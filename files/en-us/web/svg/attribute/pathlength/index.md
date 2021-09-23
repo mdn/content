@@ -5,223 +5,257 @@ tags:
   - SVG
   - SVG Attribute
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>pathLength</code></strong> attribute lets authors specify a total length for the path, in user units. This value is then used to calibrate the browser's distance calculations with those of the author, by scaling all distance computations using the ratio <code>pathLength</code>/(<em>computed value of path length</em>).</p>
+The **`pathLength`** attribute lets authors specify a total length for the path, in user units. This value is then used to calibrate the browser's distance calculations with those of the author, by scaling all distance computations using the ratio `pathLength`/(*computed value of path length*).
 
-<p>This can affect the actual rendered lengths of paths; including text paths, animation paths, and various stroke operations. Basically, all computations that require the length of the path. {{SVGAttr('stroke-dasharray')}}, for example, will assume the start of the path being 0 and the end point the value defined in the <code>pathLength</code> attribute.</p>
+This can affect the actual rendered lengths of paths; including text paths, animation paths, and various stroke operations. Basically, all computations that require the length of the path. {{SVGAttr('stroke-dasharray')}}, for example, will assume the start of the path being 0 and the end point the value defined in the `pathLength` attribute.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement('circle')}}</li>
-  <li>{{SVGElement('ellipse')}}</li>
-  <li>{{SVGElement('line')}}</li>
-  <li>{{SVGElement('path')}}</li>
-  <li>{{SVGElement('polygon')}}</li>
-  <li>{{SVGElement('polyline')}}</li>
-  <li>{{SVGElement('rect')}}</li>
-</ul>
+*   {{SVGElement('circle')}}
+*   {{SVGElement('ellipse')}}
+*   {{SVGElement('line')}}
+*   {{SVGElement('path')}}
+*   {{SVGElement('polygon')}}
+*   {{SVGElement('polyline')}}
+*   {{SVGElement('rect')}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;style&gt;
+```html
+<svg viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+  <style>
   path {
     fill: none;
     stroke: black;
     stroke-width: 2;
     stroke-dasharray: 10;
   }
-  &lt;/style&gt;
+  </style>
 
-  &lt;!-- No pathLength, the real length of the path is used. In that case, 100 user units --&gt;
-  &lt;path d="M 0,10 h100"/&gt;
+  <!-- No pathLength, the real length of the path is used. In that case, 100 user units -->
+  <path d="M 0,10 h100"/>
 
-  &lt;!-- compute everything like if the path length was 90 user units long --&gt;
-  &lt;path d="M 0,20 h100" pathLength="90"/&gt;
+  <!-- compute everything like if the path length was 90 user units long -->
+  <path d="M 0,20 h100" pathLength="90"/>
 
-  &lt;!-- compute everything like if the path length was 50 user units long --&gt;
-  &lt;path d="M 0,30 h100" pathLength="50"/&gt;
+  <!-- compute everything like if the path length was 50 user units long -->
+  <path d="M 0,30 h100" pathLength="50"/>
 
-  &lt;!-- compute everything like if the path length was 30 user units long --&gt;
-  &lt;path d="M 0,40 h100" pathLength="30"/&gt;
+  <!-- compute everything like if the path length was 30 user units long -->
+  <path d="M 0,40 h100" pathLength="30"/>
 
-  &lt;!-- compute everything like if the path length was 10 user units long --&gt;
-  &lt;path d="M 0,50 h100" pathLength="10"/&gt;
-&lt;/svg&gt;</pre>
+  <!-- compute everything like if the path length was 10 user units long -->
+  <path d="M 0,50 h100" pathLength="10"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", '100%', 200)}}</p>
+{{EmbedLiveSample("Example", '100%', 200)}}
 
-<h2 id="circle">circle</h2>
+## circle
 
-<p>For {{SVGElement('circle')}}, <code>pathLength</code> lets authors specify a total length for the circle, in user units.</p>
-
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>none</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="ellipse">ellipse</h2>
-
-<p>For {{SVGElement('ellipse')}}, <code>pathLength</code> lets authors specify a total length for the ellipse, in user units.</p>
+For {{SVGElement('circle')}}, `pathLength` lets authors specify a total length for the circle, in user units.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>none</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>none</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="line">line</h2>
+## ellipse
 
-<p>For {{SVGElement('line')}}, <code>pathLength</code> lets authors specify a total length for the line, in user units.</p>
+For {{SVGElement('ellipse')}}, `pathLength` lets authors specify a total length for the ellipse, in user units.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>none</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>none</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="path">path</h2>
+## line
 
-<p>For {{SVGElement('path')}}, <code>pathLength</code> lets authors specify a total length for the path, in user units.</p>
+For {{SVGElement('line')}}, `pathLength` lets authors specify a total length for the line, in user units.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>none</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>none</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="polygon">polygon</h2>
+## path
 
-<p>For {{SVGElement('polygon')}}, <code>pathLength</code> lets authors specify a total length for the shape, in user units.</p>
+For {{SVGElement('path')}}, `pathLength` lets authors specify a total length for the path, in user units.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>none</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>none</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="polyline">polyline</h2>
+## polygon
 
-<p>For {{SVGElement('polyline')}}, <code>pathLength</code> lets authors specify a total length for the shape, in user units.</p>
+For {{SVGElement('polygon')}}, `pathLength` lets authors specify a total length for the shape, in user units.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>none</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>none</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="rect">rect</h2>
+## polyline
 
-<p>For {{SVGElement('rect')}}, <code>pathLength</code> lets authors specify a total length for the rectangle, in user units.</p>
+For {{SVGElement('polyline')}}, `pathLength` lets authors specify a total length for the shape, in user units.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>none</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>none</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## rect
+
+For {{SVGElement('rect')}}, `pathLength` lets authors specify a total length for the rectangle, in user units.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>none</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "paths.html#PathLengthAttribute", "pathLength")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "paths.html#PathLengthAttribute", "pathLength")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "paths.html#PathLengthAttribute", "pathLength")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "paths.html#PathLengthAttribute", "pathLength")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>

@@ -10,60 +10,58 @@ tags:
   - SVG Filter
 browser-compat: svg.elements.feMorphology
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>&lt;feMorphology&gt;</code></strong> <a href="/en-US/docs/Web/SVG">SVG</a> filter primitive is used to erode or dilate the input image. Its usefulness lies especially in fattening or thinning effects.</p>
+The **`<feMorphology>`** [SVG](/en-US/docs/Web/SVG) filter primitive is used to erode or dilate the input image. Its usefulness lies especially in fattening or thinning effects.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#presentation_attributes">Presentation attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes">Filter primitive attributes</a></li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
-</ul>
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+*   [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+*   [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
+*   {{SVGAttr("class")}}
+*   {{SVGAttr("style")}}
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<ul>
- <li>{{SVGAttr("in")}}</li>
- <li>{{SVGAttr("operator")}}</li>
- <li>{{SVGAttr("radius")}}</li>
-</ul>
+*   {{SVGAttr("in")}}
+*   {{SVGAttr("operator")}}
+*   {{SVGAttr("radius")}}
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the {{domxref("SVGFEMorphologyElement")}} interface.</p>
+This element implements the {{domxref("SVGFEMorphologyElement")}} interface.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Filtering_SVG_content">Filtering SVG content</h3>
+### Filtering SVG content
 
-<h4 id="SVG">SVG</h4>
+#### SVG
 
-<pre class="brush: html; highlight[3,6]">&lt;svg xmlns="http://www.w3.org/2000/svg" width="300" height="180"&gt;
-  &lt;filter id="erode"&gt;
-    &lt;feMorphology operator="erode" radius="1"/&gt;
-  &lt;/filter&gt;
-  &lt;filter id="dilate"&gt;
-    &lt;feMorphology operator="dilate" radius="2"/&gt;
-  &lt;/filter&gt;
-  &lt;text y="1em"&gt;Normal text&lt;/text&gt;
-  &lt;text id="thin" y="2em"&gt;Thinned text&lt;/text&gt;
-  &lt;text id="thick" y="3em"&gt;Fattened text&lt;/text&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="180">
+  <filter id="erode">
+    <feMorphology operator="erode" radius="1"/>
+  </filter>
+  <filter id="dilate">
+    <feMorphology operator="dilate" radius="2"/>
+  </filter>
+  <text y="1em">Normal text</text>
+  <text id="thin" y="2em">Thinned text</text>
+  <text id="thick" y="3em">Fattened text</text>
+</svg>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[7,11]">text {
+```css
+text {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 3em;
 }
@@ -74,30 +72,34 @@ browser-compat: svg.elements.feMorphology
 
 #thick {
   filter: url(#dilate);
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Filtering_SVG_content", 340, 180)}}</p>
+{{EmbedLiveSample("Filtering_SVG_content", 340, 180)}}
 
-<h3 id="Filtering_HTML_content">Filtering HTML content</h3>
+### Filtering HTML content
 
-<h4 id="SVG_2">SVG</h4>
+#### SVG
 
-<pre class="brush: html; highlight[3,6]">&lt;svg xmlns="http://www.w3.org/2000/svg" width="0" height="0"&gt;
-  &lt;filter id="erode"&gt;
-    &lt;feMorphology operator="erode" radius="1"/&gt;
-  &lt;/filter&gt;
-  &lt;filter id="dilate"&gt;
-    &lt;feMorphology operator="dilate" radius="2"/&gt;
-  &lt;/filter&gt;
-&lt;/svg&gt;
+```html
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+  <filter id="erode">
+    <feMorphology operator="erode" radius="1"/>
+  </filter>
+  <filter id="dilate">
+    <feMorphology operator="dilate" radius="2"/>
+  </filter>
+</svg>
 
-&lt;p&gt;Normal text&lt;/p&gt;
-&lt;p id="thin"&gt;Thinned text&lt;/p&gt;
-&lt;p id="thick"&gt;Fattened text&lt;/p&gt;</pre>
+<p>Normal text</p>
+<p id="thin">Thinned text</p>
+<p id="thick">Fattened text</p>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[8,12]">p {
+```css
+p {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 3em;
@@ -109,38 +111,37 @@ browser-compat: svg.elements.feMorphology
 
 #thick {
   filter: url(#dilate);
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Filtering_HTML_content", 340, 180)}}</p>
+{{EmbedLiveSample("Filtering_HTML_content", 340, 180)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("filter")}}</li>
- <li>{{SVGElement("animate")}}</li>
- <li>{{SVGElement("set")}}</li>
- <li>{{SVGElement("feBlend")}}</li>
- <li>{{SVGElement("feColorMatrix")}}</li>
- <li>{{SVGElement("feComponentTransfer")}}</li>
- <li>{{SVGElement("feComposite")}}</li>
- <li>{{SVGElement("feConvolveMatrix")}}</li>
- <li>{{SVGElement("feDiffuseLighting")}}</li>
- <li>{{SVGElement("feDisplacementMap")}}</li>
- <li>{{SVGElement("feFlood")}}</li>
- <li>{{SVGElement("feGaussianBlur")}}</li>
- <li>{{SVGElement("feImage")}}</li>
- <li>{{SVGElement("feMerge")}}</li>
- <li>{{SVGElement("feOffset")}}</li>
- <li>{{SVGElement("feSpecularLighting")}}</li>
- <li>{{SVGElement("feTile")}}</li>
- <li>{{SVGElement("feTurbulence")}}</li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Filter_effects">SVG tutorial: Filter effects</a></li>
-</ul>
+*   {{SVGElement("filter")}}
+*   {{SVGElement("animate")}}
+*   {{SVGElement("set")}}
+*   {{SVGElement("feBlend")}}
+*   {{SVGElement("feColorMatrix")}}
+*   {{SVGElement("feComponentTransfer")}}
+*   {{SVGElement("feComposite")}}
+*   {{SVGElement("feConvolveMatrix")}}
+*   {{SVGElement("feDiffuseLighting")}}
+*   {{SVGElement("feDisplacementMap")}}
+*   {{SVGElement("feFlood")}}
+*   {{SVGElement("feGaussianBlur")}}
+*   {{SVGElement("feImage")}}
+*   {{SVGElement("feMerge")}}
+*   {{SVGElement("feOffset")}}
+*   {{SVGElement("feSpecularLighting")}}
+*   {{SVGElement("feTile")}}
+*   {{SVGElement("feTurbulence")}}
+*   [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)

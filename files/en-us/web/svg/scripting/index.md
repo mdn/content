@@ -10,76 +10,73 @@ tags:
   - preventing
   - setProperty
 ---
-<p>One can override default browser behaviors with the <em>evt.preventDefault( )</em> method, add eventListeners to objects with the syntax <em>element.addEventListener(event, function, useCapture), and set element properties with syntax </em><code>svgElement.style.setProperty("fill-opacity", "0.0", ""). </code>Note the existence of all three arguments setting properties.</p>
+One can override default browser behaviors with the *evt.preventDefault( )* method, add eventListeners to objects with the syntax *element.addEventListener(event, function, useCapture), and set element properties with syntax* ` svgElement.style.setProperty("fill-opacity", "0.0", "").  `Note the existence of all three arguments setting properties.
 
-<h3 id="Preventing_default_behavior_in_event_code">Preventing default behavior in event code</h3>
+### Preventing default behavior in event code
 
-<p>When writing drag and drop code, sometimes you'll find that text on the page gets accidentally selected while dragging. Or if you want to use the backspace key in your code, you want to override the browser's default behavior when the backspace key is pressed, which is to go back to the previous page. The <code>evt.preventDefault()</code> method lets you do this.</p>
+When writing drag and drop code, sometimes you'll find that text on the page gets accidentally selected while dragging. Or if you want to use the backspace key in your code, you want to override the browser's default behavior when the backspace key is pressed, which is to go back to the previous page. The `evt.preventDefault()` method lets you do this.
 
-<h3 id="Using_eventListeners_with_objects">Using <code>eventListeners</code> with objects</h3>
+### Using `eventListeners` with objects
 
-<p>The methods <code>addEventListener()</code> and <code>removeEventListener()</code> are very useful when writing interactive SVG. You can pass an object that implements the <code>handleEvent</code> interface as the second parameter to these methods.</p>
+The methods `addEventListener()` and `removeEventListener()` are very useful when writing interactive SVG. You can pass an object that implements the `handleEvent` interface as the second parameter to these methods.
 
-<pre class="eval">function myRect(x,y,w,h,message){
-this.message=message
-</pre>
+    function myRect(x,y,w,h,message){
+    this.message=message
 
-<pre class="eval"> this.rect=document.createElementNS("http://www.w3.org/2000/svg","rect")
- this.rect.setAttributeNS(null,"x",x)
- this.rect.setAttributeNS(null,"y",y)
- this.rect.setAttributeNS(null,"width",w)
- this.rect.setAttributeNS(null,"height",h)
- document.documentElement.appendChild(this.rect)
-</pre>
+<!---->
 
-<pre class="eval"> this.rect.addEventListener("click",this,false)
-</pre>
+     this.rect=document.createElementNS("http://www.w3.org/2000/svg","rect")
+     this.rect.setAttributeNS(null,"x",x)
+     this.rect.setAttributeNS(null,"y",y)
+     this.rect.setAttributeNS(null,"width",w)
+     this.rect.setAttributeNS(null,"height",h)
+     document.documentElement.appendChild(this.rect)
 
-<pre class="eval"> this.handleEvent= function(evt){
-   switch (evt.type){
-    case "click":
-     alert(this.message)
-     break;
-    }
-   }
-  }
-</pre>
+<!---->
 
-<h3 id="Inter-document_scripting:_referencing_embedded_SVG">Inter-document scripting: referencing embedded SVG</h3>
+     this.rect.addEventListener("click",this,false)
 
-<p>When using SVG within HTML, Adobe's SVG Viewer 3.0 automatically includes a window property called <code>svgDocument</code> that points to the SVG document. This is not the case for Mozilla's native SVG implementation; therefore, using <code>window.svgDocument</code> does not work in Mozilla. Instead, you can use</p>
+<!---->
 
-<pre>var svgDoc=document.embeds["name_of_svg"].getSVGDocument();
-</pre>
+     this.handleEvent= function(evt){
+       switch (evt.type){
+        case "click":
+         alert(this.message)
+         break;
+        }
+       }
+      }
 
-<p>to get a reference to an embedded SVG document instead.</p>
+### Inter-document scripting: referencing embedded SVG
 
-<p>The best way to get access to the {{domxref("Document")}} representing an SVG document is to look at {{domxref("HTMLIFrameElement.contentDocument")}} (if the document is presented in an {{HTMLElement("iframe")}}) or {{domxref("HTMLObjectElement.contentDocument")}} (if the document is presented in an {{HTMLElement("object")}} element), like this:</p>
+When using SVG within HTML, Adobe's SVG Viewer 3.0 automatically includes a window property called `svgDocument` that points to the SVG document. This is not the case for Mozilla's native SVG implementation; therefore, using `window.svgDocument` does not work in Mozilla. Instead, you can use
 
-<pre>var svgDoc = document.getElementById("iframe_element").contentDocument;</pre>
+    var svgDoc=document.embeds["name_of_svg"].getSVGDocument();
 
-<p>In addition, the {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, and {{HTMLElement("object")}} elements offer a method, <code>getSVGDocument()</code>, which returns the {{domxref("XMLDocument")}} representing the element's embedded SVG or <code>null</code> if the element doesn't represent an SVG document.</p>
+to get a reference to an embedded SVG document instead.
 
-<p>You can also use <code>document.getElementById("<em>svg_elem_name</em>").getSVGDocument()</code>, which gives the same result.</p>
+The best way to get access to the {{domxref("Document")}} representing an SVG document is to look at {{domxref("HTMLIFrameElement.contentDocument")}} (if the document is presented in an {{HTMLElement("iframe")}}) or {{domxref("HTMLObjectElement.contentDocument")}} (if the document is presented in an {{HTMLElement("object")}} element), like this:
 
-<div class="note">
-<p><strong>Note:</strong> You may find documentation referring to an <code>SVGDocument</code> interface. Prior to SVG 2, SVG documents were represented using that interface. However, SVG documents are now represented using the {{domxref("XMLDocument")}} interface instead.</p>
-</div>
+    var svgDoc = document.getElementById("iframe_element").contentDocument;
 
-<h3 id="Inter-document_scripting:_calling_JavaScript_functions">Inter-document scripting: calling JavaScript functions</h3>
+In addition, the {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, and {{HTMLElement("object")}} elements offer a method, `getSVGDocument()`, which returns the {{domxref("XMLDocument")}} representing the element's embedded SVG or `null` if the element doesn't represent an SVG document.
 
-<p>When calling a JavaScript function that resides in the HTML file from an SVG file that is embedded in an HTML document, you should use <code>parent.functionname()</code> to reference the function. Although the Adobe SVG viewer plugin allows the use of <code>functionname()</code>, it's not the preferred way to do things.</p>
+You can also use `document.getElementById("svg_elem_name").getSVGDocument()`, which gives the same result.
 
-<div class="note">
-<p><strong>Note:</strong> According to the <a href="http://web.archive.org/web/20100223210744/http://wiki.svg.org/Inter-Document_Communication">SVG wiki</a> the <code>"parent"</code> JS variable is broken in Adobe's SVG version 6 preview plugin. The suggested workaround is to use <code>"top"</code> instead of <code>"parent"</code>. Since it is a beta version of their plugin, we can probably safely ignore this.</p>
-</div>
+> **Note:** You may find documentation referring to an `SVGDocument` interface. Prior to SVG 2, SVG documents were represented using that interface. However, SVG documents are now represented using the {{domxref("XMLDocument")}} interface instead.
 
-<p>More information and some examples can be found on the <a href="http://web.archive.org/web/20100223210744/http://wiki.svg.org/Inter-Document_Communication">SVG wiki inter-document scripting page</a>.</p>
+### Inter-document scripting: calling JavaScript functions
 
-<h3 id="setProperty_has_three_parameters"><code>setProperty</code> has three parameters</h3>
+When calling a JavaScript function that resides in the HTML file from an SVG file that is embedded in an HTML document, you should use `parent.functionname()` to reference the function. Although the Adobe SVG viewer plugin allows the use of `functionname()`, it's not the preferred way to do things.
 
-<p>The function <code>svgElement.style.setProperty("fill-opacity", "0.0")</code> throws a DOMException - <code>SYNTAX ERR</code> in Mozilla. This behavior is specified by the W3C in the DOM Level 2 Style Specification. The function <code>setProperty</code> is defined as a function with three parameters. The above can be replaced with <code>'svgElement.style.setProperty("fill-opacity", "0.0", "")'</code>, which is standards compliant.</p>
+> **Note:** According to the [SVG wiki](http://web.archive.org/web/20100223210744/http://wiki.svg.org/Inter-Document_Communication) the `"parent"` JS variable is broken in Adobe's SVG version 6 preview plugin. The suggested workaround is to use `"top"` instead of `"parent"`. Since it is a beta version of their plugin, we can probably safely ignore this.
 
-<h3 id="Links">Links</h3>
+More information and some examples can be found on the [SVG wiki inter-document scripting page](http://web.archive.org/web/20100223210744/http://wiki.svg.org/Inter-Document_Communication).
 
-<p><a href="http://web.archive.org/web/20100212202713/http://wiki.svg.org/Main_Page#Scripting_and_Programming">SVG wiki on Scripting and Programming</a></p>
+### `setProperty` has three parameters
+
+The function `svgElement.style.setProperty("fill-opacity", "0.0")` throws a DOMException - `SYNTAX ERR` in Mozilla. This behavior is specified by the W3C in the DOM Level 2 Style Specification. The function `setProperty` is defined as a function with three parameters. The above can be replaced with `'svgElement.style.setProperty("fill-opacity", "0.0", "")'`, which is standards compliant.
+
+### Links
+
+[SVG wiki on Scripting and Programming](http://web.archive.org/web/20100212202713/http://wiki.svg.org/Main_Page#Scripting_and_Programming)

@@ -9,46 +9,40 @@ tags:
   - SVG
 browser-compat: svg.elements.cursor
 ---
-<div>{{SVGRef}}{{Deprecated_Header}}
-<div class="notecard note">
-<p><strong>Note:</strong> The CSS {{cssxref("cursor")}} property should be used instead of this element.</p>
-</div>
-</div>
+{{SVGRef}}{{Deprecated_Header}}
 
-<p>The <strong><code>&lt;cursor&gt;</code></strong> <a href="/en-US/docs/Web/SVG">SVG</a> element can be used to define a platform-independent custom cursor. A recommended approach for defining a platform-independent custom cursor is to create a PNG image and define a <code>cursor</code> element that references the PNG image and identifies the exact position within the image which is the pointer position (i.e., the hot spot).</p>
+> **Note:** The CSS {{cssxref("cursor")}} property should be used instead of this element.
 
-<p>The PNG format is recommended because it supports the ability to define a transparency mask via an alpha channel. If a different image format is used, this format should support the definition of a transparency mask (two options: provide an explicit alpha channel or use a particular pixel color to indicate transparency). If the transparency mask can be determined, the mask defines the shape of the cursor; otherwise, the cursor is an opaque rectangle. Typically, the other pixel information (e.g., the R, G and B channels) defines the colors for those parts of the cursor which are not masked out. Note that cursors usually contain at least two colors so that the cursor can be visible over most backgrounds.</p>
+The **`<cursor>`** [SVG](/en-US/docs/Web/SVG) element can be used to define a platform-independent custom cursor. A recommended approach for defining a platform-independent custom cursor is to create a PNG image and define a `cursor` element that references the PNG image and identifies the exact position within the image which is the pointer position (i.e., the hot spot).
 
-<h2 id="Usage_context">Usage context</h2>
+The PNG format is recommended because it supports the ability to define a transparency mask via an alpha channel. If a different image format is used, this format should support the definition of a transparency mask (two options: provide an explicit alpha channel or use a particular pixel color to indicate transparency). If the transparency mask can be determined, the mask defines the shape of the cursor; otherwise, the cursor is an opaque rectangle. Typically, the other pixel information (e.g., the R, G and B channels) defines the colors for those parts of the cursor which are not masked out. Note that cursors usually contain at least two colors so that the cursor can be visible over most backgrounds.
 
-<p>{{SVGInfo}}</p>
+## Usage context
 
-<h2 id="Attributes">Attributes</h2>
+{{SVGInfo}}
 
-<h3 id="Global_attributes">Global attributes</h3>
+## Attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes">Conditional processing attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#xlink_attributes">Xlink attributes</a></li>
-</ul>
+### Global attributes
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+*   [Conditional processing attributes](/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes)
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+*   [Xlink attributes](/en-US/docs/Web/SVG/Attribute#xlink_attributes)
 
-<ul>
- <li>{{SVGAttr("x")}}</li>
- <li>{{SVGAttr("y")}}</li>
- <li>{{SVGAttr("xlink:href")}}</li>
-</ul>
+### Specific attributes
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+*   {{SVGAttr("x")}}
+*   {{SVGAttr("y")}}
+*   {{SVGAttr("xlink:href")}}
 
-<p>This element implements the {{DOMxRef("SVGCursorElement")}} interface.</p>
+## DOM Interface
 
-<h2 id="Specifications">Specifications</h2>
+This element implements the {{DOMxRef("SVGCursorElement")}} interface.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

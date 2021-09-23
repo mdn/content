@@ -10,52 +10,46 @@ tags:
   - SVG Text Content
 browser-compat: svg.elements.glyphRef
 ---
-<div>{{SVGRef}}{{deprecated_header}}</div>
+{{SVGRef}}{{deprecated_header}}
 
-<p>The <code>glyphRef</code> element provides a single possible glyph to the referencing {{ SVGElement("altGlyph") }} substitution.</p>
+The `glyphRef` element provides a single possible glyph to the referencing {{ SVGElement("altGlyph") }} substitution.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core">Core attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#presentation">Presentation attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#xlink">XLink attributes</a> »</li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
-</ul>
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core) »
+*   [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation) »
+*   [XLink attributes](/en-US/docs/Web/SVG/Attribute#xlink) »
+*   {{SVGAttr("class")}}
+*   {{SVGAttr("style")}}
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<ul>
- <li>{{SVGAttr("x")}}</li>
- <li>{{SVGAttr("y")}}</li>
- <li>{{SVGAttr("dx")}}</li>
- <li>{{SVGAttr("dy")}}</li>
- <li>{{SVGAttr("glyphRef")}}</li>
- <li>{{SVGAttr("format")}}</li>
- <li>{{SVGAttr("xlink:href")}}</li>
-</ul>
+*   {{SVGAttr("x")}}
+*   {{SVGAttr("y")}}
+*   {{SVGAttr("dx")}}
+*   {{SVGAttr("dy")}}
+*   {{SVGAttr("glyphRef")}}
+*   {{SVGAttr("format")}}
+*   {{SVGAttr("xlink:href")}}
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the <code><a href="/en-US/docs/DOM/SVGGlyphRefElement">SVGGlyphRefElement</a></code> interface.</p>
+This element implements the [`SVGGlyphRefElement`](/en-US/docs/DOM/SVGGlyphRefElement) interface.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("altGlyph")}}</li>
-</ul>
+*   {{SVGElement("altGlyph")}}

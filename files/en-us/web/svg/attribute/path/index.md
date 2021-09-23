@@ -5,113 +5,117 @@ tags:
   - SVG
   - SVG Attribute
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <code><strong>path</strong></code> attribute has two different meanings, either it defines a text path along which the characters of a text are rendered, or a motion path along which a referenced element is animated.</p>
+The **`path`** attribute has two different meanings, either it defines a text path along which the characters of a text are rendered, or a motion path along which a referenced element is animated.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("animateMotion")}}</li>
-  <li>{{SVGElement("textPath")}}</li>
-</ul>
+*   {{SVGElement("animateMotion")}}
+*   {{SVGElement("textPath")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[6]">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;path id="MyPath" fill="none" stroke="silver"
-        d="M10,90 Q90,90 90,45 Q90,10 50,10 Q10,10 10,40 Q10,70 45,70 Q70,70 75,50" /&gt;
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path id="MyPath" fill="none" stroke="silver"
+        d="M10,90 Q90,90 90,45 Q90,10 50,10 Q10,10 10,40 Q10,70 45,70 Q70,70 75,50" />
 
-  &lt;text&gt;
-    &lt;textPath path="M10,90 Q90,90 90,45 Q90,10 50,10 Q10,10 10,40 Q10,70 45,70 Q70,70 75,50"&gt;
+  <text>
+    <textPath path="M10,90 Q90,90 90,45 Q90,10 50,10 Q10,10 10,40 Q10,70 45,70 Q70,70 75,50">
       Quick brown fox jumps over the lazy dog.
-    &lt;/textPath&gt;
-  &lt;/text&gt;
-&lt;/svg&gt;</pre>
+    </textPath>
+  </text>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "420", "220")}}</p>
+{{EmbedLiveSample("Example", "420", "220")}}
 
-<h2 id="animateMotion">animateMotion</h2>
+## animateMotion
 
-<p>For {{SVGElement("animateMotion")}}, <code>path</code> defines the motion path, expressed in the same format and interpreted the same way as the {{SVGAttr("d")}} geometric property for the {{SVGElement("path")}} element. The effect of a motion path animation is a translation along the x- and y-axes of the current user coordinate system by the x and y values computed over time.</p>
-
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>&lt;path-data&gt;</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
-</table>
-
-<dl>
- <dt><code>&lt;path-data&gt;</code></dt>
- <dd>This value defines the motion path along which the referenced element is animated. For detailed information about the commands that can be used, see the <a href="/en-US/docs/Web/SVG/Attribute/d#Path_commands">explanation for the <code>d</code> attribute</a>.</dd>
-</dl>
-
-<h2 id="textPath">textPath</h2>
-
-<p>For {{SVGElement("textPath")}}, <code>path</code> defines the path onto which the {{Glossary("glyph", "glyphs")}} of a {{SVGElement("text")}} element will be rendered. An empty string indicates that there is no path data for the element. This means that the text within the <code>&lt;textPath&gt;</code> element does not render or contribute to the bounding box of the <code>&lt;text&gt;</code> element. If the attribute is not specified, the path specified in {{SVGAttr("href")}} is used instead.</p>
+For {{SVGElement("animateMotion")}}, `path` defines the motion path, expressed in the same format and interpreted the same way as the {{SVGAttr("d")}} geometric property for the {{SVGElement("path")}} element. The effect of a motion path animation is a translation along the x- and y-axes of the current user coordinate system by the x and y values computed over time.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>&lt;path-data&gt;</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>Path specified in {{SVGAttr("href")}}</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>&#x3C;path-data></code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;path-data&gt;</code></dt>
- <dd>This value defines the text path along which the glyphs of the <code>&lt;text&gt;</code> element are aligned. For detailed information about the commands that can be used, see the <a href="/en-US/docs/Web/SVG/Attribute/d#Path_commands">explanation for the <code>d</code> attribute</a>.</dd>
-</dl>
+*   `<path-data>`
+    *   : This value defines the motion path along which the referenced element is animated. For detailed information about the commands that can be used, see the [explanation for the `d` attribute](/en-US/docs/Web/SVG/Attribute/d#Path_commands).
 
-<h2 id="Specifications">Specifications</h2>
+## textPath
+
+For {{SVGElement("textPath")}}, `path` defines the path onto which the {{Glossary("glyph", "glyphs")}} of a {{SVGElement("text")}} element will be rendered. An empty string indicates that there is no path data for the element. This means that the text within the `<textPath>` element does not render or contribute to the bounding box of the `<text>` element. If the attribute is not specified, the path specified in {{SVGAttr("href")}} is used instead.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>&#x3C;path-data></code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>Path specified in {{SVGAttr("href")}}</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+*   `<path-data>`
+    *   : This value defines the text path along which the glyphs of the `<text>` element are aligned. For detailed information about the commands that can be used, see the [explanation for the `d` attribute](/en-US/docs/Web/SVG/Attribute/d#Path_commands).
+
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "text.html#TextPathElementPathAttribute", "path for &lt;textPath&gt;")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Initial definition for <code>&lt;textPath&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG Animations 2", "#AnimateMotionElementPathAttribute", "path for &lt;animateMotion&gt;")}}</td>
-   <td>{{Spec2("SVG Animations 2")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "animate.html#PathAttribute", "path for &lt;animateMotion&gt;")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;animateMotion&gt;</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "text.html#TextPathElementPathAttribute", "path for &lt;textPath&gt;")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>Initial definition for <code>&#x3C;textPath></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG Animations 2", "#AnimateMotionElementPathAttribute", "path for &lt;animateMotion&gt;")}}
+      </td>
+      <td>{{Spec2("SVG Animations 2")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "animate.html#PathAttribute", "path for &lt;animateMotion&gt;")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;animateMotion></code></td>
+    </tr>
+  </tbody>
 </table>

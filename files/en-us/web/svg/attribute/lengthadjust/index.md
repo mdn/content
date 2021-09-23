@@ -6,87 +6,93 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.text.lengthAdjust
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The lengthAdjust attribute controls how the text is stretched into the length defined by the {{SVGAttr("textLength")}} attribute.</p>
+The lengthAdjust attribute controls how the text is stretched into the length defined by the {{SVGAttr("textLength")}} attribute.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("text")}}</li>
-  <li>{{SVGElement("textPath")}}</li>
-  <li>{{SVGElement("tref")}}</li>
-  <li>{{SVGElement("tspan")}}</li>
-</ul>
+*   {{SVGElement("text")}}
+*   {{SVGElement("textPath")}}
+*   {{SVGElement("tref")}}
+*   {{SVGElement("tspan")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[3-6]">&lt;svg width="300" height="150" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;g font-face="sans-serif"&gt;
-    &lt;text x="0" y="20" textLength="300" lengthAdjust="spacing"&gt;
+```html
+<svg width="300" height="150" xmlns="http://www.w3.org/2000/svg">
+  <g font-face="sans-serif">
+    <text x="0" y="20" textLength="300" lengthAdjust="spacing">
       Stretched using spacing only.
-    &lt;/text&gt;
-    &lt;text x="0" y="50" textLength="300" lengthAdjust="spacingAndGlyphs"&gt;
+    </text>
+    <text x="0" y="50" textLength="300" lengthAdjust="spacingAndGlyphs">
       Stretched using spacing and glyphs.
-    &lt;/text&gt;
-    &lt;text x="0" y="80" textLength="100" lengthAdjust="spacing"&gt;
+    </text>
+    <text x="0" y="80" textLength="100" lengthAdjust="spacing">
       Shrunk using spacing only.
-    &lt;/text&gt;
-    &lt;text x="0" y="110" textLength="100" lengthAdjust="spacingAndGlyphs"&gt;
+    </text>
+    <text x="0" y="110" textLength="100" lengthAdjust="spacingAndGlyphs">
       Shrunk using spacing and glyphs.
-    &lt;/text&gt;
-  &lt;/g&gt;
-&lt;/svg&gt;</pre>
+    </text>
+  </g>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "420", "120")}}</p>
+{{EmbedLiveSample("Example", "420", "120")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>spacing</code> | <code>spacingAndGlyphs</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>spacing</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>spacing</code> | <code>spacingAndGlyphs</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>spacing</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "text.html#TextElementLengthAdjustAttribute", "lengthAdjust")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#TextElementLengthAdjustAttribute", "lengthAdjust")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "text.html#TextElementLengthAdjustAttribute", "lengthAdjust")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "text.html#TextElementLengthAdjustAttribute", "lengthAdjust")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

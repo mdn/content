@@ -6,41 +6,43 @@ tags:
   - SVG
   - SVG Attribute
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <code><strong>attributeName</strong></code> attribute indicates the name of the CSS property or attribute of the target element that is going to be changed during an animation.</p>
+The **`attributeName`** attribute indicates the name of the CSS property or attribute of the target element that is going to be changed during an animation.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("animate")}}</li>
-  <li>{{SVGElement("animateColor")}}</li>
-  <li>{{SVGElement("animateTransform")}}</li>
-  <li>{{SVGElement("set")}}</li>
-</ul>
+*   {{SVGElement("animate")}}
+*   {{SVGElement("animateColor")}}
+*   {{SVGElement("animateTransform")}}
+*   {{SVGElement("set")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;rect x="50" y="50" width="100" height="100"&gt;
-    &lt;animate attributeType="XML" attributeName="y" from="0" to="50"
-        dur="5s" repeatCount="indefinite"/&gt;
-  &lt;/rect&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="50" width="100" height="100">
+    <animate attributeType="XML" attributeName="y" from="0" to="50"
+        dur="5s" repeatCount="indefinite"/>
+  </rect>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "400", "250")}}</p>
+{{EmbedLiveSample("Example", "400", "250")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td><code>&lt;name&gt;</code></td>
+      <td><code>&#x3C;name></code></td>
     </tr>
     <tr>
       <th scope="row">Default value</th>
@@ -53,12 +55,10 @@ tags:
   </tbody>
 </table>
 
-<dl>
-  <dt><code>&lt;name&gt;</code></dt>
-  <dd>This value indicates the name of the CSS property or attribute of the target element to be animated.</dd>
-</dl>
+*   `<name>`
+    *   : This value indicates the name of the CSS property or attribute of the target element to be animated.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
   <thead>
@@ -70,20 +70,22 @@ tags:
   </thead>
   <tbody>
     <tr>
-      <td>{{SpecName("SVG Animations 2", "#AttributeNameAttribute", "attributeName")}}</td>
+      <td>
+        {{SpecName("SVG Animations 2", "#AttributeNameAttribute", "attributeName")}}
+      </td>
       <td>{{Spec2("SVG Animations 2")}}</td>
       <td>No change</td>
     </tr>
     <tr>
-      <td>{{SpecName("SVG1.1", "animate.html#AttributeNameAttribute", "attributeName")}}</td>
+      <td>
+        {{SpecName("SVG1.1", "animate.html#AttributeNameAttribute", "attributeName")}}
+      </td>
       <td>{{Spec2("SVG1.1")}}</td>
       <td>Initial definition</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://www.w3.org/TR/2001/REC-smil-animation-20010904/#AccumulateAttribute">SMIL Animation specification</a></li>
-</ul>
+*   [SMIL Animation specification](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#AccumulateAttribute)

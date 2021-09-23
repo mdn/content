@@ -7,75 +7,71 @@ tags:
   - SVG Animation
 browser-compat: svg.elements.set
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The SVG <strong><code>&lt;set&gt;</code></strong> element provides a simple means of just setting the value of an attribute for a specified duration.</p>
+The SVG **`<set>`** element provides a simple means of just setting the value of an attribute for a specified duration.
 
-<p>It supports all attribute types, including those that cannot reasonably be interpolated, such as string and boolean values. For attributes that can be reasonably be interpolated, the {{SVGElement('animate')}} is usually preferred.</p>
+It supports all attribute types, including those that cannot reasonably be interpolated, such as string and boolean values. For attributes that can be reasonably be interpolated, the {{SVGElement('animate')}} is usually preferred.
 
-<div class="notecard note"><p><strong>Note:</strong> The <code>&lt;set&gt;</code> element is non-additive. The {{SVGAttr('additive')}} and {{SVGAttr('accumulate')}} attributes are not allowed, and will be ignored if specified.</p></div>
+> **Note:** The `<set>` element is non-additive. The {{SVGAttr('additive')}} and {{SVGAttr('accumulate')}} attributes are not allowed, and will be ignored if specified.
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html; highlight[8]">&lt;svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;style&gt;
+```html
+<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+  <style>
     rect { cursor: pointer }
     .round { rx: 5px; fill: green; }
-  &lt;/style&gt;
+  </style>
 
-  &lt;rect id="me" width="10" height="10"&gt;
-    &lt;set attributeName="class" to="round" begin="me.click" dur="2s" /&gt;
-  &lt;/rect&gt;
-&lt;/svg&gt;</pre>
+  <rect id="me" width="10" height="10">
+    <set attributeName="class" to="round" begin="me.click" dur="2s" />
+  </rect>
+</svg>
+```
 
-<p>{{EmbedLiveSample('Example', 150, '100%')}}</p>
+{{EmbedLiveSample('Example', 150, '100%')}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt>{{SVGAttr("to")}}</dt>
- <dd>This attribute defines the value to be applied to the target attribute for the duration of the animation. The value must match the requirements of the target attribute.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#anything"><strong>&lt;anything&gt;</strong></a>; <em>Default value</em>: none; <em>Animatable</em>: <strong>no</strong></small></dd>
-</dl>
+*   {{SVGAttr("to")}}
+    *   : This attribute defines the value to be applied to the target attribute for the duration of the animation. The value must match the requirements of the target attribute.
+        *Value type*: [**\<anything>**](/en-US/docs/Web/SVG/Content_type#anything); *Default value*: none; *Animatable*: **no**
 
-<h3 id="Animation_Attributes">Animation Attributes</h3>
+### Animation Attributes
 
-<dl>
- <dt><a href="/en-US/docs/Web/SVG/Attribute#animation_timing_attributes">Animation timing attributes</a></dt>
- <dd><small>{{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute#animation_attributes">Other Animation attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr("attributeName")}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Events#animation_event_attributes">Animation event attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}}</small></dd>
-</dl>
+*   [Animation timing attributes](/en-US/docs/Web/SVG/Attribute#animation_timing_attributes)
+    *   : {{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}
+*   [Other Animation attributes](/en-US/docs/Web/SVG/Attribute#animation_attributes)
+    *   : Most notably: {{SVGAttr("attributeName")}}
+*   [Animation event attributes](/en-US/docs/Web/SVG/Attribute/Events#animation_event_attributes)
+    *   : Most notably: {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}}
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<dl>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Core">Core Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('id')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Styling">Styling Attributes</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt>Event Attributes</dt>
- <dd><small><a href="/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes">Global event attributes</a>, <a href="/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes">Document element event attributes</a></small></dd>
-</dl>
+*   [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
+    *   : Most notably: {{SVGAttr('id')}}
+*   [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
+    *   : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+*   Event Attributes
+    *   : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Document element event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("animate")}}</li>
-</ul>
+*   {{SVGElement("animate")}}

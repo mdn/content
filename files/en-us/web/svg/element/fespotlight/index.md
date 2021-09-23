@@ -10,82 +10,77 @@ tags:
   - SVG Filter
 browser-compat: svg.elements.feSpotLight
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>&lt;feSpotLight&gt;</code></strong> <a href="/en-US/docs/Web/SVG">SVG</a> filter primitive defines a light source which allows to create a spotlight effect. It that can be used within a lighting filter primitive: {{SVGElement("feDiffuseLighting")}} or {{SVGElement("feSpecularLighting")}}.</p>
+The **`<feSpotLight>`** [SVG](/en-US/docs/Web/SVG) filter primitive defines a light source which allows to create a spotlight effect. It that can be used within a lighting filter primitive: {{SVGElement("feDiffuseLighting")}} or {{SVGElement("feSpecularLighting")}}.
 
+## Usage context
 
-<h2 id="Usage_context">Usage context</h2>
+{{svginfo}}
 
-<p>{{svginfo}}</p>
+## Attributes
 
-<h2 id="Attributes">Attributes</h2>
+### Global attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a></li>
-</ul>
+### Specific attributes
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+*   {{SVGAttr("x")}}
+*   {{SVGAttr("y")}}
+*   {{SVGAttr("z")}}
+*   {{SVGAttr("pointsAtX")}}
+*   {{SVGAttr("pointsAtY")}}
+*   {{SVGAttr("pointsAtZ")}}
+*   {{SVGAttr("specularExponent")}}
+*   {{SVGAttr("limitingConeAngle")}}
 
-<ul>
- <li>{{SVGAttr("x")}}</li>
- <li>{{SVGAttr("y")}}</li>
- <li>{{SVGAttr("z")}}</li>
- <li>{{SVGAttr("pointsAtX")}}</li>
- <li>{{SVGAttr("pointsAtY")}}</li>
- <li>{{SVGAttr("pointsAtZ")}}</li>
- <li>{{SVGAttr("specularExponent")}}</li>
- <li>{{SVGAttr("limitingConeAngle")}}</li>
-</ul>
+## DOM Interface
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+This element implements the {{domxref("SVGFESpotLightElement")}} interface.
 
-<p>This element implements the {{domxref("SVGFESpotLightElement")}} interface.</p>
+## Example
 
-<h2 id="Example">Example</h2>
+### HTML Content
 
-<h3 id="HTML_Content">HTML Content</h3>
+```html
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <filter id="spotlight">
+      <feSpecularLighting result="spotlight" specularConstant="1.5"
+          specularExponent="4" lighting-color="#FFF">
+        <feSpotLight x="600" y="600" z="400" limitingConeAngle="5.5" />
+      </feSpecularLighting>
+      <feComposite in="SourceGraphic" in2="spotlight" operator="out"
+          k1="0" k2="1" k3="1" k4="0"/>
+    </filter>
+  </defs>
 
-<pre class="brush: html">&lt;svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
-  &lt;defs&gt;
-    &lt;filter id="spotlight"&gt;
-      &lt;feSpecularLighting result="spotlight" specularConstant="1.5"
-          specularExponent="4" lighting-color="#FFF"&gt;
-        &lt;feSpotLight x="600" y="600" z="400" limitingConeAngle="5.5" /&gt;
-      &lt;/feSpecularLighting&gt;
-      &lt;feComposite in="SourceGraphic" in2="spotlight" operator="out"
-          k1="0" k2="1" k3="1" k4="0"/&gt;
-    &lt;/filter&gt;
-  &lt;/defs&gt;
+  <image xlink:href="/files/6457/mdn_logo_only_color.png" x="10%" y="10%"
+      width="80%" height="80%" style="filter:url(#spotlight);"/>
+</svg>
+```
 
-  &lt;image xlink:href="/files/6457/mdn_logo_only_color.png" x="10%" y="10%"
-      width="80%" height="80%" style="filter:url(#spotlight);"/&gt;
-&lt;/svg&gt;</pre>
+### Result
 
-<h3 id="Result">Result</h3>
+{{EmbedLiveSample("Example", 200, 200)}}
 
-<p>{{EmbedLiveSample("Example", 200, 200)}}</p>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("filter")}}</li>
- <li>{{SVGElement("animate")}}</li>
- <li>{{SVGElement("set")}}</li>
- <li>{{SVGElement("feDiffuseLighting")}}</li>
- <li>{{SVGElement("feSpecularLighting")}}</li>
- <li>{{SVGElement("feDistantLight")}}</li>
- <li>{{SVGElement("fePointLight")}}</li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Filter_effects">SVG tutorial: Filter effects</a></li>
-</ul>
+*   {{SVGElement("filter")}}
+*   {{SVGElement("animate")}}
+*   {{SVGElement("set")}}
+*   {{SVGElement("feDiffuseLighting")}}
+*   {{SVGElement("feSpecularLighting")}}
+*   {{SVGElement("feDistantLight")}}
+*   {{SVGElement("fePointLight")}}
+*   [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)

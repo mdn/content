@@ -6,63 +6,65 @@ tags:
   - SVG
   - SVG Attribute
 ---
-<div>{{SVGRef}}{{Deprecated_Header}}</div>
+{{SVGRef}}{{Deprecated_Header}}
 
-<p>The <strong><code>baseProfile</code></strong> attribute describes the minimum SVG language profile that the author believes is necessary to correctly render the content. The attribute does not specify any processing restrictions; It can be considered metadata.</p>
+The **`baseProfile`** attribute describes the minimum SVG language profile that the author believes is necessary to correctly render the content. The attribute does not specify any processing restrictions; It can be considered metadata.
 
-<p>For example, the value of the attribute could be used by an authoring tool to warn the user when they are modifying the document beyond the scope of the specified base profile.</p>
+For example, the value of the attribute could be used by an authoring tool to warn the user when they are modifying the document beyond the scope of the specified base profile.
 
-<p>Each SVG profile should define the text that is appropriate for this attribute.</p>
+Each SVG profile should define the text that is appropriate for this attribute.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("svg")}}</li>
-</ul>
+*   {{SVGElement("svg")}}
 
-<h2 id="Context_notes">Context notes</h2>
+## Context notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>Profile name</td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>none</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>Profile name</td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>none</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: svg">&lt;svg width="120" height="120" version="1.1"
- xmlns="http://www.w3.org/2000/svg" baseProfile="full"&gt;
+```svg
+<svg width="120" height="120" version="1.1"
+ xmlns="http://www.w3.org/2000/svg" baseProfile="full">
 
   ...
 
-&lt;/svg&gt;</pre>
+</svg>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG1.1", "struct.html#SVGElementBaseProfileAttribute", "baseProfile")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "struct.html#SVGElementBaseProfileAttribute", "baseProfile")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>

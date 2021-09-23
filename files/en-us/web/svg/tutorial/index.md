@@ -7,48 +7,46 @@ tags:
   - NeedsHelp
   - NeedsUpdate
   - SVG
-  - 'SVG:Tutorial'
+  - SVG:Tutorial
 ---
-<p>Scalable Vector Graphics, <a href="/en-US/docs/Web/SVG">SVG</a>, is a W3C XML dialect to mark up graphics. It is partially implemented in Firefox, Opera, WebKit browsers, Internet Explorer and other browsers.</p>
+Scalable Vector Graphics, [SVG](/en-US/docs/Web/SVG), is a W3C XML dialect to mark up graphics. It is partially implemented in Firefox, Opera, WebKit browsers, Internet Explorer and other browsers.
 
-<p>This tutorial aims to explain the internals of SVG and is packed with technical details. If you just want to draw beautiful images, you might find more useful resources at <a href="https://inkscape.org/en/learn/">Inkscape's documentation page</a>. Another good introduction to SVG is provided by the W3C's <a href="https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html">SVG Primer</a>.</p>
+This tutorial aims to explain the internals of SVG and is packed with technical details. If you just want to draw beautiful images, you might find more useful resources at [Inkscape's documentation page](https://inkscape.org/en/learn/). Another good introduction to SVG is provided by the W3C's [SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html).
 
-<h2 id="Introducing_SVG_from_Scratch">Introducing SVG from Scratch</h2>
+## Introducing SVG from Scratch
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Introduction">Introduction</a></li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Getting_Started">Getting Started</a></li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Positions">Positions</a></li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Basic_Shapes">Basic Shapes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Paths">Paths</a></li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes">Fills and Strokes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Gradients">Gradients</a></li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Patterns">Patterns</a></li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Texts">Texts</a></li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Basic_Transformations">Basic Transformations</a></li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Clipping_and_masking">Clipping and masking</a></li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Other_content_in_SVG">Other content in SVG</a></li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Filter_effects">Filter effects</a></li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/SVG_fonts">SVG fonts</a></li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/SVG_Image_Tag">SVG Image tag</a></li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Tools_for_SVG">Tools for SVG</a></li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/SVG_and_CSS">SVG and CSS</a></li>
-</ul>
+*   [Introduction](/en-US/docs/Web/SVG/Tutorial/Introduction)
+*   [Getting Started](/en-US/docs/Web/SVG/Tutorial/Getting_Started)
+*   [Positions](/en-US/docs/Web/SVG/Tutorial/Positions)
+*   [Basic Shapes](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes)
+*   [Paths](/en-US/docs/Web/SVG/Tutorial/Paths)
+*   [Fills and Strokes](/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes)
+*   [Gradients](/en-US/docs/Web/SVG/Tutorial/Gradients)
+*   [Patterns](/en-US/docs/Web/SVG/Tutorial/Patterns)
+*   [Texts](/en-US/docs/Web/SVG/Tutorial/Texts)
+*   [Basic Transformations](/en-US/docs/Web/SVG/Tutorial/Basic_Transformations)
+*   [Clipping and masking](/en-US/docs/Web/SVG/Tutorial/Clipping_and_masking)
+*   [Other content in SVG](/en-US/docs/Web/SVG/Tutorial/Other_content_in_SVG)
+*   [Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)
+*   [SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts)
+*   [SVG Image tag](/en-US/docs/Web/SVG/Tutorial/SVG_Image_Tag)
+*   [Tools for SVG](/en-US/docs/Web/SVG/Tutorial/Tools_for_SVG)
+*   [SVG and CSS](/en-US/docs/Web/SVG/Tutorial/SVG_and_CSS)
 
-<p>The following topics are more advanced and hence should get their own tutorials.</p>
+The following topics are more advanced and hence should get their own tutorials.
 
-<h2 id="Scripting_SVG_with_JavaScript">Scripting SVG with JavaScript</h2>
+## Scripting SVG with JavaScript
 
-<p>TBD</p>
+TBD
 
-<h2 id="SVG_filters_tutorial">SVG filters tutorial</h2>
+## SVG filters tutorial
 
-<p>TBD</p>
+TBD
 
-<h2 id="Animations_with_SMIL_in_SVG">Animations with SMIL in SVG</h2>
+## Animations with SMIL in SVG
 
-<p>TBD</p>
+TBD
 
-<h2 id="Creating_fonts_in_SVG">Creating fonts in SVG</h2>
+## Creating fonts in SVG
 
-<p>TBD</p>
+TBD

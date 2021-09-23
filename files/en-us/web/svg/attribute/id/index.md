@@ -6,93 +6,90 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.core.id
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>id</code></strong> attribute assigns a unique name to an element.</p>
+The **`id`** attribute assigns a unique name to an element.
 
-<p>You can use this attribute with any SVG element.</p>
+You can use this attribute with any SVG element.
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: html">&lt;svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;style type="text/css"&gt;
-    &lt;![CDATA[
+```html
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <style type="text/css">
+    <![CDATA[
       #smallRect {
         stroke: #000066;
         fill: #00cc00;
       }
-    ]]&gt;
-  &lt;/style&gt;
+    ]]>
+  </style>
 
-  &lt;rect id="smallRect" x="10" y="10" width="100" height="100" /&gt;
-&lt;/svg&gt;
-</pre>
+  <rect id="smallRect" x="10" y="10" width="100" height="100" />
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "120", "120")}}</p>
+{{EmbedLiveSample("Example", "120", "120")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>&lt;id&gt;</td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>&#x3C;id></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt>&lt;id&gt;</dt>
- <dd>
- <p>Specifies the element's ID. The ID must be unique within the node tree, must not be an empty string, and must not contain any whitespace characters.</p>
+*   \<id>
+    *   : Specifies the element's ID. The ID must be unique within the node tree, must not be an empty string, and must not contain any whitespace characters.
 
- <div class="notecard note">
- <p><strong>Note:</strong> You should avoid the use of <code>id</code> values that would be parsed as an SVG view specification (e.g., <code>MyDrawing.svg#svgView(viewBox(0,200,1000,1000))</code>) or a basic media fragment when used as a URL target fragment.</p>
- </div>
+        > **Note:** You should avoid the use of `id` values that would be parsed as an SVG view specification (e.g., `MyDrawing.svg#svgView(viewBox(0,200,1000,1000))`) or a basic media fragment when used as a URL target fragment.
 
- <p>It must be valid in XML documents. A stand-alone SVG document uses XML 1.0 syntax, which specifies that valid IDs only include designated characters (letters, digits, and a few punctuation marks), and do not start with a digit, a full stop (.) character, or a hyphen-minus (-) character.</p>
- </dd>
-</dl>
+        It must be valid in XML documents. A stand-alone SVG document uses XML 1.0 syntax, which specifies that valid IDs only include designated characters (letters, digits, and a few punctuation marks), and do not start with a digit, a full stop (.) character, or a hyphen-minus (-) character.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "struct.html#IDAttribute", "id")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Defines the allowed values in more detail.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "struct.html#IDAttribute", "id")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "struct.html#IDAttribute", "id")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>Defines the allowed values in more detail.</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "struct.html#IDAttribute", "id")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTML/Global_attributes/id">HTML <code>id</code></a></li>
- <li>{{SVGAttr("class")}}</li>
-</ul>
+*   [HTML `id`](/en-US/docs/Web/HTML/Global_attributes/id)
+*   {{SVGAttr("class")}}

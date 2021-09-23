@@ -15,48 +15,42 @@ tags:
   - Web
   - l10n:priority
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<h2>Getting Started with SVG</h2>
+## Getting Started with SVG
 
-<p><strong>Scalable Vector Graphics (SVG)</strong> are an <a href="/en-US/docs/Web/XML">XML</a>-based markup language for describing two-dimensional based <a href="https://en.wikipedia.org/wiki/Vector_graphics">vector graphics</a>.</p>
+**Scalable Vector Graphics (SVG)** are an [XML](/en-US/docs/Web/XML)-based markup language for describing two-dimensional based [vector graphics](https://en.wikipedia.org/wiki/Vector_graphics).
 
-<p>As such, it's a text-based, open Web standard for describing images that can be rendered cleanly at any size and are designed specifically to work well with other web standards including <a href="/en-US/docs/Web/CSS">CSS</a>, <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a>, <a href="/en-US/docs/Web/JavaScript">JavaScript</a>, and <a href="/en-US/docs/Web/SVG/SVG_animation_with_SMIL">SMIL</a>. SVG is, essentially, to graphics what <a href="/en-US/docs/Web/HTML">HTML</a> is to text.</p>
+As such, it's a text-based, open Web standard for describing images that can be rendered cleanly at any size and are designed specifically to work well with other web standards including [CSS](/en-US/docs/Web/CSS), [DOM](/en-US/docs/Web/API/Document_Object_Model), [JavaScript](/en-US/docs/Web/JavaScript), and [SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL). SVG is, essentially, to graphics what [HTML](/en-US/docs/Web/HTML) is to text.
 
-<p>SVG images and their related behaviors are defined in <a href="/en-US/docs/Web/XML">XML</a> text files, which means they can be searched, indexed, scripted, and compressed. Additionally, this means they can be created and edited with any text editor or with drawing software.</p>
+SVG images and their related behaviors are defined in [XML](/en-US/docs/Web/XML) text files, which means they can be searched, indexed, scripted, and compressed. Additionally, this means they can be created and edited with any text editor or with drawing software.
 
-<p>Compared to classic bitmapped image formats such as {{Glossary("JPEG")}} or {{Glossary("PNG")}}, SVG-format vector images can be rendered at any size without loss of quality and can be easily localized by updating the text within them, without the need of a graphical editor to do so. With proper libraries, SVG files can even be localized on-the-fly.</p>
+Compared to classic bitmapped image formats such as {{Glossary("JPEG")}} or {{Glossary("PNG")}}, SVG-format vector images can be rendered at any size without loss of quality and can be easily localized by updating the text within them, without the need of a graphical editor to do so. With proper libraries, SVG files can even be localized on-the-fly.
 
-<p>SVG has been developed by the <a href="https://www.w3.org/">World Wide Web Consortium (W3C)</a> since 1999.</p>
+SVG has been developed by the [World Wide Web Consortium (W3C)](https://www.w3.org/) since 1999.
 
-<p>See also, <a href="/en-US/docs/Web/SVG/Tutorial">SVG Tutorial</a></p>
+See also, [SVG Tutorial](/en-US/docs/Web/SVG/Tutorial)
 
-<h2 id="Documentation">Documentation</h2>
+## Documentation
 
-<dl>
-  <dt><a href="/en-US/docs/Web/SVG/Element">SVG element reference</a></dt>
-  <dd>Details about each SVG element.</dd>
-  <dt><a href="/en-US/docs/Web/SVG/Attribute">SVG attribute reference</a></dt>
-  <dd>Details about each SVG attribute.</dd>
-  <dt><a href="/en-US/docs/Web/API/Document_Object_Model#svg_interfaces">SVG DOM interface reference</a></dt>
-  <dd>Details about the SVG DOM API, for interaction with JavaScript.</dd>
-  <dt><a href="/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content">Applying SVG effects to HTML content</a></dt>
-  <dd>SVG works together with {{Glossary("HTML")}}, {{Glossary("CSS")}} and {{Glossary("JavaScript")}}. Use SVG to <a href="/en-US/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction">enhance a regular HTML page or web application</a>.</dd>
-</dl>
+*   [SVG element reference](/en-US/docs/Web/SVG/Element)
+    *   : Details about each SVG element.
+*   [SVG attribute reference](/en-US/docs/Web/SVG/Attribute)
+    *   : Details about each SVG attribute.
+*   [SVG DOM interface reference](/en-US/docs/Web/API/Document_Object_Model#svg_interfaces)
+    *   : Details about the SVG DOM API, for interaction with JavaScript.
+*   [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+    *   : SVG works together with {{Glossary("HTML")}}, {{Glossary("CSS")}} and {{Glossary("JavaScript")}}. Use SVG to [enhance a regular HTML page or web application](/en-US/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction).
 
-<h2 id="Tools">Tools</h2>
+## Tools
 
-<ul>
-  <li><a href="https://github.com/w3c/svgwg/wiki/Testing">SVG Test Suite</a></li>
-  <li><a href="https://validator.w3.org/#validate_by_input">Markup Validator</a></li>
-</ul>
+*   [SVG Test Suite](https://github.com/w3c/svgwg/wiki/Testing)
+*   [Markup Validator](https://validator.w3.org/#validate_by_input)
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<ul>
-  <li><a href="https://jwatt.org/svg/authoring/">SVG authoring guidelines</a></li>
-  <li><a href="/en-US/docs/Web/SVG/SVG_as_an_Image">SVG as an image</a></li>
-  <li><a href="/en-US/docs/Web/SVG/SVG_animation_with_SMIL">SVG animation with SMIL</a></li>
-  <li><a href="https://plurib.us/1shot/2007/svg_gallery/">SVG art gallery</a></li>
-  <li><a href="https://d3js.org">D3</a> (JavaScript library for visualizing data with HTML, SVG, and CSS)</li>
-</ul>
+*   [SVG authoring guidelines](https://jwatt.org/svg/authoring/)
+*   [SVG as an image](/en-US/docs/Web/SVG/SVG_as_an_Image)
+*   [SVG animation with SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL)
+*   [SVG art gallery](https://plurib.us/1shot/2007/svg_gallery/)
+*   [D3](https://d3js.org) (JavaScript library for visualizing data with HTML, SVG, and CSS)

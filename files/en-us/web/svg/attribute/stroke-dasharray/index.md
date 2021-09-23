@@ -6,109 +6,110 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.stroke-dasharray
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>stroke-dasharray</code></strong> attribute is a presentation attribute defining the pattern of dashes and gaps used to paint the outline of the shape;</p>
+The **`stroke-dasharray`** attribute is a presentation attribute defining the pattern of dashes and gaps used to paint the outline of the shape;
 
-<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>stroke-dasharray</code> can be used as a CSS property.</p></div>
+> **Note:** As a presentation attribute, `stroke-dasharray` can be used as a CSS property.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
- <li>{{SVGElement('altGlyph')}}</li>
- <li>{{SVGElement('circle')}}</li>
- <li>{{SVGElement('ellipse')}}</li>
- <li>{{SVGElement('path')}}</li>
- <li>{{SVGElement('line')}}</li>
- <li>{{SVGElement('polygon')}}</li>
- <li>{{SVGElement('polyline')}}</li>
- <li>{{SVGElement('rect')}}</li>
- <li>{{SVGElement('text')}}</li>
- <li>{{SVGElement('textPath')}}</li>
- <li>{{SVGElement('tref')}}</li>
- <li>{{SVGElement('tspan')}}</li>
-</ul>
+*   {{SVGElement('altGlyph')}}
+*   {{SVGElement('circle')}}
+*   {{SVGElement('ellipse')}}
+*   {{SVGElement('path')}}
+*   {{SVGElement('line')}}
+*   {{SVGElement('polygon')}}
+*   {{SVGElement('polyline')}}
+*   {{SVGElement('rect')}}
+*   {{SVGElement('text')}}
+*   {{SVGElement('textPath')}}
+*   {{SVGElement('tref')}}
+*   {{SVGElement('tspan')}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- No dashes nor gaps --&gt;
-  &lt;line x1="0" y1="1" x2="30" y2="1" stroke="black" /&gt;
+```html
+<svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg">
+  <!-- No dashes nor gaps -->
+  <line x1="0" y1="1" x2="30" y2="1" stroke="black" />
 
-  &lt;!-- Dashes and gaps of the same size --&gt;
-  &lt;line x1="0" y1="3" x2="30" y2="3" stroke="black"
-          stroke-dasharray="4" /&gt;
+  <!-- Dashes and gaps of the same size -->
+  <line x1="0" y1="3" x2="30" y2="3" stroke="black"
+          stroke-dasharray="4" />
 
-  &lt;!-- Dashes and gaps of different sizes --&gt;
-  &lt;line x1="0" y1="5" x2="30" y2="5" stroke="black"
-          stroke-dasharray="4 1" /&gt;
+  <!-- Dashes and gaps of different sizes -->
+  <line x1="0" y1="5" x2="30" y2="5" stroke="black"
+          stroke-dasharray="4 1" />
 
-  &lt;!-- Dashes and gaps of various sizes with an odd number of values --&gt;
-  &lt;line x1="0" y1="7" x2="30" y2="7" stroke="black"
-          stroke-dasharray="4 1 2" /&gt;
+  <!-- Dashes and gaps of various sizes with an odd number of values -->
+  <line x1="0" y1="7" x2="30" y2="7" stroke="black"
+          stroke-dasharray="4 1 2" />
 
-  &lt;!-- Dashes and gaps of various sizes with an even number of values --&gt;
-  &lt;line x1="0" y1="9" x2="30" y2="9" stroke="black"
-          stroke-dasharray="4 1 2 3" /&gt;
-&lt;/svg&gt;
-</pre>
+  <!-- Dashes and gaps of various sizes with an even number of values -->
+  <line x1="0" y1="9" x2="30" y2="9" stroke="black"
+          stroke-dasharray="4 1 2 3" />
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", '100%', 150)}}</p>
+{{EmbedLiveSample("Example", '100%', 150)}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>none</code> | <var>&lt;dasharray&gt;</var></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>none</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>none</code> | <var>&#x3C;dasharray></var></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>none</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><var>&lt;dasharray&gt;</var></dt>
- <dd>
- <p>A list of comma and/or white space separated <a href="/en-US/docs/Web/SVG/Content_type#length"><var>&lt;length&gt;</var></a>s and <a href="/en-US/docs/Web/SVG/Content_type#percentage"><var>&lt;percentage&gt;</var></a>s that specify the lengths of alternating dashes and gaps.</p>
+*   *\<dasharray>*
+    *   : A list of comma and/or white space separated [*\<length>*](/en-US/docs/Web/SVG/Content_type#length)s and [*\<percentage>*](/en-US/docs/Web/SVG/Content_type#percentage)s that specify the lengths of alternating dashes and gaps.
 
- <p>If an odd number of values is provided, then the list of values is repeated to yield an even number of values. Thus, <code>5,3,2</code> is equivalent to <code>5,3,2,5,3,2</code>.</p>
- </dd>
-</dl>
+        If an odd number of values is provided, then the list of values is repeated to yield an even number of values. Thus, `5,3,2` is equivalent to `5,3,2,5,3,2`.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "painting.html#StrokeDasharrayProperty", "stroke-dasharray")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Definition for shapes and texts</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "painting.html#StrokeDasharrayProperty", "stroke-dasharray")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for shapes and texts</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "painting.html#StrokeDasharrayProperty", "stroke-dasharray")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>Definition for shapes and texts</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "painting.html#StrokeDasharrayProperty", "stroke-dasharray")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for shapes and texts</td>
+    </tr>
+  </tbody>
 </table>

@@ -7,79 +7,80 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.marker.markerWidth
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>markerWidth</code></strong> attribute represents the width of the viewport into which the {{SVGElement("marker")}} is to be fitted when it is rendered according to the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.</p>
+The **`markerWidth`** attribute represents the width of the viewport into which the {{SVGElement("marker")}} is to be fitted when it is rendered according to the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("marker")}}</li>
-</ul>
+*   {{SVGElement("marker")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>{{cssxref("length-percentage")}} | {{cssxref("number")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>3</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        {{cssxref("length-percentage")}} |
+        {{cssxref("number")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>3</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;length-percentage&gt;</code></dt>
- <dd>This value defines either an absolute or a relative width of the marker.<br>
- Relative values refer to the width specified via the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.</dd>
- <dt><code>&lt;number&gt;</code></dt>
- <dd>This value defines the width of the marker in the units defined by the {{SVGAttr("markerUnits")}} attribute.</dd>
-</dl>
+*   `<length-percentage>`
+    *   : This value defines either an absolute or a relative width of the marker.
+        Relative values refer to the width specified via the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
+*   `<number>`
+    *   : This value defines the width of the marker in the units defined by the {{SVGAttr("markerUnits")}} attribute.
 
-<p>A value of zero disables rendering of the element and negative values are an error.</p>
+A value of zero disables rendering of the element and negative values are an error.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "painting.html#MarkerWidthAttribute", "markerWidth")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Allowed percentage and number values.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "painting.html#MarkerWidthAttribute", "markerWidth")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "painting.html#MarkerWidthAttribute", "markerWidth")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>Allowed percentage and number values.</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "painting.html#MarkerWidthAttribute", "markerWidth")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("marker")}}</li>
- <li>{{SVGAttr("markerHeight")}}</li>
- <li>{{SVGAttr("markerUnits")}}</li>
- <li>{{SVGAttr("viewBox")}}</li>
- <li>{{SVGAttr("preserveAspectRatio")}}</li>
-</ul>
+*   {{SVGElement("marker")}}
+*   {{SVGAttr("markerHeight")}}
+*   {{SVGAttr("markerUnits")}}
+*   {{SVGAttr("viewBox")}}
+*   {{SVGAttr("preserveAspectRatio")}}

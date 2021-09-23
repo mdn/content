@@ -6,82 +6,88 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.animate.from
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <code><strong>from</strong></code> attribute indicates the initial value of the attribute that will be modified during the animation.</p>
+The **`from`** attribute indicates the initial value of the attribute that will be modified during the animation.
 
-<p>When used with the {{SVGAttr("to")}} attribute, the animation will change the modified attribute from the <code>from</code> value to the <code>to</code> value. When used with the {{SVGAttr("by")}} attribute, the animation will change the attribute relatively from the <code>from</code> value by the value specified in <code>by</code>.</p>
+When used with the {{SVGAttr("to")}} attribute, the animation will change the modified attribute from the `from` value to the `to` value. When used with the {{SVGAttr("by")}} attribute, the animation will change the attribute relatively from the `from` value by the value specified in `by`.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("animate")}}</li>
-  <li>{{SVGElement("animateColor")}}</li>
-  <li>{{SVGElement("animateMotion")}}</li>
-  <li>{{SVGElement("animateTransform")}}</li>
-</ul>
+*   {{SVGElement("animate")}}
+*   {{SVGElement("animateColor")}}
+*   {{SVGElement("animateMotion")}}
+*   {{SVGElement("animateTransform")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[3]">&lt;svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;rect x="10" y="10" height="100"&gt;
-    &lt;animate attributeName="width" fill="freeze" from="100" to="150" dur="3s"/&gt;
-  &lt;/rect&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" height="100">
+    <animate attributeName="width" fill="freeze" from="100" to="150" dur="3s"/>
+  </rect>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "200", "200")}}</p>
+{{EmbedLiveSample("Example", "200", "200")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><em>See below</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><em>See below</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The exact value type for this attribute depends on the value of the attribute that will be animated.</p>
+The exact value type for this attribute depends on the value of the attribute that will be animated.
 
-<p>When a list of values is defined via the {{SVGAttr("values")}} attribute, the <code>from</code> attribute is ignored.</p>
+When a list of values is defined via the {{SVGAttr("values")}} attribute, the `from` attribute is ignored.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG Animations 2", "#FromAttribute", "from")}}</td>
-   <td>{{Spec2("SVG Animations 2")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "animate.html#FromAttribute", "from")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG Animations 2", "#FromAttribute", "from")}}
+      </td>
+      <td>{{Spec2("SVG Animations 2")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "animate.html#FromAttribute", "from")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

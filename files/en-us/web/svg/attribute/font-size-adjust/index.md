@@ -6,103 +6,103 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.font-size-adjust
 ---
-<p>The <code>font-size-adjust</code> attribute allows authors to specify an aspect value for an element that will preserve the x-height of the first choice font in a substitute font.</p>
+The `font-size-adjust` attribute allows authors to specify an aspect value for an element that will preserve the x-height of the first choice font in a substitute font.
 
-<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>font-size-adjust</code> can be used as a CSS property. See the {{cssxref("font-size-adjust", "CSS font-size-adjust")}} property for more information.</p></div>
+> **Note:** As a presentation attribute, `font-size-adjust` can be used as a CSS property. See the {{cssxref("font-size-adjust", "CSS font-size-adjust")}} property for more information.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("altGlyph")}}</li>
-  <li>{{SVGElement("text")}}</li>
-  <li>{{SVGElement("textPath")}}</li>
-  <li>{{SVGElement("tref")}}</li>
-  <li>{{SVGElement("tspan")}}</li>
-</ul>
+*   {{SVGElement("altGlyph")}}
+*   {{SVGElement("text")}}
+*   {{SVGElement("textPath")}}
+*   {{SVGElement("tref")}}
+*   {{SVGElement("tspan")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[9]">&lt;svg width="600" height="80" viewBox="0 0 500 80"
-    xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;text y="20" font-family="Times, serif" font-size="10px"&gt;
+```html
+<svg width="600" height="80" viewBox="0 0 500 80"
+    xmlns="http://www.w3.org/2000/svg">
+  <text y="20" font-family="Times, serif" font-size="10px">
     This text uses the Times font (10px), which is hard to read in small sizes.
-  &lt;/text&gt;
-  &lt;text y="40" font-family="Verdana, sans-serif" font-size="10px"&gt;
+  </text>
+  <text y="40" font-family="Verdana, sans-serif" font-size="10px">
     This text uses the Verdana font (10px), which has relatively large lowercase letters.
-  &lt;/text&gt;
-  &lt;text y="60" font-family="Times, serif" font-size="10px" font-size-adjust="0.58"&gt;
+  </text>
+  <text y="60" font-family="Times, serif" font-size="10px" font-size-adjust="0.58">
     This is the 10px Times, but now adjusted to the same aspect ratio as the Verdana.
-  &lt;/text&gt;
-&lt;/svg&gt;</pre>
+  </text>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "600", "100")}}</p>
+{{EmbedLiveSample("Example", "600", "100")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>none</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>none</code> | {{cssxref("number")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>none</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>none</code> | {{cssxref("number")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Choose the size of the font based only on the {{ Cssxref("font-size") }} property.</dd>
- <dt>{{cssxref("&lt;number&gt;")}}</dt>
- <dd>
- <p>Choose the size of the font so that its lowercase letters (as determined by the x-height of the font) are the specified number times the {{ Cssxref("font-size") }}.</p>
+*   `none`
+    *   : Choose the size of the font based only on the {{ Cssxref("font-size") }} property.
+*   {{cssxref("&lt;number&gt;")}}
+    *   : Choose the size of the font so that its lowercase letters (as determined by the x-height of the font) are the specified number times the {{ Cssxref("font-size") }}.
 
- <p>The number specified should generally be the aspect ratio (ratio of x-height to font size) of the first choice {{ Cssxref("font-family") }}. This means that the first-choice font, when available, will appear the same size in browsers, whether or not they support <code>font-size-adjust</code>.</p>
+        The number specified should generally be the aspect ratio (ratio of x-height to font size) of the first choice {{ Cssxref("font-family") }}. This means that the first-choice font, when available, will appear the same size in browsers, whether or not they support `font-size-adjust`.
 
- <p><code>0</code> yields text of zero height (hidden text).</p>
- </dd>
-</dl>
+        `0` yields text of zero height (hidden text).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Fonts", "#font-size-adjust-prop", "font-size-adjust")}}</td>
-   <td>{{Spec2("CSS3 Fonts")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#FontSizeAdjustProperty", "font-size-adjust")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("CSS3 Fonts", "#font-size-adjust-prop", "font-size-adjust")}}
+      </td>
+      <td>{{Spec2("CSS3 Fonts")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "text.html#FontSizeAdjustProperty", "font-size-adjust")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("font-size-adjust","CSS font-size-adjust")}}</li>
-</ul>
+*   {{cssxref("font-size-adjust","CSS font-size-adjust")}}

@@ -7,88 +7,92 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feConvolveMatrix.preserveAlpha
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>the <code>preserveAlpha</code> attribute indicates how a {{SVGElement("feConvolveMatrix")}} element handled alpha transparency.</p>
+the `preserveAlpha` attribute indicates how a {{SVGElement("feConvolveMatrix")}} element handled alpha transparency.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("feConvolveMatrix")}}</li>
-</ul>
+*   {{SVGElement("feConvolveMatrix")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[3,6]">&lt;svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;filter id="convolveMatrix1" x="0" y="0" width="100%" height="100%"&gt;
-    &lt;feConvolveMatrix kernelMatrix="1 -1 2 0 0 0 0 0 -2" preserveAlpha="true"/&gt;
-  &lt;/filter&gt;
-  &lt;filter id="convolveMatrix2" x="0" y="0" width="100%" height="100%"&gt;
-    &lt;feConvolveMatrix kernelMatrix="1 -1 2 0 0 0 0 0 -2" preserveAlpha="false"/&gt;
-  &lt;/filter&gt;
+```html
+<svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
+  <filter id="convolveMatrix1" x="0" y="0" width="100%" height="100%">
+    <feConvolveMatrix kernelMatrix="1 -1 2 0 0 0 0 0 -2" preserveAlpha="true"/>
+  </filter>
+  <filter id="convolveMatrix2" x="0" y="0" width="100%" height="100%">
+    <feConvolveMatrix kernelMatrix="1 -1 2 0 0 0 0 0 -2" preserveAlpha="false"/>
+  </filter>
 
-  &lt;image xlink:href="//developer.mozilla.org/files/6457/mdn_logo_only_color.png" width="200" height="200"
-      style="filter:url(#convolveMatrix1);"/&gt;
-  &lt;image xlink:href="//developer.mozilla.org/files/6457/mdn_logo_only_color.png" width="200" height="200"
-      style="filter:url(#convolveMatrix2); transform:translateX(220px);"/&gt;
-&lt;/svg&gt;</pre>
+  <image xlink:href="//developer.mozilla.org/files/6457/mdn_logo_only_color.png" width="200" height="200"
+      style="filter:url(#convolveMatrix1);"/>
+  <image xlink:href="//developer.mozilla.org/files/6457/mdn_logo_only_color.png" width="200" height="200"
+      style="filter:url(#convolveMatrix2); transform:translateX(220px);"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "420", "200")}}</p>
+{{EmbedLiveSample("Example", "420", "200")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>false</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>true</code> | <code>false</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>false</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>true</code> | <code>false</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>true</code></dt>
- <dd>This value indicates that the convolution will only apply to the color channels. In this case, the filter will temporarily unpremultiply the color component values and apply the kernel.</dd>
- <dt><code>false</code></dt>
- <dd>This value indicates that the convolution will apply to all channels, including the alpha channel.</dd>
-</dl>
+*   `true`
+    *   : This value indicates that the convolution will only apply to the color channels. In this case, the filter will temporarily unpremultiply the color component values and apply the kernel.
+*   `false`
+    *   : This value indicates that the convolution will apply to all channels, including the alpha channel.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Filters 1.0", "#element-attrdef-feconvolvematrix-preservealpha", "preserveAlpha")}}</td>
-   <td>{{Spec2("Filters 1.0")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#feConvolveMatrixElementPreserveAlphaAttribute", "preserveAlpha")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("Filters 1.0", "#element-attrdef-feconvolvematrix-preservealpha", "preserveAlpha")}}
+      </td>
+      <td>{{Spec2("Filters 1.0")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "filters.html#feConvolveMatrixElementPreserveAlphaAttribute", "preserveAlpha")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

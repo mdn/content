@@ -6,53 +6,57 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.cursor
 ---
-<p>« <a href="/en-US/docs/Web/SVG/Attribute">SVG Attribute reference home</a></p>
+« [SVG Attribute reference home](/en-US/docs/Web/SVG/Attribute)
 
-<p>The <code>cursor</code> attribute specifies the mouse cursor displayed when the mouse pointer is over an element.</p>
+The `cursor` attribute specifies the mouse cursor displayed when the mouse pointer is over an element.
 
-<p>This attribute behaves exactly like the {{ cssxref("cursor","CSS cursor") }} property except that if the browser supports the {{ SVGElement("cursor") }} element, you should be able to use it with the <a href="/en-US/docs/Web/SVG/Content_type#funciri">&lt;funciri&gt;</a> notation.</p>
+This attribute behaves exactly like the {{ cssxref("cursor","CSS cursor") }} property except that if the browser supports the {{ SVGElement("cursor") }} element, you should be able to use it with the [\<funciri>](/en-US/docs/Web/SVG/Content_type#funciri) notation.
 
-<p>As a presentation attribute, it also can be used as a property directly inside a CSS stylesheet, see {{ cssxref("cursor","CSS cursor") }} for further information.</p>
+As a presentation attribute, it also can be used as a property directly inside a CSS stylesheet, see {{ cssxref("cursor","CSS cursor") }} for further information.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Categories</th>
-   <td>Presentation attribute</td>
-  </tr>
-  <tr>
-   <th scope="row">Value</th>
-   <td>[[<a href="/en-US/docs/Web/SVG/Content_type#funciri">&lt;funciri&gt;</a>,]* [ <strong>auto</strong> | crosshair | default | pointer | move | e-resize | ne-resize | nw-resize | n-resize | se-resize | sw-resize | s-resize | w-resize| text | wait | help ]] | inherit</td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Normative document</th>
-   <td><a href="https://www.w3.org/TR/SVG11/interact.html#CursorProperty">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Categories</th>
+      <td>Presentation attribute</td>
+    </tr>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        [[<a href="/en-US/docs/Web/SVG/Content_type#funciri">&#x3C;funciri></a
+        >,]* [ <strong>auto</strong> | crosshair | default | pointer | move |
+        e-resize | ne-resize | nw-resize | n-resize | se-resize | sw-resize |
+        s-resize | w-resize| text | wait | help ]] | inherit
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Normative document</th>
+      <td>
+        <a href="https://www.w3.org/TR/SVG11/interact.html#CursorProperty"
+          >SVG 1.1 (2nd Edition)</a
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
+## Elements
 
-<h2 id="Elements">Elements</h2>
+The following elements can use the `cursor` attribute
 
-<p>The following elements can use the <code>cursor</code> attribute</p>
+*   [Container elements](/en-US/docs/Web/SVG/Element#container_elements) »
+*   [Graphics elements](/en-US/docs/Web/SVG/Element#graphics_elements) »
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Element#container_elements">Container elements</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Element#graphics_elements">Graphics elements</a> »</li>
-</ul>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{ cssxref("cursor","CSS cursor") }}</li>
-</ul>
+*   {{ cssxref("cursor","CSS cursor") }}

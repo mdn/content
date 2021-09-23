@@ -7,62 +7,70 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.svg.contentStyleType
 ---
-<div>{{SVGRef}}{{deprecated_header}}</div>
+{{SVGRef}}{{deprecated_header}}
 
-<p>The <strong><code>contentStyleType</code></strong> attribute specifies the style sheet language for the given document fragment on the {{SVGElement("svg")}} element.</p>
+The **`contentStyleType`** attribute specifies the style sheet language for the given document fragment on the {{SVGElement("svg")}} element.
 
-<p>This language is used for all instances of style that do not specify their own styling language, such as the {{SVGAttr("style")}} attribute that is available on many elements. The value specifies a media type, per <a class="external external-icon" href="http://www.ietf.org/rfc/rfc2046.txt" rel="noopener">MIME Part Two: Media Types [RFC2046]</a>.</p>
+This language is used for all instances of style that do not specify their own styling language, such as the {{SVGAttr("style")}} attribute that is available on many elements. The value specifies a media type, per [MIME Part Two: Media Types \[RFC2046\]](http://www.ietf.org/rfc/rfc2046.txt).
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>One of the content types specified in the <a class="external external-icon" href="http://www.ietf.org/rfc/rfc2046.txt" rel="noopener">Media Types</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>text/css</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        One of the content types specified in the
+        <a
+          class="external external-icon"
+          href="http://www.ietf.org/rfc/rfc2046.txt"
+          rel="noopener"
+          >Media Types</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>text/css</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Since CSS is the only widely deployed style sheet language for online styling and it's already defined as default value if <code>contentStyleType</code> is omitted, the attribute is not well supported in user agents. If other style sheet languages become more popular they might not use the {{SVGAttr("style")}} attribute, instead it could be easily declared which style language is used in the {{SVGElement("style")}}'s type attribute.</p>
+Since CSS is the only widely deployed style sheet language for online styling and it's already defined as default value if `contentStyleType` is omitted, the attribute is not well supported in user agents. If other style sheet languages become more popular they might not use the {{SVGAttr("style")}} attribute, instead it could be easily declared which style language is used in the {{SVGElement("style")}}'s type attribute.
 
-<p>The use of <code>contentStyleType</code> is therefore deprecated.</p>
+The use of `contentStyleType` is therefore deprecated.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG1.1", "script.html#ContentScriptTypeAttribute", "contentScriptType")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "script.html#ContentScriptTypeAttribute", "contentScriptType")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="http://www.ietf.org/rfc/rfc2046.txt">MIME Part Two: Media Types [RFC2046]</a></li>
- <li>{{SVGElement("style")}} element</li>
- <li>{{SVGAttr("style")}} attribute</li>
-</ul>
+*   [MIME Part Two: Media Types \[RFC2046\]](http://www.ietf.org/rfc/rfc2046.txt)
+*   {{SVGElement("style")}} element
+*   {{SVGAttr("style")}} attribute

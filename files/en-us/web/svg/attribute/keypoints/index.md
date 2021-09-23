@@ -6,97 +6,101 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.animateMotion.keyPoints
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>keyPoints</code></strong> attribute indicates the simple duration of an animation.</p>
+The **`keyPoints`** attribute indicates the simple duration of an animation.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("animate")}}</li>
-  <li>{{SVGElement("animateColor")}}</li>
-  <li>{{SVGElement("animateMotion")}}</li>
-  <li>{{SVGElement("animateTransform")}}</li>
-  <li>{{SVGElement("set")}}</li>
-</ul>
+*   {{SVGElement("animate")}}
+*   {{SVGElement("animateColor")}}
+*   {{SVGElement("animateMotion")}}
+*   {{SVGElement("animateTransform")}}
+*   {{SVGElement("set")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[10]">&lt;svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
-  &lt;path d="M10,110 A120,120 -45 0,1 110 10 A120,120 -45 0,1 10,110"
-      stroke="lightgrey" stroke-width="2" fill="none" id="motionPath"/&gt;
-  &lt;circle cx="10" cy="110" r="3" fill="lightgrey"/&gt;
-  &lt;circle cx="110" cy="10" r="3" fill="lightgrey"/&gt;
+```html
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M10,110 A120,120 -45 0,1 110 10 A120,120 -45 0,1 10,110"
+      stroke="lightgrey" stroke-width="2" fill="none" id="motionPath"/>
+  <circle cx="10" cy="110" r="3" fill="lightgrey"/>
+  <circle cx="110" cy="10" r="3" fill="lightgrey"/>
 
-  &lt;circle r="5" fill="red"&gt;
-    &lt;animateMotion dur="3s" repeatCount="indefinite"
-        keyPoints="0;0.5;1" keyTimes="0;0.15;1" calcMode="linear"&gt;
-      &lt;mpath xlink:href="#motionPath"/&gt;
-    &lt;/animateMotion&gt;
-  &lt;/circle&gt;
-&lt;/svg&gt;</pre>
+  <circle r="5" fill="red">
+    <animateMotion dur="3s" repeatCount="indefinite"
+        keyPoints="0;0.5;1" keyTimes="0;0.15;1" calcMode="linear">
+      <mpath xlink:href="#motionPath"/>
+    </animateMotion>
+  </circle>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "200", "120")}}</p>
+{{EmbedLiveSample("Example", "200", "120")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>{{cssxref("number")}} [; {{cssxref("number")}}]* ;?</td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>{{cssxref("number")}} [; {{cssxref("number")}}]* ;?</td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;number&gt; [; &lt;number&gt;] ;?</code></dt>
- <dd>This value defines a semicolon-separated list of floating point values between 0 and 1 and indicates how far along the motion path the object shall move at the moment in time specified by corresponding {{SVGAttr("keyTimes")}} value. The distance is calculated along the path specified by the {{SVGAttr("path")}} attribute. Each progress value in the list corresponds to a value in the <code>keyTimes</code> attribute list.
- <p>If a list of key points is specified, there must be exactly as many values in the <code>keyPoints</code> list as in the <code>keyTimes</code> list.</p>
+*   `<number> [; <number>] ;?`
+    *   : This value defines a semicolon-separated list of floating point values between 0 and 1 and indicates how far along the motion path the object shall move at the moment in time specified by corresponding {{SVGAttr("keyTimes")}} value. The distance is calculated along the path specified by the {{SVGAttr("path")}} attribute. Each progress value in the list corresponds to a value in the `keyTimes` attribute list.
 
- <p>If there's a semicolon at the end of the value, optionally followed by white space, both the semicolon and the trailing white space are ignored.</p>
+        If a list of key points is specified, there must be exactly as many values in the `keyPoints` list as in the `keyTimes` list.
 
- <p>If there are any errors in the value specification (i.e. bad values, too many or too few values), then that's an error.</p>
- </dd>
-</dl>
+        If there's a semicolon at the end of the value, optionally followed by white space, both the semicolon and the trailing white space are ignored.
 
-<h2 id="Specifications">Specifications</h2>
+        If there are any errors in the value specification (i.e. bad values, too many or too few values), then that's an error.
+
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG Animations 2", "#KeyPointsAttribute", "keyPoints")}}</td>
-   <td>{{Spec2("SVG Animations 2")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "animate.html#KeyPointsAttribute", "keyPoints")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG Animations 2", "#KeyPointsAttribute", "keyPoints")}}
+      </td>
+      <td>{{Spec2("SVG Animations 2")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "animate.html#KeyPointsAttribute", "keyPoints")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -7,90 +7,100 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feGaussianBlur.stdDeviation
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <code><strong>stdDeviation</strong></code> attribute defines the standard deviation for the blur operation.</p>
+The **`stdDeviation`** attribute defines the standard deviation for the blur operation.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("feGaussianBlur")}}</li>
-</ul>
+*   {{SVGElement("feGaussianBlur")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[3,6,9]">&lt;svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;filter id="gaussianBlur1"&gt;
-    &lt;feGaussianBlur stdDeviation="1" /&gt;
-  &lt;/filter&gt;
-  &lt;filter id="gaussianBlur2"&gt;
-    &lt;feGaussianBlur stdDeviation="5" /&gt;
-  &lt;/filter&gt;
-  &lt;filter id="gaussianBlur3" x="-30%" y="-30%" width="160%" height="160%"&gt;
-    &lt;feGaussianBlur stdDeviation="10" /&gt;
-  &lt;/filter&gt;
+```html
+<svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg">
+  <filter id="gaussianBlur1">
+    <feGaussianBlur stdDeviation="1" />
+  </filter>
+  <filter id="gaussianBlur2">
+    <feGaussianBlur stdDeviation="5" />
+  </filter>
+  <filter id="gaussianBlur3" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur stdDeviation="10" />
+  </filter>
 
-  &lt;circle cx="100" cy="100" r="50" style="filter: url(#gaussianBlur1);" /&gt;
-  &lt;circle cx="100" cy="100" r="50" style="filter: url(#gaussianBlur2); transform: translateX(140px);" /&gt;
-  &lt;circle cx="100" cy="100" r="50" style="filter: url(#gaussianBlur3); transform: translateX(280px);" /&gt;
-&lt;/svg&gt;</pre>
+  <circle cx="100" cy="100" r="50" style="filter: url(#gaussianBlur1);" />
+  <circle cx="100" cy="100" r="50" style="filter: url(#gaussianBlur2); transform: translateX(140px);" />
+  <circle cx="100" cy="100" r="50" style="filter: url(#gaussianBlur3); transform: translateX(280px);" />
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "480", "200")}}</p>
+{{EmbedLiveSample("Example", "480", "200")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#number-optional-number">&lt;number-optional-number&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/SVG/Content_type#number-optional-number"
+            >&#x3C;number-optional-number></a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;number-optional-number&gt;</code></dt>
- <dd>If two numbers are provided, the first number represents a standard deviation value along the x-axis. The second value represents a standard deviation along the y-axis. If one number is provided, then that value is used for both X and Y.<br>
- <br>
- A negative value is forbidden. A value of zero disables the effect of the given filter primitive (i.e., the result is the filter input image). If <code>stdDeviation</code> is 0 in only one of X or Y, then the effect is that the blur is only applied in the direction that has a non-zero value.</dd>
-</dl>
+*   `<number-optional-number>`
+    *   : If two numbers are provided, the first number represents a standard deviation value along the x-axis. The second value represents a standard deviation along the y-axis. If one number is provided, then that value is used for both X and Y.
 
-<h2 id="Specifications">Specifications</h2>
+        A negative value is forbidden. A value of zero disables the effect of the given filter primitive (i.e., the result is the filter input image). If `stdDeviation` is 0 in only one of X or Y, then the effect is that the blur is only applied in the direction that has a non-zero value.
+
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Filters 1.0", "#element-attrdef-fegaussianblur-stddeviation", "stdDeviation")}}</td>
-   <td>{{Spec2("Filters 1.0")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#feGaussianBlurStdDeviationAttribute", "stdDeviation")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("Filters 1.0", "#element-attrdef-fegaussianblur-stddeviation", "stdDeviation")}}
+      </td>
+      <td>{{Spec2("Filters 1.0")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "filters.html#feGaussianBlurStdDeviationAttribute", "stdDeviation")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

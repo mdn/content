@@ -9,26 +9,20 @@ tags:
   - SVG
 browser-compat: svg.attributes.style
 ---
-<p>The SVG styling attributes are all the attributes that can be specified on any SVG element to apply CSS styling effects.</p>
+The SVG styling attributes are all the attributes that can be specified on any SVG element to apply CSS styling effects.
 
-<ul>
- <li><a href="#attr-class"><code>class</code></a></li>
- <li><a href="#attr-style"><code>style</code></a></li>
-</ul>
+*   [`class`](#attr-class)
+*   [`style`](#attr-style)
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt>{{SVGAttr('class')}}</dt>
- <dd>Assigns a class name or set of class names to an element. It functions identically to the {{htmlattrxref('class')}} attribute in HTML.<br>
- <small><em>Value</em>: Any valid ID string; <em>Animatable</em>: <strong>Yes</strong></small></dd>
- <dt>{{SVGAttr('style')}}</dt>
- <dd>It specifies style information for its element. It functions identically to the {{htmlattrxref('style')}} attribute in HTML.<br>
- <small><em>Value</em>: Any valid style string; <em>Animatable</em>: <strong>No</strong></small>
+*   {{SVGAttr('class')}}
+    *   : Assigns a class name or set of class names to an element. It functions identically to the {{htmlattrxref('class')}} attribute in HTML.
+        *Value*: Any valid ID string; *Animatable*: **Yes**
+*   {{SVGAttr('style')}}
+    *   : It specifies style information for its element. It functions identically to the {{htmlattrxref('style')}} attribute in HTML.
+        *Value*: Any valid style string; *Animatable*: **No**
 
- </dd>
-</dl>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>{{Compat}}</p>
+{{Compat}}

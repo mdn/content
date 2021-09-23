@@ -7,93 +7,97 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feTurbulence.stitchTiles
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <code><strong>stitchTiles</strong></code> attribute defines how the Perlin Noise tiles behave at the border.</p>
+The **`stitchTiles`** attribute defines how the Perlin Noise tiles behave at the border.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("feTurbulence")}}</li>
-</ul>
+*   {{SVGElement("feTurbulence")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;filter id="noise1" x="0" y="0" width="100%" height="100%"&gt;
-    &lt;feTurbulence baseFrequency="0.025" stitchTiles="noStitch" /&gt;
-  &lt;/filter&gt;
-  &lt;filter id="noise2" x="0" y="0" width="100%" height="100%"&gt;
-    &lt;feTurbulence baseFrequency="0.025" stitchTiles="stitch" /&gt;
-  &lt;/filter&gt;
+```html
+<svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
+  <filter id="noise1" x="0" y="0" width="100%" height="100%">
+    <feTurbulence baseFrequency="0.025" stitchTiles="noStitch" />
+  </filter>
+  <filter id="noise2" x="0" y="0" width="100%" height="100%">
+    <feTurbulence baseFrequency="0.025" stitchTiles="stitch" />
+  </filter>
 
-  &lt;rect x="0" y="0" width="100" height="100" style="filter: url(#noise1);" /&gt;
-  &lt;rect x="0" y="0" width="100" height="100" style="filter: url(#noise1); transform: translate(100px, 0);" /&gt;
-  &lt;rect x="0" y="0" width="100" height="100" style="filter: url(#noise1); transform: translate(0, 100px);" /&gt;
-  &lt;rect x="0" y="0" width="100" height="100" style="filter: url(#noise1); transform: translate(100px, 100px);" /&gt;
+  <rect x="0" y="0" width="100" height="100" style="filter: url(#noise1);" />
+  <rect x="0" y="0" width="100" height="100" style="filter: url(#noise1); transform: translate(100px, 0);" />
+  <rect x="0" y="0" width="100" height="100" style="filter: url(#noise1); transform: translate(0, 100px);" />
+  <rect x="0" y="0" width="100" height="100" style="filter: url(#noise1); transform: translate(100px, 100px);" />
 
-  &lt;rect x="0" y="0" width="100" height="100" style="filter: url(#noise2); transform: translate(220px, 0);" /&gt;
-  &lt;rect x="0" y="0" width="100" height="100" style="filter: url(#noise2); transform: translate(320px, 0);" /&gt;
-  &lt;rect x="0" y="0" width="100" height="100" style="filter: url(#noise2); transform: translate(220px, 100px);" /&gt;
-  &lt;rect x="0" y="0" width="100" height="100" style="filter: url(#noise2); transform: translate(320px, 100px);" /&gt;
-&lt;/svg&gt;</pre>
+  <rect x="0" y="0" width="100" height="100" style="filter: url(#noise2); transform: translate(220px, 0);" />
+  <rect x="0" y="0" width="100" height="100" style="filter: url(#noise2); transform: translate(320px, 0);" />
+  <rect x="0" y="0" width="100" height="100" style="filter: url(#noise2); transform: translate(220px, 100px);" />
+  <rect x="0" y="0" width="100" height="100" style="filter: url(#noise2); transform: translate(320px, 100px);" />
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "420", "220")}}</p>
+{{EmbedLiveSample("Example", "420", "220")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>noStitch</code> | <code>stitch</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>noStitch</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>noStitch</code> | <code>stitch</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>noStitch</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>noStitch</code></dt>
- <dd>This value indicates that no attempt is made to achieve smooth transitions at the border of tiles which contain a turbulence function. Sometimes the result will show clear discontinuities at the tile borders.</dd>
- <dt><code>stitch</code></dt>
- <dd>This value indicates that the user agent will automatically adjust the x and y values of the base frequency such that the {{SVGElement("feTurbulence")}} node’s width and height (i.e., the width and height of the current subregion) contain an integral number of the tile width and height for the first octave.</dd>
-</dl>
+*   `noStitch`
+    *   : This value indicates that no attempt is made to achieve smooth transitions at the border of tiles which contain a turbulence function. Sometimes the result will show clear discontinuities at the tile borders.
+*   `stitch`
+    *   : This value indicates that the user agent will automatically adjust the x and y values of the base frequency such that the {{SVGElement("feTurbulence")}} node’s width and height (i.e., the width and height of the current subregion) contain an integral number of the tile width and height for the first octave.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Filters 1.0", "#element-attrdef-feturbulence-stitchtiles", "stitchTiles")}}</td>
-   <td>{{Spec2("Filters 1.0")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#feTurbulenceStitchTilesAttribute", "stitchTiles")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("Filters 1.0", "#element-attrdef-feturbulence-stitchtiles", "stitchTiles")}}
+      </td>
+      <td>{{Spec2("Filters 1.0")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "filters.html#feTurbulenceStitchTilesAttribute", "stitchTiles")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

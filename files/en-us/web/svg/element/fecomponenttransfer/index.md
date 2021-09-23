@@ -7,145 +7,143 @@ tags:
   - SVG Filter
 browser-compat: svg.elements.feComponentTransfer
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>&lt;feComponentTransfer&gt;</code></strong> <a href="/en-US/docs/Web/SVG">SVG</a> filter primitive performs color-component-wise remapping of data for each pixel. It allows operations like brightness adjustment, contrast adjustment, color balance or thresholding.</p>
+The **`<feComponentTransfer>`** [SVG](/en-US/docs/Web/SVG) filter primitive performs color-component-wise remapping of data for each pixel. It allows operations like brightness adjustment, contrast adjustment, color balance or thresholding.
 
-<p>The calculations are performed on non-premultiplied color values. The colors are modified by changing each channel (R, G, B, and A) to the result of what the children {{SVGElement("feFuncR")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncG")}}, and {{SVGElement("feFuncA")}} return.</p>
+The calculations are performed on non-premultiplied color values. The colors are modified by changing each channel (R, G, B, and A) to the result of what the children {{SVGElement("feFuncR")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncG")}}, and {{SVGElement("feFuncA")}} return.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#presentation_attributes">Presentation attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes">Filter primitive attributes</a></li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
-</ul>
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+*   [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+*   [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
+*   {{SVGAttr("class")}}
+*   {{SVGAttr("style")}}
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<ul>
- <li>{{SVGAttr("in")}}</li>
-</ul>
+*   {{SVGAttr("in")}}
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the {{domxref("SVGFEComponentTransferElement")}} interface.</p>
+This element implements the {{domxref("SVGFEComponentTransferElement")}} interface.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: html; highlight[12-17,20-24,27-31,34-38]">&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300"&gt;
-  &lt;defs&gt;
-    &lt;linearGradient id="rainbow" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100%" y2="0"&gt;
-      &lt;stop offset="0" stop-color="#ff0000"&gt;&lt;/stop&gt;
-      &lt;stop offset="0.2" stop-color="#ffff00"&gt;&lt;/stop&gt;
-      &lt;stop offset="0.4" stop-color="#00ff00"&gt;&lt;/stop&gt;
-      &lt;stop offset="0.6" stop-color="#00ffff"&gt;&lt;/stop&gt;
-      &lt;stop offset="0.8" stop-color="#0000ff"&gt;&lt;/stop&gt;
-      &lt;stop offset="1" stop-color="#800080"&gt;&lt;/stop&gt;
-    &lt;/linearGradient&gt;
-    &lt;filter id="identity" x="0" y="0" width="100%" height="100%"&gt;
-      &lt;feComponentTransfer&gt;
-        &lt;feFuncR type="identity"&gt;&lt;/feFuncR&gt;
-        &lt;feFuncG type="identity"&gt;&lt;/feFuncG&gt;
-        &lt;feFuncB type="identity"&gt;&lt;/feFuncB&gt;
-        &lt;feFuncA type="identity"&gt;&lt;/feFuncA&gt;
-      &lt;/feComponentTransfer&gt;
-    &lt;/filter&gt;
-    &lt;filter id="table" x="0" y="0" width="100%" height="100%"&gt;
-      &lt;feComponentTransfer&gt;
-        &lt;feFuncR type="table" tableValues="0 0 1 1"&gt;&lt;/feFuncR&gt;
-        &lt;feFuncG type="table" tableValues="1 1 0 0"&gt;&lt;/feFuncG&gt;
-        &lt;feFuncB type="table" tableValues="0 1 1 0"&gt;&lt;/feFuncB&gt;
-      &lt;/feComponentTransfer&gt;
-    &lt;/filter&gt;
-    &lt;filter id="discrete" x="0" y="0" width="100%" height="100%"&gt;
-      &lt;feComponentTransfer&gt;
-        &lt;feFuncR type="discrete" tableValues="0 0 1 1"&gt;&lt;/feFuncR&gt;
-        &lt;feFuncG type="discrete" tableValues="1 1 0 0"&gt;&lt;/feFuncG&gt;
-        &lt;feFuncB type="discrete" tableValues="0 1 1 0"&gt;&lt;/feFuncB&gt;
-      &lt;/feComponentTransfer&gt;
-    &lt;/filter&gt;
-    &lt;filter id="linear" x="0" y="0" width="100%" height="100%"&gt;
-      &lt;feComponentTransfer&gt;
-        &lt;feFuncR type="linear" slope="0.5" intercept="0"&gt;&lt;/feFuncR&gt;
-        &lt;feFuncG type="linear" slope="0.5" intercept="0.25"&gt;&lt;/feFuncG&gt;
-        &lt;feFuncB type="linear" slope="0.5" intercept="0.5"&gt;&lt;/feFuncB&gt;
-      &lt;/feComponentTransfer&gt;
-    &lt;/filter&gt;
-    &lt;filter id="gamma" x="0" y="0" width="100%" height="100%"&gt;
-      &lt;feComponentTransfer&gt;
-        &lt;feFuncR type="gamma" amplitude="4" exponent="7" offset="0"&gt;&lt;/feFuncR&gt;
-        &lt;feFuncG type="gamma" amplitude="4" exponent="4" offset="0"&gt;&lt;/feFuncG&gt;
-        &lt;feFuncB type="gamma" amplitude="4" exponent="1" offset="0"&gt;&lt;/feFuncB&gt;
-      &lt;/feComponentTransfer&gt;
-    &lt;/filter&gt;
-  &lt;/defs&gt;
-  &lt;g font-weight="bold"&gt;
-    &lt;text x="0" y="20"&gt;Default&lt;/text&gt;
-    &lt;rect x="0" y="30" width="100%" height="20"&gt;&lt;/rect&gt;
-    &lt;text x="0" y="70"&gt;Identity&lt;/text&gt;
-    &lt;rect x="0" y="80" width="100%" height="20" style="filter:url(#identity)"&gt;&lt;/rect&gt;
-    &lt;text x="0" y="120"&gt;Table lookup&lt;/text&gt;
-    &lt;rect x="0" y="130" width="100%" height="20" style="filter:url(#table)"&gt;&lt;/rect&gt;
-    &lt;text x="0" y="170"&gt;Discrete table lookup&lt;/text&gt;
-    &lt;rect x="0" y="180" width="100%" height="20" style="filter:url(#discrete)"&gt;&lt;/rect&gt;
-    &lt;text x="0" y="220"&gt;Linear function&lt;/text&gt;
-    &lt;rect x="0" y="230" width="100%" height="20" style="filter:url(#linear)"&gt;&lt;/rect&gt;
-    &lt;text x="0" y="270"&gt;Gamma function&lt;/text&gt;
-    &lt;rect x="0" y="280" width="100%" height="20" style="filter:url(#gamma)"&gt;&lt;/rect&gt;
-  &lt;/g&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <defs>
+    <linearGradient id="rainbow" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100%" y2="0">
+      <stop offset="0" stop-color="#ff0000"></stop>
+      <stop offset="0.2" stop-color="#ffff00"></stop>
+      <stop offset="0.4" stop-color="#00ff00"></stop>
+      <stop offset="0.6" stop-color="#00ffff"></stop>
+      <stop offset="0.8" stop-color="#0000ff"></stop>
+      <stop offset="1" stop-color="#800080"></stop>
+    </linearGradient>
+    <filter id="identity" x="0" y="0" width="100%" height="100%">
+      <feComponentTransfer>
+        <feFuncR type="identity"></feFuncR>
+        <feFuncG type="identity"></feFuncG>
+        <feFuncB type="identity"></feFuncB>
+        <feFuncA type="identity"></feFuncA>
+      </feComponentTransfer>
+    </filter>
+    <filter id="table" x="0" y="0" width="100%" height="100%">
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="0 0 1 1"></feFuncR>
+        <feFuncG type="table" tableValues="1 1 0 0"></feFuncG>
+        <feFuncB type="table" tableValues="0 1 1 0"></feFuncB>
+      </feComponentTransfer>
+    </filter>
+    <filter id="discrete" x="0" y="0" width="100%" height="100%">
+      <feComponentTransfer>
+        <feFuncR type="discrete" tableValues="0 0 1 1"></feFuncR>
+        <feFuncG type="discrete" tableValues="1 1 0 0"></feFuncG>
+        <feFuncB type="discrete" tableValues="0 1 1 0"></feFuncB>
+      </feComponentTransfer>
+    </filter>
+    <filter id="linear" x="0" y="0" width="100%" height="100%">
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="0.5" intercept="0"></feFuncR>
+        <feFuncG type="linear" slope="0.5" intercept="0.25"></feFuncG>
+        <feFuncB type="linear" slope="0.5" intercept="0.5"></feFuncB>
+      </feComponentTransfer>
+    </filter>
+    <filter id="gamma" x="0" y="0" width="100%" height="100%">
+      <feComponentTransfer>
+        <feFuncR type="gamma" amplitude="4" exponent="7" offset="0"></feFuncR>
+        <feFuncG type="gamma" amplitude="4" exponent="4" offset="0"></feFuncG>
+        <feFuncB type="gamma" amplitude="4" exponent="1" offset="0"></feFuncB>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+  <g font-weight="bold">
+    <text x="0" y="20">Default</text>
+    <rect x="0" y="30" width="100%" height="20"></rect>
+    <text x="0" y="70">Identity</text>
+    <rect x="0" y="80" width="100%" height="20" style="filter:url(#identity)"></rect>
+    <text x="0" y="120">Table lookup</text>
+    <rect x="0" y="130" width="100%" height="20" style="filter:url(#table)"></rect>
+    <text x="0" y="170">Discrete table lookup</text>
+    <rect x="0" y="180" width="100%" height="20" style="filter:url(#discrete)"></rect>
+    <text x="0" y="220">Linear function</text>
+    <rect x="0" y="230" width="100%" height="20" style="filter:url(#linear)"></rect>
+    <text x="0" y="270">Gamma function</text>
+    <rect x="0" y="280" width="100%" height="20" style="filter:url(#gamma)"></rect>
+  </g>
+</svg>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">rect {
+```css
+rect {
   fill: url(#rainbow);
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", "100%", 340)}}</p>
+{{EmbedLiveSample("Example", "100%", 340)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("filter")}}</li>
- <li>{{SVGElement("feBlend")}}</li>
- <li>{{SVGElement("feColorMatrix")}}</li>
- <li>{{SVGElement("feComposite")}}</li>
- <li>{{SVGElement("feConvolveMatrix")}}</li>
- <li>{{SVGElement("feDiffuseLighting")}}</li>
- <li>{{SVGElement("feDisplacementMap")}}</li>
- <li>{{SVGElement("feFlood")}}</li>
- <li>{{SVGElement("feFuncA")}}</li>
- <li>{{SVGElement("feFuncB")}}</li>
- <li>{{SVGElement("feFuncG")}}</li>
- <li>{{SVGElement("feFuncR")}}</li>
- <li>{{SVGElement("feGaussianBlur")}}</li>
- <li>{{SVGElement("feImage")}}</li>
- <li>{{SVGElement("feMerge")}}</li>
- <li>{{SVGElement("feMorphology")}}</li>
- <li>{{SVGElement("feOffset")}}</li>
- <li>{{SVGElement("feSpecularLighting")}}</li>
- <li>{{SVGElement("feTile")}}</li>
- <li>{{SVGElement("feTurbulence")}}</li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Filter_effects">SVG tutorial: Filter effects</a></li>
-</ul>
+*   {{SVGElement("filter")}}
+*   {{SVGElement("feBlend")}}
+*   {{SVGElement("feColorMatrix")}}
+*   {{SVGElement("feComposite")}}
+*   {{SVGElement("feConvolveMatrix")}}
+*   {{SVGElement("feDiffuseLighting")}}
+*   {{SVGElement("feDisplacementMap")}}
+*   {{SVGElement("feFlood")}}
+*   {{SVGElement("feFuncA")}}
+*   {{SVGElement("feFuncB")}}
+*   {{SVGElement("feFuncG")}}
+*   {{SVGElement("feFuncR")}}
+*   {{SVGElement("feGaussianBlur")}}
+*   {{SVGElement("feImage")}}
+*   {{SVGElement("feMerge")}}
+*   {{SVGElement("feMorphology")}}
+*   {{SVGElement("feOffset")}}
+*   {{SVGElement("feSpecularLighting")}}
+*   {{SVGElement("feTile")}}
+*   {{SVGElement("feTurbulence")}}
+*   [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)

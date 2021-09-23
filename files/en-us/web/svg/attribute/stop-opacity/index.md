@@ -7,74 +7,80 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.stop.stop-opacity
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>stop-opacity</code></strong> attribute defines the opacity of a given color gradient stop.</p>
+The **`stop-opacity`** attribute defines the opacity of a given color gradient stop.
 
-<p>The opacity value used for the gradient calculation is the product of the value of <code>stop-opacity</code> and the opacity of the value of the {{SVGAttr("stop-color")}} attribute. For <code>stop-color</code> values that don't include explicit opacity information, the opacity is treated as <code>1</code>.</p>
+The opacity value used for the gradient calculation is the product of the value of `stop-opacity` and the opacity of the value of the {{SVGAttr("stop-color")}} attribute. For `stop-color` values that don't include explicit opacity information, the opacity is treated as `1`.
 
-<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>stop-opacity</code> can be used as a CSS property.</p></div>
+> **Note:** As a presentation attribute, `stop-opacity` can be used as a CSS property.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("stop")}}</li>
-</ul>
+*   {{SVGElement("stop")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#opacity_value">&lt;opacity-value&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/SVG/Content_type#opacity_value"
+            >&#x3C;opacity-value></a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;opacity-value&gt;</code></dt>
- <dd>This value is either a {{cssxref("number")}} between <code>0</code> and <code>1</code> or a {{cssxref("percentage")}} value specifying the opacity of the color gradient stop.</dd>
-</dl>
+*   `<opacity-value>`
+    *   : This value is either a {{cssxref("number")}} between `0` and `1` or a {{cssxref("percentage")}} value specifying the opacity of the color gradient stop.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "pservers.html#StopOpacityProperty", "stop-opacity")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Refers to the definition in CSS Colors 3, but allows percentage values.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "pservers.html#StopOpacityProperty", "stop-opacity")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "pservers.html#StopOpacityProperty", "stop-opacity")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>
+        Refers to the definition in CSS Colors 3, but allows percentage values.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "pservers.html#StopOpacityProperty", "stop-opacity")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGAttr("stop-color")}}</li>
-</ul>
+*   {{SVGAttr("stop-color")}}

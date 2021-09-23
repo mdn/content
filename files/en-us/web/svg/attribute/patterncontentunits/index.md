@@ -6,108 +6,112 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.pattern.patternContentUnits
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>patternContentUnits</code></strong> attribute indicates which coordinate system to use for the contents of the {{ SVGElement("pattern") }} element.</p>
+The **`patternContentUnits`** attribute indicates which coordinate system to use for the contents of the {{ SVGElement("pattern") }} element.
 
-<div class="note"><p><strong>Note:</strong> That this attribute has no effect if attribute {{ SVGAttr("viewBox") }} is specified on the {{ SVGElement("pattern") }} element.</p></div>
+> **Note:** That this attribute has no effect if attribute {{ SVGAttr("viewBox") }} is specified on the {{ SVGElement("pattern") }} element.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement('pattern')}}</li>
-</ul>
+*   {{SVGElement('pattern')}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!--
+```html
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <!--
   A pattern tile that content coordinates and values are
   computed against the current coordinate user space.
   Note that the size of the tile is computed against
   the bounding box of the target element
-  --&gt;
-  &lt;pattern id="p1" width="20%" height="20%"
-           patternContentUnits="userSpaceOnUse"&gt;
-    &lt;circle cx="10" cy="10" r="10" /&gt;
-  &lt;/pattern&gt;
+  -->
+  <pattern id="p1" width="20%" height="20%"
+           patternContentUnits="userSpaceOnUse">
+    <circle cx="10" cy="10" r="10" />
+  </pattern>
 
-  &lt;!--
+  <!--
   A pattern tile that content coordinates and values are
   computed against the bounding box of the target element.
   Note that the size of the tile is also computed against
   the bounding box of the target element
-  --&gt;
-  &lt;pattern id="p2" width="20%" height="20%"
-           patternContentUnits="objectBoundingBox"&gt;
-    &lt;circle cx=".1" cy=".1" r=".1" /&gt;
-  &lt;/pattern&gt;
+  -->
+  <pattern id="p2" width="20%" height="20%"
+           patternContentUnits="objectBoundingBox">
+    <circle cx=".1" cy=".1" r=".1" />
+  </pattern>
 
-  &lt;!-- Left square with user space tiles --&gt;
-  &lt;rect x="10"  y="10" width="80" height="80"
-        fill="url(#p1)" /&gt;
+  <!-- Left square with user space tiles -->
+  <rect x="10"  y="10" width="80" height="80"
+        fill="url(#p1)" />
 
-  &lt;!-- Right square with bounding box tiles --&gt;
-  &lt;rect x="110" y="10" width="80" height="80"
-        fill="url(#p2)" /&gt;
-&lt;/svg&gt;</pre>
+  <!-- Right square with bounding box tiles -->
+  <rect x="110" y="10" width="80" height="80"
+        fill="url(#p2)" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('Example', 150, '100%')}}</p>
+{{EmbedLiveSample('Example', 150, '100%')}}
 
-<h2 id="pattern">pattern</h2>
+## pattern
 
-<p>For {{SVGElement('pattern')}}, <code>patternContentUnits</code> defines the coordinate system in use for the content of the element.</p>
+For {{SVGElement('pattern')}}, `patternContentUnits` defines the coordinate system in use for the content of the element.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>userSpaceOnUse</code> | <code>objectBoundingBox</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>userSpaceOnUse</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>userSpaceOnUse</code> | <code>objectBoundingBox</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>userSpaceOnUse</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>userSpaceOnUse</code></dt>
- <dd>This value indicates that all coordinates inside the {{SVGElement('pattern')}} element refer to the user coordinate system as defined when the pattern tile was created.</dd>
- <dt><code>objectBoundingBox</code></dt>
- <dd>This value indicates that all coordinates inside the {{SVGElement('pattern')}} element are relative to the bounding box of the element the pattern is applied to. A bounding box could be considered the same as if the content of the {{ SVGElement("pattern") }} were bound to a "<code>0 0 1 1</code>" {{ SVGAttr("viewbox") }} for a pattern tile of width and height of 100%.</dd>
-</dl>
+*   `userSpaceOnUse`
+    *   : This value indicates that all coordinates inside the {{SVGElement('pattern')}} element refer to the user coordinate system as defined when the pattern tile was created.
+*   `objectBoundingBox`
+    *   : This value indicates that all coordinates inside the {{SVGElement('pattern')}} element are relative to the bounding box of the element the pattern is applied to. A bounding box could be considered the same as if the content of the {{ SVGElement("pattern") }} were bound to a "`0 0 1 1`" {{ SVGAttr("viewbox") }} for a pattern tile of width and height of 100%.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "pservers.html#PatternElementPatternContentUnitsAttribute", "patternContentUnits")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "pservers.html#PatternElementPatternContentUnitsAttribute", "patternContentUnits")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "pservers.html#PatternElementPatternContentUnitsAttribute", "patternContentUnits")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "pservers.html#PatternElementPatternContentUnitsAttribute", "patternContentUnits")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

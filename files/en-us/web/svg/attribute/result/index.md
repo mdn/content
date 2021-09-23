@@ -6,96 +6,102 @@ tags:
   - SVG
   - SVG Attribute
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>result</code></strong> attribute defines the assigned name for this filter primitive. If supplied, then graphics that result from processing this filter primitive can be referenced by an {{SVGAttr("in")}} attribute on a subsequent filter primitive within the same {{SVGElement("filter")}} element. If no value is provided, the output will only be available for re-use as the implicit input into the next filter primitive if that filter primitive provides no value for its <code>in</code> attribute.</p>
+The **`result`** attribute defines the assigned name for this filter primitive. If supplied, then graphics that result from processing this filter primitive can be referenced by an {{SVGAttr("in")}} attribute on a subsequent filter primitive within the same {{SVGElement("filter")}} element. If no value is provided, the output will only be available for re-use as the implicit input into the next filter primitive if that filter primitive provides no value for its `in` attribute.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("feBlend")}}</li>
-  <li>{{SVGElement("feColorMatrix")}}</li>
-  <li>{{SVGElement("feComponentTransfer")}}</li>
-  <li>{{SVGElement("feComposite")}}</li>
-  <li>{{SVGElement("feConvolveMatrix")}}</li>
-  <li>{{SVGElement("feDiffuseLighting")}}</li>
-  <li>{{SVGElement("feDisplacementMap")}}</li>
-  <li>{{SVGElement("feDropShadow")}}</li>
-  <li>{{SVGElement("feFlood")}}</li>
-  <li>{{SVGElement("feGaussianBlur")}}</li>
-  <li>{{SVGElement("feImage")}}</li>
-  <li>{{SVGElement("feMerge")}}</li>
-  <li>{{SVGElement("feMorphology")}}</li>
-  <li>{{SVGElement("feOffset")}}</li>
-  <li>{{SVGElement("feSpecularLighting")}}</li>
-  <li>{{SVGElement("feTile")}}</li>
-  <li>{{SVGElement("feTurbulence")}}</li>
-</ul>
+*   {{SVGElement("feBlend")}}
+*   {{SVGElement("feColorMatrix")}}
+*   {{SVGElement("feComponentTransfer")}}
+*   {{SVGElement("feComposite")}}
+*   {{SVGElement("feConvolveMatrix")}}
+*   {{SVGElement("feDiffuseLighting")}}
+*   {{SVGElement("feDisplacementMap")}}
+*   {{SVGElement("feDropShadow")}}
+*   {{SVGElement("feFlood")}}
+*   {{SVGElement("feGaussianBlur")}}
+*   {{SVGElement("feImage")}}
+*   {{SVGElement("feMerge")}}
+*   {{SVGElement("feMorphology")}}
+*   {{SVGElement("feOffset")}}
+*   {{SVGElement("feSpecularLighting")}}
+*   {{SVGElement("feTile")}}
+*   {{SVGElement("feTurbulence")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[4]">&lt;svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;filter id="displacementFilter"&gt;
-    &lt;feTurbulence type="turbulence" baseFrequency="0.05"
-        numOctaves="2" result="turbulence"/&gt;
-    &lt;feDisplacementMap in2="turbulence" in="SourceGraphic"
-        scale="50" xChannelSelector="R" yChannelSelector="G"/&gt;
-  &lt;/filter&gt;
+```html
+<svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+  <filter id="displacementFilter">
+    <feTurbulence type="turbulence" baseFrequency="0.05"
+        numOctaves="2" result="turbulence"/>
+    <feDisplacementMap in2="turbulence" in="SourceGraphic"
+        scale="50" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
 
-  &lt;circle cx="100" cy="100" r="100"
-      style="filter: url(#displacementFilter)"/&gt;
-&lt;/svg&gt;</pre>
+  <circle cx="100" cy="100" r="100"
+      style="filter: url(#displacementFilter)"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", 220, 220)}}</p>
+{{EmbedLiveSample("Example", 220, 220)}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>&lt;filter-primitive-reference&gt;</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>&#x3C;filter-primitive-reference></code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;filter-primitive-reference&gt;</code></dt>
- <dd>This value is a {{cssxref("custom-ident")}} and defines the name for the filter primitive. It is only meaningful within a given {{SVGElement("filter")}} element and thus has only local scope. It is legal for the same <code>&lt;filter-primitive-reference&gt;</code> to appear multiple times within the same <code>&lt;filter&gt;</code> element. When referenced, this value will use the closest preceding filter primitive with the given result.</dd>
-</dl>
+*   `<filter-primitive-reference>`
+    *   : This value is a {{cssxref("custom-ident")}} and defines the name for the filter primitive. It is only meaningful within a given {{SVGElement("filter")}} element and thus has only local scope. It is legal for the same `<filter-primitive-reference>` to appear multiple times within the same `<filter>` element. When referenced, this value will use the closest preceding filter primitive with the given result.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Filters 1.0", "#element-attrdef-filter-primitive-result", "result")}}</td>
-   <td>{{Spec2("Filters 1.0")}}</td>
-   <td>Clarifies that the value is a {{cssxref("custom-ident")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#FilterPrimitiveResultAttribute", "result")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("Filters 1.0", "#element-attrdef-filter-primitive-result", "result")}}
+      </td>
+      <td>{{Spec2("Filters 1.0")}}</td>
+      <td>
+        Clarifies that the value is a {{cssxref("custom-ident")}}.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "filters.html#FilterPrimitiveResultAttribute", "result")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>

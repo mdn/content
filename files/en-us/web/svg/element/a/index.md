@@ -8,36 +8,41 @@ tags:
   - SVG Container
 browser-compat: svg.elements.a
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong>&lt;a&gt;</strong> SVG element creates a hyperlink to other web pages, files, locations in the same page, email addresses, or any other URL. It is very similar to HTML’s {{htmlelement("a")}} element.</p>
+The **\<a>** SVG element creates a hyperlink to other web pages, files, locations in the same page, email addresses, or any other URL. It is very similar to HTML’s {{htmlelement("a")}} element.
 
-<p>SVG's <code>&lt;a&gt;</code> element is a container, which means you can create a link around text (like in HTML) but also around any shape.</p>
+SVG's `<a>` element is a container, which means you can create a link around text (like in HTML) but also around any shape.
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">@namespace svg url(http://www.w3.org/2000/svg);
-html,body,svg { height:100% }</pre>
+```css hidden
+@namespace svg url(http://www.w3.org/2000/svg);
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- A link around a shape --&gt;
-  &lt;a href="/docs/Web/SVG/Element/circle"&gt;
-    &lt;circle cx="50" cy="40" r="35"/&gt;
-  &lt;/a&gt;
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- A link around a shape -->
+  <a href="/docs/Web/SVG/Element/circle">
+    <circle cx="50" cy="40" r="35"/>
+  </a>
 
-  &lt;!-- A link around a text --&gt;
-  &lt;a href="/docs/Web/SVG/Element/text"&gt;
-    &lt;text x="50" y="90" text-anchor="middle"&gt;
-      &amp;lt;circle&amp;gt;
-    &lt;/text&gt;
-  &lt;/a&gt;
-&lt;/svg&gt;</pre>
+  <!-- A link around a text -->
+  <a href="/docs/Web/SVG/Element/text">
+    <text x="50" y="90" text-anchor="middle">
+      &lt;circle&gt;
+    </text>
+  </a>
+</svg>
+```
 
-<pre class="brush: css">/* As SVG does not provide a default visual style for links,
+```css
+/* As SVG does not provide a default visual style for links,
    it's considered best practice to add some */
 
 @namespace svg url(http://www.w3.org/2000/svg);
-/* Necessary to select only SVG &lt;a&gt; elements, and not also HTML’s.
+/* Necessary to select only SVG <a> elements, and not also HTML’s.
    See warning below */
 
 svg|a:link, svg|a:visited {
@@ -52,73 +57,68 @@ text svg|a {
 
 svg|a:hover, svg|a:active {
   outline: dotted 1px blue;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('Example', 100, 100)}}</p>
+{{EmbedLiveSample('Example', 100, 100)}}
 
-<div class="warning">
-<p><strong>Warning:</strong> Since this element shares its tag name with <a href="/en-US/docs/Web/HTML/Element/a">HTML's <code>&lt;a&gt;</code> element</a>, selecting <code>a</code> with CSS or {{domxref("Document.querySelector", "querySelector")}} may apply to the wrong kind of element. Try <a href="/en-US/docs/Web/CSS/@namespace">the <code>@namespace</code> rule</a> to distinguish the two.</p>
-</div>
+> **Warning:** Since this element shares its tag name with [HTML's `<a>` element](/en-US/docs/Web/HTML/Element/a), selecting `a` with CSS or {{domxref("Document.querySelector", "querySelector")}} may apply to the wrong kind of element. Try [the `@namespace` rule](/en-US/docs/Web/CSS/@namespace) to distinguish the two.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt>{{htmlattrxref("download", "a")}} {{experimental_inline}}</dt>
- <dd>Instructs browsers to download a {{Glossary("URL")}} instead of navigating to it, so the user will be prompted to save it as a local file.<br>
- <small><em>Value type</em>: <strong>&lt;string&gt;</strong> ; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>no</strong></small></dd>
- <dt>{{SVGAttr("href")}}</dt>
- <dd>The {{Glossary("URL")}} or URL fragment the hyperlink points to.<br>
- <small><em>Value type</em>: <strong><a href="/en-US/docs/Web/SVG/Content_type#url">&lt;URL&gt;</a></strong> ; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{htmlattrxref("hreflang", "a")}}</dt>
- <dd>The human language of the URL or URL fragment that the hyperlink points to.<br>
- <small><em>Value type</em>: <strong>&lt;string&gt;</strong> ; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{htmlattrxref("ping", "a")}} {{experimental_inline}}</dt>
- <dd>A space-separated list of URLs to which, when the hyperlink is followed, {{HTTPMethod("POST")}} requests with the body <code>PING</code> will be sent by the browser (in the background). Typically used for tracking. For a more widely-supported feature addressing the same use cases, see {{domxref("Navigator.sendBeacon()")}}.<br>
- <small><em>Value type</em>: <strong><a href="/en-US/docs/Web/SVG/Content_type#list-of-ts">&lt;list-of-URLs&gt;</a></strong> ; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>no</strong></small></dd>
- <dt>{{htmlattrxref("referrerpolicy", "a")}} {{experimental_inline}}</dt>
- <dd>Which <a href="/en-US/docs/Web/HTTP/Headers/Referer">referrer</a> to send when fetching the {{Glossary("URL")}}.<br>
- <small><em>Value type</em>: <code>no-referrer</code>|<code>no-referrer-when-downgrade</code>|<code>same-origin</code>|<code>origin</code>|<code>strict-origin</code>|<code>origin-when-cross-origin</code>|<code>strict-origin-when-cross-origin</code>|<code>unsafe-url</code> ; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>no</strong></small></dd>
- <dt>{{htmlattrxref("rel", "a")}} {{experimental_inline}}</dt>
- <dd>The relationship of the target object to the link object.<br>
- <small><em>Value type</em>: <strong><a href="/en-US/docs/Web/HTML/Link_types">&lt;list-of-Link-Types&gt;</a></strong> ; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("target")}}</dt>
- <dd>Where to display the linked {{Glossary("URL")}}.<br>
- <small><em>Value type</em>: <code>_self</code>|<code>_parent</code>|<code>_top</code>|<code>_blank</code>|<strong>&lt;name&gt;</strong> ; <em>Default value</em>: <code>_self</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{htmlattrxref("type", "a")}}</dt>
- <dd>A {{Glossary("MIME type")}} for the linked URL.<br>
- <small><em>Value type</em>: <strong>&lt;string&gt;</strong> ; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("xlink:href")}} {{deprecated_inline}}</dt>
- <dd>The URL or URL fragment that the hyperlink points to. May be required for backwards compatibility for older browsers.<br>
- <small><em>Value type</em>: <strong><a href="/en-US/docs/Web/SVG/Content_type#url">&lt;URL&gt;</a></strong> ; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>yes</strong></small></dd>
-</dl>
+*   {{htmlattrxref("download", "a")}} {{experimental_inline}}
+    *   : Instructs browsers to download a {{Glossary("URL")}} instead of navigating to it, so the user will be prompted to save it as a local file.
+        *Value type*: **\<string>** ; *Default value*: *none*; *Animatable*: **no**
+*   {{SVGAttr("href")}}
+    *   : The {{Glossary("URL")}} or URL fragment the hyperlink points to.
+        *Value type*: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; *Default value*: *none*; *Animatable*: **yes**
+*   {{htmlattrxref("hreflang", "a")}}
+    *   : The human language of the URL or URL fragment that the hyperlink points to.
+        *Value type*: **\<string>** ; *Default value*: *none*; *Animatable*: **yes**
+*   {{htmlattrxref("ping", "a")}} {{experimental_inline}}
+    *   : A space-separated list of URLs to which, when the hyperlink is followed, {{HTTPMethod("POST")}} requests with the body `PING` will be sent by the browser (in the background). Typically used for tracking. For a more widely-supported feature addressing the same use cases, see {{domxref("Navigator.sendBeacon()")}}.
+        *Value type*: **[\<list-of-URLs>](/en-US/docs/Web/SVG/Content_type#list-of-ts)** ; *Default value*: *none*; *Animatable*: **no**
+*   {{htmlattrxref("referrerpolicy", "a")}} {{experimental_inline}}
+    *   : Which [referrer](/en-US/docs/Web/HTTP/Headers/Referer) to send when fetching the {{Glossary("URL")}}.
+        *Value type*: `no-referrer`|`no-referrer-when-downgrade`|`same-origin`|`origin`|`strict-origin`|`origin-when-cross-origin`|`strict-origin-when-cross-origin`|`unsafe-url` ; *Default value*: *none*; *Animatable*: **no**
+*   {{htmlattrxref("rel", "a")}} {{experimental_inline}}
+    *   : The relationship of the target object to the link object.
+        *Value type*: **[\<list-of-Link-Types>](/en-US/docs/Web/HTML/Link_types)** ; *Default value*: *none*; *Animatable*: **yes**
+*   {{SVGAttr("target")}}
+    *   : Where to display the linked {{Glossary("URL")}}.
+        *Value type*: `_self`|`_parent`|`_top`|`_blank`|**\<name>** ; *Default value*: `_self`; *Animatable*: **yes**
+*   {{htmlattrxref("type", "a")}}
+    *   : A {{Glossary("MIME type")}} for the linked URL.
+        *Value type*: **\<string>** ; *Default value*: *none*; *Animatable*: **yes**
+*   {{SVGAttr("xlink:href")}} {{deprecated_inline}}
+    *   : The URL or URL fragment that the hyperlink points to. May be required for backwards compatibility for older browsers.
+        *Value type*: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; *Default value*: *none*; *Animatable*: **yes**
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<dl>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Core">Core Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('id')}}, {{SVGAttr('lang')}}, {{SVGAttr('tabindex')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Styling">Styling Attributes</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Conditional_Processing">Conditional Processing Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}</small></dd>
- <dt>Event Attributes</dt>
- <dd><small><a href="/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes">Global event attributes</a>, <a href="/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes">Document element event attributes</a>, <a href="/en-US/docs/Web/SVG/Attribute/Events#graphical_event_attributes">Graphical event attributes</a></small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Presentation">Presentation Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}</small></dd>
- <dt>XLink Attributes</dt>
- <dd><small>Most notably: {{SVGAttr("xlink:title")}}</small></dd>
- <dt>ARIA Attributes</dt>
- <dd><small><code>aria-activedescendant</code>, <code>aria-atomic</code>, <code>aria-autocomplete</code>, <code>aria-busy</code>, <code>aria-checked</code>, <code>aria-colcount</code>, <code>aria-colindex</code>, <code>aria-colspan</code>, <code>aria-controls</code>, <code>aria-current</code>, <code>aria-describedby</code>, <code>aria-details</code>, <code>aria-disabled</code>, <code>aria-dropeffect</code>, <code>aria-errormessage</code>, <code>aria-expanded</code>, <code>aria-flowto</code>, <code>aria-grabbed</code>, <code>aria-haspopup</code>, <code>aria-hidden</code>, <code>aria-invalid</code>, <code>aria-keyshortcuts</code>, <code>aria-label</code>, <code>aria-labelledby</code>, <code>aria-level</code>, <code>aria-live</code>, <code>aria-modal</code>, <code>aria-multiline</code>, <code>aria-multiselectable</code>, <code>aria-orientation</code>, <code>aria-owns</code>, <code>aria-placeholder</code>, <code>aria-posinset</code>, <code>aria-pressed</code>, <code>aria-readonly</code>, <code>aria-relevant</code>, <code>aria-required</code>, <code>aria-roledescription</code>, <code>aria-rowcount</code>, <code>aria-rowindex</code>, <code>aria-rowspan</code>, <code>aria-selected</code>, <code>aria-setsize</code>, <code>aria-sort</code>, <code>aria-valuemax</code>, <code>aria-valuemin</code>, <code>aria-valuenow</code>, <code>aria-valuetext</code>, <code>role</code></small></dd>
-</dl>
+*   [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
+    *   : Most notably: {{SVGAttr('id')}}, {{SVGAttr('lang')}}, {{SVGAttr('tabindex')}}
+*   [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
+    *   : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+*   [Conditional Processing Attributes](/en-US/docs/Web/SVG/Attribute/Conditional_Processing)
+    *   : Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+*   Event Attributes
+    *   : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Document element event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes), [Graphical event attributes](/en-US/docs/Web/SVG/Attribute/Events#graphical_event_attributes)
+*   [Presentation Attributes](/en-US/docs/Web/SVG/Attribute/Presentation)
+    *   : Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
+*   XLink Attributes
+    *   : Most notably: {{SVGAttr("xlink:title")}}
+*   ARIA Attributes
+    *   : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

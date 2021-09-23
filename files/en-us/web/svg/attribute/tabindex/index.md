@@ -6,78 +6,81 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.core.tabindex
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>tabindex</code></strong> attribute allows you to control whether an element is focusable and to define the relative order of the element for the purposes of sequential focus navigation.</p>
+The **`tabindex`** attribute allows you to control whether an element is focusable and to define the relative order of the element for the purposes of sequential focus navigation.
 
-<p>You can use this attribute with any SVG element.</p>
+You can use this attribute with any SVG element.
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;?xml version="1.0"?&gt;
-&lt;svg viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg"&gt;
-    &lt;circle cx="60" cy="60" r="15" tabindex="1" /&gt;
-    &lt;circle cx="60" cy="160" r="30" tabindex="3" /&gt;
-    &lt;circle cx="160" cy="60" r="30" tabindex="2" /&gt;
-    &lt;circle cx="160" cy="160" r="60" tabindex="4" /&gt;
-&lt;/svg&gt;</pre>
+```html
+<?xml version="1.0"?>
+<svg viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="60" cy="60" r="15" tabindex="1" />
+    <circle cx="60" cy="160" r="30" tabindex="3" />
+    <circle cx="160" cy="60" r="30" tabindex="2" />
+    <circle cx="160" cy="160" r="60" tabindex="4" />
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "260", "260")}}</p>
+{{EmbedLiveSample("Example", "260", "260")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><a href="https://html.spec.whatwg.org/#valid-integer">valid integer</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <a href="https://html.spec.whatwg.org/#valid-integer">valid integer</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt>valid integer</dt>
- <dd>Relative order of the element for the purposes of sequential focus navigation.</dd>
-</dl>
+*   valid integer
+    *   : Relative order of the element for the purposes of sequential focus navigation.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "struct.html#SVGElementTabindexAttribute", "tabindex")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "struct.html#SVGElementTabindexAttribute", "tabindex")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTML/Global_attributes/tabindex">HTML <code>tabindex</code></a></li>
-</ul>
+*   [HTML `tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex)

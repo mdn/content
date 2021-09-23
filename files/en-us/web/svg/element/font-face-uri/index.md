@@ -10,44 +10,38 @@ tags:
   - SVG Font
 browser-compat: svg.elements.font-face-uri
 ---
-<div>{{SVGRef}}{{deprecated_header}}</div>
+{{SVGRef}}{{deprecated_header}}
 
-<p>The <strong><code>&lt;font-face-uri&gt;</code></strong> <a href="/en-US/docs/Web/SVG">SVG</a> element points to a remote definition of the current font.</p>
+The **`<font-face-uri>`** [SVG](/en-US/docs/Web/SVG) element points to a remote definition of the current font.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#xlink_attributes">XLink attributes</a></li>
-</ul>
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+*   [XLink attributes](/en-US/docs/Web/SVG/Attribute#xlink_attributes)
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<ul>
- <li>{{SVGAttr("xlink:href")}}</li>
-</ul>
+*   {{SVGAttr("xlink:href")}}
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the {{domxref("SVGFontFaceUriElement")}} interface.</p>
+This element implements the {{domxref("SVGFontFaceUriElement")}} interface.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("font-face-src")}}</li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/SVG_fonts">SVG tutorial: SVG fonts</a></li>
-</ul>
+*   {{SVGElement("font-face-src")}}
+*   [SVG tutorial: SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts)

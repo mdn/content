@@ -7,100 +7,113 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.font.horiz-adv-x
 ---
-<div>{{SVGRef}}{{Deprecated_Header}}</div>
+{{SVGRef}}{{Deprecated_Header}}
 
-<p>The <strong><code>horiz-adv-x</code></strong> attribute indicates the horizontal advance after rendering a {{Glossary("glyph")}} in horizontal orientation.</p>
+The **`horiz-adv-x`** attribute indicates the horizontal advance after rendering a {{Glossary("glyph")}} in horizontal orientation.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("font")}}</li>
-  <li>{{SVGElement("glyph")}}</li>
-  <li>{{SVGElement("missing-glyph")}}</li>
-</ul>
+*   {{SVGElement("font")}}
+*   {{SVGElement("glyph")}}
+*   {{SVGElement("missing-glyph")}}
 
-<h2 id="font">font</h2>
+## font
 
-<p>For {{SVGElement("font")}} elements, <code>horiz-adv-x</code> specifies the default horizontal advance of a glyph in horizontal orientation.</p>
+For {{SVGElement("font")}} elements, `horiz-adv-x` specifies the default horizontal advance of a glyph in horizontal orientation.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/SVG/Content_type#Number"
+            >&#x3C;number></a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;number&gt;</code></dt>
- <dd>This value indicates the horizontal advance of the glyph.</dd>
-</dl>
+*   `<number>`
+    *   : This value indicates the horizontal advance of the glyph.
 
-<h2 id="glyph_missing-glyph">glyph, missing-glyph</h2>
+## glyph, missing-glyph
 
-<p>For {{SVGElement("glyph")}} and {{SVGElement("missing-glyph")}} elements, <code>horiz-adv-x</code> specifies the horizontal advance of the glyph in horizontal orientation.</p>
+For {{SVGElement("glyph")}} and {{SVGElement("missing-glyph")}} elements, `horiz-adv-x` specifies the horizontal advance of the glyph in horizontal orientation.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>{{SVGElement("font")}}'s <code>horiz-adv-x</code> value</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/SVG/Content_type#Number"
+            >&#x3C;number></a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td>
+        <em>{{SVGElement("font")}}'s <code>horiz-adv-x</code> value</em>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;number&gt;</code></dt>
- <dd>This value indicates the horizontal advance of the glyph.</dd>
-</dl>
+*   `<number>`
+    *   : This value indicates the horizontal advance of the glyph.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG1.1", "fonts.html#GlyphElementHorizAdvXAttribute", "horiz-adv-x for &lt;glyph&gt; and &lt;missing-glyph&gt;")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;glyph&gt;</code> and <code>&lt;missing-glyph&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "fonts.html#FontElementHorizAdvXAttribute", "horiz-adv-x for &lt;font&gt;")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;font&gt;</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "fonts.html#GlyphElementHorizAdvXAttribute", "horiz-adv-x for &lt;glyph&gt; and &lt;missing-glyph&gt;")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>
+        Initial definition for <code>&#x3C;glyph></code> and
+        <code>&#x3C;missing-glyph></code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "fonts.html#FontElementHorizAdvXAttribute", "horiz-adv-x for &lt;font&gt;")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;font></code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGAttr("vert-adv-y")}}</li>
-</ul>
+*   {{SVGAttr("vert-adv-y")}}

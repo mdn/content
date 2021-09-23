@@ -8,25 +8,25 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.font-face.accent-height
 ---
-<div>{{SVGRef}}{{deprecated_header}}</div>
+{{SVGRef}}{{deprecated_header}}
 
-<p>The <strong><code>accent-height</code></strong> attribute defines the distance from the origin to the top of accent characters, measured by a distance within the font coordinate system.</p>
+The **`accent-height`** attribute defines the distance from the origin to the top of accent characters, measured by a distance within the font coordinate system.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("font-face")}}</li>
-</ul>
+*   {{SVGElement("font-face")}}
 
-<h2 id="font-face">font-face</h2>
+## font-face
 
-<p>For {{SVGElement("font-face")}}, <code>accent-height</code> defines the distance from the origin to the top of accent characters, measured by a distance within the font coordinate system.</p>
+For {{SVGElement("font-face")}}, `accent-height` defines the distance from the origin to the top of accent characters, measured by a distance within the font coordinate system.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td><a href="/en-US/docs/Web/SVG/Content_type#number">&lt;number&gt;</a></td>
+      <td>
+        <a href="/en-US/docs/Web/SVG/Content_type#number">&#x3C;number></a>
+      </td>
     </tr>
     <tr>
       <th scope="row">Default value</th>
@@ -39,7 +39,7 @@ browser-compat: svg.elements.font-face.accent-height
   </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
   <thead>
@@ -48,23 +48,23 @@ browser-compat: svg.elements.font-face.accent-height
       <th scope="col">Status</th>
       <th scope="col">Comment</th>
     </tr>
-   </thead>
-   <tbody>
-     <tr>
-       <td>{{SpecName("SVG1.1", "fonts.html#FontFaceElementAccentHeightAttribute", "accent-height")}}</td>
-       <td>{{Spec2("SVG1.1")}}</td>
-       <td>Initial definition</td>
-     </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "fonts.html#FontFaceElementAccentHeightAttribute", "accent-height")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
   </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{SVGAttr("cap-height")}}</li>
-  <li>{{SVGAttr("x-height")}}</li>
-</ul>
+*   {{SVGAttr("cap-height")}}
+*   {{SVGAttr("x-height")}}

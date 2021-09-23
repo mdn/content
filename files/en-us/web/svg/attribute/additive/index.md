@@ -7,22 +7,20 @@ tags:
   - SVG
   - SVG Attribute
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>additive</code></strong> attribute controls whether or not an animation is additive.</p>
+The **`additive`** attribute controls whether or not an animation is additive.
 
-<p>It is frequently useful to define animation as an offset or delta to an attribute's value, rather than as absolute values.</p>
+It is frequently useful to define animation as an offset or delta to an attribute's value, rather than as absolute values.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("animate")}}</li>
-  <li>{{SVGElement("animateColor")}}</li>
-  <li>{{SVGElement("animateMotion")}}</li>
-  <li>{{SVGElement("animateTransform")}}</li>
-</ul>
+*   {{SVGElement("animate")}}
+*   {{SVGElement("animateColor")}}
+*   {{SVGElement("animateMotion")}}
+*   {{SVGElement("animateTransform")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
   <tbody>
@@ -41,14 +39,12 @@ tags:
   </tbody>
 </table>
 
-<dl>
-  <dt>sum</dt>
-  <dd>Specifies that the animation will add to the underlying value of the attribute and other lower priority animations.</dd>
-  <dt>replace</dt>
-  <dd>Specifies that the animation will override the underlying value of the attribute and other lower priority animations. This is the default, however the behavior is also affected by the animation value attributes {{SVGAttr("by")}} and {{SVGAttr("to")}}, as described in <a href="https://www.w3.org/TR/2001/REC-smil-animation-20010904/#FromToByAndAdditive">SMIL Animation: How from, to and by attributes affect additive behavior</a>.</dd>
-</dl>
+*   sum
+    *   : Specifies that the animation will add to the underlying value of the attribute and other lower priority animations.
+*   replace
+    *   : Specifies that the animation will override the underlying value of the attribute and other lower priority animations. This is the default, however the behavior is also affected by the animation value attributes {{SVGAttr("by")}} and {{SVGAttr("to")}}, as described in [SMIL Animation: How from, to and by attributes affect additive behavior](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#FromToByAndAdditive).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
   <thead>
@@ -60,20 +56,22 @@ tags:
   </thead>
   <tbody>
     <tr>
-      <td>{{SpecName("SVG Animations 2", "#AdditiveAttribute", "additive")}}</td>
+      <td>
+        {{SpecName("SVG Animations 2", "#AdditiveAttribute", "additive")}}
+      </td>
       <td>{{Spec2("SVG Animations 2")}}</td>
       <td>No change</td>
     </tr>
     <tr>
-      <td>{{SpecName("SVG1.1", "animate.html#AdditiveAttribute", "additive")}}</td>
+      <td>
+        {{SpecName("SVG1.1", "animate.html#AdditiveAttribute", "additive")}}
+      </td>
       <td>{{Spec2("SVG1.1")}}</td>
       <td>Initial definition</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://www.w3.org/TR/2001/REC-smil-animation-20010904/#AdditiveAttribute">SMIL Animation specification</a></li>
-</ul>
+*   [SMIL Animation specification](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#AdditiveAttribute)

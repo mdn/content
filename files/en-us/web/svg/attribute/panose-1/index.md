@@ -7,61 +7,64 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.font-face.panose-1
 ---
-<div>{{SVGRef}}{{Deprecated_Header}}</div>
+{{SVGRef}}{{Deprecated_Header}}
 
-<p>The <strong><code>panose-1</code></strong> attribute indicates the Panose-1 number of a font face.</p>
+The **`panose-1`** attribute indicates the Panose-1 number of a font face.
 
-<p>Panose-1 is an industry standard TrueType font classification and matching technology. The PANOSE system consists of a set of ten numbers that categorize the key attributes of a Latin typeface, a classification procedure for creating those numbers, and mapper software that determines the closest possible font match given a set of typefaces.</p>
+Panose-1 is an industry standard TrueType font classification and matching technology. The PANOSE system consists of a set of ten numbers that categorize the key attributes of a Latin typeface, a classification procedure for creating those numbers, and mapper software that determines the closest possible font match given a set of typefaces.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("font-face")}}</li>
-</ul>
+*   {{SVGElement("font-face")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#Integer">&lt;integer&gt;</a>{10}</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0 0 0 0 0 0 0 0 0 0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/SVG/Content_type#Integer">&#x3C;integer></a
+          >{10}</code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0 0 0 0 0 0 0 0 0 0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;integer&gt;{10}</code></dt>
- <dd>This value specifies a Panose-1 number and consists of ten decimal integers, separated by whitespace. The initial value zero for each PANOSE digit means "any", i.e. all fonts will match the Panose number if this value is used.</dd>
-</dl>
+*   `<integer>{10}`
+    *   : This value specifies a Panose-1 number and consists of ten decimal integers, separated by whitespace. The initial value zero for each PANOSE digit means "any", i.e. all fonts will match the Panose number if this value is used.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG1.1", "fonts.html#FontFaceElementPanose1Attribute", "panose-1")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "fonts.html#FontFaceElementPanose1Attribute", "panose-1")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

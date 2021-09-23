@@ -10,36 +10,36 @@ tags:
   - SVG
 browser-compat: svg.attributes.events.global
 ---
-<p>Event attributes always have their name starting with "on" followed by the name of the event for which they are intended. They specifies some script to run when the event of the given type is dispatched to the element on which the attributes are specified.</p>
+Event attributes always have their name starting with "on" followed by the name of the event for which they are intended. They specifies some script to run when the event of the given type is dispatched to the element on which the attributes are specified.
 
-<p>For every event type that the browser supports, SVG supports that as an event attribute, following the same requirements as for HTML event attributes.</p>
+For every event type that the browser supports, SVG supports that as an event attribute, following the same requirements as for HTML event attributes.
 
-<p>The global event attributes are available on <em>all SVG elements</em>. Other event attributes are available on a case by case basis for each elements.</p>
+The global event attributes are available on *all SVG elements*. Other event attributes are available on a case by case basis for each elements.
 
-<p>All event attribute are <em>not animatable</em>.</p>
+All event attribute are *not animatable*.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Animation_Event_Attributes">Animation Event Attributes</h3>
+### Animation Event Attributes
 
-<p><code><strong>onbegin</strong></code>, <code><strong>onend</strong></code>, <code><strong>onrepeat</strong></code></p>
+**`onbegin`**, **`onend`**, **`onrepeat`**
 
-<h3 id="Document_Event_Attributes">Document Event Attributes</h3>
+### Document Event Attributes
 
-<p><code><strong>onabort</strong></code>, <code><strong>onerror</strong></code>, <code><strong>onresize</strong></code>, <code><strong>onscroll</strong></code>, <code><strong>onunload</strong></code></p>
+**`onabort`**, **`onerror`**, **`onresize`**, **`onscroll`**, **`onunload`**
 
-<h3 id="Document_Element_Event_Attributes">Document Element Event Attributes</h3>
+### Document Element Event Attributes
 
-<p><strong><code>oncopy</code></strong>, <strong><code>oncut</code></strong>, <strong><code>onpaste</code></strong></p>
+**`oncopy`**, **`oncut`**, **`onpaste`**
 
-<h3 id="Global_Event_Attributes">Global Event Attributes</h3>
+### Global Event Attributes
 
-<p><code><strong>oncancel</strong></code>, <code><strong>oncanplay</strong></code>, <code><strong>oncanplaythrough</strong></code>, <code><strong>onchange</strong></code>, <code><strong>onclick</strong></code>, <code><strong>onclose</strong></code>, <code><strong>oncuechange</strong></code>, <code><strong>ondblclick</strong></code>, <code><strong>ondrag</strong></code>, <code><strong>ondragend</strong></code>, <code><strong>ondragenter</strong></code>, <code><strong>ondragleave</strong></code>, <code><strong>ondragover</strong></code>, <code><strong>ondragstart</strong></code>, <code><strong>ondrop</strong></code>, <code><strong>ondurationchange</strong></code>, <code><strong>onemptied</strong></code>, <code><strong>onended</strong></code>, <code><strong>onerror</strong></code>, <code><strong>onfocus</strong></code>, <code><strong>oninput</strong></code>, <code><strong>oninvalid</strong></code>, <code><strong>onkeydown</strong></code>, <code><strong>onkeypress</strong></code>, <code><strong>onkeyup</strong></code>, <code><strong>onload</strong></code>, <code><strong>onloadeddata</strong></code>, <code><strong>onloadedmetadata</strong></code>, <code><strong>onloadstart</strong></code>, <code><strong>onmousedown</strong></code>, <code><strong>onmouseenter</strong></code>, <code><strong>onmouseleave</strong></code>, <code><strong>onmousemove</strong></code>, <code><strong>onmouseout</strong></code>, <code><strong>onmouseover</strong></code>, <code><strong>onmouseup</strong></code>, <code><strong>onmousewheel</strong></code>, <code><strong>onpause</strong></code>, <code><strong>onplay</strong></code>, <code><strong>onplaying</strong></code>, <code><strong>onprogress</strong></code>, <code><strong>onratechange</strong></code>, <code><strong>onreset</strong></code>, <code><strong>onresize</strong></code>, <code><strong>onscroll</strong></code>, <code><strong>onseeked</strong></code>, <code><strong>onseeking</strong></code>, <code><strong>onselect</strong></code>, <code><strong>onshow</strong></code>, <code><strong>onstalled</strong></code>, <code><strong>onsubmit</strong></code>, <code><strong>onsuspend</strong></code>, <code><strong>ontimeupdate</strong></code>, <code><strong>ontoggle</strong></code>, <code><strong>onvolumechange</strong></code>, <code><strong>onwaiting</strong></code></p>
+**`oncancel`**, **`oncanplay`**, **`oncanplaythrough`**, **`onchange`**, **`onclick`**, **`onclose`**, **`oncuechange`**, **`ondblclick`**, **`ondrag`**, **`ondragend`**, **`ondragenter`**, **`ondragleave`**, **`ondragover`**, **`ondragstart`**, **`ondrop`**, **`ondurationchange`**, **`onemptied`**, **`onended`**, **`onerror`**, **`onfocus`**, **`oninput`**, **`oninvalid`**, **`onkeydown`**, **`onkeypress`**, **`onkeyup`**, **`onload`**, **`onloadeddata`**, **`onloadedmetadata`**, **`onloadstart`**, **`onmousedown`**, **`onmouseenter`**, **`onmouseleave`**, **`onmousemove`**, **`onmouseout`**, **`onmouseover`**, **`onmouseup`**, **`onmousewheel`**, **`onpause`**, **`onplay`**, **`onplaying`**, **`onprogress`**, **`onratechange`**, **`onreset`**, **`onresize`**, **`onscroll`**, **`onseeked`**, **`onseeking`**, **`onselect`**, **`onshow`**, **`onstalled`**, **`onsubmit`**, **`onsuspend`**, **`ontimeupdate`**, **`ontoggle`**, **`onvolumechange`**, **`onwaiting`**
 
-<h3 id="Graphical_Event_Attributes">Graphical Event Attributes</h3>
+### Graphical Event Attributes
 
-<p><code><strong>onactivate</strong></code>, <code><strong>onfocusin</strong></code>, <code><strong>onfocusout</strong></code></p>
+**`onactivate`**, **`onfocusin`**, **`onfocusout`**
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

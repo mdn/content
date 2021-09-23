@@ -6,125 +6,134 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.opacity
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>opacity</code></strong> attribute specifies the transparency of an object or of a group of objects, that is, the degree to which the background behind the element is overlaid.</p>
+The **`opacity`** attribute specifies the transparency of an object or of a group of objects, that is, the degree to which the background behind the element is overlaid.
 
-<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>opacity</code> can be used as a CSS property. See the {{cssxref("opacity", "CSS opacity")}} property for more information.</p></div>
+> **Note:** As a presentation attribute, `opacity` can be used as a CSS property. See the {{cssxref("opacity", "CSS opacity")}} property for more information.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("a")}}</li>
-  <li>{{SVGElement("audio")}}</li>
-  <li>{{SVGElement("canvas")}}</li>
-  <li>{{SVGElement("circle")}}</li>
-  <li>{{SVGElement("ellipse")}}</li>
-  <li>{{SVGElement("foreignObject")}}</li>
-  <li>{{SVGElement("g")}}</li>
-  <li>{{SVGElement("iframe")}}</li>
-  <li>{{SVGElement("image")}}</li>
-  <li>{{SVGElement("line")}}</li>
-  <li>{{SVGElement("marker")}}</li>
-  <li>{{SVGElement("path")}}</li>
-  <li>{{SVGElement("polygon")}}</li>
-  <li>{{SVGElement("polyline")}}</li>
-  <li>{{SVGElement("rect")}}</li>
-  <li>{{SVGElement("svg")}}</li>
-  <li>{{SVGElement("switch")}}</li>
-  <li>{{SVGElement("symbol")}}</li>
-  <li>{{SVGElement("text")}}</li>
-  <li>{{SVGElement("textPath")}}</li>
-  <li>{{SVGElement("tspan")}}</li>
-  <li>{{SVGElement("use")}}</li>
-  <li>{{SVGElement("unknown")}}</li>
-  <li>{{SVGElement("video")}}</li>
-</ul>
+*   {{SVGElement("a")}}
+*   {{SVGElement("audio")}}
+*   {{SVGElement("canvas")}}
+*   {{SVGElement("circle")}}
+*   {{SVGElement("ellipse")}}
+*   {{SVGElement("foreignObject")}}
+*   {{SVGElement("g")}}
+*   {{SVGElement("iframe")}}
+*   {{SVGElement("image")}}
+*   {{SVGElement("line")}}
+*   {{SVGElement("marker")}}
+*   {{SVGElement("path")}}
+*   {{SVGElement("polygon")}}
+*   {{SVGElement("polyline")}}
+*   {{SVGElement("rect")}}
+*   {{SVGElement("svg")}}
+*   {{SVGElement("switch")}}
+*   {{SVGElement("symbol")}}
+*   {{SVGElement("text")}}
+*   {{SVGElement("textPath")}}
+*   {{SVGElement("tspan")}}
+*   {{SVGElement("use")}}
+*   {{SVGElement("unknown")}}
+*   {{SVGElement("video")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[2,3]">&lt;svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-    &lt;linearGradient id="gradient" x1="0%" y1="0%" x2="0" y2="100%"&gt;
-      &lt;stop offset="0%" style="stop-color:skyblue;" /&gt;
-      &lt;stop offset="100%" style="stop-color:seagreen;" /&gt;
-    &lt;/linearGradient&gt;
-  &lt;/defs&gt;
-  &lt;rect x="0" y="0" width="100%" height="100%" fill="url(#gradient)" /&gt;
-  &lt;circle cx="50" cy="50" r="40" fill="black" /&gt;
-  &lt;circle cx="150" cy="50" r="40" fill="black" opacity="0.3" /&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="0" y2="100%">
+      <stop offset="0%" style="stop-color:skyblue;" />
+      <stop offset="100%" style="stop-color:seagreen;" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#gradient)" />
+  <circle cx="50" cy="50" r="40" fill="black" />
+  <circle cx="150" cy="50" r="40" fill="black" opacity="0.3" />
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "200", "200")}}</p>
+{{EmbedLiveSample("Example", "200", "200")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>&lt;alpha-value&gt;</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>&#x3C;alpha-value></code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;alpha-value&gt;</code></dt>
- <dd>The uniform opacity setting to be applied across an entire object, as a {{cssxref("number")}}. Any values outside the range 0.0 (fully transparent) to 1.0 (fully opaque) will be clamped to this range.</dd>
-</dl>
+*   `<alpha-value>`
+    *   : The uniform opacity setting to be applied across an entire object, as a {{cssxref("number")}}. Any values outside the range 0.0 (fully transparent) to 1.0 (fully opaque) will be clamped to this range.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Colors", "#transparency", "opacity")}}</td>
-   <td>{{Spec2("CSS4 Colors")}}</td>
-   <td>Defines in more detail what this attribute applies to.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Colors", "#transparency", "opacity")}}</td>
-   <td>{{Spec2("CSS3 Colors")}}</td>
-   <td>Defines in more detail what this attribute applies to.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "render.html#ObjectAndGroupOpacityProperties", "opacity")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>References the specification in CSS Color 3 and notes that there are some related attributes.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "masking.html#OpacityProperty", "opacity")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("CSS4 Colors", "#transparency", "opacity")}}
+      </td>
+      <td>{{Spec2("CSS4 Colors")}}</td>
+      <td>Defines in more detail what this attribute applies to.</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("CSS3 Colors", "#transparency", "opacity")}}
+      </td>
+      <td>{{Spec2("CSS3 Colors")}}</td>
+      <td>Defines in more detail what this attribute applies to.</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "render.html#ObjectAndGroupOpacityProperties", "opacity")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>
+        References the specification in CSS Color 3 and notes that there are
+        some related attributes.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "masking.html#OpacityProperty", "opacity")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("opacity", "CSS opacity")}}</li>
-</ul>
+*   {{cssxref("opacity", "CSS opacity")}}

@@ -8,59 +8,59 @@ tags:
   - SVG Descriptive
 browser-compat: svg.elements.title
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>&lt;title&gt;</code></strong> element provides an accessible, short-text description of any SVG <a href="/en-US/docs/Web/SVG/Element#container_elements">container element</a> or <a href="/en-US/docs/Web/SVG/Element#graphics_elements">graphics element</a>.</p>
+The **`<title>`** element provides an accessible, short-text description of any SVG [container element](/en-US/docs/Web/SVG/Element#container_elements) or [graphics element](/en-US/docs/Web/SVG/Element#graphics_elements).
 
-<p>Text in a <code>&lt;title&gt;</code> element is not rendered as part of the graphic, but browsers usually display it as a tooltip. If an element can be described by visible text, it is recommended to reference that text with an <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a></code> attribute rather than using the <code>&lt;title&gt;</code> element.</p>
+Text in a `<title>` element is not rendered as part of the graphic, but browsers usually display it as a tooltip. If an element can be described by visible text, it is recommended to reference that text with an [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) attribute rather than using the `<title>` element.
 
-<div class="note"><p><strong>Note:</strong> For backward compatibility with SVG 1.1, <code>&lt;title&gt;</code> elements should be the first child element of their parent.</p></div>
+> **Note:** For backward compatibility with SVG 1.1, `<title>` elements should be the first child element of their parent.
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;circle cx="5" cy="5" r="4"&gt;
-    &lt;title&gt;I'm a circle&lt;/title&gt;
-  &lt;/circle&gt;
+```html
+<svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="5" cy="5" r="4">
+    <title>I'm a circle</title>
+  </circle>
 
-  &lt;rect x="11" y="1" width="8" height="8"&gt;
-    &lt;title&gt;I'm a square&lt;/title&gt;
-  &lt;/rect&gt;
-&lt;/svg&gt;</pre>
+  <rect x="11" y="1" width="8" height="8">
+    <title>I'm a square</title>
+  </rect>
+</svg>
+```
 
-<p>{{EmbedLiveSample('Example', 150, '100%')}}</p>
+{{EmbedLiveSample('Example', 150, '100%')}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element only includes global attributes</p>
+This element only includes global attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<dl>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Core">Core Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('id')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Styling">Styling Attributes</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt>Event Attributes</dt>
- <dd><small><a href="/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes">Global event attributes</a>, <a href="/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes">Document element event attributes</a></small></dd>
-</dl>
+*   [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
+    *   : Most notably: {{SVGAttr('id')}}
+*   [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
+    *   : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+*   Event Attributes
+    *   : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Document element event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("desc")}}</li>
-</ul>
+*   {{SVGElement("desc")}}

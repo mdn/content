@@ -8,78 +8,78 @@ tags:
   - SVG
 browser-compat: svg.elements.feDropShadow
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The SVG <strong><code>&lt;feDropShadow&gt;</code></strong> filter primitive creates a drop shadow of the input image. It can only be used inside a {{SVGElement('filter')}} element.</p>
+The SVG **`<feDropShadow>`** filter primitive creates a drop shadow of the input image. It can only be used inside a {{SVGElement('filter')}} element.
 
-<div class="note"><p><strong>Note:</strong> The drop shadow color and opacity can be changed by using the {{SVGAttr('flood-color')}} and {{SVGAttr('flood-opacity')}} presentation attributes.</p></div>
+> **Note:** The drop shadow color and opacity can be changed by using the {{SVGAttr('flood-color')}} and {{SVGAttr('flood-opacity')}} presentation attributes.
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html; highlight[4]">&lt;svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-    &lt;filter id="shadow"&gt;
-      &lt;feDropShadow dx="0.2" dy="0.4" stdDeviation="0.2"/&gt;
-    &lt;/filter&gt;
-    &lt;filter id="shadow2"&gt;
-      &lt;feDropShadow dx="0" dy="0" stdDeviation="0.5"
-          flood-color="cyan"/&gt;
-    &lt;/filter&gt;
-    &lt;filter id="shadow3"&gt;
-      &lt;feDropShadow dx="-0.8" dy="-0.8" stdDeviation="0"
-          flood-color="pink" flood-opacity="0.5"/&gt;
-    &lt;/filter&gt;
-  &lt;/defs&gt;
+```html
+<svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0.2" dy="0.4" stdDeviation="0.2"/>
+    </filter>
+    <filter id="shadow2">
+      <feDropShadow dx="0" dy="0" stdDeviation="0.5"
+          flood-color="cyan"/>
+    </filter>
+    <filter id="shadow3">
+      <feDropShadow dx="-0.8" dy="-0.8" stdDeviation="0"
+          flood-color="pink" flood-opacity="0.5"/>
+    </filter>
+  </defs>
 
-  &lt;circle cx="5" cy="50%" r="4"
-      style="fill:pink; filter:url(#shadow);"/&gt;
+  <circle cx="5" cy="50%" r="4"
+      style="fill:pink; filter:url(#shadow);"/>
 
-  &lt;circle cx="15" cy="50%" r="4"
-      style="fill:pink; filter:url(#shadow2);"/&gt;
+  <circle cx="15" cy="50%" r="4"
+      style="fill:pink; filter:url(#shadow2);"/>
 
-  &lt;circle cx="25" cy="50%" r="4"
-      style="fill:pink; filter:url(#shadow3);"/&gt;
-&lt;/svg&gt;</pre>
+  <circle cx="25" cy="50%" r="4"
+      style="fill:pink; filter:url(#shadow3);"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample('Example', 150, '100%')}}</p>
+{{EmbedLiveSample('Example', 150, '100%')}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt>{{SVGAttr("dx")}}</dt>
- <dd>This attribute defines the x offset of the drop shadow.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#number"><strong>&lt;number&gt;</strong></a>; <em>Default value</em>: <code>2</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("dy")}}</dt>
- <dd>This attribute defines the y offset of the drop shadow.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#number"><strong>&lt;number&gt;</strong></a>; <em>Default value</em>: <code>2</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("stdDeviation")}}</dt>
- <dd>This attribute defines the standard deviation for the blur operation in the drop shadow.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#number"><strong>&lt;number&gt;</strong></a>; <em>Default value</em>: <code>2</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
-</dl>
+*   {{SVGAttr("dx")}}
+    *   : This attribute defines the x offset of the drop shadow.
+        *Value type*: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number); *Default value*: `2`; *Animatable*: **yes**
+*   {{SVGAttr("dy")}}
+    *   : This attribute defines the y offset of the drop shadow.
+        *Value type*: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number); *Default value*: `2`; *Animatable*: **yes**
+*   {{SVGAttr("stdDeviation")}}
+    *   : This attribute defines the standard deviation for the blur operation in the drop shadow.
+        *Value type*: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number); *Default value*: `2`; *Animatable*: **yes**
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<dl>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Core">Core Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('id')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Styling">Styling Attributes</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute#filters_attributes">Filter primitive attributes</a></dt>
- <dd><small>{{SVGAttr('height')}}, {{SVGAttr('in')}}, {{SVGAttr('result')}}, {{SVGAttr('x')}}, {{SVGAttr('y')}}, {{SVGAttr('width')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Presentation">Presentation Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('flood-color')}}, {{SVGAttr('flood-opacity')}}</small></dd>
-</dl>
+*   [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
+    *   : Most notably: {{SVGAttr('id')}}
+*   [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
+    *   : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+*   [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filters_attributes)
+    *   : {{SVGAttr('height')}}, {{SVGAttr('in')}}, {{SVGAttr('result')}}, {{SVGAttr('x')}}, {{SVGAttr('y')}}, {{SVGAttr('width')}}
+*   [Presentation Attributes](/en-US/docs/Web/SVG/Attribute/Presentation)
+    *   : Most notably: {{SVGAttr('flood-color')}}, {{SVGAttr('flood-opacity')}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

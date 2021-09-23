@@ -7,88 +7,95 @@ tags:
   - SVG Filter
 browser-compat: svg.attributes.presentation.flood-color
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>flood-color</code></strong> attribute indicates what color to use to flood the current filter primitive subregion.</p>
+The **`flood-color`** attribute indicates what color to use to flood the current filter primitive subregion.
 
-<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>flood-color</code> can be used as a CSS property.</p></div>
+> **Note:** As a presentation attribute, `flood-color` can be used as a CSS property.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("feFlood")}}</li>
-  <li>{{SVGElement("feDropShadow")}}</li>
-</ul>
+*   {{SVGElement("feFlood")}}
+*   {{SVGElement("feDropShadow")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[3,6]">&lt;svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;filter id="flood1"&gt;
-    &lt;feFlood flood-color="skyblue" x="0" y="0" width="200" height="200"/&gt;
-  &lt;/filter&gt;
-  &lt;filter id="flood2"&gt;
-    &lt;feFlood flood-color="seagreen" x="0" y="0" width="200" height="200"/&gt;
-  &lt;/filter&gt;
+```html
+<svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
+  <filter id="flood1">
+    <feFlood flood-color="skyblue" x="0" y="0" width="200" height="200"/>
+  </filter>
+  <filter id="flood2">
+    <feFlood flood-color="seagreen" x="0" y="0" width="200" height="200"/>
+  </filter>
 
-  &lt;rect x="0" y="0" width="200" height="200" style="filter: url(#flood1);" /&gt;
-  &lt;rect x="0" y="0" width="200" height="200" style="filter: url(#flood2); transform: translateX(220px);" /&gt;
-&lt;/svg&gt;</pre>
+  <rect x="0" y="0" width="200" height="200" style="filter: url(#flood1);" />
+  <rect x="0" y="0" width="200" height="200" style="filter: url(#flood2); transform: translateX(220px);" />
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "420", "200")}}</p>
+{{EmbedLiveSample("Example", "420", "200")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>{{cssxref("color")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Initial value</th>
-   <td><code>black</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>{{cssxref("color")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Initial value</th>
+      <td><code>black</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Filters 1.0", "#FloodColorProperty", "flood-color")}}</td>
-   <td>{{Spec2("Filters 1.0")}}</td>
-   <td>Removed the &lt;icccolor&gt; value and aligned the value to the CSS {{cssxref("color")}} value.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#FloodColorProperty", "flood-color")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("Filters 1.0", "#FloodColorProperty", "flood-color")}}
+      </td>
+      <td>{{Spec2("Filters 1.0")}}</td>
+      <td>
+        Removed the &#x3C;icccolor> value and aligned the value to the CSS
+        {{cssxref("color")}} value.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "filters.html#FloodColorProperty", "flood-color")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGAttr("flood-opacity")}}</li>
-</ul>
+*   {{SVGAttr("flood-opacity")}}

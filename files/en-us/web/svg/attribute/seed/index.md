@@ -7,96 +7,104 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feTurbulence.seed
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <code><strong>seed</strong></code> attribute represents the starting number for the pseudo random number generator of the {{SVGElement("feTurbulence")}} filter primitive.</p>
+The **`seed`** attribute represents the starting number for the pseudo random number generator of the {{SVGElement("feTurbulence")}} filter primitive.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("feTurbulence")}}</li>
-</ul>
+*   {{SVGElement("feTurbulence")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[4,7]">&lt;svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;filter id="noise1" x="0" y="0" width="100%" height="100%"&gt;
-    &lt;feTurbulence baseFrequency="0.025" seed="0" /&gt;
-  &lt;/filter&gt;
-  &lt;filter id="noise2" x="0" y="0" width="100%" height="100%"&gt;
-    &lt;feTurbulence baseFrequency="0.025" seed="100" /&gt;
-  &lt;/filter&gt;
+```html
+<svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
+  <filter id="noise1" x="0" y="0" width="100%" height="100%">
+    <feTurbulence baseFrequency="0.025" seed="0" />
+  </filter>
+  <filter id="noise2" x="0" y="0" width="100%" height="100%">
+    <feTurbulence baseFrequency="0.025" seed="100" />
+  </filter>
 
-  &lt;rect x="0" y="0" width="200" height="200" style="filter:url(#noise1);" /&gt;
-  &lt;rect x="0" y="0" width="200" height="200" style="filter:url(#noise2); transform: translateX(220px);" /&gt;
-&lt;/svg&gt;</pre>
+  <rect x="0" y="0" width="200" height="200" style="filter:url(#noise1);" />
+  <rect x="0" y="0" width="200" height="200" style="filter:url(#noise2); transform: translateX(220px);" />
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "220", "220")}}</p>
+{{EmbedLiveSample("Example", "220", "220")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>{{cssxref("number")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>{{cssxref("number")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html; highlight[4]">&lt;svg width="200" height="200" viewBox="0 0 220 220"
-     xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;filter id="displacementFilter"&gt;
-    &lt;feTurbulence baseFrequency="0.05" seed="1000"
-        result="turbulence"/&gt;
-    &lt;feDisplacementMap in2="turbulence" in="SourceGraphic"
-        scale="50" xChannelSelector="R" yChannelSelector="G"/&gt;
-  &lt;/filter&gt;
+```html
+<svg width="200" height="200" viewBox="0 0 220 220"
+     xmlns="http://www.w3.org/2000/svg">
+  <filter id="displacementFilter">
+    <feTurbulence baseFrequency="0.05" seed="1000"
+        result="turbulence"/>
+    <feDisplacementMap in2="turbulence" in="SourceGraphic"
+        scale="50" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
 
-  &lt;circle cx="100" cy="100" r="100"
-      style="filter: url(#displacementFilter)"/&gt;
-&lt;/svg&gt;</pre>
+  <circle cx="100" cy="100" r="100"
+      style="filter: url(#displacementFilter)"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "220", "220")}}</p>
+{{EmbedLiveSample("Example", "220", "220")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Filters 1.0", "#element-attrdef-feturbulence-seed", "seed")}}</td>
-   <td>{{Spec2("Filters 1.0")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#feTurbulenceSeedAttribute", "seed")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("Filters 1.0", "#element-attrdef-feturbulence-seed", "seed")}}
+      </td>
+      <td>{{Spec2("Filters 1.0")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "filters.html#feTurbulenceSeedAttribute", "seed")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

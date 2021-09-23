@@ -7,102 +7,98 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.color-interpolation-filters
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>color-interpolation-filters</code></strong> attribute specifies the color space for imaging operations performed via filter effects.</p>
+The **`color-interpolation-filters`** attribute specifies the color space for imaging operations performed via filter effects.
 
-<div class="notecard note">
-<p><strong>Note:</strong> This property just has an affect on filter operations. Therefore, it has no effect on filter primitives like {{SVGElement("feOffset")}}, {{SVGElement("feImage")}}, {{SVGElement("feTile")}} or {{SVGElement("feFlood")}}.</p>
+> **Note:** This property just has an affect on filter operations. Therefore, it has no effect on filter primitives like {{SVGElement("feOffset")}}, {{SVGElement("feImage")}}, {{SVGElement("feTile")}} or {{SVGElement("feFlood")}}.
+>
+> `color-interpolation-filters` has a different initial value than {{SVGAttr("color-interpolation")}}. `color-interpolation-filters` has an initial value of `linearRGB`, whereas `color-interpolation` has an initial value of `sRGB`. Thus, in the default case, filter effects operations occur in the linearRGB color space, whereas all other color interpolations occur by default in the sRGB color space.
+>
+> It has no affect on filter functions, which operate in the {{Glossary("sRGB")}} color space.
 
-<p><code>color-interpolation-filters</code> has a different initial value than {{SVGAttr("color-interpolation")}}. <code>color-interpolation-filters</code> has an initial value of <code>linearRGB</code>, whereas <code>color-interpolation</code> has an initial value of <code>sRGB</code>. Thus, in the default case, filter effects operations occur in the linearRGB color space, whereas all other color interpolations occur by default in the sRGB color space.</p>
+> **Note:** As a presentation attribute, `color-interpolation-filters` can be used as a CSS property.
 
-<p>It has no affect on filter functions, which operate in the {{Glossary("sRGB")}} color space.</p>
-</div>
+You can use this attribute with the following SVG elements:
 
-<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>color-interpolation-filters</code> can be used as a CSS property.</p></div>
+*   {{SVGElement("feSpotLight")}}
+*   {{SVGElement("feBlend")}}
+*   {{SVGElement("feColorMatrix")}}
+*   {{SVGElement("feComponentTransfer")}}
+*   {{SVGElement("feComposite")}}
+*   {{SVGElement("feConvolveMatrix")}}
+*   {{SVGElement("feDiffuseLighting")}}
+*   {{SVGElement("feDisplacementMap")}}
+*   {{SVGElement("feDropShadow")}}
+*   {{SVGElement("feFlood")}}
+*   {{SVGElement("feGaussianBlur")}}
+*   {{SVGElement("feImage")}}
+*   {{SVGElement("feMerge")}}
+*   {{SVGElement("feMorphology")}}
+*   {{SVGElement("feOffset")}}
+*   {{SVGElement("feSpecularLighting")}}
+*   {{SVGElement("feTile")}}
+*   {{SVGElement("feTurbulence")}}
 
-<p>You can use this attribute with the following SVG elements:</p>
-
-<ul>
-  <li>{{SVGElement("feSpotLight")}}</li>
-  <li>{{SVGElement("feBlend")}}</li>
-  <li>{{SVGElement("feColorMatrix")}}</li>
-  <li>{{SVGElement("feComponentTransfer")}}</li>
-  <li>{{SVGElement("feComposite")}}</li>
-  <li>{{SVGElement("feConvolveMatrix")}}</li>
-  <li>{{SVGElement("feDiffuseLighting")}}</li>
-  <li>{{SVGElement("feDisplacementMap")}}</li>
-  <li>{{SVGElement("feDropShadow")}}</li>
-  <li>{{SVGElement("feFlood")}}</li>
-  <li>{{SVGElement("feGaussianBlur")}}</li>
-  <li>{{SVGElement("feImage")}}</li>
-  <li>{{SVGElement("feMerge")}}</li>
-  <li>{{SVGElement("feMorphology")}}</li>
-  <li>{{SVGElement("feOffset")}}</li>
-  <li>{{SVGElement("feSpecularLighting")}}</li>
-  <li>{{SVGElement("feTile")}}</li>
-  <li>{{SVGElement("feTurbulence")}}</li>
-</ul>
-
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>auto</code> | <code>sRGB</code> | <code>linearRGB</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>linearRGB</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>discrete</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>auto</code> | <code>sRGB</code> | <code>linearRGB</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>linearRGB</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>discrete</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Indicates that the user agent can choose either the <code>sRGB</code> or <code>linearRGB</code> spaces for color interpolation. This option indicates that the author doesn't require that color interpolation occur in a particular color space.</dd>
- <dt><code>sRGB</code></dt>
- <dd>Indicates that color interpolation should occur in the sRGB color space.</dd>
- <dt><code>linearRGB</code></dt>
- <dd>Indicates that color interpolation should occur in the linearized RGB color space as described in <a href="https://webstore.iec.ch/publication/6169">the sRGB specification</a>.</dd>
-</dl>
+*   `auto`
+    *   : Indicates that the user agent can choose either the `sRGB` or `linearRGB` spaces for color interpolation. This option indicates that the author doesn't require that color interpolation occur in a particular color space.
+*   `sRGB`
+    *   : Indicates that color interpolation should occur in the sRGB color space.
+*   `linearRGB`
+    *   : Indicates that color interpolation should occur in the linearized RGB color space as described in [the sRGB specification](https://webstore.iec.ch/publication/6169).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Filters 1.0", "#ColorInterpolationFiltersProperty", "color-interpolation")}}</td>
-   <td>{{Spec2("Filters 1.0")}}</td>
-   <td>No significant change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "painting.html#ColorInterpolationFiltersProperty", "color-interpolation-filters")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("Filters 1.0", "#ColorInterpolationFiltersProperty", "color-interpolation")}}
+      </td>
+      <td>{{Spec2("Filters 1.0")}}</td>
+      <td>No significant change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "painting.html#ColorInterpolationFiltersProperty", "color-interpolation-filters")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://webstore.iec.ch/publication/6169">sRGB specification</a></li>
- <li>{{SVGAttr("color-interpolation")}}</li>
-</ul>
+*   [sRGB specification](https://webstore.iec.ch/publication/6169)
+*   {{SVGAttr("color-interpolation")}}

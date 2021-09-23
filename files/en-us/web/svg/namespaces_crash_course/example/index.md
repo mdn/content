@@ -5,16 +5,20 @@ tags:
   - SVG
   - XML
 ---
-<p>In this example, we use <a href="/en-US/docs/Glossary/XHTML">XHTML</a>, <a href="/en-US/docs/Web/SVG">SVG</a>, <a href="/en-US/docs/Web/JavaScript">JavaScript</a>, and the <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a> to animate a swarm of "motes". These motes are governed by two simple principles. First, each mote tries to move towards the mouse cursor, and second each mote tries to move away from the average mote position. Combined, we get this very natural-looking behavior.</p>
-<p>This is done completely in W3C Standards–XHTML, SVG, and JavaScript–no Flash or any vendor-specific extensions. This example should work in Firefox 1.5 and above.</p>
-<p><a href="https://media.prod.mdn.mozit.cloud/samples/svg/swarm-of-motes.xhtml">View the example</a></p>
-<pre class="brush:xml">&lt;?xml version='1.0'?&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:svg="http://www.w3.org/2000/svg"&gt;
-	&lt;head&gt;
-	&lt;title&gt;A swarm of motes&lt;/title&gt;
-	&lt;style type='text/css'&gt;
-	&lt;![CDATA[
+In this example, we use [XHTML](/en-US/docs/Glossary/XHTML), [SVG](/en-US/docs/Web/SVG), [JavaScript](/en-US/docs/Web/JavaScript), and the [DOM](/en-US/docs/Web/API/Document_Object_Model) to animate a swarm of "motes". These motes are governed by two simple principles. First, each mote tries to move towards the mouse cursor, and second each mote tries to move away from the average mote position. Combined, we get this very natural-looking behavior.
+
+This is done completely in W3C Standards–XHTML, SVG, and JavaScript–no Flash or any vendor-specific extensions. This example should work in Firefox 1.5 and above.
+
+[View the example](https://media.prod.mdn.mozit.cloud/samples/svg/swarm-of-motes.xhtml)
+
+```xml
+<?xml version='1.0'?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:svg="http://www.w3.org/2000/svg">
+	<head>
+	<title>A swarm of motes</title>
+	<style type='text/css'>
+	<![CDATA[
 		label, input
 		{
 			width: 150px;
@@ -32,66 +36,66 @@ tags:
 		{
 			clear: left;
 		}
-	]]&gt;
-	&lt;/style&gt;
-	&lt;/head&gt;
-	&lt;body onload='update()'&gt;
-		&lt;svg:svg id='display' width='400' height='300'&gt;
-			&lt;svg:circle id='cursor' cx='200'
-cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/&gt;
-		&lt;/svg:svg&gt;
+	]]>
+	</style>
+	</head>
+	<body onload='update()'>
+		<svg:svg id='display' width='400' height='300'>
+			<svg:circle id='cursor' cx='200'
+cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
+		</svg:svg>
 
-		&lt;p&gt;A swarm of motes, governed by two simple principles.
+		<p>A swarm of motes, governed by two simple principles.
 		First, each mote tries to move towards the cursor, and
 		second each mote tries to move away from the average
 		mote position.	Combined, we get this very natural
 		looking behavior.
-		&lt;/p&gt;
+		</p>
 
-		&lt;p&gt;
+		<p>
 		This is done completely in W3C Standards–XHTML,
 		SVG and JavaScript–no flash or any vendor specific
 		extensions.	 Currently, this will work in Mozilla Firefox
 		version 1.5 and above.
-		&lt;/p&gt;
+		</p>
 
-		&lt;div&gt;
-		(C) 2006 &lt;a id='emailme' href='#'&gt;Nick Johnson&lt;/a&gt;
+		<div>
+		(C) 2006 <a id='emailme' href='#'>Nick Johnson</a>
 
-		&lt;script type='text/javascript'&gt;
-		&lt;![CDATA[
+		<script type='text/javascript'>
+		<![CDATA[
 			// foil spam bots
 			var email = '@riovia.net';
 			email ='nick' + email;
 			document.getElementById('emailme').href = 'mailto:'+email;
-		]]&gt;
-		&lt;/script&gt;
+		]]>
+		</script>
 		This software is free for you to use in any way whatsoever,
 		and comes with no warranty at all.
-		&lt;/div&gt;
+		</div>
 
-		&lt;form action="" onsubmit="return false;"&gt;
-			&lt;p&gt;
-			&lt;label&gt;Number of motes:&lt;/label&gt;
-				&lt;input id='num_motes' value='5'/&gt;
-				&lt;br/&gt;
+		<form action="" onsubmit="return false;">
+			<p>
+			<label>Number of motes:</label>
+				<input id='num_motes' value='5'/>
+				<br/>
 
-			&lt;label&gt;Max. Velocity:&lt;/label&gt;
-				&lt;input id='max_velocity' value='15'/&gt;
-				&lt;br/&gt;
+			<label>Max. Velocity:</label>
+				<input id='max_velocity' value='15'/>
+				<br/>
 
-			&lt;label&gt;Attraction to cursor:&lt;/label&gt;
-				&lt;input id='attract_cursor' value='6'/&gt;
-				&lt;br/&gt;
+			<label>Attraction to cursor:</label>
+				<input id='attract_cursor' value='6'/>
+				<br/>
 
-			&lt;label&gt;Repulsion from peers:&lt;/label&gt;
-				&lt;input id='repel_peer' value='5'/&gt;
-				&lt;br/&gt;
-			&lt;/p&gt;
-		&lt;/form&gt;
+			<label>Repulsion from peers:</label>
+				<input id='repel_peer' value='5'/>
+				<br/>
+			</p>
+		</form>
 
-	&lt;script type='text/javascript'&gt;
-	&lt;![CDATA[
+	<script type='text/javascript'>
+	<![CDATA[
 
 		// Array of motes
 		var motes;
@@ -144,7 +148,7 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/&gt;
 
 			var i;
 			var sum_x=0, sum_y=0;
-			for(i=0; i&lt;motes.length; i++)
+			for(i=0; i<motes.length; i++)
 			{
 				sum_x += motes[i].x;
 				sum_y += motes[i].y;
@@ -186,14 +190,14 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/&gt;
 		// governed by any /real/ physical principles.
 		Mote.prototype.applyForce = function(pos, mag)
 		{
-			if( pos[0] &gt; this.x )
+			if( pos[0] > this.x )
 				this.vx += mag;
-			else if( pos[0] &lt; this.x )
+			else if( pos[0] < this.x )
 				this.vx -= mag;
 
-			if( pos[1] &gt; this.y )
+			if( pos[1] > this.y )
 				this.vy += mag;
-			else if( pos[1] &lt; this.y )
+			else if( pos[1] < this.y )
 				this.vy -= mag;
 		}
 
@@ -203,14 +207,14 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/&gt;
 		{
 			var max = parseInt( document.getElementById('max_velocity').value );
 
-			if( max &lt; this.vx )
+			if( max < this.vx )
 				this.vx = max;
-			else if( -max &gt; this.vx )
+			else if( -max > this.vx )
 				this.vx = -max;
 
-			if( max &lt; this.vy )
+			if( max < this.vy )
 				this.vy = max;
-			else if( -max &gt; this.vy )
+			else if( -max > this.vy )
 				this.vy = -max;
 		}
 
@@ -219,14 +223,14 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/&gt;
 		Mote.prototype.capPosition = function()
 		{
 			var dims = Dimensions();
-			if( this.x &lt; 0 )
+			if( this.x < 0 )
 				this.x = 0;
-			else if( this.x &gt;= dims[0] )
+			else if( this.x >= dims[0] )
 				this.x = dims[0]-1;
 
-			if( this.y &lt; 0 )
+			if( this.y < 0 )
 				this.y = 0;
-			else if( this.y &gt;= dims[1] )
+			else if( this.y >= dims[1] )
 				this.y = dims[1]-1;
 		}
 
@@ -283,28 +287,28 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/&gt;
 
 			// How many motes should there be?
 			var num = parseInt( document.getElementById('num_motes').value );
-			if( num &lt; 0 )
+			if( num < 0 )
 				num = 0;
 
 			// Make sure we have exactly that many...
 			// Too few?
-			while( motes.length &lt; num )
+			while( motes.length < num )
 				motes.push( new Mote() );
 			// Or too many?
 			if( num == 0 )
 				motes = [];
-			else if( motes.length &gt; num )
+			else if( motes.length > num )
 				motes = motes.slice(0,num-1);
 
 			// Move a random mote
-			if( motes.length &gt; 0 )
+			if( motes.length > 0 )
 				motes[ Rand( motes.length ) ].move();
 
 			// And do this again in 1/100 sec
 			setTimeout('update()', 10);
 		}
-	]]&gt;
-	&lt;/script&gt;
-	&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+	]]>
+	</script>
+	</body>
+</html>
+```

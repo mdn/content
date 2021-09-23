@@ -5,674 +5,951 @@ tags:
   - SVG
   - SVG Attribute
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>height</code></strong> attribute defines the vertical length of an element in the user coordinate system.</p>
+The **`height`** attribute defines the vertical length of an element in the user coordinate system.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement('feBlend')}}</li>
-  <li>{{SVGElement('feColorMatrix')}}</li>
-  <li>{{SVGElement('feComponentTransfer')}}</li>
-  <li>{{SVGElement('feComposite')}}</li>
-  <li>{{SVGElement('feConvolveMatrix')}}</li>
-  <li>{{SVGElement('feDiffuseLighting')}}</li>
-  <li>{{SVGElement('feDisplacementMap')}}</li>
-  <li>{{SVGElement('feDropShadow')}}</li>
-  <li>{{SVGElement('feFlood')}}</li>
-  <li>{{SVGElement('feGaussianBlur')}}</li>
-  <li>{{SVGElement('feImage')}}</li>
-  <li>{{SVGElement('feMerge')}}</li>
-  <li>{{SVGElement('feMorphology')}}</li>
-  <li>{{SVGElement('feOffset')}}</li>
-  <li>{{SVGElement('feSpecularLighting')}}</li>
-  <li>{{SVGElement('feTile')}}</li>
-  <li>{{SVGElement('feTurbulence')}}</li>
-  <li>{{SVGElement('filter')}}</li>
-  <li>{{SVGElement('foreignObject')}}</li>
-  <li>{{SVGElement('image')}}</li>
-  <li>{{SVGElement('mask')}}</li>
-  <li>{{SVGElement('pattern')}}</li>
-  <li>{{SVGElement('rect')}}</li>
-  <li>{{SVGElement('svg')}}</li>
-  <li>{{SVGElement('use')}}</li>
-</ul>
+*   {{SVGElement('feBlend')}}
+*   {{SVGElement('feColorMatrix')}}
+*   {{SVGElement('feComponentTransfer')}}
+*   {{SVGElement('feComposite')}}
+*   {{SVGElement('feConvolveMatrix')}}
+*   {{SVGElement('feDiffuseLighting')}}
+*   {{SVGElement('feDisplacementMap')}}
+*   {{SVGElement('feDropShadow')}}
+*   {{SVGElement('feFlood')}}
+*   {{SVGElement('feGaussianBlur')}}
+*   {{SVGElement('feImage')}}
+*   {{SVGElement('feMerge')}}
+*   {{SVGElement('feMorphology')}}
+*   {{SVGElement('feOffset')}}
+*   {{SVGElement('feSpecularLighting')}}
+*   {{SVGElement('feTile')}}
+*   {{SVGElement('feTurbulence')}}
+*   {{SVGElement('filter')}}
+*   {{SVGElement('foreignObject')}}
+*   {{SVGElement('image')}}
+*   {{SVGElement('mask')}}
+*   {{SVGElement('pattern')}}
+*   {{SVGElement('rect')}}
+*   {{SVGElement('svg')}}
+*   {{SVGElement('use')}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- With a height of 0 or less, nothing will be rendered --&gt;
-  &lt;rect y="0" x="0" width="90" height="0"/&gt;
-  &lt;rect y="0" x="100" width="90" height="60"/&gt;
-  &lt;rect y="0" x="200" width="90" height="100%"/&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- With a height of 0 or less, nothing will be rendered -->
+  <rect y="0" x="0" width="90" height="0"/>
+  <rect y="0" x="100" width="90" height="60"/>
+  <rect y="0" x="200" width="90" height="100%"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", '100%', 200)}}</p>
+{{EmbedLiveSample("Example", '100%', 200)}}
 
-<h2 id="feBlend">feBlend</h2>
+## feBlend
 
-<p>For {{SVGElement('feBlend')}}, <code>height</code> defines the vertical length for the rendering area of the primitive.</p>
-
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>100%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="feColorMatrix">feColorMatrix</h2>
-
-<p>For {{SVGElement('feColorMatrix')}}, <code>height</code> defines the vertical length for the rendering area of the primitive.</p>
+For {{SVGElement('feBlend')}}, `height` defines the vertical length for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>100%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+        |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feComponentTransfer">feComponentTransfer</h2>
+## feColorMatrix
 
-<p>For {{SVGElement('feComponentTransfer')}}, <code>height</code> defines the vertical length for the rendering area of the primitive.</p>
+For {{SVGElement('feColorMatrix')}}, `height` defines the vertical length for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>100%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+        |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feComposite">feComposite</h2>
+## feComponentTransfer
 
-<p>For {{SVGElement('feComposite')}}, <code>height</code> defines the vertical length for the rendering area of the primitive.</p>
+For {{SVGElement('feComponentTransfer')}}, `height` defines the vertical length for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>100%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+        |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feConvolveMatrix">feConvolveMatrix</h2>
+## feComposite
 
-<p>For {{SVGElement('feConvolveMatrix')}}, <code>height</code> defines the vertical length for the rendering area of the primitive.</p>
+For {{SVGElement('feComposite')}}, `height` defines the vertical length for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>100%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+        |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feDiffuseLighting">feDiffuseLighting</h2>
+## feConvolveMatrix
 
-<p>For {{SVGElement('feDiffuseLighting')}}, <code>height</code> defines the vertical length for the rendering area of the primitive.</p>
+For {{SVGElement('feConvolveMatrix')}}, `height` defines the vertical length for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>100%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+        |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feDisplacementMap">feDisplacementMap</h2>
+## feDiffuseLighting
 
-<p>For {{SVGElement('feDisplacementMap')}}, <code>height</code> defines the vertical length for the rendering area of the primitive.</p>
+For {{SVGElement('feDiffuseLighting')}}, `height` defines the vertical length for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>100%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+        |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feDropShadow">feDropShadow</h2>
+## feDisplacementMap
 
-<p>For {{SVGElement('feDropShadow')}}, <code>height</code> defines the vertical length for the rendering area of the primitive.</p>
+For {{SVGElement('feDisplacementMap')}}, `height` defines the vertical length for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>100%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+        |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feFlood">feFlood</h2>
+## feDropShadow
 
-<p>For {{SVGElement('feFlood')}}, <code>height</code> defines the vertical length for the rendering area of the primitive.</p>
+For {{SVGElement('feDropShadow')}}, `height` defines the vertical length for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>100%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+        |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feGaussianBlur">feGaussianBlur</h2>
+## feFlood
 
-<p>For {{SVGElement('feGaussianBlur')}}, <code>height</code> defines the vertical length for the rendering area of the primitive.</p>
+For {{SVGElement('feFlood')}}, `height` defines the vertical length for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>100%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+        |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feImage">feImage</h2>
+## feGaussianBlur
 
-<p>For {{SVGElement('feImage')}}, <code>height</code> defines the vertical length for the rendering area of the primitive.</p>
+For {{SVGElement('feGaussianBlur')}}, `height` defines the vertical length for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>100%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+        |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feMerge">feMerge</h2>
+## feImage
 
-<p>For {{SVGElement('feMerge')}}, <code>height</code> defines the vertical length for the rendering area of the primitive.</p>
+For {{SVGElement('feImage')}}, `height` defines the vertical length for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>100%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+        |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feMorphology">feMorphology</h2>
+## feMerge
 
-<p>For {{SVGElement('feMorphology')}}, <code>height</code> defines the vertical length for the rendering area of the primitive.</p>
+For {{SVGElement('feMerge')}}, `height` defines the vertical length for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>100%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+        |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feOffset">feOffset</h2>
+## feMorphology
 
-<p>For {{SVGElement('feOffset')}}, <code>height</code> defines the vertical length for the rendering area of the primitive.</p>
+For {{SVGElement('feMorphology')}}, `height` defines the vertical length for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>100%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+        |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feSpecularLighting">feSpecularLighting</h2>
+## feOffset
 
-<p>For {{SVGElement('feSpecularLighting')}}, <code>height</code> defines the vertical length for the rendering area of the primitive.</p>
+For {{SVGElement('feOffset')}}, `height` defines the vertical length for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>100%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+        |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feTile">feTile</h2>
+## feSpecularLighting
 
-<p>For {{SVGElement('feTile')}}, <code>height</code> defines the vertical length for the rendering area of the primitive.</p>
+For {{SVGElement('feSpecularLighting')}}, `height` defines the vertical length for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>100%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+        |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feTurbulence">feTurbulence</h2>
+## feTile
 
-<p>For {{SVGElement('feTurbulence')}}, <code>height</code> defines the vertical length for the rendering area of the primitive.</p>
+For {{SVGElement('feTile')}}, `height` defines the vertical length for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>100%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+        |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="filter">filter</h2>
+## feTurbulence
 
-<p>For {{SVGElement('filter')}}, <code>height</code> defines the vertical length for the rendering area of the filter.</p>
+For {{SVGElement('feTurbulence')}}, `height` defines the vertical length for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>120%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+        |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>100%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="foreignObject">foreignObject</h2>
+## filter
 
-<p>For {{SVGElement('foreignObject')}}, <code>height</code> defines the vertical length for the rendering area for the referenced document.</p>
+For {{SVGElement('filter')}}, `height` defines the vertical length for the rendering area of the filter.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>auto</code> | <strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>auto</code> (treated as <code>0</code>)</td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+        |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>120%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note"><p><strong>Note:</strong> Starting with SVG2, <code>height</code> is a <em>Geometry Property</em> meaning this attribute can also be used as a CSS property for <code>&lt;foreignObject&gt;</code>.</p></div>
+## foreignObject
 
-<h2 id="image">image</h2>
-
-<p>For {{SVGElement('image')}}, <code>height</code> defines the vertical length for the image.</p>
+For {{SVGElement('foreignObject')}}, `height` defines the vertical length for the rendering area for the referenced document.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>auto</code> | <strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>auto</code> (treated as the intrinsic height of the image)</td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code>auto</code> |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+        |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>auto</code> (treated as <code>0</code>)</td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note"><p><strong>Note:</strong> Starting with SVG2, <code>height</code> is a <em>Geometry Property</em> meaning this attribute can also be used as a CSS property for images.</p></div>
+> **Note:** Starting with SVG2, `height` is a *Geometry Property* meaning this attribute can also be used as a CSS property for `<foreignObject>`.
 
-<h2 id="mask">mask</h2>
+## image
 
-<p>For {{SVGElement('mask')}}, <code>height</code> defines the vertical length of its area of effect. The exact effect of this attribute is influenced by the {{SVGAttr('maskUnits')}} attribute.</p>
+For {{SVGElement('image')}}, `height` defines the vertical length for the image.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>120%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code>auto</code> |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+        |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>auto</code> (treated as the intrinsic height of the image)</td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="pattern">pattern</h2>
+> **Note:** Starting with SVG2, `height` is a *Geometry Property* meaning this attribute can also be used as a CSS property for images.
 
-<p>For {{SVGElement('pattern')}}, <code>height</code> defines the vertical length of the tile pattern. The exact effect of this attribute is influenced by the {{SVGAttr('patternUnits')}} and {{SVGAttr('patternTransform')}} attributes.</p>
+## mask
+
+For {{SVGElement('mask')}}, `height` defines the vertical length of its area of effect. The exact effect of this attribute is influenced by the {{SVGAttr('maskUnits')}} attribute.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+        |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>120%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="rect">rect</h2>
+## pattern
 
-<p>For {{SVGElement('rect')}}, <code>height</code> defines the vertical length for the rectangle.</p>
+For {{SVGElement('pattern')}}, `height` defines the vertical length of the tile pattern. The exact effect of this attribute is influenced by the {{SVGAttr('patternUnits')}} and {{SVGAttr('patternTransform')}} attributes.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>auto</code> | <strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>auto</code> (treated as <code>0</code>)</td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note"><p><strong>Note:</strong> Starting with SVG2, <code>height</code> is a <em>Geometry Property</em> meaning this attribute can also be used as a CSS property for rectangles.</p></div>
+## rect
 
-<h2 id="svg">svg</h2>
-
-<p>For {{SVGElement('svg')}}, <code>height</code> defines the vertical length for the rendering area of the SVG viewport.</p>
-
-<div class="note"><p><strong>Note:</strong> In an HTML document if both the {{SVGAttr('viewBox')}} and <code>height</code> attributes are omitted, <a href="https://svgwg.org/specs/integration/#svg-css-sizing">the svg element will be rendered with a height of <code>150px</code></a></p></div>
+For {{SVGElement('rect')}}, `height` defines the vertical length for the rectangle.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>auto</code> | <strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>auto</code> (treated as <code>100%</code>)</td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code>auto</code> |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+        |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>auto</code> (treated as <code>0</code>)</td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note"><p><strong>Note:</strong> Starting with SVG2, <code>height</code> is a <em>Geometry Property</em> meaning this attribute can also be used as a CSS property for <code>&lt;svg&gt;</code>.</p></div>
+> **Note:** Starting with SVG2, `height` is a *Geometry Property* meaning this attribute can also be used as a CSS property for rectangles.
 
-<h2 id="use">use</h2>
+## svg
 
-<p>For {{SVGElement('use')}}, <code>height</code> defines the vertical length for the referenced element.</p>
+For {{SVGElement('svg')}}, `height` defines the vertical length for the rendering area of the SVG viewport.
+
+> **Note:** In an HTML document if both the {{SVGAttr('viewBox')}} and `height` attributes are omitted, [the svg element will be rendered with a height of `150px`](https://svgwg.org/specs/integration/#svg-css-sizing)
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>auto</code> | <strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>auto</code> (treated as <code>0</code>)</td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code>auto</code> |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+        |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>auto</code> (treated as <code>100%</code>)</td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-<p><strong>Note:</strong>  <code>height</code>has no effect on <code>use</code> elements, unless the element referenced has a <a href="/en-US/docs/Web/SVG/Attribute/viewBox">viewbox</a> - i.e. they only have an effect when <code>use</code> refers to a <code>svg</code> or <code>symbol</code> element.</p>
-</div>
+> **Note:** Starting with SVG2, `height` is a *Geometry Property* meaning this attribute can also be used as a CSS property for `<svg>`.
 
-<div class="note"><p><strong>Note:</strong> Starting with SVG2, <code>height</code> is a <em>Geometry Property</em> meaning this attribute can also be used as a CSS property for used elements.</p></div>
+## use
 
-<h2 id="Specifications">Specifications</h2>
+For {{SVGElement('use')}}, `height` defines the vertical length for the referenced element.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code>auto</code> |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+        |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>auto</code> (treated as <code>0</code>)</td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+> **Note:**  `height`has no effect on `use` elements, unless the element referenced has a [viewbox](/en-US/docs/Web/SVG/Attribute/viewBox) - i.e. they only have an effect when `use` refers to a `svg` or `symbol` element.
+
+> **Note:** Starting with SVG2, `height` is a *Geometry Property* meaning this attribute can also be used as a CSS property for used elements.
+
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Filters 1.0', '#element-attrdef-filter-height', 'height') }}</td>
-   <td>{{Spec2('Filters 1.0')}}</td>
-   <td>Definition for <code>&lt;filter&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('Filters 1.0', '#element-attrdef-filter-primitive-height', 'height') }}</td>
-   <td>{{Spec2('Filters 1.0')}}</td>
-   <td>Definition for filter primitives</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS Masks", "#element-attrdef-mask-height", 'height')}}</td>
-   <td>{{Spec2("CSS Masks")}}</td>
-   <td>Definition for <code>&lt;mask&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "geometry.html#Sizing", "height")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Definition as a geometry property</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "pservers.html#PatternElementHeightAttribute", "height")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Definition for <code>&lt;pattern&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "extend.html#ForeignObjectElementHeightAttribute", "height")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;foreignObject&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "pservers.html#PatternElementHeightAttribute", "height")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;pattern&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "struct.html#ImageElementHeightAttribute", "height")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;image&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "struct.html#SVGElementHeightAttribute", "height")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;svg&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "struct.html#UseElementHeightAttribute", "height")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;use&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#FilterElementHeightAttribute", "height")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;filter&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#FilterPrimitiveHeightAttribute", "height")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for filter primitives</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "masking.html#MaskElementHeightAttribute", "height")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;mask&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "shapes.html#RectElementHeightAttribute", "height")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;rect&gt;</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{ SpecName('Filters 1.0', '#element-attrdef-filter-height', 'height') }}
+      </td>
+      <td>{{Spec2('Filters 1.0')}}</td>
+      <td>Definition for <code>&#x3C;filter></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{ SpecName('Filters 1.0', '#element-attrdef-filter-primitive-height', 'height') }}
+      </td>
+      <td>{{Spec2('Filters 1.0')}}</td>
+      <td>Definition for filter primitives</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("CSS Masks", "#element-attrdef-mask-height", 'height')}}
+      </td>
+      <td>{{Spec2("CSS Masks")}}</td>
+      <td>Definition for <code>&#x3C;mask></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "geometry.html#Sizing", "height")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>Definition as a geometry property</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "pservers.html#PatternElementHeightAttribute", "height")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>Definition for <code>&#x3C;pattern></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "extend.html#ForeignObjectElementHeightAttribute", "height")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;foreignObject></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "pservers.html#PatternElementHeightAttribute", "height")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;pattern></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "struct.html#ImageElementHeightAttribute", "height")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;image></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "struct.html#SVGElementHeightAttribute", "height")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;svg></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "struct.html#UseElementHeightAttribute", "height")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;use></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "filters.html#FilterElementHeightAttribute", "height")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;filter></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "filters.html#FilterPrimitiveHeightAttribute", "height")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for filter primitives</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "masking.html#MaskElementHeightAttribute", "height")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;mask></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "shapes.html#RectElementHeightAttribute", "height")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;rect></code></td>
+    </tr>
+  </tbody>
 </table>

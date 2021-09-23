@@ -6,96 +6,89 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.clip-rule
 ---
-<p>« <a href="/en-US/docs/SVG/Attribute">SVG Attribute reference home</a></p>
+« [SVG Attribute reference home](/en-US/docs/SVG/Attribute)
 
-<p>The <code>clip-rule</code> attribute only applies to graphics elements that are contained within a {{ SVGElement("clipPath") }} element. The <code>clip-rule</code> attribute basically works as the {{ SVGAttr("fill-rule") }} attribute, except that it applies to {{ SVGElement("clipPath") }} definitions.</p>
+The `clip-rule` attribute only applies to graphics elements that are contained within a {{ SVGElement("clipPath") }} element. The `clip-rule` attribute basically works as the {{ SVGAttr("fill-rule") }} attribute, except that it applies to {{ SVGElement("clipPath") }} definitions.
 
-<p>The following fragment of code will cause an evenodd clipping rule to be applied to the clipping path because <code>clip-rule</code> is specified on the {{ SVGElement("path") }} element that defines the clipping shape:</p>
+The following fragment of code will cause an evenodd clipping rule to be applied to the clipping path because `clip-rule` is specified on the {{ SVGElement("path") }} element that defines the clipping shape:
 
-<pre>&lt;g&gt;
-    &lt;clipPath id="MyClip"&gt;
-        &lt;path d="..." clip-rule="evenodd" /&gt;
-    &lt;/clipPath&gt;
-    &lt;rect clip-path="url(#MyClip)" ... /&gt;
-&lt;/g&gt;
-</pre>
+    <g>
+        <clipPath id="MyClip">
+            <path d="..." clip-rule="evenodd" />
+        </clipPath>
+        <rect clip-path="url(#MyClip)" ... />
+    </g>
 
-<p>whereas the following fragment of code will not cause an evenodd clipping rule to be applied because the <code>clip-rule</code> is specified on the referencing element, not on the object defining the clipping shape:</p>
+whereas the following fragment of code will not cause an evenodd clipping rule to be applied because the `clip-rule` is specified on the referencing element, not on the object defining the clipping shape:
 
-<pre>&lt;g&gt;
-    &lt;clipPath id="MyClip"&gt;
-        &lt;path d="..." /&gt;
-    &lt;/clipPath&gt;
-    &lt;rect clip-path="url(#MyClip)" clip-rule="evenodd" ... /&gt;
-&lt;/g&gt;
-</pre>
+    <g>
+        <clipPath id="MyClip">
+            <path d="..." />
+        </clipPath>
+        <rect clip-path="url(#MyClip)" clip-rule="evenodd" ... />
+    </g>
 
-<p>As a presentation attribute, it also can be used as a property directly inside a CSS stylesheet</p>
+As a presentation attribute, it also can be used as a property directly inside a CSS stylesheet
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>nonzero | evenodd | inherit</td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td>nonzero</td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>nonzero | evenodd | inherit</td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td>nonzero</td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt>nonzero</dt>
- <dd>See description of {{ SVGAttr("fill-rule") }} property.</dd>
- <dt>evenodd</dt>
- <dd>See description of {{ SVGAttr("fill-rule") }} property.</dd>
-</dl>
+*   nonzero
+    *   : See description of {{ SVGAttr("fill-rule") }} property.
+*   evenodd
+    *   : See description of {{ SVGAttr("fill-rule") }} property.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;svg width="100" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
-  &lt;!-- Define star path --&gt;
-  &lt;defs&gt;
-    &lt;path d="M50,0 21,90 98,35 2,35 79,90z" id="star" /&gt;
-  &lt;/defs&gt;
+```html
+<svg width="100" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <!-- Define star path -->
+  <defs>
+    <path d="M50,0 21,90 98,35 2,35 79,90z" id="star" />
+  </defs>
 
-  &lt;!-- Left: evenodd --&gt;
-  &lt;clipPath id="emptyStar"&gt;
-    &lt;use xlink:href="#star" clip-rule="evenodd" /&gt;
-  &lt;/clipPath&gt;
-  &lt;rect clip-path="url(#emptyStar)" width="50" height="90" fill="blue" /&gt;
+  <!-- Left: evenodd -->
+  <clipPath id="emptyStar">
+    <use xlink:href="#star" clip-rule="evenodd" />
+  </clipPath>
+  <rect clip-path="url(#emptyStar)" width="50" height="90" fill="blue" />
 
-  &lt;!-- Right: nonzero --&gt;
-  &lt;clipPath id="filledStar"&gt;
-    &lt;use xlink:href="#star" clip-rule="nonzero" /&gt;
-  &lt;/clipPath&gt;
-  &lt;rect clip-path="url(#filledStar)" width="50" height="90" x="50" fill="red" /&gt;
-&lt;/svg&gt;
-</pre>
+  <!-- Right: nonzero -->
+  <clipPath id="filledStar">
+    <use xlink:href="#star" clip-rule="nonzero" />
+  </clipPath>
+  <rect clip-path="url(#filledStar)" width="50" height="90" x="50" fill="red" />
+</svg>
+```
 
-<p>{{ EmbedLiveSample('Example', '100%', '110') }}</p>
+{{ EmbedLiveSample('Example', '100%', '110') }}
 
-<h2 id="Elements">Elements</h2>
+## Elements
 
-<p>The following elements can use the <code>clip-rule</code> attribute, but only if they are inside a {{ SVGElement("clipPath") }} element.</p>
+The following elements can use the `clip-rule` attribute, but only if they are inside a {{ SVGElement("clipPath") }} element.
 
-<ul>
- <li><a href="/en-US/docs/SVG/Element#Graphical">Graphical elements</a> »</li>
-</ul>
+*   [Graphical elements](/en-US/docs/SVG/Element#Graphical) »
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{ SVGElement("clipPath") }}</li>
-</ul>
+*   {{ SVGElement("clipPath") }}

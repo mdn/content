@@ -6,91 +6,108 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.stroke-width
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>stroke-width</code></strong> attribute is a presentation attribute defining the width of the stroke to be applied to the shape.</p>
+The **`stroke-width`** attribute is a presentation attribute defining the width of the stroke to be applied to the shape.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement('altGlyph')}}</li>
-  <li>{{SVGElement('circle')}}</li>
-  <li>{{SVGElement('ellipse')}}</li>
-  <li>{{SVGElement('line')}}</li>
-  <li>{{SVGElement('path')}}</li>
-  <li>{{SVGElement('polygon')}}</li>
-  <li>{{SVGElement('polyline')}}</li>
-  <li>{{SVGElement('rect')}}</li>
-  <li>{{SVGElement('text')}}</li>
-  <li>{{SVGElement('textPath')}}</li>
-  <li>{{SVGElement('tref')}}</li>
-  <li>{{SVGElement('tspan')}}</li>
-</ul>
+*   {{SVGElement('altGlyph')}}
+*   {{SVGElement('circle')}}
+*   {{SVGElement('ellipse')}}
+*   {{SVGElement('line')}}
+*   {{SVGElement('path')}}
+*   {{SVGElement('polygon')}}
+*   {{SVGElement('polyline')}}
+*   {{SVGElement('rect')}}
+*   {{SVGElement('text')}}
+*   {{SVGElement('textPath')}}
+*   {{SVGElement('tref')}}
+*   {{SVGElement('tspan')}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Default stroke width: 1 --&gt;
-  &lt;circle cx="5" cy="5" r="3" stroke="green" /&gt;
+```html
+<svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg">
+  <!-- Default stroke width: 1 -->
+  <circle cx="5" cy="5" r="3" stroke="green" />
 
-  &lt;!-- Stroke width as a number --&gt;
-  &lt;circle cx="15" cy="5" r="3" stroke="green"
-          stroke-width="3" /&gt;
+  <!-- Stroke width as a number -->
+  <circle cx="15" cy="5" r="3" stroke="green"
+          stroke-width="3" />
 
-  &lt;!-- Stroke width as a percentage --&gt;
-  &lt;circle cx="25" cy="5" r="3" stroke="green"
-          stroke-width="2%" /&gt;
-&lt;/svg&gt;</pre>
+  <!-- Stroke width as a percentage -->
+  <circle cx="25" cy="5" r="3" stroke="green"
+          stroke-width="2%" />
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", '100%', 150)}}</p>
+{{EmbedLiveSample("Example", '100%', 150)}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>1px</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        > |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>1px</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note"><p><strong>Note:</strong> A percentage value is always computed as a percentage of the normalized {{SVGAttr('viewBox')}} diagonal length.</p></div>
+> **Note:** A percentage value is always computed as a percentage of the normalized {{SVGAttr('viewBox')}} diagonal length.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "painting.html#StrokeWidthProperty", "stroke-width")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Definition for shapes and texts</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "painting.html#StrokeWidthProperty", "stroke-width")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for shapes and texts</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "painting.html#StrokeWidthProperty", "stroke-width")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>Definition for shapes and texts</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "painting.html#StrokeWidthProperty", "stroke-width")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for shapes and texts</td>
+    </tr>
+  </tbody>
 </table>

@@ -6,89 +6,93 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.animate.repeatCount
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>repeatCount</code></strong> attribute indicates the number of times an animation will take place.</p>
+The **`repeatCount`** attribute indicates the number of times an animation will take place.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("animate")}}</li>
-  <li>{{SVGElement("animateColor")}}</li>
-  <li>{{SVGElement("animateMotion")}}</li>
-  <li>{{SVGElement("animateTransform")}}</li>
-  <li>{{SVGElement("set")}}</li>
-</ul>
+*   {{SVGElement("animate")}}
+*   {{SVGElement("animateColor")}}
+*   {{SVGElement("animateMotion")}}
+*   {{SVGElement("animateTransform")}}
+*   {{SVGElement("set")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[4,8]">&lt;svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;rect x="0" y="0" width="100" height="100"&gt;
-    &lt;animate attributeType="XML" attributeName="y" from="0" to="50"
-        dur="1s" repeatCount="5"/&gt;
-  &lt;/rect&gt;
-  &lt;rect x="120" y="0" width="100" height="100"&gt;
-    &lt;animate attributeType="XML" attributeName="y" from="0" to="50"
-        dur="1s" repeatCount="indefinite"/&gt;
-  &lt;/rect&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="100" height="100">
+    <animate attributeType="XML" attributeName="y" from="0" to="50"
+        dur="1s" repeatCount="5"/>
+  </rect>
+  <rect x="120" y="0" width="100" height="100">
+    <animate attributeType="XML" attributeName="y" from="0" to="50"
+        dur="1s" repeatCount="indefinite"/>
+  </rect>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "220", "150")}}</p>
+{{EmbedLiveSample("Example", "220", "150")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>{{cssxref("number")}} | <code>indefinite</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>{{cssxref("number")}} | <code>indefinite</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;number&gt;</code></dt>
- <dd>This value specifies the number of iterations. It can include partial iterations expressed as fraction values. A fractional value describes a portion of the simple duration. Values must be greater than <code>0</code>.</dd>
- <dt><code>indefinite</code></dt>
- <dd>This value indicates that the animation will be repeated indefinitely (i.e. until the document ends).</dd>
-</dl>
+*   `<number>`
+    *   : This value specifies the number of iterations. It can include partial iterations expressed as fraction values. A fractional value describes a portion of the simple duration. Values must be greater than `0`.
+*   `indefinite`
+    *   : This value indicates that the animation will be repeated indefinitely (i.e. until the document ends).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG Animations 2", "#RepeatCountAttribute", "repeatCount")}}</td>
-   <td>{{Spec2("SVG Animations 2")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "animate.html#RepeatCountAttribute", "repeatCount")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG Animations 2", "#RepeatCountAttribute", "repeatCount")}}
+      </td>
+      <td>{{Spec2("SVG Animations 2")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "animate.html#RepeatCountAttribute", "repeatCount")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

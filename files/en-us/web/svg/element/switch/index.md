@@ -8,68 +8,66 @@ tags:
   - SVG Container
 browser-compat: svg.elements.switch
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>&lt;switch&gt;</code></strong> <a href="/en-US/docs/Web/SVG">SVG</a> element evaluates any {{SVGAttr("requiredFeatures")}}, {{SVGAttr("requiredExtensions")}} and {{SVGAttr("systemLanguage")}} attributes on its direct child elements in order, and then renders the first child where these attributes evaluate to true.</p>
+The **`<switch>`** [SVG](/en-US/docs/Web/SVG) element evaluates any {{SVGAttr("requiredFeatures")}}, {{SVGAttr("requiredExtensions")}} and {{SVGAttr("systemLanguage")}} attributes on its direct child elements in order, and then renders the first child where these attributes evaluate to true.
 
-<p>Other direct children will be bypassed and therefore not rendered. If a child element is a container element, like {{SVGElement("g")}}, then its subtree is also processed/rendered or bypassed/not rendered.</p>
+Other direct children will be bypassed and therefore not rendered. If a child element is a container element, like {{SVGElement("g")}}, then its subtree is also processed/rendered or bypassed/not rendered.
 
-<div class="notecard note">
-<p><strong>Note:</strong> The <code>display</code> and <code>visibility</code> properties have no effect on <code>&lt;switch&gt;</code> element processing. In particular, setting <code>display:none</code> on a child has no effect on the true/false testing for <code>&lt;switch&gt;</code> processing.</p>
-</div>
+> **Note:** The `display` and `visibility` properties have no effect on `<switch>` element processing. In particular, setting `display:none` on a child has no effect on the true/false testing for `<switch>` processing.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes">Conditional processing attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#graphical_event_attributes">Graphical event attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#presentation_attributes">Presentation attributes</a></li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
- <li>{{SVGAttr("transform")}}</li>
-</ul>
+*   [Conditional processing attributes](/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes)
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+*   [Graphical event attributes](/en-US/docs/Web/SVG/Attribute#graphical_event_attributes)
+*   [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+*   {{SVGAttr("class")}}
+*   {{SVGAttr("style")}}
+*   {{SVGAttr("transform")}}
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the {{domxref("SVGSwitchElement")}} interface.</p>
+This element implements the {{domxref("SVGSwitchElement")}} interface.
 
-<h2 id="SVG_switch_example">SVG &lt;switch&gt; example</h2>
+## SVG \<switch> example
 
-<p>This example demonstrates showing different text content depending on the browser's language settings. The <code>switch</code> element will display the first of its child elements whose <code>systemLanguage</code> attribute matches the user's language, or the fallback element with no <code>systemLanguage</code> attribute if none of them match.</p>
+This example demonstrates showing different text content depending on the browser's language settings. The `switch` element will display the first of its child elements whose `systemLanguage` attribute matches the user's language, or the fallback element with no `systemLanguage` attribute if none of them match.
 
-<h3 id="HTML_Content">HTML Content</h3>
+### HTML Content
 
-<pre class="brush: html">&lt;svg viewBox="0 -20 100 50"&gt;
-   &lt;switch&gt;
-      &lt;text systemLanguage="ar"&gt;مرحبا&lt;/text&gt;
-      &lt;text systemLanguage="de,nl"&gt;Hallo!&lt;/text&gt;
-      &lt;text systemLanguage="en-us"&gt;Howdy!&lt;/text&gt;
-      &lt;text systemLanguage="en-gb"&gt;Wotcha!&lt;/text&gt;
-      &lt;text systemLanguage="en-au"&gt;G'day!&lt;/text&gt;
-      &lt;text systemLanguage="en"&gt;Hello!&lt;/text&gt;
-      &lt;text systemLanguage="es"&gt;Hola!&lt;/text&gt;
-      &lt;text systemLanguage="fr"&gt;Bonjour!&lt;/text&gt;
-      &lt;text systemLanguage="ja"&gt;こんにちは&lt;/text&gt;
-      &lt;text systemLanguage="ru"&gt;Привет!&lt;/text&gt;
-      &lt;text&gt;☺&lt;/text&gt;
-   &lt;/switch&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg viewBox="0 -20 100 50">
+   <switch>
+      <text systemLanguage="ar">مرحبا</text>
+      <text systemLanguage="de,nl">Hallo!</text>
+      <text systemLanguage="en-us">Howdy!</text>
+      <text systemLanguage="en-gb">Wotcha!</text>
+      <text systemLanguage="en-au">G'day!</text>
+      <text systemLanguage="en">Hello!</text>
+      <text systemLanguage="es">Hola!</text>
+      <text systemLanguage="fr">Bonjour!</text>
+      <text systemLanguage="ja">こんにちは</text>
+      <text systemLanguage="ru">Привет!</text>
+      <text>☺</text>
+   </switch>
+</svg>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('SVG_switch_example') }}</p>
+{{ EmbedLiveSample('SVG_switch_example') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

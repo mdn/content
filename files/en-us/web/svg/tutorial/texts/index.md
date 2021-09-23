@@ -4,85 +4,86 @@ slug: Web/SVG/Tutorial/Texts
 tags:
   - Intermediate
   - SVG
-  - 'SVG:Tutorial'
+  - SVG:Tutorial
 ---
-<div>{{PreviousNext("Web/SVG/Tutorial/Patterns", "Web/SVG/Tutorial/Basic_Transformations")}}</div>
+{{PreviousNext("Web/SVG/Tutorial/Patterns", "Web/SVG/Tutorial/Basic_Transformations")}}
 
-<p>When talking about text in SVG we have to differentiate two almost completely separate topics. The one is the inclusion and display of text in an image, and the other are SVG fonts. The latter may be described in a later section of the tutorial, while we will focus completely on the first part: Bringing text into an SVG image.</p>
+When talking about text in SVG we have to differentiate two almost completely separate topics. The one is the inclusion and display of text in an image, and the other are SVG fonts. The latter may be described in a later section of the tutorial, while we will focus completely on the first part: Bringing text into an SVG image.
 
-<h2 id="Basics">Basics</h2>
+## Basics
 
-<p>We have seen in the <a href="/en-US/docs/Web/SVG/Tutorial/Getting_Started">introducing example</a>, that the <code>text</code> element can be used to put arbitrary text in SVG documents:</p>
+We have seen in the [introducing example](/en-US/docs/Web/SVG/Tutorial/Getting_Started), that the `text` element can be used to put arbitrary text in SVG documents:
 
-<pre class="brush:xml">&lt;text x="10" y="10"&gt;Hello World!&lt;/text&gt;
-</pre>
+```xml
+<text x="10" y="10">Hello World!</text>
+```
 
-<p>The <code>x</code> and <code>y</code> attributes determine, where in the viewport the text will appear. The attribute {{SVGAttr("text-anchor")}}, which can have the values "start", "middle", "end" or "inherit", decides in which direction the text flows from this point. The attribute {{SVGAttr("dominant-baseline")}} decides the vertical alignment.</p>
+The `x` and `y` attributes determine, where in the viewport the text will appear. The attribute {{SVGAttr("text-anchor")}}, which can have the values "start", "middle", "end" or "inherit", decides in which direction the text flows from this point. The attribute {{SVGAttr("dominant-baseline")}} decides the vertical alignment.
 
-<p>Like with the shape elements text can be colorized with the <code>fill</code> attribute and given a stroke with the <code>stroke</code> attribute. Both may also refer to gradients or patterns, which makes simple coloring text in SVG very powerful compared to CSS 2.1.</p>
+Like with the shape elements text can be colorized with the `fill` attribute and given a stroke with the `stroke` attribute. Both may also refer to gradients or patterns, which makes simple coloring text in SVG very powerful compared to CSS 2.1.
 
-<h2 id="Setting_font_properties">Setting font properties</h2>
+## Setting font properties
 
-<p>An essential part of a text is the font in which it is displayed. SVG offers a set of attributes, many similar to their CSS counterparts, to enable font selection. Each of the following properties can be set as an attribute or via a CSS declaration: {{SVGAttr("font-family")}}, {{SVGAttr("font-style")}}, {{SVGAttr("font-weight")}}, {{SVGAttr("font-variant")}}, {{SVGAttr("font-stretch")}}, {{SVGAttr("font-size")}}, {{SVGAttr("font-size-adjust")}}, {{SVGAttr("kerning")}}, {{SVGAttr("letter-spacing")}}, {{SVGAttr("word-spacing")}} and {{SVGAttr("text-decoration")}}.</p>
+An essential part of a text is the font in which it is displayed. SVG offers a set of attributes, many similar to their CSS counterparts, to enable font selection. Each of the following properties can be set as an attribute or via a CSS declaration: {{SVGAttr("font-family")}}, {{SVGAttr("font-style")}}, {{SVGAttr("font-weight")}}, {{SVGAttr("font-variant")}}, {{SVGAttr("font-stretch")}}, {{SVGAttr("font-size")}}, {{SVGAttr("font-size-adjust")}}, {{SVGAttr("kerning")}}, {{SVGAttr("letter-spacing")}}, {{SVGAttr("word-spacing")}} and {{SVGAttr("text-decoration")}}.
 
-<h2 id="Other_text-related_elements">Other text-related elements</h2>
+## Other text-related elements
 
-<h3 id="tspan">tspan</h3>
+### tspan
 
-<p>This element is used to mark up sub-portions of a larger text. It must be a child of a <code>text</code> element or another <code>tspan</code> element. A typical use case is to paint one word of a sentence bold red.</p>
+This element is used to mark up sub-portions of a larger text. It must be a child of a `text` element or another `tspan` element. A typical use case is to paint one word of a sentence bold red.
 
-<pre class="brush:html">&lt;svg width="350" height="60" xmlns="http://www.w3.org/2000/svg"&gt;
-&lt;text&gt;
-  This is &lt;tspan font-weight="bold" fill="red"&gt;bold and red&lt;/tspan&gt;
-&lt;/text&gt;
+```html
+<svg width="350" height="60" xmlns="http://www.w3.org/2000/svg">
+<text>
+  This is <tspan font-weight="bold" fill="red">bold and red</tspan>
+</text>
 
-&lt;style&gt;&lt;![CDATA[
+<style><![CDATA[
   text{
     dominant-baseline: hanging;
     font: 28px Verdana, Helvetica, Arial, sans-serif;
   }
-]]&gt;&lt;/style&gt;
-&lt;/svg&gt;
-</pre>
+]]></style>
+</svg>
+```
 
-<p>{{ EmbedLiveSample('tspan', '100%', 100) }}</p>
+{{ EmbedLiveSample('tspan', '100%', 100) }}
 
-<p>The <code>tspan</code> element has the following custom attributes:</p>
+The `tspan` element has the following custom attributes:
 
-<dl>
-	<dt><code><strong>x</strong></code></dt>
-	<dd>Set a new absolute <code>x</code> coordinate for the containing text. This overwrites the default current text position. The attribute may also contain a list of numbers, that are one by one applied to the single characters of the <code>tspan</code> element.</dd>
-	<dt><code><strong>dx</strong></code></dt>
-	<dd>Start drawing the text with a horizontal offset <code>dx</code> from the default current position. Here, too, you may provide a list of values that are applied to consecutive characters, hence piling up the offset over time.
-	<p>Likewise, there are <code><strong>y</strong></code> and <code><strong>dy</strong></code> for vertical displacement.</p>
-	</dd>
-	<dt><code><strong>rotate</strong></code></dt>
-	<dd>Rotate all characters by this degree. A list of numbers makes each character rotate to its respective value, with remaining characters rotating according to the last value.</dd>
-	<dt><code><strong>textLength</strong></code></dt>
-	<dd>This is a more obscure attribute giving the calculated length of the string. It is meant to allow the rendering engine to fine-tune the positions of the glyphs when its own measured text length doesn't meet the one provided here.</dd>
-</dl>
+*   **`x`**
+    *   : Set a new absolute `x` coordinate for the containing text. This overwrites the default current text position. The attribute may also contain a list of numbers, that are one by one applied to the single characters of the `tspan` element.
+*   **`dx`**
+    *   : Start drawing the text with a horizontal offset `dx` from the default current position. Here, too, you may provide a list of values that are applied to consecutive characters, hence piling up the offset over time.
 
-<h3 id="textPath">textPath</h3>
+        Likewise, there are **`y`** and **`dy`** for vertical displacement.
+*   **`rotate`**
+    *   : Rotate all characters by this degree. A list of numbers makes each character rotate to its respective value, with remaining characters rotating according to the last value.
+*   **`textLength`**
+    *   : This is a more obscure attribute giving the calculated length of the string. It is meant to allow the rendering engine to fine-tune the positions of the glyphs when its own measured text length doesn't meet the one provided here.
 
-<p>This element fetches via its <code>xlink:href</code> attribute an arbitrary path and aligns the characters, that it encircles, along this path:</p>
+### textPath
 
-<pre class="brush:html">&lt;svg width="200" height="100" xmlns="http://www.w3.org/2000/svg"&gt;
-&lt;path id="my_path" d="M 20,20 C 80,60 100,40 120,20" fill="transparent" /&gt;
-&lt;text&gt;
-  &lt;textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#my_path"&gt;
+This element fetches via its `xlink:href` attribute an arbitrary path and aligns the characters, that it encircles, along this path:
+
+```html
+<svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+<path id="my_path" d="M 20,20 C 80,60 100,40 120,20" fill="transparent" />
+<text>
+  <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#my_path">
     A curve.
-  &lt;/textPath&gt;
-&lt;/text&gt;
+  </textPath>
+</text>
 
-&lt;style&gt;&lt;![CDATA[
+<style><![CDATA[
   text{
     dominant-baseline: hanging;
     font: 28px Verdana, Helvetica, Arial, sans-serif;
   }
-]]&gt;&lt;/style&gt;
-&lt;/svg&gt;
-</pre>
+]]></style>
+</svg>
+```
 
-<p>{{ EmbedLiveSample('textPath', '100%', 100) }}</p>
+{{ EmbedLiveSample('textPath', '100%', 100) }}
 
-<div>{{PreviousNext("Web/SVG/Tutorial/Patterns", "Web/SVG/Tutorial/Basic_Transformations")}}</div>
+{{PreviousNext("Web/SVG/Tutorial/Patterns", "Web/SVG/Tutorial/Basic_Transformations")}}

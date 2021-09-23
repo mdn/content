@@ -7,84 +7,83 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.glyph-orientation-vertical
 ---
-<div>{{SVGRef}}{{Deprecated_Header}}</div>
+{{SVGRef}}{{Deprecated_Header}}
 
-<p>The <strong><code>glyph-orientation-vertical</code></strong> attribute affects the amount that hte current text position advances as each {{Glossary("glyph")}} is rendered.</p>
+The **`glyph-orientation-vertical`** attribute affects the amount that hte current text position advances as each {{Glossary("glyph")}} is rendered.
 
-<p>When the inline-progression-direction is vertical and the <code>glyph-orientation-vertical</code> results in an orientation angle that is a multiple of 180 degrees, then the current text position is incremented according to the vertical metrics of the glyph. Otherwise, if the angle is not a multiple of 180 degrees, then the current text position is incremented according to the horizontal metrics of the glyph.</p>
+When the inline-progression-direction is vertical and the `glyph-orientation-vertical` results in an orientation angle that is a multiple of 180 degrees, then the current text position is incremented according to the vertical metrics of the glyph. Otherwise, if the angle is not a multiple of 180 degrees, then the current text position is incremented according to the horizontal metrics of the glyph.
 
-<p>This attribute is applied only to text written in a vertical {{SVGAttr("writing-mode")}}.</p>
+This attribute is applied only to text written in a vertical {{SVGAttr("writing-mode")}}.
 
-<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>glyph-orientation-vertical</code> can be used as a CSS property.</p></div>
+> **Note:** As a presentation attribute, `glyph-orientation-vertical` can be used as a CSS property.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("altGlyph")}}</li>
-  <li>{{SVGElement("textPath")}}</li>
-  <li>{{SVGElement("text")}}</li>
-  <li>{{SVGElement("tref")}}</li>
-  <li>{{SVGElement("tspan")}}</li>
-</ul>
+*   {{SVGElement("altGlyph")}}
+*   {{SVGElement("textPath")}}
+*   {{SVGElement("text")}}
+*   {{SVGElement("tref")}}
+*   {{SVGElement("tspan")}}
 
-<h2 id="Context_notes">Context notes</h2>
+## Context notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>auto</code> | <code><a href="/en-US/docs/Web/SVG/Content_type#Angle">&lt;angle&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>auto</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code>auto</code> |
+        <code
+          ><a href="/en-US/docs/Web/SVG/Content_type#Angle"
+            >&#x3C;angle></a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>auto</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>
- <p>Fullwidth {{Glossary("ideographic")}} and fullwidth Latin text will be set with a glyph orientation of 0 degrees. Ideographic punctuation and other ideographic characters having alternate horizontal and vertical forms will use the vertical form of the glyph. Text which is not fullwidth will be set with a glyph orientation of 90 degrees.</p>
+*   `auto`
+    *   : Fullwidth {{Glossary("ideographic")}} and fullwidth Latin text will be set with a glyph orientation of 0 degrees. Ideographic punctuation and other ideographic characters having alternate horizontal and vertical forms will use the vertical form of the glyph. Text which is not fullwidth will be set with a glyph orientation of 90 degrees.
 
- <p>This reorientation rule applies only to the first-level non-ideographic text. All further embedding of writing modes or bidirectional processing will be based on the first-level rotation.</p>
+        This reorientation rule applies only to the first-level non-ideographic text. All further embedding of writing modes or bidirectional processing will be based on the first-level rotation.
 
- <div class="notecard note">
- <p><strong>Note:</strong> Text set in this "rotated" manner may contain ligatures or other glyph combining and reordering common to the language and script. (This presentation form does not disable auto-ligature formation or similar context-driven variations.)</p>
- </div>
+        > **Note:** Text set in this "rotated" manner may contain ligatures or other glyph combining and reordering common to the language and script. (This presentation form does not disable auto-ligature formation or similar context-driven variations.)
 
- <p>The determination of which characters should be auto-rotated may vary across user agents. The determination is based on a complex interaction between country, language, script, character properties, font, and character context.</p>
- </dd>
- <dt><code>&lt;angle&gt;</code></dt>
- <dd>
- <p>The value of the angle is restricted to 0, 90, 180, and 270 degrees. If another angle is specified, it is rounded to the closest of the permitted values.<br>
-  A value of <code>0deg</code> indicates that all glyphs are set with the top of the glyphs oriented towards the reference orientation. A value of <code>90deg</code> indicates an orientation of 90 degrees clockwise from the reference orientation.</p>
- </dd>
-</dl>
+        The determination of which characters should be auto-rotated may vary across user agents. The determination is based on a complex interaction between country, language, script, character properties, font, and character context.
+*   `<angle>`
+    *   : The value of the angle is restricted to 0, 90, 180, and 270 degrees. If another angle is specified, it is rounded to the closest of the permitted values.
+        A value of `0deg` indicates that all glyphs are set with the top of the glyphs oriented towards the reference orientation. A value of `90deg` indicates an orientation of 90 degrees clockwise from the reference orientation.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#GlyphOrientationVerticalProperty", "glyph-orientation-vertical")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "text.html#GlyphOrientationVerticalProperty", "glyph-orientation-vertical")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

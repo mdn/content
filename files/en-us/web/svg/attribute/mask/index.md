@@ -6,103 +6,110 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.mask
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>mask</code></strong> attribute is a presentation attribute mainly used to bind a given {{ SVGElement("mask") }} element with the element the attribute belongs to.</p>
+The **`mask`** attribute is a presentation attribute mainly used to bind a given {{ SVGElement("mask") }} element with the element the attribute belongs to.
 
-<div class="note"><p><strong>Note:</strong> As a presentation attribute {{cssxref('mask')}} can be used as a CSS property.</p></div>
+> **Note:** As a presentation attribute {{cssxref('mask')}} can be used as a CSS property.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement('a')}}</li>
-  <li>{{SVGElement('circle')}}</li>
-  <li>{{SVGElement('clipPath')}}</li>
-  <li>{{SVGElement('ellipse')}}</li>
-  <li>{{SVGElement('g')}}</li>
-  <li>{{SVGElement('glyph')}}</li>
-  <li>{{SVGElement('image')}}</li>
-  <li>{{SVGElement('line')}}</li>
-  <li>{{SVGElement('marker')}}</li>
-  <li>{{SVGElement('mask')}}</li>
-  <li>{{SVGElement('path')}}</li>
-  <li>{{SVGElement('pattern')}}</li>
-  <li>{{SVGElement('polygon')}}</li>
-  <li>{{SVGElement('polyline')}}</li>
-  <li>{{SVGElement('rect')}}</li>
-  <li>{{SVGElement('svg')}}</li>
-  <li>{{SVGElement('symbol')}}</li>
-  <li>{{SVGElement('text')}}</li>
-  <li>{{SVGElement('use')}}</li>
-</ul>
+*   {{SVGElement('a')}}
+*   {{SVGElement('circle')}}
+*   {{SVGElement('clipPath')}}
+*   {{SVGElement('ellipse')}}
+*   {{SVGElement('g')}}
+*   {{SVGElement('glyph')}}
+*   {{SVGElement('image')}}
+*   {{SVGElement('line')}}
+*   {{SVGElement('marker')}}
+*   {{SVGElement('mask')}}
+*   {{SVGElement('path')}}
+*   {{SVGElement('pattern')}}
+*   {{SVGElement('polygon')}}
+*   {{SVGElement('polyline')}}
+*   {{SVGElement('rect')}}
+*   {{SVGElement('svg')}}
+*   {{SVGElement('symbol')}}
+*   {{SVGElement('text')}}
+*   {{SVGElement('use')}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;mask id="myMask" maskContentUnits="objectBoundingBox"&gt;
-    &lt;rect    fill="white" x="0" y="0" width="100%" height="100%" /&gt;
-    &lt;polygon fill="black" points="0.5,0.2 0.68,0.74 0.21,0.41 0.79,0.41 0.32,0.74" /&gt;
-  &lt;/mask&gt;
+```html
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <mask id="myMask" maskContentUnits="objectBoundingBox">
+    <rect    fill="white" x="0" y="0" width="100%" height="100%" />
+    <polygon fill="black" points="0.5,0.2 0.68,0.74 0.21,0.41 0.79,0.41 0.32,0.74" />
+  </mask>
 
-  &lt;!--
+  <!--
   Punch a hole in a shape of a star inside the red circle,
   revealing the yellow circle underneath
-  --&gt;
-  &lt;circle cx="50" cy="50" r="20" fill="yellow" /&gt;
-  &lt;circle cx="50" cy="50" r="45" fill="red"
-          mask="url(#myMask)"/&gt;
-&lt;/svg&gt;</pre>
+  -->
+  <circle cx="50" cy="50" r="20" fill="yellow" />
+  <circle cx="50" cy="50" r="45" fill="red"
+          mask="url(#myMask)"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", '100%', 150)}}</p>
+{{EmbedLiveSample("Example", '100%', 150)}}
 
-<p>Since SVG2, the {{cssxref('mask')}} attribute is defined as a css property and is a shorthand for many other properties: {{cssxref('mask-image')}}, {{cssxref('mask-mode')}}, {{cssxref('mask-repeat')}}, {{cssxref('mask-position')}}, {{cssxref('mask-clip')}}, {{cssxref('mask-origin')}}, {{cssxref('mask-size')}}, and {{cssxref('mask-composite')}}.</p>
+Since SVG2, the {{cssxref('mask')}} attribute is defined as a css property and is a shorthand for many other properties: {{cssxref('mask-image')}}, {{cssxref('mask-mode')}}, {{cssxref('mask-repeat')}}, {{cssxref('mask-position')}}, {{cssxref('mask-clip')}}, {{cssxref('mask-origin')}}, {{cssxref('mask-size')}}, and {{cssxref('mask-composite')}}.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>See the CSS property {{cssxref("mask")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>none</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>See the CSS property {{cssxref("mask")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>none</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Masks", "#the-mask", "mask")}}</td>
-   <td>{{Spec2("CSS Masks")}}</td>
-   <td>Extends its usage to HTML elements.<br>
-    Extends its syntax by making it a shorthand for the new <code>mask-*</code> properties defined in that specification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "masking.html#MaskProperty", "mask")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("CSS Masks", "#the-mask", "mask")}}</td>
+      <td>{{Spec2("CSS Masks")}}</td>
+      <td>
+        Extends its usage to HTML elements.<br />Extends its syntax by making it
+        a shorthand for the new <code>mask-*</code> properties defined in that
+        specification.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "masking.html#MaskProperty", "mask")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -7,91 +7,95 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feDiffuseLighting.diffuseConstant
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <code><strong>diffuseConstant</strong></code> attribute represents the k<sub>d</sub> value in the <a href="https://en.wikipedia.org/wiki/Phong_reflection_model" rel="external">Phong lighting model</a>. In SVG, this can be any non-negative number.</p>
+The **`diffuseConstant`** attribute represents the k<sub>d</sub> value in the [Phong lighting model](https://en.wikipedia.org/wiki/Phong_reflection_model). In SVG, this can be any non-negative number.
 
-<p>It’s used to determine the final RGB value of a given pixel. The brighter the lighting-color, the smaller this number should be.</p>
+It’s used to determine the final RGB value of a given pixel. The brighter the lighting-color, the smaller this number should be.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("feDiffuseLighting")}}</li>
-</ul>
+*   {{SVGElement("feDiffuseLighting")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[3,8]">&lt;svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;filter id="diffuseLighting1" x="0" y="0" width="100%" height="100%"&gt;
-    &lt;feDiffuseLighting in="SourceGraphic" diffuseConstant="1"&gt;
-      &lt;fePointLight x="60" y="60" z="20" /&gt;
-    &lt;/feDiffuseLighting&gt;
-  &lt;/filter&gt;
-  &lt;filter id="diffuseLighting2" x="0" y="0" width="100%" height="100%"&gt;
-    &lt;feDiffuseLighting in="SourceGraphic" diffuseConstant="2"&gt;
-      &lt;fePointLight x="60" y="60" z="20" /&gt;
-    &lt;/feDiffuseLighting&gt;
-  &lt;/filter&gt;
+```html
+<svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
+  <filter id="diffuseLighting1" x="0" y="0" width="100%" height="100%">
+    <feDiffuseLighting in="SourceGraphic" diffuseConstant="1">
+      <fePointLight x="60" y="60" z="20" />
+    </feDiffuseLighting>
+  </filter>
+  <filter id="diffuseLighting2" x="0" y="0" width="100%" height="100%">
+    <feDiffuseLighting in="SourceGraphic" diffuseConstant="2">
+      <fePointLight x="60" y="60" z="20" />
+    </feDiffuseLighting>
+  </filter>
 
-  &lt;rect x="0" y="0" width="200" height="200" style="filter: url(#diffuseLighting1);" /&gt;
-  &lt;rect x="0" y="0" width="200" height="200" style="filter: url(#diffuseLighting2); transform: translateX(220px);" /&gt;
-&lt;/svg&gt;</pre>
+  <rect x="0" y="0" width="200" height="200" style="filter: url(#diffuseLighting1);" />
+  <rect x="0" y="0" width="200" height="200" style="filter: url(#diffuseLighting2); transform: translateX(220px);" />
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "420", "200")}}</p>
+{{EmbedLiveSample("Example", "420", "200")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>{{cssxref("number")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>{{cssxref("number")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Filters 1.0", "#element-attrdef-fediffuselighting-diffuseconstant", "diffuseConstant")}}</td>
-   <td>{{Spec2("Filters 1.0")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#feDiffuseLightingDiffuseConstantAttribute", "diffuseConstant")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("Filters 1.0", "#element-attrdef-fediffuselighting-diffuseconstant", "diffuseConstant")}}
+      </td>
+      <td>{{Spec2("Filters 1.0")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "filters.html#feDiffuseLightingDiffuseConstantAttribute", "diffuseConstant")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://en.wikipedia.org/wiki/Phong_reflection_model">Description of Phong reflection model on Wikipedia</a></li>
-</ul>
+*   [Description of Phong reflection model on Wikipedia](https://en.wikipedia.org/wiki/Phong_reflection_model)

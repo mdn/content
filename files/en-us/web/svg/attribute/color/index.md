@@ -6,73 +6,83 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.color
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>color</code></strong> attribute is used to provide a potential indirect value, <code><span class="prop-value">currentcolor</span></code>, for the {{SVGAttr("fill")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("flood-color")}}, and {{SVGAttr("lighting-color")}} attributes.</p>
+The **`color`** attribute is used to provide a potential indirect value, `currentcolor`, for the {{SVGAttr("fill")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("flood-color")}}, and {{SVGAttr("lighting-color")}} attributes.
 
-<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>color</code> can be used as a CSS property. See <a href="/en-US/docs/Web/CSS/color">CSS color</a> for further information.</p></div>
+> **Note:** As a presentation attribute, `color` can be used as a CSS property. See [CSS color](/en-US/docs/Web/CSS/color) for further information.
 
-<p>As a presentation attribute, it can be applied to any element, but as noted above, it has no direct effect on SVG elements.</p>
+As a presentation attribute, it can be applied to any element, but as noted above, it has no direct effect on SVG elements.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code> | <code>inherit</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td>Depends on user agent</td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code><a href="/en-US/docs/Web/CSS/color_value">&#x3C;color></a></code>
+        | <code>inherit</code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td>Depends on user agent</td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;g color="green"&gt;
-    &lt;rect width="50" height="50" fill="currentcolor" /&gt;
-    &lt;circle r="25" cx="70" cy="70" stroke="currentcolor" fill="none" stroke-width="5" /&gt;
-  &lt;/g&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <g color="green">
+    <rect width="50" height="50" fill="currentcolor" />
+    <circle r="25" cx="70" cy="70" stroke="currentcolor" fill="none" stroke-width="5" />
+  </g>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "100%", "110")}}</p>
+{{EmbedLiveSample("Example", "100%", "110")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "painting.html#ColorProperty", "color")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Removed the restriction to which elements it applies.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "color.html#ColorProperty", "color")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "painting.html#ColorProperty", "color")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>Removed the restriction to which elements it applies.</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "color.html#ColorProperty", "color")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

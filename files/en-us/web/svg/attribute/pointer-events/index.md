@@ -6,65 +6,68 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.pointer-events
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>pointer-events</code></strong> attribute is a presentation attribute that allows defining whether or when an element may be the target of a mouse event.</p>
+The **`pointer-events`** attribute is a presentation attribute that allows defining whether or when an element may be the target of a mouse event.
 
-<div class="note"><p><strong>Note:</strong> As a presentation attribute {{cssxref('pointer-events')}} can be used as a CSS property.</p></div>
+> **Note:** As a presentation attribute {{cssxref('pointer-events')}} can be used as a CSS property.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement('a')}}</li>
-  <li>{{SVGElement('circle')}}</li>
-  <li>{{SVGElement('clipPath')}}</li>
-  <li>{{SVGElement('defs')}}</li>
-  <li>{{SVGElement('ellipse')}}</li>
-  <li>{{SVGElement('foreignObject')}}</li>
-  <li>{{SVGElement('g')}}</li>
-  <li>{{SVGElement('image')}}</li>
-  <li>{{SVGElement('line')}}</li>
-  <li>{{SVGElement('marker')}}</li>
-  <li>{{SVGElement('mask')}}</li>
-  <li>{{SVGElement('path')}}</li>
-  <li>{{SVGElement('pattern')}}</li>
-  <li>{{SVGElement('polygon')}}</li>
-  <li>{{SVGElement('polyline')}}</li>
-  <li>{{SVGElement('rect')}}</li>
-  <li>{{SVGElement('svg')}}</li>
-  <li>{{SVGElement('switch')}}</li>
-  <li>{{SVGElement('symbol')}}</li>
-  <li>{{SVGElement('text')}}</li>
-  <li>{{SVGElement('textPath')}}</li>
-  <li>{{SVGElement('tspan')}}</li>
-  <li>{{SVGElement('use')}}</li>
-</ul>
+*   {{SVGElement('a')}}
+*   {{SVGElement('circle')}}
+*   {{SVGElement('clipPath')}}
+*   {{SVGElement('defs')}}
+*   {{SVGElement('ellipse')}}
+*   {{SVGElement('foreignObject')}}
+*   {{SVGElement('g')}}
+*   {{SVGElement('image')}}
+*   {{SVGElement('line')}}
+*   {{SVGElement('marker')}}
+*   {{SVGElement('mask')}}
+*   {{SVGElement('path')}}
+*   {{SVGElement('pattern')}}
+*   {{SVGElement('polygon')}}
+*   {{SVGElement('polyline')}}
+*   {{SVGElement('rect')}}
+*   {{SVGElement('svg')}}
+*   {{SVGElement('switch')}}
+*   {{SVGElement('symbol')}}
+*   {{SVGElement('text')}}
+*   {{SVGElement('textPath')}}
+*   {{SVGElement('tspan')}}
+*   {{SVGElement('use')}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!--
+```html
+<svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
+  <!--
   The circle will always intercept the mouse event.
   To change the color of the rect underneath you have
   to click outside the circle
-  --&gt;
-  &lt;rect x="0" y="0" height="10" width="10" fill="black" /&gt;
-  &lt;circle cx="5" cy="5" r="4" fill="white"
-          pointer-events="visiblePainted" /&gt;
+  -->
+  <rect x="0" y="0" height="10" width="10" fill="black" />
+  <circle cx="5" cy="5" r="4" fill="white"
+          pointer-events="visiblePainted" />
 
-  &lt;!--
+  <!--
   The circle below will never catch a mouse event.
   The rect underneath will change color whether you
   are clicking on the circle or the rect itself
-  --&gt;
-  &lt;rect x="10" y="0" height="10" width="10" fill="black" /&gt;
-  &lt;circle cx="15" cy="5" r="4" fill="white"
-          pointer-events="none" /&gt;
-&lt;/svg&gt;</pre>
+  -->
+  <rect x="10" y="0" height="10" width="10" fill="black" />
+  <circle cx="15" cy="5" r="4" fill="white"
+          pointer-events="none" />
+</svg>
+```
 
-<pre class="brush: js">window.addEventListener('mouseup', (e) =&gt; {
+```js
+window.addEventListener('mouseup', (e) => {
   // Let's pick a random color between #000000 and #FFFFFF
   const color = Math.round(Math.random() * 0xFFFFFF)
 
@@ -74,55 +77,65 @@ browser-compat: svg.attributes.presentation.pointer-events
   // Let's apply our color in the
   // element we actually clicked on
   e.target.style.fill = fill
-})</pre>
+})
+```
 
-<p>{{EmbedLiveSample("Example", '100%', 150)}}</p>
+{{EmbedLiveSample("Example", '100%', 150)}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>bounding-box</code> | <code>visiblePainted</code> | <code>visibleFill</code> | <code>visibleStroke</code> | <code>visible</code> | <code>painted</code> | <code>fill</code> | <code>stroke</code> | <code>all</code> | <code>none</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>visiblePainted</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code>bounding-box</code> | <code>visiblePainted</code> |
+        <code>visibleFill</code> | <code>visibleStroke</code> |
+        <code>visible</code> | <code>painted</code> | <code>fill</code> |
+        <code>stroke</code> | <code>all</code> | <code>none</code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>visiblePainted</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<p><em>For a detailed explanation of each possible value, have a look at the CSS  {{cssxref('pointer-events')}} documentation.</em></p>
+*For a detailed explanation of each possible value, have a look at the CSS  {{cssxref('pointer-events')}} documentation.*
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "interact.html#PointerEventsProperty", "pointer-events")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "interact.html#PointerEventsProperty", "pointer-events")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "interact.html#PointerEventsProperty", "pointer-events")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "interact.html#PointerEventsProperty", "pointer-events")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>

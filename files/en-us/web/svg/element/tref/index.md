@@ -8,73 +8,68 @@ tags:
   - SVG Text Content
 browser-compat: svg.elements.tref
 ---
-<div>{{SVGRef}}{{deprecated_header}}</div>
+{{SVGRef}}{{deprecated_header}}
 
-<p>The textual content for a {{SVGElement("text")}} <a href="/en-US/docs/Web/SVG">SVG</a> element can be either character data directly embedded within the {{SVGElement("text")}} element or the character data content of a referenced element, where the referencing is specified with a <strong><code>&lt;tref&gt;</code></strong> element.</p>
+The textual content for a {{SVGElement("text")}} [SVG](/en-US/docs/Web/SVG) element can be either character data directly embedded within the {{SVGElement("text")}} element or the character data content of a referenced element, where the referencing is specified with a **`<tref>`** element.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes">Conditional processing attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#graphical_event_attributes">Graphical event attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#presentation_attributes">Presentation attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#xlink_attributes">Xlink attributes</a></li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
-</ul>
+*   [Conditional processing attributes](/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes)
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+*   [Graphical event attributes](/en-US/docs/Web/SVG/Attribute#graphical_event_attributes)
+*   [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+*   [Xlink attributes](/en-US/docs/Web/SVG/Attribute#xlink_attributes)
+*   {{SVGAttr("class")}}
+*   {{SVGAttr("style")}}
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<ul>
- <li>{{SVGAttr("xlink:href")}}</li>
-</ul>
+*   {{SVGAttr("xlink:href")}}
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the {{domxref("SVGTRefElement")}} interface.</p>
+This element implements the {{domxref("SVGTRefElement")}} interface.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: xml">&lt;svg width="100%" height="100%" viewBox="0 0 1000 300"
+```xml
+<svg width="100%" height="100%" viewBox="0 0 1000 300"
      xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
-  &lt;defs&gt;
-    &lt;text id="ReferencedText"&gt;
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <text id="ReferencedText">
       Referenced character data
-    &lt;/text&gt;
-  &lt;/defs&gt;
+    </text>
+  </defs>
 
-  &lt;text x="100" y="100" font-size="45" &gt;
+  <text x="100" y="100" font-size="45" >
     Inline character data
-  &lt;/text&gt;
+  </text>
 
-  &lt;text x="100" y="200" font-size="45" fill="red" &gt;
-    &lt;tref xlink:href="#ReferencedText"/&gt;
-  &lt;/text&gt;
+  <text x="100" y="200" font-size="45" fill="red" >
+    <tref xlink:href="#ReferencedText"/>
+  </text>
 
-  &lt;!-- Show outline of canvas using 'rect' element --&gt;
-  &lt;rect x="1" y="1" width="998" height="298"
-        fill="none" stroke-width="2" /&gt;
-&lt;/svg&gt;
-</pre>
+  <!-- Show outline of canvas using 'rect' element -->
+  <rect x="1" y="1" width="998" height="298"
+        fill="none" stroke-width="2" />
+</svg>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("text")}}</li>
-</ul>
+*   {{SVGElement("text")}}

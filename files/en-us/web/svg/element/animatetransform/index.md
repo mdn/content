@@ -7,66 +7,64 @@ tags:
   - SVG Animation
 browser-compat: svg.elements.animateTransform
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <code>animateTransform</code> element animates a transformation attribute on its target element, thereby allowing animations to control translation, scaling, rotation, and/or skewing.</p>
+The `animateTransform` element animates a transformation attribute on its target element, thereby allowing animations to control translation, scaling, rotation, and/or skewing.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;svg width="120" height="120" viewBox="0 0 120 120"
-     xmlns="http://www.w3.org/2000/svg"&gt;
+```html
+<svg width="120" height="120" viewBox="0 0 120 120"
+     xmlns="http://www.w3.org/2000/svg">
 
-    &lt;polygon points="60,30 90,90 30,90"&gt;
-        &lt;animateTransform attributeName="transform"
+    <polygon points="60,30 90,90 30,90">
+        <animateTransform attributeName="transform"
                           attributeType="XML"
                           type="rotate"
                           from="0 60 70"
                           to="360 60 70"
                           dur="10s"
-                          repeatCount="indefinite"/&gt;
-    &lt;/polygon&gt;
-&lt;/svg&gt;</pre>
+                          repeatCount="indefinite"/>
+    </polygon>
+</svg>
+```
 
-<p><strong>Live sample</strong></p>
+**Live sample**
 
-<p>{{ EmbedLiveSample('Example','120','120') }}</p>
+{{ EmbedLiveSample('Example','120','120') }}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes">Conditional processing attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#animation_event_attributes">Animation event attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#xlink_attributes">Xlink attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#animation_attribute_target_attributes">Animation attribute target attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#animation_timing_attributes">Animation timing attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#animation_value_attributes">Animation value attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#animation_addition_attributes">Animation addition attributes</a> »</li>
-</ul>
+*   [Conditional processing attributes](/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes) »
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes) »
+*   [Animation event attributes](/en-US/docs/Web/SVG/Attribute#animation_event_attributes) »
+*   [Xlink attributes](/en-US/docs/Web/SVG/Attribute#xlink_attributes) »
+*   [Animation attribute target attributes](/en-US/docs/Web/SVG/Attribute#animation_attribute_target_attributes) »
+*   [Animation timing attributes](/en-US/docs/Web/SVG/Attribute#animation_timing_attributes) »
+*   [Animation value attributes](/en-US/docs/Web/SVG/Attribute#animation_value_attributes) »
+*   [Animation addition attributes](/en-US/docs/Web/SVG/Attribute#animation_addition_attributes) »
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<ul>
- <li>{{ SVGAttr("by") }}</li>
- <li>{{ SVGAttr("from") }}</li>
- <li>{{ SVGAttr("to") }}</li>
- <li>{{ SVGAttr("type") }}</li>
-</ul>
+*   {{ SVGAttr("by") }}
+*   {{ SVGAttr("from") }}
+*   {{ SVGAttr("to") }}
+*   {{ SVGAttr("type") }}
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the <code><a href="/en-US/docs/Web/API/SVGAnimateTransformElement">SVGAnimateTransformElement</a></code> interface.</p>
+This element implements the [`SVGAnimateTransformElement`](/en-US/docs/Web/API/SVGAnimateTransformElement) interface.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

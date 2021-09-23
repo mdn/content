@@ -7,69 +7,67 @@ tags:
   - SVG
 browser-compat: svg.elements.style
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The SVG <strong><code>&lt;style&gt;</code></strong> element allows style sheets to be embedded directly within SVG content.</p>
+The SVG **`<style>`** element allows style sheets to be embedded directly within SVG content.
 
-<div class="note"><p><strong>Note:</strong> SVG's <code>style</code> element has the same attributes as the corresponding element in HTML (see HTML's {{HTMLElement("style")}} element).</p></div>
+> **Note:** SVG's `style` element has the same attributes as the corresponding element in HTML (see HTML's {{HTMLElement("style")}} element).
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html; highlight[4]">&lt;svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;style&gt;
+```html
+<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+  <style>
     circle {
       fill: gold;
       stroke: maroon;
       stroke-width: 2px;
     }
-  &lt;/style&gt;
+  </style>
 
-  &lt;circle cx="5" cy="5" r="4" /&gt;
-&lt;/svg&gt;</pre>
+  <circle cx="5" cy="5" r="4" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('Example', 150, '100%')}}</p>
+{{EmbedLiveSample('Example', 150, '100%')}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt>{{SVGAttr("type")}}</dt>
- <dd>This attribute defines type of the style sheet language to use as a media type string.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#string"><strong>&lt;string&gt;</strong></a>; <em>Default value</em>: <code>text/css</code>; <em>Animatable</em>: <strong>no</strong></small></dd>
- <dt>{{SVGAttr("media")}}</dt>
- <dd>This attribute defines to which {{cssxref('@media', 'media')}} the style applies.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#string"><strong>&lt;string&gt;</strong></a>; <em>Default value</em>: <code>all</code>; <em>Animatable</em>: <strong>no</strong></small></dd>
- <dt>{{SVGAttr("title")}}</dt>
- <dd>This attribute the title of the style sheet which can be used to switch between alternate style sheets.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#string"><strong>&lt;string&gt;</strong></a>; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>no</strong></small></dd>
-</dl>
+*   {{SVGAttr("type")}}
+    *   : This attribute defines type of the style sheet language to use as a media type string.
+        *Value type*: [**\<string>**](/en-US/docs/Web/SVG/Content_type#string); *Default value*: `text/css`; *Animatable*: **no**
+*   {{SVGAttr("media")}}
+    *   : This attribute defines to which {{cssxref('@media', 'media')}} the style applies.
+        *Value type*: [**\<string>**](/en-US/docs/Web/SVG/Content_type#string); *Default value*: `all`; *Animatable*: **no**
+*   {{SVGAttr("title")}}
+    *   : This attribute the title of the style sheet which can be used to switch between alternate style sheets.
+        *Value type*: [**\<string>**](/en-US/docs/Web/SVG/Content_type#string); *Default value*: *none*; *Animatable*: **no**
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<dl>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Core">Core Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('id')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Styling">Styling Attributes</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt>Event Attributes</dt>
- <dd><small><a href="/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes">Global event attributes</a>, <a href="/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes">Document element event attributes</a></small></dd>
-</dl>
+*   [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
+    *   : Most notably: {{SVGAttr('id')}}
+*   [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
+    *   : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+*   Event Attributes
+    *   : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Document element event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTMLElement("style", "&lt;style&gt; element in HTML")}}</li>
-</ul>
+*   {{HTMLElement("style", "&lt;style&gt; element in HTML")}}

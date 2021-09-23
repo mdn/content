@@ -7,19 +7,17 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.font-face.alphabetic
 ---
-<div>{{SVGRef}}{{deprecated_header}}</div>
+{{SVGRef}}{{deprecated_header}}
 
-<p>The <strong><code>alphabetic</code></strong> attribute defines the lower baseline of a font. It has the same syntax and semantics as the {{cssxref("@font-face/baseline", "baseline")}} descriptor within an {{cssxref("@font-face")}}.</p>
+The **`alphabetic`** attribute defines the lower baseline of a font. It has the same syntax and semantics as the {{cssxref("@font-face/baseline", "baseline")}} descriptor within an {{cssxref("@font-face")}}.
 
-<p>For horizontally oriented glyph layouts, it indicates the alignment coordinate for glyphs to achieve alphabetic baseline alignment. The value is an offset in the font coordinate system.</p>
+For horizontally oriented glyph layouts, it indicates the alignment coordinate for glyphs to achieve alphabetic baseline alignment. The value is an offset in the font coordinate system.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("font-face")}}</li>
-</ul>
+*   {{SVGElement("font-face")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
   <tbody>
@@ -38,7 +36,7 @@ browser-compat: svg.elements.font-face.alphabetic
   </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
   <thead>
@@ -50,19 +48,19 @@ browser-compat: svg.elements.font-face.alphabetic
   </thead>
   <tbody>
     <tr>
-      <td>{{SpecName("SVG1.1", "fonts.html#FontFaceElementAlphabeticAttribute", "alphabetic")}}</td>
+      <td>
+        {{SpecName("SVG1.1", "fonts.html#FontFaceElementAlphabeticAttribute", "alphabetic")}}
+      </td>
       <td>{{Spec2("SVG1.1")}}</td>
       <td>Initial definition</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{SVGAttr("v-alphabetic")}}</li>
-</ul>
+*   {{SVGAttr("v-alphabetic")}}

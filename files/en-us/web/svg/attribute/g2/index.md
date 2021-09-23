@@ -7,64 +7,67 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.hkern.g2
 ---
-<div>{{SVGRef}}{{Deprecated_Header}}</div>
+{{SVGRef}}{{Deprecated_Header}}
 
-<p>The <strong><code>g2</code></strong> attribute specifies a list of glyph names which identify a set of possible second glyphs in the kerning pair.</p>
+The **`g2`** attribute specifies a list of glyph names which identify a set of possible second glyphs in the kerning pair.
 
-<p>All glyphs with the given glyph name are included in the set. The total set of possible second  glyphs in the kerning pair is the union of glyphs specified by the {{SVGAttr("u2")}} and <code>g2</code> attributes.</p>
+All glyphs with the given glyph name are included in the set. The total set of possible second  glyphs in the kerning pair is the union of glyphs specified by the {{SVGAttr("u2")}} and `g2` attributes.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("hkern")}}</li>
-  <li>{{SVGElement("vkern")}}</li>
-</ul>
+*   {{SVGElement("hkern")}}
+*   {{SVGElement("vkern")}}
 
-<h2 id="Context_notes">Context notes</h2>
+## Context notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>&lt;name&gt;<a href="/en-US/docs/Web/CSS/Value_definition_syntax#Hash_mark_()">#</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code
+          >&#x3C;name><a
+            href="/en-US/docs/Web/CSS/Value_definition_syntax#Hash_mark_()"
+            >#</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;name&gt;#</code></dt>
- <dd>
- <p>This value indicates a comma-separated sequence of glyph names (i.e., values that match {{SVGAttr("glyph-name")}} attributes on {{SVGElement("glyph")}} elements) which identify a set of possible second glyphs in the kerning pair.</p>
- </dd>
-</dl>
+*   `<name>#`
+    *   : This value indicates a comma-separated sequence of glyph names (i.e., values that match {{SVGAttr("glyph-name")}} attributes on {{SVGElement("glyph")}} elements) which identify a set of possible second glyphs in the kerning pair.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG1.1", "fonts.html#HKernElementG2Attribute", "g2")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "fonts.html#HKernElementG2Attribute", "g2")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

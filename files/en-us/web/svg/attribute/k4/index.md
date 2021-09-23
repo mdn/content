@@ -7,85 +7,93 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feComposite.k4
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>k4</code></strong> attribute defines one of the values to be used within the <code>arithmetic</code> operation of the {{SVGElement("feComposite")}} filter primitive.</p>
+The **`k4`** attribute defines one of the values to be used within the `arithmetic` operation of the {{SVGElement("feComposite")}} filter primitive.
 
-<p>The pixel composition is computed using the following formula:</p>
+The pixel composition is computed using the following formula:
 
-<pre class="brush: plain">result = k1*i1*i2 + k2*i1 + k3*i2 + k4</pre>
+```plain
+result = k1*i1*i2 + k2*i1 + k3*i2 + k4
+```
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("feComposite")}}</li>
-</ul>
+*   {{SVGElement("feComposite")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[3,6]">&lt;svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;filter id="composite1" x="0" y="0" width="100%" height="100%"&gt;
-    &lt;feComposite in2="SourceGraphic" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" /&gt;
-  &lt;/filter&gt;
-  &lt;filter id="composite2" x="0" y="0" width="100%" height="100%"&gt;
-    &lt;feComposite in2="SourceGraphic" operator="arithmetic" k1="10" k2="0" k3="0" k4="0.3" /&gt;
-  &lt;/filter&gt;
+```html
+<svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
+  <filter id="composite1" x="0" y="0" width="100%" height="100%">
+    <feComposite in2="SourceGraphic" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" />
+  </filter>
+  <filter id="composite2" x="0" y="0" width="100%" height="100%">
+    <feComposite in2="SourceGraphic" operator="arithmetic" k1="10" k2="0" k3="0" k4="0.3" />
+  </filter>
 
-  &lt;image href="mdn.svg" x="0" y="0"
-      width="200" height="200" style="filter: url(#composite1);" /&gt;
-  &lt;image href="mdn.svg" x="0" y="0"
-      width="200" height="200" style="filter: url(#composite2); transform: translateX(220px);" /&gt;
-&lt;/svg&gt;</pre>
+  <image href="mdn.svg" x="0" y="0"
+      width="200" height="200" style="filter: url(#composite1);" />
+  <image href="mdn.svg" x="0" y="0"
+      width="200" height="200" style="filter: url(#composite2); transform: translateX(220px);" />
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "420", "200")}}</p>
+{{EmbedLiveSample("Example", "420", "200")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>{{cssxref("number")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>{{cssxref("number")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Filters 1.0", "#element-attrdef-fecomposite-k4", "k4")}}</td>
-   <td>{{Spec2("Filters 1.0")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#feCompositeK4Attribute", "k4")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("Filters 1.0", "#element-attrdef-fecomposite-k4", "k4")}}
+      </td>
+      <td>{{Spec2("Filters 1.0")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "filters.html#feCompositeK4Attribute", "k4")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -6,99 +6,102 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.textPath.startOffset
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <code><strong>startOffset</strong></code> attribute defines an offset from the start of the path for the initial current text position along the path after converting the path to the {{SVGElement("textPath")}} element's coordinate system.</p>
+The **`startOffset`** attribute defines an offset from the start of the path for the initial current text position along the path after converting the path to the {{SVGElement("textPath")}} element's coordinate system.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("textPath")}}</li>
-</ul>
+*   {{SVGElement("textPath")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;path id="path1" fill="none" stroke="red"
-        d="M10,90 Q90,90 90,45 Q90,10 50,10 Q10,10 10,40 Q10,70 45,70 Q70,70 75,50" /&gt;
-  &lt;path id="path2" fill="none" stroke="red"
-        d="M130,90 Q210,90 210,45 Q210,10 170,10 Q130,10 130,40 Q130,70 165,70 Q190,70 195,50" /&gt;
+```html
+<svg viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg">
+  <path id="path1" fill="none" stroke="red"
+        d="M10,90 Q90,90 90,45 Q90,10 50,10 Q10,10 10,40 Q10,70 45,70 Q70,70 75,50" />
+  <path id="path2" fill="none" stroke="red"
+        d="M130,90 Q210,90 210,45 Q210,10 170,10 Q130,10 130,40 Q130,70 165,70 Q190,70 195,50" />
 
-  &lt;text&gt;
-    &lt;textPath href="#path1" startOffset="0"&gt;
+  <text>
+    <textPath href="#path1" startOffset="0">
       Quick brown fox jumps over the lazy dog.
-    &lt;/textPath&gt;
-  &lt;/text&gt;
+    </textPath>
+  </text>
 
-  &lt;text&gt;
-    &lt;textPath href="#path2" startOffset="40"&gt;
+  <text>
+    <textPath href="#path2" startOffset="40">
       Quick brown fox jumps over the lazy dog.
-    &lt;/textPath&gt;
-  &lt;/text&gt;
-&lt;/svg&gt;</pre>
+    </textPath>
+  </text>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", 400, 200)}}</p>
+{{EmbedLiveSample("Example", 400, 200)}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>{{cssxref("length-percentage")}} | {{cssxref("number")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        {{cssxref("length-percentage")}} |
+        {{cssxref("number")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;length-percentage&gt;</code></dt>
- <dd>
- <p>A length represents a distance along the path measured in the current user coordinate system for the {{SVGElement("textPath")}} element.</p>
+*   `<length-percentage>`
+    *   : A length represents a distance along the path measured in the current user coordinate system for the {{SVGElement("textPath")}} element.
 
- <p>If a percentage is given, then the start offset represents a percentage distance along the entire path. Thus, <code>0%</code> indicates the start point of the path and <code>100%</code> indicates the end point of the path.</p>
- </dd>
- <dt><code>&lt;number&gt;</code></dt>
- <dd>This value indicates a distance along the path measured in the current user coordinate system for the <code>&lt;textPath&gt;</code> element.</dd>
-</dl>
+        If a percentage is given, then the start offset represents a percentage distance along the entire path. Thus, `0%` indicates the start point of the path and `100%` indicates the end point of the path.
+*   `<number>`
+    *   : This value indicates a distance along the path measured in the current user coordinate system for the `<textPath>` element.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Negative values and values larger than the path length (e.g. <code>150%</code>) are allowed.</p>
-</div>
+> **Note:** Negative values and values larger than the path length (e.g. `150%`) are allowed.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "text.html#TextPathElementStartOffsetAttribute", "startOffset")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#TextPathElementStartOffsetAttribute", "startOffset")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "text.html#TextPathElementStartOffsetAttribute", "startOffset")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "text.html#TextPathElementStartOffsetAttribute", "startOffset")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -8,71 +8,64 @@ tags:
   - SVG Animation
 browser-compat: svg.elements.animateColor
 ---
-<div>{{SVGRef}}{{deprecated_header}}</div>
+{{SVGRef}}{{deprecated_header}}
 
-<div class="warning">
-<p><strong>Warning:</strong> This element has been deprecated in SVG 1.1 Second Edition and may be removed in a future version of SVG. It provides no features not already available by using the {{SVGElement("animate")}} element. So, authors should use the <code>&lt;animate&gt;</code> element instead.</p>
-</div>
+> **Warning:** This element has been deprecated in SVG 1.1 Second Edition and may be removed in a future version of SVG. It provides no features not already available by using the {{SVGElement("animate")}} element. So, authors should use the `<animate>` element instead.
 
-<p>The <strong><code>&lt;animateColor&gt;</code></strong> <a href="/en-US/docs/Web/SVG">SVG</a> element specifies a color transformation over time.</p>
+The **`<animateColor>`** [SVG](/en-US/docs/Web/SVG) element specifies a color transformation over time.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes">Conditional processing attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#animation_event_attributes">Animation event attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#xlink_attributes">Xlink attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#animation_attribute_target_attributes">Animation attribute target attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#animation_timing_attributes">Animation timing attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#animation_value_attributes">Animation value attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#animation_addition_attributes">Animation addition attributes</a></li>
-</ul>
+*   [Conditional processing attributes](/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes)
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+*   [Animation event attributes](/en-US/docs/Web/SVG/Attribute#animation_event_attributes)
+*   [Xlink attributes](/en-US/docs/Web/SVG/Attribute#xlink_attributes)
+*   [Animation attribute target attributes](/en-US/docs/Web/SVG/Attribute#animation_attribute_target_attributes)
+*   [Animation timing attributes](/en-US/docs/Web/SVG/Attribute#animation_timing_attributes)
+*   [Animation value attributes](/en-US/docs/Web/SVG/Attribute#animation_value_attributes)
+*   [Animation addition attributes](/en-US/docs/Web/SVG/Attribute#animation_addition_attributes)
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<ul>
- <li>{{SVGAttr("by")}}</li>
- <li>{{SVGAttr("from")}}</li>
- <li>{{SVGAttr("to")}}</li>
-</ul>
+*   {{SVGAttr("by")}}
+*   {{SVGAttr("from")}}
+*   {{SVGAttr("to")}}
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the {{domxref("SVGAnimateColorElement")}} interface.</p>
+This element implements the {{domxref("SVGAnimateColorElement")}} interface.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush:html">&lt;svg width="120" height="120" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;circle cx="60" cy="60" r="50"&gt;
-    &lt;animateColor attributeName="fill" attributeType="XML"
-        from="black" to="red" dur="6s" repeatCount="indefinite"/&gt;
-  &lt;/circle&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg width="120" height="120" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="60" cy="60" r="50">
+    <animateColor attributeName="fill" attributeType="XML"
+        from="black" to="red" dur="6s" repeatCount="indefinite"/>
+  </circle>
+</svg>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", 120, 120)}}</p>
+{{EmbedLiveSample("Example", 120, 120)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("animate")}}</li>
-</ul>
+*   {{SVGElement("animate")}}

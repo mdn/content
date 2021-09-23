@@ -6,97 +6,103 @@ tags:
   - SVG
   - SVG Attribute
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <code><strong>intercept</strong></code> attribute defines the intercept of the linear function of color component transfers when the {{SVGAttr("type")}} attribute is set to <code>linear</code>.</p>
+The **`intercept`** attribute defines the intercept of the linear function of color component transfers when the {{SVGAttr("type")}} attribute is set to `linear`.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("feFuncA")}}</li>
-  <li>{{SVGElement("feFuncB")}}</li>
-  <li>{{SVGElement("feFuncG")}}</li>
-  <li>{{SVGElement("feFuncR")}}</li>
-</ul>
+*   {{SVGElement("feFuncA")}}
+*   {{SVGElement("feFuncB")}}
+*   {{SVGElement("feFuncG")}}
+*   {{SVGElement("feFuncR")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[13-15,20-22]">&lt;svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-    &lt;linearGradient id="gradient" gradientUnits="userSpaceOnUse"
-        x1="0" y1="0" x2="200" y2="0"&gt;
-      &lt;stop offset="0" stop-color="#ff0000" /&gt;
-      &lt;stop offset="0.5" stop-color="#00ff00" /&gt;
-      &lt;stop offset="1" stop-color="#0000ff" /&gt;
-    &lt;/linearGradient&gt;
-  &lt;/defs&gt;
+```html
+<svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" gradientUnits="userSpaceOnUse"
+        x1="0" y1="0" x2="200" y2="0">
+      <stop offset="0" stop-color="#ff0000" />
+      <stop offset="0.5" stop-color="#00ff00" />
+      <stop offset="1" stop-color="#0000ff" />
+    </linearGradient>
+  </defs>
 
-  &lt;filter id="componentTransfer1" x="0" y="0" width="100%" height="100%"&gt;
-    &lt;feComponentTransfer&gt;
-      &lt;feFuncR type="linear" intercept="0"/&gt;
-      &lt;feFuncG type="linear" intercept="0"/&gt;
-      &lt;feFuncB type="linear" intercept="0"/&gt;
-    &lt;/feComponentTransfer&gt;
-  &lt;/filter&gt;
-  &lt;filter id="componentTransfer2" x="0" y="0" width="100%" height="100%"&gt;
-    &lt;feComponentTransfer&gt;
-      &lt;feFuncR type="linear" intercept="0.3"/&gt;
-      &lt;feFuncG type="linear" intercept="0.1"/&gt;
-      &lt;feFuncB type="linear" intercept="0.8"/&gt;
-    &lt;/feComponentTransfer&gt;
-  &lt;/filter&gt;
+  <filter id="componentTransfer1" x="0" y="0" width="100%" height="100%">
+    <feComponentTransfer>
+      <feFuncR type="linear" intercept="0"/>
+      <feFuncG type="linear" intercept="0"/>
+      <feFuncB type="linear" intercept="0"/>
+    </feComponentTransfer>
+  </filter>
+  <filter id="componentTransfer2" x="0" y="0" width="100%" height="100%">
+    <feComponentTransfer>
+      <feFuncR type="linear" intercept="0.3"/>
+      <feFuncG type="linear" intercept="0.1"/>
+      <feFuncB type="linear" intercept="0.8"/>
+    </feComponentTransfer>
+  </filter>
 
-  &lt;rect x="0" y="0" width="200" height="200" fill="url(#gradient)"
-      style="filter: url(#componentTransfer1);" /&gt;
-  &lt;rect x="0" y="0" width="200" height="200" fill="url(#gradient)"
-      style="filter: url(#componentTransfer2); transform: translateX(220px);" /&gt;
-&lt;/svg&gt;</pre>
+  <rect x="0" y="0" width="200" height="200" fill="url(#gradient)"
+      style="filter: url(#componentTransfer1);" />
+  <rect x="0" y="0" width="200" height="200" fill="url(#gradient)"
+      style="filter: url(#componentTransfer2); transform: translateX(220px);" />
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "480", "200")}}</p>
+{{EmbedLiveSample("Example", "480", "200")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>{{cssxref("number")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>{{cssxref("number")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Filters 1.0", "#element-attrdef-fecomponenttransfer-intercept", "intercept")}}</td>
-   <td>{{Spec2("Filters 1.0")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#feComponentTransferInterceptAttribute", "intercept")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("Filters 1.0", "#element-attrdef-fecomponenttransfer-intercept", "intercept")}}
+      </td>
+      <td>{{Spec2("Filters 1.0")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "filters.html#feComponentTransferInterceptAttribute", "intercept")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>

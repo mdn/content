@@ -7,101 +7,99 @@ tags:
   - SVG Container
 browser-compat: svg.elements.marker
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>&lt;marker&gt;</code></strong> element defines the graphic that is to be used for drawing arrowheads or polymarkers on a given {{SVGElement("path")}}, {{SVGElement("line")}}, {{SVGElement("polyline")}} or {{SVGElement("polygon")}} element.</p>
+The **`<marker>`** element defines the graphic that is to be used for drawing arrowheads or polymarkers on a given {{SVGElement("path")}}, {{SVGElement("line")}}, {{SVGElement("polyline")}} or {{SVGElement("polygon")}} element.
 
-<p>Markers are attached to shapes using the {{SVGAttr("marker-start")}}, {{SVGAttr("marker-mid")}}, and {{SVGAttr("marker-end")}} properties.</p>
+Markers are attached to shapes using the {{SVGAttr("marker-start")}}, {{SVGAttr("marker-mid")}}, and {{SVGAttr("marker-end")}} properties.
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-    &lt;!-- arrowhead marker definition --&gt;
-    &lt;marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- arrowhead marker definition -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
         markerWidth="6" markerHeight="6"
-        orient="auto-start-reverse"&gt;
-      &lt;path d="M 0 0 L 10 5 L 0 10 z" /&gt;
-    &lt;/marker&gt;
+        orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" />
+    </marker>
 
-    &lt;!-- simple dot marker definition --&gt;
-    &lt;marker id="dot" viewBox="0 0 10 10" refX="5" refY="5"
-        markerWidth="5" markerHeight="5"&gt;
-      &lt;circle cx="5" cy="5" r="5" fill="red" /&gt;
-    &lt;/marker&gt;
-  &lt;/defs&gt;
+    <!-- simple dot marker definition -->
+    <marker id="dot" viewBox="0 0 10 10" refX="5" refY="5"
+        markerWidth="5" markerHeight="5">
+      <circle cx="5" cy="5" r="5" fill="red" />
+    </marker>
+  </defs>
 
-  &lt;!-- Coordinate axes with a arrowhead in both direction --&gt;
-  &lt;polyline points="10,10 10,90 90,90" fill="none" stroke="black"
-   marker-start="url(#arrow)" marker-end="url(#arrow)"  /&gt;
+  <!-- Coordinate axes with a arrowhead in both direction -->
+  <polyline points="10,10 10,90 90,90" fill="none" stroke="black"
+   marker-start="url(#arrow)" marker-end="url(#arrow)"  />
 
-  &lt;!-- Data line with polymarkers --&gt;
-  &lt;polyline points="15,80 29,50 43,60 57,30 71,40 85,15" fill="none" stroke="grey"
-   marker-start="url(#dot)" marker-mid="url(#dot)"  marker-end="url(#dot)" /&gt;
-&lt;/svg&gt;</pre>
+  <!-- Data line with polymarkers -->
+  <polyline points="15,80 29,50 43,60 57,30 71,40 85,15" fill="none" stroke="grey"
+   marker-start="url(#dot)" marker-mid="url(#dot)"  marker-end="url(#dot)" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('Example', 200, 200)}}</p>
+{{EmbedLiveSample('Example', 200, 200)}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt>{{SVGAttr("markerHeight")}}</dt>
- <dd>This attribute defines the height of the marker viewport.<br>
- <small><em>Value type</em>: <strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> ; <em>Default value</em>: <code>3</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("markerUnits")}}</dt>
- <dd>This attribute defines the coordinate system for the attributes <code>markerWidth</code>, <code>markerHeight</code> and the contents of the <code>&lt;marker&gt;</code>.<br>
- <small><em>Value type</em>: <code>userSpaceOnUse</code>|<code>strokeWidth</code> ; <em>Default value</em>: <code>strokeWidth</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("markerWidth")}}</dt>
- <dd>This attribute defines the width of the marker viewport.<br>
- <small><em>Value type</em>: <strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> ; <em>Default value</em>: <code>3</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("orient")}}</dt>
- <dd>This attribute defines the orientation of the marker relative to the shape it is attached to.<br>
- <small><em>Value type</em>: <code>auto</code>|<code>auto-start-reverse</code>|<strong><a href="/en-US/docs/Web/SVG/Content_type#angle">&lt;angle&gt;</a></strong> ; <em>Default value</em>: <code>0</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("preserveAspectRatio")}}</dt>
- <dd>This attribute defines how the svg fragment must be deformed if it is embedded in a container with a different aspect ratio.<br>
- <small><em>Value type</em>: (<code>none</code>| <code>xMinYMin</code>| <code>xMidYMin</code>| <code>xMaxYMin</code>| <code>xMinYMid</code>| <code>xMidYMid</code>| <code>xMaxYMid</code>| <code>xMinYMax</code>| <code>xMidYMax</code>| <code>xMaxYMax</code>) (<code>meet</code>|<code>slice</code>)? ; <em>Default value</em>: <code>xMidYMid meet</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("refX")}}</dt>
- <dd>This attribute defines the x coordinate for the reference point of the marker.<br>
- <small><em>Value type</em>: <code>left</code>|<code>center</code>|<code>right</code>|<strong><a href="/en-US/docs/Web/SVG/Content_type#coordinate">&lt;coordinate&gt;</a></strong> ; <em>Default value</em>: <code>0</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("refY")}}</dt>
- <dd>This attribute defines the y coordinate for the reference point of the marker.<br>
- <small><em>Value type</em>: <code>top</code>|<code>center</code>|<code>bottom</code>|<strong><a href="/en-US/docs/Web/SVG/Content_type#coordinate">&lt;coordinate&gt;</a></strong> ; <em>Default value</em>: <code>0</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("viewBox")}}</dt>
- <dd>This attribute defines the bound of the SVG viewport for the current SVG fragment.<br>
- <small><em>Value type</em>: <strong><a href="/en-US/docs/Web/SVG/Content_type#list-of-ts">&lt;list-of-numbers&gt;</a></strong> ; <em>Default value</em>: none; <em>Animatable</em>: <strong>yes</strong></small></dd>
-</dl>
+*   {{SVGAttr("markerHeight")}}
+    *   : This attribute defines the height of the marker viewport.
+        *Value type*: **[\<length>](/en-US/docs/Web/SVG/Content_type#length)** ; *Default value*: `3`; *Animatable*: **yes**
+*   {{SVGAttr("markerUnits")}}
+    *   : This attribute defines the coordinate system for the attributes `markerWidth`, `markerHeight` and the contents of the `<marker>`.
+        *Value type*: `userSpaceOnUse`|`strokeWidth` ; *Default value*: `strokeWidth`; *Animatable*: **yes**
+*   {{SVGAttr("markerWidth")}}
+    *   : This attribute defines the width of the marker viewport.
+        *Value type*: **[\<length>](/en-US/docs/Web/SVG/Content_type#length)** ; *Default value*: `3`; *Animatable*: **yes**
+*   {{SVGAttr("orient")}}
+    *   : This attribute defines the orientation of the marker relative to the shape it is attached to.
+        *Value type*: `auto`|`auto-start-reverse`|**[\<angle>](/en-US/docs/Web/SVG/Content_type#angle)** ; *Default value*: `0`; *Animatable*: **yes**
+*   {{SVGAttr("preserveAspectRatio")}}
+    *   : This attribute defines how the svg fragment must be deformed if it is embedded in a container with a different aspect ratio.
+        *Value type*: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; *Default value*: `xMidYMid meet`; *Animatable*: **yes**
+*   {{SVGAttr("refX")}}
+    *   : This attribute defines the x coordinate for the reference point of the marker.
+        *Value type*: `left`|`center`|`right`|**[\<coordinate>](/en-US/docs/Web/SVG/Content_type#coordinate)** ; *Default value*: `0`; *Animatable*: **yes**
+*   {{SVGAttr("refY")}}
+    *   : This attribute defines the y coordinate for the reference point of the marker.
+        *Value type*: `top`|`center`|`bottom`|**[\<coordinate>](/en-US/docs/Web/SVG/Content_type#coordinate)** ; *Default value*: `0`; *Animatable*: **yes**
+*   {{SVGAttr("viewBox")}}
+    *   : This attribute defines the bound of the SVG viewport for the current SVG fragment.
+        *Value type*: **[\<list-of-numbers>](/en-US/docs/Web/SVG/Content_type#list-of-ts)** ; *Default value*: none; *Animatable*: **yes**
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<dl>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Core">Core Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Styling">Styling Attributes</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Conditional_Processing">Conditional Processing Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Presentation">Presentation Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}</small></dd>
- <dt>ARIA Attributes</dt>
- <dd><small><code>aria-activedescendant</code>, <code>aria-atomic</code>, <code>aria-autocomplete</code>, <code>aria-busy</code>, <code>aria-checked</code>, <code>aria-colcount</code>, <code>aria-colindex</code>, <code>aria-colspan</code>, <code>aria-controls</code>, <code>aria-current</code>, <code>aria-describedby</code>, <code>aria-details</code>, <code>aria-disabled</code>, <code>aria-dropeffect</code>, <code>aria-errormessage</code>, <code>aria-expanded</code>, <code>aria-flowto</code>, <code>aria-grabbed</code>, <code>aria-haspopup</code>, <code>aria-hidden</code>, <code>aria-invalid</code>, <code>aria-keyshortcuts</code>, <code>aria-label</code>, <code>aria-labelledby</code>, <code>aria-level</code>, <code>aria-live</code>, <code>aria-modal</code>, <code>aria-multiline</code>, <code>aria-multiselectable</code>, <code>aria-orientation</code>, <code>aria-owns</code>, <code>aria-placeholder</code>, <code>aria-posinset</code>, <code>aria-pressed</code>, <code>aria-readonly</code>, <code>aria-relevant</code>, <code>aria-required</code>, <code>aria-roledescription</code>, <code>aria-rowcount</code>, <code>aria-rowindex</code>, <code>aria-rowspan</code>, <code>aria-selected</code>, <code>aria-setsize</code>, <code>aria-sort</code>, <code>aria-valuemax</code>, <code>aria-valuemin</code>, <code>aria-valuenow</code>, <code>aria-valuetext</code>, <code>role</code></small></dd>
-</dl>
+*   [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
+    *   : Most notably: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
+*   [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
+    *   : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+*   [Conditional Processing Attributes](/en-US/docs/Web/SVG/Attribute/Conditional_Processing)
+    *   : Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+*   [Presentation Attributes](/en-US/docs/Web/SVG/Attribute/Presentation)
+    *   : Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
+*   ARIA Attributes
+    *   : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related marker properties: {{SVGAttr("marker-start")}}, {{SVGAttr("marker-mid")}}, and {{SVGAttr("marker-end")}}</li>
-</ul>
+*   Related marker properties: {{SVGAttr("marker-start")}}, {{SVGAttr("marker-mid")}}, and {{SVGAttr("marker-end")}}

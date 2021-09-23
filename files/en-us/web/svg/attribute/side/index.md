@@ -6,85 +6,87 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.textPath.side
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <code><strong>side</strong></code> attribute determines the side of a path the text is placed on (relative to the path direction).</p>
+The **`side`** attribute determines the side of a path the text is placed on (relative to the path direction).
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("textPath")}}</li>
-</ul>
+*   {{SVGElement("textPath")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
 }
 
 text {
   font: 25px Arial, Helvetica, sans-serif;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[3,6]">&lt;svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;text&gt;
-    &lt;textPath href="#circle1" side="left"&gt;Text left from the path&lt;/textPath&gt;
-  &lt;/text&gt;
-  &lt;text&gt;
-    &lt;textPath href="#circle2" side="right"&gt;Text right from the path&lt;/textPath&gt;
-  &lt;/text&gt;
+```html
+<svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
+  <text>
+    <textPath href="#circle1" side="left">Text left from the path</textPath>
+  </text>
+  <text>
+    <textPath href="#circle2" side="right">Text right from the path</textPath>
+  </text>
 
-  &lt;circle id="circle1" cx="100" cy="100" r="70" fill="transparent" stroke="silver"/&gt;
-  &lt;circle id="circle2" cx="320" cy="100" r="70" fill="transparent" stroke="silver"/&gt;
-&lt;/svg&gt;</pre>
+  <circle id="circle1" cx="100" cy="100" r="70" fill="transparent" stroke="silver"/>
+  <circle id="circle2" cx="320" cy="100" r="70" fill="transparent" stroke="silver"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "420", "220")}}</p>
+{{EmbedLiveSample("Example", "420", "220")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>left</code> | <code>right</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>left</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>left</code> | <code>right</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>left</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>left</code></dt>
- <dd>This value places the text on the left side of the path (relative to the path direction).</dd>
- <dt><code>right</code></dt>
- <dd>This value places the text on the right side of the path (relative to the path direction). This effectively reverses the path direction.</dd>
-</dl>
+*   `left`
+    *   : This value places the text on the left side of the path (relative to the path direction).
+*   `right`
+    *   : This value places the text on the right side of the path (relative to the path direction). This effectively reverses the path direction.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "text.html#TextPathElementSideAttribute", "side")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "text.html#TextPathElementSideAttribute", "side")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

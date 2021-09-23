@@ -6,124 +6,133 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.clip-path
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>clip-path</code></strong> presentation attribute defines or associates a clipping path with the element it is related to.</p>
+The **`clip-path`** presentation attribute defines or associates a clipping path with the element it is related to.
 
-<div class="note"><p><strong>Note:</strong> As a presentation attribute <code>clip-path</code> can be used as a CSS property.</p></div>
+> **Note:** As a presentation attribute `clip-path` can be used as a CSS property.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement('a')}}</li>
-  <li>{{SVGElement('circle')}}</li>
-  <li>{{SVGElement('clipPath')}}</li>
-  <li>{{SVGElement('ellipse')}}</li>
-  <li>{{SVGElement('g')}}</li>
-  <li>{{SVGElement('glyph')}}</li>
-  <li>{{SVGElement('image')}}</li>
-  <li>{{SVGElement('line')}}</li>
-  <li>{{SVGElement('marker')}}</li>
-  <li>{{SVGElement('mask')}}</li>
-  <li>{{SVGElement('path')}}</li>
-  <li>{{SVGElement('pattern')}}</li>
-  <li>{{SVGElement('polygon')}}</li>
-  <li>{{SVGElement('polyline')}}</li>
-  <li>{{SVGElement('rect')}}</li>
-  <li>{{SVGElement('svg')}}</li>
-  <li>{{SVGElement('symbol')}}</li>
-  <li>{{SVGElement('text')}}</li>
-  <li>{{SVGElement('use')}}</li>
-</ul>
+*   {{SVGElement('a')}}
+*   {{SVGElement('circle')}}
+*   {{SVGElement('clipPath')}}
+*   {{SVGElement('ellipse')}}
+*   {{SVGElement('g')}}
+*   {{SVGElement('glyph')}}
+*   {{SVGElement('image')}}
+*   {{SVGElement('line')}}
+*   {{SVGElement('marker')}}
+*   {{SVGElement('mask')}}
+*   {{SVGElement('path')}}
+*   {{SVGElement('pattern')}}
+*   {{SVGElement('polygon')}}
+*   {{SVGElement('polyline')}}
+*   {{SVGElement('rect')}}
+*   {{SVGElement('svg')}}
+*   {{SVGElement('symbol')}}
+*   {{SVGElement('text')}}
+*   {{SVGElement('use')}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;clipPath id="myClip" clipPathUnits="objectBoundingBox"&gt;
-    &lt;circle cx=".5" cy=".5" r=".5" /&gt;
-  &lt;/clipPath&gt;
+```html
+<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+  <clipPath id="myClip" clipPathUnits="objectBoundingBox">
+    <circle cx=".5" cy=".5" r=".5" />
+  </clipPath>
 
-  &lt;!-- Top-left: Apply a custom defined clipping path --&gt;
-  &lt;rect x="1" y="1" width="8" height="8" stroke="green"
-        clip-path="url(#myClip)" /&gt;
+  <!-- Top-left: Apply a custom defined clipping path -->
+  <rect x="1" y="1" width="8" height="8" stroke="green"
+        clip-path="url(#myClip)" />
 
-  &lt;!-- Top-right: Apply a CSS basic shape on a fill-box
+  <!-- Top-right: Apply a CSS basic shape on a fill-box
        geometry. This is the same as having a custom clipping
-       path with a clipPathUnits set to objectBoundingBox --&gt;
-  &lt;rect x="11" y="1" width="8" height="8" stroke="green"
-        clip-path="circle() fill-box" /&gt;
+       path with a clipPathUnits set to objectBoundingBox -->
+  <rect x="11" y="1" width="8" height="8" stroke="green"
+        clip-path="circle() fill-box" />
 
-  &lt;!-- Bottom-left --&gt;
-  &lt;rect x="1" y="11" width="8" height="8" stroke="green"
-        clip-path="circle() stroke-box" /&gt;
+  <!-- Bottom-left -->
+  <rect x="1" y="11" width="8" height="8" stroke="green"
+        clip-path="circle() stroke-box" />
 
-  &lt;!-- Bottom-right: Apply a CSS basic shape on a view-box
+  <!-- Bottom-right: Apply a CSS basic shape on a view-box
        geometry. This is the same as having a custom clipping
-       path with a clipPathUnits set to userSpaceOnUse --&gt;
-  &lt;rect x="11" y="11" width="8" height="8" stroke="green"
-        clip-path="circle() view-box" /&gt;
-&lt;/svg&gt;</pre>
+       path with a clipPathUnits set to userSpaceOnUse -->
+  <rect x="11" y="11" width="8" height="8" stroke="green"
+        clip-path="circle() view-box" />
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", '100%', 200)}}</p>
+{{EmbedLiveSample("Example", '100%', 200)}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>{{cssxref('url')}} | [ {{cssxref('basic-shape')}} || <code>&lt;geometry-box&gt;</code> ] | <code>none</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>none</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        {{cssxref('url')}} | [ {{cssxref('basic-shape')}} ||
+        <code>&#x3C;geometry-box></code> ] | <code>none</code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>none</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt>&lt;geometry-box&gt;</dt>
- <dd>An extra information to tell how a {{cssxref('basic-shape')}} is applied to an element: <code>fill-box</code> indicates to use the object bounding box; <code>stroke-box</code> indicates to use the object bounding box extended with the stroke; <code>view-box</code> indicates to use the nearest SVG viewport as the reference box.</dd>
-</dl>
+*   \<geometry-box>
+    *   : An extra information to tell how a {{cssxref('basic-shape')}} is applied to an element: `fill-box` indicates to use the object bounding box; `stroke-box` indicates to use the object bounding box extended with the stroke; `view-box` indicates to use the nearest SVG viewport as the reference box.
 
-<div class="note"><p><strong>Note:</strong> For more details on the clip-path syntax, see the CSS property {{cssxref('clip-path')}} reference page.</p></div>
+> **Note:** For more details on the clip-path syntax, see the CSS property {{cssxref('clip-path')}} reference page.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Masks", "#the-clip-path", 'clip-path')}}</td>
-   <td>{{Spec2('CSS Masks')}}</td>
-   <td>Extends its application to HTML elements. The <code>clip-path</code> property replaces the deprecated {{cssxref("clip")}} property.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'masking.html#ClipPathProperty', 'clip-path')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Initial definition (applies to SVG elements only).</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("CSS Masks", "#the-clip-path", 'clip-path')}}
+      </td>
+      <td>{{Spec2('CSS Masks')}}</td>
+      <td>
+        Extends its application to HTML elements. The
+        <code>clip-path</code> property replaces the deprecated
+        {{cssxref("clip")}} property.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('SVG1.1', 'masking.html#ClipPathProperty', 'clip-path')}}
+      </td>
+      <td>{{Spec2('SVG1.1')}}</td>
+      <td>Initial definition (applies to SVG elements only).</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The CSS {{cssxref("clip-path")}} property</li>
-</ul>
+*   The CSS {{cssxref("clip-path")}} property

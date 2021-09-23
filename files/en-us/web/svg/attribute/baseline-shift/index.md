@@ -7,83 +7,93 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.baseline-shift
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>baseline-shift</code></strong> attribute allows repositioning of the dominant-baseline relative to the dominant-baseline of the parent text content element. The shifted object might be a sub- or superscript.</p>
+The **`baseline-shift`** attribute allows repositioning of the dominant-baseline relative to the dominant-baseline of the parent text content element. The shifted object might be a sub- or superscript.
 
-<div class="note"><p><strong>Note:</strong> As a presentation attribute <code>baseline-shift</code> can be used as a CSS property.</p></div>
+> **Note:** As a presentation attribute `baseline-shift` can be used as a CSS property.
 
-<div class="note"><p><strong>Note:</strong> This property is going to be deprecated and authors are advised to use <code><a href="/en-US/docs/Web/CSS/vertical-align">vertical-align</a></code> instead.</p></div>
+> **Note:** This property is going to be deprecated and authors are advised to use [`vertical-align`](/en-US/docs/Web/CSS/vertical-align) instead.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("altGlyph")}}</li>
-  <li>{{SVGElement("textPath")}}</li>
-  <li>{{SVGElement("tref")}}</li>
-  <li>{{SVGElement("tspan")}}</li>
-</ul>
+*   {{SVGElement("altGlyph")}}
+*   {{SVGElement("textPath")}}
+*   {{SVGElement("tref")}}
+*   {{SVGElement("tspan")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>{{cssxref("length-percentage")}} | <code>sub</code> | <code>super</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        {{cssxref("length-percentage")}} | <code>sub</code> |
+        <code>super</code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>sub</code></dt>
- <dd>The dominant-baseline is shifted to the default position for subscripts.</dd>
- <dt><code>super</code></dt>
- <dd>The dominant-baseline is shifted to the default position for superscripts.</dd>
- <dt><code>&lt;length-percentage&gt;</code></dt>
- <dd>
-   <p>A length value raises (positive value) or lowers (negative value) the dominant-baseline of the parent text content element by the specified length.</p>
-   <p>A percentage value raises (positive value) or lowers (negative value) the dominant-baseline of the parent text content element by the specified percentage of the {{SVGAttr("line-height")}}.</p>
- </dd>
-</dl>
+*   `sub`
+    *   : The dominant-baseline is shifted to the default position for subscripts.
+*   `super`
+    *   : The dominant-baseline is shifted to the default position for superscripts.
+*   `<length-percentage>`
+    *   : A length value raises (positive value) or lowers (negative value) the dominant-baseline of the parent text content element by the specified length.
 
-<h2 id="Specifications">Specifications</h2>
+        A percentage value raises (positive value) or lowers (negative value) the dominant-baseline of the parent text content element by the specified percentage of the {{SVGAttr("line-height")}}.
+
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Inline", "#propdef-baseline-shift", "alignment-baseline")}}</td>
-   <td>{{Spec2("CSS3 Inline")}}</td>
-   <td>Removed the <code>baseline</code> value, as it is a redundant keyword within the {{SVGAttr("vertical-align")}} property.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "text.html#BaselineShiftProperty", "alignment-baseline")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Refers to the definition in CSS Inline Layout and notes that {{SVGAttr("vertical-align")}} should be preferred.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#BaselineShiftProperty", "alignment-baseline")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("CSS3 Inline", "#propdef-baseline-shift", "alignment-baseline")}}
+      </td>
+      <td>{{Spec2("CSS3 Inline")}}</td>
+      <td>
+        Removed the <code>baseline</code> value, as it is a redundant keyword
+        within the {{SVGAttr("vertical-align")}} property.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "text.html#BaselineShiftProperty", "alignment-baseline")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>
+        Refers to the definition in CSS Inline Layout and notes that
+        {{SVGAttr("vertical-align")}} should be preferred.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "text.html#BaselineShiftProperty", "alignment-baseline")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

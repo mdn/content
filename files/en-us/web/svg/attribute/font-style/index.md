@@ -13,91 +13,97 @@ tags:
   - font
 browser-compat: svg.attributes.presentation.font-style
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>font-style</code></strong> attribute specifies whether the text is to be rendered using a normal, italic, or oblique face.</p>
+The **`font-style`** attribute specifies whether the text is to be rendered using a normal, italic, or oblique face.
 
-<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>font-style</code> can be used as a CSS property. See the {{cssxref("font-style", "CSS font-style")}} property for more information.</p></div>
+> **Note:** As a presentation attribute, `font-style` can be used as a CSS property. See the {{cssxref("font-style", "CSS font-style")}} property for more information.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("altGlyph")}}</li>
-  <li>{{SVGElement("text")}}</li>
-  <li>{{SVGElement("textPath")}}</li>
-  <li>{{SVGElement("tref")}}</li>
-  <li>{{SVGElement("tspan")}}</li>
-</ul>
+*   {{SVGElement("altGlyph")}}
+*   {{SVGElement("text")}}
+*   {{SVGElement("textPath")}}
+*   {{SVGElement("tref")}}
+*   {{SVGElement("tspan")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[2,3]">&lt;svg viewBox="0 0 250 30" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;text y="20" font-style="normal"&gt;Normal font style&lt;/text&gt;
-  &lt;text x="150" y="20" font-style="italic"&gt;Italic font style&lt;/text&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg viewBox="0 0 250 30" xmlns="http://www.w3.org/2000/svg">
+  <text y="20" font-style="normal">Normal font style</text>
+  <text x="150" y="20" font-style="italic">Italic font style</text>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "250", "30")}}</p>
+{{EmbedLiveSample("Example", "250", "30")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>normal</code> | <code>italic</code> | <code>oblique</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>normal</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>normal</code> | <code>italic</code> | <code>oblique</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>normal</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>For a description of the values, please refer to the <a href="/en-US/docs/Web/CSS/font-style#Values">CSS font-style</a> property.</p>
+For a description of the values, please refer to the [CSS font-style](/en-US/docs/Web/CSS/font-style#Values) property.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Fonts", "#font-style-prop", "font-style")}}</td>
-   <td>{{Spec2("CSS4 Fonts")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Fonts", "#font-style-prop", "font-style")}}</td>
-   <td>{{Spec2("CSS3 Fonts")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#FontStyleProperty", "font-style")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("CSS4 Fonts", "#font-style-prop", "font-style")}}
+      </td>
+      <td>{{Spec2("CSS4 Fonts")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("CSS3 Fonts", "#font-style-prop", "font-style")}}
+      </td>
+      <td>{{Spec2("CSS3 Fonts")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "text.html#FontStyleProperty", "font-style")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("font-style", "CSS font-style")}}</li>
-</ul>
+*   {{cssxref("font-style", "CSS font-style")}}

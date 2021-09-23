@@ -6,95 +6,129 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.text-decoration
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>text-decoration</code></strong> attribute defines whether text is decorated with an underline, overline and/or strike-through. It is a shorthand for the {{cssxref("text-decoration-line")}} and {{cssxref("text-decoration-style")}} properties.</p>
+The **`text-decoration`** attribute defines whether text is decorated with an underline, overline and/or strike-through. It is a shorthand for the {{cssxref("text-decoration-line")}} and {{cssxref("text-decoration-style")}} properties.
 
-<p>The fill and stroke of the text decoration are given by the fill and stroke of the text at the point where the text decoration is declared.</p>
+The fill and stroke of the text decoration are given by the fill and stroke of the text at the point where the text decoration is declared.
 
-<p>The paint order of the text decoration, i.e. the fill and stroke, is determined by the value of the {{SVGAttr("paint-order")}} attribute at the point where the text decoration is declared.</p>
+The paint order of the text decoration, i.e. the fill and stroke, is determined by the value of the {{SVGAttr("paint-order")}} attribute at the point where the text decoration is declared.
 
-<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>text-decoration</code> can be used as a CSS property. See the {{cssxref("text-decoration", "CSS text-decoration")}} property for more information.</p></div>
+> **Note:** As a presentation attribute, `text-decoration` can be used as a CSS property. See the {{cssxref("text-decoration", "CSS text-decoration")}} property for more information.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("altGlyph")}}</li>
-  <li>{{SVGElement("text")}}</li>
-  <li>{{SVGElement("textPath")}}</li>
-  <li>{{SVGElement("tref")}}</li>
-  <li>{{SVGElement("tspan")}}</li>
-</ul>
+*   {{SVGElement("altGlyph")}}
+*   {{SVGElement("text")}}
+*   {{SVGElement("textPath")}}
+*   {{SVGElement("tref")}}
+*   {{SVGElement("tspan")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[2,3]">&lt;svg viewBox="0 0 250 50" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;text y="20" text-decoration="underline"&gt;Underlined text&lt;/text&gt;
-  &lt;text x="0" y="40" text-decoration="line-through"&gt;Struck-through text&lt;/text&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg viewBox="0 0 250 50" xmlns="http://www.w3.org/2000/svg">
+  <text y="20" text-decoration="underline">Underlined text</text>
+  <text x="0" y="40" text-decoration="line-through">Struck-through text</text>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "250", "100")}}</p>
+{{EmbedLiveSample("Example", "250", "100")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/CSS/text-decoration-line">&lt;'text-decoration-line'&gt;</a></code> || <code><a href="/en-US/docs/Web/CSS/text-decoration-style">&lt;'text-decoration-style'&gt;</a></code> || <code><a href="/en-US/docs/Web/CSS/text-decoration-color">&lt;'text-decoration-color'&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td>See individual properties</td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/CSS/text-decoration-line"
+            >&#x3C;'text-decoration-line'></a
+          ></code
+        >
+        ||
+        <code
+          ><a href="/en-US/docs/Web/CSS/text-decoration-style"
+            >&#x3C;'text-decoration-style'></a
+          ></code
+        >
+        ||
+        <code
+          ><a href="/en-US/docs/Web/CSS/text-decoration-color"
+            >&#x3C;'text-decoration-color'></a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td>See individual properties</td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>For a description of the values, please refer to the <a href="/en-US/docs/Web/CSS/text-decoration#values">CSS <code>text-decoration</code></a> property.</p>
+For a description of the values, please refer to the [CSS `text-decoration`](/en-US/docs/Web/CSS/text-decoration#values) property.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Text Decoration", "#text-decoration-property", "text-decoration")}}</td>
-   <td>{{Spec2("CSS3 Text Decoration")}}</td>
-   <td>Defines the property as a shorthand for {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, and {{cssxref("text-decoration-color")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "text.html#TextDecorationProperties", "text-decoration")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Mainly refers to the definition in CSS Text Decoration 3 turning the property into a shorthand for {{cssxref("text-decoration-line")}} and {{cssxref("text-decoration-style")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#TextDecorationProperty", "text-decoration")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("CSS3 Text Decoration", "#text-decoration-property", "text-decoration")}}
+      </td>
+      <td>{{Spec2("CSS3 Text Decoration")}}</td>
+      <td>
+        Defines the property as a shorthand for
+        {{cssxref("text-decoration-line")}},
+        {{cssxref("text-decoration-style")}}, and
+        {{cssxref("text-decoration-color")}}.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "text.html#TextDecorationProperties", "text-decoration")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>
+        Mainly refers to the definition in CSS Text Decoration 3 turning the
+        property into a shorthand for
+        {{cssxref("text-decoration-line")}} and
+        {{cssxref("text-decoration-style")}}.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "text.html#TextDecorationProperty", "text-decoration")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("text-decoration", "CSS text-decoration")}}</li>
-</ul>
+*   {{cssxref("text-decoration", "CSS text-decoration")}}

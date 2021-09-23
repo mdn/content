@@ -7,90 +7,82 @@ tags:
   - SVG Animation
 browser-compat: svg.elements.animateMotion
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The SVG <strong><code>&lt;animateMotion&gt;</code></strong> element provides a way to define how an element moves along a motion path.</p>
+The SVG **`<animateMotion>`** element provides a way to define how an element moves along a motion path.
 
-<div class="notecard note">
-<p><strong>Note:</strong> To reuse an existing path, it will be necessary to use an {{SVGElement("mpath")}} element inside the <code>&lt;animateMotion&gt;</code> element instead of the {{SVGAttr("path")}} attribute.</p>
-</div>
+> **Note:** To reuse an existing path, it will be necessary to use an {{SVGElement("mpath")}} element inside the `<animateMotion>` element instead of the {{SVGAttr("path")}} attribute.
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100%; margin: 0; padding: 0; display:block; }</pre>
+```css hidden
+html,body,svg { height:100%; margin: 0; padding: 0; display:block; }
+```
 
-<pre class="brush: html; highlight[6,7]">&lt;svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;path fill="none" stroke="lightgrey"
-    d="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" /&gt;
+```html
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <path fill="none" stroke="lightgrey"
+    d="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
 
-  &lt;circle r="5" fill="red"&gt;
-    &lt;animateMotion dur="10s" repeatCount="indefinite"
-      path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" /&gt;
-  &lt;/circle&gt;
-&lt;/svg&gt;</pre>
+  <circle r="5" fill="red">
+    <animateMotion dur="10s" repeatCount="indefinite"
+      path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
+  </circle>
+</svg>
+```
 
-<p>{{EmbedLiveSample('Example', 150, '100%')}}</p>
+{{EmbedLiveSample('Example', 150, '100%')}}
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt>{{SVGAttr("keyPoints")}}</dt>
- <dd>This attribute indicate, in the range [0,1], how far is the object along the path for each {{SVGAttr("keyTimes")}} associated values.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#number"><strong>&lt;number&gt;</strong></a>*; <em>Default value</em>: none; <em>Animatable</em>: <strong>no</strong></small></dd>
- <dt>{{SVGAttr("path")}}</dt>
- <dd>This attribute defines the path of the motion, using the same syntax as the {{SVGAttr('d')}} attribute.<br>
- <small><em>Value type</em>: <strong>&lt;string&gt;</strong>; <em>Default value</em>: none; <em>Animatable</em>: <strong>no</strong></small></dd>
- <dt>{{SVGAttr("rotate")}}</dt>
- <dd>This attribute defines a rotation applied to the element animated along a path, usually to make it pointing in the direction of the animation.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#number"><strong>&lt;number&gt;</strong></a>|<code>auto</code>|<code>auto-reverse</code>; <em>Default value</em>: <code>0</code>; <em>Animatable</em>: <strong>no</strong></small></dd>
-</dl>
+*   {{SVGAttr("keyPoints")}}
+    *   : This attribute indicate, in the range \[0,1], how far is the object along the path for each {{SVGAttr("keyTimes")}} associated values.
+        *Value type*: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number)\*; *Default value*: none; *Animatable*: **no**
+*   {{SVGAttr("path")}}
+    *   : This attribute defines the path of the motion, using the same syntax as the {{SVGAttr('d')}} attribute.
+        *Value type*: **\<string>**; *Default value*: none; *Animatable*: **no**
+*   {{SVGAttr("rotate")}}
+    *   : This attribute defines a rotation applied to the element animated along a path, usually to make it pointing in the direction of the animation.
+        *Value type*: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number)|`auto`|`auto-reverse`; *Default value*: `0`; *Animatable*: **no**
 
-<div class="notecard note">
-<p><strong>Note:</strong> For <code>&lt;animateMotion&gt;</code>, the default value for the {{SVGAttr("calcMode")}} attribute is <code>paced</code>.</p>
-</div>
+> **Note:** For `<animateMotion>`, the default value for the {{SVGAttr("calcMode")}} attribute is `paced`.
 
-<h3 id="Animation_Attributes">Animation Attributes</h3>
+### Animation Attributes
 
-<dl>
- <dt><a href="/en-US/docs/Web/SVG/Attribute#animation_timing_attributes">Animation timing attributes</a></dt>
- <dd><small>{{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute#animation_value_attributes">Animation value attributes</a></dt>
- <dd><small>{{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute#animation_attributes">Other Animation attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr("attributeName")}}, {{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Events#animation_event_attributes">Animation event attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}}</small></dd>
-</dl>
+*   [Animation timing attributes](/en-US/docs/Web/SVG/Attribute#animation_timing_attributes)
+    *   : {{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}
+*   [Animation value attributes](/en-US/docs/Web/SVG/Attribute#animation_value_attributes)
+    *   : {{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}
+*   [Other Animation attributes](/en-US/docs/Web/SVG/Attribute#animation_attributes)
+    *   : Most notably: {{SVGAttr("attributeName")}}, {{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}
+*   [Animation event attributes](/en-US/docs/Web/SVG/Attribute/Events#animation_event_attributes)
+    *   : Most notably: {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}}
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<dl>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Core">Core Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('id')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Styling">Styling Attributes</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt>Event Attributes</dt>
- <dd><small><a href="/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes">Global event attributes</a>, <a href="/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes">Document element event attributes</a></small></dd>
-</dl>
+*   [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
+    *   : Most notably: {{SVGAttr('id')}}
+*   [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
+    *   : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+*   Event Attributes
+    *   : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Document element event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>This element implements the {{domxref("SVGAnimateMotionElement")}} interface.</p>
+This element implements the {{domxref("SVGAnimateMotionElement")}} interface.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("mpath")}}</li>
-</ul>
+*   {{SVGElement("mpath")}}

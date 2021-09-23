@@ -5,105 +5,114 @@ tags:
   - SVG
   - SVG Attribute
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <code><strong>tableValues</strong></code> attribute defines a list of numbers defining a lookup table of values for a for a color component transfer function.</p>
+The **`tableValues`** attribute defines a list of numbers defining a lookup table of values for a for a color component transfer function.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("feFuncA")}}</li>
-  <li>{{SVGElement("feFuncB")}}</li>
-  <li>{{SVGElement("feFuncG")}}</li>
-  <li>{{SVGElement("feFuncR")}}</li>
-</ul>
+*   {{SVGElement("feFuncA")}}
+*   {{SVGElement("feFuncB")}}
+*   {{SVGElement("feFuncG")}}
+*   {{SVGElement("feFuncR")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[13-15,20-22]">&lt;svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-    &lt;linearGradient id="gradient" gradientUnits="userSpaceOnUse"
-        x1="0" y1="0" x2="200" y2="0"&gt;
-      &lt;stop offset="0" stop-color="#ff0000" /&gt;
-      &lt;stop offset="0.5" stop-color="#00ff00" /&gt;
-      &lt;stop offset="1" stop-color="#0000ff" /&gt;
-    &lt;/linearGradient&gt;
-  &lt;/defs&gt;
+```html
+<svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" gradientUnits="userSpaceOnUse"
+        x1="0" y1="0" x2="200" y2="0">
+      <stop offset="0" stop-color="#ff0000" />
+      <stop offset="0.5" stop-color="#00ff00" />
+      <stop offset="1" stop-color="#0000ff" />
+    </linearGradient>
+  </defs>
 
-  &lt;filter id="componentTransfer1" x="0" y="0" width="100%" height="100%"&gt;
-    &lt;feComponentTransfer&gt;
-      &lt;feFuncR type="table" tableValues="0 1"/&gt;
-      &lt;feFuncG type="table" tableValues="0 1"/&gt;
-      &lt;feFuncB type="table" tableValues="0 1"/&gt;
-    &lt;/feComponentTransfer&gt;
-  &lt;/filter&gt;
-  &lt;filter id="componentTransfer2" x="0" y="0" width="100%" height="100%"&gt;
-    &lt;feComponentTransfer&gt;
-      &lt;feFuncR type="table" tableValues="1 0"/&gt;
-      &lt;feFuncG type="table" tableValues="1 0"/&gt;
-      &lt;feFuncB type="table" tableValues="1 0"/&gt;
-    &lt;/feComponentTransfer&gt;
-  &lt;/filter&gt;
+  <filter id="componentTransfer1" x="0" y="0" width="100%" height="100%">
+    <feComponentTransfer>
+      <feFuncR type="table" tableValues="0 1"/>
+      <feFuncG type="table" tableValues="0 1"/>
+      <feFuncB type="table" tableValues="0 1"/>
+    </feComponentTransfer>
+  </filter>
+  <filter id="componentTransfer2" x="0" y="0" width="100%" height="100%">
+    <feComponentTransfer>
+      <feFuncR type="table" tableValues="1 0"/>
+      <feFuncG type="table" tableValues="1 0"/>
+      <feFuncB type="table" tableValues="1 0"/>
+    </feComponentTransfer>
+  </filter>
 
-  &lt;rect x="0" y="0" width="200" height="200" fill="url(#gradient)"
-      style="filter: url(#componentTransfer1);" /&gt;
-  &lt;rect x="0" y="0" width="200" height="200" fill="url(#gradient)"
-      style="filter: url(#componentTransfer2); transform: translateX(220px);" /&gt;
-&lt;/svg&gt;</pre>
+  <rect x="0" y="0" width="200" height="200" fill="url(#gradient)"
+      style="filter: url(#componentTransfer1);" />
+  <rect x="0" y="0" width="200" height="200" fill="url(#gradient)"
+      style="filter: url(#componentTransfer2); transform: translateX(220px);" />
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "480", "200")}}</p>
+{{EmbedLiveSample("Example", "480", "200")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#list-of-ts">&lt;list-of-numbers&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>Empty list resulting in identity transfer</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/SVG/Content_type#list-of-ts"
+            >&#x3C;list-of-numbers></a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>Empty list resulting in identity transfer</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;list-of-numbers&gt;</code></dt>
- <dd>
-   <p>This value holds a comma- and/or space-separated list of {{cssxref("number")}}s, which define a lookup table for the color component transfer function. Each number can be between <code>0</code> and <code>1</code>.</p>
-   <p>An empty list results in an identity transfer function.</p>
- </dd>
-</dl>
+*   `<list-of-numbers>`
+    *   : This value holds a comma- and/or space-separated list of {{cssxref("number")}}s, which define a lookup table for the color component transfer function. Each number can be between `0` and `1`.
 
-<h2 id="Specifications">Specifications</h2>
+        An empty list results in an identity transfer function.
+
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Filters 1.0", "/#element-attrdef-fecomponenttransfer-tablevalues", "tableValues")}}</td>
-   <td>{{Spec2("Filters 1.0")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#feComponentTransferTableValuesAttribute", "tableValues")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("Filters 1.0", "/#element-attrdef-fecomponenttransfer-tablevalues", "tableValues")}}
+      </td>
+      <td>{{Spec2("Filters 1.0")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "filters.html#feComponentTransferTableValuesAttribute", "tableValues")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>

@@ -7,80 +7,87 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.stop-color
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>stop-color</code></strong> attribute indicates what color to use at a gradient stop.</p>
+The **`stop-color`** attribute indicates what color to use at a gradient stop.
 
-<div class="notecard note">
-<p><strong>Note:</strong> With respect to gradients, SVG treats the <code>transparent</code> keyword differently than CSS. SVG does not calculate gradients in pre-multiplied space, so <code>transparent</code> really means transparent black. So, specifying a <code>stop-color</code> with the value <code>transparent</code> is equivalent to specifying a <code>stop-color</code> with the value <code>black</code> and a {{SVGAttr("stop-opacity")}} with the value <code>0</code>.</p>
-</div>
+> **Note:** With respect to gradients, SVG treats the `transparent` keyword differently than CSS. SVG does not calculate gradients in pre-multiplied space, so `transparent` really means transparent black. So, specifying a `stop-color` with the value `transparent` is equivalent to specifying a `stop-color` with the value `black` and a {{SVGAttr("stop-opacity")}} with the value `0`.
 
-<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>stop-color</code> can be used as a CSS property.</p></div>
+> **Note:** As a presentation attribute, `stop-color` can be used as a CSS property.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("stop")}}</li>
-</ul>
+*   {{SVGElement("stop")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>currentcolor</code> | {{cssxref("color_value", "&lt;color&gt;")}} <code><a href="/en-US/docs/Web/SVG/Content_type#icccolor">&lt;icccolor&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>black</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code>currentcolor</code> |
+        {{cssxref("color_value", "&lt;color&gt;")}}
+        <code
+          ><a href="/en-US/docs/Web/SVG/Content_type#icccolor"
+            >&#x3C;icccolor></a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>black</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>currentcolor</code></dt>
- <dd>This keyword denotes the current fill color and can be specified in the same manner as within a <code><a href="/en-US/docs/Web/SVG/Content_type#paint">&lt;paint&gt;</a></code> specification for the {{SVGAttr("fill")}} and {{SVGAttr("stroke")}} attributes.</dd>
- <dt><code>&lt;color&gt;</code></dt>
- <dd>This value indicates a color value.</dd>
- <dt><code>&lt;icccolor&gt;</code></dt>
- <dd>This value refers to an ICC color profile.</dd>
-</dl>
+*   `currentcolor`
+    *   : This keyword denotes the current fill color and can be specified in the same manner as within a [`<paint>`](/en-US/docs/Web/SVG/Content_type#paint) specification for the {{SVGAttr("fill")}} and {{SVGAttr("stroke")}} attributes.
+*   `<color>`
+    *   : This value indicates a color value.
+*   `<icccolor>`
+    *   : This value refers to an ICC color profile.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "pservers.html#StopColorProperty", "stop-color")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Added a note that in SVG the <code>transparent</code> keyword is treated differently than in CSS.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "pservers.html#StopColorProperty", "stop-color")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "pservers.html#StopColorProperty", "stop-color")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>
+        Added a note that in SVG the <code>transparent</code> keyword is treated
+        differently than in CSS.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "pservers.html#StopColorProperty", "stop-color")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGAttr("stop-opacity")}}</li>
-</ul>
+*   {{SVGAttr("stop-opacity")}}

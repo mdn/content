@@ -6,87 +6,97 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.pattern.patternTransform
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>patternTransform</code></strong> attribute defines a list of <a href="/en-US/docs/Web/SVG/Attribute/transform#transform_functions">transform definitions</a> that are applied to a pattern tile.</p>
+The **`patternTransform`** attribute defines a list of [transform definitions](/en-US/docs/Web/SVG/Attribute/transform#transform_functions) that are applied to a pattern tile.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement('pattern')}}</li>
-</ul>
+*   {{SVGElement('pattern')}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Apply a transform on the tile --&gt;
-  &lt;pattern id="p1" width=".25" height=".25"
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Apply a transform on the tile -->
+  <pattern id="p1" width=".25" height=".25"
            patternTransform="rotate(20)
                              skewX(30)
-                             scale(1 0.5)"&gt;
-    &lt;circle cx="10" cy="10" r="10" /&gt;
-  &lt;/pattern&gt;
+                             scale(1 0.5)">
+    <circle cx="10" cy="10" r="10" />
+  </pattern>
 
-  &lt;!-- Apply the transformed pattern tile --&gt;
-  &lt;rect x="10" y="10" width="80" height="80"
-        fill="url(#p1)" /&gt;
-&lt;/svg&gt;</pre>
+  <!-- Apply the transformed pattern tile -->
+  <rect x="10" y="10" width="80" height="80"
+        fill="url(#p1)" />
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", '100%', 300)}}</p>
+{{EmbedLiveSample("Example", '100%', 300)}}
 
-<h2 id="pattern">pattern</h2>
+## pattern
 
-<p>For {{SVGElement('pattern')}}, <code>patternTransform</code> defines a list of <a href="/en-US/docs/Web/SVG/Attribute/transform#transform_functions">transform definitions</a> that are applied to a pattern tile.</p>
+For {{SVGElement('pattern')}}, `patternTransform` defines a list of [transform definitions](/en-US/docs/Web/SVG/Attribute/transform#transform_functions) that are applied to a pattern tile.
 
-<div class="note"><p><strong>Note:</strong> As of SVG2, it is also allowed to use the CSS {{ cssxref('transform') }} property. However, the current state of implementation isn't very good. For backward compatibility reason, it is highly suggested to keep using the <code>patternTransform</code> attribute.</p></div>
+> **Note:** As of SVG2, it is also allowed to use the CSS {{ cssxref('transform') }} property. However, the current state of implementation isn't very good. For backward compatibility reason, it is highly suggested to keep using the `patternTransform` attribute.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><a href="/en-US/docs/Web/SVG/Attribute/transform#transform_functions">&lt;transform-list&gt;</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>Identity transform</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <a href="/en-US/docs/Web/SVG/Attribute/transform#transform_functions"
+          >&#x3C;transform-list></a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>Identity transform</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="Transform_functions">Transform functions</h3>
+### Transform functions
 
-<p>To know more about the definition of transform functions, see the {{ SVGAttr("transform") }} attribute definition.</p>
+To know more about the definition of transform functions, see the {{ SVGAttr("transform") }} attribute definition.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "pservers.html#PatternElementPatternTransformAttribute", "patternTransform")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "pservers.html#PatternElementPatternTransformAttribute", "patternTransform")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "pservers.html#PatternElementPatternTransformAttribute", "patternTransform")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "pservers.html#PatternElementPatternTransformAttribute", "patternTransform")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

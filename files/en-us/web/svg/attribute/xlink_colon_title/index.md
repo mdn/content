@@ -7,90 +7,102 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.xlink.xlink_title
 ---
-<div>{{SVGRef}}{{Deprecated_Header}}</div>
+{{SVGRef}}{{Deprecated_Header}}
 
-<p>The <strong><code>xlink:title</code></strong> attribute is used to describe the meaning of a link or resource in a human-readable fashion.</p>
+The **`xlink:title`** attribute is used to describe the meaning of a link or resource in a human-readable fashion.
 
-<p>The use of this information is highly dependent on the type of processing being done. It may be used, for example, to make titles available to applications used by visually impaired users, or to create a table of links, or to present help text that appears when a user lets a mouse pointer hover over a starting resource.</p>
+The use of this information is highly dependent on the type of processing being done. It may be used, for example, to make titles available to applications used by visually impaired users, or to create a table of links, or to present help text that appears when a user lets a mouse pointer hover over a starting resource.
 
-<div class="notecard note">
-<p><strong>Note:</strong> New content should use a {{SVGElement("title")}} child element rather than a <code>xlink:title</code> attribute.</p>
-</div>
+> **Note:** New content should use a {{SVGElement("title")}} child element rather than a `xlink:title` attribute.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("a")}}</li>
-  <li>{{SVGElement("altGlyph")}}</li>
-  <li>{{SVGElement("animate")}}</li>
-  <li>{{SVGElement("animateColor")}}</li>
-  <li>{{SVGElement("animateMotion")}}</li>
-  <li>{{SVGElement("animateTransform")}}</li>
-  <li>{{SVGElement("cursor")}}</li>
-  <li>{{SVGElement("feImage")}}</li>
-  <li>{{SVGElement("filter")}}</li>
-  <li>{{SVGElement("font-face-uri")}}</li>
-  <li>{{SVGElement("glyphRef")}}</li>
-  <li>{{SVGElement("image")}}</li>
-  <li>{{SVGElement("linearGradient")}}</li>
-  <li>{{SVGElement("mpath")}}</li>
-  <li>{{SVGElement("pattern")}}</li>
-  <li>{{SVGElement("radialGradient")}}</li>
-  <li>{{SVGElement("script")}}</li>
-  <li>{{SVGElement("set")}}</li>
-  <li>{{SVGElement("textPath")}}</li>
-  <li>{{SVGElement("tref")}}</li>
-  <li>{{SVGElement("use")}}</li>
-</ul>
+*   {{SVGElement("a")}}
+*   {{SVGElement("altGlyph")}}
+*   {{SVGElement("animate")}}
+*   {{SVGElement("animateColor")}}
+*   {{SVGElement("animateMotion")}}
+*   {{SVGElement("animateTransform")}}
+*   {{SVGElement("cursor")}}
+*   {{SVGElement("feImage")}}
+*   {{SVGElement("filter")}}
+*   {{SVGElement("font-face-uri")}}
+*   {{SVGElement("glyphRef")}}
+*   {{SVGElement("image")}}
+*   {{SVGElement("linearGradient")}}
+*   {{SVGElement("mpath")}}
+*   {{SVGElement("pattern")}}
+*   {{SVGElement("radialGradient")}}
+*   {{SVGElement("script")}}
+*   {{SVGElement("set")}}
+*   {{SVGElement("textPath")}}
+*   {{SVGElement("tref")}}
+*   {{SVGElement("use")}}
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#anything">&lt;anything&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/SVG/Content_type#anything"
+            >&#x3C;anything></a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;anything&gt;</code></dt>
- <dd>This value specifies the title used to describe the meaning of the link or resource.</dd>
-</dl>
+*   `<anything>`
+    *   : This value specifies the title used to describe the meaning of the link or resource.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "linking.html#XLinkTitleAttribute", "seed")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Deprecated the attribute and made it only apply to {{SVGElement("a")}}, {{SVGElement("image")}}, {{SVGElement("linearGradient")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("script")}}, {{SVGElement("textPath")}}, and {{SVGElement("use")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "linking.html#XLinkTitleAttribute", "seed")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "linking.html#XLinkTitleAttribute", "seed")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>
+        Deprecated the attribute and made it only apply to
+        {{SVGElement("a")}}, {{SVGElement("image")}},
+        {{SVGElement("linearGradient")}},
+        {{SVGElement("pattern")}},
+        {{SVGElement("radialGradient")}},
+        {{SVGElement("script")}}, {{SVGElement("textPath")}},
+        and {{SVGElement("use")}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "linking.html#XLinkTitleAttribute", "seed")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

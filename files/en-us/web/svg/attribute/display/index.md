@@ -6,100 +6,107 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.display
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <code><strong>display</strong></code> attribute lets you control the rendering of graphical or container elements.</p>
+The **`display`** attribute lets you control the rendering of graphical or container elements.
 
-<p>A value of <code>display="none"</code> indicates that the given element and its children will not be rendered. Any value other than <code>none</code> or <code>inherit</code> indicates that the given element will be rendered by the browser.</p>
+A value of `display="none"` indicates that the given element and its children will not be rendered. Any value other than `none` or `inherit` indicates that the given element will be rendered by the browser.
 
-<p>When applied to a container element, setting <code>display</code> to <code>none</code> causes the container and all of its children to be invisible; thus, it acts on groups of elements as a group. This means that any child of an element with <code>display="none"</code> will never be rendered even if the child has a value for <code>display</code> other than <code>none</code>.</p>
+When applied to a container element, setting `display` to `none` causes the container and all of its children to be invisible; thus, it acts on groups of elements as a group. This means that any child of an element with `display="none"` will never be rendered even if the child has a value for `display` other than `none`.
 
-<p>When the <code>display</code> attribute is set to <code>none</code>, then the given element does not become part of the rendering tree. It has implications for the {{SVGElement("tspan")}}, {{SVGElement("tref")}}, and {{SVGElement("altGlyph")}} elements, event processing, for bounding box calculations and for calculation of clipping paths:</p>
+When the `display` attribute is set to `none`, then the given element does not become part of the rendering tree. It has implications for the {{SVGElement("tspan")}}, {{SVGElement("tref")}}, and {{SVGElement("altGlyph")}} elements, event processing, for bounding box calculations and for calculation of clipping paths:
 
-<ul>
- <li>If <code>display</code> is set to <code>none</code> on a {{SVGElement("tspan")}}, {{SVGElement("tref")}}, or {{SVGElement("altGlyph")}} element, then the text string is ignored for the purposes of text layout.</li>
- <li>Regarding events, if <code>display</code> is set to <code>none</code>, the element receives no events.</li>
- <li>The geometry of a <a href="/en-US/docs/Web/SVG/Element#Graphics_elements">graphics element</a> with <code>display</code> set to <code>none</code> is not included in bounding box and clipping paths calculations.</li>
-</ul>
+*   If `display` is set to `none` on a {{SVGElement("tspan")}}, {{SVGElement("tref")}}, or {{SVGElement("altGlyph")}} element, then the text string is ignored for the purposes of text layout.
+*   Regarding events, if `display` is set to `none`, the element receives no events.
+*   The geometry of a [graphics element](/en-US/docs/Web/SVG/Element#Graphics_elements) with `display` set to `none` is not included in bounding box and clipping paths calculations.
 
-<p>The <code>display</code> attribute only affects the direct rendering of a given element, whereas it does not prevent elements from being referenced by other elements. For example, setting it to <code>none</code> on a {{SVGElement("path")}} element will prevent that element from getting rendered directly onto the canvas, but the {{SVGElement("path")}} element can still be referenced by a {{SVGElement("textPath")}} element; furthermore, its geometry will be used in text-on-a-path processing even if the {{SVGElement("path")}} has a <code>display</code> value of <code>none</code>.</p>
+The `display` attribute only affects the direct rendering of a given element, whereas it does not prevent elements from being referenced by other elements. For example, setting it to `none` on a {{SVGElement("path")}} element will prevent that element from getting rendered directly onto the canvas, but the {{SVGElement("path")}} element can still be referenced by a {{SVGElement("textPath")}} element; furthermore, its geometry will be used in text-on-a-path processing even if the {{SVGElement("path")}} has a `display` value of `none`.
 
-<p>This attribute also affects direct rendering into offscreen canvases, such as occurs with masks or clip paths. Thus, setting <code>display="none"</code> on a child of a {{SVGElement("mask")}} will prevent the given child element from being rendered as part of the mask. Similarly, setting <code>display="none"</code> on a child of a {{SVGElement("clipPath")}} element will prevent the given child element from contributing to the clipping path.</p>
+This attribute also affects direct rendering into offscreen canvases, such as occurs with masks or clip paths. Thus, setting `display="none"` on a child of a {{SVGElement("mask")}} will prevent the given child element from being rendered as part of the mask. Similarly, setting `display="none"` on a child of a {{SVGElement("clipPath")}} element will prevent the given child element from contributing to the clipping path.
 
-<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>display</code> can be used as a CSS property. See {{cssxref("display", "CSS display")}} for further information.</p></div>
+> **Note:** As a presentation attribute, `display` can be used as a CSS property. See {{cssxref("display", "CSS display")}} for further information.
 
-<p>You can use this attribute with any SVG element.</p>
+You can use this attribute with any SVG element.
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Here the yellow rectangle is displayed --&gt;
-  &lt;rect x="0" y="0" width="100" height="100" fill="skyblue"&gt;&lt;/rect&gt;
-  &lt;rect x="20" y="20" width="60" height="60" fill="yellow"&gt;&lt;/rect&gt;
+```html
+<svg viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Here the yellow rectangle is displayed -->
+  <rect x="0" y="0" width="100" height="100" fill="skyblue"></rect>
+  <rect x="20" y="20" width="60" height="60" fill="yellow"></rect>
 
-  &lt;!-- Here the yellow rectangle is not displayed --&gt;
-  &lt;rect x="120" y="0" width="100" height="100" fill="skyblue"&gt;&lt;/rect&gt;
-  &lt;rect x="140" y="20" width="60" height="60" fill="yellow" display="none"&gt;&lt;/rect&gt;
-&lt;/svg&gt;</pre>
+  <!-- Here the yellow rectangle is not displayed -->
+  <rect x="120" y="0" width="100" height="100" fill="skyblue"></rect>
+  <rect x="140" y="20" width="60" height="60" fill="yellow" display="none"></rect>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "240", "120")}}</p>
+{{EmbedLiveSample("Example", "240", "120")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>inline</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Value</th>
-   <td>{{csssyntax("display")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>inline</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Value</th>
+      <td>{{csssyntax("display")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>For a description of the values, please refer to the {{cssxref("display", "CSS display")}} property.</p>
+For a description of the values, please refer to the {{cssxref("display", "CSS display")}} property.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "render.html#VisibilityControl", "display")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Refers to the CSS 2 specification of the <code>display</code> property, but outlines the differences regarding SVG.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "painting.html#DisplayProperty", "display")}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "render.html#VisibilityControl", "display")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>
+        Refers to the CSS 2 specification of the <code>display</code> property,
+        but outlines the differences regarding SVG.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "painting.html#DisplayProperty", "display")}}
+      </td>
+      <td>{{Spec2('SVG1.1')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGAttr("visibility")}} attribute</li>
- <li>{{cssxref("display", "CSS display")}}</li>
-</ul>
+*   {{SVGAttr("visibility")}} attribute
+*   {{cssxref("display", "CSS display")}}

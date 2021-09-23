@@ -7,116 +7,112 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.altGlyph.format
 ---
-<div>{{SVGRef}}{{Deprecated_Header}}</div>
+{{SVGRef}}{{Deprecated_Header}}
 
-<p>The <strong><code>format</code></strong> attribute indicates the format of the given font.</p>
+The **`format`** attribute indicates the format of the given font.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("altGlyph")}}</li>
-  <li>{{SVGElement("glyphRef")}}</li>
-</ul>
+*   {{SVGElement("altGlyph")}}
+*   {{SVGElement("glyphRef")}}
 
-<h2 id="Context_notes">Context notes</h2>
+## Context notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>&lt;string&gt;</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>&#x3C;string></code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;string&gt;</code></dt>
- <dd>
- <p>This value specifies the format of the given font.</p>
+*   `<string>`
+    *   : This value specifies the format of the given font.
 
- <p>Here is a list of font formats and their strings that can be used as values for this attribute:</p>
+        Here is a list of font formats and their strings that can be used as values for this attribute:
 
- <table class="no-markdown">
-  <tbody>
-   <tr>
-    <th>Format string</th>
-    <th>Format</th>
-   </tr>
-   <tr>
-    <td><code>truedoc-pfr</code></td>
-    <td>TrueDoc™ Portable Font Resource</td>
-   </tr>
-   <tr>
-    <td><code>embedded-opentype</code></td>
-    <td>Embedded OpenType</td>
-   </tr>
-   <tr>
-    <td><code>type-1</code></td>
-    <td>PostScript™ Type 1</td>
-   </tr>
-   <tr>
-    <td><code>truetype</code></td>
-    <td>TrueType</td>
-   </tr>
-   <tr>
-    <td><code>opentype</code></td>
-    <td>OpenType, including TrueType Open</td>
-   </tr>
-   <tr>
-    <td><code>truetype-gx</code></td>
-    <td>TrueType with GX extensions</td>
-   </tr>
-   <tr>
-    <td><code>speedo</code></td>
-    <td>Speedo</td>
-   </tr>
-   <tr>
-    <td><code>intellifont</code></td>
-    <td>Intellifont</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
-</dl>
+        <table class="no-markdown">
+          <tbody>
+            <tr>
+              <th>Format string</th>
+              <th>Format</th>
+            </tr>
+            <tr>
+              <td><code>truedoc-pfr</code></td>
+              <td>TrueDoc™ Portable Font Resource</td>
+            </tr>
+            <tr>
+              <td><code>embedded-opentype</code></td>
+              <td>Embedded OpenType</td>
+            </tr>
+            <tr>
+              <td><code>type-1</code></td>
+              <td>PostScript™ Type 1</td>
+            </tr>
+            <tr>
+              <td><code>truetype</code></td>
+              <td>TrueType</td>
+            </tr>
+            <tr>
+              <td><code>opentype</code></td>
+              <td>OpenType, including TrueType Open</td>
+            </tr>
+            <tr>
+              <td><code>truetype-gx</code></td>
+              <td>TrueType with GX extensions</td>
+            </tr>
+            <tr>
+              <td><code>speedo</code></td>
+              <td>Speedo</td>
+            </tr>
+            <tr>
+              <td><code>intellifont</code></td>
+              <td>Intellifont</td>
+            </tr>
+          </tbody>
+        </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#GlyphRefElementFormatAttribute", "format for &lt;glyphRef&gt;")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;glyphRef&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#AltGlyphElementFormatAttribute", "format for &lt;altGlyph&gt;")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;altGlyph&gt;</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "text.html#GlyphRefElementFormatAttribute", "format for &lt;glyphRef&gt;")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;glyphRef></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "text.html#AltGlyphElementFormatAttribute", "format for &lt;altGlyph&gt;")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;altGlyph></code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.w3.org/TR/2008/REC-CSS2-20080411/fonts.html#referencing">List of font formats defined in CSS 2 (outdated specification)</a></li>
-</ul>
+*   [List of font formats defined in CSS 2 (outdated specification)](https://www.w3.org/TR/2008/REC-CSS2-20080411/fonts.html#referencing)

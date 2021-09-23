@@ -5,814 +5,1204 @@ tags:
   - SVG
   - SVG Attribute
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>x</code></strong> attribute defines a x-axis coordinate in the user coordinate system.</p>
+The **`x`** attribute defines a x-axis coordinate in the user coordinate system.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("altGlyph")}}</li>
-  <li>{{SVGElement("cursor")}}</li>
-  <li>{{SVGElement("feBlend")}}</li>
-  <li>{{SVGElement("feColorMatrix")}}</li>
-  <li>{{SVGElement("feComponentTransfer")}}</li>
-  <li>{{SVGElement("feComposite")}}</li>
-  <li>{{SVGElement("feConvolveMatrix")}}</li>
-  <li>{{SVGElement("feDiffuseLighting")}}</li>
-  <li>{{SVGElement("feDisplacementMap")}}</li>
-  <li>{{SVGElement("feDropShadow")}}</li>
-  <li>{{SVGElement("feFlood")}}</li>
-  <li>{{SVGElement("feFuncA")}}</li>
-  <li>{{SVGElement("feFuncB")}}</li>
-  <li>{{SVGElement("feFuncG")}}</li>
-  <li>{{SVGElement("feFuncR")}}</li>
-  <li>{{SVGElement("feGaussianBlur")}}</li>
-  <li>{{SVGElement("feImage")}}</li>
-  <li>{{SVGElement("feMerge")}}</li>
-  <li>{{SVGElement("feMergeNode")}}</li>
-  <li>{{SVGElement("feMorphology")}}</li>
-  <li>{{SVGElement("feOffset")}}</li>
-  <li>{{SVGElement("fePointLight")}}</li>
-  <li>{{SVGElement("feSpecularLighting")}}</li>
-  <li>{{SVGElement("feSpotLight")}}</li>
-  <li>{{SVGElement("feTile")}}</li>
-  <li>{{SVGElement("feTurbulence")}}</li>
-  <li>{{SVGElement("filter")}}</li>
-  <li>{{SVGElement("foreignObject")}}</li>
-  <li>{{SVGElement("glyphRef")}}</li>
-  <li>{{SVGElement("image")}}</li>
-  <li>{{SVGElement("mask")}}</li>
-  <li>{{SVGElement("pattern")}}</li>
-  <li>{{SVGElement("rect")}}</li>
-  <li>{{SVGElement("svg")}}</li>
-  <li>{{SVGElement("symbol")}}</li>
-  <li>{{SVGElement("text")}}</li>
-  <li>{{SVGElement("tref")}}</li>
-  <li>{{SVGElement("tspan")}}</li>
-  <li>{{SVGElement("use")}}</li>
-</ul>
+*   {{SVGElement("altGlyph")}}
+*   {{SVGElement("cursor")}}
+*   {{SVGElement("feBlend")}}
+*   {{SVGElement("feColorMatrix")}}
+*   {{SVGElement("feComponentTransfer")}}
+*   {{SVGElement("feComposite")}}
+*   {{SVGElement("feConvolveMatrix")}}
+*   {{SVGElement("feDiffuseLighting")}}
+*   {{SVGElement("feDisplacementMap")}}
+*   {{SVGElement("feDropShadow")}}
+*   {{SVGElement("feFlood")}}
+*   {{SVGElement("feFuncA")}}
+*   {{SVGElement("feFuncB")}}
+*   {{SVGElement("feFuncG")}}
+*   {{SVGElement("feFuncR")}}
+*   {{SVGElement("feGaussianBlur")}}
+*   {{SVGElement("feImage")}}
+*   {{SVGElement("feMerge")}}
+*   {{SVGElement("feMergeNode")}}
+*   {{SVGElement("feMorphology")}}
+*   {{SVGElement("feOffset")}}
+*   {{SVGElement("fePointLight")}}
+*   {{SVGElement("feSpecularLighting")}}
+*   {{SVGElement("feSpotLight")}}
+*   {{SVGElement("feTile")}}
+*   {{SVGElement("feTurbulence")}}
+*   {{SVGElement("filter")}}
+*   {{SVGElement("foreignObject")}}
+*   {{SVGElement("glyphRef")}}
+*   {{SVGElement("image")}}
+*   {{SVGElement("mask")}}
+*   {{SVGElement("pattern")}}
+*   {{SVGElement("rect")}}
+*   {{SVGElement("svg")}}
+*   {{SVGElement("symbol")}}
+*   {{SVGElement("text")}}
+*   {{SVGElement("tref")}}
+*   {{SVGElement("tspan")}}
+*   {{SVGElement("use")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;rect x="20"  y="20" width="60" height="60" /&gt;
-  &lt;rect x="120" y="20" width="60" height="60" /&gt;
-  &lt;rect x="220" y="20" width="60" height="60" /&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <rect x="20"  y="20" width="60" height="60" />
+  <rect x="120" y="20" width="60" height="60" />
+  <rect x="220" y="20" width="60" height="60" />
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", '100%', 200)}}</p>
+{{EmbedLiveSample("Example", '100%', 200)}}
 
-<h2 id="altGlyph">altGlyph</h2>
+## altGlyph
 
-<div class="warning"><p><strong>Warning:</strong> As of SVG2 {{SVGElement('altGlyph')}} is deprecated and shouldn't be used.</p></div>
+> **Warning:** As of SVG2 {{SVGElement('altGlyph')}} is deprecated and shouldn't be used.
 
-<p>For {{SVGElement('altGlyph')}}, <code>x</code> defines the x-axis coordinate of the alternate glyph.</p>
-
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>List of <strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>none</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="feBlend">feBlend</h2>
-
-<p>For {{SVGElement('feBlend')}}, <code>x</code> defines the minimum x coordinate for the rendering area of the primitive.</p>
+For {{SVGElement('altGlyph')}}, `x` defines the x-axis coordinate of the alternate glyph.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        List of
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>none</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feColorMatrix">feColorMatrix</h2>
+## feBlend
 
-<p>For {{SVGElement('feColorMatrix')}}, <code>x</code> defines the minimum x coordinate for the rendering area of the primitive.</p>
+For {{SVGElement('feBlend')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feComponentTransfer">feComponentTransfer</h2>
+## feColorMatrix
 
-<p>For {{SVGElement('feComponentTransfer')}}, <code>x</code> defines the minimum x coordinate for the rendering area of the primitive.</p>
+For {{SVGElement('feColorMatrix')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feComposite">feComposite</h2>
+## feComponentTransfer
 
-<p>For {{SVGElement('feComposite')}}, <code>x</code> defines the minimum x coordinate for the rendering area of the primitive.</p>
+For {{SVGElement('feComponentTransfer')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feConvolveMatrix">feConvolveMatrix</h2>
+## feComposite
 
-<p>For {{SVGElement('feConvolveMatrix')}}, <code>x</code> defines the minimum x coordinate for the rendering area of the primitive.</p>
+For {{SVGElement('feComposite')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feDiffuseLighting">feDiffuseLighting</h2>
+## feConvolveMatrix
 
-<p>For {{SVGElement('feDiffuseLighting')}}, <code>x</code> defines the minimum x coordinate for the rendering area of the primitive.</p>
+For {{SVGElement('feConvolveMatrix')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feDisplacementMap">feDisplacementMap</h2>
+## feDiffuseLighting
 
-<p>For {{SVGElement('feDisplacementMap')}}, <code>x</code> defines the minimum x coordinate for the rendering area of the primitive.</p>
+For {{SVGElement('feDiffuseLighting')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feDropShadow">feDropShadow</h2>
+## feDisplacementMap
 
-<p>For {{SVGElement('feDropShadow')}}, <code>x</code> defines the minimum x coordinate for the rendering area of the primitive.</p>
+For {{SVGElement('feDisplacementMap')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feFlood">feFlood</h2>
+## feDropShadow
 
-<p>For {{SVGElement('feFlood')}}, <code>x</code> defines the minimum x coordinate for the rendering area of the primitive.</p>
+For {{SVGElement('feDropShadow')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feFuncA">feFuncA</h2>
+## feFlood
 
-<p>For {{SVGElement('feFuncA')}}, <code>x</code> defines the minimum x coordinate for the rendering area of the primitive.</p>
+For {{SVGElement('feFlood')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feFuncB">feFuncB</h2>
+## feFuncA
 
-<p>For {{SVGElement('feFuncB')}}, <code>x</code> defines the minimum x coordinate for the rendering area of the primitive.</p>
+For {{SVGElement('feFuncA')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feFuncG">feFuncG</h2>
+## feFuncB
 
-<p>For {{SVGElement('feFuncG')}}, <code>x</code> defines the minimum x coordinate for the rendering area of the primitive.</p>
+For {{SVGElement('feFuncB')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feFuncR">feFuncR</h2>
+## feFuncG
 
-<p>For {{SVGElement('feFuncR')}}, <code>x</code> defines the minimum x coordinate for the rendering area of the primitive.</p>
+For {{SVGElement('feFuncG')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feGaussianBlur">feGaussianBlur</h2>
+## feFuncR
 
-<p>For {{SVGElement('feGaussianBlur')}}, <code>x</code> defines the minimum x coordinate for the rendering area of the primitive.</p>
+For {{SVGElement('feFuncR')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feImage">feImage</h2>
+## feGaussianBlur
 
-<p>For {{SVGElement('feImage')}}, <code>x</code> defines the minimum x coordinate for the rendering area of the primitive.</p>
+For {{SVGElement('feGaussianBlur')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feMerge">feMerge</h2>
+## feImage
 
-<p>For {{SVGElement('feMerge')}}, <code>x</code> defines the minimum x coordinate for the rendering area of the primitive.</p>
+For {{SVGElement('feImage')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feMergeNode">feMergeNode</h2>
+## feMerge
 
-<p>For {{SVGElement('feMergeNode')}}, <code>x</code> defines the minimum x coordinate for the rendering area of the primitive.</p>
+For {{SVGElement('feMerge')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feMorphology">feMorphology</h2>
+## feMergeNode
 
-<p>For {{SVGElement('feMorphology')}}, <code>x</code> defines the minimum x coordinate for the rendering area of the primitive.</p>
+For {{SVGElement('feMergeNode')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feOffset">feOffset</h2>
+## feMorphology
 
-<p>For {{SVGElement('feOffset')}}, <code>x</code> defines the minimum x coordinate for the rendering area of the primitive.</p>
+For {{SVGElement('feMorphology')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="fePointLight">fePointLight</h2>
+## feOffset
 
-<p>For {{SVGElement('fePointLight')}}, <code>x</code> defines the x location for the light source in the coordinate system defined by the {{SVGAttr("primitiveUnits")}} attribute on the {{SVGElement("filter")}} element.</p>
+For {{SVGElement('feOffset')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#number">&lt;number&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feSpecularLighting">feSpecularLighting</h2>
+## fePointLight
 
-<p>For {{SVGElement('feSpecularLighting')}}, <code>x</code> defines the minimum x coordinate for the rendering area of the primitive.</p>
+For {{SVGElement('fePointLight')}}, `x` defines the x location for the light source in the coordinate system defined by the {{SVGAttr("primitiveUnits")}} attribute on the {{SVGElement("filter")}} element.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feSpotLight">feSpotLight</h2>
+## feSpecularLighting
 
-<p>For {{SVGElement('feSpotLight')}}, <code>x</code> defines the x location for the light source in the coordinate system defined by the {{SVGAttr("primitiveUnits")}} attribute on the {{SVGElement("filter")}} element.</p>
+For {{SVGElement('feSpecularLighting')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#number">&lt;number&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feTile">feTile</h2>
+## feSpotLight
 
-<p>For {{SVGElement('feTile')}}, <code>x</code> defines the minimum x coordinate for the rendering area of the primitive.</p>
+For {{SVGElement('feSpotLight')}}, `x` defines the x location for the light source in the coordinate system defined by the {{SVGAttr("primitiveUnits")}} attribute on the {{SVGElement("filter")}} element.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feTurbulence">feTurbulence</h2>
+## feTile
 
-<p>For {{SVGElement('feTurbulence')}}, <code>x</code> defines the minimum x coordinate for the rendering area of the primitive.</p>
+For {{SVGElement('feTile')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="filter">filter</h2>
+## feTurbulence
 
-<p>For {{SVGElement('filter')}}, <code>x</code> defines the x coordinate of the upper left corner for the rendering area of the filter.</p>
+For {{SVGElement('feTurbulence')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>-10%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="foreignObject">foreignObject</h2>
+## filter
 
-<p>For {{SVGElement('foreignObject')}}, <code>x</code> defines the  x coordinate of the upper left corner of its viewport.</p>
+For {{SVGElement('filter')}}, `x` defines the x coordinate of the upper left corner for the rendering area of the filter.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>-10%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note"><p><strong>Note:</strong> Starting with SVG2, <code>x</code> is a <em>Geometry Property</em> meaning this attribute can also be used as a CSS property for <code>&lt;foreignObject&gt;</code>.</p></div>
+## foreignObject
 
-<h2 id="glyphRef">glyphRef</h2>
-
-<div class="warning"><p><strong>Warning:</strong> As of SVG2 {{SVGElement('glyphRef')}} is deprecated and shouldn't be used.</p></div>
-
-<p>For {{SVGElement('glyphRef')}}, <code>x</code> defines the x-axis coordinate of the glyph.</p>
+For {{SVGElement('foreignObject')}}, `x` defines the  x coordinate of the upper left corner of its viewport.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#number">&lt;number&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0</code> for the first glyphRef, and the end x coordinate of the previous {{SVGElement('glyphRef')}} for all subsequent sibling {{SVGElement('glyphRef')}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="image">image</h2>
+> **Note:** Starting with SVG2, `x` is a *Geometry Property* meaning this attribute can also be used as a CSS property for `<foreignObject>`.
 
-<p>For {{SVGElement('image')}}, <code>x</code> defines the  x coordinate of the upper left corner of the image.</p>
+## glyphRef
+
+> **Warning:** As of SVG2 {{SVGElement('glyphRef')}} is deprecated and shouldn't be used.
+
+For {{SVGElement('glyphRef')}}, `x` defines the x-axis coordinate of the glyph.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td>
+        <code>0</code> for the first glyphRef, and the end x coordinate of the
+        previous {{SVGElement('glyphRef')}} for all subsequent sibling
+        {{SVGElement('glyphRef')}}.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note"><p><strong>Note:</strong> Starting with SVG2, <code>x</code> is a <em>Geometry Property</em> meaning this attribute can also be used as a CSS property for images.</p></div>
+## image
 
-<h2 id="mask">mask</h2>
-
-<p>For {{SVGElement('mask')}}, <code>x</code> defines the  x coordinate of the upper left corner of its area of effect. The exact effect of this attribute is influenced by the {{SVGAttr('maskUnits')}} attribute.</p>
+For {{SVGElement('image')}}, `x` defines the  x coordinate of the upper left corner of the image.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>-10%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="pattern">pattern</h2>
+> **Note:** Starting with SVG2, `x` is a *Geometry Property* meaning this attribute can also be used as a CSS property for images.
 
-<p>For {{SVGElement('pattern')}}, <code>x</code> defines the  x coordinate of the upper left corner of the tile pattern. The exact effect of this attribute is influenced by the {{SVGAttr('patternUnits')}} and {{SVGAttr('patternTransform')}} attributes.</p>
+## mask
+
+For {{SVGElement('mask')}}, `x` defines the  x coordinate of the upper left corner of its area of effect. The exact effect of this attribute is influenced by the {{SVGAttr('maskUnits')}} attribute.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>-10%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="rect">rect</h2>
+## pattern
 
-<p>For {{SVGElement('rect')}}, <code>x</code> defines the  x coordinate of the upper left corner of the shape.</p>
+For {{SVGElement('pattern')}}, `x` defines the  x coordinate of the upper left corner of the tile pattern. The exact effect of this attribute is influenced by the {{SVGAttr('patternUnits')}} and {{SVGAttr('patternTransform')}} attributes.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note"><p><strong>Note:</strong> Starting with SVG2, <code>x</code> is a <em>Geometry Property</em> meaning this attribute can also be used as a CSS property for rectangles.</p></div>
+## rect
 
-<h2 id="svg">svg</h2>
-
-<p>For {{SVGElement('svg')}}, <code>x</code> defines the  x coordinate of the upper left corner of its viewport.</p>
+For {{SVGElement('rect')}}, `x` defines the  x coordinate of the upper left corner of the shape.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note"><p><strong>Note:</strong> Starting with SVG2, <code>x</code> is a <em>Geometry Property</em> meaning this attribute can also be used as a CSS property for <code>&lt;svg&gt;</code>.</p></div>
+> **Note:** Starting with SVG2, `x` is a *Geometry Property* meaning this attribute can also be used as a CSS property for rectangles.
 
-<h2 id="text">text</h2>
+## svg
 
-<p>For {{SVGElement('text')}}, if it contain a single value, <code>x</code> defines the x coordinate on where the <em>content text position</em> must be placed. The <em>content text position</em> is usually a point on the baseline of the first line of text. The exact <em>content text position</em> is influenced by some properties like {{SVGAttr('text-anchor')}}, or {{cssxref('direction')}}.</p>
-
-<p>If there are multiple values, <code>x</code> defines the x coordinate of each individual glyph from the text. If there are less values than glyphs, the remaining glyphs are placed in the continuity of the last positioned glyph. If there are more values than glyphs, extra values are ignored.</p>
+For {{SVGElement('svg')}}, `x` defines the  x coordinate of the upper left corner of its viewport.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>List of (<strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>)</td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+> **Note:** Starting with SVG2, `x` is a *Geometry Property* meaning this attribute can also be used as a CSS property for `<svg>`.
 
-<pre class="brush: html">&lt;svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- horizontal line to materialized the text base line --&gt;
-  &lt;line x1="0" y1="40%" x2="100%" y2="40%" /&gt;
-  &lt;line x1="0" y1="90%" x2="100%" y2="90%" /&gt;
+## text
 
-  &lt;!-- vertical line to materialized the x positioning --&gt;
-  &lt;line x1="25%" y1="0" x2="25%" y2="100%" /&gt;
-  &lt;line x1="50%" y1="0" x2="50%" y2="100%" /&gt;
-  &lt;line x1="75%" y1="0" x2="75%" y2="100%" /&gt;
+For {{SVGElement('text')}}, if it contain a single value, `x` defines the x coordinate on where the *content text position* must be placed. The *content text position* is usually a point on the baseline of the first line of text. The exact *content text position* is influenced by some properties like {{SVGAttr('text-anchor')}}, or {{cssxref('direction')}}.
 
-  &lt;!-- x with a single value --&gt;
-  &lt;text y="40%" x="50%"&gt;SVG&lt;/text&gt;
+If there are multiple values, `x` defines the x coordinate of each individual glyph from the text. If there are less values than glyphs, the remaining glyphs are placed in the continuity of the last positioned glyph. If there are more values than glyphs, extra values are ignored.
 
-  &lt;!-- x with multiple values --&gt;
-  &lt;text y="90%" x="25%, 50%, 75%"&gt;SVG&lt;/text&gt;
-&lt;/svg&gt;</pre>
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        List of (<strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
-<pre class="brush: css">text {
+```css hidden
+html,body,svg { height:100% }
+```
+
+```html
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- horizontal line to materialized the text base line -->
+  <line x1="0" y1="40%" x2="100%" y2="40%" />
+  <line x1="0" y1="90%" x2="100%" y2="90%" />
+
+  <!-- vertical line to materialized the x positioning -->
+  <line x1="25%" y1="0" x2="25%" y2="100%" />
+  <line x1="50%" y1="0" x2="50%" y2="100%" />
+  <line x1="75%" y1="0" x2="75%" y2="100%" />
+
+  <!-- x with a single value -->
+  <text y="40%" x="50%">SVG</text>
+
+  <!-- x with multiple values -->
+  <text y="90%" x="25%, 50%, 75%">SVG</text>
+</svg>
+```
+
+```css
+text {
   font: 40px sans-serif;
 }
 
@@ -821,80 +1211,110 @@ line {
   stroke: red;
   stroke-width: .5px;
   stroke-dasharray: 2px;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('text', '100%', 100)}}</p>
+{{EmbedLiveSample('text', '100%', 100)}}
 
-<h2 id="tref">tref</h2>
+## tref
 
-<div class="warning"><p><strong>Warning:</strong> As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.</p></div>
+> **Warning:** As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
 
-<p>For {{SVGElement('tref')}}, if it contain a single value, <code>x</code> defines the x coordinate on where the <em>content text position</em> must be placed. The <em>content text position</em> is usually a point on the baseline of the first line of text. The exact <em>content text position</em> is influenced by some properties like {{SVGAttr('text-anchor')}}, or {{cssxref('direction')}}.</p>
+For {{SVGElement('tref')}}, if it contain a single value, `x` defines the x coordinate on where the *content text position* must be placed. The *content text position* is usually a point on the baseline of the first line of text. The exact *content text position* is influenced by some properties like {{SVGAttr('text-anchor')}}, or {{cssxref('direction')}}.
 
-<p>If there are multiple values, <code>x</code> defines the x coordinate of each individual glyph from the text. If there are less values than glyphs, the remaining glyphs are placed in the continuity of the last positioned glyph. If there are more values than glyphs, extra values are ignored.</p>
-
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>List of (<strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>)</td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="tspan">tspan</h2>
-
-<p>For {{SVGElement('tspan')}}, if it contain a single value, <code>x</code> defines the x coordinate on where the <em>content text position</em> must be placed. The <em>content text position</em> is usually a point on the baseline of the first line of text. The exact <em>content text position</em> is influenced by some properties like {{SVGAttr('text-anchor')}}, or {{cssxref('direction')}}.</p>
-
-<p>If there are multiple values, <code>x</code> defines the x coordinate of each individual glyph from the text. If there are less values than glyphs, the remaining glyphs are placed in the continuity of the last positioned glyph. If there are more values than glyphs, extra values are ignored.</p>
+If there are multiple values, `x` defines the x coordinate of each individual glyph from the text. If there are less values than glyphs, the remaining glyphs are placed in the continuity of the last positioned glyph. If there are more values than glyphs, extra values are ignored.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>List of (<strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>)</td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>none</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        List of (<strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+## tspan
 
-<pre class="brush: html">&lt;svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- horizontal line to materialized the text base line --&gt;
-  &lt;line x1="0" y1="40%" x2="100%" y2="40%" /&gt;
-  &lt;line x1="0" y1="90%" x2="100%" y2="90%" /&gt;
+For {{SVGElement('tspan')}}, if it contain a single value, `x` defines the x coordinate on where the *content text position* must be placed. The *content text position* is usually a point on the baseline of the first line of text. The exact *content text position* is influenced by some properties like {{SVGAttr('text-anchor')}}, or {{cssxref('direction')}}.
 
-  &lt;!-- vertical line to materialized the x positioning --&gt;
-  &lt;line x1="25%" y1="0" x2="25%" y2="100%" /&gt;
-  &lt;line x1="50%" y1="0" x2="50%" y2="100%" /&gt;
-  &lt;line x1="75%" y1="0" x2="75%" y2="100%" /&gt;
+If there are multiple values, `x` defines the x coordinate of each individual glyph from the text. If there are less values than glyphs, the remaining glyphs are placed in the continuity of the last positioned glyph. If there are more values than glyphs, extra values are ignored.
 
-  &lt;text&gt;
-    &lt;!-- x with a single value --&gt;
-    &lt;tspan y="40%" x="50%"&gt;SVG&lt;/tspan&gt;
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        List of (<strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>none</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
-    &lt;!-- x with multiple values --&gt;
-    &lt;tspan y="90%" x="25%, 50%, 75%"&gt;SVG&lt;/tspan&gt;
-  &lt;/text&gt;
-&lt;/svg&gt;</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: css">text {
+```html
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- horizontal line to materialized the text base line -->
+  <line x1="0" y1="40%" x2="100%" y2="40%" />
+  <line x1="0" y1="90%" x2="100%" y2="90%" />
+
+  <!-- vertical line to materialized the x positioning -->
+  <line x1="25%" y1="0" x2="25%" y2="100%" />
+  <line x1="50%" y1="0" x2="50%" y2="100%" />
+  <line x1="75%" y1="0" x2="75%" y2="100%" />
+
+  <text>
+    <!-- x with a single value -->
+    <tspan y="40%" x="50%">SVG</tspan>
+
+    <!-- x with multiple values -->
+    <tspan y="90%" x="25%, 50%, 75%">SVG</tspan>
+  </text>
+</svg>
+```
+
+```css
+text {
   font: 40px sans-serif;
 }
 
@@ -903,163 +1323,227 @@ line {
   stroke: red;
   stroke-width: .5px;
   stroke-dasharray: 2px;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('tspan', '100%', 100)}}</p>
+{{EmbedLiveSample('tspan', '100%', 100)}}
 
-<h2 id="use">use</h2>
+## use
 
-<p>For {{SVGElement('use')}}, <code>x</code> defines the  x coordinate of the upper left corner of the referenced element.</p>
+For {{SVGElement('use')}}, `x` defines the  x coordinate of the upper left corner of the referenced element.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong> | <strong><a href="/en-US/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note"><p><strong>Note:</strong> Starting with SVG2, <code>x</code> is a <em>Geometry Property</em> meaning this attribute can also be used as a CSS property for used elements.</p></div>
+> **Note:** Starting with SVG2, `x` is a *Geometry Property* meaning this attribute can also be used as a CSS property for used elements.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Filters 1.0', '#element-attrdef-filter-x', 'x') }}</td>
-   <td>{{Spec2('Filters 1.0')}}</td>
-   <td>Definition for <code>&lt;filter&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('Filters 1.0', '#element-attrdef-fespotlight-x', 'x') }}</td>
-   <td>{{Spec2('Filters 1.0')}}</td>
-   <td>Definition for <code>&lt;feSpotLight&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('Filters 1.0', '#element-attrdef-fepointlight-x', 'x') }}</td>
-   <td>{{Spec2('Filters 1.0')}}</td>
-   <td>Definition for <code>&lt;fePointLight&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('Filters 1.0', '#element-attrdef-filter-primitive-x', 'x') }}</td>
-   <td>{{Spec2('Filters 1.0')}}</td>
-   <td>Definition for filter primitives</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS Masks", "#element-attrdef-mask-x", 'x')}}</td>
-   <td>{{Spec2("CSS Masks")}}</td>
-   <td>Definition for <code>&lt;mask&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "geometry.html#X", "x")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Definition as a geometry property</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "pservers.html#PatternElementXAttribute", "x")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Definition for <code>&lt;pattern&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "text.html#TextElementXAttribute", "x")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Definition for <code>&lt;text&gt;</code> and <code>&lt;tspan&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "interact.html#CursorElementXAttribute", "x")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;cursor&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "extend.html#ForeignObjectElementXAttribute", "x")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;foreignObject&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "pservers.html#PatternElementXAttribute", "x")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;pattern&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "struct.html#ImageElementXAttribute", "x")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;image&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "struct.html#SVGElementXAttribute", "x")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;svg&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "struct.html#UseElementXAttribute", "x")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;use&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#fePointLightXAttribute", "x")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;fePointLight&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#feSpotLightXAttribute", "x")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;feSpotLight&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#FilterElementXAttribute", "x")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;filter&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#FilterPrimitiveXAttribute", "x")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for filter primitives</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "masking.html#MaskElementXAttribute", "x")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;mask&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#AltGlyphElementXAttribute", "x")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;altGlyph&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#GlyphRefElementXAttribute", "x")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;glyphRef&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#TextElementXAttribute", "x")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;text&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#TSpanElementXAttribute", "x")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;tref&gt;</code> and <code>&lt;tspan&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "shapes.html#RectElementXAttribute", "x")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;rect&gt;</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{ SpecName('Filters 1.0', '#element-attrdef-filter-x', 'x') }}
+      </td>
+      <td>{{Spec2('Filters 1.0')}}</td>
+      <td>Definition for <code>&#x3C;filter></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{ SpecName('Filters 1.0', '#element-attrdef-fespotlight-x', 'x') }}
+      </td>
+      <td>{{Spec2('Filters 1.0')}}</td>
+      <td>Definition for <code>&#x3C;feSpotLight></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{ SpecName('Filters 1.0', '#element-attrdef-fepointlight-x', 'x') }}
+      </td>
+      <td>{{Spec2('Filters 1.0')}}</td>
+      <td>Definition for <code>&#x3C;fePointLight></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{ SpecName('Filters 1.0', '#element-attrdef-filter-primitive-x', 'x') }}
+      </td>
+      <td>{{Spec2('Filters 1.0')}}</td>
+      <td>Definition for filter primitives</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("CSS Masks", "#element-attrdef-mask-x", 'x')}}
+      </td>
+      <td>{{Spec2("CSS Masks")}}</td>
+      <td>Definition for <code>&#x3C;mask></code></td>
+    </tr>
+    <tr>
+      <td>{{SpecName("SVG2", "geometry.html#X", "x")}}</td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>Definition as a geometry property</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "pservers.html#PatternElementXAttribute", "x")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>Definition for <code>&#x3C;pattern></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "text.html#TextElementXAttribute", "x")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>
+        Definition for <code>&#x3C;text></code> and <code>&#x3C;tspan></code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "interact.html#CursorElementXAttribute", "x")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;cursor></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "extend.html#ForeignObjectElementXAttribute", "x")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;foreignObject></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "pservers.html#PatternElementXAttribute", "x")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;pattern></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "struct.html#ImageElementXAttribute", "x")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;image></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "struct.html#SVGElementXAttribute", "x")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;svg></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "struct.html#UseElementXAttribute", "x")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;use></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "filters.html#fePointLightXAttribute", "x")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;fePointLight></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "filters.html#feSpotLightXAttribute", "x")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;feSpotLight></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "filters.html#FilterElementXAttribute", "x")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;filter></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "filters.html#FilterPrimitiveXAttribute", "x")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for filter primitives</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "masking.html#MaskElementXAttribute", "x")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;mask></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "text.html#AltGlyphElementXAttribute", "x")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;altGlyph></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "text.html#GlyphRefElementXAttribute", "x")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;glyphRef></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "text.html#TextElementXAttribute", "x")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;text></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "text.html#TSpanElementXAttribute", "x")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>
+        Initial definition for <code>&#x3C;tref></code> and
+        <code>&#x3C;tspan></code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "shapes.html#RectElementXAttribute", "x")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;rect></code></td>
+    </tr>
+  </tbody>
 </table>

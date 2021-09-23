@@ -6,97 +6,102 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.paint-order
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>paint-order</code></strong> attribute specifies the order that the fill, stroke, and markers of a given shape or text element are painted.</p>
+The **`paint-order`** attribute specifies the order that the fill, stroke, and markers of a given shape or text element are painted.
 
-<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>paint-order</code> can be used as a CSS property.</p></div>
+> **Note:** As a presentation attribute, `paint-order` can be used as a CSS property.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("circle")}}</li>
-  <li>{{SVGElement("ellipse")}}</li>
-  <li>{{SVGElement("line")}}</li>
-  <li>{{SVGElement("path")}}</li>
-  <li>{{SVGElement("polygon")}}</li>
-  <li>{{SVGElement("polyline")}}</li>
-  <li>{{SVGElement("rect")}}</li>
-  <li>{{SVGElement("text")}}</li>
-  <li>{{SVGElement("textPath")}}</li>
-  <li>{{SVGElement("tspan")}}</li>
-</ul>
+*   {{SVGElement("circle")}}
+*   {{SVGElement("ellipse")}}
+*   {{SVGElement("line")}}
+*   {{SVGElement("path")}}
+*   {{SVGElement("polygon")}}
+*   {{SVGElement("polyline")}}
+*   {{SVGElement("rect")}}
+*   {{SVGElement("text")}}
+*   {{SVGElement("textPath")}}
+*   {{SVGElement("tspan")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Value</th>
-   <td><code>normal</code> | [ <code>fill</code> || <code>stroke</code> || <code>markers</code> ]</td>
-  </tr>
-  <tr>
-   <th>Default value</th>
-   <td><code>normal</code></td>
-  </tr>
-  <tr>
-   <th>Animatable</th>
-   <td>discrete</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Value</th>
+      <td>
+        <code>normal</code> | [ <code>fill</code> || <code>stroke</code> ||
+        <code>markers</code> ]
+      </td>
+    </tr>
+    <tr>
+      <th>Default value</th>
+      <td><code>normal</code></td>
+    </tr>
+    <tr>
+      <th>Animatable</th>
+      <td>discrete</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt>normal</dt>
- <dd>This value indicates that the fill will be painted first, then the stroke, and finally the markers.</dd>
- <dt>[ fill || stroke || markers ]</dt>
- <dd>The order of these three keywords indicates the order in which the painting happens, from left to right. If any of the three painting components is omitted, they will be painted in their default order after the specified components. For example, using <code>stroke</code> is equivalent to <code>stroke fill markers</code>.</dd>
-</dl>
+*   normal
+    *   : This value indicates that the fill will be painted first, then the stroke, and finally the markers.
+*   \[ fill || stroke || markers ]
+    *   : The order of these three keywords indicates the order in which the painting happens, from left to right. If any of the three painting components is omitted, they will be painted in their default order after the specified components. For example, using `stroke` is equivalent to `stroke fill markers`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;svg xmlns="http://www.w3.org/2000/svg" width="400" height="200"&gt;
-  &lt;linearGradient id="g" x1="0" y1="0" x2="0" y2="1"&gt;
-    &lt;stop stop-color="#888"/&gt;
-    &lt;stop stop-color="#ccc" offset="1"/&gt;
-  &lt;/linearGradient&gt;
-  &lt;rect width="400" height="200" fill="url(#g)"/&gt;
-  &lt;g fill="crimson" stroke="white" stroke-width="6" stroke-linejoin="round"
-     text-anchor="middle" font-family="sans-serif" font-size="50px" font-weight="bold"&gt;
-    &lt;text x="200" y="75"&gt;stroke over&lt;/text&gt;
-    &lt;text x="200" y="150" paint-order="stroke" id="stroke-under"&gt;stroke under&lt;/text&gt;
-  &lt;/g&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+  <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+    <stop stop-color="#888"/>
+    <stop stop-color="#ccc" offset="1"/>
+  </linearGradient>
+  <rect width="400" height="200" fill="url(#g)"/>
+  <g fill="crimson" stroke="white" stroke-width="6" stroke-linejoin="round"
+     text-anchor="middle" font-family="sans-serif" font-size="50px" font-weight="bold">
+    <text x="200" y="75">stroke over</text>
+    <text x="200" y="150" paint-order="stroke" id="stroke-under">stroke under</text>
+  </g>
+</svg>
+```
 
-<p>The example would be rendered as follows:</p>
+The example would be rendered as follows:
 
-<p><img alt="An image showing how the paint-order example looks in a UA that supports the paint-order property." src="paint-order-2.png"></p>
+![An image showing how the paint-order example looks in a UA that supports the paint-order property.](paint-order-2.png)
 
-<p>The stroke under effect could be achieved via the following CSS property:</p>
+The stroke under effect could be achieved via the following CSS property:
 
-<pre class="brush: css">#stroke-under {
+```css
+#stroke-under {
   paint-order: stroke;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "painting.html#PaintOrderProperty", "paint-order")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "painting.html#PaintOrderProperty", "paint-order")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

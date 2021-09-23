@@ -5,287 +5,350 @@ tags:
   - SVG
   - SVG Attribute
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>dx</code></strong> attribute indicates a shift along the x-axis on the position of an element or its content.</p>
+The **`dx`** attribute indicates a shift along the x-axis on the position of an element or its content.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement('altGlyph')}}</li>
-  <li>{{SVGElement('feDropShadow')}}</li>
-  <li>{{SVGElement('feOffset')}}</li>
-  <li>{{SVGElement('glyphRef')}}</li>
-  <li>{{SVGElement('text')}}</li>
-  <li>{{SVGElement('tref')}}</li>
-  <li>{{SVGElement('tspan')}}</li>
-</ul>
+*   {{SVGElement('altGlyph')}}
+*   {{SVGElement('feDropShadow')}}
+*   {{SVGElement('feOffset')}}
+*   {{SVGElement('glyphRef')}}
+*   {{SVGElement('text')}}
+*   {{SVGElement('tref')}}
+*   {{SVGElement('tspan')}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Lines materialized the position of the glyphs --&gt;
-  &lt;line x1="0"  x2="100%" y1="50%" y2="50%" /&gt;
-  &lt;line x1="10%" x2="10%" y1="0"   y2="100%" /&gt;
-  &lt;line x1="60%" x2="60%" y1="0"   y2="100%" /&gt;
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Lines materialized the position of the glyphs -->
+  <line x1="0"  x2="100%" y1="50%" y2="50%" />
+  <line x1="10%" x2="10%" y1="0"   y2="100%" />
+  <line x1="60%" x2="60%" y1="0"   y2="100%" />
 
-  &lt;!-- Some reference text --&gt;
-  &lt;text x="10%" y="50%" fill="grey"&gt;SVG&lt;/text&gt;
+  <!-- Some reference text -->
+  <text x="10%" y="50%" fill="grey">SVG</text>
 
-  &lt;!-- The same text with a shift along the x-axis --&gt;
-  &lt;text dx="50%" x="10%" y="50%"&gt;SVG&lt;/text&gt;
-&lt;/svg&gt;</pre>
+  <!-- The same text with a shift along the x-axis -->
+  <text dx="50%" x="10%" y="50%">SVG</text>
+</svg>
+```
 
-<pre class="brush: css">line {
+```css
+line {
   stroke: red;
   stroke-width: .5px;
   stroke-dasharray: 3px;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Example", '100%', 200)}}</p>
+{{EmbedLiveSample("Example", '100%', 200)}}
 
-<h2 id="altGlyph">altGlyph</h2>
+## altGlyph
 
-<div class="warning"><p><strong>Warning:</strong> As of SVG2 {{SVGElement('altGlyph')}} is deprecated and shouldn't be used.</p></div>
+> **Warning:** As of SVG2 {{SVGElement('altGlyph')}} is deprecated and shouldn't be used.
 
-<p>For {{SVGElement('altGlyph')}}, if it contains a single value, <code>dx</code> defines a shift along the x-axis for all alternate glyph.</p>
+For {{SVGElement('altGlyph')}}, if it contains a single value, `dx` defines a shift along the x-axis for all alternate glyph.
 
-<p>If there are multiple values, <code>dx</code> defines a shift along the x-axis for each individual glyph relative to the preceding glyph. If there are less values than glyphs, the remaining glyphs use a value of <code>0</code>. If there are more values than glyphs, extra values are ignored.</p>
-
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>List of <strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>none</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="feDropShadow">feDropShadow</h2>
-
-<p>For {{SVGElement('feDropShadow')}}, <code>dx</code> defines the x offset of the dropped shadow. The unit used to resolve the value of the attribute is set by the {{SVGAttr('primitiveUnits')}} attribute of the {{SVGElement('filter')}} element.</p>
+If there are multiple values, `dx` defines a shift along the x-axis for each individual glyph relative to the preceding glyph. If there are less values than glyphs, the remaining glyphs use a value of `0`. If there are more values than glyphs, extra values are ignored.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>2</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        List of
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>none</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feOffset">feOffset</h2>
+## feDropShadow
 
-<p>For {{SVGElement('feOffset')}}, <code>dx</code> defines the x offset of the filter input graphic. The unit used to resolve the value of the attribute is set by the {{SVGAttr('primitiveUnits')}} attribute of the {{SVGElement('filter')}} element.</p>
+For {{SVGElement('feDropShadow')}}, `dx` defines the x offset of the dropped shadow. The unit used to resolve the value of the attribute is set by the {{SVGAttr('primitiveUnits')}} attribute of the {{SVGElement('filter')}} element.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>2</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="glyphRef">glyphRef</h2>
+## feOffset
 
-<div class="warning"><p><strong>Warning:</strong> As of SVG2 {{SVGElement('glyphRef')}} is deprecated and shouldn't be used.</p></div>
-
-<p>For {{SVGElement('glyphRef')}}, <code>dx</code> defines the x offset of the glyph, in the font metric system.</p>
+For {{SVGElement('feOffset')}}, `dx` defines the x offset of the filter input graphic. The unit used to resolve the value of the attribute is set by the {{SVGAttr('primitiveUnits')}} attribute of the {{SVGElement('filter')}} element.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="text">text</h2>
+## glyphRef
 
-<p>For {{SVGElement('text')}}, if it contains a single value, <code>dx</code> defines a shift along the x-axis for all glyphs.</p>
+> **Warning:** As of SVG2 {{SVGElement('glyphRef')}} is deprecated and shouldn't be used.
 
-<p>If there are multiple values, <code>dx</code> defines a shift along the x-axis for each individual glyph relative to the preceding glyph. If there are less values than glyphs, the remaining glyphs use a value of <code>0</code>. If there are more values than glyphs, extra values are ignored.</p>
+For {{SVGElement('glyphRef')}}, `dx` defines the x offset of the glyph, in the font metric system.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>List of <strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>none</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="Example">Example</h3>
+## text
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+For {{SVGElement('text')}}, if it contains a single value, `dx` defines a shift along the x-axis for all glyphs.
 
-<pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Lines materialized the position of the glyphs --&gt;
-  &lt;line x1="0"  x2="100%" y1="25%" y2="25%" /&gt;
-  &lt;line x1="0"  x2="100%" y1="50%" y2="50%" /&gt;
-  &lt;line x1="0"  x2="100%" y1="75%" y2="75%" /&gt;
+If there are multiple values, `dx` defines a shift along the x-axis for each individual glyph relative to the preceding glyph. If there are less values than glyphs, the remaining glyphs use a value of `0`. If there are more values than glyphs, extra values are ignored.
 
-  &lt;line x1="10%" x2="10%" y1="0"   y2="100%" /&gt;
-  &lt;line x1="30%" x2="30%" y1="0"   y2="100%" /&gt;
-  &lt;line x1="60%" x2="60%" y1="0"   y2="100%" /&gt;
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        List of
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>none</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
-  &lt;!-- Behaviors change based on the number
-       of values in the attributes --&gt;
-  &lt;text dx="20%"       x="10%" y="25%"&gt;SVG&lt;/text&gt;
-  &lt;text dx="0 10%"     x="10%" y="50%"&gt;SVG&lt;/text&gt;
-  &lt;text dx="0 10% 20%" x="10%" y="75%"&gt;SVG&lt;/text&gt;
-&lt;/svg&gt;</pre>
+### Example
 
-<pre class="brush: css">line {
+```css hidden
+html,body,svg { height:100% }
+```
+
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Lines materialized the position of the glyphs -->
+  <line x1="0"  x2="100%" y1="25%" y2="25%" />
+  <line x1="0"  x2="100%" y1="50%" y2="50%" />
+  <line x1="0"  x2="100%" y1="75%" y2="75%" />
+
+  <line x1="10%" x2="10%" y1="0"   y2="100%" />
+  <line x1="30%" x2="30%" y1="0"   y2="100%" />
+  <line x1="60%" x2="60%" y1="0"   y2="100%" />
+
+  <!-- Behaviors change based on the number
+       of values in the attributes -->
+  <text dx="20%"       x="10%" y="25%">SVG</text>
+  <text dx="0 10%"     x="10%" y="50%">SVG</text>
+  <text dx="0 10% 20%" x="10%" y="75%">SVG</text>
+</svg>
+```
+
+```css
+line {
   stroke: red;
   stroke-width: .5px;
   stroke-dasharray: 3px;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('text', '100%', 100)}}</p>
+{{EmbedLiveSample('text', '100%', 100)}}
 
-<h2 id="tref">tref</h2>
+## tref
 
-<div class="warning"><p><strong>Warning:</strong> As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.</p></div>
+> **Warning:** As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
 
-<p>For {{SVGElement('tref')}}, if it contains a single value, <code>dx</code> defines a shift along the x-axis for all glyphs.</p>
+For {{SVGElement('tref')}}, if it contains a single value, `dx` defines a shift along the x-axis for all glyphs.
 
-<p>If there are multiple values, <code>dx</code> defines a shift along the x-axis for each individual glyph relative to the preceding glyph. If there are less values than glyphs, the remaining glyphs use a value of <code>0</code>. If there are more values than glyphs, extra values are ignored.</p>
-
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>List of <strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>none</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="tspan">tspan</h2>
-
-<p>For {{SVGElement('tspan')}}, if it contains a single value, <code>dx</code> defines a shift along the x-axis for all alternate glyph.</p>
-
-<p>If there are multiple values, <code>dx</code> defines a shift along the x-axis for each individual glyph relative to the preceding glyph. If there are less values than glyphs, the remaining glyphs use a value of <code>0</code>. If there are more values than glyphs, extra values are ignored.</p>
+If there are multiple values, `dx` defines a shift along the x-axis for each individual glyph relative to the preceding glyph. If there are less values than glyphs, the remaining glyphs use a value of `0`. If there are more values than glyphs, extra values are ignored.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>List of <strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>none</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        List of
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>none</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## tspan
+
+For {{SVGElement('tspan')}}, if it contains a single value, `dx` defines a shift along the x-axis for all alternate glyph.
+
+If there are multiple values, `dx` defines a shift along the x-axis for each individual glyph relative to the preceding glyph. If there are less values than glyphs, the remaining glyphs use a value of `0`. If there are more values than glyphs, extra values are ignored.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        List of
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>none</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Filters 1.0', '#element-attrdef-fedropshadow-dx', 'dx') }}</td>
-   <td>{{Spec2('Filters 1.0')}}</td>
-   <td>Initial definition for <code>&lt;feDropShadow&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('Filters 1.0', '#element-attrdef-feoffset-dx', 'dx') }}</td>
-   <td>{{Spec2('Filters 1.0')}}</td>
-   <td>Definition for <code>&lt;feOffset&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "text.html#TextElementDXAttribute", "dx")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Definition for <code>&lt;text&gt;</code> and <code>&lt;tspan&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#feOffsetDxAttribute", "dx")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;feOffset&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#AltGlyphElementDXAttribute", "dx")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;altGlyph&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#GlyphRefElementDXAttribute", "dx")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;glyphRef&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#TextElementDXAttribute", "dx")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;text&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#TSpanElementDXAttribute", "dx")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;tref&gt;</code> and <code>&lt;tspan&gt;</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{ SpecName('Filters 1.0', '#element-attrdef-fedropshadow-dx', 'dx') }}
+      </td>
+      <td>{{Spec2('Filters 1.0')}}</td>
+      <td>Initial definition for <code>&#x3C;feDropShadow></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{ SpecName('Filters 1.0', '#element-attrdef-feoffset-dx', 'dx') }}
+      </td>
+      <td>{{Spec2('Filters 1.0')}}</td>
+      <td>Definition for <code>&#x3C;feOffset></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "text.html#TextElementDXAttribute", "dx")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>
+        Definition for <code>&#x3C;text></code> and <code>&#x3C;tspan></code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "filters.html#feOffsetDxAttribute", "dx")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;feOffset></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "text.html#AltGlyphElementDXAttribute", "dx")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;altGlyph></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "text.html#GlyphRefElementDXAttribute", "dx")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;glyphRef></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "text.html#TextElementDXAttribute", "dx")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;text></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "text.html#TSpanElementDXAttribute", "dx")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>
+        Initial definition for <code>&#x3C;tref></code> and
+        <code>&#x3C;tspan></code>
+      </td>
+    </tr>
+  </tbody>
 </table>

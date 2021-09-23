@@ -1,91 +1,87 @@
 ---
-title: 'xlink:type'
-slug: 'Web/SVG/Attribute/xlink:type'
+title: xlink:type
+slug: Web/SVG/Attribute/xlink:type
 tags:
   - Deprecated
   - SVG
   - SVG Attribute
 browser-compat: svg.attributes.xlink.xlink_type
 ---
-<div>{{SVGRef}}{{Deprecated_Header}}</div>
+{{SVGRef}}{{Deprecated_Header}}
 
-<p>The <strong><code>xlink:type</code></strong> attribute identifies the type of {{Glossary("XLink")}} being used. In SVG, only simple links are available.</p>
+The **`xlink:type`** attribute identifies the type of {{Glossary("XLink")}} being used. In SVG, only simple links are available.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("a")}}</li>
-  <li>{{SVGElement("altGlyph")}}</li>
-  <li>{{SVGElement("animate")}}</li>
-  <li>{{SVGElement("animateColor")}}</li>
-  <li>{{SVGElement("animateMotion")}}</li>
-  <li>{{SVGElement("animateTransform")}}</li>
-  <li>{{SVGElement("cursor")}}</li>
-  <li>{{SVGElement("feImage")}}</li>
-  <li>{{SVGElement("filter")}}</li>
-  <li>{{SVGElement("font-face-uri")}}</li>
-  <li>{{SVGElement("glyphRef")}}</li>
-  <li>{{SVGElement("image")}}</li>
-  <li>{{SVGElement("linearGradient")}}</li>
-  <li>{{SVGElement("mpath")}}</li>
-  <li>{{SVGElement("pattern")}}</li>
-  <li>{{SVGElement("radialGradient")}}</li>
-  <li>{{SVGElement("script")}}</li>
-  <li>{{SVGElement("set")}}</li>
-  <li>{{SVGElement("textPath")}}</li>
-  <li>{{SVGElement("tref")}}</li>
-  <li>{{SVGElement("use")}}</li>
-</ul>
+*   {{SVGElement("a")}}
+*   {{SVGElement("altGlyph")}}
+*   {{SVGElement("animate")}}
+*   {{SVGElement("animateColor")}}
+*   {{SVGElement("animateMotion")}}
+*   {{SVGElement("animateTransform")}}
+*   {{SVGElement("cursor")}}
+*   {{SVGElement("feImage")}}
+*   {{SVGElement("filter")}}
+*   {{SVGElement("font-face-uri")}}
+*   {{SVGElement("glyphRef")}}
+*   {{SVGElement("image")}}
+*   {{SVGElement("linearGradient")}}
+*   {{SVGElement("mpath")}}
+*   {{SVGElement("pattern")}}
+*   {{SVGElement("radialGradient")}}
+*   {{SVGElement("script")}}
+*   {{SVGElement("set")}}
+*   {{SVGElement("textPath")}}
+*   {{SVGElement("tref")}}
+*   {{SVGElement("use")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>simple</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>simple</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>simple</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>simple</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>simple</code></dt>
- <dd>This value specifies that the referred resource is a simple link.</dd>
-</dl>
+*   `simple`
+    *   : This value specifies that the referred resource is a simple link.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG1.1", "linking.html#XLinkShowAttribute", "xlink:type")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "linking.html#XLinkShowAttribute", "xlink:type")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.w3.org/TR/xlink/#link-types">Definition of the <code>xlink:type</code> attribute in the XLink specification</a></li>
-</ul>
+*   [Definition of the `xlink:type` attribute in the XLink specification](https://www.w3.org/TR/xlink/#link-types)

@@ -4,12 +4,11 @@ slug: Web/SVG/Compatibility_sources
 tags:
   - SVG
 ---
-<p>The following sources are used for the compatibility tables on SVG elements and attributes:</p>
-<ul>
-  <li><a href="/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox">https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox</a> together with its revision history for Firefox</li>
-  <li><a href="http://www.webkit.org/projects/svg/status.xml">http://www.webkit.org/projects/svg/status.xml</a> together with its <a href="http://wayback.archive.org/web/*/http://www.webkit.org/projects/svg/status.xml">recorded archive</a> for WebKit, Safari and Chrome</li>
-  <li><a href="http://www.opera.com/docs/specs/opera9/svg/">http://www.opera.com/docs/specs/opera9/svg/</a> and accompanying pages for Opera &gt;= 9, <a href="http://www.opera.com/docs/specs/opera8/">http://www.opera.com/docs/specs/opera8/</a> for Opera 8</li>
-  <li><a href="http://blogs.msdn.com/b/ie/archive/2010/03/18/svg-in-ie9-roadmap.aspx">http://blogs.msdn.com/b/ie/archive/2010/03/18/svg-in-ie9-roadmap.aspx</a> for hints on IE9 support status</li>
-  <li><a href="http://www.codedread.com/svg-support.php">The SVG support charts at Codedread.com</a> for basic checks against the W3C test suite</li>
-  <li><a href="https://en.wikipedia.org/wiki/SVG">Wikipedia</a> for basic hints, not normative</li>
-</ul>
+The following sources are used for the compatibility tables on SVG elements and attributes:
+
+*   [https://developer.mozilla.org/en-US/docs/Web/SVG/SVG\_1.1\_Support_in_Firefox](/en-US/docs/Web/SVG/SVG\_1.1\_Support_in_Firefox) together with its revision history for Firefox
+*   <http://www.webkit.org/projects/svg/status.xml> together with its [recorded archive](http://wayback.archive.org/web/\*/http://www.webkit.org/projects/svg/status.xml) for WebKit, Safari and Chrome
+*   <http://www.opera.com/docs/specs/opera9/svg/> and accompanying pages for Opera >= 9, <http://www.opera.com/docs/specs/opera8/> for Opera 8
+*   <http://blogs.msdn.com/b/ie/archive/2010/03/18/svg-in-ie9-roadmap.aspx> for hints on IE9 support status
+*   [The SVG support charts at Codedread.com](http://www.codedread.com/svg-support.php) for basic checks against the W3C test suite
+*   [Wikipedia](https://en.wikipedia.org/wiki/SVG) for basic hints, not normative

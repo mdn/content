@@ -6,159 +6,173 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.fill-rule
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>fill-rule</code></strong> attribute is a presentation attribute defining the algorithm to use to determine the <em>inside</em> part of a shape.</p>
+The **`fill-rule`** attribute is a presentation attribute defining the algorithm to use to determine the *inside* part of a shape.
 
-<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>fill-rule</code> can be used as a CSS property.</p></div>
+> **Note:** As a presentation attribute, `fill-rule` can be used as a CSS property.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement('altGlyph')}}</li>
-  <li>{{SVGElement('path')}}</li>
-  <li>{{SVGElement('polygon')}}</li>
-  <li>{{SVGElement('polyline')}}</li>
-  <li>{{SVGElement('text')}}</li>
-  <li>{{SVGElement('textPath')}}</li>
-  <li>{{SVGElement('tref')}}</li>
-  <li>{{SVGElement('tspan')}}</li>
-</ul>
+*   {{SVGElement('altGlyph')}}
+*   {{SVGElement('path')}}
+*   {{SVGElement('polygon')}}
+*   {{SVGElement('polyline')}}
+*   {{SVGElement('text')}}
+*   {{SVGElement('textPath')}}
+*   {{SVGElement('tref')}}
+*   {{SVGElement('tspan')}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="-10 -10 220 120" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Default value for fill-rule --&gt;
-  &lt;polygon fill-rule="nonzero" stroke="red"
-   points="50,0 21,90 98,35 2,35 79,90"/&gt;
+```html
+<svg viewBox="-10 -10 220 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Default value for fill-rule -->
+  <polygon fill-rule="nonzero" stroke="red"
+   points="50,0 21,90 98,35 2,35 79,90"/>
 
-  &lt;!--
+  <!--
   The center of the shape has two
   path segments (shown by the red stroke)
   between it and infinity. It is therefore
   considered outside the shape, and not filled.
-  --&gt;
-  &lt;polygon fill-rule="evenodd" stroke="red"
-   points="150,0 121,90 198,35 102,35 179,90"/&gt;
-&lt;/svg&gt;</pre>
+  -->
+  <polygon fill-rule="evenodd" stroke="red"
+   points="150,0 121,90 198,35 102,35 179,90"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", '100%', 200)}}</p>
+{{EmbedLiveSample("Example", '100%', 200)}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>nonzero</code> | <code>evenodd</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>nonzero</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>discrete</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>nonzero</code> | <code>evenodd</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>nonzero</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>discrete</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The <code>fill-rule</code> attribute provides two options for how the inside (that is, the area to be filled) of a shape is determined:</p>
+The `fill-rule` attribute provides two options for how the inside (that is, the area to be filled) of a shape is determined:
 
-<h3 id="nonzero">nonzero</h3>
+### nonzero
 
-<p>The value <code>nonzero</code> determines the "insideness" of a point in the shape by drawing a ray from that point to infinity in any direction, and then examining the places where a segment of the shape crosses the ray. Starting with a count of zero, add one each time a path segment crosses the ray from left to right and subtract one each time a path segment crosses the ray from right to left. After counting the crossings, if the result is zero then the point is outside the path. Otherwise, it is inside.</p>
+The value `nonzero` determines the "insideness" of a point in the shape by drawing a ray from that point to infinity in any direction, and then examining the places where a segment of the shape crosses the ray. Starting with a count of zero, add one each time a path segment crosses the ray from left to right and subtract one each time a path segment crosses the ray from right to left. After counting the crossings, if the result is zero then the point is outside the path. Otherwise, it is inside.
 
-<h4 id="Example">Example</h4>
+#### Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Effect of nonzero fill rule on crossing path segments --&gt;
-  &lt;polygon fill-rule="nonzero" stroke="red"
-           points="50,0 21,90 98,35 2,35 79,90"/&gt;
+```html
+<svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Effect of nonzero fill rule on crossing path segments -->
+  <polygon fill-rule="nonzero" stroke="red"
+           points="50,0 21,90 98,35 2,35 79,90"/>
 
-  &lt;!--
+  <!--
   Effect of nonzero fill rule on a shape inside a shape
   with the path segment moving in the same direction
   (both squares drawn clockwise, to the "right")
-  --&gt;
-  &lt;path fill-rule="nonzero" stroke="red"
+  -->
+  <path fill-rule="nonzero" stroke="red"
         d="M110,0  h90 v90 h-90 z
-           M130,20 h50 v50 h-50 z"/&gt;
+           M130,20 h50 v50 h-50 z"/>
 
-  &lt;!--
+  <!--
   Effect of nonzero fill rule on a shape inside a shape
   with the path segment moving in the opposite direction
   (one square drawn clockwise, the other anti-clockwise)
-  --&gt;
-  &lt;path fill-rule="nonzero" stroke="red"
+  -->
+  <path fill-rule="nonzero" stroke="red"
         d="M210,0  h90 v90 h-90 z
-           M230,20 v50 h50 v-50 z"/&gt;
-&lt;/svg&gt;</pre>
+           M230,20 v50 h50 v-50 z"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample('nonzero', '100%', 200)}}</p>
+{{EmbedLiveSample('nonzero', '100%', 200)}}
 
-<h3 id="evenodd">evenodd</h3>
+### evenodd
 
-<p>The value <code>evenodd</code> determines the "insideness" of a point in the shape by drawing a ray from that point to infinity in any direction and counting the number of path segments from the given shape that the ray crosses. If this number is odd, the point is inside; if even, the point is outside.</p>
+The value `evenodd` determines the "insideness" of a point in the shape by drawing a ray from that point to infinity in any direction and counting the number of path segments from the given shape that the ray crosses. If this number is odd, the point is inside; if even, the point is outside.
 
-<h4 id="Example_2">Example</h4>
+#### Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Effect of evenodd fill rule on crossing path segments --&gt;
-  &lt;polygon fill-rule="evenodd" stroke="red"
-           points="50,0 21,90 98,35 2,35 79,90"/&gt;
+```html
+<svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Effect of evenodd fill rule on crossing path segments -->
+  <polygon fill-rule="evenodd" stroke="red"
+           points="50,0 21,90 98,35 2,35 79,90"/>
 
-  &lt;!--
+  <!--
   Effect of evenodd fill rule on a shape inside a shape
   with the path segment moving in the same direction
   (both squares drawn clockwise, to the "right")
-  --&gt;
-  &lt;path fill-rule="evenodd" stroke="red"
+  -->
+  <path fill-rule="evenodd" stroke="red"
         d="M110,0  h90 v90 h-90 z
-           M130,20 h50 v50 h-50 z"/&gt;
+           M130,20 h50 v50 h-50 z"/>
 
-  &lt;!--
+  <!--
   Effect of evenodd fill rule on a shape inside a shape
   with the path segment moving in opposite direction
   (one square drawn clockwise, the other anti-clockwise)
-  --&gt;
-  &lt;path fill-rule="evenodd" stroke="red"
+  -->
+  <path fill-rule="evenodd" stroke="red"
         d="M210,0  h90 v90 h-90 z
-           M230,20 v50 h50 v-50 z"/&gt;
-&lt;/svg&gt;</pre>
+           M230,20 v50 h50 v-50 z"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample('evenodd', '100%', 200)}}</p>
+{{EmbedLiveSample('evenodd', '100%', 200)}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "painting.html#FillRuleProperty", "fill-rule")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Definition for shapes and text</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "painting.html#FillRuleProperty", "fill-rule")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for shapes and text</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "painting.html#FillRuleProperty", "fill-rule")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>Definition for shapes and text</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "painting.html#FillRuleProperty", "fill-rule")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for shapes and text</td>
+    </tr>
+  </tbody>
 </table>
