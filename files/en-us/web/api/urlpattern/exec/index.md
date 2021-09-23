@@ -51,8 +51,8 @@ matched input, and matched groups for that part.
 
 ## Examples
 
-This example creates a URL pattern and matches against it some URLs in both
-string, and structured form.
+This example shows how to use the `exec()` method to match a URL against a
+pattern. The example prints the result of the `exec()` calls to the console.
 
 ```js
 const pattern = new URLPattern('http{s}?://*.example.com/books/:id');

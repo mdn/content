@@ -48,6 +48,9 @@ A {{jsxref("boolean")}}.
 
 ## Examples
 
+This example shows how to use the `test()` method to match a URL against a
+pattern. The example prints the result of the `test()` calls to the console.
+
 ```js
 const pattern = new URLPattern('http{s}?://*.example.com/books/:id');
 

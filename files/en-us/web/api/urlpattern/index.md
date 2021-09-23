@@ -85,10 +85,10 @@ This syntax is similar to the one used in
 
 ### Fixed text and capture groups
 
-Each pattern can contain a combination of fixed text, and groups. The fixed text
+Each pattern can contain a combination of fixed text and groups. The fixed text
 is a sequence of characters that is matched exactly. Groups match an arbitrary
-string based on some matching rules. Each URL part has its own default rules
-that are explained below, but they can be overwritten.
+string based on matching rules. Each URL part has its own default rules that are
+explained below, but they can be overwritten.
 
 ```js
 // A pattern matching some fixed text
@@ -104,16 +104,16 @@ console.log(pattern.exec('https://example.com/books/123').pathname.groups); // {
 
 ### Segment wildcard
 
-By default, a group matching inside the `pathname` part of the URL will match
-all characters but the forward slash (`/`). In the `hostname` part, the group
-will match all characters except the dot (`.`). In all other parts, the group
-will match all characters. The segment wildcard is non-greedy, meaning that it
-will match the shortest possible string.
+By default, a group matching the `pathname` part of the URL will match all
+characters but the forward slash (`/`). In the `hostname` part, the group will
+match all characters except the dot (`.`). In all other parts, the group will
+match all characters. The segment wildcard is non-greedy, meaning that it will
+match the shortest possible string.
 
 ### Regex matchers
 
-Instead of using the default match rules for a group, a regex can be specified
-per group. This regex defines the matching rules for the group. Below is an
+Instead of using the default match rules for a group, you can use a regex for
+each group. This regex defines the matching rules for the group. Below is an
 example of a regex matcher on a named group that constrains the group to only
 match if it contains one or more digits:
 
@@ -179,8 +179,8 @@ console.log(pattern.test('https://example.com/books/123/456/789')); // true
 Patterns can also contain group delimiters. These are pieces of a pattern that
 are surrounded by curly braces (`{}`). These group delimiters are not captured
 in the match result like capturing groups, but can still have modifiers applied
-to them, just like groups. If a group delimiters does not have a modifier, it is
-treated as if the items in it were just part of the parent pattern. Group
+to them, just like groups. If group delimiters do not contain a modifier, they
+are treated as if the items in them were just part of the parent pattern. Group
 delimiters may not contain other group delimiters, but may contain any other
 pattern items (capturing groups, regex, wildcard, or fixed text).
 
@@ -211,8 +211,8 @@ automatic slash (`/`) prefix added if the group definition is preceded by a
 slash (`/`). This is useful for groups with modifiers, as it allows for
 repeating groups to work as expected.
 
-If you do not want this automatic prefixing, you can disable it by surrounding
-the group with a group delimiters (`{}`). Group delimiters do not have automatic
+If you do not want automatic prefixing, you can disable it by surrounding the
+group with group delimiters (`{}`). Group delimiters do not have automatic
 prefixing behavior.
 
 ```js
@@ -242,12 +242,12 @@ console.log(pattern.test('https://example.com/books')); // false
 console.log(pattern.test('https://example.com/books/')); // true
 ```
 
-### Wildcard token
+### Wildcard tokens
 
-A shorthand for an unamed capturing group that matches all characters zero or
-more times is provided by the wildcard token (`*`). This can be can be placed
-anywhere in the pattern. The wilcard is greedy, meaning that it will match the
-longest possible string.
+The wildcard token (`*`) is a shorthand for an unnamed capturing group that
+matches all characters zero or more times. You can place this anywhere in the
+pattern. The wilcard is greedy, meaning that it will match the longest possible
+string.
 
 ```js
 // A wildcard at the end of a pattern
@@ -311,11 +311,11 @@ console.log(pattern.test('https://cdn-example.com/foo/bar'));
 
 ### Construct a URLPattern from a full URL string
 
-The following example shows how a `URLPattern` can be constructed from a full
-URL string with patterns embedded. For example, a `:` can be both the URL
-protocol suffix, like `https:`, and the beginning of a named pattern group, like
-`:foo`. If there is no ambiguity between whether a character is a part of the
-URL syntax or part of the pattern syntax then it just works.
+The following example shows how to construct a `URLPattern` from a full URL
+string with embedded patterns. For example, a `:` can be both the URL protocol
+suffix, like `https:`, and the beginning of a named pattern group, like `:foo`.
+It "just works" if there is no ambiguity between whether a character is part of
+the URL syntax or part of the pattern syntax.
 
 ```js
 // Construct a URLPattern that matches URLs to CDN servers loading jpg images.
@@ -385,8 +385,7 @@ console.log(pattern.test('data:foobar')); // true
 
 ### Using base URLs for test() and exec()
 
-The following example shows how input values to `test()` and `exec()` can use
-base URLs.
+The following example shows how `test()` and `exec()` can use base URLs.
 
 ```js
 const pattern = new URLPattern({ hostname: 'example.com', pathname: '/foo/*' });
@@ -419,11 +418,11 @@ console.log(result.hostname.input); // 'example.com'
 ### Using base URLs in the URLPattern constructor
 
 The follow example shows how base URLs can also be used to construct the
-`URLPattern`. It's important to note that the base URL in these cases is treated
-strictly as a URL and cannot contain any pattern syntax itself.
+`URLPattern`. Note that the base URL in these cases is treated strictly as a URL
+and cannot contain any pattern syntax itself.
 
 Also, since the base URL provides a value for every component the resulting
-`URLPattern` will also have a value for every component; even if it's the empty
+`URLPattern` will also have a value for every component, even if it's the empty
 string. This means you do not get the "default to wildcard" behavior.
 
 ```js
@@ -507,8 +506,8 @@ console.log(result.pathname.groups[0]); // 'foo'
 
 ### Named group with a custom regular expression
 
-The following example shows how a custom regular expression can be used with a
-named group.
+The following example shows how to use a custom regular expression with a named
+group.
 
 ```js
 const pattern = new URLPattern({ pathname: '/:type(foo|bar)' });
@@ -519,9 +518,9 @@ console.log(result.pathname.groups.type); // 'foo'
 
 ### Making matching groups optional
 
-The following example shows how a matching group can be made optional by placing
-a `?` modifier after it. For the pathname component this also causes any
-preceding `/` character to be treated as an optional prefix to the group.
+The following example shows how to make a matching group optional by placing a
+`?` modifier after it. For the pathname component this also causes any preceding
+`/` character to be treated as an optional prefix to the group.
 
 ```js
 const pattern = new URLPattern({ pathname: '/product/(index.html)?' });
@@ -547,7 +546,7 @@ console.log(pattern3.test({ pathname: '/product/' })); // true
 ### Making matching groups repeated
 
 The following example shows how a matching group can be made repeated by placing
-a `+` modifier after it. In the `pathname` component this also treats the `/`
+`+` modifier after it. In the `pathname` component this also treats the `/`
 prefix as special. It is repeated with the group.
 
 ```js
@@ -561,8 +560,8 @@ console.log(pattern.test({ pathname: '/product' })); // false
 
 ### Making matching groups optional and repeated
 
-The following example shows how a matching group can be made both optional and
-repeated. This is done by placing a `*` modifier after the group. Again, the
+The following example shows how to make a matching group that is both optional
+and repeated. Do this by placing a `*` modifier after the group. Again, the
 pathname component treats the `/` prefix as special. It both becomes optional
 and is also repeated with the group.
 
@@ -595,8 +594,8 @@ console.log(result.hostname.groups.subdomain); // 'foo.bar'
 
 ### Making text optional or repeated without a matching group
 
-The following example shows how curly braces can be used to denote text without
-a matching group can be made optional or repeated without a matching group.
+The following example shows how curly braces can be used to denote fixed text
+values as optional or repeated without using a matching group.
 
 ```js
 const pattern = new URLPattern({ pathname: '/product{/}?' });
