@@ -345,7 +345,7 @@ console.log(
 
 ### Constructing a URLPattern with an ambiguous URL string
 
-The following example shows how a URLPattern constructed from an ambiguous
+The following example shows how a `URLPattern` constructed from an ambiguous
 string will favor treating characters as part of the pattern syntax. In this
 case the `:` character could be the protocol component suffix or it could be the
 prefix for a named group in the pattern. The constructor chooses to treat this
