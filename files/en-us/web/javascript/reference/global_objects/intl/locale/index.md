@@ -55,6 +55,12 @@ Traditionally, the Intl API used strings to represent locales, just as Unicode d
   - : Returns the region of the world (usually a country) associated with the locale.
 - {{jsxref("Intl/Locale/script", "Intl.Locale.prototype.script")}}
   - : Returns the script used for writing the particular language used in the locale.
+- {{jsxref("Intl/Locale/textInfo", "Intl.Locale.prototype.textInfo")}}
+  - : Returns the part indicating the ordering of characters `ltr (left-to-right)` or `rtl (right-to-left)`.
+- {{jsxref("Intl/Locale/timeZones", "Intl.Locale.prototype.timeZones")}}
+  - : Returns an {{jsxref("Array")}} of time zone identifiers, associated with the `Locale`.
+- {{jsxref("Intl/Locale/weekInfo", "Intl.Locale.prototype.weekInfo")}}
+  - : Returns [UTS 35's Week Elements](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Patterns_Week_Elements) according to the locale rules.
 
 ## Instance methods
 
