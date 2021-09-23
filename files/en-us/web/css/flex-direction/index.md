@@ -110,7 +110,7 @@ Using the `flex-direction` property with values of `row-reverse` or `column-reve
   flex-direction: column-reverse;
 }
 
-.row-rev {
+#row-rev {
   flex-direction: row-reverse;
 }
 
