@@ -92,6 +92,7 @@ The equipment may also include an accelerometer, barometer, or other sensors whi
 - {{DOMxRef("XRLayerEvent")}}
 - {{DOMxRef("XRCompositionLayer")}}
 - {{DOMxRef("XRProjectionLayer")}}
+- {{DOMxRef("XRMediaBinding")}}
 
 ### WebGL binding
 
