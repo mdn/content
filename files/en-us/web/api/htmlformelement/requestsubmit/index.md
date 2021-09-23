@@ -43,9 +43,9 @@ None.
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException)}}
+- `TypeError` {{domxref("DOMException")}}
   - : Thrown if the specified `submitter` is not a submit button.
-- `NotFoundError` {{domxref("DOMException)}}
+- `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if the specified `submitter` isn't a member of the form on
     which `requestSubmit()` was called. The submitter must be either a
     descendant of the form element or must have an {{htmlattrxref("form", "input")}}
