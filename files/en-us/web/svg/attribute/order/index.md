@@ -9,7 +9,7 @@ browser-compat: svg.elements.feConvolveMatrix.order
 ---
 {{SVGRef}}
 
-the **`order`** attribute indicates the size of the matrix to be used by a {{SVGElement("feConvolveMatrix")}} element.
+The **`order`** attribute indicates the size of the matrix to be used by a {{SVGElement("feConvolveMatrix")}} element.
 
 You can use this attribute with the following SVG elements:
 
