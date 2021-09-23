@@ -6,7 +6,7 @@ tags:
   - Constructor
   - Reference
   - URLPattern
-  - URLPattern API
+  - URL Pattern API
   - Polyfill
   - Experimental
 browser-compat: api.URLPattern.URLPattern

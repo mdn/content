@@ -6,12 +6,12 @@ tags:
   - Property
   - Reference
   - URLPattern
-  - URLPattern API
+  - URL Pattern API
   - Experimental
 browser-compat: api.URLPattern.password
 ---
 
-{{ APIRef("URLPattern API") }}
+{{ APIRef("URL Pattern API") }}
 
 The **`password`** property of the {{domxref("URLPattern")}} interface is a
 {{domxref("USVString")}} containing the pattern used to match the password part

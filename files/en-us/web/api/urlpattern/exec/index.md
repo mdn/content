@@ -6,13 +6,13 @@ tags:
   - Method
   - Reference
   - URLPattern
-  - URLPattern API
+  - URL Pattern API
   - Polyfill
   - Experimental
 browser-compat: api.URLPattern.exec
 ---
 
-{{APIRef("URLPattern API")}}
+{{APIRef("URL Pattern API")}}
 
 The **`exec()`**method of the {{domxref("URLPattern")}} interface takes a URL or
 object of URL parts, and returns either an object containing the results of

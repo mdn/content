@@ -6,13 +6,13 @@ tags:
   - Method
   - Reference
   - URLPattern
-  - URLPattern API
+  - URL Pattern API
   - Polyfill
   - Experimental
 browser-compat: api.URLPattern.test
 ---
 
-{{APIRef("URLPattern API")}}
+{{APIRef("URL Pattern API")}}
 
 The **`test()`**method of the {{domxref("URLPattern")}} interface takes a URL or
 object of URL parts, and returns a boolean indicating if the given input matches

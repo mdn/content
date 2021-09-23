@@ -6,12 +6,12 @@ tags:
   - Property
   - Reference
   - URLPattern
-  - URLPattern API
+  - URL Pattern API
   - Experimental
 browser-compat: api.URLPattern.hostname
 ---
 
-{{ APIRef("URLPattern API") }}
+{{ APIRef("URL Pattern API") }}
 
 The **`hostname`** property of the {{domxref("URLPattern")}} interface is a
 {{domxref("USVString")}} containing the pattern used to match the hostname part
