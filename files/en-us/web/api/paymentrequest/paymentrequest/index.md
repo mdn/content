@@ -114,7 +114,7 @@ complete context of instantiating a `PaymentRequest` object.
 
 ```js
 var supportedInstruments = [{
- supportedMethods: 'https://example.com/payment-manifest.json',
+ supportedMethods: 'https://example.com/pay'
 }];
 
 var details = {

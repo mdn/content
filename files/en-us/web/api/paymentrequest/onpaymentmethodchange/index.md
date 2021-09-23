@@ -42,7 +42,7 @@ indicating that the user has changed payment methods within the same payment han
 
 The {{event("paymentmethodchange")}} event is triggered by a user-agent controlled
 interaction (i.e., the end-user switches from a debit to a credit card in the payment
-UI). To make sure you receive the event, you should add event listeners to
+app). To make sure you receive the event, you should add event listeners to
 {{domxref('PaymentRequest')}} object after instantiation, but before you call
 `show()`.
 

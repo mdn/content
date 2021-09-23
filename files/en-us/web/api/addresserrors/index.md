@@ -105,7 +105,7 @@ First, we declare the variables `supportedHandlers`, which is compatible with {{
 ```js
 let supportedHandlers = [
   {
-    supportedMethods: "https://www.example.com/pay"
+    supportedMethods: "https://example.com/pay"
   }
 ];
 
