@@ -62,6 +62,8 @@ or use an ordered list if the order of the list items matters:
 
 > **Note:** The ARIA list/listitem roles don't distinguish between ordered and unordered lists.
 
+> **Note:** Styling a list with `list-style: none;` in CSS removes the list semantics. Adding `role="listitem"` returns the semantics.
+
 > **Note:**  If you are marking up a list of items that will function as a tabbed interface, you should instead use the [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_role), [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role), and [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) roles.
 
 ## Specifications
