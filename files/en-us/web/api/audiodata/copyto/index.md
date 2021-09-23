@@ -39,7 +39,7 @@ Undefined.
 ### Exceptions
 
 - {{domxref("DOMException")}} `InvalidStateError`
-  - : Thrown if the `AudioData` object has been {{domxref("Transferable","transfered")}}.
+  - : Thrown if the `AudioData` object has been {{Glossary("Transferable Objects","transferred")}}.
 - {{domxref("DOMException")}} `RangeError`
   - : Thrown if the length of the sample is longer than the destination length.
 - {{domxref("DOMException")}} `RangeError`
