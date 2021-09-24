@@ -74,5 +74,6 @@ You can find a complete guide in [Using the Payment Request API](/en-US/docs/Web
 - [Payment processing concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)
 - [Introducing the Payment Request API for Apple Pay](https://webkit.org/blog/8182/introducing-the-payment-request-api-for-apple-pay/)
 - [Google Pay API PaymentRequest Tutorial](https://developers.google.com/pay/api/web/guides/paymentrequest/tutorial)
+- [Samsung Pay Web Payments Integration Guide](https://developer.samsung.com/internet/android/web-payments-integration-guide.html)
 - [W3C Payment Request API FAQ](https://github.com/w3c/payment-request-info/wiki/FAQ)
 - Feature Policy directive {{httpheader("Feature-Policy/payment", "payment")}}
