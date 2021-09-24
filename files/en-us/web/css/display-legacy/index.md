@@ -84,21 +84,7 @@ In the new syntax the inline flex container would be created using two values, i
 
 ## Browser compatibility
 
-### Support of inline-block
-
-{{Compat("css.properties.display.inline-block", 10)}}
-
-### Support of inline-table
-
-{{Compat("css.properties.display.inline-table", 10)}}
-
-### Support of inline-flex
-
-{{Compat("css.properties.display.inline-flex", 10)}}
-
-### Support of inline-grid
-
-{{Compat("css.properties.display.inline-grid", 10)}}
+{{Compat}}
 
 ## See also
 
