@@ -55,7 +55,9 @@ a + (b * c)   // 7
 a * c + b * c // 9
 ```
 
-Notice in these examples that the left-to-right order of evaluation is still preserved.
+Notice in these examples that the left-to-right order of evaluation is still
+preserved. In other words, the order in which the *operators* evaluate has changed,
+but the order in which the *operands* evaluate has not.
 For example in this code:
 
 ```js
