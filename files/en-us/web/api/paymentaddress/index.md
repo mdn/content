@@ -102,7 +102,7 @@ async function doPaymentRequest() {
 doPaymentRequest();
 ```
 
-Once the payment flow has been triggered using {{domxref("PaymentRequest.show()")}} and the promise resolves successfully, the {{domxref("PaymentResponse")}} object available inside the fulfilled promise (`instrumentResponse` above) will have a {{domxref("PaymentResponse.details")}} property that will contain response details. This has to conform to the structure defined by the payment method provider.
+Once the payment flow has been triggered using {{domxref("PaymentRequest.show()")}} and the promise resolves successfully, the {{domxref("PaymentResponse")}} object available from the fulfilled promise (`instrumentResponse` above) will have a {{domxref("PaymentResponse.details")}} property containing response details. This has to conform to the structure defined by the payment method provider.
 
 ## Browser compatibility
 
