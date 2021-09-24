@@ -45534,16 +45534,6 @@
       "Crash"
     ]
   },
-  "Web/API/File/size": {
-    "modified": "2019-01-17T02:01:36.842Z",
-    "contributors": [
-      "devinea2",
-      "chrisdavidmills",
-      "cg-cnu",
-      "maximusvladimir",
-      "Sheppy"
-    ]
-  },
   "Web/API/File/type": {
     "modified": "2020-10-15T21:52:05.883Z",
     "contributors": [

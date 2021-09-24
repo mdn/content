@@ -7404,6 +7404,7 @@
 /en-US/docs/Web/API/File.type	/en-US/docs/Web/API/Blob/type
 /en-US/docs/Web/API/File/fileName	/en-US/docs/Web/API/File/name
 /en-US/docs/Web/API/File/fileSize	/en-US/docs/Web/API/Blob/size
+/en-US/docs/Web/API/File/size	/en-US/docs/Web/API/Blob/size
 /en-US/docs/Web/API/FileEntry	/en-US/docs/Web/API/FileSystemFileEntry
 /en-US/docs/Web/API/FileHandle	/en-US/docs/Web/API/IDBMutableFile
 /en-US/docs/Web/API/FileHandle.getFile	/en-US/docs/Web/API/IDBMutableFile/getFile
