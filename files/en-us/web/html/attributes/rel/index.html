@@ -9,7 +9,7 @@ tags:
   - form
   - rel
 ---
-<p>{{HTMLSidebar}}{{draft}}</p>
+<p>{{HTMLSidebar}}</p>
 
 <p>The <strong><code>rel</code></strong> attribute defines the relationship between a linked resource and the current document. Valid on {{htmlelement('link')}}, {{htmlelement('a')}}, {{htmlelement('area')}}, and {{htmlelement('form')}}, the supported values depend on the element on which the attribute is found.</p>
 
@@ -34,40 +34,40 @@ tags:
 			<td>Alternate representations of the current document.</td>
 			<td>Link</td>
 			<td>Link</td>
-			<td class="not-allowed">Not allowed</td>
+			<td>Not allowed</td>
 		</tr>
 		<tr>
 			<td><code>{{anch("attr-author", "author")}}</code></td>
 			<td>Author of the current document or article.</td>
 			<td>Link</td>
 			<td>Link</td>
-			<td class="not-allowed">Not allowed</td>
+			<td>Not allowed</td>
 		</tr>
 		<tr>
 			<td><code>{{anch("attr-bookmark", "bookmark")}}</code></td>
 			<td>Permalink for the nearest ancestor section.</td>
-			<td class="not-allowed">Not allowed</td>
+			<td>Not allowed</td>
 			<td>Link</td>
-			<td class="not-allowed">Not allowed</td>
+			<td>Not allowed</td>
 		</tr>
 		<tr>
 			<td><code>{{anch("attr-canonical", "canonical")}}</code></td>
 			<td>Preferred URL for the current document.</td>
 			<td>Link</td>
-			<td class="not-allowed">Not allowed</td>
-			<td class="not-allowed">Not allowed</td>
+			<td>Not allowed</td>
+			<td>Not allowed</td>
 		</tr>
 		<tr>
 			<td><code><a href="/en-US/docs/Web/HTML/Link_types/dns-prefetch">dns-prefetch</a></code></td>
 			<td>Tells the browser to preemptively perform DNS resolution for the target resource's origin</td>
 			<td>External Resource</td>
-			<td class="not-allowed">Not allowed</td>
-			<td class="not-allowed">Not allowed</td>
+			<td>Not allowed</td>
+			<td>Not allowed</td>
 		</tr>
 		<tr>
 			<td><code>{{anch("attr-external", "external")}}</code></td>
 			<td>The referenced document is not part of the same site as the current document.</td>
-			<td class="not-allowed">Not allowed</td>
+			<td>Not allowed</td>
 			<td>Annotation</td>
 			<td>Annotation</td>
 		</tr>
@@ -82,8 +82,8 @@ tags:
 			<td><code>{{anch("attr-icon", "icon")}}</code></td>
 			<td>An icon representing the current document.</td>
 			<td>External Resource</td>
-			<td class="not-allowed">Not allowed</td>
-			<td class="not-allowed">Not allowed</td>
+			<td>Not allowed</td>
+			<td>Not allowed</td>
 		</tr>
 		<tr>
 			<td><code>{{anch("attr-license", "license")}}</code></td>
@@ -97,14 +97,14 @@ tags:
 			<td>Web app manifest</td>
 			<td>Link</td>
 			<td>Not allowed</td>
-			<td class="not-allowed">Not allowed</td>
+			<td>Not allowed</td>
 		</tr>
 		<tr>
 			<td><code><a href="/en-US/docs/Web/HTML/Link_types/modulepreload">modulepreload</a></code></td>
 			<td>Tells to browser to preemptively fetch the script and store it in the document's module map for later evaluation. Optionally, the module's dependencies can be fetched as well.</td>
 			<td>External Resource</td>
-			<td class="not-allowed">Not allowed</td>
-			<td class="not-allowed">Not allowed</td>
+			<td>Not allowed</td>
+			<td>Not allowed</td>
 		</tr>
 		<tr>
 			<td><code>{{anch("attr-next", "next")}}</code></td>
@@ -116,28 +116,28 @@ tags:
 		<tr>
 			<td><code>{{anch("attr-nofollow", "nofollow")}}</code></td>
 			<td>Indicates that the current document's original author or publisher does not endorse the referenced document.</td>
-			<td class="not-allowed">Not allowed</td>
+			<td>Not allowed</td>
 			<td>Annotation</td>
 			<td>Annotation</td>
 		</tr>
 		<tr>
 			<td><code><a href="/en-US/docs/Web/HTML/Link_types/noopener">noopener</a></code></td>
 			<td>Creates a top-level browsing context that is not an auxiliary browsing context if the hyperlink would create either of those, to begin with (i.e., has an appropriate<code> target </code>attribute value).</td>
-			<td class="not-allowed">Not allowed</td>
+			<td>Not allowed</td>
 			<td>Annotation</td>
 			<td>Annotation</td>
 		</tr>
 		<tr>
 			<td><code>{{anch("attr-noreferrer", "noreferrer")}}</code></td>
 			<td>No <code>Referer</code> header will be included. Additionally, has the same effect as <code>noopener</code>.</td>
-			<td class="not-allowed">Not allowed</td>
+			<td>Not allowed</td>
 			<td>Annotation</td>
 			<td>Annotation</td>
 		</tr>
 		<tr>
 			<td><code>{{anch("attr-opener", "opener")}}</code></td>
 			<td>Creates an auxiliary browsing context if the hyperlink would otherwise create a top-level browsing context that is not an auxiliary browsing context (i.e., has "<code>_blank</code>" as <code>target</code> attribute value).</td>
-			<td class="not-allowed">Not allowed</td>
+			<td>Not allowed</td>
 			<td>Annotation</td>
 			<td>Annotation</td>
 		</tr>
@@ -145,36 +145,36 @@ tags:
 			<td><code>{{anch("attr-pingback", "pingback")}}</code></td>
 			<td>Gives the address of the pingback server that handles pingbacks to the current document.</td>
 			<td>External Resource</td>
-			<td class="not-allowed">Not allowed</td>
-			<td class="not-allowed">Not allowed</td>
+			<td>Not allowed</td>
+			<td>Not allowed</td>
 		</tr>
 		<tr>
 			<td><code><a href="/en-US/docs/Web/HTML/Link_types/preconnect">preconnect</a></code></td>
 			<td>Specifies that the user agent should preemptively connect to the target resource's origin.</td>
 			<td>External Resource</td>
-			<td class="not-allowed">Not allowed</td>
-			<td class="not-allowed">Not allowed</td>
+			<td>Not allowed</td>
+			<td>Not allowed</td>
 		</tr>
 		<tr>
 			<td><code><a href="/en-US/docs/Web/HTML/Link_types/prefetch">prefetch</a></code></td>
 			<td>Specifies that the user agent should preemptively fetch and cache the target resource as it is likely to be required for a followup navigation.</td>
 			<td>External Resource</td>
-			<td class="not-allowed">Not allowed</td>
-			<td class="not-allowed">Not allowed</td>
+			<td>Not allowed</td>
+			<td>Not allowed</td>
 		</tr>
 		<tr>
 			<td><code><a href="/en-US/docs/Web/HTML/Link_types/preload">preload</a></code></td>
 			<td>Specifies that the user agent must preemptively fetch and cache the target resource for current navigation according to the potential destination given by the <code><a href="as">as</a></code> attribute (and the priority associated with the corresponding destination).</td>
 			<td>External Resource</td>
-			<td class="not-allowed">Not allowed</td>
-			<td class="not-allowed">Not allowed</td>
+			<td>Not allowed</td>
+			<td>Not allowed</td>
 		</tr>
 		<tr>
 			<td><code><a href="/en-US/docs/Web/HTML/Link_types/prerender">prerender</a></code></td>
 			<td>Specifies that the user agent should preemptively fetch the target resource and process it in a way that helps deliver a faster response in the future.</td>
 			<td>External Resource</td>
-			<td class="not-allowed">Not allowed</td>
-			<td class="not-allowed">Not allowed</td>
+			<td>Not allowed</td>
+			<td>Not allowed</td>
 		</tr>
 		<tr>
 			<td><code>{{anch("attr-prev", "prev")}}</code></td>
@@ -194,15 +194,15 @@ tags:
 			<td><code>{{anch("attr-stylesheet", "stylesheet")}}</code></td>
 			<td>Imports a style sheet.</td>
 			<td>External Resource</td>
-			<td class="not-allowed">Not allowed</td>
-			<td class="not-allowed">Not allowed</td>
+			<td>Not allowed</td>
+			<td>Not allowed</td>
 		</tr>
 		<tr>
 			<td><code>{{anch("attr-tag", "tag")}}</code></td>
 			<td>Gives a tag (identified by the given address) that applies to the current document.</td>
-			<td class="not-allowed">Not allowed</td>
+			<td>Not allowed</td>
 			<td>Link</td>
-			<td class="not-allowed">Not allowed</td>
+			<td>Not allowed</td>
 		</tr>
 	</tbody>
 </table>
