@@ -45,7 +45,7 @@ This element implements the {{domxref("SVGFilterElement")}} interface.
 #### SVG
 
 ```html
-<svg height="120" width="230" xmlns="http://www.w3.org/2000/svg">
+<svg width="230" height="120" xmlns="http://www.w3.org/2000/svg">
   
   <filter id="blurMe">
     <feGaussianBlur stdDeviation="5"/>
