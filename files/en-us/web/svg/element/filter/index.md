@@ -59,7 +59,7 @@ This element implements the {{domxref("SVGFilterElement")}} interface.
 
 #### Result
 
-{{EmbedLiveSample("Example",235,135)}}
+{{EmbedLiveSample("Example",235,140)}}
 
 ## Specifications
 
