@@ -35,7 +35,7 @@ document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 
 ### Return value
 
-A {{jsxref('Boolean')}} that is `false` if the command is unsupported or
+A boolean value that is `false` if the command is unsupported or
 disabled.
 
 > **Note:** `document.execCommand()` only returns
