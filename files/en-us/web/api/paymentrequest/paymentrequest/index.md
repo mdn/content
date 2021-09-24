@@ -43,7 +43,7 @@ var paymentRequest = new PaymentRequest(methodData, details, [options]);
       - : A JSON-serializable object that provides optional information that might be
         needed by the supported payment methods. This has to conform to the type expected
         by the payment handler indicated by `supportedMethods`. Developers need to consult
-        whoever controls the payment methods for the expected shape of the data object.
+        whomever controls the payment methods for the expected shape of the data object.
 
 - `details`
 
