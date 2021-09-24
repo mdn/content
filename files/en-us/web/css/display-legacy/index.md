@@ -84,8 +84,7 @@ In the new syntax the inline flex container would be created using two values, i
 
 ## Browser compatibility
 
-{{Compat}}
-
+{{Compat("css.properties.display.inline_values", 10)}}
 ## See also
 
 - {{CSSxRef("display")}}
