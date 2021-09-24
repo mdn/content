@@ -9,6 +9,7 @@ tags:
   - Reference
   - ARIA roles
   - document structure role
+  - toolbar role
   - NeedsContent
 ---
 
@@ -16,22 +17,15 @@ The `toolbar` role defines the containing element as a collection of commonly us
 
 ## Description
 
-A toolbar is a collection of commonly used controls, such as buttons or checkboxes, grouped together in a compact visual form. The `toolbar` role can be used to communicate the presence and purpose of such a grouping to screen reader users. Grouping controls into toolbars can also help reduce the number of tab stops for keyboard users. Only use the `toolbar` role to group 3 or more controls.
+A toolbar is a collection of commonly used controls, such as buttons or checkboxes, grouped together in a compact visual form. The `toolbar` role can be used to communicate the presence and purpose of such a grouping to screen reader users and can help reduce the number of tab stops for keyboard users. Only use the `toolbar` role to group 3 or more controls.
 
-The toolbar is commonly a subset of functions found in a `menubar` as a way to reduce user effort. If you have more than one toolbar in a menubar, each toolbar requires a label.
+The toolbar is commonly a subset of functions found in a `menubar` as a way to reduce user effort. If you have more than one toolbar in a menubar, each toolbar requires a label; which you can include with `aria-labelledby` or `aria-label`.
 
-If you are creating a toolbar, you need to implement focus management and keyboard interactions within the toolbar, handling when toolbar keyboard interactions are the same as native control keyboard interactions.
+When creating a toolbar, you need to implement focus management and keyboard interactions within the toolbar, handling when the same keyboard interactions is used both in the toolbar and in included native control. The <kbd>Left Arrow</kbd> and <kbd>Right Arrow</kbd> should be used to navigate between the controls withing a horizontal tool bar. The <kbd>Up Arrow</kbd> and <kbd>Down Arrow</kbd> should be used if the toolbar is vertical -- in which case you also want to include the `aria-orientation="vertical"` -- or, in a horizontal toolbar, can be reserved for operating controls, such as spin buttons that require vertical arrow keys to operate.
+
+Avoid including controls whose operation requires arrow keys used for toolbar navigation. If you must include such a control, make it the last control in the toolbar. For example, in a horizontal toolbar, a textbox could be included as the last element.
 
 If any of the otherwise interactive elements within the toolbar are temporarily disabled, consider letting them remain focusable so screen reader users can be made aware of their presence.
-
-
-In horizontal toolbars, Left Arrow and Right Arrow navigate among controls. Up Arrow and Down Arrow can duplicate Left Arrow and Right Arrow, respectively, or can be reserved for operating controls, such as spin buttons that require vertical arrow keys to operate.
-In vertical toolbars, Up Arrow and Down Arrow navigate among controls. Left Arrow and Right Arrow can duplicate Up Arrow and Down Arrow, respectively, or can be reserved for operating controls, such as horizontal sliders that require horizontal arrow keys to operate.
-
-Avoid including controls whose operation requires the pair of arrow keys used for toolbar navigation. If unavoidable, include only one such control and make it the last element in the toolbar. For example, in a horizontal toolbar, a textbox could be included as the last element.
-
-Example
-
 
 
 ### Associated WAI-ARIA roles, states, and properties
@@ -85,19 +79,23 @@ If the toolbar is vertical, ensure `aria-orientation="vertical"` is set, and the
 
 Implement focus management so the keyboard tab sequence includes one stop for the toolbar and arrow keys move focus among the controls in the toolbar. When tabbing into the toolbar, focus returns to the control that last had focus. 
 
-Focus movement inside the toolbar has to be managed. On load, the first element in the tabbing sequence within the toolbar has `tabindex="0"` with `tabindex="-1"` set on all other focusable elements within the toolbar. Depending on the [keyboard interaction], the element receiving focus gets set to `tabindex="0"` and the element that just lost focus gets switched back to `tabindex="-1"`. Set focus, `element.focus()`, on the element that has `tabindex="0"`. This is called "roving tabindex".  A benefit of using roving tabindex to manage focus is that the browser will scroll the newly focused element into view.
+While the toolbar element itself does not receive focus, focus on movement into, out of, and within the toolbar has to be managed. On load, the first element in the tabbing sequence within the toolbar has `tabindex="0"` with `tabindex="-1"` set on all other focusable elements within the toolbar. Depending on the [keyboard interaction], the element receiving focus gets set to `tabindex="0"` and the element that just lost focus gets switched back to `tabindex="-1"`. Set focus, `element.focus()`, on the element that has `tabindex="0"`. This is called "roving tabindex".  A benefit of using roving tabindex to manage focus is that the browser will scroll the newly focused element into view.
 
 If the design calls for a specific element to be focused the next time the user moves focus into the toolbar with <kbd>Tab</kbd> or <kbd>Shift + Tab</kbd>, check if that target element has `tabindex="0"` when toolbar loses focus. 
 
-
+When the toolbar has focus within it, provide visual cues. When the an element within the toolbar has focus, a visual cue must be included on both the toolbar itself - to help the toolbar supports directional navigation with the arrow keys - and the control that has focus. The CSS pseudoclasses of `:focus` and `:focus-within` can be used to target both elements.
 
 ## Examples
 
+[Toolbar example from the <abbr title="world wide web consortium">W3C</abbr>](https://www.w3.org/TR/wai-aria-practices-1.2/examples/toolbar/toolbar.html)
+
 ## Accessibility Concerns
 
-## Best Practices
+Avoid including controls whose operation requires arrow keys used for toolbar navigation (right and left arrows, or top and bottom for vertical toolbars). If you must include such a control, make it the last control in the toolbar. For example, in a horizontal toolbar, a textbox could be included as the last element.
 
-### Prefer HTML
+If any of the otherwise interactive elements within the toolbar are disabled, consider letting them remain focusable so screen reader users can be made aware of their presence.
+
+
 
 ## Specifications
 
@@ -109,6 +107,8 @@ If the design calls for a specific element to be focused the next time the user 
 
 ## See Also
 
+- The CSS :focus pseudoclass
+- The CSS :focus-within pseudclass
 
 <section id="Quick_links">
 
