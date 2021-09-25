@@ -25,7 +25,7 @@ var result = event.which;
 
 ### Return value
 
-#### Return value for {{domxref("KeyboardEvent")}}
+#### Return value for {{domxref("KeyboardEvent")}} {{non-standard_inline}}
 
 - `event.which` contains the numeric code for a particular key pressed,
   depending on whether an alphanumeric or non-alphanumeric key was pressed. Please see deprecated
