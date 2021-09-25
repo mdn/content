@@ -15,11 +15,11 @@ browser-compat: javascript.builtins.Intl.Locale.hourCycles
 ---
 {{JSRef}}
 
-The **`Intl.Locale.prototype.hourCycles`** property is an accessor property which returns a list of 1 or more unique hour cycle identifiers for the `Locale`.
+The **`Intl.Locale.prototype.hourCycles`** property is an accessor property which returns a list of one or more unique hour cycle identifiers for the `Locale`.
 
 ## Description
 
-There are 2 main types of time keeping conventions (clocks) used around the world: the 12 hour clock and the 24 hour clock. The `hourCycles` property makes it easier for JavaScript programmers to access all clock types available for a particular locale. Like other additional locale data, hour cycle type is an [extension subtag](https://www.unicode.org/reports/tr35/#u_Extension), which extends the data contained in a locale string. The hour cycle type can have several different values, which are listed in the table below.
+There are two main types of time keeping conventions (clocks) used around the world: the 12 hour clock and the 24 hour clock. The `hourCycles` property makes it easier to access all clock types available for a particular locale. Like other additional locale data, the hour cycle type is an [extension subtag](https://www.unicode.org/reports/tr35/#u_Extension), which extends the data contained in a locale string. The hour cycle type can have several different values, which are listed in the table below.
 
 ### Valid hour cycle types
 
@@ -38,12 +38,12 @@ List supported hour cycles for a given `Locale`.
 
 ```js
 let arEG = new Intl.Locale("ar-EG");
-console.log(arEG.hourCycles); // Prints ["h12"]
+console.log(arEG.hourCycles); // logs ["h12"]
 ```
 
 ```js
 let jaJP = new Intl.Locale("ja-JP");
-console.log(jaJP.hourCycles); // Prints ["h23"]
+console.log(jaJP.hourCycles); // logs ["h23"]
 ```
 
 ## Specifications
