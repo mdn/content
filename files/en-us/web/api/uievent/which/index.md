@@ -28,9 +28,9 @@ var result = event.which;
 #### Return value for {{domxref("KeyboardEvent")}}
 
 - `event.which` contains the numeric code for a particular key pressed,
-  depending on whether an alphanumeric or non-alphanumeric key was pressed. Please see
+  depending on whether an alphanumeric or non-alphanumeric key was pressed. Please see deprecated
   {{domxref("KeyboardEvent.charCode")}} and {{domxref("KeyboardEvent.keyCode")}} for
-  more details.
+  more details. Consider {{domxref("KeyboardEvent.key")}} or {{domxref("KeyboardEvent.code")}} for new code.
 
 #### Return value for {{domxref("MouseEvent")}} {{non-standard_inline}}
 
@@ -43,6 +43,7 @@ A number representing a given button:
 
 For a mouse configured for left-handed use, the button actions are reversed. In this
 case, the values are read from right to left.
+Consider {{domxref("MouseEvent.button")}} for new code.
 
 ## Example
 
