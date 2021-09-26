@@ -45,6 +45,6 @@ bar **= 'foo' // NaN
 ## See also
 
 - [Assignment
-  operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
+  operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
 - [Exponentiation
   operator](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
