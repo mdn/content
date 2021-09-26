@@ -18,7 +18,7 @@ browser-compat: api.URLPattern
 The **`URLPattern`** interface matches URLs or parts of URLs against a pattern.
 The pattern can contain capturing groups that extract parts of the matched URL.
 
-More information about the syntax of patterns can be found on the API ovewview
+More information about the syntax of patterns can be found on the API overview
 page: [URL Pattern API](/en-US/docs/Web/API/URL_Pattern_API)
 
 {{AvailableInWorkers}}
