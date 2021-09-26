@@ -25,9 +25,10 @@ expressions.
 
 The grouping operator consists of a pair of parentheses around an expression or
 sub-expression to override the normal [operator
-precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) so that expressions with lower precedence can be evaluated before an
-expression with higher priority. As it sounds, it groups what's inside of
-the parentheses.
+precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+so that operators with lower precedence can be evaluated before an operator
+with higher precedence. As it sounds, it groups what's inside of the
+parentheses.
 
 ## Examples
 
@@ -53,6 +54,17 @@ a + (b * c)   // 7
 // which is equivalent to
 a * c + b * c // 9
 ```
+
+Notice in these examples that the left-to-right order of evaluation is still
+preserved. In other words, the order in which the *operators* evaluate has changed,
+but the order in which the *operands* evaluate has not.
+For example in this code:
+
+```js
+a() * (b() + c())
+```
+
+The function `a` will be called before the function `b`, which will be called before the function `c`.
 
 ## Specifications
 
