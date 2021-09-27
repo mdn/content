@@ -553,7 +553,7 @@ textarea.onkeyup = function(){
 <p>HTML has an element for marking up contact details — {{htmlelement("address")}}. This wraps around your contact details, for example:</p>
 
 <pre class="brush: html">&lt;address&gt;
-  &lt;p&gt;Chris Mills, Manchester, The Grim North, UK&lt;/p&gt;
+  Chris Mills, Manchester, The Grim North, UK
 &lt;/address&gt;</pre>
 
 <p>It could also include more complex markup, and other forms of contact information, for example:</p>
@@ -575,8 +575,12 @@ textarea.onkeyup = function(){
 <p>Note that something like this would also be ok, if the linked page contained the contact information:</p>
 
 <pre class="brush: html">&lt;address&gt;
-  &lt;p&gt;Page written by &lt;a href="../authors/chris-mills/"&gt;Chris Mills&lt;/a&gt;.&lt;/p&gt;
+  Page written by &lt;a href="../authors/chris-mills/"&gt;Chris Mills&lt;/a&gt;.
 &lt;/address&gt;</pre>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> The {{htmlelement("address")}} element should only be used to provide contact information for the document contained with the nearest {{htmlelement("article")}} or {{htmlelement("body")}} element. It would be correct to use it in the footer of a site to include the contact information of the entire site, on inside an article for the contact details of the author, but not to mark up a list of addresses unrelated to the content of that page.</p>
+</div>
 
 <h2 id="Superscript_and_subscript">Superscript and subscript</h2>
 
