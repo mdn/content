@@ -7,8 +7,14 @@ tags:
   - Reference
   - annotations
   - mark
+  - needscontent
 ---
-The `mark` landmark role semantically denotes HTML elements containing text that is marked/highlighted for reference purposes. This is semantically equivalent to the HTML {{HTMLElement('mark')}} element. If possible, you should use this element instead.
+
+{{draft}}
+
+The `mark` role semantically denotes HTML elements containing text that is marked/highlighted for reference purposes. This is semantically equivalent to the HTML {{HTMLElement('mark')}} element. If possible, you should use this element instead.
+
+> **Warning:** The `mark` roll be part of WAI-ARIA 1.3, which is still being drafted.
 
 ## Examples
 
@@ -29,15 +35,12 @@ The related comment is marked up using an HTML structure wrapped with a `<div>` 
 
 To associate the comment with the text being commented, we need to wrap the commented text with an element containing the `aria-details` attribute, the value of which should be the ID of the comment.
 
-## Accessibility concerns
-
-[Landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles#landmark_roles) are intended to be used sparingly, to identify larger overall sections of the document. Using too many landmark roles can create "noise" in screen readers, making it difficult to understand the overall layout of the page.
 
 ## Best practices
 
 ### Prefer HTML
 
-Using the [`<mark>`](/en-US/docs/Web/Accessibility/ARIA/Roles/mark_role) element will automatically communicate a section has a role of `mark`. If at all possible, prefer using it instead.
+Using the [`<mark>`](/en-US/docs/Web/Accessibility/ARIA/Roles/mark_role) element will automatically communicate a node has a role of `mark`. If at all possible, prefer using it instead.
 
 ## Specifications
 
