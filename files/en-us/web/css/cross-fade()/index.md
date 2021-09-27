@@ -82,11 +82,11 @@ cross-fade(url(white.png), url(black.png), 100%); /* fully white */
 
 In the implemented syntax, the two comma-separated images are declared first, followed by a comma and required percent value. Omitting the comma or percent invalidates the value. The percent is the opacity of the first declared image. The included percentage is subtracted from 100%, with the difference being the opacity of the second image.
 
-The green/red example (with the percentages totalling 150%) and the yellow/red/blue example (with three images) from the specification syntax section, are not possible in this implementation.
+The green/red example (with the percentages totaling 150%) and the yellow/red/blue example (with three images) from the specification syntax section, are not possible in this implementation.
 
 ## Accessibility concerns
 
-Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document. When using background images, make sure the contrast in color is great enough that any text is legible over the image as well as if the images is missing.
+Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document. When using background images, make sure the contrast in color is great enough that any text is legible over the image as well as if the images are missing.
 
 - [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_%E2%80%94_Providing_text_alternatives_for_non-text_content)
 - [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
