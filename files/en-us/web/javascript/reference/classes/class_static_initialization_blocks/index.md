@@ -145,7 +145,7 @@ getDPrivateField(new D('private'));
 
 ### Workarounds
 
-Prior to ES13 more complex static initialization might be achieved by using a static method that is called after the other properties to perform static initialization, or having a method that is external to the class that performs initialisation tasks.
+Prior to ES13 more complex static initialization might be achieved by using a static method that is called after the other properties to perform static initialization, or having a method that is external to the class that performs initialization tasks.
 
 In both cases the approach is less elegant, and does not grant access to private methods in the class.
 
