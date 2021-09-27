@@ -6,4 +6,4 @@ tags:
   - Index
   - MDN Meta
 ---
-<p>{{Index("/en-US/docs/Web/HTML")}}</p>
+{{Index("/en-US/docs/Web/HTML")}}

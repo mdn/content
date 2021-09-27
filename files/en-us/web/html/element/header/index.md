@@ -8,95 +8,160 @@ tags:
   - Reference
 browser-compat: html.elements.header
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;header&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements.</span></p>
+The **`<header>`** [HTML](/en-US/docs/Web/HTML) element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/header.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/header.html", "tabbed-standard")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content">palpable content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, but with no <code>&lt;header&gt;</code> or {{HTMLElement("footer")}} descendant.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a>. Note that a <code>&lt;header&gt;</code> element must not be a descendant of an {{HTMLElement("address")}}, {{HTMLElement("footer")}} or another {{HTMLElement("header")}} element.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_role">banner</a>, or <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a> if a descendant of an <code><a href="/en-US/docs/Web/HTML/Element/article">article</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/aside">aside</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/main">main</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/nav">nav</a></code> or <code><a href="/en-US/docs/Web/HTML/Element/section">section</a></code> element, or an element with <code>role=<a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role">article</a></code>, <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role">complementary</a></code>, <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role">main</a></code>, <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role">navigation</a></code> or <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role">region</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>{{ARIARole("group")}}, {{ARIARole("presentation")}} or {{ARIARole("none")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content"
+          >palpable content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >, but with no <code>&#x3C;header></code> or
+        {{HTMLElement("footer")}} descendant.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >flow content</a
+        >. Note that a <code>&#x3C;header></code> element must not be a
+        descendant of an {{HTMLElement("address")}},
+        {{HTMLElement("footer")}} or another
+        {{HTMLElement("header")}} element.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_role">banner</a
+        >, or
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >no corresponding role</a
+        >
+        if a descendant of an
+        <code><a href="/en-US/docs/Web/HTML/Element/article">article</a></code
+        >, <code><a href="/en-US/docs/Web/HTML/Element/aside">aside</a></code
+        >, <code><a href="/en-US/docs/Web/HTML/Element/main">main</a></code
+        >, <code><a href="/en-US/docs/Web/HTML/Element/nav">nav</a></code> or
+        <code><a href="/en-US/docs/Web/HTML/Element/section">section</a></code>
+        element, or an element with
+        <code
+          >role=<a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role"
+            >article</a
+          ></code
+        >,
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role"
+            >complementary</a
+          ></code
+        >,
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role"
+            >main</a
+          ></code
+        >,
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role"
+            >navigation</a
+          ></code
+        >
+        or
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role"
+            >region</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>
+        {{ARIARole("group")}}, {{ARIARole("presentation")}} or
+        {{ARIARole("none")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>The <code>&lt;header&gt;</code> element is not sectioning content and therefore does not introduce a new section in the <a href="/en-US/docs/Web/HTML/Element/Heading_Elements">outline</a>. That said, a <code>&lt;header&gt;</code> element is intended to usually contain the surrounding section's heading (an <code>h1</code>–<code>h6</code> element), but this is <strong>not</strong> required.</p>
+The `<header>` element is not sectioning content and therefore does not introduce a new section in the [outline](/en-US/docs/Web/HTML/Element/Heading_Elements). That said, a `<header>` element is intended to usually contain the surrounding section's heading (an `h1`–`h6` element), but this is **not** required.
 
-<h3 id="Historical_Usage">Historical Usage</h3>
+### Historical Usage
 
-<p>Although the <code>&lt;header&gt;</code> element didn't make its way into specifications until {{glossary("HTML5")}}, it actually existed at the very beginning of HTML. As seen in <a href="http://info.cern.ch/">the very first website</a>, it was originally used as the <code>&lt;head&gt;</code> element. At some point, it was decided to use a different name. This allowed <code>&lt;header&gt;</code> to be free to fill a different role later on.</p>
+Although the `<header>` element didn't make its way into specifications until {{glossary("HTML5")}}, it actually existed at the very beginning of HTML. As seen in [the very first website](http://info.cern.ch/), it was originally used as the `<head>` element. At some point, it was decided to use a different name. This allowed `<header>` to be free to fill a different role later on.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element only includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Page_Header">Page Header</h3>
+### Page Header
 
-<pre class="brush: html">&lt;header&gt;
-  &lt;h1&gt;Main Page Title&lt;/h1&gt;
-  &lt;img src="mdn-logo-sm.png" alt="MDN logo"&gt;
-&lt;/header&gt;
-</pre>
+```html
+<header>
+  <h1>Main Page Title</h1>
+  <img src="mdn-logo-sm.png" alt="MDN logo">
+</header>
+```
 
-<h3 id="Article_Header">Article Header</h3>
+### Article Header
 
-<pre class="brush: html">&lt;article&gt;
-  &lt;header&gt;
-    &lt;h2&gt;The Planet Earth&lt;/h2&gt;
-    &lt;p&gt;Posted on Wednesday, &lt;time datetime="2017-10-04"&gt;4 October 2017&lt;/time&gt; by Jane Smith&lt;/p&gt;
-  &lt;/header&gt;
-  &lt;p&gt;We live on a planet that's blue and green, with so many things still unseen.&lt;/p&gt;
-  &lt;p&gt;&lt;a href="https://example.com/the-planet-earth/"&gt;Continue reading....&lt;/a&gt;&lt;/p&gt;
-&lt;/article&gt;
-</pre>
+```html
+<article>
+  <header>
+    <h2>The Planet Earth</h2>
+    <p>Posted on Wednesday, <time datetime="2017-10-04">4 October 2017</time> by Jane Smith</p>
+  </header>
+  <p>We live on a planet that's blue and green, with so many things still unseen.</p>
+  <p><a href="https://example.com/the-planet-earth/">Continue reading....</a></p>
+</article>
+```
 
-<h2 id="Accessibility">Accessibility</h2>
+## Accessibility
 
-<p>The <code>&lt;header></code> element defines a <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_role"><code>banner</code></a> landmark when its context is the {{HTMLElement('body')}} element. The HTML header element is not considered a banner landmark when it is descendant of an  {{HTMLElement('article')}},  {{HTMLElement('aside')}},  {{HTMLElement('main')}},  {{HTMLElement('nav')}}, or {{HTMLElement('section')}} element. 
+The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_role) landmark when its context is the {{HTMLElement('body')}} element. The HTML header element is not considered a banner landmark when it is descendant of an {{HTMLElement('article')}}, {{HTMLElement('aside')}}, {{HTMLElement('main')}}, {{HTMLElement('nav')}}, or {{HTMLElement('section')}} element.
 
+## Specifications
 
-<h2 id="Specifications">Specifications</h2>
+{{Specifications}}
 
-<p>{{Specifications}}</p>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}}.</li>
- <li><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">Using HTML sections and outlines</a></li>
-</ul>
+*   Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}}.
+*   [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)

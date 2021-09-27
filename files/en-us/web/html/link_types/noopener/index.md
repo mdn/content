@@ -8,20 +8,18 @@ tags:
   - Reference
 browser-compat: html.elements.a.rel.noopener
 ---
-<p>The <strong><code>noopener</code></strong> keyword for the <code><a href="/en-US/docs/Web/HTML/Attributes/rel">rel</a></code> attribute of the {{HTMLElement("a")}}, {{HTMLElement("area")}}, and {{HTMLElement("form")}} elements instructs the browser to navigate to the target resource without granting the new browsing context access to the document that opened it — by not setting the {{DOMxRef("Window.opener")}} property on the opened window (it returns <code>null</code>).</p>
+The **`noopener`** keyword for the [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute of the {{HTMLElement("a")}}, {{HTMLElement("area")}}, and {{HTMLElement("form")}} elements instructs the browser to navigate to the target resource without granting the new browsing context access to the document that opened it — by not setting the {{DOMxRef("Window.opener")}} property on the opened window (it returns `null`).
 
-<p>This is especially useful when opening untrusted links, in order to ensure they cannot tamper with the originating document via the {{DOMxRef("Window.opener")}} property (see <a href="https://mathiasbynens.github.io/rel-noopener/">About rel=noopener</a> for more details), while still providing the <code>Referer</code> HTTP header (unless <code>noreferrer</code> is used as well).</p>
+This is especially useful when opening untrusted links, in order to ensure they cannot tamper with the originating document via the {{DOMxRef("Window.opener")}} property (see [About rel=noopener](https://mathiasbynens.github.io/rel-noopener/) for more details), while still providing the `Referer` HTTP header (unless `noreferrer` is used as well).
 
-<p>Note that when <code>noopener</code> is used, nonempty target names other than <code>_top</code>, <code>_self</code>, and <code>_parent</code> are all treated like <code>_blank</code> in terms of deciding whether to open a new window/tab.</p>
+Note that when `noopener` is used, nonempty target names other than `_top`, `_self`, and `_parent` are all treated like `_blank` in terms of deciding whether to open a new window/tab.
 
-<div class="notecard note">
- <p><strong>Note:</strong> Setting <code>target="_blank"</code> on <code>&lt;a&gt;</code> elements now implicitly provides the same <code>rel</code> behavior as setting <code>rel="noopener"</code> which does not set <code>window.opener</code>. See <a href="/en-US/docs/Web/HTML/Element/a#browser_compatibility">browser compatibility</a> for support status.</p>
-</div>
+> **Note:** Setting `target="_blank"` on `<a>` elements now implicitly provides the same `rel` behavior as setting `rel="noopener"` which does not set `window.opener`. See [browser compatibility](/en-US/docs/Web/HTML/Element/a#browser_compatibility) for support status.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

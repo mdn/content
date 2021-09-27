@@ -9,91 +9,119 @@ tags:
   - Web
 browser-compat: html.elements.em
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;em&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element marks text that has stress emphasis. The <code>&lt;em&gt;</code> element can be nested, with each level of nesting indicating a greater degree of emphasis.</p>
+The **`<em>`** [HTML](/en-US/docs/Web/HTML) element marks text that has stress emphasis. The `<em>` element can be nested, with each level of nesting indicating a greater degree of emphasis.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/em.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/em.html", "tabbed-shorter")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>Any</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the {{domxref("HTMLSpanElement")}} interface for this element.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >Phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>
+        {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4)
+        inclusive, Firefox implements the
+        {{domxref("HTMLSpanElement")}} interface for this element.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element only includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>The <code>&lt;em&gt;</code> element is for words that have a stressed emphasis compared to surrounding text, which is often limited to a word or words of a sentence and affects the meaning of the sentence itself.</p>
+The `<em>` element is for words that have a stressed emphasis compared to surrounding text, which is often limited to a word or words of a sentence and affects the meaning of the sentence itself.
 
-<p>Typically this element is displayed in italic type. However, it should not be used to apply italic styling; use the CSS {{cssxref("font-style")}} property for that purpose. Use the {{HTMLElement("cite")}} element to mark the title of a work (book, play, song, etc.). Use the {{HTMLElement("i")}} element to mark text that is in an alternate tone or mood, which covers many common situations for italics such as scientific names or words in other languages. Use the {{HTMLElement("strong")}} element to mark text that has greater importance than surrounding text.</p>
+Typically this element is displayed in italic type. However, it should not be used to apply italic styling; use the CSS {{cssxref("font-style")}} property for that purpose. Use the {{HTMLElement("cite")}} element to mark the title of a work (book, play, song, etc.). Use the {{HTMLElement("i")}} element to mark text that is in an alternate tone or mood, which covers many common situations for italics such as scientific names or words in other languages. Use the {{HTMLElement("strong")}} element to mark text that has greater importance than surrounding text.
 
-<h3>&lt;i&gt; vs. &lt;em&gt;</h3>
+### \<i> vs. \<em>
 
-<p>New developers are often confused at seeing multiple elements that produce similar results. <code>&lt;em&gt;</code> and <code>&lt;i&gt;</code> are a common example, since they both italicize text. What's the difference? Which should you use?</p>
+New developers are often confused at seeing multiple elements that produce similar results. `<em>` and `<i>` are a common example, since they both italicize text. What's the difference? Which should you use?
 
-<p>By default, the visual result is the same. However, the semantic meaning is different. The <code>&lt;em&gt;</code> element represents stress emphasis of its contents, while the <code>&lt;i&gt;</code> element represents text that is set off from the normal prose, such a foreign word, fictional character thoughts, or when the text refers to the definition of a word instead of representing its semantic meaning. (The title of a work, such as the name of a book or movie, should use <code>&lt;cite&gt;</code>.)</p>
+By default, the visual result is the same. However, the semantic meaning is different. The `<em>` element represents stress emphasis of its contents, while the `<i>` element represents text that is set off from the normal prose, such a foreign word, fictional character thoughts, or when the text refers to the definition of a word instead of representing its semantic meaning. (The title of a work, such as the name of a book or movie, should use `<cite>`.)
 
-<p>This means the right one to use depends on the situation. Neither is for purely decorative purposes, that's what CSS styling is for.</p>
+This means the right one to use depends on the situation. Neither is for purely decorative purposes, that's what CSS styling is for.
 
-<p>An example for <code>&lt;em&gt;</code> could be: "Just <em>do</em> it already!", or: "We <em>had</em> to do something about it". A person or software reading the text would pronounce the words in italics with an emphasis, using verbal stress.</p>
+An example for `<em>` could be: "Just *do* it already!", or: "We *had* to do something about it". A person or software reading the text would pronounce the words in italics with an emphasis, using verbal stress.
 
-<p>An example for <code>&lt;i&gt;</code> could be: "The <em>Queen Mary</em> sailed last night". Here, there is no added emphasis or importance on the word "Queen Mary". It is merely indicated that the object in question is not a queen named Mary, but a ship named <em>Queen Mary</em>. Another example for <code>&lt;i&gt;</code> could be: "The word <em>the</em> is an article".</p>
+An example for `<i>` could be: "The *Queen Mary* sailed last night". Here, there is no added emphasis or importance on the word "Queen Mary". It is merely indicated that the object in question is not a queen named Mary, but a ship named *Queen Mary*. Another example for `<i>` could be: "The word *the* is an article".
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The <code>&lt;em&gt;</code> element is often used to indicate an implicit or explicit contrast.</p>
+The `<em>` element is often used to indicate an implicit or explicit contrast.
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   In HTML 5, what was previously called
-  &lt;em&gt;block-level&lt;/em&gt; content is now called
-  &lt;em&gt;flow&lt;/em&gt; content.
-&lt;/p&gt;</pre>
+  <em>block-level</em> content is now called
+  <em>flow</em> content.
+</p>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTMLElement("i")}}</li>
-</ul>
+*   {{HTMLElement("i")}}

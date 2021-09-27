@@ -13,139 +13,147 @@ tags:
   - picture
 browser-compat: html.elements.picture
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;picture&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element contains zero or more {{HTMLElement("source")}} elements and one {{HTMLElement("img")}} element to offer alternative versions of an image for different display/device scenarios.</p>
+The **`<picture>`** [HTML](/en-US/docs/Web/HTML) element contains zero or more {{HTMLElement("source")}} elements and one {{HTMLElement("img")}} element to offer alternative versions of an image for different display/device scenarios.
 
-<p>The browser will consider each child <code>&lt;source&gt;</code> element and choose the best match among them. If no matches are found—or the browser doesn't support the <code>&lt;picture&gt;</code> element—the URL of the <code>&lt;img&gt;</code> element's {{htmlattrxref("src", "img")}} attribute is selected. The selected image is then presented in the space occupied by the <code>&lt;img&gt;</code> element.</p>
+The browser will consider each child `<source>` element and choose the best match among them. If no matches are found—or the browser doesn't support the `<picture>` element—the URL of the `<img>` element's {{htmlattrxref("src", "img")}} attribute is selected. The selected image is then presented in the space occupied by the `<img>` element.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/picture.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/picture.html", "tabbed-standard")}}
 
-<p>To decide which URL to load, the {{Glossary("user agent")}} examines each <code>&lt;source&gt;</code>'s {{htmlattrxref("srcset", "source")}}, {{htmlattrxref("media", "source")}}, and {{htmlattrxref("type", "source")}} attributes to select a compatible image that best matches the current layout and capabilities of the display device.</p>
+To decide which URL to load, the {{Glossary("user agent")}} examines each `<source>`'s {{htmlattrxref("srcset", "source")}}, {{htmlattrxref("media", "source")}}, and {{htmlattrxref("type", "source")}} attributes to select a compatible image that best matches the current layout and capabilities of the display device.
 
-<p>The <code>&lt;img&gt;</code> element serves two purposes:</p>
+The `<img>` element serves two purposes:
 
-<ol>
- <li>It describes the size and other attributes of the image and its presentation.</li>
- <li>It provides a fallback in case none of the offered <code>&lt;source&gt;</code> elements are able to provide a usable image.</li>
-</ol>
+1.  It describes the size and other attributes of the image and its presentation.
+2.  It provides a fallback in case none of the offered `<source>` elements are able to provide a usable image.
 
-<p>Common use cases for <code>&lt;picture&gt;</code>:</p>
+Common use cases for `<picture>`:
 
-<ul>
- <li><strong>Art direction.</strong> Cropping or modifying images for different <code>media</code> conditions (for example, loading a simpler version of an image which has too many details, on smaller displays).</li>
- <li><strong>Offering alternative image formats</strong>, for cases where certain formats are not supported.
-  <div class="note">
-  <p><strong>Note:</strong> For example, newer formats like <a href="/en-US/docs/Web/Media/Formats/Image_types#avif">AVIF</a> or <a href="/en-US/docs/Web/Media/Formats/Image_types#webp">WEBP</a> have many advantages, but  might not be supported by the browser. A list of supported image formats can be found in: <a href="/en-US/docs/Web/Media/Formats/Image_types">Image file type and format guide</a>.</p>
-  </div>
- </li>
- <li><strong>Saving bandwidth and speeding page load times</strong> by loading the most appropriate image for the viewer's display.</li>
-</ul>
+*   **Art direction.** Cropping or modifying images for different `media` conditions (for example, loading a simpler version of an image which has too many details, on smaller displays).
+*   **Offering alternative image formats**, for cases where certain formats are not supported.
 
-<p>If providing higher-density versions of an image for high-DPI (Retina) display, use {{htmlattrxref("srcset", "img")}} on the <code>&lt;img&gt;</code> element instead. This lets browsers opt for lower-density versions in data-saving modes, and you don't have to write explicit <code>media</code> conditions.</p>
+    > **Note:** For example, newer formats like [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif) or [WEBP](/en-US/docs/Web/Media/Formats/Image_types#webp) have many advantages, but  might not be supported by the browser. A list of supported image formats can be found in: [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types).
+*   **Saving bandwidth and speeding page load times** by loading the most appropriate image for the viewer's display.
+
+If providing higher-density versions of an image for high-DPI (Retina) display, use {{htmlattrxref("srcset", "img")}} on the `<img>` element instead. This lets browsers opt for lower-density versions in data-saving modes, and you don't have to write explicit `media` conditions.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, phrasing content, embedded content</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td>Zero or more {{HTMLElement("source")}} elements, followed by one {{HTMLElement("img")}} element, optionally intermixed with script-supporting elements.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that allows embedded content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>No <code>role</code> permitted</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLPictureElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >, phrasing content, embedded content
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        Zero or more {{HTMLElement("source")}} elements, followed by one
+        {{HTMLElement("img")}} element, optionally intermixed with
+        script-supporting elements.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>Any element that allows embedded content.</td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLPictureElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element includes only <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element includes only [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>You can use the {{cssxref("object-position")}} property to adjust the positioning of the image within the element's frame, and the {{cssxref("object-fit")}} property to control how the image is resized to fit within the frame.</p>
+You can use the {{cssxref("object-position")}} property to adjust the positioning of the image within the element's frame, and the {{cssxref("object-fit")}} property to control how the image is resized to fit within the frame.
 
-<div class="note">
-<p><strong>Note:</strong> Use these properties on the child <code>&lt;img&gt;</code> element, <strong>not</strong> the <code>&lt;picture&gt;</code> element.</p>
-</div>
+> **Note:** Use these properties on the child `<img>` element, **not** the `<picture>` element.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>These examples demonstrate how different attributes of the {{HTMLElement("source")}} element change the selection of the image inside <code>&lt;picture&gt;</code>.</p>
+These examples demonstrate how different attributes of the {{HTMLElement("source")}} element change the selection of the image inside `<picture>`.
 
-<h3 id="The_media_attribute">The media attribute</h3>
+### The media attribute
 
-<p>The <code>media</code> attribute specifies a media condition (similar to a media query) that the user agent will evaluate for each {{HTMLElement("source")}} element.</p>
+The `media` attribute specifies a media condition (similar to a media query) that the user agent will evaluate for each {{HTMLElement("source")}} element.
 
-<p>If the {{HTMLElement("source")}}'s media condition evaluates to <code>false</code>, the browser skips it and evaluates the next element inside <code>&lt;picture&gt;</code>.</p>
+If the {{HTMLElement("source")}}'s media condition evaluates to `false`, the browser skips it and evaluates the next element inside `<picture>`.
 
-<pre class="brush: html">&lt;picture&gt;
-  &lt;source srcset="mdn-logo-wide.png" media="(min-width: 600px)"&gt;
-  &lt;img src="mdn-logo-narrow.png" alt="MDN"&gt;
-&lt;/picture&gt;
-</pre>
+```html
+<picture>
+  <source srcset="mdn-logo-wide.png" media="(min-width: 600px)">
+  <img src="mdn-logo-narrow.png" alt="MDN">
+</picture>
+```
 
-<h3 id="The_srcset_attribute">The srcset attribute</h3>
+### The srcset attribute
 
-<p>The <a href="/en-US/docs/Web/HTML/Element/source#attr-srcset">{{htmlattrdef("srcset")}}</a> attribute is used to offer list of possible images <em>based on size</em>.</p>
+The [{{htmlattrdef("srcset")}}](/en-US/docs/Web/HTML/Element/source#attr-srcset) attribute is used to offer list of possible images *based on size*.
 
-<p>It is composed of a comma-separated list of image descriptors. Each image descriptor is composed of a URL of the image, and <em>either...</em></p>
+It is composed of a comma-separated list of image descriptors. Each image descriptor is composed of a URL of the image, and *either...*
 
-<ul>
- <li>a <em>width descriptor</em>, followed by a <code>w</code> (such as <code>300w</code>);<br>
-  <em>OR</em></li>
- <li>a <em>pixel density descriptor</em>, followed by an <code>x</code> (such as <code>2x</code>) to serve a high-res image for high-DPI screens.</li>
-</ul>
+*   a *width descriptor*, followed by a `w` (such as `300w`);
+    *OR*
+*   a *pixel density descriptor*, followed by an `x` (such as `2x`) to serve a high-res image for high-DPI screens.
 
-<pre class="brush: html">&lt;picture&gt;
-  &lt;source srcset="logo-768.png 768w, logo-768-1.5x.png 1.5x"&gt;
-  &lt;source srcset="logo-480.png, logo-480-2x.png 2x"&gt;
-  &lt;img src="logo-320.png" alt="logo"&gt;
-&lt;/picture&gt;</pre>
+```html
+<picture>
+  <source srcset="logo-768.png 768w, logo-768-1.5x.png 1.5x">
+  <source srcset="logo-480.png, logo-480-2x.png 2x">
+  <img src="logo-320.png" alt="logo">
+</picture>
+```
 
-<h3 id="The_type_attribute">The type attribute</h3>
+### The type attribute
 
-<p>The <code>type</code> attribute specifies a <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a> for the resource URL(s) in the {{HTMLElement("source")}} element's <code>srcset</code> attribute. If the user agent does not support the given type, the {{HTMLElement("source")}} element is skipped.</p>
+The `type` attribute specifies a [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) for the resource URL(s) in the {{HTMLElement("source")}} element's `srcset` attribute. If the user agent does not support the given type, the {{HTMLElement("source")}} element is skipped.
 
-<pre class="brush: html">&lt;picture&gt;
-  &lt;source srcset="logo.webp" type="image/webp"&gt;
-  &lt;img src="logo.png" alt="logo"&gt;
-&lt;/picture&gt;
-</pre>
+```html
+<picture>
+  <source srcset="logo.webp" type="image/webp">
+  <img src="logo.png" alt="logo">
+</picture>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTMLElement("img")}} element</li>
- <li>{{HTMLElement("source")}} element</li>
- <li>Positioning and sizing the picture within its frame: {{cssxref("object-position")}} and {{cssxref("object-fit")}}</li>
- <li><a href="/en-US/docs/Web/Media/Formats/Image_types">Image file type and format guide</a></li>
-</ul>
+*   {{HTMLElement("img")}} element
+*   {{HTMLElement("source")}} element
+*   Positioning and sizing the picture within its frame: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
+*   [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)

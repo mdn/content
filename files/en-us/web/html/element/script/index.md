@@ -15,191 +15,199 @@ tags:
   - tag
 browser-compat: html.elements.script
 ---
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;script&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element is used to embed executable code or data; this is typically used to embed or refer to JavaScript code. The <code>&lt;script&gt;</code> element can also be used with other languages, such as <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a>'s GLSL shader programming language and <a href="/en-US/docs/Glossary/JSON">JSON</a>.</p>
+The **`<script>`** [HTML](/en-US/docs/Web/HTML) element is used to embed executable code or data; this is typically used to embed or refer to JavaScript code. The `<script>` element can also be used with other languages, such as [WebGL](/en-US/docs/Web/API/WebGL_API)'s GLSL shader programming language and [JSON](/en-US/docs/Glossary/JSON).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content">Metadata content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td>Dynamic script such as <code>text/javascript</code>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content">metadata content</a>, or any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>No <code>role</code> permitted</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLScriptElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
+          >Metadata content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >Phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>Dynamic script such as <code>text/javascript</code>.</td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
+          >metadata content</a
+        >, or any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLScriptElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("async")}}</dt>
- <dd>
- <p>For classic scripts, if the <code>async</code> attribute is present, then the classic script will be fetched in parallel to parsing and evaluated as soon as it is available.</p>
+*   {{htmlattrdef("async")}}
+    *   : For classic scripts, if the `async` attribute is present, then the classic script will be fetched in parallel to parsing and evaluated as soon as it is available.
 
- <p>For <a href="/en-US/docs/Web/JavaScript/Guide/Modules">module scripts</a>, if the <code>async</code> attribute is present then the scripts and all their dependencies will be executed in the defer queue, therefore they will get fetched in parallel to parsing and evaluated as soon as they are available.</p>
+        For [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules), if the `async` attribute is present then the scripts and all their dependencies will be executed in the defer queue, therefore they will get fetched in parallel to parsing and evaluated as soon as they are available.
 
- <p>This attribute allows the elimination of <strong>parser-blocking JavaScript</strong> where the browser would have to load and evaluate scripts before continuing to parse. <code>defer</code> has a similar effect in this case.</p>
+        This attribute allows the elimination of **parser-blocking JavaScript** where the browser would have to load and evaluate scripts before continuing to parse. `defer` has a similar effect in this case.
 
- <p>This is a boolean attribute: the presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.</p>
+        This is a boolean attribute: the presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.
 
- <p>See {{anch("Browser compatibility")}} for notes on browser support. See also <a href="/en-US/docs/Games/Techniques/Async_scripts">Async scripts for asm.js</a>.</p>
- </dd>
- <dt>{{htmlattrdef("crossorigin")}}</dt>
- <dd>Normal <code>script</code> elements pass minimal information to the {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} for scripts which do not pass the standard {{Glossary("CORS")}} checks. To allow error logging for sites which use a separate domain for static media, use this attribute. See <a href="/en-US/docs/Web/HTML/Attributes/crossorigin">CORS settings attributes</a> for a more descriptive explanation of its valid arguments.</dd>
- <dt>{{htmlattrdef("defer")}}</dt>
- <dd>
- <p>This Boolean attribute is set to indicate to a browser that the script is meant to be executed after the document has been parsed, but before firing {{event("DOMContentLoaded")}}.</p>
+        See {{anch("Browser compatibility")}} for notes on browser support. See also [Async scripts for asm.js](/en-US/docs/Games/Techniques/Async_scripts).
+*   {{htmlattrdef("crossorigin")}}
+    *   : Normal `script` elements pass minimal information to the {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} for scripts which do not pass the standard {{Glossary("CORS")}} checks. To allow error logging for sites which use a separate domain for static media, use this attribute. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for a more descriptive explanation of its valid arguments.
+*   {{htmlattrdef("defer")}}
+    *   : This Boolean attribute is set to indicate to a browser that the script is meant to be executed after the document has been parsed, but before firing {{event("DOMContentLoaded")}}.
 
- <p>Scripts with the <code>defer</code> attribute will prevent the <code>DOMContentLoaded</code> event from firing until the script has loaded and finished evaluating.</p>
+        Scripts with the `defer` attribute will prevent the `DOMContentLoaded` event from firing until the script has loaded and finished evaluating.
 
- <div class="warning">
- <p><strong>Warning:</strong> This attribute must not be used if the <code>src</code> attribute is absent (i.e. for inline scripts), in this case it would have no effect.</p>
+        > **Warning:** This attribute must not be used if the `src` attribute is absent (i.e. for inline scripts), in this case it would have no effect.
+        >
+        > The `defer` attribute has no effect on [module scripts ](/en-US/docs/Web/JavaScript/Guide/Modules)— they defer by default.
 
- <p>The <code>defer</code> attribute has no effect on <a href="/en-US/docs/Web/JavaScript/Guide/Modules">module scripts </a>— they defer by default.</p>
- </div>
+        Scripts with the `defer` attribute will execute in the order in which they appear in the document.
 
- <p>Scripts with the <code>defer</code> attribute will execute in the order in which they appear in the document.</p>
+        This attribute allows the elimination of **parser-blocking JavaScript** where the browser would have to load and evaluate scripts before continuing to parse. `async` has a similar effect in this case.
+*   {{htmlattrdef("integrity")}}
+    *   : This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered free of unexpected manipulation. See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity).
+*   {{htmlattrdef("nomodule")}}
+    *   : This Boolean attribute is set to indicate that the script should not be executed in browsers that support[ ES2015 modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) — in effect, this can be used to serve fallback scripts to older browsers that do not support modular JavaScript code.
+*   {{htmlattrdef("nonce")}}
+    *   : A cryptographic nonce (number used once) to allow scripts in a [script-src Content-Security-Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.
+*   {{htmlattrdef("referrerpolicy")}}
+    *   : Indicates which [referrer](/en-US/docs/Web/API/Document/referrer) to send when fetching the script, or resources fetched by the script:
 
- <p>This attribute allows the elimination of <strong>parser-blocking JavaScript</strong> where the browser would have to load and evaluate scripts before continuing to parse. <code>async</code> has a similar effect in this case.</p>
- </dd>
- <dt>{{htmlattrdef("integrity")}}</dt>
- <dd>This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered free of unexpected manipulation. See <a href="/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a>.</dd>
- <dt>{{htmlattrdef("nomodule")}}</dt>
- <dd>This Boolean attribute is set to indicate that the script should not be executed in browsers that support<a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/"> ES2015 modules</a> — in effect, this can be used to serve fallback scripts to older browsers that do not support modular JavaScript code.</dd>
- <dt>{{htmlattrdef("nonce")}}</dt>
- <dd>A cryptographic nonce (number used once) to allow scripts in a <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src">script-src Content-Security-Policy</a>. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.</dd>
- <dt>{{htmlattrdef("referrerpolicy")}}</dt>
- <dd>Indicates which <a href="/en-US/docs/Web/API/Document/referrer">referrer</a> to send when fetching the script, or resources fetched by the script:
-  <ul>
-  <li><code>no-referrer</code>: The {{HTTPHeader("Referer")}} header will not be sent.</li>
-  <li><code>no-referrer-when-downgrade</code>: The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).</li>
-  <li><code>origin</code>: The sent referrer will be limited to the origin of the referring page: its <a href="/en-US/docs/Learn/Common_questions/What_is_a_URL">scheme</a>, {{Glossary("host")}}, and {{Glossary("port")}}.</li>
-  <li><code>origin-when-cross-origin</code>: The referrer sent to other origins will be limited to the scheme, the host, and the port. Navigations on the same origin will still include the path.</li>
-  <li><code>same-origin</code>: A referrer will be sent for {{Glossary("Same-origin policy", "same origin")}}, but cross-origin requests will contain no referrer information.</li>
-  <li><code>strict-origin</code>: Only send the origin of the document as the referrer when the protocol security level stays the same (HTTPS→HTTPS), but don't send it to a less secure destination (HTTPS→HTTP).</li>
-  <li><code>strict-origin-when-cross-origin</code> (default): Send a full URL when performing a same-origin request, only send the origin when the protocol security level stays the same (HTTPS→HTTPS), and send no header to a less secure destination (HTTPS→HTTP).</li>
-  <li><code>unsafe-url</code>: The referrer will include the origin <em>and</em> the path (but not the <a href="/en-US/docs/Web/API/HTMLAnchorElement/hash">fragment</a>, <a href="/en-US/docs/Web/API/HTMLAnchorElement/password">password</a>, or <a href="/en-US/docs/Web/API/HTMLAnchorElement/username">username</a>). <strong>This value is unsafe</strong>, because it leaks origins and paths from TLS-protected resources to insecure origins.</li>
- </ul>
+        *   `no-referrer`: The {{HTTPHeader("Referer")}} header will not be sent.
+        *   `no-referrer-when-downgrade`: The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
+        *   `origin`: The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn/Common_questions/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
+        *   `origin-when-cross-origin`: The referrer sent to other origins will be limited to the scheme, the host, and the port. Navigations on the same origin will still include the path.
+        *   `same-origin`: A referrer will be sent for {{Glossary("Same-origin policy", "same origin")}}, but cross-origin requests will contain no referrer information.
+        *   `strict-origin`: Only send the origin of the document as the referrer when the protocol security level stays the same (HTTPS→HTTPS), but don't send it to a less secure destination (HTTPS→HTTP).
+        *   `strict-origin-when-cross-origin` (default): Send a full URL when performing a same-origin request, only send the origin when the protocol security level stays the same (HTTPS→HTTPS), and send no header to a less secure destination (HTTPS→HTTP).
+        *   `unsafe-url`: The referrer will include the origin *and* the path (but not the [fragment](/en-US/docs/Web/API/HTMLAnchorElement/hash), [password](/en-US/docs/Web/API/HTMLAnchorElement/password), or [username](/en-US/docs/Web/API/HTMLAnchorElement/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
 
- <div class="notecard note">
- <p><strong>Note:</strong> An empty string value (<code>""</code>) is both the default value, and a fallback value if <code>referrerpolicy</code> is not supported. If <code>referrerpolicy</code> is not explicitly specified on the <code>&lt;script&gt;</code> element, it will adopt a higher-level referrer policy, i.e. one set on the whole document or domain. If a higher-level policy is not available, the empty string is treated as being equivalent to <code>strict-origin-when-cross-origin</code>.</p>
- </div>
- </dd>
- <dt>{{htmlattrdef("src")}}</dt>
- <dd>
- <p>This attribute specifies the <abbr>URI</abbr> of an external script; this can be used as an alternative to embedding a script directly within a document.</p>
- </dd>
- <dt>{{htmlattrdef("type")}}</dt>
- <dd>
- <p>This attribute indicates the type of script represented. The value of this attribute will be in one of the following categories:</p>
+        > **Note:** An empty string value (`""`) is both the default value, and a fallback value if `referrerpolicy` is not supported. If `referrerpolicy` is not explicitly specified on the `<script>` element, it will adopt a higher-level referrer policy, i.e. one set on the whole document or domain. If a higher-level policy is not available, the empty string is treated as being equivalent to `strict-origin-when-cross-origin`.
+*   {{htmlattrdef("src")}}
+    *   : This attribute specifies the URI of an external script; this can be used as an alternative to embedding a script directly within a document.
+*   {{htmlattrdef("type")}}
+    *   : This attribute indicates the type of script represented. The value of this attribute will be in one of the following categories:
 
- <ul>
-  <li><strong>Omitted or a JavaScript MIME type:</strong> This indicates the script is JavaScript. The HTML5 specification urges authors to omit the attribute rather than provide a redundant MIME type. In earlier browsers, this identified the scripting language of the embedded or imported (via the <code>src</code> attribute) code. JavaScript MIME types are <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#javascript_types">listed in the specification</a>.</li>
-  <li><strong><code>module</code>:</strong> Causes the code to be treated as a JavaScript module. The processing of the script contents is not affected by the <code>charset</code> and <code>defer</code> attributes. For information on using <code>module</code>, see our <a href="/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript modules</a> guide. Unlike classic scripts, module scripts require the use of the CORS protocol for cross-origin fetching.</li>
-  <li><strong>Any other value:</strong> The embedded content is treated as a data block which won't be processed by the browser. Developers must use a valid MIME type that is not a JavaScript MIME type to denote data blocks. The <code>src</code> attribute will be ignored.</li>
- </ul>
- </dd>
-</dl>
+        *   **Omitted or a JavaScript MIME type:** This indicates the script is JavaScript. The HTML5 specification urges authors to omit the attribute rather than provide a redundant MIME type. In earlier browsers, this identified the scripting language of the embedded or imported (via the `src` attribute) code. JavaScript MIME types are [listed in the specification](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#javascript_types).
+        *   **`module`:** Causes the code to be treated as a JavaScript module. The processing of the script contents is not affected by the `charset` and `defer` attributes. For information on using `module`, see our [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide. Unlike classic scripts, module scripts require the use of the CORS protocol for cross-origin fetching.
+        *   **Any other value:** The embedded content is treated as a data block which won't be processed by the browser. Developers must use a valid MIME type that is not a JavaScript MIME type to denote data blocks. The `src` attribute will be ignored.
 
-<h3 id="Deprecated_attributes">Deprecated attributes</h3>
+### Deprecated attributes
 
-<dl>
- <dt>{{htmlattrdef("charset")}} {{Deprecated_inline}}</dt>
- <dd>If present, its value must be an ASCII case-insensitive match for "<code>utf-8</code>". It’s unnecessary to specify the <code>charset</code> attribute, because documents must use UTF-8, and the <code>script</code> element inherits its character encoding from the document.</dd>
- <dt>{{htmlattrdef("language")}} {{Deprecated_inline}}</dt>
- <dd>Like the <code>type</code> attribute, this attribute identifies the scripting language in use. Unlike the <code>type</code> attribute, however, this attribute’s possible values were never standardized. The <code>type</code> attribute should be used instead.</dd>
-</dl>
+*   {{htmlattrdef("charset")}} {{Deprecated_inline}}
+    *   : If present, its value must be an ASCII case-insensitive match for "`utf-8`". It’s unnecessary to specify the `charset` attribute, because documents must use UTF-8, and the `script` element inherits its character encoding from the document.
+*   {{htmlattrdef("language")}} {{Deprecated_inline}}
+    *   : Like the `type` attribute, this attribute identifies the scripting language in use. Unlike the `type` attribute, however, this attribute’s possible values were never standardized. The `type` attribute should be used instead.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Scripts without {{HTMLAttrxRef("async", "script")}} , {{HTMLAttrxRef("defer", "script")}} or <code>type="module"</code> attributes, as well as inline scripts, are fetched and executed immediately, before the browser continues to parse the page.</p>
+Scripts without {{HTMLAttrxRef("async", "script")}} , {{HTMLAttrxRef("defer", "script")}} or `type="module"` attributes, as well as inline scripts, are fetched and executed immediately, before the browser continues to parse the page.
 
-<p>The script should be served with the <code>text/javascript</code> MIME type, but browsers are lenient and only block them if the script is served with an image type (<code>image/*</code>); a video type (<code>video/*</code>); an audio (<code>audio/*</code>) type; or <code>text/csv</code>. If the script is blocked, an {{event("error")}} is sent to the element, if not a {{event("load")}} event is sent.</p>
+The script should be served with the `text/javascript` MIME type, but browsers are lenient and only block them if the script is served with an image type (`image/*`); a video type (`video/*`); an audio (`audio/*`) type; or `text/csv`. If the script is blocked, an {{event("error")}} is sent to the element, if not a {{event("load")}} event is sent.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_usage">Basic usage</h3>
+### Basic usage
 
-<p>These examples show how to import (an external) script using the <code>&lt;script&gt;</code> element.</p>
+These examples show how to import (an external) script using the `<script>` element.
 
-<pre class="brush: html">&lt;script src="javascript.js"&gt;&lt;/script&gt;
-</pre>
+```html
+<script src="javascript.js"></script>
+```
 
-<p>And the following examples show how to put (an inline) script inside the <code>&lt;script&gt;</code> element.</p>
+And the following examples show how to put (an inline) script inside the `<script>` element.
 
-<pre class="brush: html">&lt;script&gt;
+```html
+<script>
   alert("Hello World!");
-&lt;/script&gt;</pre>
+</script>
+```
 
-<h3 id="Module_fallback">Module fallback</h3>
+### Module fallback
 
-<p>Browsers that support the <code>module</code> value for the {{htmlattrxref("type", "script")}} attribute ignore any script with a <code>nomodule</code> attribute. That enables you to use module scripts while also providing <code>nomodule</code>-marked fallback scripts for non-supporting browsers.</p>
+Browsers that support the `module` value for the {{htmlattrxref("type", "script")}} attribute ignore any script with a `nomodule` attribute. That enables you to use module scripts while also providing `nomodule`-marked fallback scripts for non-supporting browsers.
 
-<pre class="brush: html">&lt;script type="module" src="main.js"&gt;&lt;/script&gt;
-&lt;script nomodule src="fallback.js"&gt;&lt;/script&gt;</pre>
+```html
+<script type="module" src="main.js"></script>
+<script nomodule src="fallback.js"></script>
+```
 
-<h3 id="Embedding_data_in_HTML">Embedding data in HTML</h3>
+### Embedding data in HTML
 
-<p>You can also use the <code>&lt;script&gt;</code> element to embed data in HTML with server-side rendering by specifying a valid non-JavaScript MIME type in the <code>type</code> attribute.</p>
+You can also use the `<script>` element to embed data in HTML with server-side rendering by specifying a valid non-JavaScript MIME type in the `type` attribute.
 
-<pre class="brush: html">&lt;!-- Generated by the server --&gt;
-&lt;script id="data" type="application/json"&gt;{"userId":1234,"userName":"John Doe","memberSince":"2000-01-01T00:00:00.000Z"}&lt;/script&gt;
+```html
+<!-- Generated by the server -->
+<script id="data" type="application/json">{"userId":1234,"userName":"John Doe","memberSince":"2000-01-01T00:00:00.000Z"}</script>
 
-&lt;!-- Static --&gt;
-&lt;script&gt;
+<!-- Static -->
+<script>
   const userInfo = JSON.parse(document.getElementById("data").text);
   console.log("User information: %o", userInfo);
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h3 id="Compatibility_notes">Compatibility notes</h3>
+### Compatibility notes
 
-<p>In older browsers that don't support the <code>async</code> attribute, parser-inserted scripts block the parser; script-inserted scripts execute asynchronously in IE and WebKit, but synchronously in Opera and pre-4 Firefox. In Firefox 4, the <code>async</code> DOM property defaults to <code>true</code> for script-created scripts, so the default behavior matches the behavior of IE and WebKit.</p>
+In older browsers that don't support the `async` attribute, parser-inserted scripts block the parser; script-inserted scripts execute asynchronously in IE and WebKit, but synchronously in Opera and pre-4 Firefox. In Firefox 4, the `async` DOM property defaults to `true` for script-created scripts, so the default behavior matches the behavior of IE and WebKit.
 
-<p>To request script-inserted external scripts be executed in the insertion order in browsers where the <code>document.createElement("script").async</code> evaluates to <code>true</code> (such as Firefox 4), set <code>async="false"</code> on the scripts you want to maintain order.</p>
+To request script-inserted external scripts be executed in the insertion order in browsers where the `document.createElement("script").async` evaluates to `true` (such as Firefox 4), set `async="false"` on the scripts you want to maintain order.
 
-<div class="warning">
-<p><strong>Warning:</strong> Never call <code>document.write()</code> from an async script. In Firefox 3.6, calling <code>document.write()</code> has an unpredictable effect. In Firefox 4, calling <code>document.write()</code> from an async script has no effect (other than printing a warning to the error console).</p>
-</div>
+> **Warning:** Never call `document.write()` from an async script. In Firefox 3.6, calling `document.write()` has an unpredictable effect. In Firefox 4, calling `document.write()` from an async script has no effect (other than printing a warning to the error console).
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("document.currentScript")}}</li>
- <li><a href="https://pie.gd/test/script-link-events/">Ryan Grove's <code>&lt;script&gt;</code> and <code>&lt;link&gt;</code> node event compatibility chart</a></li>
- <li><a href="https://flaviocopes.com/javascript-async-defer/">Flavio Copes' article on loading JavaScript efficiently and explaining the differences between <code>async</code> and <code>defer</code></a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript modules</a> guide</li>
-</ul>
+*   {{domxref("document.currentScript")}}
+*   [Ryan Grove's `<script>` and `<link>` node event compatibility chart](https://pie.gd/test/script-link-events/)
+*   [Flavio Copes' article on loading JavaScript efficiently and explaining the differences between `async` and `defer`](https://flaviocopes.com/javascript-async-defer/)
+*   [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide

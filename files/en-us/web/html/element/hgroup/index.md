@@ -11,126 +11,143 @@ tags:
   - Web
 browser-compat: html.elements.hgroup
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> <code>&lt;hgroup&gt;</code> should not be used because no assistive technology supports it, and as a result it has a detrimental effect on assistance for headings placed within it.</p>
-  <p>For more information see the <a href="#usage_notes">Usage notes below</a>.</p>
-</div>
+> **Warning:** `<hgroup>` should not be used because no assistive technology supports it, and as a result it has a detrimental effect on assistance for headings placed within it.
+>
+> For more information see the [Usage notes below](#usage_notes).
 
-<p>The <strong><code>&lt;hgroup&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element represents a multi-level heading for a section of a document. It groups a set of <code><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;–&lt;h6&gt;</a></code> elements.</p>
+The **`<hgroup>`** [HTML](/en-US/docs/Web/HTML) element represents a multi-level heading for a section of a document. It groups a set of [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) elements.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, heading content, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td>One or more {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, and/or {{HTMLElement("h6")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>Any</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >, heading content, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        One or more {{HTMLElement("h1")}}, {{HTMLElement("h2")}},
+        {{HTMLElement("h3")}}, {{HTMLElement("h4")}},
+        {{HTMLElement("h5")}}, and/or {{HTMLElement("h6")}}.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element only includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<div class="note">
-<p><strong>Note:</strong> The <code>&lt;hgroup&gt;</code> element has been removed from the HTML5 (W3C) specification, but it still is in the WHATWG version of HTML. It is partially implemented in most browsers, though, so is unlikely to go away.<br>
- However, given that a key purpose of the <code>&lt;hgroup&gt;</code> element is to affect how headings are displayed by <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#the_html5_outline_algorithm">the outline algorithm defined in the HTML specification</a>—but <strong>the HTML outline algorithm is not implemented in any browsers</strong>—then the <code>&lt;hgroup&gt;</code> semantics are in practice only theoretical.<br>
- So the HTML5 (W3C) specification provides advice on how to mark up <a href="https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#common-idioms-without-dedicated-elements">Subheadings, subtitles, alternative titles and taglines</a> without using <code>&lt;hgroup&gt;</code>.</p>
-</div>
+> **Note:** The `<hgroup>` element has been removed from the HTML5 (W3C) specification, but it still is in the WHATWG version of HTML. It is partially implemented in most browsers, though, so is unlikely to go away.
+> However, given that a key purpose of the `<hgroup>` element is to affect how headings are displayed by [the outline algorithm defined in the HTML specification](/en-US/docs/Web/HTML/Element/Heading_Elements#the_html5\_outline_algorithm)—but **the HTML outline algorithm is not implemented in any browsers**—then the `<hgroup>` semantics are in practice only theoretical.
+> So the HTML5 (W3C) specification provides advice on how to mark up [Subheadings, subtitles, alternative titles and taglines](https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#common-idioms-without-dedicated-elements) without using `<hgroup>`.
 
-<p>The <code>&lt;hgroup&gt;</code> element allows the primary heading for a document section to be grouped with any secondary headings—such as subheadings or alternative titles—to form a <em>multi-level</em> heading.</p>
+The `<hgroup>` element allows the primary heading for a document section to be grouped with any secondary headings—such as subheadings or alternative titles—to form a *multi-level* heading.
 
-<p>In other words, the <code>&lt;hgroup&gt;</code> element prevents any of its secondary <code><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;–&lt;h6&gt;</a></code> children from creating separate sections of their own in the outline—as those <code><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;–&lt;h6&gt;</a></code> elements otherwise normally would if they were not children of any <code>&lt;hgroup&gt;</code>.</p>
+In other words, the `<hgroup>` element prevents any of its secondary [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) children from creating separate sections of their own in the outline—as those [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) elements otherwise normally would if they were not children of any `<hgroup>`.
 
-<p>So in the abstract outline produced by the <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#the_html5_outline_algorithm">HTML outline algorithm defined in the HTML specification</a>, the <code>&lt;hgroup&gt;</code> as a whole forms a single logical heading, with the entire set of <code><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;–&lt;h6&gt;</a></code> children of the <code>&lt;hgroup&gt;</code> going into the outline as one <em>multi-level</em> unit, to comprise that single logical heading in the abstract outline.</p>
+So in the abstract outline produced by the [HTML outline algorithm defined in the HTML specification](/en-US/docs/Web/HTML/Element/Heading_Elements#the_html5\_outline_algorithm), the `<hgroup>` as a whole forms a single logical heading, with the entire set of [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) children of the `<hgroup>` going into the outline as one *multi-level* unit, to comprise that single logical heading in the abstract outline.
 
-<p>To produce any (non-abstract) <em>rendered</em> view of such an outline, some choice must be made in the design of the rendering tool about how to render <code>&lt;hgroup&gt;</code> headings in such a way as to convey their multi-level nature. There are a variety of ways an <code>&lt;hgroup&gt;</code> might be shown in a rendered outline; for example:</p>
+To produce any (non-abstract) *rendered* view of such an outline, some choice must be made in the design of the rendering tool about how to render `<hgroup>` headings in such a way as to convey their multi-level nature. There are a variety of ways an `<hgroup>` might be shown in a rendered outline; for example:
 
-<ul>
- <li>an <code>&lt;hgroup&gt;</code> might be shown in a rendered outline in with a colon character and space (“<code>: </code>”) or other such punctuation after the primary heading and before the first secondary heading (and with the same or similar punctuation before any other secondary headings</li>
- <li>an <code>&lt;hgroup&gt;</code> might be shown in a rendered outline in with the primary heading followed by parentheses around the secondary heading(s)</li>
-</ul>
+*   an `<hgroup>` might be shown in a rendered outline in with a colon character and space (“` :  `”) or other such punctuation after the primary heading and before the first secondary heading (and with the same or similar punctuation before any other secondary headings
+*   an `<hgroup>` might be shown in a rendered outline in with the primary heading followed by parentheses around the secondary heading(s)
 
-<p>Consider the following HTML document:</p>
+Consider the following HTML document:
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;title&gt;HTML Standard&lt;/title&gt;
-&lt;body&gt;
-  &lt;hgroup id="document-title"&gt;
-    &lt;h1&gt;HTML&lt;/h1&gt;
-    &lt;h2&gt;Living Standard — Last Updated 12 August 2016&lt;/h2&gt;
-  &lt;/hgroup&gt;
-  &lt;p&gt;Some intro to the document.&lt;/p&gt;
-  &lt;h2&gt;Table of contents&lt;/h2&gt;
-  &lt;ol id=toc&gt;...&lt;/ol&gt;
-  &lt;h2&gt;First section&lt;/h2&gt;
-  &lt;p&gt;Some intro to the first section.&lt;/p&gt;
-&lt;/body&gt;</pre>
+```html
+<!DOCTYPE html>
+<title>HTML Standard</title>
+<body>
+  <hgroup id="document-title">
+    <h1>HTML</h1>
+    <h2>Living Standard — Last Updated 12 August 2016</h2>
+  </hgroup>
+  <p>Some intro to the document.</p>
+  <h2>Table of contents</h2>
+  <ol id=toc>...</ol>
+  <h2>First section</h2>
+  <p>Some intro to the first section.</p>
+</body>
+```
 
-<p>A rendered outline for that document might look like the following:</p>
+A rendered outline for that document might look like the following:
 
-<p><img alt="" src="outline-colon.png"></p>
+![](outline-colon.png)
 
-<p>That is, the rendered outline might show the primary title, <em>HTML</em>, followed by a colon and space, followed by the secondary title, <em>Living Standard — Last Updated 12 August 2016</em>.</p>
+That is, the rendered outline might show the primary title, *HTML*, followed by a colon and space, followed by the secondary title, *Living Standard — Last Updated 12 August 2016*.
 
-<p>Or, the rendered outline for that document might instead look like the following:</p>
+Or, the rendered outline for that document might instead look like the following:
 
-<p><img alt="Rendered outline that includes an &lt;hgroup&gt; element, with parens around the secondary heading" src="outline-paren.png"></p>
+![Rendered outline that includes an \<hgroup> element, with parens around the secondary heading](outline-paren.png)
 
-<p>That is, the rendered outline might show the primary title, <em>HTML</em>, followed by the secondary title shown in parentheses:<em> (Living Standard — Last Updated 12 August 2016)</em>.</p>
+That is, the rendered outline might show the primary title, *HTML*, followed by the secondary title shown in parentheses: *(Living Standard — Last Updated 12 August 2016)*.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: html">&lt;hgroup id="document-title"&gt;
-  &lt;h1&gt;HTML&lt;/h1&gt;
-  &lt;h2&gt;Living Standard — Last Updated 12 August 2016&lt;/h2&gt;
-&lt;/hgroup&gt;
-</pre>
+```html
+<hgroup id="document-title">
+  <h1>HTML</h1>
+  <h2>Living Standard — Last Updated 12 August 2016</h2>
+</hgroup>
+```
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>The presence of <code>hgroup</code> may remove information reported to assistive technology about the subheading portion of the heading group.</p>
+The presence of `hgroup` may remove information reported to assistive technology about the subheading portion of the heading group.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};</li>
- <li><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">Sections and outlines of an HTML5 document</a>.</li>
-</ul>
+*   Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
+*   [Sections and outlines of an HTML5 document](/en-US/docs/Web/HTML/Element/Heading_Elements).

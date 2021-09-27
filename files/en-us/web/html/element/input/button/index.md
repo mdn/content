@@ -13,73 +13,81 @@ tags:
   - button
 browser-compat: html.elements.input.input-button
 ---
-<div>{{HTMLRef("Input_types")}}</div>
+{{HTMLRef("Input_types")}}
 
-<p>{{HTMLElement("input")}} elements of type <strong><code>button</code></strong> are rendered as simple push buttons, which can be programmed to control custom functionality anywhere on a webpage as required when assigned an event handler function (typically for the {{event("click")}} event).</p>
+{{HTMLElement("input")}} elements of type **`button`** are rendered as simple push buttons, which can be programmed to control custom functionality anywhere on a webpage as required when assigned an event handler function (typically for the {{event("click")}} event).
 
-<div>{{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}
 
-<div class="note">
-<p><strong>Note:</strong> While <code>&lt;input&gt;</code> elements of type <code>button</code> are still perfectly valid HTML, the newer {{HTMLElement("button")}} element is now the favored way to create buttons. Given that a {{HTMLElement("button")}}’s label text is inserted between the opening and closing tags, you can include HTML in the label, even images.</p>
-</div>
+> **Note:** While `<input>` elements of type `button` are still perfectly valid HTML, the newer {{HTMLElement("button")}} element is now the favored way to create buttons. Given that a {{HTMLElement("button")}}’s label text is inserted between the opening and closing tags, you can include HTML in the label, even images.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
-   <td>A {{domxref("DOMString")}} used as the button's label</td>
-  </tr>
-  <tr>
-   <td><strong>Events</strong></td>
-   <td>{{domxref("Element/click_event", "click")}}</td>
-  </tr>
-  <tr>
-   <td><strong>Supported common attributes</strong></td>
-   <td>{{htmlattrxref("type", "input")}} and {{htmlattrxref("value", "input")}}</td>
-  </tr>
-  <tr>
-   <td><strong>IDL attributes</strong></td>
-   <td><code>value</code></td>
-  </tr>
-  <tr>
-   <td><strong>Methods</strong></td>
-   <td>None</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td><strong>{{anch("Value")}}</strong></td>
+      <td>A {{domxref("DOMString")}} used as the button's label</td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>{{domxref("Element/click_event", "click")}}</td>
+    </tr>
+    <tr>
+      <td><strong>Supported common attributes</strong></td>
+      <td>
+        {{htmlattrxref("type", "input")}} and
+        {{htmlattrxref("value", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td><code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>None</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Value">Value</h2>
+## Value
 
-<h3>Button with a value</h3>
+### Button with a value
 
-<p>An <code>&lt;input type="button"&gt;</code> elements' {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} that is used as the button's label.</p>
+An `<input type="button">` elements' {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} that is used as the button's label.
 
-<pre class="brush: html">&lt;input type="button" value="Click Me"&gt;</pre>
+```html
+<input type="button" value="Click Me">
+```
 
-<p>{{EmbedLiveSample("Button_with_a_value", 650, 30)}}</p>
+{{EmbedLiveSample("Button_with_a_value", 650, 30)}}
 
-<h3>Button without a value</h3>
+### Button without a value
 
-<p>If you don't specify a <code>value</code>, you get an empty button:</p>
+If you don't specify a `value`, you get an empty button:
 
-<pre class="brush: html">&lt;input type="button"&gt;</pre>
+```html
+<input type="button">
+```
 
-<p>{{EmbedLiveSample("Button_without_a_value", 650, 30)}}</p>
+{{EmbedLiveSample("Button_without_a_value", 650, 30)}}
 
-<h2 id="Using_buttons">Using buttons</h2>
+## Using buttons
 
-<p><code>&lt;input type="button"&gt;</code> elements have no default behavior (their cousins,<code> <a href="/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/input/reset">&lt;input type="reset"&gt;</a></code> are used to submit and reset forms, respectively). To make buttons do anything, you have to write JavaScript code to do the work.</p>
+`<input type="button">` elements have no default behavior (their cousins,`  <input type="submit"> ` and [`<input type="reset">`](/en-US/docs/Web/HTML/Element/input/reset) are used to submit and reset forms, respectively). To make buttons do anything, you have to write JavaScript code to do the work.
 
-<h3 id="A_simple_button">A simple button</h3>
+### A simple button
 
-<p>We'll begin by creating a simple button with a {{event("click")}} event handler that starts our machine (well, it toggles the <code>value</code> of the button and the text content of the following paragraph):</p>
+We'll begin by creating a simple button with a {{event("click")}} event handler that starts our machine (well, it toggles the `value` of the button and the text content of the following paragraph):
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;input type="button" value="Start machine"&gt;
-&lt;/form&gt;
-&lt;p&gt;The machine is stopped.&lt;/p&gt;</pre>
+```html
+<form>
+  <input type="button" value="Start machine">
+</form>
+<p>The machine is stopped.</p>
+```
 
-<pre class="brush: js">const button = document.querySelector('input');
+```js
+const button = document.querySelector('input');
 const paragraph = document.querySelector('p');
 
 button.addEventListener('click', updateButton);
@@ -92,26 +100,28 @@ function updateButton() {
     button.value = 'Start machine';
     paragraph.textContent = 'The machine is stopped.';
   }
-}</pre>
+}
+```
 
-<p>The script gets a reference to the {{domxref("HTMLInputElement")}} object representing the <code>&lt;input&gt;</code> in the DOM, saving this refence in the variable <code>button</code>. {{domxref("EventTarget.addEventListener", "addEventListener()")}} is then used to establish a function that will be run when {{event("click")}} events occur on the button.</p>
+The script gets a reference to the {{domxref("HTMLInputElement")}} object representing the `<input>` in the DOM, saving this refence in the variable `button`. {{domxref("EventTarget.addEventListener", "addEventListener()")}} is then used to establish a function that will be run when {{event("click")}} events occur on the button.
 
-<p>{{EmbedLiveSample("A_simple_button", 650, 100)}}</p>
+{{EmbedLiveSample("A_simple_button", 650, 100)}}
 
-<h3 id="Adding_keyboard_shortcuts_to_buttons">Adding keyboard shortcuts to buttons</h3>
+### Adding keyboard shortcuts to buttons
 
-<p>Keyboard shortcuts, also known as access keys and keyboard equivalents, let the user trigger a button using a key or combination of keys on the keyboard. To add a keyboard shortcut to a button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the {{htmlattrxref("accesskey")}} global attribute.</p>
+Keyboard shortcuts, also known as access keys and keyboard equivalents, let the user trigger a button using a key or combination of keys on the keyboard. To add a keyboard shortcut to a button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the {{htmlattrxref("accesskey")}} global attribute.
 
-<p>In this example, <kbd>s</kbd> is specified as the access key (you'll need to press <kbd>s</kbd> plus the particular modifier keys for your browser/OS combination; see <a href="/en-US/docs/Web/HTML/Global_attributes/accesskey">accesskey</a> for a useful list of those).</p>
+In this example, <kbd>s</kbd> is specified as the access key (you'll need to press <kbd>s</kbd> plus the particular modifier keys for your browser/OS combination; see [accesskey](/en-US/docs/Web/HTML/Global_attributes/accesskey) for a useful list of those).
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;input type="button" value="Start machine" accesskey="s"&gt;
-&lt;/form&gt;
-&lt;p&gt;The machine is stopped.&lt;/p&gt;
-</pre>
-</div>
+```html
+<form>
+  <input type="button" value="Start machine" accesskey="s">
+</form>
+<p>The machine is stopped.</p>
+```
 
-<pre class="brush: js hidden">const button = document.querySelector('input');
+```js hidden
+const button = document.querySelector('input');
 const paragraph = document.querySelector('p');
 
 button.addEventListener('click', updateButton);
@@ -124,27 +134,31 @@ function updateButton() {
     button.value = 'Start machine';
     paragraph.textContent = 'The machine is stopped.';
   }
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Adding_keyboard_shortcuts_to_buttons", 650, 100)}}</p>
+{{EmbedLiveSample("Adding_keyboard_shortcuts_to_buttons", 650, 100)}}
 
-<div class="note">
-<p><strong>Note:</strong> The problem with the above example of course is that the user will not know what the access key is! In a real site, you'd have to provide this information in a way that doesn't intefere with the site design (for example by providing an easily accessible link that points to information on what the site accesskeys are).</p>
-</div>
+> **Note:** The problem with the above example of course is that the user will not know what the access key is! In a real site, you'd have to provide this information in a way that doesn't intefere with the site design (for example by providing an easily accessible link that points to information on what the site accesskeys are).
 
-<h3 id="Disabling_and_enabling_a_button">Disabling and enabling a button</h3>
+### Disabling and enabling a button
 
-<p>To disable a button, specify the {{htmlattrxref("disabled")}} global attribute on it, like so:</p>
+To disable a button, specify the {{htmlattrxref("disabled")}} global attribute on it, like so:
 
-<pre class="brush: html">&lt;input type="button" value="Disable me" disabled&gt;</pre>
+```html
+<input type="button" value="Disable me" disabled>
+```
 
-<h4>Setting the disabled attribute</h4>
+#### Setting the disabled attribute
 
-<p>You can enable and disable buttons at run time by setting <code>disabled</code> to <code>true</code> or <code>false</code>. In this example our button starts off enabled, but if you press it, it is disabled using <code>button.disabled = true</code>. A {{domxref("setTimeout()")}} function is then used to reset the button back to its enabled state after two seconds.</p>
+You can enable and disable buttons at run time by setting `disabled` to `true` or `false`. In this example our button starts off enabled, but if you press it, it is disabled using `button.disabled = true`. A {{domxref("setTimeout()")}} function is then used to reset the button back to its enabled state after two seconds.
 
-<pre class="brush: html">&lt;input type="button" value="Enabled"&gt;</pre>
+```html
+<input type="button" value="Enabled">
+```
 
-<pre class="brush: js">const button = document.querySelector('input');
+```js
+const button = document.querySelector('input');
 
 button.addEventListener('click', disableButton);
 
@@ -155,24 +169,28 @@ function disableButton() {
     button.disabled = false;
     button.value = 'Enabled';
   }, 2000);
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Setting_the_disabled_attribute", 650, 60)}}</p>
+{{EmbedLiveSample("Setting_the_disabled_attribute", 650, 60)}}
 
-<h4>Inheriting the disabled state</h4>
+#### Inheriting the disabled state
 
-<p>If the <code>disabled</code> attribute isn't specified, the button inherits its <code>disabled</code> state from its parent element. This makes it possible to enable and disable groups of elements all at once by enclosing them in a container such as a {{HTMLElement("fieldset")}} element, and then setting <code>disabled</code> on the container.</p>
+If the `disabled` attribute isn't specified, the button inherits its `disabled` state from its parent element. This makes it possible to enable and disable groups of elements all at once by enclosing them in a container such as a {{HTMLElement("fieldset")}} element, and then setting `disabled` on the container.
 
-<p>The example below shows this in action. This is very similar to the previous example, except that the <code>disabled</code> attribute is set on the <code>&lt;fieldset&gt;</code> when the first button is pressed — this causes all three buttons to be disabled until the two second timeout has passed.</p>
+The example below shows this in action. This is very similar to the previous example, except that the `disabled` attribute is set on the `<fieldset>` when the first button is pressed — this causes all three buttons to be disabled until the two second timeout has passed.
 
-<pre class="brush: html">&lt;fieldset&gt;
-  &lt;legend&gt;Button group&lt;/legend&gt;
-  &lt;input type="button" value="Button 1"&gt;
-  &lt;input type="button" value="Button 2"&gt;
-  &lt;input type="button" value="Button 3"&gt;
-&lt;/fieldset&gt;</pre>
+```html
+<fieldset>
+  <legend>Button group</legend>
+  <input type="button" value="Button 1">
+  <input type="button" value="Button 2">
+  <input type="button" value="Button 3">
+</fieldset>
+```
 
-<pre class="brush: js">const button = document.querySelector('input');
+```js
+const button = document.querySelector('input');
 const fieldset = document.querySelector('fieldset');
 
 button.addEventListener('click', disableButton);
@@ -182,33 +200,35 @@ function disableButton() {
   window.setTimeout(function() {
     fieldset.disabled = false;
   }, 2000);
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Inheriting_the_disabled_state", 650, 100)}}</p>
+{{EmbedLiveSample("Inheriting_the_disabled_state", 650, 100)}}
 
-<div class="note">
-<p><strong>Note:</strong> Firefox will, unlike other browsers, by default, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persist the dynamic disabled state</a> of a {{HTMLElement("button")}} across page loads. Use the {{htmlattrxref("autocomplete","button")}} attribute to control this feature.</p>
+> **Note:** Firefox will, unlike other browsers, by default, [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the {{htmlattrxref("autocomplete","button")}} attribute to control this feature.
+
+## Validation
+
+Buttons don't participate in constraint validation; they have no real value to be constrained.
+
+## Examples
+
+The below example shows a very simple drawing app created using a {{htmlelement("canvas")}} element and some simple CSS and JavaScript (we'll hide the CSS for brevity). The top two controls allow you to choose the color and size of the drawing pen. The button, when clicked, invokes a function that clears the canvas.
+
+```html
+<div class="toolbar">
+  <input type="color" aria-label="select pen color">
+  <input type="range" min="2" max="50" value="30" aria-label="select pen size"><span class="output">30</span>
+  <input type="button" value="Clear canvas">
 </div>
 
-<h2 id="Validation">Validation</h2>
+<canvas class="myCanvas">
+  <p>Add suitable fallback here.</p>
+</canvas>
+```
 
-<p>Buttons don't participate in constraint validation; they have no real value to be constrained.</p>
-
-<h2 id="Examples">Examples</h2>
-
-<p>The below example shows a very simple drawing app created using a {{htmlelement("canvas")}} element and some simple CSS and JavaScript (we'll hide the CSS for brevity). The top two controls allow you to choose the color and size of the drawing pen. The button, when clicked, invokes a function that clears the canvas.</p>
-
-<pre class="brush: html">&lt;div class="toolbar"&gt;
-  &lt;input type="color" aria-label="select pen color"&gt;
-  &lt;input type="range" min="2" max="50" value="30" aria-label="select pen size"&gt;&lt;span class="output"&gt;30&lt;/span&gt;
-  &lt;input type="button" value="Clear canvas"&gt;
-&lt;/div&gt;
-
-&lt;canvas class="myCanvas"&gt;
-  &lt;p&gt;Add suitable fallback here.&lt;/p&gt;
-&lt;/canvas&gt;</pre>
-
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   background: #ccc;
   margin: 0;
   overflow: hidden;
@@ -234,9 +254,11 @@ input[type="range"] {
 span {
   position: relative;
   bottom: 5px;
-}</pre>
+}
+```
 
-<pre class="brush: js">var canvas = document.querySelector('.myCanvas');
+```js
+var canvas = document.querySelector('.myCanvas');
 var width = canvas.width = window.innerWidth;
 var height = canvas.height = window.innerHeight-85;
 var ctx = canvas.getContext('2d');
@@ -295,22 +317,21 @@ function draw() {
   requestAnimationFrame(draw);
 }
 
-draw();</pre>
+draw();
+```
 
-<p>{{EmbedLiveSample("Examples", '100%', 600)}}</p>
+{{EmbedLiveSample("Examples", '100%', 600)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.</li>
- <li>The more modern {{HTMLElement("button")}} element.</li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
-</ul>
+*   {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
+*   The more modern {{HTMLElement("button")}} element.
+*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

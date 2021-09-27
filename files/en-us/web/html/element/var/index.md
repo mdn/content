@@ -14,117 +14,144 @@ tags:
   - variable
 browser-compat: html.elements.var
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;var&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element represents the name of a variable in a mathematical expression or a programming context. It's typically presented using an italicized version of the current typeface, although that behavior is browser-dependent.</p>
+The **`<var>`** [HTML](/en-US/docs/Web/HTML) element represents the name of a variable in a mathematical expression or a programming context. It's typically presented using an italicized version of the current typeface, although that behavior is browser-dependent.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/var.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/var.html", "tabbed-shorter")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>Any</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >Phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element only includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<h3 id="Related_elements">Related elements</h3>
+### Related elements
 
-<p>Other elements that are used in contexts in which <code>&lt;var&gt;</code> is commonly used include:</p>
+Other elements that are used in contexts in which `<var>` is commonly used include:
 
-<ul>
- <li>{{HTMLElement("code")}}: The HTML Code element</li>
- <li>{{HTMLElement("kbd")}}: The HTML Keyboard input element</li>
- <li>{{HTMLElement("samp")}}: The HTML Sample Output element</li>
-</ul>
+*   {{HTMLElement("code")}}: The HTML Code element
+*   {{HTMLElement("kbd")}}: The HTML Keyboard input element
+*   {{HTMLElement("samp")}}: The HTML Sample Output element
 
-<p>If you encounter code that is mistakenly using <code>&lt;var&gt;</code> for style purposes rather than semantic purposes, you should either use a {{HTMLElement("span")}} with appropriate CSS or, an appropriate semantic element among the following:</p>
+If you encounter code that is mistakenly using `<var>` for style purposes rather than semantic purposes, you should either use a {{HTMLElement("span")}} with appropriate CSS or, an appropriate semantic element among the following:
 
-<ul>
- <li>{{HTMLElement("em")}}</li>
- <li>{{HTMLElement("i")}}</li>
- <li>{{HTMLElement("q")}}</li>
-</ul>
+*   {{HTMLElement("em")}}
+*   {{HTMLElement("i")}}
+*   {{HTMLElement("q")}}
 
-<h3 id="Default_style">Default style</h3>
+### Default style
 
-<p>Most browsers apply {{cssxref("font-style")}} to <code>"italic"</code> when rendering <code>&lt;var&gt;</code>. This can be overridden in CSS, like this:</p>
+Most browsers apply {{cssxref("font-style")}} to `"italic"` when rendering `<var>`. This can be overridden in CSS, like this:
 
-<pre class="brush: css">var {
+```css
+var {
   font-style: normal;
-}</pre>
+}
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<p>Here's a simple example, using <code>&lt;var&gt;</code> to denote variable names in a mathematical equation.</p>
+Here's a simple example, using `<var>` to denote variable names in a mathematical equation.
 
-<pre class="brush: html">&lt;p&gt;A simple equation:
-  &lt;var&gt;x&lt;/var&gt; = &lt;var&gt;y&lt;/var&gt; + 2 &lt;/p&gt;
-</pre>
+```html
+<p>A simple equation:
+  <var>x</var> = <var>y</var> + 2 </p>
+```
 
-<p>The output:</p>
+The output:
 
-<p>{{EmbedLiveSample("Basic_example", 650,80)}}</p>
+{{EmbedLiveSample("Basic_example", 650,80)}}
 
-<h3 id="Overriding_the_default_style">Overriding the default style</h3>
+### Overriding the default style
 
-<p>Using CSS, you can override the default style for the <code>&lt;var&gt;</code> element. In this example, variable names are rendered using bold Courier if it's available, otherwise it falls back to the default monospace font.</p>
+Using CSS, you can override the default style for the `<var>` element. In this example, variable names are rendered using bold Courier if it's available, otherwise it falls back to the default monospace font.
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">var {
+```css
+var {
   font: bold 15px "Courier", "Courier New", monospace;
-}</pre>
+}
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;The variables &lt;var&gt;minSpeed&lt;/var&gt; and &lt;var&gt;maxSpeed&lt;/var&gt; control
+```html
+<p>The variables <var>minSpeed</var> and <var>maxSpeed</var> control
    the minimum and maximum speed of the apparatus in revolutions
-   per minute (RPM).&lt;/p&gt;</pre>
+   per minute (RPM).</p>
+```
 
-<p>This HTML uses <code>&lt;var&gt;</code> to enclose the names of two variables.</p>
+This HTML uses `<var>` to enclose the names of two variables.
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Overriding_the_default_style", 650, 120)}}</p>
+{{EmbedLiveSample("Overriding_the_default_style", 650, 120)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

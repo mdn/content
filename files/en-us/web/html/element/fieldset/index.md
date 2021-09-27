@@ -10,125 +10,155 @@ tags:
   - Web
 browser-compat: html.elements.fieldset
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;fieldset&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element is used to group several controls as well as labels ({{HTMLElement("label")}}) within a web form.</p>
+The **`<fieldset>`** [HTML](/en-US/docs/Web/HTML) element is used to group several controls as well as labels ({{HTMLElement("label")}}) within a web form.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/fieldset.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/fieldset.html", "tabbed-standard")}}
 
-<p>As the example above shows, the <code>&lt;fieldset&gt;</code> element provides a grouping for a part of an HTML form, with a nested {{htmlelement("legend")}} element providing a caption for the <code>&lt;fieldset&gt;</code>. It takes few attributes, the most notable of which are <code>form</code>, which can contain the <code>id</code> of a {{htmlelement("form")}} on the same page, allowing you to make the <code>&lt;fieldset&gt;</code> part of that <code>&lt;form&gt;</code> even if it is not nested inside it, and <code>disabled</code>, which allows you to disable the <code>&lt;fieldset&gt;</code> and all its contents in one go.</p>
+As the example above shows, the `<fieldset>` element provides a grouping for a part of an HTML form, with a nested {{htmlelement("legend")}} element providing a caption for the `<fieldset>`. It takes few attributes, the most notable of which are `form`, which can contain the `id` of a {{htmlelement("form")}} on the same page, allowing you to make the `<fieldset>` part of that `<form>` even if it is not nested inside it, and `disabled`, which allows you to disable the `<fieldset>` and all its contents in one go.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("disabled")}}</dt>
- <dd>If this Boolean attribute is set, all form controls that are descendants of the <code>&lt;fieldset&gt;</code>, are disabled, meaning they are not editable and won't be submitted along with the {{htmlelement("form")}}. They won't receive any browsing events, like mouse clicks or focus-related events. By default browsers display such controls grayed out. Note that form elements inside the {{HTMLElement("legend")}} element won't be disabled.</dd>
- <dt>{{htmlattrdef("form")}}</dt>
- <dd>This attribute takes the value of the {{htmlattrxref("id")}} attribute of a {{HTMLElement("form")}} element you want the <code>&lt;fieldset&gt;</code> to be part of, even if it is not inside the form. Please note that usage of this is confusing — if you want the {{HTMLElement("input")}} elements inside the <code>&lt;fieldset&gt;</code> to be associated with the form, you need to use the <code>form</code> attribute directly on those elements. You can check which elements are associated with a form via JavaScript, using {{domxref("HTMLFormElement.elements")}}.</dd>
- <dt>{{htmlattrdef("name")}}</dt>
- <dd>The name associated with the group.
- <div class="note"><p><strong>Note:</strong> The caption for the fieldset is given by the first {{HTMLElement("legend")}} element nested inside it.</p></div>
- </dd>
-</dl>
+*   {{htmlattrdef("disabled")}}
+    *   : If this Boolean attribute is set, all form controls that are descendants of the `<fieldset>`, are disabled, meaning they are not editable and won't be submitted along with the {{htmlelement("form")}}. They won't receive any browsing events, like mouse clicks or focus-related events. By default browsers display such controls grayed out. Note that form elements inside the {{HTMLElement("legend")}} element won't be disabled.
+*   {{htmlattrdef("form")}}
+    *   : This attribute takes the value of the {{htmlattrxref("id")}} attribute of a {{HTMLElement("form")}} element you want the `<fieldset>` to be part of, even if it is not inside the form. Please note that usage of this is confusing — if you want the {{HTMLElement("input")}} elements inside the `<fieldset>` to be associated with the form, you need to use the `form` attribute directly on those elements. You can check which elements are associated with a form via JavaScript, using {{domxref("HTMLFormElement.elements")}}.
+*   {{htmlattrdef("name")}}
+    *   : The name associated with the group.
 
-<h2 id="Styling_with_CSS">Styling with CSS</h2>
+        > **Note:** The caption for the fieldset is given by the first {{HTMLElement("legend")}} element nested inside it.
 
-<p>There are several special styling considerations for <code>&lt;fieldset&gt;</code>.</p>
+## Styling with CSS
 
-<p>Its {{cssxref("display")}} value is <code>block</code> by default, and it establishes a <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a>. If the <code>&lt;fieldset&gt;</code> is styled with an inline-level <code>display</code> value, it will behave as <code>inline-block</code>, otherwise it will behave as <code>block</code>. By default there is a <code>2px</code> <code>groove</code> border surrounding the contents, and a small amount of default padding. The element has {{cssxref("min-inline-size", "min-inline-size: min-content")}} by default.</p>
+There are several special styling considerations for `<fieldset>`.
 
-<p>If a {{htmlelement("legend")}} is present, it is placed over the <code>block-start</code> border. The <code>&lt;legend&gt;</code> shrink-wraps, and also establishes a formatting context. The <code>display</code> value is blockified. (For example, <code>display: inline</code> behaves as <code>block</code>.)</p>
+Its {{cssxref("display")}} value is `block` by default, and it establishes a [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context). If the `<fieldset>` is styled with an inline-level `display` value, it will behave as `inline-block`, otherwise it will behave as `block`. By default there is a `2px` `groove` border surrounding the contents, and a small amount of default padding. The element has {{cssxref("min-inline-size", "min-inline-size: min-content")}} by default.
 
-<p>There will be an anonymous box holding the contents of the <code>&lt;fieldset&gt;</code>, which inherits certain properties from the <code>&lt;fieldset&gt;</code>. If the <code>&lt;fieldset&gt;</code> is styled with <code>display: grid</code> or <code>display: inline-grid</code>, then the anonymous box will be a grid formatting context. If the <code>&lt;fieldset&gt;</code> is styled with <code>display: flex</code> or <code>display: inline-flex</code>, then the anonymous box will be a flex formatting context. Otherwise, it establishes a block formatting context.</p>
+If a {{htmlelement("legend")}} is present, it is placed over the `block-start` border. The `<legend>` shrink-wraps, and also establishes a formatting context. The `display` value is blockified. (For example, `display: inline` behaves as `block`.)
 
-<p>You can feel free to style the <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> in any way you want to suit your page design.</p>
+There will be an anonymous box holding the contents of the `<fieldset>`, which inherits certain properties from the `<fieldset>`. If the `<fieldset>` is styled with `display: grid` or `display: inline-grid`, then the anonymous box will be a grid formatting context. If the `<fieldset>` is styled with `display: flex` or `display: inline-flex`, then the anonymous box will be a flex formatting context. Otherwise, it establishes a block formatting context.
 
-<h2 id="Examples">Examples</h2>
+You can feel free to style the `<fieldset>` and `<legend>` in any way you want to suit your page design.
 
-<h3 id="Simple_fieldset">Simple fieldset</h3>
+## Examples
 
-<p>This example shows a really simple <code>&lt;fieldset&gt;</code> example, with a <code>&lt;legend&gt;</code>, and a single control inside it.</p>
+### Simple fieldset
 
-<pre class="brush: html">&lt;form action="#"&gt;
-  &lt;fieldset&gt;
-    &lt;legend&gt;Simple fieldset&lt;/legend&gt;
-    &lt;input type="radio" id="radio"&gt;
-    &lt;label for="radio"&gt;Spirit of radio&lt;/label&gt;
-  &lt;/fieldset&gt;
-&lt;/form&gt;</pre>
+This example shows a really simple `<fieldset>` example, with a `<legend>`, and a single control inside it.
 
-<p>{{ EmbedLiveSample('Simple_fieldset', '100%', '80') }}</p>
+```html
+<form action="#">
+  <fieldset>
+    <legend>Simple fieldset</legend>
+    <input type="radio" id="radio">
+    <label for="radio">Spirit of radio</label>
+  </fieldset>
+</form>
+```
 
-<h3 id="Disabled_fieldset">Disabled fieldset</h3>
+{{ EmbedLiveSample('Simple_fieldset', '100%', '80') }}
 
-<p>This example shows a disabled <code>&lt;fieldset&gt;</code> with two controls inside it. Note how both the controls are disabled due to being inside a disabled <code>&lt;fieldset&gt;</code>.</p>
+### Disabled fieldset
 
-<pre class="brush: html">&lt;form action="#"&gt;
-  &lt;fieldset disabled&gt;
-    &lt;legend&gt;Disabled fieldset&lt;/legend&gt;
-    &lt;div&gt;
-      &lt;label for="name"&gt;Name: &lt;/label&gt;
-      &lt;input type="text" id="name" value="Chris"&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;label for="pwd"&gt;Archetype: &lt;/label&gt;
-      &lt;input type="password" id="pwd" value="Wookie"&gt;
-    &lt;/div&gt;
-  &lt;/fieldset&gt;
-&lt;/form&gt;</pre>
+This example shows a disabled `<fieldset>` with two controls inside it. Note how both the controls are disabled due to being inside a disabled `<fieldset>`.
 
-<p>{{ EmbedLiveSample('Disabled_fieldset', '100%', '110') }}</p>
+```html
+<form action="#">
+  <fieldset disabled>
+    <legend>Disabled fieldset</legend>
+    <div>
+      <label for="name">Name: </label>
+      <input type="text" id="name" value="Chris">
+    </div>
+    <div>
+      <label for="pwd">Archetype: </label>
+      <input type="password" id="pwd" value="Wookie">
+    </div>
+  </fieldset>
+</form>
+```
 
-<h2 id="Technical_summary">Technical summary</h2>
+{{ EmbedLiveSample('Disabled_fieldset', '100%', '110') }}
+
+## Technical summary
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_root">sectioning root</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_listed">listed</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_content">form-associated</a> element, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td>An optional {{HTMLElement("legend")}} element, followed by flow content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td>{{ARIARole("group")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>{{ARIARole("radiogroup")}}, {{ARIARole("presentation")}}, {{ARIARole("none")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLFieldSetElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_root"
+          >sectioning root</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_listed"
+          >listed</a
+        >,
+        <a
+          href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_content"
+          >form-associated</a
+        >
+        element, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        An optional {{HTMLElement("legend")}} element, followed by flow
+        content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>{{ARIARole("group")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>
+        {{ARIARole("radiogroup")}},
+        {{ARIARole("presentation")}}, {{ARIARole("none")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLFieldSetElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{HTMLElement("legend")}} element</li>
- <li>The {{HTMLElement("input")}} element</li>
- <li>The {{HTMLElement("label")}} element</li>
- <li>The {{HTMLElement("form")}} element</li>
-</ul>
+*   The {{HTMLElement("legend")}} element
+*   The {{HTMLElement("input")}} element
+*   The {{HTMLElement("label")}} element
+*   The {{HTMLElement("form")}} element

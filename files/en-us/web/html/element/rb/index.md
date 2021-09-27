@@ -11,92 +11,100 @@ tags:
   - Web
 browser-compat: html.elements.rb
 ---
-<div>{{HTMLRef}}{{deprecated_header}}</div>
+{{HTMLRef}}{{deprecated_header}}
 
-<p>The <strong><code>&lt;rb&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element is used to delimit the base text component of a  {{HTMLElement("ruby") }} annotation, i.e. the text that is being annotated. One <code>&lt;rb&gt;</code> element should wrap each separate atomic segment of the base text.</p>
+The **`<rb>`** [HTML](/en-US/docs/Web/HTML) element is used to delimit the base text component of a  {{HTMLElement("ruby") }} annotation, i.e. the text that is being annotated. One `<rb>` element should wrap each separate atomic segment of the base text.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td>None.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td>As a child of a {{htmlelement("ruby")}} element.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>The end tag can be omitted if the element is immediately followed by an {{HTMLElement("rt")}}, {{HTMLElement("rtc")}}, or {{HTMLElement("rp")}} element or another <code>&lt;rb&gt;</code> element, or if there is no more content in the parent element.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>A {{HTMLElement("ruby")}} element.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>Any</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>As a child of a {{htmlelement("ruby")}} element.</td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>
+        The end tag can be omitted if the element is immediately followed by an
+        {{HTMLElement("rt")}}, {{HTMLElement("rtc")}}, or
+        {{HTMLElement("rp")}} element or another
+        <code>&#x3C;rb></code> element, or if there is no more content in the
+        parent element.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>A {{HTMLElement("ruby")}} element.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element only includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<ul>
- <li>Ruby annotations are for showing pronunciation of East Asian characters, like using Japanese furigana or Taiwanese bopomofo characters. The <code>&lt;rb&gt;</code> element is used to separate out each segment of the ruby base text.</li>
- <li>Even though <code>&lt;rb&gt;</code> is not an empty element, it is common to just include the opening tag of each element in the source code, so that the ruby markup is less complex and easier to read. The browser can then fill in the full element in the rendered version.</li>
- <li>You need to include one {{htmlelement("rt")}} element for each base segment/<code>&lt;rb&gt;</code> element that you want to annotate.</li>
-</ul>
+*   Ruby annotations are for showing pronunciation of East Asian characters, like using Japanese furigana or Taiwanese bopomofo characters. The `<rb>` element is used to separate out each segment of the ruby base text.
+*   Even though `<rb>` is not an empty element, it is common to just include the opening tag of each element in the source code, so that the ruby markup is less complex and easier to read. The browser can then fill in the full element in the rendered version.
+*   You need to include one {{htmlelement("rt")}} element for each base segment/`<rb>` element that you want to annotate.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>Using rb</h3>
+### Using rb
 
-<p>In this example, we provide an annotation for the original character equivalent of "Kanji":</p>
+In this example, we provide an annotation for the original character equivalent of "Kanji":
 
-<pre class="brush: html">&lt;ruby&gt;
-  &lt;rb&gt;漢&lt;rb&gt;字
-  &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;kan&lt;rt&gt;ji&lt;rp&gt;)&lt;/rp&gt;
-&lt;/ruby&gt;</pre>
+```html
+<ruby>
+  <rb>漢<rb>字
+  <rp>(</rp><rt>kan<rt>ji<rp>)</rp>
+</ruby>
+```
 
-<p>Note how we've included two <code>&lt;rb&gt;</code> elements, to delimit the two separate parts of the ruby base text. The annotation on the other hand is delimited by two {{htmlelement("rt")}} elements.</p>
+Note how we've included two `<rb>` elements, to delimit the two separate parts of the ruby base text. The annotation on the other hand is delimited by two {{htmlelement("rt")}} elements.
 
-<p>{{EmbedLiveSample("Using_rb", "100%", 60)}}</p>
+{{EmbedLiveSample("Using_rb", "100%", 60)}}
 
-<h3>Separate annotations</h3>
+### Separate annotations
 
-<p>Note that we could also write this example with the two base text parts annotated completely separately. In this case we don't need to include <code>&lt;rb&gt;</code> elements:</p>
+Note that we could also write this example with the two base text parts annotated completely separately. In this case we don't need to include `<rb>` elements:
 
-<pre class="brush: html">&lt;ruby&gt;
-  漢 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;Kan&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
-  字 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;ji&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
-&lt;/ruby&gt;</pre>
+```html
+<ruby>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
+  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+```
 
-<p>See the article about the {{HTMLElement("ruby")}} element for further examples.</p>
+See the article about the {{HTMLElement("ruby")}} element for further examples.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTMLElement("ruby")}}</li>
- <li>{{HTMLElement("rt")}}</li>
- <li>{{HTMLElement("rp")}}</li>
- <li>
-  <p>{{HTMLElement("rtc")}}</p>
- </li>
-</ul>
+*   {{HTMLElement("ruby")}}
+*   {{HTMLElement("rt")}}
+*   {{HTMLElement("rp")}}
+*   {{HTMLElement("rtc")}}

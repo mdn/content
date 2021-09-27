@@ -9,123 +9,131 @@ tags:
   - Web
   - l10n:priority
 ---
-<div>{{HTMLSidebar("Elements")}}</div>
+{{HTMLSidebar("Elements")}}
 
-<p>This page lists all the {{Glossary("HTML")}} {{Glossary("Element","elements")}}, which are created using {{Glossary("Tag", "tags")}}.</p>
+This page lists all the {{Glossary("HTML")}} {{Glossary("Element","elements")}}, which are created using {{Glossary("Tag", "tags")}}.
 
-<p>They are grouped by function to help you find what you have in mind easily. An alphabetical list of all elements is provided in the sidebar on every element's page as well as this one.</p>
+They are grouped by function to help you find what you have in mind easily. An alphabetical list of all elements is provided in the sidebar on every element's page as well as this one.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> For more information about the basics of HTML elements and attributes, see <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML#elements_%e2%80%94_the_basic_building_blocks">the section on elements in the Introduction to HTML article</a>.</p>
-</div>
+> **Note:** For more information about the basics of HTML elements and attributes, see [the section on elements in the Introduction to HTML article](/en-US/docs/Learn/HTML/Introduction_to_HTML#elements\_%e2%80%94\_the_basic_building_blocks).
 
-<h2 id="Main_root">Main root</h2>
+## Main root
 
-<p>{{HTMLRefTable("HTML Root Element")}}</p>
+{{HTMLRefTable("HTML Root Element")}}
 
-<h2 id="Document_metadata">Document metadata</h2>
+## Document metadata
 
-<p>Metadata contains information about the page. This includes information about styles, scripts and data to help software ({{Glossary("search engine", "search engines")}}, {{Glossary("Browser","browsers")}}, etc.) use and render the page. Metadata for styles and scripts may be defined in the page or link to another file that has the information. </p>
+Metadata contains information about the page. This includes information about styles, scripts and data to help software ({{Glossary("search engine", "search engines")}}, {{Glossary("Browser","browsers")}}, etc.) use and render the page. Metadata for styles and scripts may be defined in the page or link to another file that has the information. 
 
-<p>{{HTMLRefTable("HTML Document Metadata")}}</p>
+{{HTMLRefTable("HTML Document Metadata")}}
 
-<h2 id="Sectioning_root">Sectioning root</h2>
+## Sectioning root
 
-<p>{{HTMLRefTable("Sectioning Root Element")}}</p>
+{{HTMLRefTable("Sectioning Root Element")}}
 
-<h2 id="Content_sectioning">Content sectioning</h2>
+## Content sectioning
 
-<p>Content sectioning elements allow you to organize the document content into logical pieces. Use the sectioning elements to create a broad outline for your page content, including header and footer navigation, and heading elements to identify sections of content.   </p>
+Content sectioning elements allow you to organize the document content into logical pieces. Use the sectioning elements to create a broad outline for your page content, including header and footer navigation, and heading elements to identify sections of content.   
 
-<p>{{HTMLRefTable("HTML Sections")}}</p>
+{{HTMLRefTable("HTML Sections")}}
 
-<h2 id="Text_content">Text content</h2>
+## Text content
 
-<p>Use HTML text content elements to organize blocks or sections of content placed between the opening {{HTMLElement("body")}} and closing <code>&lt;/body&gt;</code> tags. Important for {{Glossary("accessibility")}} and {{Glossary("SEO")}}, these elements identify the purpose or structure of that content.     </p>
+Use HTML text content elements to organize blocks or sections of content placed between the opening {{HTMLElement("body")}} and closing `</body>` tags. Important for {{Glossary("accessibility")}} and {{Glossary("SEO")}}, these elements identify the purpose or structure of that content.     
 
-<p>{{HTMLRefTable("HTML Grouping Content")}}</p>
+{{HTMLRefTable("HTML Grouping Content")}}
 
-<h2 id="Inline_text_semantics">Inline text semantics</h2>
+## Inline text semantics
 
-<p>Use the HTML inline text semantic to define the meaning, structure, or style of a word, line, or any arbitrary piece of text.</p>
+Use the HTML inline text semantic to define the meaning, structure, or style of a word, line, or any arbitrary piece of text.
 
-<p>{{HTMLRefTable("HTML Text-Level Semantics")}}</p>
+{{HTMLRefTable("HTML Text-Level Semantics")}}
 
-<h2 id="Image_and_multimedia">Image and multimedia</h2>
+## Image and multimedia
 
-<p>HTML supports various multimedia resources such as images, audio, and video.</p>
+HTML supports various multimedia resources such as images, audio, and video.
 
-<p>{{HTMLRefTable("multimedia")}}</p>
+{{HTMLRefTable("multimedia")}}
 
-<h2 id="Embedded_content">Embedded content</h2>
+## Embedded content
 
-<p>In addition to regular multimedia content, HTML can include a variety of other content, even if it's not always easy to interact with.</p>
+In addition to regular multimedia content, HTML can include a variety of other content, even if it's not always easy to interact with.
 
-<p>{{HTMLRefTable({"include":["HTML embedded content"], "exclude":["multimedia"]})}}</p>
+{{HTMLRefTable({"include":\["HTML embedded content"], "exclude":\["multimedia"]})}}
 
-<h2>SVG and MathML</h2>
+## SVG and MathML
 
-<p>You can embed <a href="/en-US/docs/Web/SVG">SVG</a> and <a href="/en-US/docs/Web/MathML">MathML</a> content directly into HTML documents, using the {{SVGElement("svg")}} and {{MathMLElement("math")}} elements.</p>
+You can embed [SVG](/en-US/docs/Web/SVG) and [MathML](/en-US/docs/Web/MathML) content directly into HTML documents, using the {{SVGElement("svg")}} and {{MathMLElement("math")}} elements.
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Element</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SVGElement("svg")}}</td>
-   <td>The <code>svg</code> element is a container that defines a new coordinate system and <a href="/en-US/docs/Web/SVG/Attribute/viewBox">viewport</a>. It is used as the outermost element of SVG documents, but it can also be used to embed an SVG fragment inside an SVG or HTML document.</td>
-  </tr>
-  <tr>
-   <td>{{MathMLElement("math")}}</td>
-   <td>The top-level element in MathML is <code>&lt;math&gt;</code>. Every valid MathML instance must be wrapped in <code>&lt;math&gt;</code> tags. In addition you must not nest a second <code>&lt;math&gt;</code> element in another, but you can have an arbitrary number of other child elements in it.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Element</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SVGElement("svg")}}</td>
+      <td>
+        The <code>svg</code> element is a container that defines a new
+        coordinate system and
+        <a href="/en-US/docs/Web/SVG/Attribute/viewBox">viewport</a>. It is used
+        as the outermost element of SVG documents, but it can also be used to
+        embed an SVG fragment inside an SVG or HTML document.
+      </td>
+    </tr>
+    <tr>
+      <td>{{MathMLElement("math")}}</td>
+      <td>
+        The top-level element in MathML is <code>&#x3C;math></code>. Every valid
+        MathML instance must be wrapped in <code>&#x3C;math></code> tags. In
+        addition you must not nest a second <code>&#x3C;math></code> element in
+        another, but you can have an arbitrary number of other child elements in
+        it.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Scripting">Scripting</h2>
+## Scripting
 
-<p>In order to create dynamic content and Web applications, HTML supports the use of scripting languages, most prominently JavaScript. Certain elements support this capability.</p>
+In order to create dynamic content and Web applications, HTML supports the use of scripting languages, most prominently JavaScript. Certain elements support this capability.
 
-<p>{{HTMLRefTable("HTML Scripting")}}</p>
+{{HTMLRefTable("HTML Scripting")}}
 
-<h2 id="Demarcating_edits">Demarcating edits</h2>
+## Demarcating edits
 
-<p>These elements let you provide indications that specific parts of the text have been altered.</p>
+These elements let you provide indications that specific parts of the text have been altered.
 
-<p>{{HTMLRefTable("HTML Edits")}}</p>
+{{HTMLRefTable("HTML Edits")}}
 
-<h2 id="Table_content">Table content</h2>
+## Table content
 
-<p>The elements here are used to create and handle tabular data.</p>
+The elements here are used to create and handle tabular data.
 
-<p>{{HTMLRefTable("HTML tabular data")}}</p>
+{{HTMLRefTable("HTML tabular data")}}
 
-<h2 id="Forms">Forms</h2>
+## Forms
 
-<p>HTML provides a number of elements which can be used together to create forms which the user can fill out and submit to the Web site or application. There's a great deal of further information about this available in the <a href="/en-US/docs/Learn/Forms">HTML forms guide</a>.</p>
+HTML provides a number of elements which can be used together to create forms which the user can fill out and submit to the Web site or application. There's a great deal of further information about this available in the [HTML forms guide](/en-US/docs/Learn/Forms).
 
-<p>{{HTMLRefTable({"include": ["HTML forms"], "exclude":["Deprecated"]})}}</p>
+{{HTMLRefTable({"include": \["HTML forms"], "exclude":\["Deprecated"]})}}
 
-<h2 id="Interactive_elements">Interactive elements</h2>
+## Interactive elements
 
-<p>HTML offers a selection of elements which help to create interactive user interface objects.</p>
+HTML offers a selection of elements which help to create interactive user interface objects.
 
-<p>{{HTMLRefTable("HTML interactive elements")}}</p>
+{{HTMLRefTable("HTML interactive elements")}}
 
-<h2 id="Web_Components">Web Components</h2>
+## Web Components
 
-<p>Web Components is an HTML-related technology which makes it possible to, essentially, create and use custom elements as if it were regular HTML. In addition, you can create custom versions of standard HTML elements.</p>
+Web Components is an HTML-related technology which makes it possible to, essentially, create and use custom elements as if it were regular HTML. In addition, you can create custom versions of standard HTML elements.
 
-<p>{{HTMLRefTable({"include":["Web Components"],"exclude":["Deprecated", "Obsolete"]})}}</p>
+{{HTMLRefTable({"include":\["Web Components"],"exclude":\["Deprecated", "Obsolete"]})}}
 
-<h2 id="Obsolete_and_deprecated_elements">Obsolete and deprecated elements</h2>
+## Obsolete and deprecated elements
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> These are old HTML elements which are deprecated and should not be used. <strong>You should never use them in new projects, and should replace them in old projects as soon as you can.</strong> They are listed here for completeness only.</p>
-</div>
+> **Warning:** These are old HTML elements which are deprecated and should not be used. **You should never use them in new projects, and should replace them in old projects as soon as you can.** They are listed here for completeness only.
 
-<p>{{HTMLRefTable({"include":["Deprecated","Obsolete"]})}}</p>
+{{HTMLRefTable({"include":\["Deprecated","Obsolete"]})}}

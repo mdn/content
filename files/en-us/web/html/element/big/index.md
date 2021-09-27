@@ -9,76 +9,78 @@ tags:
   - Web
 browser-compat: html.elements.big
 ---
-<div>{{deprecated_header}}</div>
+{{deprecated_header}}
 
-<p>The <strong><code>&lt;big&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> deprecated element renders the enclosed text at a font size one level larger than the surrounding text (<code>medium</code> becomes <code>large</code>, for example). The size is capped at the browser's maximum permitted font size.</p>
+The **`<big>`** [HTML](/en-US/docs/Web/HTML) deprecated element renders the enclosed text at a font size one level larger than the surrounding text (`medium` becomes `large`, for example). The size is capped at the browser's maximum permitted font size.
 
-<div class="warning">
-<p><strong>Warning:</strong> This element has been removed from the specification and shouldn't be used any more. Use the CSS {{cssxref("font-size")}} property to adjust the font size.</p>
-</div>
+> **Warning:** This element has been removed from the specification and shouldn't be used any more. Use the CSS {{cssxref("font-size")}} property to adjust the font size.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element has no other attributes than the <a href="/en-US/docs/Web/HTML/Global_attributes" title="HTML/global attributes">global attributes</a>, common to all elements.</p>
+This element has no other attributes than the [global attributes](/en-US/docs/Web/HTML/Global_attributes "HTML/global attributes"), common to all elements.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Here we see examples showing the use of <code>&lt;big&gt;</code> followed by an example showing how to accomplish the same results using modern CSS syntax instead.</p>
+Here we see examples showing the use of `<big>` followed by an example showing how to accomplish the same results using modern CSS syntax instead.
 
-<h3 id="Using_big">Using big</h3>
+### Using big
 
-<p>This example uses the obsolete <code>&lt;big&gt;</code> element to increase the size of some text.</p>
+This example uses the obsolete `<big>` element to increase the size of some text.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;
-  This is the first sentence. &lt;big&gt;This whole
-  sentence is in bigger letters.&lt;/big&gt;
-&lt;/p&gt;</pre>
+```html
+<p>
+  This is the first sentence. <big>This whole
+  sentence is in bigger letters.</big>
+</p>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Using_big", 640, 60)}}</p>
+{{EmbedLiveSample("Using_big", 640, 60)}}
 
-<h3 id="Using_CSS_font-size">Using CSS <code>font-size</code></h3>
+### Using CSS `font-size`
 
-<p>This example uses the CSS {{cssxref("font-size")}} property to increase the font size by one level.</p>
+This example uses the CSS {{cssxref("font-size")}} property to increase the font size by one level.
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.bigger {
+```css
+.bigger {
   font-size: larger;
-}</pre>
+}
+```
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;
-  This is the first sentence. &lt;span class="bigger"&gt;This whole
-  sentence is in bigger letters.&lt;/span&gt;
-&lt;/p&gt;</pre>
+```html
+<p>
+  This is the first sentence. <span class="bigger">This whole
+  sentence is in bigger letters.</span>
+</p>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Using_CSS_font-size", 640, 60)}}</p>
+{{EmbedLiveSample("Using_CSS_font-size", 640, 60)}}
 
-<h2 id="DOM_interface">DOM interface</h2>
+## DOM interface
 
-<p>This element implements the {{domxref('HTMLElement')}} interface.</p>
+This element implements the {{domxref('HTMLElement')}} interface.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>CSS: {{cssxref("font-size")}}, {{cssxref("font")}}</li>
- <li>HTML: {{htmlelement("small")}}, {{htmlelement("font")}}, {{htmlelement("style")}}</li>
- <li>HTML 4.01 Specification: <a href="https://www.w3.org/TR/html4/present/graphics.html#h-15.2">Font Styles</a></li>
-</ul>
+*   CSS: {{cssxref("font-size")}}, {{cssxref("font")}}
+*   HTML: {{htmlelement("small")}}, {{htmlelement("font")}}, {{htmlelement("style")}}
+*   HTML 4.01 Specification: [Font Styles](https://www.w3.org/TR/html4/present/graphics.html#h-15.2)
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

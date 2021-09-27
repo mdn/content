@@ -11,82 +11,76 @@ tags:
   - itemid
 browser-compat: html.global_attributes.itemid
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>The <code><strong>itemid</strong></code> <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a> provides microdata in the form of a unique, global identifier of an item.</p>
+The **`itemid`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) provides microdata in the form of a unique, global identifier of an item.
 
-<p>An <code>itemid</code> attribute can only be specified for an element that has both {{htmlattrxref("itemscope")}} and {{htmlattrxref("itemtype")}} attributes. Also, <code>itemid</code> can only be specified on elements that possess an <code>itemscope</code> attribute whose corresponding <code>itemtype</code> refers to or defines a vocabulary that supports global identifiers.</p>
+An `itemid` attribute can only be specified for an element that has both {{htmlattrxref("itemscope")}} and {{htmlattrxref("itemtype")}} attributes. Also, `itemid` can only be specified on elements that possess an `itemscope` attribute whose corresponding `itemtype` refers to or defines a vocabulary that supports global identifiers.
 
-<p>The exact meaning of an <code>itemtype</code>'s global identifier is provided by the definition of that identifier within the specified vocabulary. The vocabulary defines whether several items with the same global identifier can coexist and, if so, how items with the same identifier are handled.</p>
+The exact meaning of an `itemtype`'s global identifier is provided by the definition of that identifier within the specified vocabulary. The vocabulary defines whether several items with the same global identifier can coexist and, if so, how items with the same identifier are handled.
 
-<div class="note"><p><strong>Note:</strong> The {{glossary("WHATWG")}} definition specifies that an <code>itemid</code> must be a {{glossary("URL")}}. However, the following example correctly illustrates that a {{glossary("URN")}} may also be used. This inconsistency may reflect the incomplete nature of the Microdata specification.</p></div>
+> **Note:** The {{glossary("WHATWG")}} definition specifies that an `itemid` must be a {{glossary("URL")}}. However, the following example correctly illustrates that a {{glossary("URN")}} may also be used. This inconsistency may reflect the incomplete nature of the Microdata specification.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;dl itemscope
+```html
+<dl itemscope
     itemtype="http://vocab.example.net/book"
-    itemid="urn:isbn:0-330-34032-8"&gt;
-&lt;dt&gt;Title &lt;dd itemprop="title"&gt;The Reality Dysfunction
-&lt;dt&gt;Author &lt;dd itemprop="author"&gt;Peter F. Hamilton
-&lt;dt&gt;Publication date
-&lt;dd&gt;&lt;time itemprop="pubdate" datetime="1996-01-26"&gt;26 January 1996&lt;/time&gt; &lt;/dl&gt;</pre>
+    itemid="urn:isbn:0-330-34032-8">
+<dt>Title <dd itemprop="title">The Reality Dysfunction
+<dt>Author <dd itemprop="author">Peter F. Hamilton
+<dt>Publication date
+<dd><time itemprop="pubdate" datetime="1996-01-26">26 January 1996</time> </dl>
+```
 
-<h3 id="Structured_data">Structured data</h3>
+### Structured data
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td rowspan="4">itemscope</td>
-   <td>itemtype: itemid</td>
-   <td colspan="2">
-    http://vocab.example.net/book: urn:isbn:0-330-34032-8
-   </td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>title</td>
-   <td>The Reality Dysfunction</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>author</td>
-   <td>
-    Peter F. Hamilton
-   </td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>pubdate</td>
-   <td>1996-01-26</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td rowspan="4">itemscope</td>
+      <td>itemtype: itemid</td>
+      <td colspan="2">http://vocab.example.net/book: urn:isbn:0-330-34032-8</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>title</td>
+      <td>The Reality Dysfunction</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>author</td>
+      <td>Peter F. Hamilton</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>pubdate</td>
+      <td>1996-01-26</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('HTML', '', '', '', 'Web/HTML/Global_attributes/itemid')}}</p>
+{{EmbedLiveSample('HTML', '', '', '', 'Web/HTML/Global_attributes/itemid')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>All <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</li>
- <li>Other, microdata related, global attributes:
-  <ul>
-   <li>{{htmlattrxref("itemid")}}</li>
-   <li>{{htmlattrxref("itemprop")}}</li>
-   <li>{{htmlattrxref("itemref")}}</li>
-   <li>{{htmlattrxref("itemscope")}}</li>
-   <li>{{htmlattrxref("itemtype")}}</li>
-  </ul>
- </li>
-</ul>
+*   All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+*   Other, microdata related, global attributes:
+
+    *   {{htmlattrxref("itemid")}}
+    *   {{htmlattrxref("itemprop")}}
+    *   {{htmlattrxref("itemref")}}
+    *   {{htmlattrxref("itemscope")}}
+    *   {{htmlattrxref("itemtype")}}

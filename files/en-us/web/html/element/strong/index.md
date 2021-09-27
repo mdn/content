@@ -15,104 +15,132 @@ tags:
   - strong
 browser-compat: html.elements.strong
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;strong&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element indicates that its contents have strong importance, seriousness, or urgency. Browsers typically render the contents in bold type.</p>
+The **`<strong>`** [HTML](/en-US/docs/Web/HTML) element indicates that its contents have strong importance, seriousness, or urgency. Browsers typically render the contents in bold type.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/strong.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/strong.html", "tabbed-shorter")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>None, must have both a start tag and an end tag.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>, or any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>Any</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >Phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>None, must have both a start tag and an end tag.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >, or any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element only includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>The <code>&lt;strong&gt;</code> element is for content that is of "strong importance," including things of great seriousness or urgency (such as warnings). This could be a sentence that is of great importance to the whole page, or you could merely try to point out that some words are of greater importance compared to nearby content.</p>
+The `<strong>` element is for content that is of "strong importance," including things of great seriousness or urgency (such as warnings). This could be a sentence that is of great importance to the whole page, or you could merely try to point out that some words are of greater importance compared to nearby content.
 
-<p>Typically this element is rendered by default using a bold font weight. However, it should <em>not</em> be used to apply bold styling; use the CSS {{cssxref("font-weight")}} property for that purpose. Use the {{HTMLElement("b")}} element to draw attention to certain text without indicating a higher level of importance. Use the {{HTMLElement("em")}} element to mark text that has stress emphasis.</p>
+Typically this element is rendered by default using a bold font weight. However, it should *not* be used to apply bold styling; use the CSS {{cssxref("font-weight")}} property for that purpose. Use the {{HTMLElement("b")}} element to draw attention to certain text without indicating a higher level of importance. Use the {{HTMLElement("em")}} element to mark text that has stress emphasis.
 
-<p>Another accepted use for <code>&lt;strong&gt;</code> is to denote the labels of paragraphs which represent notes or warnings within the text of a page.</p>
+Another accepted use for `<strong>` is to denote the labels of paragraphs which represent notes or warnings within the text of a page.
 
-<h3>&lt;b&gt; vs. &lt;strong&gt;</h3>
+### \<b> vs. \<strong>
 
-<p>It is often confusing to new developers why there are so many ways to express the same thing on a rendered website. {{HTMLElement("b")}} and <code>&lt;strong&gt;</code> are perhaps one of the most common sources of confusion, causing developers to ask "Should I use <code>&lt;b&gt;</code> or <code>&lt;strong&gt;</code>? Don't they both do the same thing?"</p>
+It is often confusing to new developers why there are so many ways to express the same thing on a rendered website. {{HTMLElement("b")}} and `<strong>` are perhaps one of the most common sources of confusion, causing developers to ask "Should I use `<b>` or `<strong>`? Don't they both do the same thing?"
 
-<p>Not exactly. The <code>&lt;strong&gt;</code> element is for content that is of greater importance, while the <code>&lt;b&gt;</code> element is used to draw attention to text without indicating that it's more important.</p>
+Not exactly. The `<strong>` element is for content that is of greater importance, while the `<b>` element is used to draw attention to text without indicating that it's more important.
 
-<p>It may help to realize that both are valid and semantic elements in HTML5 and that it's a coincidence that they both have the same default styling (boldface) in most browsers (although some older browsers actually underline <code>&lt;strong&gt;</code>). Each element is meant to be used in certain types of scenarios, and if you want to bold text for decoration, you should instead actually use the CSS {{cssxref("font-weight")}} property.</p>
+It may help to realize that both are valid and semantic elements in HTML5 and that it's a coincidence that they both have the same default styling (boldface) in most browsers (although some older browsers actually underline `<strong>`). Each element is meant to be used in certain types of scenarios, and if you want to bold text for decoration, you should instead actually use the CSS {{cssxref("font-weight")}} property.
 
-<p>The intended meaning or purpose of the enclosed text should be what determines which element you use. Communicating meaning is what semantics are all about.</p>
+The intended meaning or purpose of the enclosed text should be what determines which element you use. Communicating meaning is what semantics are all about.
 
-<h3>&lt;em&gt; vs. &lt;strong&gt;</h3>
+### \<em> vs. \<strong>
 
-<p>Adding to the confusion is the fact that while HTML 4 defined <code>&lt;strong&gt;</code> as indicating a stronger emphasis, HTML 5 defines <code>&lt;strong&gt;</code> as representing "strong importance for its contents." This is an important distinction to make.</p>
+Adding to the confusion is the fact that while HTML 4 defined `<strong>` as indicating a stronger emphasis, HTML 5 defines `<strong>` as representing "strong importance for its contents." This is an important distinction to make.
 
-<p>While <code>&lt;em&gt;</code> is used to change the meaning of a sentence as spoken emphasis does ("I <em>love</em> carrots" vs. "I love <em>carrots</em>"), <code>&lt;strong&gt;</code> is used to give portions of a sentence added importance (e.g., "<strong>Warning!</strong> This is <strong>very dangerous.</strong>") Both <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> can be nested to increase the relative degree of importance or stress emphasis, respectively.</p>
+While `<em>` is used to change the meaning of a sentence as spoken emphasis does ("I *love* carrots" vs. "I love *carrots*"), `<strong>` is used to give portions of a sentence added importance (e.g., "**Warning!** This is **very dangerous.**") Both `<strong>` and `<em>` can be nested to increase the relative degree of importance or stress emphasis, respectively.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<pre class="brush: html">&lt;p&gt;Before proceeding, &lt;strong&gt;make sure you put on your safety goggles&lt;/strong&gt;.&lt;/p&gt;</pre>
+```html
+<p>Before proceeding, <strong>make sure you put on your safety goggles</strong>.</p>
+```
 
-<p>The resulting output:</p>
+The resulting output:
 
-<p>{{EmbedLiveSample("Basic_example", 650, 80)}}</p>
+{{EmbedLiveSample("Basic_example", 650, 80)}}
 
-<h3 id="Labeling_warnings">Labeling warnings</h3>
+### Labeling warnings
 
-<pre class="brush: html">&lt;p&gt;&lt;strong&gt;Important:&lt;/strong&gt; Before proceeding, make sure you add plenty of butter.&lt;/p&gt;</pre>
+```html
+<p><strong>Important:</strong> Before proceeding, make sure you add plenty of butter.</p>
+```
 
-<p>This results in:</p>
+This results in:
 
-<p>{{EmbedLiveSample("Labeling_warnings", 650, 80)}}</p>
+{{EmbedLiveSample("Labeling_warnings", 650, 80)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>The {{HTMLElement("b")}} element</li>
- <li>The {{HTMLElement("em")}} element</li>
- <li>The {{cssxref("font-weight")}} property</li>
-</ul>
+*   The {{HTMLElement("b")}} element
+*   The {{HTMLElement("em")}} element
+*   The {{cssxref("font-weight")}} property

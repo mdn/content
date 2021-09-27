@@ -15,80 +15,118 @@ tags:
   - Web Components
 browser-compat: html.elements.template
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;template&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element is a mechanism for holding {{Glossary("HTML")}} that is not to be rendered immediately when a page is loaded but may be instantiated subsequently during runtime using JavaScript.</p>
+The **`<template>`** [HTML](/en-US/docs/Web/HTML) element is a mechanism for holding {{Glossary("HTML")}} that is not to be rendered immediately when a page is loaded but may be instantiated subsequently during runtime using JavaScript.
 
-<p>Think of a template as a content fragment that is being stored for subsequent use in the document. While the parser does process the contents of the <strong><code>&lt;template&gt;</code></strong> element while loading the page, it does so only to ensure that those contents are valid; the element's contents are not rendered, however.</p>
+Think of a template as a content fragment that is being stored for subsequent use in the document. While the parser does process the contents of the **`<template>`** element while loading the page, it does so only to ensure that those contents are valid; the element's contents are not rendered, however.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content">Metadata content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#script-supporting_elements">script-supporting element</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td>No restrictions</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content">metadata content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>, or <a href="/en-US/docs/Web/Guide/HTML/Content_categories#script-supporting_elements">script-supporting elements</a>. Also allowed as a child of a {{HTMLElement("colgroup")}} element that does <em>not</em> have a {{htmlattrxref("span", "colgroup")}} attribute.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>No <code>role</code> permitted</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLTemplateElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
+          >Metadata content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >flow content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >,
+        <a
+          href="/en-US/docs/Web/Guide/HTML/Content_categories#script-supporting_elements"
+          >script-supporting element</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>No restrictions</td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
+          >metadata content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >, or
+        <a
+          href="/en-US/docs/Web/Guide/HTML/Content_categories#script-supporting_elements"
+          >script-supporting elements</a
+        >. Also allowed as a child of a {{HTMLElement("colgroup")}}
+        element that does <em>not</em> have a
+        {{htmlattrxref("span", "colgroup")}} attribute.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLTemplateElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element only includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<p>However, the {{domxref("HTMLTemplateElement")}} has a {{domxref("HTMLTemplateElement.content", "content")}} property, which is a read-only {{domxref("DocumentFragment")}} containing the DOM subtree which the template represents. Note that directly using the value of the {{domxref("HTMLTemplateElement.content", "content")}} could lead to unexpected behavior, see <a href="#avoiding_documentfragment_pitfall">Avoiding DocumentFragment pitfall</a> section below.</p>
+However, the {{domxref("HTMLTemplateElement")}} has a {{domxref("HTMLTemplateElement.content", "content")}} property, which is a read-only {{domxref("DocumentFragment")}} containing the DOM subtree which the template represents. Note that directly using the value of the {{domxref("HTMLTemplateElement.content", "content")}} could lead to unexpected behavior, see [Avoiding DocumentFragment pitfall](#avoiding_documentfragment_pitfall) section below.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>First we start with the HTML portion of the example.</p>
+First we start with the HTML portion of the example.
 
-<pre class="brush: html">&lt;table id="producttable"&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;td&gt;UPC_Code&lt;/td&gt;
-      &lt;td&gt;Product_Name&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;!-- existing data could optionally be included here --&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+```html
+<table id="producttable">
+  <thead>
+    <tr>
+      <td>UPC_Code</td>
+      <td>Product_Name</td>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- existing data could optionally be included here -->
+  </tbody>
+</table>
 
-&lt;template id="productrow"&gt;
-  &lt;tr&gt;
-    &lt;td class="record"&gt;&lt;/td&gt;
-    &lt;td&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/template&gt;
-</pre>
+<template id="productrow">
+  <tr>
+    <td class="record"></td>
+    <td></td>
+  </tr>
+</template>
+```
 
-<p>First, we have a table into which we will later insert content using JavaScript code. Then comes the template, which describes the structure of an HTML fragment representing a single table row.</p>
+First, we have a table into which we will later insert content using JavaScript code. Then comes the template, which describes the structure of an HTML fragment representing a single table row.
 
-<p>Now that the table has been created and the template defined, we use JavaScript to insert rows into the table, with each row being constructed using the template as its basis.</p>
+Now that the table has been created and the template defined, we use JavaScript to insert rows into the table, with each row being constructed using the template as its basis.
 
-<pre class="brush:js;">// Test to see if the browser supports the HTML template element by checking
+```js
+// Test to see if the browser supports the HTML template element by checking
 // for the presence of the template element's content attribute.
 if ('content' in document.createElement('template')) {
 
@@ -117,36 +155,41 @@ if ('content' in document.createElement('template')) {
   // Find another way to add the rows to the table because
   // the HTML template element is not supported.
 }
-</pre>
+```
 
-<p>The result is the original HTML table, with two new rows appended to it via JavaScript:</p>
+The result is the original HTML table, with two new rows appended to it via JavaScript:
 
-<pre class="brush: css hidden">table {
+```css hidden
+table {
   background: #000;
 }
 table td {
   background: #fff;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Examples", 500, 120)}}</p>
+{{EmbedLiveSample("Examples", 500, 120)}}
 
-<h2 id="Avoiding_DocumentFragment_pitfall">Avoiding DocumentFragment pitfall</h2>
+## Avoiding DocumentFragment pitfall
 
-<p>A {{domxref("DocumentFragment")}} is not a valid target for various events, as such it is often preferable to clone or refer to the elements within it.</p>
+A {{domxref("DocumentFragment")}} is not a valid target for various events, as such it is often preferable to clone or refer to the elements within it.
 
-<p>Consider the following HTML and JavaScript:</p>
+Consider the following HTML and JavaScript:
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="container"&gt;&lt;/div&gt;
+```html
+<div id="container"></div>
 
-&lt;template id="template"&gt;
-  &lt;div&gt;Click me&lt;/div&gt;
-&lt;/template&gt;</pre>
+<template id="template">
+  <div>Click me</div>
+</template>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const container = document.getElementById("container");
+```js
+const container = document.getElementById("container");
 const template = document.getElementById("template");
 
 function clickHandler(event) {
@@ -159,25 +202,24 @@ container.appendChild(firstClone);
 
 const secondClone = template.content.firstElementChild.cloneNode(true);
 secondClone.addEventListener("click", clickHandler);
-container.appendChild(secondClone);</pre>
+container.appendChild(secondClone);
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p><code>firstClone</code> is a DocumentFragment instance, so while it gets appended inside the container as expected, clicking on it does not trigger the click event. <code>secondClone</code> is an <a href="/en-US/docs/Web/API/HTMLDivElement">HTMLDivElement</a> instance, clicking on it works as one would expect.</p>
+`firstClone` is a DocumentFragment instance, so while it gets appended inside the container as expected, clicking on it does not trigger the click event. `secondClone` is an [HTMLDivElement](/en-US/docs/Web/API/HTMLDivElement) instance, clicking on it works as one would expect.
 
-<p>{{EmbedLiveSample('Avoiding_DocumentFragment_pitfall')}}</p>
+{{EmbedLiveSample('Avoiding_DocumentFragment_pitfall')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Web components: {{HTMLElement("slot")}} (and historical: {{HTMLElement("shadow")}})</li>
- <li><a href="/en-US/docs/Web/Web_Components/Using_templates_and_slots">Using templates and slots</a></li>
-</ul>
+*   Web components: {{HTMLElement("slot")}} (and historical: {{HTMLElement("shadow")}})
+*   [Using templates and slots](/en-US/docs/Web/Web_Components/Using_templates_and_slots)

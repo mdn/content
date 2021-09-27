@@ -12,35 +12,29 @@ tags:
   - Reference
 browser-compat: html.elements.image
 ---
-<div>{{deprecated_header}}</div>
+{{deprecated_header}}{{non-standard_header}}
 
-<div>{{non-standard_header}}</div>
+The **`<image>`** [HTML](/en-US/docs/Web/HTML) element is an obsolete remnant of an ancient version of HTML lost in the mists of time; use the standard {{HTMLElement("img")}} element instead. Seriously, the specification even literally uses the words "Don't ask" when describing this element.
 
-<p>The <strong><code>&lt;image&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element is an obsolete remnant of an ancient version of HTML lost in the mists of time; use the standard {{HTMLElement("img")}} element instead. Seriously, the specification even literally uses the words "Don't ask" when describing this element.</p>
+> **Warning:** Do not use this element! In order to display images, use the standard {{HTMLElement("img")}} element.
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> Do not use this element! In order to display images, use the standard {{HTMLElement("img")}} element.</p>
-</div>
+While some browsers will attempt to automatically convert this into an {{HTMLElement("img")}} element, they won't always do so, and won't always succeed when they try, due to various ways in which the options can be interpreted. So just don't use it if you like your users.
 
-<p>While some browsers will attempt to automatically convert this into an {{HTMLElement("img")}} element, they won't always do so, and won't always succeed when they try, due to various ways in which the options can be interpreted. So just don't use it if you like your users.</p>
+## Specifications
 
-<h2 id="Specifications">Specifications</h2>
+This might have once been part of a specification, but nobody seems to remember. It certainly isn't anymore. Just avoid it like the plague.
 
-<p>This might have once been part of a specification, but nobody seems to remember. It certainly isn't anymore. Just avoid it like the plague.</p>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+In general, browsers will attempt to map this to `<img>`, but only if the {{htmlattrxref("src", "img")}} attribute is specified as well.  Creating an `<image>` element without a `src` attribute results in an {{domxref("HTMLElement")}} object with the local element name `"image"`. However, if the element is created with a `src` attribute, the result is instead an {{domxref("HTMLImageElement")}} and its local element name is changed to `"img"`.
 
-<p>In general, browsers will attempt to map this to <code>&lt;img&gt;</code>, but only if the {{htmlattrxref("src", "img")}} attribute is specified as well.  Creating an <code>&lt;image&gt;</code> element without a <code>src</code> attribute results in an {{domxref("HTMLElement")}} object with the local element name <code>"image"</code>. However, if the element is created with a <code>src</code> attribute, the result is instead an {{domxref("HTMLImageElement")}} and its local element name is changed to <code>"img"</code>.</p>
+However, that doesn't mean this is a good idea to use. It's not.
 
-<p>However, that doesn't mean this is a good idea to use. It's not.</p>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
+*   {{HTMLElement("img")}}: The correct way to display an image in a document
+*   {{HTMLElement("picture")}}: A more powerful correct way to display an image in a document
 
-<ul>
- <li>{{HTMLElement("img")}}: The correct way to display an image in a document</li>
- <li>{{HTMLElement("picture")}}: A more powerful correct way to display an image in a document</li>
-</ul>
-
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

@@ -9,105 +9,125 @@ tags:
   - Web
 browser-compat: html.elements.br
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;br&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element produces a line break in text (carriage-return). It is useful for writing a poem or an address, where the division of lines is significant.</p>
+The **`<br>`** [HTML](/en-US/docs/Web/HTML) element produces a line break in text (carriage-return). It is useful for writing a poem or an address, where the division of lines is significant.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/br.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/br.html", "tabbed-standard")}}
 
-<p>As you can see from the above example, a <code>&lt;br&gt;</code> element is included at each point where we want the text to break. The text after the <code>&lt;br&gt;</code> begins again at the start of the next line of the text block.</p>
+As you can see from the above example, a `<br>` element is included at each point where we want the text to break. The text after the `<br>` begins again at the start of the next line of the text block.
 
-<div class="note">
-<p><strong>Note:</strong> Do not use <code>&lt;br&gt;</code> to create margins between paragraphs; wrap them in {{htmlelement("p")}} elements and use the <a href="/en-US/docs/Web/CSS">CSS</a> {{cssxref('margin')}} property to control their size.</p>
-</div>
+> **Note:** Do not use `<br>` to create margins between paragraphs; wrap them in {{htmlelement("p")}} elements and use the [CSS](/en-US/docs/Web/CSS) {{cssxref('margin')}} property to control their size.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element's attributes include the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<h3 id="Deprecated_attributes">Deprecated attributes</h3>
+### Deprecated attributes
 
-<dl>
- <dt>{{htmlattrdef("clear")}}</dt>
- <dd>Indicates where to begin the next line after the break.</dd>
-</dl>
+*   {{htmlattrdef("clear")}}
+    *   : Indicates where to begin the next line after the break.
 
-<h2 id="Styling_with_CSS">Styling with CSS</h2>
+## Styling with CSS
 
-<p>The <code>&lt;br&gt;</code> element has a single, well-defined purpose — to create a line break in a block of text. As such, it has no dimensions or visual output of its own, and there is very little you can do to style it.</p>
+The `<br>` element has a single, well-defined purpose — to create a line break in a block of text. As such, it has no dimensions or visual output of its own, and there is very little you can do to style it.
 
-<p>You can set a {{cssxref("margin")}} on <code>&lt;br&gt;</code> elements themselves to increase the spacing between the lines of text in the block, but this is a bad practice — you should use the {{cssxref("line-height")}} property that was designed for that purpose.</p>
+You can set a {{cssxref("margin")}} on `<br>` elements themselves to increase the spacing between the lines of text in the block, but this is a bad practice — you should use the {{cssxref("line-height")}} property that was designed for that purpose.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Simple_br">Simple br</h3>
+### Simple br
 
-<p>In the following example we use <code>&lt;br&gt;</code> elements to create line breaks between the different lines of a postal address:</p>
+In the following example we use `<br>` elements to create line breaks between the different lines of a postal address:
 
-<pre class="brush: html">Mozilla&lt;br&gt;
-331 E. Evelyn Avenue&lt;br&gt;
-Mountain View, CA&lt;br&gt;
-94041&lt;br&gt;
-USA&lt;br&gt;
-</pre>
+```html
+Mozilla<br>
+331 E. Evelyn Avenue<br>
+Mountain View, CA<br>
+94041<br>
+USA<br>
+```
 
-<p>The result looks like so:</p>
+The result looks like so:
 
-<p>{{ EmbedLiveSample('Simple_br', '100%', '90') }}</p>
+{{ EmbedLiveSample('Simple_br', '100%', '90') }}
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>Creating separate paragraphs of text using <code>&lt;br&gt;</code> is not only bad practice, it is problematic for people who navigate with the aid of screen reading technology. Screen readers may announce the presence of the element, but not any content contained within <code>&lt;br&gt;</code>s. This can be a confusing and frustrating experience for the person using the screen reader.</p>
+Creating separate paragraphs of text using `<br>` is not only bad practice, it is problematic for people who navigate with the aid of screen reading technology. Screen readers may announce the presence of the element, but not any content contained within `<br>`s. This can be a confusing and frustrating experience for the person using the screen reader.
 
-<p>Use <code>&lt;p&gt;</code> elements, and use CSS properties like {{cssxref("margin")}} to control their spacing.</p>
+Use `<p>` elements, and use CSS properties like {{cssxref("margin")}} to control their spacing.
 
-<h2 id="Technical_summary">Technical summary</h2>
+## Technical summary
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td>None, it is an {{Glossary("empty element")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>Must have a start tag, and must not have an end tag. In XHTML documents, write this element as <code>&lt;br /&gt;</code>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>{{ARIARole("none")}}, {{ARIARole("presentation")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLBRElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>None, it is an {{Glossary("empty element")}}.</td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>
+        Must have a start tag, and must not have an end tag. In XHTML documents,
+        write this element as <code>&#x3C;br /></code>.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>
+        {{ARIARole("none")}}, {{ARIARole("presentation")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLBRElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTMLElement("address")}} element</li>
- <li>{{HTMLElement("p")}} element</li>
- <li>{{HTMLElement("wbr")}} element</li>
-</ul>
+*   {{HTMLElement("address")}} element
+*   {{HTMLElement("p")}} element
+*   {{HTMLElement("wbr")}} element

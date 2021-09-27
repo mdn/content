@@ -7,37 +7,31 @@ tags:
   - Reference
 browser-compat: html.global_attributes.spellcheck
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>The <strong><code>spellcheck</code></strong> <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a> is an enumerated attribute defines whether the element may be checked for spelling errors.</p>
+The **`spellcheck`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an enumerated attribute defines whether the element may be checked for spelling errors.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/attribute-spellcheck.html","tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/attribute-spellcheck.html","tabbed-shorter")}}
 
-<p>It may have the following values:</p>
+It may have the following values:
 
-<ul>
- <li><code>true</code>, which indicates that the element should be, if possible, checked for spelling errors;</li>
- <li><code>false</code>, which indicates that the element should not be checked for spelling errors.</li>
-</ul>
+*   `true`, which indicates that the element should be, if possible, checked for spelling errors;
+*   `false`, which indicates that the element should not be checked for spelling errors.
 
-<div class="notecard note">
-<p><strong>Note:</strong> The <code>spellcheck</code> attribute is an <em>enumerated</em> one and not a <em>Boolean</em> one. This means that the explicit usage of one of the values <code>true</code> or <code>false</code> is mandatory, and that a shorthand like <code>&lt;textarea spellcheck&gt;&lt;/textarea&gt;</code> is not allowed. The correct usage is <code>&lt;textarea spellcheck="true"&gt;&lt;/textarea&gt;</code>.</p>
-</div>
+> **Note:** The `spellcheck` attribute is an *enumerated* one and not a *Boolean* one. This means that the explicit usage of one of the values `true` or `false` is mandatory, and that a shorthand like `<textarea spellcheck></textarea>` is not allowed. The correct usage is `<textarea spellcheck="true"></textarea>`.
 
-<p>If this attribute is not set, its default value is element-type and browser-defined. This default value may also be <em>inherited</em>, which means that the element content will be checked for spelling errors only if its nearest ancestor has a <em>spellcheck</em> state of <code>true</code>.</p>
+If this attribute is not set, its default value is element-type and browser-defined. This default value may also be *inherited*, which means that the element content will be checked for spelling errors only if its nearest ancestor has a *spellcheck* state of `true`.
 
-<p>This attribute is merely a hint for the browser: browsers are not required to check for spelling errors. Typically non-editable elements are not checked for spelling errors, even if the <code>spellcheck</code> attribute is set to <code>true</code> and the browser supports spellchecking.</p>
+This attribute is merely a hint for the browser: browsers are not required to check for spelling errors. Typically non-editable elements are not checked for spelling errors, even if the `spellcheck` attribute is set to `true` and the browser supports spellchecking.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>All <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</li>
-</ul>
+*   All [global attributes](/en-US/docs/Web/HTML/Global_attributes).

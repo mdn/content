@@ -13,51 +13,52 @@ tags:
   - center
 browser-compat: html.elements.center
 ---
-<div>{{deprecated_header}}</div>
+{{deprecated_header}}
 
-<p>The <strong><code>&lt;center&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element is a <a href="/en-US/docs/Web/HTML/Block-level_elements">block-level element</a> that displays its block-level or inline contents centered horizontally within its containing element. The container is usually, but isn't required to be, {{HTMLElement("body")}}.</p>
+The **`<center>`** [HTML](/en-US/docs/Web/HTML) element is a [block-level element](/en-US/docs/Web/HTML/Block-level_elements) that displays its block-level or inline contents centered horizontally within its containing element. The container is usually, but isn't required to be, {{HTMLElement("body")}}.
 
-<p>This tag has been deprecated in HTML 4 (and XHTML 1) in favor of the <a href="/en-US/docs/Web/CSS">CSS</a> {{Cssxref("text-align")}} property, which can be applied to the {{HTMLElement("div")}} element or to an individual {{HTMLElement("p")}}. For centering blocks, use other CSS properties like {{Cssxref("margin-left")}} and {{Cssxref("margin-right")}} and set them to <code>auto</code> (or set {{Cssxref("margin")}} to <code>0 auto</code>).</p>
+This tag has been deprecated in HTML 4 (and XHTML 1) in favor of the [CSS](/en-US/docs/Web/CSS) {{Cssxref("text-align")}} property, which can be applied to the {{HTMLElement("div")}} element or to an individual {{HTMLElement("p")}}. For centering blocks, use other CSS properties like {{Cssxref("margin-left")}} and {{Cssxref("margin-right")}} and set them to `auto` (or set {{Cssxref("margin")}} to `0 auto`).
 
-<h2 id="DOM_interface">DOM interface</h2>
+## DOM interface
 
-<p>This element implements the {{domxref("HTMLElement")}} interface.</p>
+This element implements the {{domxref("HTMLElement")}} interface.
 
-<h2 id="Example_1">Example 1</h2>
+## Example 1
 
-<pre class="brush: html">&lt;center&gt;This text will be centered.
-&lt;p&gt;So will this paragraph.&lt;/p&gt;&lt;/center&gt;
-</pre>
+```html
+<center>This text will be centered.
+<p>So will this paragraph.</p></center>
+```
 
-<h2>Example 2 (CSS alternative)</h2>
+## Example 2 (CSS alternative)
 
-<pre class="brush: html">&lt;div style="text-align:center"&gt;This text will be centered.
-&lt;p&gt;So will this paragraph.&lt;/p&gt;&lt;/div&gt;
-</pre>
+```html
+<div style="text-align:center">This text will be centered.
+<p>So will this paragraph.</p></div>
+```
 
-<h2>Example 3 (CSS alternative)</h2>
+## Example 3 (CSS alternative)
 
-<pre class="brush: html">&lt;p style="text-align:center"&gt;This line will be centered.&lt;br&gt;
-And so will this line.&lt;/p&gt;
-</pre>
+```html
+<p style="text-align:center">This line will be centered.<br>
+And so will this line.</p>
+```
 
-<h2>Note</h2>
+## Note
 
-<p>Applying {{Cssxref("text-align")}}<code>:center</code> to a {{HTMLElement("div")}} or {{HTMLElement("p")}} element centers the <em>contents</em> of those elements while leaving their overall dimensions unchanged.</p>
+Applying {{Cssxref("text-align")}}`:center` to a {{HTMLElement("div")}} or {{HTMLElement("p")}} element centers the *contents* of those elements while leaving their overall dimensions unchanged.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref("text-align")}}</li>
- <li>{{Cssxref("display")}}</li>
-</ul>
+*   {{Cssxref("text-align")}}
+*   {{Cssxref("display")}}
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

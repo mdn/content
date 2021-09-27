@@ -9,28 +9,33 @@ tags:
   - metadata
 browser-compat: html.elements.meta.name.theme-color
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>theme-color</code></strong> value for the {{htmlattrxref("name", "meta")}} attribute of the {{htmlelement("meta")}} element indicates a suggested color that user agents should use to customize the display of the page or of the surrounding user interface. If specified, the {{htmlattrxref("content", "meta")}} attribute must contain a valid CSS {{cssxref("&lt;color&gt;")}}.</p>
+The **`theme-color`** value for the {{htmlattrxref("name", "meta")}} attribute of the {{htmlelement("meta")}} element indicates a suggested color that user agents should use to customize the display of the page or of the surrounding user interface. If specified, the {{htmlattrxref("content", "meta")}} attribute must contain a valid CSS {{cssxref("&lt;color&gt;")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;meta name="theme-color" content="#4285f4"&gt;</pre>
+```html
+<meta name="theme-color" content="#4285f4">
+```
 
-<p>The following image shows the effect that the {{htmlelement("meta")}} element above will have on a document displayed in Chrome running on an Android mobile device.</p>
+The following image shows the effect that the {{htmlelement("meta")}} element above will have on a document displayed in Chrome running on an Android mobile device.
 
-<img alt="Image showing the effect of using theme-color" src="theme-color.png">
-<p><em>Image credit: from <a href="https://developers.google.com/web/fundamentals/design-and-ux/browser-customization">Icons &amp; Browser Colors</a>, created and <a href="https://developers.google.com/readme/policies">shared by Google</a> and used according to terms described in the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons 4.0 Attribution License</a>.</em></p>
+![Image showing the effect of using theme-color](theme-color.png)
 
-<p>You can provide a media type or query inside the {{htmlattrxref("media", "meta")}} attribute; the color will then only be set if the media condition is true. For example:</p>
+*Image credit: from [Icons & Browser Colors](https://developers.google.com/web/fundamentals/design-and-ux/browser-customization), created and [shared by Google](https://developers.google.com/readme/policies) and used according to terms described in the [Creative Commons 4.0 Attribution License](https://creativecommons.org/licenses/by/4.0/).*
 
-<pre class="brush: html">&lt;meta name="theme-color" media="(prefers-color-scheme: light)" content="white"&gt;
-&lt;meta name="theme-color" media="(prefers-color-scheme: dark)" content="black"&gt;</pre>
+You can provide a media type or query inside the {{htmlattrxref("media", "meta")}} attribute; the color will then only be set if the media condition is true. For example:
 
-<h2 id="Specifications">Specifications</h2>
+```html
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
+```
 
-<p>{{Specifications}}</p>
+## Specifications
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Specifications}}
 
-<p>{{Compat}}</p>
+## Browser compatibility
+
+{{Compat}}

@@ -11,91 +11,105 @@ tags:
   - Web
 browser-compat: html.elements.rp
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;rp&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element is used to provide fall-back parentheses for browsers that do not support display of ruby annotations using the {{HTMLElement("ruby") }} element. One <code>&lt;rp&gt;</code> element should enclose each of the opening and closing parentheses that wrap the {{HTMLElement("rt")}} element that contains the annotation's text.</p>
+The **`<rp>`** [HTML](/en-US/docs/Web/HTML) element is used to provide fall-back parentheses for browsers that do not support display of ruby annotations using the {{HTMLElement("ruby") }} element. One `<rp>` element should enclose each of the opening and closing parentheses that wrap the {{HTMLElement("rt")}} element that contains the annotation's text.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/rp.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/rp.html", "tabbed-shorter")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td>None.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td>Text</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>The end tag can be omitted if the element is immediately followed by an {{HTMLElement("rt")}} or another <code>&lt;rp&gt;</code> element, or if there is no more content in the parent element.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>A {{HTMLElement("ruby")}} element. <code>&lt;rp&gt;</code> must be positioned immediately before or after an {{HTMLElement("rt")}} element.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>Any</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>Text</td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>
+        The end tag can be omitted if the element is immediately followed by an
+        {{HTMLElement("rt")}} or another <code>&#x3C;rp></code> element,
+        or if there is no more content in the parent element.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        A {{HTMLElement("ruby")}} element. <code>&#x3C;rp></code> must
+        be positioned immediately before or after an
+        {{HTMLElement("rt")}} element.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element only includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<ul>
- <li>Ruby annotations are for showing pronunciation of East Asian characters, like using Japanese furigana or Taiwanese bopomofo characters. The <code>&lt;rp&gt;</code> element is used in the case of lack of {{HTMLElement("ruby")}} element support; the <code>&lt;rp&gt;</code> content provides what should be displayed in order to indicate the presence of a ruby annotation, usually parentheses.</li>
-</ul>
+*   Ruby annotations are for showing pronunciation of East Asian characters, like using Japanese furigana or Taiwanese bopomofo characters. The `<rp>` element is used in the case of lack of {{HTMLElement("ruby")}} element support; the `<rp>` content provides what should be displayed in order to indicate the presence of a ruby annotation, usually parentheses.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>Using ruby annotations</h3>
+### Using ruby annotations
 
-<p>This example uses ruby annotations to display the {{interwiki("wikipedia", "Romaji")}} equivalents for each character.</p>
+This example uses ruby annotations to display the {{interwiki("wikipedia", "Romaji")}} equivalents for each character.
 
-<pre class="brush: html">&lt;ruby&gt;
-  漢 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;Kan&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
-  字 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;ji&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
-&lt;/ruby&gt;</pre>
+```html
+<ruby>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
+  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   font-size: 22px;
-}</pre>
+}
+```
 
-<p>The result looks like this in your browser:</p>
+The result looks like this in your browser:
 
-<p>{{EmbedLiveSample("Using_ruby_annotations", 600, 60)}}</p>
+{{EmbedLiveSample("Using_ruby_annotations", 600, 60)}}
 
-<p>See the article about the {{HTMLElement("ruby")}} element for further examples.</p>
+See the article about the {{HTMLElement("ruby")}} element for further examples.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTMLElement("ruby")}}</li>
- <li>{{HTMLElement("rt")}}</li>
- <li>{{HTMLElement("rb")}}</li>
- <li>
-  <p>{{HTMLElement("rtc")}}</p>
- </li>
-</ul>
+*   {{HTMLElement("ruby")}}
+*   {{HTMLElement("rt")}}
+*   {{HTMLElement("rb")}}
+*   {{HTMLElement("rtc")}}

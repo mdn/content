@@ -9,56 +9,58 @@ tags:
   - Performance
   - Reference
 ---
-<p>{{HTMLSidebar}}</p>
+{{HTMLSidebar}}
 
-<p>The <strong><code>elementtiming</code></strong> attribute is used to indicate that an element is flagged for tracking by the {{domxref("Element Timing API")}}. This attribute may be applied to {{htmlelement("img")}}, {{SVGElement("image")}} elements inside an {{htmlelement("svg")}}, poster images of {{htmlelement("video")}} elements, elements which have a {{cssxref("background-image")}}, and elements containing text nodes, such as a {{htmlelement("p")}}.</p>
+The **`elementtiming`** attribute is used to indicate that an element is flagged for tracking by the {{domxref("Element Timing API")}}. This attribute may be applied to {{htmlelement("img")}}, {{SVGElement("image")}} elements inside an {{htmlelement("svg")}}, poster images of {{htmlelement("video")}} elements, elements which have a {{cssxref("background-image")}}, and elements containing text nodes, such as a {{htmlelement("p")}}.
 
-<h2 id="Usage">Usage</h2>
+## Usage
 
-<p>The value given for <code>elementtiming</code> becomes an identifier for the observed element.</p>
+The value given for `elementtiming` becomes an identifier for the observed element.
 
-<pre class="brush: html">&lt;img alt="alt" src="img.jpg" elementtiming="label for element"&gt;</pre>
+```html
+<img alt="alt" src="img.jpg" elementtiming="label for element">
+```
 
-<p>Good contenders for elements you might want to observe are:</p>
-<ul>
-  <li>The main image for an article.</li>
-  <li>A blog post title</li>
-  <li>Images in a carousel for a shopping site.</li>
-  <li>The poster image for the main video on a page.</li>
-</ul>
+Good contenders for elements you might want to observe are:
 
-<h2 id="Examples">Examples</h2>
+*   The main image for an article.
+*   A blog post title
+*   Images in a carousel for a shopping site.
+*   The poster image for the main video on a page.
 
-<pre class="brush: html">&lt;img alt="Alt for a main blog post image" src="my-massive-image.jpg" elementtiming="Main image"&gt;
+## Examples
 
-&lt;p elementtiming="important-text"&gt;Some very important information.&lt;/p"&gt;
-</pre>
+```html
+<img alt="Alt for a main blog post image" src="my-massive-image.jpg" elementtiming="Main image">
 
-<h2 id="Specifications">Specifications</h2>
+<p elementtiming="important-text">Some very important information.</p">
+```
+
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Element Timing API', 'forms.html#attr-label-for', 'for as used with label')}}</td>
-   <td>{{Spec2('Element Timing API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName('Element Timing API', 'forms.html#attr-label-for', 'for as used with label')}}
+      </td>
+      <td>{{Spec2('Element Timing API')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("html.elements.attribute.elementtiming")}}</p>
+{{Compat("html.elements.attribute.elementtiming")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://web.dev/custom-metrics/">Custom metrics</a></li>
-</ul>
+*   [Custom metrics](https://web.dev/custom-metrics/)

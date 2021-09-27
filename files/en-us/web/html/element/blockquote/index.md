@@ -14,66 +14,86 @@ tags:
   - Web
 browser-compat: html.elements.blockquote
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;blockquote&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element indicates that the enclosed text is an extended quotation. Usually, this is rendered visually by indentation (see <a href="#usage_notes" rel="internal">Notes</a> for how to change it). A URL for the source of the quotation may be given using the <strong>cite</strong> attribute, while a text representation of the source can be given using the {{HTMLElement("cite")}} element.</p>
+The **`<blockquote>`** [HTML](/en-US/docs/Web/HTML) element indicates that the enclosed text is an extended quotation. Usually, this is rendered visually by indentation (see [Notes](#usage_notes) for how to change it). A URL for the source of the quotation may be given using the **cite** attribute, while a text representation of the source can be given using the {{HTMLElement("cite")}} element.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/blockquote.html","tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/blockquote.html","tabbed-standard")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, sectioning root, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>Any</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLQuoteElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >, sectioning root, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLQuoteElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element's attributes include the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("cite")}}</dt>
- <dd>A URL that designates a source document or message for the information quoted. This attribute is intended to point to information explaining the context or the reference for the quote.</dd>
-</dl>
+*   {{htmlattrdef("cite")}}
+    *   : A URL that designates a source document or message for the information quoted. This attribute is intended to point to information explaining the context or the reference for the quote.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>To change the indentation applied to the quoted text, use the {{Glossary("CSS")}} {{cssxref("margin-left")}} and/or {{cssxref("margin-right")}} properties, or the {{cssxref("margin")}} shorthand property.</p>
+To change the indentation applied to the quoted text, use the {{Glossary("CSS")}} {{cssxref("margin-left")}} and/or {{cssxref("margin-right")}} properties, or the {{cssxref("margin")}} shorthand property.
 
-<p>To include shorter quotes inline rather than in a separate block, use the {{HTMLElement("q")}} (Quotation) element.</p>
+To include shorter quotes inline rather than in a separate block, use the {{HTMLElement("q")}} (Quotation) element.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example demonstrates the use of the <code>&lt;blockquote&gt;</code> element to quote a passage from {{RFC(1149)}}, <em>A Standard for the Transmission of IP Datagrams on Avian Carriers</em>.</p>
+This example demonstrates the use of the `<blockquote>` element to quote a passage from {{RFC(1149)}}, *A Standard for the Transmission of IP Datagrams on Avian Carriers*.
 
-<pre class="brush: html">&lt;blockquote cite="https://datatracker.ietf.org/doc/html/rfc1149"&gt;
-  &lt;p&gt;Avian carriers can provide high delay, low
+```html
+<blockquote cite="https://datatracker.ietf.org/doc/html/rfc1149">
+  <p>Avian carriers can provide high delay, low
   throughput, and low altitude service. The
   connection topology is limited to a single
   point-to-point path for each carrier, used with
@@ -83,25 +103,23 @@ browser-compat: html.elements.blockquote
   ether space available to the carriers, in contrast
   to the 1D ether used by IEEE802.3. The carriers
   have an intrinsic collision avoidance system, which
-  increases availability.&lt;/p&gt;
-&lt;/blockquote&gt;
-</pre>
+  increases availability.</p>
+</blockquote>
+```
 
-<p>The output from this HTML snippet looks like this:</p>
+The output from this HTML snippet looks like this:
 
-<p>{{EmbedLiveSample("Example", 640, 180)}}</p>
+{{EmbedLiveSample("Example", 640, 180)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{HTMLElement("q")}} element for inline quotations.</li>
- <li>The {{HTMLElement("cite")}} element for source citations.</li>
-</ul>
+*   The {{HTMLElement("q")}} element for inline quotations.
+*   The {{HTMLElement("cite")}} element for source citations.

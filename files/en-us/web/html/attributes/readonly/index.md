@@ -8,138 +8,141 @@ tags:
   - Forms
   - required
 ---
-<p>{{HTMLSidebar}}{{draft}}</p>
+{{HTMLSidebar}}{{draft}}
 
-<p>The Boolean <code><strong>readonly</strong></code> attribute, when present, makes the element not mutable, meaning the user can not edit the control.</p>
+The Boolean **`readonly`** attribute, when present, makes the element not mutable, meaning the user can not edit the control.
 
-<p>If the <code>readonly</code> attribute is specified on an input element, because the user can not edit the input, the element does not participate in constraint validation.</p>
+If the `readonly` attribute is specified on an input element, because the user can not edit the input, the element does not participate in constraint validation.
 
-<p>The <code>readonly</code> attribute is supported by  <code>{{HTMLElement("input/text","text")}}</code>, <code>{{HTMLElement("input/search","search")}}</code>, <code>{{HTMLElement("input/url","url")}}</code>, <code>{{HTMLElement("input/tel","tel")}}</code>, <code>{{HTMLElement("input/email","email")}}</code>, <code>{{HTMLElement("input/password","password")}}</code>, <code>{{HTMLElement("input/date","date")}}</code>, <code>{{HTMLElement("input/month","month")}}</code>, <code>{{HTMLElement("input/week","week")}}</code>, <code>{{HTMLElement("input/time","time")}}</code>, <code>{{HTMLElement("input/datetime-local","datetime-local")}}</code>, and <code>{{HTMLElement("input/number","number")}}</code><code>{{HTMLElement("input")}}</code> types and the <code>{{HTMLElement("textarea")}}</code> form control elements. If present on any of these input types and elements, the <code>{{cssxref(':read-only')}}</code> pseudo class will match. If the attribute is not included, the <code>{{cssxref(':read-write')}}</code> pseudo class will match.</p>
+The `readonly` attribute is supported by  `{{HTMLElement("input/text","text")}}`, `{{HTMLElement("input/search","search")}}`, `{{HTMLElement("input/url","url")}}`, `{{HTMLElement("input/tel","tel")}}`, `{{HTMLElement("input/email","email")}}`, `{{HTMLElement("input/password","password")}}`, `{{HTMLElement("input/date","date")}}`, `{{HTMLElement("input/month","month")}}`, `{{HTMLElement("input/week","week")}}`, `{{HTMLElement("input/time","time")}}`, `{{HTMLElement("input/datetime-local","datetime-local")}}`, and `{{HTMLElement("input/number","number")}}``{{HTMLElement("input")}}` types and the `{{HTMLElement("textarea")}}` form control elements. If present on any of these input types and elements, the `{{cssxref(':read-only')}}` pseudo class will match. If the attribute is not included, the `{{cssxref(':read-write')}}` pseudo class will match.
 
-<p>The attribute is not supported or relevant to <code>{{HTMLElement("select")}}</code> or input types that are already not mutable, such as {{HTMLElement("input/checkbox","checkbox")}} and {{HTMLElement("input/radio","radio")}} or cannot, by definition, start with a value, such as the {{HTMLElement("input/file","file")}}  input type. {{HTMLElement("input/range","range")}} and {{HTMLElement("input/color","color")}}, as both have default values. It is also not supported on {{HTMLElement("input/hidden","hidden")}} as it can not be expected that a user to fill out a form that is hidden. Nor is it supported on any of the button types, including <code>image</code>.</p>
+The attribute is not supported or relevant to `{{HTMLElement("select")}}` or input types that are already not mutable, such as {{HTMLElement("input/checkbox","checkbox")}} and {{HTMLElement("input/radio","radio")}} or cannot, by definition, start with a value, such as the {{HTMLElement("input/file","file")}}  input type. {{HTMLElement("input/range","range")}} and {{HTMLElement("input/color","color")}}, as both have default values. It is also not supported on {{HTMLElement("input/hidden","hidden")}} as it can not be expected that a user to fill out a form that is hidden. Nor is it supported on any of the button types, including `image`.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Only text controls can be made read-only, since for other controls (such as checkboxes and buttons) there is no useful distinction between being read-only and being disabled, so the <code>readonly</code> attribute does not apply.</p>
+> **Note:** Only text controls can be made read-only, since for other controls (such as checkboxes and buttons) there is no useful distinction between being read-only and being disabled, so the `readonly` attribute does not apply.
+
+When an input has the `readonly` attribute, the {{cssxref(":read-only")}} pseudo-class also applies to it. Conversely, inputs that support the `readonly` attribute but don't have the attribute set match the {{cssxref(":read-write")}} pseudo-class.
+
+### Attribute interactions
+
+The difference between [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) and `readonly` is that read-only controls can still function and are still focusable, whereas disabled controls can not receive focus and are not submitted with the form and generally do not function as controls until they are enabled.
+
+Because a read-only field cannot have it's value changed by a user interaction, [`required`](/en-US/docs/Web/HTML/Attributes/required) does not have any effect on inputs with the `readonly` attribute also specified.
+
+The only way to modify dynamically the value of the readonly attribute is through a script.
+
+> **Note:** The `required` attribute is not permitted on inputs with the `readonly` attribute specified.
+
+### Usability
+
+Browsers display the `readonly` attribute...
+
+### Constraint validation
+
+If the element is read-only, then the element's value can not be updated by the user, and does not participate in constraint validation.
+
+## Example
+
+### HTML
+
+```html
+<div class="group">
+  <input type="textbox" value="Some value" readonly="readonly"/>
+  <label>Textbox</label>
 </div>
-
-<p>When an input has the <code>readonly</code> attribute, the {{cssxref(":read-only")}} pseudo-class also applies to it. Conversely, inputs that support the <code>readonly</code> attribute but don't have the attribute set match the {{cssxref(":read-write")}} pseudo-class.</p>
-
-<h3 id="Attribute_interactions">Attribute interactions</h3>
-
-<p>The difference between <code><a href="/en-US/docs/Web/HTML/Attributes/disabled">disabled</a></code> and <code>readonly</code> is that read-only controls can still function and are still focusable, whereas disabled controls can not receive focus and are not submitted with the form and generally do not function as controls until they are enabled.</p>
-
-<p>Because a read-only field cannot have it's value changed by a user interaction, <code><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></code> does not have any effect on inputs with the <code>readonly</code> attribute also specified.</p>
-
-<p>The only way to modify dynamically the value of the readonly attribute is through a script.</p>
-
-<div class="notecard note">
-<p><strong>Note:</strong> The <code>required</code> attribute is not permitted on inputs with the <code>readonly</code> attribute specified.</p>
+<div class="group">
+  <input type="date" value="2020-01-01" readonly="readonly"/>
+  <label>Date</label>
 </div>
+<div class="group">
+  <input type="email" value="Some value" readonly="readonly"/>
+  <label>Email</label>
+</div>
+<div class="group">
+  <input type="password" value="Some value" readonly="readonly"/>
+  <label>Password</label>
+</div>
+<div class="group">
+  <textarea readonly="readonly">Some value</textarea>
+  <label>Message</label>
+</div>
+```
 
-<h3 id="Usability">Usability</h3>
+### Result
 
-<p>Browsers display the <code>readonly</code> attribute...</p>
+{{EmbedLiveSample('Example')}}
 
-<h3 id="Constraint_validation">Constraint validation</h3>
+## Examples
 
-<p>If the element is read-only, then the element's value can not be updated by the user, and does not participate in constraint validation.</p>
+```html hidden
+<fieldset>
+  <legend>Checkboxes buttons</legend>
+  <p><label>
+    <input type="checkbox" name="chbox" value="regular"> Regular
+  </label></p>
+  <p><label>
+    <input type="checkbox" name="chbox" value="readonly" readonly> readonly
+  </label></p>
+  <p><label>
+    <input type="checkbox" name="chbox" value="disabled" disabled> disabled
+  </label></p>
+</fieldset>
+<fieldset>
+  <legend>Radio buttons</legend>
+  <p><label>
+    <input type="radio" name="radio" value="regular"> Regular
+  </label></p>
+  <p><label>
+    <input type="radio" name="radio" value="readonly" readonly> readonly
+  </label></p>
+  <p><label>
+    <input type="radio" name="radio" value="disabled" disabled> disabled
+  </label></p>
+</fieldset>
+```
 
-<h2 id="Example">Example</h2>
+{{EmbedLiveSample('Examples', 500, 200)}}
 
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html">&lt;div class="group"&gt;
-  &lt;input type="textbox" value="Some value" readonly="readonly"/&gt;
-  &lt;label&gt;Textbox&lt;/label&gt;
-&lt;/div&gt;
-&lt;div class="group"&gt;
-  &lt;input type="date" value="2020-01-01" readonly="readonly"/&gt;
-  &lt;label&gt;Date&lt;/label&gt;
-&lt;/div&gt;
-&lt;div class="group"&gt;
-  &lt;input type="email" value="Some value" readonly="readonly"/&gt;
-  &lt;label&gt;Email&lt;/label&gt;
-&lt;/div&gt;
-&lt;div class="group"&gt;
-  &lt;input type="password" value="Some value" readonly="readonly"/&gt;
-  &lt;label&gt;Password&lt;/label&gt;
-&lt;/div&gt;
-&lt;div class="group"&gt;
-  &lt;textarea readonly="readonly"&gt;Some value&lt;/textarea&gt;
-  &lt;label&gt;Message&lt;/label&gt;
-&lt;/div&gt;
-</pre>
-
-<h3 id="Result">Result</h3>
-
-<p>{{EmbedLiveSample('Example')}}</p>
-
-<h2 id="Examples">Examples</h2>
-
-<pre class="brush: html hidden">&lt;fieldset&gt;
-  &lt;legend&gt;Checkboxes buttons&lt;/legend&gt;
-  &lt;p&gt;&lt;label&gt;
-    &lt;input type="checkbox" name="chbox" value="regular"&gt; Regular
-  &lt;/label&gt;&lt;/p&gt;
-  &lt;p&gt;&lt;label&gt;
-    &lt;input type="checkbox" name="chbox" value="readonly" readonly&gt; readonly
-  &lt;/label&gt;&lt;/p&gt;
-  &lt;p&gt;&lt;label&gt;
-    &lt;input type="checkbox" name="chbox" value="disabled" disabled&gt; disabled
-  &lt;/label&gt;&lt;/p&gt;
-&lt;/fieldset&gt;
-&lt;fieldset&gt;
-  &lt;legend&gt;Radio buttons&lt;/legend&gt;
-  &lt;p&gt;&lt;label&gt;
-    &lt;input type="radio" name="radio" value="regular"&gt; Regular
-  &lt;/label&gt;&lt;/p&gt;
-  &lt;p&gt;&lt;label&gt;
-    &lt;input type="radio" name="radio" value="readonly" readonly&gt; readonly
-  &lt;/label&gt;&lt;/p&gt;
-  &lt;p&gt;&lt;label&gt;
-    &lt;input type="radio" name="radio" value="disabled" disabled&gt; disabled
-  &lt;/label&gt;&lt;/p&gt;
-&lt;/fieldset&gt;</pre>
-
-<p>{{EmbedLiveSample('Examples', 500, 200)}}</p>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#attr-input-readonly', 'readonly attribute')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#attr-input-readonly', 'readonly attribute')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'sec-forms.html#the-readonly-attribute', 'readonly attribute')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName('HTML WHATWG', 'forms.html#attr-input-readonly', 'readonly attribute')}}
+      </td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('HTML5 W3C', 'forms.html#attr-input-readonly', 'readonly attribute')}}
+      </td>
+      <td>{{Spec2('HTML5 W3C')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('HTML5.1', 'sec-forms.html#the-readonly-attribute', 'readonly attribute')}}
+      </td>
+      <td>{{Spec2('HTML5.1')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("html.elements.attributes.readonly")}}</p>
+{{Compat("html.elements.attributes.readonly")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref(':read-only')}} and {{cssxref(':read-write')}}</li>
- <li>{{htmlelement('input')}}</li>
- <li>{{htmlelement('select')}}</li>
-</ul>
+*   {{cssxref(':read-only')}} and {{cssxref(':read-write')}}
+*   {{htmlelement('input')}}
+*   {{htmlelement('select')}}

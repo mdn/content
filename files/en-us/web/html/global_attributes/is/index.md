@@ -8,17 +8,18 @@ tags:
   - is
 browser-compat: html.global_attributes.is
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>The <strong><code>is</code></strong> <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a> allows you to specify that a standard HTML element should behave like a defined custom built-in element (see <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">Using custom elements</a> for more details).</p>
+The **`is`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) allows you to specify that a standard HTML element should behave like a defined custom built-in element (see [Using custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements) for more details).
 
-<p>This attribute can only be used if the specified custom element name has been successfully <a href="/en-US/docs/Web/API/CustomElementRegistry/define">defined</a> in the current document, and extends the element type it is being applied to.</p>
+This attribute can only be used if the specified custom element name has been successfully [defined](/en-US/docs/Web/API/CustomElementRegistry/define) in the current document, and extends the element type it is being applied to.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following code is taken from our <a href="https://github.com/mdn/web-components-examples/tree/master/word-count-web-component">word-count-web-component</a> example (<a href="https://mdn.github.io/web-components-examples/word-count-web-component/">see it live also</a>).</p>
+The following code is taken from our [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) example ([see it live also](https://mdn.github.io/web-components-examples/word-count-web-component/)).
 
-<pre class="brush: js">// Create a class for the element
+```js
+// Create a class for the element
 class WordCount extends HTMLParagraphElement {
   constructor() {
     // Always call super first in constructor
@@ -31,20 +32,21 @@ class WordCount extends HTMLParagraphElement {
 }
 
 // Define the new element
-customElements.define('word-count', WordCount, { extends: 'p' });</pre>
+customElements.define('word-count', WordCount, { extends: 'p' });
+```
 
-<pre class="brush: html">&lt;p is="word-count"&gt;&lt;/p&gt;</pre>
+```html
+<p is="word-count"></p>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>All <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</li>
-</ul>
+*   All [global attributes](/en-US/docs/Web/HTML/Global_attributes).

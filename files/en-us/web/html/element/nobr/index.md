@@ -11,27 +11,25 @@ tags:
   - nobr
 browser-compat: html.elements.nobr
 ---
-<div>{{HTMLRef}}{{Non-standard_Header}}{{deprecated_header}}</div>
+{{HTMLRef}}{{Non-standard_Header}}{{deprecated_header}}
 
-<p>The <strong><code>&lt;nobr&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element prevents the text it contains from automatically wrapping across multiple lines, potentially resulting in the user having to scroll horizontally to see the entire width of the text.</p>
+The **`<nobr>`** [HTML](/en-US/docs/Web/HTML) element prevents the text it contains from automatically wrapping across multiple lines, potentially resulting in the user having to scroll horizontally to see the entire width of the text.
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> Although this element is widely supported, it was <em>never</em> standard HTML, so you shouldn't use it. Instead, use the CSS property {{CSSxRef("white-space")}} like this:</p>
-</div>
+> **Warning:** Although this element is widely supported, it was *never* standard HTML, so you shouldn't use it. Instead, use the CSS property {{CSSxRef("white-space")}} like this:
 
-<pre class="brush: html">&lt;span style="white-space: nowrap;"&gt;Long line with no breaks&lt;/span&gt;</pre>
+```html
+<span style="white-space: nowrap;">Long line with no breaks</span>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef("white-space")}}</li>
- <li>{{CSSxRef("overflow")}}</li>
-</ul>
+*   {{CSSxRef("white-space")}}
+*   {{CSSxRef("overflow")}}

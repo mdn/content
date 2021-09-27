@@ -10,90 +10,84 @@ tags:
   - marquee
 browser-compat: html.elements.marquee
 ---
-<div>{{deprecated_header}}</div>
+{{deprecated_header}}
 
-<p>The <strong><code>&lt;marquee&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element is used to insert a scrolling area of text. You can control what happens when the text reaches the edges of its content area using its attributes.</p>
+The **`<marquee>`** [HTML](/en-US/docs/Web/HTML) element is used to insert a scrolling area of text. You can control what happens when the text reaches the edges of its content area using its attributes.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{DOMxRef("HTMLMarqueeElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{DOMxRef("HTMLMarqueeElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt>{{htmlattrdef("behavior")}}</dt>
- <dd>Sets how the text is scrolled within the marquee. Possible values are <code>scroll</code>, <code>slide</code> and <code>alternate</code>. If no value is specified, the default value is <code>scroll</code>.</dd>
- <dt>{{htmlattrdef("bgcolor")}}</dt>
- <dd>Sets the background color through color name or hexadecimal value.</dd>
- <dt>{{htmlattrdef("direction")}}</dt>
- <dd>Sets the direction of the scrolling within the marquee. Possible values are <code>left</code>, <code>right</code>, <code>up</code> and <code>down</code>. If no value is specified, the default value is <code>left</code>.</dd>
- <dt>{{htmlattrdef("height")}}</dt>
- <dd>Sets the height in pixels or percentage value.</dd>
- <dt>{{htmlattrdef("hspace")}}</dt>
- <dd>Sets the horizontal margin</dd>
- <dt>{{htmlattrdef("loop")}}</dt>
- <dd>Sets the number of times the marquee will scroll. If no value is specified, the default value is −1, which means the marquee will scroll continuously.</dd>
- <dt>{{htmlattrdef("scrollamount")}}</dt>
- <dd>Sets the amount of scrolling at each interval in pixels. The default value is 6.</dd>
- <dt>{{htmlattrdef("scrolldelay")}}</dt>
- <dd>Sets the interval between each scroll movement in milliseconds. The default value is 85. Note that any value smaller than 60 is ignored and the value 60 is used instead, unless<code> truespeed </code>is specified.</dd>
- <dt>{{htmlattrdef("truespeed")}}</dt>
- <dd>By default,<code> scrolldelay </code>values lower than 60 are ignored. If<code> truespeed </code>is present, those values are not ignored.</dd>
- <dt>{{htmlattrdef("vspace")}}</dt>
- <dd>Sets the vertical margin in pixels or percentage value.</dd>
- <dt>{{htmlattrdef("width")}}</dt>
- <dd>Sets the width in pixels or percentage value.</dd>
-</dl>
+*   {{htmlattrdef("behavior")}}
+    *   : Sets how the text is scrolled within the marquee. Possible values are `scroll`, `slide` and `alternate`. If no value is specified, the default value is `scroll`.
+*   {{htmlattrdef("bgcolor")}}
+    *   : Sets the background color through color name or hexadecimal value.
+*   {{htmlattrdef("direction")}}
+    *   : Sets the direction of the scrolling within the marquee. Possible values are `left`, `right`, `up` and `down`. If no value is specified, the default value is `left`.
+*   {{htmlattrdef("height")}}
+    *   : Sets the height in pixels or percentage value.
+*   {{htmlattrdef("hspace")}}
+    *   : Sets the horizontal margin
+*   {{htmlattrdef("loop")}}
+    *   : Sets the number of times the marquee will scroll. If no value is specified, the default value is −1, which means the marquee will scroll continuously.
+*   {{htmlattrdef("scrollamount")}}
+    *   : Sets the amount of scrolling at each interval in pixels. The default value is 6.
+*   {{htmlattrdef("scrolldelay")}}
+    *   : Sets the interval between each scroll movement in milliseconds. The default value is 85. Note that any value smaller than 60 is ignored and the value 60 is used instead, unless`  truespeed  `is specified.
+*   {{htmlattrdef("truespeed")}}
+    *   : By default,`  scrolldelay  `values lower than 60 are ignored. If`  truespeed  `is present, those values are not ignored.
+*   {{htmlattrdef("vspace")}}
+    *   : Sets the vertical margin in pixels or percentage value.
+*   {{htmlattrdef("width")}}
+    *   : Sets the width in pixels or percentage value.
 
-<h2 id="Event_handlers">Event handlers</h2>
+## Event handlers
 
-<dl>
- <dt>{{htmlattrdef("onbounce")}}</dt>
- <dd>Fires when the marquee has reached the end of its scroll position. It can only fire when the behavior attribute is set to <code>alternate</code>.</dd>
- <dt>{{htmlattrdef("onfinish")}}</dt>
- <dd>Fires when the marquee has finished the amount of scrolling that is set by the loop attribute. It can only fire when the loop attribute is set to some number that is greater than 0.</dd>
- <dt>{{htmlattrdef("onstart")}}</dt>
- <dd>Fires when the marquee starts scrolling.</dd>
-</dl>
+*   {{htmlattrdef("onbounce")}}
+    *   : Fires when the marquee has reached the end of its scroll position. It can only fire when the behavior attribute is set to `alternate`.
+*   {{htmlattrdef("onfinish")}}
+    *   : Fires when the marquee has finished the amount of scrolling that is set by the loop attribute. It can only fire when the loop attribute is set to some number that is greater than 0.
+*   {{htmlattrdef("onstart")}}
+    *   : Fires when the marquee starts scrolling.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt><code>start()</code></dt>
- <dd>Starts scrolling of the marquee.</dd>
- <dt><code>stop()</code></dt>
- <dd>Stops scrolling of the marquee.</dd>
-</dl>
+*   `start()`
+    *   : Starts scrolling of the marquee.
+*   `stop()`
+    *   : Stops scrolling of the marquee.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: html">&lt;marquee&gt;This text will scroll from right to left&lt;/marquee&gt;
+```html
+<marquee>This text will scroll from right to left</marquee>
 
-&lt;marquee direction="up"&gt;This text will scroll from bottom to top&lt;/marquee&gt;
+<marquee direction="up">This text will scroll from bottom to top</marquee>
 
-&lt;marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid"&gt;
-  &lt;marquee behavior="alternate"&gt;
+<marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid">
+  <marquee behavior="alternate">
     This text will bounce
-  &lt;/marquee&gt;
-&lt;/marquee&gt;</pre>
+  </marquee>
+</marquee>
+```
 
-<p>{{EmbedLiveSample("Examples", 600, 450)}}</p>
+{{EmbedLiveSample("Examples", 600, 450)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{DOMxRef("HTMLMarqueeElement")}}</li>
-</ul>
+*   {{DOMxRef("HTMLMarqueeElement")}}

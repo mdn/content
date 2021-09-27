@@ -10,126 +10,126 @@ tags:
   - Web
 browser-compat: html.elements.col
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;col&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element defines a column within a table and is used for defining common semantics on all common cells. It is generally found within a {{HTMLElement("colgroup")}} element.</p>
+The **`<col>`** [HTML](/en-US/docs/Web/HTML) element defines a column within a table and is used for defining common semantics on all common cells. It is generally found within a {{HTMLElement("colgroup")}} element.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/col.html","tabbed-taller")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/col.html","tabbed-taller")}}
 
-<p><code>&lt;col&gt;</code> allows styling columns using CSS, but only a few properties will have an effect on the column (<a href="https://www.w3.org/TR/CSS21/tables.html#columns">see the CSS 2.1 specification</a> for a list).</p>
+`<col>` allows styling columns using CSS, but only a few properties will have an effect on the column ([see the CSS 2.1 specification](https://www.w3.org/TR/CSS21/tables.html#columns) for a list).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td>None.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td>None, it is an {{Glossary("empty element")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>It must have start tag, but must not have an end tag.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>{{HTMLElement("colgroup")}} only, though it can be implicitly defined as its start tag is not mandatory. The {{HTMLElement("colgroup")}} must not have a {{htmlattrxref("span", "colgroup")}} attribute.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>No <code>role</code> permitted</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLTableColElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>None, it is an {{Glossary("empty element")}}.</td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>It must have start tag, but must not have an end tag.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        {{HTMLElement("colgroup")}} only, though it can be implicitly
+        defined as its start tag is not mandatory. The
+        {{HTMLElement("colgroup")}} must not have a
+        {{htmlattrxref("span", "colgroup")}} attribute.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLTableColElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("span")}}</dt>
- <dd>This attribute contains a positive integer indicating the number of consecutive columns the <code>&lt;col&gt;</code> element spans. If not present, its default value is <code>1</code>.</dd>
-</dl>
+*   {{htmlattrdef("span")}}
+    *   : This attribute contains a positive integer indicating the number of consecutive columns the `<col>` element spans. If not present, its default value is `1`.
 
-<h3 id="Deprecated_attributes">Deprecated attributes</h3>
+### Deprecated attributes
 
-<p>The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.</p>
+The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.
 
-<dl>
- <dt>{{htmlattrdef("align")}} {{deprecated_inline}}</dt>
- <dd>This enumerated attribute specifies how horizontal alignment of each column cell content will be handled. Possible values are:
- <ul>
-  <li><code>left</code>, aligning the content to the left of the cell</li>
-  <li><code>center</code>, centering the content in the cell</li>
-  <li><code>right</code>, aligning the content to the right of the cell</li>
-  <li><code>justify</code>, inserting spaces into the textual content so that the content is justified in the cell</li>
- </ul>
+*   {{htmlattrdef("align")}} {{deprecated_inline}}
+    *   : This enumerated attribute specifies how horizontal alignment of each column cell content will be handled. Possible values are:
 
- <p>If this attribute is not set, its value is inherited from the {{htmlattrxref("align", "colgroup")}} of the {{HTMLElement("colgroup")}} element this <code>&lt;col&gt;</code> element belongs too. If there are none, the <code>left</code> value is assumed.</p>
+        *   `left`, aligning the content to the left of the cell
+        *   `center`, centering the content in the cell
+        *   `right`, aligning the content to the right of the cell
+        *   `justify`, inserting spaces into the textual content so that the content is justified in the cell
 
- <div class="note"><p><strong>Note:</strong> To achieve the same effect as the <code>left</code>, <code>center</code>, <code>right</code> or <code>justify</code> values, do not try to set the {{cssxref("text-align")}} property on a selector giving a <code>&lt;col&gt;</code> element. Because {{HTMLElement("td")}} elements are not descendant of the <code>&lt;col&gt;</code> element, they won't inherit it.</p>
+        If this attribute is not set, its value is inherited from the {{htmlattrxref("align", "colgroup")}} of the {{HTMLElement("colgroup")}} element this `<col>` element belongs too. If there are none, the `left` value is assumed.
 
- <p>If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the <code>td:nth-child(an+b)</code> CSS selector. Set <code>a</code> to zero and <code>b </code>to the position of the column in the table, e.g. <code>td:nth-child(2) { text-align: right; }</code> to right-align the second column.</p>
-    <p>If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like <code>[colspan=n]</code>, though this is not trivial.</p>
- </div>
- </dd>
- <dt>{{htmlattrdef("bgcolor")}} {{Deprecated_inline}}</dt>
- <dd>
- <p>The background color of the table. It is a <a href="/en-US/docs/Web/CSS/color_value#rgb_colors">6-digit hexadecimal RGB code</a>, prefixed by a '<code>#</code>'. One of the predefined <a href="/en-US/docs/Web/CSS/color_value#color_keywords">color kewords</a> can also be used.</p>
+        > **Note:** To achieve the same effect as the `left`, `center`, `right` or `justify` values, do not try to set the {{cssxref("text-align")}} property on a selector giving a `<col>` element. Because {{HTMLElement("td")}} elements are not descendant of the `<col>` element, they won't inherit it.
+        >
+        > If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the `td:nth-child(an+b)` CSS selector. Set `a` to zero and ` b  `to the position of the column in the table, e.g. `td:nth-child(2) { text-align: right; }` to right-align the second column.
+        >
+        > If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
+*   {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
+    *   : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/color_value#rgb_colors), prefixed by a '`#`'. One of the predefined [color kewords](/en-US/docs/Web/CSS/color_value#color_keywords) can also be used.
 
- <p>To achieve a similar effect, use the CSS {{cssxref("background-color")}} property.</p>
- </dd>
- <dt>{{htmlattrdef("char")}} {{deprecated_inline}}</dt>
- <dd>This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "col")}} is not set to <code>char</code>, this attribute is ignored.</dd>
- <dt>{{htmlattrdef("charoff")}} {{deprecated_inline}}</dt>
- <dd>This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the <code>char</code> attribute.</dd>
- <dt>{{htmlattrdef("valign")}} {{deprecated_inline}}</dt>
- <dd>This attribute specifies the vertical alignment of the text within each cell of the column. Possible values for this attribute are:
- <ul>
-  <li><code>baseline</code>, which will put the text as close to the bottom of the cell as it is possible, but align it on the <a href="https://en.wikipedia.org/wiki/Baseline_%28typography%29">baseline</a> of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as <code>bottom</code>.</li>
-  <li><code>bottom</code>, which will put the text as close to the bottom of the cell as it is possible;</li>
-  <li><code>middle</code>, which will center the text in the cell;</li>
-  <li>and <code>top</code>, which will put the text as close to the top of the cell as it is possible.</li>
- </ul>
+        To achieve a similar effect, use the CSS {{cssxref("background-color")}} property.
+*   {{htmlattrdef("char")}} {{deprecated_inline}}
+    *   : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "col")}} is not set to `char`, this attribute is ignored.
+*   {{htmlattrdef("charoff")}} {{deprecated_inline}}
+    *   : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the `char` attribute.
+*   {{htmlattrdef("valign")}} {{deprecated_inline}}
+    *   : This attribute specifies the vertical alignment of the text within each cell of the column. Possible values for this attribute are:
 
- <div class="note"><p><strong>Note:</strong> Do not try to set the {{cssxref("vertical-align")}} property on a selector giving a <code>&lt;col&gt;</code> element. Because {{HTMLElement("td")}} elements are not descendant of the <code>&lt;col&gt;</code> element, they won't inherit it.</p>
- <p>If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the <code>td:nth-child(an+b)</code> CSS selector where a is the total number of the columns in the table and b is the ordinal position of the column in the table. Only after this selector the <code>vertical-align</code> property can be used.</p>
- <p>If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like <code>[colspan=n]</code>, though this is not trivial.</p>
- </div>
- </dd>
- <dt>{{htmlattrdef("width")}} {{deprecated_inline}}</dt>
- <dd>This attribute specifies a default width for each column in the current column group. In addition to the standard pixel and percentage values, this attribute might take the special form <code>0*</code>, which means that the width of each column in the group should be the minimum width necessary to hold the column's contents. Relative widths such as <code>5*</code> also can be used.</dd>
-</dl>
+        *   `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the [baseline](https://en.wikipedia.org/wiki/Baseline\_%28typography%29) of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.
+        *   `bottom`, which will put the text as close to the bottom of the cell as it is possible;
+        *   `middle`, which will center the text in the cell;
+        *   and `top`, which will put the text as close to the top of the cell as it is possible.
 
-<h2 id="Examples">Examples</h2>
+        > **Note:** Do not try to set the {{cssxref("vertical-align")}} property on a selector giving a `<col>` element. Because {{HTMLElement("td")}} elements are not descendant of the `<col>` element, they won't inherit it.
+        >
+        > If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the `td:nth-child(an+b)` CSS selector where a is the total number of the columns in the table and b is the ordinal position of the column in the table. Only after this selector the `vertical-align` property can be used.
+        >
+        > If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
+*   {{htmlattrdef("width")}} {{deprecated_inline}}
+    *   : This attribute specifies a default width for each column in the current column group. In addition to the standard pixel and percentage values, this attribute might take the special form `0*`, which means that the width of each column in the group should be the minimum width necessary to hold the column's contents. Relative widths such as `5*` also can be used.
 
-<p>Please see the {{HTMLElement("table")}} page for examples on <code>&lt;col&gt;</code>.</p>
+## Examples
 
-<h2 id="Specifications">Specifications</h2>
+Please see the {{HTMLElement("table")}} page for examples on `<col>`.
 
-<p>{{Specifications}}</p>
+## Specifications
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Specifications}}
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li>CSS properties and pseudo-classes that may be specially useful to style the <code>&lt;col&gt;</code> element:
-  <ul>
-   <li>the {{cssxref("width")}} property to control the width of the column;</li>
-   <li>the {{cssxref(":nth-child")}} pseudo-class to set the alignment on the cells of the column;</li>
-   <li>the {{cssxref("text-align")}} property to align all cells content on the same character, like '.'.</li>
-  </ul>
- </li>
-</ul>
+## See also
+
+*   CSS properties and pseudo-classes that may be specially useful to style the `<col>` element:
+
+    *   the {{cssxref("width")}} property to control the width of the column;
+    *   the {{cssxref(":nth-child")}} pseudo-class to set the alignment on the cells of the column;
+    *   the {{cssxref("text-align")}} property to align all cells content on the same character, like '.'.

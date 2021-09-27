@@ -18,250 +18,227 @@ tags:
   - passwords
   - textarea
 ---
-<div>{{HTMLSidebar}}</div>
+{{HTMLSidebar}}
 
-<p>The HTML <code>autocomplete</code> attribute lets web developers specify what if any permission the {{Glossary("user agent")}} has to provide automated assistance in filling out form field values, as well as guidance to the browser as to the type of information expected in the field.</p>
+The HTML `autocomplete` attribute lets web developers specify what if any permission the {{Glossary("user agent")}} has to provide automated assistance in filling out form field values, as well as guidance to the browser as to the type of information expected in the field.
 
-<p>It is available on {{HTMLElement("input")}} elements that take a text or numeric value as input, {{HTMLElement("textarea")}} elements, {{HTMLElement("select")}} elements, and {{HTMLElement("form")}} elements.</p>
+It is available on {{HTMLElement("input")}} elements that take a text or numeric value as input, {{HTMLElement("textarea")}} elements, {{HTMLElement("select")}} elements, and {{HTMLElement("form")}} elements.
 
-<p>The source of the suggested values is generally up to the browser; typically values come from past values entered by the user, but they may also come from pre-configured values. For instance, a browser might let the user save their name, address, phone number, and email addresses for autocomplete purposes. Perhaps the browser offers the ability to save encrypted credit card information, for autocompletion following an authentication procedure.</p>
+The source of the suggested values is generally up to the browser; typically values come from past values entered by the user, but they may also come from pre-configured values. For instance, a browser might let the user save their name, address, phone number, and email addresses for autocomplete purposes. Perhaps the browser offers the ability to save encrypted credit card information, for autocompletion following an authentication procedure.
 
-<p>If an {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("textarea")}} element has no <code>autocomplete</code> attribute, then browsers use the <code>autocomplete</code> attribute of the element's form owner, which is either the {{HTMLElement("form")}} element that the element is a descendant of, or the <code>&lt;form&gt;</code> whose <code>id</code> is specified by the {{htmlattrxref("form", "input")}} attribute of the element.</p>
+If an {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("textarea")}} element has no `autocomplete` attribute, then browsers use the `autocomplete` attribute of the element's form owner, which is either the {{HTMLElement("form")}} element that the element is a descendant of, or the `<form>` whose `id` is specified by the {{htmlattrxref("form", "input")}} attribute of the element.
 
-<p>For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute in {{HTMLElement("form")}}.</p>
+For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute in {{HTMLElement("form")}}.
 
-<div class="notecard note">
-<p><strong>Note:</strong> In order to provide autocompletion, user-agents might require <code>&lt;input&gt;</code>/<code>&lt;select&gt;</code>/<code>&lt;textarea&gt;</code> elements to:</p>
+> **Note:** In order to provide autocompletion, user-agents might require `<input>`/`<select>`/`<textarea>` elements to:
+>
+> 1.  Have a `name` and/or `id` attribute
+> 2.  Be descendants of a `<form>` element
+> 3.  The form to have a {{HTMLElement("input/submit", "submit")}} button
 
-<ol>
-	<li>Have a <code>name</code> and/or <code>id</code> attribute</li>
-	<li>Be descendants of a <code>&lt;form&gt;</code> element</li>
-	<li>The form to have a {{HTMLElement("input/submit", "submit")}} button</li>
-</ol>
+## Values
+
+*   "`off`"
+    *   : The browser is not permitted to automatically enter or select a value for this field. It is possible that the document or application provides its own autocomplete feature, or that security concerns require that the field's value not be automatically entered.
+
+        > **Note:** In most modern browsers, setting `autocomplete` to "`off`" will not prevent a password manager from asking the user if they would like to save username and password information, or from automatically filling in those values in a site's login form. See [the autocomplete attribute and login fields](/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields).
+*   "`on`"
+    *   : The browser is allowed to automatically complete the input. No guidance is provided as to the type of data expected in the field, so the browser may use its own judgement.
+*   "`name`"
+    *   : The field expects the value to be a person's full name. Using "`name`" rather than breaking the name down into its components is generally preferred because it avoids dealing with the wide diversity of human names and how they are structured; however, you can use the following `autocomplete` values if you do need to break the name down into its components:
+
+        *   "`honorific-prefix`"
+            *   : The prefix or title, such as "Mrs.", "Mr.", "Miss", "Ms.", "Dr.", or "Mlle.".
+        *   "`given-name`"
+            *   : The given (or "first") name.
+        *   "`additional-name`"
+            *   : The middle name.
+        *   "`family-name`"
+            *   : The family (or "last") name.
+        *   "`honorific-suffix`"
+            *   : The suffix, such as "Jr.", "B.Sc.", "PhD.", "MBASW", or "IV".
+        *   "`nickname`"
+            *   : A nickname or handle.
+*   "`email`"
+    *   : An email address.
+*   "`username`"
+    *   : A username or account name.
+*   "`new-password`"
+    *   : A new password. When creating a new account or changing passwords, this should be used for an "Enter your new password" or "Confirm new password" field, as opposed to a general "Enter your current password" field that might be present. This may be used by the browser both to avoid accidentally filling in an existing password and to offer assistance in creating a secure password (see also [Preventing autofilling with autocomplete="new-password"](/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#preventing_autofilling_with_autocompletenew-password)).
+*   "`current-password`"
+    *   : The user's current password.
+*   "`one-time-code`"
+    *   : A one-time code used for verifying user identity.
+*   "`organization-title`"
+    *   : A job title, or the title a person has within an organization, such as "Senior Technical Writer", "President", or "Assistant Troop Leader".
+*   "`organization`"
+    *   : A company or organization name, such as "Acme Widget Company" or "Girl Scouts of America".
+*   "`street-address`"
+    *   : A street address. This can be multiple lines of text, and should fully identify the location of the address within its second administrative level (typically a city or town), but should not include the city name, ZIP or postal code, or country name.
+*   "`address-line1`", "`address-line2`", "`address-line3`"
+    *   : Each individual line of the street address. These should only be present if the "`street-address`" is not present.
+*   "`address-level4`"
+    *   : The finest-grained {{anch("Administrative levels in addresses", "administrative level")}}, in addresses which have four levels.
+*   "`address-level3`"
+    *   : The third {{anch("Administrative levels in addresses", "administrative level")}}, in addresses with at least three administrative levels.
+*   "`address-level2`"
+    *   : The second {{anch("Administrative levels in addresses", "administrative level")}}, in addresses with at least two of them. In countries with two administrative levels, this would typically be the city, town, village, or other locality in which the address is located.
+*   "`address-level1`"
+    *   : The first {{anch("Administrative levels in addresses", "administrative level")}} in the address. This is typically the province in which the address is located. In the United States, this would be the state. In Switzerland, the canton. In the United Kingdom, the post town.
+*   "`country`"
+    *   : A country or territory code.
+*   "`country-name`"
+    *   : A country or territory name.
+*   "`postal-code`"
+    *   : A postal code (in the United States, this is the ZIP code).
+*   "`cc-name`"
+    *   : The full name as printed on or associated with a payment instrument such as a credit card. Using a full name field is preferred, typically, over breaking the name into pieces.
+*   "`cc-given-name`"
+    *   : A given (first) name as given on a payment instrument like a credit card.
+*   "`cc-additional-name`"
+    *   : A middle name as given on a payment instrument or credit card.
+*   "`cc-family-name`"
+    *   : A family name, as given on a credit card.
+*   "`cc-number`"
+    *   : A credit card number or other number identifying a payment method, such as an account number.
+*   "`cc-exp`"
+    *   : A payment method expiration date, typically in the form "MM/YY" or "MM/YYYY".
+*   "`cc-exp-month`"
+    *   : The month in which the payment method expires.
+*   "`cc-exp-year`"
+    *   : The year in which the payment method expires.
+*   "`cc-csc`"
+    *   : The security code for the payment instrument; on credit cards, this is the 3-digit verification number on the back of the card.
+*   "`cc-type`"
+    *   : The type of payment instrument (such as "Visa" or "Master Card").
+*   "`transaction-currency`"
+    *   : The currency in which the transaction is to take place.
+*   "`transaction-amount`"
+    *   : The amount, given in the currency specified by "`transaction-currency`", of the transaction, for a payment form.
+*   "`language`"
+    *   : A preferred language, given as a valid [BCP 47 language tag](https://en.wikipedia.org/wiki/IETF_language_tag).
+*   "`bday`"
+    *   : A birth date, as a full date.
+*   "`bday-day`"
+    *   : The day of the month of a birth date.
+*   "`bday-month`"
+    *   : The month of the year of a birth date.
+*   "`bday-year`"
+    *   : The year of a birth date.
+*   "`sex`"
+    *   : A gender identity (such as "Female", "Fa'afafine", "Male"), as freeform text without newlines.
+*   "`tel`"
+    *   : A full telephone number, including the country code. If you need to break the phone number up into its components, you can use these values for those fields:
+
+        *   "`tel-country-code`"
+            *   : The country code, such as "1" for the United States, Canada, and other areas in North America and parts of the Caribbean.
+        *   "`tel-national`"
+            *   : The entire phone number without the country code component, including a country-internal prefix. For the phone number "1-855-555-6502", this field's value would be "855-555-6502".
+        *   "`tel-area-code`"
+            *   : The area code, with any country-internal prefix applied if appropriate.
+        *   "`tel-local`"
+            *   : The phone number without the country or area code. This can be split further into two parts, for phone numbers which have an exchange number and then a number within the exchange. For the phone number "555-6502", use "`tel-local-prefix`" for "555" and "`tel-local-suffix`" for "6502".
+*   "`tel-extension`"
+    *   : A telephone extension code within the phone number, such as a room or suite number in a hotel or an office extension in a company.
+*   "`impp`"
+    *   : A URL for an instant messaging protocol endpoint, such as "xmpp:username\@example.net".
+*   "`url`"
+    *   : A URL, such as a home page or company web site address as appropriate given the context of the other fields in the form.
+*   "`photo`"
+    *   : The URL of an image representing the person, company, or contact information given in the other fields in the form.
+
+See the [WHATWG Standard](https://html.spec.whatwg.org/multipage/forms.html#autofill) for more detailed information.
+
+> **Note:** The `autocomplete` attribute also controls whether Firefox will — unlike other browsers — [persist the dynamic disabled state and (if applicable) dynamic checkedness](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` element, `<textarea>` element, or entire `<form>` across page loads. The persistence feature is enabled by default. Setting the value of the `autocomplete` attribute to `off` disables this feature. This works even when the `autocomplete` attribute would normally not apply by virtue of its `type`. See {{bug(654072)}}.
+
+## Examples
+
+```html
+<div>
+  <label for="cc-number">Enter your credit card number</label>
+  <input name="cc-number" id="cc-number" autocomplete="off">
 </div>
+```
 
-<h2 id="Values">Values</h2>
+## Administrative levels in addresses
 
-<dl>
-	<dt>"<code>off</code>"</dt>
-	<dd>The browser is not permitted to automatically enter or select a value for this field. It is possible that the document or application provides its own autocomplete feature, or that security concerns require that the field's value not be automatically entered.
-	<div class="note"><p><strong>Note:</strong> In most modern browsers, setting <code>autocomplete</code> to "<code>off</code>" will not prevent a password manager from asking the user if they would like to save username and password information, or from automatically filling in those values in a site's login form. See <a href="/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields">the autocomplete attribute and login fields</a>.</p></div>
-	</dd>
-	<dt>"<code>on</code>"</dt>
-	<dd>The browser is allowed to automatically complete the input. No guidance is provided as to the type of data expected in the field, so the browser may use its own judgement.</dd>
-	<dt>"<code>name</code>"</dt>
-	<dd>The field expects the value to be a person's full name. Using "<code>name</code>" rather than breaking the name down into its components is generally preferred because it avoids dealing with the wide diversity of human names and how they are structured; however, you can use the following <code>autocomplete</code> values if you do need to break the name down into its components:
-	<dl>
-		<dt>"<code>honorific-prefix</code>"</dt>
-		<dd>The prefix or title, such as "Mrs.", "Mr.", "Miss", "Ms.", "Dr.", or "Mlle.".</dd>
-		<dt>"<code>given-name</code>"</dt>
-		<dd>The given (or "first") name.</dd>
-		<dt>"<code>additional-name</code>"</dt>
-		<dd>The middle name.</dd>
-		<dt>"<code>family-name</code>"</dt>
-		<dd>The family (or "last") name.</dd>
-		<dt>"<code>honorific-suffix</code>"</dt>
-		<dd>The suffix, such as "Jr.", "B.Sc.", "PhD.", "MBASW", or "IV".</dd>
-		<dt>"<code>nickname</code>"</dt>
-		<dd>A nickname or handle.</dd>
-	</dl>
-	</dd>
-	<dt>"<code>email</code>"</dt>
-	<dd>An email address.</dd>
-	<dt>"<code>username</code>"</dt>
-	<dd>A username or account name.</dd>
-	<dt>"<code>new-password</code>"</dt>
-	<dd>A new password. When creating a new account or changing passwords, this should be used for an "Enter your new password" or "Confirm new password" field, as opposed to a general "Enter your current password" field that might be present. This may be used by the browser both to avoid accidentally filling in an existing password and to offer assistance in creating a secure password (see also <a href="/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#preventing_autofilling_with_autocompletenew-password">Preventing autofilling with autocomplete="new-password"</a>).</dd>
-	<dt>"<code>current-password</code>"</dt>
-	<dd>The user's current password.</dd>
-	<dt>"<code>one-time-code</code>"</dt>
-	<dd>A one-time code used for verifying user identity.</dd>
-	<dt>"<code>organization-title</code>"</dt>
-	<dd>A job title, or the title a person has within an organization, such as "Senior Technical Writer", "President", or "Assistant Troop Leader".</dd>
-	<dt>"<code>organization</code>"</dt>
-	<dd>A company or organization name, such as "Acme Widget Company" or "Girl Scouts of America".</dd>
-	<dt>"<code>street-address</code>"</dt>
-	<dd>A street address. This can be multiple lines of text, and should fully identify the location of the address within its second administrative level (typically a city or town), but should not include the city name, ZIP or postal code, or country name.</dd>
-	<dt>"<code>address-line1</code>", "<code>address-line2</code>", "<code>address-line3</code>"</dt>
-	<dd>Each individual line of the street address. These should only be present if the "<code>street-address</code>" is not present.</dd>
-	<dt>"<code>address-level4</code>"</dt>
-	<dd>The finest-grained {{anch("Administrative levels in addresses", "administrative level")}}, in addresses which have four levels.</dd>
-	<dt>"<code>address-level3</code>"</dt>
-	<dd>The third {{anch("Administrative levels in addresses", "administrative level")}}, in addresses with at least three administrative levels.</dd>
-	<dt>"<code>address-level2</code>"</dt>
-	<dd>The second {{anch("Administrative levels in addresses", "administrative level")}}, in addresses with at least two of them. In countries with two administrative levels, this would typically be the city, town, village, or other locality in which the address is located.</dd>
-	<dt>"<code>address-level1</code>"</dt>
-	<dd>The first {{anch("Administrative levels in addresses", "administrative level")}} in the address. This is typically the province in which the address is located. In the United States, this would be the state. In Switzerland, the canton. In the United Kingdom, the post town.</dd>
-	<dt>"<code>country</code>"</dt>
-	<dd>A country or territory code.</dd>
-	<dt>"<code>country-name</code>"</dt>
-	<dd>A country or territory name.</dd>
-	<dt>"<code>postal-code</code>"</dt>
-	<dd>A postal code (in the United States, this is the ZIP code).</dd>
-	<dt>"<code>cc-name</code>"</dt>
-	<dd>The full name as printed on or associated with a payment instrument such as a credit card. Using a full name field is preferred, typically, over breaking the name into pieces.</dd>
-	<dt>"<code>cc-given-name</code>"</dt>
-	<dd>A given (first) name as given on a payment instrument like a credit card.</dd>
-	<dt>"<code>cc-additional-name</code>"</dt>
-	<dd>A middle name as given on a payment instrument or credit card.</dd>
-	<dt>"<code>cc-family-name</code>"</dt>
-	<dd>A family name, as given on a credit card.</dd>
-	<dt>"<code>cc-number</code>"</dt>
-	<dd>A credit card number or other number identifying a payment method, such as an account number.</dd>
-	<dt>"<code>cc-exp</code>"</dt>
-	<dd>A payment method expiration date, typically in the form "MM/YY" or "MM/YYYY".</dd>
-	<dt>"<code>cc-exp-month</code>"</dt>
-	<dd>The month in which the payment method expires.</dd>
-	<dt>"<code>cc-exp-year</code>"</dt>
-	<dd>The year in which the payment method expires.</dd>
-	<dt>"<code>cc-csc</code>"</dt>
-	<dd>The security code for the payment instrument; on credit cards, this is the 3-digit verification number on the back of the card.</dd>
-	<dt>"<code>cc-type</code>"</dt>
-	<dd>The type of payment instrument (such as "Visa" or "Master Card").</dd>
-	<dt>"<code>transaction-currency</code>"</dt>
-	<dd>The currency in which the transaction is to take place.</dd>
-	<dt>"<code>transaction-amount</code>"</dt>
-	<dd>The amount, given in the currency specified by "<code>transaction-currency</code>", of the transaction, for a payment form.</dd>
-	<dt>"<code>language</code>"</dt>
-	<dd>A preferred language, given as a valid <a href="https://en.wikipedia.org/wiki/IETF_language_tag">BCP 47 language tag</a>.</dd>
-	<dt>"<code>bday</code>"</dt>
-	<dd>A birth date, as a full date.</dd>
-	<dt>"<code>bday-day</code>"</dt>
-	<dd>The day of the month of a birth date.</dd>
-	<dt>"<code>bday-month</code>"</dt>
-	<dd>The month of the year of a birth date.</dd>
-	<dt>"<code>bday-year</code>"</dt>
-	<dd>The year of a birth date.</dd>
-	<dt>"<code>sex</code>"</dt>
-	<dd>A gender identity (such as "Female", "Fa'afafine", "Male"), as freeform text without newlines.</dd>
-	<dt>"<code>tel</code>"</dt>
-	<dd>A full telephone number, including the country code. If you need to break the phone number up into its components, you can use these values for those fields:
-	<dl>
-		<dt>"<code>tel-country-code</code>"</dt>
-		<dd>The country code, such as "1" for the United States, Canada, and other areas in North America and parts of the Caribbean.</dd>
-		<dt>"<code>tel-national</code>"</dt>
-		<dd>The entire phone number without the country code component, including a country-internal prefix. For the phone number "1-855-555-6502", this field's value would be "855-555-6502".</dd>
-		<dt>"<code>tel-area-code</code>"</dt>
-		<dd>The area code, with any country-internal prefix applied if appropriate.</dd>
-		<dt>"<code>tel-local</code>"</dt>
-		<dd>The phone number without the country or area code. This can be split further into two parts, for phone numbers which have an exchange number and then a number within the exchange. For the phone number "555-6502", use "<code>tel-local-prefix</code>" for "555" and "<code>tel-local-suffix</code>" for "6502".</dd>
-	</dl>
-	</dd>
-	<dt>"<code>tel-extension</code>"</dt>
-	<dd>A telephone extension code within the phone number, such as a room or suite number in a hotel or an office extension in a company.</dd>
-	<dt>"<code>impp</code>"</dt>
-	<dd>A URL for an instant messaging protocol endpoint, such as "xmpp:username@example.net".</dd>
-	<dt>"<code>url</code>"</dt>
-	<dd>A URL, such as a home page or company web site address as appropriate given the context of the other fields in the form.</dd>
-	<dt>"<code>photo</code>"</dt>
-	<dd>The URL of an image representing the person, company, or contact information given in the other fields in the form.</dd>
-</dl>
+The four administrative level fields (`address-level1` through `address-level4`) describe the address in terms of increasing levels of precision within the country in which the address is located. Each country has its own system of administrative levels, and may arrange the levels in different orders when addresses are written.
 
-<p>See the <a href="https://html.spec.whatwg.org/multipage/forms.html#autofill">WHATWG Standard</a> for more detailed information.</p>
+`address-level1` always represents the broadest administrative division; it is the least-specific portion of the address short of the country name.
 
-<div class="note">
-<p><strong>Note:</strong> The <code>autocomplete</code> attribute also controls whether Firefox will — unlike other browsers — <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persist the dynamic disabled state and (if applicable) dynamic checkedness</a> of an <code>&lt;input&gt;</code> element, <code>&lt;textarea&gt;</code> element, or entire <code>&lt;form&gt;</code> across page loads. The persistence feature is enabled by default. Setting the value of the <code>autocomplete</code> attribute to <code>off</code> disables this feature. This works even when the <code>autocomplete</code> attribute would normally not apply by virtue of its <code>type</code>. See {{bug(654072)}}.</p>
-</div>
+### Form layout flexibility
 
-<h2 id="Examples">Examples</h2>
+Given that different countries write their address in different ways, with each field in different places within the address, and even different sets and numbers of fields entirely, it can be helpful if, when possible, your site is able to switch to the layout expected by your users when presenting an address entry form, given the country the address is located within.
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;label for="cc-number"&gt;Enter your credit card number&lt;/label&gt;
-  &lt;input name="cc-number" id="cc-number" autocomplete="off"&gt;
-&lt;/div&gt;</pre>
+### Variations
 
-<h2 id="Administrative_levels_in_addresses">Administrative levels in addresses</h2>
+The way each administrative level is used will vary from country to country. Below are some examples; this is not meant to be an exhaustive list.
 
-<p>The four administrative level fields (<code>address-level1</code> through <code>address-level4</code>) describe the address in terms of increasing levels of precision within the country in which the address is located. Each country has its own system of administrative levels, and may arrange the levels in different orders when addresses are written.</p>
+#### United States
 
-<p><code>address-level1</code> always represents the broadest administrative division; it is the least-specific portion of the address short of the country name.</p>
+A typical home address within the United States looks like this:
 
-<h3 id="Form_layout_flexibility">Form layout flexibility</h3>
+432 Anywhere St
+Exampleville CA 95555
 
-<p>Given that different countries write their address in different ways, with each field in different places within the address, and even different sets and numbers of fields entirely, it can be helpful if, when possible, your site is able to switch to the layout expected by your users when presenting an address entry form, given the country the address is located within.</p>
+In the United States, the least-specific portion of the address is the state, in this case "CA" (the official US Postal Service shorthand for "California"). Thus `address-level1` is the state, or "CA" in this case.
 
-<h3 id="Variations">Variations</h3>
+The second-least specific portion of the address is the city or town name, so `address-level2` is "Exampleville" in this example address.
 
-<p>The way each administrative level is used will vary from country to country. Below are some examples; this is not meant to be an exhaustive list.</p>
+United States addresses do not use levels 3 and up.
 
-<h4 id="United_States">United States</h4>
+#### United Kingdom
 
-<p>A typical home address within the United States looks like this:</p>
+Address input forms in the UK should contain one address level and one, two or three address lines, depending on the address. A complete address would look like so:
 
-<p>432 Anywhere St<br>
-Exampleville CA 95555</p>
+103 Frogmarch Street
+Upper-Wapping
+Winchelsea
+TN99 8ZZ
 
-<p>In the United States, the least-specific portion of the address is the state, in this case "CA" (the official US Postal Service shorthand for "California"). Thus <code>address-level1</code> is the state, or "CA" in this case.</p>
+The address levels are:
 
-<p>The second-least specific portion of the address is the city or town name, so <code>address-level2</code> is "Exampleville" in this example address.</p>
+*   `address-level1`: The post town — "Winchelsea" in this case.
+*   `address-line2`: The locality — "Upper-Wapping" in this case.
+*   `address-line1`: The house/street particulars — "103 Frogmarch Street"
 
-<p>United States addresses do not use levels 3 and up.</p>
+The postcode is separate. Note that you can actually use just the postcode and `address-line1` to successfully deliver mail in the UK, so they should be the only mandatory items, but usually people tend to provide more details.
 
-<h4 id="United_Kingdom">United Kingdom</h4>
+#### China
 
-<p>Address input forms in the UK should contain one address level and one, two or three address lines, depending on the address. A complete address would look like so:</p>
+China can use as many as three administrative levels: the province, the city, and the district.
 
-<p>103 Frogmarch Street<br>
-Upper-Wapping<br>
-Winchelsea<br>
-TN99 8ZZ</p>
+The 6 digit postal code is not always needed but when supplied it is placed separately with a label for clarity. For example:
 
-<p>The address levels are:</p>
+北京市东城区建国门北大街8号华润大厦17层1708单元
+邮编：100005
 
-<ul>
-	<li><code>address-level1</code>: The post town — "Winchelsea" in this case.</li>
-	<li><code>address-line2</code>: The locality — "Upper-Wapping" in this case.</li>
-	<li><code>address-line1</code>: The house/street particulars — "103 Frogmarch Street"</li>
-</ul>
+#### Japan
 
-<p>The postcode is separate. Note that you can actually use just the postcode and <code>address-line1</code> to successfully deliver mail in the UK, so they should be the only mandatory items, but usually people tend to provide more details.</p>
+An address in Japan is typically **written in one line**, in an order from the least-specific to more-specific portions (in **reverse order to the United States**). There are two or three administrative levels in an address. Additional line can be used to show building names and room numbers. The postal code is separate. For example:
 
-<h4 id="China">China</h4>
+〒381-0000
+長野県長野市某町123
 
-<p>China can use as many as three administrative levels: the province, the city, and the district.</p>
+"〒" and following seven digits shows the postal code.
 
-<p>The 6 digit postal code is not always needed but when supplied it is placed separately with a label for clarity. For example:</p>
+`address-level1` is used for prefectures or the Tokyo Metropolis; "長野県" (Nagano Prefecture) is in this case. `address-level2` is typically used for cities, counties, towns and villages; "長野市" (Nagano City) in this case. "某町123" is `address-line1` which consists of an area name and a lot number.
 
-<p>北京市东城区建国门北大街8号华润大厦17层1708单元<br>
-邮编：100005</p>
+## Specifications
 
-<h4 id="Japan">Japan</h4>
+| Specification                                                                                |
+| -------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "#attr-fe-autocomplete", "autocomplete")}} |
 
-<p>An address in Japan is typically <strong>written in one line</strong>, in an order from the least-specific to more-specific portions (in <strong>reverse order to the United States</strong>). There are two or three administrative levels in an address. Additional line can be used to show building names and room numbers. The postal code is separate. For example:</p>
+## Browser compatibility
 
-<p>〒381-0000<br>
-長野県長野市某町123</p>
+{{Compat("html.global_attributes.autocomplete")}}
 
-<p>"〒" and following seven digits shows the postal code.</p>
+## See also
 
-<p><code>address-level1</code> is used for prefectures or the Tokyo Metropolis; "長野県" (Nagano Prefecture) is in this case. <code>address-level2</code> is typically used for cities, counties, towns and villages; "長野市" (Nagano City) in this case. "某町123" is <code>address-line1</code> which consists of an area name and a lot number.</p>
-
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('HTML WHATWG', "#attr-fe-autocomplete", "autocomplete")}}</td>
-		</tr>
-	</tbody>
-</table>
-
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>{{Compat("html.global_attributes.autocomplete")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
-	<li>The {{htmlelement("input")}} element.</li>
-	<li>The {{htmlelement("select")}} element.</li>
-	<li>The {{htmlelement("textarea")}} element.</li>
-	<li>The {{htmlelement("form")}} element.</li>
-	<li><a href="/en-US/docs/Learn/Forms">HTML forms</a></li>
-	<li>All <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</li>
-</ul>
+*   The {{htmlelement("input")}} element.
+*   The {{htmlelement("select")}} element.
+*   The {{htmlelement("textarea")}} element.
+*   The {{htmlelement("form")}} element.
+*   [HTML forms](/en-US/docs/Learn/Forms)
+*   All [global attributes](/en-US/docs/Web/HTML/Global_attributes).

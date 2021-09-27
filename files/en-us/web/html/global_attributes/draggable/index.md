@@ -7,33 +7,27 @@ tags:
   - Reference
 browser-compat: html.global_attributes.draggable
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>The <strong>draggable</strong> <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a> is an enumerated attribute that indicates whether the element can be dragged, either with native browser behavior or the <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop API</a>.</p>
+The **draggable** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an enumerated attribute that indicates whether the element can be dragged, either with native browser behavior or the [HTML Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API).
 
-<p><code>draggable</code> can have the following values:</p>
+`draggable` can have the following values:
 
-<ul>
- <li><code>true</code>: the element can be dragged.</li>
- <li><code>false</code>: the element cannot be dragged.</li>
-</ul>
+*   `true`: the element can be dragged.
+*   `false`: the element cannot be dragged.
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> This attribute is <em>enumerated</em> and not <em>Boolean</em>. A value of <code>true</code> or <code>false</code> is mandatory, and shorthand like <code>&lt;img draggable&gt;</code> is forbidden. The correct usage is <code>&lt;img draggable="false"&gt;</code>.</p>
-</div>
+> **Warning:** This attribute is *enumerated* and not *Boolean*. A value of `true` or `false` is mandatory, and shorthand like `<img draggable>` is forbidden. The correct usage is `<img draggable="false">`.
 
-<p>If this attribute is not set, its default value is <code>auto</code>, which means drag behavior is the default browser behavior: only text selections, images, and links can be dragged. For other elements, the event {{domxref('GlobalEventHandlers.ondragstart', 'ondragstart')}} must be set for drag and drop to work, as shown in this <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">comprehensive example</a>.</p>
+If this attribute is not set, its default value is `auto`, which means drag behavior is the default browser behavior: only text selections, images, and links can be dragged. For other elements, the event {{domxref('GlobalEventHandlers.ondragstart', 'ondragstart')}} must be set for drag and drop to work, as shown in this [comprehensive example](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>All <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</li>
-</ul>
+*   All [global attributes](/en-US/docs/Web/HTML/Global_attributes).

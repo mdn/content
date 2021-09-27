@@ -8,27 +8,25 @@ tags:
   - Reference
 browser-compat: html.global_attributes.autocapitalize
 ---
-<p>{{HTMLSidebar("Global_attributes")}}</p>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>The <strong><code>autocapitalize</code></strong> <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a> is an enumerated attribute that controls whether and how text input is automatically capitalized as it is entered/edited by the user.</p>
+The **`autocapitalize`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an enumerated attribute that controls whether and how text input is automatically capitalized as it is entered/edited by the user.
 
-<p>The attribute must take one of the following values:</p>
+The attribute must take one of the following values:
 
-<ul>
- <li><code>off</code> or <code>none</code>: No autocapitalization is applied (all letters default to lowercase)</li>
- <li><code>on</code> or <code>sentences</code>: The first letter of each sentence defaults to a capital letter; all other letters default to lowercase</li>
- <li><code>words</code>: The first letter of each word defaults to a capital letter; all other letters default to lowercase</li>
- <li><code>characters</code>: All letters should default to uppercase</li>
-</ul>
+*   `off` or `none`: No autocapitalization is applied (all letters default to lowercase)
+*   `on` or `sentences`: The first letter of each sentence defaults to a capital letter; all other letters default to lowercase
+*   `words`: The first letter of each word defaults to a capital letter; all other letters default to lowercase
+*   `characters`: All letters should default to uppercase
 
-<p>The <code>autocapitalize</code> attribute doesn’t affect behavior when typing on a physical keyboard. Instead, it affects the behavior of other input mechanisms, such as virtual keyboards on mobile devices and voice input. The behavior of such mechanisms is that they often assist users by automatically capitalizing the first letter of sentences. The <code>autocapitalize</code> attribute enables authors to override that behavior per-element.</p>
+The `autocapitalize` attribute doesn’t affect behavior when typing on a physical keyboard. Instead, it affects the behavior of other input mechanisms, such as virtual keyboards on mobile devices and voice input. The behavior of such mechanisms is that they often assist users by automatically capitalizing the first letter of sentences. The `autocapitalize` attribute enables authors to override that behavior per-element.
 
-<p>The <code>autocapitalize</code> attribute never causes autocapitalization to be enabled for an {{HTMLElement("input")}} element with a {{htmlattrxref("type", "input")}} attribute whose value is <code>url</code>, <code>email</code>, or <code>password</code>.</p>
+The `autocapitalize` attribute never causes autocapitalization to be enabled for an {{HTMLElement("input")}} element with a {{htmlattrxref("type", "input")}} attribute whose value is `url`, `email`, or `password`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

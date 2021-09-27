@@ -9,150 +9,176 @@ tags:
   - min
   - Reference
 ---
-<p>{{HTMLSidebar}}</p>
+{{HTMLSidebar}}
 
-<p>The <strong><code>min</code></strong> attribute defines the minimum value that is acceptable and valid for the input containing the attribute. If the <code><a href="/en-US/docs/Web/HTML/Element/input#attr-value">value</a></code> of the element is less than this, the element fails <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. This value must be less than or equal to the value of the <code>max</code> attribute. If a value is specified for <code>min</code> that isn't a valid number, the input has no minimum value.</p>
+The **`min`** attribute defines the minimum value that is acceptable and valid for the input containing the attribute. If the [`value`](/en-US/docs/Web/HTML/Element/input#attr-value) of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation). This value must be less than or equal to the value of the `max` attribute. If a value is specified for `min` that isn't a valid number, the input has no minimum value.
 
-<p>Valid for the numeric input types, including the {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types, and the {{htmlelement('meter')}} element, the <code>min</code> attribute is a number that specifies the most negative value a form control to be considered valid.</p>
+Valid for the numeric input types, including the {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types, and the {{htmlelement('meter')}} element, the `min` attribute is a number that specifies the most negative value a form control to be considered valid.
 
-<h3 id="Syntax">Syntax</h3>
-
-<table class="no-markdown">
- <caption>Syntax for <code>min</code> values by input <code>type</code></caption>
- <thead>
-  <tr>
-   <th>Input type</th>
-   <th>Example</th>
-   <th>Example</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{HTMLElement("input/date", "date")}}</td>
-   <td><code>yyyy-mm-dd</code></td>
-   <td><code>&lt;input type="date" min="2019-12-25" step="1"&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/month", "month")}}</td>
-   <td><code>yyyy-mm</code></td>
-   <td><code>&lt;input type="month" min="2019-12" step="12"&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/week", "week")}}</td>
-   <td><code>yyyy-W##</code></td>
-   <td><code>&lt;input type="week" min="2019-W23" step=""&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/time", "time")}}</td>
-   <td><code>hh:mm</code></td>
-   <td><code>&lt;input type="time" min="09:00" step="900"&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/datetime-local", "datetime-local")}}</td>
-   <td><code>yyyy-mm-ddThh:mm</code></td>
-   <td><code>&lt;input type="datetime-local" min="2019-12-25T19:30"&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/number", "number")}}</td>
-   <td><a href="/en-US/docs/Web/CSS/number">&lt;number&gt;</a></td>
-   <td><code>&lt;input type="number" min="0" step="5" max="100"&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/range", "range")}}</td>
-   <td><a href="/en-US/docs/Web/CSS/number">&lt;number&gt;</a></td>
-   <td><code>&lt;input type="range" min="60" step="5" max="100"&gt;</code></td>
-  </tr>
- </tbody>
-</table>
-
-<div class="note">
-<p><strong>Note:</strong> When the data entered by the user doesn't adhere to the min value set, the value is considered invalid in contraint validation and will match the {{cssxref(':invalid')}} and {{cssxref(':out-of-range')}} pseudo-classes.</p>
-</div>
-
-<p>See <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Client-side validation</a> and {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}} for more information.</p>
-
-<p>For the {{htmlelement('meter')}} element, the <code>min</code> attribute defines the lower numeric bound of the measured range. This must be less than the minimum value (<code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code> attribute), if specified. In both cases, if omitted, the value defaults to 1.</p>
+### Syntax
 
 <table class="no-markdown">
- <caption>Syntax for <code>min</code> values for other elements</caption>
- <thead>
-  <tr>
-   <th>Input type</th>
-   <th>Syntax</th>
-   <th>Example</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{HTMLElement("meter")}}</td>
-   <td><a href="/en-US/docs/Web/CSS/number">&lt;number&gt;</a></td>
-   <td><code>&lt;meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="40"&gt; at 40/100&lt;/meter&gt;</code></td>
-  </tr>
- </tbody>
+  <caption>
+    Syntax for
+    <code>min</code>
+    values by input
+    <code>type</code>
+  </caption>
+  <thead>
+    <tr>
+      <th>Input type</th>
+      <th>Example</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{HTMLElement("input/date", "date")}}</td>
+      <td><code>yyyy-mm-dd</code></td>
+      <td><code>&#x3C;input type="date" min="2019-12-25" step="1"></code></td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/month", "month")}}</td>
+      <td><code>yyyy-mm</code></td>
+      <td><code>&#x3C;input type="month" min="2019-12" step="12"></code></td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/week", "week")}}</td>
+      <td><code>yyyy-W##</code></td>
+      <td><code>&#x3C;input type="week" min="2019-W23" step=""></code></td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/time", "time")}}</td>
+      <td><code>hh:mm</code></td>
+      <td><code>&#x3C;input type="time" min="09:00" step="900"></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{HTMLElement("input/datetime-local", "datetime-local")}}
+      </td>
+      <td><code>yyyy-mm-ddThh:mm</code></td>
+      <td>
+        <code>&#x3C;input type="datetime-local" min="2019-12-25T19:30"></code>
+      </td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/number", "number")}}</td>
+      <td><a href="/en-US/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td>
+        <code>&#x3C;input type="number" min="0" step="5" max="100"></code>
+      </td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/range", "range")}}</td>
+      <td><a href="/en-US/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td>
+        <code>&#x3C;input type="range" min="60" step="5" max="100"></code>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="Impact_on_step">Impact on step</h3>
+> **Note:** When the data entered by the user doesn't adhere to the min value set, the value is considered invalid in contraint validation and will match the {{cssxref(':invalid')}} and {{cssxref(':out-of-range')}} pseudo-classes.
 
-<p>The value of <code>min</code> and <code>step</code> define what are valid values, even if the <code>step</code> attribute is not included, as <code>step</code> defaults to <code>0</code>.</p>
+See [Client-side validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation) and {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}} for more information.
 
-<p>We add a big red border around invalid inputs:</p>
+For the {{htmlelement('meter')}} element, the `min` attribute defines the lower numeric bound of the measured range. This must be less than the minimum value ([`max`](/en-US/docs/Web/HTML/Attributes/max) attribute), if specified. In both cases, if omitted, the value defaults to 1.
 
-<pre class="brush: css">input:invalid {
+<table class="no-markdown">
+  <caption>
+    Syntax for
+    <code>min</code>
+    values for other elements
+  </caption>
+  <thead>
+    <tr>
+      <th>Input type</th>
+      <th>Syntax</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{HTMLElement("meter")}}</td>
+      <td><a href="/en-US/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td>
+        <code
+          >&#x3C;meter id="fuel" min="0" max="100" low="33" high="66"
+          optimum="80" value="40"> at 40/100&#x3C;/meter></code
+        >
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Impact on step
+
+The value of `min` and `step` define what are valid values, even if the `step` attribute is not included, as `step` defaults to `0`.
+
+We add a big red border around invalid inputs:
+
+```css
+input:invalid {
   border: solid red 3px;
-}</pre>
+}
+```
 
-<p>Then define an input with a minimum value of 7.2, omitting the step attribute, wherein it defaults to 1.</p>
+Then define an input with a minimum value of 7.2, omitting the step attribute, wherein it defaults to 1.
 
-<pre class="brush: html">&lt;input id="myNumber" name="myNumber" type="number" min="7.2" value="8"&gt;</pre>
+```html
+<input id="myNumber" name="myNumber" type="number" min="7.2" value="8">
+```
 
-<p>Because <code>step</code> defaults to 1, valid values include <code>7.2</code>, <code>8.2</code>, <code>9.2</code>, and so on. The value 8 is not valid. As we included an invalid value, supporting browsers will show the value as invalid.</p>
+Because `step` defaults to 1, valid values include `7.2`, `8.2`, `9.2`, and so on. The value 8 is not valid. As we included an invalid value, supporting browsers will show the value as invalid.
 
-<p>{{EmbedLiveSample("Impact_on_step",200,55)}}</p>
+{{EmbedLiveSample("Impact_on_step",200,55)}}
 
-<p>If not explicitly included, <code>step</code> defaults to 1 for <code>number</code> and <code>range</code>, and 1 unit type (second, week, month, day) for the date/time input types.</p>
+If not explicitly included, `step` defaults to 1 for `number` and `range`, and 1 unit type (second, week, month, day) for the date/time input types.
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>Provide instructions to help users understand how to complete the form and use individual form controls. Indicate any required and optional input, data formats, and other relevant information. When using the <code>min</code> attribute, ensure this minimum requirement is understood by the user. Providing instructions within the {{htmlelement('label')}} may be sufficient. If providing instructions outside of labels, which allows more flexible positioning and design, consider using <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a></code> or <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute">aria-describedby</a></code>.</p>
+Provide instructions to help users understand how to complete the form and use individual form controls. Indicate any required and optional input, data formats, and other relevant information. When using the `min` attribute, ensure this minimum requirement is understood by the user. Providing instructions within the {{htmlelement('label')}} may be sufficient. If providing instructions outside of labels, which allows more flexible positioning and design, consider using [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) or [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'input.html#the-min-and-max-attributes', 'min attribute')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'input.html#the-min-and-max-attributes', 'min attribute')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName('HTML WHATWG', 'input.html#the-min-and-max-attributes', 'min attribute')}}
+      </td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('HTML5 W3C', 'input.html#the-min-and-max-attributes', 'min attribute')}}
+      </td>
+      <td>{{Spec2('HTML5 W3C')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("html.elements.attributes.min")}}</p>
+{{Compat("html.elements.attributes.min")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTML/Attributes/step"><code>step</code></a></li>
- <li><a href="/en-US/docs/Web/HTML/Attributes/max"><code>max</code></a></li>
- <li>other meter attributes: <a href="/en-US/docs/Web/HTML/Attributes/low"><code>low</code></a>, <a href="/en-US/docs/Web/HTML/Attributes/high"><code>high</code></a>, <a href="/en-US/docs/Web/HTML/Attributes/optimum"><code>optimum</code></a></li>
- <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Constraint validation</a></li>
- <li><a href="/en-US/docs/Web/API/Constraint_validation">Constraint validation API</a></li>
- <li>{{domxref('validityState.rangeUnderflow')}}</li>
- <li>{{cssxref(':out-of-range')}}</li>
- <li>{{htmlelement('input')}}</li>
- <li>{{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types, and the {{htmlelement('meter')}}</li>
-</ul>
+*   [`step`](/en-US/docs/Web/HTML/Attributes/step)
+*   [`max`](/en-US/docs/Web/HTML/Attributes/max)
+*   other meter attributes: [`low`](/en-US/docs/Web/HTML/Attributes/low), [`high`](/en-US/docs/Web/HTML/Attributes/high), [`optimum`](/en-US/docs/Web/HTML/Attributes/optimum)
+*   [Constraint validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+*   [Constraint validation API](/en-US/docs/Web/API/Constraint_validation)
+*   {{domxref('validityState.rangeUnderflow')}}
+*   {{cssxref(':out-of-range')}}
+*   {{htmlelement('input')}}
+*   {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types, and the {{htmlelement('meter')}}

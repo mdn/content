@@ -9,41 +9,39 @@ tags:
   - Web
 browser-compat: html.elements.frameset
 ---
-<div>{{HTMLRef}}{{Deprecated_header}}</div>
+{{HTMLRef}}{{Deprecated_header}}
 
-<p>The <strong><code>&lt;frameset&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element is used to contain {{HTMLElement("frame")}} elements.</p>
+The **`<frameset>`** [HTML](/en-US/docs/Web/HTML) element is used to contain {{HTMLElement("frame")}} elements.
 
-<div class="note"><p><strong>Note:</strong> Because the use of frames is now discouraged in favor of using {{HTMLElement("iframe")}}, this element is not typically used by modern web sites.</p></div>
+> **Note:** Because the use of frames is now discouraged in favor of using {{HTMLElement("iframe")}}, this element is not typically used by modern web sites.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>Like all other HTML elements, this element supports the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("cols")}}</dt>
- <dd>This attribute specifies the number and size of horizontal spaces in a frameset.</dd>
- <dt>{{htmlattrdef("rows")}}</dt>
- <dd>This attribute specifies the number and size of vertical spaces in a frameset.</dd>
-</dl>
+*   {{htmlattrdef("cols")}}
+    *   : This attribute specifies the number and size of horizontal spaces in a frameset.
+*   {{htmlattrdef("rows")}}
+    *   : This attribute specifies the number and size of vertical spaces in a frameset.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:html">&lt;frameset cols="50%,50%"&gt;
-  &lt;frame src="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frameset" /&gt;
-  &lt;frame src="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frame" /&gt;
-&lt;/frameset&gt;</pre>
+```html
+<frameset cols="50%,50%">
+  <frame src="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frameset" />
+  <frame src="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frame" />
+</frameset>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTMLElement("frame")}}</li>
- <li>{{HTMLElement("iframe")}}</li>
-</ul>
+*   {{HTMLElement("frame")}}
+*   {{HTMLElement("iframe")}}

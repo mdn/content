@@ -10,42 +10,44 @@ tags:
   - Web Standards
   - XHTML
 ---
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}
 
-<p>In the old days of the web, pages were typically written in two versions: One for Netscape Navigator, and one for Microsoft Internet Explorer. When the web standards were made at W3C, browsers could not just start using them, as doing so would break most existing sites on the web. Browsers therefore introduced two modes to treat new standards compliant sites differently from old legacy sites.</p>
+In the old days of the web, pages were typically written in two versions: One for Netscape Navigator, and one for Microsoft Internet Explorer. When the web standards were made at W3C, browsers could not just start using them, as doing so would break most existing sites on the web. Browsers therefore introduced two modes to treat new standards compliant sites differently from old legacy sites.
 
-<p>There are now three modes used by the layout engines in web browsers: quirks mode, almost standards mode, and full standards mode. In <strong>quirks mode</strong>, layout emulates nonstandard behavior in Navigator 4 and Internet Explorer 5. This is essential in order to support websites that were built before the widespread adoption of web standards. In <strong>full standards mode</strong>, the behavior is (hopefully) the behavior described by the HTML and CSS specifications. In <strong>almost standards mode</strong>, there are only a very small number of quirks implemented.</p>
+There are now three modes used by the layout engines in web browsers: quirks mode, almost standards mode, and full standards mode. In **quirks mode**, layout emulates nonstandard behavior in Navigator 4 and Internet Explorer 5. This is essential in order to support websites that were built before the widespread adoption of web standards. In **full standards mode**, the behavior is (hopefully) the behavior described by the HTML and CSS specifications. In **almost standards mode**, there are only a very small number of quirks implemented.
 
-<h2>How do browsers determine which mode to use?</h2>
+## How do browsers determine which mode to use?
 
-<p>For <a href="/en-US/docs/HTML">HTML</a> documents, browsers use a DOCTYPE in the beginning of the document to decide whether to handle it in quirks mode or standards mode. To ensure that your page uses full standards mode, make sure that your page has a DOCTYPE like in this example:</p>
+For [HTML](/en-US/docs/HTML) documents, browsers use a DOCTYPE in the beginning of the document to decide whether to handle it in quirks mode or standards mode. To ensure that your page uses full standards mode, make sure that your page has a DOCTYPE like in this example:
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-  &lt;head&gt;
-    &lt;meta charset=UTF-8&gt;
-    &lt;title&gt;Hello World!&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset=UTF-8>
+    <title>Hello World!</title>
+  </head>
+  <body>
+  </body>
+</html>
+```
 
-<p>The DOCTYPE shown in the example, <code>&lt;!DOCTYPE html&gt;</code>, is the simplest possible, and the one recommended by HTML5. Earlier versions of the HTML standard recommended other variants, but all existing browsers today will use full standards mode for this DOCTYPE, even the dated Internet Explorer 6. There are no valid reasons to use a more complicated DOCTYPE. If you do use another DOCTYPE, you may risk choosing one which triggers almost standards mode or quirks mode.</p>
+The DOCTYPE shown in the example, `<!DOCTYPE html>`, is the simplest possible, and the one recommended by HTML5. Earlier versions of the HTML standard recommended other variants, but all existing browsers today will use full standards mode for this DOCTYPE, even the dated Internet Explorer 6. There are no valid reasons to use a more complicated DOCTYPE. If you do use another DOCTYPE, you may risk choosing one which triggers almost standards mode or quirks mode.
 
-<p>Make sure you put the DOCTYPE right at the beginning of your HTML document. Anything before the DOCTYPE, like a comment or an XML declaration will trigger quirks mode in Internet Explorer 9 and older.</p>
+Make sure you put the DOCTYPE right at the beginning of your HTML document. Anything before the DOCTYPE, like a comment or an XML declaration will trigger quirks mode in Internet Explorer 9 and older.
 
-<p>In HTML5, the only purpose of the DOCTYPE is to activate full standards mode. Older versions of the HTML standard gave additional meaning to the DOCTYPE, but no browser has ever used the DOCTYPE for anything other than switching between quirks mode and standards mode.</p>
+In HTML5, the only purpose of the DOCTYPE is to activate full standards mode. Older versions of the HTML standard gave additional meaning to the DOCTYPE, but no browser has ever used the DOCTYPE for anything other than switching between quirks mode and standards mode.
 
-<p>See also a detailed description of <a href="http://hsivonen.iki.fi/doctype/">when different browsers choose various modes</a>.</p>
+See also a detailed description of [when different browsers choose various modes](http://hsivonen.iki.fi/doctype/).
 
-<h3 id="XHTML">XHTML</h3>
+### XHTML
 
-<p>If you serve your page as <a href="/en-US/docs/XHTML">XHTML</a> using the <code>application/xhtml+xml</code> MIME type in the <code>Content-Type</code> HTTP header, you do not need a DOCTYPE to enable standards mode, as such documents always use full standards mode. Note however that serving your pages as <code>application/xhtml+xml</code> will cause Internet Explorer 8 to <a href="/en-US/docs/XHTML#Support" title="XHTML">show a download dialog</a> box for an unknown format instead of displaying your page, as the first version of Internet Explorer with support for XHTML is Internet Explorer 9.</p>
+If you serve your page as [XHTML](/en-US/docs/XHTML) using the `application/xhtml+xml` MIME type in the `Content-Type` HTTP header, you do not need a DOCTYPE to enable standards mode, as such documents always use full standards mode. Note however that serving your pages as `application/xhtml+xml` will cause Internet Explorer 8 to [show a download dialog](/en-US/docs/XHTML#Support "XHTML") box for an unknown format instead of displaying your page, as the first version of Internet Explorer with support for XHTML is Internet Explorer 9.
 
-<p>If you serve XHTML-like content using the <code>text/html</code> MIME type, browsers will read it as HTML, and you will need the DOCTYPE to use standards mode.</p>
+If you serve XHTML-like content using the `text/html` MIME type, browsers will read it as HTML, and you will need the DOCTYPE to use standards mode.
 
-<h2 id="How_do_I_see_which_mode_is_used">How do I see which mode is used?</h2>
+## How do I see which mode is used?
 
-<p>In Firefox, select <em>Page Info</em> from the <em>Tools</em> menu bar, and look for <em>Render Mode</em>. (<a href="https://support.mozilla.org/en-US/kb/firefox-page-info-window">Learn more about the Firefox Page Info window</a>)</p>
+In Firefox, select *Page Info* from the *Tools* menu bar, and look for *Render Mode*. ([Learn more about the Firefox Page Info window](https://support.mozilla.org/en-US/kb/firefox-page-info-window))
 
-<p>In Internet Explorer, press <em>F12</em>, and look for <em>Document Mode</em>.</p>
+In Internet Explorer, press *F12*, and look for *Document Mode*.

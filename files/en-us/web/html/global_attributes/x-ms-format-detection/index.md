@@ -4,42 +4,37 @@ slug: Web/HTML/Global_attributes/x-ms-format-detection
 tags:
   - Attribute
   - HTML
-  - 'HTML:Microsoft Extensions'
+  - HTML:Microsoft Extensions
   - Non-standard
   - Reference
   - x-ms-format-detection
 ---
-<div>{{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}</div>
+{{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}
 
-<p>The <code><a href="https://docs.microsoft.com/en-us/previous-versions/dn337007(v%3Dvs.85)">x-ms-format-detection</a></code> attribute determines whether data formats within the element’s text, like phone numbers, are automatically converted to followable links.</p>
+The [`x-ms-format-detection`](https://docs.microsoft.com/en-us/previous-versions/dn337007\(v%3Dvs.85\)) attribute determines whether data formats within the element’s text, like phone numbers, are automatically converted to followable links.
 
-<p>Existing links, such as ones with the <code>tel:</code> scheme, are unaffected.</p>
+Existing links, such as ones with the `tel:` scheme, are unaffected.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Links created through format detection do not appear in the DOM.</p>
-</div>
+> **Note:** Links created through format detection do not appear in the DOM.
 
-<p>{{Non-standard_inline}} This proprietary property is specific to Internet Explorer and Microsoft Edge.</p>
+{{Non-standard_inline}} This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">&lt;html x-ms-format-detection="none"&gt;
-</pre>
+```html
+<html x-ms-format-detection="none">
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<dl>
- <dt><code>all</code></dt>
- <dd>All supported data formats are detected.</dd>
- <dt><code>none</code></dt>
- <dd>Format detection is turned off.</dd>
- <dt><code>phone</code></dt>
- <dd>Phone number patterns are autolinked.</dd>
-</dl>
+*   `all`
+    *   : All supported data formats are detected.
+*   `none`
+    *   : Format detection is turned off.
+*   `phone`
+    *   : Phone number patterns are autolinked.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Microsoft_API_extensions">Microsoft API extensions</a></li>
- <li><a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html">Safari Supported Meta Tags</a></li>
-</ul>
+*   [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_API_extensions)
+*   [Safari Supported Meta Tags](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html)

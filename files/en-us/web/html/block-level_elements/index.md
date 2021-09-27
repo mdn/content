@@ -9,121 +9,112 @@ tags:
   - HTML5
   - Web
 ---
-<p>In this article, we'll examine HTML block-level elements and how they differ from <a href="/en-US/docs/Web/HTML/Inline_elements">inline-level elements</a>.</p>
+In this article, we'll examine HTML block-level elements and how they differ from [inline-level elements](/en-US/docs/Web/HTML/Inline_elements).
 
-<p>HTML (<strong>Hypertext Markup Language</strong>) elements historically were categorized as either "block-level" elements or "inline-level" elements. Since this is a presentational characteristic it is nowadays specified by CSS in the <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout">Flow Layout</a>. A Block-level element occupies the entire horizontal space of its parent element (container), and vertical space equal to the height of its contents, thereby creating a "block".</p>
+HTML (**Hypertext Markup Language**) elements historically were categorized as either "block-level" elements or "inline-level" elements. Since this is a presentational characteristic it is nowadays specified by CSS in the [Flow Layout](/en-US/docs/Web/CSS/CSS_Flow_Layout). A Block-level element occupies the entire horizontal space of its parent element (container), and vertical space equal to the height of its contents, thereby creating a "block".
 
-<p>Browsers typically display the block-level element with a newline both before and after the element. You can visualize them as a stack of boxes.</p>
+Browsers typically display the block-level element with a newline both before and after the element. You can visualize them as a stack of boxes.
 
-<div class="note">
-<p><strong>Note:</strong> A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).</p>
-</div>
+> **Note:** A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).
 
-<p>The following example demonstrates the block-level element's influence:</p>
+The following example demonstrates the block-level element's influence:
 
-<h2>Block-level elements</h2>
+## Block-level elements
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;This paragraph is a block-level element; its background has been colored to display the paragraph's parent element.&lt;/p&gt;</pre>
+```html
+<p>This paragraph is a block-level element; its background has been colored to display the paragraph's parent element.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p { background-color: #8ABB55; }
-</pre>
+```css
+p { background-color: #8ABB55; }
+```
 
-<p>{{ EmbedLiveSample('Block-level_elements') }}</p>
+{{ EmbedLiveSample('Block-level_elements') }}
 
-<h2 id="Usage">Usage</h2>
+## Usage
 
-<ul>
- <li>Block-level elements may appear only within a {{ HTMLElement("body") }} element.</li>
-</ul>
+*   Block-level elements may appear only within a {{ HTMLElement("body") }} element.
 
-<h2 id="Block-level_vs._inline">Block-level vs. inline</h2>
+## Block-level vs. inline
 
-<p>There are a couple of key differences between block-level elements and inline elements:</p>
+There are a couple of key differences between block-level elements and inline elements:
 
-<dl>
- <dt>Content model</dt>
- <dd>Generally, block-level elements may contain inline elements and (sometimes) other block-level elements. Inherent in this structural distinction is the idea that block elements create "larger" structures than inline elements.</dd>
- <dt>Default formatting</dt>
- <dd>By default, block-level elements begin on new lines, but inline elements can start anywhere in a line.</dd>
-</dl>
+*   Content model
+    *   : Generally, block-level elements may contain inline elements and (sometimes) other block-level elements. Inherent in this structural distinction is the idea that block elements create "larger" structures than inline elements.
+*   Default formatting
+    *   : By default, block-level elements begin on new lines, but inline elements can start anywhere in a line.
 
-<p>The distinction of block-level vs. inline elements was used in HTML specifications up to 4.01. In HTML5, this binary distinction is replaced with a more complex set of <a href="/en-US/docs/Web/Guide/HTML/Content_categories">content categories</a>. While the "inline" category roughly corresponds to the category of <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>, the "block-level" category doesn't directly correspond to any HTML5 content category, but <em>"block-level" and "inline" elements combined together</em> correspond to the <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a> in HTML5. There are also additional categories, e.g. <a href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content">interactive content</a>.</p>
+The distinction of block-level vs. inline elements was used in HTML specifications up to 4.01. In HTML5, this binary distinction is replaced with a more complex set of [content categories](/en-US/docs/Web/Guide/HTML/Content_categories). While the "inline" category roughly corresponds to the category of [phrasing content](/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content), the "block-level" category doesn't directly correspond to any HTML5 content category, but *"block-level" and "inline" elements combined together* correspond to the [flow content](/en-US/docs/Web/Guide/HTML/Content_categories#flow_content) in HTML5. There are also additional categories, e.g. [interactive content](/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content).
 
-<h2 id="Elements">Elements</h2>
+## Elements
 
-<p>The following is a complete list of all HTML "block-level" elements (although "block-level" is not technically defined for elements that are new in HTML5).</p>
+The following is a complete list of all HTML "block-level" elements (although "block-level" is not technically defined for elements that are new in HTML5).
 
-<div class="threecolumns">
-<dl>
- <dt>{{ HTMLElement("address") }}</dt>
- <dd>Contact information.</dd>
- <dt>{{ HTMLElement("article") }}</dt>
- <dd>Article content.</dd>
- <dt>{{ HTMLElement("aside") }}</dt>
- <dd>Aside content.</dd>
- <dt>{{ HTMLElement("blockquote") }}</dt>
- <dd>Long ("block") quotation.</dd>
- <dt>{{ HTMLElement("details") }}</dt>
- <dd>Disclosure widget.</dd>
- <dt>{{ HTMLElement("dialog") }}</dt>
- <dd>Dialog box.</dd>
- <dt>{{ HTMLElement("dd") }}</dt>
- <dd>Describes a term in a description list.</dd>
- <dt>{{ HTMLElement("div") }}</dt>
- <dd>Document division.</dd>
- <dt>{{ HTMLElement("dl") }}</dt>
- <dd>Description list.</dd>
- <dt>{{ HTMLElement("dt") }}</dt>
- <dd>Description list term.</dd>
- <dt>{{ HTMLElement("fieldset") }}</dt>
- <dd>Field set label.</dd>
- <dt>{{ HTMLElement("figcaption") }}</dt>
- <dd>Figure caption.</dd>
- <dt>{{ HTMLElement("figure") }}</dt>
- <dd>Groups media content with a caption (see {{ HTMLElement("figcaption") }}).</dd>
- <dt>{{ HTMLElement("footer") }}</dt>
- <dd>Section or page footer.</dd>
- <dt>{{ HTMLElement("form") }}</dt>
- <dd>Input form.</dd>
- <dt>{{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}</dt>
- <dd>Heading levels 1-6.</dd>
- <dt>{{ HTMLElement("header") }}</dt>
- <dd>Section or page header.</dd>
- <dt>{{ HTMLElement("hgroup") }}</dt>
- <dd>Groups header information.</dd>
- <dt>{{ HTMLElement("hr") }}</dt>
- <dd>Horizontal rule (dividing line).</dd>
- <dt>{{ HTMLElement("li") }}</dt>
- <dd>List item.</dd>
- <dt>{{ HTMLElement("main") }}</dt>
- <dd>Contains the central content unique to this document.</dd>
- <dt>{{ HTMLElement("nav") }}</dt>
- <dd>Contains navigation links.</dd>
- <dt>{{ HTMLElement("ol") }}</dt>
- <dd>Ordered list.</dd>
- <dt>{{ HTMLElement("p") }}</dt>
- <dd>Paragraph.</dd>
- <dt>{{ HTMLElement("pre") }}</dt>
- <dd>Preformatted text.</dd>
- <dt>{{ HTMLElement("section") }}</dt>
- <dd>Section of a web page.</dd>
- <dt>{{ HTMLElement("table") }}</dt>
- <dd>Table.</dd>
- <dt>{{ HTMLElement("ul") }}</dt>
- <dd>Unordered list.</dd>
-</dl>
-</div>
+*   {{ HTMLElement("address") }}
+    *   : Contact information.
+*   {{ HTMLElement("article") }}
+    *   : Article content.
+*   {{ HTMLElement("aside") }}
+    *   : Aside content.
+*   {{ HTMLElement("blockquote") }}
+    *   : Long ("block") quotation.
+*   {{ HTMLElement("details") }}
+    *   : Disclosure widget.
+*   {{ HTMLElement("dialog") }}
+    *   : Dialog box.
+*   {{ HTMLElement("dd") }}
+    *   : Describes a term in a description list.
+*   {{ HTMLElement("div") }}
+    *   : Document division.
+*   {{ HTMLElement("dl") }}
+    *   : Description list.
+*   {{ HTMLElement("dt") }}
+    *   : Description list term.
+*   {{ HTMLElement("fieldset") }}
+    *   : Field set label.
+*   {{ HTMLElement("figcaption") }}
+    *   : Figure caption.
+*   {{ HTMLElement("figure") }}
+    *   : Groups media content with a caption (see {{ HTMLElement("figcaption") }}).
+*   {{ HTMLElement("footer") }}
+    *   : Section or page footer.
+*   {{ HTMLElement("form") }}
+    *   : Input form.
+*   {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}
+    *   : Heading levels 1-6.
+*   {{ HTMLElement("header") }}
+    *   : Section or page header.
+*   {{ HTMLElement("hgroup") }}
+    *   : Groups header information.
+*   {{ HTMLElement("hr") }}
+    *   : Horizontal rule (dividing line).
+*   {{ HTMLElement("li") }}
+    *   : List item.
+*   {{ HTMLElement("main") }}
+    *   : Contains the central content unique to this document.
+*   {{ HTMLElement("nav") }}
+    *   : Contains navigation links.
+*   {{ HTMLElement("ol") }}
+    *   : Ordered list.
+*   {{ HTMLElement("p") }}
+    *   : Paragraph.
+*   {{ HTMLElement("pre") }}
+    *   : Preformatted text.
+*   {{ HTMLElement("section") }}
+    *   : Section of a web page.
+*   {{ HTMLElement("table") }}
+    *   : Table.
+*   {{ HTMLElement("ul") }}
+    *   : Unordered list.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTML/Inline_elements">Inline elements</a></li>
- <li>{{cssxref("display")}}</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow">Block and Inline Layout in Normal Flow</a></li>
-</ul>
+*   [Inline elements](/en-US/docs/Web/HTML/Inline_elements)
+*   {{cssxref("display")}}
+*   [Block and Inline Layout in Normal Flow](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
 
-<div>{{QuickLinksWithSubpages("/en-US/docs/Web/HTML/")}}</div>
+{{QuickLinksWithSubpages("/en-US/docs/Web/HTML/")}}

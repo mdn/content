@@ -11,84 +11,116 @@ tags:
   - figure
 browser-compat: html.elements.figure
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;figure&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element represents self-contained content, potentially with an optional caption, which is specified using the {{HTMLElement("figcaption")}} element. The figure, its caption, and its contents are referenced as a single unit.</p>
+The **`<figure>`** [HTML](/en-US/docs/Web/HTML) element represents self-contained content, potentially with an optional caption, which is specified using the {{HTMLElement("figcaption")}} element. The figure, its caption, and its contents are referenced as a single unit.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/figure.html","tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/figure.html","tabbed-shorter")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots">sectioning root</a>, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td>A {{HTMLElement("figcaption")}} element, followed by <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a>; or flow content followed by a {{HTMLElement("figcaption")}} element; or flow content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Figure_Role">figure</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>With no <a href="/en-US/docs/Web/HTML/Element/figcaption">figcaption </a>descendant: <a href="https://www.w3.org/TR/html-aria/#dfn-any-role">any</a>, otherwise no permitted roles</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots"
+          >sectioning root</a
+        >, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        A {{HTMLElement("figcaption")}} element, followed by
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >flow content</a
+        >; or flow content followed by a
+        {{HTMLElement("figcaption")}} element; or flow content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Figure_Role"
+          >figure</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>
+        With no
+        <a href="/en-US/docs/Web/HTML/Element/figcaption">figcaption </a
+        >descendant:
+        <a href="https://www.w3.org/TR/html-aria/#dfn-any-role">any</a>,
+        otherwise no permitted roles
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element only includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<ul>
- <li>Usually a <code>&lt;figure&gt;</code> is an image, illustration, diagram, code snippet, etc., that is referenced in the main flow of a document, but that can be moved to another part of the document or to an appendix without affecting the main flow.</li>
- <li>Being a <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots">sectioning root</a>, the outline of the content of the <code>&lt;figure&gt;</code> element is excluded from the main outline of the document.</li>
- <li>A caption can be associated with the <code>&lt;figure&gt;</code> element by inserting a {{HTMLElement("figcaption")}} inside it (as the first or the last child). The first <code>&lt;figcaption&gt;</code> element found in the figure is presented as the figure's caption.</li>
-</ul>
+*   Usually a `<figure>` is an image, illustration, diagram, code snippet, etc., that is referenced in the main flow of a document, but that can be moved to another part of the document or to an appendix without affecting the main flow.
+*   Being a [sectioning root](/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots), the outline of the content of the `<figure>` element is excluded from the main outline of the document.
+*   A caption can be associated with the `<figure>` element by inserting a {{HTMLElement("figcaption")}} inside it (as the first or the last child). The first `<figcaption>` element found in the figure is presented as the figure's caption.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Images">Images</h3>
+### Images
 
-<pre class="brush: html">&lt;!-- Just an image --&gt;
-&lt;figure&gt;
-  &lt;img
+```html
+<!-- Just an image -->
+<figure>
+  <img
   src="favicon-192x192.png"
-  alt="The beautiful MDN logo."&gt;
-&lt;/figure&gt;
+  alt="The beautiful MDN logo.">
+</figure>
 
-&lt;!-- Image with a caption --&gt;
-&lt;figure&gt;
-  &lt;img
+<!-- Image with a caption -->
+<figure>
+  <img
   src="favicon-192x192.png"
-  alt="The beautiful MDN logo."&gt;
-  &lt;figcaption&gt;MDN Logo&lt;/figcaption&gt;
-&lt;/figure&gt;
-</pre>
+  alt="The beautiful MDN logo.">
+  <figcaption>MDN Logo</figcaption>
+</figure>
+```
 
-<div>{{EmbedLiveSample("Images", "100%", 375)}}</div>
+{{EmbedLiveSample("Images", "100%", 375)}}
 
-<h3 id="Code_snippets">Code snippets</h3>
+### Code snippets
 
-<pre class="brush: html">&lt;figure&gt;
-  &lt;figcaption&gt;Get browser details using &lt;code&gt;navigator&lt;/code&gt;.&lt;/figcaption&gt;
-  &lt;pre&gt;
+```html
+<figure>
+  <figcaption>Get browser details using <code>navigator</code>.</figcaption>
+  <pre>
 function NavigatorExample() {
   var txt;
   txt = "Browser CodeName: " + navigator.appCodeName + "; ";
@@ -99,48 +131,50 @@ function NavigatorExample() {
   txt+= "User-agent header: " + navigator.userAgent  + "; ";
   console.log("NavigatorExample", txt);
 }
-  &lt;/pre&gt;
-&lt;/figure&gt;</pre>
+  </pre>
+</figure>
+```
 
-<div>{{EmbedLiveSample("Code_snippets", "100%", 250)}}</div>
+{{EmbedLiveSample("Code_snippets", "100%", 250)}}
 
-<h3 id="Quotations">Quotations</h3>
+### Quotations
 
-<pre class="brush: html">&lt;figure&gt;
-  &lt;figcaption&gt;&lt;cite&gt;Edsger Dijkstra:&lt;/cite&gt;&lt;/figcaption&gt;
-  &lt;blockquote&gt;If debugging is the process of removing software bugs,
-  then programming must be the process of putting them in.&lt;/blockquote&gt;
-&lt;/figure&gt;
-</pre>
+```html
+<figure>
+  <figcaption><cite>Edsger Dijkstra:</cite></figcaption>
+  <blockquote>If debugging is the process of removing software bugs,
+  then programming must be the process of putting them in.</blockquote>
+</figure>
+```
 
-<div>{{EmbedLiveSample("Quotations")}}</div>
+{{EmbedLiveSample("Quotations")}}
 
-<h3 id="Poems">Poems</h3>
+### Poems
 
-<pre class="brush: html">&lt;figure&gt;
-  &lt;p style="white-space:pre"&gt;
+```html
+<figure>
+  <p style="white-space:pre">
 Bid me discourse, I will enchant thine ear,
   Or like a fairy trip upon the green,
 Or, like a nymph, with long dishevell'd hair,
   Dance on the sands, and yet no footing seen:
 Love is a spirit all compact of fire,
-  Not gross to sink, but light, and will aspire.&lt;/p&gt;
-  &lt;figcaption&gt;&lt;cite&gt;Venus and Adonis&lt;/cite&gt;,
-    by William Shakespeare&lt;/figcaption&gt;
-&lt;/figure&gt;</pre>
+  Not gross to sink, but light, and will aspire.</p>
+  <figcaption><cite>Venus and Adonis</cite>,
+    by William Shakespeare</figcaption>
+</figure>
+```
 
-<div>{{EmbedLiveSample("Poems", "100%", 250)}}</div>
+{{EmbedLiveSample("Poems", "100%", 250)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{HTMLElement("figcaption")}} element.</li>
-</ul>
+*   The {{HTMLElement("figcaption")}} element.

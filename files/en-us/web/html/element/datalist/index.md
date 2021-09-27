@@ -10,80 +10,105 @@ tags:
   - Web
 browser-compat: html.elements.datalist
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;datalist&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element contains a set of {{HTMLElement("option")}} elements that represent the permissible or recommended options available to choose from within other controls.</p>
+The **`<datalist>`** [HTML](/en-US/docs/Web/HTML) element contains a set of {{HTMLElement("option")}} elements that represent the permissible or recommended options available to choose from within other controls.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/datalist.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/datalist.html", "tabbed-standard")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td>Either <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a> or zero or more {{HTMLElement("option")}} elements.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>No <code>role</code> permitted</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLDataListElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        Either
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >
+        or zero or more {{HTMLElement("option")}} elements.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role"
+          >listbox</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLDataListElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element has no other attributes than the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>, common to all elements.</p>
+This element has no other attributes than the [global attributes](/en-US/docs/Web/HTML/Global_attributes), common to all elements.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_datalist">Basic datalist</h3>
+### Basic datalist
 
-<pre class="brush: html">&lt;label for="myBrowser"&gt;Choose a browser from this list:&lt;/label&gt;
-&lt;input list="browsers" id="myBrowser" name="myBrowser" /&gt;
-&lt;datalist id="browsers"&gt;
-  &lt;option value="Chrome"&gt;
-  &lt;option value="Firefox"&gt;
-  &lt;option value="Internet Explorer"&gt;
-  &lt;option value="Opera"&gt;
-  &lt;option value="Safari"&gt;
-  &lt;option value="Microsoft Edge"&gt;
-&lt;/datalist&gt;
-</pre>
+```html
+<label for="myBrowser">Choose a browser from this list:</label>
+<input list="browsers" id="myBrowser" name="myBrowser" />
+<datalist id="browsers">
+  <option value="Chrome">
+  <option value="Firefox">
+  <option value="Internet Explorer">
+  <option value="Opera">
+  <option value="Safari">
+  <option value="Microsoft Edge">
+</datalist>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Basic_datalist", '100%', 100)}}</p>
+{{EmbedLiveSample("Basic_datalist", '100%', 100)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{HTMLElement("input")}} element, and more specifically its {{htmlattrxref("list", "input")}} attribute;</li>
- <li>The {{HTMLElement("option")}} element.</li>
-</ul>
+*   The {{HTMLElement("input")}} element, and more specifically its {{htmlattrxref("list", "input")}} attribute;
+*   The {{HTMLElement("option")}} element.

@@ -13,100 +13,127 @@ tags:
   - nav
 browser-compat: html.elements.nav
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;nav&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. Common examples of navigation sections are menus, tables of contents, and indexes.</p>
+The **`<nav>`** [HTML](/en-US/docs/Web/HTML) element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. Common examples of navigation sections are menus, tables of contents, and indexes.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/nav.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/nav.html", "tabbed-standard")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#sectioning_content">sectioning content</a>, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role">navigation</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>No <code>role</code> permitted</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a
+          href="/en-US/docs/Web/Guide/HTML/Content_categories#sectioning_content"
+          >sectioning content</a
+        >, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role"
+            >navigation</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element only includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<ul>
- <li>It's not necessary for all links to be contained in a <code>&lt;nav&gt;</code> element. <code>&lt;nav&gt;</code> is intended only for major block of navigation links; typically the {{HTMLElement("footer")}} element often has a list of links that don't need to be in a {{HTMLElement("nav")}} element.</li>
- <li>A document may have several {{HTMLElement("nav")}} elements, for example, one for site navigation and one for intra-page navigation. <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a></code> can be used in such case to promote accessibility, see <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#labeling_section_content">example</a>.</li>
- <li>User agents, such as screen readers targeting disabled users, can use this element to determine whether to omit the initial rendering of navigation-only content.</li>
-</ul>
+*   It's not necessary for all links to be contained in a `<nav>` element. `<nav>` is intended only for major block of navigation links; typically the {{HTMLElement("footer")}} element often has a list of links that don't need to be in a {{HTMLElement("nav")}} element.
+*   A document may have several {{HTMLElement("nav")}} elements, for example, one for site navigation and one for intra-page navigation. [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) can be used in such case to promote accessibility, see [example](/en-US/docs/Web/HTML/Element/Heading_Elements#labeling_section_content).
+*   User agents, such as screen readers targeting disabled users, can use this element to determine whether to omit the initial rendering of navigation-only content.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, a <code>&lt;nav&gt;</code> block is used to contain an unordered list ({{HTMLElement("ul")}}) of links. With appropriate CSS, this can be presented as a sidebar, navigation bar, or drop-down menu.</p>
+In this example, a `<nav>` block is used to contain an unordered list ({{HTMLElement("ul")}}) of links. With appropriate CSS, this can be presented as a sidebar, navigation bar, or drop-down menu.
 
-<pre class="brush: html">&lt;nav class="menu"&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-</pre>
+```html
+<nav class="menu">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+```
 
-<p>The semantics of the <code>nav</code> element is that of providing links. However a <code>nav</code> element doesn&rsquo;t have to contain a list, it can contain other kinds of content as well. In this navigation block, links are provided in prose:</p>
-<pre class="brush: html">&lt;nav&gt;
-  &lt;h2&gt;Navigation&lt;/h2&gt;
-  &lt;p&gt;You are on my home page. To the north lies &lt;a href="/blog"&gt;my
-  blog&lt;/a&gt;, from whence the sounds of battle can be heard. To the east
-  you can see a large mountain, upon which many &lt;a
-  href="/school"&gt;school papers&lt;/a&gt; are littered. Far up thus mountain
+The semantics of the `nav` element is that of providing links. However a `nav` element doesn’t have to contain a list, it can contain other kinds of content as well. In this navigation block, links are provided in prose:
+
+```html
+<nav>
+  <h2>Navigation</h2>
+  <p>You are on my home page. To the north lies <a href="/blog">my
+  blog</a>, from whence the sounds of battle can be heard. To the east
+  you can see a large mountain, upon which many <a
+  href="/school">school papers</a> are littered. Far up thus mountain
   you can spy a little figure who appears to be me, desperately
-  scribbling a &lt;a href="/school/thesis"&gt;thesis&lt;/a&gt;.&lt;/p&gt;
-  &lt;p&gt;To the west are several exits. One fun-looking exit is labeled &lt;a
-  href="https://games.example.com/"&gt;"games"&lt;/a&gt;. Another more
-  boring-looking exit is labeled &lt;a
-  href="https://isp.example.net/"&gt;ISP&trade;&lt;/a&gt;.&lt;/p&gt;
-  &lt;p&gt;To the south lies a dark and dank &lt;a href="/about"&gt;contacts
-  page&lt;/a&gt;. Cobwebs cover its disused entrance, and at one point you
-  see a rat run quickly out of the page.&lt;/p&gt;
-&lt;/nav&gt;</pre>
+  scribbling a <a href="/school/thesis">thesis</a>.</p>
+  <p>To the west are several exits. One fun-looking exit is labeled <a
+  href="https://games.example.com/">"games"</a>. Another more
+  boring-looking exit is labeled <a
+  href="https://isp.example.net/">ISP™</a>.</p>
+  <p>To the south lies a dark and dank <a href="/about">contacts
+  page</a>. Cobwebs cover its disused entrance, and at one point you
+  see a rat run quickly out of the page.</p>
+</nav>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};</li>
- <li><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">Sections and outlines of an HTML5 document</a>.</li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role">ARIA: Navigation role</a></li>
-</ul>
+*   Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
+*   [Sections and outlines of an HTML5 document](/en-US/docs/Web/HTML/Element/Heading_Elements).
+*   [ARIA: Navigation role](/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role)

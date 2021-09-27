@@ -13,128 +13,144 @@ tags:
   - Web
 browser-compat: html.elements.summary
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;summary&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element specifies a summary, caption, or legend for a {{HTMLElement("details")}} element's disclosure box. Clicking the <code>&lt;summary&gt;</code> element toggles the state of the parent <code>&lt;details&gt;</code> element open and closed.</p>
+The **`<summary>`** [HTML](/en-US/docs/Web/HTML) element specifies a summary, caption, or legend for a {{HTMLElement("details")}} element's disclosure box. Clicking the `<summary>` element toggles the state of the parent `<details>` element open and closed.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/summary.html","tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/summary.html","tabbed-shorter")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a> or one element of <a href="/en-US/docs/Web/Guide/HTML/Content_categories#heading_content">Heading content</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>None, both the start tag and the end tag are mandatory.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>The {{HTMLElement("details")}} element.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>No <code>role</code> permitted</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >Phrasing content</a
+        >
+        or one element of
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#heading_content"
+          >Heading content</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>None, both the start tag and the end tag are mandatory.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>The {{HTMLElement("details")}} element.</td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"
+            >button</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element only includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>The <code>&lt;summary&gt;</code> element's contents can be any heading content, plain text, or HTML that can be used within a paragraph.</p>
+The `<summary>` element's contents can be any heading content, plain text, or HTML that can be used within a paragraph.
 
-<p>A <code>&lt;summary&gt;</code> element may <em>only</em> be used as the first child of a <code>&lt;details&gt;</code> element. When the user clicks on the summary, the parent <code>&lt;details&gt;</code> element is toggled open or closed, and then a {{event("toggle")}} event is sent to the <code>&lt;details&gt;</code> element, which can be used to let you know when this state change occurs.</p>
+A `<summary>` element may *only* be used as the first child of a `<details>` element. When the user clicks on the summary, the parent `<details>` element is toggled open or closed, and then a {{event("toggle")}} event is sent to the `<details>` element, which can be used to let you know when this state change occurs.
 
-<h3 id="Default_label_text">Default label text</h3>
+### Default label text
 
-<p>If a <code>&lt;details&gt;</code> element's first child is not a <code>&lt;summary&gt;</code> element, the {{Glossary("user agent")}} will use a default string (typically "Details") as the label for the disclosure box.</p>
+If a `<details>` element's first child is not a `<summary>` element, the {{Glossary("user agent")}} will use a default string (typically "Details") as the label for the disclosure box.
 
-<h3 id="Default_style">Default style</h3>
+### Default style
 
-<p>Per the HTML specification, the default style for <code>&lt;summary&gt;</code> elements includes <code>display: list-item</code>. This makes it possible to change or remove the icon displayed as the disclosure widget next to the label from the default, which is typically a triangle.</p>
+Per the HTML specification, the default style for `<summary>` elements includes `display: list-item`. This makes it possible to change or remove the icon displayed as the disclosure widget next to the label from the default, which is typically a triangle.
 
-<p>You can also change the style to <code>display: block</code> to remove the disclosure triangle.</p>
+You can also change the style to `display: block` to remove the disclosure triangle.
 
-<p>See the {{anch("Browser compatibility")}} section for details, as not all browsers support full functionality of this element yet.</p>
+See the {{anch("Browser compatibility")}} section for details, as not all browsers support full functionality of this element yet.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Below are some examples showing <code>&lt;summary&gt;</code> in use. You can find more examples in the documentation for the {{HTMLElement("details")}} element.</p>
+Below are some examples showing `<summary>` in use. You can find more examples in the documentation for the {{HTMLElement("details")}} element.
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<p>A simple example showing the use of <code>&lt;summary&gt;</code> in a {{HTMLElement("details")}} element:</p>
+A simple example showing the use of `<summary>` in a {{HTMLElement("details")}} element:
 
-<pre class="brush: html">&lt;details open&gt;
-  &lt;summary&gt;Overview&lt;/summary&gt;
-  &lt;ol&gt;
-    &lt;li&gt;Cash on hand: $500.00&lt;/li&gt;
-    &lt;li&gt;Current invoice: $75.30&lt;/li&gt;
-    &lt;li&gt;Due date: 5/6/19&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/details&gt;</pre>
+```html
+<details open>
+  <summary>Overview</summary>
+  <ol>
+    <li>Cash on hand: $500.00</li>
+    <li>Current invoice: $75.30</li>
+    <li>Due date: 5/6/19</li>
+  </ol>
+</details>
+```
 
-<p>{{EmbedLiveSample("Basic_example", 650, 120)}}</p>
+{{EmbedLiveSample("Basic_example", 650, 120)}}
 
-<h3 id="Summaries_as_headings">Summaries as headings</h3>
+### Summaries as headings
 
-<p>You can use heading elements in <code>&lt;summary&gt;</code>, like this:</p>
+You can use heading elements in `<summary>`, like this:
 
-<pre class="brush: html">&lt;details open&gt;
-  &lt;summary&gt;&lt;h4&gt;Overview&lt;/h4&gt;&lt;/summary&gt;
-  &lt;ol&gt;
-    &lt;li&gt;Cash on hand: $500.00&lt;/li&gt;
-    &lt;li&gt;Current invoice: $75.30&lt;/li&gt;
-    &lt;li&gt;Due date: 5/6/19&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/details&gt;</pre>
+```html
+<details open>
+  <summary><h4>Overview</h4></summary>
+  <ol>
+    <li>Cash on hand: $500.00</li>
+    <li>Current invoice: $75.30</li>
+    <li>Due date: 5/6/19</li>
+  </ol>
+</details>
+```
 
-<p>{{EmbedLiveSample("Summaries_as_headings", 650, 120)}}</p>
+{{EmbedLiveSample("Summaries_as_headings", 650, 120)}}
 
-<p>This currently has some spacing issues that could be addressed using CSS.</p>
+This currently has some spacing issues that could be addressed using CSS.
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> Because the <code>&lt;summary&gt;</code> element has a default role of <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">button</a> (which strips all roles from child elements), this example will not work for users of assistive technologies such as screen readers. The <code>&lt;h4&gt;</code> will have its role removed and thus will not be treated as a heading for these users.</p>
-</div>
+> **Warning:** Because the `<summary>` element has a default role of [button](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role) (which strips all roles from child elements), this example will not work for users of assistive technologies such as screen readers. The `<h4>` will have its role removed and thus will not be treated as a heading for these users.
 
-<h3 id="HTML_in_summaries">HTML in summaries</h3>
+### HTML in summaries
 
-<p>This example adds some semantics to the <code>&lt;summary&gt;</code> element to indicate the label as important:</p>
+This example adds some semantics to the `<summary>` element to indicate the label as important:
 
-<pre class="brush: html">&lt;details open&gt;
-  &lt;summary&gt;&lt;strong&gt;Overview&lt;/strong&gt;&lt;/summary&gt;
-  &lt;ol&gt;
-    &lt;li&gt;Cash on hand: $500.00&lt;/li&gt;
-    &lt;li&gt;Current invoice: $75.30&lt;/li&gt;
-    &lt;li&gt;Due date: 5/6/19&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/details&gt;</pre>
+```html
+<details open>
+  <summary><strong>Overview</strong></summary>
+  <ol>
+    <li>Cash on hand: $500.00</li>
+    <li>Current invoice: $75.30</li>
+    <li>Due date: 5/6/19</li>
+  </ol>
+</details>
+```
 
-<p>{{EmbedLiveSample("HTML_in_summaries", 650, 120)}}</p>
+{{EmbedLiveSample("HTML_in_summaries", 650, 120)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTMLElement("details")}}</li>
-</ul>
+*   {{HTMLElement("details")}}

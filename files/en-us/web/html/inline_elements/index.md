@@ -6,39 +6,42 @@ tags:
   - Elements
   - HTML
   - HTML Elements
-  - 'HTML:Element Reference'
+  - HTML:Element Reference
   - Layout
   - Reference
 ---
-<p>In this article, we'll examine HTML inline-level elements and how they differ from <a href="/en-US/docs/Web/HTML/Block-level_elements">block-level elements</a>.</p>
+In this article, we'll examine HTML inline-level elements and how they differ from [block-level elements](/en-US/docs/Web/HTML/Block-level_elements).
 
-<p>HTML (<strong>Hypertext Markup Language</strong>) elements historically were categorized as either "block-level" elements or "inline-level" elements. Since this is a presentational characteristic it is nowadays specified by CSS in the <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout">Flow Layout</a>.</p>
+HTML (**Hypertext Markup Language**) elements historically were categorized as either "block-level" elements or "inline-level" elements. Since this is a presentational characteristic it is nowadays specified by CSS in the [Flow Layout](/en-US/docs/Web/CSS/CSS_Flow_Layout).
 
-<p>Inline elements are those which only occupy the space bounded by the tags defining the element, instead of breaking the flow of the content.</p>
+Inline elements are those which only occupy the space bounded by the tags defining the element, instead of breaking the flow of the content.
 
-<div class="note">
-<p><strong>Note:</strong> An inline element does not start on a new line and only takes up as much width as necessary.</p>
-</div>
+> **Note:** An inline element does not start on a new line and only takes up as much width as necessary.
 
-<h2 id="Inline_vs._block-level_elements_a_demonstration">Inline vs. block-level elements: a demonstration</h2>
+## Inline vs. block-level elements: a demonstration
 
-<p>This is most easily demonstrated with a simple example. First, some simple CSS that we'll be using:</p>
+This is most easily demonstrated with a simple example. First, some simple CSS that we'll be using:
 
-<pre class="brush: css">.highlight {
+```css
+.highlight {
   background-color:#ee3;
-}</pre>
+}
+```
 
-<h3 id="Inline">Inline</h3>
+### Inline
 
-<p>Let's look at the following example which demonstrates an inline element:</p>
+Let's look at the following example which demonstrates an inline element:
 
-<pre class="brush: html">&lt;div&gt;The following span is an &lt;span class="highlight"&gt;inline element&lt;/span&gt;;
+```html
+<div>The following span is an <span class="highlight">inline element</span>;
 its background has been colored to display both the beginning and end of
-the inline element's influence.&lt;/div&gt;</pre>
+the inline element's influence.</div>
+```
 
-<p>In this example, the {{HTMLElement("div")}} block-level element contains some text. Within that text is a {{HTMLElement("span")}} element, which is an inline element. Because the <code>&lt;span&gt;</code> element is inline, the paragraph correctly renders as a single, unbroken text flow, like this:</p>
+In this example, the {{HTMLElement("div")}} block-level element contains some text. Within that text is a {{HTMLElement("span")}} element, which is an inline element. Because the `<span>` element is inline, the paragraph correctly renders as a single, unbroken text flow, like this:
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   margin: 0;
   padding: 4px;
   border: 1px solid #333;
@@ -46,19 +49,23 @@ the inline element's influence.&lt;/div&gt;</pre>
 
 .highlight {
   background-color:#ee3;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Inline", 600, 80)}}</p>
+{{EmbedLiveSample("Inline", 600, 80)}}
 
-<h3 id="Block-level">Block-level</h3>
+### Block-level
 
-<p>Now let's change that <code>&lt;span&gt;</code> into a block-level element, such as {{HTMLElement("p")}}:</p>
+Now let's change that `<span>` into a block-level element, such as {{HTMLElement("p")}}:
 
-<pre class="brush: html">&lt;div&gt;The following paragraph is a &lt;p class="highlight"&gt;block-level element;&lt;/p&gt;
+```html
+<div>The following paragraph is a <p class="highlight">block-level element;</p>
 its background has been colored to display both the beginning and end of
-the block-level element's influence.&lt;/div&gt;</pre>
+the block-level element's influence.</div>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   margin: 0;
   padding: 4px;
   border: 1px solid #333;
@@ -66,99 +73,94 @@ the block-level element's influence.&lt;/div&gt;</pre>
 
 .highlight {
   background-color:#ee3;
-}</pre>
+}
+```
 
-<p>Rendered using the same CSS as before, we get:</p>
+Rendered using the same CSS as before, we get:
 
-<p>{{EmbedLiveSample("Block-level", 600, 150)}}</p>
+{{EmbedLiveSample("Block-level", 600, 150)}}
 
-<p>See the difference? The <code>&lt;p&gt;</code> element totally changes the layout of the text, splitting it into three segments: the text before the <code>&lt;p&gt;</code>, then the <code>&lt;p&gt;</code>'s text, and finally the text following the <code>&lt;p&gt;</code>.</p>
+See the difference? The `<p>` element totally changes the layout of the text, splitting it into three segments: the text before the `<p>`, then the `<p>`'s text, and finally the text following the `<p>`.
 
-<h3 id="Changing_element_levels">Changing element levels</h3>
+### Changing element levels
 
-<p>You can change the <em>visual presentation</em> of an element using the CSS {{cssxref("display")}} property. For example, by changing the value of <code>display</code> from <code>"inline"</code> to <code>"block"</code>, you can tell the browser to render the inline element in a block box rather than an inline box, and vice versa. However, doing this will not change the <em>category</em> and the <em>content model</em> of the element. For example, even if the <code>display</code> of the <code>span</code> element is changed to <code>"block"</code>, it still would not allow to nest a <code>div</code> element inside it.</p>
+You can change the *visual presentation* of an element using the CSS {{cssxref("display")}} property. For example, by changing the value of `display` from `"inline"` to `"block"`, you can tell the browser to render the inline element in a block box rather than an inline box, and vice versa. However, doing this will not change the *category* and the *content model* of the element. For example, even if the `display` of the `span` element is changed to `"block"`, it still would not allow to nest a `div` element inside it.
 
-<h2 id="Conceptual_differences">Conceptual differences</h2>
+## Conceptual differences
 
-<p>In brief, here are the basic conceptual differences between inline and block-level elements:</p>
+In brief, here are the basic conceptual differences between inline and block-level elements:
 
-<dl>
- <dt>Content model</dt>
- <dd>Generally, inline elements may contain only data and other inline elements. You can't put block elements inside inline elements.</dd>
- <dt>Formatting</dt>
- <dd>By default, inline elements do not force a new line to begin in the document flow. Block elements, on the other hand, typically cause a line break to occur (although, as usual, this can be changed using CSS).</dd>
-</dl>
+*   Content model
+    *   : Generally, inline elements may contain only data and other inline elements. You can't put block elements inside inline elements.
+*   Formatting
+    *   : By default, inline elements do not force a new line to begin in the document flow. Block elements, on the other hand, typically cause a line break to occur (although, as usual, this can be changed using CSS).
 
-<h2>List of "inline" elements</h2>
+## List of "inline" elements
 
-<p>The following elements are inline by default (although block and inline elements are no longer defined in HTML 5, use <a href="/en-US/docs/Web/Guide/HTML/Content_categories">content categories</a> instead):</p>
+The following elements are inline by default (although block and inline elements are no longer defined in HTML 5, use [content categories](/en-US/docs/Web/Guide/HTML/Content_categories) instead):
 
-<ul>
- <li>{{ HTMLElement("a") }}</li>
- <li>{{ HTMLElement("abbr") }}</li>
- <li>{{ HTMLElement("acronym") }}</li>
- <li>{{ HTMLElement("audio") }} (if it has visible controls)</li>
- <li>{{ HTMLElement("b") }}</li>
- <li>{{ HTMLElement("bdi") }}</li>
- <li>{{ HTMLElement("bdo") }}</li>
- <li>{{ HTMLElement("big") }}</li>
- <li>{{ HTMLElement("br") }}</li>
- <li>{{ HTMLElement("button") }}</li>
- <li>{{ HTMLElement("canvas") }}</li>
- <li>{{ HTMLElement("cite") }}</li>
- <li>{{ HTMLElement("code") }}</li>
- <li>{{ HTMLElement("data") }}</li>
- <li>{{ HTMLElement("datalist") }}</li>
- <li>{{ HTMLElement("del") }}</li>
- <li>{{ HTMLElement("dfn") }}</li>
- <li>{{ HTMLElement("em") }}</li>
- <li>{{ HTMLElement("embed") }}</li>
- <li>{{ HTMLElement("i") }}</li>
- <li>{{ HTMLElement("iframe") }}</li>
- <li>{{ HTMLElement("img") }}</li>
- <li>{{ HTMLElement("input") }}</li>
- <li>{{ HTMLElement("ins") }}</li>
- <li>{{ HTMLElement("kbd") }}</li>
- <li>{{ HTMLElement("label") }}</li>
- <li>{{ HTMLElement("map") }}</li>
- <li>{{ HTMLElement("mark") }}</li>
- <li>{{ HTMLElement("meter") }}</li>
- <li>{{ HTMLElement("noscript") }}</li>
- <li>{{ HTMLElement("object") }}</li>
- <li>{{ HTMLElement("output") }}</li>
- <li>{{ HTMLElement("picture") }}</li>
- <li>{{ HTMLElement("progress") }}</li>
- <li>{{ HTMLElement("q") }}</li>
- <li>{{ HTMLElement("ruby") }}</li>
- <li>{{ HTMLElement("s") }}</li>
- <li>{{ HTMLElement("samp") }}</li>
- <li>{{ HTMLElement("script") }}</li>
- <li>{{ HTMLElement("select") }}</li>
- <li>{{ HTMLElement("slot") }}</li>
- <li>{{ HTMLElement("small") }}</li>
- <li>{{ HTMLElement("span") }}</li>
- <li>{{ HTMLElement("strong") }}</li>
- <li>{{ HTMLElement("sub") }}</li>
- <li>{{ HTMLElement("sup") }}</li>
- <li>{{ HTMLElement("svg") }}</li>
- <li>{{ HTMLElement("template") }}</li>
- <li>{{ HTMLElement("textarea") }}</li>
- <li>{{ HTMLElement("time") }}</li>
- <li>{{ HTMLElement("u") }}</li>
- <li>{{ HTMLElement("tt") }}</li>
- <li>{{ HTMLElement("var") }}</li>
- <li>{{ HTMLElement("video") }}</li>
- <li>{{ HTMLElement("wbr") }}</li>
-</ul>
+*   {{ HTMLElement("a") }}
+*   {{ HTMLElement("abbr") }}
+*   {{ HTMLElement("acronym") }}
+*   {{ HTMLElement("audio") }} (if it has visible controls)
+*   {{ HTMLElement("b") }}
+*   {{ HTMLElement("bdi") }}
+*   {{ HTMLElement("bdo") }}
+*   {{ HTMLElement("big") }}
+*   {{ HTMLElement("br") }}
+*   {{ HTMLElement("button") }}
+*   {{ HTMLElement("canvas") }}
+*   {{ HTMLElement("cite") }}
+*   {{ HTMLElement("code") }}
+*   {{ HTMLElement("data") }}
+*   {{ HTMLElement("datalist") }}
+*   {{ HTMLElement("del") }}
+*   {{ HTMLElement("dfn") }}
+*   {{ HTMLElement("em") }}
+*   {{ HTMLElement("embed") }}
+*   {{ HTMLElement("i") }}
+*   {{ HTMLElement("iframe") }}
+*   {{ HTMLElement("img") }}
+*   {{ HTMLElement("input") }}
+*   {{ HTMLElement("ins") }}
+*   {{ HTMLElement("kbd") }}
+*   {{ HTMLElement("label") }}
+*   {{ HTMLElement("map") }}
+*   {{ HTMLElement("mark") }}
+*   {{ HTMLElement("meter") }}
+*   {{ HTMLElement("noscript") }}
+*   {{ HTMLElement("object") }}
+*   {{ HTMLElement("output") }}
+*   {{ HTMLElement("picture") }}
+*   {{ HTMLElement("progress") }}
+*   {{ HTMLElement("q") }}
+*   {{ HTMLElement("ruby") }}
+*   {{ HTMLElement("s") }}
+*   {{ HTMLElement("samp") }}
+*   {{ HTMLElement("script") }}
+*   {{ HTMLElement("select") }}
+*   {{ HTMLElement("slot") }}
+*   {{ HTMLElement("small") }}
+*   {{ HTMLElement("span") }}
+*   {{ HTMLElement("strong") }}
+*   {{ HTMLElement("sub") }}
+*   {{ HTMLElement("sup") }}
+*   {{ HTMLElement("svg") }}
+*   {{ HTMLElement("template") }}
+*   {{ HTMLElement("textarea") }}
+*   {{ HTMLElement("time") }}
+*   {{ HTMLElement("u") }}
+*   {{ HTMLElement("tt") }}
+*   {{ HTMLElement("var") }}
+*   {{ HTMLElement("video") }}
+*   {{ HTMLElement("wbr") }}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTML/Block-level_elements">Block-level elements</a></li>
- <li><a href="/en-US/docs/Web/HTML/Element">HTML element reference</a></li>
- <li>{{cssxref("display")}}</li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow">Block and Inline Layout in Normal Flow</a></li>
-</ul>
+*   [Block-level elements](/en-US/docs/Web/HTML/Block-level_elements)
+*   [HTML element reference](/en-US/docs/Web/HTML/Element)
+*   {{cssxref("display")}}
+*   [Content categories](/en-US/docs/Web/Guide/HTML/Content_categories)
+*   [Block and Inline Layout in Normal Flow](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
 
-<div>{{QuickLinksWithSubpages("/en-US/docs/Web/HTML/")}}</div>
+{{QuickLinksWithSubpages("/en-US/docs/Web/HTML/")}}

@@ -10,118 +10,126 @@ tags:
   - Web
 browser-compat: html.elements.tfoot
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;tfoot&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element defines a set of rows summarizing the columns of the table.</p>
+The **`<tfoot>`** [HTML](/en-US/docs/Web/HTML) element defines a set of rows summarizing the columns of the table.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/tfoot.html","tabbed-taller")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/tfoot.html","tabbed-taller")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td>None.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td>Zero or more {{HTMLElement("tr")}} elements.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>The start tag is mandatory. The end tag may be omitted if there is no more content in the parent {{HTMLElement("table")}} element.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>A {{HTMLElement("table")}} element. The {{HTMLElement("tfoot")}} must appear after any {{HTMLElement("caption")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, or {{HTMLElement("tr")}} element. Note that this is the requirement as of HTML5.<br>
-    In HTML4, the {{HTMLElement("tfoot")}} element cannot be placed after any {{HTMLElement("tbody")}} and {{HTMLElement("tr")}} element. Note that this directly contradicts the above normative requirement from HTML5.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">rowgroup</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>Any</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLTableSectionElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>Zero or more {{HTMLElement("tr")}} elements.</td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>
+        The start tag is mandatory. The end tag may be omitted if there is no
+        more content in the parent {{HTMLElement("table")}} element.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        A {{HTMLElement("table")}} element. The
+        {{HTMLElement("tfoot")}} must appear after any
+        {{HTMLElement("caption")}},
+        {{HTMLElement("colgroup")}}, {{HTMLElement("thead")}},
+        {{HTMLElement("tbody")}}, or {{HTMLElement("tr")}}
+        element. Note that this is the requirement as of HTML5.<br />In HTML4,
+        the {{HTMLElement("tfoot")}} element cannot be placed after any
+        {{HTMLElement("tbody")}} and {{HTMLElement("tr")}}
+        element. Note that this directly contradicts the above normative
+        requirement from HTML5.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role"
+            >rowgroup</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLTableSectionElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<h3 id="Deprecated_attributes">Deprecated attributes</h3>
+### Deprecated attributes
 
-<p>The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.</p>
+The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.
 
-<dl>
- <dt>{{htmlattrdef("align")}} {{deprecated_inline}}</dt>
- <dd>This enumerated attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
- <ul>
-  <li><code>left</code>, aligning the content to the left of the cell</li>
-  <li><code>center</code>, centering the content in the cell</li>
-  <li><code>right</code>, aligning the content to the right of the cell</li>
-  <li><code>justify</code>, inserting spaces into the textual content so that the content is justified in the cell</li>
-  <li><code>char</code>, aligning the textual content on a special character with a minimal offset, defined by the {{htmlattrxref("char", "tbody")}} and {{htmlattrxref("charoff", "tbody")}} attributes.</li>
- </ul>
+*   {{htmlattrdef("align")}} {{deprecated_inline}}
+    *   : This enumerated attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
 
- <p>If this attribute is not set, the <code>left</code> value is assumed.</p>
+        *   `left`, aligning the content to the left of the cell
+        *   `center`, centering the content in the cell
+        *   `right`, aligning the content to the right of the cell
+        *   `justify`, inserting spaces into the textual content so that the content is justified in the cell
+        *   `char`, aligning the textual content on a special character with a minimal offset, defined by the {{htmlattrxref("char", "tbody")}} and {{htmlattrxref("charoff", "tbody")}} attributes.
 
- <div class="note"><p><strong>Note:</strong></p>
+        If this attribute is not set, the `left` value is assumed.
 
- <ul>
-  <li>To achieve the same effect as the <code>left</code>, <code>center</code>, <code>right</code> or <code>justify</code> values, use the CSS {{cssxref("text-align")}} property on it.</li>
-  <li>To achieve the same effect as the <code>char</code> value, in CSS3, you can use the value of the {{htmlattrxref("char", "tfoot")}} as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.</li>
- </ul>
- </div>
- </dd>
- <dt>{{htmlattrdef("bgcolor")}} {{Deprecated_inline}}</dt>
- <dd>
- <p>The background color of the table. It is a <a href="/en-US/docs/Web/CSS/color_value#rgb_colors">6-digit hexadecimal RGB code</a>, prefixed by a '<code>#</code>'. One of the predefined <a href="/en-US/docs/Web/CSS/color_value#color_keywords">color kewords</a> can also be used.</p>
+        > **Note:**
+        >
+        > *   To achieve the same effect as the `left`, `center`, `right` or `justify` values, use the CSS {{cssxref("text-align")}} property on it.
+        > *   To achieve the same effect as the `char` value, in CSS3, you can use the value of the {{htmlattrxref("char", "tfoot")}} as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
+*   {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
+    *   : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/color_value#rgb_colors), prefixed by a '`#`'. One of the predefined [color kewords](/en-US/docs/Web/CSS/color_value#color_keywords) can also be used.
 
- <p>To achieve a similar effect, use the CSS {{cssxref("background-color")}} property.</p>
- </dd>
- <dt>{{htmlattrdef("char")}} {{deprecated_inline}}</dt>
- <dd>This attribute specifies the alignment of the content in a column to a character. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tfoot")}} is not set to <code>char</code>, this attribute is ignored.</dd>
- <dt>{{htmlattrdef("charoff")}} {{deprecated_inline}}</dt>
- <dd>This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the <code>char</code> attribute.</dd>
- <dt>{{htmlattrdef("valign")}} {{deprecated_inline}}</dt>
- <dd>This attribute specifies the vertical alignment of the text within each row of cells of the table footer. Possible values for this attribute are:
- <ul>
-  <li><code>baseline</code>, which will put the text as close to the bottom of the cell as it is possible, but align it on the <a href="https://en.wikipedia.org/wiki/Baseline_%28typography%29">baseline</a> of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as <code>bottom</code>.</li>
-  <li><code>bottom</code>, which will put the text as close to the bottom of the cell as it is possible;</li>
-  <li><code>middle</code>, which will center the text in the cell;</li>
-  <li>and <code>top</code>, which will put the text as close to the top of the cell as it is possible.</li>
- </ul>
+        To achieve a similar effect, use the CSS {{cssxref("background-color")}} property.
+*   {{htmlattrdef("char")}} {{deprecated_inline}}
+    *   : This attribute specifies the alignment of the content in a column to a character. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tfoot")}} is not set to `char`, this attribute is ignored.
+*   {{htmlattrdef("charoff")}} {{deprecated_inline}}
+    *   : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the `char` attribute.
+*   {{htmlattrdef("valign")}} {{deprecated_inline}}
+    *   : This attribute specifies the vertical alignment of the text within each row of cells of the table footer. Possible values for this attribute are:
 
- <div class="note"><p><strong>Note:</strong> Do not use this attribute as it is obsolete (and not supported) in the latest standard: instead set the CSS {{cssxref("vertical-align")}} property on it.</p></div>
- </dd>
-</dl>
+        *   `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the [baseline](https://en.wikipedia.org/wiki/Baseline\_%28typography%29) of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.
+        *   `bottom`, which will put the text as close to the bottom of the cell as it is possible;
+        *   `middle`, which will center the text in the cell;
+        *   and `top`, which will put the text as close to the top of the cell as it is possible.
 
-<h2 id="Examples">Examples</h2>
+        > **Note:** Do not use this attribute as it is obsolete (and not supported) in the latest standard: instead set the CSS {{cssxref("vertical-align")}} property on it.
 
-<p>Please see the {{HTMLElement("table")}} page for examples on <code>&lt;tfoot&gt;</code>.</p>
+## Examples
 
-<h2 id="Specifications">Specifications</h2>
+Please see the {{HTMLElement("table")}} page for examples on `<tfoot>`.
 
-<p>{{Specifications}}</p>
+## Specifications
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Specifications}}
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li>Other table-related HTML Elements: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};</li>
- <li>CSS properties and pseudo-classes that may be specially useful to style the <code>&lt;tfoot&gt;</code> element:
-  <ul>
-   <li>the {{cssxref(":nth-child")}} pseudo-class to set the alignment on the cells of the column;</li>
-   <li>the {{cssxref("text-align")}} property to align all cells content on the same character, like '.'.</li>
-  </ul>
- </li>
-</ul>
+## See also
+
+*   Other table-related HTML Elements: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};
+*   CSS properties and pseudo-classes that may be specially useful to style the `<tfoot>` element:
+
+    *   the {{cssxref(":nth-child")}} pseudo-class to set the alignment on the cells of the column;
+    *   the {{cssxref("text-align")}} property to align all cells content on the same character, like '.'.

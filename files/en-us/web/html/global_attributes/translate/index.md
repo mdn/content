@@ -8,40 +8,36 @@ tags:
   - Reference
 browser-compat: html.global_attributes.translate
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>The <strong><code>translate</code></strong> <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a> is an enumerated attribute that is used to specify whether an element's <em>translateable attribute</em> values and its {{domxref("Text")}} node children should be translated when the page is localized, or whether to leave them unchanged.</p>
+The **`translate`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an enumerated attribute that is used to specify whether an element's *translateable attribute* values and its {{domxref("Text")}} node children should be translated when the page is localized, or whether to leave them unchanged.
 
-<p>It can have the following values:</p>
+It can have the following values:
 
-<ul>
- <li>empty string or "<code>yes</code>", which indicates that the element should be translated when the page is localized.</li>
- <li>"<code>no</code>", which indicates that the element must not be translated.</li>
-</ul>
+*   empty string or "`yes`", which indicates that the element should be translated when the page is localized.
+*   "`no`", which indicates that the element must not be translated.
 
-<p>Although not all browsers recognize this attribute, it is respected by automatic translation systems such as Google Translate, and may also be respected by tools used by human translators. As such it's important that web authors use this attribute to mark content that should not be translated.</p>
+Although not all browsers recognize this attribute, it is respected by automatic translation systems such as Google Translate, and may also be respected by tools used by human translators. As such it's important that web authors use this attribute to mark content that should not be translated.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, the <code>translate</code> attribute is used to ask translation tools not to translate the company's brand name in the footer.</p>
+In this example, the `translate` attribute is used to ask translation tools not to translate the company's brand name in the footer.
 
-<pre>&lt;footer&gt;
-  &lt;small&gt;© 2020 &lt;span translate="no"&gt;BrandName&lt;/span&gt;&lt;/small&gt;
-&lt;/footer&gt;</pre>
+    <footer>
+      <small>© 2020 <span translate="no">BrandName</span></small>
+    </footer>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>All <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</li>
- <li>The {{domxref("HTMLElement.translate")}} property that reflects this attribute.</li>
- <li><a href="https://www.w3.org/International/questions/qa-translate-flag">Using HTML's translate attribute</a>.</li>
- <li>HTML {{htmlattrxref("lang")}} attribute</li>
-</ul>
+*   All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+*   The {{domxref("HTMLElement.translate")}} property that reflects this attribute.
+*   [Using HTML's translate attribute](https://www.w3.org/International/questions/qa-translate-flag).
+*   HTML {{htmlattrxref("lang")}} attribute

@@ -13,52 +13,47 @@ tags:
   - Web
 browser-compat: html.elements.bgsound
 ---
-<div>{{deprecated_header}}{{non-standard_header}}</div>
+{{deprecated_header}}{{non-standard_header}}
 
-<p>The <strong><code>&lt;bgsound&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element is deprecated. It sets up a sound file to play in the background while the page is used; use {{HTMLElement("audio")}} instead.</p>
+The **`<bgsound>`** [HTML](/en-US/docs/Web/HTML) element is deprecated. It sets up a sound file to play in the background while the page is used; use {{HTMLElement("audio")}} instead.
 
-<div class="warning">
-<p><strong>Warning:</strong> Do not use this! In order to embed audio in a Web page, you should be using the {{HTMLElement("audio")}} element.</p>
-</div>
+> **Warning:** Do not use this! In order to embed audio in a Web page, you should be using the {{HTMLElement("audio")}} element.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt>{{htmlattrdef("balance")}}</dt>
- <dd>This attribute defines a number between -10,000 and +10,000 that determines how the volume will be divided between the speakers.</dd>
- <dt>{{htmlattrdef("loop")}}</dt>
- <dd>This attribute indicates the number of times a sound is to be played and either has a numeric value or the keyword infinite.</dd>
- <dt>{{htmlattrdef("src")}}</dt>
- <dd>This attribute specifies the URL of the sound file to be played, which must be one of the following types: .wav, .au, or .mid.</dd>
- <dt>{{htmlattrdef("volume")}}</dt>
- <dd>This attribute defines a number between -10,000 and 0 that determines the loudness of a page's background sound.</dd>
-</dl>
+*   {{htmlattrdef("balance")}}
+    *   : This attribute defines a number between -10,000 and +10,000 that determines how the volume will be divided between the speakers.
+*   {{htmlattrdef("loop")}}
+    *   : This attribute indicates the number of times a sound is to be played and either has a numeric value or the keyword infinite.
+*   {{htmlattrdef("src")}}
+    *   : This attribute specifies the URL of the sound file to be played, which must be one of the following types: .wav, .au, or .mid.
+*   {{htmlattrdef("volume")}}
+    *   : This attribute defines a number between -10,000 and 0 that determines the loudness of a page's background sound.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:html">&lt;bgsound src="sound1.mid"&gt;
+```html
+<bgsound src="sound1.mid">
 
-&lt;bgsound src="sound2.au" loop="infinite"&gt;
-</pre>
+<bgsound src="sound2.au" loop="infinite">
+```
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>Historically, the {{HTMLElement("embed")}} element could be used with audio player plug-ins to play audio in the background in most browsers. However, even this is no longer appropriate, and you should use <code>&lt;audio&gt;</code> instead, since it's more capable, more compatible, and doesn't require plug-ins.</p>
+Historically, the {{HTMLElement("embed")}} element could be used with audio player plug-ins to play audio in the background in most browsers. However, even this is no longer appropriate, and you should use `<audio>` instead, since it's more capable, more compatible, and doesn't require plug-ins.
 
-<p>You can write <code>&lt;bgsound&gt;</code> as a self-closing tag (<code>&lt;bgsound /&gt;</code>); however, since this element is non-standard, doing so will still not validate.</p>
+You can write `<bgsound>` as a self-closing tag (`<bgsound />`); however, since this element is non-standard, doing so will still not validate.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{htmlelement("audio")}}, which is the standard element to embed audio in a document.</li>
-</ul>
+*   The {{htmlelement("audio")}}, which is the standard element to embed audio in a document.
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

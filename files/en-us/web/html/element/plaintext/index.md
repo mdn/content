@@ -11,42 +11,37 @@ tags:
   - plaintext
 browser-compat: html.elements.plaintext
 ---
-<div>{{deprecated_header}}</div>
+{{deprecated_header}}
 
-<p>The <strong><code>&lt;plaintext&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element renders everything following the start tag as raw text, ignoring any following HTML. There is no closing tag, since everything after it is considered raw text.</p>
+The **`<plaintext>`** [HTML](/en-US/docs/Web/HTML) element renders everything following the start tag as raw text, ignoring any following HTML. There is no closing tag, since everything after it is considered raw text.
 
-<div class="warning"><p><strong>Warning:</strong> Do not use this element.</p>
+> **Warning:** Do not use this element.
+>
+> *   `<plaintext>` is deprecated since HTML 2, and not all browsers implemented it. Browsers that did implement it didn't do so consistently.
+> *   `<plaintext>` is obsolete in HTML5; browsers that accept it may instead treat it as a {{HTMLElement("pre")}} element that still interprets HTML within.
+> *   If `<plaintext>` is the first element on the page (other than any non-displayed elements, like {{HTMLElement("head")}}), do not use HTML at all. Instead serve a text file with the `text/plain` [MIME-type](/en-US/docs/Learn/Server-side/Configuring_server_MIME_types "Properly Configuring Server MIME Types").
+> *   Instead of `<plaintext>`, use the {{HTMLElement("pre")}} element or, if semantically accurate (such as for inline text), the {{HTMLElement("code")}} element. Escape any `<`, `>` and `&` characters, to prevent browsers inadvertently parsing content the element content as HTML.
+> *   A monospaced font can be applied to any HTML element via a [CSS](/en-US/docs/Web/CSS) {{cssxref("font-family")}} style with the `monospace` generic value.
 
-<ul>
- <li><code>&lt;plaintext&gt;</code> is deprecated since HTML 2, and not all browsers implemented it. Browsers that did implement it didn't do so consistently.</li>
- <li><code>&lt;plaintext&gt;</code> is obsolete in HTML5; browsers that accept it may instead treat it as a {{HTMLElement("pre")}} element that still interprets HTML within.</li>
- <li>If <code>&lt;plaintext&gt;</code> is the first element on the page (other than any non-displayed elements, like {{HTMLElement("head")}}), do not use HTML at all. Instead serve a text file with the <code>text/plain</code> <a href="/en-US/docs/Learn/Server-side/Configuring_server_MIME_types" title="Properly Configuring Server MIME Types">MIME-type</a>.</li>
- <li>Instead of <code>&lt;plaintext&gt;</code>, use the {{HTMLElement("pre")}} element or, if semantically accurate (such as for inline text), the {{HTMLElement("code")}} element. Escape any <code>&lt;</code>, <code>&gt;</code> and <code>&amp;</code> characters, to prevent browsers inadvertently parsing content the element content as HTML.</li>
- <li>A monospaced font can be applied to any HTML element via a <a href="/en-US/docs/Web/CSS">CSS</a> {{cssxref("font-family")}} style with the <code>monospace</code> generic value.</li>
-</ul>
-</div>
+## Attributes
 
-<h2 id="Attributes">Attributes</h2>
+This element has no other attributes than the [global attributes](/en-US/docs/Web/HTML/Global_attributes "HTML/global attributes") common to all elements.
 
-<p>This element has no other attributes than the <a href="/en-US/docs/Web/HTML/Global_attributes" rel="internal" title="HTML/global attributes">global attributes</a> common to all elements.</p>
+## DOM interface
 
-<h2 id="DOM_interface">DOM interface</h2>
+This element implements the {{domxref('HTMLElement')}} interface.
 
-<p>This element implements the {{domxref('HTMLElement')}} interface.</p>
+## Specifications
 
-<h2 id="Specifications">Specifications</h2>
+{{Specifications}}
 
-<p>{{Specifications}}</p>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
+*   The {{HTMLElement("pre")}} and {{HTMLElement("code")}} elements, which should be used instead.
+*   The {{HTMLElement("listing")}} and {{HTMLElement("xmp")}} elements, which are both obsolete elements similar to {{HTMLElement("plaintext")}}.
 
-<ul>
- <li>The {{HTMLElement("pre")}} and {{HTMLElement("code")}} elements, which should be used instead.</li>
- <li>The {{HTMLElement("listing")}} and {{HTMLElement("xmp")}} elements, which are both obsolete elements similar to {{HTMLElement("plaintext")}}.</li>
-</ul>
-
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

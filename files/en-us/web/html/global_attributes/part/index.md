@@ -8,22 +8,20 @@ tags:
   - part
 browser-compat: html.global_attributes.part
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>The <strong><code>part</code></strong> <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a> contains a space-separated list of the part names of the element. Part names allows CSS to select and style specific elements in a shadow tree via the {{CSSxRef("::part")}} pseudo-element.</p>
+The **`part`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) contains a space-separated list of the part names of the element. Part names allows CSS to select and style specific elements in a shadow tree via the {{CSSxRef("::part")}} pseudo-element.
 
-<p>See our <a href="https://mdn.github.io/web-components-examples/shadow-part/">Shadow part example</a> for a usage example.</p>
+See our [Shadow part example](https://mdn.github.io/web-components-examples/shadow-part/) for a usage example.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>All <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</li>
-</ul>
+*   All [global attributes](/en-US/docs/Web/HTML/Global_attributes).

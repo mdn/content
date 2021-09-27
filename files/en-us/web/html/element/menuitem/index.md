@@ -17,117 +17,124 @@ tags:
   - menuitem
 browser-compat: html.elements.menuitem
 ---
-<p>{{HTMLRef}}{{Deprecated_Header}}</p>
+{{HTMLRef}}{{Deprecated_Header}}
 
-<p>The <strong><code>&lt;menuitem&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element represents a command that a user is able to invoke through a popup menu. This includes context menus, as well as menus that might be attached to a menu button.</p>
+The **`<menuitem>`** [HTML](/en-US/docs/Web/HTML) element represents a command that a user is able to invoke through a popup menu. This includes context menus, as well as menus that might be attached to a menu button.
 
-<p>A command can either be defined explicitly, with a textual label and optional icon to describe its appearance, or alternatively as an <em>indirect command</em> whose behavior is defined by a separate element. Commands can also optionally include a checkbox or be grouped to share radio buttons. (Menu items for indirect commands gain checkboxes or radio buttons when defined against elements <code>&lt;input type="checkbox"&gt;</code> and <code>&lt;input type="radio"&gt;</code>.)</p>
+A command can either be defined explicitly, with a textual label and optional icon to describe its appearance, or alternatively as an *indirect command* whose behavior is defined by a separate element. Commands can also optionally include a checkbox or be grouped to share radio buttons. (Menu items for indirect commands gain checkboxes or radio buttons when defined against elements `<input type="checkbox">` and `<input type="radio">`.)
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td>None.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td>None, it is an {{Glossary("empty element")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>Must have a start tag and must not have an end tag.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>The {{HTMLElement("menu")}} element, where that element is in the <em>popup menu</em> state. (If specified, the <code>type</code> attribute of the {{HTMLElement("menu")}} element must be <code>popup</code>; if missing, the parent element of the {{HTMLElement("menu")}} must itself be a {{HTMLElement("menu")}} in the <em>popup menu</em> state.)</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>None</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{DOMxRef("HTMLMenuItemElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>None, it is an {{Glossary("empty element")}}.</td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>Must have a start tag and must not have an end tag.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        The {{HTMLElement("menu")}} element, where that element is in
+        the <em>popup menu</em> state. (If specified, the
+        <code>type</code> attribute of the {{HTMLElement("menu")}}
+        element must be <code>popup</code>; if missing, the parent element of
+        the {{HTMLElement("menu")}} must itself be a
+        {{HTMLElement("menu")}} in the <em>popup menu</em> state.)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{DOMxRef("HTMLMenuItemElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>; in particular <code>title</code> can be used to describe the command, or provide usage hints.</p>
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes); in particular `title` can be used to describe the command, or provide usage hints.
 
-<dl>
- <dt>{{HTMLAttrDef("checked")}}</dt>
- <dd>Boolean attribute which indicates whether the command is selected. May only be used when the <code>type</code> attribute is <code>checkbox</code> or <code>radio</code>.</dd>
- <dt>{{HTMLAttrDef("command")}}</dt>
- <dd>Specifies the ID of a separate element, indicating a command to be invoked indirectly. May not be used within a menu item that also includes the attributes <code>checked</code>, <code>disabled</code>, <code>icon</code>, <code>label</code>, <code>radiogroup</code> or <code>type</code>.</dd>
- <dt>{{HTMLAttrDef("default")}}</dt>
- <dd>This Boolean attribute indicates use of the same command as the menu's subject element (such as a <code>button</code> or <code>input</code>).</dd>
- <dt>{{HTMLAttrDef("disabled")}}</dt>
- <dd>Boolean attribute which indicates that the command is not available in the current state. Note that <code>disabled</code> is distinct from <code>hidden</code>; the <code>disabled</code> attribute is appropriate in any context where a change in circumstances might render the command relevant.</dd>
- <dt>{{HTMLAttrDef("icon")}}</dt>
- <dd>Image URL, used to provide a picture to represent the command.</dd>
- <dt>{{HTMLAttrDef("label")}}</dt>
- <dd>The name of the command as shown to the user. Required when a <code>command</code> attribute is not present.</dd>
- <dt>{{HTMLAttrDef("radiogroup")}}</dt>
- <dd>This attribute specifies the name of a group of commands to be toggled as radio buttons when selected. May only be used where the <code>type</code> attribute is <code>radio</code>.</dd>
- <dt>{{HTMLAttrDef("type")}}</dt>
- <dd>This attribute indicates the kind of command, and can be one of three values.
- <ul>
-  <li><code>command</code>: A regular command with an associated action. This is the missing value default.</li>
-  <li><code>checkbox</code>: Represents a command that can be toggled between two different states.</li>
-  <li><code>radio</code>: Represent one selection from a group of commands that can be toggled as radio buttons.</li>
- </ul>
- </dd>
-</dl>
+*   {{HTMLAttrDef("checked")}}
+    *   : Boolean attribute which indicates whether the command is selected. May only be used when the `type` attribute is `checkbox` or `radio`.
+*   {{HTMLAttrDef("command")}}
+    *   : Specifies the ID of a separate element, indicating a command to be invoked indirectly. May not be used within a menu item that also includes the attributes `checked`, `disabled`, `icon`, `label`, `radiogroup` or `type`.
+*   {{HTMLAttrDef("default")}}
+    *   : This Boolean attribute indicates use of the same command as the menu's subject element (such as a `button` or `input`).
+*   {{HTMLAttrDef("disabled")}}
+    *   : Boolean attribute which indicates that the command is not available in the current state. Note that `disabled` is distinct from `hidden`; the `disabled` attribute is appropriate in any context where a change in circumstances might render the command relevant.
+*   {{HTMLAttrDef("icon")}}
+    *   : Image URL, used to provide a picture to represent the command.
+*   {{HTMLAttrDef("label")}}
+    *   : The name of the command as shown to the user. Required when a `command` attribute is not present.
+*   {{HTMLAttrDef("radiogroup")}}
+    *   : This attribute specifies the name of a group of commands to be toggled as radio buttons when selected. May only be used where the `type` attribute is `radio`.
+*   {{HTMLAttrDef("type")}}
+    *   : This attribute indicates the kind of command, and can be one of three values.
 
-<h2 id="Example">Example</h2>
+        *   `command`: A regular command with an associated action. This is the missing value default.
+        *   `checkbox`: Represents a command that can be toggled between two different states.
+        *   `radio`: Represent one selection from a group of commands that can be toggled as radio buttons.
 
-<h3 id="HTML">HTML</h3>
+## Example
 
-<pre class="brush: html;">&lt;!-- A &lt;div&gt; element with a context menu --&gt;
-&lt;div contextmenu="popup-menu"&gt;
+### HTML
+
+```html
+<!-- A <div> element with a context menu -->
+<div contextmenu="popup-menu">
   Right-click to see the adjusted context menu
-&lt;/div&gt;
+</div>
 
-&lt;menu type="context" id="popup-menu"&gt;
-  &lt;menuitem type="checkbox" checked&gt;Checkbox&lt;/menuitem&gt;
-  &lt;hr&gt;
-  &lt;menuitem type="command" label="This command does nothing" icon="favicon-192x192.png"&gt;
+<menu type="context" id="popup-menu">
+  <menuitem type="checkbox" checked>Checkbox</menuitem>
+  <hr>
+  <menuitem type="command" label="This command does nothing" icon="favicon-192x192.png">
     Commands don't render their contents.
-  &lt;/menuitem&gt;
-  &lt;menuitem type="command" label="This command has javascript" onclick="alert('command clicked')"&gt;
+  </menuitem>
+  <menuitem type="command" label="This command has javascript" onclick="alert('command clicked')">
     Commands don't render their contents.
-  &lt;/menuitem&gt;
-  &lt;hr&gt;
-  &lt;menuitem type="radio" radiogroup="group1"&gt;Radio Button 1&lt;/menuitem&gt;
-  &lt;menuitem type="radio" radiogroup="group1"&gt;Radio Button 2&lt;/menuitem&gt;
-&lt;/menu&gt;
-</pre>
+  </menuitem>
+  <hr>
+  <menuitem type="radio" radiogroup="group1">Radio Button 1</menuitem>
+  <menuitem type="radio" radiogroup="group1">Radio Button 2</menuitem>
+</menu>
+```
 
-<h3 id="CSS_content">CSS content</h3>
+### CSS content
 
-<pre class="brush: css;">div {
+```css
+div {
   width: 300px;
   height: 80px;
   background-color: lightgreen;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", '100%', 80)}}</p>
+{{EmbedLiveSample("Example", '100%', 80)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any current specifications.</p>
+Not part of any current specifications.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://hacks.mozilla.org/2011/11/html5-context-menus-in-firefox-screencast-and-code/">HTML5 context menus in Firefox (Screencast and Code)</a></li>
-</ul>
+*   [HTML5 context menus in Firefox (Screencast and Code)](https://hacks.mozilla.org/2011/11/html5-context-menus-in-firefox-screencast-and-code/)

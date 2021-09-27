@@ -9,49 +9,46 @@ tags:
   - Web
 browser-compat: html.elements.strike
 ---
-<p>{{HTMLRef}}{{deprecated_header}}</p>
+{{HTMLRef}}{{deprecated_header}}
 
-<p>The <strong><code>&lt;strike&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element places a strikethrough (horizontal line) over text.</p>
+The **`<strike>`** [HTML](/en-US/docs/Web/HTML) element places a strikethrough (horizontal line) over text.
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> This element is deprecated in HTML 4 and XHTML 1, and obsoleted in HTML5. If semantically appropriate, i.e., if it represents <em>deleted</em> content, use {{HTMLElement("del")}} instead. In all other cases use {{HTMLElement("s")}}.</p>
-</div>
+> **Warning:** This element is deprecated in HTML 4 and XHTML 1, and obsoleted in HTML5. If semantically appropriate, i.e., if it represents *deleted* content, use {{HTMLElement("del")}} instead. In all other cases use {{HTMLElement("s")}}.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{DOMxRef("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{DOMxRef("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:html">&amp;lt;strike&amp;gt;:	&lt;strike&gt;Today's Special: Salmon&lt;/strike&gt; SOLD OUT&lt;br /&gt;
-&amp;lt;s&amp;gt;:	&lt;s&gt;Today's Special: Salmon&lt;/s&gt; SOLD OUT
-</pre>
+```html
+&lt;strike&gt;:	<strike>Today's Special: Salmon</strike> SOLD OUT<br />
+&lt;s&gt;:	<s>Today's Special: Salmon</s> SOLD OUT
+```
 
-<p>The result of this code is:</p>
+The result of this code is:
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{HTMLElement("s")}} element.</li>
- <li>The {{HTMLElement("del")}} element should be used if the data has been <em>deleted</em>.</li>
- <li>The CSS {{CSSxRef("text-decoration")}} property can be used to style text with a strikethrough.</li>
-</ul>
+*   The {{HTMLElement("s")}} element.
+*   The {{HTMLElement("del")}} element should be used if the data has been *deleted*.
+*   The CSS {{CSSxRef("text-decoration")}} property can be used to style text with a strikethrough.
