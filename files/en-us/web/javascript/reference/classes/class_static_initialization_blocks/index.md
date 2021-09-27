@@ -20,7 +20,7 @@ Static blocks allow statements to be evaluated during initialization, which allo
 Initialization is performed in the context of the current class declaration, with privileged access to private state.
 This means that static blocks can also be used to share information between classes with instance private fields and other classes or functions declared in the same scope (analogous to "friend" classes in C++).
 
-{{EmbedInteractiveExample("pages/js/classes-static.html")}}
+{{EmbedInteractiveExample("pages/js/classes-static-initialization.html")}}
 
 ## Syntax
 
@@ -48,14 +48,14 @@ class A {
   }
 }
 
-// vars defined in static block is not hoisted
+// var defined in static block is not hoisted
 console.log(y);
 // > 'Outer y'
 ```
 
 The `this` inside a static block refers to the constructor object of the class.
 `super.<property>` can be used to access properties of a super class.
-Note however that it is a syntax error to call `super()` in a class static initialization block, or to attempt to access arguments of the class constructor function.
+Note however that it is a syntax error to call {{jsxref("Operators/super", "super()")}} in a class static initialization block, or to attempt to access arguments of the class constructor function.
 
 The scope of the static block is nested _within_ the lexical scope of the class body, and can access the private instance variables of the class.
 
