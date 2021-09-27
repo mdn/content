@@ -43,7 +43,7 @@ createCubeLayer(options)
       - `ext.COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2`
       - `ext.COMPRESSED_SRGB8_ALPHA8_ETC2_EAC`
       Additionally, for contexts with the {{domxref("WEBGL_compressed_texture_astc")}} extension enabled:
-      - All of the formats the extension supports.
+      - All of the [formats](/en-US/docs/Web/API/WEBGL_compressed_texture_astc#constants) the extension supports.
     - `depthFormat`: Optional. A {{domxref("GLenum")}} defining the data type of the depth texture data or `0` indicating that the layer should not provide a depth texture. (In that case {{domxref("XRProjectionLayer.ignoreDepthValues")}} will be `true`.)
       Possible values for {{domxref("WebGLRenderingContext")}} contexts with the {{domxref("WEBGL_depth_texture")}} extension enabled, or for {{domxref("WebGL2RenderingContext")}} contexts (no extension required):
       - `gl.DEPTH_COMPONENT` (Default)
