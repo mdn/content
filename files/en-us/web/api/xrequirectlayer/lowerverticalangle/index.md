@@ -24,7 +24,7 @@ A number representing the lower vertical angle in radians for the sphere. Settin
 
 ### Getting a layer's lower vertical angle
 
-The {{domxref("XRWebGLBinding.createEquirectLayer()")}} method creates an equirect layer and allows to specify a `lowerVerticalAngle`. The `XREquirectLayer.lowerVerticalAngle` property can be used after layer creation to get the lower vertical angle used or to set it to a new one.
+The {{domxref("XRWebGLBinding.createEquirectLayer()")}} method creates an equirect layer and allows specifying a `lowerVerticalAngle`. The `XREquirectLayer.lowerVerticalAngle` property can be used after layer creation to get the lower vertical angle used or to set it to a new one.
 
 ```js
 const equirectLayer = xrGlBinding.createEquirectLayer({

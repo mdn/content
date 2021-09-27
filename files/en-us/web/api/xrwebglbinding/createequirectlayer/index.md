@@ -23,7 +23,7 @@ createEquirectLayer(options)
 ### Parameters
 
 - `options`
-  - : An object to configure the {{domxref("XREquirectLayer")}}. It can have the following properties and the `space`, `viewPixelHeight`, and `viewPixelWidth` properties are required:
+  - : An object to configure the {{domxref("XREquirectLayer")}}. It can have the following properties. The `space`, `viewPixelHeight`, and `viewPixelWidth` properties are required:
     - `centralHorizontalAngle`: Optional. A number indicating the central horizontal angle in radians of the sphere. Default value: `6.28318` (2π).
     - `colorFormat`: Optional. A {{domxref("GLenum")}} defining the data type of the color texture data. Possible values:
         - `gl.RGB`
@@ -46,7 +46,7 @@ createEquirectLayer(options)
       Additionally, for contexts with the {{domxref("WEBGL_compressed_texture_astc")}} extension enabled:
       - All of the formats the extension supports.
       The default value is `gl.RGBA`.
-    - `depthFormat`: Optional. A {{domxref("GLenum")}} defining the data type of the depth texture data or `0` indicating that the layer should not provide a depth texture (in that case {{domxref("XRProjectionLayer.ignoreDepthValues")}} will be `true`).
+    - `depthFormat`: Optional. A {{domxref("GLenum")}} defining the data type of the depth texture data, or else `0` to indicate that the layer should not provide a depth texture (in that case {{domxref("XRProjectionLayer.ignoreDepthValues")}} will be `true`).
       Possible values within {{domxref("WebGLRenderingContext")}} contexts with the {{domxref("WEBGL_depth_texture")}} extension enabled, or within {{domxref("WebGL2RenderingContext")}} contexts (no extension required):
       - `gl.DEPTH_COMPONENT`
       - `gl.DEPTH_STENCIL`

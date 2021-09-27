@@ -24,7 +24,7 @@ A number representing the central horizontal angle in radians for the sphere. Se
 
 ### Getting a layer's central horizontal angle
 
-The {{domxref("XRWebGLBinding.createEquirectLayer()")}} method creates an equirect layer and allows to specify a `centralHorizontalAngle`. The `XREquirectLayer.centralHorizontalAngle` property can be used after layer creation to get the central horizontal angle used or to set it to a new one.
+The {{domxref("XRWebGLBinding.createEquirectLayer()")}} method creates an equirect layer and allows specifying a `centralHorizontalAngle`. The `XREquirectLayer.centralHorizontalAngle` property can be used after layer creation to get the central horizontal angle used or to set it to a new one.
 
 ```js
 const equirectLayer = xrGlBinding.createEquirectLayer({

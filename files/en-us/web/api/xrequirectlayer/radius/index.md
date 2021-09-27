@@ -18,13 +18,13 @@ The **`radius`** property of the {{domxref("XREquirectLayer")}} interface repres
 
 ## Value
 
-A number representing non-negative radius in meters of the sphere. Values of zero or infinity are treated as an infinite sphere. Setting `radius` to a value less than 0 will set it to 0.
+A number representing the non-negative radius (in meters) of the sphere. Values of zero or infinity are treated as representing an infinite sphere. Setting `radius` to a value less than 0 will set it to 0.
 
 ## Examples
 
 ### Getting a layer's radius
 
-The {{domxref("XRWebGLBinding.createEquirectLayer()")}} method creates an equirect layer and allows to specify a `radius`. The `XREquirectLayer.radius` property can be used after layer creation to get the radius used or to set it to a new one.
+The {{domxref("XRWebGLBinding.createEquirectLayer()")}} method creates an equirect layer and allows specifying a `radius`. The `XREquirectLayer.radius` property can be used after layer creation to get the radius used or to set it to a new one.
 
 ```js
 const equirectLayer = xrGlBinding.createEquirectLayer({
