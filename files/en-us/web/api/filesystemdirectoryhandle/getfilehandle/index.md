@@ -41,15 +41,15 @@ A {{jsxref('Promise')}} which resolves with a {{domxref('FileSystemFileHandle')}
 
 ### Exceptions
 
-- `NotAllowedError`
-  - : If {{domxref('PermissionStatus')}} is not 'granted'.
-- `TypeError`
-  - : If the name specified is not a valid string or contains characters that would
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if {{domxref('PermissionStatus')}} is not 'granted'.
+- `TypeError` {{domxref("DOMException")}}
+  - : Thrown if the name specified is not a valid string or contains characters that would
     interfere with the native file system
-- `TypeMismatchError`
-  - : If the named entry is a directory and not a file.
-- `NotFoundError`
-  - : if file doesn't exist and the `create` option is set to
+- `TypeMismatchError` {{domxref("DOMException")}}
+  - : Thrown if the named entry is a directory and not a file.
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if file doesn't exist and the `create` option is set to
     `false`.
 
 ## Examples

@@ -49,9 +49,6 @@ HTMLMediaElement.seekToNextFrame();
 
 A {{jsxref("Promise")}} which is fulfilled once the seek operation has completed.
 
-> **Note:** Firefox 49 returns {{jsxref("undefined")}} instead of a promise, and performs the
-> seek operation synchronously.
-
 ## Specifications
 
 Not part of any specification.

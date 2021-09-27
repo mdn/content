@@ -67,56 +67,21 @@ browser-compat: html.elements.input.input-password
 
 <h2 id="Additional_attributes">Additional attributes</h2>
 
-<p>In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, password field inputs support the following attributes:</p>
+<p>In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, password field inputs support the following attributes.</p>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>{{anch("maxlength")}}</code></td>
-   <td>The maximum length the value may be, in UTF-16 characters</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("minlength")}}</code></td>
-   <td>The minimum length in characters that will be considered valid</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("pattern")}}</code></td>
-   <td>A regular expression the value must match in order to be valid</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("placeholder")}}</code></td>
-   <td>An example value to display in the field when the field is empty</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("readonly")}}</code></td>
-   <td>A Boolean attribute which, if present, indicates that the field's contents should not be editable</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("size")}}</code></td>
-   <td>The number of characters wide the input field should be</td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="attr-maxlength"><code id="maxlength">maxlength</code></h3>
+<h3>maxlength</h3>
 
 <p>The maximum number of characters (as UTF-16 code units) the user can enter into the password field. This must be an integer value 0 or higher. If no <code>maxlength</code> is specified, or an invalid value is specified, the password field has no maximum length. This value must also be greater than or equal to the value of <code>minlength</code>.</p>
 
 <p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text entered into the field is greater than <code>maxlength</code> UTF-16 code units long.</p>
 
-<h3 id="attr-minlength"><code id="minlength">minlength</code></h3>
+<h3>minlength</h3>
 
 <p>The minimum number of characters (as UTF-16 code units) the user can enter into the password entry field. This must be an non-negative integer value smaller than or equal to the value specified by <code>maxlength</code>. If no <code>minlength</code> is specified, or an invalid value is specified, the password input has no minimum length.</p>
 
 <p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long.</p>
 
-<h3 id="attr-pattern"><code id="pattern">pattern</code></h3>
+<h3>pattern</h3>
 
 <p>The <code>pattern</code> attribute, when specified, is a regular expression that the input's {{htmlattrxref("value")}} must match in order for the value to pass <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">guide on regular expressions</a>; the <code>'u'</code> flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.</p>
 
@@ -128,7 +93,7 @@ browser-compat: html.elements.input.input-password
 
 <p>Use of a pattern is strongly recommended for password inputs, in order to help ensure that valid passwords using a wide assortment of character classes are selected and used by your users. With a pattern, you can mandate case rules, require the use of some number of digits and/or punctuation characters, and so forth. See the section {{anch("Validation")}} for details and an example.</p>
 
-<h3><code>placeholder</code></h3>
+<h3>placeholder</h3>
 
 <p>The <code>placeholder</code> attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text <em>must not</em> include carriage returns or line feeds.</p>
 
@@ -138,7 +103,7 @@ browser-compat: html.elements.input.input-password
 <p><strong>Note:</strong> Avoid using the <code>placeholder</code> attribute if you can. It is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for more information.</p>
 </div>
 
-<h3 id="attr-readonly"><code id="readonly">readonly</code></h3>
+<h3>readonly</h3>
 
 <p>A Boolean attribute which, if present, means this field cannot be edited by the user. Its <code>value</code> can, however, still be changed from JavaScript code that directly sets the value of the {{domxref("HTMLInputElement.value")}} property.</p>
 
@@ -146,7 +111,7 @@ browser-compat: html.elements.input.input-password
 <p><strong>Note:</strong> Because a read-only field cannot have a value, <code>required</code> does not have any effect on inputs with the <code>readonly</code> attribute also specified.</p>
 </div>
 
-<h3><code>size</code></h3>
+<h3>size</h3>
 
 <p>The <code>size</code> attribute is a numeric value indicating how many characters wide the input field should be. The value must be a number greater than zero, and the default value is 20. Since character widths vary, this may or may not be exact and should not be relied upon to be so; the resulting input may be narrower or wider than the specified number of characters, depending on the characters and the font ({{cssxref("font")}} settings in use).</p>
 

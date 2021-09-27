@@ -46,19 +46,13 @@ method throws an exception. This will also happen if `child` was in fact a
 child of `element` at the time of the call, but was removed by an event
 handler invoked in the course of trying to remove the element (e.g., {{Event("blur")}}.)
 
-### Errors thrown
+### Exception
 
-The method throws an exception in 2 different ways:
-
-1.  If the `child` was in fact a child of `element` and so
-    existing on the DOM, but was removed the method throws the following exception:
-
-    `Uncaught NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node`.
-
-2.  If the `child` doesn't exist on the DOM of the page, the method throws
-    the following exception:
-
-    `Uncaught TypeError: Failed to execute 'removeChild' on 'Node': parameter 1 is not of type 'Node'.`
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if the `child` was in fact a child of `element` and so
+    existing on the DOM, but was removed.
+- `TypeError` {{domxref("DOMException")}}
+  - : Thrown if the `child` doesn't exist on the DOM of the page.
 
 ## Examples
 

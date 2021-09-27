@@ -12,10 +12,7 @@ browser-compat: api.UIEvent.which
 ---
 {{ APIRef("DOM Events") }} {{Non-standard_header}}
 
-The **`UIEvent.which`** read-only property of the {{domxref("UIEvent")}}
-interface returns a number that indicates which button was pressed on the mouse, or the
-numeric `keyCode` or the character code (`charCode`) of the key
-pressed on the keyboard.
+The **`UIEvent.which`** read-only property of the {{domxref("UIEvent")}} interface returns a number that indicates which button was pressed on the mouse, or the numeric `keyCode` or the character code (`charCode`) of the key pressed on the keyboard.
 
 ## Syntax
 
@@ -25,12 +22,12 @@ var result = event.which;
 
 ### Return value
 
-#### Return value for {{domxref("KeyboardEvent")}}
+#### Return value for {{domxref("KeyboardEvent")}} {{non-standard_inline}}
 
-- `event.which` contains the numeric code for a particular key pressed,
-  depending on whether an alphanumeric or non-alphanumeric key was pressed. Please see
-  {{domxref("KeyboardEvent.charCode")}} and {{domxref("KeyboardEvent.keyCode")}} for
-  more details.
+`event.which` contains the numeric code for a particular key pressed, depending on whether an alphanumeric or non-alphanumeric key was pressed.
+Please see deprecated {{domxref("KeyboardEvent.charCode")}} and {{domxref("KeyboardEvent.keyCode")}} for more details.
+
+> **Note:** Consider {{domxref("KeyboardEvent.key")}} or {{domxref("KeyboardEvent.code")}} for new code.
 
 #### Return value for {{domxref("MouseEvent")}} {{non-standard_inline}}
 
@@ -41,8 +38,11 @@ A number representing a given button:
 - `2`: Middle button (if present)
 - `3`: Right button
 
-For a mouse configured for left-handed use, the button actions are reversed. In this
-case, the values are read from right to left.
+For a mouse configured for left-handed use, the button actions are reversed.
+In this case, the values are read from right to left.
+
+> **Note:** Consider {{domxref("MouseEvent.button")}} for new code.
+
 
 ## Example
 
