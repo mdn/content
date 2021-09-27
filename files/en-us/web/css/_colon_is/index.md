@@ -59,6 +59,11 @@ These legacy pseudo-classes can be used to provide backwards compatibility.
 }
 ```
 
+### Difference between :is() and :where()
+
+The difference between the two is that `:is()` counts towards the specificity of the overall selector (it takes the specificity of its most specific argument), whereas [`:where()`](/en-US/docs/Web/CSS/:where) has a specificity value of 0. This is demonstrated by the [example on the `:where()` reference page](/en-US/docs/Web/CSS/:where#examples).
+
+
 ### Forgiving Selector Parsing
 
 The specification defines `:is()` and `:where()` as accepting a [forgiving selector list](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list).
@@ -182,9 +187,7 @@ dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
 
 ```css
 /* 3-deep (or more) unordered lists use a square */
-:is(ol, ul, menu, dir) :is(ol, ul, menu, dir) ul,
-:is(ol, ul, menu, dir) :is(ol, ul, menu, dir) menu,
-:is(ol, ul, menu, dir) :is(ol, ul, menu, dir) dir {
+:is(ol, ul, menu, dir) :is(ol, ul, menu, dir) :is(ul, menu, dir) {
   list-style-type: square;
 }
 ```
@@ -238,10 +241,6 @@ h1 {
   font-size: 15px;
 }
 ```
-
-### Difference between :is() and :where()
-
-The difference between the two is that `:is()` counts towards the specificity of the overall selector (it takes the specificity of its most specific argument), whereas [`:where()`](/en-US/docs/Web/CSS/:where) has a specificity value of 0. This is demonstrated by the [example on the `:where()` reference page](/en-US/docs/Web/CSS/:where#examples).
 
 ## Syntax
 

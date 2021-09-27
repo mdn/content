@@ -85,8 +85,7 @@ browser-compat: html.elements.img
 	<dt>{{htmlattrdef("alt")}}</dt>
 	<dd>Defines an alternative text description of the image.
 		<div class="notecard note">
-			<h4>Note</h4>
-			<p>Browsers do not always display images. There are a number of situations in which a browser might not display images, such as:</p>
+			<p><strong>Note:</strong> Browsers do not always display images. There are a number of situations in which a browser might not display images, such as:</p>
 			<ul>
 				<li>Non-visual browsers (such as those used by people with visual impairments)</li>
 				<li>The user chooses not to display images (saving bandwidth, privacy reasons)</li>
@@ -122,8 +121,6 @@ browser-compat: html.elements.img
 	<dt>{{htmlattrdef("decoding")}}</dt>
 	<dd>
 	<p>Provides an image decoding hint to the browser. Allowed values:</p>
-	</dd>
-	<dd>
 	<dl>
 		<dt><code>sync</code></dt>
 		<dd>Decode the image synchronously, for atomic presentation with other content.</dd>
@@ -140,8 +137,7 @@ browser-compat: html.elements.img
 	<dt>{{htmlattrdef("ismap")}}</dt>
 	<dd>This Boolean attribute indicates that the image is part of a <a href="https://en.wikipedia.org/wiki/Image_map#Server-side">server-side map</a>. If so, the coordinates where the user clicked on the image are sent to the server.
 	<div class="notecard note">
-		<h4>Note</h4>
-		<p><strong>Note:</strong> This attribute is allowed only if the <code>&lt;img&gt;</code> element is a descendant of an {{htmlelement("a")}} element with a valid {{htmlattrxref("href","a")}} attribute. This gives users without pointing devices a fallback destination.</p>
+		<p><strong>Note:</strong> <strong>Note:</strong> This attribute is allowed only if the <code>&lt;img&gt;</code> element is a descendant of an {{htmlelement("a")}} element with a valid {{htmlattrxref("href","a")}} attribute. This gives users without pointing devices a fallback destination.</p>
 	</div>
 	</dd>
 	<dt>{{htmlattrdef("loading")}} {{experimental_inline}}</dt>
@@ -150,8 +146,7 @@ browser-compat: html.elements.img
 		<li><code>eager</code>: Loads the image immediately, regardless of whether or not the image is currently within the visible viewport (this is the default value).</li>
 		<li><code>lazy</code>: Defers loading the image until it reaches a calculated distance from the viewport, as defined by the browser. The intent is to avoid the network and storage bandwidth needed to handle the image until it's reasonably certain that it will be needed. This generally improves the performance of the content in most typical use cases.
 		<div class="notecard note">
-			<h4>Note</h4>
-			<p>Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing images in a page's markup such that a server can track how many images are requested and when.</p>
+			<p><strong>Note:</strong> Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing images in a page's markup such that a server can track how many images are requested and when.</p>
 		</div>
 		</li>
 	</ul>
@@ -205,8 +200,7 @@ browser-compat: html.elements.img
 	<dt>{{htmlattrdef("usemap")}}</dt>
 	<dd>The partial {{glossary("URL")}} (starting with <code>#</code>) of an <a href="/en-US/docs/Web/HTML/Element/map">image map</a> associated with the element.
 	<div class="notecard note">
-		<h4>Note</h4>
-		<p>You cannot use this attribute if the <code>&lt;img&gt;</code> element is inside an {{htmlelement("a")}} or {{HTMLElement("button")}} element.</p>
+		<p><strong>Note:</strong> You cannot use this attribute if the <code>&lt;img&gt;</code> element is inside an {{htmlelement("a")}} or {{HTMLElement("button")}} element.</p>
 	</div>
 	</dd>
 </dl>
@@ -215,19 +209,18 @@ browser-compat: html.elements.img
 
 <dl>
 	<dt>{{htmlattrdef("align")}} {{deprecated_inline}}</dt>
-	<dd>Aligns the image with its surrounding context. Use the {{cssxref('float')}} and/or {{cssxref('vertical-align')}} {{glossary("CSS")}} properties instead of this attribute. Allowed values:</dd>
-	<dd>
+	<dd>Aligns the image with its surrounding context. Use the {{cssxref('float')}} and/or {{cssxref('vertical-align')}} {{glossary("CSS")}} properties instead of this attribute. Allowed values:
 	<dl>
 		<dt><code>top</code></dt>
-		<dd>Equivalent to <code style="white-space: nowrap;">vertical-align: top</code> or <code style="white-space: nowrap;">vertical-align: text-top</code></dd>
+		<dd>Equivalent to <code>vertical-align: top</code> or <code>vertical-align: text-top</code></dd>
 		<dt><code>middle</code></dt>
-		<dd>Equivalent to <code style="white-space: nowrap;">vertical-align: -moz-middle-with-baseline</code></dd>
+		<dd>Equivalent to <code>vertical-align: -moz-middle-with-baseline</code></dd>
 		<dt><code>bottom</code></dt>
-		<dd>The default, equivalent to <code style="white-space: nowrap;">vertical-align: unset</code> or <code style="white-space: nowrap;">vertical-align: initial</code></dd>
+		<dd>The default, equivalent to <code>vertical-align: unset</code> or <code>vertical-align: initial</code></dd>
 		<dt><code>left</code></dt>
-		<dd>Equivalent to <code style="white-space: nowrap;">float: left</code></dd>
+		<dd>Equivalent to <code>float: left</code></dd>
 		<dt><code>right</code></dt>
-		<dd>Equivalent to <code style="white-space: nowrap;">float: right</code></dd>
+		<dd>Equivalent to <code>float: right</code></dd>
 	</dl>
 	</dd>
 	<dt>{{htmlattrdef("border")}} {{deprecated_inline}}</dt>
@@ -237,8 +230,7 @@ browser-compat: html.elements.img
 	<dt>{{htmlattrdef("longdesc")}} {{deprecated_inline}}</dt>
 	<dd>A link to a more detailed description of the image. Possible values are a {{glossary("URL")}} or an element {{htmlattrxref("id")}}.
 	<div class="notecard note">
-		<h4>Note</h4>
-		<p>This attribute is mentioned in the latest {{glossary("W3C")}} version, <a href="https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc">HTML 5.2</a>, but has been removed from the {{glossary("WHATWG")}}’s <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">HTML Living Standard</a>. It has an uncertain future; authors should use a {{glossary("WAI")}}-{{glossary("ARIA")}} alternative such as <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby"><code>aria-describedby</code></a> or <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-details"><code>aria-details</code></a>.</p>
+		<p><strong>Note:</strong> This attribute is mentioned in the latest {{glossary("W3C")}} version, <a href="https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc">HTML 5.2</a>, but has been removed from the {{glossary("WHATWG")}}’s <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">HTML Living Standard</a>. It has an uncertain future; authors should use a {{glossary("WAI")}}-{{glossary("ARIA")}} alternative such as <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby"><code>aria-describedby</code></a> or <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-details"><code>aria-details</code></a>.</p>
 	</div>
 	</dd>
 	<dt>{{htmlattrdef("name")}} {{deprecated_inline}}</dt>
@@ -303,8 +295,7 @@ browser-compat: html.elements.img
 <p>{{EmbedLiveSample("Using_the_srcset_and_sizes_attributes", "100%", 350)}}</p>
 
 <div class="notecard note">
-	<h4>Note</h4>
-	<p>To see the resizing in action, {{LiveSampleLink('Using_the_srcset_and_sizes_attributes', 'view the example on a separate page')}}, so you can actually resize the content area.</p>
+	<p><strong>Note:</strong> To see the resizing in action, {{LiveSampleLink('Using_the_srcset_and_sizes_attributes', 'view the example on a separate page')}}, so you can actually resize the content area.</p>
 </div>
 
 <h2 id="Security_and_privacy_concerns">Security and privacy concerns</h2>

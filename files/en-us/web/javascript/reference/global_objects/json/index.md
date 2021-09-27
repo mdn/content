@@ -39,7 +39,7 @@ JavaScript is _not_ JSON.
     {{jsxref("SyntaxError")}}.
 
 Consider this example where {{jsxref("JSON.parse()")}} parses the string as JSON and
-{{jsxref("Global_Objects/eval")}} executes the string as JavaScript:
+{{jsxref("Global_Objects/eval", "eval")}} executes the string as JavaScript:
 
 ```js
 let code = '"\u2028\u2029"'

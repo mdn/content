@@ -39,7 +39,7 @@ isNaN(value)
 Unlike all other possible values in JavaScript, it is not possible to use the equality
 operators (== and ===) to compare a value against {{jsxref("NaN")}} to determine whether
 the value _is_ `NaN` or not, because both `NaN == NaN` and
-`NaN === NaN` evaluate to `false`. The `isNan()` function provides a convenient 
+`NaN === NaN` evaluate to `false`. The `isNaN()` function provides a convenient 
 equality check against {{jsxref("NaN")}}.
 
 ### Origin of NaN values

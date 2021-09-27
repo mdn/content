@@ -1314,11 +1314,6 @@
 /en-US/docs/DOM/EventTarget.dispatchEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
 /en-US/docs/DOM/EventTarget.removeEventListener	/en-US/docs/Web/API/EventTarget/removeEventListener
 /en-US/docs/DOM/File	/en-US/docs/Web/API/File
-/en-US/docs/DOM/File.fileName	/en-US/docs/Web/API/File/fileName
-/en-US/docs/DOM/File.fileSize	/en-US/docs/Web/API/File/fileSize
-/en-US/docs/DOM/File.getAsBinary	/en-US/docs/Web/API/File/getAsBinary
-/en-US/docs/DOM/File.getAsDataURL	/en-US/docs/Web/API/File/getAsDataURL
-/en-US/docs/DOM/File.getAsText	/en-US/docs/Web/API/File/getAsText
 /en-US/docs/DOM/File.lastModifiedDate	/en-US/docs/Web/API/File/lastModifiedDate
 /en-US/docs/DOM/File.name	/en-US/docs/Web/API/File/name
 /en-US/docs/DOM/File.size	/en-US/docs/Web/API/Blob/size
@@ -1765,7 +1760,6 @@
 /en-US/docs/DOM/ValidityState	/en-US/docs/Web/API/ValidityState
 /en-US/docs/DOM/WheelEvent	/en-US/docs/Web/API/WheelEvent
 /en-US/docs/DOM/Window.dispatchEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
-/en-US/docs/DOM/Window.routeEvent	/en-US/docs/Web/API/Window/routeEvent
 /en-US/docs/DOM/Worker	/en-US/docs/Web/API/Worker
 /en-US/docs/DOM/Worker/Functions_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/DOM/XMLHttpRequest	/en-US/docs/Web/API/XMLHttpRequest
@@ -2024,7 +2018,7 @@
 /en-US/docs/DOM/event.timeStamp	/en-US/docs/Web/API/Event/timeStamp
 /en-US/docs/DOM/event.type	/en-US/docs/Web/API/Event/type
 /en-US/docs/DOM/event.view	/en-US/docs/Web/API/UIEvent/view
-/en-US/docs/DOM/event.which	/en-US/docs/Web/API/KeyboardEvent/which
+/en-US/docs/DOM/event.which	/en-US/docs/Web/API/UIEvent/which
 /en-US/docs/DOM/event/AnimationEvent	/en-US/docs/Web/API/AnimationEvent
 /en-US/docs/DOM/event/Comparison_of_Event_Targets	/en-US/docs/Web/API/Event/Comparison_of_Event_Targets
 /en-US/docs/DOM/form.acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset
@@ -2151,7 +2145,6 @@
 /en-US/docs/DOM/window.getDefaultComputedStyle	/en-US/docs/Web/API/window/getDefaultComputedStyle
 /en-US/docs/DOM/window.getSelection	/en-US/docs/Web/API/Window/getSelection
 /en-US/docs/DOM/window.history	/en-US/docs/Web/API/Window/history
-/en-US/docs/DOM/window.home	/en-US/docs/Web/API/Window/home
 /en-US/docs/DOM/window.innerHeight	/en-US/docs/Web/API/Window/innerHeight
 /en-US/docs/DOM/window.innerWidth	/en-US/docs/Web/API/Window/innerWidth
 /en-US/docs/DOM/window.length	/en-US/docs/Web/API/Window/length
@@ -2159,7 +2152,7 @@
 /en-US/docs/DOM/window.locationbar	/en-US/docs/Web/API/Window/locationbar
 /en-US/docs/DOM/window.matchMedia	/en-US/docs/Web/API/Window/matchMedia
 /en-US/docs/DOM/window.menubar	/en-US/docs/Web/API/Window/menubar
-/en-US/docs/DOM/window.minimize	/en-US/docs/Web/API/Window/minimize
+/en-US/docs/DOM/window.minimize	/en-US/docs/Web/API/Window
 /en-US/docs/DOM/window.moveBy	/en-US/docs/Web/API/Window/moveBy
 /en-US/docs/DOM/window.moveTo	/en-US/docs/Web/API/Window/moveTo
 /en-US/docs/DOM/window.mozAnimationStartTime	/en-US/docs/Web/API/Window/mozAnimationStartTime
@@ -2514,7 +2507,7 @@
 /en-US/docs/DOM:event.timeStamp	/en-US/docs/Web/API/Event/timeStamp
 /en-US/docs/DOM:event.type	/en-US/docs/Web/API/Event/type
 /en-US/docs/DOM:event.view	/en-US/docs/Web/API/UIEvent/view
-/en-US/docs/DOM:event.which	/en-US/docs/Web/API/KeyboardEvent/which
+/en-US/docs/DOM:event.which	/en-US/docs/Web/API/UIEvent/which
 /en-US/docs/DOM:event:Comparison_of_Event_Targets	/en-US/docs/Web/API/Event/Comparison_of_Event_Targets
 /en-US/docs/DOM:form.acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset
 /en-US/docs/DOM:form.action	/en-US/docs/Web/API/HTMLFormElement/action
@@ -2615,7 +2608,6 @@
 /en-US/docs/DOM:window.getComputedStyle	/en-US/docs/Web/API/Window/getComputedStyle
 /en-US/docs/DOM:window.getSelection	/en-US/docs/Web/API/Window/getSelection
 /en-US/docs/DOM:window.history	/en-US/docs/Web/API/Window/history
-/en-US/docs/DOM:window.home	/en-US/docs/Web/API/Window/home
 /en-US/docs/DOM:window.innerHeight	/en-US/docs/Web/API/Window/innerHeight
 /en-US/docs/DOM:window.innerWidth	/en-US/docs/Web/API/Window/innerWidth
 /en-US/docs/DOM:window.length	/en-US/docs/Web/API/Window/length
@@ -2826,11 +2818,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/Element.querySelector	/en-US/docs/Web/API/Element/querySelector
 /en-US/docs/Document_Object_Model_(DOM)/Element.querySelectorAll	/en-US/docs/Web/API/Element/querySelectorAll
 /en-US/docs/Document_Object_Model_(DOM)/File	/en-US/docs/Web/API/File
-/en-US/docs/Document_Object_Model_(DOM)/File.fileName	/en-US/docs/Web/API/File/fileName
-/en-US/docs/Document_Object_Model_(DOM)/File.fileSize	/en-US/docs/Web/API/File/fileSize
-/en-US/docs/Document_Object_Model_(DOM)/File.getAsBinary	/en-US/docs/Web/API/File/getAsBinary
-/en-US/docs/Document_Object_Model_(DOM)/File.getAsDataURL	/en-US/docs/Web/API/File/getAsDataURL
-/en-US/docs/Document_Object_Model_(DOM)/File.getAsText	/en-US/docs/Web/API/File/getAsText
 /en-US/docs/Document_Object_Model_(DOM)/File.name	/en-US/docs/Web/API/File/name
 /en-US/docs/Document_Object_Model_(DOM)/File.size	/en-US/docs/Web/API/Blob/size
 /en-US/docs/Document_Object_Model_(DOM)/File.type	/en-US/docs/Web/API/Blob/type
@@ -3076,7 +3063,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/Using_the_Page_Visibility_API	/en-US/docs/Web/API/Page_Visibility_API
 /en-US/docs/Document_Object_Model_(DOM)/ValidityState	/en-US/docs/Web/API/ValidityState
 /en-US/docs/Document_Object_Model_(DOM)/Window.dispatchEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
-/en-US/docs/Document_Object_Model_(DOM)/Window.routeEvent	/en-US/docs/Web/API/Window/routeEvent
 /en-US/docs/Document_Object_Model_(DOM)/Worker	/en-US/docs/Web/API/Worker
 /en-US/docs/Document_Object_Model_(DOM)/Worker/Functions_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Document_Object_Model_(DOM)/createEvent	/en-US/docs/Web/API/Document/createEvent
@@ -3350,7 +3336,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.locationbar	/en-US/docs/Web/API/Window/locationbar
 /en-US/docs/Document_Object_Model_(DOM)/window.matchMedia	/en-US/docs/Web/API/Window/matchMedia
 /en-US/docs/Document_Object_Model_(DOM)/window.menubar	/en-US/docs/Web/API/Window/menubar
-/en-US/docs/Document_Object_Model_(DOM)/window.minimize	/en-US/docs/Web/API/Window/minimize
+/en-US/docs/Document_Object_Model_(DOM)/window.minimize	/en-US/docs/Web/API/Window
 /en-US/docs/Document_Object_Model_(DOM)/window.moveBy	/en-US/docs/Web/API/Window/moveBy
 /en-US/docs/Document_Object_Model_(DOM)/window.moveTo	/en-US/docs/Web/API/Window/moveTo
 /en-US/docs/Document_Object_Model_(DOM)/window.mozAnimationStartTime	/en-US/docs/Web/API/Window/mozAnimationStartTime
@@ -5732,13 +5718,14 @@
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_41_for_developers	/en-US/docs/Mozilla/Firefox/Releases/41
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_47_for_developers	/en-US/docs/Mozilla/Firefox/Releases/47
 /en-US/docs/Mozilla/Firefox/Releases/developers	/en-US/docs/Mozilla/Firefox/Releases/63
+/en-US/docs/Mozilla/MathML_Project/Fonts	/en-US/docs/Web/MathML/Fonts
 /en-US/docs/Mozilla/Performance/Scroll-linked_effects	https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html
 /en-US/docs/Mozilla/QA/Bug_writing_guidelines	https://bugzilla.mozilla.org/page.cgi?id=bug-writing.html
+/en-US/docs/Mozilla/Tech/Xray_vision	https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html
 /en-US/docs/Mozilla/Virtualenv	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/virtualenv
 /en-US/docs/Mozilla_CSS_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/Mozilla_MathML_Project/Authoring	/en-US/docs/Web/MathML/Authoring
 /en-US/docs/Mozilla_MathML_Project/Authoring_MathML	/en-US/docs/Web/MathML/Authoring
-/en-US/docs/Mozilla_SVG_Status	/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox
 /en-US/docs/Mozilla_event_reference	/en-US/docs/Web/Events
 /en-US/docs/Mozilla_event_reference/DOMContentLoaded_(event)	/en-US/docs/Web/API/Window/DOMContentLoaded_event
 /en-US/docs/Mozilla_event_reference/DOMContentLoading (event)	/en-US/docs/Web/API/Window/DOMContentLoaded_event
@@ -6210,7 +6197,6 @@
 /en-US/docs/SVG/Linking	/en-US/docs/Web/SVG/Linking
 /en-US/docs/SVG/Namespaces_Crash_Course	/en-US/docs/Web/SVG/Namespaces_Crash_Course
 /en-US/docs/SVG/Namespaces_Crash_Course/Example	/en-US/docs/Web/SVG/Namespaces_Crash_Course/Example
-/en-US/docs/SVG/Other_Resources	/en-US/docs/Web/SVG/Other_Resources
 /en-US/docs/SVG/SVG_animation_with_SMIL	/en-US/docs/Web/SVG/SVG_animation_with_SMIL
 /en-US/docs/SVG/SVG_as_an_Image	/en-US/docs/Web/SVG/SVG_as_an_Image
 /en-US/docs/SVG/Scripting	/en-US/docs/Web/SVG/Scripting
@@ -6239,7 +6225,6 @@
 /en-US/docs/SVG/filter	/en-US/docs/Web/CSS/filter
 /en-US/docs/SVG/g	/en-US/docs/Web/SVG/Element/g
 /en-US/docs/SVG/line	/en-US/docs/Web/SVG/Element/line
-/en-US/docs/SVG/mimeTypes.rdf_corruption	/en-US/docs/Web/SVG/mimeTypes.rdf_corruption
 /en-US/docs/SVG/polyline	/en-US/docs/Web/SVG/Element/polyline
 /en-US/docs/SVG/rect	/en-US/docs/Web/SVG/Element/rect
 /en-US/docs/SVG/use	/en-US/docs/Web/SVG/Element/use
@@ -6247,7 +6232,6 @@
 /en-US/docs/SVG:Linking	/en-US/docs/Web/SVG/Linking
 /en-US/docs/SVG:Namespaces_Crash_Course	/en-US/docs/Web/SVG/Namespaces_Crash_Course
 /en-US/docs/SVG:Namespaces_Crash_Course:Example	/en-US/docs/Web/SVG/Namespaces_Crash_Course/Example
-/en-US/docs/SVG:Other_Resources	/en-US/docs/Web/SVG/Other_Resources
 /en-US/docs/SVG:Scripting	/en-US/docs/Web/SVG/Scripting
 /en-US/docs/SVG:Specification_Deviations	/en-US/docs/Web/SVG/Specification_Deviations
 /en-US/docs/SVG:Tutorial	/en-US/docs/Web/SVG/Tutorial
@@ -6260,7 +6244,6 @@
 /en-US/docs/SVG:ellipse	/en-US/docs/Web/SVG/Element/ellipse
 /en-US/docs/SVG:g	/en-US/docs/Web/SVG/Element/g
 /en-US/docs/SVG:line	/en-US/docs/Web/SVG/Element/line
-/en-US/docs/SVG:mimeTypes.rdf_corruption	/en-US/docs/Web/SVG/mimeTypes.rdf_corruption
 /en-US/docs/SVG:polyline	/en-US/docs/Web/SVG/Element/polyline
 /en-US/docs/SVG:rect	/en-US/docs/Web/SVG/Element/rect
 /en-US/docs/SVG:use	/en-US/docs/Web/SVG/Element/use
@@ -6272,10 +6255,6 @@
 /en-US/docs/SVG_Tutorial	/en-US/docs/Web/SVG/Tutorial
 /en-US/docs/SVG_animation_(SMIL)_in_Firefox	/en-US/docs/Web/SVG/SVG_animation_with_SMIL
 /en-US/docs/SVG_improvements_in_Firefox_3	/en-US/docs/Mozilla/Firefox/Releases/3/SVG_improvements
-/en-US/docs/SVG_in_Firefox	/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox
-/en-US/docs/SVG_in_Firefox_1.5	/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox
-/en-US/docs/SVG_in_Firefox_2	/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox
-/en-US/docs/SVG_in_Firefox_2.0	/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox
 /en-US/docs/Same_origin_policy_for_JavaScript	/en-US/docs/Web/Security/Same-origin_policy
 /en-US/docs/Sample_.htaccess_file	/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess
 /en-US/docs/Scripting_plugins	/en-US/docs/Plugins/Guide/Scripting_plugins
@@ -6799,7 +6778,6 @@
 /en-US/docs/Web/API/AnimationTimingEffectProperties/iterations	/en-US/docs/Web/API/EffectTiming/iterations
 /en-US/docs/Web/API/Apps.mgmt.addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener
 /en-US/docs/Web/API/Apps.mgmt.removeEventListener	/en-US/docs/Web/API/EventTarget/removeEventListener
-/en-US/docs/Web/API/ArrayBuffer	/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /en-US/docs/Web/API/AudioBuffer.copyFromChannel	/en-US/docs/Web/API/AudioBuffer/copyFromChannel
 /en-US/docs/Web/API/AudioBuffer.copyToChannel	/en-US/docs/Web/API/AudioBuffer/copyToChannel
 /en-US/docs/Web/API/AudioBuffer.duration	/en-US/docs/Web/API/AudioBuffer/duration
@@ -6891,6 +6869,7 @@
 /en-US/docs/Web/API/AudioNode.numberOfInputs	/en-US/docs/Web/API/AudioNode/numberOfInputs
 /en-US/docs/Web/API/AudioNode.numberOfOutputs	/en-US/docs/Web/API/AudioNode/numberOfOutputs
 /en-US/docs/Web/API/AudioNode/connect(AudioNode)	/en-US/docs/Web/API/AudioNode/connect
+/en-US/docs/Web/API/AudioNodeOptions	/en-US/docs/Web/API/AudioNode
 /en-US/docs/Web/API/AudioParam.cancelScheduledValues	/en-US/docs/Web/API/AudioParam/cancelScheduledValues
 /en-US/docs/Web/API/AudioParam.defaultValue	/en-US/docs/Web/API/AudioParam/defaultValue
 /en-US/docs/Web/API/AudioParam.exponentialRampToValueAtTime	/en-US/docs/Web/API/AudioParam/exponentialRampToValueAtTime
@@ -7182,8 +7161,13 @@
 /en-US/docs/Web/API/DOMImplementation.hasFeature	/en-US/docs/Web/API/DOMImplementation/hasFeature
 /en-US/docs/Web/API/DOMMatrix/DOMMatrix.DOMMatrix	/en-US/docs/Web/API/DOMMatrix/DOMMatrix
 /en-US/docs/Web/API/DOMMatrix/DOMMatrixReadOnly	/en-US/docs/Web/API/DOMMatrixReadOnly/DOMMatrixReadOnly
-/en-US/docs/Web/API/DOMPoint/DOMPoint.fromPoint()	/en-US/docs/Web/API/DOMPoint/fromPoint
+/en-US/docs/Web/API/DOMPoint/DOMPoint.fromPoint()	/en-US/docs/web/api/DOMPoint/fromPoint
 /en-US/docs/Web/API/DOMPoint/toJSON	/en-US/docs/Web/API/DOMPointReadOnly/toJSON
+/en-US/docs/Web/API/DOMPointInit	/en-US/docs/web/api/DOMPoint/fromPoint
+/en-US/docs/Web/API/DOMPointInit/w	/en-US/docs/web/api/DOMPoint/w
+/en-US/docs/Web/API/DOMPointInit/x	/en-US/docs/web/api/DOMPoint/x
+/en-US/docs/Web/API/DOMPointInit/y	/en-US/docs/web/api/DOMPoint/y
+/en-US/docs/Web/API/DOMPointInit/z	/en-US/docs/web/api/DOMPoint/z
 /en-US/docs/Web/API/DOMPointReadOnly/DOMPoint.x	/en-US/docs/Web/API/DOMPointReadOnly/x
 /en-US/docs/Web/API/DOMReadOnlyMatrix	/en-US/docs/Web/API/DOMMatrixReadOnly
 /en-US/docs/Web/API/DOMTokenList/DOMTokenList.add()	/en-US/docs/Web/API/DOMTokenList/add
@@ -7414,15 +7398,12 @@
 /en-US/docs/Web/API/FetchSignal	/en-US/docs/Web/API/AbortSignal
 /en-US/docs/Web/API/FetchSignal/aborted	/en-US/docs/Web/API/AbortSignal/aborted
 /en-US/docs/Web/API/FetchSignal/onabort	/en-US/docs/Web/API/AbortSignal/onabort
-/en-US/docs/Web/API/File.fileName	/en-US/docs/Web/API/File/fileName
-/en-US/docs/Web/API/File.fileSize	/en-US/docs/Web/API/File/fileSize
-/en-US/docs/Web/API/File.getAsBinary	/en-US/docs/Web/API/File/getAsBinary
-/en-US/docs/Web/API/File.getAsDataURL	/en-US/docs/Web/API/File/getAsDataURL
-/en-US/docs/Web/API/File.getAsText	/en-US/docs/Web/API/File/getAsText
 /en-US/docs/Web/API/File.lastModifiedDate	/en-US/docs/Web/API/File/lastModifiedDate
 /en-US/docs/Web/API/File.name	/en-US/docs/Web/API/File/name
 /en-US/docs/Web/API/File.size	/en-US/docs/Web/API/Blob/size
 /en-US/docs/Web/API/File.type	/en-US/docs/Web/API/Blob/type
+/en-US/docs/Web/API/File/fileName	/en-US/docs/Web/API/File/name
+/en-US/docs/Web/API/File/fileSize	/en-US/docs/Web/API/Blob/size
 /en-US/docs/Web/API/FileEntry	/en-US/docs/Web/API/FileSystemFileEntry
 /en-US/docs/Web/API/FileHandle	/en-US/docs/Web/API/IDBMutableFile
 /en-US/docs/Web/API/FileHandle.getFile	/en-US/docs/Web/API/IDBMutableFile/getFile
@@ -7537,7 +7518,6 @@
 /en-US/docs/Web/API/GlobalEventHandlers/onmozfullscreenchange	/en-US/docs/Web/API/Document/onfullscreenchange
 /en-US/docs/Web/API/GlobalEventHandlers/onmozfullscreenerror	/en-US/docs/Web/API/Document/onfullscreenerror
 /en-US/docs/Web/API/GlobalEventHandlers/onpointerdown/drag	/en-US/docs/Web/API/GlobalEventHandlers/ondrag
-/en-US/docs/Web/API/GlobalFetch	/en-US/docs/Web/API/WindowOrWorkerGlobalScope
 /en-US/docs/Web/API/GlobalFetch/GlobalFetch.fetch()	/en-US/docs/Web/API/fetch
 /en-US/docs/Web/API/GlobalFetch/fetch	/en-US/docs/Web/API/fetch
 /en-US/docs/Web/API/Guide/Events/Creating_and_triggering_events	/en-US/docs/Web/Events/Creating_and_triggering_events
@@ -7891,7 +7871,8 @@
 /en-US/docs/Web/API/KeyboardEvent.location	/en-US/docs/Web/API/KeyboardEvent/location
 /en-US/docs/Web/API/KeyboardEvent.metaKey	/en-US/docs/Web/API/KeyboardEvent/metaKey
 /en-US/docs/Web/API/KeyboardEvent.shiftKey	/en-US/docs/Web/API/KeyboardEvent/shiftKey
-/en-US/docs/Web/API/KeyboardEvent.which	/en-US/docs/Web/API/KeyboardEvent/which
+/en-US/docs/Web/API/KeyboardEvent.which	/en-US/docs/Web/API/UIEvent/which
+/en-US/docs/Web/API/KeyboardEvent/which	/en-US/docs/Web/API/UIEvent/which
 /en-US/docs/Web/API/KeyframeEffect/KeyframeEffect.getKeyframes()	/en-US/docs/Web/API/KeyframeEffect/getKeyframes
 /en-US/docs/Web/API/KeyframeEffect/getFrames	/en-US/docs/Web/API/KeyframeEffect/getKeyframes
 /en-US/docs/Web/API/KeyframeEffect/setFrames	/en-US/docs/Web/API/KeyframeEffect/setKeyframes
@@ -8001,9 +7982,10 @@
 /en-US/docs/Web/API/MouseEvent.screenX	/en-US/docs/Web/API/MouseEvent/screenX
 /en-US/docs/Web/API/MouseEvent.screenY	/en-US/docs/Web/API/MouseEvent/screenY
 /en-US/docs/Web/API/MouseEvent.shiftKey	/en-US/docs/Web/API/MouseEvent/shiftKey
-/en-US/docs/Web/API/MouseEvent.which	/en-US/docs/Web/API/MouseEvent/which
+/en-US/docs/Web/API/MouseEvent.which	/en-US/docs/Web/API/UIEvent/which
 /en-US/docs/Web/API/MouseEvent/MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN	/en-US/docs/Web/API/MouseEvent/WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN
 /en-US/docs/Web/API/MouseEvent/MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN	/en-US/docs/Web/API/MouseEvent/WEBKIT_FORCE_AT_MOUSE_DOWN
+/en-US/docs/Web/API/MouseEvent/which	/en-US/docs/Web/API/UIEvent/which
 /en-US/docs/Web/API/MsAudioCategory	/en-US/docs/Web/API/HTMLAudioElement/msAudioCategory
 /en-US/docs/Web/API/MsAudioDeviceType	/en-US/docs/Web/API/HTMLAudioElement/msAudioDeviceType
 /en-US/docs/Web/API/MsClearEffects	/en-US/docs/Web/API/HTMLMediaElement/msClearEffects
@@ -8472,6 +8454,10 @@
 /en-US/docs/Web/API/ScriptProcessorNode.bufferSize	/en-US/docs/Web/API/ScriptProcessorNode/bufferSize
 /en-US/docs/Web/API/ScriptProcessorNode.onaudioprocess	/en-US/docs/Web/API/ScriptProcessorNode/onaudioprocess
 /en-US/docs/Web/API/ScriptProcessorNode/audioprocess	/en-US/docs/Web/API/ScriptProcessorNode/audioprocess_event
+/en-US/docs/Web/API/ScrollToOptions	/en-US/docs/Web/API/Window/scroll
+/en-US/docs/Web/API/ScrollToOptions/behavior	/en-US/docs/Web/API/Window/scroll
+/en-US/docs/Web/API/ScrollToOptions/left	/en-US/docs/Web/API/Window/scroll
+/en-US/docs/Web/API/ScrollToOptions/top	/en-US/docs/Web/API/Window/scroll
 /en-US/docs/Web/API/Selection.addRange	/en-US/docs/Web/API/Selection/addRange
 /en-US/docs/Web/API/Selection.anchorNode	/en-US/docs/Web/API/Selection/anchorNode
 /en-US/docs/Web/API/Selection.anchorOffset	/en-US/docs/Web/API/Selection/anchorOffset
@@ -8647,7 +8633,7 @@
 /en-US/docs/Web/API/UIEvent.pageX	/en-US/docs/Web/API/MouseEvent/pageX
 /en-US/docs/Web/API/UIEvent.pageY	/en-US/docs/Web/API/MouseEvent/pageY
 /en-US/docs/Web/API/UIEvent.view	/en-US/docs/Web/API/UIEvent/view
-/en-US/docs/Web/API/UIEvent.which	/en-US/docs/Web/API/KeyboardEvent/which
+/en-US/docs/Web/API/UIEvent.which	/en-US/docs/Web/API/UIEvent/which
 /en-US/docs/Web/API/UIEvent/UIEvent.detail	/en-US/docs/Web/API/UIEvent/detail
 /en-US/docs/Web/API/UIEvent/cancelBubble	/en-US/docs/Web/API/Event/cancelBubble
 /en-US/docs/Web/API/UIEvent/pageX	/en-US/docs/Web/API/MouseEvent/pageX
@@ -8851,7 +8837,6 @@
 /en-US/docs/Web/API/Window.dispatchEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
 /en-US/docs/Web/API/Window.localStorage	/en-US/docs/Web/API/Window/localStorage
 /en-US/docs/Web/API/Window.onlanguagechange	/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange
-/en-US/docs/Web/API/Window.routeEvent	/en-US/docs/Web/API/Window/routeEvent
 /en-US/docs/Web/API/Window.sessionStorage	/en-US/docs/Web/API/Window/sessionStorage
 /en-US/docs/Web/API/Window/StaticRange	/en-US/docs/Web/API/StaticRange
 /en-US/docs/Web/API/Window/URL	/en-US/docs/Web/API/URL
@@ -8868,6 +8853,7 @@
 /en-US/docs/Web/API/Window/convertPointFromPageToNode	/en-US/docs/Web/API/Window/webkitConvertPointFromPageToNode
 /en-US/docs/Web/API/Window/fetch	/en-US/docs/Web/API/fetch
 /en-US/docs/Web/API/Window/indexedDB	/en-US/docs/Web/API/indexedDB
+/en-US/docs/Web/API/Window/minimize	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/mozRequestAnimationFrame	/en-US/docs/Web/API/window/requestAnimationFrame
 /en-US/docs/Web/API/Window/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
 /en-US/docs/Web/API/Window/onafterprint	/en-US/docs/Web/API/WindowEventHandlers/onafterprint
@@ -8911,7 +8897,6 @@
 /en-US/docs/Web/API/Window/setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Web/API/Window/setTimeout	/en-US/docs/Web/API/setTimeout
 /en-US/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages	/en-US/docs/Web/OpenSearch
-/en-US/docs/Web/API/WindowBase64	/en-US/docs/Web/API/WindowOrWorkerGlobalScope
 /en-US/docs/Web/API/WindowBase64.atob	/en-US/docs/Web/API/atob
 /en-US/docs/Web/API/WindowBase64.btoa	/en-US/docs/Web/API/btoa
 /en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/en-US/docs/Glossary/Base64
@@ -8945,7 +8930,6 @@
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/unhandledrejection_event	/en-US/docs/Web/API/Window/unhandledrejection_event
 /en-US/docs/Web/API/WindowSessionStorage	/en-US/docs/Web/API/Window/sessionStorage
 /en-US/docs/Web/API/WindowSessionStorage.sessionStorage	/en-US/docs/Web/API/Window/sessionStorage
-/en-US/docs/Web/API/WindowTimers	/en-US/docs/Web/API/WindowOrWorkerGlobalScope
 /en-US/docs/Web/API/WindowTimers.clearInterval	/en-US/docs/Web/API/clearInterval
 /en-US/docs/Web/API/WindowTimers.clearTimeout	/en-US/docs/Web/API/clearTimeout
 /en-US/docs/Web/API/WindowTimers.setInterval	/en-US/docs/Web/API/setInterval
@@ -9258,7 +9242,7 @@
 /en-US/docs/Web/API/event.timeStamp	/en-US/docs/Web/API/Event/timeStamp
 /en-US/docs/Web/API/event.type	/en-US/docs/Web/API/Event/type
 /en-US/docs/Web/API/event.view	/en-US/docs/Web/API/UIEvent/view
-/en-US/docs/Web/API/event.which	/en-US/docs/Web/API/KeyboardEvent/which
+/en-US/docs/Web/API/event.which	/en-US/docs/Web/API/UIEvent/which
 /en-US/docs/Web/API/form.acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset
 /en-US/docs/Web/API/form.action	/en-US/docs/Web/API/HTMLFormElement/action
 /en-US/docs/Web/API/form.elements	/en-US/docs/Web/API/HTMLFormElement/elements
@@ -9413,7 +9397,6 @@
 /en-US/docs/Web/API/window.getDefaultComputedStyle	/en-US/docs/Web/API/window/getDefaultComputedStyle
 /en-US/docs/Web/API/window.getSelection	/en-US/docs/Web/API/Window/getSelection
 /en-US/docs/Web/API/window.history	/en-US/docs/Web/API/Window/history
-/en-US/docs/Web/API/window.home	/en-US/docs/Web/API/Window/home
 /en-US/docs/Web/API/window.innerHeight	/en-US/docs/Web/API/Window/innerHeight
 /en-US/docs/Web/API/window.innerWidth	/en-US/docs/Web/API/Window/innerWidth
 /en-US/docs/Web/API/window.length	/en-US/docs/Web/API/Window/length
@@ -9421,7 +9404,7 @@
 /en-US/docs/Web/API/window.locationbar	/en-US/docs/Web/API/Window/locationbar
 /en-US/docs/Web/API/window.matchMedia	/en-US/docs/Web/API/Window/matchMedia
 /en-US/docs/Web/API/window.menubar	/en-US/docs/Web/API/Window/menubar
-/en-US/docs/Web/API/window.minimize	/en-US/docs/Web/API/Window/minimize
+/en-US/docs/Web/API/window.minimize	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/window.moveBy	/en-US/docs/Web/API/Window/moveBy
 /en-US/docs/Web/API/window.moveTo	/en-US/docs/Web/API/Window/moveTo
 /en-US/docs/Web/API/window.mozAnimationStartTime	/en-US/docs/Web/API/Window/mozAnimationStartTime
@@ -11430,20 +11413,6 @@
 /en-US/docs/XML_introduction/Index	/en-US/docs/Web/XML/Index
 /en-US/docs/XML_introduction/xml:base	/en-US/docs/Web/XML/xml:base
 /en-US/docs/XPCOM_Interface_Reference/nsIDOMStorageEvent	/en-US/docs/Web/API/StorageEvent
-/en-US/docs/XPInstall_API_Reference/InstallTrigger_Object	/en-US/docs/Web/API/InstallTrigger
-/en-US/docs/XPInstall_API_Reference/InstallTrigger_Object/Methods/compareVersion	/en-US/docs/Web/API/InstallTrigger/compareVersion
-/en-US/docs/XPInstall_API_Reference/InstallTrigger_Object/Methods/enabled	/en-US/docs/Web/API/InstallTrigger/enabled
-/en-US/docs/XPInstall_API_Reference/InstallTrigger_Object/Methods/getVersion	/en-US/docs/Web/API/InstallTrigger/getVersion
-/en-US/docs/XPInstall_API_Reference/InstallTrigger_Object/Methods/install	/en-US/docs/Web/API/InstallTrigger/install
-/en-US/docs/XPInstall_API_Reference/InstallTrigger_Object/Methods/installChrome	/en-US/docs/Web/API/InstallTrigger/installChrome
-/en-US/docs/XPInstall_API_Reference/InstallTrigger_Object/Methods/startSoftwareUpdate	/en-US/docs/Web/API/InstallTrigger/startSoftwareUpdate
-/en-US/docs/XPInstall_API_Reference:InstallTrigger_Object	/en-US/docs/Web/API/InstallTrigger
-/en-US/docs/XPInstall_API_Reference:InstallTrigger_Object:Methods:compareVersion	/en-US/docs/Web/API/InstallTrigger/compareVersion
-/en-US/docs/XPInstall_API_Reference:InstallTrigger_Object:Methods:enabled	/en-US/docs/Web/API/InstallTrigger/enabled
-/en-US/docs/XPInstall_API_Reference:InstallTrigger_Object:Methods:getVersion	/en-US/docs/Web/API/InstallTrigger/getVersion
-/en-US/docs/XPInstall_API_Reference:InstallTrigger_Object:Methods:install	/en-US/docs/Web/API/InstallTrigger/install
-/en-US/docs/XPInstall_API_Reference:InstallTrigger_Object:Methods:installChrome	/en-US/docs/Web/API/InstallTrigger/installChrome
-/en-US/docs/XPInstall_API_Reference:InstallTrigger_Object:Methods:startSoftwareUpdate	/en-US/docs/Web/API/InstallTrigger/startSoftwareUpdate
 /en-US/docs/XPath	/en-US/docs/Web/XPath
 /en-US/docs/XPath/Axes	/en-US/docs/Web/XPath/Axes
 /en-US/docs/XPath/Axes/ancestor	/en-US/docs/Web/XPath/Axes/ancestor
@@ -11656,6 +11625,7 @@
 /en-US/docs/XSL_Transformations_in_Mozilla_FAQ	/en-US/docs/Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ
 /en-US/docs/XSL_Transformations_in_Mozilla_FAQ_(external)	/en-US/docs/Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ
 /en-US/docs/XSL_Transforms	/en-US/docs/Web/API/XSLTProcessor
+/en-US/docs/Xray_vision	https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html
 /en-US/docs/acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset
 /en-US/docs/adData	/en-US/docs/Web/API/Web_Bluetooth_API
 /en-US/docs/addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener

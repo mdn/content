@@ -10,12 +10,14 @@ tags:
   - Layout
   - Reference
 ---
-<p>HTML (<strong>Hypertext Markup Language</strong>) elements historically were categorized as either "block-level" elements or "inline-level" elements. Since this is a presentational characteristic it is nowadays specified by CSS in the <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout">Flow Layout</a>.
+<p>In this article, we'll examine HTML inline-level elements and how they differ from <a href="/en-US/docs/Web/HTML/Block-level_elements">block-level elements</a>.</p>
 
-<span class="seoSummary">Inline elements are those which only occupy the space bounded by the tags defining the element, instead of breaking the flow of the content.</span> In this article, we'll examine HTML inline-level elements and how they differ from <a href="/en-US/docs/Web/HTML/Block-level_elements">block-level elements</a>.</p>
+<p>HTML (<strong>Hypertext Markup Language</strong>) elements historically were categorized as either "block-level" elements or "inline-level" elements. Since this is a presentational characteristic it is nowadays specified by CSS in the <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout">Flow Layout</a>.</p>
+
+<p>Inline elements are those which only occupy the space bounded by the tags defining the element, instead of breaking the flow of the content.</p>
 
 <div class="note">
-<p>An inline element does not start on a new line and only takes up as much width as necessary.</p>
+<p><strong>Note:</strong> An inline element does not start on a new line and only takes up as much width as necessary.</p>
 </div>
 
 <h2 id="Inline_vs._block-level_elements_a_demonstration">Inline vs. block-level elements: a demonstration</h2>
@@ -36,12 +38,7 @@ the inline element's influence.&lt;/div&gt;</pre>
 
 <p>In this example, the {{HTMLElement("div")}} block-level element contains some text. Within that text is a {{HTMLElement("span")}} element, which is an inline element. Because the <code>&lt;span&gt;</code> element is inline, the paragraph correctly renders as a single, unbroken text flow, like this:</p>
 
-<p>{{EmbedLiveSample("Inline", 600, 80)}}</p>
-
-<div class="hidden">
-<p>For looks, this CSS (not displayed in standard reading mode) is also used:</p>
-
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   margin: 0;
   padding: 4px;
   border: 1px solid #333;
@@ -50,7 +47,8 @@ the inline element's influence.&lt;/div&gt;</pre>
 .highlight {
   background-color:#ee3;
 }</pre>
-</div>
+
+<p>{{EmbedLiveSample("Inline", 600, 80)}}</p>
 
 <h3 id="Block-level">Block-level</h3>
 
@@ -60,10 +58,7 @@ the inline element's influence.&lt;/div&gt;</pre>
 its background has been colored to display both the beginning and end of
 the block-level element's influence.&lt;/div&gt;</pre>
 
-<div class="hidden">
-<p>The CSS (not displayed in standard reading mode) is also used:</p>
-
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   margin: 0;
   padding: 4px;
   border: 1px solid #333;
@@ -72,7 +67,6 @@ the block-level element's influence.&lt;/div&gt;</pre>
 .highlight {
   background-color:#ee3;
 }</pre>
-</div>
 
 <p>Rendered using the same CSS as before, we get:</p>
 
@@ -95,7 +89,7 @@ the block-level element's influence.&lt;/div&gt;</pre>
  <dd>By default, inline elements do not force a new line to begin in the document flow. Block elements, on the other hand, typically cause a line break to occur (although, as usual, this can be changed using CSS).</dd>
 </dl>
 
-<h2 id="Elements">List of "inline" elements</h2>
+<h2>List of "inline" elements</h2>
 
 <p>The following elements are inline by default (although block and inline elements are no longer defined in HTML 5, use <a href="/en-US/docs/Web/Guide/HTML/Content_categories">content categories</a> instead):</p>
 
@@ -155,7 +149,6 @@ the block-level element's influence.&lt;/div&gt;</pre>
  <li>{{ HTMLElement("var") }}</li>
  <li>{{ HTMLElement("video") }}</li>
  <li>{{ HTMLElement("wbr") }}</li>
- <dd></dd>
 </ul>
 
 <h2 id="See_also">See also</h2>

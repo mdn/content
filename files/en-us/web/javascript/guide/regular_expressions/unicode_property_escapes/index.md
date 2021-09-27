@@ -41,9 +41,9 @@ tags:
 See also [PropertyValueAliases.txt](https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt)
 
 - UnicodeBinaryPropertyName
-  - : The name of a [binary property](https://tc39.es/ecma262/#table-binary-unicode-properties). E.g.: [`ASCII`](https://unicode.org/reports/tr18/#General_Category_Property), [`Alpha`](https://unicode.org/reports/tr44/#Alphabetic), `Math`, [`Diacritic`](https://unicode.org/reports/tr44/#Diacritic), [`Emoji`](https://unicode.org/reports/tr51/#Emoji_Properties), [`Hex_Digit`](https://unicode.org/reports/tr44/#Hex_Digit), `Math`, [`White_space`](https://unicode.org/reports/tr44/#White_Space), etc. See [Unicode Data PropList.txt ](https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt)for more info.
+  - : The name of a [binary property](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties). E.g.: [`ASCII`](https://unicode.org/reports/tr18/#General_Category_Property), [`Alpha`](https://unicode.org/reports/tr44/#Alphabetic), `Math`, [`Diacritic`](https://unicode.org/reports/tr44/#Diacritic), [`Emoji`](https://unicode.org/reports/tr51/#Emoji_Properties), [`Hex_Digit`](https://unicode.org/reports/tr44/#Hex_Digit), `Math`, [`White_space`](https://unicode.org/reports/tr44/#White_Space), etc. See [Unicode Data PropList.txt ](https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt)for more info.
 - UnicodePropertyName
-  - : The name of a [non-binary](https://tc39.es/ecma262/#table-nonbinary-unicode-properties) property:
+  - : The name of a [non-binary](https://tc39.es/ecma262/multipage/text-processing.html#table-nonbinary-unicode-properties) property:
 - UnicodePropertyValue
   - : One of the tokens listed in the Values section, below. Many values have aliases or shorthand (e.g. the value `Decimal_Number` for the `General_Category` property may be written `Nd`, `digit`, or `Decimal_Number`). For most values, the *`UnicodePropertyName`* part and equals sign may be omitted. If a *`UnicodePropertyName`* is specified, the value must correspond to the property type given.
 
@@ -97,7 +97,7 @@ mixedCharacters.match(/\p{Script=Greek}/u); // ε
 mixedCharacters.match(/\p{Sc=Cyrillic}/u); // Л
 ```
 
-For more details, please refer to [the Unicode specification](https://unicode.org/reports/tr24/#Script) and the [Scripts table in the ECMAScript specification](https://tc39.es/ecma262/#table-unicode-script-values).
+For more details, please refer to [the Unicode specification](https://unicode.org/reports/tr24/#Script) and the [Scripts table in the ECMAScript specification](https://tc39.es/ecma262/multipage/text-processing.html#table-unicode-script-values).
 
 If a character is used in a limited set of scripts, the `Script` property will only match for the "predominant" used script. If we want to match characters based on a "non-predominant" script, we could use the `Script_Extensions` property (`Scx` for short).
 
@@ -147,4 +147,4 @@ console.table(nonEnglishText.match(regexpUPE));
 - [Unicode character property — Wikipedia](https://en.wikipedia.org/wiki/Unicode_character_property)
 - [A blog post from Axel Rauschmayer about Unicode property escapes](https://2ality.com/2017/07/regexp-unicode-property-escapes.html)
 - [The Unicode document for Unicode properties](https://unicode.org/reports/tr18/#Categories)
-- [UnicodeMatchProperty in the ECMAScript specification](https://tc39.es/ecma262/#sec-runtime-semantics-unicodematchproperty-p)
+- [UnicodeMatchProperty in the ECMAScript specification](https://tc39.es/ecma262/multipage/text-processing.html#sec-runtime-semantics-unicodematchproperty-p)

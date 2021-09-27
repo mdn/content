@@ -22,18 +22,18 @@ browser-compat: html.elements.input.input-radio
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
-<p><span class="seoSummary">{{htmlelement("input")}} elements of type <strong><code>radio</code></strong> are generally used in <strong>radio groups</strong>—collections of radio buttons describing a set of related options.</span> Only one radio button in a given group can be selected at the same time. Radio buttons are typically rendered as small circles, which are filled or highlighted when selected.</p>
+<p>{{htmlelement("input")}} elements of type <strong><code>radio</code></strong> are generally used in <strong>radio groups</strong>—collections of radio buttons describing a set of related options.</p>
+
+<p>Only one radio button in a given group can be selected at the same time. Radio buttons are typically rendered as small circles, which are filled or highlighted when selected.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-radio.html", "tabbed-standard")}}</div>
 
-<div id="Basic_example">
 <p>They are called radio buttons because they look and operate in a similar manner to the push buttons on old-fashioned radios, such as the one shown below.</p>
 
 <p><img alt="Shows what radio buttons looked like in the olden days." src="old-radio.jpg" title="Photo of an old-time radio"></p>
-</div>
 
 <div class="note">
-<p><strong>Note</strong>: <a href="/en-US/docs/Web/HTML/Element/input/checkbox">Checkboxes</a> are similar to radio buttons, but with an important distinction: radio buttons are designed for selecting one value out of a set, whereas checkboxes let you turn individual values on and off. Where multiple controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.</p>
+<p><strong>Note:</strong> <a href="/en-US/docs/Web/HTML/Element/input/checkbox">Checkboxes</a> are similar to radio buttons, but with an important distinction: radio buttons are designed for selecting one value out of a set, whereas checkboxes let you turn individual values on and off. Where multiple controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.</p>
 </div>
 
 <table class="properties">
@@ -108,7 +108,7 @@ browser-compat: html.elements.input.input-radio
 <p>If you omit the <code>value</code> attribute in the HTML, the submitted form data assigns the value <code>on</code> to the group. In this scenario, if the user clicked on the "Phone" option and submitted the form, the resulting form data would be <code>contact=on</code>, which isn't helpful. So don't forget to set your <code>value</code> attributes!</p>
 
 <div class="note">
-<p><strong>Note</strong>: If no radio button is selected when the form is submitted, the radio group is not included in the submitted form data at all, since there is no value to report.</p>
+<p><strong>Note:</strong> If no radio button is selected when the form is submitted, the radio group is not included in the submitted form data at all, since there is no value to report.</p>
 </div>
 
 <p>It's fairly uncommon to actually want to allow the form to be submitted without any of the radio buttons in a group selected, so it is usually wise to have one default to the <code>checked</code> state. See {{anch("Selecting a radio button by default")}} below.</p>
@@ -157,34 +157,15 @@ form.addEventListener("submit", function(event) {
 
 <h2 id="Additional_attributes">Additional attributes</h2>
 
-<p>In addition to the common attributes shared by all {{HTMLElement("input")}} elements, <code>radio</code> inputs support the following attributes:</p>
+<p>In addition to the common attributes shared by all {{HTMLElement("input")}} elements, <code>radio</code> inputs support the following attributes.</p>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code><a href="#attr-checked">checked</a></td>
-   <td>A Boolean indicating whether or not this radio button is the default-selected item in the group</td>
-  </tr>
-  <tr>
-   <td><code><a href="#attr-value">value</a></code></td>
-   <td>The string to use as the value of the radio when submitting the form, if the radio is currently toggled on</td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="attr-checked"><code>checked</code></h3>
+<h3>checked</h3>
 
 <p>A Boolean attribute which, if present, indicates that this radio button is the default selected one in the group.</p>
 
 <p>Unlike other browsers, Firefox by default <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persists the dynamic checked state</a> of an <code>&lt;input&gt;</code> across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.</p>
 
-<h3 id="attr-value"><code>value</code></h3>
+<h3>value</h3>
 
 <p>The <code>value</code> attribute is one which all {{HTMLElement("input")}}s share; however, it serves a special purpose for inputs of type <code>radio</code>: when a form is submitted, only radio buttons which are currently checked are submitted to the server, and the reported value is the value of the <code>value</code> attribute. If the <code>value</code> is not otherwise specified, it is the string <code>on</code> by default. This is demonstrated in the section {{anch("Value")}} above.</p>
 
@@ -221,7 +202,7 @@ form.addEventListener("submit", function(event) {
 <p>In this case, the first radio button is now selected by default.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If you put the <code>checked</code> attribute on more than one radio button, later instances will override earlier ones; that is, the last <code>checked</code> radio button will be the one that is selected. This is because only one radio button in a group can ever be selected at once, and the user agent automatically deselects others each time a new one is marked as checked.</p>
+<p><strong>Note:</strong> If you put the <code>checked</code> attribute on more than one radio button, later instances will override earlier ones; that is, the last <code>checked</code> radio button will be the one that is selected. This is because only one radio button in a group can ever be selected at once, and the user agent automatically deselects others each time a new one is marked as checked.</p>
 </div>
 
 <h3 id="Providing_a_bigger_hit_area_for_your_radio_buttons">Providing a bigger hit area for your radio buttons</h3>
@@ -324,7 +305,7 @@ button:active {
 <p>Most notable here is the use of the {{cssxref("appearance")}} property (with prefixes needed to support some browsers). By default, radio buttons (and <a href="/en-US/docs/Web/HTML/Element/input/checkbox">checkboxes</a>) are styled with the operating system's native styles for those controls. By specifying <code>appearance: none</code>, you can remove the native styling altogether, and create your own styles for them. Here we've used a {{cssxref("border")}} along with {{cssxref("border-radius")}} and a {{cssxref("transition")}} to create a nice animating radio selection. Notice also how the {{cssxref(":checked")}} pseudo-class is used to specify the styles for the radio button's appearance when selected.</p>
 
 <div class="note">
-<p><strong>Compatibility note</strong>: If you wish to use the {{cssxref("appearance")}} property, you should test it very carefully. Although it is supported in most modern browsers, its implementation varies widely. In older browsers, even the keyword <code>none</code> does not have the same effect across different browsers, and some do not support it at all. The differences are smaller in the newest browsers.</p>
+<p><strong>Note:</strong> If you wish to use the {{cssxref("appearance")}} property, you should test it very carefully. Although it is supported in most modern browsers, its implementation varies widely. In older browsers, even the keyword <code>none</code> does not have the same effect across different browsers, and some do not support it at all. The differences are smaller in the newest browsers.</p>
 </div>
 
 <p>{{EmbedLiveSample('Styling_radio_inputs', 600, 120)}}</p>

@@ -33,7 +33,7 @@ Cookies are mainly used for three purposes:
 - Tracking
   - : Recording and analyzing user behavior
 
-Cookies were once used for general client-side storage. While this was legitimate when they were the only way to store data on the client, it is now recommended to use modern storage APIs. Cookies are sent with every request, so they can worsen performance (especially for mobile data connections). Modern APIs for client storage are the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API "DOM Storage") (`localStorage` and `sessionStorage`) and [IndexedDB](/en-US/docs/Web/API/IndexedDB_API).
+Cookies were once used for general client-side storage. While this was legitimate when there were the only way to store data on the client, it is now recommended to use modern storage APIs. Cookies are sent with every request, so they can worsen performance (especially for mobile data connections). Modern APIs for client storage are the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API "DOM Storage") (`localStorage` and `sessionStorage`) and [IndexedDB](/en-US/docs/Web/API/IndexedDB_API).
 
 > **Note:** To see stored cookies (and other storage that a web page can use), you can enable the [Storage Inspector](/en-US/docs/Tools/Storage_Inspector) in Developer Tools and select Cookies from the storage tree.
 
@@ -120,11 +120,18 @@ For example, if `Domain=mozilla.org` is set, then cookies are available on subdo
 
 The `Path` attribute indicates a URL path that must exist in the requested URL in order to send the `Cookie` header. The `%x2F` ("/") character is considered a directory separator, and subdirectories match as well.
 
-For example, if `Path=/docs` is set, these paths match:
+For example, if `Path=/docs` is set, these request paths match:
 
 - `/docs`
+- `/docs/`
 - `/docs/Web/`
 - `/docs/Web/HTTP`
+
+But these request paths don't:
+
+- `/`
+- `/docsets`
+- `/fr/docs`
 
 #### SameSite attribute
 

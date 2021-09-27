@@ -541,7 +541,7 @@ multiply24(10) // 240
 if (!Array.prototype.mapUsingReduce) {
   Array.prototype.mapUsingReduce = function(callback, initialValue) {
     return this.reduce(function(mappedArray, currentValue, currentIndex, array) {
-      mappedArray[index] = callback.call(initialValue, currentValue, currentIndex, array)
+      mappedArray[currentIndex] = callback.call(initialValue, currentValue, currentIndex, array)
       return mappedArray
     }, [])
   }

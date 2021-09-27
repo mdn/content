@@ -1,0 +1,75 @@
+---
+title: Touch.clientX
+slug: Web/API/Touch/clientX
+tags:
+  - API
+  - DOM
+  - Property
+  - Read-only
+  - Reference
+  - touch
+browser-compat: api.Touch.clientX
+---
+{{ APIRef("Touch Events") }}
+
+The `Touch.clientX` read-only property returns the X coordinate of the touch
+point relative to the viewport, not including any scroll offset.
+
+## Syntax
+
+```js
+touchItem.clientX;
+```
+
+### Return value
+
+A `long` representing the X coordinate of the touch point relative to the
+viewport, not including any scroll offset.
+
+## Example
+
+This example illustrates using the {{domxref("Touch")}} object's
+{{domxref("Touch.clientX")}} and {{domxref("Touch.clientY")}} properties. The
+{{domxref("Touch.clientX")}} property is the horizontal coordinate of a touch point
+relative to the browser's viewport excluding any scroll offset. The
+{{domxref("Touch.clientY")}} property is the vertical coordinate of the touch point
+relative to the browser's viewport excluding any scroll offset .
+
+In this example, we assume the user initiates a touch on an element with an id of
+`source`, moves within the element or out of the element and then releases
+contact with the surface. When the {{domxref("Element/touchend_event", "touchend")}}
+event handler is invoked, the changes in the {{domxref("Touch.clientX")}} and
+{{domxref("Touch.clientY")}} coordinates, from the starting touch point to the ending
+touch point, are calculated.
+
+```js
+// Register touchstart and touchend listeners for element 'source'
+var src = document.getElementById("source");
+var clientX, clientY;
+
+src.addEventListener('touchstart', function(e) {
+  // Cache the client X/Y coordinates
+  clientX = e.touches[0].clientX;
+  clientY = e.touches[0].clientY;
+}, false);
+
+src.addEventListener('touchend', function(e) {
+  var deltaX, deltaY;
+
+  // Compute the change in X and Y coordinates.
+  // The first touch point in the changedTouches
+  // list is the touch point that was just removed from the surface.
+  deltaX = e.changedTouches[0].clientX - clientX;
+  deltaY = e.changedTouches[0].clientY - clientY;
+
+  // Process the data ...
+}, false);
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

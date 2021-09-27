@@ -78,7 +78,7 @@ browser-compat: html.elements.script
  <p>Scripts with the <code>defer</code> attribute will prevent the <code>DOMContentLoaded</code> event from firing until the script has loaded and finished evaluating.</p>
 
  <div class="warning">
- <p>This attribute must not be used if the <code>src</code> attribute is absent (i.e. for inline scripts), in this case it would have no effect.</p>
+ <p><strong>Warning:</strong> This attribute must not be used if the <code>src</code> attribute is absent (i.e. for inline scripts), in this case it would have no effect.</p>
 
  <p>The <code>defer</code> attribute has no effect on <a href="/en-US/docs/Web/JavaScript/Guide/Modules">module scripts </a>— they defer by default.</p>
  </div>
@@ -93,7 +93,7 @@ browser-compat: html.elements.script
  <dd>This Boolean attribute is set to indicate that the script should not be executed in browsers that support<a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/"> ES2015 modules</a> — in effect, this can be used to serve fallback scripts to older browsers that do not support modular JavaScript code.</dd>
  <dt>{{htmlattrdef("nonce")}}</dt>
  <dd>A cryptographic nonce (number used once) to allow scripts in a <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src">script-src Content-Security-Policy</a>. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.</dd>
- <dt id="attr-referrer">{{htmlattrdef("referrerpolicy")}}</dt>
+ <dt>{{htmlattrdef("referrerpolicy")}}</dt>
  <dd>Indicates which <a href="/en-US/docs/Web/API/Document/referrer">referrer</a> to send when fetching the script, or resources fetched by the script:
   <ul>
   <li><code>no-referrer</code>: The {{HTTPHeader("Referer")}} header will not be sent.</li>
@@ -107,7 +107,7 @@ browser-compat: html.elements.script
  </ul>
 
  <div class="notecard note">
- <p><strong>Note</strong>: An empty string value (<code>""</code>) is both the default value, and a fallback value if <code>referrerpolicy</code> is not supported. If <code>referrerpolicy</code> is not explicitly specified on the <code>&lt;script&gt;</code> element, it will adopt a higher-level referrer policy, i.e. one set on the whole document or domain. If a higher-level policy is not available, the empty string is treated as being equivalent to <code>strict-origin-when-cross-origin</code>.</p>
+ <p><strong>Note:</strong> An empty string value (<code>""</code>) is both the default value, and a fallback value if <code>referrerpolicy</code> is not supported. If <code>referrerpolicy</code> is not explicitly specified on the <code>&lt;script&gt;</code> element, it will adopt a higher-level referrer policy, i.e. one set on the whole document or domain. If a higher-level policy is not available, the empty string is treated as being equivalent to <code>strict-origin-when-cross-origin</code>.</p>
  </div>
  </dd>
  <dt>{{htmlattrdef("src")}}</dt>
@@ -192,7 +192,7 @@ browser-compat: html.elements.script
 <p>To request script-inserted external scripts be executed in the insertion order in browsers where the <code>document.createElement("script").async</code> evaluates to <code>true</code> (such as Firefox 4), set <code>async="false"</code> on the scripts you want to maintain order.</p>
 
 <div class="warning">
-<p>Never call <code>document.write()</code> from an async script. In Firefox 3.6, calling <code>document.write()</code> has an unpredictable effect. In Firefox 4, calling <code>document.write()</code> from an async script has no effect (other than printing a warning to the error console).</p>
+<p><strong>Warning:</strong> Never call <code>document.write()</code> from an async script. In Firefox 3.6, calling <code>document.write()</code> has an unpredictable effect. In Firefox 4, calling <code>document.write()</code> from an async script has no effect (other than printing a warning to the error console).</p>
 </div>
 
 <h2 id="See_also">See also</h2>

@@ -12,7 +12,9 @@ browser-compat: html.elements.button
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>&lt;button&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element represents a clickable button, used to submit <a href="/en-US/docs/Learn/Forms">forms</a> or anywhere in a document for accessible, standard button functionality.</span> By default, HTML buttons are presented in a style resembling the platform the {{Glossary("user agent")}} runs on, but you can change buttons’ appearance with <a href="/en-US/docs/Web/CSS">CSS</a>.</p>
+<p>The <strong><code>&lt;button&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element represents a clickable button, used to submit <a href="/en-US/docs/Learn/Forms">forms</a> or anywhere in a document for accessible, standard button functionality.</p>
+
+<p>By default, HTML buttons are presented in a style resembling the platform the {{Glossary("user agent")}} runs on, but you can change buttons’ appearance with <a href="/en-US/docs/Web/CSS">CSS</a>.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/button.html", "tabbed-shorter")}}</div>
 
@@ -65,8 +67,8 @@ browser-compat: html.elements.button
  <p>Firefox, unlike other browsers, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persists the dynamic disabled state</a> of a {{HTMLElement("button")}} across page loads. Use the {{htmlattrxref("autocomplete","button")}} attribute to control this feature.</p>
  </dd>
  <dt>{{htmlattrdef("form")}}</dt>
- <dd>The {{HTMLElement("form")}} element to associate the button with (its <em>form owner</em>). The value of this attribute must be the <code>id</code> of a <code>&lt;form&gt;</code> in the same document. (If this attribute is not set, the <code>&lt;button&gt;</code> is associated with its ancestor <code>&lt;form&gt;</code> element, if any.)</dd>
- <dd>This attribute lets you associate <code>&lt;button&gt;</code> elements to <code>&lt;form&gt;</code>s anywhere in the document, not just inside a <code>&lt;form&gt;</code>. It can also override an ancestor <code>&lt;form&gt;</code> element.</dd>
+ <dd><p>The {{HTMLElement("form")}} element to associate the button with (its <em>form owner</em>). The value of this attribute must be the <code>id</code> of a <code>&lt;form&gt;</code> in the same document. (If this attribute is not set, the <code>&lt;button&gt;</code> is associated with its ancestor <code>&lt;form&gt;</code> element, if any.)</p>
+ <p>This attribute lets you associate <code>&lt;button&gt;</code> elements to <code>&lt;form&gt;</code>s anywhere in the document, not just inside a <code>&lt;form&gt;</code>. It can also override an ancestor <code>&lt;form&gt;</code> element.</p></dd>
  <dt>{{htmlattrdef("formaction")}}</dt>
  <dd>The URL that processes the information submitted by the button. Overrides the {{htmlattrxref("action","form")}} attribute of the button's form owner. Does nothing if there is no form owner.</dd>
  <dt>{{htmlattrdef("formenctype")}}</dt>
@@ -89,8 +91,8 @@ browser-compat: html.elements.button
  <p>If specified, this attribute overrides the {{htmlattrxref("method","form")}} attribute of the button's form owner.</p>
  </dd>
  <dt>{{htmlattrdef("formnovalidate")}}</dt>
- <dd>If the button is a submit button, this Boolean attribute specifies that the form is not to be <a href="/en-US/docs/Learn/Forms/Form_validation">validated</a> when it is submitted. If this attribute is specified, it overrides the {{htmlattrxref("novalidate","form")}} attribute of the button's form owner.</dd>
- <dd>This attribute is also available on <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> elements.</dd>
+ <dd><p>If the button is a submit button, this Boolean attribute specifies that the form is not to be <a href="/en-US/docs/Learn/Forms/Form_validation">validated</a> when it is submitted. If this attribute is specified, it overrides the {{htmlattrxref("novalidate","form")}} attribute of the button's form owner.</p>
+ <p>This attribute is also available on <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> elements.</p></dd>
  <dt>{{htmlattrdef("formtarget")}}</dt>
  <dd>If the button is a submit button, this attribute is a author-defined name or standardized, underscore-prefixed keyword indicating where to display the response from submitting the form. This is the <code>name</code> of, or keyword for, a <em>browsing context</em> (a tab, window, or {{HTMLElement("iframe")}}). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the button's form owner. The following keywords have special meanings:
  <ul>
@@ -139,7 +141,7 @@ browser-compat: html.elements.button
 
 <h4 id="Example_2">Example</h4>
 
-<pre>&lt;button name="favorite"&gt;
+<pre class="brush:html">&lt;button name="favorite"&gt;
   &lt;svg aria-hidden="true" viewBox="0 0 10 10"&gt;&lt;path d="M7 9L5 8 3 9V6L1 4h3l1-3 1 3h3L7 6z"/&gt;&lt;/svg&gt;
   Add to favorites
 &lt;/button&gt;
@@ -177,7 +179,7 @@ browser-compat: html.elements.button
  <li><a href="https://axesslab.com/hand-tremors/">Hand tremors and the giant-button-problem - Axess Lab</a></li>
 </ul>
 
-<h3 id="ARIA">ARIA state information</h3>
+<h3>ARIA state information</h3>
 
 <p>To describe the state of a button the correct ARIA attribute to use is <code>aria-pressed</code> and not <code>aria-checked</code> or <code>aria-selected</code>. To find out more read  the information about the <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">ARIA button role</a>.</p>
 
@@ -211,28 +213,28 @@ browser-compat: html.elements.button
  <tbody>
   <tr>
    <th>Firefox</th>
-   <td class="bc-supports-yes">Yes - Firefox 30.0</td>
-   <td class="bc-supports-no">No (even with a <code>tabindex</code>) Firefox 63</td>
+   <td>✅ Yes - Firefox 30.0</td>
+   <td>❌ No (even with a <code>tabindex</code>) Firefox 63</td>
   </tr>
   <tr>
    <th>Chrome</th>
-   <td class="bc-supports-yes">Yes - Chrome 35</td>
-   <td class="bc-supports-yes">Yes - Chrome 65</td>
+   <td>✅ Yes - Chrome 35</td>
+   <td>✅ Yes - Chrome 65</td>
   </tr>
   <tr>
    <th>Safari</th>
-   <td style="background: #eee;">N/A</td>
-   <td class="bc-supports-no">No (even with a <code>tabindex</code>) Safari 12 (<a href="https://bugs.webkit.org/show_bug.cgi?id=22261">bug 22261</a>)</td>
+   <td>N/A</td>
+   <td>❌ No (even with a <code>tabindex</code>) Safari 12 (<a href="https://bugs.webkit.org/show_bug.cgi?id=22261">bug 22261</a>)</td>
   </tr>
   <tr>
    <th>Internet Explorer</th>
-   <td class="bc-supports-yes">Yes - Internet Explorer 11</td>
-   <td style="background: #eee;">N/A</td>
+   <td>✅ Yes - Internet Explorer 11</td>
+   <td>N/A</td>
   </tr>
   <tr>
    <th>Presto</th>
-   <td class="bc-supports-yes">Yes - Opera 12</td>
-   <td class="bc-supports-yes">Yes - Opera 12</td>
+   <td>✅ Yes - Opera 12</td>
+   <td>✅ Yes - Opera 12</td>
   </tr>
  </tbody>
 </table>
@@ -249,13 +251,13 @@ browser-compat: html.elements.button
  <tbody>
   <tr>
    <th>Safari Mobile</th>
-   <td class="bc-supports-no">No (even with a <code>tabindex</code>)</td>
-   <td style="background-color: #eeeeee;">N/A</td>
+   <td>❌ No (even with a <code>tabindex</code>)</td>
+   <td>N/A</td>
   </tr>
   <tr>
    <th>Chrome 35</th>
-   <td class="bc-supports-no">No (even with a <code>tabindex</code>)</td>
-   <td class="bc-supports-yes">Yes</td>
+   <td>❌ No (even with a <code>tabindex</code>)</td>
+   <td>✅ Yes</td>
   </tr>
  </tbody>
 </table>

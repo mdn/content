@@ -14,14 +14,12 @@ tags:
 
 <p>The <code>pattern</code> attribute is an attribute of the {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}}, and {{HTMLElement("input/search", "search")}} input types.</p>
 
-<div id="pattern-include">
 <p>The <code>pattern</code> attribute, when specified, is a regular expression which the input's {{htmlattrxref("value")}} must match in order for the value to pass <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">guide on regular expressions</a>; the <code>'u'</code> flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.</p>
 
 <p>If the specified pattern is not specified or is invalid, no regular expression is applied and this attribute is ignored.</p>
 
 <div class="note">
-<p><strong>Tip:</strong> Use the {{htmlattrxref("title", "input")}} attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You <strong>must not</strong> rely on the tooltip alone for an explanation. See below for more information on usability.</p>
-</div>
+<p><strong>Note:</strong> Use the {{htmlattrxref("title", "input")}} attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You <strong>must not</strong> rely on the tooltip alone for an explanation. See below for more information on usability.</p>
 </div>
 
 <p>Some of the input types supporting the pattern attribute, notably the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/url", "url")}} input types, have expected value syntaxes that must be matched. If the pattern attribute isn't present, and the value doesn't match the expected syntax for that value type, the {{domxref('ValidityState')}} object's read-only {{domxref('ValidityState.typeMismatch','typeMismatch')}} property will be true.</p>
@@ -37,12 +35,13 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
+<h3>Matching a phone number</h3>
+
 <p>Given the following:</p>
 
-<div id="example1">
 <pre class="brush: html">&lt;p&gt;
- &lt;label&gt;Enter your phone number in the format (123)456-7890
-  (&lt;input name="tel1" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit area code" size="2"/&gt;)-
+ &lt;label&gt;Enter your phone number in the format (123) - 456 - 7890
+  (&lt;input name="tel1" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit area code" size="2"/&gt;) -
    &lt;input name="tel2" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit prefix" size="2"/&gt; -
    &lt;input name="tel3" type="tel" pattern="[0-9]{4}" placeholder="####" aria-label="4-digit number" size="3"/&gt;
  &lt;/label&gt;
@@ -56,10 +55,9 @@ tags:
   border: red solid 3px;
 }</pre>
 
-<p>{{EmbedLiveSample("example1", 300, 40)}}</p>
-</div>
+<p>{{EmbedLiveSample("Matching_a_phone_number", 300, 80)}}</p>
 
-<p>Had we used <code><a href="/en-US/docs/Web/HTML/Attributes/minlength">minlength</a></code> and <code><a href="/en-US/docs/Web/HTML/Attributes/maxlength">maxlength</a></code> attributes instead, we may have seen {{domxref('validityState.tooLong')}} or {{domxref('validityState.tooShort')}} being true.</p>
+<p>If we had used <code><a href="/en-US/docs/Web/HTML/Attributes/minlength">minlength</a></code> and <code><a href="/en-US/docs/Web/HTML/Attributes/maxlength">maxlength</a></code> attributes instead, we may have seen {{domxref('validityState.tooLong')}} or {{domxref('validityState.tooShort')}} being true.</p>
 
 <h3 id="Specifying_a_pattern">Specifying a pattern</h3>
 
@@ -80,8 +78,7 @@ tags:
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -106,7 +103,6 @@ input:valid+span:after {
   content: '✓';
   padding-left: 5px;
 }</pre>
-</div>
 
 <p>This renders like so:</p>
 

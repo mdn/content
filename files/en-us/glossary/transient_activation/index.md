@@ -16,11 +16,9 @@ Examples of APIs that require _transient activation_ are:
 
 > **Note:** Transient activation expires after a timeout (if not renewed by further interaction), and may also be "consumed" by some APIs.
 
+## See also 
+
+- {{domxref("MediaDevices.selectAudioOutput()")}}
+- [HTML Living Standard > Transient activation](https://html.spec.whatwg.org/multipage/interaction.html#transient-activation)
 
 
-<section id="Quick_links">
-<ul>
-  <li>{{domxref("MediaDevices.selectAudioOutput()")}}</li>
-  <li><a href="https://html.spec.whatwg.org/multipage/interaction.html#transient-activation">HTML Living Standard > Transient activation</a></li>
-</ul>
-</section>

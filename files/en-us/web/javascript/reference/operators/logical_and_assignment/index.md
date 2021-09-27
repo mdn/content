@@ -80,6 +80,5 @@ y &&= 0; // 0
   nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
 - [Bitwise
   AND assignment (`&=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
-- {{jsxref("Boolean")}}
 - {{Glossary("Truthy")}}
 - {{Glossary("Falsy")}}
