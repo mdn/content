@@ -157138,18 +157138,6 @@
       "kohei.yoshino"
     ]
   },
-  "Web/Web_Components/HTML_Imports": {
-    "modified": "2020-10-15T21:30:02.826Z",
-    "contributors": [
-      "ExE-Boss",
-      "RayannTedds",
-      "paulie4",
-      "indolering",
-      "chrisdavidmills",
-      "markg",
-      "teoli"
-    ]
-  },
   "Web/Web_Components/Using_custom_elements": {
     "modified": "2020-11-07T18:06:44.658Z",
     "contributors": [

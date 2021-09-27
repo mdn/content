@@ -11242,6 +11242,7 @@
 /en-US/docs/Web/Web_APIs	/en-US/docs/Web/API
 /en-US/docs/Web/Web_Components/Custom_Elements	/en-US/docs/Web/Web_Components/Using_custom_elements
 /en-US/docs/Web/Web_Components/Custom_Elements/Custom_Elements_with_Classes	/en-US/docs/Web/Web_Components/Using_custom_elements
+/en-US/docs/Web/Web_Components/HTML_Imports	/en-US/docs/Web/Web_Components
 /en-US/docs/Web/Web_Components/Shadow_DOM	/en-US/docs/Web/Web_Components/Using_shadow_DOM
 /en-US/docs/Web/XSLT/EXSLT	/en-US/docs/Web/EXSLT
 /en-US/docs/Web/XSLT/Elements	/en-US/docs/Web/XSLT/Element
