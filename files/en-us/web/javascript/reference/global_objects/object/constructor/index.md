@@ -171,7 +171,6 @@ function Child(x, y) {
   }
 }
 
-Child = Object.assign(Child, ParentWithStatic)  // copies over the static members from ParentWithStatic to Child
 Child.prototype = Object.create(ParentWithStatic.prototype)
 Child.prototype.constructor = Child
 
