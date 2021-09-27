@@ -13,7 +13,7 @@ browser-compat: javascript.classes.class_static_initialization_blocks
 ---
 {{jsSidebar("Classes")}}
 
-**Class static initialization blocks** are special ES13 methods of a {{jsxref("Statements/class", "class")}} that enable more flexible initialization of {{jsxref("Classes/static", "static")}} properties than can be achieved using per-field initialization.
+**Class static initialization blocks** are a special feature of a {{jsxref("Statements/class", "class")}} that enable more flexible initialization of {{jsxref("Classes/static", "static")}} properties than can be achieved using per-field initialization.
 
 Static blocks allow statements to be evaluated during initialization, which allows initializatons that (for example) include `try...catch` or set multiple fields from a single value.
 
