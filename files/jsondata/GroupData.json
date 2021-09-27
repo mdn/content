@@ -353,7 +353,6 @@
         "KeyboardEvent",
         "MouseEvent",
         "MouseScrollEvent",
-        "MouseWheelEvent",
         "MutationEvent",
         "ProgressEvent",
         "UIEvent",

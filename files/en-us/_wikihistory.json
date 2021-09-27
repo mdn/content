@@ -62243,19 +62243,6 @@
       "Masayuki"
     ]
   },
-  "Web/API/MouseWheelEvent": {
-    "modified": "2020-10-15T21:19:37.070Z",
-    "contributors": [
-      "fscholz",
-      "mfluehr",
-      "stevenwdv",
-      "teoli",
-      "kscarfone",
-      "Masayuki",
-      "Sheppy",
-      "rpp2119"
-    ]
-  },
   "Web/API/MsFirstPaint": {
     "modified": "2019-03-18T21:32:14.582Z",
     "contributors": [

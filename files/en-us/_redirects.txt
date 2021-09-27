@@ -1415,7 +1415,7 @@
 /en-US/docs/DOM/MediaStreamTrack	/en-US/docs/Web/API/MediaStreamTrack
 /en-US/docs/DOM/MouseEvent	/en-US/docs/Web/API/MouseEvent
 /en-US/docs/DOM/MouseScrollEvent	/en-US/docs/Web/API/MouseScrollEvent
-/en-US/docs/DOM/MouseWheelEvent	/en-US/docs/Web/API/MouseWheelEvent
+/en-US/docs/DOM/MouseWheelEvent	/en-US/docs/Web/API/WheelEvent
 /en-US/docs/DOM/Mouse_gesture_events	/en-US/docs/Web/Events/Mouse_gesture_events
 /en-US/docs/DOM/Mozilla_event_reference	/en-US/docs/Web/Events
 /en-US/docs/DOM/Mozilla_event_reference/DOMContentLoaded	/en-US/docs/Web/API/Window/DOMContentLoaded_event
@@ -7986,6 +7986,7 @@
 /en-US/docs/Web/API/MouseEvent/MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN	/en-US/docs/Web/API/MouseEvent/WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN
 /en-US/docs/Web/API/MouseEvent/MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN	/en-US/docs/Web/API/MouseEvent/WEBKIT_FORCE_AT_MOUSE_DOWN
 /en-US/docs/Web/API/MouseEvent/which	/en-US/docs/Web/API/UIEvent/which
+/en-US/docs/Web/API/MouseWheelEvent	/en-US/docs/Web/API/WheelEvent
 /en-US/docs/Web/API/MsAudioCategory	/en-US/docs/Web/API/HTMLAudioElement/msAudioCategory
 /en-US/docs/Web/API/MsAudioDeviceType	/en-US/docs/Web/API/HTMLAudioElement/msAudioDeviceType
 /en-US/docs/Web/API/MsClearEffects	/en-US/docs/Web/API/HTMLMediaElement/msClearEffects
