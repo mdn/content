@@ -26,7 +26,7 @@ createCubeLayer(options)
   - : An object to configure the {{domxref("XRCubeLayer")}}. It can have the following properties and the `space`, `viewPixelHeight`, and `viewPixelWidth` properties are required:
     - `colorFormat`: Optional. A {{domxref("GLenum")}} defining the data type of the color texture data. Possible values:
         - `gl.RGB`
-        - `gl.RGBA`
+        - `gl.RGBA` (Default)
       Additionally, for contexts with the {{domxref("EXT_sRGB")}} extension enabled:
       - `ext.SRGB_EXT`
       - `ext.SRGB_ALPHA_EXT`
@@ -44,24 +44,22 @@ createCubeLayer(options)
       - `ext.COMPRESSED_SRGB8_ALPHA8_ETC2_EAC`
       Additionally, for contexts with the {{domxref("WEBGL_compressed_texture_astc")}} extension enabled:
       - All of the formats the extension supports.
-      The default value is `gl.RGBA`.
-    - `depthFormat`: Optional. A {{domxref("GLenum")}} defining the data type of the depth texture data or `0` indicating that the layer should not provide a depth texture (in that case {{domxref("XRProjectionLayer.ignoreDepthValues")}} will be `true`).
-      Possible values within {{domxref("WebGLRenderingContext")}} contexts with the {{domxref("WEBGL_depth_texture")}} extension enabled, or within {{domxref("WebGL2RenderingContext")}} contexts (no extension required):
-      - `gl.DEPTH_COMPONENT`
+    - `depthFormat`: Optional. A {{domxref("GLenum")}} defining the data type of the depth texture data or `0` indicating that the layer should not provide a depth texture. (In that case {{domxref("XRProjectionLayer.ignoreDepthValues")}} will be `true`.)
+      Possible values for {{domxref("WebGLRenderingContext")}} contexts with the {{domxref("WEBGL_depth_texture")}} extension enabled, or for {{domxref("WebGL2RenderingContext")}} contexts (no extension required):
+      - `gl.DEPTH_COMPONENT` (Default)
       - `gl.DEPTH_STENCIL`
       Additionally, for {{domxref("WebGL2RenderingContext")}} contexts:
       - `gl.DEPTH_COMPONENT24`
       - `gl.DEPTH24_STENCIL24`
-      The default value is `gl.DEPTH_COMPONENT`.
     - `isStatic`: Optional. A boolean that, if true, indicates you can only draw to this layer when {{domxref("XRCompositionLayer.needsRedraw", "needsRedraw")}} is `true`. The default value is `false`.
     - `layout`: Optional. A string indicating the layout of the layer. Possible values:
       - `default`: The layer accommodates all views of the session.
       - `mono`: A single {{domxref("XRSubImage")}} is allocated and presented to both eyes.
       - `stereo`: The user agent decides how it allocates the {{domxref("XRSubImage")}} (one or two) and the layout (top/bottom or left/right).
-      - `stereo-left-right`: A single {{domxref("XRSubImage")}} is allocated. Left eye gets the left area of the texture, right eye the right.
-      - `stereo-top-bottom`: A single {{domxref("XRSubImage")}} is allocated. Left eye gets the top area of the texture, right eye the bottom.
+      - `stereo-left-right`: A single {{domxref("XRSubImage")}} is allocated. The left eye gets the left area of the texture, the right eye the right.
+      - `stereo-top-bottom`: A single {{domxref("XRSubImage")}} is allocated. The left eye gets the top area of the texture, the right eye the bottom.
       The default value is `mono`.
-    - `mipLevels`: Optional. A number specifying desired number of mip levels. The default value is `1`.
+    - `mipLevels`: Optional. A number specifying the desired number of mip levels. The default value is `1`.
     - `orientation`: Optional. A {{domxref("DOMPointReadOnly")}} specifying the orientation relative to the `space` property.
     - `space`: **Required**. An {{domxref("XRSpace")}} object defining the layer's spatial relationship with the user’s physical environment.
     - `viewPixelHeight`: **Required**. A number specifying the pixel height of the layer view.
@@ -73,7 +71,7 @@ An {{domxref("XRCubeLayer")}} object.
 
 ## Examples
 
-### Creating an `XRCubeLayer`
+### Creating an XRCubeLayer
 
 Configure the cube layer using the options listed above in a call to `createCubeLayer()`. To present layers to the XR device, add them to the `layers` render state using {{domxref("XRSession.updateRenderState()")}}.
 

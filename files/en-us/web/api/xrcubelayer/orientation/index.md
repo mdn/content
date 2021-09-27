@@ -24,7 +24,7 @@ A {{domxref("DOMPointReadOnly")}}.
 
 ### Updating the cube layer's orientation
 
-The {{domxref("XRWebGLBinding.createCubeLayer()")}} method creates a cube layer and allows to specify an `orientation`. The `XRCubeLayer.orientation` property can be used after layer creation to get the orientation used or to set it to a new one.
+The {{domxref("XRWebGLBinding.createCubeLayer()")}} method creates a cube layer and allows specifying an `orientation`. The `XRCubeLayer.orientation` property can be used after layer creation to get the current orientation or to set it to a new one.
 
 ```js
 const cubeLayer = xrGlBinding.createCubeLayer({

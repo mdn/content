@@ -18,7 +18,7 @@ The `redraw` event is sent to the `XRCubeLayer` object when the underlying resou
 
 See also the {{domxref("XRCompositionLayer.needsRedraw")}} property which is also available to `XRCubeLayer` objects through inheritance from {{domxref("XRCompositionLayer")}}.
 
-The event is of type {{domxref("XRLayerEvent")}}. Also available through the `XRCubeLayer.onredraw` event handler property.
+The event is of type {{domxref("XRLayerEvent")}}. Also passed to the `XRCubeLayer.onredraw` event handler property.
 
 <table class="properties">
   <tbody>
