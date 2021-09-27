@@ -40,12 +40,14 @@ Since `var`, `function`, `const` or  `let` declared in a `static {}` initializat
 
 ```js
 var y = 'Outer y';
+
 class A {
   static field = 'Inner y';
   static {
     var y = this.field;
   }
 }
+
 // vars defined in static block is not hoisted
 console.log(y);
 // > 'Outer y'
