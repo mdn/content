@@ -12,8 +12,8 @@ tags:
   - composite widget role
   - NeedsContent
 ---
-
-
+{{draft}}
+<!--
 
 ## Description
 
@@ -30,13 +30,13 @@ tags:
 ## Best Practices
 
 ### Prefer HTML
-
+-->
 ## Specifications
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#menubar","ARIA: menubar role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_menubar_role","menubar role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+| {{SpecName("ARIA Authoring Practices 1.2","#menu","menubar role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 
 ## See Also

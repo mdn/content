@@ -10,8 +10,8 @@ tags:
   - ARIA roles
   - NeedsContent
 ---
-
-
+{{draft}}
+<!--
 
 ## Description
 
@@ -27,14 +27,14 @@ tags:
 
 ## Best Practices
 
-### Prefer HTML
+### Prefer HTML -->
 
 ## Specifications
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#menuitem","ARIA: menuitem role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_menuitem_role","menuitem role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+| {{SpecName("ARIA Authoring Practices 1.2","#menu","menuitem role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 
 ## See Also

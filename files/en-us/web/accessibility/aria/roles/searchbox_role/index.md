@@ -11,8 +11,8 @@ tags:
   - NeedsContent
 ---
 
-
-
+{{draft}}
+<!--
 ## Description
 
 ### Associated WAI-ARIA roles, states, and properties
@@ -27,18 +27,18 @@ tags:
 
 ## Best Practices
 
-### Prefer HTML
+### Prefer HTML -->
 
 ## Specifications
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#searchbox","ARIA: searchbox role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_searchbox_role","searchbox role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 
 ## See Also
 
+- [ARIA: `search` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Search_role)
 
 <section id="Quick_links">
 

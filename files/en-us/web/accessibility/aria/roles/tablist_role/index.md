@@ -12,9 +12,9 @@ tags:
   - composite widget role
   - NeedsContent
 ---
+{{draft}}
 
-
-
+<!--
 ## Description
 
 ### Associated WAI-ARIA roles, states, and properties
@@ -30,13 +30,12 @@ tags:
 ## Best Practices
 
 ### Prefer HTML
-
+-->
 ## Specifications
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#tablist","ARIA: tablist role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_tablist_role","tablist role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 
 ## See Also

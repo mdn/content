@@ -8,7 +8,7 @@ tags:
   - annotations
   - mark
 ---
-The `mark` [landmark role](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) semantically denotes HTML elements containing text that is marked/highlighted for reference purposes. This is semantically equivalent to the HTML [\<mark>](/en-US/docs/Web/HTML/Element/mark) element. If possible, you should use this element instead.
+The `mark` landmark role semantically denotes HTML elements containing text that is marked/highlighted for reference purposes. This is semantically equivalent to the HTML {{HTMLElement('mark')}} element. If possible, you should use this element instead.
 
 ## Examples
 
@@ -31,13 +31,13 @@ To associate the comment with the text being commented, we need to wrap the comm
 
 ## Accessibility concerns
 
-[Landmark roles](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) are intended to be used sparingly, to identify larger overall sections of the document. Using too many landmark roles can create "noise" in screen readers, making it difficult to understand the overall layout of the page.
+[Landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles#landmark_roles) are intended to be used sparingly, to identify larger overall sections of the document. Using too many landmark roles can create "noise" in screen readers, making it difficult to understand the overall layout of the page.
 
 ## Best practices
 
 ### Prefer HTML
 
-Using the [`<mark>` element](/en-US/docs/Web/HTML/Element/mark) will automatically communicate a section has a role of `mark`. If at all possible, prefer using it instead.
+Using the [`<mark>`](/en-US/docs/Web/Accessibility/ARIA/Roles/mark_role) element will automatically communicate a section has a role of `mark`. If at all possible, prefer using it instead.
 
 ## Specifications
 
@@ -47,6 +47,7 @@ Will be part of WAI-ARIA 1.3, which is still being drafted.
 
 ## See also
 
+- HTML {{HTMLElement('mark')}} element
 - [ARIA annotations](/en-US/docs/Web/Accessibility/ARIA/Annotations)
 
 <section id="Quick_links">

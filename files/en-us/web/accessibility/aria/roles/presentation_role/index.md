@@ -9,7 +9,6 @@ tags:
   - Reference
   - ARIA roles
   - document structure role
-  - NeedsContent
 ---
 
 The `presentation` role and its synonym `none` remove an elements implicit native semantics, such as headings, lists, etc., from the accessibility tree. 
@@ -67,7 +66,7 @@ None. If a global ARIA state and property is set, `presentation` or `none` will 
 
 ## See Also
 
-
+- [`aria-hidden` versus `role="presentation/none"`](https://www.scottohara.me/blog/2018/05/05/hidden-vs-none.html) - by Scott O'Hara
 
 
 <section id="Quick_links">

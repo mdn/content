@@ -9,7 +9,6 @@ tags:
   - Reference
   - ARIA roles
   - document structure role
-  - NeedsContent
 ---
 
 A `note` role suggests a section whose content is parenthetic or ancillary to the main content.

@@ -39,7 +39,7 @@ Elements with the role status have an implicit `aria-live` value of `polite` and
 
   - : Some screen readers announce the name of a status element before announcing the content of the status element. Including an `aria-label` provides a method for prefacing the visible content of a status element with text that is not displayed when a screen reader reads the content.  
 
-## ## Specifications
+## Specifications
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |

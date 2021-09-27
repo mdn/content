@@ -11,8 +11,8 @@ tags:
   - NeedsContent
 ---
 
-
-
+{{draft}}
+<!--
 ## Description
 
 ### Associated WAI-ARIA roles, states, and properties
@@ -27,14 +27,13 @@ tags:
 
 ## Best Practices
 
-### Prefer HTML
+### Prefer HTML -->
 
 ## Specifications
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#scrollbar","ARIA: scrollbar role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_scrollbar_role","scrollbar role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 
 ## See Also

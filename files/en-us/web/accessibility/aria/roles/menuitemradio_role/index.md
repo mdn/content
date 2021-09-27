@@ -11,8 +11,8 @@ tags:
   - NeedsContent
 ---
 
-
-
+{{draft}}
+<!--
 ## Description
 
 ### Associated WAI-ARIA roles, states, and properties
@@ -27,14 +27,14 @@ tags:
 
 ## Best Practices
 
-### Prefer HTML
+### Prefer HTML -->
 
 ## Specifications
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#menuitemradio","ARIA: menuitemradio role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_menuitemradio_role","menuitemradio role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+| {{SpecName("ARIA Authoring Practices 1.2","#menu","Menu or Menu bar")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 
 ## See Also

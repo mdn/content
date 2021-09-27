@@ -31,9 +31,9 @@ There are no hard and fast rules about which elements you should use to mark up 
 
 ### Associated WAI-ARIA Roles, States, and Properties
 
-- [list](/en-US/docs/Web/Accessibility/ARIA/Roles/List_role)
+- [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/List_role)
   - : A list of items. Elements with role `list` must have one or more elements with the role `listitem` as children, a one or more elements with the role of `group` that have one or more elements with the `listitem` role as children.
-- [group](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
+- [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
   - : A collection of related objects, limited to list items when nested in a list, not important enough to have their own place in a pages table of contents.
 
 ## Best practices
@@ -60,7 +60,7 @@ or use an ordered list if the order of the list items matters:
 </ol>
 ```
 
-> **Note:** The ARIA list/listitem roles don't distinguish between ordered and unordered lists.
+> **Note:** The ARIA `list` / `listitem` roles don't distinguish between ordered and unordered lists.
 
 > **Note:** Styling a list with `list-style: none;` in CSS removes the list semantics. Adding `role="listitem"` returns the semantics.
 

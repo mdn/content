@@ -79,7 +79,7 @@ If the grid is used as an interactive widget, [keyboard](#keyboard-use) interac
 - [aria-readonly](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-readonly_attribute)
   - : If the user can navigate the grid but not change the value or values of the grid, the `aria-readonly` should be set to `true`. The default value is `false`.
 
-> **Note:** For many use cases, an HTML {{HTMLElement(table)}} element is sufficient as it and the various table elements already include many ARIA roles.
+> **Note:** For many use cases, an HTML {{HTMLElement('table')}} element is sufficient as it and the various table elements already include many ARIA roles.
 
 ### Keyboard interactions
 
@@ -601,15 +601,15 @@ Even if the keyboard use is properly implemented, some users might not be aware 
 
 ## See also
 
-- [ARIA composite role](/en-US/docs/Web/Accessibility/ARIA/Roles/composite_role)
-- [ARIA table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
-- [ARIA treegrid role](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
-- [ARIA row role](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role)
-- [ARIA rowgroup role](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role)
-- [ARIA: gridcell role](/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_role)
-- [ARIA: rowheader role](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
+- [ARIA `composite` role](/en-US/docs/Web/Accessibility/ARIA/Roles/composite_role)
+- [ARIA `table` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- [ARIA `treegrid` role](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
+- [ARIA `row` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role)
+- [ARIA `rowgroup` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role)
+- [ARIA: `gridcell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_role)
+- [ARIA: `rowheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
 - [ARIA: columnheader role](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-- HTML table element
+- {{HTMLElement('table','HTML <code>&lg;table></code> element')}}
 - aria-level
 - aria-multiselectable
 - aria-readonly

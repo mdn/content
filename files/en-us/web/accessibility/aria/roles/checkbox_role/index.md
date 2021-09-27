@@ -66,7 +66,7 @@ The developer is required to change the value of the `aria-checked` attribute d
 
     key to change the state of the checkbox by changing the value of the `aria-checked` attribute and the appearance of the checkbox so it appears checked or unchecked to the sighted user
 
-### Examples
+## Examples
 
 The following example creates an otherwise non-semantic checkbox element using CSS and JavaScript to handle the checked or unchecked status of the element.
 

@@ -11,7 +11,8 @@ tags:
   - NeedsContent
 ---
 
-
+{{draft}}
+<!--
 
 ## Description
 
@@ -27,14 +28,14 @@ tags:
 
 ## Best Practices
 
-### Prefer HTML
+### Prefer HTML -->
 
 ## Specifications
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#menuitemcheckbox","ARIA: menuitemcheckbox role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_menuitemcheckbox_role","menuitemcheckbox role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+| {{SpecName("ARIA Authoring Practices 1.2","#menu","Menu or Menu bar")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 
 ## See Also

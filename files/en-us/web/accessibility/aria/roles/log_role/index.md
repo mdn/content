@@ -40,7 +40,7 @@ By default, updates contain only the changes to the live region and these are an
 
 ## Best Practices
 
-With an area that has scrolling text, such as a stock ticker, the marquee role should be used instead.
+With an area that has scrolling text, such as a stock ticker, the [`marquee`](/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role) role should be used instead.
 
 ## Specifications
 

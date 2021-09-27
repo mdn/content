@@ -10,7 +10,6 @@ tags:
   - ARIA roles
   - document structure role
   - toolbar role
-  - NeedsContent
 ---
 
 The `toolbar` role defines the containing element as a collection of commonly used function buttons or controls represented in a compact visual form.
@@ -107,8 +106,8 @@ If any of the otherwise interactive elements within the toolbar are disabled, co
 
 ## See Also
 
-- The CSS :focus pseudoclass
-- The CSS :focus-within pseudclass
+- [The CSS `:focus` pseudoclass](/en-US/docs/Web/CSS/:focus)
+- [The CSS `:focus-within` pseudclass](/en-US/docs/Web/CSS/:focus-within)
 
 <section id="Quick_links">
 

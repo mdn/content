@@ -20,7 +20,7 @@ It is highly recommended using the HTML select element, or a group of radio butt
 
 Elements with the role `listbox` have an implicit `aria-orientation` value of `vertical`.
 
-When a list is tabbed to, the first item in the list will be selected if nothing else already is. Up/down arrows navigate the list, and pressing Shift + Up/Down arrows will move and extend the selection. Typing one or more letters will navigate the list items (same letter goes to each item starting with that, different letters go to the first item starting with that entire string). If the current item has an associated context menu, Shift+F10 will launch that menu. If list items are checkable, Space can be used to toggle [checkboxes](https://www.w3.org/TR/wai-aria-practices/#checkbox). For selectable list items, Space toggles their selection, Shift+Space can be used to select contiguous items, Ctrl+Arrow moves without selecting, and Ctrl+Space can be used to select non-contiguous items. It is recommended that a checkbox, link or other method be used to select all items, and Ctrl+A could be used as a shortcut key for this.
+When a list is tabbed to, the first item in the list will be selected if nothing else already is. Up/down arrows navigate the list, and pressing Shift + Up/Down arrows will move and extend the selection. Typing one or more letters will navigate the list items (same letter goes to each item starting with that, different letters go to the first item starting with that entire string). If the current item has an associated context menu, Shift+F10 will launch that menu. If list items are checkable, Space can be used to toggle [checkboxes](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role). For selectable list items, Space toggles their selection, Shift+Space can be used to select contiguous items, Ctrl+Arrow moves without selecting, and Ctrl+Space can be used to select non-contiguous items. It is recommended that a checkbox, link or other method be used to select all items, and Ctrl+A could be used as a shortcut key for this.
 
 When the listbox role is added to an element, or such an element becomes visible, screen readers announce the label and role of the listbox when it gets focus. If an option or item is focused within the list, it gets announced next, followed by an indication of the item's position with the list if the screen reader supports this. As focus moves within the list, the screen reader announces the relevant items.
 
@@ -28,16 +28,38 @@ When the listbox role is added to an element, or such an element becomes visible
 
 #### Associated Roles
 
-- [option](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
+- [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role) role
   - : One or more nested options are required. All selected options have `aria-selected` set to `true`. All options that are not selected have `aria-selected` set to `false`. If an option is not selectable, omit the `aria-selected`.
-- [list](/en-US/docs/Web/Accessibility/ARIA/Roles/List_role)
+  
+- [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/List_role) role
   - : A section containing `listitem` elements
 
 #### States and Properties
 
-<dl><dt>aria-activedescendant</dt><dd>Holds the `id` string of the currently active element within the listbox. If that's an option element, then that would be the `id` of the most recently interacted with option, regardless of whether that option has an `aria-selected` value of `true` or not. Takes the value of only one `id`, even in a multiselectable listbox. If the `id` does not refer to a DOM descendant of the listbox, then that `id` must be included among the IDs in the `aria-owns` attribute.</dd><dt>aria-owns</dt><dd>This is a space-separated list of element IDs which are not DOM child elements of the listbox. IDs listed here cannot also be listed in `aria-owns` attributes of any other elements.</dd><dt>aria-multiselectable</dt><dd>Include and set to `true` if the user can select more than one option. If set to `true`, <em>every</em> selectable option should have an `aria-selected` attribute included and set to `true` or `false`. Options which are <em>not</em> selectable <em>should not</em> have the `aria-selected` attribute.</dd><dd>If `false` or omitted, only the currently selected option, if any option is selected, needs the `aria-selected` attribute, and it must be set to `true`.</dd><dt>aria-required</dt><dd>A Boolean attribute which indicates that an option with a non-empty string value must be selected.</dd><dt>aria-readonly</dt><dd>The user cannot change which options are selected or unselected, but the listbox is otherwise operable.</dd><dt>aria-label</dt><dd>A human-readable string value which identifies the listbox. If there's a visible label, then `aria-labelledby` should be used instead to refer to that label.</dd><dt>aria-labelledby</dt><dd>Identifies the visible element or elements in a space-separated list of element IDs which identify the listbox. If there's no visible label, then `aria-label` should be used instead to include a label. (Note: "labelled", with two L's, is the correct spelling based on the accessibility API conventions.)</dd><dt>aria-roledescription</dt><dd>A human-readable string value which more clearly identifies the role of the listbox. Screen readers will often read this value to the user after reading the label (if there is one), in place of saying "listbox".</dd></dl>
+- `aria-activedescendant`
+    - : Holds the `id` string of the currently active element within the listbox. If that's an option element, then that would be the `id` of the most recently interacted with option, regardless of whether that option has an `aria-selected` value of `true` or not. Takes the value of only one `id`, even in a multiselectable listbox. If the `id` does not refer to a DOM descendant of the listbox, then that `id` must be included among the IDs in the `aria-owns` attribute.
+- `aria-owns`
+    - : This is a space-separated list of element IDs which are not DOM child elements of the listbox. IDs listed here cannot also be listed in `aria-owns` attributes of any other elements.
 
-(For further details and a full list of ARIA states and properties see the [ARIA `listbox` (role)](https://www.w3.org/TR/wai-aria-1.1/#listbox) documentation.)
+- `aria-multiselectable`
+    - : Include and set to `true` if the user can select more than one option. If set to `true`, _every_ selectable option should have an `aria-selected` attribute included and set to `true` or `false`. Options which are _not_ selectable _should not_ have the `aria-selected` attribute. If `false` or omitted, only the currently selected option, if any option is selected, needs the `aria-selected` attribute, and it must be set to `true`.
+
+- `aria-required`
+    - : A Boolean attribute which indicates that an option with a non-empty string value must be selected.
+
+- `aria-readonly`
+    - : The user cannot change which options are selected or unselected, but the listbox is otherwise operable.
+
+- `aria-label`
+    - : A human-readable string value which identifies the listbox. If there's a visible label, then `aria-labelledby` should be used instead to refer to that label.
+
+- `aria-labelledby`
+    - : Identifies the visible element or elements in a space-separated list of element IDs which identify the listbox. If there's no visible label, then `aria-label` should be used instead to include a label. (Note: "labelled", with two L's, is the correct spelling based on the accessibility API conventions.)
+
+- `aria-roledescription`
+    - : A human-readable string value which more clearly identifies the role of the listbox. Screen readers will often read this value to the user after reading the label (if there is one), in place of saying "listbox".
+
+For further details and a full list of ARIA states and properties see the  `listbox`(/en-US/docs/Web/Accessibility/ARIA/Roles/Listbox_role)  role.
 
 ### Keyboard interactions
 
@@ -128,8 +150,8 @@ When the user selects an option, the following must occur:
 When the user clicks on an option, hits <kbd>Space</kbd> when focused on an option, or otherwise toggles the state of an option, the following must occur:
 
 1.  Toggle the aria-selected state of the currently focused option, changing the state of the aria-selected to true if it was false or false if it was true.
-2.  Change the appearance of the option to reflect it's selected state
-3.  Update the aria-activedescendant value on the listbox to the id of the option the user just interacted with, even if they toggled the option to be unselected.
+1.  Change the appearance of the option to reflect it's selected state
+1.  Update the aria-activedescendant value on the listbox to the id of the option the user just interacted with, even if they toggled the option to be unselected.
 
 <div class="notecard note"><p>The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. The {{HTMLElement('select')}} element with descendant {{HTMLElement('option')}} elements handles all the needed interactions natively.</p></div>
 

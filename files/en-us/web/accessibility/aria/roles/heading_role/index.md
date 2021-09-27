@@ -26,7 +26,7 @@ This defines the text in the `div` to be the main heading of the page, indicated
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- aria-level
+- `aria-level`
   - : The aria-level attribute specifies the heading level in the document structure. If no level is present, a value of 2 is the default.
 
 ### Keyboard interactions
@@ -83,6 +83,20 @@ If you must use the `heading` role and `aria-level` attribute, do not go over l
 ## Best practices
 
 The best way to use this role is to **not use it at all**, and instead use the native heading tags {{HTMLElement('h1')}}  through {{HTMLElement('h6')}}  as shown in the example above. The `heading` role and `aria-level` attribute should only be used to retrofit accessibility on legacy code that you cannot make major changes to.
+
+Instead of using the ARIA `heading` role, use the semantic HTML element:
+
+
+| HTML Element          | `heading` role                   |
+| --------------------- | ------------------------ |
+| {{HTMLElement('h1')}} | `<div role="heading" aria-level="1">` |
+| {{HTMLElement('h2')}} | `<div role="heading" aria-level="2">` |
+| {{HTMLElement('h3')}} | `<div role="heading" aria-level="3">` |
+| {{HTMLElement('h4')}} | `<div role="heading" aria-level="4">` |
+| {{HTMLElement('h5')}} | `<div role="heading" aria-level="5">` |
+| {{HTMLElement('h6')}} | `<div role="heading" aria-level="6">` |
+
+
 
 ### Added benefits
 

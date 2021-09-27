@@ -11,8 +11,8 @@ tags:
   - NeedsContent
 ---
 
-
-
+{{draft}}
+<!--
 ## Description
 
 ### Associated WAI-ARIA roles, states, and properties
@@ -28,13 +28,13 @@ tags:
 ## Best Practices
 
 ### Prefer HTML
-
+-->
 ## Specifications
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#option","ARIA: option role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_option_role","option role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+| {{SpecName("ARIA Authoring Practices 1.2","#Listbox","option in a Listbox example")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 
 ## See Also

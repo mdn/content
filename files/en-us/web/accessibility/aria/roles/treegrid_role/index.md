@@ -12,9 +12,9 @@ tags:
   - composite widget role
   - NeedsContent
 ---
+{{draft}}
 
-
-
+<!--
 ## Description
 
 ### Associated WAI-ARIA roles, states, and properties
@@ -30,13 +30,13 @@ tags:
 ## Best Practices
 
 ### Prefer HTML
-
+-->
 ## Specifications
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#treegrid","ARIA: treegrid role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_treegrid_role","treegrid role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+| {{SpecName("ARIA Authoring Practices 1.2","#treegrid","treegrid role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 
 ## See Also
