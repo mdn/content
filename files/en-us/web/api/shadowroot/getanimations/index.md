@@ -19,7 +19,7 @@ browser-compat: api.ShadowRoot.getAnimations
 ---
 {{APIRef("Web Animations")}}
 
-The `getAnimations()` method of the {{domxref("ShadowRoot")}} interface
+The **`getAnimations()`** method of the {{domxref("ShadowRoot")}} interface
 returns an array of all {{domxref("Animation")}} objects currently in effect whose
 target elements are descendants of the shadow tree. This array includes [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations), [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions), and [Web Animations](/en-US/docs/Web/API/Web_Animations_API).
 

@@ -265,7 +265,9 @@ The following values are implemented only for one or both of the prefixed proper
 
 ```css
 .exampleone {
-  appearance: menulist-button;
+-webkit-appearance: menulist-button;
+   -moz-appearance: menulist-button;
+        appearance: menulist-button;
 }
 ```
 

@@ -14,7 +14,7 @@ browser-compat: api.RTCDataChannel.bufferedAmountLowThreshold
 The `RTCDataChannel` property
 **`bufferedAmountLowThreshold`** is used to specify the number
 of bytes of buffered outgoing data that is considered "low." The default value is
-0\. hen the number of buffered outgoing bytes, as indicated by the
+0\. When the number of buffered outgoing bytes, as indicated by the
 {{domxref("RTCDataChannel.bufferedAmount", "bufferedAmount")}} property, falls to or
 below this value, a {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event is fired. This event may be
 used, for example, to implement code which queues more messages to be sent whenever

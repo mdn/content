@@ -13,7 +13,7 @@ browser-compat: api.ServiceWorkerGlobalScope.onnotificationclick
 ---
 {{APIRef("Service Workers API")}}
 
-The **`ServiceWorkerGlobalScope.onnotificationclic`** property is an event handler called whenever the {{Event("notificationclick")}} event is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} object, that is when a user clicks on a displayed notification spawned by {{domxref("ServiceWorkerRegistration.showNotification()")}}.
+The **`ServiceWorkerGlobalScope.onnotificationclick`** property is an event handler called whenever the {{Event("notificationclick")}} event is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} object, that is when a user clicks on a displayed notification spawned by {{domxref("ServiceWorkerRegistration.showNotification()")}}.
 
 Notifications created on the main thread or in workers which aren't service workers using the {{domxref("Notification.Notification","Notification()")}} constructor will instead receive a {{Event("click")}} event on the `Notification` object itself.
 

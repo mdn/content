@@ -62243,19 +62243,6 @@
       "Masayuki"
     ]
   },
-  "Web/API/MouseWheelEvent": {
-    "modified": "2020-10-15T21:19:37.070Z",
-    "contributors": [
-      "fscholz",
-      "mfluehr",
-      "stevenwdv",
-      "teoli",
-      "kscarfone",
-      "Masayuki",
-      "Sheppy",
-      "rpp2119"
-    ]
-  },
   "Web/API/MsFirstPaint": {
     "modified": "2019-03-18T21:32:14.582Z",
     "contributors": [
@@ -86004,12 +85991,6 @@
       "Cocoa",
       "jpmedley",
       "teoli"
-    ]
-  },
-  "Web/API/WebRTC_API/Coding_guide": {
-    "modified": "2019-03-23T22:47:18.640Z",
-    "contributors": [
-      "Sheppy"
     ]
   },
   "Web/API/WebRTC_API/Connectivity": {
@@ -157155,18 +157136,6 @@
       "Sebastianz",
       "markg",
       "kohei.yoshino"
-    ]
-  },
-  "Web/Web_Components/HTML_Imports": {
-    "modified": "2020-10-15T21:30:02.826Z",
-    "contributors": [
-      "ExE-Boss",
-      "RayannTedds",
-      "paulie4",
-      "indolering",
-      "chrisdavidmills",
-      "markg",
-      "teoli"
     ]
   },
   "Web/Web_Components/Using_custom_elements": {

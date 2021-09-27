@@ -111,11 +111,11 @@ browser-compat: html.elements.input.input-number
 <p><code>&lt;input type="number"&gt;</code> elements can help simplify your work when building the user interface and logic for entering numbers into a form. When you create a number input with the proper <code>type</code> value, <code>number</code>, you get automatic validation that the entered text is a number, and usually a set of up and down buttons to step the value up and down.</p>
 
 <div class="warning">
-<p><strong>Important</strong>: Bear in mind that, logically, you should not be able to enter characters inside a number input other than numbers. There seems to be some disagreement about this among browsers; see {{bug(1398528)}}.</p>
+<p><strong>Warning:</strong> Logically, you should not be able to enter characters inside a number input other than numbers. There seems to be some disagreement about this among browsers; see {{bug(1398528)}}.</p>
 </div>
 
 <div class="note">
-<p><strong>Note:</strong> It's crucial to remember that a user can tinker with your HTML behind the scenes, so your site <em>must not</em> use simple client-side validation for any security purposes. You <em>must</em> verify on the server side any transaction in which the provided value may have security implications of any kind.</p>
+<p><strong>Note:</strong> A user can tinker with your HTML behind the scenes, so your site <em>must not</em> use simple client-side validation for any security purposes. You <em>must</em> verify on the server side any transaction in which the provided value may have security implications of any kind.</p>
 </div>
 
 <p>Mobile browsers further help with the user experience by showing a special keyboard more suited for entering numbers when the user tries to enter a value.</p>
@@ -259,7 +259,7 @@ input:valid+span:after {
 <p>We put it on a separate <code>&lt;span&gt;</code> element for added flexibility. Some browsers don't display generated content very effectively on some types of form inputs. (Read, for example, the section on <a href="/en-US/docs/Web/HTML/Element/input/date#validation"><code>&lt;input type="date"&gt;</code> validation</a>.)</p>
 
 <div class="warning">
-<p><strong>Important</strong>: HTML form validation is <em>not</em> a substitute for server-side scripts that ensure that the entered data is in the proper format!</p>
+<p><strong>Warning:</strong> HTML form validation is <em>not</em> a substitute for server-side scripts that ensure that the entered data is in the proper format!</p>
 
 <p>It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML and submit the data directly to your server.</p>
 
