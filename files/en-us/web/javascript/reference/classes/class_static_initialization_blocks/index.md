@@ -33,7 +33,7 @@ static { ... }
 
 A {{jsxref("Statements/class", "class")}} can have any number of `static {}` initialization blocks in its class body.
 These are evaluated, along with any interleaved static field initializers, in the order they are declared.
-Any static intitialization of a super class is performed first, before that of its sub classes!
+Any static intitialization of a super class is performed first, before that of its sub classes.
 
 The scope of the variables declared inside the static block is local to the block.
 Since `var`, `function`, `const` or  `let` declared in a `static {}` initialization block are local to the block, any `var` declarations in the block are not hoisted.
