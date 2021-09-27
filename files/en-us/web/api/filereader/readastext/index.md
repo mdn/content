@@ -35,6 +35,34 @@ instanceOfFileReader.readAsText(blob[, encoding]);
   - : A string specifying the encoding to use for the returned data. By default, UTF-8 is
     assumed if this parameter is not specified.
 
+## Example
+
+### HTML
+
+```html
+<input type="file" onchange="previewFile()"><br>
+<p class="content"></p>
+```
+
+### JavaScript
+
+```js
+function previewFile() {
+  const content = document.querySelector('.content');
+  const [file] = document.querySelector('input[type=file]').files;
+  const reader = new FileReader();
+
+  reader.addEventListener("load", function () {
+    // convert image file to base64 string
+    content.innerText = reader.result;
+  }, false);
+
+  if (file) {
+    reader.readAsText(file);
+  }
+}
+```
+
 ## Specifications
 
 {{Specifications}}
