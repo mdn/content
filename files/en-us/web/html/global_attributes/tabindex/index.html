@@ -25,7 +25,7 @@ browser-compat: html.global_attributes.tabindex
  <li><code>tabindex="0"</code> means that the element should be focusable in sequential keyboard navigation, after any positive tabindex values and its order is defined by the document's source order.</li>
  <li>A <em>positive value</em> means the element should be focusable in sequential keyboard navigation, with its order defined by the value of the number. That is, <code>tabindex="4"</code> is focused before <code>tabindex="5"</code> and <code>tabindex="0"</code>, but after <code>tabindex="3"</code>. If multiple elements share the same positive <code>tabindex</code> value, their order relative to each other follows their position in the document source. The maximum value for <code>tabindex</code> is 32767. If not specified, it takes the default value 0.
   <div class="warning">
-  <p>Avoid using <code>tabindex</code> values greater than 0. Doing so makes it difficult for people who rely on assistive technology to navigate and operate page content. Instead, write the document with the elements in a logical sequence.</p>
+  <p><strong>Warning:</strong> Avoid using <code>tabindex</code> values greater than 0. Doing so makes it difficult for people who rely on assistive technology to navigate and operate page content. Instead, write the document with the elements in a logical sequence.</p>
   </div>
  </li>
 </ul>

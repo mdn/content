@@ -99,7 +99,10 @@ browser-compat: html.elements.input
   <tr>
    <td>{{HTMLElement("input/hidden", "hidden")}}</td>
    <td>A control that is not displayed but whose value is submitted to the server. There is an example in the next column, but it's hidden!</td>
-   <td><input id="userId" name="userId" type="hidden" value="abc123"></td>
+   <td id="examplehidden">
+    <pre class="brush: html hidden">
+&lt;input id="userId" name="userId" type="hidden" value="abc123"&gt;</pre>
+    {{EmbedLiveSample("examplehidden",200,55,"","", "nobutton")}}</td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/image", "image")}}</td>
@@ -231,7 +234,7 @@ browser-compat: html.elements.input
 
 <p>The <code>&lt;input&gt;</code> element is so powerful because of its attributes; the {{htmlattrxref("type", "input")}} attribute, described with examples above, being the most important. Since every <code>&lt;input&gt;</code> element, regardless of type, is based on the {{domxref("HTMLInputElement")}} interface, they technically share the exact same set of attributes. However, in reality, most attributes have an effect on only a specific subset of input types. In addition, the way some attributes impact an input depends on the input type, impacting different input types in different ways.</p>
 
-<p>This section provides a table listing all the attributes with a brief description. This table is followed by a list describing each attribute in greater detail, along with which input types they are associated with.Those that are common to most or all input types are defined in greater detail below. Attributes that are unique to particular input types—or attributes which are common to all input types but have special behaviors when used on a given input type—are instead documented on those types' pages. This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>. Those with extra importance as it relates to <code>&lt;input&gt;</code> are highlighted.</p>
+<p>This section provides a table listing all the attributes with a brief description. This table is followed by a list describing each attribute in greater detail, along with which input types they are associated with. Those that are common to most or all input types are defined in greater detail below. Attributes that are unique to particular input types—or attributes which are common to all input types but have special behaviors when used on a given input type—are instead documented on those types' pages. This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>. Those with extra importance as it relates to <code>&lt;input&gt;</code> are highlighted.</p>
 
 <table>
  <caption>Attributes for the <code>&lt;input&gt;</code> element include <a href="/en-US/docs/Web/HTML/Global_attributes">global HTML attributes</a> and:</caption>
@@ -992,11 +995,11 @@ input[min][max] {}
 
 <p>In addition to an accessible name, the label provides a larger 'hit' area for mouse and touch screen users to click on or touch. By pairing a <code>&lt;label&gt;</code> with an <code>&lt;input&gt;</code>, clicking on either one will focus the <code>&lt;input&gt;</code>. If you use plain text to "label" your input, this won't happen. Having the prompt part of the activation area for the input is helpful for people with motor control conditions.</p>
 
-<p>As web developers, it's important that we never assume that people will know all the things that we know. The diversity of people using the web—and by extension your web site—practically guarantees that some of your site's visitors will have some variation in thought processes and/or circumstances that leads them to interpret your forms very differently from you without clear and properly-presented labels.</p>
+<p>As web developers, it's important that we never assume that people will know all the things that we know. The diversity of people using the web—and by extension your website—practically guarantees that some of your site's visitors will have some variation in thought processes and/or circumstances that leads them to interpret your forms very differently from you without clear and properly-presented labels.</p>
 
 <h4 id="Placeholders_are_not_accessible">Placeholders are not accessible</h4>
 
-<p>The {{htmlattrxref("placeholder", "input", "", 1)}} attribute lets you specify text that appears within the <code>&lt;input&gt;</code> element's content area itself when it is empty. The placeholder should never be required in order to understand your forms. It is not a label, and should not be used as a substitute, because it isn't. The placeholder is used to provide a hint as to what an inputted value should look like, not an explanation or prompt.</p>
+<p>The {{htmlattrxref("placeholder", "input", "", 1)}} attribute lets you specify text that appears within the <code>&lt;input&gt;</code> element's content area itself when it is empty. The placeholder should never be required to understand your forms. It is not a label, and should not be used as a substitute, because it isn't. The placeholder is used to provide a hint as to what an inputted value should look like, not an explanation or prompt.</p>
 
 <p>Not only is the placeholder not accessible to screen readers, but once the user enters any text into the form control, or if the form control already has a value, the placeholder disappears. Browsers with automatic page translation features may skip over attributes when translating, meaning the <code>placeholder</code> may not get translated.</p>
 
@@ -1280,7 +1283,7 @@ nameInput.addEventListener('invalid', () =&gt; {
 <ul>
  <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/target-size.html">Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1</a></li>
  <li><a href="https://adrianroselli.com/2019/06/target-size-and-2-5-5.html">Target Size and 2.5.5 | Adrian Roselli</a></li>
- <li><a href="https://a11yproject.com/posts/large-touch-targets/">Quick test: Large touch targets - The A11Y Project</a></li>
+ <li><a href="https://www.a11yproject.com/posts/2018-11-21-large-touch-targets/">Quick test: Large touch targets - The A11Y Project</a></li>
 </ul>
 
 <h2 id="Specifications">Specifications</h2>
