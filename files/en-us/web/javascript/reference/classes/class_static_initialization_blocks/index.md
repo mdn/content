@@ -128,6 +128,7 @@ This example below shows how access can be granted to the private object of a cl
 
 ```js
 let getDPrivateField;
+
 class D {
   #privateField;
   constructor(v) {
@@ -137,6 +138,7 @@ class D {
     getDPrivateField = (d) => d.#privateField;
   }
 }
+
 getDPrivateField(new D('private'));
 // > private
 ```
