@@ -59,6 +59,10 @@ function previewFile() {
 }
 ```
 
+### Result
+
+{{EmbedLiveSample("Example", "100%", 240)}}
+
 ## Specifications
 
 {{Specifications}}
