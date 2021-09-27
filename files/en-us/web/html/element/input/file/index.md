@@ -14,257 +14,265 @@ tags:
   - Type
 browser-compat: html.elements.input.input-file
 ---
-<div>{{HTMLRef("Input_types")}}</div>
+{{HTMLRef("Input_types")}}
 
-<p>{{HTMLElement("input")}} elements with <strong><code>type="file"</code></strong> let the user choose one or more files from their device storage. Once chosen, the files can be uploaded to a server using<a href="/en-US/docs/Learn/Forms"> form submission</a>, or manipulated using JavaScript code and <a href="/en-US/docs/Web/API/File/Using_files_from_web_applications">the File API</a>.</p>
+{{HTMLElement("input")}} elements with **`type="file"`** let the user choose one or more files from their device storage. Once chosen, the files can be uploaded to a server using[ form submission](/en-US/docs/Learn/Forms), or manipulated using JavaScript code and [the File API](/en-US/docs/Web/API/File/Using_files_from_web_applications).
 
-<div>{{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
-   <td>A {{domxref("DOMString")}} representing the path to the selected file.</td>
-  </tr>
-  <tr>
-   <td><strong>Events</strong></td>
-   <td>{{domxref("HTMLElement/change_event", "change")}} and {{domxref("HTMLElement/input_event", "input")}}</td>
-  </tr>
-  <tr>
-   <td><strong>Supported common attributes</strong></td>
-   <td>{{htmlattrxref("required", "input")}}</td>
-  </tr>
-  <tr>
-   <td><strong>Additional Attributes</strong></td>
-   <td>{{htmlattrxref("accept", "input/file")}}, {{htmlattrxref("capture", "input/file")}}, {{htmlattrxref("files", "input/file")}}, {{htmlattrxref("multiple", "input/file")}}</td>
-  </tr>
-  <tr>
-   <td><strong>IDL attributes</strong></td>
-   <td><code>files</code> and <code>value</code></td>
-  </tr>
-  <tr>
-   <td><strong>DOM interface</strong></td>
-   <td>
-    <p>{{domxref("HTMLInputElement")}}</p>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Properties</strong></td>
-   <td>
-    <p><a href="/en-US/docs/Web/API/HTMLInputElement#properties_file">Properties that apply only to elements of type <code>file</code></a></p>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Methods</strong></td>
-   <td>{{domxref("HTMLInputElement.select", "select()")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td><strong>{{anch("Value")}}</strong></td>
+      <td>
+        A {{domxref("DOMString")}} representing the path to the selected
+        file.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} and
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Supported common attributes</strong></td>
+      <td>{{htmlattrxref("required", "input")}}</td>
+    </tr>
+    <tr>
+      <td><strong>Additional Attributes</strong></td>
+      <td>
+        {{htmlattrxref("accept", "input/file")}},
+        {{htmlattrxref("capture", "input/file")}},
+        {{htmlattrxref("files", "input/file")}},
+        {{htmlattrxref("multiple", "input/file")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td><code>files</code> and <code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>Properties</strong></td>
+      <td>
+        <p>
+          <a href="/en-US/docs/Web/API/HTMLInputElement#properties_file"
+            >Properties that apply only to elements of type <code>file</code></a
+          >
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A file input's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} that represents the path to the selected file(s). If the user selected multiple files, the <code>value</code> represents the first file in the list of files they selected. The other files can be identified using the input's <code>HTMLInputElement.files</code> property.</p>
+A file input's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} that represents the path to the selected file(s). If the user selected multiple files, the `value` represents the first file in the list of files they selected. The other files can be identified using the input's `HTMLInputElement.files` property.
 
-<div class="note"><p><strong>Note:</strong></p>
+> **Note:**
+>
+> 1.  If multiple files are selected, the string represents the first selected file. JavaScript can access the other files [through the input's `files` property](/en-US/docs/Web/API/File/Using_files_from_web_applications#getting_information_about_selected_files).
+> 2.  If no file is yet selected, the string is `""` (empty).
+> 3.  The string [is prefixed with `C:\fakepath\`](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly), to prevent malicious software from guessing the user's file structure.
 
-<ol>
- <li>If multiple files are selected, the string represents the first selected file. JavaScript can access the other files <a href="/en-US/docs/Web/API/File/Using_files_from_web_applications#getting_information_about_selected_files">through the input's <code>files</code> property</a>.</li>
- <li>If no file is yet selected, the string is <code>""</code> (empty).</li>
- <li>The string <a href="https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly">is prefixed with <code>C:\fakepath\</code></a>, to prevent malicious software from guessing the user's file structure.</li>
-</ol>
-</div>
+## Additional attributes
 
-<h2 id="Additional_attributes">Additional attributes</h2>
+In addition to the common attributes shared by all {{HTMLElement("input")}} elements, inputs of type `file` also support the following attributes.
 
-<p>In addition to the common attributes shared by all {{HTMLElement("input")}} elements, inputs of type <code>file</code> also support the following attributes.</p>
+### accept
 
-<h3>accept</h3>
+The [`accept`](/en-US/docs/Web/HTML/Attributes/accept) attribute value is a string that defines the file types the file input should accept. This string is a comma-separated list of **{{anch("Unique file type specifiers", "unique file type specifiers")}}**. Because a given file type may be identified in more than one manner, it's useful to provide a thorough set of type specifiers when you need files of a given format.
 
-<p>The <a href="/en-US/docs/Web/HTML/Attributes/accept"><code>accept</code></a> attribute value is a string that defines the file types the file input should accept. This string is a comma-separated list of <strong>{{anch("Unique file type specifiers", "unique file type specifiers")}}</strong>. Because a given file type may be identified in more than one manner, it's useful to provide a thorough set of type specifiers when you need files of a given format.</p>
+For instance, there are a number of ways Microsoft Word files can be identified, so a site that accepts Word files might use an `<input>` like this:
 
-<p>For instance, there are a number of ways Microsoft Word files can be identified, so a site that accepts Word files might use an <code>&lt;input&gt;</code> like this:</p>
+```html
+<input type="file" id="docpicker"
+  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+```
 
-<pre class="brush: html">&lt;input type="file" id="docpicker"
-  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"&gt;</pre>
+### capture
 
-<h3>capture</h3>
+The [`capture`](/en-US/docs/Web/HTML/Attributes/capture) attribute value is a string that specifies which camera to use for capture of image or video data, if the [`accept`](/en-US/docs/Web/HTML/Attributes/accept) attribute indicates that the input should be of one of those types. A value of `user` indicates that the user-facing camera and/or microphone should be used. A value of `environment` specifies that the outward-facing camera and/or microphone should be used. If this attribute is missing, the {{Glossary("user agent")}} is free to decide on its own what to do. If the requested facing mode isn't available, the user agent may fall back to its preferred default mode.
 
-<p>The <a href="/en-US/docs/Web/HTML/Attributes/capture"><code>capture</code></a> attribute value is a string that specifies which camera to use for capture of image or video data, if the <a href="/en-US/docs/Web/HTML/Attributes/accept"><code>accept</code></a> attribute indicates that the input should be of one of those types. A value of <code>user</code> indicates that the user-facing camera and/or microphone should be used. A value of <code>environment</code> specifies that the outward-facing camera and/or microphone should be used. If this attribute is missing, the {{Glossary("user agent")}} is free to decide on its own what to do. If the requested facing mode isn't available, the user agent may fall back to its preferred default mode.</p>
+> **Note:** `capture` was previously a Boolean attribute which, if present, requested that the device's media capture device(s) such as camera or microphone be used instead of requesting a file input.
 
-<div class="note"><p><strong>Note:</strong> <code>capture</code> was previously a Boolean attribute which, if present, requested that the device's media capture device(s) such as camera or microphone be used instead of requesting a file input.</p></div>
+### files
 
-<h3>files</h3>
+A {{domxref("FileList")}} object that lists every selected file. This list has no more than one member unless the {{htmlattrxref("multiple", "input/file")}} attribute is specified.
 
-<p>A {{domxref("FileList")}} object that lists every selected file. This list has no more than one member unless the {{htmlattrxref("multiple", "input/file")}} attribute is specified.</p>
+### multiple
 
-<h3>multiple</h3>
+When the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) Boolean attribute is specified, the file input allows the user to select more than one file.
 
-<p>When the <a href="/en-US/docs/Web/HTML/Attributes/multiple"><code>multiple</code></a> Boolean attribute is specified, the file input allows the user to select more than one file.</p>
+## Non-standard attributes
 
-<h2 id="Non-standard_attributes">Non-standard attributes</h2>
+In addition to the attributes listed above, the following non-standard attributes are available on some browsers. You should try to avoid using them when possible, since doing so will limit the ability of your code to function in browsers that don't implement them.
 
-<p>In addition to the attributes listed above, the following non-standard attributes are available on some browsers. You should try to avoid using them when possible, since doing so will limit the ability of your code to function in browsers that don't implement them.</p>
+### `webkitdirectory`
 
-<h3><code>webkitdirectory</code></h3>
+The Boolean `webkitdirectory` attribute, if present, indicates that only directories should be available to be selected by the user in the file picker interface. See {{domxref("HTMLInputElement.webkitdirectory")}} for additional details and examples.
 
-<p>The Boolean <code>webkitdirectory</code> attribute, if present, indicates that only directories should be available to be selected by the user in the file picker interface. See {{domxref("HTMLInputElement.webkitdirectory")}} for additional details and examples.</p>
+Though originally implemented only for WebKit-based browsers, `webkitdirectory` is also usable in Microsoft Edge as well as Firefox 50 and later. However, even though it has relatively broad support, it is still not standard and should not be used unless you have no alternative.
 
-<p>Though originally implemented only for WebKit-based browsers, <code>webkitdirectory</code> is also usable in Microsoft Edge as well as Firefox 50 and later. However, even though it has relatively broad support, it is still not standard and should not be used unless you have no alternative.</p>
+## Unique file type specifiers
 
-<h2 id="Unique_file_type_specifiers">Unique file type specifiers</h2>
+A **unique file type specifier** is a string that describes a type of file that may be selected by the user in an {{HTMLElement("input")}} element of type `file`. Each unique file type specifier may take one of the following forms:
 
-<p>A <strong>unique file type specifier</strong> is a string that describes a type of file that may be selected by the user in an {{HTMLElement("input")}} element of type <code>file</code>. Each unique file type specifier may take one of the following forms:</p>
+*   A valid case-insensitive filename extension, starting with a period (".") character. For example: `.jpg`, `.pdf`, or `.doc`.
+*   A valid MIME type string, with no extensions.
+*   The string `audio/*` meaning "any audio file".
+*   The string `video/*` meaning "any video file".
+*   The string `image/*` meaning "any image file".
 
-<ul>
- <li>A valid case-insensitive filename extension, starting with a period (".") character. For example: <code>.jpg</code>, <code>.pdf</code>, or <code>.doc</code>.</li>
- <li>A valid MIME type string, with no extensions.</li>
- <li>The string <code>audio/*</code> meaning "any audio file".</li>
- <li>The string <code>video/*</code> meaning "any video file".</li>
- <li>The string <code>image/*</code> meaning "any image file".</li>
-</ul>
+The `accept` attribute takes as its value a string containing one or more of these unique file type specifiers, separated by commas. For example, a file picker that needs content that can be presented as an image, including both standard image formats and PDF files, might look like this:
 
-<p>The <code>accept</code> attribute takes as its value a string containing one or more of these unique file type specifiers, separated by commas. For example, a file picker that needs content that can be presented as an image, including both standard image formats and PDF files, might look like this:</p>
+```html
+<input type="file" accept="image/*,.pdf">
+```
 
-<pre class="brush: html">&lt;input type="file" accept="image/*,.pdf"&gt;</pre>
+## Using file inputs
 
-<h2 id="Using_file_inputs">Using file inputs</h2>
+### A basic example
 
-<h3 id="A_basic_example">A basic example</h3>
+```html
+<form method="post" enctype="multipart/form-data">
+ <div>
+   <label for="file">Choose file to upload</label>
+   <input type="file" id="file" name="file" multiple>
+ </div>
+ <div>
+   <button>Submit</button>
+ </div>
+</form>
+```
 
-<pre class="brush: html">&lt;form method="post" enctype="multipart/form-data"&gt;
- &lt;div&gt;
-   &lt;label for="file"&gt;Choose file to upload&lt;/label&gt;
-   &lt;input type="file" id="file" name="file" multiple&gt;
- &lt;/div&gt;
- &lt;div&gt;
-   &lt;button&gt;Submit&lt;/button&gt;
- &lt;/div&gt;
-&lt;/form&gt;</pre>
-
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   margin-bottom: 10px;
-}</pre>
+}
+```
 
-<p>This produces the following output:</p>
+This produces the following output:
 
-<p>{{EmbedLiveSample('A_basic_example', 650, 90)}}</p>
+{{EmbedLiveSample('A_basic_example', 650, 90)}}
 
-<div class="note">
-<p><strong>Note:</strong> You can find this example on GitHub too — see the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html">source code</a>, and also <a href="https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html">see it running live</a>.</p>
-</div>
+> **Note:** You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
 
-<p>Regardless of the user's device or operating system, the file input provides a button that opens up a file picker dialog that allows the user to choose a file.</p>
+Regardless of the user's device or operating system, the file input provides a button that opens up a file picker dialog that allows the user to choose a file.
 
-<p>Including the {{htmlattrxref("multiple", "input/file")}} attribute, as shown above, specifies that multiple files can be chosen at once. The user can choose multiple files from the file picker in any way that their chosen platform allows (e.g. by holding down <kbd>Shift</kbd> or <kbd>Control</kbd>, and then clicking). If you only want the user to choose a single file per <code>&lt;input&gt;</code>, omit the <code>multiple</code> attribute.</p>
+Including the {{htmlattrxref("multiple", "input/file")}} attribute, as shown above, specifies that multiple files can be chosen at once. The user can choose multiple files from the file picker in any way that their chosen platform allows (e.g. by holding down <kbd>Shift</kbd> or <kbd>Control</kbd>, and then clicking). If you only want the user to choose a single file per `<input>`, omit the `multiple` attribute.
 
-<h3 id="Getting_information_on_selected_files">Getting information on selected files</h3>
+### Getting information on selected files
 
-<p>The selected files' are returned by the element's <code>HTMLInputElement.files</code> property, which is a {{domxref("FileList")}} object containing a list of {{domxref("File")}} objects. The <code>FileList</code> behaves like an array, so you can check its <code>length</code> property to get the number of selected files.</p>
+The selected files' are returned by the element's `HTMLInputElement.files` property, which is a {{domxref("FileList")}} object containing a list of {{domxref("File")}} objects. The `FileList` behaves like an array, so you can check its `length` property to get the number of selected files.
 
-<p>Each <code>File</code> object contains the following information:</p>
+Each `File` object contains the following information:
 
-<dl>
- <dt><code>name</code></dt>
- <dd>The file's name.</dd>
- <dt><code>lastModified</code></dt>
- <dd>A number specifying the date and time at which the file was last modified, in milliseconds since the UNIX epoch (January 1, 1970 at midnight).</dd>
- <dt><code>lastModifiedDate</code> {{deprecated_inline}}</dt>
- <dd>A {{jsxref("Date")}} object representing the date and time at which the file was last modified. <em>This is deprecated and should not be used. Use <code>lastModified</code> instead.</em></dd>
- <dt><code>size</code></dt>
- <dd>The size of the file in bytes.</dd>
- <dt><code>type</code></dt>
- <dd>The file's <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a>.</dd>
- <dt><code>webkitRelativePath</code> {{non-standard_inline}}</dt>
- <dd>A string specifying the file's path relative to the base directory selected in a directory picker (that is, a <code>file</code> picker in which the {{htmlattrxref("webkitdirectory", "input/file")}} attribute is set). <em>This is non-standard and should be used with caution.</em></dd>
-</dl>
+*   `name`
+    *   : The file's name.
+*   `lastModified`
+    *   : A number specifying the date and time at which the file was last modified, in milliseconds since the UNIX epoch (January 1, 1970 at midnight).
+*   `lastModifiedDate` {{deprecated_inline}}
+    *   : A {{jsxref("Date")}} object representing the date and time at which the file was last modified. *This is deprecated and should not be used. Use `lastModified` instead.*
+*   `size`
+    *   : The size of the file in bytes.
+*   `type`
+    *   : The file's [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
+*   `webkitRelativePath` {{non-standard_inline}}
+    *   : A string specifying the file's path relative to the base directory selected in a directory picker (that is, a `file` picker in which the {{htmlattrxref("webkitdirectory", "input/file")}} attribute is set). *This is non-standard and should be used with caution.*
 
-<div class="note">
-<p><strong>Note:</strong> You can set as well as get the value of <code>HTMLInputElement.files</code> in all modern browsers; this was most recently added to Firefox, in version 57 (see {{bug(1384030)}}).</p>
-</div>
+> **Note:** You can set as well as get the value of `HTMLInputElement.files` in all modern browsers; this was most recently added to Firefox, in version 57 (see {{bug(1384030)}}).
 
-<h3 id="Limiting_accepted_file_types">Limiting accepted file types</h3>
+### Limiting accepted file types
 
-<p>Often you won't want the user to be able to pick any arbitrary type of file; instead, you often want them to select files of a specific type or types. For example, if your file input lets users upload a profile picture, you probably want them to select web-compatible image formats, such as {{Glossary("JPEG")}} or {{Glossary("PNG")}}.</p>
+Often you won't want the user to be able to pick any arbitrary type of file; instead, you often want them to select files of a specific type or types. For example, if your file input lets users upload a profile picture, you probably want them to select web-compatible image formats, such as {{Glossary("JPEG")}} or {{Glossary("PNG")}}.
 
-<p>Acceptable file types can be specified with the {{htmlattrxref("accept","input/file")}} attribute, which takes a comma-separated list of allowed file extensions or MIME types. Some examples:</p>
+Acceptable file types can be specified with the {{htmlattrxref("accept","input/file")}} attribute, which takes a comma-separated list of allowed file extensions or MIME types. Some examples:
 
-<ul>
- <li><code>accept="image/png"</code> or <code>accept=".png"</code> — Accepts PNG files.</li>
- <li><code>accept="image/png, image/jpeg"</code> or <code>accept=".png, .jpg, .jpeg"</code> — Accept PNG or JPEG files.</li>
- <li><code>accept="image/*"</code> — Accept any file with an <code>image/*</code> MIME type. (Many mobile devices also let the user take a picture with the camera when this is used.)</li>
- <li><code>accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"</code> — accept anything that smells like an MS Word document.</li>
-</ul>
+*   `accept="image/png"` or `accept=".png"` — Accepts PNG files.
+*   `accept="image/png, image/jpeg"` or `accept=".png, .jpg, .jpeg"` — Accept PNG or JPEG files.
+*   `accept="image/*"` — Accept any file with an `image/*` MIME type. (Many mobile devices also let the user take a picture with the camera when this is used.)
+*   `accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"` — accept anything that smells like an MS Word document.
 
-<p>Let's look at a more complete example:</p>
+Let's look at a more complete example:
 
-<pre class="brush: html">&lt;form method="post" enctype="multipart/form-data"&gt;
-  &lt;div&gt;
-    &lt;label for="profile_pic"&gt;Choose file to upload&lt;/label&gt;
-    &lt;input type="file" id="profile_pic" name="profile_pic"
-          accept=".jpg, .jpeg, .png"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button&gt;Submit&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+```html
+<form method="post" enctype="multipart/form-data">
+  <div>
+    <label for="profile_pic">Choose file to upload</label>
+    <input type="file" id="profile_pic" name="profile_pic"
+          accept=".jpg, .jpeg, .png">
+  </div>
+  <div>
+    <button>Submit</button>
+  </div>
+</form>
+```
 
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   margin-bottom: 10px;
-}</pre>
+}
+```
 
-<p>This produces a similar-looking output to the previous example:</p>
+This produces a similar-looking output to the previous example:
 
-<p>{{EmbedLiveSample('Limiting_accepted_file_types', 650, 90)}}</p>
+{{EmbedLiveSample('Limiting_accepted_file_types', 650, 90)}}
 
-<div class="note">
-<p><strong>Note:</strong> You can find this example on GitHub too — see the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-with-accept.html">source code</a>, and also <a href="https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html">see it running live</a>.</p>
-</div>
+> **Note:** You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-with-accept.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html).
 
-<p>It may look similar, but if you try selecting a file with this input, you'll see that the file picker only lets you select the file types specified in the <code>accept</code> value (the exact interface differs across browsers and operating systems).</p>
+It may look similar, but if you try selecting a file with this input, you'll see that the file picker only lets you select the file types specified in the `accept` value (the exact interface differs across browsers and operating systems).
 
-<p>The <code>accept</code> attribute doesn't validate the types of the selected files; it provides hints for browsers to guide users towards selecting the correct file types. It is still possible (in most cases) for users to toggle an option in the file chooser that makes it possible to override this and select any file they wish, and then choose incorrect file types.</p>
+The `accept` attribute doesn't validate the types of the selected files; it provides hints for browsers to guide users towards selecting the correct file types. It is still possible (in most cases) for users to toggle an option in the file chooser that makes it possible to override this and select any file they wish, and then choose incorrect file types.
 
-<p>Because of this, you should make sure that the <code>accept</code> attribute is backed up by appropriate server-side validation.</p>
+Because of this, you should make sure that the `accept` attribute is backed up by appropriate server-side validation.
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<ol>
- <li>
-  <p>You cannot set the value of a file picker from a script — doing something like the following has no effect:</p>
+1.  You cannot set the value of a file picker from a script — doing something like the following has no effect:
 
-  <pre class="brush: js">const input = document.querySelector("input[type=file]");
-input.value = "foo";
-</pre>
- </li>
- <li>
-  <p>When a file is chosen using an <code>&lt;input type="file"&gt;</code>, the real path to the source file is not shown in the input's <code>value</code> attribute for obvious security reasons. Instead, the filename is shown, with <code>C:\fakepath\</code> appended to the beginning of it. There are some historical reasons for this quirk, but it is supported across all modern browsers, and in fact is <a href="https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly">defined in the spec</a>.</p>
- </li>
-</ol>
+    ```js
+    const input = document.querySelector("input[type=file]");
+    input.value = "foo";
+    ```
+2.  When a file is chosen using an `<input type="file">`, the real path to the source file is not shown in the input's `value` attribute for obvious security reasons. Instead, the filename is shown, with `C:\fakepath\` appended to the beginning of it. There are some historical reasons for this quirk, but it is supported across all modern browsers, and in fact is [defined in the spec](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, we'll present a slightly more advanced file chooser that takes advantage of the file information available in the <code>HTMLInputElement.files</code> property, as well as showing off a few clever tricks.</p>
+In this example, we'll present a slightly more advanced file chooser that takes advantage of the file information available in the `HTMLInputElement.files` property, as well as showing off a few clever tricks.
 
-<div class="note">
-<p><strong>Note:</strong> You can see the complete source code for this example on GitHub — <a href="https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html">file-example.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html">see it live also</a>). We won't explain the CSS; the JavaScript is the main focus.</p>
-</div>
+> **Note:** You can see the complete source code for this example on GitHub — [file-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)). We won't explain the CSS; the JavaScript is the main focus.
 
-<p>First of all, let's look at the HTML:</p>
+First of all, let's look at the HTML:
 
-<pre class="brush: html">&lt;form method="post" enctype="multipart/form-data"&gt;
-  &lt;div&gt;
-    &lt;label for="image_uploads"&gt;Choose images to upload (PNG, JPG)&lt;/label&gt;
-    &lt;input type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" multiple&gt;
-  &lt;/div&gt;
-  &lt;div class="preview"&gt;
-    &lt;p&gt;No files currently selected for upload&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button&gt;Submit&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+```html
+<form method="post" enctype="multipart/form-data">
+  <div>
+    <label for="image_uploads">Choose images to upload (PNG, JPG)</label>
+    <input type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" multiple>
+  </div>
+  <div class="preview">
+    <p>No files currently selected for upload</p>
+  </div>
+  <div>
+    <button>Submit</button>
+  </div>
+</form>
+```
 
-<pre class="brush: css hidden">html {
+```css hidden
+html {
   font-family: sans-serif;
 }
 
@@ -280,7 +288,7 @@ form ol {
   padding-left: 0;
 }
 
-form li, div &gt; p {
+form li, div > p {
   background: #eee;
   display: flex;
   justify-content: space-between;
@@ -316,45 +324,45 @@ form label:hover, form button:hover {
 form label:active, form button:active {
   background-color: #0D3F8F;
   color: white;
-}</pre>
+}
+```
 
-<p>This is similar to what we've seen before — nothing special to comment on.</p>
+This is similar to what we've seen before — nothing special to comment on.
 
-<p>Next, let's walk through the JavaScript.</p>
+Next, let's walk through the JavaScript.
 
-<p>In the first lines of script, we get references to the form input itself, and the {{htmlelement("div")}} element with the class of <code>.preview</code>. Next, we hide the {{htmlelement("input")}} element — we do this because file inputs tend to be ugly, difficult to style, and inconsistent in their design across browsers. You can activate the <code>input</code> element by clicking its {{htmlelement("label")}}, so it is better to visually hide the <code>input</code> and style the label like a button, so the user will know to interact with it if they want to upload files.</p>
+In the first lines of script, we get references to the form input itself, and the {{htmlelement("div")}} element with the class of `.preview`. Next, we hide the {{htmlelement("input")}} element — we do this because file inputs tend to be ugly, difficult to style, and inconsistent in their design across browsers. You can activate the `input` element by clicking its {{htmlelement("label")}}, so it is better to visually hide the `input` and style the label like a button, so the user will know to interact with it if they want to upload files.
 
-<pre class="brush: js">const input = document.querySelector('input');
+```js
+const input = document.querySelector('input');
 const preview = document.querySelector('.preview');
 
-input.style.opacity = 0;</pre>
+input.style.opacity = 0;
+```
 
-<div class="note">
-<p><strong>Note:</strong> {{cssxref("opacity")}} is used to hide the file input instead of {{cssxref("visibility", "visibility: hidden")}} or {{cssxref("display", "display: none")}}, because assistive technology interprets the latter two styles to mean the file input isn't interactive.</p>
-</div>
+> **Note:** {{cssxref("opacity")}} is used to hide the file input instead of {{cssxref("visibility", "visibility: hidden")}} or {{cssxref("display", "display: none")}}, because assistive technology interprets the latter two styles to mean the file input isn't interactive.
 
-<p>Next, we add an <a href="/en-US/docs/Web/API/EventTarget/addEventListener">event listener</a> to the input to listen for changes to its selected value changes (in this case, when files are selected). The event listener invokes our custom <code>updateImageDisplay()</code> function.</p>
+Next, we add an [event listener](/en-US/docs/Web/API/EventTarget/addEventListener) to the input to listen for changes to its selected value changes (in this case, when files are selected). The event listener invokes our custom `updateImageDisplay()` function.
 
-<pre class="brush: js">input.addEventListener('change', updateImageDisplay);</pre>
+```js
+input.addEventListener('change', updateImageDisplay);
+```
 
-<p>Whenever the <code>updateImageDisplay()</code> function is invoked, we:</p>
+Whenever the `updateImageDisplay()` function is invoked, we:
 
-<ul>
- <li>Use a {{jsxref("Statements/while", "while")}} loop to empty the previous contents of the preview <code>&lt;div&gt;</code>.</li>
- <li>Grab the {{domxref("FileList")}} object that contains the information on all the selected files, and store it in a variable called <code>curFiles</code>.</li>
- <li>Check to see if no files were selected, by checking if <code>curFiles.length</code> is equal to 0. If so, print a message into the preview <code>&lt;div&gt;</code> stating that no files have been selected.</li>
- <li>If files <em>have</em> been selected, we loop through each one, printing information about it into the preview <code>&lt;div&gt;</code>. Things to note here:</li>
- <li>We use the custom <code>validFileType()</code> function to check whether the file is of the correct type (e.g. the image types specified in the <code>accept</code> attribute).</li>
- <li>If it is, we:
-  <ul>
-   <li>Print out its name and file size into a list item inside the previous <code>&lt;div&gt;</code> (obtained from <code>file.name</code> and <code>file.size</code>). The custom <code>returnFileSize()</code> function returns a nicely-formatted version of the size in bytes/KB/MB (by default the browser reports the size in absolute bytes).</li>
-   <li>Generate a thumbnail preview of the image by calling {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}}. Then, insert the image into the list item too by creating a new {{htmlelement("img")}} and setting its {{htmlattrxref("src", "img")}} to the thumbnail.</li>
-  </ul>
- </li>
- <li>If the file type is invalid, we display a message inside a list item telling the user that they need to select a different file type.</li>
-</ul>
+*   Use a {{jsxref("Statements/while", "while")}} loop to empty the previous contents of the preview `<div>`.
+*   Grab the {{domxref("FileList")}} object that contains the information on all the selected files, and store it in a variable called `curFiles`.
+*   Check to see if no files were selected, by checking if `curFiles.length` is equal to 0. If so, print a message into the preview `<div>` stating that no files have been selected.
+*   If files *have* been selected, we loop through each one, printing information about it into the preview `<div>`. Things to note here:
+*   We use the custom `validFileType()` function to check whether the file is of the correct type (e.g. the image types specified in the `accept` attribute).
+*   If it is, we:
 
-<pre class="brush: js">function updateImageDisplay() {
+    *   Print out its name and file size into a list item inside the previous `<div>` (obtained from `file.name` and `file.size`). The custom `returnFileSize()` function returns a nicely-formatted version of the size in bytes/KB/MB (by default the browser reports the size in absolute bytes).
+    *   Generate a thumbnail preview of the image by calling {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}}. Then, insert the image into the list item too by creating a new {{htmlelement("img")}} and setting its {{htmlattrxref("src", "img")}} to the thumbnail.
+*   If the file type is invalid, we display a message inside a list item telling the user that they need to select a different file type.
+
+```js
+function updateImageDisplay() {
   while(preview.firstChild) {
     preview.removeChild(preview.firstChild);
   }
@@ -386,11 +394,13 @@ input.style.opacity = 0;</pre>
       list.appendChild(listItem);
     }
   }
-}</pre>
+}
+```
 
-<p>The custom <code>validFileType()</code> function takes a {{domxref("File")}} object as a parameter, then uses {{jsxref("Array.prototype.includes()")}} to check if any value in the <code>fileTypes</code> matches the file's <code>type</code> property. If a match is found, the function returns <code>true</code>. If no match is found, it returns <code>false</code>.</p>
+The custom `validFileType()` function takes a {{domxref("File")}} object as a parameter, then uses {{jsxref("Array.prototype.includes()")}} to check if any value in the `fileTypes` matches the file's `type` property. If a match is found, the function returns `true`. If no match is found, it returns `false`.
 
-<pre class="brush: js">// https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types
+```js
+// https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types
 const fileTypes = [
   "image/apng",
   "image/bmp",
@@ -406,35 +416,36 @@ const fileTypes = [
 
 function validFileType(file) {
   return fileTypes.includes(file.type);
-}</pre>
+}
+```
 
-<p>The <code>returnFileSize()</code> function takes a number (of bytes, taken from the current file's <code>size</code> property), and turns it into a nicely formatted size in bytes/KB/MB.</p>
+The `returnFileSize()` function takes a number (of bytes, taken from the current file's `size` property), and turns it into a nicely formatted size in bytes/KB/MB.
 
-<pre class="brush: js">function returnFileSize(number) {
-  if(number &lt; 1024) {
+```js
+function returnFileSize(number) {
+  if(number < 1024) {
     return number + 'bytes';
-  } else if(number &gt;= 1024 &amp;&amp; number &lt; 1048576) {
+  } else if(number >= 1024 && number < 1048576) {
     return (number/1024).toFixed(1) + 'KB';
-  } else if(number &gt;= 1048576) {
+  } else if(number >= 1048576) {
     return (number/1048576).toFixed(1) + 'MB';
   }
-}</pre>
+}
+```
 
-<p>The example looks like this; have a play:</p>
+The example looks like this; have a play:
 
-<p>{{EmbedLiveSample('Examples', '100%', 200)}}</p>
+{{EmbedLiveSample('Examples', '100%', 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/File/Using_files_from_web_applications">Using files from web applications</a> — contains a number of other useful examples related to <code>&lt;input type="file"&gt;</code> and the <a href="/en-US/docs/Web/API/File">File API</a>.</li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
-</ul>
+*   [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications) — contains a number of other useful examples related to `<input type="file">` and the [File API](/en-US/docs/Web/API/File).
+*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

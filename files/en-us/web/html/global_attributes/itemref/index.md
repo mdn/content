@@ -10,34 +10,36 @@ tags:
   - Reference
 browser-compat: html.global_attributes.itemref
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>Properties that are not descendants of an element with the {{HTMLAttrxRef("itemscope")}} attribute can be associated with an item using the <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a> <strong><code>itemref</code></strong>.</p>
+Properties that are not descendants of an element with the {{HTMLAttrxRef("itemscope")}} attribute can be associated with an item using the [global attribute](/en-US/docs/Web/HTML/Global_attributes) **`itemref`**.
 
-<p><code>itemref</code> provides a list of element IDs (not <code>itemid</code>s) elsewhere in the document, with additional properties</p>
+`itemref` provides a list of element IDs (not `itemid`s) elsewhere in the document, with additional properties
 
-<p>The <code>itemref</code> attribute can only be specified on elements that have an <code>itemscope</code> attribute specified.</p>
+The `itemref` attribute can only be specified on elements that have an `itemscope` attribute specified.
 
-<div class="note"><p><strong>Note:</strong> The <code>itemref</code> attribute is not part of the microdata data model. It is merely a syntactic construct to aid authors in adding annotations to pages where the data to be annotated does not follow a convenient tree structure. For example, it allows authors to mark up data in a table so that each column defines a separate item while keeping the properties in the cells.</p></div>
+> **Note:** The `itemref` attribute is not part of the microdata data model. It is merely a syntactic construct to aid authors in adding annotations to pages where the data to be annotated does not follow a convenient tree structure. For example, it allows authors to mark up data in a table so that each column defines a separate item while keeping the properties in the cells.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div itemscope id="amanda" itemref="a b"&gt;&lt;/div&gt;
-&lt;p id="a"&gt;Name: &lt;span itemprop="name"&gt;Amanda&lt;/span&gt; &lt;/p&gt;
-&lt;div id="b" itemprop="band" itemscope itemref="c"&gt;&lt;/div&gt;
-&lt;div id="c"&gt;
-    &lt;p&gt;Band: &lt;span itemprop="name"&gt;Jazz Band&lt;/span&gt; &lt;/p&gt;
-    &lt;p&gt;Size: &lt;span itemprop="size"&gt;12&lt;/span&gt; players&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div itemscope id="amanda" itemref="a b"></div>
+<p id="a">Name: <span itemprop="name">Amanda</span> </p>
+<div id="b" itemprop="band" itemscope itemref="c"></div>
+<div id="c">
+    <p>Band: <span itemprop="name">Jazz Band</span> </p>
+    <p>Size: <span itemprop="size">12</span> players</p>
+</div>
+```
 
-<h3 id="Structured_data">Structured data</h3>
+### Structured data
 
-<p><small>(in <a href="https://json-ld.org/" rel="external">JSON-LD</a> format)</small></p>
+(in [JSON-LD](https://json-ld.org/) format)
 
-<pre class="brush: json">{
+```json
+{
   "@id": "amanda",
   "name": "Amanda",
   "band": {
@@ -46,31 +48,27 @@ browser-compat: html.global_attributes.itemref
     "size": 12
   }
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example', '', '', '', 'Web/HTML/Global_attributes/itemref')}}</p>
+{{EmbedLiveSample('Example', '', '', '', 'Web/HTML/Global_attributes/itemref')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTML/Global_attributes">Other different global attributes</a></li>
- <li>Other, microdata related, global attributes:
-  <ul>
-   <li>{{htmlattrxref("itemid")}}</li>
-   <li>{{htmlattrxref("itemprop")}}</li>
-   <li>{{htmlattrxref("itemref")}}</li>
-   <li>{{htmlattrxref("itemscope")}}</li>
-   <li>{{htmlattrxref("itemtype")}}</li>
-  </ul>
- </li>
-</ul>
+*   [Other different global attributes](/en-US/docs/Web/HTML/Global_attributes)
+*   Other, microdata related, global attributes:
+
+    *   {{htmlattrxref("itemid")}}
+    *   {{htmlattrxref("itemprop")}}
+    *   {{htmlattrxref("itemref")}}
+    *   {{htmlattrxref("itemscope")}}
+    *   {{htmlattrxref("itemtype")}}

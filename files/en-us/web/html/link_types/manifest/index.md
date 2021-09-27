@@ -11,12 +11,12 @@ tags:
   - Reference
 browser-compat: html.elements.link.rel.manifest
 ---
-<p>The <strong><code>manifest</code></strong> keyword for the {{HTMLAttrxRef("rel", "link")}} attribute of the {{HTMLElement("link")}} element indicates that the target resource is a <a href="/en-US/docs/Web/Manifest">Web app manifest</a>.</p>
+The **`manifest`** keyword for the {{HTMLAttrxRef("rel", "link")}} attribute of the {{HTMLElement("link")}} element indicates that the target resource is a [Web app manifest](/en-US/docs/Web/Manifest).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -12,113 +12,151 @@ tags:
   - Web
 browser-compat: html.elements.sup
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;sup&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element specifies inline text which is to be displayed as superscript for solely typographical reasons. Superscripts are usually rendered with a raised baseline using smaller text.</p>
+The **`<sup>`** [HTML](/en-US/docs/Web/HTML) element specifies inline text which is to be displayed as superscript for solely typographical reasons. Superscripts are usually rendered with a raised baseline using smaller text.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/sup.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/sup.html", "tabbed-shorter")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>Any</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >Phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element only includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>The <code>&lt;sup&gt;</code> element should only be used for typographical reasons—that is, to change the position of the text to comply with typographical conventions or standards, rather than solely for presentation or appearance purposes.</p>
+The `<sup>` element should only be used for typographical reasons—that is, to change the position of the text to comply with typographical conventions or standards, rather than solely for presentation or appearance purposes.
 
-<p>For example, to style the {{interwiki("wikipedia", "wordmark")}} of a business or product which uses a raised baseline should be done using CSS (most likely {{cssxref("vertical-align")}}) rather than <code>&lt;sup&gt;</code>. This would be done using, for example, <code>vertical-align: super</code> or, to shift the baseline up 50%, <code>vertical-align: 50%</code>.</p>
+For example, to style the {{interwiki("wikipedia", "wordmark")}} of a business or product which uses a raised baseline should be done using CSS (most likely {{cssxref("vertical-align")}}) rather than `<sup>`. This would be done using, for example, `vertical-align: super` or, to shift the baseline up 50%, `vertical-align: 50%`.
 
-<p>Appropriate use cases for <code>&lt;sup&gt;</code> include (but aren't necessarily limited to):</p>
+Appropriate use cases for `<sup>` include (but aren't necessarily limited to):
 
+*   Displaying exponents, such as "x
+
+    <sup>3</sup>
+
+    ." It may be worth considering the use of [MathML](/en-US/docs/Web/MathML) for these, especially in more complex cases. See {{anch("Exponents")}} under {{anch("Examples")}} below.
+*   Displaying {{interwiki("wikipedia", "superior letter", "superior lettering")}}, which is used in some languages when rendering certain abbreviations. For example, in French, the word "mademoiselle" can be abbreviated "M
+
+    <sup>lle</sup>
+
+    "); this is an acceptable use case. See {{anch("Superior lettering")}} for examples.
+*   Representing ordinal numbers, such as "4
+
+    <sup>th</sup>
+
+    " instead of "fourth." See {{anch("Ordinal numbers")}} for examples.
+
+## Examples
+
+### Exponents
+
+Exponents, or powers of a number, are among the most common uses of superscripted text. For example:
+
+```html
+<p>One of the most common equations in all of physics is
+<var>E</var>=<var>m</var><var>c</var><sup>2</sup>.</p>
+```
+
+The resulting output looks like this:
+
+{{EmbedLiveSample("Exponents", 650, 80)}}
+
+### Superior lettering
+
+Superior lettering is not technically the same thing as superscript. However, it is common to use `<sup>` to present superior lettering in HTML. Among the most common uses of superior lettering is the presentation of certain abbreviations in French:
+
+```html
+<p>Robert a présenté son rapport à M<sup>lle</sup> Bernard.</p>
+```
+
+The resulting output:
+
+{{EmbedLiveSample("Superior_lettering", 650, 80)}}
+
+### Ordinal numbers
+
+Ordinal numbers, such as "fourth" in English or "quinto" in Spanish may be abbreviated using numerals and language-specific text rendered in superscript:
+
+```html
+<p>The ordinal number "fifth" can be abbreviated in various
+languages as follows:</p>
 <ul>
- <li>Displaying exponents, such as "x<sup>3</sup>." It may be worth considering the use of <a href="/en-US/docs/Web/MathML">MathML</a> for these, especially in more complex cases. See {{anch("Exponents")}} under {{anch("Examples")}} below.</li>
- <li>Displaying {{interwiki("wikipedia", "superior letter", "superior lettering")}}, which is used in some languages when rendering certain abbreviations. For example, in French, the word "mademoiselle" can be abbreviated "M<sup>lle</sup>"); this is an acceptable use case. See {{anch("Superior lettering")}} for examples.</li>
- <li>Representing ordinal numbers, such as "4<sup>th</sup>" instead of "fourth." See {{anch("Ordinal numbers")}} for examples.</li>
+  <li>English: 5<sup>th</sup></li>
+  <li>French: 5<sup>ème</sup></li>
 </ul>
+```
 
-<h2 id="Examples">Examples</h2>
+The output:
 
-<h3 id="Exponents">Exponents</h3>
+{{EmbedLiveSample("Ordinal_numbers", 650, 160)}}
 
-<p>Exponents, or powers of a number, are among the most common uses of superscripted text. For example:</p>
+## Specifications
 
-<pre class="brush: html">&lt;p&gt;One of the most common equations in all of physics is
-&lt;var&gt;E&lt;/var&gt;=&lt;var&gt;m&lt;/var&gt;&lt;var&gt;c&lt;/var&gt;&lt;sup&gt;2&lt;/sup&gt;.&lt;/p&gt;</pre>
+{{Specifications}}
 
-<p>The resulting output looks like this:</p>
+## Browser compatibility
 
-<p>{{EmbedLiveSample("Exponents", 650, 80)}}</p>
+{{Compat}}
 
-<h3 id="Superior_lettering">Superior lettering</h3>
+## See also
 
-<p>Superior lettering is not technically the same thing as superscript. However, it is common to use <code>&lt;sup&gt;</code> to present superior lettering in HTML. Among the most common uses of superior lettering is the presentation of certain abbreviations in French:</p>
-
-<pre class="brush: html">&lt;p&gt;Robert a présenté son rapport à M&lt;sup&gt;lle&lt;/sup&gt; Bernard.&lt;/p&gt;</pre>
-
-<p>The resulting output:</p>
-
-<p>{{EmbedLiveSample("Superior_lettering", 650, 80)}}</p>
-
-<h3 id="Ordinal_numbers">Ordinal numbers</h3>
-
-<p>Ordinal numbers, such as "fourth" in English or "quinto" in Spanish may be abbreviated using numerals and language-specific text rendered in superscript:</p>
-
-<pre class="brush: html">&lt;p&gt;The ordinal number "fifth" can be abbreviated in various
-languages as follows:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;English: 5&lt;sup&gt;th&lt;/sup&gt;&lt;/li&gt;
-  &lt;li&gt;French: 5&lt;sup&gt;ème&lt;/sup&gt;&lt;/li&gt;
-&lt;/ul&gt;</pre>
-
-<p>The output:</p>
-
-<p>{{EmbedLiveSample("Ordinal_numbers", 650, 160)}}</p>
-
-<h2 id="Specifications">Specifications</h2>
-
-<p>{{Specifications}}</p>
-
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>The {{HTMLElement("sub")}} HTML element that produces subscripts. Note that you cannot use them both at the same time and you need to use <a href="/en-US/docs/Web/MathML">MathML</a> to produce both a superscript and a subscript next to the chemical symbol of an element, representing its atomic number and its nuclear number.</li>
- <li>The <a href="/en-US/docs/Web/MathML/Element/msub"><code>&lt;msub&gt;</code></a>, <a href="/en-US/docs/Web/MathML/Element/msup"><code>&lt;msup&gt;</code></a>, and <a href="/en-US/docs/Web/MathML/Element/msubsup"><code>&lt;msubsup&gt;</code></a> MathML elements.</li>
- <li>The CSS {{cssxref("vertical-align")}} property.</li>
-</ul>
+*   The {{HTMLElement("sub")}} HTML element that produces subscripts. Note that you cannot use them both at the same time and you need to use [MathML](/en-US/docs/Web/MathML) to produce both a superscript and a subscript next to the chemical symbol of an element, representing its atomic number and its nuclear number.
+*   The [`<msub>`](/en-US/docs/Web/MathML/Element/msub), [`<msup>`](/en-US/docs/Web/MathML/Element/msup), and [`<msubsup>`](/en-US/docs/Web/MathML/Element/msubsup) MathML elements.
+*   The CSS {{cssxref("vertical-align")}} property.

@@ -12,30 +12,30 @@ tags:
   - noembed
 browser-compat: html.elements.noembed
 ---
-<div>{{HTMLRef}}{{Non-standard_header}}{{deprecated_header}}</div>
+{{HTMLRef}}{{Non-standard_header}}{{deprecated_header}}
 
-<p>The <strong><code>&lt;noembed&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element is an obsolete, non-standard way to provide alternative, or "fallback", content for browsers that do not support the {{HTMLElement("embed")}} element or do not support the type of <a href="/en-US/docs/Web/Guide/HTML/Content_categories#embedded_content">embedded content</a> an author wishes to use. This element was deprecated in HTML 4.01 and above in favor of placing fallback content between the opening and closing tags of an {{HTMLElement("object")}} element.</p>
+The **`<noembed>`** [HTML](/en-US/docs/Web/HTML) element is an obsolete, non-standard way to provide alternative, or "fallback", content for browsers that do not support the {{HTMLElement("embed")}} element or do not support the type of [embedded content](/en-US/docs/Web/Guide/HTML/Content_categories#embedded_content) an author wishes to use. This element was deprecated in HTML 4.01 and above in favor of placing fallback content between the opening and closing tags of an {{HTMLElement("object")}} element.
 
-<div class="note">
-<p><strong>Note:</strong> While this element currently still works in many browsers, it is obsolete and should not be used. Use {{HTMLElement("object")}} instead, with fallback content between the opening and closing tags of the element.</p>
-</div>
+> **Note:** While this element currently still works in many browsers, it is obsolete and should not be used. Use {{HTMLElement("object")}} instead, with fallback content between the opening and closing tags of the element.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The message inside <code>&lt;noembed&gt;</code> tag will appear only when your browser does not support <code>&lt;embed&gt;</code> tag.</p>
+The message inside `<noembed>` tag will appear only when your browser does not support `<embed>` tag.
 
-<h3 id="Show_an_alternative_content">Show an alternative content</h3>
+### Show an alternative content
 
-<pre class="brush: html">&lt;embed type="vide/webm" src="/media/examples/flower.mp4" width="200" height="200"&gt;
-  &lt;noembed&gt;
-    &lt;h1&gt;Alternative content&lt;/h1&gt;
-  &lt;/noembed&gt;
-&lt;/embed&gt;</pre>
+```html
+<embed type="vide/webm" src="/media/examples/flower.mp4" width="200" height="200">
+  <noembed>
+    <h1>Alternative content</h1>
+  </noembed>
+</embed>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

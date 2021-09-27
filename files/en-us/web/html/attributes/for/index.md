@@ -8,67 +8,79 @@ tags:
   - for
   - Reference
 ---
-<p>{{HTMLSidebar}}</p>
+{{HTMLSidebar}}
 
-<p>The <strong><code>for</code></strong> attribute is an allowed attribute for {{htmlelement("label")}} and {{htmlelement("output")}}. When used on a <code>&lt;label&gt;</code> element it indicates the form element that this label describes. When used on an <code>&lt;output&gt;</code> element it allows for an explicit relationship between the elements that represent values which are used in the output.</p>
+The **`for`** attribute is an allowed attribute for {{htmlelement("label")}} and {{htmlelement("output")}}. When used on a `<label>` element it indicates the form element that this label describes. When used on an `<output>` element it allows for an explicit relationship between the elements that represent values which are used in the output.
 
-<h2 id="Usage">Usage</h2>
+## Usage
 
-<p>When used as an attribute of <code>&lt;label&gt;</code>, the <code>for</code> attribute has a value which is the <code>id</code> of the form element it relates to.</p>
+When used as an attribute of `<label>`, the `for` attribute has a value which is the `id` of the form element it relates to.
 
-<pre class="brush: html">&lt;label for="username"&gt;Your name&lt;/label&gt;
-&lt;input type="text" id="username"&gt;</pre>
+```html
+<label for="username">Your name</label>
+<input type="text" id="username">
+```
 
-<p>When used as an attribute of <code>&lt;output&gt;</code>, the <code>for</code> attribute has a value which is a space separated list of the <code>id</code> values of the elements which are used to create the output.</p>
+When used as an attribute of `<output>`, the `for` attribute has a value which is a space separated list of the `id` values of the elements which are used to create the output.
 
-<pre class="brush: html">&lt;input type="range" id="b" name="b" value="50"&gt; +
-&lt;input type="number" id="a" name="a" value="10"&gt; =
-&lt;output name="result" for="a b">60&lt;/output&gt;</pre>
+```html
+<input type="range" id="b" name="b" value="50"> +
+<input type="number" id="a" name="a" value="10"> =
+<output name="result" for="a b">60</output>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See examples of usage on the element pages for {{htmlelement("label")}} and {{htmlelement("output")}}.</p>
+See examples of usage on the element pages for {{htmlelement("label")}} and {{htmlelement("output")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#attr-label-for', 'for as used with label')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-    <td>{{SpecName('HTML WHATWG', 'form-elements.html#attr-output-for', 'for as used with output')}}</td>
-    <td>{{Spec2('HTML WHATWG')}}</td>
-    <td></td>
-   </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'sec-forms.html#element-attrdef-label-for', 'for as used with label')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-    <td>{{SpecName('HTML5 W3C', 'sec-forms.html#element-attrdef-output-for', 'for as used with output')}}</td>
-    <td>{{Spec2('HTML5 W3C')}}</td>
-    <td></td>
-   </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName('HTML WHATWG', 'forms.html#attr-label-for', 'for as used with label')}}
+      </td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('HTML WHATWG', 'form-elements.html#attr-output-for', 'for as used with output')}}
+      </td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('HTML5 W3C', 'sec-forms.html#element-attrdef-label-for', 'for as used with label')}}
+      </td>
+      <td>{{Spec2('HTML5 W3C')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('HTML5 W3C', 'sec-forms.html#element-attrdef-output-for', 'for as used with output')}}
+      </td>
+      <td>{{Spec2('HTML5 W3C')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3>Support with label</h3>
+### Support with label
 
-<p>{{Compat("html.elements.label.for")}}</p>
+{{Compat("html.elements.label.for")}}
 
-<h3>Support with output</h3>
+### Support with output
 
-<p>{{Compat("html.elements.output.for")}}</p>
+{{Compat("html.elements.output.for")}}

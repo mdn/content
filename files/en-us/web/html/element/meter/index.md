@@ -10,114 +10,137 @@ tags:
   - Web
 browser-compat: html.elements.meter
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;meter&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element represents either a scalar value within a known range or a fractional value.</p>
+The **`<meter>`** [HTML](/en-US/docs/Web/HTML) element represents either a scalar value within a known range or a fractional value.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/meter.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/meter.html", "tabbed-shorter")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>, labelable content, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a>, but there must be no <code>&lt;meter&gt;</code> element among its descendants.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>No <code>role</code> permitted</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLMeterElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >, labelable content, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >Phrasing content</a
+        >, but there must be no <code>&#x3C;meter></code> element among its
+        descendants.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLMeterElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("value")}}</dt>
- <dd>The current numeric value. This must be between the minimum and maximum values (<code>min</code> attribute and <code>max</code> attribute) if they are specified. If unspecified or malformed, the value is <code>0</code>. If specified, but not within the range given by the <code>min</code> attribute and <code>max</code> attribute, the value is equal to the nearest end of the range.
- <div class="note"><p><strong>Note:</strong> Unless the <code>value</code> attribute is between <code>0</code> and <code>1</code> (inclusive), the <code>min</code> and <code>max</code> attributes should define the range so that the <code>value</code> attribute's value is within it.</p></div>
- </dd>
- <dt>{{htmlattrdef("min")}}</dt>
- <dd>The lower numeric bound of the measured range. This must be less than the maximum value (<code>max</code> attribute), if specified. If unspecified, the minimum value is <code>0</code>.</dd>
- <dt>{{htmlattrdef("max")}}</dt>
- <dd>The upper numeric bound of the measured range. This must be greater than the minimum value (<code>min</code> attribute), if specified. If unspecified, the maximum value is <code>1</code>.</dd>
- <dt>{{htmlattrdef("low")}}</dt>
- <dd>The upper numeric bound of the low end of the measured range. This must be greater than the minimum value (<code>min</code> attribute), and it also must be less than the high value and maximum value (<code>high</code> attribute and <code>max</code> attribute, respectively), if any are specified. If unspecified, or if less than the minimum value, the <code>low</code> value is equal to the minimum value.</dd>
- <dt>{{htmlattrdef("high")}}</dt>
- <dd>The lower numeric bound of the high end of the measured range. This must be less than the maximum value (<code>max</code> attribute), and it also must be greater than the low value and minimum value (<code>low</code> attribute and <code>min</code> attribute, respectively), if any are specified. If unspecified, or if greater than the maximum value, the <code>high</code> value is equal to the maximum value.</dd>
- <dt>{{htmlattrdef("optimum")}}</dt>
- <dd>This attribute indicates the optimal numeric value. It must be within the range (as defined by the <code>min</code> attribute and <code>max</code> attribute). When used with the <code>low</code> attribute and <code>high</code> attribute, it gives an indication where along the range is considered preferable. For example, if it is between the <code>min</code> attribute and the <code>low</code> attribute, then the lower range is considered preferred. The browser may color the meter's bar differently depending on whether the value is less than or equal to the optimum value.</dd>
- <dt>{{htmlattrdef("form")}}</dt>
- <dd>The {{HTMLElement("form")}} element to associate the <code>&lt;meter&gt;</code> element with (its <em>form owner</em>). The value of this attribute must be the {{htmlattrxref("id")}} of a <code>&lt;form&gt;</code> in the same document. If this attribute is not set, the <code>&lt;meter&gt;</code> is associated with its ancestor <code>&lt;form&gt;</code> element, if any. This attribute is only used if the <code>&lt;meter&gt;</code> element is being used as a form-associated element, such as one displaying a range corresponding to an <a href="/en-US/docs/Web/HTML/Element/input/number"><code>&lt;input type="number"&gt;</code></a>.</dd>
-</dl>
+*   {{htmlattrdef("value")}}
+    *   : The current numeric value. This must be between the minimum and maximum values (`min` attribute and `max` attribute) if they are specified. If unspecified or malformed, the value is `0`. If specified, but not within the range given by the `min` attribute and `max` attribute, the value is equal to the nearest end of the range.
 
-<h2 id="Examples">Examples</h2>
+        > **Note:** Unless the `value` attribute is between `0` and `1` (inclusive), the `min` and `max` attributes should define the range so that the `value` attribute's value is within it.
+*   {{htmlattrdef("min")}}
+    *   : The lower numeric bound of the measured range. This must be less than the maximum value (`max` attribute), if specified. If unspecified, the minimum value is `0`.
+*   {{htmlattrdef("max")}}
+    *   : The upper numeric bound of the measured range. This must be greater than the minimum value (`min` attribute), if specified. If unspecified, the maximum value is `1`.
+*   {{htmlattrdef("low")}}
+    *   : The upper numeric bound of the low end of the measured range. This must be greater than the minimum value (`min` attribute), and it also must be less than the high value and maximum value (`high` attribute and `max` attribute, respectively), if any are specified. If unspecified, or if less than the minimum value, the `low` value is equal to the minimum value.
+*   {{htmlattrdef("high")}}
+    *   : The lower numeric bound of the high end of the measured range. This must be less than the maximum value (`max` attribute), and it also must be greater than the low value and minimum value (`low` attribute and `min` attribute, respectively), if any are specified. If unspecified, or if greater than the maximum value, the `high` value is equal to the maximum value.
+*   {{htmlattrdef("optimum")}}
+    *   : This attribute indicates the optimal numeric value. It must be within the range (as defined by the `min` attribute and `max` attribute). When used with the `low` attribute and `high` attribute, it gives an indication where along the range is considered preferable. For example, if it is between the `min` attribute and the `low` attribute, then the lower range is considered preferred. The browser may color the meter's bar differently depending on whether the value is less than or equal to the optimum value.
+*   {{htmlattrdef("form")}}
+    *   : The {{HTMLElement("form")}} element to associate the `<meter>` element with (its *form owner*). The value of this attribute must be the {{htmlattrxref("id")}} of a `<form>` in the same document. If this attribute is not set, the `<meter>` is associated with its ancestor `<form>` element, if any. This attribute is only used if the `<meter>` element is being used as a form-associated element, such as one displaying a range corresponding to an [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number).
 
-<h3 id="Simple_example">Simple example</h3>
+## Examples
 
-<h4 id="HTML">HTML</h4>
+### Simple example
 
-<pre class="brush: html">&lt;p&gt;Heat the oven to &lt;meter min="200" max="500"
-  value="350"&gt;350 degrees&lt;/meter&gt;.&lt;/p&gt;
-</pre>
+#### HTML
 
-<h4 id="Result">Result</h4>
+```html
+<p>Heat the oven to <meter min="200" max="500"
+  value="350">350 degrees</meter>.</p>
+```
 
-<p>{{EmbedLiveSample("Simple_example", 300, 60)}}</p>
+#### Result
 
-<p>On Google Chrome, the resulting meter looks like this:</p>
+{{EmbedLiveSample("Simple_example", 300, 60)}}
 
-<p><img alt="current look of &lt;meter&gt; in google chrome" src="screen_shot_2020-10-12_at_10.10.53_pm.png"></p>
+On Google Chrome, the resulting meter looks like this:
 
-<h3 id="High_and_Low_range_example">High and Low range example</h3>
+![current look of \<meter> in google chrome](screen_shot\_2020-10-12\_at\_10.10.53\_pm.png)
 
-<p>Note that in this example the {{htmlattrxref("min", "meter")}} attribute is omitted. This is allowed, as it will default to <code>0</code>.</p>
+### High and Low range example
 
-<h4 id="HTML_2">HTML</h4>
+Note that in this example the {{htmlattrxref("min", "meter")}} attribute is omitted. This is allowed, as it will default to `0`.
 
-<pre class="brush: html">&lt;p&gt;He got a &lt;meter low="69" high="80" max="100"
-  value="84"&gt;B&lt;/meter&gt; on the exam.&lt;/p&gt;
-</pre>
+#### HTML
 
-<h4 id="Result_2">Result</h4>
+```html
+<p>He got a <meter low="69" high="80" max="100"
+  value="84">B</meter> on the exam.</p>
+```
 
-<p>{{EmbedLiveSample("High_and_Low_range_example", 300, 60)}}</p>
+#### Result
 
-<p>On Google Chrome, the resulting meter looks like this:</p>
+{{EmbedLiveSample("High_and_Low_range_example", 300, 60)}}
 
-<p><img alt="red meter in google chrome" src="screen_shot_2020-10-12_at_10.11.52_pm.png"></p>
+On Google Chrome, the resulting meter looks like this:
 
-<h2 id="Specifications">Specifications</h2>
+![red meter in google chrome](screen_shot\_2020-10-12\_at\_10.11.52\_pm.png)
 
-<p>{{Specifications}}</p>
+## Specifications
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Specifications}}
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li>{{HTMLElement("progress")}}</li>
-</ul>
+## See also
+
+*   {{HTMLElement("progress")}}

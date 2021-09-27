@@ -12,41 +12,37 @@ tags:
   - text input
 browser-compat: html.global_attributes.contenteditable
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>The <strong><code>contenteditable</code></strong> <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a> is an enumerated attribute indicating if the element should be editable by the user. If so, the browser modifies its widget to allow editing.</p>
+The **`contenteditable`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an enumerated attribute indicating if the element should be editable by the user. If so, the browser modifies its widget to allow editing.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/attribute-contenteditable.html","tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/attribute-contenteditable.html","tabbed-shorter")}}
 
-<p>The attribute must take one of the following values:</p>
+The attribute must take one of the following values:
 
-<ul>
- <li><code>true</code> or an <em>empty string</em>, which indicates that the element is editable.</li>
- <li><code>false</code>, which indicates that the element is not editable.</li>
-</ul>
+*   `true` or an *empty string*, which indicates that the element is editable.
+*   `false`, which indicates that the element is not editable.
 
-<p>If the attribute is given without a value, like <code>&lt;label contenteditable&gt;Example Label&lt;/label&gt;</code>, its value is treated as an empty string.</p>
+If the attribute is given without a value, like `<label contenteditable>Example Label</label>`, its value is treated as an empty string.
 
-<p>If this attribute is missing or its value is invalid, its value is <em>inherited</em> from its parent element: so the element is editable if its parent is editable.</p>
+If this attribute is missing or its value is invalid, its value is *inherited* from its parent element: so the element is editable if its parent is editable.
 
-<p>Note that although its allowed values include <code>true</code> and <code>false</code>, this attribute is an <em>enumerated</em> one and not a <em>Boolean</em> one.</p>
+Note that although its allowed values include `true` and `false`, this attribute is an *enumerated* one and not a *Boolean* one.
 
-<p>You can set the color used to draw the text insertion {{Glossary("caret")}} with the CSS {{cssxref("caret-color")}} property.</p>
+You can set the color used to draw the text insertion {{Glossary("caret")}} with the CSS {{cssxref("caret-color")}} property.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/HTML/Editable_content">Making content editable</a></li>
- <li>All <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a></li>
- <li>{{domxref("HTMLElement.contentEditable")}} and {{domxref("HTMLElement.isContentEditable")}}</li>
- <li>The CSS {{cssxref("caret-color")}} property</li>
- <li><a href="/en-US/docs/Web/API/HTMLElement/input_event"><code>HTMLElement</code> <code>input</code> event</a></li>
-</ul>
+*   [Making content editable](/en-US/docs/Web/Guide/HTML/Editable_content)
+*   All [global attributes](/en-US/docs/Web/HTML/Global_attributes)
+*   {{domxref("HTMLElement.contentEditable")}} and {{domxref("HTMLElement.isContentEditable")}}
+*   The CSS {{cssxref("caret-color")}} property
+*   [`HTMLElement` `input` event](/en-US/docs/Web/API/HTMLElement/input_event)

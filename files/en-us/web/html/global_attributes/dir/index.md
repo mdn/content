@@ -8,54 +8,36 @@ tags:
   - Reference
 browser-compat: html.global_attributes.dir
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>The <code><strong>dir</strong></code> <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a> is an enumerated attribute that indicates the directionality of the element's text.</p>
+The **`dir`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an enumerated attribute that indicates the directionality of the element's text.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/attribute-dir.html","tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/attribute-dir.html","tabbed-standard")}}
 
-<p>It can have the following values:</p>
+It can have the following values:
 
-<ul>
- <li><code>ltr</code>, which means <em>left to right</em> and is to be used for languages that are written from the left to the right (like English);</li>
- <li><code>rtl</code>, which means <em>right to left</em> and is to be used for languages that are written from the right to the left (like Arabic);</li>
- <li><code>auto</code>, which lets the user agent decide. It uses a basic algorithm as it parses the characters inside the element until it finds a character with a strong directionality, then applies that directionality to the whole element.</li>
-</ul>
+*   `ltr`, which means *left to right* and is to be used for languages that are written from the left to the right (like English);
+*   `rtl`, which means *right to left* and is to be used for languages that are written from the right to the left (like Arabic);
+*   `auto`, which lets the user agent decide. It uses a basic algorithm as it parses the characters inside the element until it finds a character with a strong directionality, then applies that directionality to the whole element.
 
-<div class="note">
-<p><strong>Note:</strong> This attribute is mandatory for the {{ HTMLElement("bdo") }} element where it has a different semantic meaning.</p>
+> **Note:** This attribute is mandatory for the {{ HTMLElement("bdo") }} element where it has a different semantic meaning.
+>
+> *   This attribute is *not* inherited by the {{ HTMLElement("bdi") }} element. If not set, its value is `auto`.
+> *   This attribute can be overridden by the CSS properties {{ cssxref("direction") }} and {{ cssxref("unicode-bidi") }}, if a CSS page is active and the element supports these properties.
+> *   As the directionality of the text is semantically related to its content and not to its presentation, it is recommended that web developers use this attribute instead of the related CSS properties when possible. That way, the text will display correctly even on a browser that doesn't support CSS or has the CSS deactivated.
+> *   The `auto` value should be used for data with an unknown directionality, like data coming from user input, eventually stored in a database.
 
-<ul>
- <li>
-  <p>This attribute is <em>not</em> inherited by the {{ HTMLElement("bdi") }} element. If not set, its value is <code>auto</code>.</p>
- </li>
- <li>
-  <p>This attribute can be overridden by the CSS properties {{ cssxref("direction") }} and {{ cssxref("unicode-bidi") }}, if a CSS page is active and the element supports these properties.</p>
- </li>
- <li>
-  <p>As the directionality of the text is semantically related to its content and not to its presentation, it is recommended that web developers use this attribute instead of the related CSS properties when possible. That way, the text will display correctly even on a browser that doesn't support CSS or has the CSS deactivated.</p>
- </li>
- <li>
-  <p>The <code>auto</code> value should be used for data with an unknown directionality, like data coming from user input, eventually stored in a database.</p>
- </li>
-</ul>
-</div>
+> **Note:** Browsers might allow users to change the directionality of {{ HTMLElement("input") }} and {{ HTMLElement("textarea") }}s in order to assist with authoring content. Chrome and Safari provide a directionality option in the contextual menu of input fields while Internet Explorer and Edge use the key combinations <kbd>Ctrl</kbd> + <kbd>Left Shift</kbd> and <kbd>Ctrl</kbd> + <kbd>Right Shift</kbd>. Firefox uses <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> but does NOT update the **`dir`** attribute value.
 
-<div class="note">
-<p><strong>Note:</strong> Browsers might allow users to change the directionality of {{ HTMLElement("input") }} and {{ HTMLElement("textarea") }}s in order to assist with authoring content. Chrome and Safari provide a directionality option in the contextual menu of input fields while Internet Explorer and Edge use the key combinations <kbd>Ctrl</kbd> + <kbd>Left Shift</kbd> and <kbd>Ctrl</kbd> + <kbd>Right Shift</kbd>. Firefox uses <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> but does NOT update the <code><strong>dir</strong></code> attribute value.</p>
-</div>
+## Specifications
 
-<h2 id="Specifications">Specifications</h2>
+{{Specifications}}
 
-<p>{{Specifications}}</p>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>All <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</li>
- <li>{{domxref("HTMLElement.dir")}} that reflects this attribute.</li>
-</ul>
+*   All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+*   {{domxref("HTMLElement.dir")}} that reflects this attribute.

@@ -4,59 +4,54 @@ slug: Web/HTML/Element/acronym
 tags:
   - Element
   - HTML
-  - 'HTML:Flow content'
+  - HTML:Flow content
   - Deprecated
   - Reference
   - Web
 browser-compat: html.elements.acronym
 ---
-<div>{{deprecated_header}}</div>
+{{deprecated_header}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>The <strong><code>&lt;acronym&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element allows authors to clearly indicate a sequence of characters that compose an acronym or abbreviation for a word.</p>
+The **`<acronym>`** [HTML](/en-US/docs/Web/HTML) element allows authors to clearly indicate a sequence of characters that compose an acronym or abbreviation for a word.
 
-<div class="warning">
-<p><strong>Warning:</strong> Don't use this element. Use the {{HTMLElement("abbr")}} element instead.</p>
-</div>
+> **Warning:** Don't use this element. Use the {{HTMLElement("abbr")}} element instead.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element only has <a href="/en-US/docs/Web/HTML/Global_attributes" rel="internal" title="HTML/global attributes">global attributes</a>, which are common to all elements.</p>
+This element only has [global attributes](/en-US/docs/Web/HTML/Global_attributes "HTML/global attributes"), which are common to all elements.
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the {{domxref('HTMLElement')}} interface.</p>
+This element implements the {{domxref('HTMLElement')}} interface.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:html">&lt;p&gt;The &lt;acronym title="World Wide Web"&gt;WWW&lt;/acronym&gt; is only a component of the Internet.&lt;/p&gt;
-</pre>
+```html
+<p>The <acronym title="World Wide Web">WWW</acronym> is only a component of the Internet.</p>
+```
 
-<h2 id="Default_styling">Default styling</h2>
+## Default styling
 
-<p>Though the purpose of this tag is purely for the convenience of the author, its default styling varies from one browser to another:</p>
+Though the purpose of this tag is purely for the convenience of the author, its default styling varies from one browser to another:
 
-<ul>
- <li>Some browsers, like Internet Explorer, do not style it differently than a {{HTMLElement("span")}} element.</li>
- <li>Opera, Firefox, Chrome, and some others add a dotted underline to the content of the element.</li>
- <li>A few browsers not only add a dotted underline, but also put it in small caps; to avoid this styling, adding something like {{cssxref('font-variant')}}<code>: none</code> in the CSS takes care of this case.</li>
-</ul>
+*   Some browsers, like Internet Explorer, do not style it differently than a {{HTMLElement("span")}} element.
+*   Opera, Firefox, Chrome, and some others add a dotted underline to the content of the element.
+*   A few browsers not only add a dotted underline, but also put it in small caps; to avoid this styling, adding something like {{cssxref('font-variant')}}`: none` in the CSS takes care of this case.
 
-<p>It is therefore recommended that web authors either explicitly style this element, or accept some cross-browser variation.</p>
+It is therefore recommended that web authors either explicitly style this element, or accept some cross-browser variation.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{HTMLElement("abbr")}} HTML element</li>
-</ul>
+*   The {{HTMLElement("abbr")}} HTML element
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

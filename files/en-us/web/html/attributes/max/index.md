@@ -9,157 +9,192 @@ tags:
   - max
   - Reference
 ---
-<p>{{HTMLSidebar}}</p>
+{{HTMLSidebar}}
 
-<p>The <strong><code>max</code></strong> attribute defines the maximum value that is acceptable and valid for the input containing the attribute. If the <code><a href="/en-US/docs/Web/HTML/Element/input#attr-value">value</a></code> of the element is greater than this, the element fails <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. This value must be greater than or equal to the value of the <a href="min"><code>min</code></a> attribute. If the <code>max</code> attribute is present by is not specified or is invalid, no <code>max</code> value is applied. If the <code>max</code> attribute is valid and a non-empty value is greater than the maximum allowed by the <code>max</code> attribute, constraint validation will prevent form submission.</p>
+The **`max`** attribute defines the maximum value that is acceptable and valid for the input containing the attribute. If the [`value`](/en-US/docs/Web/HTML/Element/input#attr-value) of the element is greater than this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation). This value must be greater than or equal to the value of the [`min`](min) attribute. If the `max` attribute is present by is not specified or is invalid, no `max` value is applied. If the `max` attribute is valid and a non-empty value is greater than the maximum allowed by the `max` attribute, constraint validation will prevent form submission.
 
-<p>Valid for the numeric input types, including the {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types, and both the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the <code>max</code> attribute is a number that specifies the most positive value a form control to be considered valid.</p>
+Valid for the numeric input types, including the {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types, and both the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the `max` attribute is a number that specifies the most positive value a form control to be considered valid.
 
-<p>If the value exceeds the max value allowed, the {{domxref('validityState.rangeOverflow')}} will be true, and the control will be matched by the {{cssxref(':out-of-range')}} and {{cssxref(':invalid')}} pseudo-classes.</p>
+If the value exceeds the max value allowed, the {{domxref('validityState.rangeOverflow')}} will be true, and the control will be matched by the {{cssxref(':out-of-range')}} and {{cssxref(':invalid')}} pseudo-classes.
 
-<h3 id="Syntax">Syntax</h3>
-
-<table class="no-markdown">
- <caption>Syntax for <code>max</code> values by input <code>type</code></caption>
- <thead>
-  <tr>
-   <th>Input type</th>
-   <th>Syntax</th>
-   <th>Example</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{HTMLElement("input/date", "date")}}</td>
-   <td><code>yyyy-mm-dd</code></td>
-   <td><code>&lt;input type="date" max="2019-12-25" step="1"&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/month", "month")}}</td>
-   <td><code>yyyy-mm</code></td>
-   <td><code>&lt;input type="month" max="2019-12" step="12"&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/week", "week")}}</td>
-   <td><code>yyyy-W##</code></td>
-   <td><code>&lt;input type="week" max="2019-W23" step=""&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/time", "time")}}</td>
-   <td><code>hh:mm</code></td>
-   <td><code>&lt;input type="time" max="17:00" step="900"&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/datetime-local", "datetime-local")}}</td>
-   <td><code>yyyy-mm-ddThh:mm</code></td>
-   <td><code>&lt;input type="datetime-local" max="2019-12-25T23:59"&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/number", "number")}}</td>
-   <td><a href="/en-US/docs/Web/CSS/number">&lt;number&gt;</a></td>
-   <td><code>&lt;input type="number" min="0" step="5" max="100"&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/range", "range")}}</td>
-   <td><a href="/en-US/docs/Web/CSS/number">&lt;number&gt;</a></td>
-   <td><code>&lt;input type="range" min="60" step="5" max="100"&gt;</code></td>
-  </tr>
- </tbody>
-</table>
-
-<div class="note">
-<p><strong>Note:</strong> When the data entered by the user doesn't adhere to the maximum value set, the value is considered invalid in contraint validation and will match the {{cssxref(':invalid')}} and {{cssxref(':out-of-range')}} pseudo-classes.</p>
-</div>
-
-<p>See <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Client-side validation</a> and {{domxref("ValidityState.rangeOverflow", "rangeOverflow")}} for more information.</p>
-
-<p>For the {{htmlelement('progress')}} element, the <code>max</code> attribute describes how much work the task indicated by the <code>progress</code> element requires. If present, must have a value greater than zero and be a valid floating point number. For the {{htmlelement('meter')}} element, the <code>max</code> attribute defines the upper numeric bound of the measured range. This must be greater than the minimum value (<code><a href="/en-US/docs/Web/HTML/Attributes/min">min</a></code> attribute), if specified. In both cases, if omitted, the value defaults to 1.</p>
+### Syntax
 
 <table class="no-markdown">
- <caption>Syntax for <code>max</code> values for other elements</caption>
- <thead>
-  <tr>
-   <th>Input type</th>
-   <th>Syntax</th>
-   <th>Example</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{HTMLElement("progress")}}</td>
-   <td><a href="/en-US/docs/Web/CSS/number">&lt;number&gt;</a></td>
-   <td><code>&lt;progress id="file" max="100" value="70"&gt; 70% &lt;/progress&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("meter")}}</td>
-   <td><a href="/en-US/docs/Web/CSS/number">&lt;number&gt;</a></td>
-   <td><code>&lt;meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="40"&gt; at 40/100&lt;/meter&gt;</code></td>
-  </tr>
- </tbody>
+  <caption>
+    Syntax for
+    <code>max</code>
+    values by input
+    <code>type</code>
+  </caption>
+  <thead>
+    <tr>
+      <th>Input type</th>
+      <th>Syntax</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{HTMLElement("input/date", "date")}}</td>
+      <td><code>yyyy-mm-dd</code></td>
+      <td><code>&#x3C;input type="date" max="2019-12-25" step="1"></code></td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/month", "month")}}</td>
+      <td><code>yyyy-mm</code></td>
+      <td><code>&#x3C;input type="month" max="2019-12" step="12"></code></td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/week", "week")}}</td>
+      <td><code>yyyy-W##</code></td>
+      <td><code>&#x3C;input type="week" max="2019-W23" step=""></code></td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/time", "time")}}</td>
+      <td><code>hh:mm</code></td>
+      <td><code>&#x3C;input type="time" max="17:00" step="900"></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{HTMLElement("input/datetime-local", "datetime-local")}}
+      </td>
+      <td><code>yyyy-mm-ddThh:mm</code></td>
+      <td>
+        <code>&#x3C;input type="datetime-local" max="2019-12-25T23:59"></code>
+      </td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/number", "number")}}</td>
+      <td><a href="/en-US/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td>
+        <code>&#x3C;input type="number" min="0" step="5" max="100"></code>
+      </td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/range", "range")}}</td>
+      <td><a href="/en-US/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td>
+        <code>&#x3C;input type="range" min="60" step="5" max="100"></code>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+> **Note:** When the data entered by the user doesn't adhere to the maximum value set, the value is considered invalid in contraint validation and will match the {{cssxref(':invalid')}} and {{cssxref(':out-of-range')}} pseudo-classes.
 
-<p>Provide instructions to help users understand how to complete the form and use individual form controls. Indicate any required and optional input, data formats, and other relevant information. When using the <code>max</code> attribute, ensure this maximum requirement is understood by the user. Providing instructions within the {{htmlelement('label')}} may be sufficient. If providing instructions outside of labels, which allows more flexible positioning and design, consider using <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a></code> or <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute">aria-describedby</a></code>.</p>
+See [Client-side validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation) and {{domxref("ValidityState.rangeOverflow", "rangeOverflow")}} for more information.
 
-<h2 id="Specifications">Specifications</h2>
+For the {{htmlelement('progress')}} element, the `max` attribute describes how much work the task indicated by the `progress` element requires. If present, must have a value greater than zero and be a valid floating point number. For the {{htmlelement('meter')}} element, the `max` attribute defines the upper numeric bound of the measured range. This must be greater than the minimum value ([`min`](/en-US/docs/Web/HTML/Attributes/min) attribute), if specified. In both cases, if omitted, the value defaults to 1.
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'input.html#the-min-and-max-attributes', 'max attribute')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'input.html#the-min-and-max-attributes', 'max attribute')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#the-progress-element', 'progress element')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#the-progress-element', 'progress element')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#the-meter-element', 'meter element')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#the-meter-element', 'meter element')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <caption>
+    Syntax for
+    <code>max</code>
+    values for other elements
+  </caption>
+  <thead>
+    <tr>
+      <th>Input type</th>
+      <th>Syntax</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{HTMLElement("progress")}}</td>
+      <td><a href="/en-US/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td>
+        <code
+          >&#x3C;progress id="file" max="100" value="70"> 70%
+          &#x3C;/progress></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("meter")}}</td>
+      <td><a href="/en-US/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td>
+        <code
+          >&#x3C;meter id="fuel" min="0" max="100" low="33" high="66"
+          optimum="80" value="40"> at 40/100&#x3C;/meter></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Accessibility concerns
 
-<p>{{Compat("html.elements.attributes.max")}}</p>
+Provide instructions to help users understand how to complete the form and use individual form controls. Indicate any required and optional input, data formats, and other relevant information. When using the `max` attribute, ensure this maximum requirement is understood by the user. Providing instructions within the {{htmlelement('label')}} may be sufficient. If providing instructions outside of labels, which allows more flexible positioning and design, consider using [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) or [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute).
 
-<h2 id="See_also">See also</h2>
+## Specifications
 
-<ul>
- <li><a href="/en-US/docs/Web/HTML/Attributes/step"><code>step</code></a></li>
- <li><a href="/en-US/docs/Web/HTML/Attributes/min"><code>min</code></a></li>
- <li>other meter attributes: <a href="/en-US/docs/Web/HTML/Attributes/low"><code>low</code></a>, <a href="/en-US/docs/Web/HTML/Attributes/high"><code>high</code></a>, <a href="/en-US/docs/Web/HTML/Attributes/optimum"><code>optimum</code></a></li>
- <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Constraint validation</a></li>
- <li><a href="/en-US/docs/Web/API/Constraint_validation">Constraint validation API</a></li>
- <li>{{domxref('validityState.rangeOverflow')}}</li>
- <li>{{cssxref(':out-of-range')}}</li>
- <li>{{htmlelement('input')}}</li>
- <li>{{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types, and the {{htmlelement('meter')}}</li>
-</ul>
+<table class="no-markdown">
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName('HTML WHATWG', 'input.html#the-min-and-max-attributes', 'max attribute')}}
+      </td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('HTML5 W3C', 'input.html#the-min-and-max-attributes', 'max attribute')}}
+      </td>
+      <td>{{Spec2('HTML5 W3C')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('HTML WHATWG', 'forms.html#the-progress-element', 'progress element')}}
+      </td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('HTML5 W3C', 'forms.html#the-progress-element', 'progress element')}}
+      </td>
+      <td>{{Spec2('HTML5 W3C')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('HTML WHATWG', 'forms.html#the-meter-element', 'meter element')}}
+      </td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('HTML5 W3C', 'forms.html#the-meter-element', 'meter element')}}
+      </td>
+      <td>{{Spec2('HTML5 W3C')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+## Browser compatibility
+
+{{Compat("html.elements.attributes.max")}}
+
+## See also
+
+*   [`step`](/en-US/docs/Web/HTML/Attributes/step)
+*   [`min`](/en-US/docs/Web/HTML/Attributes/min)
+*   other meter attributes: [`low`](/en-US/docs/Web/HTML/Attributes/low), [`high`](/en-US/docs/Web/HTML/Attributes/high), [`optimum`](/en-US/docs/Web/HTML/Attributes/optimum)
+*   [Constraint validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+*   [Constraint validation API](/en-US/docs/Web/API/Constraint_validation)
+*   {{domxref('validityState.rangeOverflow')}}
+*   {{cssxref(':out-of-range')}}
+*   {{htmlelement('input')}}
+*   {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types, and the {{htmlelement('meter')}}

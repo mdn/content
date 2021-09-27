@@ -9,233 +9,238 @@ tags:
   - Web
 browser-compat: html.elements.h1
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;h1&gt;</code></strong> to <strong><code>&lt;h6&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> elements represent six levels of section headings. <code>&lt;h1&gt;</code> is the highest section level and <code>&lt;h6&gt;</code> is the lowest.</p>
+The **`<h1>`** to **`<h6>`** [HTML](/en-US/docs/Web/HTML) elements represent six levels of section headings. `<h1>` is the highest section level and `<h6>` is the lowest.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/h1-h6.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/h1-h6.html", "tabbed-standard")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, heading content, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a>; don't use a heading element as a child of the {{HTMLElement("hgroup")}} element — it is now deprecated.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role">heading</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>{{ARIARole("tab")}}, {{ARIARole("presentation")}} or {{ARIARole("none")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLHeadingElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >, heading content, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >Phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >flow content</a
+        >; don't use a heading element as a child of the
+        {{HTMLElement("hgroup")}} element — it is now deprecated.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role"
+          >heading</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>
+        {{ARIARole("tab")}}, {{ARIARole("presentation")}} or
+        {{ARIARole("none")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLHeadingElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>These elements only include the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+These elements only include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<div class="note">
-<p><strong>Note:</strong> The <code>align</code> attribute is obsolete; don't use it.</p>
-</div>
+> **Note:** The `align` attribute is obsolete; don't use it.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<ul>
- <li>Heading information can be used by user agents to construct a table of contents for a document automatically.</li>
- <li>Avoid using heading elements to resize text. Instead, use the {{glossary("CSS")}} {{cssxref("font-size")}} property.</li>
- <li>Avoid skipping heading levels: always start from <code>&lt;h1&gt;</code>, followed by <code>&lt;h2&gt;</code> and so on.</li>
- <li>Use only one <code>&lt;h1&gt;</code> per page or view. It should concisely describe the overall purpose of the content.</li>
-</ul>
+*   Heading information can be used by user agents to construct a table of contents for a document automatically.
+*   Avoid using heading elements to resize text. Instead, use the {{glossary("CSS")}} {{cssxref("font-size")}} property.
+*   Avoid skipping heading levels: always start from `<h1>`, followed by `<h2>` and so on.
+*   Use only one `<h1>` per page or view. It should concisely describe the overall purpose of the content.
 
-<h3>Multiple <code>&lt;h1&gt;</code> elements on one page</h3>
+### Multiple `<h1>` elements on one page
 
-<p>Using more than one <code>&lt;h1&gt;</code> is allowed by the HTML specification, but is not considered a best practice. Using only one <code>&lt;h1&gt;</code> is beneficial for screenreader users.</p>
+Using more than one `<h1>` is allowed by the HTML specification, but is not considered a best practice. Using only one `<h1>` is beneficial for screenreader users.
 
-<p>The HTML specification includes the concept of an <em>outline</em> formed by the use of {{htmlelement("section")}} elements.
-  If this were implemented it would enable the use of multiple <code>&lt;h1&gt;</code> elements, giving user agents—including screen readers—a way to understand that an &lt;h1&gt; nested inside a defined section is a subheading. This functionality has never been implemented; therefore it is important to use your headings to describe the outline of your document.</p>
+The HTML specification includes the concept of an *outline* formed by the use of {{htmlelement("section")}} elements.
+If this were implemented it would enable the use of multiple `<h1>` elements, giving user agents—including screen readers—a way to understand that an \<h1> nested inside a defined section is a subheading. This functionality has never been implemented; therefore it is important to use your headings to describe the outline of your document.
 
-<p>The following articles give more information about the status of outlines:</p>
+The following articles give more information about the status of outlines:
 
-<ul>
-  <li><a href="https://html5doctor.com/computer-says-no-to-html5-document-outline/">Computer says no to the HTML5 outline</a></li>
-  <li><a href="https://html5accessibility.com/stuff/2021/03/21/a-decade-a-year-of-heading-backwards/">A decade + a year of heading backwards</a></li>
-</ul>
+*   [Computer says no to the HTML5 outline](https://html5doctor.com/computer-says-no-to-html5-document-outline/)
+*   [A decade + a year of heading backwards](https://html5accessibility.com/stuff/2021/03/21/a-decade-a-year-of-heading-backwards/)
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="All_headings">All headings</h3>
+### All headings
 
-<p>The following code shows all the heading levels, in use.</p>
+The following code shows all the heading levels, in use.
 
-<pre class="brush: html">&lt;h1&gt;Heading level 1&lt;/h1&gt;
-&lt;h2&gt;Heading level 2&lt;/h2&gt;
-&lt;h3&gt;Heading level 3&lt;/h3&gt;
-&lt;h4&gt;Heading level 4&lt;/h4&gt;
-&lt;h5&gt;Heading level 5&lt;/h5&gt;
-&lt;h6&gt;Heading level 6&lt;/h6&gt;
-</pre>
+```html
+<h1>Heading level 1</h1>
+<h2>Heading level 2</h2>
+<h3>Heading level 3</h3>
+<h4>Heading level 4</h4>
+<h5>Heading level 5</h5>
+<h6>Heading level 6</h6>
+```
 
-<p>Here is the result of this code:</p>
+Here is the result of this code:
 
-<p>{{ EmbedLiveSample('All_headings', '280', '300', '') }}</p>
+{{ EmbedLiveSample('All_headings', '280', '300', '') }}
 
-<h3 id="Example_page">Example page</h3>
+### Example page
 
-<p>The following code shows a few headings with some content under them.</p>
+The following code shows a few headings with some content under them.
 
-<pre class="brush: html">&lt;h1&gt;Heading elements&lt;/h1&gt;
-&lt;h2&gt;Summary&lt;/h2&gt;
-&lt;p&gt;Some text here...&lt;/p&gt;
+```html
+<h1>Heading elements</h1>
+<h2>Summary</h2>
+<p>Some text here...</p>
 
-&lt;h2&gt;Examples&lt;/h2&gt;
-&lt;h3&gt;Example 1&lt;/h3&gt;
-&lt;p&gt;Some text here...&lt;/p&gt;
+<h2>Examples</h2>
+<h3>Example 1</h3>
+<p>Some text here...</p>
 
-&lt;h3&gt;Example 2&lt;/h3&gt;
-&lt;p&gt;Some text here...&lt;/p&gt;
+<h3>Example 2</h3>
+<p>Some text here...</p>
 
-&lt;h2&gt;See also&lt;/h2&gt;
-&lt;p&gt;Some text here...&lt;/p&gt;
-</pre>
+<h2>See also</h2>
+<p>Some text here...</p>
+```
 
-<p>Here is the result of this code:</p>
+Here is the result of this code:
 
-<p>{{ EmbedLiveSample('Example_page', '280', '480', '') }}</p>
+{{ EmbedLiveSample('Example_page', '280', '480', '') }}
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<h3 id="Navigation">Navigation</h3>
+### Navigation
 
-<p>A common navigation technique for users of screen reading software is jumping from heading to heading to quickly determine the content of the page. Because of this, it is important to not skip one or more heading levels. Doing so may create confusion, as the person navigating this way may be left wondering where the missing heading is.</p>
+A common navigation technique for users of screen reading software is jumping from heading to heading to quickly determine the content of the page. Because of this, it is important to not skip one or more heading levels. Doing so may create confusion, as the person navigating this way may be left wondering where the missing heading is.
 
-<h4 id="Dont">Don't</h4>
+#### Don't
 
-<pre class="brush: html example-bad">&lt;h1&gt;Heading level 1&lt;/h1&gt;
-&lt;h3&gt;Heading level 3&lt;/h3&gt;
-&lt;h4&gt;Heading level 4&lt;/h4&gt;
-</pre>
+```html example-bad
+<h1>Heading level 1</h1>
+<h3>Heading level 3</h3>
+<h4>Heading level 4</h4>
+```
 
-<h4 id="Do">Do</h4>
+#### Do
 
-<pre class="brush: html example-good">&lt;h1&gt;Heading level 1&lt;/h1&gt;
-&lt;h2&gt;Heading level 2&lt;/h2&gt;
-&lt;h3&gt;Heading level 3&lt;/h3&gt;
-</pre>
+```html example-good
+<h1>Heading level 1</h1>
+<h2>Heading level 2</h2>
+<h3>Heading level 3</h3>
+```
 
-<h4 id="Nesting">Nesting</h4>
+#### Nesting
 
-<p>Headings may be nested as subsections to reflect the organization of the content of the page. Most screen readers can also generate an ordered list of all the headings on a page, which can help a person quickly determine the hierarchy of the content:</p>
+Headings may be nested as subsections to reflect the organization of the content of the page. Most screen readers can also generate an ordered list of all the headings on a page, which can help a person quickly determine the hierarchy of the content:
 
-<ol>
- <li><code>h1</code> Beetles
+1.  `h1` Beetles
 
-  <ol>
-   <li><code>h2</code> Etymology</li>
-   <li><code>h2</code> Distribution and Diversity</li>
-   <li><code>h2</code> Evolution
-    <ol>
-     <li><code>h3</code> Late Paleozoic</li>
-     <li><code>h3</code> Jurassic</li>
-     <li><code>h3</code> Cretaceous</li>
-     <li><code>h3</code> Cenozoic</li>
-    </ol>
-   </li>
-   <li><code>h2</code> External Morphology
-    <ol>
-     <li><code>h3</code> Head
-      <ol>
-       <li><code>h4</code> Mouthparts</li>
-      </ol>
-     </li>
-     <li><code>h3</code> Thorax
-      <ol>
-       <li><code>h4</code> Prothorax</li>
-       <li><code>h4</code> Pterothorax</li>
-      </ol>
-     </li>
-     <li><code>h3</code> Legs</li>
-     <li><code>h3</code> Wings</li>
-     <li><code>h3</code> Abdomen</li>
-    </ol>
-   </li>
-  </ol>
- </li>
-</ol>
+    1.  `h2` Etymology
+    2.  `h2` Distribution and Diversity
+    3.  `h2` Evolution
 
-<p>When headings are nested, heading levels may be "skipped" when closing a subsection.</p>
+        1.  `h3` Late Paleozoic
+        2.  `h3` Jurassic
+        3.  `h3` Cretaceous
+        4.  `h3` Cenozoic
+    4.  `h2` External Morphology
 
-<ul>
- <li><a href="https://www.w3.org/WAI/tutorials/page-structure/headings/">Headings • Page Structure • WAI Web Accessibility Tutorials</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways">MDN Understanding WCAG, Guideline 1.3 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are">MDN Understanding WCAG, Guideline 2.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html">Understanding Success Criterion 2.4.1 | W3C Understanding WCAG 2.0</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html">Understanding Success Criterion 2.4.6 | W3C Understanding WCAG 2.0</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html">Understanding Success Criterion 2.4.10 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+        1.  `h3` Head
 
-<h3 id="Labeling_section_content">Labeling section content</h3>
+            1.  `h4` Mouthparts
+        2.  `h3` Thorax
 
-<p>Another common navigation technique for users of screen reading software is to generate a list of <a href="/en-US/docs/Web/HTML/Element#content_sectioning">sectioning content</a> and use it to determine the page's layout.</p>
+            1.  `h4` Prothorax
+            2.  `h4` Pterothorax
+        3.  `h3` Legs
+        4.  `h3` Wings
+        5.  `h3` Abdomen
 
-<p>Sectioning content can be labeled using a combination of the <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a></code> and {{htmlattrxref("id")}} attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.</p>
+When headings are nested, heading levels may be "skipped" when closing a subsection.
 
-<h4 id="Example">Example</h4>
+*   [Headings • Page Structure • WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/headings/)
+*   [MDN Understanding WCAG, Guideline 1.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline\_1.3\_—\_create_content_that_can_be_presented_in_different_ways)
+*   [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
+*   [MDN Understanding WCAG, Guideline 2.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline\_2.4\_—\_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+*   [Understanding Success Criterion 2.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
+*   [Understanding Success Criterion 2.4.6 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html)
+*   [Understanding Success Criterion 2.4.10 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html)
 
-<pre class="brush: html">&lt;header&gt;
-  &lt;nav aria-labelledby="primary-navigation"&gt;
-    &lt;h2 id="primary-navigation"&gt;Primary navigation&lt;/h2&gt;
-    &lt;!-- navigation items --&gt;
-  &lt;/nav&gt;
-&lt;/header&gt;
+### Labeling section content
 
-&lt;!-- page content --&gt;
+Another common navigation technique for users of screen reading software is to generate a list of [sectioning content](/en-US/docs/Web/HTML/Element#content_sectioning) and use it to determine the page's layout.
 
-&lt;footer&gt;
-  &lt;nav aria-labelledby="footer-navigation"&gt;
-    &lt;h2 id="footer-navigation"&gt;Footer navigation&lt;/h2&gt;
-    &lt;!-- navigation items --&gt;
-  &lt;/nav&gt;
-&lt;/footer&gt;
-</pre>
+Sectioning content can be labeled using a combination of the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) and {{htmlattrxref("id")}} attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.
 
-<p>In this example, screen reading technology would announce that there are two {{HTMLElement("nav")}} sections, one called "Primary navigation" and one called "Footer navigation". If labels were not provided, the person using screen reading software may have to investigate each <code>nav</code> element's contents to determine their purpose.</p>
+#### Example
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">Using the aria-labelledby attribute</a></li>
- <li><a href="https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby">Labeling Regions • Page Structure • W3C WAI Web Accessibility Tutorials</a></li>
-</ul>
+```html
+<header>
+  <nav aria-labelledby="primary-navigation">
+    <h2 id="primary-navigation">Primary navigation</h2>
+    <!-- navigation items -->
+  </nav>
+</header>
 
-<h2 id="Specifications">Specifications</h2>
+<!-- page content -->
 
-<p>{{Specifications}}</p>
+<footer>
+  <nav aria-labelledby="footer-navigation">
+    <h2 id="footer-navigation">Footer navigation</h2>
+    <!-- navigation items -->
+  </nav>
+</footer>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+In this example, screen reading technology would announce that there are two {{HTMLElement("nav")}} sections, one called "Primary navigation" and one called "Footer navigation". If labels were not provided, the person using screen reading software may have to investigate each `nav` element's contents to determine their purpose.
 
-<p>{{Compat}}</p>
+*   [Using the aria-labelledby attribute](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
+*   [Labeling Regions • Page Structure • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)
 
-<h2 id="See_also">See also</h2>
+## Specifications
 
-<ul>
- <li>{{HTMLElement("p")}}</li>
- <li>{{HTMLElement("div")}}</li>
- <li>{{HTMLElement("section")}}</li>
-</ul>
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+*   {{HTMLElement("p")}}
+*   {{HTMLElement("div")}}
+*   {{HTMLElement("section")}}

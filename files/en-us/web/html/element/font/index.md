@@ -9,39 +9,35 @@ tags:
   - Web
 browser-compat: html.elements.font
 ---
-<div>{{deprecated_header}}</div>
+{{deprecated_header}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>The <strong><code>&lt;font&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element defines the font size, color and face for its content.</p>
+The **`<font>`** [HTML](/en-US/docs/Web/HTML) element defines the font size, color and face for its content.
 
-<div class="warning">
-<p><strong>Warning:</strong> Do not use this element. Use the CSS <a href="/en-US/docs/Web/CSS/CSS_Fonts">Fonts</a> properties to style text.</p>
-</div>
+> **Warning:** Do not use this element. Use the CSS [Fonts](/en-US/docs/Web/CSS/CSS_Fonts) properties to style text.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>Like all other HTML elements, this element supports the <a href="/en-US/docs/Web/HTML/Global_attributes" title="HTML/Global attributes">global attributes</a>.</p>
+Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes "HTML/Global attributes").
 
-<dl>
- <dt>{{htmlattrdef("color")}}</dt>
- <dd>This attribute sets the text color using either a named color or a color specified in the hexadecimal #RRGGBB format.</dd>
- <dt>{{htmlattrdef("face")}}</dt>
- <dd>This attribute contains a comma-separated list of one or more font names. The document text in the default style is rendered in the first font face that the client's browser supports. If no font listed is installed on the local system, the browser typically defaults to the proportional or fixed-width font for that system.</dd>
- <dt>{{htmlattrdef("size")}}</dt>
- <dd>This attribute specifies the font size as either a numeric or relative value. Numeric values range from <code>1</code> to <code>7</code> with <code>1</code> being the smallest and <code>3</code> the default. It can be defined using a relative value, like <code>+2</code> or <code>-3</code>, which set it relative to the value of the {{htmlattrxref("size", "basefont")}} attribute of the {{HTMLElement("basefont")}} element, or relative to <code>3</code>, the default value, if none does exist.</dd>
-</dl>
+*   {{htmlattrdef("color")}}
+    *   : This attribute sets the text color using either a named color or a color specified in the hexadecimal #RRGGBB format.
+*   {{htmlattrdef("face")}}
+    *   : This attribute contains a comma-separated list of one or more font names. The document text in the default style is rendered in the first font face that the client's browser supports. If no font listed is installed on the local system, the browser typically defaults to the proportional or fixed-width font for that system.
+*   {{htmlattrdef("size")}}
+    *   : This attribute specifies the font size as either a numeric or relative value. Numeric values range from `1` to `7` with `1` being the smallest and `3` the default. It can be defined using a relative value, like `+2` or `-3`, which set it relative to the value of the {{htmlattrxref("size", "basefont")}} attribute of the {{HTMLElement("basefont")}} element, or relative to `3`, the default value, if none does exist.
 
-<h2 id="DOM_interface">DOM interface</h2>
+## DOM interface
 
-<p>This element implements the {{domxref("HTMLFontElement")}} interface.</p>
+This element implements the {{domxref("HTMLFontElement")}} interface.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

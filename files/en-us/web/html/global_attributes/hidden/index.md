@@ -7,38 +7,34 @@ tags:
   - Reference
 browser-compat: html.global_attributes.hidden
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>The <strong><code>hidden</code></strong> <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a> is a Boolean attribute indicating that the element is not yet, or is no longer, <em>relevant</em>. For example, it can be used to hide elements of the page that can't be used until the login process has been completed. Browsers won't render elements with the <code>hidden</code> attribute set.</p>
+The **`hidden`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is a Boolean attribute indicating that the element is not yet, or is no longer, *relevant*. For example, it can be used to hide elements of the page that can't be used until the login process has been completed. Browsers won't render elements with the `hidden` attribute set.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/attribute-hidden.html","tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/attribute-hidden.html","tabbed-shorter")}}
 
-<p>The <code>hidden</code> attribute must not be used to hide content just from one presentation. If something is marked hidden, it is hidden from all presentations, including, for instance, screen readers.</p>
+The `hidden` attribute must not be used to hide content just from one presentation. If something is marked hidden, it is hidden from all presentations, including, for instance, screen readers.
 
-<p>Hidden elements shouldn't be linked from non-hidden elements, and elements that are descendants of a hidden element are still active, which means that script elements can still execute and form elements can still submit. Elements and scripts may, however, refer to elements that are hidden in other contexts.</p>
+Hidden elements shouldn't be linked from non-hidden elements, and elements that are descendants of a hidden element are still active, which means that script elements can still execute and form elements can still submit. Elements and scripts may, however, refer to elements that are hidden in other contexts.
 
-<p>For example, it would be incorrect to use the <code>href</code> attribute to link to a section marked with the <code>hidden</code> attribute. If the content is not applicable or relevant, then there is no reason to link to it.</p>
+For example, it would be incorrect to use the `href` attribute to link to a section marked with the `hidden` attribute. If the content is not applicable or relevant, then there is no reason to link to it.
 
-<p>It would be fine, however, to use the ARIA <code>aria-describedby</code> attribute to refer to descriptions that are themselves hidden. While hiding the descriptions implies that they are not useful on their own, they could be written in such a way that they are useful in the specific context of being referenced from the element that they describe.</p>
+It would be fine, however, to use the ARIA `aria-describedby` attribute to refer to descriptions that are themselves hidden. While hiding the descriptions implies that they are not useful on their own, they could be written in such a way that they are useful in the specific context of being referenced from the element that they describe.
 
-<p>Similarly, a canvas element with the <code>hidden</code> attribute could be used by a scripted graphics engine as an off-screen buffer, and a form control could refer to a hidden form element using its form attribute.</p>
+Similarly, a canvas element with the `hidden` attribute could be used by a scripted graphics engine as an off-screen buffer, and a form control could refer to a hidden form element using its form attribute.
 
-<div class="note">
-<p><strong>Note:</strong> Changing the value of the CSS {{cssxref("display")}} property on an element with the <code>hidden</code> attribute overrides the behavior. For instance, elements styled <code>display: flex</code> will be displayed despite the <code>hidden</code> attribute's presence.</p>
-</div>
+> **Note:** Changing the value of the CSS {{cssxref("display")}} property on an element with the `hidden` attribute overrides the behavior. For instance, elements styled `display: flex` will be displayed despite the `hidden` attribute's presence.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{DOMxRef("HTMLElement.hidden")}}</li>
- <li>All <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute"><code>aria-hidden</code> attribute</a></li>
-</ul>
+*   {{DOMxRef("HTMLElement.hidden")}}
+*   All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+*   [`aria-hidden` attribute](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute)

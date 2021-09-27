@@ -17,169 +17,196 @@ tags:
   - user input
 browser-compat: html.elements.kbd
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;kbd&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element represents a span of inline text denoting textual user input from a keyboard, voice input, or any other text entry device. By convention, the {{Glossary("user agent")}} defaults to rendering the contents of a <code>&lt;kbd&gt;</code> element using its default monospace font, although this is not mandated by the HTML standard.</p>
+The **`<kbd>`** [HTML](/en-US/docs/Web/HTML) element represents a span of inline text denoting textual user input from a keyboard, voice input, or any other text entry device. By convention, the {{Glossary("user agent")}} defaults to rendering the contents of a `<kbd>` element using its default monospace font, although this is not mandated by the HTML standard.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/kbd.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/kbd.html", "tabbed-shorter")}}
 
-<p><code>&lt;kbd&gt;</code> may be nested in various combinations with the {{HTMLElement("samp")}} (Sample Output) element to represent various forms of input or output based on visual cues.</p>
+`<kbd>` may be nested in various combinations with the {{HTMLElement("samp")}} (Sample Output) element to represent various forms of input or output based on visual cues.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>Any</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >Phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element only includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>Other elements can be used in tandem with <code>&lt;kbd&gt;</code> to represent more specific scenarios:</p>
+Other elements can be used in tandem with `<kbd>` to represent more specific scenarios:
 
-<ul>
- <li>Nesting a <code>&lt;kbd&gt;</code> element within another <code>&lt;kbd&gt;</code> element represents an actual key or other unit of input as a portion of a larger input. See {{anch("Representing keystrokes within an input")}} below.</li>
- <li>Nesting a <code>&lt;kbd&gt;</code> element inside a {{HTMLElement("samp")}} element represents input that has been echoed back to the user by the system. See {{anch("Echoed input")}}, below, for an example.</li>
- <li>Nesting a <code>&lt;samp&gt;</code> element inside a <code>&lt;kbd&gt;</code> element, on the other hand, represents input which is based on text presented by the system, such as the names of menus and menu items, or the names of buttons displayed on the screen. See the example under {{anch("Representing onscreen input options")}} below.</li>
-</ul>
+*   Nesting a `<kbd>` element within another `<kbd>` element represents an actual key or other unit of input as a portion of a larger input. See {{anch("Representing keystrokes within an input")}} below.
+*   Nesting a `<kbd>` element inside a {{HTMLElement("samp")}} element represents input that has been echoed back to the user by the system. See {{anch("Echoed input")}}, below, for an example.
+*   Nesting a `<samp>` element inside a `<kbd>` element, on the other hand, represents input which is based on text presented by the system, such as the names of menus and menu items, or the names of buttons displayed on the screen. See the example under {{anch("Representing onscreen input options")}} below.
 
-<div class="note">
-<p><strong>Note:</strong> You can define a custom style to override the browser's default font selection for the <code>&lt;kbd&gt;</code> element, although the user's preferences may potentially override your CSS.</p>
-</div>
+> **Note:** You can define a custom style to override the browser's default font selection for the `<kbd>` element, although the user's preferences may potentially override your CSS.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<pre class="brush: html">&lt;p&gt;Use the command &lt;kbd&gt;help mycommand&lt;/kbd&gt; to view documentation
-for the command "mycommand".&lt;/p&gt;
-</pre>
+```html
+<p>Use the command <kbd>help mycommand</kbd> to view documentation
+for the command "mycommand".</p>
+```
 
-<p>{{ EmbedLiveSample('Basic_example', 350, 80) }}</p>
+{{ EmbedLiveSample('Basic_example', 350, 80) }}
 
-<h3 id="Representing_keystrokes_within_an_input">Representing keystrokes within an input</h3>
+### Representing keystrokes within an input
 
-<p>To describe an input comprised of multiple keystrokes, you can nest multiple <code>&lt;kbd&gt;</code> elements, with an outer <code>&lt;kbd&gt;</code> element representing the overall input and each individual keystroke or component of the input enclosed within its own <code>&lt;kbd&gt;</code>.</p>
+To describe an input comprised of multiple keystrokes, you can nest multiple `<kbd>` elements, with an outer `<kbd>` element representing the overall input and each individual keystroke or component of the input enclosed within its own `<kbd>`.
 
-<h4 id="Unstyled">Unstyled</h4>
+#### Unstyled
 
-<p>First, let's look at what this looks like as just plain HTML.</p>
+First, let's look at what this looks like as just plain HTML.
 
-<h5 id="HTML">HTML</h5>
+##### HTML
 
-<pre class="brush: html">&lt;p&gt;You can also create a new document using the keyboard shortcut
-&lt;kbd&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;N&lt;/kbd&gt;&lt;/kbd&gt;.&lt;/p&gt;</pre>
+```html
+<p>You can also create a new document using the keyboard shortcut
+<kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd>.</p>
+```
 
-<p>This wraps the entire key sequence in an outer <code>&lt;kbd&gt;</code> element, then each individual key within its own, in order to denote the components of the sequence.</p>
+This wraps the entire key sequence in an outer `<kbd>` element, then each individual key within its own, in order to denote the components of the sequence.
 
-<div class="notecard note">
-<p><strong>Note:</strong> You don't need to do all this wrapping; you can choose to simplify it by leaving out the external <code>&lt;kbd&gt;</code> element. In other words, simplifying this to just <code>&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;N&lt;/kbd&gt;</code> would be perfectly valid.</p>
+> **Note:** You don't need to do all this wrapping; you can choose to simplify it by leaving out the external `<kbd>` element. In other words, simplifying this to just `<kbd>Ctrl</kbd>+<kbd>N</kbd>` would be perfectly valid.
+>
+> **Note:** Depending on your style sheet, though, you may find it useful to do this kind of nesting.
 
-<p><strong>Note:</strong> Depending on your style sheet, though, you may find it useful to do this kind of nesting.</p>
-</div>
+##### Result
 
-<h5 id="Result">Result</h5>
+The output looks like this without a style sheet applied:
 
-<p>The output looks like this without a style sheet applied:</p>
+{{EmbedLiveSample("Unstyled", 650, 80)}}
 
-<p>{{EmbedLiveSample("Unstyled", 650, 80)}}</p>
+#### With custom styles
 
-<h4 id="With_custom_styles">With custom styles</h4>
+We can make more sense of this by adding some CSS:
 
-<p>We can make more sense of this by adding some CSS:</p>
+##### CSS
 
-<h5 id="CSS">CSS</h5>
+We add a new style for `<kbd>` elements, `key`, which we can apply when rendering keyboard keys:
 
-<p>We add a new style for <code>&lt;kbd&gt;</code> elements, <code>key</code>, which we can apply when rendering keyboard keys:</p>
-
-<pre class="brush: css">kbd.key {
+```css
+kbd.key {
   border-radius: 3px;
   padding: 1px 2px 0;
   border: 1px solid black;
-}</pre>
+}
+```
 
-<h5 id="HTML_2">HTML</h5>
+##### HTML
 
-<p>Then we update the HTML to use this class on the keys in the output to be presented:</p>
+Then we update the HTML to use this class on the keys in the output to be presented:
 
-<pre class="brush: html">&lt;p&gt;You can also create a new document by pressing &lt;kbd&gt;&lt;kbd class="key"&gt;Ctrl&lt;/kbd&gt;+&lt;kbd class="key"&gt;N&lt;/kbd&gt;&lt;/kbd&gt;.&lt;/p&gt;</pre>
+```html
+<p>You can also create a new document by pressing <kbd><kbd class="key">Ctrl</kbd>+<kbd class="key">N</kbd></kbd>.</p>
+```
 
-<h5 id="Result_2">Result</h5>
+##### Result
 
-<p>The result is just what we want!</p>
+The result is just what we want!
 
-<p>{{EmbedLiveSample("With_custom_styles", 650, 80)}}</p>
+{{EmbedLiveSample("With_custom_styles", 650, 80)}}
 
-<h3 id="Echoed_input">Echoed input</h3>
+### Echoed input
 
-<p>Nesting a <code>&lt;kbd&gt;</code> element inside a {{HTMLElement("samp")}} element represents input that has been echoed back to the user by the system.</p>
+Nesting a `<kbd>` element inside a {{HTMLElement("samp")}} element represents input that has been echoed back to the user by the system.
 
-<pre class="brush: html">&lt;p&gt;If a syntax error occurs, the tool will output the initial
-command you typed for your review:&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;samp&gt;&lt;kbd&gt;custom-git ad my-new-file.cpp&lt;/kbd&gt;&lt;/samp&gt;
-&lt;/blockquote&gt;</pre>
+```html
+<p>If a syntax error occurs, the tool will output the initial
+command you typed for your review:</p>
+<blockquote>
+  <samp><kbd>custom-git ad my-new-file.cpp</kbd></samp>
+</blockquote>
+```
 
-<p>{{EmbedLiveSample("Echoed_input", 650, 100)}}</p>
+{{EmbedLiveSample("Echoed_input", 650, 100)}}
 
-<h3 id="Representing_onscreen_input_options">Representing onscreen input options</h3>
+### Representing onscreen input options
 
-<p>Nesting a <code>&lt;samp&gt;</code> element inside a <code>&lt;kbd&gt;</code> element represents input which is based on text presented by the system, such as the names of menus and menu items, or the names of buttons displayed on the screen.</p>
+Nesting a `<samp>` element inside a `<kbd>` element represents input which is based on text presented by the system, such as the names of menus and menu items, or the names of buttons displayed on the screen.
 
-<p>For example, you can explain how to choose the "New Document" option in the "File" menu using HTML that looks like this:</p>
+For example, you can explain how to choose the "New Document" option in the "File" menu using HTML that looks like this:
 
-<pre class="brush: html">&lt;p&gt;To create a new file, choose the menu option
-&lt;kbd&gt;&lt;kbd&gt;&lt;samp&gt;File&lt;/samp&gt;&lt;/kbd&gt;⇒&lt;kbd&gt;&lt;samp&gt;New
-Document&lt;/samp&gt;&lt;/kbd&gt;&lt;/kbd&gt;.&lt;/p&gt;
+```html
+<p>To create a new file, choose the menu option
+<kbd><kbd><samp>File</samp></kbd>⇒<kbd><samp>New
+Document</samp></kbd></kbd>.</p>
 
-&lt;p&gt;Don't forget to click the &lt;kbd&gt;&lt;samp&gt;OK&lt;/samp&gt;&lt;/kbd&gt; button
-to confirm once you've entered the name of the new file.&lt;/p&gt;</pre>
+<p>Don't forget to click the <kbd><samp>OK</samp></kbd> button
+to confirm once you've entered the name of the new file.</p>
+```
 
-<p>This does some interesting nesting. For the menu option description, the entire input is enclosed in a <code>&lt;kbd&gt;</code> element. Then, inside that, both the menu and menu item names are  contained within both <code>&lt;kbd&gt;</code> and <code>&lt;samp&gt;</code>, indicating an input which is selected from a screen widget.</p>
+This does some interesting nesting. For the menu option description, the entire input is enclosed in a `<kbd>` element. Then, inside that, both the menu and menu item names are  contained within both `<kbd>` and `<samp>`, indicating an input which is selected from a screen widget.
 
-<h4 id="Result_3">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Representing_onscreen_input_options", 650, 120)}}</p>
+{{EmbedLiveSample("Representing_onscreen_input_options", 650, 120)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{htmlelement("code")}}</li>
-</ul>
+*   {{htmlelement("code")}}

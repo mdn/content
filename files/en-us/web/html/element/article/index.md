@@ -9,114 +9,147 @@ tags:
   - Web
 browser-compat: html.elements.article
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;article&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication).</span> Examples include: a forum post, a magazine or newspaper article, or a blog entry, a product card, a user-submitted comment, an interactive widget or gadget, or any other independent item of content.</p>
+The **`<article>`** [HTML](/en-US/docs/Web/HTML) element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication). Examples include: a forum post, a magazine or newspaper article, or a blog entry, a product card, a user-submitted comment, an interactive widget or gadget, or any other independent item of content.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/article.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/article.html", "tabbed-standard")}}
 
-<p>A given document can have multiple articles in it; for example, on a blog that shows the text of each article one after another as the reader scrolls, each post would be contained in an <code>&lt;article&gt;</code> element, possibly with one or more <code>&lt;section&gt;</code>s within.</p>
+A given document can have multiple articles in it; for example, on a blog that shows the text of each article one after another as the reader scrolls, each post would be contained in an `<article>` element, possibly with one or more `<section>`s within.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#sectioning_content">sectioning content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content">palpable content</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a>. Note that an <code>&lt;article&gt;</code> element must not be a descendant of an {{HTMLElement("address")}} element.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role">article</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>{{ARIARole("application")}}, {{ARIARole("document")}}, {{ARIARole("feed")}}, {{ARIARole("main")}}, {{ARIARole("none")}}, {{ARIARole("presentation")}}, {{ARIARole("region")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a
+          href="/en-US/docs/Web/Guide/HTML/Content_categories#sectioning_content"
+          >sectioning content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content"
+          >palpable content</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >flow content</a
+        >. Note that an <code>&#x3C;article></code> element must not be a
+        descendant of an {{HTMLElement("address")}} element.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role"
+            >article</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>
+        {{ARIARole("application")}}, {{ARIARole("document")}},
+        {{ARIARole("feed")}}, {{ARIARole("main")}},
+        {{ARIARole("none")}}, {{ARIARole("presentation")}},
+        {{ARIARole("region")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element only includes the <a href="/en-US/docs/Web/HTML/Global_attributes" title="HTML/Global attributes">global attributes</a>.</p>
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes "HTML/Global attributes").
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<ul>
- <li>Each <code>&lt;article&gt;</code> should be identified, typically by including a heading (<a href="/en-US/docs/Web/HTML/Element/Heading_Elements"><code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code></a> element) as a child of the <code>&lt;article&gt;</code> element.</li>
- <li>When an <code>&lt;article&gt;</code> element is nested, the inner element represents an article related to the outer element. For example, the comments of a blog post can be <code>&lt;article&gt;</code> elements nested in the <code>&lt;article&gt;</code> representing the blog post.</li>
- <li>Author information of an <code>&lt;article&gt;</code> element can be provided through the {{HTMLElement("address")}} element, but it doesn't apply to nested <code>&lt;article&gt;</code> elements.</li>
- <li>The publication date and time of an <code>&lt;article&gt;</code> element can be described using the {{htmlattrxref("datetime", "time")}} attribute of a {{HTMLElement("time")}} element. <em>Note that the {{htmlattrxref("pubdate", "time")}} attribute of {{HTMLElement("time")}} is no longer a part of the {{glossary("W3C")}} {{glossary("HTML5")}} standard.</em></li>
-</ul>
+*   Each `<article>` should be identified, typically by including a heading ([`<h1>`-`<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element) as a child of the `<article>` element.
+*   When an `<article>` element is nested, the inner element represents an article related to the outer element. For example, the comments of a blog post can be `<article>` elements nested in the `<article>` representing the blog post.
+*   Author information of an `<article>` element can be provided through the {{HTMLElement("address")}} element, but it doesn't apply to nested `<article>` elements.
+*   The publication date and time of an `<article>` element can be described using the {{htmlattrxref("datetime", "time")}} attribute of a {{HTMLElement("time")}} element. *Note that the {{htmlattrxref("pubdate", "time")}} attribute of {{HTMLElement("time")}} is no longer a part of the {{glossary("W3C")}} {{glossary("HTML5")}} standard.*
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: html">&lt;article class="film_review"&gt;
-  &lt;h2&gt;Jurassic Park&lt;/h2&gt;
-  &lt;section class="main_review"&gt;
-    &lt;h3&gt;Review&lt;/h3&gt;
-    &lt;p&gt;Dinos were great!&lt;/p&gt;
-  &lt;/section&gt;
-  &lt;section class="user_reviews"&gt;
-    &lt;h3&gt;User reviews&lt;/h3&gt;
-    &lt;article class="user_review"&gt;
-      &lt;h4&gt;Too scary!&lt;/h4&gt;
-      &lt;p&gt;Way too scary for me.&lt;/p&gt;
-      &lt;footer&gt;
-        &lt;p&gt;
+```html
+<article class="film_review">
+  <h2>Jurassic Park</h2>
+  <section class="main_review">
+    <h3>Review</h3>
+    <p>Dinos were great!</p>
+  </section>
+  <section class="user_reviews">
+    <h3>User reviews</h3>
+    <article class="user_review">
+      <h4>Too scary!</h4>
+      <p>Way too scary for me.</p>
+      <footer>
+        <p>
           Posted on
-          &lt;time datetime="2015-05-16 19:00"&gt;May 16&lt;/time&gt;
+          <time datetime="2015-05-16 19:00">May 16</time>
           by Lisa.
-        &lt;/p&gt;
-      &lt;/footer&gt;
-    &lt;/article&gt;
-    &lt;article class="user_review"&gt;
-      &lt;h4&gt;Love the dinos!&lt;/h4&gt;
-      &lt;p&gt;I agree, dinos are my favorite.&lt;/p&gt;
-      &lt;footer&gt;
-        &lt;p&gt;
+        </p>
+      </footer>
+    </article>
+    <article class="user_review">
+      <h4>Love the dinos!</h4>
+      <p>I agree, dinos are my favorite.</p>
+      <footer>
+        <p>
           Posted on
-          &lt;time datetime="2015-05-17 19:00"&gt;May 17&lt;/time&gt;
+          <time datetime="2015-05-17 19:00">May 17</time>
           by Tom.
-        &lt;/p&gt;
-      &lt;/footer&gt;
-    &lt;/article&gt;
-  &lt;/section&gt;
-  &lt;footer&gt;
-    &lt;p&gt;
+        </p>
+      </footer>
+    </article>
+  </section>
+  <footer>
+    <p>
       Posted on
-      &lt;time datetime="2015-05-15 19:00"&gt;May 15&lt;/time&gt;
+      <time datetime="2015-05-15 19:00">May 15</time>
       by Staff.
-    &lt;/p&gt;
-  &lt;/footer&gt;
-&lt;/article&gt;
-</pre>
+    </p>
+  </footer>
+</article>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}</li>
- <li><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">Using HTML sections and outlines</a></li>
-</ul>
+*   Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
+*   [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)

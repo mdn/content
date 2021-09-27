@@ -11,247 +11,279 @@ tags:
   - textarea
 browser-compat: html.elements.textarea
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;textarea&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element represents a multi-line plain-text editing control, useful when you want to allow users to enter a sizeable amount of free-form text, for example a comment on a review or feedback form.</p>
+The **`<textarea>`** [HTML](/en-US/docs/Web/HTML) element represents a multi-line plain-text editing control, useful when you want to allow users to enter a sizeable amount of free-form text, for example a comment on a review or feedback form.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/textarea.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/textarea.html", "tabbed-standard")}}
 
-<p>The above example demonstrates a number of features of <code>&lt;textarea&gt;</code>:</p>
+The above example demonstrates a number of features of `<textarea>`:
 
-<ul>
- <li>An <code>id</code> attribute to allow the <code>&lt;textarea&gt;</code> to be associated with a {{htmlelement("label")}} element for accessibility purposes</li>
- <li>A <code>name</code> attribute to set the name of the associated data point submitted to the server when the form is submitted.</li>
- <li><code>rows</code> and <code>cols</code> attributes to allow you to specify an exact size for the <code>&lt;textarea&gt;</code> to take. Setting these is a good idea for consistency, as browser defaults can differ.</li>
- <li>Default content entered between the opening and closing tags. <code>&lt;textarea&gt;</code> does not support the <code>value</code> attribute.</li>
-</ul>
+*   An `id` attribute to allow the `<textarea>` to be associated with a {{htmlelement("label")}} element for accessibility purposes
+*   A `name` attribute to set the name of the associated data point submitted to the server when the form is submitted.
+*   `rows` and `cols` attributes to allow you to specify an exact size for the `<textarea>` to take. Setting these is a good idea for consistency, as browser defaults can differ.
+*   Default content entered between the opening and closing tags. `<textarea>` does not support the `value` attribute.
 
-<p>The <code>&lt;textarea&gt;</code> element also accepts several attributes common to form <code>&lt;input&gt;</code>s, such as <code>autocomplete</code>, <code>autofocus</code>, <code>disabled</code>, <code>placeholder</code>, <code>readonly</code>, and <code>required</code>.</p>
+The `<textarea>` element also accepts several attributes common to form `<input>`s, such as `autocomplete`, `autofocus`, `disabled`, `placeholder`, `readonly`, and `required`.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("autocapitalize")}} {{non-standard_inline}}</dt>
- <dd>This is a non-standard attribute supported by WebKit on iOS (therefore nearly all browsers running on iOS, including Safari, Firefox, and Chrome), which controls whether and how the text value should be automatically capitalized as it is entered/edited by the user. The non-deprecated values are available in iOS 5 and later. Possible values are:
- <ul>
-  <li><code>none</code>: Completely disables automatic capitalization.</li>
-  <li><code>sentences</code>: Automatically capitalize the first letter of sentences.</li>
-  <li><code>words</code>: Automatically capitalize the first letter of words.</li>
-  <li><code>characters</code>: Automatically capitalize all characters.</li>
-  <li><code>on</code>: {{deprecated_inline}} Deprecated since iOS 5.</li>
-  <li><code>off</code>: {{deprecated_inline}} Deprecated since iOS 5.</li>
- </ul>
- </dd>
- <dt>{{htmlattrdef("autocomplete")}}</dt>
- <dd>This attribute indicates whether the value of the control can be automatically completed by the browser. Possible values are:
- <ul>
-  <li><code>off</code>: The user must explicitly enter a value into this field for every use, or the document provides its own auto-completion method; the browser does not automatically complete the entry.</li>
-  <li><code>on</code>: The browser can automatically complete the value based on values that the user has entered during previous uses.</li>
- </ul>
+*   {{htmlattrdef("autocapitalize")}} {{non-standard_inline}}
+    *   : This is a non-standard attribute supported by WebKit on iOS (therefore nearly all browsers running on iOS, including Safari, Firefox, and Chrome), which controls whether and how the text value should be automatically capitalized as it is entered/edited by the user. The non-deprecated values are available in iOS 5 and later. Possible values are:
 
- <p>If the <code>autocomplete</code> attribute is not specified on a <code>&lt;textarea&gt;</code> element, then the browser uses the <code>autocomplete</code> attribute value of the <code>&lt;textarea&gt;</code> element's form owner. The form owner is either the {{HTMLElement("form")}} element that this <code>&lt;textarea&gt;</code> element is a descendant of or the form element whose <code>id</code> is specified by the <code>form</code> attribute of the input element. For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute in {{HTMLElement("form")}}.</p>
- </dd>
- <dt>{{ htmlattrdef("autocorrect") }} {{non-standard_inline}}</dt>
- <dd>A string which indicates whether or not to activate automatic spelling correction and processing of text substitutions (if any are configured) while the user is editing this <code>textarea</code>. Permitted values are:
- <dl>
-  <dt><code>on</code></dt>
-  <dd>Enable automatic spelling correction and text substitutions.</dd>
-  <dt><code>off</code></dt>
-  <dd>Disable automatic spelling correction and text substitutions.</dd>
- </dl>
-</dd>
- <dt>{{ htmlattrdef("autofocus") }}</dt>
- <dd>This Boolean attribute lets you specify that a form control should have input focus when the page loads. Only one form-associated element in a document can have this attribute specified.</dd>
- <dt>{{ htmlattrdef("cols") }}</dt>
- <dd>The visible width of the text control, in average character widths. If it is specified, it must be a positive integer. If it is not specified, the default value is <code>20</code>.</dd>
- <dt>{{ htmlattrdef("disabled") }}</dt>
- <dd>This Boolean attribute indicates that the user cannot interact with the control. If this attribute is not specified, the control inherits its setting from the containing element, for example {{ HTMLElement("fieldset") }}; if there is no containing element when the <code>disabled</code> attribute is set, the control is enabled.</dd>
- <dt>{{ htmlattrdef("form") }}</dt>
- <dd>The form element that the <code>&lt;textarea&gt;</code> element is associated with (its "form owner"). The value of the attribute must be the <code>id</code> of a form element in the same document. If this attribute is not specified, the <code>&lt;textarea&gt;</code> element must be a descendant of a form element. This attribute enables you to place <code>&lt;textarea&gt;</code> elements anywhere within a document, not just as descendants of form elements.</dd>
- <dt>{{ htmlattrdef("maxlength") }}</dt>
- <dd>The maximum number of characters (UTF-16 code units) that the user can enter. If this value isn't specified, the user can enter an unlimited number of characters.</dd>
- <dt>{{ htmlattrdef("minlength") }}</dt>
- <dd>The minimum number of characters (UTF-16 code units) required that the user should enter.</dd>
- <dt>{{ htmlattrdef("name") }}</dt>
- <dd>The name of the control.</dd>
- <dt>{{ htmlattrdef("placeholder") }}</dt>
- <dd>A hint to the user of what can be entered in the control. Carriage returns or line-feeds within the placeholder text must be treated as line breaks when rendering the hint.
- <div class="note"><p><strong>Note:</strong> Placeholders should only be used to show an example of the type of data that should be entered into a form; they are <em>not</em> a substitute for a proper {{HTMLElement("label")}} element tied to the input. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for a full explanation.</p></div>
- </dd>
- <dt>{{ htmlattrdef("readonly") }}</dt>
- <dd>This Boolean attribute indicates that the user cannot modify the value of the control. Unlike the <code>disabled</code> attribute, the <code>readonly</code> attribute does not prevent the user from clicking or selecting in the control. The value of a read-only control is still submitted with the form.</dd>
- <dt>{{ htmlattrdef("required") }}</dt>
- <dd>This attribute specifies that the user must fill in a value before submitting a form.</dd>
- <dt>{{ htmlattrdef("rows") }}</dt>
- <dd>The number of visible text lines for the control.</dd>
- <dt>{{ htmlattrdef("spellcheck") }}</dt>
- <dd>Specifies whether the <code>&lt;textarea&gt;</code> is subject to spell checking by the underlying browser/OS. The value can be:
- <ul>
-  <li><code>true</code>: Indicates that the element needs to have its spelling and grammar checked.</li>
-  <li><code>default</code> : Indicates that the element is to act according to a default behavior, possibly based on the parent element's own <code>spellcheck</code> value.</li>
-  <li><code>false</code> : Indicates that the element should not be spell checked.</li>
- </ul>
- </dd>
- <dt>{{ htmlattrdef("wrap") }}</dt>
- <dd>Indicates how the control wraps text. Possible values are:
- <ul>
-  <li><code>hard</code>: The browser automatically inserts line breaks (CR+LF) so that each line has no more than the width of the control; the <code>cols</code> attribute must also be specified for this to take effect.</li>
-  <li><code>soft</code>: The browser ensures that all line breaks in the value consist of a CR+LF pair, but does not insert any additional line breaks.</li>
-  <li><code>off</code> {{non-standard_inline}}: Like <code>soft</code> but changes appearance to <code>white-space: pre</code> so line segments exceeding <code>cols</code> are not wrapped and the <code>&lt;textarea&gt;</code> becomes horizontally scrollable.</li>
- </ul>
+        *   `none`: Completely disables automatic capitalization.
+        *   `sentences`: Automatically capitalize the first letter of sentences.
+        *   `words`: Automatically capitalize the first letter of words.
+        *   `characters`: Automatically capitalize all characters.
+        *   `on`: {{deprecated_inline}} Deprecated since iOS 5.
+        *   `off`: {{deprecated_inline}} Deprecated since iOS 5.
+*   {{htmlattrdef("autocomplete")}}
+    *   : This attribute indicates whether the value of the control can be automatically completed by the browser. Possible values are:
 
- <p>If this attribute is not specified, <code>soft</code> is its default value.</p>
- </dd>
-</dl>
+        *   `off`: The user must explicitly enter a value into this field for every use, or the document provides its own auto-completion method; the browser does not automatically complete the entry.
+        *   `on`: The browser can automatically complete the value based on values that the user has entered during previous uses.
 
-<h2 id="Styling_with_CSS">Styling with CSS</h2>
+        If the `autocomplete` attribute is not specified on a `<textarea>` element, then the browser uses the `autocomplete` attribute value of the `<textarea>` element's form owner. The form owner is either the {{HTMLElement("form")}} element that this `<textarea>` element is a descendant of or the form element whose `id` is specified by the `form` attribute of the input element. For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute in {{HTMLElement("form")}}.
+*   {{ htmlattrdef("autocorrect") }} {{non-standard_inline}}
+    *   : A string which indicates whether or not to activate automatic spelling correction and processing of text substitutions (if any are configured) while the user is editing this `textarea`. Permitted values are:
 
-<p><code>&lt;textarea&gt;</code> is a <a href="/en-US/docs/Web/CSS/Replaced_element">replaced element</a> — it has intrinsic dimensions, like a raster image. By default, its {{cssxref("display")}} value is <code>inline-block</code>. Compared to other form elements it is relatively easy to style, with its box model, fonts, color scheme, etc. being easily manipulable using regular CSS.</p>
+        *   `on`
+            *   : Enable automatic spelling correction and text substitutions.
+        *   `off`
+            *   : Disable automatic spelling correction and text substitutions.
+*   {{ htmlattrdef("autofocus") }}
+    *   : This Boolean attribute lets you specify that a form control should have input focus when the page loads. Only one form-associated element in a document can have this attribute specified.
+*   {{ htmlattrdef("cols") }}
+    *   : The visible width of the text control, in average character widths. If it is specified, it must be a positive integer. If it is not specified, the default value is `20`.
+*   {{ htmlattrdef("disabled") }}
+    *   : This Boolean attribute indicates that the user cannot interact with the control. If this attribute is not specified, the control inherits its setting from the containing element, for example {{ HTMLElement("fieldset") }}; if there is no containing element when the `disabled` attribute is set, the control is enabled.
+*   {{ htmlattrdef("form") }}
+    *   : The form element that the `<textarea>` element is associated with (its "form owner"). The value of the attribute must be the `id` of a form element in the same document. If this attribute is not specified, the `<textarea>` element must be a descendant of a form element. This attribute enables you to place `<textarea>` elements anywhere within a document, not just as descendants of form elements.
+*   {{ htmlattrdef("maxlength") }}
+    *   : The maximum number of characters (UTF-16 code units) that the user can enter. If this value isn't specified, the user can enter an unlimited number of characters.
+*   {{ htmlattrdef("minlength") }}
+    *   : The minimum number of characters (UTF-16 code units) required that the user should enter.
+*   {{ htmlattrdef("name") }}
+    *   : The name of the control.
+*   {{ htmlattrdef("placeholder") }}
+    *   : A hint to the user of what can be entered in the control. Carriage returns or line-feeds within the placeholder text must be treated as line breaks when rendering the hint.
 
-<p><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling HTML forms</a> provides some useful tips on styling <code>&lt;textarea&gt;</code>s.</p>
+        > **Note:** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are *not* a substitute for a proper {{HTMLElement("label")}} element tied to the input. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for a full explanation.
+*   {{ htmlattrdef("readonly") }}
+    *   : This Boolean attribute indicates that the user cannot modify the value of the control. Unlike the `disabled` attribute, the `readonly` attribute does not prevent the user from clicking or selecting in the control. The value of a read-only control is still submitted with the form.
+*   {{ htmlattrdef("required") }}
+    *   : This attribute specifies that the user must fill in a value before submitting a form.
+*   {{ htmlattrdef("rows") }}
+    *   : The number of visible text lines for the control.
+*   {{ htmlattrdef("spellcheck") }}
+    *   : Specifies whether the `<textarea>` is subject to spell checking by the underlying browser/OS. The value can be:
 
-<h3 id="Baseline_inconsistency">Baseline inconsistency</h3>
+        *   `true`: Indicates that the element needs to have its spelling and grammar checked.
+        *   `default` : Indicates that the element is to act according to a default behavior, possibly based on the parent element's own `spellcheck` value.
+        *   `false` : Indicates that the element should not be spell checked.
+*   {{ htmlattrdef("wrap") }}
+    *   : Indicates how the control wraps text. Possible values are:
 
-<p>The HTML specification doesn't define where the baseline of a <code>&lt;textarea&gt;</code> is, so different browsers set it to different positions. For Gecko, the <code>&lt;textarea&gt;</code> baseline is set on the baseline of the first line of the textarea, on another browser it may be set on the bottom of the <code>&lt;textarea&gt;</code> box. Don't use {{cssxref("vertical-align")}}<code>: baseline</code> on it; the behavior is unpredictable.</p>
+        *   `hard`: The browser automatically inserts line breaks (CR+LF) so that each line has no more than the width of the control; the `cols` attribute must also be specified for this to take effect.
+        *   `soft`: The browser ensures that all line breaks in the value consist of a CR+LF pair, but does not insert any additional line breaks.
+        *   `off` {{non-standard_inline}}: Like `soft` but changes appearance to `white-space: pre` so line segments exceeding `cols` are not wrapped and the `<textarea>` becomes horizontally scrollable.
 
-<h3 id="Controlling_whether_a_textarea_is_resizable">Controlling whether a textarea is resizable</h3>
+        If this attribute is not specified, `soft` is its default value.
 
-<p>In most browsers, <code>&lt;textarea&gt;</code>s are resizable — you'll notice the drag handle in the right hand corner, which can be used to alter the size of the element on the page. This is controlled by the {{ cssxref("resize") }} CSS property — resizing is enabled by default, but you can explicitly disable it using a <code>resize</code> value of <code>none</code>:</p>
+## Styling with CSS
 
-<pre class="brush: html">textarea {
+`<textarea>` is a [replaced element](/en-US/docs/Web/CSS/Replaced_element) — it has intrinsic dimensions, like a raster image. By default, its {{cssxref("display")}} value is `inline-block`. Compared to other form elements it is relatively easy to style, with its box model, fonts, color scheme, etc. being easily manipulable using regular CSS.
+
+[Styling HTML forms](/en-US/docs/Learn/Forms/Styling_web_forms) provides some useful tips on styling `<textarea>`s.
+
+### Baseline inconsistency
+
+The HTML specification doesn't define where the baseline of a `<textarea>` is, so different browsers set it to different positions. For Gecko, the `<textarea>` baseline is set on the baseline of the first line of the textarea, on another browser it may be set on the bottom of the `<textarea>` box. Don't use {{cssxref("vertical-align")}}`: baseline` on it; the behavior is unpredictable.
+
+### Controlling whether a textarea is resizable
+
+In most browsers, `<textarea>`s are resizable — you'll notice the drag handle in the right hand corner, which can be used to alter the size of the element on the page. This is controlled by the {{ cssxref("resize") }} CSS property — resizing is enabled by default, but you can explicitly disable it using a `resize` value of `none`:
+
+```html
+textarea {
   resize: none;
 }
-</pre>
+```
 
-<h3 id="Styling_valid_and_invalid_values">Styling valid and invalid values</h3>
+### Styling valid and invalid values
 
-<p>Valid and invalid values of a <code>&lt;textarea&gt;</code> element (e.g. those within, and outside the bounds set by <code>minlength</code>, <code>maxlength</code>, or <code>required</code>) can be highlighted using the {{cssxref(":valid")}} and {{cssxref(":invalid")}} pseudo-classes. For example, to give your textarea a different border depending on whether it is valid or invalid:</p>
+Valid and invalid values of a `<textarea>` element (e.g. those within, and outside the bounds set by `minlength`, `maxlength`, or `required`) can be highlighted using the {{cssxref(":valid")}} and {{cssxref(":invalid")}} pseudo-classes. For example, to give your textarea a different border depending on whether it is valid or invalid:
 
-<pre class="brush: css">textarea:invalid {
+```css
+textarea:invalid {
   border: 2px dashed red;
 }
 
 textarea:valid {
    border: 2px solid lime;
-}</pre>
+}
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<p>The following example show a very simple textarea, with a set numbers of rows and columns and some default content.</p>
+The following example show a very simple textarea, with a set numbers of rows and columns and some default content.
 
-<pre class="brush: html">&lt;textarea name="textarea"
-   rows="10" cols="50"&gt;Write something here&lt;/textarea&gt;</pre>
+```html
+<textarea name="textarea"
+   rows="10" cols="50">Write something here</textarea>
+```
 
-<p>{{ EmbedLiveSample('Basic_example','600','150') }}</p>
+{{ EmbedLiveSample('Basic_example','600','150') }}
 
-<h3 id="Min_and_max_length">Min and max length</h3>
+### Min and max length
 
-<p>This example has a minimum and maximum number of characters — of 10 and 20 respectively. Try it and see.</p>
+This example has a minimum and maximum number of characters — of 10 and 20 respectively. Try it and see.
 
-<pre class="brush: html">&lt;textarea name="textarea"
+```html
+<textarea name="textarea"
    rows="5" cols="30"
-   minlength="10" maxlength="20"&gt;Write something here&lt;/textarea&gt;</pre>
+   minlength="10" maxlength="20">Write something here</textarea>
+```
 
-<p>{{ EmbedLiveSample('Min_and_max_length','600','80') }}</p>
+{{ EmbedLiveSample('Min_and_max_length','600','80') }}
 
-<p>Note that <code>minlength</code> doesn't stop the user from removing characters so that the number entered goes past the minimum, but it does make the value entered into the <code>&lt;textarea&gt;</code> invalid. Also note that even if you have a <code>minlength</code> value set (3, for example), an empty <code>&lt;textarea&gt;</code> is still considered valid unless you also have the <code>required</code> attribute set.</p>
+Note that `minlength` doesn't stop the user from removing characters so that the number entered goes past the minimum, but it does make the value entered into the `<textarea>` invalid. Also note that even if you have a `minlength` value set (3, for example), an empty `<textarea>` is still considered valid unless you also have the `required` attribute set.
 
-<h3 id="Placeholder">Placeholder</h3>
+### Placeholder
 
-<p>This example has a placeholder set. Notice how it disappears when you start typing into the box.</p>
+This example has a placeholder set. Notice how it disappears when you start typing into the box.
 
-<pre class="brush: html">&lt;textarea name="textarea"
+```html
+<textarea name="textarea"
    rows="5" cols="30"
-   placeholder="Comment text."&gt;&lt;/textarea&gt;</pre>
+   placeholder="Comment text."></textarea>
+```
 
-<p>{{ EmbedLiveSample('Placeholder','600','80') }}</p>
+{{ EmbedLiveSample('Placeholder','600','80') }}
 
-<div class="note">
-<p><strong>Note:</strong> Placeholders should only be used to show an example of the type of data that should be entered into a form; they are <em>not</em> a substitute for a proper {{HTMLElement("label")}} element tied to the input. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for a full explanation.</p>
-</div>
+> **Note:** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are *not* a substitute for a proper {{HTMLElement("label")}} element tied to the input. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for a full explanation.
 
-<h3 id="Disabled_and_readonly">Disabled and readonly</h3>
+### Disabled and readonly
 
-<p>This example shows two <code>&lt;textarea&gt;</code>s — one of which is <code>disabled</code>, and one of which is <code>readonly</code>. Have a play with both and you'll see the difference in behavior — the <code>disabled</code> element is not selectable in any way (and its value is not submitted), whereas the <code>readonly</code> element is selectable and its contents copyable (and its value is submitted); you just can't edit the contents.</p>
+This example shows two `<textarea>`s — one of which is `disabled`, and one of which is `readonly`. Have a play with both and you'll see the difference in behavior — the `disabled` element is not selectable in any way (and its value is not submitted), whereas the `readonly` element is selectable and its contents copyable (and its value is submitted); you just can't edit the contents.
 
-<div class="note">
-<p><strong>Note:</strong> In browsers other than firefox, such as chrome, the <code>disabled</code> textarea content may be selectable and copyable.</p>
-</div>
+> **Note:** In browsers other than firefox, such as chrome, the `disabled` textarea content may be selectable and copyable.
 
-<pre class="brush: html">&lt;textarea name="textarea"
+```html
+<textarea name="textarea"
    rows="5" cols="30"
-   disabled&gt;I am a disabled textarea&lt;/textarea&gt;
-&lt;textarea name="textarea"
+   disabled>I am a disabled textarea</textarea>
+<textarea name="textarea"
    rows="5" cols="30"
-   readonly&gt;I am a readonly textarea&lt;/textarea&gt;
-</pre>
+   readonly>I am a readonly textarea</textarea>
+```
 
-<p>{{ EmbedLiveSample('Disabled_and_readonly','600','80') }}</p>
+{{ EmbedLiveSample('Disabled_and_readonly','600','80') }}
 
-<h2 id="Technical_summary">Technical summary</h2>
+## Technical summary
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content">Interactive content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_listed">listed</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable">labelable</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_resettable">resettable</a>, and <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_submittable">submittable</a> <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_">form-associated</a> element.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td>Text</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>No <code>role</code> permitted</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLTextAreaElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >,
+        <a
+          href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content"
+          >Interactive content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_listed"
+          >listed</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable"
+          >labelable</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_resettable"
+          >resettable</a
+        >, and
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_submittable"
+          >submittable</a
+        >
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_"
+          >form-associated</a
+        >
+        element.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>Text</td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role"
+            >textbox</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLTextAreaElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p>Other form-related elements:</p>
+Other form-related elements:
 
-<ul>
- <li>{{ HTMLElement("form") }}</li>
- <li>{{ HTMLElement("button") }}</li>
- <li>{{ HTMLElement("datalist") }}</li>
- <li>{{ HTMLElement("legend") }}</li>
- <li>{{ HTMLElement("label") }}</li>
- <li>{{ HTMLElement("select") }}</li>
- <li>{{ HTMLElement("optgroup") }}</li>
- <li>{{ HTMLElement("option") }}</li>
- <li>{{ HTMLElement("input") }}</li>
- <li>{{ HTMLElement("keygen") }}</li>
- <li>{{ HTMLElement("fieldset") }}</li>
- <li>{{ HTMLElement("output") }}</li>
- <li>{{ HTMLElement("progress") }}</li>
- <li>{{ HTMLElement("meter") }}</li>
-</ul>
+*   {{ HTMLElement("form") }}
+*   {{ HTMLElement("button") }}
+*   {{ HTMLElement("datalist") }}
+*   {{ HTMLElement("legend") }}
+*   {{ HTMLElement("label") }}
+*   {{ HTMLElement("select") }}
+*   {{ HTMLElement("optgroup") }}
+*   {{ HTMLElement("option") }}
+*   {{ HTMLElement("input") }}
+*   {{ HTMLElement("keygen") }}
+*   {{ HTMLElement("fieldset") }}
+*   {{ HTMLElement("output") }}
+*   {{ HTMLElement("progress") }}
+*   {{ HTMLElement("meter") }}

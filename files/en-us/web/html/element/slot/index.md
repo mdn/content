@@ -11,61 +11,86 @@ tags:
   - slot
 browser-compat: html.elements.slot
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;slot&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element—part of the <a href="/en-US/docs/Web/Web_Components">Web Components</a> technology suite—is a placeholder inside a web component that you can fill with your own markup, which lets you create separate DOM trees and present them together.</p>
+The **`<slot>`** [HTML](/en-US/docs/Web/HTML) element—part of the [Web Components](/en-US/docs/Web/Web_Components) technology suite—is a placeholder inside a web component that you can fill with your own markup, which lets you create separate DOM trees and present them together.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#transparent_content_model">Transparent</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Events</th>
-   <td>{{event("slotchange")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>No <code>role</code> permitted</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLSlotElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a
+          href="/en-US/docs/Web/Guide/HTML/Content_categories#transparent_content_model"
+          >Transparent</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Events</th>
+      <td>{{event("slotchange")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLSlotElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("name")}}</dt>
- <dd><p>The slot's name.</p>
- <p>A <strong><dfn>named slot</dfn></strong> is a <code>&lt;slot&gt;</code> element with a <code>name</code> attribute.</p></dd>
-</dl>
+*   {{htmlattrdef("name")}}
+    *   : The slot's name.
 
-<h2 id="Examples">Examples</h2>
+        A ***named slot*** is a `<slot>` element with a `name` attribute.
 
-<pre class="brush: html">&lt;template id="element-details-template"&gt;
-  &lt;style&gt;
+## Examples
+
+```html
+<template id="element-details-template">
+  <style>
     details {font-family: "Open Sans Light", Helvetica, Arial, sans-serif }
     .name {font-weight: bold; color: #217ac0; font-size: 120% }
     h4 {
@@ -78,28 +103,27 @@ browser-compat: html.elements.slot
     }
     .attributes { margin-left: 22px; font-size: 90% }
     .attributes p { margin-left: 16px; font-style: italic }
-  &lt;/style&gt;
-  &lt;details&gt;
-    &lt;summary&gt;
-      &lt;code class="name"&gt;&amp;lt;&lt;slot name="element-name"&gt;NEED NAME&lt;/slot&gt;&amp;gt;&lt;/code&gt;
-      &lt;i class="desc"&gt;&lt;slot name="description"&gt;NEED DESCRIPTION&lt;/slot&gt;&lt;/i&gt;
-    &lt;/summary&gt;
-    &lt;div class="attributes"&gt;
-      &lt;h4&gt;Attributes&lt;/h4&gt;
-      &lt;slot name="attributes"&gt;&lt;p&gt;None&lt;/p&gt;&lt;/slot&gt;
-    &lt;/div&gt;
-  &lt;/details&gt;
-  &lt;hr&gt;
-&lt;/template&gt;</pre>
+  </style>
+  <details>
+    <summary>
+      <code class="name">&lt;<slot name="element-name">NEED NAME</slot>&gt;</code>
+      <i class="desc"><slot name="description">NEED DESCRIPTION</slot></i>
+    </summary>
+    <div class="attributes">
+      <h4>Attributes</h4>
+      <slot name="attributes"><p>None</p></slot>
+    </div>
+  </details>
+  <hr>
+</template>
+```
 
-<div class="note">
-<p><strong>Note:</strong> You can see this complete example in action at <a class="external external-icon" href="https://github.com/mdn/web-components-examples/tree/master/element-details" rel="noopener">element-details</a> (see it <a class="external external-icon" href="https://mdn.github.io/web-components-examples/element-details/" rel="noopener">running live</a>). In addition, you can find an explanation at <a href="/en-US/docs/Web/Web_Components/Using_templates_and_slots">Using templates and slots</a>.</p>
-</div>
+> **Note:** You can see this complete example in action at [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) (see it [running live](https://mdn.github.io/web-components-examples/element-details/)). In addition, you can find an explanation at [Using templates and slots](/en-US/docs/Web/Web_Components/Using_templates_and_slots).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

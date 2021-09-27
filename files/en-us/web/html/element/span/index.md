@@ -10,91 +10,124 @@ tags:
   - Web
 browser-compat: html.elements.span
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;span&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element is a generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the {{htmlattrxref("class")}} or {{htmlattrxref("id")}} attributes), or because they share attribute values, such as {{htmlattrxref("lang")}}. It should be used only when no other semantic element is appropriate. <code>&lt;span&gt;</code> is very much like a {{HTMLElement("div")}} element, but {{HTMLElement("div")}} is a <a href="/en-US/docs/Web/HTML/Block-level_elements">block-level element</a> whereas a <code>&lt;span&gt;</code> is an <a href="/en-US/docs/Web/HTML/Inline_elements">inline element</a>.</p>
+The **`<span>`** [HTML](/en-US/docs/Web/HTML) element is a generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the {{htmlattrxref("class")}} or {{htmlattrxref("id")}} attributes), or because they share attribute values, such as {{htmlattrxref("lang")}}. It should be used only when no other semantic element is appropriate. `<span>` is very much like a {{HTMLElement("div")}} element, but {{HTMLElement("div")}} is a [block-level element](/en-US/docs/Web/HTML/Block-level_elements) whereas a `<span>` is an [inline element](/en-US/docs/Web/HTML/Inline_elements).
 
-<div>{{EmbedInteractiveExample("pages/tabbed/span.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/span.html", "tabbed-shorter")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>, or any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>Any</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLSpanElement")}} (before {{glossary("HTML5")}}, the interface was {{domxref("HTMLElement")}})</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >Phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >, or any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>
+        {{domxref("HTMLSpanElement")}} (before
+        {{glossary("HTML5")}}, the interface was
+        {{domxref("HTMLElement")}})
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element only includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="Example_1">Example 1</h3>
+### Example 1
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush:html">&lt;p&gt;&lt;span&gt;Some text&lt;/span&gt;&lt;/p&gt;</pre>
+```html
+<p><span>Some text</span></p>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Example_1')}}</p>
+{{EmbedLiveSample('Example_1')}}
 
-<h3 id="Example_2">Example 2</h3>
+### Example 2
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush:html">&lt;li&gt;&lt;span&gt;
-    &lt;a href="portfolio.html" target="_blank"&gt;See my portfolio&lt;/a&gt;
-&lt;/span&gt;&lt;/li&gt;
-</pre>
+```html
+<li><span>
+    <a href="portfolio.html" target="_blank">See my portfolio</a>
+</span></li>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">li span {
+```css
+li span {
   background: gold;
  }
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Example_2')}}</p>
+{{EmbedLiveSample('Example_2')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>HTML {{HTMLElement("div")}} element</li>
-</ul>
+*   HTML {{HTMLElement("div")}} element

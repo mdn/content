@@ -9,81 +9,69 @@ tags:
   - Constraint validation
   - HTML
 ---
-<p>{{HTMLSidebar}}{{draft}}</p>
+{{HTMLSidebar}}{{draft}}
 
-<p>The <strong><code>capture</code></strong> attribute specifies that, optionally, a new file should be captured, and which device should be used to capture that new media of a type defined by the <code><a href="accept">accept</a></code> attribute.</p>
+The **`capture`** attribute specifies that, optionally, a new file should be captured, and which device should be used to capture that new media of a type defined by the [`accept`](accept) attribute.
 
-<p>Values include <code>user</code> and <code>environment</code>. The capture attribute is supported on the {{HTMLElement("input/file", "file")}} input type.</p>
+Values include `user` and `environment`. The capture attribute is supported on the {{HTMLElement("input/file", "file")}} input type.
 
-<p>The <code>capture</code> attribute takes as it's value a string that specifies which camera to use for capture of image or video data, if the <a href="accept">accept</a> attribute indicates that the input should be of one of those types.</p>
+The `capture` attribute takes as it's value a string that specifies which camera to use for capture of image or video data, if the [accept](accept) attribute indicates that the input should be of one of those types.
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Value</th>
-			<th scope="col">Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>user</code></td>
-			<td>The user-facing camera and/or microphone should be used.</td>
-		</tr>
-		<tr>
-			<td><code>environment</code></td>
-			<td>The outward-facing camera and/or microphone should be used</td>
-		</tr>
-	</tbody>
-</table>
+| Value         | Description                                                |
+| ------------- | ---------------------------------------------------------- |
+| `user`        | The user-facing camera and/or microphone should be used.   |
+| `environment` | The outward-facing camera and/or microphone should be used |
 
-<div class="note"><p><strong>Note:</strong> Capture was previously a Boolean attribute which, if present, requested that the device's media capture device(s) such as camera or microphone be used instead of requesting a file input.</p></div>
+> **Note:** Capture was previously a Boolean attribute which, if present, requested that the device's media capture device(s) such as camera or microphone be used instead of requesting a file input.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>When set on a file input type, operating systems with microphones and cameras will display a user interface allowing the selection from an existing file or the creating of a new one.</p>
+When set on a file input type, operating systems with microphones and cameras will display a user interface allowing the selection from an existing file or the creating of a new one.
 
-<pre class="brush: html">&lt;p&gt;
-	&lt;label for="soundFile"&gt;What does your voice sound like?:&lt;/label&gt;
-	&lt;input type="file" id="soundFile" capture="user" accept="audio/*"&gt;
-	&lt;/p&gt;
-	&lt;p&gt;
-	&lt;label for="videoFile"&gt;Upload a video:&lt;/label&gt;
-	&lt;input type="file" id="videoFile" capture="environment" accept="video/*"&gt;
-	&lt;/p&gt;
-	&lt;p&gt;
-	&lt;label for="imageFile"&gt;Upload a photo of yourself:&lt;/label&gt;
-	&lt;input type="file" id="imageFile" capture="user" accept="image/*"&gt;
-	&lt;/p&gt;</pre>
+```html
+<p>
+	<label for="soundFile">What does your voice sound like?:</label>
+	<input type="file" id="soundFile" capture="user" accept="audio/*">
+	</p>
+	<p>
+	<label for="videoFile">Upload a video:</label>
+	<input type="file" id="videoFile" capture="environment" accept="video/*">
+	</p>
+	<p>
+	<label for="imageFile">Upload a photo of yourself:</label>
+	<input type="file" id="imageFile" capture="user" accept="image/*">
+	</p>
+```
 
-<p>{{EmbedLiveSample('Examples', '100%', 200)}}</p>
+{{EmbedLiveSample('Examples', '100%', 200)}}
 
-<p>Note these work better on mobile devices; if your device is a desktop computer, you'll likely get a typical file picker.</p>
+Note these work better on mobile devices; if your device is a desktop computer, you'll likely get a typical file picker.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('HTML Media Capture', '#the-capture-attribute','capture attribute')}}</td>
-			<td>{{Spec2('HTML Media Capture')}}</td>
-		</tr>
-	</tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName('HTML Media Capture', '#the-capture-attribute','capture attribute')}}
+      </td>
+      <td>{{Spec2('HTML Media Capture')}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("html.elements.attribute.capture")}}</p>
+{{Compat("html.elements.attribute.capture")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/API/File/Using_files_from_web_applications">Using files from web applications</a></li>
-	<li><a href="/en-US/docs/Web/API/File">File API</a></li>
-	<li>{{domxref('HTMLInputElement.files')}}</li>
-</ul>
+*   [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
+*   [File API](/en-US/docs/Web/API/File)
+*   {{domxref('HTMLInputElement.files')}}

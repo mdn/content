@@ -12,46 +12,44 @@ tags:
   - noframes
 browser-compat: html.elements.noframes
 ---
-<div>{{deprecated_header}}</div>
+{{deprecated_header}}
 
-<p>The <strong><code>&lt;noframes&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element provides content to be presented in browsers that don't support (or have disabled support for) the {{HTMLElement("frame")}} element. Although most commonly-used browsers support frames, there are exceptions, including certain special-use browsers including some mobile browsers, as well as text-mode browsers.</p>
+The **`<noframes>`** [HTML](/en-US/docs/Web/HTML) element provides content to be presented in browsers that don't support (or have disabled support for) the {{HTMLElement("frame")}} element. Although most commonly-used browsers support frames, there are exceptions, including certain special-use browsers including some mobile browsers, as well as text-mode browsers.
 
-<p>A <code>&lt;noframes&gt;</code> element can contain any HTML elements that are allowed within the body of an HTML document, with the exception of the {{HTMLElement("frameset")}} and {{HTMLElement("frame")}} elements, since using frames when they aren't supported doesn't make sense.</p>
+A `<noframes>` element can contain any HTML elements that are allowed within the body of an HTML document, with the exception of the {{HTMLElement("frameset")}} and {{HTMLElement("frame")}} elements, since using frames when they aren't supported doesn't make sense.
 
-<p><code>&lt;noframes&gt;</code> can be used to present a message explaining that the user's browser doesn't support frames, but ideally should be used to present an alternate form of the site that doesn't use frames but still offers the same or similar functionality.</p>
+`<noframes>` can be used to present a message explaining that the user's browser doesn't support frames, but ideally should be used to present an alternate form of the site that doesn't use frames but still offers the same or similar functionality.
 
-<div class="note">
-<p><strong>Note:</strong> This element is obsolete and shouldn't be used, since the {{HTMLElement("frame")}} and {{HTMLElement("frameset")}} elements are also obsolete. When frames are needed at all, they should be presented using the {{HTMLElement("iframe")}} element.</p>
-</div>
+> **Note:** This element is obsolete and shouldn't be used, since the {{HTMLElement("frame")}} and {{HTMLElement("frameset")}} elements are also obsolete. When frames are needed at all, they should be presented using the {{HTMLElement("iframe")}} element.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>Like all other HTML elements, this element supports the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>. It has no other attributes available.</p>
+Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes). It has no other attributes available.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, we see a frameset with two frames. In addition, <code>&lt;noframes&gt;</code> is used to present an explanatory message if the {{Glossary("user agent")}} doesn't support frames.</p>
+In this example, we see a frameset with two frames. In addition, `<noframes>` is used to present an explanatory message if the {{Glossary("user agent")}} doesn't support frames.
 
-<pre class="brush:html">&lt;frameset cols="50%,50%"&gt;
-  &lt;frame src="https://developer.mozilla.org/en/HTML/Element/frameset" /&gt;
-  &lt;frame src="https://developer.mozilla.org/en/HTML/Element/frame" /&gt;
-  &lt;noframes&gt;&lt;p&gt;It seems your browser does not support frames or is
-  configured to not allow them.&lt;/p&gt;&lt;/noframes&gt;
-&lt;/frameset&gt;</pre>
+```html
+<frameset cols="50%,50%">
+  <frame src="https://developer.mozilla.org/en/HTML/Element/frameset" />
+  <frame src="https://developer.mozilla.org/en/HTML/Element/frame" />
+  <noframes><p>It seems your browser does not support frames or is
+  configured to not allow them.</p></noframes>
+</frameset>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTMLElement("frameset")}}</li>
- <li>{{HTMLElement("frame")}}</li>
-</ul>
+*   {{HTMLElement("frameset")}}
+*   {{HTMLElement("frame")}}
 
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}

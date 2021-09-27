@@ -13,90 +13,123 @@ tags:
   - Web
 browser-compat: html.elements.aside
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;aside&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element represents a portion of a document whose content is only indirectly related to the document's main content. Asides are frequently presented as sidebars or call-out boxes.</p>
+The **`<aside>`** [HTML](/en-US/docs/Web/HTML) element represents a portion of a document whose content is only indirectly related to the document's main content. Asides are frequently presented as sidebars or call-out boxes.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/aside.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/aside.html", "tabbed-standard")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#sectioning_content">sectioning content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content">palpable content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a>. Note that an <code>&lt;aside&gt;</code> element must not be a descendant of an {{HTMLElement("address")}} element.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role">complementary</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>{{ARIARole("feed")}}, {{ARIARole("none")}}, {{ARIARole("note")}}, {{ARIARole("presentation")}}, {{ARIARole("region")}}, {{ARIARole("search")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a
+          href="/en-US/docs/Web/Guide/HTML/Content_categories#sectioning_content"
+          >sectioning content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content"
+          >palpable content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >flow content</a
+        >. Note that an <code>&#x3C;aside></code> element must not be a
+        descendant of an {{HTMLElement("address")}} element.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role"
+            >complementary</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>
+        {{ARIARole("feed")}}, {{ARIARole("none")}},
+        {{ARIARole("note")}}, {{ARIARole("presentation")}},
+        {{ARIARole("region")}}, {{ARIARole("search")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element only includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<ul>
- <li>Do not use the <code>&lt;aside&gt;</code> element to tag parenthesized text, as this kind of text is considered part of the main flow.</li>
-</ul>
+*   Do not use the `<aside>` element to tag parenthesized text, as this kind of text is considered part of the main flow.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>Using &lt;aside&gt;</h3>
+### Using \<aside>
 
-<p>This example uses <code>&lt;aside&gt;</code> to mark up a paragraph in an article. The paragraph is only indirectly related to the main article content:</p>
+This example uses `<aside>` to mark up a paragraph in an article. The paragraph is only indirectly related to the main article content:
 
-<pre class="brush: html">&lt;article&gt;
-  &lt;p&gt;
-    The Disney movie &lt;cite&gt;The Little Mermaid&lt;/cite&gt; was
+```html
+<article>
+  <p>
+    The Disney movie <cite>The Little Mermaid</cite> was
     first released to theatres in 1989.
-  &lt;/p&gt;
-  &lt;aside&gt;
-    &lt;p&gt;
+  </p>
+  <aside>
+    <p>
       The movie earned $87 million during its initial release.
-    &lt;/p&gt;
-  &lt;/aside&gt;
-  &lt;p&gt;
+    </p>
+  </aside>
+  <p>
     More info about the movie...
-  &lt;/p&gt;
-&lt;/article&gt;</pre>
+  </p>
+</article>
+```
 
-<p>{{EmbedLiveSample("Using_aside")}}</p>
+{{EmbedLiveSample("Using_aside")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};</li>
- <li><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">Using HTML sections and outlines</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role">ARIA: Complementary role</a></li>
-</ul>
+*   Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
+*   [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
+*   [ARIA: Complementary role](/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role)

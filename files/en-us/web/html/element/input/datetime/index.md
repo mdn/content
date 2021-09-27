@@ -12,23 +12,19 @@ tags:
   - Reference
   - datetime
 ---
-<div>{{HTMLRef}}{{deprecated_header}}</div>
+{{HTMLRef}}{{deprecated_header}}
 
-<p>The HTML <code>&lt;input type="datetime"&gt;</code> was a control for entering a date and time (hour, minute, second, and fraction of a second) as well as a timezone. <strong>This feature has been <a class="external external-icon" href="https://github.com/whatwg/html/issues/336">removed from WHATWG HTML</a></strong>, and is no longer supported in browsers.</p>
+The HTML `<input type="datetime">` was a control for entering a date and time (hour, minute, second, and fraction of a second) as well as a timezone. **This feature has been [removed from WHATWG HTML](https://github.com/whatwg/html/issues/336)**, and is no longer supported in browsers.
 
-<p>Instead, browsers are implementing (and developers are encouraged to use) <code><a href="/en-US/docs/Web/HTML/Element/input/datetime-local">&lt;input type="datetime-local"&gt;</a></code>.</p>
+Instead, browsers are implementing (and developers are encouraged to use) [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local).
 
-<p>The format of the date and time value used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid global date and time string")}}.</p>
+The format of the date and time value used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid global date and time string")}}.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div class="notecard note">
-<p><strong>Note:</strong> This feature has no current browser implementations.</p>
-</div>
+> **Note:** This feature has no current browser implementations.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTMLElement("input")}} element</li>
- <li><a href="/en-US/docs/Web/HTML/Date_and_time_formats">Date and time formats used in HTML</a></li>
-</ul>
+*   {{HTMLElement("input")}} element
+*   [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)

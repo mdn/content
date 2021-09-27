@@ -9,133 +9,158 @@ tags:
   - main
 browser-compat: html.elements.main
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;main&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element represents the dominant content of the {{HTMLElement("body")}} of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the central functionality of an application.</p>
+The **`<main>`** [HTML](/en-US/docs/Web/HTML) element represents the dominant content of the {{HTMLElement("body")}} of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the central functionality of an application.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/main.html","tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/main.html","tabbed-shorter")}}
 
-<p>A document mustn't have more than one <code>&lt;main&gt;</code> element that doesn't have the {{htmlattrxref("hidden")}} attribute specified.</p>
+A document mustn't have more than one `<main>` element that doesn't have the {{htmlattrxref("hidden")}} attribute specified.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>None; both the starting and ending tags are mandatory.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Where <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a> is expected, but only if it is a <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#hierarchically-correct-main-element">hierarchically correct <code>main</code> element</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role">main</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>No <code>role</code> permitted</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>None; both the starting and ending tags are mandatory.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Where
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >flow content</a
+        >
+        is expected, but only if it is a
+        <a
+          href="https://html.spec.whatwg.org/multipage/grouping-content.html#hierarchically-correct-main-element"
+          >hierarchically correct <code>main</code> element</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role"
+            >main</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element only includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>The content of a <code>&lt;main&gt;</code> element should be unique to the document. Content that is repeated across a set of documents or document sections such as sidebars, navigation links, copyright information, site logos, and search forms shouldn't be included unless the search form is the main function of the page.</p>
+The content of a `<main>` element should be unique to the document. Content that is repeated across a set of documents or document sections such as sidebars, navigation links, copyright information, site logos, and search forms shouldn't be included unless the search form is the main function of the page.
 
-<p><code>&lt;main&gt;</code> doesn't contribute to the document's outline; that is, unlike elements such as {{HTMLElement("body")}}, headings such as {{HTMLElement("h2")}}, and such, <code>&lt;main&gt;</code> doesn't affect the {{glossary("DOM", "DOM's")}} concept of the structure of the page. It's strictly informative.</p>
+`<main>` doesn't contribute to the document's outline; that is, unlike elements such as {{HTMLElement("body")}}, headings such as {{HTMLElement("h2")}}, and such, `<main>` doesn't affect the {{glossary("DOM", "DOM's")}} concept of the structure of the page. It's strictly informative.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;!-- other content --&gt;
+```html
+<!-- other content -->
 
-&lt;main&gt;
-  &lt;h1&gt;Apples&lt;/h1&gt;
-  &lt;p&gt;The apple is the pomaceous fruit of the apple tree.&lt;/p&gt;
+<main>
+  <h1>Apples</h1>
+  <p>The apple is the pomaceous fruit of the apple tree.</p>
 
-  &lt;article&gt;
-    &lt;h2&gt;Red Delicious&lt;/h2&gt;
-    &lt;p&gt;These bright red apples are the most common found in many
-    supermarkets.&lt;/p&gt;
-    &lt;p&gt;... &lt;/p&gt;
-    &lt;p&gt;... &lt;/p&gt;
-  &lt;/article&gt;
+  <article>
+    <h2>Red Delicious</h2>
+    <p>These bright red apples are the most common found in many
+    supermarkets.</p>
+    <p>... </p>
+    <p>... </p>
+  </article>
 
-  &lt;article&gt;
-    &lt;h2&gt;Granny Smith&lt;/h2&gt;
-    &lt;p&gt;These juicy, green apples make a great filling for
-    apple pies.&lt;/p&gt;
-    &lt;p&gt;... &lt;/p&gt;
-    &lt;p&gt;... &lt;/p&gt;
-  &lt;/article&gt;
-&lt;/main&gt;
+  <article>
+    <h2>Granny Smith</h2>
+    <p>These juicy, green apples make a great filling for
+    apple pies.</p>
+    <p>... </p>
+    <p>... </p>
+  </article>
+</main>
 
-&lt;!-- other content --&gt;</pre>
+<!-- other content -->
+```
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<h3 id="Landmark">Landmark</h3>
+### Landmark
 
-<p>The <code>&lt;main&gt;</code> element behaves like a <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role"><code>main</code> landmark</a> role. <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles">Landmarks</a> can be used by assistive technology to quickly identify and navigate to large sections of the document. Prefer using the <code>&lt;main&gt;</code> element over declaring <code>role="main"</code>, unless there are <a href="#browser_compatibility">legacy browser support concerns</a>.</p>
+The `<main>` element behaves like a [`main` landmark](/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role) role. [Landmarks](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) can be used by assistive technology to quickly identify and navigate to large sections of the document. Prefer using the `<main>` element over declaring `role="main"`, unless there are [legacy browser support concerns](#browser_compatibility).
 
-<h3 id="Skip_navigation">Skip navigation</h3>
+### Skip navigation
 
-<p>Skip navigation, also known as "skipnav", is a technique that allows an assistive technology user to quickly bypass large sections of repeated content (main navigation, info banners, etc.). This lets the user access the main content of the page faster.</p>
+Skip navigation, also known as "skipnav", is a technique that allows an assistive technology user to quickly bypass large sections of repeated content (main navigation, info banners, etc.). This lets the user access the main content of the page faster.
 
-<p>Adding an {{htmlattrxref("id")}} attribute to the <code>&lt;main&gt;</code> element lets it be a target of a skip navigation link.</p>
+Adding an {{htmlattrxref("id")}} attribute to the `<main>` element lets it be a target of a skip navigation link.
 
-<pre class="brush: html">&lt;body&gt;
-  &lt;a href="#main-content"&gt;Skip to main content&lt;/a&gt;
+```html
+<body>
+  <a href="#main-content">Skip to main content</a>
 
-  &lt;!-- navigation and header content --&gt;
+  <!-- navigation and header content -->
 
-  &lt;main id="main-content"&gt;
-    &lt;!-- main page content --&gt;
-  &lt;/main&gt;
-&lt;/body&gt;
-</pre>
+  <main id="main-content">
+    <!-- main page content -->
+  </main>
+</body>
+```
 
-<ul>
- <li><a href="https://webaim.org/techniques/skipnav/">WebAIM: "Skip Navigation" Links</a></li>
-</ul>
+*   [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
 
-<h3 id="Reader_mode">Reader mode</h3>
+### Reader mode
 
-<p>Browser reader mode functionality looks for the presence of the <code>&lt;main&gt;</code> element, as well as <a href="/en-US/docs/Web/HTML/Element/Heading_Elements">heading</a> and <a href="/en-US/docs/Web/HTML/Element#content_sectioning">content sectioning elements</a> when converting content into a specialized reader view.</p>
+Browser reader mode functionality looks for the presence of the `<main>` element, as well as [heading](/en-US/docs/Web/HTML/Element/Heading_Elements) and [content sectioning elements](/en-US/docs/Web/HTML/Element#content_sectioning) when converting content into a specialized reader view.
 
-<ul>
- <li><a href="https://medium.com/@mandy.michael/building-websites-for-safari-reader-mode-and-other-reading-apps-1562913c86c9">Building websites for Safari Reader Mode and other reading apps.</a></li>
-</ul>
+*   [Building websites for Safari Reader Mode and other reading apps.](https://medium.com/@mandy.michael/building-websites-for-safari-reader-mode-and-other-reading-apps-1562913c86c9)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>To support Internet Explorer 11 and lower, you can add an {{glossary("ARIA")}} role of <code>"main"</code> to the <code>&lt;main&gt;</code> element. But understand that the ARIA in HTML specification states that <code>role="main"</code> shouldn't actually be used with the <code>&lt;main&gt;</code> element, and the W3C validator will report a warning for it. However, Internet Explorer 11 and lower will otherwise not correctly expose the <code>&lt;main&gt;</code> element to screen readers such JAWS unless the element also has a <code>role="main"</code> attribute.</p>
+To support Internet Explorer 11 and lower, you can add an {{glossary("ARIA")}} role of `"main"` to the `<main>` element. But understand that the ARIA in HTML specification states that `role="main"` shouldn't actually be used with the `<main>` element, and the W3C validator will report a warning for it. However, Internet Explorer 11 and lower will otherwise not correctly expose the `<main>` element to screen readers such JAWS unless the element also has a `role="main"` attribute.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Basic structural elements: {{HTMLElement("html")}}, {{HTMLElement("head")}}, {{HTMLElement("body")}}</li>
- <li>Section-related elements: {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, or {{HTMLElement("nav")}}</li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role">ARIA: Main role</a></li>
-</ul>
+*   Basic structural elements: {{HTMLElement("html")}}, {{HTMLElement("head")}}, {{HTMLElement("body")}}
+*   Section-related elements: {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, or {{HTMLElement("nav")}}
+*   [ARIA: Main role](/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role)

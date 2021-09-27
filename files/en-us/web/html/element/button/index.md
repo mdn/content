@@ -10,262 +10,311 @@ tags:
   - Web
 browser-compat: html.elements.button
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;button&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element represents a clickable button, used to submit <a href="/en-US/docs/Learn/Forms">forms</a> or anywhere in a document for accessible, standard button functionality.</p>
+The **`<button>`** [HTML](/en-US/docs/Web/HTML) element represents a clickable button, used to submit [forms](/en-US/docs/Learn/Forms) or anywhere in a document for accessible, standard button functionality.
 
-<p>By default, HTML buttons are presented in a style resembling the platform the {{Glossary("user agent")}} runs on, but you can change buttons’ appearance with <a href="/en-US/docs/Web/CSS">CSS</a>.</p>
+By default, HTML buttons are presented in a style resembling the platform the {{Glossary("user agent")}} runs on, but you can change buttons’ appearance with [CSS](/en-US/docs/Web/CSS).
 
-<div>{{EmbedInteractiveExample("pages/tabbed/button.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/button.html", "tabbed-shorter")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content">Interactive content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_listed">listed</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable">labelable</a>, and <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_submittable">submittable</a> <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_content">form-associated</a> element, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a> but there must be no <a href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content">Interactive content</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>{{ARIARole("checkbox")}}, {{ARIARole("link")}}, {{ARIARole("menuitem")}}, {{ARIARole("menuitemcheckbox")}}, {{ARIARole("menuitemradio")}}, {{ARIARole("option")}}, {{ARIARole("radio")}}, {{ARIARole("switch")}}, {{ARIARole("tab")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLButtonElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >,
+        <a
+          href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content"
+          >Interactive content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_listed"
+          >listed</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable"
+          >labelable</a
+        >, and
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_submittable"
+          >submittable</a
+        >
+        <a
+          href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_content"
+          >form-associated</a
+        >
+        element, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >Phrasing content</a
+        >
+        but there must be no
+        <a
+          href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content"
+          >Interactive content</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"
+            >button</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>
+        {{ARIARole("checkbox")}}, {{ARIARole("link")}},
+        {{ARIARole("menuitem")}},
+        {{ARIARole("menuitemcheckbox")}},
+        {{ARIARole("menuitemradio")}}, {{ARIARole("option")}},
+        {{ARIARole("radio")}}, {{ARIARole("switch")}},
+        {{ARIARole("tab")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLButtonElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element's attributes include the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("autofocus")}}</dt>
- <dd>This Boolean attribute specifies that the button should have input <a href="/en-US/docs/Web/API/HTMLElement/focus">focus</a> when the page loads. <strong>Only one element in a document can have this attribute.</strong></dd>
- <dt>{{htmlattrdef("autocomplete")}} {{non-standard_inline}}</dt>
- <dd>This attribute on a {{HTMLElement("button")}} is nonstandard and Firefox-specific. Unlike other browsers, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">Firefox persists the dynamic disabled state</a> of a {{HTMLElement("button")}} across page loads. Setting <code>autocomplete="off"</code> on the button disables this feature; see {{bug(654072)}}.</dd>
- <dt>{{htmlattrdef("disabled")}}</dt>
- <dd>
- <p>This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.</p>
+*   {{htmlattrdef("autofocus")}}
+    *   : This Boolean attribute specifies that the button should have input [focus](/en-US/docs/Web/API/HTMLElement/focus) when the page loads. **Only one element in a document can have this attribute.**
+*   {{htmlattrdef("autocomplete")}} {{non-standard_inline}}
+    *   : This attribute on a {{HTMLElement("button")}} is nonstandard and Firefox-specific. Unlike other browsers, [Firefox persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Setting `autocomplete="off"` on the button disables this feature; see {{bug(654072)}}.
+*   {{htmlattrdef("disabled")}}
+    *   : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.
 
- <p>Firefox, unlike other browsers, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persists the dynamic disabled state</a> of a {{HTMLElement("button")}} across page loads. Use the {{htmlattrxref("autocomplete","button")}} attribute to control this feature.</p>
- </dd>
- <dt>{{htmlattrdef("form")}}</dt>
- <dd><p>The {{HTMLElement("form")}} element to associate the button with (its <em>form owner</em>). The value of this attribute must be the <code>id</code> of a <code>&lt;form&gt;</code> in the same document. (If this attribute is not set, the <code>&lt;button&gt;</code> is associated with its ancestor <code>&lt;form&gt;</code> element, if any.)</p>
- <p>This attribute lets you associate <code>&lt;button&gt;</code> elements to <code>&lt;form&gt;</code>s anywhere in the document, not just inside a <code>&lt;form&gt;</code>. It can also override an ancestor <code>&lt;form&gt;</code> element.</p></dd>
- <dt>{{htmlattrdef("formaction")}}</dt>
- <dd>The URL that processes the information submitted by the button. Overrides the {{htmlattrxref("action","form")}} attribute of the button's form owner. Does nothing if there is no form owner.</dd>
- <dt>{{htmlattrdef("formenctype")}}</dt>
- <dd>If the button is a submit button (it's inside/associated with a <code>&lt;form&gt;</code> and doesn't have <code>type="button"</code>), specifies how to encode the form data that is submitted. Possible values:
- <ul>
-  <li><code>application/x-www-form-urlencoded</code>: The default if the attribute is not used.</li>
-  <li><code>multipart/form-data</code>: Use to submit {{HTMLElement("input")}} elements with their {{htmlattrxref("type","input")}} attributes set to <code>file</code>.</li>
-  <li><code>text/plain</code>: Specified as a debugging aid; shouldn’t be used for real form submission.</li>
- </ul>
+        Firefox, unlike other browsers, [persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the {{htmlattrxref("autocomplete","button")}} attribute to control this feature.
+*   {{htmlattrdef("form")}}
+    *   : The {{HTMLElement("form")}} element to associate the button with (its *form owner*). The value of this attribute must be the `id` of a `<form>` in the same document. (If this attribute is not set, the `<button>` is associated with its ancestor `<form>` element, if any.)
 
- <p>If this attribute is specified, it overrides the {{htmlattrxref("enctype","form")}} attribute of the button's form owner.</p>
- </dd>
- <dt>{{htmlattrdef("formmethod")}}</dt>
- <dd>If the button is a submit button (it's inside/associated with a <code>&lt;form&gt;</code> and doesn't have <code>type="button"</code>), this attribute specifies the <a href="/en-US/docs/Web/HTTP/Methods">HTTP method</a> used to submit the form. Possible values:
- <ul>
-  <li><code>post</code>: The data from the form are included in the body of the HTTP request when sent to the server. Use when the form contains information that shouldn’t be public, like login credentials.</li>
-  <li><code>get</code>: The form data are appended to the form's <code>action</code> URL, with a <code>?</code> as a separator, and the resulting URL is sent to the server. Use this method when the form <a href="/en-US/docs/Glossary/Idempotent">has no side effects</a>, like search forms.</li>
- </ul>
+        This attribute lets you associate `<button>` elements to `<form>`s anywhere in the document, not just inside a `<form>`. It can also override an ancestor `<form>` element.
+*   {{htmlattrdef("formaction")}}
+    *   : The URL that processes the information submitted by the button. Overrides the {{htmlattrxref("action","form")}} attribute of the button's form owner. Does nothing if there is no form owner.
+*   {{htmlattrdef("formenctype")}}
+    *   : If the button is a submit button (it's inside/associated with a `<form>` and doesn't have `type="button"`), specifies how to encode the form data that is submitted. Possible values:
 
- <p>If specified, this attribute overrides the {{htmlattrxref("method","form")}} attribute of the button's form owner.</p>
- </dd>
- <dt>{{htmlattrdef("formnovalidate")}}</dt>
- <dd><p>If the button is a submit button, this Boolean attribute specifies that the form is not to be <a href="/en-US/docs/Learn/Forms/Form_validation">validated</a> when it is submitted. If this attribute is specified, it overrides the {{htmlattrxref("novalidate","form")}} attribute of the button's form owner.</p>
- <p>This attribute is also available on <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> elements.</p></dd>
- <dt>{{htmlattrdef("formtarget")}}</dt>
- <dd>If the button is a submit button, this attribute is a author-defined name or standardized, underscore-prefixed keyword indicating where to display the response from submitting the form. This is the <code>name</code> of, or keyword for, a <em>browsing context</em> (a tab, window, or {{HTMLElement("iframe")}}). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the button's form owner. The following keywords have special meanings:
- <ul>
-  <li><code>_self</code>: Load the response into the same browsing context as the current one. This is the default if the attribute is not specified.</li>
-  <li><code>_blank</code>: Load the response into a new unnamed browsing context — usually a new tab or window, depending on the user’s browser settings.</li>
-  <li><code>_parent</code>: Load the response into the parent browsing context of the current one. If there is no parent, this option behaves the same way as <code>_self</code>.</li>
-  <li><code>_top</code>: Load the response into the top-level browsing context (that is, the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as <code>_self</code>.</li>
- </ul>
- </dd>
- <dt>{{htmlattrdef("name")}}</dt>
- <dd>The name of the button, submitted as a pair with the button’s <code>value</code> as part of the form data, when that button is used to submit the form.</dd>
- <dt>{{htmlattrdef("type")}}</dt>
- <dd>The default behavior of the button. Possible values are:
- <ul>
-  <li><code>submit</code>: The button submits the form data to the server. This is the default if the attribute is not specified for buttons associated with a <code>&lt;form&gt;</code>, or if the attribute is an empty or invalid value.</li>
-  <li><code>reset</code>: The button resets all the controls to their initial values, like <a href="/en-US/docs/Web/HTML/Element/input/reset">&lt;input type="reset"&gt;</a>. (This behavior tends to annoy users.)</li>
-  <li><code>button</code>: The button has no default behavior, and does nothing when pressed by default. It can have client-side scripts listen to the element's events, which are triggered when the events occur.</li>
- </ul>
- </dd>
- <dt>{{htmlattrdef("value")}}</dt>
- <dd>Defines the value associated with the button’s <code>name</code> when it’s submitted with the form data. This value is passed to the server in params when the form is submitted using this button.</dd>
-</dl>
+        *   `application/x-www-form-urlencoded`: The default if the attribute is not used.
+        *   `multipart/form-data`: Use to submit {{HTMLElement("input")}} elements with their {{htmlattrxref("type","input")}} attributes set to `file`.
+        *   `text/plain`: Specified as a debugging aid; shouldn’t be used for real form submission.
 
-<h2 id="Notes">Notes</h2>
+        If this attribute is specified, it overrides the {{htmlattrxref("enctype","form")}} attribute of the button's form owner.
+*   {{htmlattrdef("formmethod")}}
+    *   : If the button is a submit button (it's inside/associated with a `<form>` and doesn't have `type="button"`), this attribute specifies the [HTTP method](/en-US/docs/Web/HTTP/Methods) used to submit the form. Possible values:
 
-<p>A submit button with the attribute <code>formaction</code> set, but without an associated form does nothing. You have to set a form owner, either by wrapping it in a <code>&lt;form&gt;</code> or set the attribute <code>form</code> to the id of the form.</p>
+        *   `post`: The data from the form are included in the body of the HTTP request when sent to the server. Use when the form contains information that shouldn’t be public, like login credentials.
+        *   `get`: The form data are appended to the form's `action` URL, with a `?` as a separator, and the resulting URL is sent to the server. Use this method when the form [has no side effects](/en-US/docs/Glossary/Idempotent), like search forms.
 
-<p><code>&lt;button&gt;</code> elements are much easier to style than {{HTMLElement("input")}} elements. You can add inner HTML content (think <code>&lt;i&gt;</code>, <code>&lt;br&gt;</code>, or even <code>&lt;img&gt;</code>), and use {{Cssxref("::after")}} and {{Cssxref("::before")}} pseudo-elements for complex rendering.</p>
+        If specified, this attribute overrides the {{htmlattrxref("method","form")}} attribute of the button's form owner.
+*   {{htmlattrdef("formnovalidate")}}
+    *   : If the button is a submit button, this Boolean attribute specifies that the form is not to be [validated](/en-US/docs/Learn/Forms/Form_validation) when it is submitted. If this attribute is specified, it overrides the {{htmlattrxref("novalidate","form")}} attribute of the button's form owner.
 
-<p>If your buttons are not for submitting form data to a server, be sure to set their <code>type</code> attribute to <code>button</code>. Otherwise they will try to submit form data and to load the (nonexistent) response, possibly destroying the current state of the document.</p>
+        This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) and [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit) elements.
+*   {{htmlattrdef("formtarget")}}
+    *   : If the button is a submit button, this attribute is a author-defined name or standardized, underscore-prefixed keyword indicating where to display the response from submitting the form. This is the `name` of, or keyword for, a *browsing context* (a tab, window, or {{HTMLElement("iframe")}}). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the button's form owner. The following keywords have special meanings:
 
-<h2 id="Example">Example</h2>
+        *   `_self`: Load the response into the same browsing context as the current one. This is the default if the attribute is not specified.
+        *   `_blank`: Load the response into a new unnamed browsing context — usually a new tab or window, depending on the user’s browser settings.
+        *   `_parent`: Load the response into the parent browsing context of the current one. If there is no parent, this option behaves the same way as `_self`.
+        *   `_top`: Load the response into the top-level browsing context (that is, the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as `_self`.
+*   {{htmlattrdef("name")}}
+    *   : The name of the button, submitted as a pair with the button’s `value` as part of the form data, when that button is used to submit the form.
+*   {{htmlattrdef("type")}}
+    *   : The default behavior of the button. Possible values are:
 
-<pre class="brush:html">&lt;button name="button"&gt;Press me&lt;/button&gt;
-</pre>
+        *   `submit`: The button submits the form data to the server. This is the default if the attribute is not specified for buttons associated with a `<form>`, or if the attribute is an empty or invalid value.
+        *   `reset`: The button resets all the controls to their initial values, like [\<input type="reset">](/en-US/docs/Web/HTML/Element/input/reset). (This behavior tends to annoy users.)
+        *   `button`: The button has no default behavior, and does nothing when pressed by default. It can have client-side scripts listen to the element's events, which are triggered when the events occur.
+*   {{htmlattrdef("value")}}
+    *   : Defines the value associated with the button’s `name` when it’s submitted with the form data. This value is passed to the server in params when the form is submitted using this button.
 
-<p>{{ EmbedLiveSample('Example', 200, 64) }}</p>
+## Notes
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+A submit button with the attribute `formaction` set, but without an associated form does nothing. You have to set a form owner, either by wrapping it in a `<form>` or set the attribute `form` to the id of the form.
 
-<h3 id="Icon_buttons">Icon buttons</h3>
+`<button>` elements are much easier to style than {{HTMLElement("input")}} elements. You can add inner HTML content (think `<i>`, `<br>`, or even `<img>`), and use {{Cssxref("::after")}} and {{Cssxref("::before")}} pseudo-elements for complex rendering.
 
-<p>Buttons that only show an icon to represent do not have an <em>accessible name</em>. Accessible names provide information for assistive technology, such as screen readers, to access when they parse the document and generate <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis">an accessibility tree</a>. Assistive technology then uses the accessibility tree to navigate and manipulate page content.</p>
+If your buttons are not for submitting form data to a server, be sure to set their `type` attribute to `button`. Otherwise they will try to submit form data and to load the (nonexistent) response, possibly destroying the current state of the document.
 
-<p>To give an icon button an accessible name, put text in the <code>&lt;button&gt;</code> element that concisely describes the button's functionality.</p>
+## Example
 
-<h4 id="Example_2">Example</h4>
+```html
+<button name="button">Press me</button>
+```
 
-<pre class="brush:html">&lt;button name="favorite"&gt;
-  &lt;svg aria-hidden="true" viewBox="0 0 10 10"&gt;&lt;path d="M7 9L5 8 3 9V6L1 4h3l1-3 1 3h3L7 6z"/&gt;&lt;/svg&gt;
+{{ EmbedLiveSample('Example', 200, 64) }}
+
+## Accessibility concerns
+
+### Icon buttons
+
+Buttons that only show an icon to represent do not have an *accessible name*. Accessible names provide information for assistive technology, such as screen readers, to access when they parse the document and generate [an accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis). Assistive technology then uses the accessibility tree to navigate and manipulate page content.
+
+To give an icon button an accessible name, put text in the `<button>` element that concisely describes the button's functionality.
+
+#### Example
+
+```html
+<button name="favorite">
+  <svg aria-hidden="true" viewBox="0 0 10 10"><path d="M7 9L5 8 3 9V6L1 4h3l1-3 1 3h3L7 6z"/></svg>
   Add to favorites
-&lt;/button&gt;
-</pre>
+</button>
+```
 
-<p>If you want to visually hide the button's text, an accessible way to do so is to use <a href="https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link">a combination of CSS properties</a> to remove it visually from the screen, but keep it parsable by assistive technology.</p>
+If you want to visually hide the button's text, an accessible way to do so is to use [a combination of CSS properties](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) to remove it visually from the screen, but keep it parsable by assistive technology.
 
-<p>However, it is worth noting that leaving the button text visually apparent can aid people who may not be familiar with the icon's meaning or understand the button's purpose. This is especially relevant for people who are not technologically sophisticated, or who may have different cultural interpretations for the icon the button uses.</p>
+However, it is worth noting that leaving the button text visually apparent can aid people who may not be familiar with the icon's meaning or understand the button's purpose. This is especially relevant for people who are not technologically sophisticated, or who may have different cultural interpretations for the icon the button uses.
 
-<ul>
- <li><a href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/">What is an accessible name? | The Paciello Group</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust#guideline_4.1_—_compatible_maximize_compatibility_with_current_and_future_user_agents_including_assistive_technologies">MDN Understanding WCAG, Guideline 4.1 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html">Understanding Success Criterion 4.1.2 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+*   [What is an accessible name? | The Paciello Group](https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/)
+*   [MDN Understanding WCAG, Guideline 4.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust#guideline\_4.1\_—\_compatible_maximize_compatibility_with_current_and_future_user_agents_including_assistive_technologies)
+*   [Understanding Success Criterion 4.1.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)
 
-<h3 id="Size_and_Proximity">Size and Proximity</h3>
+### Size and Proximity
 
-<h4 id="Size">Size</h4>
+#### Size
 
-<p>Interactive elements such as buttons should provide an area large enough that it is easy to activate them. This helps a variety of people, including people with motor control issues and people using non-precise forms of input such as a stylus or fingers. A minimum interactive size of 44×44 <a href="https://www.w3.org/TR/WCAG21/#dfn-css-pixels">CSS pixels</a> is recommended.</p>
+Interactive elements such as buttons should provide an area large enough that it is easy to activate them. This helps a variety of people, including people with motor control issues and people using non-precise forms of input such as a stylus or fingers. A minimum interactive size of 44×44 [CSS pixels](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) is recommended.
 
-<ul>
- <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/target-size.html">Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1</a></li>
- <li><a href="https://adrianroselli.com/2019/06/target-size-and-2-5-5.html">Target Size and 2.5.5 | Adrian Roselli</a></li>
- <li><a href="https://a11yproject.com/posts/2018-11-21-large-touch-targets/">Quick test: Large touch targets - The A11Y Project</a></li>
-</ul>
+*   [Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
+*   [Target Size and 2.5.5 | Adrian Roselli](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
+*   [Quick test: Large touch targets - The A11Y Project](https://a11yproject.com/posts/2018-11-21-large-touch-targets/)
 
-<h4 id="Proximity">Proximity</h4>
+#### Proximity
 
-<p>Large amounts of interactive content — including buttons — placed in close visual proximity to each other should have space separating them. This spacing is beneficial for people who are experiencing motor control issues, who may accidentally activate the wrong interactive content.</p>
+Large amounts of interactive content — including buttons — placed in close visual proximity to each other should have space separating them. This spacing is beneficial for people who are experiencing motor control issues, who may accidentally activate the wrong interactive content.
 
-<p>Spacing may be created using CSS properties such as {{cssxref("margin")}}.</p>
+Spacing may be created using CSS properties such as {{cssxref("margin")}}.
 
-<ul>
- <li><a href="https://axesslab.com/hand-tremors/">Hand tremors and the giant-button-problem - Axess Lab</a></li>
-</ul>
+*   [Hand tremors and the giant-button-problem - Axess Lab](https://axesslab.com/hand-tremors/)
 
-<h3>ARIA state information</h3>
+### ARIA state information
 
-<p>To describe the state of a button the correct ARIA attribute to use is <code>aria-pressed</code> and not <code>aria-checked</code> or <code>aria-selected</code>. To find out more read  the information about the <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">ARIA button role</a>.</p>
+To describe the state of a button the correct ARIA attribute to use is `aria-pressed` and not `aria-checked` or `aria-selected`. To find out more read the information about the [ARIA button role](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role).
 
-<h3 id="Firefox">Firefox</h3>
+### Firefox
 
-<p>Firefox will add a small dotted border on a focused button. This border is declared through CSS in the browser stylesheet, but you can override it to add your own focused style using <code><a href="/en-US/docs/Web/CSS/::-moz-focus-inner">button::-moz-focus-inner { }</a></code>.</p>
+Firefox will add a small dotted border on a focused button. This border is declared through CSS in the browser stylesheet, but you can override it to add your own focused style using [`button::-moz-focus-inner { }`](/en-US/docs/Web/CSS/::-moz-focus-inner).
 
-<p>If overridden, it is important to <strong>ensure that the state change when focus is moved to the button is high enough</strong> that people experiencing low vision conditions will be able to perceive it.</p>
+If overridden, it is important to **ensure that the state change when focus is moved to the button is high enough** that people experiencing low vision conditions will be able to perceive it.
 
-<p>Color contrast ratio is determined by comparing the luminosity of the button text and background color values compared to the background the button is placed on. In order to meet current <a href="https://www.w3.org/WAI/intro/wcag" rel="noopener">Web Content Accessibility Guidelines (WCAG)</a>, a ratio of 4.5:1 is required for text content and 3:1 for large text. (Large text is defined as 18.66px and {{cssxref("font-weight", "bold")}} or larger, or 24px or larger.)</p>
+Color contrast ratio is determined by comparing the luminosity of the button text and background color values compared to the background the button is placed on. In order to meet current [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/intro/wcag), a ratio of 4.5:1 is required for text content and 3:1 for large text. (Large text is defined as 18.66px and {{cssxref("font-weight", "bold")}} or larger, or 24px or larger.)
 
-<ul>
- <li><a href="https://webaim.org/resources/contrastchecker/">WebAIM: Color Contrast Checker</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+*   [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
+*   [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline\_1.4\_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+*   [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
-<h3 id="Clicking_and_focus">Clicking and focus</h3>
+### Clicking and focus
 
-<p>Whether clicking on a {{HTMLElement("button")}} causes it to (by default) become focused varies by browser and OS. The results for {{HTMLElement("input")}} of <code>type="button"</code> and <code>type="submit"</code> are the same.</p>
+Whether clicking on a {{HTMLElement("button")}} causes it to (by default) become focused varies by browser and OS. The results for {{HTMLElement("input")}} of `type="button"` and `type="submit"` are the same.
 
 <table>
- <caption>Does clicking on a {{HTMLElement("button")}} give it focus?</caption>
- <thead>
-  <tr>
-   <th>Desktop Browsers</th>
-   <th>Windows 8.1</th>
-   <th>OS X 10.X</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th>Firefox</th>
-   <td>✅ Yes - Firefox 30.0</td>
-   <td>❌ No (even with a <code>tabindex</code>) Firefox 63</td>
-  </tr>
-  <tr>
-   <th>Chrome</th>
-   <td>✅ Yes - Chrome 35</td>
-   <td>✅ Yes - Chrome 65</td>
-  </tr>
-  <tr>
-   <th>Safari</th>
-   <td>N/A</td>
-   <td>❌ No (even with a <code>tabindex</code>) Safari 12 (<a href="https://bugs.webkit.org/show_bug.cgi?id=22261">bug 22261</a>)</td>
-  </tr>
-  <tr>
-   <th>Internet Explorer</th>
-   <td>✅ Yes - Internet Explorer 11</td>
-   <td>N/A</td>
-  </tr>
-  <tr>
-   <th>Presto</th>
-   <td>✅ Yes - Opera 12</td>
-   <td>✅ Yes - Opera 12</td>
-  </tr>
- </tbody>
+  <caption>
+    Does clicking on a {{HTMLElement("button")}} give it focus?
+  </caption>
+  <thead>
+    <tr>
+      <th>Desktop Browsers</th>
+      <th>Windows 8.1</th>
+      <th>OS X 10.X</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Firefox</th>
+      <td>✅ Yes - Firefox 30.0</td>
+      <td>❌ No (even with a <code>tabindex</code>) Firefox 63</td>
+    </tr>
+    <tr>
+      <th>Chrome</th>
+      <td>✅ Yes - Chrome 35</td>
+      <td>✅ Yes - Chrome 65</td>
+    </tr>
+    <tr>
+      <th>Safari</th>
+      <td>N/A</td>
+      <td>
+        ❌ No (even with a <code>tabindex</code>) Safari 12 (<a
+          href="https://bugs.webkit.org/show_bug.cgi?id=22261"
+          >bug 22261</a
+        >)
+      </td>
+    </tr>
+    <tr>
+      <th>Internet Explorer</th>
+      <td>✅ Yes - Internet Explorer 11</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>Presto</th>
+      <td>✅ Yes - Opera 12</td>
+      <td>✅ Yes - Opera 12</td>
+    </tr>
+  </tbody>
 </table>
 
 <table>
- <caption>Does tapping on a {{HTMLElement("button")}} give it focus?</caption>
- <thead>
-  <tr>
-   <th>Mobile Browsers</th>
-   <th>iOS 7.1.2</th>
-   <th>Android 4.4.4</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th>Safari Mobile</th>
-   <td>❌ No (even with a <code>tabindex</code>)</td>
-   <td>N/A</td>
-  </tr>
-  <tr>
-   <th>Chrome 35</th>
-   <td>❌ No (even with a <code>tabindex</code>)</td>
-   <td>✅ Yes</td>
-  </tr>
- </tbody>
+  <caption>
+    Does tapping on a {{HTMLElement("button")}} give it focus?
+  </caption>
+  <thead>
+    <tr>
+      <th>Mobile Browsers</th>
+      <th>iOS 7.1.2</th>
+      <th>Android 4.4.4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Safari Mobile</th>
+      <td>❌ No (even with a <code>tabindex</code>)</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>Chrome 35</th>
+      <td>❌ No (even with a <code>tabindex</code>)</td>
+      <td>✅ Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

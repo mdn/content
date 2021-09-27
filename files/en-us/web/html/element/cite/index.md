@@ -14,108 +14,134 @@ tags:
   - Web
 browser-compat: html.elements.cite
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;cite&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element is used to describe a reference to a cited creative work, and must include the title of that work. The reference may be in an abbreviated form according to context-appropriate conventions related to citation metadata.</p>
+The **`<cite>`** [HTML](/en-US/docs/Web/HTML) element is used to describe a reference to a cited creative work, and must include the title of that work. The reference may be in an abbreviated form according to context-appropriate conventions related to citation metadata.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/cite.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/cite.html", "tabbed-standard")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>Any</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the {{domxref("HTMLSpanElement")}} interface for this element.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >Phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>
+        {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4)
+        inclusive, Firefox implements the
+        {{domxref("HTMLSpanElement")}} interface for this element.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element only includes the <a href="/en-US/docs/Web/HTML/Global_attributes" title="HTML/Global attributes">global attributes</a>.</p>
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes "HTML/Global attributes").
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>In the context of the <code>&lt;cite&gt;</code> element, a creative work that might be cited could be, for example, one of the following:</p>
+In the context of the `<cite>` element, a creative work that might be cited could be, for example, one of the following:
 
-<ul>
- <li>A book</li>
- <li>A research paper</li>
- <li>An essay</li>
- <li>A poem</li>
- <li>A musical score</li>
- <li>A song</li>
- <li>A play or film script</li>
- <li>A film</li>
- <li>A television show</li>
- <li>A game</li>
- <li>A sculpture</li>
- <li>A painting</li>
- <li>A theatrical production</li>
- <li>A play</li>
- <li>An opera</li>
- <li>A musical</li>
- <li>An exhibition</li>
- <li>A legal case report</li>
- <li>A computer program</li>
- <li>A web site</li>
- <li>A web page</li>
- <li>A blog post or comment</li>
- <li>A forum post or comment</li>
- <li>A tweet</li>
- <li>A Facebook post</li>
- <li>A written or oral statement</li>
- <li>And so forth.</li>
-</ul>
+*   A book
+*   A research paper
+*   An essay
+*   A poem
+*   A musical score
+*   A song
+*   A play or film script
+*   A film
+*   A television show
+*   A game
+*   A sculpture
+*   A painting
+*   A theatrical production
+*   A play
+*   An opera
+*   A musical
+*   An exhibition
+*   A legal case report
+*   A computer program
+*   A web site
+*   A web page
+*   A blog post or comment
+*   A forum post or comment
+*   A tweet
+*   A Facebook post
+*   A written or oral statement
+*   And so forth.
 
-<p>It's worth noting that the W3C specification says that a reference to a creative work, as included within a <code>&lt;cite&gt;</code> element, may include the name of the work’s author. However, the WHATWG specification for <code>&lt;cite&gt;</code> says the opposite: that a person’s name must <em>never</em> be included, under any circumstances.</p>
+It's worth noting that the W3C specification says that a reference to a creative work, as included within a `<cite>` element, may include the name of the work’s author. However, the WHATWG specification for `<cite>` says the opposite: that a person’s name must *never* be included, under any circumstances.
 
-<p>To include a reference to the source of quoted material which is contained within a {{HTMLElement("blockquote")}} or {{HTMLElement("q")}} element, use the {{htmlattrxref("cite", "blockquote")}} attribute on the element.</p>
+To include a reference to the source of quoted material which is contained within a {{HTMLElement("blockquote")}} or {{HTMLElement("q")}} element, use the {{htmlattrxref("cite", "blockquote")}} attribute on the element.
 
-<p>Typically, browsers style the contents of a <code>&lt;cite&gt;</code> element in italics by default. To avoid this, apply the CSS {{cssxref("font-style")}} property to the <code>&lt;cite&gt;</code> element.</p>
+Typically, browsers style the contents of a `<cite>` element in italics by default. To avoid this, apply the CSS {{cssxref("font-style")}} property to the `<cite>` element.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;p&gt;More information can be found in &lt;cite&gt;[ISO-0000]&lt;/cite&gt;.&lt;/p&gt;</pre>
+```html
+<p>More information can be found in <cite>[ISO-0000]</cite>.</p>
+```
 
-<p>The HTML above outputs:</p>
+The HTML above outputs:
 
-<p>{{EmbedLiveSample("Example", 640, 60)}}</p>
+{{EmbedLiveSample("Example", 640, 60)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The element {{HTMLElement("blockquote")}} for long quotations.</li>
- <li>The element {{HTMLElement("q")}} for inline quotations.</li>
-</ul>
+*   The element {{HTMLElement("blockquote")}} for long quotations.
+*   The element {{HTMLElement("q")}} for inline quotations.

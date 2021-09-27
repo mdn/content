@@ -15,140 +15,146 @@ tags:
   - reset
 browser-compat: html.elements.input.input-reset
 ---
-<div>{{HTMLRef("Input_types")}}</div>
+{{HTMLRef("Input_types")}}
 
-<p>{{HTMLElement("input")}} elements of type <strong><code>reset</code></strong> are rendered as buttons, with a default {{event("click")}} event handler that resets all of the inputs in the form to their initial values.</p>
+{{HTMLElement("input")}} elements of type **`reset`** are rendered as buttons, with a default {{event("click")}} event handler that resets all of the inputs in the form to their initial values.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/input-reset.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/input-reset.html", "tabbed-standard")}}
 
-<div class="note">
-<p><strong>Note:</strong> You should usually avoid including reset buttons in your forms. They're rarely useful, and are instead more likely to frustrate users who click them by mistake (often while trying to click the <a href="/en-US/docs/Web/HTML/Element/input/submit">submit button</a>).</p>
-</div>
+> **Note:** You should usually avoid including reset buttons in your forms. They're rarely useful, and are instead more likely to frustrate users who click them by mistake (often while trying to click the [submit button](/en-US/docs/Web/HTML/Element/input/submit)).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
-   <td>A {{domxref("DOMString")}} used as the button's label</td>
-  </tr>
-  <tr>
-   <td><strong>Events</strong></td>
-   <td>{{domxref("Element/click_event", "click")}}</td>
-  </tr>
-  <tr>
-   <td><strong>Supported common attributes</strong></td>
-   <td>{{htmlattrxref("type", "input")}} and {{htmlattrxref("value", "input")}}</td>
-  </tr>
-  <tr>
-   <td><strong>IDL attributes</strong></td>
-   <td><code>value</code></td>
-  </tr>
-  <tr>
-   <td><strong>Methods</strong></td>
-   <td>None</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td><strong>{{anch("Value")}}</strong></td>
+      <td>A {{domxref("DOMString")}} used as the button's label</td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>{{domxref("Element/click_event", "click")}}</td>
+    </tr>
+    <tr>
+      <td><strong>Supported common attributes</strong></td>
+      <td>
+        {{htmlattrxref("type", "input")}} and
+        {{htmlattrxref("value", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td><code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>None</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>An <code>&lt;input type="reset"&gt;</code> element's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} that is used as the button's label. Buttons such as <code>reset</code> don't have a value otherwise.</p>
+An `<input type="reset">` element's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} that is used as the button's label. Buttons such as `reset` don't have a value otherwise.
 
-<h3>Setting the value attribute</h3>
+### Setting the value attribute
 
-<pre class="brush: html">&lt;input type="reset" value="Reset the form"&gt;</pre>
+```html
+<input type="reset" value="Reset the form">
+```
 
-<p>{{EmbedLiveSample("Setting_the_value_attribute", 650, 30)}}</p>
+{{EmbedLiveSample("Setting_the_value_attribute", 650, 30)}}
 
-<h3>Omitting the value attribute</h3>
+### Omitting the value attribute
 
-<p>If you don't specify a <code>value</code>, you get an button with the default label (typically "Reset," but this will vary depending on the {{Glossary("user agent")}}):</p>
+If you don't specify a `value`, you get an button with the default label (typically "Reset," but this will vary depending on the {{Glossary("user agent")}}):
 
-<pre class="brush: html">&lt;input type="reset"&gt;</pre>
+```html
+<input type="reset">
+```
 
-<p>{{EmbedLiveSample("Omitting_the_value_attribute", 650, 30)}}</p>
+{{EmbedLiveSample("Omitting_the_value_attribute", 650, 30)}}
 
-<h2 id="Using_reset_buttons">Using reset buttons</h2>
+## Using reset buttons
 
-<p><code>&lt;input type="reset"&gt;</code> buttons are used to reset forms. If you want to create a custom button and then customize the behavior using JavaScript, you need to use <code><a href="/en-US/docs/Web/HTML/Element/input/button">&lt;input type="button"&gt;</a></code>, or better still, a {{htmlelement("button")}} element.</p>
+`<input type="reset">` buttons are used to reset forms. If you want to create a custom button and then customize the behavior using JavaScript, you need to use [`<input type="button">`](/en-US/docs/Web/HTML/Element/input/button), or better still, a {{htmlelement("button")}} element.
 
-<h3 id="A_simple_reset_button">A simple reset button</h3>
+### A simple reset button
 
-<p>We'll begin by creating a simple reset button:</p>
+We'll begin by creating a simple reset button:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="example"&gt;Type in some sample text&lt;/label&gt;
-    &lt;input id="example" type="text"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;input type="reset" value="Reset the form"&gt;
-  &lt;/div&gt;
-&lt;/form&gt;
-</pre>
+```html
+<form>
+  <div>
+    <label for="example">Type in some sample text</label>
+    <input id="example" type="text">
+  </div>
+  <div>
+    <input type="reset" value="Reset the form">
+  </div>
+</form>
+```
 
-<p>This renders like so:</p>
+This renders like so:
 
-<p>{{EmbedLiveSample("A_simple_reset_button", 650, 100)}}</p>
+{{EmbedLiveSample("A_simple_reset_button", 650, 100)}}
 
-<p>Try entering some text into the text field, and then pressing the reset button.</p>
+Try entering some text into the text field, and then pressing the reset button.
 
-<h3 id="Adding_a_reset_keyboard_shortcut">Adding a reset keyboard shortcut</h3>
+### Adding a reset keyboard shortcut
 
-<p>To add a keyboard shortcut to a reset button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the {{htmlattrxref("accesskey")}} global attribute.</p>
+To add a keyboard shortcut to a reset button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the {{htmlattrxref("accesskey")}} global attribute.
 
-<p>In this example, <kbd>r</kbd> is specified as the access key (you'll need to press <kbd>r</kbd> plus the particular modifier keys for your browser/OS combination; see {{htmlattrxref("accesskey")}} for a useful list of those).</p>
+In this example, <kbd>r</kbd> is specified as the access key (you'll need to press <kbd>r</kbd> plus the particular modifier keys for your browser/OS combination; see {{htmlattrxref("accesskey")}} for a useful list of those).
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="example"&gt;Type in some sample text&lt;/label&gt;
-    &lt;input id="example" type="text"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;input type="reset" value="Reset the form"
-     accesskey="r"&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <div>
+    <label for="example">Type in some sample text</label>
+    <input id="example" type="text">
+  </div>
+  <div>
+    <input type="reset" value="Reset the form"
+     accesskey="r">
+  </div>
+</form>
+```
 
-<p>{{EmbedLiveSample("Adding_a_reset_keyboard_shortcut", 650, 100)}}</p>
+{{EmbedLiveSample("Adding_a_reset_keyboard_shortcut", 650, 100)}}
 
-<p>The problem with the above example is that there's no way for the user to know what the access key is! This is especially true since the modifiers are typically non-standard to avoid conflicts. When building a site, be sure to provide this information in a way that doesn't interfere with the site design (for example by providing an easily accessible link that points to information on what the site access keys are). Adding a tooltip to the button (using the {{htmlattrxref("title")}} attribute) can also help, although it's not a complete solution for accessibility purposes.</p>
+The problem with the above example is that there's no way for the user to know what the access key is! This is especially true since the modifiers are typically non-standard to avoid conflicts. When building a site, be sure to provide this information in a way that doesn't interfere with the site design (for example by providing an easily accessible link that points to information on what the site access keys are). Adding a tooltip to the button (using the {{htmlattrxref("title")}} attribute) can also help, although it's not a complete solution for accessibility purposes.
 
-<h3 id="Disabling_and_enabling_a_reset_button">Disabling and enabling a reset button</h3>
+### Disabling and enabling a reset button
 
-<p>To disable a reset button, specify the {{htmlattrxref("disabled")}} global attribute on it, like so:</p>
+To disable a reset button, specify the {{htmlattrxref("disabled")}} global attribute on it, like so:
 
-<pre class="brush: html">&lt;input type="reset" value="Disabled" disabled&gt;</pre>
+```html
+<input type="reset" value="Disabled" disabled>
+```
 
-<p>You can enable and disable buttons at run time by setting <code>disabled</code> to <code>true</code> or <code>false</code>; in JavaScript this looks like <code>btn.disabled = true</code> or <code>btn.disabled = false</code>.</p>
+You can enable and disable buttons at run time by setting `disabled` to `true` or `false`; in JavaScript this looks like `btn.disabled = true` or `btn.disabled = false`.
 
-<div class="note">
-<p><strong>Note:</strong> See the <code><a href="/en-US/docs/Web/HTML/Element/input/button#disabling_and_enabling_a_button">&lt;input type="button"&gt;</a></code> page for more ideas about enabling and disabling buttons.</p>
-</div>
+> **Note:** See the [`<input type="button">`](/en-US/docs/Web/HTML/Element/input/button#disabling_and_enabling_a_button) page for more ideas about enabling and disabling buttons.
 
-<h2 id="Validation">Validation</h2>
+## Validation
 
-<p>Buttons don't participate in constraint validation; they have no real value to be constrained.</p>
+Buttons don't participate in constraint validation; they have no real value to be constrained.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>We've included simple examples above. There isn't really anything more to say about reset buttons. </p>
+We've included simple examples above. There isn't really anything more to say about reset buttons. 
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.</li>
- <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls#actual_buttons">Forms and buttons</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/forms">Forms (accessibility)</a></li>
- <li><a href="/en-US/docs/Learn/Forms">HTML forms</a></li>
- <li>The {{HTMLElement("button")}} element</li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
-</ul>
+*   {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
+*   [Forms and buttons](/en-US/docs/Learn/Forms/Basic_native_form_controls#actual_buttons)
+*   [Forms (accessibility)](/en-US/docs/Web/Accessibility/ARIA/forms)
+*   [HTML forms](/en-US/docs/Learn/Forms)
+*   The {{HTMLElement("button")}} element
+*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

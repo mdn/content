@@ -13,234 +13,253 @@ tags:
   - Reference
 browser-compat: html.elements.input.input-number
 ---
-<div>{{HTMLRef("Input_types")}}</div>
+{{HTMLRef("Input_types")}}
 
-<p>{{HTMLElement("input")}} elements of type <strong><code>number</code></strong> are used to let the user enter a number. They include built-in validation to reject non-numerical entries.</p>
+{{HTMLElement("input")}} elements of type **`number`** are used to let the user enter a number. They include built-in validation to reject non-numerical entries.
 
-<p>The browser may opt to provide stepper arrows to let the user increase and decrease the value using their mouse or by tapping with a fingertip.</p>
+The browser may opt to provide stepper arrows to let the user increase and decrease the value using their mouse or by tapping with a fingertip.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/input-number.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/input-number.html", "tabbed-shorter")}}
 
-<p>On browsers that don't support inputs of type <code>number</code>, a <code>number</code> input falls back to type <code>text</code>.</p>
+On browsers that don't support inputs of type `number`, a `number` input falls back to type `text`.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
-   <td>A {{jsxref("Number")}} representing a number, or empty</td>
-  </tr>
-  <tr>
-   <td><strong>Events</strong></td>
-   <td>{{domxref("HTMLElement/change_event", "change")}} and {{domxref("HTMLElement/input_event", "input")}}</td>
-  </tr>
-  <tr>
-   <td><strong>Supported common attributes</strong></td>
-   <td>{{htmlattrxref("autocomplete", "input")}}, {{htmlattrxref("list", "input")}}, {{htmlattrxref("placeholder", "input")}}, {{htmlattrxref("readonly", "input")}}</td>
-  </tr>
-  <tr>
-   <td><strong>IDL attributes</strong></td>
-   <td><code>list</code>, <code>value</code>, <code>valueAsNumber</code></td>
-  </tr>
-  <tr>
-   <td><strong>Methods</strong></td>
-   <td>{{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.stepUp", "stepUp()")}}, {{domxref("HTMLInputElement.stepDown", "stepDown()")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td><strong>{{anch("Value")}}</strong></td>
+      <td>A {{jsxref("Number")}} representing a number, or empty</td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} and
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Supported common attributes</strong></td>
+      <td>
+        {{htmlattrxref("autocomplete", "input")}},
+        {{htmlattrxref("list", "input")}},
+        {{htmlattrxref("placeholder", "input")}},
+        {{htmlattrxref("readonly", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td><code>list</code>, <code>value</code>, <code>valueAsNumber</code></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}},
+        {{domxref("HTMLInputElement.stepUp", "stepUp()")}},
+        {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A {{jsxref("Number")}} representing the value of the number entered into the input. You can set a default value for the input by including a number inside the {{htmlattrxref("value", "input")}} attribute, like so:</p>
+A {{jsxref("Number")}} representing the value of the number entered into the input. You can set a default value for the input by including a number inside the {{htmlattrxref("value", "input")}} attribute, like so:
 
-<pre class="brush: html">&lt;input id="number" type="number" value="42"&gt;</pre>
+```html
+<input id="number" type="number" value="42">
+```
 
-<p>{{EmbedLiveSample('Value', 600, 40)}}</p>
+{{EmbedLiveSample('Value', 600, 40)}}
 
-<h2 id="Additional_attributes">Additional attributes</h2>
+## Additional attributes
 
-<p>In addition to the attributes commonly supported by all {{HTMLElement("input")}} types, inputs of type <code>number</code> support these attributes.</p>
+In addition to the attributes commonly supported by all {{HTMLElement("input")}} types, inputs of type `number` support these attributes.
 
-<h3>list</h3>
+### list
 
-<p>The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.</p>
+The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
 
-<h3>max</h3>
+### max
 
-<p>The maximum value to accept for this input. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If the value of the <code>max</code> attribute isn't a number, then the element has no maximum value.</p>
+The maximum value to accept for this input. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If the value of the `max` attribute isn't a number, then the element has no maximum value.
 
-<p>This value must be greater than or equal to the value of the <code>min</code> attribute.</p>
+This value must be greater than or equal to the value of the `min` attribute.
 
-<h3>min</h3>
+### min
 
-<p>The minimum value to accept for this input. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If a value is specified for <code>min</code> that isn't a valid number, the input has no minimum value.</p>
+The minimum value to accept for this input. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If a value is specified for `min` that isn't a valid number, the input has no minimum value.
 
-<p>This value must be less than or equal to the value of the <code>max</code> attribute.</p>
+This value must be less than or equal to the value of the `max` attribute.
 
-<h3><code>placeholder</code></h3>
+### `placeholder`
 
-<p>The <code>placeholder</code> attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text <em>must not</em> include carriage returns or line feeds.</p>
+The `placeholder` attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text *must not* include carriage returns or line feeds.
 
-<p>If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossary("RTL")}}) but needs to present the placeholder in the opposite directionality, you can use Unicode bidirectional algorithm formatting characters to override directionality within the placeholder; see {{SectionOnPage("/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Overriding BiDi using Unicode control characters")}} for those characters.</p>
+If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossary("RTL")}}) but needs to present the placeholder in the opposite directionality, you can use Unicode bidirectional algorithm formatting characters to override directionality within the placeholder; see {{SectionOnPage("/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Overriding BiDi using Unicode control characters")}} for those characters.
 
-<div class="note">
-<p><strong>Note:</strong> Avoid using the <code>placeholder</code> attribute if you can. It is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for more information.</p>
-</div>
+> **Note:** Avoid using the `placeholder` attribute if you can. It is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for more information.
 
-<h3>readonly</h3>
+### readonly
 
-<p>A Boolean attribute which, if present, means this field cannot be edited by the user. Its <code>value</code> can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement")}} <code>value</code> property.</p>
+A Boolean attribute which, if present, means this field cannot be edited by the user. Its `value` can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement")}} `value` property.
 
-<div class="note">
-<p><strong>Note:</strong> Because a read-only field cannot have a value, <code>required</code> does not have any effect on inputs with the <code>readonly</code> attribute also specified.</p>
-</div>
+> **Note:** Because a read-only field cannot have a value, `required` does not have any effect on inputs with the `readonly` attribute also specified.
 
-<h3>step</h3>
+### step
 
-<p>The <code>step</code> attribute is a number that specifies the granularity that the value must adhere to, or the special value <code>any</code>, which is described below. Only values which are equal to the basis for stepping (<code>{{anch("min")}}</code> if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.</p>
+The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping (`{{anch("min")}}` if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.
 
-<p>A string value of <code>any</code> means that no stepping is implied, and any value is allowed (barring other constraints, such as <code>{{anch("min")}}</code> and <code>{{anch("max")}}</code>).</p>
+A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as `{{anch("min")}}` and `{{anch("max")}}`).
 
-<div class="note">
-<p><strong>Note:</strong> When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.</p>
-</div>
+> **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
 
-<p>The default stepping value for <code>number</code> inputs is <code>1</code>, allowing only integers to be entered—<em>unless</em> the stepping base is not an integer.</p>
+The default stepping value for `number` inputs is `1`, allowing only integers to be entered—*unless* the stepping base is not an integer.
 
-<h2 id="Using_number_inputs">Using number inputs</h2>
+## Using number inputs
 
-<p><code>&lt;input type="number"&gt;</code> elements can help simplify your work when building the user interface and logic for entering numbers into a form. When you create a number input with the proper <code>type</code> value, <code>number</code>, you get automatic validation that the entered text is a number, and usually a set of up and down buttons to step the value up and down.</p>
+`<input type="number">` elements can help simplify your work when building the user interface and logic for entering numbers into a form. When you create a number input with the proper `type` value, `number`, you get automatic validation that the entered text is a number, and usually a set of up and down buttons to step the value up and down.
 
-<div class="warning">
-<p><strong>Warning:</strong> Logically, you should not be able to enter characters inside a number input other than numbers. There seems to be some disagreement about this among browsers; see {{bug(1398528)}}.</p>
-</div>
+> **Warning:** Logically, you should not be able to enter characters inside a number input other than numbers. There seems to be some disagreement about this among browsers; see {{bug(1398528)}}.
 
-<div class="note">
-<p><strong>Note:</strong> A user can tinker with your HTML behind the scenes, so your site <em>must not</em> use simple client-side validation for any security purposes. You <em>must</em> verify on the server side any transaction in which the provided value may have security implications of any kind.</p>
-</div>
+> **Note:** A user can tinker with your HTML behind the scenes, so your site *must not* use simple client-side validation for any security purposes. You *must* verify on the server side any transaction in which the provided value may have security implications of any kind.
 
-<p>Mobile browsers further help with the user experience by showing a special keyboard more suited for entering numbers when the user tries to enter a value.</p>
+Mobile browsers further help with the user experience by showing a special keyboard more suited for entering numbers when the user tries to enter a value.
 
-<h3 id="A_simple_number_input">A simple number input</h3>
+### A simple number input
 
-<p>In its most basic form, a number input can be implemented like this:</p>
+In its most basic form, a number input can be implemented like this:
 
-<pre class="brush: html">&lt;label for="ticketNum"&gt;Number of tickets you would like to buy:&lt;/label&gt;
-&lt;input id="ticketNum" type="number" name="ticketNum" value="0"&gt;</pre>
+```html
+<label for="ticketNum">Number of tickets you would like to buy:</label>
+<input id="ticketNum" type="number" name="ticketNum" value="0">
+```
 
-<p>{{EmbedLiveSample('A_simple_number_input', 600, 40)}}</p>
+{{EmbedLiveSample('A_simple_number_input', 600, 40)}}
 
-<p>A number input is considered valid when empty and when a single number is entered, but is otherwise invalid. If the {{htmlattrxref("required", "input")}} attribute is used, the input is no longer considered valid when empty.</p>
+A number input is considered valid when empty and when a single number is entered, but is otherwise invalid. If the {{htmlattrxref("required", "input")}} attribute is used, the input is no longer considered valid when empty.
 
-<div class="note">
-<p><strong>Note:</strong> Any number is an acceptable value, as long as it is a <a href="https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number">valid floating point number</a> (that is, not <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN">NaN</a> or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a>).</p>
-</div>
+> **Note:** Any number is an acceptable value, as long as it is a [valid floating point number](https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number) (that is, not [NaN](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) or [Infinity](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity)).
 
-<h3 id="Placeholders">Placeholders</h3>
+### Placeholders
 
-<p>Sometimes it's helpful to offer an in-context hint as to what form the input data should take. This can be especially important if the page design doesn't offer descriptive labels for each {{HTMLElement("input")}}. This is where <strong>placeholders</strong> come in. A placeholder is a value most commonly used to provide a hint as to the format the input should take <code>value</code>. It is displayed inside the edit box when the element's <code>value</code> is <code>""</code>. Once data is entered into the box, the placeholder disappears; if the box is emptied, the placeholder reappears.</p>
+Sometimes it's helpful to offer an in-context hint as to what form the input data should take. This can be especially important if the page design doesn't offer descriptive labels for each {{HTMLElement("input")}}. This is where **placeholders** come in. A placeholder is a value most commonly used to provide a hint as to the format the input should take `value`. It is displayed inside the edit box when the element's `value` is `""`. Once data is entered into the box, the placeholder disappears; if the box is emptied, the placeholder reappears.
 
-<p>Here, we have an <code>number</code> input with the placeholder "<code>Multiple of 10</code>". Note how the placeholder disappears and reappears as you manipulate the contents of the edit field.</p>
+Here, we have an `number` input with the placeholder "`Multiple of 10`". Note how the placeholder disappears and reappears as you manipulate the contents of the edit field.
 
-<pre class="brush: html">&lt;input type="number" placeholder="Multiple of 10"&gt;</pre>
+```html
+<input type="number" placeholder="Multiple of 10">
+```
 
-<p>{{EmbedLiveSample('Placeholders', 600, 40)}}</p>
+{{EmbedLiveSample('Placeholders', 600, 40)}}
 
-<h3 id="Controlling_step_size">Controlling step size</h3>
+### Controlling step size
 
-<p>By default, the up and down buttons provided for you to step the number up and down will step the value up and down by 1. You can change this by providing a {{htmlattrxref("step", "input")}} attribute, which takes as its value a number specifying the step amount. Our above example contains a placeholder saying that the value should be a multiple of 10, so it makes sense to add a <code>step</code> value of <code>10</code>:</p>
+By default, the up and down buttons provided for you to step the number up and down will step the value up and down by 1. You can change this by providing a {{htmlattrxref("step", "input")}} attribute, which takes as its value a number specifying the step amount. Our above example contains a placeholder saying that the value should be a multiple of 10, so it makes sense to add a `step` value of `10`:
 
-<pre class="brush: html">&lt;input type="number" placeholder="multiple of 10" step="10"&gt;</pre>
+```html
+<input type="number" placeholder="multiple of 10" step="10">
+```
 
-<p>{{EmbedLiveSample('Controlling_step_size', 600, 40)}}</p>
+{{EmbedLiveSample('Controlling_step_size', 600, 40)}}
 
-<p>In this example, you should find that the up and down step arrows will increase and decrease the value by 10 each time, not 1. You can still manually enter a number that's not a multiple of 10, but it will be considered invalid.</p>
+In this example, you should find that the up and down step arrows will increase and decrease the value by 10 each time, not 1. You can still manually enter a number that's not a multiple of 10, but it will be considered invalid.
 
-<h3 id="Specifying_minimum_and_maximum_values">Specifying minimum and maximum values</h3>
+### Specifying minimum and maximum values
 
-<p>You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to specify a minimum and maximum value that the field can have. For example, let's give our example a minimum of <code>0</code>, and a maximum of <code>100</code>:</p>
+You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to specify a minimum and maximum value that the field can have. For example, let's give our example a minimum of `0`, and a maximum of `100`:
 
-<pre class="brush: html">&lt;input type="number" placeholder="multiple of 10" step="10" min="0" max="100"&gt;</pre>
+```html
+<input type="number" placeholder="multiple of 10" step="10" min="0" max="100">
+```
 
-<p>{{EmbedLiveSample('Specifying_minimum_and_maximum_values', 600, 40)}}</p>
+{{EmbedLiveSample('Specifying_minimum_and_maximum_values', 600, 40)}}
 
-<p>In this updated version, you should find that the up and down step buttons will not allow you to go below 0 or above 100. You can still manually enter a number outside these bounds, but it will be considered invalid.</p>
+In this updated version, you should find that the up and down step buttons will not allow you to go below 0 or above 100. You can still manually enter a number outside these bounds, but it will be considered invalid.
 
-<h3 id="Allowing_decimal_values">Allowing decimal values</h3>
+### Allowing decimal values
 
-<p>One issue with number inputs is that their step size is 1 by default. If you try to enter a number with a decimal (such as "1.0"), it will be considered invalid. If you want to enter a value that requires decimals, you'll need to reflect this in the <code>step</code> value (e.g. <code>step="0.01"</code> to allow decimals to two decimal places). Here's a simple example:</p>
+One issue with number inputs is that their step size is 1 by default. If you try to enter a number with a decimal (such as "1.0"), it will be considered invalid. If you want to enter a value that requires decimals, you'll need to reflect this in the `step` value (e.g. `step="0.01"` to allow decimals to two decimal places). Here's a simple example:
 
-<pre class="brush: html">&lt;input type="number" placeholder="1.0" step="0.01" min="0" max="10"&gt;</pre>
+```html
+<input type="number" placeholder="1.0" step="0.01" min="0" max="10">
+```
 
-<p>{{EmbedLiveSample("Allowing_decimal_values", 600, 40)}}</p>
+{{EmbedLiveSample("Allowing_decimal_values", 600, 40)}}
 
-<p>See that this example allows any value between <code>0.0</code> and <code>10.0</code>, with decimals to two places. For example, "9.52" is valid, but "9.521" is not.</p>
+See that this example allows any value between `0.0` and `10.0`, with decimals to two places. For example, "9.52" is valid, but "9.521" is not.
 
-<h3 id="Controlling_input_size">Controlling input size</h3>
+### Controlling input size
 
-<p>{{HTMLElement("input")}} elements of type <code>number</code> don't support form sizing attributes such as {{htmlattrxref("size", "input")}}. You'll have to resort to <a href="/en-US/docs/Web/CSS">CSS</a> to change the size of these controls.</p>
+{{HTMLElement("input")}} elements of type `number` don't support form sizing attributes such as {{htmlattrxref("size", "input")}}. You'll have to resort to [CSS](/en-US/docs/Web/CSS) to change the size of these controls.
 
-<p>For example, to adjust the width of the input to be only as wide as is needed to enter a three-digit number, we can change our HTML to include an {{htmlattrxref("id")}} and to shorten our placeholder since the field will be too narrow for the text we have been using so far:</p>
+For example, to adjust the width of the input to be only as wide as is needed to enter a three-digit number, we can change our HTML to include an {{htmlattrxref("id")}} and to shorten our placeholder since the field will be too narrow for the text we have been using so far:
 
-<pre class="brush: html">&lt;input type="number" placeholder="x10" step="10" min="0" max="100" id="number"&gt;</pre>
+```html
+<input type="number" placeholder="x10" step="10" min="0" max="100" id="number">
+```
 
-<p>Then we add some CSS to narrow the width of the element with the <code>id</code> selector <code>#number</code>:</p>
+Then we add some CSS to narrow the width of the element with the `id` selector `#number`:
 
-<pre class="brush: css">#number {
+```css
+#number {
   width: 3em;
-}</pre>
+}
+```
 
-<p>The result looks like this:</p>
+The result looks like this:
 
-<p>{{EmbedLiveSample('Controlling_input_size', 600, 40)}}</p>
+{{EmbedLiveSample('Controlling_input_size', 600, 40)}}
 
-<h3 id="Offering_suggested_values">Offering suggested values</h3>
+### Offering suggested values
 
-<p>You can provide a list of default options from which the user can select by specifying the {{htmlattrxref("list", "input")}} attribute, which contains as its value the {{htmlattrxref("id")}} of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value. Each <code>option</code>'s <code>value</code> is the corresponding suggested value for the number entry box.</p>
+You can provide a list of default options from which the user can select by specifying the {{htmlattrxref("list", "input")}} attribute, which contains as its value the {{htmlattrxref("id")}} of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value. Each `option`'s `value` is the corresponding suggested value for the number entry box.
 
-<pre class="brush: html">&lt;input id="ticketNum" type="number" name="ticketNum" list="defaultNumbers"&gt;
-&lt;span class="validity"&gt;&lt;/span&gt;
+```html
+<input id="ticketNum" type="number" name="ticketNum" list="defaultNumbers">
+<span class="validity"></span>
 
-&lt;datalist id="defaultNumbers"&gt;
-  &lt;option value="10045678"&gt;
-  &lt;option value="103421"&gt;
-  &lt;option value="11111111"&gt;
-  &lt;option value="12345678"&gt;
-  &lt;option value="12999922"&gt;
-&lt;/datalist&gt;</pre>
+<datalist id="defaultNumbers">
+  <option value="10045678">
+  <option value="103421">
+  <option value="11111111">
+  <option value="12345678">
+  <option value="12999922">
+</datalist>
+```
 
-<p>{{EmbedLiveSample("Offering_suggested_values", 600, 40)}}</p>
+{{EmbedLiveSample("Offering_suggested_values", 600, 40)}}
 
-<h2 id="Validation">Validation</h2>
+## Validation
 
-<p>We have already mentioned a number of validation features of <code>number</code> inputs, but let's review them now:</p>
+We have already mentioned a number of validation features of `number` inputs, but let's review them now:
 
-<ul>
- <li><code>&lt;input type="number"&gt;</code> elements automatically invalidate any entry that isn't a number (or empty, unless <code>required</code> is specified).</li>
- <li>You can use the {{htmlattrxref("required", "input")}} attribute to make an empty entry invalid. (In other words, the input <em>must</em> be filled in.)</li>
- <li>You can use the {{htmlattrxref("step", "input")}} attribute to constrain valid values to a certain set of steps (e.g., multiples of 10).</li>
- <li>You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to constrain valid values to lower and upper bounds.</li>
-</ul>
+*   `<input type="number">` elements automatically invalidate any entry that isn't a number (or empty, unless `required` is specified).
+*   You can use the {{htmlattrxref("required", "input")}} attribute to make an empty entry invalid. (In other words, the input *must* be filled in.)
+*   You can use the {{htmlattrxref("step", "input")}} attribute to constrain valid values to a certain set of steps (e.g., multiples of 10).
+*   You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to constrain valid values to lower and upper bounds.
 
-<p>The following example exhibits all of the above features, as well as using some CSS to display valid and invalid icons, depending on the <code>input</code>'s value:</p>
+The following example exhibits all of the above features, as well as using some CSS to display valid and invalid icons, depending on the `input`'s value:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="balloons"&gt;Number of balloons to order (multiples of 10):&lt;/label&gt;
-    &lt;input id="balloons" type="number" name="balloons" step="10" min="0" max="100" required&gt;
-    &lt;span class="validity"&gt;&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;input type="submit"&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <div>
+    <label for="balloons">Number of balloons to order (multiples of 10):</label>
+    <input id="balloons" type="number" name="balloons" step="10" min="0" max="100" required>
+    <span class="validity"></span>
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+```
 
-<p>{{EmbedLiveSample("Validation", 600, 110)}}</p>
+{{EmbedLiveSample("Validation", 600, 110)}}
 
-<p>Try submitting the form with different invalid values entered — e.g., no value; a value below 0 or above 100; a value that is not a multiple of 10; or a non-numerical value — and see how the error messages the browser gives you differ with different ones.</p>
+Try submitting the form with different invalid values entered — e.g., no value; a value below 0 or above 100; a value that is not a multiple of 10; or a non-numerical value — and see how the error messages the browser gives you differ with different ones.
 
-<p>The CSS applied to this example is as follows:</p>
+The CSS applied to this example is as follows:
 
-<pre class="brush: css">div {
+```css
+div {
   margin-bottom: 10px;
 }
 
@@ -252,66 +271,68 @@ input:invalid+span:after {
 input:valid+span:after {
   content: '✓';
   padding-left: 5px;
-}</pre>
+}
+```
 
-<p>Here we use the {{cssxref(":invalid")}} and {{cssxref(":valid")}} pseudo classes to display an appropriate invalid or valid icon as generated content on the adjacent {{htmlelement("span")}} element, as a visual indicator of validity.</p>
+Here we use the {{cssxref(":invalid")}} and {{cssxref(":valid")}} pseudo classes to display an appropriate invalid or valid icon as generated content on the adjacent {{htmlelement("span")}} element, as a visual indicator of validity.
 
-<p>We put it on a separate <code>&lt;span&gt;</code> element for added flexibility. Some browsers don't display generated content very effectively on some types of form inputs. (Read, for example, the section on <a href="/en-US/docs/Web/HTML/Element/input/date#validation"><code>&lt;input type="date"&gt;</code> validation</a>.)</p>
+We put it on a separate `<span>` element for added flexibility. Some browsers don't display generated content very effectively on some types of form inputs. (Read, for example, the section on [`<input type="date">` validation](/en-US/docs/Web/HTML/Element/input/date#validation).)
 
-<div class="warning">
-<p><strong>Warning:</strong> HTML form validation is <em>not</em> a substitute for server-side scripts that ensure that the entered data is in the proper format!</p>
+> **Warning:** HTML form validation is *not* a substitute for server-side scripts that ensure that the entered data is in the proper format!
+>
+> It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML and submit the data directly to your server.
+>
+> If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).
 
-<p>It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML and submit the data directly to your server.</p>
+### Pattern validation
 
-<p>If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).</p>
-</div>
+`<input type="number">` elements do not support use of the {{htmlattrxref("pattern", "input")}} attribute for making entered values conform to a specific regex pattern.
 
-<h3 id="Pattern_validation">Pattern validation</h3>
+The rationale for this is that number inputs won't be valid if they contain anything except numbers, and you can constrain the minimum and maximum number of valid digits using the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes (as explained above).
 
-<p><code>&lt;input type="number"&gt;</code> elements do not support use of the {{htmlattrxref("pattern", "input")}} attribute for making entered values conform to a specific regex pattern.</p>
+## Examples
 
-<p>The rationale for this is that number inputs won't be valid if they contain anything except numbers, and you can constrain the minimum and maximum number of valid digits using the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes (as explained above).</p>
+We've already covered the fact that by default, the increment is `1`, and you can use the {{htmlattrxref("step", "input")}} attribute to allow decimal inputs. Let's take a closer look.
 
-<h2 id="Examples">Examples</h2>
+In the following example is a form for entering the user's height. It defaults to accepting a height in meters, but you can click the relevant button to change the form to accept feet and inches instead. The input for the height in meters accepts decimals to two places.
 
-<p>We've already covered the fact that by default, the increment is <code>1</code>, and you can use the {{htmlattrxref("step", "input")}} attribute to allow decimal inputs. Let's take a closer look.</p>
+{{EmbedLiveSample("Examples", 600, 150)}}
 
-<p>In the following example is a form for entering the user's height. It defaults to accepting a height in meters, but you can click the relevant button to change the form to accept feet and inches instead. The input for the height in meters accepts decimals to two places.</p>
+The HTML looks like this:
 
-<p>{{EmbedLiveSample("Examples", 600, 150)}}</p>
+```html
+<form>
+    <div class="metersInputGroup">
+        <label for="meters">Enter your height — meters:</label>
+        <input id="meters" type="number" name="meters" step="0.01" min="0" placeholder="e.g. 1.78" required>
+        <span class="validity"></span>
+    </div>
+    <div class="feetInputGroup" style="display: none;">
+        <span>Enter your height — </span>
+        <label for="feet">feet:</label>
+        <input id="feet" type="number" name="feet" min="0" step="1">
+        <span class="validity"></span>
+        <label for="inches">inches:</label>
+        <input id="inches" type="number" name="inches" min="0" max="11" step="1">
+        <span class="validity"></span>
+    </div>
+    <div>
+      <input type="button" class="meters" value="Enter height in feet and inches">
+    </div>
+    <div>
+        <input type="submit" value="Submit form">
+    </div>
+</form>
+```
 
-<p>The HTML looks like this:</p>
+You'll see that we are using many of the attributes we've already looked at in the article earlier on. Since we want to accept a meter value in centimeters, we've set the `step` value to `0.01`, so that values like *1.78* are not seen as invalid. We've also provided a placeholder for that input.
 
-<pre class="brush: html">&lt;form&gt;
-    &lt;div class="metersInputGroup"&gt;
-        &lt;label for="meters"&gt;Enter your height — meters:&lt;/label&gt;
-        &lt;input id="meters" type="number" name="meters" step="0.01" min="0" placeholder="e.g. 1.78" required&gt;
-        &lt;span class="validity"&gt;&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class="feetInputGroup" style="display: none;"&gt;
-        &lt;span&gt;Enter your height — &lt;/span&gt;
-        &lt;label for="feet"&gt;feet:&lt;/label&gt;
-        &lt;input id="feet" type="number" name="feet" min="0" step="1"&gt;
-        &lt;span class="validity"&gt;&lt;/span&gt;
-        &lt;label for="inches"&gt;inches:&lt;/label&gt;
-        &lt;input id="inches" type="number" name="inches" min="0" max="11" step="1"&gt;
-        &lt;span class="validity"&gt;&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;input type="button" class="meters" value="Enter height in feet and inches"&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;input type="submit" value="Submit form"&gt;
-    &lt;/div&gt;
-&lt;/form&gt;</pre>
+We've hidden the feet and inches inputs initially using `style="display: none;"`, so that meters is the default entry type.
 
-<p>You'll see that we are using many of the attributes we've already looked at in the article earlier on. Since we want to accept a meter value in centimeters, we've set the <code>step</code> value to <code>0.01</code>, so that values like <em>1.78</em> are not seen as invalid. We've also provided a placeholder for that input.</p>
+Now, onto the CSS. This looks very similar to the validation styling we saw before; nothing remarkable here.
 
-<p>We've hidden the feet and inches inputs initially using <code>style="display: none;"</code>, so that meters is the default entry type.</p>
-
-<p>Now, onto the CSS. This looks very similar to the validation styling we saw before; nothing remarkable here.</p>
-
-<pre class="brush: css">div {
+```css
+div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -334,11 +355,13 @@ input:valid+span:after {
   position: absolute;
   content: '✓';
   padding-left: 5px;
-}</pre>
+}
+```
 
-<p>And finally, the JavaScript:</p>
+And finally, the JavaScript:
 
-<pre class="brush: js">let metersInputGroup = document.querySelector('.metersInputGroup');
+```js
+let metersInputGroup = document.querySelector('.metersInputGroup');
 let feetInputGroup = document.querySelector('.feetInputGroup');
 let metersInput = document.querySelector('#meters');
 let feetInput = document.querySelector('#feet');
@@ -372,31 +395,28 @@ switchBtn.addEventListener('click', function() {
     feetInput.value = '';
     inchesInput.value = '';
   }
-});</pre>
+});
+```
 
-<p>After declaring a few variables, an event listener is added to the <code>button</code> to control the switching mechanism. This is pretty simple, mostly involving changing over the button's <code>class</code> and {{HTMLElement("label")}}, and updating the display values of the two sets of inputs when the button is pressed.</p>
+After declaring a few variables, an event listener is added to the `button` to control the switching mechanism. This is pretty simple, mostly involving changing over the button's `class` and {{HTMLElement("label")}}, and updating the display values of the two sets of inputs when the button is pressed.
 
-<p>(Note that we're not converting back and forth between meters and feet/inches here, which a real-life web application would probably do.)</p>
+(Note that we're not converting back and forth between meters and feet/inches here, which a real-life web application would probably do.)
 
-<div class="note">
-<p><strong>Note:</strong> When the user clicks the button, the <code>required</code> attribute(s) are removed from the input(s) we are hiding, and empty the <code>value</code> attribute(s). This is so the form can be submitted if both input sets aren't filled in. It also ensures that the form won't submit data that the user didn't mean to.</p>
+> **Note:** When the user clicks the button, the `required` attribute(s) are removed from the input(s) we are hiding, and empty the `value` attribute(s). This is so the form can be submitted if both input sets aren't filled in. It also ensures that the form won't submit data that the user didn't mean to.
+>
+> If you didn't do this, you'd have to fill in both feet/inches **and** meters to submit the form!
 
-<p>If you didn't do this, you'd have to fill in both feet/inches <strong>and</strong> meters to submit the form!</p>
-</div>
+## Specifications
 
-<h2 id="Specifications">Specifications</h2>
+{{Specifications}}
 
-<p>{{Specifications}}</p>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Learn/Forms">HTML forms guide</a></li>
- <li>{{HTMLElement("input")}}</li>
- <li><code><a href="/en-US/docs/Web/HTML/Element/input/tel">&lt;input type="tel"&gt;</a></code></li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
-</ul>
+*   [HTML forms guide](/en-US/docs/Learn/Forms)
+*   {{HTMLElement("input")}}
+*   [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel)
+*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

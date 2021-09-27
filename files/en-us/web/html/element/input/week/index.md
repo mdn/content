@@ -17,148 +17,171 @@ tags:
   - Weeks
 browser-compat: html.elements.input.input-week
 ---
-<div>{{HTMLRef("Input_types")}}</div>
+{{HTMLRef("Input_types")}}
 
-<p>{{HTMLElement("input")}} elements of type <strong><code>week</code></strong> create input fields allowing easy entry of a year plus the <a href="https://en.wikipedia.org/wiki/ISO_8601#Week_dates">ISO 8601 week number</a> during that year (i.e., week 1 to <a href="https://en.wikipedia.org/wiki/ISO_8601#Week_dates">52 or 53</a>).</p>
+{{HTMLElement("input")}} elements of type **`week`** create input fields allowing easy entry of a year plus the [ISO 8601 week number](https://en.wikipedia.org/wiki/ISO\_8601#Week_dates) during that year (i.e., week 1 to [52 or 53](https://en.wikipedia.org/wiki/ISO\_8601#Week_dates)).
 
-<div>{{EmbedInteractiveExample("pages/tabbed/input-week.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/input-week.html", "tabbed-shorter")}}
 
-<p>The control's user interface varies from browser to browser; cross-browser support is currently a bit limited, with only Chrome/Opera and Microsoft Edge supporting it at this time. In non-supporting browsers, the control degrades gracefully to function identically to <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>.</p>
+The control's user interface varies from browser to browser; cross-browser support is currently a bit limited, with only Chrome/Opera and Microsoft Edge supporting it at this time. In non-supporting browsers, the control degrades gracefully to function identically to [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text).
 
-<p>In Chrome/Opera the <code>week</code> control provides slots to fill in week and year values, a pop-up calendar interface to select them more visually, and an "X" button to clear the control's value.</p>
+In Chrome/Opera the `week` control provides slots to fill in week and year values, a pop-up calendar interface to select them more visually, and an "X" button to clear the control's value.
 
-<p><img alt="" src="week-control-chrome.png"></p>
+![](week-control-chrome.png)
 
-<p>The Edge <code>week</code> control is somewhat more elaborate, opening up week and year pickers with sliding reels.</p>
+The Edge `week` control is somewhat more elaborate, opening up week and year pickers with sliding reels.
 
-<p><img alt="" src="week-control-edge.png"></p>
+![](week-control-edge.png)
 
 <table class="properties">
- <tbody>
-  <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
-   <td>A {{domxref("DOMString")}} representing a week and year, or empty</td>
-  </tr>
-  <tr>
-   <td><strong>Events</strong></td>
-   <td>{{domxref("HTMLElement/change_event", "change")}} and {{domxref("HTMLElement/input_event", "input")}}</td>
-  </tr>
-  <tr>
-   <td><strong>Supported common attributes</strong></td>
-   <td>{{htmlattrxref("autocomplete", "input")}}, {{htmlattrxref("list", "input")}}, {{htmlattrxref("readonly", "input")}}, and {{htmlattrxref("step", "input")}}</td>
-  </tr>
-  <tr>
-   <td><strong>IDL attributes</strong></td>
-   <td><code>value</code>, <code>valueAsDate</code>, <code>valueAsNumber</code>, and <code>list</code>.</td>
-  </tr>
-  <tr>
-   <td><strong>Methods</strong></td>
-   <td>{{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.stepDown", "stepDown()")}}, and {{domxref("HTMLInputElement.stepUp", "stepUp()")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td><strong>{{anch("Value")}}</strong></td>
+      <td>
+        A {{domxref("DOMString")}} representing a week and year, or
+        empty
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} and
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Supported common attributes</strong></td>
+      <td>
+        {{htmlattrxref("autocomplete", "input")}},
+        {{htmlattrxref("list", "input")}},
+        {{htmlattrxref("readonly", "input")}}, and
+        {{htmlattrxref("step", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td>
+        <code>value</code>, <code>valueAsDate</code>,
+        <code>valueAsNumber</code>, and <code>list</code>.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}},
+        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
+        and {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A {{domxref("DOMString")}} representing the value of the week/year entered into the input. The format of the date and time value used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid week string")}}.</p>
+A {{domxref("DOMString")}} representing the value of the week/year entered into the input. The format of the date and time value used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid week string")}}.
 
-<p>You can set a default value for the input by including a value inside the {{htmlattrxref("value", "input")}} attribute, like so:</p>
+You can set a default value for the input by including a value inside the {{htmlattrxref("value", "input")}} attribute, like so:
 
-<pre class="brush: html">&lt;label for="week"&gt;What week would you like to start?&lt;/label&gt;
-&lt;input id="week" type="week" name="week" value="2017-W01"&gt;</pre>
+```html
+<label for="week">What week would you like to start?</label>
+<input id="week" type="week" name="week" value="2017-W01">
+```
 
-<p>{{EmbedLiveSample('Value', 600, 60)}}</p>
+{{EmbedLiveSample('Value', 600, 60)}}
 
-<p>One thing to note is that the displayed format may differ from the actual <code>value</code>, which is always formatted <code>yyyy-Www</code>. When the above value is submitted to the server, for example, browsers may display it as <code>Week 01, 2017</code>, but the submitted value will always look like <code>week=2017-W01</code>.</p>
+One thing to note is that the displayed format may differ from the actual `value`, which is always formatted `yyyy-Www`. When the above value is submitted to the server, for example, browsers may display it as `Week 01, 2017`, but the submitted value will always look like `week=2017-W01`.
 
-<p>You can also get and set the value in JavaScript using the input element's {{domxref("HTMLInputElement.value", "value")}} property, for example:</p>
+You can also get and set the value in JavaScript using the input element's {{domxref("HTMLInputElement.value", "value")}} property, for example:
 
-<pre class="brush: js">var weekControl = document.querySelector('input[type="week"]');
-weekControl.value = '2017-W45';</pre>
+```js
+var weekControl = document.querySelector('input[type="week"]');
+weekControl.value = '2017-W45';
+```
 
-<h2 id="Additional_attributes">Additional attributes</h2>
+## Additional attributes
 
-<p>In addition to the attributes common to {{HTMLElement("input")}} elements, week inputs offer the following attributes.</p>
+In addition to the attributes common to {{HTMLElement("input")}} elements, week inputs offer the following attributes.
 
-<h3>max</h3>
+### max
 
-<p>The latest (time-wise) year and week number, in the string format discussed in the {{anch("Value")}} section above, to accept. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If the value of the <code>max</code> attribute isn't a valid week string, then the element has no maximum value.</p>
+The latest (time-wise) year and week number, in the string format discussed in the {{anch("Value")}} section above, to accept. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If the value of the `max` attribute isn't a valid week string, then the element has no maximum value.
 
-<p>This value must be greater than or equal to the year and week specified by the <code>min</code> attribute.</p>
+This value must be greater than or equal to the year and week specified by the `min` attribute.
 
-<h3>min</h3>
+### min
 
-<p>The earliest year and week to accept. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If a value is specified for <code>min</code> that isn't a valid week string, the input has no minimum value.</p>
+The earliest year and week to accept. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If a value is specified for `min` that isn't a valid week string, the input has no minimum value.
 
-<p>This value must be less than or equal to the value of the <code>max</code> attribute.</p>
+This value must be less than or equal to the value of the `max` attribute.
 
-<h3>readonly</h3>
+### readonly
 
-<p>A Boolean attribute which, if present, means this field cannot be edited by the user. Its <code>value</code> can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement")}} <code>value</code> property.</p>
+A Boolean attribute which, if present, means this field cannot be edited by the user. Its `value` can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement")}} `value` property.
 
-<div class="note">
-<p><strong>Note:</strong> Because a read-only field cannot have a value, <code>required</code> does not have any effect on inputs with the <code>readonly</code> attribute also specified.</p>
-</div>
+> **Note:** Because a read-only field cannot have a value, `required` does not have any effect on inputs with the `readonly` attribute also specified.
 
-<h3>step</h3>
+### step
 
-<p>The <code>step</code> attribute is a number that specifies the granularity that the value must adhere to, or the special value <code>any</code>, which is described below. Only values which are equal to the basis for stepping (<code>{{anch("min")}}</code> if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.</p>
+The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping (`{{anch("min")}}` if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.
 
-<p>A string value of <code>any</code> means that no stepping is implied, and any value is allowed (barring other constraints, such as <code>{{anch("min")}}</code> and <code>{{anch("max")}}</code>).</p>
+A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as `{{anch("min")}}` and `{{anch("max")}}`).
 
-<div class="note">
-<p><strong>Note:</strong> When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.</p>
-</div>
+> **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
 
-<p>For <code>week</code> inputs, the value of <code>step</code> is given in weeks, with a scaling factor of 604,800,000 (since the underlying numeric value is in milliseconds). The default value of <code>step</code> is 1, indicating 1week. The default stepping base is -259,200,000, which is the beginning of the first week of 1970 (<code>"1970-W01"</code>).</p>
+For `week` inputs, the value of `step` is given in weeks, with a scaling factor of 604,800,000 (since the underlying numeric value is in milliseconds). The default value of `step` is 1, indicating 1week. The default stepping base is -259,200,000, which is the beginning of the first week of 1970 (`"1970-W01"`).
 
-<p><em>At this time, it's unclear what a value of <code>"any"</code> means for <code>step</code> when used with <code>week</code> inputs. This will be updated as soon as that information is determined.</em></p>
+*At this time, it's unclear what a value of `"any"` means for `step` when used with `week` inputs. This will be updated as soon as that information is determined.*
 
-<h2 id="Using_week_inputs">Using week inputs</h2>
+## Using week inputs
 
-<p>Week inputs sound convenient at first glance, since they provide an easy UI for choosing weeks, and they normalize the data format sent to the server, regardless of the user's browser or locale. However, there are issues with <code>&lt;input type="week"&gt;</code> because browser support is not guaranteed across all browsers.</p>
+Week inputs sound convenient at first glance, since they provide an easy UI for choosing weeks, and they normalize the data format sent to the server, regardless of the user's browser or locale. However, there are issues with `<input type="week">` because browser support is not guaranteed across all browsers.
 
-<p>We'll look at basic and more complex uses of <code>&lt;input type="week"&gt;</code>, then offer advice on mitigating the browser support issue later on (see {{anch("Handling browser support")}}).</p>
+We'll look at basic and more complex uses of `<input type="week">`, then offer advice on mitigating the browser support issue later on (see {{anch("Handling browser support")}}).
 
-<h3 id="Basic_uses_of_week">Basic uses of week</h3>
+### Basic uses of week
 
-<p>The simplest use of <code>&lt;input type="week"&gt;</code> involves a basic <code>&lt;input&gt;</code> and {{htmlelement("label")}} element combination, as seen below:</p>
+The simplest use of `<input type="week">` involves a basic `<input>` and {{htmlelement("label")}} element combination, as seen below:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;label for="week"&gt;What week would you like to start?&lt;/label&gt;
-  &lt;input id="week" type="week" name="week"&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <label for="week">What week would you like to start?</label>
+  <input id="week" type="week" name="week">
+</form>
+```
 
-<p>{{EmbedLiveSample('Basic_uses_of_week', 600, 40)}}</p>
+{{EmbedLiveSample('Basic_uses_of_week', 600, 40)}}
 
-<h3 id="Controlling_input_size">Controlling input size</h3>
+### Controlling input size
 
-<p><code>&lt;input type="week"&gt;</code> doesn't support form sizing attributes such as {{htmlattrxref("size", "input")}}. You'll have to resort to <a href="/en-US/docs/Web/CSS">CSS</a> for sizing needs.</p>
+`<input type="week">` doesn't support form sizing attributes such as {{htmlattrxref("size", "input")}}. You'll have to resort to [CSS](/en-US/docs/Web/CSS) for sizing needs.
 
-<h3 id="Using_the_step_attribute">Using the step attribute</h3>
+### Using the step attribute
 
-<p>You should be able to use the {{htmlattrxref("step", "input")}} attribute to vary the number of weeks jumped whenever they are incremented or decremented, however it doesn't seem to have any effect on supporting browsers.</p>
+You should be able to use the {{htmlattrxref("step", "input")}} attribute to vary the number of weeks jumped whenever they are incremented or decremented, however it doesn't seem to have any effect on supporting browsers.
 
-<h2 id="Validation">Validation</h2>
+## Validation
 
-<p>By default, <code>&lt;input type="week"&gt;</code> does not apply any validation to entered values. The UI implementations generally don't let you specify anything that isn't a valid week/year, which is helpful, but it's still possible to submit with the field empty, and you might want to restrict the range of choosable weeks.</p>
+By default, `<input type="week">` does not apply any validation to entered values. The UI implementations generally don't let you specify anything that isn't a valid week/year, which is helpful, but it's still possible to submit with the field empty, and you might want to restrict the range of choosable weeks.
 
-<h3 id="Setting_maximum_and_minimum_weeks">Setting maximum and minimum weeks</h3>
+### Setting maximum and minimum weeks
 
-<p>You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to restrict the valid weeks that can be chosen by the user. In the following example we are setting a minimum value of <code>Week 01, 2017</code> and a maximum value of <code>Week 52, 2017</code>:</p>
+You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to restrict the valid weeks that can be chosen by the user. In the following example we are setting a minimum value of `Week 01, 2017` and a maximum value of `Week 52, 2017`:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;label for="week"&gt;What week would you like to start?&lt;/label&gt;
-  &lt;input id="week" type="week" name="week"
-         min="2017-W01" max="2017-W52"&gt;
-  &lt;span class="validity"&gt;&lt;/span&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <label for="week">What week would you like to start?</label>
+  <input id="week" type="week" name="week"
+         min="2017-W01" max="2017-W52">
+  <span class="validity"></span>
+</form>
+```
 
-<p>{{EmbedLiveSample('Setting_maximum_and_minimum_weeks', 600, 40)}}</p>
+{{EmbedLiveSample('Setting_maximum_and_minimum_weeks', 600, 40)}}
 
-<p>Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid. We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.</p>
+Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid. We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.
 
-<pre class="brush: css">div {
+```css
+div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -181,98 +204,100 @@ input:valid+span:after {
   position: absolute;
   content: '✓';
   padding-left: 5px;
-}</pre>
+}
+```
 
-<p>The result here is that only weeks between W01 and W52 in 2017 will be seen as valid and be selectable in supporting browsers.</p>
+The result here is that only weeks between W01 and W52 in 2017 will be seen as valid and be selectable in supporting browsers.
 
-<h3 id="Making_week_values_required">Making week values required</h3>
+### Making week values required
 
-<p>In addition you can use the {{htmlattrxref("required", "input")}} attribute to make filling in the week mandatory. As a result, supporting browsers will display an error if you try to submit an empty week field.</p>
+In addition you can use the {{htmlattrxref("required", "input")}} attribute to make filling in the week mandatory. As a result, supporting browsers will display an error if you try to submit an empty week field.
 
-<p>Let's look at an example; here we've set minimum and maximum weeks, and also made the field required:</p>
+Let's look at an example; here we've set minimum and maximum weeks, and also made the field required:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="week"&gt;What week would you like to start?&lt;/label&gt;
-    &lt;input id="week" type="week" name="week"
-         min="2017-W01" max="2017-W52" required&gt;
-    &lt;span class="validity"&gt;&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-      &lt;input type="submit" value="Submit form"&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <div>
+    <label for="week">What week would you like to start?</label>
+    <input id="week" type="week" name="week"
+         min="2017-W01" max="2017-W52" required>
+    <span class="validity"></span>
+  </div>
+  <div>
+      <input type="submit" value="Submit form">
+  </div>
+</form>
+```
 
-<p>If you try to submit the form with no value, the browser displays an error. Try playing with the example now:</p>
+If you try to submit the form with no value, the browser displays an error. Try playing with the example now:
 
-<p>{{EmbedLiveSample('Making_week_values_required', 600, 120)}}</p>
+{{EmbedLiveSample('Making_week_values_required', 600, 120)}}
 
-<p>Here's'a screenshot for those of you who aren't using a supporting browser:</p>
+Here's'a screenshot for those of you who aren't using a supporting browser:
 
-<p><img alt="" src="week-validation-chrome.png"></p>
+![](week-validation-chrome.png)
 
-<div class="warning">
-<p><strong>Warning:</strong> HTML form validation is <em>not</em> a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, of the wrong type, and so forth).</p>
-</div>
+> **Warning:** HTML form validation is *not* a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, of the wrong type, and so forth).
 
-<h2 id="Handling_browser_support">Handling browser support</h2>
+## Handling browser support
 
-<p>As mentioned above, the major problem with using week inputs right now is browser support: Safari and Firefox don't support it on desktop, and old versions of IE don't support it.</p>
+As mentioned above, the major problem with using week inputs right now is browser support: Safari and Firefox don't support it on desktop, and old versions of IE don't support it.
 
-<p>Mobile platforms such as Android and iOS make really good use of such input types, providing specialist UI controls that make it really easy to select values in a touchscreen environment. For example, the <code>week</code> picker on Chrome for Android looks like this:</p>
+Mobile platforms such as Android and iOS make really good use of such input types, providing specialist UI controls that make it really easy to select values in a touchscreen environment. For example, the `week` picker on Chrome for Android looks like this:
 
-<p><img alt="" src="week-chrome-android.png"></p>
+![](week-chrome-android.png)
 
-<p>Non-supporting browsers gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.</p>
+Non-supporting browsers gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.
 
-<p>The second problem is the more serious. As mentioned earlier, with a <code>week</code> input the actual value is always normalized to the format <code>yyyy-Www</code>. When the browser falls back to a generic text input, there's nothing to guide the user toward correctly formatting the input (and it's certainly not intuitive). There are multiple ways in which people could write week values; for example:</p>
+The second problem is the more serious. As mentioned earlier, with a `week` input the actual value is always normalized to the format `yyyy-Www`. When the browser falls back to a generic text input, there's nothing to guide the user toward correctly formatting the input (and it's certainly not intuitive). There are multiple ways in which people could write week values; for example:
 
-<ul>
- <li><code>Week 1 2017</code></li>
- <li><code>Jan 2-8 2017</code></li>
- <li><code>2017-W01</code></li>
- <li>etc.</li>
-</ul>
+*   `Week 1 2017`
+*   `Jan 2-8 2017`
+*   `2017-W01`
+*   etc.
 
-<p>The best way to deal with week/years in forms in a cross-browser way at the moment is to get the user to enter the week number and year in separate controls ({{htmlelement("select")}} elements being popular; see below for an example), or use JavaScript libraries such as <a href="https://jqueryui.com/datepicker/">jQuery date picker</a>.</p>
+The best way to deal with week/years in forms in a cross-browser way at the moment is to get the user to enter the week number and year in separate controls ({{htmlelement("select")}} elements being popular; see below for an example), or use JavaScript libraries such as [jQuery date picker](https://jqueryui.com/datepicker/).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example we create two sets of UI elements for choosing weeks: a native picker created using <code>&lt;input type="week"&gt;</code>, and a set of two {{htmlelement("select")}} elements for choosing weeks/years in older browsers that don't support the <code>week</code> input type.</p>
+In this example we create two sets of UI elements for choosing weeks: a native picker created using `<input type="week">`, and a set of two {{htmlelement("select")}} elements for choosing weeks/years in older browsers that don't support the `week` input type.
 
-<p>{{EmbedLiveSample('Examples', 600, 140)}}</p>
+{{EmbedLiveSample('Examples', 600, 140)}}
 
-<p>The HTML looks like so:</p>
+The HTML looks like so:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div class="nativeWeekPicker"&gt;
-    &lt;label for="week"&gt;What week would you like to start?&lt;/label&gt;
-    &lt;input id="week" type="week" name="week"
-           min="2017-W01" max="2018-W52" required&gt;
-    &lt;span class="validity"&gt;&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;p class="fallbackLabel"&gt;What week would you like to start?&lt;/p&gt;
-  &lt;div class="fallbackWeekPicker"&gt;
-    &lt;div&gt;
-      &lt;span&gt;
-        &lt;label for="week"&gt;Week:&lt;/label&gt;
-        &lt;select id="fallbackWeek" name="week"&gt;
-        &lt;/select&gt;
-      &lt;/span&gt;
-      &lt;span&gt;
-        &lt;label for="year"&gt;Year:&lt;/label&gt;
-        &lt;select id="year" name="year"&gt;
-          &lt;option value="2017" selected&gt;2017&lt;/option&gt;
-          &lt;option value="2018"&gt;2018&lt;/option&gt;
-        &lt;/select&gt;
-      &lt;/span&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <div class="nativeWeekPicker">
+    <label for="week">What week would you like to start?</label>
+    <input id="week" type="week" name="week"
+           min="2017-W01" max="2018-W52" required>
+    <span class="validity"></span>
+  </div>
+  <p class="fallbackLabel">What week would you like to start?</p>
+  <div class="fallbackWeekPicker">
+    <div>
+      <span>
+        <label for="week">Week:</label>
+        <select id="fallbackWeek" name="week">
+        </select>
+      </span>
+      <span>
+        <label for="year">Year:</label>
+        <select id="year" name="year">
+          <option value="2017" selected>2017</option>
+          <option value="2018">2018</option>
+        </select>
+      </span>
+    </div>
+  </div>
+</form>
+```
 
-<p>The week values are dynamically generated by the JavaScript code below.</p>
+The week values are dynamically generated by the JavaScript code below.
 
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -295,11 +320,13 @@ input:valid+span:after {
   position: absolute;
   content: '✓';
   padding-left: 5px;
-}</pre>
+}
+```
 
-<p>The other part of the code that may be of interest is the feature detection code. To detect whether the browser supports <code>&lt;input type="week"&gt;</code>, we create a new {{htmlelement("input")}} element, try setting its <code>type</code> to <code>week</code>, then immediately check what its <code>type</code> is set to. Non-supporting browsers will return <code>text</code>, because the <code>week</code> type falls back to type <code>text</code>. If <code>&lt;input type="week"&gt;</code> is not supported, we hide the native picker and show the fallback picker UI ({{htmlelement("select")}}s) instead.</p>
+The other part of the code that may be of interest is the feature detection code. To detect whether the browser supports `<input type="week">`, we create a new {{htmlelement("input")}} element, try setting its `type` to `week`, then immediately check what its `type` is set to. Non-supporting browsers will return `text`, because the `week` type falls back to type `text`. If `<input type="week">` is not supported, we hide the native picker and show the fallback picker UI ({{htmlelement("select")}}s) instead.
 
-<pre class="brush: js">// define variables
+```js
+// define variables
 var nativePicker = document.querySelector('.nativeWeekPicker');
 var fallbackPicker = document.querySelector('.fallbackWeekPicker');
 var fallbackLabel = document.querySelector('.fallbackLabel');
@@ -333,30 +360,27 @@ if(test.type === 'text') {
 
 function populateWeeks() {
   // Populate the week select with 52 weeks
-  for(var i = 1; i &lt;= 52; i++) {
+  for(var i = 1; i <= 52; i++) {
     var option = document.createElement('option');
-    option.textContent = (i &lt; 10) ? ("0" + i) : i;
+    option.textContent = (i < 10) ? ("0" + i) : i;
     weekSelect.appendChild(option);
   }
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note:</strong> Remember that some years have 53 weeks in them (see <a href="https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year">Weeks per year</a>)! You'll need to take this into consideration when developing production apps.</p>
-</div>
+> **Note:** Remember that some years have 53 weeks in them (see [Weeks per year](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year))! You'll need to take this into consideration when developing production apps.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}</li>
- <li><a href="/en-US/docs/Web/HTML/Date_and_time_formats">Date and time formats used in HTML</a></li>
- <li><code><a href="/en-US/docs/Web/HTML/Element/input/datetime-local">&lt;input type="datetime-local"&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/input/date">&lt;input type="date"&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/input/time">&lt;input type="time"&gt;</a></code>, and <code><a href="/en-US/docs/Web/HTML/Element/input/month">&lt;input type="month"&gt;</a></code></li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
-</ul>
+*   The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
+*   [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
+*   [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date), [`<input type="time">`](/en-US/docs/Web/HTML/Element/input/time), and [`<input type="month">`](/en-US/docs/Web/HTML/Element/input/month)
+*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

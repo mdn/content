@@ -9,33 +9,27 @@ tags:
   - id
 browser-compat: html.global_attributes.id
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>The <strong><code>id</code></strong> <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a> defines an identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking (using a <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#Fragment">fragment identifier</a>), scripting, or styling (with {{glossary("CSS")}}).</p>
+The **`id`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) defines an identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking (using a [fragment identifier](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#Fragment)), scripting, or styling (with {{glossary("CSS")}}).
 
-<div>{{EmbedInteractiveExample("pages/tabbed/attribute-id.html","tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/attribute-id.html","tabbed-shorter")}}
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> This attribute's value is an opaque string: this means that web authors should not rely on it to convey human-readable information (although having your IDs somewhat human-readable can be useful for code comprehension, e.g. consider <code>ticket-18659</code> versus <code>r45tgfe-freds&amp;$@</code>).</p>
-</div>
+> **Warning:** This attribute's value is an opaque string: this means that web authors should not rely on it to convey human-readable information (although having your IDs somewhat human-readable can be useful for code comprehension, e.g. consider `ticket-18659` versus `r45tgfe-freds&$@`).
 
-<p><code>id</code>'s value must not contain {{glossary("whitespace")}} (spaces, tabs etc.). Browsers treat non-conforming IDs that contain whitespace as if the whitespace is part of the ID. In contrast to the {{htmlattrxref("class")}} attribute, which allows space-separated values, elements can only have one single ID value.</p>
+`id`'s value must not contain {{glossary("whitespace")}} (spaces, tabs etc.). Browsers treat non-conforming IDs that contain whitespace as if the whitespace is part of the ID. In contrast to the {{htmlattrxref("class")}} attribute, which allows space-separated values, elements can only have one single ID value.
 
-<div class="note">
-<p><strong>Note:</strong> Using characters except {{glossary("ASCII")}} letters, digits, <code>'_'</code>, <code>'-'</code> and <code>'.'</code> may cause compatibility problems, as they weren't allowed in HTML 4. Though this restriction has been lifted in {{glossary("HTML5")}}, an ID should start with a letter for compatibility.</p>
-</div>
+> **Note:** Using characters except {{glossary("ASCII")}} letters, digits, `'_'`, `'-'` and `'.'` may cause compatibility problems, as they weren't allowed in HTML 4. Though this restriction has been lifted in {{glossary("HTML5")}}, an ID should start with a letter for compatibility.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>All <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</li>
- <li>{{domxref("Element.id")}} that reflects this attribute.</li>
-</ul>
+*   All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+*   {{domxref("Element.id")}} that reflects this attribute.

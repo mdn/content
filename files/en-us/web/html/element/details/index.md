@@ -12,130 +12,151 @@ tags:
   - details
 browser-compat: html.elements.details
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;details&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element creates a disclosure widget in which information is visible only when the widget is toggled into an "open" state. A summary or label must be provided using the {{HTMLElement("summary")}} element.</p>
+The **`<details>`** [HTML](/en-US/docs/Web/HTML) element creates a disclosure widget in which information is visible only when the widget is toggled into an "open" state. A summary or label must be provided using the {{HTMLElement("summary")}} element.
 
-<p>A disclosure widget is typically presented onscreen using a small triangle which rotates (or twists) to indicate open/closed status, with a label next to the triangle. The contents of the <code>&lt;summary&gt;</code> element are used as the label for the disclosure widget.</p>
+A disclosure widget is typically presented onscreen using a small triangle which rotates (or twists) to indicate open/closed status, with a label next to the triangle. The contents of the `<summary>` element are used as the label for the disclosure widget.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/details.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/details.html", "tabbed-shorter")}}
 
-<p>A <code>&lt;details&gt;</code> widget can be in one of two states. The default <em>closed</em> state displays only the triangle and the label inside <code>&lt;summary&gt;</code> (or a {{Glossary("user agent")}}-defined default string if no <code>&lt;summary&gt;</code>).</p>
+A `<details>` widget can be in one of two states. The default *closed* state displays only the triangle and the label inside `<summary>` (or a {{Glossary("user agent")}}-defined default string if no `<summary>`).
 
-<p>When the user clicks on the widget or focuses it then presses the space bar, it "twists" open, revealing its contents. The common use of a triangle which rotates or twists around to represent opening or closing the widget is why these are sometimes called "twisties".</p>
+When the user clicks on the widget or focuses it then presses the space bar, it "twists" open, revealing its contents. The common use of a triangle which rotates or twists around to represent opening or closing the widget is why these are sometimes called "twisties".
 
-<p>You can use CSS to style the disclosure widget, and you can programmatically open and close the widget by setting/removing its {{htmlattrxref("open", "details")}} attribute. Unfortunately, at this time there's no built-in way to animate the transition between open and closed.</p>
+You can use CSS to style the disclosure widget, and you can programmatically open and close the widget by setting/removing its {{htmlattrxref("open", "details")}} attribute. Unfortunately, at this time there's no built-in way to animate the transition between open and closed.
 
-<p>By default when closed, the widget is only tall enough to display the disclosure triangle and summary. When open, it expands to display the details contained within.</p>
+By default when closed, the widget is only tall enough to display the disclosure triangle and summary. When open, it expands to display the details contained within.
 
-<p>Fully standards-compliant implementations automatically apply the CSS <code>{{cssxref("display")}}: list-item</code> to the {{HTMLElement("summary")}} element. You can use this to customize its appearance further. See {{anch("Customizing the disclosure widget")}} for further details.</p>
+Fully standards-compliant implementations automatically apply the CSS `{{cssxref("display")}}: list-item` to the {{HTMLElement("summary")}} element. You can use this to customize its appearance further. See {{anch("Customizing the disclosure widget")}} for further details.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, sectioning root, interactive content, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td>One {{HTMLElement("summary")}} element followed by <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td>{{ARIARole("group")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>No <code>role</code> permitted</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLDetailsElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >, sectioning root, interactive content, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        One {{HTMLElement("summary")}} element followed by
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>{{ARIARole("group")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLDetailsElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("open")}}</dt>
- <dd>
- <p>This Boolean attribute indicates whether or not the details — that is, the contents of the <code>&lt;details&gt;</code> element — are currently visible. The details are shown when this attribute exists, or hidden when this attribute is absent. By default this attribute is absent which means the details are not visible. </p>
+*   {{htmlattrdef("open")}}
+    *   : This Boolean attribute indicates whether or not the details — that is, the contents of the `<details>` element — are currently visible. The details are shown when this attribute exists, or hidden when this attribute is absent. By default this attribute is absent which means the details are not visible.
 
- <div class="note"><p><strong>Note:</strong> You have to remove this attribute entirely to make the details hidden. <code>open="false"</code> makes the details visible because this attribute is Boolean.</p></div>
-</dd>
-</dl>
+        > **Note:** You have to remove this attribute entirely to make the details hidden. `open="false"` makes the details visible because this attribute is Boolean.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<p>In addition to the usual events supported by HTML elements, the <code>&lt;details&gt;</code> element supports the {{event("toggle")}} event, which is dispatched to the <code>&lt;details&gt;</code> element whenever its state changes between open and closed. It is sent <em>after</em> the state is changed, although if the state changes multiple times before the browser can dispatch the event, the events are coalesced so that only one is sent.</p>
+In addition to the usual events supported by HTML elements, the `<details>` element supports the {{event("toggle")}} event, which is dispatched to the `<details>` element whenever its state changes between open and closed. It is sent *after* the state is changed, although if the state changes multiple times before the browser can dispatch the event, the events are coalesced so that only one is sent.
 
-<p>You can use an event listener for the <code>toggle</code> event to detect when the widget changes state:</p>
+You can use an event listener for the `toggle` event to detect when the widget changes state:
 
-<pre class="brush: js">details.addEventListener("toggle", event =&gt; {
+```js
+details.addEventListener("toggle", event => {
   if (details.open) {
     /* the element was toggled open */
   } else {
     /* the element was toggled closed */
   }
-});</pre>
+});
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>A simple disclosure example</h3>
+### A simple disclosure example
 
-<p>This example shows a simple <code>&lt;details&gt;</code> element with a <code>&lt;summary&gt;</code>.
+This example shows a simple `<details>` element with a `<summary>`.
 
-<pre class="brush: html">&lt;details&gt;
-  &lt;summary&gt;System Requirements&lt;/summary&gt;
-  &lt;p&gt;Requires a computer running an operating system. The computer
+```html
+<details>
+  <summary>System Requirements</summary>
+  <p>Requires a computer running an operating system. The computer
   must have some memory and ideally some kind of long-term storage.
   An input device as well as some form of output device is
-  recommended.&lt;/p&gt;
-&lt;/details&gt;</pre>
+  recommended.</p>
+</details>
+```
 
-<p>The result of this HTML is:</p>
+The result of this HTML is:
 
-<p>{{EmbedLiveSample("A_simple_disclosure_example", 650, 150)}}</p>
+{{EmbedLiveSample("A_simple_disclosure_example", 650, 150)}}
 
-<h3 id="Creating_an_open_disclosure_box">Creating an open disclosure box</h3>
+### Creating an open disclosure box
 
-<p>To start the <code>&lt;details&gt;</code> box in its open state, add the Boolean <code>open</code> attribute:</p>
+To start the `<details>` box in its open state, add the Boolean `open` attribute:
 
-<pre class="brush: html">&lt;details open&gt;
-  &lt;summary&gt;System Requirements&lt;/summary&gt;
-  &lt;p&gt;Requires a computer running an operating system. The computer
+```html
+<details open>
+  <summary>System Requirements</summary>
+  <p>Requires a computer running an operating system. The computer
   must have some memory and ideally some kind of long-term storage.
   An input device as well as some form of output device is
-  recommended.&lt;/p&gt;
-&lt;/details&gt;</pre>
+  recommended.</p>
+</details>
+```
 
-<p>This results in:</p>
+This results in:
 
-<p>{{EmbedLiveSample("Creating_an_open_disclosure_box", 650, 150)}}</p>
+{{EmbedLiveSample("Creating_an_open_disclosure_box", 650, 150)}}
 
-<h3 id="Customizing_the_appearance">Customizing the appearance</h3>
+### Customizing the appearance
 
-<p>Now let's apply some CSS to customize the appearance of the disclosure box.</p>
+Now let's apply some CSS to customize the appearance of the disclosure box.
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">details {
+```css
+details {
   font: 16px "Open Sans", Calibri, sans-serif;
   width: 620px;
 }
 
-details &gt; summary {
+details > summary {
   padding: 2px 6px;
   width: 15em;
   background-color: #ddd;
@@ -144,7 +165,7 @@ details &gt; summary {
   cursor: pointer;
 }
 
-details &gt; p {
+details > p {
   border-radius: 0 0 10px 10px;
   background-color: #ddd;
   padding: 2px 6px;
@@ -154,40 +175,44 @@ details &gt; p {
 
 details[open] > summary {
   background-color: #ccf;
-}</pre>
+}
+```
 
-<p>This CSS creates a look similar to a tabbed interface, where clicking the tab opens it to reveal its contents.</p>
+This CSS creates a look similar to a tabbed interface, where clicking the tab opens it to reveal its contents.
 
-<p>The selector <code>details[open]</code> can be used to style the element which is open.</p>
+The selector `details[open]` can be used to style the element which is open.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;details&gt;
-  &lt;summary&gt;System Requirements&lt;/summary&gt;
-  &lt;p&gt;Requires a computer running an operating system. The computer
+```html
+<details>
+  <summary>System Requirements</summary>
+  <p>Requires a computer running an operating system. The computer
   must have some memory and ideally some kind of long-term storage.
   An input device as well as some form of output device is
-  recommended.&lt;/p&gt;
-&lt;/details&gt;</pre>
+  recommended.</p>
+</details>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Customizing_the_appearance", 650, 150)}}</p>
+{{EmbedLiveSample("Customizing_the_appearance", 650, 150)}}
 
-<h3 id="Customizing_the_disclosure_widget">Customizing the disclosure widget</h3>
+### Customizing the disclosure widget
 
-<p>The disclosure triangle itself can be customized, although this is not as broadly supported. There are variations in how browsers support this customization due to experimental implementations as the element was standardized, so we'll have to use multiple approaches for a while.</p>
+The disclosure triangle itself can be customized, although this is not as broadly supported. There are variations in how browsers support this customization due to experimental implementations as the element was standardized, so we'll have to use multiple approaches for a while.
 
-<p>The {{HTMLElement("summary")}} element supports the {{cssxref("list-style")}} shorthand property and its longhand properties, such as {{cssxref("list-style-type")}}, to change the disclosure triangle to whatever you choose (usually with {{cssxref("list-style-image")}}). For example, we can remove the disclosure widget icon by setting <code>list-style: none</code>.</p>
+The {{HTMLElement("summary")}} element supports the {{cssxref("list-style")}} shorthand property and its longhand properties, such as {{cssxref("list-style-type")}}, to change the disclosure triangle to whatever you choose (usually with {{cssxref("list-style-image")}}). For example, we can remove the disclosure widget icon by setting `list-style: none`.
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">details {
+```css
+details {
   font: 16px "Open Sans", Calibri, sans-serif;
   width: 620px;
 }
 
-details &gt; summary {
+details > summary {
   padding: 2px 6px;
   width: 15em;
   background-color: #ddd;
@@ -197,41 +222,41 @@ details &gt; summary {
   list-style: none;
 }
 
-details &gt; p {
+details > p {
   border-radius: 0 0 10px 10px;
   background-color: #ddd;
   padding: 2px 6px;
   margin: 0;
   box-shadow: 3px 3px 4px black;
 }
-</pre>
+```
 
-<p>This CSS creates a look similar to a tabbed interface, where activating the tab expands and opens it to reveal its contents.</p>
+This CSS creates a look similar to a tabbed interface, where activating the tab expands and opens it to reveal its contents.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;details&gt;
-  &lt;summary&gt;System Requirements&lt;/summary&gt;
-  &lt;p&gt;Requires a computer running an operating system. The computer
+```html
+<details>
+  <summary>System Requirements</summary>
+  <p>Requires a computer running an operating system. The computer
   must have some memory and ideally some kind of long-term storage.
   An input device as well as some form of output device is
-  recommended.&lt;/p&gt;
-&lt;/details&gt;</pre>
+  recommended.</p>
+</details>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Customizing_the_disclosure_widget", 650, 150)}}</p>
+{{EmbedLiveSample("Customizing_the_disclosure_widget", 650, 150)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTMLElement("summary")}}</li>
-</ul>
+*   {{HTMLElement("summary")}}

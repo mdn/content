@@ -8,99 +8,102 @@ tags:
   - Forms
   - required
 ---
-<p>{{HTMLSidebar}}</p>
+{{HTMLSidebar}}
 
-<p>The Boolean <code><strong>required</strong></code> attribute, if present, indicates that the user must specify a value for the input before the owning form can be submitted.</p>
+The Boolean **`required`** attribute, if present, indicates that the user must specify a value for the input before the owning form can be submitted.
 
-<p>The <code>required</code> attribute is supported by <code>{{HTMLElement("input/text","text")}}</code>, <code>{{HTMLElement("input/search","search")}}</code>, <code>{{HTMLElement("input/url","url")}}</code>, <code>{{HTMLElement("input/tel","tel")}}</code>, <code>{{HTMLElement("input/email","email")}}</code>, <code>{{HTMLElement("input/password","password")}}</code>, <code>{{HTMLElement("input/date","date")}}</code>, <code>{{HTMLElement("input/month","month")}}</code>, <code>{{HTMLElement("input/week","week")}}</code>, <code>{{HTMLElement("input/time","time")}}</code>, <code>{{HTMLElement("input/datetime-local","datetime-local")}}</code>, <code>{{HTMLElement("input/number","number")}}</code>, <code>{{HTMLElement("input/checkbox","checkbox")}}</code>, <code>{{HTMLElement("input/radio","radio")}}</code>, <code>{{HTMLElement("input/file","file")}}</code>, {{HTMLElement("input")}} types along with the {{HTMLElement("select")}} and {{HTMLElement("textarea")}} form control elements. If present on any of these input types and elements, the {{cssxref(':required')}} pseudo class will match. If the attribute is not included, the {{cssxref(':optional')}} pseudo class will match.</p>
+The `required` attribute is supported by `{{HTMLElement("input/text","text")}}`, `{{HTMLElement("input/search","search")}}`, `{{HTMLElement("input/url","url")}}`, `{{HTMLElement("input/tel","tel")}}`, `{{HTMLElement("input/email","email")}}`, `{{HTMLElement("input/password","password")}}`, `{{HTMLElement("input/date","date")}}`, `{{HTMLElement("input/month","month")}}`, `{{HTMLElement("input/week","week")}}`, `{{HTMLElement("input/time","time")}}`, `{{HTMLElement("input/datetime-local","datetime-local")}}`, `{{HTMLElement("input/number","number")}}`, `{{HTMLElement("input/checkbox","checkbox")}}`, `{{HTMLElement("input/radio","radio")}}`, `{{HTMLElement("input/file","file")}}`, {{HTMLElement("input")}} types along with the {{HTMLElement("select")}} and {{HTMLElement("textarea")}} form control elements. If present on any of these input types and elements, the {{cssxref(':required')}} pseudo class will match. If the attribute is not included, the {{cssxref(':optional')}} pseudo class will match.
 
-<p>The attribute is not supported or relevant to {{HTMLElement("input/range","range")}} and {{HTMLElement("input/color","color")}}, as both have default values. It is also not supported on {{HTMLElement("input/hidden","hidden")}} as it can not be expected that a user to fill out a form that is hidden. Nor is it supported on any of the button types, including <code>image</code>.</p>
+The attribute is not supported or relevant to {{HTMLElement("input/range","range")}} and {{HTMLElement("input/color","color")}}, as both have default values. It is also not supported on {{HTMLElement("input/hidden","hidden")}} as it can not be expected that a user to fill out a form that is hidden. Nor is it supported on any of the button types, including `image`.
 
-<p>Note <code>color</code> and <code>range</code> don't support <code>required</code>, but type <code>color</code> defaults to <code>#000000</code>, and <code>range</code> defaults to the midpoint between <code>min</code> and <code>max</code> -- with <code>min</code> and <code>max</code> defaulting to 0 and 100 respectively in most browsers if not declared -- so always has a value.</p>
+Note `color` and `range` don't support `required`, but type `color` defaults to `#000000`, and `range` defaults to the midpoint between `min` and `max` -- with `min` and `max` defaulting to 0 and 100 respectively in most browsers if not declared -- so always has a value.
 
-<p>In the case of a same named group of {{HTMLElement("input/radio","radio")}} buttons, if a single radio button in the group has the <code>required</code> attribute, a radio button in that group must be checked, although it doesn't have to be the one with the attribute is applied. So to improve code maintenance, it is recommended to either include the <code>required</code> attribute in every same-named radio button in the group, or else in none.</p>
+In the case of a same named group of {{HTMLElement("input/radio","radio")}} buttons, if a single radio button in the group has the `required` attribute, a radio button in that group must be checked, although it doesn't have to be the one with the attribute is applied. So to improve code maintenance, it is recommended to either include the `required` attribute in every same-named radio button in the group, or else in none.
 
-<p>In the case of a same named group of {{HTMLElement("input/checkbox","checkbox")}} input types, only the checkboxes with the <code>required</code> attribute are required.</p>
+In the case of a same named group of {{HTMLElement("input/checkbox","checkbox")}} input types, only the checkboxes with the `required` attribute are required.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Setting <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute">aria-required</a>="true"</code> tells a screen reader that an element (any element) is required, but has no bearing on the optionality of the element.</p>
-</div>
+> **Note:** Setting `aria-required="true"` tells a screen reader that an element (any element) is required, but has no bearing on the optionality of the element.
 
-<h3 id="Attribute_interactions">Attribute interactions</h3>
+### Attribute interactions
 
-<p>Because a read-only field cannot have a value, <code>required</code> does not have any effect on inputs with the <code><a href="/en-US/docs/Web/HTML/Attributes/readonly">readonly</a></code> attribute also specified.</p>
+Because a read-only field cannot have a value, `required` does not have any effect on inputs with the [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly) attribute also specified.
 
-<h3 id="Usability">Usability</h3>
+### Usability
 
-<p>When including the <code>required</code> attribute, provide a visible indication near the control informing the user that the {{HTMLElement("input")}},  {{HTMLElement("select")}} or {{HTMLElement("textarea")}} is required. In addition, target required form controls with the {{cssxref(':required')}} pseudo-class, styling them in a way to indicate they are required. This improves usability for sighted users. Assistive technology should inform the user that the form control in mandatory based on the required attribute, but adding <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute">aria-required</a>="true"</code> doesn't hurt, in case the browser / screen reader combination does not support <code>required</code> yet.</p>
+When including the `required` attribute, provide a visible indication near the control informing the user that the {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("textarea")}} is required. In addition, target required form controls with the {{cssxref(':required')}} pseudo-class, styling them in a way to indicate they are required. This improves usability for sighted users. Assistive technology should inform the user that the form control in mandatory based on the required attribute, but adding `aria-required="true"` doesn't hurt, in case the browser / screen reader combination does not support `required` yet.
 
-<h3 id="Constraint_validation">Constraint validation</h3>
+### Constraint validation
 
-<p>If the element is required and the element's value is the empty string, then the element is suffering from {{domxref('ValidityState.valueMissing','valueMissing')}} and the element will match the {{cssxref(':invalid')}} pseudo class.</p>
+If the element is required and the element's value is the empty string, then the element is suffering from {{domxref('ValidityState.valueMissing','valueMissing')}} and the element will match the {{cssxref(':invalid')}} pseudo class.
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>Provide an indication to users informing them the form control is required. Ensure the messaging is multi-faceted, such as through text, color, markings, and attribute, so that all users understand the requirements whether they have color blindness, cognitive differences, or are using a screen reader.</p>
+Provide an indication to users informing them the form control is required. Ensure the messaging is multi-faceted, such as through text, color, markings, and attribute, so that all users understand the requirements whether they have color blindness, cognitive differences, or are using a screen reader.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div class="group"&gt;
-    &lt;input type="text"&gt;
-    &lt;label&gt;Normal&lt;/label&gt;
-  &lt;/div&gt;
-  &lt;div class="group"&gt;
-    &lt;input type="text" required="required"&gt;
-    &lt;label&gt;Required&lt;/label&gt;
-  &lt;/div&gt;
-  &lt;input type="submit"&gt;
-&lt;/form&gt;
-</pre>
+```html
+<form>
+  <div class="group">
+    <input type="text">
+    <label>Normal</label>
+  </div>
+  <div class="group">
+    <input type="text" required="required">
+    <label>Required</label>
+  </div>
+  <input type="submit">
+</form>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Example')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#attr-input-required', 'required attribute')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#attr-input-required', 'required attribute')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'sec-forms.html#the-required-attribute', 'required attribute')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName('HTML WHATWG', 'forms.html#attr-input-required', 'required attribute')}}
+      </td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('HTML5 W3C', 'forms.html#attr-input-required', 'required attribute')}}
+      </td>
+      <td>{{Spec2('HTML5 W3C')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('HTML5.1', 'sec-forms.html#the-required-attribute', 'required attribute')}}
+      </td>
+      <td>{{Spec2('HTML5.1')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("html.elements.attributes.required")}}</p>
+{{Compat("html.elements.attributes.required")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref('validityState.valueMissing')}}</li>
- <li>{{cssxref(':required')}} and {{cssxref(':optional')}}</li>
- <li>{{htmlelement('input')}}</li>
- <li>{{htmlelement('select')}}</li>
-</ul>
+*   {{cssxref('validityState.valueMissing')}}
+*   {{cssxref(':required')}} and {{cssxref(':optional')}}
+*   {{htmlelement('input')}}
+*   {{htmlelement('select')}}

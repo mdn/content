@@ -13,189 +13,226 @@ tags:
   - Web
 browser-compat: html.elements.dl
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;dl&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element represents a description list. The element encloses a list of groups of terms (specified using the {{HTMLElement("dt")}} element) and descriptions (provided by {{HTMLElement("dd")}} elements). Common uses for this element are to implement a glossary or to display metadata (a list of key-value pairs).</p>
+The **`<dl>`** [HTML](/en-US/docs/Web/HTML) element represents a description list. The element encloses a list of groups of terms (specified using the {{HTMLElement("dt")}} element) and descriptions (provided by {{HTMLElement("dd")}} elements). Common uses for this element are to implement a glossary or to display metadata (a list of key-value pairs).
 
-<div>{{EmbedInteractiveExample("pages/tabbed/dl.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/dl.html", "tabbed-standard")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, and if the <code>&lt;dl&gt;</code> element's children include one name-value group, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td>
-    <p>Either: Zero or more groups each consisting of one or more {{HTMLElement("dt")}} elements followed by one or more {{HTMLElement("dd")}} elements, optionally intermixed with {{HTMLElement("script")}} and {{HTMLElement("template")}} elements.<br>
-     Or: (in {{Glossary("WHATWG")}} HTML, {{Glossary("W3C")}} HTML 5.2 and later) One or more {{HTMLElement("div")}} elements, optionally intermixed with {{HTMLElement("script")}} and {{HTMLElement("template")}} elements.</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>{{ARIARole("group")}}, <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/List_role">list</a></code>, {{ARIARole("none")}}, {{ARIARole("presentation")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLDListElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >, and if the <code>&#x3C;dl></code> element's children include one
+        name-value group, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <p>
+          Either: Zero or more groups each consisting of one or more
+          {{HTMLElement("dt")}} elements followed by one or more
+          {{HTMLElement("dd")}} elements, optionally intermixed with
+          {{HTMLElement("script")}} and
+          {{HTMLElement("template")}} elements.<br />Or: (in
+          {{Glossary("WHATWG")}} HTML, {{Glossary("W3C")}} HTML 5.2
+          and later) One or more {{HTMLElement("div")}} elements,
+          optionally intermixed with {{HTMLElement("script")}} and
+          {{HTMLElement("template")}} elements.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>
+        {{ARIARole("group")}},
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/List_role"
+            >list</a
+          ></code
+        >, {{ARIARole("none")}}, {{ARIARole("presentation")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLDListElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element only includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Single_term_and_description">Single term and description</h3>
+### Single term and description
 
-<pre class="brush: html">&lt;dl&gt;
-  &lt;dt&gt;Firefox&lt;/dt&gt;
-  &lt;dd&gt;
+```html
+<dl>
+  <dt>Firefox</dt>
+  <dd>
     A free, open source, cross-platform,
     graphical web browser developed by the
     Mozilla Corporation and hundreds of
     volunteers.
-  &lt;/dd&gt;
+  </dd>
 
-  &lt;!-- Other terms and descriptions --&gt;
-&lt;/dl&gt;
-</pre>
+  <!-- Other terms and descriptions -->
+</dl>
+```
 
-<p>{{EmbedLiveSample("Single_term_and_description")}}</p>
+{{EmbedLiveSample("Single_term_and_description")}}
 
-<h3 id="Multiple_terms_single_description">Multiple terms, single description</h3>
+### Multiple terms, single description
 
-<pre class="brush: html">&lt;dl&gt;
-  &lt;dt&gt;Firefox&lt;/dt&gt;
-  &lt;dt&gt;Mozilla Firefox&lt;/dt&gt;
-  &lt;dt&gt;Fx&lt;/dt&gt;
-  &lt;dd&gt;
+```html
+<dl>
+  <dt>Firefox</dt>
+  <dt>Mozilla Firefox</dt>
+  <dt>Fx</dt>
+  <dd>
     A free, open source, cross-platform,
     graphical web browser developed by the
     Mozilla Corporation and hundreds of
     volunteers.
-  &lt;/dd&gt;
+  </dd>
 
-  &lt;!-- Other terms and descriptions --&gt;
-&lt;/dl&gt;
-</pre>
+  <!-- Other terms and descriptions -->
+</dl>
+```
 
-<p>{{EmbedLiveSample("Multiple_terms_single_description")}}</p>
+{{EmbedLiveSample("Multiple_terms_single_description")}}
 
-<h3 id="Single_term_multiple_descriptions">Single term, multiple descriptions</h3>
+### Single term, multiple descriptions
 
-<pre class="brush: html">&lt;dl&gt;
-  &lt;dt&gt;Firefox&lt;/dt&gt;
-  &lt;dd&gt;
+```html
+<dl>
+  <dt>Firefox</dt>
+  <dd>
     A free, open source, cross-platform,
     graphical web browser developed by the
     Mozilla Corporation and hundreds of
     volunteers.
-  &lt;/dd&gt;
-  &lt;dd&gt;
+  </dd>
+  <dd>
     The Red Panda also known as the Lesser
     Panda, Wah, Bear Cat or Firefox, is a
     mostly herbivorous mammal, slightly larger
     than a domestic cat (60 cm long).
-  &lt;/dd&gt;
+  </dd>
 
-  &lt;!-- Other terms and descriptions --&gt;
-&lt;/dl&gt;
-</pre>
+  <!-- Other terms and descriptions -->
+</dl>
+```
 
-<p>{{EmbedLiveSample("Single_term_multiple_descriptions")}}</p>
+{{EmbedLiveSample("Single_term_multiple_descriptions")}}
 
-<h3 id="Multiple_terms_and_descriptions">Multiple terms and descriptions</h3>
+### Multiple terms and descriptions
 
-<p>It is also possible to define multiple terms with multiple corresponding descriptions, by combining the examples above.</p>
+It is also possible to define multiple terms with multiple corresponding descriptions, by combining the examples above.
 
-<h3 id="Metadata">Metadata</h3>
+### Metadata
 
-<p>Description lists are useful for displaying metadata as a list of key-value pairs.</p>
+Description lists are useful for displaying metadata as a list of key-value pairs.
 
-<pre class="brush: html">&lt;dl&gt;
-  &lt;dt&gt;Name&lt;/dt&gt;
-  &lt;dd&gt;Godzilla&lt;/dd&gt;
-  &lt;dt&gt;Born&lt;/dt&gt;
-  &lt;dd&gt;1952&lt;/dd&gt;
-  &lt;dt&gt;Birthplace&lt;/dt&gt;
-  &lt;dd&gt;Japan&lt;/dd&gt;
-  &lt;dt&gt;Color&lt;/dt&gt;
-  &lt;dd&gt;Green&lt;/dd&gt;
-&lt;/dl&gt;
-</pre>
+```html
+<dl>
+  <dt>Name</dt>
+  <dd>Godzilla</dd>
+  <dt>Born</dt>
+  <dd>1952</dd>
+  <dt>Birthplace</dt>
+  <dd>Japan</dd>
+  <dt>Color</dt>
+  <dd>Green</dd>
+</dl>
+```
 
-<p>Tip: It can be handy to define a key-value separator in the CSS, such as:</p>
+Tip: It can be handy to define a key-value separator in the CSS, such as:
 
-<pre class="brush: css">dt::after {
+```css
+dt::after {
   content: ": ";
-}</pre>
+}
+```
 
-<h3>Wrapping name-value groups in <code>div</code> elements</h3>
+### Wrapping name-value groups in `div` elements
 
-<p><a href="/en-US/docs/Glossary/WHATWG">WHATWG</a> HTML allows wrapping each name-value group in a {{HTMLElement("dl")}} element in a {{HTMLElement("div")}} element. This can be useful when using <a href="/en-US/docs/Web/HTML/Microdata">microdata</a>, or when <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a> apply to a whole group, or for styling purposes.</p>
+[WHATWG](/en-US/docs/Glossary/WHATWG) HTML allows wrapping each name-value group in a {{HTMLElement("dl")}} element in a {{HTMLElement("div")}} element. This can be useful when using [microdata](/en-US/docs/Web/HTML/Microdata), or when [global attributes](/en-US/docs/Web/HTML/Global_attributes) apply to a whole group, or for styling purposes.
 
-<pre class="brush: html">&lt;dl&gt;
-  &lt;div&gt;
-    &lt;dt&gt;Name&lt;/dt&gt;
-    &lt;dd&gt;Godzilla&lt;/dd&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;dt&gt;Born&lt;/dt&gt;
-    &lt;dd&gt;1952&lt;/dd&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;dt&gt;Birthplace&lt;/dt&gt;
-    &lt;dd&gt;Japan&lt;/dd&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;dt&gt;Color&lt;/dt&gt;
-    &lt;dd&gt;Green&lt;/dd&gt;
-  &lt;/div&gt;
-&lt;/dl&gt;
-</pre>
+```html
+<dl>
+  <div>
+    <dt>Name</dt>
+    <dd>Godzilla</dd>
+  </div>
+  <div>
+    <dt>Born</dt>
+    <dd>1952</dd>
+  </div>
+  <div>
+    <dt>Birthplace</dt>
+    <dd>Japan</dd>
+  </div>
+  <div>
+    <dt>Color</dt>
+    <dd>Green</dd>
+  </div>
+</dl>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Do not use this element (nor {{HTMLElement("ul")}} elements) to merely create indentation on a page. Although it works, this is a bad practice and obscures the meaning of description lists.</p>
+Do not use this element (nor {{HTMLElement("ul")}} elements) to merely create indentation on a page. Although it works, this is a bad practice and obscures the meaning of description lists.
 
-<p>To change the indentation of a description term, use the <a href="/en-US/docs/Web/CSS">CSS</a> {{cssxref("margin")}} property.</p>
+To change the indentation of a description term, use the [CSS](/en-US/docs/Web/CSS) {{cssxref("margin")}} property.
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>Each screen reader announces <code>&lt;dl&gt;</code> content differently. As of iOS 14, VoiceOver will announce that <code>&lt;dl&gt;</code> content is a list when navigating with the virtual cursor (not via the read-all command). Because of this, make sure each list item's content is written in such a way that it communicates its relationship to the other list items in the list grouping.</p>
+Each screen reader announces `<dl>` content differently. As of iOS 14, VoiceOver will announce that `<dl>` content is a list when navigating with the virtual cursor (not via the read-all command). Because of this, make sure each list item's content is written in such a way that it communicates its relationship to the other list items in the list grouping.
 
-<ul>
- <li><a href="https://codepen.io/aardrian/debug/NzGaKP">CodePen - HTML Buddies: dt &amp; dd</a></li>
- <li><a href="https://adrianroselli.com/2020/09/voiceover-on-ios-14-supports-description-lists.html">VoiceOver on iOS 14 Supports Description Lists</a></li>
-</ul>
+*   [CodePen - HTML Buddies: dt & dd](https://codepen.io/aardrian/debug/NzGaKP)
+*   [VoiceOver on iOS 14 Supports Description Lists](https://adrianroselli.com/2020/09/voiceover-on-ios-14-supports-description-lists.html)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTMLElement("dt")}}</li>
- <li>{{HTMLElement("dd")}}</li>
-</ul>
+*   {{HTMLElement("dt")}}
+*   {{HTMLElement("dd")}}

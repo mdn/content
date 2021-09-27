@@ -17,187 +17,209 @@ tags:
   - month
 browser-compat: html.elements.input.input-month
 ---
-<div>{{HTMLRef("Input_types")}}</div>
+{{HTMLRef("Input_types")}}
 
-<p>{{HTMLElement("input")}} elements of type <strong><code>month</code></strong> create input fields that let the user enter a month and year allowing a month and year to be easily entered. The value is a string whose value is in the format "<code>YYYY-MM</code>", where <code>YYYY</code> is the four-digit year and <code>MM</code> is the month number.</p>
+{{HTMLElement("input")}} elements of type **`month`** create input fields that let the user enter a month and year allowing a month and year to be easily entered. The value is a string whose value is in the format "`YYYY-MM`", where `YYYY` is the four-digit year and `MM` is the month number.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/input-month.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/input-month.html", "tabbed-shorter")}}
 
-<p>The control's UI varies in general from browser to browser; at the moment support is patchy, with only Chrome/Opera and Edge on desktop — and most modern mobile browser versions — having usable implementations. In browsers that don't support <code>month</code> inputs, the control degrades gracefully to a simple <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>, although there may be automatic validation of the entered text to ensure it's formatted as expected.</p>
+The control's UI varies in general from browser to browser; at the moment support is patchy, with only Chrome/Opera and Edge on desktop — and most modern mobile browser versions — having usable implementations. In browsers that don't support `month` inputs, the control degrades gracefully to a simple [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text), although there may be automatic validation of the entered text to ensure it's formatted as expected.
 
-<p>For those of you using a browser that doesn't support <code>month</code>, the screenshot below shows what it looks like in Chrome and Opera. Clicking the down arrow on the right hand side brings up a date picker that lets you select the month and year.</p>
+For those of you using a browser that doesn't support `month`, the screenshot below shows what it looks like in Chrome and Opera. Clicking the down arrow on the right hand side brings up a date picker that lets you select the month and year.
 
-<p><img alt="" src="month-control-chrome.png"></p>
+![](month-control-chrome.png)
 
-<p>The Microsoft Edge <code>month</code> control looks like this:</p>
+The Microsoft Edge `month` control looks like this:
 
-<p><img alt="" src="month-control-edge.png"></p>
+![](month-control-edge.png)
 
 <table class="properties">
- <tbody>
-  <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
-   <td>A {{domxref("DOMString")}} representing a month and year, or empty.</td>
-  </tr>
-  <tr>
-   <td><strong>Events</strong></td>
-   <td>{{domxref("HTMLElement/change_event", "change")}} and {{domxref("HTMLElement/input_event", "input")}}</td>
-  </tr>
-  <tr>
-   <td><strong>Supported common attributes</strong></td>
-   <td>{{htmlattrxref("autocomplete", "input")}}, {{htmlattrxref("list", "input")}}, {{htmlattrxref("readonly", "input")}}, and {{htmlattrxref("step", "input")}}.</td>
-  </tr>
-  <tr>
-   <td><strong>IDL attributes</strong></td>
-   <td><code>value</code></td>
-  </tr>
-  <tr>
-   <td><strong>Methods</strong></td>
-   <td>{{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.stepDown", "stepDown()")}}, {{domxref("HTMLInputElement.stepUp", "stepUp()")}}.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td><strong>{{anch("Value")}}</strong></td>
+      <td>
+        A {{domxref("DOMString")}} representing a month and year, or
+        empty.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} and
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Supported common attributes</strong></td>
+      <td>
+        {{htmlattrxref("autocomplete", "input")}},
+        {{htmlattrxref("list", "input")}},
+        {{htmlattrxref("readonly", "input")}}, and
+        {{htmlattrxref("step", "input")}}.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td><code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}},
+        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
+        {{domxref("HTMLInputElement.stepUp", "stepUp()")}}.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A {{domxref("DOMString")}} representing the value of the month and year entered into the input, in the form YYYY-MM (four or more digit year, then a hyphen ("<code>-</code>"), followed by the two-digit month). The format of the month string used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid local month string")}}.</p>
+A {{domxref("DOMString")}} representing the value of the month and year entered into the input, in the form YYYY-MM (four or more digit year, then a hyphen ("`-`"), followed by the two-digit month). The format of the month string used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid local month string")}}.
 
-<h3>Setting a default value</h3>
+### Setting a default value
 
-<p>You can set a default value for the input control by including a month and year inside the {{htmlattrxref("value", "input")}} attribute, like so:</p>
+You can set a default value for the input control by including a month and year inside the {{htmlattrxref("value", "input")}} attribute, like so:
 
-<pre class="brush: html">&lt;label for="bday-month"&gt;What month were you born in?&lt;/label&gt;
-&lt;input id="bday-month" type="month" name="bday-month" value="2017-06"&gt;</pre>
+```html
+<label for="bday-month">What month were you born in?</label>
+<input id="bday-month" type="month" name="bday-month" value="2017-06">
+```
 
-<p>{{EmbedLiveSample('Setting_a_default_value', 600, 60)}}</p>
+{{EmbedLiveSample('Setting_a_default_value', 600, 60)}}
 
-<p>One thing to note is that the displayed date format differs from the actual <code>value</code>; most {{Glossary("user agent", "user agents")}} display the month and year in a locale-appropriate form, based on the set locale of the user's operating system, whereas the date <code>value</code> is always formatted <code>yyyy-MM</code>.</p>
+One thing to note is that the displayed date format differs from the actual `value`; most {{Glossary("user agent", "user agents")}} display the month and year in a locale-appropriate form, based on the set locale of the user's operating system, whereas the date `value` is always formatted `yyyy-MM`.
 
-<p>When the above value is submitted to the server, for example, it will look like <code>bday-month=1978-06</code>.</p>
+When the above value is submitted to the server, for example, it will look like `bday-month=1978-06`.
 
-<h3>Setting the value using JavaScript</h3>
+### Setting the value using JavaScript
 
-<p>You can also get and set the date value in JavaScript using the {{domxref("HTMLInputElement.value")}} property, for example:</p>
+You can also get and set the date value in JavaScript using the {{domxref("HTMLInputElement.value")}} property, for example:
 
-<pre class="brush: html">&lt;label for="bday-month"&gt;What month were you born in?&lt;/label&gt;
-&lt;input id="bday-month" type="month" name="bday-month" value="2017-06"&gt;</pre>
+```html
+<label for="bday-month">What month were you born in?</label>
+<input id="bday-month" type="month" name="bday-month" value="2017-06">
+```
 
-<pre class="brush: js">var monthControl = document.querySelector('input[type="month"]');
-monthControl.value = '1978-06';</pre>
+```js
+var monthControl = document.querySelector('input[type="month"]');
+monthControl.value = '1978-06';
+```
 
-<p>{{EmbedLiveSample("Setting_the_value_using_JavaScript", 600, 60)}}</p>
+{{EmbedLiveSample("Setting_the_value_using_JavaScript", 600, 60)}}
 
-<h2 id="Additional_attributes">Additional attributes</h2>
+## Additional attributes
 
-<p>In addition to the attributes common to {{HTMLElement("input")}} elements, month inputs offer the following attributes.</p>
+In addition to the attributes common to {{HTMLElement("input")}} elements, month inputs offer the following attributes.
 
-<h3>list</h3>
+### list
 
-<p>The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.</p>
+The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
 
-<h3>max</h3>
+### max
 
-<p>The latest year and month, in the string format discussed in the {{anch("Value")}} section above, to accept. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If the value of the <code>max</code> attribute isn't a valid string in "<code>yyyy-MM</code>" format, then the element has no maximum value.</p>
+The latest year and month, in the string format discussed in the {{anch("Value")}} section above, to accept. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If the value of the `max` attribute isn't a valid string in "`yyyy-MM`" format, then the element has no maximum value.
 
-<p>This value must specify a year-month pairing later than or equal to the one specified by the <code>min</code> attribute.</p>
+This value must specify a year-month pairing later than or equal to the one specified by the `min` attribute.
 
-<h3>min</h3>
+### min
 
-<p>The latest year and month to accept, in the same "<code>yyyy-MM</code>" format described above. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If a value is specified for <code>min</code> that isn't a valid year and month string, the input has no minimum value.</p>
+The latest year and month to accept, in the same "`yyyy-MM`" format described above. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If a value is specified for `min` that isn't a valid year and month string, the input has no minimum value.
 
-<p>This value must be a year-month pairing which is earlier than or equal to the one specified by the <code>max</code> attribute.</p>
+This value must be a year-month pairing which is earlier than or equal to the one specified by the `max` attribute.
 
-<h3>readonly</h3>
+### readonly
 
-<p>A Boolean attribute which, if present, means this field cannot be edited by the user. Its <code>value</code> can, however, still be changed from JavaScript code that directly sets the value of the {{domxref("HTMLInputElement.value")}} property.</p>
+A Boolean attribute which, if present, means this field cannot be edited by the user. Its `value` can, however, still be changed from JavaScript code that directly sets the value of the {{domxref("HTMLInputElement.value")}} property.
 
-<div class="note">
-<p><strong>Note:</strong> Because a read-only field cannot have a value, <code>required</code> does not have any effect on inputs with the <code>readonly</code> attribute also specified.</p>
-</div>
+> **Note:** Because a read-only field cannot have a value, `required` does not have any effect on inputs with the `readonly` attribute also specified.
 
-<h3>step</h3>
+### step
 
-<p>The <code>step</code> attribute is a number that specifies the granularity that the value must adhere to, or the special value <code>any</code>, which is described below. Only values which are equal to the basis for stepping (<code>{{anch("min")}}</code> if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.</p>
+The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping (`{{anch("min")}}` if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.
 
-<p>A string value of <code>any</code> means that no stepping is implied, and any value is allowed (barring other constraints, such as <code>{{anch("min")}}</code> and <code>{{anch("max")}}</code>).</p>
+A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as `{{anch("min")}}` and `{{anch("max")}}`).
 
-<div class="note">
-<p><strong>Note:</strong> When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.</p>
-</div>
+> **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
 
-<p>For <code>month</code> inputs, the value of <code>step</code> is given in months, with a scaling factor of 1 (since the underlying numeric value is also in months). The default value of <code>step</code> is 1 month.</p>
+For `month` inputs, the value of `step` is given in months, with a scaling factor of 1 (since the underlying numeric value is also in months). The default value of `step` is 1 month.
 
-<h2 id="Using_month_inputs">Using month inputs</h2>
+## Using month inputs
 
-<p>Date-related inputs (including <code>month</code>) sound convenient at first glance; they promise an easy UI for choosing dates, and they normalize the data format sent to the server, regardless of the user's locale. However, there are issues with <code>&lt;input type="month"&gt;</code> because at this time, many major browsers don't yet support it.</p>
+Date-related inputs (including `month`) sound convenient at first glance; they promise an easy UI for choosing dates, and they normalize the data format sent to the server, regardless of the user's locale. However, there are issues with `<input type="month">` because at this time, many major browsers don't yet support it.
 
-<p>We'll look at basic and more complex uses of <code>&lt;input type="month"&gt;</code>, then offer advice on mitigating the browser support issue in the section {{anch("Handling browser support")}}).</p>
+We'll look at basic and more complex uses of `<input type="month">`, then offer advice on mitigating the browser support issue in the section {{anch("Handling browser support")}}).
 
-<h3 id="Basic_uses_of_month">Basic uses of month</h3>
+### Basic uses of month
 
-<p>The simplest use of <code>&lt;input type="month"&gt;</code> involves a basic {{HTMLElement("input")}} and {{htmlelement("label")}} element combination, as seen below:</p>
+The simplest use of `<input type="month">` involves a basic {{HTMLElement("input")}} and {{htmlelement("label")}} element combination, as seen below:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;label for="bday-month"&gt;What month were you born in?&lt;/label&gt;
-  &lt;input id="bday-month" type="month" name="bday-month"&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <label for="bday-month">What month were you born in?</label>
+  <input id="bday-month" type="month" name="bday-month">
+</form>
+```
 
-<p>{{EmbedLiveSample('Basic_uses_of_month', 600, 40)}}</p>
+{{EmbedLiveSample('Basic_uses_of_month', 600, 40)}}
 
-<h3 id="Setting_maximum_and_minimum_dates">Setting maximum and minimum dates</h3>
+### Setting maximum and minimum dates
 
-<p>You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to restrict the range of dates that the user can choose. In the following example we specify a minimum month of <code>1900-01</code> and a maximum month of <code>1999-12</code>:</p>
+You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to restrict the range of dates that the user can choose. In the following example we specify a minimum month of `1900-01` and a maximum month of `1999-12`:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;label for="bday-month"&gt;What month were you born in?&lt;/label&gt;
-  &lt;input id="bday-month" type="month" name="bday-month"
-         min="1900-01" max="1999-12"&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <label for="bday-month">What month were you born in?</label>
+  <input id="bday-month" type="month" name="bday-month"
+         min="1900-01" max="1999-12">
+</form>
+```
 
-<p>{{EmbedLiveSample('Setting_maximum_and_minimum_dates', 600, 40)}}</p>
+{{EmbedLiveSample('Setting_maximum_and_minimum_dates', 600, 40)}}
 
-<p>The result here is that:</p>
+The result here is that:
 
-<ul>
- <li>Only months between in January 1900 and December 1999 can be selected; months outside that range can't be scrolled to in the control.</li>
- <li>Depending on what browser you are using, you might find that months outside the specified range might not be selectable in the month picker (e.g. Edge), or invalid (see {{anch("Validation")}}) but still available (e.g. Chrome).</li>
-</ul>
+*   Only months between in January 1900 and December 1999 can be selected; months outside that range can't be scrolled to in the control.
+*   Depending on what browser you are using, you might find that months outside the specified range might not be selectable in the month picker (e.g. Edge), or invalid (see {{anch("Validation")}}) but still available (e.g. Chrome).
 
-<h3 id="Controlling_input_size">Controlling input size</h3>
+### Controlling input size
 
-<p><code>&lt;input type="month"&gt;</code> doesn't support form sizing attributes such as {{htmlattrxref("size", "input")}}. You'll have to resort to <a href="/en-US/docs/Web/CSS">CSS</a> for sizing needs.</p>
+`<input type="month">` doesn't support form sizing attributes such as {{htmlattrxref("size", "input")}}. You'll have to resort to [CSS](/en-US/docs/Web/CSS) for sizing needs.
 
-<h2 id="Validation">Validation</h2>
+## Validation
 
-<p>By default, <code>&lt;input type="month"&gt;</code> does not apply any validation to entered values. The UI implementations generally don't let you enter anything that isn't a date — which is helpful — but you can still submit the form with the <code>month</code> input empty, or enter an invalid date (e.g. the 32nd of April).</p>
+By default, `<input type="month">` does not apply any validation to entered values. The UI implementations generally don't let you enter anything that isn't a date — which is helpful — but you can still submit the form with the `month` input empty, or enter an invalid date (e.g. the 32nd of April).
 
-<p>To help avoid this, you can use {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} to restrict the available dates (see {{anch("Setting maximum and minimum dates")}}), and in addition use the {{htmlattrxref("required", "input")}} attribute to make filling in the date mandatory. As a result, supporting browsers will display an error if you try to submit a date that is outside the set bounds, or an empty date field.</p>
+To help avoid this, you can use {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} to restrict the available dates (see {{anch("Setting maximum and minimum dates")}}), and in addition use the {{htmlattrxref("required", "input")}} attribute to make filling in the date mandatory. As a result, supporting browsers will display an error if you try to submit a date that is outside the set bounds, or an empty date field.
 
-<p>Let's look at an example; here we've set minimum and maximum dates, and also made the field required:</p>
+Let's look at an example; here we've set minimum and maximum dates, and also made the field required:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="month"&gt;What month would you like to visit us (Summer months only, please)?&lt;/label&gt;
-    &lt;input id="month" type="month" name="month"
-           min="2017-06" max="2017-09" required&gt;
-    &lt;span class="validity"&gt;&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-      &lt;input type="submit" value="Submit form"&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <div>
+    <label for="month">What month would you like to visit us (Summer months only, please)?</label>
+    <input id="month" type="month" name="month"
+           min="2017-06" max="2017-09" required>
+    <span class="validity"></span>
+  </div>
+  <div>
+      <input type="submit" value="Submit form">
+  </div>
+</form>
+```
 
-<p>If you try to submit the form without both the month and year specified (or with a date outside the set bounds), the browser displays an error. Try playing with the example now:</p>
+If you try to submit the form without both the month and year specified (or with a date outside the set bounds), the browser displays an error. Try playing with the example now:
 
-<p>{{ EmbedLiveSample('Validation', 600, 120) }}</p>
+{{ EmbedLiveSample('Validation', 600, 120) }}
 
-<p>Here's a screenshot for those of you who aren't using a supporting browser:</p>
+Here's a screenshot for those of you who aren't using a supporting browser:
 
-<p><img alt="" src="month-required.png"></p>
+![](month-required.png)
 
-<p>Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid. We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.</p>
+Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid. We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.
 
-<pre class="brush: css">div {
+```css
+div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -220,53 +242,53 @@ input:valid+span:after {
   position: absolute;
   content: '✓';
   padding-left: 5px;
-}</pre>
+}
+```
 
-<div class="warning">
-<p><strong>Warning:</strong> HTML form validation is <em>not</em> a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, of the wrong type, and so forth).</p>
-</div>
+> **Warning:** HTML form validation is *not* a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, of the wrong type, and so forth).
 
-<h2 id="Handling_browser_support">Handling browser support</h2>
+## Handling browser support
 
-<p>As mentioned above, the major problem with using date inputs at the time of writing is that many major browsers don't yet implement them all; only Chrome/Opera and Edge support it on desktop, and most modern browsers on mobile. As an example, the <code>month</code> picker on Chrome for Android looks like this:</p>
+As mentioned above, the major problem with using date inputs at the time of writing is that many major browsers don't yet implement them all; only Chrome/Opera and Edge support it on desktop, and most modern browsers on mobile. As an example, the `month` picker on Chrome for Android looks like this:
 
-<p><img alt="" src="month-android.png"></p>
+![](month-android.png)
 
-<p>Non-supporting browsers gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.</p>
+Non-supporting browsers gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.
 
-<p>The second problem is the more serious of the two. As mentioned earlier, with a <code>month</code> input the actual value is always normalized to the format <code>yyyy-mm</code>. On the other hand, in its default configuration, a <code>text</code> input has no idea what format the date should be in, and this is an issue because of the number of different ways in which people write dates. For example:</p>
+The second problem is the more serious of the two. As mentioned earlier, with a `month` input the actual value is always normalized to the format `yyyy-mm`. On the other hand, in its default configuration, a `text` input has no idea what format the date should be in, and this is an issue because of the number of different ways in which people write dates. For example:
 
-<ul>
- <li><code>mmyyyy</code> (072018)</li>
- <li><code>mm/yyyy</code> (07/2018)</li>
- <li><code>mm-yyyy</code> (07-2018)</li>
- <li><code>yyyy-mm</code> (2018-07)</li>
- <li><code>Month yyyy</code> (July 2018)</li>
- <li>... and so forth.</li>
-</ul>
+*   `mmyyyy` (072018)
+*   `mm/yyyy` (07/2018)
+*   `mm-yyyy` (07-2018)
+*   `yyyy-mm` (2018-07)
+*   `Month yyyy` (July 2018)
+*   ... and so forth.
 
-<p>One way around this is to put a {{htmlattrxref("pattern", "input")}} attribute on your <code>month</code> input. Even though the <code>month</code> input doesn't use it, if the browser falls back to treating it like a <code>text</code> input, the pattern will be used. For example, try viewing the following demo in a browser that doesn't support <code>month</code> inputs:</p>
+One way around this is to put a {{htmlattrxref("pattern", "input")}} attribute on your `month` input. Even though the `month` input doesn't use it, if the browser falls back to treating it like a `text` input, the pattern will be used. For example, try viewing the following demo in a browser that doesn't support `month` inputs:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="month"&gt;What month would you like to visit us? (Summer months only, yyyy-mm)&lt;/label&gt;
-    &lt;input id="month" type="month" name="month"
+```html
+<form>
+  <div>
+    <label for="month">What month would you like to visit us? (Summer months only, yyyy-mm)</label>
+    <input id="month" type="month" name="month"
            min="2017-06" max="2017-09" required
-           pattern="[0-9]{4}-[0-9]{2}"&gt;
-    &lt;span class="validity"&gt;&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-      &lt;input type="submit" value="Submit form"&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+           pattern="[0-9]{4}-[0-9]{2}">
+    <span class="validity"></span>
+  </div>
+  <div>
+      <input type="submit" value="Submit form">
+  </div>
+</form>
+```
 
-<p>{{ EmbedLiveSample('Handling_browser_support', 600, 100) }}</p>
+{{ EmbedLiveSample('Handling_browser_support', 600, 100) }}
 
-<p>If you try submitting it, you'll see that the browser now displays an error message (and highlights the input as invalid) if your entry doesn't match the pattern <code>nnnn-nn</code>, where <code>n</code> is a number from 0 to 9. Of course, this doesn't stop people from entering invalid dates (such as <code>0000-42</code>), or incorrectly formatted dates that follow the pattern.</p>
+If you try submitting it, you'll see that the browser now displays an error message (and highlights the input as invalid) if your entry doesn't match the pattern `nnnn-nn`, where `n` is a number from 0 to 9. Of course, this doesn't stop people from entering invalid dates (such as `0000-42`), or incorrectly formatted dates that follow the pattern.
 
-<p>There's also the problem that the user won't necessarily know which of the many date formats is expected. We have work left to do.</p>
+There's also the problem that the user won't necessarily know which of the many date formats is expected. We have work left to do.
 
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -289,60 +311,64 @@ input:valid+span:after {
   position: absolute;
   content: '✓';
   padding-left: 5px;
-}</pre>
+}
+```
 
-<p>The best way to deal with dates in forms in a cross-browser way (until all of the major browsers have supported them for a while) is to get the user to enter the month and year in separate controls ({{htmlelement("select")}} elements being popular; see below for an implementation), or use JavaScript libraries such as the <a href="https://jqueryui.com/datepicker/">jQuery date picker</a> plugin.</p>
+The best way to deal with dates in forms in a cross-browser way (until all of the major browsers have supported them for a while) is to get the user to enter the month and year in separate controls ({{htmlelement("select")}} elements being popular; see below for an implementation), or use JavaScript libraries such as the [jQuery date picker](https://jqueryui.com/datepicker/) plugin.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, we create two sets of UI elements, each designed to let the user select a month and year. The first is a native <code>month</code> input, and the other is a pair of {{HTMLElement("select")}} elements that allow choosing a month and year independently, for compatibility with browsers that don't yet support <code>&lt;input type="month"&gt;</code>.</p>
+In this example, we create two sets of UI elements, each designed to let the user select a month and year. The first is a native `month` input, and the other is a pair of {{HTMLElement("select")}} elements that allow choosing a month and year independently, for compatibility with browsers that don't yet support `<input type="month">`.
 
-<p>{{EmbedLiveSample('Examples', 600, 140)}}</p>
+{{EmbedLiveSample('Examples', 600, 140)}}
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>The form that requests the month and year looks like this:</p>
+The form that requests the month and year looks like this:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div class="nativeDatePicker"&gt;
-    &lt;label for="month-visit"&gt;What month would you like to visit us?&lt;/label&gt;
-    &lt;input type="month" id="month-visit" name="month-visit"&gt;
-    &lt;span class="validity"&gt;&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;p class="fallbackLabel"&gt;What month would you like to visit us?&lt;/p&gt;
-  &lt;div class="fallbackDatePicker"&gt;
-    &lt;div&gt;
-      &lt;span&gt;
-        &lt;label for="month"&gt;Month:&lt;/label&gt;
-        &lt;select id="month" name="month"&gt;
-          &lt;option selected&gt;January&lt;/option&gt;
-          &lt;option&gt;February&lt;/option&gt;
-          &lt;option&gt;March&lt;/option&gt;
-          &lt;option&gt;April&lt;/option&gt;
-          &lt;option&gt;May&lt;/option&gt;
-          &lt;option&gt;June&lt;/option&gt;
-          &lt;option&gt;July&lt;/option&gt;
-          &lt;option&gt;August&lt;/option&gt;
-          &lt;option&gt;September&lt;/option&gt;
-          &lt;option&gt;October&lt;/option&gt;
-          &lt;option&gt;November&lt;/option&gt;
-          &lt;option&gt;December&lt;/option&gt;
-        &lt;/select&gt;
-      &lt;/span&gt;
-      &lt;span&gt;
-        &lt;label for="year"&gt;Year:&lt;/label&gt;
-        &lt;select id="year" name="year"&gt;
-        &lt;/select&gt;
-      &lt;/span&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <div class="nativeDatePicker">
+    <label for="month-visit">What month would you like to visit us?</label>
+    <input type="month" id="month-visit" name="month-visit">
+    <span class="validity"></span>
+  </div>
+  <p class="fallbackLabel">What month would you like to visit us?</p>
+  <div class="fallbackDatePicker">
+    <div>
+      <span>
+        <label for="month">Month:</label>
+        <select id="month" name="month">
+          <option selected>January</option>
+          <option>February</option>
+          <option>March</option>
+          <option>April</option>
+          <option>May</option>
+          <option>June</option>
+          <option>July</option>
+          <option>August</option>
+          <option>September</option>
+          <option>October</option>
+          <option>November</option>
+          <option>December</option>
+        </select>
+      </span>
+      <span>
+        <label for="year">Year:</label>
+        <select id="year" name="year">
+        </select>
+      </span>
+    </div>
+  </div>
+</form>
+```
 
-<p>The {{HTMLElement("div")}} with the ID <code>nativeDatePicker</code> uses the <code>month</code> input type to request the month and year, while the <code>&lt;div&gt;</code> with the ID <code>fallbackDatePicker</code> instead uses a pair of <code>&lt;select&gt;</code> elements. The first requests the month, and the second the year.</p>
+The {{HTMLElement("div")}} with the ID `nativeDatePicker` uses the `month` input type to request the month and year, while the `<div>` with the ID `fallbackDatePicker` instead uses a pair of `<select>` elements. The first requests the month, and the second the year.
 
-<p>The <code>&lt;select&gt;</code> for choosing the month is hardcoded with the names of the months, as they don't change (leaving localization out of things). The list of available year values is dynamically generated depending on the current year (see the code comments below for detailed explanations of how these functions work).</p>
+The `<select>` for choosing the month is hardcoded with the names of the months, as they don't change (leaving localization out of things). The list of available year values is dynamically generated depending on the current year (see the code comments below for detailed explanations of how these functions work).
 
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -365,15 +391,17 @@ input:valid+span:after {
   position: absolute;
   content: '✓';
   padding-left: 5px;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<p>The JavaScript code that handles selecting which approach to use and to set up the list of years to include in the non-native year <code>&lt;select&gt;</code> follows.</p>
+The JavaScript code that handles selecting which approach to use and to set up the list of years to include in the non-native year `<select>` follows.
 
-<p>The part of the example that may be of most interest is the feature detection code. In order to detect whether the browser supports <code>&lt;input type="month"&gt;</code>, we create a new {{htmlelement("input")}} element, try setting its <code>type</code> to <code>month</code>, then immediately check what its type is set to. Browsers that don't support type <code>month</code> will return <code>text</code>, since that's What month falls back to when not supported. If <code>&lt;input type="month"&gt;</code> is not supported, we hide the native picker and show the fallback picker UI instead.</p>
+The part of the example that may be of most interest is the feature detection code. In order to detect whether the browser supports `<input type="month">`, we create a new {{htmlelement("input")}} element, try setting its `type` to `month`, then immediately check what its type is set to. Browsers that don't support type `month` will return `text`, since that's What month falls back to when not supported. If `<input type="month">` is not supported, we hide the native picker and show the fallback picker UI instead.
 
-<pre class="brush: js">// define variables
+```js
+// define variables
 var nativePicker = document.querySelector('.nativeDatePicker');
 var fallbackPicker = document.querySelector('.fallbackDatePicker');
 var fallbackLabel = document.querySelector('.fallbackLabel');
@@ -411,32 +439,29 @@ function populateYears() {
   var date = new Date();
   var year = date.getFullYear();
 
-  // Make this year, and the 100 years before it available in the year &lt;select&gt;
-  for(var i = 0; i &lt;= 100; i++) {
+  // Make this year, and the 100 years before it available in the year <select>
+  for(var i = 0; i <= 100; i++) {
     var option = document.createElement('option');
     option.textContent = year-i;
     yearSelect.appendChild(option);
   }
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note:</strong> Remember that some years have 53 weeks in them (see <a href="https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year">Weeks per year</a>)! You'll need to take this into consideration when developing production apps.</p>
-</div>
+> **Note:** Remember that some years have 53 weeks in them (see [Weeks per year](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year))! You'll need to take this into consideration when developing production apps.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}</li>
- <li><a href="/en-US/docs/Web/HTML/Date_and_time_formats">Date and time formats used in HTML</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker">Date and Time picker tutorial</a></li>
- <li><code><a href="/en-US/docs/Web/HTML/Element/input/datetime-local">&lt;input type="datetime-local"&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/input/date">&lt;input type="date"&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/input/time">&lt;input type="time"&gt;</a></code>, and <code><a href="/en-US/docs/Web/HTML/Element/input/week">&lt;input type="week"&gt;</a></code></li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
-</ul>
+*   The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
+*   [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
+*   [Date and Time picker tutorial](/en-US/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
+*   [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date), [`<input type="time">`](/en-US/docs/Web/HTML/Element/input/time), and [`<input type="week">`](/en-US/docs/Web/HTML/Element/input/week)
+*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

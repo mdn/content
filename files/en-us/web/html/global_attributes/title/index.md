@@ -8,85 +8,81 @@ tags:
   - Title
 browser-compat: html.global_attributes.title
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>The <strong><code>title</code></strong> <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a> contains text representing advisory information related to the element it belongs to.</p>
+The **`title`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) contains text representing advisory information related to the element it belongs to.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/attribute-title.html","tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/attribute-title.html","tabbed-shorter")}}
 
-<p>Some typical uses:</p>
+Some typical uses:
 
-<ul>
- <li>Labeling {{HTMLElement("iframe")}} elements for assistive technology</li>
- <li>Providing a programmatically associated label for an {{HTMLElement("input")}} element as a fallback for a real {{HTMLElement("label")}}</li>
- <li>Labeling controls in <a href="/en-US/docs/Web/HTML/Element/table">data tables</a></li>
-</ul>
+*   Labeling {{HTMLElement("iframe")}} elements for assistive technology
+*   Providing a programmatically associated label for an {{HTMLElement("input")}} element as a fallback for a real {{HTMLElement("label")}}
+*   Labeling controls in [data tables](/en-US/docs/Web/HTML/Element/table)
 
-<p>Additional semantics are attached to the <code>title</code> attributes of the {{HTMLElement("link")}}, {{HTMLElement("abbr")}}, {{HTMLElement("input")}}, and {{HTMLElement("menuitem")}} elements.</p>
+Additional semantics are attached to the `title` attributes of the {{HTMLElement("link")}}, {{HTMLElement("abbr")}}, {{HTMLElement("input")}}, and {{HTMLElement("menuitem")}} elements.
 
-<h2 id="Multiline_titles">Multiline titles</h2>
+## Multiline titles
 
-<p>The <code>title</code> attribute may contain several lines. Each <code>U+000A LINE FEED</code> (<code>LF</code>) character represents a line break. Some caution must be taken, as this means the following renders across two lines:</p>
+The `title` attribute may contain several lines. Each `U+000A LINE FEED` (`LF`) character represents a line break. Some caution must be taken, as this means the following renders across two lines:
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Newlines in &lt;code&gt;title&lt;/code&gt; should be taken into account,
-like &lt;abbr title="This is a
-multiline title"&gt;example&lt;/abbr&gt;.&lt;/p&gt;</pre>
+```html
+<p>Newlines in <code>title</code> should be taken into account,
+like <abbr title="This is a
+multiline title">example</abbr>.</p>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<div>{{EmbedLiveSample('Multiline_titles')}}</div>
+{{EmbedLiveSample('Multiline_titles')}}
 
-<h2 id="Title_attribute_inheritance">Title attribute inheritance</h2>
+## Title attribute inheritance
 
-<p>If an element has no <code>title</code> attribute, then it inherits it from its parent node, which in turn may inherit it from its parent, and so on.</p>
+If an element has no `title` attribute, then it inherits it from its parent node, which in turn may inherit it from its parent, and so on.
 
-<p>If this attribute is set to the empty string, it means its ancestors' <code>title</code>s are irrelevant and shouldn't be used in the tooltip for this element.</p>
+If this attribute is set to the empty string, it means its ancestors' `title`s are irrelevant and shouldn't be used in the tooltip for this element.
 
-<h3 id="HTML_2">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div title="CoolTip"&gt;
-  &lt;p&gt;Hovering here will show “CoolTip”.&lt;/p&gt;
-  &lt;p title=""&gt;Hovering here will show nothing.&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div title="CoolTip">
+  <p>Hovering here will show “CoolTip”.</p>
+  <p title="">Hovering here will show nothing.</p>
+</div>
+```
 
-<h3 id="Result_2">Result</h3>
+### Result
 
-<div>{{EmbedLiveSample('Title_attribute_inheritance')}}</div>
+{{EmbedLiveSample('Title_attribute_inheritance')}}
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>Use of the <code>title</code> attribute is highly problematic for:</p>
+Use of the `title` attribute is highly problematic for:
 
-<ul>
- <li>People using touch-only devices</li>
- <li>People navigating with keyboards</li>
- <li>People navigating with assistive technology such as screen readers or magnifiers</li>
- <li>People experiencing fine motor control impairment</li>
- <li>People with cognitive concerns</li>
-</ul>
+*   People using touch-only devices
+*   People navigating with keyboards
+*   People navigating with assistive technology such as screen readers or magnifiers
+*   People experiencing fine motor control impairment
+*   People with cognitive concerns
 
-<p>This is due to inconsistent browser support, compounded by the additional assistive technology parsing of the browser-rendered page. If a tooltip effect is desired, it is better to <a href="https://inclusive-components.design/tooltips-toggletips/">use a more accessible technique</a> that can be accessed with the above browsing methods.</p>
+This is due to inconsistent browser support, compounded by the additional assistive technology parsing of the browser-rendered page. If a tooltip effect is desired, it is better to [use a more accessible technique](https://inclusive-components.design/tooltips-toggletips/) that can be accessed with the above browsing methods.
 
-<ul>
- <li><a href="https://www.w3.org/TR/html/dom.html#the-title-attribute">3.2.5.1. The title attribute | W3C HTML 5.2: 3. Semantics, structure, and APIs of HTML documents</a></li>
- <li><a href="https://developer.paciellogroup.com/blog/2013/01/using-the-html-title-attribute-updated/">Using the HTML title attribute – updated | The Paciello Group</a></li>
- <li><a href="https://inclusive-components.design/tooltips-toggletips/">Tooltips &amp; Toggletips - Inclusive Components</a></li>
- <li><a href="https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/">The Trials and Tribulations of the Title Attribute - 24 Accessibility</a></li>
-</ul>
+*   [3.2.5.1. The title attribute | W3C HTML 5.2: 3. Semantics, structure, and APIs of HTML documents](https://www.w3.org/TR/html/dom.html#the-title-attribute)
+*   [Using the HTML title attribute – updated | The Paciello Group](https://developer.paciellogroup.com/blog/2013/01/using-the-html-title-attribute-updated/)
+*   [Tooltips & Toggletips - Inclusive Components](https://inclusive-components.design/tooltips-toggletips/)
+*   [The Trials and Tribulations of the Title Attribute - 24 Accessibility](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>All <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</li>
- <li>{{domxref("HTMLElement.title")}} that reflects this attribute.</li>
-</ul>
+*   All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+*   {{domxref("HTMLElement.title")}} that reflects this attribute.

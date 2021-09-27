@@ -20,125 +20,136 @@ tags:
   - radio button
 browser-compat: html.elements.input.input-radio
 ---
-<div>{{HTMLRef("Input_types")}}</div>
+{{HTMLRef("Input_types")}}
 
-<p>{{htmlelement("input")}} elements of type <strong><code>radio</code></strong> are generally used in <strong>radio groups</strong>—collections of radio buttons describing a set of related options.</p>
+{{htmlelement("input")}} elements of type **`radio`** are generally used in **radio groups**—collections of radio buttons describing a set of related options.
 
-<p>Only one radio button in a given group can be selected at the same time. Radio buttons are typically rendered as small circles, which are filled or highlighted when selected.</p>
+Only one radio button in a given group can be selected at the same time. Radio buttons are typically rendered as small circles, which are filled or highlighted when selected.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/input-radio.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/input-radio.html", "tabbed-standard")}}
 
-<p>They are called radio buttons because they look and operate in a similar manner to the push buttons on old-fashioned radios, such as the one shown below.</p>
+They are called radio buttons because they look and operate in a similar manner to the push buttons on old-fashioned radios, such as the one shown below.
 
-<p><img alt="Shows what radio buttons looked like in the olden days." src="old-radio.jpg" title="Photo of an old-time radio"></p>
+![Shows what radio buttons looked like in the olden days.](old-radio.jpg "Photo of an old-time radio")
 
-<div class="note">
-<p><strong>Note:</strong> <a href="/en-US/docs/Web/HTML/Element/input/checkbox">Checkboxes</a> are similar to radio buttons, but with an important distinction: radio buttons are designed for selecting one value out of a set, whereas checkboxes let you turn individual values on and off. Where multiple controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.</p>
-</div>
+> **Note:** [Checkboxes](/en-US/docs/Web/HTML/Element/input/checkbox) are similar to radio buttons, but with an important distinction: radio buttons are designed for selecting one value out of a set, whereas checkboxes let you turn individual values on and off. Where multiple controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
-   <td>A {{domxref("DOMString")}} representing the value of the radio button.</td>
-  </tr>
-  <tr>
-   <td><strong>Events</strong></td>
-   <td>{{event("change")}} and {{event("input")}}</td>
-  </tr>
-  <tr>
-   <td><strong>Supported common attributes</strong></td>
-   <td><code><a href="#attr-checked">checked</a></code>, <code><a href="#attr-value">value</a></code> and <code><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></code></td>
-  </tr>
-  <tr>
-   <td><strong>IDL attributes</strong></td>
-   <td><code>checked</code> and <code>value</code></td>
-  </tr>
-  <tr>
-   <td><strong>Methods</strong></td>
-   <td>{{domxref("HTMLInputElement.select", "select()")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td><strong>{{anch("Value")}}</strong></td>
+      <td>
+        A {{domxref("DOMString")}} representing the value of the radio
+        button.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>{{event("change")}} and {{event("input")}}</td>
+    </tr>
+    <tr>
+      <td><strong>Supported common attributes</strong></td>
+      <td>
+        <code><a href="#attr-checked">checked</a></code
+        >, <code><a href="#attr-value">value</a></code> and
+        <code
+          ><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td><code>checked</code> and <code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>The <code>value</code> attribute is a {{domxref("DOMString")}} containing the radio button's value. The value is never shown to the user by their {{Glossary("user agent")}}. Instead, it's used to identify which radio button in a group is selected.</p>
+The `value` attribute is a {{domxref("DOMString")}} containing the radio button's value. The value is never shown to the user by their {{Glossary("user agent")}}. Instead, it's used to identify which radio button in a group is selected.
 
-<h3 id="Defining_a_radio_group">Defining a radio group</h3>
+### Defining a radio group
 
-<p>A radio group is defined by giving each of radio buttons in the group the same {{htmlattrxref("name", "input")}}. Once a radio group is established, selecting any radio button in that group automatically deselects any currently-selected radio button in the same group.</p>
+A radio group is defined by giving each of radio buttons in the group the same {{htmlattrxref("name", "input")}}. Once a radio group is established, selecting any radio button in that group automatically deselects any currently-selected radio button in the same group.
 
-<p>You can have as many radio groups on a page as you like, as long as each has its own unique <code>name</code>.</p>
+You can have as many radio groups on a page as you like, as long as each has its own unique `name`.
 
-<p>For example, if your form needs to ask the user for their preferred contact method, you might create three radio buttons, each with the <code>name</code> property set to <code>contact</code> but one with the value <code>email</code>, one with the value <code>phone</code>, and one with the value <code>mail</code>. The user never sees the <code>value</code> or the <code>name</code> (unless you expressly add code to display it).</p>
+For example, if your form needs to ask the user for their preferred contact method, you might create three radio buttons, each with the `name` property set to `contact` but one with the value `email`, one with the value `phone`, and one with the value `mail`. The user never sees the `value` or the `name` (unless you expressly add code to display it).
 
-<p>The resulting HTML looks like this:</p>
+The resulting HTML looks like this:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;p&gt;Please select your preferred contact method:&lt;/p&gt;
-  &lt;div&gt;
-    &lt;input type="radio" id="contactChoice1"
-     name="contact" value="email"&gt;
-    &lt;label for="contactChoice1"&gt;Email&lt;/label&gt;
+```html
+<form>
+  <p>Please select your preferred contact method:</p>
+  <div>
+    <input type="radio" id="contactChoice1"
+     name="contact" value="email">
+    <label for="contactChoice1">Email</label>
 
-    &lt;input type="radio" id="contactChoice2"
-     name="contact" value="phone"&gt;
-    &lt;label for="contactChoice2"&gt;Phone&lt;/label&gt;
+    <input type="radio" id="contactChoice2"
+     name="contact" value="phone">
+    <label for="contactChoice2">Phone</label>
 
-    &lt;input type="radio" id="contactChoice3"
-     name="contact" value="mail"&gt;
-    &lt;label for="contactChoice3"&gt;Mail&lt;/label&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button type="submit"&gt;Submit&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+    <input type="radio" id="contactChoice3"
+     name="contact" value="mail">
+    <label for="contactChoice3">Mail</label>
+  </div>
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>
+```
 
-<p>Here you see the three radio buttons, each with the <code>name</code> set to <code>contact</code> and each with a unique <code>value</code> that uniquely identifies that individual radio button within the group. They each also have a unique {{domxref("Element.id", "id")}}, which is used by the {{HTMLElement("label")}} element's {{htmlattrxref("for", "label")}} attribute to associate the labels with the radio buttons.</p>
+Here you see the three radio buttons, each with the `name` set to `contact` and each with a unique `value` that uniquely identifies that individual radio button within the group. They each also have a unique {{domxref("Element.id", "id")}}, which is used by the {{HTMLElement("label")}} element's {{htmlattrxref("for", "label")}} attribute to associate the labels with the radio buttons.
 
-<p>You can try out this example here:</p>
+You can try out this example here:
 
-<p>{{EmbedLiveSample('Defining_a_radio_group', 600, 130)}}</p>
+{{EmbedLiveSample('Defining_a_radio_group', 600, 130)}}
 
-<h3 id="Data_representation_of_a_radio_group">Data representation of a radio group</h3>
+### Data representation of a radio group
 
-<p>When the above form is submitted with a radio button selected, the form's data includes an entry in the form <code>contact=<var>value</var></code>. For example, if the user clicks on the "Phone" radio button then submits the form, the form's data will include the line <code>contact=phone</code>.</p>
+When the above form is submitted with a radio button selected, the form's data includes an entry in the form `contact=value`. For example, if the user clicks on the "Phone" radio button then submits the form, the form's data will include the line `contact=phone`.
 
-<p>If you omit the <code>value</code> attribute in the HTML, the submitted form data assigns the value <code>on</code> to the group. In this scenario, if the user clicked on the "Phone" option and submitted the form, the resulting form data would be <code>contact=on</code>, which isn't helpful. So don't forget to set your <code>value</code> attributes!</p>
+If you omit the `value` attribute in the HTML, the submitted form data assigns the value `on` to the group. In this scenario, if the user clicked on the "Phone" option and submitted the form, the resulting form data would be `contact=on`, which isn't helpful. So don't forget to set your `value` attributes!
 
-<div class="note">
-<p><strong>Note:</strong> If no radio button is selected when the form is submitted, the radio group is not included in the submitted form data at all, since there is no value to report.</p>
-</div>
+> **Note:** If no radio button is selected when the form is submitted, the radio group is not included in the submitted form data at all, since there is no value to report.
 
-<p>It's fairly uncommon to actually want to allow the form to be submitted without any of the radio buttons in a group selected, so it is usually wise to have one default to the <code>checked</code> state. See {{anch("Selecting a radio button by default")}} below.</p>
+It's fairly uncommon to actually want to allow the form to be submitted without any of the radio buttons in a group selected, so it is usually wise to have one default to the `checked` state. See {{anch("Selecting a radio button by default")}} below.
 
-<p>Let's add a little bit of code to our example so we can examine the data generated by this form. The HTML is revised to add a {{HTMLElement("pre")}} block to output the form data into:</p>
+Let's add a little bit of code to our example so we can examine the data generated by this form. The HTML is revised to add a {{HTMLElement("pre")}} block to output the form data into:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;p&gt;Please select your preferred contact method:&lt;/p&gt;
-  &lt;div&gt;
-    &lt;input type="radio" id="contactChoice1"
-           name="contact" value="email"&gt;
-    &lt;label for="contactChoice1"&gt;Email&lt;/label&gt;
-    &lt;input type="radio" id="contactChoice2"
-           name="contact" value="phone"&gt;
-    &lt;label for="contactChoice2"&gt;Phone&lt;/label&gt;
-    &lt;input type="radio" id="contactChoice3"
-           name="contact" value="mail"&gt;
-    &lt;label for="contactChoice3"&gt;Mail&lt;/label&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button type="submit"&gt;Submit&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;
-&lt;pre id="log"&gt;
-&lt;/pre&gt;
+```html
+<form>
+  <p>Please select your preferred contact method:</p>
+  <div>
+    <input type="radio" id="contactChoice1"
+           name="contact" value="email">
+    <label for="contactChoice1">Email</label>
+    <input type="radio" id="contactChoice2"
+           name="contact" value="phone">
+    <label for="contactChoice2">Phone</label>
+    <input type="radio" id="contactChoice3"
+           name="contact" value="mail">
+    <label for="contactChoice3">Mail</label>
+  </div>
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>
+<pre id="log">
 </pre>
+```
 
-<p>Then we add some <a href="/en-US/docs/Web/JavaScript">JavaScript</a> to set up an event listener on the {{domxref("HTMLFormElement/submit_event", "submit")}} event, which is sent when the user clicks the "Submit" button:</p>
+Then we add some [JavaScript](/en-US/docs/Web/JavaScript) to set up an event listener on the {{domxref("HTMLFormElement/submit_event", "submit")}} event, which is sent when the user clicks the "Submit" button:
 
-<pre class="brush: js">var form = document.querySelector("form");
+```js
+var form = document.querySelector("form");
 var log = document.querySelector("#log");
 
 form.addEventListener("submit", function(event) {
@@ -149,103 +160,107 @@ form.addEventListener("submit", function(event) {
   };
   log.innerText = output;
   event.preventDefault();
-}, false);</pre>
+}, false);
+```
 
-<p>Try this example out and see how there's never more than one result for the <code>contact</code> group.</p>
+Try this example out and see how there's never more than one result for the `contact` group.
 
-<p>{{EmbedLiveSample("Data_representation_of_a_radio_group", 600, 130)}}</p>
+{{EmbedLiveSample("Data_representation_of_a_radio_group", 600, 130)}}
 
-<h2 id="Additional_attributes">Additional attributes</h2>
+## Additional attributes
 
-<p>In addition to the common attributes shared by all {{HTMLElement("input")}} elements, <code>radio</code> inputs support the following attributes.</p>
+In addition to the common attributes shared by all {{HTMLElement("input")}} elements, `radio` inputs support the following attributes.
 
-<h3>checked</h3>
+### checked
 
-<p>A Boolean attribute which, if present, indicates that this radio button is the default selected one in the group.</p>
+A Boolean attribute which, if present, indicates that this radio button is the default selected one in the group.
 
-<p>Unlike other browsers, Firefox by default <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persists the dynamic checked state</a> of an <code>&lt;input&gt;</code> across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.</p>
+Unlike other browsers, Firefox by default [persists the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.
 
-<h3>value</h3>
+### value
 
-<p>The <code>value</code> attribute is one which all {{HTMLElement("input")}}s share; however, it serves a special purpose for inputs of type <code>radio</code>: when a form is submitted, only radio buttons which are currently checked are submitted to the server, and the reported value is the value of the <code>value</code> attribute. If the <code>value</code> is not otherwise specified, it is the string <code>on</code> by default. This is demonstrated in the section {{anch("Value")}} above.</p>
+The `value` attribute is one which all {{HTMLElement("input")}}s share; however, it serves a special purpose for inputs of type `radio`: when a form is submitted, only radio buttons which are currently checked are submitted to the server, and the reported value is the value of the `value` attribute. If the `value` is not otherwise specified, it is the string `on` by default. This is demonstrated in the section {{anch("Value")}} above.
 
-<h2 id="Using_radio_inputs">Using radio inputs</h2>
+## Using radio inputs
 
-<p>We already covered the fundamentals of radio buttons above. Let's now look at the other common radio-button-related features and techniques you may need to know about.</p>
+We already covered the fundamentals of radio buttons above. Let's now look at the other common radio-button-related features and techniques you may need to know about.
 
-<h3 id="Selecting_a_radio_button_by_default">Selecting a radio button by default</h3>
+### Selecting a radio button by default
 
-<p>To make a radio button selected by default, you include <code>checked</code> attribute, as shown in this revised version of the previous example:</p>
+To make a radio button selected by default, you include `checked` attribute, as shown in this revised version of the previous example:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;p&gt;Please select your preferred contact method:&lt;/p&gt;
-  &lt;div&gt;
-    &lt;input type="radio" id="contactChoice1"
-     name="contact" value="email" checked&gt;
-    &lt;label for="contactChoice1"&gt;Email&lt;/label&gt;
+```html
+<form>
+  <p>Please select your preferred contact method:</p>
+  <div>
+    <input type="radio" id="contactChoice1"
+     name="contact" value="email" checked>
+    <label for="contactChoice1">Email</label>
 
-    &lt;input type="radio" id="contactChoice2"
-     name="contact" value="phone"&gt;
-    &lt;label for="contactChoice2"&gt;Phone&lt;/label&gt;
+    <input type="radio" id="contactChoice2"
+     name="contact" value="phone">
+    <label for="contactChoice2">Phone</label>
 
-    &lt;input type="radio" id="contactChoice3"
-     name="contact" value="mail"&gt;
-    &lt;label for="contactChoice3"&gt;Mail&lt;/label&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button type="submit"&gt;Submit&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+    <input type="radio" id="contactChoice3"
+     name="contact" value="mail">
+    <label for="contactChoice3">Mail</label>
+  </div>
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>
+```
 
-<p>{{EmbedLiveSample('Selecting_a_radio_button_by_default', 600, 130)}}</p>
+{{EmbedLiveSample('Selecting_a_radio_button_by_default', 600, 130)}}
 
-<p>In this case, the first radio button is now selected by default.</p>
+In this case, the first radio button is now selected by default.
 
-<div class="note">
-<p><strong>Note:</strong> If you put the <code>checked</code> attribute on more than one radio button, later instances will override earlier ones; that is, the last <code>checked</code> radio button will be the one that is selected. This is because only one radio button in a group can ever be selected at once, and the user agent automatically deselects others each time a new one is marked as checked.</p>
-</div>
+> **Note:** If you put the `checked` attribute on more than one radio button, later instances will override earlier ones; that is, the last `checked` radio button will be the one that is selected. This is because only one radio button in a group can ever be selected at once, and the user agent automatically deselects others each time a new one is marked as checked.
 
-<h3 id="Providing_a_bigger_hit_area_for_your_radio_buttons">Providing a bigger hit area for your radio buttons</h3>
+### Providing a bigger hit area for your radio buttons
 
-<p>In the above examples, you may have noticed that you can select a radio button by clicking on its associated {{htmlelement("label")}} element, as well as on the radio button itself. This is a really useful feature of HTML form labels that makes it easier for users to click the option they want, especially on small-screen devices like smartphones.</p>
+In the above examples, you may have noticed that you can select a radio button by clicking on its associated {{htmlelement("label")}} element, as well as on the radio button itself. This is a really useful feature of HTML form labels that makes it easier for users to click the option they want, especially on small-screen devices like smartphones.
 
-<p>Beyond accessibility, this is another good reason to properly set up <code>&lt;label&gt;</code> elements on your forms.</p>
+Beyond accessibility, this is another good reason to properly set up `<label>` elements on your forms.
 
-<h2 id="Validation">Validation</h2>
+## Validation
 
-<p>Radio buttons don't participate in constraint validation; they have no real value to be constrained.</p>
+Radio buttons don't participate in constraint validation; they have no real value to be constrained.
 
-<h2 id="Styling_radio_inputs">Styling radio inputs</h2>
+## Styling radio inputs
 
-<p>The following example shows a slightly more thorough version of the example we've seen throughout the article, with some additional styling, and with better semantics established through use of specialized elements. The HTML looks like this:</p>
+The following example shows a slightly more thorough version of the example we've seen throughout the article, with some additional styling, and with better semantics established through use of specialized elements. The HTML looks like this:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;fieldset&gt;
-    &lt;legend&gt;Please select your preferred contact method:&lt;/legend&gt;
-    &lt;div&gt;
-      &lt;input type="radio" id="contactChoice1"
-       name="contact" value="email" checked&gt;
-      &lt;label for="contactChoice1"&gt;Email&lt;/label&gt;
+```html
+<form>
+  <fieldset>
+    <legend>Please select your preferred contact method:</legend>
+    <div>
+      <input type="radio" id="contactChoice1"
+       name="contact" value="email" checked>
+      <label for="contactChoice1">Email</label>
 
-      &lt;input type="radio" id="contactChoice2"
-       name="contact" value="phone"&gt;
-      &lt;label for="contactChoice2"&gt;Phone&lt;/label&gt;
+      <input type="radio" id="contactChoice2"
+       name="contact" value="phone">
+      <label for="contactChoice2">Phone</label>
 
-      &lt;input type="radio" id="contactChoice3"
-       name="contact" value="mail"&gt;
-      &lt;label for="contactChoice3"&gt;Mail&lt;/label&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;button type="submit"&gt;Submit&lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/fieldset&gt;
-&lt;/form&gt;</pre>
+      <input type="radio" id="contactChoice3"
+       name="contact" value="mail">
+      <label for="contactChoice3">Mail</label>
+    </div>
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </fieldset>
+</form>
+```
 
-<p>There's not much new to note here except for the addition of {{htmlelement("fieldset")}} and {{htmlelement("legend")}} elements, which help to group the functionality nicely and in a semantic way.</p>
+There's not much new to note here except for the addition of {{htmlelement("fieldset")}} and {{htmlelement("legend")}} elements, which help to group the functionality nicely and in a semantic way.
 
-<p>The CSS involved is a bit more significant:</p>
+The CSS involved is a bit more significant:
 
-<pre class="brush: css">html {
+```css
+html {
   font-family: sans-serif;
 }
 
@@ -300,30 +315,27 @@ button:active {
   background-color: white;
   color: black;
   outline: 1px solid black;
-}</pre>
+}
+```
 
-<p>Most notable here is the use of the {{cssxref("appearance")}} property (with prefixes needed to support some browsers). By default, radio buttons (and <a href="/en-US/docs/Web/HTML/Element/input/checkbox">checkboxes</a>) are styled with the operating system's native styles for those controls. By specifying <code>appearance: none</code>, you can remove the native styling altogether, and create your own styles for them. Here we've used a {{cssxref("border")}} along with {{cssxref("border-radius")}} and a {{cssxref("transition")}} to create a nice animating radio selection. Notice also how the {{cssxref(":checked")}} pseudo-class is used to specify the styles for the radio button's appearance when selected.</p>
+Most notable here is the use of the {{cssxref("appearance")}} property (with prefixes needed to support some browsers). By default, radio buttons (and [checkboxes](/en-US/docs/Web/HTML/Element/input/checkbox)) are styled with the operating system's native styles for those controls. By specifying `appearance: none`, you can remove the native styling altogether, and create your own styles for them. Here we've used a {{cssxref("border")}} along with {{cssxref("border-radius")}} and a {{cssxref("transition")}} to create a nice animating radio selection. Notice also how the {{cssxref(":checked")}} pseudo-class is used to specify the styles for the radio button's appearance when selected.
 
-<div class="note">
-<p><strong>Note:</strong> If you wish to use the {{cssxref("appearance")}} property, you should test it very carefully. Although it is supported in most modern browsers, its implementation varies widely. In older browsers, even the keyword <code>none</code> does not have the same effect across different browsers, and some do not support it at all. The differences are smaller in the newest browsers.</p>
-</div>
+> **Note:** If you wish to use the {{cssxref("appearance")}} property, you should test it very carefully. Although it is supported in most modern browsers, its implementation varies widely. In older browsers, even the keyword `none` does not have the same effect across different browsers, and some do not support it at all. The differences are smaller in the newest browsers.
 
-<p>{{EmbedLiveSample('Styling_radio_inputs', 600, 120)}}</p>
+{{EmbedLiveSample('Styling_radio_inputs', 600, 120)}}
 
-<p>Notice that when clicking on a radio button, there's a nice, smooth fade out/in effect as the two buttons change state. In addition, the style and coloring of the legend and submit button are customized to have strong contrast. This might not be a look you'd want in a real web application, but it definitely shows off the possibilities.</p>
+Notice that when clicking on a radio button, there's a nice, smooth fade out/in effect as the two buttons change state. In addition, the style and coloring of the legend and submit button are customized to have strong contrast. This might not be a look you'd want in a real web application, but it definitely shows off the possibilities.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface that implements it.</li>
- <li>{{domxref("RadioNodeList")}}: the interface that describes a list of radio buttons</li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
-</ul>
+*   {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface that implements it.
+*   {{domxref("RadioNodeList")}}: the interface that describes a list of radio buttons
+*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

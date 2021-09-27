@@ -7,27 +7,25 @@ tags:
   - Reference
 browser-compat: html.global_attributes.class
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>The <code><strong>class</strong></code> <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a> is a space-separated list of the case-sensitive classes of the element. Classes allow CSS and Javascript to select and access specific elements via the <a href="/en-US/docs/Web/CSS/Class_selectors">class selectors</a> or functions like the DOM method {{domxref("document.getElementsByClassName")}}.</p>
+The **`class`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is a space-separated list of the case-sensitive classes of the element. Classes allow CSS and Javascript to select and access specific elements via the [class selectors](/en-US/docs/Web/CSS/Class_selectors) or functions like the DOM method {{domxref("document.getElementsByClassName")}}.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/attribute-class.html","tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/attribute-class.html","tabbed-standard")}}
 
-<p>Though the specification doesn't put requirements on the name of classes, web developers are encouraged to use names that describe the semantic purpose of the element, rather than the presentation of the element. For example, <em>attribute</em> to describe an attribute rather than <em>italics</em>, although an element of this class may be presented by <em>italics</em>. Semantic names remain logical even if the presentation of the page changes.</p>
+Though the specification doesn't put requirements on the name of classes, web developers are encouraged to use names that describe the semantic purpose of the element, rather than the presentation of the element. For example, *attribute* to describe an attribute rather than *italics*, although an element of this class may be presented by *italics*. Semantic names remain logical even if the presentation of the page changes.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>All <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</li>
-	<li>{{domxref('element.className')}}</li>
-	<li>{{domxref('element.classList')}}</li>
-	<li><a href="/en-US/docs/Learn/CSS/">Introduction to CSS</a></li>
-</ul>
+*   All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+*   {{domxref('element.className')}}
+*   {{domxref('element.classList')}}
+*   [Introduction to CSS](/en-US/docs/Learn/CSS/)

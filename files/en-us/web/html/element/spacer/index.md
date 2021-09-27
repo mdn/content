@@ -9,43 +9,42 @@ tags:
   - Web
 browser-compat: html.elements.spacer
 ---
-<div>{{non-standard_header}}{{deprecated_header}}</div>
+{{non-standard_header}}{{deprecated_header}}
 
-<p>The <strong><code>&lt;spacer&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element is an obsolete HTML element which allowed insertion of empty spaces on pages. It was devised by Netscape to accomplish the same effect as a single-pixel layout image, which was something web designers used to use to add white spaces to web pages without actually using an image. However, <code>&lt;spacer&gt;</code> no longer supported by any major browser and the same effects can now be achieved using simple CSS.</p>
+The **`<spacer>`** [HTML](/en-US/docs/Web/HTML) element is an obsolete HTML element which allowed insertion of empty spaces on pages. It was devised by Netscape to accomplish the same effect as a single-pixel layout image, which was something web designers used to use to add white spaces to web pages without actually using an image. However, `<spacer>` no longer supported by any major browser and the same effects can now be achieved using simple CSS.
 
-<p>Firefox, which is the descendant of Netscape's browsers, removed support for <code>&lt;spacer&gt;</code> in version 4.</p>
+Firefox, which is the descendant of Netscape's browsers, removed support for `<spacer>` in version 4.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>Like all other HTML elements, this element supports the <a href="/en-US/docs/Web/HTML/Global_attributes" title="HTML/Global attributes">global attributes</a>.</p>
+Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes "HTML/Global attributes").
 
-<dl>
- <dt>{{ htmlattrdef("type") }}</dt>
- <dd>This attribute determines type of spacer. Possible values are <code>horizontal</code>, <code>vertical</code> and <code>block</code>.</dd>
- <dt>{{ htmlattrdef("size") }}</dt>
- <dd>This attribute can be used for defining size of spacer in pixels when type is <code>horizontal</code> or <code>vertical</code>.</dd>
- <dt>{{ htmlattrdef("width") }}</dt>
- <dd>This attribute can be used for defining width of spacer in pixels when type is <code>block</code>.</dd>
- <dt>{{ htmlattrdef("height") }}</dt>
- <dd>This attribute can be used for defining height of spacer in pixels when type is <code>block</code>.</dd>
- <dt>{{ htmlattrdef("align") }}</dt>
- <dd>This attribute determines alignment of spacer. Possible values are <code>left</code>, <code>right</code> and <code>center</code>.</dd>
-</dl>
+*   {{ htmlattrdef("type") }}
+    *   : This attribute determines type of spacer. Possible values are `horizontal`, `vertical` and `block`.
+*   {{ htmlattrdef("size") }}
+    *   : This attribute can be used for defining size of spacer in pixels when type is `horizontal` or `vertical`.
+*   {{ htmlattrdef("width") }}
+    *   : This attribute can be used for defining width of spacer in pixels when type is `block`.
+*   {{ htmlattrdef("height") }}
+    *   : This attribute can be used for defining height of spacer in pixels when type is `block`.
+*   {{ htmlattrdef("align") }}
+    *   : This attribute determines alignment of spacer. Possible values are `left`, `right` and `center`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:html">&lt;span&gt;Just a text node&lt;/span&gt;
-&lt;spacer type="horizontal" size="10"&gt;&lt;/spacer&gt;
-&lt;span&gt;Just another text node&lt;/span&gt;
-&lt;spacer type="block" width="10" height="10"&gt;&lt;/spacer&gt;
-</pre>
+```html
+<span>Just a text node</span>
+<spacer type="horizontal" size="10"></spacer>
+<span>Just another text node</span>
+<spacer type="block" width="10" height="10"></spacer>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{ HTMLRef }}</p>
+{{ HTMLRef }}

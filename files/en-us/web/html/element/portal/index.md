@@ -13,59 +13,62 @@ tags:
   - Portal
 browser-compat: html.elements.portal
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;portal&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element enables the embedding of another HTML page into the current one for the purposes of allowing smoother navigation into new pages.</p>
+The **`<portal>`** [HTML](/en-US/docs/Web/HTML) element enables the embedding of another HTML page into the current one for the purposes of allowing smoother navigation into new pages.
 
-<p>A <code>&lt;portal&gt;</code> is similar to an <code>&lt;iframe&gt;</code>. An <code>&lt;iframe&gt;</code> allows a separate {{Glossary("browsing context")}} to be embedded. However, the embedded content of a <code>&lt;portal&gt;</code> is more limited than that of an <code>&lt;iframe&gt;</code>. It cannot be interacted with, and therefore is not suitable for embedding widgets into a document. Instead, the <code>&lt;portal&gt;</code> acts as a preview of the content of another page. It can be navigated into therefore allowing for seamless transition to the embedded content.</p>
+A `<portal>` is similar to an `<iframe>`. An `<iframe>` allows a separate {{Glossary("browsing context")}} to be embedded. However, the embedded content of a `<portal>` is more limited than that of an `<iframe>`. It cannot be interacted with, and therefore is not suitable for embedding widgets into a document. Instead, the `<portal>` acts as a preview of the content of another page. It can be navigated into therefore allowing for seamless transition to the embedded content.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></td>
+      <td>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"
+          >button</a
+        >
+      </td>
     </tr>
     <tr>
       <th scope="row">DOM interface</th>
       <td>{{domxref("HTMLPortalElement")}}</td>
-     </tr>
+    </tr>
   </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<dl>
-  <dt>{{htmlattrdef("referrerpolicy")}}</dt>
-  <dd>Sets the <a href="/en-US/docs/Web/HTTP/Headers/Referrer-Policy">referrer policy</a> to use when requesting the page at the URL given as the value of the <code>src</code> attribute.
-  </dd>
-  <dt>{{htmlattrdef("src")}}</dt>
-  <dd>The URL of the page to embed.</dd>
-</dl>
+*   {{htmlattrdef("referrerpolicy")}}
+    *   : Sets the [referrer policy](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) to use when requesting the page at the URL given as the value of the `src` attribute.
+*   {{htmlattrdef("src")}}
+    *   : The URL of the page to embed.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>Basic example</h3>
+### Basic example
 
-<p>The following example will embed the contents of <code>https://example.com</code> as a preview.</p>
+The following example will embed the contents of `https://example.com` as a preview.
 
-<pre class="brush:html">&lt;portal id="exampleportal" src="https://example.com/"&gt;&lt;/portal&gt;</pre>
+```html
+<portal id="exampleportal" src="https://example.com/"></portal>
+```
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>The preview displayed by a <code>&lt;portal&gt;</code> is not interactive, therefore does not receive input events or focus. Therefore the embedded contents of the portal are not exposed as elements in the {{Glossary("accessibility tree")}}. The portal can be navigated to and activated like a button, the default behavior when clicking on the portal is to activate it.</p>
+The preview displayed by a `<portal>` is not interactive, therefore does not receive input events or focus. Therefore the embedded contents of the portal are not exposed as elements in the {{Glossary("accessibility tree")}}. The portal can be navigated to and activated like a button, the default behavior when clicking on the portal is to activate it.
 
-<p>Portals are given a default label which is the title of the embedded page. If no title is present the visible text in the preview is concatenated to create a label. The {{htmlattrxref("aria-label")}} attribute can be used to override this.</p>
+Portals are given a default label which is the title of the embedded page. If no title is present the visible text in the preview is concatenated to create a label. The {{htmlattrxref("aria-label")}} attribute can be used to override this.
 
-<p>Portals used for prerendering only should be hidden with the hidden HTML attribute or the CSS {{cssxref("display")}} property with a value of <code>none</code>.</p>
+Portals used for prerendering only should be hidden with the hidden HTML attribute or the CSS {{cssxref("display")}} property with a value of `none`.
 
-<p>When using animations during portal activation the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media feature</a> should be respected.</p>
+When using animations during portal activation the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) should be respected.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

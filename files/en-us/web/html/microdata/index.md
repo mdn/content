@@ -10,155 +10,149 @@ tags:
   - SEO
   - Search
 ---
-<p>Microdata is part of the {{glossary("WHATWG")}} HTML Standard and is used to nest metadata within existing content on web pages. Search engines and web crawlers can extract and process microdata from a web page and use it to provide a richer browsing experience for users. Search engines benefit greatly from direct access to this structured data because it allows search engines to understand the information on web pages and provide more relevant results to users. Microdata uses a supporting vocabulary to describe an item and name-value pairs to assign values to its properties. Microdata is an attempt to provide a simpler way of annotating HTML elements with machine-readable tags than the similar approaches of using RDFa and classic microformats.</p>
+Microdata is part of the {{glossary("WHATWG")}} HTML Standard and is used to nest metadata within existing content on web pages. Search engines and web crawlers can extract and process microdata from a web page and use it to provide a richer browsing experience for users. Search engines benefit greatly from direct access to this structured data because it allows search engines to understand the information on web pages and provide more relevant results to users. Microdata uses a supporting vocabulary to describe an item and name-value pairs to assign values to its properties. Microdata is an attempt to provide a simpler way of annotating HTML elements with machine-readable tags than the similar approaches of using RDFa and classic microformats.
 
-<p>At a high level, microdata consists of a group of name-value pairs. The groups are called items, and each name-value pair is a property. Items and properties are represented by regular elements.</p>
+At a high level, microdata consists of a group of name-value pairs. The groups are called items, and each name-value pair is a property. Items and properties are represented by regular elements.
 
-<ul>
- <li>To create an item, the <strong>itemscope</strong> attribute is used.</li>
- <li>To add a property to an item, the <strong>itemprop</strong> attribute is used on one of the item's descendants.</li>
-</ul>
+*   To create an item, the **itemscope** attribute is used.
+*   To add a property to an item, the **itemprop** attribute is used on one of the item's descendants.
 
-<h2 id="Vocabularies">Vocabularies</h2>
+## Vocabularies
 
-<p>Google and other major search engines support the <a href="https://schema.org">Schema.org</a> vocabulary for structured data. This vocabulary defines a standard set of type names and property names, for example, <a href="http://schema.org/MusicEvent">Schema.org Music Event</a> indicates a concert performance, with <a href="http://schema.org/startDate">startDate</a> and <a href="http://schema.org/location">location</a> properties to specify the concert's key details. In this case, <a href="http://schema.org/MusicEvent">Schema.org Music Event</a> would be the URL used by itemtype and startDate and location would be itemprop's that <a href="http://schema.org/MusicEvent">Schema.org Music Event</a> defines.</p>
+Google and other major search engines support the [Schema.org](https://schema.org) vocabulary for structured data. This vocabulary defines a standard set of type names and property names, for example, [Schema.org Music Event](http://schema.org/MusicEvent) indicates a concert performance, with [startDate](http://schema.org/startDate) and [location](http://schema.org/location) properties to specify the concert's key details. In this case, [Schema.org Music Event](http://schema.org/MusicEvent) would be the URL used by itemtype and startDate and location would be itemprop's that [Schema.org Music Event](http://schema.org/MusicEvent) defines.
 
-<div class="note">
-<p><strong>Note:</strong> More about itemtype attributes can be found at <a href="http://schema.org/Thing">http://schema.org/Thing</a>.</p>
-</div>
+> **Note:** More about itemtype attributes can be found at <http://schema.org/Thing>.
 
-<p>Microdata vocabularies provide the semantics or meaning of an Item. Web developers can design a custom vocabulary or use vocabularies available on the web, such as the widely used <a href="http://schema.org">schema.org</a> vocabulary. A collection of commonly used markup vocabularies are provided by Schema.org.</p>
+Microdata vocabularies provide the semantics or meaning of an Item. Web developers can design a custom vocabulary or use vocabularies available on the web, such as the widely used [schema.org](http://schema.org) vocabulary. A collection of commonly used markup vocabularies are provided by Schema.org.
 
-<p>Commonly used vocabularies:</p>
+Commonly used vocabularies:
 
-<ul>
- <li>Creative works: <a href="http://schema.org/CreativeWork">CreativeWork</a>, <a href="http://schema.org/Book">Book</a>, <a href="http://schema.org/Movie">Movie</a>, <a href="http://schema.org/MusicRecording">MusicRecording</a>, <a href="http://schema.org/Recipe">Recipe</a>, <a href="http://schema.org/TVSeries">TVSeries</a></li>
- <li>Embedded non-text objects: <a href="http://schema.org/AudioObject">AudioObject</a>, <a href="http://schema.org/ImageObject">ImageObject</a>, <a href="http://schema.org/VideoObject">VideoObject</a></li>
- <li><a href="http://schema.org/Event">Event</a></li>
- <li><a href="http://schema.org/docs/meddocs.html">Health and medical types</a>: Notes on the health and medical types under <a href="http://schema.org/MedicalEntity">MedicalEntity</a></li>
- <li><a href="http://schema.org/Organization">Organization</a></li>
- <li><a href="http://schema.org/Person">Person</a></li>
- <li><a href="http://schema.org/Place">Place</a>, <a href="http://schema.org/LocalBusiness">LocalBusiness</a>, <a href="http://schema.org/Restaurant">Restaurant</a></li>
- <li><a href="http://schema.org/Product">Product</a>, <a href="http://schema.org/Offer">Offer</a>, <a href="http://schema.org/AggregateOffer">AggregateOffer</a></li>
- <li><a href="http://schema.org/Review">Review</a>, <a href="http://schema.org/AggregateRating">AggregateRating</a></li>
- <li><a href="http://schema.org/Action">Action</a></li>
- <li><a href="http://schema.org/Thing">Thing</a></li>
- <li><a href="http://schema.org/Intangible">Intangible</a></li>
-</ul>
+*   Creative works: [CreativeWork](http://schema.org/CreativeWork), [Book](http://schema.org/Book), [Movie](http://schema.org/Movie), [MusicRecording](http://schema.org/MusicRecording), [Recipe](http://schema.org/Recipe), [TVSeries](http://schema.org/TVSeries)
+*   Embedded non-text objects: [AudioObject](http://schema.org/AudioObject), [ImageObject](http://schema.org/ImageObject), [VideoObject](http://schema.org/VideoObject)
+*   [Event](http://schema.org/Event)
+*   [Health and medical types](http://schema.org/docs/meddocs.html): Notes on the health and medical types under [MedicalEntity](http://schema.org/MedicalEntity)
+*   [Organization](http://schema.org/Organization)
+*   [Person](http://schema.org/Person)
+*   [Place](http://schema.org/Place), [LocalBusiness](http://schema.org/LocalBusiness), [Restaurant](http://schema.org/Restaurant)
+*   [Product](http://schema.org/Product), [Offer](http://schema.org/Offer), [AggregateOffer](http://schema.org/AggregateOffer)
+*   [Review](http://schema.org/Review), [AggregateRating](http://schema.org/AggregateRating)
+*   [Action](http://schema.org/Action)
+*   [Thing](http://schema.org/Thing)
+*   [Intangible](http://schema.org/Intangible)
 
-<p>Major search engine operators like Google, Microsoft, and Yahoo! rely on the <a href="http://schema.org/">schema.org</a> vocabulary to improve search results. For some purposes, an ad-hoc vocabulary is adequate. For others, a vocabulary will need to be designed. Where possible, authors are encouraged to re-use existing vocabularies, as this makes content re-use easier.</p>
+Major search engine operators like Google, Microsoft, and Yahoo! rely on the [schema.org](http://schema.org/) vocabulary to improve search results. For some purposes, an ad-hoc vocabulary is adequate. For others, a vocabulary will need to be designed. Where possible, authors are encouraged to re-use existing vocabularies, as this makes content re-use easier.
 
-<h2 id="Localization">Localization</h2>
+## Localization
 
-<p>In some cases, search engines covering specific regions may provide locally-specific extensions of microdata. For example, <a href="https://www.yandex.com/">Yandex</a>, a major search engine in Russia, supports microformats such as hCard (company contact information), hRecipe (food recipe), hReview (market reviews) and hProduct (product data) and provides its own format for the definition of the terms and encyclopedic articles. This extension was made to solve transliteration problems between the Cyrillic and Latin alphabets. Due to the implementation of additional marking parameters of Schema's vocabulary, the indexation of information in Russian-language web-pages became considerably more successful.</p>
+In some cases, search engines covering specific regions may provide locally-specific extensions of microdata. For example, [Yandex](https://www.yandex.com/), a major search engine in Russia, supports microformats such as hCard (company contact information), hRecipe (food recipe), hReview (market reviews) and hProduct (product data) and provides its own format for the definition of the terms and encyclopedic articles. This extension was made to solve transliteration problems between the Cyrillic and Latin alphabets. Due to the implementation of additional marking parameters of Schema's vocabulary, the indexation of information in Russian-language web-pages became considerably more successful.
 
-<h2 id="Global_attributes">Global attributes</h2>
+## Global attributes
 
-<p><a href="/en-US/docs/Web/HTML/Global_attributes/itemid">itemid </a>– The unique, global identifier of an item.</p>
+[itemid ](/en-US/docs/Web/HTML/Global_attributes/itemid)– The unique, global identifier of an item.
 
-<p><a href="/en-US/docs/Web/HTML/Global_attributes/itemprop">itemprop </a>– Used to add properties to an item. Every HTML element may have an itemprop attribute specified, where an itemprop consists of a name and value pair.</p>
+[itemprop ](/en-US/docs/Web/HTML/Global_attributes/itemprop)– Used to add properties to an item. Every HTML element may have an itemprop attribute specified, where an itemprop consists of a name and value pair.
 
-<p><a href="/en-US/docs/Web/HTML/Global_attributes/itemref">itemref</a> – Properties that are not descendants of an element with the <code>itemscope</code> attribute can be associated with the item using an <strong>itemref</strong>. Itemref provides a list of element ids (not <code>itemid</code>s) with additional properties elsewhere in the document.</p>
+[itemref](/en-US/docs/Web/HTML/Global_attributes/itemref) – Properties that are not descendants of an element with the `itemscope` attribute can be associated with the item using an **itemref**. Itemref provides a list of element ids (not `itemid`s) with additional properties elsewhere in the document.
 
-<p><a href="/en-US/docs/Web/HTML/Global_attributes/itemscope">itemscope</a> – Itemscope (usually) works along with <a href="/en-US/docs/Web/HTML/Global_attributes/itemtype">itemtype </a>to specify that the HTML contained in a block is about a particular item. itemscope creates the Item and defines the scope of the itemtype associated with it. itemtype is a valid URL of a vocabulary (such as <a class="external external-icon" href="http://schema.org/">schema.org</a>) that describes the item and its properties context.</p>
+[itemscope](/en-US/docs/Web/HTML/Global_attributes/itemscope) – Itemscope (usually) works along with [itemtype ](/en-US/docs/Web/HTML/Global_attributes/itemtype)to specify that the HTML contained in a block is about a particular item. itemscope creates the Item and defines the scope of the itemtype associated with it. itemtype is a valid URL of a vocabulary (such as [schema.org](http://schema.org/)) that describes the item and its properties context.
 
-<p><a href="/en-US/docs/Web/HTML/Global_attributes/itemtype">itemtype</a> – Specifies the URL of the vocabulary that will be used to define itemprop's (item properties) in the data structure. <a href="/en-US/docs/Web/HTML/Global_attributes/itemscope">Itemscope</a> is used to set the scope of where in the data structure the vocabulary set by itemtype will be active.</p>
+[itemtype](/en-US/docs/Web/HTML/Global_attributes/itemtype) – Specifies the URL of the vocabulary that will be used to define itemprop's (item properties) in the data structure. [Itemscope](/en-US/docs/Web/HTML/Global_attributes/itemscope) is used to set the scope of where in the data structure the vocabulary set by itemtype will be active.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div itemscope itemtype="http://schema.org/SoftwareApplication"&gt;
-  &lt;span itemprop="name"&gt;Angry Birds&lt;/span&gt; -
+```html
+<div itemscope itemtype="http://schema.org/SoftwareApplication">
+  <span itemprop="name">Angry Birds</span> -
 
-  REQUIRES &lt;span itemprop="operatingSystem"&gt;ANDROID&lt;/span&gt;&lt;br&gt;
-  &lt;link itemprop="applicationCategory" href="http://schema.org/GameApplication"/&gt;
+  REQUIRES <span itemprop="operatingSystem">ANDROID</span><br>
+  <link itemprop="applicationCategory" href="http://schema.org/GameApplication"/>
 
-  &lt;div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"&gt;
+  <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
     RATING:
-    &lt;span itemprop="ratingValue"&gt;4.6&lt;/span&gt; (
-    &lt;span itemprop="ratingCount"&gt;8864&lt;/span&gt; ratings )
-  &lt;/div&gt;
+    <span itemprop="ratingValue">4.6</span> (
+    <span itemprop="ratingCount">8864</span> ratings )
+  </div>
 
-  &lt;div itemprop="offers" itemscope itemtype="http://schema.org/Offer"&gt;
-    Price: $&lt;span itemprop="price"&gt;1.00&lt;/span&gt;
-    &lt;meta itemprop="priceCurrency" content="USD" /&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+    Price: $<span itemprop="price">1.00</span>
+    <meta itemprop="priceCurrency" content="USD" />
+  </div>
+</div>
+```
 
-<h3 id="Structured_data">Structured data</h3>
+### Structured data
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td rowspan="4">itemscope</td>
-   <td>itemtype</td>
-   <td colspan="2">SoftwareApplication (http://schema.org/SoftwareApplication)</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>name</td>
-   <td>Angry Birds</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>operatingSystem</td>
-   <td>ANDROID</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>applicationCategory</td>
-   <td>GameApplication (http://schema.org/GameApplication)</td>
-  </tr>
-  <tr>
-   <td rowspan="3">itemscope</td>
-   <td>itemprop[itemtype]</td>
-   <td colspan="2">aggregateRating [AggregateRating]</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>ratingValue</td>
-   <td>4.6</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>ratingCount</td>
-   <td>8864</td>
-  </tr>
-  <tr>
-   <td rowspan="3">itemscope</td>
-   <td>itemprop[itemtype]</td>
-   <td colspan="2">offers [Offer]</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>price</td>
-   <td>1.00</td>
-  </tr>
-  <tr>
-   <td>itemprop</td>
-   <td>priceCurrency</td>
-   <td>USD</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td rowspan="4">itemscope</td>
+      <td>itemtype</td>
+      <td colspan="2">
+        SoftwareApplication (http://schema.org/SoftwareApplication)
+      </td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>name</td>
+      <td>Angry Birds</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>operatingSystem</td>
+      <td>ANDROID</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>applicationCategory</td>
+      <td>GameApplication (http://schema.org/GameApplication)</td>
+    </tr>
+    <tr>
+      <td rowspan="3">itemscope</td>
+      <td>itemprop[itemtype]</td>
+      <td colspan="2">aggregateRating [AggregateRating]</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>ratingValue</td>
+      <td>4.6</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>ratingCount</td>
+      <td>8864</td>
+    </tr>
+    <tr>
+      <td rowspan="3">itemscope</td>
+      <td>itemprop[itemtype]</td>
+      <td colspan="2">offers [Offer]</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>price</td>
+      <td>1.00</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>priceCurrency</td>
+      <td>USD</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('HTML', '', '100', '', 'Web/HTML/Microdata') }}</p>
+{{ EmbedLiveSample('HTML', '', '100', '', 'Web/HTML/Microdata') }}
 
-<div class="note">
-<p><strong>Note:</strong> A handy tool for extracting microdata structures from HTML is Google's <a href="https://developers.google.com/search/docs/guides/intro-structured-data">Structured Data Testing Tool</a>. Try it on the HTML shown above.</p>
-</div>
+> **Note:** A handy tool for extracting microdata structures from HTML is Google's [Structured Data Testing Tool](https://developers.google.com/search/docs/guides/intro-structured-data). Try it on the HTML shown above.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>Supported in Firefox 16. Removed in Firefox 49.</p>
+Supported in Firefox 16. Removed in Firefox 49.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTML/Global_attributes">Global Attributes</a></li>
-</ul>
+*   [Global Attributes](/en-US/docs/Web/HTML/Global_attributes)
 
-<p>{{QuickLinksWithSubpages("/en-US/docs/Web/HTML")}}</p>
+{{QuickLinksWithSubpages("/en-US/docs/Web/HTML")}}

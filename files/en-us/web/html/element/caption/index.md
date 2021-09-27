@@ -14,100 +14,116 @@ tags:
   - caption
 browser-compat: html.elements.caption
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;caption&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element specifies the caption (or title) of a table.</p>
+The **`<caption>`** [HTML](/en-US/docs/Web/HTML) element specifies the caption (or title) of a table.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/caption.html", "tabbed-taller")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/caption.html", "tabbed-taller")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td>None.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>The end tag can be omitted if the element is not immediately followed by ASCII whitespace or a comment.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>A {{HTMLElement("table")}} element, as its first descendant.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>No <code>role</code> permitted</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLTableCaptionElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>
+        The end tag can be omitted if the element is not immediately followed by
+        ASCII whitespace or a comment.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        A {{HTMLElement("table")}} element, as its first descendant.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLTableCaptionElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<h3 id="Deprecated_attributes">Deprecated attributes</h3>
+### Deprecated attributes
 
-<p>The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.</p>
+The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.
 
-<dl>
- <dt>{{htmlattrdef("align")}} {{deprecated_inline}}</dt>
- <dd>This enumerated attribute indicates how the caption must be aligned with respect to the table. It may have one of the following values:
- <dl>
-  <dt><code>left</code></dt>
-  <dd>The caption is displayed to the left of the table.</dd>
-  <dt><code>top</code></dt>
-  <dd>The caption is displayed above the table.</dd>
-  <dt><code>right</code></dt>
-  <dd>The caption is displayed to the right of the table.</dd>
-  <dt><code>bottom</code></dt>
-  <dd>The caption is displayed below the table.</dd>
- </dl>
+*   {{htmlattrdef("align")}} {{deprecated_inline}}
+    *   : This enumerated attribute indicates how the caption must be aligned with respect to the table. It may have one of the following values:
 
- <div class="warning"><p><strong>Warning:</strong> Do not use this attribute, as it has been deprecated. The {{HTMLElement("caption")}} element should be styled using the <a href="/en-US/docs/Web/CSS">CSS</a> properties {{cssxref("caption-side")}} and {{cssxref("text-align")}}.</p></div>
- </dd>
-</dl>
+        *   `left`
+            *   : The caption is displayed to the left of the table.
+        *   `top`
+            *   : The caption is displayed above the table.
+        *   `right`
+            *   : The caption is displayed to the right of the table.
+        *   `bottom`
+            *   : The caption is displayed below the table.
 
-<h2 id="Usage_notes">Usage notes</h2>
+        > **Warning:** Do not use this attribute, as it has been deprecated. The {{HTMLElement("caption")}} element should be styled using the [CSS](/en-US/docs/Web/CSS) properties {{cssxref("caption-side")}} and {{cssxref("text-align")}}.
 
-<p>The <code>&lt;caption&gt;</code> element should be the first child of its parent {{htmlelement("table")}} element.</p>
+## Usage notes
 
-<p>When the <code>&lt;table&gt;</code> element that contains the <code>&lt;caption&gt;</code> is the only descendant of a {{HTMLElement("figure")}} element, you should use the {{HTMLElement("figcaption")}} element instead of <code>&lt;caption&gt;</code>.</p>
+The `<caption>` element should be the first child of its parent {{htmlelement("table")}} element.
 
-<p>A {{cssxref("background-color")}} on the table will not include the caption. Add a <code>background-color</code> to the <code>&lt;caption&gt;</code> element as well if you want the same color to be behind both.</p>
+When the `<table>` element that contains the `<caption>` is the only descendant of a {{HTMLElement("figure")}} element, you should use the {{HTMLElement("figcaption")}} element instead of `<caption>`.
 
-<h2 id="Example">Example</h2>
+A {{cssxref("background-color")}} on the table will not include the caption. Add a `background-color` to the `<caption>` element as well if you want the same color to be behind both.
 
-<p>This simple example presents a table that includes a caption.</p>
+## Example
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;caption&gt;Example Caption&lt;/caption&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Login&lt;/th&gt;
-    &lt;th&gt;Email&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;user1&lt;/td&gt;
-    &lt;td&gt;user1@sample.com&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;user2&lt;/td&gt;
-    &lt;td&gt;user2@sample.com&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+This simple example presents a table that includes a caption.
 
-<pre class="brush: css hidden">caption {
+```html
+<table>
+  <caption>Example Caption</caption>
+  <tr>
+    <th>Login</th>
+    <th>Email</th>
+  </tr>
+  <tr>
+    <td>user1</td>
+    <td>user1@sample.com</td>
+  </tr>
+  <tr>
+    <td>user2</td>
+    <td>user2@sample.com</td>
+  </tr>
+</table>
+```
+
+```css hidden
+caption {
   caption-side: top;
 }
 table {
@@ -117,24 +133,20 @@ table {
 table, th, td {
   border: 1px solid black;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Example', 650, 100)}}</p>
+{{EmbedLiveSample('Example', 650, 100)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>CSS properties that may be specially useful to style the {{HTMLElement("caption")}} element:
-  <ul>
-   <li>{{cssxref("text-align")}}, {{cssxref("caption-side")}}.</li>
-  </ul>
- </li>
-</ul>
+*   CSS properties that may be specially useful to style the {{HTMLElement("caption")}} element:
+
+    *   {{cssxref("text-align")}}, {{cssxref("caption-side")}}.

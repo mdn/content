@@ -12,79 +12,82 @@ tags:
   - Storage
   - data
 ---
-<p>HTML provides a {{ htmlattrxref("crossorigin", "img") }} attribute for images that, in combination with an appropriate {{Glossary("CORS")}} header, allows images defined by the {{ HTMLElement("img") }} element that are loaded from foreign origins to be used in a {{HTMLElement("canvas")}} as if they had been loaded from the current origin.</p>
+HTML provides a {{ htmlattrxref("crossorigin", "img") }} attribute for images that, in combination with an appropriate {{Glossary("CORS")}} header, allows images defined by the {{ HTMLElement("img") }} element that are loaded from foreign origins to be used in a {{HTMLElement("canvas")}} as if they had been loaded from the current origin.
 
-<p>See <a href="/en-US/docs/Web/HTML/Attributes/crossorigin">CORS settings attributes</a> for details on how the <code>crossorigin</code> attribute is used.</p>
+See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for details on how the `crossorigin` attribute is used.
 
-<h2 id="Security_and_tainted_canvases">Security and tainted canvases</h2>
+## Security and tainted canvases
 
-<p>Because the pixels in a canvas's bitmap can come from a variety of sources, including images or videos retrieved from other hosts, it's inevitable that security problems may arise.</p>
+Because the pixels in a canvas's bitmap can come from a variety of sources, including images or videos retrieved from other hosts, it's inevitable that security problems may arise.
 
-<p>As soon as you draw into a canvas any data that was loaded from another origin without CORS approval, the canvas becomes <strong>tainted</strong>. A tainted canvas is one which is no longer considered secure, and any attempts to retrieve image data back from the canvas will cause an exception to be thrown.</p>
+As soon as you draw into a canvas any data that was loaded from another origin without CORS approval, the canvas becomes **tainted**. A tainted canvas is one which is no longer considered secure, and any attempts to retrieve image data back from the canvas will cause an exception to be thrown.
 
-<p>If the source of the foreign content is an HTML {{HTMLElement("img")}} or SVG {{SVGElement("svg")}} element, attempting to retrieve the contents of the canvas isn't allowed.</p>
+If the source of the foreign content is an HTML {{HTMLElement("img")}} or SVG {{SVGElement("svg")}} element, attempting to retrieve the contents of the canvas isn't allowed.
 
-<p>If the foreign content comes from an image obtained from either as {{domxref("HTMLCanvasElement")}} or {{domxref("ImageBitMap")}}, and the image source doesn't meet the same origin rules, attempts to read the canvas's contents are blocked.</p>
+If the foreign content comes from an image obtained from either as {{domxref("HTMLCanvasElement")}} or {{domxref("ImageBitMap")}}, and the image source doesn't meet the same origin rules, attempts to read the canvas's contents are blocked.
 
-<p>Calling any of the following on a tainted canvas will result in an error:</p>
+Calling any of the following on a tainted canvas will result in an error:
 
-<ul>
- <li>Calling {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}} on the canvas's context</li>
- <li>Calling {{domxref("HTMLCanvasElement.toBlob", "toBlob()")}} on the {{HTMLElement("canvas")}} element itself</li>
- <li>Calling {{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}} on the canvas</li>
-</ul>
+*   Calling {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}} on the canvas's context
+*   Calling {{domxref("HTMLCanvasElement.toBlob", "toBlob()")}} on the {{HTMLElement("canvas")}} element itself
+*   Calling {{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}} on the canvas
 
-<p>Attempting any of these when the canvas is tainted will cause a <code>SecurityError</code> to be thrown. This protects users from having private data exposed by using images to pull information from remote web sites without permission.</p>
+Attempting any of these when the canvas is tainted will cause a `SecurityError` to be thrown. This protects users from having private data exposed by using images to pull information from remote web sites without permission.
 
-<h2 id="Storing_an_image_from_a_foreign_origin">Storing an image from a foreign origin</h2>
+## Storing an image from a foreign origin
 
-<p>In this example, we wish to permit images from a foreign origin to be retrieved and saved to local storage. Implementing this requires configuring the server as well as writing code for the web site itself.</p>
+In this example, we wish to permit images from a foreign origin to be retrieved and saved to local storage. Implementing this requires configuring the server as well as writing code for the web site itself.
 
-<h3 id="Web_server_configuration">Web server configuration</h3>
+### Web server configuration
 
-<p>The first thing we need is a server that's configured to host images with the {{HTTPHeader("Access-Control-Allow-Origin")}} header configured to permit cross-origin access to image files.</p>
+The first thing we need is a server that's configured to host images with the {{HTTPHeader("Access-Control-Allow-Origin")}} header configured to permit cross-origin access to image files.
 
-<p>Let's assume we're serving our site using <a href="https://httpd.apache.org/">Apache</a>. Consider the HTML5 Boilerplate <a href="https://github.com/h5bp/server-configs-apache/blob/master/h5bp/cross-origin/images.conf">Apache server configuration file for CORS images</a>, shown below:</p>
+Let's assume we're serving our site using [Apache](https://httpd.apache.org/). Consider the HTML5 Boilerplate [Apache server configuration file for CORS images](https://github.com/h5bp/server-configs-apache/blob/master/h5bp/cross-origin/images.conf), shown below:
 
-<pre class="brush: xml">&lt;IfModule mod_setenvif.c&gt;
-  &lt;IfModule mod_headers.c&gt;
-    &lt;FilesMatch "\.(avifs?|bmp|cur|gif|ico|jpe?g|jxl|a?png|svgz?|webp)$"&gt;
+```xml
+<IfModule mod_setenvif.c>
+  <IfModule mod_headers.c>
+    <FilesMatch "\.(avifs?|bmp|cur|gif|ico|jpe?g|jxl|a?png|svgz?|webp)$">
       SetEnvIf Origin ":" IS_CORS
       Header set Access-Control-Allow-Origin "*" env=IS_CORS
-    &lt;/FilesMatch&gt;
-  &lt;/IfModule&gt;
-&lt;/IfModule&gt;</pre>
+    </FilesMatch>
+  </IfModule>
+</IfModule>
+```
 
-<p>In short, this configures the server to allow graphic files (those with the extensions ".bmp", ".cur", ".gif", ".ico", ".jpg", ".jpeg", ".png", ".svg", ".svgz", and ".webp") to be accessed cross-origin from anywhere on the internet.</p>
+In short, this configures the server to allow graphic files (those with the extensions ".bmp", ".cur", ".gif", ".ico", ".jpg", ".jpeg", ".png", ".svg", ".svgz", and ".webp") to be accessed cross-origin from anywhere on the internet.
 
-<h3 id="Implementing_the_save_feature">Implementing the save feature</h3>
+### Implementing the save feature
 
-<p>Now that the server has been configured to allow retrieval of the images cross-origin, we can write the code that allows the user to save them to <a href="/en-US/docs/Web/API/Web_Storage_API">local storage</a>, just as if they were being served from the same domain the code is running on.</p>
+Now that the server has been configured to allow retrieval of the images cross-origin, we can write the code that allows the user to save them to [local storage](/en-US/docs/Web/API/Web_Storage_API), just as if they were being served from the same domain the code is running on.
 
-<p>The key is to use the {{htmlattrxref("crossorigin")}} attribute by setting {{domxref("HTMLImageElement.crossOrigin", "crossOrigin")}} on the {{domxref("HTMLImageElement")}} into which the image will be loaded. This tells the browser to request cross-origin access when trying to download the image data.</p>
+The key is to use the {{htmlattrxref("crossorigin")}} attribute by setting {{domxref("HTMLImageElement.crossOrigin", "crossOrigin")}} on the {{domxref("HTMLImageElement")}} into which the image will be loaded. This tells the browser to request cross-origin access when trying to download the image data.
 
-<h4 id="Starting_the_download">Starting the download</h4>
+#### Starting the download
 
-<p>The code that starts the download (say, when the user clicks a "Download" button), looks like this:</p>
+The code that starts the download (say, when the user clicks a "Download" button), looks like this:
 
-<pre class="brush: js">function startDownload() {
+```js
+function startDownload() {
   let imageURL = "https://cdn.glitch.com/4c9ebeb9-8b9a-4adc-ad0a-238d9ae00bb5%2Fmdn_logo-only_color.svg?1535749917189";
 
   downloadedImg = new Image;
   downloadedImg.crossOrigin = "Anonymous";
   downloadedImg.addEventListener("load", imageReceived, false);
   downloadedImg.src = imageURL;
-}</pre>
+}
+```
 
-<p>We're using a hard-coded URL here (<code>imageURL</code>), but that could easily come from anywhere. To begin downloading the image, we create a new {{domxref("HTMLImageElement")}} object by using the {{domxref("HTMLImageElement.Image", "Image()")}} constructor. The image is then configured to allow cross-origin downloading by setting its <code>crossOrigin</code> attribute to <code>"Anonymous"</code> (that is, allow non-authenticated downloading of the image cross-origin). An event listener is added for the {{event("load")}} event being fired on the image element, which means the image data has been received.</p>
+We're using a hard-coded URL here (`imageURL`), but that could easily come from anywhere. To begin downloading the image, we create a new {{domxref("HTMLImageElement")}} object by using the {{domxref("HTMLImageElement.Image", "Image()")}} constructor. The image is then configured to allow cross-origin downloading by setting its `crossOrigin` attribute to `"Anonymous"` (that is, allow non-authenticated downloading of the image cross-origin). An event listener is added for the {{event("load")}} event being fired on the image element, which means the image data has been received.
 
-<p>Finally, the image's {{domxref("HTMLImageElement.src", "src")}} attribute is set to the URL of the image to download; this triggers the download to begin.</p>
+Finally, the image's {{domxref("HTMLImageElement.src", "src")}} attribute is set to the URL of the image to download; this triggers the download to begin.
 
-<h4 id="Receiving_and_saving_the_image">Receiving and saving the image</h4>
+#### Receiving and saving the image
 
-<p>The code that handles the newly-downloaded image is found in the <code>imageReceived()</code> method:</p>
+The code that handles the newly-downloaded image is found in the `imageReceived()` method:
 
-<pre class="brush: js">function imageReceived() {
+```js
+function imageReceived() {
   let canvas = document.createElement("canvas");
   let context = canvas.getContext("2d");
 
@@ -100,22 +103,21 @@ tags:
   catch(err) {
     console.log("Error: " + err);
   }
-}</pre>
+}
+```
 
-<p><code>imageReceived()</code> is called to handle the <code>"load"</code> event on the <code>HTMLImageElement</code> that receives the downloaded image. This event is triggered once the downloaded data is all available. It begins by creating a new {{HTMLElement("canvas")}} element that we'll use to convert the image into a data URL, and by getting access to the canvas's 2D drawing context ({{domxref("CanvasRenderingContext2D")}}) in the variable <code>context</code>.</p>
+`imageReceived()` is called to handle the `"load"` event on the `HTMLImageElement` that receives the downloaded image. This event is triggered once the downloaded data is all available. It begins by creating a new {{HTMLElement("canvas")}} element that we'll use to convert the image into a data URL, and by getting access to the canvas's 2D drawing context ({{domxref("CanvasRenderingContext2D")}}) in the variable `context`.
 
-<p>The canvas's size is adjusted to match the received image, then the image is drawn into the canvas using {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}}. The canvas is then inserted into the document so the image is visible.</p>
+The canvas's size is adjusted to match the received image, then the image is drawn into the canvas using {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}}. The canvas is then inserted into the document so the image is visible.
 
-<p>Now it's time to actually save the image locally. To do this, we use the Web Storage API's local storage mechanism, which is accessed through the {{domxref("Window.localStorage", "localStorage")}} global. The canvas method {{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}} is used to convert the image into a data:// URL representing a PNG image, which is then saved into local storage using {{domxref("Storage.setItem", "setItem()")}}.</p>
+Now it's time to actually save the image locally. To do this, we use the Web Storage API's local storage mechanism, which is accessed through the {{domxref("Window.localStorage", "localStorage")}} global. The canvas method {{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}} is used to convert the image into a data:// URL representing a PNG image, which is then saved into local storage using {{domxref("Storage.setItem", "setItem()")}}.
 
-<p>You can <a href="https://cors-image-example.glitch.me/">try out</a> or <a href="https://glitch.com/edit/#!/remix/cors-image-example">remix</a> this example on Glitch.</p>
+You can [try out](https://cors-image-example.glitch.me/) or [remix](https://glitch.com/edit/#!/remix/cors-image-example) this example on Glitch.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="http://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html">Using Cross-domain images in WebGL and Chrome 13</a></li>
- <li><a href="https://www.whatwg.org/html#attr-img-crossorigin">HTML Specification - the <code>crossorigin</code> attribute</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage API</a></li>
-</ul>
+*   [Using Cross-domain images in WebGL and Chrome 13](http://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
+*   [HTML Specification - the `crossorigin` attribute](https://www.whatwg.org/html#attr-img-crossorigin)
+*   [Web Storage API](/en-US/docs/Web/API/Web_Storage_API)
 
-<div>{{QuickLinksWithSubpages("/en-US/docs/Web/HTML/")}}</div>
+{{QuickLinksWithSubpages("/en-US/docs/Web/HTML/")}}

@@ -7,22 +7,20 @@ tags:
   - Reference
 browser-compat: html.global_attributes.slot
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>The <strong><code>slot</code></strong> <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a> assigns a slot in a <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a> shadow tree to an element: An element with a <code>slot</code> attribute is assigned to the slot created by the {{HTMLElement("slot")}} element whose {{htmlattrxref("name", "slot")}} attribute's value matches that <code>slot</code> attribute's value.</p>
+The **`slot`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) assigns a slot in a [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) shadow tree to an element: An element with a `slot` attribute is assigned to the slot created by the {{HTMLElement("slot")}} element whose {{htmlattrxref("name", "slot")}} attribute's value matches that `slot` attribute's value.
 
-<p>For examples, see our <a href="/en-US/docs/Web/Web_Components/Using_templates_and_slots">Using templates and slots</a> guide.</p>
+For examples, see our [Using templates and slots](/en-US/docs/Web/Web_Components/Using_templates_and_slots) guide.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>All <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</li>
-</ul>
+*   All [global attributes](/en-US/docs/Web/HTML/Global_attributes).

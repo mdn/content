@@ -6,24 +6,20 @@ tags:
   - application cache
 browser-compat: html.elements.html.manifest
 ---
-<p>{{Deprecated_Header}}{{Non-standard_Header}}</p>
+{{Deprecated_Header}}{{Non-standard_Header}}
 
-<p>The <code><strong>manifest</strong></code> attribute of the <code>&lt;html&gt;</code> element specifies a URL of a application cache manifest that is downloaded in the early stages of page load.</p>
+The **`manifest`** attribute of the `<html>` element specifies a URL of a application cache manifest that is downloaded in the early stages of page load.
 
-<div class="notecard note">
-<p><strong>Note:</strong> manifest-based caching mechanism has been deprecated. Use service workers instead.</p>
-</div>
+> **Note:** manifest-based caching mechanism has been deprecated. Use service workers instead.
 
-<p>The manifest attribute has only effect during early stages of page load, thus changing it via regular DOM interfaces has no effect, {{domxref("Window.applicationCache")}} interface instead.</p>
+The manifest attribute has only effect during early stages of page load, thus changing it via regular DOM interfaces has no effect, {{domxref("Window.applicationCache")}} interface instead.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Window.applicationCache")}}</li>
- <li><a href="/en-US/docs/Web/HTML/Using_the_application_cache">Using the application cache</a></li>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a></li>
-</ul>
+*   {{domxref("Window.applicationCache")}}
+*   [Using the application cache](/en-US/docs/Web/HTML/Using_the_application_cache)
+*   [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)

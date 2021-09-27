@@ -15,263 +15,273 @@ tags:
   - Reference
 browser-compat: html.elements.input.input-tel
 ---
-<div>{{HTMLRef("Input_types")}}</div>
+{{HTMLRef("Input_types")}}
 
-<p>{{HTMLElement("input")}} elements of type <code><strong>tel</strong></code> are used to let the user enter and edit a telephone number. Unlike <code><a href="/en-US/docs/Web/HTML/Element/input/email">&lt;input type="email"&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/input/url">&lt;input type="url"&gt;</a></code> , the input value is not automatically validated to a particular format before the form can be submitted, because formats for telephone numbers vary so much around the world.</p>
+{{HTMLElement("input")}} elements of type **`tel`** are used to let the user enter and edit a telephone number. Unlike [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) and [`<input type="url">`](/en-US/docs/Web/HTML/Element/input/url) , the input value is not automatically validated to a particular format before the form can be submitted, because formats for telephone numbers vary so much around the world.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/input-tel.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/input-tel.html", "tabbed-standard")}}
 
-<p>Despite the fact that inputs of type <code>tel</code> are functionally identical to standard <code>text</code> inputs, they do serve useful purposes; the most quickly apparent of these is that mobile browsers — especially on mobile phones — may opt to present a custom keypad optimized for entering phone numbers. Using a specific input type for telephone numbers also makes adding custom validation and handling of phone numbers more convenient.</p>
+Despite the fact that inputs of type `tel` are functionally identical to standard `text` inputs, they do serve useful purposes; the most quickly apparent of these is that mobile browsers — especially on mobile phones — may opt to present a custom keypad optimized for entering phone numbers. Using a specific input type for telephone numbers also makes adding custom validation and handling of phone numbers more convenient.
 
-<div class="note">
-<p><strong>Note:</strong> Browsers that don't support type <code>tel</code> fall back to being a standard {{HTMLElement("input/text", "text")}} input.</p>
-</div>
+> **Note:** Browsers that don't support type `tel` fall back to being a standard {{HTMLElement("input/text", "text")}} input.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
-   <td>A {{domxref("DOMString")}} representing a telephone number, or empty</td>
-  </tr>
-  <tr>
-   <td><strong>Events</strong></td>
-   <td>{{domxref("HTMLElement/change_event", "change")}} and {{domxref("HTMLElement/input_event", "input")}}</td>
-  </tr>
-  <tr>
-   <td><strong>Supported common attributes</strong></td>
-   <td>{{htmlattrxref("autocomplete", "input")}}, {{htmlattrxref("list", "input")}}, {{htmlattrxref("maxlength", "input")}}, {{htmlattrxref("minlength", "input")}}, {{htmlattrxref("pattern", "input")}}, {{htmlattrxref("placeholder", "input")}}, {{htmlattrxref("readonly", "input")}}, and {{htmlattrxref("size", "input")}}</td>
-  </tr>
-  <tr>
-   <td><strong>IDL attributes</strong></td>
-   <td><code>list</code>, <code>selectionStart</code>, <code>selectionEnd</code>, <code>selectionDirection</code>, and <code>value</code></td>
-  </tr>
-  <tr>
-   <td><strong>Methods</strong></td>
-   <td>{{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}}, {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td><strong>{{anch("Value")}}</strong></td>
+      <td>
+        A {{domxref("DOMString")}} representing a telephone number, or
+        empty
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} and
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Supported common attributes</strong></td>
+      <td>
+        {{htmlattrxref("autocomplete", "input")}},
+        {{htmlattrxref("list", "input")}},
+        {{htmlattrxref("maxlength", "input")}},
+        {{htmlattrxref("minlength", "input")}},
+        {{htmlattrxref("pattern", "input")}},
+        {{htmlattrxref("placeholder", "input")}},
+        {{htmlattrxref("readonly", "input")}}, and
+        {{htmlattrxref("size", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td>
+        <code>list</code>, <code>selectionStart</code>,
+        <code>selectionEnd</code>, <code>selectionDirection</code>, and
+        <code>value</code>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}},
+        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
+        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} that either represents a telephone number or is an empty string (<code>""</code>).</p>
+The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} that either represents a telephone number or is an empty string (`""`).
 
-<h2 id="Additional_attributes">Additional attributes</h2>
+## Additional attributes
 
-<p>In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, telephone number inputs support the following attributes.</p>
+In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, telephone number inputs support the following attributes.
 
-<h3>list</h3>
+### list
 
-<p>The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.</p>
+The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
 
-<h3>maxlength</h3>
+### maxlength
 
-<p>The maximum number of characters (as UTF-16 code units) the user can enter into the telephone number field. This must be an integer value 0 or higher. If no <code>maxlength</code> is specified, or an invalid value is specified, the telephone number field has no maximum length. This value must also be greater than or equal to the value of <code>minlength</code>.</p>
+The maximum number of characters (as UTF-16 code units) the user can enter into the telephone number field. This must be an integer value 0 or higher. If no `maxlength` is specified, or an invalid value is specified, the telephone number field has no maximum length. This value must also be greater than or equal to the value of `minlength`.
 
-<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text entered into the field is greater than <code>maxlength</code> UTF-16 code units long.</p>
+The input will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) if the length of the text entered into the field is greater than `maxlength` UTF-16 code units long.
 
-<h3>minlength</h3>
+### minlength
 
-<p>The minimum number of characters (as UTF-16 code units) the user can enter into the telephone number field. This must be an non-negative integer value smaller than or equal to the value specified by <code>maxlength</code>. If no <code>minlength</code> is specified, or an invalid value is specified, the telephone number input has no minimum length.</p>
+The minimum number of characters (as UTF-16 code units) the user can enter into the telephone number field. This must be an non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the telephone number input has no minimum length.
 
-<p>The telephone number field will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long.</p>
+The telephone number field will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long.
 
-<h3>pattern</h3>
+### pattern
 
-<p>The <code>pattern</code> attribute, when specified, is a regular expression that the input's {{htmlattrxref("value")}} must match in order for the value to pass <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">guide on regular expressions</a>; the <code>'u'</code> flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.</p>
+The `pattern` attribute, when specified, is a regular expression that the input's {{htmlattrxref("value")}} must match in order for the value to pass [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.
 
-<p>If the specified pattern is not specified or is invalid, no regular expression is applied and this attribute is ignored completely.</p>
+If the specified pattern is not specified or is invalid, no regular expression is applied and this attribute is ignored completely.
 
-<div class="note">
-<p><strong>Note:</strong> Use the {{htmlattrxref("title", "input")}} attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.</p>
-</div>
+> **Note:** Use the {{htmlattrxref("title", "input")}} attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.
 
-<p>See {{anch("Pattern validation")}} below for details and an example.</p>
+See {{anch("Pattern validation")}} below for details and an example.
 
-<h3>placeholder</h3>
+### placeholder
 
-<p>The <code>placeholder</code> attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text <em>must not</em> include carriage returns or line feeds.</p>
+The `placeholder` attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text *must not* include carriage returns or line feeds.
 
-<p>If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossary("RTL")}}) but needs to present the placeholder in the opposite directionality, you can use Unicode bidirectional algorithm formatting characters to override directionality within the placeholder; see {{SectionOnPage("/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Overriding BiDi using Unicode control characters")}} for those characters.</p>
+If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossary("RTL")}}) but needs to present the placeholder in the opposite directionality, you can use Unicode bidirectional algorithm formatting characters to override directionality within the placeholder; see {{SectionOnPage("/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Overriding BiDi using Unicode control characters")}} for those characters.
 
-<div class="note">
-<p><strong>Note:</strong> Avoid using the <code>placeholder</code> attribute if you can. It is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for more information.</p>
-</div>
+> **Note:** Avoid using the `placeholder` attribute if you can. It is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for more information.
 
-<h3>readonly</h3>
+### readonly
 
-<p>A Boolean attribute which, if present, means this field cannot be edited by the user. Its <code>value</code> can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement")}} <code>value</code> property.</p>
+A Boolean attribute which, if present, means this field cannot be edited by the user. Its `value` can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement")}} `value` property.
 
-<div class="note">
-<p><strong>Note:</strong> Because a read-only field cannot have a value, <code>required</code> does not have any effect on inputs with the <code>readonly</code> attribute also specified.</p>
-</div>
+> **Note:** Because a read-only field cannot have a value, `required` does not have any effect on inputs with the `readonly` attribute also specified.
 
-<h3>size</h3>
+### size
 
-<p>The <code>size</code> attribute is a numeric value indicating how many characters wide the input field should be. The value must be a number greater than zero, and the default value is 20. Since character widths vary, this may or may not be exact and should not be relied upon to be so; the resulting input may be narrower or wider than the specified number of characters, depending on the characters and the font ({{cssxref("font")}} settings in use).</p>
+The `size` attribute is a numeric value indicating how many characters wide the input field should be. The value must be a number greater than zero, and the default value is 20. Since character widths vary, this may or may not be exact and should not be relied upon to be so; the resulting input may be narrower or wider than the specified number of characters, depending on the characters and the font ({{cssxref("font")}} settings in use).
 
-<p>This does <em>not</em> set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the <code>{{anch("maxlength")}}</code> attribute.</p>
+This does *not* set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the `{{anch("maxlength")}}` attribute.
 
-<h2 id="Non-standard_attributes">Non-standard attributes</h2>
+## Non-standard attributes
 
-<p>The following non-standard attributes are available to telephone number input fields. As a general rule, you should avoid using them unless it can't be helped.</p>
+The following non-standard attributes are available to telephone number input fields. As a general rule, you should avoid using them unless it can't be helped.
 
-<h3>autocorrect</h3>
+### autocorrect
 
-<p>A Safari extension, the <code>autocorrect</code> attribute is a string which indicates whether or not to activate automatic correction while the user is editing this field. Permitted values are:</p>
+A Safari extension, the `autocorrect` attribute is a string which indicates whether or not to activate automatic correction while the user is editing this field. Permitted values are:
 
-<dl>
- <dt><code>on</code></dt>
- <dd>Enable automatic correction of typos, as well as processing of text substitutions if any are configured.</dd>
- <dt><code>off</code></dt>
- <dd>Disable automatic correction and text substitutions.</dd>
-</dl>
+*   `on`
+    *   : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
+*   `off`
+    *   : Disable automatic correction and text substitutions.
 
-<h3>mozactionhint</h3>
+### mozactionhint
 
-<p>A Mozilla extension, supported by Firefox for Android, which provides a hint as to what sort of action will be taken if the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field. This information is used to decide what kind of label to use on the <kbd>Enter</kbd> key on the virtual keyboard.</p>
+A Mozilla extension, supported by Firefox for Android, which provides a hint as to what sort of action will be taken if the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field. This information is used to decide what kind of label to use on the <kbd>Enter</kbd> key on the virtual keyboard.
 
-<div class="note">
-<p><strong>Note:</strong> This <a href="https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute">has been standardized</a> as the global attribute {{htmlattrxref("enterkeyhint")}}, but is not yet widely implemented. To see the status of the change being implemented in Firefox, see {{bug(1490661)}}.</p>
-</div>
+> **Note:** This [has been standardized](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) as the global attribute {{htmlattrxref("enterkeyhint")}}, but is not yet widely implemented. To see the status of the change being implemented in Firefox, see {{bug(1490661)}}.
 
-<p>Permitted values are: <code>go</code>, <code>done</code>, <code>next</code>, <code>search</code>, and <code>send</code>. The browser decides, using this hint, what label to put on the enter key.</p>
+Permitted values are: `go`, `done`, `next`, `search`, and `send`. The browser decides, using this hint, what label to put on the enter key.
 
-<h2 id="Using_tel_inputs">Using tel inputs</h2>
+## Using tel inputs
 
-<p>Telephone numbers are a very commonly collected type of data on the web. When creating any kind of registration or e-commerce site, for example, you will likely need to ask the user for a telephone number, whether for business purposes or for emergency contact purposes. Given how commonly-entered phone numbers are, it's unfortunate that a "one size fits all" solution for validating phone numbers is not practical.</p>
+Telephone numbers are a very commonly collected type of data on the web. When creating any kind of registration or e-commerce site, for example, you will likely need to ask the user for a telephone number, whether for business purposes or for emergency contact purposes. Given how commonly-entered phone numbers are, it's unfortunate that a "one size fits all" solution for validating phone numbers is not practical.
 
-<p>Fortunately, you can consider the requirements of your own site and implement an appropriate level of validation yourself. See {{anch("Validation")}}, below, for details.</p>
+Fortunately, you can consider the requirements of your own site and implement an appropriate level of validation yourself. See {{anch("Validation")}}, below, for details.
 
-<h3 id="Custom_keyboards">Custom keyboards</h3>
+### Custom keyboards
 
-<p>One of the main advantages of <code>&lt;input type="tel"&gt;</code> is that it causes mobile browsers to display a special keyboard for entering phone numbers. For example, here's what the keypads look like on a couple of devices.</p>
+One of the main advantages of `<input type="tel">` is that it causes mobile browsers to display a special keyboard for entering phone numbers. For example, here's what the keypads look like on a couple of devices.
 
-<table class="standard-table">
- <caption>Examples of custom keyboards on mobile devices.</caption>
- <thead>
-  <tr>
-   <th scope="col">Firefox for Android</th>
-   <th scope="col">WebKit iOS (Safari/Chrome/Firefox)</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><img alt="Firefox for Android screen shot" src="fx-android-tel.png"></td>
-   <td><img alt="Firefox for iOS screenshot" src="iphone-tel-keyboard-50pct.png"></td>
-  </tr>
- </tbody>
-</table>
+| Firefox for Android                                    | WebKit iOS (Safari/Chrome/Firefox)                           |
+| ------------------------------------------------------ | ------------------------------------------------------------ |
+| ![Firefox for Android screen shot](fx-android-tel.png) | ![Firefox for iOS screenshot](iphone-tel-keyboard-50pct.png) |
 
-<h3 id="A_simple_tel_input">A simple tel input</h3>
+### A simple tel input
 
-<p>In its most basic form, a tel input can be implemented like this:</p>
+In its most basic form, a tel input can be implemented like this:
 
-<pre class="brush: html">&lt;label for="telNo"&gt;Phone number:&lt;/label&gt;
-&lt;input id="telNo" name="telNo" type="tel"&gt;</pre>
+```html
+<label for="telNo">Phone number:</label>
+<input id="telNo" name="telNo" type="tel">
+```
 
-<p>{{ EmbedLiveSample('A_simple_tel_input', 600, 40) }}</p>
+{{ EmbedLiveSample('A_simple_tel_input', 600, 40) }}
 
-<p>There is nothing magical going on here. When submitted to the server, the above input's data would be represented as, for example, <code>telNo=+12125553151</code>.</p>
+There is nothing magical going on here. When submitted to the server, the above input's data would be represented as, for example, `telNo=+12125553151`.
 
-<h3 id="Placeholders">Placeholders</h3>
+### Placeholders
 
-<p>Sometimes it's helpful to offer an in-context hint as to what form the input data should take. This can be especially important if the page design doesn't offer descriptive labels for each {{HTMLElement("input")}}. This is where <strong>placeholders</strong> come in. A placeholder is a value that demonstrates the form the <code>value</code> should take by presenting an example of a valid value, which is displayed inside the edit box when the element's <code>value</code> is <code>""</code>. Once data is entered into the box, the placeholder disappears; if the box is emptied, the placeholder reappears.</p>
+Sometimes it's helpful to offer an in-context hint as to what form the input data should take. This can be especially important if the page design doesn't offer descriptive labels for each {{HTMLElement("input")}}. This is where **placeholders** come in. A placeholder is a value that demonstrates the form the `value` should take by presenting an example of a valid value, which is displayed inside the edit box when the element's `value` is `""`. Once data is entered into the box, the placeholder disappears; if the box is emptied, the placeholder reappears.
 
-<p>Here, we have an <code>tel</code> input with the placeholder <code>123-4567-8901</code>. Note how the placeholder disappears and reappears as you manipulate the contents of the edit field.</p>
+Here, we have an `tel` input with the placeholder `123-4567-8901`. Note how the placeholder disappears and reappears as you manipulate the contents of the edit field.
 
-<pre class="brush: html">&lt;input id="telNo" name="telNo" type="tel"
-       placeholder="123-4567-8901"&gt;</pre>
+```html
+<input id="telNo" name="telNo" type="tel"
+       placeholder="123-4567-8901">
+```
 
-<p>{{ EmbedLiveSample('Placeholders', 600, 40) }}</p>
+{{ EmbedLiveSample('Placeholders', 600, 40) }}
 
-<h3 id="Controlling_the_input_size">Controlling the input size</h3>
+### Controlling the input size
 
-<p>You can control not only the physical length of the input box, but also the minimum and maximum lengths allowed for the input text itself.</p>
+You can control not only the physical length of the input box, but also the minimum and maximum lengths allowed for the input text itself.
 
-<h4 id="Physical_input_element_size">Physical input element size</h4>
+#### Physical input element size
 
-<p>The physical size of the input box can be controlled using the {{htmlattrxref("size", "input")}} attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the <code>tel</code> edit box is 20 characters wide:</p>
+The physical size of the input box can be controlled using the {{htmlattrxref("size", "input")}} attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the `tel` edit box is 20 characters wide:
 
-<pre class="brush: html">&lt;input id="telNo" name="telNo" type="tel"
-       size="20"&gt;</pre>
+```html
+<input id="telNo" name="telNo" type="tel"
+       size="20">
+```
 
-<p>{{ EmbedLiveSample('Physical_input_element_size', 600, 40) }}</p>
+{{ EmbedLiveSample('Physical_input_element_size', 600, 40) }}
 
-<h4 id="Element_value_length">Element value length</h4>
+#### Element value length
 
-<p>The <code>size</code> is separate from the length limitation on the entered telephone number. You can specify a minimum length, in characters, for the entered telephone number using the {{htmlattrxref("minlength", "input")}} attribute; similarly, use {{htmlattrxref("maxlength", "input")}} to set the maximum length of the entered telephone number.</p>
+The `size` is separate from the length limitation on the entered telephone number. You can specify a minimum length, in characters, for the entered telephone number using the {{htmlattrxref("minlength", "input")}} attribute; similarly, use {{htmlattrxref("maxlength", "input")}} to set the maximum length of the entered telephone number.
 
-<p>The example below creates a 20-character wide telephone number entry box, requiring that the contents be no shorter than 9 characters and no longer than 14 characters.</p>
+The example below creates a 20-character wide telephone number entry box, requiring that the contents be no shorter than 9 characters and no longer than 14 characters.
 
-<pre class="brush: html">&lt;input id="telNo" name="telNo" type="tel"
-       size="20" minlength="9" maxlength="14"&gt;</pre>
+```html
+<input id="telNo" name="telNo" type="tel"
+       size="20" minlength="9" maxlength="14">
+```
 
-<p>{{EmbedLiveSample("Element_value_length", 600, 40) }}</p>
+{{EmbedLiveSample("Element_value_length", 600, 40) }}
 
-<div class="note">
-<p><strong>Note:</strong> The above attributes do affect {{anch("Validation")}} — the above example's inputs will count as invalid if the length of the value is less than 9 characters, or more than 14. Most browser won't even let you enter a value over the max length.</p>
-</div>
+> **Note:** The above attributes do affect {{anch("Validation")}} — the above example's inputs will count as invalid if the length of the value is less than 9 characters, or more than 14. Most browser won't even let you enter a value over the max length.
 
-<h3 id="Providing_default_options">Providing default options</h3>
+### Providing default options
 
-<h4>Providing a single default using the value attribute</h4>
+#### Providing a single default using the value attribute
 
-<p>As always, you can provide a default value for an <code>tel</code> input box by setting its {{htmlattrxref("value", "input")}} attribute:</p>
+As always, you can provide a default value for an `tel` input box by setting its {{htmlattrxref("value", "input")}} attribute:
 
-<pre class="brush: html">&lt;input id="telNo" name="telNo" type="tel"
-       value="333-4444-4444"&gt;</pre>
+```html
+<input id="telNo" name="telNo" type="tel"
+       value="333-4444-4444">
+```
 
-<p>{{EmbedLiveSample("Providing_a_single_default_using_the_value_attribute", 600, 40)}}</p>
+{{EmbedLiveSample("Providing_a_single_default_using_the_value_attribute", 600, 40)}}
 
-<h4 id="Offering_suggested_values">Offering suggested values</h4>
+#### Offering suggested values
 
-<p>Taking it a step further, you can provide a list of default phone number values from which the user can select. To do this, use the {{htmlattrxref("list", "input")}} attribute. This doesn't limit the user to those options, but does allow them to select commonly-used telephone numbers more quickly. This also offers hints to {{htmlattrxref("autocomplete", "input")}}. The <code>list</code> attribute specifies the ID of a {{HTMLElement("datalist")}} element, which in turn contains one {{HTMLElement("option")}} element per suggested value; each <code>option</code>'s <code>value</code> is the corresponding suggested value for the telephone number entry box.</p>
+Taking it a step further, you can provide a list of default phone number values from which the user can select. To do this, use the {{htmlattrxref("list", "input")}} attribute. This doesn't limit the user to those options, but does allow them to select commonly-used telephone numbers more quickly. This also offers hints to {{htmlattrxref("autocomplete", "input")}}. The `list` attribute specifies the ID of a {{HTMLElement("datalist")}} element, which in turn contains one {{HTMLElement("option")}} element per suggested value; each `option`'s `value` is the corresponding suggested value for the telephone number entry box.
 
-<pre class="brush: html">&lt;label for="telNo"&gt;Phone number: &lt;/label&gt;
-&lt;input id="telNo" name="telNo" type="tel" list="defaultTels"&gt;
+```html
+<label for="telNo">Phone number: </label>
+<input id="telNo" name="telNo" type="tel" list="defaultTels">
 
-&lt;datalist id="defaultTels"&gt;
-  &lt;option value="111-1111-1111"&gt;
-  &lt;option value="122-2222-2222"&gt;
-  &lt;option value="333-3333-3333"&gt;
-  &lt;option value="344-4444-4444"&gt;
-&lt;/datalist&gt;</pre>
+<datalist id="defaultTels">
+  <option value="111-1111-1111">
+  <option value="122-2222-2222">
+  <option value="333-3333-3333">
+  <option value="344-4444-4444">
+</datalist>
+```
 
-<p>{{EmbedLiveSample("Offering_suggested_values", 600, 40)}}</p>
+{{EmbedLiveSample("Offering_suggested_values", 600, 40)}}
 
-<p>With the {{HTMLElement("datalist")}} element and its {{HTMLElement("option")}}s in place, the browser will offer the specified values as potential values for the email address; this is typically presented as a popup or drop-down menu containing the suggestions. While the specific user experience may vary from one browser to another, typically clicking in the edit box presents a drop-down of the suggested email addresses. Then, as the user types, the list is adjusted to show only filtered matching values. Each typed character narrows down the list until the user makes a selection or types a custom value.</p>
+With the {{HTMLElement("datalist")}} element and its {{HTMLElement("option")}}s in place, the browser will offer the specified values as potential values for the email address; this is typically presented as a popup or drop-down menu containing the suggestions. While the specific user experience may vary from one browser to another, typically clicking in the edit box presents a drop-down of the suggested email addresses. Then, as the user types, the list is adjusted to show only filtered matching values. Each typed character narrows down the list until the user makes a selection or types a custom value.
 
-<p>Here's a screenshot of what that might look like:</p>
+Here's a screenshot of what that might look like:
 
-<p><img alt="" src="phone-number-with-options.png"></p>
+![](phone-number-with-options.png)
 
-<h2 id="Validation">Validation</h2>
+## Validation
 
-<p>As we've touched on before, it's quite difficult to provide a one-size-fits-all client-side validation solution for phone numbers. So what can we do? Let's consider some options.</p>
+As we've touched on before, it's quite difficult to provide a one-size-fits-all client-side validation solution for phone numbers. So what can we do? Let's consider some options.
 
-<div class="warning">
-<p><strong>Warning:</strong> HTML form validation is <em>not</em> a substitute for server-side scripts that ensure the entered data is in the proper format before it is allowed into the database.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.</p>
-</div>
+> **Warning:** HTML form validation is *not* a substitute for server-side scripts that ensure the entered data is in the proper format before it is allowed into the database.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.
 
-<h3 id="Making_telephone_numbers_required">Making telephone numbers required</h3>
+### Making telephone numbers required
 
-<p>You can make it so that an empty input is invalid and won't be submitted to the server using the {{htmlattrxref("required", "input")}} attribute. For example, let's use this HTML:</p>
+You can make it so that an empty input is invalid and won't be submitted to the server using the {{htmlattrxref("required", "input")}} attribute. For example, let's use this HTML:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="telNo"&gt;Enter a telephone number (required): &lt;/label&gt;
-    &lt;input id="telNo" name="telNo" type="tel" required&gt;
-    &lt;span class="validity"&gt;&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button&gt;Submit&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <div>
+    <label for="telNo">Enter a telephone number (required): </label>
+    <input id="telNo" name="telNo" type="tel" required>
+    <span class="validity"></span>
+  </div>
+  <div>
+    <button>Submit</button>
+  </div>
+</form>
+```
 
-<p>And let's include the following CSS to highlight valid entries with a checkmark and invalid entries with a cross:</p>
+And let's include the following CSS to highlight valid entries with a checkmark and invalid entries with a cross:
 
-<pre class="brush: css">div {
+```css
+div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -295,31 +305,35 @@ input:valid+span:after {
   content: '✓';
   padding-left: 5px;
   color: #009000;
-}</pre>
+}
+```
 
-<p>The output looks like this:</p>
+The output looks like this:
 
-<p>{{EmbedLiveSample("Making_telephone_numbers_required", 700, 70)}}</p>
+{{EmbedLiveSample("Making_telephone_numbers_required", 700, 70)}}
 
-<h3 id="Pattern_validation">Pattern validation</h3>
+### Pattern validation
 
-<p>If you want to further restrict entered numbers so they also have to conform to a specific pattern, you can use the {{htmlattrxref("pattern","input")}} attribute, which takes as its value a {{Glossary("regular expression")}} that entered values have to match.</p>
+If you want to further restrict entered numbers so they also have to conform to a specific pattern, you can use the {{htmlattrxref("pattern","input")}} attribute, which takes as its value a {{Glossary("regular expression")}} that entered values have to match.
 
-<p>In this example we'll use the same CSS as before, but our HTML is changed to look like this:</p>
+In this example we'll use the same CSS as before, but our HTML is changed to look like this:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="telNo"&gt;Enter a telephone number (in the form xxx-xxx-xxxx): &lt;/label&gt;
-    &lt;input id="telNo" name="telNo" type="tel" required
-           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"&gt;
-    &lt;span class="validity"&gt;&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button&gt;Submit&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <div>
+    <label for="telNo">Enter a telephone number (in the form xxx-xxx-xxxx): </label>
+    <input id="telNo" name="telNo" type="tel" required
+           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+    <span class="validity"></span>
+  </div>
+  <div>
+    <button>Submit</button>
+  </div>
+</form>
+```
 
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -343,60 +357,64 @@ input:valid+span:after {
   content: '✓';
   padding-left: 5px;
   color: #009000;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Pattern_validation", 700, 70)}}</p>
+{{EmbedLiveSample("Pattern_validation", 700, 70)}}
 
-<p>Notice how the entered value is reported as invalid unless the pattern xxx-xxx-xxxx is matched; for instance, 41-323-421 won't be accepted. Neither will 800-MDN-ROCKS. However, 865-555-6502 will be accepted. This particular pattern is obviously only useful for certain locales — in a real application you'd probably have to vary the pattern used depending on the locale of the user.</p>
+Notice how the entered value is reported as invalid unless the pattern xxx-xxx-xxxx is matched; for instance, 41-323-421 won't be accepted. Neither will 800-MDN-ROCKS. However, 865-555-6502 will be accepted. This particular pattern is obviously only useful for certain locales — in a real application you'd probably have to vary the pattern used depending on the locale of the user.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, we present a simple interface with a {{htmlelement("select")}} element that lets the user choose which country they're in, and a set of <code>&lt;input type="tel"&gt;</code> elements to let them enter each part of their phone number; there is no reason why you can't have multiple <code>tel</code> inputs.</p>
+In this example, we present a simple interface with a {{htmlelement("select")}} element that lets the user choose which country they're in, and a set of `<input type="tel">` elements to let them enter each part of their phone number; there is no reason why you can't have multiple `tel` inputs.
 
-<p>Each input has a {{htmlattrxref("placeholder","input")}} attribute to show a hint to sighted users about what to enter into it, a {{htmlattrxref("pattern","input")}} to enforce a specific number of characters for the desired section, and an <code>aria-label</code> attribute to contain a hint to be read out to screenreader users about what to enter into it.</p>
+Each input has a {{htmlattrxref("placeholder","input")}} attribute to show a hint to sighted users about what to enter into it, a {{htmlattrxref("pattern","input")}} to enforce a specific number of characters for the desired section, and an `aria-label` attribute to contain a hint to be read out to screenreader users about what to enter into it.
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="country"&gt;Choose your country:&lt;/label&gt;
-    &lt;select id="country" name="country"&gt;
-      &lt;option&gt;UK&lt;/option&gt;
-      &lt;option selected&gt;US&lt;/option&gt;
-      &lt;option&gt;Germany&lt;/option&gt;
-    &lt;/select&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;p&gt;Enter your telephone number: &lt;/p&gt;
-    &lt;span class="areaDiv"&gt;
-      &lt;input id="areaNo" name="areaNo" type="tel" required
+```html
+<form>
+  <div>
+    <label for="country">Choose your country:</label>
+    <select id="country" name="country">
+      <option>UK</option>
+      <option selected>US</option>
+      <option>Germany</option>
+    </select>
+  </div>
+  <div>
+    <p>Enter your telephone number: </p>
+    <span class="areaDiv">
+      <input id="areaNo" name="areaNo" type="tel" required
              placeholder="Area code" pattern="[0-9]{3}"
-             aria-label="Area code"&gt;
-      &lt;span class="validity"&gt;&lt;/span&gt;
-    &lt;/span&gt;
-    &lt;span class="number1Div"&gt;
-      &lt;input id="number1" name="number1" type="tel" required
+             aria-label="Area code">
+      <span class="validity"></span>
+    </span>
+    <span class="number1Div">
+      <input id="number1" name="number1" type="tel" required
              placeholder="First part" pattern="[0-9]{3}"
-             aria-label="First part of number"&gt;
-      &lt;span class="validity"&gt;&lt;/span&gt;
-    &lt;/span&gt;
-    &lt;span class="number2Div"&gt;
-      &lt;input id="number2" name="number2" type="tel" required
+             aria-label="First part of number">
+      <span class="validity"></span>
+    </span>
+    <span class="number2Div">
+      <input id="number2" name="number2" type="tel" required
              placeholder="Second part" pattern="[0-9]{4}"
-             aria-label="Second part of number"&gt;
-      &lt;span class="validity"&gt;&lt;/span&gt;
-    &lt;/span&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button&gt;Submit&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+             aria-label="Second part of number">
+      <span class="validity"></span>
+    </span>
+  </div>
+  <div>
+    <button>Submit</button>
+  </div>
+</form>
+```
 
-<p>The JavaScript is relatively simple — it contains an {{domxref("GlobalEventHandlers.onchange", "onchange")}} event handler that, when the <code>&lt;select&gt;</code> value is changed, updates the <code>&lt;input&gt;</code> element's <code>pattern</code>, <code>placeholder</code>, and <code>aria-label</code> to suit the format of telephone numbers in that country/territory.</p>
+The JavaScript is relatively simple — it contains an {{domxref("GlobalEventHandlers.onchange", "onchange")}} event handler that, when the `<select>` value is changed, updates the `<input>` element's `pattern`, `placeholder`, and `aria-label` to suit the format of telephone numbers in that country/territory.
 
-<pre class="brush: js">var selectElem = document.querySelector("select");
+```js
+var selectElem = document.querySelector("select");
 var inputElems = document.querySelectorAll("input");
 
 selectElem.onchange = function() {
-  for(var i = 0; i &lt; inputElems.length; i++) {
+  for(var i = 0; i < inputElems.length; i++) {
     inputElems[i].value = "";
   }
 
@@ -436,17 +454,19 @@ selectElem.onchange = function() {
     inputElems[2].pattern = "[0-9]{4}";
     inputElems[2].setAttribute("aria-label","Second part of number");
   }
-}</pre>
+}
+```
 
-<p>The example looks like this:</p>
+The example looks like this:
 
-<p>{{EmbedLiveSample('Examples', 600, 140)}}</p>
+{{EmbedLiveSample('Examples', 600, 140)}}
 
-<p>This is an interesting idea, which goes to show a potential solution to the problem of dealing with international phone numbers. You would have to extend the example of course to provide the correct pattern for potentially every country, which would be a lot of work, and there would still be no foolproof guarantee that the users would enter their numbers correctly.</p>
+This is an interesting idea, which goes to show a potential solution to the problem of dealing with international phone numbers. You would have to extend the example of course to provide the correct pattern for potentially every country, which would be a lot of work, and there would still be no foolproof guarantee that the users would enter their numbers correctly.
 
-<p>It makes you wonder if it is worth going to all this trouble on the client-side, when you could just let the user enter their number in whatever format they wanted on the client-side and then validate and sanitize it on the server. But this choice is yours to make.</p>
+It makes you wonder if it is worth going to all this trouble on the client-side, when you could just let the user enter their number in whatever format they wanted on the client-side and then validate and sanitize it on the server. But this choice is yours to make.
 
-<pre class="brush: css hidden">div {
+```css hidden
+div {
 margin-bottom: 10px;
 position: relative;
 }
@@ -470,26 +490,23 @@ input:valid+span:after {
   content: '✓';
   padding-left: 5px;
   color: #009000;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn/Forms">HTML forms guide</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/forms">Forms and accessibility</a></li>
- <li>{{HTMLElement("input")}}
-  <ul>
-   <li><code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code></li>
-   <li><code><a href="/en-US/docs/Web/HTML/Element/input/email">&lt;input type="email"&gt;</a></code></li>
-  </ul>
- </li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
-</ul>
+*   [HTML forms guide](/en-US/docs/Learn/Forms)
+*   [Forms and accessibility](/en-US/docs/Web/Accessibility/ARIA/forms)
+*   {{HTMLElement("input")}}
+
+    *   [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text)
+    *   [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email)
+*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

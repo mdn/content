@@ -10,30 +10,32 @@ tags:
   - Web
 browser-compat: html.elements.blink
 ---
-<div>{{HTMLRef}}{{Deprecated_header}}</div>
+{{HTMLRef}}{{Deprecated_header}}
 
-<p>The <strong><code>&lt;blink&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element is a non-standard element which causes the enclosed text to flash slowly.</p>
+The **`<blink>`** [HTML](/en-US/docs/Web/HTML) element is a non-standard element which causes the enclosed text to flash slowly.
 
-<div class="warning"><p><strong>Warning:</strong> Do not use this element as it is <strong>obsolete</strong> and is bad design practice. Blinking text is frowned upon by several accessibility standards and the CSS specification allows browsers to ignore the <code>&lt;blink&gt;</code> element.</p></div>
+> **Warning:** Do not use this element as it is **obsolete** and is bad design practice. Blinking text is frowned upon by several accessibility standards and the CSS specification allows browsers to ignore the `<blink>` element.
 
-<h2 id="DOM_interface">DOM interface</h2>
+## DOM interface
 
-<p>This element is unsupported and thus implements the {{domxref("HTMLUnknownElement")}} interface.</p>
+This element is unsupported and thus implements the {{domxref("HTMLUnknownElement")}} interface.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:html">&lt;blink&gt;Why would somebody use this?&lt;/blink&gt;
-</pre>
+```html
+<blink>Why would somebody use this?</blink>
+```
 
-<h3 id="Result_toned_down!">Result (toned down!)</h3>
+### Result (toned down!)
 
-<p><img src="htmlblinkelement.gif"></p>
+![](htmlblinkelement.gif)
 
-<h2 id="CSS_polyfill">CSS polyfill</h2>
+## CSS polyfill
 
-<p>If you really do need a polyfill, then you can use the following CSS polyfill. Works in IE10+.</p>
+If you really do need a polyfill, then you can use the following CSS polyfill. Works in IE10+.
 
-<pre class="brush: css">blink {
+```css
+blink {
   -webkit-animation: 2s linear infinite condemned_blink_effect; /* for Safari 4.0 - 8.0 */
   animation: 2s linear infinite condemned_blink_effect;
 }
@@ -61,21 +63,20 @@ browser-compat: html.elements.blink
   100% {
     visibility: visible;
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="http://www.montulli.org/theoriginofthe%3Cblink%3Etag">History of the creation of the HTML <code>&lt;blink&gt;</code> element</a>.</li>
- <li>{{cssxref("text-decoration")}}, where a blink value exists, though browsers are not required to effectively make it blink.</li>
- <li>{{htmlelement("marquee")}}, another similar non-standard element.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">CSS animations</a> are the way to go to create such an effect.</li>
-</ul>
+*   [History of the creation of the HTML `<blink>` element](http://www.montulli.org/theoriginofthe%3Cblink%3Etag).
+*   {{cssxref("text-decoration")}}, where a blink value exists, though browsers are not required to effectively make it blink.
+*   {{htmlelement("marquee")}}, another similar non-standard element.
+*   [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) are the way to go to create such an effect.

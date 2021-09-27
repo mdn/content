@@ -14,218 +14,230 @@ tags:
   - text input
 browser-compat: html.elements.input.input-text
 ---
-<div>{{HTMLRef("Input_types")}}</div>
+{{HTMLRef("Input_types")}}
 
-<p>{{HTMLElement("input")}} elements of type <code><strong>text</strong></code> create basic single-line text fields.</p>
+{{HTMLElement("input")}} elements of type **`text`** create basic single-line text fields.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
-   <td>A {{domxref("DOMString")}} representing the text contained in the text field.</td>
-  </tr>
-  <tr>
-   <td><strong>Events</strong></td>
-   <td>{{event("change")}} and {{event("input")}}</td>
-  </tr>
-  <tr>
-   <td><strong>Supported Common Attributes</strong></td>
-   <td>{{htmlattrxref("autocomplete", "input")}}, {{htmlattrxref("list", "input")}}, {{htmlattrxref("maxlength", "input")}}, {{htmlattrxref("minlength", "input")}}, {{htmlattrxref("pattern", "input")}}, {{htmlattrxref("placeholder", "input")}}, {{htmlattrxref("readonly", "input")}}, {{htmlattrxref("required", "input")}} and {{htmlattrxref("size", "input")}}</td>
-  </tr>
-  <tr>
-   <td><strong>IDL attributes</strong></td>
-   <td>{{htmlattrxref("list", "input")}}, <code>value</code></td>
-  </tr>
-  <tr>
-   <td><strong>Methods</strong></td>
-   <td>{{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}} and {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td><strong>{{anch("Value")}}</strong></td>
+      <td>
+        A {{domxref("DOMString")}} representing the text contained in
+        the text field.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>{{event("change")}} and {{event("input")}}</td>
+    </tr>
+    <tr>
+      <td><strong>Supported Common Attributes</strong></td>
+      <td>
+        {{htmlattrxref("autocomplete", "input")}},
+        {{htmlattrxref("list", "input")}},
+        {{htmlattrxref("maxlength", "input")}},
+        {{htmlattrxref("minlength", "input")}},
+        {{htmlattrxref("pattern", "input")}},
+        {{htmlattrxref("placeholder", "input")}},
+        {{htmlattrxref("readonly", "input")}},
+        {{htmlattrxref("required", "input")}} and
+        {{htmlattrxref("size", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td>{{htmlattrxref("list", "input")}}, <code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}},
+        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}}
+        and
+        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>The {{htmlattrxref("value", "input")}} attribute is a {{domxref("DOMString")}} that contains the current value of the text entered into the text field. You can retrieve this using the {{domxref("HTMLInputElement")}} <code>value</code> property in JavaScript.</p>
+The {{htmlattrxref("value", "input")}} attribute is a {{domxref("DOMString")}} that contains the current value of the text entered into the text field. You can retrieve this using the {{domxref("HTMLInputElement")}} `value` property in JavaScript.
 
-<pre class="brush: js">let theText = myTextInput.value;
-</pre>
+```js
+let theText = myTextInput.value;
+```
 
-<p>If no validation constraints are in place for the input (see {{anch("Validation")}} for more details), the value may be an empty string ("").</p>
+If no validation constraints are in place for the input (see {{anch("Validation")}} for more details), the value may be an empty string ("").
 
-<h2 id="Additional_attributes">Additional attributes</h2>
+## Additional attributes
 
-<p>In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, text inputs support the following attributes.</p>
+In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, text inputs support the following attributes.
 
-<h3>list</h3>
+### list
 
-<p>The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.</p>
+The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
 
-<h3>maxlength</h3>
+### maxlength
 
-<p>The maximum number of characters (as UTF-16 code units) the user can enter into the <code>text</code> input. This must be an integer value 0 or higher. If no <code>maxlength</code> is specified, or an invalid value is specified, the <code>text</code> input has no maximum length. This value must also be greater than or equal to the value of <code>minlength</code>.</p>
+The maximum number of characters (as UTF-16 code units) the user can enter into the `text` input. This must be an integer value 0 or higher. If no `maxlength` is specified, or an invalid value is specified, the `text` input has no maximum length. This value must also be greater than or equal to the value of `minlength`.
 
-<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text value of the field is greater than <code>maxlength</code> UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.</p>
+The input will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) if the length of the text value of the field is greater than `maxlength` UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.
 
-<h3>minlength</h3>
+### minlength
 
-<p>The minimum number of characters (as UTF-16 code units) the user can enter into the <code>text</code> input. This must be an non-negative integer value smaller than or equal to the value specified by <code>maxlength</code>. If no <code>minlength</code> is specified, or an invalid value is specified, the <code>text</code> input has no minimum length.</p>
+The minimum number of characters (as UTF-16 code units) the user can enter into the `text` input. This must be an non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the `text` input has no minimum length.
 
-<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.</p>
+The input will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.
 
-<h3>pattern</h3>
+### pattern
 
-<p>The <code>pattern</code> attribute, when specified, is a regular expression that the input's {{htmlattrxref("value")}} must match in order for the value to pass <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">guide on regular expressions</a>; the <code>'u'</code> flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.</p>
+The `pattern` attribute, when specified, is a regular expression that the input's {{htmlattrxref("value")}} must match in order for the value to pass [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.
 
-<p>If the specified pattern is not specified or is invalid, no regular expression is applied and this attribute is ignored completely.</p>
+If the specified pattern is not specified or is invalid, no regular expression is applied and this attribute is ignored completely.
 
-<div class="note">
-<p><strong>Note:</strong> Use the {{htmlattrxref("title", "input")}} attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.</p>
-</div>
+> **Note:** Use the {{htmlattrxref("title", "input")}} attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.
 
-<p>See {{anch("Specifying a pattern")}} for further details and an example.</p>
+See {{anch("Specifying a pattern")}} for further details and an example.
 
-<h3>placeholder</h3>
+### placeholder
 
-<p>The <code>placeholder</code> attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text <em>must not</em> include carriage returns or line feeds.</p>
+The `placeholder` attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text *must not* include carriage returns or line feeds.
 
-<p>If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossary("RTL")}}) but needs to present the placeholder in the opposite directionality, you can use Unicode bidirectional algorithm formatting characters to override directionality within the placeholder; see {{SectionOnPage("/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Overriding BiDi using Unicode control characters")}} for those characters.</p>
+If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossary("RTL")}}) but needs to present the placeholder in the opposite directionality, you can use Unicode bidirectional algorithm formatting characters to override directionality within the placeholder; see {{SectionOnPage("/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Overriding BiDi using Unicode control characters")}} for those characters.
 
-<div class="note">
-<p><strong>Note:</strong> Avoid using the <code>placeholder</code> attribute if you can. It is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for more information.</p>
-</div>
+> **Note:** Avoid using the `placeholder` attribute if you can. It is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for more information.
 
-<h3>readonly</h3>
+### readonly
 
-<p>A Boolean attribute which, if present, means this field cannot be edited by the user. Its <code>value</code> can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement")}} <code>value</code> property.</p>
+A Boolean attribute which, if present, means this field cannot be edited by the user. Its `value` can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement")}} `value` property.
 
-<div class="note">
-<p><strong>Note:</strong> Because a read-only field cannot have a value, <code>required</code> does not have any effect on inputs with the <code>readonly</code> attribute also specified.</p>
-</div>
+> **Note:** Because a read-only field cannot have a value, `required` does not have any effect on inputs with the `readonly` attribute also specified.
 
-<h3>size</h3>
+### size
 
-<p>The <code>size</code> attribute is a numeric value indicating how many characters wide the input field should be. The value must be a number greater than zero, and the default value is 20. Since character widths vary, this may or may not be exact and should not be relied upon to be so; the resulting input may be narrower or wider than the specified number of characters, depending on the characters and the font ({{cssxref("font")}} settings in use).</p>
+The `size` attribute is a numeric value indicating how many characters wide the input field should be. The value must be a number greater than zero, and the default value is 20. Since character widths vary, this may or may not be exact and should not be relied upon to be so; the resulting input may be narrower or wider than the specified number of characters, depending on the characters and the font ({{cssxref("font")}} settings in use).
 
-<p>This does <em>not</em> set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the <code>{{anch("maxlength")}}</code> attribute.</p>
+This does *not* set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the `{{anch("maxlength")}}` attribute.
 
-<h3>spellcheck</h3>
+### spellcheck
 
-<p><code>spellcheck</code> is a global attribute which is used to indicate whether or not to enable spell checking for an element. It can be used on any editable content, but here we consider specifics related to the use of <code>spellcheck</code> on {{HTMLElement("input")}} elements. The permitted values for <code>spellcheck</code> are:</p>
+`spellcheck` is a global attribute which is used to indicate whether or not to enable spell checking for an element. It can be used on any editable content, but here we consider specifics related to the use of `spellcheck` on {{HTMLElement("input")}} elements. The permitted values for `spellcheck` are:
 
-<dl>
- <dt><code>false</code></dt>
- <dd>Disable spell checking for this element.</dd>
- <dt><code>true</code></dt>
- <dd>Enable spell checking for this element.</dd>
- <dt>"" (empty string) or no value</dt>
- <dd>Follow the element's default behavior for spell checking. This may be based upon a parent's <code>spellcheck</code> setting or other factors.</dd>
-</dl>
+*   `false`
+    *   : Disable spell checking for this element.
+*   `true`
+    *   : Enable spell checking for this element.
+*   "" (empty string) or no value
+    *   : Follow the element's default behavior for spell checking. This may be based upon a parent's `spellcheck` setting or other factors.
 
-<p>An input field can have spell checking enabled if it doesn't have the {{anch("readonly")}} attribute set and is not disabled.</p>
+An input field can have spell checking enabled if it doesn't have the {{anch("readonly")}} attribute set and is not disabled.
 
-<p>The value returned by reading <code>spellcheck</code> may not reflect the actual state of spell checking within a control, if the {{Glossary("user agent", "user agent's")}} preferences override the setting.</p>
+The value returned by reading `spellcheck` may not reflect the actual state of spell checking within a control, if the {{Glossary("user agent", "user agent's")}} preferences override the setting.
 
-<h2 id="Non-standard_attributes">Non-standard attributes</h2>
+## Non-standard attributes
 
-<p>The following non-standard attributes are also available on some browsers. As a general rule, you should avoid using them unless it can't be helped.</p>
+The following non-standard attributes are also available on some browsers. As a general rule, you should avoid using them unless it can't be helped.
 
-<h3>autocorrect</h3>
+### autocorrect
 
-<p>A Safari extension, the <code>autocorrect</code> attribute is a string which indicates whether or not to activate automatic correction while the user is editing this field. Permitted values are:</p>
+A Safari extension, the `autocorrect` attribute is a string which indicates whether or not to activate automatic correction while the user is editing this field. Permitted values are:
 
-<dl>
- <dt><code>on</code></dt>
- <dd>Enable automatic correction of typos, as well as processing of text substitutions if any are configured.</dd>
- <dt><code>off</code></dt>
- <dd>Disable automatic correction and text substitutions.</dd>
-</dl>
+*   `on`
+    *   : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
+*   `off`
+    *   : Disable automatic correction and text substitutions.
 
-<h3>mozactionhint</h3>
+### mozactionhint
 
-<p>A Mozilla extension, supported by Firefox for Android, which provides a hint as to what sort of action will be taken if the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field. This information is used to decide what kind of label to use on the <kbd>Enter</kbd> key on the virtual keyboard.</p>
+A Mozilla extension, supported by Firefox for Android, which provides a hint as to what sort of action will be taken if the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field. This information is used to decide what kind of label to use on the <kbd>Enter</kbd> key on the virtual keyboard.
 
-<div class="note">
-<p><strong>Note:</strong> This <a href="https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute">has been standardized</a> as the global attribute {{htmlattrxref("enterkeyhint")}}, but is not yet widely implemented. To see the status of the change being implemented in Firefox, see {{bug(1490661)}}.</p>
-</div>
+> **Note:** This [has been standardized](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) as the global attribute {{htmlattrxref("enterkeyhint")}}, but is not yet widely implemented. To see the status of the change being implemented in Firefox, see {{bug(1490661)}}.
 
-<p>Permitted values are: <code>go</code>, <code>done</code>, <code>next</code>, <code>search</code>, and <code>send</code>. The browser decides, using this hint, what label to put on the enter key.</p>
+Permitted values are: `go`, `done`, `next`, `search`, and `send`. The browser decides, using this hint, what label to put on the enter key.
 
-<h2 id="Using_text_inputs">Using text inputs</h2>
+## Using text inputs
 
-<p><code>&lt;input&gt;</code> elements of type <code>text</code> create basic, single-line inputs. You should use them anywhere you want the user to enter a single-line value and there isn't a more specific input type available for collecting that value (for example, if it's a <a href="/en-US/docs/Web/HTML/Element/input/datetime-local">date</a>, <a href="/en-US/docs/Web/HTML/Element/input/url">URL</a>, <a href="/en-US/docs/Web/HTML/Element/input/email">email</a>, or <a href="/en-US/docs/Web/HTML/Element/input/search">search term</a>, you've got better options available).</p>
+`<input>` elements of type `text` create basic, single-line inputs. You should use them anywhere you want the user to enter a single-line value and there isn't a more specific input type available for collecting that value (for example, if it's a [date](/en-US/docs/Web/HTML/Element/input/datetime-local), [URL](/en-US/docs/Web/HTML/Element/input/url), [email](/en-US/docs/Web/HTML/Element/input/email), or [search term](/en-US/docs/Web/HTML/Element/input/search), you've got better options available).
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="uname"&gt;Choose a username: &lt;/label&gt;
-    &lt;input type="text" id="uname" name="name"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button&gt;Submit&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <div>
+    <label for="uname">Choose a username: </label>
+    <input type="text" id="uname" name="name">
+  </div>
+  <div>
+    <button>Submit</button>
+  </div>
+</form>
+```
 
-<p>This renders like so:</p>
+This renders like so:
 
-<p>{{EmbedLiveSample("Basic_example", 600, 50)}}</p>
+{{EmbedLiveSample("Basic_example", 600, 50)}}
 
-<p>When submitted, the data name/value pair sent to the server will be <code>name=Chris</code> (if "Chris" was entered as the input value before submission). You must remember to include {{htmlattrxref("name", "input")}} attribute on the {{HTMLElement("input")}} element, otherwise the text field's value won't be included with the submitted data.</p>
+When submitted, the data name/value pair sent to the server will be `name=Chris` (if "Chris" was entered as the input value before submission). You must remember to include {{htmlattrxref("name", "input")}} attribute on the {{HTMLElement("input")}} element, otherwise the text field's value won't be included with the submitted data.
 
-<h3 id="Setting_placeholders">Setting placeholders</h3>
+### Setting placeholders
 
-<p>You can provide a useful placeholder inside your text input that can provide a hint as to what to enter by including using the {{htmlattrxref("placeholder","input")}} attribute. Look at the following example:</p>
+You can provide a useful placeholder inside your text input that can provide a hint as to what to enter by including using the {{htmlattrxref("placeholder","input")}} attribute. Look at the following example:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="uname"&gt;Choose a username: &lt;/label&gt;
-    &lt;input type="text" id="uname" name="name"
-           placeholder="Lower case, all one word"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button&gt;Submit&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <div>
+    <label for="uname">Choose a username: </label>
+    <input type="text" id="uname" name="name"
+           placeholder="Lower case, all one word">
+  </div>
+  <div>
+    <button>Submit</button>
+  </div>
+</form>
+```
 
-<p>You can see how the placeholder is rendered below:</p>
+You can see how the placeholder is rendered below:
 
-<p>{{EmbedLiveSample("Setting_placeholders", 600, 50)}}</p>
+{{EmbedLiveSample("Setting_placeholders", 600, 50)}}
 
-<p>The placeholder is typically rendered in a lighter color than the element's foreground color, and automatically vanishes when the user begins to enter text into the field (or whenever the field has a value set programmatically by setting its <code>value</code> attribute.</p>
+The placeholder is typically rendered in a lighter color than the element's foreground color, and automatically vanishes when the user begins to enter text into the field (or whenever the field has a value set programmatically by setting its `value` attribute.
 
-<h3 id="Physical_input_element_size">Physical input element size</h3>
+### Physical input element size
 
-<p>The physical size of the input box can be controlled using the {{htmlattrxref("size", "input")}} attribute. With it, you can specify the number of characters the text input can display at a time. This affects the width of the element, letting you specify the width in terms of characters rather than pixels. In this example, for instance, the input is 30 characters wide:</p>
+The physical size of the input box can be controlled using the {{htmlattrxref("size", "input")}} attribute. With it, you can specify the number of characters the text input can display at a time. This affects the width of the element, letting you specify the width in terms of characters rather than pixels. In this example, for instance, the input is 30 characters wide:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="uname"&gt;Choose a username: &lt;/label&gt;
-    &lt;input type="text" id="uname" name="name"
+```html
+<form>
+  <div>
+    <label for="uname">Choose a username: </label>
+    <input type="text" id="uname" name="name"
            placeholder="Lower case, all one word"
-           size="30"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button&gt;Submit&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+           size="30">
+  </div>
+  <div>
+    <button>Submit</button>
+  </div>
+</form>
+```
 
-<p>{{ EmbedLiveSample('Physical_input_element_size', 600, 50) }}</p>
+{{ EmbedLiveSample('Physical_input_element_size', 600, 50) }}
 
-<h2 id="Validation">Validation</h2>
+## Validation
 
-<p><code>&lt;input&gt;</code> elements of type <code>text</code> have no automatic validation applied to them (since a basic text input needs to be capable of accepting any arbitrary string), but there are some client-side validation options available, which we'll discuss below.</p>
+`<input>` elements of type `text` have no automatic validation applied to them (since a basic text input needs to be capable of accepting any arbitrary string), but there are some client-side validation options available, which we'll discuss below.
 
-<div class="note">
-<p><strong>Note:</strong> HTML form validation is <em>not</em> a substitute for server-scripts that ensure the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.</p>
-</div>
+> **Note:** HTML form validation is *not* a substitute for server-scripts that ensure the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.
 
-<h3 id="A_note_on_styling">A note on styling</h3>
+### A note on styling
 
-<p>There are useful pseudo-classes available for styling form elements to help the user see when their values are valid or invalid. These are {{cssxref(":valid")}} and {{cssxref(":invalid")}}. In this section, we'll use the following CSS, which will place a check (tick) mark next to inputs containing valid values, and a cross (X) next to inputs containing invalid values.</p>
+There are useful pseudo-classes available for styling form elements to help the user see when their values are valid or invalid. These are {{cssxref(":valid")}} and {{cssxref(":invalid")}}. In this section, we'll use the following CSS, which will place a check (tick) mark next to inputs containing valid values, and a cross (X) next to inputs containing invalid values.
 
-<pre class="brush: css">div {
+```css
+div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -243,26 +255,29 @@ input:valid+span:after {
   position: absolute;
   content: '✓';
   padding-left: 5px;
-}</pre>
+}
+```
 
-<p>The technique also requires a {{htmlelement("span")}} element to be placed after the form element, which acts as a holder for the icons. This was necessary because some input types on some browsers don't display icons placed directly after them very well.</p>
+The technique also requires a {{htmlelement("span")}} element to be placed after the form element, which acts as a holder for the icons. This was necessary because some input types on some browsers don't display icons placed directly after them very well.
 
-<h3 id="Making_input_required">Making input required</h3>
+### Making input required
 
-<p>You can use the {{htmlattrxref("required","input")}} attribute as an easy way of making entering a value required before form submission is allowed:</p>
+You can use the {{htmlattrxref("required","input")}} attribute as an easy way of making entering a value required before form submission is allowed:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="uname"&gt;Choose a username: &lt;/label&gt;
-    &lt;input type="text" id="uname" name="name" required&gt;
-    &lt;span class="validity"&gt;&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button&gt;Submit&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <div>
+    <label for="uname">Choose a username: </label>
+    <input type="text" id="uname" name="name" required>
+    <span class="validity"></span>
+  </div>
+  <div>
+    <button>Submit</button>
+  </div>
+</form>
+```
 
-<pre class="brush: css hidden">
+```css hidden
 div {
   margin-bottom: 10px;
   position: relative;
@@ -279,34 +294,37 @@ input:valid+span:after {
   position: absolute;
   content: '✓';
   padding-left: 5px;
-}</pre>
+}
+```
 
-<p>This renders like so:</p>
+This renders like so:
 
-<p>{{ EmbedLiveSample('Making_input_required', 600, 70) }}</p>
+{{ EmbedLiveSample('Making_input_required', 600, 70) }}
 
-<p>If you try to submit the form with no search term entered into it, the browser will show an error message.</p>
+If you try to submit the form with no search term entered into it, the browser will show an error message.
 
-<h3 id="Input_value_length">Input value length</h3>
+### Input value length
 
-<p>You can specify a minimum length (in characters) for the entered value using the {{htmlattrxref("minlength", "input")}} attribute; similarly, use {{htmlattrxref("maxlength", "input")}} to set the maximum length of the entered value, in characters.</p>
+You can specify a minimum length (in characters) for the entered value using the {{htmlattrxref("minlength", "input")}} attribute; similarly, use {{htmlattrxref("maxlength", "input")}} to set the maximum length of the entered value, in characters.
 
-<p>The example below requires that the entered value be 4–8 characters in length.</p>
+The example below requires that the entered value be 4–8 characters in length.
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="uname"&gt;Choose a username: &lt;/label&gt;
-    &lt;input type="text" id="uname" name="name" required size="10"
+```html
+<form>
+  <div>
+    <label for="uname">Choose a username: </label>
+    <input type="text" id="uname" name="name" required size="10"
            placeholder="Username"
-           minlength="4" maxlength="8"&gt;
-    &lt;span class="validity"&gt;&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button&gt;Submit&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+           minlength="4" maxlength="8">
+    <span class="validity"></span>
+  </div>
+  <div>
+    <button>Submit</button>
+  </div>
+</form>
+```
 
-<pre class="brush: css hidden">
+```css hidden
 div {
   margin-bottom: 10px;
   position: relative;
@@ -323,38 +341,40 @@ input:valid+span:after {
   position: absolute;
   content: '✓';
   padding-left: 5px;
-}</pre>
+}
+```
 
-<p>This renders like so:</p>
+This renders like so:
 
-<p>{{ EmbedLiveSample('Input_value_length', 600, 70) }}</p>
+{{ EmbedLiveSample('Input_value_length', 600, 70) }}
 
-<p>If you try to submit the form with less than 4 characters, you'll be given an appropriate error message (which differs between browsers). If you try to enter more than 8 characters, the browser won't let you.</p>
+If you try to submit the form with less than 4 characters, you'll be given an appropriate error message (which differs between browsers). If you try to enter more than 8 characters, the browser won't let you.
 
-<div class="note">
-<p><strong>Note:</strong> If you specify a <code>minlength</code> but do not specify <code>required</code>, the input is considered valid, since the user is not required to specify a value.</p>
-</div>
+> **Note:** If you specify a `minlength` but do not specify `required`, the input is considered valid, since the user is not required to specify a value.
 
-<h3 id="Specifying_a_pattern">Specifying a pattern</h3>
+### Specifying a pattern
 
-<p>You can use the {{htmlattrxref("pattern","input")}} attribute to specify a regular expression that the inputted value must match in order to be considered valid (see <a href="/en-US/docs/Learn/Forms/Form_validation#validating_against_a_regular_expression">Validating against a regular expression</a> for a simple crash course on using regular expressions to validate inputs).</p>
+You can use the {{htmlattrxref("pattern","input")}} attribute to specify a regular expression that the inputted value must match in order to be considered valid (see [Validating against a regular expression](/en-US/docs/Learn/Forms/Form_validation#validating_against_a_regular_expression) for a simple crash course on using regular expressions to validate inputs).
 
-<p>The example below restricts the value to 4-8 characters and requires that it contain only lower-case letters.</p>
+The example below restricts the value to 4-8 characters and requires that it contain only lower-case letters.
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="uname"&gt;Choose a username: &lt;/label&gt;
-    &lt;input type="text" id="uname" name="name" required size="45"
-           pattern="[a-z]{4,8}"&gt;
-    &lt;span class="validity"&gt;&lt;/span&gt;
-    &lt;p&gt;Usernames must be lowercase and 4-8 characters in length.&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button&gt;Submit&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <div>
+    <label for="uname">Choose a username: </label>
+    <input type="text" id="uname" name="name" required size="45"
+           pattern="[a-z]{4,8}">
+    <span class="validity"></span>
+    <p>Usernames must be lowercase and 4-8 characters in length.</p>
+  </div>
+  <div>
+    <button>Submit</button>
+  </div>
+</form>
+```
 
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -378,30 +398,29 @@ input:valid+span:after {
   position: absolute;
   content: '✓';
   padding-left: 5px;
-}</pre>
+}
+```
 
-<p>This renders like so:</p>
+This renders like so:
 
-<p>{{ EmbedLiveSample('Specifying_a_pattern', 600, 110) }}</p>
+{{ EmbedLiveSample('Specifying_a_pattern', 600, 110) }}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>You can see good examples of text inputs used in context in our <a href="/en-US/docs/Learn/Forms/Your_first_form">Your first HTML form</a> and <a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form">How to structure an HTML form</a> articles.</p>
+You can see good examples of text inputs used in context in our [Your first HTML form](/en-US/docs/Learn/Forms/Your_first_form) and [How to structure an HTML form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form) articles.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn/Forms">HTML Forms</a></li>
- <li>{{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon.</li>
- <li><code><a href="/en-US/docs/Web/HTML/Element/input/search">&lt;input type="search"&gt;</a></code></li>
- <li>{{HTMLElement("textarea")}}: Multi-line text input</li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
-</ul>
+*   [HTML Forms](/en-US/docs/Learn/Forms)
+*   {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon.
+*   [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
+*   {{HTMLElement("textarea")}}: Multi-line text input
+*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

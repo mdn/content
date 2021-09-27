@@ -9,12 +9,12 @@ tags:
   - Reference
 browser-compat: html.elements.link.rel.modulepreload
 ---
-<p>The <strong><code>modulepreload</code></strong> keyword for the {{HTMLAttrxRef("rel", "link")}} attribute of the {{HTMLElement("link")}} element provides a declarative way to preemptively fetch a <a href="/en-US/docs/Web/JavaScript/Guide/Modules">module script</a> and its dependencies, and store them in the document's module map for later evaluation.</p>
+The **`modulepreload`** keyword for the {{HTMLAttrxRef("rel", "link")}} attribute of the {{HTMLElement("link")}} element provides a declarative way to preemptively fetch a [module script](/en-US/docs/Web/JavaScript/Guide/Modules) and its dependencies, and store them in the document's module map for later evaluation.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

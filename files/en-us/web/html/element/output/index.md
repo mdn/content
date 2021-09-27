@@ -11,81 +11,113 @@ tags:
   - Web
 browser-compat: html.elements.output
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>The <strong><code>&lt;output&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element is a container element into which a site or app can inject the results of a calculation or the outcome of a user action.</p>
+The **`<output>`** [HTML](/en-US/docs/Web/HTML) element is a container element into which a site or app can inject the results of a calculation or the outcome of a user action.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_listed">listed</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable">labelable</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_resettable">resettable</a> <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_content">form-associated element</a>, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td>{{ARIARole("status")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>Any</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLOutputElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_listed"
+          >listed</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable"
+          >labelable</a
+        >,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_resettable"
+          >resettable</a
+        >
+        <a
+          href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_content"
+          >form-associated element</a
+        >, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >Phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>{{ARIARole("status")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLOutputElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("for")}}</dt>
- <dd>A space-separated list of other elements’ {{htmlattrxref("id")}}s, indicating that those elements contributed input values to (or otherwise affected) the calculation.</dd>
- <dt>{{htmlattrdef("form")}}</dt>
- <dd><p>The {{HTMLElement("form")}} element to associate the output with (its <em>form owner</em>). The value of this attribute must be the {{htmlattrxref("id")}} of a <code>&lt;form&gt;</code> in the same document. (If this attribute is not set, the <code>&lt;output&gt;</code> is associated with its ancestor <code>&lt;form&gt;</code> element, if any.)</p>
- <p>This attribute lets you associate <code>&lt;output&gt;</code> elements to <code>&lt;form&gt;</code>s anywhere in the document, not just inside a <code>&lt;form&gt;</code>. It can also override an ancestor <code>&lt;form&gt;</code> element.</p>
- </dd>
- <dt>{{htmlattrdef("name")}}</dt>
- <dd>The element's name. Used in the {{domxref("HTMLFormElement.elements", "form.elements")}} API.</dd>
-</dl>
+*   {{htmlattrdef("for")}}
+    *   : A space-separated list of other elements’ {{htmlattrxref("id")}}s, indicating that those elements contributed input values to (or otherwise affected) the calculation.
+*   {{htmlattrdef("form")}}
+    *   : The {{HTMLElement("form")}} element to associate the output with (its *form owner*). The value of this attribute must be the {{htmlattrxref("id")}} of a `<form>` in the same document. (If this attribute is not set, the `<output>` is associated with its ancestor `<form>` element, if any.)
 
-<p>The <code>&lt;output&gt;</code> value, name, and contents are NOT submitted during form submission.</p>
+        This attribute lets you associate `<output>` elements to `<form>`s anywhere in the document, not just inside a `<form>`. It can also override an ancestor `<form>` element.
+*   {{htmlattrdef("name")}}
+    *   : The element's name. Used in the {{domxref("HTMLFormElement.elements", "form.elements")}} API.
 
-<h2 id="Examples">Examples</h2>
+The `<output>` value, name, and contents are NOT submitted during form submission.
 
-<p>In the following example, the form provides a slider whose value can range between <code>0</code> and <code>100</code>, and an {{HTMLElement("input")}} element into which you can enter a second number. The two numbers are added together, and the result is displayed in the <code>&lt;output&gt;</code> element each time the value of any of the controls changes.</p>
+## Examples
 
-<pre class="brush: html">&lt;form oninput="result.value=parseInt(a.value)+parseInt(b.value)"&gt;
-  &lt;input type="range" id="b" name="b" value="50" /&gt; +
-  &lt;input type="number" id="a" name="a" value="10" /&gt; =
-  &lt;output name="result" for="a b"&gt;60&lt;/output&gt;
-&lt;/form&gt;
-</pre>
+In the following example, the form provides a slider whose value can range between `0` and `100`, and an {{HTMLElement("input")}} element into which you can enter a second number. The two numbers are added together, and the result is displayed in the `<output>` element each time the value of any of the controls changes.
 
-<p>{{ EmbedLiveSample('Examples')}}</p>
+```html
+<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+  <input type="range" id="b" name="b" value="50" /> +
+  <input type="number" id="a" name="a" value="10" /> =
+  <output name="result" for="a b">60</output>
+</form>
+```
 
-<h2 id="Accessibility_Concerns">Accessibility Concerns</h2>
+{{ EmbedLiveSample('Examples')}}
 
-<p>Many browsers implement this element as an <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">aria-live</a></code> region. Assistive technology will thereby announce the results of UI interactions posted inside it without requiring that focus is switched away from the controls that produce those results.</p>
+## Accessibility Concerns
 
-<h2 id="Specifications">Specifications</h2>
+Many browsers implement this element as an [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) region. Assistive technology will thereby announce the results of UI interactions posted inside it without requiring that focus is switched away from the controls that produce those results.
 
-<p>{{Specifications}}</p>
+## Specifications
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Specifications}}
 
-<p>{{Compat}}</p>
+## Browser compatibility
+
+{{Compat}}

@@ -9,56 +9,56 @@ tags:
   - contextmenu
 browser-compat: html.global_attributes.contextmenu
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<div class="warning">
-<p><strong>Warning:</strong> The <a href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-contextmenu">contextmenu attribute is obsolete</a> and will be removed from all browsers</p>
-</div>
+> **Warning:** The [contextmenu attribute is obsolete](https://html.spec.whatwg.org/multipage/obsolete.html#attr-contextmenu) and will be removed from all browsers
 
-<p>The <code><strong>contextmenu</strong></code> <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a> is the <a href="/en-US/docs/Web/HTML/Global_attributes/id"><strong>id</strong></a> of a {{HTMLElement("menu")}} to use as the contextual menu for this element.</p>
+The **`contextmenu`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is the [**id**](/en-US/docs/Web/HTML/Global_attributes/id) of a {{HTMLElement("menu")}} to use as the contextual menu for this element.
 
-<p>A <em>context menu</em> is a menu that appears upon user interaction, such as a right-click. HTML5 now allows us to customize this menu. Here are some implementation examples, including nested menus.</p>
+A *context menu* is a menu that appears upon user interaction, such as a right-click. HTML5 now allows us to customize this menu. Here are some implementation examples, including nested menus.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html highlight:[1,10,15]">&lt;body contextmenu="share"&gt;
-  &lt;menu type="context" id="share"&gt;
-    &lt;menu label="share"&gt;
-      &lt;menuitem label="Twitter" onclick="shareViaTwitter()"&gt;&lt;/menuitem&gt;
-      &lt;menuitem label="Facebook" onclick="shareViaFacebook()"&gt;&lt;/menuitem&gt;
-    &lt;/menu&gt;
-  &lt;/menu&gt;
-  &lt;ol&gt;
-    &lt;li&gt;
+```html
+<body contextmenu="share">
+  <menu type="context" id="share">
+    <menu label="share">
+      <menuitem label="Twitter" onclick="shareViaTwitter()"></menuitem>
+      <menuitem label="Facebook" onclick="shareViaFacebook()"></menuitem>
+    </menu>
+  </menu>
+  <ol>
+    <li>
       Anywhere in the example you can share the page on Twitter and
       Facebook using the Share menu from your context menu.
-    &lt;/li&gt;
-    &lt;li contextmenu="changeFont" id="fontSizing"&gt;
+    </li>
+    <li contextmenu="changeFont" id="fontSizing">
       On this specific list element, you can change the size of the text
       by using the "Increase/Decrease font" actions from your context menu
-    &lt;/li&gt;
-    &lt;menu type="context" id="changeFont"&gt;
-      &lt;menuitem label="Increase Font" onclick="incFont()"&gt;&lt;/menuitem&gt;
-      &lt;menuitem label="Decrease Font" onclick="decFont()"&gt;&lt;/menuitem&gt;
-    &lt;/menu&gt;
-    &lt;li contextmenu="ChangeImage" id="changeImage"&gt;
+    </li>
+    <menu type="context" id="changeFont">
+      <menuitem label="Increase Font" onclick="incFont()"></menuitem>
+      <menuitem label="Decrease Font" onclick="decFont()"></menuitem>
+    </menu>
+    <li contextmenu="ChangeImage" id="changeImage">
       On the image below, you can fire the "Change Image" action
-      in your Context Menu.&lt;br /&gt;
-      &lt;img src="promobutton_mdn5.png"
-          contextmenu="ChangeImage" id="promoButton" /&gt;
-      &lt;menu type="context" id="ChangeImage"&gt;
-        &lt;menuitem label="Change Image" onclick="changeImage()"&gt;&lt;/menuitem&gt;
-      &lt;/menu&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/body&gt;
-</pre>
+      in your Context Menu.<br />
+      <img src="promobutton_mdn5.png"
+          contextmenu="ChangeImage" id="promoButton" />
+      <menu type="context" id="ChangeImage">
+        <menuitem label="Change Image" onclick="changeImage()"></menuitem>
+      </menu>
+    </li>
+  </ol>
+</body>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function shareViaTwitter() {
+```js
+function shareViaTwitter() {
   window.open("https://twitter.com/intent/tweet?text=" +
       "Hurray! I am learning ContextMenu from MDN via Mozilla");
 }
@@ -79,23 +79,22 @@ function decFont() {
 function changeImage() {
   var index = Math.ceil(Math.random() * 39 + 1);
   document.images[0].src = index + ".png";
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", "100%", 400)}}</p>
+{{EmbedLiveSample("Example", "100%", 400)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>The <a href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-contextmenu">contextmenu attribute is obsolete</a> and will be removed from all browsers.</p>
+The [contextmenu attribute is obsolete](https://html.spec.whatwg.org/multipage/obsolete.html#attr-contextmenu) and will be removed from all browsers.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>All <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a></li>
- <li>{{domxref("HTMLElement.contextMenu")}}</li>
-</ul>
+*   All [global attributes](/en-US/docs/Web/HTML/Global_attributes)
+*   {{domxref("HTMLElement.contextMenu")}}
