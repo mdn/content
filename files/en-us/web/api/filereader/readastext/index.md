@@ -49,7 +49,7 @@ function previewFile() {
   const reader = new FileReader();
 
   reader.addEventListener("load", () => {
-    // this will then display a .txt file
+    // this will then display a text file
     content.innerText = reader.result;
   }, false);
 
