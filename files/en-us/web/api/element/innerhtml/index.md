@@ -105,7 +105,7 @@ user agent to follow these steps:
 3.  For all other elements, the element's contents are replaced with the nodes in the
     new `DocumentFragment`.
     
-### Appending the contents to an element  
+### Appending HTML to an element  
 
 Setting the value of `innerHTML` lets you append new contents to the existing one of an element.
 
