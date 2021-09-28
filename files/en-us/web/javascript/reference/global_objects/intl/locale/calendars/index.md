@@ -15,11 +15,11 @@ browser-compat: javascript.builtins.Intl.Locale.calendars
 ---
 {{JSRef}}
 
-The **`Intl.Locale.prototype.calendars`** property is an accessor property which returns a list of 1 or more unique calendar identifiers for the `Locale`.
+The **`Intl.Locale.prototype.calendars`** property is an accessor property which returns an array of one or more unique calendar identifiers for the `Locale`.
 
 ## Description
 
-The `calendar` property returns a list of all supported calendars for the `Locale` all list items indicates the `Locale` object's calendar era. The following table shows all the valid Unicode calendar key strings, along with a description of the calendar era they represent.
+The `calendar` property returns an array of all supported calendars for the `Locale`. The array items indicate the `Locale` object's calendar era. The following table shows all valid Unicode calendar key strings, along with a description of the calendar era they represent.
 
 ### Unicode calendar keys
 
@@ -61,7 +61,7 @@ The `calendar` property returns a list of all supported calendars for the `Local
   - : Civil (algorithmic) Arabic calendar
 - `islamicc`
   - : Civil (algorithmic) Arabic calendar
-    > **Warning:** The islamicc calendar key has been deprecated. Please use islamic-civil.
+    > **Warning:** The `islamicc` calendar key has been deprecated. Please use `islamic-civil`.
 
 ## Examples
 
@@ -71,12 +71,12 @@ List supported calendars for a given `Locale`.
 
 ```js
 let arEG = new Intl.Locale("ar-EG");
-console.log(arEG.calendars); // Prints ["gregory", "coptic", "islamic", "islamic-civil", "islamic-tbla"
+console.log(arEG.calendars); // logs ["gregory", "coptic", "islamic", "islamic-civil", "islamic-tbla"]
 ```
 
 ```js
 let jaJP = new Intl.Locale("ja-JP");
-console.log(jaJP.calendars); // Prints ["gregory", "japanese"]
+console.log(jaJP.calendars); // logs ["gregory", "japanese"]
 ```
 ## Specifications
 

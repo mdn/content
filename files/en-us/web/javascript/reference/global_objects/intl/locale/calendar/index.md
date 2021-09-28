@@ -60,7 +60,7 @@ The `calendar` property returns the part of the `Locale` that indicates the `Loc
   - : Civil (algorithmic) Arabic calendar
 - `islamicc`
   - : Civil (algorithmic) Arabic calendar
-    > **Warning:** The islamicc calendar key has been deprecated. Please use islamic-civil.
+    > **Warning:** The `islamicc` calendar key has been deprecated. Please use `islamic-civil`.
 
 ## Examples
 
