@@ -11,7 +11,7 @@ browser-compat: api.EncodedVideoChunk.copyTo
 ---
 {{DefaultAPISidebar("WebCodecs API")}}
 
-The **`copyTo`** method of the {{domxref("EncodedVideoChunk")}} interface copies the encoded chunk of video data.
+The **`copyTo()`** method of the {{domxref("EncodedVideoChunk")}} interface copies the encoded chunk of video data.
 
 ## Syntax
 
