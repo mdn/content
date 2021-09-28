@@ -164,7 +164,7 @@ tags:
 
 <p>Your remote should now be set up. You can verify it by running the command <code>git remote -v</code> in your terminal, which outputs a list of your remote names and where they point to. You should see something a bit like this:</p>
 
-<pre>mozilla    git@github.com:mdn/content.git (fetch)
+<pre class="brush: plain">mozilla    git@github.com:mdn/content.git (fetch)
 mozilla    git@github.com:mdn/content.git (push)
 origin    git@github.com:chrisdavidmills/content.git (fetch)
 origin    git@github.com:chrisdavidmills/content.git (push)</pre>
@@ -273,12 +273,12 @@ Make sure you run the following to switch to the main branch before doing anythi
 
 <p>If you were successful, git should tell you something like this:</p>
 
-<pre>Branch 'test-branch' set up to track remote branch 'test-branch' from 'origin'.
+<pre class="brush: plain">Branch 'test-branch' set up to track remote branch 'test-branch' from 'origin'.
 Switched to a new branch 'test-branch'</pre>
 
 <p>Note that you can check the status of your repo, including what branch you are on, at any time by running the command <code>git status</code>. Try this now, and git should tell you something like this:</p>
 
-<pre>On branch test-branch
+<pre class="brush: plain">On branch test-branch
 Your branch is up to date with 'origin/test-branch'.
 
 nothing to commit, working tree clean</pre>
@@ -298,7 +298,7 @@ nothing to commit, working tree clean</pre>
   <li>
     <p>Now go back to your command line and enter the <code>git status</code> command again. This time git should tell you something like this:</p>
 
-    <pre>Your branch is up to date with 'origin/test-branch'.
+    <pre class="brush: plain">Your branch is up to date with 'origin/test-branch'.
 
     Changes not staged for commit:
       (use "git add &lt;file&gt;..." to update what will be committed)
@@ -319,7 +319,7 @@ nothing to commit, working tree clean</pre>
   <li>
     <p>If you run <code>git status</code> again, you'll now see this:</p>
 
-    <pre>On branch test-branch
+    <pre class="brush: plain">On branch test-branch
     Your branch is up to date with 'origin/test-branch'.
 
     Changes to be committed:
@@ -333,7 +333,7 @@ nothing to commit, working tree clean</pre>
 
     <p>Git will tell you this:</p>
 
-    <pre>[test-branch 44b207ef6] my first commit
+    <pre class="brush: plain">[test-branch 44b207ef6] my first commit
      1 file changed, 1 insertion(+), 1 deletion(-)</pre>
 
     <p>To show that it has registered that you've made a commit.</p>
@@ -341,7 +341,7 @@ nothing to commit, working tree clean</pre>
   <li>
     <p>Run <code>git status</code> again, and you'll get this information:</p>
 
-    <pre>On branch test-branch
+    <pre class="brush: plain">On branch test-branch
     Your branch is ahead of 'origin/test-branch' by 1 commit.
       (use "git push" to publish your local commits)
 
@@ -353,7 +353,7 @@ nothing to commit, working tree clean</pre>
 
 <p>Let's send our local change to the remote branch. You can do this by running the command <code>git push</code> — try this now. If there no errors, you should get a readout like this:</p>
 
-<pre>Enumerating objects: 5, done.
+<pre class="brush: plain">Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.
 Delta compression using up to 8 threads
 Compressing objects: 100% (3/3), done.
