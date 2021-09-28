@@ -21,10 +21,6 @@ within the element.
 To insert the HTML into the document rather than replace the contents of an element,
 use the method {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.
 
-> **Note:** using `innerHTML` to append html elements (e.g. `el.innerHTML += "<a href='...'>link</a>"`) 
-> will result in the removal of any previously set event listeners. 
-> That is, after you append any HTML element that way you won't be able to listen to the previously set event listeners.
-
 ## Syntax
 
 ```js
