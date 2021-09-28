@@ -25,7 +25,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Objective:</th>
-   <td>To understand what happens when form data is submitted, including getting a basic idea of how data is processed on the server</td>
+   <td>To understand what happens when form data is submitted, including getting a basic idea of how data is processed on the server.</td>
   </tr>
  </tbody>
 </table>
@@ -34,7 +34,7 @@ tags:
 
 <h2 id="Clientserver_architecture">Client/server architecture</h2>
 
-<p>At it's most basic, the web uses a client/server architecture that can be summarized as follows. a client (usually a web browser) sends a request to a server (most of the time a web server like <a href="https://httpd.apache.org/" rel="external">Apache</a>, <a href="https://www.nginx.com/" rel="external">Nginx</a>, <a href="https://www.iis.net/" rel="external">IIS</a>, <a href="https://tomcat.apache.org/" rel="external">Tomcat</a>, etc.), using the <a href="/en-US/docs/Web/HTTP">HTTP protocol</a>. The server answers the request using the same protocol.</p>
+<p>At its most basic, the web uses a client/server architecture that can be summarized as follows: a client (usually a web browser) sends a request to a server (most of the time a web server like <a href="https://httpd.apache.org/" rel="external">Apache</a>, <a href="https://www.nginx.com/" rel="external">Nginx</a>, <a href="https://www.iis.net/" rel="external">IIS</a>, <a href="https://tomcat.apache.org/" rel="external">Tomcat</a>, etc.), using the <a href="/en-US/docs/Web/HTTP">HTTP protocol</a>. The server answers the request using the same protocol.</p>
 
 <p><img alt="A basic schema of the Web client/server architecture" src="client-server.png"></p>
 
@@ -299,11 +299,11 @@ if __name__ == "__main__":
  <li><strong>Sandbox uploaded files</strong>. Store them on a different server and allow access to the file only through a different subdomain or even better through a completely different domain.</li>
 </ul>
 
-<p>You should avoid many/most problems if you follow these three rules, but it's always a good idea to get a security review performed by a competent third party. Don't assume that you've seen all the possible problems.</p>
+<p>You should be able to avoid many/most problems if you follow these three rules, but it's always a good idea to get a security review performed by a competent third party. Don't assume that you've seen all the possible problems.</p>
 
 <h2 id="Summary">Summary</h2>
 
-<p>As we'd alluded to above, sending form data is easy, but securing an application can be tricky. Just remember that a front-end developer is not the one who should define the security model of the data.It's possible to perform <a href="/en-US/docs/Learn/Forms/Form_validation">client-side form validation</a>, but the server can't trust this validation because it has no way to truly know what has really happened on the client-side.</p>
+<p>As we'd alluded to above, sending form data is easy, but securing an application can be tricky. Just remember that a front-end developer is not the one who should define the security model of the data. It's possible to perform <a href="/en-US/docs/Learn/Forms/Form_validation">client-side form validation</a>, but the server can't trust this validation because it has no way to truly know what has really happened on the client-side.</p>
 
 <p>If you've worked your way through these tutorials in order, you now know how to markup and style a form, do client-side validation, and have some idea about submitting a form.</p>
 
