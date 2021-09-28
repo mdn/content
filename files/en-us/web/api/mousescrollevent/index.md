@@ -67,5 +67,4 @@ The **`MouseScrollEvent`** interface represents events that occur due to the use
 
 - `DOMMouseScroll`
 - `MozMousePixelScroll`
-- Non-gecko browsers' legacy mouse wheel event object: {{ domxref("MouseWheelEvent") }}
 - Standardized mouse wheel event object: {{ domxref("WheelEvent") }}
