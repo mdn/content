@@ -26,7 +26,7 @@ A combobox is an input that controls another element, such as a listbox or grid,
 
 - `aria-expanded`
 
-  - : Include with a value of `true` or `false` depending on whether the combobox is open (true) or closed (false)
+  - : Include with a value of `true` or `false` depending on whether the combobox is open (true) or closed (false).
 
 ### Keyboard interactions
 

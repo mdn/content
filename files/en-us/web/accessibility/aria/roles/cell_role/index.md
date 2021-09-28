@@ -32,13 +32,13 @@ A better, more semantic way of writing the cells above would be to use the sema
 
 ## Description
 
-The element with `role="cell"` is a cell within a row, optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role), within a [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role). If the cell is in a [`grid](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role) or` [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_role), opt for  [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_Role). Using native HTML {{HTMLElement('td')}} elements, whenever possible, is strongly encouraged.
+The element with `role="cell"` is a cell within a row, optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role), within a [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role). If the cell is in a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role) or` [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_role), opt for  [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_Role). Using native HTML {{HTMLElement('td')}} elements, whenever possible, is strongly encouraged.
 
 Each element with `role="cell"` MUST be nested in a container element with [`role="row"`](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role). That row, in turn, can be nested within an element with [`role="rowgroup"`](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role), and should be nested within a `grid`, `table` or `treegrid`. If a cell contains column or row header information, use the `columnheader` or `rowheader` roles, respectively. If the cell does not contain header information and is nested in a `grid` or `treegrid`, the role of `gridcell` may be more appropriate.
 
 A cell can contain a number of property attributes clarifying the cell's position within the tabular data structure, including `aria-colindex`, `aria-colspan`, `aria-rowindex`, and `aria-rowspan`.
 
-> **Note** Using the native HTML table element ({{HTMLElement('table')}} elements, whenever possible, is strongly encouraged.) along with the table row element ({{HTMLElement('tr')}} elements, whenever possible, is strongly encouraged.) and table cell element ({{HTMLElement('td')}} elements, whenever possible, is strongly encouraged.) whenever possible is strongly encouraged.
+> **Note** Using the native HTML table element ({{HTMLElement('table')}} element, along with the table row element ({{HTMLElement('tr')}},  and table cell element ({{HTMLElement('td')}}, whenever possible, is strongly encouraged.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -85,6 +85,7 @@ The first rule of ARIA use is if you can use a native feature with the semantics
 
 ## Examples
 
+```html
     <div role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="81">
       <div id="semantic_elements_table_desc">Semantic Elements to use instead of ARIA's roles</div>
       <div role="rowgroup">
@@ -113,7 +114,7 @@ The first rule of ARIA use is if you can use a native feature with the semantics
       </div>
     </div>
 
-The above is a non-semantic ARIA table with five of 81 rows present in the DOM: one within a table header and four rows within the table body. Because not all the rows are in the DOM, we've included the `aria-rowindex` property on every cell. If no cells spanned more than one row or column, the aria-rowindex could have been placed on the row rather than the row's individual cells.
+The above is a non-semantic ARIA table with five of 81 rows present in the DOM: one within a table header and four rows within the table body. Because not all the rows are in the DOM, we've included the `aria-rowindex` property on every cell. If no cells spanned more than one row or column, the `aria-rowindex` could have been placed on the row rather than the row's individual cells.
 
 ## Best practices
 

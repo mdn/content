@@ -18,7 +18,7 @@ The heading role indicates to assistive technologies that this element should be
 <div role="heading" aria-level="1">This is a main page heading</div>
 ```
 
-This defines the text in the `div` to be the main heading of the page, indicated by being level 1 via the aria-level attribute. Opt for using the {{HTMLElement('h1')}} (thru {{HTMLElement('h6')}}) element instead.
+This defines the text in the `<div>` to be the main heading of the page, indicated by being level 1 via the aria-level attribute. Opt for using the {{HTMLElement('h1')}} (thru {{HTMLElement('h6')}}) element instead.
 
 ```html
 <h1>This is a main page heading</h1>
@@ -27,7 +27,7 @@ This defines the text in the `div` to be the main heading of the page, indicated
 ### Associated WAI-ARIA roles, states, and properties
 
 - `aria-level`
-  - : The aria-level attribute specifies the heading level in the document structure. If no level is present, a value of 2 is the default.
+  - : The `aria-level` attribute specifies the heading level in the document structure. If no level is present, a value of 2 is the default.
 
 ### Keyboard interactions
 
@@ -76,9 +76,9 @@ However, instead, you should do:
 
 ## Accessibility concerns
 
-> **Warning:** Using `aria-label` or `aria-labelledby` will the content of your heading from assistive technologies, reading the label instead of the heading.
+> **Warning:** Using `aria-label` or `aria-labelledby` will hide the content of your heading from assistive technologies, reading the label instead of the heading.
 
-If you must use the `heading` role and `aria-level` attribute, do not go over level 6 so that you are consistent with HTML. Although theoretically you can go higher, and some screen readers may support it, the results can be unpredictable with other browser/screen reader combinations.
+If you must use the `heading` role and `aria-level` attribute, do not go over level 6 so that you are consistent with HTML. Although theoretically you can go higher, and some screen readers may support it, the results can be unpredictable with other browser and screen reader combinations.
 
 ## Best practices
 

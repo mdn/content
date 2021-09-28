@@ -34,7 +34,7 @@ There are no hard and fast rules about which elements you should use to mark up 
 - [`listitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/Listitem_role) role
   - : A single item in a list or directory. Elements with role listitem can only be found in an element with the role `list` or `group`.
 - [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role
-  - : A collection of related objects, limited to list items when nested in a list, not important enough to have their own place in a pages table of contents.
+  - : A collection of related objects, limited to list items when nested in a list, not important enough to have their own place in a page's table of contents.
 
 
 ## Best practices
@@ -63,7 +63,7 @@ or use an ordered list if the order of the list items matters:
 
 > **Note:** The ARIA `list` / `listitem` roles don't distinguish between ordered and unordered lists.
 
-As an aside, note that if you are using the semantic HTML elements of ol or ul and apply a role of [`presentation`](/en-US/docs/Web/Accessibility/ARIA/roles/presentation_role), each child `li` element inherits the `presentation` role because ARIA requires the `listitem` elements to have the parent `list` element. So, the `li` elements are not exposed to assistive technologies, but elements contained inside of those `li` elements, including nested lists, are visible to assistive technologies.
+As an aside, note that if you are using the semantic HTML elements of `<ol>` or `<ul>` and apply a role of [`presentation`](/en-US/docs/Web/Accessibility/ARIA/roles/presentation_role), each child `<li>` element inherits the `presentation` role because ARIA requires the `listitem` elements to have the parent `list` element. So, the `<li>` elements are not exposed to assistive technologies, but elements contained inside of those `<li>` elements, including nested lists, are visible to assistive technologies.
 
 > **Note:** If you are marking up a list of items that will function as a tabbed interface, you should instead use the [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role), [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role), and [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) roles.
 

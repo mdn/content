@@ -36,11 +36,11 @@ The developer is required to change the value of the `aria-checked` attribute d
   - : The value of `aria-checked` defines the state of a checkbox. This attribute has one of three possible values:
 
     - `true`
-      - : The checkbox is checked
+      - : The checkbox is checked.
     - `false`
-      - : The checkbox is not checked
+      - : The checkbox is not checked.
     - `mixed`
-      - : The checkbox is partially checked, or indeterminate
+      - : The checkbox is partially checked, or indeterminate.
 
 - `tabindex="0"`
   - : Used to make it focusable so the assistive technology user can tab to it and start reading right away.

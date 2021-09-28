@@ -21,7 +21,7 @@ An element with *role="columnheader"* nested as a descendant for an element with
 
 ### Associated WAI-ARIA roles, states, and properties
 
-All columnheaders should be nested within a [row](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role). Every row, in turn, should be nested within a [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role), [table](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role), or [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role), alternitiely within a [rowgroup](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role) nested within one of the above.
+All columnheaders should be nested within a [row](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role). Every row, in turn, should be nested within a [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role), [table](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role), or [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role), alternatively within a [rowgroup](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role) nested within one of the above.
 
 - `aria-sort`
   - : Only applied to one column header at a time, if any, the `aria-sort` attribute indicates if a column is sorted in the three values of `ascending` or `descending` order, or `none` for not sorted.
@@ -72,7 +72,7 @@ JavaScript is only required if the `aria-sort` attribute is used.
 
 Columnheaders should contain a title or header information for the column.
 
-The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. It is recommended to use the native HTML `th` element with the `scope` attribute set `<th scope="col">` instead of a `div` or other element. If you use semantic HTML's `<th scope="col">` the role attribute is not required, but can be included as a back up to ensure the table retains its semantics should the default semantics be removed with a CSS display property value. 
+The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. It is recommended to use the native HTML `<th>` element with the `scope` attribute set `<th scope="col">` instead of a `<div>` or other element. If you use semantic HTML's `<th scope="col">` the role attribute is not required, but can be included as a back up to ensure the table retains its semantics should the default semantics be removed with a CSS display property value. 
 
 The `aria-sort` attribute can be added to a `<th scope="col>`  even when the ARIA role attribute is not specified.
 

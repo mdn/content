@@ -60,13 +60,13 @@ As an example, the mute button on an audio player labeled "mute" could indicate 
 | <kbd>Enter</kbd> | Activates the button. |
 | <kbd>Space</kbd> | Activates the button  |
 
-Following button activation, focus is set depending on the type of action the button performs. For example, if clicking the button opens a dialog, the focus should move to the dialog. If the button closes a dialog, focus should returns to the button that opened the dialog unless the function performed in the dialog context logically leads to a different element. If the button alters the current context, then focus typically remains on the button, such as muting and unmuting an audio file.
+Following button activation, focus is set depending on the type of action the button performs. For example, if clicking the button opens a dialog, the focus should move to the dialog. If the button closes a dialog, focus should return to the button that opened the dialog unless the function performed in the dialog context logically leads to a different element. If the button alters the current context, , such as muting and unmuting an audio file, then focus typically remains on the button.
 
 ### Required JavaScript Features
 
 #### Required event handlers
 
-Buttons can be operated by mouse, touch, and keyboard users. For native HTML `<button>` elements, the button's `onclick` event fires for mouse clicks and when the user presses <kbd>Space</kbd> or <kbd>Enter</kbd> while the button has focus. But if another tag is used to create a button, the `onclick `event only fires when clicked by the mouse cursor, even if `role="button"` is used. Because of this, separate key event handlers must be added to the element so that the button is be triggered when the <kbd>Space</kbd> or <kbd>Enter</kbd> key is pressed.
+Buttons can be operated by mouse, touch, and keyboard users. For native HTML `<button>` elements, the button's `onclick` event fires for mouse clicks and when the user presses <kbd>Space</kbd> or <kbd>Enter</kbd> while the button has focus. But if another tag is used to create a button, the `onclick` event only fires when clicked by the mouse cursor, even if `role="button"` is used. Because of this, separate key event handlers must be added to the element so that the button is be triggered when the <kbd>Space</kbd> or <kbd>Enter</kbd> key is pressed.
 
 - `onclick`
   - : Handles the event raised when the button is activated using a mouse click or touch event.

@@ -26,15 +26,15 @@ By default, updates contain only the changes to the live region and these are an
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- aria-atomic
+- `aria-atomic`
 
   - : Defines whether assistive technologies should present all, or only parts of, the changed region. Elements with the role `log` have an implicit [aria-atomic](https://www.w3.org/TR/wai-aria-1.1/#aria-atomic) value of `false`.
 
-- aria-live
+- `aria-live`
 
   - : Defines when assistive technology should inform the user of updates to content. Elements with the role `log` have an implicit [aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live) value of `polite`, meaning screen readers will announce changes inside the log when the user is idle.
 
-- aria-label / aria-labelledby
+- `aria-label` and `aria-labelledby`
 
   - : The `log` is required to have an accessible name.  Use `aria-labelledby` if a visible label is present, otherwise use `aria-label`.
 

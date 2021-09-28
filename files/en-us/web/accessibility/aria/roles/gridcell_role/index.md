@@ -5,7 +5,7 @@ tags:
   - ARIA
   - HTML
 ---
-The [gridcell role](https://www.w3.org/TR/wai-aria-1.1/#gridcell) is used to make a cell in a [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role) or [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_role). It is intended to mimic the functionality of the [HTML `td` element](/en-US/docs/Web/HTML/Element/td) for table-style grouping of information.
+The [gridcell role](https://www.w3.org/TR/wai-aria-1.1/#gridcell) is used to make a cell in a [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role) or [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_role). It is intended to mimic the functionality of the HTML {{HTMLElement('td')}} element for table-style grouping of information.
 
 ```html
 <div role="gridcell">Potato</div>
@@ -24,7 +24,7 @@ Elements that have `role="gridcell"` applied to them must be the child of an el
 </div>
 ```
 
-The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the native [HTML `td` element](/en-US/docs/Web/HTML/Element/td) in conjunction with the and [`contenteditable` attribute](/en-US/docs/Web/HTML/Global_attributes/contenteditable):
+The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the HTML {{HTMLElement('td')}} element in conjunction with the and [`contenteditable` attribute](/en-US/docs/Web/HTML/Global_attributes/contenteditable):
 
 ```html
 <td>Potato</td>
@@ -74,7 +74,7 @@ By referencing the parent elements with roles of [`rowheader`](/en-US/docs/Web
 
 #### Editable cells
 
-Both `td` elements and elements with a role of `gridcell` applied to them can be made editable, mimicking functionality similar to editing a spreadsheet. This is done by applying the HTML [`contenteditable` attribute](/en-US/docs/Web/HTML/Global_attributes/contenteditable).
+Both `<td>` elements and elements with a role of `gridcell` applied to them can be made editable, mimicking functionality similar to editing a spreadsheet. This is done by applying the HTML [`contenteditable` attribute](/en-US/docs/Web/HTML/Global_attributes/contenteditable).
 
 ```html
 <td contenteditable="true">Notes</td>
@@ -90,17 +90,17 @@ In a [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_role), gridcel
 
 ### Associated WAI-ARIA Roles, States, and Properties
 
-- grid
+- `grid`
   - : Communicates that a parent element is a table or tree style grouping of information.
-- row
+- `row`
   - : Required to communicate the `gridcell` is part of a row of a table-style grouping of information.
-- columnheader
+- `columnheader`
   - : Specifies which element is the associated column header.
-- aria-colindex
+- `aria-colindex`
   - : Identifies the position of an element in relation to the rest of the table-style grouping of information's columns.
-- rowheader
+- `rowheader`
   - : Specifies which element is the associated row header.
-- aria-rowindex
+- `aria-rowindex`
   - : Identifies the position of an element in relation to the rest of the table-style grouping of information's rows.
 
 ### Examples
@@ -142,11 +142,11 @@ The following example creates a table-style grouping of information:
 
 ## Accessibility concerns
 
-Support for `gridcell` and certain `gridcell`-related ARIA roles and properties have poor support with assistive technologies. If at all possible, utilize [native HTML table markup](/en-US/docs/Web/HTML/Element/table) in their place.
+Support for `gridcell` and certain `gridcell`-related ARIA roles and properties have poor support with assistive technologies. If at all possible, use [HTML table markup](/en-US/docs/Web/HTML/Element/table) in their place.
 
 ## Best practices
 
-The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use the utilize [native HTML table markup](/en-US/docs/Web/HTML/Element/table) instead of recreating a table's form and functionality with ARIA and JavaScript.
+The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use [native HTML table markup](/en-US/docs/Web/HTML/Element/table) instead of recreating a table's form and functionality with ARIA and JavaScript.
 
 ## See also
 

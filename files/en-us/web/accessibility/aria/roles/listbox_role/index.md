@@ -140,8 +140,8 @@ For further details and a full list of ARIA states and properties see the  `list
 
 When the user selects an option, the following must occur:
 
-1.  Deselect the previously selected option, setting the aria-selected to false, or removing the attribute altogether, changing the appearance of the newly unselected option to appear not selected.
-2.  Select the newly selected option, setting aria-selected="true" on the option and changing the appearance of the newly selected option to appear selected.
+1.  Deselect the previously selected option, setting the `aria-selected` to `false`, or removing the attribute altogether, changing the appearance of the newly unselected option to appear not selected.
+2.  Select the newly selected option, setting `aria-selected="true"` on the option and changing the appearance of the newly selected option to appear selected.
 3.  Update the `aria-activedescendant` value on the listbox to the id of the newly selected option
 4.  Visually handle the blur, focus, and selected states of the option
 
@@ -149,11 +149,11 @@ When the user selects an option, the following must occur:
 
 When the user clicks on an option, hits <kbd>Space</kbd> when focused on an option, or otherwise toggles the state of an option, the following must occur:
 
-1.  Toggle the aria-selected state of the currently focused option, changing the state of the aria-selected to true if it was false or false if it was true.
+1.  Toggle the `aria-selected` state of the currently focused option, changing the state of the `aria-selected` to true if it was false or false if it was true.
 1.  Change the appearance of the option to reflect it's selected state
-1.  Update the aria-activedescendant value on the listbox to the id of the option the user just interacted with, even if they toggled the option to be unselected.
+1.  Update the `aria-activedescendant` value on the listbox to the ID of the option the user just interacted with, even if they toggled the option to be unselected.
 
-<div class="notecard note"><p>The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. The {{HTMLElement('select')}} element with descendant {{HTMLElement('option')}} elements handles all the needed interactions natively.</p></div>
+> **Note: ** The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. The {{HTMLElement('select')}} element with descendant {{HTMLElement('option')}} elements handles all the needed interactions natively.
 
 ## Examples
 
