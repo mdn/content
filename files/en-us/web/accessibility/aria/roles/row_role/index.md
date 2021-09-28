@@ -155,7 +155,7 @@ The above is a non-semantic ARIA table with five of 81 rows present in the DOM:
 
 ## Best practices
 
-Only use table, tbody, thead, tr, th, td, etc., for data table structure. You can add these ARIA roles to ensure accessibility should the native semantics of the table be removed, such as with CSS. A relevant use case for the ARIA table role is when the native semantics of a table are overridden by CSS's display property, such as by display: grid. In this case, you can use the ARIA table roles to add the semantics back in.
+Only use {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}}, etc., for data table structure. You can add these ARIA roles to ensure accessibility should the native semantics of the table be removed, such as with CSS. A relevant use case for the ARIA table role is when the native semantics of a table are overridden by CSS's display property, such as by display: grid. In this case, you can use the ARIA table roles to add the semantics back in.
 
 ```html
 <table role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="81">
