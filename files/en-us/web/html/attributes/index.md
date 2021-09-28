@@ -43,22 +43,14 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/form#attr-accept-charset"
-            >accept-charset</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/form#attr-accept-charset">accept-charset</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>List of supported charsets.</td>
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Global_attributes/accesskey"
-            >accesskey</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Global_attributes/accesskey">accesskey</a></code>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
@@ -93,11 +85,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/iframe#attr-allow"
-            >allow</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/iframe#attr-allow">allow</a></code>
       </td>
       <td>{{ HTMLElement("iframe") }}</td>
       <td>Specifies a feature-policy for the iframe.</td>
@@ -114,22 +102,14 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/script#attr-async"
-            >async</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/script#attr-async">async</a></code>
       </td>
       <td>{{ HTMLElement("script") }}</td>
       <td>Executes the script asynchronously.</td>
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Global_attributes/autocapitalize"
-            >autocapitalize</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Global_attributes/autocapitalize">autocapitalize</a></code>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
@@ -140,11 +120,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/autocomplete"
-            >autocomplete</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/autocomplete">autocomplete</a></code>
       </td>
       <td>
         {{ HTMLElement("form") }}, {{ HTMLElement("input") }},
@@ -158,11 +134,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/autofocus"
-            >autofocus</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/autofocus">autofocus</a></code>
       </td>
       <td>
         {{ HTMLElement("button") }},
@@ -177,9 +149,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/autoplay">autoplay</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/autoplay">autoplay</a></code>
       </td>
       <td>
         {{ HTMLElement("audio") }},
@@ -243,9 +213,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/buffered">buffered</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/buffered">buffered</a></code>
       </td>
       <td>
         {{ HTMLElement("audio") }},
@@ -255,33 +223,24 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/capture">capture</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/capture">capture</a></code>
       </td>
       <td>{{ HTMLElement("input") }}</td>
       <td>
-        From the
-        {{SpecName('HTML Media Capture', '#the-capture-attribute','media capture')}}spec,
+        From the <a href="https://w3c.github.io/html-media-capture/#the-capture-attribute">Media Capture specification</a>,
         specifies a new file can be captured.
       </td>
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/keygen#attr-challenge"
-            >challenge</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/keygen#attr-challenge">challenge</a></code>
       </td>
       <td>{{ HTMLElement("keygen") }}</td>
       <td>A challenge string that is submitted along with the public key.</td>
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/charset">charset</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/charset">charset</a></code>
       </td>
       <td>
         {{ HTMLElement("meta") }}, {{ HTMLElement("script") }}
@@ -290,9 +249,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/checked">checked</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/checked">checked</a></code>
       </td>
       <td>
         {{ HTMLElement("command") }},
@@ -313,11 +270,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Global_attributes/class"
-            >class</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Global_attributes/class">class</a></code>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
@@ -326,11 +279,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/applet#attr-code"
-            >code</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/applet#attr-code">code</a></code>
       </td>
       <td>{{ HTMLElement("applet") }}</td>
       <td>
@@ -339,11 +288,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/applet#attr-codebase"
-            >codebase</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/applet#attr-codebase">codebase</a></code>
       </td>
       <td>{{ HTMLElement("applet") }}</td>
       <td>
@@ -372,20 +317,14 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/textarea#attr-cols"
-            >cols</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/textarea#attr-cols">cols</a></code>
       </td>
       <td>{{ HTMLElement("textarea") }}</td>
       <td>Defines the number of columns in a textarea.</td>
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/colspan">colspan</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/colspan">colspan</a></code>
       </td>
       <td>
         {{ HTMLElement("td") }}, {{ HTMLElement("th") }}
@@ -396,11 +335,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/meta#attr-content"
-            >content</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/meta#attr-content">content</a></code>
       </td>
       <td>{{ HTMLElement("meta") }}</td>
       <td>
@@ -410,11 +345,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable"
-            >contenteditable</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable">contenteditable</a></code>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
@@ -423,11 +354,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/contextmenu"
-            >contextmenu</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/contextmenu">contextmenu</a></code>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
@@ -439,9 +366,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/controls">controls</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/controls">controls</a></code>
       </td>
       <td>
         {{ HTMLElement("audio") }},
@@ -453,11 +378,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/area#attr-coords"
-            >coords</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/area#attr-coords">coords</a></code>
       </td>
       <td>{{ HTMLElement("area") }}</td>
       <td>
@@ -466,11 +387,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/crossorigin"
-            >crossorigin</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/crossorigin">crossorigin</a></code>
       </td>
       <td>
         {{ HTMLElement("audio") }}, {{ HTMLElement("img") }},
@@ -492,22 +409,14 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/object#attr-data"
-            >data</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/object#attr-data">data</a></code>
       </td>
       <td>{{ HTMLElement("object") }}</td>
       <td>Specifies the URL of the resource.</td>
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Global_attributes/data-*"
-            >data-*</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Global_attributes/data-*">data-*</a></code>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
@@ -516,9 +425,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/datetime">datetime</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/datetime">datetime</a></code>
       </td>
       <td>
         {{ HTMLElement("del") }}, {{ HTMLElement("ins") }},
@@ -528,22 +435,14 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/img#attr-decoding"
-            >decoding</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/img#attr-decoding">decoding</a></code>
       </td>
       <td>{{ HTMLElement("img") }}</td>
       <td>Indicates the preferred method to decode the image.</td>
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/track#attr-default"
-            >default</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/track#attr-default">default</a></code>
       </td>
       <td>{{ HTMLElement("track") }}</td>
       <td>
@@ -553,11 +452,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/script#attr-defer"
-            >defer</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/script#attr-defer">defer</a></code>
       </td>
       <td>{{ HTMLElement("script") }}</td>
       <td>
@@ -567,9 +462,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Global_attributes/dir">dir</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Global_attributes/dir">dir</a></code>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
@@ -581,9 +474,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/dirname">dirname</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/dirname">dirname</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }},
@@ -593,9 +484,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/disabled">disabled</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/disabled">disabled</a></code>
       </td>
       <td>
         {{ HTMLElement("button") }},
@@ -612,9 +501,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/download">download</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/download">download</a></code>
       </td>
       <td>{{ HTMLElement("a") }}, {{ HTMLElement("area") }}</td>
       <td>
@@ -623,11 +510,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Global_attributes/draggable"
-            >draggable</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Global_attributes/draggable">draggable</a></code>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
@@ -636,11 +519,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/form#attr-enctype"
-            >enctype</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/form#attr-enctype">enctype</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -650,25 +529,15 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/enterkeyhint"
-            >enterkeyhint</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/enterkeyhint">enterkeyhint</a></code>
         {{experimental_inline}}
       </td>
       <td>
         {{ HTMLElement("textarea") }},
-        <a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable"
-          ><code>contenteditable</code></a
-        >
+        <a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable"><code>contenteditable</code></a>
       </td>
       <td>
-        The
-        <a
-          href="https://html.spec.whatwg.org/dev/interaction.html#input-modalities:-the-enterkeyhint-attribute"
-          ><code>enterkeyhint</code></a
-        >
+        The <a href="https://html.spec.whatwg.org/dev/interaction.html#input-modalities:-the-enterkeyhint-attribute"><code>enterkeyhint</code></a>
         specifies what action label (or icon) to present for the enter key on
         virtual keyboards. The attribute can be used with form controls (such as
         the value of <code>textarea</code> elements), or in elements in an
@@ -706,11 +575,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/formaction"
-            >formaction</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/formaction">formaction</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }},
@@ -723,11 +588,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/formenctype"
-            >formenctype</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/formenctype">formenctype</a></code>
       </td>
       <td>
         {{ HTMLElement("button") }},
@@ -743,11 +604,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/formmethod"
-            >formmethod</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/formmethod">formmethod</a></code>
       </td>
       <td>
         {{ HTMLElement("button") }},
@@ -763,11 +620,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/formnovalidate"
-            >formnovalidate</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/formnovalidate">formnovalidate</a></code>
       </td>
       <td>
         {{ HTMLElement("button") }},
@@ -783,11 +636,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/formtarget"
-            >formtarget</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/formtarget">formtarget</a></code>
       </td>
       <td>
         {{ HTMLElement("button") }},
@@ -804,9 +653,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/headers">headers</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/headers">headers</a></code>
       </td>
       <td>
         {{ HTMLElement("td") }}, {{ HTMLElement("th") }}
@@ -843,11 +690,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Global_attributes/hidden"
-            >hidden</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Global_attributes/hidden">hidden</a></code>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
@@ -859,9 +702,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/meter#attr-high">high</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/meter#attr-high">high</a></code>
       </td>
       <td>{{ HTMLElement("meter") }}</td>
       <td>Indicates the lower bound of the upper range.</td>
@@ -878,9 +719,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/hreflang">hreflang</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/hreflang">hreflang</a></code>
       </td>
       <td>
         {{ HTMLElement("a") }}, {{ HTMLElement("area") }},
@@ -890,22 +729,14 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/meta#attr-http-equiv"
-            >http-equiv</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/meta#attr-http-equiv">http-equiv</a></code>
       </td>
       <td>{{ HTMLElement("meta") }}</td>
       <td>Defines a pragma directive.</td>
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/command#attr-icon"
-            >icon</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/command#attr-icon">icon</a></code>
       </td>
       <td>{{ HTMLElement("command") }}</td>
       <td>Specifies a picture which represents the command.</td>
@@ -924,11 +755,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/importance"
-            >importance</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/importance">importance</a></code>
         {{experimental_inline}}
       </td>
       <td>
@@ -939,11 +766,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/Security/Subresource_Integrity"
-            >integrity</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/Security/Subresource_Integrity">integrity</a></code>
       </td>
       <td>
         {{ HTMLElement("link") }}, {{ HTMLElement("script") }}
@@ -951,37 +774,29 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
       <td>
         <p>
           Specifies a
-          <a href="/en-US/docs/Web/Security/Subresource_Integrity"
-            >Subresource Integrity</a
-          >
+          <a href="/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a>
           value that allows browsers to verify what they fetch.
         </p>
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/HTML/Element/img#attr-intrinsicsize"
-          ><code>intrinsicsize</code></a
-        >
+        <a href="/en-US/docs/Web/HTML/Element/img#attr-intrinsicsize"><code>intrinsicsize</code></a>
         {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("img") }}</td>
       <td>
         This attribute tells the browser to ignore the actual intrinsic size of
-        the image and pretend it’s the size specified in the attribute.
+        the image and pretend it's the size specified in the attribute.
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/HTML/Global_attributes/inputmode"
-          ><code>inputmode</code></a
-        >
+        <a href="/en-US/docs/Web/HTML/Global_attributes/inputmode"><code>inputmode</code></a>
       </td>
       <td>
         {{ HTMLElement("textarea") }},
-        <a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable"
-          ><code>contenteditable</code></a
-        >
+        <a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable"><code>contenteditable</code></a>
       </td>
       <td>
         Provides a hint as to the type of data that might be entered by the user
@@ -993,20 +808,14 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/img#attr-ismap">ismap</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/img#attr-ismap">ismap</a></code>
       </td>
       <td>{{ HTMLElement("img") }}</td>
       <td>Indicates that the image is part of a server-side image map.</td>
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Global_attributes/itemprop"
-            >itemprop</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Global_attributes/itemprop">itemprop</a></code>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
@@ -1015,20 +824,14 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/keygen#attr-keytype"
-            >keytype</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/keygen#attr-keytype">keytype</a></code>
       </td>
       <td>{{ HTMLElement("keygen") }}</td>
       <td>Specifies the type of key generated.</td>
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/track#attr-kind">kind</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/track#attr-kind">kind</a></code>
       </td>
       <td>{{ HTMLElement("track") }}</td>
       <td>Specifies the kind of text track.</td>
@@ -1046,9 +849,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Global_attributes/lang">lang</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Global_attributes/lang">lang</a></code>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
@@ -1057,11 +858,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/script#attr-language"
-            >language</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/script#attr-language">language</a></code>
         {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("script") }}</td>
@@ -1080,9 +877,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/input#attr-list">list</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/input#attr-list">list</a></code>
       </td>
       <td>{{ HTMLElement("input") }}</td>
       <td>Identifies a list of pre-defined options to suggest to the user.</td>
@@ -1104,20 +899,14 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/meter#attr-low">low</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/meter#attr-low">low</a></code>
       </td>
       <td>{{ HTMLElement("meter") }}</td>
       <td>Indicates the upper bound of the lower range.</td>
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/html#attr-manifest"
-            >manifest</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/html#attr-manifest">manifest</a></code>
         {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("html") }}</td>
@@ -1126,9 +915,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
         <div class="note">
           <p>
             <strong>Note:</strong> This attribute is obsolete, use
-            <a href="/en-US/docs/Web/Manifest"
-              ><code>&#x3C;link rel="manifest"></code></a
-            >
+            <a href="/en-US/docs/Web/Manifest"><code>&#x3C;link rel="manifest"></code></a>
             instead.
           </p>
         </div>
@@ -1147,11 +934,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/maxlength"
-            >maxlength</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/maxlength">maxlength</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }},
@@ -1161,11 +944,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/minlength"
-            >minlength</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/minlength">minlength</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }},
@@ -1210,9 +989,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/multiple">multiple</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/multiple">multiple</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }},
@@ -1259,11 +1036,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/form#attr-novalidate"
-            >novalidate</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/form#attr-novalidate">novalidate</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -1288,20 +1061,14 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/meter#attr-optimum"
-            >optimum</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/meter#attr-optimum">optimum</a></code>
       </td>
       <td>{{ HTMLElement("meter") }}</td>
       <td>Indicates the optimal numeric value.</td>
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/pattern">pattern</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/pattern">pattern</a></code>
       </td>
       <td>{{ HTMLElement("input") }}</td>
       <td>
@@ -1321,11 +1088,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/placeholder"
-            >placeholder</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/placeholder">placeholder</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }},
@@ -1335,11 +1098,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/video#attr-poster"
-            >poster</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/video#attr-poster">poster</a></code>
       </td>
       <td>{{ HTMLElement("video") }}</td>
       <td>
@@ -1348,9 +1107,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/preload">preload</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/preload">preload</a></code>
       </td>
       <td>
         {{ HTMLElement("audio") }},
@@ -1363,20 +1120,14 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/command#attr-radiogroup"
-            >radiogroup</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/command#attr-radiogroup">radiogroup</a></code>
       </td>
       <td>{{ HTMLElement("command") }}</td>
       <td></td>
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/readonly">readonly</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/readonly">readonly</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }},
@@ -1386,11 +1137,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/referralpolicy"
-            >referrerpolicy</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/referralpolicy">referrerpolicy</a></code>
       </td>
       <td>
         {{ HTMLElement("a") }}, {{ HTMLElement("area") }},
@@ -1413,9 +1160,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }},
@@ -1426,11 +1171,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/ol#attr-reversed"
-            >reversed</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/ol#attr-reversed">reversed</a></code>
       </td>
       <td>{{ HTMLElement("ol") }}</td>
       <td>
@@ -1440,20 +1181,14 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/textarea#attr-rows"
-            >rows</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/textarea#attr-rows">rows</a></code>
       </td>
       <td>{{ HTMLElement("textarea") }}</td>
       <td>Defines the number of rows in a text area.</td>
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/rowspan">rowspan</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Attributes/rowspan">rowspan</a></code>
       </td>
       <td>
         {{ HTMLElement("td") }}, {{ HTMLElement("th") }}
@@ -1462,11 +1197,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/iframe#attr-sandbox"
-            >sandbox</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/iframe#attr-sandbox">sandbox</a></code>
       </td>
       <td>{{ HTMLElement("iframe") }}</td>
       <td>
@@ -1476,9 +1207,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/th#attr-scope">scope</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/th#attr-scope">scope</a></code>
       </td>
       <td>{{ HTMLElement("th") }}</td>
       <td>
@@ -1488,11 +1217,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/style#attr-scoped"
-            >scoped</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/style#attr-scoped">scoped</a></code>
         {{non-standard_inline}} {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("style") }}</td>
@@ -1500,11 +1225,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/option#attr-selected"
-            >selected</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/option#attr-selected">selected</a></code>
       </td>
       <td>{{ HTMLElement("option") }}</td>
       <td>Defines a value which will be selected on page load.</td>
@@ -1542,9 +1263,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Global_attributes/slot">slot</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Global_attributes/slot">slot</a></code>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
@@ -1563,11 +1282,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Global_attributes/spellcheck"
-            >spellcheck</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Global_attributes/spellcheck">spellcheck</a></code>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
@@ -1592,22 +1307,14 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/iframe#attr-srcdoc"
-            >srcdoc</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/iframe#attr-srcdoc">srcdoc</a></code>
       </td>
       <td>{{ HTMLElement("iframe") }}</td>
       <td></td>
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/track#attr-srclang"
-            >srclang</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/track#attr-srclang">srclang</a></code>
       </td>
       <td>{{ HTMLElement("track") }}</td>
       <td></td>
@@ -1623,9 +1330,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/ol#attr-start">start</a></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/ol#attr-start">start</a></code>
       </td>
       <td>{{ HTMLElement("ol") }}</td>
       <td>Defines the first number if other than 1.</td>
@@ -1639,11 +1344,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Global_attributes/style"
-            >style</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Global_attributes/style">style</a></code>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
@@ -1652,11 +1353,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/table#attr-summary"
-            >summary</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/table#attr-summary">summary</a></code>
         {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("table") }}</td>
@@ -1664,11 +1361,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Global_attributes/tabindex"
-            >tabindex</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Global_attributes/tabindex">tabindex</a></code>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
@@ -1694,11 +1387,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Global_attributes/title"
-            >title</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Global_attributes/title">title</a></code>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
@@ -1707,11 +1396,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Global_attributes/translate"
-            >translate</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Global_attributes/translate">translate</a></code>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
@@ -1795,11 +1480,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/HTML/Element/textarea#attr-wrap"
-            >wrap</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/HTML/Element/textarea#attr-wrap">wrap</a></code>
       </td>
       <td>{{ HTMLElement("textarea") }}</td>
       <td>Indicates whether the text should be wrapped.</td>
@@ -1823,16 +1504,16 @@ IDL attributes can [reflect other types](https://www.whatwg.org/specs/web-apps/c
 
 ## Boolean Attributes
 
-Some content attributes (e.g. `required`, `readonly`, `disabled`) are called [boolean attributes](https://www.w3.org/TR/html52/infrastructure.html#sec-boolean-attributes). If a boolean attribute is present, its value is **true**, and if it’s absent, its value is **false**.
+Some content attributes (e.g. `required`, `readonly`, `disabled`) are called [boolean attributes](https://www.w3.org/TR/html52/infrastructure.html#sec-boolean-attributes). If a boolean attribute is present, its value is **true**, and if it's absent, its value is **false**.
 
-HTML5 defines restrictions on the allowed values of boolean attributes: If the attribute is present, its value must either be the empty string (equivalently, the attribute may have an unassigned value), or a value that is an ASCII case-insensitive match for the attribute’s canonical name, with no leading or trailing whitespace. The following examples are valid ways to mark up a boolean attribute:
+HTML5 defines restrictions on the allowed values of boolean attributes: If the attribute is present, its value must either be the empty string (equivalently, the attribute may have an unassigned value), or a value that is an ASCII case-insensitive match for the attribute's canonical name, with no leading or trailing whitespace. The following examples are valid ways to mark up a boolean attribute:
 
     <div itemscope> This is valid HTML but invalid XML. </div>
     <div itemscope=itemscope> This is also valid HTML but invalid XML. </div>
     <div itemscope=""> This is valid HTML and also valid XML. </div>
     <div itemscope="itemscope"> This is also valid HTML and XML, but perhaps a bit verbose. </div>
 
-To be clear, the values "`true`" and "`false`" are not allowed on boolean attributes. To represent a false value, the attribute has to be omitted altogether. This restriction clears up some common misunderstandings: With `checked="false"` for example, the element’s `checked` attribute would be interpreted as **true** because the attribute is present.
+To be clear, the values "`true`" and "`false`" are not allowed on boolean attributes. To represent a false value, the attribute has to be omitted altogether. This restriction clears up some common misunderstandings: With `checked="false"` for example, the element's `checked` attribute would be interpreted as **true** because the attribute is present.
 
 ## See also
 
