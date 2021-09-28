@@ -48,8 +48,8 @@ function previewFile() {
   const [file] = document.querySelector('input[type=file]').files;
   const reader = new FileReader();
 
-  reader.addEventListener("load", function () {
-    // convert image file to base64 string
+  reader.addEventListener("load", () => {
+    // this will then display a .txt file
     content.innerText = reader.result;
   }, false);
 
