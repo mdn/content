@@ -89,7 +89,7 @@ class MyClass {
 */
 ```
 
-Note that any static intitialization of a super class is performed first, before that of its sub classes.
+Note that any static initialization of a super class is performed first, before that of its sub classes.
 
 
 ### Using `this` and `super.property`
