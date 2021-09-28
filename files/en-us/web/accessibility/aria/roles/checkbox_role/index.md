@@ -123,7 +123,7 @@ Assistive technology products should do the following:
 
 - Screen readers should announce the element as a checkbox, and optionally provide instructions on how to activate it.
 
-> **Note:** Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and therefore not normative.
+> **Note:** Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and may change.
 
 ## Best practices
 

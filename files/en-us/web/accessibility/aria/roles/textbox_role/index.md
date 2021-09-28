@@ -7,19 +7,21 @@ tags:
   - Accessibility
   - Reference
   - textbox role
+  - needcontent
 ---
 The `textbox` role is used to identify an element that allows the input of free-form text. Whenever possible, rather than using this role, use an {{HTMLElement("input")}} element with [type="text"](/en-US/docs/Web/HTML/Element/input/text), for single-line input, or a {{HTMLElement("textarea")}} element for multi-line input.
 
 ## Description
 
-<p class="p2">When an element has the `textbox` role, the browser sends an accessible textbox event to assistive technologies, which can then notify the user about it.</p>
+When an element has the `textbox` role, the browser sends an accessible textbox event to assistive technologies, which can then notify the user about it.
 
-<p class="p2">The default is a single line input, in which <kbd>Return</kbd> or <kbd>Enter</kbd> submits the form; in this case, it is preferable to use an HTML {{HTMLElement("input")}} with `type="text"`. To create a multi-line text box which supports line breaks, as in an HTML {{HTMLElement("textarea")}}, set `<span class="s1">aria-multiline="true"</span>`. Including the HTML `contenteditable` attribute ensures the text node is editable.</p>
+The default is a single line input, in which <kbd>Return</kbd> or <kbd>Enter</kbd> submits the form; in this case, it is preferable to use an HTML {{HTMLElement("input")}} with `type="text"`. To create a multi-line text box which supports line breaks, as in an HTML {{HTMLElement("textarea")}}, set `aria-multiline="true"`. Including the HTML `contenteditable` attribute ensures the text node is editable.
 
 ```html
 <!-- Simple text input field -->
 <div id="txtboxLabel">Enter your five-digit zipcode</div>
-<div role="textbox" contenteditable="true" aria-placeholder="5-digit zipcode" aria-labelledby="txtboxLabel"></div>
+<div role="textbox" contenteditable="true" aria-placeholder="5-digit zipcode" 
+    aria-labelledby="txtboxLabel"></div>
 
 <!-- Multi-line text area -->
 <div id="txtboxMultilineLabel">Enter the tags for the article</div>
@@ -38,12 +40,12 @@ Semantic elements are more concise and require no JavaScript to support textbox 
 <textarea id="txtboxMultiline" required></textarea>
 ```
 
-<p class="p2">Where a text field is read-only, indicated this by setting `<span class="s1">aria-readonly="true"</span>` on the element.</p>
+Where a text field is read-only, indicated this by setting `aria-readonly="true"` on the element.
 
 ### Associated ARIA properties
 
 - `aria-activedescendant` attribute
-  - : Taking as it's value the ID of is either a descendant of the element with DOM focus or is a logical descendant as indicated by the `aria-owns` attribute, it indicates when that element has focus, when it is part of a composite widget such as a [combobox](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox). For example, in a combobox, focus may remain on the textbox while the value of `aria-activedescendant` on the textbox element refers to a descendant of a popup listbox that is controlled by the textbox.This attribute must be updated programmatically as the focus changes.
+  - : Taking as it's value the ID of is either a descendant of the element with DOM focus or is a logical descendant as indicated by the `aria-owns` attribute, it indicates when that element has focus, when it is part of a composite widget such as a [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role). For example, in a combobox, focus may remain on the textbox while the value of `aria-activedescendant` on the textbox element refers to a descendant of a popup listbox that is controlled by the textbox.This attribute must be updated programmatically as the focus changes.
 - `aria-autocomplete` attribute
 
   - : Indicates whether and how the user's input into the field could trigger display of a prediction of the intended value. It supports the following values:
@@ -93,33 +95,35 @@ All features associated with any and all properties and states must be maintaine
 - Focus event handler and aria-activedescendant attribute
   - : If you are implementing a composite widget, such as a combobox composed of a text box and a listbox, you need to manage the `aria-activedescendant` attribute using a handler. Before using this technique, ensure that the browsers you need to target currently support it. See the [specification of aria-descendent](https://www.w3.org/TR/wai-aria-1.1/#aria-activedescendant) for further information.
 
-> **Note:**It is a better practice to use an {{HTMLElement("input")}} element with type="text", or a {{HTMLElement("textarea")}} element instead of the ARIA textbox role. When using either semantic element, the ARIA textbox role is not necessary. </span>See <a href="https://www.w3.org/TR/aria-in-html/">Notes on Using ARIA in HTML</a>.</p></div>
+> **Note:**It is a better practice to use an {{HTMLElement("input")}} element with type="text", or a {{HTMLElement("textarea")}} element instead of the ARIA textbox role. When using either semantic element, the ARIA textbox role is not necessary. See [Notes on Using ARIA in HTML](https://www.w3.org/TR/aria-in-html/).
 
 ## Possible effects on user agents and assistive technology 
 
-<p class="p1">When the `textbox` role is added to an element, or such an element becomes visible, the user agent should do the following:</p>
+When the `textbox` role is added to an element, or such an element becomes visible, the user agent should do the following:
 
-<ul class="ul1"><li class="li2">Expose the element as having a textbox role in the operating system's accessibility API.</li><li class="li2">Fire an accessible textbox event using the operating system's accessibility API if it supports it.</li></ul>
+   - Expose the element as having a textbox role in the operating system's accessibility API.
+   - Fire an accessible textbox event using the operating system's accessibility API if it supports it.
 
-<p class="p1">Assistive technology products should listen for such an event and notify the user accordingly:</p>
+Assistive technology products should listen for such an event and notify the user accordingly:
 
-<ul class="ul1"><li class="li2">Screen readers should announce its label and role when focus first lands on a textbox. If it also contains content, this should be announced as with a regular textbox.</li><li class="li2">Screen magnifiers may enlarge the textbox.</li></ul>
+- Screen readers should announce its label and role when focus first lands on a textbox. If it also contains content, this should be announced as with a regular textbox.
+- Screen magnifiers may enlarge the textbox.
 
-> **Note:** **Note:** Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and therefore not normative.</div>
+> **Note:** Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and may be experienced differently.
 
 ## Examples
 
 ### Example 1: Adding the role in the HTML code for single line input
 
-<p class="p2">The snippet below shows how the textbox role is added directly into the HTML source code.</p>
+The snippet below shows how the textbox role is added directly into the HTML source code.
 
 ```html
 <div role="textbox" contenteditable="true"></div>
 ```
 
-<h3 class="p1" id="Example_2_Adding_the_role_in_the_HTML_code_for_multi-line_input">Example 2: Adding the role in the HTML code for multi-line input</h3>
+### Example 2: Adding the role in the HTML code for multi-line input
 
-<p class="p2">The snippet below shows how the textbox role is added directly into the HTML source code.</p>
+The snippet below shows how the textbox role is added directly into the HTML source code.
 
 ```html
 <div role="textbox" contenteditable="true" aria-multiline="true"></div>
@@ -127,7 +131,7 @@ All features associated with any and all properties and states must be maintaine
 
 ## Best practices
 
-<ul><li class="li1">Be sure to add the `contenteditable="true"` attribute to the HTML element to which this role is applied. Do so even if you set `aria-readonly` to `true`; in this way, you communicate that the content would be editable if it were not read-only.</li></ul>
+- Be sure to add the `contenteditable="true"` attribute to the HTML element to which this role is applied. Do so even if you set `aria-readonly` to `true`; in this way, you communicate that the content would be editable if it were not read-only.
 
 ## See also
 

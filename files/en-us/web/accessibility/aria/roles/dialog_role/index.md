@@ -74,7 +74,7 @@ When the `dialog` role is used, the user agent should do the following:
 
 When the dialog is correctly labeled and focus is moved to an element (often an interactive element, such as a button) inside the dialog, screen readers should announce the dialog's accessible role, name and optionally description, along with announcing the focused element.
 
-> **Note:** Opinions may differ on how assistive technology should handle this technique, and the order of announcements may differ depending on the assistive technology used. The information provided above is one of those opinions and therefore not normative.
+> **Note:** Opinions may differ on how assistive technology should handle this technique, and the order of announcements may differ depending on the assistive technology used. The information provided above is one of those opinions and therefore may be different for some browser and assitive technology combinations.
 
 ## Examples
 
