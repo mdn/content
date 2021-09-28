@@ -1,6 +1,6 @@
 ---
-title: self.reportError()
-slug: Web/API/window/reportError
+title: reportError()
+slug: Web/API/reportError
 tags:
   - API
   - Method
@@ -11,7 +11,7 @@ browser-compat: api._globals.reportError
 ---
 {{APIRef}} {{AvailableInWorkers}}
 
-The **`self.reportError()`** method may be used to report errors to the console or global event handlers, emulating an uncaught JavaScript exception.
+The **`reportError()`** global method may be used to report errors to the console or global event handlers, emulating an uncaught JavaScript exception.
 
 This feature is primarily intended for custom event-dispatching or callback-manipulating libraries.
 Libraries can use this feature to catch errors in callback code and re-throw them to the top level handler.
@@ -51,8 +51,8 @@ if (typeof self.reportError == 'function') {
 }
 ```
 
-The following code shows how you might create and report an error, and how it may be caught using either `window.onerror` or by adding a listener for the `error` event.
-Note that `window.onerror` must return `true` to stop the event propagating further.
+The following code shows how you might create and report an error, and how it may be caught using either the global `onerror` handler ({{domxref("GlobalEventHandlers.onerror")}}) or by adding a listener for the `error` event.
+Note that the handler assigned to `onerror` must return `true` to stop the event propagating further.
 
 ```js
 var newError = new Error('Some error message', "someFile.js", 11);
@@ -84,5 +84,7 @@ self.addEventListener('error', (error) => {
 
 ## See also
 
+- [`Window`](/en-US/docs/Web/API/Window#methods_implemented_from_elsewhere)
+- [`WorkerGlobalScope`](/en-US/docs/Web/API/WorkerGlobalScope#methods_implemented_from_elsewhere)
 - {{domxref("GlobalEventHandlers/onerror","GlobalEventHandlers.onerror")}}
 - [error](/en-US/docs/Web/API/Element/error_event) event

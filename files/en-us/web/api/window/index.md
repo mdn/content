@@ -303,7 +303,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Schedules a function to execute every time a given number of milliseconds elapses.
 - {{domxref("setTimeout()")}}
   - : Schedules a function to execute in a given amount of time.
-- {{domxref("Window.reportError", "self.reportError()")}}
+- {{domxref("reportError()")}}
   - : Reports an error in a script, emulating an unhandled exception.
 
 
