@@ -40,7 +40,7 @@ To associate the comment with the text being commented, we need to wrap the comm
 
 ### Prefer HTML
 
-Using the [`<mark>`](/en-US/docs/Web/Accessibility/ARIA/Roles/mark_role) element will automatically communicate a node has a role of `mark`. If at all possible, prefer using it instead.
+Using the {{HTMLElement('mark')}} element will automatically communicate a node has a role of `mark`. If at all possible, prefer using it instead.
 
 ## Specifications
 
