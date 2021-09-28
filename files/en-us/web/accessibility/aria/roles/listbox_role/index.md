@@ -157,7 +157,7 @@ When the user clicks on an option, hits <kbd>Space</kbd> when focused on an opti
 
 ## Examples
 
-#### Example 1: A single select listbox that uses aria-activedescendant
+#### Example 1: A single select listbox that uses `aria-activedescendant`
 
 The snippet below shows how the listbox role is added directly into the html source code.
 

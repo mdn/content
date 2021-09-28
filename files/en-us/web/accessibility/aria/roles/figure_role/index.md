@@ -55,12 +55,12 @@ This can be done semantically, without ARIA, with HTML's {{HTMLElement('figure')
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- aria-describedby
+- `aria-describedby`
   - : The id of an element containing reference text serving as a caption.
-- aria-labelledby
+- `aria-labelledby`
   - : The id of an element containing text serving as a label.
-- aria-label
-  - : If there is no element containing text that could serve as a label, you can add the label directly as a value on the aria-label on the element with the `figure` role or on the `<figure>` element.
+- `aria-label`
+  - : If there is no element containing text that could serve as a label, you can add the label directly as a value on the `aria-label` on the element with the `figure` role or on the `<figure>` element.
 
 ### Keyboard interactions
 

@@ -6,15 +6,17 @@ tags:
   - Accessibility
   - NeedsContent
   - Role
+  - ARIA widget
+  - Reference
 ---
-The [`checkbox` role](https://www.w3.org/TR/wai-aria-1.1/#checkbox) is for checkable interactive controls. Elements containing `role="checkbox"` must also include the `aria-checked` attribute to expose the checkbox's state to assistive technology.
+The `checkbox` role is for checkable interactive controls. Elements containing `role="checkbox"` must also include the `aria-checked` attribute to expose the checkbox's state to assistive technology.
 
 ```html
 <span role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="chk1-label"></span> 
 <label id="chk1-label">Remember my preferences</label>
 ```
 
-> **Note:** The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the native [HTML checkbox](/en-US/docs/Web/HTML/Element/input/checkbox) of [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) (with an associated [`<label>`](/en-US/docs/Web/HTML/Element/input/label)), which natively provides all the functionality required:
+> **Note:** The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the native [HTML checkbox](/en-US/docs/Web/HTML/Element/input/checkbox) of [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) (with an associated {{HTMLElement('label')}}, which natively provides all the functionality required:
 
 ```html
 <input type="checkbox" id="chk1-label">
@@ -23,7 +25,7 @@ The [`checkbox` role](https://www.w3.org/TR/wai-aria-1.1/#checkbox) is for check
 
 ## Description
 
-The native [HTML checkbox](/en-US/docs/Web/HTML/Element/input/checkbox)  form control had two states ("checked" or "not checked"), with an [indeterminate](/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes) state settable via JavaScript. Similarly, an element with `role="checkbox"`  can expose three states through the `aria-checked` attribute: `true`, `false`, or `mixed`.
+The native [HTML checkbox](/en-US/docs/Web/HTML/Element/input/checkbox)  form control had two states ("checked" or "not checked"), with an [`indeterminate`](/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes) state settable via JavaScript. Similarly, an element with `role="checkbox"`  can expose three states through the `aria-checked` attribute: `true`, `false`, or `mixed`.
 
 Since a checkbox is an interactive control, it must be focusable and keyboard accessible. If the role is applied to a non-focusable element, use the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute to change this. The expected keyboard shortcut for activating a checkbox is the <kbd>Space</kbd> key.
 
@@ -56,9 +58,9 @@ The developer is required to change the value of the `aria-checked` attribute d
 
 #### Required event handlers
 
-- onclick
+- `onclick`
   - : Handle mouse clicks on both the checkbox and the associated label that will change the state of the checkbox by changing the value of the `aria-checked` attribute and the appearance of the checkbox so it appears checked or unchecked to the sighted user
-- onKeyPress
+- `onKeyPress`
 
   - : Handle the case where the user presses the
 

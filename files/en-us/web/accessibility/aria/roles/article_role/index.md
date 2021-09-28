@@ -55,9 +55,9 @@ Instead of including the `article` role on a non-semantic element, the {{HTMLEle
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- aria-posinset
+- `aria-posinset`
   - : In the context of a feed, indicates the position of this particular article within that feed, based on a count starting at 1.
-- aria-setsize
+- `aria-setsize`
   - : In the context of a feed, indicates how many article items there are within that feed.
 
 ### Keyboard interactions

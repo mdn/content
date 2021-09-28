@@ -39,21 +39,21 @@ The `application` role is designed to provide a means for widgets that are not p
 
 - [`document`](/en-US/docs/Web/Accessibility/ARIA/Roles/Document_Role), [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role)
   - : Used to indicate parts of the application that should be treated as normal web content
-- aria-activedescendant
+- `aria-activedescendant`
   - : Used to manage focus inside the application.
-- aria-label
+- `aria-label`
   - : Used to provide the name of the application or purpose of the widget that is being exposed.
-- aria-describedby
+- `aria-describedby`
   - : Used to indicate the idref of an element that contains additional instructions for navigating or operating this element.
-- aria-roledescription
+- `aria-roledescription`
   - : Used to give the application a more descriptive role text for screen readers to speak. This should be localized.
-- aria-disabled
+- `aria-disabled`
   - : Indicates that an element is visible but disabled
-- aria-errormessage
+- `aria-errormessage`
   - : A reference to the element that provides the error message for an the element on which it is set
-- aria-expanded
+- `aria-expanded`
   - : If set to `true`, the grouping element owned or controlled by this element is expanded, or `false` if collapsed.
-- aria-haspopup
+- `aria-haspopup`
   - : Indicates there is a popup, such as menu or dialog, that can be triggered by the element.
 
 
@@ -98,8 +98,8 @@ Applying the `application` role will cause this and all of the descendant elemen
 
 ## See also
 
-- [If you use the WAI-ARIA role "application", please do so wisely](https://www.marcozehe.de/2012/02/06/if-you-use-the-wai-aria-role-application-please-do-so-wisely/) - blog post by Marco Zehe
-- [Using the ARIA application role](https://tink.uk/using-the-aria-application-role/) - by Léonie Watson
+- [If you use the WAI-ARIA role `application`, please do so wisely](https://www.marcozehe.de/2012/02/06/if-you-use-the-wai-aria-role-application-please-do-so-wisely/) - blog post by Marco Zehe
+- [Using the ARIA `application` role](https://tink.uk/using-the-aria-application-role/) - by Léonie Watson
 
 <section id="Quick_links">
 

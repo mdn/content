@@ -48,13 +48,13 @@ The `complementary` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/ARIA
 
 ### Prefer HTML
 
-Using the [`<aside>` element](/en-US/docs/Web/HTML/Element/aside) will automatically communicate a section has a role of `complementary`. If at all possible, prefer using it instead.
+Using the {{HTMLElement('aside')}} element will automatically communicate a section has a role of `complementary`. If at all possible, prefer using it instead.
 
 ### Labeling landmarks
 
 #### Multiple landmarks
 
-If there is more than one `complementary` landmark role or [`<aside>` element](/en-US/docs/Web/HTML/Element/aside) in a document, provide a label for each landmark using the `aria-label` attribute, or, if the aside has an appropriately descriptive title, point to it with the `aria-labelledby` attribute. This label will allow an assistive technology user to be able to quickly understand the purpose of each landmark.
+If there is more than one `complementary` landmark role or {{HTMLElement('aside')}} element in a document, provide a label for each landmark using the `aria-label` attribute, or, if the aside has an appropriately descriptive title, point to it with the `aria-labelledby` attribute. This label will allow an assistive technology user to be able to quickly understand the purpose of each landmark.
 
 ```html
 <aside aria-label="Note about usage">

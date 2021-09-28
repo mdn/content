@@ -43,7 +43,7 @@ To create an ARIA row, add `role="row"` to the container element. That row shou
 
 A row can contain a number of attributes clarifying the row's role, including `aria-colindex`, `aria-level`, `aria-rowindex`, and `aria-selected`.
 
-If the row is within a treegrid, rows can include the `aria-expanded` attribute, using the attribute to indicate the present status. This is not the case for an ordinary table or grid, in which the aria-expanded attribute is not present.
+If the row is within a treegrid, rows can include the `aria-expanded` attribute, using the attribute to indicate the present status. This is not the case for an ordinary table or grid, in which the `aria-expanded` attribute is not present.
 
 To create an interactive widget that has a tabular structure, use the grid pattern instead. If the interaction provides for the selection state of individual cells, if left to right and top to bottom navigation is provided, or if the user interface allows the rearranging of cell order or otherwise changing individual cell order such as through drag and drop, use [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role) or [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role) instead.
 
@@ -83,7 +83,7 @@ To create an interactive widget that has a tabular structure, use the grid patte
     - `aria-expanded="false"`: Row is currently collapsed.
     - `aria-expended="undefined"` or the attribute is missing: The row is neither expandable nor collapsible.
 
-    If the element with the aria-expanded attribute controls the expansion of another grouping container that is not 'owned by' the element, the author **should** reference the container by using the aria-controls attribute.
+    If the element with the `aria-expanded` attribute controls the expansion of another grouping container that is not 'owned by' the element, the author **should** reference the container by using the `aria-controls` attribute.
 
 - `aria-selected` state
 
@@ -97,7 +97,7 @@ To create an interactive widget that has a tabular structure, use the grid patte
 
   - : The `aria-colindex` attribute is only needed if columns are hidden from the DOM. It is generally placed on row children, rather than on the row itself. If the columns displayed are contiguous, then it can be placed on the row.
 
-    The attribute takes as its value an integer between 1 and the total number of columns within the table, grid or treegrid. When placed on the row, the `aria-colindex` defines an element's column index or position with respect to the total number of columns within a row. For example, in a table with 15 columns, and columns 4, 5, and 6 are in the DOM, aria-colindex="4" could be set on every row.
+    The attribute takes as its value an integer between 1 and the total number of columns within the table, grid or treegrid. When placed on the row, the `aria-colindex` defines an element's column index or position with respect to the total number of columns within a row. For example, in a table with 15 columns, and columns 4, 5, and 6 are in the DOM, `aria-colindex="4"` could be set on every row.
 
     If the set of columns which is present in the DOM is **not** contiguous, or if there are cells spanning more than one row or column, put the `aria-colindex` on all of the children of each row instead of on the row itself.
 
@@ -151,7 +151,7 @@ None. For sortable columns, see the [`columnheader`](/en-US/docs/Web/Accessibili
 </div>
 ```
 
-The above is a non-semantic ARIA table with five of 81 rows present in the DOM: One within a table header and four rows within the table body. The header row, alone in a header rowgroup, has two column headers. The columns are sortable, but not currently sorted, as indicated by the aria-sort property. The table body is in a separate rowgroup, with four rows currently in the DOM. Because not all the rows are in the DOM, we've included the `aria-rowindex` property on every row.
+The above is a non-semantic ARIA table with five of 81 rows present in the DOM: One within a table header and four rows within the table body. The header row, alone in a header rowgroup, has two column headers. The columns are sortable, but not currently sorted, as indicated by the `aria-sort` property. The table body is in a separate rowgroup, with four rows currently in the DOM. Because not all the rows are in the DOM, we've included the `aria-rowindex` property on every row.
 
 ## Best practices
 

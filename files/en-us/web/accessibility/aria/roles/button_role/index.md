@@ -9,7 +9,7 @@ tags:
   - Button Role
   - Reference
 ---
-The [`button`](https://www.w3.org/WAI/PF/aria/roles#button) role is for clickable elements that trigger a response when activated by the user. Adding `role="button"` tells the screen reader the element is a button, but provides no button functionality. Use {{HTMLElement("button")}} or {{HTMLElement("input")}} with `type="button"` instead. This role can be used in combination with the `aria-pressed` attribute to create toggle buttons.</span></p>
+The `button` role is for clickable elements that trigger a response when activated by the user. Adding `role="button"` tells the screen reader the element is a button, but provides no button functionality. Use {{HTMLElement("button")}} or {{HTMLElement("input")}} with `type="button"` instead. This role can be used in combination with the `aria-pressed` attribute to create toggle buttons.</span></p>
 
 ```html
 <div id="saveChanges" tabindex="0" role="button" aria-pressed="false">Save</div>
@@ -75,9 +75,9 @@ Buttons can be operated by mouse, touch, and keyboard users. For native HTML `
 
 #### Changing attribute values
 
-#### aria-pressed
+#### `aria-pressed`
 
-The value of aria-pressed defines the state of a toggle button. This attribute has one of four possible values:
+The value of `aria-pressed` defines the state of a toggle button. This attribute has one of four possible values:
 
 `true`, `false`, `mixed`, `undefined`
 
@@ -259,7 +259,7 @@ If a link performs the action of a button, giving the element `role="button"` he
 - [Strong native semantics in HTML5](https://www.w3.org/TR/html5/dom.html#aria-usage-note)
 - [Notes on Using ARIA in HTML](https://www.w3.org/TR/aria-in-html/)
 - [Official WAI-ARIA example code](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html)
-- [ARIA menubutton role](/en-US/docs/Web/Accessibility/ARIA/Roles/menubutton_role)
+- [ARIA `menubutton` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menubutton_role)
 
 <section id="Quick_links">
 

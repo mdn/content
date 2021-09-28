@@ -27,15 +27,15 @@ Elements with the role status have an implicit `aria-live` value of `polite` and
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- aria-atomic
+- `aria-atomic`
 
   - : Defines whether assistive technologies should present all, or only parts of, the changed region. Elements with the role `status` have an implicit [aria-atomic](https://www.w3.org/TR/wai-aria-1.1/#aria-atomic) value of `true`.
 
-- aria-live
+- `aria-live`
 
   - : Defines when assistive technology should inform the user of updates to content. Elements with the role `status` have an implicit [aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live) value of `polite`, meaning screen readers will announce changes inside the log when the user is idle.
 
-- aria-label
+- `aria-label`
 
   - : Some screen readers announce the name of a status element before announcing the content of the status element. Including an `aria-label` provides a method for prefacing the visible content of a status element with text that is not displayed when a screen reader reads the content.  
 

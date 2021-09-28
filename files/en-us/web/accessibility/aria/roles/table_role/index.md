@@ -51,7 +51,7 @@ An element with `role="table"` is a static tabular structure with rows containin
 
 To create an ARIA table, add `role="table"` to the container element. Within that container, each row has `role="row"` set and contains child cells. Each cell has a role of either `columnheader`, `rowheader`, or `cell`. Rows can be children of the table or within a `rowgroup`.
 
-The table caption can be defined via aria-labelledby or aria-label.  All other semantic table elements, such as {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, and {{HTMLElement('td')}}, need to be added via associated roles, such as `rowgroup`, `row`, `columnheader`, and `cell`.
+The table caption can be defined via `aria-labelledby` or `aria-label`.  All other semantic table elements, such as {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, and {{HTMLElement('td')}}, need to be added via associated roles, such as `rowgroup`, `row`, `columnheader`, and `cell`.
 
 If the table contains sortable columns or rows, the `aria-sort` attribute should be added on the header cell element (not the table itself). If any rows or columns are hidden, the `aria-colcount` or `aria-rowcount` should be included indicating the total number of columns or rows, respectively, along with the `aria-colindex` or `aria-rowindex` on each cell. The `aria-colindex` or `aria-rowindex` is set to the position of a cell within the row or column, respectively. If the table includes cells that span multiple rows or multiple columns, then `aria-rowspan` or `aria-colspan` should be included as well. Realize, it is much simpler to use the {{HTMLElement('table')}} element, along with all the related semantic elements and attributes that are all supported by all assistive technologies.
 
@@ -68,7 +68,7 @@ To create an interactive widget that has a tabular structure, use the `grid` pat
 - `aria-describedby` attribute
   - : Takes as its value the id of the element that serves as a description for the table.
 - `aria-label` attribute
-  - : The aria-label provides an accessible name for the table.
+  - : The `aria-label` provides an accessible name for the table.
 - `aria-colcount` attribute
   - : This attribute is only required if the columns are not present in the DOM all the time. It provides an explicit indication of the number of columns in the full table. Set the value to the total number of columns in the full table. If unknown, set `aria-colcount="-1"`.
 - `aria-rowcount` attribute
@@ -116,7 +116,7 @@ None. For sortable columns, see the [columnheader](/en-US/docs/Web/Accessibility
 </div>
 ```
 
-The above is part of a table. While the full table has 81 entries, as indicated by the `aria-rowcount` property, only four are currently visible. The columns are sortable, but not currently sorted, as indicated by the aria-sort property on the column headers.
+The above is part of a table. While the full table has 81 entries, as indicated by the `aria-rowcount` property, only four are currently visible. The columns are sortable, but not currently sorted, as indicated by the `aria-sort` property on the column headers.
 
 ## Best practices
 

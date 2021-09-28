@@ -24,11 +24,11 @@ When working with elements with the `tab` role, when they are selected or acti
 
 ### Associated Roles and Attributes
 
-- aria-selected
+- `aria-selected`
   - : boolean
-- aria-controls
+- `aria-controls`
   - : `id` of element with `tabpanel` role
-- id
+- `id`
   - : content
 
 ### Keyboard interaction

@@ -18,7 +18,7 @@ The heading role indicates to assistive technologies that this element should be
 <div role="heading" aria-level="1">This is a main page heading</div>
 ```
 
-This defines the text in the `<div>` to be the main heading of the page, indicated by being level 1 via the aria-level attribute. Opt for using the {{HTMLElement('h1')}} (thru {{HTMLElement('h6')}}) element instead.
+This defines the text in the `<div>` to be the main heading of the page, indicated by being level 1 via the `aria-level` attribute. Opt for using the {{HTMLElement('h1')}} (thru {{HTMLElement('h6')}}) element instead.
 
 ```html
 <h1>This is a main page heading</h1>
@@ -38,7 +38,7 @@ This role does not require any special keyboard navigation. As with any heading,
 - Required event handlers
   - : None.
 - Changing attribute values
-  - : Usually not required, unless dynamically inserting content. In that case, the newly-added headings need aria-level attributes whose values are consistent with the rest of the document structure.
+  - : Usually not required, unless dynamically inserting content. In that case, the newly-added headings need `aria-level` attributes whose values are consistent with the rest of the document structure.
 
 > **Note:** Instead of using a `<div>` or `<span>` with a `heading` role and `aria-level`, consider using a native {{HTMLElement('h1')}}  through {{HTMLElement('h6')}}  elements instead to indicate that this text is a heading, and what part of the structure it represents.
 
