@@ -113,6 +113,7 @@ The first rule of ARIA use is if you can use a native feature with the semantics
         </div>
       </div>
     </div>
+  ```
 
 The above is a non-semantic ARIA table with five of 81 rows present in the DOM: one within a table header and four rows within the table body. Because not all the rows are in the DOM, we've included the `aria-rowindex` property on every cell. If no cells spanned more than one row or column, the `aria-rowindex` could have been placed on the row rather than the row's individual cells.
 
@@ -120,6 +121,7 @@ The above is a non-semantic ARIA table with five of 81 rows present in the DOM:
 
 Only use {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}}, etc., for data table structure. You can add ARIA roles to ensure accessibility should the native semantics of the table be removed, such as with CSS. A relevant use case for the ARIA table role is when the native semantics of a table are overridden by [CSS's display property, such as by display: grid](/en-US/docs/Web/CSS/display#accessibility_concerns). In this case, you can use the ARIA table roles to add the semantics back in.
 
+```html
     <table role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="81">
       <caption id="semantic_elements_table_desc">Semantic Elements to use instead of ARIA's roles</caption>
       <thead role="rowgroup">
@@ -147,6 +149,7 @@ Only use {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thea
          </tr>
        </tbody>
      </table>
+```
 
 Above is the semantic way of writing a table. The ARIA roles are not necessary if the native semantics of the table, and therefore the table rows, have not been altered, such as through [the display property](/en-US/docs/Web/CSS/display#accessibility_concerns).
 
