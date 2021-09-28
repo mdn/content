@@ -22,7 +22,7 @@ The **`ImageDecoder`** interface of the {{domxref('WebCodecs API','','','true')}
 - {{domxref("ImageDecoder.complete")}}{{ReadOnlyInline}}
   - : Returns a {{jsxref("boolean")}} indicating whether the data is completely buffered.
 - {{domxref("ImageDecoder.completed")}}{{ReadOnlyInline}}
-  - : Returns a promise that resolves once `complete` is true.
+  - : Returns a {{jsxref("Promise")}} that resolves once `complete` is true.
 - {{domxref("ImageDecoder.tracks")}}{{ReadOnlyInline}}
   - : Returns an {{domxref("ImageTrackList")}} object listing the available tracks and providing a method for selecting a track to decode.
 
