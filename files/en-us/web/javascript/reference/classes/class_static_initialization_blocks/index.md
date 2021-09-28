@@ -67,7 +67,7 @@ A static initialization block may not have decorators (the class itself may).
 ### Multiple blocks
 
 The code below demonstrates a class with static initialization blocks and interleaved static field initializers.
-The output shows that the blocks and fields are evaluatd in execution order. 
+The output shows that the blocks and fields are evaluated in execution order. 
 
 ```js
 class MyClass {
