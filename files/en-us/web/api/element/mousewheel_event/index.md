@@ -33,7 +33,7 @@ The _obsolete_ and _non-standard_ **`mousewheel`** event is fired asynchronously
     <tr>
       <th scope="row">Interface</th>
       <td>
-        `MouseWheelEvent` {{deprecated_inline}}
+        {{domxref("WheelEvent")}}
       </td>
     </tr>
     <tr>
