@@ -86,7 +86,7 @@ The {{domxref("XRSpace")}} used to describe the position and orientation of the 
 You can easily obtain the target ray corresponding to the `targetRaySpace` from within the drawing handler for a given frame using {{domxref("XRFrame")}}'s {{domxref("XRFrame.getPose", "getPose()")}} method. The returned {{domxref("XRPose")}}'s {{domxref("XRPose.transform", "transform")}} is the transform corresponding to the target ray. Thus, for an input controller `primaryInput`:
 
 ```js
-let targetRayPose = frame.session.getPose(primaryInput.targetRaySpace,
+let targetRayPose = frame.getPose(primaryInput.targetRaySpace,
                        viewerRefSpace);
 let targetRayOrigin = targetRayPose.transform.position;
 let targetRayVector = targetRayPose.transform.orientation;
