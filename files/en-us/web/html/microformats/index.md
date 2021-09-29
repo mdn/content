@@ -11,8 +11,6 @@ tags:
   - SEO
   - Search
 ---
-## Summary
-
 [*Microformats*](https://microformats.org/) (sometimes abbreviated **μF**) are standards used to embed semantics & structured data in HTML, and provide an API to be used by search engines, aggregators, and other tools. These minimal patterns of HTML are used for marking up entities that range from fundamental to domain-specific information, such as people, organizations, events, and locations. Microformats use supporting vocabularies to describe objects and name-value pairs to assign values to their properties. The properties are carried in class attributes that can be added to any HTML element, while the data values re-use HTML element content and semantic attributes. Microformats2 is an update to microformats that provides a simpler way of annotating HTML structured syntax & vocabularies than previous approaches of using RDFa and microdata which require learning new attributes.
 
 Microformats are supported by all major search engines. Search engines benefit greatly from direct access to this structured data because it allows them to understand the information on web pages and provide more relevant results to users. In addition to being machine-readable, their format is designed to be easily read by humans.
