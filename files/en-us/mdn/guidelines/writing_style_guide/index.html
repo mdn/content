@@ -80,9 +80,7 @@ tags:
 
 <p>This example of a summary is far too short. It leaves out too much information, such as what it means exactly to "stroke" text, where the text is drawn, and so forth.</p>
 
-<div class="example-bad">
 <p><strong><code>CanvasRenderingContext2D.strokeText()</code></strong> draws a string.</p>
-</div>
 
 <h5 id="Example_Too_long!">Example: Too long!</h5>
 
@@ -90,7 +88,6 @@ tags:
 
 <p>Instead, the summary should focus on the <code>strokeText()</code> method, and should refer to the appropriate guides where the other details are described.</p>
 
-<div class="example-bad">
 <p>When called, the Canvas 2D API method <strong><code>CanvasRenderingContext2D.strokeText()</code></strong> strokes the characters in the specified string beginning at the coordinates specified, using the current pen color. In the terminology of computer graphics, "stroking" text means to draw the outlines of the glyphs in the string without filling in the contents of each character with color.</p>
 
 <p>The text is drawn using the context's current font as specified in the context's {{domxref("CanvasRenderingContext2D.font", "font")}} property.</p>
@@ -102,17 +99,14 @@ tags:
 <p>You can, optionally, provide a fourth parameter that lets you specify a maximum width for the string, in pixels. If you provide this parameter, the text is compressed horizontally or scaled (or otherwise adjusted) to fit inside a space that wide when being drawn.</p>
 
 <p>You can call the <strong><code>fillText()</code></strong> method to draw a string's characters as filled with color instead of only drawing the outlines of the characters.</p>
-</div>
 
 <h5 id="Example_Much_better!">Example: Much better!</h5>
 
 <p>Here we see a much better overview for the <code>strokeText()</code> method.</p>
 
-<div class="example-good">
 <p>The {{domxref("CanvasRenderingContext2D")}} method <code><strong>strokeText()</strong></code>, part of the <a href="/en-US/docs/Web/API/Canvas_API">Canvas 2D API</a>, strokes—that is, draws the outlines of—the characters of a specified string, anchored at the position indicated by the given X and Y coordinates. The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.</p>
 
 <p>For more details and further examples, see {{SectionOnPage("/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Text")}} in the Learning Area as well as our main article on the subject, <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text">Drawing text</a>.</p>
-</div>
 
 <h4 id="Include_all_relevant_examples">Include all relevant examples</h4>
 
@@ -164,7 +158,6 @@ tags:
 
 <p>An example of a correctly structured bulleted list:</p>
 
-<div class="example-good">
 <p>In this example we should include:</p>
 
 <ul>
@@ -172,7 +165,6 @@ tags:
  <li>A similar condition, with a brief explanation.</li>
  <li>Yet another condition, with some further explanation.</li>
 </ul>
-</div>
 
 <p>Note how the same sentence structure repeats from bullet to bullet. In this example, each bullet point states a condition followed by a comma and a brief explanation, and each item in the list ends with a period.</p>
 
@@ -182,7 +174,6 @@ tags:
 
 <p>An example of a correctly structured numbered list:</p>
 
-<div class="example-good">
 <p>In order to correctly structure a numbered list, you should:</p>
 
 <ol>
@@ -192,7 +183,6 @@ tags:
 </ol>
 
 <p>This is an example of writing a closing explanation. We have created a short numbered list that provides instructive steps to produce a numbered list with the correct formatting.</p>
-</div>
 
 <p>Note how the items in numbered lists read like short paragraphs. Because numbered lists are routinely used for instructional purposes, or to walk someone through an orderly procedure, be sure to keep each item focused: one numbered item per step.</p>
 
@@ -260,8 +250,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
  <dt>Attribute definitions</dt>
  <dd>Use the {{TemplateLink("htmlattrdef")}} macro (e.g., \{{htmlattrdef("type")}}) for the definition term, so that it can be linked to from other pages easily by using the {{TemplateLink("htmlattrxref")}} macro (e.g., \{{htmlattrxref("type","element")}}) to reference attribute definitions.</dd>
  <dt>Attribute values</dt>
- <dd>Use the "Inline Code" style to apply <code>&lt;code&gt;</code> to attribute values, and don't use quotation marks around string values, unless needed by the syntax of a code sample.</dd>
- <dd><strong>For example:</strong> "When the <code>type</code> attribute of an <code>&lt;input&gt;</code> element is set to <code>email</code> or <code>tel</code> ..."</dd>
+ <dd>Use the "Inline Code" style to apply <code>&lt;code&gt;</code> to attribute values, and don't use quotation marks around string values, unless needed by the syntax of a code sample. <strong>For example:</strong> "When the <code>type</code> attribute of an <code>&lt;input&gt;</code> element is set to <code>email</code> or <code>tel</code> ..."</dd>
 </dl>
 
 <h3 id="Latin_abbreviations">Latin abbreviations</h3>

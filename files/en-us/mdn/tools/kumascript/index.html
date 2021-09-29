@@ -200,18 +200,16 @@ Hello #2</pre>
  <dt><code>md5(string)</code></dt>
  <dd>Returns an MD5 hex digest of the given string.</dd>
  <dt><code>template("name", ["arg0", "arg1", ..., "argN"])</code></dt>
- <dd>
- <p>Executes and returns the result of the named template with the given list of parameters.</p>
+ <dd>Executes and returns the result of the named template with the given list of parameters.
 
- <p>Example: <code>&lt;%- template("warning", ["foo", "bar", "baz"]) %&gt;</code>.</p>
+  <p>Example: <code>&lt;%- template("warning", ["foo", "bar", "baz"]) %&gt;</code>.</p>
 
- <p>Example using the <code>DOMxRef</code> macro: <code>&lt;%- template("DOMxRef", ["Event.bubbles", "bubbles"]) %&gt;</code>.</p>
+  <p>Example using the <code>DOMxRef</code> macro: <code>&lt;%- template("DOMxRef", ["Event.bubbles", "bubbles"]) %&gt;</code>.</p>
 
- <p>This is a JavaScript function. So, if one of the parameters is an arg variable like $2, do not put it in quotes. Like this: <code>&lt;%- template("warning", [$1, $2, "baz"]) %&gt;</code>. If you need to call another template from within a block of code, do not use <code>&lt;%</code> ... <code>%&gt;</code>. Example: <code>myvar = "&lt;li&gt;" + template("LXRSearch", ["ident", "i", $1]) + "&lt;/li&gt;";</code></p>
+  <p>This is a JavaScript function. So, if one of the parameters is an arg variable like $2, do not put it in quotes. Like this: <code>&lt;%- template("warning", [$1, $2, "baz"]) %&gt;</code>. If you need to call another template from within a block of code, do not use <code>&lt;%</code> ... <code>%&gt;</code>. Example: <code>myvar = "&lt;li&gt;" + template("LXRSearch", ["ident", "i", $1]) + "&lt;/li&gt;";</code></p>
  </dd>
  <dt><code>require(name)</code></dt>
- <dd>Loads another template as a module; any output is ignored. Anything assigned to <code>module.exports</code> in the template is returned.</dd>
- <dd>Used in templates like so: <code>&lt;% const my_module = require('MyModule'); %&gt;</code>.</dd>
+ <dd>Loads another template as a module; any output is ignored. Anything assigned to <code>module.exports</code> in the template is returned. Used in templates like so: <code>&lt;% const my_module = require('MyModule'); %&gt;</code>.</dd>
  <dt><code>cacheFn(key, timeout, function_to_cache)</code></dt>
  <dd>Using the given key and cache entry lifetime, cache the results of the given function. Honors the value of <code>env.cache_control</code> to invalidate cache on <code>no-cache</code>, which can be sent by a logged-in user hitting shift-refresh.</dd>
  <dt><code>request</code></dt>
@@ -305,7 +303,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;</pre>
 
 <p>Sometimes, you'll see a scripting message like this when you load a page:</p>
 
-<pre class="brush: none">Kumascript service failed unexpectedly: &lt;class 'httplib.BadStatusLine'&gt;</pre>
+<pre class="brush: plain">Kumascript service failed unexpectedly: &lt;class 'httplib.BadStatusLine'&gt;</pre>
 
 <p>This is probably a temporary failure of the KumaScript service. If you Refresh the page, the error may disappear. If that doesn't work, try a Shift-Refresh. If, after a few tries, the error persists - <a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=mozilla.org&amp;format=itrequest">file an IT bug</a> for Mozilla Developer Network to ask for an investigation.</p>
 
@@ -313,11 +311,11 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;</pre>
 
 <p>On some pages, you'll see a scripting error like this:</p>
 
-<pre class="brush: none">Syntax error at line 436, column 461: Expected valid JSON object as the parameter of the preceding macro but...</pre>
+<pre class="brush: plain">Syntax error at line 436, column 461: Expected valid JSON object as the parameter of the preceding macro but...</pre>
 
 <p>If you edit the page, you’ll probably see a macro like this at the bottom of the page:</p>
 
-<pre class="brush: none">\{{ wiki.languages({ &quot;zh-tw&quot;: &quot;zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要&quot;, ... }) }}</pre>
+<pre class="brush: plain">\{{ wiki.languages({ &quot;zh-tw&quot;: &quot;zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要&quot;, ... }) }}</pre>
 
 <p>To fix the problem, just delete the macro. Or, replace the curly braces on either side with HTML comments <code>&lt;!-- --&gt;</code> to preserve the information, like so:</p>
 
@@ -385,7 +383,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;</pre>
 
 <p>My favorite editor is MacVim, and a series of regexes like this does the bulk of the work with just a little manual clean up following:</p>
 
-<pre class="brush: none">%s#&lt;span#^M&lt;span#g
+<pre class="brush: plain">%s#&lt;span#^M&lt;span#g
 %s#&lt;span lang="\(.*\)" .*&gt;#&lt;% } else if ("\1" == env.locale) { %&gt;#g
 %s#&lt;span class="script"&gt;template.CSSxRef(#&lt;%- template("CSSxRef", [#
 %s#)&lt;/span&gt; &lt;/span&gt;#]) %&gt;
