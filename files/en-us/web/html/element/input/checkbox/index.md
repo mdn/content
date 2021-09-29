@@ -80,25 +80,21 @@ If the `value` attribute was omitted, the default value for the checkbox is `on`
 
 In addition to the common attributes shared by all {{HTMLElement("input")}} elements, "`checkbox`" inputs support the following attributes.
 
-### checked
+- {{htmlattrdef("checked")}}
+  - : A Boolean attribute indicating whether or not this checkbox is checked by default (when the page loads). It does *not* indicate whether this checkbox is currently checked: if the checkbox’s state is changed, this content attribute does not reflect the change. (Only the {{domxref("HTMLInputElement")}}’s `checked` IDL attribute is updated.)
+    > **Note:** Unlike other input controls, a checkbox's value is only included in the submitted data if the checkbox is currently `checked`. If it is, then the value of the checkbox's `value` attribute is reported as the input's value.
+    Unlike other browsers, Firefox by default [persists the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.
 
-A Boolean attribute indicating whether or not this checkbox is checked by default (when the page loads). It does *not* indicate whether this checkbox is currently checked: if the checkbox’s state is changed, this content attribute does not reflect the change. (Only the {{domxref("HTMLInputElement")}}’s `checked` IDL attribute is updated.)
+- {{htmlattrdef("indeterminate")}}
+  - : If the `indeterminate` attribute is present on the {{HTMLElement("input")}} element defining a checkbox, the checkbox's value is neither `true` nor `false`, but is instead **indeterminate**, meaning that its state cannot be determined or stated in pure binary terms. This may happen, for instance, if the state of the checkbox depends on multiple other checkboxes, and those checkboxes have different values.
 
-> **Note:** Unlike other input controls, a checkbox's value is only included in the submitted data if the checkbox is currently `checked`. If it is, then the value of the checkbox's `value` attribute is reported as the input's value.
+    Essentially, then, the `indeterminate` attribute adds a third possible state to the checkbox: "I don't know." In this state, the browser may draw the checkbox in grey or with a different mark inside the checkbox. For instance, browsers on macOS may draw the checkbox with a hyphen "-" inside to indicate an unexpected state.
 
-Unlike other browsers, Firefox by default [persists the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.
+    > **Note:** No browser currently supports `indeterminate` as an attribute. It must be set via JavaScript. See {{anch("Indeterminate state checkboxes")}} for details.
 
-### indeterminate
+- {{htmlattrdef("value")}}
 
-If the `indeterminate` attribute is present on the {{HTMLElement("input")}} element defining a checkbox, the checkbox's value is neither `true` nor `false`, but is instead **indeterminate**, meaning that its state cannot be determined or stated in pure binary terms. This may happen, for instance, if the state of the checkbox depends on multiple other checkboxes, and those checkboxes have different values.
-
-Essentially, then, the `indeterminate` attribute adds a third possible state to the checkbox: "I don't know." In this state, the browser may draw the checkbox in grey or with a different mark inside the checkbox. For instance, browsers on macOS may draw the checkbox with a hyphen "-" inside to indicate an unexpected state.
-
-> **Note:** No browser currently supports `indeterminate` as an attribute. It must be set via JavaScript. See {{anch("Indeterminate state checkboxes")}} for details.
-
-### value
-
-The `value` attribute is one which all {{HTMLElement("input")}}s share; however, it serves a special purpose for inputs of type `checkbox`: when a form is submitted, only checkboxes which are currently checked are submitted to the server, and the reported value is the value of the `value` attribute. If the `value` is not otherwise specified, it is the string `on` by default. This is demonstrated in the section {{anch("Value")}} above.
+  - : The `value` attribute is one which all {{HTMLElement("input")}}s share; however, it serves a special purpose for inputs of type `checkbox`: when a form is submitted, only checkboxes which are currently checked are submitted to the server, and the reported value is the value of the `value` attribute. If the `value` is not otherwise specified, it is the string `on` by default. This is demonstrated in the section {{anch("Value")}} above.
 
 ## Using checkbox inputs
 
