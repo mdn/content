@@ -47,8 +47,6 @@ The physical border to which `border-inline-end` maps depends on the element's w
 
 Related properties are {{cssxref("border-block-start")}}, {{cssxref("border-block-end")}}, and {{cssxref("border-inline-start")}}, which define the other borders of the element.
 
-{{cssinfo}}
-
 ### Values
 
 The `border-inline-end` is specified with one or more of the following, in any order:
