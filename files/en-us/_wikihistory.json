@@ -88959,19 +88959,6 @@
       "JesseW"
     ]
   },
-  "Web/API/Window/mozAnimationStartTime": {
-    "modified": "2020-10-15T21:13:27.556Z",
-    "contributors": [
-      "alattalatta",
-      "connorshea",
-      "sarafec",
-      "fscholz",
-      "teoli",
-      "kscarfone",
-      "Sheppy",
-      "Roc"
-    ]
-  },
   "Web/API/Window/mozInnerScreenX": {
     "modified": "2020-10-15T21:14:34.736Z",
     "contributors": [
