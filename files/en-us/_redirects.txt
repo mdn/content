@@ -2233,7 +2233,7 @@
 /en-US/docs/DOM/window.outerHeight	/en-US/docs/Web/API/Window/outerHeight
 /en-US/docs/DOM/window.outerWidth	/en-US/docs/Web/API/Window/outerWidth
 /en-US/docs/DOM/window.parent	/en-US/docs/Web/API/Window/parent
-/en-US/docs/DOM/window.performance	/en-US/docs/Web/API/Window/performance
+/en-US/docs/DOM/window.performance	/en-US/docs/Web/API/performance_property
 /en-US/docs/DOM/window.performance.now	/en-US/docs/Web/API/Performance/now
 /en-US/docs/DOM/window.personalbar	/en-US/docs/Web/API/Window/personalbar
 /en-US/docs/DOM/window.pkcs11	/en-US/docs/Web/API/Window/pkcs11
@@ -8892,6 +8892,7 @@
 /en-US/docs/Web/API/Window/onuserproximity	/en-US/docs/Web/API/UserProximityEvent
 /en-US/docs/Web/API/Window/onvrdisplayconnected	/en-US/docs/Web/API/Window/onvrdisplayconnect
 /en-US/docs/Web/API/Window/onvrdisplaydisconnected	/en-US/docs/Web/API/Window/onvrdisplaydisconnect
+/en-US/docs/Web/API/Window/performance	/en-US/docs/Web/API/performance_property
 /en-US/docs/Web/API/Window/removeEventListener	/en-US/docs/Web/API/EventTarget/removeEventListener
 /en-US/docs/Web/API/Window/resolveLocalFileSystemURL	/en-US/docs/Web/API/LocalFileSystem#resolvelocalfilesystemurl()
 /en-US/docs/Web/API/Window/restore	/en-US/docs/Web/API/Window/moveTo
@@ -8960,7 +8961,7 @@
 /en-US/docs/Web/API/WorkerGlobalScope.onlanguagechange	/en-US/docs/Web/API/WorkerGlobalScope/onlanguagechange
 /en-US/docs/Web/API/WorkerGlobalScope.onoffline	/en-US/docs/Web/API/WorkerGlobalScope/onoffline
 /en-US/docs/Web/API/WorkerGlobalScope.ononline	/en-US/docs/Web/API/WorkerGlobalScope/ononline
-/en-US/docs/Web/API/WorkerGlobalScope.performance	/en-US/docs/Web/API/WorkerGlobalScope/performance
+/en-US/docs/Web/API/WorkerGlobalScope.performance	/en-US/docs/Web/API/performance_property
 /en-US/docs/Web/API/WorkerGlobalScope.self	/en-US/docs/Web/API/WorkerGlobalScope/self
 /en-US/docs/Web/API/WorkerGlobalScope/WorkerGlobalScope.caches	/en-US/docs/Web/API/caches
 /en-US/docs/Web/API/WorkerGlobalScope/atob	/en-US/docs/Web/API/atob
@@ -8972,6 +8973,7 @@
 /en-US/docs/Web/API/WorkerGlobalScope/fetch	/en-US/docs/Web/API/fetch
 /en-US/docs/Web/API/WorkerGlobalScope/indexedDB	/en-US/docs/Web/API/indexedDB
 /en-US/docs/Web/API/WorkerGlobalScope/onclose	/en-US/docs/Web/API/DedicatedWorkerGlobalScope/close
+/en-US/docs/Web/API/WorkerGlobalScope/performance	/en-US/docs/Web/API/performance_property
 /en-US/docs/Web/API/WorkerGlobalScope/requestFileSystemSync	/en-US/docs/Web/API/LocalFileSystemSync/requestFileSystemSync
 /en-US/docs/Web/API/WorkerGlobalScope/setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Web/API/WorkerGlobalScope/setTimeout	/en-US/docs/Web/API/setTimeout
@@ -9485,7 +9487,7 @@
 /en-US/docs/Web/API/window.outerHeight	/en-US/docs/Web/API/Window/outerHeight
 /en-US/docs/Web/API/window.outerWidth	/en-US/docs/Web/API/Window/outerWidth
 /en-US/docs/Web/API/window.parent	/en-US/docs/Web/API/Window/parent
-/en-US/docs/Web/API/window.performance	/en-US/docs/Web/API/Window/performance
+/en-US/docs/Web/API/window.performance	/en-US/docs/Web/API/performance_property
 /en-US/docs/Web/API/window.performance.now	/en-US/docs/Web/API/Performance/now
 /en-US/docs/Web/API/window.personalbar	/en-US/docs/Web/API/Window/personalbar
 /en-US/docs/Web/API/window.pkcs11	/en-US/docs/Web/API/Window/pkcs11

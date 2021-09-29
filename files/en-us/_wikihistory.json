@@ -89617,26 +89617,6 @@
       "wbamberg"
     ]
   },
-  "Web/API/Window/performance": {
-    "modified": "2020-10-15T21:22:10.802Z",
-    "contributors": [
-      "sideshowbarker",
-      "connorshea",
-      "Sheppy",
-      "anonyco",
-      "kmag",
-      "sarafec",
-      "smarts",
-      "jsantell",
-      "fscholz",
-      "paul.irish",
-      "teoli",
-      "julienw",
-      "iamanupmenon",
-      "ethertank",
-      "MattBrubeck"
-    ]
-  },
   "Web/API/Window/personalbar": {
     "modified": "2020-10-15T21:14:01.101Z",
     "contributors": [
@@ -91429,16 +91409,6 @@
       "teoli",
       "chrisdavidmills",
       "kscarfone"
-    ]
-  },
-  "Web/API/WorkerGlobalScope/performance": {
-    "modified": "2020-10-15T21:29:37.425Z",
-    "contributors": [
-      "fscholz",
-      "AFBarstow",
-      "teoli",
-      "chrisdavidmills",
-      "Bzbarsky"
     ]
   },
   "Web/API/WorkerGlobalScope/self": {
@@ -94503,6 +94473,26 @@
       "Bzbarsky",
       "chrisdavidmills",
       "ziyunfei"
+    ]
+  },
+  "Web/API/performance_property": {
+    "modified": "2020-10-15T21:22:10.802Z",
+    "contributors": [
+      "sideshowbarker",
+      "connorshea",
+      "Sheppy",
+      "anonyco",
+      "kmag",
+      "sarafec",
+      "smarts",
+      "jsantell",
+      "fscholz",
+      "paul.irish",
+      "teoli",
+      "julienw",
+      "iamanupmenon",
+      "ethertank",
+      "MattBrubeck"
     ]
   },
   "Web/API/queueMicrotask": {
