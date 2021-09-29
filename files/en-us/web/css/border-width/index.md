@@ -32,7 +32,8 @@ border-width: thin;
 border-width: medium;
 border-width: thick;
 
-/* <length> values */ border-width: 4px;
+/* <length> values */
+border-width: 4px;
 border-width: 1.2rem;
 
 /* vertical | horizontal */
