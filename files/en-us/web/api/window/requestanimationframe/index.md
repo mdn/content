@@ -121,7 +121,6 @@ Edge versions below 17 and Internet Explorer do not reliably fire
 
 ## See also
 
-- {{domxref("Window.mozAnimationStartTime")}}
 - {{domxref("Window.cancelAnimationFrame()")}}
 - [mozRequestAnimationFrame](http://weblogs.mozillazine.org/roc/archives/2010/08/mozrequestanima.html)
   \- Blog post

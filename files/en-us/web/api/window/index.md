@@ -189,8 +189,6 @@ Note that properties which are objects (e.g.,. for overriding the prototype of b
   - : Gets/sets the status bar text for the given window.
 - {{domxref("Window.dialogArguments")}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : Gets the arguments passed to the window (if it's a dialog box) at the time {{domxref("window.showModalDialog()")}} was called. This is an {{Interface("nsIArray")}}.
-- {{domxref("Window.mozAnimationStartTime")}} {{Non-standard_inline}} {{deprecated_inline}}
-  - : The time in milliseconds since epoch at which the current animation cycle began. Use {{domxref("Animation.startTime")}} instead.
 - {{domxref("Window.mozPaintCount")}} {{non-standard_inline}} {{deprecated_inline}}
   - : Returns the number of times the current document has been rendered to the screen in this window. This can be used to compute rendering performance.
 - {{domxref("Window.orientation")}} {{readOnlyInline}} {{deprecated_inline}}
