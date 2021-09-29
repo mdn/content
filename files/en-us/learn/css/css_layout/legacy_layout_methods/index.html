@@ -91,48 +91,12 @@ div:nth-of-type(2) {
 
 <p>Putting this all together should give us a result like so:</p>
 
-<div id="Floated_Two_Col">
-<div class="hidden">
-<h6 id="Simple_two-column_layout">Simple two-column layout</h6>
-
-<pre class="brush: html">&lt;h1&gt;2 column layout example&lt;/h1&gt;
-
-&lt;div&gt;
-  &lt;h2&gt;First column&lt;/h2&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div&gt;
-  &lt;h2&gt;Second column&lt;/h2&gt;
-  &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css">body {
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-div:nth-of-type(1) {
-  width: 48%;
-  float: left;
-}
-
-div:nth-of-type(2) {
-  width: 48%;
-  float: right;
-}
-</pre>
-</div>
-</div>
-
-<p>{{ EmbedLiveSample('Floated_Two_Col', '100%', 520) }}</p>
+<p>{{ EmbedLiveSample('A_two_column_layout', '100%', 520) }}</p>
 
 <p>You'll notice here that we are using percentages for all the widths — this is quite a good strategy, as it creates a <strong>liquid layout</strong>, one that adjusts to different screen sizes and keeps the same proportions for the column widths at smaller screen sizes. Try adjusting the width of your browser window to see for yourself. This is a valuable tool for responsive web design.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can see this example running at <a href="https://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html">0_two-column-layout.html</a> (see also <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/0_two-column-layout.html">the source code</a>).</p>
+<p><strong>Note:</strong> You can see this example running at <a href="https://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html">0_two-column-layout.html</a> (see also <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/0_two-column-layout.html">the source code</a>).</p>
 </div>
 
 <h2 id="Creating_simple_legacy_grid_frameworks">Creating simple legacy grid frameworks</h2>
@@ -215,7 +179,7 @@ body {
 <p>The top row of single columns will now lay out neatly as a grid.</p>
 
 <div class="note">
-<p><strong>Note</strong>: We've also given each column a light red color so you can see exactly how much space each one takes up.</p>
+<p><strong>Note:</strong> We've also given each column a light red color so you can see exactly how much space each one takes up.</p>
 </div>
 
 <p>Layout containers that we want to span more than one column need to be given special classes to adjust their {{cssxref("width")}} values to the required number of columns (plus gutters in between). We need to create an additional class to allow containers to span 2 to 12 columns. Each width is the result of adding up the column width of that number of columns plus the gutter widths, which will always number one less than the number of columns.</p>
