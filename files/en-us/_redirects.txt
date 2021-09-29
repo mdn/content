@@ -2236,7 +2236,6 @@
 /en-US/docs/DOM/window.performance	/en-US/docs/Web/API/performance_property
 /en-US/docs/DOM/window.performance.now	/en-US/docs/Web/API/Performance/now
 /en-US/docs/DOM/window.personalbar	/en-US/docs/Web/API/Window/personalbar
-/en-US/docs/DOM/window.pkcs11	/en-US/docs/Web/API/Window/pkcs11
 /en-US/docs/DOM/window.postMessage	/en-US/docs/Web/API/Window/postMessage
 /en-US/docs/DOM/window.print	/en-US/docs/Web/API/Window/print
 /en-US/docs/DOM/window.prompt	/en-US/docs/Web/API/Window/prompt
@@ -2669,7 +2668,6 @@
 /en-US/docs/DOM:window.outerWidth	/en-US/docs/Web/API/Window/outerWidth
 /en-US/docs/DOM:window.parent	/en-US/docs/Web/API/Window/parent
 /en-US/docs/DOM:window.personalbar	/en-US/docs/Web/API/Window/personalbar
-/en-US/docs/DOM:window.pkcs11	/en-US/docs/Web/API/Window/pkcs11
 /en-US/docs/DOM:window.postMessage	/en-US/docs/Web/API/Window/postMessage
 /en-US/docs/DOM:window.print	/en-US/docs/Web/API/Window/print
 /en-US/docs/DOM:window.prompt	/en-US/docs/Web/API/Window/prompt
@@ -3399,7 +3397,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.outerWidth	/en-US/docs/Web/API/Window/outerWidth
 /en-US/docs/Document_Object_Model_(DOM)/window.parent	/en-US/docs/Web/API/Window/parent
 /en-US/docs/Document_Object_Model_(DOM)/window.personalbar	/en-US/docs/Web/API/Window/personalbar
-/en-US/docs/Document_Object_Model_(DOM)/window.pkcs11	/en-US/docs/Web/API/Window/pkcs11
 /en-US/docs/Document_Object_Model_(DOM)/window.postMessage	/en-US/docs/Web/API/Window/postMessage
 /en-US/docs/Document_Object_Model_(DOM)/window.prompt	/en-US/docs/Web/API/Window/prompt
 /en-US/docs/Document_Object_Model_(DOM)/window.releaseEvents	/en-US/docs/Web/API/Window/releaseEvents
@@ -9492,7 +9489,6 @@
 /en-US/docs/Web/API/window.performance	/en-US/docs/Web/API/performance_property
 /en-US/docs/Web/API/window.performance.now	/en-US/docs/Web/API/Performance/now
 /en-US/docs/Web/API/window.personalbar	/en-US/docs/Web/API/Window/personalbar
-/en-US/docs/Web/API/window.pkcs11	/en-US/docs/Web/API/Window/pkcs11
 /en-US/docs/Web/API/window.postMessage	/en-US/docs/Web/API/Window/postMessage
 /en-US/docs/Web/API/window.print	/en-US/docs/Web/API/Window/print
 /en-US/docs/Web/API/window.prompt	/en-US/docs/Web/API/Window/prompt
@@ -11906,7 +11902,6 @@
 /en-US/docs/window.outerWidth	/en-US/docs/Web/API/Window/outerWidth
 /en-US/docs/window.parent	/en-US/docs/Web/API/Window/parent
 /en-US/docs/window.personalbar	/en-US/docs/Web/API/Window/personalbar
-/en-US/docs/window.pkcs11	/en-US/docs/Web/API/Window/pkcs11
 /en-US/docs/window.prompt	/en-US/docs/Web/API/Window/prompt
 /en-US/docs/window.releaseEvents	/en-US/docs/Web/API/Window/releaseEvents
 /en-US/docs/window.resizeBy	/en-US/docs/Web/API/Window/resizeBy

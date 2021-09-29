@@ -89616,22 +89616,6 @@
       "JesseW"
     ]
   },
-  "Web/API/Window/pkcs11": {
-    "modified": "2020-10-15T21:14:39.330Z",
-    "contributors": [
-      "connorshea",
-      "sarafec",
-      "fscholz",
-      "teoli",
-      "kohei.yoshino",
-      "Sheppy",
-      "iamanupmenon",
-      "bsmedberg",
-      "Mgjbot",
-      "Dria",
-      "JesseW"
-    ]
-  },
   "Web/API/Window/popstate_event": {
     "modified": "2020-11-03T18:05:27.736Z",
     "contributors": [

@@ -193,8 +193,6 @@ Note that properties which are objects (e.g.,. for overriding the prototype of b
   - : Returns the number of times the current document has been rendered to the screen in this window. This can be used to compute rendering performance.
 - {{domxref("Window.orientation")}} {{readOnlyInline}} {{deprecated_inline}}
   - : Returns the orientation in degrees (in 90 degree increments) of the viewport relative to the device's natural orientation.
-- {{domxref("Window.pkcs11")}} {{deprecated_inline}}
-  - : Formerly provided access to install and remove PKCS11 modules.
 - {{domxref("Window.returnValue")}} {{deprecated_inline}}
   - : The return value to be returned to the function that called {{domxref("window.showModalDialog()")}} to display the window as a modal dialog.
 
