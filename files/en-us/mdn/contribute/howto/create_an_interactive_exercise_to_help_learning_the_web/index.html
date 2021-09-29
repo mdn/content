@@ -25,25 +25,20 @@ tags:
 
 <h3 id="Hidden_code">Hidden code</h3>
 
-<p>The first way to use a code sample to create active learning content is to edit the page where you want to add your content. Use the Live Sample feature to create your content as you wish. Don't bother with the code complexity you could write; just create what you need. Once your content is ready, just switch to the editor code view and surround your code with a simple {{HTMLElement('div')}} element with the class <code>hidden</code>. By doing so, your code won't be displayed but your live sample remains accessible and displayable.</p>
+<p>The first way to use a code sample to create active learning content is to edit the page where you want to add your content. Use the Live Sample feature to create your content as you wish. Don't bother with the code complexity you could write; just create what you need. Once your code example is ready, surround it with a simple {{HTMLElement('div')}} element with an appropriate <code>id</code> attribute. Add the class <code>hidden</code> to any {{HTMLElement('pre')}} elements that surround this code. By doing so, your code won't be displayed but your live sample remains accessible and displayable.</p>
 
 <p>Let's see a simple example:</p>
 
-<div class="moreinfo">
+<div>
 <p>Click on the following square to randomly change its color:</p>
 
-<div class="hidden">
-<h4 id="hidden_code_example">hidden code example</h4>
+<div id="hidden_code_example">
 
-<h5 id="HTML">HTML</h5>
-
-<pre class="brush: html">&lt;div class="square"&gt;
+<pre class="brush: html hidden">&lt;div class="square"&gt;
   &lt;p class="color"&gt;#000000&lt;/p&gt;
 &lt;/div&gt;</pre>
 
-<h5 id="CSS">CSS</h5>
-
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   padding: 10px;
   margin : 0;
 }
@@ -63,9 +58,7 @@ tags:
 }
 </pre>
 
-<h5 id="JS">JS</h5>
-
-<pre class="brush: js">function setColor(color) {
+<pre class="brush: js hidden">function setColor(color) {
   document.querySelector('.square').style.backgroundColor = '#' + color;
   document.querySelector('.color').textContent = '#' + color;
 }
@@ -80,26 +73,22 @@ document.addEventListener('click', function (e) {
 });
 </pre>
 </div>
+
 {{EmbedLiveSample('hidden_code_example', 120, 125)}}</div>
 
 <p>If you take a look at the source code of this page, you'll see the following HTML code:</p>
 
-<pre class="brush: html">&lt;div class="moreinfo"&gt;
-&lt;p&gt;Click on the following square to randomly change its color or just type an hexadecimal code color&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Click on the following square to randomly change its color or just type an hexadecimal code color&lt;/p&gt;
 
-&lt;div class="hidden"&gt;
-&lt;h4 id="hidden_code_example"&gt;hidden code example&lt;/h4&gt;
+&lt;div id="hidden_code_example"&gt;
 
-&lt;h5 id="HTML"&gt;HTML&lt;/h5&gt;
+&lt;pre class="brush: html hidden"&gt;
+  &lt;div class="square"&gt;
+    &lt;p class="color"&gt;#000000&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/pre&gt;
 
-&lt;pre class="brush: html"&gt;
-&amp;lt;div class="square"&amp;gt;
-  &amp;lt;p class="color"&amp;gt;#000000&amp;lt;/p&amp;gt;
-&amp;lt;/div&amp;gt;&lt;/pre&gt;
-
-&lt;h5 id="CSS"&gt;CSS&lt;/h5&gt;
-
-&lt;pre class="brush: css"&gt;
+&lt;pre class="brush: css hidden"&gt;
 body {
   padding: 10px;
   margin : 0;
@@ -120,9 +109,7 @@ body {
 }
 &lt;/pre&gt;
 
-&lt;h5 id="JS"&gt;JS&lt;/h5&gt;
-
-&lt;pre class="brush: js"&gt;
+&lt;pre class="brush: js hidden"&gt;
 function setColor(color) {
   document.querySelector('.square').style.backgroundColor = '#' + color;
   document.querySelector('.color').textContent = '#' + color;
@@ -139,8 +126,7 @@ document.addEventListener('click', function (e) {
 &lt;/pre&gt;
 &lt;/div&gt;
 
-\{{EmbedLiveSample('hidden_code_example', 120, 125)}}
-&lt;/div&gt;</pre>
+\{{EmbedLiveSample('hidden_code_example', 120, 125)}}</pre>
 
 <p>You can see a more advanced example of such a tweak on <a href="/en-US/docs/Web/API/Canvas_API#javascript">the Canvas API page</a>.</p>
 
@@ -152,7 +138,7 @@ document.addEventListener('click', function (e) {
 
 <p>Let's how that sample looks when configured as if it were being embedded from a remote origin:</p>
 
-<div class="moreinfo">
+<div>
 <p>Click on the following square to randomly change its color or just type a hexadecimal code color</p>
 {{EmbedLiveSample('The_example', 120, 125, '', 'MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example')}}</div>
 
