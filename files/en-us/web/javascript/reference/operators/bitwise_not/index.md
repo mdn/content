@@ -79,4 +79,4 @@ Note that due to using 32-bit representation for numbers both `~-1` and
 ## See also
 
 - [Bitwise
-  operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise)
+  operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)
