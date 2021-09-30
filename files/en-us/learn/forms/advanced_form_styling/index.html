@@ -258,7 +258,7 @@ input[type="checkbox"]:disabled {
  <li><code>:disabled</code> — the checkbox (or radio button) is in a disabled state — it cannot be interacted with.</li>
 </ul>
 
-<p id="results">You can see the live result:</p>
+<p>You can see the live result:</p>
 
 <p>{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/checkboxes-styled.html", '100%', 200)}}</p>
 
@@ -462,7 +462,7 @@ button {
 
 <p>The only problem with file pickers is that the button provided that you press to open the file picker is completely unstylable — it can't be sized or colored, and it won't even accept a different font.</p>
 
-<p>One way around this is to take advantage of the fact that if you have a label associated with a form control, clicking the label will activate the control. So you could hide the actual from input using something like this:</p>
+<p>One way around this is to take advantage of the fact that if you have a label associated with a form control, clicking the label will activate the control. So you could hide the actual form input using something like this:</p>
 
 <pre class="brush: css">input[type="file"] {
   height: 0;
@@ -489,7 +489,7 @@ label[for="file"]:active {
   box-shadow: inset 1px 1px 3px #ccc;
 }</pre>
 
-<p>You can see the result of the above CSS styling in the below live example (see also <a href="https://mdn.github.io/learning-area/html/forms/styling-examples/styled-file-picker.html">styled-file-picker.html</a> live, and the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/styling-examples/styled-file-picker.html-US/docs/">source code</a>).</p>
+<p>You can see the result of the above CSS styling in the below live example (see also <a href="https://mdn.github.io/learning-area/html/forms/styling-examples/styled-file-picker.html">styled-file-picker.html</a> live, and the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/styling-examples/styled-file-picker.html">source code</a>).</p>
 
 <p>{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/styled-file-picker.html", '100%', 200)}}</p>
 
@@ -497,7 +497,7 @@ label[for="file"]:active {
 
 <p><code><a href="/en-US/docs/Web/HTML/Element/meter">&lt;meter&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/progress">&lt;progress&gt;</a></code> are possibly the worst of the lot. As you saw in the earlier example, we can set them to a desired width relatively accurately. But beyond that, they are really difficult to style in any way. They don't handle height settings consistently between each other and between browsers, you can color the background, but not the foreground bar, and setting <code>appearance: none</code> on them makes things worse, not better.</p>
 
-<p>It is easier to just create your own custom solution for these features, if you want to be able to control the styling, or use a third party solution such as <a href="https://kimmobrunfeldt.github.io/progressbar.js/#examples">progressbar.js</a>.</p>
+<p>It is easier to just create your own custom solution for these features, if you want to be able to control the styling, or use a third-party solution such as <a href="https://kimmobrunfeldt.github.io/progressbar.js/#examples">progressbar.js</a>.</p>
 
 <h2 id="The_road_to_nicer_forms_useful_libraries_and_polyfills">The road to nicer forms: useful libraries and polyfills</h2>
 

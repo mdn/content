@@ -164,7 +164,7 @@ tags:
 
 <p>Your remote should now be set up. You can verify it by running the command <code>git remote -v</code> in your terminal, which outputs a list of your remote names and where they point to. You should see something a bit like this:</p>
 
-<pre>mozilla    git@github.com:mdn/content.git (fetch)
+<pre class="brush: plain">mozilla    git@github.com:mdn/content.git (fetch)
 mozilla    git@github.com:mdn/content.git (push)
 origin    git@github.com:chrisdavidmills/content.git (fetch)
 origin    git@github.com:chrisdavidmills/content.git (push)</pre>
@@ -183,10 +183,8 @@ Make sure you run the following to switch to the main branch before doing anythi
 
 <pre class="brush: bash">git switch main</pre>
 
-<div class="notecard note">
-  <h4>Note</h4>
-
-  <p>In other tutorials you may have seen <code>git checkout</code> used to change branches in a repo. That works fine most of the time, but can sometimes have unintended side-effects, therefore in this tutorial we are recommending the newer <code>git switch</code> command, which is designed purely for switching branches and has less chance of going wrong. If you are interested in how these commands are related, and the differences between them, <a href="https://github.blog/2019-08-16-highlights-from-git-2-23/#experimental-alternatives-for-git-checkout">Highlights from Git 2.23 > Experimental alternatives for git checkout</a> provides a good summary.</p>
+<div class="note">
+  <p><strong>Note:</strong> In other tutorials you may have seen <code>git checkout</code> used to change branches in a repo. That works fine most of the time, but can sometimes have unintended side-effects, therefore in this tutorial we are recommending the newer <code>git switch</code> command, which is designed purely for switching branches and has less chance of going wrong. If you are interested in how these commands are related, and the differences between them, <a href="https://github.blog/2019-08-16-highlights-from-git-2-23/#experimental-alternatives-for-git-checkout">Highlights from Git 2.23 > Experimental alternatives for git checkout</a> provides a good summary.</p>
 </div>
 
 <h3 id="update_your_main_branch">Update your main branch</h3>
@@ -275,12 +273,12 @@ Make sure you run the following to switch to the main branch before doing anythi
 
 <p>If you were successful, git should tell you something like this:</p>
 
-<pre>Branch 'test-branch' set up to track remote branch 'test-branch' from 'origin'.
+<pre class="brush: plain">Branch 'test-branch' set up to track remote branch 'test-branch' from 'origin'.
 Switched to a new branch 'test-branch'</pre>
 
 <p>Note that you can check the status of your repo, including what branch you are on, at any time by running the command <code>git status</code>. Try this now, and git should tell you something like this:</p>
 
-<pre>On branch test-branch
+<pre class="brush: plain">On branch test-branch
 Your branch is up to date with 'origin/test-branch'.
 
 nothing to commit, working tree clean</pre>
@@ -300,7 +298,7 @@ nothing to commit, working tree clean</pre>
   <li>
     <p>Now go back to your command line and enter the <code>git status</code> command again. This time git should tell you something like this:</p>
 
-    <pre>Your branch is up to date with 'origin/test-branch'.
+    <pre class="brush: plain">Your branch is up to date with 'origin/test-branch'.
 
     Changes not staged for commit:
       (use "git add &lt;file&gt;..." to update what will be committed)
@@ -314,16 +312,14 @@ nothing to commit, working tree clean</pre>
 
     <pre class="brush: bash">git add README.md</pre>
 
-    <div class="notecard note">
-      <h3>Note</h3>
-
-      <p><code>README.md</code> is the path to the file you have changed, not just its name. If it were inside a subdirectory, you'd have to write the full path to the file.
+    <div class="note">
+      <p><strong>Note:</strong> <code>README.md</code> is the path to the file you have changed, not just its name. If it were inside a subdirectory, you'd have to write the full path to the file.</p>
     </div>
   </li>
   <li>
     <p>If you run <code>git status</code> again, you'll now see this:</p>
 
-    <pre>On branch test-branch
+    <pre class="brush: plain">On branch test-branch
     Your branch is up to date with 'origin/test-branch'.
 
     Changes to be committed:
@@ -337,7 +333,7 @@ nothing to commit, working tree clean</pre>
 
     <p>Git will tell you this:</p>
 
-    <pre>[test-branch 44b207ef6] my first commit
+    <pre class="brush: plain">[test-branch 44b207ef6] my first commit
      1 file changed, 1 insertion(+), 1 deletion(-)</pre>
 
     <p>To show that it has registered that you've made a commit.</p>
@@ -345,7 +341,7 @@ nothing to commit, working tree clean</pre>
   <li>
     <p>Run <code>git status</code> again, and you'll get this information:</p>
 
-    <pre>On branch test-branch
+    <pre class="brush: plain">On branch test-branch
     Your branch is ahead of 'origin/test-branch' by 1 commit.
       (use "git push" to publish your local commits)
 
@@ -357,7 +353,7 @@ nothing to commit, working tree clean</pre>
 
 <p>Let's send our local change to the remote branch. You can do this by running the command <code>git push</code> — try this now. If there no errors, you should get a readout like this:</p>
 
-<pre>Enumerating objects: 5, done.
+<pre class="brush: plain">Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.
 Delta compression using up to 8 threads
 Compressing objects: 100% (3/3), done.
@@ -381,10 +377,8 @@ To github.com:chrisdavidmills/content.git
 
     <p><img src="open-pull-request.png" alt="open pull request form, which includes text fields for title and description"></p>
 
-    <div class="notecard warning">
-      <h3>Warning</h3>
-
-      <p>Only follow the rest of these steps if you have a real change to make to the repo! Please do not actually submit test PRs to our repos.</p>
+    <div class="warning">
+      <p><strong>Warning:</strong> Only follow the rest of these steps if you have a real change to make to the repo! Please do not actually submit test PRs to our repos.</p>
     </div>
   </li>
   <li>
@@ -450,9 +444,8 @@ To github.com:chrisdavidmills/content.git
 
 <p>If you look at your remote fork's github.com page again, you'll see the commit that you wanted to reverse, plus the commit that reverses it.</p>
 
-<div class="note notecard">
-  <h4>Note</h4>
-  <p>Another way to handle getting rid of files that have ended up in pull requests that you don't want to be there is to use the GitHub UI. Go to your pull request's page on github.com, go to the "Files changed" tab, and find the file you want to remove from the pull request. At the top right of the file's box in the page there will be a "three dot" (<code>...</code>) menu. Press this button and choose "Delete file". In the confirmation page, enter a title for the new commit, make sure the "Commit directly..." checkbox is selected, and press the "Commit changes" button.</p>
+<div class="note">
+  <p><strong>Note:</strong> Another way to handle getting rid of files that have ended up in pull requests that you don't want to be there is to use the GitHub UI. Go to your pull request's page on github.com, go to the "Files changed" tab, and find the file you want to remove from the pull request. At the top right of the file's box in the page there will be a "three dot" (<code>...</code>) menu. Press this button and choose "Delete file". In the confirmation page, enter a title for the new commit, make sure the "Commit directly..." checkbox is selected, and press the "Commit changes" button.</p>
 
   <p>It is usually a good idea to get the rest of the pull request looking exactly how you want it before you make changes via the GitHub UI. If you do something like this and then end up having to make more changes, you'll need to remember to pull the changes you made to your remote branch down to your local branch (e.g. with <code>git pull</code>) before you can push more commits.</p>
 </div>

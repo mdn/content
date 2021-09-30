@@ -38,7 +38,7 @@ var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAni
 
 var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
 
-var start = window.mozAnimationStartTime;  // Only supported in FF. Other browsers can use something like Date.now().
+var start = Date.now();
 
 var myReq;
 
@@ -65,6 +65,5 @@ cancelAnimationFrame(myReq);
 
 ## See also
 
-- {{domxref("window.mozAnimationStartTime")}}
 - {{domxref("window.requestAnimationFrame()")}}
 - [A polyfill](https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js)

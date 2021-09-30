@@ -90,7 +90,7 @@ tags:
  <li>The constructor for {{domxref("ImageData")}} has been added. This interface can be used in a {{domxref("Worker")}}. ({{bug(959958)}})</li>
  <li>The property {{domxref("URLUtilsReadOnly.origin", "location.origin")}} is now available in workers (via {{domxref("WorkerLocation")}}) ({{bug(964148)}}).</li>
  <li>The {{domxref("ValidityState.badInput")}} property has been implemented ({{bug(827161)}}).</li>
- <li>The deprecated {{domxref("Window.pkcs11")}} property has been removed; it was returning <code>null</code> since Firefox 3.0.14. ({{bug(964964)}})</li>
+ <li>The deprecated <code>Window.pkcs11</code> property has been removed; it was returning <code>null</code> since Firefox 3.0.14. ({{bug(964964)}})</li>
  <li>The {{domxref("Node.cloneNode()")}} and {{domxref("Document.importNode()")}} methods take the Boolean <code>deep</code> argument. Until now, if omitted, these methods acted as if the value of <code>deep</code> was <code>true</code>. But this behavior has been changed as per the latest spec, and if omitted, the methods will act as if the value was <code>false</code>. ({{bug(937461)}})</li>
  <li>{{domxref("Window._content")}} is no longer available to Web content ({{bug(946564)}}).</li>
  <li>{{domxref("HTMLAnchorElement/port", "URLUtils.port")}} behavior has been slightly changed: set to <code>''</code> will set it to the default port associated with the protocol, and <code>0</code> to <code>0.</code> ({{bug(930450)}})</li>

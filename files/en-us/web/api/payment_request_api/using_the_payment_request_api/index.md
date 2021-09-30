@@ -39,11 +39,7 @@ The functions invoked inside the constructor return the required object paramete
 function buildSupportedPaymentMethodData() {
   // Example supported payment methods:
   return [{
-    supportedMethods: 'basic-card',
-    data: {
-      supportedNetworks: ['visa', 'mastercard'],
-      supportedTypes: ['debit', 'credit']
-    }
+    supportedMethods: 'https://example.com/pay'
   }];
 }
 
