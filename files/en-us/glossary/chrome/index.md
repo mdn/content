@@ -7,10 +7,8 @@ tags:
   - Glossary
   - WebMechanics
 ---
-<p>In a browser, the chrome is any visible aspect of a browser aside from the webpages themselves (e.g., toolbars, menu bar, tabs). This is not to be confused with the {{glossary("Google Chrome")}} browser.</p>
+In a browser, the chrome is any visible aspect of a browser aside from the webpages themselves (e.g., toolbars, menu bar, tabs). This is not to be confused with the {{glossary("Google Chrome")}} browser.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.nngroup.com/articles/browser-and-gui-chrome/">Browser and GUI Chrome</a></li>
-</ul>
+- [Browser and GUI Chrome](https://www.nngroup.com/articles/browser-and-gui-chrome/)

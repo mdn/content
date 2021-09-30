@@ -7,13 +7,11 @@ tags:
   - XML
   - XSLT
 ---
-<p><em>eXtensible Stylesheet Language Transformations</em> (<strong>XSLT</strong>) is a declarative language used to convert {{Glossary("XML")}} documents into other XML documents, {{Glossary("HTML")}}, {{Glossary("PDF")}}, plain text, and so on.</p>
+_eXtensible Stylesheet Language Transformations_ (**XSLT**) is a declarative language used to convert {{Glossary("XML")}} documents into other XML documents, {{Glossary("HTML")}}, {{Glossary("PDF")}}, plain text, and so on.
 
-<p>XSLT has its own processor that accepts XML input, or any format convertible to an XQuery and XPath Data Model. The XSLT processor produces a new document based on the XML document and an XSLT stylesheet, making no changes to the original files in the process.</p>
+XSLT has its own processor that accepts XML input, or any format convertible to an XQuery and XPath Data Model. The XSLT processor produces a new document based on the XML document and an XSLT stylesheet, making no changes to the original files in the process.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "XSLT")}} on Wikipedia</li>
- <li><a href="/en-US/docs/Web/XSLT">XSLT documentation on MDN</a></li>
-</ul>
+- {{Interwiki("wikipedia", "XSLT")}} on Wikipedia
+- [XSLT documentation on MDN](/en-US/docs/Web/XSLT)

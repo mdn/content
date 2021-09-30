@@ -6,10 +6,8 @@ tags:
   - Glossary
   - JavaScript
 ---
-<p>In {{glossary("JavaScript")}}, a block is a collection of related {{glossary("statement","statements")}} enclosed in braces ("{}"). For example, you can put a block of statements after an {{jsxref("Statements/if...else","if (condition)")}} block, indicating that the interpreter should run the code inside the block if the condition is true, or skip the whole block if the condition is false.</p>
+In {{glossary("JavaScript")}}, a block is a collection of related {{glossary("statement","statements")}} enclosed in braces ("{}"). For example, you can put a block of statements after an {{jsxref("Statements/if...else","if (condition)")}} block, indicating that the interpreter should run the code inside the block if the condition is true, or skip the whole block if the condition is false.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/block">JavaScript block statement</a></li>
-</ul>
+- [JavaScript block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block)

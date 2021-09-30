@@ -8,33 +8,34 @@ tags:
   - Preflight
   - request
 ---
-<p>A CORS preflight request is a {{Glossary("CORS")}} request that checks to see if the CORS protocol is understood and a server is aware using specific methods and headers.</p>
+A CORS preflight request is a {{Glossary("CORS")}} request that checks to see if the CORS protocol is understood and a server is aware using specific methods and headers.
 
-<p>It is an {{HTTPMethod("OPTIONS")}} request, using three HTTP request headers: {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Access-Control-Request-Headers")}}, and the {{HTTPHeader("Origin")}} header.</p>
+It is an {{HTTPMethod("OPTIONS")}} request, using three HTTP request headers: {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Access-Control-Request-Headers")}}, and the {{HTTPHeader("Origin")}} header.
 
-<p>A preflight request is automatically issued by a browser and in normal cases, front-end developers don't need to craft such requests themselves. It appears when request is qualified as <a href="/en-US/docs/Web/HTTP/CORS#preflighted_requests">"to be preflighted"</a> and omitted for <a href="/en-US/docs/Web/HTTP/CORS#simple_requests">simple requests</a>.</p>
+A preflight request is automatically issued by a browser and in normal cases, front-end developers don't need to craft such requests themselves. It appears when request is qualified as ["to be preflighted"](/en-US/docs/Web/HTTP/CORS#preflighted_requests) and omitted for [simple requests](/en-US/docs/Web/HTTP/CORS#simple_requests).
 
-<p>For example, a client might be asking a server if it would allow a {{HTTPMethod("DELETE")}} request, before sending a <code>DELETE</code> request, by using a preflight request:</p>
+For example, a client might be asking a server if it would allow a {{HTTPMethod("DELETE")}} request, before sending a `DELETE` request, by using a preflight request:
 
-<pre class="brush: plain">OPTIONS /resource/foo
+```plain
+OPTIONS /resource/foo
 Access-Control-Request-Method: DELETE
 Access-Control-Request-Headers: origin, x-requested-with
-Origin: https://foo.bar.org</pre>
+Origin: https://foo.bar.org
+```
 
-<p>If the server allows it, then it will respond to the preflight request with an {{HTTPHeader("Access-Control-Allow-Methods")}} response header, which lists <code>DELETE</code>:</p>
+If the server allows it, then it will respond to the preflight request with an {{HTTPHeader("Access-Control-Allow-Methods")}} response header, which lists `DELETE`:
 
-<pre class="brush: plain">HTTP/1.1 204 No Content
+```plain
+HTTP/1.1 204 No Content
 Connection: keep-alive
 Access-Control-Allow-Origin: https://foo.bar.org
 Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
 Access-Control-Max-Age: 86400
-</pre>
+```
 
-<p>The preflight response can be optionally cached for the requests created in the same {{Glossary("URL")}} using {{HTTPHeader("Access-Control-Max-Age")}} header like in the above example.</p>
+The preflight response can be optionally cached for the requests created in the same {{Glossary("URL")}} using {{HTTPHeader("Access-Control-Max-Age")}} header like in the above example.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Glossary("CORS")}}</li>
- <li>{{HTTPMethod("OPTIONS")}}</li>
-</ul>
+- {{Glossary("CORS")}}
+- {{HTTPMethod("OPTIONS")}}

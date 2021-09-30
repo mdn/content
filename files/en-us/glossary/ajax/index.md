@@ -6,28 +6,24 @@ tags:
   - CodingScripting
   - Glossary
   - Infrastructure
-  - 'l10n:priority'
+  - l10n:priority
 ---
-<p><strong>Ajax</strong>, which initially stood for Asynchronous {{Glossary("JavaScript")}} And {{Glossary("XML")}}, is a programming practice of building complex, dynamic webpages using a technology known as {{Glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}}.</p>
+**Ajax**, which initially stood for Asynchronous {{Glossary("JavaScript")}} And {{Glossary("XML")}}, is a programming practice of building complex, dynamic webpages using a technology known as {{Glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}}.
 
-<p>Ajax allows you to update parts of the {{Glossary("DOM")}} of an {{Glossary("HTML")}} page instead without the need for a full page refresh. Ajax also lets you work asynchronously, meaning your code continues to run while the targeted part of your web page is trying to reload (compared to synchronously, which blocks your code from running until that part of your page is done reloading).</p>
+Ajax allows you to update parts of the {{Glossary("DOM")}} of an {{Glossary("HTML")}} page instead without the need for a full page refresh. Ajax also lets you work asynchronously, meaning your code continues to run while the targeted part of your web page is trying to reload (compared to synchronously, which blocks your code from running until that part of your page is done reloading).
 
-<p>With interactive websites and modern web standards, Ajax is gradually being replaced by functions within JavaScript frameworks and the official {{domxref("Fetch API")}} Standard.</p>
+With interactive websites and modern web standards, Ajax is gradually being replaced by functions within JavaScript frameworks and the official {{domxref("Fetch API")}} Standard.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{interwiki("wikipedia", "AJAX")}} on Wikipedia</li>
- <li><a href="/en-US/docs/Web/Guide/AJAX">Ajax</a></li>
- <li><a href="/en-US/docs/Web/Guide/AJAX/Getting_Started">Ajax - Getting started</a></li> 
- <li><a href="/en-US/docs/Glossary">Glossary</a>:
-  <ul>
-   <li>{{Glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}}</li>
-  </ul>
- </li>
- <li>{{DOMxRef("XMLHttpRequest")}}</li>
- <li>{{DOMxRef("Fetch API")}}</li>
- <li><a href="/en-US/docs/Web/API/Fetch_API/Using_Fetch">Using Fetch API</a></li>
- <li><a href="https://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/">Synchronous vs. Asynchronous Communications</a></li>
-</ul>
+- {{interwiki("wikipedia", "AJAX")}} on Wikipedia
+- [Ajax](/en-US/docs/Web/Guide/AJAX)
+- [Ajax - Getting started](/en-US/docs/Web/Guide/AJAX/Getting_Started)
+- [Glossary](/en-US/docs/Glossary):
 
+  - {{Glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}}
+
+- {{DOMxRef("XMLHttpRequest")}}
+- {{DOMxRef("Fetch API")}}
+- [Using Fetch API](/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+- [Synchronous vs. Asynchronous Communications](https://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/)

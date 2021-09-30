@@ -7,10 +7,8 @@ tags:
   - Specification
   - Standardization
 ---
-<p>Software {{Glossary("specification", "specifications")}} often contains information marked as  <em>non-normative</em> or <em>informative,</em> which means that those are provided there for the purpose of helping the readers to understand the specification better or to show an example or a best practice, and not needed to be followed as a rule. Sections that contain official part of the specification that must be followed are often marked as {{Glossary("normative", "normative")}}.</p>
+Software {{Glossary("specification", "specifications")}} often contains information marked as  *non-normative* or *informative,* which means that those are provided there for the purpose of helping the readers to understand the specification better or to show an example or a best practice, and not needed to be followed as a rule. Sections that contain official part of the specification that must be followed are often marked as {{Glossary("normative", "normative")}}.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>Description of <a href="https://wiki.whatwg.org/wiki/Specs/howto#Content">normative and informative content</a> in WHATWG wiki</li>
-</ul>
+- Description of [normative and informative content](https://wiki.whatwg.org/wiki/Specs/howto#Content) in WHATWG wiki

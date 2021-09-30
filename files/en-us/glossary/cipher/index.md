@@ -7,40 +7,34 @@ tags:
   - Privacy
   - Security
 ---
-<p>In {{glossary("cryptography")}}, a <strong>cipher</strong> is an algorithm that can {{glossary("encryption", "encode")}} {{glossary("Plaintext")}} to make it unreadable, and to {{glossary("decryption", "decode")}} it back.</p>
+In {{glossary("cryptography")}}, a **cipher** is an algorithm that can {{glossary("encryption", "encode")}} {{glossary("Plaintext")}} to make it unreadable, and to {{glossary("decryption", "decode")}} it back.
 
-<p>Ciphers were common long before the information age (e.g., <a href="https://en.wikipedia.org/wiki/Substitution_cipher">substitution ciphers</a>, <a href="https://en.wikipedia.org/wiki/Transposition_cipher">transposition ciphers</a>, and <a href="https://en.wikipedia.org/wiki/Permutation_cipher">permutation ciphers</a>), but none of them were cryptographically secure except for the <a href="https://en.wikipedia.org/wiki/One-time_pad">one-time pad</a>.</p>
+Ciphers were common long before the information age (e.g., [substitution ciphers](https://en.wikipedia.org/wiki/Substitution_cipher), [transposition ciphers](https://en.wikipedia.org/wiki/Transposition_cipher), and [permutation ciphers](https://en.wikipedia.org/wiki/Permutation_cipher)), but none of them were cryptographically secure except for the [one-time pad](https://en.wikipedia.org/wiki/One-time_pad).
 
-<p>Modern ciphers are designed to withstand {{glossary("attack", "attacks")}} discovered by a {{glossary("cryptanalysis", "cryptanalyst")}}. There is no guarantee that all attack methods have been discovered, but each algorithm is judged against known classes of attacks.</p>
+Modern ciphers are designed to withstand {{glossary("attack", "attacks")}} discovered by a {{glossary("cryptanalysis", "cryptanalyst")}}. There is no guarantee that all attack methods have been discovered, but each algorithm is judged against known classes of attacks.
 
-<p>Ciphers operate two ways, either as <a href="https://en.wikipedia.org/wiki/Block_cipher">block ciphers</a> on successive blocks, or buffers, of data, or as <a href="https://en.wikipedia.org/wiki/Stream_cipher">stream ciphers</a> on a continuous data flow (often of sound or video).</p>
+Ciphers operate two ways, either as [block ciphers](https://en.wikipedia.org/wiki/Block_cipher) on successive blocks, or buffers, of data, or as [stream ciphers](https://en.wikipedia.org/wiki/Stream_cipher) on a continuous data flow (often of sound or video).
 
-<p>They also are classified according to how their {{glossary("key", "keys")}} are handled:</p>
+They also are classified according to how their {{glossary("key", "keys")}} are handled:
 
-<ul>
- <li><a href="https://en.wikipedia.org/wiki/Symmetric_key_algorithm">symmetric key</a> algorithms use the same key to encode and decode a message. The key also must be sent securely if the message is to stay confidential.</li>
- <li><a href="https://en.wikipedia.org/wiki/Asymmetric_key_algorithm">asymmetric key</a> algorithms use a different key for encryption and decryption.</li>
-</ul>
+- [symmetric key](https://en.wikipedia.org/wiki/Symmetric_key_algorithm) algorithms use the same key to encode and decode a message. The key also must be sent securely if the message is to stay confidential.
+- [asymmetric key](https://en.wikipedia.org/wiki/Asymmetric_key_algorithm) algorithms use a different key for encryption and decryption.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
-   <li>{{Interwiki("wikipedia", "Cipher")}} on Wikipedia</li>
-   <li><a href="/en-US/docs/Archive/Security/Encryption_and_Decryption">Encryption and Decryption</a></li>
-  <li><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a>
-    <ul>
-    <li>{{Glossary("Block cipher mode of operation")}}</li>
-    <li>{{Glossary("Cipher")}}</li>
-    <li>{{Glossary("Ciphertext")}}</li>
-    <li>{{Glossary("Cipher suite")}}</li>
-    <li>{{Glossary("Cryptanalysis")}}</li>
-    <li>{{Glossary("Cryptography")}}</li>
-    <li>{{Glossary("Decryption")}}</li>
-    <li>{{Glossary("Encryption")}}</li>
-    <li>{{Glossary("Key")}}</li>
-    <li>{{Glossary("Plaintext")}}</li>
-    <li>{{Glossary("Public-key cryptography")}}</li>
-    <li>{{Glossary("Symmetric-key cryptography")}}</li>
-    </ul>
-  </li>
-</ul>
+- {{Interwiki("wikipedia", "Cipher")}} on Wikipedia
+- [Encryption and Decryption](/en-US/docs/Archive/Security/Encryption_and_Decryption)
+- [MDN Web Docs Glossary](/en-US/docs/Glossary)
+
+  - {{Glossary("Block cipher mode of operation")}}
+  - {{Glossary("Cipher")}}
+  - {{Glossary("Ciphertext")}}
+  - {{Glossary("Cipher suite")}}
+  - {{Glossary("Cryptanalysis")}}
+  - {{Glossary("Cryptography")}}
+  - {{Glossary("Decryption")}}
+  - {{Glossary("Encryption")}}
+  - {{Glossary("Key")}}
+  - {{Glossary("Plaintext")}}
+  - {{Glossary("Public-key cryptography")}}
+  - {{Glossary("Symmetric-key cryptography")}}

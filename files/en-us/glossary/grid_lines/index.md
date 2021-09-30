@@ -4,13 +4,14 @@ slug: Glossary/Grid_Lines
 tags:
   - CSS Grids
 ---
-<p><strong>Grid lines</strong> are created when you define {{glossary("Grid tracks", "tracks")}} in the explicit grid using <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>.</p>
+**Grid lines** are created when you define {{glossary("Grid tracks", "tracks")}} in the explicit grid using [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout).
 
-<h2>Example</h2>
+## Example
 
-<p>In the following example there is a grid with three column tracks and two row tracks. This gives us 4 column lines and 3 row lines.</p>
+In the following example there is a grid with three column tracks and two row tracks. This gives us 4 column lines and 3 row lines.
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -21,44 +22,47 @@ tags:
      grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div&gt;One&lt;/div&gt;
-   &lt;div&gt;Two&lt;/div&gt;
-   &lt;div&gt;Three&lt;/div&gt;
-   &lt;div&gt;Four&lt;/div&gt;
-   &lt;div&gt;Five&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+   <div>One</div>
+   <div>Two</div>
+   <div>Three</div>
+   <div>Four</div>
+   <div>Five</div>
+</div>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 100px 100px;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Example', '500', '250') }}</p>
+{{ EmbedLiveSample('Example', '500', '250') }}
 
-<p>Lines can be addressed using their line number. In a left-to-right language such as English, column line 1 will be on the left of the grid, row line 1 on the top. Lines numbers respect the <a href="/en-US/docs/Web/CSS/CSS_Writing_Modes">writing mode</a> of the document and so in a right-to-left language for example, column line 1 will be on the right of the grid. The image below shows the line numbers of the grid, assuming the language is left-to-right.</p>
+Lines can be addressed using their line number. In a left-to-right language such as English, column line 1 will be on the left of the grid, row line 1 on the top. Lines numbers respect the [writing mode](/en-US/docs/Web/CSS/CSS_Writing_Modes) of the document and so in a right-to-left language for example, column line 1 will be on the right of the grid. The image below shows the line numbers of the grid, assuming the language is left-to-right.
 
-<p><img alt="Diagram showing the grid with lines numbered." src="1_diagram_numbered_grid_lines.png"></p>
+![Diagram showing the grid with lines numbered.](1_diagram_numbered_grid_lines.png)
 
-<p>Lines are also created in the <em>implicit grid</em> when implicit tracks are created to hold content positioned outside of the <em>explicit grid</em>, however these lines cannot be addressed by a number.</p>
+Lines are also created in the _implicit grid_ when implicit tracks are created to hold content positioned outside of the _explicit grid_, however these lines cannot be addressed by a number.
 
-<h2 id="Placing_items_onto_the_grid_by_line_number">Placing items onto the grid by line number</h2>
+## Placing items onto the grid by line number
 
-<p>Having created a grid, you can place items onto the grid by line number. In the following example the item is positioned from column line 1 to column line 3, and from row line 1 to row line 3.</p>
+Having created a grid, you can place items onto the grid by line number. In the following example the item is positioned from column line 1 to column line 3, and from row line 1 to row line 3.
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -69,21 +73,23 @@ tags:
      grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="item"&gt;Item&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+   <div class="item">Item</div>
+</div>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 100px 100px;
@@ -94,15 +100,16 @@ tags:
   grid-row-start: 1;
   grid-row-end: 3;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Placing_items_onto_the_grid_by_line_number', '500', '250') }}</p>
+{{ EmbedLiveSample('Placing_items_onto_the_grid_by_line_number', '500', '250') }}
 
-<h2 id="Naming_lines">Naming lines</h2>
+## Naming lines
 
-<p>The lines created in the <em>explicit grid</em> can be named, by adding the name in square brackets before or after the track sizing information. When placing an item, you can then use these names instead of the line number, as demonstrated below.</p>
+The lines created in the _explicit grid_ can be named, by adding the name in square brackets before or after the track sizing information. When placing an item, you can then use these names instead of the line number, as demonstrated below.
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -113,21 +120,23 @@ tags:
      grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="item"&gt;Item&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+   <div class="item">Item</div>
+</div>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: [col1-start] 1fr [col2-start] 1fr [col3-start] 1fr [cols-end];
   grid-template-rows: [row1-start] 100px [row2-start] 100px [rows-end];
@@ -138,31 +147,27 @@ tags:
   grid-row-start: row1-start;
   grid-row-end: rows-end;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Naming_lines', '500', '250') }}</p>
+{{ EmbedLiveSample('Naming_lines', '500', '250') }}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<h3 id="Property_reference">Property reference</h3>
+### Property reference
 
-<ul>
- <li>{{cssxref("grid-template-columns")}}</li>
- <li>{{cssxref("grid-template-rows")}}</li>
- <li>{{cssxref("grid-column-start")}}</li>
- <li>{{cssxref("grid-column-end")}}</li>
- <li>{{cssxref("grid-column")}}</li>
- <li>{{cssxref("grid-row-start")}}</li>
- <li>{{cssxref("grid-row-end")}}</li>
- <li>{{cssxref("grid-row")}}</li>
-</ul>
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-rows")}}
+- {{cssxref("grid-column-start")}}
+- {{cssxref("grid-column-end")}}
+- {{cssxref("grid-column")}}
+- {{cssxref("grid-row-start")}}
+- {{cssxref("grid-row-end")}}
+- {{cssxref("grid-row")}}
 
-<h3 id="Further_reading">Further reading</h3>
+### Further reading
 
-<ul>
- <li>CSS Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basic concepts of grid layout</a></em></li>
- <li>CSS Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement with CSS Grid</a></em></li>
- <li>CSS Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></em></li>
- <li>CSS Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes">CSS Grids, Logical Values and Writing Modes</a></em></li>
- <li><a href="https://drafts.csswg.org/css-grid/#grid-line-concept">Definition of Grid Lines in the CSS Grid Layout specification</a></li>
-</ul>
+- CSS Grid Layout Guide: _[Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
+- CSS Grid Layout Guide: _[Line-based placement with CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
+- CSS Grid Layout Guide: _[Layout using named grid lines](/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)_
+- CSS Grid Layout Guide: _[CSS Grids, Logical Values and Writing Modes](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes)_
+- [Definition of Grid Lines in the CSS Grid Layout specification](https://drafts.csswg.org/css-grid/#grid-line-concept)

@@ -9,13 +9,11 @@ tags:
   - Mozilla
   - Mozilla Firefox
 ---
-<p><strong>Mozilla Firefox</strong> is a free open-source {{Glossary("browser")}} whose development is overseen by the Mozilla Corporation. Firefox runs on Windows, OS X, Linux, and Android.</p>
+**Mozilla Firefox** is a free open-source {{Glossary("browser")}} whose development is overseen by the Mozilla Corporation. Firefox runs on Windows, OS X, Linux, and Android.
 
-<p>First released in November 2004, Firefox is completely customizable with themes, plug-ins, and <a href="/en-US/docs/Mozilla/Add-ons">add-ons</a>. Firefox uses {{glossary("Gecko")}} to render webpages, and implements both current and upcoming {{glossary("world wide web", "Web")}} standards.</p>
+First released in November 2004, Firefox is completely customizable with themes, plug-ins, and [add-ons](/en-US/docs/Mozilla/Add-ons). Firefox uses {{glossary("Gecko")}} to render webpages, and implements both current and upcoming {{glossary("world wide web", "Web")}} standards.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.mozilla.org/firefox">Mozilla Firefox official website</a></li>
- <li><a href="/en-US/docs/Mozilla/Firefox">Firefox developer documentations</a> on MDN</li>
-</ul>
+- [Mozilla Firefox official website](https://www.mozilla.org/firefox)
+- [Firefox developer documentations](/en-US/docs/Mozilla/Firefox) on MDN

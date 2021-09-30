@@ -5,20 +5,17 @@ tags:
   - Glossary
   - WebMechanics
 ---
+A **representation header** is an {{glossary("HTTP_header", "HTTP header")}} that describes the particular _representation_ of the resource sent in an HTTP message body.
 
-<p>A <strong>representation header</strong> is an {{glossary("HTTP_header", "HTTP header")}} that describes the particular <em>representation</em> of the resource sent in an HTTP message body.</p>
+Representations are different versions of a particular resource that might be returned from a request. For example, the same data resource might be formatted as XML or JSON, and that resource might then be encoded in one or more compressed formats for sending. Clients specify the formats that they prefer during content negotiation (using `Accept-*` headers), and the representation headers tell the client the format of the representation they actually received.
 
-<p>Representations are different versions of a particular resource that might be returned from a request. For example, the same data resource might be formatted as XML or JSON, and that resource might then be encoded in one or more compressed formats for sending. Clients specify the formats that they prefer during content negotiation (using <code>Accept-*</code> headers), and the representation headers tell the client the format of the representation they actually received.</p>
+Representation headers may be present in both HTTP request and response messages. If sent as a response to a `HEAD` request, they describe the body content that _would_ be sent if the resource was actually requested.
 
-<p>Representation headers may be present in both HTTP request and response messages. If sent as a response to a <code>HEAD</code> request, they describe the body content that <em>would</em> be sent if the resource was actually requested.</p>
+Representation headers include: {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Content-Encoding")}}, {{HTTPHeader("Content-Language")}}, and {{HTTPHeader("Content-Location")}}.
 
-<p>Representation headers include: {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Content-Encoding")}}, {{HTTPHeader("Content-Language")}}, and {{HTTPHeader("Content-Location")}}.</p>
+## See also
 
-<h2 id="see_also">See also</h2>
-
-<ul>
-  <li><a href="https://datatracker.ietf.org/doc/html/rfc7231#section-3">RFC 7231, section 3: Representations</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/Headers">List of all HTTP headers</a></li>
-  <li>{{Glossary("Payload header")}}</li>
-  <li>{{glossary("Entity header")}}</li>
-</ul>
+- [RFC 7231, section 3: Representations](https://datatracker.ietf.org/doc/html/rfc7231#section-3)
+- [List of all HTTP headers](/en-US/docs/Web/HTTP/Headers)
+- {{Glossary("Payload header")}}
+- {{glossary("Entity header")}}

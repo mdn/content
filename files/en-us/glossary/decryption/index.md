@@ -7,17 +7,14 @@ tags:
   - Privacy
   - Security
 ---
-<p>In {{glossary("cryptography")}}, <strong>decryption</strong> is the conversion of {{glossary("ciphertext")}} into {{glossary("Plaintext")}}.</p>
+In {{glossary("cryptography")}}, **decryption** is the conversion of {{glossary("ciphertext")}} into {{glossary("Plaintext")}}.
 
-<p>Decryption is a cryptographic primitive: it transforms a ciphertext message into plaintext using a cryptographic algorithm called a {{glossary("cipher")}}. Like encryption, decryption in modern ciphers is performed using a specific algorithm and a secret, called the {{glossary("key")}}. Since the algorithm is often public, the key must stay secret if the encryption stays secure.</p>
+Decryption is a cryptographic primitive: it transforms a ciphertext message into plaintext using a cryptographic algorithm called a {{glossary("cipher")}}. Like encryption, decryption in modern ciphers is performed using a specific algorithm and a secret, called the {{glossary("key")}}. Since the algorithm is often public, the key must stay secret if the encryption stays secure.
 
+![The decryption primitive.](decryption.png)
 
-<p><img alt="The decryption primitive." src="decryption.png"></p>
+Decryption is the reverse of {{glossary("encryption")}} and if the key stays secret, decryption without knowing the specific secret, decryption is mathematically hard to perform. How hard depends on the security of the cryptographic algorithm chosen and evolves with the progress of {{glossary("cryptanalysis")}}.
 
-<p>Decryption is the reverse of {{glossary("encryption")}} and if the key stays secret, decryption without knowing the specific secret, decryption is mathematically hard to perform. How hard depends on the security of the cryptographic algorithm chosen and evolves with the progress of {{glossary("cryptanalysis")}}.</p>
+## See also
 
-<h2 id="see_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Encryption_and_Decryption">Encryption and Decryption</a></li>
-</ul>
+- [Encryption and Decryption](/en-US/docs/Encryption_and_Decryption)

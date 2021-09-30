@@ -7,9 +7,8 @@ tags:
   - Glossary
   - Selector
 ---
-<p>In CSS, a <strong>pseudo-class </strong>selector targets elements depending on their state rather than on information from the document tree. For example, the selector <code>a</code>{{ cssxref(":visited") }} applies styles only to links that the user has already followed.</p>
+In CSS, a **pseudo-class** selector targets elements depending on their state rather than on information from the document tree. For example, the selector `a`{{ cssxref(":visited") }} applies styles only to links that the user has already followed.
 
-<h2 id="see_also">See also</h2>
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Pseudo-classes">Pseudo-class documentation</a></li>
-</ul>
+## See also
+
+- [Pseudo-class documentation](/en-US/docs/Web/CSS/Pseudo-classes)

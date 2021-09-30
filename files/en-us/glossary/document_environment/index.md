@@ -6,10 +6,8 @@ tags:
   - Glossary
   - JavaScript
 ---
-<p>When the JavaScript global environment is a window or an iframe, it is called a <em>document environment</em>. A global environment is an environment that doesn't have an outer environment.</p>
+When the JavaScript global environment is a window or an iframe, it is called a _document environment_. A global environment is an environment that doesn't have an outer environment.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://html.spec.whatwg.org/multipage/webappapis.html#document-environment">document environment</a> in the HTML specification</li>
-</ul>
+- [document environment](https://html.spec.whatwg.org/multipage/webappapis.html#document-environment) in the HTML specification

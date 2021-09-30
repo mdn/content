@@ -7,40 +7,36 @@ tags:
   - Glossary
   - flexbox
 ---
-<p><code>flex</code> is a new value added to the CSS {{cssxref("display")}} property. Along with <code>inline-flex</code> it causes the element that it applies to in order to become a {{glossary("flex container")}}, and the element's children to each become a {{glossary("flex item")}}. The items then participate in flex layout, and all of the properties defined in the CSS Flexible Box Layout Module may be applied.</p>
+`flex` is a new value added to the CSS {{cssxref("display")}} property. Along with `inline-flex` it causes the element that it applies to in order to become a {{glossary("flex container")}}, and the element's children to each become a {{glossary("flex item")}}. The items then participate in flex layout, and all of the properties defined in the CSS Flexible Box Layout Module may be applied.
 
-<p>The <code>flex</code> property is a shorthand for the flexbox properties <code>flex-grow</code>, <code>flex-shrink</code> and <code>flex-basis</code>.</p>
+The `flex` property is a shorthand for the flexbox properties `flex-grow`, `flex-shrink` and `flex-basis`.
 
-<p>In addition <code>&lt;flex&gt;</code> can refer to <a href="/en-US/docs/Web/CSS/flex_value">a flexible length</a> in CSS Grid Layout.</p>
+In addition `<flex>` can refer to [a flexible length](/en-US/docs/Web/CSS/flex_value) in CSS Grid Layout.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<h3 id="Property_reference">Property reference</h3>
+### Property reference
 
-<ul>
- <li>{{cssxref("align-content")}}</li>
- <li>{{cssxref("align-items")}}</li>
- <li>{{cssxref("align-self")}}</li>
- <li>{{cssxref("flex")}}</li>
- <li>{{cssxref("flex-basis")}}</li>
- <li>{{cssxref("flex-direction")}}</li>
- <li>{{cssxref("flex-flow")}}</li>
- <li>{{cssxref("flex-grow")}}</li>
- <li>{{cssxref("flex-shrink")}}</li>
- <li>{{cssxref("flex-wrap")}}</li>
- <li>{{cssxref("justify-content")}}</li>
- <li>{{cssxref("order")}}</li>
-</ul>
+- {{cssxref("align-content")}}
+- {{cssxref("align-items")}}
+- {{cssxref("align-self")}}
+- {{cssxref("flex")}}
+- {{cssxref("flex-basis")}}
+- {{cssxref("flex-direction")}}
+- {{cssxref("flex-flow")}}
+- {{cssxref("flex-grow")}}
+- {{cssxref("flex-shrink")}}
+- {{cssxref("flex-wrap")}}
+- {{cssxref("justify-content")}}
+- {{cssxref("order")}}
 
-<h3 id="Further_reading">Further reading</h3>
+### Further reading
 
-<ul>
- <li><em><a href="https://www.w3.org/TR/css-flexbox-1/">CSS Flexible Box Layout Module Level 1 Specification</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic Concepts of Flexbox</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods">Relationship of flexbox to other layout methods</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning items in a flex container</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items">Ordering flex items</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Controlling Ratios of flex items along the main axis</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items">Mastering wrapping of flex items</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox">Typical use cases of flexbox</a></em></li>
-</ul>
+- _[CSS Flexible Box Layout Module Level 1 Specification](https://www.w3.org/TR/css-flexbox-1/)_
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox Guide: _[Relationship of flexbox to other layout methods](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)_
+- CSS Flexbox Guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
+- CSS Flexbox Guide: _[Ordering flex items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_
+- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- CSS Flexbox Guide: _[Mastering wrapping of flex items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_
+- CSS Flexbox Guide: _[Typical use cases of flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)_

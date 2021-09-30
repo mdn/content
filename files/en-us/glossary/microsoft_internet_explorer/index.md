@@ -12,23 +12,21 @@ tags:
   - Windows
   - Windows Operating System
 ---
-<p>Internet Explorer (or IE) is a free graphical {{glossary("browser")}} maintained by Microsoft for legacy enterprise uses. {{glossary("Microsoft Edge")}} is currently the default Windows browser.</p>
+Internet Explorer (or IE) is a free graphical {{glossary("browser")}} maintained by Microsoft for legacy enterprise uses. {{glossary("Microsoft Edge")}} is currently the default Windows browser.
 
-<p>Microsoft first bundled IE with Windows in 1995 as part of the package called "Microsoft Plus!". By around 2002, Internet Explorer had become the most used browser in the world, but has since lost ground to Chrome, Firefox, Edge, and Safari.</p>
+Microsoft first bundled IE with Windows in 1995 as part of the package called "Microsoft Plus!". By around 2002, Internet Explorer had become the most used browser in the world, but has since lost ground to Chrome, Firefox, Edge, and Safari.
 
-<p>IE has gone through many releases and currently stands at version 11.0.12, with desktop, mobile, and Xbox Console versions available. Formerly available on Mac and UNIX, Microsoft discontinued those versions in 2003 and 2001 respectively.</p>
+IE has gone through many releases and currently stands at version 11.0.12, with desktop, mobile, and Xbox Console versions available. Formerly available on Mac and UNIX, Microsoft discontinued those versions in 2003 and 2001 respectively.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{interwiki("wikipedia", "Internet Explorer", "Internet Explorer")}} on Wikipedia</li>
- <li>{{interwiki("wikipedia", "History of Internet Explorer", "History of Internet Explorer")}} on Wikipedia</li>
- <li>{{interwiki("wikipedia", "Internet Explorer versions", "Internet Explorer versions")}} on Wikipedia</li>
- <li><a href="https://windows.microsoft.com/en-us/internet-explorer/download-ie">http://windows.microsoft.com/en-us/internet-explorer/download-ie</a></li>
- <li><a href="https://windows.microsoft.com/en-us/windows7/getting-started-with-internet-explorer-9">http://windows.microsoft.com/en-us/windows7/getting-started-with-internet-explorer-9</a></li>
- <li><a href="https://windows.microsoft.com/en-us/internet-explorer/internet-explorer-help">http://windows.microsoft.com/en-us/internet-explorer/internet-explorer-help</a></li>
- <li><a href="https://windows.microsoft.com/en-us/internet-explorer/make-ie-default-browser#ie=ie-11">http://windows.microsoft.com/en-us/internet-explorer/make-ie-default-browser#ie=ie-11</a></li>
- <li><a href="https://windows.microsoft.com/en-us/internet-explorer/products/ie-8/system-requirements">http://windows.microsoft.com/en-us/internet-explorer/products/ie-8/system-requirements</a></li>
- <li><a href="https://windows.microsoft.com/en-us/internet-explorer/products/ie-9/system-requirements">http://windows.microsoft.com/en-us/internet-explorer/products/ie-9/system-requirements</a></li>
- <li><a href="https://support.microsoft.com/kb/969393">http://support.microsoft.com/kb/969393</a></li>
-</ul>
+- {{interwiki("wikipedia", "Internet Explorer", "Internet Explorer")}} on Wikipedia
+- {{interwiki("wikipedia", "History of Internet Explorer", "History of Internet Explorer")}} on Wikipedia
+- {{interwiki("wikipedia", "Internet Explorer versions", "Internet Explorer versions")}} on Wikipedia
+- [http://windows.microsoft.com/en-us/internet-explorer/download-ie](https://windows.microsoft.com/en-us/internet-explorer/download-ie)
+- [http://windows.microsoft.com/en-us/windows7/getting-started-with-internet-explorer-9](https://windows.microsoft.com/en-us/windows7/getting-started-with-internet-explorer-9)
+- [http://windows.microsoft.com/en-us/internet-explorer/internet-explorer-help](https://windows.microsoft.com/en-us/internet-explorer/internet-explorer-help)
+- [http://windows.microsoft.com/en-us/internet-explorer/make-ie-default-browser#ie=ie-11](https://windows.microsoft.com/en-us/internet-explorer/make-ie-default-browser#ie=ie-11)
+- [http://windows.microsoft.com/en-us/internet-explorer/products/ie-8/system-requirements](https://windows.microsoft.com/en-us/internet-explorer/products/ie-8/system-requirements)
+- [http://windows.microsoft.com/en-us/internet-explorer/products/ie-9/system-requirements](https://windows.microsoft.com/en-us/internet-explorer/products/ie-9/system-requirements)
+- [http://support.microsoft.com/kb/969393](https://support.microsoft.com/kb/969393)

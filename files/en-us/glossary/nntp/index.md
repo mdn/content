@@ -5,11 +5,9 @@ tags:
   - Glossary
   - Infrastructure
 ---
-<p><strong>NNTP</strong> (Network News Transfer Protocol) is a {{Glossary("protocol")}} used to transfer {{Glossary("Usenet")}} messages from client to server or between servers.</p>
+**NNTP** (Network News Transfer Protocol) is a {{Glossary("protocol")}} used to transfer {{Glossary("Usenet")}} messages from client to server or between servers.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Network_News_Transfer_Protocol", "NNTP")}} at Wikipedia</li>
- <li>From the IETF: <a href="https://datatracker.ietf.org/doc/html/rfc3977">RFC 3977 about NNTP</a> (2006)</li>
-</ul>
+- {{Interwiki("wikipedia", "Network_News_Transfer_Protocol", "NNTP")}} at Wikipedia
+- From the IETF: [RFC 3977 about NNTP](https://datatracker.ietf.org/doc/html/rfc3977) (2006)

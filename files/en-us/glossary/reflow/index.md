@@ -5,10 +5,8 @@ tags:
   - Glossary
   - WebMechanics
 ---
-<p><strong>Reflow</strong> happens when a {{glossary("browser")}} must process and draw part or all of a webpage again, such as after an update on an interactive site.</p>
+**Reflow** happens when a {{glossary("browser")}} must process and draw part or all of a webpage again, such as after an update on an interactive site.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://developers.google.com/speed/articles/reflow">Google article "Minimizing browser reflow"</a></li>
-</ul>
+- [Google article "Minimizing browser reflow"](https://developers.google.com/speed/articles/reflow)

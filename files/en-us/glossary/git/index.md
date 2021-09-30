@@ -5,11 +5,9 @@ tags:
   - Collaborating
   - Glossary
 ---
-<p><strong>Git</strong> is a free, open-source, distributed Source Code Management ({{Glossary("SCM", "SCM", 1)}}) system. It facilitates handling code bases with distributed development teams. What sets it apart from previous SCM systems is the ability to do common operations (branching, committing, etc.) on your local development machine, without having to change the master repository or even having write access to it.</p>
+**Git** is a free, open-source, distributed Source Code Management ({{Glossary("SCM", "SCM", 1)}}) system. It facilitates handling code bases with distributed development teams. What sets it apart from previous SCM systems is the ability to do common operations (branching, committing, etc.) on your local development machine, without having to change the master repository or even having write access to it.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://git-scm.com/">Official website with documentation</a></li>
- <li><a href="https://github.com/">GitHub</a>, a Git-based graphical project host</li>
-</ul>
+- [Official website with documentation](https://git-scm.com/)
+- [GitHub](https://github.com/), a Git-based graphical project host

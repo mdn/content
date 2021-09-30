@@ -5,24 +5,17 @@ tags:
   - Glossary
   - scroll container
 ---
-<p>A <strong>scroll container</strong> is created by applying <code><a href="/en-US/docs/Web/CSS/overflow">overflow</a>: scroll</code> to a container, or <code>overflow: auto</code> when there is enough content to cause overflow.</p>
+A **scroll container** is created by applying `overflow: scroll` to a container, or `overflow: auto` when there is enough content to cause overflow.
 
-<p>The scroll container allows the user to scroll through parts of the overflow region that would otherwise be clipped and hidden from view. The visible part of the scroll container is referred to as the {{glossary("Scrollport", "scrollport")}}.</p>
+The scroll container allows the user to scroll through parts of the overflow region that would otherwise be clipped and hidden from view. The visible part of the scroll container is referred to as the {{glossary("Scrollport", "scrollport")}}.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a>:
+- [MDN Web Docs Glossary](/en-US/docs/Glossary):
 
-  <ul>
-   <li>{{glossary("Scroll container")}}</li>
-   <li>{{glossary("Scrollport")}}</li>
-  </ul>
- </li>
- <li>Related CSS Properties:
-  <ul>
-   <li>{{cssxref("overflow")}}</li>
-  </ul>
- </li>
-</ul>
+  - {{glossary("Scroll container")}}
+  - {{glossary("Scrollport")}}
 
+- Related CSS Properties:
+
+  - {{cssxref("overflow")}}

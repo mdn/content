@@ -5,10 +5,8 @@ tags:
   - Glossary
   - Infrastructure
 ---
-<p>Presto was the proprietary browser layout engine used to power the {{Glossary("Opera browser")}} until version 15. Since then, the Opera browser is based on Chromium, which uses the {{Glossary('Blink')}} layout engine.</p>
+Presto was the proprietary browser layout engine used to power the {{Glossary("Opera browser")}} until version 15. Since then, the Opera browser is based on Chromium, which uses the {{Glossary('Blink')}} layout engine.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://en.wikipedia.org/wiki/Presto_%28layout_engine%29">Presto layout engine</a> on Wikipedia</li>
-</ul>
+- [Presto layout engine](https://en.wikipedia.org/wiki/Presto_%28layout_engine%29) on Wikipedia

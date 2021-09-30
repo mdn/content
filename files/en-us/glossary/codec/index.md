@@ -5,13 +5,11 @@ tags:
   - Glossary
   - WebMechanics
 ---
-<p>A <em>codec</em> (a blend word derived from "<em><strong>co</strong></em>der-<em><strong>dec</strong></em>oder") is a program, algorithm, or device that encodes or decodes a data stream. A given codec knows how to handle a specific encoding or compression technology.</p>
+A *codec* (a blend word derived from "**_co_**der-**_dec_**oder") is a program, algorithm, or device that encodes or decodes a data stream. A given codec knows how to handle a specific encoding or compression technology.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Codec")}} on Wikipedia</li>
- <li><a href="/en-US/docs/Web/Media/Formats/Video_codecs">Web video codec guide</a></li>
- <li><a href="/en-US/docs/Web/Media/Formats/Audio_codecs">Web audio codec guide</a></li>
- <li><a href="/en-US/docs/Web/Media/Formats">Guide to media types and formats on the web</a></li>
-</ul>
+- {{Interwiki("wikipedia", "Codec")}} on Wikipedia
+- [Web video codec guide](/en-US/docs/Web/Media/Formats/Video_codecs)
+- [Web audio codec guide](/en-US/docs/Web/Media/Formats/Audio_codecs)
+- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)

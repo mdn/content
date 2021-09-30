@@ -5,25 +5,20 @@ tags:
   - Glossary
   - Infrastructure
 ---
+A Second Level Domain ({{Glossary("SLD")}}) is the part of the domain name that is located right before a Top Level Domain ({{Glossary("TLD")}}).
 
-<p>A Second Level Domain ({{Glossary("SLD")}}) is the part of the domain name that is located right before a Top Level Domain ({{Glossary("TLD")}}).</p>
+For example, in `mozilla.org` the SLD is `mozilla` and the TLD is `org`.
 
-<p>For example, in <code>mozilla.org</code> the SLD is <code>mozilla</code> and the TLD is <code>org</code>.</p>
+A domain name is not limited to a TLD and an SLD. Additional subdomains can be created in order to provide additional information about various functions of a server or to delimit areas under the same domain. For example, `www` is a commonly used subdomain to indicate the domain points to a web server.
 
-<p>A domain name is not limited to a TLD and an SLD. Additional subdomains can be created in order to provide additional information about various functions of a server or to delimit areas under the same domain. For example, <code>www</code> is a commonly used subdomain to indicate the domain points to a web server.</p>
+As another example, in `developer.mozilla.org`, the `developer` subdomain is used to specify that the subdomain contains the developer section of the Mozilla website.
 
-<p>As another example, in <code>developer.mozilla.org</code>, the <code>developer</code> subdomain is used to specify that the subdomain contains the developer section of the Mozilla website.</p>
+## See also
 
-<h2 id="see_also">See also</h2>
+- {{Interwiki("wikipedia", "Second-level domain", "SLD")}} (Wikipedia)
+- [Glossary](/en-US/docs/Glossary)
 
-<ul>
-  <li>{{Interwiki("wikipedia", "Second-level domain", "SLD")}} (Wikipedia)</li>
-  <li><a href="/en-US/docs/Glossary">Glossary</a>
-    <ul>
-     <li>{{Glossary("DNS")}}</li>
-     <li>{{Glossary("Domain")}}</li>
-     <li>{{Glossary("Domain name")}}</li>
-     <li>{{Glossary("TLD")}}</li>
-    </ul>
-   </li>
-</ul>
+  - {{Glossary("DNS")}}
+  - {{Glossary("Domain")}}
+  - {{Glossary("Domain name")}}
+  - {{Glossary("TLD")}}

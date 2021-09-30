@@ -8,18 +8,18 @@ tags:
   - metrics
   - page load time
 ---
-<p><strong>Page load time</strong> is the time it takes for a page to load, measured from <a href="/en-US/docs/Web/API/PerformanceTiming/navigationStart">navigation start</a> to the <a href="/en-US/docs/Web/API/PerformanceTiming/loadEventStart">start of the load event</a>.</p>
+**Page load time** is the time it takes for a page to load, measured from [navigation start](/en-US/docs/Web/API/PerformanceTiming/navigationStart) to the [start of the load event](/en-US/docs/Web/API/PerformanceTiming/loadEventStart).
 
-<pre class="brush: js">let time = performance.timing;
+```js
+let time = performance.timing;
 
-let pageloadtime = time.loadEventStart - time.navigationStart;</pre>
+let pageloadtime = time.loadEventStart - time.navigationStart;
+```
 
-<p>While page load time 'sounds' like the perfect web performance metric, it isn't. Load times can vary greatly between users depending on device capabilities, network conditions, and, to a lesser extent, distance from the server. The development environment, where page load time is measured, is likely an optimal experience, not reflective of your users' reality. In addition, web performance isn't just about when the load event happens. It's also about <a href="/en-US/docs/Glossary/Perceived_performance">perceived performance</a>, responsiveness, <a href="/en-US/docs/Glossary/Jank">jank</a> and jitter.</p>
+While page load time 'sounds' like the perfect web performance metric, it isn't. Load times can vary greatly between users depending on device capabilities, network conditions, and, to a lesser extent, distance from the server. The development environment, where page load time is measured, is likely an optimal experience, not reflective of your users' reality. In addition, web performance isn't just about when the load event happens. It's also about [perceived performance](/en-US/docs/Glossary/Perceived_performance), responsiveness, [jank](/en-US/docs/Glossary/Jank) and jitter.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Performance/Navigation_and_resource_timings">Navigation and resource timing</a></li>
- <li>{{domxref("PerformanceNavigationTiming")}}</li>
- <li>{{domxref("PerformanceResourceTiming")}},</li>
-</ul>
+- [Navigation and resource timing](/en-US/docs/Web/Performance/Navigation_and_resource_timings)
+- {{domxref("PerformanceNavigationTiming")}}
+- {{domxref("PerformanceResourceTiming")}},

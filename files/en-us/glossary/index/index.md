@@ -7,4 +7,4 @@ tags:
   - MDN Meta
   - Navigation
 ---
-<p>{{Index("/en-US/docs/Glossary")}}</p>
+{{Index("/en-US/docs/Glossary")}}

@@ -8,43 +8,38 @@ tags:
   - Headers
   - forbidden
 ---
-<p>A <strong>forbidden header name</strong> is the name of any <a href="/en-US/docs/Web/HTTP/Headers">HTTP header</a> that cannot be modified programmatically; specifically, an HTTP <strong>request</strong> header name (in contrast with a {{Glossary("Forbidden response header name")}}).</p>
+A **forbidden header name** is the name of any [HTTP header](/en-US/docs/Web/HTTP/Headers) that cannot be modified programmatically; specifically, an HTTP **request** header name (in contrast with a {{Glossary("Forbidden response header name")}}).
 
-<p>Modifying such headers is forbidden because the user agent retains full control over them. Names starting with `<code>Sec-</code>` are reserved for creating new headers safe from {{glossary("API","APIs")}} using <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> that grant developers control over headers, such as {{domxref("XMLHttpRequest")}}.</p>
+Modifying such headers is forbidden because the user agent retains full control over them. Names starting with \``Sec-`\` are reserved for creating new headers safe from {{glossary("API","APIs")}} using [Fetch](/en-US/docs/Web/API/Fetch_API) that grant developers control over headers, such as {{domxref("XMLHttpRequest")}}.
 
-<p>Forbidden header names start with <code>Proxy-</code> or <code>Sec-</code>, or are one of the following names:</p>
+Forbidden header names start with `Proxy-` or `Sec-`, or are one of the following names:
 
-<ul>
- <li><code>Accept-Charset</code></li>
- <li><code>Accept-Encoding</code></li>
- <li><code>Access-Control-Request-Headers</code></li>
- <li><code>Access-Control-Request-Method</code></li>
- <li><code>Connection</code></li>
- <li><code>Content-Length</code></li>
- <li><code>Cookie</code></li>
- <li><code>Cookie2</code></li>
- <li><code>Date</code></li>
- <li><code>DNT</code></li>
- <li><code>Expect</code></li>
- <li><code>Feature-Policy</code></li> 
- <li><code>Host</code></li>
- <li><code>Keep-Alive</code></li>
- <li><code>Origin</code></li>
- <li><code>Proxy-</code></li>
- <li><code>Sec-</code></li>
- <li><code>Referer</code></li>
- <li><code>TE</code></li>
- <li><code>Trailer</code></li>
- <li><code>Transfer-Encoding</code></li>
- <li><code>Upgrade</code></li>
- <li><code>Via</code></li>
-</ul>
+- `Accept-Charset`
+- `Accept-Encoding`
+- `Access-Control-Request-Headers`
+- `Access-Control-Request-Method`
+- `Connection`
+- `Content-Length`
+- `Cookie`
+- `Cookie2`
+- `Date`
+- `DNT`
+- `Expect`
+- `Feature-Policy`
+- `Host`
+- `Keep-Alive`
+- `Origin`
+- `Proxy-`
+- `Sec-`
+- `Referer`
+- `TE`
+- `Trailer`
+- `Transfer-Encoding`
+- `Upgrade`
+- `Via`
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The <code>User-Agent</code> header is no longer forbidden, <a href="https://fetch.spec.whatwg.org/#terminology-headers">as per spec</a> — see forbidden header name list (this was implemented in Firefox 43) — it can now be set in a Fetch <a href="/en-US/docs/Web/API/Headers">Headers</a> object, or via XHR <a href="/en-US/docs/Web/API/XMLHttpRequest#setrequestheader%28%29">setRequestHeader()</a>.  However, Chrome will silently drop the header from Fetch requests (see <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=571722">Chromium bug 571722</a>).</p>
-</div>
+> **Note:** The `User-Agent` header is no longer forbidden, [as per spec](https://fetch.spec.whatwg.org/#terminology-headers) — see forbidden header name list (this was implemented in Firefox 43) — it can now be set in a Fetch [Headers](/en-US/docs/Web/API/Headers) object, or via XHR [setRequestHeader()](/en-US/docs/Web/API/XMLHttpRequest#setrequestheader%28%29).  However, Chrome will silently drop the header from Fetch requests (see [Chromium bug 571722](https://bugs.chromium.org/p/chromium/issues/detail?id=571722)).
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<p>{{Glossary("Forbidden response header name")}} (Glossary)</p>
-
+{{Glossary("Forbidden response header name")}} (Glossary)

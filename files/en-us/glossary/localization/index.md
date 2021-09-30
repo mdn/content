@@ -8,30 +8,26 @@ tags:
   - Localization
   - WebMechanics
 ---
-<p><strong>Localization</strong> (l10n) is the process of adapting a software user interface to a specific culture.</p>
+**Localization** (l10n) is the process of adapting a software user interface to a specific culture.
 
-<p>The following are common factors to consider:</p>
+The following are common factors to consider:
 
-<ul>
- <li>language</li>
- <li>unit of measure (e.g., kilometers in Europe, miles in U.S.)</li>
- <li>text direction (e.g., European languages are left-to-right, Arabic right-to-left)</li>
- <li>capitalization in Latin script (e.g., English uses capitals for weekdays, Spanish uses lowercase)</li>
- <li>adaptation of idioms (e.g., "raining cats and dogs" makes no sense when translated literally)</li>
- <li>use of register (e.g., in Japanese respectful speech differs exceptionally from casual speech)</li>
- <li>number format (e.g., 10 000,00 in Germany vs. 10,000.00 in the U.S.)</li>
- <li>date format</li>
- <li>currency</li>
- <li>cultural references</li>
- <li>paper size</li>
- <li>color psychology</li>
- <li>compliance with local laws</li>
- <li>local holidays</li>
- <li>personal names</li>
-</ul>
+- language
+- unit of measure (e.g., kilometers in Europe, miles in U.S.)
+- text direction (e.g., European languages are left-to-right, Arabic right-to-left)
+- capitalization in Latin script (e.g., English uses capitals for weekdays, Spanish uses lowercase)
+- adaptation of idioms (e.g., "raining cats and dogs" makes no sense when translated literally)
+- use of register (e.g., in Japanese respectful speech differs exceptionally from casual speech)
+- number format (e.g., 10 000,00 in Germany vs. 10,000.00 in the U.S.)
+- date format
+- currency
+- cultural references
+- paper size
+- color psychology
+- compliance with local laws
+- local holidays
+- personal names
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{interwiki("wikipedia", "Language localisation", "Localization")}} on Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "Language localisation", "Localization")}} on Wikipedia

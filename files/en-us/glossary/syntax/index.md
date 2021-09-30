@@ -6,20 +6,18 @@ tags:
   - Glossary
   - Syntax
 ---
-<p>Syntax specifies the required combination and sequence of {{Glossary("character","characters")}} making up correctly structured code. Syntax generally includes grammar and the rules that apply to writing it, such as indentation requirements in Python.</p>
+Syntax specifies the required combination and sequence of {{Glossary("character","characters")}} making up correctly structured code. Syntax generally includes grammar and the rules that apply to writing it, such as indentation requirements in Python.
 
-<p>Syntax varies from language to language (e.g., syntax is different in {{Glossary("HTML")}} and {{Glossary("JavaScript")}}). Although languages can share few similarities in terms of their syntaxes for example "operand operator operand" rule in javaScript and python. This does not mean the two languages share similarities with syntax.</p>
+Syntax varies from language to language (e.g., syntax is different in {{Glossary("HTML")}} and {{Glossary("JavaScript")}}). Although languages can share few similarities in terms of their syntaxes for example "operand operator operand" rule in javaScript and python. This does not mean the two languages share similarities with syntax.
 
-<p>Syntax applies both to programming languages (commands to the computer) and markup languages (document structure information) alike.</p>
+Syntax applies both to programming languages (commands to the computer) and markup languages (document structure information) alike.
 
-<p>Syntax only governs ordering and structure; the instructions must also be <em>meaningful</em>, which is the province of {{Glossary("semantics")}}.</p>
+Syntax only governs ordering and structure; the instructions must also be _meaningful_, which is the province of {{Glossary("semantics")}}.
 
-<p>Code must have correct syntax in order to {{Glossary("compile")}} correctly, otherwise a {{Glossary("syntax error")}} occurs. Even small errors, like a missing parenthesis, can stop source code from compiling successfully.</p>
+Code must have correct syntax in order to {{Glossary("compile")}} correctly, otherwise a {{Glossary("syntax error")}} occurs. Even small errors, like a missing parenthesis, can stop source code from compiling successfully.
 
-<p>Frameworks are said to have a "clean" syntax if they produce simple, readable, concise results. If a codebase uses "a lot of syntax", it requires more characters to achieve the same functionality.</p>
+Frameworks are said to have a "clean" syntax if they produce simple, readable, concise results. If a codebase uses "a lot of syntax", it requires more characters to achieve the same functionality.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Syntax (programming languages)")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Syntax (programming languages)")}} on Wikipedia

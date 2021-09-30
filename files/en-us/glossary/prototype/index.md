@@ -6,12 +6,10 @@ tags:
   - Composing
   - Glossary
 ---
-<p>A prototype is a model that displays the appearance and behavior of an application or product early in the development lifecycle.</p>
+A prototype is a model that displays the appearance and behavior of an application or product early in the development lifecycle.
 
-<p>See <a href="/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Inheritance and the prototype chain</a></p>
+See [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Software Prototyping")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Software Prototyping")}} on Wikipedia

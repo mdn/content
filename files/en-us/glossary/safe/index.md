@@ -5,6 +5,6 @@ tags:
   - Glossary
   - Disambiguation
 ---
-<p>The term <strong>safe</strong> can have several meanings depending on the context. It may refer to:</p>
+The term **safe** can have several meanings depending on the context. It may refer to:
 
-<p>{{GlossaryDisambiguation}}</p>
+{{GlossaryDisambiguation}}

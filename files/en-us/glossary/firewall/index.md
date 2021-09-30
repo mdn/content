@@ -8,12 +8,10 @@ tags:
   - Security
   - computer network
 ---
-<p>A <strong>firewall</strong> is a system that filters network traffic. It can either let it pass or block it, according to some specified rules. For example, it can block incoming connections aimed at a certain port or outgoing connections to a certain IP address.</p>
+A **firewall** is a system that filters network traffic. It can either let it pass or block it, according to some specified rules. For example, it can block incoming connections aimed at a certain port or outgoing connections to a certain IP address.
 
-<p>Firewalls can be as simple as a single piece of software, or more complex, like a dedicated machine whose only function is to act as a firewall.</p>
+Firewalls can be as simple as a single piece of software, or more complex, like a dedicated machine whose only function is to act as a firewall.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Firewall (computing)")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Firewall (computing)")}} on Wikipedia

@@ -5,12 +5,10 @@ tags:
   - CodingScripting
   - Glossary
 ---
-<p>SISD is short for <strong>Single Instruction/Single Data</strong> which is one {{Interwiki("wikipedia","Flynn%27s_taxonomy","classification of computer architectures")}}. In SISD architecture, a single processor executes a single instruction and operates on a single data point in memory.</p>
+SISD is short for **Single Instruction/Single Data** which is one {{Interwiki("wikipedia","Flynn%27s_taxonomy","classification of computer architectures")}}. In SISD architecture, a single processor executes a single instruction and operates on a single data point in memory.
 
-<p>See also {{Glossary("SIMD")}} for a parallel architecture that allows one same operation to be performed on multiple data points.</p>
+See also {{Glossary("SIMD")}} for a parallel architecture that allows one same operation to be performed on multiple data points.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "SISD")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "SISD")}} on Wikipedia

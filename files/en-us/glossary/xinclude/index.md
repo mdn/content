@@ -5,23 +5,26 @@ tags:
   - CodingScripting
   - Glossary
 ---
-<p><a href="https://www.w3.org/TR/xinclude/#text-included-items">XML Inclusions (XInclude)</a> is a W3C Recommendation to allow inclusion of XML more different sources in a more convenient fashion than XML external entities. When used in conjunction with XPointer (Firefox supports a subset of it, and is used in the code sample below), XInclude can also target just specific portions of a document for inclusion. Firefox does not support it natively, but the following function aims to allow its use with documents passed into it.</p>
+[XML Inclusions (XInclude)](https://www.w3.org/TR/xinclude/#text-included-items) is a W3C Recommendation to allow inclusion of XML more different sources in a more convenient fashion than XML external entities. When used in conjunction with XPointer (Firefox supports a subset of it, and is used in the code sample below), XInclude can also target just specific portions of a document for inclusion. Firefox does not support it natively, but the following function aims to allow its use with documents passed into it.
 
-<h3 id="Code_sample">Code sample</h3>
+### Code sample
 
-<p>The following code aims to let &lt;xi:include&gt; and &lt;xi:fallback&gt; tags (the two elements in the language) with all of the attributes of &lt;xi:include&gt; be included in an XML document so as to be resolvable into a single XML document.</p>
+The following code aims to let \<xi:include> and \<xi:fallback> tags (the two elements in the language) with all of the attributes of \<xi:include> be included in an XML document so as to be resolvable into a single XML document.
 
-<p>(Note that this has not been thoroughly tested for all circumstances and may not necessarily reflect the standard behavior completely.)</p>
+(Note that this has not been thoroughly tested for all circumstances and may not necessarily reflect the standard behavior completely.)
 
-<p>Note also that if you wish to allow xml:base, you will need the <a href="/en-US/docs/Archive/Add-ons/Code_snippets/XML/base_function">xml:base function</a>, and the line beginning <code>var href = ...</code> should become:</p>
+Note also that if you wish to allow xml:base, you will need the [xml:base function](/en-US/docs/Archive/Add-ons/Code_snippets/XML/base_function), and the line beginning `var href = ...` should become:
 
-<pre class="brush: js">var href = getXmlBaseLink (/* XLink sans xml:base */ xinclude.getAttribute('href'), /* Element to query from */ xinclude);</pre>
+```js
+var href = getXmlBaseLink (/* XLink sans xml:base */ xinclude.getAttribute('href'), /* Element to query from */ xinclude);
+```
 
-<pre class="brush: js">function resolveXIncludes(docu) {
+```js
+function resolveXIncludes(docu) {
     // http://www.w3.org/TR/xinclude/#xml-included-items
     var xincludes = docu.getElementsByTagNameNS('http://www.w3.org/2001/XInclude', 'include');
     if (xincludes) {
-        for (i=0; i &lt; xincludes.length; i++) {
+        for (i=0; i < xincludes.length; i++) {
             var xinclude = xincludes[i];
             var href = xinclude.getAttribute('href');
             var parse = xinclude.getAttribute('parse');
@@ -32,7 +35,7 @@ tags:
             var xiFallback = xinclude.getElementsByTagNameNS('http://www.w3.org/2001/XInclude', 'fallback')[0]; // Only one such child is allowed
             if (href === '' || href === null) { // Points to same document if empty (null is equivalent to empty string)
                 href = null; // Set for uniformity in testing below
-                if (parse === 'xml' &amp;&amp; xpointer === null) {
+                if (parse === 'xml' && xpointer === null) {
                     alert('There must be an XPointer attribute present if "href" is empty an parse is "xml"');
                     return false;
                 }
@@ -66,10 +69,10 @@ tags:
                             //text/xml; charset="utf-8" // Send to get headers first?
                             // Fix: We test for file extensions as well in case file:// doesn't return content type (as seems to be the case); can some other tool be uesd in FF (or IE) to detect encoding of local file? Probably just need BOM test since other encodings must be specified
                             var patternXML = /\.(svg|xml|xul|rdf|xhtml)$/;
-                            if ((contentType &amp;&amp; contentType.match(/[text|application]\/(.*)\+?xml/)) || (href.indexOf('file://') === 0 &amp;&amp; href.match(patternXML))) {
+                            if ((contentType && contentType.match(/[text|application]\/(.*)\+?xml/)) || (href.indexOf('file://') === 0 && href.match(patternXML))) {
                                 /* Grab the response as text (see below for that routine) and then find encoding within*/
                                var encName = '([A-Za-z][A-Za-z0-9._-]*)';
-                               var pattern = new RegExp('^&lt;\\?xml\\s+.*encoding\\s*=\\s*([\'"])'+encName+'\\1.*\\?&gt;'); // Check document if not?
+                               var pattern = new RegExp('^<\\?xml\\s+.*encoding\\s*=\\s*([\'"])'+encName+'\\1.*\\?>'); // Check document if not?
                                // Let the request be processed below
                             }
                             else {
@@ -90,7 +93,7 @@ tags:
                             break;
                     }
                     request.send(null);
-                    if((request.status === 200 || request.status === 0) &amp;&amp; request[responseType] !== null) {
+                    if((request.status === 200 || request.status === 0) && request[responseType] !== null) {
                         response = request[responseType];
                          if (responseType === 'responseXML') {
                             // apply xpointer (only xpath1() subset is supported)
@@ -104,7 +107,7 @@ tags:
                                                                  null
                                                               );
                                 var a = [];
-                                for(var k = 0; k &lt; xpathResult.snapshotLength; k++) {
+                                for(var k = 0; k < xpathResult.snapshotLength; k++) {
                                 a[k] = xpathResult.snapshotItem(k);
                                 }
                                 responseNodes = a;
@@ -113,7 +116,7 @@ tags:
                                 responseNodes = [response.documentElement]; // Put in array so can be treated the same way as the above
                             }
                             // PREPEND ANY NODE(S) (AS XML) THEN REMOVE XINCLUDE
-                            for (j=0; j &lt; responseNodes.length ; j++) {
+                            for (j=0; j < responseNodes.length ; j++) {
                                 xincludeParent.insertBefore(responseNodes[j], xinclude);
                             }
                             xincludeParent.removeChild(xinclude);
@@ -148,7 +151,7 @@ tags:
             catch (e) { // Use xi:fallback if XInclude retrieval above failed
                 var xiFallbackChildren = xiFallback.childNodes;
                 // PREPEND ANY NODE(S) THEN REMOVE XINCLUDE
-                for (j=0; j &lt; xiFallbackChildren.length ; j++) {
+                for (j=0; j < xiFallbackChildren.length ; j++) {
                     xincludeParent.insertBefore(xiFallbackChildren[j], xinclude);
                 }
                 xincludeParent.removeChild(xinclude);
@@ -157,4 +160,4 @@ tags:
     }
     return docu;
 }
-</pre>
+```

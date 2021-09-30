@@ -6,10 +6,8 @@ tags:
   - Glossary
   - NeedsContent
 ---
-<p>Local scope is a characteristic of {{glossary("variable","variables")}} that makes them local (i.e., the variable name is only bound to its {{glossary("value")}} within a scope which is not the {{glossary("global scope")}}).</p>
+Local scope is a characteristic of {{glossary("variable","variables")}} that makes them local (i.e., the variable name is only bound to its {{glossary("value")}} within a scope which is not the {{glossary("global scope")}}).
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{interwiki("wikipedia", "Scope (computer science)", "Scope")}} on Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "Scope (computer science)", "Scope")}} on Wikipedia

@@ -5,15 +5,13 @@ tags:
   - CodingScripting
   - Glossary
 ---
-<p><strong><a href="/en-US/docs/Web/JavaScript/Memory_Management#garbage_collection">Garbage collection</a></strong> is a term used in {{Glossary("computer programming")}} to describe the process of finding and deleting {{Glossary("object", "objects")}} which are no longer being {{Glossary("object reference", "referenced")}} by other objects.</p>
+**[Garbage collection](/en-US/docs/Web/JavaScript/Memory_Management#garbage_collection)** is a term used in {{Glossary("computer programming")}} to describe the process of finding and deleting {{Glossary("object", "objects")}} which are no longer being {{Glossary("object reference", "referenced")}} by other objects.
 
-<p>In other words, garbage collection is the process of removing any objects which are not being used by any other objects. Often abbreviated "GC," garbage collection is a fundamental component of the <a href="/en-US/docs/Web/JavaScript/Memory_Management">memory management</a> system used by {{Glossary("JavaScript")}}.</p>
+In other words, garbage collection is the process of removing any objects which are not being used by any other objects. Often abbreviated "GC," garbage collection is a fundamental component of the [memory management](/en-US/docs/Web/JavaScript/Memory_Management) system used by {{Glossary("JavaScript")}}.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{interwiki("wikipedia", "Memory management")}} on Wikipedia</li>
- <li>{{interwiki("wikipedia", "Garbage collection")}} on Wikipedia</li>
- <li><a href="/en-US/docs/Web/JavaScript/Memory_Management#garbage_collection">Garbage collection</a> in the MDN JavaScript guide.</li>
- <li><a href="/en-US/docs/Web/JavaScript/Memory_Management">Memory management in JavaScript</a></li>
-</ul>
+- {{interwiki("wikipedia", "Memory management")}} on Wikipedia
+- {{interwiki("wikipedia", "Garbage collection")}} on Wikipedia
+- [Garbage collection](/en-US/docs/Web/JavaScript/Memory_Management#garbage_collection) in the MDN JavaScript guide.
+- [Memory management in JavaScript](/en-US/docs/Web/JavaScript/Memory_Management)

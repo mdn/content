@@ -5,37 +5,33 @@ tags:
   - Glossary
   - WebMechanics
 ---
-<p>An HTTP method is <strong>idempotent</strong> if an identical request can be made once or several times in a row with the same effect while leaving the server in the same state. In other words, an idempotent method should not have any side-effects (except for keeping statistics). Implemented correctly, the {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}}, and {{HTTPMethod("DELETE")}} methods are <strong>idempotent</strong>, but not the {{HTTPMethod("POST")}} method. All {{glossary("Safe/HTTP", "safe")}} methods are also idempotent.</p>
+An HTTP method is **idempotent** if an identical request can be made once or several times in a row with the same effect while leaving the server in the same state. In other words, an idempotent method should not have any side-effects (except for keeping statistics). Implemented correctly, the {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}}, and {{HTTPMethod("DELETE")}} methods are **idempotent**, but not the {{HTTPMethod("POST")}} method. All {{glossary("Safe/HTTP", "safe")}} methods are also idempotent.
 
-<p>To be idempotent, only the actual back-end state of the server is considered, the status code returned by each request may differ: the first call of a {{HTTPMethod("DELETE")}} will likely return a {{HTTPStatus("200")}}, while successive ones will likely return a {{HTTPStatus("404")}}. Another implication of {{HTTPMethod("DELETE")}} being idempotent is that developers should not implement RESTful APIs with a <em>delete last entry</em> functionality using the <code>DELETE</code> method.</p>
+To be idempotent, only the actual back-end state of the server is considered, the status code returned by each request may differ: the first call of a {{HTTPMethod("DELETE")}} will likely return a {{HTTPStatus("200")}}, while successive ones will likely return a {{HTTPStatus("404")}}. Another implication of {{HTTPMethod("DELETE")}} being idempotent is that developers should not implement RESTful APIs with a _delete last entry_ functionality using the `DELETE` method.
 
-<p>Note that the idempotence of a method is not guaranteed by the server and some applications may incorrectly break the idempotence constraint.</p>
+Note that the idempotence of a method is not guaranteed by the server and some applications may incorrectly break the idempotence constraint.
 
-<p><code>GET /pageX HTTP/1.1</code> is idempotent. Called several times in a row, the client gets the same results:</p>
+`GET /pageX HTTP/1.1` is idempotent. Called several times in a row, the client gets the same results:
 
-<pre>GET /pageX HTTP/1.1
-GET /pageX HTTP/1.1
-GET /pageX HTTP/1.1
-GET /pageX HTTP/1.1
-</pre>
+    GET /pageX HTTP/1.1
+    GET /pageX HTTP/1.1
+    GET /pageX HTTP/1.1
+    GET /pageX HTTP/1.1
 
-<p><code>POST /add_row HTTP/1.1</code> is not idempotent; if it is called several times, it adds several rows:</p>
+`POST /add_row HTTP/1.1` is not idempotent; if it is called several times, it adds several rows:
 
-<pre>POST /add_row HTTP/1.1
-POST /add_row HTTP/1.1   -&gt; Adds a 2nd row
-POST /add_row HTTP/1.1   -&gt; Adds a 3rd row
-</pre>
+    POST /add_row HTTP/1.1
+    POST /add_row HTTP/1.1   -> Adds a 2nd row
+    POST /add_row HTTP/1.1   -> Adds a 3rd row
 
-<p><code>DELETE /idX/delete HTTP/1.1</code> is idempotent, even if the returned status code may change between requests:</p>
+`DELETE /idX/delete HTTP/1.1` is idempotent, even if the returned status code may change between requests:
 
-<pre>DELETE /idX/delete HTTP/1.1   -&gt; Returns 200 if idX exists
-DELETE /idX/delete HTTP/1.1   -&gt; Returns 404 as it just got deleted
-DELETE /idX/delete HTTP/1.1   -&gt; Returns 404</pre>
+    DELETE /idX/delete HTTP/1.1   -> Returns 200 if idX exists
+    DELETE /idX/delete HTTP/1.1   -> Returns 404 as it just got deleted
+    DELETE /idX/delete HTTP/1.1   -> Returns 404
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>Definition of <a href="https://datatracker.ietf.org/doc/html/rfc7231#section-4.2.2">idempotent</a> in the HTTP specification.</li>
- <li>Description of common idempotent methods: {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}}, {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("TRACE")}}</li>
- <li>Description of common non-idempotent methods: {{HTTPMethod("POST")}},{{HTTPMethod("PATCH")}}, {{HTTPMethod("CONNECT")}}</li>
-</ul>
+- Definition of [idempotent](https://datatracker.ietf.org/doc/html/rfc7231#section-4.2.2) in the HTTP specification.
+- Description of common idempotent methods: {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}}, {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("TRACE")}}
+- Description of common non-idempotent methods: {{HTTPMethod("POST")}},{{HTTPMethod("PATCH")}}, {{HTTPMethod("CONNECT")}}

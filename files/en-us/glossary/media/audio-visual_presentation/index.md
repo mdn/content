@@ -8,17 +8,15 @@ tags:
   - Multimedia
   - Video
 ---
-<p>The term <strong>media</strong> (more accurately, <strong>multimedia</strong>) refers to audio, video, or combined audio-visual material such as music, recorded speech, movies, TV shows, or any other form of content that is presented over a period of time.</p>
+The term **media** (more accurately, **multimedia**) refers to audio, video, or combined audio-visual material such as music, recorded speech, movies, TV shows, or any other form of content that is presented over a period of time.
 
-<p>More broadly, media may include still images such as photographs or other still images.</p>
+More broadly, media may include still images such as photographs or other still images.
 
-<p>Media content can be recorded, played back, presented, and at times interacted with in various ways.</p>
+Media content can be recorded, played back, presented, and at times interacted with in various ways.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{interwiki("wikipedia", "Multimedia")}} on Wikipedia</li>
- <li><a href="/en-US/docs/Web/Media">Web media technologies</a>: a guide to all the ways media can be used in web content</li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding">Multimedia and Embedding</a> in the MDN learning area</li>
- <li>{{HTMLElement("audio")}} and {{HTMLElement("video")}} elements, used to present media in {{Glossary("HTML")}} documents</li>
-</ul>
+- {{interwiki("wikipedia", "Multimedia")}} on Wikipedia
+- [Web media technologies](/en-US/docs/Web/Media): a guide to all the ways media can be used in web content
+- [Multimedia and Embedding](/en-US/docs/Learn/HTML/Multimedia_and_embedding) in the MDN learning area
+- {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements, used to present media in {{Glossary("HTML")}} documents

@@ -9,27 +9,32 @@ tags:
   - Intro
   - PHP
 ---
-<p>PHP (a recursive initialism for PHP: Hypertext Preprocessor) is an open-source server-side scripting language that can be embedded into HTML to build web applications and dynamic websites.</p>
+PHP (a recursive initialism for PHP: Hypertext Preprocessor) is an open-source server-side scripting language that can be embedded into HTML to build web applications and dynamic websites.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_syntax">Basic syntax</h3>
+### Basic syntax
 
-<pre class="brush: php">  // start of PHP code
-&lt;?php
+```php
+  // start of PHP code
+<?php
      // PHP code goes here
- ?&gt;
-// end of PHP code</pre>
+ ?>
+// end of PHP code
+```
 
-<h3 id="Printing_data_on_screen">Printing data on screen</h3>
+### Printing data on screen
 
-<pre class="brush: php">&lt;?php
+```php
+<?php
    echo "Hello World!";
-?&gt;</pre>
+?>
+```
 
-<h3 id="PHP_variables">PHP variables</h3>
+### PHP variables
 
-<pre class="brush: php">&lt;?php
+```php
+<?php
  // variables
  $nome='Danilo';
  $sobrenome='Santos';
@@ -41,21 +46,17 @@ tags:
  echo $sobrenome;
  echo $pais;
  echo $email;
-?&gt;</pre>
+?>
+```
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://php.net/">Official website</a></li>
- <li>{{Interwiki("wikipedia", "PHP")}} on Wikipedia</li>
- <li><a href="https://en.wikibooks.org/wiki/PHP_Programming">PHP</a> on Wikibooks</li>
- <li><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a>
-  <ul>
-   <li>{{Glossary("Java")}}</li>
-   <li>{{Glossary("JavaScript")}}</li>
-   <li>{{Glossary("Python")}}</li>
-   <li>{{Glossary("Ruby")}}</li>
-  </ul>
- </li>
-</ul>
+- [Official website](https://php.net/)
+- {{Interwiki("wikipedia", "PHP")}} on Wikipedia
+- [PHP](https://en.wikibooks.org/wiki/PHP_Programming) on Wikibooks
+- [MDN Web Docs Glossary](/en-US/docs/Glossary)
 
+  - {{Glossary("Java")}}
+  - {{Glossary("JavaScript")}}
+  - {{Glossary("Python")}}
+  - {{Glossary("Ruby")}}

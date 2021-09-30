@@ -7,24 +7,19 @@ tags:
   - Infrastructure
   - Reference
   - Web Performance
-  - 'l10n:priority'
+  - l10n:priority
 ---
-<p><strong>HTTP/2</strong> is a major revision of the <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP">HTTP network protocol</a>.</p>
+**HTTP/2** is a major revision of the [HTTP network protocol](/en-US/docs/Web/HTTP/Basics_of_HTTP).
 
-<p>The primary goals for HTTP/2 are to reduce {{glossary("latency")}} by enabling full request and response multiplexing, minimize protocol overhead via efficient compression of HTTP header fields, and add support for request prioritization and server push.</p>
+The primary goals for HTTP/2 are to reduce {{glossary("latency")}} by enabling full request and response multiplexing, minimize protocol overhead via efficient compression of HTTP header fields, and add support for request prioritization and server push.
 
-<p>HTTP/2 does not modify the application semantics of HTTP in any way. All the core concepts found in HTTP 1.1, such as HTTP methods, status codes, URIs, and header fields, remain in place. Instead, HTTP/2 modifies how the data is formatted (framed) and transported between the client and server, both of which manage the entire process, and hides application complexity within the new framing layer. As a result, all existing applications can be delivered without modification.</p>
+HTTP/2 does not modify the application semantics of HTTP in any way. All the core concepts found in HTTP 1.1, such as HTTP methods, status codes, URIs, and header fields, remain in place. Instead, HTTP/2 modifies how the data is formatted (framed) and transported between the client and server, both of which manage the entire process, and hides application complexity within the new framing layer. As a result, all existing applications can be delivered without modification.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
-   <li><a href="/en-US/docs/Web/HTTP">HTTP on MDN</a></li>
-   <li>{{interwiki("wikipedia", "HTTP/2", "HTTP/2")}} on Wikipedia</li>
-    <li><a href="/en-US/docs/Glossary">Glossary</a>
-      <ul>
-      <li>{{glossary("HTTP")}}</li>
-      <li>{{glossary("Latency")}}</li>
-      </ul>
-    </li>
-</ul>
+- [HTTP on MDN](/en-US/docs/Web/HTTP)
+- {{interwiki("wikipedia", "HTTP/2", "HTTP/2")}} on Wikipedia
+- [Glossary](/en-US/docs/Glossary)
 
+  - {{glossary("HTTP")}}
+  - {{glossary("Latency")}}

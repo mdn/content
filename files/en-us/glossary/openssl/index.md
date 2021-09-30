@@ -5,11 +5,9 @@ tags:
   - Glossary
   - Security
 ---
-<p>OpenSSL is an open-source implementation of {{glossary("SSL")}} and {{glossary("TLS")}}.</p>
+OpenSSL is an open-source implementation of {{glossary("SSL")}} and {{glossary("TLS")}}.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "OpenSSL")}} on Wikipedia</li>
- <li><a href="https://www.openssl.org/">Official website</a></li>
-</ul>
+- {{Interwiki("wikipedia", "OpenSSL")}} on Wikipedia
+- [Official website](https://www.openssl.org/)

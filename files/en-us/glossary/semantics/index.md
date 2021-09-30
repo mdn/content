@@ -7,90 +7,85 @@ tags:
   - HTML
   - semantics
 ---
-<p>In programming, <strong>Semantics</strong> refers to the <em>meaning</em> of a piece of code — for example "what effect does running that line of JavaScript have?", or "what purpose or role does that HTML element have" (rather than "what does it look like?".)</p>
+In programming, **Semantics** refers to the _meaning_ of a piece of code — for example "what effect does running that line of JavaScript have?", or "what purpose or role does that HTML element have" (rather than "what does it look like?".)
 
-<h2 id="Semantics_in_JavaScript">Semantics in JavaScript</h2>
+## Semantics in JavaScript
 
-<p>In JavaScript, consider a function that takes a string parameter, and returns an {{htmlelement("li")}} element with that string as its <code>textContent</code>. Would you need to look at the code to understand what the function did if it was called <code>build('Peach')</code>, or <code>createLiWithContent('Peach')</code>?</p>
+In JavaScript, consider a function that takes a string parameter, and returns an {{htmlelement("li")}} element with that string as its `textContent`. Would you need to look at the code to understand what the function did if it was called `build('Peach')`, or `createLiWithContent('Peach')`?
 
-<h2 id="Semantics_in_CSS">Semantics in CSS</h2>
+## Semantics in CSS
 
-<p>In CSS, consider styling a list with <code>li</code> elements representing different types of fruits. Would you know what part of the DOM is being selected with <code>div &gt; ul &gt; li</code>, or <code>.fruits__item</code>?</p>
+In CSS, consider styling a list with `li` elements representing different types of fruits. Would you know what part of the DOM is being selected with `div > ul > li`, or `.fruits__item`?
 
-<h2 id="Semantics_in_HTML">Semantics in HTML</h2>
+## Semantics in HTML
 
-<p>In HTML, for example, the {{htmlelement("h1")}} element is a semantic element, which gives the text it wraps around the role (or meaning) of "a top level heading on your page."</p>
+In HTML, for example, the {{htmlelement("h1")}} element is a semantic element, which gives the text it wraps around the role (or meaning) of "a top level heading on your page."
 
-<pre class="brush: html">&lt;h1&gt;This is a top level heading&lt;/h1&gt;</pre>
+```html
+<h1>This is a top level heading</h1>
+```
 
-<p>By default, most browser's <a href="/en-US/docs/Web/CSS/Cascade#user-agent_stylesheets">user agent stylesheet</a> will style an {{htmlelement("h1")}} with a large font size to make it <em>look</em> like a heading (although you could style it to look like anything you wanted).</p>
+By default, most browser's [user agent stylesheet](/en-US/docs/Web/CSS/Cascade#user-agent_stylesheets) will style an {{htmlelement("h1")}} with a large font size to make it _look_ like a heading (although you could style it to look like anything you wanted).
 
-<p>On the other hand, you could make any element <em>look</em> like a top level heading. Consider the following:</p>
+On the other hand, you could make any element _look_ like a top level heading. Consider the following:
 
-<pre class="brush: html">&lt;span style="font-size: 32px; margin: 21px 0;"&gt;Is this a top level heading?&lt;/span&gt;</pre>
+```html
+<span style="font-size: 32px; margin: 21px 0;">Is this a top level heading?</span>
+```
 
-<p>This will render it to look like a top level heading, but it has no semantic value, so it will not get any extra benefits as described above. It is therefore a good idea to use the right HTML element for the right job.</p>
+This will render it to look like a top level heading, but it has no semantic value, so it will not get any extra benefits as described above. It is therefore a good idea to use the right HTML element for the right job.
 
-<p>HTML should be coded to represent the <em>data</em> that will be populated and not based on its default presentation styling. Presentation (how it should look), is the sole responsibility of <a href="/en-US/docs/Web/CSS">CSS</a>.</p>
+HTML should be coded to represent the _data_ that will be populated and not based on its default presentation styling. Presentation (how it should look), is the sole responsibility of [CSS](/en-US/docs/Web/CSS).
 
-<p>Some of the benefits from writing semantic markup are as follows:</p>
+Some of the benefits from writing semantic markup are as follows:
 
-<ul>
- <li>Search engines will consider its contents as important keywords to influence the page's search rankings (see {{glossary("SEO")}})</li>
- <li>Screen readers can use it as a signpost to help visually impaired users navigate a page</li>
- <li>Finding blocks of meaningful code is significantly easier than searching through endless <code>div</code>s with or without semantic or namespaced classes</li>
- <li>Suggests to the developer the type of data that will be populated</li>
- <li>Semantic naming mirrors proper custom element/component naming</li>
-</ul>
+- Search engines will consider its contents as important keywords to influence the page's search rankings (see {{glossary("SEO")}})
+- Screen readers can use it as a signpost to help visually impaired users navigate a page
+- Finding blocks of meaningful code is significantly easier than searching through endless `div`s with or without semantic or namespaced classes
+- Suggests to the developer the type of data that will be populated
+- Semantic naming mirrors proper custom element/component naming
 
-<p>When approaching which markup to use, ask yourself, "What element(s) best describe/represent the data that I'm going to populate?" For example, is it a list of data?; ordered, unordered?; is it an article with sections and an aside of related information?; does it list out definitions?; is it a figure or image that needs a caption?; should it have a header and a footer in addition to the global site-wide header and footer?; etc.</p>
+When approaching which markup to use, ask yourself, "What element(s) best describe/represent the data that I'm going to populate?" For example, is it a list of data?; ordered, unordered?; is it an article with sections and an aside of related information?; does it list out definitions?; is it a figure or image that needs a caption?; should it have a header and a footer in addition to the global site-wide header and footer?; etc.
 
-<h2 id="Semantic_elements">Semantic elements</h2>
+## Semantic elements
 
-<p>These are <em>some</em> of the roughly 100 semantic <a href="/en-US/docs/Web/HTML/Element">elements</a> available:</p>
+These are _some_ of the roughly 100 semantic [elements](/en-US/docs/Web/HTML/Element) available:
 
-<ul>
- <li>{{htmlelement("article")}}</li>
- <li>{{htmlelement("aside")}}</li>
- <li>{{htmlelement("details")}}</li>
- <li>{{htmlelement("figcaption")}}</li>
- <li>{{htmlelement("figure")}}</li>
- <li>{{htmlelement("footer")}}</li>
- <li>{{htmlelement("header")}}</li>
- <li>{{htmlelement("main")}}</li>
- <li>{{htmlelement("mark")}}</li>
- <li>{{htmlelement("nav")}}</li>
- <li>{{htmlelement("section")}}</li>
- <li>{{htmlelement("summary")}}</li>
- <li>{{htmlelement("time")}}</li>
-</ul>
+- {{htmlelement("article")}}
+- {{htmlelement("aside")}}
+- {{htmlelement("details")}}
+- {{htmlelement("figcaption")}}
+- {{htmlelement("figure")}}
+- {{htmlelement("footer")}}
+- {{htmlelement("header")}}
+- {{htmlelement("main")}}
+- {{htmlelement("mark")}}
+- {{htmlelement("nav")}}
+- {{htmlelement("section")}}
+- {{htmlelement("summary")}}
+- {{htmlelement("time")}}
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTML/Element#inline_text_semantics">HTML element reference</a> on MDN</li>
- <li><a href="/en-US/docs/Web/HTML/Element/Heading_Elements#problems_solved_by_html5">Using HTML sections and outlines</a> on MDN</li>
- <li>{{interwiki("wikipedia", "Semantics#Computer_science", "The meaning of semantics in computer science")}} on Wikipedia</li>
-  <li><a href="/en-US/docs/Glossary">Glossary</a>
-  <ul>
-   <li>{{Glossary("SEO")}}</li>
-  </ul>
- </li>
- <li>Semantic elements in HTML:
-  <ul>
-   <li>{{htmlelement("article")}}</li>
-   <li>{{htmlelement("aside")}}</li>
-   <li>{{htmlelement("details")}}</li>
-   <li>{{htmlelement("figcaption")}}</li>
-   <li>{{htmlelement("figure")}}</li>
-   <li>{{htmlelement("footer")}}</li>
-   <li>{{htmlelement("header")}}</li>
-   <li>{{htmlelement("main")}}</li>
-   <li>{{htmlelement("mark")}}</li>
-   <li>{{htmlelement("nav")}}</li>
-   <li>{{htmlelement("section")}}</li>
-   <li>{{htmlelement("summary")}}</li>
-   <li>{{htmlelement("time")}}</li>
-  </ul>
- </li>
-</ul>
+- [HTML element reference](/en-US/docs/Web/HTML/Element#inline_text_semantics) on MDN
+- [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements#problems_solved_by_html5) on MDN
+- {{interwiki("wikipedia", "Semantics#Computer_science", "The meaning of semantics in computer science")}} on Wikipedia
+- [Glossary](/en-US/docs/Glossary)
+
+  - {{Glossary("SEO")}}
+
+- Semantic elements in HTML:
+
+  - {{htmlelement("article")}}
+  - {{htmlelement("aside")}}
+  - {{htmlelement("details")}}
+  - {{htmlelement("figcaption")}}
+  - {{htmlelement("figure")}}
+  - {{htmlelement("footer")}}
+  - {{htmlelement("header")}}
+  - {{htmlelement("main")}}
+  - {{htmlelement("mark")}}
+  - {{htmlelement("nav")}}
+  - {{htmlelement("section")}}
+  - {{htmlelement("summary")}}
+  - {{htmlelement("time")}}

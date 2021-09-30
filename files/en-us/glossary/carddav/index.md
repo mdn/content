@@ -6,11 +6,9 @@ tags:
   - Glossary
   - Infrastructure
 ---
-<p><strong>CardDAV </strong>(vCard Extension to {{Glossary("WebDAV")}}) is a {{glossary("protocol")}} standardized by the {{Glossary("IETF")}} and used to remote-access or share contact information over a {{glossary("server")}}.</p>
+**CardDAV** (vCard Extension to {{Glossary("WebDAV")}}) is a {{glossary("protocol")}} standardized by the {{Glossary("IETF")}} and used to remote-access or share contact information over a {{glossary("server")}}.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "CardDAV")}} on Wikipedia</li>
- <li><a href="https://datatracker.ietf.org/doc/html/rfc6352">RFC 6352: vCard Extensions to Web Distributed Authoring and Versioning (WebDAV)</a></li>
-</ul>
+- {{Interwiki("wikipedia", "CardDAV")}} on Wikipedia
+- [RFC 6352: vCard Extensions to Web Distributed Authoring and Versioning (WebDAV)](https://datatracker.ietf.org/doc/html/rfc6352)

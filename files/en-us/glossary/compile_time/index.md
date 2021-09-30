@@ -6,10 +6,8 @@ tags:
   - Glossary
   - JavaScript
 ---
-<p>The <em>compile time</em> is the time from when the program is first loaded until the program is {{Glossary("parse","parsed")}}.</p>
+The _compile time_ is the time from when the program is first loaded until the program is {{Glossary("parse","parsed")}}.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Compile time")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Compile time")}} on Wikipedia

@@ -6,20 +6,16 @@ tags:
   - Glossary
   - Infrastructure
 ---
-<p><strong>POP3</strong> (Post Office Protocol) is a very common {{glossary("protocol")}} for getting emails from a mail server over a {{glossary("TCP")}} connection. POP3 does not support folders, unlike the more recent {{Glossary("IMAP")}}, which is harder to implement because of its more complex structure.</p>
+**POP3** (Post Office Protocol) is a very common {{glossary("protocol")}} for getting emails from a mail server over a {{glossary("TCP")}} connection. POP3 does not support folders, unlike the more recent {{Glossary("IMAP")}}, which is harder to implement because of its more complex structure.
 
-<p>Clients usually retrieve all messages and then delete them from the server, but POP3 does allow retaining a copy on the server. Nearly all email servers and clients currently support POP3.</p>
+Clients usually retrieve all messages and then delete them from the server, but POP3 does allow retaining a copy on the server. Nearly all email servers and clients currently support POP3.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Post Office Protocol", "POP")}} on Wikipedia</li>
- <li><a href="https://datatracker.ietf.org/doc/html/rfc1734">RFC 1734</a> (Specification of POP3 authentication mechanism)</li>
- <li><a href="https://datatracker.ietf.org/doc/html/rfc1939">RFC 1939</a> (Specification of POP3)</li>
- <li><a href="https://datatracker.ietf.org/doc/html/rfc2449">RFC 2449</a> (Specification of POP3 extension mechanism)</li>
- <li><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a>:
-  <ul>
-   <li>{{Glossary("IMAP")}}</li>
-  </ul>
- </li>
-</ul>
+- {{Interwiki("wikipedia", "Post Office Protocol", "POP")}} on Wikipedia
+- [RFC 1734](https://datatracker.ietf.org/doc/html/rfc1734) (Specification of POP3 authentication mechanism)
+- [RFC 1939](https://datatracker.ietf.org/doc/html/rfc1939) (Specification of POP3)
+- [RFC 2449](https://datatracker.ietf.org/doc/html/rfc2449) (Specification of POP3 extension mechanism)
+- [MDN Web Docs Glossary](/en-US/docs/Glossary):
+
+  - {{Glossary("IMAP")}}

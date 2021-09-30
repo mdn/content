@@ -8,11 +8,9 @@ tags:
   - WebMechanics
   - WebRTC
 ---
-<p><strong>NAT </strong>(Network Address Translation) is a technique for letting multiple computers share an IP address. NAT assigns unique addresses to each computer on the local network and adjusts incoming/outgoing network traffic to send data to the right place.</p>
+**NAT** (Network Address Translation) is a technique for letting multiple computers share an IP address. NAT assigns unique addresses to each computer on the local network and adjusts incoming/outgoing network traffic to send data to the right place.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Protocols">WebRTC protocols</a></li>
- <li>{{interwiki("wikipedia", "NAT")}} on Wikipedia</li>
-</ul>
+- [WebRTC protocols](/en-US/docs/Web/API/WebRTC_API/Protocols)
+- {{interwiki("wikipedia", "NAT")}} on Wikipedia

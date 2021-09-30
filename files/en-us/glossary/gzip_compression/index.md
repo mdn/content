@@ -6,12 +6,9 @@ tags:
   - compression
   - gzip
 ---
-<p>Gzip is a file format used for file compression and decompression. It is based on the Deflate algorithm that allows files to be made smaller in size which allows for faster network transfers. Gzip is commonly supported by web servers and modern browsers, meaning that servers can automatically compress files with Gzip before sending them, and browsers can uncompress files upon receiving them.</p>
+Gzip is a file format used for file compression and decompression. It is based on the Deflate algorithm that allows files to be made smaller in size which allows for faster network transfers. Gzip is commonly supported by web servers and modern browsers, meaning that servers can automatically compress files with Gzip before sending them, and browsers can uncompress files upon receiving them.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://varvy.com/pagespeed/enable-compression.html">How to enable compression and gzip for page speed.</a></li>
- <li><a href="https://en.wikipedia.org/wiki/Gzip">Gzip on Wikipedia</a></li>
-</ul>
-
+- [How to enable compression and gzip for page speed.](https://varvy.com/pagespeed/enable-compression.html)
+- [Gzip on Wikipedia](https://en.wikipedia.org/wiki/Gzip)

@@ -6,18 +6,14 @@ tags:
   - Proxy
   - Server
 ---
-<p>A <strong>proxy server</strong> is an intermediate program or computer used when navigating through different networks of the Internet. They facilitate access to content on the World Wide Web. A proxy intercepts requests and serves back responses; it may forward the requests, or not (for example in the case of a cache), and it may modify it (for example changing its headers, at the boundary between two networks).</p>
+A **proxy server** is an intermediate program or computer used when navigating through different networks of the Internet. They facilitate access to content on the World Wide Web. A proxy intercepts requests and serves back responses; it may forward the requests, or not (for example in the case of a cache), and it may modify it (for example changing its headers, at the boundary between two networks).
 
-<p>A proxy can be on the user's local computer, or anywhere between the user's computer and a destination server on the Internet. In general there are two main types of proxy servers:</p>
+A proxy can be on the user's local computer, or anywhere between the user's computer and a destination server on the Internet. In general there are two main types of proxy servers:
 
-<ul>
- <li>A <strong>forward proxy</strong> that handles requests from and to anywhere on the Internet.</li>
- <li>A <strong>reverse proxy</strong> taking requests from the Internet and forwarding them to servers in an internal network.</li>
-</ul>
+- A **forward proxy** that handles requests from and to anywhere on the Internet.
+- A **reverse proxy** taking requests from the Internet and forwarding them to servers in an internal network.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling">Proxy servers and tunneling </a></li>
- <li><a href="https://en.wikipedia.org/wiki/Proxy_server">Proxy server</a> on Wikipedia</li>
-</ul>
+- [Proxy servers and tunneling](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling)
+- [Proxy server](https://en.wikipedia.org/wiki/Proxy_server) on Wikipedia

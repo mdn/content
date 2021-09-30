@@ -6,10 +6,8 @@ tags:
   - Glossary
   - NeedsContent
 ---
-<p>The {{glossary("object")}} to which a given {{glossary("property")}} or {{glossary("method")}} belongs.</p>
+The {{glossary("object")}} to which a given {{glossary("property")}} or {{glossary("method")}} belongs.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Discussion of Inheritance and prototypes in JavaScript</a></li>
-</ul>
+- [Discussion of Inheritance and prototypes in JavaScript](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)

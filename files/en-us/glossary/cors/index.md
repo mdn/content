@@ -6,37 +6,33 @@ tags:
   - Infrastructure
   - Security
 ---
-<p><strong>CORS</strong> (Cross-Origin Resource Sharing) is a system, consisting of transmitting {{Glossary("HTTP_header", "HTTP headers")}}, that determines whether browsers block frontend JavaScript code from accessing responses for cross-origin requests.</p>
+**CORS** (Cross-Origin Resource Sharing) is a system, consisting of transmitting {{Glossary("HTTP_header", "HTTP headers")}}, that determines whether browsers block frontend JavaScript code from accessing responses for cross-origin requests.
 
-<p>The <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin security policy</a> forbids cross-origin access to resources. But CORS gives web servers the ability to say they want to opt into allowing cross-origin access to their resources.</p>
+The [same-origin security policy](/en-US/docs/Web/Security/Same-origin_policy) forbids cross-origin access to resources. But CORS gives web servers the ability to say they want to opt into allowing cross-origin access to their resources.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing (CORS)</a> on MDN</li>
- <li>{{Interwiki("wikipedia", "Cross-origin resource sharing")}} on Wikipedia</li>
- <li><a href="https://fetch.spec.whatwg.org">Fetch specification</a></li> 
-</ul>
+- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS) on MDN
+- {{Interwiki("wikipedia", "Cross-origin resource sharing")}} on Wikipedia
+- [Fetch specification](https://fetch.spec.whatwg.org)
 
-<h3 id="CORS_headers">CORS headers</h3>
+### CORS headers
 
-<dl>
- <dt>{{HTTPHeader("Access-Control-Allow-Origin")}}</dt>
- <dd>Indicates whether the response can be shared.</dd>
- <dt>{{HTTPHeader("Access-Control-Allow-Credentials")}}</dt>
- <dd>Indicates whether or not the response to the request can be exposed when the credentials flag is true.</dd>
- <dt>{{HTTPHeader("Access-Control-Allow-Headers")}}</dt>
- <dd>Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request.</dd>
- <dt>{{HTTPHeader("Access-Control-Allow-Methods")}}</dt>
- <dd>Specifies the method or methods allowed when accessing the resource in response to a preflight request.</dd>
- <dt>{{HTTPHeader("Access-Control-Expose-Headers")}}</dt>
- <dd>Indicates which headers can be exposed as part of the response by listing their names.</dd>
- <dt>{{HTTPHeader("Access-Control-Max-Age")}}</dt>
- <dd>Indicates how long the results of a preflight request can be cached.</dd>
- <dt>{{HTTPHeader("Access-Control-Request-Headers")}}</dt>
- <dd>Used when issuing a preflight request to let the server know which HTTP headers will be used when the actual request is made.</dd>
- <dt>{{HTTPHeader("Access-Control-Request-Method")}}</dt>
- <dd>Used when issuing a preflight request to let the server know which <a href="/en-US/docs/Web/HTTP/Methods">HTTP method</a> will be used when the actual request is made.</dd>
- <dt>{{HTTPHeader("Origin")}}</dt>
- <dd>Indicates where a fetch originates from.</dd>
-</dl>
+- {{HTTPHeader("Access-Control-Allow-Origin")}}
+  - : Indicates whether the response can be shared.
+- {{HTTPHeader("Access-Control-Allow-Credentials")}}
+  - : Indicates whether or not the response to the request can be exposed when the credentials flag is true.
+- {{HTTPHeader("Access-Control-Allow-Headers")}}
+  - : Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request.
+- {{HTTPHeader("Access-Control-Allow-Methods")}}
+  - : Specifies the method or methods allowed when accessing the resource in response to a preflight request.
+- {{HTTPHeader("Access-Control-Expose-Headers")}}
+  - : Indicates which headers can be exposed as part of the response by listing their names.
+- {{HTTPHeader("Access-Control-Max-Age")}}
+  - : Indicates how long the results of a preflight request can be cached.
+- {{HTTPHeader("Access-Control-Request-Headers")}}
+  - : Used when issuing a preflight request to let the server know which HTTP headers will be used when the actual request is made.
+- {{HTTPHeader("Access-Control-Request-Method")}}
+  - : Used when issuing a preflight request to let the server know which [HTTP method](/en-US/docs/Web/HTTP/Methods) will be used when the actual request is made.
+- {{HTTPHeader("Origin")}}
+  - : Indicates where a fetch originates from.

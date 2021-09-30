@@ -7,11 +7,9 @@ tags:
   - Protocol
   - WebMechanics
 ---
-<p>A <strong>domain name</strong> is a website's address on the {{Glossary("Internet")}}. Domain names are used in {{Glossary("URL","URLs")}} to identify to which server belong a specific webpage. The domain name consists of a hierarchical sequence of names (labels) separated by periods (dots) and ending with an {{glossary("TLD","extension")}}.</p>
+A **domain name** is a website's address on the {{Glossary("Internet")}}. Domain names are used in {{Glossary("URL","URLs")}} to identify to which server belong a specific webpage. The domain name consists of a hierarchical sequence of names (labels) separated by periods (dots) and ending with an {{glossary("TLD","extension")}}.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{interwiki("wikipedia", "Domain_name", "Domain name")}} on Wikipedia</li>
- <li><a href="/en-US/docs/Learn/Common_questions/What_is_a_domain_name">Understanding domain names</a></li>
-</ul>
+- {{interwiki("wikipedia", "Domain_name", "Domain name")}} on Wikipedia
+- [Understanding domain names](/en-US/docs/Learn/Common_questions/What_is_a_domain_name)

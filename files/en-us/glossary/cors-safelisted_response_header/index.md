@@ -7,46 +7,40 @@ tags:
   - Glossary
   - HTTP
 ---
-<p>A <em>CORS-safelisted response header</em> is an <a href="/en-US/docs/Web/HTTP/Headers">HTTP header</a> in a <a href="/en-US/docs/Web/HTTP/CORS">CORS</a> response that it is considered <em>safe</em> to expose to client scripts. Only safelisted response headers are made available to web pages.</p>
+A _CORS-safelisted response header_ is an [HTTP header](/en-US/docs/Web/HTTP/Headers) in a [CORS](/en-US/docs/Web/HTTP/CORS) response that it is considered _safe_ to expose to client scripts. Only safelisted response headers are made available to web pages.
 
-<p>By default, the safelist includes the following response headers:</p>
-<ul>
- <li>{{HTTPHeader("Cache-Control")}}</li>
- <li>{{HTTPHeader("Content-Language")}}</li>
- <li>{{HTTPHeader("Content-Length")}}</li>
- <li>{{HTTPHeader("Content-Type")}}</li>
- <li>{{HTTPHeader("Expires")}}</li>
- <li>{{HTTPHeader("Last-Modified")}}</li>
- <li>{{HTTPHeader("Pragma")}}</li>
-</ul>
+By default, the safelist includes the following response headers:
 
-<p>Additional headers can be added to the safelist using {{HTTPHeader("Access-Control-Expose-Headers")}}.</p>
+- {{HTTPHeader("Cache-Control")}}
+- {{HTTPHeader("Content-Language")}}
+- {{HTTPHeader("Content-Length")}}
+- {{HTTPHeader("Content-Type")}}
+- {{HTTPHeader("Expires")}}
+- {{HTTPHeader("Last-Modified")}}
+- {{HTTPHeader("Pragma")}}
 
-<div class="notecard note">
-  <p><strong>Note:</strong> {{HTTPHeader("Content-Length")}} was not part of the original set of safelisted response headers [<a href="https://github.com/whatwg/fetch/pull/626">ref</a>]</p>
-</div>
+Additional headers can be added to the safelist using {{HTTPHeader("Access-Control-Expose-Headers")}}.
 
+> **Note:** {{HTTPHeader("Content-Length")}} was not part of the original set of safelisted response headers \[[ref](https://github.com/whatwg/fetch/pull/626)]
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Extending_the_safelist">Extending the safelist</h3>
+### Extending the safelist
 
-<p>You can extend the list of CORS-safelisted response headers by using the {{HTTPHeader("Access-Control-Expose-Headers")}} header:</p>
+You can extend the list of CORS-safelisted response headers by using the {{HTTPHeader("Access-Control-Expose-Headers")}} header:
 
-<pre class="brush: plain">Access-Control-Expose-Headers: X-Custom-Header, Content-Encoding</pre>
+```plain
+Access-Control-Expose-Headers: X-Custom-Header, Content-Encoding
+```
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
-   <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-   <li><a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a></li>
-   <li>{{HTTPHeader("Access-Control-Expose-Headers")}}</li>
-    <li><a href="/en-US/docs/Glossary">Glossary</a>
-      <ul>
-      <li>{{Glossary("CORS")}}</li>
-      <li>{{Glossary("CORS-safelisted_request_header", "CORS-safelisted request header")}}</li>
-      <li>{{Glossary("Forbidden header name")}}</li>
-      <li>{{Glossary("Request header")}}</li>
-      </ul>
-    </li>
-</ul>
+- [HTTP](/en-US/docs/Web/HTTP)
+- [HTTP headers](/en-US/docs/Web/HTTP/Headers)
+- {{HTTPHeader("Access-Control-Expose-Headers")}}
+- [Glossary](/en-US/docs/Glossary)
+
+  - {{Glossary("CORS")}}
+  - {{Glossary("CORS-safelisted_request_header", "CORS-safelisted request header")}}
+  - {{Glossary("Forbidden header name")}}
+  - {{Glossary("Request header")}}

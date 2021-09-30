@@ -7,21 +7,17 @@ tags:
   - Layout
   - Rendering engine
 ---
-<p>Blink is an open-source browser layout engine developed by Google as part of Chromium (and therefore part of {{glossary("Google Chrome", "Chrome")}} as well). Specifically, Blink began as a fork of the WebCore library in {{glossary("WebKit")}}, which handles layout, rendering, and {{glossary("DOM")}}, but now stands on its own as a separate {{glossary("rendering engine")}}.</p>
+Blink is an open-source browser layout engine developed by Google as part of Chromium (and therefore part of {{glossary("Google Chrome", "Chrome")}} as well). Specifically, Blink began as a fork of the WebCore library in {{glossary("WebKit")}}, which handles layout, rendering, and {{glossary("DOM")}}, but now stands on its own as a separate {{glossary("rendering engine")}}.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
-   <li>Blink project <a href="https://www.chromium.org/blink">home page</a></li>
-   <li><a href="https://en.wikipedia.org/wiki/Blink_(browser_engine)">Blink</a> on Wikipedia</li>
-   <li><a href="https://www.chromium.org/blink/developer-faq">FAQ</a> on Blink</li>
- <li><a href="/en-US/docs/Glossary">Glossary</a>
-  <ul>
-   <li>{{glossary("Google Chrome")}}</li>
-   <li>{{glossary("Gecko")}}</li>
-   <li>{{glossary("Trident")}}</li>
-   <li>{{glossary("WebKit")}}</li>
-   <li>{{glossary("Rendering engine")}}</li>
-  </ul>
-</ul>
+- Blink project [home page](https://www.chromium.org/blink)
+- [Blink](<https://en.wikipedia.org/wiki/Blink_(browser_engine)>) on Wikipedia
+- [FAQ](https://www.chromium.org/blink/developer-faq) on Blink
+- [Glossary](/en-US/docs/Glossary)
 
+  - {{glossary("Google Chrome")}}
+  - {{glossary("Gecko")}}
+  - {{glossary("Trident")}}
+  - {{glossary("WebKit")}}
+  - {{glossary("Rendering engine")}}

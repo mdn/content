@@ -7,12 +7,10 @@ tags:
   - Reference
   - Web Performance
 ---
-<p>A <strong>long task</strong>  is a task that takes more than 50ms to complete.</p>
+A **long task**  is a task that takes more than 50ms to complete.
 
-<p>It is an uninterrupted period where the <a href="/en-US/docs/Glossary/Main_thread">main UI thread</a> is busy for 50 ms or longer. Common examples include long running event handlers, expensive <a href="/en-US/docs/Glossary/Reflow">reflows</a> and other re-renders, and work the browser does between different turns of the event loop that exceeds 50 ms.</p>
+It is an uninterrupted period where the [main UI thread](/en-US/docs/Glossary/Main_thread) is busy for 50 ms or longer. Common examples include long running event handlers, expensive [reflows](/en-US/docs/Glossary/Reflow) and other re-renders, and work the browser does between different turns of the event loop that exceeds 50 ms.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Long_Tasks_API">Long task API</a></li>
-</ul>
+- [Long task API](/en-US/docs/Web/API/Long_Tasks_API)

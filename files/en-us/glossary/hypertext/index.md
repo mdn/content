@@ -6,12 +6,10 @@ tags:
   - Web
   - WebMechanics
 ---
-<p>Hypertext is text that contains links to other texts, as opposed to a single linear flow like in a novel.</p>
+Hypertext is text that contains links to other texts, as opposed to a single linear flow like in a novel.
 
-<p>The term was coined by Ted Nelson around 1965.</p>
+The term was coined by Ted Nelson around 1965.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{interwiki("wikipedia", "Hypertext", "Hypertext")}} on Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "Hypertext", "Hypertext")}} on Wikipedia

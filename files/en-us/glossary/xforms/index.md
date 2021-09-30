@@ -7,9 +7,6 @@ tags:
   - Deprecated
   - XForms
 ---
+**XForms** is a convention for building Web forms and processing form data in the {{glossary("XML")}} format.
 
-<p><strong>XForms</strong> is a convention for building Web forms and processing form data in the {{glossary("XML")}} format. </p>
-
-<div class="notecard note">
-  <p><strong>Note:</strong> No major browser supports XForms any longer—we suggest using <a href="/en-US/docs/Learn/Forms">HTML5 forms</a> instead.</p>
-</div>
+> **Note:** No major browser supports XForms any longer—we suggest using [HTML5 forms](/en-US/docs/Learn/Forms) instead.

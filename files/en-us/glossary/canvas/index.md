@@ -8,17 +8,15 @@ tags:
   - HTML
   - JavaScript
 ---
-<p>The <strong>canvas element</strong> is part of <a href="https://en.wikipedia.org/wiki/HTML5">HTML5</a> and allows for dynamic, <a href="https://en.wikipedia.org/wiki/Scripting_language" title="Scripting language">scriptable</a> <a href="https://en.wikipedia.org/wiki/Rendering_(computer_graphics)" title="Rendering (computer graphics)">rendering</a> of 2D and 3D shapes and <a href="https://en.wikipedia.org/wiki/Bitmap">bitmap</a> images.</p> 
+The **canvas element** is part of [HTML5](https://en.wikipedia.org/wiki/HTML5) and allows for dynamic, [scriptable](https://en.wikipedia.org/wiki/Scripting_language "Scripting language") [rendering](<https://en.wikipedia.org/wiki/Rendering_(computer_graphics)> "Rendering (computer graphics)") of 2D and 3D shapes and [bitmap](https://en.wikipedia.org/wiki/Bitmap) images.
 
-<p>It is a low level, procedural model that updates a <a href="https://en.wikipedia.org/wiki/Bitmap">bitmap</a> and does not have a built-in <a href="https://en.wikipedia.org/wiki/Scene_graph" title="Scene graph">scene graph</a>. It provides an empty graphic zone on which specific {{Glossary("JavaScript")}} {{Glossary("API","APIs")}} can draw (such as Canvas 2D or {{Glossary("WebGL")}}).</p>
+It is a low level, procedural model that updates a [bitmap](https://en.wikipedia.org/wiki/Bitmap) and does not have a built-in [scene graph](https://en.wikipedia.org/wiki/Scene_graph "Scene graph"). It provides an empty graphic zone on which specific {{Glossary("JavaScript")}} {{Glossary("API","APIs")}} can draw (such as Canvas 2D or {{Glossary("WebGL")}}).
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Canvas element", "Canvas")}} on Wikipedia</li>
- <li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial">The Canvas tutorial on MDN</a></li>
- <li>The HTML {{HTMLElement("canvas")}} element on MDN</li>
- <li><a href="/en-US/docs/Web/API/Canvas_API">The Canvas general documentation on MDN</a></li>
- <li>{{domxref("CanvasRenderingContext2D")}}: The canvas 2D drawing API</li>
- <li><a href="https://www.w3.org/TR/2dcontext/">The Canvas 2D API specification</a></li>
-</ul>
+- {{Interwiki("wikipedia", "Canvas element", "Canvas")}} on Wikipedia
+- [The Canvas tutorial on MDN](/en-US/docs/Web/API/Canvas_API/Tutorial)
+- The HTML {{HTMLElement("canvas")}} element on MDN
+- [The Canvas general documentation on MDN](/en-US/docs/Web/API/Canvas_API)
+- {{domxref("CanvasRenderingContext2D")}}: The canvas 2D drawing API
+- [The Canvas 2D API specification](https://www.w3.org/TR/2dcontext/)

@@ -4,25 +4,19 @@ slug: Glossary/routers
 tags:
   - Intro
 ---
-<p>There are two definitions for <strong>routers</strong> on the web:</p>
+There are two definitions for **routers** on the web:
 
-<ol>
- <li>For the network layer, the router is a networking device that decides data {{Glossary('Packet')}}s directions. They are distributed by retailers allowing user interaction to the internet.</li>
- <li>For {{Glossary('SPA')}} in application layer, router is a library that decides what web page is presented by a given {{Glossary('URL')}}. This middleware module is used for all URL functions, as these are given a path to a file that is rendered to open the next page.</li>
-</ol>
+1.  For the network layer, the router is a networking device that decides data {{Glossary('Packet')}}s directions. They are distributed by retailers allowing user interaction to the internet.
+2.  For {{Glossary('SPA')}} in application layer, router is a library that decides what web page is presented by a given {{Glossary('URL')}}. This middleware module is used for all URL functions, as these are given a path to a file that is rendered to open the next page.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<p>For network layer context:</p>
+For network layer context:
 
-<ul>
- <li>{{Interwiki("wikipedia", "Router (computing)")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Router (computing)")}} on Wikipedia
 
-<p>For SPA in application layer context, most of the popular SPA frameworks has its routing library:</p>
+For SPA in application layer context, most of the popular SPA frameworks has its routing library:
 
-<ul>
- <li><a href="https://angular.io/guide/router">Angular router</a></li>
- <li><a href="https://reacttraining.com/react-router">React router</a></li>
- <li><a href="https://router.vuejs.org">Vue router</a></li>
-</ul>
+- [Angular router](https://angular.io/guide/router)
+- [React router](https://reacttraining.com/react-router)
+- [Vue router](https://router.vuejs.org)

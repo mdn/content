@@ -7,16 +7,14 @@ tags:
   - Reference
   - Web Performance
 ---
-<p><strong>Time to First Byte</strong> (TTFB) refers to the time between the browser requesting a page and when it receives the first byte of information from the server.  This time includes <a href="/en-US/docs/Glossary/DNS">DNS</a> lookup and establishing the connection using a <a href="/en-US/docs/Glossary/TCP">TCP</a> handshake and <a href="/en-US/docs/Glossary/SSL">SSL</a> handshake if the request is made over <a href="/en-US/docs/Glossary/https">https</a>.</p>
+**Time to First Byte** (TTFB) refers to the time between the browser requesting a page and when it receives the first byte of information from the server.  This time includes [DNS](/en-US/docs/Glossary/DNS) lookup and establishing the connection using a [TCP](/en-US/docs/Glossary/TCP) handshake and [SSL](/en-US/docs/Glossary/SSL) handshake if the request is made over [https](/en-US/docs/Glossary/https).
 
-<p>TTFB is the time it takes between the start of the request and the start of the response, in milliseconds:</p>
+TTFB is the time it takes between the start of the request and the start of the response, in milliseconds:
 
-<pre>TTFB = <a href="/en-US/docs/Web/API/PerformanceResourceTiming/responseStart">responseStart</a> - <a href="/en-US/docs/Web/API/PerformanceTiming/navigationStart">navigationStart</a></pre>
+    TTFB = responseStart - navigationStart
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Session">A typical HTTP session</a></li>
- <li><a href="/en-US/docs/Web/API/PerformanceResourceTiming">PerformanceResourceTiming</a></li>
- <li><a href="/en-US/docs/Web/API/PerformanceTiming">PerformanceTiming</a></li>
-</ul>
+- [A typical HTTP session](/en-US/docs/Web/HTTP/Session)
+- [PerformanceResourceTiming](/en-US/docs/Web/API/PerformanceResourceTiming)
+- [PerformanceTiming](/en-US/docs/Web/API/PerformanceTiming)

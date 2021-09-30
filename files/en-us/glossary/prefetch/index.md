@@ -7,37 +7,35 @@ tags:
   - Reference
   - Web Performance
 ---
-<p>Prefetching is when content is downloaded in the background, this is based on the assumption that the content will likely be requested, enabling the content to load instantly if and when the user requests it. The content is downloaded and cached for anticipated future use without the user making an explicit request for it.</p>
+Prefetching is when content is downloaded in the background, this is based on the assumption that the content will likely be requested, enabling the content to load instantly if and when the user requests it. The content is downloaded and cached for anticipated future use without the user making an explicit request for it.
 
-<h3 id="DNS_Prefetching">DNS Prefetching</h3>
+### DNS Prefetching
 
-<p>Domain lookups can be slow, especially with network latency on mobile phones. They are most relevant when there are a plethora of links to external websites that may be clicked on, like search engine results, DNS prefetching resolves domain names in advance thereby speeding up load times by reducing the time associated with domain lookup at request time.</p>
+Domain lookups can be slow, especially with network latency on mobile phones. They are most relevant when there are a plethora of links to external websites that may be clicked on, like search engine results, DNS prefetching resolves domain names in advance thereby speeding up load times by reducing the time associated with domain lookup at request time.
 
-<pre>&lt;link rel="dns-prefetch" href="https://example.com/"&gt;</pre>
+    <link rel="dns-prefetch" href="https://example.com/">
 
-<h3 id="Link_prefetching">Link prefetching</h3>
+### Link prefetching
 
-<p>Link prefetching is a performance optimization technique that works by assuming which links the user is likely to click, then downloading the content of those links. If the user decides to click on one of the links, then the page will be rendered instantly as the content has already been downloaded.</p>
+Link prefetching is a performance optimization technique that works by assuming which links the user is likely to click, then downloading the content of those links. If the user decides to click on one of the links, then the page will be rendered instantly as the content has already been downloaded.
 
-<p>The prefetch hints are sent in HTTP headers:</p>
+The prefetch hints are sent in HTTP headers:
 
-<pre>Link: ; rel=dns-prefetch,
-      ; as=script; rel=preload,
-      ; rel=prerender,
-      ; as=style; rel=preload</pre>
+    Link: ; rel=dns-prefetch,
+          ; as=script; rel=preload,
+          ; rel=prerender,
+          ; as=style; rel=preload
 
-<h3 id="Prefetch_attribute_value">Prefetch attribute value</h3>
+### Prefetch attribute value
 
-<p>Browsers will prefetch content when the prefetch <code><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> tag directs it to, giving the developer control over what resources should be prefetched.</p>
+Browsers will prefetch content when the prefetch [`<link>`](/en-US/docs/Web/HTML/Element/link) tag directs it to, giving the developer control over what resources should be prefetched.
 
-<pre> &lt;link rel="prefetch" href="https://www.example.com/solutions" /&gt;</pre>
+     <link rel="prefetch" href="https://www.example.com/solutions" />
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>defer</li>
- <li>async</li>
- <li><a href="/en-US/docs/Web/HTML/Link_types/preload">preload</a></li>
- <li><a href="/en-US/docs/Glossary/Page_prediction">page prediction</a></li>
- <li><a href="/en-US/docs/Web/Performance/Lazy_loading">lazy loading</a></li>
-</ul>
+- defer
+- async
+- [preload](/en-US/docs/Web/HTML/Link_types/preload)
+- [page prediction](/en-US/docs/Glossary/Page_prediction)
+- [lazy loading](/en-US/docs/Web/Performance/Lazy_loading)

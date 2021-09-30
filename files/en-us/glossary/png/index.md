@@ -8,10 +8,8 @@ tags:
   - Infrastructure
   - PNG
 ---
-<p><strong>PNG</strong> (Portable Network Graphics) is a graphics file format that supports lossless data compression.</p>
+**PNG** (Portable Network Graphics) is a graphics file format that supports lossless data compression.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG </a>on Wikipedia</li>
-</ul>
+- [PNG ](https://en.wikipedia.org/wiki/Portable_Network_Graphics)on Wikipedia

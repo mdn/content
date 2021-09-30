@@ -5,15 +5,13 @@ tags:
   - Glossary
   - Infrastructure
 ---
-<p>Robots.txt is a file which is usually placed in the root of any website. It decides whether {{Glossary("crawler", "crawlers")}} are permitted or forbidden access to the web site.</p>
+Robots.txt is a file which is usually placed in the root of any website. It decides whether {{Glossary("crawler", "crawlers")}} are permitted or forbidden access to the web site.
 
-<p>For example, the site admin can forbid crawlers to visit a certain folder (and all the files therein contained) or to crawl a specific file, usually to prevent those files being indexed by other search engines.</p>
+For example, the site admin can forbid crawlers to visit a certain folder (and all the files therein contained) or to crawl a specific file, usually to prevent those files being indexed by other search engines.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Robots.txt")}} on Wikipedia</li>
- <li><a href="https://developers.google.com/search/reference/robots_txt" rel="nofollow">https://developers.google.com/search/reference/robots_txt</a></li>
- <li>Standard specification draft: <a href="https://datatracker.ietf.org/doc/html/draft-rep-wg-topic-00">https://datatracker.ietf.org/doc/html/draft-rep-wg-topic</a></li>
- <li><a href="https://www.robotstxt.org/" rel="nofollow">https://www.robotstxt.org/</a></li>
-</ul>
+- {{Interwiki("wikipedia", "Robots.txt")}} on Wikipedia
+- <https://developers.google.com/search/reference/robots_txt>
+- Standard specification draft: [https://datatracker.ietf.org/doc/html/draft-rep-wg-topic](https://datatracker.ietf.org/doc/html/draft-rep-wg-topic-00)
+- <https://www.robotstxt.org/>

@@ -7,11 +7,9 @@ tags:
   - SOAP
   - WebMechanics
 ---
-<p><strong>SOAP</strong> (Simple Object Access Protocol) is a {{glossary('protocol')}} for transmitting data in {{glossary('XML')}} format.
+**SOAP** (Simple Object Access Protocol) is a {{glossary('protocol')}} for transmitting data in {{glossary('XML')}} format.
 
-  <h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "SOAP")}} on Wikipedia</li>
- <li><a href="https://www.w3.org/TR/soap12-part1/">Specification</a></li>
-</ul>
+- {{Interwiki("wikipedia", "SOAP")}} on Wikipedia
+- [Specification](https://www.w3.org/TR/soap12-part1/)

@@ -6,22 +6,20 @@ tags:
   - Glossary
   - JavaScript
 ---
-<p>JavaScript <strong>Hoisting</strong> refers to the process whereby the interpreter allocates memory for variable and function declarations prior to execution of the code. Declarations that are made using <code>var</code> are initialized with a default value of <code>undefined</code>. Declarations made using <code>let</code> and <code>const</code> are not initialized as part of hoisting.</p>
+JavaScript **Hoisting** refers to the process whereby the interpreter allocates memory for variable and function declarations prior to execution of the code. Declarations that are made using `var` are initialized with a default value of `undefined`. Declarations made using `let` and `const` are not initialized as part of hoisting.
 
-<p>Conceptually hoisting is often presented as the interpreter "splitting variable declaration and initialization, and moving (just) the declarations to the top of the code".
-  This allows variables to appear in code before they are defined.
-  Note however, that any variable initialization in the original code will not happen until the line of code is executed.</p>
+Conceptually hoisting is often presented as the interpreter "splitting variable declaration and initialization, and moving (just) the declarations to the top of the code".
+This allows variables to appear in code before they are defined.
+Note however, that any variable initialization in the original code will not happen until the line of code is executed.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The term hoisting is not used in any normative specification prose prior to <a href="https://www.ecma-international.org/ecma-262/6.0/index.html">ECMAScript® 2015 Language Specification</a>. Hoisting was thought up as a general way of thinking about how execution contexts (specifically the creation and execution phases) work in JavaScript.</p>
-</div>
+> **Note:** The term hoisting is not used in any normative specification prose prior to [ECMAScript® 2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/index.html). Hoisting was thought up as a general way of thinking about how execution contexts (specifically the creation and execution phases) work in JavaScript.
 
+## Technical example
 
-<h2 id="Technical_example">Technical example</h2>
+One of the advantages of JavaScript putting function declarations into memory before it executes any code segment is that it allows you to use a function before you declare it in your code. For example:
 
-<p>One of the advantages of JavaScript putting function declarations into memory before it executes any code segment is that it allows you to use a function before you declare it in your code. For example:</p>
-
-<pre class="brush: js">function catName(name) {
+```js
+function catName(name) {
   console.log("My cat's name is " + name);
 }
 
@@ -30,11 +28,12 @@ catName("Tiger");
 /*
 The result of the code above is: "My cat's name is Tiger"
 */
-</pre>
+```
 
-<p>The above code snippet is how you would expect to write the code for it to work. Now, let's see what happens when we call the function before we write it:</p>
+The above code snippet is how you would expect to write the code for it to work. Now, let's see what happens when we call the function before we write it:
 
-<pre class="brush: js">catName("Chloe");
+```js
+catName("Chloe");
 
 function catName(name) {
   console.log("My cat's name is " + name);
@@ -42,29 +41,34 @@ function catName(name) {
 /*
 The result of the code above is: "My cat's name is Chloe"
 */
-</pre>
+```
 
-<p>Even though we call the function in our code first, before the function is written, the code still works, because this is how context execution works in JavaScript.</p>
+Even though we call the function in our code first, before the function is written, the code still works, because this is how context execution works in JavaScript.
 
-<p>Hoisting works well with other data types and variables. The variables can be initialized and used before they are declared.</p>
+Hoisting works well with other data types and variables. The variables can be initialized and used before they are declared.
 
-<h3 id="Only_declarations_are_hoisted">Only declarations are hoisted</h3>
+### Only declarations are hoisted
 
-<p>JavaScript only hoists declarations, not initializations. If a variable is used in code and then declared and initialized, the value when it is used will be its default initialization (<code>undefined</code> for a variable declared using <code>var</code>, otherwise uninitialized).
-  For example:</p>
+JavaScript only hoists declarations, not initializations. If a variable is used in code and then declared and initialized, the value when it is used will be its default initialization (`undefined` for a variable declared using `var`, otherwise uninitialized).
+For example:
 
-<pre class="brush: js">console.log(num); // Returns 'undefined' from hoisted var declaration (not 6)
+```js
+console.log(num); // Returns 'undefined' from hoisted var declaration (not 6)
 var num; // Declaration
-num = 6; // Initialization</pre>
+num = 6; // Initialization
+```
 
-<p>The example below only has initialization. No hoisting happens so trying to read the variable results in <code>ReferenceError</code> exception.</p>
+The example below only has initialization. No hoisting happens so trying to read the variable results in `ReferenceError` exception.
 
-<pre class="brush: js">console.log(num); // Throws ReferenceError exception
-num = 6; // Initialization</pre>
+```js
+console.log(num); // Throws ReferenceError exception
+num = 6; // Initialization
+```
 
-<p>Below are more examples demonstrating hoisting.</p>
+Below are more examples demonstrating hoisting.
 
-<pre class="brush: js">// Example 1
+```js
+// Example 1
 // Only y is hoisted
 
 x = 1; // Initialize x, and if not already declared, declare it - but no hoisting as there is no var in the statement.
@@ -78,19 +82,17 @@ var y = 2; // Declare and Initialize y
 a = 'Cran'; // Initialize a
 b = 'berry'; // Initialize b
 
-console.log(a + "" + b); // 'Cranberry'</pre>
+console.log(a + "" + b); // 'Cranberry'
+```
 
-<h3>Let and const hoisting</h3>
+### Let and const hoisting
 
-<p>Variables declared with <code>let</code> and <code>const</code> are also hoisted, but unlike for <code>var</code> the variables are not initialized with a default value of <code>undefined</code>.
-  Until the line in which they are initialized is executed, any code that accesses these variables will throw an exception.</p>
+Variables declared with `let` and `const` are also hoisted, but unlike for `var` the variables are not initialized with a default value of `undefined`.
+Until the line in which they are initialized is executed, any code that accesses these variables will throw an exception.
 
-<p>For information and examples see <a href="/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz"><code>let</code> > temporal dead zone</a>.</p>
+For information and examples see [`let` > temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz).
 
+## See also
 
-<h2 id="see_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var">var statement</a> — MDN</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/function">function statement</a> — MDN</li>
-</ul>
+- [var statement](/en-US/docs/Web/JavaScript/Reference/Statements/var) — MDN
+- [function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function) — MDN

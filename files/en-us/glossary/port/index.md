@@ -8,12 +8,10 @@ tags:
   - computer network
   - port
 ---
-<p>For a computer connected to a network with an {{Glossary("IP address")}}, a <strong>port</strong> is a communication endpoint. Ports are designated by numbers, and below 1024 each port is associated by default with a specific {{Glossary("protocol")}}.</p>
+For a computer connected to a network with an {{Glossary("IP address")}}, a **port** is a communication endpoint. Ports are designated by numbers, and below 1024 each port is associated by default with a specific {{Glossary("protocol")}}.
 
-<p>For example, the default port for the {{Glossary("HTTP")}} protocol is 80 and the default port for the HTTPS protocol is 443, so a {{Glossary("HTTP")}} server waits for requests on those ports. Each Internet protocol is associated with a default port: {{Glossary("SMTP")}} (25), {{Glossary("POP")}} (110), {{Glossary("IMAP")}} (143), {{Glossary("IRC")}} (194), and so on.</p>
+For example, the default port for the {{Glossary("HTTP")}} protocol is 80 and the default port for the HTTPS protocol is 443, so a {{Glossary("HTTP")}} server waits for requests on those ports. Each Internet protocol is associated with a default port: {{Glossary("SMTP")}} (25), {{Glossary("POP")}} (110), {{Glossary("IMAP")}} (143), {{Glossary("IRC")}} (194), and so on.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Port (computer networking)" , "Port")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Port (computer networking)" , "Port")}} on Wikipedia

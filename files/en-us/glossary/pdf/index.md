@@ -7,10 +7,8 @@ tags:
   - PDF
   - Portable Document Format
 ---
-<p><strong>PDF</strong> (Portable Document Format) is a file format used to share documentation without depending on any particular software implementation, hardware platform, or operating system. PDF provides a digital image of a printed document, and keeps the same appearance when printed.</p>
+**PDF** (Portable Document Format) is a file format used to share documentation without depending on any particular software implementation, hardware platform, or operating system. PDF provides a digital image of a printed document, and keeps the same appearance when printed.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Portable Document Format", "PDF")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Portable Document Format", "PDF")}} on Wikipedia

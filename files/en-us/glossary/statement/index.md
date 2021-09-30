@@ -6,11 +6,9 @@ tags:
   - CodingScripting
   - Glossary
 ---
-<p>In a computer programming language, a <strong>statement</strong> is a line of code commanding a task. Every program consists of a sequence of statements.</p>
+In a computer programming language, a **statement** is a line of code commanding a task. Every program consists of a sequence of statements.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Statement (computer science)")}} on Wikipedia</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements">JavaScript statements and declarations</a></li>
-</ul>
+- {{Interwiki("wikipedia", "Statement (computer science)")}} on Wikipedia
+- [JavaScript statements and declarations](/en-US/docs/Web/JavaScript/Reference/Statements)

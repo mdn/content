@@ -7,14 +7,11 @@ tags:
   - Glossary
   - Protocol
 ---
-<p><strong>FTP</strong> (File Transfer Protocol) is an insecure {{glossary("protocol")}} for transferring files from one {{glossary("host")}} to another over the Internet.</p>
+**FTP** (File Transfer Protocol) is an insecure {{glossary("protocol")}} for transferring files from one {{glossary("host")}} to another over the Internet.
 
-<p>For many years it was the defacto standard way of transferring files, but as it is inherently insecure, it is no longer supported by many hosting accounts. Instead you should use SFTP (a secure, encrypted version of FTP) or another secure method for transferring files like Rsync over SSH.</p>
+For many years it was the defacto standard way of transferring files, but as it is inherently insecure, it is no longer supported by many hosting accounts. Instead you should use SFTP (a secure, encrypted version of FTP) or another secure method for transferring files like Rsync over SSH.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server">Beginner's guide to uploading files via FTP</a></li>
- <li>{{interwiki("wikipedia", "File Transfer Protocol", "FTP")}} on Wikipedia
-   </li>
-</ul>
+- [Beginner's guide to uploading files via FTP](/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server)
+- {{interwiki("wikipedia", "File Transfer Protocol", "FTP")}} on Wikipedia

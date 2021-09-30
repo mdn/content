@@ -6,30 +6,30 @@ tags:
   - JavaScript
   - Type coercion
 ---
-<p>Type coercion is the automatic or implicit conversion of values from one data type to another (such as strings to numbers). <em>{{Glossary("Type conversion")}}</em> is similar to <em>type coercion</em> because they both convert values from one data type to another with one key difference — <em>type coercion</em> is implicit whereas <em>type conversion</em> can be either implicit <em>or</em> explicit.</p>
+Type coercion is the automatic or implicit conversion of values from one data type to another (such as strings to numbers). _{{Glossary("Type conversion")}}_ is similar to _type coercion_ because they both convert values from one data type to another with one key difference — _type coercion_ is implicit whereas _type conversion_ can be either implicit _or_ explicit.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">const value1 = '5';
+```js
+const value1 = '5';
 const value2 = 9;
 let sum = value1 + value2;
 
-console.log(sum);</pre>
+console.log(sum);
+```
 
-<p>In the above example, JavaScript has <em>coerced</em> the <code>9</code> from a number into a string and then concatenated the two values together, resulting in a string of <code>59</code>. JavaScript had a choice between a string or a number and decided to use a string.</p>
+In the above example, JavaScript has _coerced_ the `9` from a number into a string and then concatenated the two values together, resulting in a string of `59`. JavaScript had a choice between a string or a number and decided to use a string.
 
-<p>The compiler could have coerced the <code>5</code> into a number and returned a sum of <code>14</code>, but it did not. To return this result, you'd have to explicitly convert the <code>5</code> to a number using the {{jsxref("Global_Objects/Number", "Number()")}} method:</p>
+The compiler could have coerced the `5` into a number and returned a sum of `14`, but it did not. To return this result, you'd have to explicitly convert the `5` to a number using the {{jsxref("Global_Objects/Number", "Number()")}} method:
 
-<pre class="brush: js">sum = Number(value1) + value2;</pre>
+```js
+sum = Number(value1) + value2;
+```
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{Interwiki("wikipedia", "Type conversion")}} (Wikipedia)</li>
-  <li><a href="/en-US/docs/Glossary">Glossary</a>
-    <ul>
-     <li>{{Glossary("Type")}}</li>
-     <li>{{Glossary("Type conversion")}}</li>
-    </ul>
-   </li>
-</ul>
+- {{Interwiki("wikipedia", "Type conversion")}} (Wikipedia)
+- [Glossary](/en-US/docs/Glossary)
+
+  - {{Glossary("Type")}}
+  - {{Glossary("Type conversion")}}

@@ -7,11 +7,9 @@ tags:
   - Server Timing
   - Web Performance
 ---
-<p>The <a href="https://www.w3.org/TR/server-timing/" rel="noopener noreferrer">Server Timing specification</a> enables the server to communicate performance metrics from the request-response cycle to the user agent, and utilizes a JavaScript interface to allow applications to collect, process, and act on these metrics to optimize application delivery.</p>
+The [Server Timing specification](https://www.w3.org/TR/server-timing/) enables the server to communicate performance metrics from the request-response cycle to the user agent, and utilizes a JavaScript interface to allow applications to collect, process, and act on these metrics to optimize application delivery.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.w3.org/TR/server-timing/">https://www.w3.org/TR/server-timing/</a></li>
- <li><a href="https://www.w3.org/TR/resource-timing/">Resource Timing</a></li>
-</ul>
+- <https://www.w3.org/TR/server-timing/>
+- [Resource Timing](https://www.w3.org/TR/resource-timing/)

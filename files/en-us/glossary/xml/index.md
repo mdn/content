@@ -7,12 +7,10 @@ tags:
   - XML
   - l10n:priority
 ---
-<p>eXtensible Markup Language (XML) is a generic markup language specified by the W3C. The information technology (IT) industry uses many languages based on XML as data-description languages.</p>
+eXtensible Markup Language (XML) is a generic markup language specified by the W3C. The information technology (IT) industry uses many languages based on XML as data-description languages.
 
-<p>XML tags resemble HTML tags, but XML is much more flexible because it lets users define their own tags. In this way XML acts like a meta-language—that is, it can be used to define other languages, such as {{Glossary("RSS")}}. Moreover, HTML is a presentation language, whereas XML is a data-description language. This means that XML has far broader applications than just the Web. For example, Web services can use XML to exchange requests and responses.</p>
+XML tags resemble HTML tags, but XML is much more flexible because it lets users define their own tags. In this way XML acts like a meta-language—that is, it can be used to define other languages, such as {{Glossary("RSS")}}. Moreover, HTML is a presentation language, whereas XML is a data-description language. This means that XML has far broader applications than just the Web. For example, Web services can use XML to exchange requests and responses.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/XML/XML_introduction">XML introduction</a></li>
-</ul>
+- [XML introduction](/en-US/docs/Web/XML/XML_introduction)

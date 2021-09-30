@@ -7,8 +7,8 @@ tags:
   - Reference
   - Web Performance
 ---
-<p><strong>Minification</strong> is the process of removing unnecessary or redundant data without affecting how a resource is processed by the browser.</p>
+**Minification** is the process of removing unnecessary or redundant data without affecting how a resource is processed by the browser.
 
-<p>Minification can include the removal of code comments, white space, and unused code, as well as the shortening of variable and function names. Minification is used to improve web performance by reducing file size. It is generally an automated step that occurs at build time.</p>
+Minification can include the removal of code comments, white space, and unused code, as well as the shortening of variable and function names. Minification is used to improve web performance by reducing file size. It is generally an automated step that occurs at build time.
 
-<p>As minification makes code less legible to humans, developer tools have 'prettification' features that can add white space back into the code to make it a bit more legible.</p>
+As minification makes code less legible to humans, developer tools have 'prettification' features that can add white space back into the code to make it a bit more legible.

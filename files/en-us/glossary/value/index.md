@@ -6,10 +6,8 @@ tags:
   - Glossary
   - NeedsContent
 ---
-<p>In the context of data or an object <strong>{{Glossary("Wrapper", "wrapper")}}</strong> around that data, the value is the <strong>{{Glossary("Primitive","primitive value")}}</strong> that the object wrapper contains. In the context of a <strong>{{Glossary("Variable","variable")}}</strong> or <strong>{{Glossary("Property","property")}}</strong>, the value can be either a primitive or an <strong>{{Glossary("Object reference","object reference")}}</strong>.</p>
+In the context of data or an object **{{Glossary("Wrapper", "wrapper")}}** around that data, the value is the **{{Glossary("Primitive","primitive value")}}** that the object wrapper contains. In the context of a **{{Glossary("Variable","variable")}}** or **{{Glossary("Property","property")}}**, the value can be either a primitive or an **{{Glossary("Object reference","object reference")}}**.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Primitive wrapper class")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Primitive wrapper class")}} on Wikipedia

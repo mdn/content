@@ -7,18 +7,17 @@ tags:
   - JavaScript
   - NeedsContent
 ---
-<p><strong><code>undefined</code></strong> is a {{Glossary("primitive")}} value automatically assigned to {{glossary("variable", "variables")}} that have just been declared, or to formal {{Glossary("Argument","arguments")}} for which there are no actual arguments.</p>
+**`undefined`** is a {{Glossary("primitive")}} value automatically assigned to {{glossary("variable", "variables")}} that have just been declared, or to formal {{Glossary("Argument","arguments")}} for which there are no actual arguments.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var x; //create a variable but assign it no value
+```js
+var x; //create a variable but assign it no value
 
 console.log("x's value is", x) //logs "x's value is undefined"
-</pre>
+```
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Undefined value")}} on Wikipedia</li>
- <li><a href="/en-US/docs/Web/JavaScript/Data_structures">JavaScript data types and data structures</a></li>
-</ul>
+- {{Interwiki("wikipedia", "Undefined value")}} on Wikipedia
+- [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)

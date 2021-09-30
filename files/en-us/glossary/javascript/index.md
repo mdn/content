@@ -5,32 +5,30 @@ tags:
   - CodingScripting
   - Glossary
   - JavaScript
-  - 'l10n:priority'
+  - l10n:priority
 ---
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>JavaScript (or "JS") is a programming language used most often for dynamic client-side scripts on webpages, but it is also often used on the {{Glossary("Server","server")}}-side, using a runtime such as <a href="https://nodejs.org/">Node.js</a>.</p>
+JavaScript (or "JS") is a programming language used most often for dynamic client-side scripts on webpages, but it is also often used on the {{Glossary("Server","server")}}-side, using a runtime such as [Node.js](https://nodejs.org/).
 
-<p>JavaScript <strong>should not</strong> be confused with the {{interwiki("wikipedia", "Java_(programming_language)", "Java programming language")}}. Although <em>"Java"</em> and <em>"JavaScript"</em> are trademarks (or registered trademarks) of Oracle in the U.S. and other countries, the two programming languages are significantly different in their syntax, semantics, and use cases.</p>
+JavaScript **should not** be confused with the {{interwiki("wikipedia", "Java_(programming_language)", "Java programming language")}}. Although _"Java"_ and _"JavaScript"_ are trademarks (or registered trademarks) of Oracle in the U.S. and other countries, the two programming languages are significantly different in their syntax, semantics, and use cases.
 
-<p>JavaScript is primarily used in the browser, enabling developers to manipulate webpage content through the {{Glossary("DOM")}}, manipulate data with {{Glossary("AJAX")}} and {{Glossary("IndexedDB")}}, draw graphics with {{Glossary("canvas")}}, interact with the device running the browser through various {{Glossary("API","APIs")}}, and more. JavaScript is one of the world's most commonly-used languages, owing to the recent growth and performance improvement of {{Glossary("API","APIs")}} available in browsers.</p>
+JavaScript is primarily used in the browser, enabling developers to manipulate webpage content through the {{Glossary("DOM")}}, manipulate data with {{Glossary("AJAX")}} and {{Glossary("IndexedDB")}}, draw graphics with {{Glossary("canvas")}}, interact with the device running the browser through various {{Glossary("API","APIs")}}, and more. JavaScript is one of the world's most commonly-used languages, owing to the recent growth and performance improvement of {{Glossary("API","APIs")}} available in browsers.
 
-<h2 id="Origins_and_History">Origins and History</h2>
+## Origins and History
 
-<p>Conceived as a server-side language by Brendan Eich (then employed by the Netscape Corporation), JavaScript soon came to Netscape Navigator 2.0 in September 1995. JavaScript enjoyed immediate success and {{glossary("Microsoft Internet Explorer", "Internet Explorer 3.0")}} introduced JavaScript support under the name JScript in August 1996.</p>
+Conceived as a server-side language by Brendan Eich (then employed by the Netscape Corporation), JavaScript soon came to Netscape Navigator 2.0 in September 1995. JavaScript enjoyed immediate success and {{glossary("Microsoft Internet Explorer", "Internet Explorer 3.0")}} introduced JavaScript support under the name JScript in August 1996.
 
-<p>In November 1996, Netscape began working with ECMA International to make JavaScript an industry standard. Since then, the standardized JavaScript is called ECMAScript and specified under ECMA-262, whose latest (eleventh, ES2020) edition is available as of June 2020.</p>
+In November 1996, Netscape began working with ECMA International to make JavaScript an industry standard. Since then, the standardized JavaScript is called ECMAScript and specified under ECMA-262, whose latest (eleventh, ES2020) edition is available as of June 2020.
 
-<p>Recently, JavaScript's popularity has expanded even further through the successful <a href="https://nodejs.org/">Node.js</a> platform—the most popular cross-platform JavaScript runtime environment outside the browser. Node.js - built using <a href="https://en.wikipedia.org/wiki/V8_(JavaScript_engine)">Chrome's V8 JavaScript Engine</a> - allows developers to use JavaScript as a scripting language to automate things on a computer and build fully functional {{Glossary("HTTP")}} and {{Glossary("WebSockets")}} servers.</p>
+Recently, JavaScript's popularity has expanded even further through the successful [Node.js](https://nodejs.org/) platform—the most popular cross-platform JavaScript runtime environment outside the browser. Node.js - built using [Chrome's V8 JavaScript Engine](<https://en.wikipedia.org/wiki/V8_(JavaScript_engine)>) - allows developers to use JavaScript as a scripting language to automate things on a computer and build fully functional {{Glossary("HTTP")}} and {{Glossary("WebSockets")}} servers.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{interwiki("wikipedia", "JavaScript", "JavaScript")}} on Wikipedia</li>
- <li>The {{Link("/en-US/docs/Web/JavaScript/Guide")}} on MDN</li>
- <li><a href="https://nodeschool.io/#workshoppers">The "javascripting" workshop on NodeSchool</a></li>
- <li><a href="https://www.codecademy.com/tracks/javascript">The JavaScript course on codecademy.com</a></li>
- <li><a href="https://www.ecma-international.org/publications/standards/Ecma-262.htm">The latest ECMAScript standard</a></li>
- <li>The {{Link("/en-US/docs/Web/JavaScript/reference")}} on MDN</li>
- <li><a href="https://eloquentjavascript.net/">The <em>Eloquent JavaScript</em> book</a></li>
-</ul>
+- {{interwiki("wikipedia", "JavaScript", "JavaScript")}} on Wikipedia
+- The {{Link("/en-US/docs/Web/JavaScript/Guide")}} on MDN
+- [The "javascripting" workshop on NodeSchool](https://nodeschool.io/#workshoppers)
+- [The JavaScript course on codecademy.com](https://www.codecademy.com/tracks/javascript)
+- [The latest ECMAScript standard](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
+- The {{Link("/en-US/docs/Web/JavaScript/reference")}} on MDN
+- [The _Eloquent JavaScript_ book](https://eloquentjavascript.net/)

@@ -5,30 +5,26 @@ tags:
   - Glossary
   - Security
 ---
-<p>DoS (Denial of Service) is a network attack that prevents legitimate use of {{glossary("server")}} resources by flooding the server with requests.</p>
+DoS (Denial of Service) is a network attack that prevents legitimate use of {{glossary("server")}} resources by flooding the server with requests.
 
-<p>Computers have limited resources, for example computation power or memory. When these are exhausted, the program can freeze or crash, making it unavailable. A DoS attack consists of various techniques to exhaust these resources and make a server or a network unavailable to legitimate users, or at least make the server perform sluggishly.</p>
+Computers have limited resources, for example computation power or memory. When these are exhausted, the program can freeze or crash, making it unavailable. A DoS attack consists of various techniques to exhaust these resources and make a server or a network unavailable to legitimate users, or at least make the server perform sluggishly.
 
-<p>There are also Distributed Denial of Service (DDoS) Attacks in which a multitude of servers are used to exhaust the computing capacity of an attacked computer.</p>
+There are also Distributed Denial of Service (DDoS) Attacks in which a multitude of servers are used to exhaust the computing capacity of an attacked computer.
 
-<h3 id="Types_of_DoS_attack">Types of DoS attack</h3>
+### Types of DoS attack
 
-<p>DoS attacks are more of a category than a particular kind of attack. Here is a non-exhaustive list of DoS attack types:</p>
+DoS attacks are more of a category than a particular kind of attack. Here is a non-exhaustive list of DoS attack types:
 
-<ul>
- <li>bandwidth attack</li>
- <li>service request flood</li>
- <li>SYN flooding attack</li>
- <li>ICMP flood attack</li>
- <li>peer-to-peer attack</li>
- <li>permanent DoS attack</li>
- <li>application level flood attack</li>
-</ul>
+- bandwidth attack
+- service request flood
+- SYN flooding attack
+- ICMP flood attack
+- peer-to-peer attack
+- permanent DoS attack
+- application level flood attack
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{interwiki("wikipedia", "Denial-of-service_attack", "Denial-of-service attack")}} on Wikipedia</li>
- <li><a href="https://www.owasp.org/index.php/Denial_of_Service">Denial-of-service on OWASP</a></li>
- <li>{{Glossary("Distributed Denial of Service","DDoS")}}</li>
-</ul>
+- {{interwiki("wikipedia", "Denial-of-service_attack", "Denial-of-service attack")}} on Wikipedia
+- [Denial-of-service on OWASP](https://www.owasp.org/index.php/Denial_of_Service)
+- {{Glossary("Distributed Denial of Service","DDoS")}}

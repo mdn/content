@@ -6,14 +6,11 @@ tags:
   - CodingScripting
   - Glossary
 ---
-<p><strong>OOP </strong>(Object-Oriented Programming) is an approach in programming in which data is encapsulated within <strong>{{glossary("object","objects")}}</strong> and the object itself is operated on, rather than its component parts.</p>
+**OOP** (Object-Oriented Programming) is an approach in programming in which data is encapsulated within **{{glossary("object","objects")}}** and the object itself is operated on, rather than its component parts.
 
-<p>{{glossary("JavaScript")}} is heavily object-oriented. It follows a <strong>prototype</strong>-based model (<a href="/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#class-based_vs._prototype-based_languages">as opposed to class-based</a>).</p>
+{{glossary("JavaScript")}} is heavily object-oriented. It follows a **prototype**-based model ([as opposed to class-based](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#class-based_vs._prototype-based_languages)).
 
+## See also
 
-<h2 id="see_also">See also</h2>
-
-<ul>
- <li>{{Interwiki("wikipedia", "Object-oriented programming")}} on Wikipedia</li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects">Introduction to object-oriented JavaScript</a></li>
-</ul>
+- {{Interwiki("wikipedia", "Object-oriented programming")}} on Wikipedia
+- [Introduction to object-oriented JavaScript](/en-US/docs/Learn/JavaScript/Objects)

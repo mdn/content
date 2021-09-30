@@ -8,17 +8,13 @@ tags:
   - WebMechanics
   - WebRTC
 ---
-<p><strong>STUN </strong>(Session Traversal Utilities for NAT) is an auxiliary protocol for transmitting data around a {{glossary("NAT")}} (Network Address Translator). STUN returns the {{glossary("IP address")}}, {{glossary("port")}}, and connectivity status of a networked computer behind a NAT.</p>
+**STUN** (Session Traversal Utilities for NAT) is an auxiliary protocol for transmitting data around a {{glossary("NAT")}} (Network Address Translator). STUN returns the {{glossary("IP address")}}, {{glossary("port")}}, and connectivity status of a networked computer behind a NAT.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "STUN")}} on Wikipedia</li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Protocols">WebRTC protocols</a></li>
-</ul>
+- {{Interwiki("wikipedia", "STUN")}} on Wikipedia
+- [WebRTC protocols](/en-US/docs/Web/API/WebRTC_API/Protocols)
 
-<h3 id="Technical_reference">Technical reference</h3>
+### Technical reference
 
-<ul>
- <li><a href="https://datatracker.ietf.org/doc/html/rfc5389">Specification</a></li>
-</ul>
+- [Specification](https://datatracker.ietf.org/doc/html/rfc5389)
