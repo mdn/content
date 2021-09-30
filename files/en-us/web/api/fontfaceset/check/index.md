@@ -35,7 +35,7 @@ A {{jsxref("Boolean")}} value that is `true` if the font list is available.
 
 ## Examples
 
-In the following example, the first line will print `true` if the font Courier is availabe at `12px`. The second line will print `true` if the font `MyFont` contains the "ß" character.
+In the following example, the first line will print `true` if the Courier font is availabe at `12px`. The second line will print `true` if the font `MyFont` contains the "ß" character.
 
 ```js
 console.log(document.fonts.check("12px courier"));

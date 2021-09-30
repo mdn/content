@@ -26,7 +26,7 @@ FontFaceSet.add(font)
 
 ### Return Value
 
-The new {{domxref("FontFaceSet")}}.
+A new {{domxref("FontFaceSet")}}.
 
 ### Exceptions
 

@@ -37,7 +37,7 @@ failed to load.
 
 ## Examples
 
-The following example returns a promise that will be fulfilled or rejected according the success to load MyFont. The code in 'then' can assume the availability of that font.
+The following example returns a promise that will be fulfilled or rejected according the success of loading "MyFont". The code in `then()` can assume the availability of that font.
 
 ```js
 document.fonts.load("12px MyFont", "ß").then(…);

@@ -27,9 +27,9 @@ FontFaceSet.forEach(callbackFn, thisArg)
     - `value`, `key`
       - : The current element being processed in the `FontFaceSet`. As there are no keys in a `FontFaceSet`, the value is passed for both arguments.
     - `set`
-      - : The `FontFaceSet` which `forEach()` was called upon.
+      - : The `FontFaceSet` which `forEach()` was called on.
 - `thisArg`
-  - : Value to use as `this` when executing `callbackFn`.
+  - : Value to use as {{jsxref('this')}} when executing `callbackFn`.
 
 ### Return Value
 
