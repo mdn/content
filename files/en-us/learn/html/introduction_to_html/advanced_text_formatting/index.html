@@ -43,9 +43,12 @@ In drama, where a character speaks their thoughts out loud to share them with th
 aside
 In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought or piece of additional background information</pre>
 
-<p>Description lists use a different wrapper than the other list types — {{htmlelement("dl")}}; in addition each term is wrapped in a {{htmlelement("dt")}} (description term) element, and each description is wrapped in a {{htmlelement("dd")}} (description definition) element. Let's finish marking up our example:</p>
+<p>Description lists use a different wrapper than the other list types — {{htmlelement("dl")}}; in addition each term is wrapped in a {{htmlelement("dt")}} (description term) element, and each description is wrapped in a {{htmlelement("dd")}} (description definition) element.
 
-<div id="description-lists-live-sample-1">
+<h3>Description list example</h3>
+
+<p>Let's finish marking up our example:</p>
+
 <pre class="brush: html">&lt;dl&gt;
   &lt;dt&gt;soliloquy&lt;/dt&gt;
   &lt;dd&gt;In drama, where a character speaks to themselves, representing their inner thoughts or feelings and in the process relaying them to the audience (but not to other characters.)&lt;/dd&gt;
@@ -54,15 +57,15 @@ In drama, where a character shares a comment only with the audience for humorous
   &lt;dt&gt;aside&lt;/dt&gt;
   &lt;dd&gt;In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought, or piece of additional background information.&lt;/dd&gt;
 &lt;/dl&gt;</pre>
-</div>
 
 <p>The browser default styles will display description lists with the descriptions indented somewhat from the terms.</p>
 
-<p>{{EmbedLiveSample('description-lists-live-sample-1', '100%', '285px', '', '', 'hide-codepen-jsfiddle')}}</p>
+<p>{{EmbedLiveSample('Description_list_example', '100%', '285px')}}</p>
+
+<h3>Multiple descriptions for one term</h3>
 
 <p>Note that it is permitted to have a single term with multiple descriptions, for example:</p>
 
-<div id="description-lists-live-sample-2">
 <pre class="brush: html">&lt;dl&gt;
   &lt;dt&gt;aside&lt;/dt&gt;
   &lt;dd&gt;In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought, or piece of additional background information.&lt;/dd&gt;
@@ -70,7 +73,7 @@ In drama, where a character shares a comment only with the audience for humorous
 &lt;/dl&gt;</pre>
 </div>
 
-<p>{{EmbedLiveSample('description-lists-live-sample-2', '100%', '193px', '', '', 'hide-codepen-jsfiddle')}}</p>
+<p>{{EmbedLiveSample('Multiple_descriptions_for_one_term', '100%', '193px')}}</p>
 
 <h3 id="Active_learning_Marking_up_a_set_of_definitions">Active learning: Marking up a set of definitions</h3>
 
@@ -78,10 +81,7 @@ In drama, where a character shares a comment only with the audience for humorous
 
 <p>If you make a mistake, you can always reset it using the <em>Reset</em> button. If you get really stuck, press the <em>Show solution</em> button to see the answer.</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -103,7 +103,7 @@ A light brown color.&lt;/textarea&gt;
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -123,7 +123,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js">const textarea = document.getElementById('code');
+<pre class="brush: js hidden">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 const output = document.querySelector('.output');
@@ -200,9 +200,8 @@ textarea.onkeyup = function(){
 
   updateCode();
 };</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 350, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Active_learning_Marking_up_a_set_of_definitions', 700, 350) }}</p>
 
 <h2 id="Quotations">Quotations</h2>
 
@@ -217,17 +216,15 @@ Quotation Element&lt;/em&gt;) indicates that the enclosed text is an extended qu
 
 <p>To turn this into a block quote, we would just do this:</p>
 
-<div id="blockquote-live-sample">
 <pre class="brush: html">&lt;p&gt;Here below is a blockquote...&lt;/p&gt;
 &lt;blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"&gt;
   &lt;p&gt;The &lt;strong&gt;HTML &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt; Element&lt;/strong&gt; (or &lt;em&gt;HTML Block
   Quotation Element&lt;/em&gt;) indicates that the enclosed text is an extended quotation.&lt;/p&gt;
 &lt;/blockquote&gt;</pre>
-</div>
 
 <p>Browser default styling will render this as an indented paragraph, as an indicator that it is a quote; the paragraph above the quotation is there to demonstrate that.</p>
 
-<p>{{EmbedLiveSample('blockquote-live-sample', '100%', '117px', '', '', 'hide-codepen-jsfiddle')}}</p>
+<p>{{EmbedLiveSample('Blockquotes', '100%', '200px')}}</p>
 
 <h3 id="Inline_quotations">Inline quotations</h3>
 
@@ -238,7 +235,7 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt;&lt;/p&gt;</p
 
 <p>Browser default styling will render this as normal text put in quotes to indicate a quotation, like so:</p>
 
-<p>{{EmbedLiveSample('Inline_quotations', '100%', '78px', '', '', 'hide-codepen-jsfiddle')}}</p>
+<p>{{EmbedLiveSample('Inline_quotations', '100%', '78px')}}</p>
 
 <h3 id="Citations">Citations</h3>
 
@@ -261,7 +258,7 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
 
 <p>Citations are styled in italic font by default.</p>
 
-<p>{{EmbedLiveSample('Citations', '100%', '179px', '', '', 'hide-codepen-jsfiddle')}}</p>
+<p>{{EmbedLiveSample('Citations', '100%', '179px')}}</p>
 
 <h3 id="Active_learning_Who_said_that">Active learning: Who said that?</h3>
 
@@ -282,10 +279,7 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
 
 <p>If you make a mistake, you can always reset it using the <em>Reset</em> button. If you get really stuck, press the <em>Show solution</em> button to see the answer.</p>
 
-<div class="hidden">
-<h6 id="Playable_code_2">Playable code 2</h6>
-
-<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -304,7 +298,7 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -324,7 +318,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js">const textarea = document.getElementById('code');
+<pre class="brush: js hidden">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 const output = document.querySelector('.output');
@@ -401,23 +395,24 @@ textarea.onkeyup = function(){
 
   updateCode();
 };</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_2', 700, 450, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Active_learning_Who_said_that', 700, 450) }}</p>
 
 <h2 id="Abbreviations">Abbreviations</h2>
 
-<p>Another fairly common element you'll meet when looking around the Web is {{htmlelement("abbr")}} — this is used to wrap around an abbreviation or acronym, and provide a full expansion of the term (included inside a {{htmlattrxref("title")}} attribute.) Let's look at a couple of examples:</p>
+<p>Another fairly common element you'll meet when looking around the Web is {{htmlelement("abbr")}} — this is used to wrap around an abbreviation or acronym, and provide a full expansion of the term (included inside a {{htmlattrxref("title")}} attribute.)
 
-<div id="abbreviations-live-sample">
+<h3>Abbreviation example</h3>
+
+<p>Let's look at an example.</p>
+
 <pre class="brush: html">&lt;p&gt;We use &lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt; to structure our web documents.&lt;/p&gt;
 
 &lt;p&gt;I think &lt;abbr title="Reverend"&gt;Rev.&lt;/abbr&gt; Green did it in the kitchen with the chainsaw.&lt;/p&gt;</pre>
-</div>
 
 <p>These will come out looking something like this (the expansion will appear in a tooltip when the term is hovered over):</p>
 
-<p>{{EmbedLiveSample('abbreviations-live-sample', '100%', '94px', '', '', 'hide-codepen-jsfiddle')}}</p>
+<p>{{EmbedLiveSample('Abbreviation_example', '100%', '150')}}</p>
 
 <div class="note">
 <p><strong>Note</strong>: Earlier versions of html also included support for the {{htmlelement("acronym")}} element, but it was removed from the HTML spec in favor of using <code>&lt;abbr&gt;</code> to represent both abbreviations and acronyms. <code>&lt;acronym&gt;</code> should not be used.</p>
@@ -427,10 +422,7 @@ textarea.onkeyup = function(){
 
 <p>For this simple active learning assignment, we'd like you to mark up an abbreviation. You can use our sample below, or replace it with one of your own. </p>
 
-<div class="hidden">
-<h6 id="Playable_code_3">Playable code</h6>
-
-<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -447,7 +439,7 @@ textarea.onkeyup = function(){
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -467,7 +459,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js">const textarea = document.getElementById('code');
+<pre class="brush: js hidden">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 const output = document.querySelector('.output');
@@ -544,9 +536,8 @@ textarea.onkeyup = function(){
 
   updateCode();
 };</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_3', 700, 300, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Active_learning_marking_up_an_abbreviation', 700, 300) }}</p>
 
 <h2 id="Marking_up_contact_details">Marking up contact details</h2>
 
@@ -592,7 +583,7 @@ textarea.onkeyup = function(){
 
 <p>The output of this code looks like so:</p>
 
-<p>{{ EmbedLiveSample('Superscript_and_subscript', '100%', '141px', '', '', 'hide-codepen-jsfiddle') }}</p>
+<p>{{ EmbedLiveSample('Superscript_and_subscript', '100%', '141px') }}</p>
 
 <h2 id="Representing_computer_code">Representing computer code</h2>
 
@@ -626,7 +617,7 @@ para.onclick = function() {
 
 <p>The above code will look like so:</p>
 
-<p>{{ EmbedLiveSample('Representing_computer_code','100%',300, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Representing_computer_code','100%',300) }}</p>
 
 <h2 id="Marking_up_times_and_dates">Marking up times and dates</h2>
 

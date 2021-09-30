@@ -216,32 +216,37 @@ play, the lights should be down low]&lt;/span&gt;.&lt;/p&gt;</pre>
 
 <h3 id="Line_breaks_and_horizontal_rules">Line breaks and horizontal rules</h3>
 
-<p>Two elements that you'll use occasionally and will want to know about are {{htmlelement("br")}} and {{htmlelement("hr")}}:</p>
+<p>Two elements that you'll use occasionally and will want to know about are {{htmlelement("br")}} and {{htmlelement("hr")}}.</p>
+
+<h4>&lt;br&gt;: the line break element</h4>
 
 <p><code>&lt;br&gt;</code> creates a line break in a paragraph; it is the only way to force a rigid structure in a situation where you want a series of fixed short lines, such as in a postal address or a poem. For example:</p>
 
-<div id="line-break-live-sample">
 <pre class="brush: html">&lt;p&gt;There once was a man named O'Dell&lt;br&gt;
 Who loved to write HTML&lt;br&gt;
 But his structure was bad, his semantics were sad&lt;br&gt;
 and his markup didn't read very well.&lt;/p&gt;</pre>
-</div>
 
 <p>Without the <code>&lt;br&gt;</code> elements, the paragraph would just be rendered in one long line (as we said earlier in the course, <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#whitespace_in_html">HTML ignores most whitespace</a>); with <code>&lt;br&gt;</code> elements in the code, the markup renders like this:</p>
 
-<p>{{EmbedLiveSample('line-break-live-sample', '100%', '125px', '', '', 'hide-codepen-jsfiddle')}}</p>
+<p>{{EmbedLiveSample('br_the_line_break_element', '100%', '125px')}}</p>
+
+<h4>&lt;hr&gt;: the thematic break element</h4>
 
 <p><code>&lt;hr&gt;</code> elements create a horizontal rule in the document that denotes a thematic change in the text (such as a change in topic or scene). Visually it just looks like a horizontal line. As an example:</p>
 
-<div id="horizantal-rule-live-sample">
-<pre class="brush: html">&lt;p&gt;Ron was backed into a corner by the marauding netherbeasts. Scared, but determined to protect his friends, he raised his wand and prepared to do battle, hoping that his distress call had made it through.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Ron was backed into a corner by the marauding
+   netherbeasts. Scared, but determined to protect his friends, he raised his
+   wand and prepared to do battle, hoping that his distress call had made it through.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;Meanwhile, Harry was sitting at home, staring at his royalty statement and pondering when the next spin off series would come out, when an enchanted distress letter flew through his window and landed in his lap. He read it hazily and sighed; "better get back to work then", he mused.&lt;/p&gt;</pre>
-</div>
+&lt;p&gt;Meanwhile, Harry was sitting at home, staring at his royalty statement
+  and pondering when the next spin off series would come out, when an enchanted
+  distress letter flew through his window and landed in his lap. He read it
+  hazily and sighed; "better get back to work then", he mused.&lt;/p&gt;</pre>
 
 <p>Would render like this:</p>
 
-<p>{{EmbedLiveSample('horizantal-rule-live-sample', '100%', '185px', '', '', 'hide-codepen-jsfiddle')}}</p>
+<p>{{EmbedLiveSample('hr_the_thematic_break_element', '100%', '185px')}}</p>
 
 <h2 id="Planning_a_simple_website">Planning a simple website</h2>
 

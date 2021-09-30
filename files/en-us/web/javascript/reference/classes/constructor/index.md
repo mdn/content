@@ -10,9 +10,7 @@ browser-compat: javascript.classes.constructor
 ---
 {{jsSidebar("Classes")}}
 
-The `constructor` method is a special method of
-a {{jsxref("Statements/class", "class")}} for creating and initializing an object of
-that class.
+The `constructor` method is a special method of a {{jsxref("Statements/class", "class")}} for creating and initializing an object instance of that class.
 
 {{EmbedInteractiveExample("pages/js/classes-constructor.html")}}
 
@@ -27,8 +25,7 @@ constructor(argument0, argument1, ... , argumentN) { ... }
 
 ## Description
 
-A constructor enables you to provide any custom initialization that must be done before
-any other methods can be called on an instantiated object.
+A constructor enables you to provide any custom initialization that must be done before any other methods can be called on an instantiated object.
 
 ```js
 class Person {
@@ -48,15 +45,14 @@ const otto = new Person('Otto');
 otto.introduce();
 ```
 
-If you don't provide your own constructor, then a default constructor will be supplied
-for you. If your class is a base class, the default constructor is empty:
+If you don't provide your own constructor, then a default constructor will be supplied for you.
+If your class is a base class, the default constructor is empty:
 
 ```js
 constructor() {}
 ```
 
-If your class is a derived class, the default constructor calls the parent constructor,
-passing along any arguments that were provided:
+If your class is a derived class, the default constructor calls the parent constructor, passing along any arguments that were provided:
 
 ```js
 constructor(...args) {
@@ -88,13 +84,11 @@ try {
 }
 ```
 
-The `ValidationError` class doesn't need an explicit constructor, because it
-doesn't need to do any custom initialization. The default constructor then takes care of
-initializing the parent `Error` from the argument it is given.
+The `ValidationError` class doesn't need an explicit constructor, because it doesn't need to do any custom initialization.
+The default constructor then takes care of initializing the parent `Error` from the argument it is given.
 
-However, if you provide your own constructor, and your class derives from some parent
-class, then you must explicitly call the parent class constructor using
-`super`. For example:
+However, if you provide your own constructor, and your class derives from some parent class, then you must explicitly call the parent class constructor using `super`.
+For example:
 
 ```js
 class ValidationError extends Error {
@@ -124,16 +118,14 @@ try {
 }
 ```
 
-There can be only one special method with the name "`constructor`" in a
-class. Having more than one occurrence of a `constructor` method in a class
-will throw a {{jsxref("SyntaxError")}} error.
+There can be only one special method with the name "`constructor`" in a class.
+Having more than one occurrence of a `constructor` method in a class will throw a {{jsxref("SyntaxError")}} error.
 
 ## Examples
 
 ### Using the `constructor` method
 
-This code snippet is taken from the [classes
-sample](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) ([live demo](https://googlechrome.github.io/samples/classes-es6/index.html)).
+This code snippet is taken from the [classes sample](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) ([live demo](https://googlechrome.github.io/samples/classes-es6/index.html)).
 
 ```js
 class Square extends Polygon {
@@ -159,9 +151,7 @@ class Square extends Polygon {
 
 ### Another example
 
-Here the prototype of `Square` class is changed—but the constructor of its
-base class `Polygon` is still called when a new instance of a square is
-created.
+Here the prototype of `Square` class is changed—but the constructor of its base class `Polygon` is still called when a new instance of a square is created.
 
 ```js
 class Polygon {
@@ -202,3 +192,4 @@ console.log(newInstance.name); //Polygon
 - {{jsxref("Operators/class", "class expression", "", "true")}}
 - {{jsxref("Classes")}}
 - [Object.prototype.constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)
+- [Class static initialization block](/en-US/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks)

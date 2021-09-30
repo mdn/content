@@ -1,11 +1,23 @@
-<!-- Please provide the following information to help us review this PR: -->
+<!-- 👀 Thanks for opening a PR! Read comments like this one to get your PR merged faster. -->
+#### Summary
+<!-- ✍️ In a sentence or two, describe your changes -->
 
-> Issue number that this PR fixes (if any). For example: 'Fixes #987654321'
+#### Motivation
+<!-- ❓ Why are you making this change? Help us understand how your changes help readers. -->
 
+#### Supporting details
+<!-- 🔗 Link to supporting information, such as bug trackers, source control, release notes, and vendor docs. -->
 
+#### Related issues
+<!-- 🔨 If applicable, use "Fixes #XYZ" -->
 
-> What was wrong/why is this fix needed? (quick summary only)
+#### Metadata
+<!-- ✅ Check a box if applicable, like this: [x]
 
+This PR…
+-->
+- [ ] Adds a new document
+- [ ] Rewrites (or significantly expands) a document
+- [ ] Fixes a typo, bug, or other error
 
-
-> Anything else that could help us review it
+<!-- 👷‍♀️ After submitting, review the results of the "Checks" tab! -->

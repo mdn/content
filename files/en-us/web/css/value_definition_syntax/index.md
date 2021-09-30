@@ -27,7 +27,7 @@ All CSS properties accept the keywords `inherit`, `initial` and `unset`, that a
 
 ### Literals
 
-In CSS, a few characters can appear on their own, like the slash ('`/`') or the comma ('`,`'), and are used in a property definition to separate its parts. The comma is often used to separate values in enumerations, or parameters in mathematical-like functions; the slash often separates parts of the value that are semantically different, but have a common syntax. Typically, the slash is used in shorthand properties; to separate component that are of the same type, but belong to different properties.
+In CSS, a few characters can appear on their own, like the slash ('`/`') or the comma ('`,`'), and are used in a property definition to separate its parts. The comma is often used to separate values in enumerations, or parameters in mathematical-like functions; the slash often separates parts of the value that are semantically different, but have a common syntax. Typically, the slash is used in shorthand properties; to separate components that are of the same type, but belong to different properties.
 
 Both symbols appear literally in a value definition.
 
@@ -39,7 +39,7 @@ Some kind of data are used throughout CSS, and are defined once for all values i
 
 #### Non-terminal data types
 
-Less common data types, called _non-terminal data types_, are also surrounded  by '`<`' and '`>`'.
+Less common data types, called _non-terminal data types_, are also surrounded by '`<`' and '`>`'.
 
 Non-terminal data types are of two kinds:
 
@@ -158,7 +158,7 @@ But not:
 
 ## Component value multipliers
 
-A multiplier is a sign that indicate how many times a preceding entity can be repeated. Without a multiplier, an entity must appear exactly one time.
+A multiplier is a sign that indicates how many times a preceding entity can be repeated. Without a multiplier, an entity must appear exactly one time.
 
 Note that multipliers cannot be added and have all precedence over combinators.
 
