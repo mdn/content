@@ -9,7 +9,11 @@ tags:
   - Button Role
   - Reference
 ---
-The `button` role is for clickable elements that trigger a response when activated by the user. Adding `role="button"` tells the screen reader the element is a button, but provides no button functionality. Use {{HTMLElement("button")}} or {{HTMLElement("input")}} with `type="button"` instead. This role can be used in combination with the `aria-pressed` attribute to create toggle buttons.</span></p>
+The `button` role is for clickable elements that trigger a response when activated by the user. Adding `role="button"` tells the screen reader the element is a button, but provides no button functionality. Use {{HTMLElement("button")}} or {{HTMLElement("input")}} with `type="button"` instead. 
+
+## Description
+
+The button role identifies an element as a button to screen readers. A button is a widget used to perform actions such as submitting a form, opening a dialog, cancelling an action, or performing a command such as inserting a new record or displaying information. Adding `role="button"` tells the screen reader the element is a button, but provides no button functionality. Use {{HTMLElement("button")}} or {{HTMLElement("input")}} with `type="button"` instead. This role can be used in combination with the `aria-pressed` attribute to create toggle buttons.
 
 ```html
 <div id="saveChanges" tabindex="0" role="button" aria-pressed="false">Save</div>
@@ -23,18 +27,14 @@ The above example creates a focusable button, requiring JavaScript and CSS to in
 
 > **Note:** If using role="button" instead of the semantic `<button>` or `<input type="button">` elements, you will need to make the element focusable and have to define event handlers for {{event("click")}} and {{event("keydown")}} events, including the <kbd>Enter</kbd> and <kbd>Space</kbd> keys, in order to process the user's input. See [the official WAI-ARIA example code](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html).
 
-## Description
-
-The button role identifies an element as a button to screen readers. A button is a widget used to perform actions such as submitting a form, opening a dialog, cancelling an action, or performing a command such as inserting a new record or displaying information.
+In addition to the ordinary button widget, role="button" should be included when creating a toggle button or menu button using a non button element. A toggle button is a two-state button that can be either off (not pressed) or on (pressed). The `aria-pressed` attribute values of `true` or `false` identify a button as a toggle button. A menu button is a button that controls a menu and has an `aria-haspopup` property attribute set to either `menu` or `true`.
 
 A common convention to inform users a button will launch a dialog is to append "…" (ellipsis) to the button's label, e.g., "Save as…".
-
-In addition to the ordinary button widget, role="button" should be included when creating a toggle button or menu button using a non button element. A toggle button is a two-state button that can be either off (not pressed) or on (pressed). The `aria-pressed` attribute values of `true` or `false` identify a button as a toggle button. A menu button is a button that controls a menu and has an `aria-haspopup` property attribute set to either `menu` or `true`.
 
 ### Associated ARIA roles, states, and properties
 
 - `aria-pressed`
-  - : Defines the button as a toggle button. The value of `aria-pressed` describes the state of the button. The values include `aria-pressed="false"` when a button is not currently pressed, `aria-pressed="true"` to indicate a button is currently pressed, and `aria-pressed="mixed"` if the button is considered to be partially pressed. If the attribute is omitted or set to its default value of `aria-pressed="undefined"`, the element does not support being pressed.
+  - : The `aria-pressed`  attribute defines the button as a toggle button. The value describes the state of the button. The values include `aria-pressed="false"` when a button is not currently pressed, `aria-pressed="true"` to indicate a button is currently pressed, and `aria-pressed="mixed"` if the button is considered to be partially pressed. If the attribute is omitted or set to its default value of `aria-pressed="undefined"`, the element does not support being pressed.  
 - `aria-expanded`
   - : If the button controls a grouping of other elements, the `aria-expanded` state indicates whether the controlled grouping is currently expanded or collapsed.  If the button has `aria-expanded="false"` set, the grouping is not currently expanded; If the button has `aria-expanded="true"` set, it is currently expanded; if the button has `aria-expanded="undefined"` set or the attribute is omitted, it is not expandable.
 
@@ -73,13 +73,6 @@ Buttons can be operated by mouse, touch, and keyboard users. For native HTML `
 - `onKeyDown`
   - : Handles the event raised when the button is activated using the Enter or Space key on the keyboard. (Note not the [deprecated onKeyPress](/en-US/docs/Web/API/Document/keypress_event))
 
-#### Changing attribute values
-
-#### `aria-pressed`
-
-The value of `aria-pressed` defines the state of a toggle button. This attribute has one of four possible values:
-
-`true`, `false`, `mixed`, `undefined`
 
 ## Examples
 
@@ -245,21 +238,21 @@ If a link performs the action of a button, giving the element `role="button"` he
 | {{SpecName("ARIA","#button","button")}}                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#button","button")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
-## Notes 
 
-### ARIA attributes used
 
-- [`button`](https://www.w3.org/TR/wai-aria/roles#button)
+## See also
+
+- The {{HTMLElement('button')}} element
+- The {{HTMLElement("input")}} element
+-  [`<input type="button">`](/en-US/docs/Web/HTML/Element/input/button)
+-  [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit)
+-  [`<input type="reset">`](/en-US/docs/Web/HTML/Element/input/reset)
 - [`aria-pressed`](https://www.w3.org/TR/wai-aria-1.1/#aria-pressed)
 - [`aria-expanded`](https://www.w3.org/TR/wai-aria-1.1/#aria-expanded)
 - [`aria-haspopup`](https://www.w3.org/TR/wai-aria-1.1/#aria-haspopup)
-
-### Additional resources
-
 - [Strong native semantics in HTML5](https://www.w3.org/TR/html5/dom.html#aria-usage-note)
 - [Notes on Using ARIA in HTML](https://www.w3.org/TR/aria-in-html/)
 - [Official WAI-ARIA example code](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html)
-- [ARIA `menubutton` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menubutton_role)
 
 <section id="Quick_links">
 
