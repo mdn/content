@@ -30,15 +30,15 @@ multi-column scenarios. Each object in the array contains two properties:
     with a horizontal {{cssxref("writing-mode")}}, this is the horizontal dimension, or
     width; if the writing-mode is vertical, this is the vertical dimension, or height.
 
-> **Note:** For more explanation of writing modes and block and inline
+> **Note:** For more information about writing modes and block and inline
 > dimensions, read [Handling
 > different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
 
 ## Examples
 
 The folowing example is taken from the article [Pixel-perfect rendering with devicePixelContentBox](https://web.dev/device-pixel-content-box/). As the callback function of a {{domxref("ResizeObserver")}}
-is called after layout but before paint,
-this provides an opportunity to log the exact size in physical pixels to
+is called after layout but before paint.
+This provides an opportunity to log the exact size in physical pixels to
 ensure a one-to-one mapping of canvas pixels to physical pixels.
 
 ```js
