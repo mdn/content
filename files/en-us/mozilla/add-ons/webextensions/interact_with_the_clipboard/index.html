@@ -21,7 +21,7 @@ tags:
 <p><strong>Note:</strong> The {{domxref("Clipboard", "navigator.clipboard")}} API is a recent addition to the specification and may not be fully implemented in all browsers. This article describes some limitations, but be sure to review the compatibility tables for each method before using them to ensure that the API supports your needs.</p>
 </div>
 
-<p>The difference between the two APIs is that {{domxref("Clipboard", "navigator.clipboard")}} is analogous to the keyboard copy, cut, and paste actions – exchanging data between a webpage and clipboard – whereas {{domxref("Clipboard", "navigator.clipboard")}} writes and reads arbitrary data to and from the clipboard.</p>
+<p>The difference between the two APIs is that {{{domxref("Document.execCommand()","document.execCommand")}} this is analogous to the keyboard copy, cut, and paste actions – exchanging data between a webpage and clipboard – whereas {{domxref("Clipboard", "navigator.clipboard")}} writes and reads arbitrary data to and from the clipboard.</p>
 
 <p>{{domxref("Clipboard", "navigator.clipboard")}} provide separate methods to read or write:</p>
 <ul>
@@ -29,10 +29,10 @@ tags:
   <li>images, rich text, HTML, and other rich content, using {{domxref("Clipboard.read", "navigator.clipboard.read()")}} and {{domxref("Clipboard.write", "navigator.clipboard.write()")}}.</li>
 </ul>
 
-<p>However, while {{domxref("Clipboard.readText", "navigator.clipboard.readText()")}} and {{domxref("Clipboard.writeText", "navigator.clipboard.writeText()")}} work on all browsers,{{domxref("Clipboard.read", "navigator.clipboard.read()")}} and {{domxref("Clipboard.write", "navigator.clipboard.write()")}} do not. For example, on Firefox at the time of writing, {{domxref("Clipboard.read", "navigator.clipboard.read()")}} and {{domxref("Clipboard.write", "navigator.clipboard.write()")}} are not fully implemented, such that to:</p>
+<p>However, while {{domxref("Clipboard.readText", "navigator.clipboard.readText()")}} and {{domxref("Clipboard.writeText", "navigator.clipboard.writeText()")}} work on all browsers, {{domxref("Clipboard.read", "navigator.clipboard.read()")}} and {{domxref("Clipboard.write", "navigator.clipboard.write()")}} do not. For example, on Firefox at the time of writing, {{domxref("Clipboard.read", "navigator.clipboard.read()")}} and {{domxref("Clipboard.write", "navigator.clipboard.write()")}} are not fully implemented, such that to:</p>
 
 <ul>
-  <li>work with images use {{WebExtAPIRef("clipboard.setImageData","browser.clipboard.setImageData()")}} to write images to the clipboard and {{domxref("Document.execCommand()","document.execCommand(&quot;paste&quot;)")}} to paste images  to a webpage.</li>
+  <li>work with images use {{WebExtAPIRef("clipboard.setImageData","browser.clipboard.setImageData()")}} to write images to the clipboard and {{domxref("Document.execCommand()","document.execCommand(&quot;paste&quot;)")}} to paste images to a webpage.</li>
   <li>write rich content (such as, HTML, rich text including images, etc.) to the clipboard, use {{domxref("Document.execCommand()","document.execCommand(&quot;copy&quot;)")}} or {{domxref("Document.execCommand()","document.execCommand(&quot;cut&quot;)")}}. Then, either {{domxref("Clipboard.read","navigator.clipboard.read()")}} (recommended) or {{domxref("Document.execCommand()","document.execCommand(&quot;paste&quot;)")}} to read the content from the clipboard.</li>
 </ul>
 
@@ -120,15 +120,11 @@ browser.alarms.onAlarm.addListener(copy);</pre>
 
 <p>In Chrome:</p>
 
-<ul>
- <li>You can write to the clipboard like this in all execution contexts – background pages, content scripts, options pages, and popups.</li>
- <li>You don't need <code>"clipboardWrite"</code> even to write to the clipboard outside a user-generated event handler.</li>
-</ul>
+<p>You don't need <code>"clipboardWrite"</code>, even to write to the clipboard outside a user-generated event handler.</p>
 
 <p>In Firefox:</p>
 
 <ul>
- <li>You can write to the clipboard with execCommand in all execution contexts <em>except background pages</em>. In Firefox, you can't select text or focus an input field in background pages, so you can't write to the clipboard with execCommand from a background page. The Clipboard Web API doesn't have this limitation.</li>
  <li>From version 57 onward, you can copy images to the clipboard using the {{WebExtAPIRef("clipboard.setImageData","browser.clipboard.setImageData()")}} API.</li>
  <li>Support for the Clipboard API's {{domxref("Clipboard.writeText", "navigator.clipboard.writeText()")}} method was added in Firefox 63.</li>
  <li>When using content scripts, the Clipboard API is available only for HTTPS pages. As a workaround, use messaging between your content scripts and the background script.</li>
