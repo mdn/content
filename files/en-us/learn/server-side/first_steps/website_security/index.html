@@ -42,7 +42,7 @@ tags:
 <p>The rest of this article gives you more details about a few common threats and some of the simple steps you can take to protect your site.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This is an introductory topic, designed to help you start thinking about website security, but it is not exhaustive.</p>
+<p><strong>Note:</strong> This is an introductory topic, designed to help you start thinking about website security, but it is not exhaustive.</p>
 </div>
 
 <h2 id="Website_security_threats">Website security threats</h2>
@@ -54,7 +54,7 @@ tags:
 <p>XSS is a term used to describe a class of attacks that allow an attacker to inject client-side scripts <em>through</em> the website into the browsers of other users. Because the injected code comes to the browser from the site, the code is <em>trusted</em> and can do things like send the user's site authorization cookie to the attacker. When the attacker has the cookie, they can log into a site as though they were the user and do anything the user can, such as access their credit card details, see contact details, or change passwords.</p>
 
 <div class="note">
-<p><strong>Note</strong>: XSS vulnerabilities have been historically more common than any other type of security threat.</p>
+<p><strong>Note:</strong> XSS vulnerabilities have been historically more common than any other type of security threat.</p>
 </div>
 
 <p>The XSS vulnerabilities are divided into <em>reflected</em> and <em>persistent</em>, based on how the site returns the injected scripts to a browser.</p>
@@ -94,7 +94,7 @@ tags:
 <p>To avoid this sort of attack, you must ensure that any user data that is passed to an SQL query cannot change the nature of the query. One way to do this is to <a href="https://en.wikipedia.org/wiki/Escape_character">escape</a> all the characters in the user input that have a special meaning in SQL.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The SQL statement treats the <strong>'</strong> character as the beginning and end of a string literal. By putting a backslash in front of this character (<strong>\'</strong>), we escape the symbol, and tell SQL to instead treat it as a character (just a part of the string).</p>
+<p><strong>Note:</strong> The SQL statement treats the <strong>'</strong> character as the beginning and end of a string literal. By putting a backslash in front of this character (<strong>\'</strong>), we escape the symbol, and tell SQL to instead treat it as a character (just a part of the string).</p>
 </div>
 
 <p>In the following statement, we escape the <strong>'</strong> character. The SQL will now interpret the name as the whole string in bold (which is a very odd name indeed, but not harmful).</p>
@@ -106,7 +106,7 @@ tags:
 <p>Web frameworks will often take care of the character escaping for you. Django, for example, ensures that any user-data passed to querysets (model queries) is escaped.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This section draws heavily on the information in <a href="https://en.wikipedia.org/wiki/SQL_injection">Wikipedia here</a>.</p>
+<p><strong>Note:</strong> This section draws heavily on the information in <a href="https://en.wikipedia.org/wiki/SQL_injection">Wikipedia here</a>.</p>
 </div>
 
 <h3 id="Cross-Site_Request_Forgery_CSRF">Cross-Site Request Forgery (CSRF)</h3>
@@ -120,7 +120,7 @@ tags:
 <p>The result is that a<span style="line-height: 1.5;">ny user who clicks the <em>Submit</em> button while they are logged in to the trading site will make the transaction. John gets rich.</span></p>
 
 <div class="note">
-<p><strong>Note</strong>: The trick here is that John doesn't need to have access to the user's cookies (or access credentials). The browser of the user stores this information and automatically includes it in all requests to the associated server.</p>
+<p><strong>Note:</strong> The trick here is that John doesn't need to have access to the user's cookies (or access credentials). The browser of the user stores this information and automatically includes it in all requests to the associated server.</p>
 </div>
 
 <p>One way to prevent this type of attack is for the server to require that <code>POST</code> requests include a user-specific site-generated secret. The secret would be supplied by the server when sending the web form used to make transfers. This approach prevents John from creating his own form, because he would have to know the secret that the server is providing for the user. Even if he found out the secret and created a form for a particular user, he would no longer be able to use that same form to attack every user.</p>
