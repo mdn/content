@@ -5,18 +5,17 @@ tags:
   - HTTP
   - HTTP Header
   - Digest
-  - Authentication
 browser-compat: http.headers.Digest
 ---
 {{HTTPSidebar}}
 
 The **`Digest`** response HTTP header provides a {{Glossary("digest")}} of the _selected representation_ of the requested resource.
 
-Representations are different "versions" of a particular resource that might be returned from a request: for example, the same data resource might formatted in a particular media type such as XML or JSON, localised to a particular written language or geographical region, and/or compressed or otherwise encoded for transmission.
+Representations are different "serialization" of a particular resource that might be returned from a request: for example, the same resource might be formatted in a particular media type such as XML or JSON, localised to a particular written language or geographical region, and/or compressed or otherwise encoded for transmission.
 The representation can be determined from the response's {{Glossary("Representation header","Representation headers")}}.
 
 The digest applies to the whole representation of a resource, not to a particular message.
-It can be used to verify that the representation has not been modified during transmission.
+It can be used to verify that the representation data has not been modified during transmission.
 
 > **Note:** While a representation may be fully contained in the message body of a single response, it can also be sent using multiple messages in response to a [range request](/en-US/docs/Web/HTTP/Range_requests), or omitted altogether in response to a {{HTTPMethod("HEAD")}} request.
 
