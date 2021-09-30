@@ -55,16 +55,17 @@ a + (b * c)   // 7
 a * c + b * c // 9
 ```
 
-Notice in these examples that the left-to-right order of evaluation is still
-preserved. In other words, the order in which the *operators* evaluate has changed,
-but the order in which the *operands* evaluate has not.
-For example in this code:
+The grouping operator is also used to clarify a mathematical structure of expressions.
 
 ```js
-a() * (b() + c())
+const z = (x = y); // Or equivalently: const z = x = y;
 ```
 
-The function `a` will be called before the function `b`, which will be called before the function `c`.
+When chaining the expressions, the assignment is evaluated right-to-left.
+
+`w = z = x = y` is equivalent to `w = (z = (x = y))` or `x = y; z = y; w = y`
+
+Essentially, the grouping operator is used to define a dependency graph of expressions along with other operators in a mathematical sense, that is independent from an evaluation strategy of a programming language. It is possible to derive an evaluation order or the absence of an evaluation order that respects the given dependencies from the dependency graph.
 
 ## Specifications
 
