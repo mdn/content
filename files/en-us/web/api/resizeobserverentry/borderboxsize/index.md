@@ -3,7 +3,6 @@ title: ResizeObserverEntry.borderBoxSize
 slug: Web/API/ResizeObserverEntry/borderBoxSize
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - Resize Observer API
@@ -11,19 +10,13 @@ tags:
   - borderBoxSize
 browser-compat: api.ResizeObserverEntry.borderBoxSize
 ---
-{{APIRef("Resize Observer API")}}{{SeeCompatTable}}
+{{APIRef("Resize Observer API")}}
 
 The **`borderBoxSize`** read-only property of
 the {{domxref("ResizeObserverEntry")}} interface returns an array containing the new
 border box size of the observed element when the callback is run.
 
-## Syntax
-
-```js
-var myBorderBoxSize = ResizeObserverEntry.borderBoxSize;
-```
-
-### Value
+## Value
 
 An array containing objects with the new border box size of the observed element. The
 array is necessary to support elements that have multiple fragments, which occur in
