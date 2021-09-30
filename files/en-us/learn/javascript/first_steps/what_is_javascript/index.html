@@ -22,7 +22,7 @@ tags:
 
 <div>{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}</div>
 
-<p class="summary">Welcome to the MDN beginner's JavaScript course! In this article we will look at JavaScript from a high level, answering questions such as "What is it?" and "What can you do with it?", and making sure you are comfortable with JavaScript's purpose.</p>
+<p>Welcome to the MDN beginner's JavaScript course! In this article we will look at JavaScript from a high level, answering questions such as "What is it?" and "What can you do with it?", and making sure you are comfortable with JavaScript's purpose.</p>
 
 <table>
  <tbody>
@@ -86,7 +86,7 @@ function updateName() {
 }
 </pre>
 
-<p>{{ EmbedLiveSample('A_high-level_definition', '100%', 80, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('A_high-level_definition', '100%', 80) }}</p>
 
 <p>Try clicking on this last version of the text label to see what happens (note also that you can find this demo on GitHub — see the <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/javascript-label.html">source code</a>, or <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html">run it live</a>)!</p>
 
@@ -273,7 +273,6 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 
 <p>Note that sometimes you'll come across bits of actual JavaScript code living inside HTML. It might look something like this:</p>
 
-<div id="inline_js_example">
 <pre class="brush: js example-bad">function createParagraph() {
   let para = document.createElement('p');
   para.textContent = 'You clicked the button!';
@@ -285,13 +284,15 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 
 <p>You can try this version of our demo below.</p>
 
-<p>{{ EmbedLiveSample('inline_js_example', '100%', 150, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Inline_JavaScript_handlers', '100%', 150) }}</p>
 
 <p>This demo has exactly the same functionality as in the previous two sections, except that the {{htmlelement("button")}} element includes an inline <code>onclick</code> handler to make the function run when the button is pressed.</p>
 
 <p><strong>Please don't do this, however.</strong> It is bad practice to pollute your HTML with JavaScript, and it is inefficient — you'd have to include the <code>onclick="createParagraph()"</code> attribute on every button you want the JavaScript to apply to.</p>
 
-<p>Using a pure JavaScript construct allows you to select all the buttons using one instruction. The code we used above to serve this purpose looks like this:</p>
+<h3>Using addEventListener instead</h3>
+
+<p>Instead of an including JavaScript in your HTML, use a pure JavaScript construct. In this case the <code>addEventListener()</code> function allows you to select all the buttons using one instruction. The code we used above to serve this purpose looks like this:</p>
 
 <pre class="brush: js">const buttons = document.querySelectorAll('button');
 
