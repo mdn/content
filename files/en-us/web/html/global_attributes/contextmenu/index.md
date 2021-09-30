@@ -9,13 +9,14 @@ tags:
   - contextmenu
 browser-compat: html.global_attributes.contextmenu
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 > **Warning:** The [contextmenu attribute is obsolete](https://html.spec.whatwg.org/multipage/obsolete.html#attr-contextmenu) and will be removed from all browsers
 
 The **`contextmenu`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is the [**id**](/en-US/docs/Web/HTML/Global_attributes/id) of a {{HTMLElement("menu")}} to use as the contextual menu for this element.
 
-A *context menu* is a menu that appears upon user interaction, such as a right-click. HTML5 now allows us to customize this menu. Here are some implementation examples, including nested menus.
+A _context menu_ is a menu that appears upon user interaction, such as a right-click. HTML5 now allows us to customize this menu. Here are some implementation examples, including nested menus.
 
 ## Example
 
@@ -96,5 +97,5 @@ The [contextmenu attribute is obsolete](https://html.spec.whatwg.org/multipage/o
 
 ## See also
 
-*   All [global attributes](/en-US/docs/Web/HTML/Global_attributes)
-*   {{domxref("HTMLElement.contextMenu")}}
+- All [global attributes](/en-US/docs/Web/HTML/Global_attributes)
+- {{domxref("HTMLElement.contextMenu")}}

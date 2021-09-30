@@ -11,6 +11,7 @@ tags:
   - minlength
   - textarea
 ---
+
 {{HTMLSidebar}}
 
 The **`minlength`** attribute defines the minimum number of characters (as UTF-16 code units) the user can enter into an {{htmlelement('input')}} or {{htmlelement('textarea')}}. This must be an integer value 0 or higher. If no minlength is specified, or an invalid value is specified, the input has no minimum length. This value must be less than or equal to the value of [maxlength](/en-US/docs/Web/HTML/Attributes/maxlength), otherwise the value will never be valid, as it is impossible to meet both criteria.
@@ -25,7 +26,7 @@ By adding `minlength="5"`, the value must either be empty or five characters or 
 <label for="fruit">Enter a fruit name that is at least 5 letters long</label> <input type="text" minlength="5" id="fruit">
 ```
 
-We can use pseudoclasses to style the element based on whether the value is valid. The value will be valid as long as it is either null (empty) or five or more characters long. *Lime* is invalid, *lemon is valid*.
+We can use pseudoclasses to style the element based on whether the value is valid. The value will be valid as long as it is either null (empty) or five or more characters long. _Lime_ is invalid, _lemon is valid_.
 
 ```css
 input {
@@ -72,9 +73,9 @@ input:invalid:focus {
 
 ## See also
 
-*   [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength)
-*   [`size`](/en-US/docs/Web/HTML/Attributes/size)
-*   [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern)
-*   [Constraint validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)
-*   [Constraint validation API](/en-US/docs/Web/API/Constraint_validation)
-*   {{htmlelement('input')}}
+- [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength)
+- [`size`](/en-US/docs/Web/HTML/Attributes/size)
+- [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern)
+- [Constraint validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Constraint validation API](/en-US/docs/Web/API/Constraint_validation)
+- {{htmlelement('input')}}

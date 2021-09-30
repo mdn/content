@@ -9,6 +9,7 @@ tags:
   - Web
 browser-compat: html.elements.data
 ---
+
 {{HTMLRef}}
 
 The **`<data>`** [HTML](/en-US/docs/Web/HTML) element links a given piece of content with a machine-readable translation. If the content is time- or date-related, the {{HTMLElement("time")}} element must be used.
@@ -76,8 +77,8 @@ The **`<data>`** [HTML](/en-US/docs/Web/HTML) element links a given piece of co
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-*   {{htmlattrdef("value")}}
-    *   : This attribute specifies the machine-readable translation of the content of the element.
+- {{htmlattrdef("value")}}
+  - : This attribute specifies the machine-readable translation of the content of the element.
 
 ## Examples
 
@@ -102,4 +103,4 @@ The following example displays product names but also associates each name with 
 
 ## See also
 
-*   The HTML {{HTMLElement("time")}} element.
+- The HTML {{HTMLElement("time")}} element.

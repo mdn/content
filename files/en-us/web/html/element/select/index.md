@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: html.elements.select
 ---
+
 {{HTMLRef}}
 
 The **`<select>`** [HTML](/en-US/docs/Web/HTML) element represents a control that provides a menu of options:
@@ -30,26 +31,29 @@ For further examples, see [The native form widgets: Drop-down content](/en-US/do
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-*   {{htmlattrdef("autocomplete")}}
-    *   : A {{domxref("DOMString")}} providing a hint for a {{Glossary("user agent", "user agent's")}} autocomplete feature. See [The HTML autocomplete attribute](/en-US/docs/Web/HTML/Attributes/autocomplete) for a complete list of values and details on how to use autocomplete.
-*   {{htmlattrdef("autofocus")}}
-    *   : This Boolean attribute lets you specify that a form control should have input focus when the page loads. Only one form element in a document can have the `autofocus` attribute.
-*   {{htmlattrdef("disabled")}}
-    *   : This Boolean attribute indicates that the user cannot interact with the control. If this attribute is not specified, the control inherits its setting from the containing element, for example {{htmlelement("fieldset")}}; if there is no containing element with the `disabled` attribute set, then the control is enabled.
-*   {{htmlattrdef("form")}}
-    *   : The {{HTMLElement("form")}} element to associate the `<select>` with (its *form owner*). The value of this attribute must be the {{htmlattrxref("id")}} of a `<form>` in the same document. (If this attribute is not set, the `<select>` is associated with its ancestor `<form>` element, if any.)
+- {{htmlattrdef("autocomplete")}}
+  - : A {{domxref("DOMString")}} providing a hint for a {{Glossary("user agent", "user agent's")}} autocomplete feature. See [The HTML autocomplete attribute](/en-US/docs/Web/HTML/Attributes/autocomplete) for a complete list of values and details on how to use autocomplete.
+- {{htmlattrdef("autofocus")}}
+  - : This Boolean attribute lets you specify that a form control should have input focus when the page loads. Only one form element in a document can have the `autofocus` attribute.
+- {{htmlattrdef("disabled")}}
+  - : This Boolean attribute indicates that the user cannot interact with the control. If this attribute is not specified, the control inherits its setting from the containing element, for example {{htmlelement("fieldset")}}; if there is no containing element with the `disabled` attribute set, then the control is enabled.
+- {{htmlattrdef("form")}}
 
-        This attribute lets you associate `<select>` elements to `<form>`s anywhere in the document, not just inside a `<form>`. It can also override an ancestor `<form>` element.
-*   {{htmlattrdef("multiple")}}
-    *   : This Boolean attribute indicates that multiple options can be selected in the list. If it is not specified, then only one option can be selected at a time. When `multiple` is specified, most browsers will show a scrolling list box instead of a single line dropdown.
-*   {{htmlattrdef("name")}}
-    *   : This attribute is used to specify the name of the control.
-*   {{htmlattrdef("required")}}
-    *   : A Boolean attribute indicating that an option with a non-empty string value must be selected.
-*   {{htmlattrdef("size")}}
-    *   : If the control is presented as a scrolling list box (e.g. when `multiple` is specified), this attribute represents the number of rows in the list that should be visible at one time. Browsers are not required to present a select element as a scrolled list box. The default value is `0`.
+  - : The {{HTMLElement("form")}} element to associate the `<select>` with (its _form owner_). The value of this attribute must be the {{htmlattrxref("id")}} of a `<form>` in the same document. (If this attribute is not set, the `<select>` is associated with its ancestor `<form>` element, if any.)
 
-        > **Note:** According to the HTML5 specification, the default value for size should be `1`; however, in practice, this has been found to break some web sites, and no other browser currently does that, so Mozilla has opted to continue to return `0` for the time being with Firefox.
+    This attribute lets you associate `<select>` elements to `<form>`s anywhere in the document, not just inside a `<form>`. It can also override an ancestor `<form>` element.
+
+- {{htmlattrdef("multiple")}}
+  - : This Boolean attribute indicates that multiple options can be selected in the list. If it is not specified, then only one option can be selected at a time. When `multiple` is specified, most browsers will show a scrolling list box instead of a single line dropdown.
+- {{htmlattrdef("name")}}
+  - : This attribute is used to specify the name of the control.
+- {{htmlattrdef("required")}}
+  - : A Boolean attribute indicating that an option with a non-empty string value must be selected.
+- {{htmlattrdef("size")}}
+
+  - : If the control is presented as a scrolling list box (e.g. when `multiple` is specified), this attribute represents the number of rows in the list that should be visible at one time. Browsers are not required to present a select element as a scrolled list box. The default value is `0`.
+
+    > **Note:** According to the HTML5 specification, the default value for size should be `1`; however, in practice, this has been found to break some web sites, and no other browser currently does that, so Mozilla has opted to continue to return `0` for the time being with Firefox.
 
 ## Usage notes
 
@@ -61,63 +65,67 @@ Mouse users can hold the <kbd>Ctrl</kbd>, <kbd>Command</kbd>, or <kbd>Shift</kbd
 
 > **Warning:** The mechanism for selecting multiple non-contiguous items via the keyboard described below currently only seems to work in Firefox.
 >
-> On macOS, the <kbd>Ctrl</kbd> + <kbd>Up</kbd> and <kbd>Ctrl</kbd> + <kbd>Down</kbd> shortcuts conflict with the OS default shortcuts for *Mission Control* and *Application windows*, so you'll have to turn these off before it will work.
+> On macOS, the <kbd>Ctrl</kbd> + <kbd>Up</kbd> and <kbd>Ctrl</kbd> + <kbd>Down</kbd> shortcuts conflict with the OS default shortcuts for _Mission Control_ and _Application windows_, so you'll have to turn these off before it will work.
 
 Keyboard users can select multiple contiguous items by:
 
-*   Focusing on the `<select>` element (e.g. using 
+- Focusing on the `<select>` element (e.g. using
 
-    <kbd>Tab</kbd>
+  <kbd>Tab</kbd>
 
-    ).
-*   Selecting an item at the top or bottom of the range they want to select using the 
+  ).
 
-    <kbd>Up</kbd>
+- Selecting an item at the top or bottom of the range they want to select using the
 
-     and 
+  <kbd>Up</kbd>
 
-    <kbd>Down</kbd>
+  and
 
-     cursor keys to go up and down the options.
-*   Holding down the 
+  <kbd>Down</kbd>
 
-    <kbd>Shift</kbd>
+  cursor keys to go up and down the options.
 
-     key and then using the 
+- Holding down the
 
-    <kbd>Up</kbd>
+  <kbd>Shift</kbd>
 
-     and 
+  key and then using the
 
-    <kbd>Down</kbd>
+  <kbd>Up</kbd>
 
-     cursor keys to increase or decrease the range of items selected.
+  and
+
+  <kbd>Down</kbd>
+
+  cursor keys to increase or decrease the range of items selected.
 
 Keyboard users can select multiple non-contiguous items by:
 
-*   Focusing on the `<select>` element (e.g. using 
+- Focusing on the `<select>` element (e.g. using
 
-    <kbd>Tab</kbd>
+  <kbd>Tab</kbd>
 
-    ).
-*   Holding down the 
+  ).
 
-    <kbd>Ctrl</kbd>
+- Holding down the
 
-     key then using the 
+  <kbd>Ctrl</kbd>
 
-    <kbd>Up</kbd>
+  key then using the
 
-     and 
+  <kbd>Up</kbd>
 
-    <kbd>Down</kbd>
+  and
 
-     cursor keys to change the "focused" select option, i.e. the one that will be selected if you choose to do so. The "focused" select option is highlighted with a dotted outline, in the same way as a keyboard-focused link.
-*   Pressing 
+  <kbd>Down</kbd>
 
-    <kbd>Space</kbd>
+  cursor keys to change the "focused" select option, i.e. the one that will be selected if you choose to do so. The "focused" select option is highlighted with a dotted outline, in the same way as a keyboard-focused link.
 
-     to select/deselect "focused" select options.
+- Pressing
+
+  <kbd>Space</kbd>
+
+  to select/deselect "focused" select options.
 
 ## Styling with CSS
 
@@ -127,8 +135,8 @@ However, these properties don't produce a consistent result across browsers, and
 
 For more useful information on styling `<select>`, see:
 
-*   [Styling HTML forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-*   [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling)
+- [Styling HTML forms](/en-US/docs/Learn/Forms/Styling_web_forms)
+- [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling)
 
 Also see the "Customizing select styles" example below for an example of you could attempt a simple `<select>` styling.
 
@@ -174,10 +182,10 @@ The follow example is more complex, showing off more features you can use on a `
 
 You'll see that:
 
-*   Multiple options are selectable because we've included the `multiple` attribute.
-*   The `size` attribute causes only 4 lines to display at a time; you can scroll to view all the options.
-*   We've included {{htmlelement("optgroup")}} elements to divide the options up into different groups. This is a purely visual grouping, its visualization generally consists of the group name being bolded, and the options being indented.
-*   The "Hamster" option includes a `disabled` attribute and therefore can't be selected at all.
+- Multiple options are selectable because we've included the `multiple` attribute.
+- The `size` attribute causes only 4 lines to display at a time; you can scroll to view all the options.
+- We've included {{htmlelement("optgroup")}} elements to divide the options up into different groups. This is a purely visual grouping, its visualization generally consists of the group name being bolded, and the options being indented.
+- The "Hamster" option includes a `disabled` attribute and therefore can't be selected at all.
 
 ### Customizing select styles
 
@@ -185,8 +193,8 @@ This example shows how you could use some CSS and JavaScript to provide extensiv
 
 This example basically:
 
-*   Clones the `<select>`'s context (the [`<option>`s](/en-US/docs/Web/HTML/Element/option)) in a parent wrapper and reimplements the standard expected behavior using additional HTML elements and JavaScript. This includes basic tab behavior to provide keyboard accessibility.
-*   Maps some standards native `attributes` to `data-attributes` of the new elements in order to manage state and CSS.
+- Clones the `<select>`'s context (the [`<option>`s](/en-US/docs/Web/HTML/Element/option)) in a parent wrapper and reimplements the standard expected behavior using additional HTML elements and JavaScript. This includes basic tab behavior to provide keyboard accessibility.
+- Maps some standards native `attributes` to `data-attributes` of the new elements in order to manage state and CSS.
 
 > **Note:** Not all native features are supported, it's a Proof of Concept. IT starts from standard HTML but the same results can be achieved starting from JSON data, custom HTML, or other solutions.
 
@@ -626,6 +634,6 @@ document.forms[0].onsubmit = function(e) {
 
 ## See also
 
-*   Events fired by `<select>`: {{domxref("HTMLElement/change_event", "change")}}, {{domxref("HTMLElement/input_event", "input")}}
-*   The {{HTMLElement("option")}} element
-*   The {{HTMLElement("optgroup")}} element
+- Events fired by `<select>`: {{domxref("HTMLElement/change_event", "change")}}, {{domxref("HTMLElement/input_event", "input")}}
+- The {{HTMLElement("option")}} element
+- The {{HTMLElement("optgroup")}} element

@@ -21,6 +21,7 @@ tags:
   - rtl
 browser-compat: html.elements.bdo
 ---
+
 {{HTMLRef}}
 
 The **`<bdo>`** [HTML](/en-US/docs/Web/HTML) element overrides the current directionality of text, so that the text within is rendered in a different direction.
@@ -99,11 +100,12 @@ The text's characters are drawn from the starting point in the given direction; 
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-*   {{htmlattrdef("dir")}}
-    *   : The direction in which text should be rendered in this element's contents. Possible values are:
+- {{htmlattrdef("dir")}}
 
-        *   `ltr`: Indicates that the text should go in a left-to-right direction.
-        *   `rtl`: Indicates that the text should go in a right-to-left direction.
+  - : The direction in which text should be rendered in this element's contents. Possible values are:
+
+    - `ltr`: Indicates that the text should go in a left-to-right direction.
+    - `rtl`: Indicates that the text should go in a right-to-left direction.
 
 ## Examples
 
@@ -132,4 +134,4 @@ The HTML 4 specification did not specify events for this element; they were adde
 
 ## See also
 
-*   Related HTML element: {{HTMLElement("bdi")}}
+- Related HTML element: {{HTMLElement("bdi")}}

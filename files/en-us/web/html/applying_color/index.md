@@ -12,6 +12,7 @@ tags:
   - Styling HTML
   - color
 ---
+
 {{HTMLRef}}
 
 This article is a primer introducing each of the ways CSS color can be used in HTML.
@@ -32,31 +33,31 @@ At a fundamental level, the {{cssxref("color")}} property defines the foreground
 
 Whenever an element is rendered, these properties are used to determine the color of the text, its background, and any decorations on the text.
 
-*   {{cssxref("color")}}
-    *   : The color to use when drawing the text and any [text decorations](/en-US/docs/Learn/CSS/Styling_text/Fundamentals#font_style_font_weight_text_transform_and_text_decoration) (such as the addition of under- or overlines, strike-through lines, and so forth.
-*   {{cssxref("background-color")}}
-    *   : The text's background color.
-*   {{cssxref("text-shadow")}}
-    *   : Configures a shadow effect to apply to text. Among the options for the shadow is the shadow's base color (which is then blurred and blended with the background based on the other parameters). See {{SectionOnPage("/en-US/docs/Learn/CSS/Styling_text/Fundamentals", "Text drop shadows")}} to learn more.
-*   {{cssxref("text-decoration-color")}}
-    *   : By default, text decorations (such as underlines, strikethroughs, etc) use the `color` property as their colors. However, you can override that behavior and use a different color for them with the `text-decoration-color` property.
-*   {{cssxref("text-emphasis-color")}}
-    *   : The color to use when drawing emphasis symbols adjacent to each character in the text. This is used primarily when drawing text for East Asian languages.
-*   {{cssxref("caret-color")}}
-    *   : The color to use when drawing the {{Glossary("caret")}} (sometimes referred to as the text input cursor) within the element. This is only useful in elements that are editable, such as {{HTMLElement("input")}} and {{HTMLElement("textarea")}} or elements whose HTML {{htmlattrxref("contenteditable")}} attribute is set.
+- {{cssxref("color")}}
+  - : The color to use when drawing the text and any [text decorations](/en-US/docs/Learn/CSS/Styling_text/Fundamentals#font_style_font_weight_text_transform_and_text_decoration) (such as the addition of under- or overlines, strike-through lines, and so forth.
+- {{cssxref("background-color")}}
+  - : The text's background color.
+- {{cssxref("text-shadow")}}
+  - : Configures a shadow effect to apply to text. Among the options for the shadow is the shadow's base color (which is then blurred and blended with the background based on the other parameters). See {{SectionOnPage("/en-US/docs/Learn/CSS/Styling_text/Fundamentals", "Text drop shadows")}} to learn more.
+- {{cssxref("text-decoration-color")}}
+  - : By default, text decorations (such as underlines, strikethroughs, etc) use the `color` property as their colors. However, you can override that behavior and use a different color for them with the `text-decoration-color` property.
+- {{cssxref("text-emphasis-color")}}
+  - : The color to use when drawing emphasis symbols adjacent to each character in the text. This is used primarily when drawing text for East Asian languages.
+- {{cssxref("caret-color")}}
+  - : The color to use when drawing the {{Glossary("caret")}} (sometimes referred to as the text input cursor) within the element. This is only useful in elements that are editable, such as {{HTMLElement("input")}} and {{HTMLElement("textarea")}} or elements whose HTML {{htmlattrxref("contenteditable")}} attribute is set.
 
 ### Boxes
 
 Every element is a box with some sort of content, and has a background and a border in addition to whatever contents the box may have.
 
-*   {{anch("Borders")}}
-    *   : See the section {{anch("Borders")}} for a list of the CSS properties you can use to set the colors of a box's borders.
-*   {{cssxref("background-color")}}
-    *   : The background color to use in areas of the element that have no foreground content.
-*   {{cssxref("column-rule-color")}}
-    *   : The color to use when drawing the line separating columns of text.
-*   {{cssxref("outline-color")}}
-    *   : The color to use when drawing an outline around the outside of the element. This outline is different from the border in that it doesn't get space set aside for it in the document (so it may overlap other content). It's generally used as a focus indicator, to show which element will receive input events.
+- {{anch("Borders")}}
+  - : See the section {{anch("Borders")}} for a list of the CSS properties you can use to set the colors of a box's borders.
+- {{cssxref("background-color")}}
+  - : The background color to use in areas of the element that have no foreground content.
+- {{cssxref("column-rule-color")}}
+  - : The color to use when drawing the line separating columns of text.
+- {{cssxref("outline-color")}}
+  - : The color to use when drawing an outline around the outside of the element. This outline is different from the border in that it doesn't get space set aside for it in the document (so it may overlap other content). It's generally used as a focus indicator, to show which element will receive input events.
 
 ### Borders
 
@@ -64,25 +65,25 @@ Any element can have a [border](/en-US/docs/Learn/CSS/Building_blocks/Background
 
 You can use the {{cssxref("border")}} shorthand property, which lets you configure everything about the border in one shot (including non-color features of borders, such as its [width](/en-US/docs/Web/CSS/border-width), [style](/en-US/docs/Web/CSS/border-style) (solid, dashed, etc.), and so forth.
 
-*   {{cssxref("border-color")}}
-    *   : Specifies a single color to use for every side of the element's border.
-*   {{cssxref("border-left-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-top-color")}}, and {{cssxref("border-bottom-color")}}
-    *   : Lets you set the color of the corresponding side of the element's border.
-*   {{cssxref("border-block-start-color")}} and {{cssxref("border-block-end-color")}}
-    *   : With these, you can set the color used to draw the borders which are closest to the start and end of the block the border surrounds. In a left-to-right writing mode (such as the way English is written), the block start border is the top edge and the block end is the bottom. This differs from the inline start and end, which are the left and right edges (corresponding to where each line of text in the box begins and ends).
-*   {{cssxref("border-inline-start-color")}} and {{cssxref("border-inline-end-color")}}
-    *   : These let you color the edges of the border closest to the beginning and the end of the start of lines of text within the box. Which side this is will vary depending on the {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}} properties, which are typically (but not always) used to adjust text directionality based on the language being displayed. For example, if the box's text is being rendered right-to-left, then the `border-inline-start-color` is applied to the right side of the border.
+- {{cssxref("border-color")}}
+  - : Specifies a single color to use for every side of the element's border.
+- {{cssxref("border-left-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-top-color")}}, and {{cssxref("border-bottom-color")}}
+  - : Lets you set the color of the corresponding side of the element's border.
+- {{cssxref("border-block-start-color")}} and {{cssxref("border-block-end-color")}}
+  - : With these, you can set the color used to draw the borders which are closest to the start and end of the block the border surrounds. In a left-to-right writing mode (such as the way English is written), the block start border is the top edge and the block end is the bottom. This differs from the inline start and end, which are the left and right edges (corresponding to where each line of text in the box begins and ends).
+- {{cssxref("border-inline-start-color")}} and {{cssxref("border-inline-end-color")}}
+  - : These let you color the edges of the border closest to the beginning and the end of the start of lines of text within the box. Which side this is will vary depending on the {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}} properties, which are typically (but not always) used to adjust text directionality based on the language being displayed. For example, if the box's text is being rendered right-to-left, then the `border-inline-start-color` is applied to the right side of the border.
 
 ### Other ways to use color
 
 CSS isn't the only web technology that supports color. There are graphics technologies that are available on the web which also support color.
 
-*   The HTML [Canvas API](/en-US/docs/Web/API/Canvas_API)
-    *   : Lets you draw 2D bitmapped graphics in a {{HTMLElement("canvas")}} element. See our [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial) to learn more.
-*   [SVG](/en-US/docs/Web/SVG) (Scalable Vector Graphics)
-    *   : Lets you draw images using commands that draw specific shapes, patterns, and lines to produce an image. SVG commands are formatted as XML, and can be embedded directly into a web page or can be placed in the page using the {{HTMLElement("img")}} element, just like any other type of image.
-*   [WebGL](/en-US/docs/Web/API/WebGL_API)
-    *   : The Web Graphics Library is an OpenGL ES-based API for drawing high-performance 2D and 3D graphics on the Web. See our [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) to find out more.
+- The HTML [Canvas API](/en-US/docs/Web/API/Canvas_API)
+  - : Lets you draw 2D bitmapped graphics in a {{HTMLElement("canvas")}} element. See our [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial) to learn more.
+- [SVG](/en-US/docs/Web/SVG) (Scalable Vector Graphics)
+  - : Lets you draw images using commands that draw specific shapes, patterns, and lines to produce an image. SVG commands are formatted as XML, and can be embedded directly into a web page or can be placed in the page using the {{HTMLElement("img")}} element, just like any other type of image.
+- [WebGL](/en-US/docs/Web/API/WebGL_API)
+  - : The Web Graphics Library is an OpenGL ES-based API for drawing high-performance 2D and 3D graphics on the Web. See our [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) to find out more.
 
 ## How to describe a color
 
@@ -102,18 +103,18 @@ There are three ways to represent an RGB color in CSS.
 
 #### Hexadecimal string notation
 
-Hexadecimal string notation represents a color using hexadecimal digits to represent each of the color components (red, green, and blue). It may also include a fourth component: the alpha channel (or opacity). Each color component can be represented as a number between 0 and 255 (0x00 and 0xFF) or, optionally, as a number between 0 and 15 (0x0 and 0xF). All components *must* be specified using the same number of digits. If you use the single-digit notation, the final color is computed by using each component's digit twice; that is, `"#D"` becomes `"#DD"` when drawing.
+Hexadecimal string notation represents a color using hexadecimal digits to represent each of the color components (red, green, and blue). It may also include a fourth component: the alpha channel (or opacity). Each color component can be represented as a number between 0 and 255 (0x00 and 0xFF) or, optionally, as a number between 0 and 15 (0x0 and 0xF). All components _must_ be specified using the same number of digits. If you use the single-digit notation, the final color is computed by using each component's digit twice; that is, `"#D"` becomes `"#DD"` when drawing.
 
 A color in hexadecimal string notation always begins with the character `"#"`. After that come the hexadecimal digits of the color code. The string is case-insensitive.
 
-*   `"#rrggbb"`
-    *   : Specifies a fully-opaque color whose red component is the hexadecimal number `0xrr`, green component is `0xgg`, and blue component is `0xbb`.
-*   `"#rrggbbaa"`
-    *   : Specifies a color whose red component is the hexadecimal number `0xrr`, green component is `0xgg`, and blue component is `0xbb`. The alpha channel is specified by `0xaa`; the lower this value is, the more translucent the color becomes.
-*   `"#rgb"`
-    *   : Specifies a color whose red component is the hexadecimal number `0xrr`, green component is `0xgg`, and blue component is `0xbb`.
-*   `"#rgba"`
-    *   : Specifies a color whose red component is the hexadecimal number `0xrr`, green component is `0xgg`, and blue component is `0xbb`. The alpha channel is specified by `0xaa`; the lower this value is, the more translucent the color becomes.
+- `"#rrggbb"`
+  - : Specifies a fully-opaque color whose red component is the hexadecimal number `0xrr`, green component is `0xgg`, and blue component is `0xbb`.
+- `"#rrggbbaa"`
+  - : Specifies a color whose red component is the hexadecimal number `0xrr`, green component is `0xgg`, and blue component is `0xbb`. The alpha channel is specified by `0xaa`; the lower this value is, the more translucent the color becomes.
+- `"#rgb"`
+  - : Specifies a color whose red component is the hexadecimal number `0xrr`, green component is `0xgg`, and blue component is `0xbb`.
+- `"#rgba"`
+  - : Specifies a color whose red component is the hexadecimal number `0xrr`, green component is `0xgg`, and blue component is `0xbb`. The alpha channel is specified by `0xaa`; the lower this value is, the more translucent the color becomes.
 
 As an example, you can represent the opaque color bright blue as `"#0000ff"` or `"#00f"`. To make it 25% opaque, you can use `"#0000ff44"` or `"#00f4"`.
 
@@ -123,10 +124,10 @@ RGB (Red/Green/Blue) functional notation, like hexadecimal string notation, repr
 
 Legal values for each of these parameters are:
 
-*   `red`, `green`, and `blue`
-    *   : Each must be an {{cssxref("&lt;integer&gt;")}} value between 0 and 255 (inclusive), or a {{cssxref("&lt;percentage&gt;")}} from 0% to 100%.
-*   `alpha`
-    *   : The alpha channel is a number between 0.0 (fully transparent) and 1.0 (fully opaque). You can also specify a percentage where 0% is the same as 0.0 and 100% is the same as 1.0.
+- `red`, `green`, and `blue`
+  - : Each must be an {{cssxref("&lt;integer&gt;")}} value between 0 and 255 (inclusive), or a {{cssxref("&lt;percentage&gt;")}} from 0% to 100%.
+- `alpha`
+  - : The alpha channel is a number between 0.0 (fully transparent) and 1.0 (fully opaque). You can also specify a percentage where 0% is the same as 0.0 and 100% is the same as 1.0.
 
 For example, a bright red that's 50% opaque can be represented as `rgb(255, 0, 0, 0.5)` or `rgb(100%, 0, 0, 50%)`.
 
@@ -292,9 +293,9 @@ In brief, `.box` establishes the size of each box, as well as the configuration 
 
 The `.boxLeft` class—which, cleverly, is used to style the box on the left—floats the box to the left, then sets up the colors:
 
-*   The box's background color is set by changing the value of the CSS {{cssxref("background-color")}} property to `rgb(245, 130, 130)`.
-*   An outline is defined for the box. Unlike the more commonly used `border`, {{cssxref("outline")}} doesn't affect layout at all; it draws over the top of whatever may happen to be outside the element's box instead of making room as `border` does. This outline is a solid, dark red line that's two pixels thick. Note the use of the `darkred` keyword when specifying the color.
-*   Notice that we're not explicitly setting the text color. That means the value of {{cssxref("color")}} will be inherited from the nearest containing element that defines it. By default, that's black.
+- The box's background color is set by changing the value of the CSS {{cssxref("background-color")}} property to `rgb(245, 130, 130)`.
+- An outline is defined for the box. Unlike the more commonly used `border`, {{cssxref("outline")}} doesn't affect layout at all; it draws over the top of whatever may happen to be outside the element's box instead of making room as `border` does. This outline is a solid, dark red line that's two pixels thick. Note the use of the `darkred` keyword when specifying the color.
+- Notice that we're not explicitly setting the text color. That means the value of {{cssxref("color")}} will be inherited from the nearest containing element that defines it. By default, that's black.
 
 ```css
 .boxRight {
@@ -311,11 +312,11 @@ The `.boxLeft` class—which, cleverly, is used to style the box on the left—f
 
 Finally, the `.boxRight` class describes the unique properties of the box that's drawn on the right. It's configured to float the box to the right so that it appears next to the previous box. Then the following colors are established:
 
-*   The `background-color` is set using the HSL value specified using `hsl(270deg, 50%, 75%)`. This is a medium purple color.
-*   The box's `outline` is used to specify that the box should be enclosed in a four pixel thick dashed line whose color is a somewhat deeper purple (`rgb(110, 20, 120)`).
-*   The foreground (text) color is specified by setting the {{cssxref("color")}} property to `hsl(0deg, 100%, 100%)`. This is one of many ways to specify the color white.
-*   We add a green wavy line under the text with {{cssxref("text-decoration")}}.
-*   Finally, a bit of a shadow is added to the text using {{cssxref("text-shadow")}}. Its `color` parameter is set to `black`.
+- The `background-color` is set using the HSL value specified using `hsl(270deg, 50%, 75%)`. This is a medium purple color.
+- The box's `outline` is used to specify that the box should be enclosed in a four pixel thick dashed line whose color is a somewhat deeper purple (`rgb(110, 20, 120)`).
+- The foreground (text) color is specified by setting the {{cssxref("color")}} property to `hsl(0deg, 100%, 100%)`. This is one of many ways to specify the color white.
+- We add a green wavy line under the text with {{cssxref("text-decoration")}}.
+- Finally, a bit of a shadow is added to the text using {{cssxref("text-shadow")}}. Its `color` parameter is set to `black`.
 
 ## Letting the user pick a color
 
@@ -393,9 +394,9 @@ Coming up with just the right colors can be tricky, especially without training 
 
 The first step is to choose your **base color**. This is the color that in some way defines your website or the subject matter of the site. Just as we associate green with the beverage {{interwiki("wikipedia", "Mountain Dew")}} and one might think of the color blue in relationship with the sky or the ocean, choosing an appropriate base color to represent your site is a good place to start. There are plenty of ways to select a base color; a few ideas include:
 
-*   A color that is naturally associated with the topic of your content, such as the existing color identified with a product or idea or a color representative of the emotion you wish to convey.
-*   A color that comes from imagery associated with what your content is about. If you're creating a website about a given item or product, choose a color that's physically present on that item.
-*   Browse websites that let you look at lots of existing color palettes and images to find inspiration.
+- A color that is naturally associated with the topic of your content, such as the existing color identified with a product or idea or a color representative of the emotion you wish to convey.
+- A color that comes from imagery associated with what your content is about. If you're creating a website about a given item or product, choose a color that's physically present on that item.
+- Browse websites that let you look at lots of existing color palettes and images to find inspiration.
 
 When trying to decide upon a base color, you may find that browser extensions that let you select colors from web content can be particularly handy. Some of these are even specifically designed to help with this sort of work. For example, the website [ColorZilla](http://www.colorzilla.com/) offers an extension ([Chrome](http://www.colorzilla.com/chrome) / [Firefox](http://www.colorzilla.com/firefox)) that offers an eyedropper tool for picking colors from the web. It can also take averages of the colors of pixels in various sized areas or even a selected area of the page.
 
@@ -407,9 +408,9 @@ Once you have decided on your base color, there are plenty of online tools that 
 
 A few examples (all free to use as of the time this list was last revised):
 
-*   [MDN's color picker tool](/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool)
-*   [Paletton](http://paletton.com)
-*   [Adobe Color CC online color wheel](https://color.adobe.com/create/color-wheel)
+- [MDN's color picker tool](/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool)
+- [Paletton](http://paletton.com)
+- [Adobe Color CC online color wheel](https://color.adobe.com/create/color-wheel)
 
 When designing your palette, be sure to keep in mind that in addition to the colors these tools typically generate, you'll probably also need to add some core neutral colors such as white (or nearly white), black (or nearly black), and some number of shades of gray.
 
@@ -419,10 +420,10 @@ When designing your palette, be sure to keep in mind that in addition to the col
 
 A full review of color theory is beyond the scope of this article, but there are plenty of articles about color theory available, as well as courses you can find at nearby schools and universities. A couple of useful resources about color theory:
 
-*   [Color Science](https://www.khanacademy.org/partner-content/pixar/color) ([Khan Academy](https://www.khanacademy.org/) in association with [Pixar](https://www.pixar.com/))
-    *   : An online course which introduces concepts such as what color is, how it's perceived, and how to use colors to express ideas. Presented by Pixar artists and designers.
-*   {{interwiki("wikipedia", "Color theory")}} on Wikipedia
-    *   : Wikipedia's entry on color theory, which has a lot of great information from a technical perspective. It's not really a resource for helping you with the color selection process, but is still full of useful information.
+- [Color Science](https://www.khanacademy.org/partner-content/pixar/color) ([Khan Academy](https://www.khanacademy.org/) in association with [Pixar](https://www.pixar.com/))
+  - : An online course which introduces concepts such as what color is, how it's perceived, and how to use colors to express ideas. Presented by Pixar artists and designers.
+- {{interwiki("wikipedia", "Color theory")}} on Wikipedia
+  - : Wikipedia's entry on color theory, which has a lot of great information from a technical perspective. It's not really a resource for helping you with the color selection process, but is still full of useful information.
 
 ### Color and accessibility
 
@@ -434,13 +435,13 @@ You should do at least basic research into {{interwiki("wikipedia", "color blind
 
 For more information about color blindness, see the following articles:
 
-*   [Medline Plus: Color Blindness](https://medlineplus.gov/colorblindness.html) (United States National Institute of Health)
-*   [American Academy of Ophthalmology: What Is Color Blindness?](https://www.aao.org/eye-health/diseases/what-is-color-blindness)
-*   [Color Blindness & Web Design](https://www.usability.gov/get-involved/blog/2010/02/color-blindness.html) (Usability.gov: United States Department of Health and Human Services)
+- [Medline Plus: Color Blindness](https://medlineplus.gov/colorblindness.html) (United States National Institute of Health)
+- [American Academy of Ophthalmology: What Is Color Blindness?](https://www.aao.org/eye-health/diseases/what-is-color-blindness)
+- [Color Blindness & Web Design](https://www.usability.gov/get-involved/blog/2010/02/color-blindness.html) (Usability.gov: United States Department of Health and Human Services)
 
 ### Palette design example
 
-Let's consider a quick example of selecting an appropriate color palette for a site. Imagine that you're building a website for a new game that takes place on the planet Mars. So let's do a [Google search for photos of Mars](https://www.google.com/search?q=Mars\&tbm=isch). Lots of good examples of Martian coloration there. We carefully avoid the mockups and the photos from movies. And we decide to use a photo taken by one of the Mars landers humanity has parked on the surface over the last few decades, since the game takes place on the planet's surface. We use a color picker tool to select a sample of the color we choose.
+Let's consider a quick example of selecting an appropriate color palette for a site. Imagine that you're building a website for a new game that takes place on the planet Mars. So let's do a [Google search for photos of Mars](https://www.google.com/search?q=Mars&tbm=isch). Lots of good examples of Martian coloration there. We carefully avoid the mockups and the photos from movies. And we decide to use a photo taken by one of the Mars landers humanity has parked on the surface over the last few decades, since the game takes place on the planet's surface. We use a color picker tool to select a sample of the color we choose.
 
 Using an eyedropper tool, we identify a color we like and determine that the color in question is `#D79C7A`, which is an appropriate rusty orange-red color that's so stereotypical of the Martian surface.
 
@@ -482,6 +483,6 @@ You can set `color-adjust` to `exact` to tell the browser that the element or el
 
 ## See also
 
-*   [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-*   [Graphics on the web](/en-US/docs/Web/Guide/Graphics)
-*   [MDN's color picker tool](/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool)
+- [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
+- [Graphics on the web](/en-US/docs/Web/Guide/Graphics)
+- [MDN's color picker tool](/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool)

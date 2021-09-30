@@ -15,9 +15,10 @@ tags:
   - Web
 browser-compat: html.elements.a
 ---
+
 {{HTMLRef}}
 
-The **`<a>`** [HTML](/en-US/docs/Web/HTML) element (or *anchor* element), with [its `href` attribute](#href), creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.
+The **`<a>`** [HTML](/en-US/docs/Web/HTML) element (or _anchor_ element), with [its `href` attribute](#href), creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.
 
 Content within each `<a>` **should** indicate the link's destination. If the `href` attribute is present, pressing the enter key while focused on the `<a>` element will activate it.
 
@@ -27,78 +28,92 @@ Content within each `<a>` **should** indicate the link's destination. If the `h
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-*   {{HTMLAttrDef("download")}}
-    *   : Prompts the user to save the linked URL instead of navigating to it. Can be used with or without a value:
+- {{HTMLAttrDef("download")}}
 
-        *   Without a value, the browser will suggest a filename/extension, generated from various sources:
+  - : Prompts the user to save the linked URL instead of navigating to it. Can be used with or without a value:
 
-            *   The {{HTTPHeader("Content-Disposition")}} HTTP header
-            *   The final segment in the URL [path](/en-US/docs/Web/API/URL/pathname)
-            *   The {{Glossary("MIME_type", "media type")}} (from the {{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs), or {{domxref("Blob.type")}} for a [`blob:` URL](/en-US/docs/Web/API/URL/createObjectURL))
-        *   Defining a value suggests it as the filename. `/` and `\` characters are converted to underscores (`_`). Filesystems may forbid other characters in filenames, so browsers will adjust the suggested name if necessary.
+    - Without a value, the browser will suggest a filename/extension, generated from various sources:
 
-        > **Note:**
-        >
-        > *   `download` only works for [same-origin URLs](/en-US/docs/Web/Security/Same-origin_policy), or the `blob:` and `data:` schemes.
-        > *   If the `Content-Disposition` header has different information from the `download` attribute, resulting behavior may differ:
-        >
-        >     *   If the header specifies a `filename`, it takes priority over a filename specified in the `download` attribute.
-        >     *   If the header specifies a disposition of `inline`, Chrome, and Firefox 82 and later, prioritize the attribute and treat it as a download. Firefox versions before 82 prioritize the header and will display the content inline.
-*   {{HTMLAttrDef("href")}}
-    *   : The URL that the hyperlink points to. Links are not restricted to HTTP-based URLs — they can use any URL scheme supported by browsers:
+      - The {{HTTPHeader("Content-Disposition")}} HTTP header
+      - The final segment in the URL [path](/en-US/docs/Web/API/URL/pathname)
+      - The {{Glossary("MIME_type", "media type")}} (from the {{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs), or {{domxref("Blob.type")}} for a [`blob:` URL](/en-US/docs/Web/API/URL/createObjectURL))
 
-        *   Sections of a page with fragment URLs
-        *   Pieces of media files with media fragments
-        *   Telephone numbers with `tel:` URLs
-        *   Email addresses with `mailto:` URLs
-        *   While web browsers may not support other URL schemes, web sites can with [`registerProtocolHandler()`](/en-US/docs/Web/API/Navigator/registerProtocolHandler)
-*   {{HTMLAttrDef("hreflang")}}
-    *   : Hints at the human language of the linked URL. No built-in functionality. Allowed values are the same as [the global `lang` attribute](/en-US/docs/Web/HTML/Global_attributes/lang).
-*   {{HTMLAttrDef("ping")}}
-    *   : A space-separated list of URLs. When the link is followed, the browser will send {{HTTPMethod("POST")}} requests with the body `PING` to the URLs. Typically for tracking.
-*   {{HTMLAttrDef("referrerpolicy")}}
-    *   : How much of the [referrer](/en-US/docs/Web/HTTP/Headers/Referer) to send when following the link.
+    - Defining a value suggests it as the filename. `/` and `\` characters are converted to underscores (`_`). Filesystems may forbid other characters in filenames, so browsers will adjust the suggested name if necessary.
 
-        *   `no-referrer`: The {{HTTPHeader("Referer")}} header will not be sent.
-        *   `no-referrer-when-downgrade`: The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
-        *   `origin`: The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn/Common_questions/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
-        *   `origin-when-cross-origin`: The referrer sent to other origins will be limited to the scheme, the host, and the port. Navigations on the same origin will still include the path.
-        *   `same-origin`: A referrer will be sent for {{Glossary("Same-origin policy", "same origin")}}, but cross-origin requests will contain no referrer information.
-        *   `strict-origin`: Only send the origin of the document as the referrer when the protocol security level stays the same (HTTPS→HTTPS), but don't send it to a less secure destination (HTTPS→HTTP).
-        *   `strict-origin-when-cross-origin` (default): Send a full URL when performing a same-origin request, only send the origin when the protocol security level stays the same (HTTPS→HTTPS), and send no header to a less secure destination (HTTPS→HTTP).
-        *   `unsafe-url`: The referrer will include the origin *and* the path (but not the [fragment](/en-US/docs/Web/API/HTMLAnchorElement/hash), [password](/en-US/docs/Web/API/HTMLAnchorElement/password), or [username](/en-US/docs/Web/API/HTMLAnchorElement/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
-*   {{HTMLAttrDef("rel")}}
-    *   : The relationship of the linked URL as space-separated [link types](/en-US/docs/Web/HTML/Link_types).
-*   {{HTMLAttrDef("target")}}
-    *   : Where to display the linked URL, as the name for a *browsing context* (a tab, window, or {{HTMLElement("iframe")}}). The following keywords have special meanings for where to load the URL:
+    > **Note:**
+    >
+    > - `download` only works for [same-origin URLs](/en-US/docs/Web/Security/Same-origin_policy), or the `blob:` and `data:` schemes.
+    > - If the `Content-Disposition` header has different information from the `download` attribute, resulting behavior may differ:
+    >
+    >   - If the header specifies a `filename`, it takes priority over a filename specified in the `download` attribute.
+    >   - If the header specifies a disposition of `inline`, Chrome, and Firefox 82 and later, prioritize the attribute and treat it as a download. Firefox versions before 82 prioritize the header and will display the content inline.
 
-        *   `_self`: the current browsing context. (Default)
-        *   `_blank`: usually a new tab, but users can configure browsers to open a new window instead.
-        *   `_parent`: the parent browsing context of the current one. If no parent, behaves as `_self`.
-        *   `_top`: the topmost browsing context (the "highest" context that’s an ancestor of the current one). If no ancestors, behaves as `_self`.
+- {{HTMLAttrDef("href")}}
 
-        > **Note:** Setting `target="_blank"` on `<a>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types/noopener) which does not set `window.opener`. See [browser compatibility](#browser_compatibility) for support status.
-*   {{HTMLAttrDef("type")}}
-    *   : Hints at the linked URL’s format with a {{Glossary("MIME type")}}. No built-in functionality.
+  - : The URL that the hyperlink points to. Links are not restricted to HTTP-based URLs — they can use any URL scheme supported by browsers:
+
+    - Sections of a page with fragment URLs
+    - Pieces of media files with media fragments
+    - Telephone numbers with `tel:` URLs
+    - Email addresses with `mailto:` URLs
+    - While web browsers may not support other URL schemes, web sites can with [`registerProtocolHandler()`](/en-US/docs/Web/API/Navigator/registerProtocolHandler)
+
+- {{HTMLAttrDef("hreflang")}}
+  - : Hints at the human language of the linked URL. No built-in functionality. Allowed values are the same as [the global `lang` attribute](/en-US/docs/Web/HTML/Global_attributes/lang).
+- {{HTMLAttrDef("ping")}}
+  - : A space-separated list of URLs. When the link is followed, the browser will send {{HTTPMethod("POST")}} requests with the body `PING` to the URLs. Typically for tracking.
+- {{HTMLAttrDef("referrerpolicy")}}
+
+  - : How much of the [referrer](/en-US/docs/Web/HTTP/Headers/Referer) to send when following the link.
+
+    - `no-referrer`: The {{HTTPHeader("Referer")}} header will not be sent.
+    - `no-referrer-when-downgrade`: The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
+    - `origin`: The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn/Common_questions/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
+    - `origin-when-cross-origin`: The referrer sent to other origins will be limited to the scheme, the host, and the port. Navigations on the same origin will still include the path.
+    - `same-origin`: A referrer will be sent for {{Glossary("Same-origin policy", "same origin")}}, but cross-origin requests will contain no referrer information.
+    - `strict-origin`: Only send the origin of the document as the referrer when the protocol security level stays the same (HTTPS→HTTPS), but don't send it to a less secure destination (HTTPS→HTTP).
+    - `strict-origin-when-cross-origin` (default): Send a full URL when performing a same-origin request, only send the origin when the protocol security level stays the same (HTTPS→HTTPS), and send no header to a less secure destination (HTTPS→HTTP).
+    - `unsafe-url`: The referrer will include the origin _and_ the path (but not the [fragment](/en-US/docs/Web/API/HTMLAnchorElement/hash), [password](/en-US/docs/Web/API/HTMLAnchorElement/password), or [username](/en-US/docs/Web/API/HTMLAnchorElement/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
+
+- {{HTMLAttrDef("rel")}}
+  - : The relationship of the linked URL as space-separated [link types](/en-US/docs/Web/HTML/Link_types).
+- {{HTMLAttrDef("target")}}
+
+  - : Where to display the linked URL, as the name for a _browsing context_ (a tab, window, or {{HTMLElement("iframe")}}). The following keywords have special meanings for where to load the URL:
+
+    - `_self`: the current browsing context. (Default)
+    - `_blank`: usually a new tab, but users can configure browsers to open a new window instead.
+    - `_parent`: the parent browsing context of the current one. If no parent, behaves as `_self`.
+    - `_top`: the topmost browsing context (the "highest" context that’s an ancestor of the current one). If no ancestors, behaves as `_self`.
+
+    > **Note:** Setting `target="_blank"` on `<a>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types/noopener) which does not set `window.opener`. See [browser compatibility](#browser_compatibility) for support status.
+
+- {{HTMLAttrDef("type")}}
+  - : Hints at the linked URL’s format with a {{Glossary("MIME type")}}. No built-in functionality.
 
 ### Deprecated attributes
 
-*   {{HTMLAttrDef("charset")}}{{Deprecated_Inline}}
-    *   : Hinted at the {{Glossary("character encoding")}} of the linked URL.
+- {{HTMLAttrDef("charset")}}{{Deprecated_Inline}}
 
-        > **Note:** This attribute is deprecated and **should not be used by authors**. Use the HTTP {{HTTPHeader("Content-Type")}} header on the linked URL.
-*   {{HTMLAttrDef("coords")}}{{Deprecated_Inline}}
-    *   : Used with [the `shape` attribute](#shape). A comma-separated list of coordinates.
-*   {{HTMLAttrDef("name")}}{{Deprecated_Inline}}
-    *   : Was required to define a possible target location in a page. In HTML 4.01, `id` and `name` could both be used on `<a>`, as long as they had identical values.
+  - : Hinted at the {{Glossary("character encoding")}} of the linked URL.
 
-        > **Note:** Use the global attribute {{HTMLAttrxRef("id")}} instead.
-*   {{HTMLAttrDef("rev")}}{{Deprecated_Inline}}
-    *   : Specified a reverse link; the opposite of [the `rel` attribute](#rel). Deprecated for being very confusing.
-*   {{HTMLAttrDef("shape")}}{{Deprecated_Inline}}
-    *   : The shape of the hyperlink’s region in an image map.
+    > **Note:** This attribute is deprecated and **should not be used by authors**. Use the HTTP {{HTTPHeader("Content-Type")}} header on the linked URL.
 
-        > **Note:** Use the {{HTMLElement("area")}} element for image maps instead.
+- {{HTMLAttrDef("coords")}}{{Deprecated_Inline}}
+  - : Used with [the `shape` attribute](#shape). A comma-separated list of coordinates.
+- {{HTMLAttrDef("name")}}{{Deprecated_Inline}}
+
+  - : Was required to define a possible target location in a page. In HTML 4.01, `id` and `name` could both be used on `<a>`, as long as they had identical values.
+
+    > **Note:** Use the global attribute {{HTMLAttrxRef("id")}} instead.
+
+- {{HTMLAttrDef("rev")}}{{Deprecated_Inline}}
+  - : Specified a reverse link; the opposite of [the `rel` attribute](#rel). Deprecated for being very confusing.
+- {{HTMLAttrDef("shape")}}{{Deprecated_Inline}}
+
+  - : The shape of the hyperlink’s region in an image map.
+
+    > **Note:** Use the {{HTMLElement("area")}} element for image maps instead.
 
 ## Properties
 
@@ -265,10 +280,10 @@ For details about `mailto:` URLs, such as including a subject or body, see [Emai
 
 `tel:` link behavior varies with device capabilities:
 
-*   Cellular devices autodial the number.
-*   Most operating systems have programs that can make calls, like Skype or FaceTime.
-*   Websites can make phone calls with {{domxref("Navigator/registerProtocolHandler", "registerProtocolHandler")}}, such as `web.skype.com`.
-*   Other behaviors include saving the number to contacts, or sending the number to another device.
+- Cellular devices autodial the number.
+- Most operating systems have programs that can make calls, like Skype or FaceTime.
+- Websites can make phone calls with {{domxref("Navigator/registerProtocolHandler", "registerProtocolHandler")}}, such as `web.skype.com`.
+- Other behaviors include saving the number to contacts, or sending the number to another device.
 
 See {{RFC(3966)}} for syntax, additional features, and other details about the `tel:` URL scheme.
 
@@ -339,7 +354,7 @@ document.querySelector('a').addEventListener('click', event =>
 
 ## Security and privacy
 
-`<a>` elements can have consequences for users’ security and privacy. See [`Referer` header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:\_privacy_and_security_concerns) for information.
+`<a>` elements can have consequences for users’ security and privacy. See [`Referer` header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for information.
 
 Using `target="_blank"` without [`rel="noreferrer"`](/en-US/docs/Web/HTML/Link_types/noreferrer) and [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types/noopener) makes the website vulnerable to {{domxref("window.opener")}} API exploitation attacks ([vulnerability description](https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/)), although note that, in newer browser versions setting `target="_blank"` implicitly provides the same protection as setting `rel="noopener"`. See [browser compatibility](#browser_compatibility) for details.
 
@@ -415,10 +430,10 @@ If an icon is used to signify link behavior, make sure it has {{HTMLAttrxRef("al
 </a>
 ```
 
-*   [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
-*   [MDN / Understanding WCAG, Guideline 3.2](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline\_3.2\_—\_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
-*   [G200: Opening new windows and tabs from a link only when necessary](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
-*   [G201: Giving users advanced warning when opening a new window](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
+- [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
+- [MDN / Understanding WCAG, Guideline 3.2](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
+- [G200: Opening new windows and tabs from a link only when necessary](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
+- [G201: Giving users advanced warning when opening a new window](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
 
 ### Skip links
 
@@ -450,10 +465,10 @@ Skip links let keyboard users bypass content repeated throughout multiple pages,
 
 Skip links are especially useful for people who navigate with the aid of assistive technology such as switch control, voice command, or mouth sticks/head wands, where the act of moving through repetitive links can be laborious.
 
-*   [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
-*   [How-to: Use Skip Navigation links](https://a11yproject.com/posts/2013-05-11-skip-nav-links/)
-*   [MDN / Understanding WCAG, Guideline 2.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline\_2.4\_%e2%80%94\_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
-*   [Understanding Success Criterion 2.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
+- [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
+- [How-to: Use Skip Navigation links](https://a11yproject.com/posts/2013-05-11-skip-nav-links/)
+- [MDN / Understanding WCAG, Guideline 2.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [Understanding Success Criterion 2.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 
 ### Size and proximity
 
@@ -463,9 +478,9 @@ Interactive elements, like links, should provide an area large enough that it is
 
 Text-only links in prose content are exempt from this requirement, but it’s still a good idea to make sure enough text is hyperlinked to be easily activated.
 
-*   [Understanding Success Criterion 2.5.5: Target Size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
-*   [Target Size and 2.5.5](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
-*   [Quick test: Large touch targets](https://www.a11yproject.com/posts/2018-11-21-large-touch-targets/)
+- [Understanding Success Criterion 2.5.5: Target Size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
+- [Target Size and 2.5.5](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
+- [Quick test: Large touch targets](https://www.a11yproject.com/posts/2018-11-21-large-touch-targets/)
 
 #### Proximity
 
@@ -473,7 +488,7 @@ Interactive elements, like links, placed in close visual proximity should have s
 
 Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
 
-*   [Hand tremors and the giant-button-problem](https://axesslab.com/hand-tremors/)
+- [Hand tremors and the giant-button-problem](https://axesslab.com/hand-tremors/)
 
 ## Specifications
 
@@ -485,5 +500,5 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
 
 ## See also
 
-*   {{HTMLElement("link")}} is similar to `<a>`, but for metadata hyperlinks that are invisible to users.
-*   {{CSSxRef(":link")}} is a CSS pseudo-class that will match `<a>` elements with valid `href` attributes.
+- {{HTMLElement("link")}} is similar to `<a>`, but for metadata hyperlinks that are invisible to users.
+- {{CSSxRef(":link")}} is a CSS pseudo-class that will match `<a>` elements with valid `href` attributes.

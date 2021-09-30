@@ -7,9 +7,10 @@ tags:
   - Reference
 browser-compat: html.global_attributes.hidden
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
-The **`hidden`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is a Boolean attribute indicating that the element is not yet, or is no longer, *relevant*. For example, it can be used to hide elements of the page that can't be used until the login process has been completed. Browsers won't render elements with the `hidden` attribute set.
+The **`hidden`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is a Boolean attribute indicating that the element is not yet, or is no longer, _relevant_. For example, it can be used to hide elements of the page that can't be used until the login process has been completed. Browsers won't render elements with the `hidden` attribute set.
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-hidden.html","tabbed-shorter")}}
 
@@ -35,6 +36,6 @@ Similarly, a canvas element with the `hidden` attribute could be used by a scrip
 
 ## See also
 
-*   {{DOMxRef("HTMLElement.hidden")}}
-*   All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-*   [`aria-hidden` attribute](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute)
+- {{DOMxRef("HTMLElement.hidden")}}
+- All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+- [`aria-hidden` attribute](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute)

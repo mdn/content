@@ -12,6 +12,7 @@ tags:
   - Web
 browser-compat: html.elements.sup
 ---
+
 {{HTMLRef}}
 
 The **`<sup>`** [HTML](/en-US/docs/Web/HTML) element specifies inline text which is to be displayed as superscript for solely typographical reasons. Superscripts are usually rendered with a raised baseline using smaller text.
@@ -87,21 +88,23 @@ For example, to style the {{interwiki("wikipedia", "wordmark")}} of a business o
 
 Appropriate use cases for `<sup>` include (but aren't necessarily limited to):
 
-*   Displaying exponents, such as "x
+- Displaying exponents, such as "x
 
-    <sup>3</sup>
+  <sup>3</sup>
 
-    ." It may be worth considering the use of [MathML](/en-US/docs/Web/MathML) for these, especially in more complex cases. See {{anch("Exponents")}} under {{anch("Examples")}} below.
-*   Displaying {{interwiki("wikipedia", "superior letter", "superior lettering")}}, which is used in some languages when rendering certain abbreviations. For example, in French, the word "mademoiselle" can be abbreviated "M
+  ." It may be worth considering the use of [MathML](/en-US/docs/Web/MathML) for these, especially in more complex cases. See {{anch("Exponents")}} under {{anch("Examples")}} below.
 
-    <sup>lle</sup>
+- Displaying {{interwiki("wikipedia", "superior letter", "superior lettering")}}, which is used in some languages when rendering certain abbreviations. For example, in French, the word "mademoiselle" can be abbreviated "M
 
-    "); this is an acceptable use case. See {{anch("Superior lettering")}} for examples.
-*   Representing ordinal numbers, such as "4
+  <sup>lle</sup>
 
-    <sup>th</sup>
+  "); this is an acceptable use case. See {{anch("Superior lettering")}} for examples.
 
-    " instead of "fourth." See {{anch("Ordinal numbers")}} for examples.
+- Representing ordinal numbers, such as "4
+
+  <sup>th</sup>
+
+  " instead of "fourth." See {{anch("Ordinal numbers")}} for examples.
 
 ## Examples
 
@@ -157,6 +160,6 @@ The output:
 
 ## See also
 
-*   The {{HTMLElement("sub")}} HTML element that produces subscripts. Note that you cannot use them both at the same time and you need to use [MathML](/en-US/docs/Web/MathML) to produce both a superscript and a subscript next to the chemical symbol of an element, representing its atomic number and its nuclear number.
-*   The [`<msub>`](/en-US/docs/Web/MathML/Element/msub), [`<msup>`](/en-US/docs/Web/MathML/Element/msup), and [`<msubsup>`](/en-US/docs/Web/MathML/Element/msubsup) MathML elements.
-*   The CSS {{cssxref("vertical-align")}} property.
+- The {{HTMLElement("sub")}} HTML element that produces subscripts. Note that you cannot use them both at the same time and you need to use [MathML](/en-US/docs/Web/MathML) to produce both a superscript and a subscript next to the chemical symbol of an element, representing its atomic number and its nuclear number.
+- The [`<msub>`](/en-US/docs/Web/MathML/Element/msub), [`<msup>`](/en-US/docs/Web/MathML/Element/msup), and [`<msubsup>`](/en-US/docs/Web/MathML/Element/msubsup) MathML elements.
+- The CSS {{cssxref("vertical-align")}} property.

@@ -15,6 +15,7 @@ tags:
   - strong
 browser-compat: html.elements.strong
 ---
+
 {{HTMLRef}}
 
 The **`<strong>`** [HTML](/en-US/docs/Web/HTML) element indicates that its contents have strong importance, seriousness, or urgency. Browsers typically render the contents in bold type.
@@ -89,7 +90,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 The `<strong>` element is for content that is of "strong importance," including things of great seriousness or urgency (such as warnings). This could be a sentence that is of great importance to the whole page, or you could merely try to point out that some words are of greater importance compared to nearby content.
 
-Typically this element is rendered by default using a bold font weight. However, it should *not* be used to apply bold styling; use the CSS {{cssxref("font-weight")}} property for that purpose. Use the {{HTMLElement("b")}} element to draw attention to certain text without indicating a higher level of importance. Use the {{HTMLElement("em")}} element to mark text that has stress emphasis.
+Typically this element is rendered by default using a bold font weight. However, it should _not_ be used to apply bold styling; use the CSS {{cssxref("font-weight")}} property for that purpose. Use the {{HTMLElement("b")}} element to draw attention to certain text without indicating a higher level of importance. Use the {{HTMLElement("em")}} element to mark text that has stress emphasis.
 
 Another accepted use for `<strong>` is to denote the labels of paragraphs which represent notes or warnings within the text of a page.
 
@@ -107,7 +108,7 @@ The intended meaning or purpose of the enclosed text should be what determines w
 
 Adding to the confusion is the fact that while HTML 4 defined `<strong>` as indicating a stronger emphasis, HTML 5 defines `<strong>` as representing "strong importance for its contents." This is an important distinction to make.
 
-While `<em>` is used to change the meaning of a sentence as spoken emphasis does ("I *love* carrots" vs. "I love *carrots*"), `<strong>` is used to give portions of a sentence added importance (e.g., "**Warning!** This is **very dangerous.**") Both `<strong>` and `<em>` can be nested to increase the relative degree of importance or stress emphasis, respectively.
+While `<em>` is used to change the meaning of a sentence as spoken emphasis does ("I _love_ carrots" vs. "I love _carrots_"), `<strong>` is used to give portions of a sentence added importance (e.g., "**Warning!** This is **very dangerous.**") Both `<strong>` and `<em>` can be nested to increase the relative degree of importance or stress emphasis, respectively.
 
 ## Examples
 
@@ -141,6 +142,6 @@ This results in:
 
 ## See also
 
-*   The {{HTMLElement("b")}} element
-*   The {{HTMLElement("em")}} element
-*   The {{cssxref("font-weight")}} property
+- The {{HTMLElement("b")}} element
+- The {{HTMLElement("em")}} element
+- The {{cssxref("font-weight")}} property

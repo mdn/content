@@ -12,6 +12,7 @@ tags:
   - Web
 browser-compat: html.elements.samp
 ---
+
 {{HTMLRef}}
 
 The **`<samp>`** [HTML](/en-US/docs/Web/HTML) element is used to enclose inline text which represents sample (or quoted) output from a computer program. Its contents are typically rendered using the browser's default monospaced font (such as {{interwiki("wikipedia", "Courier (typeface)", "Courier")}} or Lucida Console).
@@ -161,5 +162,5 @@ The resulting output is this:
 
 ## See also
 
-*   Related elements: {{HTMLElement("kbd")}}, {{HTMLElement("code")}}, {{HTMLElement("pre")}}
-*   The {{HTMLElement("output")}} element: a container for script-generated output
+- Related elements: {{HTMLElement("kbd")}}, {{HTMLElement("code")}}, {{HTMLElement("pre")}}
+- The {{HTMLElement("output")}} element: a container for script-generated output

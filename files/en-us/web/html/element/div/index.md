@@ -13,6 +13,7 @@ tags:
   - div
 browser-compat: html.elements.div
 ---
+
 {{HTMLRef}}
 
 The **`<div>`** [HTML](/en-US/docs/Web/HTML) element is the generic container for flow content. It has no effect on the content or layout until styled in some way using {{glossary("CSS")}} (e.g. styling is directly applied to it, or some kind of layout model like [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) is applied to its parent element).
@@ -89,7 +90,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Usage notes
 
-*   The `<div>` element should be used only when no other semantic element (such as {{HTMLElement("article")}} or {{HTMLElement("nav")}}) is appropriate.
+- The `<div>` element should be used only when no other semantic element (such as {{HTMLElement("article")}} or {{HTMLElement("nav")}}) is appropriate.
 
 ## Accessibility concerns
 
@@ -103,7 +104,7 @@ The `<div>` element has [an implicit role of `generic`](https://www.w3.org/TR/wa
 <div>
   <p>Any kind of content here. Such as
   &lt;p&gt;, &lt;table&gt;. You name it!</p>
-</div> 
+</div>
 ```
 
 The result looks like this:
@@ -149,5 +150,5 @@ This example creates a shadowed box by applying a style to the `<div>` using CSS
 
 ## See also
 
-*   Semantic sectioning elements: {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}
-*   {{HTMLElement("span")}} element for styling of phrasing content
+- Semantic sectioning elements: {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}
+- {{HTMLElement("span")}} element for styling of phrasing content

@@ -14,6 +14,7 @@ tags:
   - slider
 browser-compat: html.elements.input.input-range
 ---
+
 {{HTMLRef("Input_types")}}
 
 {{HTMLElement("input")}} elements of type **`range`** let the user specify a numeric value which must be no less than a given value, and no more than another given value. The precise value, however, is not considered important. This is typically represented using a slider or dial control rather than a text entry box like the {{HTMLElement('input/number', 'number')}} input type.
@@ -69,10 +70,10 @@ If the user's browser doesn't support type `range`, it will fall back and treat 
 
 There is no pattern validation available; however, the following forms of automatic validation are performed:
 
-*   If the {{htmlattrxref("value", "input")}} is set to something which can't be converted into a valid floating-point number, validation fails because the input is suffering from a bad input.
-*   The value won't be less than {{htmlattrxref("min", "input")}}. The default is 0.
-*   The value won't be greater than {{htmlattrxref("max", "input")}}. The default is 100.
-*   The value will be a multiple of {{htmlattrxref("step", "input")}}. The default is 1.
+- If the {{htmlattrxref("value", "input")}} is set to something which can't be converted into a valid floating-point number, validation fails because the input is suffering from a bad input.
+- The value won't be less than {{htmlattrxref("min", "input")}}. The default is 0.
+- The value won't be greater than {{htmlattrxref("max", "input")}}. The default is 100.
+- The value will be a multiple of {{htmlattrxref("step", "input")}}. The default is 1.
 
 ### Value
 
@@ -105,7 +106,7 @@ This value must be greater than or equal to the value of the [`min`](/en-US/docs
 
 The lowest value in the range of permitted values. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If a value is specified for `min` that isn't a valid number, the input has no minimum value.
 
-This value must be less than or equal to the value of the [`max`](/en-US/docs/Web/HTML/Attributes/max) attribute. See the [HTML ` min  `attribute.](/en-US/docs/Web/HTML/Attributes/min)
+This value must be less than or equal to the value of the [`max`](/en-US/docs/Web/HTML/Attributes/max) attribute. See the [HTML `min `attribute.](/en-US/docs/Web/HTML/Attributes/min)
 
 ### step
 
@@ -115,7 +116,7 @@ A string value of `any` means that no stepping is implied, and any value is allo
 
 > **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
 
-The default stepping value for `range` inputs is 1, allowing only integers to be entered, *unless* the stepping base is not an integer; for example, if you set `min` to -10 and `value` to 1.5, then a `step` of 1 will allow only values such as 1.5, 2.5, 3.5,... in the positive direction and -0.5, -1.5, -2.5,... in the negative direction. See the [HTML `step` attribute](/en-US/docs/Web/HTML/Attributes/step).
+The default stepping value for `range` inputs is 1, allowing only integers to be entered, _unless_ the stepping base is not an integer; for example, if you set `min` to -10 and `value` to 1.5, then a `step` of 1 will allow only values such as 1.5, 2.5, 3.5,... in the positive direction and -0.5, -1.5, -2.5,... in the negative direction. See the [HTML `step` attribute](/en-US/docs/Web/HTML/Attributes/step).
 
 ## Non Standard Attributes
 
@@ -131,10 +132,10 @@ While the `number` type lets users enter a number with optional constraints forc
 
 A few examples of situations in which range inputs are commonly used:
 
-*   Audio controls such as volume and balance, or filter controls.
-*   Color configuration controls such as color channels, transparency, brightness, etc.
-*   Game configuration controls such as difficulty, visibility distance, world size, and so forth.
-*   Password length for a password manager's generated passwords.
+- Audio controls such as volume and balance, or filter controls.
+- Color configuration controls such as color channels, transparency, brightness, etc.
+- Game configuration controls such as difficulty, visibility distance, world size, and so forth.
+- Password length for a password manager's generated passwords.
 
 As a rule, if the user is more likely to be interested in the percentage of the distance between minimum and maximum values than the actual number itself, a range input is a great candidate. For example, in the case of a home stereo volume control, users typically think "set volume at halfway to maximum" instead of "set volume to 0.5".
 
@@ -233,18 +234,19 @@ This range control is using a `list` attribute specifying the ID of a {{HTMLElem
 &#x3C;input type="range" list="tickmarks">
 
 &#x3C;datalist id="tickmarks">
-  &#x3C;option value="0">&#x3C;/option>
-  &#x3C;option value="10">&#x3C;/option>
-  &#x3C;option value="20">&#x3C;/option>
-  &#x3C;option value="30">&#x3C;/option>
-  &#x3C;option value="40">&#x3C;/option>
-  &#x3C;option value="50">&#x3C;/option>
-  &#x3C;option value="60">&#x3C;/option>
-  &#x3C;option value="70">&#x3C;/option>
-  &#x3C;option value="80">&#x3C;/option>
-  &#x3C;option value="90">&#x3C;/option>
-  &#x3C;option value="100">&#x3C;/option>
+&#x3C;option value="0">&#x3C;/option>
+&#x3C;option value="10">&#x3C;/option>
+&#x3C;option value="20">&#x3C;/option>
+&#x3C;option value="30">&#x3C;/option>
+&#x3C;option value="40">&#x3C;/option>
+&#x3C;option value="50">&#x3C;/option>
+&#x3C;option value="60">&#x3C;/option>
+&#x3C;option value="70">&#x3C;/option>
+&#x3C;option value="80">&#x3C;/option>
+&#x3C;option value="90">&#x3C;/option>
+&#x3C;option value="100">&#x3C;/option>
 &#x3C;/datalist>
+
 </pre
         >
       </td>
@@ -285,18 +287,19 @@ You can add labels to your range control by adding the {{htmlattrxref("label", "
 &#x3C;input type="range" list="tickmarks">
 
 &#x3C;datalist id="tickmarks">
-  &#x3C;option value="0" label="0%">&#x3C;/option>
-  &#x3C;option value="10">&#x3C;/option>
-  &#x3C;option value="20">&#x3C;/option>
-  &#x3C;option value="30">&#x3C;/option>
-  &#x3C;option value="40">&#x3C;/option>
-  &#x3C;option value="50" label="50%">&#x3C;/option>
-  &#x3C;option value="60">&#x3C;/option>
-  &#x3C;option value="70">&#x3C;/option>
-  &#x3C;option value="80">&#x3C;/option>
-  &#x3C;option value="90">&#x3C;/option>
-  &#x3C;option value="100" label="100%">&#x3C;/option>
+&#x3C;option value="0" label="0%">&#x3C;/option>
+&#x3C;option value="10">&#x3C;/option>
+&#x3C;option value="20">&#x3C;/option>
+&#x3C;option value="30">&#x3C;/option>
+&#x3C;option value="40">&#x3C;/option>
+&#x3C;option value="50" label="50%">&#x3C;/option>
+&#x3C;option value="60">&#x3C;/option>
+&#x3C;option value="70">&#x3C;/option>
+&#x3C;option value="80">&#x3C;/option>
+&#x3C;option value="90">&#x3C;/option>
+&#x3C;option value="100" label="100%">&#x3C;/option>
 &#x3C;/datalist>
+
 </pre
         >
       </td>
@@ -433,7 +436,7 @@ Use similar HTML as in the previous examples, we add the attribute with a value 
 
 #### writing-mode: bt-lr;
 
-The {{cssxref('writing-mode')}} property should generally not be used to alter text direction for internationalization or localization purposes, but can be used for special effects. 
+The {{cssxref('writing-mode')}} property should generally not be used to alter text direction for internationalization or localization purposes, but can be used for special effects.
 
 We use the same HTML as in the previous examples:
 
@@ -482,10 +485,10 @@ input[type="range"] {
 
 ## See also
 
-*   [HTML Forms](/en-US/docs/Learn/Forms)
-*   {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon
-*   [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number)
-*   {{domxref('validityState.rangeOverflow')}} and {{domxref('validityState.rangeUnderflow')}}
-*   [Controlling multiple parameters with ConstantSourceNode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
-*   [Styling the range element](https://css-tricks.com/sliding-nightmare-understanding-range-input)
-*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [HTML Forms](/en-US/docs/Learn/Forms)
+- {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon
+- [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number)
+- {{domxref('validityState.rangeOverflow')}} and {{domxref('validityState.rangeUnderflow')}}
+- [Controlling multiple parameters with ConstantSourceNode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
+- [Styling the range element](https://css-tricks.com/sliding-nightmare-understanding-range-input)
+- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

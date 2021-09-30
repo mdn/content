@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: html.elements.canvas
 ---
+
 {{HTMLRef}}
 
 Use the **HTML `<canvas>` element** with either the [canvas scripting API](/en-US/docs/Web/API/Canvas_API) or the [WebGL API](/en-US/docs/Web/API/WebGL_API) to draw graphics and animations.
@@ -86,12 +87,12 @@ Use the **HTML `<canvas>` element** with either the [canvas scripting API](/en-U
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-*   {{htmlattrdef("height")}}
-    *   : The height of the coordinate space in CSS pixels. Defaults to 150.
-*   {{htmlattrdef("moz-opaque")}} {{non-standard_inline}} {{deprecated_inline}}
-    *   : Lets the canvas know whether or not translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized. This is only supported by Mozilla-based browsers; use the standardized {{domxref("HTMLCanvasElement.getContext()", "canvas.getContext('2d', { alpha: false })")}} instead.
-*   {{htmlattrdef("width")}}
-    *   : The width of the coordinate space in CSS pixels. Defaults to 300.
+- {{htmlattrdef("height")}}
+  - : The height of the coordinate space in CSS pixels. Defaults to 150.
+- {{htmlattrdef("moz-opaque")}} {{non-standard_inline}} {{deprecated_inline}}
+  - : Lets the canvas know whether or not translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized. This is only supported by Mozilla-based browsers; use the standardized {{domxref("HTMLCanvasElement.getContext()", "canvas.getContext('2d', { alpha: false })")}} instead.
+- {{htmlattrdef("width")}}
+  - : The width of the coordinate space in CSS pixels. Defaults to 300.
 
 ## Usage notes
 
@@ -155,10 +156,10 @@ ctx.fillRect(10, 10, 100, 100);
 
 The `<canvas>` element on its own is just a bitmap and does not provide information about any drawn objects. Canvas content is not exposed to accessibility tools as semantic HTML is. In general, you should avoid using canvas in an accessible website or app. The following guides can help to make it more accessible.
 
-*   [Canvas accessibility use cases](https://www.w3.org/WAI/PF/HTML/wiki/Canvas_Accessibility_Use_Cases)
-*   [Canvas element accessibility issues](https://www.w3.org/html/wg/wiki/AddedElementCanvas)
-*   [HTML5 Canvas Accessibility in Firefox 13 – by Steve Faulkner](https://developer.paciellogroup.com/blog/2012/06/html5-canvas-accessibility-in-firefox-13/)
-*   [Best practices for interactive canvas elements](https://html.spec.whatwg.org/multipage/scripting.html#best-practices)
+- [Canvas accessibility use cases](https://www.w3.org/WAI/PF/HTML/wiki/Canvas_Accessibility_Use_Cases)
+- [Canvas element accessibility issues](https://www.w3.org/html/wg/wiki/AddedElementCanvas)
+- [HTML5 Canvas Accessibility in Firefox 13 – by Steve Faulkner](https://developer.paciellogroup.com/blog/2012/06/html5-canvas-accessibility-in-firefox-13/)
+- [Best practices for interactive canvas elements](https://html.spec.whatwg.org/multipage/scripting.html#best-practices)
 
 ## Specifications
 
@@ -170,8 +171,8 @@ The `<canvas>` element on its own is just a bitmap and does not provide informat
 
 ## See also
 
-*   [MDN canvas portal](/en-US/docs/Web/API/Canvas_API)
-*   [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)
-*   [Canvas cheat sheet](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html)
-*   [Canvas-related demos](/en-US/docs/Web/Demos#canvas)
-*   [Canvas introduction by Apple](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html)
+- [MDN canvas portal](/en-US/docs/Web/API/Canvas_API)
+- [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)
+- [Canvas cheat sheet](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html)
+- [Canvas-related demos](/en-US/docs/Web/Demos#canvas)
+- [Canvas introduction by Apple](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html)

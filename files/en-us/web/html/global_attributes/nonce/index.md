@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: html.global_attributes.nonce
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 The **`nonce`** [global attribute](/en-US/docs/Web/HTML/Global_attributes)
@@ -17,7 +18,7 @@ be allowed to proceed for a given element.
 ## Description
 
 The `nonce` attribute is useful to allow-list specific elements, such as a particular inline script or style elements.
-It can help you to avoid using the [CSP](/en-US/docs/Web/HTTP/CSP) `unsafe-inline` directive, which would allow-list *all* inline scripts or styles.
+It can help you to avoid using the [CSP](/en-US/docs/Web/HTTP/CSP) `unsafe-inline` directive, which would allow-list _all_ inline scripts or styles.
 
 > **Note:** Only use `nonce` for cases where you have no way around using unsafe inline script
 > or style contents. If you don't need `nonce`, don't use it. If your script is static, you could also use a CSP hash instead.
@@ -88,6 +89,6 @@ script[nonce~=whatever] {
 
 ## See also
 
-*   [`HTMLElement.nonce`](/en-US/docs/Web/API/HTMLElement/nonce)
-*   [Content Security Policy](/en-US/docs/Web/HTTP/CSP)
-*   CSP: [`script-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src)
+- [`HTMLElement.nonce`](/en-US/docs/Web/API/HTMLElement/nonce)
+- [Content Security Policy](/en-US/docs/Web/HTTP/CSP)
+- CSP: [`script-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src)

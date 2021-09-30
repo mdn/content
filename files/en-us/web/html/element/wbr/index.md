@@ -9,6 +9,7 @@ tags:
   - Web
 browser-compat: html.elements.wbr
 ---
+
 {{HTMLRef}}
 
 The **`<wbr>`** [HTML](/en-US/docs/Web/HTML) element represents a word break opportunity—a position within text where the browser may optionally break a line, though its line-breaking rules would not otherwise create a break at that location.
@@ -77,7 +78,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## Notes
 
-On UTF-8 encoded pages, `<wbr>` behaves like the `U+200B``  ZERO-WIDTH SPACE ` code point. In particular, it behaves like a Unicode bidi BN code point, meaning it has no effect on {{Glossary("bidi")}}-ordering: `<div dir=rtl>123,<wbr>456</div>` displays, when not broken on two lines, `123,456` and not `456,123`.
+On UTF-8 encoded pages, `<wbr>` behaves like the ` U+200B`` ZERO-WIDTH SPACE  ` code point. In particular, it behaves like a Unicode bidi BN code point, meaning it has no effect on {{Glossary("bidi")}}-ordering: `<div dir=rtl>123,<wbr>456</div>` displays, when not broken on two lines, `123,456` and not `456,123`.
 
 For the same reason, the `<wbr>` element does not introduce a hyphen at the line break point. To make a hyphen appear only at the end of a line, use the soft hyphen character entity (`&shy;`) instead.
 
@@ -85,7 +86,7 @@ This element was first implemented in Internet Explorer 5.5 and was officially d
 
 ## Example
 
-*[The Yahoo Style Guide](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/)* recommends [breaking a URL *before* punctuation](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses), to avoid leaving a punctuation mark at the end of the line, which the reader might mistake for the end of the URL.
+_[The Yahoo Style Guide](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/)_ recommends [breaking a URL _before_ punctuation](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses), to avoid leaving a punctuation mark at the end of the line, which the reader might mistake for the end of the URL.
 
 ```html
 <p>http://this<wbr>.is<wbr>.a<wbr>.really<wbr>.long<wbr>.example<wbr>.com/With<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages</p>
@@ -103,7 +104,7 @@ This element was first implemented in Internet Explorer 5.5 and was officially d
 
 ## See also
 
-*   {{cssxref("overflow-wrap")}}
-*   {{cssxref("word-break")}}
-*   {{cssxref("hyphens")}}
-*   The {{HTMLElement("br")}} element
+- {{cssxref("overflow-wrap")}}
+- {{cssxref("word-break")}}
+- {{cssxref("hyphens")}}
+- The {{HTMLElement("br")}} element

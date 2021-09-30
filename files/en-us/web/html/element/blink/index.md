@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: html.elements.blink
 ---
+
 {{HTMLRef}}{{Deprecated_header}}
 
 The **`<blink>`** [HTML](/en-US/docs/Web/HTML) element is a non-standard element which causes the enclosed text to flash slowly.
@@ -76,7 +77,7 @@ blink {
 
 ## See also
 
-*   [History of the creation of the HTML `<blink>` element](http://www.montulli.org/theoriginofthe%3Cblink%3Etag).
-*   {{cssxref("text-decoration")}}, where a blink value exists, though browsers are not required to effectively make it blink.
-*   {{htmlelement("marquee")}}, another similar non-standard element.
-*   [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) are the way to go to create such an effect.
+- [History of the creation of the HTML `<blink>` element](http://www.montulli.org/theoriginofthe%3Cblink%3Etag).
+- {{cssxref("text-decoration")}}, where a blink value exists, though browsers are not required to effectively make it blink.
+- {{htmlelement("marquee")}}, another similar non-standard element.
+- [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) are the way to go to create such an effect.

@@ -20,6 +20,7 @@ tags:
   - month-year
   - week-year
 ---
+
 {{HTMLRef}}
 
 Certain HTML elements use date and/or time values. The formats of the strings that specify these values are described in this article.
@@ -28,12 +29,12 @@ Elements that use such formats include certain forms of the {{HTMLElement("input
 
 For `<input>`, the values of {{htmlattrxref("type", "input")}} that return a {{htmlattrxref("value")}} which contains a string representing a date and/or time are:
 
-*   [`date`](/en-US/docs/Web/HTML/Element/input/date)
-*   [`datetime`](/en-US/docs/Web/HTML/Element/input/datetime) {{deprecated_inline}}
-*   [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local)
-*   [`month`](/en-US/docs/Web/HTML/Element/input/month)
-*   [`time`](/en-US/docs/Web/HTML/Element/input/time)
-*   [`week`](/en-US/docs/Web/HTML/Element/input/week)
+- [`date`](/en-US/docs/Web/HTML/Element/input/date)
+- [`datetime`](/en-US/docs/Web/HTML/Element/input/datetime) {{deprecated_inline}}
+- [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local)
+- [`month`](/en-US/docs/Web/HTML/Element/input/month)
+- [`time`](/en-US/docs/Web/HTML/Element/input/time)
+- [`week`](/en-US/docs/Web/HTML/Element/input/week)
 
 ## Examples
 
@@ -142,7 +143,7 @@ A year is normally 365 days long, except during **{{anch("Leap years", "leap yea
 
 #### Leap years
 
-A **leap year** is any year which is divisible by 400 *or* the year is divisible by 4 but not by 100. Although the calendar year is normally 365 days long, it actually takes the planet Earth approximately 365.2422 days to complete a single orbit around the sun. Leap years help to adjust the calendar to keep it synchronized with the actual position of the planet in its orbit. Adding a day to the year every four years essentially makes the average year 365.25 days long, which is close to correct.
+A **leap year** is any year which is divisible by 400 _or_ the year is divisible by 4 but not by 100. Although the calendar year is normally 365 days long, it actually takes the planet Earth approximately 365.2422 days to complete a single orbit around the sun. Leap years help to adjust the calendar to keep it synchronized with the actual position of the planet in its orbit. Adding a day to the year every four years essentially makes the average year 365.25 days long, which is close to correct.
 
 The adjustments to the algorithm (taking a leap year when the year can be divided by 400, and skipping leap years when the year is divisible by 100) help to bring the average even closer to the correct number of days (365.2425 days). Scientists occasionally add leap seconds to the calendar (seriously) to handle the remaining three ten-thousandths of a day and to compensate for the gradual, naturally occurring slowing of Earth's rotation.
 
@@ -235,12 +236,12 @@ Month numbers 1, 3, 5, 7, 8, 10, and 12 are 31 days long. Months 4, 6, 9, and 11
 
 A week string specifies a week within a particular year. A **valid week string** consists of a valid {{anch("Year numbers", "year number")}}, followed by a hyphen character ("`-`", or U+002D), then the capital letter "`W`" (U+0057), followed by a two-digit week of the year value.
 
-The week of the year is a two-digit string between `01` and `53`. Each week begins on Monday and ends on Sunday. That means it's possible for the first few days of January to be considered part of the previous week-year, and for the last few days of December to be considered part of the following week-year. The first week of the year is the week that contains the *first Thursday of the year*. For example, the first Thursday of 1953 was on January 1, so that week—beginning on Monday, December 29—is considered the first week of the year. Therefore, December 30, 1952 occurs during the week `1953-W01`.
+The week of the year is a two-digit string between `01` and `53`. Each week begins on Monday and ends on Sunday. That means it's possible for the first few days of January to be considered part of the previous week-year, and for the last few days of December to be considered part of the following week-year. The first week of the year is the week that contains the _first Thursday of the year_. For example, the first Thursday of 1953 was on January 1, so that week—beginning on Monday, December 29—is considered the first week of the year. Therefore, December 30, 1952 occurs during the week `1953-W01`.
 
 A year has 53 weeks if:
 
-*   The first day of the calendar year (January 1) is a Thursday **or**
-*   The first day of the year (January 1) is a Wednesday and the year is a {{anch("Leap years", "leap year")}}
+- The first day of the calendar year (January 1) is a Thursday **or**
+- The first day of the year (January 1) is a Wednesday and the year is a {{anch("Leap years", "leap year")}}
 
 All other years have 52 weeks.
 
@@ -288,12 +289,12 @@ A time string can specify a time with precision to the minute, second, or to the
 
 There are some additional basic rules:
 
-*   The hour is always specified using the 24-hour clock, with `00` being midnight and 11 PM being `23`. No values outside the range `00`–`23` are permitted.
-*   The minute must be a two-digit number between `00` and `59`. No values outside that range are allowed.
-*   If the number of seconds is omitted (to specify a time accurate only to the minute), no colon should follow the number of minutes.
-*   If specified, the integer portion of the number of seconds must be between `00` and `59`. You *cannot* specify leap seconds by using values like `60` or `61`.
-*   If the number of seconds is specified and is an integer, it must not be followed by a decimal point.
-*   If a fraction of a second is included, it may be from one to three digits long, indicating the number of milliseconds. It follows the decimal point placed after the seconds component of the time string.
+- The hour is always specified using the 24-hour clock, with `00` being midnight and 11 PM being `23`. No values outside the range `00`–`23` are permitted.
+- The minute must be a two-digit number between `00` and `59`. No values outside that range are allowed.
+- If the number of seconds is omitted (to specify a time accurate only to the minute), no colon should follow the number of minutes.
+- If specified, the integer portion of the number of seconds must be between `00` and `59`. You _cannot_ specify leap seconds by using values like `60` or `61`.
+- If the number of seconds is specified and is an integer, it must not be followed by a decimal point.
+- If a fraction of a second is included, it may be from one to three digits long, indicating the number of milliseconds. It follows the decimal point placed after the seconds component of the time string.
 
 | Time string   | Time                                          |
 | ------------- | --------------------------------------------- |
@@ -363,8 +364,8 @@ A global date and time string specifies a date and time as well as the time zone
 
 A time zone offset string specifies the offset in either a positive or a negative number of hours and minutes from the standard time base. There are two standard time bases, which are very close to the same, but not exactly the same:
 
-*   For dates after the establishment of {{interwiki("wikipedia", "Coordinated Universal Time")}} (UTC) in the early 1960s, the time base is `Z` and the offset indicates a particular time zone's offset from the time at the prime meridian at 0º longitude (which passes through the Royal Observatory at Greenwich, England).
-*   For dates prior to UTC, the time base is instead expressed in terms of {{interwiki("wikipedia", "UT1")}}, which is the contemporary Earth solar time at the prime meridian.
+- For dates after the establishment of {{interwiki("wikipedia", "Coordinated Universal Time")}} (UTC) in the early 1960s, the time base is `Z` and the offset indicates a particular time zone's offset from the time at the prime meridian at 0º longitude (which passes through the Royal Observatory at Greenwich, England).
+- For dates prior to UTC, the time base is instead expressed in terms of {{interwiki("wikipedia", "UT1")}}, which is the contemporary Earth solar time at the prime meridian.
 
 The time zone string is appended immediately following the time in the date and time string. You can specify "`Z`" as the time zone offset string to indicate that the time is specified in UTC. Otherwise, the time zone string is constructed as follows:
 
@@ -412,9 +413,9 @@ While this format allows for time zones between -23:59 and +23:59, the current r
 
 ## See also
 
-*   {{HTMLElement("input")}}
-*   {{HTMLElement("ins")}} and {{HTMLElement("del")}}: see the `datetime` attribute, which specifies either a date or a local date and time at which the content was inserted or deleted
-*   [The ISO 8601 specification](https://www.iso.org/iso-8601-date-and-time-format.html)
-*   [Numbers and Dates](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates) in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
-*   The JavaScript {{jsxref("Date")}} object
-*   The [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) object for formatting dates and times for a given locale
+- {{HTMLElement("input")}}
+- {{HTMLElement("ins")}} and {{HTMLElement("del")}}: see the `datetime` attribute, which specifies either a date or a local date and time at which the content was inserted or deleted
+- [The ISO 8601 specification](https://www.iso.org/iso-8601-date-and-time-format.html)
+- [Numbers and Dates](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates) in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
+- The JavaScript {{jsxref("Date")}} object
+- The [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) object for formatting dates and times for a given locale

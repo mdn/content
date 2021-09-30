@@ -11,6 +11,7 @@ tags:
   - applet
 browser-compat: html.elements.applet
 ---
+
 {{HTMLRef}}{{deprecated_header}}
 
 The obsolete **HTML Applet Element** (**`<applet>`**) embeds a Java applet into the document; this element has been deprecated in favor of {{HTMLElement("object")}}.
@@ -69,36 +70,36 @@ Use of Java applets on the Web is deprecated; most browsers no longer support us
 
 ## Attributes
 
-*   {{HTMLAttrDef("align")}}
-    *   : This attribute is used to position the applet on the page relative to content that might flow around it. The HTML 4.01 specification defines values of `bottom`, `left`, `middle`, `right`, and `top`, whereas Microsoft and Netscape also might support `absbottom`, `absmiddle`, `baseline`, `center`, and `texttop`.
-*   {{HTMLAttrDef("alt")}}
-    *   : This attribute causes a descriptive text alternate to be displayed on browsers that do not support Java. Page designers should also remember that content enclosed within the `<applet>` element may also be rendered as alternative text.
-*   {{HTMLAttrDef("archive")}}
-    *   : This attribute refers to an archived or compressed version of the applet and its associated class files, which might help reduce download time.
-*   {{HTMLAttrDef("code")}}
-    *   : This attribute specifies the URL of the applet's class file to be loaded and executed. Applet filenames are identified by a .class filename extension. The URL specified by code might be relative to the `codebase` attribute.
-*   {{HTMLAttrDef("codebase")}}
-    *   : This attribute gives the absolute or relative URL of the directory where applets' .class files referenced by the code attribute are stored.
-*   {{HTMLAttrDef("datafld")}}
-    *   : This attribute, supported by Internet Explorer 4 and higher, specifies the column name from the data source object that supplies the bound data. This attribute might be used to specify the various {{HTMLElement("param")}} elements passed to the Java applet.
-*   {{HTMLAttrDef("datasrc")}}
-    *   : Like `datafld`, this attribute is used for data binding under Internet Explorer 4. It indicates the id of the data source object that supplies the data that is bound to the {{HTMLElement("param")}} elements associated with the applet.
-*   {{HTMLAttrDef("height")}}
-    *   : This attribute specifies the height, in pixels, that the applet needs.
-*   {{HTMLAttrDef("hspace")}}
-    *   : This attribute specifies additional horizontal space, in pixels, to be reserved on either side of the applet.
-*   {{HTMLAttrDef("mayscript")}}
-    *   : In the Netscape implementation, this attribute allows access to an applet by programs in a scripting language embedded in the document.
-*   {{HTMLAttrDef("name")}}
-    *   : This attribute assigns a name to the applet so that it can be identified by other resources; particularly scripts.
-*   {{HTMLAttrDef("object")}}
-    *   : This attribute specifies the URL of a serialized representation of an applet.
-*   {{HTMLAttrDef("src")}}
-    *   : As defined for Internet Explorer 4 and higher, this attribute specifies a URL for an associated file for the applet. The meaning and use is unclear and not part of the HTML standard.
-*   {{HTMLAttrDef("vspace")}}
-    *   : This attribute specifies additional vertical space, in pixels, to be reserved above and below the applet.
-*   {{HTMLAttrDef("width")}}
-    *   : This attribute specifies in pixels the width that the applet needs.
+- {{HTMLAttrDef("align")}}
+  - : This attribute is used to position the applet on the page relative to content that might flow around it. The HTML 4.01 specification defines values of `bottom`, `left`, `middle`, `right`, and `top`, whereas Microsoft and Netscape also might support `absbottom`, `absmiddle`, `baseline`, `center`, and `texttop`.
+- {{HTMLAttrDef("alt")}}
+  - : This attribute causes a descriptive text alternate to be displayed on browsers that do not support Java. Page designers should also remember that content enclosed within the `<applet>` element may also be rendered as alternative text.
+- {{HTMLAttrDef("archive")}}
+  - : This attribute refers to an archived or compressed version of the applet and its associated class files, which might help reduce download time.
+- {{HTMLAttrDef("code")}}
+  - : This attribute specifies the URL of the applet's class file to be loaded and executed. Applet filenames are identified by a .class filename extension. The URL specified by code might be relative to the `codebase` attribute.
+- {{HTMLAttrDef("codebase")}}
+  - : This attribute gives the absolute or relative URL of the directory where applets' .class files referenced by the code attribute are stored.
+- {{HTMLAttrDef("datafld")}}
+  - : This attribute, supported by Internet Explorer 4 and higher, specifies the column name from the data source object that supplies the bound data. This attribute might be used to specify the various {{HTMLElement("param")}} elements passed to the Java applet.
+- {{HTMLAttrDef("datasrc")}}
+  - : Like `datafld`, this attribute is used for data binding under Internet Explorer 4. It indicates the id of the data source object that supplies the data that is bound to the {{HTMLElement("param")}} elements associated with the applet.
+- {{HTMLAttrDef("height")}}
+  - : This attribute specifies the height, in pixels, that the applet needs.
+- {{HTMLAttrDef("hspace")}}
+  - : This attribute specifies additional horizontal space, in pixels, to be reserved on either side of the applet.
+- {{HTMLAttrDef("mayscript")}}
+  - : In the Netscape implementation, this attribute allows access to an applet by programs in a scripting language embedded in the document.
+- {{HTMLAttrDef("name")}}
+  - : This attribute assigns a name to the applet so that it can be identified by other resources; particularly scripts.
+- {{HTMLAttrDef("object")}}
+  - : This attribute specifies the URL of a serialized representation of an applet.
+- {{HTMLAttrDef("src")}}
+  - : As defined for Internet Explorer 4 and higher, this attribute specifies a URL for an associated file for the applet. The meaning and use is unclear and not part of the HTML standard.
+- {{HTMLAttrDef("vspace")}}
+  - : This attribute specifies additional vertical space, in pixels, to be reserved above and below the applet.
+- {{HTMLAttrDef("width")}}
+  - : This attribute specifies in pixels the width that the applet needs.
 
 ## Example
 

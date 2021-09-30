@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: html.elements.input.input-number
 ---
+
 {{HTMLRef("Input_types")}}
 
 {{HTMLElement("input")}} elements of type **`number`** are used to let the user enter a number. They include built-in validation to reject non-numerical entries.
@@ -92,7 +93,7 @@ This value must be less than or equal to the value of the `max` attribute.
 
 ### `placeholder`
 
-The `placeholder` attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text *must not* include carriage returns or line feeds.
+The `placeholder` attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text _must not_ include carriage returns or line feeds.
 
 If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossary("RTL")}}) but needs to present the placeholder in the opposite directionality, you can use Unicode bidirectional algorithm formatting characters to override directionality within the placeholder; see {{SectionOnPage("/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Overriding BiDi using Unicode control characters")}} for those characters.
 
@@ -112,7 +113,7 @@ A string value of `any` means that no stepping is implied, and any value is allo
 
 > **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
 
-The default stepping value for `number` inputs is `1`, allowing only integers to be entered—*unless* the stepping base is not an integer.
+The default stepping value for `number` inputs is `1`, allowing only integers to be entered—_unless_ the stepping base is not an integer.
 
 ## Using number inputs
 
@@ -120,7 +121,7 @@ The default stepping value for `number` inputs is `1`, allowing only integers to
 
 > **Warning:** Logically, you should not be able to enter characters inside a number input other than numbers. There seems to be some disagreement about this among browsers; see {{bug(1398528)}}.
 
-> **Note:** A user can tinker with your HTML behind the scenes, so your site *must not* use simple client-side validation for any security purposes. You *must* verify on the server side any transaction in which the provided value may have security implications of any kind.
+> **Note:** A user can tinker with your HTML behind the scenes, so your site _must not_ use simple client-side validation for any security purposes. You _must_ verify on the server side any transaction in which the provided value may have security implications of any kind.
 
 Mobile browsers further help with the user experience by showing a special keyboard more suited for entering numbers when the user tries to enter a value.
 
@@ -232,10 +233,10 @@ You can provide a list of default options from which the user can select by spec
 
 We have already mentioned a number of validation features of `number` inputs, but let's review them now:
 
-*   `<input type="number">` elements automatically invalidate any entry that isn't a number (or empty, unless `required` is specified).
-*   You can use the {{htmlattrxref("required", "input")}} attribute to make an empty entry invalid. (In other words, the input *must* be filled in.)
-*   You can use the {{htmlattrxref("step", "input")}} attribute to constrain valid values to a certain set of steps (e.g., multiples of 10).
-*   You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to constrain valid values to lower and upper bounds.
+- `<input type="number">` elements automatically invalidate any entry that isn't a number (or empty, unless `required` is specified).
+- You can use the {{htmlattrxref("required", "input")}} attribute to make an empty entry invalid. (In other words, the input _must_ be filled in.)
+- You can use the {{htmlattrxref("step", "input")}} attribute to constrain valid values to a certain set of steps (e.g., multiples of 10).
+- You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to constrain valid values to lower and upper bounds.
 
 The following example exhibits all of the above features, as well as using some CSS to display valid and invalid icons, depending on the `input`'s value:
 
@@ -278,7 +279,7 @@ Here we use the {{cssxref(":invalid")}} and {{cssxref(":valid")}} pseudo classes
 
 We put it on a separate `<span>` element for added flexibility. Some browsers don't display generated content very effectively on some types of form inputs. (Read, for example, the section on [`<input type="date">` validation](/en-US/docs/Web/HTML/Element/input/date#validation).)
 
-> **Warning:** HTML form validation is *not* a substitute for server-side scripts that ensure that the entered data is in the proper format!
+> **Warning:** HTML form validation is _not_ a substitute for server-side scripts that ensure that the entered data is in the proper format!
 >
 > It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML and submit the data directly to your server.
 >
@@ -325,7 +326,7 @@ The HTML looks like this:
 </form>
 ```
 
-You'll see that we are using many of the attributes we've already looked at in the article earlier on. Since we want to accept a meter value in centimeters, we've set the `step` value to `0.01`, so that values like *1.78* are not seen as invalid. We've also provided a placeholder for that input.
+You'll see that we are using many of the attributes we've already looked at in the article earlier on. Since we want to accept a meter value in centimeters, we've set the `step` value to `0.01`, so that values like _1.78_ are not seen as invalid. We've also provided a placeholder for that input.
 
 We've hidden the feet and inches inputs initially using `style="display: none;"`, so that meters is the default entry type.
 
@@ -416,7 +417,7 @@ After declaring a few variables, an event listener is added to the `button` to c
 
 ## See also
 
-*   [HTML forms guide](/en-US/docs/Learn/Forms)
-*   {{HTMLElement("input")}}
-*   [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel)
-*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [HTML forms guide](/en-US/docs/Learn/Forms)
+- {{HTMLElement("input")}}
+- [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel)
+- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

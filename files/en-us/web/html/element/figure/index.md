@@ -11,6 +11,7 @@ tags:
   - figure
 browser-compat: html.elements.figure
 ---
+
 {{HTMLRef}}
 
 The **`<figure>`** [HTML](/en-US/docs/Web/HTML) element represents self-contained content, potentially with an optional caption, which is specified using the {{HTMLElement("figcaption")}} element. The figure, its caption, and its contents are referenced as a single unit.
@@ -88,9 +89,9 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## Usage notes
 
-*   Usually a `<figure>` is an image, illustration, diagram, code snippet, etc., that is referenced in the main flow of a document, but that can be moved to another part of the document or to an appendix without affecting the main flow.
-*   Being a [sectioning root](/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots), the outline of the content of the `<figure>` element is excluded from the main outline of the document.
-*   A caption can be associated with the `<figure>` element by inserting a {{HTMLElement("figcaption")}} inside it (as the first or the last child). The first `<figcaption>` element found in the figure is presented as the figure's caption.
+- Usually a `<figure>` is an image, illustration, diagram, code snippet, etc., that is referenced in the main flow of a document, but that can be moved to another part of the document or to an appendix without affecting the main flow.
+- Being a [sectioning root](/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots), the outline of the content of the `<figure>` element is excluded from the main outline of the document.
+- A caption can be associated with the `<figure>` element by inserting a {{HTMLElement("figcaption")}} inside it (as the first or the last child). The first `<figcaption>` element found in the figure is presented as the figure's caption.
 
 ## Examples
 
@@ -177,4 +178,4 @@ Love is a spirit all compact of fire,
 
 ## See also
 
-*   The {{HTMLElement("figcaption")}} element.
+- The {{HTMLElement("figcaption")}} element.

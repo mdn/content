@@ -15,6 +15,7 @@ tags:
   - dt
 browser-compat: html.elements.dt
 ---
+
 {{HTMLRef}}
 
 The **`<dt>`** [HTML](/en-US/docs/Web/HTML) element specifies a term in a description or definition list, and as such must be used inside a {{HTMLElement("dl")}} element. It is usually followed by a {{HTMLElement("dd")}} element; however, multiple `<dt>` elements in a row indicate several terms that are all defined by the immediate next {{HTMLElement("dd")}} element.
@@ -106,5 +107,5 @@ For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web
 
 ## See also
 
-*   {{HTMLElement("dl")}}
-*   {{HTMLElement("dd")}}
+- {{HTMLElement("dl")}}
+- {{HTMLElement("dd")}}

@@ -8,6 +8,7 @@ tags:
   - Reference
   - Select
 ---
+
 {{HTMLSidebar}}
 
 The **`size`** attribute defines the width of the {{htmlelement('input')}} and the height of the {{htmlelement('select')}} element. For the `input`, if the `type` attribute is {{HTMLElement("input/text", "text")}} or {{HTMLElement("input/password", "password")}} then it's the number of characters. This must be an integer value 0 or higher. If no `size` is specified, or an invalid value is specified, the input has no size declared, and the form control will be the default width based on the user agent. If CSS targets the element with properties impacting the width, CSS takes precedence.
@@ -43,10 +44,10 @@ By adding `size` on some input types, the width of the input can be controlled. 
 
 ## Specifications
 
-| Specification                                                                                        | Status                           |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- |
+| Specification                                                               | Status                   |
+| --------------------------------------------------------------------------- | ------------------------ |
 | {{SpecName('HTML WHATWG', 'input.html#attr-input-size', 'size attribute')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5.1', 'input.html#attr-size-accept', 'size attribute')}}     | {{Spec2('HTML5.1')}}     |
+| {{SpecName('HTML5.1', 'input.html#attr-size-accept', 'size attribute')}}    | {{Spec2('HTML5.1')}}     |
 
 ## Browser compatibility
 
@@ -54,6 +55,6 @@ By adding `size` on some input types, the width of the input can be controlled. 
 
 ## See also
 
-*   [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength)
-*   [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength)
-*   [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern)
+- [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength)
+- [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength)
+- [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern)

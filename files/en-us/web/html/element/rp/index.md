@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: html.elements.rp
 ---
+
 {{HTMLRef}}
 
 The **`<rp>`** [HTML](/en-US/docs/Web/HTML) element is used to provide fall-back parentheses for browsers that do not support display of ruby annotations using the {{HTMLElement("ruby") }} element. One `<rp>` element should enclose each of the opening and closing parentheses that wrap the {{HTMLElement("rt")}} element that contains the annotation's text.
@@ -72,7 +73,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## Usage notes
 
-*   Ruby annotations are for showing pronunciation of East Asian characters, like using Japanese furigana or Taiwanese bopomofo characters. The `<rp>` element is used in the case of lack of {{HTMLElement("ruby")}} element support; the `<rp>` content provides what should be displayed in order to indicate the presence of a ruby annotation, usually parentheses.
+- Ruby annotations are for showing pronunciation of East Asian characters, like using Japanese furigana or Taiwanese bopomofo characters. The `<rp>` element is used in the case of lack of {{HTMLElement("ruby")}} element support; the `<rp>` content provides what should be displayed in order to indicate the presence of a ruby annotation, usually parentheses.
 
 ## Examples
 
@@ -109,7 +110,7 @@ See the article about the {{HTMLElement("ruby")}} element for further examples.
 
 ## See also
 
-*   {{HTMLElement("ruby")}}
-*   {{HTMLElement("rt")}}
-*   {{HTMLElement("rb")}}
-*   {{HTMLElement("rtc")}}
+- {{HTMLElement("ruby")}}
+- {{HTMLElement("rt")}}
+- {{HTMLElement("rb")}}
+- {{HTMLElement("rtc")}}

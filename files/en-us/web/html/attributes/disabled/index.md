@@ -8,6 +8,7 @@ tags:
   - Forms
   - required
 ---
+
 {{HTMLSidebar}}
 
 The Boolean **`disabled`** attribute, when present, makes the element not mutable, focusable, or even submitted with the form. The user can neither edit nor focus on the control, nor its form control descendants.
@@ -143,4 +144,4 @@ When form controls are disabled, many browsers will display them in a lighter, g
 
 ## See also
 
-*   {{cssxref(':disabled')}} and {{cssxref(':enabled')}}
+- {{cssxref(':disabled')}} and {{cssxref(':enabled')}}

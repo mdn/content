@@ -13,6 +13,7 @@ tags:
   - tbody
 browser-compat: html.elements.tbody
 ---
+
 {{HTMLRef}}
 
 The **`<tbody>`** [HTML](/en-US/docs/Web/HTML) element encapsulates a set of table rows ({{HTMLElement("tr")}} elements), indicating that they comprise the body of the table ({{HTMLELement("table")}}).
@@ -82,45 +83,50 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ### Deprecated attributes
 
-*   {{ htmlattrdef("align") }} {{deprecated_inline}}
-    *   : This enumerated attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
+- {{ htmlattrdef("align") }} {{deprecated_inline}}
 
-        *   `left`, aligning the content to the left of the cell
-        *   `center`, centering the content in the cell
-        *   `right`, aligning the content to the right of the cell
-        *   `justify`, inserting spaces into the textual content so that the content is justified in the cell
-        *   `char`, aligning the textual content on a special character with a minimal offset, defined by the {{ htmlattrxref("char", "tbody") }} and {{ htmlattrxref("charoff", "tbody") }} attributes.
+  - : This enumerated attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
 
-        If this attribute is not set, the `left` value is assumed.
+    - `left`, aligning the content to the left of the cell
+    - `center`, centering the content in the cell
+    - `right`, aligning the content to the right of the cell
+    - `justify`, inserting spaces into the textual content so that the content is justified in the cell
+    - `char`, aligning the textual content on a special character with a minimal offset, defined by the {{ htmlattrxref("char", "tbody") }} and {{ htmlattrxref("charoff", "tbody") }} attributes.
 
-        As this attribute is deprecated, use the CSS {{cssxref("text-align")}} property instead.
+    If this attribute is not set, the `left` value is assumed.
 
-        > **Note:** The equivalent `text-align` property for the `align="char"` is not implemented in any browsers yet. See the [`text-align`'s browser compatibility section](/en-US/docs/Web/CSS/text-align#browser_compatibility) for the `<string>` value.
-*   {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
-    *   : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/color_value#rgb_colors), prefixed by a '`#`'. One of the predefined [color kewords](/en-US/docs/Web/CSS/color_value#color_keywords) can also be used.
+    As this attribute is deprecated, use the CSS {{cssxref("text-align")}} property instead.
 
-        As this attribute is deprecated, use the CSS {{cssxref("background-color")}} property instead.
-*   {{ htmlattrdef("char") }} {{deprecated_inline}}
-    *   : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tbody")}} is not set to `char`, this attribute is ignored.
-*   {{ htmlattrdef("charoff") }} {{deprecated_inline}}
-    *   : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the `char` attribute.
-*   {{ htmlattrdef("valign") }} {{deprecated_inline}}
-    *   : This attribute specifies the vertical alignment of the text within each row of cells of the table header. Possible values for this attribute are:
+    > **Note:** The equivalent `text-align` property for the `align="char"` is not implemented in any browsers yet. See the [`text-align`'s browser compatibility section](/en-US/docs/Web/CSS/text-align#browser_compatibility) for the `<string>` value.
 
-        *   `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the [baseline](https://en.wikipedia.org/wiki/Baseline\_%28typography%29) of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.
-        *   `bottom`, which will put the text as close to the bottom of the cell as it is possible;
-        *   `middle`, which will center the text in the cell;
-        *   and `top`, which will put the text as close to the top of the cell as it is possible.
+- {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
 
-        As this attribute is deprecated, use the CSS {{cssxref("vertical-align")}} property instead.
+  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/color_value#rgb_colors), prefixed by a '`#`'. One of the predefined [color kewords](/en-US/docs/Web/CSS/color_value#color_keywords) can also be used.
+
+    As this attribute is deprecated, use the CSS {{cssxref("background-color")}} property instead.
+
+- {{ htmlattrdef("char") }} {{deprecated_inline}}
+  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tbody")}} is not set to `char`, this attribute is ignored.
+- {{ htmlattrdef("charoff") }} {{deprecated_inline}}
+  - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the `char` attribute.
+- {{ htmlattrdef("valign") }} {{deprecated_inline}}
+
+  - : This attribute specifies the vertical alignment of the text within each row of cells of the table header. Possible values for this attribute are:
+
+    - `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the [baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29) of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.
+    - `bottom`, which will put the text as close to the bottom of the cell as it is possible;
+    - `middle`, which will center the text in the cell;
+    - and `top`, which will put the text as close to the top of the cell as it is possible.
+
+    As this attribute is deprecated, use the CSS {{cssxref("vertical-align")}} property instead.
 
 ## Usage notes
 
-*   If the table includes a {{HTMLElement("thead")}} block (to semantically identify header rows), the `<tbody>` block *must* come after it.
-*   If you use `<tbody>`, you can't also have table rows ({{HTMLElement("tr")}} elements) which are direct children of the {{HTMLElement("table")}} but not included inside the `<tbody>`. All non-header and non-footer rows must be inside the `<tbody>` if one is used.
-*   When printing a document, the `<thead>` and {{htmlelement("tfoot")}} elements specify information that may be the same—or at least very similar—on every page of a multi-page table, while the `<tbody>` element's contents generally will differ from page to page.
-*   When a table is presented in a screen context (such as a window) which is not large enough to display the entire table, the {{Glossary("user agent")}} may let the user scroll the contents of the `<thead>`, `<tbody>`, `<tfoot>`, and {{HTMLElement("caption")}} blocks separately from one another for the same parent table.
-*   You *may* use more than one `<tbody>` per table as long as they are all consecutive. This lets you divide the rows in large tables into sections, each of which may be separately formatted if so desired.
+- If the table includes a {{HTMLElement("thead")}} block (to semantically identify header rows), the `<tbody>` block _must_ come after it.
+- If you use `<tbody>`, you can't also have table rows ({{HTMLElement("tr")}} elements) which are direct children of the {{HTMLElement("table")}} but not included inside the `<tbody>`. All non-header and non-footer rows must be inside the `<tbody>` if one is used.
+- When printing a document, the `<thead>` and {{htmlelement("tfoot")}} elements specify information that may be the same—or at least very similar—on every page of a multi-page table, while the `<tbody>` element's contents generally will differ from page to page.
+- When a table is presented in a screen context (such as a window) which is not large enough to display the entire table, the {{Glossary("user agent")}} may let the user scroll the contents of the `<thead>`, `<tbody>`, `<tfoot>`, and {{HTMLElement("caption")}} blocks separately from one another for the same parent table.
+- You _may_ use more than one `<tbody>` per table as long as they are all consecutive. This lets you divide the rows in large tables into sections, each of which may be separately formatted if so desired.
 
 ## Examples
 
@@ -205,7 +211,7 @@ The resulting table looks like this:
 
 ### Multiple bodies
 
-You can create multiple sections within a table by using multiple `<tbody>` elements. Each may potentially have its own header row or rows; however, *there can be only one {{HTMLElement("thead")}} per table!* Because of that, you need to use a {{HTMLElement("tr")}} filled with {{HTMLElement("th")}} elements to create headers within each `<tbody>`. Let's see how that's done.
+You can create multiple sections within a table by using multiple `<tbody>` elements. Each may potentially have its own header row or rows; however, _there can be only one {{HTMLElement("thead")}} per table!_ Because of that, you need to use a {{HTMLElement("tr")}} filled with {{HTMLElement("th")}} elements to create headers within each `<tbody>`. Let's see how that's done.
 
 Let's take the previous example, add some more students to the list, and update the table so that instead of listing each student's major on every row, the students are grouped by major, with heading rows for each major.
 
@@ -315,7 +321,7 @@ tbody > tr > th {
 
 ## See also
 
-*   CSS properties and [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) that may be specially useful to style the `<tbody>` element:
+- CSS properties and [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) that may be specially useful to style the `<tbody>` element:
 
-    *   the {{ cssxref(":nth-child") }} pseudo-class to set the alignment on the cells of the column;
-    *   the {{ cssxref("text-align") }} property to align all cells content on the same character, like '.'.
+  - the {{ cssxref(":nth-child") }} pseudo-class to set the alignment on the cells of the column;
+  - the {{ cssxref("text-align") }} property to align all cells content on the same character, like '.'.

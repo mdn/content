@@ -8,6 +8,7 @@ tags:
   - HTML
   - Reference
 ---
+
 {{HTMLSidebar}}
 
 The **`pattern`** attribute specifies a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) the form control's value should match. If a non-`null` value doesn't conform to the constraints set by the `pattern` value, the {{domxref('ValidityState')}} object's read-only {{domxref('ValidityState.patternMismatch','patternMismatch')}} property will be true.
@@ -122,11 +123,11 @@ While `title`s are used by some browsers to populate error messaging, because br
 
 ## Specifications
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| Specification                                                             | Status                   | Comment |
+| ------------------------------------------------------------------------- | ------------------------ | ------- |
 | {{ SpecName('HTML WHATWG', 'forms.html#attr-input-pattern', 'pattern') }} | {{Spec2('HTML WHATWG')}} |         |
 | {{ SpecName('HTML5.1', 'forms.html#attr-input-pattern', 'pattern') }}     | {{Spec2('HTML5.1')}}     |         |
-| {{ SpecName('HTML5 W3C', 'forms.html#attr-input-pattern', 'pattern') }} | {{Spec2('HTML5 W3C')}}     |         |
+| {{ SpecName('HTML5 W3C', 'forms.html#attr-input-pattern', 'pattern') }}   | {{Spec2('HTML5 W3C')}}   |         |
 
 ## Browser compatibility
 
@@ -134,6 +135,6 @@ While `title`s are used by some browsers to populate error messaging, because br
 
 ## See also
 
-*   [Constraint validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)
-*   [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)
-*   [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Constraint validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)

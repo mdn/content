@@ -16,6 +16,7 @@ tags:
   - password
 browser-compat: html.elements.input.input-password
 ---
+
 {{HTMLRef("Input_types")}}
 
 `<input>` elements of type **`password`** provide a way for the user to securely enter a password.
@@ -112,7 +113,7 @@ Use of a pattern is strongly recommended for password inputs, in order to help e
 
 ### placeholder
 
-The `placeholder` attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text *must not* include carriage returns or line feeds.
+The `placeholder` attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text _must not_ include carriage returns or line feeds.
 
 If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossary("RTL")}}) but needs to present the placeholder in the opposite directionality, you can use Unicode bidirectional algorithm formatting characters to override directionality within the placeholder; see {{SectionOnPage("/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Overriding BiDi using Unicode control characters")}} for those characters.
 
@@ -128,7 +129,7 @@ A Boolean attribute which, if present, means this field cannot be edited by the 
 
 The `size` attribute is a numeric value indicating how many characters wide the input field should be. The value must be a number greater than zero, and the default value is 20. Since character widths vary, this may or may not be exact and should not be relied upon to be so; the resulting input may be narrower or wider than the specified number of characters, depending on the characters and the font ({{cssxref("font")}} settings in use).
 
-This does *not* set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the `{{anch("maxlength")}}` attribute.
+This does _not_ set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the `{{anch("maxlength")}}` attribute.
 
 ## Using password inputs
 
@@ -149,14 +150,14 @@ Here we see the most basic password input, with a label established using the {{
 
 To allow the user's password manager to automatically enter the password, specify the {{htmlattrxref("autocomplete", "input")}} attribute. For passwords, this should typically be one of the following:
 
-*   `on`
-    *   : Allow the browser or a password manager to automatically fill out the password field. This isn't as informative as using either `current-password` or `new-password`.
-*   `off`
-    *   : Don't allow the browser or password manager to automatically fill out the password field. Note that some software ignores this value, since it's typically harmful to users' ability to maintain safe password practices.
-*   `current-password`
-    *   : Allow the browser or password manager to enter the current password for the site. This provides more information than `on` does, since it lets the browser or password manager automatically enter currently-known password for the site in the field, but not to suggest a new one.
-*   `new-password`
-    *   : Allow the browser or password manager to automatically enter a new password for the site; this is used on "change your password" and "new user" forms, on the field asking the user for a new password. The new password may be generated in a variety of ways, depending on the password manager in use. It may fill in a new suggested password, or it might show the user an interface for creating one.
+- `on`
+  - : Allow the browser or a password manager to automatically fill out the password field. This isn't as informative as using either `current-password` or `new-password`.
+- `off`
+  - : Don't allow the browser or password manager to automatically fill out the password field. Note that some software ignores this value, since it's typically harmful to users' ability to maintain safe password practices.
+- `current-password`
+  - : Allow the browser or password manager to enter the current password for the site. This provides more information than `on` does, since it lets the browser or password manager automatically enter currently-known password for the site in the field, but not to suggest a new one.
+- `new-password`
+  - : Allow the browser or password manager to automatically enter a new password for the site; this is used on "change your password" and "new user" forms, on the field asking the user for a new password. The new password may be generated in a variety of ways, depending on the password manager in use. It may fill in a new suggested password, or it might show the user an interface for creating one.
 
 ```html
 <label for="userPassword">Password:</label>
@@ -290,4 +291,4 @@ ssn.oninput = function(event) {
 
 ## See also
 
-*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

@@ -9,13 +9,14 @@ tags:
   - Web
   - l10n:priority
 ---
+
 {{HTMLSidebar("Elements")}}
 
 This page lists all the {{Glossary("HTML")}} {{Glossary("Element","elements")}}, which are created using {{Glossary("Tag", "tags")}}.
 
 They are grouped by function to help you find what you have in mind easily. An alphabetical list of all elements is provided in the sidebar on every element's page as well as this one.
 
-> **Note:** For more information about the basics of HTML elements and attributes, see [the section on elements in the Introduction to HTML article](/en-US/docs/Learn/HTML/Introduction_to_HTML#elements\_%e2%80%94\_the_basic_building_blocks).
+> **Note:** For more information about the basics of HTML elements and attributes, see [the section on elements in the Introduction to HTML article](/en-US/docs/Learn/HTML/Introduction_to_HTML#elements_%e2%80%94_the_basic_building_blocks).
 
 ## Main root
 
@@ -23,7 +24,7 @@ They are grouped by function to help you find what you have in mind easily. An a
 
 ## Document metadata
 
-Metadata contains information about the page. This includes information about styles, scripts and data to help software ({{Glossary("search engine", "search engines")}}, {{Glossary("Browser","browsers")}}, etc.) use and render the page. Metadata for styles and scripts may be defined in the page or link to another file that has the information. 
+Metadata contains information about the page. This includes information about styles, scripts and data to help software ({{Glossary("search engine", "search engines")}}, {{Glossary("Browser","browsers")}}, etc.) use and render the page. Metadata for styles and scripts may be defined in the page or link to another file that has the information.
 
 {{HTMLRefTable("HTML Document Metadata")}}
 
@@ -33,13 +34,13 @@ Metadata contains information about the page. This includes information about st
 
 ## Content sectioning
 
-Content sectioning elements allow you to organize the document content into logical pieces. Use the sectioning elements to create a broad outline for your page content, including header and footer navigation, and heading elements to identify sections of content.   
+Content sectioning elements allow you to organize the document content into logical pieces. Use the sectioning elements to create a broad outline for your page content, including header and footer navigation, and heading elements to identify sections of content.
 
 {{HTMLRefTable("HTML Sections")}}
 
 ## Text content
 
-Use HTML text content elements to organize blocks or sections of content placed between the opening {{HTMLElement("body")}} and closing `</body>` tags. Important for {{Glossary("accessibility")}} and {{Glossary("SEO")}}, these elements identify the purpose or structure of that content.     
+Use HTML text content elements to organize blocks or sections of content placed between the opening {{HTMLElement("body")}} and closing `</body>` tags. Important for {{Glossary("accessibility")}} and {{Glossary("SEO")}}, these elements identify the purpose or structure of that content.
 
 {{HTMLRefTable("HTML Grouping Content")}}
 

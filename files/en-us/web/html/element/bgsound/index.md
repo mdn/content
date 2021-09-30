@@ -13,6 +13,7 @@ tags:
   - Web
 browser-compat: html.elements.bgsound
 ---
+
 {{deprecated_header}}{{non-standard_header}}
 
 The **`<bgsound>`** [HTML](/en-US/docs/Web/HTML) element is deprecated. It sets up a sound file to play in the background while the page is used; use {{HTMLElement("audio")}} instead.
@@ -21,14 +22,14 @@ The **`<bgsound>`** [HTML](/en-US/docs/Web/HTML) element is deprecated. It sets 
 
 ## Attributes
 
-*   {{htmlattrdef("balance")}}
-    *   : This attribute defines a number between -10,000 and +10,000 that determines how the volume will be divided between the speakers.
-*   {{htmlattrdef("loop")}}
-    *   : This attribute indicates the number of times a sound is to be played and either has a numeric value or the keyword infinite.
-*   {{htmlattrdef("src")}}
-    *   : This attribute specifies the URL of the sound file to be played, which must be one of the following types: .wav, .au, or .mid.
-*   {{htmlattrdef("volume")}}
-    *   : This attribute defines a number between -10,000 and 0 that determines the loudness of a page's background sound.
+- {{htmlattrdef("balance")}}
+  - : This attribute defines a number between -10,000 and +10,000 that determines how the volume will be divided between the speakers.
+- {{htmlattrdef("loop")}}
+  - : This attribute indicates the number of times a sound is to be played and either has a numeric value or the keyword infinite.
+- {{htmlattrdef("src")}}
+  - : This attribute specifies the URL of the sound file to be played, which must be one of the following types: .wav, .au, or .mid.
+- {{htmlattrdef("volume")}}
+  - : This attribute defines a number between -10,000 and 0 that determines the loudness of a page's background sound.
 
 ## Example
 
@@ -54,6 +55,6 @@ You can write `<bgsound>` as a self-closing tag (`<bgsound />`); however, since 
 
 ## See also
 
-*   The {{htmlelement("audio")}}, which is the standard element to embed audio in a document.
+- The {{htmlelement("audio")}}, which is the standard element to embed audio in a document.
 
 {{HTMLRef}}

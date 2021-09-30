@@ -7,6 +7,7 @@ tags:
   - Constraint validation
   - HTML
 ---
+
 {{HTMLSidebar}}
 
 The Boolean **`multiple`** attribute, if set, means the form control accepts one or more values. Valid for the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/file", "file")}} input types and the {{HTMLElement("select")}}, the manner by which the user opts for multiple values depends on the form control.
@@ -195,6 +196,6 @@ There are a few ways to select multiple options in a `<select>` element with a `
 
 ## See also
 
-*   {{htmlelement('input')}}
-*   {{htmlelement('select')}}
-*   [Allowing multiple e-mail addresses](/en-US/docs/Web/HTML/Element/input/email#allowing_multiple_e-mail_addresses)
+- {{htmlelement('input')}}
+- {{htmlelement('select')}}
+- [Allowing multiple e-mail addresses](/en-US/docs/Web/HTML/Element/input/email#allowing_multiple_e-mail_addresses)
