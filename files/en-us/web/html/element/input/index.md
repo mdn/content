@@ -519,7 +519,7 @@ This section provides a table listing all the attributes with a brief descriptio
     </tr>
     <tr>
       <td>{{htmlattrxref("size", "input", "", 1)}}</td>
-      <td>email, password, tel, text</td>
+      <td>email, password, tel, text, url</td>
       <td>Size of the control</td>
     </tr>
     <tr>
@@ -710,7 +710,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
         See {{anch("Client-side validation")}} and the [HTML attribute: `required`](/en-US/docs/Web/HTML/Attributes/required) for more information.
 *   {{htmlattrdef("size")}}
-    *   : Valid for `email`, `password`, `tel`, and `text` `input` types only. Specifies how much of the input is shown. Basically creates same result as setting CSS `width` property with a few specialities. The actual unit of the value depends on the input type. For `password` and `text`, it is a number of characters (or `em` units) with a default value of `20`, and for others, it is `pixel`s. CSS width takes precedence over size attribute.
+    *   : Valid for `email`, `password`, `tel`, `url` and `text` `input` types only. Specifies how much of the input is shown. Basically creates same result as setting CSS `width` property with a few specialities. The actual unit of the value depends on the input type. For `password` and `text`, it is a number of characters (or `em` units) with a default value of `20`, and for others, it is `pixel`s. CSS width takes precedence over size attribute.
 *   {{htmlattrdef("src")}}
     *   : Valid for the `image` input button only, the `src` is string specifying the URL of the image file to display to represent the graphical submit button. See the {{HTMLElement("input/image", "image")}} input type.
 *   {{htmlattrdef("step")}}
@@ -1559,8 +1559,8 @@ Firefox uses the following heuristics to determine the locale to validate the us
             {{ARIARole("spinbutton")}}
           </li>
           <li>
-            <code
-              >type=color|date|datetime|datetime-local|email|file|hidden|month|number|password|range|reset|search|submit|tel|url|week</code
+            <code>type=color|date|datetime|datetime-local|email|file|hidden|</code>
+              <code>month|number|password|range|reset|search|submit|tel|url|week</code
             >
             or <code>text</code> with <code>list</code> attribute: no
             <code>role</code> permitted
