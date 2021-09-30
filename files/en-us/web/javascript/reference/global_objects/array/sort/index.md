@@ -73,15 +73,11 @@ elements are sorted according to the return value of the compare function (all
 `undefined` elements are sorted to the end of the array, with no call to
 `compareFunction`).
 
-| `compareFunction(a, b)` returns | sort order            |
-|---------------------------------|-----------------------|
-| value < 0                       | sort `b` before `a`   |
-| value > 0                       | sort `a` before `b`   |
-| value === 0                     | `a` and `b` are equal |
-
-  > **Note:** The [ECMAScript Standard, 10th edition](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-intro) (2019)
-  > algorithm mandates stable sorting, which means elements that compare equal must remain in their original order with respect to each other.
-  > This behaviour may not be respected by older browsers.
+| `compareFunction(a, b)` return value | sort order                         |
+|--------------------------------------|------------------------------------|
+| > 0                                  | sort `b` before `a`                |
+| < 0                                  | sort `a` before `b`                |
+| === 0                                | keep original order of `a` and `b` |
 
 - `compareFunction(a, b)` must always return the same value when given a
   specific pair of elements `a` and `b` as its two arguments. If
