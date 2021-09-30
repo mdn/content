@@ -11,7 +11,7 @@ browser-compat: api.ImageTrack.animated
 ---
 {{DefaultAPISidebar("WebCodecs API")}}
 
-The **`animated`**  property of the {{domxref("ImageTrack")}} interface returns `true` if the track is animated and therefore has multiple frames.
+The **`animated`** property of the {{domxref("ImageTrack")}} interface returns `true` if the track is animated and therefore has multiple frames.
 
 ### Value
 
