@@ -13,7 +13,7 @@ tags:
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}</div>
 
-<p class="summary">We now look at the functionality of non-<code>&lt;input&gt;</code> form elements in detail, from other control types such as drop-down lists and multi-line text fields, to other useful form features such as the {{htmlelement('output')}} element (which we saw in action in the previous article), and progress bars.</p>
+<p>We now look at the functionality of non-<code>&lt;input&gt;</code> form elements in detail, from other control types such as drop-down lists and multi-line text fields, to other useful form features such as the {{htmlelement('output')}} element (which we saw in action in the previous article), and progress bars.</p>
 
 <table>
  <tbody>
@@ -93,21 +93,22 @@ tags:
 
 <p>A simple select box is created with a {{HTMLElement("select")}} element with one or more {{HTMLElement("option")}} elements as its children, each of which specifies one of its possible values.</p>
 
-<div id="Simple">
+<h4>Basic example</h4>
+
 <pre class="brush: html">&lt;select id="simple" name="simple"&gt;
   &lt;option&gt;Banana&lt;/option&gt;
   &lt;option selected&gt;Cherry&lt;/option&gt;
   &lt;option&gt;Lemon&lt;/option&gt;
 &lt;/select&gt;</pre>
-</div>
 
-<p>{{EmbedLiveSample("Simple", 120, 120)}}</p>
+<p>{{EmbedLiveSample("Basic_example", 120, 120)}}</p>
 
 <p>If required, the default value for the select box can be set using the {{htmlattrxref("selected","option")}} attribute on the desired {{HTMLElement("option")}} element — this option is then preselected when the page loads.</p>
 
+<h4>Using optgroup</h4>
+
 <p>The {{HTMLElement("option")}} elements can be nested inside {{HTMLElement("optgroup")}} elements to create visually associated groups of values:</p>
 
-<div id="groups">
 <pre class="brush: html">&lt;select id="groups" name="groups"&gt;
   &lt;optgroup label="fruits"&gt;
     &lt;option&gt;Banana&lt;/option&gt;
@@ -120,11 +121,12 @@ tags:
     &lt;option&gt;Potato&lt;/option&gt;
   &lt;/optgroup&gt;
 &lt;/select&gt;</pre>
-</div>
 
-<p>{{EmbedLiveSample("groups", 120, 120)}}</p>
+<p>{{EmbedLiveSample("Using_optgroup", 120, 120)}}</p>
 
-<p>On the {{HTMLElement("optgroup")}} element, the value of the <code><a href="/en-US/docs/Web/HTML/Attributes/label">label</a></code> attribute is displayed before the values of the nested options. The browser usually sets them visually apart from the options (i.e. by being bolded and at a different nesting level) so they are less likely to be confused for actual options.</p>
+<p>On the {{HTMLElement("optgroup")}} element, the value of the <code><a href="/en-US/docs/Web/HTML/Element/optgroup#attr-label">label</a></code> attribute is displayed before the values of the nested options. The browser usually sets them visually apart from the options (i.e. by being bolded and at a different nesting level) so they are less likely to be confused for actual options.</p>
+
+<h4>Using the value attribute</h4>
 
 <p>If an {{HTMLElement("option")}} element has an explicit <code>value</code> attribute set on it, that value is sent when the form is submitted with that option selected. If the <code>value</code> attribute is omitted, as with the examples above, the content of the {{HTMLElement("option")}} element is used as the value. So <code>value</code> attributes are not needed, but you might find a reason to want to send a shortened or different value to the server than what is visually shown in the select box.</p>
 
@@ -169,8 +171,9 @@ tags:
 
 <p>The data list is then bound to an {{htmlelement("input")}} element (e.g. a <code>text</code> or <code>email</code> input type) using the {{htmlattrxref("list","input")}} attribute, the value of which is the <code>id</code> of the data list to bind.</p>
 
-<div id="first_autocomplete">
 <p>Once a data list is affiliated with a form widget, its options are used to auto-complete text entered by the user; typically, this is presented to the user as a drop-down box listing possible matches for what they've typed into the input.</p>
+
+<h4>Basic example</h4>
 
 <p>Let's look at an example.</p>
 
@@ -187,8 +190,7 @@ tags:
   &lt;option&gt;Pear&lt;/option&gt;
 &lt;/datalist&gt;</pre>
 
-<p>{{EmbedLiveSample("first_autocomplete", 120, 120)}}</p>
-</div>
+<p>{{EmbedLiveSample("Basic_example", 120, 120)}}</p>
 
 <h4 id="Datalist_support_and_fallbacks">Datalist support and fallbacks</h4>
 

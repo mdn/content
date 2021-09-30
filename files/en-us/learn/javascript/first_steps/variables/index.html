@@ -38,54 +38,54 @@ tags:
 
 <p>Throughout this article, you'll be asked to type in lines of code to test your understanding of the content. If you are using a desktop browser, the best place to type your sample code is your browser's JavaScript console (see <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information on how to access this tool).</p>
 
-
 <h2>What is a variable?</h2>
 
-<p>A variable is a container for a value, like a number we might use in a sum, or a string that we might use as part of a sentence. Let's look at a simple example:</p>
+<p>A variable is a container for a value, like a number we might use in a sum, or a string that we might use as part of a sentence.</p>
 
-<div id="example_with_variabele">
-    <pre class="brush: html">
-    &lt;button id="button_A"&gt;Press me&lt;/button&gt;
-    &lt;h3 id="heading_A"&gt;&lt;/h3&gt;
-    </pre>
+<h3>Variable example</h3>
 
-    <pre class="brush: js">
-    const buttonA = document.querySelector('#button_A');
-    const headingA = document.querySelector('#heading_A');
-    
-    buttonA.onclick = function() {
-      let name = prompt('What is your name?');
-      alert('Hello ' + name + ', nice to see you!');
-      headingA.textContent = 'Welcome ' + name;
-    }</pre>
-    
-    <p>{{ EmbedLiveSample('example_with_variabele', '100%', 50, "", "", "hide-codepen-jsfiddle") }}</p>
-</div>
+<p>Let's look at a simple example:</p>
+
+<pre class="brush: html">
+&lt;button id="button_A"&gt;Press me&lt;/button&gt;
+&lt;h3 id="heading_A"&gt;&lt;/h3&gt;
+</pre>
+
+<pre class="brush: js">
+const buttonA = document.querySelector('#button_A');
+const headingA = document.querySelector('#heading_A');
+
+buttonA.onclick = function() {
+  let name = prompt('What is your name?');
+  alert('Hello ' + name + ', nice to see you!');
+  headingA.textContent = 'Welcome ' + name;
+}
+</pre>
+
+<p>{{ EmbedLiveSample('Variable example', '100%', 120) }}</p>
 
 <p>In this example pressing the button runs some code. The first line pops a box up on the screen that asks the reader to enter their name, and then stores the value in a variable. The second line displays a welcome message that includes their name, taken from the variable value and the third line displays that name on the page.</p>
+
+<h3>Without a variable</h3>
 
 <p>To understand why this is so useful, let's think about how we'd write this example without using a variable. It would end up looking something like this:</p>
 
 
-<div id="example_without_variable">
+<pre class="brush: html example-bad">
+&lt;button id="button_B"&gt;Press me&lt;/button&gt;
+&lt;h3 id="heading_B"&gt;&lt;/h3&gt;
+</pre>
 
-    <pre class="brush: html example-bad">
-    &lt;button id="button_B"&gt;Press me&lt;/button&gt;
-    &lt;h3 id="heading_B"&gt;&lt;/h3&gt;
-    </pre>
+<pre class="brush: js example-bad">
+const buttonB = document.querySelector('#button_B');
+const headingB = document.querySelector('#heading_B');
 
-    <pre class="brush: js example-bad">
-    const buttonB = document.querySelector('#button_B');
-    const headingB = document.querySelector('#heading_B');
-    
-    buttonB.onclick = function() {
-        alert('Hello ' + prompt('What is your name?') + ', nice to see you!');
-        headingB.textContent = 'Welcome ' + prompt('What is your name?');
-    }</pre>
-    
-    <p>{{ EmbedLiveSample('example_without_variable', '100%', 50, "", "", "hide-codepen-jsfiddle") }}</p>
-</div>
+buttonB.onclick = function() {
+    alert('Hello ' + prompt('What is your name?') + ', nice to see you!');
+    headingB.textContent = 'Welcome ' + prompt('What is your name?');
+}</pre>
 
+<p>{{ EmbedLiveSample('Without_a_variable', '100%', 120) }}</p>
 
 <p>You may not fully understand the syntax we are using (yet!), but you should be able to get the idea. If we didn't have variables available, we'd have to ask the reader for their name every time we needed to use it!</p>
 
