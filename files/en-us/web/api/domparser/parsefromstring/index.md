@@ -78,17 +78,22 @@ console.log(doc3.body.firstChild.textContent);
 
 ### Error handling
 
-Note that if the XML parser is used and parsing fails, the `DOMParser` throws an error:
+When using the XML parser with a string that doesn't represent well-formed XML, the {{domxref("XMLDocument")}} returned by `parseFromString` will contain a `<parsererror>` node describing the nature of the parsing error.
 
 ```js
 const parser = new DOMParser();
 
 const xmlString = "<warning>Beware of the missing closing tag";
 const doc = parser.parseFromString(xmlString, "application/xml");
-// XML Parsing Error: no root element found
+const errorNode = doc.querySelector('parsererror');
+if (errorNode) {
+  // parsing failed
+} else {
+  // parsing succeeded
+}
 ```
 
-The parsing error may also be reported to the browser's JavaScript console.
+Additionally, the parsing error may be reported to the browser's JavaScript console.
 
 ## Specifications
 
