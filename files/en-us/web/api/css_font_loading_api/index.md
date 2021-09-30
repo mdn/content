@@ -5,7 +5,6 @@ tags:
   - API
   - CSSFontLoading
   - CSSOM
-  - Experimental
   - Fonts
   - NeedsContent
   - Reference
