@@ -37,13 +37,13 @@ tags:
 <p><img alt="" src="tabbed-info-box.png"></p>
 
 <div class="note">
-<p><strong>Note</strong>: You can see the finished example running live at <a href="https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html">info-box.html</a> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html">source code</a>). Check it out to get an idea of what you will be building in this section of the article.</p>
+<p><strong>Note:</strong> You can see the finished example running live at <a href="https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html">info-box.html</a> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html">source code</a>). Check it out to get an idea of what you will be building in this section of the article.</p>
 </div>
 
 <p>You might be thinking "why not just create the separate tabs as separate webpages, and just have the tabs clicking through to the separate pages to create the effect?" This code would be simpler, yes, but then each separate "page" view would actually be a newly-loaded webpage, which would make it harder to save information across views, and integrate this feature into a larger UI design. In addition, so-called "single page apps" are becoming very popular — especially for mobile web UIs — because having everything served as a single file cuts down on the number of HTTP requests required to view all the content, thereby improving performance.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Some web developers take things even further, only having one page of information loaded at once, and dynamically changing the information shown using a JavaScript feature such as <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>. At this point in your learning however we want to keep things as simple as possible. There is some JavaScript later on, but only a tiny bit.</p>
+<p><strong>Note:</strong> Some web developers take things even further, only having one page of information loaded at once, and dynamically changing the information shown using a JavaScript feature such as <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>. At this point in your learning however we want to keep things as simple as possible. There is some JavaScript later on, but only a tiny bit.</p>
 </div>
 
 <p>To start with, we'd like you to make a local copy of the starting HTML file — <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box-start.html">info-box-start.html</a>. Save this somewhere sensible on your local computer, and open it up in your text editor. Let's look at the HTML contained within the body:</p>
@@ -121,7 +121,7 @@ body {
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: We are using descendant selectors with <code>.info-box</code> at the start of the chain throughout this example — this is so that we can insert this feature into a page with other content already on it, without fear of interfering with the styles applied to other parts of the page.</p>
+<p><strong>Note:</strong> We are using descendant selectors with <code>.info-box</code> at the start of the chain throughout this example — this is so that we can insert this feature into a page with other content already on it, without fear of interfering with the styles applied to other parts of the page.</p>
 </div>
 
 <p>Next, we'll style the horizontal tabs — the list items are all floated left to make them sit in a line together, their {{cssxref("list-style-type")}} is set to <code>none</code> to get rid of the bullets, and their {{cssxref("width")}} is set to <code>150px</code> so they will comfortably fit across the info-box. The {{htmlelement("a")}} elements are set to {{cssxref("display")}} inline-block so they will sit in a line but still be stylable, and they are styled appropriately for tab buttons, using a variety of other properties.</p>
@@ -238,7 +238,7 @@ function setTabHandler(tab, tabPos) {
 <p><img alt="" src="fixed-info-box.png"></p>
 
 <div class="note">
-<p><strong>Note</strong>: You can see the finished example running live at <a href="https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html">fixed-info-box.html</a> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/fixed-info-box.html">source code</a>). Check it out to get an idea of what you will be building in this section of the article.</p>
+<p><strong>Note:</strong> You can see the finished example running live at <a href="https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html">fixed-info-box.html</a> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/fixed-info-box.html">source code</a>). Check it out to get an idea of what you will be building in this section of the article.</p>
 </div>
 
 <p>As a starting point, you can use your completed example from the first section of the article, or make a local copy of <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html">info-box.html</a> from our Github repo.</p>
@@ -260,7 +260,7 @@ function setTabHandler(tab, tabPos) {
 &lt;/section&gt;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: You can feel free to change the fake content for some real content if you like.</p>
+<p><strong>Note:</strong> You can feel free to change the fake content for some real content if you like.</p>
 </div>
 
 <h3 id="Changes_to_the_existing_CSS">Changes to the existing CSS</h3>
@@ -301,7 +301,7 @@ function setTabHandler(tab, tabPos) {
 <p><img alt="" src="hidden-sliding-panel.png"></p>
 
 <div class="note">
-<p><strong>Note</strong>: You can see the finished example running live at <a href="https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html">hidden-info-panel.html</a> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel.html">source code</a>). Check it out to get an idea of what you will be building in this section of the article.</p>
+<p><strong>Note:</strong> You can see the finished example running live at <a href="https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html">hidden-info-panel.html</a> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel.html">source code</a>). Check it out to get an idea of what you will be building in this section of the article.</p>
 </div>
 
 <p>As a starting point, make a local copy of <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel-start.html">hidden-info-panel-start.html</a> from our Github repo. This doesn't follow on from the previous example, so a fresh start file is required. Let's have a look at the HTML in the file:</p>
@@ -317,7 +317,7 @@ function setTabHandler(tab, tabPos) {
 <p>To start with here we've got a {{htmlelement("label")}} element and an {{htmlelement("input")}} element — <code>&lt;label&gt;</code> elements are normally used to associate a text label with a form element for accessibility purposes (allowing a screen user to see what description goes with what form element). Here it is associated with the <code>&lt;input&gt;</code> checkbox using the <code>for</code> and <code>id</code> attributes.</p>
 
 <div class="note">
-<p><strong>Note</strong>: We've put a special question mark character into our HTML to act as our info icon — this represents the button that will be pressed to show/hide the panel.</p>
+<p><strong>Note:</strong> We've put a special question mark character into our HTML to act as our info icon — this represents the button that will be pressed to show/hide the panel.</p>
 </div>
 
 <p>Here we are going to use these elements for a slightly different purpose — another useful side effect of <code>&lt;label&gt;</code> elements is that you can click a checkbox's label to check the checkbox, as well as just the checkbox itself. This has led to the well-known <a href="https://css-tricks.com/the-checkbox-hack/">checkbox hack</a>, which provides a JavaScript-free way of controlling an element by toggling a button. The element we'll be controlling is the {{htmlelement("aside")}} element that follows the other two (we've left its contents out of the above code listing for brevity).</p>

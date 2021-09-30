@@ -48,7 +48,7 @@ tags:
 <p>This article will focus mainly on 2D canvas, as raw WebGL code is very complex. We will however show how to use a WebGL library to create a 3D scene more easily, and you can find a tutorial covering raw WebGL elsewhere — see <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL">Getting started with WebGL</a>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Basic canvas functionality is supported well across browsers, with the exception of IE 8 and below for 2D canvas, and IE 11 and below for WebGL.</p>
+<p><strong>Note:</strong> Basic canvas functionality is supported well across browsers, with the exception of IE 8 and below for 2D canvas, and IE 11 and below for WebGL.</p>
 </div>
 
 <h2 id="Active_learning_Getting_started_with_a_&lt;canvas&gt;">Active learning: Getting started with a &lt;canvas&gt;</h2>
@@ -110,7 +110,7 @@ const height = canvas.height = window.innerHeight;</pre>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: You should generally set the size of the image using HTML attributes or DOM properties, as explained above. You could use CSS, but the trouble then is that the sizing is done after the canvas has rendered, and just like any other image (the rendered canvas is just an image), the image could become pixelated/distorted.</p>
+<p><strong>Note:</strong> You should generally set the size of the image using HTML attributes or DOM properties, as explained above. You could use CSS, but the trouble then is that the sizing is done after the canvas has rendered, and just like any other image (the rendered canvas is just an image), the image could become pixelated/distorted.</p>
 </div>
 
 <h3 id="Getting_the_canvas_context_and_final_setup">Getting the canvas context and final setup</h3>
@@ -122,7 +122,7 @@ const height = canvas.height = window.innerHeight;</pre>
 <pre class="brush: js">const ctx = canvas.getContext('2d');</pre>
 
 <div class="note">
-<p><strong>Note</strong>: other context values you could choose include <code>webgl</code> for WebGL, <code>webgl2</code> for WebGL 2, etc., but we won't need those in this article.</p>
+<p><strong>Note:</strong> other context values you could choose include <code>webgl</code> for WebGL, <code>webgl2</code> for WebGL 2, etc., but we won't need those in this article.</p>
 </div>
 
 <p>So that's it — our canvas is now primed and ready for drawing on! The <code>ctx</code> variable now contains a {{domxref("CanvasRenderingContext2D")}} object, and all drawing operations on the canvas will involve manipulating this object.</p>
@@ -202,7 +202,7 @@ ctx.strokeRect(25, 25, 175, 200);</pre>
 <p>{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles.html", '100%', 250)}}</p>
 
 <div class="note">
-<p><strong>Note</strong>: The finished code is available on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles.html">2_canvas_rectangles.html</a>.</p>
+<p><strong>Note:</strong> The finished code is available on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles.html">2_canvas_rectangles.html</a>.</p>
 </div>
 
 <h3 id="Drawing_paths">Drawing paths</h3>
@@ -300,7 +300,7 @@ ctx.fill();</pre>
   <p><code>arc()</code> takes six parameters. The first two specify the position of the arc's center (X and Y, respectively). The third is the circle's radius, the fourth and fifth are the start and end angles at which to draw the circle (so specifying 0 and 360 degrees gives us a full circle), and the sixth parameter defines whether the circle should be drawn counterclockwise (anticlockwise) or clockwise (<code>false</code> is clockwise).</p>
 
   <div class="note">
-  <p><strong>Note</strong>: 0 degrees is horizontally to the right.</p>
+  <p><strong>Note:</strong> 0 degrees is horizontally to the right.</p>
   </div>
  </li>
  <li>
@@ -326,11 +326,11 @@ ctx.fill();</pre>
 <p>{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/3_canvas_paths.html", '100%', 200)}}</p>
 
 <div class="note">
-<p><strong>Note</strong>: The finished code is available on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/3_canvas_paths.html">3_canvas_paths.html</a>.</p>
+<p><strong>Note:</strong> The finished code is available on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/3_canvas_paths.html">3_canvas_paths.html</a>.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: To find out more about advanced path drawing features such as Bézier curves, check out our <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">Drawing shapes with canvas</a> tutorial.</p>
+<p><strong>Note:</strong> To find out more about advanced path drawing features such as Bézier curves, check out our <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">Drawing shapes with canvas</a> tutorial.</p>
 </div>
 
 <h3 id="Text">Text</h3>
@@ -364,7 +364,7 @@ ctx.fillText('Canvas text', 50, 150);</pre>
 <p>{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/4_canvas_text.html", '100%', 180)}}</p>
 
 <div class="note">
-<p><strong>Note</strong>: The finished code is available on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/4_canvas_text.html">4_canvas_text.html</a>.</p>
+<p><strong>Note:</strong> The finished code is available on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/4_canvas_text.html">4_canvas_text.html</a>.</p>
 </div>
 
 <p>Have a play and see what you can come up with! You can find more information on the options available for canvas text at <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text">Drawing text</a>.</p>
@@ -416,7 +416,7 @@ image.src = 'firefox.png';</pre>
 <p>{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/5_canvas_images.html", '100%', 260)}}</p>
 
 <div class="note">
-<p><strong>Note</strong>: The finished code is available on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/5_canvas_images.html">5_canvas_images.html</a>.</p>
+<p><strong>Note:</strong> The finished code is available on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/5_canvas_images.html">5_canvas_images.html</a>.</p>
 </div>
 
 <h2 id="Loops_and_animations">Loops and animations</h2>
@@ -504,7 +504,7 @@ ctx.rotate(degToRad(5));</pre>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: The finished code is available on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop.html">6_canvas_for_loop.html</a>.</p>
+<p><strong>Note:</strong> The finished code is available on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop.html">6_canvas_for_loop.html</a>.</p>
 </div>
 
 <h3 id="Animations">Animations</h3>
@@ -553,7 +553,7 @@ loop();</pre>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: We won't cover <code>save()</code> and <code>restore()</code> here, but they are explained nicely in our <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations">Transformations</a> tutorial (and the ones that follow it).</p>
+<p><strong>Note:</strong> We won't cover <code>save()</code> and <code>restore()</code> here, but they are explained nicely in our <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations">Transformations</a> tutorial (and the ones that follow it).</p>
 </div>
 
 <h3 id="A_simple_character_animation">A simple character animation</h3>
@@ -657,7 +657,7 @@ let posX = 0;</pre>
 <p>{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation.html", '100%', 260)}}</p>
 
 <div class="note">
-<p><strong>Note</strong>: The finished code is available on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation.html">7_canvas_walking_animation.html</a>.</p>
+<p><strong>Note:</strong> The finished code is available on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation.html">7_canvas_walking_animation.html</a>.</p>
 </div>
 
 <h3 id="A_simple_drawing_application">A simple drawing application</h3>
@@ -710,7 +710,7 @@ canvas.onmouseup = function() {
 draw();</pre>
 
 <div class="note">
-<p><strong>Note</strong>: The {{htmlelement("input")}} <code>range</code> and <code>color</code> types are supported fairly well across browsers, with the exception of Internet Explorer versions less than 10; also Safari doesn't yet support <code>color</code>. If your browser doesn't support these inputs, they will fall back to simple text fields and you'll just have to enter valid color/number values yourself.</p>
+<p><strong>Note:</strong> The {{htmlelement("input")}} <code>range</code> and <code>color</code> types are supported fairly well across browsers, with the exception of Internet Explorer versions less than 10; also Safari doesn't yet support <code>color</code>. If your browser doesn't support these inputs, they will fall back to simple text fields and you'll just have to enter valid color/number values yourself.</p>
 </div>
 
 <h2 id="WebGL">WebGL</h2>
@@ -837,7 +837,7 @@ scene.add(spotLight);</pre>
 <p>You can <a href="https://github.com/mdn/learning-area/tree/master/javascript/apis/drawing-graphics/threejs-cube">find the finished code on GitHub</a>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: In our GitHub repo you can also find another interesting 3D cube example — <a href="https://github.com/mdn/learning-area/tree/master/javascript/apis/drawing-graphics/threejs-video-cube">Three.js Video Cube</a> (<a href="https://mdn.github.io/learning-area/javascript/apis/drawing-graphics/threejs-video-cube/">see it live also</a>). This uses {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to take a video stream from a computer web cam and project it onto the side of the cube as a texture!</p>
+<p><strong>Note:</strong> In our GitHub repo you can also find another interesting 3D cube example — <a href="https://github.com/mdn/learning-area/tree/master/javascript/apis/drawing-graphics/threejs-video-cube">Three.js Video Cube</a> (<a href="https://mdn.github.io/learning-area/javascript/apis/drawing-graphics/threejs-video-cube/">see it live also</a>). This uses {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to take a video stream from a computer web cam and project it onto the side of the cube as a texture!</p>
 </div>
 
 <h2 id="Summary">Summary</h2>

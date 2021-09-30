@@ -254,7 +254,7 @@ let completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
 <p>We can tell Svelte that we want our <code>totalTodos</code> and <code>completedTodos</code> variables to be reactive by prefixing them with <code>$:</code>. Svelte will generate the code to automatically update them whenever data they depend on is changed.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Svelte uses the <code>$:</code> <a href="/en-US/docs/Web/JavaScript/Reference/Statements/label">JavaScript label statement syntax</a> to mark reactive statements. Just like the <code>export</code> keyword being used to declare props, this may look a little alien. This is another example in which Svelte takes advantage of valid JavaScript syntax and gives it a new purpose — in this case to mean "re-run this code whenever any of the referenced values change". Once you get used to it, there's no going back.</p>
+<p><strong>Note:</strong> Svelte uses the <code>$:</code> <a href="/en-US/docs/Web/JavaScript/Reference/Statements/label">JavaScript label statement syntax</a> to mark reactive statements. Just like the <code>export</code> keyword being used to declare props, this may look a little alien. This is another example in which Svelte takes advantage of valid JavaScript syntax and gives it a new purpose — in this case to mean "re-run this code whenever any of the referenced values change". Once you get used to it, there's no going back.</p>
 </div>
 
 <p>Update your <code>totalTodos</code> and <code>completedTodos</code> variable definitions inside <code>src/components/Todos.svelte</code> to look like so:</p>
@@ -297,7 +297,7 @@ $: completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
 	<pre class="brush: js">$: console.log('newTodoName: ', newTodoName)</pre>
 
 	<div class="notecard note">
-	<p><strong>Note</strong>: as you may have noticed, reactive statements aren't limited to variable declarations. You can put <em>any</em> JavaScript statement after the <code>$:</code> sign.</p>
+	<p><strong>Note:</strong> as you may have noticed, reactive statements aren't limited to variable declarations. You can put <em>any</em> JavaScript statement after the <code>$:</code> sign.</p>
 	</div>
 	</li>
 	<li>
@@ -312,7 +312,7 @@ $: completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
 }</pre>
 
 	<div class="notecard note">
-	<p><strong>Note</strong>: For the moment we are just assigning the same <code>id</code> to every todo, but don't worry, we will fix that soon.</p>
+	<p><strong>Note:</strong> For the moment we are just assigning the same <code>id</code> to every todo, but don't worry, we will fix that soon.</p>
 	</div>
 	</li>
 	<li>
@@ -328,7 +328,7 @@ $: completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
 	<p>Just adding <code>todos = todos</code> to the end of the <code>addTodo()</code> function would solve the problem, but it seems strange to have to include that at the end of the function. Instead, we'll take out the <code>push()</code> method and use <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread syntax</a> to achieve the same result — we'll assign a value to the <code>todos</code> array equal to the <code>todos</code> array plus the new object.</p>
 
 	<div class="notecard note">
-	<p><strong>Note</strong>: Array has several mutable operations — <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push">push()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop">pop()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">splice()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift">shift()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift">unshift()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse">reverse()</a></code>, and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">sort()</a></code>. Using them often causes side effects and bugs that are hard to track. By using the spread syntax instead of <code>push()</code> we avoid mutating the array, which is considered a good practice.</p>
+	<p><strong>Note:</strong> Array has several mutable operations — <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push">push()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop">pop()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">splice()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift">shift()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift">unshift()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse">reverse()</a></code>, and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">sort()</a></code>. Using them often causes side effects and bugs that are hard to track. By using the spread syntax instead of <code>push()</code> we avoid mutating the array, which is considered a good practice.</p>
 	</div>
 
 	<p>Update your <code>addTodo()</code> function like so:</p>
@@ -358,7 +358,7 @@ $: completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
   }</pre>
 
 	<div class="notecard note">
-	<p><strong>Note</strong>: as you can see, reactive statements are not limited to one-liners. The following would work too, but it is a little less readable: <code>$: newTodoId = totalTodos ? Math.max(...todos.map(t =&gt; t.id)) + 1 : 1</code></p>
+	<p><strong>Note:</strong> as you can see, reactive statements are not limited to one-liners. The following would work too, but it is a little less readable: <code>$: newTodoId = totalTodos ? Math.max(...todos.map(t =&gt; t.id)) + 1 : 1</code></p>
 	</div>
 	</li>
 	<li>
@@ -417,7 +417,7 @@ $: completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
 	<p>We will show the current filter by applying the <code>btn__primary</code> class to the active filter button. To conditionally apply style classes to an element we use the <code>class:name={value}</code> directive. If the value expression evaluates to truthy, the class name will be applied. You can add many of these directives, with different conditions, to the same element. So when we issue <code>class:btn__primary={filter === 'all'}</code>, Svelte will apply the <code>btn__primary</code> class if filter equals all.</p>
 
 	<div class="notecard note">
-	<p><strong>Note</strong>: Svelte provides a shortcut which allows us to shorten <code>&lt;div class:active={active}&gt;</code> to <code>&lt;div class:active&gt;</code> when the class matches the variable name.</p>
+	<p><strong>Note:</strong> Svelte provides a shortcut which allows us to shorten <code>&lt;div class:active={active}&gt;</code> to <code>&lt;div class:active&gt;</code> when the class matches the variable name.</p>
 	</div>
 
 	<p>Something similar happens with <code>aria-pressed={filter === 'all'}</code> — when the JavaScript expression passed between curly braces evaluates to a truthy value, the <code>aria-pressed</code> attribute will be added to the button.</p>

@@ -69,7 +69,7 @@ tags:
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: <a href="https://www.toptal.com/javascript/10-most-common-javascript-mistakes">Buggy JavaScript Code: The 10 Most Common Mistakes JavaScript Developers Make</a> has some nice discussions of these common mistakes and more.</p>
+<p><strong>Note:</strong> <a href="https://www.toptal.com/javascript/10-most-common-javascript-mistakes">Buggy JavaScript Code: The 10 Most Common Mistakes JavaScript Developers Make</a> has some nice discussions of these common mistakes and more.</p>
 </div>
 
 <h3 id="Linters">Linters</h3>
@@ -112,7 +112,7 @@ tags:
 <p><img alt="" src="js-hint-commandline.png">You can also use these tools with a task runner/build tool such as <a href="https://gulpjs.com/">Gulp</a> or <a href="https://webpack.github.io/">Webpack</a> to automatically lint your JavaScript during development. (see <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#using_a_task_runner_to_automate_testing_tools">Using a task runner to automate testing tools</a> in a later article.) See <a href="https://eslint.org/docs/user-guide/integrations">ESLint integrations</a> for ESLint options; JSHint is supported out of the box by Grunt, and also has other integrations available, e.g. <a href="https://github.com/webpack/jshint-loader">JSHint loader for Webpack</a>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: ESLint takes a bit more setup and configuration than JSHint, but it is more powerful too.</p>
+<p><strong>Note:</strong> ESLint takes a bit more setup and configuration than JSHint, but it is more powerful too.</p>
 </div>
 
 <h3 id="Browser_developer_tools">Browser developer tools</h3>
@@ -173,7 +173,7 @@ showHeroes(superHeroes);</pre>
 <p>Unfortunately, we still have the same error — the problem has not gone away. Let's investigate this now, using a more sophisticated feature of browser developer tools: the <a href="/en-US/docs/Tools/Debugger">JavaScript debugger</a> as it is called in Firefox.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Similar tools are available in other browsers; the <a href="https://developers.google.com/web/tools/chrome-devtools/#sources">Sources tab</a> in Chrome, Debugger in Safari (see <a href="https://developer.apple.com/safari/tools/">Safari Web Development Tools</a>), etc.</p>
+<p><strong>Note:</strong> Similar tools are available in other browsers; the <a href="https://developers.google.com/web/tools/chrome-devtools/#sources">Sources tab</a> in Chrome, Debugger in Safari (see <a href="https://developer.apple.com/safari/tools/">Safari Web Development Tools</a>), etc.</p>
 </div>
 
 <p>In Firefox, the Debugger tab looks as follows:</p>
@@ -210,7 +210,7 @@ showHeroes(superHeroes);</pre>
 <p>We'd like you to try fixing this problem yourself. To give you a clue, you can either <a href="/en-US/docs/Web/API/XMLHttpRequest/responseType">tell the XMLHttpRequest object explicitly to return JSON format</a>, or <a href="/en-US/docs/Learn/JavaScript/Objects/JSON#converting_between_objects_and_text">convert the returned text to JSON</a> after the response arrives. If you get stuck, consult our <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fixed-ajax.html">fixed-ajax.html</a> example.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The debugger tab has many other useful features that we've not discussed here, for example conditional breakpoints and watch expressions. For a lot more information, see the <a href="/en-US/docs/Tools/Debugger">Debugger</a> page.</p>
+<p><strong>Note:</strong> The debugger tab has many other useful features that we've not discussed here, for example conditional breakpoints and watch expressions. For a lot more information, see the <a href="/en-US/docs/Tools/Debugger">Debugger</a> page.</p>
 </div>
 
 <h3 id="Performance_issues">Performance issues</h3>
@@ -225,7 +225,7 @@ showHeroes(superHeroes);</pre>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: Addy Osmani's <a href="https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/" rel="bookmark" title="Read 'Writing Fast, Memory-Efficient JavaScript'"><span class="headline">Writing Fast, Memory-Efficient JavaScript</span></a> <span class="headline">contains a lot of detail and some excellent tips for boosting JavaScript performance.</span></p>
+<p><strong>Note:</strong> Addy Osmani's <a href="https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/" rel="bookmark" title="Read 'Writing Fast, Memory-Efficient JavaScript'"><span class="headline">Writing Fast, Memory-Efficient JavaScript</span></a> <span class="headline">contains a lot of detail and some excellent tips for boosting JavaScript performance.</span></p>
 </div>
 
 <h2 id="Cross-browser_JavaScript_problems">Cross-browser JavaScript problems</h2>
@@ -268,7 +268,7 @@ showHeroes(superHeroes);</pre>
 <p>There are a few strategies for handling incompatibilities between browsers relating to feature support; let's explore the most common ones.</p>
 
 <div class="note">
-<p><strong>Note</strong>: These strategies do not exist in separate silos — you can, of course combine them as needed. For example, you could use feature detection to determine whether a feature is supported; if it isn't, you could then run code to load a polyfill or a library to handle the lack of support.</p>
+<p><strong>Note:</strong> These strategies do not exist in separate silos — you can, of course combine them as needed. For example, you could use feature detection to determine whether a feature is supported; if it isn't, you could then run code to load a polyfill or a library to handle the lack of support.</p>
 </div>
 
 <h4 id="Feature_detection">Feature detection</h4>
@@ -288,11 +288,11 @@ showHeroes(superHeroes);</pre>
 <p>As a last point, don't confuse feature detection with <strong>browser sniffing</strong> (detecting what specific browser is accessing the site) — this is a terrible practice that should be discouraged at all costs. See {{anch("Using bad browser sniffing code")}}, later on, for more details.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Some features are known to be undetectable — see Modernizr's list of <a href="https://github.com/Modernizr/Modernizr/wiki/Undetectables">Undetectables</a>.</p>
+<p><strong>Note:</strong> Some features are known to be undetectable — see Modernizr's list of <a href="https://github.com/Modernizr/Modernizr/wiki/Undetectables">Undetectables</a>.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: Feature detection will be covered in a lot more detail in its own dedicated article, later in the module.</p>
+<p><strong>Note:</strong> Feature detection will be covered in a lot more detail in its own dedicated article, later in the module.</p>
 </div>
 
 <h4 id="Libraries">Libraries</h4>
@@ -312,13 +312,13 @@ showHeroes(superHeroes);</pre>
 <p>When choosing a library to use, make sure that it works across the set of browsers you want to support, and test your implementation thoroughly. Also make sure that the library is popular and well-supported, and isn't likely to just become obsolete next week. Talk to other developers to find out what they recommend, see how much activity and how many contributors the library has on Github (or wherever else it is stored), etc.</p>
 
 <div class="note">
-<p><strong>Note</strong>: <a href="https://www.javascripting.com/">JavaScripting.com</a> gives you a good idea of just how many JavaScript libraries there are available, and can be useful for finding libraries for specific purposes.</p>
+<p><strong>Note:</strong> <a href="https://www.javascripting.com/">JavaScripting.com</a> gives you a good idea of just how many JavaScript libraries there are available, and can be useful for finding libraries for specific purposes.</p>
 </div>
 
 <p>Library usage at a basic level tends to consist of downloading the library's files (JavaScript, possibly some CSS or other dependencies too) and attaching them to your page (e.g. via a {{htmlelement("script")}} element), although there are normally many other usage options for such libraries, like installing them as <a href="https://bower.io/">Bower</a> components, or including them as dependencies via the <a href="https://webpack.github.io/">Webpack</a> module bundler. You will have to read the libraries' individual install pages for more information.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You will also come across JavaScript frameworks in your travels around the Web, like <a href="https://emberjs.com/">Ember</a> and <a href="https://angularjs.org/">Angular</a>. Whereas libraries are often usable for solving individual problems and dropping into existing sites, frameworks tend to be more along the lines of complete solutions for developing complex web applications.</p>
+<p><strong>Note:</strong> You will also come across JavaScript frameworks in your travels around the Web, like <a href="https://emberjs.com/">Ember</a> and <a href="https://angularjs.org/">Angular</a>. Whereas libraries are often usable for solving individual problems and dropping into existing sites, frameworks tend to be more along the lines of complete solutions for developing complex web applications.</p>
 </div>
 
 <h4 id="Polyfills">Polyfills</h4>
@@ -353,7 +353,7 @@ fetch('flowers.jpg').then(function(response) {
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: You can find our finished version at <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html">fetch-polyfill-finished.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html">source code</a>).</p>
+<p><strong>Note:</strong> You can find our finished version at <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html">fetch-polyfill-finished.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html">source code</a>).</p>
 </div>
 
 <div class="note">
@@ -402,7 +402,7 @@ function main(err) {
 <p>You can see this code in action in <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html">fetch-polyfill-only-when-needed.html</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html">source code also</a>). We'd like to make it clear that we can't take credit for this code — it was originally written by Philip Walton.  Check out his article <a href="https://philipwalton.com/articles/loading-polyfills-only-when-needed/">Loading Polyfills Only When Needed</a> for the original code, plus a lot of useful explanation around the wider subject).</p>
 
 <div class="note">
-<p><strong>Note</strong>: There are some 3rd party options to consider, for example <a href="https://polyfill.io/v2/docs/">Polyfill.io</a> — this is a meta-polyfill library that will look at each browser's capabilities and apply polyfills as needed, depending on what APIs and JS features you are using in your code.</p>
+<p><strong>Note:</strong> There are some 3rd party options to consider, for example <a href="https://polyfill.io/v2/docs/">Polyfill.io</a> — this is a meta-polyfill library that will look at each browser's capabilities and apply polyfills as needed, depending on what APIs and JS features you are using in your code.</p>
 </div>
 
 <h4 id="JavaScript_transpiling">JavaScript transpiling</h4>
@@ -410,7 +410,7 @@ function main(err) {
 <p>Another option that is becoming popular for people that want to use modern JavaScript features now is converting code that makes use of ECMAScript 6/ECMAScript 2015 features to a version that will work in older browsers.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This is called "transpiling" — you are not compiling code into a lower level to be run on a computer (like you would say with C code); instead, you are changing it into a syntax that exists at a similar level of abstraction so it can be used in the same way, but in slightly different circumstances (in this case, transforming one flavor of JavaScript into another).</p>
+<p><strong>Note:</strong> This is called "transpiling" — you are not compiling code into a lower level to be run on a computer (like you would say with C code); instead, you are changing it into a syntax that exists at a similar level of abstraction so it can be used in the same way, but in slightly different circumstances (in this case, transforming one flavor of JavaScript into another).</p>
 </div>
 
 <p>So for example, we talked about arrow functions (see <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html">arrow-function.html</a> live, and see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/arrow-function.html">source code</a>) earlier in the article, which only work in the newest browsers:</p>
@@ -426,7 +426,7 @@ function main(err) {
 <p>The easiest way to give Babel a try is to use the <a href="https://babeljs.io/repl/">online version</a>, which allows you to enter your source code on the left, and outputs a transpiled version on the right.</p>
 
 <div class="note">
-<p><strong>Note</strong>: There are many ways to use Babel (task runners, automation tools, etc.), as you'll see on the <a href="https://babeljs.io/docs/setup/">setup page</a>.</p>
+<p><strong>Note:</strong> There are many ways to use Babel (task runners, automation tools, etc.), as you'll see on the <a href="https://babeljs.io/docs/setup/">setup page</a>.</p>
 </div>
 
 <h3 id="Using_bad_browser_sniffing_code">Using bad browser sniffing code</h3>
@@ -446,7 +446,7 @@ if(ua.indexOf('Firefox') !== -1) {
 <p>The idea was fairly good — detect what browser is viewing the site, and run code as appropriate to make sure the browser will be able to use your site OK.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Try opening up your JavaScript console now and running <code>navigator.userAgent</code>, to see what you get returned.</p>
+<p><strong>Note:</strong> Try opening up your JavaScript console now and running <code>navigator.userAgent</code>, to see what you get returned.</p>
 </div>
 
 <p>However, as time went on, developers started to see major problems with this approach. For a start, the code was error prone. What if you knew a feature didn't work in say, Firefox 10 and below, and implemented code to detect this, and then Firefox 11 came out — which did support that feature? Firefox 11 probably wouldn't be supported because it's not Firefox 10. You'd have to change all your sniffing code regularly.</p>
@@ -454,7 +454,7 @@ if(ua.indexOf('Firefox') !== -1) {
 <p>Many developers implemented bad browser sniffing code and didn't maintain it, and browsers start getting locked out of using websites containing features that they had since implemented. This became so common that browsers started to lie about what browser they were in their user-agent strings (or claim they were all browsers), to get around sniffing code. Browsers also implemented facilities to allow users to change what user-agent string the browser reported when queried with JavaScript. This all made browser sniffing even more error prone, and ultimately pointless. </p>
 
 <div class="note">
-<p><strong>Note</strong>: You should read <a href="https://webaim.org/blog/user-agent-string-history/">History of the browser user-agent string</a> by Aaron Andersen for a useful and amusing take on this situation.</p>
+<p><strong>Note:</strong> You should read <a href="https://webaim.org/blog/user-agent-string-history/">History of the browser user-agent string</a> by Aaron Andersen for a useful and amusing take on this situation.</p>
 </div>
 
 <p>The lesson to be learned here is — NEVER use browser sniffing. The only real use case for browser sniffing code in the modern day is if you are implementing a fix for a bug in a very specific version of a particular browser. But even then, most bugs get fixed pretty quickly in browser vendor rapid release cycles. It won't come up very often. {{anch("Feature detection")}} is almost always a better option — if you detect whether a feature is supported, you won't need to change your code when new browser versions come out, and the tests are much more reliable.</p>

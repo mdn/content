@@ -40,7 +40,7 @@ tags:
 <p>In order to put a simple image on a webpage, we use the {{htmlelement("img")}} element. This is an {{glossary("empty element")}} (meaning that it has no text content or closing tag) that requires a minimum of one attribute to be useful — <code>src</code> (sometimes spoken as its full title, <em>source</em>). The <code>src</code> attribute contains a path pointing to the image you want to embed in the page, which can be a relative or absolute URL, in the same way as <code>href</code> attribute values in {{htmlelement("a")}} elements.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You should read <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#a_quick_primer_on_urls_and_paths">A quick primer on URLs and paths</a> to refresh your memory on relative and absolute URLs before continuing.</p>
+<p><strong>Note:</strong> You should read <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#a_quick_primer_on_urls_and_paths">A quick primer on URLs and paths</a> to refresh your memory on relative and absolute URLs before continuing.</p>
 </div>
 
 <p>So for example, if your image is called <code>dinosaur.jpg</code>, and it sits in the same directory as your HTML page, you could embed the image like so:</p>
@@ -54,7 +54,7 @@ tags:
 <p>And so on.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Search engines also read image filenames and count them towards SEO. Therefore, you should give your image a descriptive filename; <code>dinosaur.jpg</code> is better than <code>img835.png</code>.</p>
+<p><strong>Note:</strong> Search engines also read image filenames and count them towards SEO. Therefore, you should give your image a descriptive filename; <code>dinosaur.jpg</code> is better than <code>img835.png</code>.</p>
 </div>
 
 <p>You could embed the image using its absolute URL, for example:</p>
@@ -81,11 +81,11 @@ tags:
 <p><img alt='A basic image of a dinosaur, embedded in a browser, with "Images in HTML" written above it' src="basic-image.png"></p>
 
 <div class="note">
-<p><strong>Note</strong>: Elements like {{htmlelement("img")}} and {{htmlelement("video")}} are sometimes referred to as <strong>replaced elements</strong>. This is because the element's content and size are defined by an external resource (like an image or video file), not by the contents of the element itself. You can read more about them at <a href="/en-US/docs/Web/CSS/Replaced_element">Replaced elements</a>.</p>
+<p><strong>Note:</strong> Elements like {{htmlelement("img")}} and {{htmlelement("video")}} are sometimes referred to as <strong>replaced elements</strong>. This is because the element's content and size are defined by an external resource (like an image or video file), not by the contents of the element itself. You can read more about them at <a href="/en-US/docs/Web/CSS/Replaced_element">Replaced elements</a>.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: You can find the finished example from this section <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html">running on Github</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html">source code</a> too.)</p>
+<p><strong>Note:</strong> You can find the finished example from this section <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html">running on Github</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html">source code</a> too.)</p>
 </div>
 
 <h3 id="Alternative_text">Alternative text</h3>
@@ -122,7 +122,7 @@ tags:
 <p>Essentially, the key is to deliver a usable experience, even when the images can't be seen. This ensures all users are not missing any of the content. Try turning off images in your browser and see how things look. You'll soon realize how helpful alt text is if the image cannot be seen.</p>
 
 <div class="note">
-<p><strong>Note</strong>: For more information, see our guide to <a href="/en-US/docs/Learn/Accessibility/HTML#text_alternatives">Text Alternatives</a>.</p>
+<p><strong>Note:</strong> For more information, see our guide to <a href="/en-US/docs/Learn/Accessibility/HTML#text_alternatives">Text Alternatives</a>.</p>
 </div>
 
 <h3 id="Width_and_height">Width and height</h3>
@@ -144,7 +144,7 @@ tags:
 <p>However, you shouldn't alter the size of your images using HTML attributes. If you set the image size too big, you'll end up with images that look grainy, fuzzy, or too small, and wasting bandwidth downloading an image that is not fitting the user's needs. The image may also end up looking distorted, if you don't maintain the correct <a href="https://en.wikipedia.org/wiki/Aspect_ratio_%28image%29">aspect ratio</a>. You should use an image editor to put your image at the correct size before putting it on your webpage.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If you do need to alter an image's size, you should use <a href="/en-US/docs/Learn/CSS">CSS</a> instead.</p>
+<p><strong>Note:</strong> If you do need to alter an image's size, you should use <a href="/en-US/docs/Learn/CSS">CSS</a> instead.</p>
 </div>
 
 <h3 id="Image_titles">Image titles</h3>
@@ -336,7 +336,7 @@ textarea.onkeyup = function(){
 <p>The {{htmlelement("figcaption")}} element tells browsers, and assistive technology that the caption describes the other content of the {{htmlelement("figure")}} element.</p>
 
 <div class="note">
-<p><strong>Note</strong>: From an accessibility viewpoint, captions and {{htmlattrxref('alt','img')}} text have distinct roles. Captions benefit even people who can see the image, whereas {{htmlattrxref('alt','img')}} text provides the same functionality as an absent image. Therefore, captions and <code>alt</code> text shouldn't just say the same thing, because they both appear when the image is gone. Try turning images off in your browser and see how it looks.</p>
+<p><strong>Note:</strong> From an accessibility viewpoint, captions and {{htmlattrxref('alt','img')}} text have distinct roles. Captions benefit even people who can see the image, whereas {{htmlattrxref('alt','img')}} text provides the same functionality as an absent image. Therefore, captions and <code>alt</code> text shouldn't just say the same thing, because they both appear when the image is gone. Try turning images off in your browser and see how it looks.</p>
 </div>
 
 <p>A figure doesn't have to be an image. It is an independent unit of content that:</p>
@@ -493,7 +493,7 @@ textarea.onkeyup = function(){
 <p>Summing up: if an image has meaning, in terms of your content, you should use an HTML image. If an image is purely decoration, you should use CSS background images.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You'll learn a lot more about <a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">CSS background images</a> in our <a href="/en-US/docs/Learn/CSS">CSS</a> topic.</p>
+<p><strong>Note:</strong> You'll learn a lot more about <a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">CSS background images</a> in our <a href="/en-US/docs/Learn/CSS">CSS</a> topic.</p>
 </div>
 
 <h2 id="Test_your_skills!">Test your skills!</h2>

@@ -58,7 +58,7 @@ tags:
 <p>That said, this article will cover cross browser and testing issues surrounding people with disabilities, and how they use the Web. We've already talked about other spheres such as <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#responsive_design_problems">responsive design</a> and <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#performance_issues">performance</a> in other places in the module.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Like many things in web development, accessibility isn't about 100% success or not; 100% accessibility is pretty much impossible to achieve for all content, especially as sites get more complex. Instead, it is more about making a reasonable effort to make as much of your content accessible to as many people as possible via defensive coding and sticking to best practices.</p>
+<p><strong>Note:</strong> Like many things in web development, accessibility isn't about 100% success or not; 100% accessibility is pretty much impossible to achieve for all content, especially as sites get more complex. Instead, it is more about making a reasonable effort to make as much of your content accessible to as many people as possible via defensive coding and sticking to best practices.</p>
 </div>
 
 <h2 id="Common_accessibility_issues">Common accessibility issues</h2>
@@ -66,7 +66,7 @@ tags:
 <p>In this section we'll detail some of the main issues that arise around web accessibility, connected with specific technologies, along with best practices to follow, and some quick tests you can do to see if your sites are going in the right direction.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Accessibility is morally the right thing to do, and good for business (numbers of disabled users, users on mobile devices, etc. present significant market segments), but it is also a legal requirement in many parts of the world to make web content accessible to people with disabilities. Read <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_guidelines_and_the_law">Accessibility guidelines and the law</a> for more information.</p>
+<p><strong>Note:</strong> Accessibility is morally the right thing to do, and good for business (numbers of disabled users, users on mobile devices, etc. present significant market segments), but it is also a legal requirement in many parts of the world to make web content accessible to people with disabilities. Read <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_guidelines_and_the_law">Accessibility guidelines and the law</a> for more information.</p>
 </div>
 
 <h3 id="HTML">HTML</h3>
@@ -151,7 +151,7 @@ a:focus, input:focus, button:focus, select:focus {
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: If you do decide to remove the default focus styling using CSS, make sure you replace it with something else that fits in with your design better — it is a very valuable accessibility tool, and should not be removed.</p>
+<p><strong>Note:</strong> If you do decide to remove the default focus styling using CSS, make sure you replace it with something else that fits in with your design better — it is a very valuable accessibility tool, and should not be removed.</p>
 </div>
 
 <h4 id="Building_in_keyboard_accessibility">Building in keyboard accessibility</h4>
@@ -171,7 +171,7 @@ a:focus, input:focus, button:focus, select:focus {
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: This technique will only work if you set your original event handlers via event handler properties (e.g. <code>onclick</code>). <code>addEventListener</code> won't work. This is a lot of extra hassle to build the functionality back in. And there's bound to be other problems with it. Better to just use the right element for the right job in the first place.</p>
+<p><strong>Note:</strong> This technique will only work if you set your original event handlers via event handler properties (e.g. <code>onclick</code>). <code>addEventListener</code> won't work. This is a lot of extra hassle to build the functionality back in. And there's bound to be other problems with it. Better to just use the right element for the right job in the first place.</p>
 </div>
 
 <h4 id="Text_alternatives">Text alternatives</h4>
@@ -179,7 +179,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>Text alternatives are very important for accessibility — if a person has a visual or hearing impairment that stops them being able to see or hear some content, then this is a problem. The simplest text alternative available is the humble <code>alt</code> attribute, which we should include on all images that contain relevant content. This should contain a description of the image that successfully conveys its meaning and content on the page, to be picked up by a screenreader and read out to the user.</p>
 
 <div class="note">
-<p><strong>Note</strong>: For more information, read <a href="/en-US/docs/Learn/Accessibility/HTML#text_alternatives">Text alternatives</a>.</p>
+<p><strong>Note:</strong> For more information, read <a href="/en-US/docs/Learn/Accessibility/HTML#text_alternatives">Text alternatives</a>.</p>
 </div>
 
 <p>Missing alt text can be tested for in a number of ways, for example using accessibility {{anch("Auditing tools")}}.</p>
@@ -195,7 +195,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>Next on our list, the form {{htmlelement("label")}} element is one of the central features that allows us to make forms accessible. The trouble with forms is that you need labels to say what data should be entered into each form input. Each label needs to be included inside a {{htmlelement("label")}} to link it unambiguously to its partner form input (each <code>&lt;label&gt;</code> <code>for</code> attribute value needs to match the form element <code>id</code> value), and it will make sense even if the source order is not completely logical (which to be fair it should be).</p>
 
 <div class="note">
-<p><strong>Note</strong>: For more information about link text and form labels, read <a href="/en-US/docs/Learn/Accessibility/HTML#meaningful_text_labels">Meaningful text labels</a>.</p>
+<p><strong>Note:</strong> For more information about link text and form labels, read <a href="/en-US/docs/Learn/Accessibility/HTML#meaningful_text_labels">Meaningful text labels</a>.</p>
 </div>
 
 <p>Finally, a quick word about data tables. A basic data table can be written with very simple markup (see <code>bad-table.html</code> <a href="https://mdn.github.io/learning-area/accessibility/html/bad-table.html">live</a>, and <a href="https://github.com/mdn/learning-area/blob/master/accessibility/html/bad-table.html">source</a>), but this has problems — there is no way for a screen reader user to associate rows or columns together as groupings of data — to do this you need to know what the header rows are, and if they are heading up rows, columns, etc. This can only be done visually for such a table.</p>
@@ -203,7 +203,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>If you instead look at our <code>punk-bands-complete.html</code> example (<a href="https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html">live</a>, <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-complete.html">source</a>), you can see a few accessibility aids at work here, such as table headers ({{htmlelement("th")}} and <code>scope</code> attributes), {{htmlelement("caption")}} element, etc.</p>
 
 <div class="note">
-<p><strong>Note</strong>: For more information about accessible tables, read <a href="/en-US/docs/Learn/Accessibility/HTML#accessible_data_tables">Accessible data tables</a>.</p>
+<p><strong>Note:</strong> For more information about accessible tables, read <a href="/en-US/docs/Learn/Accessibility/HTML#accessible_data_tables">Accessible data tables</a>.</p>
 </div>
 
 <h3 id="CSS">CSS</h3>
@@ -225,7 +225,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>Another tip is to not rely on color alone for signposts/information, as this will be no good for those who can't see the color. Instead of marking required form fields in red, for example, mark them with an asterisk and in red.</p>
 
 <div class="note">
-<p><strong>Note</strong>: A high contrast ratio will also allow anyone using a smartphone or tablet with a glossy screen to better read pages when in a bright environment, such as sunlight.</p>
+<p><strong>Note:</strong> A high contrast ratio will also allow anyone using a smartphone or tablet with a glossy screen to better read pages when in a bright environment, such as sunlight.</p>
 </div>
 
 <h4 id="Hiding_content">Hiding content</h4>
@@ -239,7 +239,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>On the other hand, you shouldn't use {{cssxref("visibility")}}<code>:hidden</code> or {{cssxref("display")}}<code>:none</code>, because they do hide content from screenreaders. Unless of course, there is a good reason why you want this content to be hidden from screenreaders.</p>
 
 <div class="note">
-<p><strong>Note</strong>: <a href="https://webaim.org/techniques/css/invisiblecontent/">Invisible Content Just for Screen Reader Users</a> has a lot more useful detail surrounding this topic.</p>
+<p><strong>Note:</strong> <a href="https://webaim.org/techniques/css/invisiblecontent/">Invisible Content Just for Screen Reader Users</a> has a lot more useful detail surrounding this topic.</p>
 </div>
 
 <h3 id="JavaScript">JavaScript</h3>
@@ -256,7 +256,7 @@ a:focus, input:focus, button:focus, select:focus {
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: WebAIM's <a href="https://webaim.org/techniques/javascript/">Accessible JavaScript</a> provides some useful further details about considerations for accessible JavaScript.</p>
+<p><strong>Note:</strong> WebAIM's <a href="https://webaim.org/techniques/javascript/">Accessible JavaScript</a> provides some useful further details about considerations for accessible JavaScript.</p>
 </div>
 
 <p>More complex JavaScript implementations can create issues with accessibility — you need to do what you can. For example, it would be unreasonable to expect you to make a complex 3D game written using <a href="/en-US/docs/Learn/WebGL">WebGL</a> 100% accessible to a blind person, but you could implement <a href="/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard">keyboard controls</a> so it is usable by non-mouse users, and make the color scheme contrasting enough to be usable by those with color deficiencies.</p>
@@ -315,7 +315,7 @@ a:focus, input:focus, button:focus, select:focus {
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: Such tools aren't good enough to solve all your accessibility problems on their own. You'll need a combination of these, knowledge and experience, user testing, etc. to get a full picture.</p>
+<p><strong>Note:</strong> Such tools aren't good enough to solve all your accessibility problems on their own. You'll need a combination of these, knowledge and experience, user testing, etc. to get a full picture.</p>
 </div>
 
 <h3 id="Automation_tools">Automation tools</h3>
@@ -348,7 +348,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>Let's go through some tests with a couple of different screenreaders to give you a general idea of how they work and how to test with them.</p>
 
 <div class="note">
-<p><strong>Note</strong>: WebAIM's <a href="https://webaim.org/techniques/screenreader/">Designing for Screen Reader Compatibility</a> provides some useful information about screenreader usage and what works best for screenreaders. Also see <a href="https://webaim.org/projects/screenreadersurvey6/#used">Screen Reader User Survey #6 Results</a> for some interesting screenreader usage statistics.</p>
+<p><strong>Note:</strong> WebAIM's <a href="https://webaim.org/techniques/screenreader/">Designing for Screen Reader Compatibility</a> provides some useful information about screenreader usage and what works best for screenreaders. Also see <a href="https://webaim.org/projects/screenreadersurvey6/#used">Screen Reader User Survey #6 Results</a> for some interesting screenreader usage statistics.</p>
 </div>
 
 <h4 id="VoiceOver">VoiceOver</h4>
@@ -358,7 +358,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>To turn it on, press Cmd + F5. If you've not used VO before, you will be given a welcome screen where you can choose to start VO or not, and run through a rather useful tutorial to learn how to use it. To turn it off again, press Cmd + F5 again.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You should go through the tutorial at least once — it is a really useful way to learn VO.</p>
+<p><strong>Note:</strong> You should go through the tutorial at least once — it is a really useful way to learn VO.</p>
 </div>
 
 <p>When VO is on, the display will look mostly the same, but you'll see a black box at the bottom left of the screen that contains information on what VO currently has selected. The current selection will also be highlighted, with a black border — this highlight is known as the <strong>VO cursor</strong>.</p>
@@ -466,7 +466,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>To use NVDA, you will make a lot of use of the "NVDA modifier" — this is a key that you need to press in addition to the actual NVDA keyboard shortcuts to get them to work. Using a modifier like this is common with screenreaders, to enable them to keep their commands from clashing with other commands. In the case of NVDA, the modifier can either be Insert (the default), or CapsLock (can be chosen by checking the first checkbox in the NVDA welcome dialog before pressing <em>OK</em>).</p>
 
 <div class="note">
-<p><strong>Note</strong>: NVDA is more subtle than VoiceOver in terms of how it highlights where it is and what it is doing. When you are scrolling through headings, lists, etc., items you are selected on will generally be highlighted with a subtle outline, but this is not always the case for all things. If you get completely lost, you can press Ctrl + F5 to refresh the current page and begin from the top again.</p>
+<p><strong>Note:</strong> NVDA is more subtle than VoiceOver in terms of how it highlights where it is and what it is doing. When you are scrolling through headings, lists, etc., items you are selected on will generally be highlighted with a subtle outline, but this is not always the case for all things. If you get completely lost, you can press Ctrl + F5 to refresh the current page and begin from the top again.</p>
 </div>
 
 <p>NVDA has many keyboard commands, and we won't list them all here. The basic ones you'll need for web page testing are in the following table. In the keyboard shortcuts, "NVDA" means "the NVDA modifier".</p>

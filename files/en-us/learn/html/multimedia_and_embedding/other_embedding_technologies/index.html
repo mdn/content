@@ -227,7 +227,7 @@ textarea.onkeyup = function(){
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: In order to improve speed, it's a good idea to set the iframe's <code>src</code> attribute with JavaScript after the main content is done with loading. This makes your page usable sooner and decreases your official page load time (an important {{glossary("SEO")}} metric.)</p>
+<p><strong>Note:</strong> In order to improve speed, it's a good idea to set the iframe's <code>src</code> attribute with JavaScript after the main content is done with loading. This makes your page usable sooner and decreases your official page load time (an important {{glossary("SEO")}} metric.)</p>
 </div>
 
 <h3 id="Security_concerns">Security concerns</h3>
@@ -262,7 +262,7 @@ textarea.onkeyup = function(){
 <p>HTTPS-enabling your site requires a special security certificate to be installed. Many hosting providers offer HTTPS-enabled hosting without you needing to do any setup on your own to put a certificate in place. But if you <em>do</em> need to set up HTTPS support for your site on your own, <a href="https://letsencrypt.org/">Let's Encrypt</a> provides tools and instructions you can use for automatically creating and installing the necessary certificate — with built-in support for the most widely-used web servers, including the Apache web server, Nginx, and others. The Let's Encrypt tooling is designed to make the process as easy as possible, so there’s really no good reason to avoid using it or other available means to HTTPS-enable your site.</p>
 
 <div class="note">
-<p><strong>Note</strong>: <a href="/en-US/docs/Learn/Common_questions/Using_Github_pages">GitHub pages</a> allow content to be served via HTTPS by default, so it is useful for hosting content. If you are using a different hosting provider and are not sure, ask them about it.</p>
+<p><strong>Note:</strong> <a href="/en-US/docs/Learn/Common_questions/Using_Github_pages">GitHub pages</a> allow content to be served via HTTPS by default, so it is useful for hosting content. If you are using a different hosting provider and are not sure, ask them about it.</p>
 </div>
 
 <h4 id="Always_use_the_sandbox_attribute">Always use the <code>sandbox</code> attribute</h4>
@@ -274,7 +274,7 @@ textarea.onkeyup = function(){
 <p>If absolutely required, you can add permissions back one by one (inside the <code>sandbox=""</code> attribute value) — see the {{htmlattrxref('sandbox','iframe')}} reference entry for all the available options. One important note is that you should <em>never</em> add both <code>allow-scripts</code> and <code>allow-same-origin</code> to your <code>sandbox</code> attribute — in that case, the embedded content could bypass the <a href="/en-US/docs/Glossary/Same-origin_policy">Same-origin policy</a> that stops sites from executing scripts, and use JavaScript to turn off sandboxing altogether.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Sandboxing provides no protection if attackers can fool people into visiting malicious content directly (outside an <code>iframe</code>). If there's any chance that certain content may be malicious (e.g., user-generated content), please serve it from a different {{glossary("domain")}} to your main site.</p>
+<p><strong>Note:</strong> Sandboxing provides no protection if attackers can fool people into visiting malicious content directly (outside an <code>iframe</code>). If there's any chance that certain content may be malicious (e.g., user-generated content), please serve it from a different {{glossary("domain")}} to your main site.</p>
 </div>
 
 <h4 id="configure_csp_directives">Configure CSP directives</h4>
@@ -282,7 +282,7 @@ textarea.onkeyup = function(){
 <p>{{Glossary("CSP")}} stands for <strong><a href="/en-US/docs/Web/HTTP/CSP">content security policy</a></strong> and provides <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">a set of HTTP Headers</a> (metadata sent along with your web pages when they are served from a web server) designed to improve the security of your HTML document. When it comes to securing <code>&lt;iframe&gt;</code>s, you can <em><a href="/en-US/docs/Web/HTTP/Headers/X-Frame-Options">configure your server to send an appropriate <code>X-Frame-Options</code>  header.</a></em> This can prevent other websites from embedding your content in their web pages (which would enable {{interwiki('wikipedia','clickjacking')}} and a host of other attacks), which is exactly what the MDN developers have done, as we saw earlier on.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can read Frederik Braun's post <a href="https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/">On the X-Frame-Options Security Header</a> for more background information on this topic. Obviously, it's rather out of scope for a full explanation in this article.</p>
+<p><strong>Note:</strong> You can read Frederik Braun's post <a href="https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/">On the X-Frame-Options Security Header</a> for more background information on this topic. Obviously, it's rather out of scope for a full explanation in this article.</p>
 </div>
 
 <h2 id="The_&lt;embed&gt;_and_&lt;object&gt;_elements">The &lt;embed&gt; and &lt;object&gt; elements</h2>
@@ -290,7 +290,7 @@ textarea.onkeyup = function(){
 <p>The {{htmlelement("embed")}} and {{htmlelement("object")}} elements serve a different function to {{htmlelement("iframe")}} — these elements are general purpose embedding tools for embedding multiple types of external content, which include plugin technologies like Java Applets and Flash, PDF (which can be shown in a browser with a PDF plugin), and even content like videos, SVG and images!</p>
 
 <div class="note">
-<p><strong>Note</strong>: A <strong>plugin</strong>, in this context, refers to software that provides access to content the browser cannot read natively.</p>
+<p><strong>Note:</strong> A <strong>plugin</strong>, in this context, refers to software that provides access to content the browser cannot read natively.</p>
 </div>
 
 <p>However, you are unlikely to use these elements very much — Applets haven't been used for years, Flash is no longer very popular, due to a number of reasons (see {{anch("The case against plugins")}}, below), PDFs tend to be better linked to than embedded, and other content such as images and video have much better, easier elements to handle those. Plugins and these embedding methods are really a legacy technology, and we are mainly mentioning them in case you come across them in certain circumstances like intranets, or enterprise projects.</p>

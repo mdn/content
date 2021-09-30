@@ -44,7 +44,7 @@ tags:
 </ul>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Cache busting is a new term that we haven't met before in the module. This is the strategy of breaking a browser's own caching mechanism, which forces the browser to download a new copy of your code. Parcel (and indeed many other tools) will generate filenames that are unique to each new build. This unique filename "busts" your browser's cache, thereby making sure the browser downloads the fresh code each time an update is made to the deployed code.</p>
+<p><strong>Note:</strong> Cache busting is a new term that we haven't met before in the module. This is the strategy of breaking a browser's own caching mechanism, which forces the browser to download a new copy of your code. Parcel (and indeed many other tools) will generate filenames that are unique to each new build. This unique filename "busts" your browser's cache, thereby making sure the browser downloads the fresh code each time an update is made to the deployed code.</p>
 </div>
 
 <p>The above tasks also break down into further tasks; note that most web development teams will have their own terms and processes for at least some part of the post-development phase.</p>
@@ -86,7 +86,7 @@ tags:
 }</pre>
 
   <div class="notecard note">
-  <p><strong>Note</strong>: If the <code>scripts</code> property already has a command inside it, put a comma at the end of it. Keep the JSON valid.</p>
+  <p><strong>Note:</strong> If the <code>scripts</code> property already has a command inside it, put a comma at the end of it. Keep the JSON valid.</p>
   </div>
  </li>
  <li>
@@ -144,7 +144,7 @@ dist/index.html                    354 B    944ms</pre>
   <pre class="brush: bash">git commit -m ’committing initial code’</pre>
 
   <div class="notecard note">
-  <p><strong>Note</strong>: Although you're free to write whatever you wish in the commit message, there's some useful tips around the web on good commit messages. Keep them short, concise, and descriptive, so they clearly describe what the change does.  </p>
+  <p><strong>Note:</strong> Although you're free to write whatever you wish in the commit message, there's some useful tips around the web on good commit messages. Keep them short, concise, and descriptive, so they clearly describe what the change does.  </p>
   </div>
  </li>
  <li>
@@ -180,13 +180,13 @@ dist/index.html                    354 B    944ms</pre>
 </ol>
 
 <div class="notecard note">
-<p><strong>Note</strong>: If you are interested in using the SSH option, thereby avoiding the need to enter your username and password every time you push to GitHub, <a href="https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh">this tutorial walks you through how</a>.</p>
+<p><strong>Note:</strong> If you are interested in using the SSH option, thereby avoiding the need to enter your username and password every time you push to GitHub, <a href="https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh">this tutorial walks you through how</a>.</p>
 </div>
 
 <p>This final command instructs git to push the code (aka publish) to the "remote" location that we called <code>github</code> (that's the repository hosted on github.com — we could have called it anything we like) using the branch <code>main</code>. We've not encountered branches at all, but the "main" branch is the default place for our work and it's what git starts on. It's also the default branch that Netlify will look for, which is convenient.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Until October 2020 the default branch on GitHub was <code>master</code>, which for various social reasons was switched to <code>main</code>. You should be aware that this older default branch may appear in various projects you encounter, but we'd suggest using <code>main</code> for your own projects.</p>
+<p><strong>Note:</strong> Until October 2020 the default branch on GitHub was <code>master</code>, which for various social reasons was switched to <code>main</code>. You should be aware that this older default branch may appear in various projects you encounter, but we'd suggest using <code>main</code> for your own projects.</p>
 </div>
 
 <p>So with our project committed in git and pushed to our GitHub repository, the next step in the toolchain is to connect GitHub to Netlify so our project can be deployed live on the web!</p>
@@ -196,7 +196,7 @@ dist/index.html                    354 B    944ms</pre>
 <p>Deploying from GitHub to Netlify is surprisingly simple once you know the steps, particularly with "static websites" such as this project.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: There are also a lot of <a href="https://www.netlify.com/tags/tutorial/">guides and tutorials on Netlify</a> to help you improve your development workflow.</p>
+<p><strong>Note:</strong> There are also a lot of <a href="https://www.netlify.com/tags/tutorial/">guides and tutorials on Netlify</a> to help you improve your development workflow.</p>
 </div>
 
 <p>Let's get this done:</p>
