@@ -82,8 +82,7 @@ left: 30px;</pre>
 
 <p>If you now save and refresh, you'll get a result something like this:</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;h1&gt;Relative positioning&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Relative positioning&lt;/h1&gt;
 
 &lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
 
@@ -93,7 +92,7 @@ left: 30px;</pre>
 
 &lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="long.jpg"&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   width: 500px;
   margin: 0 auto;
 }
@@ -128,15 +127,17 @@ span {
 
 <h2 id="Absolute_positioning">Absolute positioning</h2>
 
-<p>Absolute positioning brings very different results. Let's try changing the position declaration in your code as follows:</p>
+<p>Absolute positioning brings very different results.
+
+<h3>Setting position: absolute</h3>
+
+<p>Let's try changing the position declaration in your code as follows:</p>
 
 <pre class="brush: css">position: absolute;</pre>
 
 <p>If you now save and refresh, you should see something like so:</p>
 
-<div class="hidden">
-<h3 id="hidden_abspos_code">hidden abspos code</h3>
-<pre class="brush: html">&lt;h1&gt;Absolute positioning&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Absolute positioning&lt;/h1&gt;
 
 &lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
 
@@ -146,7 +147,7 @@ span {
 
 &lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="long.jpg"&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   width: 500px;
   margin: 0 auto;
 }
@@ -169,9 +170,8 @@ span {
   top: 30px;
   left: 30px;
 }</pre>
-</div>
 
-<p>{{ EmbedLiveSample('hidden_abspos_code', '100%', 450) }}</p>
+<p>{{ EmbedLiveSample('Setting_position_absolute', '100%', 450) }}</p>
 
 <p>First of all, note that the gap where the positioned element should be in the document flow is no longer there — the first and third elements have closed together like it no longer exists! Well, in a way, this is true. An absolutely positioned element no longer exists in the normal document flow. Instead, it sits on its own layer separate from everything else. This is very useful: it means that we can create isolated UI features that don't interfere with the layout of other elements on the page.  For example, popup information boxes, control menus, rollover panels, UI features that can be dragged and dropped anywhere on the page, and so on.</p>
 
@@ -201,8 +201,7 @@ span {
 
 <p>This should give the following result:</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;h1&gt;Positioning context&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Positioning context&lt;/h1&gt;
 
 &lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
 
@@ -212,7 +211,7 @@ span {
 
 &lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="long.jpg"&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   width: 500px;
   margin: 0 auto;
   position: relative;
@@ -236,7 +235,6 @@ span {
   top: 30px;
   left: 30px;
 }</pre>
-</div>
 
 <p>{{ EmbedLiveSample('Positioning_contexts', '100%', 420) }}</p>
 
@@ -271,8 +269,7 @@ span {
 
 <p>You should now see the lime paragraph on top:</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;h1&gt;z-index&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;z-index&lt;/h1&gt;
 
 &lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
 
@@ -282,7 +279,7 @@ span {
 
 &lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="long.jpg"&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   width: 500px;
   margin: 0 auto;
   position: relative;
@@ -315,7 +312,6 @@ p:nth-of-type(1) {
   z-index: 1;
 }
 </pre>
-</div>
 
 <p>{{ EmbedLiveSample('Introducing_z-index', '100%', 400) }}</p>
 
@@ -360,8 +356,7 @@ p:nth-of-type(1) {
 
 <p>You should now see the finished example:</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;h1&gt;Fixed positioning&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Fixed positioning&lt;/h1&gt;
 
 &lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
 
@@ -371,7 +366,7 @@ p:nth-of-type(1) {
 
 &lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="long.jpg"&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   width: 500px;
   height: 1400px;
   margin: 0 auto;
@@ -400,7 +395,6 @@ h1 {
 p:nth-of-type(1) {
   margin-top: 60px;
 }</pre>
-</div>
 
 <p>{{ EmbedLiveSample('Fixed_positioning', '100%', 400) }}</p>
 
@@ -410,13 +404,13 @@ p:nth-of-type(1) {
 
 <h2 id="position_sticky">Sticky positioning</h2>
 
-<p>There is another position value available called <code>position: sticky</code>, which is somewhat newer than the others. This is basically a hybrid between relative and fixed position. It allows a positioned element to act like it's relatively positioned until it's scrolled to a certain threshold (e.g., 10px from the top of the viewport), after which it becomes fixed. This can be used, for example, to cause a navigation bar to scroll with the page until a certain point and then stick to the top of the page. </p>
+<p>There is another position value available called <code>position: sticky</code>, which is somewhat newer than the others. This is basically a hybrid between relative and fixed position. It allows a positioned element to act like it's relatively positioned until it's scrolled to a certain threshold (e.g., 10px from the top of the viewport), after which it becomes fixed.</p>
 
-<div id="Sticky_1">
-<div class="hidden">
-<h6 id="Sticky_positioning_example">Sticky positioning example</h6>
+<h3>Basic example</h3>
 
-<pre class="brush: html">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
+<p>Sticky positioning can be used, for example, to cause a navigation bar to scroll with the page until a certain point and then stick to the top of the page. </p>
+
+<pre class="brush: html hidden">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
 
 &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
 
@@ -426,7 +420,7 @@ p:nth-of-type(1) {
 
 &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;       </pre>
 
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   width: 500px;
   margin: 0 auto;
 }
@@ -438,16 +432,16 @@ p:nth-of-type(1) {
   margin: 10px;
   border-radius: 5px;
 }</pre>
-</div>
 
 <pre class="brush: css">.positioned {
   position: sticky;
   top: 30px;
   left: 30px;
 }</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Sticky_1', '100%', 200) }}</p>
+<p>{{ EmbedLiveSample('Basic_example', '100%', 200) }}</p>
+
+<h3>Scrolling index</h3>
 
 <p>An interesting and common use of <code>position: sticky</code> is to create a scrolling index page where different headings stick to the top of the page as they reach it. The markup for such an example might look like so:</p>
 
@@ -495,26 +489,14 @@ p:nth-of-type(1) {
 }
 </pre>
 
-<div id="Sticky_2">
-<div class="hidden">
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   width: 500px;
   height: 1400px;
   margin: 0 auto;
 }
-
-dt {
-  background-color: black;
-  color: white;
-  padding: 10px;
-  position: sticky;
-  top: 0;
-  left: 0;
-  margin: 1em 0;
-}
 </pre>
 
-<pre class="brush: html">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
 
 &lt;dl&gt;
     &lt;dt&gt;A&lt;/dt&gt;
@@ -544,10 +526,8 @@ dt {
     &lt;dd&gt;Egret&lt;/dd&gt;
 &lt;/dl&gt;
 </pre>
-</div>
-</div>
 
-<p>{{ EmbedLiveSample('Sticky_2', '100%', 200) }}</p>
+<p>{{ EmbedLiveSample('Scrolling_index', '100%', 200) }}</p>
 
 <p>Sticky elements are "sticky" relative to the nearest ancestor with a "scrolling mechanism", which is determined by its ancestors' <a href="/en-US/docs/Web/CSS/position">position</a> property.</p>
 

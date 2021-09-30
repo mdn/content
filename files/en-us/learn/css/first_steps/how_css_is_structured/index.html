@@ -270,9 +270,12 @@ p {
 
 <h3 id="Functions">Functions</h3>
 
-<p>While most values are relatively simple keywords or numeric values, there are some values that take the form of a function. An example would be the <code>calc()</code> function, which can do simple math within CSS:</p>
+<p>While most values are relatively simple keywords or numeric values, there are some values that take the form of a function.</p>
 
-<div id="calc_example">
+<h4>The calc() function</h4>
+
+<p>An example would be the <code>calc()</code> function, which can do simple math within CSS:</p>
+
 <pre class="brush: html">&lt;div class="outer"&gt;&lt;div class="box"&gt;The inner box is 90% - 30px.&lt;/div&gt;&lt;/div&gt;</pre>
 
 <pre class="brush: css">.outer {
@@ -285,17 +288,17 @@ p {
   background-color: rebeccapurple;
   color: white;
 }</pre>
-</div>
 
 <p>This renders as:</p>
 
-<p>{{EmbedLiveSample('calc_example', '100%', 200)}}</p>
+<p>{{EmbedLiveSample('The_calc_function', '100%', 200)}}</p>
 
 <p>A function consists of the function name, and parentheses to enclose the values for the function. In the case of the <code>calc()</code> example above, the values define the width of this box to be 90% of the containing block width, minus 30 pixels. The result of the calculation isn't something that can be computed in advance and entered as a static value.</p>
 
+<h4>Transform functions</h4>
+
 <p>Another example would be the various values for {{cssxref("transform")}}, such as <code>rotate()</code>.</p>
 
-<div id="transform_example">
 <pre class="brush: html">&lt;div class="box"&gt;&lt;/div&gt;</pre>
 
 <pre class="brush: css">.box {
@@ -309,7 +312,7 @@ p {
 
 <p>The output from the above code looks like this:</p>
 
-<p>{{EmbedLiveSample('transform_example', '100%', 200)}}</p>
+<p>{{EmbedLiveSample('Transform_functions', '100%', 200)}}</p>
 
 <p><strong>Look up different values of properties listed below. Write CSS rules that apply styling to different HTML elements: </strong></p>
 
@@ -474,7 +477,7 @@ div p + p {
 }
 </pre>
 
-<p id="Very_compact">The next example shows the equivalent CSS in a more compressed format. Although the two examples work the same, the one below is more difficult to read.</p>
+<p>The next example shows the equivalent CSS in a more compressed format. Although the two examples work the same, the one below is more difficult to read.</p>
 
 <pre class="brush: css">body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
 @media (min-width: 70em) { body {font-size: 130%;} }
