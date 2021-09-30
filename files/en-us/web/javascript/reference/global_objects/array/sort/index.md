@@ -79,9 +79,9 @@ elements are sorted according to the return value of the compare function (all
 | < 0                                  | sort `a` before `b`                |
 | === 0                                | keep original order of `a` and `b` |
 
-- `compareFunction(a, b)` must always return the same value when given a
-  specific pair of elements `a` and `b` as its two arguments. If
-  inconsistent results are returned, then the sort order is undefined.
+> **Note:** `compareFunction(a, b)` must always return the same value when given a specific pair of
+> elements `a` and `b` as its two arguments. If inconsistent results are returned, then the sort order
+> is `undefined`.
 
 So, the compare function has the following form:
 
