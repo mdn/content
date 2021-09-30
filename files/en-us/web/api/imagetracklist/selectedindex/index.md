@@ -11,7 +11,7 @@ browser-compat: api.ImageTrackList.selectedIndex
 ---
 {{DefaultAPISidebar("WebCodecs API")}}
 
-The **`selectedIndex`**  property of the {{domxref("ImageTrackList")}} interface returns the `index` of the selected track.
+The **`selectedIndex`** property of the {{domxref("ImageTrackList")}} interface returns the `index` of the selected track.
 
 ### Value
 
