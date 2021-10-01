@@ -39,16 +39,16 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.0.5.tgz#21905dcc1520f095631a0d72a9f15605039ac7ff"
   integrity sha512-KPSNaHUl5aikqsQU7LpBntFzaPbhm5OJxD88Wv00OKDc4wudyid2wDFqLeb7VcYT9x5bND8PPFloWdK5DY0pHA==
 
-"@mdn/yari@0.4.783":
-  version "0.4.783"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.783.tgz#8c75f50a08ad9a62e345be7be9f2cbe846f31d8a"
-  integrity sha512-wbVqaBRYCA9quMQVod2sgFHs8AezhdC2g0XY6UzL6w93gZHSx6joBgmoLqQZo/wVrWbcSVXQGVKcU+CHizHeXw==
+"@mdn/yari@0.4.784":
+  version "0.4.784"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.784.tgz#2c418dba4574866eb0094883ba133a4aa62c7ff1"
+  integrity sha512-SSuBA5MKUm8DCwEz8hHJIXPMPd8hcsA/csB98WnIu3G0Uuy3y/H0A0dVo7TyZAACOyjgmGtlpQvzKKuZ4F60aQ==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
     "@mdn/browser-compat-data" "4.0.5"
     accept-language-parser "1.5.0"
-    browser-specs "^2.12.0"
+    browser-specs "^2.14.0"
     chalk "4.1.2"
     cheerio "1.0.0-rc.10"
     cli-progress "^3.9.1"
@@ -60,7 +60,7 @@
     dotenv "10.0.0"
     ejs "3.1.6"
     express "4.17.1"
-    fast-xml-parser "3.20.0"
+    fast-xml-parser "3.20.3"
     fdir "5.1.0"
     file-type "16.5.3"
     front-matter "^4.0.2"
@@ -548,10 +548,10 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^2.12.0:
-  version "2.12.0"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-2.12.0.tgz#6a46123bfb7dbed7e45140efd17486632a6db64a"
-  integrity sha512-aVP2XFaVWXlDLGU8ChCgpIXECPdrYhDJ0pBWvp1XeFHRcjaapI3RpuKKxMaC8t4EuFna60vxdsH5B84UpM3ZtQ==
+browser-specs@^2.14.0:
+  version "2.14.1"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-2.14.1.tgz#19617db971f4fb13a41847dc0b12908821bdae72"
+  integrity sha512-DKzCDdLvXgnHqX3cjI0GBpenerDYYkkllSDpanqFdE4Rd/yaWwPbqMoiWQgjc2ieeN6LvsyQgpsGFSNDwajFyA==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
@@ -1623,12 +1623,12 @@ fast-safe-stringify@^2.0.4:
   resolved "https://registry.yarnpkg.com/fast-safe-stringify/-/fast-safe-stringify-2.0.7.tgz#124aa885899261f68aedb42a7c080de9da608743"
   integrity sha512-Utm6CdzT+6xsDk2m8S6uL8VHxNwI6Jub+e9NYTcAms28T84pTa25GJQV9j0CY0N1rM8hK4x6grpF2BQf+2qwVA==
 
-fast-xml-parser@3.20.0:
-  version "3.20.0"
-  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-3.20.0.tgz#b9ce9ddbc44d2cb7e38f846c5929c667bbf0936d"
-  integrity sha512-cMQwDJYVDjMPU56DviszewgMKuNzuf4NQSBuDf9RgZ6FKm5QEMxW05Za8lvnuL6moxoeZVUWBlL733WmovvV6g==
+fast-xml-parser@3.20.3:
+  version "3.20.3"
+  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-3.20.3.tgz#c171425356d4d929efeca4e4f67f24231a31c786"
+  integrity sha512-FfHJ/QCpo4K2gquBX7dIAcmShSBG4dMtYJ3ghSiR4w7YqlUujuamrM57C+mKLNWS3mvZzmm2B2Qx8Q6Gfw+lDQ==
   dependencies:
-    strnum "^1.0.3"
+    strnum "^1.0.4"
 
 fastq@^1.6.0:
   version "1.8.0"
@@ -4357,10 +4357,10 @@ strip-outer@^1.0.0:
   dependencies:
     escape-string-regexp "^1.0.2"
 
-strnum@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/strnum/-/strnum-1.0.3.tgz#bbc438bcb35fbbfc9c1e82f73097665b6ec6959e"
-  integrity sha512-GVoRjsqAYZkAH16GDzfTuafuwKxzKdaaCQyLaWf37gOP1e2PPbAKWoME1OmO+c4RCKMfNrrPRDLFCNBFU45N/A==
+strnum@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/strnum/-/strnum-1.0.4.tgz#e97e36a7d6ba9f93d0d6b496b2ed0678d422832b"
+  integrity sha512-lMzNMfDpaQOLt4B2mEbfzYS0+T7dvCXeojnlGf6f1AygvWDMcWyXYaLbyICfjVu29sErR8fnRagQfBW/N/hGgw==
 
 strtok3@^6.2.4:
   version "6.2.4"
