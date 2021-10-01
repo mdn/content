@@ -17,13 +17,13 @@ The **`createQuadLayer()`** method of the {{domxref("XRWebGLBinding")}} interfac
 ## Syntax
 
 ```js
-createQuadLayer(options)
+createQuadLayer(init)
 ```
 
 ### Parameters
 
-- `options`
-  - : An object to configure the {{domxref("XRQuadLayer")}}. It can have the following properties and the `space`, `viewPixelHeight`, and `viewPixelWidth` properties are required:
+- `init`
+  - : An object to configure the {{domxref("XRQuadLayer")}}. It must have the `space`, `viewPixelHeight`, and `viewPixelWidth` properties. `init` has the following properties:
     - `colorFormat`: Optional. A {{domxref("GLenum")}} defining the data type of the color texture data. Possible values:
         - `gl.RGB`
         - `gl.RGBA`
@@ -81,7 +81,7 @@ An {{domxref("XRQuadLayer")}} object.
 
 ### Creating an `XRQuadLayer`
 
-Configure the quad layer using the options listed above in a call to `createQuadLayer()`. To present layers to the XR device, add them to the `layers` render state using {{domxref("XRSession.updateRenderState()")}}.
+Configure the quad layer using the properties listed above in a call to `createQuadLayer()`. To present layers to the XR device, add them to the `layers` render state using {{domxref("XRSession.updateRenderState()")}}.
 
 ```js
 function onXRSessionStarted(xrSession) {
