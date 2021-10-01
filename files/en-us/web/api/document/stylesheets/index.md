@@ -42,7 +42,6 @@ function getStyleSheet(unique_title) {
     }
   }
 }
-
 ```
 
 ## Specifications
