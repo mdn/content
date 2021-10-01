@@ -17,7 +17,7 @@ tags:
 <div>{{LearnSidebar}}<br>
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
-<p class="summary">At this point we'll start adding some interactivity to our app, providing the ability to add and display new todo items. Along the way, we'll look at using events in Ember, creating component classes to contain JavaScript code to control interactive features, and setting up a service to keep track of the data state of our app.</p>
+<p>At this point we'll start adding some interactivity to our app, providing the ability to add and display new todo items. Along the way, we'll look at using events in Ember, creating component classes to contain JavaScript code to control interactive features, and setting up a service to keep track of the data state of our app.</p>
 
 <table>
  <tbody>
@@ -99,7 +99,7 @@ export default class HeaderComponent extends Component {
 <p>The <code>@action</code> decorator is the only Ember-specific code here (aside from extending from the <code>Component</code> superclass, and the Ember-specific items we are importing using <a href="/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript module syntax</a>) — the rest of the file is vanilla JavaScript, and would work in any application. The <code>@action</code> decorator declares that the function is an "action", meaning it's a type of function that will be invoked from an event that occurred in the template. <code>@action</code> also binds the <code>this</code> of the function to the class instance.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: A decorator is basically a wrapper function, which wraps and calls other functions or properties, providing additional functionality along the way. For example, the <code>@tracked</code> decorator (see slightly later on) runs code it is applied to, but additionally tracks it and automatically updates the app when values change. <a href="https://www.sitepoint.com/javascript-decorators-what-they-are/">Read JavaScript Decorators: What They Are and When to Use Them</a> for more general information on decorators.</p>
+<p><strong>Note:</strong> A decorator is basically a wrapper function, which wraps and calls other functions or properties, providing additional functionality along the way. For example, the <code>@tracked</code> decorator (see slightly later on) runs code it is applied to, but additionally tracks it and automatically updates the app when values change. <a href="https://www.sitepoint.com/javascript-decorators-what-they-are/">Read JavaScript Decorators: What They Are and When to Use Them</a> for more general information on decorators.</p>
 </div>
 
 <p>Coming back to our browser tab with the app running, we can type whatever we want, and when we hit <kbd>Enter</kbd> we'll be greeted with an alert message telling us exactly what we typed.</p>

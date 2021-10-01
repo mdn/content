@@ -16,10 +16,10 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
-<p class="summary">Now it's time to dive deeper into Vue, and create our own custom component — we'll start by creating a component to represent each item in the todo list. Along the way, we'll learn about a few important concepts such as calling components inside other components, passing data to them via props, and saving data state.</p>
+<p>Now it's time to dive deeper into Vue, and create our own custom component — we'll start by creating a component to represent each item in the todo list. Along the way, we'll learn about a few important concepts such as calling components inside other components, passing data to them via props, and saving data state.</p>
 
 <div class="notecard note">
-<p class="summary"><strong>Note</strong>: If you need to check your code against our version, you can find a finished version of the sample Vue app code in our <a href="https://github.com/mdn/todo-vue">todo-vue repository</a>. For a running live version, see <a href="https://mdn.github.io/todo-vue/dist/">https://mdn.github.io/todo-vue/dist/</a>.</p>
+<p><strong>Note:</strong> If you need to check your code against our version, you can find a finished version of the sample Vue app code in our <a href="https://github.com/mdn/todo-vue">todo-vue repository</a>. For a running live version, see <a href="https://mdn.github.io/todo-vue/dist/">https://mdn.github.io/todo-vue/dist/</a>.</p>
 </div>
 
 <table>
@@ -143,7 +143,7 @@ export default {
 </ul>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Prop validation only happens in development mode, so you can't strictly rely on it in production. Additionally, prop validation functions are invoked before the component instance is created, so they do not have access to the component state (or other props).</p>
+<p><strong>Note:</strong> Prop validation only happens in development mode, so you can't strictly rely on it in production. Additionally, prop validation functions are invoked before the component instance is created, so they do not have access to the component state (or other props).</p>
 </div>
 
 <p>For this component, we’ll use the object registration method.</p>
@@ -234,7 +234,7 @@ found in
 <p>You use <code>this</code> to access a component's props and other properties from inside data, as you may expect. We'll see an example of this shortly.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Because of the way that <code>this</code> works in arrow functions (binding to the parent’s context), you wouldn’t be able to access any of the necessary attributes from inside <code>data</code> if you used an arrow function. So don’t use an arrow function for the <code>data</code> property.</p>
+<p><strong>Note:</strong> Because of the way that <code>this</code> works in arrow functions (binding to the parent’s context), you wouldn’t be able to access any of the necessary attributes from inside <code>data</code> if you used an arrow function. So don’t use an arrow function for the <code>data</code> property.</p>
 </div>
 
 <p>So let's add a <code>data</code> property to our <code>ToDoItem</code> component. This will return an object containing a single property that we'll call <code>isDone</code>, whose value is <code>this.done</code>.</p>
@@ -298,7 +298,7 @@ found in
 <pre class="brush: bash">npm install --save lodash.uniqueid</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: If you prefer yarn, you could instead use <code>yarn add lodash.uniqueid</code>.</p>
+<p><strong>Note:</strong> If you prefer yarn, you could instead use <code>yarn add lodash.uniqueid</code>.</p>
 </div>
 
 <p>We can now import this package into our <code>ToDoItem</code> component. Add the following line at the top of <code>ToDoItem.vue</code>’s <code>&lt;script&gt;</code> element:</p>

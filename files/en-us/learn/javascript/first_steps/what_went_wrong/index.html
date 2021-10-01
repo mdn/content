@@ -18,7 +18,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}</div>
 
-<p class="summary">When you built up the "Guess the number" game in the previous article, you may have found that it didn't work. Never fear — this article aims to save you from tearing your hair out over such problems by providing you with some tips on how to find and fix errors in JavaScript programs.</p>
+<p>When you built up the "Guess the number" game in the previous article, you may have found that it didn't work. Never fear — this article aims to save you from tearing your hair out over such problems by providing you with some tips on how to find and fix errors in JavaScript programs.</p>
 
 <table>
  <tbody>
@@ -54,7 +54,7 @@ tags:
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: You might well have your own version of the game example that doesn't work, which you might want to fix! We'd still like you to work through the article with our version, so that you can learn the techniques we are teaching here. Then you can go back and try to fix your example.</p>
+<p><strong>Note:</strong> You might well have your own version of the game example that doesn't work, which you might want to fix! We'd still like you to work through the article with our version, so that you can learn the techniques we are teaching here. Then you can go back and try to fix your example.</p>
 </div>
 
 <p>At this point, let's consult the developer console to see if it reports any syntax errors, then try to fix them. You'll learn how below.</p>
@@ -82,7 +82,7 @@ tags:
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: See our <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function">TypeError: "x" is not a function</a> reference page for more details about this error.</p>
+<p><strong>Note:</strong> See our <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function">TypeError: "x" is not a function</a> reference page for more details about this error.</p>
 </div>
 
 <h3 id="Syntax_errors_round_two">Syntax errors round two</h3>
@@ -91,9 +91,13 @@ tags:
  <li>Save your page and refresh, and you should see the error has gone.</li>
  <li>Now if you try to enter a guess and press the Submit guess button, you'll see ... another error! <img alt="" src="variable-is-null.png"></li>
  <li>This time the error being reported is "TypeError: lowOrHi is null", on line 78.
-  <div class="note"><strong>Note</strong>: <code><a href="/en-US/docs/Glossary/Null">Null</a></code> is a special value that means "nothing", or "no value". So <code>lowOrHi</code> has been declared and initialised, but not with any meaningful value — it has no type or value.</div>
+  <div class="note">
+    <p><strong>Note:</strong> <code><a href="/en-US/docs/Glossary/Null">Null</a></code> is a special value that means "nothing", or "no value". So <code>lowOrHi</code> has been declared and initialised, but not with any meaningful value — it has no type or value.</p>
+  </div>
 
-  <div class="note"><strong>Note</strong>: This error didn't come up as soon as the page was loaded because this error occurred inside a function (inside the <code>checkGuess() { ... }</code> block). As you'll learn in more detail in our later <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">functions article</a>, code inside functions runs in a separate scope than code outside functions. In this case, the code was not run and the error was not thrown until the <code>checkGuess()</code> function was run by line 86.</div>
+  <div class="note">
+    <p><strong>Note:</strong> This error didn't come up as soon as the page was loaded because this error occurred inside a function (inside the <code>checkGuess() { ... }</code> block). As you'll learn in more detail in our later <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">functions article</a>, code inside functions runs in a separate scope than code outside functions. In this case, the code was not run and the error was not thrown until the <code>checkGuess()</code> function was run by line 86.</p>
+  </div>
  </li>
  <li>Have a look at line 78, and you'll see the following code:
   <pre class="brush: js">lowOrHi.textContent = 'Last guess was too high!';</pre>
@@ -105,7 +109,7 @@ tags:
   <pre class="brush: js">console.log(lowOrHi);</pre>
 
   <div class="note">
-  <p><strong>Note</strong>: <code><a href="/en-US/docs/Web/API/console/log">console.log()</a></code> is a really useful debugging function that prints a value to the console. So it will print the value of <code>lowOrHi</code> to the console as soon as we have tried to set it in line 48.</p>
+  <p><strong>Note:</strong> <code><a href="/en-US/docs/Web/API/console/log">console.log()</a></code> is a really useful debugging function that prints a value to the console. So it will print the value of <code>lowOrHi</code> to the console as soon as we have tried to set it in line 48.</p>
   </div>
  </li>
  <li>Save and refresh, and you should now see the <code>console.log()</code> result in your console. <img alt="" src="console-log-output.png"> Sure enough, <code>lowOrHi</code>'s value is <code>null</code> at this point, so there is definitely a problem with line 48.</li>
@@ -117,7 +121,7 @@ tags:
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: See our <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type">TypeError: "x" is (not) "y"</a> reference page for more details about this error.</p>
+<p><strong>Note:</strong> See our <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type">TypeError: "x" is (not) "y"</a> reference page for more details about this error.</p>
 </div>
 
 <h3 id="Syntax_errors_round_three">Syntax errors round three</h3>
@@ -184,7 +188,7 @@ tags:
 <p>It throws this error because it thinks you are trying to do something different. You should make sure that you don't mix up the assignment operator (<code>=</code>) — which sets a variable to be equal to a value — with the strict equality operator (<code>===</code>), which tests whether one value is equal to another, and returns a <code>true</code>/<code>false</code> result.</p>
 
 <div class="note">
-<p><strong>Note</strong>: See our <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement">SyntaxError: missing ; before statement</a> reference page for more details about this error.</p>
+<p><strong>Note:</strong> See our <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement">SyntaxError: missing ; before statement</a> reference page for more details about this error.</p>
 </div>
 
 <h3 id="The_program_always_says_youve_won_regardless_of_the_guess_you_enter">The program always says you've won, regardless of the guess you enter</h3>
@@ -204,7 +208,7 @@ tags:
 <p>This one is pretty simple — it generally means that you've missed the closing parenthesis at the end of a function/method call.</p>
 
 <div class="note">
-<p><strong>Note</strong>: See our <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list">SyntaxError: missing ) after argument list</a> reference page for more details about this error.</p>
+<p><strong>Note:</strong> See our <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list">SyntaxError: missing ) after argument list</a> reference page for more details about this error.</p>
 </div>
 
 <h3 id="SyntaxError_missing_after_property_id">SyntaxError: missing : after property id</h3>
@@ -230,7 +234,7 @@ tags:
 <p>For all of these errors, think about how we tackled the examples we looked at in the walkthrough. When an error arises, look at the line number you are given, go to that line and see if you can spot what's wrong. Bear in mind that the error is not necessarily going to be on that line, and also that the error might not be caused by the exact same problem we cited above!</p>
 
 <div class="note">
-<p><strong>Note</strong>: See our <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_token">SyntaxError: Unexpected token</a> and <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal">SyntaxError: unterminated string literal</a> reference pages for more details about these errors.</p>
+<p><strong>Note:</strong> See our <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_token">SyntaxError: Unexpected token</a> and <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal">SyntaxError: unterminated string literal</a> reference pages for more details about these errors.</p>
 </div>
 
 <h2 id="Summary">Summary</h2>

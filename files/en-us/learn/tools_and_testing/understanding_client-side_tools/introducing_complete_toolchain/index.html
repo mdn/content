@@ -15,7 +15,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Package_management","Learn/Tools_and_testing/Understanding_client-side_tools/Deployment", "Learn/Tools_and_testing/Understanding_client-side_tools")}}</div>
 
-<p class="summary">In the final couple of articles in the series we will solidify your tooling knowledge by walking you through the process of building up a sample case study toolchain. We'll go all the way from setting up a sensible development environment and putting transformation tools in place to actually deploying your app on Netlify. In this article we'll introduce the case study, set up our development environment, and set up our code transformation tools.</p>
+<p>In the final couple of articles in the series we will solidify your tooling knowledge by walking you through the process of building up a sample case study toolchain. We'll go all the way from setting up a sensible development environment and putting transformation tools in place to actually deploying your app on Netlify. In this article we'll introduce the case study, set up our development environment, and set up our code transformation tools.</p>
 
 <table>
  <tbody>
@@ -33,7 +33,7 @@ tags:
 <p>There really are unlimited combinations of tools and ways to use them, what you see in this article and the next is only <em>one</em> way that the featured tools can be used for a project.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: It's also worth repeating that not all of these tools need to be run on the command line. Many of today's code editors (such as VS Code and Atom) have integration support for a <em>lot</em> of tools via plugins.</p>
+<p><strong>Note:</strong> It's also worth repeating that not all of these tools need to be run on the command line. Many of today's code editors (such as VS Code and Atom) have integration support for a <em>lot</em> of tools via plugins.</p>
 </div>
 
 <h2 id="Introducing_our_case_study">Introducing our case study</h2>
@@ -121,7 +121,7 @@ tags:
 <p>We'll use npm to install our tools, which you first met in Chapter 2. You should have Node.js and npm installed already, but if not, <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups">refer back to that section</a>.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Though it's not clear from the install process, installing npm also installs a complimentary tool called npx. We will use npx later on this chapter to help run tools that are installed as local dependencies to the project.</p>
+<p><strong>Note:</strong> Though it's not clear from the install process, installing npm also installs a complimentary tool called npx. We will use npx later on this chapter to help run tools that are installed as local dependencies to the project.</p>
 </div>
 
 <p>npm will be used to install subsequent parts of our toolchain. First of all, however, we'll install git to help with revision control.</p>
@@ -163,7 +163,7 @@ tags:
 <pre class="brush: bash">prettier --write ./src/index.html</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: In the command above, I use Prettier with the <code>--write</code> flag. Prettier understands this to mean "if there's problems in my code format, go ahead and fix them, then save my file". This is fine for our development process, but we can also use prettier without the flag and it will only check the file. Checking the file (and not saving it) is useful for purposes like checks that run before a release - i.e. "don't release any code that's not been properly formatted."</p>
+<p><strong>Note:</strong> In the command above, I use Prettier with the <code>--write</code> flag. Prettier understands this to mean "if there's problems in my code format, go ahead and fix them, then save my file". This is fine for our development process, but we can also use prettier without the flag and it will only check the file. Checking the file (and not saving it) is useful for purposes like checks that run before a release - i.e. "don't release any code that's not been properly formatted."</p>
 </div>
 
 <p>It can be arduous to run the initial command against each file, and it would be useful to have a single command to do this for us (and the same will go for our linting tools).</p>
@@ -177,7 +177,7 @@ tags:
 </ul>
 
 <div class="notecard note">
-<p><strong>Note</strong>: What is a git hook? Git (not GitHub) provides a system that lets us attach pre- and post- actions to the tasks you perform with git (such as committing your code). Although git hooks can be a bit overly complicated (in this author's opinion), once they're in place they can be very powerful. If you're interested in using hooks, <a href="https://github.com/typicode/husky">Husky</a> is a greatly simplified route into using hooks.</p>
+<p><strong>Note:</strong> What is a git hook? Git (not GitHub) provides a system that lets us attach pre- and post- actions to the tasks you perform with git (such as committing your code). Although git hooks can be a bit overly complicated (in this author's opinion), once they're in place they can be very powerful. If you're interested in using hooks, <a href="https://github.com/typicode/husky">Husky</a> is a greatly simplified route into using hooks.</p>
 </div>
 
 <p>For VS Code, one useful extension is the <a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode">Prettier Code Formatter by Esben Petersen</a>, which lets VSCode automatically format code upon saving. This means that any file in the project we are working on gets formatted nicely, including HTML, CSS, JavaScript, JSON, markdown, and more. All the editor needs is "Format On Save" enabled.</p>
@@ -213,7 +213,7 @@ tags:
 ✖ 3 problems (3 errors, 0 warnings)</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: We'll install eslint in the next section; don't worry about this for now.</p>
+<p><strong>Note:</strong> We'll install eslint in the next section; don't worry about this for now.</p>
 </div>
 
 <p>As with other tools, code editor integration support is typically good for eslint, and potentially more useful as it can give us real-time feedback when issues crop up:</p>
@@ -281,7 +281,7 @@ cd will-it-miss</pre>
 <p>We have our project files in place. That’s all we need to do for now!</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: To set up the project on your local machine, go to the root directory of the unzipped folder, open a terminal in that location, and execute the <code>npm install</code> command in the terminal. This will install all of the project dependencies that are stored in the `package.json` file.</p>
+<p><strong>Note:</strong> To set up the project on your local machine, go to the root directory of the unzipped folder, open a terminal in that location, and execute the <code>npm install</code> command in the terminal. This will install all of the project dependencies that are stored in the `package.json` file.</p>
 </div>
 
 <h4 id="Installing_our_tools">Installing our tools</h4>
@@ -444,7 +444,7 @@ cd will-it-miss</pre>
   <p>Parcel also installs the dependencies that we will use in our code, including react, react-dom, react-async-hook, date-fns, and format-number. This first run will therefore be longer than a typical run of Parcel.</p>
 
   <div class="notecard note">
-  <p><strong>Note</strong>: if you run Parcel on this project and are faced with an error that reads <code>Error: ENOENT: no such file or directory</code>, stop the process using <kbd>Ctrl</kbd> + <kbd>C</kbd> and then try re-running it.</p>
+  <p><strong>Note:</strong> if you run Parcel on this project and are faced with an error that reads <code>Error: ENOENT: no such file or directory</code>, stop the process using <kbd>Ctrl</kbd> + <kbd>C</kbd> and then try re-running it.</p>
   </div>
 
   <p>The server is now running on the URL that was printed (in this case localhost:1234).</p>

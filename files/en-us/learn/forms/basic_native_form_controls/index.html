@@ -16,7 +16,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}</div>
 
-<p class="summary">In the <a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form">previous article</a>, we marked up a functional web form example, introducing some form controls and common structural elements, and focusing on accessibility best practices. Next we will look at the functionality of the different form controls, or widgets, in detail — studying all the different options available to collect different types of data. In this particular article we will look at the original set of form controls, available in all browsers since the early days of the web.</p>
+<p>In the <a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form">previous article</a>, we marked up a functional web form example, introducing some form controls and common structural elements, and focusing on accessibility best practices. Next we will look at the functionality of the different form controls, or widgets, in detail — studying all the different options available to collect different types of data. In this particular article we will look at the original set of form controls, available in all browsers since the early days of the web.</p>
 
 <table>
  <tbody>
@@ -39,7 +39,7 @@ tags:
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: The features discussed in this article are supported in all browsers, which is not the case for all form controls. We cover newer form controls added in HTML5 in the next two articles. If you want a more advanced reference, you should consult our <a href="/en-US/docs/Web/HTML/Element#forms">HTML forms element reference</a>, and in particular our extensive <a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt; types</a> reference.</p>
+<p><strong>Note:</strong> The features discussed in this article are supported in all browsers, which is not the case for all form controls. We cover newer form controls added in HTML5 in the next two articles. If you want a more advanced reference, you should consult our <a href="/en-US/docs/Web/HTML/Element#forms">HTML forms element reference</a>, and in particular our extensive <a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt; types</a> reference.</p>
 </div>
 
 <h2 id="Text_input_fields">Text input fields</h2>
@@ -47,7 +47,7 @@ tags:
 <p>Text {{htmlelement("input")}} fields are the most basic form widgets. They are a very convenient way to let the user enter any kind of data, and we've already seen a few simple examples.</p>
 
 <div class="note">
-<p><strong>Note</strong>: HTML form text fields are simple plain text input controls. This means that you cannot use them to perform <a href="/en-US/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla">rich editing</a> (bold, italic, etc.). All rich text editors you'll encounter are custom widgets created with HTML, CSS, and JavaScript.</p>
+<p><strong>Note:</strong> HTML form text fields are simple plain text input controls. This means that you cannot use them to perform <a href="/en-US/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla">rich editing</a> (bold, italic, etc.). All rich text editors you'll encounter are custom widgets created with HTML, CSS, and JavaScript.</p>
 </div>
 
 <p>All basic text controls share some common behaviors:</p>
@@ -60,7 +60,7 @@ tags:
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: The {{htmlelement("input")}} element is unique amongst HTML elements because it can take many different forms depending on its <code><a href="/en-US/docs/Web/HTML/Attributes/type">type</a></code> attribute value. It is used for creating most types of form widgets including single line text fields, time and date controls, controls without text input like checkboxes, radio buttons, and color pickers, and buttons.</p>
+<p><strong>Note:</strong> The {{htmlelement("input")}} element is unique amongst HTML elements because it can take many different forms depending on its <code><a href="/en-US/docs/Web/HTML/Attributes/type">type</a></code> attribute value. It is used for creating most types of form widgets including single line text fields, time and date controls, controls without text input like checkboxes, radio buttons, and color pickers, and buttons.</p>
 </div>
 
 <h3 id="Single_line_text_fields">Single line text fields</h3>
@@ -68,7 +68,7 @@ tags:
 <p>A single line text field is created using an {{HTMLElement("input")}} element whose {{htmlattrxref("type","input")}} attribute value is set to <code>text</code>, or by omitting the  {{htmlattrxref("type","input")}} attribute altogether (<code>text</code> is the default value). The value <code>text</code> for this attribute is also the fallback value if the value you specify for the {{htmlattrxref("type","input")}} attribute is unknown by the browser (for example if you specify <code>type="color"</code> and the browser doesn't support native color pickers).</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can find examples of all the single line text field types on GitHub at <a href="https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/single-line-text-fields.html">single-line-text-fields.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html">see it live also</a>).</p>
+<p><strong>Note:</strong> You can find examples of all the single line text field types on GitHub at <a href="https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/single-line-text-fields.html">single-line-text-fields.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html">see it live also</a>).</p>
 </div>
 
 <p>Here is a basic single line text field example:</p>
@@ -82,7 +82,7 @@ tags:
 <p><img alt="Screenshot of the disabled attribute and default :focus styles on a text input in Firefox, Safari, Chrome and Edge." src="disabled.png"></p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: HTML5 enhanced the basic original single line text field by adding special values for the {{htmlattrxref("type","input")}} attribute that enforce specific validation constraints and other features, for example specific to entering URLs or numbers. We'll cover those in the next article, <a href="/en-US/docs/Learn/Forms/HTML5_input_types">The HTML5 input types</a>.</p>
+<p><strong>Note:</strong> HTML5 enhanced the basic original single line text field by adding special values for the {{htmlattrxref("type","input")}} attribute that enforce specific validation constraints and other features, for example specific to entering URLs or numbers. We'll cover those in the next article, <a href="/en-US/docs/Learn/Forms/HTML5_input_types">The HTML5 input types</a>.</p>
 </div>
 
 <h4 id="Password_field">Password field</h4>
@@ -115,7 +115,7 @@ tags:
 <p>It's worth noting that these widgets do not behave exactly like other form widgets. For most form widgets, once the form is submitted all widgets that have a <a href="/en-US/docs/Web/HTML/Attributes/name"><code>name</code></a> attribute are sent, even if no value has been filled out. In the case of checkable items, their values are sent only if they are checked. If they are not checked, nothing is sent, not even their name. If they are checked but have no value, the name is sent with a value of <em>on.</em></p>
 
 <div class="note">
-<p><strong>Note</strong>: You can find the examples from this section on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/checkable-items.html">checkable-items.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html">see it live also</a>).</p>
+<p><strong>Note:</strong> You can find the examples from this section on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/checkable-items.html">checkable-items.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html">see it live also</a>).</p>
 </div>
 
 <p>For maximum usability/accessibility, you are advised to surround each list of related items in a {{htmlelement("fieldset")}}, with a {{htmlelement("legend")}} providing an overall description of the list.  Each individual pair of {{htmlelement("label")}}/{{htmlelement("input")}} elements should be contained in its own list item (or similar). The associated {{htmlelement('label')}} is generally placed immediately after the radio button or checkbox, with the instructions for the group of radio button or checkboxes generally being the content of the {{htmlelement("legend")}}. See the examples linked above for structural examples.</p>
@@ -152,7 +152,7 @@ tags:
 <p><img alt="Default, focused and disabled Checkboxes in Firefox 71 and Safari 13 on Mac and Chrome 79 and Edge 18 on Windows 10" src="checkboxes.png"></p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Any checkboxes and radio buttons with the <code><a href="/en-US/docs/Web/HTML/Attributes/checked">checked</a></code> attribute on load match the {{cssxref(':default')}} pseudo class, even if they are no longer checked. Any that are currently checked match the {{cssxref(':checked')}} pseudo class.</p>
+<p><strong>Note:</strong> Any checkboxes and radio buttons with the <code><a href="/en-US/docs/Web/HTML/Attributes/checked">checked</a></code> attribute on load match the {{cssxref(':default')}} pseudo class, even if they are no longer checked. Any that are currently checked match the {{cssxref(':checked')}} pseudo class.</p>
 </div>
 
 <p>Due to the on-off nature of checkboxes, the checkbox is considered a toggle button, with many developers and designers expanding on the default checkbox styling to create buttons that look like toggle switches. You can <a href="https://mdn.github.io/learning-area/html/forms/toggle-switch-example/">see an example in action here</a> (also see the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/toggle-switch-example/index.html">source code</a>).</p>
@@ -203,11 +203,11 @@ tags:
 <p>Then we also have the {{htmlelement("button")}} element itself. This can take a <code>type</code> attribute of value <code>submit</code>, <code>reset</code>, or <code>button</code> to mimic the behavior of the three <code>&lt;input&gt;</code> types mentioned above. The main difference between the two is that actual <code>&lt;button&gt;</code> elements are much easier to style.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The <code>image</code> input type also renders as a button. We'll cover that later too.</p>
+<p><strong>Note:</strong> The <code>image</code> input type also renders as a button. We'll cover that later too.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: You can find the examples from this section on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/button-examples.html">button-examples.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html">see it live also</a>).</p>
+<p><strong>Note:</strong> You can find the examples from this section on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/button-examples.html">button-examples.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html">see it live also</a>).</p>
 </div>
 
 <p>Below you can find examples of each button <code>&lt;input&gt;</code> type, along with the equivalent <code>&lt;button&gt;</code> type.</p>

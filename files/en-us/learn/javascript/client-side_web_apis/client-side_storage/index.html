@@ -16,7 +16,7 @@ tags:
 
 <div>{{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}</div>
 
-<p class="summary">Modern web browsers support a number of ways for web sites to store data on the user's computer — with the user's permission — then retrieve it when necessary. This lets you persist data for long-term storage, save sites or documents for offline use, retain user-specific settings for your site, and more. This article explains the very basics of how these work.</p>
+<p>Modern web browsers support a number of ways for web sites to store data on the user's computer — with the user's permission — then retrieve it when necessary. This lets you persist data for long-term storage, save sites or documents for offline use, retain user-specific settings for your site, and more. This article explains the very basics of how these work.</p>
 
 <table>
  <tbody>
@@ -47,7 +47,7 @@ tags:
 <p>Often client-side and server-side storage are used together. For example, you could download a batch of music files (perhaps used by a web game or music player application), store them inside a client-side database, and play them as needed. The user would only have to download the music files once — on subsequent visits they would be retrieved from the database instead.</p>
 
 <div class="note">
-<p><strong>Note</strong>: There are limits to the amount of data you can store using client-side storage APIs (possibly both per individual API and cumulatively); the exact limit varies depending on the browser and possibly based on user settings. See <a href="/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria">Browser storage limits and eviction criteria</a> for more information.</p>
+<p><strong>Note:</strong> There are limits to the amount of data you can store using client-side storage APIs (possibly both per individual API and cumulatively); the exact limit varies depending on the browser and possibly based on user settings. See <a href="/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria">Browser storage limits and eviction criteria</a> for more information.</p>
 </div>
 
 <h3 id="Old_school_Cookies">Old school: Cookies</h3>
@@ -247,11 +247,11 @@ function nameDisplayCheck() {
 <p>Your example is finished — well done! All that remains now is to save your code and test your HTML page in a browser. You can see our <a href="https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/personal-greeting.html">finished version running live here</a>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: There is another, slightly more complex example to explore at <a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a>.</p>
+<p><strong>Note:</strong> There is another, slightly more complex example to explore at <a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a>.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: In the line <code>&lt;script src="index.js" defer&gt;&lt;/script&gt;</code> of the source for our finished version, the <code>defer</code> attribute specifies that the contents of the {{htmlelement("script")}} element will not execute until the page has finished loading.</p>
+<p><strong>Note:</strong> In the line <code>&lt;script src="index.js" defer&gt;&lt;/script&gt;</code> of the source for our finished version, the <code>defer</code> attribute specifies that the contents of the {{htmlelement("script")}} element will not execute until the page has finished loading.</p>
 </div>
 
 <h2 id="Storing_complex_data_—_IndexedDB">Storing complex data — IndexedDB</h2>
@@ -312,7 +312,7 @@ let request = window.indexedDB.open('notes_db', 1);</pre>
   <p>To handle this in IndexedDB, you create a request object (which can be called anything you like — we called it <code>request</code> so it is obvious what it is for). You then use event handlers to run code when the request completes, fails, etc., which you'll see in use below.</p>
 
   <div class="note">
-  <p><strong>Note</strong>: The version number is important. If you want to upgrade your database (for example, by changing the table structure), you have to run your code again with an increased version number, different schema specified inside the <code>onupgradeneeded</code> handler (see below), etc. We won't cover upgrading databases in this simple tutorial.</p>
+  <p><strong>Note:</strong> The version number is important. If you want to upgrade your database (for example, by changing the table structure), you have to run your code again with an increased version number, different schema specified inside the <code>onupgradeneeded</code> handler (see below), etc. We won't cover upgrading databases in this simple tutorial.</p>
   </div>
  </li>
  <li>
@@ -692,7 +692,7 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
   }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: The given path to the <code>sw.js</code> file is relative to the site origin, not the JavaScript file that contains the code. The service worker is at <code>https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js</code>. The origin is <code>https://mdn.github.io</code>, and therefore the given path has to be <code>/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js</code>. If you wanted to host this example on your own server, you'd have to change this accordingly. This is rather confusing, but it has to work this way for security reasons.</p>
+<p><strong>Note:</strong> The given path to the <code>sw.js</code> file is relative to the site origin, not the JavaScript file that contains the code. The service worker is at <code>https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js</code>. The origin is <code>https://mdn.github.io</code>, and therefore the given path has to be <code>/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js</code>. If you wanted to host this example on your own server, you'd have to change this accordingly. This is rather confusing, but it has to work this way for security reasons.</p>
 </div>
 
 <h4 id="Installing_the_service_worker">Installing the service worker</h4>

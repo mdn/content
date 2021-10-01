@@ -20,7 +20,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}</div>
 
-<p class="summary">In the final article of this module, we'll look at arrays — a neat way of storing a list of data items under a single variable name. Here we look at why this is useful, then explore how to create an array, retrieve, add, and remove items stored in an array, and more besides.</p>
+<p>In the final article of this module, we'll look at arrays — a neat way of storing a list of data items under a single variable name. Here we look at why this is useful, then explore how to create an array, retrieve, add, and remove items stored in an array, and more besides.</p>
 
 <table>
  <tbody>
@@ -73,7 +73,9 @@ let random = ['tree', 795, [0, 1, 2]];</pre>
 shopping;
 // shopping will now return [ "tahini", "milk", "cheese", "hummus", "noodles" ]</pre>
 
-  <div class="note"><strong>Note</strong>: We've said it before, but just as a reminder — computers start counting from 0!</div>
+  <div class="note">
+  <p><strong>Note:</strong> We've said it before, but just as a reminder — computers start counting from 0!</p>
+  </div>
  </li>
  <li>Note that an array inside an array is called a multidimensional array. You can access an item inside an array that is itself inside another array by chaining two sets of square brackets together. For example, to access one of the items inside the array that is the third item inside the <code>random</code> array (see previous section), we could do something like this:
   <pre class="brush: js">random[2][2];</pre>
@@ -112,7 +114,7 @@ for (let i = 0; i &lt; sequence.length; i++) {
 <p>Often you'll be presented with some raw data contained in a big long string, and you might want to separate the useful items out into a more useful form and then do things to them, like display them in a data table. To do this, we can use the {{jsxref("String.prototype.split()","split()")}} method. In its simplest form, this takes a single parameter, the character you want to separate the string at, and returns the substrings between the separator as items in an array.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Okay, this is technically a string method, not an array method, but we've put it in with arrays as it goes well here.</p>
+<p><strong>Note:</strong> Okay, this is technically a string method, not an array method, but we've put it in with arrays as it goes well here.</p>
 </div>
 
 <ol>
@@ -360,7 +362,7 @@ body {
 <p>In this example we're going to show a much simpler use — here we're giving you a fake search site, with a search box. The idea is that when terms are entered in the search box, the top 5 previous search terms are displayed in the list. When the number of terms goes over 5, the last term starts being deleted each time a new term is added to the top, so the 5 previous terms are always displayed.</p>
 
 <div class="note">
-<p><strong>Note</strong>: In a real search app, you'd probably be able to click the previous search terms to return to previous searches, and it would display actual search results! We are just keeping it simple for now.</p>
+<p><strong>Note:</strong> In a real search app, you'd probably be able to click the previous search terms to return to previous searches, and it would display actual search results! We are just keeping it simple for now.</p>
 </div>
 
 <p>To complete the app, we need you to:</p>
