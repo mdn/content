@@ -48,7 +48,7 @@ An {{domxref("HTMLDocument")}} or an {{domxref("XMLDocument")}}, depending on th
 
 ### Parsing XML, SVG, and HTML
 
-> **Note:** That a MIME type of `text/html` will invoke the HTML parser, and any other valid MIME type will invoke the XML parser. The `application/xml` and `image/svg+xml` MIME types in the example below are functionally identical — the latter does not include any SVG-specific parsing rules. Distinguishing between the two serves only to clarify the code's intent.
+Note that a MIME type of `text/html` will invoke the HTML parser, and any other valid MIME type will invoke the XML parser. The `application/xml` and `image/svg+xml` MIME types in the example below are functionally identical — the latter does not include any SVG-specific parsing rules. Distinguishing between the two serves only to clarify the code's intent.
 
 ```js
 const parser = new DOMParser();
