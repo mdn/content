@@ -32,7 +32,7 @@ structuredClone(value, { transfer })
 
 ### Return value
 
-The returned `clonedValue` is a clone of the original passed `value`, with transfered values for items passed in the `transfer` array.
+The returned value is a clone of the original passed `value`, with transfered values for items passed in the `transfer` array.
 
 ### Exceptions
 
