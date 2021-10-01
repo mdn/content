@@ -152,7 +152,7 @@ npm run dev                                       # start the app in development
 <p>Once you have TypeScript configured, you can start using it from a Svelte component by just adding a <code>&lt;script lang='ts'&gt;</code> at the beginning of the script section. To use it from regular JavaScript files, just change the file extension from <code>.js</code> to <code>.ts</code>. You'll also have to update any corresponding import statements (don't include the <code>.ts</code> in your <code>import</code> statements; TypeScript chose to omit the extensions).</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> using TypeScript in component markup sections is <a href="https://github.com/sveltejs/svelte/issues/4701">not supported yet</a>. You'll have to use JavaScript from the markup, and TypeScript in the <code>&lt;script lang='ts'&gt;</code> section.</p>
+<p><strong>Note:</strong> Using TypeScript in component markup sections is <a href="https://github.com/sveltejs/svelte/issues/4701">not supported yet</a>. You'll have to use JavaScript from the markup, and TypeScript in the <code>&lt;script lang='ts'&gt;</code> section.</p>
 </div>
 
 <h2 id="Improved_developer_experience_with_TypeScript">Improved developer experience with TypeScript</h2>
@@ -228,7 +228,7 @@ npm run dev                                       # start the app in development
 }</pre>
 
 	<div class="notecard note">
-	<p><strong>Note:</strong> the Svelte template uses <a href="https://github.com/sveltejs/svelte-preprocess">svelte-preprocess</a> 4.0.0 to support TypeScript. From that version onward you have to use <code>export</code>/<code>import</code> type syntax to import types and interfaces. Check <a href="https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/typescript.md#how-do-i-import-interfaces-into-my-svelte-components-i-get-errors-after-transpilation">this section of the troubleshooting guide</a> for more information.</p>
+	<p><strong>Note:</strong> The Svelte template uses <a href="https://github.com/sveltejs/svelte-preprocess">svelte-preprocess</a> 4.0.0 to support TypeScript. From that version onward you have to use <code>export</code>/<code>import</code> type syntax to import types and interfaces. Check <a href="https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/typescript.md#how-do-i-import-interfaces-into-my-svelte-components-i-get-errors-after-transpilation">this section of the troubleshooting guide</a> for more information.</p>
 	</div>
 	</li>
 	<li>
@@ -340,7 +340,7 @@ Warn: Parameter 'ms' implicitly has an 'any' type, but a better type may be infe
     if (!message) {               // hide Alert if message is empty</pre>
 
 	<div class="notecard note">
-	<p><code>Note</code>: There's no need to specify the <code>ms</code> type with <code>export let ms:number = 3000</code> because TypeScript is already inferring it from its default value.</p>
+	<p><strong>Note:</strong> There's no need to specify the <code>ms</code> type with <code>export let ms:number = 3000</code> because TypeScript is already inferring it from its default value.</p>
 	</div>
 	</li>
 </ol>

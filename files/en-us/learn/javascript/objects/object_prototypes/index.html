@@ -20,10 +20,10 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}</div>
 
-<p class="summary">Prototypes are the mechanism by which JavaScript objects inherit features from one another. In this article, we explain how prototype chains work and look at how the <code>prototype</code> property can be used to add methods to existing constructors.</p>
+<p>Prototypes are the mechanism by which JavaScript objects inherit features from one another. In this article, we explain how prototype chains work and look at how the <code>prototype</code> property can be used to add methods to existing constructors.</p>
 
 <div class="notecard note">
-<p class="summary"><strong>Note</strong>: This article covers traditional JavaScript constructors and classes. In the next article, we talk about the modern way of doing things, which provides easier syntax to achieve the same things — see <a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance#ecmascript_2015_classes">ECMAScript 2015 classes</a>.</p>
+<p><strong>Note:</strong> This article covers traditional JavaScript constructors and classes. In the next article, we talk about the modern way of doing things, which provides easier syntax to achieve the same things — see <a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance#ecmascript_2015_classes">ECMAScript 2015 classes</a>.</p>
 </div>
 
 <table>
@@ -244,11 +244,11 @@ Person.prototype.farewell = function() {
 
 <p>But the <code>farewell()</code> method is <em>still</em> available on the <code>person1</code> object instance — its members have been automatically updated to include the newly defined <code>farewell()</code> method.</p>
 
-<div class="note"><strong>Note</strong>: Conversely, deleting properties defined on the constructor's prototype using the <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code> operator removes the respective properties from all other class instances too.<br>
-<br>
-In the above example, performing <code>delete person1.__proto__.farewell</code> or <code>delete Person.prototype.farewell</code> would remove the <code>farewell()</code> method from all <code>Person</code> instances.<br>
-<br>
-In order to mitigate this issue, you could use <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty()</a></code> instead.</div>
+<div class="note">
+  <p><strong>Note:</strong> Conversely, deleting properties defined on the constructor's prototype using the <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code> operator removes the respective properties from all other class instances too.</p>
+  <p>In the above example, performing <code>delete person1.__proto__.farewell</code> or <code>delete Person.prototype.farewell</code> would remove the <code>farewell()</code> method from all <code>Person</code> instances.</p>
+  <p>In order to mitigate this issue, you could use <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty()</a></code> instead.</p>
+</div>
 
 <div class="note">
 <p><strong>Note:</strong> If you are having trouble getting this example to work, have a look at our <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html">oojs-class-prototype.html</a> example (see it <a href="https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html">running live</a> also).</p>
