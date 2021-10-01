@@ -13,11 +13,11 @@ browser-compat: html.global_attributes.itemtype
 
 {{HTMLSidebar("Global_attributes")}}
 
-The [global attribute](/en-US/docs/Web/HTML/Global_attributes)** `itemtype`** specifies the URL of the vocabulary that will be used to define `itemprop`'s (item properties) in the data structure.
+The [global attribute](/en-US/docs/Web/HTML/Global_attributes) **`itemtype`** specifies the URL of the vocabulary that will be used to define `itemprop`'s (item properties) in the data structure.
 
 {{htmlattrxref("itemscope")}} is used to set the scope of where in the data structure the vocabulary set by `itemtype` will be active.
 
-Google and other major search engines support the [schema.org](http://schema.org/) vocabulary for structured data. This vocabulary defines a standard set of type names and property names. For example, `MusicEvent `indicates a concert performance, with [`startDate`](http://schema.org/startDate) and [`location`](http://schema.org/location) properties specifying the concert's key details. In this case, [`MusicEvent` ](http://schema.org/MusicEvent)would be the URL used by `itemtype`, with `startDate` and location as `itemprop`'s which [`MusicEvent`](http://schema.org/MusicEvent) defines.
+Google and other major search engines support the [schema.org](http://schema.org/) vocabulary for structured data. This vocabulary defines a standard set of type names and property names. For example, `MusicEvent `indicates a concert performance, with [`startDate`](http://schema.org/startDate) and [`location`](http://schema.org/location) properties specifying the concert's key details. In this case, [`MusicEvent`](http://schema.org/MusicEvent)would be the URL used by `itemtype`, with `startDate` and location as `itemprop`'s which [`MusicEvent`](http://schema.org/MusicEvent) defines.
 
 > **Note:** More about `itemtype` attributes can be found at <http://schema.org/Thing>
 
