@@ -8,7 +8,6 @@ tags:
   - Storage
   - tracking
 ---
-
 <p class="summary">
   State Partitioning is a broad effort to rework how Firefox manages client-side
   state (i.e., data stored in the browser) to mitigate the ability of websites
@@ -304,6 +303,34 @@ tags:
   <p><strong>Warning</strong>: Make sure to set these prefs in a separate
   Firefox profile or reset them after testing.</p>
 </div>
+
+
+<h5>Disable Web Compatibility Features</h5>
+<p>
+  Setting <code>privacy.antitracking.enableWebcompat</code> to <code>false</code>
+  will <b>disable</b> all ETP and State Partitioning web compatiblity features.
+  Disabling these features can be useful when testing, to ensure your website is
+  fully compatible with the State Partitioning mechanism in Firefox and it does
+  not rely on heuristics.
+  <p>Features disabled by the pref include:</p>
+  <ul>
+    <li><a href="#partitioning_heuristics">Storage access heuristics</a>:
+    unpartitioned storage access can only be aquired via the Storage Access
+    API.</li>
+    <li>Automatic storage access grants:
+      <a href="/en-US/docs/Web/API/Document/requestStorageAccess">
+        <code>document.requestStorageAccess</code>
+      </a> will always prompt the user.
+    </li>
+    <li><a class="external"
+    href="https://blog.mozilla.org/security/2021/07/13/smartblock-v2/">SmartBlock’s
+    "unblock on opt-in" feature</a>, which will allow certain trackers when users
+    interact with them.</li>
+    <li>Any temporary <a class="external"
+    href="https://wiki.mozilla.org/Security/Anti_tracking_policy#Temporary_Web_Compatibility_Interventions">anti-tracking
+    exceptions</a> granted to websites via the skip-listing mechanism.</li>
+  </ul>
+</p>
 
 <h5>Disable Heuristics</h5>
 <p>
