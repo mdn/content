@@ -47,9 +47,9 @@ new Intl.Collator(locales, options)
     - `co`
       - : Variant collations for certain locales. Possible values include:
           - `big5han`
+          - `compat`
           - `dict`
           - `direct`
-          - `compat`
           - `ducet` 
           - `eor` 
           - `gb2312`
@@ -138,9 +138,9 @@ new Intl.Collator(locales, options)
     - `collation`
       - : Variant collations for certain locales. Possible values include:
           - `big5han`
+          - `compat`
           - `dict`
           - `direct`
-          - `compat`
           - `ducet` 
           - `eor` 
           - `gb2312`
