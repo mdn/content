@@ -33,10 +33,11 @@ const doc = domparser.parseFromString(string, mimeType)
     - `application/xhtml+xml`
     - `image/svg+xml`
 
-    A value of `text/html` will invoke the HTML parser, and the method will return an {{domxref("HTMLDocument")}}.
-    Any other valid value will invoke the XML parser, and the method will return an {{domxref("XMLDocument")}}.
+    A value of `text/html` will invoke the HTML parser, and the method will return an {{domxref("HTMLDocument")}}. 
 
-    Any other value will cause a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) to be thrown.
+    The other valid values (`text/xml`, `application/xml`, `application/xhtml+xml`, and `image/svg+xml`) are functionally equivalent. They all invoke the XML parser, and the method will return a {{domxref("XMLDocument")}}.
+
+    Any other value is invalid and will cause a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) to be thrown.
 
 ### Return value
 
@@ -47,9 +48,7 @@ An {{domxref("HTMLDocument")}} or an {{domxref("XMLDocument")}}, depending on th
 
 ### Parsing XML, SVG, and HTML
 
-This example shows how to parse XML, SVG, and HTML. Note that a MIME type of
-`text/html` will invoke the HTML parser, and any other valid MIME type will invoke
-the XML parser.
+Note that a MIME type of `text/html` will invoke the HTML parser, and any other valid MIME type will invoke the XML parser. The `application/xml` and `image/svg+xml` MIME types in the example below are functionally identical — the latter does not include any SVG-specific parsing rules. Distinguishing between the two serves only to clarify the code's intent.
 
 ```js
 const parser = new DOMParser();

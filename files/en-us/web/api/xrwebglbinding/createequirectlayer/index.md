@@ -17,13 +17,13 @@ The **`createEquirectLayer()`** method of the {{domxref("XRWebGLBinding")}} inte
 ## Syntax
 
 ```js
-createEquirectLayer(options)
+createEquirectLayer(init)
 ```
 
 ### Parameters
 
-- `options`
-  - : An object to configure the {{domxref("XREquirectLayer")}}. It can have the following properties. The `space`, `viewPixelHeight`, and `viewPixelWidth` properties are required:
+- `init`
+  - : An object to configure the {{domxref("XREquirectLayer")}}. It must have the `space`, `viewPixelHeight`, and `viewPixelWidth` properties. `init` has the following properties:
     - `centralHorizontalAngle`: Optional. A number indicating the central horizontal angle in radians of the sphere. Default value: `6.28318` (2π).
     - `colorFormat`: Optional. A {{domxref("GLenum")}} defining the data type of the color texture data. Possible values:
         - `gl.RGB`
@@ -83,7 +83,7 @@ An {{domxref("XREquirectLayer")}} object.
 
 ### Creating an `XREquirectLayer`
 
-Configure the equirect layer using the options listed above in a call to `createEquirect()`. To present layers to the XR device, add them to the `layers` render state using {{domxref("XRSession.updateRenderState()")}}.
+Configure the equirect layer using the properties listed above in a call to `createEquirect()`. To present layers to the XR device, add them to the `layers` render state using {{domxref("XRSession.updateRenderState()")}}.
 
 ```js
 function onXRSessionStarted(xrSession) {

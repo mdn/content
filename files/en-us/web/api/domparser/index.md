@@ -46,36 +46,7 @@ from a URL-addressable resource, returning a `Document` in its
 
 ## Examples
 
-### Parsing XML, SVG, and HTML
-
-This example shows how to parse XML, SVG, and HTML. Note that a MIME type of
-`text/html` will invoke the HTML parser, and any of the other MIME types
-that are accepted by this method will invoke the XML parser.
-
-```js
-const parser = new DOMParser();
-
-const xmlString = "<warning>Beware of the tiger</warning>";
-const doc1 = parser.parseFromString(xmlString, "application/xml");
-// XMLDocument
-
-const svgString = "<circle cx=\"50\" cy=\"50\" r=\"50\"/>";
-const doc2 = parser.parseFromString(svgString, "image/svg+xml");
-// XMLDocument
-
-const htmlString = "<strong>Beware of the leopard</strong>";
-const doc3 = parser.parseFromString(htmlString, "text/html");
-// HTMLDocument
-
-console.log(doc1.documentElement.textContent)
-// "Beware of the tiger"
-
-console.log(doc2.firstChild.tagName);
-// "circle"
-
-console.log(doc3.body.firstChild.textContent);
-// "Beware of the leopard"
-```
+The documentation for {{domxref("DOMParser.parseFromString()")}}, this interface's only method, contains examples for parsing XML, SVG, and HTML strings.
 
 ## Specifications
 
