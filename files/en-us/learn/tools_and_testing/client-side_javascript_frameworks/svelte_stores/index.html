@@ -13,7 +13,7 @@ tags:
 <div>{{LearnSidebar}}<br>
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
-<p class="summary">In the last article we completed the development of our app, finished organizing it into components, and discussed some advanced techniques for dealing with reactivity, working with DOM nodes, and exposing component functionality. In this article we will show another way to handle state management in Svelte — <a href="https://svelte.dev/tutorial/writable-stores">Stores</a>. Stores are global data repositories that hold values. Components can subscribe to stores and receive notifications when their values change.</p>
+<p>In the last article we completed the development of our app, finished organizing it into components, and discussed some advanced techniques for dealing with reactivity, working with DOM nodes, and exposing component functionality. In this article we will show another way to handle state management in Svelte — <a href="https://svelte.dev/tutorial/writable-stores">Stores</a>. Stores are global data repositories that hold values. Components can subscribe to stores and receive notifications when their values change.</p>
 
 <table>
  <tbody>
@@ -325,7 +325,7 @@ const removeCompletedTodos = () =&gt; {
 <p>We could do the same within any component or <code>.js</code> file.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> outside of Svelte components you cannot use the <code>$store</code> syntax. That's because the Svelte compiler won't touch anything outside of Svelte components. In that case you'll have to rely on the <code>store.subscribe()</code> and <code>store.set()</code> methods.</p>
+<p><strong>Note:</strong> Outside of Svelte components you cannot use the <code>$store</code> syntax. That's because the Svelte compiler won't touch anything outside of Svelte components. In that case you'll have to rely on the <code>store.subscribe()</code> and <code>store.set()</code> methods.</p>
 </div>
 
 <h2 id="Improving_our_Alert_component">Improving our Alert component</h2>
@@ -415,7 +415,7 @@ const removeCompletedTodos = () =&gt; {
   <pre class="brush: html">&lt;Todos bind:todos /&gt;</pre>
 
   <div class="notecard note">
-  <p><strong>Remember</strong>: <code>&lt;Todos bind:todos /&gt;</code> is just a shortcut for <code>&lt;Todos bind:todos={todos} /&gt;</code>.</p>
+  <p><strong>Note:</strong> <code>&lt;Todos bind:todos /&gt;</code> is just a shortcut for <code>&lt;Todos bind:todos={todos} /&gt;</code>.</p>
   </div>
  </li>
  <li>
@@ -534,7 +534,7 @@ function myStore() {
 <p>Our To-do list app is not particularly complex, so we won't move all our modification methods into a central place. We'll just leave them as they are, and instead concentrate on persisting our todos.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> if you are following this guide working from the Svelte REPL you won't be able to complete this step. For security reasons the Svelte REPL works in a sandboxed environment which will not let you access web storage, and you will get a "The operation is insecure" error. In order to follow this section you'll have to clone the repo and go to the <code>mdn-svelte-tutorial/06-stores</code> folder or you can directly download the folder's content with <code>npx degit opensas/mdn-svelte-tutorial/06-stores</code>.</p>
+<p><strong>Note:</strong> If you are following this guide working from the Svelte REPL you won't be able to complete this step. For security reasons the Svelte REPL works in a sandboxed environment which will not let you access web storage, and you will get a "The operation is insecure" error. In order to follow this section you'll have to clone the repo and go to the <code>mdn-svelte-tutorial/06-stores</code> folder or you can directly download the folder's content with <code>npx degit opensas/mdn-svelte-tutorial/06-stores</code>.</p>
 </div>
 
 <p>So, to implement a custom store that saves its content to web storage, we will need a writable store that:</p>
@@ -664,7 +664,7 @@ export const todos = localStore('mdn-svelte-todo', initialTodos)</pre>
 &gt;</pre>
 
   <div class="notecard note">
-  <p><strong>Note:</strong> the double curly braces are not special Svelte syntax. It's just a literal JavaScript object being passed as a parameter to the fly transition.</p>
+  <p><strong>Note:</strong> The double curly braces are not special Svelte syntax. It's just a literal JavaScript object being passed as a parameter to the fly transition.</p>
   </div>
  </li>
  <li>

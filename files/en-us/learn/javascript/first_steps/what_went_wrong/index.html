@@ -91,9 +91,13 @@ tags:
  <li>Save your page and refresh, and you should see the error has gone.</li>
  <li>Now if you try to enter a guess and press the Submit guess button, you'll see ... another error! <img alt="" src="variable-is-null.png"></li>
  <li>This time the error being reported is "TypeError: lowOrHi is null", on line 78.
-  <div class="note"><strong>Note</strong>: <code><a href="/en-US/docs/Glossary/Null">Null</a></code> is a special value that means "nothing", or "no value". So <code>lowOrHi</code> has been declared and initialised, but not with any meaningful value — it has no type or value.</div>
+  <div class="note">
+    <p><strong>Note:</strong> <code><a href="/en-US/docs/Glossary/Null">Null</a></code> is a special value that means "nothing", or "no value". So <code>lowOrHi</code> has been declared and initialised, but not with any meaningful value — it has no type or value.</p>
+  </div>
 
-  <div class="note"><strong>Note</strong>: This error didn't come up as soon as the page was loaded because this error occurred inside a function (inside the <code>checkGuess() { ... }</code> block). As you'll learn in more detail in our later <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">functions article</a>, code inside functions runs in a separate scope than code outside functions. In this case, the code was not run and the error was not thrown until the <code>checkGuess()</code> function was run by line 86.</div>
+  <div class="note">
+    <p><strong>Note:</strong> This error didn't come up as soon as the page was loaded because this error occurred inside a function (inside the <code>checkGuess() { ... }</code> block). As you'll learn in more detail in our later <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">functions article</a>, code inside functions runs in a separate scope than code outside functions. In this case, the code was not run and the error was not thrown until the <code>checkGuess()</code> function was run by line 86.</p>
+  </div>
  </li>
  <li>Have a look at line 78, and you'll see the following code:
   <pre class="brush: js">lowOrHi.textContent = 'Last guess was too high!';</pre>
