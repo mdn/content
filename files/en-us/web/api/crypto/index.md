@@ -20,7 +20,7 @@ The **`Crypto`** interface represents basic cryptography features available in t
 
 {{AvailableInWorkers}}
 
-The [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) is accessed through the {{domxref("Window.crypto")}} property, which is a `Crypto` object.
+The [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) is accessed through the global {{domxref("crypto_property", "crypto")}} property, which is a `Crypto` object.
 
 ## Properties
 
@@ -38,7 +38,7 @@ _This interface implements methods defined on {{domxref("Crypto/getRandomValues"
 
 ## Usage notes
 
-You should avoid using the Web Crypto API on insecure contexts, even though the `Crypto` interface is present on insecure contexts, as is the {{domxref("Window.crypto")}} property. In addition, the `Crypto` method {{domxref("Crypto.getRandomValues", "getRandomValues()")}} is available on insecure contexts, but the {{domxref("Crypto.subtle", "subtle")}} property is not.
+You should avoid using the Web Crypto API on insecure contexts, even though the `Crypto` interface is present on insecure contexts, as is the {{domxref("crypto_property", "crypto")}} property. In addition, the `Crypto` method {{domxref("Crypto.getRandomValues", "getRandomValues()")}} is available on insecure contexts, but the {{domxref("Crypto.subtle", "subtle")}} property is not.
 
 In general, you probably should just treat `Crypto` as available only on secure contexts.
 
