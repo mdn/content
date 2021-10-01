@@ -17,13 +17,13 @@ The **`createCubeLayer()`** method of the {{domxref("XRWebGLBinding")}} interfac
 ## Syntax
 
 ```js
-createCubeLayer(options)
+createCubeLayer(init)
 ```
 
 ### Parameters
 
-- `options`
-  - : An object to configure the {{domxref("XRCubeLayer")}}. It can have the following properties and the `space`, `viewPixelHeight`, and `viewPixelWidth` properties are required:
+- `init`
+  - : An object to configure the {{domxref("XRCubeLayer")}}. It must have the `space`, `viewPixelHeight`, and `viewPixelWidth` properties. `init` has the following properties:
     - `colorFormat`: Optional. A {{domxref("GLenum")}} defining the data type of the color texture data. Possible values:
         - `gl.RGB`
         - `gl.RGBA` (Default)
@@ -73,7 +73,7 @@ An {{domxref("XRCubeLayer")}} object.
 
 ### Creating an XRCubeLayer
 
-Configure the cube layer using the options listed above in a call to `createCubeLayer()`. To present layers to the XR device, add them to the `layers` render state using {{domxref("XRSession.updateRenderState()")}}.
+Configure the cube layer using the properties listed above in a call to `createCubeLayer()`. To present layers to the XR device, add them to the `layers` render state using {{domxref("XRSession.updateRenderState()")}}.
 
 ```js
 function onXRSessionStarted(xrSession) {
