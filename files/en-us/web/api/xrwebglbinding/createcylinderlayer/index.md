@@ -17,13 +17,13 @@ The **`createCylinderLayer()`** method of the {{domxref("XRWebGLBinding")}} inte
 ## Syntax
 
 ```js
-createCylinderLayer(options)
+createCylinderLayer(init)
 ```
 
 ### Parameters
 
-- `options`
-  - : An object to configure the {{domxref("XRCylinderLayer")}}. It can have the following properties and the `space`, `viewPixelHeight`, and `viewPixelWidth` properties are required:
+- `init`
+  - : An object to configure the {{domxref("XRCylinderLayer")}}. It must have the `space`, `viewPixelHeight`, and `viewPixelWidth` properties. `init` has the following properties:
     - `aspectRatio`: Optional. A number indicating the ratio of the visible cylinder section. It is the ratio of the width of the visible section of the cylinder divided by its height. The width is calculated by multiplying the `radius` with the `centralAngle`. The default value is `2.0`.
     - `centralAngle`: Optional. A number indicating the angle in radians of the visible section of the cylinder. Default value: `0.78539` (π / 4).
     - `colorFormat`: Optional. A {{domxref("GLenum")}} defining the data type of the color texture data. Possible values:
@@ -82,7 +82,7 @@ An {{domxref("XRCylinderLayer")}} object.
 
 ### Creating an `XRCylinderLayer`
 
-Configure the cylinder layer using the options listed above in a call to `createCylinderLayer()`. To present layers to the XR device, add them to the `layers` render state using {{domxref("XRSession.updateRenderState()")}}.
+Configure the cylinder layer using the properties listed above in a call to `createCylinderLayer()`. To present layers to the XR device, add them to the `layers` render state using {{domxref("XRSession.updateRenderState()")}}.
 
 ```js
 function onXRSessionStarted(xrSession) {
