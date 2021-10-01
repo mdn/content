@@ -1,7 +1,6 @@
 ---
 title: >-
-  Mapping the width and height attributes of media container elements to their
-  aspect-ratio
+  Mapping the width and height attributes of media container elements to their aspect-ratio
 slug: Web/Media/images/aspect_ratio_mapping
 tags:
   - CSS
@@ -39,7 +38,9 @@ tags:
 
 <p>Mozilla then <a href="https://github.com/WICG/intrinsicsize-attribute/issues/16">brought the idea up in the WICG community group</a> and discussed it further until representatives from Chrome were onboard with the idea.</p>
 
-<p>Due to this work, browsers are working on adding a new mechanism for sizing images before the actual image is loaded. Firefox has added an internal <code>aspect-ratio</code> property (in version 69 onwards) that applies to replaced elements, and other related elements that accept <code>width</code> and <code>height</code> attributes. This appears in the browser's internal UA stylesheet, similar to the following:</p>
+<p>Due to this work, browsers are working on adding a new mechanism for sizing images before the actual image is loaded.
+  The {{cssxref("aspect-ratio")}} property that applies to replaced elements, and other related elements that accept <code>width</code> and <code>height</code> attributes.
+  This appears in the browser's internal UA stylesheet, similar to the following:</p>
 
 <pre class="brush: css">img, input[type="image"], video, embed, iframe, marquee, object, table {
   aspect-ratio: attr(width) / attr(height);
@@ -48,7 +49,7 @@ tags:
 <p>This actually affects any element that acts as a container for complex or mixed visual media — {{htmlelement("embed")}}, {{htmlelement("iframe")}}, {{htmlelement("marquee")}}, {{htmlelement("object")}}, {{htmlelement("table")}}, and {{htmlelement("video")}}, in addition to actual images ({{htmlelement("img")}} and <strong id="docs-internal-guid-1a994dc9-7fff-a700-71f0-25b6cfe48215"> </strong><code>&lt;input type="image"&gt;</code>). When such an element has <code>width</code> and <code>height</code> attributes set on it, its aspect ratio will be calculated before load time, and be available to the browser.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Currently this effect is being limited to actual <code>&lt;img&gt;</code> elements, as applying to other such elements may have undesirable results. See ({{bug(1583980)}}).</p>
+<p><strong>Note</strong>: Currently on Firefox this effect is being limited to actual <code>&lt;img&gt;</code> elements, as applying to other such elements may have undesirable results. See ({{bug(1583980)}}).</p>
 </div>
 
 <p>When the <code>width</code>/<code>height</code> of an <code>&lt;img&gt;</code> element — as set using HTML attributes — is overridden using CSS using something like this:</p>
@@ -70,8 +71,12 @@ tags:
 
 <h2 id="Summary">Summary</h2>
 
-<p>So there you have it — eliminating another piece of jank from web layout! There is no need for a web developer to do anything special to their code to take advantage of this, besides returning to the habit of using <code>width</code> and <code>height</code> attributes in their HTML. They'll just get it for free.</p>
+<p>So there you have it — eliminating another piece of jank from web layout!
+  There is no need for a web developer to do anything special to their code to take advantage of this, besides returning to the habit of using <code>width</code> and <code>height</code> attributes in their HTML. They'll just get it for free.</p>
 
-<div class="notecard note">
-<p><strong>Note</strong>: This new mechanism is enabled in Firefox 69 in beta and Nightly as the spec is worked out (controlled by the <code>layout.css.width-and-height-map-to-aspect-ratio.enabled</code> pref), and it is <a href="https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/hbhKRuBzZ4o">currently being implemented in Chrome</a>. It will ship with <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1585637">Firefox 71</a>.</p>
-</div>
+<h2 id="see_also">See also</h2>
+
+<ul>
+  <li><a href="https://www.smashingmagazine.com/2019/03/aspect-ratio-unit-css/">Designing an aspect ratio unit for CSS</a></li>
+  <li><a href="https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/">Setting Height And Width On Images Is Important Again</a></li>
+</ul>

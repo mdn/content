@@ -76,3 +76,4 @@ You can read more about this feature in [Setting Height And Width On Images Is I
 
 - [Mapping the width and height attributes of media container elements to their aspect-ratio](/en-US/docs/Web/Media/images/aspect_ratio_mapping)
 - [Designing an aspect ratio unit for CSS](https://www.smashingmagazine.com/2019/03/aspect-ratio-unit-css/)
+- [Setting Height And Width On Images Is Important Again](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/)
