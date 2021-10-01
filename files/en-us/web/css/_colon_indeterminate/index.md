@@ -46,11 +46,15 @@ This example applies special styles to the labels associated with indeterminate 
 ```html
 <div>
   <input type="checkbox" id="checkbox">
-  <label for="checkbox">This label starts out lime.</label>
+  <label for="checkbox">This checkbox label starts out lime.</label>
 </div>
 <div>
-  <input type="radio" id="radio">
-  <label for="radio">This label starts out lime.</label>
+  <input type="radio" id="radio1" name="radioButton">
+  <label for="radio1">This radio label starts out lime.</label>
+</div>
+<div>
+  <input type="radio" id="radio2" name="radioButton">
+  <label for="radio2">This radio label starts out lime.</label>
 </div>
 ```
 
@@ -65,14 +69,14 @@ input:indeterminate + label {
 #### JavaScript
 
 ```js
-var inputs = document.getElementsByTagName("input");
+const inputs = document.getElementsByTagName("input");
 
-for (var i = 0; i < inputs.length; i++) {
+for (let i = 0; i < inputs.length; i++) {
   inputs[i].indeterminate = true;
 }
 ```
 
-{{EmbedLiveSample('Checkbox_radio_button', 'auto', 50)}}
+{{EmbedLiveSample('Checkbox_radio_button', 'auto', 150)}}
 
 ### Progress bar
 
