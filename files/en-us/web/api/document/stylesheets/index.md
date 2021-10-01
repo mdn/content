@@ -30,17 +30,19 @@ The returned list is ordered as follows:
 
 ```js
 function getStyleSheet(unique_title) {
-  let i, styleSheetsNo;
+  let i, sheets, styleSheetsNo;
   i = 0;
-  styleSheetsNo = document.styleSheets.length;
+  sheets = document.styleSheets;
+  styleSheetsNo = sheets.length;
   
   for (i; i < styleSheetsNo; i++) {
-    let sheet = document.styleSheets[i];
+    let sheet = sheets[i];
     if (sheet.title == unique_title) {
       return sheet;
     }
   }
 }
+
 ```
 
 ## Specifications
