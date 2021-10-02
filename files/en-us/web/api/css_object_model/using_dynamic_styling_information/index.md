@@ -33,7 +33,7 @@ body {
 </style>
 <script type="text/javascript">
 var stylesheet = document.styleSheets[0];
-stylesheet.cssRules[0].style.backgroundColor="aquablue";
+stylesheet.cssRules[0].style.backgroundColor="aqua";
 </script>
 </head>
 <body>
