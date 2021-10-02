@@ -44,18 +44,25 @@ This example applies special styles to the labels associated with indeterminate 
 #### HTML
 
 ```html
-<div>
-  <input type="checkbox" id="checkbox">
-  <label for="checkbox">This checkbox label starts out lime.</label>
-</div>
-<div>
-  <input type="radio" id="radio1" name="radioButton">
-  <label for="radio1">This radio label starts out lime.</label>
-</div>
-<div>
-  <input type="radio" id="radio2" name="radioButton">
-  <label for="radio2">This radio label starts out lime.</label>
-</div>
+<fieldset>
+  <legend>Checkbox</legend>
+  <div>
+    <input type="checkbox" id="checkbox">
+    <label for="checkbox">This checkbox label starts out lime.</label>
+  </div>
+</fieldset>
+
+<fieldset>
+  <legend>Radio</legend>
+  <div>
+    <input type="radio" id="radio1" name="radioButton">
+    <label for="radio1">First radio label starts out lime.</label>
+  </div>
+  <div>
+    <input type="radio" id="radio2" name="radioButton">
+    <label for="radio2">Second radio label also starts out lime.</label>
+  </div>
+</fieldset>
 ```
 
 #### CSS
@@ -63,6 +70,20 @@ This example applies special styles to the labels associated with indeterminate 
 ```css
 input:indeterminate + label {
   background: lime;
+}
+```
+
+```css hidden
+fieldset {
+    padding: 1em 0.75em;
+}
+
+fieldset:first-of-type {
+    margin-bottom: 1.5rem;
+}
+
+fieldset:not(:first-of-type) > div:not(:last-child) {
+    margin-bottom: 0.5rem;
 }
 ```
 
@@ -76,7 +97,7 @@ for (let i = 0; i < inputs.length; i++) {
 }
 ```
 
-{{EmbedLiveSample('Checkbox_radio_button', 'auto', 150)}}
+{{EmbedLiveSample('Checkbox_radio_button', 'auto', 230)}}
 
 ### Progress bar
 
