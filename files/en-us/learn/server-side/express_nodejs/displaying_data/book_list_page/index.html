@@ -20,6 +20,7 @@ tags:
 exports.book_list = function(req, res, next) {
 
   Book.find({}, 'title author')
+    .sort({title : 1})
     .populate('author')
     .exec(function (err, list_books) {
       if (err) { return next(err); }
@@ -41,9 +42,8 @@ exports.book_list = function(req, res, next) {
 
 block content
   h1= title
-
+  
   ul
-    - book_list.sort(function(a, b) {let textA = a.title.toUpperCase(); let textB = b.title.toUpperCase(); return (textA &lt; textB) ? -1 : (textA &gt; textB) ? 1 : 0;});
     each book in book_list
       li
         a(href=book.url) #{book.title}
