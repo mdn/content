@@ -15,7 +15,7 @@ The **`margin-left`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area]
 
 {{EmbedInteractiveExample("pages/css/margin-left.html")}}
 
-The vertical margins of two adjacent boxes may fuse. This is called [_margin collapsing_](/en-US/docs/CSS/margin_collapsing).
+The vertical margins of two adjacent boxes may fuse. This is called [_margin collapsing_](/en-US/docs/Web/CSS/margin_collapsing).
 
 In the rare cases where width is overconstrained (i.e., when all of `width`, `margin-left`, `border`, `padding`, the content area, and `margin-right` are defined), `margin-left` is ignored, and will have the same calculated value as if the `auto` value was specified.
 

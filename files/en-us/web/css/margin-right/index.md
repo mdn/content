@@ -14,7 +14,7 @@ The **`margin-right`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area
 
 {{EmbedInteractiveExample("pages/css/margin-right.html")}}
 
-The vertical margins of two adjacent boxes may fuse. This is called [_margin collapsing_](/en-US/docs/CSS/margin_collapsing).
+The vertical margins of two adjacent boxes may fuse. This is called [_margin collapsing_](/en-US/docs/Web/CSS/margin_collapsing).
 
 ## Syntax
 

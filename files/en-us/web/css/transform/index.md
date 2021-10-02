@@ -128,6 +128,6 @@ Please see [Using CSS transforms](/en-US/docs/Web/Guide/CSS/Using_CSS_transforms
 
 ## See also
 
-- [Using CSS transforms](/en-US/docs/CSS/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/Using_CSS_transforms)
 - {{cssxref("&lt;transform-function&gt;")}} data type with all the transform functions explained.
 - Online tool to visualize CSS Transform functions: [CSS Transform Playground](https://css-transform.moro.es/)
