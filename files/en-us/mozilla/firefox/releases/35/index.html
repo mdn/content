@@ -69,10 +69,10 @@ tags:
 <h3 id="InterfacesAPIsDOM">Interfaces/APIs/DOM</h3>
 
 <ul>
- <li>The {{domxref("NavigatorLanguage")}} interface is now available to workers on {{domxref("WorkerNavigator")}} ({{bug(925849)}}).</li>
+ <li>The {{domxref("Navigator", "NavigatorLanguage")}} interface is now available to workers on {{domxref("WorkerNavigator")}} ({{bug(925849)}}).</li>
  <li>The {{domxref("Element.closest()")}} method returns the closest ancestor of the current element ({{bug(1055533)}}).</li>
  <li>Experimental support for the {{domxref("CanvasRenderingContext2D.filter")}} property has been added behind the <code>canvas.filters.enabled</code> flag ({{bug(927892)}}).</li>
- <li>Our experimental implementation of Web Animations progresses with the landing of the {{domxref("Animation.target")}} property. This always is behind the <code>dom.animations-api.core.enabled</code> pref, off by default ({{bug(1067701)}}).</li>
+ <li>Our experimental implementation of Web Animations progresses with the landing of the <code>Animation.target</code> property. This always is behind the <code>dom.animations-api.core.enabled</code> pref, off by default ({{bug(1067701)}}).</li>
  <li>The {{domxref("Element.hasAttributes", "hasAttributes()")}} method has been moved from {{domxref("Node")}} to {{domxref("Element")}} as required by the spec ({{bug("1055773")}}).</li>
  <li>The <code>crossOrigin</code> reflected attribute of {{domxref("HTMLImageElement")}}, {{domxref("HTMLLinkElement")}}, {{domxref("HTMLMediaElement")}}, {{domxref("HTMLScriptElement")}}, and {{domxref("SVGScriptElement")}} only accepts valid values, and <code>""</code> isn't, <code>null</code> has to be used instead ({{bug(880997)}}).</li>
  <li>The Resource Timing API has been activated by default ({{bug(1002855)}}).</li>
@@ -80,9 +80,9 @@ tags:
  <li>The new {{domxref("ImageCapture")}} API has been implemented: {{domxref("ImageCapture.takePhoto()")}} is available ({{bug(916643)}}).</li>
  <li>Non-HTTP {{domxref("XMLHttpRequest")}} requests now return <code>200</code> in case of success (instead of the erroneous <code>0</code>) ({{bug(716491)}}).</li>
  <li>{{domxref("XMLHttpRequest.responseURL")}} has been adapted to the latest spec and doesn't include the fragment (<code>'#xyz'</code>) of the URL, if relevant ({{bug(1073882)}}).</li>
- <li>The internal, non-standard, {{domxref("File.mozFullPath")}} property is no more visible from content ({{bug(1048293)}}).</li>
+ <li>The internal, non-standard, <code>File.mozFullPath</code> property is no more visible from content ({{bug(1048293)}}).</li>
  <li>The constructor of {{domxref("File")}} has been extended to match the specification ({{bug(1047483)}}).</li>
- <li>An experimental implementation of {{domxref("AbortablePromise")}}, a promise that can be aborted by a different entity that the one who created it, has been added. It is prefixed with <code>Moz</code> and controlled by the <code>dom.abortablepromise.enabled</code>property, defaulting to <code>false</code> ({{bug(1035060)}}).</li>
+ <li>An experimental implementation of <code>AbortablePromise</code>, a promise that can be aborted by a different entity that the one who created it, has been added. It is prefixed with <code>Moz</code> and controlled by the <code>dom.abortablepromise.enabled</code>property, defaulting to <code>false</code> ({{bug(1035060)}}).</li>
  <li>The non-standard {{domxref("Navigator.mozIsLocallyAvailable")}} property has been removed ({{bug(1066826)}}).</li>
  <li>The preference <code>network.websocket.enabled,</code> <code>true</code> by default, has been removed; <a href="/en-US/docs/Web/API/WebSockets_API">Websocket</a> API cannot be deactivated anymore ({{bug(1091016)}}).</li>
  <li>The non-standard methods and properties of {{domxref("Crypto")}} have been removed ({{bug(1030963)}}). Only methods and properties defined in the standard WebCrypto API are left.</li>
@@ -122,7 +122,7 @@ tags:
 <h3 id="XUL_Add-ons">XUL &amp; Add-ons</h3>
 
 <ul>
- <li>The private <code>_getTabForBrowser()</code> method on the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tabbrowser">&lt;xul:tabbrowser&gt;</a></code> element has been deprecated. In its place, we've added a new, public, method called <span id="m-getTabForBrowser"><code><a href="/en-US/docs/Mozilla/Tech/XUL/Method/getTabForBrowser">getTabForBrowser</a></code></span>. This returns, predictably, the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tab">&lt;xul:tab&gt;</a></code> element that contains the specified <code><a href="/en-US/docs/Mozilla/Tech/XUL/browser">&lt;xul:browser&gt;</a></code>.</li>
+ <li>The private <code>_getTabForBrowser()</code> method on the <code>&lt;xul:tabbrowser&gt;</code> element has been deprecated. In its place, we've added a new, public, method called <code>getTabForBrowser</code>. This returns, predictably, the <code>&lt;xul:tab&gt;</code> element that contains the specified <code>&lt;xul:browser&gt;</code>.</li>
  <li><code>Components.utils.now()</code>, matching {{domxref("Performance.now()")}} has been implemented for non-window chrome code ({{bug(969490)}}).</li>
 </ul>
 
@@ -131,9 +131,9 @@ tags:
 <h4 id="Highlights">Highlights</h4>
 
 <ul>
- <li>Added <a href="/en-US/docs/Mozilla/Add-ons/SDK/Tutorials/Add_a_Context_Menu_Item#adding_an_access_key">access keys for context menu</a>.</li>
- <li>Removed <code>isPrivateBrowsing</code> from <a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/windows#browserwindow"><code>BrowserWindow</code></a>.</li>
- <li>added <code><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/url#tojson%28%29">toJSON</a></code> method to <code>URL</code> instances from <a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/url">sdk/url</a></li>
+ <li>Added access keys for context menu.</li>
+ <li>Removed <code>isPrivateBrowsing</code> from <code>BrowserWindow</code>.</li>
+ <li>Added <code>toJSON</code> method to <code>URL</code> instances.</li>
 </ul>
 
 <h4 id="Details">Details</h4>
