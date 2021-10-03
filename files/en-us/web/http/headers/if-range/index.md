@@ -13,13 +13,13 @@ browser-compat: http.headers.If-Range
 {{HTTPSidebar}}
 
 The **`If-Range`** HTTP request header makes a range request
-conditional: if the condition is fulfilled, the range request will be issued and the
+conditional: if the condition is fulfilled, the range request is issued, and the
 server sends back a {{HTTPStatus("206")}} `Partial Content` answer with the
-appropriate body. If the condition is not fulfilled, the full resource is sent back,
+appropriate body. If the condition is not fulfilled, the full resource is sent back
 with a {{HTTPStatus("200")}} `OK` status.
 
-This header can be used either with a {{HTTPHeader("Last-Modified")}} validator, or
-with an {{HTTPHeader("ETag")}}, but not with both.
+This header can be used either with the {{HTTPHeader("Last-Modified")}} validator or
+with {{HTTPHeader("ETag")}}, but not with both.
 
 The most common use case is to resume a download, to guarantee that the stored resource
 has not been modified since the last fragment has been received.
@@ -48,7 +48,7 @@ If-Range: <etag>
 
 - \<etag>
   - : An entity tag uniquely representing the requested resource. It is a string of ASCII
-    characters placed between double quotes (Like `"675af34563dc-tr34"`) and
+    characters placed between double quotes (Like `"675af34563dc-tr34"`). It
     may be prefixed by `W/` to indicate that the weak comparison algorithm
     should be used.
 - \<day-name>
@@ -57,7 +57,7 @@ If-Range: <etag>
   - : 2 digit day number, e.g. "04" or "23".
 - \<month>
   - : One of "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov",
-    "Dec" (case sensitive).
+    "Dec" (case-sensitive).
 - \<year>
   - : 4 digit year number, e.g. "1990" or "2016".
 - \<hour>
