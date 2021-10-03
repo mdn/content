@@ -69,9 +69,8 @@ Content-Length: 1234567890987
 Expect: 100-continue
 ```
 
-The server checks the headers and generates the response. The response is either:
-- {{HTTPStatus("100")}} (Continue) which instructs the client to proceed and send the message body or
-- {{HTTPStatus("417")}} (Expectation Failed) if the server cannot met any of the expectations.
+The server checks the headers and generates the response.
+The server sends {{HTTPStatus("100")}} (Continue), which instructs the client to send the message body.
 
 ## Specifications
 
