@@ -58,7 +58,7 @@ There is only one defined expectation:
 
 ### Large message body
 
-A client sends a request with  `Expect` header and waits for the server to respond
+A client sends a request with `Expect` header and waits for the server to respond
 before sending the message body.
 
 ```
