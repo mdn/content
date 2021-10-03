@@ -14,7 +14,7 @@ software used by the origin server that handled the request — that is, the ser
 generated the response.
 
 > **Warning:** Avoid overly-detailed `Server` values, as they can reveal information that
-> might make it (slightly) easier for attackers to exploit known security holes.
+> may make it (slightly) easier for attackers to exploit known security holes.
 
 <table class="properties">
   <tbody>
@@ -38,14 +38,14 @@ Server: <product>
 ## Directives
 
 - \<product>
-  - : The name of the software or product that handled the request. Usually in a format
+  - : A name of the software or the product that handled the request. Usually in a format
     similar to {{HTTPHeader('User-Agent')}}.
 
 How much detail to include is an interesting balance to strike; exposing the OS version
 is probably a bad idea, as mentioned in the earlier warning about overly-detailed
-values. However, exposed Apache versions helped browsers work around a bug those
-versions had with {{HTTPHeader('Content-Encoding')}} combined with
-{{HTTPHeader('Range')}}.
+values. However, exposed Apache versions helped browsers to work around a bug of the
+versions with {{HTTPHeader('Content-Encoding')}} and
+{{HTTPHeader('Range')}} in combination.
 
 ## Examples
 
