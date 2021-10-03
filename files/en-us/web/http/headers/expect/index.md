@@ -10,20 +10,21 @@ browser-compat: http.headers.Expect
 ---
 {{HTTPSidebar}}
 
-The **`Expect`** HTTP Request header indicates the expectations
+The **`Expect`** HTTP request header indicates expectations
 that need to be met by the server to handle the request successfully.
 
-Upon `Expect: 100-continue` expectation the server responds with:
+Upon `Expect: 100-continue`, the server responds with:
 
-- {{HTTPStatus("100")}} (Expectation Succeeded) if the information from the Request header is sufficient to
-  cause immediate success,
-- {{HTTPStatus("417")}} (Expectation Failed) if the server cannot meet the expectation; or any
-  other 4xx status otherwise.
+- {{HTTPStatus("100")}} (Continue) if the information from the request header is sufficient to
+  cause immediate success
+- {{HTTPStatus("417")}} (Expectation Failed) if the server cannot meet the expectation
+
+or any other 4xx status otherwise.
 
 For example, the server may reject a request if its {{HTTPHeader("Content-Length")}} is
 too large.
 
-No common browsers send the `Expect` HTTP Request header, but some other clients such as
+No common browsers send the `Expect` header, but some other clients such as
 cURL do so by default.
 
 <table class="properties">
@@ -41,13 +42,13 @@ cURL do so by default.
 
 ## Syntax
 
-There is one expectation specified: "100-continue" only.
-
 ```
 Expect: 100-continue
 ```
 
 ## Directives
+
+There is only one defined expectation:
 
 - `100-continue`
   - : Informs recipients that the client is about to send a (presumably large) message
@@ -58,7 +59,7 @@ Expect: 100-continue
 
 ### Large message body
 
-A client sends a request with  `Expect` HTTP Request header and waits for the server to respond
+A client sends a request with `Expect` header and waits for the server to respond
 before sending the message body.
 
 ```
@@ -69,9 +70,8 @@ Content-Length: 1234567890987
 Expect: 100-continue
 ```
 
-The server checks the Request Header and generates the response. The response is either: 
-- {{HTTPStatus("100")}} (Continue) which instructs the client to proceed and send the message body or 
-- {{HTTPStatus("417")}} (Expectation Failed) if the server cannot met any of the expectations.
+The server checks the headers and generates the response.
+The server sends {{HTTPStatus("100")}} (Continue), which instructs the client to send the message body.
 
 ## Specifications
 
