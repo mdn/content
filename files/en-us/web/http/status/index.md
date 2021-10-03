@@ -23,7 +23,7 @@ The below status codes are defined by [section 10 of RFC 2616](https://datatrack
 
 > **Note:** If you receive a response that is not in [this list](#information-responses), it is a non-standard response, possibly custom to the server's software.
 
-## Information responses {#information-responses}
+## Information responses
 
 - {{HTTPStatus(100, "100 Continue")}}
   - : This interim response indicates that the client should continue the request or ignore the response if the request is already finished.
@@ -34,7 +34,7 @@ The below status codes are defined by [section 10 of RFC 2616](https://datatrack
 - {{HTTPStatus(103, "103 Early Hints")}}
   - : This status code is primarily intended to be used with the {{HTTPHeader("Link")}} header, letting the user agent starts [preloading](/en-US/docs/Web/HTML/Link_types/preload) resources while the server prepares a response.
 
-## Successful responses {#successful_responses}
+## Successful responses
 
 - {{HTTPStatus(200, "200 OK")}}
 
@@ -64,7 +64,7 @@ The below status codes are defined by [section 10 of RFC 2616](https://datatrack
 - {{HTTPStatus(226, "226 IM Used")}} ([HTTP Delta encoding](https://datatracker.ietf.org/doc/html/rfc3229))
   - : The server has fulfilled a `GET` request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance.
 
-## Redirection messages {#redirection_messages}
+## Redirection messages
 
 - {{HTTPStatus(300, "300 Multiple Choice")}}
   - : The request has more than one possible response. The user agent or user should choose one of them. (There is no standardized way of choosing one of the responses, but HTML links to the possibilities are recommended so the user can pick.)
@@ -85,7 +85,7 @@ The below status codes are defined by [section 10 of RFC 2616](https://datatrack
 - {{HTTPStatus(308, "308 Permanent Redirect")}}
   - : This means that the resource is now permanently located at another URI, specified by the `Location:` HTTP Response header. This has the same semantics as the `301 Moved Permanently` HTTP response code, with the exception that the user agent _must not_ change the HTTP method used: if a `POST` was used in the first request, a `POST` must be used in the second request.
 
-## Client error responses {#client_error_responses}
+## Client error responses
 
 - {{HTTPStatus(400, "400 Bad Request")}}
   - : The server could not understand the request due to invalid syntax.
