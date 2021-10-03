@@ -15,6 +15,7 @@ tags:
   - reset
 browser-compat: html.elements.input.input-reset
 ---
+
 {{HTMLRef("Input_types")}}
 
 {{HTMLElement("input")}} elements of type **`reset`** are rendered as buttons, with a default {{event("click")}} event handler that resets all of the inputs in the form to their initial values.
@@ -140,7 +141,7 @@ Buttons don't participate in constraint validation; they have no real value to b
 
 ## Examples
 
-We've included simple examples above. There isn't really anything more to say about reset buttons. 
+We've included simple examples above. There isn't really anything more to say about reset buttons.
 
 ## Specifications
 
@@ -152,9 +153,9 @@ We've included simple examples above. There isn't really anything more to say ab
 
 ## See also
 
-*   {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
-*   [Forms and buttons](/en-US/docs/Learn/Forms/Basic_native_form_controls#actual_buttons)
-*   [Forms (accessibility)](/en-US/docs/Web/Accessibility/ARIA/forms)
-*   [HTML forms](/en-US/docs/Learn/Forms)
-*   The {{HTMLElement("button")}} element
-*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
+- [Forms and buttons](/en-US/docs/Learn/Forms/Basic_native_form_controls#actual_buttons)
+- [Forms (accessibility)](/en-US/docs/Web/Accessibility/ARIA/forms)
+- [HTML forms](/en-US/docs/Learn/Forms)
+- The {{HTMLElement("button")}} element
+- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

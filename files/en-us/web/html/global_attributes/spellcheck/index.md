@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: html.global_attributes.spellcheck
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 The **`spellcheck`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an enumerated attribute defines whether the element may be checked for spelling errors.
@@ -15,12 +16,12 @@ The **`spellcheck`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) 
 
 It may have the following values:
 
-*   `true`, which indicates that the element should be, if possible, checked for spelling errors;
-*   `false`, which indicates that the element should not be checked for spelling errors.
+- `true`, which indicates that the element should be, if possible, checked for spelling errors;
+- `false`, which indicates that the element should not be checked for spelling errors.
 
-> **Note:** The `spellcheck` attribute is an *enumerated* one and not a *Boolean* one. This means that the explicit usage of one of the values `true` or `false` is mandatory, and that a shorthand like `<textarea spellcheck></textarea>` is not allowed. The correct usage is `<textarea spellcheck="true"></textarea>`.
+> **Note:** The `spellcheck` attribute is an _enumerated_ one and not a _Boolean_ one. This means that the explicit usage of one of the values `true` or `false` is mandatory, and that a shorthand like `<textarea spellcheck></textarea>` is not allowed. The correct usage is `<textarea spellcheck="true"></textarea>`.
 
-If this attribute is not set, its default value is element-type and browser-defined. This default value may also be *inherited*, which means that the element content will be checked for spelling errors only if its nearest ancestor has a *spellcheck* state of `true`.
+If this attribute is not set, its default value is element-type and browser-defined. This default value may also be _inherited_, which means that the element content will be checked for spelling errors only if its nearest ancestor has a _spellcheck_ state of `true`.
 
 This attribute is merely a hint for the browser: browsers are not required to check for spelling errors. Typically non-editable elements are not checked for spelling errors, even if the `spellcheck` attribute is set to `true` and the browser supports spellchecking.
 
@@ -34,4 +35,4 @@ This attribute is merely a hint for the browser: browsers are not required to ch
 
 ## See also
 
-*   All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+- All [global attributes](/en-US/docs/Web/HTML/Global_attributes).

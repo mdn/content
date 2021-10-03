@@ -12,6 +12,7 @@ tags:
   - hidden
 browser-compat: html.elements.input.input-hidden
 ---
+
 {{HTMLRef}}
 
 {{HTMLElement("input")}} elements of type **`hidden`** let web developers include data that cannot be seen or modified by users when a form is submitted. For example, the ID of the content that is currently being ordered or edited, or a unique security token. Hidden inputs are completely invisible in the rendered page, and there is no way to make it visible in the page's content.
@@ -78,9 +79,9 @@ You can see a full example of what this might look like in the {{anch("Examples"
 
 ### Improving website security
 
-Hidden inputs are also used to store and submit security tokens or *secrets*, for the purposes of improving website security. The basic idea is that if a user is filling in a sensitive form, such as a form on their banking website to transfer some money to another account, the secret they would be provided with would prove that they are who they say they are, and that they are using the correct form to submit the transfer request.
+Hidden inputs are also used to store and submit security tokens or _secrets_, for the purposes of improving website security. The basic idea is that if a user is filling in a sensitive form, such as a form on their banking website to transfer some money to another account, the secret they would be provided with would prove that they are who they say they are, and that they are using the correct form to submit the transfer request.
 
-This would stop a malicious user from creating a fake form, pretending to be a bank, and emailing the form to unsuspecting users to trick them into transferring money to the wrong place. This kind of attack is called a [Cross Site Request Forgery (CSRF)](/en-US/docs/Learn/Server-side/First_steps/Website_security#cross-site_request_forgery_\(csrf\)); pretty much any reputable server-side framework uses hidden secrets to prevent such attacks.
+This would stop a malicious user from creating a fake form, pretending to be a bank, and emailing the form to unsuspecting users to trick them into transferring money to the wrong place. This kind of attack is called a [Cross Site Request Forgery (CSRF)](</en-US/docs/Learn/Server-side/First_steps/Website_security#cross-site_request_forgery_(csrf)>); pretty much any reputable server-side framework uses hidden secrets to prevent such attacks.
 
 > **Note:** Placing the secret in a hidden input doesn't inherently make it secure. The key's composition and encoding would do that. The value of the hidden input is that it keeps the secret associated with the data and automatically includes it when the form is sent to the server. You need to use well-designed secrets to actually secure your website.
 
@@ -172,5 +173,5 @@ Even though the hidden input cannot be seen at all, its data is still submitted.
 
 ## See also
 
-*   [HTML forms guide](/en-US/docs/Learn/Forms)
-*   {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon
+- [HTML forms guide](/en-US/docs/Learn/Forms)
+- {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon

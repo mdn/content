@@ -17,6 +17,7 @@ tags:
   - user input
 browser-compat: html.elements.kbd
 ---
+
 {{HTMLRef}}
 
 The **`<kbd>`** [HTML](/en-US/docs/Web/HTML) element represents a span of inline text denoting textual user input from a keyboard, voice input, or any other text entry device. By convention, the {{Glossary("user agent")}} defaults to rendering the contents of a `<kbd>` element using its default monospace font, although this is not mandated by the HTML standard.
@@ -90,9 +91,9 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 Other elements can be used in tandem with `<kbd>` to represent more specific scenarios:
 
-*   Nesting a `<kbd>` element within another `<kbd>` element represents an actual key or other unit of input as a portion of a larger input. See {{anch("Representing keystrokes within an input")}} below.
-*   Nesting a `<kbd>` element inside a {{HTMLElement("samp")}} element represents input that has been echoed back to the user by the system. See {{anch("Echoed input")}}, below, for an example.
-*   Nesting a `<samp>` element inside a `<kbd>` element, on the other hand, represents input which is based on text presented by the system, such as the names of menus and menu items, or the names of buttons displayed on the screen. See the example under {{anch("Representing onscreen input options")}} below.
+- Nesting a `<kbd>` element within another `<kbd>` element represents an actual key or other unit of input as a portion of a larger input. See {{anch("Representing keystrokes within an input")}} below.
+- Nesting a `<kbd>` element inside a {{HTMLElement("samp")}} element represents input that has been echoed back to the user by the system. See {{anch("Echoed input")}}, below, for an example.
+- Nesting a `<samp>` element inside a `<kbd>` element, on the other hand, represents input which is based on text presented by the system, such as the names of menus and menu items, or the names of buttons displayed on the screen. See the example under {{anch("Representing onscreen input options")}} below.
 
 > **Note:** You can define a custom style to override the browser's default font selection for the `<kbd>` element, although the user's preferences may potentially override your CSS.
 
@@ -209,4 +210,4 @@ This does some interesting nesting. For the menu option description, the entire 
 
 ## See also
 
-*   {{htmlelement("code")}}
+- {{htmlelement("code")}}

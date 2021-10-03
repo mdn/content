@@ -23,6 +23,7 @@ tags:
   - rtl
 browser-compat: html.elements.bdi
 ---
+
 {{HTMLRef}}
 
 The **`<bdi>`** [HTML](/en-US/docs/Web/HTML) element tells the browser's bidirectional algorithm to treat the text it contains in isolation from its surrounding text. It's particularly useful when a website dynamically inserts some text and doesn't know the directionality of the text being inserted.
@@ -35,20 +36,20 @@ Usually, the bidirectional algorithm will do the right thing without the author 
 
 The `<bdi>` element is used to wrap a span of text and instructs the bidirectional algorithm to treat this text in isolation from its surroundings. This works in two ways:
 
-*   The directionality of text embedded in `<bdi>` *does not influence* the directionality of the surrounding text.
-*   The directionality of text embedded in `<bdi>` *is not influenced by* the directionality of the surrounding text.
+- The directionality of text embedded in `<bdi>` _does not influence_ the directionality of the surrounding text.
+- The directionality of text embedded in `<bdi>` _is not influenced by_ the directionality of the surrounding text.
 
 For example, consider some text like:
 
     EMBEDDED-TEXT - 1st place
 
-If `EMBEDDED-TEXT` is LTR, this works fine. But if `EMBEDDED-TEXT` is RTL, then  `  - 1 ` will be treated as RTL text (because it consists of neutral and weak characters). The result will be garbled:
+If `EMBEDDED-TEXT` is LTR, this works fine. But if `EMBEDDED-TEXT` is RTL, then  ` - 1` will be treated as RTL text (because it consists of neutral and weak characters). The result will be garbled:
 
     1 - EMBEDDED-TEXTst place
 
 If you know the directionality of `EMBEDDED-TEXT` in advance, you can fix this problem by wrapping `EMBEDDED-TEXT` in a {{HTMLElement("span")}} with the {{htmlattrxref("dir")}} attribute set to the known directionality. But if you don't know the directionality - for example, because `EMBEDDED-TEXT` is being read from a database or entered by the user - you should use `<bdi>` to prevent the directionality of `EMBEDDED-TEXT` from affecting its surroundings.
 
-Though the same visual effect can be achieved using the CSS rule {{cssxref("unicode-bidi")}}`: isolate` on a {{HTMLElement("span")}} or another text-formatting element, HTML authors should not use this approach because it is not semantic and browsers are allowed to ignore CSS styling.
+Though the same visual effect can be achieved using the CSS rule {{cssxref("unicode-bidi")}}`: isolate` on a {{HTMLElement("span")}} or another text-formatting element, HTML authors should not use this approach because it is not semantic and browsers are allowed to ignore CSS styling.
 
 Embedding the characters in `<span dir="auto">` has the same effect as using `<bdi>`, but its semantics are less clear.
 
@@ -194,8 +195,8 @@ body {
 
 ## See also
 
-*   [Inline markup and bidirectional text in HTML](https://www.w3.org/International/articles/inline-bidi-markup/)
-*   [Unicode Bidirectional Algorithm basics](https://www.w3.org/International/articles/inline-bidi-markup/uba-basics)
-*   {{Glossary("Localization")}}
-*   Related HTML element: {{HTMLElement("bdo")}}
-*   Related CSS properties: {{cssxref("direction")}}, {{cssxref("unicode-bidi")}}
+- [Inline markup and bidirectional text in HTML](https://www.w3.org/International/articles/inline-bidi-markup/)
+- [Unicode Bidirectional Algorithm basics](https://www.w3.org/International/articles/inline-bidi-markup/uba-basics)
+- {{Glossary("Localization")}}
+- Related HTML element: {{HTMLElement("bdo")}}
+- Related CSS properties: {{cssxref("direction")}}, {{cssxref("unicode-bidi")}}

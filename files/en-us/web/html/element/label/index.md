@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: html.elements.label
 ---
+
 {{HTMLRef}}
 
 The **`<label>`** [HTML](/en-US/docs/Web/HTML) element represents a caption for an item in a user interface.
@@ -18,8 +19,8 @@ The **`<label>`** [HTML](/en-US/docs/Web/HTML) element represents a caption for 
 
 Associating a `<label>` with an {{htmlelement("input")}} element offers some major advantages:
 
-*   The label text is not only visually associated with its corresponding text input; it is programmatically associated with it too. This means that, for example, a screen reader will read out the label when the user is focused on the form input, making it easier for an assistive technology user to understand what data should be entered.
-*   When a user clicks or touches/taps a label, the browser passes the focus to its associated input (the resulting event is also raised for the input). That increased hit area for focusing the input provides an advantage to anyone trying to activate it — including those using a touch-screen device.
+- The label text is not only visually associated with its corresponding text input; it is programmatically associated with it too. This means that, for example, a screen reader will read out the label when the user is focused on the form input, making it easier for an assistive technology user to understand what data should be entered.
+- When a user clicks or touches/taps a label, the browser passes the focus to its associated input (the resulting event is also raised for the input). That increased hit area for focusing the input provides an advantage to anyone trying to activate it — including those using a touch-screen device.
 
 To associate the `<label>` with an `<input>` element, you need to give the `<input>` an `id` attribute. The `<label>` then needs a `for` attribute whose value is the same as the input's `id`.
 
@@ -31,7 +32,7 @@ Alternatively, you can nest the `<input>` directly inside the `<label>`, in whic
 </label>
 ```
 
-The form control that a label is labeling is called the *labeled control* of the label element. Multiple labels can be associated with the same form control:
+The form control that a label is labeling is called the _labeled control_ of the label element. Multiple labels can be associated with the same form control:
 
 ```html
 <label for="username">Enter your username:</label>
@@ -43,14 +44,15 @@ The form control that a label is labeling is called the *labeled control* of the
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-*   {{htmlattrdef("for")}}
-    *   : The value of the `for` attribute must be a single {{htmlattrxref("id")}} for a [labelable](/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable) form-related element in the same document as the `<label>` element. So, any given `label` element can be associated with only one form control.
+- {{htmlattrdef("for")}}
 
-        The first element in the document with an `id` attribute matching the value of the `for` attribute is the *labeled control* for this `label` element — if the element with that `id` is actually a [labelable element](https://html.spec.whatwg.org/multipage/forms.html#category-label). If it is *not* a labelable element, then the `for` attribute has no effect. If there are other elements that also match the `id` value, later in the document, they are not considered.
+  - : The value of the `for` attribute must be a single {{htmlattrxref("id")}} for a [labelable](/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable) form-related element in the same document as the `<label>` element. So, any given `label` element can be associated with only one form control.
 
-        Multiple `label` elements can be given the same value for their `for` attribute; doing so causes the associated form control (the form control that `for` value references) to have multiple labels.
+    The first element in the document with an `id` attribute matching the value of the `for` attribute is the _labeled control_ for this `label` element — if the element with that `id` is actually a [labelable element](https://html.spec.whatwg.org/multipage/forms.html#category-label). If it is _not_ a labelable element, then the `for` attribute has no effect. If there are other elements that also match the `id` value, later in the document, they are not considered.
 
-        > **Note:** A `<label>` element can have both a `for` attribute and a contained control element, as long as the `for` attribute points to the contained control element.
+    Multiple `label` elements can be given the same value for their `for` attribute; doing so causes the associated form control (the form control that `for` value references) to have multiple labels.
+
+    > **Note:** A `<label>` element can have both a `for` attribute and a contained control element, as long as the `for` attribute points to the contained control element.
 
 ## Styling with CSS
 
@@ -123,7 +125,7 @@ If a [form](/en-US/docs/Web/HTML/Element/form), or a section of a form needs a t
 <label class="large-label" for="your-name">
   Your name
   <input id="your-name" name="your-name" type="text">
-</label> 
+</label>
 ```
 
 ### Buttons

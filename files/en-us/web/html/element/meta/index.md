@@ -14,6 +14,7 @@ tags:
   - metadata
 browser-compat: html.elements.meta
 ---
+
 {{HTMLRef}}
 
 The **`<meta>`** [HTML](/en-US/docs/Web/HTML) element represents {{Glossary("Metadata","metadata")}} that cannot be represented by other HTML meta-related elements, like {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} or {{HTMLElement("title")}}.
@@ -104,10 +105,10 @@ The **`<meta>`** [HTML](/en-US/docs/Web/HTML) element represents {{Glossary("Met
 
 The type of metadata provided by the `<meta>` element can be one of the following:
 
-*   If the {{htmlattrxref("name", "meta")}} attribute is set, the `<meta>` element provides *document-level metadata*, applying to the whole page.
-*   If the {{htmlattrxref("http-equiv", "meta")}} attribute is set, the `<meta>` element is a *pragma directive*, providing information equivalent to what can be given by a similarly-named HTTP header.
-*   If the {{htmlattrxref("charset", "meta")}} attribute is set, the `<meta>` element is a *charset declaration*, giving the character encoding in which the document is encoded.
-*   If the {{htmlattrxref("itemprop")}} attribute is set, the `<meta>` element provides *user-defined metadata*.
+- If the {{htmlattrxref("name", "meta")}} attribute is set, the `<meta>` element provides _document-level metadata_, applying to the whole page.
+- If the {{htmlattrxref("http-equiv", "meta")}} attribute is set, the `<meta>` element is a _pragma directive_, providing information equivalent to what can be given by a similarly-named HTTP header.
+- If the {{htmlattrxref("charset", "meta")}} attribute is set, the `<meta>` element is a _charset declaration_, giving the character encoding in which the document is encoded.
+- If the {{htmlattrxref("itemprop")}} attribute is set, the `<meta>` element provides _user-defined metadata_.
 
 ## Attributes
 
@@ -115,43 +116,50 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 > **Note:** the attribute {{htmlattrxref("name", "meta")}} has a specific meaning for the `<meta>` element, and the {{htmlattrxref("itemprop")}} attribute must not be set on the same `<meta>` element that has any existing {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} or {{htmlattrxref("charset", "meta")}} attributes.
 
-*   {{htmlattrdef("charset")}}
-    *   : This attribute declares the document's character encoding. If the attribute is present, its value must be an ASCII case-insensitive match for the string "`utf-8`", because UTF-8 is the only valid encoding for HTML5 documents. `<meta>` elements which declare a character encoding must be located entirely within the first 1024 bytes of the document.
-*   {{htmlattrdef("content")}}
-    *   : This attribute contains the value for the {{htmlattrxref("http-equiv", "meta")}} or {{htmlattrxref("name", "meta")}} attribute, depending on which is used.
-*   {{htmlattrdef("http-equiv")}}
-    *   : Defines a pragma directive. The attribute is named `http-equiv(alent)` because all the allowed values are names of particular HTTP headers:
+- {{htmlattrdef("charset")}}
+  - : This attribute declares the document's character encoding. If the attribute is present, its value must be an ASCII case-insensitive match for the string "`utf-8`", because UTF-8 is the only valid encoding for HTML5 documents. `<meta>` elements which declare a character encoding must be located entirely within the first 1024 bytes of the document.
+- {{htmlattrdef("content")}}
+  - : This attribute contains the value for the {{htmlattrxref("http-equiv", "meta")}} or {{htmlattrxref("name", "meta")}} attribute, depending on which is used.
+- {{htmlattrdef("http-equiv")}}
 
-        *   `content-security-policy`
+  - : Defines a pragma directive. The attribute is named `http-equiv(alent)` because all the allowed values are names of particular HTTP headers:
 
-            Allows page authors to define a [content policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) for the current page. Content policies mostly specify allowed server origins and script endpoints which help guard against cross-site scripting attacks.
-        *   `content-type`
+    - `content-security-policy`
 
-            Declares the [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) and character encoding of the document. If specified, the `content` attribute must have the value "`text/html; charset=utf-8`". This is equivalent to a `<meta>` element with the {{htmlattrxref("charset", "meta")}} attribute specified, and carries the same restriction on placement within the document. **Note:** Can only be used in documents served with a `text/html` — not in documents served with an XML MIME type.
-        *   `default-style`
+      Allows page authors to define a [content policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) for the current page. Content policies mostly specify allowed server origins and script endpoints which help guard against cross-site scripting attacks.
 
-            Sets the name of the default [CSS style sheet](/en-US/docs/Web/CSS) set.
-        *   `x-ua-compatible`
+    - `content-type`
 
-            If specified, the `content` attribute must have the value "`IE=edge`". User agents are required to ignore this pragma.
-        *   `refresh`This instruction specifies:
+      Declares the [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) and character encoding of the document. If specified, the `content` attribute must have the value "`text/html; charset=utf-8`". This is equivalent to a `<meta>` element with the {{htmlattrxref("charset", "meta")}} attribute specified, and carries the same restriction on placement within the document. **Note:** Can only be used in documents served with a `text/html` — not in documents served with an XML MIME type.
 
-            *   The number of seconds until the page should be reloaded - only if the {{htmlattrxref("content", "meta")}} attribute contains a positive integer.
-            *   The number of seconds until the page should redirect to another - only if the {{htmlattrxref("content", "meta")}} attribute contains a positive integer followed by the string '`;url=`', and a valid URL.
+    - `default-style`
 
-            ##### Accessibility concerns
+      Sets the name of the default [CSS style sheet](/en-US/docs/Web/CSS) set.
 
-            Pages set with a `refresh` value run the risk of having the time interval being too short. People navigating with the aid of assistive technology such as a screen reader may be unable to read through and understand the page's content before being automatically redirected. The abrupt, unannounced updating of the page content may also be disorienting for people experiencing low vision conditions.
+    - `x-ua-compatible`
 
-            *   [MDN Understanding WCAG, Guideline 2.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline\_2.2\_—\_enough_time_provide_users_enough_time_to_read_and_use_content)
-            *   [MDN Understanding WCAG, Guideline 3.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline\_3.2\_—\_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
-            *   [Understanding Success Criterion 2.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html)
-            *   [Understanding Success Criterion 2.2.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)
-            *   [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
-*   {{htmlattrdef("name")}}
-    *   : The `name` and `content` attributes can be used together to provide document metadata in terms of name-value pairs, with the `name` attribute giving the metadata name, and the `content` attribute giving the value.
+      If specified, the `content` attribute must have the value "`IE=edge`". User agents are required to ignore this pragma.
 
-        See [standard metadata names](/en-US/docs/Web/HTML/Element/meta/name) for details about the set of standard metadata names defined in the HTML specification.
+    - `refresh`This instruction specifies:
+
+      - The number of seconds until the page should be reloaded - only if the {{htmlattrxref("content", "meta")}} attribute contains a positive integer.
+      - The number of seconds until the page should redirect to another - only if the {{htmlattrxref("content", "meta")}} attribute contains a positive integer followed by the string '`;url=`', and a valid URL.
+
+      ##### Accessibility concerns
+
+      Pages set with a `refresh` value run the risk of having the time interval being too short. People navigating with the aid of assistive technology such as a screen reader may be unable to read through and understand the page's content before being automatically redirected. The abrupt, unannounced updating of the page content may also be disorienting for people experiencing low vision conditions.
+
+      - [MDN Understanding WCAG, Guideline 2.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_—_enough_time_provide_users_enough_time_to_read_and_use_content)
+      - [MDN Understanding WCAG, Guideline 3.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
+      - [Understanding Success Criterion 2.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html)
+      - [Understanding Success Criterion 2.2.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)
+      - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
+
+- {{htmlattrdef("name")}}
+
+  - : The `name` and `content` attributes can be used together to provide document metadata in terms of name-value pairs, with the `name` attribute giving the metadata name, and the `content` attribute giving the value.
+
+    See [standard metadata names](/en-US/docs/Web/HTML/Element/meta/name) for details about the set of standard metadata names defined in the HTML specification.
 
 ## Examples
 

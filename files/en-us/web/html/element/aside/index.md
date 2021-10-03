@@ -13,6 +13,7 @@ tags:
   - Web
 browser-compat: html.elements.aside
 ---
+
 {{HTMLRef}}
 
 The **`<aside>`** [HTML](/en-US/docs/Web/HTML) element represents a portion of a document whose content is only indirectly related to the document's main content. Asides are frequently presented as sidebars or call-out boxes.
@@ -93,7 +94,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## Usage notes
 
-*   Do not use the `<aside>` element to tag parenthesized text, as this kind of text is considered part of the main flow.
+- Do not use the `<aside>` element to tag parenthesized text, as this kind of text is considered part of the main flow.
 
 ## Examples
 
@@ -130,6 +131,6 @@ This example uses `<aside>` to mark up a paragraph in an article. The paragraph 
 
 ## See also
 
-*   Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
-*   [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
-*   [ARIA: Complementary role](/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role)
+- Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
+- [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
+- [ARIA: Complementary role](/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role)

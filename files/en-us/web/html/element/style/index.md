@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: html.elements.style
 ---
+
 {{HTMLRef}}
 
 The **`<style>`** [HTML](/en-US/docs/Web/HTML) element contains style information for a document, or part of a document. It contains CSS, which is applied to the contents of the document containing the `<style>` element.
@@ -27,21 +28,22 @@ In the same manner as `<link>` elements, `<style>` elements can include `media` 
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-*   {{htmlattrdef("type")}}
-    *   : This attribute defines the styling language as a MIME type (charset should not be specified). This attribute is optional and defaults to `text/css` if it is not specified; values other than the empty string or `text/css` are not used. **Note:** There is very little reason to include this attribute in modern web documents.
-*   {{htmlattrdef("media")}}
-    *   : This attribute defines which media the style should be applied to. Its value is a [media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries), which defaults to `all` if the attribute is missing.
-*   {{htmlattrdef("nonce")}}
-    *   : A cryptographic nonce (number used once) used to allow inline styles in a [style-src Content-Security-Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource’s policy is otherwise trivial.
-*   {{htmlattrdef("title")}}
-    *   : This attribute specifies [alternative style sheet](/en-US/docs/Web/CSS/Alternative_style_sheets) sets.
+- {{htmlattrdef("type")}}
+  - : This attribute defines the styling language as a MIME type (charset should not be specified). This attribute is optional and defaults to `text/css` if it is not specified; values other than the empty string or `text/css` are not used. **Note:** There is very little reason to include this attribute in modern web documents.
+- {{htmlattrdef("media")}}
+  - : This attribute defines which media the style should be applied to. Its value is a [media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries), which defaults to `all` if the attribute is missing.
+- {{htmlattrdef("nonce")}}
+  - : A cryptographic nonce (number used once) used to allow inline styles in a [style-src Content-Security-Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource’s policy is otherwise trivial.
+- {{htmlattrdef("title")}}
+  - : This attribute specifies [alternative style sheet](/en-US/docs/Web/CSS/Alternative_style_sheets) sets.
 
 ### Deprecated attributes
 
-*   {{htmlattrdef("scoped")}} {{non-standard_inline}} {{deprecated_inline}}
-    *   : This attribute specifies that the styles only apply to the elements of its parent(s) and children.
+- {{htmlattrdef("scoped")}} {{non-standard_inline}} {{deprecated_inline}}
 
-        > **Note:** This attribute may be re-introduced in the future per <https://github.com/w3c/csswg-drafts/issues/3547>. If you want to use the attribute now, you can use a [polyfill](https://github.com/samthor/scoped).
+  - : This attribute specifies that the styles only apply to the elements of its parent(s) and children.
+
+    > **Note:** This attribute may be re-introduced in the future per <https://github.com/w3c/csswg-drafts/issues/3547>. If you want to use the attribute now, you can use a [polyfill](https://github.com/samthor/scoped).
 
 ## Examples
 
@@ -197,5 +199,5 @@ In this example we build on the previous one, including a `media` attribute on t
 
 ## See also
 
-*   The {{HTMLElement("link")}} element, which allows us to apply external stylesheets to a document.
-*   [Alternative Style Sheets](/en-US/docs/Web/CSS/Alternative_style_sheets)
+- The {{HTMLElement("link")}} element, which allows us to apply external stylesheets to a document.
+- [Alternative Style Sheets](/en-US/docs/Web/CSS/Alternative_style_sheets)

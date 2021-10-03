@@ -11,6 +11,7 @@ tags:
   - polyfill
 browser-compat: html.elements.dialog
 ---
+
 {{HTMLRef}}
 
 The **`<dialog>`** [HTML](/en-US/docs/Web/HTML) element represents a dialog box or other interactive component, such as a dismissible alert, inspector, or subwindow.
@@ -78,13 +79,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 > **Warning:** The `tabindex` attribute must not be used on the `<dialog>` element.
 
-*   {{htmlattrdef("open")}}
-    *   : Indicates that the dialog is active and can be interacted with. When the `open` attribute is not set, the dialog *shouldn't* be shown to the user.
+- {{htmlattrdef("open")}}
+  - : Indicates that the dialog is active and can be interacted with. When the `open` attribute is not set, the dialog _shouldn't_ be shown to the user.
 
 ## Usage notes
 
-*   {{HTMLElement("form")}} elements can close a dialog if they have the attribute `method="dialog"`. When such a form is submitted, the dialog closes with its {{domxref("HTMLDialogElement.returnValue", "returnValue")}} property set to the `value` of the button that was used to submit the form.
-*   The {{cssxref('::backdrop')}} CSS pseudo-element can be used to style behind a `<dialog>` element when the dialog is displayed with {{domxref("HTMLDialogElement.showModal()")}}. For example, to dim unreachable content behind the modal dialog.
+- {{HTMLElement("form")}} elements can close a dialog if they have the attribute `method="dialog"`. When such a form is submitted, the dialog closes with its {{domxref("HTMLDialogElement.returnValue", "returnValue")}} property set to the `value` of the button that was used to submit the form.
+- The {{cssxref('::backdrop')}} CSS pseudo-element can be used to style behind a `<dialog>` element when the dialog is displayed with {{domxref("HTMLDialogElement.showModal()")}}. For example, to dim unreachable content behind the modal dialog.
 
 ## Examples
 
@@ -175,7 +176,7 @@ Include this polyfill to provide support for browsers without `<dialog>` element
 
 ## See also
 
-*   The {{domxref("HTMLDialogElement/close_event", "close")}} event
-*   The {{domxref("HTMLDialogElement/cancel_event", "cancel")}} event
-*   [HTML forms guide](/en-US/docs/Learn/Forms).
-*   The {{cssxref("::backdrop")}} pseudo-element
+- The {{domxref("HTMLDialogElement/close_event", "close")}} event
+- The {{domxref("HTMLDialogElement/cancel_event", "cancel")}} event
+- [HTML forms guide](/en-US/docs/Learn/Forms).
+- The {{cssxref("::backdrop")}} pseudo-element

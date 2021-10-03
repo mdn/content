@@ -17,6 +17,7 @@ tags:
   - semantics
 browser-compat: html.elements.abbr
 ---
+
 {{HTMLRef}}
 
 The **`<abbr>`** [HTML](/en-US/docs/Web/HTML) element represents an abbreviation or acronym; the optional {{htmlattrxref("title")}} attribute can provide an expansion or description for the abbreviation. If present, `title` must contain this full description and nothing else.
@@ -82,7 +83,7 @@ The **`<abbr>`** [HTML](/en-US/docs/Web/HTML) element represents an abbreviation
 
 ## Attributes
 
-This element only supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes). The {{htmlattrxref("title")}} attribute has a specific semantic meaning when used with the `<abbr>` element; it *must* contain a full human-readable description or expansion of the abbreviation. This text is often presented by browsers as a tooltip when the mouse cursor is hovered over the element.
+This element only supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes). The {{htmlattrxref("title")}} attribute has a specific semantic meaning when used with the `<abbr>` element; it _must_ contain a full human-readable description or expansion of the abbreviation. This text is often presented by browsers as a tooltip when the mouse cursor is hovered over the element.
 
 Each `<abbr>` element you use is independent from all others; providing a `title` for one does not automatically attach the same expansion text to others with the same content text.
 
@@ -92,10 +93,10 @@ Each `<abbr>` element you use is independent from all others; providing a `title
 
 It's certainly not required that all abbreviations be marked up using `<abbr>`. There are, though, a few cases where it's helpful to do so:
 
-*   When an abbreviation is used and you want to provide an expansion or definition outside the flow of the document's content, use `<abbr>` with an appropriate {{htmlattrxref("title")}}.
-*   To define an abbreviation which may be unfamiliar to the reader, present the term using `<abbr>` and either a `title` attribute or inline text providing the definition.
-*   When an abbreviation's presence in the text needs to be semantically noted, the `<abbr>` element is useful. This can be used, in turn, for styling or scripting purposes.
-*   You can use `<abbr>` in concert with {{HTMLElement("dfn")}} to establish definitions for terms which are abbreviations or acronyms. See the example {{anch("Defining an abbreviation")}} below.
+- When an abbreviation is used and you want to provide an expansion or definition outside the flow of the document's content, use `<abbr>` with an appropriate {{htmlattrxref("title")}}.
+- To define an abbreviation which may be unfamiliar to the reader, present the term using `<abbr>` and either a `title` attribute or inline text providing the definition.
+- When an abbreviation's presence in the text needs to be semantically noted, the `<abbr>` element is useful. This can be used, in turn, for styling or scripting purposes.
+- You can use `<abbr>` in concert with {{HTMLElement("dfn")}} to establish definitions for terms which are abbreviations or acronyms. See the example {{anch("Defining an abbreviation")}} below.
 
 ### Grammar considerations
 
@@ -105,9 +106,9 @@ In languages with {{interwiki("wikipedia", "grammatical number")}} (that is, lan
 
 The purpose of this element is purely for the convenience of the author and all browsers display it inline ({{cssxref('display')}}`: inline`) by default, though its default styling varies from one browser to another:
 
-*   Some browsers, like Internet Explorer, do not style it differently than a {{HTMLElement("span")}} element.
-*   Opera, Firefox, and some others add a dotted underline to the content of the element.
-*   A few browsers not only add a dotted underline, but also put it in small caps; to avoid this styling, adding something like {{cssxref('font-variant')}}`: none` in the CSS takes care of this case.
+- Some browsers, like Internet Explorer, do not style it differently than a {{HTMLElement("span")}} element.
+- Opera, Firefox, and some others add a dotted underline to the content of the element.
+- A few browsers not only add a dotted underline, but also put it in small caps; to avoid this styling, adding something like {{cssxref('font-variant')}}`: none` in the CSS takes care of this case.
 
 ## Examples
 
@@ -205,4 +206,4 @@ This is especially helpful for people who are unfamiliar with the terminology or
 
 ## See also
 
-*   [Using the `<abbr>` element](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abbreviations)
+- [Using the `<abbr>` element](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abbreviations)

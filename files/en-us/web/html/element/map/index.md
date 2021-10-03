@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: html.elements.map
 ---
+
 {{HTMLRef}}
 
 The **`<map>`** [HTML](/en-US/docs/Web/HTML) element is used with {{HTMLElement("area")}} elements to define an image map (a clickable link area).
@@ -80,8 +81,8 @@ The **`<map>`** [HTML](/en-US/docs/Web/HTML) element is used with {{HTMLElement(
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-*   {{htmlattrdef("name")}}
-    *   : The `name` attribute gives the map a name so that it can be referenced. The attribute must be present and must have a non-empty value with no space characters. The value of the `name` attribute must not be equal to the value of the `name` attribute of another `<map>` element in the same document. If the {{htmlattrxref("id")}} attribute is also specified, both attributes must have the same value.
+- {{htmlattrdef("name")}}
+  - : The `name` attribute gives the map a name so that it can be referenced. The attribute must be present and must have a non-empty value with no space characters. The value of the `name` attribute must not be equal to the value of the `name` attribute of another `<map>` element in the same document. If the {{htmlattrxref("id")}} attribute is also specified, both attributes must have the same value.
 
 ## Examples
 
@@ -101,11 +102,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 The live example above should appear similar to the following images (when using your keyboard tab key):
 
-*For the `left.html` link:*
-![](screen_shot\_2017-02-02\_at\_10.48.40\_pm.png)
+_For the `left.html` link:_
+![](screen_shot_2017-02-02_at_10.48.40_pm.png)
 
-*For the `right.html` link*
-![](screen_shot\_2017-02-02\_at\_10.49.04\_pm.png)
+_For the `right.html` link_
+![](screen_shot_2017-02-02_at_10.49.04_pm.png)
 
 ## Specifications
 
@@ -117,5 +118,5 @@ The live example above should appear similar to the following images (when using
 
 ## See also
 
-*   {{HTMLElement("a")}}
-*   {{HTMLElement("area")}}
+- {{HTMLElement("a")}}
+- {{HTMLElement("area")}}

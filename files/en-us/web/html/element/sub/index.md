@@ -16,6 +16,7 @@ tags:
   - sub
 browser-compat: html.elements.sub
 ---
+
 {{HTMLRef}}
 
 The **`<sub>`** [HTML](/en-US/docs/Web/HTML) element specifies inline text which should be displayed as subscript for solely typographical reasons. Subscripts are typically rendered with a lowered baseline using smaller text.
@@ -91,25 +92,25 @@ For example, using `<sub>` to style the name of a company which uses altered bas
 
 Appropriate use cases for `<sub>` include (but aren't necessarily limited to):
 
-*   Marking up footnote numbers. See {{anch("Footnote numbers")}} for an example.
-*   Marking up the subscript in mathematical variable numbers (although you may also consider using a [MathML](/en-US/docs/Web/MathML) formula for this). See {{anch("Variable subscripts")}}.
-*   Denoting the number of atoms of a given element within a chemical formula (such as every developer's best friend, C
+- Marking up footnote numbers. See {{anch("Footnote numbers")}} for an example.
+- Marking up the subscript in mathematical variable numbers (although you may also consider using a [MathML](/en-US/docs/Web/MathML) formula for this). See {{anch("Variable subscripts")}}.
+- Denoting the number of atoms of a given element within a chemical formula (such as every developer's best friend, C
 
-    <sub>8</sub>
+  <sub>8</sub>
 
-    H
+  H
 
-    <sub>10</sub>
+  <sub>10</sub>
 
-    N
+  N
 
-    <sub>4</sub>
+  <sub>4</sub>
 
-    O
+  O
 
-    <sub>2</sub>
+  <sub>2</sub>
 
-    , otherwise known as "caffeine"). See {{anch("Chemical formulas")}}.
+  , otherwise known as "caffeine"). See {{anch("Chemical formulas")}}.
 
 ## Examples
 
@@ -166,6 +167,6 @@ The output:
 
 ## See also
 
-*   The {{HTMLElement("sup")}} HTML element that produces superscript. Note that you cannot use them both at the same time and you need to use [MathML](/en-US/docs/Web/MathML) to produce both a superscript directly above a subscript next to the chemical symbol of an element, representing its atomic number and its nuclear number.
-*   The [`<msub>`](/en-US/docs/Web/MathML/Element/msub), [`<msup>`](/en-US/docs/Web/MathML/Element/msup), and [`<msubsup>`](/en-US/docs/Web/MathML/Element/msubsup) MathML elements.
-*   The CSS {{cssxref("vertical-align")}} property.
+- The {{HTMLElement("sup")}} HTML element that produces superscript. Note that you cannot use them both at the same time and you need to use [MathML](/en-US/docs/Web/MathML) to produce both a superscript directly above a subscript next to the chemical symbol of an element, representing its atomic number and its nuclear number.
+- The [`<msub>`](/en-US/docs/Web/MathML/Element/msub), [`<msup>`](/en-US/docs/Web/MathML/Element/msup), and [`<msubsup>`](/en-US/docs/Web/MathML/Element/msubsup) MathML elements.
+- The CSS {{cssxref("vertical-align")}} property.

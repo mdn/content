@@ -7,32 +7,33 @@ tags:
   - Reference
 browser-compat: html.global_attributes.lang
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
-The **`lang`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) helps define the language of an element: the language that non-editable elements are written in, or the language that the editable elements should be written in by the user. The attribute contains a single “language tag” in the format defined in [*Tags for Identifying Languages (BCP47)*](https://www.ietf.org/rfc/bcp/bcp47.txt).
+The **`lang`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) helps define the language of an element: the language that non-editable elements are written in, or the language that the editable elements should be written in by the user. The attribute contains a single “language tag” in the format defined in [_Tags for Identifying Languages (BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt).
 
 > **Note:** The default value of `lang` is `unknown`, therefore it is recommended to always specify this attribute with the appropriate value.
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-lang.html","tabbed-shorter")}}
 
-If the attribute value is the *empty string* (`lang=""`), the language is set to *unknown*; if the language tag is not valid according to BCP47, it is set to *invalid*.
+If the attribute value is the _empty string_ (`lang=""`), the language is set to _unknown_; if the language tag is not valid according to BCP47, it is set to _invalid_.
 
 Even if the **lang** attribute is set, it may not be taken into account, as the [**xml:lang**](/en-US/docs/Web/HTML/Global_attributes#attr-xml:lang) attribute has priority.
 
-For the CSS pseudo-class {{cssxref(":lang")}}, two invalid language names are different if their names are different. So while `:lang(es)` matches both `lang="es-ES"` and `lang="es-419"`, `:lang(xyzzy)` would *not* match `lang="xyzzy-Zorp!"`.
+For the CSS pseudo-class {{cssxref(":lang")}}, two invalid language names are different if their names are different. So while `:lang(es)` matches both `lang="es-ES"` and `lang="es-419"`, `:lang(xyzzy)` would _not_ match `lang="xyzzy-Zorp!"`.
 
 ## Language tag syntax
 
 The full BCP47 syntax is in-depth enough to mark extremely specific language dialects, but most usage is much simpler.
 
-A language tag is made of hyphen-separated *language subtags*, where each subtag indicates a certain property of the language. The 3 most common subtags are:
+A language tag is made of hyphen-separated _language subtags_, where each subtag indicates a certain property of the language. The 3 most common subtags are:
 
-*   Language subtag
-    *   : Required. A 2-or-3-character code that defines the basic language, typically written in all lowercase. For example, the language code for English is `en`, and the code for Badeshi is `bdz`.
-*   Script subtag
-    *   : Optional. This subtag defines the writing system used for the language, and is always 4 characters long, with the first letter capitalized. For example, French-in-Braille is `fr-Brai` and `ja-Kana` is Japanese written with the Katakana alphabet. If the language is written in a highly typical way, like English in the Latin alphabet, there is no need to use this subtag.
-*   Region subtag
-    *   : Optional. This subtag defines a dialect of the base language from a particular location, and is either 2 letters in ALLCAPS matching a country code, or 3 numbers matching a non-country area. For example, `es-ES` is for Spanish as spoken in Spain, and `es-013` is Spanish as spoken in Central America. “International Spanish” would just be `es`.
+- Language subtag
+  - : Required. A 2-or-3-character code that defines the basic language, typically written in all lowercase. For example, the language code for English is `en`, and the code for Badeshi is `bdz`.
+- Script subtag
+  - : Optional. This subtag defines the writing system used for the language, and is always 4 characters long, with the first letter capitalized. For example, French-in-Braille is `fr-Brai` and `ja-Kana` is Japanese written with the Katakana alphabet. If the language is written in a highly typical way, like English in the Latin alphabet, there is no need to use this subtag.
+- Region subtag
+  - : Optional. This subtag defines a dialect of the base language from a particular location, and is either 2 letters in ALLCAPS matching a country code, or 3 numbers matching a non-country area. For example, `es-ES` is for Spanish as spoken in Spain, and `es-013` is Spanish as spoken in Central America. “International Spanish” would just be `es`.
 
 The script subtag precedes the region subtag if both are present — `ru-Cyrl-BY` is Russian, written in the Cyrillic alphabet, as spoken in Belarus.
 
@@ -121,6 +122,6 @@ For example, the language menu on this site (MDN) includes a **`lang`** attribu
 
 ## See also
 
-*   All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-*   [`Content-Language` HTTP Header](/en-US/docs/Web/HTTP/Headers/Content-Language)
-*   HTML {{htmlattrxref("translate")}} attribute
+- All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+- [`Content-Language` HTTP Header](/en-US/docs/Web/HTTP/Headers/Content-Language)
+- HTML {{htmlattrxref("translate")}} attribute

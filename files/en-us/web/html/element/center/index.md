@@ -13,6 +13,7 @@ tags:
   - center
 browser-compat: html.elements.center
 ---
+
 {{deprecated_header}}
 
 The **`<center>`** [HTML](/en-US/docs/Web/HTML) element is a [block-level element](/en-US/docs/Web/HTML/Block-level_elements) that displays its block-level or inline contents centered horizontally within its containing element. The container is usually, but isn't required to be, {{HTMLElement("body")}}.
@@ -46,7 +47,7 @@ And so will this line.</p>
 
 ## Note
 
-Applying {{Cssxref("text-align")}}`:center` to a {{HTMLElement("div")}} or {{HTMLElement("p")}} element centers the *contents* of those elements while leaving their overall dimensions unchanged.
+Applying {{Cssxref("text-align")}}`:center` to a {{HTMLElement("div")}} or {{HTMLElement("p")}} element centers the _contents_ of those elements while leaving their overall dimensions unchanged.
 
 ## Specifications
 
@@ -58,7 +59,7 @@ Applying {{Cssxref("text-align")}}`:center` to a {{HTMLElement("div")}} or {{HT
 
 ## See also
 
-*   {{Cssxref("text-align")}}
-*   {{Cssxref("display")}}
+- {{Cssxref("text-align")}}
+- {{Cssxref("display")}}
 
 {{HTMLRef}}

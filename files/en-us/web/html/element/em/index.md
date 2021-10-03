@@ -9,6 +9,7 @@ tags:
   - Web
 browser-compat: html.elements.em
 ---
+
 {{HTMLRef}}
 
 The **`<em>`** [HTML](/en-US/docs/Web/HTML) element marks text that has stress emphasis. The `<em>` element can be nested, with each level of nesting indicating a greater degree of emphasis.
@@ -94,9 +95,9 @@ By default, the visual result is the same. However, the semantic meaning is diff
 
 This means the right one to use depends on the situation. Neither is for purely decorative purposes, that's what CSS styling is for.
 
-An example for `<em>` could be: "Just *do* it already!", or: "We *had* to do something about it". A person or software reading the text would pronounce the words in italics with an emphasis, using verbal stress.
+An example for `<em>` could be: "Just _do_ it already!", or: "We _had_ to do something about it". A person or software reading the text would pronounce the words in italics with an emphasis, using verbal stress.
 
-An example for `<i>` could be: "The *Queen Mary* sailed last night". Here, there is no added emphasis or importance on the word "Queen Mary". It is merely indicated that the object in question is not a queen named Mary, but a ship named *Queen Mary*. Another example for `<i>` could be: "The word *the* is an article".
+An example for `<i>` could be: "The _Queen Mary_ sailed last night". Here, there is no added emphasis or importance on the word "Queen Mary". It is merely indicated that the object in question is not a queen named Mary, but a ship named _Queen Mary_. Another example for `<i>` could be: "The word _the_ is an article".
 
 ## Example
 
@@ -124,4 +125,4 @@ The `<em>` element is often used to indicate an implicit or explicit contrast.
 
 ## See also
 
-*   {{HTMLElement("i")}}
+- {{HTMLElement("i")}}

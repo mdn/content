@@ -10,6 +10,7 @@ tags:
   - Reference
   - Security
 ---
+
 {{HTMLSidebar}}{{draft}}
 
 The crossorigin attribute, valid on the {{ HTMLElement("audio") }}, {{ HTMLElement("img") }}, {{ HTMLElement("link") }}, {{ HTMLElement("script") }}, and {{ HTMLElement("video") }} elements, provides support for [CORS](/en-US/docs/Web/HTTP/CORS), defining how the element handles crossorigin requests, thereby enabling the configuration of the CORS requests for the element's fetched data. Depending on the element, the attribute can be a CORS settings attribute.
@@ -115,7 +116,7 @@ The `use-credentials` value must be used when fetching a [manifest](/en-US/docs/
 
 ## See also
 
-*   [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
-*   [HTML attribute: `rel`](/en-US/docs/Web/HTML/Attributes/rel)
+- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTML attribute: `rel`](/en-US/docs/Web/HTML/Attributes/rel)
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/HTML/")}}

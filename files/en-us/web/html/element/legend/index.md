@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: html.elements.legend
 ---
+
 {{HTMLRef}}
 
 The **`<legend>`** [HTML](/en-US/docs/Web/HTML) element represents a caption for the content of its parent {{HTMLElement("fieldset")}}.
@@ -85,4 +86,4 @@ See {{HTMLElement("form")}} for examples on `<legend>`.
 
 ## See also
 
-*   [ARIA: Form role](/en-US/docs/Web/Accessibility/ARIA/Roles/Form_Role)
+- [ARIA: Form role](/en-US/docs/Web/Accessibility/ARIA/Roles/Form_Role)

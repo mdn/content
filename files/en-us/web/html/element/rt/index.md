@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: html.elements.rt
 ---
+
 {{HTMLRef}}
 
 The **`<rt>`** [HTML](/en-US/docs/Web/HTML) element specifies the ruby text component of a ruby annotation, which is used to provide pronunciation, translation, or transliteration information for East Asian typography. The `<rt>` element must always be contained within a {{HTMLElement("ruby")}} element.
@@ -106,8 +107,8 @@ The output looks like this in your browser:
 
 ## See also
 
-*   {{HTMLElement("ruby")}}
-*   {{HTMLElement("rp")}}
-*   {{HTMLElement("rb")}}
-*   {{HTMLElement("rtc")}}
-*   {{CSSXRef("text-transform", "text-transform: full-size-kana")}}
+- {{HTMLElement("ruby")}}
+- {{HTMLElement("rp")}}
+- {{HTMLElement("rb")}}
+- {{HTMLElement("rtc")}}
+- {{CSSXRef("text-transform", "text-transform: full-size-kana")}}

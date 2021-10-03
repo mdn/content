@@ -17,9 +17,10 @@ tags:
   - Weeks
 browser-compat: html.elements.input.input-week
 ---
+
 {{HTMLRef("Input_types")}}
 
-{{HTMLElement("input")}} elements of type **`week`** create input fields allowing easy entry of a year plus the [ISO 8601 week number](https://en.wikipedia.org/wiki/ISO\_8601#Week_dates) during that year (i.e., week 1 to [52 or 53](https://en.wikipedia.org/wiki/ISO\_8601#Week_dates)).
+{{HTMLElement("input")}} elements of type **`week`** create input fields allowing easy entry of a year plus the [ISO 8601 week number](https://en.wikipedia.org/wiki/ISO_8601#Week_dates) during that year (i.e., week 1 to [52 or 53](https://en.wikipedia.org/wiki/ISO_8601#Week_dates)).
 
 {{EmbedInteractiveExample("pages/tabbed/input-week.html", "tabbed-shorter")}}
 
@@ -130,7 +131,7 @@ A string value of `any` means that no stepping is implied, and any value is allo
 
 For `week` inputs, the value of `step` is given in weeks, with a scaling factor of 604,800,000 (since the underlying numeric value is in milliseconds). The default value of `step` is 1, indicating 1week. The default stepping base is -259,200,000, which is the beginning of the first week of 1970 (`"1970-W01"`).
 
-*At this time, it's unclear what a value of `"any"` means for `step` when used with `week` inputs. This will be updated as soon as that information is determined.*
+_At this time, it's unclear what a value of `"any"` means for `step` when used with `week` inputs. This will be updated as soon as that information is determined._
 
 ## Using week inputs
 
@@ -237,7 +238,7 @@ Here's'a screenshot for those of you who aren't using a supporting browser:
 
 ![](week-validation-chrome.png)
 
-> **Warning:** HTML form validation is *not* a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, of the wrong type, and so forth).
+> **Warning:** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, of the wrong type, and so forth).
 
 ## Handling browser support
 
@@ -251,10 +252,10 @@ Non-supporting browsers gracefully degrade to a text input, but this creates pro
 
 The second problem is the more serious. As mentioned earlier, with a `week` input the actual value is always normalized to the format `yyyy-Www`. When the browser falls back to a generic text input, there's nothing to guide the user toward correctly formatting the input (and it's certainly not intuitive). There are multiple ways in which people could write week values; for example:
 
-*   `Week 1 2017`
-*   `Jan 2-8 2017`
-*   `2017-W01`
-*   etc.
+- `Week 1 2017`
+- `Jan 2-8 2017`
+- `2017-W01`
+- etc.
 
 The best way to deal with week/years in forms in a cross-browser way at the moment is to get the user to enter the week number and year in separate controls ({{htmlelement("select")}} elements being popular; see below for an example), or use JavaScript libraries such as [jQuery date picker](https://jqueryui.com/datepicker/).
 
@@ -380,7 +381,7 @@ function populateWeeks() {
 
 ## See also
 
-*   The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
-*   [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
-*   [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date), [`<input type="time">`](/en-US/docs/Web/HTML/Element/input/time), and [`<input type="month">`](/en-US/docs/Web/HTML/Element/input/month)
-*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
+- [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
+- [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date), [`<input type="time">`](/en-US/docs/Web/HTML/Element/input/time), and [`<input type="month">`](/en-US/docs/Web/HTML/Element/input/month)
+- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

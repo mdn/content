@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: html.elements.li
 ---
+
 {{HTMLRef}}
 
 The **`<li>`** [HTML](/en-US/docs/Web/HTML) element is used to represent an item in a list. It must be contained in a parent element: an ordered list ({{HTMLElement("ol")}}), an unordered list ({{HTMLElement("ul")}}), or a menu ({{HTMLElement("menu")}}). In menus and unordered lists, list items are usually displayed using bullet points. In ordered lists, they are usually displayed with an ascending counter on the left, such as a number or letter.
@@ -84,20 +85,21 @@ The **`<li>`** [HTML](/en-US/docs/Web/HTML) element is used to represent an item
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-*   {{htmlattrdef("value")}}
-    *   : This integer attribute indicates the current ordinal value of the list item as defined by the {{HTMLElement("ol")}} element. The only allowed value for this attribute is a number, even if the list is displayed with Roman numerals or letters. List items that follow this one continue numbering from the value set. The **value** attribute has no meaning for unordered lists ({{HTMLElement("ul")}}) or for menus ({{HTMLElement("menu")}}).
-*   {{htmlattrdef("type")}} {{Deprecated_inline}}
-    *   : This character attribute indicates the numbering type:
+- {{htmlattrdef("value")}}
+  - : This integer attribute indicates the current ordinal value of the list item as defined by the {{HTMLElement("ol")}} element. The only allowed value for this attribute is a number, even if the list is displayed with Roman numerals or letters. List items that follow this one continue numbering from the value set. The **value** attribute has no meaning for unordered lists ({{HTMLElement("ul")}}) or for menus ({{HTMLElement("menu")}}).
+- {{htmlattrdef("type")}} {{Deprecated_inline}}
 
-        *   `a`: lowercase letters
-        *   `A`: uppercase letters
-        *   `i`: lowercase Roman numerals
-        *   `I`: uppercase Roman numerals
-        *   `1`: numbers
+  - : This character attribute indicates the numbering type:
 
-        This type overrides the one used by its parent {{HTMLElement("ol")}} element, if any.
+    - `a`: lowercase letters
+    - `A`: uppercase letters
+    - `i`: lowercase Roman numerals
+    - `I`: uppercase Roman numerals
+    - `1`: numbers
 
-        > **Note:** This attribute has been deprecated; use the CSS {{cssxref("list-style-type")}} property instead.
+    This type overrides the one used by its parent {{HTMLElement("ol")}} element, if any.
+
+    > **Note:** This attribute has been deprecated; use the CSS {{cssxref("list-style-type")}} property instead.
 
 ## Examples
 
@@ -149,9 +151,9 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
 
 ## See also
 
-*   Other list-related HTML Elements: {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, {{HTMLElement("menu")}}, and the obsolete {{HTMLElement("dir")}};
-*   CSS properties that may be specially useful to style the `<li>` element:
+- Other list-related HTML Elements: {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, {{HTMLElement("menu")}}, and the obsolete {{HTMLElement("dir")}};
+- CSS properties that may be specially useful to style the `<li>` element:
 
-    *   the {{cssxref("list-style")}} property, to choose the way the ordinal is displayed,
-    *   [CSS counters](/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters), to handle complex nested lists,
-    *   the {{cssxref("margin")}} property, to control the indent of the list item.
+  - the {{cssxref("list-style")}} property, to choose the way the ordinal is displayed,
+  - [CSS counters](/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters), to handle complex nested lists,
+  - the {{cssxref("margin")}} property, to control the indent of the list item.

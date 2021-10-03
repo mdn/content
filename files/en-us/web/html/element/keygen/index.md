@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: html.elements.keygen
 ---
+
 {{HTMLRef}}{{deprecated_header}}
 
 The **`<keygen>`** [HTML](/en-US/docs/Web/HTML) element exists to facilitate generation of key material, and submission of the public key as part of an [HTML form](/en-US/docs/Learn/Forms). This mechanism is designed for use with Web-based certificate management systems. It is expected that the `<keygen>` element will be used in an HTML form along with other information needed to construct a certificate request, and that the result of the process will be a signed certificate.
@@ -80,18 +81,18 @@ The **`<keygen>`** [HTML](/en-US/docs/Web/HTML) element exists to facilitate gen
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-*   {{HTMLAttrDef("autofocus")}}
-    *   : This Boolean attribute lets you specify that the control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form element in a document can have the `autofocus` attribute, which is a Boolean.
-*   {{HTMLAttrDef("challenge")}}
-    *   : A challenge string that is submitted along with the public key. Defaults to an empty string if not specified.
-*   {{HTMLAttrDef("disabled")}}
-    *   : This Boolean attribute indicates that the form control is not available for interaction.
-*   {{HTMLAttrDef("form")}}
-    *   : The form element that this element is associated with (its *form owner*). The value of the attribute must be an `id` of a {{HTMLElement("form")}} element in the same document. If this attribute is not specified, this element must be a descendant of a {{HTMLElement("form")}} element. This attribute enables you to place ` <keygen>  `elements anywhere within a document, not just as descendants of their form elements.
-*   {{HTMLAttrDef("keytype")}}
-    *   : The type of key generated. The default value is `RSA`.
-*   {{HTMLAttrDef("name")}}
-    *   : The name of the control, which is submitted with the form data.
+- {{HTMLAttrDef("autofocus")}}
+  - : This Boolean attribute lets you specify that the control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form element in a document can have the `autofocus` attribute, which is a Boolean.
+- {{HTMLAttrDef("challenge")}}
+  - : A challenge string that is submitted along with the public key. Defaults to an empty string if not specified.
+- {{HTMLAttrDef("disabled")}}
+  - : This Boolean attribute indicates that the form control is not available for interaction.
+- {{HTMLAttrDef("form")}}
+  - : The form element that this element is associated with (its _form owner_). The value of the attribute must be an `id` of a {{HTMLElement("form")}} element in the same document. If this attribute is not specified, this element must be a descendant of a {{HTMLElement("form")}} element. This attribute enables you to place `<keygen> `elements anywhere within a document, not just as descendants of their form elements.
+- {{HTMLAttrDef("keytype")}}
+  - : The type of key generated. The default value is `RSA`.
+- {{HTMLAttrDef("name")}}
+  - : The name of the control, which is submitted with the form data.
 
 The element is written as follows:
 
@@ -122,7 +123,7 @@ When the submit button is pressed, a key pair of the selected size is generated.
         signature BIT STRING
     }
 
-The public key and challenge string are DER encoded as `PublicKeyAndChallenge`, and then digitally signed with the private key to produce a `SignedPublicKeyAndChallenge`. The `SignedPublicKeyAndChallenge` is {{Glossary("Base64")}} encoded, and the ASCII data is finally submitted to the server as the value of a form name/value pair, where the name is *name* as specified by the `name` attribute of the `keygen` element. If no challenge string is provided, then it will be encoded as an `IA5STRING` of length zero.
+The public key and challenge string are DER encoded as `PublicKeyAndChallenge`, and then digitally signed with the private key to produce a `SignedPublicKeyAndChallenge`. The `SignedPublicKeyAndChallenge` is {{Glossary("Base64")}} encoded, and the ASCII data is finally submitted to the server as the value of a form name/value pair, where the name is _name_ as specified by the `name` attribute of the `keygen` element. If no challenge string is provided, then it will be encoded as an `IA5STRING` of length zero.
 
 Here is an example form submission as it would be delivered to a CGI program by the HTTP server:
 

@@ -14,6 +14,7 @@ tags:
   - embed
 browser-compat: html.elements.embed
 ---
+
 {{HTMLRef}}
 
 The **`<embed>`** [HTML](/en-US/docs/Web/HTML) element embeds external content at the specified point in the document. This content is provided by an external application or other source of interactive content such as a browser plug-in.
@@ -83,14 +84,14 @@ Keep in mind that most modern browsers have deprecated and removed support for b
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-*   {{htmlattrdef("height")}}
-    *   : The displayed height of the resource, in [CSS pixels](https://drafts.csswg.org/css-values/#px). This must be an absolute value; percentages are *not* allowed.
-*   {{htmlattrdef("src")}}
-    *   : The URL of the resource being embedded.
-*   {{htmlattrdef("type")}}
-    *   : The {{glossary("MIME type")}} to use to select the plug-in to instantiate.
-*   {{htmlattrdef("width")}}
-    *   : The displayed width of the resource, in [CSS pixels](https://drafts.csswg.org/css-values/#px). This must be an absolute value; percentages are *not* allowed.
+- {{htmlattrdef("height")}}
+  - : The displayed height of the resource, in [CSS pixels](https://drafts.csswg.org/css-values/#px). This must be an absolute value; percentages are _not_ allowed.
+- {{htmlattrdef("src")}}
+  - : The URL of the resource being embedded.
+- {{htmlattrdef("type")}}
+  - : The {{glossary("MIME type")}} to use to select the plug-in to instantiate.
+- {{htmlattrdef("width")}}
+  - : The displayed width of the resource, in [CSS pixels](https://drafts.csswg.org/css-values/#px). This must be an absolute value; percentages are _not_ allowed.
 
 ## Usage notes
 
@@ -116,5 +117,5 @@ Use the [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on an 
 
 ## See also
 
-*   Other elements that are used for embedding content of various types include {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{SVGElement("svg")}}, and {{HTMLElement("video")}}.
-*   Positioning and sizing the embedded content within its frame: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
+- Other elements that are used for embedding content of various types include {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{SVGElement("svg")}}, and {{HTMLElement("video")}}.
+- Positioning and sizing the embedded content within its frame: {{cssxref("object-position")}} and {{cssxref("object-fit")}}

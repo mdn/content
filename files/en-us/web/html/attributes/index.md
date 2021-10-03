@@ -13,6 +13,7 @@ tags:
   - Settings
   - Web
 ---
+
 {{HTMLSidebar}}
 
 Elements in HTML have **attributes**; these are additional values that configure the elements or adjust their behavior in various ways to meet the criteria the users want.
@@ -1517,4 +1518,4 @@ To be clear, the values "`true`" and "`false`" are not allowed on boolean attrib
 
 ## See also
 
-*   [HTML elements](/en-US/docs/Web/HTML/Element)
+- [HTML elements](/en-US/docs/Web/HTML/Element)

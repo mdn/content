@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: html.global_attributes.enterkeyhint
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 The **`enterkeyhint`** [global attribute](/en-US/docs/Web/HTML/Global_attributes)
@@ -103,9 +104,9 @@ The `enterkeyhint` attribute is an enumerated attribute and only accepts the fol
 
 ## See also
 
-*   [`HTMLElement.enterkeyhint`](/en-US/docs/Web/API/HTMLElement/enterkeyhint) property reflecting this attribute
-*   [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) global attribute
-*   [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute
-*   [`type`](/en-US/docs/Web/HTML/Element/input#input_types) and
-    [`pattern`](/en-US/docs/Web/HTML/Element/input#htmlattrdefpattern) attributes on
-    [`<input>`](/en-US/docs/Web/HTML/Element/input) elements
+- [`HTMLElement.enterkeyhint`](/en-US/docs/Web/API/HTMLElement/enterkeyhint) property reflecting this attribute
+- [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) global attribute
+- [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute
+- [`type`](/en-US/docs/Web/HTML/Element/input#input_types) and
+  [`pattern`](/en-US/docs/Web/HTML/Element/input#htmlattrdefpattern) attributes on
+  [`<input>`](/en-US/docs/Web/HTML/Element/input) elements
