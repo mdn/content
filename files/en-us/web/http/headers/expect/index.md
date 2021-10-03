@@ -10,7 +10,7 @@ browser-compat: http.headers.Expect
 ---
 {{HTTPSidebar}}
 
-The **`Expect`** HTTP request header indicates the expectations
+The **`Expect`** HTTP request header indicates expectations
 that need to be met by the server to handle the request successfully.
 
 Upon `Expect: 100-continue` expectation the server responds with:
