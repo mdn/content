@@ -123,7 +123,7 @@ Content-Type: text/html
 
 <!DOCTYPE html... (here comes the 29769 bytes of the requested web page)
 
-4. Close or reuse the connection for further requests.
+4. Close or reuse the connection for further requests.xxxxxxx
 
 If HTTP pipelining is activated, several requests can be sent without waiting for the first response to be fully received. HTTP pipelining has proven difficult to implement in existing networks, where old pieces of software coexist with modern versions. HTTP pipelining has been superseded in HTTP/2 with more robust multiplexing requests within a frame.
 
