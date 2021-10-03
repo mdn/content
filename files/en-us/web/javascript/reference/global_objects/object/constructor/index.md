@@ -185,16 +185,16 @@ Child.prototype.getOffsetByInitialPosition = function getOffsetByInitialPosition
 };
 ```
 
-For this example we need either to keep Parent as the constructor to continue to work properly or reassign static properties to Child's constructor:
+For this example to work properly we need either to keep `Parent` as the constructor or reassign static properties to `Child`'s constructor:
 
 ```js
 ...
-Child = Object.assign(Child, ParentWithStatic) // Notice that we assign it before we create(...) a prototype below
-Child.prototype = Object.create(ParentWithStatic.prototype)
+Child = Object.assign(Child, ParentWithStatic); // Notice that we assign it before we create(...) a prototype below
+Child.prototype = Object.create(ParentWithStatic.prototype);
 ...
 ```
 
-or assign Parent's constructor identifier to a separate property on the Child constructor function and access it via that property:
+or assign `Parent`'s constructor identifier to a separate property on the `Child` constructor function and access it via that property:
 
 ```js
 ...
