@@ -13,12 +13,13 @@ browser-compat: http.headers.Expect
 The **`Expect`** HTTP request header indicates expectations
 that need to be met by the server to handle the request successfully.
 
-Upon `Expect: 100-continue` expectation the server responds with:
+Upon `Expect: 100-continue`, the server responds with:
 
 - {{HTTPStatus("100")}} (Continue) if the information from the request header is sufficient to
-  cause immediate success,
-- {{HTTPStatus("417")}} (Expectation Failed) if the server cannot meet the expectation; or any
-  other 4xx status otherwise.
+  cause immediate success
+- {{HTTPStatus("417")}} (Expectation Failed) if the server cannot meet the expectation
+
+or any other 4xx status otherwise.
 
 For example, the server may reject a request if its {{HTTPHeader("Content-Length")}} is
 too large.
