@@ -13,20 +13,22 @@ browser-compat: http.headers.WWW-Authenticate
 ---
 {{HTTPSidebar}}
 
-The HTTP **`WWW-Authenticate`** response header defines the [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) methods ("challenges") that might be used to gain access to a specific resource.
+The HTTP **`WWW-Authenticate`** response header defines the [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) methods that should be used to gain access to a resource. Response can contain one or more such headers with different authentication [schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes) and {{Glossary("challenge", "challenges")}}.
 
-> **Note:** This header is part of the [General HTTP authentication framework](/en-US/docs/Web/HTTP/Authentication#the_general_http_authentication_framework), which can be used with a number of [authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
-> Each "challenge" lists a scheme supported by the server and additional parameters that are defined for that scheme type. 
-
-A server using [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) will respond with a {{HTTPStatus("401")}} `Unauthorized` response to a request for a protected resource.
-This response must include at least one `WWW-Authenticate` header and at least one {{Glossary("challenge")}}, to indicate what authentication schemes can be used to access the resource (and any additional data that each particular scheme needs).
+> **Note:** This header is a part of the [General HTTP authentication framework](/en-US/docs/Web/HTTP/Authentication#the_general_http_authentication_framework).
 
 Multiple challenges are allowed in one `WWW-Authenticate` header, and multiple `WWW-Authenticate` headers are allowed in one response.
 A server may also include the `WWW-Authenticate` header in other response messages to indicate that supplying credentials might affect the response.
 
 After receiving the `WWW-Authenticate` header, a client will typically prompt the user for credentials, and then re-request the resource.
-This new request uses the {{HTTPHeader("Authorization")}} header to supply the credentials to the server, encoded appropriately for the selected "challenge" authentication method.
-The client is expected to select the most secure of the challenges it understands (note that in some cases the "most secure" method is debatable).
+This new request uses the {{HTTPHeader("Authorization")}} header to supply the credentials to the server, encoded appropriately for the selected challenge (authentication method).
+The client is expected to select the most secure of the challenges it understands. Note that in some cases the "most secure" method is debatable.
+
+When you attempt to request a protected resource, its' HTTP-server will respond with a {{HTTPStatus("401")}} `Unauthorized`.
+This response must include:
+- at least one `WWW-Authenticate` header,
+- at least one challenge to indicate what authentication schemes can be used to access the resource,
+- any additional data that each particular scheme needs.
 
 <table class="properties">
   <tbody>
@@ -44,9 +46,10 @@ The client is expected to select the most secure of the challenges it understand
 ## Syntax
 
 At least one challenge must be specified.
-Multiple challenges may be specified, comma-separated, in a single header, or in individual headers:
+Specify multiple challenges as comma-separated list in a single header, or in multiple headers as well:
+
 ```http
-// Challenges specified in single header
+// Challenges specified in a single header
 WWW-Authenticate: challenge1, ..., challengeN
 
 // Challenges specified in multiple headers
@@ -55,8 +58,7 @@ WWW-Authenticate: challenge1
 WWW-Authenticate: challengeN
 ```
 
-A single challenge has the following format. Note that the scheme token (`<auth-scheme>`) is mandatory.
-The presence of `realm`, `token68` and any other parameters depends on the definition of the selected scheme.
+A single challenge has the following format:
 
 ```http
 // Possible challenge formats (scheme dependent)
@@ -70,7 +72,10 @@ WWW-Authenticate: <auth-scheme> realm=<realm> auth-param1=auth-param1-token, ...
 WWW-Authenticate: <auth-scheme> token68 auth-param1=auth-param1-token, ..., auth-paramN=auth-paramN-token
 ```
 
-For example, [Basic authentication](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme) allows for optional `realm` and `charset` keys, but does not support `token68`.
+Note that the scheme token (`<auth-scheme>`) is mandatory.
+The presence of `realm`, `token68` and any other parameters depends on the definition of the selected scheme.
+
+For example, [Basic authentication](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme) allows for optional `realm` and `charset` keys, but does not support `token68`:
 
 ```http
 WWW-Authenticate: Basic
