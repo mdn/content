@@ -41,13 +41,13 @@ cURL do so by default.
 
 ## Syntax
 
-There is one expectation specified: "100-continue" only.
-
 ```
 Expect: 100-continue
 ```
 
 ## Directives
+
+There is only one defined expectation:
 
 - `100-continue`
   - : Informs recipients that the client is about to send a (presumably large) message
