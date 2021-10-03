@@ -114,7 +114,7 @@ Network client hints allow a server to choose what information is sent based on 
 - {{HTTPHeader("If-Match")}}
   - : Makes the request conditional, and applies the method only if the stored resource matches one of the given ETags.
 - {{HTTPHeader("If-None-Match")}}
-  - : Makes the request conditional, and applies the method only if the stored resource _doesn't_ match any of the given ETags. This is used to update caches (for safe requests), or to prevent to upload a new resource when one already exists.
+  - : Makes the request conditional, and applies the method only if the stored resource _doesn't_ match any of the given ETags. This is used to update caches (for safe requests), or to prevent uploading a new resource when one already exists.
 - {{HTTPHeader("If-Modified-Since")}}
   - : Makes the request conditional, and expects the resource to be transmitted only if it has been modified after the given date. This is used to transmit data only when the cache is out of date.
 - {{HTTPHeader("If-Unmodified-Since")}}
@@ -225,10 +225,10 @@ _Learn more about CORS [here](CORS)._
   - : Contains an Internet email address for a human user who controls the requesting user agent.
 - {{HTTPHeader("Host")}}
   - : Specifies the domain name of the server (for virtual hosting), and (optionally) the TCP port number on which the server is listening.
-- {{HTTPHeader("Referer")}}
+- {{HTTPHeader("Referrer")}}
   - : The address of the previous web page from which a link to the currently requested page was followed.
 - {{HTTPHeader("Referrer-Policy")}}
-  - : Governs which referrer information sent in the {{HTTPHeader("Referer")}} header should be included with requests made.
+  - : Governs which referrer information sent in the {{HTTPHeader("Referrer")}} header should be included with requests made.
 - {{HTTPHeader("User-Agent")}}
   - : Contains a characteristic string that allows the network protocol peers to identify the application type, operating system, software vendor or software version of the requesting software user agent. See also the [Firefox user agent string reference](/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox).
 
