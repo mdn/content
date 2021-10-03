@@ -25,7 +25,9 @@ insert new elements (adding a link), or affect an entire line (indenting). When 
 `contentEditable`, `execCommand()` affects the currently active
 editable element.
 
-> **Note:** This method is obsolete and should not be used. In particular, to interact with the clipboard, consider using the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) instead.
+> **Note:** This method is mostly obsolete and should not be used. In particular, to interact with the clipboard, consider using the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) instead.
+>
+> Also note that the Clipboard API doesn't replace `insertText` command. You can and should use it for programtially replacing text at cursor. This preserves undo buffer (edit history) in plain textarea and inputs.
 
 ## Syntax
 
@@ -221,7 +223,39 @@ disabled.
 ## Example
 
 An example of [how to use
-it](https://codepen.io/chrisdavidmills/full/gzYjag/) on CodePen.
+execCommand with contentEditable elements](https://codepen.io/chrisdavidmills/full/gzYjag/) on CodePen.
+
+An example on how to insert text with both plain textarea and contentEditable elements:
+```js
+//
+// Inserts text at cursor
+// (or replaces selected text).
+function insertText(newText, textarea)
+{
+    if (typeof textarea === 'string') {
+        textarea = document.querySelector(textarea);
+    }
+    textarea.focus();
+    
+    // attempting to paste to preserver undo functionality
+    var pasted = true;
+    try {
+        if (!document.execCommand("insertText", false, newText)) {
+            pasted = false;
+        }
+    } catch (e) {
+        console.error('error caught:', e);
+        pasted = false;
+    }
+    // fallback?
+    if (!pasted) {
+        console.error('paste unsuccessful, execCommand not supported');
+    }
+}
+
+// insert bold tag in some editing filed.
+insertText('<b></b>', '#someEditorTextarea');
+```
 
 ## Specifications
 
