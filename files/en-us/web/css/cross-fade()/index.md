@@ -141,5 +141,5 @@ Browsers do not provide any special information on background images to assistiv
 - {{cssxref("_image", "image()")}}
 - {{cssxref("image-set")}}
 - {{cssxref("element")}}
-- [Using CSS gradients](/en-US/docs/CSS/Using_CSS_gradients "Using gradients")
+- [Using CSS gradients](/en-US/docs/Web/CSS/Using_CSS_gradients "Using gradients")
 - Gradient functions: {{cssxref("linear-gradient", "linear-gradient()")}}, {{cssxref("radial-gradient", "radial-gradient()")}}, {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("conic-gradient", "conic-gradient()")}},
