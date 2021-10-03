@@ -49,7 +49,9 @@ Set-Cookie: <cookie-name>=<cookie-value>; Path=<path-value>
 Set-Cookie: <cookie-name>=<cookie-value>; Secure
 Set-Cookie: <cookie-name>=<cookie-value>; HttpOnly
 
-Set-Cookie: <cookie-name>=<cookie-value>; SameSite=<samesite-value>
+Set-Cookie: <cookie-name>=<cookie-value>; SameSite=Strict
+Set-Cookie: <cookie-name>=<cookie-value>; SameSite=Lax
+Set-Cookie: <cookie-name>=<cookie-value>; SameSite=None; Secure
 
 // Multiple attributes are also possible, for example:
 Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnly
@@ -122,11 +124,11 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
 - `Secure` {{optional_inline}}
 
-  - : Inidcates that the cookie is sent to the server only when a request is made with the `https:` scheme (except on localhost), and therefore, is more resistent to [man-in-the-middle](/en-US/docs/Glossary/MitM) attacks.
+  - : Indicates that the cookie is sent to the server only when a request is made with the `https:` scheme (except on localhost), and therefore, is more resistant to [man-in-the-middle](/en-US/docs/Glossary/MitM) attacks.
 
     > **Note:** Do not assume that `Secure` prevents all access to sensitive information in cookies (session keys, login details, etc.). Cookies with this attribute can still be read/modified either with access to the client's hard disk or from JavaScript if the `HttpOnly` cookie attribute is not set.
     >
-    > Insecure sites (`http:`) cannott set cookies with the `Secure` attribute (since Chrome 52 and Firefox 52). For Firefox, the `https:` requirements are ignored when the `Secure` attribute is set by localhost (since Firefox 75).
+    > Insecure sites (`http:`) cannot set cookies with the `Secure` attribute (since Chrome 52 and Firefox 52). For Firefox, the `https:` requirements are ignored when the `Secure` attribute is set by localhost (since Firefox 75).
 
 - `HttpOnly` {{optional_inline}}
   - : Forbids JavaScript from accessing the cookie, for example, through the {{domxref("Document.cookie")}} property. Note that a cookie that has been created with `HttpOnly` will still be sent with JavaScript-initiated requests, for example, when calling {{domxref("XMLHttpRequest.send()")}} or {{domxref("fetch()")}}. This mitigates attacks against cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}).
@@ -135,7 +137,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
   - : Controls whether or not a cookie is sent with cross-origin requests,
     providing some protection against cross-site request forgery attacks ({{Glossary("CSRF")}}).
 
-    The possible atrribute value are: `Strict`, `Lax`, and `None`.
+    The possible attribute values are: `Strict`, `Lax`, and `None`.
 
     `Strict` means that the browser sends the cookie only for same-site requests,
     that is, requests originating from the same site that set the cookie.
