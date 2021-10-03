@@ -285,7 +285,7 @@ export default Form;</pre>
 
 <p>We’ve now got a <code>setTasks</code> hook that we can use in our <code>addTask()</code> function to update our list of tasks. There’s one problem however: we can’t just pass the <code>name</code> argument of <code>addTask()</code> into <code>setTasks</code>, because <code>tasks</code> is an array of objects and <code>name</code> is a string. If we tried to do this, the array would be replaced with the string.</p>
 
-<p>First of all, we need to put name into an object that has the same structure as our existing tasks. Inside of the <code>addTask()</code> function, we will make a <code>newTask</code> object to add to the array.</p>
+<p>First of all, we need to put <code>name</code> into an object that has the same structure as our existing tasks. Inside of the <code>addTask()</code> function, we will make a <code>newTask</code> object to add to the array.</p>
 
 <p>We then need to make a new array with this new task added to it and then update the state of the tasks data to this new state. To do this, we can use spread syntax to <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#copy_an_array">copy the existing array</a>, and add our object at the end. We then pass this array into <code>setTasks()</code> to update the state.</p>
 
