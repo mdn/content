@@ -171,7 +171,6 @@ function Child(x, y) {
   }
 }
 
-Child = Object.assign(Child, ParentWithStatic)  // copies over the static members from ParentWithStatic to Child
 Child.prototype = Object.create(ParentWithStatic.prototype)
 Child.prototype.constructor = Child
 
@@ -186,7 +185,7 @@ Child.prototype.getOffsetByInitialPosition = function getOffsetByInitialPosition
 };
 ```
 
-For this example we need either to stay parent constructor to continue to work properly or reassign static properties to child's constructor:
+For this example we need either to keep Parent as the constructor to continue to work properly or reassign static properties to Child's constructor:
 
 ```js
 ...
@@ -195,7 +194,7 @@ Child.prototype = Object.create(ParentWithStatic.prototype)
 ...
 ```
 
-or assign parent constructor identifier to a separate property on the Child constructor function and access it via that property:
+or assign Parent's constructor identifier to a separate property on the Child constructor function and access it via that property:
 
 ```js
 ...
