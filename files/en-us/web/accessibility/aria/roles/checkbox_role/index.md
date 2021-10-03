@@ -25,7 +25,7 @@ The `checkbox` role is for checkable interactive controls. Elements containing `
 
 ## Description
 
-The native [HTML checkbox](/en-US/docs/Web/HTML/Element/input/checkbox)  form control had two states ("checked" or "not checked"), with an [`indeterminate`](/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes) state settable via JavaScript. Similarly, an element with `role="checkbox"`  can expose three states through the `aria-checked` attribute: `true`, `false`, or `mixed`.
+The native HTML checkbox ([`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox))  form control had two states ("checked" or "not checked"), with an [`indeterminate`](/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes) state settable via JavaScript. Similarly, an element with `role="checkbox"`  can expose three states through the `aria-checked` attribute: `true`, `false`, or `mixed`.
 
 Since a checkbox is an interactive control, it must be focusable and keyboard accessible. If the role is applied to a non-focusable element, use the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute to change this. The expected keyboard shortcut for activating a checkbox is the <kbd>Space</kbd> key.
 
@@ -62,11 +62,7 @@ The developer is required to change the value of the `aria-checked` attribute d
   - : Handle mouse clicks on both the checkbox and the associated label that will change the state of the checkbox by changing the value of the `aria-checked` attribute and the appearance of the checkbox so it appears checked or unchecked to the sighted user
 - `onKeyPress`
 
-  - : Handle the case where the user presses the
-
-    <kbd>Space</kbd>
-
-    key to change the state of the checkbox by changing the value of the `aria-checked` attribute and the appearance of the checkbox so it appears checked or unchecked to the sighted user
+  - : Handle the case where the user presses the <kbd>Space</kbd> key to change the state of the checkbox by changing the value of the `aria-checked` attribute and the appearance of the checkbox so it appears checked or unchecked to the sighted user
 
 ## Examples
 
@@ -134,12 +130,12 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 ## See also
 
 - [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)
-- [ARIA: radio role](/en-US/docs/Web/Accessibility/ARIA/Roles/Radio_Role)
-- [ARIA: menuitem role](/en-US/docs/Web/Accessibility/ARIA/Roles/Menuitem_Role)
-- [ARIA: menuitemcheckbox role](/en-US/docs/Web/Accessibility/ARIA/Roles/Menuitemcheckbox_Role)
-- [ARIA: menuitemradio role](/en-US/docs/Web/Accessibility/ARIA/Roles/Menuitemradio_Role)
-- [ARIA: switch role](/en-US/docs/Web/Accessibility/ARIA/Roles/Switch_role)
-- [ARIA: option role](/en-US/docs/Web/Accessibility/ARIA/Roles/Option_role)
+- [ARIA: `radio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Radio_Role)
+- [ARIA: `menuitem` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Menuitem_Role)
+- [ARIA: `menuitemcheckbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Menuitemcheckbox_Role)
+- [ARIA: `menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Menuitemradio_Role)
+- [ARIA: `switch` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Switch_role)
+- [ARIA: `option` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Option_role)
 
 <section id="Quick_links">
 
