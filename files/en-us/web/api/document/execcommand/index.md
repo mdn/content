@@ -25,9 +25,10 @@ insert new elements (adding a link), or affect an entire line (indenting). When 
 `contentEditable`, `execCommand()` affects the currently active
 editable element.
 
-> **Note:** This method is mostly obsolete and should not be used. In particular, to interact with the clipboard, consider using the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) instead.
->
-> Also note that the Clipboard API doesn't replace `insertText` command. You can and should use it for programtially replacing text at cursor. This preserves undo buffer (edit history) in plain textarea and inputs.
+> **Note:** While this method is deprecated, it is still useful in some cases.
+> 
+> For example, the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) doesn't replace `insertText` command.
+> You can and should use it for programmatically replacing text at cursor in order to preserve the undo buffer (edit history) in plain `textarea` and `input` elements.
 
 ## Syntax
 
@@ -225,7 +226,7 @@ disabled.
 An example of [how to use
 execCommand with contentEditable elements](https://codepen.io/chrisdavidmills/full/gzYjag/) on CodePen.
 
-An example on how to insert text with both plain textarea and contentEditable elements:
+An example on how to insert text with both plain `textarea` and `contentEditable` elements:
 ```js
 //
 // Inserts text at cursor
@@ -270,6 +271,4 @@ This feature is not part of any current specification. It is no longer on track 
 - {{domxref("HTMLElement.contentEditable")}}
 - {{domxref("document.designMode")}}
 - [Rich-Text Editing in Mozilla](/en-US/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla)
-- [Scribe's
-  "Browser Inconsistencies" documentation](https://github.com/guardian/scribe/blob/master/BROWSERINCONSISTENCIES.md) with bugs related to
-  `document.execCommand`.
+- [Scribe's "Browser Inconsistencies" documentation](https://github.com/guardian/scribe/blob/master/BROWSERINCONSISTENCIES.md) with bugs related to `document.execCommand`.
