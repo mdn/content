@@ -46,7 +46,7 @@ The modified array, filled with `value`.
 - `fill` is a mutator method: it will change the array itself and return it, not a copy of it.
 - If the first parameter is an object, each slot in the array will reference that object.
 
-> **Note:** Using Array.prototype.fill() on an empty array would not modify it as the array has nothing to be modified.
+> **Note:** Using `Array.prototype.fill()` on an empty array would not modify it as the array has nothing to be modified.
 > To use `Array.prototype.fill()` when declaring an array, make sure to assign slots to the array.
 > [See example](#using_fill_to_populate_an_empty_array).
 
