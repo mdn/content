@@ -144,7 +144,7 @@ function setWeather() {
 
 </pre>
 
-<p>{{ EmbedLiveSample('else_if', '100%', 100, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('else_if', '100%', 100, "", "") }}</p>
 
 <ol>
  <li>Here we've got an HTML {{htmlelement("select")}} element allowing us to make different weather choices, and a simple paragraph.</li>
@@ -339,7 +339,7 @@ function setWeather() {
   }
 }</pre>
 
-<p>{{ EmbedLiveSample('A_switch_example', '100%', 100, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('A_switch_example', '100%', 100, "", "") }}</p>
 
 <div class="note">
 <p><strong>Note:</strong> You can also <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html">find this example on GitHub</a> (see it <a href="https://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html">running live</a> on there also.)</p>
@@ -383,7 +383,7 @@ select.onchange = function() {
 }
 </pre>
 
-<p>{{ EmbedLiveSample('Ternary_operator_example', '100%', 300, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Ternary_operator_example', '100%', 300, "", "") }}</p>
 
 <p>Here we've got a {{htmlelement('select')}} element to choose a theme (black or white), plus a simple {{htmlelement('h1')}} to display a website title. We also have a function called <code>update()</code>, which takes two colors as parameters (inputs). The website's background color is set to the first provided color, and its text color is set to the second provided color.</p>
 
@@ -419,10 +419,7 @@ select.onchange = function() {
 
 <p>If you make a mistake, you can always reset the example with the "Reset" button. If you get really stuck, press "Show solution" to see a solution.</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
 &lt;div class="output" style="height: 500px;overflow: auto;"&gt;
   &lt;label for="month"&gt;Select month: &lt;/label&gt;
   &lt;select id="month"&gt;
@@ -480,7 +477,7 @@ createCalendar(31,'January');
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css">.output * {
+<pre class="brush: css hidden">.output * {
   box-sizing: border-box;
 }
 
@@ -519,7 +516,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js">const textarea = document.getElementById('code');
+<pre class="brush: js hidden">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 let code = textarea.value;
@@ -595,11 +592,10 @@ textarea.onkeyup = function(){
 
   updateCode();
 };</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', '100%', 1110, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Active_learning_A_simple_calendar', '100%', 1110) }}</p>
 
-<h2 id="Active_learning_More_color_choices!">Active learning: More color choices!</h2>
+<h2 id="Active_learning_More_color_choices">Active learning: More color choices</h2>
 
 <p>In this example, you are going to take the ternary operator example we saw earlier and convert the ternary operator into a switch statement to allow us to apply more choices to the simple website. Look at the {{htmlelement("select")}} — this time you'll see that it has not two theme options, but five. You need to add a switch statement just underneath the <code>// ADD SWITCH STATEMENT</code> comment:</p>
 
@@ -611,10 +607,7 @@ textarea.onkeyup = function(){
 
 <p>If you make a mistake, you can always reset the example with the "Reset" button. If you get really stuck, press "Show solution" to see a solution.</p>
 
-<div class="hidden">
-<h6 id="Playable_code_2">Playable code 2</h6>
-
-<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
 &lt;div class="output" style="height: 300px;"&gt;
   &lt;label for="theme"&gt;Select theme: &lt;/label&gt;
   &lt;select id="theme"&gt;
@@ -652,7 +645,7 @@ function update(bgColor, textColor) {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -672,7 +665,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js">const textarea = document.getElementById('code');
+<pre class="brush: js hidden">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 let code = textarea.value;
@@ -748,9 +741,8 @@ textarea.onkeyup = function(){
 
   updateCode();
 };</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_2', '100%', 950, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Active_learning_More_color_choices', '100%', 950) }}</p>
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
