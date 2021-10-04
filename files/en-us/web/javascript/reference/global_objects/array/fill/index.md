@@ -32,9 +32,9 @@ fill(value, start, end)
 - `value`
   - : Value to fill the array with. (Note all elements in the array will be this exact value.)
 - `start` {{optional_inline}}
-  - : Start index, default `0`.
+  - : Start index (inclusive), default `0`.
 - `end` {{optional_inline}}
-  - : End index, default `arr.length`.
+  - : End index (exclusive), default `arr.length`.
 
 ### Return value
 
