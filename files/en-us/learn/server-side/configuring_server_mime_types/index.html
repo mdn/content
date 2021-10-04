@@ -37,11 +37,15 @@ tags:
 
 <dl>
  <dt>Loss of control</dt>
- <dd>If the browser ignores the reported MIME type, web administrators and authors no longer have control over how their content is to be processed.</dd>
- <dd>For example, a web site oriented for web developers might wish to send certain example HTML documents as either <code>text/html</code> or <code>text/plain</code> in order to have the documents either processed and displayed as HTML or as source code. If the browser guesses the MIME type, this option is no longer available to the author.</dd>
+ <dd>
+   <p>If the browser ignores the reported MIME type, web administrators and authors no longer have control over how their content is to be processed.</p>
+   <p>For example, a web site oriented for web developers might wish to send certain example HTML documents as either <code>text/html</code> or <code>text/plain</code> in order to have the documents either processed and displayed as HTML or as source code. If the browser guesses the MIME type, this option is no longer available to the author.</p>
+ </dd>
  <dt>Security</dt>
- <dd>Some content types, such as executable programs, are inherently unsafe. For this reason, these MIME types are usually restricted in terms of what actions a web browser will take when given that type of content. An executable program should not be executed on the user's computer and should at least cause a dialog to appear <strong>asking the user</strong> if they wish to download the file.</dd>
- <dd>MIME type guessing has led to security exploits in Internet Explorer that were based upon a malicious author incorrectly reporting a MIME type of a dangerous file as a safe type. This bypassed the normal download dialog, resulting in Internet Explorer guessing that the content was an executable program and then running it on the user's computer.</dd>
+ <dd>
+   <p>Some content types, such as executable programs, are inherently unsafe. For this reason, these MIME types are usually restricted in terms of what actions a web browser will take when given that type of content. An executable program should not be executed on the user's computer and should at least cause a dialog to appear <strong>asking the user</strong> if they wish to download the file.</p>
+   <p>MIME type guessing has led to security exploits in Internet Explorer that were based upon a malicious author incorrectly reporting a MIME type of a dangerous file as a safe type. This bypassed the normal download dialog, resulting in Internet Explorer guessing that the content was an executable program and then running it on the user's computer.</p>
+ </dd>
 </dl>
 
 <h2 id="JavaScript_legacy_MIME_types">JavaScript legacy MIME types</h2>
