@@ -22,7 +22,7 @@ executable MIME types. Since then, other browsers have introduced it, even if th
 sniffing algorithms were less aggressive.
 
 Starting with Firefox 72, top-level
-documents are also avoid MIME sniffing (if {{HTTPHeader("Content-type")}} is provided). This can cause HTML web pages
+documents also avoid MIME sniffing (if {{HTTPHeader("Content-type")}} is provided). This can cause HTML web pages
 to be downloaded instead of being rendered when they are served with a MIME type other
 than `text/html`. Make sure to set both headers correctly.
 
