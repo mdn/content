@@ -24,13 +24,14 @@ The most important thing to know about the `alert` role is that it is for dynami
 
 ## Examples
 
-The most basic way to trigger an alert is by adding `role="alert"` to an element that has `display: none;` by default. When the [display](/en-US/docs/Web/CSS/CSS_Display) value is changed with CSS or JavaScript, it would automatically trigger the screen reader to read out the content.
+If an element has  `role="alert"` and `display: none;` , when the [display](/en-US/docs/Web/CSS/CSS_Display) value is changed with CSS or JavaScript, it automatically triggers the screen reader to read out the content.
 
 ```html
 <p role="alert" style="display: none;">The alert will trigger when the element becomes visible.</p>
 ```
+While triggering an alert via CSS alone is possible, it is better to rely on JavaScript because it has more browser/screen reader support and is often more appropriate as part of a larger user interaction such as inside an event handler or form validation. 
 
-While triggering an alert via CSS alone is possible, it is better to rely on JavaScript because it has more browser/screen reader support and is often more appropriate as part of a larger user interaction such as inside an event handler or form validation. With JavaScript, developers control the adding and removing of alerts as appropriate.
+With JavaScript, developers control the adding and removing of alerts as appropriate.
 
 ```html
 <button type="button">Trigger alert</button>
@@ -46,6 +47,8 @@ function triggerAlert() {
   alertEl.setAttribute("role", "alert");
 }
 ```
+
+
 
 ## Accessibility concerns
 
