@@ -56,6 +56,13 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLScriptElement.referrerPolicy")}}
   - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("referrerPolicy", "script")}} HTML attribute indicating which referrer to use when fetching the script, and fetches done by that script.
 
+
+## Static methods
+
+- {{domxref("HTMLScriptElement.supports()")}}
+  - : Returns `true` if the browser supports scripts of the specified type and `false` otherwise.
+     This method provides a simple and unified method for script-related feature detection.
+    
 ## Methods
 
 _No specific methods; inherits methods from its parent, {{domxref("HTMLElement")}}._
