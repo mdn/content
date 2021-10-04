@@ -18,7 +18,7 @@ The **[`alert`](href="https://www.w3.org/TR/wai-aria-1.1/#alert)** role can be u
 
 One of the five live region roles, the [`alert`](https://www.w3.org/TR/wai-aria-1.1/#alert) role is used to provide the user with important, and usually time-sensitive, information, and often to tell the user an element has been dynamically updated.
 
-The `alert` role is added to the node containing an alert message, not the element causing the alert to be triggered. Alerts are [assertive live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Setting `role="alert"` is equivalent to setting `aria-live="assertive"` and `aria-atomic="true"`. They don't receive focus, and therefore focus does not need to be managed and no user interaction should be required.
+The `alert` role is added to the node containing an alert message, **not** the element causing the alert to be triggered. Alerts are [assertive live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Setting `role="alert"` is equivalent to setting `aria-live="assertive"` and `aria-atomic="true"`. They don't receive focus, and therefore focus does not need to be managed and no user interaction should be required.
 
 The most important thing to know about the `alert` role is that it is for dynamic content. It is perfect for situations such as when a user fills out a form and JavaScript is used to add an error message - the alert would immediately read out the message. It should not be used on HTML where the user hasn't interacted with it. For example, if a page loads with multiple visible alerts scattered throughout, none would be read because they are not dynamically triggered.
 
