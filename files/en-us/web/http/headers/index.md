@@ -225,7 +225,7 @@ _Learn more about CORS [here](CORS)._
   - : Contains an Internet email address for a human user who controls the requesting user agent.
 - {{HTTPHeader("Host")}}
   - : Specifies the domain name of the server (for virtual hosting), and (optionally) the TCP port number on which the server is listening.
-- {{HTTPHeader("Referrer")}}
+- {{HTTPHeader("Referer")}}
   - : The address of the previous web page from which a link to the currently requested page was followed.
 - {{HTTPHeader("Referrer-Policy")}}
   - : Governs which referrer information sent in the {{HTTPHeader("Referrer")}} header should be included with requests made.
