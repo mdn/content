@@ -39,10 +39,10 @@ reduce(callbackFn)
 reduce(callbackFn, initialValue)
 
 // Inline callback function
-reduce(function callbackFn(previousValue, currentValue) { ... })
-reduce(function callbackFn(previousValue, currentValue, currentIndex) { ... })
-reduce(function callbackFn(previousValue, currentValue, currentIndex, array){ ... })
-reduce(function callbackFn(previousValue, currentValue, currentIndex, array) { ... }, initialValue)
+reduce(function(previousValue, currentValue) { ... })
+reduce(function(previousValue, currentValue, currentIndex) { ... })
+reduce(function(previousValue, currentValue, currentIndex, array) { ... })
+reduce(function(previousValue, currentValue, currentIndex, array) { ... }, initialValue)
 ```
 
 ### Parameters
