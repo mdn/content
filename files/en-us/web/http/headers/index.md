@@ -228,7 +228,7 @@ _Learn more about CORS [here](CORS)._
 - {{HTTPHeader("Referer")}}
   - : The address of the previous web page from which a link to the currently requested page was followed.
 - {{HTTPHeader("Referrer-Policy")}}
-  - : Governs which referrer information sent in the {{HTTPHeader("Referrer")}} header should be included with requests made.
+  - : Governs which referrer information sent in the {{HTTPHeader("Referer")}} header should be included with requests made.
 - {{HTTPHeader("User-Agent")}}
   - : Contains a characteristic string that allows the network protocol peers to identify the application type, operating system, software vendor or software version of the requesting software user agent. See also the [Firefox user agent string reference](/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox).
 
