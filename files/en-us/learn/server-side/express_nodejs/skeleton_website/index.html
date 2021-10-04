@@ -437,7 +437,7 @@ app.use('/users', usersRouter);
     So for example, if the imported <strong>users</strong> module defines a route for <code>/profile</code>, you would access that route at <code>/users/profile</code>. We'll talk more about routes in a later article.</p>
 </div>
 
-<p id="error_handling">The last middleware in the file adds handler methods for errors and HTTP 404 responses.</p>
+<p>The last middleware in the file adds handler methods for errors and HTTP 404 responses.</p>
 
 <pre class="brush: js">// catch 404 and forward to error handler
 app.use(function(req, res, next) {

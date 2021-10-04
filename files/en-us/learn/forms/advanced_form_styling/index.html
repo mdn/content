@@ -94,7 +94,7 @@ tags:
 }</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: It is a good idea to always include both declarations — prefixed and unprefixed — when using a prefixed property. Prefixed usually means "work in progress", so in the future browser vendors may come to a consensus to drop the prefix. The above code is good for future-proofing against such an eventuality.</p>
+<p><strong>Note:</strong> It is a good idea to always include both declarations — prefixed and unprefixed — when using a prefixed property. Prefixed usually means "work in progress", so in the future browser vendors may come to a consensus to drop the prefix. The above code is good for future-proofing against such an eventuality.</p>
 </div>
 
 <p>The following live example shows you what they look like in your system — default on the left, and with the above CSS applied on the right (<a href="https://mdn.github.io/learning-area/html/forms/styling-examples/appearence-tester.html">find it here also</a> if you want to test it on other systems).</p>
@@ -123,7 +123,7 @@ tags:
 <p>{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/styled-search.html", '100%', 200)}}</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You may have noticed that in the search field, the "x" delete icon disappears when the input loses focus in Edge and Chrome, but stays put in Safari. To remove via CSS, you can use <code>input[type="search"]::-webkit-search-cancel-button { display: none; }</code>. However, this seems to get rid of the icon <em>with</em> focus too, with no apparent way to get it back.</p>
+<p><strong>Note:</strong> You may have noticed that in the search field, the "x" delete icon disappears when the input loses focus in Edge and Chrome, but stays put in Safari. To remove via CSS, you can use <code>input[type="search"]::-webkit-search-cancel-button { display: none; }</code>. However, this seems to get rid of the icon <em>with</em> focus too, with no apparent way to get it back.</p>
 </div>
 
 <h3 id="Styling_checkboxes_and_radio_buttons">Styling checkboxes and radio buttons</h3>
@@ -258,7 +258,7 @@ input[type="checkbox"]:disabled {
  <li><code>:disabled</code> — the checkbox (or radio button) is in a disabled state — it cannot be interacted with.</li>
 </ul>
 
-<p id="results">You can see the live result:</p>
+<p>You can see the live result:</p>
 
 <p>{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/checkboxes-styled.html", '100%', 200)}}</p>
 
@@ -272,7 +272,7 @@ input[type="checkbox"]:disabled {
 <p>If you view these checkboxes in a browser that doesn't support {{cssxref("appearance")}}, your custom design will be lost, but they will still look like checkboxes and be usable.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: While Internet Explorer doesn't support any version of <code>appearance</code>, the <code>input[type=checkbox]::-ms-check</code> enables the targeting of checkboxes in IE only. This technique works for radio buttons too, despite the name <code>-ms-<em><strong>check</strong></em></code>.</p>
+<p><strong>Note:</strong> While Internet Explorer doesn't support any version of <code>appearance</code>, the <code>input[type=checkbox]::-ms-check</code> enables the targeting of checkboxes in IE only. This technique works for radio buttons too, despite the name <code>-ms-<em><strong>check</strong></em></code>.</p>
 </div>
 
 <h2 id="What_can_be_done_about_the_ugly_elements">What can be done about the "ugly" elements?</h2>
@@ -342,7 +342,7 @@ button {
 }</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: If you want to test these examples across a number of browsers simultaneously, you can <a href="https://mdn.github.io/learning-area/html/forms/styling-examples/ugly-controls.html">find it live here</a> (also <a href="https://github.com/mdn/learning-area/blob/master/html/forms/styling-examples/ugly-controls.html">see here for the source code</a>).</p>
+<p><strong>Note:</strong> If you want to test these examples across a number of browsers simultaneously, you can <a href="https://mdn.github.io/learning-area/html/forms/styling-examples/ugly-controls.html">find it live here</a> (also <a href="https://github.com/mdn/learning-area/blob/master/html/forms/styling-examples/ugly-controls.html">see here for the source code</a>).</p>
 
 <p>Also bear in mind that we've added some JavaScript to the page that lists the files selected by the file picker, below the control itself. This is a simplified version of the example found on the <code><a href="/en-US/docs/Web/HTML/Element/input/file#examples">&lt;input type="file"&gt;</a></code> reference page.</p>
 </div>
@@ -355,7 +355,6 @@ button {
   display: block;
   font-family: inherit;
   font-size: 100%;
-  padding: 0;
   margin: 0;
   box-sizing: border-box;
   width: 100%;
@@ -426,7 +425,7 @@ button {
 <p>However, the internal parts of the control (e.g. the popup calendar that you use pick a date, the spinner that you can use to increment/decrement values) are not stylable at all, and you can't get rid of them using <code>appearance: none;</code>. If you really need full control over the styling, you'll have to either use some kind of library to generate a custom control, or build your own.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: It is worth mentioning <code><a href="/en-US/docs/Web/HTML/Element/input/number">&lt;input type="number"&gt;</a></code> here too — this also has a spinner that you can use to increment/decrement values, so potentially suffers from the same problem. However, in the case of the <code>number</code> type the data being collected is simpler, and it is easy to just use a <code>text</code> input type instead if desired (or <code>tel</code> if you want mobile browsers to show the numeric keypad).</p>
+<p><strong>Note:</strong> It is worth mentioning <code><a href="/en-US/docs/Web/HTML/Element/input/number">&lt;input type="number"&gt;</a></code> here too — this also has a spinner that you can use to increment/decrement values, so potentially suffers from the same problem. However, in the case of the <code>number</code> type the data being collected is simpler, and it is easy to just use a <code>text</code> input type instead if desired (or <code>tel</code> if you want mobile browsers to show the numeric keypad).</p>
 </div>
 
 <h3 id="Range_input_types">Range input types</h3>
@@ -463,7 +462,7 @@ button {
 
 <p>The only problem with file pickers is that the button provided that you press to open the file picker is completely unstylable — it can't be sized or colored, and it won't even accept a different font.</p>
 
-<p>One way around this is to take advantage of the fact that if you have a label associated with a form control, clicking the label will activate the control. So you could hide the actual from input using something like this:</p>
+<p>One way around this is to take advantage of the fact that if you have a label associated with a form control, clicking the label will activate the control. So you could hide the actual form input using something like this:</p>
 
 <pre class="brush: css">input[type="file"] {
   height: 0;
@@ -490,7 +489,7 @@ label[for="file"]:active {
   box-shadow: inset 1px 1px 3px #ccc;
 }</pre>
 
-<p>You can see the result of the above CSS styling in the below live example (see also <a href="https://mdn.github.io/learning-area/html/forms/styling-examples/styled-file-picker.html">styled-file-picker.html</a> live, and the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/styling-examples/styled-file-picker.html-US/docs/">source code</a>).</p>
+<p>You can see the result of the above CSS styling in the below live example (see also <a href="https://mdn.github.io/learning-area/html/forms/styling-examples/styled-file-picker.html">styled-file-picker.html</a> live, and the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/styling-examples/styled-file-picker.html">source code</a>).</p>
 
 <p>{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/styled-file-picker.html", '100%', 200)}}</p>
 
@@ -498,7 +497,7 @@ label[for="file"]:active {
 
 <p><code><a href="/en-US/docs/Web/HTML/Element/meter">&lt;meter&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/progress">&lt;progress&gt;</a></code> are possibly the worst of the lot. As you saw in the earlier example, we can set them to a desired width relatively accurately. But beyond that, they are really difficult to style in any way. They don't handle height settings consistently between each other and between browsers, you can color the background, but not the foreground bar, and setting <code>appearance: none</code> on them makes things worse, not better.</p>
 
-<p>It is easier to just create your own custom solution for these features, if you want to be able to control the styling, or use a third party solution such as <a href="https://kimmobrunfeldt.github.io/progressbar.js/#examples">progressbar.js</a>.</p>
+<p>It is easier to just create your own custom solution for these features, if you want to be able to control the styling, or use a third-party solution such as <a href="https://kimmobrunfeldt.github.io/progressbar.js/#examples">progressbar.js</a>.</p>
 
 <h2 id="The_road_to_nicer_forms_useful_libraries_and_polyfills">The road to nicer forms: useful libraries and polyfills</h2>
 

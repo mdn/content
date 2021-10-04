@@ -10,14 +10,12 @@ browser-compat: path.to.feature.NameOfTheInterface
 <p>{{MDNSidebar}}</p>
 
 <!-- Remove div below here before publishing -->
-<div class="notecard note">
-<h2 id="Remove_before_publishing">Remove before publishing</h2>
 
 <h3 id="Page_front_matter">Page front matter</h3>
 
 <p>The frontmatter at the top of the page is used to define "page metadata". The values should be updated appropriately for the particular interface.</p>
 
-<pre>---
+<pre class="brush: plain">---
 title: NameOfTheInterface
 slug: Web/API/NameOfTheInterface
 tags:
@@ -36,9 +34,11 @@ browser-compat: path.to.feature.NameOfTheInterface
 <dt>slug</dt>
 <dd>The end of the URL path after <code>https://developer.mozilla.org/en-US/docs/</code>). This will be formatted like <code>Web/API/NameOfTheParentInterface</code>. For example, <a href="/en-US/docs/Web/API/Request">Request</a> slug is "Web/API/Request".</dd>
 <dt>tags</dt>
-<dd><p>Include the following tags: <strong>API</strong>, <strong>Reference</strong>, <strong>Interface</strong>, <em>the name of the API</em> (e.g. <strong>WebVR</strong>), the name of the interface (e.g. <strong>Request</strong>), <strong>Experimental</strong> (if the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>), <strong>Secure context</strong> (if it is available in a secure context only), and <strong>Deprecated</strong> (if it is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>).</p>
+<dd>
+  <p>Include the following tags: <strong>API</strong>, <strong>Reference</strong>, <strong>Interface</strong>, <em>the name of the API</em> (e.g. <strong>WebVR</strong>), the name of the interface (e.g. <strong>Request</strong>), <strong>Experimental</strong> (if the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>), <strong>Secure context</strong> (if it is available in a secure context only), and <strong>Deprecated</strong> (if it is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>).</p>
 
-  <p>Optionally, you can elect to include some other tags that represent terms people might search for when looking for information on that technology. For example on WebVR interface pages we include <strong>VR</strong> and <strong>Virtual reality</strong>.</p></dd>
+  <p>Optionally, you can elect to include some other tags that represent terms people might search for when looking for information on that technology. For example on WebVR interface pages we include <strong>VR</strong> and <strong>Virtual reality</strong>.</p>
+</dd>
 <dt>browser-compat</dt>
 <dd><p>Replace the placeholder value <code>path.to.feature.NameOfTheMethod</code> with the query string for the method in the <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a>. The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the <code>\{{Compat}}</code> and <code>\{{Specifications}}</code> macros).</p>
   
@@ -62,7 +62,7 @@ browser-compat: path.to.feature.NameOfTheInterface
 
 <p>{{APIRef("GroupDataName")}}{{Draft}}{{SeeCompatTable}}{{SecureContext_Header}}{{Deprecated_Header}}</p>
 
-<p class="summary">The summary paragraph — start by naming the interface, saying what API it is part of, and saying what it does. This should ideally be 1 or 2 short sentences. You could copy most of this from the Interface's summary on the corresponding API landing page.</p>
+<p>The summary paragraph — start by naming the interface, saying what API it is part of, and saying what it does. This should ideally be 1 or 2 short sentences. You could copy most of this from the Interface's summary on the corresponding API landing page.</p>
 
 <p>{{InheritanceDiagram}}</p>
 

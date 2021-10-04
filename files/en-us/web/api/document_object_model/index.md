@@ -272,7 +272,6 @@ Here are the DOM APIs for data types used in the definitions of SVG properties a
 - {{DOMxRef("SVGUnitTypes")}}
 - {{DOMxRef("SVGUseElementShadowRoot")}}
 - {{DOMxRef("SVGViewSpec")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGZoomAndPan")}}
 - {{DOMxRef("SVGZoomEvent")}} {{Deprecated_Inline}}
 
 ## Specifications

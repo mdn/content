@@ -43,9 +43,14 @@ tags:
 <div style="overflow: hidden;">
 <pre class="brush: js">const xmlStr = '&lt;a id="a"&gt;&lt;b id="b"&gt;hey!&lt;/b&gt;&lt;/a&gt;';
 const parser = new DOMParser();
-const dom = parser.parseFromString(xmlStr, "application/xml");
+const doc = parser.parseFromString(xmlStr, "application/xml");
 // print the name of the root element or error message
-console.log(dom.documentElement.nodeName == "parsererror" ? "error while parsing" : dom.documentElement.nodeName);
+const errorNode = doc.querySelector("parsererror");
+if (errorNode) {
+  console.log("error while parsing");
+} else {
+  console.log(dom.documentElement.nodeName);
+}
 </pre>
 </div>
 

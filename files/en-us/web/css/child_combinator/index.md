@@ -33,7 +33,7 @@ selector1 > selector2 { style properties }
 
 ```css
 span {
-  background-color: white;
+  background-color: aqua;
 }
 
 div > span {

@@ -39,15 +39,6 @@ The `play` event is fired when the `paused` property is changed from `true` to `
       <th scope="row">Event handler property</th>
       <td>{{domxref("GlobalEventHandlers.onplay")}}</td>
     </tr>
-    <tr>
-      <th scope="row">Specification</th>
-      <td>
-        <a
-          href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing"
-          >HTML5 media</a
-        >
-      </td>
-    </tr>
   </tbody>
 </table>
 

@@ -18,7 +18,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}</div>
 
-<p class="summary">Following on from the previous article, sometimes making complex UI controls that involve unsemantic HTML and dynamic JavaScript-updated content can be difficult. WAI-ARIA is a technology that can help with such problems by adding in further semantics that browsers and assistive technologies can recognize and use to let users know what is going on. Here we'll show how to use it at a basic level to improve accessibility.</p>
+<p>Following on from the previous article, sometimes making complex UI controls that involve unsemantic HTML and dynamic JavaScript-updated content can be difficult. WAI-ARIA is a technology that can help with such problems by adding in further semantics that browsers and assistive technologies can recognize and use to let users know what is going on. Here we'll show how to use it at a basic level to improve accessibility.</p>
 
 <table>
  <tbody>
@@ -71,7 +71,7 @@ tags:
 <p>An important point about WAI-ARIA attributes is that they don't affect anything about the web page, except for the information exposed by the browser's accessibility APIs (where screenreaders get their information from). WAI-ARIA doesn't affect webpage structure, the DOM, etc., although the attributes can be useful for selecting elements by CSS.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can find a useful list of all the ARIA roles and their uses, with links to futher information, in the WAI-ARIA spec — see <a href="https://www.w3.org/TR/wai-aria-1.1/#role_definitions">Definition of Roles</a> — on on this site — see <a href="/en-US/docs/Web/accessibility/ARIA/roles">ARIA roles</a>.</p>
+<p><strong>Note:</strong> You can find a useful list of all the ARIA roles and their uses, with links to futher information, in the WAI-ARIA spec — see <a href="https://www.w3.org/TR/wai-aria-1.1/#role_definitions">Definition of Roles</a> — on on this site — see <a href="/en-US/docs/Web/accessibility/ARIA/roles">ARIA roles</a>.</p>
 
 <p>The spec also contains a list of all the properties and states, with links to further information — see <a href="https://www.w3.org/TR/wai-aria-1.1/#state_prop_def">Definitions of States and Properties (all aria-* attributes)</a>.</p>
 </div>
@@ -97,7 +97,7 @@ tags:
 <p>In this article, we won't attempt to cover every WAI-ARIA feature, and its exact support details. Instead, we will cover the most critical WAI-ARIA features for you to know about; if we don't mention any support details, you can assume that the feature is well-supported. We will clearly mention any exceptions to this.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Some JavaScript libraries support WAI-ARIA, meaning that when they generate UI features like complex form controls, they add ARIA attributes to improve the accessibility of those features. If you are looking for a 3rd party JavaScript solution for rapid UI development, you should definitely consider the accessibility of its UI widgets as an important factor when making your choice. Good examples are jQuery UI (see <a href="https://jqueryui.com/about/#deep-accessibility-support">About jQuery UI: Deep accessibility support</a>), <a href="https://www.sencha.com/products/extjs/">ExtJS</a>, and <a href="https://dojotoolkit.org/reference-guide/1.10/dijit/a11y/statement.html">Dojo/Dijit</a>.</p>
+<p><strong>Note:</strong> Some JavaScript libraries support WAI-ARIA, meaning that when they generate UI features like complex form controls, they add ARIA attributes to improve the accessibility of those features. If you are looking for a 3rd party JavaScript solution for rapid UI development, you should definitely consider the accessibility of its UI widgets as an important factor when making your choice. Good examples are jQuery UI (see <a href="https://jqueryui.com/about/#deep-accessibility-support">About jQuery UI: Deep accessibility support</a>), <a href="https://www.sencha.com/products/extjs/">ExtJS</a>, and <a href="https://dojotoolkit.org/reference-guide/1.10/dijit/a11y/statement.html">Dojo/Dijit</a>.</p>
 </div>
 
 <h3 id="When_should_you_use_WAI-ARIA">When should you use WAI-ARIA?</h3>
@@ -116,7 +116,7 @@ tags:
 <p>But again, only use it when necessary!</p>
 
 <div class="note">
-<p><strong>Note</strong>: Also, try to make sure you test your site with a variety of <em>real</em> users — non-disabled people, people using screenreaders, people using keyboard navigation, etc. They will have better insights than you about how well it works.</p>
+<p><strong>Note:</strong> Also, try to make sure you test your site with a variety of <em>real</em> users — non-disabled people, people using screenreaders, people using keyboard navigation, etc. They will have better insights than you about how well it works.</p>
 </div>
 
 <h2 id="Practical_WAI-ARIA_implementations">Practical WAI-ARIA implementations</h2>
@@ -233,7 +233,7 @@ tags:
 <p>This will cause a screenreader to read out the content as it is updated.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Most browsers will throw a security exception if you try to do an <code>XMLHttpRequest</code> call from a <code>file://</code> URL, e.g. if you just load the file by loading it directly into the browser (via double clicking, etc.). To get it to run, you will need to upload it to a web server, for example <a href="/en-US/docs/Learn/Common_questions/Using_Github_pages">using GitHub</a>, or a local web server like <a href="https://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/">Python's SimpleHTTPServer</a>.</p>
+<p><strong>Note:</strong> Most browsers will throw a security exception if you try to do an <code>XMLHttpRequest</code> call from a <code>file://</code> URL, e.g. if you just load the file by loading it directly into the browser (via double clicking, etc.). To get it to run, you will need to upload it to a web server, for example <a href="/en-US/docs/Learn/Common_questions/Using_Github_pages">using GitHub</a>, or a local web server like <a href="https://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/">Python's SimpleHTTPServer</a>.</p>
 </div>
 
 <p>There is an additional consideration here — only the bit of text that updates is read out. It might be nice if we always read out the heading too, so the user can remember what is being read out. To do this, we can add the <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-atomic">aria-atomic</a></code> property to the section. Update your <code>&lt;section&gt;</code> tag again, like so:</p>
@@ -243,11 +243,11 @@ tags:
 <p>The <code>aria-atomic="true"</code> attribute tells screenreaders to read out the entire element contents as one atomic unit, not just the bits that were updated.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can see the finished example at <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-live.html">aria-live.html</a> (<a href="https://mdn.github.io/learning-area/accessibility/aria/aria-live.html">see it running live</a>).</p>
+<p><strong>Note:</strong> You can see the finished example at <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-live.html">aria-live.html</a> (<a href="https://mdn.github.io/learning-area/accessibility/aria/aria-live.html">see it running live</a>).</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: The <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-relevant">aria-relevant</a></code> property is also quite useful for controlling what gets read out when a live region is updated. You can for example only get content additions or removals read out.</p>
+<p><strong>Note:</strong> The <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-relevant">aria-relevant</a></code> property is also quite useful for controlling what gets read out when a live region is updated. You can for example only get content additions or removals read out.</p>
 </div>
 
 <h3 id="Enhancing_keyboard_accessibility">Enhancing keyboard accessibility</h3>
@@ -303,7 +303,7 @@ tags:
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: You can see the finished example live at <a href="https://mdn.github.io/learning-area/accessibility/aria/form-validation-updated.html">form-validation-updated.html</a>.</p>
+<p><strong>Note:</strong> You can see the finished example live at <a href="https://mdn.github.io/learning-area/accessibility/aria/form-validation-updated.html">form-validation-updated.html</a>.</p>
 </div>
 
 <p>WAI-ARIA also enables some advanced form labelling techniques, beyond the classic {{htmlelement("label")}} element. We already talked about using the <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-label">aria-label</a></code> property to provide a label where we don't want the label to be visible to sighted users (see the {{anch("Signposts/Landmarks")}} section, above). There are some other labelling techniques that use other properties such as <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby">aria-labelledby</a></code> if you want to designate a non-<code>&lt;label&gt;</code> element as a label or label multiple form inputs with the same label, and <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby">aria-describedby</a></code>, if you want to associate other information with a form input and have it read out as well. See <a href="https://webaim.org/techniques/forms/advanced">WebAIM's Advanced Form Labeling article</a> for more details.</p>
@@ -345,7 +345,7 @@ tags:
 <p>Now when you try this using a screenreader, you'll have buttons be reported using phrases like "Click me!, button" — much better.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Don't forget however that using the correct semantic element where possible is always better. If you want to create a button, and can use a {{htmlelement("button")}} element, you should use a {{htmlelement("button")}} element!</p>
+<p><strong>Note:</strong> Don't forget however that using the correct semantic element where possible is always better. If you want to create a button, and can use a {{htmlelement("button")}} element, you should use a {{htmlelement("button")}} element!</p>
 </div>
 
 <h4 id="Guiding_users_through_complex_widgets">Guiding users through complex widgets</h4>
@@ -376,7 +376,7 @@ tags:
 &lt;/div&gt;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: The most striking change here is that we've removed the links that were originally present in the example, and just used the list items as the tabs — this was done because it makes things less confusing for screenreader users (the links don't really take you anywhere; they just change the view), and it allows the setsize/position in set features to work better — when these were put on the links, the browser kept reporting "1 of 1" all the time, not "1 of 3", "2 of 3", etc.</p>
+<p><strong>Note:</strong> The most striking change here is that we've removed the links that were originally present in the example, and just used the list items as the tabs — this was done because it makes things less confusing for screenreader users (the links don't really take you anywhere; they just change the view), and it allows the setsize/position in set features to work better — when these were put on the links, the browser kept reporting "1 of 1" all the time, not "1 of 3", "2 of 3", etc.</p>
 </div>
 
 <p>The new features are as follows:</p>
@@ -393,7 +393,7 @@ tags:
 <p>In our tests, this new structure did serve to improve things overall. The tabs are now recognized as tabs (e.g. "tab" is spoken by the screenreader), the selected tab is indicated by "selected" being read out with the tab name, and the screenreader also tells you which tab number you are currently on. In addition, because of the <code>aria-hidden</code> settings (only the non-hidden tab ever has <code>aria-hidden="false"</code> set), the non-hidden content is the only one you can navigate down to, meaning the selected content is easier to find.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If there is anything you explicitly don't want screen readers to read out, you can give them the <code>aria-hidden="true"</code>  attribute.</p>
+<p><strong>Note:</strong> If there is anything you explicitly don't want screen readers to read out, you can give them the <code>aria-hidden="true"</code>  attribute.</p>
 </div>
 
 <h2 id="Test_your_skills!">Test your skills!</h2>

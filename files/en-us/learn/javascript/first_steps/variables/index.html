@@ -19,7 +19,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}</div>
 
-<p class="summary">After reading the last couple of articles you should now know what JavaScript is, what it can do for you, how you use it alongside other web technologies, and what its main features look like from a high level. In this article, we will get down to the real basics, looking at how to work with the most basic building blocks of JavaScript — Variables.</p>
+<p>After reading the last couple of articles you should now know what JavaScript is, what it can do for you, how you use it alongside other web technologies, and what its main features look like from a high level. In this article, we will get down to the real basics, looking at how to work with the most basic building blocks of JavaScript — Variables.</p>
 
 <table class="learn-box">
  <tbody>
@@ -38,54 +38,54 @@ tags:
 
 <p>Throughout this article, you'll be asked to type in lines of code to test your understanding of the content. If you are using a desktop browser, the best place to type your sample code is your browser's JavaScript console (see <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information on how to access this tool).</p>
 
-
 <h2>What is a variable?</h2>
 
-<p>A variable is a container for a value, like a number we might use in a sum, or a string that we might use as part of a sentence. Let's look at a simple example:</p>
+<p>A variable is a container for a value, like a number we might use in a sum, or a string that we might use as part of a sentence.</p>
 
-<div id="example_with_variabele">
-    <pre class="brush: html">
-    &lt;button id="button_A"&gt;Press me&lt;/button&gt;
-    &lt;h3 id="heading_A"&gt;&lt;/h3&gt;
-    </pre>
+<h3>Variable example</h3>
 
-    <pre class="brush: js">
-    const buttonA = document.querySelector('#button_A');
-    const headingA = document.querySelector('#heading_A');
-    
-    buttonA.onclick = function() {
-      let name = prompt('What is your name?');
-      alert('Hello ' + name + ', nice to see you!');
-      headingA.textContent = 'Welcome ' + name;
-    }</pre>
-    
-    <p>{{ EmbedLiveSample('example_with_variabele', '100%', 50, "", "", "hide-codepen-jsfiddle") }}</p>
-</div>
+<p>Let's look at a simple example:</p>
+
+<pre class="brush: html">
+&lt;button id="button_A"&gt;Press me&lt;/button&gt;
+&lt;h3 id="heading_A"&gt;&lt;/h3&gt;
+</pre>
+
+<pre class="brush: js">
+const buttonA = document.querySelector('#button_A');
+const headingA = document.querySelector('#heading_A');
+
+buttonA.onclick = function() {
+  let name = prompt('What is your name?');
+  alert('Hello ' + name + ', nice to see you!');
+  headingA.textContent = 'Welcome ' + name;
+}
+</pre>
+
+<p>{{ EmbedLiveSample('Variable example', '100%', 120) }}</p>
 
 <p>In this example pressing the button runs some code. The first line pops a box up on the screen that asks the reader to enter their name, and then stores the value in a variable. The second line displays a welcome message that includes their name, taken from the variable value and the third line displays that name on the page.</p>
+
+<h3>Without a variable</h3>
 
 <p>To understand why this is so useful, let's think about how we'd write this example without using a variable. It would end up looking something like this:</p>
 
 
-<div id="example_without_variable">
+<pre class="brush: html example-bad">
+&lt;button id="button_B"&gt;Press me&lt;/button&gt;
+&lt;h3 id="heading_B"&gt;&lt;/h3&gt;
+</pre>
 
-    <pre class="brush: html example-bad">
-    &lt;button id="button_B"&gt;Press me&lt;/button&gt;
-    &lt;h3 id="heading_B"&gt;&lt;/h3&gt;
-    </pre>
+<pre class="brush: js example-bad">
+const buttonB = document.querySelector('#button_B');
+const headingB = document.querySelector('#heading_B');
 
-    <pre class="brush: js example-bad">
-    const buttonB = document.querySelector('#button_B');
-    const headingB = document.querySelector('#heading_B');
-    
-    buttonB.onclick = function() {
-        alert('Hello ' + prompt('What is your name?') + ', nice to see you!');
-        headingB.textContent = 'Welcome ' + prompt('What is your name?');
-    }</pre>
-    
-    <p>{{ EmbedLiveSample('example_without_variable', '100%', 50, "", "", "hide-codepen-jsfiddle") }}</p>
-</div>
+buttonB.onclick = function() {
+    alert('Hello ' + prompt('What is your name?') + ', nice to see you!');
+    headingB.textContent = 'Welcome ' + prompt('What is your name?');
+}</pre>
 
+<p>{{ EmbedLiveSample('Without_a_variable', '100%', 120) }}</p>
 
 <p>You may not fully understand the syntax we are using (yet!), but you should be able to get the idea. If we didn't have variables available, we'd have to ask the reader for their name every time we needed to use it!</p>
 
@@ -94,7 +94,7 @@ tags:
 <p>One special thing about variables is that they can contain just about anything — not just strings and numbers. Variables can also contain complex data and even entire functions to do amazing things. You'll learn more about this as you go along.</p>
 
 <div class="note">
-<p><strong>Note</strong>: We say variables contain values. This is an important distinction to make. Variables aren't the values themselves; they are containers for values. You can think of them being like little cardboard boxes that you can store things in.</p>
+<p><strong>Note:</strong> We say variables contain values. This is an important distinction to make. Variables aren't the values themselves; they are containers for values. You can think of them being like little cardboard boxes that you can store things in.</p>
 </div>
 
 <p><img alt="" src="boxes.png"></p>
@@ -109,7 +109,7 @@ let myAge;</pre>
 <p>Here we're creating two variables called <code>myName</code> and <code>myAge</code>. Try typing these lines into your web browser's console. After that, try creating a variable (or two) with your own name choices.</p>
 
 <div class="note">
-<p><strong>Note</strong>: In JavaScript, all code instructions should end with a semi-colon (<code>;</code>) — your code may work correctly for single lines, but probably won't when you are writing multiple lines of code together. Try to get into the habit of including it.</p>
+<p><strong>Note:</strong> In JavaScript, all code instructions should end with a semi-colon (<code>;</code>) — your code may work correctly for single lines, but probably won't when you are writing multiple lines of code together. Try to get into the habit of including it.</p>
 </div>
 
 <p>You can test whether these values now exist in the execution environment by typing just the variable's name, e.g.</p>
@@ -122,7 +122,7 @@ myAge;</pre>
 <pre class="brush: js">scoobyDoo;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Don't confuse a variable that exists but has no defined value with a variable that doesn't exist at all — they are very different things. In the box analogy you saw above, not existing would mean there's no box (variable) for a value to go in. No value defined would mean that there is a box, but it has no value inside it.</p>
+<p><strong>Note:</strong> Don't confuse a variable that exists but has no defined value with a variable that doesn't exist at all — they are very different things. In the box analogy you saw above, not existing would mean there's no box (variable) for a value to go in. No value defined would mean that there is a box, but it has no value inside it.</p>
 </div>
 
 <h2 id="Initializing_a_variable">Initializing a variable</h2>
@@ -164,7 +164,7 @@ logName();
 var myName;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: This won't work when typing individual lines into a JavaScript console, just when running multiple lines of JavaScript in a web document.</p>
+<p><strong>Note:</strong> This won't work when typing individual lines into a JavaScript console, just when running multiple lines of JavaScript in a web document.</p>
 </div>
 
 <p>This works because of <strong>hoisting</strong> — read <a href="/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting">var hoisting</a> for more detail on the subject.</p>
@@ -212,7 +212,7 @@ myAge = 40;</pre>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: You can find a fairly complete list of reserved keywords to avoid at <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords">Lexical grammar — keywords</a>.</p>
+<p><strong>Note:</strong> You can find a fairly complete list of reserved keywords to avoid at <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords">Lexical grammar — keywords</a>.</p>
 </div>
 
 <p>Good name examples:</p>

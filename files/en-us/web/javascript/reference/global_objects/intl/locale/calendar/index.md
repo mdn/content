@@ -22,111 +22,45 @@ The `calendar` property returns the part of the `Locale` that indicates the `Loc
 
 ### Unicode calendar keys
 
-<table class="standard-table">
-  <caption>
-    Unicode calendar keys
-  </caption>
-  <thead>
-    <tr>
-      <th scope="col">Calendar key (name)</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>buddhist</code></td>
-      <td>Thai Buddhist calendar</td>
-    </tr>
-    <tr>
-      <td><code>chinese</code></td>
-      <td>Traditional Chinese calendar</td>
-    </tr>
-    <tr>
-      <td><code>coptic</code></td>
-      <td>Coptic calendar</td>
-    </tr>
-    <tr>
-      <td><code>dangi</code></td>
-      <td>Traditional Korean calendar</td>
-    </tr>
-    <tr>
-      <td><code>ethioaa</code></td>
-      <td>Ethiopic calendar, Amete Alem (epoch approx. 5493 B.C.E)</td>
-    </tr>
-    <tr>
-      <td><code>ethiopic</code></td>
-      <td>Ethiopic calendar, Amete Mihret (epoch approx, 8 C.E.)</td>
-    </tr>
-    <tr>
-      <td><code>gregory</code></td>
-      <td>Gregorian calendar</td>
-    </tr>
-    <tr>
-      <td><code>hebrew</code></td>
-      <td>Traditional Hebrew calendar</td>
-    </tr>
-    <tr>
-      <td><code>indian</code></td>
-      <td>Indian calendar</td>
-    </tr>
-    <tr>
-      <td><code>islamic</code></td>
-      <td>Islamic calendar</td>
-    </tr>
-    <tr>
-      <td><code>islamic-umalqura</code></td>
-      <td>Islamic calendar, Umm al-Qura</td>
-    </tr>
-    <tr>
-      <td><code>islamic-tbla</code></td>
-      <td>
-        Islamic calendar, tabular (intercalary years
-        [2,5,7,10,13,16,18,21,24,26,29] - astronomical epoch)
-      </td>
-    </tr>
-    <tr>
-      <td><code>islamic-civil</code></td>
-      <td>
-        Islamic calendar, tabular (intercalary years
-        [2,5,7,10,13,16,18,21,24,26,29] - civil epoch)
-      </td>
-    </tr>
-    <tr>
-      <td><code>islamic-rgsa</code></td>
-      <td>Islamic calendar, Saudi Arabia sighting</td>
-    </tr>
-    <tr>
-      <td><code>iso8601</code></td>
-      <td>
-        ISO calendar (Gregorian calendar using the ISO 8601 calendar week rules)
-      </td>
-    </tr>
-    <tr>
-      <td><code>japanese</code></td>
-      <td>Japanese Imperial calendar</td>
-    </tr>
-    <tr>
-      <td><code>persian</code></td>
-      <td>Persian calendar</td>
-    </tr>
-    <tr>
-      <td><code>roc</code></td>
-      <td>Republic of China calendar</td>
-    </tr>
-    <tr>
-      <td>
-        <div class="notecard warning">
-          <p>
-            <strong>Warning:</strong> The <code>islamicc</code> calendar key has
-            been deprecated. Please use <code>islamic-civil</code>.
-          </p>
-        </div>
-        <p><code>islamicc</code></p>
-      </td>
-      <td>Civil (algorithmic) Arabic calendar</td>
-    </tr>
-  </tbody>
-</table>
+- `buddhist`
+  - : Thai Buddhist calendar
+- `chinese`
+  - : Traditional Chinese calendar
+- `coptic`
+  - : Coptic calendar
+- `dangi`
+  - : Traditional Korean calendar
+- `ethioaa`
+  - : Ethiopic calendar, Amete Alem (epoch approx. 5493 B.C.E)
+- `ethiopic`
+  - : Ethiopic calendar, Amete Mihret (epoch approx, 8 C.E.)
+- `gregory`
+  - : Gregorian calendar
+- `hebrew`
+  - : Traditional Hebrew calendar
+- `indian`
+  - : Indian calendar
+- `islamic`
+  - : Islamic calendar
+- `islamic-umalqura`
+  - : Islamic calendar, Umm al-Qura
+- `islamic-tbla`
+  - : Islamic calendar, tabular (intercalary years [2,5,7,10,13,16,18,21,24,26,29] - astronomical epoch)
+- `islamic-civil`	
+  - : Islamic calendar, tabular (intercalary years [2,5,7,10,13,16,18,21,24,26,29] - civil epoch)
+- `islamic-rgsa`
+  - : Islamic calendar, Saudi Arabia sighting
+- `iso8601`
+  - : ISO calendar (Gregorian calendar using the ISO 8601 calendar week rules)
+- `japanese`	
+  - : Japanese Imperial calendar
+- `persian`
+  - : Persian calendar
+- `roc`
+  - : Civil (algorithmic) Arabic calendar
+- `islamicc`
+  - : Civil (algorithmic) Arabic calendar
+    > **Warning:** The `islamicc` calendar key has been deprecated. Please use `islamic-civil`.
 
 ## Examples
 

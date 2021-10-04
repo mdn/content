@@ -19,7 +19,7 @@ tags:
 
 <div>{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}</div>
 
-<p class="summary">This article will recap some of the CSS layout features we've already touched upon in previous modules, such as different {{cssxref("display")}} values, as well as introduce some of the concepts we'll be covering throughout this module.</p>
+<p>This article will recap some of the CSS layout features we've already touched upon in previous modules, such as different {{cssxref("display")}} values, as well as introduce some of the concepts we'll be covering throughout this module.</p>
 
 <table>
  <tbody>
@@ -72,7 +72,7 @@ tags:
 <p>The elements that appear one below the other are described as <strong>block</strong> elements, in contrast to <strong>inline</strong> elements, which appear beside one another like the individual words in a paragraph.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The direction in which block element contents are laid out is described as the Block Direction. The Block Direction runs vertically in a language such as English, which has a horizontal writing mode. It would run horizontally in any language with a Vertical Writing Mode, such as Japanese. The corresponding Inline Direction is the direction in which inline contents (such as a sentence) would run.</p>
+<p><strong>Note:</strong> The direction in which block element contents are laid out is described as the Block Direction. The Block Direction runs vertically in a language such as English, which has a horizontal writing mode. It would run horizontally in any language with a Vertical Writing Mode, such as Japanese. The corresponding Inline Direction is the direction in which inline contents (such as a sentence) would run.</p>
 </div>
 
 <p>For many of the elements on your page, the normal flow will create exactly the layout you need. However, for more complex layouts you will need to alter this default behavior using some of the tools available to you in CSS. Starting with a well-structured HTML document is very important because you can then work with the way things are laid out by default rather than fighting against it.</p>
@@ -99,23 +99,19 @@ tags:
 
 <p>Flexbox is the short name for the <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexible Box Layout</a> CSS module, designed to make it easy for us to lay things out in one dimension — either as a row or as a column. To use flexbox, you apply <code>display: flex</code> to the parent element of the elements you want to lay out; all its direct children then become <em>flex items</em>. We can see this in a simple example.</p>
 
+<h3>Setting display: flex</h3>
+
 <p>The HTML markup below gives us a containing element with a class of <code>wrapper</code>, inside of which are three {{htmlelement("div")}} elements. By default these would display as block elements, that is, below one another in our English language document.</p>
 
 <p>However, if we add <code>display: flex</code> to the parent, the three items now arrange themselves into columns. This is due to them becoming <em>flex items</em> and being affected by some initial values that flexbox sets on the flex container. They are displayed in a row because the property {{cssxref("flex-direction")}} of the parent element has an initial value of <code>row</code>. They all appear to stretch in height because the property {{cssxref("align-items")}} of their parent element has an initial value of <code>stretch</code>. This means that the items stretch to the height of the flex container, which in this case is defined by the tallest item. The items all line up at the start of the container, leaving any extra space at the end of the row.</p>
 
-<div id="Flex_1">
-<div class="hidden">
-<h6 id="Flexbox_Example_1">Flexbox Example 1</h6>
-
-<pre class="brush: css">* {box-sizing: border-box;}
-
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 .wrapper &gt; div {
     border-radius: 5px;
     background-color: rgb(207,232,220);
     padding: 1em;
 }
-    </pre>
-</div>
+</pre>
 
 <pre class="brush: css">.wrapper {
   display: flex;
@@ -128,27 +124,25 @@ tags:
   &lt;div class="box3"&gt;Three&lt;/div&gt;
 &lt;/div&gt;
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Flex_1', '300', '200') }}</p>
+<p>{{ EmbedLiveSample('Setting_display_flex', '300', '200') }}</p>
+
+<h3>Setting the flex property</h3>
 
 <p>In addition to properties that can be applied to a <em>flex container</em>, there are also properties that can be applied to <em>flex items</em>. These properties, among other things, can change the way that items <em>flex</em>, enabling them to expand or contract according to available space.</p>
 
 <p>As a simple example, we can add the {{cssxref("flex")}} property to all of our child items, and give it a value of <code>1</code>. This will cause all of the items to grow and fill the container, rather than leaving space at the end. If there is more space then the items will become wider; if there is less space they will become narrower. In addition, if you add another element to the markup, the other items will all become smaller to make space for it; the items all together continue taking up all the space.</p>
 
-<div id="Flex_2">
-<div class="hidden">
-<h6 id="Flexbox_Example_2">Flexbox Example 2</h6>
-
-<pre class="brush: css">    * {box-sizing: border-box;}
-
-    .wrapper &gt; div {
-        border-radius: 5px;
-        background-color: rgb(207,232,220);
-        padding: 1em;
-    }
-    </pre>
-</div>
+<pre class="brush: css hidden">
+* {
+    box-sizing: border-box;
+}
+.wrapper &gt; div {
+    border-radius: 5px;
+    background-color: rgb(207,232,220);
+    padding: 1em;
+}
+</pre>
 
 <pre class="brush: css">.wrapper {
     display: flex;
@@ -165,33 +159,32 @@ tags:
     &lt;div class="box3"&gt;Three&lt;/div&gt;
 &lt;/div&gt;
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Flex_2', '300', '200') }}</p>
+<p>{{ EmbedLiveSample('Setting_the_flex_property', '300', '200') }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: This has been a very short introduction to what is possible in Flexbox. To find out more, see our <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> article.</p>
+<p><strong>Note:</strong> This has been a very short introduction to what is possible in Flexbox. To find out more, see our <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> article.</p>
 </div>
 
 <h2 id="Grid_Layout">Grid Layout</h2>
 
 <p>While flexbox is designed for one-dimensional layout, Grid Layout is designed for two dimensions — lining things up in rows and columns.</p>
 
+<h3>Setting display: grid</h3>
+
 <p>Similar to flexbox, we enable Grid Layout with its specific display value — <code>display: grid</code>. The below example uses similar markup to the flex example, with a container and some child elements. In addition to using <code>display: grid</code>, we also define some row and column <em>tracks</em> for the parent using the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties respectively. We've defined three columns, each of <code>1fr</code>, as well as two rows of <code>100px</code>. We don’t need to put any rules on the child elements; they're automatically placed into the cells our grid's created.</p>
 
-<div id="Grid_1">
-<div class="hidden">
-<h6 id="Grid_example_1">Grid example 1</h6>
+<pre class="brush: css hidden">
+* {
+    box-sizing: border-box;
+  }
 
-<pre class="brush: css">    * {box-sizing: border-box;}
-
-    .wrapper &gt; div {
-        border-radius: 5px;
-        background-color: rgb(207,232,220);
-        padding: 1em;
-    }
-    </pre>
-</div>
+.wrapper &gt; div {
+    border-radius: 5px;
+    background-color: rgb(207,232,220);
+    padding: 1em;
+}
+</pre>
 
 <pre class="brush: css">.wrapper {
     display: grid;
@@ -210,25 +203,24 @@ tags:
     &lt;div class="box6"&gt;Six&lt;/div&gt;
 &lt;/div&gt;
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Grid_1', '300', '330') }}</p>
+<p>{{ EmbedLiveSample('Setting_display_grid', '300', '330') }}</p>
+
+<h3>Placing items on the grid</h3>
 
 <p>Once you have a grid, you can explicitly place your items on it, rather than relying on the auto-placement behavior seen above. In the next example below, we've defined the same grid, but this time with three child items. We've set the start and end line of each item using the {{cssxref("grid-column")}} and {{cssxref("grid-row")}} properties. This causes the items to span multiple tracks.</p>
 
-<div id="Grid_2">
-<div class="hidden">
-<h6 id="Grid_example_2">Grid example 2</h6>
+<pre class="brush: css hidden">
+* {
+    box-sizing: border-box;
+}
 
-<pre class="brush: css">    * {box-sizing: border-box;}
-
-    .wrapper &gt; div {
-        border-radius: 5px;
-        background-color: rgb(207,232,220);
-        padding: 1em;
-    }
-    </pre>
-</div>
+.wrapper &gt; div {
+    border-radius: 5px;
+    background-color: rgb(207,232,220);
+    padding: 1em;
+}
+</pre>
 
 <pre class="brush: css">.wrapper {
     display: grid;
@@ -259,12 +251,11 @@ tags:
     &lt;div class="box3"&gt;Three&lt;/div&gt;
 &lt;/div&gt;
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Grid_2', '300', '330') }}</p>
+<p>{{ EmbedLiveSample('Placing_items_on_the_grid', '300', '330') }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: These two examples reveal just a small sample of the power of Grid layout. To learn more, see our <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">Grid Layout</a> article.</p>
+<p><strong>Note:</strong> These two examples reveal just a small sample of the power of Grid layout. To learn more, see our <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">Grid Layout</a> article.</p>
 </div>
 
 <p>The rest of this guide covers other layout methods that are less important for the main layout of your page, but still help to achieve specific tasks. By understanding the nature of each layout task you will soon find that when you look at a particular component of your design, the type of layout most suitable for it will often be clear.</p>
@@ -284,11 +275,7 @@ tags:
 
 <p>In the example below, we float a <code>&lt;div&gt;</code> left and give it a {{cssxref("margin")}} on the right to push the surrounding text away it. This gives us the effect of text wrapped around the boxed element, and is most of what you need to know about floats as used in modern web design.</p>
 
-<div id="Float_1">
-<div class="hidden">
-<h6 id="Floats_example">Floats example</h6>
-
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
     width: 90%;
     max-width: 900px;
     margin: 0 auto;
@@ -306,7 +293,6 @@ p {
     border-radius: 5px;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;h1&gt;Simple float example&lt;/h1&gt;
 
@@ -326,10 +312,10 @@ p {
 </pre>
 </div>
 
-<p>{{ EmbedLiveSample('Float_1', '100%', 600) }}</p>
+<p>{{ EmbedLiveSample('Floats', '100%', 600) }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: Floats are fully explained in our lesson on the <a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">float and clear</a> properties. Prior to techniques such as Flexbox and Grid Layout, floats were used as a method of creating column layouts. You may still come across these methods on the web; we will cover these in the lesson on <a href="/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">legacy layout methods</a>.</p>
+<p><strong>Note:</strong> Floats are fully explained in our lesson on the <a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">float and clear</a> properties. Prior to techniques such as Flexbox and Grid Layout, floats were used as a method of creating column layouts. You may still come across these methods on the web; we will cover these in the lesson on <a href="/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">legacy layout methods</a>.</p>
 </div>
 
 <h2 id="Positioning_techniques">Positioning techniques</h2>
@@ -392,17 +378,13 @@ p {
 
 <p>Adding this code will give the following result:</p>
 
-<div id="Relative_1">
-<div class="hidden">
-<h6 id="Relative_positioning_example">Relative positioning example</h6>
-
-<pre class="brush: html">&lt;h1&gt;Relative positioning&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Relative positioning&lt;/h1&gt;
 
 &lt;p&gt;I am a basic block level element.&lt;/p&gt;
 &lt;p class="positioned"&gt;This is my relatively positioned element.&lt;/p&gt;
 &lt;p&gt;I am a basic block level element.&lt;/p&gt;</pre>
 
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   width: 500px;
   margin: 0 auto;
 }
@@ -415,18 +397,16 @@ p {
     border-radius: 5px;
 }
 </pre>
-</div>
 
-<pre class="brush: css">.positioned {
+<pre class="brush: css hidden">.positioned {
   position: relative;
   background: rgba(255,84,104,.3);
   border: 2px solid rgb(255,84,104);
   top: 30px;
   left: 30px;
 }</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Relative_1', '100%', 300) }}</p>
+<p>{{ EmbedLiveSample('Relative_positioning', '100%', 300) }}</p>
 
 <h3 id="Absolute_positioning">Absolute positioning</h3>
 
@@ -442,11 +422,7 @@ p {
 
 <p>Here we give our middle paragraph a {{cssxref("position")}} value of <code>absolute</code> and the same {{cssxref("top")}} and {{cssxref("left")}} properties as before. Adding this code will produce the following result:</p>
 
-<div id="Absolute_1">
-<div class="hidden">
-<h6 id="Absolute_positioning_example">Absolute positioning example</h6>
-
-<pre class="brush: html">&lt;h1&gt;Absolute positioning&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Absolute positioning&lt;/h1&gt;
 
 &lt;p&gt;I am a basic block level element.&lt;/p&gt;
 &lt;p class="positioned"&gt;This is my absolutely positioned element.&lt;/p&gt;
@@ -465,18 +441,13 @@ p {
     border-radius: 5px;
 }
 </pre>
-</div>
 
-<pre class="brush: css">.positioned {
-    position: absolute;
+<pre class="brush: css hidden">.positioned {
     background: rgba(255,84,104,.3);
     border: 2px solid rgb(255,84,104);
-    top: 30px;
-    left: 30px;
 }</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Absolute_1', '100%', 300) }}</p>
+<p>{{ EmbedLiveSample('Absolute_positioning', '100%', 300) }}</p>
 
 <p>This is very different! The positioned element has now been completely separated from the rest of the page layout and sits over the top of it. The other two paragraphs now sit together as if their positioned sibling doesn't exist. The {{cssxref("top")}} and {{cssxref("left")}} properties have a different effect on absolutely positioned elements than they do on relatively positioned elements. In this case the offsets have been calculated from the top and left of the page. It is possible to change the parent element that becomes this container and we will take a look at that in the lesson on <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">positioning</a>.</p></p>
 
@@ -490,28 +461,22 @@ p {
 
 &lt;div class="positioned"&gt;Fixed&lt;/div&gt;
 
-&lt;p&gt;Paragraph 1.&lt;/p&gt;
-&lt;p&gt;Paragraph 2.&lt;/p&gt;
-&lt;p&gt;Paragraph 3.&lt;/p&gt;
+&lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis
+orci, pulvinar id metus ut, rutrum luctus orci.&lt;/p&gt;
+
+&lt;p&gt; Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet.
+Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet
+orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare
+ex malesuada et.&lt;/p&gt;
+
+&lt;p&gt; In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
+imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo
+et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
 </pre>
 
-<div id="Fixed_1">
-<div class="hidden">
-<h6 id="Fixed_positioning_example">Fixed positioning example</h6>
-
-<pre class="brush: html">&lt;h1&gt;Fixed positioning&lt;/h1&gt;
-
-&lt;div class="positioned"&gt;Fixed&lt;/div&gt;
-
-&lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
-
-&lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
-
-&lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
-
-</pre>
-
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
     width: 500px;
     margin: 0 auto;
 }
@@ -523,7 +488,6 @@ p {
     margin: 10px;
     border-radius: 5px;
 }</pre>
-</div>
 
 <pre class="brush: css">.positioned {
     position: fixed;
@@ -532,17 +496,13 @@ p {
 }</pre>
 </div>
 
-<p>{{ EmbedLiveSample('Fixed_1', '100%', 200) }}</p>
+<p>{{ EmbedLiveSample('Fixed_positioning', '100%', 200) }}</p>
 
 <h3 id="Sticky_positioning">Sticky positioning</h3>
 
 <p>Sticky positioning is the final positioning method that we have at our disposal. It mixes static positioning with fixed positioning. When an item has <code>position: sticky</code>, it'll scroll in normal flow until it hits offsets from the viewport that we have defined. At that point it becomes "stuck" as if it had <code>position: fixed</code> applied.</p>
 
-<div id="Sticky_1">
-<div class="hidden">
-<h6 id="Sticky_positioning_example">Sticky positioning example</h6>
-
-<pre class="brush: html">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
 
 &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
 
@@ -550,9 +510,10 @@ p {
 
 &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
 
-&lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;       </pre>
+&lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
+</pre>
 
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   width: 500px;
   margin: 0 auto;
 }
@@ -564,19 +525,17 @@ p {
   margin: 10px;
   border-radius: 5px;
 }</pre>
-</div>
 
 <pre class="brush: css">.positioned {
   position: sticky;
   top: 30px;
   left: 30px;
 }</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Sticky_1', '100%', 200) }}</p>
+<p>{{ EmbedLiveSample('Sticky_positioning', '100%', 200) }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: to find more out about positioning, see our <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a> article.</p>
+<p><strong>Note:</strong> to find more out about positioning, see our <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a> article.</p>
 </div>
 
 <h2 id="Table_layout">Table layout</h2>
@@ -652,7 +611,7 @@ form p {
 <p>You can also see this example live at <a href="https://mdn.github.io/learning-area/css/styling-boxes/box-model-recap/css-tables-example.html">css-tables-example.html</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/box-model-recap/css-tables-example.html">source code</a> too.)</p>
 
 <div class="note">
-  <p><strong>Note</strong>: Table layout, unlike the other topics of this page, won't be further covered in this module due to its legacy application.</p>
+  <p><strong>Note:</strong> Table layout, unlike the other topics of this page, won't be further covered in this module due to its legacy application.</p>
   </div>
 
 <h2 id="Multi-column_layout">Multi-column layout</h2>
@@ -663,40 +622,42 @@ form p {
 
 <p>In the below example, we start with a block of HTML inside a containing <code>&lt;div&gt;</code> element with a class of <code>container</code>.</p>
 
-<pre class="brush: html">&lt;div class="container"&gt;
-    &lt;h1&gt;Multi-column layout&lt;/h1&gt;
 
-    &lt;p&gt;Paragraph 1.&lt;/p&gt;
-    &lt;p&gt;Paragraph 2.&lt;/p&gt;
+<pre class="brush: html">
+&lt;div class="container"&gt;
+
+ &lt;h1&gt;Multi-column Layout&lt;/h1&gt;
+
+ &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+ luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+ pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
+ ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.&lt;/p&gt;
+
+ &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget
+ malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut,
+ facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam
+ lorem.&lt;/p&gt;
+
+ &lt;p&gt;Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris
+ ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus
+ viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum
+ sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+ mus.&lt;/p&gt;
 
 &lt;/div&gt;
 </pre>
 
 <p>We're using a <code>column-width</code> of 200 pixels on that container, causing the browser to create as many 200 pixel columns as will fit. Whatever space is left between the columns will be shared.</p>
 
-<div id="Multicol_1">
-<div class="hidden">
-<h6 id="Multicol_example">Multicol example</h6>
 
-<pre class="brush: html">    &lt;div class="container"&gt;
-        &lt;h1&gt;Multi-column Layout&lt;/h1&gt;
+<pre class="brush: css hidden">body { max-width: 800px; margin: 0 auto; } </pre>
 
-        &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
+<pre class="brush: css">
+.container {
+    column-width: 200px;
+}</pre>
 
-        &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
-
-    &lt;/div&gt;
-        </pre>
-
-<pre class="brush: css">body { max-width: 800px; margin: 0 auto; } </pre>
-</div>
-
-<pre class="brush: css">    .container {
-        column-width: 200px;
-    }</pre>
-</div>
-
-<p>{{ EmbedLiveSample('Multicol_1', '100%', 200) }}</p>
+<p>{{ EmbedLiveSample('Multi-column_layout', '100%', 200) }}</p>
 
 <h2 id="Summary">Summary</h2>
 

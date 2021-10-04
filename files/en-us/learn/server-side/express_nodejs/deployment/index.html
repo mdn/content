@@ -157,7 +157,7 @@ export DEBUG="author,book"
 </pre>
 
 <div class="notecard note">
-  <p><strong>Note</strong> <strong>Challenge</strong> Calls to <code>debug</code> can replace logging you might previously have done using <code>console.log()</code> or <code>console.error()</code>. Replace any <code>console.log()</code> calls in your code with logging via the <a href="https://www.npmjs.com/package/debug">debug </a>module. Turn the logging on and off in your development environment by setting the DEBUG variable and observe the impact this has on logging.</p>
+  <p><strong>Note:</strong> Calls to <code>debug</code> can replace logging you might previously have done using <code>console.log()</code> or <code>console.error()</code>. Replace any <code>console.log()</code> calls in your code with logging via the <a href="https://www.npmjs.com/package/debug">debug </a>module. Turn the logging on and off in your development environment by setting the DEBUG variable and observe the impact this has on logging.</p>
 </div>
 
 <p>If you need to log website activity you can use a logging library like <em>Winston</em> or <em>Bunyan</em>. For more information on this topic see: <a href="https://expressjs.com/en/advanced/best-practice-performance.html">Production best practices: performance and reliability</a>.</p>
@@ -332,9 +332,9 @@ Changes to be committed:
 
 <div class="notecard note">
   <p><strong>Note:</strong> This is a good point to make a backup of your "vanilla" project — while some of the changes we're going to be making in the following sections might be useful for deployment on any platform (or development) others might not.</p>
-  
+
   <p>The <em>best</em> way to do this is to use <em>git</em> to manage your revisions. With <em>git</em> you can not only go back to a particular past version, but you can maintain this in a separate "branch" from your production changes and cherry-pick any changes to move between production and development branches. <a href="https://help.github.com/articles/good-resources-for-learning-git-and-github/">Learning Git</a> is well worth the effort, but is beyond the scope of this topic.</p>
-  
+
   <p>The <em>easiest</em> way to do this is to just copy your files into another location. Use whichever approach best matches your knowledge of git!</p>
 </div>
 
@@ -501,7 +501,7 @@ heroku ps   #Display dyno status
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li id="production-best-practices-performance-and-reliability"><a href="https://expressjs.com/en/advanced/best-practice-performance.html">Production best practices: performance and reliability</a> (Express docs)</li>
+ <li><a href="https://expressjs.com/en/advanced/best-practice-performance.html">Production best practices: performance and reliability</a> (Express docs)</li>
  <li><a href="https://expressjs.com/en/advanced/best-practice-security.html">Production Best Practices: Security</a> (Express docs)</li>
  <li>Heroku
   <ul>

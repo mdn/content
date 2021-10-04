@@ -58,12 +58,12 @@ The following properties are obsolete and should no longer be used, but may stil
 
 In the following example, the {{domxref("PaymentRequest.PaymentRequest","PaymentRequest()")}} constructor is used to create a new payment request, which takes three objects as parameters — one containing details of the payment methods that can be used for the payment, one containing details of the actual order (such as items bought and shipping options), and an optional object containing further options.
 
-The first of these three (`supportedInstruments` in the example below) contains a `data` property that has to conform to the structure defined by the {{domxref("BasicCardRequest")}} dictionary.
+The first of these three (`supportedInstruments` in the example below) contains a `data` property that has to conform to the structure defined by the payment method.
 
 ```js
 const supportedInstruments = [
   {
-    supportedMethods: "basic-card",
+    supportedMethods: "https://example.com/pay",
   },
 ];
 
@@ -102,21 +102,7 @@ async function doPaymentRequest() {
 doPaymentRequest();
 ```
 
-Once the payment flow has been triggered using {{domxref("PaymentRequest.show()")}} and the promise resolves successfully, the {{domxref("PaymentResponse")}} object available inside the fulfilled promise (`instrumentResponse` above) will have a {{domxref("PaymentResponse.details")}} property that will contain response details. This has to conform to the structure defined by the `BasicCardResponse` dictionary, and may look something like this:
-
-```js
-{
-  "cardNumber' : '9999999999999999",
-  "cardholderName' : 'Pat Straw",
-  "cardSecurityCode" : "999",
-  "expiryMonth" : "07",
-  "expiryYear" : "2021",
-  "billingAddress" : {
-    "country" : "GB",
-    // etc. billing address is a PaymentAddress object
-  }
-}
-```
+Once the payment flow has been triggered using {{domxref("PaymentRequest.show()")}} and the promise resolves successfully, the {{domxref("PaymentResponse")}} object available from the fulfilled promise (`instrumentResponse` above) will have a {{domxref("PaymentResponse.details")}} property containing response details. This has to conform to the structure defined by the payment method provider.
 
 ## Browser compatibility
 

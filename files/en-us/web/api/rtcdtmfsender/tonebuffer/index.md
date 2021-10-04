@@ -35,6 +35,11 @@ var toneBuffer = RTCDTMFSender.toneBuffer;
 A {{domxref("DOMString")}} listing the tones to be played. If the string is empty,
 there are no tones pending.
 
+### Exceptions
+
+- `InvalidCharacterError` {{domxref("DOMException")}}
+  - : Thrown if a character is not a DTMF tone character (0-9, A-D, # or ,).
+
 ### Tone buffer format
 
 The tone buffer is a string which can contain any combination of the characters that
@@ -57,7 +62,7 @@ are permitted by the DTMF standard.
 
 > **Note:** All other characters are unrecognized and will cause
 > {{domxref("RTCDTMFSender.insertDTMF", "insertDTMF()")}} to throw an
-> `InvalidCharacterError` exception.
+> `InvalidCharacterError` {{domxref("DOMException")}}.
 
 #### Using tone buffer strings
 

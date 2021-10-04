@@ -7,10 +7,9 @@ tags:
   - Reference
   - Template
 ---
-<div> {{MDNSidebar}}</div>
+<div>{{MDNSidebar}}</div>
 
-<div class="note">
-<h2 id="Remove_before_publishing">Remove before publishing</h2>
+<h2 id="Page_includes">Page includes</h2>
 
 <h3 id="Title_and_slug">Title and slug</h3>
 
@@ -22,9 +21,7 @@ tags:
 
 <ul>
  <li>\{{deprecated_header}}—generates a <strong>Deprecated</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>. If it isn't, then you can remove the macro call.</li>
- <li>
-  <div>\{{ariaref}}—generates a suitable ARIA sidebar, depending on what tags are included on the page.</div>
- </li>
+ <li>\{{ariaref}}—generates a suitable ARIA sidebar, depending on what tags are included on the page.</li>
 </ul>
 
 <h3 id="Tags">Tags</h3>
@@ -37,7 +34,7 @@ tags:
 
 <ul>
  <li>ARIA: https://www.w3.org/TR/wai-aria-1.1/</li>
- <li><span class="blob-code-inner blob-code-marker-addition"><span class="pl-s">ARIA Authoring Practices</span></span>: https://www.w3.org/TR/wai-aria-practices-1.1/</li>
+ <li>ARIA Authoring Practices: https://www.w3.org/TR/wai-aria-practices-1.1/</li>
 </ul>
 
 <p>Additional resources:</p>
@@ -48,7 +45,8 @@ tags:
 </ul>
 </div>
 
-<div>{{draft}}\{{ariaref}}</div>
+<h2 id="Page_template">Page template</h2>
+
 
 <p>The summary paragraph—start by naming the role or attribute and saying what it does. This should ideally be 1 or 2 short sentences. This content appears as a tool tip on links to this page, so craft it well.</p>
 
@@ -84,7 +82,7 @@ tags:
 </dl>
 
 <div class="note">
-<p>Include a note about semantic alternatives to using this role or attribute. <span class="ILfuVd yZ8quc">The first rule of ARIA use is that you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and <strong>adding</strong> an ARIA role, state, or property to make it accessible, then do so. Then post full details in best practices section below.</span></p>
+  <p><strong>Note:</strong> Include a note about semantic alternatives to using this role or attribute. The first rule of ARIA use is that you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and <strong>adding</strong> an ARIA role, state, or property to make it accessible, then do so. Then post full details in best practices section below.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>

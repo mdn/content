@@ -141,7 +141,7 @@ The following example demonstrates the usage of these two methods.
 ```js
 function clear_resource_timings() {
   if (performance === undefined) {
-    console.log("= performance.clearResourceTimings(): peformance NOT supported");
+    console.log("= performance.clearResourceTimings(): performance NOT supported");
     return;
   }
   // Check if Performance.clearResourceTiming() is supported
@@ -164,7 +164,7 @@ function clear_resource_timings() {
 
 function set_resource_timing_buffer_size(n) {
   if (performance === undefined) {
-    console.log("= performance.setResourceTimingBufferSize(): peformance NOT supported");
+    console.log("= performance.setResourceTimingBufferSize(): performance NOT supported");
     return;
   }
   // Check if Performance.setResourceTimingBufferSize() is supported

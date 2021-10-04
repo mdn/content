@@ -89,7 +89,7 @@ _Also inherits event handlers from {{DOMxRef("EventTarget")}}._
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers)
     which specifies a function to be called by the browser
     when the {{DOMxRef("RTCDataChannel.close_event", "close")}} event is received by the data channel.
-- {{DOMxRef("RTCDataChannel.onclosing", "onclose")}} {{Experimental_inline}}
+- {{DOMxRef("RTCDataChannel.onclosing", "onclosing")}} {{Experimental_inline}}
   - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers)
     which specifies a function to be called by the browser
     when the {{DOMxRef("RTCDataChannel.closing_event", "closing")}} event is received by the data channel.

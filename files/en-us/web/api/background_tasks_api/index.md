@@ -86,7 +86,7 @@ Below you'll find only the HTML and JavaScript for this example. The CSS is not 
 
 ### HTML content
 
-In order to be oriented about what we're trying to accomplish, let's have a look at the HTML. This establishes a box (ID `"Container"`) that's used to present the progress of an operation (because you never know how long decoding "quantum filament tachyon emissions" will take, after all) as well as a second main box (with the ID `"logBox"`), which is used to display textual output.
+In order to be oriented about what we're trying to accomplish, let's have a look at the HTML. This establishes a box (`id="container"`) that's used to present the progress of an operation (because you never know how long decoding "quantum filament tachyon emissions" will take, after all) as well as a second main box (`id="logBox"`), which is used to display textual output.
 
 ```html
 <p>
@@ -95,23 +95,21 @@ In order to be oriented about what we're trying to accomplish, let's have a look
   method.
 </p>
 
-<div class="container">
+<div id="container">
   <div class="label">Decoding quantum filament tachyon emissions...</div>
+  
   <progress id="progress" value="0"></progress>
-  <div class="button" id="startButton">
-    Start
-  </div>
+  
+  <button class="button" id="startButton">Start</button>
+  
   <div class="label counter">
     Task <span id="currentTaskNumber">0</span> of <span id="totalTaskCount">0</span>
   </div>
 </div>
 
-<div class="logBox">
-  <div class="logHeader">
-    Log
-  </div>
-  <div id="log">
-  </div>
+<div id="logBox">
+  <div class="logHeader">Log</div>
+  <div id="log"></div>
 </div>
 ```
 
@@ -123,7 +121,7 @@ body {
   font-size: 16px;
 }
 
-.logBox {
+#logBox {
   margin-top: 16px;
   width: 400px;
   height:500px;
@@ -150,7 +148,7 @@ body {
   height: 460px;
 }
 
-.container {
+#container {
   width: 400px;
   padding: 6px;
   border-radius: 6px;
@@ -291,7 +289,7 @@ Next, we check to see if we already have an idle callback created; if `taskHandl
 
 ##### Running tasks
 
-Our idle callback handler, runTaskQueue(), gets called when the browser determines there's enough idle time available to let us do some work or our timeout of one second expires. This function's job is to run our enqueued tasks.
+Our idle callback handler, `runTaskQueue()`, gets called when the browser determines there's enough idle time available to let us do some work or our timeout of one second expires. This function's job is to run our enqueued tasks.
 
 ```js
 function runTaskQueue(deadline) {

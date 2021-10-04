@@ -9,19 +9,24 @@ tags:
   - HIDInputReportEvent
 browser-compat: api.HIDInputReportEvent.data
 ---
-{{securecontext_header}}{{DefaultAPISidebar("")}}
+{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
 
 The **`data`**  property of the {{domxref("HIDInputReportEvent")}} interface returns a {{jsxref("DataView")}} containing the data from the input report, excluding the `reportId` if the HID interface uses report IDs.
 
-## Syntax
-
-```js
-let aDataView = HIDInputReportEvent.data;
-```
-
-### Value
+## Value
 
 A {{jsxref("DataView")}}.
+
+## Examples
+
+In the following example the returned `data` is logged to the console.
+
+```js
+device.addEventListener("inputreport", event => {
+  const { data, device, reportId } = event;
+  console.log(data);
+});
+```
 
 ## Specifications
 

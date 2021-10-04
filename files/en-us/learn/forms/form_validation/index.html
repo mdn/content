@@ -97,7 +97,7 @@ tags:
 </ul>
 
 <div class="notecard note">
-<p><strong>Note</strong>: There are several errors that will prevent the form from being submitted, including a {{domxref('validityState.badInput', 'badInput')}}, {{domxref('validityState.patternMismatch','patternMismatch')}}, {{domxref('validityState.rangeOverflow','rangeOverflow')}} or {{domxref('validityState.rangeUnderflow','rangeUnderflow')}}, {{domxref('validityState.stepMismatch','stepMismatch')}}, {{domxref('validityState.tooLong','tooLong')}} or {{domxref('validityState.tooShort','tooShort')}}, {{domxref('validityState.typeMismatch','typeMismatch')}}, {{domxref('validityState.valueMissing','valueMissing')}}, or a {{domxref('validityState.customError','customError')}}.</p>
+<p><strong>Note:</strong> There are several errors that will prevent the form from being submitted, including a {{domxref('validityState.badInput', 'badInput')}}, {{domxref('validityState.patternMismatch','patternMismatch')}}, {{domxref('validityState.rangeOverflow','rangeOverflow')}} or {{domxref('validityState.rangeUnderflow','rangeUnderflow')}}, {{domxref('validityState.stepMismatch','stepMismatch')}}, {{domxref('validityState.tooLong','tooLong')}} or {{domxref('validityState.tooShort','tooShort')}}, {{domxref('validityState.typeMismatch','typeMismatch')}}, {{domxref('validityState.valueMissing','valueMissing')}}, or a {{domxref('validityState.customError','customError')}}.</p>
 </div>
 
 <h2 id="Built-in_form_validation_examples">Built-in form validation examples</h2>
@@ -157,7 +157,7 @@ input:valid {
 <p>{{EmbedLiveSample("The_required_attribute", "100%", 80)}}</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You can find this example live on GitHub as <a href="https://mdn.github.io/learning-area/html/forms/form-validation/fruit-required.html">fruit-validation.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-required.html">source code</a>.)</p>
+<p><strong>Note:</strong> You can find this example live on GitHub as <a href="https://mdn.github.io/learning-area/html/forms/form-validation/fruit-required.html">fruit-validation.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-required.html">source code</a>.)</p>
 </div>
 
 <p>Try submitting the form without a value. Note how the invalid input gets focus, a default error message ("Please fill out this field") appears, and the form is prevented from being sent.</p>
@@ -165,7 +165,7 @@ input:valid {
 <p>The presence of the <code>required</code> attribute on any element that supports this attribute means the element matches the {{cssxref(':required')}} pseudoclass whether it has a value or not. If the {{HTMLElement("input")}} has no value, the <code>input</code> will match the {{cssxref(':invalid')}} pseudoclass.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: For good user experience, indicate to the user when form fields are required. It isn't only good user experience, it is required by WCAG <a href="/en-US/docs/Learn/Accessibility">accessibility</a> guidelines. Also, only require users to input data you actually need: For example, why do you really need to know someone's gender or title?</p>
+<p><strong>Note:</strong> For good user experience, indicate to the user when form fields are required. It isn't only good user experience, it is required by WCAG <a href="/en-US/docs/Learn/Accessibility">accessibility</a> guidelines. Also, only require users to input data you actually need: For example, why do you really need to know someone's gender or title?</p>
 </div>
 
 <h3 id="Validating_against_a_regular_expression">Validating against a regular expression</h3>
@@ -209,7 +209,7 @@ input:valid {
 <p>{{EmbedLiveSample("Validating_against_a_regular_expression", "100%", 80)}}</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You can find this example live on GitHub as <a href="https://mdn.github.io/learning-area/html/forms/form-validation/fruit-pattern.html">fruit-pattern.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-pattern.html">source code</a>.)</p>
+<p><strong>Note:</strong> You can find this example live on GitHub as <a href="https://mdn.github.io/learning-area/html/forms/form-validation/fruit-pattern.html">fruit-pattern.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-pattern.html">source code</a>.)</p>
 </div>
 
 <p>In this example, the {{HTMLElement("input")}} element accepts one of four possible values: the strings "banana", "Banana", "cherry", or "Cherry". Regular expressions are case-sensitive, but we've made it support capitalized as well as lower-case versions using an extra "Aa" pattern nested inside square brackets.</p>
@@ -223,7 +223,7 @@ input:valid {
 </div>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The {{HTMLElement("textarea")}} element doesn't support the <a href="/en-US/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a> attribute.</p>
+<p><strong>Note:</strong> The {{HTMLElement("textarea")}} element doesn't support the <a href="/en-US/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a> attribute.</p>
 </div>
 
 <h3 id="Constraining_the_length_of_your_entries">Constraining the length of your entries</h3>
@@ -278,11 +278,11 @@ div {
 <p>{{EmbedLiveSample("Constraining_the_values_of_your_entries", "100%", 100)}}</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You can find this example live on GitHub as <a href="https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html">fruit-length.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-length.html">source code</a>.)</p>
+<p><strong>Note:</strong> You can find this example live on GitHub as <a href="https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html">fruit-length.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-length.html">source code</a>.)</p>
 </div>
 
 <div class="notecard note">
-<p><strong>Note</strong>: <code>&lt;input type="number"&gt;</code> (and other types, such as <code>range</code> and <code>date</code>) can also take a <a href="/en-US/docs/Web/HTML/Attributes/step"><code>step</code></a> attribute, which specifies what increment the value will go up or down by when the input controls are used (such as the up and down number buttons). In the above example we've not included a <code>step</code> attribute, so the value defaults to <code>1</code>. This means that floats, like 3.2, will also show as invalid.</p>
+<p><strong>Note:</strong> <code>&lt;input type="number"&gt;</code> (and other types, such as <code>range</code> and <code>date</code>) can also take a <a href="/en-US/docs/Web/HTML/Attributes/step"><code>step</code></a> attribute, which specifies what increment the value will go up or down by when the input controls are used (such as the up and down number buttons). In the above example we've not included a <code>step</code> attribute, so the value defaults to <code>1</code>. This means that floats, like 3.2, will also show as invalid.</p>
 </div>
 
 <h3 id="Full_example">Full example</h3>
@@ -372,7 +372,7 @@ input:focus:invalid {
 <p>See <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation#validation-related_attributes">Validation-related attributes</a> for a complete list of attributes that can be used to constrain input values and the input types that support them.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You can find this example live on GitHub as <a href="https://mdn.github.io/learning-area/html/forms/form-validation/full-example.html">full-example.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/full-example.html">source code</a>.)</p>
+<p><strong>Note:</strong> You can find this example live on GitHub as <a href="https://mdn.github.io/learning-area/html/forms/form-validation/full-example.html">full-example.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/full-example.html">source code</a>.)</p>
 </div>
 
 <h2 id="Validating_forms_using_JavaScript">Validating forms using JavaScript</h2>
@@ -392,7 +392,7 @@ input:focus:invalid {
  <li><code><a href="/en-US/docs/Web/API/HTMLTextAreaElement">HTMLTextAreaElement</a></code> (represents a <code><a href="/en-US/docs/Web/HTML/Element/textarea">&lt;textarea&gt;</a></code> element)</li>
 </ul>
 
-<p id="Constraint_validation_API_properties">The Constraint validation API makes the following properties available on the above elements.</p>
+<p>The Constraint validation API makes the following properties available on the above elements.</p>
 
 <ul>
  <li><code>validationMessage</code>: Returns a localized message describing the validation constraints that the control doesn't satisfy (if any). If the control is not a candidate for constraint validation (<code>willValidate</code> is <code>false</code>) or the element's value satisfies its constraints (is valid), this will return an empty string.</li>
@@ -411,7 +411,7 @@ input:focus:invalid {
  <li><code>willValidate</code>: Returns <code>true</code> if the element will be validated when the form is submitted; <code>false</code> otherwise.</li>
 </ul>
 
-<p id="Constraint_validation_API_methods">The Constraint Validation API also makes the following methods available on the above elements and the <code><a href="/en-US/docs/Web/HTML/Element/form">form</a></code> element.</p>
+<p>The Constraint Validation API also makes the following methods available on the above elements and the <code><a href="/en-US/docs/Web/HTML/Element/form">form</a></code> element.</p>
 
 <ul>
  <li><code>checkValidity()</code>: Returns <code>true</code> if the element's value has no validity problems; <code>false</code> otherwise. If the element is invalid, this method also fires an <a href="/en-US/docs/Web/API/HTMLInputElement/invalid_event"><code>invalid</code> event</a> on the element.</li>
@@ -465,7 +465,7 @@ email.addEventListener("input", function (event) {
 <p>{{EmbedGHLiveSample("learning-area/html/forms/form-validation/custom-error-message.html", '100%', 80)}}</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You can find this example live on GitHub as <a href="https://mdn.github.io/learning-area/html/forms/form-validation/custom-error-message.html">custom-error-message.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/custom-error-message.html">source code</a>.)</p>
+<p><strong>Note:</strong> You can find this example live on GitHub as <a href="https://mdn.github.io/learning-area/html/forms/form-validation/custom-error-message.html">custom-error-message.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/custom-error-message.html">source code</a>.)</p>
 </div>
 
 <h4 id="A_more_detailed_example">A more detailed example</h4>
@@ -492,7 +492,7 @@ email.addEventListener("input", function (event) {
 <p>We are aiming to show the error messages inside a <code>&lt;span&gt;</code> element. The <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions"><code>aria-live</code></a> attribute is set on that <code>&lt;span&gt;</code> to make sure that our custom error message will be presented to everyone, including it being read out to screenreader users.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: A key point here is that setting the <code>novalidate</code> attribute on the form is what stops the form from showing its own error message bubbles, and allows us to instead display the custom error messages in the DOM in some manner of our own choosing.</p>
+<p><strong>Note:</strong> A key point here is that setting the <code>novalidate</code> attribute on the form is what stops the form from showing its own error message bubbles, and allows us to instead display the custom error messages in the DOM in some manner of our own choosing.</p>
 </div>
 
 <p>Now onto some basic CSS to improve the look of the form slightly, and provide some visual feedback when the input data is invalid:</p>
@@ -616,13 +616,13 @@ function showError() {
 <p>{{EmbedGHLiveSample("learning-area/html/forms/form-validation/detailed-custom-validation.html", '100%', 150)}}</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You can find this example live on GitHub as <a href="https://mdn.github.io/learning-area/html/forms/form-validation/detailed-custom-validation.html">detailed-custom-validation.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/detailed-custom-validation.html">source code</a>.)</p>
+<p><strong>Note:</strong> You can find this example live on GitHub as <a href="https://mdn.github.io/learning-area/html/forms/form-validation/detailed-custom-validation.html">detailed-custom-validation.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/detailed-custom-validation.html">source code</a>.)</p>
 </div>
 
 <p>The constraint validation API gives you a powerful tool to handle form validation, letting you have enormous control over the user interface above and beyond what you can do with HTML and CSS alone.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: For further information, see our <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Constraint validation guide</a>, and the <a href="/en-US/docs/Web/API/Constraint_validation">Constraint Validation API</a> reference.</p>
+<p><strong>Note:</strong> For further information, see our <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Constraint validation guide</a>, and the <a href="/en-US/docs/Web/API/Constraint_validation">Constraint Validation API</a> reference.</p>
 </div>
 
 <h3 id="Validating_forms_without_a_built-in_API">Validating forms without a built-in API</h3>

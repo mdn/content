@@ -107,6 +107,8 @@ place-items: unset;
 
 ### Placing items in a flex container
 
+In flexbox {{cssxref("justify-self")}} or {{cssxref("justify-items")}} do not apply, as on the main axis items are treated as a group. Therefore, the second value will be ignored.
+
 ```css hidden
 div > div {
   box-sizing: border-box;
@@ -120,6 +122,7 @@ div > div {
 #item1 {
   background-color: #8cffa0;
   min-height: 30px;
+  font-size: 2em;
 }
 
 #item2 {
@@ -145,7 +148,6 @@ div > div {
 #item6 {
   background-color: #8cffff;
   min-height: 50px;
-  font-size: 30px;
 }
 
 select {
@@ -158,26 +160,16 @@ select {
 ```
 
 ```html hidden
-<div id="container" class="flex">
+<div id="container">
   <div id="item1">1</div>
   <div id="item2">2</div>
   <div id="item3">3</div>
-  <div id="item4">4</div>
-  <div id="item5">5</div>
-  <div id="item6">6</div>
-</div>
-
-<div class="row">
-  <label for="display">display: </label>
-  <select id="display">
-    <option value="flex">flex</option>
-    <option value="grid">grid</option>
-  </select>
 </div>
 
 <div class="row">
   <label for="values">place-items: </label>
   <select id="values">
+    <option value="stretch">stretch</option>
     <option value="start">start</option>
     <option value="center">center</option>
     <option value="end">end</option>
@@ -203,16 +195,11 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
+let values = document.getElementById('values');
+let container = document.getElementById('container');
 
 values.addEventListener('change', function (evt) {
   container.style.placeItems = evt.target.value;
-});
-
-display.addEventListener('change', function (evt) {
-  container.className = evt.target.value;
 });
 ```
 
@@ -222,24 +209,135 @@ display.addEventListener('change', function (evt) {
 #container {
   height:200px;
   width: 240px;
-  place-items: center; /* You can change this value by selecting another option in the list */
+  place-items: stretch; /* You can change this value by selecting another option in the list */
   background-color: #8c8c8c;
-}
-
-.flex {
   display: flex;
-  flex-wrap: wrap;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 50px);
-}
 ```
 
 #### Result
 
 {{EmbedLiveSample("Placing_items_in_a_flex_container", 260, 290)}}
+
+
+### Placing items in a grid container
+
+The following grid container has items which are smaller than the grid areas they are placed in, therefore `place-items` will move them in the block and inline dimensions.
+
+```css hidden
+div > div {
+  box-sizing: border-box;
+  border: 2px solid #8c8c8c;
+}
+
+#item1 {
+  background-color: #8cffa0;
+  min-height: 30px;
+  font-size: 2em;
+}
+
+#item2 {
+  background-color: #a0c8ff;
+  min-height: 50px;
+}
+
+#item3 {
+  background-color: #ffa08c;
+  min-height: 40px;
+}
+
+#item4 {
+  background-color: #ffff8c;
+  min-height: 60px;
+}
+
+#item5 {
+  background-color: #ff8cff;
+  min-height: 70px;
+}
+
+#item6 {
+  background-color: #8cffff;
+  min-height: 50px;
+}
+
+select {
+  font-size: 16px;
+}
+
+.row {
+  margin-top: 10px;
+}
+```
+
+```html hidden
+<div id="gridcontainer">
+  <div id="item1">1</div>
+  <div id="item2">2</div>
+  <div id="item3">3</div>
+  <div id="item4">4</div>
+  <div id="item5">5</div>
+</div>
+
+<div class="row">
+  <label for="gridvalues">place-items: </label>
+  <select id="gridvalues">
+    <option value="stretch">stretch</option>
+    <option value="start">start</option>
+    <option value="center">center</option>
+    <option value="end">end</option>
+    <option value="left">left</option>
+    <option value="right">right</option>
+    <option value="auto center">auto center</option>
+    <option value="normal start">normal start</option>
+    <option value="center normal">center normal</option>
+    <option value="start auto">start auto</option>
+    <option value="end normal">end normal</option>
+    <option value="self-start auto">self-start auto</option>
+    <option value="self-end normal">self-end normal</option>
+    <option value="flex-start auto">flex-start auto</option>
+    <option value="flex-end normal">flex-end normal</option>
+    <option value="left auto">left auto</option>
+    <option value="right normal">right normal</option>
+    <option value="baseline normal">baseline normal</option>
+    <option value="first baseline auto">first baseline auto</option>
+    <option value="last baseline normal">last baseline normal</option>
+    <option value="stretch auto">stretch auto</option>
+  </select>
+</div>
+```
+
+```js hidden
+let values = document.getElementById('gridvalues');
+let container = document.getElementById('gridcontainer');
+
+values.addEventListener('change', function (evt) {
+  container.style.placeItems = evt.target.value;
+});
+```
+
+#### CSS
+
+```css
+#gridcontainer {
+  height:200px;
+  width: 240px;
+  place-items: stretch; /* You can change this value by selecting another option in the list */
+  background-color: #8c8c8c;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#gridcontainer > div {
+  width: 50px;
+}
+
+```
+
+#### Result
+
+{{EmbedLiveSample("Placing_items_in_a_grid_container", 260, 290)}}
 
 ## Specifications
 

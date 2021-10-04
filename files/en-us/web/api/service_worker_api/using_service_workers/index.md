@@ -16,7 +16,7 @@ This article provides information on getting started with service workers, inclu
 
 One overriding problem that web users have suffered with for years is loss of connectivity. The best web app in the world will provide a terrible user experience if you can’t download it. There have been various attempts to create technologies to solve this problem, and some of the issues have been solved. But the overriding problem is that there still isn’t a good overall control mechanism for asset caching and custom network requests.
 
-The previous attempt — [AppCache](/en-US/docs/Web/HTML/Using_the_application_cache) — seemed to be a good idea because it allowed you to specify assets to cache really easily. However, it made many assumptions about what you were trying to do and then broke horribly when your app didn’t follow those assumptions exactly. Read Jake Archibald's (unfortunately-titled but well-written) [Application Cache is a Douchebag](https://alistapart.com/article/application-cache-is-a-douchebag) for more details.
+The previous attempt, _AppCache_, seemed to be a good idea because it allowed you to specify assets to cache really easily. However, it made many assumptions about what you were trying to do and then broke horribly when your app didn’t follow those assumptions exactly. Read Jake Archibald's (unfortunately-titled but well-written) [Application Cache is a Douchebag](https://alistapart.com/article/application-cache-is-a-douchebag) for more details.
 
 > **Note:** From Firefox 84, AppCache has been removed ({{bug("1619673")}}). It is also planned for removal in Chomium 90, and is deprecated in Safari.
 

@@ -35,15 +35,15 @@ A {{jsxref("Promise")}} that resolves with `undefined` after the user accepts or
 
 The promise will be rejected with one of the following exceptions:
 
-- {{domxref("DOMException")}} `InvalidStateError`
+- `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if {{domxref("HTMLMediaElement.disableRemotePlayback","disableRemotePlayback")}} is `true` for the media element.
-- {{domxref("DOMException")}} `OperationError`
+- `OperationError` {{domxref("DOMException")}}
   - : Thrown if there is already an unsettled promise for this media element, or browsing context.
-- {{domxref("DOMException")}} `InvalidAccessError`
+- `InvalidAccessError` {{domxref("DOMException")}}
   - : Thrown if the user has not interacted with this device recently.
-- {{domxref("DOMException")}} `NotSupportedError`
+- `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the user agent knows that remote playback of this particular media is not feasible.
-- {{domxref("DOMException")}} `NotFoundError`
+- `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if remote playback is unavailable.
 
 ## Examples

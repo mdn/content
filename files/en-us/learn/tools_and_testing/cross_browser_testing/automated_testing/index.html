@@ -17,7 +17,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment", "Learn/Tools_and_testing/Cross_browser_testing")}}</div>
 
-<p class="summary">Manually running tests on several browsers and devices, several times per day, can get tedious, and time-consuming. To handle this efficiently, you should become familiar with automation tools. In this article, we look at what is available, how to use task runners, and how to use the basics of commercial browser test automation apps such as LambdaTest, Sauce Labs, BrowserStack, and TestingBot.</p>
+<p>Manually running tests on several browsers and devices, several times per day, can get tedious, and time-consuming. To handle this efficiently, you should become familiar with automation tools. In this article, we look at what is available, how to use task runners, and how to use the basics of commercial browser test automation apps such as LambdaTest, Sauce Labs, BrowserStack, and TestingBot.</p>
 
 <table>
  <tbody>
@@ -46,7 +46,7 @@ tags:
 <p>We will look at how to set up your own Selenium-based testing system in the next article. In this article, we'll look at how to set up a task runner, and use the basic functionality of commercial systems like the ones mentioned above.</p>
 
 <div class="note">
-<p><strong>Note</strong>: the above two categories are not mutually exclusive. It is possible to set up a task runner to access a service like Sauce Labs, or LambdaTest via an API, run cross browser tests, and return results. We will look at this below as well.</p>
+<p><strong>Note:</strong> the above two categories are not mutually exclusive. It is possible to set up a task runner to access a service like Sauce Labs, or LambdaTest via an API, run cross browser tests, and return results. We will look at this below as well.</p>
 </div>
 
 <h2 id="Using_a_task_runner_to_automate_testing_tools">Using a task runner to automate testing tools</h2>
@@ -70,7 +70,7 @@ npm -v</pre>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: If the above command fails with permissions errors, <a href="https://docs.npmjs.com/getting-started/fixing-npm-permissions">Fixing npm permissions</a> should sort you out.</p>
+<p><strong>Note:</strong> If the above command fails with permissions errors, <a href="https://docs.npmjs.com/getting-started/fixing-npm-permissions">Fixing npm permissions</a> should sort you out.</p>
 </div>
 
 <p>To start using Node/npm-based packages on your projects, you need to set up your project directories as npm projects. This is easy to do.</p>
@@ -154,7 +154,7 @@ exports.default = function(cb) {
 </pre>
 
   <div class="note">
-  <p><strong>Note</strong>: <code>--save-dev</code> adds the package as a dependency to your project. If you look in your project's <code>package.json</code> file, you'll see an entry for it in the <code>devDependencies</code> property.</p>
+  <p><strong>Note:</strong> <code>--save-dev</code> adds the package as a dependency to your project. If you look in your project's <code>package.json</code> file, you'll see an entry for it in the <code>devDependencies</code> property.</p>
   </div>
  </li>
  <li>Add the following dependency to <code>gulpfile.js</code>:
@@ -291,11 +291,11 @@ const jshint = require('gulp-jshint');
 <p>Now try entering the <code>gulp watch</code> command into your terminal. Gulp will now watch your directory, and run the appropriate tasks whenever you save a change to an HTML, CSS, or JavaScript file.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The <code>*</code> character is a wildcard character — here we're saying "run these tasks when any files of these types are saved. You could also use wildcards in your main tasks, for example <code>gulp.src('src/*.css')</code> would grab all your CSS files and then run piped tasks on them.</p>
+<p><strong>Note:</strong> The <code>*</code> character is a wildcard character — here we're saying "run these tasks when any files of these types are saved. You could also use wildcards in your main tasks, for example <code>gulp.src('src/*.css')</code> would grab all your CSS files and then run piped tasks on them.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: One problem with our watch command above is that our CSSLint/Autoprefixer combination throws full-blown errors when a CSS error is encountered, which stops the watch working. You'll have to restart the watch once a CSS error is encountered, or find another way to do this.</p>
+<p><strong>Note:</strong> One problem with our watch command above is that our CSSLint/Autoprefixer combination throws full-blown errors when a CSS error is encountered, which stops the watch working. You'll have to restart the watch once a CSS error is encountered, or find another way to do this.</p>
 </div>
 
 <p>There's a lot more you can do with Gulp. The <a href="https://gulpjs.com/plugins/">Gulp plugin directory</a> has literally thousands of plugins to search through.</p>
@@ -318,7 +318,7 @@ const jshint = require('gulp-jshint');
 <p>You can then step up a gear, using an API to access functionality programmatically, which means that such apps can be combined with task runners, such as your own local Selenium environments and others, to create automated tests.</p>
 
 <div class="note">
-<p><strong>Note</strong>: There are other commercial browser testing systems available but in this article, we'll focus on LambdaTest, Sauce Labs, and BrowserStack. We're not saying that these are necessarily the best tools available, but they are good ones that are simple for beginners to get up and running with.</p>
+<p><strong>Note:</strong> There are other commercial browser testing systems available but in this article, we'll focus on LambdaTest, Sauce Labs, and BrowserStack. We're not saying that these are necessarily the best tools available, but they are good ones that are simple for beginners to get up and running with.</p>
 </div>
 
 <h3 id="LambdaTest">LambdaTest</h3>
@@ -331,7 +331,7 @@ const jshint = require('gulp-jshint');
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: Unlike other cloud-based cross browser testing service providers, LambdaTest offers a freemium account where you get lifetime access to their platform. The only difference between their premium and their freemium plan is on the amount of consumption. For automation testing through their Selenium Grid, LambdaTest offers 60 minutes per month of free testing.</p>
+<p><strong>Note:</strong> Unlike other cloud-based cross browser testing service providers, LambdaTest offers a freemium account where you get lifetime access to their platform. The only difference between their premium and their freemium plan is on the amount of consumption. For automation testing through their Selenium Grid, LambdaTest offers 60 minutes per month of free testing.</p>
 </div>
 
 <h4 id="The_basics_Manual_tests">The basics: Manual tests</h4>
@@ -348,12 +348,12 @@ const jshint = require('gulp-jshint');
   If you notice an issue with the UI, then you can share it with your colleagues by capturing a screenshot of your VM with the screenshot button. You can also record a video of your test session by hitting the recorder button in your test session.</li>
  <li>With the in-built image editor, highlight your screenshot before you push it to your colleagues.<img alt="Highlight a bug" src="mark-as-bug-3.png"></li>
  <li>
-  <p id="Using_the_mark_as_bug_button_you_can_push_bug_to_numerous_third-party_tools_which_are_integrated_with_LambdaTest_such_as_Jira_asana_trello_and_more._That_way_you_can_log_a_bug_directly_from_the_middle_of_your_test_session_on_LambdaTest_to_your_project_management_instance._Check_out_all_LambdaTest_integrations_with_third-party_tools.">Using the mark as bug button you can push bugs to numerous third-party tools such as Jira, Asana, Trello, and more. That way you can log a bug directly from your test session on LambdaTest to your project management instance. Check out all the <a href="https://www.lambdatest.com/integrations">third-party LambdaTest integrations</a>.</p>
+  <p>Using the mark as bug button you can push bugs to numerous third-party tools such as Jira, Asana, Trello, and more. That way you can log a bug directly from your test session on LambdaTest to your project management instance. Check out all the <a href="https://www.lambdatest.com/integrations">third-party LambdaTest integrations</a>.</p>
  </li>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: All the videos and images captured inside a test session are captured inside the gallery, test logs, and issue tracker at LambdaTest.</p>
+<p><strong>Note:</strong> All the videos and images captured inside a test session are captured inside the gallery, test logs, and issue tracker at LambdaTest.</p>
 </div>
 
 <h3 id="Sauce_Labs">Sauce Labs</h3>
@@ -390,7 +390,7 @@ const jshint = require('gulp-jshint');
 <p>Once you stop the session, you'll return to the Manual Tests tab, where you'll see an entry for each of the previous manual sessions you started. Clicking on one of these entries shows more data for the session. In here you can download any screenshots you took, watch a video of the session, view data logs, and more.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This is already very useful, and way more convenient than having to set up all these emulators and virtual machines by yourself.</p>
+<p><strong>Note:</strong> This is already very useful, and way more convenient than having to set up all these emulators and virtual machines by yourself.</p>
 </div>
 
 <h4 id="Advanced_The_Sauce_Labs_API">Advanced: The Sauce Labs API</h4>
@@ -470,7 +470,7 @@ myAccount.getAccountDetails(function (err, res) {
 <p><img alt="" src="browserstack-test-device-sized.png"></p>
 
 <div class="note">
-<p><strong>Note</strong>: The blue device icon next to some of the mobile device choices signals that you will be testing on a real device; choices without that icon will be run on an emulator.</p>
+<p><strong>Note:</strong> The blue device icon next to some of the mobile device choices signals that you will be testing on a real device; choices without that icon will be run on an emulator.</p>
 </div>
 
 <p>You'll find that you can enter URLs into the address bar, and use the other controls like you'd expect on a real device. You can even do things like copy and paste from the device to your clipboard, scroll up and down by dragging with the mouse, or use appropriate gestures (e.g. pinch/zoom, two fingers to scroll) on the touchpads of supporting devices (e.g. MacBook). Note that not all features are available on all devices.</p>
@@ -496,7 +496,7 @@ myAccount.getAccountDetails(function (err, res) {
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: This is already very useful, and way more convenient than having to set up all these emulators and virtual machines by yourself.</p>
+<p><strong>Note:</strong> This is already very useful, and way more convenient than having to set up all these emulators and virtual machines by yourself.</p>
 </div>
 
 <h4 id="Other_basic_features">Other basic features</h4>

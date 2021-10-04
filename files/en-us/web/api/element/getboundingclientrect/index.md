@@ -142,9 +142,8 @@ element, in each case.
 This example demonstrates how bounding client rect is changing when document is scrolled.
 
 ```html
-<div></div>
-    <div id="example"></div>
-    <div id="controls"></div>
+<div id="example"></div>
+<div id="controls"></div>
 ```
 
 ```css
@@ -163,7 +162,7 @@ p { margin: 0; }
 ```js
 function update() {
   const container = document.getElementById("controls");
-  const elem = document.querySelector('div');
+  const elem = document.getElementById("example");
   const rect = elem.getBoundingClientRect();
 
   container.innerHTML = '';
