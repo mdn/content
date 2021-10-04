@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.endsWith
 ---
+
 {{JSRef}}
 
 The **`endsWith()`** method determines
@@ -21,8 +22,8 @@ whether a string ends with the characters of a specified string, returning
 ## Syntax
 
 ```js
-endsWith(searchString)
-endsWith(searchString, length)
+endsWith(searchString);
+endsWith(searchString, length);
 ```
 
 ### Parameters
@@ -48,11 +49,11 @@ method is case-sensitive.
 ### Using endsWith()
 
 ```js
-let str = 'To be, or not to be, that is the question.'
+let str = "To be, or not to be, that is the question.";
 
-console.log(str.endsWith('question.'))  // true
-console.log(str.endsWith('to be'))      // false
-console.log(str.endsWith('to be', 19))  // true
+console.log(str.endsWith("question.")); // true
+console.log(str.endsWith("to be")); // false
+console.log(str.endsWith("to be", 19)); // true
 ```
 
 ## Polyfill
@@ -63,7 +64,7 @@ in all JavaScript implementations yet. However, you can polyfill
 
 ```js
 if (!String.prototype.endsWith) {
-  String.prototype.endsWith = function(search, this_len) {
+  String.prototype.endsWith = function (search, this_len) {
     if (this_len === undefined || this_len > this.length) {
       this_len = this.length;
     }

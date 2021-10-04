@@ -8,6 +8,7 @@ tags:
   - Property
 browser-compat: javascript.builtins.Function.caller
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`function.caller`** property returns the function that invoked the specified function. It returns `null` for strict, async function and generator function callers.
@@ -25,8 +26,16 @@ The special property `__caller__`, which returned the activation object of the c
 Note that in case of recursion, you can't reconstruct the call stack using this property. Consider:
 
 ```js
-function f(n) { g(n - 1); }
-function g(n) { if (n > 0) { f(n); } else { stop(); } }
+function f(n) {
+  g(n - 1);
+}
+function g(n) {
+  if (n > 0) {
+    f(n);
+  } else {
+    stop();
+  }
+}
 f(2);
 ```
 
@@ -39,16 +48,16 @@ f(2) -> g(1) -> f(1) -> g(0) -> stop()
 The following is true:
 
 ```js
-stop.caller === g && f.caller === g && g.caller === f
+stop.caller === g && f.caller === g && g.caller === f;
 ```
 
 so if you tried to get the stack trace in the `stop()` function like this:
 
 ```js
 var f = stop;
-var stack = 'Stack trace:';
+var stack = "Stack trace:";
 while (f) {
-  stack += '\n' + f.name;
+  stack += "\n" + f.name;
   f = f.caller;
 }
 ```
@@ -64,9 +73,9 @@ The following code checks the value a function's `caller` property.
 ```js
 function myFunc() {
   if (myFunc.caller == null) {
-    return 'The function was called from the top!';
+    return "The function was called from the top!";
   } else {
-    return 'This function\'s caller was ' + myFunc.caller;
+    return "This function's caller was " + myFunc.caller;
   }
 }
 ```

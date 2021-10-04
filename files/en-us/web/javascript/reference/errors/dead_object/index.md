@@ -1,5 +1,5 @@
 ---
-title: 'TypeError: can''t access dead object'
+title: "TypeError: can't access dead object"
 slug: Web/JavaScript/Reference/Errors/Dead_object
 tags:
   - Addons
@@ -7,6 +7,7 @@ tags:
   - Errors
   - JavaScript
 ---
+
 {{JSSidebar("Errors")}}
 
 The JavaScript exception "can't access dead object" occurs when Firefox disallows
@@ -52,8 +53,7 @@ exception.
 ```js
 try {
   String(window);
-}
-catch (e) {
+} catch (e) {
   console.log("window is likely dead");
 }
 ```

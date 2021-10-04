@@ -1,11 +1,12 @@
 ---
-title: 'Warning: expression closures are deprecated'
+title: "Warning: expression closures are deprecated"
 slug: Web/JavaScript/Reference/Errors/Deprecated_expression_closures
 tags:
   - Error
   - JavaScript
   - Warning
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript warning "expression closures are deprecated" occurs when the
@@ -50,10 +51,14 @@ To convert the non-standard expression closures syntax to standard ECMAScript sy
 you can add curly braces and return statements.
 
 ```js example-good
-var x = function() { return 1; }
+var x = function () {
+  return 1;
+};
 
 var obj = {
-  count: function() { return 1; }
+  count: function () {
+    return 1;
+  },
 };
 ```
 
@@ -82,8 +87,12 @@ definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions),
 
 ```js example-good
 var obj = {
-  get x() { return 1 },
-  set x(v) { this.v = v }
+  get x() {
+    return 1;
+  },
+  set x(v) {
+    this.v = v;
+  },
 };
 ```
 

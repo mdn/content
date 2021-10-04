@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.toUTCString
 ---
+
 {{JSRef}}
 
 The **`toUTCString()`** method converts a date to a string,
@@ -23,7 +24,7 @@ toUTCString](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-dat
 ## Syntax
 
 ```js
-toUTCString()
+toUTCString();
 ```
 
 ### Return value
@@ -55,7 +56,7 @@ slightly updated version of RFC-822 date stamps.
 ### Using toUTCString()
 
 ```js
-let today = new Date('Wed, 14 Jun 2017 00:00:00 PDT');
+let today = new Date("Wed, 14 Jun 2017 00:00:00 PDT");
 let UTCstring = today.toUTCString(); // Wed, 14 Jun 2017 07:00:00 GMT
 ```
 

@@ -10,6 +10,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Map.values
 ---
+
 {{JSRef}}
 
 The **`values()`** method returns a new
@@ -22,7 +23,7 @@ order.
 ## Syntax
 
 ```js
-values()
+values();
 ```
 
 ### Return value
@@ -35,9 +36,9 @@ A new {{jsxref("Map")}} iterator object.
 
 ```js
 var myMap = new Map();
-myMap.set('0', 'foo');
-myMap.set(1, 'bar');
-myMap.set({}, 'baz');
+myMap.set("0", "foo");
+myMap.set(1, "bar");
+myMap.set({}, "baz");
 
 var mapIter = myMap.values();
 

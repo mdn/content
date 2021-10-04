@@ -10,6 +10,7 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.add
 ---
+
 {{JSRef}}
 
 The **`add()`** method appends a new element with a specified
@@ -20,7 +21,7 @@ value to the end of a `Set` object.
 ## Syntax
 
 ```js
-add(value)
+add(value);
 ```
 
 ### Parameters
@@ -40,7 +41,7 @@ The `Set` object with added value.
 var mySet = new Set();
 
 mySet.add(1);
-mySet.add(5).add('some text'); // chainable
+mySet.add(5).add("some text"); // chainable
 
 console.log(mySet);
 // Set [1, 5, "some text"]

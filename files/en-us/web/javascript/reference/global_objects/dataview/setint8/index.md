@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.setInt8
 ---
+
 {{JSRef}}
 
 The **`setInt8()`** method stores a signed 8-bit integer (byte)
@@ -19,7 +20,7 @@ value at the specified byte offset from the start of the {{jsxref("DataView")}}.
 ## Syntax
 
 ```js
-setInt8(byteOffset, value)
+setInt8(byteOffset, value);
 ```
 
 ### Parameters

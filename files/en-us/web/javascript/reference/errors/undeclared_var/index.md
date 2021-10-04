@@ -8,6 +8,7 @@ tags:
   - ReferenceError
   - Strict Mode
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript [strict
@@ -57,7 +58,7 @@ In this case, the variable "bar" is an undeclared variable.
 
 ```js example-bad
 function foo() {
-  'use strict';
+  "use strict";
   bar = true;
 }
 foo(); // ReferenceError: assignment to undeclared variable bar
@@ -71,7 +72,7 @@ keyword in front of it.
 
 ```js example-good
 function foo() {
-  'use strict';
+  "use strict";
   var bar = true;
 }
 foo();

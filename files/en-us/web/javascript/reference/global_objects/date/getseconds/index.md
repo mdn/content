@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getSeconds
 ---
+
 {{JSRef}}
 
 The **`getSeconds()`** method returns the seconds in the
@@ -19,7 +20,7 @@ specified date according to local time.
 ## Syntax
 
 ```js
-getSeconds()
+getSeconds();
 ```
 
 ### Return value
@@ -36,7 +37,7 @@ based on the value of the {{jsxref("Global_Objects/Date", "Date")}} object
 `Xmas95`.
 
 ```js
-var Xmas95 = new Date('December 25, 1995 23:15:30');
+var Xmas95 = new Date("December 25, 1995 23:15:30");
 var seconds = Xmas95.getSeconds();
 
 console.log(seconds); // 30

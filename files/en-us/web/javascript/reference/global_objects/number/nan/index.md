@@ -7,6 +7,7 @@ tags:
   - Property
 browser-compat: javascript.builtins.Number.NaN
 ---
+
 {{JSRef}}
 
 The **`Number.NaN`** property represents Not-A-Number. Equivalent of {{jsxref("NaN")}}.

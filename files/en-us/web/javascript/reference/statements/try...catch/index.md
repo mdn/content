@@ -8,6 +8,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.try_catch
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`try...catch`** statement marks a block of statements to
@@ -19,13 +20,11 @@ try and specifies a response should an exception be thrown.
 
 ```js
 try {
-  try_statements
-}
-catch (exception_var) {
-  catch_statements
-}
-finally {
-  finally_statements
+  try_statements;
+} catch (exception_var) {
+  catch_statements;
+} finally {
+  finally_statements;
 }
 ```
 
@@ -79,7 +78,7 @@ exception occurs in the following code, control transfers to the
 
 ```js
 try {
-  throw 'myException'; // generates an exception
+  throw "myException"; // generates an exception
 } catch (e) {
   // statements to handle any exceptions
   logMyErrors(e); // pass exception object to error handler
@@ -123,7 +122,7 @@ try {
   if (e instanceof RangeError) {
     // statements to handle this very common expected error
   } else {
-    throw e;  // re-throw the error unchanged
+    throw e; // re-throw the error unchanged
   }
 }
 ```
@@ -181,12 +180,12 @@ First, let's see what happens with this:
 ```js
 try {
   try {
-    throw new Error('oops');
+    throw new Error("oops");
   } finally {
-    console.log('finally');
+    console.log("finally");
   }
 } catch (ex) {
-  console.error('outer', ex.message);
+  console.error("outer", ex.message);
 }
 
 // Output:
@@ -200,14 +199,14 @@ Now, if we already caught the exception in the inner `try`-block by adding a
 ```js
 try {
   try {
-    throw new Error('oops');
+    throw new Error("oops");
   } catch (ex) {
-    console.error('inner', ex.message);
+    console.error("inner", ex.message);
   } finally {
-    console.log('finally');
+    console.log("finally");
   }
 } catch (ex) {
-  console.error('outer', ex.message);
+  console.error("outer", ex.message);
 }
 
 // Output:
@@ -220,15 +219,15 @@ And now, let's rethrow the error.
 ```js
 try {
   try {
-    throw new Error('oops');
+    throw new Error("oops");
   } catch (ex) {
-    console.error('inner', ex.message);
+    console.error("inner", ex.message);
     throw ex;
   } finally {
-    console.log('finally');
+    console.log("finally");
   }
 } catch (ex) {
-  console.error('outer', ex.message);
+  console.error("outer", ex.message);
 }
 
 // Output:
@@ -250,19 +249,19 @@ of the entire `try-catch-finally` statement, regardless of any
 This includes exceptions thrown inside of the `catch`-block:
 
 ```js
-(function() {
+(function () {
   try {
     try {
-      throw new Error('oops');
+      throw new Error("oops");
     } catch (ex) {
-      console.error('inner', ex.message);
+      console.error("inner", ex.message);
       throw ex;
     } finally {
-      console.log('finally');
+      console.log("finally");
       return;
     }
   } catch (ex) {
-    console.error('outer', ex.message);
+    console.error("outer", ex.message);
   }
 })();
 

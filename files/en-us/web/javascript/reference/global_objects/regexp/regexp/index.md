@@ -8,6 +8,7 @@ tags:
   - RegExp
 browser-compat: javascript.builtins.RegExp.RegExp
 ---
+
 {{JSRef}}
 
 The **`RegExp`** constructor creates a regular expression
@@ -74,11 +75,11 @@ RegExp(pattern[, flags])
       - : Matches only from the index indicated by the `lastIndex` property of
         this regular expression in the target string. Does not attempt to match from any
         later indexes.
-        
+
 ### Exceptions
 
 - If `pattern` cannot be parsed as a valid regular expression, a {{jsxref("SyntaxError")}} is thrown.
-- If `flags` contains repeated characters or any character outside of those allowed, a 
+- If `flags` contains repeated characters or any character outside of those allowed, a
   {{jsxref("SyntaxError")}} is thrown.
 
 ## Examples
@@ -96,9 +97,9 @@ and a _constructor_.
 The following three expressions create the same regular expression:
 
 ```js
-/ab+c/i
-new RegExp(/ab+c/, 'i') // literal notation
-new RegExp('ab+c', 'i') // constructor
+/ab+c/i;
+new RegExp(/ab+c/, "i"); // literal notation
+new RegExp("ab+c", "i"); // constructor
 ```
 
 The literal notation results in compilation of the regular expression when the

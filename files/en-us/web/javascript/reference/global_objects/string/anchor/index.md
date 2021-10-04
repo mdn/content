@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.anchor
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`anchor()`** method creates a string beginning with an
@@ -26,7 +27,7 @@ The **`anchor()`** method creates a string beginning with an
 ## Syntax
 
 ```js
-anchor(name)
+anchor(name);
 ```
 
 ### Parameters
@@ -52,9 +53,9 @@ doesn't even create valid markup.
 ### Using anchor()
 
 ```js
-var myString = 'Table of Contents';
+var myString = "Table of Contents";
 
-document.body.innerHTML = myString.anchor('contents_anchor');
+document.body.innerHTML = myString.anchor("contents_anchor");
 ```
 
 will output the following HTML:

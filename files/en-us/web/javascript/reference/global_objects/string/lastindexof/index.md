@@ -10,6 +10,7 @@ tags:
   - lastIndexOf
 browser-compat: javascript.builtins.String.lastIndexOf
 ---
+
 {{JSRef}}
 
 The **`lastIndexOf()`** method returns the index within the
@@ -22,8 +23,8 @@ not found.
 ## Syntax
 
 ```js
-lastIndexOf(searchValue)
-lastIndexOf(searchValue, fromIndex)
+lastIndexOf(searchValue);
+lastIndexOf(searchValue, fromIndex);
 ```
 
 ### Parameters
@@ -51,14 +52,14 @@ is `0`, and the index of the last character is
 `str.length - 1`.
 
 ```js
-'canal'.lastIndexOf('a');     // returns 3
-'canal'.lastIndexOf('a', 2);  // returns 1
-'canal'.lastIndexOf('a', 0);  // returns -1
-'canal'.lastIndexOf('x');     // returns -1
-'canal'.lastIndexOf('c', -5); // returns 0
-'canal'.lastIndexOf('c', 0);  // returns 0
-'canal'.lastIndexOf('');      // returns 5
-'canal'.lastIndexOf('', 2);   // returns 2
+"canal".lastIndexOf("a"); // returns 3
+"canal".lastIndexOf("a", 2); // returns 1
+"canal".lastIndexOf("a", 0); // returns -1
+"canal".lastIndexOf("x"); // returns -1
+"canal".lastIndexOf("c", -5); // returns 0
+"canal".lastIndexOf("c", 0); // returns 0
+"canal".lastIndexOf(""); // returns 5
+"canal".lastIndexOf("", 2); // returns 2
 ```
 
 > **Note:** `'abab'.lastIndexOf('ab', 2)` will return
@@ -71,7 +72,7 @@ The `lastIndexOf()` method is case sensitive. For example, the following
 expression returns `-1`:
 
 ```js
-'Blue Whale, Killer Whale'.lastIndexOf('blue'); // returns -1
+"Blue Whale, Killer Whale".lastIndexOf("blue"); // returns -1
 ```
 
 ## Examples
@@ -83,15 +84,23 @@ The following example uses {{jsxref("String.prototype.indexOf()", "indexOf()")}}
 "`Brave new world`".
 
 ```js
-let anyString = 'Brave new world';
+let anyString = "Brave new world";
 
-console.log('The index of the first w from the beginning is ' + anyString.indexOf('w'));
+console.log(
+  "The index of the first w from the beginning is " + anyString.indexOf("w")
+);
 // logs 8
-console.log('The index of the first w from the end is ' + anyString.lastIndexOf('w'));
+console.log(
+  "The index of the first w from the end is " + anyString.lastIndexOf("w")
+);
 // logs 10
-console.log('The index of "new" from the beginning is ' + anyString.indexOf('new'));
+console.log(
+  'The index of "new" from the beginning is ' + anyString.indexOf("new")
+);
 // logs 6
-console.log('The index of "new" from the end is ' + anyString.lastIndexOf('new'));
+console.log(
+  'The index of "new" from the end is ' + anyString.lastIndexOf("new")
+);
 // logs 6
 ```
 

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.minimize
 ---
+
 {{JSRef}}
 
 The
@@ -24,7 +25,7 @@ remove information about the locale that would be added by calling
 ## Syntax
 
 ```js
-minimize()
+minimize();
 ```
 
 ### Return value
@@ -53,7 +54,10 @@ in the locale identifier are called extension subtags and are not affected by th
 ### Using minimize
 
 ```js
-let myLocale = new Intl.Locale("fr-Latn-FR", {hourCycle: "h24", calendar: "gregory"});
+let myLocale = new Intl.Locale("fr-Latn-FR", {
+  hourCycle: "h24",
+  calendar: "gregory",
+});
 console.log(myLocale.baseName); // Prints "fr-Latn-FR"
 console.log(myLocale.toString()); // Prints "fr-Latn-FR-u-ca-gregory-hc-h24"
 

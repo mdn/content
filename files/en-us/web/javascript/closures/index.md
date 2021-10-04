@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - Reference
 ---
+
 {{jsSidebar("Intermediate")}}
 
 A **closure** is the combination of a function bundled together (enclosed) with references to its surrounding state (the **lexical environment**). In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
@@ -19,8 +20,9 @@ Consider the following example code:
 
 ```js
 function init() {
-  var name = 'Mozilla'; // name is a local variable created by init
-  function displayName() { // displayName() is the inner function, a closure
+  var name = "Mozilla"; // name is a local variable created by init
+  function displayName() {
+    // displayName() is the inner function, a closure
     alert(name); // use variable declared in the parent function
   }
   displayName();
@@ -38,7 +40,7 @@ Consider the following code example:
 
 ```js
 function makeFunc() {
-  var name = 'Mozilla';
+  var name = "Mozilla";
   function displayName() {
     alert(name);
   }
@@ -59,7 +61,7 @@ Here's a slightly more interesting example—a `makeAdder` function:
 
 ```js
 function makeAdder(x) {
-  return function(y) {
+  return function (y) {
     return x + y;
   };
 }
@@ -67,7 +69,7 @@ function makeAdder(x) {
 var add5 = makeAdder(5);
 var add10 = makeAdder(10);
 
-console.log(add5(2));  // 7
+console.log(add5(2)); // 7
 console.log(add10(2)); // 12
 ```
 
@@ -108,8 +110,8 @@ Here's the JavaScript:
 
 ```js
 function makeSizer(size) {
-  return function() {
-    document.body.style.fontSize = size + 'px';
+  return function () {
+    document.body.style.fontSize = size + "px";
   };
 }
 
@@ -121,9 +123,9 @@ var size16 = makeSizer(16);
 `size12`, `size14`, and `size16` are now functions that resize the body text to 12, 14, and 16 pixels, respectively. You can attach them to buttons (in this case hyperlinks) as demonstrated in the following code example.
 
 ```js
-document.getElementById('size-12').onclick = size12;
-document.getElementById('size-14').onclick = size14;
-document.getElementById('size-16').onclick = size16;
+document.getElementById("size-12").onclick = size12;
+document.getElementById("size-14").onclick = size14;
+document.getElementById("size-16").onclick = size16;
 ```
 
 ```html
@@ -143,35 +145,35 @@ JavaScript does not provide a native way of doing this, but it is possible to em
 The following code illustrates how to use closures to define public functions that can access private functions and variables. Note that these closures follow the [Module Design Pattern](http://www.google.com/search?q=javascript+module+pattern).
 
 ```js
-var counter = (function() {
+var counter = (function () {
   var privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
   }
 
   return {
-    increment: function() {
+    increment: function () {
       changeBy(1);
     },
 
-    decrement: function() {
+    decrement: function () {
       changeBy(-1);
     },
 
-    value: function() {
+    value: function () {
       return privateCounter;
-    }
+    },
   };
 })();
 
-console.log(counter.value());  // 0.
+console.log(counter.value()); // 0.
 
 counter.increment();
 counter.increment();
-console.log(counter.value());  // 2.
+console.log(counter.value()); // 2.
 
 counter.decrement();
-console.log(counter.value());  // 1.
+console.log(counter.value()); // 1.
 ```
 
 In previous examples, each closure had its own lexical environment. Here though, there is a single lexical environment that is shared by the three functions: `counter.increment`, `counter.decrement`, and `counter.value`.
@@ -181,30 +183,30 @@ The shared lexical environment is created in the body of an anonymous function, 
 Those three public functions are closures that share the same lexical environment. Thanks to JavaScript's lexical scoping, they each have access to the `privateCounter` variable and the `changeBy` function.
 
 ```js
-var makeCounter = function() {
+var makeCounter = function () {
   var privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
   }
   return {
-    increment: function() {
+    increment: function () {
       changeBy(1);
     },
 
-    decrement: function() {
+    decrement: function () {
       changeBy(-1);
     },
 
-    value: function() {
+    value: function () {
       return privateCounter;
-    }
-  }
+    },
+  };
 };
 
 var counter1 = makeCounter();
 var counter2 = makeCounter();
 
-alert(counter1.value());  // 0.
+alert(counter1.value()); // 0.
 
 counter1.increment();
 counter1.increment();
@@ -232,16 +234,16 @@ A common mistake is not realizing that in the case where the outer function is i
 ```js
 // global scope
 var e = 10;
-function sum(a){
-  return function(b){
-    return function(c){
+function sum(a) {
+  return function (b) {
+    return function (c) {
       // outer functions scope
-      return function(d){
+      return function (d) {
         // local scope
         return a + b + c + d + e;
-      }
-    }
-  }
+      };
+    };
+  };
 }
 
 console.log(sum(1)(2)(3)(4)); // log 20
@@ -250,23 +252,23 @@ console.log(sum(1)(2)(3)(4)); // log 20
 
 // global scope
 var e = 10;
-function sum(a){
-  return function sum2(b){
-    return function sum3(c){
+function sum(a) {
+  return function sum2(b) {
+    return function sum3(c) {
       // outer functions scope
-      return function sum4(d){
+      return function sum4(d) {
         // local scope
         return a + b + c + d + e;
-      }
-    }
-  }
+      };
+    };
+  };
 }
 
 var sum2 = sum(1);
 var sum3 = sum2(2);
 var sum4 = sum3(3);
 var result = sum4(4);
-console.log(result) //log 20
+console.log(result); //log 20
 ```
 
 In the example above, there's a series of nested functions, all of which have access to the outer functions' scope. In this context, we can say that closures have access to _all_ outer function scopes.
@@ -277,28 +279,28 @@ Prior to the introduction of the [`let` ](/en-US/docs/Web/JavaScript/Reference/S
 
 ```html
 <p id="help">Helpful notes will appear here</p>
-<p>E-mail: <input type="text" id="email" name="email"></p>
-<p>Name: <input type="text" id="name" name="name"></p>
-<p>Age: <input type="text" id="age" name="age"></p>
+<p>E-mail: <input type="text" id="email" name="email" /></p>
+<p>Name: <input type="text" id="name" name="name" /></p>
+<p>Age: <input type="text" id="age" name="age" /></p>
 ```
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   var helpText = [
-      {'id': 'email', 'help': 'Your e-mail address'},
-      {'id': 'name', 'help': 'Your full name'},
-      {'id': 'age', 'help': 'Your age (you must be over 16)'}
-    ];
+    { id: "email", help: "Your e-mail address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
+  ];
 
   for (var i = 0; i < helpText.length; i++) {
     var item = helpText[i];
-    document.getElementById(item.id).onfocus = function() {
+    document.getElementById(item.id).onfocus = function () {
       showHelp(item.help);
-    }
+    };
   }
 }
 
@@ -317,21 +319,21 @@ One solution in this case is to use more closures: in particular, to use a funct
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function makeHelpCallback(help) {
-  return function() {
+  return function () {
     showHelp(help);
   };
 }
 
 function setupHelp() {
   var helpText = [
-      {'id': 'email', 'help': 'Your e-mail address'},
-      {'id': 'name', 'help': 'Your full name'},
-      {'id': 'age', 'help': 'Your age (you must be over 16)'}
-    ];
+    { id: "email", help: "Your e-mail address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
+  ];
 
   for (var i = 0; i < helpText.length; i++) {
     var item = helpText[i];
@@ -350,22 +352,22 @@ One other way to write the above using anonymous closures is:
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   var helpText = [
-      {'id': 'email', 'help': 'Your e-mail address'},
-      {'id': 'name', 'help': 'Your full name'},
-      {'id': 'age', 'help': 'Your age (you must be over 16)'}
-    ];
+    { id: "email", help: "Your e-mail address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
+  ];
 
   for (var i = 0; i < helpText.length; i++) {
-    (function() {
-       var item = helpText[i];
-       document.getElementById(item.id).onfocus = function() {
-         showHelp(item.help);
-       }
+    (function () {
+      var item = helpText[i];
+      document.getElementById(item.id).onfocus = function () {
+        showHelp(item.help);
+      };
     })(); // Immediate event listener attachment with the current value of item (preserved until iteration).
   }
 }
@@ -377,21 +379,21 @@ If you don't want to use more closures, you can use the [`let`](/en-US/docs/Web/
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   var helpText = [
-      {'id': 'email', 'help': 'Your e-mail address'},
-      {'id': 'name', 'help': 'Your full name'},
-      {'id': 'age', 'help': 'Your age (you must be over 16)'}
-    ];
+    { id: "email", help: "Your e-mail address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
+  ];
 
   for (let i = 0; i < helpText.length; i++) {
     let item = helpText[i];
-    document.getElementById(item.id).onfocus = function() {
+    document.getElementById(item.id).onfocus = function () {
       showHelp(item.help);
-    }
+    };
   }
 }
 
@@ -404,20 +406,20 @@ Another alternative could be to use `forEach()` to iterate over the `helpText` a
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   var helpText = [
-      {'id': 'email', 'help': 'Your e-mail address'},
-      {'id': 'name', 'help': 'Your full name'},
-      {'id': 'age', 'help': 'Your age (you must be over 16)'}
-    ];
+    { id: "email", help: "Your e-mail address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
+  ];
 
-  helpText.forEach(function(text) {
-    document.getElementById(text.id).onfocus = function() {
+  helpText.forEach(function (text) {
+    document.getElementById(text.id).onfocus = function () {
       showHelp(text.help);
-    }
+    };
   });
 }
 
@@ -436,11 +438,11 @@ Consider the following case:
 function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
-  this.getName = function() {
+  this.getName = function () {
     return this.name;
   };
 
-  this.getMessage = function() {
+  this.getMessage = function () {
     return this.message;
   };
 }
@@ -454,12 +456,12 @@ function MyObject(name, message) {
   this.message = message.toString();
 }
 MyObject.prototype = {
-  getName: function() {
+  getName: function () {
     return this.name;
   },
-  getMessage: function() {
+  getMessage: function () {
     return this.message;
-  }
+  },
 };
 ```
 
@@ -470,10 +472,10 @@ function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
 }
-MyObject.prototype.getName = function() {
+MyObject.prototype.getName = function () {
   return this.name;
 };
-MyObject.prototype.getMessage = function() {
+MyObject.prototype.getMessage = function () {
   return this.message;
 };
 ```

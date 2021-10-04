@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing variable name'
+title: "SyntaxError: missing variable name"
 slug: Web/JavaScript/Reference/Errors/No_variable_name
 tags:
   - Error
@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing variable name" is a common error experienced by developers. It mostly occurs due to a typo or a forgotten variable name.
@@ -72,11 +73,12 @@ var second = document.getElementById('two'),
 The fixed version:
 
 ```js example-good
-var x, y = "foo";
+var x,
+  y = "foo";
 var x = "foo";
 
-var first = document.getElementById('one');
-var second = document.getElementById('two');
+var first = document.getElementById("one");
+var second = document.getElementById("two");
 ```
 
 ### Arrays
@@ -92,7 +94,7 @@ var arr = 1,2,3,4,5;
 This would be correct:
 
 ```js example-good
-var arr = [1,2,3,4,5];
+var arr = [1, 2, 3, 4, 5];
 ```
 
 ## See also

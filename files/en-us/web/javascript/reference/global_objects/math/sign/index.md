@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Math.sign
 ---
+
 {{JSRef}}
 
 The **`Math.sign()`** function returns either a
@@ -22,7 +23,7 @@ number passed into the argument. If the number passed into `Math.sign()` is
 ## Syntax
 
 ```js
-Math.sign(x)
+Math.sign(x);
 ```
 
 ### Parameters
@@ -52,14 +53,14 @@ created (`Math` is not a constructor).
 ### Using Math.sign()
 
 ```js
-Math.sign(3);     //  1
-Math.sign(-3);    // -1
-Math.sign('-3');  // -1
-Math.sign(0);     //  0
-Math.sign(-0);    // -0
-Math.sign(NaN);   // NaN
-Math.sign('foo'); // NaN
-Math.sign();      // NaN
+Math.sign(3); //  1
+Math.sign(-3); // -1
+Math.sign("-3"); // -1
+Math.sign(0); //  0
+Math.sign(-0); // -0
+Math.sign(NaN); // NaN
+Math.sign("foo"); // NaN
+Math.sign(); // NaN
 ```
 
 ## Specifications

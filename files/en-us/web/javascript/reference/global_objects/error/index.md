@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Error
 ---
+
 {{JSRef}}
 
 `Error` objects are thrown when runtime errors occur. The `Error` object can also be used as a base object for user-defined exceptions. See below for standard built-in error types.
@@ -80,9 +81,9 @@ You can handle the error using the {{JSxRef("Statements/try...catch", "try...cat
 
 ```js
 try {
-  throw new Error('Whoops!')
+  throw new Error("Whoops!");
 } catch (e) {
-  console.error(e.name + ': ' + e.message)
+  console.error(e.name + ": " + e.message);
 }
 ```
 
@@ -92,15 +93,14 @@ You can choose to handle only specific error types by testing the error type wit
 
 ```js
 try {
-  foo.bar()
+  foo.bar();
 } catch (e) {
   if (e instanceof EvalError) {
-    console.error(e.name + ': ' + e.message)
+    console.error(e.name + ": " + e.message);
   } else if (e instanceof RangeError) {
-    console.error(e.name + ': ' + e.message)
+    console.error(e.name + ": " + e.message);
   }
   // ... etc
-  
   else {
     // If none of our cases matched leave the Error unhandled
     throw e;
@@ -122,23 +122,23 @@ function doWork() {
   try {
     doFailSomeWay();
   } catch (err) {
-    throw new Error('Failed in some way', { cause: err });
+    throw new Error("Failed in some way", { cause: err });
   }
   try {
     doFailAnotherWay();
   } catch (err) {
-    throw new Error('Failed in another way', { cause: err });
+    throw new Error("Failed in another way", { cause: err });
   }
 }
 
 try {
   doWork();
 } catch (err) {
-  switch(err.message) {
-    case 'Failed in some way':
+  switch (err.message) {
+    case "Failed in some way":
       handleFailSomeWay(err.cause);
       break;
-    case 'Failed in another way':
+    case "Failed in another way":
       handleFailAnotherWay(err.cause);
       break;
   }
@@ -146,10 +146,11 @@ try {
 ```
 
 You can also use the `cause` property in [custom error types](#custom_error_types), provided the subclasses' constructor passes the `options` parameter when calling `super()`:
+
 ```js
 class MyError extends Error {
   constructor(/* some arguments */) {
-    // Needs to pass both `message` and `options` to install the "cause" property. 
+    // Needs to pass both `message` and `options` to install the "cause" property.
     super(message, options);
   }
 }
@@ -169,29 +170,28 @@ See ["What's a good way to extend Error in JavaScript?"](https://stackoverflow.
 
 ```js
 class CustomError extends Error {
-  constructor(foo = 'bar', ...params) {
+  constructor(foo = "bar", ...params) {
     // Pass remaining arguments (including vendor specific ones) to parent constructor
-    super(...params)
+    super(...params); // Maintains proper stack trace for where our error was thrown (only available on V8)
 
-    // Maintains proper stack trace for where our error was thrown (only available on V8)
     if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, CustomError)
+      Error.captureStackTrace(this, CustomError);
     }
 
-    this.name = 'CustomError'
+    this.name = "CustomError";
     // Custom debugging information
-    this.foo = foo
-    this.date = new Date()
+    this.foo = foo;
+    this.date = new Date();
   }
 }
 
 try {
-  throw new CustomError('baz', 'bazMessage')
-} catch(e) {
-  console.error(e.name)    //CustomError
-  console.error(e.foo)     //baz
-  console.error(e.message) //bazMessage
-  console.error(e.stack)   //stacktrace
+  throw new CustomError("baz", "bazMessage");
+} catch (e) {
+  console.error(e.name); //CustomError
+  console.error(e.foo); //baz
+  console.error(e.message); //bazMessage
+  console.error(e.stack); //stacktrace
 }
 ```
 
@@ -202,7 +202,7 @@ try {
 ```js
 function CustomError(foo, message, fileName, lineNumber) {
   var instance = new Error(message, fileName, lineNumber);
-  instance.name = 'CustomError';
+  instance.name = "CustomError";
   instance.foo = foo;
   Object.setPrototypeOf(instance, Object.getPrototypeOf(this));
   if (Error.captureStackTrace) {
@@ -216,25 +216,24 @@ CustomError.prototype = Object.create(Error.prototype, {
     value: Error,
     enumerable: false,
     writable: true,
-    configurable: true
-  }
+    configurable: true,
+  },
 });
 
-if (Object.setPrototypeOf){
+if (Object.setPrototypeOf) {
   Object.setPrototypeOf(CustomError, Error);
 } else {
   CustomError.__proto__ = Error;
 }
 
 try {
-  throw new CustomError('baz', 'bazMessage');
-} catch(e){
+  throw new CustomError("baz", "bazMessage");
+} catch (e) {
   console.error(e.name); //CustomError
   console.error(e.foo); //baz
   console.error(e.message); //bazMessage
 }
 ```
-
 
 ## Specifications
 

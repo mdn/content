@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Number.POSITIVE_INFINITY
 ---
+
 {{JSRef}}
 
 The **`Number.POSITIVE_INFINITY`** property represents the positive Infinity value.

@@ -5,12 +5,13 @@ tags:
   - ECMAScript 5
   - JavaScript
   - Method
-  - 'Null'
+  - "Null"
   - Object
   - Reference
   - Polyfill
 browser-compat: javascript.builtins.Object.create
 ---
+
 {{JSRef}}
 
 The **`Object.create()`** method creates a new object, using an
@@ -21,8 +22,8 @@ existing object as the prototype of the newly created object.
 ## Syntax
 
 ```js
-Object.create(proto)
-Object.create(proto, propertiesObject)
+Object.create(proto);
+Object.create(proto, propertiesObject);
 ```
 
 ### Parameters
@@ -109,9 +110,9 @@ _A simple common debugging function:_
 
 ```js
 // display top-level property name:value pairs of given object
-function ShowProperties(obj){
-  for(var prop in obj){
-    console.log(prop + ": " + obj[prop] + "\n" );
+function ShowProperties(obj) {
+  for (var prop in obj) {
+    console.log(prop + ": " + obj[prop] + "\n");
   }
 }
 ```
@@ -222,7 +223,7 @@ However, setting the generic **prototype** as the new object's prototype
 works even better:
 
 ```js
-ocn = Object.create( null );                  // create "null" object (same as before)
+ocn = Object.create(null); // create "null" object (same as before)
 Object.setPrototypeOf(ocn, Object.prototype); // set new object's prototype to the "generic" object (NOT standard-object)
 ```
 
@@ -253,10 +254,10 @@ function Shape() {
 }
 
 // superclass method
-Shape.prototype.move = function(x, y) {
+Shape.prototype.move = function (x, y) {
   this.x += x;
   this.y += y;
-  console.info('Shape moved.');
+  console.info("Shape moved.");
 };
 
 // Rectangle - subclass
@@ -274,8 +275,8 @@ Rectangle.prototype.constructor = Rectangle;
 
 var rect = new Rectangle();
 
-console.log('Is rect an instance of Rectangle?', rect instanceof Rectangle); // true
-console.log('Is rect an instance of Shape?', rect instanceof Shape); // true
+console.log("Is rect an instance of Rectangle?", rect instanceof Rectangle); // true
+console.log("Is rect an instance of Shape?", rect instanceof Shape); // true
 rect.move(1, 1); // Outputs, 'Shape moved.'
 ```
 
@@ -299,21 +300,23 @@ o = Object.create(Object.prototype, {
   foo: {
     writable: true,
     configurable: true,
-    value: 'hello'
+    value: "hello",
   },
   // bar is a getter-and-setter (accessor) property
   bar: {
     configurable: false,
-    get: function() { return 10; },
-    set: function(value) {
-      console.log('Setting `o.bar` to', value);
-    }
-/* with ES2015 Accessors our code can look like this
+    get: function () {
+      return 10;
+    },
+    set: function (value) {
+      console.log("Setting `o.bar` to", value);
+    },
+    /* with ES2015 Accessors our code can look like this
     get() { return 10; },
     set(value) {
       console.log('Setting `o.bar` to', value);
     } */
-  }
+  },
 });
 
 function Constructor() {}
@@ -344,14 +347,17 @@ delete o.p;
 // false
 
 // to specify an ES3 property
-o2 = Object.create({}, {
-  p: {
-    value: 42,
-    writable: true,
-    enumerable: true,
-    configurable: true
+o2 = Object.create(
+  {},
+  {
+    p: {
+      value: 42,
+      writable: true,
+      enumerable: true,
+      configurable: true,
+    },
   }
-});
+);
 /* is not equivalent to:
 This will create an object with prototype : {p: 42 }
 o2 = Object.create({p: 42}) */

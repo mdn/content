@@ -13,6 +13,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.entries
 ---
+
 {{JSRef}}
 
 The **`entries()`** method returns a new {{jsxref("Array")}}
@@ -23,7 +24,7 @@ iterator object that contains the key/value pairs for each index in the array.
 ## Syntax
 
 ```js
-entries()
+entries();
 ```
 
 ### Return value

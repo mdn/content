@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Promise.finally
 ---
+
 {{JSRef}}
 
 The **`finally()`** method returns a {{jsxref("Promise")}}.
@@ -28,8 +29,8 @@ This helps to avoid duplicating code in both the promise's {{jsxref("Promise.th
 ```js
 p.finally(onFinally);
 
-p.finally(function() {
-   // settled (fulfilled or rejected)
+p.finally(function () {
+  // settled (fulfilled or rejected)
 });
 ```
 
@@ -78,16 +79,23 @@ The `finally()` method is very similar to calling
 ```js
 let isLoading = true;
 
-fetch(myRequest).then(function(response) {
+fetch(myRequest)
+  .then(function (response) {
     var contentType = response.headers.get("content-type");
-    if(contentType && contentType.includes("application/json")) {
+    if (contentType && contentType.includes("application/json")) {
       return response.json();
     }
     throw new TypeError("Oops, we haven't got JSON!");
   })
-  .then(function(json) { /* process your JSON further */ })
-  .catch(function(error) { console.error(error); /* this line can also throw, e.g. when console = {} */ })
-  .finally(function() { isLoading = false; });
+  .then(function (json) {
+    /* process your JSON further */
+  })
+  .catch(function (error) {
+    console.error(error); /* this line can also throw, e.g. when console = {} */
+  })
+  .finally(function () {
+    isLoading = false;
+  });
 ```
 
 ## Specifications

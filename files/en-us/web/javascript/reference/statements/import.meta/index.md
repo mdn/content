@@ -11,6 +11,7 @@ tags:
   - import.meta
 browser-compat: javascript.statements.import_meta
 ---
+
 {{JSSidebar("Statements")}}
 
 The **`import.meta`** object exposes context-specific metadata
@@ -19,7 +20,7 @@ to a JavaScript module. It contains information about the module, like the modul
 ## Syntax
 
 ```js
-import.meta
+import.meta;
 ```
 
 ## Description
@@ -61,7 +62,7 @@ For example, with the following HTML:
 
 ```html
 <script type="module">
-import './index.mjs?someURLInfo=5';
+  import "./index.mjs?someURLInfo=5";
 </script>
 ```
 
@@ -69,17 +70,17 @@ import './index.mjs?someURLInfo=5';
 
 ```js
 // index.mjs
-new URL(import.meta.url).searchParams.get('someURLInfo'); // 5
+new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
 ```
 
 The same applies when a file imports another:
 
 ```js
 // index.mjs
-import './index2.mjs?someURLInfo=5';
+import "./index2.mjs?someURLInfo=5";
 
 // index2.mjs
-new URL(import.meta.url).searchParams.get('someURLInfo'); // 5
+new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
 ```
 
 Note that while Node.js will pass on query parameters (or the hash) as in the latter

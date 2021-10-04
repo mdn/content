@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.small
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`small()`** method creates a {{HTMLElement("small")}}
@@ -20,7 +21,7 @@ HTML element that causes a string to be displayed in a small font.
 ## Syntax
 
 ```js
-small()
+small();
 ```
 
 ### Return value
@@ -39,10 +40,10 @@ element: "`<small>str</small>`".
 The following example uses string methods to change the size of a string:
 
 ```js
-var worldString = 'Hello, world';
+var worldString = "Hello, world";
 
-console.log(worldString.small());     // <small>Hello, world</small>
-console.log(worldString.big());       // <big>Hello, world</big>
+console.log(worldString.small()); // <small>Hello, world</small>
+console.log(worldString.big()); // <big>Hello, world</big>
 console.log(worldString.fontsize(7)); // <font size="7">Hello, world</fontsize>
 ```
 
@@ -51,7 +52,7 @@ the element's `style` attribute and manipulate it more generically, for
 example:
 
 ```js
-document.getElementById('yourElemId').style.fontSize = '0.7em';
+document.getElementById("yourElemId").style.fontSize = "0.7em";
 ```
 
 ## Specifications

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.spread
 ---
+
 {{jsSidebar("Operators")}}
 
 **Spread syntax** (`...`) allows an iterable such as an array
@@ -69,13 +70,13 @@ myFunction(...iterableObj); // pass all elements of iterableObj as arguments to 
 For array literals or strings:
 
 ```js
-[...iterableObj, '4', 'five', 6]; // combine two arrays by inserting all elements from iterableObj
+[...iterableObj, "4", "five", 6]; // combine two arrays by inserting all elements from iterableObj
 ```
 
 For object literals (new in ECMAScript 2018):
 
 ```js
-let objClone = { ...obj }; // pass all key:value pairs from an object 
+let objClone = { ...obj }; // pass all key:value pairs from an object
 ```
 
 ## Rest syntax (parameters)
@@ -95,7 +96,7 @@ It is common to use {{jsxref("Function.prototype.apply()")}} in cases where you 
 use the elements of an array as arguments to a function.
 
 ```js
-function myFunction(x, y, z) { }
+function myFunction(x, y, z) {}
 let args = [0, 1, 2];
 myFunction.apply(null, args);
 ```
@@ -103,7 +104,7 @@ myFunction.apply(null, args);
 With spread syntax the above can be written as:
 
 ```js
-function myFunction(x, y, z) { }
+function myFunction(x, y, z) {}
 let args = [0, 1, 2];
 myFunction(...args);
 ```
@@ -112,7 +113,7 @@ Any argument in the argument list can use spread syntax, and the spread syntax c
 used multiple times.
 
 ```js
-function myFunction(v, w, x, y, z) { }
+function myFunction(v, w, x, y, z) {}
 let args = [0, 1];
 myFunction(-1, ...args, 2, ...[3]);
 ```
@@ -125,7 +126,7 @@ does a `[[Call]]` and not a `[[Construct]]`). However, an array
 can be easily used with `new` thanks to spread syntax:
 
 ```js
-let dateFields = [1970, 0, 1];  // 1 Jan 1970
+let dateFields = [1970, 0, 1]; // 1 Jan 1970
 let d = new Date(...dateFields);
 ```
 
@@ -134,26 +135,26 @@ have to do it **indirectly** through partial application:
 
 ```js
 function applyAndNew(constructor, args) {
-   function partial () {
-      return constructor.apply(this, args);
-   };
-   if (typeof constructor.prototype === "object") {
-      partial.prototype = Object.create(constructor.prototype);
-   }
-   return partial;
+  function partial() {
+    return constructor.apply(this, args);
+  }
+  if (typeof constructor.prototype === "object") {
+    partial.prototype = Object.create(constructor.prototype);
+  }
+  return partial;
 }
 
-function myConstructor () {
-   console.log("arguments.length: " + arguments.length);
-   console.log(arguments);
-   this.prop1="val1";
-   this.prop2="val2";
-};
+function myConstructor() {
+  console.log("arguments.length: " + arguments.length);
+  console.log(arguments);
+  this.prop1 = "val1";
+  this.prop2 = "val2";
+}
 
 let myArguments = ["hi", "how", "are", "you", "mr", null];
 let myConstructorWithArguments = applyAndNew(myConstructor, myArguments);
 
-console.log(new myConstructorWithArguments);
+console.log(new myConstructorWithArguments());
 //  (internal log of myConstructor):           arguments.length: 6
 //  (internal log of myConstructor):           ["hi", "how", "are", "you", "mr", null]
 //  (log of "new myConstructorWithArguments"): {prop1: "val1", prop2: "val2"}
@@ -170,8 +171,8 @@ instead using a combination of {{jsxref("Array.prototype.push", "push()")}},
    "concat()")}}, etc. With spread syntax this becomes much more succinct:
 
 ```js
-let parts = ['shoulders', 'knees'];
-let lyrics = ['head', ...parts, 'and', 'toes'];
+let parts = ["shoulders", "knees"];
+let lyrics = ["head", ...parts, "and", "toes"];
 //  ["head", "shoulders", "knees", "and", "toes"]
 ```
 
@@ -202,7 +203,7 @@ arr2.push(4);
 > //  1
 >
 > //  Oh no!  Now array 'a' is affected as well:
-> a
+> a;
 > //  [[], [2], [3]]
 > ```
 
@@ -238,7 +239,7 @@ let arr1 = [0, 1, 2];
 let arr2 = [3, 4, 5];
 
 //  Prepend all items from arr2 onto arr1
-Array.prototype.unshift.apply(arr1, arr2)
+Array.prototype.unshift.apply(arr1, arr2);
 
 //  arr1 is now [3, 4, 5, 0, 1, 2]
 ```
@@ -268,8 +269,8 @@ Shallow-cloning (excluding prototype) or merging of objects is now possible usin
 shorter syntax than {{jsxref("Object.assign()")}}.
 
 ```js
-let obj1 = { foo: 'bar', x: 42 };
-let obj2 = { foo: 'baz', y: 13 };
+let obj1 = { foo: "bar", x: 42 };
+let obj2 = { foo: "baz", y: 13 };
 
 let clonedObj = { ...obj1 };
 // Object { foo: "bar", x: 42 }
@@ -284,14 +285,14 @@ Note that {{jsxref("Object.assign()")}} triggers {{jsxref("Functions/set",
 Note that you cannot replace or mimic the {{jsxref("Object.assign()")}} function:
 
 ```js
-let obj1 = { foo: 'bar', x: 42 };
-let obj2 = { foo: 'baz', y: 13 };
-const merge = ( ...objects ) => ( { ...objects } );
+let obj1 = { foo: "bar", x: 42 };
+let obj2 = { foo: "baz", y: 13 };
+const merge = (...objects) => ({ ...objects });
 
-let mergedObj1 = merge (obj1, obj2);
+let mergedObj1 = merge(obj1, obj2);
 // Object { 0: { foo: 'bar', x: 42 }, 1: { foo: 'baz', y: 13 } }
 
-let mergedObj2 = merge ({}, obj1, obj2);
+let mergedObj2 = merge({}, obj1, obj2);
 // Object { 0: {}, 1: { foo: 'bar', x: 42 }, 2: { foo: 'baz', y: 13 } }
 ```
 
@@ -309,7 +310,7 @@ Spread syntax (other than in the case of spread properties) can be applied only 
 objects:
 
 ```js
-let obj = {'key1': 'value1'};
+let obj = { key1: "value1" };
 let array = [...obj]; // TypeError: obj is not iterable
 ```
 

@@ -9,6 +9,7 @@ tags:
   - Reflect
   - l10n:priority
 ---
+
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Iterators_and_Generators", "Web/JavaScript/Guide/Modules")}}
 
 Starting with ECMAScript 2015, JavaScript gains support for the {{jsxref("Proxy")}} and {{jsxref("Reflect")}} objects allowing you to intercept and define custom behavior for fundamental language operations (e.g. property lookup, assignment, enumeration, function invocation, etc). With the help of these two objects you are able to program at the meta level of JavaScript.
@@ -21,14 +22,14 @@ For example, getting a property on an object:
 
 ```js
 let handler = {
-  get: function(target, name) {
-    return name in target ? target[name] : 42
-  }
-}
+  get: function (target, name) {
+    return name in target ? target[name] : 42;
+  },
+};
 
-let p = new Proxy({}, handler)
-p.a = 1
-console.log(p.a, p.b) // 1, 42
+let p = new Proxy({}, handler);
+p.a = 1;
+console.log(p.a, p.b); // 1, 42
 ```
 
 The `Proxy` object defines a _`target`_ (an empty object here) and a _`handler`_ object, in which a `get` _trap_ is implemented. Here, an object that is proxied will not return `undefined` when getting undefined properties, but will instead return the number `42`.
@@ -409,20 +410,23 @@ The {{jsxref("Proxy.revocable()")}} method is used to create a revocable `Proxy`
 Afterwards, any operation on the proxy leads to a {{jsxref("TypeError")}}.
 
 ```js
-let revocable = Proxy.revocable({}, {
-  get: function(target, name) {
-    return '[[' + name + ']]'
+let revocable = Proxy.revocable(
+  {},
+  {
+    get: function (target, name) {
+      return "[[" + name + "]]";
+    },
   }
-})
-let proxy = revocable.proxy
-console.log(proxy.foo)  // "[[foo]]"
+);
+let proxy = revocable.proxy;
+console.log(proxy.foo); // "[[foo]]"
 
-revocable.revoke()
+revocable.revoke();
 
-console.log(proxy.foo)  // TypeError is thrown
-proxy.foo = 1           // TypeError again
-delete proxy.foo        // still TypeError
-typeof proxy            // "object", typeof doesn't trigger any trap
+console.log(proxy.foo); // TypeError is thrown
+proxy.foo = 1; // TypeError again
+delete proxy.foo; // still TypeError
+typeof proxy; // "object", typeof doesn't trigger any trap
 ```
 
 ## Reflection
@@ -436,7 +440,7 @@ typeof proxy            // "object", typeof doesn't trigger any trap
 With {{jsxref("Reflect.has()")}} for example, you get the [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in) as a function:
 
 ```js
-Reflect.has(Object, 'assign') // true
+Reflect.has(Object, "assign"); // true
 ```
 
 ### A better `apply` function
@@ -444,22 +448,22 @@ Reflect.has(Object, 'assign') // true
 In ES5, you typically use the {{jsxref("Function.prototype.apply()")}} method to call a function with a given `this` value and `arguments` provided as an array (or an [array-like object](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).
 
 ```js
-Function.prototype.apply.call(Math.floor, undefined, [1.75])
+Function.prototype.apply.call(Math.floor, undefined, [1.75]);
 ```
 
 With {{jsxref("Reflect.apply")}} this becomes less verbose and easier to understand:
 
 ```js
-Reflect.apply(Math.floor, undefined, [1.75])
+Reflect.apply(Math.floor, undefined, [1.75]);
 // 1
 
-Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111])
+Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]);
 // "hello"
 
-Reflect.apply(RegExp.prototype.exec, /ab/, ['confabulation']).index
+Reflect.apply(RegExp.prototype.exec, /ab/, ["confabulation"]).index;
 // 4
 
-Reflect.apply(''.charAt, 'ponies', [3])
+Reflect.apply("".charAt, "ponies", [3]);
 // "i"
 ```
 

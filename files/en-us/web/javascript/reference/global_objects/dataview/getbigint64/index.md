@@ -12,6 +12,7 @@ tags:
   - getBigInt64()
 browser-compat: javascript.builtins.DataView.getBigInt64
 ---
+
 {{JSRef}}
 
 The **`getBigInt64()`** method gets a signed 64-bit integer
@@ -22,8 +23,8 @@ The **`getBigInt64()`** method gets a signed 64-bit integer
 ## Syntax
 
 ```js
-getBigInt64(byteOffset)
-getBigInt64(byteOffset, littleEndian)
+getBigInt64(byteOffset);
+getBigInt64(byteOffset, littleEndian);
 ```
 
 ### Parameters

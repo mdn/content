@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.indexOf
 ---
+
 {{JSRef}}
 
 The **`indexOf()`** method returns the first index at which a
@@ -21,8 +22,8 @@ given element can be found in the array, or -1 if it is not present.
 ## Syntax
 
 ```js
-indexOf(searchElement)
-indexOf(searchElement, fromIndex)
+indexOf(searchElement);
+indexOf(searchElement, fromIndex);
 ```
 
 ### Parameters
@@ -58,9 +59,9 @@ The following example uses `indexOf()` to locate values in an array.
 
 ```js
 var array = [2, 9, 9];
-array.indexOf(2);     // 0
-array.indexOf(7);     // -1
-array.indexOf(9, 2);  // 2
+array.indexOf(2); // 0
+array.indexOf(7); // -1
+array.indexOf(9, 2); // 2
 array.indexOf(2, -1); // -1
 array.indexOf(2, -3); // 0
 ```
@@ -69,8 +70,8 @@ array.indexOf(2, -3); // 0
 
 ```js
 var indices = [];
-var array = ['a', 'b', 'a', 'c', 'a', 'd'];
-var element = 'a';
+var array = ["a", "b", "a", "c", "a", "d"];
+var element = "a";
 var idx = array.indexOf(element);
 while (idx != -1) {
   indices.push(idx);
@@ -83,20 +84,20 @@ console.log(indices);
 ### Finding if an element exists in the array or not and updating the array
 
 ```js
-function updateVegetablesCollection (veggies, veggie) {
-    if (veggies.indexOf(veggie) === -1) {
-        veggies.push(veggie);
-        console.log('New veggies collection is : ' + veggies);
-    } else if (veggies.indexOf(veggie) > -1) {
-        console.log(veggie + ' already exists in the veggies collection.');
-    }
+function updateVegetablesCollection(veggies, veggie) {
+  if (veggies.indexOf(veggie) === -1) {
+    veggies.push(veggie);
+    console.log("New veggies collection is : " + veggies);
+  } else if (veggies.indexOf(veggie) > -1) {
+    console.log(veggie + " already exists in the veggies collection.");
+  }
 }
 
-var veggies = ['potato', 'tomato', 'chillies', 'green-pepper'];
+var veggies = ["potato", "tomato", "chillies", "green-pepper"];
 
-updateVegetablesCollection(veggies, 'spinach');
+updateVegetablesCollection(veggies, "spinach");
 // New veggies collection is : potato,tomato,chillies,green-pepper,spinach
-updateVegetablesCollection(veggies, 'spinach');
+updateVegetablesCollection(veggies, "spinach");
 // spinach already exists in the veggies collection.
 ```
 
@@ -114,26 +115,30 @@ one specified in ECMA-262, 5th edition, assuming {{jsxref("Global_Objects/TypeEr
 // skipping the definitely fruitless NaN search. Other parts are merely cosmetic conciseness.
 // Whether it is actually faster remains to be seen.
 if (!Array.prototype.indexOf)
-  Array.prototype.indexOf = (function(Object, max, min) {
-    "use strict"
+  Array.prototype.indexOf = (function (Object, max, min) {
+    "use strict";
     return function indexOf(member, fromIndex) {
       if (this === null || this === undefined)
-        throw TypeError("Array.prototype.indexOf called on null or undefined")
+        throw TypeError("Array.prototype.indexOf called on null or undefined");
 
-      var that = Object(this), Len = that.length >>> 0, i = min(fromIndex | 0, Len)
-      if (i < 0) i = max(0, Len + i)
-      else if (i >= Len) return -1
+      var that = Object(this),
+        Len = that.length >>> 0,
+        i = min(fromIndex | 0, Len);
+      if (i < 0) i = max(0, Len + i);
+      else if (i >= Len) return -1;
 
-      if (member === void 0) {        // undefined
-        for (; i !== Len; ++i) if (that[i] === void 0 && i in that) return i
-      } else if (member !== member) { // NaN
-        return -1 // Since NaN !== NaN, it will never be found. Fast-path it.
-      } else                          // all else
-        for (; i !== Len; ++i) if (that[i] === member) return i
+      if (member === void 0) {
+        // undefined
+        for (; i !== Len; ++i) if (that[i] === void 0 && i in that) return i;
+      } else if (member !== member) {
+        // NaN
+        return -1; // Since NaN !== NaN, it will never be found. Fast-path it.
+      } // all else
+      else for (; i !== Len; ++i) if (that[i] === member) return i;
 
-      return -1 // if the value was not found, then return -1
-    }
-  })(Object, Math.max, Math.min)
+      return -1; // if the value was not found, then return -1
+    };
+  })(Object, Math.max, Math.min);
 ```
 
 However, if you are more interested in all the little technical bits defined by the
@@ -144,7 +149,7 @@ find this more descriptive polyfill to be more useful.
 // Production steps of ECMA-262, Edition 5, 15.4.4.14
 // Reference: https://es5.github.io/#x15.4.4.14
 if (!Array.prototype.indexOf) {
-  Array.prototype.indexOf = function(searchElement, fromIndex) {
+  Array.prototype.indexOf = function (searchElement, fromIndex) {
     "use strict";
     var k;
 
@@ -194,8 +199,7 @@ if (!Array.prototype.indexOf) {
       //        Strict Equality Comparison Algorithm to
       //        searchElement and elementK.
       //  iii.  If same is true, return k.
-      if (k in o && o[k] === searchElement)
-        return k;
+      if (k in o && o[k] === searchElement) return k;
     }
     return -1;
   };

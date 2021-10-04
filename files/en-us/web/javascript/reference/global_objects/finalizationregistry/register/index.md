@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.FinalizationRegistry.register
 ---
+
 {{JSRef}}
 
 The `register()` method registers an object with a
@@ -62,7 +63,7 @@ passing in another object as the held value, and not passing in any unregistrati
 (which means `target` can't be unregistered):
 
 ```js
-registry.register(target, {"useful": "info about target"});
+registry.register(target, { useful: "info about target" });
 ```
 
 ## Specifications

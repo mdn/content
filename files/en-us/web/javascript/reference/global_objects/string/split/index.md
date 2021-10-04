@@ -10,6 +10,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.split
 ---
+
 {{JSRef}}
 
 The **`split()`** method divides a
@@ -22,9 +23,9 @@ the pattern is provided as the first parameter in the method's call.
 ## Syntax
 
 ```js
-split()
-split(separator)
-split(separator, limit)
+split();
+split(separator);
+split(separator, limit);
 ```
 
 ### Parameters
@@ -99,10 +100,10 @@ string, rather than an empty array. If the string and separator are both empty
 strings, an empty array is returned.
 
 ```js
-const myString = ''
-const splits = myString.split()
+const myString = "";
+const splits = myString.split();
 
-console.log(splits)
+console.log(splits);
 
 // ↪ [""]
 ```
@@ -114,22 +115,27 @@ number of elements in the array, and the individual array elements.
 
 ```js
 function splitString(stringToSplit, separator) {
-  const arrayOfStrings = stringToSplit.split(separator)
+  const arrayOfStrings = stringToSplit.split(separator);
 
-  console.log('The original string is: ', stringToSplit)
-  console.log('The separator is: ', separator)
-  console.log('The array has ', arrayOfStrings.length, ' elements: ', arrayOfStrings.join(' / '))
+  console.log("The original string is: ", stringToSplit);
+  console.log("The separator is: ", separator);
+  console.log(
+    "The array has ",
+    arrayOfStrings.length,
+    " elements: ",
+    arrayOfStrings.join(" / ")
+  );
 }
 
-const tempestString = 'Oh brave new world that has such people in it.'
-const monthString = 'Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec'
+const tempestString = "Oh brave new world that has such people in it.";
+const monthString = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec";
 
-const space = ' '
-const comma = ','
+const space = " ";
+const comma = ",";
 
-splitString(tempestString, space)
-splitString(tempestString)
-splitString(monthString, comma)
+splitString(tempestString, space);
+splitString(tempestString);
+splitString(monthString, comma);
 ```
 
 This example produces the following output:
@@ -156,14 +162,14 @@ the semicolon from the string. `nameList` is the array returned as a result
 of `split()`.
 
 ```js
-const names = 'Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand '
+const names = "Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand ";
 
-console.log(names)
+console.log(names);
 
-const re = /\s*(?:;|$)\s*/
-const nameList = names.split(re)
+const re = /\s*(?:;|$)\s*/;
+const nameList = names.split(re);
 
-console.log(nameList)
+console.log(nameList);
 ```
 
 This logs two lines; the first line logs the original string, and the second line logs
@@ -180,16 +186,16 @@ In the following example, `split()` looks for spaces in a string and returns
 the first 3 splits that it finds.
 
 ```js
-const myString = 'Hello World. How are you doing?'
-const splits = myString.split(' ', 3)
+const myString = "Hello World. How are you doing?";
+const splits = myString.split(" ", 3);
 
-console.log(splits)
+console.log(splits);
 ```
 
 This script displays the following:
 
 ```js
-["Hello", "World.", "How"]
+["Hello", "World.", "How"];
 ```
 
 ### Splitting with a `RegExp` to include parts of the separator in the result
@@ -198,16 +204,16 @@ If `separator` is a regular expression that contains capturing
 parentheses ` (``) `, matched results are included in the array.
 
 ```js
-const myString = 'Hello 1 word. Sentence number 2.'
-const splits = myString.split(/(\d)/)
+const myString = "Hello 1 word. Sentence number 2.";
+const splits = myString.split(/(\d)/);
 
-console.log(splits)
+console.log(splits);
 ```
 
 This script displays the following:
 
 ```js
-[ "Hello ", "1", " word. Sentence number ", "2", "." ]
+["Hello ", "1", " word. Sentence number ", "2", "."];
 ```
 
 > **Note:** `\d` matches the [character
@@ -218,8 +224,8 @@ This script displays the following:
 > **Warning:** This is not a robust way to reverse a string:
 >
 > ```js example-bad
-> const str = 'asdfghjkl'
-> const strReverse = str.split('').reverse().join('')
+> const str = "asdfghjkl";
+> const strReverse = str.split("").reverse().join("");
 > // 'lkjhgfdsa'
 >
 > // split() returns an array on which reverse() and join() can be applied
@@ -229,13 +235,15 @@ This script displays the following:
 > unicode-aware split. (Use, for example, [esrever](https://github.com/mathiasbynens/esrever) instead.)
 >
 > ```js example-bad
-> const str = 'mañana mañana'
-> const strReverse = str.split('').reverse().join('')
+> const str = "mañana mañana";
+> const strReverse = str.split("").reverse().join("");
 > // => "anãnam anañam" // notice how the first word has an ã rather ñ
 > ```
 >
 > **Bonus:** use {{jsxref("Operators", "===",
+
     "#Identity_strict_equality_(===)")}} operator to test if the original string was a
+
 > palindrome.
 
 ## Specifications

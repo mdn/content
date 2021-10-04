@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.toLocaleTimeString
 ---
+
 {{JSRef}}
 
 The **`toLocaleTimeString()`** method returns a string with a
@@ -27,9 +28,9 @@ entirely implementation-dependent.
 ## Syntax
 
 ```js
-toLocaleTimeString()
-toLocaleTimeString(locales)
-toLocaleTimeString(locales, options)
+toLocaleTimeString();
+toLocaleTimeString(locales);
+toLocaleTimeString(locales, options);
 ```
 
 ### Parameters
@@ -90,24 +91,24 @@ var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 // America/Los_Angeles for the US
 
 // US English uses 12-hour time with AM/PM
-console.log(date.toLocaleTimeString('en-US'));
+console.log(date.toLocaleTimeString("en-US"));
 // → "7:00:00 PM"
 
 // British English uses 24-hour time without AM/PM
-console.log(date.toLocaleTimeString('en-GB'));
+console.log(date.toLocaleTimeString("en-GB"));
 // → "03:00:00"
 
 // Korean uses 12-hour time with AM/PM
-console.log(date.toLocaleTimeString('ko-KR'));
+console.log(date.toLocaleTimeString("ko-KR"));
 // → "오후 12:00:00"
 
 // Arabic in most Arabic speaking countries uses real Arabic digits
-console.log(date.toLocaleTimeString('ar-EG'));
+console.log(date.toLocaleTimeString("ar-EG"));
 // → "٧:٠٠:٠٠ م"
 
 // when requesting a language that may not be supported, such as
 // Balinese, include a fallback language, in this case Indonesian
-console.log(date.toLocaleTimeString(['ban', 'id']));
+console.log(date.toLocaleTimeString(["ban", "id"]));
 // → "11.00.00"
 ```
 
@@ -120,16 +121,18 @@ The results provided by `toLocaleTimeString()` can be customized using the
 var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // an application may want to use UTC and make that visible
-var options = { timeZone: 'UTC', timeZoneName: 'short' };
-console.log(date.toLocaleTimeString('en-US', options));
+var options = { timeZone: "UTC", timeZoneName: "short" };
+console.log(date.toLocaleTimeString("en-US", options));
 // → "3:00:00 AM GMT"
 
 // sometimes even the US needs 24-hour time
-console.log(date.toLocaleTimeString('en-US', { hour12: false }));
+console.log(date.toLocaleTimeString("en-US", { hour12: false }));
 // → "19:00:00"
 
 // show only hours and minutes, use options with the default locale - use an empty array
-console.log(date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+console.log(
+  date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
+);
 // → "20:01"
 ```
 

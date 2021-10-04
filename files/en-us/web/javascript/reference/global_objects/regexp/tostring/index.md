@@ -10,6 +10,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the
@@ -20,7 +21,7 @@ regular expression.
 ## Syntax
 
 ```js
-toString()
+toString();
 ```
 
 ### Return value
@@ -42,11 +43,11 @@ expression.
 The following example displays the string value of a {{jsxref("RegExp")}} object:
 
 ```js
-var myExp = new RegExp('a+b+c');
-console.log(myExp.toString());  // logs '/a+b+c/'
+var myExp = new RegExp("a+b+c");
+console.log(myExp.toString()); // logs '/a+b+c/'
 
-var foo = new RegExp('bar', 'g');
-console.log(foo.toString());    // logs '/bar/g'
+var foo = new RegExp("bar", "g");
+console.log(foo.toString()); // logs '/bar/g'
 ```
 
 ### Empty regular expressions and escaping
@@ -57,8 +58,8 @@ line terminators such as "\n" are escaped:
 ```js
 new RegExp().toString(); // "/(?:)/"
 
-new RegExp('\n').toString() === '/\n/';  // true, prior to ES5
-new RegExp('\n').toString() === '/\\n/'; // true, starting with ES5
+new RegExp("\n").toString() === "/\n/"; // true, prior to ES5
+new RegExp("\n").toString() === "/\\n/"; // true, starting with ES5
 ```
 
 ## Specifications

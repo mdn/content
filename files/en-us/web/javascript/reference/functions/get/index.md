@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.functions.get
 ---
+
 {{jsSidebar("Functions")}}
 
 The **`get`** syntax binds an object property to a function
@@ -51,14 +52,14 @@ Note the following when working with the `get` syntax:
   arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) for more information);
 - It must not appear in an object literal with another `get` e.g. the following is forbidden
   ```js example-bad
-  { 
-    get x() { }, get x() { } 
+  {
+    get x() { }, get x() { }
   }
   ```
 - It must not appear with a data entry for the same property e.g. the following is forbidden
   ```js example-bad
-  { 
-    x: ..., get x() { } 
+  {
+    x: ..., get x() { }
   }
   ```
 
@@ -71,12 +72,12 @@ which will return the last array item in `log`.
 
 ```js
 const obj = {
-  log: ['example','test'],
+  log: ["example", "test"],
   get latest() {
     if (this.log.length === 0) return undefined;
     return this.log[this.log.length - 1];
-  }
-}
+  },
+};
 console.log(obj.latest); // "test"
 ```
 
@@ -97,20 +98,26 @@ To append a getter to an existing object later at any time, use
 {{jsxref("Object.defineProperty()")}}.
 
 ```js
-const o = {a: 0};
+const o = { a: 0 };
 
-Object.defineProperty(o, 'b', { get: function() { return this.a + 1; } });
+Object.defineProperty(o, "b", {
+  get: function () {
+    return this.a + 1;
+  },
+});
 
-console.log(o.b) // Runs the getter, which yields a + 1 (which is 1)
+console.log(o.b); // Runs the getter, which yields a + 1 (which is 1)
 ```
 
 ### Using a computed property name
 
 ```js
-const expr = 'foo';
+const expr = "foo";
 
 const obj = {
-  get [expr]() { return 'bar'; }
+  get [expr]() {
+    return "bar";
+  },
 };
 
 console.log(obj.foo); // "bar"
@@ -121,12 +128,12 @@ console.log(obj.foo); // "bar"
 ```js
 class MyConstants {
   static get foo() {
-    return 'foo';
+    return "foo";
   }
 }
 
 console.log(MyConstants.foo); // 'foo'
-MyConstants.foo = 'bar';
+MyConstants.foo = "bar";
 console.log(MyConstants.foo); // 'foo', a static getter's value cannot be changed
 ```
 
@@ -181,7 +188,7 @@ instance it is applied to.
 ```js
 class Example {
   get hello() {
-    return 'world';
+    return "world";
   }
 }
 
@@ -189,13 +196,11 @@ const obj = new Example();
 console.log(obj.hello);
 // "world"
 
-console.log(Object.getOwnPropertyDescriptor(obj, 'hello'));
+console.log(Object.getOwnPropertyDescriptor(obj, "hello"));
 // undefined
 
 console.log(
-  Object.getOwnPropertyDescriptor(
-    Object.getPrototypeOf(obj), 'hello'
-  )
+  Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), "hello")
 );
 // { configurable: true, enumerable: false, get: function get hello() { return 'world'; }, set: undefined }
 ```

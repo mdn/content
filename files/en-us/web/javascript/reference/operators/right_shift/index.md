@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.right_shift
 ---
+
 {{jsSidebar("Operators")}}
 
 The **right shift operator (`>>`)** shifts the first
@@ -22,7 +23,7 @@ bit) does not change. Hence the name "sign-propagating".
 ## Syntax
 
 ```js
-a >> b
+a >> b;
 ```
 
 ## Description
@@ -55,7 +56,7 @@ preserved:
 ### Using right shift
 
 ```js
- 9 >> 2; //  2
+9 >> 2; //  2
 -9 >> 2; // -3
 ```
 

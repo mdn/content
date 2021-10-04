@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.BigInt
 ---
+
 {{JSRef}}
 
 **`BigInt`** is a built-in object whose constructor returns a `bigint` {{Glossary("Primitive", "primitive")}} — also called a **BigInt value**, or sometimes just a **BigInt** — to represent whole numbers larger than 2^53 - 1 ([`Number.MAX_SAFE_INTEGER`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)), which is the largest number JavaScript can represent with a `number` {{Glossary("Primitive", "primitive")}} (or _Number value_). BigInt values can be used for arbitrarily large integers.
@@ -17,21 +18,23 @@ browser-compat: javascript.builtins.BigInt
 A **BigInt value**, also sometimes just called a **BigInt**, is a `bigint` {{Glossary("Primitive", "primitive")}}, created by appending `n` to the end of an integer literal, or by calling the {{jsxref("Global_Objects/BigInt/BigInt", "BigInt()")}} constructor (but without the `new` operator) and giving it an integer value or string value.
 
 ```js
-const previouslyMaxSafeInteger = 9007199254740991n
+const previouslyMaxSafeInteger = 9007199254740991n;
 
-const alsoHuge = BigInt(9007199254740991)
+const alsoHuge = BigInt(9007199254740991);
 // ↪ 9007199254740991n
 
-const hugeString = BigInt("9007199254740991")
+const hugeString = BigInt("9007199254740991");
 // ↪ 9007199254740991n
 
-const hugeHex = BigInt("0x1fffffffffffff")
+const hugeHex = BigInt("0x1fffffffffffff");
 // ↪ 9007199254740991n
 
-const hugeOctal = BigInt("0o377777777777777777")
+const hugeOctal = BigInt("0o377777777777777777");
 // ↪ 9007199254740991n
 
-const hugeBin = BigInt("0b11111111111111111111111111111111111111111111111111111")
+const hugeBin = BigInt(
+  "0b11111111111111111111111111111111111111111111111111111"
+);
 // ↪ 9007199254740991n
 ```
 
@@ -42,14 +45,14 @@ BigInt values are similar to Number values in some ways, but also differ in a fe
 When tested against `typeof`, a BigInt value (`bigint` primitive) will give "`bigint`":
 
 ```js
-typeof 1n === 'bigint'           // true
-typeof BigInt('1') === 'bigint'  // true
+typeof 1n === "bigint"; // true
+typeof BigInt("1") === "bigint"; // true
 ```
 
 A BigInt value can also be wrapped in an `Object`:
 
 ```js
-typeof Object(1n) === 'object'  // true
+typeof Object(1n) === "object"; // true
 ```
 
 ### Operators
@@ -63,38 +66,38 @@ The following operators may be used with BigInt values or object-wrapped BigInt 
 Also unsupported is the unary operator (`+`), [in order to not break asm.js](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs).
 
 ```js
-const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER)
+const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER);
 // ↪ 9007199254740991n
 
-const maxPlusOne = previousMaxSafe + 1n
+const maxPlusOne = previousMaxSafe + 1n;
 // ↪ 9007199254740992n
 
-const theFuture = previousMaxSafe + 2n
+const theFuture = previousMaxSafe + 2n;
 // ↪ 9007199254740993n, this works now!
 
-const multi = previousMaxSafe * 2n
+const multi = previousMaxSafe * 2n;
 // ↪ 18014398509481982n
 
-const subtr = multi - 10n
+const subtr = multi - 10n;
 // ↪ 18014398509481972n
 
-const mod = multi % 10n
+const mod = multi % 10n;
 // ↪ 2n
 
-const bigN = 2n ** 54n
+const bigN = 2n ** 54n;
 // ↪ 18014398509481984n
 
-bigN * -1n
+bigN * -1n;
 // ↪ -18014398509481984n
 ```
 
 The `/` operator also works as expected with whole numbers — but operations with a fractional result will be truncated when used with a BigInt value — they won’t return any fractional digits.
 
 ```js
-const expected = 4n / 2n
+const expected = 4n / 2n;
 // ↪ 2n
 
-const truncated = 5n / 2n
+const truncated = 5n / 2n;
 // ↪ 2n, not 2.5n
 ```
 
@@ -103,58 +106,58 @@ const truncated = 5n / 2n
 A BigInt value is not strictly equal to a Number value, but it _is_ loosely so:
 
 ```js
-0n === 0
+0n === 0;
 // ↪ false
 
-0n == 0
+0n == 0;
 // ↪ true
 ```
 
 A Number value and a BigInt value may be compared as usual:
 
 ```js
-1n < 2
+1n < 2;
 // ↪ true
 
-2n > 1
+2n > 1;
 // ↪ true
 
-2 > 2
+2 > 2;
 // ↪ false
 
-2n > 2
+2n > 2;
 // ↪ false
 
-2n >= 2
+2n >= 2;
 // ↪ true
 ```
 
 BigInt values and Number values may be mixed in arrays and sorted:
 
 ```js
-const mixed = [4n, 6, -12n, 10, 4, 0, 0n]
+const mixed = [4n, 6, -12n, 10, 4, 0, 0n];
 // ↪  [4n, 6, -12n, 10, 4, 0, 0n]
 
-mixed.sort() // default sorting behavior
+mixed.sort(); // default sorting behavior
 // ↪  [ -12n, 0, 0n, 10, 4n, 4, 6 ]
 
-mixed.sort((a, b) => a - b)
+mixed.sort((a, b) => a - b);
 // won't work since subtraction will not work with mixed types
 // TypeError: can't convert BigInt value to Number value
 
 // sort with an appropriate numeric comparator
-mixed.sort((a, b) => (a < b) ? -1 : ((a > b) ? 1 : 0))
+mixed.sort((a, b) => (a < b ? -1 : a > b ? 1 : 0));
 // ↪  [ -12n, 0, 0n, 4n, 4, 6, 10 ]
 ```
 
 Note that comparisons with `Object`-wrapped BigInt values act as with other objects, only indicating equality when the same object instance is compared:
 
 ```js
-0n === Object(0n)          // false
-Object(0n) === Object(0n)  // false
+0n === Object(0n); // false
+Object(0n) === Object(0n); // false
 
-const o = Object(0n)
-o === o                    // true
+const o = Object(0n);
+o === o; // true
 ```
 
 ### Conditionals
@@ -167,29 +170,29 @@ A BigInt value behaves like a Number value in cases where:
 
 ```js
 if (0n) {
-  console.log('Hello from the if!')
+  console.log("Hello from the if!");
 } else {
-  console.log('Hello from the else!')
+  console.log("Hello from the else!");
 }
 
 // ↪ "Hello from the else!"
 
-0n || 12n
+0n || 12n;
 // ↪ 12n
 
-0n && 12n
+0n && 12n;
 // ↪ 0n
 
-Boolean(0n)
+Boolean(0n);
 // ↪ false
 
-Boolean(12n)
+Boolean(12n);
 // ↪ true
 
-!12n
+!12n;
 // ↪ false
 
-!0n
+!0n;
 // ↪ true
 ```
 
@@ -232,13 +235,15 @@ The operations supported on BigInt values are not constant-time, and are thus op
 Using [`JSON.stringify()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) with any BigInt value will raise a `TypeError`, as BigInt values aren't serialized in JSON by default. However, you can implement your own `toJSON` method:
 
 ```js
-BigInt.prototype.toJSON = function() { return this.toString()  }
+BigInt.prototype.toJSON = function () {
+  return this.toString();
+};
 ```
 
 Instead of throwing, `JSON.stringify` now produces a string like this:
 
 ```js
-JSON.stringify(BigInt(1))
+JSON.stringify(BigInt(1));
 // '"1"'
 ```
 
@@ -252,26 +257,26 @@ function isPrime(p) {
   for (let i = 2n; i * i <= p; i++) {
     if (p % i === 0n) return false;
   }
-  return true
+  return true;
 }
 
 // Takes a BigInt value as an argument, returns nth prime number as a BigInt value
 function nthPrime(nth) {
-  let maybePrime = 2n
-  let prime = 0n
+  let maybePrime = 2n;
+  let prime = 0n;
 
   while (nth >= 0n) {
     if (isPrime(maybePrime)) {
-      nth--
-      prime = maybePrime
+      nth--;
+      prime = maybePrime;
     }
-    maybePrime++
+    maybePrime++;
   }
 
-  return prime
+  return prime;
 }
 
-nthPrime(20n)
+nthPrime(20n);
 // ↪ 73n
 ```
 

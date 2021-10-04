@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.fontcolor
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`fontcolor()`** method creates a {{HTMLElement("font")}}
@@ -23,7 +24,7 @@ HTML element that causes a string to be displayed in the specified font color.
 ## Syntax
 
 ```js
-fontcolor(color)
+fontcolor(color);
 ```
 
 ### Parameters
@@ -50,12 +51,14 @@ The following example uses the `fontcolor()` method to change the color of a
 string by producing a string with the HTML `<font>` element.
 
 ```js
-var worldString = 'Hello, world';
+var worldString = "Hello, world";
 
-console.log(worldString.fontcolor('red') +  ' is red in this line');
+console.log(worldString.fontcolor("red") + " is red in this line");
 // '<font color="red">Hello, world</font> is red in this line'
 
-console.log(worldString.fontcolor('FF00') + ' is red in hexadecimal in this line');
+console.log(
+  worldString.fontcolor("FF00") + " is red in hexadecimal in this line"
+);
 // '<font color="FF00">Hello, world</font> is red in hexadecimal in this line'
 ```
 
@@ -64,7 +67,7 @@ the element's `style` attribute and manipulate it more generically, for
 example:
 
 ```js
-document.getElementById('yourElemId').style.color = 'red';
+document.getElementById("yourElemId").style.color = "red";
 ```
 
 ## Specifications

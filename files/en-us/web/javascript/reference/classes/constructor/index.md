@@ -8,6 +8,7 @@ tags:
   - Language feature
 browser-compat: javascript.classes.constructor
 ---
+
 {{jsSidebar("Classes")}}
 
 The `constructor` method is a special method of a {{jsxref("Statements/class", "class")}} for creating and initializing an object instance of that class.
@@ -29,7 +30,6 @@ A constructor enables you to provide any custom initialization that must be done
 
 ```js
 class Person {
-
   constructor(name) {
     this.name = name;
   }
@@ -37,10 +37,9 @@ class Person {
   introduce() {
     console.log(`Hello, my name is ${this.name}`);
   }
-
 }
 
-const otto = new Person('Otto');
+const otto = new Person("Otto");
 
 otto.introduce();
 ```
@@ -64,21 +63,19 @@ That enables code like this to work:
 
 ```js
 class ValidationError extends Error {
-
   printCustomerMessage() {
     return `Validation failed :-( (details: ${this.message})`;
   }
-
 }
 
 try {
   throw new ValidationError("Not a valid phone number");
 } catch (error) {
-   if (error instanceof ValidationError) {
+  if (error instanceof ValidationError) {
     console.log(error.name); // This is Error instead of ValidationError!
     console.log(error.printCustomerMessage());
   } else {
-    console.log('Unknown error', error);
+    console.log("Unknown error", error);
     throw error;
   }
 }
@@ -92,27 +89,25 @@ For example:
 
 ```js
 class ValidationError extends Error {
-
   constructor(message) {
-    super(message);  // call parent class constructor
-    this.name = 'ValidationError';
-    this.code = '42';
+    super(message); // call parent class constructor
+    this.name = "ValidationError";
+    this.code = "42";
   }
 
   printCustomerMessage() {
-     return `Validation failed :-( (details: ${this.message}, code: ${this.code})`;
+    return `Validation failed :-( (details: ${this.message}, code: ${this.code})`;
   }
-
 }
 
 try {
   throw new ValidationError("Not a valid phone number");
 } catch (error) {
-   if (error instanceof ValidationError) {
+  if (error instanceof ValidationError) {
     console.log(error.name); // Now this is ValidationError!
     console.log(error.printCustomerMessage());
   } else {
-    console.log('Unknown error', error);
+    console.log("Unknown error", error);
     throw error;
   }
 }
@@ -135,7 +130,7 @@ class Square extends Polygon {
     super(length, length);
     // NOTE: In derived classes, `super()` must be called before you
     // can use `this`. Leaving this out will cause a ReferenceError.
-    this.name = 'Square';
+    this.name = "Square";
   }
 
   get area() {
@@ -143,8 +138,8 @@ class Square extends Polygon {
   }
 
   set area(value) {
-    this.height = value**0.5;
-    this.width = value**0.5;
+    this.height = value ** 0.5;
+    this.width = value ** 0.5;
   }
 }
 ```
@@ -155,15 +150,15 @@ Here the prototype of `Square` class is changed—but the constructor of its bas
 
 ```js
 class Polygon {
-    constructor() {
-        this.name = "Polygon";
-    }
+  constructor() {
+    this.name = "Polygon";
+  }
 }
 
 class Square extends Polygon {
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+  }
 }
 
 class Rectangle {}

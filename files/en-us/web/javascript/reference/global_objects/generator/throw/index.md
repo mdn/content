@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Generator.throw
 ---
+
 {{JSRef}}
 
 The **`throw()`** method resumes the
@@ -19,7 +20,7 @@ properties `done` and `value`.
 ## Syntax
 
 ```js
-throw(exception)
+throw exception;
 ```
 
 ### Parameters
@@ -49,11 +50,11 @@ The following example shows a simple generator and an error that is thrown using
 
 ```js
 function* gen() {
-  while(true) {
+  while (true) {
     try {
-       yield 42;
-    } catch(e) {
-      console.log('Error caught!');
+      yield 42;
+    } catch (e) {
+      console.log("Error caught!");
     }
   }
 }
@@ -61,7 +62,7 @@ function* gen() {
 const g = gen();
 g.next();
 // { value: 42, done: false }
-g.throw(new Error('Something went wrong'));
+g.throw(new Error("Something went wrong"));
 // "Error caught!"
 // { value: 42, done: false }
 ```

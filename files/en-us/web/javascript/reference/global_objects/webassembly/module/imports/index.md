@@ -12,6 +12,7 @@ tags:
   - imports
 browser-compat: javascript.builtins.WebAssembly.Module.imports
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.imports()`** function returns an array
@@ -20,7 +21,7 @@ containing descriptions of all the declared imports of the given `Module`.
 ## Syntax
 
 ```js
-WebAssembly.Module.imports(module)
+WebAssembly.Module.imports(module);
 ```
 
 ### Parameters
@@ -47,10 +48,9 @@ live also](https://mdn.github.io/webassembly-examples/js-api-examples/imports.ht
 for its imports.
 
 ```js
-WebAssembly.compileStreaming(fetch('simple.wasm'))
-.then(function(mod) {
-  var imports = WebAssembly.Module.imports(mod);
-  console.log(imports[0]);
+WebAssembly.compileStreaming(fetch("simple.wasm")).then(function (mod) {
+  var imports = WebAssembly.Module.imports(mod);
+  console.log(imports[0]);
 });
 ```
 

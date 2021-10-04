@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.lookupSetter
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`__lookupSetter__`** method returns the function bound as
@@ -18,7 +19,7 @@ a setter to the specified property.
 ## Syntax
 
 ```js
-__lookupSetter__(sprop)
+__lookupSetter__(sprop);
 ```
 
 ### Parameters
@@ -48,15 +49,15 @@ It is now possible to do this in a standardized way using
 var obj = {
   set foo(value) {
     this.bar = value;
-  }
+  },
 };
 
 // Non-standard and deprecated way
-obj.__lookupSetter__('foo')
+obj.__lookupSetter__("foo");
 // (function(value) { this.bar = value; })
 
 // Standard-compliant way
-Object.getOwnPropertyDescriptor(obj, 'foo').set;
+Object.getOwnPropertyDescriptor(obj, "foo").set;
 // (function(value) { this.bar = value; })
 ```
 

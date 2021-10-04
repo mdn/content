@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.ListFormat.ListFormat
 ---
+
 {{JSRef}}
 
 The **`Intl.ListFormat()`** constructor creates
@@ -23,9 +24,9 @@ formatting.
 ## Syntax
 
 ```js
-new Intl.ListFormat()
-new Intl.ListFormat(locales)
-new Intl.ListFormat(locales, options)
+new Intl.ListFormat();
+new Intl.ListFormat(locales);
+new Intl.ListFormat(locales, options);
 ```
 
 ### Parameters
@@ -64,15 +65,25 @@ new Intl.ListFormat(locales, options)
 The following example shows how to create a List formatter using the English language.
 
 ```js
-const list = ['Motorcycle', 'Bus', 'Car'];
+const list = ["Motorcycle", "Bus", "Car"];
 
- console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).format(list));
+console.log(
+  new Intl.ListFormat("en-GB", { style: "long", type: "conjunction" }).format(
+    list
+  )
+);
 // > Motorcycle, Bus and Car
 
- console.log(new Intl.ListFormat('en-GB', { style: 'short', type: 'disjunction' }).format(list));
+console.log(
+  new Intl.ListFormat("en-GB", { style: "short", type: "disjunction" }).format(
+    list
+  )
+);
 // > Motorcycle, Bus or Car
 
- console.log(new Intl.ListFormat('en-GB', { style: 'narrow', type: 'unit' }).format(list));
+console.log(
+  new Intl.ListFormat("en-GB", { style: "narrow", type: "unit" }).format(list)
+);
 // > Motorcycle Bus Car
 ```
 

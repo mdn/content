@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Math.asin
 ---
+
 {{JSRef}}
 
 The **`Math.asin()`** function returns the arcsine (in radians)
@@ -60,7 +61,7 @@ of a number, that is
 ## Syntax
 
 ```js
-Math.asin(x)
+Math.asin(x);
 ```
 
 ### Parameters
@@ -94,12 +95,12 @@ created (`Math` is not a constructor).
 ### Using Math.asin()
 
 ```js
-Math.asin(-2);  // NaN
-Math.asin(-1);  // -1.5707963267948966 (-pi/2)
-Math.asin(0);   // 0
+Math.asin(-2); // NaN
+Math.asin(-1); // -1.5707963267948966 (-pi/2)
+Math.asin(0); // 0
 Math.asin(0.5); // 0.5235987755982989
-Math.asin(1);   // 1.5707963267948966 (pi/2)
-Math.asin(2);   // NaN
+Math.asin(1); // 1.5707963267948966 (pi/2)
+Math.asin(2); // NaN
 ```
 
 For values less than -1 or greater than 1, `Math.asin()` returns

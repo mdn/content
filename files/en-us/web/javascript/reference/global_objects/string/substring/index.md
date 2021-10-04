@@ -9,6 +9,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.substring
 ---
+
 {{JSRef}}
 
 The **`substring()`** method returns the part of the
@@ -19,8 +20,8 @@ The **`substring()`** method returns the part of the
 ## Syntax
 
 ```js
-substring(indexStart)
-substring(indexStart, indexEnd)
+substring(indexStart);
+substring(indexStart, indexEnd);
 ```
 
 ### Parameters
@@ -61,23 +62,23 @@ The following example uses `substring()` to display characters from the
 string `'Mozilla'`:
 
 ```js
-let anyString = 'Mozilla'
+let anyString = "Mozilla";
 
 // Displays 'M'
-console.log(anyString.substring(0, 1))
-console.log(anyString.substring(1, 0))
+console.log(anyString.substring(0, 1));
+console.log(anyString.substring(1, 0));
 
 // Displays 'Mozill'
-console.log(anyString.substring(0, 6))
+console.log(anyString.substring(0, 6));
 
 // Displays 'lla'
-console.log(anyString.substring(4))
-console.log(anyString.substring(4, 7))
-console.log(anyString.substring(7, 4))
+console.log(anyString.substring(4));
+console.log(anyString.substring(4, 7));
+console.log(anyString.substring(7, 4));
 
 // Displays 'Mozilla'
-console.log(anyString.substring(0, 7))
-console.log(anyString.substring(0, 10))
+console.log(anyString.substring(0, 7));
+console.log(anyString.substring(0, 10));
 ```
 
 ### Using substring() with length property
@@ -89,14 +90,14 @@ know the starting and ending indices as you would in the above examples.
 
 ```js
 // Displays 'illa' the last 4 characters
-let anyString = 'Mozilla'
-let anyString4 = anyString.substring(anyString.length - 4)
-console.log(anyString4)
+let anyString = "Mozilla";
+let anyString4 = anyString.substring(anyString.length - 4);
+console.log(anyString4);
 
 // Displays 'zilla' the last 5 characters
-let anyString = 'Mozilla'
-let anyString5 = anyString.substring(anyString.length - 5)
-console.log(anyString5)
+let anyString = "Mozilla";
+let anyString5 = anyString.substring(anyString.length - 5);
+console.log(anyString5);
 ```
 
 ### The difference between substring() and substr()
@@ -114,9 +115,9 @@ ECMAScript** and could be removed from future versions, so it is best to avoid
 using it if possible.
 
 ```js
-let text = 'Mozilla'
-console.log(text.substring(2,5))  // => "zil"
-console.log(text.substr(2,3))     // => "zil"
+let text = "Mozilla";
+console.log(text.substring(2, 5)); // => "zil"
+console.log(text.substr(2, 3)); // => "zil"
 ```
 
 ### Differences between substring() and slice()
@@ -131,17 +132,17 @@ meaning that a string is still returned. The {{jsxref("String.slice", "slice()")
 method returns an empty string if this is the case.
 
 ```js
-let text = 'Mozilla'
-console.log(text.substring(5, 2))  // => "zil"
-console.log(text.slice(5, 2))      // => ""
+let text = "Mozilla";
+console.log(text.substring(5, 2)); // => "zil"
+console.log(text.slice(5, 2)); // => ""
 ```
 
 If either or both of the arguments are negative or `NaN`, the
 `substring()` method treats them as if they were `0`.
 
 ```js
-console.log(text.substring(-5, 2))  // => "Mo"
-console.log(text.substring(-5, -2)) // => ""
+console.log(text.substring(-5, 2)); // => "Mo"
+console.log(text.substring(-5, -2)); // => ""
 ```
 
 `slice()` also treats `NaN` arguments as `0`, but when
@@ -149,8 +150,8 @@ it is given negative values it counts backwards from the end of the string to fi
 indexes.
 
 ```js
-console.log(text.slice(-5, 2))   // => ""
-console.log(text.slice(-5, -2))  // => "zil"
+console.log(text.slice(-5, 2)); // => ""
+console.log(text.slice(-5, -2)); // => "zil"
 ```
 
 See the {{jsxref("String.slice", "slice()")}} page for more examples with negative
@@ -167,13 +168,16 @@ changes the string `Brave New World` to `Brave New Web`.
 function replaceString(oldS, newS, fullS) {
   for (let i = 0; i < fullS.length; ++i) {
     if (fullS.substring(i, i + oldS.length) == oldS) {
-      fullS = fullS.substring(0, i) + newS + fullS.substring(i + oldS.length, fullS.length)
+      fullS =
+        fullS.substring(0, i) +
+        newS +
+        fullS.substring(i + oldS.length, fullS.length);
     }
   }
-  return fullS
+  return fullS;
 }
 
-replaceString('World', 'Web', 'Brave New World')
+replaceString("World", "Web", "Brave New World");
 ```
 
 Note that this can result in an infinite loop if `oldS` is itself a
@@ -184,7 +188,7 @@ A better method for replacing strings is as follows:
 
 ```js
 function replaceString(oldS, newS, fullS) {
-  return fullS.split(oldS).join(newS)
+  return fullS.split(oldS).join(newS);
 }
 ```
 

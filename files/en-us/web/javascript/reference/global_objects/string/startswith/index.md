@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.startsWith
 ---
+
 {{JSRef}}
 
 The **`startsWith()`** method
@@ -22,8 +23,8 @@ returning `true` or `false` as appropriate.
 ## Syntax
 
 ```js
-startsWith(searchString)
-startsWith(searchString, position)
+startsWith(searchString);
+startsWith(searchString, position);
 ```
 
 ### Parameters
@@ -50,11 +51,11 @@ method is case-sensitive.
 
 ```js
 //startswith
-let str = 'To be, or not to be, that is the question.'
+let str = "To be, or not to be, that is the question.";
 
-console.log(str.startsWith('To be'))          // true
-console.log(str.startsWith('not to be'))      // false
-console.log(str.startsWith('not to be', 10))  // true
+console.log(str.startsWith("To be")); // true
+console.log(str.startsWith("not to be")); // false
+console.log(str.startsWith("not to be", 10)); // true
 ```
 
 ## Polyfill
@@ -65,12 +66,12 @@ available in all JavaScript implementations yet. However, you can polyfill
 
 ```js
 if (!String.prototype.startsWith) {
-    Object.defineProperty(String.prototype, 'startsWith', {
-        value: function(search, rawPos) {
-            var pos = rawPos > 0 ? rawPos|0 : 0;
-            return this.substring(pos, pos + search.length) === search;
-        }
-    });
+  Object.defineProperty(String.prototype, "startsWith", {
+    value: function (search, rawPos) {
+      var pos = rawPos > 0 ? rawPos | 0 : 0;
+      return this.substring(pos, pos + search.length) === search;
+    },
+  });
 }
 ```
 

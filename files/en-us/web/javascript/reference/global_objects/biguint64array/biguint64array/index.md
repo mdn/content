@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.BigUint64Array.BigUint64Array
 ---
+
 {{JSRef}}
 
 The **`BigUint64Array()`** typed array constructor creates a
@@ -71,7 +72,7 @@ console.log(biguint64.length); // 2
 console.log(biguint64.BYTES_PER_ELEMENT); // 8
 
 // From an array
-var arr = new BigUint64Array([21n,31n]);
+var arr = new BigUint64Array([21n, 31n]);
 console.log(arr[1]); // 31n
 
 // From another TypedArray
@@ -84,7 +85,9 @@ var buffer = new ArrayBuffer(32);
 var z = new BigUint64Array(buffer, 0, 4);
 
 // From an iterable
-var iterable = function*(){ yield* [1n, 2n, 3n]; }();
+var iterable = (function* () {
+  yield* [1n, 2n, 3n];
+})();
 var biguint64 = new BigUint64Array(iterable);
 // BigUint64Array[1n, 2n, 3n]
 ```

@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: Unexpected token'
+title: "SyntaxError: Unexpected token"
 slug: Web/JavaScript/Reference/Errors/Unexpected_token
 tags:
   - Error
@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exceptions "unexpected token" occur when a specific language construct
@@ -73,12 +74,19 @@ The brackets may look correct at first, but note how the `||` is outside the
 brackets. Correct would be putting brackets around the `||`:
 
 ```js example-good
-function round(n, upperBound, lowerBound){
-  if((n > upperBound) || (n < lowerBound)){
-    throw 'Number ' + String(n) + ' is more than ' + String(upperBound) + ' or less than ' + String(lowerBound);
-  }else if(n < ((upperBound + lowerBound)/2)){
+function round(n, upperBound, lowerBound) {
+  if (n > upperBound || n < lowerBound) {
+    throw (
+      "Number " +
+      String(n) +
+      " is more than " +
+      String(upperBound) +
+      " or less than " +
+      String(lowerBound)
+    );
+  } else if (n < (upperBound + lowerBound) / 2) {
     return lowerBound;
-  }else{
+  } else {
     return upperBound;
   }
 }

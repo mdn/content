@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Number.isSafeInteger
 ---
+
 {{JSRef}}
 
 The **`Number.isSafeInteger()`** method determines whether the
@@ -42,7 +43,7 @@ For larger integers, consider using the {{jsxref("BigInt")}} type.
 ## Syntax
 
 ```js
-Number.isSafeInteger(testValue)
+Number.isSafeInteger(testValue);
 ```
 
 ### Parameters
@@ -58,9 +59,13 @@ safe integer.
 ## Polyfill
 
 ```js
-Number.isSafeInteger = Number.isSafeInteger || function (value) {
-   return Number.isInteger(value) && Math.abs(value) <= Number.MAX_SAFE_INTEGER;
-};
+Number.isSafeInteger =
+  Number.isSafeInteger ||
+  function (value) {
+    return (
+      Number.isInteger(value) && Math.abs(value) <= Number.MAX_SAFE_INTEGER
+    );
+  };
 ```
 
 ## Examples
@@ -68,14 +73,14 @@ Number.isSafeInteger = Number.isSafeInteger || function (value) {
 ### Using isSafeInteger
 
 ```js
-Number.isSafeInteger(3);                    // true
-Number.isSafeInteger(Math.pow(2, 53));      // false
-Number.isSafeInteger(Math.pow(2, 53) - 1);  // true
-Number.isSafeInteger(NaN);                  // false
-Number.isSafeInteger(Infinity);             // false
-Number.isSafeInteger('3');                  // false
-Number.isSafeInteger(3.1);                  // false
-Number.isSafeInteger(3.0);                  // true
+Number.isSafeInteger(3); // true
+Number.isSafeInteger(Math.pow(2, 53)); // false
+Number.isSafeInteger(Math.pow(2, 53) - 1); // true
+Number.isSafeInteger(NaN); // false
+Number.isSafeInteger(Infinity); // false
+Number.isSafeInteger("3"); // false
+Number.isSafeInteger(3.1); // false
+Number.isSafeInteger(3.0); // true
 ```
 
 ## Specifications

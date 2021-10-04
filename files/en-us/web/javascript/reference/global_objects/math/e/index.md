@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Math.E
 ---
+
 {{JSRef}}
 
 The **`Math.E`** property represents Euler's number, the base of natural logarithms, e, which is approximately 2.718.

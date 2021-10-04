@@ -8,6 +8,7 @@ tags:
   - Shared Memory
 browser-compat: javascript.builtins.Atomics.isLockFree
 ---
+
 {{JSRef}}
 
 The static
@@ -23,7 +24,7 @@ property of integer TypedArray types.
 ## Syntax
 
 ```js
-Atomics.isLockFree(size)
+Atomics.isLockFree(size);
 ```
 
 ### Parameters

@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Number.MAX_VALUE
 ---
+
 {{JSRef}}
 
 The **`Number.MAX_VALUE`** property represents the maximum numeric value representable in JavaScript.

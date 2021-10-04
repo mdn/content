@@ -7,6 +7,7 @@ tags:
   - Overview
   - Reference
 ---
+
 {{JSSidebar("Objects")}}
 
 This chapter documents all of JavaScript's standard, built-in objects, including their methods and properties.

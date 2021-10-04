@@ -9,6 +9,7 @@ tags:
   - Regular Expressions
   - regex
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 Assertions include boundaries, which indicate the beginnings and endings of lines and words, and other patterns indicating in some way that a match is possible (including look-ahead, look-behind, and conditional expressions).
@@ -191,19 +192,19 @@ buggyMultiline = `tey, ihe light-greon apple
 tangs on ihe greon traa`;
 
 // 1) Use ^ to fix the matching at the begining of the string, and right after newline.
-buggyMultiline = buggyMultiline.replace(/^t/gim,'h');
+buggyMultiline = buggyMultiline.replace(/^t/gim, "h");
 console.log(1, buggyMultiline); // fix 'tey', 'tangs' => 'hey', 'hangs'. Avoid 'traa'.
 
 // 2) Use $ to fix matching at the end of the text.
-buggyMultiline = buggyMultiline.replace(/aa$/gim,'ee.');
+buggyMultiline = buggyMultiline.replace(/aa$/gim, "ee.");
 console.log(2, buggyMultiline); // fix  'traa' => 'tree'.
 
 // 3) Use \b to match characters right on border between a word and a space.
-buggyMultiline = buggyMultiline.replace(/\bi/gim,'t');
+buggyMultiline = buggyMultiline.replace(/\bi/gim, "t");
 console.log(3, buggyMultiline); // fix  'ihe' but does not touch 'light'.
 
 // 4) Use \B to match characters inside borders of an entity.
-fixedMultiline = buggyMultiline.replace(/\Bo/gim,'e');
+fixedMultiline = buggyMultiline.replace(/\Bo/gim, "e");
 console.log(4, fixedMultiline); // fix  'greon' but does not touch 'on'.
 ```
 
@@ -217,7 +218,7 @@ let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 // Select fruits started with 'A' by /^A/ Regex.
 // Here '^' control symbol used only in one role: Matching beginning of an input.
 
-let fruitsStartsWithA = fruits.filter(fruit => /^A/.test(fruit));
+let fruitsStartsWithA = fruits.filter((fruit) => /^A/.test(fruit));
 console.log(fruitsStartsWithA); // [ 'Apple', 'Avocado' ]
 ```
 
@@ -232,7 +233,7 @@ let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 // 2) A negated or complemented character class: [^A]
 // That is, it matches anything that is not enclosed in the brackets.
 
-let fruitsStartsWithNotA = fruits.filter(fruit => /^[^A]/.test(fruit));
+let fruitsStartsWithNotA = fruits.filter((fruit) => /^[^A]/.test(fruit));
 
 console.log(fruitsStartsWithNotA); // [ 'Watermelon', 'Orange', 'Strawberry' ]
 ```
@@ -243,7 +244,9 @@ console.log(fruitsStartsWithNotA); // [ 'Watermelon', 'Orange', 'Strawberry' ]
 let fruitsWithDescription = ["Red apple", "Orange orange", "Green Avocado"];
 
 // Select descriptions that contains 'en' or 'ed' words endings:
-let enEdSelection = fruitsWithDescription.filter(descr => /(en|ed)\b/.test(descr));
+let enEdSelection = fruitsWithDescription.filter((descr) =>
+  /(en|ed)\b/.test(descr)
+);
 
 console.log(enEdSelection); // [ 'Red apple', 'Green Avocado' ]
 ```
@@ -255,10 +258,10 @@ console.log(enEdSelection); // [ 'Red apple', 'Green Avocado' ]
 
 let regex = /First(?= test)/g;
 
-console.log('First test'.match(regex)); // [ 'First' ]
-console.log('First peach'.match(regex)); // null
-console.log('This is a First test in a year.'.match(regex)); // [ 'First' ]
-console.log('This is a First peach in a month.'.match(regex)); // null
+console.log("First test".match(regex)); // [ 'First' ]
+console.log("First peach".match(regex)); // null
+console.log("This is a First test in a year.".match(regex)); // [ 'First' ]
+console.log("This is a First peach in a month.".match(regex)); // null
 ```
 
 ### Basic negative lookahead assertion
@@ -266,7 +269,7 @@ console.log('This is a First peach in a month.'.match(regex)); // null
 For example, `/\d+(?!\.)/` matches a number only if it is not followed by a decimal point. `/\d+(?!\.)/.exec('3.141')` matches "141" but not "3.
 
 ```js
-console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
+console.log(/\d+(?!\.)/g.exec("3.141")); // [ '141', index: 2, input: '3.141' ]
 ```
 
 ### Different meaning of '?!' combination usage in Assertions and  Ranges 
@@ -274,22 +277,23 @@ console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
 Different meaning of `?!` combination usage in [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions) `/x(?!y)/ `and [Ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) `[^?!]`.
 
 ```js
-let orangeNotLemon = "Do you want to have an orange? Yes, I do not want to have a lemon!";
+let orangeNotLemon =
+  "Do you want to have an orange? Yes, I do not want to have a lemon!";
 
 // Different meaning of '?!' combination usage in Assertions /x(?!y)/ and  Ranges /[^?!]/
-let selectNotLemonRegex = /[^?!]+have(?! a lemon)[^?!]+[?!]/gi
+let selectNotLemonRegex = /[^?!]+have(?! a lemon)[^?!]+[?!]/gi;
 console.log(orangeNotLemon.match(selectNotLemonRegex)); // [ 'Do you want to have an orange?' ]
 
-let selectNotOrangeRegex = /[^?!]+have(?! an orange)[^?!]+[?!]/gi
+let selectNotOrangeRegex = /[^?!]+have(?! an orange)[^?!]+[?!]/gi;
 console.log(orangeNotLemon.match(selectNotOrangeRegex)); // [ ' Yes, I do not want to have a lemon!' ]
 ```
 
 ### Lookbehind assertion
 
 ```js
-let oranges = ['ripe orange A ', 'green orange B', 'ripe orange C',];
+let oranges = ["ripe orange A ", "green orange B", "ripe orange C"];
 
-let ripe_oranges = oranges.filter( fruit => fruit.match(/(?<=ripe )orange/));
+let ripe_oranges = oranges.filter((fruit) => fruit.match(/(?<=ripe )orange/));
 console.log(ripe_oranges); // [ 'ripe orange A ', 'ripe orange C' ]
 ```
 

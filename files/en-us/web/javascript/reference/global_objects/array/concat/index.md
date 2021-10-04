@@ -11,6 +11,7 @@ tags:
   - concat
 browser-compat: javascript.builtins.Array.concat
 ---
+
 {{JSRef}}
 
 The **`concat()`** method is used to merge two or more arrays.
@@ -73,7 +74,7 @@ copied into the new array as follows:
 The following code concatenates two arrays:
 
 ```js
-const letters = ['a', 'b', 'c'];
+const letters = ["a", "b", "c"];
 const numbers = [1, 2, 3];
 
 letters.concat(numbers);
@@ -100,7 +101,7 @@ console.log(numbers);
 The following code concatenates three values to an array:
 
 ```js
-const letters = ['a', 'b', 'c'];
+const letters = ["a", "b", "c"];
 
 const alphaNumeric = letters.concat(1, [2, 3]);
 

@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat.resolvedOptions
 ---
+
 {{JSRef}}
 
 The **`Intl.NumberFormat.prototype.resolvedOptions()`** method
@@ -25,7 +26,7 @@ options computed during initialization of this {{jsxref("Intl.NumberFormat")}} o
 ## Syntax
 
 ```js
-resolvedOptions()
+resolvedOptions();
 ```
 
 ### Return value
@@ -81,18 +82,18 @@ Only one of the following two groups of properties is included:
 ### Using the `resolvedOptions` method
 
 ```js
-var de = new Intl.NumberFormat('de-DE');
+var de = new Intl.NumberFormat("de-DE");
 var usedOptions = de.resolvedOptions();
 
-usedOptions.locale;                // "de-DE"
-usedOptions.numberingSystem;       // "latn"
-usedOptions.notation;              // "standard"
-usedOptions.signDisplay;           // "auto"
-usedOptions.style;                 // "decimal"
-usedOptions.minimumIntegerDigits;  // 1
+usedOptions.locale; // "de-DE"
+usedOptions.numberingSystem; // "latn"
+usedOptions.notation; // "standard"
+usedOptions.signDisplay; // "auto"
+usedOptions.style; // "decimal"
+usedOptions.minimumIntegerDigits; // 1
 usedOptions.minimumFractionDigits; // 0
 usedOptions.maximumFractionDigits; // 3
-usedOptions.useGrouping;           // true
+usedOptions.useGrouping; // true
 ```
 
 ## Specifications

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.ListFormat.resolvedOptions
 ---
+
 {{JSRef}}
 
 The **`Intl.ListFormat.prototype.resolvedOptions()`** method
@@ -21,7 +22,7 @@ object.
 ## Syntax
 
 ```js
-listFormat.resolvedOptions()
+listFormat.resolvedOptions();
 ```
 
 ### Return value
@@ -56,8 +57,8 @@ const deListFormatter = new Intl.ListFormat("de-DE", { style: "short" });
 
 const usedOptions = de.resolvedOptions();
 console.log(usedOptions.locale); // "de-DE"
-console.log(usedOptions.style);  // "short"
-console.log(usedOptions.type);   // "conjunction" (the default value)
+console.log(usedOptions.style); // "short"
+console.log(usedOptions.type); // "conjunction" (the default value)
 ```
 
 ## Specifications
@@ -72,10 +73,10 @@ console.log(usedOptions.type);   // "conjunction" (the default value)
 
 - {{jsxref("Intl.ListFormat")}}
 - {{jsxref("Intl/NumberFormat/resolvedOptions",
-		"Intl.NumberFormat.prototype.resolvedOptions()")}}
+  	"Intl.NumberFormat.prototype.resolvedOptions()")}}
 - {{jsxref("Intl/Collator/resolvedOptions",
-		"Intl.Collator.prototype.resolvedOptions()")}}
+  	"Intl.Collator.prototype.resolvedOptions()")}}
 - {{jsxref("Intl/DateTimeFormat/resolvedOptions",
-		"Intl.DateTimeFormat.prototype.resolvedOptions()")}}
+  	"Intl.DateTimeFormat.prototype.resolvedOptions()")}}
 - {{jsxref("Intl/PluralRules/resolvedOptions",
-		"Intl.PluralRules.prototype.resolvedOptions()")}}
+  	"Intl.PluralRules.prototype.resolvedOptions()")}}

@@ -12,6 +12,7 @@ tags:
   - cosine
 browser-compat: javascript.builtins.Math.cos
 ---
+
 {{JSRef}}
 
 The **`Math.cos()`** static function
@@ -23,7 +24,7 @@ specified in {{interwiki("wikipedia", "radians")}}.
 ## Syntax
 
 ```js
-Math.cos(x)
+Math.cos(x);
 ```
 
 ### Parameters
@@ -49,10 +50,10 @@ created (`Math` is not a constructor).
 ### Using Math.cos()
 
 ```js
-Math.cos(0);           // 1
-Math.cos(1);           // 0.5403023058681398
+Math.cos(0); // 1
+Math.cos(1); // 0.5403023058681398
 
-Math.cos(Math.PI);     // -1
+Math.cos(Math.PI); // -1
 Math.cos(2 * Math.PI); // 1
 ```
 

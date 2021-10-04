@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Math.SQRT2
 ---
+
 {{JSRef}}
 
 The **`Math.SQRT2`** property represents the square root of 2, approximately 1.414:

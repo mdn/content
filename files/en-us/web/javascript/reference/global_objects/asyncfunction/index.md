@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.AsyncFunction
 ---
+
 {{JSRef}}
 
 The **`AsyncFunction` constructor** creates a new
@@ -17,15 +18,15 @@ Note that `AsyncFunction` is _not_ a global object. It can be
 obtained with the following code:
 
 ```js
-Object.getPrototypeOf(async function(){}).constructor
+Object.getPrototypeOf(async function () {}).constructor;
 ```
 
 ## Syntax
 
 ```js
-new AsyncFunction(arg0, functionBody)
-new AsyncFunction(arg0, arg1, functionBody)
-new AsyncFunction(arg0, arg1, ...argN, functionBody)
+new AsyncFunction(arg0, functionBody);
+new AsyncFunction(arg0, arg1, functionBody);
+new AsyncFunction(arg0, arg1, ...argN, functionBody);
 ```
 
 ### Parameters
@@ -51,7 +52,9 @@ All arguments passed to the function are treated as the names of the identifiers
 parameters in the function to be created, in the order in which they are passed.
 
 > **Note:** {{jsxref("Statements/async_function", "async functions", "",
+
     1)}} created with the `AsyncFunction` constructor do not create closures to
+
 > their creation contexts; they are always created in the global scope.
 >
 > When running them, they will only be able to access their own local variables and
@@ -70,20 +73,22 @@ Invoking the `AsyncFunction` constructor as a function (without using the
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
   });
 }
 
-let AsyncFunction = Object.getPrototypeOf(async function(){}).constructor
+let AsyncFunction = Object.getPrototypeOf(async function () {}).constructor;
 
-let a = new AsyncFunction('a',
-                          'b',
-                          'return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);');
+let a = new AsyncFunction(
+  "a",
+  "b",
+  "return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);"
+);
 
-a(10, 20).then(v => {
+a(10, 20).then((v) => {
   console.log(v); // prints 30 after 4 seconds
 });
 ```

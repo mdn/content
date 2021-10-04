@@ -10,6 +10,7 @@ tags:
   - if
 browser-compat: javascript.statements.if_else
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`if`** statement executes a
@@ -22,9 +23,9 @@ statement if a specified condition is {{Glossary("truthy")}}. If the condition i
 
 ```js
 if (condition) {
-   statement1
+  statement1;
 } else {
-   statement2
+  statement2;
 }
 ```
 
@@ -79,9 +80,9 @@ statements:
 
 ```js
 if (condition) {
-  statements1
+  statements1;
 } else {
-  statements2
+  statements2;
 }
 ```
 
@@ -133,7 +134,7 @@ assignment can be confused with equality when glancing over the code. For exampl
 not use the following code:
 
 ```js example-bad
-if (x = y) {
+if ((x = y)) {
   /* do something */
 }
 ```

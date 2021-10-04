@@ -11,6 +11,7 @@ tags:
   - Primary Expression
 browser-compat: javascript.operators.generator_function
 ---
+
 {{jsSidebar("Operators")}}
 
 The **`function*`** keyword can be used to define a generator
@@ -55,8 +56,8 @@ The following example defines an unnamed generator function and assigns it to
 `x`. The function yields the square of its argument:
 
 ```js
-let x = function*(y) {
-   yield y * y;
+let x = function* (y) {
+  yield y * y;
 };
 ```
 

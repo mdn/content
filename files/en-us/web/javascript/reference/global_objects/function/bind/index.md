@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Function.bind
 ---
+
 {{JSRef}}
 
 The **`bind()`** method creates a new
@@ -100,10 +101,12 @@ Without special care, however, the original object is usually lost. Creating a b
 function from the function, using the original object, neatly solves this problem:
 
 ```js
-this.x = 9;    // 'this' refers to global 'window' object here in a browser
+this.x = 9; // 'this' refers to global 'window' object here in a browser
 const module = {
   x: 81,
-  getX: function() { return this.x; }
+  getX: function () {
+    return this.x;
+  },
 };
 
 module.getX();
@@ -178,11 +181,11 @@ function LateBloomer() {
 }
 
 // Declare bloom after a delay of 1 second
-LateBloomer.prototype.bloom = function() {
+LateBloomer.prototype.bloom = function () {
   window.setTimeout(this.declare.bind(this), 1000);
 };
 
-LateBloomer.prototype.declare = function() {
+LateBloomer.prototype.declare = function () {
   console.log(`I am a beautiful flower with ${this.petalCount} petals!`);
 };
 
@@ -211,7 +214,7 @@ function Point(x, y) {
   this.y = y;
 }
 
-Point.prototype.toString = function() {
+Point.prototype.toString = function () {
   return `${this.x},${this.y}`;
 };
 
@@ -223,16 +226,16 @@ p.toString();
 
 //  works fine with native bind:
 
-const YAxisPoint = Point.bind(null, 0/*x*/);
+const YAxisPoint = Point.bind(null, 0 /*x*/);
 
 const emptyObj = {};
-const YAxisPoint = Point.bind(emptyObj, 0/*x*/);
+const YAxisPoint = Point.bind(emptyObj, 0 /*x*/);
 
 const axisPoint = new YAxisPoint(5);
-axisPoint.toString();                    // '0,5'
+axisPoint.toString(); // '0,5'
 
-axisPoint instanceof Point;              // true
-axisPoint instanceof YAxisPoint;         // true
+axisPoint instanceof Point; // true
+axisPoint instanceof YAxisPoint; // true
 new YAxisPoint(17, 42) instanceof Point; // true
 ```
 

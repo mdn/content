@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Math.tan
 ---
+
 {{JSRef}}
 
 The **`Math.tan()`** function returns the tangent of a number.
@@ -17,7 +18,7 @@ The **`Math.tan()`** function returns the tangent of a number.
 ## Syntax
 
 ```js
-Math.tan(x)
+Math.tan(x);
 ```
 
 ### Parameters
@@ -52,7 +53,7 @@ radians and returns the tangent.
 
 ```js
 function getTanDeg(deg) {
-  var rad = deg * Math.PI/180;
+  var rad = (deg * Math.PI) / 180;
   return Math.tan(rad);
 }
 ```

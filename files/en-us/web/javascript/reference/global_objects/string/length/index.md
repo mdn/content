@@ -10,6 +10,7 @@ tags:
   - length
 browser-compat: javascript.builtins.String.length
 ---
+
 {{JSRef}}
 
 The **`length`** property of a {{jsxref("String")}} object contains the length of the string, in UTF-16 code units. `length` is a read-only data property of string instances.
@@ -31,23 +32,23 @@ The static property `String.length` is unrelated to the length of strings, it's 
 Since \`length\` counts code units instead of characters, if you want to get the number of characters you need something like this:
 
 ```js
-function getCharacterLength (str) {
+function getCharacterLength(str) {
   // The string iterator that is used here iterates over characters,
   //  not mere code units
   return [...str].length;
 }
 
-console.log(getCharacterLength('A\uD87E\uDC04Z')); // 3
+console.log(getCharacterLength("A\uD87E\uDC04Z")); // 3
 
 // While not recommended, you could add this to each string as follows:
 
-Object.defineProperty(String.prototype, 'charLength', {
-  get () {
+Object.defineProperty(String.prototype, "charLength", {
+  get() {
     return getCharacterLength(this);
-  }
+  },
 });
 
-console.log('A\uD87E\uDC04Z'.charLength); // 3
+console.log("A\uD87E\uDC04Z".charLength); // 3
 ```
 
 ## Examples
@@ -55,13 +56,13 @@ console.log('A\uD87E\uDC04Z'.charLength); // 3
 ### Basic usage
 
 ```js
-let x = 'Mozilla';
-let empty = '';
+let x = "Mozilla";
+let empty = "";
 
-console.log(x + ' is ' + x.length + ' code units long');
+console.log(x + " is " + x.length + " code units long");
 /* "Mozilla is 7 code units long" */
 
-console.log('The empty string has a length of ' + empty.length);
+console.log("The empty string has a length of " + empty.length);
 // expected output: "The empty string has a length of 0"
 ```
 

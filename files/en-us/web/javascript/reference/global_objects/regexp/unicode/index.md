@@ -11,6 +11,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.unicode
 ---
+
 {{JSRef}}
 
 The **`unicode`** property indicates whether or not the "`u`" flag is used with a regular expression. `unicode` is a read-only property of an individual regular expression instance.
@@ -28,7 +29,7 @@ You cannot change this property directly. It is read-only.
 ### Using the unicode property
 
 ```js
-var regex = new RegExp('\u{61}', 'u');
+var regex = new RegExp("\u{61}", "u");
 
 console.log(regex.unicode); // true
 ```

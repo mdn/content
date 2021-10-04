@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.reduce
 ---
+
 {{JSRef}}
 
 The **`reduce()`** method applies a function against an
@@ -94,7 +95,7 @@ value would be returned without calling `callbackFn`.
 ### Sum up all values within an array
 
 ```js
-var total = new Uint8Array([0, 1, 2, 3]).reduce(function(a, b) {
+var total = new Uint8Array([0, 1, 2, 3]).reduce(function (a, b) {
   return a + b;
 });
 // total == 6

@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.getFloat64
 ---
+
 {{JSRef}}
 
 The **`getFloat64()`** method gets a signed 64-bit float
@@ -19,8 +20,8 @@ The **`getFloat64()`** method gets a signed 64-bit float
 ## Syntax
 
 ```js
-getFloat64(byteOffset)
-getFloat64(byteOffset, littleEndian)
+getFloat64(byteOffset);
+getFloat64(byteOffset, littleEndian);
 ```
 
 ### Parameters

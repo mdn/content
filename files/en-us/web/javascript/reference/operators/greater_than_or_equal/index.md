@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.greater_than_or_equal
 ---
+
 {{jsSidebar("Operators")}}
 
 The greater than or equal operator (`>=`) returns `true` if
@@ -19,7 +20,7 @@ otherwise.
 ## Syntax
 
 ```js
-x >= y
+x >= y;
 ```
 
 ## Description
@@ -33,56 +34,56 @@ operator for a summary of this algorithm.
 ### String to string comparison
 
 ```js
-console.log("a" >= "b");     // false
-console.log("a" >= "a");     // true
-console.log("a" >= "3");     // true
+console.log("a" >= "b"); // false
+console.log("a" >= "a"); // true
+console.log("a" >= "3"); // true
 ```
 
 ### String to number comparison
 
 ```js
-console.log("5" >= 3);       // true
-console.log("3" >= 3);       // true
-console.log("3" >= 5);       // false
+console.log("5" >= 3); // true
+console.log("3" >= 3); // true
+console.log("3" >= 5); // false
 
-console.log("hello" >= 5);   // false
-console.log(5 >= "hello");   // false
+console.log("hello" >= 5); // false
+console.log(5 >= "hello"); // false
 ```
 
 ### Number to Number comparison
 
 ```js
-console.log(5 >= 3);         // true
-console.log(3 >= 3);         // true
-console.log(3 >= 5);         // false
+console.log(5 >= 3); // true
+console.log(3 >= 3); // true
+console.log(3 >= 5); // false
 ```
 
 ### Number to BigInt comparison
 
 ```js
-console.log(5n >= 3);        // true
-console.log(3 >= 3n);        // true
-console.log(3 >= 5n);        // false
+console.log(5n >= 3); // true
+console.log(3 >= 3n); // true
+console.log(3 >= 5n); // false
 ```
 
 ### Comparing Boolean, null, undefined, NaN
 
 ```js
-console.log(true >= false);  // true
-console.log(true >= true);   // true
-console.log(false >= true);  // false
+console.log(true >= false); // true
+console.log(true >= true); // true
+console.log(false >= true); // false
 
-console.log(true >= 0);      // true
-console.log(true >= 1);      // true
+console.log(true >= 0); // true
+console.log(true >= 1); // true
 
-console.log(null >= 0);      // true
-console.log(1 >= null);      // true
+console.log(null >= 0); // true
+console.log(1 >= null); // true
 
 console.log(undefined >= 3); // false
 console.log(3 >= undefined); // false
 
-console.log(3 >= NaN);       // false
-console.log(NaN >= 3);       // false
+console.log(3 >= NaN); // false
+console.log(NaN >= 3); // false
 ```
 
 ## Specifications

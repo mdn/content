@@ -9,6 +9,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the
@@ -19,7 +20,7 @@ specified object.
 ## Syntax
 
 ```js
-toString()
+toString();
 ```
 
 ### Return value
@@ -41,7 +42,7 @@ same as the {{jsxref("String.prototype.valueOf()")}} method.
 The following example displays the string value of a {{jsxref("String")}} object:
 
 ```js
-var x = new String('Hello world');
+var x = new String("Hello world");
 
 console.log(x.toString()); // logs 'Hello world'
 ```

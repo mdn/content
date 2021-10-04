@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.toJSON
 ---
+
 {{JSRef}}
 
 The **`toJSON()`** method returns a string representation of
@@ -19,7 +20,7 @@ the {{jsxref("Date")}} object.
 ## Syntax
 
 ```js
-toJSON()
+toJSON();
 ```
 
 ### Return value
@@ -39,7 +40,7 @@ generally intended to, by default, usefully serialize {{jsxref("Date")}} objects
 ### Using toJSON()
 
 ```js
-var jsonDate = (new Date()).toJSON();
+var jsonDate = new Date().toJSON();
 var backToDate = new Date(jsonDate);
 
 console.log(jsonDate); //2015-10-26T07:46:36.611Z

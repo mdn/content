@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.RegExp.flags
 ---
+
 {{JSRef}}
 
 The **`flags`** property returns a string consisting of the [flags](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) of the current regular expression object.
@@ -29,19 +30,19 @@ Flags in the `flags` property are sorted alphabetically (from left to right, e.g
 ### Using flags
 
 ```js
-/foo/ig.flags;   // "gi"
-/bar/myu.flags;  // "muy"
+/foo/gi.flags; // "gi"
+/bar/muy.flags; // "muy"
 ```
 
 ## Polyfill
 
 ```js
 if (RegExp.prototype.flags === undefined) {
-  Object.defineProperty(RegExp.prototype, 'flags', {
+  Object.defineProperty(RegExp.prototype, "flags", {
     configurable: true,
-    get: function() {
+    get: function () {
       return this.toString().match(/[gimsuy]*$/)[0];
-    }
+    },
   });
 }
 ```

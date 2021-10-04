@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Math.atan
 ---
+
 {{JSRef}}
 
 The **`Math.atan()`** function returns the arctangent (in
@@ -49,7 +50,7 @@ radians) of a number, that is
 ## Syntax
 
 ```js
-Math.atan(x)
+Math.atan(x);
 ```
 
 ### Parameters
@@ -83,12 +84,12 @@ created (`Math` is not a constructor).
 ### Using Math.atan()
 
 ```js
-Math.atan(1);   // 0.7853981633974483
-Math.atan(0);   // 0
-Math.atan(-0);  // -0
+Math.atan(1); // 0.7853981633974483
+Math.atan(0); // 0
+Math.atan(-0); // -0
 
-Math.atan(Infinity);   //  1.5707963267948966
-Math.atan(-Infinity);  // -1.5707963267948966
+Math.atan(Infinity); //  1.5707963267948966
+Math.atan(-Infinity); // -1.5707963267948966
 
 // The angle that the line [(0,0);(x,y)] forms with the x-axis in a Cartesian coordinate system
 Math.atan(y / x);

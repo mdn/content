@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.deleteProperty
 ---
+
 {{JSRef}}
 
 The static
@@ -22,7 +23,7 @@ operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete) as a function.
 ## Syntax
 
 ```js
-Reflect.deleteProperty(target, propertyKey)
+Reflect.deleteProperty(target, propertyKey);
 ```
 
 ### Parameters
@@ -54,19 +55,19 @@ operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete).
 ### Using `Reflect.deleteProperty()`
 
 ```js
-let obj = { x: 1, y: 2 }
-Reflect.deleteProperty(obj, 'x')  // true
-obj                               // { y: 2 }
+let obj = { x: 1, y: 2 };
+Reflect.deleteProperty(obj, "x"); // true
+obj; // { y: 2 }
 
-let arr = [1, 2, 3, 4, 5]
-Reflect.deleteProperty(arr, '3')  // true
-arr                               // [1, 2, 3, undefined, 5]
+let arr = [1, 2, 3, 4, 5];
+Reflect.deleteProperty(arr, "3"); // true
+arr; // [1, 2, 3, undefined, 5]
 
 // Returns true if no such property exists
-Reflect.deleteProperty({}, 'foo')  // true
+Reflect.deleteProperty({}, "foo"); // true
 
 // Returns false if a property is unconfigurable
-Reflect.deleteProperty(Object.freeze({foo: 1}), 'foo')  // false
+Reflect.deleteProperty(Object.freeze({ foo: 1 }), "foo"); // false
 ```
 
 ## Specifications

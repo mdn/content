@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.setUint8
 ---
+
 {{JSRef}}
 
 The **`setUint8()`** method stores an unsigned 8-bit integer
@@ -19,7 +20,7 @@ The **`setUint8()`** method stores an unsigned 8-bit integer
 ## Syntax
 
 ```js
-setUint8(byteOffset, value)
+setUint8(byteOffset, value);
 ```
 
 ### Parameters

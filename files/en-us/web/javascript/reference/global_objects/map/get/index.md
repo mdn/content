@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Map.get
 ---
+
 {{JSRef}}
 
 The **`get()`** method returns a specified element from a `Map` object. If the
@@ -22,7 +23,7 @@ modify it inside the `Map` object.
 ## Syntax
 
 ```js
-get(key)
+get(key);
 ```
 
 ### Parameters
@@ -41,10 +42,10 @@ The element associated with the specified key, or
 
 ```js
 let myMap = new Map();
-myMap.set('bar', 'foo');
+myMap.set("bar", "foo");
 
-myMap.get('bar');   // Returns "foo"
-myMap.get('baz');   // Returns undefined
+myMap.get("bar"); // Returns "foo"
+myMap.get("baz"); // Returns undefined
 ```
 
 ## Specifications

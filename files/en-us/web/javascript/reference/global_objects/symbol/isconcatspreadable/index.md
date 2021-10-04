@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Symbol.isConcatSpreadable
 ---
+
 {{JSRef}}
 
 The **`Symbol.isConcatSpreadable`** well-known symbol is used to configure if an object should be flattened to its array elements when using the {{jsxref("Array.prototype.concat()")}} method.
@@ -56,16 +57,16 @@ console.log(alphaNumeric)  // Result: ['a', 'b', 'c', [1, 2, 3] ]
 For array-like objects, the default is to not spread. `Symbol.isConcatSpreadable` needs to be set to `true` in order to get a flattened array:
 
 ```js
-let x = [1, 2, 3]
+let x = [1, 2, 3];
 
 let fakeArray = {
   [Symbol.isConcatSpreadable]: true,
   length: 2,
-  0: 'hello',
-  1: 'world'
-}
+  0: "hello",
+  1: "world",
+};
 
-x.concat(fakeArray)  // [1, 2, 3, "hello", "world"]
+x.concat(fakeArray); // [1, 2, 3, "hello", "world"]
 ```
 
 > **Note:** The `length` property is used to control the number of object properties to be added. In the above example, `length:2` indicates two properties has to be added.

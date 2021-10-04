@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Math.SQRT1_2
 ---
+
 {{JSRef}}
 
 The **`Math.SQRT1_2`** property represents the square root of 1/2 which is approximately 0.707:

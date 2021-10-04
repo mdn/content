@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Object.Object
 ---
+
 {{JSRef}}
 
 The **`Object` constructor** creates an object wrapper for the
@@ -24,8 +25,8 @@ When called in a non-constructor context, `Object` behaves identically to
 ## Syntax
 
 ```js
-new Object()
-new Object(value)
+new Object();
+new Object(value);
 ```
 
 ### Parameters
@@ -38,10 +39,10 @@ new Object(value)
 ### Creating a new Object
 
 ```js
-let o = new Object()
-o.foo = 42
+let o = new Object();
+o.foo = 42;
 
-console.log(o)
+console.log(o);
 // Object { foo: 42 }
 ```
 
@@ -50,15 +51,15 @@ console.log(o)
 The following examples store an empty `Object` object in `o`:
 
 ```js
-let o = new Object()
+let o = new Object();
 ```
 
 ```js
-let o = new Object(undefined)
+let o = new Object(undefined);
 ```
 
 ```js
-let o = new Object(null)
+let o = new Object(null);
 ```
 
 ## Specifications

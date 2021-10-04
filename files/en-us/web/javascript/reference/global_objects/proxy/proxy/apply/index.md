@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.apply
 ---
+
 {{JSRef}}
 
 The **`handler.apply()`** method is a trap for a function call.
@@ -18,8 +19,7 @@ The **`handler.apply()`** method is a trap for a function call.
 
 ```js
 const p = new Proxy(target, {
-  apply: function(target, thisArg, argumentsList) {
-  }
+  apply: function (target, thisArg, argumentsList) {},
 });
 ```
 
@@ -66,15 +66,15 @@ function object.
 The following code traps a function call.
 
 ```js
-const p = new Proxy(function() {}, {
-  apply: function(target, thisArg, argumentsList) {
-    console.log('called: ' + argumentsList.join(', '));
+const p = new Proxy(function () {}, {
+  apply: function (target, thisArg, argumentsList) {
+    console.log("called: " + argumentsList.join(", "));
     return argumentsList[0] + argumentsList[1] + argumentsList[2];
-  }
+  },
 });
 
 console.log(p(1, 2, 3)); // "called: 1, 2, 3"
-                         // 6
+// 6
 ```
 
 ## Specifications

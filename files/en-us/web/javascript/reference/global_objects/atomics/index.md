@@ -8,6 +8,7 @@ tags:
   - Specifications
 browser-compat: javascript.builtins.Atomics
 ---
+
 {{JSRef}}
 
 The **`Atomics`** object provides atomic operations as static methods. They are used with {{jsxref("SharedArrayBuffer")}} and {{jsxref("ArrayBuffer")}} objects.
@@ -80,8 +81,7 @@ Atomics.isLockFree(3); // false
 Atomics.isLockFree(4); // true
 
 Atomics.or(ta, 0, 1); // 12
-Atomics.load(ta, 0);  // 13
-
+Atomics.load(ta, 0); // 13
 Atomics.store(ta, 0, 12); // 12
 
 Atomics.sub(ta, 0, 2); // 12

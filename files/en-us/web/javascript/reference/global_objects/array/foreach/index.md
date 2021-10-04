@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.forEach
 ---
+
 {{JSRef}}
 
 The **`forEach()`** method executes a provided function once
@@ -115,7 +116,9 @@ effects at the end of a chain.
 >
 > Array methods: {{jsxref("Array.prototype.every()", "every()")}},
 > {{jsxref("Array.prototype.some()", "some()")}}, {{jsxref("Array.prototype.find()",
+
     "find()")}}, and {{jsxref("Array.prototype.findIndex()", "findIndex()")}} test the
+
 > array elements with a predicate returning a truthy value to determine if further
 > iteration is required.
 
@@ -128,16 +131,15 @@ effects at the end of a chain.
 > let ratings = [5, 4, 5];
 > let sum = 0;
 >
-> let sumFunction = async function (a, b)
-> {
->   return a + b
-> }
+> let sumFunction = async function (a, b) {
+>   return a + b;
+> };
 >
-> ratings.forEach(async function(rating) {
->   sum = await sumFunction(sum, rating)
-> })
+> ratings.forEach(async function (rating) {
+>   sum = await sumFunction(sum, rating);
+> });
 >
-> console.log(sum)
+> console.log(sum);
 > // Naively expected output: 14
 > // Actual output: 0
 > ```
@@ -158,11 +160,13 @@ that `fun.call` evaluates to the original value of
 // Production steps of ECMA-262, Edition 5, 15.4.4.18
 // Reference: https://es5.github.io/#x15.4.4.18
 
-if (!Array.prototype['forEach']) {
-
-  Array.prototype.forEach = function(callback, thisArg) {
-
-    if (this == null) { throw new TypeError('Array.prototype.forEach called on null or undefined'); }
+if (!Array.prototype["forEach"]) {
+  Array.prototype.forEach = function (callback, thisArg) {
+    if (this == null) {
+      throw new TypeError(
+        "Array.prototype.forEach called on null or undefined"
+      );
+    }
 
     var T, k;
     // 1. Let O be the result of calling toObject() passing the
@@ -176,18 +180,21 @@ if (!Array.prototype['forEach']) {
 
     // 4. If isCallable(callback) is false, throw a TypeError exception.
     // See: https://es5.github.io/#x9.11
-    if (typeof callback !== "function") { throw new TypeError(callback + ' is not a function'); }
+    if (typeof callback !== "function") {
+      throw new TypeError(callback + " is not a function");
+    }
 
     // 5. If thisArg was supplied, let T be thisArg; else let
     // T be undefined.
-    if (arguments.length > 1) { T = thisArg; }
+    if (arguments.length > 1) {
+      T = thisArg;
+    }
 
     // 6. Let k be 0
     k = 0;
 
     // 7. Repeat, while k < len
     while (k < len) {
-
       var kValue;
 
       // a. Let Pk be ToString(k).
@@ -197,7 +204,6 @@ if (!Array.prototype['forEach']) {
       //    This step can be combined with c
       // c. If kPresent is true, then
       if (k in O) {
-
         // i. Let kValue be the result of calling the Get internal
         // method of O with argument Pk.
         kValue = O[k];
@@ -219,15 +225,15 @@ if (!Array.prototype['forEach']) {
 ### No operation for uninitialized values (sparse arrays)
 
 ```js
-const arraySparse = [1,3,,7]
-let numCallbackRuns = 0
+const arraySparse = [1, 3, , 7];
+let numCallbackRuns = 0;
 
-arraySparse.forEach(function(element) {
-  console.log(element)
-  numCallbackRuns++
-})
+arraySparse.forEach(function (element) {
+  console.log(element);
+  numCallbackRuns++;
+});
 
-console.log("numCallbackRuns: ", numCallbackRuns)
+console.log("numCallbackRuns: ", numCallbackRuns);
 
 // 1
 // 3
@@ -239,18 +245,18 @@ console.log("numCallbackRuns: ", numCallbackRuns)
 ### Converting a for loop to forEach
 
 ```js
-const items = ['item1', 'item2', 'item3']
-const copyItems = []
+const items = ["item1", "item2", "item3"];
+const copyItems = [];
 
 // before
 for (let i = 0; i < items.length; i++) {
-  copyItems.push(items[i])
+  copyItems.push(items[i]);
 }
 
 // after
-items.forEach(function(item){
-  copyItems.push(item)
-})
+items.forEach(function (item) {
+  copyItems.push(item);
+});
 ```
 
 ### Printing the contents of an array
@@ -266,12 +272,12 @@ The following code logs a line for each element in an array:
 
 ```js
 function logArrayElements(element, index, array) {
-  console.log('a[' + index + '] = ' + element)
+  console.log("a[" + index + "] = " + element);
 }
 
 // Notice that index 2 is skipped, since there is no item at
 // that position in the array...
-[2, 5, , 9].forEach(logArrayElements)
+[2, 5, , 9].forEach(logArrayElements);
 // logs:
 // a[0] = 2
 // a[1] = 5
@@ -285,21 +291,21 @@ array:
 
 ```js
 function Counter() {
-  this.sum = 0
-  this.count = 0
+  this.sum = 0;
+  this.count = 0;
 }
-Counter.prototype.add = function(array) {
+Counter.prototype.add = function (array) {
   array.forEach(function countEntry(entry) {
-    this.sum += entry
-    ++this.count
-  }, this)
-}
+    this.sum += entry;
+    ++this.count;
+  }, this);
+};
 
-const obj = new Counter()
-obj.add([2, 5, 9])
-obj.count
+const obj = new Counter();
+obj.add([2, 5, 9]);
+obj.count;
 // 3
-obj.sum
+obj.sum;
 // 16
 ```
 
@@ -322,19 +328,19 @@ ECMAScript 5 `Object.*` meta property functions.
 
 ```js
 function copy(obj) {
-  const copy = Object.create(Object.getPrototypeOf(obj))
-  const propNames = Object.getOwnPropertyNames(obj)
+  const copy = Object.create(Object.getPrototypeOf(obj));
+  const propNames = Object.getOwnPropertyNames(obj);
 
-  propNames.forEach(function(name) {
-    const desc = Object.getOwnPropertyDescriptor(obj, name)
-    Object.defineProperty(copy, name, desc)
-  })
+  propNames.forEach(function (name) {
+    const desc = Object.getOwnPropertyDescriptor(obj, name);
+    Object.defineProperty(copy, name, desc);
+  });
 
-  return copy
+  return copy;
 }
 
-const obj1 = { a: 1, b: 2 }
-const obj2 = copy(obj1) // obj2 looks like obj1 now
+const obj1 = { a: 1, b: 2 };
+const obj2 = copy(obj1); // obj2 looks like obj1 now
 ```
 
 ### Modifying the array during iteration
@@ -349,15 +355,15 @@ Because element `four` is now at an earlier position in the array,
 `forEach()` does not make a copy of the array before iterating.
 
 ```js
-let words = ['one', 'two', 'three', 'four']
-words.forEach(function(word) {
-  console.log(word)
-  if (word === 'two') {
-    words.shift() //'one' will delete from array
+let words = ["one", "two", "three", "four"];
+words.forEach(function (word) {
+  console.log(word);
+  if (word === "two") {
+    words.shift(); //'one' will delete from array
   }
-}) // one // two // four
+}); // one // two // four
 
-console.log(words);  //['two', 'three', 'four']
+console.log(words); //['two', 'three', 'four']
 ```
 
 ### Flatten an array
@@ -367,23 +373,23 @@ array using built-in methods you can use {{jsxref("Array.prototype.flat()")}}.
 
 ```js
 function flatten(arr) {
-  const result = []
+  const result = [];
 
-  arr.forEach(function(i) {
+  arr.forEach(function (i) {
     if (Array.isArray(i)) {
-      result.push(...flatten(i))
+      result.push(...flatten(i));
     } else {
-      result.push(i)
+      result.push(i);
     }
-  })
+  });
 
-  return result
+  return result;
 }
 
 // Usage
-const nested = [1, 2, 3, [4, 5, [6, 7], 8, 9]]
+const nested = [1, 2, 3, [4, 5, [6, 7], 8, 9]];
 
-flatten(nested) // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+flatten(nested); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
 ## Specifications

@@ -8,6 +8,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Array.reverse
 ---
+
 {{JSRef}}
 
 The **`reverse()`** method reverses an array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_. The first
@@ -18,7 +19,7 @@ array element becomes the last, and the last array element becomes the first.
 ## Syntax
 
 ```js
-reverse()
+reverse();
 ```
 
 ### Return value
@@ -62,7 +63,7 @@ elements and a length property, then reverses the array-like object. The call to
 `a`.
 
 ```js
-const a = {0: 1, 1: 2, 2: 3, length: 3};
+const a = { 0: 1, 1: 2, 2: 3, length: 3 };
 
 console.log(a); // {0: 1, 1: 2, 2: 3, length: 3}
 

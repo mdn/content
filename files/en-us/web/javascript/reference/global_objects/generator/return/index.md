@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Generator.return
 ---
+
 {{JSRef}}
 
 The **`return()`** method returns the given value and finishes
@@ -18,7 +19,7 @@ the generator.
 ## Syntax
 
 ```js
-return(value)
+return value;
 ```
 
 ### Parameters
@@ -45,9 +46,9 @@ function* gen() {
 
 const g = gen();
 
-g.next();        // { value: 1, done: false }
-g.return('foo'); // { value: "foo", done: true }
-g.next();        // { value: undefined, done: true }
+g.next(); // { value: 1, done: false }
+g.return("foo"); // { value: "foo", done: true }
+g.next(); // { value: undefined, done: true }
 ```
 
 If `return(value)` is called on a generator that is already in

@@ -8,6 +8,7 @@ tags:
   - Language feature
 browser-compat: javascript.functions.default_parameters
 ---
+
 {{jsSidebar("Functions")}}
 
 **Default function parameters** allow named
@@ -38,11 +39,11 @@ In the following example, if no value is provided for `b` when
 
 ```js
 function multiply(a, b) {
-  return a * b
+  return a * b;
 }
 
-multiply(5, 2)  // 10
-multiply(5)     // NaN !
+multiply(5, 2); // 10
+multiply(5); // NaN !
 ```
 
 To guard against this, something like the second line would be used, where
@@ -51,12 +52,12 @@ with only one argument:
 
 ```js
 function multiply(a, b) {
-  b = (typeof b !== 'undefined') ?  b : 1
-  return a * b
+  b = typeof b !== "undefined" ? b : 1;
+  return a * b;
 }
 
-multiply(5, 2)  // 10
-multiply(5)     // 5
+multiply(5, 2); // 10
+multiply(5); // 5
 ```
 
 With default parameters in ES2015, checks in the function body are no longer necessary.
@@ -65,12 +66,12 @@ the function head:
 
 ```js
 function multiply(a, b = 1) {
-  return a * b
+  return a * b;
 }
 
-multiply(5, 2)          // 10
-multiply(5)             // 5
-multiply(5, undefined)  // 5
+multiply(5, 2); // 10
+multiply(5); // 5
+multiply(5, undefined); // 5
 ```
 
 ## Examples
@@ -83,15 +84,15 @@ values), the value of the `num` argument is still the default.
 
 ```js
 function test(num = 1) {
-  console.log(typeof num)
+  console.log(typeof num);
 }
 
-test()           // 'number' (num is set to 1)
-test(undefined)  // 'number' (num is set to 1 too)
+test(); // 'number' (num is set to 1)
+test(undefined); // 'number' (num is set to 1 too)
 
 // test with other falsy values:
-test('')         // 'string' (num is set to '')
-test(null)       // 'object' (num is set to null)
+test(""); // 'string' (num is set to '')
+test(null); // 'object' (num is set to null)
 ```
 
 ### Evaluated at call time
@@ -101,29 +102,29 @@ Python, a new object is created each time the function is called.
 
 ```js
 function append(value, array = []) {
-  array.push(value)
-  return array
+  array.push(value);
+  return array;
 }
 
-append(1)  // [1]
-append(2)  // [2], not [1, 2]
+append(1); // [1]
+append(2); // [2], not [1, 2]
 ```
 
 This even applies to functions and variables:
 
 ```js
 function callSomething(thing = something()) {
-  return thing
+  return thing;
 }
 
-let numberOfTimesCalled = 0
+let numberOfTimesCalled = 0;
 function something() {
-  numberOfTimesCalled += 1
-  return numberOfTimesCalled
+  numberOfTimesCalled += 1;
+  return numberOfTimesCalled;
 }
 
-callSomething()  // 1
-callSomething()  // 2
+callSomething(); // 1
+callSomething(); // 2
 ```
 
 ### Earlier parameters are available to later default parameters
@@ -131,12 +132,12 @@ callSomething()  // 2
 Parameters defined earlier (to the left) are available to later default parameters:
 
 ```js
-function greet(name, greeting, message = greeting + ' ' + name) {
-  return [name, greeting, message]
+function greet(name, greeting, message = greeting + " " + name) {
+  return [name, greeting, message];
 }
 
-greet('David', 'Hi')                     // ["David", "Hi", "Hi David"]
-greet('David', 'Hi', 'Happy Birthday!')  // ["David", "Hi", "Happy Birthday!"]
+greet("David", "Hi"); // ["David", "Hi", "Hi David"]
+greet("David", "Hi", "Happy Birthday!"); // ["David", "Hi", "Happy Birthday!"]
 ```
 
 This functionality can be approximated like this, which demonstrates how many edge
@@ -144,12 +145,19 @@ cases are handled:
 
 ```js
 function go() {
-  return ':P'
+  return ":P";
 }
 
-function withDefaults(a, b = 5, c = b, d = go(), e = this,
-                      f = arguments, g = this.value) {
-  return [a, b, c, d, e, f, g]
+function withDefaults(
+  a,
+  b = 5,
+  c = b,
+  d = go(),
+  e = this,
+  f = arguments,
+  g = this.value
+) {
+  return [a, b, c, d, e, f, g];
 }
 
 function withoutDefaults(a, b, c, d, e, f, g) {
@@ -173,10 +181,10 @@ function withoutDefaults(a, b, c, d, e, f, g) {
   return [a, b, c, d, e, f, g];
 }
 
-withDefaults.call({value: '=^_^='});
+withDefaults.call({ value: "=^_^=" });
 // [undefined, 5, 5, ":P", {value:"=^_^="}, arguments, "=^_^="]
 
-withoutDefaults.call({value: '=^_^='});
+withoutDefaults.call({ value: "=^_^=" });
 // [undefined, 5, 5, ":P", {value:"=^_^="}, arguments, "=^_^="]
 ```
 
@@ -199,8 +207,11 @@ the default parameter value does not have access to the child scope of the funct
 body:
 
 ```js example-bad
-function f(a = go()) { // Throws a `ReferenceError` when `f` is invoked.
-  function go() { return ':P' }
+function f(a = go()) {
+  // Throws a `ReferenceError` when `f` is invoked.
+  function go() {
+    return ":P";
+  }
 }
 ```
 
@@ -210,8 +221,8 @@ function f(a = go()) { // Throws a `ReferenceError` when `f` is invoked.
 
 ```js example-bad
 function f(a, b = () => console.log(a)) {
-  var a = 1
-  b() // Prints `undefined`, because default parameter values exist in their own scope
+  var a = 1;
+  b(); // Prints `undefined`, because default parameter values exist in their own scope
 }
 ```
 
@@ -222,11 +233,11 @@ are later parameters without defaults.
 
 ```js
 function f(x = 1, y) {
-  return [x, y]
+  return [x, y];
 }
 
-f()   // [1, undefined]
-f(2)  // [2, undefined]
+f(); // [1, undefined]
+f(2); // [2, undefined]
 ```
 
 ### Destructured parameter with default value assignment
@@ -236,11 +247,11 @@ You can use default value assignment with the
 notation:
 
 ```js
-function f([x, y] = [1, 2], {z: z} = {z: 3}) {
-  return x + y + z
+function f([x, y] = [1, 2], { z: z } = { z: 3 }) {
+  return x + y + z;
 }
 
-f()  // 6
+f(); // 6
 ```
 
 ## Specifications

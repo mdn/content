@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.every
 ---
+
 {{JSRef}}
 
 The **`every()`** method tests whether
@@ -113,12 +114,12 @@ that `callbackfn.call` evaluates to the original value of
 
 ```js
 if (!Array.prototype.every) {
-  Array.prototype.every = function(callbackfn, thisArg) {
-    'use strict';
+  Array.prototype.every = function (callbackfn, thisArg) {
+    "use strict";
     var T, k;
 
     if (this == null) {
-      throw new TypeError('this is null or not defined');
+      throw new TypeError("this is null or not defined");
     }
 
     // 1. Let O be the result of calling ToObject passing the this
@@ -131,7 +132,10 @@ if (!Array.prototype.every) {
     var len = O.length >>> 0;
 
     // 4. If IsCallable(callbackfn) is false, throw a TypeError exception.
-    if (typeof callbackfn !== 'function' && Object.prototype.toString.call(callbackfn) !== '[object Function]') {
+    if (
+      typeof callbackfn !== "function" &&
+      Object.prototype.toString.call(callbackfn) !== "[object Function]"
+    ) {
       throw new TypeError();
     }
 
@@ -145,7 +149,6 @@ if (!Array.prototype.every) {
 
     // 7. Repeat, while k < len
     while (k < len) {
-
       var kValue;
 
       // a. Let Pk be ToString(k).
@@ -164,8 +167,8 @@ if (!Array.prototype.every) {
         // of callbackfn with T as the this value if T is not undefined
         // else is the result of calling callbackfn
         // and argument list containing kValue, k, and O.
-        if(T) testResult = callbackfn.call(T, kValue, k, O);
-        else testResult = callbackfn(kValue,k,O)
+        if (T) testResult = callbackfn.call(T, kValue, k, O);
+        else testResult = callbackfn(kValue, k, O);
 
         // iii. If ToBoolean(testResult) is false, return false.
         if (!testResult) {
@@ -189,7 +192,7 @@ The following example tests whether all elements in the array are bigger than 10
 function isBigEnough(element, index, array) {
   return element >= 10;
 }
-[12, 5, 8, 130, 44].every(isBigEnough);   // false
+[12, 5, 8, 130, 44].every(isBigEnough); // false
 [12, 54, 18, 130, 44].every(isBigEnough); // true
 ```
 
@@ -200,7 +203,7 @@ The following example tests if all the elements of an array are present in anoth
 ```js
 function isSubset(array1, array2) {
   // returns true if array2 is a subset of array1
-  
+
   return array2.every(function (element) {
     return array1.includes(element);
   });
@@ -216,8 +219,8 @@ console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 8, 7])); // false
 functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
 
 ```js
-[12, 5, 8, 130, 44].every(x => x >= 10);   // false
-[12, 54, 18, 130, 44].every(x => x >= 10); // true
+[12, 5, 8, 130, 44].every((x) => x >= 10); // false
+[12, 54, 18, 130, 44].every((x) => x >= 10); // true
 ```
 
 ### Affecting Initial Array (modifying, appending, and deleting)
@@ -230,11 +233,11 @@ array is modified.
 // Modifying items
 // ---------------
 let arr = [1, 2, 3, 4];
-arr.every( (elem, index, arr) => {
-  arr[index+1] -= 1
-  console.log(`[${arr}][${index}] -> ${elem}`)
-  return elem < 2
-})
+arr.every((elem, index, arr) => {
+  arr[index + 1] -= 1;
+  console.log(`[${arr}][${index}] -> ${elem}`);
+  return elem < 2;
+});
 
 // Loop runs for 3 iterations, but would
 // have run 2 iterations without any modification
@@ -247,11 +250,11 @@ arr.every( (elem, index, arr) => {
 // Appending items
 // ---------------
 arr = [1, 2, 3];
-arr.every( (elem, index, arr) => {
-  arr.push('new')
-  console.log(`[${arr}][${index}] -> ${elem}`)
-  return elem < 4
-})
+arr.every((elem, index, arr) => {
+  arr.push("new");
+  console.log(`[${arr}][${index}] -> ${elem}`);
+  return elem < 4;
+});
 
 // Loop runs for 3 iterations, even after appending new items
 //
@@ -263,11 +266,11 @@ arr.every( (elem, index, arr) => {
 // Deleting items
 // ---------------
 arr = [1, 2, 3, 4];
-arr.every( (elem, index, arr) => {
-  arr.pop()
-  console.log(`[${arr}][${index}] -> ${elem}`)
-  return elem < 4
-})
+arr.every((elem, index, arr) => {
+  arr.pop();
+  console.log(`[${arr}][${index}] -> ${elem}`);
+  return elem < 4;
+});
 
 // Loop runs for 2 iterations only, as the remaining
 // items are `pop()`ed off

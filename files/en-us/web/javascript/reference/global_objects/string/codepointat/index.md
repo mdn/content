@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.codePointAt
 ---
+
 {{JSRef}}
 
 The **`codePointAt()`** method returns a non-negative integer
@@ -21,7 +22,7 @@ that is the UTF-16 code point value.
 ## Syntax
 
 ```js
-codePointAt(pos)
+codePointAt(pos);
 ```
 
 ### Parameters
@@ -43,18 +44,18 @@ A decimal number representing the code point value of the character at the given
 ### Using codePointAt()
 
 ```js
-'ABC'.codePointAt(0)                        // 65
-'ABC'.codePointAt(0).toString(16)           // 41
+"ABC".codePointAt(0); // 65
+"ABC".codePointAt(0).toString(16); // 41
 
-'😍'.codePointAt(0)                         // 128525
-'\ud83d\ude0d'.codePointAt(0)               // 128525
-'\ud83d\ude0d'.codePointAt(0).toString(16)  // 1f60d
+"😍".codePointAt(0); // 128525
+"\ud83d\ude0d".codePointAt(0); // 128525
+"\ud83d\ude0d".codePointAt(0).toString(16); // 1f60d
 
-'😍'.codePointAt(1)                         // 56845
-'\ud83d\ude0d'.codePointAt(1)               // 56845
-'\ud83d\ude0d'.codePointAt(1).toString(16)  // de0d
+"😍".codePointAt(1); // 56845
+"\ud83d\ude0d".codePointAt(1); // 56845
+"\ud83d\ude0d".codePointAt(1).toString(16); // de0d
 
-'ABC'.codePointAt(42)                       // undefined
+"ABC".codePointAt(42); // undefined
 ```
 
 ### Looping with codePointAt()
@@ -67,8 +68,8 @@ or an Array's [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/
 (or anything which correctly iterates UTF-16 surrogates) to iterate the string, using `codePointAt(0)` to get the code point of each element.
 
 ```js
-for (let codePoint of '\ud83d\udc0e\ud83d\udc71\u2764') {
-   console.log(codePoint.codePointAt(0).toString(16))
+for (let codePoint of "\ud83d\udc0e\ud83d\udc71\u2764") {
+  console.log(codePoint.codePointAt(0).toString(16));
 }
 // '1f40e', '1f471', '2764'
 ```
@@ -81,18 +82,18 @@ specified in ECMAScript 2015 for browsers without native support.
 ```js
 /*! https://mths.be/codepointat v0.2.0 by @mathias */
 if (!String.prototype.codePointAt) {
-  (function() {
-    'use strict'; // needed to support `apply`/`call` with `undefined`/`null`
-    var defineProperty = (function() {
+  (function () {
+    "use strict"; // needed to support `apply`/`call` with `undefined`/`null`
+    var defineProperty = (function () {
       // IE 8 only supports `Object.defineProperty` on DOM elements
       try {
         var object = {};
         var $defineProperty = Object.defineProperty;
         var result = $defineProperty(object, object, object) && $defineProperty;
-      } catch(error) {}
+      } catch (error) {}
       return result;
-    }());
-    var codePointAt = function(position) {
+    })();
+    var codePointAt = function (position) {
       if (this == null) {
         throw TypeError();
       }
@@ -100,7 +101,8 @@ if (!String.prototype.codePointAt) {
       var size = string.length;
       // `ToInteger`
       var index = position ? Number(position) : 0;
-      if (index != index) { // better `isNaN`
+      if (index != index) {
+        // better `isNaN`
         index = 0;
       }
       // Account for out-of-bounds indices:
@@ -110,28 +112,31 @@ if (!String.prototype.codePointAt) {
       // Get the first code unit
       var first = string.charCodeAt(index);
       var second;
-      if ( // check if it’s the start of a surrogate pair
-        first >= 0xD800 && first <= 0xDBFF && // high surrogate
+      if (
+        // check if it’s the start of a surrogate pair
+        first >= 0xd800 &&
+        first <= 0xdbff && // high surrogate
         size > index + 1 // there is a next code unit
       ) {
         second = string.charCodeAt(index + 1);
-        if (second >= 0xDC00 && second <= 0xDFFF) { // low surrogate
+        if (second >= 0xdc00 && second <= 0xdfff) {
+          // low surrogate
           // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
-          return (first - 0xD800) * 0x400 + second - 0xDC00 + 0x10000;
+          return (first - 0xd800) * 0x400 + second - 0xdc00 + 0x10000;
         }
       }
       return first;
     };
     if (defineProperty) {
-      defineProperty(String.prototype, 'codePointAt', {
-        'value': codePointAt,
-        'configurable': true,
-        'writable': true
+      defineProperty(String.prototype, "codePointAt", {
+        value: codePointAt,
+        configurable: true,
+        writable: true,
       });
     } else {
       String.prototype.codePointAt = codePointAt;
     }
-  }());
+  })();
 }
 ```
 

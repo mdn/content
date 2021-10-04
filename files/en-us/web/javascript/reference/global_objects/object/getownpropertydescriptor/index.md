@@ -8,6 +8,7 @@ tags:
   - Object
 browser-compat: javascript.builtins.Object.getOwnPropertyDescriptor
 ---
+
 {{JSRef}}
 
 The **`Object.getOwnPropertyDescriptor()`** method returns an
@@ -21,7 +22,7 @@ configuration.
 ## Syntax
 
 ```js
-Object.getOwnPropertyDescriptor(obj, prop)
+Object.getOwnPropertyDescriptor(obj, prop);
 ```
 
 ### Parameters
@@ -72,8 +73,12 @@ A _property descriptor_ is a record with some of the following attributes:
 ```js
 var o, d;
 
-o = { get foo() { return 17; } };
-d = Object.getOwnPropertyDescriptor(o, 'foo');
+o = {
+  get foo() {
+    return 17;
+  },
+};
+d = Object.getOwnPropertyDescriptor(o, "foo");
 // d is {
 //   configurable: true,
 //   enumerable: true,
@@ -82,7 +87,7 @@ d = Object.getOwnPropertyDescriptor(o, 'foo');
 // }
 
 o = { bar: 42 };
-d = Object.getOwnPropertyDescriptor(o, 'bar');
+d = Object.getOwnPropertyDescriptor(o, "bar");
 // d is {
 //   configurable: true,
 //   enumerable: true,
@@ -90,8 +95,8 @@ d = Object.getOwnPropertyDescriptor(o, 'bar');
 //   writable: true
 // }
 
-o = { [Symbol.for('baz')]: 73 }
-d = Object.getOwnPropertyDescriptor(o, Symbol.for('baz'));
+o = { [Symbol.for("baz")]: 73 };
+d = Object.getOwnPropertyDescriptor(o, Symbol.for("baz"));
 // d is {
 //   configurable: true,
 //   enumerable: true,
@@ -100,12 +105,12 @@ d = Object.getOwnPropertyDescriptor(o, Symbol.for('baz'));
 // }
 
 o = {};
-Object.defineProperty(o, 'qux', {
+Object.defineProperty(o, "qux", {
   value: 8675309,
   writable: false,
-  enumerable: false
+  enumerable: false,
 });
-d = Object.getOwnPropertyDescriptor(o, 'qux');
+d = Object.getOwnPropertyDescriptor(o, "qux");
 // d is {
 //   value: 8675309,
 //   writable: false,
@@ -121,10 +126,10 @@ will cause a {{jsxref("TypeError")}}. In ES2015, a non-object first argument wil
 coerced to an object at first.
 
 ```js
-Object.getOwnPropertyDescriptor('foo', 0);
+Object.getOwnPropertyDescriptor("foo", 0);
 // TypeError: "foo" is not an object  // ES5 code
 
-Object.getOwnPropertyDescriptor('foo', 0);
+Object.getOwnPropertyDescriptor("foo", 0);
 // Object returned by ES2015 code: {
 //   configurable: false,
 //   enumerable: true,

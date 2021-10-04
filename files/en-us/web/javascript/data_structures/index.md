@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - Types
 ---
+
 {{jsSidebar("More")}}
 
 Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.
@@ -16,9 +17,9 @@ Programming languages all have built-in data structures, but these often differ 
 JavaScript is a *loosely typed* and *dynamic* language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:
 
 ```js
-let foo = 42;    // foo is now a number
-foo     = 'bar'; // foo is now a string
-foo     = true;  // foo is now a boolean
+let foo = 42; // foo is now a number
+foo = "bar"; // foo is now a string
+foo = true; // foo is now a boolean
 ```
 
 ## JavaScript types
@@ -26,6 +27,7 @@ foo     = true;  // foo is now a boolean
 The set of types in the JavaScript language consists of [_primitive values_](#primitive_values) and [_objects_](#objects).
 
 - [Primitive values](#primitive_values) (immutable datum represented directly at the lowest level of the language)
+
   - [Boolean type](#boolean_type)
   - [Null type](#null_type)
   - [Undefined type](#undefined_type)
@@ -227,7 +229,7 @@ An accessor property has the following attributes:
 | ---------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------- |
 | [[Get]]          | Function object or `undefined` | The function is called with an empty argument list and retrieves the property value whenever a get access to the value is performed. See also [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get).               | `undefined`   |
 | [[Set]]          | Function object or `undefined` | The function is called with an argument that contains the assigned value and is executed whenever a specified property is attempted to be changed. See also [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set). | `undefined`   |
-| [[Enumerable]]   | Boolean                        | If `true`, the property will be enumerated in [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops.                                                                                                | `false`       |
+| [[Enumerable]]   | Boolean                        | If `true`, the property will be enumerated in [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops.                                                                                              | `false`       |
 | [[Configurable]] | Boolean                        | If `false`, the property can't be deleted and can't be changed to a data property.                                                                                                                                       | `false`       |
 
 ### "Normal" objects, and functions
@@ -248,19 +250,19 @@ Additionally, arrays inherit from `Array.prototype`, which provides to them a ha
 
 [Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays) are new to JavaScript with ECMAScript 2015, and present an array-like view of an underlying binary data buffer. The following table helps determine the equivalent C data types:
 
-| Type                                     | Value Range                   | Size in bytes | Description                                                                  | Web IDL type          | Equivalent C type               |
-| ---------------------------------------- | ----------------------------- | ------------- | ---------------------------------------------------------------------------- | --------------------- | ------------------------------- |
+| Type                            | Value Range                   | Size in bytes | Description                                                                  | Web IDL type          | Equivalent C type               |
+| ------------------------------- | ----------------------------- | ------------- | ---------------------------------------------------------------------------- | --------------------- | ------------------------------- |
 | {{jsxref("Int8Array")}}         | `-128` to `127`               | 1             | 8-bit two's complement signed integer                                        | `byte`                | `int8_t`                        |
-| {{jsxref("Uint8Array")}}         | `0` to `255`                  | 1             | 8-bit unsigned integer                                                       | `octet`               | `uint8_t`                       |
+| {{jsxref("Uint8Array")}}        | `0` to `255`                  | 1             | 8-bit unsigned integer                                                       | `octet`               | `uint8_t`                       |
 | {{jsxref("Uint8ClampedArray")}} | `0` to `255`                  | 1             | 8-bit unsigned integer (clamped)                                             | `octet`               | `uint8_t`                       |
-| {{jsxref("Int16Array")}}         | `-32768` to `32767`           | 2             | 16-bit two's complement signed integer                                       | `short`               | `int16_t`                       |
-| {{jsxref("Uint16Array")}}         | `0` to `65535`                | 2             | 16-bit unsigned integer                                                      | `unsigned short`      | `uint16_t`                      |
-| {{jsxref("Int32Array")}}         | `-2147483648` to `2147483647` | 4             | 32-bit two's complement signed integer                                       | `long`                | `int32_t`                       |
-| {{jsxref("Uint32Array")}}         | `0` to `4294967295`           | 4             | 32-bit unsigned integer                                                      | `unsigned long`       | `uint32_t`                      |
-| {{jsxref("Float32Array")}}     | `1.2E-38` to `3.4E38`         | 4             | 32-bit IEEE floating point number (7 significant digits e.g., `1.1234567`)   | `unrestricted float`  | `float`                         |
-| {{jsxref("Float64Array")}}     | `5E-324` to `1.8E308`         | 8             | 64-bit IEEE floating point number (16 significant digits e.g., `1.123...15`) | `unrestricted double` | `double`                        |
+| {{jsxref("Int16Array")}}        | `-32768` to `32767`           | 2             | 16-bit two's complement signed integer                                       | `short`               | `int16_t`                       |
+| {{jsxref("Uint16Array")}}       | `0` to `65535`                | 2             | 16-bit unsigned integer                                                      | `unsigned short`      | `uint16_t`                      |
+| {{jsxref("Int32Array")}}        | `-2147483648` to `2147483647` | 4             | 32-bit two's complement signed integer                                       | `long`                | `int32_t`                       |
+| {{jsxref("Uint32Array")}}       | `0` to `4294967295`           | 4             | 32-bit unsigned integer                                                      | `unsigned long`       | `uint32_t`                      |
+| {{jsxref("Float32Array")}}      | `1.2E-38` to `3.4E38`         | 4             | 32-bit IEEE floating point number (7 significant digits e.g., `1.1234567`)   | `unrestricted float`  | `float`                         |
+| {{jsxref("Float64Array")}}      | `5E-324` to `1.8E308`         | 8             | 64-bit IEEE floating point number (16 significant digits e.g., `1.123...15`) | `unrestricted double` | `double`                        |
 | {{jsxref("BigInt64Array")}}     | `-2^63` to `2^63 - 1`         | 8             | 64-bit two's complement signed integer                                       | `bigint`              | `int64_t (signed long long)`    |
-| {{jsxref("BigUint64Array")}}     | `0` to `2^64 - 1`             | 8             | 64-bit unsigned integer                                                      | `bigint`              | `uint64_t (unsigned long long)` |
+| {{jsxref("BigUint64Array")}}    | `0` to `2^64 - 1`             | 8             | 64-bit unsigned integer                                                      | `bigint`              | `uint64_t (unsigned long long)` |
 
 ### Keyed collections: Maps, Sets, WeakMaps, WeakSets
 

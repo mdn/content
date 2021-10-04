@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setUTCHours
 ---
+
 {{JSRef}}
 
 The **`setUTCHours()`** method sets the hour for a specified
@@ -21,10 +22,10 @@ instance.
 ## Syntax
 
 ```js
-setUTCHours(hoursValue)
-setUTCHours(hoursValue, minutesValue)
-setUTCHours(hoursValue, minutesValue, secondsValue)
-setUTCHours(hoursValue, minutesValue, secondsValue, msValue)
+setUTCHours(hoursValue);
+setUTCHours(hoursValue, minutesValue);
+setUTCHours(hoursValue, minutesValue, secondsValue);
+setUTCHours(hoursValue, minutesValue, secondsValue, msValue);
 ```
 
 ### Parameters

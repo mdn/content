@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Date.now
 ---
+
 {{JSRef}}
 
 The static **`Date.now()`** method returns the number of
@@ -20,7 +21,7 @@ milliseconds elapsed since January 1, 1970 00:00:00 UTC.
 ## Syntax
 
 ```js
-Date.now()
+Date.now();
 ```
 
 ### Return value
@@ -52,7 +53,7 @@ default and defaults to 20µs in Firefox 59; in 60 it will be 2ms.
 
 ```js
 // reduced time precision (2ms) in Firefox 60
-Date.now()
+Date.now();
 // 1519211809934
 // 1519211810362
 // 1519211811670

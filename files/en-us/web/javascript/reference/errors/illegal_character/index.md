@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: illegal character'
+title: "SyntaxError: illegal character"
 slug: Web/JavaScript/Reference/Errors/Illegal_character
 tags:
   - Error
@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "illegal character" occurs when there is an invalid or
@@ -28,8 +29,8 @@ SyntaxError: Invalid or unexpected token (Chrome)
 
 There is an invalid or unexpected token that doesn't belong at this position in the
 code. Use an editor that supports syntax highlighting and carefully check your code
-against mismatches like a minus sign (` - `) versus a dash (` – `)
-or simple quotes (` " `) vs non-standard quotation marks (` “ `).
+against mismatches like a minus sign (`-`) versus a dash (`–`)
+or simple quotes (`"`) vs non-standard quotation marks (`“`).
 
 ## Examples
 
@@ -55,7 +56,7 @@ This should work:
 ```js example-good
 "This is actually a string";
 42 - 13;
-var foo = 'bar';
+var foo = "bar";
 ```
 
 Some editors and IDEs will notify you or at least use a slightly different highlighting for it, but not all. When something like this happens to your code and you're not able to find the source of the problem, it's often best to just delete the problematic line and retype it.
@@ -72,7 +73,7 @@ var colors = ['#000', #333', '#666'];
 Add the missing quote for `'#333'`.
 
 ```js example-good
-var colors = ['#000', '#333', '#666'];
+var colors = ["#000", "#333", "#666"];
 ```
 
 ### Hidden characters
@@ -81,7 +82,7 @@ When copy pasting code from external sources, there might be invalid characters.
 out!
 
 ```js example-bad
-var foo = 'bar';
+var foo = "bar";
 // SyntaxError: illegal character
 ```
 

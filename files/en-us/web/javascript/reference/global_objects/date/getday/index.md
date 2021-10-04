@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getDay
 ---
+
 {{JSRef}}
 
 The **`getDay()`** method returns the
@@ -20,7 +21,7 @@ Sunday. For the day of the month, see {{jsxref("Date.prototype.getDate()")}}.
 ## Syntax
 
 ```js
-getDay()
+getDay();
 ```
 
 ### Return value
@@ -37,7 +38,7 @@ value of the {{jsxref("Date")}} object `Xmas95`. December 25, 1995, is a
 Monday.
 
 ```js
-var Xmas95 = new Date('December 25, 1995 23:15:30');
+var Xmas95 = new Date("December 25, 1995 23:15:30");
 var weekday = Xmas95.getDay();
 
 console.log(weekday); // 1
@@ -49,10 +50,10 @@ console.log(weekday); // 1
 > made easier:
 >
 > ```js
-> var options = { weekday: 'long'};
-> console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
+> var options = { weekday: "long" };
+> console.log(new Intl.DateTimeFormat("en-US", options).format(Xmas95));
 > // Monday
-> console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));
+> console.log(new Intl.DateTimeFormat("de-DE", options).format(Xmas95));
 > // Montag
 > ```
 

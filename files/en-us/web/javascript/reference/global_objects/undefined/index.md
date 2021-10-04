@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.undefined
 ---
+
 {{jsSidebar("Objects")}}
 
 The global **`undefined`** property represents the primitive
@@ -20,7 +21,7 @@ value `{{Glossary("Undefined", "undefined")}}`. It is one of JavaScript's
 ## Syntax
 
 ```js
-undefined
+undefined;
 ```
 
 ## Description
@@ -41,22 +42,24 @@ a value was not {{jsxref("Statements/return", "returned")}}.
 > **Note:** While you can use `undefined` as an
 > {{Glossary("identifier")}} (variable name) in any scope other than the global scope
 > (because `undefined` is not a {{jsxref("Reserved_Words", "reserved word",
+
     "", 1)}}), doing so is a very bad idea that will make your code difficult to maintain
+
 > and debug.
 >
 > ```js example-bad
 > //  DON'T DO THIS
 >
 > //  logs "foo string"
-> (function() {
->   var undefined = 'foo';
+> (function () {
+>   var undefined = "foo";
 >   console.log(undefined, typeof undefined);
 > })();
 >
 > //  logs "foo string"
-> (function(undefined) {
+> (function (undefined) {
 >   console.log(undefined, typeof undefined);
-> })('foo');
+> })("foo");
 > ```
 
 ## Examples
@@ -71,8 +74,7 @@ determine whether a variable has a value. In the following code, the variable
 var x;
 if (x === undefined) {
   // these statements execute
-}
-else {
+} else {
   // these statements do not execute
 }
 ```
@@ -92,8 +94,8 @@ Alternatively, {{jsxref("Operators/typeof", "typeof")}} can be used:
 
 ```js
 var x;
-if (typeof x === 'undefined') {
-   // these statements execute
+if (typeof x === "undefined") {
+  // these statements execute
 }
 ```
 
@@ -102,12 +104,13 @@ error if the variable has not been declared.
 
 ```js
 //  x has not been declared before
-if (typeof x === 'undefined') { //  evaluates to true without errors
-   //  these statements execute
+if (typeof x === "undefined") {
+  //  evaluates to true without errors
+  //  these statements execute
 }
 
-if (x === undefined) { //  throws a ReferenceError
-
+if (x === undefined) {
+  //  throws a ReferenceError
 }
 ```
 
@@ -121,7 +124,7 @@ existence of a property on the _global object_, using the
 {{jsxref("Operators/in", "in")}} operator, for instance:
 
 ```js
-if ('x' in window) {
+if ("x" in window) {
   //  these statements execute only if x is defined globally
 }
 ```

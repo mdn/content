@@ -9,6 +9,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.valueOf
 ---
+
 {{JSRef}}
 
 The **`valueOf()`** method returns the primitive value of a
@@ -19,7 +20,7 @@ The **`valueOf()`** method returns the primitive value of a
 ## Syntax
 
 ```js
-valueOf()
+valueOf();
 ```
 
 ### Return value
@@ -39,7 +40,7 @@ This method is usually called internally by JavaScript and not explicitly in cod
 ### Using `valueOf()`
 
 ```js
-var x = new String('Hello world');
+var x = new String("Hello world");
 console.log(x.valueOf()); // Displays 'Hello world'
 ```
 

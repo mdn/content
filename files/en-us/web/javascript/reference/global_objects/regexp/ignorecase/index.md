@@ -10,6 +10,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.ignoreCase
 ---
+
 {{JSRef}}
 
 The **`ignoreCase`** property indicates whether or not the "`i`" flag is used with the regular expression. `ignoreCase` is a read-only property of an individual regular expression instance.
@@ -27,7 +28,7 @@ You cannot change this property directly.
 ### Using ignoreCase
 
 ```js
-var regex = new RegExp('foo', 'i');
+var regex = new RegExp("foo", "i");
 
 console.log(regex.ignoreCase); // true
 ```

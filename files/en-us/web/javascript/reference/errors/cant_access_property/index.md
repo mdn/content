@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "can't access property" occurs when property access was
@@ -56,7 +57,7 @@ the [typeof](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) operator,
 for example.
 
 ```js
-if (typeof foo !== 'undefined') {
+if (typeof foo !== "undefined") {
   // Now we know that foo is defined, we are good to go.
 }
 ```

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.toGMTString
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`toGMTString()`** method converts a date to a string,
@@ -24,7 +25,7 @@ general it should represent a human readable date string.
 ## Syntax
 
 ```js
-toGMTString()
+toGMTString();
 ```
 
 ### Return value
@@ -42,9 +43,9 @@ to the following form. The exact format depends on the platform.
 
 ```js
 var today = new Date();
-var str = today.toGMTString();  // deprecated! use toUTCString()
+var str = today.toGMTString(); // deprecated! use toUTCString()
 
-console.log(str);               // Mon, 18 Dec 1995 17:28:35 GMT
+console.log(str); // Mon, 18 Dec 1995 17:28:35 GMT
 ```
 
 ## Specifications

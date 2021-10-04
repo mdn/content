@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Number.MAX_SAFE_INTEGER
 ---
+
 {{JSRef}}
 
 The **`Number.MAX_SAFE_INTEGER`** constant represents the maximum safe integer in JavaScript (`2^53 - 1`).
@@ -31,7 +32,7 @@ Because `MAX_SAFE_INTEGER` is a static property of {{jsxref("Number")}}, you alw
 
 ```js
 if (!Number.MAX_SAFE_INTEGER) {
-    Number.MAX_SAFE_INTEGER = 9007199254740991; // Math.pow(2, 53) - 1;
+  Number.MAX_SAFE_INTEGER = 9007199254740991; // Math.pow(2, 53) - 1;
 }
 ```
 

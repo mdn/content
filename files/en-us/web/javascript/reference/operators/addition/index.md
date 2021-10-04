@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.addition
 ---
+
 {{jsSidebar("Operators")}}
 
 The addition operator (`+`) produces the sum of numeric operands or string
@@ -18,7 +19,7 @@ concatenation.
 ## Syntax
 
 ```js
-x + y
+x + y;
 ```
 
 ## Examples
@@ -27,26 +28,26 @@ x + y
 
 ```js
 // Number + Number -> addition
-1 + 2 // 3
+1 + 2; // 3
 
 // Boolean + Number -> addition
-true + 1 // 2
+true + 1; // 2
 
 // Boolean + Boolean -> addition
-false + false // 0
+false + false; // 0
 ```
 
 ### String concatenation
 
 ```js
 // String + String -> concatenation
-'foo' + 'bar' // "foobar"
+"foo" + "bar"; // "foobar"
 
 // Number + String -> concatenation
-5 + 'foo' // "5foo"
+5 + "foo"; // "5foo"
 
 // String + Boolean -> concatenation
-'foo' + false // "foofalse"
+"foo" + false; // "foofalse"
 ```
 
 ## Specifications

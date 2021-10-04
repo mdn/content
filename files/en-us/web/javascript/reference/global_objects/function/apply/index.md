@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Function.apply
 ---
+
 {{JSRef}}
 
 The **`apply()`** method calls a function with a given `this` value, and `arguments` provided as an array (or an [array-like object](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).
@@ -17,8 +18,8 @@ The **`apply()`** method calls a function with a given `this` value, and `argume
 ## Syntax
 
 ```js
-apply(thisArg)
-apply(thisArg, argsArray)
+apply(thisArg);
+apply(thisArg, argsArray);
 ```
 
 ### Parameters
@@ -70,7 +71,7 @@ But you wanted to append to the existing array... So what now? Write a loop? Sur
 `apply` to the rescue!
 
 ```js
-const array = ['a', 'b'];
+const array = ["a", "b"];
 const elements = [0, 1, 2];
 array.push.apply(array, elements);
 console.info(array); // ["a", "b", 0, 1, 2]
@@ -94,7 +95,7 @@ let max = Math.max.apply(null, numbers);
 let min = Math.min.apply(null, numbers);
 
 // vs. simple loop based algorithm
-max = -Infinity, min = +Infinity;
+(max = -Infinity), (min = +Infinity);
 
 for (let i = 0; i < numbers.length; i++) {
   if (numbers[i] > max) {
@@ -118,8 +119,7 @@ function minOfArray(arr) {
   let QUANTUM = 32768;
 
   for (var i = 0, len = arr.length; i < len; i += QUANTUM) {
-    var submin = Math.min.apply(null,
-                                arr.slice(i, Math.min(i+QUANTUM, len)));
+    var submin = Math.min.apply(null, arr.slice(i, Math.min(i + QUANTUM, len)));
     min = Math.min(submin, min);
   }
 
@@ -136,7 +136,7 @@ You can use `apply` to chain {{jsxref("Operators/new", "constructors", "", 1)}} 
 In the following example we will create a global {{jsxref("Function")}} method called `construct`, which will enable you to use an array-like object with a constructor instead of an arguments list.
 
 ```js
-Function.prototype.construct = function(aArgs) {
+Function.prototype.construct = function (aArgs) {
   let oNew = Object.create(this.prototype);
   this.apply(oNew, aArgs);
   return oNew;
@@ -148,16 +148,16 @@ Example usage:
 ```js
 function MyConstructor() {
   for (let nProp = 0; nProp < arguments.length; nProp++) {
-    this['property' + nProp] = arguments[nProp];
+    this["property" + nProp] = arguments[nProp];
   }
 }
 
-let myArray = [4, 'Hello world!', false];
+let myArray = [4, "Hello world!", false];
 let myInstance = MyConstructor.construct(myArray);
 
-console.log(myInstance.property1);                // logs 'Hello world!'
+console.log(myInstance.property1); // logs 'Hello world!'
 console.log(myInstance instanceof MyConstructor); // logs 'true'
-console.log(myInstance.constructor);              // logs 'MyConstructor'
+console.log(myInstance.constructor); // logs 'MyConstructor'
 ```
 
 > **Note:** This non-native `Function.construct` method will not work with some native constructors; like {{jsxref("Date")}}, for example. In these cases you have to use the {{jsxref("Function.prototype.bind")}} method.

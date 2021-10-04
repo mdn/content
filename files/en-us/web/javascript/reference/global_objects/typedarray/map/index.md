@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.map
 ---
+
 {{JSRef}}
 
 The **`map()`** method creates a new typed array with the
@@ -113,7 +114,7 @@ the typed array as `map()` loops through the original typed array.
 
 ```js
 const numbers = new Uint8Array([1, 4, 9]);
-const doubles = numbers.map(function(num) {
+const doubles = numbers.map(function (num) {
   return num * 2;
 });
 // doubles is now Uint8Array [2, 8, 18]

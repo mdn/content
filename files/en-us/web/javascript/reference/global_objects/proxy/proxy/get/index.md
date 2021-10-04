@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.get
 ---
+
 {{JSRef}}
 
 The **`handler.get()`** method is a trap for getting a property
@@ -19,8 +20,7 @@ value.
 
 ```js
 const p = new Proxy(target, {
-  get: function(target, property, receiver) {
-  }
+  get: function (target, property, receiver) {},
 });
 ```
 
@@ -74,32 +74,35 @@ If the following invariants are violated, the proxy will throw a
 The following code traps getting a property value.
 
 ```js
-const p = new Proxy({}, {
-  get: function(target, property, receiver) {
-    console.log('called: ' + property);
-    return 10;
+const p = new Proxy(
+  {},
+  {
+    get: function (target, property, receiver) {
+      console.log("called: " + property);
+      return 10;
+    },
   }
-});
+);
 
 console.log(p.a); // "called: a"
-                  // 10
+// 10
 ```
 
 The following code violates an invariant.
 
 ```js
 const obj = {};
-Object.defineProperty(obj, 'a', {
+Object.defineProperty(obj, "a", {
   configurable: false,
   enumerable: false,
   value: 10,
-  writable: false
+  writable: false,
 });
 
 const p = new Proxy(obj, {
-  get: function(target, property) {
+  get: function (target, property) {
     return 20;
-  }
+  },
 });
 
 p.a; // TypeError is thrown

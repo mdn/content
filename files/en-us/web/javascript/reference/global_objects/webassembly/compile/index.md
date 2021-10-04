@@ -11,6 +11,7 @@ tags:
   - compile
 browser-compat: javascript.builtins.WebAssembly.compile
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.compile()`** function compiles WebAssembly
@@ -21,7 +22,7 @@ it is necessary to a compile a module before it can be instantiated (otherwise, 
 ## Syntax
 
 ```js
-WebAssembly.compile(bufferSource)
+WebAssembly.compile(bufferSource);
 ```
 
 ### Parameters
@@ -52,13 +53,10 @@ The following example compiles the loaded simple.wasm byte code using the
 ```js
 var worker = new Worker("wasm_worker.js");
 
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes =>
-  WebAssembly.compile(bytes)
-).then(mod =>
-  worker.postMessage(mod)
-);
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.compile(bytes))
+  .then((mod) => worker.postMessage(mod));
 ```
 
 > **Note:** You'll probably want to use

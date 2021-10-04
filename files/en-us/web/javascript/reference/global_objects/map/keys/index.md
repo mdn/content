@@ -10,6 +10,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Map.keys
 ---
+
 {{JSRef}}
 
 The **`keys()`** method returns a new
@@ -21,7 +22,7 @@ that contains the keys for each element in the `Map` object in insertion order.
 ## Syntax
 
 ```js
-keys()
+keys();
 ```
 
 ### Return value
@@ -34,9 +35,9 @@ A new {{jsxref("Map")}} iterator object.
 
 ```js
 var myMap = new Map();
-myMap.set('0', 'foo');
-myMap.set(1, 'bar');
-myMap.set({}, 'baz');
+myMap.set("0", "foo");
+myMap.set(1, "bar");
+myMap.set({}, "baz");
 
 var mapIter = myMap.keys();
 

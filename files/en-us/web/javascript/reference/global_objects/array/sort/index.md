@@ -10,6 +10,7 @@ tags:
   - Sorting
 browser-compat: javascript.builtins.Array.sort
 ---
+
 {{JSRef}}
 
 The **`sort()`** method sorts the elements of an array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_ and
@@ -116,7 +117,7 @@ The `sort` method can be conveniently used with
 
 ```js
 var numbers = [4, 2, 5, 1, 3];
-numbers.sort(function(a, b) {
+numbers.sort(function (a, b) {
   return a - b;
 });
 console.log(numbers);
@@ -139,12 +140,12 @@ Arrays of objects can be sorted by comparing the value of one of their propertie
 
 ```js
 var items = [
-  { name: 'Edward', value: 21 },
-  { name: 'Sharpe', value: 37 },
-  { name: 'And', value: 45 },
-  { name: 'The', value: -12 },
-  { name: 'Magnetic', value: 13 },
-  { name: 'Zeros', value: 37 }
+  { name: "Edward", value: 21 },
+  { name: "Sharpe", value: 37 },
+  { name: "And", value: 45 },
+  { name: "The", value: -12 },
+  { name: "Magnetic", value: 13 },
+  { name: "Zeros", value: 37 },
 ];
 
 // sort by value
@@ -153,7 +154,7 @@ items.sort(function (a, b) {
 });
 
 // sort by name
-items.sort(function(a, b) {
+items.sort(function (a, b) {
   var nameA = a.name.toUpperCase(); // ignore upper and lowercase
   var nameB = b.name.toUpperCase(); // ignore upper and lowercase
   if (nameA < nameB) {
@@ -177,10 +178,10 @@ sorted arrays. The numeric arrays are sorted without a compare function, then so
 using one.
 
 ```js
-let stringArray = ['Blue', 'Humpback', 'Beluga'];
-let numericStringArray = ['80', '9', '700'];
+let stringArray = ["Blue", "Humpback", "Beluga"];
+let numericStringArray = ["80", "9", "700"];
 let numberArray = [40, 1, 5, 200];
-let mixedNumericArray = ['80', '9', '700', 40, 1, 5, 200];
+let mixedNumericArray = ["80", "9", "700", 40, 1, 5, 200];
 
 function compareNumbers(a, b) {
   return a - b;
@@ -210,7 +211,7 @@ For sorting strings with non-ASCII characters, i.e. strings with accented charac
 appear in the right order.
 
 ```js
-var items = ['réservé', 'premier', 'communiqué', 'café', 'adieu', 'éclair'];
+var items = ["réservé", "premier", "communiqué", "café", "adieu", "éclair"];
 items.sort(function (a, b) {
   return a.localeCompare(b);
 });
@@ -230,12 +231,12 @@ temporary array to achieve the right order.
 
 ```js
 // the array to be sorted
-const data = ['delta', 'alpha', 'charlie', 'bravo'];
+const data = ["delta", "alpha", "charlie", "bravo"];
 
 // temporary array holds objects with position and sort-value
 const mapped = data.map((v, i) => {
   return { i, value: someSlowOperation(v) };
-})
+});
 
 // sorting the mapped array containing the reduced values
 mapped.sort((a, b) => {
@@ -248,7 +249,7 @@ mapped.sort((a, b) => {
   return 0;
 });
 
-const result = mapped.map(v => data[v.i]);
+const result = mapped.map((v) => data[v.i]);
 ```
 
 There is an open source library available called [mapsort](https://null.house/open-source/mapsort) which applies this approach.
@@ -261,10 +262,10 @@ For example, say you had a list of students alongside their grades. Note that th
 
 ```js
 const students = [
-  { name: "Alex",   grade: 15 },
+  { name: "Alex", grade: 15 },
   { name: "Devlin", grade: 15 },
-  { name: "Eagle",  grade: 13 },
-  { name: "Sam",    grade: 14 },
+  { name: "Eagle", grade: 13 },
+  { name: "Sam", grade: 14 },
 ];
 ```
 
@@ -278,9 +279,9 @@ The `students` variable will then have the following value:
 
 ```js
 [
-  { name: "Eagle",  grade: 13 },
-  { name: "Sam",    grade: 14 },
-  { name: "Alex",   grade: 15 }, // original maintained for similar grade (stable sorting)
+  { name: "Eagle", grade: 13 },
+  { name: "Sam", grade: 14 },
+  { name: "Alex", grade: 15 }, // original maintained for similar grade (stable sorting)
   { name: "Devlin", grade: 15 }, // original maintained for similar grade (stable sorting)
 ];
 ```
@@ -291,10 +292,10 @@ Before version 10 (or EcmaScript 2019), sort stability was not guaranteed, meani
 
 ```js
 [
-  { name: "Eagle",  grade: 13 },
-  { name: "Sam",    grade: 14 },
+  { name: "Eagle", grade: 13 },
+  { name: "Sam", grade: 14 },
   { name: "Devlin", grade: 15 }, // original order not maintained
-  { name: "Alex",   grade: 15 }, // original order not maintained
+  { name: "Alex", grade: 15 }, // original order not maintained
 ];
 ```
 

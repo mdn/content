@@ -10,6 +10,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.generator_function
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`function*`** declaration (`function` keyword
@@ -77,8 +78,7 @@ of that generator's code, they will just return an object of this form:
 ```js
 function* idMaker() {
   var index = 0;
-  while (true)
-    yield index++;
+  while (true) yield index++;
 }
 
 var gen = idMaker();
@@ -128,10 +128,10 @@ var gen = logGenerator();
 
 // the first call of next executes from the start of the function
 // until the first yield statement
-gen.next();             // 0
-gen.next('pretzel');    // 1 pretzel
-gen.next('california'); // 2 california
-gen.next('mayonnaise'); // 3 mayonnaise
+gen.next(); // 0
+gen.next("pretzel"); // 1 pretzel
+gen.next("california"); // 2 california
+gen.next("mayonnaise"); // 3 mayonnaise
 ```
 
 ### Return statement in a generator
@@ -143,7 +143,7 @@ function* yieldAndReturn() {
   yield "unreachable";
 }
 
-var gen = yieldAndReturn()
+var gen = yieldAndReturn();
 console.log(gen.next()); // { value: "Y", done: false }
 console.log(gen.next()); // { value: "R", done: true }
 console.log(gen.next()); // { value: undefined, done: true }
@@ -153,13 +153,13 @@ console.log(gen.next()); // { value: undefined, done: true }
 
 ```js
 const someObj = {
-  *generator () {
-    yield 'a';
-    yield 'b';
-  }
-}
+  *generator() {
+    yield "a";
+    yield "b";
+  },
+};
 
-const gen = someObj.generator()
+const gen = someObj.generator();
 
 console.log(gen.next()); // { value: 'a', done: false }
 console.log(gen.next()); // { value: 'b', done: false }
@@ -170,14 +170,14 @@ console.log(gen.next()); // { value: undefined, done: true }
 
 ```js
 class Foo {
-  *generator () {
+  *generator() {
     yield 1;
     yield 2;
     yield 3;
   }
 }
 
-const f = new Foo ();
+const f = new Foo();
 const gen = f.generator();
 
 console.log(gen.next()); // { value: 1, done: false }
@@ -190,20 +190,20 @@ console.log(gen.next()); // { value: undefined, done: true }
 
 ```js
 class Foo {
-  *[Symbol.iterator] () {
+  *[Symbol.iterator]() {
     yield 1;
     yield 2;
   }
 }
 
 const SomeObj = {
-  *[Symbol.iterator] () {
-    yield 'a';
-    yield 'b';
-  }
-}
+  *[Symbol.iterator]() {
+    yield "a";
+    yield "b";
+  },
+};
 
-console.log(Array.from(new Foo)); // [ 1, 2 ]
+console.log(Array.from(new Foo())); // [ 1, 2 ]
 console.log(Array.from(SomeObj)); // [ 'a', 'b' ]
 ```
 
@@ -211,7 +211,7 @@ console.log(Array.from(SomeObj)); // [ 'a', 'b' ]
 
 ```js
 function* f() {}
-var obj = new f; // throws "TypeError: f is not a constructor
+var obj = new f(); // throws "TypeError: f is not a constructor
 ```
 
 ### Generator defined in an expression
@@ -229,22 +229,22 @@ console.log(bar.next()); // {value: 10, done: false}
 ### Generator example
 
 ```js
-function* powers(n){
-     //endless loop to generate
-     for(let current =n;; current *= n){
-         yield current;
-     }
+function* powers(n) {
+  //endless loop to generate
+  for (let current = n; ; current *= n) {
+    yield current;
+  }
 }
 
-for(let power of powers(2)){
-     //controlling generator
-     if(power > 32) break;
-     console.log(power)
-           //2
-          //4
-         //8
-        //16
-       //32
+for (let power of powers(2)) {
+  //controlling generator
+  if (power > 32) break;
+  console.log(power);
+  //2
+  //4
+  //8
+  //16
+  //32
 }
 ```
 

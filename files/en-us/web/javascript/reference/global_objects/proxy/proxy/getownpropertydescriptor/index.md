@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.getOwnPropertyDescriptor
 ---
+
 {{JSRef}}
 
 The **`handler.getOwnPropertyDescriptor()`** method is a trap for {{jsxref("Object.getOwnPropertyDescriptor()")}}.
@@ -18,8 +19,7 @@ The **`handler.getOwnPropertyDescriptor()`** method is a trap for {{jsxref("Obje
 
 ```js
 const p = new Proxy(target, {
-  getOwnPropertyDescriptor: function(target, prop) {
-  }
+  getOwnPropertyDescriptor: function (target, prop) {},
 });
 ```
 
@@ -65,15 +65,18 @@ If the following invariants are violated, the proxy will throw a {{jsxref("TypeE
 The following code traps {{jsxref("Object.getOwnPropertyDescriptor()")}}.
 
 ```js
-const p = new Proxy({ a: 20}, {
-  getOwnPropertyDescriptor: function(target, prop) {
-    console.log('called: ' + prop);
-    return { configurable: true, enumerable: true, value: 10 };
+const p = new Proxy(
+  { a: 20 },
+  {
+    getOwnPropertyDescriptor: function (target, prop) {
+      console.log("called: " + prop);
+      return { configurable: true, enumerable: true, value: 10 };
+    },
   }
-});
+);
 
-console.log(Object.getOwnPropertyDescriptor(p, 'a').value); // "called: a"
-                                                            // 10
+console.log(Object.getOwnPropertyDescriptor(p, "a").value); // "called: a"
+// 10
 ```
 
 The following code violates an invariant.
@@ -82,12 +85,12 @@ The following code violates an invariant.
 const obj = { a: 10 };
 Object.preventExtensions(obj);
 const p = new Proxy(obj, {
-  getOwnPropertyDescriptor: function(target, prop) {
+  getOwnPropertyDescriptor: function (target, prop) {
     return undefined;
-  }
+  },
 });
 
-Object.getOwnPropertyDescriptor(p, 'a'); // TypeError is thrown
+Object.getOwnPropertyDescriptor(p, "a"); // TypeError is thrown
 ```
 
 ## Specifications

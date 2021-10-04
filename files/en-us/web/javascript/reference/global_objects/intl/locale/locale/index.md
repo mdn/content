@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.Locale
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale`** constructor is a
@@ -23,8 +24,8 @@ identifier.
 ## Syntax
 
 ```js
-new Intl.Locale(tag)
-new Intl.Locale(tag, options)
+new Intl.Locale(tag);
+new Intl.Locale(tag, options);
 ```
 
 ### Parameters
@@ -43,7 +44,7 @@ At its very simplest, the {{jsxref("Intl/Locale/Locale", "Intl.Locale")}} constr
 a locale identifier string as its argument:
 
 ```js
-let us = new Intl.Locale('en-US');
+let us = new Intl.Locale("en-US");
 ```
 
 ### Using the Locale constructor with an options object

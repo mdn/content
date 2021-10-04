@@ -9,6 +9,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Module
 ---
+
 {{JSRef}}
 
 A **`WebAssembly.Module`** object contains stateless WebAssembly code that has already been compiled by the browser — this can be efficiently [shared with Workers](/en-US/docs/Web/API/Worker/postMessage), and instantiated multiple times.
@@ -36,9 +37,8 @@ The following example (see our [index-compile.html](https://github.com/mdn/webas
 ```js
 var worker = new Worker("wasm_worker.js");
 
-WebAssembly.compileStreaming(fetch('simple.wasm'))
-.then(mod =>
-  worker.postMessage(mod)
+WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) =>
+  worker.postMessage(mod)
 );
 ```
 
@@ -47,17 +47,17 @@ In the worker (see [`wasm_worker.js`](https://github.com/mdn/webassembly-example
 ```js
 var importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-onmessage = function(e) {
-  console.log('module received from main thread');
+onmessage = function (e) {
+  console.log("module received from main thread");
   var mod = e.data;
 
-  WebAssembly.instantiate(mod, importObject).then(function(instance) {
+  WebAssembly.instantiate(mod, importObject).then(function (instance) {
     instance.exports.exported_func();
   });
 };

@@ -8,6 +8,7 @@ tags:
   - arguments
 browser-compat: javascript.functions.arguments.@@iterator
 ---
+
 {{jsSidebar("Functions")}}
 
 The initial value of the **`@@iterator`** property is the same
@@ -17,7 +18,7 @@ property.
 ## Syntax
 
 ```js
-arguments[Symbol.iterator]()
+arguments[Symbol.iterator]();
 ```
 
 ## Examples
@@ -32,7 +33,7 @@ function f() {
     console.log(letter);
   }
 }
-f('w', 'y', 'k', 'o', 'p');
+f("w", "y", "k", "o", "p");
 ```
 
 ## Specifications

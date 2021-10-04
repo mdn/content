@@ -10,6 +10,7 @@ tags:
   - JavaScript
   - Protocols
 ---
+
 {{jsSidebar("More")}}
 
 As a couple of additions to ECMAScript 2015, **Iteration protocols** aren't new built-ins or syntax, but _protocols_. These protocols can be implemented by any object by following some conventions.
@@ -96,10 +97,12 @@ An object is an iterator when it implements a **`next()`** method with the follo
 > ```js
 > // Satisfies both the Iterator Protocol and Iterable
 > const myIterator = {
->     next: function() {
->         // ...
->     },
->     [Symbol.iterator]: function() { return this; }
+>   next: function () {
+>     // ...
+>   },
+>   [Symbol.iterator]: function () {
+>     return this;
+>   },
 > };
 > ```
 >
@@ -110,7 +113,7 @@ An object is an iterator when it implements a **`next()`** method with the follo
 A {{jsxref("String")}} is an example of a built-in iterable object:
 
 ```js
-const someString = 'hi';
+const someString = "hi";
 console.log(typeof someString[Symbol.iterator]); // "function"
 ```
 
@@ -118,7 +121,7 @@ console.log(typeof someString[Symbol.iterator]); // "function"
 
 ```js
 const iterator = someString[Symbol.iterator]();
-console.log(iterator + ''); // "[object String Iterator]"
+console.log(iterator + ""); // "[object String Iterator]"
 
 console.log(iterator.next()); // { value: "h", done: false }
 console.log(iterator.next()); // { value: "i", done: false }
@@ -135,20 +138,22 @@ You can redefine the iteration behavior by supplying our own `@@iterator`:
 
 ```js
 // need to construct a String object explicitly to avoid auto-boxing
-const someString = new String('hi');
+const someString = new String("hi");
 
 someString[Symbol.iterator] = function () {
   return {
     // this is the iterator object, returning a single element (the string "bye")
     next: function () {
-      return this._first ? {
-        value: 'bye',
-        done: (this._first = false)
-      } : {
-        done: true
-      }
+      return this._first
+        ? {
+            value: "bye",
+            done: (this._first = false),
+          }
+        : {
+            done: true,
+          };
     },
-    _first: true
+    _first: true,
   };
 };
 ```
@@ -157,7 +162,7 @@ Notice how redefining `@@iterator` affects the behavior of built-in constructs t
 
 ```js
 console.log([...someString]); // ["bye"]
-console.log(someString + ''); // "hi"
+console.log(someString + ""); // "hi"
 ```
 
 ## Iterable examples
@@ -173,9 +178,9 @@ You can make your own iterables like this:
 ```js
 const myIterable = {};
 myIterable[Symbol.iterator] = function* () {
-    yield 1;
-    yield 2;
-    yield 3;
+  yield 1;
+  yield 2;
+  yield 3;
 };
 console.log([...myIterable]); // [1, 2, 3]
 ```
@@ -190,24 +195,30 @@ There are many APIs that accept iterables. Some examples include:
 - {{jsxref("WeakSet", "new WeakSet([<var>iterable</var>])")}}
 
 ```js
-new Map([[1, 'a'], [2, 'b'], [3, 'c']]).get(2); // "b"
+new Map([
+  [1, "a"],
+  [2, "b"],
+  [3, "c"],
+]).get(2); // "b"
 
 const myObj = {};
 
 new WeakMap([
-    [{}, 'a'],
-    [myObj, 'b'],
-    [{}, 'c']
-]).get(myObj);             // "b"
+  [{}, "a"],
+  [myObj, "b"],
+  [{}, "c"],
+]).get(myObj); // "b"
 
 new Set([1, 2, 3]).has(3); // true
-new Set('123').has('2');   // true
+new Set("123").has("2"); // true
 
-new WeakSet(function* () {
-    yield {}
-    yield myObj
-    yield {}
-}()).has(myObj);           // true
+new WeakSet(
+  (function* () {
+    yield {};
+    yield myObj;
+    yield {};
+  })()
+).has(myObj); // true
 ```
 
 #### See also
@@ -221,23 +232,23 @@ new WeakSet(function* () {
 Some statements and expressions expect iterables, for example the {{jsxref("Statements/for...of", "for...of")}} loops, the {{jsxref("Operators/Spread_syntax", "spread operator", "", 1)}}), {{jsxref("Operators/yield*", "yield*")}}, and {{jsxref("Operators/Destructuring_assignment", "destructuring assignment")}}:
 
 ```js
-for (const value of ['a', 'b', 'c']) {
-    console.log(value);
+for (const value of ["a", "b", "c"]) {
+  console.log(value);
 }
 // "a"
 // "b"
 // "c"
 
-console.log([...'abc']);   // ["a", "b", "c"]
+console.log([..."abc"]); // ["a", "b", "c"]
 
 function* gen() {
-  yield* ['a', 'b', 'c'];
+  yield* ["a", "b", "c"];
 }
 
 console.log(gen().next()); // { value: "a", done: false }
 
-[a, b, c] = new Set(['a', 'b', 'c']);
-console.log(a);            // "a"
+[a, b, c] = new Set(["a", "b", "c"]);
+console.log(a); // "a"
 ```
 
 ### Non-well-formed iterables
@@ -258,24 +269,26 @@ nonWellFormedIterable[Symbol.iterator] = () => 1;
 
 ```js
 function makeIterator(array) {
-  let nextIndex = 0
+  let nextIndex = 0;
   return {
-    next: function() {
-      return nextIndex < array.length ? {
-        value: array[nextIndex++],
-        done: false
-      } : {
-        done: true
-      };
-    }
+    next: function () {
+      return nextIndex < array.length
+        ? {
+            value: array[nextIndex++],
+            done: false,
+          }
+        : {
+            done: true,
+          };
+    },
   };
 }
 
-const it = makeIterator(['yo', 'ya']);
+const it = makeIterator(["yo", "ya"]);
 
 console.log(it.next().value); // 'yo'
 console.log(it.next().value); // 'ya'
-console.log(it.next().done);  // true
+console.log(it.next().done); // true
 ```
 
 ### Infinite iterator
@@ -284,12 +297,12 @@ console.log(it.next().done);  // true
 function idMaker() {
   let index = 0;
   return {
-    next: function() {
+    next: function () {
       return {
         value: index++,
-        done: false
+        done: false,
       };
-    }
+    },
   };
 }
 
@@ -311,11 +324,11 @@ function* makeSimpleGenerator(array) {
   }
 }
 
-const gen = makeSimpleGenerator(['yo', 'ya']);
+const gen = makeSimpleGenerator(["yo", "ya"]);
 
 console.log(gen.next().value); // 'yo'
 console.log(gen.next().value); // 'ya'
-console.log(gen.next().done);  // true
+console.log(gen.next().done); // true
 
 function* idMaker() {
   let index = 0;
@@ -324,7 +337,7 @@ function* idMaker() {
   }
 }
 
-const it = idMaker()
+const it = idMaker();
 
 console.log(it.next().value); // '0'
 console.log(it.next().value); // '1'
@@ -349,16 +362,16 @@ class SimpleClass {
     return {
       next: () => {
         if (index < this.data.length) {
-          return {value: this.data[index++], done: false}
+          return { value: this.data[index++], done: false };
         } else {
-          return {done: true}
+          return { done: true };
         }
-      }
-    }
+      },
+    };
   }
 }
 
-const simple = new SimpleClass([1,2,3,4,5]);
+const simple = new SimpleClass([1, 2, 3, 4, 5]);
 
 for (const val of simple) {
   console.log(val); // '1' '2' '3' '4' '5'
@@ -370,11 +383,11 @@ for (const val of simple) {
 A {{jsxref("Generator", "generator object", "", 1)}} is _both_ iterator and iterable:
 
 ```js
-const aGeneratorObject = function* () {
+const aGeneratorObject = (function* () {
   yield 1;
   yield 2;
   yield 3;
-}();
+})();
 
 console.log(typeof aGeneratorObject.next);
 // "function", because it has a next method, so it's an iterator
@@ -388,7 +401,7 @@ console.log(aGeneratorObject[Symbol.iterator]() === aGeneratorObject);
 console.log([...aGeneratorObject]);
 // [1, 2, 3]
 
-console.log(Symbol.iterator in aGeneratorObject)
+console.log(Symbol.iterator in aGeneratorObject);
 // true, because @@iterator method is a property of aGeneratorObject
 ```
 

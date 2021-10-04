@@ -10,6 +10,7 @@ tags:
   - polyfill
 browser-compat: javascript.builtins.Date.toISOString
 ---
+
 {{JSRef}}
 
 The **`toISOString()`** method returns a string in
@@ -26,7 +27,7 @@ respectively). The timezone is always zero UTC offset, as denoted by the suffix
 ## Syntax
 
 ```js
-toISOString()
+toISOString();
 ```
 
 ### Return value
@@ -39,9 +40,9 @@ universal time.
 ### Using toISOString()
 
 ```js
-let today = new Date('05 October 2011 14:48 UTC')
+let today = new Date("05 October 2011 14:48 UTC");
 
-console.log(today.toISOString())  // Returns 2011-10-05T14:48:00.000Z
+console.log(today.toISOString()); // Returns 2011-10-05T14:48:00.000Z
 ```
 
 The above example uses parsing of a non–standard string value that may not be correctly

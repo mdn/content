@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setHours
 ---
+
 {{JSRef}}
 
 The **`setHours()`** method sets the hours for a specified date
@@ -20,10 +21,10 @@ according to local time, and returns the number of milliseconds since January 1,
 ## Syntax
 
 ```js
-setHours(hoursValue)
-setHours(hoursValue, minutesValue)
-setHours(hoursValue, minutesValue, secondsValue)
-setHours(hoursValue, minutesValue, secondsValue, msValue)
+setHours(hoursValue);
+setHours(hoursValue, minutesValue);
+setHours(hoursValue, minutesValue, secondsValue);
+setHours(hoursValue, minutesValue, secondsValue, msValue);
 ```
 
 ### Parameters

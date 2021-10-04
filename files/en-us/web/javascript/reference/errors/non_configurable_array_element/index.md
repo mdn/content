@@ -1,5 +1,5 @@
 ---
-title: 'TypeError: can''t delete non-configurable array element'
+title: "TypeError: can't delete non-configurable array element"
 slug: Web/JavaScript/Reference/Errors/Non_configurable_array_element
 tags:
   - Error
@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "can't delete non-configurable array element" occurs when it
@@ -49,8 +50,8 @@ default if you haven't specified them as configurable.
 ```js example-bad
 "use strict";
 var arr = [];
-Object.defineProperty(arr, 0, {value: 0});
-Object.defineProperty(arr, 1, {value: "1"});
+Object.defineProperty(arr, 0, { value: 0 });
+Object.defineProperty(arr, 1, { value: "1" });
 
 arr.length = 1;
 // TypeError: can't delete non-configurable array element
@@ -61,8 +62,8 @@ You will need to set the elements as configurable, if you intend to shorten the 
 ```js example-good
 "use strict";
 var arr = [];
-Object.defineProperty(arr, 0, {value: 0, configurable: true});
-Object.defineProperty(arr, 1, {value: "1", configurable: true});
+Object.defineProperty(arr, 0, { value: 0, configurable: true });
+Object.defineProperty(arr, 1, { value: "1", configurable: true });
 
 arr.length = 1;
 ```
@@ -74,7 +75,7 @@ non-configurable.
 
 ```js example-bad
 "use strict";
-var arr = [1,2,3];
+var arr = [1, 2, 3];
 Object.seal(arr);
 
 arr.length = 1;
@@ -87,7 +88,7 @@ length.
 
 ```js example-good
 "use strict";
-var arr = [1,2,3];
+var arr = [1, 2, 3];
 Object.seal(arr);
 
 // Copy the initial array to shorten the copy

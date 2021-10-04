@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: function statement requires a name'
+title: "SyntaxError: function statement requires a name"
 slug: Web/JavaScript/Reference/Errors/Unnamed_function_statement
 tags:
   - Error
@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "function statement requires a name" occurs when there is a [function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function)
@@ -51,8 +52,8 @@ You can use a [function expression](/en-US/docs/Web/JavaScript/Reference/Operato
 (assignment) instead:
 
 ```js example-good
-var greet = function() {
-  return 'Hello world';
+var greet = function () {
+  return "Hello world";
 };
 ```
 
@@ -61,9 +62,7 @@ Invoked Function Expression), which is a function that runs as soon as it is def
 You will need a few more braces in this case:
 
 ```js example-good
-(function () {
-
-})();
+(function () {})();
 ```
 
 ### Labeled functions
@@ -100,7 +99,7 @@ following syntax without a name after the `function` keyword is valid then.
 var greeter = {
   german: function () {
     return "Moin";
-  }
+  },
 };
 ```
 

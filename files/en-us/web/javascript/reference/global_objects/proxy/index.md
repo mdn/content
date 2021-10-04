@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy
 ---
+
 {{JSRef}}
 
 The `Proxy` object enables you to create a proxy for another object, which can intercept and redefine fundamental operations for that object.
@@ -24,7 +25,7 @@ For example, this code defines a simple target with just two properties, and an 
 ```js
 const target = {
   message1: "hello",
-  message2: "everyone"
+  message2: "everyone",
 };
 
 const handler1 = {};
@@ -44,13 +45,13 @@ To customise the proxy, we define functions on the handler object:
 ```js
 const target = {
   message1: "hello",
-  message2: "everyone"
+  message2: "everyone",
 };
 
 const handler2 = {
-  get: function(target, prop, receiver) {
+  get: function (target, prop, receiver) {
     return "world";
-  }
+  },
 };
 
 const proxy2 = new Proxy(target, handler2);
@@ -70,7 +71,7 @@ With the help of the {{jsxref("Reflect")}} class we can give some accessors the 
 ```js
 const target = {
   message1: "hello",
-  message2: "everyone"
+  message2: "everyone",
 };
 
 const handler3 = {
@@ -106,11 +107,9 @@ In this simple example, the number `37` gets returned as the default value when 
 
 ```js
 const handler = {
-  get: function(obj, prop) {
-    return prop in obj ?
-      obj[prop] :
-      37;
-  }
+  get: function (obj, prop) {
+    return prop in obj ? obj[prop] : 37;
+  },
 };
 
 const p = new Proxy({}, handler);
@@ -120,7 +119,7 @@ p.b = undefined;
 console.log(p.a, p.b);
 //  1, undefined
 
-console.log('c' in p, p.c);
+console.log("c" in p, p.c);
 //  false, 37
 ```
 
@@ -148,13 +147,13 @@ With a `Proxy`, you can easily validate the passed value for an object. This exa
 
 ```js
 let validator = {
-  set: function(obj, prop, value) {
-    if (prop === 'age') {
+  set: function (obj, prop, value) {
+    if (prop === "age") {
       if (!Number.isInteger(value)) {
-        throw new TypeError('The age is not an integer');
+        throw new TypeError("The age is not an integer");
       }
       if (value > 200) {
-        throw new RangeError('The age seems invalid');
+        throw new RangeError("The age seems invalid");
       }
     }
 
@@ -163,15 +162,15 @@ let validator = {
 
     // Indicate success
     return true;
-  }
+  },
 };
 
 const person = new Proxy({}, validator);
 
 person.age = 100;
 console.log(person.age); // 100
-person.age = 'young';    // Throws an exception
-person.age = 300;        // Throws an exception
+person.age = "young"; // Throws an exception
+person.age = 300; // Throws an exception
 ```
 
 ### Extending constructor
@@ -181,41 +180,42 @@ A function proxy could easily extend a constructor with a new constructor. This 
 ```js
 function extend(sup, base) {
   var descriptor = Object.getOwnPropertyDescriptor(
-    base.prototype, 'constructor'
+    base.prototype,
+    "constructor"
   );
   base.prototype = Object.create(sup.prototype);
   var handler = {
-    construct: function(target, args) {
+    construct: function (target, args) {
       var obj = Object.create(base.prototype);
       this.apply(target, obj, args);
       return obj;
     },
-    apply: function(target, that, args) {
+    apply: function (target, that, args) {
       sup.apply(that, args);
       base.apply(that, args);
-    }
+    },
   };
   var proxy = new Proxy(base, handler);
   descriptor.value = proxy;
-  Object.defineProperty(base.prototype, 'constructor', descriptor);
+  Object.defineProperty(base.prototype, "constructor", descriptor);
   return proxy;
 }
 
-var Person = function(name) {
+var Person = function (name) {
   this.name = name;
 };
 
-var Boy = extend(Person, function(name, age) {
+var Boy = extend(Person, function (name, age) {
   this.age = age;
 });
 
-Boy.prototype.gender = 'M';
+Boy.prototype.gender = "M";
 
-var Peter = new Boy('Peter', 13);
+var Peter = new Boy("Peter", 13);
 
-console.log(Peter.gender);  // "M"
-console.log(Peter.name);    // "Peter"
-console.log(Peter.age);     // 13
+console.log(Peter.gender); // "M"
+console.log(Peter.name); // "Peter"
+console.log(Peter.age); // 13
 ```
 
 ### Manipulating DOM nodes
@@ -265,49 +265,51 @@ Note: even if selected: !null, then giving oldval.setAttribute is not a function
 The `products` proxy object evaluates the passed value and converts it to an array if needed. The object also supports an extra property called `latestBrowser` both as a getter and a setter.
 
 ```js
-let products = new Proxy({
-  browsers: ['Internet Explorer', 'Netscape']
-},
-{
-  get: function(obj, prop) {
-    // An extra property
-    if (prop === 'latestBrowser') {
-      return obj.browsers[obj.browsers.length - 1];
-    }
-
-    // The default behavior to return the value
-    return obj[prop];
+let products = new Proxy(
+  {
+    browsers: ["Internet Explorer", "Netscape"],
   },
-  set: function(obj, prop, value) {
-    // An extra property
-    if (prop === 'latestBrowser') {
-      obj.browsers.push(value);
+  {
+    get: function (obj, prop) {
+      // An extra property
+      if (prop === "latestBrowser") {
+        return obj.browsers[obj.browsers.length - 1];
+      }
+
+      // The default behavior to return the value
+      return obj[prop];
+    },
+    set: function (obj, prop, value) {
+      // An extra property
+      if (prop === "latestBrowser") {
+        obj.browsers.push(value);
+        return true;
+      }
+
+      // Convert the value if it is not an array
+      if (typeof value === "string") {
+        value = [value];
+      }
+
+      // The default behavior to store the value
+      obj[prop] = value;
+
+      // Indicate success
       return true;
-    }
-
-    // Convert the value if it is not an array
-    if (typeof value === 'string') {
-      value = [value];
-    }
-
-    // The default behavior to store the value
-    obj[prop] = value;
-
-    // Indicate success
-    return true;
+    },
   }
-});
+);
 
 console.log(products.browsers);
 //  ['Internet Explorer', 'Netscape']
 
-products.browsers = 'Firefox';
+products.browsers = "Firefox";
 //  pass a string (by mistake)
 
 console.log(products.browsers);
 //  ['Firefox'] <- no problem, the value is an array
 
-products.latestBrowser = 'Chrome';
+products.latestBrowser = "Chrome";
 
 console.log(products.browsers);
 //  ['Firefox', 'Chrome']
@@ -321,61 +323,64 @@ console.log(products.latestBrowser);
 This proxy extends an array with some utility features. As you see, you can flexibly "define" properties without using {{jsxref("Object.defineProperties", "Object.defineProperties()")}}. This example can be adapted to find a table row by its cell. In that case, the target will be {{domxref("HTMLTableElement.rows", "table.rows")}}.
 
 ```js
-let products = new Proxy([
-  { name: 'Firefox', type: 'browser' },
-  { name: 'SeaMonkey', type: 'browser' },
-  { name: 'Thunderbird', type: 'mailer' }
-],
-{
-  get: function(obj, prop) {
-    // The default behavior to return the value; prop is usually an integer
-    if (prop in obj) {
-      return obj[prop];
-    }
-
-    // Get the number of products; an alias of products.length
-    if (prop === 'number') {
-      return obj.length;
-    }
-
-    let result, types = {};
-
-    for (let product of obj) {
-      if (product.name === prop) {
-        result = product;
+let products = new Proxy(
+  [
+    { name: "Firefox", type: "browser" },
+    { name: "SeaMonkey", type: "browser" },
+    { name: "Thunderbird", type: "mailer" },
+  ],
+  {
+    get: function (obj, prop) {
+      // The default behavior to return the value; prop is usually an integer
+      if (prop in obj) {
+        return obj[prop];
       }
-      if (types[product.type]) {
-        types[product.type].push(product);
-      } else {
-        types[product.type] = [product];
+
+      // Get the number of products; an alias of products.length
+      if (prop === "number") {
+        return obj.length;
       }
-    }
 
-    // Get a product by name
-    if (result) {
-      return result;
-    }
+      let result,
+        types = {};
 
-    // Get products by type
-    if (prop in types) {
-      return types[prop];
-    }
+      for (let product of obj) {
+        if (product.name === prop) {
+          result = product;
+        }
+        if (types[product.type]) {
+          types[product.type].push(product);
+        } else {
+          types[product.type] = [product];
+        }
+      }
 
-    // Get product types
-    if (prop === 'types') {
-      return Object.keys(types);
-    }
+      // Get a product by name
+      if (result) {
+        return result;
+      }
 
-    return undefined;
+      // Get products by type
+      if (prop in types) {
+        return types[prop];
+      }
+
+      // Get product types
+      if (prop === "types") {
+        return Object.keys(types);
+      }
+
+      return undefined;
+    },
   }
-});
+);
 
-console.log(products[0]);          // { name: 'Firefox', type: 'browser' }
-console.log(products['Firefox']);  // { name: 'Firefox', type: 'browser' }
-console.log(products['Chrome']);   // undefined
-console.log(products.browser);     // [{ name: 'Firefox', type: 'browser' }, { name: 'SeaMonkey', type: 'browser' }]
-console.log(products.types);       // ['browser', 'mailer']
-console.log(products.number);      // 3
+console.log(products[0]); // { name: 'Firefox', type: 'browser' }
+console.log(products["Firefox"]); // { name: 'Firefox', type: 'browser' }
+console.log(products["Chrome"]); // undefined
+console.log(products.browser); // [{ name: 'Firefox', type: 'browser' }, { name: 'SeaMonkey', type: 'browser' }]
+console.log(products.types); // ['browser', 'mailer']
+console.log(products.number); // 3
 ```
 
 ### A complete `traps` list example
@@ -393,11 +398,15 @@ var docCookies = new Proxy(docCookies, {
     return oTarget[sKey] || oTarget.getItem(sKey) || undefined;
   },
   set: function (oTarget, sKey, vValue) {
-    if (sKey in oTarget) { return false; }
+    if (sKey in oTarget) {
+      return false;
+    }
     return oTarget.setItem(sKey, vValue);
   },
   deleteProperty: function (oTarget, sKey) {
-    if (!sKey in oTarget) { return false; }
+    if (!sKey in oTarget) {
+      return false;
+    }
     return oTarget.removeItem(sKey);
   },
   enumerate: function (oTarget, sKey) {
@@ -410,26 +419,30 @@ var docCookies = new Proxy(docCookies, {
     return sKey in oTarget || oTarget.hasItem(sKey);
   },
   defineProperty: function (oTarget, sKey, oDesc) {
-    if (oDesc && 'value' in oDesc) { oTarget.setItem(sKey, oDesc.value); }
+    if (oDesc && "value" in oDesc) {
+      oTarget.setItem(sKey, oDesc.value);
+    }
     return oTarget;
   },
   getOwnPropertyDescriptor: function (oTarget, sKey) {
     var vValue = oTarget.getItem(sKey);
-    return vValue ? {
-      value: vValue,
-      writable: true,
-      enumerable: true,
-      configurable: false
-    } : undefined;
+    return vValue
+      ? {
+          value: vValue,
+          writable: true,
+          enumerable: true,
+          configurable: false,
+        }
+      : undefined;
   },
 });
 
 /* Cookies test */
 
-console.log(docCookies.my_cookie1 = 'First value');
-console.log(docCookies.getItem('my_cookie1'));
+console.log((docCookies.my_cookie1 = "First value"));
+console.log(docCookies.getItem("my_cookie1"));
 
-docCookies.setItem('my_cookie1', 'Changed value');
+docCookies.setItem("my_cookie1", "Changed value");
 console.log(docCookies.my_cookie1);
 ```
 

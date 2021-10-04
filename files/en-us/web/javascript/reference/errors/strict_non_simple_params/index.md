@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "`'use strict'` not allowed in function" occurs
@@ -66,7 +67,7 @@ entire script or enclosing function is also okay to be in strict mode, you can m
 `"use strict"` directive outside of the function:
 
 ```js example-good
-'use strict';
+"use strict";
 function sum(a = 1, b = 2) {
   return a + b;
 }
@@ -87,8 +88,8 @@ var sum = function sum([a, b]) {
 This can be converted to the following expression:
 
 ```js example-good
-var sum = (function() {
-  'use strict';
+var sum = (function () {
+  "use strict";
   return function sum([a, b]) {
     return a + b;
   };
@@ -112,7 +113,7 @@ This can be converted to the following expression:
 
 ```js example-good
 var callback = (() => {
-  'use strict';
+  "use strict";
   return (...args) => {
     return this.run(args);
   };

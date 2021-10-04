@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.getCanonicalLocales
 ---
+
 {{JSRef}}
 
 The **`Intl.getCanonicalLocales()`** method returns an array
@@ -22,7 +23,7 @@ validated as structurally valid language tags.
 ## Syntax
 
 ```js
-Intl.getCanonicalLocales(locales)
+Intl.getCanonicalLocales(locales);
 ```
 
 ### Parameters
@@ -39,10 +40,10 @@ An array containing the canonical locale names.
 ### Using getCanonicalLocales
 
 ```js
-Intl.getCanonicalLocales('EN-US'); // ["en-US"]
-Intl.getCanonicalLocales(['EN-US', 'Fr']); // ["en-US", "fr"]
+Intl.getCanonicalLocales("EN-US"); // ["en-US"]
+Intl.getCanonicalLocales(["EN-US", "Fr"]); // ["en-US", "fr"]
 
-Intl.getCanonicalLocales('EN_US');
+Intl.getCanonicalLocales("EN_US");
 // RangeError:'EN_US' is not a structurally valid language tag
 ```
 
@@ -62,7 +63,7 @@ Intl.getCanonicalLocales polyfill](https://formatjs.io/docs/polyfills/intl-getca
 ## See also
 
 - {{jsxref("Intl/NumberFormat/supportedLocalesOf",
-		"Intl.NumberFormat.supportedLocalesOf()")}}
+  	"Intl.NumberFormat.supportedLocalesOf()")}}
 - {{jsxref("Intl/DateTimeFormat/supportedLocalesOf",
-		"Intl.DateTimeFormat.supportedLocalesOf()")}}
+  	"Intl.DateTimeFormat.supportedLocalesOf()")}}
 - {{jsxref("Intl/Collator/supportedLocalesOf", "Intl.Collator.supportedLocalesOf()")}}

@@ -15,6 +15,7 @@ tags:
   - Numeric
   - l10n:priority
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
 
 This chapter introduces the concepts, objects and functions used to work with and perform calculations using numbers and dates in JavaScript. This includes using numbers written in various bases including decimal, binary, and hexadecimal, as well as the use of the global {{jsxref("Math")}} object to perform a wide variety of mathematical operations on numbers.
@@ -34,13 +35,13 @@ You can use four types of number literals: decimal, binary, octal, and hexadecim
 ### Decimal numbers
 
 ```js
-1234567890
-42
+1234567890;
+42;
 
 // Caution when using leading zeros:
 
-0888 // 888 parsed as decimal
-0777 // parsed as octal in non-strict mode (511 in decimal)
+0888; // 888 parsed as decimal
+0777; // parsed as octal in non-strict mode (511 in decimal)
 ```
 
 Note that decimal literals can start with a zero (`0`) followed by another decimal digit, but if every digit after the leading `0` is smaller than 8, the number gets parsed as an octal number.
@@ -50,9 +51,9 @@ Note that decimal literals can start with a zero (`0`) followed by another decim
 Binary number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "B" (`0b` or `0B`). If the digits after the `0b` are not 0 or 1, the following {{jsxref("SyntaxError")}} is thrown: "Missing binary digits after 0b".
 
 ```js
-var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
+var FLT_SIGNBIT = 0b10000000000000000000000000000000; // 2147483648
 var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
-var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
+var FLT_MANTISSA = 0b00000000011111111111111111111111; // 8388607
 ```
 
 ### Octal numbers
@@ -75,17 +76,17 @@ var a = 0o10; // ES2015: 8
 Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (`0x` or `0X`). If the digits after 0x are outside the range (0123456789ABCDEF), the following {{jsxref("SyntaxError")}} is thrown: "Identifier starts immediately after numeric literal".
 
 ```js
-0xFFFFFFFFFFFFFFFFF // 295147905179352830000
-0x123456789ABCDEF   // 81985529216486900
-0XA                 // 10
+0xfffffffffffffffff; // 295147905179352830000
+0x123456789abcdef; // 81985529216486900
+0xa; // 10
 ```
 
 ### Exponentiation
 
 ```js
-1E3   // 1000
-2e6   // 2000000
-0.1e2 // 10
+1e3; // 1000
+2e6; // 2000000
+0.1e2; // 10
 ```
 
 ## Number object
@@ -104,46 +105,46 @@ You always refer to a property of the predefined `Number` object as shown above,
 
 The following table summarizes the `Number` object's properties.
 
-| Property                                             | Description                                                                                                                                        |
-| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("Number.MAX_VALUE")}}             | The largest representable number (`±1.7976931348623157e+308`)                                                                                      |
-| {{jsxref("Number.MIN_VALUE")}}             | The smallest representable number (`±5e-324`)                                                                                                      |
-| {{jsxref("Number.NaN")}}                     | Special "not a number" value                                                                                                                       |
-| {{jsxref("Number.NEGATIVE_INFINITY")}} | Special negative infinite value; returned on overflow                                                                                              |
-| {{jsxref("Number.POSITIVE_INFINITY")}} | Special positive infinite value; returned on overflow                                                                                              |
-| {{jsxref("Number.EPSILON")}}                 | Difference between `1` and the smallest value greater than `1` that can be represented as a {{jsxref("Number")}} (`2.220446049250313e-16`) |
-| {{jsxref("Number.MIN_SAFE_INTEGER")}}     | Minimum safe integer in JavaScript (−2^53 + 1, or `−9007199254740991`)                                                                             |
-| {{jsxref("Number.MAX_SAFE_INTEGER")}}     | Maximum safe integer in JavaScript (+2^53 − 1, or `+9007199254740991`)                                                                             |
+| Property                               | Description                                                                                                                                |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{jsxref("Number.MAX_VALUE")}}         | The largest representable number (`±1.7976931348623157e+308`)                                                                              |
+| {{jsxref("Number.MIN_VALUE")}}         | The smallest representable number (`±5e-324`)                                                                                              |
+| {{jsxref("Number.NaN")}}               | Special "not a number" value                                                                                                               |
+| {{jsxref("Number.NEGATIVE_INFINITY")}} | Special negative infinite value; returned on overflow                                                                                      |
+| {{jsxref("Number.POSITIVE_INFINITY")}} | Special positive infinite value; returned on overflow                                                                                      |
+| {{jsxref("Number.EPSILON")}}           | Difference between `1` and the smallest value greater than `1` that can be represented as a {{jsxref("Number")}} (`2.220446049250313e-16`) |
+| {{jsxref("Number.MIN_SAFE_INTEGER")}}  | Minimum safe integer in JavaScript (−2^53 + 1, or `−9007199254740991`)                                                                     |
+| {{jsxref("Number.MAX_SAFE_INTEGER")}}  | Maximum safe integer in JavaScript (+2^53 − 1, or `+9007199254740991`)                                                                     |
 
-| Method                                           | Description                                                                                                                                                                                           |
-| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("Number.parseFloat()")}}     | Parses a string argument and returns a floating point number. Same as the global {{jsxref("parseFloat", "parseFloat()")}} function.                                                       |
-| {{jsxref("Number.parseInt()")}}         | Parses a string argument and returns an integer of the specified radix or base. Same as the global {{jsxref("parseInt", "parseInt()")}} function.                                         |
-| {{jsxref("Number.isFinite()")}}         | Determines whether the passed value is a finite number.                                                                                                                                               |
-| {{jsxref("Number.isInteger()")}}     | Determines whether the passed value is an integer.                                                                                                                                                    |
-| {{jsxref("Number.isNaN()")}}             | Determines whether the passed value is {{jsxref("Global_Objects/NaN", "NaN")}}. More robust version of the original global {{jsxref("Global_Objects/isNaN", "isNaN()")}}. |
-| {{jsxref("Number.isSafeInteger()")}} | Determines whether the provided value is a number that is a _safe integer_.                                                                                                                           |
+| Method                               | Description                                                                                                                                                               |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{jsxref("Number.parseFloat()")}}    | Parses a string argument and returns a floating point number. Same as the global {{jsxref("parseFloat", "parseFloat()")}} function.                                       |
+| {{jsxref("Number.parseInt()")}}      | Parses a string argument and returns an integer of the specified radix or base. Same as the global {{jsxref("parseInt", "parseInt()")}} function.                         |
+| {{jsxref("Number.isFinite()")}}      | Determines whether the passed value is a finite number.                                                                                                                   |
+| {{jsxref("Number.isInteger()")}}     | Determines whether the passed value is an integer.                                                                                                                        |
+| {{jsxref("Number.isNaN()")}}         | Determines whether the passed value is {{jsxref("Global_Objects/NaN", "NaN")}}. More robust version of the original global {{jsxref("Global_Objects/isNaN", "isNaN()")}}. |
+| {{jsxref("Number.isSafeInteger()")}} | Determines whether the provided value is a number that is a _safe integer_.                                                                                               |
 
 The `Number` prototype provides methods for retrieving information from `Number` objects in various formats. The following table summarizes the methods of `Number.prototype`.
 
-| Method                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| Method                                                | Description                                                                                |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------------ |
 | {{jsxref("Number.toExponential", "toExponential()")}} | Returns a string representing the number in exponential notation.                          |
-| {{jsxref("Number.toFixed", "toFixed()")}}                 | Returns a string representing the number in fixed-point notation.                          |
-| {{jsxref("Number.toPrecision", "toPrecision()")}}         | Returns a string representing the number to a specified precision in fixed-point notation. |
+| {{jsxref("Number.toFixed", "toFixed()")}}             | Returns a string representing the number in fixed-point notation.                          |
+| {{jsxref("Number.toPrecision", "toPrecision()")}}     | Returns a string representing the number to a specified precision in fixed-point notation. |
 
 ## Math object
 
 The built-in {{jsxref("Math")}} object has properties and methods for mathematical constants and functions. For example, the `Math` object's `PI` property has the value of pi (3.141...), which you would use in an application as
 
 ```js
-Math.PI
+Math.PI;
 ```
 
 Similarly, standard mathematical functions are methods of `Math`. These include trigonometric, logarithmic, exponential, and other functions. For example, if you want to use the trigonometric function sine, you would write
 
 ```js
-Math.sin(1.56)
+Math.sin(1.56);
 ```
 
 Note that all trigonometric methods of `Math` take arguments in radians.
@@ -321,7 +322,7 @@ With the "get" and "set" methods you can get and set seconds, minutes, hours, da
 For example, suppose you define the following date:
 
 ```js
-var Xmas95 = new Date('December 25, 1995');
+var Xmas95 = new Date("December 25, 1995");
 ```
 
 Then `Xmas95.getMonth()` returns 11, and `Xmas95.getFullYear()` returns 1995.
@@ -345,7 +346,7 @@ The `parse` method is useful for assigning values from date strings to existing 
 
 ```js
 var IPOdate = new Date();
-IPOdate.setTime(Date.parse('Aug 9, 1995'));
+IPOdate.setTime(Date.parse("Aug 9, 1995"));
 ```
 
 ### Example
@@ -358,12 +359,11 @@ function JSClock() {
   var hour = time.getHours();
   var minute = time.getMinutes();
   var second = time.getSeconds();
-  var temp = '' + ((hour > 12) ? hour - 12 : hour);
-  if (hour == 0)
-    temp = '12';
-  temp += ((minute < 10) ? ':0' : ':') + minute;
-  temp += ((second < 10) ? ':0' : ':') + second;
-  temp += (hour >= 12) ? ' P.M.' : ' A.M.';
+  var temp = "" + (hour > 12 ? hour - 12 : hour);
+  if (hour == 0) temp = "12";
+  temp += (minute < 10 ? ":0" : ":") + minute;
+  temp += (second < 10 ? ":0" : ":") + second;
+  temp += hour >= 12 ? " P.M." : " A.M.";
   return temp;
 }
 ```

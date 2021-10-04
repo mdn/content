@@ -10,6 +10,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.multiline
 ---
+
 {{JSRef}}
 
 The **`multiline`** property indicates whether or not the "`m`" flag is used with the regular expression. `multiline` is a read-only property of an individual regular expression instance.
@@ -27,7 +28,7 @@ You cannot change this property directly.
 ### Using multiline
 
 ```js
-var regex = new RegExp('foo', 'm');
+var regex = new RegExp("foo", "m");
 
 console.log(regex.multiline); // true
 ```

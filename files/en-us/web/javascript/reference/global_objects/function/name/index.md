@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Function.name
 ---
+
 {{JSRef}}
 
 A {{jsxref("Function")}} object's read-only **`name`** property indicates the function's name as specified when it was created, or it may be either `anonymous` or `''` (an empty string) for functions created anonymously.
@@ -24,25 +25,25 @@ A {{jsxref("Function")}} object's read-only **`name`** property indicates the fu
 Source code such as:
 
 ```js
-function Foo() {};
+function Foo() {}
 let foo = new Foo();
 
-if (foo.constructor.name === 'Foo') {
+if (foo.constructor.name === "Foo") {
   console.log("'foo' is an instance of 'Foo'");
 } else {
-  console.log('Oops!');
+  console.log("Oops!");
 }
 ```
 
 may be compressed to:
 
 ```js
-function a() {};
+function a() {}
 let b = new a();
-if (b.constructor.name === 'Foo') {
+if (b.constructor.name === "Foo") {
   console.log("'foo' is an instance of 'Foo'");
 } else {
-  console.log('Oops!');
+  console.log("Oops!");
 }
 ```
 
@@ -64,7 +65,7 @@ doSomething.name; // "doSomething"
 Functions created with the syntax `new Function(...)` or just `Function(...)` create {{jsxref("Function")}} objects and their name is "anonymous".
 
 ```js
-(new Function).name; // "anonymous"
+new Function().name; // "anonymous"
 ```
 
 ### Anonymous function expression
@@ -72,7 +73,7 @@ Functions created with the syntax `new Function(...)` or just `Function(...)` cr
 Anonymous function expressions that were created using the keyword `function` or arrow functions would have `""` (an empty string) as their name.
 
 ```js
-(function() {}).name; // ""
+(function () {}.name); // ""
 (() => {}).name; // ""
 ```
 
@@ -81,9 +82,9 @@ Anonymous function expressions that were created using the keyword `function` or
 Variables and methods can infer the name of an anonymous function from its syntactic position (new in ECMAScript 2015).
 
 ```js
-let f = function() {};
+let f = function () {};
 let object = {
-  someMethod: function() {}
+  someMethod: function () {},
 };
 
 console.log(f.name); // "f"
@@ -94,23 +95,27 @@ You can define a function with a name in a {{jsxref("Operators/Function", "funct
 
 ```js
 let object = {
-  someMethod: function object_someMethod() {}
+  someMethod: function object_someMethod() {},
 };
 console.log(object.someMethod.name); // logs "object_someMethod"
 
-try { object_someMethod } catch(e) { console.log(e); }
+try {
+  object_someMethod;
+} catch (e) {
+  console.log(e);
+}
 // ReferenceError: object_someMethod is not defined
 ```
 
 The name property is read-only and cannot be changed by the assigment operator:
 
 ```js
- let object = {
+let object = {
   // anonymous
-  someMethod: function() {}
+  someMethod: function () {},
 };
 
-object.someMethod.name = 'otherMethod';
+object.someMethod.name = "otherMethod";
 console.log(object.someMethod.name); // someMethod
 ```
 
@@ -120,7 +125,7 @@ To change it, use {{jsxref("Object.defineProperty()")}}.
 
 ```js
 var o = {
-  foo(){}
+  foo() {},
 };
 o.foo.name; // "foo";
 ```
@@ -130,7 +135,7 @@ o.foo.name; // "foo";
 {{jsxref("Function.bind()")}} produces a function whose name is "bound " plus the function name.
 
 ```js
-function foo() {};
+function foo() {}
 foo.bind({}).name; // "bound foo"
 ```
 
@@ -140,8 +145,8 @@ When using [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [`set
 
 ```js
 let o = {
-  get foo(){},
-  set foo(x){}
+  get foo() {},
+  set foo(x) {},
 };
 
 var descriptor = Object.getOwnPropertyDescriptor(o, "foo");
@@ -154,7 +159,7 @@ descriptor.set.name; // "set foo";
 You can use `obj.constructor.name` to check the "class" of an object (but be sure to read the warnings below):
 
 ```js
-function Foo() {}  // ES2015 Syntax: class Foo {}
+function Foo() {} // ES2015 Syntax: class Foo {}
 
 var fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // logs "Foo"
@@ -175,8 +180,8 @@ With a `static name()` method `Foo.name` no longer holds the actual class name b
 
 ```js
 function Foo() {}
-Object.defineProperty(Foo, 'name', { writable: true });
-Foo.name = function() {};
+Object.defineProperty(Foo, "name", { writable: true });
+Foo.name = function () {};
 ```
 
 Trying to obtain the class of `fooInstance` via `fooInstance.constructor.name` won't give us the class name at all but a reference to the static class method. Example:
@@ -189,7 +194,7 @@ console.log(fooInstance.constructor.name); // logs function name()
 You may also see from the ES5 syntax example that in Chrome or Firefox our static definition of `Foo.name` becomes _writable_. The built-in definition in the absence of a custom static definition is _read-only_:
 
 ```js
-Foo.name = 'Hello';
+Foo.name = "Hello";
 console.log(Foo.name); // logs "Hello" if class Foo has a static name() property but "Foo" if not.
 ```
 
@@ -203,8 +208,8 @@ If a {{jsxref("Symbol")}} is used a function name and the symbol has a descripti
 let sym1 = Symbol("foo");
 let sym2 = Symbol();
 let o = {
-  [sym1]: function(){},
-  [sym2]: function(){}
+  [sym1]: function () {},
+  [sym2]: function () {},
 };
 
 o[sym1].name; // "[foo]"

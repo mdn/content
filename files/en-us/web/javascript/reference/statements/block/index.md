@@ -8,6 +8,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.block
 ---
+
 {{jsSidebar("Statements")}}
 
 A **block statement** (or **compound statement** in other
@@ -23,7 +24,7 @@ braces ("curly brackets") and may optionally be {{jsxref("Statements/label", "la
 
 ```js
 {
-  StatementList
+  StatementList;
 }
 ```
 
@@ -31,7 +32,7 @@ braces ("curly brackets") and may optionally be {{jsxref("Statements/label", "la
 
 ```js
 LabelIdentifier: {
-  StatementList
+  StatementList;
 }
 ```
 

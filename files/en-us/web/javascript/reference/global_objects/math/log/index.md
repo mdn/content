@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Math.log
 ---
+
 {{JSRef}}
 
 The **`Math.log()`** function returns the natural logarithm
@@ -46,7 +47,7 @@ _ln(x)_ in mathematics.
 ## Syntax
 
 ```js
-Math.log(x)
+Math.log(x);
 ```
 
 ### Parameters
@@ -83,8 +84,8 @@ want to precalculate 1 / Math.log(otherBase).
 
 ```js
 Math.log(-1); // NaN, out of range
-Math.log(0);  // -Infinity
-Math.log(1);  // 0
+Math.log(0); // -Infinity
+Math.log(1); // 0
 Math.log(10); // 2.302585092994046
 ```
 

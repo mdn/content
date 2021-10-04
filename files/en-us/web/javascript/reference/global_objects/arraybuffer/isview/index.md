@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.ArrayBuffer.isView
 ---
+
 {{JSRef}}
 
 The **`ArrayBuffer.isView()`** method determines whether the
@@ -20,7 +21,7 @@ objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) or a {{
 ## Syntax
 
 ```js
-ArrayBuffer.isView(value)
+ArrayBuffer.isView(value);
 ```
 
 ### Parameters
@@ -38,15 +39,15 @@ otherwise, `false`.
 ### Using isView
 
 ```js
-ArrayBuffer.isView();                    // false
-ArrayBuffer.isView([]);                  // false
-ArrayBuffer.isView({});                  // false
-ArrayBuffer.isView(null);                // false
-ArrayBuffer.isView(undefined);           // false
+ArrayBuffer.isView(); // false
+ArrayBuffer.isView([]); // false
+ArrayBuffer.isView({}); // false
+ArrayBuffer.isView(null); // false
+ArrayBuffer.isView(undefined); // false
 ArrayBuffer.isView(new ArrayBuffer(10)); // false
 
-ArrayBuffer.isView(new Uint8Array());    // true
-ArrayBuffer.isView(new Float32Array());  // true
+ArrayBuffer.isView(new Uint8Array()); // true
+ArrayBuffer.isView(new Float32Array()); // true
 ArrayBuffer.isView(new Int8Array(10).subarray(0, 3)); // true
 
 const buffer = new ArrayBuffer(2);

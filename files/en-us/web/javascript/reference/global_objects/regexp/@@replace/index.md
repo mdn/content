@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.RegExp.@@replace
 ---
+
 {{JSRef}}
 
 The **`[@@replace]()`** method replaces some or all matches of
@@ -52,9 +53,9 @@ This method is called internally in {{jsxref("String.prototype.replace()")}} if 
 two examples return same result.
 
 ```js
-'abc'.replace(/a/, 'A');
+"abc".replace(/a/, "A");
 
-/a/[Symbol.replace]('abc', 'A');
+/a/[Symbol.replace]("abc", "A");
 ```
 
 This method exists for customizing replace behavior in `RegExp` subclass.
@@ -73,9 +74,9 @@ different arguments order.
 
 ```js
 var re = /-/g;
-var str = '2016-01-01';
-var newstr = re[Symbol.replace](str, '.');
-console.log(newstr);  // 2016.01.01
+var str = "2016-01-01";
+var newstr = re[Symbol.replace](str, ".");
+console.log(newstr); // 2016.01.01
 ```
 
 ### Using @@replace in subclasses
@@ -99,9 +100,9 @@ class MyRegExp extends RegExp {
   }
 }
 
-var re = new MyRegExp('\\d', '', 3);
-var str = '01234567';
-var newstr = str.replace(re, '#'); // String.prototype.replace calls re[@@replace].
+var re = new MyRegExp("\\d", "", 3);
+var str = "01234567";
+var newstr = str.replace(re, "#"); // String.prototype.replace calls re[@@replace].
 console.log(newstr); // ###34567
 ```
 

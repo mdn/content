@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Array.toSource
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`toSource()`** method returns a string representing the
@@ -18,7 +19,7 @@ source code of the array.
 ## Syntax
 
 ```js
-toSource()
+toSource();
 ```
 
 ### Return value
@@ -36,7 +37,7 @@ The `toSource` method returns the following values:
     function Array() {
         [native code]
     }
-    ```
+  ```
 
 - For instances of {{jsxref("Array")}}, `toSource` returns a string
   representing the source code.
@@ -51,7 +52,7 @@ can call `toSource` while debugging to examine the contents of an array.
 To examine the source code of an array:
 
 ```js
-var alpha = new Array('a', 'b', 'c');
+var alpha = new Array("a", "b", "c");
 
 alpha.toSource();
 //returns ['a', 'b', 'c']

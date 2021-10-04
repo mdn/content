@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.reduceRight
 ---
+
 {{JSRef}}
 
 The **`reduceRight()`** method applies a function against an
@@ -74,7 +75,7 @@ index, and the typed array over which iteration is occurring.
 The call to the `reduceRight` callback would look something like this:
 
 ```js
-typedarray.reduceRight(function(accumulator, currentValue, index, typedarray) {
+typedarray.reduceRight(function (accumulator, currentValue, index, typedarray) {
   // ...
 });
 ```
@@ -100,7 +101,7 @@ value would be returned without calling `callbackFn`.
 ### Sum up all values within an array
 
 ```js
-var total = new Uint8Array([0, 1, 2, 3]).reduceRight(function(a, b) {
+var total = new Uint8Array([0, 1, 2, 3]).reduceRight(function (a, b) {
   return a + b;
 });
 // total == 6

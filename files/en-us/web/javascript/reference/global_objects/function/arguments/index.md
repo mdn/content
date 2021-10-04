@@ -9,6 +9,7 @@ tags:
   - arguments
 browser-compat: javascript.builtins.Function.arguments
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`function.arguments`** property refers to an array-like object corresponding to the arguments passed to a function. Use the simple variable {{jsxref("Functions/arguments", "arguments")}} instead. This property is restricted to non-strict functions.
@@ -26,17 +27,21 @@ The value of the arguments property is normally null if there is no outstanding 
 ### Using the arguments object
 
 ```js
-function f(n) { g(n - 1) }
-
-function g(n) {
-  console.log('before: ' + g.arguments[0])
-  if (n > 0) { f(n) }
-  console.log('after: ' + g.arguments[0])
+function f(n) {
+  g(n - 1);
 }
 
-f(2)
+function g(n) {
+  console.log("before: " + g.arguments[0]);
+  if (n > 0) {
+    f(n);
+  }
+  console.log("after: " + g.arguments[0]);
+}
 
-console.log('returned: ' + g.arguments)
+f(2);
+
+console.log("returned: " + g.arguments);
 
 // Output
 

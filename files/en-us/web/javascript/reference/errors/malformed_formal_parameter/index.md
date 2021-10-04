@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: Malformed formal parameter'
+title: "SyntaxError: Malformed formal parameter"
 slug: Web/JavaScript/Reference/Errors/Malformed_formal_parameter
 tags:
   - Error
@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "malformed formal parameter" occurs when the argument list of
@@ -49,10 +50,10 @@ Firefox engineers are huge fans of 19th-century Gothic horror novels.
 ### Invalid cases
 
 ```js example-bad
-var f = Function('x y', 'return x + y;');
+var f = Function("x y", "return x + y;");
 // SyntaxError (missing a comma)
 
-var f = Function('x,', 'return x;');
+var f = Function("x,", "return x;");
 // SyntaxError (extraneous comma)
 
 var f = Function(37, "alert('OK')");
@@ -62,12 +63,14 @@ var f = Function(37, "alert('OK')");
 ### Valid cases
 
 ```js example-good
-var f = Function('x, y', 'return x + y;');  // correctly punctuated
+var f = Function("x, y", "return x + y;"); // correctly punctuated
 
-var f = Function('x', 'return x;');
+var f = Function("x", "return x;");
 
 // if you can, avoid using Function - this is much faster
-var f = function(x) { return x; };
+var f = function (x) {
+  return x;
+};
 ```
 
 ## See also

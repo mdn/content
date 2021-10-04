@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.has
 ---
+
 {{JSRef}}
 
 The static **`Reflect.has()`** method works like the [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in)
@@ -20,7 +21,7 @@ as a function.
 ## Syntax
 
 ```js
-Reflect.has(target, propertyKey)
+Reflect.has(target, propertyKey);
 ```
 
 ### Parameters
@@ -51,18 +52,23 @@ as a function.
 ### Using Reflect.has()
 
 ```js
-Reflect.has({x: 0}, 'x')  // true
-Reflect.has({x: 0}, 'y')  // false
+Reflect.has({ x: 0 }, "x"); // true
+Reflect.has({ x: 0 }, "y"); // false
 
 // returns true for properties in the prototype chain
-Reflect.has({x: 0}, 'toString')
+Reflect.has({ x: 0 }, "toString");
 
 // Proxy with .has() handler method
-obj = new Proxy({}, {
-  has(t, k) { return k.startsWith('door')  }
-});
-Reflect.has(obj, 'doorbell')  // true
-Reflect.has(obj, 'dormitory')  // false
+obj = new Proxy(
+  {},
+  {
+    has(t, k) {
+      return k.startsWith("door");
+    },
+  }
+);
+Reflect.has(obj, "doorbell"); // true
+Reflect.has(obj, "dormitory"); // false
 ```
 
 `Reflect.has` returns `true` for any inherited properties, like
@@ -70,11 +76,11 @@ the [`in`
 operator](/en-US/docs/Web/JavaScript/Reference/Operators/in):
 
 ```js
-const a = {foo: 123}
-const b = {__proto__: a}
-const c = {__proto__: b}
+const a = { foo: 123 };
+const b = { __proto__: a };
+const c = { __proto__: b };
 // The prototype chain is: c -> b -> a
-Reflect.has(c, 'foo') // true
+Reflect.has(c, "foo"); // true
 ```
 
 ## Specifications

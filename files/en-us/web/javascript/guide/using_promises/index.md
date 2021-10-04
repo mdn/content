@@ -10,6 +10,7 @@ tags:
   - asynchronous
   - l10n:priority
 ---
+
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}
 
 A {{jsxref("Promise")}} is an object representing the eventual completion or failure of an asynchronous operation. Since most people are consumers of already-created promises, this guide will explain consumption of returned promises before explaining how to create them.
@@ -74,12 +75,20 @@ Basically, each promise represents the completion of another asynchronous step i
 In the old days, doing several asynchronous operations in a row would lead to the classic callback pyramid of doom:
 
 ```js
-doSomething(function(result) {
-  doSomethingElse(result, function(newResult) {
-    doThirdThing(newResult, function(finalResult) {
-      console.log('Got the final result: ' + finalResult);
-    }, failureCallback);
-  }, failureCallback);
+doSomething(function (result) {
+  doSomethingElse(
+    result,
+    function (newResult) {
+      doThirdThing(
+        newResult,
+        function (finalResult) {
+          console.log("Got the final result: " + finalResult);
+        },
+        failureCallback
+      );
+    },
+    failureCallback
+  );
 }, failureCallback);
 ```
 
@@ -87,28 +96,28 @@ With modern functions, we attach our callbacks to the returned promises instead,
 
 ```js
 doSomething()
-.then(function(result) {
-  return doSomethingElse(result);
-})
-.then(function(newResult) {
-  return doThirdThing(newResult);
-})
-.then(function(finalResult) {
-  console.log('Got the final result: ' + finalResult);
-})
-.catch(failureCallback);
+  .then(function (result) {
+    return doSomethingElse(result);
+  })
+  .then(function (newResult) {
+    return doThirdThing(newResult);
+  })
+  .then(function (finalResult) {
+    console.log("Got the final result: " + finalResult);
+  })
+  .catch(failureCallback);
 ```
 
 The arguments to `then` are optional, and `catch(failureCallback)` is short for `then(null, failureCallback)`. You might see this expressed with [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) instead:
 
 ```js
 doSomething()
-.then(result => doSomethingElse(result))
-.then(newResult => doThirdThing(newResult))
-.then(finalResult => {
-  console.log(`Got the final result: ${finalResult}`);
-})
-.catch(failureCallback);
+  .then((result) => doSomethingElse(result))
+  .then((newResult) => doThirdThing(newResult))
+  .then((finalResult) => {
+    console.log(`Got the final result: ${finalResult}`);
+  })
+  .catch(failureCallback);
 ```
 
 **Important:** Always return results, otherwise callbacks won't catch the result of a previous promise (with arrow functions `() => x` is short for `() => { return x; }`).
@@ -119,21 +128,21 @@ It's possible to chain _after_ a failure, i.e. a `catch`, which is useful to acc
 
 ```js
 new Promise((resolve, reject) => {
-    console.log('Initial');
+  console.log("Initial");
 
-    resolve();
+  resolve();
 })
-.then(() => {
-    throw new Error('Something failed');
+  .then(() => {
+    throw new Error("Something failed");
 
-    console.log('Do this');
-})
-.catch(() => {
-    console.error('Do that');
-})
-.then(() => {
-    console.log('Do this, no matter what happened before');
-});
+    console.log("Do this");
+  })
+  .catch(() => {
+    console.error("Do that");
+  })
+  .then(() => {
+    console.log("Do this, no matter what happened before");
+  });
 ```
 
 This will output the following text:
@@ -152,10 +161,10 @@ You might recall seeing `failureCallback` three times in the pyramid of doom ear
 
 ```js
 doSomething()
-.then(result => doSomethingElse(result))
-.then(newResult => doThirdThing(newResult))
-.then(finalResult => console.log(`Got the final result: ${finalResult}`))
-.catch(failureCallback);
+  .then((result) => doSomethingElse(result))
+  .then((newResult) => doThirdThing(newResult))
+  .then((finalResult) => console.log(`Got the final result: ${finalResult}`))
+  .catch(failureCallback);
 ```
 
 If there's an exception, the browser will look down the chain for `.catch()` handlers or `onRejected`. This is very much modeled after how synchronous code works:
@@ -166,7 +175,7 @@ try {
   const newResult = syncDoSomethingElse(result);
   const finalResult = syncDoThirdThing(newResult);
   console.log(`Got the final result: ${finalResult}`);
-} catch(error) {
+} catch (error) {
   failureCallback(error);
 }
 ```
@@ -180,7 +189,7 @@ async function foo() {
     const newResult = await doSomethingElse(result);
     const finalResult = await doThirdThing(newResult);
     console.log(`Got the final result: ${finalResult}`);
-  } catch(error) {
+  } catch (error) {
     failureCallback(error);
   }
 }
@@ -223,7 +232,7 @@ A {{jsxref("Promise")}} can be created from scratch using its constructor. This 
 In an ideal world, all asynchronous functions would already return promises. Unfortunately, some APIs still expect success and/or failure callbacks to be passed in the old way. The most obvious example is the [`setTimeout()`](/en-US/docs/Web/API/setTimeout) function:
 
 ```js
-setTimeout(() => saySomething("10 seconds passed"), 10*1000);
+setTimeout(() => saySomething("10 seconds passed"), 10 * 1000);
 ```
 
 Mixing old-style callbacks and promises is problematic. If `saySomething()` fails or contains a programming error, nothing catches it. `setTimeout` is to blame for this.
@@ -231,9 +240,11 @@ Mixing old-style callbacks and promises is problematic. If `saySomething()` fail
 Luckily we can wrap `setTimeout` in a promise. Best practice is to wrap problematic functions at the lowest possible level, and then never call them directly again:
 
 ```js
-const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-wait(10*1000).then(() => saySomething("10 seconds")).catch(failureCallback);
+wait(10 * 1000)
+  .then(() => saySomething("10 seconds"))
+  .catch(failureCallback);
 ```
 
 Basically, the promise constructor takes an executor function that lets us resolve or reject a promise manually. Since `setTimeout()` doesn't really fail, we left out reject in this case.
@@ -247,15 +258,19 @@ Basically, the promise constructor takes an executor function that lets us resol
 We can start operations in parallel and wait for them all to finish like this:
 
 ```js
-Promise.all([func1(), func2(), func3()])
-.then(([result1, result2, result3]) => { /* use result1, result2 and result3 */ });
+Promise.all([func1(), func2(), func3()]).then(([result1, result2, result3]) => {
+  /* use result1, result2 and result3 */
+});
 ```
 
 Sequential composition is possible using some clever JavaScript:
 
 ```js
-[func1, func2, func3].reduce((p, f) => p.then(f), Promise.resolve())
-.then(result3 => { /* use result3 */ });
+[func1, func2, func3]
+  .reduce((p, f) => p.then(f), Promise.resolve())
+  .then((result3) => {
+    /* use result3 */
+  });
 ```
 
 Basically, we reduce an array of asynchronous functions down to a promise chain equivalent to: `Promise.resolve().then(func1).then(func2).then(func3);`
@@ -263,8 +278,11 @@ Basically, we reduce an array of asynchronous functions down to a promise chain 
 This can be made into a reusable compose function, which is common in functional programming:
 
 ```js
-const applyAsync = (acc,val) => acc.then(val);
-const composeAsync = (...funcs) => x => funcs.reduce(applyAsync, Promise.resolve(x));
+const applyAsync = (acc, val) => acc.then(val);
+const composeAsync =
+  (...funcs) =>
+  (x) =>
+    funcs.reduce(applyAsync, Promise.resolve(x));
 ```
 
 The `composeAsync()` function will accept any number of functions as arguments, and will return a new function that accepts an initial value to be passed through the composition pipeline:
@@ -296,10 +314,12 @@ console.log(1); // 1, 2
 Instead of running immediately, the passed-in function is put on a microtask queue, which means it runs later (only after the function which created it exits, and when the JavaScript execution stack is empty), just before control is returned to the event loop; i.e. pretty soon:
 
 ```js
-const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 wait(0).then(() => console.log(4));
-Promise.resolve().then(() => console.log(2)).then(() => console.log(3));
+Promise.resolve()
+  .then(() => console.log(2))
+  .then(() => console.log(3));
 console.log(1); // 1, 2, 3, 4
 ```
 
@@ -308,15 +328,15 @@ console.log(1); // 1, 2, 3, 4
 Promise callbacks are handled as a [Microtask](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) whereas [`setTimeout()`](/en-US/docs/Web/API/setTimeout) callbacks are handled as Task queues.
 
 ```js
-const promise = new Promise(function(resolve, reject) {
-  console.log("Promise callback");
-  resolve();
-}).then(function(result) {
-  console.log("Promise callback (.then)");
+const promise = new Promise(function (resolve, reject) {
+  console.log("Promise callback");
+  resolve();
+}).then(function (result) {
+  console.log("Promise callback (.then)");
 });
 
-setTimeout(function() {
-  console.log("event-loop cycle: Promise (fulfilled)", promise)
+setTimeout(function () {
+  console.log("event-loop cycle: Promise (fulfilled)", promise);
 }, 0);
 
 console.log("Promise (pending)", promise);
@@ -341,11 +361,13 @@ Nesting is a control structure to limit the scope of `catch` statements. Specifi
 
 ```js
 doSomethingCritical()
-.then(result => doSomethingOptional(result)
-  .then(optionalResult => doSomethingExtraNice(optionalResult))
-  .catch(e => {})) // Ignore if optional stuff fails; proceed.
-.then(() => moreCriticalStuff())
-.catch(e => console.error("Critical failure: " + e.message));
+  .then((result) =>
+    doSomethingOptional(result)
+      .then((optionalResult) => doSomethingExtraNice(optionalResult))
+      .catch((e) => {})
+  ) // Ignore if optional stuff fails; proceed.
+  .then(() => moreCriticalStuff())
+  .catch((e) => console.error("Critical failure: " + e.message));
 ```
 
 Note that the optional steps here are nested, not from the indentation, but from the precarious placement of the outer `(` and `)` around them.
@@ -359,10 +381,12 @@ Here are some common mistakes to watch out for when composing promise chains. Se
 ```js example-bad
 // Bad example! Spot 3 mistakes!
 
-doSomething().then(function(result) {
-  doSomethingElse(result) // Forgot to return promise from inner chain + unnecessary nesting
-  .then(newResult => doThirdThing(newResult));
-}).then(() => doFourthThing());
+doSomething()
+  .then(function (result) {
+    doSomethingElse(result) // Forgot to return promise from inner chain + unnecessary nesting
+      .then((newResult) => doThirdThing(newResult));
+  })
+  .then(() => doFourthThing());
 // Forgot to terminate chain with a catch!
 ```
 
@@ -376,12 +400,12 @@ A good rule-of-thumb is to always either return or terminate promise chains, and
 
 ```js example-good
 doSomething()
-.then(function(result) {
-  return doSomethingElse(result);
-})
-.then(newResult => doThirdThing(newResult))
-.then(() => doFourthThing())
-.catch(error => console.error(error));
+  .then(function (result) {
+    return doSomethingElse(result);
+  })
+  .then((newResult) => doThirdThing(newResult))
+  .then(() => doFourthThing())
+  .catch((error) => console.error(error));
 ```
 
 Note that `() => x` is short for `() => { return x; }`.

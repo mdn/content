@@ -13,6 +13,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.at
 ---
+
 {{JSRef}}
 
 The **`at()`** method takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.
@@ -24,7 +25,7 @@ This is not to suggest there is anything wrong with using the square bracket not
 ## Syntax
 
 ```js
-at(index)
+at(index);
 ```
 
 ### Parameters
@@ -44,7 +45,7 @@ The following example provides a function which returns the last element found i
 
 ```js
 // Our array with items
-const cart = ['apple', 'banana', 'pear'];
+const cart = ["apple", "banana", "pear"];
 
 // A function which returns the last item of a given array
 function returnLast(arr) {
@@ -56,7 +57,7 @@ const item1 = returnLast(cart);
 console.log(item1); // Logs: 'pear'
 
 // Add an item to our 'cart' array
-cart.push('orange');
+cart.push("orange");
 const item2 = returnLast(cart);
 console.log(item2); // Logs: 'orange'
 ```
@@ -67,10 +68,10 @@ This example compares different ways to select the penultimate (last but one) it
 
 ```js
 // Our array with items
-const colors = ['red', 'green', 'blue'];
+const colors = ["red", "green", "blue"];
 
 // Using length property
-const lengthWay = colors[colors.length-2];
+const lengthWay = colors[colors.length - 2];
 console.log(lengthWay); // Logs: 'green'
 
 // Using slice() method. Note an array is returned

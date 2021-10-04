@@ -10,6 +10,7 @@ tags:
   - eval
 browser-compat: javascript.builtins.eval
 ---
+
 {{jsSidebar("Objects")}}
 
 > **Warning:** Executing JavaScript from a string is an enormous security
@@ -24,7 +25,7 @@ as a string.
 ## Syntax
 
 ```js
-eval(string)
+eval(string);
 ```
 
 ### Parameters
@@ -60,16 +61,16 @@ specified and `eval()` returns a `String` object rather than
 evaluating the string.
 
 ```js
-eval(new String('2 + 2')); // returns a String object containing "2 + 2"
-eval('2 + 2');             // returns 4
+eval(new String("2 + 2")); // returns a String object containing "2 + 2"
+eval("2 + 2"); // returns 4
 ```
 
 You can work around this limitation in a generic fashion by using
 `toString()`.
 
 ```js
-var expression = new String('2 + 2');
-eval(expression.toString());            // returns 4
+var expression = new String("2 + 2");
+eval(expression.toString()); // returns 4
 ```
 
 If you use the `eval` function _indirectly,_ by invoking it via a
@@ -81,14 +82,15 @@ called.
 
 ```js
 function test() {
-  var x = 2, y = 4;
+  var x = 2,
+    y = 4;
   // Direct call, uses local scope
-  console.log(eval('x + y')); // Result is 6
+  console.log(eval("x + y")); // Result is 6
   // Indirect call using the comma operator to return eval
-  console.log((0, eval)('x + y')); // Uses global scope, throws because x is undefined
+  console.log((0, eval)("x + y")); // Uses global scope, throws because x is undefined
   // Indirect call using a variable to store and return eval
   var geval = eval;
-  console.log(geval('x + y')); // Uses global scope, throws because x is undefined
+  console.log(geval("x + y")); // Uses global scope, throws because x is undefined
 }
 ```
 
@@ -120,23 +122,19 @@ using a dangerous `eval()` to using `Function()`, see below.
 Bad code with `eval()`:
 
 ```js
-function looseJsonParse(obj){
-    return eval("(" + obj + ")");
+function looseJsonParse(obj) {
+  return eval("(" + obj + ")");
 }
-console.log(looseJsonParse(
-   "{a:(4-1), b:function(){}, c:new Date()}"
-))
+console.log(looseJsonParse("{a:(4-1), b:function(){}, c:new Date()}"));
 ```
 
 Better code without `eval()`:
 
 ```js
-function looseJsonParse(obj){
-    return Function('"use strict";return (' + obj + ')')();
+function looseJsonParse(obj) {
+  return Function('"use strict";return (' + obj + ")")();
 }
-console.log(looseJsonParse(
-   "{a:(4-1), b:function(){}, c:new Date()}"
-))
+console.log(looseJsonParse("{a:(4-1), b:function(){}, c:new Date()}"));
 ```
 
 Comparing the two code snippets above, the two code snippets might seem to work the
@@ -149,15 +147,21 @@ instead of a local variable called `Date`. But, in the code using
 the following:
 
 ```js
-function Date(n){
-    return ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"][n%7 || 0];
+function Date(n) {
+  return [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ][n % 7 || 0];
 }
-function looseJsonParse(obj){
-    return eval("(" + obj + ")");
+function looseJsonParse(obj) {
+  return eval("(" + obj + ")");
 }
-console.log(looseJsonParse(
-   "{a:(4-1), b:function(){}, c:new Date()}"
-))
+console.log(looseJsonParse("{a:(4-1), b:function(){}, c:new Date()}"));
 ```
 
 Thus, in the `eval()` version of the code, the browser is forced to make the
@@ -170,17 +174,21 @@ you just take the easy way out and fall back to `eval()`? No! Never. Instead
 try the approach below.
 
 ```js
-function Date(n){
-    return ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"][n%7 || 0];
+function Date(n) {
+  return [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ][n % 7 || 0];
 }
-function runCodeWithDateFunction(obj){
-    return Function('"use strict";return (' + obj + ')')()(
-        Date
-    );
+function runCodeWithDateFunction(obj) {
+  return Function('"use strict";return (' + obj + ")")()(Date);
 }
-console.log(runCodeWithDateFunction(
-   "function(Date){ return Date(5) }"
-))
+console.log(runCodeWithDateFunction("function(Date){ return Date(5) }"));
 ```
 
 The code above may seem inefficiently slow because of the triple nested function, but
@@ -200,8 +208,13 @@ efficiently because the function arguments names can be minified too as seen in 
 minified code below.
 
 ```js
-console.log(Function('"use strict";return(function(a){return a(5)})')()(function(a){
-return"Monday Tuesday Wednesday Thursday Friday Saturday Sunday".split(" ")[a%7||0]}));
+console.log(
+  Function('"use strict";return(function(a){return a(5)})')()(function (a) {
+    return "Monday Tuesday Wednesday Thursday Friday Saturday Sunday".split(
+      " "
+    )[a % 7 || 0];
+  })
+);
 ```
 
 There are also additional safer (and faster!) alternatives to `eval()` or
@@ -215,9 +228,9 @@ known until the code is executed. This can be done with `eval()`:
 
 ```js
 var obj = { a: 20, b: 30 };
-var propName = getPropName();  // returns "a" or "b"
+var propName = getPropName(); // returns "a" or "b"
 
-eval( 'var result = obj.' + propName );
+eval("var result = obj." + propName);
 ```
 
 However, `eval()` is not necessary here. In fact, its use here is
@@ -226,18 +239,18 @@ accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors), w
 
 ```js
 var obj = { a: 20, b: 30 };
-var propName = getPropName();  // returns "a" or "b"
-var result = obj[ propName ];  //  obj[ "a" ] is the same as obj.a
+var propName = getPropName(); // returns "a" or "b"
+var result = obj[propName]; //  obj[ "a" ] is the same as obj.a
 ```
 
 You can even use this method to access descendant properties. Using `eval()`
 this would look like:
 
 ```js
-var obj = {a: {b: {c: 0}}};
-var propPath = getPropPath();  // returns e.g. "a.b.c"
+var obj = { a: { b: { c: 0 } } };
+var propPath = getPropPath(); // returns e.g. "a.b.c"
 
-eval( 'var result = obj.' + propPath );
+eval("var result = obj." + propPath);
 ```
 
 Avoiding `eval()` here could be done by splitting the property path and
@@ -245,15 +258,15 @@ looping through the different properties:
 
 ```js
 function getDescendantProp(obj, desc) {
-  var arr = desc.split('.');
+  var arr = desc.split(".");
   while (arr.length) {
     obj = obj[arr.shift()];
   }
   return obj;
 }
 
-var obj = {a: {b: {c: 0}}};
-var propPath = getPropPath();  // returns e.g. "a.b.c"
+var obj = { a: { b: { c: 0 } } };
+var propPath = getPropPath(); // returns e.g. "a.b.c"
 var result = getDescendantProp(obj, propPath);
 ```
 
@@ -261,16 +274,16 @@ Setting a property that way works similarly:
 
 ```js
 function setDescendantProp(obj, desc, value) {
-  var arr = desc.split('.');
+  var arr = desc.split(".");
   while (arr.length > 1) {
     obj = obj[arr.shift()];
   }
-  return obj[arr[0]] = value;
+  return (obj[arr[0]] = value);
 }
 
-var obj = {a: {b: {c: 0}}};
-var propPath = getPropPath();  // returns e.g. "a.b.c"
-var result = setDescendantProp(obj, propPath, 1);  // obj.a.b.c will now be 1
+var obj = { a: { b: { c: 0 } } };
+var propPath = getPropPath(); // returns e.g. "a.b.c"
+var result = setDescendantProp(obj, propPath, 1); // obj.a.b.c will now be 1
 ```
 
 ### Use functions instead of evaluating snippets of code
@@ -285,7 +298,7 @@ can (and should) write:
 setTimeout(function() { ... }, 1000);
 
 // instead of elt.setAttribute("onclick", "...") use:
-elt.addEventListener('click', function() { ... } , false); 
+elt.addEventListener('click', function() { ... } , false);
 ```
 
 [Closures](/en-US/docs/Web/JavaScript/Closures) are also helpful as a way to
@@ -320,9 +333,9 @@ The first evaluates the string "`x + y + 1`"; the second evaluates the string
 ```js
 var x = 2;
 var y = 39;
-var z = '42';
-eval('x + y + 1'); // returns 42
-eval(z);           // returns 42
+var z = "42";
+eval("x + y + 1"); // returns 42
+eval(z); // returns 42
 ```
 
 ### Using `eval` to evaluate a string of JavaScript statements
@@ -338,7 +351,7 @@ and it will also evaluate the set of statements and return the value that is ass
 var x = 5;
 var str = "if (x == 5) {console.log('z is 42'); z = 42;} else z = 0;";
 
-console.log('z is ', eval(str));
+console.log("z is ", eval(str));
 ```
 
 If you define multiple values then the last value is returned.
@@ -347,7 +360,7 @@ If you define multiple values then the last value is returned.
 var x = 5;
 var str = "if (x == 5) {console.log('z is 42'); z = 42; x = 420; } else z = 0;";
 
-console.log('x is ', eval(str)); // z is 42  x is 420
+console.log("x is ", eval(str)); // z is 42  x is 420
 ```
 
 ### Last expression is evaluated
@@ -355,25 +368,25 @@ console.log('x is ', eval(str)); // z is 42  x is 420
 `eval()` returns the value of the last expression evaluated.
 
 ```js
-var str = 'if ( a ) { 1 + 1; } else { 1 + 2; }';
+var str = "if ( a ) { 1 + 1; } else { 1 + 2; }";
 var a = true;
-var b = eval(str);  // returns 2
+var b = eval(str); // returns 2
 
-console.log('b is : ' + b);
+console.log("b is : " + b);
 
 a = false;
-b = eval(str);  // returns 3
+b = eval(str); // returns 3
 
-console.log('b is : ' + b);
+console.log("b is : " + b);
 ```
 
 ### `eval` as a string defining function requires "(" and ")" as prefix and suffix
 
 ```js
-var fctStr1 = 'function a() {}'
-var fctStr2 = '(function a() {})'
-var fct1 = eval(fctStr1)  // return undefined
-var fct2 = eval(fctStr2)  // return a function
+var fctStr1 = "function a() {}";
+var fctStr2 = "(function a() {})";
+var fct1 = eval(fctStr1); // return undefined
+var fct2 = eval(fctStr2); // return a function
 ```
 
 ## Specifications

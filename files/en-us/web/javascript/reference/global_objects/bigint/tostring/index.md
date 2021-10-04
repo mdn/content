@@ -9,6 +9,7 @@ tags:
   - toString()
 browser-compat: javascript.builtins.BigInt.toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the
@@ -19,8 +20,8 @@ specified {{jsxref("BigInt")}} object. The trailing "n" is not part of the strin
 ## Syntax
 
 ```js
-toString()
-toString(radix)
+toString();
+toString(radix);
 ```
 
 ### Parameters
@@ -64,11 +65,11 @@ complement of the `bigIntObj`.
 ### Using `toString`
 
 ```js
-17n.toString();      // '17'
-66n.toString(2);     // '1000010'
-254n.toString(16);   // 'fe'
--10n.toString(2);    // -1010'
--0xffn.toString(2);  // '-11111111'
+17n.toString(); // '17'
+66n.toString(2); // '1000010'
+254n.toString(16); // 'fe'
+-10n.toString(2); // -1010'
+-0xffn.toString(2); // '-11111111'
 ```
 
 ### Negative-zero `BigInt`
@@ -78,7 +79,7 @@ integers. `-0.0` is an IEEE floating-point concept that only appears in the
 JavaScript {{jsxref("Number")}} type.
 
 ```js
-(-0n).toString();      // '0'
+(-0n).toString(); // '0'
 BigInt(-0).toString(); // '0'
 ```
 

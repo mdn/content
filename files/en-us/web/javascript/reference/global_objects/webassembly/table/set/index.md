@@ -11,6 +11,7 @@ tags:
   - table
 browser-compat: javascript.builtins.WebAssembly.Table.set
 ---
+
 {{JSRef}}
 
 The **`set()`** prototype method of
@@ -20,7 +21,7 @@ to a different value.
 ## Syntax
 
 ```js
-set(index, value)
+set(index, value);
 ```
 
 ### Parameters
@@ -57,7 +58,7 @@ the length is two, and the indexes currently contain no function references (the
 currently return {{jsxref("null")}}).
 
 ```js
-var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
+var tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });
 console.log(tbl.length);
 console.log(tbl.get(0));
 console.log(tbl.get(1));
@@ -68,8 +69,8 @@ We then create an import object that contains a reference to the table:
 ```js
 var importObj = {
   js: {
-    tbl:tbl
-  }
+    tbl: tbl,
+  },
 };
 ```
 
@@ -81,12 +82,13 @@ representation](https://github.com/mdn/webassembly-examples/blob/master/text-for
 a simple value):
 
 ```js
-WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
-.then(function(obj) {
-  console.log(tbl.length);
-  console.log(tbl.get(0)());
-  console.log(tbl.get(1)());
-});
+WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
+  function (obj) {
+    console.log(tbl.length);
+    console.log(tbl.get(0)());
+    console.log(tbl.get(1)());
+  }
+);
 ```
 
 Note how you've got to include a second function invocation operator at the end of the

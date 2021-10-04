@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript [strict
@@ -44,25 +45,25 @@ Read-only properties are not super common, but they can be created using
 {{jsxref("Object.defineProperty()")}} or {{jsxref("Object.freeze()")}}.
 
 ```js example-bad
-'use strict';
-var obj = Object.freeze({name: 'Elsa', score: 157});
-obj.score = 0;  // TypeError
+"use strict";
+var obj = Object.freeze({ name: "Elsa", score: 157 });
+obj.score = 0; // TypeError
 
-'use strict';
-Object.defineProperty(this, 'LUNG_COUNT', {value: 2, writable: false});
-LUNG_COUNT = 3;  // TypeError
+("use strict");
+Object.defineProperty(this, "LUNG_COUNT", { value: 2, writable: false });
+LUNG_COUNT = 3; // TypeError
 
-'use strict';
+("use strict");
 var frozenArray = Object.freeze([0, 1, 2]);
-frozenArray[0]++;  // TypeError
+frozenArray[0]++; // TypeError
 ```
 
 There are also a few read-only properties built into JavaScript. Maybe you tried to
 redefine a mathematical constant.
 
 ```js example-bad
-'use strict';
-Math.PI = 4;  // TypeError
+"use strict";
+Math.PI = 4; // TypeError
 ```
 
 Sorry, you can't do that.
@@ -71,20 +72,20 @@ The global variable `undefined` is also read-only, so you can't silence the
 infamous "undefined is not a function" error by doing this:
 
 ```js example-bad
-'use strict';
-undefined = function() {};  // TypeError: "undefined" is read-only
+"use strict";
+undefined = function () {}; // TypeError: "undefined" is read-only
 ```
 
 ### Valid cases
 
 ```js example-good
-'use strict';
-var obj = Object.freeze({name: 'Score', points: 157});
-obj = {name: obj.name, points: 0};   // replacing it with a new object works
+"use strict";
+var obj = Object.freeze({ name: "Score", points: 157 });
+obj = { name: obj.name, points: 0 }; // replacing it with a new object works
 
-'use strict';
-var LUNG_COUNT = 2;  // a `var` works, because it's not read-only
-LUNG_COUNT = 3;  // ok (anatomically unlikely, though)
+("use strict");
+var LUNG_COUNT = 2; // a `var` works, because it's not read-only
+LUNG_COUNT = 3; // ok (anatomically unlikely, though)
 ```
 
 ## See also

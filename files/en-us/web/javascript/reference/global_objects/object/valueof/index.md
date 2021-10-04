@@ -8,6 +8,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Object.valueOf
 ---
+
 {{JSRef}}
 
 The **`valueOf()`** method returns the primitive value of the
@@ -18,7 +19,7 @@ specified object.
 ## Syntax
 
 ```js
-valueOf()
+valueOf();
 ```
 
 ### Return value
@@ -56,7 +57,9 @@ Suppose you have an object type `MyNumberType` and you want to create a
 to the object's `valueOf` method:
 
 ```js
-MyNumberType.prototype.valueOf = function() { return customPrimitiveValue; };
+MyNumberType.prototype.valueOf = function () {
+  return customPrimitiveValue;
+};
 ```
 
 With the preceding code in place, any time an object of type `MyNumberType`
@@ -67,7 +70,7 @@ An object's `valueOf` method is usually invoked by JavaScript, but you can
 invoke it yourself as follows:
 
 ```js
-myNumberType.valueOf()
+myNumberType.valueOf();
 ```
 
 > **Note:** Objects in string contexts convert via the
@@ -83,11 +86,11 @@ myNumberType.valueOf()
 
 ```js
 function MyNumberType(n) {
-    this.number = n;
+  this.number = n;
 }
 
-MyNumberType.prototype.valueOf = function() {
-    return this.number;
+MyNumberType.prototype.valueOf = function () {
+  return this.number;
 };
 
 var myObj = new MyNumberType(4);
@@ -97,21 +100,21 @@ myObj + 3; // 7
 ### Using unary plus
 
 ```js
-+"5" // 5 (string to number)
-+"" // 0 (string to number)
-+"1 + 2" // NaN (doesn't evaluate)
-+new Date() // same as (new Date()).getTime()
-+"foo" // NaN (string to number)
-+{} // NaN
-+[] // 0 (toString() returns an empty string list)
-+[1] // 1
-+[1,2] // NaN
-+new Set([1]) // NaN
-+BigInt(1) // Uncaught TypeError: Cannot convert a BigInt value to a number
-+undefined // NaN
-+null // 0
-+true // 1
-+false // 0
++"5" + // 5 (string to number)
+  "" + // 0 (string to number)
+  "1 + 2" + // NaN (doesn't evaluate)
+  new Date() + // same as (new Date()).getTime()
+  "foo" + // NaN (string to number)
+  {} + // NaN
+  [] + // 0 (toString() returns an empty string list)
+  [1] + // 1
+  [1, 2] + // NaN
+  new Set([1]) + // NaN
+  BigInt(1) + // Uncaught TypeError: Cannot convert a BigInt value to a number
+  undefined + // NaN
+  null + // 0
+  true + // 1
+  false; // 0
 ```
 
 ## Specifications

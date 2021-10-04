@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.FinalizationRegistry.FinalizationRegistry
 ---
+
 {{JSRef}}
 
 The **`FinalizationRegistry`** constructor creates a {{jsxref("FinalizationRegistry")}} object that uses the given callback.
@@ -38,7 +39,7 @@ new FinalizationRegistry(function callbackFn(heldValue) { ... })
 You create the registry passing in the callback:
 
 ```js
-const registry = new FinalizationRegistry(heldValue => {
+const registry = new FinalizationRegistry((heldValue) => {
   // ....
 });
 ```

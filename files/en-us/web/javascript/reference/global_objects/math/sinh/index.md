@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Math.sinh
 ---
+
 {{JSRef}}
 
 The **`Math.sinh()`** function returns the hyperbolic sine of a
@@ -32,7 +33,7 @@ e^{-x}}{2}</annotation></semantics></math>
 ## Syntax
 
 ```js
-Math.sinh(x)
+Math.sinh(x);
 ```
 
 ### Parameters
@@ -55,18 +56,22 @@ created (`Math` is not a constructor).
 This can be emulated with the help of the {{jsxref("Math.exp()")}} function:
 
 ```js
-Math.sinh = Math.sinh || function(x) {
-  return (Math.exp(x) - Math.exp(-x)) / 2;
-}
+Math.sinh =
+  Math.sinh ||
+  function (x) {
+    return (Math.exp(x) - Math.exp(-x)) / 2;
+  };
 ```
 
 or using only one call to the {{jsxref("Math.exp()")}} function:
 
 ```js
-Math.sinh = Math.sinh || function(x) {
-  var y = Math.exp(x);
-  return (y - 1 / y) / 2;
-}
+Math.sinh =
+  Math.sinh ||
+  function (x) {
+    var y = Math.exp(x);
+    return (y - 1 / y) / 2;
+  };
 ```
 
 ## Examples

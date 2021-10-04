@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.matchAll
 ---
+
 {{JSRef}}
 
 The **`matchAll()`** method returns an iterator of all results
@@ -23,7 +24,7 @@ groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges).
 ## Syntax
 
 ```js
-matchAll(regexp)
+matchAll(regexp);
 ```
 
 ### Parameters
@@ -58,12 +59,14 @@ calls to [regexp.exec](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegEx
 (and regexes with the `/g` flag) in a loop to obtain all the matches:
 
 ```js
-const regexp = new RegExp('foo[a-z]*','g');
-const str = 'table football, foosball';
+const regexp = new RegExp("foo[a-z]*", "g");
+const str = "table football, foosball";
 let match;
 
 while ((match = regexp.exec(str)) !== null) {
-  console.log(`Found ${match[0]} start=${match.index} end=${regexp.lastIndex}.`);
+  console.log(
+    `Found ${match[0]} start=${match.index} end=${regexp.lastIndex}.`
+  );
   // expected output: "Found football start=6 end=14."
   // expected output: "Found foosball start=16 end=24."
 }
@@ -78,27 +81,31 @@ convenient {{jsxref("Statements/for...of", "for...of")}},
 constructs:
 
 ```js
-const regexp = new RegExp('foo[a-z]*','g');
-const str = 'table football, foosball';
+const regexp = new RegExp("foo[a-z]*", "g");
+const str = "table football, foosball";
 const matches = str.matchAll(regexp);
 
 for (const match of matches) {
-  console.log(`Found ${match[0]} start=${match.index} end=${match.index + match[0].length}.`);
+  console.log(
+    `Found ${match[0]} start=${match.index} end=${
+      match.index + match[0].length
+    }.`
+  );
 }
 // expected output: "Found football start=6 end=14."
 // expected output: "Found foosball start=16 end=24."
 
 // matches iterator is exhausted after the for..of iteration
 // Call matchAll again to create a new iterator
-Array.from(str.matchAll(regexp), m => m[0]);
+Array.from(str.matchAll(regexp), (m) => m[0]);
 // Array [ "football", "foosball" ]
 ```
 
 `matchAll` will throw an exception if the `g` flag is missing.
 
 ```js
-const regexp = new RegExp('[a-c]','');
-const str = 'abc';
+const regexp = new RegExp("[a-c]", "");
+const str = "abc";
 str.matchAll(regexp);
 // TypeError
 ```
@@ -108,10 +115,10 @@ str.matchAll(regexp);
   "regexp.exec()")}}, `lastIndex` does not change as the string is scanned.
 
 ```js
-const regexp = new RegExp('[a-c]','g');
+const regexp = new RegExp("[a-c]", "g");
 regexp.lastIndex = 1;
-const str = 'abc';
-Array.from(str.matchAll(regexp), m => `${regexp.lastIndex} ${m[0]}`);
+const str = "abc";
+Array.from(str.matchAll(regexp), (m) => `${regexp.lastIndex} ${m[0]}`);
 // Array [ "1 b", "1 c" ]
 ```
 
@@ -125,7 +132,7 @@ Capture groups are ignored when using {{jsxref("Global_Objects/String/match",
 
 ```js
 let regexp = /t(e)(st(\d?))/g;
-let str = 'test1test2';
+let str = "test1test2";
 
 str.match(regexp);
 // Array ['test1', 'test2']

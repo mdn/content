@@ -12,6 +12,7 @@ tags:
   - Operator
 browser-compat: javascript.operators.destructuring
 ---
+
 {{jsSidebar("Operators")}}
 
 The **destructuring assignment** syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
@@ -36,7 +37,7 @@ console.log(a); // 10
 console.log(b); // 20
 
 // Stage 4(finished) proposal
-({a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40});
+({ a, b, ...rest } = { a: 10, b: 20, c: 30, d: 40 });
 console.log(a); // 10
 console.log(b); // 20
 console.log(rest); // {c: 30, d: 40}
@@ -77,7 +78,7 @@ This capability is similar to features present in languages such as Perl and Pyt
 #### Basic variable assignment
 
 ```js
-const foo = ['one', 'two', 'three'];
+const foo = ["one", "two", "three"];
 
 const [red, yellow, green] = foo;
 console.log(red); // "one"
@@ -100,13 +101,13 @@ console.log(b); // 2
 In an array destructuring from an array of length _N_ specified on the right-hand side of the assignment, if the number of variables specified on the left-hand side of the assignment is greater than _N_, only the first _N_ variables are assigned values. The values of the remaining variables will be undefined.
 
 ```js
-const foo = ['one', 'two'];
+const foo = ["one", "two"];
 
 const [red, yellow, green, blue] = foo;
 console.log(red); // "one"
 console.log(yellow); // "two"
 console.log(green); // undefined
-console.log(blue);  //undefined
+console.log(blue); //undefined
 ```
 
 #### Default values
@@ -116,7 +117,7 @@ A variable can be assigned a default, in the case that the value unpacked from t
 ```js
 let a, b;
 
-[a=5, b=7] = [1];
+[a = 5, b = 7] = [1];
 console.log(a); // 1
 console.log(b); // 7
 ```
@@ -135,7 +136,7 @@ let b = 3;
 console.log(a); // 3
 console.log(b); // 1
 
-const arr = [1,2,3];
+const arr = [1, 2, 3];
 [arr[2], arr[1]] = [arr[1], arr[2]];
 console.log(arr); // [1,3,2]
 ```
@@ -177,7 +178,7 @@ console.log(c); // 1
 You can also ignore all returned values:
 
 ```js
-[,,] = f();
+[, ,] = f();
 ```
 
 #### Assigning the rest of an array to a variable
@@ -210,14 +211,16 @@ function parseProtocol(url) {
     return false;
   }
   console.log(parsedURL);
-  // ["https://developer.mozilla.org/en-US/docs/Web/JavaScript", 
+  // ["https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   // "https", "developer.mozilla.org", "en-US/docs/Web/JavaScript"]
 
   const [, protocol, fullhost, fullpath] = parsedURL;
   return protocol;
 }
 
-console.log(parseProtocol('https://developer.mozilla.org/en-US/docs/Web/JavaScript'));
+console.log(
+  parseProtocol("https://developer.mozilla.org/en-US/docs/Web/JavaScript")
+);
 // "https"
 ```
 
@@ -227,11 +230,11 @@ console.log(parseProtocol('https://developer.mozilla.org/en-US/docs/Web/JavaScri
 
 ```js
 const user = {
-    id: 42,
-    isVerified: true
+  id: 42,
+  isVerified: true,
 };
 
-const {id, isVerified} = user;
+const { id, isVerified } = user;
 
 console.log(id); // 42
 console.log(isVerified); // true
@@ -244,7 +247,7 @@ A variable can be assigned its value with destructuring separate from its declar
 ```js
 let a, b;
 
-({a, b} = {a: 1, b: 2});
+({ a, b } = { a: 1, b: 2 });
 ```
 
 > **Note:** The parentheses `( ... )` around the assignment statement are required when using object literal destructuring assignment without a declaration.
@@ -260,8 +263,8 @@ let a, b;
 A property can be unpacked from an object and assigned to a variable with a different name than the object property.
 
 ```js
-const o = {p: 42, q: true};
-const {p: foo, q: bar} = o;
+const o = { p: 42, q: true };
+const { p: foo, q: bar } = o;
 
 console.log(foo); // 42
 console.log(bar); // true
@@ -274,7 +277,7 @@ Here, for example, `const {p: foo} = o` takes from the object `o` the property n
 A variable can be assigned a default, in the case that the value unpacked from the object is `undefined`.
 
 ```js
-const {a = 10, b = 5} = {a: 3};
+const { a = 10, b = 5 } = { a: 3 };
 
 console.log(a); // 3
 console.log(b); // 5
@@ -288,7 +291,7 @@ A property can be both
 - Assigned a default value in case the unpacked value is `undefined`.
 
 ```js
-const {a: aa = 10, b: bb = 5} = {a: 3};
+const { a: aa = 10, b: bb = 5 } = { a: 3 };
 
 console.log(aa); // 3
 console.log(bb); // 5
@@ -299,23 +302,23 @@ console.log(bb); // 5
 ```js
 const user = {
   id: 42,
-  displayName: 'jdoe',
+  displayName: "jdoe",
   fullName: {
-    firstName: 'John',
-    lastName: 'Doe'
-  }
+    firstName: "John",
+    lastName: "Doe",
+  },
 };
 
-function userId({id}) {
+function userId({ id }) {
   return id;
 }
 
-function whois({displayName, fullName: {firstName: name}}) {
+function whois({ displayName, fullName: { firstName: name } }) {
   return `${displayName} is ${name}`;
 }
 
 console.log(userId(user)); // 42
-console.log(whois(user));  // "jdoe is John"
+console.log(whois(user)); // "jdoe is John"
 ```
 
 This unpacks the `id`, `displayName` and `firstName` from the user object and prints them.
@@ -323,14 +326,18 @@ This unpacks the `id`, `displayName` and `firstName` from the user object and pr
 #### Setting a function parameter's default value
 
 ```js
-function drawChart({size = 'big', coords = {x: 0, y: 0}, radius = 25} = {}) {
+function drawChart({
+  size = "big",
+  coords = { x: 0, y: 0 },
+  radius = 25,
+} = {}) {
   console.log(size, coords, radius);
   // do some chart drawing
 }
 
 drawChart({
-  coords: {x: 18, y: 30},
-  radius: 30
+  coords: { x: 18, y: 30 },
+  radius: 30,
 });
 ```
 
@@ -340,30 +347,30 @@ drawChart({
 
 ```js
 const metadata = {
-  title: 'Scratchpad',
+  title: "Scratchpad",
   translations: [
     {
-      locale: 'de',
+      locale: "de",
       localization_tags: [],
-      last_edit: '2014-04-14T08:43:37',
-      url: '/de/docs/Tools/Scratchpad',
-      title: 'JavaScript-Umgebung'
-    }
+      last_edit: "2014-04-14T08:43:37",
+      url: "/de/docs/Tools/Scratchpad",
+      title: "JavaScript-Umgebung",
+    },
   ],
-  url: '/en-US/docs/Tools/Scratchpad'
+  url: "/en-US/docs/Tools/Scratchpad",
 };
 
 let {
   title: englishTitle, // rename
   translations: [
     {
-       title: localeTitle, // rename
+      title: localeTitle, // rename
     },
   ],
 } = metadata;
 
 console.log(englishTitle); // "Scratchpad"
-console.log(localeTitle);  // "JavaScript-Umgebung"
+console.log(localeTitle); // "JavaScript-Umgebung"
 ```
 
 #### For of iteration and destructuring
@@ -371,27 +378,30 @@ console.log(localeTitle);  // "JavaScript-Umgebung"
 ```js
 const people = [
   {
-    name: 'Mike Smith',
+    name: "Mike Smith",
     family: {
-      mother: 'Jane Smith',
-      father: 'Harry Smith',
-      sister: 'Samantha Smith'
+      mother: "Jane Smith",
+      father: "Harry Smith",
+      sister: "Samantha Smith",
     },
-    age: 35
+    age: 35,
   },
   {
-    name: 'Tom Jones',
+    name: "Tom Jones",
     family: {
-      mother: 'Norah Jones',
-      father: 'Richard Jones',
-      brother: 'Howard Jones'
+      mother: "Norah Jones",
+      father: "Richard Jones",
+      brother: "Howard Jones",
     },
-    age: 25
-  }
+    age: 25,
+  },
 ];
 
-for (const {name: n, family: {father: f}} of people) {
-  console.log('Name: ' + n + ', Father: ' + f);
+for (const {
+  name: n,
+  family: { father: f },
+} of people) {
+  console.log("Name: " + n + ", Father: " + f);
 }
 
 // "Name: Mike Smith, Father: Harry Smith"
@@ -403,8 +413,8 @@ for (const {name: n, family: {father: f}} of people) {
 Computed property names, like on [object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names), can be used with destructuring.
 
 ```js
-let key = 'z';
-let {[key]: foo} = {z: 'bar'};
+let key = "z";
+let { [key]: foo } = { z: "bar" };
 
 console.log(foo); // "bar"
 ```
@@ -414,7 +424,7 @@ console.log(foo); // "bar"
 The [Rest/Spread Properties for ECMAScript](https://github.com/tc39/proposal-object-rest-spread) proposal (stage 4) adds the [rest](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) syntax to destructuring. Rest properties collect the remaining own enumerable property keys that are not already picked off by the destructuring pattern.
 
 ```js
-let {a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40}
+let { a, b, ...rest } = { a: 10, b: 20, c: 30, d: 40 };
 a; // 10
 b; // 20
 rest; // { c: 30, d: 40 }
@@ -425,8 +435,8 @@ rest; // { c: 30, d: 40 }
 Destructuring can be used with property names that are not valid JavaScript {{glossary("Identifier", "identifiers")}} by providing an alternative identifier that is valid.
 
 ```js
-const foo = { 'fizz-buzz': true };
-const { 'fizz-buzz': fizzBuzz } = foo;
+const foo = { "fizz-buzz": true };
+const { "fizz-buzz": fizzBuzz } = foo;
 
 console.log(fizzBuzz); // "true"
 ```
@@ -437,12 +447,12 @@ Array and Object destructuring can be combined. Say you want the third element i
 
 ```js
 const props = [
-  { id: 1, name: 'Fizz'},
-  { id: 2, name: 'Buzz'},
-  { id: 3, name: 'FizzBuzz'}
+  { id: 1, name: "Fizz" },
+  { id: 2, name: "Buzz" },
+  { id: 3, name: "FizzBuzz" },
 ];
 
-const [,, { name }] = props;
+const [, , { name }] = props;
 
 console.log(name); // "FizzBuzz"
 ```
@@ -452,9 +462,9 @@ console.log(name); // "FizzBuzz"
 When deconstructing an object, if a property is not accessed in itself, it will continue to look up along the prototype chain.
 
 ```js
-let obj = {self: '123'};
-obj.__proto__.prot = '456';
-const {self, prot} = obj;
+let obj = { self: "123" };
+obj.__proto__.prot = "456";
+const { self, prot } = obj;
 // self "123"
 // prot "456" (Access to the prototype chain)
 ```

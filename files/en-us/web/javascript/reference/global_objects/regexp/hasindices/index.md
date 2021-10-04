@@ -11,6 +11,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.hasIndices
 ---
+
 {{JSRef}}
 
 The **`hasIndices`** property indicates whether or not the "`d`" flag is used with the regular expression. `hasIndices` is a read-only property of an individual regular expression instance.
@@ -30,18 +31,18 @@ You cannot change this property directly.
 ### Using `hasIndices`
 
 ```js
-const str1 = 'foo bar foo';
+const str1 = "foo bar foo";
 
-const regex1 = new RegExp('foo', 'gd');
+const regex1 = new RegExp("foo", "gd");
 
 console.log(regex1.hasIndices); // Output: true
 
 console.log(regex1.exec(str1).indices[0]); // Output: Array [0, 3]
 console.log(regex1.exec(str1).indices[0]); // Output: Array [8, 11]
 
-const str2 = 'foo bar foo';
+const str2 = "foo bar foo";
 
-const regex2 = new RegExp('foo');
+const regex2 = new RegExp("foo");
 
 console.log(regex2.hasIndices); // Output: false
 

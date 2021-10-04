@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setUTCFullYear
 ---
+
 {{JSRef}}
 
 The **`setUTCFullYear()`** method sets the full year for a
@@ -19,9 +20,9 @@ specified date according to universal time.
 ## Syntax
 
 ```js
-setUTCFullYear(yearValue)
-setUTCFullYear(yearValue, monthValue)
-setUTCFullYear(yearValue, monthValue, dayValue)
+setUTCFullYear(yearValue);
+setUTCFullYear(yearValue, monthValue);
+setUTCFullYear(yearValue, monthValue, dayValue);
 ```
 
 ### Parameters

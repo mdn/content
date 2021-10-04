@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Math.atan2
 ---
+
 {{JSRef}}
 
 The **`Math.atan2()`** function returns the angle in the plane
@@ -20,7 +21,7 @@ positive x-axis and the ray from (0,0) to the point (x,y), for
 ## Syntax
 
 ```js
-Math.atan2(y, x)
+Math.atan2(y, x);
 ```
 
 ### Parameters

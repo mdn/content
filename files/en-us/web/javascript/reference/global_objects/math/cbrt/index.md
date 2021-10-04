@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Math.cbrt
 ---
+
 {{JSRef}}
 
 The **`Math.cbrt()`** function returns the cube root of a
@@ -45,7 +46,7 @@ number, that is
 ## Syntax
 
 ```js
-Math.cbrt(x)
+Math.cbrt(x);
 ```
 
 ### Parameters
@@ -81,11 +82,11 @@ For all <math><semantics><mrow><mi>x</mi>
 
 ```js
 if (!Math.cbrt) {
-  Math.cbrt = (function(pow) {
-    return function cbrt(x){
-      // ensure negative numbers remain negative:
-      return x < 0 ? -pow(-x, 1/3) : pow(x, 1/3);
-    };
+  Math.cbrt = (function (pow) {
+    return function cbrt(x) {
+      // ensure negative numbers remain negative:
+      return x < 0 ? -pow(-x, 1 / 3) : pow(x, 1 / 3);
+    };
   })(Math.pow); // localize Math.pow to increase efficiency
 }
 ```
@@ -103,7 +104,7 @@ Math.cbrt(0); // 0
 Math.cbrt(1); // 1
 Math.cbrt(Infinity); // Infinity
 Math.cbrt(null); // 0
-Math.cbrt(2);  // 1.2599210498948732
+Math.cbrt(2); // 1.2599210498948732
 ```
 
 ## Specifications

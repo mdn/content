@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.WeakMap.WeakMap
 ---
+
 {{JSRef}}
 
 The **`WeakMap()` constructor** creates `WeakMap`
@@ -22,8 +23,8 @@ collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections).
 ## Syntax
 
 ```js
-new WeakMap()
-new WeakMap(iterable)
+new WeakMap();
+new WeakMap(iterable);
 ```
 
 ### Parameters
@@ -39,14 +40,14 @@ new WeakMap(iterable)
 
 ```js
 const wm1 = new WeakMap(),
-      wm2 = new WeakMap(),
-      wm3 = new WeakMap();
+  wm2 = new WeakMap(),
+  wm3 = new WeakMap();
 const o1 = {},
-      o2 = function() {},
-      o3 = window;
+  o2 = function () {},
+  o3 = window;
 
 wm1.set(o1, 37);
-wm1.set(o2, 'azerty');
+wm1.set(o2, "azerty");
 wm2.set(o1, o2); // a value can be anything, including an object or a function
 wm2.set(o3, undefined);
 wm2.set(wm1, wm2); // keys and values can be any objects. Even WeakMaps!

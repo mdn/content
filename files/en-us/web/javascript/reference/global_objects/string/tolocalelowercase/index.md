@@ -10,6 +10,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.toLocaleLowerCase
 ---
+
 {{JSRef}}
 
 The **`toLocaleLowerCase()`** method returns the calling string
@@ -59,13 +60,13 @@ follow the default case mappings in Unicode, there may be a different result.
 ### Using toLocaleLowerCase()
 
 ```js
-'ALPHABET'.toLocaleLowerCase(); // 'alphabet'
+"ALPHABET".toLocaleLowerCase(); // 'alphabet'
 
-'\u0130'.toLocaleLowerCase('tr') === 'i';    // true
-'\u0130'.toLocaleLowerCase('en-US') === 'i'; // false
+"\u0130".toLocaleLowerCase("tr") === "i"; // true
+"\u0130".toLocaleLowerCase("en-US") === "i"; // false
 
-let locales = ['tr', 'TR', 'tr-TR', 'tr-u-co-search', 'tr-x-turkish'];
-'\u0130'.toLocaleLowerCase(locales) === 'i'; // true
+let locales = ["tr", "TR", "tr-TR", "tr-u-co-search", "tr-x-turkish"];
+"\u0130".toLocaleLowerCase(locales) === "i"; // true
 ```
 
 ## Specifications

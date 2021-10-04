@@ -9,6 +9,7 @@ tags:
   - WeakMap
 browser-compat: javascript.builtins.WeakMap.get
 ---
+
 {{JSRef}}
 
 The **`get()`** method returns a specified element from a
@@ -19,7 +20,7 @@ The **`get()`** method returns a specified element from a
 ## Syntax
 
 ```js
-get(key)
+get(key);
 ```
 
 ### Parameters
@@ -38,10 +39,10 @@ the key can't be found, {{jsxref("undefined")}} is returned.
 
 ```js
 var wm = new WeakMap();
-wm.set(window, 'foo');
+wm.set(window, "foo");
 
 wm.get(window); // Returns "foo".
-wm.get('baz');  // Returns undefined.
+wm.get("baz"); // Returns undefined.
 ```
 
 ## Specifications

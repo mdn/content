@@ -7,11 +7,13 @@ tags:
   - JavaScript
   - RegExp
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 This page provides an overall cheat sheet of all the capabilities of `RegExp` syntax by aggregating the content of the articles in the `RegExp` guide. If you need more information on a specific topic, please follow the link on the corresponding heading to access the full article or head to [the guide](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
 
 ## Character classes
+
 [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes) distinguish kinds of characters such as, for example, distinguishing between letters and digits.
 
 <table class="standard-table">
@@ -250,6 +252,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` s
 </table>
 
 ## Assertions
+
 [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions) include boundaries, which indicate the beginnings and endings of lines and words, and other patterns indicating in some way that a match is possible (including look-ahead, look-behind, and conditional expressions).
 
 ### Boundary-type assertions
@@ -417,6 +420,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` s
 </table>
 
 ## Groups and ranges
+
 [Groups and ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) indicate groups and ranges of expression characters.
 
 <table class="standard-table">
@@ -601,6 +605,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` s
 </table>
 
 ## Quantifiers
+
 [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers) indicate numbers of characters or expressions to match.
 
 > **Note:** In the following, *item* refers not only to singular characters, but also includes [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes), [groups and ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges).
@@ -730,6 +735,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` s
 </table>
 
 ## Unicode property escapes
+
 [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) allow for matching characters based on their Unicode properties.
 
 ```js

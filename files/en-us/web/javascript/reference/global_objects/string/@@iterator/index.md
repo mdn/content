@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.@@iterator
 ---
+
 {{JSRef}}
 
 The **`[@@iterator]()`** method returns a new iterator object
@@ -23,7 +24,7 @@ String value.
 ## Syntax
 
 ```js
-str[Symbol.iterator]
+str[Symbol.iterator];
 ```
 
 ### Return value
@@ -35,7 +36,7 @@ A new iterator object.
 ### Using \[@@iterator]\()
 
 ```js
-var str = 'A\uD835\uDC68';
+var str = "A\uD835\uDC68";
 
 var strIter = str[Symbol.iterator]();
 
@@ -46,7 +47,7 @@ console.log(strIter.next().value); // "\uD835\uDC68"
 ### Using \[@@iterator]\() with for..of
 
 ```js
-var str = 'A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A';
+var str = "A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A";
 
 for (var v of str) {
   console.log(v);

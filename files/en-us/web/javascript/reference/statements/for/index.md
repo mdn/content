@@ -10,6 +10,7 @@ tags:
   - for
 browser-compat: javascript.statements.for
 ---
+
 {{jsSidebar("Statements")}}
 
 The **for statement** creates a loop that consists of three optional
@@ -22,8 +23,7 @@ be executed in the loop.
 ## Syntax
 
 ```js
-for ([initialization]; [condition]; [final-expression])
-   statement
+for ([initialization]; [condition]; [final - expression]) statement;
 ```
 
 - `initialization`
@@ -65,8 +65,8 @@ less than nine, performs the two succeeding statements, and increments `i` by
 
 ```js
 for (let i = 0; i < 9; i++) {
-   console.log(i);
-   // more statements
+  console.log(i);
+  // more statements
 }
 ```
 
@@ -80,8 +80,8 @@ initialize variables:
 ```js
 var i = 0;
 for (; i < 9; i++) {
-    console.log(i);
-    // more statements
+  console.log(i);
+  // more statements
 }
 ```
 
@@ -91,10 +91,10 @@ expression, you must make sure to break the loop in the body in order to not cre
 infinite loop.
 
 ```js
-for (let i = 0;; i++) {
-   console.log(i);
-   if (i > 3) break;
-   // more statements
+for (let i = 0; ; i++) {
+  console.log(i);
+  if (i > 3) break;
+  // more statements
 }
 ```
 
@@ -121,26 +121,31 @@ use of a `statement` section, a semicolon is used instead.
 
 ```js
 function showOffsetPos(sId) {
-
-  var nLeft = 0, nTop = 0;
+  var nLeft = 0,
+    nTop = 0;
 
   for (
-
-    var oItNode = document.getElementById(sId); /* initialization */
-
-    oItNode; /* condition */
-
-    nLeft += oItNode.offsetLeft, nTop += oItNode.offsetTop, oItNode = oItNode.offsetParent /* final-expression */
-
+    var oItNode = document.getElementById(sId) /* initialization */;
+    oItNode /* condition */;
+    nLeft += oItNode.offsetLeft,
+      nTop += oItNode.offsetTop,
+      oItNode = oItNode.offsetParent /* final-expression */
   ); /* semicolon */
 
-  console.log('Offset position of \'' + sId + '\' element:\n left: ' + nLeft + 'px;\n top: ' + nTop + 'px;');
-
+  console.log(
+    "Offset position of '" +
+      sId +
+      "' element:\n left: " +
+      nLeft +
+      "px;\n top: " +
+      nTop +
+      "px;"
+  );
 }
 
 /* Example call: */
 
-showOffsetPos('content');
+showOffsetPos("content");
 
 // Output:
 // "Offset position of "content" element:

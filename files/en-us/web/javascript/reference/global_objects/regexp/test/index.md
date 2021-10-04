@@ -10,6 +10,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.test
 ---
+
 {{JSRef}}
 
 The **`test()`** method executes a search for a match between a
@@ -21,7 +22,7 @@ regular expression and a specified string. Returns `true` or
 ## Syntax
 
 ```js
-test(str)
+test(str);
 ```
 
 ### Parameters
@@ -57,7 +58,7 @@ Simple example that tests if "`hello`" is contained at the very beginning of
 a string, returning a boolean result.
 
 ```js
-const str = 'hello world!';
+const str = "hello world!";
 const result = /^hello/.test(str);
 
 console.log(result); // true
@@ -69,9 +70,9 @@ The following example logs a message which depends on the success of the test:
 function testInput(re, str) {
   let midstring;
   if (re.test(str)) {
-    midstring = 'contains';
+    midstring = "contains";
   } else {
-    midstring = 'does not contain';
+    midstring = "does not contain";
   }
   console.log(`${str} ${midstring} ${re.source}`);
 }
@@ -101,16 +102,16 @@ The following example demonstrates this behavior:
 const regex = /foo/g; // the "global" flag is set
 
 // regex.lastIndex is at 0
-regex.test('foo')     // true
+regex.test("foo"); // true
 
 // regex.lastIndex is now at 3
-regex.test('foo')     // false
+regex.test("foo"); // false
 
 // regex.lastIndex is at 0
-regex.test('barfoo')  // true
+regex.test("barfoo"); // true
 
 // regex.lastIndex is at 6
-regex.test('foobar')  //false
+regex.test("foobar"); //false
 
 // regex.lastIndex is at 0
 // (...and so on)

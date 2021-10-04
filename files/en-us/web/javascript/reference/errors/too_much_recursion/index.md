@@ -1,5 +1,5 @@
 ---
-title: 'InternalError: too much recursion'
+title: "InternalError: too much recursion"
 slug: Web/JavaScript/Reference/Errors/Too_much_recursion
 tags:
   - Error
@@ -7,6 +7,7 @@ tags:
   - InternalError
   - JavaScript
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "too much recursion" or "Maximum call stack size exceeded"
@@ -40,7 +41,8 @@ This recursive function runs 10 times, as per the exit condition.
 
 ```js
 function loop(x) {
-  if (x >= 10) // "x >= 10" is the exit condition
+  if (x >= 10)
+    // "x >= 10" is the exit condition
     return;
   // do stuff
   loop(x + 1); // the recursive call
@@ -52,8 +54,7 @@ Setting this condition to an extremely high value, won't work:
 
 ```js example-bad
 function loop(x) {
-  if (x >= 1000000000000)
-    return;
+  if (x >= 1000000000000) return;
   // do stuff
   loop(x + 1);
 }
@@ -67,9 +68,9 @@ function will call itself infinitely.
 
 ```js example-bad
 function loop(x) {
- // The base case is missing
+  // The base case is missing
 
-loop(x + 1); // Recursive call
+  loop(x + 1); // Recursive call
 }
 
 loop(0);
@@ -80,11 +81,11 @@ loop(0);
 ### Class error: too much recursion
 
 ```js example-bad
-class Person{
-	constructor(){}
-	set name(name){
-		this.name = name; // Recursive call
-	}
+class Person {
+  constructor() {}
+  set name(name) {
+    this.name = name; // Recursive call
+  }
 }
 
 const tony = new Person();
@@ -117,14 +118,14 @@ function is different from the one that initially triggered the setter.The same 
 for the getter.
 
 ```js
-class Person{
-	constructor(){}
-	set name(name){
-		this._name = name;
-	}
-	get name(){
-		return this._name;
-	}
+class Person {
+  constructor() {}
+  set name(name) {
+    this._name = name;
+  }
+  get name() {
+    return this._name;
+  }
 }
 const tony = new Person();
 tony.name = "Tonisha";

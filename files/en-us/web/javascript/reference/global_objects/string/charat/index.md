@@ -9,6 +9,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.charAt
 ---
+
 {{JSRef}}
 
 The {{jsxref("String")}} object's
@@ -20,7 +21,7 @@ single UTF-16 code unit located at the specified offset into the string.
 ## Syntax
 
 ```js
-charAt(index)
+charAt(index);
 ```
 
 ### Parameters
@@ -56,15 +57,15 @@ The following example displays characters at different locations in the string
 "`Brave new world`":
 
 ```js
-var anyString = 'Brave new world';
-console.log("The character at index 0   is '" + anyString.charAt()   + "'");
+var anyString = "Brave new world";
+console.log("The character at index 0   is '" + anyString.charAt() + "'");
 // No index was provided, used 0 as default
 
-console.log("The character at index 0   is '" + anyString.charAt(0)   + "'");
-console.log("The character at index 1   is '" + anyString.charAt(1)   + "'");
-console.log("The character at index 2   is '" + anyString.charAt(2)   + "'");
-console.log("The character at index 3   is '" + anyString.charAt(3)   + "'");
-console.log("The character at index 4   is '" + anyString.charAt(4)   + "'");
+console.log("The character at index 0   is '" + anyString.charAt(0) + "'");
+console.log("The character at index 1   is '" + anyString.charAt(1) + "'");
+console.log("The character at index 2   is '" + anyString.charAt(2) + "'");
+console.log("The character at index 3   is '" + anyString.charAt(3) + "'");
+console.log("The character at index 4   is '" + anyString.charAt(4) + "'");
 console.log("The character at index 999 is '" + anyString.charAt(999) + "'");
 ```
 
@@ -88,7 +89,7 @@ provides a whole character, even if the string contains characters that are not 
 Basic Multi-lingual Plane.
 
 ```js
-var str = 'A \uD87E\uDC04 Z'; // We could also use a non-BMP character directly
+var str = "A \uD87E\uDC04 Z"; // We could also use a non-BMP character directly
 for (var i = 0, chr; i < str.length; i++) {
   if ((chr = getWholeChar(str, i)) === false) {
     continue;
@@ -104,34 +105,34 @@ function getWholeChar(str, i) {
   var code = str.charCodeAt(i);
 
   if (Number.isNaN(code)) {
-    return ''; // Position not found
+    return ""; // Position not found
   }
-  if (code < 0xD800 || code > 0xDFFF) {
+  if (code < 0xd800 || code > 0xdfff) {
     return str.charAt(i);
   }
 
   // High surrogate (could change last hex to 0xDB7F to treat high private
   // surrogates as single characters)
-  if (0xD800 <= code && code <= 0xDBFF) {
-    if (str.length <= (i + 1)) {
-      throw 'High surrogate without following low surrogate';
+  if (0xd800 <= code && code <= 0xdbff) {
+    if (str.length <= i + 1) {
+      throw "High surrogate without following low surrogate";
     }
     var next = str.charCodeAt(i + 1);
-      if (0xDC00 > next || next > 0xDFFF) {
-        throw 'High surrogate without following low surrogate';
-      }
-      return str.charAt(i) + str.charAt(i + 1);
+    if (0xdc00 > next || next > 0xdfff) {
+      throw "High surrogate without following low surrogate";
+    }
+    return str.charAt(i) + str.charAt(i + 1);
   }
   // Low surrogate (0xDC00 <= code && code <= 0xDFFF)
   if (i === 0) {
-    throw 'Low surrogate without preceding high surrogate';
+    throw "Low surrogate without preceding high surrogate";
   }
   var prev = str.charCodeAt(i - 1);
 
   // (could change last hex to 0xDB7F to treat high private
   // surrogates as single characters)
-  if (0xD800 > prev || prev > 0xDBFF) {
-    throw 'Low surrogate without preceding high surrogate';
+  if (0xd800 > prev || prev > 0xdbff) {
+    throw "Low surrogate without preceding high surrogate";
   }
   // We can pass over low surrogates now as the second component
   // in a pair which we have already processed
@@ -145,55 +146,52 @@ an incrementing variable automatically (if the character warrants it in being a
 surrogate pair).
 
 ```js
-let str = 'A\uD87E\uDC04Z'  // We could also use a non-BMP character directly
+let str = "A\uD87E\uDC04Z"; // We could also use a non-BMP character directly
 for (let i = 0, chr; i < str.length; i++) {
-  [chr, i] = getWholeCharAndI(str, i)
+  [chr, i] = getWholeCharAndI(str, i); // Adapt this line at the top of each loop, passing in the whole string and
 
-  // Adapt this line at the top of each loop, passing in the whole string and
   // the current iteration and returning an array with the individual character
   // and 'i' value (only changed if a surrogate pair)
 
-  console.log(chr)
+  console.log(chr);
 }
 
 function getWholeCharAndI(str, i) {
-  let code = str.charCodeAt(i)
+  let code = str.charCodeAt(i);
 
   if (Number.isNaN(code)) {
-    return ''  // Position not found
+    return ""; // Position not found
   }
-  if (code < 0xD800 || code > 0xDFFF) {
-    return [str.charAt(i), i]  // Normal character, keeping 'i' the same
+  if (code < 0xd800 || code > 0xdfff) {
+    return [str.charAt(i), i]; // Normal character, keeping 'i' the same
   }
 
   // High surrogate (could change last hex to 0xDB7F to treat high private
   // surrogates as single characters)
-  if (0xD800 <= code && code <= 0xDBFF) {
-    if (str.length <= (i + 1)) {
-      throw 'High surrogate without following low surrogate'
+  if (0xd800 <= code && code <= 0xdbff) {
+    if (str.length <= i + 1) {
+      throw "High surrogate without following low surrogate";
     }
-    let next = str.charCodeAt(i + 1)
-      if (0xDC00 > next || next > 0xDFFF) {
-        throw 'High surrogate without following low surrogate'
-      }
-      return [str.charAt(i) + str.charAt(i + 1), i + 1]
-  }
+    let next = str.charCodeAt(i + 1);
+    if (0xdc00 > next || next > 0xdfff) {
+      throw "High surrogate without following low surrogate";
+    }
+    return [str.charAt(i) + str.charAt(i + 1), i + 1];
+  } // Low surrogate (0xDC00 <= code && code <= 0xDFFF)
 
-  // Low surrogate (0xDC00 <= code && code <= 0xDFFF)
   if (i === 0) {
-    throw 'Low surrogate without preceding high surrogate'
+    throw "Low surrogate without preceding high surrogate";
   }
 
-  let prev = str.charCodeAt(i - 1)
+  let prev = str.charCodeAt(i - 1);
 
   // (could change last hex to 0xDB7F to treat high private surrogates
   // as single characters)
-  if (0xD800 > prev || prev > 0xDBFF) {
-    throw 'Low surrogate without preceding high surrogate'
-  }
+  if (0xd800 > prev || prev > 0xdbff) {
+    throw "Low surrogate without preceding high surrogate";
+  } // Return the next character instead (and increment)
 
-  // Return the next character instead (and increment)
-  return [str.charAt(i + 1), i + 1]
+  return [str.charAt(i + 1), i + 1];
 }
 ```
 
@@ -207,31 +205,34 @@ represent, one can use the following:
 
 ```js
 function fixedCharAt(str, idx) {
-  let ret = ''
-  str += ''
-  let end = str.length
+  let ret = "";
+  str += "";
+  let end = str.length;
 
-  let surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g
-  while ((surrogatePairs.exec(str)) != null) {
-    let lastIdx = surrogatePairs.lastIndex
+  let surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
+  while (surrogatePairs.exec(str) != null) {
+    let lastIdx = surrogatePairs.lastIndex;
     if (lastIdx - 2 < idx) {
-      idx++
+      idx++;
     } else {
-      break
+      break;
     }
   }
 
   if (idx >= end || idx < 0) {
-    return ''
+    return "";
   }
 
-  ret += str.charAt(idx)
+  ret += str.charAt(idx);
 
-  if (/[\uD800-\uDBFF]/.test(ret) && /[\uDC00-\uDFFF]/.test(str.charAt(idx + 1))) {
+  if (
+    /[\uD800-\uDBFF]/.test(ret) &&
+    /[\uDC00-\uDFFF]/.test(str.charAt(idx + 1))
+  ) {
     // Go one further, since one of the "characters" is part of a surrogate pair
-    ret += str.charAt(idx + 1)
+    ret += str.charAt(idx + 1);
   }
-  return ret
+  return ret;
 }
 ```
 

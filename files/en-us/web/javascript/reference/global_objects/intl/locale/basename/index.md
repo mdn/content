@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.baseName
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale.prototype.baseName`** property returns a substring of the `Locale`'s string representation, containing core information about the `Locale`.
@@ -49,7 +50,7 @@ console.log(japan.baseName); // Prints out "ja-JP"
 // Input string indicates language as Dutch and region as Belgium,
 
 // but options object overrides the region and sets it to the Netherlands
-let dutch = new Intl.Locale("nl-Latn-BE", {region: "NL"});
+let dutch = new Intl.Locale("nl-Latn-BE", { region: "NL" });
 
 console.log(dutch.baseName); // Prints out "nl-Latn-NL"
 ```

@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Math
 ---
+
 {{JSRef}}
 
 **`Math`** is a built-in object that has properties and methods for mathematical constants and functions. It’s not a function object.
@@ -125,11 +126,11 @@ Since humans tend to think in degrees, and some functions (such as CSS transform
 ```js
 function degToRad(degrees) {
   return degrees * (Math.PI / 180);
-};
+}
 
 function radToDeg(rad) {
   return rad / (Math.PI / 180);
-};
+}
 ```
 
 ### Calculating the height of an equilateral triangle

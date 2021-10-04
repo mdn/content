@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat.formatToParts
 ---
+
 {{JSRef}}
 
 The **`Intl.Numberformat.prototype.formatToParts()`** method
@@ -21,8 +22,8 @@ formatters.
 ## Syntax
 
 ```js
-formatToParts()
-formatToParts(number)
+formatToParts();
+formatToParts(number);
 ```
 
 ### Parameters
@@ -46,8 +47,8 @@ looks like this:
 [
   { type: "integer", value: "3" },
   { type: "group", value: "." },
-  { type: "integer", value: "500" }
-]
+  { type: "integer", value: "500" },
+];
 ```
 
 Possible types are the following:
@@ -89,9 +90,9 @@ directly:
 ```js
 var number = 3500;
 
-var formatter = new Intl.NumberFormat('de-DE', {
-  style: 'currency',
-  currency: 'EUR'
+var formatter = new Intl.NumberFormat("de-DE", {
+  style: "currency",
+  currency: "EUR",
 });
 
 formatter.format(number);
@@ -108,14 +109,14 @@ formatter.formatToParts(number);
 
 // return value:
 [
-  { type: "integer",  value: "3"   },
-  { type: "group",    value: "."   },
-  { type: "integer",  value: "500" },
-  { type: "decimal",  value: ","   },
-  { type: "fraction", value: "00"  },
-  { type: "literal",  value: " "   },
-  { type: "currency", value: "€"   }
-]
+  { type: "integer", value: "3" },
+  { type: "group", value: "." },
+  { type: "integer", value: "500" },
+  { type: "decimal", value: "," },
+  { type: "fraction", value: "00" },
+  { type: "literal", value: " " },
+  { type: "currency", value: "€" },
+];
 ```
 
 Now the information is available separately and it can be formatted and concatenated
@@ -126,12 +127,17 @@ statement](/en-US/docs/Web/JavaScript/Reference/Statements/switch), [template
 literals](/en-US/docs/Web/JavaScript/Reference/Template_literals), and {{jsxref("Array.prototype.reduce()")}}.
 
 ```js
-var numberString = formatter.formatToParts(number).map(({type, value}) => {
-  switch (type) {
-    case 'currency': return `<strong>${value}</strong>`;
-    default : return value;
-  }
-}).reduce((string, part) => string + part);
+var numberString = formatter
+  .formatToParts(number)
+  .map(({ type, value }) => {
+    switch (type) {
+      case "currency":
+        return `<strong>${value}</strong>`;
+      default:
+        return value;
+    }
+  })
+  .reduce((string, part) => string + part);
 ```
 
 This will make the currency bold, when using the `formatToParts()` method.
@@ -154,4 +160,4 @@ console.log(numberString);
 - {{jsxref("Intl.NumberFormat")}}
 - {{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.prototype.format")}}
 - Formatting dates: {{jsxref("Intl/DateTimeFormat/formatToParts",
-		"Intl.DateTimeFormat.prototype.formatToParts()")}}
+  	"Intl.DateTimeFormat.prototype.formatToParts()")}}

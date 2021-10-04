@@ -8,6 +8,7 @@ tags:
   - Shared Memory
 browser-compat: javascript.builtins.Atomics.sub
 ---
+
 {{JSRef}}
 
 The static **`Atomics.sub()`** method substracts a given value
@@ -20,7 +21,7 @@ back.
 ## Syntax
 
 ```js
-Atomics.sub(typedArray, index, value)
+Atomics.sub(typedArray, index, value);
 ```
 
 ### Parameters

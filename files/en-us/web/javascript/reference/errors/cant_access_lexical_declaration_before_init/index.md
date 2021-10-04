@@ -1,5 +1,5 @@
 ---
-title: 'ReferenceError: can''t access lexical declaration`X'' before initialization'
+title: "ReferenceError: can't access lexical declaration`X' before initialization"
 slug: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
 tags:
   - Error
@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - ReferenceError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "can't access lexical declaration \`_variable_' before
@@ -44,12 +45,10 @@ In this case, the variable "foo" is accessed, even before it is declared which t
 
 ```js example-bad
 function test() {
+  // Accessing the variable foo before it's declared
 
-  // Accessing the variable foo before it's declared 
-
-  console.log(foo);     // ReferenceError: can't access lexical
-  let foo = 33;         // 'foo' is declared here using the 'let' keyword
-   
+  console.log(foo); // ReferenceError: can't access lexical
+  let foo = 33; // 'foo' is declared here using the 'let' keyword
 }
 test();
 ```
@@ -59,12 +58,11 @@ test();
 In the following example, we correctly declare a variable using the `let` keyword before accessing it, so we encounter no error. And in contrast, notice how we are accessing the `bar` variable even before it is declared — without encountering any error. That's because of the [hoisted](/en-US/docs/Glossary/Hoisting) nature of `var` variables.
 
 ```js example-good
-function test(){
-
-   // Declaring variable foo
-   let foo = 33;
-   console.log(foo, bar);    // 33 undefined
-   var bar = 12;
+function test() {
+  // Declaring variable foo
+  let foo = 33;
+  console.log(foo, bar); // 33 undefined
+  var bar = 12;
 }
 test();
 ```

@@ -13,6 +13,7 @@ tags:
   - delete
 browser-compat: javascript.operators.delete
 ---
+
 {{jsSidebar("Operators")}}
 
 The JavaScript **`delete` operator**
@@ -30,8 +31,8 @@ delete expression
 Where `expression` should evaluate to a [property](/en-US/docs/Glossary/property/JavaScript) reference, e.g.:
 
 ```js
-delete object.property
-delete object['property']
+delete object.property;
+delete object["property"];
 ```
 
 ### Parameters
@@ -93,12 +94,12 @@ The following snippet gives a simple example:
 ```js
 var Employee = {
   age: 28,
-  name: 'abc',
-  designation: 'developer'
-}
+  name: "abc",
+  designation: "developer",
+};
 
-console.log(delete Employee.name);   // returns true
-console.log(delete Employee.age);    // returns true
+console.log(delete Employee.name); // returns true
+console.log(delete Employee.age); // returns true
 
 // When trying to delete a property that does
 // not exist, true is returned
@@ -113,9 +114,9 @@ effect, and will return `false`. In strict mode this will raise a
 
 ```js
 var Employee = {};
-Object.defineProperty(Employee, 'name', {configurable: false});
+Object.defineProperty(Employee, "name", { configurable: false });
 
-console.log(delete Employee.name);  // returns false
+console.log(delete Employee.name); // returns false
 ```
 
 {{jsxref("Statements/var","var")}}, {{jsxref("Statements/let","let")}}, and
@@ -279,10 +280,10 @@ longer in the array. In the following example, `trees[3]` is removed with
 `delete`.
 
 ```js
-var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+var trees = ["redwood", "bay", "cedar", "oak", "maple"];
 delete trees[3];
 if (3 in trees) {
-    // this is not executed
+  // this is not executed
 }
 ```
 
@@ -292,10 +293,10 @@ following example, `trees[3]` is assigned the value `undefined`,
 but the array element still exists:
 
 ```js
-var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+var trees = ["redwood", "bay", "cedar", "oak", "maple"];
 trees[3] = undefined;
 if (3 in trees) {
-    // this is executed
+  // this is executed
 }
 ```
 
@@ -305,8 +306,8 @@ use the {{jsxref("Array.splice()", "splice()")}} method. In the following exampl
 {{jsxref("Array.splice()", "splice()")}}:
 
 ```js
-var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
-trees.splice(3,1);
+var trees = ["redwood", "bay", "cedar", "oak", "maple"];
+trees.splice(3, 1);
 console.log(trees); // ["redwood", "bay", "cedar", "maple"]
 ```
 

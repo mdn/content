@@ -8,6 +8,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.ArrayBuffer.@@species
 ---
+
 {{JSRef}}
 
 The **`ArrayBuffer[@@species]`** accessor property returns the `ArrayBuffer` constructor.
@@ -33,7 +34,9 @@ In a derived collection object (e.g. your custom array buffer `MyArrayBuffer`), 
 ```js
 class MyArrayBuffer extends ArrayBuffer {
   // Overwrite MyArrayBuffer species to the parent ArrayBuffer constructor
-  static get [Symbol.species]() { return ArrayBuffer; }
+  static get [Symbol.species]() {
+    return ArrayBuffer;
+  }
 }
 ```
 

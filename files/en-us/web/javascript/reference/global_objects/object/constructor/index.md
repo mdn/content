@@ -8,6 +8,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Object.constructor
 ---
+
 {{JSRef}}
 
 The **`constructor`** property returns a reference to the {{jsxref("Object")}} constructor function that created the instance object. Note that the value of this property is a reference to _the function itself_, not a string containing the function's name.
@@ -19,20 +20,20 @@ The value is only read-only for primitive values such as `1`, `true`, and `"test
 All objects (with the exception of objects created with `Object.create(null)`) will have a `constructor` property. Objects created without the explicit use of a constructor function (such as object- and array-literals) will have a `constructor` property that points to the Fundamental Object constructor type for that object.
 
 ```js
-let o = {}
-o.constructor === Object // true
+let o = {};
+o.constructor === Object; // true
 
-let o = new Object
-o.constructor === Object // true
+let o = new Object();
+o.constructor === Object; // true
 
-let a = []
-a.constructor === Array // true
+let a = [];
+a.constructor === Array; // true
 
-let a = new Array
-a.constructor === Array // true
+let a = new Array();
+a.constructor === Array; // true
 
-let n = new Number(3)
-n.constructor === Number // true
+let n = new Number(3);
+n.constructor === Number; // true
 ```
 
 ## Examples
@@ -43,11 +44,11 @@ The following example creates a constructor (`Tree`) and an object of that type 
 
 ```js
 function Tree(name) {
-  this.name = name
+  this.name = name;
 }
 
-let theTree = new Tree('Redwood')
-console.log('theTree.constructor is ' + theTree.constructor)
+let theTree = new Tree("Redwood");
+console.log("theTree.constructor is " + theTree.constructor);
 ```
 
 This example displays the following output:
@@ -66,10 +67,10 @@ One can assign the `constructor` property for any value except `null` and `undef
 let val = null;
 val.constructor = 1; //TypeError: val is null
 
-val = 'abc';
+val = "abc";
 val.constructor = Number; //val.constructor === String
 
-val.foo = 'bar'; //An implicit instance of String('abc') was created and assigned the prop foo
+val.foo = "bar"; //An implicit instance of String('abc') was created and assigned the prop foo
 val.foo === undefined; //true, since a new instance of String('abc') was created for this comparison, which doesn't have the foo property
 ```
 
@@ -77,14 +78,14 @@ So basically one can change the value of the `constructor` property for anything
 
 ```js
 let a = [];
-a.constructor = String
-a.constructor === String // true
-a instanceof String //false
-a instanceof Array //true
+a.constructor = String;
+a.constructor === String; // true
+a instanceof String; //false
+a instanceof Array; //true
 
 a = new Foo();
-a.constructor = 'bar'
-a.constructor === 'bar' // true
+a.constructor = "bar";
+a.constructor === "bar"; // true
 
 //etc.
 ```
@@ -102,15 +103,17 @@ a.constructor === Object; //true
 Mostly this property is used for defining a function as a **function-constructor** with further calling it with **new** and prototype-inherits chain.
 
 ```js
-function Parent() { /* ... */ }
-Parent.prototype.parentMethod = function parentMethod() {}
+function Parent() {
+  /* ... */
+}
+Parent.prototype.parentMethod = function parentMethod() {};
 
 function Child() {
-   Parent.call(this) // Make sure everything is initialized properly
+  Parent.call(this); // Make sure everything is initialized properly
 }
-Child.prototype = Object.create(Parent.prototype) // re-define child prototype to Parent prototype
+Child.prototype = Object.create(Parent.prototype); // re-define child prototype to Parent prototype
 
-Child.prototype.constructor = Child // return original constructor to Child
+Child.prototype.constructor = Child; // return original constructor to Child
 ```
 
 But when do we need to perform the last line here? Unfortunately, the answer is: _it depends_.
@@ -120,18 +123,20 @@ Let's try to define the cases in which re-assignment of the original constructor
 Take the following case: the object has the `create()` method to create itself.
 
 ```js
-function Parent() { /* ... */ }
+function Parent() {
+  /* ... */
+}
 function CreatedConstructor() {
-   Parent.call(this)
+  Parent.call(this);
 }
 
-CreatedConstructor.prototype = Object.create(Parent.prototype)
+CreatedConstructor.prototype = Object.create(Parent.prototype);
 
 CreatedConstructor.prototype.create = function create() {
-  return new this.constructor()
-}
+  return new this.constructor();
+};
 
-new CreatedConstructor().create().create() // TypeError undefined is not a function since constructor === Parent
+new CreatedConstructor().create().create(); // TypeError undefined is not a function since constructor === Parent
 ```
 
 In the example above the exception will be shown since the constructor links to Parent.
@@ -139,17 +144,21 @@ In the example above the exception will be shown since the constructor links to 
 To avoid this, just assign the necessary constructor you are going to use.
 
 ```js
-function Parent() { /* ... */ }
-function CreatedConstructor() { /* ... */ }
-
-CreatedConstructor.prototype = Object.create(Parent.prototype)
-CreatedConstructor.prototype.constructor = CreatedConstructor // sets the correct constructor for future use
-
-CreatedConstructor.prototype.create = function create() {
-  return new this.constructor()
+function Parent() {
+  /* ... */
+}
+function CreatedConstructor() {
+  /* ... */
 }
 
-new CreatedConstructor().create().create() // it's pretty fine
+CreatedConstructor.prototype = Object.create(Parent.prototype);
+CreatedConstructor.prototype.constructor = CreatedConstructor; // sets the correct constructor for future use
+
+CreatedConstructor.prototype.create = function create() {
+  return new this.constructor();
+};
+
+new CreatedConstructor().create().create(); // it's pretty fine
 ```
 
 Ok, now it's pretty clear why changing the constructor can be useful.
@@ -159,31 +168,32 @@ Let's consider one more case.
 ```js
 function ParentWithStatic() {}
 
-ParentWithStatic.startPosition = { x: 0, y:0 } // Static member property
+ParentWithStatic.startPosition = { x: 0, y: 0 }; // Static member property
 ParentWithStatic.getStartPosition = function getStartPosition() {
-  return this.startPosition
-}
+  return this.startPosition;
+};
 
 function Child(x, y) {
   this.position = {
     x: x,
-    y: y
-  }
+    y: y,
+  };
 }
 
-Child = Object.assign(Child, ParentWithStatic)  // copies over the static members from ParentWithStatic to Child
-Child.prototype = Object.create(ParentWithStatic.prototype)
-Child.prototype.constructor = Child
+Child = Object.assign(Child, ParentWithStatic); // copies over the static members from ParentWithStatic to Child
+Child.prototype = Object.create(ParentWithStatic.prototype);
+Child.prototype.constructor = Child;
 
-Child.prototype.getOffsetByInitialPosition = function getOffsetByInitialPosition() {
-  let position = this.position
-  let startPosition = this.constructor.getStartPosition() // error undefined is not a function, since the constructor is Child
+Child.prototype.getOffsetByInitialPosition =
+  function getOffsetByInitialPosition() {
+    let position = this.position;
+    let startPosition = this.constructor.getStartPosition(); // error undefined is not a function, since the constructor is Child
 
-  return {
-    offsetX: startPosition.x - position.x,
-    offsetY: startPosition.y - position.y
-  }
-};
+    return {
+      offsetX: startPosition.x - position.x,
+      offsetY: startPosition.y - position.y,
+    };
+  };
 ```
 
 For this example we need either to stay parent constructor to continue to work properly or reassign static properties to child's constructor:

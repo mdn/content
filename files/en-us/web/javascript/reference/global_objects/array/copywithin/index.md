@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.copyWithin
 ---
+
 {{JSRef}}
 
 The **`copyWithin()`** method shallow copies part of an array
@@ -21,9 +22,9 @@ to another location in the same array and returns it without modifying its leng
 ## Syntax
 
 ```js
-copyWithin(target)
-copyWithin(target, start)
-copyWithin(target, start, end)
+copyWithin(target);
+copyWithin(target, start);
+copyWithin(target, start, end);
 ```
 
 ### Parameters

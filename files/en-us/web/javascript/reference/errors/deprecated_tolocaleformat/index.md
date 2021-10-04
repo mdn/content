@@ -1,11 +1,12 @@
 ---
-title: 'Warning: Date.prototype.toLocaleFormat is deprecated'
+title: "Warning: Date.prototype.toLocaleFormat is deprecated"
 slug: Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat
 tags:
   - Error
   - JavaScript
   - Warning
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript warning "Date.prototype.toLocaleFormat is deprecated; consider using
@@ -38,7 +39,7 @@ removed (no cross-browser support, available in Firefox only).
 
 ```js example-bad
 var today = new Date();
-var date = today.toLocaleFormat('%A, %e. %B %Y');
+var date = today.toLocaleFormat("%A, %e. %B %Y");
 
 console.log(date);
 // In German locale
@@ -56,9 +57,13 @@ you just want to format one date.
 
 ```js example-good
 var today = new Date();
-var options = { weekday: 'long', year: 'numeric',
-                month: 'long', day: 'numeric' };
-var date = today.toLocaleDateString('de-DE', options);
+var options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+var date = today.toLocaleDateString("de-DE", options);
 
 console.log(date);
 // "Freitag, 10. März 2017"
@@ -69,14 +74,17 @@ which allows you to cache an object with most of the computations done so that
 formatting is fast. This is useful if you have a loop of dates to format.
 
 ```js example-good
-var options = { weekday: 'long', year: 'numeric',
-                month: 'long', day: 'numeric' };
-var dateFormatter = new Intl.DateTimeFormat('de-DE', options)
+var options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+var dateFormatter = new Intl.DateTimeFormat("de-DE", options);
 
-var dates = [Date.UTC(2012, 11, 20, 3, 0, 0),
-             Date.UTC(2014, 04, 12, 8, 0, 0)];
+var dates = [Date.UTC(2012, 11, 20, 3, 0, 0), Date.UTC(2014, 04, 12, 8, 0, 0)];
 
-dates.forEach(date => console.log(dateFormatter.format(date)));
+dates.forEach((date) => console.log(dateFormatter.format(date)));
 
 // "Donnerstag, 20. Dezember 2012"
 // "Montag, 12. Mai 2014"
@@ -87,7 +95,7 @@ dates.forEach(date => console.log(dateFormatter.format(date)));
 The {{jsxref("Date")}} object offers several methods to build a custom date string.
 
 ```js example-bad
-(new Date()).toLocaleFormat("%Y%m%d");
+new Date().toLocaleFormat("%Y%m%d");
 // "20170310"
 ```
 
@@ -95,8 +103,8 @@ Can be converted to:
 
 ```js example-good
 let now = new Date();
-let date = now.getFullYear() * 10000 +
-          (now.getMonth() + 1) * 100 + now.getDate();
+let date =
+  now.getFullYear() * 10000 + (now.getMonth() + 1) * 100 + now.getDate();
 
 console.log(date);
 // "20170310"

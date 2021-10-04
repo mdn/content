@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.slice
 ---
+
 {{JSRef}}
 
 The **`slice()`** method returns a new typed array (with a new
@@ -24,9 +25,9 @@ array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#type
 ## Syntax
 
 ```js
-slice()
-slice(start)
-slice(start, end)
+slice();
+slice(start);
+slice(start, end);
 ```
 
 ### Parameters
@@ -71,11 +72,11 @@ If an element is changed in either typed array, the other typed array is not aff
 ### Return a portion of an existing typed array
 
 ```js
-const uint8 = new Uint8Array([1,2,3]);
-uint8.slice(1);   // Uint8Array [ 2, 3 ]
-uint8.slice(2);   // Uint8Array [ 3 ]
-uint8.slice(-2);  // Uint8Array [ 2, 3 ]
-uint8.slice(0,1); // Uint8Array [ 1 ]
+const uint8 = new Uint8Array([1, 2, 3]);
+uint8.slice(1); // Uint8Array [ 2, 3 ]
+uint8.slice(2); // Uint8Array [ 3 ]
+uint8.slice(-2); // Uint8Array [ 2, 3 ]
+uint8.slice(0, 1); // Uint8Array [ 1 ]
 ```
 
 ## Polyfill
@@ -85,12 +86,11 @@ done on an "as needed" basis.
 
 ```js
 if (!Uint8Array.prototype.slice) {
-  Object.defineProperty(Uint8Array.prototype, 'slice', {
-    value: function (begin, end)
-     {
-        return new Uint8Array(Array.prototype.slice.call(this, begin, end));
-     }
-  });
+  Object.defineProperty(Uint8Array.prototype, "slice", {
+    value: function (begin, end) {
+      return new Uint8Array(Array.prototype.slice.call(this, begin, end));
+    },
+  });
 }
 ```
 

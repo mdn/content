@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.some
 ---
+
 {{JSRef}}
 
 The **`some()`** method tests whether some element in the typed
@@ -88,8 +89,8 @@ done on an "as needed" basis.
 ```js
 // https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.some
 if (!Uint8Array.prototype.some) {
-  Object.defineProperty(Uint8Array.prototype, 'some', {
-    value: Array.prototype.some
+  Object.defineProperty(Uint8Array.prototype, "some", {
+    value: Array.prototype.some,
   });
 }
 ```
@@ -119,8 +120,8 @@ new Uint8Array([12, 5, 8, 1, 4]).some(isBiggerThan10); // true
 functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
 
 ```js
-new Uint8Array([2, 5, 8, 1, 4]).some(elem => elem > 10); // false
-new Uint8Array([12, 5, 8, 1, 4]).some(elem => elem > 10); // true
+new Uint8Array([2, 5, 8, 1, 4]).some((elem) => elem > 10); // false
+new Uint8Array([12, 5, 8, 1, 4]).some((elem) => elem > 10); // true
 ```
 
 ## Specifications

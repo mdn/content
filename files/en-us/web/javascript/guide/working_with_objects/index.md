@@ -10,6 +10,7 @@ tags:
   - Object
   - l10n:priority
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
 
 JavaScript is designed on a simple object-based paradigm. An object is a collection of properties, and a property is an association between a name (or _key_) and a value. A property's value can be a function, in which case the property is known as a method. In addition to objects that are predefined in the browser, you can define your own objects. This chapter describes how to use objects, properties, functions, and methods, and how to create your own objects.
@@ -25,15 +26,15 @@ In JavaScript, an object is a standalone entity, with properties and type. Compa
 A JavaScript object has properties associated with it. A property of an object can be explained as a variable that is attached to the object. Object properties are basically the same as ordinary JavaScript variables, except for the attachment to objects. The properties of an object define the characteristics of the object. You access the properties of an object with a simple dot-notation:
 
 ```js
-objectName.propertyName
+objectName.propertyName;
 ```
 
 Like all JavaScript variables, both the object name (which could be a normal variable) and property name are case sensitive. You can define a property by assigning it a value. For example, let's create an object named `myCar` and give it properties named `make`, `model`, and `year` as follows:
 
 ```js
 var myCar = new Object();
-myCar.make = 'Ford';
-myCar.model = 'Mustang';
+myCar.make = "Ford";
+myCar.model = "Mustang";
 myCar.year = 1969;
 ```
 
@@ -41,9 +42,9 @@ The above example could also be written using an **[object initializer](/en-US/d
 
 ```js
 var myCar = {
-    make: 'Ford',
-    model: 'Mustang',
-    year: 1969
+  make: "Ford",
+  model: "Mustang",
+  year: 1969,
 };
 ```
 
@@ -56,9 +57,9 @@ myCar.color; // undefined
 Properties of JavaScript objects can also be accessed or set using a bracket notation (for more details see [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)). Objects are sometimes called _associative arrays_, since each property is associated with a string value that can be used to access it. So, for example, you could access the properties of the `myCar` object as follows:
 
 ```js
-myCar['make'] = 'Ford';
-myCar['model'] = 'Mustang';
-myCar['year'] = 1969;
+myCar["make"] = "Ford";
+myCar["model"] = "Mustang";
+myCar["year"] = 1969;
 ```
 
 An object property name can be any valid JavaScript string, or anything that can be converted to a string, including the empty string. However, any property name that is not a valid JavaScript identifier (for example, a property name that has a space or a hyphen, or that starts with a number) can only be accessed using the square bracket notation. This notation is also very useful when property names are to be dynamically determined (when the property name is not determined until runtime). Examples are as follows:
@@ -67,16 +68,16 @@ An object property name can be any valid JavaScript string, or anything that can
 // four variables are created and assigned in a single go,
 // separated by commas
 var myObj = new Object(),
-    str = 'myString',
-    rand = Math.random(),
-    obj = new Object();
+  str = "myString",
+  rand = Math.random(),
+  obj = new Object();
 
-myObj.type              = 'Dot syntax';
-myObj['date created']   = 'String with space';
-myObj[str]              = 'String value';
-myObj[rand]             = 'Random Number';
-myObj[obj]              = 'Object';
-myObj['']               = 'Even an empty string';
+myObj.type = "Dot syntax";
+myObj["date created"] = "String with space";
+myObj[str] = "String value";
+myObj[rand] = "Random Number";
+myObj[obj] = "Object";
+myObj[""] = "Even an empty string";
 
 console.log(myObj);
 ```
@@ -86,11 +87,11 @@ Please note that all keys in the square bracket notation are converted to strin
 You can also access properties by using a string value that is stored in a variable:
 
 ```js
-var propertyName = 'make';
-myCar[propertyName] = 'Ford';
+var propertyName = "make";
+myCar[propertyName] = "Ford";
 
-propertyName = 'model';
-myCar[propertyName] = 'Mustang';
+propertyName = "model";
+myCar[propertyName] = "Mustang";
 ```
 
 You can use the bracket notation with [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) to iterate over all the enumerable properties of an object. To illustrate how this works, the following function displays the properties of the object when you pass the object and the object's name as arguments to the function:
@@ -111,9 +112,9 @@ function showProps(obj, objName) {
 So, the function call `showProps(myCar, "myCar")` would return the following:
 
 ```js
-myCar.make = Ford
-myCar.model = Mustang
-myCar.year = 1969
+myCar.make = Ford;
+myCar.model = Mustang;
+myCar.year = 1969;
 ```
 
 ## Enumerate the properties of an object
@@ -131,17 +132,18 @@ Before ECMAScript 5, there was no native way to list all properties of an object
 
 ```js
 function listAllProperties(o) {
-	var objectToInspect;
-	var result = [];
+  var objectToInspect;
+  var result = [];
 
-	for(objectToInspect = o; objectToInspect !== null;
-           objectToInspect = Object.getPrototypeOf(objectToInspect)) {
-        result = result.concat(
-            Object.getOwnPropertyNames(objectToInspect)
-        );
-    }
+  for (
+    objectToInspect = o;
+    objectToInspect !== null;
+    objectToInspect = Object.getPrototypeOf(objectToInspect)
+  ) {
+    result = result.concat(Object.getOwnPropertyNames(objectToInspect));
+  }
 
-	return result;
+  return result;
 }
 ```
 
@@ -158,10 +160,12 @@ In addition to creating objects using a constructor function, you can create obj
 The syntax for an object using an object initializer is:
 
 ```js
-var obj = { property_1:   value_1,   // property_# may be an identifier...
-            2:            value_2,   // or a number...
-            // ...,
-            'property n': value_n }; // or a string
+var obj = {
+  property_1: value_1, // property_# may be an identifier...
+  2: value_2, // or a number...
+  // ...,
+  "property n": value_n,
+}; // or a string
 ```
 
 where `obj` is the name of the new object, each `property_i` is an identifier (either a name, a number, or a string literal), and each `value_i` is an expression whose value is assigned to the `property_i`. The `obj` and assignment are optional; if you do not need to refer to this object elsewhere, you do not need to assign it to a variable. (Note that you may need to wrap the object literal in parentheses if the object appears where a statement is expected, so as not to have the literal be confused with a block statement.)
@@ -171,13 +175,13 @@ Object initializers are expressions, and each object initializer results in a ne
 The following statement creates an object and assigns it to the variable `x` if and only if the expression `cond` is true:
 
 ```js
-if (cond) var x = {greeting: 'hi there'};
+if (cond) var x = { greeting: "hi there" };
 ```
 
 The following example creates `myHonda` with three properties. Note that the `engine` property is also an object with its own properties.
 
 ```js
-var myHonda = {color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}};
+var myHonda = { color: "red", wheels: 4, engine: { cylinders: 4, size: 2.2 } };
 ```
 
 You can also use object initializers to create arrays. See [array literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals).
@@ -204,7 +208,7 @@ Notice the use of `this` to assign values to the object's properties based on th
 Now you can create an object called `mycar` as follows:
 
 ```js
-var mycar = new Car('Eagle', 'Talon TSi', 1993);
+var mycar = new Car("Eagle", "Talon TSi", 1993);
 ```
 
 This statement creates `mycar` and assigns it the specified values for its properties. Then the value of `mycar.make` is the string "Eagle", `mycar.year` is the integer 1993, and so on.
@@ -212,8 +216,8 @@ This statement creates `mycar` and assigns it the specified values for its prope
 You can create any number of `Car` objects by calls to `new`. For example,
 
 ```js
-var kenscar = new Car('Nissan', '300ZX', 1992);
-var vpgscar = new Car('Mazda', 'Miata', 1990);
+var kenscar = new Car("Nissan", "300ZX", 1992);
+var vpgscar = new Car("Mazda", "Miata", 1990);
 ```
 
 An object can have a property that is itself another object. For example, suppose you define an object called `person` as follows:
@@ -229,8 +233,8 @@ function Person(name, age, sex) {
 and then instantiate two new `person` objects as follows:
 
 ```js
-var rand = new Person('Rand McKinnon', 33, 'M');
-var ken = new Person('Ken Jones', 39, 'M');
+var rand = new Person("Rand McKinnon", 33, "M");
+var ken = new Person("Ken Jones", 39, "M");
 ```
 
 Then, you can rewrite the definition of `Car` to include an `owner` property that takes a `person` object, as follows:
@@ -247,20 +251,20 @@ function Car(make, model, year, owner) {
 To instantiate the new objects, you then use the following:
 
 ```js
-var car1 = new Car('Eagle', 'Talon TSi', 1993, rand);
-var car2 = new Car('Nissan', '300ZX', 1992, ken);
+var car1 = new Car("Eagle", "Talon TSi", 1993, rand);
+var car2 = new Car("Nissan", "300ZX", 1992, ken);
 ```
 
 Notice that instead of passing a literal string or integer value when creating the new objects, the above statements pass the objects `rand` and `ken` as the arguments for the owners. Then if you want to find out the name of the owner of car2, you can access the following property:
 
 ```js
-car2.owner.name
+car2.owner.name;
 ```
 
 Note that you can always add a property to a previously defined object. For example, the statement
 
 ```js
-car1.color = 'black';
+car1.color = "black";
 ```
 
 adds a property `color` to car1, and assigns it a value of "black." However, this does not affect any other objects. To add the new property to all objects of the same type, you have to add the property to the definition of the `Car` object type.
@@ -272,10 +276,11 @@ Objects can also be created using the {{jsxref("Object.create()")}} method. This
 ```js
 // Animal properties and method encapsulation
 var Animal = {
-  type: 'Invertebrates', // Default value of properties
-  displayType: function() {  // Method which will display type of Animal
+  type: "Invertebrates", // Default value of properties
+  displayType: function () {
+    // Method which will display type of Animal
     console.log(this.type);
-  }
+  },
 };
 
 // Create new animal type called animal1
@@ -284,7 +289,7 @@ animal1.displayType(); // Output:Invertebrates
 
 // Create new animal type called Fishes
 var fish = Object.create(Animal);
-fish.type = 'Fishes';
+fish.type = "Fishes";
 fish.displayType(); // Output:Fishes
 ```
 
@@ -306,7 +311,7 @@ You can add a property to a previously defined object type by using the `prototy
 
 ```js
 Car.prototype.color = null;
-car1.color = 'black';
+car1.color = "black";
 ```
 
 See the [`prototype` property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) of the `Function` object in the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference) for more information.
@@ -381,36 +386,36 @@ JavaScript has a special keyword, [`this`](/en-US/docs/Web/JavaScript/Reference/
 
 ```js
 const Manager = {
-  name: "John",
-  age: 27,
-  job: "Software Engineer"
-}
+  name: "John",
+  age: 27,
+  job: "Software Engineer",
+};
 const Intern = {
-  name: "Ben",
-  age: 21,
-  job: "Software Engineer Intern"
-}
+  name: "Ben",
+  age: 21,
+  job: "Software Engineer Intern",
+};
 
 function sayHi() {
-    console.log('Hello, my name is', this.name)
+  console.log("Hello, my name is", this.name);
 }
 
 // add sayHi function to both objects
 Manager.sayHi = sayHi;
 Intern.sayHi = sayHi;
 
-Manager.sayHi() // Hello, my name is John'
-Intern.sayHi() // Hello, my name is Ben'
+Manager.sayHi(); // Hello, my name is John'
+Intern.sayHi(); // Hello, my name is Ben'
 ```
 
 The `this` refers to the object that it is in. You can create a new function called `howOldAmI()` which logs a sentence saying how old the person is.
 
 ```js
-function howOldAmI (){
-  console.log('I am ' + this.age + ' years old.')
+function howOldAmI() {
+  console.log("I am " + this.age + " years old.");
 }
 Manager.howOldAmI = howOldAmI;
-Manager.howOldAmI() // I am 27 years old.
+Manager.howOldAmI(); // I am 27 years old.
 ```
 
 ## Defining getters and setters
@@ -432,12 +437,12 @@ var o = {
   },
   set c(x) {
     this.a = x / 2;
-  }
+  },
 };
 
 console.log(o.a); // 7
 console.log(o.b); // 8 <-- At this point the get b() method is initiated.
-o.c = 50;         //   <-- At this point the set c(x) method is initiated
+o.c = 50; //   <-- At this point the set c(x) method is initiated
 console.log(o.a); // 25
 ```
 
@@ -455,8 +460,16 @@ Getters and setters can also be added to an object at any time after creation us
 var o = { a: 0 };
 
 Object.defineProperties(o, {
-    'b': { get: function() { return this.a + 1; } },
-    'c': { set: function(x) { this.a = x / 2; } }
+  b: {
+    get: function () {
+      return this.a + 1;
+    },
+  },
+  c: {
+    set: function (x) {
+      this.a = x / 2;
+    },
+  },
 });
 
 o.c = 10; // Runs the setter, which assigns 10 / 2 (5) to the 'a' property
@@ -471,13 +484,13 @@ You can remove a non-inherited property by using the [`delete`](/en-US/docs/Web/
 
 ```js
 // Creates a new object, myobj, with two properties, a and b.
-var myobj = new Object;
+var myobj = new Object();
 myobj.a = 5;
 myobj.b = 12;
 
 // Removes the a property, leaving myobj with only the b property.
 delete myobj.a;
-console.log ('a' in myobj); // output: "false"
+console.log("a" in myobj); // output: "false"
 ```
 
 You can also use `delete` to delete a global variable if the `var` keyword was not used to declare the variable:
@@ -493,8 +506,8 @@ In JavaScript, objects are a reference type. Two distinct objects are never equa
 
 ```js
 // Two variables, two distinct objects with the same properties
-var fruit = {name: 'apple'};
-var fruitbear = {name: 'apple'};
+var fruit = { name: "apple" };
+var fruitbear = { name: "apple" };
 
 fruit == fruitbear; // return false
 fruit === fruitbear; // return false
@@ -502,14 +515,14 @@ fruit === fruitbear; // return false
 
 ```js
 // Two variables, a single object
-var fruit = {name: 'apple'};
-var fruitbear = fruit;  // Assign fruit object reference to fruitbear
+var fruit = { name: "apple" };
+var fruitbear = fruit; // Assign fruit object reference to fruitbear
 
 // Here fruit and fruitbear are pointing to same object
 fruit == fruitbear; // return true
 fruit === fruitbear; // return true
 
-fruit.name = 'grape';
+fruit.name = "grape";
 console.log(fruitbear); // output: { name: "grape" }, instead of { name: "apple" }
 ```
 

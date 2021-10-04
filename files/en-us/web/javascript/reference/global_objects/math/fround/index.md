@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Math.fround
 ---
+
 {{JSRef}}
 
 The **`Math.fround()`** function returns the
@@ -22,7 +23,7 @@ nearest {{interwiki("wikipedia", "Single-precision floating-point format", "32-b
 ## Syntax
 
 ```js
-Math.fround(doubleFloat)
+Math.fround(doubleFloat);
 ```
 
 ### Parameters
@@ -89,7 +90,7 @@ If the parameter cannot be converted to a number, or it is {{interwiki("wikipedi
 `NaN`:
 
 ```js
-Math.fround('abc'); // NaN
+Math.fround("abc"); // NaN
 Math.fround(NaN); // NaN
 ```
 
@@ -99,32 +100,35 @@ This can be emulated with the following function, if {{jsxref("Float32Array")}} 
 supported:
 
 ```js
-Math.fround = Math.fround || (function (array) {
-  return function(x) {
-    return array[0] = x, array[0];
-  };
-})(new Float32Array(1));
+Math.fround =
+  Math.fround ||
+  (function (array) {
+    return function (x) {
+      return (array[0] = x), array[0];
+    };
+  })(new Float32Array(1));
 ```
 
 Supporting older browsers is slower, but also possible:
 
 ```js
-if (!Math.fround) Math.fround = function(arg) {
-  arg = Number(arg);
-  // Return early for ±0 and NaN.
-  if (!arg) return arg;
-  var sign = arg < 0 ? -1 : 1;
-  if (sign < 0) arg = -arg;
-  // Compute the exponent (8 bits, signed).
-  var exp = Math.floor(Math.log(arg) / Math.LN2);
-  var powexp = Math.pow(2, Math.max(-126, Math.min(exp, 127)));
-  // Handle subnormals: leading digit is zero if exponent bits are all zero.
-  var leading = exp < -127 ? 0 : 1;
-  // Compute 23 bits of mantissa, inverted to round toward zero.
-  var mantissa = Math.round((leading - arg / powexp) * 0x800000);
-  if (mantissa <= -0x800000) return sign * Infinity;
-  return sign * powexp * (leading - mantissa / 0x800000);
-};
+if (!Math.fround)
+  Math.fround = function (arg) {
+    arg = Number(arg);
+    // Return early for ±0 and NaN.
+    if (!arg) return arg;
+    var sign = arg < 0 ? -1 : 1;
+    if (sign < 0) arg = -arg;
+    // Compute the exponent (8 bits, signed).
+    var exp = Math.floor(Math.log(arg) / Math.LN2);
+    var powexp = Math.pow(2, Math.max(-126, Math.min(exp, 127)));
+    // Handle subnormals: leading digit is zero if exponent bits are all zero.
+    var leading = exp < -127 ? 0 : 1;
+    // Compute 23 bits of mantissa, inverted to round toward zero.
+    var mantissa = Math.round((leading - arg / powexp) * 0x800000);
+    if (mantissa <= -0x800000) return sign * Infinity;
+    return sign * powexp * (leading - mantissa / 0x800000);
+  };
 ```
 
 ## Specifications

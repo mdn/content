@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.logical_and
 ---
+
 {{jsSidebar("Operators")}}
 
 The logical AND (`&&`) operator (logical conjunction) for a set of
@@ -23,7 +24,7 @@ non-Boolean value.
 ## Syntax
 
 ```js
-expr1 && expr2
+expr1 && expr2;
 ```
 
 ## Description
@@ -66,10 +67,16 @@ happens because the value of the operator is already determined after the evalua
 the first operand. See example:
 
 ```js
-function A(){ console.log('called A'); return false; }
-function B(){ console.log('called B'); return true; }
+function A() {
+  console.log("called A");
+  return false;
+}
+function B() {
+  console.log("called B");
+  return true;
+}
 
-console.log( A() && B() );
+console.log(A() && B());
 // logs "called A" due to the function call,
 // then logs false (which is the resulting value of the operator)
 ```
@@ -81,8 +88,13 @@ The following expressions might seem equivalent, but they are not, because the
 precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
 
 ```js
-true || false && false      // returns true, because && is executed first
-(true || false) && false    // returns false, because operator precedence cannot apply
+true ||
+  (false &&
+    false(
+      // returns true, because && is executed first
+      true || false
+    ) &&
+    false); // returns false, because operator precedence cannot apply
 ```
 
 ## Examples
@@ -93,15 +105,15 @@ The following code shows examples of the `&&` (logical AND)
 operator.
 
 ```js
-a1 = true  && true       // t && t returns true
-a2 = true  && false      // t && f returns false
-a3 = false && true       // f && t returns false
-a4 = false && (3 == 4)   // f && f returns false
-a5 = 'Cat' && 'Dog'      // t && t returns "Dog"
-a6 = false && 'Cat'      // f && t returns false
-a7 = 'Cat' && false      // t && f returns false
-a8 = ''    && false      // f && f returns ""
-a9 = false && ''         // f && f returns false
+a1 = true && true; // t && t returns true
+a2 = true && false; // t && f returns false
+a3 = false && true; // f && t returns false
+a4 = false && 3 == 4; // f && f returns false
+a5 = "Cat" && "Dog"; // t && t returns "Dog"
+a6 = false && "Cat"; // f && t returns false
+a7 = "Cat" && false; // t && f returns false
+a8 = "" && false; // f && f returns ""
+a9 = false && ""; // f && f returns false
 ```
 
 ### Conversion rules for booleans
@@ -111,13 +123,13 @@ a9 = false && ''         // f && f returns false
 The following operation involving **booleans**:
 
 ```js
-bCondition1 && bCondition2
+bCondition1 && bCondition2;
 ```
 
 is always equal to:
 
 ```js
-!(!bCondition1 || !bCondition2)
+!(!bCondition1 || !bCondition2);
 ```
 
 #### Converting OR to AND
@@ -125,13 +137,13 @@ is always equal to:
 The following operation involving **booleans**:
 
 ```js
-bCondition1 || bCondition2
+bCondition1 || bCondition2;
 ```
 
 is always equal to:
 
 ```js
-!(!bCondition1 && !bCondition2)
+!(!bCondition1 && !bCondition2);
 ```
 
 ### Removing nested parentheses
@@ -142,13 +154,13 @@ parentheses from a complex expression following some rules.
 The following composite operation involving **booleans**:
 
 ```js
-bCondition1 || (bCondition2 && bCondition3)
+bCondition1 || (bCondition2 && bCondition3);
 ```
 
 is always equal to:
 
 ```js
-bCondition1 || bCondition2 && bCondition3
+bCondition1 || (bCondition2 && bCondition3);
 ```
 
 ## Specifications

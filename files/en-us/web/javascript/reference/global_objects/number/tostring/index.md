@@ -8,6 +8,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Number.toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the
@@ -18,8 +19,8 @@ specified {{jsxref("Number")}} object.
 ## Syntax
 
 ```js
-toString()
-toString(radix)
+toString();
+toString(radix);
 ```
 
 ### Parameters
@@ -68,19 +69,19 @@ separate the decimal places.
 ### Using toString
 
 ```js
-let count = 10
+let count = 10;
 
-console.log(count.toString())    // displays '10'
-console.log((17).toString())     // displays '17'
-console.log((17.2).toString())   // displays '17.2'
+console.log(count.toString()); // displays '10'
+console.log((17).toString()); // displays '17'
+console.log((17.2).toString()); // displays '17.2'
 
-let x = 6
+let x = 6;
 
-console.log(x.toString(2))       // displays '110'
-console.log((254).toString(16))  // displays 'fe'
+console.log(x.toString(2)); // displays '110'
+console.log((254).toString(16)); // displays 'fe'
 
-console.log((-10).toString(2))   // displays '-1010'
-console.log((-0xff).toString(2)) // displays '-11111111'
+console.log((-10).toString(2)); // displays '-1010'
+console.log((-0xff).toString(2)); // displays '-11111111'
 ```
 
 ## Specifications

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getMilliseconds
 ---
+
 {{JSRef}}
 
 The **`getMilliseconds()`** method returns the milliseconds in
@@ -19,7 +20,7 @@ the specified date according to local time.
 ## Syntax
 
 ```js
-getMilliseconds()
+getMilliseconds();
 ```
 
 ### Return value

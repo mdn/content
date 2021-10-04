@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.setFloat32
 ---
+
 {{JSRef}}
 
 The **`setFloat32()`** method stores a signed 32-bit float
@@ -19,8 +20,8 @@ The **`setFloat32()`** method stores a signed 32-bit float
 ## Syntax
 
 ```js
-setFloat32(byteOffset, value)
-setFloat32(byteOffset, value, littleEndian)
+setFloat32(byteOffset, value);
+setFloat32(byteOffset, value, littleEndian);
 ```
 
 ### Parameters

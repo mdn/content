@@ -9,6 +9,7 @@ tags:
   - arguments
 browser-compat: javascript.functions.arguments
 ---
+
 {{JSSidebar("Functions")}}
 
 **`arguments`** is an `Array`-like object accessible inside [functions](/en-US/docs/Web/JavaScript/Guide/Functions) that contains the values of the arguments passed to that function.
@@ -26,15 +27,15 @@ The `arguments` object is a local variable available within all non-[arrow](/en-
 For example, if a function is passed 3 arguments, you can access them as follows:
 
 ```js
-arguments[0] // first argument
-arguments[1] // second argument
-arguments[2] // third argument
+arguments[0]; // first argument
+arguments[1]; // second argument
+arguments[2]; // third argument
 ```
 
 Each argument can also be set or reassigned:
 
 ```js
-arguments[1] = 'new value';
+arguments[1] = "new value";
 ```
 
 The `arguments` object is not an {{jsxref("Array")}}. It is similar, but lacks all `Array` properties except {{jsxref("Array.length", "length")}}. For example, it does not have the {{jsxref("Array.pop", "pop()")}} method.
@@ -59,8 +60,8 @@ The `arguments` object is useful for functions called with more arguments than t
 
 ```js
 function longestString() {
-  var longest = '';
-  for (var i=0; i < arguments.length; i++) {
+  var longest = "";
+  for (var i = 0; i < arguments.length; i++) {
     if (arguments[i].length > longest.length) {
       longest = arguments[i];
     }
@@ -76,7 +77,7 @@ You can use {{jsxref("Functions/arguments/length", "arguments.length")}} to coun
 The {{jsxref("Operators/typeof", "typeof")}} operator returns `'object'` when used with `arguments`
 
 ```js
-console.log(typeof arguments); // 'object' 
+console.log(typeof arguments); // 'object'
 ```
 
 The type of individual arguments can be determined by indexing `arguments`:
@@ -111,13 +112,13 @@ You can pass as many arguments as you like to this function. It returns a string
 
 ```js
 // returns "red, orange, blue"
-myConcat(', ', 'red', 'orange', 'blue');
+myConcat(", ", "red", "orange", "blue");
 
 // returns "elephant; giraffe; lion; cheetah"
-myConcat('; ', 'elephant', 'giraffe', 'lion', 'cheetah');
+myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
 
 // returns "sage. basil. oregano. pepper. parsley"
-myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');
+myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 ```
 
 ### Defining a function that creates HTML lists
@@ -126,10 +127,10 @@ This example defines a function that creates a string containing HTML for a list
 
 ```js
 function list(type) {
-  var html = '<' + type + 'l><li>';
+  var html = "<" + type + "l><li>";
   var args = Array.prototype.slice.call(arguments, 1);
-  html += args.join('</li><li>');
-  html += '</li></' + type + 'l>'; // end list
+  html += args.join("</li><li>");
+  html += "</li></" + type + "l>"; // end list
   return html;
 }
 ```
@@ -137,7 +138,7 @@ function list(type) {
 You can pass any number of arguments to this function, and it adds each argument as a list item to a list of the type indicated. For example:
 
 ```js
-let listHTML = list('u', 'One', 'Two', 'Three');
+let listHTML = list("u", "One", "Two", "Three");
 
 /* listHTML is:
 "<ul><li>One</li><li>Two</li><li>Three</li></ul>"

@@ -9,6 +9,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Array.toLocaleString
 ---
+
 {{JSRef}}
 
 The **`toLocaleString()`** method returns a string representing
@@ -46,8 +47,8 @@ A string representing the elements of the array.
 ```js
 // https://tc39.github.io/ecma402/#sup-array.prototype.tolocalestring
 if (!Array.prototype.toLocaleString) {
-  Object.defineProperty(Array.prototype, 'toLocaleString', {
-    value: function(locales, options) {
+  Object.defineProperty(Array.prototype, "toLocaleString", {
+    value: function (locales, options) {
       // 1. Let O be ? ToObject(this value).
       if (this == null) {
         throw new TypeError('"this" is null or not defined');
@@ -63,11 +64,11 @@ if (!Array.prototype.toLocaleString) {
       //    host environment's current locale (this is
       //    derived in an implementation-defined way).
       // NOTE: In this case, we will use a comma
-      var separator = ',';
+      var separator = ",";
 
       // 4. If len is zero, return the empty String.
       if (len === 0) {
-        return '';
+        return "";
       }
 
       // 5. Let firstElement be ? Get(A, "0").
@@ -83,8 +84,10 @@ if (!Array.prototype.toLocaleString) {
       //        « locales, options »
       //       )
       //     )
-      var r = firstElement == null ?
-        '' : firstElement.toLocaleString(locales, options);
+      var r =
+        firstElement == null
+          ? ""
+          : firstElement.toLocaleString(locales, options);
 
       // 8. Let k be 1.
       var k = 1;
@@ -109,8 +112,10 @@ if (!Array.prototype.toLocaleString) {
         //        « locales, options »
         //       )
         //     )
-        r = nextElement == null ?
-          '' : nextElement.toLocaleString(locales, options);
+        r =
+          nextElement == null
+            ? ""
+            : nextElement.toLocaleString(locales, options);
 
         // e. Let R be a String value produced by
         //   concatenating S and R.
@@ -122,7 +127,7 @@ if (!Array.prototype.toLocaleString) {
 
       // 10. Return R.
       return r;
-    }
+    },
   });
 }
 ```
@@ -147,8 +152,8 @@ Always display the currency for the strings and numbers in the `prices`
 array:
 
 ```js
-var prices = ['￥7', 500, 8123, 12];
-prices.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
+var prices = ["￥7", 500, 8123, 12];
+prices.toLocaleString("ja-JP", { style: "currency", currency: "JPY" });
 
 // "￥7,￥500,￥8,123,￥12"
 ```

@@ -13,6 +13,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.values
 ---
+
 {{JSRef}}
 
 The **`values()`** method returns a new
@@ -24,7 +25,7 @@ index in the array.
 ## Syntax
 
 ```js
-values()
+values();
 ```
 
 ### Return value
@@ -36,33 +37,33 @@ A new {{jsxref("Array")}} iterator object.
 ### Iteration using for...of loop
 
 ```js
-var arr = ['a', 'b', 'c', 'd', 'e'];
+var arr = ["a", "b", "c", "d", "e"];
 var iterator = arr.values();
 
 for (let letter of iterator) {
   console.log(letter);
-}  //"a" "b" "c" "d" "e"
+} //"a" "b" "c" "d" "e"
 ```
 
 **Array.prototype.values** is default implementation of
 **Array.prototype\[Symbol.iterator]**.
 
 ```js
-Array.prototype.values === Array.prototype[Symbol.iterator]      //true
+Array.prototype.values === Array.prototype[Symbol.iterator]; //true
 ```
 
 ### Iteration using .next()
 
 ```js
-var arr = ['a', 'b', 'c', 'd', 'e'];
+var arr = ["a", "b", "c", "d", "e"];
 var iterator = arr.values();
-iterator.next();               // Object { value: "a", done: false }
-iterator.next().value;         // "b"
-iterator.next()["value"];      // "c"
-iterator.next();               // Object { value: "d", done: false }
-iterator.next();               // Object { value: "e", done: false }
-iterator.next();               // Object { value: undefined, done: true }
-iteraror.next().value;         // undefined 
+iterator.next(); // Object { value: "a", done: false }
+iterator.next().value; // "b"
+iterator.next()["value"]; // "c"
+iterator.next(); // Object { value: "d", done: false }
+iterator.next(); // Object { value: "e", done: false }
+iterator.next(); // Object { value: undefined, done: true }
+iteraror.next().value; // undefined
 ```
 
 > **Warning:** The array iterator object is one use or temporary object
@@ -70,13 +71,13 @@ iteraror.next().value;         // undefined
 example:
 
 ```js
-var arr = ['a', 'b', 'c', 'd', 'e'];
- var iterator = arr.values();
- for (let letter of iterator) {
- console.log(letter);
+var arr = ["a", "b", "c", "d", "e"];
+var iterator = arr.values();
+for (let letter of iterator) {
+  console.log(letter);
 } //"a" "b" "c" "d" "e"
 for (let letter of iterator) {
-console.log(letter);
+  console.log(letter);
 } // undefined
 ```
 
@@ -89,12 +90,12 @@ object; instead it stores the address of the array used in its creation and s
 on the values stored in that array.
 
 ```js
-var arr = ['a', 'b', 'c', 'd', 'e'];
+var arr = ["a", "b", "c", "d", "e"];
 var iterator = arr.values();
-console.log(iterator);        // Array Iterator {  }
-iterator.next().value;        // "a"
-arr[1]='n';
-iterator.next().value;        //  "n"
+console.log(iterator); // Array Iterator {  }
+iterator.next().value; // "a"
+arr[1] = "n";
+iterator.next().value; //  "n"
 ```
 
 > **Note:** If the values in the array changed the array iterator object values change too.

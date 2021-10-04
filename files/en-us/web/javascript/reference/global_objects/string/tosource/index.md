@@ -11,6 +11,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.toSource
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`toSource()`** method returns a string representing the
@@ -19,7 +20,7 @@ source code of the object.
 ## Syntax
 
 ```js
-toSource()
+toSource();
 ```
 
 ### Return value

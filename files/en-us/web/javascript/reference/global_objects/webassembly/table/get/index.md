@@ -11,6 +11,7 @@ tags:
   - table
 browser-compat: javascript.builtins.WebAssembly.Table.get
 ---
+
 {{JSRef}}
 
 The **`get()`** prototype method of
@@ -20,7 +21,7 @@ given index.
 ## Syntax
 
 ```js
-get(index)
+get(index);
 ```
 
 ### Parameters
@@ -50,11 +51,10 @@ live](https://mdn.github.io/webassembly-examples/js-api-examples/table.html) als
 references stored in the exported table.
 
 ```js
-WebAssembly.instantiateStreaming(fetch('table.wasm'))
-.then(function(obj) {
-  var tbl = obj.instance.exports.tbl;
-  console.log(tbl.get(0)());  // 13
-  console.log(tbl.get(1)());  // 42
+WebAssembly.instantiateStreaming(fetch("table.wasm")).then(function (obj) {
+  var tbl = obj.instance.exports.tbl;
+  console.log(tbl.get(0)()); // 13
+  console.log(tbl.get(1)()); // 42
 });
 ```
 

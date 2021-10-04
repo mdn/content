@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Math.trunc
 ---
+
 {{JSRef}}
 
 The **`Math.trunc()`** function returns the integer part of a
@@ -20,7 +21,7 @@ number by removing any fractional digits.
 ## Syntax
 
 ```js
-Math.trunc(x)
+Math.trunc(x);
 ```
 
 ### Parameters
@@ -51,14 +52,14 @@ created (`Math` is not a constructor).
 ### Using Math.trunc()
 
 ```js
-Math.trunc(13.37);    // 13
-Math.trunc(42.84);    // 42
-Math.trunc(0.123);    //  0
-Math.trunc(-0.123);   // -0
-Math.trunc('-1.123'); // -1
-Math.trunc(NaN);      // NaN
-Math.trunc('foo');    // NaN
-Math.trunc();         // NaN
+Math.trunc(13.37); // 13
+Math.trunc(42.84); // 42
+Math.trunc(0.123); //  0
+Math.trunc(-0.123); // -0
+Math.trunc("-1.123"); // -1
+Math.trunc(NaN); // NaN
+Math.trunc("foo"); // NaN
+Math.trunc(); // NaN
 ```
 
 ## Specifications

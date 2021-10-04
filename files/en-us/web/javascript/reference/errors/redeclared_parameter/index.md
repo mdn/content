@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "redeclaration of formal parameter" occurs when the same
@@ -40,7 +41,7 @@ In this case, the variable "arg" redeclares the argument.
 
 ```js example-bad
 function f(arg) {
-  let arg = 'foo';
+  let arg = "foo";
 }
 
 // SyntaxError: redeclaration of formal parameter "arg"
@@ -53,11 +54,11 @@ conflicts with the function parameter already.
 
 ```js example-good
 function f(arg) {
-  arg = 'foo';
+  arg = "foo";
 }
 
 function f(arg) {
-  let bar = 'foo';
+  let bar = "foo";
 }
 ```
 

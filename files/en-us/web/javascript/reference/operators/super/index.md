@@ -10,6 +10,7 @@ tags:
   - Operator
 browser-compat: javascript.operators.super
 ---
+
 {{jsSidebar("Operators")}}
 
 The **super** keyword is used to access and call functions on an object's
@@ -45,12 +46,12 @@ common between `Rectangle` and `Square`.
 ```js
 class Rectangle {
   constructor(height, width) {
-    this.name = 'Rectangle';
+    this.name = "Rectangle";
     this.height = height;
     this.width = width;
   }
   sayName() {
-    console.log('Hi, I am a ', this.name + '.');
+    console.log("Hi, I am a ", this.name + ".");
   }
   get area() {
     return this.height * this.width;
@@ -70,7 +71,7 @@ class Square extends Rectangle {
 
     // Note: In derived classes, super() must be called before you
     // can use 'this'. Leaving this out will cause a reference error.
-    this.name = 'Square';
+    this.name = "Square";
   }
 }
 ```
@@ -82,13 +83,13 @@ You are also able to call super on [static](/en-US/docs/Web/JavaScript/Reference
 ```js
 class Rectangle {
   static logNbSides() {
-    return 'I have 4 sides';
+    return "I have 4 sides";
   }
 }
 
 class Square extends Rectangle {
   static logDescription() {
-    return super.logNbSides() + ' which are all equal';
+    return super.logNbSides() + " which are all equal";
   }
 }
 Square.logDescription(); // 'I have 4 sides which are all equal'
@@ -110,7 +111,7 @@ class Derived extends Base {
   }
 }
 
-new Derived().delete(); // ReferenceError: invalid delete involving 'super'. 
+new Derived().delete(); // ReferenceError: invalid delete involving 'super'.
 ```
 
 ### `super.prop` cannot overwrite non-writable properties
@@ -121,10 +122,10 @@ When defining non-writable properties with e.g. {{jsxref("Object.defineProperty"
 ```js
 class X {
   constructor() {
-    Object.defineProperty(this, 'prop', {
+    Object.defineProperty(this, "prop", {
       configurable: true,
       writable: false,
-      value: 1
+      value: 1,
     });
   }
 }
@@ -134,7 +135,7 @@ class Y extends X {
     super();
   }
   foo() {
-    super.prop = 2;   // Cannot overwrite the value.
+    super.prop = 2; // Cannot overwrite the value.
   }
 }
 
@@ -155,15 +156,15 @@ to find `method1` on `obj1`.
 ```js
 var obj1 = {
   method1() {
-    console.log('method 1');
-  }
-}
+    console.log("method 1");
+  },
+};
 
 var obj2 = {
   method2() {
     super.method1();
-  }
-}
+  },
+};
 
 Object.setPrototypeOf(obj2, obj1);
 obj2.method2(); // logs "method 1"

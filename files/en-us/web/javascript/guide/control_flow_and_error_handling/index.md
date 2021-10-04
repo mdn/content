@@ -13,6 +13,7 @@ tags:
   - l10n:priority
   - statements
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types",
   "Web/JavaScript/Guide/Loops_and_iteration")}}
@@ -120,11 +121,11 @@ conditions tested in sequence, as follows:
 if (condition_1) {
   statement_1;
 } else if (condition_2) {
-  statement_2;
+  statement_2;
 } else if (condition_n) {
-  statement_n;
+  statement_n;
 } else {
-  statement_last;
+  statement_last;
 }
 ```
 
@@ -154,7 +155,7 @@ For example, do _not_ write code like this:
 
 ```js example-bad
 // Prone to being misread as "x == y"
-if (x = y) {
+if ((x = y)) {
   /* statements here */
 }
 ```
@@ -206,8 +207,9 @@ function checkData() {
     return true;
   } else {
     alert(
-        'Enter exactly three characters. ' +
-        `${document.form1.threeChar.value} is not valid.`);
+      "Enter exactly three characters. " +
+        `${document.form1.threeChar.value} is not valid.`
+    );
     return false;
   }
 }
@@ -270,26 +272,26 @@ following `switch`. If `break` were omitted, the statement for
 
 ```js
 switch (fruittype) {
-  case 'Oranges':
-    console.log('Oranges are $0.59 a pound.');
+  case "Oranges":
+    console.log("Oranges are $0.59 a pound.");
     break;
-  case 'Apples':
-    console.log('Apples are $0.32 a pound.');
+  case "Apples":
+    console.log("Apples are $0.32 a pound.");
     break;
-  case 'Bananas':
-    console.log('Bananas are $0.48 a pound.');
+  case "Bananas":
+    console.log("Bananas are $0.48 a pound.");
     break;
-  case 'Cherries':
-    console.log('Cherries are $3.00 a pound.');
+  case "Cherries":
+    console.log("Cherries are $3.00 a pound.");
     break;
-  case 'Mangoes':
-    console.log('Mangoes are $0.56 a pound.');
+  case "Mangoes":
+    console.log("Mangoes are $0.56 a pound.");
     break;
-  case 'Papayas':
-    console.log('Mangoes and papayas are $2.79 a pound.');
+  case "Papayas":
+    console.log("Mangoes and papayas are $2.79 a pound.");
     break;
   default:
-   console.log(`Sorry, we are out of ${fruittype}.`);
+    console.log(`Sorry, we are out of ${fruittype}.`);
 }
 console.log("Is there anything else you'd like?");
 ```
@@ -327,10 +329,14 @@ You may throw any expression, not just expressions of a specific type. The follo
 code throws several exceptions of varying types:
 
 ```js
-throw 'Error2';   // String type
-throw 42;         // Number type
-throw true;       // Boolean type
-throw {toString: function() { return "I'm an object!"; } };
+throw "Error2"; // String type
+throw 42; // Number type
+throw true; // Boolean type
+throw {
+  toString: function () {
+    return "I'm an object!";
+  },
+};
 ```
 
 > **Note:** You can specify an object when you throw an exception. You can
@@ -340,17 +346,17 @@ throw {toString: function() { return "I'm an object!"; } };
 // Create an object type UserException
 function UserException(message) {
   this.message = message;
-  this.name = 'UserException';
+  this.name = "UserException";
 }
 
 // Make the exception convert to a pretty string when used as a string
 // (e.g., by the error console)
-UserException.prototype.toString = function() {
+UserException.prototype.toString = function () {
   return `${this.name}: "${this.message}"`;
-}
+};
 
 // Create an instance of the object type and throw it
-throw new UserException('Value too high');
+throw new UserException("Value too high");
 ```
 
 ### `try...catch` statement
@@ -382,20 +388,32 @@ function. If the value does not correspond to a month number
 ```js
 function getMonthName(mo) {
   mo = mo - 1; // Adjust month number for array index (1 = Jan, 12 = Dec)
-  let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
-                'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
   if (months[mo]) {
     return months[mo];
   } else {
-    throw 'InvalidMonthNo'; // throw keyword is used here
+    throw "InvalidMonthNo"; // throw keyword is used here
   }
 }
 
-try { // statements to try
+try {
+  // statements to try
   monthName = getMonthName(myMonth); // function could throw exception
-}
-catch (e) {
-  monthName = 'unknown';
+} catch (e) {
+  monthName = "unknown";
   logMyErrors(e); // pass exception object to error handler (i.e. your own function)
 }
 ```
@@ -425,11 +443,10 @@ transfers to the `catch` block.
 
 ```js
 try {
-  throw 'myException'; // generates an exception
-}
-catch (err) {
+  throw "myException"; // generates an exception
+} catch (err) {
   // statements to handle any exceptions
-  logMyErrors(err);    // pass exception object to error handler
+  logMyErrors(err); // pass exception object to error handler
 }
 ```
 
@@ -464,7 +481,7 @@ if an error occurs.
 openMyFile();
 try {
   writeMyFile(theData); // This may throw an error
-} catch(e) {
+} catch (e) {
   handleError(e); // If an error occurred, handle it
 } finally {
   closeMyFile(); // Always close the resource
@@ -479,19 +496,19 @@ of the entire `try…catch…finally` production, regardless of any
 function f() {
   try {
     console.log(0);
-    throw 'bogus';
-  } catch(e) {
+    throw "bogus";
+  } catch (e) {
     console.log(1);
-    return true;    // this return statement is suspended
-                    // until finally block has completed
+    return true; // this return statement is suspended
+    // until finally block has completed
     console.log(2); // not reachable
   } finally {
     console.log(3);
-    return false;   // overwrites the previous "return"
+    return false; // overwrites the previous "return"
     console.log(4); // not reachable
   }
   // "return false" is executed now
-  console.log(5);   // not reachable
+  console.log(5); // not reachable
 }
 console.log(f()); // 0, 1, 3, false
 ```
@@ -502,11 +519,11 @@ exceptions thrown or re-thrown inside of the `catch` block:
 ```js
 function f() {
   try {
-    throw 'bogus';
-  } catch(e) {
+    throw "bogus";
+  } catch (e) {
     console.log('caught inner "bogus"');
     throw e; // this throw statement is suspended until
-             // finally block has completed
+    // finally block has completed
   } finally {
     return false; // overwrites the previous "throw"
   }
@@ -515,9 +532,9 @@ function f() {
 
 try {
   console.log(f());
-} catch(e) {
+} catch (e) {
   // this is never reached!
-  // while f() executes, the `finally` block returns false,
+  // while f() executes, the `finally` block returns false,
   // which overwrites the `throw` inside the above `catch`
   console.log('caught outer "bogus"');
 }

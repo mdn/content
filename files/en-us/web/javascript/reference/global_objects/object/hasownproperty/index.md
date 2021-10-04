@@ -9,6 +9,7 @@ tags:
   - hasOwnProperty
 browser-compat: javascript.builtins.Object.hasOwnProperty
 ---
+
 {{JSRef}}
 
 The **`hasOwnProperty()`** method returns a boolean indicating whether the
@@ -23,7 +24,7 @@ it).
 ## Syntax
 
 ```js
-hasOwnProperty(prop)
+hasOwnProperty(prop);
 ```
 
 ### Parameters
@@ -52,9 +53,9 @@ example {{jsxref("Array")}} is an {{jsxref("Object")}}, so you can
 use `hasOwnProperty()` method to check whether an index exists:
 
 ```js
-let fruits = ['Apple', 'Banana','Watermelon', 'Orange'];
-fruits.hasOwnProperty(3);   // true ('Orange')
-fruits.hasOwnProperty(4);   // false - not defined
+let fruits = ["Apple", "Banana", "Watermelon", "Orange"];
+fruits.hasOwnProperty(3); // true ('Orange')
+fruits.hasOwnProperty(4); // false - not defined
 ```
 
 The method will not be available in objects where it is reimplemented, or on
@@ -69,16 +70,16 @@ The following code shows how to determine whether the `example` object contains 
 
 ```js
 let example = {};
-example.hasOwnProperty('prop');   // false
+example.hasOwnProperty("prop"); // false
 
-example.prop = 'exists';
-example.hasOwnProperty('prop');   // true - 'prop' has been defined
+example.prop = "exists";
+example.hasOwnProperty("prop"); // true - 'prop' has been defined
 
 example.prop = null;
-example.hasOwnProperty('prop');   // true - own property exists with value of null
+example.hasOwnProperty("prop"); // true - own property exists with value of null
 
 example.prop = undefined;
-example.hasOwnProperty('prop');   // true - own property exists with value of undefined
+example.hasOwnProperty("prop"); // true - own property exists with value of undefined
 ```
 
 ### Direct vs. inherited properties
@@ -87,17 +88,17 @@ The following example differentiates between direct properties and properties in
 
 ```js
 let example = {};
-example.prop = 'exists';
+example.prop = "exists";
 
 // `hasOwnProperty` will only return true for direct properties:
-example.hasOwnProperty('prop');             // returns true
-example.hasOwnProperty('toString');         // returns false
-example.hasOwnProperty('hasOwnProperty');   // returns false
+example.hasOwnProperty("prop"); // returns true
+example.hasOwnProperty("toString"); // returns false
+example.hasOwnProperty("hasOwnProperty"); // returns false
 
 // The `in` operator will return true for direct or inherited properties:
-'prop' in example;                          // returns true
-'toString' in example;                      // returns true
-'hasOwnProperty' in example;                // returns true
+"prop" in example; // returns true
+"toString" in example; // returns true
+"hasOwnProperty" in example; // returns true
 ```
 
 ### Iterating over the properties of an object
@@ -107,15 +108,13 @@ object without executing on inherited properties.
 
 ```js
 let buz = {
-  fog: 'stack'
+  fog: "stack",
 };
 
 for (let name in buz) {
   if (buz.hasOwnProperty(name)) {
-    console.log('this is fog (' +
-      name + ') for sure. Value: ' + buz[name]);
-  }
-  else {
+    console.log("this is fog (" + name + ") for sure. Value: " + buz[name]);
+  } else {
     console.log(name); // toString or something else
   }
 }
@@ -134,13 +133,13 @@ has a property with this name may return incorrect results:
 
 ```js
 let foo = {
-  hasOwnProperty: function() {
+  hasOwnProperty: function () {
     return false;
   },
-  bar: 'Here be dragons'
+  bar: "Here be dragons",
 };
 
-foo.hasOwnProperty('bar'); // reimplementation always returns false
+foo.hasOwnProperty("bar"); // reimplementation always returns false
 ```
 
 The recommended way to overcome this problem is to instead use
@@ -148,17 +147,17 @@ The recommended way to overcome this problem is to instead use
 alternatives include using an _external_ `hasOwnProperty`:
 
 ```js
-let foo = { bar: 'Here be dragons' };
+let foo = { bar: "Here be dragons" };
 
 // Use Object.hasOwn() method - recommended
-Object.hasOwn(foo, "bar");  // true
-  
+Object.hasOwn(foo, "bar"); // true
+
 // Use the hasOwnProperty property from the Object prototype
-Object.prototype.hasOwnProperty.call(foo, 'bar'); // true
+Object.prototype.hasOwnProperty.call(foo, "bar"); // true
 
 // Use another Object's hasOwnProperty
 // and call it with 'this' set to foo
-({}).hasOwnProperty.call(foo, 'bar'); // true
+({}.hasOwnProperty.call(foo, "bar")); // true
 ```
 
 Note that in the first two cases there are no newly created objects.
@@ -171,8 +170,8 @@ inherit from `Object.prototype`, making `hasOwnProperty()` inaccessible.
 
 ```js
 let foo = Object.create(null);
-foo.prop = 'exists';
-foo.hasOwnProperty("prop");  // Uncaught TypeError: foo.hasOwnProperty is not a function
+foo.prop = "exists";
+foo.hasOwnProperty("prop"); // Uncaught TypeError: foo.hasOwnProperty is not a function
 ```
 
 The solutions in this case are the same as for the previous section: use

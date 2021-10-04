@@ -8,6 +8,7 @@ tags:
   - parseInt
 browser-compat: javascript.builtins.parseInt
 ---
+
 {{jsSidebar("Objects")}}
 
 The **`parseInt()`** function parses a string argument and
@@ -19,8 +20,8 @@ systems).
 ## Syntax
 
 ```js
-parseInt(string)
-parseInt(string, radix)
+parseInt(string);
+parseInt(string, radix);
 ```
 
 ### Parameters
@@ -120,8 +121,8 @@ implementations had interpreted a numeric string beginning with a leading `0` as
 octal. The following might have had an octal result, or it might have had a decimal result.
 
 ```js
-parseInt('0e0')  // 0
-parseInt('08')   // 0, because '8' is not an octal digit.
+parseInt("0e0"); // 0
+parseInt("08"); // 0, because '8' is not an octal digit.
 ```
 
 The ECMAScript 5 specification of the function `parseInt` no longer allows
@@ -129,8 +130,8 @@ implementations to treat Strings beginning with a `0` character as octal
 values. Many implementations have adopted this behavior as of 2021.
 
 ```js
-parseInt('0e0')  // 0
-parseInt('08')   // 8
+parseInt("0e0"); // 0
+parseInt("08"); // 8
 ```
 
 ### A stricter parse function
@@ -142,20 +143,20 @@ Regular expressions can help:
 ```js
 function filterInt(value) {
   if (/^[-+]?(\d+|Infinity)$/.test(value)) {
-    return Number(value)
+    return Number(value);
   } else {
-    return NaN
+    return NaN;
   }
 }
 
-console.log(filterInt('421'))                // 421
-console.log(filterInt('-421'))               // -421
-console.log(filterInt('+421'))               // 421
-console.log(filterInt('Infinity'))           // Infinity
-console.log(filterInt('421e+0'))             // NaN
-console.log(filterInt('421hop'))             // NaN
-console.log(filterInt('hop1.61803398875'))   // NaN
-console.log(filterInt('1.61803398875'))      // NaN
+console.log(filterInt("421")); // 421
+console.log(filterInt("-421")); // -421
+console.log(filterInt("+421")); // 421
+console.log(filterInt("Infinity")); // Infinity
+console.log(filterInt("421e+0")); // NaN
+console.log(filterInt("421hop")); // NaN
+console.log(filterInt("hop1.61803398875")); // NaN
+console.log(filterInt("1.61803398875")); // NaN
 ```
 
 ## Examples
@@ -165,72 +166,72 @@ console.log(filterInt('1.61803398875'))      // NaN
 The following examples all return `15`:
 
 ```js
-parseInt('0xF', 16)
-parseInt('F', 16)
-parseInt('17', 8)
-parseInt(021, 8)
-parseInt('015', 10)    // but `parseInt(015, 8)` will return 13
-parseInt(15.99, 10)
-parseInt('15,123', 10)
-parseInt('FXX123', 16)
-parseInt('1111', 2)
-parseInt('15 * 3', 10)
-parseInt('15e2', 10)
-parseInt('15px', 10)
-parseInt('12', 13)
+parseInt("0xF", 16);
+parseInt("F", 16);
+parseInt("17", 8);
+parseInt(021, 8);
+parseInt("015", 10); // but `parseInt(015, 8)` will return 13
+parseInt(15.99, 10);
+parseInt("15,123", 10);
+parseInt("FXX123", 16);
+parseInt("1111", 2);
+parseInt("15 * 3", 10);
+parseInt("15e2", 10);
+parseInt("15px", 10);
+parseInt("12", 13);
 ```
 
 The following examples all return `NaN`:
 
 ```js
-parseInt('Hello', 8)  // Not a number at all
-parseInt('546', 2)    // Digits other than 0 or 1 are invalid for binary radix
+parseInt("Hello", 8); // Not a number at all
+parseInt("546", 2); // Digits other than 0 or 1 are invalid for binary radix
 ```
 
 The following examples all return `-15`:
 
 ```js
-parseInt('-F', 16)
-parseInt('-0F', 16)
-parseInt('-0XF', 16)
-parseInt(-15.1, 10)
-parseInt('-17', 8)
-parseInt('-15', 10)
-parseInt('-1111', 2)
-parseInt('-15e1', 10)
-parseInt('-12', 13)
+parseInt("-F", 16);
+parseInt("-0F", 16);
+parseInt("-0XF", 16);
+parseInt(-15.1, 10);
+parseInt("-17", 8);
+parseInt("-15", 10);
+parseInt("-1111", 2);
+parseInt("-15e1", 10);
+parseInt("-12", 13);
 ```
 
 The following examples all return `4`.
 
 ```js
-parseInt(4.7, 10)
-parseInt(4.7 * 1e22, 10)        // Very large number becomes 4
-parseInt(0.00000000000434, 10)  // Very small number becomes 4
+parseInt(4.7, 10);
+parseInt(4.7 * 1e22, 10); // Very large number becomes 4
+parseInt(0.00000000000434, 10); // Very small number becomes 4
 ```
 
 If the number is greater than 1e+21 (including) or less than 1e-7 (including), it will
 return `1`. (when using radix 10).
 
 ```js
-parseInt(0.0000001,10);
-parseInt(0.000000123,10);
-parseInt(1e-7,10);
-parseInt(1000000000000000000000,10);
-parseInt(123000000000000000000000,10);
-parseInt(1e+21,10);
+parseInt(0.0000001, 10);
+parseInt(0.000000123, 10);
+parseInt(1e-7, 10);
+parseInt(1000000000000000000000, 10);
+parseInt(123000000000000000000000, 10);
+parseInt(1e21, 10);
 ```
 
 The following example returns `224`:
 
 ```js
-parseInt('0e0', 16)
+parseInt("0e0", 16);
 ```
 
 {{jsxref("BigInt")}} values lose precision:
 
 ```js
-parseInt('900719925474099267n')
+parseInt("900719925474099267n");
 // 900719925474099300
 ```
 
@@ -238,7 +239,7 @@ parseInt('900719925474099267n')
 separators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_separators):
 
 ```js
-parseInt('123_456')
+parseInt("123_456");
 // 123
 ```
 
@@ -246,15 +247,21 @@ The radix is coerced to a `Number`:
 
 ```js
 const obj = {
-  valueOf() {return 8}
+  valueOf() {
+    return 8;
+  },
 };
-parseInt('11', obj); // 9
+parseInt("11", obj); // 9
 
-obj.valueOf = function() {return 1};
-parseInt('11', obj); // NaN
+obj.valueOf = function () {
+  return 1;
+};
+parseInt("11", obj); // NaN
 
-obj.valueOf = function() {return Infinity};
-parseInt('11', obj); // 11
+obj.valueOf = function () {
+  return Infinity;
+};
+parseInt("11", obj); // 11
 ```
 
 ## Specifications

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.JSON.parse
 ---
+
 {{JSRef}}
 
 The **`JSON.parse()`** method parses a
@@ -21,8 +22,8 @@ on the resulting object before it is returned.
 ## Syntax
 
 ```js
-JSON.parse(text)
-JSON.parse(text, reviver)
+JSON.parse(text);
+JSON.parse(text, reviver);
 ```
 
 ### Parameters
@@ -48,11 +49,11 @@ Throws a {{jsxref("SyntaxError")}} exception if the string to parse is not valid
 ### Using JSON.parse()
 
 ```js
-JSON.parse('{}');              // {}
-JSON.parse('true');            // true
-JSON.parse('"foo"');           // "foo"
+JSON.parse("{}"); // {}
+JSON.parse("true"); // true
+JSON.parse('"foo"'); // "foo"
 JSON.parse('[1, 5, "false"]'); // [1, 5, "false"]
-JSON.parse('null');            // null
+JSON.parse("null"); // null
 ```
 
 ### Using the reviver parameter
@@ -72,17 +73,19 @@ certain to return all untransformed values as-is, otherwise, they will be delete
 the resulting object.
 
 ```js
-JSON.parse('{"p": 5}', (key, value) =>
-  typeof value === 'number'
-    ? value * 2 // return value * 2 for numbers
-    : value     // return everything else unchanged
+JSON.parse(
+  '{"p": 5}',
+  (key, value) =>
+    typeof value === "number"
+      ? value * 2 // return value * 2 for numbers
+      : value // return everything else unchanged
 );
 
 // { p: 10 }
 
 JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) => {
   console.log(key); // log the current property name, the last is "".
-  return value;     // return the unchanged property value.
+  return value; // return the unchanged property value.
 });
 
 // 1
@@ -98,7 +101,7 @@ JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) => {
 
 ```js example-bad
 // both will throw a SyntaxError
-JSON.parse('[1, 2, 3, 4, ]');
+JSON.parse("[1, 2, 3, 4, ]");
 JSON.parse('{"foo" : 1, }');
 ```
 

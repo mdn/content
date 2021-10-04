@@ -8,6 +8,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.LinkError.LinkError
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.LinkError()`** constructor creates a new
@@ -18,10 +19,10 @@ from the start function).
 ## Syntax
 
 ```js
-new WebAssembly.LinkError()
-new WebAssembly.LinkError(message)
-new WebAssembly.LinkError(message, fileName)
-new WebAssembly.LinkError(message, fileName, lineNumber)
+new WebAssembly.LinkError();
+new WebAssembly.LinkError(message);
+new WebAssembly.LinkError(message, fileName);
+new WebAssembly.LinkError(message, fileName, lineNumber);
 ```
 
 ### Parameters
@@ -42,15 +43,15 @@ details to the console:
 
 ```js
 try {
-  throw new WebAssembly.LinkError('Hello', 'someFile', 10);
+  throw new WebAssembly.LinkError("Hello", "someFile", 10);
 } catch (e) {
   console.log(e instanceof LinkError); // true
-  console.log(e.message);                 // "Hello"
-  console.log(e.name);                    // "LinkError"
-  console.log(e.fileName);                // "someFile"
-  console.log(e.lineNumber);              // 10
-  console.log(e.columnNumber);            // 0
-  console.log(e.stack);                   // returns the location where the code was run
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "LinkError"
+  console.log(e.fileName); // "someFile"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // returns the location where the code was run
 }
 ```
 

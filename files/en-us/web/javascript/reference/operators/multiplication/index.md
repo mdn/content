@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.multiplication
 ---
+
 {{jsSidebar("Operators")}}
 
 The multiplication operator (`*`) produces the product of the operands.
@@ -17,7 +18,7 @@ The multiplication operator (`*`) produces the product of the operands.
 ## Syntax
 
 ```js
-x * y
+x * y;
 ```
 
 ## Examples
@@ -25,21 +26,21 @@ x * y
 ### Multiplication using numbers
 
 ```js
- 2 * 2      // 4
--2 * 2     // -4
+2 * 2 - // 4
+  2 * 2; // -4
 ```
 
 ### Multiplication with Infinity
 
 ```js
-Infinity * 0         // NaN
-Infinity * Infinity  // Infinity
+Infinity * 0; // NaN
+Infinity * Infinity; // Infinity
 ```
 
 ### Multiplication with non-numbers
 
 ```js
-'foo' * 2 // NaN
+"foo" * 2; // NaN
 ```
 
 ## Specifications

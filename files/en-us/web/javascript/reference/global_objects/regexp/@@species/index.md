@@ -10,6 +10,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.@@species
 ---
+
 {{JSRef}}
 
 The **`RegExp[@@species]`** accessor property returns the `RegExp` constructor.
@@ -37,7 +38,9 @@ In a derived collection object (e.g. your custom regexp `MyRegExp`), the `MyRegE
 ```js
 class MyRegExp extends RegExp {
   // Overwrite MyRegExp species to the parent RegExp constructor
-  static get [Symbol.species]() { return RegExp; }
+  static get [Symbol.species]() {
+    return RegExp;
+  }
 }
 ```
 

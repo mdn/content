@@ -15,6 +15,7 @@ tags:
   - min
 browser-compat: javascript.builtins.Math.min
 ---
+
 {{JSRef}}
 
 The static function **`Math.min()`**
@@ -62,7 +63,8 @@ This finds the min of `x` and `y` and assigns it to
 `z`:
 
 ```js
-var x = 10, y = -20;
+var x = 10,
+  y = -20;
 var z = Math.min(x, y);
 ```
 

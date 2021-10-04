@@ -8,6 +8,7 @@ tags:
   - Learn
   - l10n:priority
 ---
+
 {{JsSidebar}}
 
 **JavaScript** (**JS**) is a lightweight, interpreted, or [just-in-time](https://en.wikipedia.org/wiki/Just-in-time_compilation) compiled programming language with {{Glossary("First-class Function", "first-class functions")}}. While it is most well-known as the scripting language for Web pages, [many non-browser environments](https://en.wikipedia.org/wiki/JavaScript#Other_usage) also use it, such as {{Glossary("Node.js")}}, [Apache CouchDB](https://couchdb.apache.org/) and [Adobe Acrobat](https://www.adobe.com/devnet/acrobat/javascript.html). JavaScript is a {{Glossary("Prototype-based programming", "prototype-based")}}, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. Read more [about JavaScript](/en-US/docs/Web/JavaScript/About_JavaScript).

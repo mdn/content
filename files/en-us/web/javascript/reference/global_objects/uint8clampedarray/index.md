@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Uint8ClampedArray
 ---
+
 {{JSRef}}
 
 The **`Uint8ClampedArray`** typed array represents an array of 8-bit unsigned integers clamped to 0-255; if you specified a value that is out of the range of \[0,255], 0 or 255 will be set instead; if you specify a non-integer, the nearest integer will be set. The contents are initialized to `0`. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
@@ -113,7 +114,7 @@ console.log(uintc8.length); // 2
 console.log(uintc8.BYTES_PER_ELEMENT); // 1
 
 // From an array
-var arr = new Uint8ClampedArray([21,31]);
+var arr = new Uint8ClampedArray([21, 31]);
 console.log(arr[1]); // 31
 
 // From another TypedArray
@@ -126,7 +127,9 @@ var buffer = new ArrayBuffer(8);
 var z = new Uint8ClampedArray(buffer, 1, 4);
 
 // From an iterable
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var uintc8 = new Uint8ClampedArray(iterable);
 // Uint8ClampedArray[1, 2, 3]
 ```

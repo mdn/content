@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getYear
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`getYear()`** method returns the year in the specified
@@ -20,7 +21,7 @@ date according to local time. Because `getYear()` does not return full years
 ## Syntax
 
 ```js
-getYear()
+getYear();
 ```
 
 ### Return value
@@ -62,7 +63,7 @@ The `getYear()` method returns either a 2-digit or 4-digit year:
 The second statement assigns the value 95 to the variable `year`.
 
 ```js
-var Xmas = new Date('December 25, 1995 23:15:00');
+var Xmas = new Date("December 25, 1995 23:15:00");
 var year = Xmas.getYear(); // returns 95
 ```
 
@@ -71,7 +72,7 @@ var year = Xmas.getYear(); // returns 95
 The second statement assigns the value 100 to the variable `year`.
 
 ```js
-var Xmas = new Date('December 25, 2000 23:15:00');
+var Xmas = new Date("December 25, 2000 23:15:00");
 var year = Xmas.getYear(); // returns 100
 ```
 
@@ -80,7 +81,7 @@ var year = Xmas.getYear(); // returns 100
 The second statement assigns the value -100 to the variable `year`.
 
 ```js
-var Xmas = new Date('December 25, 1800 23:15:00');
+var Xmas = new Date("December 25, 1800 23:15:00");
 var year = Xmas.getYear(); // returns -100
 ```
 
@@ -90,7 +91,7 @@ The third statement assigns the value 95 to the variable `year`,
 representing the year 1995.
 
 ```js
-var Xmas = new Date('December 25, 2015 23:15:00');
+var Xmas = new Date("December 25, 2015 23:15:00");
 Xmas.setYear(95);
 var year = Xmas.getYear(); // returns 95
 ```

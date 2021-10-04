@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: return not in function'
+title: "SyntaxError: return not in function"
 slug: Web/JavaScript/Reference/Errors/Bad_return_or_yield
 tags:
   - Error
@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "return (or yield) not in function" occurs when a
@@ -57,12 +58,12 @@ The curly brackets look correct at a first glance, but this code snippet is miss
 `{` after the first `if` statement. Correct would be:
 
 ```js example-good
-var cheer = function(score) {
+var cheer = function (score) {
   if (score === 147) {
-    return 'Maximum!';
+    return "Maximum!";
   }
   if (score > 100) {
-    return 'Century!';
+    return "Century!";
   }
 };
 ```

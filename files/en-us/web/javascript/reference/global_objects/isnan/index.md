@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.isNaN
 ---
+
 {{jsSidebar("Objects")}}
 
 The **`isNaN()`** function determines whether a value is
@@ -19,7 +20,7 @@ want to use {{jsxref("Number.isNaN()")}}.
 ## Syntax
 
 ```js
-isNaN(value)
+isNaN(value);
 ```
 
 ### Parameters
@@ -39,7 +40,7 @@ isNaN(value)
 Unlike all other possible values in JavaScript, it is not possible to use the equality
 operators (== and ===) to compare a value against {{jsxref("NaN")}} to determine whether
 the value _is_ `NaN` or not, because both `NaN == NaN` and
-`NaN === NaN` evaluate to `false`. The `isNaN()` function provides a convenient 
+`NaN === NaN` evaluate to `false`. The `isNaN()` function provides a convenient
 equality check against {{jsxref("NaN")}}.
 
 ### Origin of NaN values
@@ -80,38 +81,38 @@ A polyfill for `isNaN` would be (the polyfill leverages the unique
 never-equal-to-itself characteristic of `NaN`):
 
 ```js
-const isNaN = function(value) {
-    const n = Number(value);
-    return n !== n;
+const isNaN = function (value) {
+  const n = Number(value);
+  return n !== n;
 };
 ```
 
 ## Examples
 
 ```js
-isNaN(NaN);       // true
+isNaN(NaN); // true
 isNaN(undefined); // true
-isNaN({});        // true
+isNaN({}); // true
 
-isNaN(true);      // false
-isNaN(null);      // false
-isNaN(37);        // false
+isNaN(true); // false
+isNaN(null); // false
+isNaN(37); // false
 
 // strings
-isNaN('37');      // false: "37" is converted to the number 37 which is not NaN
-isNaN('37.37');   // false: "37.37" is converted to the number 37.37 which is not NaN
-isNaN("37,5");    // true
-isNaN('123ABC');  // true:  parseInt("123ABC") is 123 but Number("123ABC") is NaN
-isNaN('');        // false: the empty string is converted to 0 which is not NaN
-isNaN(' ');       // false: a string with spaces is converted to 0 which is not NaN
+isNaN("37"); // false: "37" is converted to the number 37 which is not NaN
+isNaN("37.37"); // false: "37.37" is converted to the number 37.37 which is not NaN
+isNaN("37,5"); // true
+isNaN("123ABC"); // true:  parseInt("123ABC") is 123 but Number("123ABC") is NaN
+isNaN(""); // false: the empty string is converted to 0 which is not NaN
+isNaN(" "); // false: a string with spaces is converted to 0 which is not NaN
 
 // dates
-isNaN(new Date());                // false
-isNaN(new Date().toString());     // true
+isNaN(new Date()); // false
+isNaN(new Date().toString()); // true
 
 // This is a false positive and the reason why isNaN is not entirely reliable
-isNaN('blabla');   // true: "blabla" is converted to a number.
-                   // Parsing this as a number fails and returns NaN
+isNaN("blabla"); // true: "blabla" is converted to a number.
+// Parsing this as a number fails and returns NaN
 ```
 
 ### Useful special-case behavior

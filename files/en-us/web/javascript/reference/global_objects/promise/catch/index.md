@@ -9,6 +9,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Promise.catch
 ---
+
 {{JSRef}}
 
 The **`catch()`** method returns a {{jsxref("Promise")}} and
@@ -26,8 +27,8 @@ deals with rejected cases only. It behaves the same as calling {{jsxref("Promise
 ```js
 p.catch(onRejected);
 
-p.catch(function(reason) {
-   // rejection
+p.catch(function (reason) {
+  // rejection
 });
 ```
 
@@ -61,23 +62,30 @@ called, passing the parameters `undefined` and the received
 
 ```js
 // overriding original Promise.prototype.then/catch just to add some logs
-(function(Promise){
-    var originalThen = Promise.prototype.then;
-    var originalCatch = Promise.prototype.catch;
+(function (Promise) {
+  var originalThen = Promise.prototype.then;
+  var originalCatch = Promise.prototype.catch;
 
-    Promise.prototype.then = function(){
-        console.log('> > > > > > called .then on %o with arguments: %o', this, arguments);
-        return originalThen.apply(this, arguments);
-    };
-    Promise.prototype.catch = function(){
-        console.error('> > > > > > called .catch on %o with arguments: %o', this, arguments);
-        return originalCatch.apply(this, arguments);
-    };
-
+  Promise.prototype.then = function () {
+    console.log(
+      "> > > > > > called .then on %o with arguments: %o",
+      this,
+      arguments
+    );
+    return originalThen.apply(this, arguments);
+  };
+  Promise.prototype.catch = function () {
+    console.error(
+      "> > > > > > called .catch on %o with arguments: %o",
+      this,
+      arguments
+    );
+    return originalCatch.apply(this, arguments);
+  };
 })(this.Promise);
 
 // calling catch on an already resolved promise
-Promise.resolve().catch(function XXX(){});
+Promise.resolve().catch(function XXX() {});
 
 // logs:
 // > > > > > > called .catch on Promise{} with arguments: Arguments{1} [0: function XXX()]
@@ -96,65 +104,75 @@ chained](/en-US/docs/Web/JavaScript/Guide/Using_promises#Chaining_after_a_catch)
 ### Using and chaining the catch method
 
 ```js
-var p1 = new Promise(function(resolve, reject) {
-  resolve('Success');
+var p1 = new Promise(function (resolve, reject) {
+  resolve("Success");
 });
 
-p1.then(function(value) {
+p1.then(function (value) {
   console.log(value); // "Success!"
-  throw new Error('oh, no!');
-}).catch(function(e) {
-  console.error(e.message); // "oh, no!"
-}).then(function(){
-  console.log('after a catch the chain is restored');
-}, function () {
-  console.log('Not fired due to the catch');
-});
+  throw new Error("oh, no!");
+})
+  .catch(function (e) {
+    console.error(e.message); // "oh, no!"
+  })
+  .then(
+    function () {
+      console.log("after a catch the chain is restored");
+    },
+    function () {
+      console.log("Not fired due to the catch");
+    }
+  );
 
 // The following behaves the same as above
-p1.then(function(value) {
+p1.then(function (value) {
   console.log(value); // "Success!"
-  return Promise.reject('oh, no!');
-}).catch(function(e) {
-  console.error(e); // "oh, no!"
-}).then(function(){
-  console.log('after a catch the chain is restored');
-}, function () {
-  console.log('Not fired due to the catch');
-});
+  return Promise.reject("oh, no!");
+})
+  .catch(function (e) {
+    console.error(e); // "oh, no!"
+  })
+  .then(
+    function () {
+      console.log("after a catch the chain is restored");
+    },
+    function () {
+      console.log("Not fired due to the catch");
+    }
+  );
 ```
 
 ### Gotchas when throwing errors
 
 ```js
 // Throwing an error will call the catch method most of the time
-var p1 = new Promise(function(resolve, reject) {
-  throw new Error('Uh-oh!');
+var p1 = new Promise(function (resolve, reject) {
+  throw new Error("Uh-oh!");
 });
 
-p1.catch(function(e) {
+p1.catch(function (e) {
   console.error(e); // "Uh-oh!"
 });
 
 // Errors thrown inside asynchronous functions will act like uncaught errors
-var p2 = new Promise(function(resolve, reject) {
-  setTimeout(function() {
-    throw new Error('Uncaught Exception!');
+var p2 = new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    throw new Error("Uncaught Exception!");
   }, 1000);
 });
 
-p2.catch(function(e) {
+p2.catch(function (e) {
   console.error(e); // This is never called
 });
 
 // Errors thrown after resolve is called will be silenced
-var p3 = new Promise(function(resolve, reject) {
+var p3 = new Promise(function (resolve, reject) {
   resolve();
-  throw new Error('Silenced Exception!');
+  throw new Error("Silenced Exception!");
 });
 
-p3.catch(function(e) {
-   console.error(e); // This is never called
+p3.catch(function (e) {
+  console.error(e); // This is never called
 });
 ```
 
@@ -165,18 +183,21 @@ p3.catch(function(e) {
 var p1 = Promise.resolve("calling next");
 
 var p2 = p1.catch(function (reason) {
-    //This is never called
-    console.error("catch p1!");
-    console.error(reason);
+  //This is never called
+  console.error("catch p1!");
+  console.error(reason);
 });
 
-p2.then(function (value) {
+p2.then(
+  function (value) {
     console.log("next promise's onFulfilled"); /* next promise's onFulfilled */
     console.log(value); /* calling next */
-}, function (reason) {
+  },
+  function (reason) {
     console.log("next promise's onRejected");
     console.log(reason);
-});
+  }
+);
 ```
 
 ## Specifications

@@ -9,6 +9,7 @@ tags:
   - WeakMap
 browser-compat: javascript.builtins.WeakMap.has
 ---
+
 {{JSRef}}
 
 The **`has()`** method returns a boolean indicating whether an
@@ -19,7 +20,7 @@ element with the specified key exists in the `WeakMap` object or not.
 ## Syntax
 
 ```js
-has(key)
+has(key);
 ```
 
 ### Parameters
@@ -40,10 +41,10 @@ has(key)
 
 ```js
 var wm = new WeakMap();
-wm.set(window, 'foo');
+wm.set(window, "foo");
 
 wm.has(window); // returns true
-wm.has('baz');  // returns false
+wm.has("baz"); // returns false
 ```
 
 ## Specifications

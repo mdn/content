@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.includes
 ---
+
 {{JSRef}}
 
 The **`includes()`** method performs a case-sensitive search to determine whether one string may
@@ -21,8 +22,8 @@ appropriate.
 ## Syntax
 
 ```js
-includes(searchString)
-includes(searchString, position)
+includes(searchString);
+includes(searchString, position);
 ```
 
 ### Parameters
@@ -48,7 +49,7 @@ The `includes()` method is case sensitive. For example, the following
 expression returns `false`:
 
 ```js
-'Blue Whale'.includes('blue')  // returns false
+"Blue Whale".includes("blue"); // returns false
 ```
 
 ## Polyfill
@@ -60,13 +61,15 @@ However, you can easily polyfill this method:
 
 ```js
 if (!String.prototype.includes) {
-  String.prototype.includes = function(search, start) {
-    'use strict';
+  String.prototype.includes = function (search, start) {
+    "use strict";
 
     if (search instanceof RegExp) {
-      throw TypeError('first argument must not be a RegExp');
+      throw TypeError("first argument must not be a RegExp");
     }
-    if (start === undefined) { start = 0; }
+    if (start === undefined) {
+      start = 0;
+    }
     return this.indexOf(search, start) !== -1;
   };
 }
@@ -77,14 +80,14 @@ if (!String.prototype.includes) {
 ### Using `includes()`
 
 ```js
-const str = 'To be, or not to be, that is the question.'
+const str = "To be, or not to be, that is the question.";
 
-console.log(str.includes('To be'))        // true
-console.log(str.includes('question'))     // true
-console.log(str.includes('nonexistent'))  // false
-console.log(str.includes('To be', 1))     // false
-console.log(str.includes('TO BE'))        // false
-console.log(str.includes(''))             // true
+console.log(str.includes("To be")); // true
+console.log(str.includes("question")); // true
+console.log(str.includes("nonexistent")); // false
+console.log(str.includes("To be", 1)); // false
+console.log(str.includes("TO BE")); // false
+console.log(str.includes("")); // true
 ```
 
 ## Specifications

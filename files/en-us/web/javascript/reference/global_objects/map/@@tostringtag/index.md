@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Map.@@toStringTag
 ---
+
 {{JSRef}}
 
 The **`Map[@@toStringTag]`** property has an initial value of "Map".
@@ -19,7 +20,7 @@ The **`Map[@@toStringTag]`** property has an initial value of "Map".
 ## Syntax
 
 ```js
-Map[Symbol.toStringTag]
+Map[Symbol.toStringTag];
 ```
 
 ## Examples
@@ -27,7 +28,7 @@ Map[Symbol.toStringTag]
 ### Using toStringTag
 
 ```js
-Object.prototype.toString.call(new Map()) // "[object Map]"
+Object.prototype.toString.call(new Map()); // "[object Map]"
 ```
 
 ## Specifications

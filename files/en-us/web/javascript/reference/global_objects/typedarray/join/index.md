@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.join
 ---
+
 {{JSRef}}
 
 The **`join()`** method joins all elements of an array into a
@@ -23,8 +24,8 @@ array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Type
 ## Syntax
 
 ```js
-join()
-join(separator)
+join();
+join(separator);
 ```
 
 ### Parameters
@@ -43,10 +44,10 @@ A string with all array elements joined.
 ### Using join()
 
 ```js
-var uint8 = new Uint8Array([1,2,3]);
-uint8.join();      // '1,2,3'
-uint8.join(' / '); // '1 / 2 / 3'
-uint8.join('');    // '123'
+var uint8 = new Uint8Array([1, 2, 3]);
+uint8.join(); // '1,2,3'
+uint8.join(" / "); // '1 / 2 / 3'
+uint8.join(""); // '123'
 ```
 
 ## Polyfill
@@ -57,8 +58,8 @@ done on an "as needed" basis.
 ```js
 // https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.join
 if (!Uint8Array.prototype.join) {
-  Object.defineProperty(Uint8Array.prototype, 'join', {
-    value: Array.prototype.join
+  Object.defineProperty(Uint8Array.prototype, "join", {
+    value: Array.prototype.join,
   });
 }
 ```

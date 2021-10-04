@@ -9,6 +9,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Module.Module
 ---
+
 {{JSRef}}
 
 A **`WebAssembly.Module()`** constructor creates a new Module
@@ -29,7 +30,7 @@ synchronously compile given WebAssembly binary code. However, the primary way to
 > {{jsxref("WebAssembly.compileStreaming()")}} method should be used at all other times.
 
 ```js
-new WebAssembly.Module(bufferSource)
+new WebAssembly.Module(bufferSource);
 ```
 
 ### Parameters
@@ -45,25 +46,24 @@ new WebAssembly.Module(bufferSource)
 ```js
 var importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
 function createWasmModule(bytes) {
   return new WebAssembly.Module(bytes);
 }
 
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes => {
-  let mod = createWasmModule(bytes);
-  WebAssembly.instantiate(mod, importObject)
-  .then(result =>
-     result.exports.exported_func()
-  );
-})
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => {
+    let mod = createWasmModule(bytes);
+    WebAssembly.instantiate(mod, importObject).then((result) =>
+      result.exports.exported_func()
+    );
+  });
 ```
 
 ## Specifications

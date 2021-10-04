@@ -11,6 +11,7 @@ tags:
   - table
 browser-compat: javascript.builtins.WebAssembly.Table.length
 ---
+
 {{JSRef}}
 
 The **`length`** prototype property of the
@@ -25,15 +26,19 @@ The following example creates a new WebAssembly Table instance with an initial s
 2 and a maximum size of 10.
 
 ```js
-var table = new WebAssembly.Table({ element: "anyfunc", initial: 2, maximum: 10 });
+var table = new WebAssembly.Table({
+  element: "anyfunc",
+  initial: 2,
+  maximum: 10,
+});
 ```
 
 You can then grow the table by 1 with the following:
 
 ```js
-console.log(table.length);   // "2"
-console.log(table.grow(1));  // "2"
-console.log(table.length);   // "3"
+console.log(table.length); // "2"
+console.log(table.grow(1)); // "2"
+console.log(table.length); // "3"
 ```
 
 ## Specifications

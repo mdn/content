@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.@@toStringTag
 ---
+
 {{JSRef}}
 
 The **`Intl[@@toStringTag]`** property has an initial value of
@@ -24,7 +25,7 @@ The **`Intl[@@toStringTag]`** property has an initial value of
 ## Syntax
 
 ```js
-Intl[Symbol.toStringTag]
+Intl[Symbol.toStringTag];
 ```
 
 ## Examples
@@ -32,8 +33,8 @@ Intl[Symbol.toStringTag]
 ### Using toStringTag
 
 ```js
-Object.prototype.toString.call(Intl) // "[object Intl]"
-Intl.toString() // "[object Intl]"
+Object.prototype.toString.call(Intl); // "[object Intl]"
+Intl.toString(); // "[object Intl]"
 ```
 
 ## Specifications

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setDate
 ---
+
 {{JSRef}}
 
 The **`setDate()`** method changes the day of the month of a given {{jsxref("Date")}} instance, based on local time.
@@ -20,7 +21,7 @@ To instead change the day of the month for a given {{jsxref("Date")}} instance b
 ## Syntax
 
 ```js
-setDate(dayValue)
+setDate(dayValue);
 ```
 
 ### Parameters
@@ -51,11 +52,11 @@ date being set to 1 day before the last day of the previous month.
 
 ```js
 const theBigDay = new Date(1962, 6, 7, 12); // noon of 1962-07-07 (7th of July 1962,  month is 0-indexed)
-theBigDay.setDate(24);  // 1962-07-24 (24th of July 1962)
-theBigDay.setDate(32);  // 1962-08-01 (1st of August 1962)
-theBigDay.setDate(22);  // 1962-08-22 (22nd of August 1962)
-theBigDay.setDate(0);   // 1962-07-31 (31st of July 1962)
-theBigDay.setDate(98);  // 1962-10-06 (6th of October 1962)
+theBigDay.setDate(24); // 1962-07-24 (24th of July 1962)
+theBigDay.setDate(32); // 1962-08-01 (1st of August 1962)
+theBigDay.setDate(22); // 1962-08-22 (22nd of August 1962)
+theBigDay.setDate(0); // 1962-07-31 (31st of July 1962)
+theBigDay.setDate(98); // 1962-10-06 (6th of October 1962)
 theBigDay.setDate(-50); // 1962-08-11 (11th of August 1962)
 ```
 

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.new
 ---
+
 {{jsSidebar("Operators")}}
 
 The **`new` operator** lets developers
@@ -20,7 +21,7 @@ types that has a constructor function.
 ## Syntax
 
 ```js
-new constructor[([arguments])]
+new constructor[[arguments]]();
 ```
 
 ### Parameters
@@ -58,7 +59,7 @@ Creating a user-defined object requires two steps:
 2.  Create an instance of the object with `new`.
 
     ```js
-    var myFoo = new Foo('Bar 1', 2021);
+    var myFoo = new Foo("Bar 1", 2021);
     ```
 
 > **Note:** An object can have a property that is itself another object. See the
@@ -100,18 +101,18 @@ function Car() {}
 car1 = new Car();
 car2 = new Car();
 
-console.log(car1.color);    // undefined
+console.log(car1.color); // undefined
 
-Car.prototype.color = 'original color';
-console.log(car1.color);    // 'original color'
+Car.prototype.color = "original color";
+console.log(car1.color); // 'original color'
 
-car1.color = 'black';
-console.log(car1.color);    // 'black'
+car1.color = "black";
+console.log(car1.color); // 'black'
 
 console.log(Object.getPrototypeOf(car1).color); // 'original color'
 console.log(Object.getPrototypeOf(car2).color); // 'original color'
-console.log(car1.color);   // 'black'
-console.log(car2.color);   // 'original color'
+console.log(car1.color); // 'black'
+console.log(car2.color); // 'original color'
 ```
 
 > **Note:** While the constructor function can be invoked like any regular function (i.e. without the `new` operator),
@@ -136,7 +137,7 @@ function Car(make, model, year) {
 Now you can create an object called `myCar` as follows:
 
 ```js
-var myCar = new Car('Eagle', 'Talon TSi', 1993);
+var myCar = new Car("Eagle", "Talon TSi", 1993);
 ```
 
 This statement creates `myCar` and assigns it the specified values for its
@@ -147,7 +148,7 @@ You can create any number of `car` objects by calls to `new`. For
 example:
 
 ```js
-var kensCar = new Car('Nissan', '300ZX', 1992);
+var kensCar = new Car("Nissan", "300ZX", 1992);
 ```
 
 ### Object property that is itself another object
@@ -165,8 +166,8 @@ function Person(name, age, sex) {
 And then instantiate two new `Person` objects as follows:
 
 ```js
-var rand = new Person('Rand McNally', 33, 'M');
-var ken = new Person('Ken Jones', 39, 'M');
+var rand = new Person("Rand McNally", 33, "M");
+var ken = new Person("Ken Jones", 39, "M");
 ```
 
 Then you can rewrite the definition of `Car` to include an
@@ -184,8 +185,8 @@ function Car(make, model, year, owner) {
 To instantiate the new objects, you then use the following:
 
 ```js
-var car1 = new Car('Eagle', 'Talon TSi', 1993, rand);
-var car2 = new Car('Nissan', '300ZX', 1992, ken);
+var car1 = new Car("Eagle", "Talon TSi", 1993, rand);
+var car2 = new Car("Nissan", "300ZX", 1992, ken);
 ```
 
 Instead of passing a literal string or integer value when creating the new objects, the
@@ -194,7 +195,7 @@ parameters for the owners. To find out the name of the owner of `car2`, you
 can access the following property:
 
 ```js
-car2.owner.name
+car2.owner.name;
 ```
 
 ## Specifications

@@ -10,6 +10,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.search
 ---
+
 {{JSRef}}
 
 The **`search()`** method executes a search for a match between
@@ -20,7 +21,7 @@ a regular expression and this {{jsxref("String")}} object.
 ## Syntax
 
 ```js
-search(regexp)
+search(regexp);
 ```
 
 ### Parameters
@@ -57,11 +58,11 @@ The following example searches a string with two different regex objects to show
 successful search (positive value) vs. an unsuccessful search (`-1`)
 
 ```js
-let str = "hey JudE"
-let re = /[A-Z]/g
-let reDot = /[.]/g
-console.log(str.search(re))    // returns 4, which is the index of the first capital letter "J"
-console.log(str.search(reDot)) // returns -1 cannot find '.' dot punctuation
+let str = "hey JudE";
+let re = /[A-Z]/g;
+let reDot = /[.]/g;
+console.log(str.search(re)); // returns 4, which is the index of the first capital letter "J"
+console.log(str.search(reDot)); // returns -1 cannot find '.' dot punctuation
 ```
 
 ## Specifications

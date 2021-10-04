@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Map.delete
 ---
+
 {{JSRef}}
 
 The **`delete()`** method removes the specified element from a `Map` object by
@@ -20,7 +21,7 @@ key.
 ## Syntax
 
 ```js
-delete(key)
+delete key;
 ```
 
 ### Parameters
@@ -39,10 +40,10 @@ delete(key)
 
 ```js
 var myMap = new Map();
-myMap.set('bar', 'foo');
+myMap.set("bar", "foo");
 
-myMap.delete('bar'); // Returns true. Successfully removed.
-myMap.has('bar');    // Returns false. The "bar" element is no longer present.
+myMap.delete("bar"); // Returns true. Successfully removed.
+myMap.has("bar"); // Returns false. The "bar" element is no longer present.
 ```
 
 ## Specifications

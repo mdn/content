@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.subarray
 ---
+
 {{JSRef}}
 
 The **`subarray()`** method returns a new _TypedArray_
@@ -23,9 +24,9 @@ array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Type
 ## Syntax
 
 ```js
-subarray()
-subarray(begin)
-subarray(begin, end)
+subarray();
+subarray(begin);
+subarray(begin, end);
 ```
 
 ### Parameters
@@ -60,13 +61,13 @@ object's contents will impact the original object and vice versa.
 ```js
 var buffer = new ArrayBuffer(8);
 var uint8 = new Uint8Array(buffer);
-uint8.set([1,2,3]);
+uint8.set([1, 2, 3]);
 
 console.log(uint8); // Uint8Array [ 1, 2, 3, 0, 0, 0, 0, 0 ]
 
-var sub = uint8.subarray(0,4);
+var sub = uint8.subarray(0, 4);
 
-console.log(sub);   // Uint8Array [ 1, 2, 3, 0 ]
+console.log(sub); // Uint8Array [ 1, 2, 3, 0 ]
 ```
 
 ## Specifications

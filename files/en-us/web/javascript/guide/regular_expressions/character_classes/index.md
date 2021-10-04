@@ -9,6 +9,7 @@ tags:
   - Regular Expressions
   - character classes
 ---
+
 {{JSSidebar("JavaScript Guide")}}
 
 Character classes distinguish kinds of characters such as, for example, distinguishing between letters and digits.
@@ -272,7 +273,8 @@ console.table(randomData.match(regexpFourDigits));
 ### Looking for a word (from the latin alphabet) starting with A
 
 ```js
-var aliceExcerpt = "I’m sure I’m not Ada,’ she said, ‘for her hair goes in such long ringlets, and mine doesn’t go in ringlets at all.";
+var aliceExcerpt =
+  "I’m sure I’m not Ada,’ she said, ‘for her hair goes in such long ringlets, and mine doesn’t go in ringlets at all.";
 var regexpWordStartingWithA = /\b[aA]\w+/g;
 // \b indicates a boundary (i.e. do not start matching in the middle of a word)
 // [aA] indicates the letter a or A
@@ -292,7 +294,7 @@ var regexpBMPWord = /([\u0000-\u0019\u0021-\uFFFF])+/gu;
 // BMP goes through U+0000 to U+FFFF but space is U+0020
 
 console.table(nonEnglishText.match(regexpBMPWord));
-[ 'Приключения', 'Алисы', 'в', 'Стране', 'чудес' ]
+["Приключения", "Алисы", "в", "Стране", "чудес"];
 ```
 
 ## See also

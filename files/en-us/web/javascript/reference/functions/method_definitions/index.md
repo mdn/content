@@ -10,6 +10,7 @@ tags:
   - Syntax
 browser-compat: javascript.functions.method_definitions
 ---
+
 {{JsSidebar("Functions")}}
 
 Starting with ECMAScript 2015, a shorter syntax for method definitions on objects
@@ -48,13 +49,13 @@ Given the following code:
 
 ```js
 const obj = {
-  foo: function() {
+  foo: function () {
     // ...
   },
-  bar: function() {
+  bar: function () {
     // ...
-  }
-}
+  },
+};
 ```
 
 You are now able to shorten this to:
@@ -66,8 +67,8 @@ const obj = {
   },
   bar() {
     // ...
-  }
-}
+  },
+};
 ```
 
 ### Generator methods
@@ -90,26 +91,26 @@ When doing so:
 // Using a named property
 const obj2 = {
   g: function* () {
-    let index = 0
+    let index = 0;
     while (true) {
-      yield index++
-    }
-  }
+      yield index++;
+    }
+  },
 };
 
 // The same object using shorthand syntax
 const obj2 = {
-  * g() {
-    let index = 0
+  *g() {
+    let index = 0;
     while (true) {
-      yield index++
-    }
-  }
+      yield index++;
+    }
+  },
 };
 
-const it = obj2.g()
-console.log(it.next().value)  // 0
-console.log(it.next().value)  // 1
+const it = obj2.g();
+console.log(it.next().value); // 0
+console.log(it.next().value); // 1
 ```
 
 ### Async methods
@@ -121,16 +122,16 @@ using the shorthand syntax.
 // Using a named property
 const obj3 = {
   f: async function () {
-    await some_promise
-  }
-}
+    await some_promise;
+  },
+};
 
 // The same object using shorthand syntax
 const obj3 = {
   async f() {
-    await some_promise
-  }
-}
+    await some_promise;
+  },
+};
 ```
 
 ### Async generator methods
@@ -141,20 +142,20 @@ methods](/en-US/docs/Web/JavaScript/Reference/Statements/function*) can also be 
 ```js
 const obj4 = {
   f: async function* () {
-    yield 1
-    yield 2
-    yield 3
-  }
+    yield 1;
+    yield 2;
+    yield 3;
+  },
 };
 
 // The same object using shorthand syntax
 const obj4 = {
-  async* f() {
-   yield 1
-   yield 2
-   yield 3
-  }
-}
+  async *f() {
+    yield 1;
+    yield 2;
+    yield 3;
+  },
+};
 ```
 
 ### Method definitions are not constructable
@@ -164,14 +165,14 @@ instantiate them.
 
 ```js example-bad
 const objA = {
-  method() {}
-}
-new objA.method  // TypeError: obj.method is not a constructor
+  method() {},
+};
+new objA.method(); // TypeError: obj.method is not a constructor
 
 const objB = {
-  * g() {}
-}
-new objB.g       // TypeError: obj.g is not a constructor (changed in ES2016)
+  *g() {},
+};
+new objB.g(); // TypeError: obj.g is not a constructor (changed in ES2016)
 ```
 
 ## Examples
@@ -180,10 +181,12 @@ new objB.g       // TypeError: obj.g is not a constructor (changed in ES2016)
 
 ```js
 const obj = {
-  a: 'foo',
-  b() { return this.a }
+  a: "foo",
+  b() {
+    return this.a;
+  },
 };
-console.log(obj.b())  // "foo"
+console.log(obj.b()); // "foo"
 ```
 
 ### Computed property names
@@ -192,22 +195,28 @@ The shorthand syntax also supports computed property names.
 
 ```js
 const bar = {
-  foo0: function() { return 0 },
-  foo1() { return 1 },
-  ['foo' + 2]() { return 2 }
-}
+  foo0: function () {
+    return 0;
+  },
+  foo1() {
+    return 1;
+  },
+  ["foo" + 2]() {
+    return 2;
+  },
+};
 
-console.log(bar.foo0())  // 0
-console.log(bar.foo1())  // 1
-console.log(bar.foo2())  // 2
+console.log(bar.foo0()); // 0
+console.log(bar.foo1()); // 1
+console.log(bar.foo2()); // 2
 
 // A global function
 function foo() {
-  return 1
+  return 1;
 }
 
-let name = 'foo'
-console.log(window[name]())  // 1
+let name = "foo";
+console.log(window[name]()); // 1
 ```
 
 ## Specifications

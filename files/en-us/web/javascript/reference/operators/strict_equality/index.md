@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.strict_equality
 ---
+
 {{jsSidebar("Operators")}}
 
 The strict equality operator (`===`) checks whether its two operands are
@@ -20,7 +21,7 @@ different.
 ## Syntax
 
 ```js
-x === y
+x === y;
 ```
 
 ## Description
@@ -49,41 +50,41 @@ The most notable difference between this operator and the [equality](/en-US/docs
 ### Comparing operands of the same type
 
 ```js
-console.log("hello" === "hello");   // true
-console.log("hello" === "hola");    // false
+console.log("hello" === "hello"); // true
+console.log("hello" === "hola"); // false
 
-console.log(3 === 3);               // true
-console.log(3 === 4);               // false
+console.log(3 === 3); // true
+console.log(3 === 4); // false
 
-console.log(true === true);         // true
-console.log(true === false);        // false
+console.log(true === true); // true
+console.log(true === false); // false
 
-console.log(null === null);         // true
+console.log(null === null); // true
 ```
 
 ### Comparing operands of different types
 
 ```js
-console.log("3" === 3);           // false
+console.log("3" === 3); // false
 
-console.log(true === 1);          // false
+console.log(true === 1); // false
 
-console.log(null === undefined);  // false
+console.log(null === undefined); // false
 ```
 
 ### Comparing objects
 
 ```js
 const object1 = {
-  name: "hello"
-}
+  name: "hello",
+};
 
 const object2 = {
-  name: "hello"
-}
+  name: "hello",
+};
 
-console.log(object1 === object2);  // false
-console.log(object1 === object1);  // true
+console.log(object1 === object2); // false
+console.log(object1 === object1); // true
 ```
 
 ## Specifications

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.maximize
 ---
+
 {{JSRef}}
 
 The
@@ -25,7 +26,7 @@ existing values.
 ## Syntax
 
 ```js
-maximize()
+maximize();
 ```
 
 ### Return value
@@ -56,7 +57,7 @@ include {{jsxref("Intl/Locale/hourCycle", "Locale.hourCycle")}},
 ### Using maximize
 
 ```js
-let myLocale = new Intl.Locale("fr", {hourCycle: "h24", calendar: "gregory"});
+let myLocale = new Intl.Locale("fr", { hourCycle: "h24", calendar: "gregory" });
 console.log(myLocale.baseName); // Prints "fr"
 console.log(myLocale.toString()); // Prints "fr-u-ca-gregory-hc-h24"
 let myLocMaximized = myLocale.maximize();
@@ -67,7 +68,7 @@ console.log(myLocMaximized.baseName);
 
 // Prints "fr-Latn-FR-u-ca-gregory-hc-h24".
 // Note that the extension tags (after "-u") remain unchanged.
-console.log(myLocMaximized.toString()); 
+console.log(myLocMaximized.toString());
 ```
 
 ## Specifications

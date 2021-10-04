@@ -9,6 +9,7 @@ tags:
   - Primary Expressions
 browser-compat: javascript.operators.function
 ---
+
 {{jsSidebar("Operators")}}
 
 The **`function`** keyword can be used to define a function
@@ -61,12 +62,12 @@ Function expressions in JavaScript are not hoisted, unlike
 create them:
 
 ```js
-console.log(notHoisted) // undefined
+console.log(notHoisted); // undefined
 //  even though the variable name is hoisted, the definition isn't. so it's undefined.
 notHoisted(); // TypeError: notHoisted is not a function
 
-var notHoisted = function() {
-   console.log('bar');
+var notHoisted = function () {
+  console.log("bar");
 };
 ```
 
@@ -79,16 +80,16 @@ function body (scope)**. This also avoids using the non-standard
 
 ```js
 let math = {
-  'factit': function factorial(n) {
-    console.log(n)
+  factit: function factorial(n) {
+    console.log(n);
     if (n <= 1) {
       return 1;
     }
     return n * factorial(n - 1);
-  }
+  },
 };
 
-math.factit(3) //3;2;1;
+math.factit(3); //3;2;1;
 ```
 
 The variable the function expression is assigned to will have a `name`
@@ -99,14 +100,14 @@ present, it will be the function name (explicit name). This also applies to
 you can only give the variable an implicit name).
 
 ```js
-var foo = function() {}
-foo.name // "foo"
+var foo = function () {};
+foo.name; // "foo"
 
-var foo2 = foo
-foo2.name // "foo"
+var foo2 = foo;
+foo2.name; // "foo"
 
-var bar = function baz() {}
-bar.name // "baz"
+var bar = function baz() {};
+bar.name; // "baz"
 
 console.log(foo === foo2); // true
 console.log(typeof baz); // undefined
@@ -121,8 +122,8 @@ The following example defines an unnamed function and assigns it to `x`. The
 function returns the square of its argument:
 
 ```js
-var x = function(y) {
-   return y * y;
+var x = function (y) {
+  return y * y;
 };
 ```
 
@@ -131,9 +132,9 @@ var x = function(y) {
 More commonly it is used as a {{Glossary("Callback_function", "callback")}}:
 
 ```js
-button.addEventListener('click', function(event) {
-    console.log('button is clicked!')
-})
+button.addEventListener("click", function (event) {
+  console.log("button is clicked!");
+});
 ```
 
 ### Using an Immediately Invoked Function Expression (IIFE)
@@ -141,15 +142,15 @@ button.addEventListener('click', function(event) {
 An anonymous function is created and called:
 
 ```js
-(function() {
-    console.log('Code runs!')
+(function () {
+  console.log("Code runs!");
 })();
 
 // or
 
-!function() {
-  console.log('Code runs!')
-}();
+!(function () {
+  console.log("Code runs!");
+})();
 ```
 
 ## Specifications

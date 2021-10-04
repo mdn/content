@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.ArrayBuffer.ArrayBuffer
 ---
+
 {{JSRef}}
 
 The **`ArrayBuffer()`** constructor is used to create
@@ -19,7 +20,7 @@ The **`ArrayBuffer()`** constructor is used to create
 ## Syntax
 
 ```js
-new ArrayBuffer(length)
+new ArrayBuffer(length);
 ```
 
 ### Parameters
@@ -63,7 +64,7 @@ In this example, we create a 8-byte buffer with a {{jsxref("Global_Objects/Int32
 
 ```js
 var buffer = new ArrayBuffer(8);
-var view   = new Int32Array(buffer);
+var view = new Int32Array(buffer);
 ```
 
 ## Specifications

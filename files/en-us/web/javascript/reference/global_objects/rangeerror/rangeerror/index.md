@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.RangeError.RangeError
 ---
+
 {{JSRef}}
 
 The **`RangeError()`** constructor creates an error
@@ -15,10 +16,10 @@ when a value is not in the set or range of allowed values.
 ## Syntax
 
 ```js
-new RangeError()
-new RangeError(message)
-new RangeError(message, fileName)
-new RangeError(message, fileName, lineNumber)
+new RangeError();
+new RangeError(message);
+new RangeError(message, fileName);
+new RangeError(message, fileName, lineNumber);
 ```
 
 ### Parameters
@@ -35,48 +36,38 @@ new RangeError(message, fileName, lineNumber)
 ### Using `RangeError` (for numeric values)
 
 ```js
-function check(n)
-{
-    if( !(n >= -500 && n <= 500) )
-    {
-        throw new RangeError("The argument must be between -500 and 500.")
-    }
+function check(n) {
+  if (!(n >= -500 && n <= 500)) {
+    throw new RangeError("The argument must be between -500 and 500.");
+  }
 }
 
-try
-{
-    check(2000)
-}
-catch(error)
-{
-    if (error instanceof RangeError)
-    {
-        // Handle the error
-    }
+try {
+  check(2000);
+} catch (error) {
+  if (error instanceof RangeError) {
+    // Handle the error
+  }
 }
 ```
 
 ### Using `RangeError` (for non-numeric values)
 
 ```js
-function check(value)
-{
-    if(["apple", "banana", "carrot"].includes(value) === false)
-    {
-        throw new RangeError('The argument must be an "apple", "banana", or "carrot".')
-    }
+function check(value) {
+  if (["apple", "banana", "carrot"].includes(value) === false) {
+    throw new RangeError(
+      'The argument must be an "apple", "banana", or "carrot".'
+    );
+  }
 }
 
-try
-{
-    check("cabbage")
-}
-catch(error)
-{
-    if(error instanceof RangeError)
-    {
-        // Handle the error
-    }
+try {
+  check("cabbage");
+} catch (error) {
+  if (error instanceof RangeError) {
+    // Handle the error
+  }
 }
 ```
 

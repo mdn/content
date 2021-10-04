@@ -8,6 +8,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Array.toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the
@@ -18,7 +19,7 @@ specified array and its elements.
 ## Syntax
 
 ```js
-toString()
+toString();
 ```
 
 ### Return value
@@ -46,7 +47,7 @@ value will be returned.
 ### Using toString
 
 ```js
-const array1 = [1, 2, 'a', '1a'];
+const array1 = [1, 2, "a", "1a"];
 
 console.log(array1.toString());
 // expected output: "1,2,a,1a"

@@ -8,6 +8,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Global.Global
 ---
+
 {{JSRef}}
 
 A **`WebAssembly.Global()`** constructor creates a new
@@ -18,7 +19,7 @@ instances. This allows dynamic linking of multiple modules.
 ## Syntax
 
 ```js
-new WebAssembly.Global(descriptor, value)
+new WebAssembly.Global(descriptor, value);
 ```
 
 ### Parameters
@@ -59,28 +60,36 @@ function exported out of the `global.wasm` module (this adds 1 to whatever
 value is given to it and then returns the new value).
 
 ```js
-const output = document.getElementById('output');
+const output = document.getElementById("output");
 
 function assertEq(msg, got, expected) {
   output.innerHTML += `Testing ${msg}: `;
   if (got !== expected)
     output.innerHTML += `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
-  else
-    output.innerHTML += `SUCCESS! Got: ${got}<br>`;
+  else output.innerHTML += `SUCCESS! Got: ${got}<br>`;
 }
 
 assertEq("WebAssembly.Global exists", typeof WebAssembly.Global, "function");
 
-const global = new WebAssembly.Global({value:'i32', mutable:true}, 0);
+const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
 
-WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
-.then(({instance}) => {
-    assertEq("getting initial value from wasm", instance.exports.getGlobal(), 0);
+WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
+  ({ instance }) => {
+    assertEq(
+      "getting initial value from wasm",
+      instance.exports.getGlobal(),
+      0
+    );
     global.value = 42;
-    assertEq("getting JS-updated value from wasm", instance.exports.getGlobal(), 42);
+    assertEq(
+      "getting JS-updated value from wasm",
+      instance.exports.getGlobal(),
+      42
+    );
     instance.exports.incGlobal();
     assertEq("getting wasm-updated value from JS", global.value, 43);
-});
+  }
+);
 ```
 
 > **Note:** You can see the example [running

@@ -8,6 +8,7 @@ tags:
   - Object
   - l10n:priority
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Using_promises")}}
 
 JavaScript is an object-based language based on prototypes, rather than being class-based. Because of this different basis, it can be less apparent how JavaScript allows you to create hierarchies of objects and to have inheritance of properties and their values. This chapter attempts to clarify the situation.
@@ -138,8 +139,8 @@ The following Java and JavaScript `Employee` definitions are similar. The only d
 ```js
 class Employee {
   constructor() {
-    this.name = '';
-    this.dept = 'general';
+    this.name = "";
+    this.dept = "general";
   }
 }
 ```
@@ -148,8 +149,8 @@ class Employee {
 
 ```js
 function Employee() {
-    this.name = '';
-    this.dept = 'general';
+  this.name = "";
+  this.dept = "general";
 }
 ```
 
@@ -201,19 +202,19 @@ The `Engineer` and `SalesPerson` definitions create objects that descend from `W
 
 ```js
 function SalesPerson() {
-   WorkerBee.call(this);
-   this.dept = 'sales';
-   this.quota = 100;
+  WorkerBee.call(this);
+  this.dept = "sales";
+  this.quota = 100;
 }
 SalesPerson.prototype = Object.create(WorkerBee.prototype);
 SalesPerson.prototype.constructor = SalesPerson;
 
 function Engineer() {
-   WorkerBee.call(this);
-   this.dept = 'engineering';
-   this.machine = '';
+  WorkerBee.call(this);
+  this.dept = "engineering";
+  this.machine = "";
 }
-Engineer.prototype = Object.create(WorkerBee.prototype)
+Engineer.prototype = Object.create(WorkerBee.prototype);
 Engineer.prototype.constructor = Engineer;
 ```
 
@@ -246,29 +247,29 @@ The following hierarchy is created using the code on the right side.
 #### Individual objects = Jim, Sally, Mark, Fred, Jane, etc.<br>"Instances" created from constructor
 
 ```js
-var jim = new Employee;
+var jim = new Employee();
 // Parentheses can be omitted if the
 // constructor takes no arguments.
 // jim.name is ''
 // jim.dept is 'general'
 
-var sally = new Manager;
+var sally = new Manager();
 // sally.name is ''
 // sally.dept is 'general'
 // sally.reports is []
 
-var mark = new WorkerBee;
+var mark = new WorkerBee();
 // mark.name is ''
 // mark.dept is 'general'
 // mark.projects is []
 
-var fred = new SalesPerson;
+var fred = new SalesPerson();
 // fred.name is ''
 // fred.dept is 'sales'
 // fred.projects is []
 // fred.quota is 100
 
-var jane = new Engineer;
+var jane = new Engineer();
 // jane.name is ''
 // jane.dept is 'engineering'
 // jane.projects is []
@@ -284,7 +285,7 @@ This section discusses how objects inherit properties from other objects in the 
 Suppose you create the `mark` object as a `WorkerBee` with the following statement:
 
 ```js
-var mark = new WorkerBee;
+var mark = new WorkerBee();
 ```
 
 When JavaScript sees the `new` operator, it creates a new generic object and implicitly sets the value of the internal property \[\[Prototype]] to the value of `WorkerBee.prototype` and passes this new object as the value of the _`this`_ keyword to the `WorkerBee` constructor function. The internal \[\[Prototype]] property determines the prototype chain used to return property values. Once these properties are set, JavaScript returns the new object and the assignment statement sets the variable `mark` to that object.
@@ -292,8 +293,8 @@ When JavaScript sees the `new` operator, it creates a new generic object and im
 This process does not explicitly put values in the `mark` object (_local_ values) for the properties that `mark` inherits from the prototype chain. When you ask for the value of a property, JavaScript first checks to see if the value exists in that object. If it does, that value is returned. If the value is not there locally, JavaScript checks the prototype chain (using the internal \[\[Prototype]] property). If an object in the prototype chain has a value for the property, that value is returned. If no such property is found, JavaScript says the object does not have the property. In this way, the `mark` object has the following properties and values:
 
 ```js
-mark.name = '';
-mark.dept = 'general';
+mark.name = "";
+mark.dept = "general";
 mark.projects = [];
 ```
 
@@ -302,9 +303,9 @@ The `mark` object is assigned local values for the `name` and `dept` properties 
 Because these constructors do not let you supply instance-specific values, this information is generic. The property values are the default ones shared by all new objects created from `WorkerBee`. You can, of course, change the values of any of these properties. So, you could give specific information for `mark` as follows:
 
 ```js
-mark.name = 'Doe, Mark';
-mark.dept = 'admin';
-mark.projects = ['navigator'];
+mark.name = "Doe, Mark";
+mark.dept = "admin";
+mark.projects = ["navigator"];
 ```
 
 ### Adding properties
@@ -320,7 +321,7 @@ Now, the `mark` object has a `bonus` property, but no other `WorkerBee` has this
 If you add a new property to an object that is being used as the prototype for a constructor function, you add that property to all objects that inherit properties from the prototype. For example, you can add a `specialty` property to all employees with the following statement:
 
 ```js
-Employee.prototype.specialty = 'none';
+Employee.prototype.specialty = "none";
 ```
 
 As soon as JavaScript executes this statement, the `mark` object also has the `specialty` property with the value of `"none"`. The following figure shows the effect of adding this property to the `Employee` prototype and then overriding it for the `Engineer` prototype.
@@ -337,8 +338,8 @@ The following pairs of examples show the Java and JavaScript definitions for the
 
 ```js
 function Employee(name, dept) {
-  this.name = name || '';
-  this.dept = dept || 'general';
+  this.name = name || "";
+  this.dept = dept || "general";
 }
 ```
 
@@ -363,7 +364,7 @@ public class Employee {
 function WorkerBee(projs) {
   this.projects = projs || [];
 }
-WorkerBee.prototype = new Employee;
+WorkerBee.prototype = new Employee();
 ```
 
 ```java
@@ -380,10 +381,10 @@ public class WorkerBee extends Employee {
 
 ```js
 function Engineer(mach) {
-  this.dept = 'engineering';
-  this.machine = mach || '';
+  this.dept = "engineering";
+  this.machine = mach || "";
 }
-Engineer.prototype = new WorkerBee;
+Engineer.prototype = new WorkerBee();
 ```
 
 ```java
@@ -403,7 +404,7 @@ public class Engineer extends WorkerBee {
 These JavaScript definitions use a special idiom for setting default values:
 
 ```js
-this.name = name || '';
+this.name = name || "";
 ```
 
 The JavaScript logical OR operator (`||`) evaluates its first argument. If that argument converts to true, the operator returns it. Otherwise, the operator returns the value of the second argument. Therefore, this line of code tests to see if `name` has a useful value for the `name` property. If it does, it sets `this.name` to that value. Otherwise, it sets `this.name` to the empty string. This chapter uses this idiom for brevity; however, it can be puzzling at first glance.
@@ -413,16 +414,16 @@ The JavaScript logical OR operator (`||`) evaluates its first argument. If that 
 With these definitions, when you create an instance of an object, you can specify values for the locally defined properties. You can use the following statement to create a new `Engineer`:
 
 ```js
-var jane = new Engineer('belau');
+var jane = new Engineer("belau");
 ```
 
 `Jane`'s properties are now:
 
 ```js
-jane.name == '';
-jane.dept == 'engineering';
+jane.name == "";
+jane.dept == "engineering";
 jane.projects == [];
-jane.machine == 'belau';
+jane.machine == "belau";
 ```
 
 Notice that with these definitions, you cannot specify an initial value for an inherited property such as `name`. If you want to specify an initial value for inherited properties in JavaScript, you need to add more code to the constructor function.
@@ -436,15 +437,15 @@ Let's look at one of these definitions in detail. Here's the new definition for 
 ```js
 function Engineer(name, projs, mach) {
   this.base = WorkerBee;
-  this.base(name, 'engineering', projs);
-  this.machine = mach || '';
+  this.base(name, "engineering", projs);
+  this.machine = mach || "";
 }
 ```
 
 Suppose you create a new `Engineer` object as follows:
 
 ```js
-var jane = new Engineer('Doe, Jane', ['navigator', 'javascript'], 'belau');
+var jane = new Engineer("Doe, Jane", ["navigator", "javascript"], "belau");
 ```
 
 JavaScript follows these steps:
@@ -462,11 +463,11 @@ You might think that, having called the `WorkerBee` constructor from inside the 
 ```js
 function Engineer(name, projs, mach) {
   this.base = WorkerBee;
-  this.base(name, 'engineering', projs);
-  this.machine = mach || '';
+  this.base(name, "engineering", projs);
+  this.machine = mach || "";
 }
-var jane = new Engineer('Doe, Jane', ['navigator', 'javascript'], 'belau');
-Employee.prototype.specialty = 'none';
+var jane = new Engineer("Doe, Jane", ["navigator", "javascript"], "belau");
+Employee.prototype.specialty = "none";
 ```
 
 The `jane` object does not inherit the `specialty` property. You still need to explicitly set up the prototype to ensure dynamic inheritance. Assume instead you have these statements:
@@ -474,12 +475,12 @@ The `jane` object does not inherit the `specialty` property. You still need to e
 ```js
 function Engineer(name, projs, mach) {
   this.base = WorkerBee;
-  this.base(name, 'engineering', projs);
-  this.machine = mach || '';
+  this.base(name, "engineering", projs);
+  this.machine = mach || "";
 }
-Engineer.prototype = new WorkerBee;
-var jane = new Engineer('Doe, Jane', ['navigator', 'javascript'], 'belau');
-Employee.prototype.specialty = 'none';
+Engineer.prototype = new WorkerBee();
+var jane = new Engineer("Doe, Jane", ["navigator", "javascript"], "belau");
+Employee.prototype.specialty = "none";
 ```
 
 Now the value of the `jane` object's `specialty` property is "none".
@@ -489,15 +490,15 @@ Another way of inheriting is by using the [`call()`](/en-US/docs/Web/JavaScript/
 ```js
 function Engineer(name, projs, mach) {
   this.base = WorkerBee;
-  this.base(name, 'engineering', projs);
-  this.machine = mach || '';
+  this.base(name, "engineering", projs);
+  this.machine = mach || "";
 }
 ```
 
 ```js
 function Engineer(name, projs, mach) {
-  WorkerBee.call(this, name, 'engineering', projs);
-  this.machine = mach || '';
+  WorkerBee.call(this, name, "engineering", projs);
+  this.machine = mach || "";
 }
 ```
 
@@ -520,34 +521,34 @@ The outcome of these steps depends on how you define things along the way. The o
 
 ```js
 function Employee() {
-  this.name = '';
-  this.dept = 'general';
+  this.name = "";
+  this.dept = "general";
 }
 
 function WorkerBee() {
   this.projects = [];
 }
-WorkerBee.prototype = new Employee;
+WorkerBee.prototype = new Employee();
 ```
 
 With these definitions, suppose you create `amy` as an instance of `WorkerBee` with the following statement:
 
 ```js
-var amy = new WorkerBee;
+var amy = new WorkerBee();
 ```
 
 The `amy` object has one local property, `projects`. The values for the `name` and `dept` properties are not local to `amy` and so derive from the `amy` object's `__proto__` property. Thus, `amy` has these property values:
 
 ```js
-amy.name == '';
-amy.dept == 'general';
+amy.name == "";
+amy.dept == "general";
 amy.projects == [];
 ```
 
 Now suppose you change the value of the `name` property in the prototype associated with `Employee`:
 
 ```js
-Employee.prototype.name = 'Unknown';
+Employee.prototype.name = "Unknown";
 ```
 
 At first glance, you might expect that new value to propagate down to all the instances of `Employee`. However, it does not.
@@ -558,18 +559,18 @@ If you want to change the value of an object property at run time and have the n
 
 ```js
 function Employee() {
-  this.dept = 'general';    // Note that this.name (a local variable) does not appear here
+  this.dept = "general"; // Note that this.name (a local variable) does not appear here
 }
-Employee.prototype.name = '';    // A single copy
+Employee.prototype.name = ""; // A single copy
 
 function WorkerBee() {
   this.projects = [];
 }
-WorkerBee.prototype = new Employee;
+WorkerBee.prototype = new Employee();
 
-var amy = new WorkerBee;
+var amy = new WorkerBee();
 
-Employee.prototype.name = 'Unknown';
+Employee.prototype.name = "Unknown";
 ```
 
 In this case, the `name` property of `amy` becomes "Unknown".
@@ -586,13 +587,13 @@ Every object has a `__proto__` object property (except `Object`); every function
 
 ```js
 var f = new Foo();
-var isTrue = (f instanceof Foo);
+var isTrue = f instanceof Foo;
 ```
 
 For a more detailed example, suppose you have the same set of definitions shown in [Inheriting properties](#inheriting_properties). Create an `Engineer` object as follows:
 
 ```js
-var chris = new Engineer('Pigman, Chris', ['jsd'], 'fiji');
+var chris = new Engineer("Pigman, Chris", ["jsd"], "fiji");
 ```
 
 With this object, the following statements are all true:
@@ -609,16 +610,15 @@ Given this, you could write an `instanceOf` function as follows:
 
 ```js
 function instanceOf(object, constructor) {
-   object = object.__proto__;
-   while (object != null) {
-      if (object == constructor.prototype)
-         return true;
-      if (typeof object == 'xml') {
-        return constructor.prototype == XML.prototype;
-      }
-      object = object.__proto__;
-   }
-   return false;
+  object = object.__proto__;
+  while (object != null) {
+    if (object == constructor.prototype) return true;
+    if (typeof object == "xml") {
+      return constructor.prototype == XML.prototype;
+    }
+    object = object.__proto__;
+  }
+  return false;
 }
 ```
 
@@ -627,16 +627,16 @@ function instanceOf(object, constructor) {
 Using the instanceOf function defined above, these expressions are true:
 
 ```js
-instanceOf(chris, Engineer)
-instanceOf(chris, WorkerBee)
-instanceOf(chris, Employee)
-instanceOf(chris, Object)
+instanceOf(chris, Engineer);
+instanceOf(chris, WorkerBee);
+instanceOf(chris, Employee);
+instanceOf(chris, Object);
 ```
 
 But the following expression is false:
 
 ```js
-instanceOf(chris, SalesPerson)
+instanceOf(chris, SalesPerson);
 ```
 
 ### Global information in constructors
@@ -647,17 +647,17 @@ When you create constructors, you need to be careful if you set global informati
 var idCounter = 1;
 
 function Employee(name, dept) {
-   this.name = name || '';
-   this.dept = dept || 'general';
-   this.id = idCounter++;
+  this.name = name || "";
+  this.dept = dept || "general";
+  this.id = idCounter++;
 }
 ```
 
 With this definition, when you create a new `Employee`, the constructor assigns it the next ID in sequence and then increments the global ID counter. So, if your next statement is the following, `victoria.id` is 1 and `harry.id` is 2:
 
 ```js
-var victoria = new Employee('Pigbert, Victoria', 'pubs');
-var harry = new Employee('Tschopik, Harry', 'sales');
+var victoria = new Employee("Pigbert, Victoria", "pubs");
+var harry = new Employee("Tschopik, Harry", "sales");
 ```
 
 At first glance that seems fine. However, `idCounter` gets incremented every time an `Employee` object is created, for whatever purpose. If you create the entire `Employee` hierarchy shown in this chapter, the `Employee` constructor is called every time you set up a prototype. Suppose you have the following code:
@@ -692,10 +692,9 @@ Depending on the application, it may or may not matter that the counter has been
 
 ```js
 function Employee(name, dept) {
-   this.name = name || '';
-   this.dept = dept || 'general';
-   if (name)
-      this.id = idCounter++;
+  this.name = name || "";
+  this.dept = dept || "general";
+  if (name) this.id = idCounter++;
 }
 ```
 
@@ -718,35 +717,35 @@ In JavaScript, you can have a constructor function call more than one other cons
 
 ```js
 function Hobbyist(hobby) {
-   this.hobby = hobby || 'scuba';
+  this.hobby = hobby || "scuba";
 }
 
 function Engineer(name, projs, mach, hobby) {
-   this.base1 = WorkerBee;
-   this.base1(name, 'engineering', projs);
-   this.base2 = Hobbyist;
-   this.base2(hobby);
-   this.machine = mach || '';
+  this.base1 = WorkerBee;
+  this.base1(name, "engineering", projs);
+  this.base2 = Hobbyist;
+  this.base2(hobby);
+  this.machine = mach || "";
 }
-Engineer.prototype = new WorkerBee;
+Engineer.prototype = new WorkerBee();
 
-var dennis = new Engineer('Doe, Dennis', ['collabra'], 'hugo');
+var dennis = new Engineer("Doe, Dennis", ["collabra"], "hugo");
 ```
 
 Further assume that the definition of `WorkerBee` is as used earlier in this chapter. In this case, the `dennis` object has these properties:
 
 ```js
-dennis.name == 'Doe, Dennis';
-dennis.dept == 'engineering';
-dennis.projects == ['collabra'];
-dennis.machine == 'hugo';
-dennis.hobby == 'scuba';
+dennis.name == "Doe, Dennis";
+dennis.dept == "engineering";
+dennis.projects == ["collabra"];
+dennis.machine == "hugo";
+dennis.hobby == "scuba";
 ```
 
 So `dennis` does get the `hobby` property from the `Hobbyist` constructor. However, assume you then add a property to the `Hobbyist` constructor's prototype:
 
 ```js
-Hobbyist.prototype.equipment = ['mask', 'fins', 'regulator', 'bcd'];
+Hobbyist.prototype.equipment = ["mask", "fins", "regulator", "bcd"];
 ```
 
 The `dennis` object does not inherit this new property.

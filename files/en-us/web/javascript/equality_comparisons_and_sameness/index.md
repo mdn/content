@@ -13,6 +13,7 @@ tags:
   - SameValueZero
   - Sameness
 ---
+
 {{jsSidebar("Intermediate")}}
 
 There are four equality algorithms in ES2015:
@@ -42,8 +43,8 @@ Strict equality compares two values for equality. Neither value is implicitly co
 
 ```js
 var num = 0;
-var obj = new String('0');
-var str = '0';
+var obj = new String("0");
+var str = "0";
 
 console.log(num === num); // true
 console.log(obj === obj); // true
@@ -115,8 +116,8 @@ The following example demonstrates loose equality comparisons involving the numb
 ```js
 const num = 0;
 const big = 0n;
-const str = '0';
-const obj = new String('0');
+const str = "0";
+const obj = new String("0");
 
 console.log(num == str); // true
 console.log(big == num); // true
@@ -133,11 +134,15 @@ Same-value equality addresses a final use case: determining whether two values a
 
 ```js
 // Add an immutable NEGATIVE_ZERO property to the Number constructor.
-Object.defineProperty(Number, 'NEGATIVE_ZERO',
-                      { value: -0, writable: false, configurable: false, enumerable: false });
+Object.defineProperty(Number, "NEGATIVE_ZERO", {
+  value: -0,
+  writable: false,
+  configurable: false,
+  enumerable: false,
+});
 
 function attemptMutation(v) {
-  Object.defineProperty(Number, 'NEGATIVE_ZERO', { value: v });
+  Object.defineProperty(Number, "NEGATIVE_ZERO", { value: v });
 }
 ```
 
@@ -198,10 +203,10 @@ Here's a non-exhaustive list of built-in methods and operators that might cause 
 
 - {{jsxref("Operators/Unary_negation", "- (unary negation)")}}
   - : Consider the following example:
-      ```js
-      let stoppingForce = obj.mass * -obj.velocity;
-      ```
-      If `obj.velocity` is `0` (or computes to `0`), a `-0` is introduced at that place and propagates out into `stoppingForce`.
+    ```js
+    let stoppingForce = obj.mass * -obj.velocity;
+    ```
+    If `obj.velocity` is `0` (or computes to `0`), a `-0` is introduced at that place and propagates out into `stoppingForce`.
 - {{jsxref("Math.atan2")}}, {{jsxref("Math.ceil")}}, {{jsxref("Math.pow")}}, {{jsxref("Math.round")}}
   - : In some cases,it's possible for a `-0` to be introduced into an expression as a return value of these methods even when no `-0` exists as one of the parameters. For example, using {{jsxref("Math.pow")}} to raise {{jsxref("Infinity", "-Infinity")}} to the power of any negative, odd exponent evaluates to `-0`. Refer to the documentation for the individual methods.
 - {{jsxref("Math.floor")}}, {{jsxref("Math.max")}}, {{jsxref("Math.min")}}, {{jsxref("Math.sin")}}, {{jsxref("Math.sqrt")}}, {{jsxref("Math.tan")}}
@@ -216,8 +221,8 @@ Relying on {{jsxref("Object.is")}} when the signedness of zeros is not taken int
 The {{jsxref("Object.is")}} specification treats all instances of {{jsxref("NaN")}} as the same object. However, since [typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) are available, we can have distinct instances, which don't behave identically in all contexts. For example:
 
 ```js
-var f2b = x => new Uint8Array(new Float64Array([x]).buffer);
-var b2f = x => new Float64Array(x.buffer)[0];
+var f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);
+var b2f = (x) => new Float64Array(x.buffer)[0];
 var n = f2b(NaN);
 n[0] = 1;
 var nan2 = b2f(n);

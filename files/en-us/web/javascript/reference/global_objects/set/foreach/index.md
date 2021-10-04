@@ -10,6 +10,7 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.forEach
 ---
+
 {{JSRef}}
 
 The **`forEach()`** method executes a provided function once
@@ -98,10 +99,10 @@ The following code logs a line for each element in a `Set` object:
 
 ```js
 function logSetElements(value1, value2, set) {
-    console.log('s[' + value1 + '] = ' + value2);
+  console.log("s[" + value1 + "] = " + value2);
 }
 
-new Set(['foo', 'bar', undefined]).forEach(logSetElements);
+new Set(["foo", "bar", undefined]).forEach(logSetElements);
 
 // logs:
 // "s[foo] = foo"

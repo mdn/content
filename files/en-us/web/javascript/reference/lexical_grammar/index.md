@@ -9,6 +9,7 @@ tags:
   - Literal
 browser-compat: javascript.grammar
 ---
+
 {{JsSidebar("More")}}
 
 This page describes JavaScript's lexical grammar. The source text of ECMAScript scripts gets scanned from left to right and is converted into a sequence of input elements which are tokens, control characters, line terminators, comments or [white space](/en-US/docs/Glossary/Whitespace). ECMAScript also defines certain keywords and literals and has rules for automatic insertion of semicolons to end statements.
@@ -60,7 +61,7 @@ The first way is the `//` comment; this makes all text following it on the same 
 ```js
 function comment() {
   // This is a one line JavaScript comment
-  console.log('Hello world!');
+  console.log("Hello world!");
 }
 comment();
 ```
@@ -72,7 +73,7 @@ For example, you can use it on a single line:
 ```js
 function comment() {
   /* This is a one line JavaScript comment */
-  console.log('Hello world!');
+  console.log("Hello world!");
 }
 comment();
 ```
@@ -83,7 +84,7 @@ You can also make multiple-line comments, like this:
 function comment() {
   /* This comment spans multiple lines. Notice
      that we don't need to end the comment until we're done. */
-  console.log('Hello world!');
+  console.log("Hello world!");
 }
 comment();
 ```
@@ -92,9 +93,9 @@ You can also use it in the middle of a line, if you wish, although this can make
 
 ```js
 function comment(x) {
-  console.log('Hello ' + x /* insert the value of x */ + ' !');
+  console.log("Hello " + x /* insert the value of x */ + " !");
 }
-comment('world');
+comment("world");
 ```
 
 In addition, you can use it to disable code to prevent it from running, by wrapping code in a comment, like this:
@@ -244,7 +245,7 @@ A few identifiers have a special meaning in some contexts without being keywords
 See also {{jsxref("null")}} for more information.
 
 ```js
-null
+null;
 ```
 
 ### Boolean literal
@@ -252,8 +253,8 @@ null
 See also {{jsxref("Boolean")}} for more information.
 
 ```js
-true
-false
+true;
+false;
 ```
 
 ### Numeric literals
@@ -263,12 +264,12 @@ The {{jsxref("Number")}} and {{jsxref("BigInt")}} types use numeric literals.
 #### Decimal
 
 ```js
-1234567890
-42
+1234567890;
+42;
 
 // Caution when using with a leading zero:
-0888 // 888 parsed as decimal
-0777 // parsed as octal, 511 in decimal
+0888; // 888 parsed as decimal
+0777; // parsed as octal, 511 in decimal
 ```
 
 Note that decimal literals can start with a zero (`0`) followed by another decimal digit, but If all digits after the leading `0` are smaller than 8, the number is interpreted as an octal number. This won't throw in JavaScript, see [bug 957513](https://bugzilla.mozilla.org/show_bug.cgi?id=957513). See also the page about {{jsxref("parseInt", "parseInt()")}}
@@ -278,12 +279,12 @@ Note that decimal literals can start with a zero (`0`) followed by another decim
 The decimal exponential literal is specified by the following format: `beN`; where `b` is a base number (integer or floating), followed by `e` char (which serves as separator or _exponent indicator_) and `N`, which is *exponent* or *power* number – a signed integer (as per 2019 ECMA-262 specs):
 
 ```js
-0e-5   // => 0
-0e+5   // => 0
-5e1    // => 50
-175e-2 // => 1.75
-1e3    // => 1000
-1e-3   // => 0.001
+0e-5; // => 0
+0e5; // => 0
+5e1; // => 50
+175e-2; // => 1.75
+1e3; // => 1000
+1e-3; // => 0.001
 ```
 
 #### Binary
@@ -291,9 +292,9 @@ The decimal exponential literal is specified by the following format: `beN`; wh
 Binary number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "B" (`0b` or `0B`). Because this syntax is new in ECMAScript 2015, see the browser compatibility table, below. If the digits after the `0b` are not 0 or 1, the following {{jsxref("SyntaxError")}} is thrown: "Missing binary digits after 0b".
 
 ```js
-var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
+var FLT_SIGNBIT = 0b10000000000000000000000000000000; // 2147483648
 var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
-var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
+var FLT_MANTISSA = 0b00000000011111111111111111111111; // 8388607
 ```
 
 #### Octal
@@ -301,12 +302,12 @@ var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
 Octal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "O" (`0o` or `0O)`. Because this syntax is new in ECMAScript 2015, see the browser compatibility table, below. If the digits after the `0o` are outside the range (01234567), the following {{jsxref("SyntaxError")}} is thrown: "Missing octal digits after 0o".
 
 ```js
-var n = 0O755; // 493
+var n = 0o755; // 493
 var m = 0o644; // 420
 
 // Also possible with just a leading zero (see note about decimals above)
-0755
-0644
+0755;
+0644;
 ```
 
 #### Hexadecimal
@@ -314,9 +315,9 @@ var m = 0o644; // 420
 Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (`0x` or `0X)`. If the digits after 0x are outside the range (0123456789ABCDEF), the following {{jsxref("SyntaxError")}} is thrown: "Identifier starts immediately after numeric literal".
 
 ```js
-0xFFFFFFFFFFFFFFFFF // 295147905179352830000
-0x123456789ABCDEF   // 81985529216486900
-0XA                 // 10
+0xfffffffffffffffff; // 295147905179352830000
+0x123456789abcdef; // 81985529216486900
+0xa; // 10
 ```
 
 #### BigInt literal
@@ -324,10 +325,10 @@ Hexadecimal number syntax uses a leading zero followed by a lowercase or upperca
 The {{jsxref("BigInt")}} type is a numeric primitive in JavaScript that can represent integers with arbitrary precision. BigInt literals are created by appending `n` to the end of an integer.
 
 ```js
-123456789123456789n     // 123456789123456789
-0o777777777777n         // 68719476735
-0x123456789ABCDEFn      // 81985529216486895‬
-0b11101001010101010101n // 955733
+123456789123456789n; // 123456789123456789
+0o777777777777n; // 68719476735
+0x123456789abcdefn; // 81985529216486895‬
+0b11101001010101010101n; // 955733
 ```
 
 Note that legacy octal numbers with just a leading zero won't work for `BigInt`:
@@ -340,7 +341,7 @@ Note that legacy octal numbers with just a leading zero won't work for `BigInt`:
 For octal `BigInt` numbers, always use zero followed by the letter "o" (uppercase or lowercase):
 
 ```js example-good
-0o755n
+0o755n;
 ```
 
 For more information about `BigInt`, see also [JavaScript data structures](/en-US/docs/Web/JavaScript/Data_structures#bigint_type).
@@ -351,20 +352,20 @@ To improve readability for numeric literals, underscores (`_`, `U+005F`) can be 
 
 ```js
 // separators in decimal numbers
-1_000_000_000_000
-1_050.95
+1_000_000_000_000;
+1_050.95;
 
 // separators in binary numbers
-0b1010_0001_1000_0101
+0b1010_0001_1000_0101;
 
 // separators in octal numbers
-0o2_2_5_6
+0o2_2_5_6;
 
 // separators in hex numbers
-0xA0_B0_C0
+0xa0_b0_c0;
 
 // separators in BigInts
-1_000_000_000_000_000_000_000n
+1_000_000_000_000_000_000_000n;
 ```
 
 Note these limitations:
@@ -385,11 +386,13 @@ Note these limitations:
 See also {{jsxref("Object")}} and [Object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) for more information.
 
 ```js
-var o = { a: 'foo', b: 'bar', c: 42 };
+var o = { a: "foo", b: "bar", c: 42 };
 
 // shorthand notation. New in ES2015
-var a = 'foo', b = 'bar', c = 42;
-var o = {a, b, c};
+var a = "foo",
+  b = "bar",
+  c = 42;
+var o = { a, b, c };
 
 // instead of
 var o = { a: a, b: b, c: c };
@@ -400,7 +403,7 @@ var o = { a: a, b: b, c: c };
 See also {{jsxref("Array")}} for more information.
 
 ```js
-[1954, 1974, 1990, 2014]
+[1954, 1974, 1990, 2014];
 ```
 
 ### String literals
@@ -416,8 +419,8 @@ Prior to the [proposal to make all JSON text valid ECMA-262](https://github.com/
 Any code points may appear in the form of an escape sequence. String literals evaluate to ECMAScript String values. When generating these String values Unicode code points are UTF-16 encoded.
 
 ```js
-'foo'
-"bar"
+"foo";
+"bar";
 ```
 
 #### Hexadecimal escape sequences
@@ -425,7 +428,7 @@ Any code points may appear in the form of an escape sequence. String literals ev
 Hexadecimal escape sequences consist of `\x` followed by exactly two hexadecimal digits representing a code unit or code point in the range 0x0000 to 0x00FF.
 
 ```js
-'\xA9' // "©"
+"\xA9"; // "©"
 ```
 
 #### Unicode escape sequences
@@ -435,7 +438,7 @@ A Unicode escape sequence consists of exactly four hexadecimal digits following 
 See also {{jsxref("String.fromCharCode()")}} and {{jsxref("String.prototype.charCodeAt()")}}.
 
 ```js
-'\u00A9' // "©" (U+A9)
+"\u00A9"; // "©" (U+A9)
 ```
 
 #### Unicode code point escapes
@@ -445,10 +448,10 @@ A Unicode code point escape consists of `\u{`, followed by a code point in hexad
 See also {{jsxref("String.fromCodePoint()")}} and {{jsxref("String.prototype.codePointAt()")}}.
 
 ```js
-'\u{2F804}' // CJK COMPATIBILITY IDEOGRAPH-2F804 (U+2F804)
+"\u{2F804}"; // CJK COMPATIBILITY IDEOGRAPH-2F804 (U+2F804)
 
 // the same character represented as a surrogate pair
-'\uD87E\uDC04'
+"\uD87E\uDC04";
 ```
 
 ### Regular expression literals
@@ -469,14 +472,10 @@ See also {{jsxref("RegExp")}} for more information.
 See also [template strings](/en-US/docs/Web/JavaScript/Reference/Template_literals) for more information.
 
 ```js
-`string text`
+`string text``string text line 1
+ string text line 2``string text ${expression} string text`;
 
-`string text line 1
- string text line 2`
-
-`string text ${expression} string text`
-
-tag `string text ${expression} string text`
+tag`string text ${expression} string text`;
 ```
 
 ## Automatic semicolon insertion
@@ -496,13 +495,19 @@ The ECMAScript specification mentions [three rules of semicolon insertion](https
 1\. A semicolon is inserted before, when a [Line terminator](#line_terminators) or "}" is encountered that is not allowed by the grammar.
 
 ```js
-{ 1
-2 } 3
+{
+  1;
+  2;
+}
+3;
 
 // is transformed by ASI into:
 
-{ 1
-;2 ;} 3;
+{
+  1;
+  2;
+}
+3;
 ```
 
 2\. A semicolon is inserted at the end, when the end of the input stream of tokens is detected and the parser is unable to parse the single input stream as a complete program.
@@ -510,8 +515,8 @@ The ECMAScript specification mentions [three rules of semicolon insertion](https
 Here `++` is not treated as a [postfix operator](/en-US/docs/Web/JavaScript/Reference/Operators#increment) applying to variable `b`, because a line terminator occurs between `b` and `++`.
 
 ```js
-a = b
-++c
+a = b;
+++c;
 
 // is transformend by ASI into
 
@@ -529,8 +534,8 @@ a = b;
 - `module`
 
 ```js
-return
-a + b
+return;
+a + b;
 
 // is transformed by ASI into
 

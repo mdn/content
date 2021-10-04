@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Error.lineNumber
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 The **`lineNumber`** property contains the line number in the file that raised this error.
@@ -18,18 +19,18 @@ The **`lineNumber`** property contains the line number in the file that raised t
 ### Using lineNumber
 
 ```js
-var e = new Error('Could not parse input');
+var e = new Error("Could not parse input");
 throw e;
-console.log(e.lineNumber) // 2
+console.log(e.lineNumber); // 2
 ```
 
 ### Alternative example using error event
 
 ```js
-window.addEventListener('error', function(e) {
+window.addEventListener("error", function (e) {
   console.log(e.lineNumber); // 5
 });
-var e = new Error('Could not parse input');
+var e = new Error("Could not parse input");
 throw e;
 ```
 

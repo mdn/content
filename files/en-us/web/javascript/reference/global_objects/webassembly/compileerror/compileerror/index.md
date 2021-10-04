@@ -8,6 +8,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.CompileError.CompileError
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.CompileError()`** constructor creates a new
@@ -17,10 +18,10 @@ WebAssembly decoding or validation.
 ## Syntax
 
 ```js
-new WebAssembly.CompileError()
-new WebAssembly.CompileError(message)
-new WebAssembly.CompileError(message, fileName)
-new WebAssembly.CompileError(message, fileName, lineNumber)
+new WebAssembly.CompileError();
+new WebAssembly.CompileError(message);
+new WebAssembly.CompileError(message, fileName);
+new WebAssembly.CompileError(message, fileName, lineNumber);
 ```
 
 ### Parameters
@@ -41,15 +42,15 @@ details to the console:
 
 ```js
 try {
-  throw new WebAssembly.CompileError('Hello', 'someFile', 10);
+  throw new WebAssembly.CompileError("Hello", "someFile", 10);
 } catch (e) {
   console.log(e instanceof CompileError); // true
-  console.log(e.message);                 // "Hello"
-  console.log(e.name);                    // "CompileError"
-  console.log(e.fileName);                // "someFile"
-  console.log(e.lineNumber);              // 10
-  console.log(e.columnNumber);            // 0
-  console.log(e.stack);                   // returns the location where the code was run
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "CompileError"
+  console.log(e.fileName); // "someFile"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // returns the location where the code was run
 }
 ```
 

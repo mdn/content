@@ -8,6 +8,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Table.Table
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.Table()`** constructor creates a new
@@ -16,7 +17,7 @@ The **`WebAssembly.Table()`** constructor creates a new
 ## Syntax
 
 ```js
-new WebAssembly.Table(tableDescriptor)
+new WebAssembly.Table(tableDescriptor);
 ```
 
 ### Parameters
@@ -52,10 +53,10 @@ via {{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}} to show that th
 is two and both elements are {{jsxref("null")}}.
 
 ```js
-var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
-console.log(tbl.length);  // "2"
-console.log(tbl.get(0));  // "null"
-console.log(tbl.get(1));  // "null"
+var tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });
+console.log(tbl.length); // "2"
+console.log(tbl.get(0)); // "null"
+console.log(tbl.get(1)); // "null"
 ```
 
 We then create an import object that contains the table:
@@ -63,8 +64,8 @@ We then create an import object that contains the table:
 ```js
 var importObj = {
   js: {
-    tbl:tbl
-  }
+    tbl: tbl,
+  },
 };
 ```
 
@@ -77,12 +78,13 @@ elements now contain callable [Exported WebAssembly Functions](/en-US/docs/WebAs
 which we can call from JS.
 
 ```js
-WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
-.then(function(obj) {
-  console.log(tbl.length);
-  console.log(tbl.get(0)());
-  console.log(tbl.get(1)());
-});
+WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
+  function (obj) {
+    console.log(tbl.length);
+    console.log(tbl.get(0)());
+    console.log(tbl.get(1)());
+  }
+);
 ```
 
 Note how you've got to include a second function invocation operator at the end of the

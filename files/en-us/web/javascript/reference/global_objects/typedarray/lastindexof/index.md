@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.lastIndexOf
 ---
+
 {{JSRef}}
 
 The **`lastIndexOf()`** method returns the last index at which
@@ -25,8 +26,8 @@ array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Type
 ## Syntax
 
 ```js
-lastIndexOf(searchElement)
-lastIndexOf(searchElement, fromIndex)
+lastIndexOf(searchElement);
+lastIndexOf(searchElement, fromIndex);
 ```
 
 ### Parameters
@@ -58,10 +59,10 @@ equality](/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Us
 
 ```js
 var uint8 = new Uint8Array([2, 5, 9, 2]);
-uint8.lastIndexOf(2);     // 3
-uint8.lastIndexOf(7);     // -1
-uint8.lastIndexOf(2, 3);  // 3
-uint8.lastIndexOf(2, 2);  // 0
+uint8.lastIndexOf(2); // 3
+uint8.lastIndexOf(7); // -1
+uint8.lastIndexOf(2, 3); // 3
+uint8.lastIndexOf(2, 2); // 0
 uint8.lastIndexOf(2, -2); // 0
 uint8.lastIndexOf(2, -1); // 3
 ```

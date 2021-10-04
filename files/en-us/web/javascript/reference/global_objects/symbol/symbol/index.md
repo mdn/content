@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Symbol.Symbol
 ---
+
 {{JSRef}}
 
 The `Symbol()` constructor returns a value of type **symbol**,
@@ -25,8 +26,8 @@ call to it will cause an exception.
 ## Syntax
 
 ```js
-Symbol()
-Symbol(description)
+Symbol();
+Symbol(description);
 ```
 
 ### Parameters
@@ -43,16 +44,16 @@ To create a new primitive symbol, you write `Symbol()` with an optional
 string as its description:
 
 ```js
-let sym1 = Symbol()
-let sym2 = Symbol('foo')
-let sym3 = Symbol('foo')
+let sym1 = Symbol();
+let sym2 = Symbol("foo");
+let sym3 = Symbol("foo");
 ```
 
 The above code creates three new symbols. Note that `Symbol("foo")` does not
 coerce the string `"foo"` into a symbol. It creates a new symbol each time:
 
 ```js
-Symbol('foo') === Symbol('foo')  // false
+Symbol("foo") === Symbol("foo"); // false
 ```
 
 ### new Symbol(...)
@@ -61,7 +62,7 @@ The following syntax with the {{jsxref("Operators/new", "new")}} operator will t
 {{jsxref("TypeError")}}:
 
 ```js
-let sym = new Symbol()  // TypeError
+let sym = new Symbol(); // TypeError
 ```
 
 This prevents authors from creating an explicit `Symbol` wrapper object
@@ -73,10 +74,10 @@ If you really want to create a `Symbol` wrapper object, you can use the
 `Object()` function:
 
 ```js
-let sym    = Symbol('foo');
+let sym = Symbol("foo");
 let symObj = Object(sym);
-typeof sym    // => "symbol"
-typeof symObj // => "object"
+typeof sym; // => "symbol"
+typeof symObj; // => "object"
 ```
 
 ## Specifications

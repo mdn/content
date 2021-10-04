@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.JSON
 ---
+
 {{JSRef}}
 
 The **`JSON`** object contains methods
@@ -42,9 +43,9 @@ Consider this example where {{jsxref("JSON.parse()")}} parses the string as JSON
 {{jsxref("Global_Objects/eval", "eval")}} executes the string as JavaScript:
 
 ```js
-let code = '"\u2028\u2029"'
-JSON.parse(code)  // evaluates to "\u2028\u2029" in all engines
-eval(code)        // throws a SyntaxError in old engines
+let code = '"\u2028\u2029"';
+JSON.parse(code); // evaluates to "\u2028\u2029" in all engines
+eval(code); // throws a SyntaxError in old engines
 ```
 
 Other differences include allowing only double-quoted strings and having no provisions
@@ -137,17 +138,17 @@ whitespace characters.
 
 ```json
 {
-  "browsers": {
-    "firefox": {
-      "name": "Firefox",
-      "pref_url": "about:config",
-      "releases": {
-        "1": {
-          "release_date": "2004-11-09",
-          "status": "retired",
-          "engine": "Gecko",
-          "engine_version": "1.7"
-        }
+  "browsers": {
+    "firefox": {
+      "name": "Firefox",
+      "pref_url": "about:config",
+      "releases": {
+        "1": {
+          "release_date": "2004-11-09",
+          "status": "retired",
+          "engine": "Gecko",
+          "engine_version": "1.7"
+        }
       }
     }
   }

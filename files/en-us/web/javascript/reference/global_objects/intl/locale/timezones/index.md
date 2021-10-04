@@ -14,6 +14,7 @@ tags:
   - time zone
 browser-compat: javascript.builtins.Intl.Locale.timeZones
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale.prototype.timeZones`** property is an accessor property which returns an array of supported time zones for a chosen `Locale`.
@@ -24,7 +25,6 @@ Returns an array with supported time zones for the associated `Locale`, returned
 represents an [IANA time zone](https://en.wikipedia.org/wiki/Daylight_saving_time#IANA_time_zone_database).
 
 > **Note:** If the Unicode Language Identifier does not contain the the `-` for the Unicode region subtag sequence, the returned value is `undefined`
-
 
 ## Examples
 

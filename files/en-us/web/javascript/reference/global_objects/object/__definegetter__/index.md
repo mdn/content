@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.defineGetter
 ---
+
 {{JSRef}}
 
 > **Warning:** This feature is deprecated in favor of defining getters using the [object
@@ -24,7 +25,7 @@ a function to be called when that property is looked up.
 ## Syntax
 
 ```js
-__defineGetter__(prop, func)
+__defineGetter__(prop, func);
 ```
 
 ### Parameters
@@ -49,7 +50,9 @@ to be defined on a pre-existing object.
 
 ```js
 var o = {};
-o.__defineGetter__('gimmeFive', function() { return 5; });
+o.__defineGetter__("gimmeFive", function () {
+  return 5;
+});
 console.log(o.gimmeFive); // 5
 ```
 
@@ -57,15 +60,19 @@ console.log(o.gimmeFive); // 5
 
 ```js
 // Using the get operator
-var o = { get gimmeFive() { return 5; } };
+var o = {
+  get gimmeFive() {
+    return 5;
+  },
+};
 console.log(o.gimmeFive); // 5
 
 // Using Object.defineProperty
 var o = {};
-Object.defineProperty(o, 'gimmeFive', {
-  get: function() {
+Object.defineProperty(o, "gimmeFive", {
+  get: function () {
     return 5;
-  }
+  },
 });
 console.log(o.gimmeFive); // 5
 ```

@@ -11,6 +11,7 @@ tags:
   - instanceof
 browser-compat: javascript.operators.instanceof
 ---
+
 {{jsSidebar("Operators")}}
 
 The **`instanceof` operator** tests to see if the
@@ -22,7 +23,7 @@ of an object. The return value is a boolean value.
 ## Syntax
 
 ```js
-object instanceof constructor
+object instanceof constructor;
 ```
 
 ### Parameters
@@ -42,30 +43,30 @@ The `instanceof` operator tests the presence of
 function C() {}
 function D() {}
 
-let o = new C()
+let o = new C();
 
 // true, because: Object.getPrototypeOf(o) === C.prototype
-o instanceof C
+o instanceof C;
 
 // false, because D.prototype is nowhere in o's prototype chain
-o instanceof D
+o instanceof D;
 
-o instanceof Object           // true, because:
-C.prototype instanceof Object // true
+o instanceof Object; // true, because:
+C.prototype instanceof Object; // true
 
-C.prototype = {}
-let o2 = new C()
+C.prototype = {};
+let o2 = new C();
 
-o2 instanceof C  // true
+o2 instanceof C; // true
 
 // false, because C.prototype is nowhere in
 // o's prototype chain anymore
-o instanceof C
+o instanceof C;
 
-D.prototype = new C()  // add C to [[Prototype]] linkage of D
-let o3 = new D()
-o3 instanceof D        // true
-o3 instanceof C        // true since C.prototype is now in o3's prototype chain
+D.prototype = new C(); // add C to [[Prototype]] linkage of D
+let o3 = new D();
+o3 instanceof D; // true
+o3 instanceof C; // true since C.prototype is now in o3's prototype chain
 ```
 
 Note that the value of an `instanceof` test can change based on changes to
@@ -97,16 +98,16 @@ use `myNode instanceof myNode.ownerDocument.defaultView.SVGElement`.
 The following example shows the behavior of `instanceof` with `String` objects.
 
 ```js
-let literalString = 'This is a literal string';
-let stringObject  = new String('String created with constructor');
+let literalString = "This is a literal string";
+let stringObject = new String("String created with constructor");
 
-literalString instanceof String;  // false, string literal is not a String
-stringObject  instanceof String;  // true
+literalString instanceof String; // false, string literal is not a String
+stringObject instanceof String; // true
 
-literalString instanceof Object;  // false, string literal is not an Object
-stringObject  instanceof Object;  // true
+literalString instanceof Object; // false, string literal is not an Object
+stringObject instanceof Object; // true
 
-stringObject  instanceof Date;    // false
+stringObject instanceof Date; // false
 ```
 
 ### Using instanceof with Date
@@ -116,9 +117,9 @@ The following example shows the behavior of `instanceof` with `Date` objects.
 ```js
 let myDate = new Date();
 
-myDate instanceof Date;      // true
-myDate instanceof Object;    // true
-myDate instanceof String;    // false
+myDate instanceof Date; // true
+myDate instanceof Object; // true
+myDate instanceof String; // false
 ```
 
 ### Objects created using Object.create()
@@ -126,8 +127,7 @@ myDate instanceof String;    // false
 The following example shows the behavior of `instanceof` with objects created using `Object.create()`
 
 ```js
-function Shape() {
-}
+function Shape() {}
 
 function Rectangle() {
   Shape.call(this); // call super constructor.
@@ -139,18 +139,18 @@ Rectangle.prototype.constructor = Rectangle;
 
 let rect = new Rectangle();
 
-rect instanceof Object;    // true
-rect instanceof Shape;     // true
+rect instanceof Object; // true
+rect instanceof Shape; // true
 rect instanceof Rectangle; // true
-rect instanceof String;    // false
+rect instanceof String; // false
 
-let literalObject     = {};
-let nullObject  = Object.create(null);
+let literalObject = {};
+let nullObject = Object.create(null);
 nullObject.name = "My object";
 
-literalObject    instanceof Object;   // true, every object literal has Object.prototype as prototype
-({})             instanceof Object;   // true, same case as above
-nullObject       instanceof Object;   // false, prototype is end of prototype chain (null)
+literalObject instanceof Object; // true, every object literal has Object.prototype as prototype
+({} instanceof Object); // true, same case as above
+nullObject instanceof Object; // false, prototype is end of prototype chain (null)
 ```
 
 ### Demonstrating that `mycar` is of type `Car` and type `Object`
@@ -166,9 +166,9 @@ function Car(make, model, year) {
   this.model = model;
   this.year = year;
 }
-let mycar = new Car('Honda', 'Accord', 1998)
-let a = mycar instanceof Car     // returns true
-let b = mycar instanceof Object  // returns true
+let mycar = new Car("Honda", "Accord", 1998);
+let a = mycar instanceof Car; // returns true
+let b = mycar instanceof Object; // returns true
 ```
 
 ### Not an instanceof
@@ -179,7 +179,7 @@ do
 ```js
 if (!(mycar instanceof Car)) {
   // Do something, like:
-  // mycar = new Car(mycar)
+  // mycar = new Car(mycar)
 }
 ```
 

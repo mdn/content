@@ -13,6 +13,7 @@ tags:
   - max
 browser-compat: javascript.builtins.Math.max
 ---
+
 {{JSRef}}
 
 The **`Math.max()`** function returns
@@ -57,9 +58,9 @@ If at least one of arguments cannot be converted to a number, the result is
 ### Using Math.max()
 
 ```js
-Math.max(10, 20);   //  20
+Math.max(10, 20); //  20
 Math.max(-10, -20); // -10
-Math.max(-10, 20);  //  20
+Math.max(-10, 20); //  20
 ```
 
 ### Getting the maximum element of an array
@@ -68,9 +69,9 @@ Math.max(-10, 20);  //  20
 element in a numeric array, by comparing each value:
 
 ```js
-var arr = [1,2,3];
-var max = arr.reduce(function(a, b) {
-    return Math.max(a, b);
+var arr = [1, 2, 3];
+var max = arr.reduce(function (a, b) {
+  return Math.max(a, b);
 }, 0);
 ```
 

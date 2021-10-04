@@ -2,6 +2,7 @@
 title: Intl.Segmenter
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter
 ---
+
 {{JSRef}}
 
 The **`Intl.Segmenter`** object is a constructor for segmenters, objects that enable language sensitive string splitting.

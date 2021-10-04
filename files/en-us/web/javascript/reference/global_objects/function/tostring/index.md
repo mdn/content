@@ -8,6 +8,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Function.toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the
@@ -18,7 +19,7 @@ source code of the function.
 ## Syntax
 
 ```js
-toString()
+toString();
 ```
 
 ### Return value
@@ -42,7 +43,7 @@ The `toString()` method will throw a {{jsxref("TypeError")}} exception
 `this` value object is not a `Function` object.
 
 ```js example-bad
-Function.prototype.toString.call('foo'); // TypeError
+Function.prototype.toString.call("foo"); // TypeError
 ```
 
 If the `toString()` method is called on built-in function objects or a
@@ -50,7 +51,7 @@ function created by `Function.prototype.bind`, `toString()`
 returns a _native function string_ which looks like
 
 ```js
-"function () {\n    [native code]\n}"
+"function () {\n    [native code]\n}";
 ```
 
 If the `toString()` method is called on a function created by the
@@ -62,8 +63,10 @@ It's also possible to explicitly get the string representation of a function usi
 `+` operator:
 
 ```js
-function foo() { return 'bar' }
-console.log(foo + ''); // "function foo() { return 'bar' }"
+function foo() {
+  return "bar";
+}
+console.log(foo + ""); // "function foo() { return 'bar' }"
 ```
 
 ## Examples

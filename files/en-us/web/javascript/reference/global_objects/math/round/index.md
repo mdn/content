@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Math.round
 ---
+
 {{JSRef}}
 
 The **`Math.round()`** function returns the value of a number
@@ -19,7 +20,7 @@ rounded to the nearest integer.
 ## Syntax
 
 ```js
-Math.round(x)
+Math.round(x);
 ```
 
 ### Parameters
@@ -51,10 +52,10 @@ created (`Math` has no constructor).
 ### Using round
 
 ```js
-Math.round( 20.49); //  20
-Math.round( 20.5 ); //  21
-Math.round( 42   ); //  42
-Math.round(-20.5 ); // -20
+Math.round(20.49); //  20
+Math.round(20.5); //  21
+Math.round(42); //  42
+Math.round(-20.5); // -20
 Math.round(-20.51); // -21
 ```
 

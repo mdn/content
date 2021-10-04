@@ -9,11 +9,11 @@ tags:
   - Experimental
 browser-compat: javascript.builtins.Object.hasOwn
 ---
+
 {{JSRef}}{{SeeCompatTable}}
 
 The **`Object.hasOwn()`** static method returns `true` if the specified object has the indicated property as its _own_ property.
 If the property is inherited, or does not exist, the method returns `false`.
-
 
 > **Note:** `Object.hasOwn()` is intended as a replacement for {{jsxref("Object.hasOwnProperty()")}}.
 
@@ -22,7 +22,7 @@ If the property is inherited, or does not exist, the method returns `false`.
 ## Syntax
 
 ```js
-Object.hasOwn(instance,prop)
+Object.hasOwn(instance, prop);
 ```
 
 ### Parameters
@@ -54,22 +54,22 @@ external object, `Object.hasOwn()` is more intuitive.
 
 ## Examples
 
-### Using hasOwn to test for a property's existence 
+### Using hasOwn to test for a property's existence
 
 The following code shows how to determine whether the `example` object contains a property named `prop`.
- 
+
 ```js
 let example = {};
-Object.hasOwn(example, 'prop');   // false = 'prop' has not been defined
+Object.hasOwn(example, "prop"); // false = 'prop' has not been defined
 
-example.prop = 'exists';
-Object.hasOwn(example, 'prop');   // true - 'prop' has been defined
+example.prop = "exists";
+Object.hasOwn(example, "prop"); // true - 'prop' has been defined
 
 example.prop = null;
-Object.hasOwn(example, 'prop');   // true - own property exists with value of null
+Object.hasOwn(example, "prop"); // true - own property exists with value of null
 
 example.prop = undefined;
-Object.hasOwn(example, 'prop');   // true - own property exists with value of undefined
+Object.hasOwn(example, "prop"); // true - own property exists with value of undefined
 ```
 
 ### Direct vs. inherited properties
@@ -77,18 +77,18 @@ Object.hasOwn(example, 'prop');   // true - own property exists with value of un
 The following example differentiates between direct properties and properties inherited through the prototype chain:
 
 ```js
-let example = {}
-example.prop = 'exists';
+let example = {};
+example.prop = "exists";
 
 // `hasOwn` will only return true for direct properties:
-Object.hasOwn(example, 'prop');             // returns true
-Object.hasOwn(example, 'toString');         // returns false
-Object.hasOwn(example, 'hasOwnProperty');   // returns false
+Object.hasOwn(example, "prop"); // returns true
+Object.hasOwn(example, "toString"); // returns false
+Object.hasOwn(example, "hasOwnProperty"); // returns false
 
 // The `in` operator will return true for direct or inherited properties:
-'prop' in example;                          // returns true
-'toString' in example;                      // returns true
-'hasOwnProperty' in example;                // returns true
+"prop" in example; // returns true
+"toString" in example; // returns true
+"hasOwnProperty" in example; // returns true
 ```
 
 ### Iterating over the properties of an object
@@ -119,10 +119,9 @@ The elements of an {{jsxref("Array")}} are defined as direct properties, so
 you can use `hasOwn()` method to check whether a particular index exists:
 
 ```js
-let fruits = ['Apple', 'Banana','Watermelon', 'Orange'];
-Object.hasOwn(fruits, 3);   // true ('Orange')
-Object.hasOwn(fruits, 4);   // false - not defined
-    
+let fruits = ["Apple", "Banana", "Watermelon", "Orange"];
+Object.hasOwn(fruits, 3); // true ('Orange')
+Object.hasOwn(fruits, 4); // false - not defined
 ```
 
 ### Problematic cases for hasOwnProperty
@@ -133,13 +132,13 @@ This section demonstrate that `hasOwn()` is immune to the problems that affect
 
 ```js
 let foo = {
-  hasOwnProperty: function() {
+  hasOwnProperty: function () {
     return false;
   },
-  bar: 'The dragons be out of office'
+  bar: "The dragons be out of office",
 };
 
-if (Object.hasOwn(foo, 'bar')) {
+if (Object.hasOwn(foo, "bar")) {
   console.log(foo.bar); //true - remplementation of hasOwnProperty() does not affect Object
 }
 ```
@@ -150,8 +149,8 @@ not inherit from `Object.prototype`, and so `hasOwnProperty()` is inaccessible.
 
 ```js
 let foo = Object.create(null);
-foo.prop = 'exists';
-if (Object.hasOwn(foo, 'prop')) {
+foo.prop = "exists";
+if (Object.hasOwn(foo, "prop")) {
   console.log(foo.prop); //true - works irrespective of how the object is created.
 }
 ```

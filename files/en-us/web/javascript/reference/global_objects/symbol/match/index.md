@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Symbol.match
 ---
+
 {{JSRef}}
 
 The **`Symbol.match`** well-known symbol specifies the matching of a regular expression against a string. This function is called by the {{jsxref("String.prototype.match()")}} method.
@@ -28,7 +29,7 @@ This function is also used to identify if objects have the behavior of regular e
 The following code will throw a {{jsxref("TypeError")}}:
 
 ```js
-'/bar/'.startsWith(/bar/);
+"/bar/".startsWith(/bar/);
 
 // Throws TypeError, as /bar/ is a regular expression
 // and Symbol.match is not modified.
@@ -39,8 +40,8 @@ However, if you set `Symbol.match` to `false`, the `isRegExp` check (that uses t
 ```js
 var re = /foo/;
 re[Symbol.match] = false;
-'/foo/'.startsWith(re); // true
-'/baz/'.endsWith(re);   // false
+"/foo/".startsWith(re); // true
+"/baz/".endsWith(re); // false
 ```
 
 ## Specifications

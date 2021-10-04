@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Number.MIN_SAFE_INTEGER
 ---
+
 {{JSRef}}
 
 The **`Number.MIN_SAFE_INTEGER`** constant represents the minimum safe integer in JavaScript (`-(2^53 - 1)`).
@@ -28,8 +29,8 @@ Because `MIN_SAFE_INTEGER` is a static property of {{jsxref("Number")}}, you alw
 ### Using MIN_SAFE_INTEGER
 
 ```js
-Number.MIN_SAFE_INTEGER // -9007199254740991
--(Math.pow(2, 53) - 1)  // -9007199254740991
+Number.MIN_SAFE_INTEGER - // -9007199254740991
+  (Math.pow(2, 53) - 1); // -9007199254740991
 ```
 
 ## Specifications

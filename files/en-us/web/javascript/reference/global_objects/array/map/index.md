@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.map
 ---
+
 {{JSRef}}
 
 The **`map()`** method **creates
@@ -100,7 +101,7 @@ determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/
 `callbackFn`, if invoked, may do so).
 
 The range of elements processed by `map` is set before the first invocation
-of `callbackFn`. Elements which are assigned to indexes already visited, or to indexes 
+of `callbackFn`. Elements which are assigned to indexes already visited, or to indexes
 outside the range, will not be visited by `callbackFn`.
 If existing elements of the array are changed after the call to `map`, their
 value will be the value at the time `callbackFn` visits them.
@@ -129,13 +130,11 @@ value of `{{jsxref("Function.prototype.call")}}`.
 // Production steps of ECMA-262, Edition 5, 15.4.4.19
 // Reference: https://es5.github.io/#x15.4.4.19
 if (!Array.prototype.map) {
-
-  Array.prototype.map = function(callback/*, thisArg*/) {
-
+  Array.prototype.map = function (callback /*, thisArg*/) {
     var T, A, k;
 
     if (this == null) {
-      throw new TypeError('this is null or not defined');
+      throw new TypeError("this is null or not defined");
     }
 
     // 1. Let O be the result of calling ToObject passing the |this|
@@ -149,8 +148,8 @@ if (!Array.prototype.map) {
 
     // 4. If IsCallable(callback) is false, throw a TypeError exception.
     // See: https://es5.github.com/#x9.11
-    if (typeof callback !== 'function') {
-      throw new TypeError(callback + ' is not a function');
+    if (typeof callback !== "function") {
+      throw new TypeError(callback + " is not a function");
     }
 
     // 5. If thisArg was supplied, let T be thisArg; else let T be undefined.
@@ -168,7 +167,6 @@ if (!Array.prototype.map) {
 
     // 8. Repeat, while k < len
     while (k < len) {
-
       var kValue, mappedValue;
 
       // a. Let Pk be ToString(k).
@@ -178,7 +176,6 @@ if (!Array.prototype.map) {
       //   This step can be combined with c
       // c. If kPresent is true, then
       if (k in O) {
-
         // i. Let kValue be the result of calling the Get internal
         //    method of O with argument Pk.
         kValue = O[k];
@@ -225,10 +222,10 @@ The following code takes an array of numbers and creates a new array containing 
 square roots of the numbers in the first array.
 
 ```js
-let numbers = [1, 4, 9]
-let roots = numbers.map(function(num) {
-    return Math.sqrt(num)
-})
+let numbers = [1, 4, 9];
+let roots = numbers.map(function (num) {
+  return Math.sqrt(num);
+});
 // roots is now     [1, 2, 3]
 // numbers is still [1, 4, 9]
 ```
@@ -239,15 +236,17 @@ The following code takes an array of objects and creates a new array containing 
 newly reformatted objects.
 
 ```js
-let kvArray = [{key: 1, value: 10},
-               {key: 2, value: 20},
-               {key: 3, value: 30}]
+let kvArray = [
+  { key: 1, value: 10 },
+  { key: 2, value: 20 },
+  { key: 3, value: 30 },
+];
 
-let reformattedArray = kvArray.map(obj => {
-   let rObj = {}
-   rObj[obj.key] = obj.value
-   return rObj
-})
+let reformattedArray = kvArray.map((obj) => {
+  let rObj = {};
+  rObj[obj.key] = obj.value;
+  return rObj;
+});
 // reformattedArray is now [{1: 10}, {2: 20}, {3: 30}],
 
 // kvArray is still:
@@ -263,10 +262,10 @@ argument is used with it. The argument will automatically be assigned from each 
 of the array as `map` loops through the original array.
 
 ```js
-let numbers = [1, 4, 9]
-let doubles = numbers.map(function(num) {
-  return num * 2
-})
+let numbers = [1, 4, 9];
+let doubles = numbers.map(function (num) {
+  return num * 2;
+});
 
 // doubles is now   [2, 8, 18]
 // numbers is still [1, 4, 9]
@@ -278,10 +277,10 @@ This example shows how to use map on a {{jsxref("String")}} to get an array of b
 the ASCII encoding representing the character values:
 
 ```js
-let map = Array.prototype.map
-let a = map.call('Hello World', function(x) {
-  return x.charCodeAt(0)
-})
+let map = Array.prototype.map;
+let a = map.call("Hello World", function (x) {
+  return x.charCodeAt(0);
+});
 // a now equals [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
 ```
 
@@ -294,10 +293,10 @@ This example shows how to iterate through a collection of objects collected by
 In this case, we return all the selected `option`s' values on the screen:
 
 ```js
-let elems = document.querySelectorAll('select option:checked')
-let values = Array.prototype.map.call(elems, function(obj) {
-  return obj.value
-})
+let elems = document.querySelectorAll("select option:checked");
+let values = Array.prototype.map.call(elems, function (obj) {
+  return obj.value;
+});
 ```
 
 An easier way would be the {{jsxref("Array.from()")}} method.
@@ -313,7 +312,7 @@ additional optional arguments. These habits may lead to confusing behaviors.
 Consider:
 
 ```js
-["1", "2", "3"].map(parseInt)
+["1", "2", "3"].map(parseInt);
 ```
 
 While one might expect `[1, 2, 3]`, the actual result is
@@ -334,43 +333,50 @@ Here is a concise example of the iteration steps:
 
 ```js
 // parseInt(string, radix) -> map(parseInt(value, index))
-/*  first iteration  (index is 0): */ parseInt("1", 0)  // 1
-/*  second iteration (index is 1): */ parseInt("2", 1)  // NaN
-/*  third iteration  (index is 2): */ parseInt("3", 2)  // NaN
+/*  first iteration  (index is 0): */ parseInt("1", 0); // 1
+/*  second iteration (index is 1): */ parseInt("2", 1); // NaN
+/*  third iteration  (index is 2): */ parseInt("3", 2); // NaN
 ```
 
 Then let's talk about solutions.
 
 ```js
 function returnInt(element) {
-  return parseInt(element, 10)
+  return parseInt(element, 10);
 }
 
-['1', '2', '3'].map(returnInt); // [1, 2, 3]
+["1", "2", "3"].map(returnInt); // [1, 2, 3]
 // Actual result is an array of numbers (as expected)
 
 // Same as above, but using the concise arrow function syntax
-['1', '2', '3'].map( str => parseInt(str) )
+["1", "2", "3"]
+  .map((str) => parseInt(str))
 
-// A simpler way to achieve the above, while avoiding the "gotcha":
-['1', '2', '3'].map(Number)  // [1, 2, 3]
+  [
+    // A simpler way to achieve the above, while avoiding the "gotcha":
+    ("1", "2", "3")
+  ].map(Number) // [1, 2, 3]
 
-// But unlike parseInt(), Number() will also return a float or (resolved) exponential notation:
-['1.1', '2.2e2', '3e300'].map(Number)  // [1.1, 220, 3e+300]
+  [
+    // But unlike parseInt(), Number() will also return a float or (resolved) exponential notation:
+    ("1.1", "2.2e2", "3e300")
+  ].map(Number) // [1.1, 220, 3e+300]
 
-// For comparison, if we use parseInt() on the array above:
-['1.1', '2.2e2', '3e300'].map( str => parseInt(str) ) // [1, 2, 3]
+  [
+    // For comparison, if we use parseInt() on the array above:
+    ("1.1", "2.2e2", "3e300")
+  ].map((str) => parseInt(str)); // [1, 2, 3]
 ```
 
 One alternative output of the map method being called with {{jsxref("parseInt")}} as a
 parameter runs as follows:
 
 ```js
-let xs = ['10', '10', '10']
+let xs = ["10", "10", "10"];
 
-xs = xs.map(parseInt)
+xs = xs.map(parseInt);
 
-console.log(xs)
+console.log(xs);
 // Actual result of 10,NaN,2 may be unexpected based on the above description.
 ```
 
@@ -379,12 +385,12 @@ console.log(xs)
 When {{jsxref("undefined")}} or nothing is returned:
 
 ```js
-let numbers = [1, 2, 3, 4]
-let filteredNumbers = numbers.map(function(num, index) {
+let numbers = [1, 2, 3, 4];
+let filteredNumbers = numbers.map(function (num, index) {
   if (index < 3) {
-     return num
+    return num;
   }
-})
+});
 // index goes from 0, so the filterNumbers are 1,2,3 and undefined.
 // filteredNumbers is [1, 2, 3, undefined]
 // numbers is still [1, 2, 3, 4]

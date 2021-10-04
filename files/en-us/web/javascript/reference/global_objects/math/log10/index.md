@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Math.log10
 ---
+
 {{JSRef}}
 
 The **`Math.log10()`** function returns the base 10 logarithm
@@ -46,7 +47,7 @@ of a number, that is
 ## Syntax
 
 ```js
-Math.log10(x)
+Math.log10(x);
 ```
 
 ### Parameters
@@ -76,10 +77,10 @@ constant {{jsxref("Math.LOG10E")}} which is 1 / {{jsxref("Math.LN10")}}.
 ### Using Math.log10()
 
 ```js
-Math.log10(2);      // 0.3010299956639812
-Math.log10(1);      // 0
-Math.log10(0);      // -Infinity
-Math.log10(-2);     // NaN
+Math.log10(2); // 0.3010299956639812
+Math.log10(1); // 0
+Math.log10(0); // -Infinity
+Math.log10(-2); // NaN
 Math.log10(100000); // 5
 ```
 
@@ -88,9 +89,11 @@ Math.log10(100000); // 5
 This can be emulated with the following function:
 
 ```js
-Math.log10 = Math.log10 || function(x) {
-  return Math.log(x) * Math.LOG10E;
-};
+Math.log10 =
+  Math.log10 ||
+  function (x) {
+    return Math.log(x) * Math.LOG10E;
+  };
 ```
 
 ## Specifications

@@ -10,6 +10,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.LinkError
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.LinkError`** object indicates an error during module instantiation (besides [traps](https://webassembly.org/docs/semantics/#traps) from the start function).
@@ -49,15 +50,15 @@ The following snippet creates a new `LinkError` instance, and logs its details t
 
 ```js
 try {
-  throw new WebAssembly.LinkError('Hello', 'someFile', 10);
+  throw new WebAssembly.LinkError("Hello", "someFile", 10);
 } catch (e) {
   console.log(e instanceof LinkError); // true
-  console.log(e.message);                 // "Hello"
-  console.log(e.name);                    // "LinkError"
-  console.log(e.fileName);                // "someFile"
-  console.log(e.lineNumber);              // 10
-  console.log(e.columnNumber);            // 0
-  console.log(e.stack);                   // returns the location where the code was run
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "LinkError"
+  console.log(e.fileName); // "someFile"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // returns the location where the code was run
 }
 ```
 

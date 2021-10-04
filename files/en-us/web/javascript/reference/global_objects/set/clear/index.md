@@ -10,6 +10,7 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.clear
 ---
+
 {{JSRef}}
 
 The **`clear()`** method removes all elements from a
@@ -20,7 +21,7 @@ The **`clear()`** method removes all elements from a
 ## Syntax
 
 ```js
-clear()
+clear();
 ```
 
 ### Return value
@@ -34,15 +35,15 @@ clear()
 ```js
 var mySet = new Set();
 mySet.add(1);
-mySet.add('foo');
+mySet.add("foo");
 
-mySet.size;       // 2
-mySet.has('foo'); // true
+mySet.size; // 2
+mySet.has("foo"); // true
 
 mySet.clear();
 
-mySet.size;       // 0
-mySet.has('bar')  // false
+mySet.size; // 0
+mySet.has("bar"); // false
 ```
 
 ## Specifications

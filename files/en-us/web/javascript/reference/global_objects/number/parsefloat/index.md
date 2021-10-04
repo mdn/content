@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Number.parseFloat
 ---
+
 {{JSRef}}
 
 The **`Number.parseFloat()`** method parses an argument and returns a floating point number. If a number cannot be parsed from the argument, it returns {{jsxref("NaN")}}.
@@ -18,7 +19,7 @@ The **`Number.parseFloat()`** method parses an argument and returns a floating p
 ## Syntax
 
 ```js
-Number.parseFloat(string)
+Number.parseFloat(string);
 ```
 
 ### Parameters

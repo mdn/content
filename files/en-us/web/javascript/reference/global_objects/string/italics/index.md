@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.italics
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`italics()`** method creates an {{HTMLElement("i")}} HTML
@@ -19,7 +20,7 @@ element that causes a string to be italic.
 ## Syntax
 
 ```js
-italics()
+italics();
 ```
 
 ### Return value
@@ -38,11 +39,11 @@ The `italics()` method embeds a string in an `<i>` element:
 The following example uses string methods to change the formatting of a string:
 
 ```js
-var worldString = 'Hello, world';
-console.log(worldString.blink());  // <blink>Hello, world</blink>
-console.log(worldString.bold());  // <b>Hello, world</b>
+var worldString = "Hello, world";
+console.log(worldString.blink()); // <blink>Hello, world</blink>
+console.log(worldString.bold()); // <b>Hello, world</b>
 console.log(worldString.italics()); // <i>Hello, world</i>
-console.log(worldString.strike());  // <strike>Hello, world</strike>
+console.log(worldString.strike()); // <strike>Hello, world</strike>
 ```
 
 ## Specifications

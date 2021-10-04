@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Symbol
 ---
+
 {{JSRef}}
 
 **`Symbol`** is a built-in object whose constructor returns a `symbol` [primitive](/en-US/docs/Glossary/Primitive) — also called a **Symbol value** or just a **Symbol** — that’s guaranteed to be unique. Symbols are often used to add unique property keys to an object that won’t collide with keys any other code might add to the object, and which are hidden from any mechanisms other code will typically use to access the object. That enables a form of weak {{Glossary("encapsulation")}}, or a weak form of [information hiding](https://en.wikipedia.org/wiki/Information_hiding).
@@ -20,21 +21,21 @@ Every `Symbol()` call is guaranteed to return a unique Symbol. Every `Symbol.for
 To create a new primitive Symbol, you write `Symbol()` with an optional string as its description:
 
 ```js
-let sym1 = Symbol()
-let sym2 = Symbol('foo')
-let sym3 = Symbol('foo')
+let sym1 = Symbol();
+let sym2 = Symbol("foo");
+let sym3 = Symbol("foo");
 ```
 
 The above code creates three new Symbols. Note that `Symbol("foo")` does not coerce the string `"foo"` into a Symbol. It creates a new Symbol each time:
 
 ```js
-Symbol('foo') === Symbol('foo')  // false
+Symbol("foo") === Symbol("foo"); // false
 ```
 
 The following syntax with the {{jsxref("Operators/new", "new")}} operator will throw a {{jsxref("TypeError")}}:
 
 ```js
-let sym = new Symbol()  // TypeError
+let sym = new Symbol(); // TypeError
 ```
 
 This prevents authors from creating an explicit `Symbol` wrapper object instead of a new Symbol value and might be surprising as creating explicit wrapper objects around primitive data types is generally possible (for example, `new Boolean`, `new String` and `new Number`).
@@ -42,10 +43,10 @@ This prevents authors from creating an explicit `Symbol` wrapper object instead 
 If you really want to create a `Symbol` wrapper object, you can use the `Object()` function:
 
 ```js
-let sym = Symbol('foo')
-typeof sym      // "symbol"
-let symObj = Object(sym)
-typeof symObj   // "object"
+let sym = Symbol("foo");
+typeof sym; // "symbol"
+let symObj = Object(sym);
+typeof symObj; // "object"
 ```
 
 ### Shared Symbols in the global Symbol registry
@@ -120,9 +121,9 @@ The method {{jsxref("Object.getOwnPropertySymbols()")}} returns an array of Symb
 The {{jsxref("Operators/typeof", "typeof")}} operator can help you to identify Symbols.
 
 ```js
-typeof Symbol() === 'symbol'
-typeof Symbol('foo') === 'symbol'
-typeof Symbol.iterator === 'symbol'
+typeof Symbol() === "symbol";
+typeof Symbol("foo") === "symbol";
+typeof Symbol.iterator === "symbol";
 ```
 
 ### Symbol type conversions
@@ -140,15 +141,15 @@ Some things to note when working with type conversion of Symbols.
 Symbols are not enumerable in [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) iterations. In addition, {{jsxref("Object.getOwnPropertyNames()")}} will not return Symbol object properties, however, you can use {{jsxref("Object.getOwnPropertySymbols()")}} to get these.
 
 ```js
-let obj = {}
+let obj = {};
 
-obj[Symbol('a')] = 'a'
-obj[Symbol.for('b')] = 'b'
-obj['c'] = 'c'
-obj.d = 'd'
+obj[Symbol("a")] = "a";
+obj[Symbol.for("b")] = "b";
+obj["c"] = "c";
+obj.d = "d";
 
 for (let i in obj) {
-   console.log(i)  // logs "c" and "d"
+  console.log(i); // logs "c" and "d"
 }
 ```
 
@@ -157,7 +158,7 @@ for (let i in obj) {
 Symbol-keyed properties will be completely ignored when using `JSON.stringify()`:
 
 ```js
-JSON.stringify({[Symbol('foo')]: 'foo'})
+JSON.stringify({ [Symbol("foo")]: "foo" });
 // '{}'
 ```
 
@@ -168,10 +169,10 @@ For more details, see {{jsxref("JSON.stringify()")}}.
 When a Symbol wrapper object is used as a property key, this object will be coerced to its wrapped Symbol:
 
 ```js
-let sym = Symbol('foo')
-let obj = {[sym]: 1}
-obj[sym]             // 1
-obj[Object(sym)]     // still 1
+let sym = Symbol("foo");
+let obj = { [sym]: 1 };
+obj[sym]; // 1
+obj[Object(sym)]; // still 1
 ```
 
 ## Specifications

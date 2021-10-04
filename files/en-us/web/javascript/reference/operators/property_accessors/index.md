@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.property_accessors
 ---
+
 {{jsSidebar("Operators")}}
 
 **Property accessors** provide access to an
@@ -18,8 +19,8 @@ object's properties by using the dot notation or the bracket notation.
 ## Syntax
 
 ```js
-object.property
-object['property']
+object.property;
+object["property"];
 ```
 
 ## Description
@@ -65,7 +66,7 @@ Here, the method named `createElement` is retrieved from
 `document` and is called.
 
 ```js
-document.createElement('pre')
+document.createElement("pre");
 ```
 
 If you use a method for a numeric literal, and the numeric literal has no exponent and
@@ -73,16 +74,15 @@ no decimal point, you should leave [white-space(s)](/en-US/docs/Glossary/Whitesp
 method call, so that the dot is not interpreted as a decimal point.
 
 ```js
-77 .toExponential()
+(77).toExponential();
 // or
-77
-.toExponential()
+(77).toExponential();
 // or
-;(77).toExponential()
+(77).toExponential();
 // or
-77..toExponential()
+(77).toExponential();
 // or
-77.0.toExponential()
+(77.0).toExponential();
 // because 77. === 77.0, no ambiguity
 ```
 
@@ -93,20 +93,20 @@ the `property_name` is just a string or [Symbol](/en-US/docs/Glossary/Symbol).
 `'1foo'`, `'!bar!'`, or even `' '` (a space).
 
 ```js
-const variable = object[property_name]
+const variable = object[property_name];
 object[property_name] = value;
 ```
 
 This does the exact same thing as the previous example.
 
 ```js
-document['createElement']('pre')
+document["createElement"]("pre");
 ```
 
 A space before bracket notation is allowed.
 
 ```js
-document ['createElement']('pre')
+document["createElement"]("pre");
 ```
 
 ### Property names
@@ -116,18 +116,20 @@ other value, including a number, is coerced to a string. This outputs
 `'value'`, since `1` is coerced into `'1'`.
 
 ```js
-let object = {}
-object['1'] = 'value'
-console.log(object[1])
+let object = {};
+object["1"] = "value";
+console.log(object[1]);
 ```
 
 This also outputs `'value'`, since both `foo` and
 `bar` are converted to the same string.
 
 ```js
-let foo = {unique_prop: 1}, bar = {unique_prop: 2}, object = {};
-object[foo] = 'value'
-console.log(object[bar])
+let foo = { unique_prop: 1 },
+  bar = { unique_prop: 2 },
+  object = {};
+object[foo] = "value";
+console.log(object[bar]);
 ```
 
 In the [SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey) JavaScript
@@ -151,7 +153,7 @@ the bracket notation can be used instead.
 For example, the following syntax is often seen in many scripts.
 
 ```js
-x = eval('document.forms.form_name.elements.' + strFormControl + '.value')
+x = eval("document.forms.form_name.elements." + strFormControl + ".value");
 ```
 
 `eval()` is slow and should be avoided whenever possible. Also,
@@ -160,7 +162,7 @@ names and `id`s of form controls. It is better to use bracket notation
 instead:
 
 ```js
-x = document.forms['form_name'].elements[strFormControl].value
+x = document.forms["form_name"].elements[strFormControl].value;
 ```
 
 ## Specifications

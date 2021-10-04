@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.getOwnPropertyNames
 ---
+
 {{JSRef}}
 
 The **`Object.getOwnPropertyNames()`** method returns an array of all properties (including non-enumerable properties except for those which use Symbol) found directly in a given object.
@@ -20,7 +21,7 @@ The **`Object.getOwnPropertyNames()`** method returns an array of all properties
 ## Syntax
 
 ```js
-Object.getOwnPropertyNames(obj)
+Object.getOwnPropertyNames(obj);
 ```
 
 ### Parameters
@@ -39,10 +40,10 @@ An array of strings that corresponds to the properties found directly in the giv
 In ES5, if the argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be coerced to an object.
 
 ```js
-Object.getOwnPropertyNames('foo');
+Object.getOwnPropertyNames("foo");
 // TypeError: "foo" is not an object (ES5 code)
 
-Object.getOwnPropertyNames('foo');
+Object.getOwnPropertyNames("foo");
 // ["0", "1", "2", "length"]  (ES2015 code)
 ```
 
@@ -51,33 +52,36 @@ Object.getOwnPropertyNames('foo');
 ### Using Object.getOwnPropertyNames()
 
 ```js
-var arr = ['a', 'b', 'c'];
+var arr = ["a", "b", "c"];
 console.log(Object.getOwnPropertyNames(arr).sort()); // .sort() is an array method.
 // logs ["0", "1", "2", "length"]
 
 // Array-like object
-var obj = { 0: 'a', 1: 'b', 2: 'c' };
+var obj = { 0: "a", 1: "b", 2: "c" };
 console.log(Object.getOwnPropertyNames(obj).sort()); // .sort() is an array method.
 // logs ["0", "1", "2"]
 
 // Logging property names and values using Array.forEach
-Object.getOwnPropertyNames(obj).forEach(
-  function (val, idx, array) {
-    console.log(val + ' -> ' + obj[val]);
-  }
-);
+Object.getOwnPropertyNames(obj).forEach(function (val, idx, array) {
+  console.log(val + " -> " + obj[val]);
+});
 // logs
 // 0 -> a
 // 1 -> b
 // 2 -> c
 
 // non-enumerable property
-var my_obj = Object.create({}, {
-  getFoo: {
-    value: function() { return this.foo; },
-    enumerable: false
+var my_obj = Object.create(
+  {},
+  {
+    getFoo: {
+      value: function () {
+        return this.foo;
+      },
+      enumerable: false,
+    },
   }
-});
+);
 my_obj.foo = 1;
 
 console.log(Object.getOwnPropertyNames(my_obj).sort());
@@ -90,14 +94,14 @@ Items on the prototype chain are not listed:
 
 ```js
 function ParentClass() {}
-ParentClass.prototype.inheritedMethod = function() {};
+ParentClass.prototype.inheritedMethod = function () {};
 
 function ChildClass() {
   this.prop = 5;
-  this.method = function() {};
+  this.method = function () {};
 }
-ChildClass.prototype = new ParentClass;
-ChildClass.prototype.prototypeMethod = function() {};
+ChildClass.prototype = new ParentClass();
+ChildClass.prototype.prototypeMethod = function () {};
 
 console.log(
   Object.getOwnPropertyNames(
@@ -114,7 +118,7 @@ This uses the {{jsxref("Array.prototype.filter()")}} function to remove the enum
 var target = myObject;
 var enum_and_nonenum = Object.getOwnPropertyNames(target);
 var enum_only = Object.keys(target);
-var nonenum_only = enum_and_nonenum.filter(function(key) {
+var nonenum_only = enum_and_nonenum.filter(function (key) {
   var indexInEnum = enum_only.indexOf(key);
   if (indexInEnum == -1) {
     // Not found in enum_only keys,

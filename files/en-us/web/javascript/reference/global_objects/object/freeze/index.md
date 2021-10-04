@@ -15,6 +15,7 @@ tags:
   - lock
 browser-compat: javascript.builtins.Object.freeze
 ---
+
 {{JSRef}}
 
 The **`Object.freeze()`** method **freezes** an
@@ -30,7 +31,7 @@ same object that was passed in.
 ## Syntax
 
 ```js
-Object.freeze(obj)
+Object.freeze(obj);
 ```
 
 ### Parameters
@@ -109,13 +110,13 @@ made immutable.
 ```js
 const obj = {
   prop() {},
-  foo: 'bar'
+  foo: "bar",
 };
 
 // Before freezing: new properties may be added,
 // and existing properties may be changed or removed
-obj.foo = 'baz';
-obj.lumpy = 'woof';
+obj.foo = "baz";
+obj.lumpy = "woof";
 delete obj.prop;
 
 // Freeze.
@@ -128,30 +129,30 @@ o === obj; // true
 Object.isFrozen(obj); // === true
 
 // Now any changes will fail
-obj.foo = 'quux'; // silently does nothing
+obj.foo = "quux"; // silently does nothing
 // silently doesn't add the property
-obj.quaxxor = 'the friendly duck';
+obj.quaxxor = "the friendly duck";
 
 // In strict mode such attempts will throw TypeErrors
 function fail() {
-  'use strict';
-  obj.foo = 'sparky'; // throws a TypeError
+  "use strict";
+  obj.foo = "sparky"; // throws a TypeError
   delete obj.foo; // throws a TypeError
   delete obj.quaxxor; // returns true since attribute 'quaxxor' was never added
-  obj.sparky = 'arf'; // throws a TypeError
+  obj.sparky = "arf"; // throws a TypeError
 }
 
 fail();
 
 // Attempted changes through Object.defineProperty;
 // both statements below throw a TypeError.
-Object.defineProperty(obj, 'ohai', { value: 17 });
-Object.defineProperty(obj, 'foo', { value: 'eit' });
+Object.defineProperty(obj, "ohai", { value: 17 });
+Object.defineProperty(obj, "foo", { value: "eit" });
 
 // It's also impossible to change the prototype
 // both statements below will throw a TypeError.
-Object.setPrototypeOf(obj, { x: 20 })
-obj.__proto__ = { x: 20 }
+Object.setPrototypeOf(obj, { x: 20 });
+obj.__proto__ = { x: 20 };
 ```
 
 ### Freezing arrays
@@ -164,7 +165,7 @@ a[0] = 1; // fails silently
 
 // In strict mode such attempt will throw a TypeError
 function fail() {
-  "use strict"
+  "use strict";
   a[0] = 1;
 }
 
@@ -180,13 +181,13 @@ _constant_. The following example shows that a frozen object is not constant
 
 ```js
 const obj1 = {
-  internal: {}
+  internal: {},
 };
 
 Object.freeze(obj1);
-obj1.internal.a = 'aValue';
+obj1.internal.a = "aValue";
 
-obj1.internal.a // 'aValue'
+obj1.internal.a; // 'aValue'
 ```
 
 To be a constant object, the entire reference graph (direct and indirect references to
@@ -210,8 +211,8 @@ const employee = {
   designation: "Developer",
   address: {
     street: "Rohini",
-    city: "Delhi"
-  }
+    city: "Delhi",
+  },
 };
 
 Object.freeze(employee);
@@ -219,7 +220,7 @@ Object.freeze(employee);
 employee.name = "Dummy"; // fails silently in non-strict mode
 employee.address.city = "Noida"; // attributes of child object can be modified
 
-console.log(employee.address.city) // Output: "Noida"
+console.log(employee.address.city); // Output: "Noida"
 ```
 
 To make an object immutable, recursively freeze each property which is of type object
@@ -251,13 +252,13 @@ function deepFreeze(object) {
 
 const obj2 = {
   internal: {
-    a: null
-  }
+    a: null,
+  },
 };
 
 deepFreeze(obj2);
 
-obj2.internal.a = 'anotherValue'; // fails silently in non-strict mode
+obj2.internal.a = "anotherValue"; // fails silently in non-strict mode
 obj2.internal.a; // null
 ```
 

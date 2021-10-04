@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - precedence
 ---
+
 {{jsSidebar("Operators")}}
 
 **Operator precedence** determines how operators are parsed concerning
@@ -30,8 +31,8 @@ precedence than addition and executed first, even though addition is written fir
 the code.
 
 ```js
-console.log(3 + 10 * 2);   // logs 23
-console.log(3 + (10 * 2)); // logs 23 because parentheses here are superfluous
+console.log(3 + 10 * 2); // logs 23
+console.log(3 + 10 * 2); // logs 23 because parentheses here are superfluous
 console.log((3 + 10) * 2); // logs 26 because the parentheses change the order
 ```
 
@@ -210,19 +211,19 @@ include logical conjunction ("AND"), nullish-coalescing, optional chaining, and 
 conditional operator. Some more examples follow.
 
 ```js
-a || (b * c);  // evaluate `a` first, then produce `a` if `a` is "truthy"
-a && (b < c);  // evaluate `a` first, then produce `a` if `a` is "falsy"
+a || b * c; // evaluate `a` first, then produce `a` if `a` is "truthy"
+a && b < c; // evaluate `a` first, then produce `a` if `a` is "falsy"
 a ?? (b || c); // evaluate `a` first, then produce `a` if `a` is not `null` and not `undefined`
-a?.b.c;        // evaluate `a` first, then produce `undefined` if `a` is `null` or `undefined`
+a?.b.c; // evaluate `a` first, then produce `undefined` if `a` is `null` or `undefined`
 ```
 
 ## Examples
 
 ```js
-3 > 2 && 2 > 1
+3 > 2 && 2 > 1;
 // returns true
 
-3 > 2 > 1
+3 > 2 > 1;
 // Returns false because 3 > 2 is true, then true is converted to 1
 // in inequality operators, therefore true > 1 becomes 1 > 1, which
 //  is false. Adding parentheses makes things clear: (3 > 2) > 1.

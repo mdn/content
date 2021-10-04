@@ -1,5 +1,5 @@
 ---
-title: 'RangeError: invalid array length'
+title: "RangeError: invalid array length"
 slug: Web/JavaScript/Reference/Errors/Invalid_array_length
 tags:
   - Error
@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - RangeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "Invalid array length" occurs when specifying an array length that is either negative or exceeds the maximum supported by the platform (i.e. when creating an {{jsxref("Array")}} or {{jsxref("ArrayBuffer")}}, or when setting the {{jsxref("Array.length")}} property).
@@ -51,26 +52,25 @@ using it as argument of the constructor.
 ### Invalid cases
 
 ```js example-bad
-new Array(Math.pow(2, 40))
-new Array(-1)
-new ArrayBuffer(Math.pow(2, 32)) //32-bit system
-new ArrayBuffer(-1)
+new Array(Math.pow(2, 40));
+new Array(-1);
+new ArrayBuffer(Math.pow(2, 32)); //32-bit system
+new ArrayBuffer(-1);
 
 let a = [];
-a.length = a.length - 1;         // set -1 to the length property
+a.length = a.length - 1; // set -1 to the length property
 
 let b = new Array(Math.pow(2, 32) - 1);
-b.length = b.length + 1;         // set 2^32 to the length property
+b.length = b.length + 1; // set 2^32 to the length property
 ```
 
 ### Valid cases
 
 ```js example-good
-[ Math.pow(2, 40) ]                     // [ 1099511627776 ]
-[ -1 ]                                  // [ -1 ]
-new ArrayBuffer(Math.pow(2, 32) - 1)
-new ArrayBuffer(Math.pow(2, 33))  // 64-bit systems after Firefox 89
-new ArrayBuffer(0)
+[Math.pow(2, 40)][-1]; // [ 1099511627776 ] // [ -1 ]
+new ArrayBuffer(Math.pow(2, 32) - 1);
+new ArrayBuffer(Math.pow(2, 33)); // 64-bit systems after Firefox 89
+new ArrayBuffer(0);
 
 let a = [];
 a.length = Math.max(0, a.length - 1);

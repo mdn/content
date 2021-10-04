@@ -9,6 +9,7 @@ tags:
   - inFinite
 browser-compat: javascript.builtins.isFinite
 ---
+
 {{jsSidebar("Objects")}}
 
 The global **`isFinite()`** function determines whether the
@@ -20,7 +21,7 @@ number.
 ## Syntax
 
 ```js
-isFinite(testValue)
+isFinite(testValue);
 ```
 
 ### Parameters
@@ -48,19 +49,19 @@ You can use this function to determine whether a number is a finite number. The
 ### Using isFinite
 
 ```js
-isFinite(Infinity);  // false
-isFinite(NaN);       // false
+isFinite(Infinity); // false
+isFinite(NaN); // false
 isFinite(-Infinity); // false
 
-isFinite(0);         // true
-isFinite(2e64);      // true
-isFinite(910);       // true
+isFinite(0); // true
+isFinite(2e64); // true
+isFinite(910); // true
 
-isFinite(null);      // true, would've been false with the
-                     // more robust Number.isFinite(null)
+isFinite(null); // true, would've been false with the
+// more robust Number.isFinite(null)
 
-isFinite('0');       // true, would've been false with the
-                     // more robust Number.isFinite("0")
+isFinite("0"); // true, would've been false with the
+// more robust Number.isFinite("0")
 ```
 
 ## Specifications

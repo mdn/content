@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.ListFormat.formatToParts
 ---
+
 {{JSRef}}
 
 The **`Intl.ListFormat.prototype.formatToParts()`** method
@@ -21,7 +22,7 @@ can be used to format a list of values in a locale-aware fashion.
 ## Syntax
 
 ```js
-formatToParts(list)
+formatToParts(list);
 ```
 
 ### Parameters
@@ -55,8 +56,11 @@ The locale and style options used for formatting are given when constructing the
 ### Using formatToParts
 
 ```js
-const fruits = ['Apple', 'Orange', 'Pineapple'];
-const myListFormat = new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' });
+const fruits = ["Apple", "Orange", "Pineapple"];
+const myListFormat = new Intl.ListFormat("en-GB", {
+  style: "long",
+  type: "conjunction",
+});
 
 console.table(myListFormat.formatToParts(fruits));
 // [
@@ -81,8 +85,8 @@ console.table(myListFormat.formatToParts(fruits));
 - {{jsxref("Intl.ListFormat")}}
 - {{jsxref("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}}
 - {{jsxref("Intl/RelativeTimeFormat/formatToParts",
-		"Intl.RelativeTimeFormat.prototype.formatToParts()")}}
+  	"Intl.RelativeTimeFormat.prototype.formatToParts()")}}
 - {{jsxref("Intl/NumberFormat/formatToParts",
-		"Intl.NumberFormat.prototype.formatToParts()")}}
+  	"Intl.NumberFormat.prototype.formatToParts()")}}
 - {{jsxref("Intl/DateTimeFormat/formatToParts",
-		"Intl.DateTimeFormat.prototype.formatToParts()")}}
+  	"Intl.DateTimeFormat.prototype.formatToParts()")}}

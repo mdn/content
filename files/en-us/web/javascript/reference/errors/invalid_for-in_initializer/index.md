@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: for-in loop head declarations may not have initializers'
+title: "SyntaxError: for-in loop head declarations may not have initializers"
 slug: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
 tags:
   - Error
@@ -7,6 +7,7 @@ tags:
   - Strict Mode
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript [strict
@@ -59,7 +60,7 @@ You can remove the initializer (`i = 0`) in the head of the for-in loop.
 ```js example-good
 "use strict";
 
-var obj = {a: 1, b: 2, c: 3 };
+var obj = { a: 1, b: 2, c: 3 };
 
 for (var i in obj) {
   console.log(obj[i]);
@@ -75,7 +76,7 @@ instead of a `for-in` loop to iterate an {{jsxref("Array")}}? The
 `for` loop allows you to set an initializer then as well:
 
 ```js example-good
-var arr = [ "a", "b", "c" ]
+var arr = ["a", "b", "c"];
 
 for (var i = 2; i < arr.length; i++) {
   console.log(arr[i]);

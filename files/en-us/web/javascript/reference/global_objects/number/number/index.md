@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Number.Number
 ---
+
 {{JSRef}}
 
 The **`Number()` constructor** creates a {{jsxref("Number")}} object.
@@ -16,7 +17,7 @@ The **`Number()` constructor** creates a {{jsxref("Number")}} object.
 ## Syntax
 
 ```js
-new Number(value)
+new Number(value);
 ```
 
 ### Parameters
@@ -29,10 +30,10 @@ new Number(value)
 ### Creating Number objects
 
 ```js
-const a = new Number('123'); // a === 123 is false
-const b = Number('123');     // b === 123 is true
-a instanceof Number;         // is true
-b instanceof Number;         // is false
+const a = new Number("123"); // a === 123 is false
+const b = Number("123"); // b === 123 is true
+a instanceof Number; // is true
+b instanceof Number; // is false
 ```
 
 ## Specifications

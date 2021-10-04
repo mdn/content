@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setTime
 ---
+
 {{JSRef}}
 
 The **`setTime()`** method sets the {{jsxref("Date")}} object
@@ -19,7 +20,7 @@ to the time represented by a number of milliseconds since January 1, 1970, 00:00
 ## Syntax
 
 ```js
-setTime(timeValue)
+setTime(timeValue);
 ```
 
 ### Parameters
@@ -43,7 +44,7 @@ Use the `setTime()` method to help assign a date and time to another
 ### Using setTime()
 
 ```js
-var theBigDay = new Date('July 1, 1999');
+var theBigDay = new Date("July 1, 1999");
 var sameAsBigDay = new Date();
 sameAsBigDay.setTime(theBigDay.getTime());
 ```

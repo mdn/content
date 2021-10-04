@@ -1,5 +1,5 @@
 ---
-title: 'null'
+title: "null"
 slug: Web/JavaScript/Reference/Global_Objects/null
 tags:
   - JavaScript
@@ -8,6 +8,7 @@ tags:
   - Primitive
 browser-compat: javascript.builtins.null
 ---
+
 {{jsSidebar("Operators")}}
 
 The value `null` represents the intentional absence of any object value. It
@@ -19,7 +20,7 @@ is treated as [falsy](/en-US/docs/Glossary/Falsy) for boolean operations.
 ## Syntax
 
 ```js
-null
+null;
 ```
 
 ## Description
@@ -51,15 +52,15 @@ between equality (==) and identity (===) operators](/en-US/docs/Web/JavaScript/R
 type-conversion.
 
 ```js
-typeof null          // "object" (not "null" for legacy reasons)
-typeof undefined     // "undefined"
-null === undefined   // false
-null  == undefined   // true
-null === null        // true
-null == null         // true
-!null                // true
-isNaN(1 + null)      // false
-isNaN(1 + undefined) // true
+typeof null; // "object" (not "null" for legacy reasons)
+typeof undefined; // "undefined"
+null === undefined; // false
+null == undefined; // true
+null === null; // true
+null == null; // true
+!null; // true
+isNaN(1 + null); // false
+isNaN(1 + undefined); // true
 ```
 
 ## Specifications

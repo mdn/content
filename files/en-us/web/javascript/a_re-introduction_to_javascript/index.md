@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - Learn
 ---
+
 {{jsSidebar}}
 
 Why a re-introduction? Because [JavaScript](/en-US/docs/Glossary/JavaScript) is notorious for being misunderstood. It is often derided as being a toy, but beneath its layer of deceptive simplicity, powerful language features await. JavaScript is now used by an incredible number of high-profile applications, showing that deeper knowledge of this technology is an important skill for any web or mobile developer.
@@ -61,7 +62,7 @@ ECMAScript has two built-in numeric types: **Number** and **BigInt**.
 The Number type is a [double-precision 64-bit binary format IEEE 754 value](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) (numbers between -(2^53 − 1) and 2^53 − 1). And where this article and other MDN articles refer to “integers”, what’s usually meant is a _representation_ of an integer using a Number value. But because such Number values aren’t real integers, you have to be a little careful. For example:
 
 ```js
-console.log(3 / 2);             // 1.5, not 1
+console.log(3 / 2); // 1.5, not 1
 console.log(Math.floor(3 / 2)); // 1
 ```
 
@@ -85,15 +86,15 @@ var circumference = 2 * Math.PI * r;
 You can convert a string to an integer using the built-in {{jsxref("Global_Objects/parseInt", "parseInt()")}} function. This takes the base for the conversion as an optional second argument, which you should always provide:
 
 ```js
-parseInt('123', 10); // 123
-parseInt('010', 10); // 10
+parseInt("123", 10); // 123
+parseInt("010", 10); // 10
 ```
 
 In older browsers, strings beginning with a "0" are assumed to be in octal (radix 8), but this hasn't been the case since 2013 or so. Unless you're certain of your string format, you can get surprising results on those older browsers:
 
 ```js
-parseInt('010');  //  8
-parseInt('0x10'); // 16
+parseInt("010"); //  8
+parseInt("0x10"); // 16
 ```
 
 Here, we see the {{jsxref("Global_Objects/parseInt", "parseInt()")}} function treat the first string as octal due to the leading 0, and the second string as hexadecimal due to the leading "0x". The _hexadecimal notation is still in place_; only octal has been removed.
@@ -101,7 +102,7 @@ Here, we see the {{jsxref("Global_Objects/parseInt", "parseInt()")}} function tr
 If you want to convert a binary number to an integer, just change the base:
 
 ```js
-parseInt('11', 2); // 3
+parseInt("11", 2); // 3
 ```
 
 Similarly, you can parse floating point numbers using the built-in {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} function. Unlike its {{jsxref("Global_Objects/parseInt", "parseInt()")}} cousin, `parseFloat()` always uses base 10.
@@ -109,15 +110,15 @@ Similarly, you can parse floating point numbers using the built-in {{jsxref("Glo
 You can also use the unary `+` operator to convert values to numbers:
 
 ```js
-+ '42';   // 42
-+ '010';  // 10
-+ '0x10'; // 16
++"42"; // 42
++"010"; // 10
++"0x10"; // 16
 ```
 
 A special value called {{jsxref("NaN")}} (short for "Not a Number") is returned if the string is non-numeric:
 
 ```js
-parseInt('hello', 10); // NaN
+parseInt("hello", 10); // NaN
 ```
 
 `NaN` is toxic: if you provide it as an operand to any mathematical operation, the result will also be `NaN`:
@@ -130,29 +131,29 @@ You can reliably test for `NaN` using the built-in {{jsxref("Number.isNaN", "Num
 
 ```js
 Number.isNaN(NaN); // true
-Number.isNaN('hello'); // false
-Number.isNaN('1'); // false
+Number.isNaN("hello"); // false
+Number.isNaN("1"); // false
 Number.isNaN(undefined); // false
 Number.isNaN({}); // false
-Number.isNaN([1]) // false
-Number.isNaN([1,2]) // false
+Number.isNaN([1]); // false
+Number.isNaN([1, 2]); // false
 ```
 
 But don’t test for `NaN` using the global {{jsxref("Global_Objects/isNaN", "isNaN()")}} function, [which has unintuitive behavior](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#confusing_special-case_behavior):
 
 ```js
-isNaN('hello'); // true
-isNaN('1'); // false
+isNaN("hello"); // true
+isNaN("1"); // false
 isNaN(undefined); // true
 isNaN({}); // true
-isNaN([1]) // false
-isNaN([1,2]) // true
+isNaN([1]); // false
+isNaN([1, 2]); // true
 ```
 
 JavaScript also has the special values {{jsxref("Infinity")}} and `-Infinity`:
 
 ```js
- 1 / 0; //  Infinity
+1 / 0; //  Infinity
 -1 / 0; // -Infinity
 ```
 
@@ -175,15 +176,15 @@ If you want to represent a single character, you just use a string consisting of
 To find the length of a string (in code units), access its [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length) property:
 
 ```js
-'hello'.length; // 5
+"hello".length; // 5
 ```
 
 There's our first brush with JavaScript objects! Did we mention that you can use strings like {{jsxref("Object", "objects", "", 1)}} too? They have {{jsxref("String", "methods", "#instance_methods", 1)}} as well that allow you to manipulate the string and access information about the string:
 
 ```js
-'hello'.charAt(0); // "h"
-'hello, world'.replace('world', 'mars'); // "hello, mars"
-'hello'.toUpperCase(); // "HELLO"
+"hello".charAt(0); // "h"
+"hello, world".replace("world", "mars"); // "hello, mars"
+"hello".toUpperCase(); // "HELLO"
 ```
 
 ## Other types
@@ -198,7 +199,7 @@ JavaScript has a boolean type, with possible values `true` and `false` (both of 
 You can perform this conversion explicitly using the `Boolean()` function:
 
 ```js
-Boolean('');  // false
+Boolean(""); // false
 Boolean(234); // true
 ```
 
@@ -214,7 +215,7 @@ New variables in JavaScript are declared using one of three keywords: [`let`](/e
 
 ```js
 let a;
-let name = 'Simon';
+let name = "Simon";
 ```
 
 The following is an example of scope with a variable declared with **`let`**:
@@ -240,7 +241,7 @@ Pi = 1; // will throw an error because you cannot change a constant variable.
 
 ```js
 var a;
-var name = 'Simon';
+var name = "Simon";
 ```
 
 An example of scope with a variable declared with **`var`:**
@@ -273,14 +274,14 @@ You can use `++` and `--` to increment and decrement respectively. These can be 
 The [`+` operator](/en-US/docs/Web/JavaScript/Reference/Operators#addition) also does string concatenation:
 
 ```js
-'hello' + ' world'; // "hello world"
+"hello" + " world"; // "hello world"
 ```
 
 If you add a string to a number (or other value) everything is converted into a string first. This might trip you up:
 
 ```js
-'3' + 4 + 5;  // "345"
- 3 + 4 + '5'; // "75"
+"3" + 4 + 5; // "345"
+3 + 4 + "5"; // "75"
 ```
 
 Adding an empty string to something is a useful way of converting it to a string itself.
@@ -288,15 +289,15 @@ Adding an empty string to something is a useful way of converting it to a string
 [Comparisons](/en-US/docs/Web/JavaScript/Reference/Operators) in JavaScript can be made using `<`, `>`, `<=` and `>=`. These work for both strings and numbers. Equality is a little less straightforward. The double-equals operator performs type coercion if you give it different types, with sometimes interesting results:
 
 ```js
-123 == '123'; // true
+123 == "123"; // true
 1 == true; // true
 ```
 
 To avoid type coercion, use the triple-equals operator:
 
 ```js
-123 === '123'; // false
-1 === true;    // false
+123 === "123"; // false
+1 === true; // false
 ```
 
 There are also `!=` and `!==` operators.
@@ -308,15 +309,15 @@ JavaScript also has [bitwise operations](/en-US/docs/Web/JavaScript/Reference/Op
 JavaScript has a similar set of control structures to other languages in the C family. Conditional statements are supported by `if` and `else`; you can chain them together if you like:
 
 ```js
-var name = 'kittens';
-if (name === 'puppies') {
-  name += ' woof';
-} else if (name === 'kittens') {
-  name += ' meow';
+var name = "kittens";
+if (name === "puppies") {
+  name += " woof";
+} else if (name === "kittens") {
+  name += " meow";
 } else {
-  name += '!';
+  name += "!";
 }
-name === 'kittens meow';
+name === "kittens meow";
 ```
 
 JavaScript has `while` loops and `do-while` loops. The first is good for basic looping; the second for loops where you wish to ensure that the body of the loop is executed at least once:
@@ -371,17 +372,17 @@ var name = cachedName || (cachedName = getName());
 JavaScript has a ternary operator for conditional expressions:
 
 ```js
-var allowed = (age > 18) ? 'yes' : 'no';
+var allowed = age > 18 ? "yes" : "no";
 ```
 
 The `switch` statement can be used for multiple branches based on a number or string:
 
 ```js
 switch (action) {
-  case 'draw':
+  case "draw":
     drawIt();
     break;
-  case 'eat':
+  case "eat":
     eatIt();
     break;
   default:
@@ -446,12 +447,12 @@ Object literal syntax can be used to initialize an object in its entirety:
 
 ```js
 var obj = {
-  name: 'Carrot',
-  _for: 'Max', // 'for' is a reserved word, use '_for' instead.
+  name: "Carrot",
+  _for: "Max", // 'for' is a reserved word, use '_for' instead.
   details: {
-    color: 'orange',
-    size: 12
-  }
+    color: "orange",
+    size: 12,
+  },
 };
 ```
 
@@ -459,7 +460,7 @@ Attribute access can be chained together:
 
 ```js
 obj.details.color; // orange
-obj['details']['size']; // 12
+obj["details"]["size"]; // 12
 ```
 
 The following example creates an object prototype(`Person`) and an instance of that prototype(`you`).
@@ -471,7 +472,7 @@ function Person(name, age) {
 }
 
 // Define an object
-var you = new Person('You', 24);
+var you = new Person("You", 24);
 // We are creating a new person named "You" aged 24.
 ```
 
@@ -479,7 +480,7 @@ var you = new Person('You', 24);
 
 ```js
 // dot notation
-obj.name = 'Simon';
+obj.name = "Simon";
 var name = obj.name;
 ```
 
@@ -487,18 +488,18 @@ And...
 
 ```js
 // bracket notation
-obj['name'] = 'Simon';
-var name = obj['name'];
+obj["name"] = "Simon";
+var name = obj["name"];
 // can use a variable to define a key
-var user = prompt('what is your key?')
-obj[user] = prompt('what is its value?')
+var user = prompt("what is your key?");
+obj[user] = prompt("what is its value?");
 ```
 
 These are also semantically equivalent. The second method has the advantage that the name of the property is provided as a string, which means it can be calculated at run-time. However, using this method prevents some JavaScript engine and minifier optimizations being applied. It can also be used to set and get properties with names that are [reserved words](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords):
 
 ```js
-obj.for = 'Simon'; // Syntax error, because 'for' is a reserved word
-obj['for'] = 'Simon'; // works fine
+obj.for = "Simon"; // Syntax error, because 'for' is a reserved word
+obj["for"] = "Simon"; // works fine
 ```
 
 > **Note:** Starting in ECMAScript 5, reserved words may be used as object property names "in the buff". This means that they don't need to be "clothed" in quotes when defining object literals. See the ES5 [Spec](https://es5.github.io/#x7.6.1).
@@ -515,24 +516,24 @@ One way of creating arrays is as follows:
 
 ```js
 var a = new Array();
-a[0] = 'dog';
-a[1] = 'cat';
-a[2] = 'hen';
+a[0] = "dog";
+a[1] = "cat";
+a[2] = "hen";
 a.length; // 3
 ```
 
 A more convenient notation is to use an array literal:
 
 ```js
-var a = ['dog', 'cat', 'hen'];
+var a = ["dog", "cat", "hen"];
 a.length; // 3
 ```
 
 Note that `array.length` isn't necessarily the number of items in the array. Consider the following:
 
 ```js
-var a = ['dog', 'cat', 'hen'];
-a[100] = 'fox';
+var a = ["dog", "cat", "hen"];
+a[100] = "fox";
 a.length; // 101
 ```
 
@@ -565,7 +566,7 @@ You could also iterate over an array using a [`for`...`in`](/en-US/docs/Web/Java
 Another way of iterating over an array that was added with ECMAScript 5 is [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach):
 
 ```js
-['dog', 'cat', 'hen'].forEach(function(currentValue, index, array) {
+["dog", "cat", "hen"].forEach(function (currentValue, index, array) {
   // Do something with currentValue or array[index]
 });
 ```
@@ -707,7 +708,7 @@ function() {
 But such an anonymous function isn’t useful in isolation — because without a name, there’s no way to call the function. So in practice, anonymous functions are typically used as arguments to other functions or are made callable by immediately assigning them to a variable that can be used to invoke the function:
 
 ```js
-var avg = function() {
+var avg = function () {
   var sum = 0;
   for (var i = 0, j = arguments.length; i < j; i++) {
     sum += arguments[i];
@@ -721,7 +722,7 @@ That makes the anonymous function invocable by calling `avg()` with some argumen
 But there’s a way that anonymous functions can be useful even without ever being assigned to variables or passed as arguments to other functions: JavaScript provides a mechanism for simultaneously declaring and invoking a function using a single expression. It’s called an [Immediately invoked function expression (IIFE)](/en-US/docs/Glossary/IIFE), and the syntax for using it with an anonymous function looks like this:
 
 ```js
-(function() {
+(function () {
   // …
 })();
 ```
@@ -734,11 +735,12 @@ JavaScript allows you to call functions recursively. This is particularly useful
 
 ```js
 function countChars(elm) {
-  if (elm.nodeType == 3) { // TEXT_NODE
+  if (elm.nodeType == 3) {
+    // TEXT_NODE
     return elm.nodeValue.length;
   }
   var count = 0;
-  for (var i = 0, child; child = elm.childNodes[i]; i++) {
+  for (var i = 0, child; (child = elm.childNodes[i]); i++) {
     count += countChars(child);
   }
   return count;
@@ -749,11 +751,12 @@ This highlights a potential problem with anonymous functions: how do you call th
 
 ```js
 var charsInBody = (function counter(elm) {
-  if (elm.nodeType == 3) { // TEXT_NODE
+  if (elm.nodeType == 3) {
+    // TEXT_NODE
     return elm.nodeValue.length;
   }
   var count = 0;
-  for (var i = 0, child; child = elm.childNodes[i]; i++) {
+  for (var i = 0, child; (child = elm.childNodes[i]); i++) {
     count += counter(child);
   }
   return count;
@@ -774,17 +777,17 @@ In classic Object Oriented Programming, objects are collections of data and meth
 function makePerson(first, last) {
   return {
     first: first,
-    last: last
+    last: last,
   };
 }
 function personFullName(person) {
-  return person.first + ' ' + person.last;
+  return person.first + " " + person.last;
 }
 function personFullNameReversed(person) {
-  return person.last + ', ' + person.first;
+  return person.last + ", " + person.first;
 }
 
-var s = makePerson('Simon', 'Willison');
+var s = makePerson("Simon", "Willison");
 personFullName(s); // "Simon Willison"
 personFullNameReversed(s); // "Willison, Simon"
 ```
@@ -796,16 +799,16 @@ function makePerson(first, last) {
   return {
     first: first,
     last: last,
-    fullName: function() {
-      return this.first + ' ' + this.last;
+    fullName: function () {
+      return this.first + " " + this.last;
     },
-    fullNameReversed: function() {
-      return this.last + ', ' + this.first;
-    }
+    fullNameReversed: function () {
+      return this.last + ", " + this.first;
+    },
   };
 }
 
-var s = makePerson('Simon', 'Willison');
+var s = makePerson("Simon", "Willison");
 s.fullName(); // "Simon Willison"
 s.fullNameReversed(); // "Willison, Simon"
 ```
@@ -815,7 +818,7 @@ Note on the [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) keywor
 Note that `this` is a frequent cause of mistakes. For example:
 
 ```js
-var s = makePerson('Simon', 'Willison');
+var s = makePerson("Simon", "Willison");
 var fullName = s.fullName;
 fullName(); // undefined undefined
 ```
@@ -828,14 +831,14 @@ We can take advantage of the `this` keyword to improve our `makePerson` function
 function Person(first, last) {
   this.first = first;
   this.last = last;
-  this.fullName = function() {
-    return this.first + ' ' + this.last;
+  this.fullName = function () {
+    return this.first + " " + this.last;
   };
-  this.fullNameReversed = function() {
-    return this.last + ', ' + this.first;
+  this.fullNameReversed = function () {
+    return this.last + ", " + this.first;
   };
 }
-var s = new Person('Simon', 'Willison');
+var s = new Person("Simon", "Willison");
 ```
 
 We have introduced another keyword: [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). `new` is strongly related to `this`. It creates a brand new empty object, and then calls the function specified, with `this` set to that new object. Notice though that the function specified with `this` does not return a value but merely modifies the `this` object. It's `new` that returns the `this` object to the calling site. Functions that are designed to be called by `new` are called constructor functions. Common practice is to capitalize these functions as a reminder to call them with `new`.
@@ -846,10 +849,10 @@ Our person objects are getting better, but there are still some ugly edges to th
 
 ```js
 function personFullName() {
-  return this.first + ' ' + this.last;
+  return this.first + " " + this.last;
 }
 function personFullNameReversed() {
-  return this.last + ', ' + this.first;
+  return this.last + ", " + this.first;
 }
 function Person(first, last) {
   this.first = first;
@@ -866,11 +869,11 @@ function Person(first, last) {
   this.first = first;
   this.last = last;
 }
-Person.prototype.fullName = function() {
-  return this.first + ' ' + this.last;
+Person.prototype.fullName = function () {
+  return this.first + " " + this.last;
 };
-Person.prototype.fullNameReversed = function() {
-  return this.last + ', ' + this.first;
+Person.prototype.fullNameReversed = function () {
+  return this.last + ", " + this.first;
 };
 ```
 
@@ -879,10 +882,10 @@ Person.prototype.fullNameReversed = function() {
 This is an incredibly powerful tool. JavaScript lets you modify something's prototype at any time in your program, which means you can add extra methods to existing objects at runtime:
 
 ```js
-var s = new Person('Simon', 'Willison');
+var s = new Person("Simon", "Willison");
 s.firstNameCaps(); // TypeError on line 1: s.firstNameCaps is not a function
 
-Person.prototype.firstNameCaps = function() {
+Person.prototype.firstNameCaps = function () {
   return this.first.toUpperCase();
 };
 s.firstNameCaps(); // "SIMON"
@@ -891,11 +894,11 @@ s.firstNameCaps(); // "SIMON"
 Interestingly, you can also add things to the prototype of built-in JavaScript objects. Let's add a method to `String` that returns that string in reverse:
 
 ```js
-var s = 'Simon';
+var s = "Simon";
 s.reversed(); // TypeError on line 1: s.reversed is not a function
 
-String.prototype.reversed = function() {
-  var r = '';
+String.prototype.reversed = function () {
+  var r = "";
   for (var i = this.length - 1; i >= 0; i--) {
     r += this[i];
   }
@@ -908,18 +911,18 @@ s.reversed(); // nomiS
 Our new method even works on string literals!
 
 ```js
-'This can now be reversed'.reversed(); // desrever eb won nac sihT
+"This can now be reversed".reversed(); // desrever eb won nac sihT
 ```
 
 As mentioned before, the prototype forms part of a chain. The root of that chain is `Object.prototype`, whose methods include `toString()` — it is this method that is called when you try to represent an object as a string. This is useful for debugging our `Person` objects:
 
 ```js
-var s = new Person('Simon', 'Willison');
+var s = new Person("Simon", "Willison");
 s.toString(); // [object Object]
 
-Person.prototype.toString = function() {
-  return '<Person: ' + this.fullName() + '>';
-}
+Person.prototype.toString = function () {
+  return "<Person: " + this.fullName() + ">";
+};
 
 s.toString(); // "<Person: Simon Willison>"
 ```
@@ -939,13 +942,13 @@ This isn't an exact replica of `new` as it doesn't set up the prototype chain (i
 Calling
 
 ```js
-var bill = trivialNew(Person, 'William', 'Orange');
+var bill = trivialNew(Person, "William", "Orange");
 ```
 
 is therefore almost equivalent to
 
 ```js
-var bill = new Person('William', 'Orange');
+var bill = new Person("William", "Orange");
 ```
 
 `apply()` has a sister function named [`call`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call), which again lets you set `this` but takes an expanded argument list as opposed to an array.
@@ -954,7 +957,7 @@ var bill = new Person('William', 'Orange');
 function lastNameCaps() {
   return this.last.toUpperCase();
 }
-var s = new Person('Simon', 'Willison');
+var s = new Person("Simon", "Willison");
 lastNameCaps.call(s);
 // Is the same as:
 s.lastNameCaps = lastNameCaps;
@@ -971,7 +974,7 @@ function parentFunc() {
 
   function nestedFunc() {
     var b = 4; // parentFunc can't use this
-    return a + b;
+    return a + b;
   }
   return nestedFunc(); // 5
 }
@@ -987,7 +990,7 @@ This leads us to one of the most powerful abstractions that JavaScript has to of
 
 ```js
 function makeAdder(a) {
-  return function(b) {
+  return function (b) {
     return a + b;
   };
 }

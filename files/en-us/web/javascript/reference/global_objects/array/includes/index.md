@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.includes
 ---
+
 {{JSRef}}
 
 The **`includes()`** method determines whether an array
@@ -23,8 +24,8 @@ includes a certain value among its entries, returning `true` or
 ## Syntax
 
 ```js
-includes(searchElement)
-includes(searchElement, fromIndex)
+includes(searchElement);
+includes(searchElement, fromIndex);
 ```
 
 ### Parameters
@@ -67,12 +68,13 @@ but `false` is _not_ considered to be the same as `0`.
 ## Examples
 
 ```js
-[1, 2, 3].includes(2)         // true
-[1, 2, 3].includes(4)         // false
-[1, 2, 3].includes(3, 3)      // false
-[1, 2, 3].includes(3, -1)     // true
-[1, 2, NaN].includes(NaN)     // true
-["1", "2", "3"].includes(3)   // false
+[1, 2, 3]
+  .includes(2) // true
+  [(1, 2, 3)].includes(4) // false
+  [(1, 2, 3)].includes(3, 3) // false
+  [(1, 2, 3)].includes(3, -1) // true
+  [(1, 2, NaN)].includes(NaN) // true
+  [("1", "2", "3")].includes(3); // false
 ```
 
 ### `fromIndex` is greater than or equal to the array length
@@ -81,10 +83,10 @@ If `fromIndex` is greater than or equal to the length of the
 array, `false` is returned. The array will not be searched.
 
 ```js
-let arr = ['a', 'b', 'c']
+let arr = ["a", "b", "c"];
 
-arr.includes('c', 3)    // false
-arr.includes('c', 100)  // false
+arr.includes("c", 3); // false
+arr.includes("c", 100); // false
 ```
 
 ### Computed index is less than 0
@@ -99,12 +101,12 @@ be used as a position in the array at which to begin searching for
 // fromIndex is -100
 // computed index is 3 + (-100) = -97
 
-let arr = ['a', 'b', 'c']
+let arr = ["a", "b", "c"];
 
-arr.includes('a', -100) // true
-arr.includes('b', -100) // true
-arr.includes('c', -100) // true
-arr.includes('a', -2)   // false
+arr.includes("a", -100); // true
+arr.includes("b", -100); // true
+arr.includes("c", -100); // true
+arr.includes("a", -2); // false
 ```
 
 ### includes() used as a generic method
@@ -117,10 +119,10 @@ The example below illustrates `includes()` method called on the function's
 [arguments](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object.
 
 ```js
-(function() {
-  console.log(Array.prototype.includes.call(arguments, 'a'))  // true
-  console.log(Array.prototype.includes.call(arguments, 'd'))  // false
-})('a','b','c') 
+(function () {
+  console.log(Array.prototype.includes.call(arguments, "a")); // true
+  console.log(Array.prototype.includes.call(arguments, "d")); // false
+})("a", "b", "c");
 ```
 
 ## Specifications

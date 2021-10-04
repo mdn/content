@@ -9,6 +9,7 @@ tags:
   - Primary Expression
 browser-compat: javascript.operators.async_function
 ---
+
 {{jsSidebar("Operators")}}
 
 The **`async function`** keyword can be used to define
@@ -47,29 +48,31 @@ An `async function` expression is very similar to, and has almost the same synt
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
   });
-};
+}
 
-const add = async function(x) { // async function expression assigned to a variable
+const add = async function (x) {
+  // async function expression assigned to a variable
   let a = await resolveAfter2Seconds(20);
   let b = await resolveAfter2Seconds(30);
   return x + a + b;
 };
 
-add(10).then(v => {
-  console.log(v);  // prints 60 after 4 seconds.
+add(10).then((v) => {
+  console.log(v); // prints 60 after 4 seconds.
 });
 
-(async function(x) { // async function expression used as an IIFE
+(async function (x) {
+  // async function expression used as an IIFE
   let p_a = resolveAfter2Seconds(20);
   let p_b = resolveAfter2Seconds(30);
-  return x + await p_a + await p_b;
-})(10).then(v => {
-  console.log(v);  // prints 60 after 2 seconds.
+  return x + (await p_a) + (await p_b);
+})(10).then((v) => {
+  console.log(v); // prints 60 after 2 seconds.
 });
 ```
 

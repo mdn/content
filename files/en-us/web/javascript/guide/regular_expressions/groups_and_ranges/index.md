@@ -10,6 +10,7 @@ tags:
   - ranges
   - regex
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 Groups and ranges indicate groups and ranges of expression characters.
@@ -205,7 +206,8 @@ Groups and ranges indicate groups and ranges of expression characters.
 ### Counting vowels
 
 ```js
-var aliceExcerpt = "There was a long silence after this, and Alice could only hear whispers now and then.";
+var aliceExcerpt =
+  "There was a long silence after this, and Alice could only hear whispers now and then.";
 var regexpVowels = /[aeiouy]/g;
 
 console.log("Number of vowels:", aliceExcerpt.match(regexpVowels).length);
@@ -218,11 +220,11 @@ console.log("Number of vowels:", aliceExcerpt.match(regexpVowels).length);
 let personList = `First_Name: John, Last_Name: Doe
 First_Name: Jane, Last_Name: Smith`;
 
-let regexpNames =  /First_Name: (\w+), Last_Name: (\w+)/mg;
+let regexpNames = /First_Name: (\w+), Last_Name: (\w+)/gm;
 let match = regexpNames.exec(personList);
 do {
-  console.log(`Hello ${match[1]} ${match[2]}`);
-} while((match = regexpNames.exec(personList)) !== null);
+  console.log(`Hello ${match[1]} ${match[2]}`);
+} while ((match = regexpNames.exec(personList)) !== null);
 ```
 
 ### Using named groups
@@ -231,11 +233,12 @@ do {
 let personList = `First_Name: John, Last_Name: Doe
 First_Name: Jane, Last_Name: Smith`;
 
-let regexpNames =  /First_Name: (?<firstname>\w+), Last_Name: (?<lastname>\w+)/mg;
+let regexpNames =
+  /First_Name: (?<firstname>\w+), Last_Name: (?<lastname>\w+)/gm;
 let match = regexpNames.exec(personList);
 do {
-  console.log(`Hello ${match.groups.firstname} ${match.groups.lastname}`);
-} while((match = regexpNames.exec(personList)) !== null);
+  console.log(`Hello ${match.groups.firstname} ${match.groups.lastname}`);
+} while ((match = regexpNames.exec(personList)) !== null);
 ```
 
 ## See also

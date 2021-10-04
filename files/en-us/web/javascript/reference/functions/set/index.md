@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.functions.set
 ---
+
 {{jsSidebar("Functions")}}
 
 The **`set`** syntax binds an object
@@ -65,13 +66,13 @@ const language = {
   set current(name) {
     this.log.push(name);
   },
-  log: []
-}
+  log: [],
+};
 
-language.current = 'EN';
+language.current = "EN";
 console.log(language.log); // ['EN']
 
-language.current = 'FA';
+language.current = "FA";
 console.log(language.log); // ['EN', 'FA']
 ```
 
@@ -93,33 +94,37 @@ To append a setter to an _existing_ object, use
 {{jsxref("Object.defineProperty()")}}.
 
 ```js
-const o = {a: 0};
+const o = { a: 0 };
 
-Object.defineProperty(o, 'b', {
-  set: function(x) { this.a = x / 2; }
+Object.defineProperty(o, "b", {
+  set: function (x) {
+    this.a = x / 2;
+  },
 });
 
 o.b = 10;
 //  Runs the setter, which assigns 10 / 2 (5) to the 'a' property
 
-console.log(o.a)
+console.log(o.a);
 //  5
 ```
 
 ### Using a computed property name
 
 ```js
-const expr = 'foo';
+const expr = "foo";
 
 const obj = {
-  baz: 'bar',
-  set [expr](v) { this.baz = v; }
+  baz: "bar",
+  set [expr](v) {
+    this.baz = v;
+  },
 };
 
 console.log(obj.baz);
 //  "bar"
 
-obj.foo = 'baz';
+obj.foo = "baz";
 //  run the setter
 
 console.log(obj.baz);

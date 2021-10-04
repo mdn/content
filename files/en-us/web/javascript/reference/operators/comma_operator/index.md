@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.comma
 ---
+
 {{jsSidebar("Operators")}}
 
 The **comma operator** (**`,`**) evaluates each of
@@ -53,7 +54,7 @@ The following code prints the values of the diagonal elements in the array:
 
 ```js
 for (var i = 0, j = 9; i <= 9; i++, j--)
-  console.log('a[' + i + '][' + j + '] = ' + a[i][j]);
+  console.log("a[" + i + "][" + j + "] = " + a[i][j]);
 ```
 
 Note that the comma operators in assignments may appear not to have the normal effect
@@ -66,12 +67,12 @@ precedence and associativity](/en-US/docs/Web/JavaScript/Reference/Operators/Ope
 ```js
 var a, b, c;
 
-a = b = 3, c = 4; // Returns 4 in console
+(a = b = 3), (c = 4); // Returns 4 in console
 console.log(a); // 3 (left-most)
 
 var x, y, z;
 
-x = (y = 5, z = 6); // Returns 6 in console
+x = ((y = 5), (z = 6)); // Returns 6 in console
 console.log(x); // 6 (right-most)
 ```
 
@@ -85,7 +86,7 @@ evaluated as well. So, one could do:
 function myFunc() {
   var x = 0;
 
-  return (x += 1, x); // the same as return ++x;
+  return (x += 1), x; // the same as return ++x;
 }
 ```
 

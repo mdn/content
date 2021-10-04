@@ -9,6 +9,7 @@ tags:
   - WeakSet
 browser-compat: javascript.builtins.WeakSet.has
 ---
+
 {{JSRef}}
 
 The **`has()`** method returns a boolean indicating whether an
@@ -19,7 +20,7 @@ object exists in a `WeakSet` or not.
 ## Syntax
 
 ```js
-has(value)
+has(value);
 ```
 
 ### Parameters
@@ -42,8 +43,8 @@ var ws = new WeakSet();
 var obj = {};
 ws.add(window);
 
-mySet.has(window);  // returns true
-mySet.has(obj);     // returns false
+mySet.has(window); // returns true
+mySet.has(obj); // returns false
 ```
 
 ## Specifications

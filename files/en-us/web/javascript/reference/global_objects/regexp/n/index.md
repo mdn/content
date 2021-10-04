@@ -11,6 +11,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.n
 ---
+
 {{JSRef}}
 
 The legacy RegExp **$1, $2, $3, $4, $5, $6, $7, $8, $9** properties are static and read-only properties of regular expressions that contain parenthesized substring matches.
@@ -33,8 +34,8 @@ The following script uses the {{jsxref("String.prototype.replace()", "replace()"
 
 ```js
 var re = /(\w+)\s(\w+)/;
-var str = 'John Smith';
-str.replace(re, '$2, $1'); // "Smith, John"
+var str = "John Smith";
+str.replace(re, "$2, $1"); // "Smith, John"
 RegExp.$1; // "John"
 RegExp.$2; // "Smith"
 ```
@@ -44,8 +45,8 @@ RegExp.$2; // "Smith"
 The following script uses the {{jsxref("RegExp.prototype.test()", "test()")}} method of the {{jsxref("RegExp")}} instance to grab a number in a generic string.
 
 ```js
-var str = 'Test 24';
-var number = /(\d+)/.test(str) ? RegExp.$1 : '0';
+var str = "Test 24";
+var number = /(\d+)/.test(str) ? RegExp.$1 : "0";
 number; // "24"
 ```
 

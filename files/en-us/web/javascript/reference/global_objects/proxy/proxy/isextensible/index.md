@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.isExtensible
 ---
+
 {{JSRef}}
 
 The **`handler.isExtensible()`** method is a trap for
@@ -19,8 +20,7 @@ The **`handler.isExtensible()`** method is a trap for
 
 ```js
 const p = new Proxy(target, {
-  isExtensible: function(target) {
-  }
+  isExtensible: function (target) {},
 });
 ```
 
@@ -63,25 +63,31 @@ If the following invariants are violated, the proxy will throw a
 The following code traps {{jsxref("Object.isExtensible()")}}.
 
 ```js
-const p = new Proxy({}, {
-  isExtensible: function(target) {
-    console.log('called');
-    return true;
+const p = new Proxy(
+  {},
+  {
+    isExtensible: function (target) {
+      console.log("called");
+      return true;
+    },
   }
-});
+);
 
 console.log(Object.isExtensible(p)); // "called"
-                                     // true
+// true
 ```
 
 The following code violates the invariant.
 
 ```js example-bad
-const p = new Proxy({}, {
-  isExtensible: function(target) {
-    return false;
+const p = new Proxy(
+  {},
+  {
+    isExtensible: function (target) {
+      return false;
+    },
   }
-});
+);
 
 Object.isExtensible(p); // TypeError is thrown
 ```

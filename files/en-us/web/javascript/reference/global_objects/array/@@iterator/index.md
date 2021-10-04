@@ -13,6 +13,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.@@iterator
 ---
+
 {{JSRef}}
 
 The **`@@iterator`** method is part of [The
@@ -26,7 +27,7 @@ function object as the initial value of the {{jsxref("Array.prototype.values()",
 ## Syntax
 
 ```js
-[Symbol.iterator]()
+[Symbol.iterator]();
 ```
 
 ### Return value
@@ -42,23 +43,22 @@ return the {{jsxref("Array.prototype.values()", "values()")}} function.
 #### HTML
 
 ```html
-<ul id="letterResult">
-</ul>
+<ul id="letterResult"></ul>
 ```
 
 #### JavaScript
 
 ```js
-const arr = ['a', 'b', 'c'];
+const arr = ["a", "b", "c"];
 const eArr = arr[Symbol.iterator]();
-const letterResult = document.getElementById('letterResult');
+const letterResult = document.getElementById("letterResult");
 // your browser must support for..of loop
 // and let-scoped variables in for loops
 // const and var could also be used
 for (let letter of eArr) {
-  const li = document.createElement('LI');
-  li.textContent = letter;
-  letterResult.appendChild(li);
+  const li = document.createElement("LI");
+  li.textContent = letter;
+  letterResult.appendChild(li);
 }
 ```
 
@@ -70,7 +70,7 @@ for (let letter of eArr) {
 ### Alternative iteration
 
 ```js
-var arr = ['a', 'b', 'c', 'd', 'e'];
+var arr = ["a", "b", "c", "d", "e"];
 var eArr = arr[Symbol.iterator]();
 console.log(eArr.next().value); // a
 console.log(eArr.next().value); // b
@@ -90,30 +90,34 @@ object or a custom object.
 
 ```js
 function logIterable(it) {
- if (!(Symbol.iterator in Object.getPrototypeOf(it)
- /* or "Symbol.iterator in Object.__proto__"
-    or "it[Symbol.iterator]" */)) {
-   console.log(it, ' is not an iterable object...');
-   return;
- }
+  if (
+    !(
+      (Symbol.iterator in Object.getPrototypeOf(it))
+      /* or "Symbol.iterator in Object.__proto__"
+    or "it[Symbol.iterator]" */
+    )
+  ) {
+    console.log(it, " is not an iterable object...");
+    return;
+  }
 
- var iterator = it[Symbol.iterator]();
+  var iterator = it[Symbol.iterator]();
   // your browser must support for..of loop
   // and let-scoped variables in for loops
   // const and var could also be used
   for (let letter of iterator) {
-      console.log(letter);
+    console.log(letter);
   }
 }
 
 // Array
-logIterable(['a', 'b', 'c']);
+logIterable(["a", "b", "c"]);
 // a
 // b
 // c
 
 // string
-logIterable('abc');
+logIterable("abc");
 // a
 // b
 // c

@@ -1,5 +1,5 @@
 ---
-title: 'TypeError: cyclic object value'
+title: "TypeError: cyclic object value"
 slug: Web/JavaScript/Reference/Errors/Cyclic_object_value
 tags:
   - Error
@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "cyclic object value" occurs when object references were found
@@ -39,7 +40,7 @@ accordingly.
 In a circular structure like the following
 
 ```js
-var circularReference = {otherData: 123};
+var circularReference = { otherData: 123 };
 circularReference.myself = circularReference;
 ```
 

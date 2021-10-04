@@ -11,6 +11,7 @@ tags:
   - export
 browser-compat: javascript.statements.export
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`export`** statement is used
@@ -102,20 +103,20 @@ But a default export can be imported with any name for example:
 
 ```js
 // file test.js
-let k; export default k = 12;
+let k;
+export default k = 12;
 ```
 
 ```js
 // some other file
-import m from './test'; // note that we have the freedom to use import m instead of import k, because k was default export
-console.log(m);        // will log 12
+import m from "./test"; // note that we have the freedom to use import m instead of import k, because k was default export
+console.log(m); // will log 12
 ```
 
 You can also rename named exports to avoid naming conflicts:
 
 ```js
-export { myFunction as function1,
-         myVariable as variable };
+export { myFunction as function1, myVariable as variable };
 ```
 
 ### Re-exporting / Aggregating
@@ -127,15 +128,13 @@ single module concentrating various exports from various modules.
 This can be achieved with the "export from" syntax:
 
 ```js
-export { default as function1,
-         function2 } from 'bar.js';
+export { default as function1, function2 } from "bar.js";
 ```
 
 Which is comparable to a combination of import and export:
 
 ```js
-import { default as function1,
-         function2 } from 'bar.js';
+import { default as function1, function2 } from "bar.js";
 export { function1, function2 };
 ```
 
@@ -146,24 +145,24 @@ inside the current module.
 > equivalent:
 
 ```js
-import DefaultExport from 'bar.js'; // Valid
+import DefaultExport from "bar.js"; // Valid
 ```
 
 ```js
-export DefaultExport from 'bar.js'; // Invalid
+export DefaultExport from "bar.js"; // Invalid
 ```
 
 The correct way of doing this is to rename the export:
 
 ```js
-export { default as DefaultExport } from 'bar.js';
+export { default as DefaultExport } from "bar.js";
 ```
 
 The "export from" syntax allows the `as` token to be omitted; however
 this will mean the default item cannot be imported as a named import:
 
 ```js
-export { default, function2 } from 'bar.js';
+export { default, function2 } from "bar.js";
 ```
 
 ## Examples
@@ -182,13 +181,13 @@ const foo = Math.PI + Math.SQRT2;
 
 var graph = {
   options: {
-      color:'white',
-      thickness:'2px'
+    color: "white",
+    thickness: "2px",
   },
-  draw: function() {
-      console.log('From graph draw function');
-  }
-}
+  draw: function () {
+    console.log("From graph draw function");
+  },
+};
 
 export { cube, foo, graph };
 ```
@@ -196,16 +195,16 @@ export { cube, foo, graph };
 Then in the top-level module included in your HTML page, we could have:
 
 ```js
-import { cube, foo, graph } from './my-module.js';
+import { cube, foo, graph } from "./my-module.js";
 
 graph.options = {
-    color:'blue',
-    thickness:'3px'
+  color: "blue",
+  thickness: "3px",
 };
 
 graph.draw();
 console.log(cube(3)); // 27
-console.log(foo);    // 4.555806215962888
+console.log(foo); // 4.555806215962888
 ```
 
 It is important to note the following:
@@ -232,7 +231,7 @@ export default function cube(x) {
 Then, in another script, it is straightforward to import the default export:
 
 ```js
-import cube from './my-module.js';
+import cube from "./my-module.js";
 console.log(cube(3)); // 27
 ```
 
@@ -265,15 +264,15 @@ export myClass;
 // In parentModule.js
 // Only aggregating the exports from childModule1 and childModule2
 // to re-export them
-export { myFunction, myVariable } from 'childModule1.js';
-export { myClass } from 'childModule2.js';
+export { myFunction, myVariable } from "childModule1.js";
+export { myClass } from "childModule2.js";
 ```
 
 ```js
 // In top-level module
 // We can consume the exports from a single module since parentModule
 // "collected"/"bundled" them in a single source
-import { myFunction, myVariable, myClass } from 'parentModule.js'
+import { myFunction, myVariable, myClass } from "parentModule.js";
 ```
 
 ## Specifications

@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.of
 ---
+
 {{JSRef}}
 
 The **`Array.of()`** method creates a new `Array`
@@ -28,7 +29,7 @@ Array.of(7); // [7]
 Array(7); // array of 7 empty slots
 
 Array.of(1, 2, 3); // [1, 2, 3]
-Array(1, 2, 3);    // [1, 2, 3]
+Array(1, 2, 3); // [1, 2, 3]
 ```
 
 ## Syntax
@@ -65,8 +66,8 @@ For more information, see:
 ### Using Array.of
 
 ```js
-Array.of(1);         // [1]
-Array.of(1, 2, 3);   // [1, 2, 3]
+Array.of(1); // [1]
+Array.of(1, 2, 3); // [1, 2, 3]
 Array.of(undefined); // [undefined]
 ```
 

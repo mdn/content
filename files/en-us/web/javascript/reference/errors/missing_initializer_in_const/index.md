@@ -1,11 +1,12 @@
 ---
-title: 'SyntaxError: missing = in const declaration'
+title: "SyntaxError: missing = in const declaration"
 slug: Web/JavaScript/Reference/Errors/Missing_initializer_in_const
 tags:
   - Error
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing = in const declaration" occurs when a const

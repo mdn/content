@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DateTimeFormat.resolvedOptions
 ---
+
 {{JSRef}}
 
 The **`Intl.DateTimeFormat.prototype.resolvedOptions()`**
@@ -26,7 +27,7 @@ object.
 ## Syntax
 
 ```js
-resolvedOptions()
+resolvedOptions();
 ```
 
 ### Return value
@@ -69,14 +70,14 @@ The resulting object has the following properties:
 ### Using the resolvedOptions method
 
 ```js
-var germanFakeRegion = new Intl.DateTimeFormat('de-XX', { timeZone: 'UTC' });
+var germanFakeRegion = new Intl.DateTimeFormat("de-XX", { timeZone: "UTC" });
 var usedOptions = germanFakeRegion.resolvedOptions();
 
-usedOptions.locale;          // "de"
-usedOptions.calendar;        // "gregory"
+usedOptions.locale; // "de"
+usedOptions.calendar; // "gregory"
 usedOptions.numberingSystem; // "latn"
-usedOptions.timeZone;        // "UTC"
-usedOptions.month;           // "numeric"
+usedOptions.timeZone; // "UTC"
+usedOptions.month; // "numeric"
 ```
 
 ## Specifications

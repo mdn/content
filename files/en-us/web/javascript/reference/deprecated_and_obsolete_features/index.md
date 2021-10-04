@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - Deprecated
 ---
+
 {{JsSidebar("More")}}
 
 This page lists features of JavaScript that are deprecated (that is, still available but planned for removal) and obsolete (that is, no longer usable).
@@ -86,13 +87,13 @@ the following properties are deprecated. This does not affect their use in {{jsx
 
 The following are now properties of `RegExp` instances, no longer of the `RegExp` object:
 
-| Property                                                     | Description                                                                                                        |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| {{jsxref("RegExp.global", "global")}}             | Whether or not to test the regular expression against all possible matches in a string, or only against the first. |
+| Property                                      | Description                                                                                                        |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| {{jsxref("RegExp.global", "global")}}         | Whether or not to test the regular expression against all possible matches in a string, or only against the first. |
 | {{jsxref("RegExp.ignoreCase", "ignoreCase")}} | Whether or not to ignore case while attempting a match in a string.                                                |
-| {{jsxref("RegExp.lastIndex", "lastIndex")}}     | The index at which to start the next match.                                                                        |
-| {{jsxref("RegExp.multiline", "multiline")}}     | Whether or not to search in strings across multiple lines.                                                         |
-| {{jsxref("RegExp.source", "source")}}             | The text of the pattern.                                                                                           |
+| {{jsxref("RegExp.lastIndex", "lastIndex")}}   | The index at which to start the next match.                                                                        |
+| {{jsxref("RegExp.multiline", "multiline")}}   | Whether or not to search in strings across multiple lines.                                                         |
+| {{jsxref("RegExp.source", "source")}}         | The text of the pattern.                                                                                           |
 
 ### RegExp methods
 
@@ -157,19 +158,19 @@ These obsolete features have been entirely removed from JavaScript and can no lo
 
 ### Object
 
-| Property                                                                                 | Description                                                                    |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| {{jsxref("Global_Objects/Object/count", "__count__")}}                 | Returns the number of enumerable properties directly on a user-defined object. |
-| {{jsxref("Global_Objects/Object/Parent", "__parent__")}}             | Points to an object's context.                                                 |
+| Property                                                            | Description                                                                    |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| {{jsxref("Global_Objects/Object/count", "__count__")}}              | Returns the number of enumerable properties directly on a user-defined object. |
+| {{jsxref("Global_Objects/Object/Parent", "__parent__")}}            | Points to an object's context.                                                 |
 | {{jsxref("Global_Objects/Object/eval", "Object.prototype.eval()")}} | Evaluates a string of JavaScript code in the context of the specified object.  |
-| {{jsxref("Object.observe()")}}                                                 | Asynchronously observing the changes to an object.                             |
-| {{jsxref("Object.unobserve()")}}                                             | Remove observers.                                                              |
-| {{jsxref("Object.getNotifier()")}}                                             | Creates an object that allows to synthetically trigger a change.               |
+| {{jsxref("Object.observe()")}}                                      | Asynchronously observing the changes to an object.                             |
+| {{jsxref("Object.unobserve()")}}                                    | Remove observers.                                                              |
+| {{jsxref("Object.getNotifier()")}}                                  | Creates an object that allows to synthetically trigger a change.               |
 
 ### Function
 
-| Property                                                             | Description                 |
-| -------------------------------------------------------------------- | --------------------------- |
+| Property                                             | Description                 |
+| ---------------------------------------------------- | --------------------------- |
 | {{jsxref("Global_Objects/Function/arity", "arity")}} | Number of formal arguments. |
 
 ### String

@@ -10,6 +10,7 @@ tags:
   - isPrototype
 browser-compat: javascript.builtins.Object.isPrototypeOf
 ---
+
 {{JSRef}}
 
 The **`isPrototypeOf()`** method checks if an object exists in
@@ -18,7 +19,9 @@ another object's prototype chain.
 {{EmbedInteractiveExample("pages/js/object-prototype-isprototypeof.html")}}
 
 > **Note:** `isPrototypeOf()` differs from the {{jsxref("Operators/instanceof",
+
     "instanceof")}} operator. In the expression
+
 > "`object instanceof AFunction`", the `object` prototype chain is
 > checked against `AFunction.prototype`, not against `AFunction`
 > itself.
@@ -26,7 +29,7 @@ another object's prototype chain.
 ## Syntax
 
 ```js
-isPrototypeOf(object)
+isPrototypeOf(object);
 ```
 
 ### Parameters
@@ -74,13 +77,13 @@ const baz = new Baz();
 // foo: Foo <- Object
 // bar: Bar <- Foo <- Object
 // baz: Baz <- Bar <- Foo <- Object
-console.log(Baz.prototype.isPrototypeOf(baz));    // true
-console.log(Baz.prototype.isPrototypeOf(bar));    // false
-console.log(Baz.prototype.isPrototypeOf(foo));    // false
-console.log(Bar.prototype.isPrototypeOf(baz));    // true
-console.log(Bar.prototype.isPrototypeOf(foo));    // false
-console.log(Foo.prototype.isPrototypeOf(baz));    // true
-console.log(Foo.prototype.isPrototypeOf(bar));    // true
+console.log(Baz.prototype.isPrototypeOf(baz)); // true
+console.log(Baz.prototype.isPrototypeOf(bar)); // false
+console.log(Baz.prototype.isPrototypeOf(foo)); // false
+console.log(Bar.prototype.isPrototypeOf(baz)); // true
+console.log(Bar.prototype.isPrototypeOf(foo)); // false
+console.log(Foo.prototype.isPrototypeOf(baz)); // true
+console.log(Foo.prototype.isPrototypeOf(bar)); // true
 console.log(Object.prototype.isPrototypeOf(baz)); // true
 ```
 
@@ -90,7 +93,7 @@ For example, to execute some code that’s only safe to run if a `baz` object ha
 
 ```js
 if (Foo.prototype.isPrototypeOf(baz)) {
-  // do something safe
+  // do something safe
 }
 ```
 

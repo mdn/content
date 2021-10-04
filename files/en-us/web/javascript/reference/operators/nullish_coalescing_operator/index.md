@@ -9,6 +9,7 @@ tags:
   - nullish coalescing
 browser-compat: javascript.operators.nullish_coalescing
 ---
+
 {{JSSidebar("Operators")}}
 
 The **nullish coalescing operator (`??`)** is a logical
@@ -32,7 +33,7 @@ precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence),
 ## Syntax
 
 ```js
-leftExpr ?? rightExpr
+leftExpr ?? rightExpr;
 ```
 
 ## Examples
@@ -66,7 +67,7 @@ to use the logical OR operator
 let foo;
 
 //  foo is never assigned any value so it is still undefined
-let someDummyText = foo || 'Hello!';
+let someDummyText = foo || "Hello!";
 ```
 
 However, due to `||` being a boolean logical operator, the left hand-side
@@ -82,7 +83,7 @@ let text = "";
 
 let qty = count || 42;
 let message = text || "hi!";
-console.log(qty);     // 42 and not 0
+console.log(qty); // 42 and not 0
 console.log(message); // "hi!" and not ""
 ```
 
@@ -91,12 +92,12 @@ operand when the first one evaluates to either `null` or
 `undefined` (but no other falsy values):
 
 ```js
-let myText = ''; // An empty string (which is also a falsy value)
+let myText = ""; // An empty string (which is also a falsy value)
 
-let notFalsyText = myText || 'Hello world';
+let notFalsyText = myText || "Hello world";
 console.log(notFalsyText); // Hello world
 
-let preservingFalsy = myText ?? 'Hi neighborhood';
+let preservingFalsy = myText ?? "Hi neighborhood";
 console.log(preservingFalsy); // '' (as myText is neither undefined nor null)
 ```
 
@@ -106,15 +107,24 @@ Like the OR and AND logical operators, the right-hand side expression is not eva
 if the left-hand side proves to be neither `null` nor `undefined`.
 
 ```js
-function A() { console.log('A was called'); return undefined;}
-function B() { console.log('B was called'); return false;}
-function C() { console.log('C was called'); return "foo";}
+function A() {
+  console.log("A was called");
+  return undefined;
+}
+function B() {
+  console.log("B was called");
+  return false;
+}
+function C() {
+  console.log("C was called");
+  return "foo";
+}
 
-console.log( A() ?? C() );
+console.log(A() ?? C());
 // logs "A was called" then "C was called" and then "foo"
 // as A() returned undefined so both expressions are evaluated
 
-console.log( B() ?? C() );
+console.log(B() ?? C());
 // logs "B was called" then "false"
 // as B() returned false (and not null or undefined), the right
 // hand side expression was not evaluated

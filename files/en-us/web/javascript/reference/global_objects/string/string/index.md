@@ -8,6 +8,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.String
 ---
+
 {{JSRef}}
 
 The **`String`** constructor is used to create a new
@@ -18,8 +19,8 @@ useful.
 ## Syntax
 
 ```js
-new String(thing)
-String(thing)
+new String(thing);
+String(thing);
 ```
 
 ### Parameters
@@ -34,8 +35,8 @@ String(thing)
 String function and String constructor produce different results:
 
 ```js
-typeof String('Hello world'); // string
-typeof new String('Hello world'); // object
+typeof String("Hello world"); // string
+typeof new String("Hello world"); // object
 ```
 
 Here, the function produces a string (the {{Glossary("primitive")}} type) as promised.

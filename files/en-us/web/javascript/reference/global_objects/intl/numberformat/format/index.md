@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat.format
 ---
+
 {{JSRef}}
 
 The **`Intl.NumberFormat.prototype.format()`** method formats a
@@ -26,7 +27,7 @@ number according to the locale and formatting options of this
 ## Syntax
 
 ```js
-format(number)
+format(number);
 ```
 
 ### Parameters
@@ -47,8 +48,8 @@ Use the `format` getter function for formatting a single currency value,
 here for Russia:
 
 ```js
-var options = { style: 'currency', currency: 'RUB' };
-var numberFormat = new Intl.NumberFormat('ru-RU', options);
+var options = { style: "currency", currency: "RUB" };
+var numberFormat = new Intl.NumberFormat("ru-RU", options);
 console.log(numberFormat.format(654321.987));
 // → "654 321,99 руб."
 ```
@@ -63,9 +64,9 @@ for new features, but is preserved to maintain compatibility with existing progr
 
 ```js
 var a = [123456.789, 987654.321, 456789.123];
-var numberFormat = new Intl.NumberFormat('es-ES');
-var formatted = a.map(n => numberFormat.format(n));
-console.log(formatted.join('; '));
+var numberFormat = new Intl.NumberFormat("es-ES");
+var formatted = a.map((n) => numberFormat.format(n));
+console.log(formatted.join("; "));
 // → "123.456,789; 987.654,321; 456.789,123"
 ```
 

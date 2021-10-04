@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.some
 ---
+
 {{JSRef}}
 
 The **`some()`** method tests whether
@@ -109,14 +110,14 @@ that `fun.call` evaluates to the original value of
 // Production steps of ECMA-262, Edition 5, 15.4.4.17
 // Reference: https://es5.github.io/#x15.4.4.17
 if (!Array.prototype.some) {
-  Array.prototype.some = function(fun, thisArg) {
-    'use strict';
+  Array.prototype.some = function (fun, thisArg) {
+    "use strict";
 
     if (this == null) {
-      throw new TypeError('Array.prototype.some called on null or undefined');
+      throw new TypeError("Array.prototype.some called on null or undefined");
     }
 
-    if (typeof fun !== 'function') {
+    if (typeof fun !== "function") {
       throw new TypeError();
     }
 
@@ -145,7 +146,7 @@ function isBiggerThan10(element, index, array) {
   return element > 10;
 }
 
-[2, 5, 8, 1, 4].some(isBiggerThan10);  // false
+[2, 5, 8, 1, 4].some(isBiggerThan10); // false
 [12, 5, 8, 1, 4].some(isBiggerThan10); // true
 ```
 
@@ -155,8 +156,8 @@ function isBiggerThan10(element, index, array) {
 functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
 
 ```js
-[2, 5, 8, 1, 4].some(x => x > 10);  // false
-[12, 5, 8, 1, 4].some(x => x > 10); // true
+[2, 5, 8, 1, 4].some((x) => x > 10); // false
+[12, 5, 8, 1, 4].some((x) => x > 10); // true
 ```
 
 ### Checking whether a value exists in an array
@@ -165,52 +166,52 @@ To mimic the function of the `includes()` method, this custom
 function returns `true` if the element exists in the array:
 
 ```js
-const fruits = ['apple', 'banana', 'mango', 'guava'];
+const fruits = ["apple", "banana", "mango", "guava"];
 
 function checkAvailability(arr, val) {
-  return arr.some(function(arrVal) {
+  return arr.some(function (arrVal) {
     return val === arrVal;
   });
 }
 
-checkAvailability(fruits, 'kela');   // false
-checkAvailability(fruits, 'banana'); // true
+checkAvailability(fruits, "kela"); // false
+checkAvailability(fruits, "banana"); // true
 ```
 
 ### Checking whether a value exists using an arrow function
 
 ```js
-const fruits = ['apple', 'banana', 'mango', 'guava'];
+const fruits = ["apple", "banana", "mango", "guava"];
 
 function checkAvailability(arr, val) {
-  return arr.some(arrVal => val === arrVal);
+  return arr.some((arrVal) => val === arrVal);
 }
 
-checkAvailability(fruits, 'kela');   // false
-checkAvailability(fruits, 'banana'); // true
+checkAvailability(fruits, "kela"); // false
+checkAvailability(fruits, "banana"); // true
 ```
 
 ### Converting any value to Boolean
 
 ```js
-const TRUTHY_VALUES = [true, 'true', 1];
+const TRUTHY_VALUES = [true, "true", 1];
 
 function getBoolean(value) {
-  'use strict';
+  "use strict";
 
-  if (typeof value === 'string') {
+  if (typeof value === "string") {
     value = value.toLowerCase().trim();
   }
 
-  return TRUTHY_VALUES.some(function(t) {
+  return TRUTHY_VALUES.some(function (t) {
     return t === value;
   });
 }
 
-getBoolean(false);   // false
-getBoolean('false'); // false
-getBoolean(1);       // true
-getBoolean('true');  // true
+getBoolean(false); // false
+getBoolean("false"); // false
+getBoolean(1); // true
+getBoolean("true"); // true
 ```
 
 ## Specifications

@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - l10n:priority
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
 
 This chapter introduces how to work with strings and text in JavaScript.
@@ -19,8 +20,8 @@ JavaScript's [String](/en-US/docs/Glossary/String) type is used to represent tex
 You can create simple strings using either single or double quotes:
 
 ```js
-'foo'
-"bar"
+"foo";
+"bar";
 ```
 
 More advanced strings can be created using escape sequences:
@@ -30,7 +31,7 @@ More advanced strings can be created using escape sequences:
 The number after \x is interpreted as a [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal) number.
 
 ```js
-'\xA9' // "©"
+"\xA9"; // "©"
 ```
 
 #### Unicode escape sequences
@@ -38,7 +39,7 @@ The number after \x is interpreted as a [hexadecimal](https://en.wikipedia.org/w
 The Unicode escape sequences require at least four hexadecimal digits following `\u`.
 
 ```js
-'\u00A9' // "©"
+"\u00A9"; // "©"
 ```
 
 #### Unicode code point escapes
@@ -48,10 +49,10 @@ New in ECMAScript 2015. With Unicode code point escapes, any character can be es
 See also {{jsxref("String.fromCodePoint()")}} or {{jsxref("String.prototype.codePointAt()")}}.
 
 ```js
-'\u{2F804}'
+"\u{2F804}";
 
 // the same with simple Unicode escapes
-'\uD87E\uDC04'
+"\uD87E\uDC04";
 ```
 
 ### String objects
@@ -59,7 +60,7 @@ See also {{jsxref("String.fromCodePoint()")}} or {{jsxref("String.prototype.code
 The {{jsxref("String")}} object is a wrapper around the string primitive data type.
 
 ```js
-const foo = new String('foo'); // Creates a String object
+const foo = new String("foo"); // Creates a String object
 console.log(foo); // Displays: [String: 'foo']
 typeof foo; // Returns 'object'
 ```
@@ -69,8 +70,8 @@ You can call any of the methods of the `String` object on a string literal value
 You should use string literals unless you specifically need to use a `String` object, because `String` objects can have counterintuitive behavior. For example:
 
 ```js
-const firstString = '2 + 2'; // Creates a string literal value
-const secondString = new String('2 + 2'); // Creates a String object
+const firstString = "2 + 2"; // Creates a string literal value
+const secondString = new String("2 + 2"); // Creates a String object
 eval(firstString); // Returns the number 4
 eval(secondString); // Returns a String object containing "2 + 2"
 ```
@@ -78,9 +79,9 @@ eval(secondString); // Returns a String object containing "2 + 2"
 A `String` object has one property, `length`, that indicates the number of UTF-16 code units in the string. For example, the following code assigns `helloLength` the value 13, because "Hello, World!" has 13 characters, each represented by one UTF-16 code unit. You can access each code unit using an array bracket style. You can't change individual characters because strings are immutable array-like objects:
 
 ```js
-const hello = 'Hello, World!';
+const hello = "Hello, World!";
 const helloLength = hello.length;
-hello[0] = 'L'; // This has no effect, because strings are immutable
+hello[0] = "L"; // This has no effect, because strings are immutable
 hello[0]; // This returns "H"
 ```
 
@@ -217,8 +218,10 @@ Template literals are enclosed by the back-tick (\` \`) ([grave accent](https://
 Any new line characters inserted in the source are part of the template literal. Using normal strings, you would have to use the following syntax in order to get multi-line strings:
 
 ```js
-console.log('string text line 1\n\
-string text line 2');
+console.log(
+  "string text line 1\n\
+string text line 2"
+);
 // "string text line 1
 // string text line 2"
 ```
@@ -239,7 +242,9 @@ In order to embed expressions within normal strings, you would use the following
 ```js
 const five = 5;
 const ten = 10;
-console.log('Fifteen is ' + (five + ten) + ' and not ' + (2 * five + ten) + '.');
+console.log(
+  "Fifteen is " + (five + ten) + " and not " + (2 * five + ten) + "."
+);
 // "Fifteen is 15 and not 20."
 ```
 
@@ -268,9 +273,15 @@ const msPerDay = 24 * 60 * 60 * 1000;
 // July 17, 2014 00:00:00 UTC.
 const july172014 = new Date(msPerDay * (44 * 365 + 11 + 197));
 
-const options = { year: '2-digit', month: '2-digit', day: '2-digit',
-                hour: '2-digit', minute: '2-digit', timeZoneName: 'short' };
-const americanDateTime = new Intl.DateTimeFormat('en-US', options).format;
+const options = {
+  year: "2-digit",
+  month: "2-digit",
+  day: "2-digit",
+  hour: "2-digit",
+  minute: "2-digit",
+  timeZoneName: "short",
+};
+const americanDateTime = new Intl.DateTimeFormat("en-US", options).format;
 
 console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
 ```
@@ -280,14 +291,18 @@ console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
 The {{jsxref("Intl.NumberFormat")}} object is useful for formatting numbers, for example currencies.
 
 ```js
-const gasPrice = new Intl.NumberFormat('en-US',
-                        { style: 'currency', currency: 'USD',
-                          minimumFractionDigits: 3 });
+const gasPrice = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  minimumFractionDigits: 3,
+});
 
 console.log(gasPrice.format(5.259)); // $5.259
 
-const hanDecimalRMBInChina = new Intl.NumberFormat('zh-CN-u-nu-hanidec',
-                        { style: 'currency', currency: 'CNY' });
+const hanDecimalRMBInChina = new Intl.NumberFormat("zh-CN-u-nu-hanidec", {
+  style: "currency",
+  currency: "CNY",
+});
 
 console.log(hanDecimalRMBInChina.format(1314.25)); // ￥ 一,三一四.二五
 ```
@@ -299,22 +314,22 @@ The {{jsxref("Intl.Collator")}} object is useful for comparing and sorting strin
 For example, there are actually two different sort orders in German, _phonebook_ and _dictionary_. Phonebook sort emphasizes sound, and it’s as if “ä”, “ö”, and so on were expanded to “ae”, “oe”, and so on prior to sorting.
 
 ```js
-const names = ['Hochberg', 'Hönigswald', 'Holzman'];
+const names = ["Hochberg", "Hönigswald", "Holzman"];
 
-const germanPhonebook = new Intl.Collator('de-DE-u-co-phonebk');
+const germanPhonebook = new Intl.Collator("de-DE-u-co-phonebk");
 
 // as if sorting ["Hochberg", "Hoenigswald", "Holzman"]:
-console.log(names.sort(germanPhonebook.compare).join(', '));
+console.log(names.sort(germanPhonebook.compare).join(", "));
 // logs "Hochberg, Hönigswald, Holzman"
 ```
 
 Some German words conjugate with extra umlauts, so in dictionaries it’s sensible to order ignoring umlauts (except when ordering words differing _only_ by umlauts: _schon_ before _schön_).
 
 ```js
-const germanDictionary = new Intl.Collator('de-DE-u-co-dict');
+const germanDictionary = new Intl.Collator("de-DE-u-co-dict");
 
 // as if sorting ["Hochberg", "Honigswald", "Holzman"]:
-console.log(names.sort(germanDictionary.compare).join(', '));
+console.log(names.sort(germanDictionary.compare).join(", "));
 // logs "Hochberg, Holzman, Hönigswald"
 ```
 

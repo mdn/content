@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.reduceRight
 ---
+
 {{JSRef}}
 
 The **`reduceRight()`** method applies a function against an
@@ -77,7 +78,7 @@ The call to the reduceRight `callbackFn` would look something like
 this:
 
 ```js
-arr.reduceRight(function(accumulator, currentValue, index, array) {
+arr.reduceRight(function (accumulator, currentValue, index, array) {
   // ...
 });
 ```
@@ -101,7 +102,7 @@ would be returned without calling `callbackFn`.
 Some example run-throughs of the function would look like this:
 
 ```js
-[0, 1, 2, 3, 4].reduceRight(function(accumulator, currentValue, index, array) {
+[0, 1, 2, 3, 4].reduceRight(function (accumulator, currentValue, index, array) {
   return accumulator + currentValue;
 });
 ```
@@ -173,7 +174,7 @@ And if you were to provide an `initialValue`, the result would
 look like this:
 
 ```js
-[0, 1, 2, 3, 4].reduceRight(function(accumulator, currentValue, index, array) {
+[0, 1, 2, 3, 4].reduceRight(function (accumulator, currentValue, index, array) {
   return accumulator + currentValue;
 }, 10);
 ```
@@ -256,16 +257,19 @@ by inserting the following code at the beginning of your scripts, allowing use o
 ```js
 // Production steps of ECMA-262, Edition 5, 15.4.4.22
 // Reference: https://es5.github.io/#x15.4.4.22
-if ('function' !== typeof Array.prototype.reduceRight) {
-  Array.prototype.reduceRight = function(callback /*, initialValue*/) {
-    'use strict';
-    if (null === this || 'undefined' === typeof this) {
-      throw new TypeError('Array.prototype.reduce called on null or undefined');
+if ("function" !== typeof Array.prototype.reduceRight) {
+  Array.prototype.reduceRight = function (callback /*, initialValue*/) {
+    "use strict";
+    if (null === this || "undefined" === typeof this) {
+      throw new TypeError("Array.prototype.reduce called on null or undefined");
     }
-    if ('function' !== typeof callback) {
-      throw new TypeError(callback + ' is not a function');
+    if ("function" !== typeof callback) {
+      throw new TypeError(callback + " is not a function");
     }
-    var t = Object(this), len = t.length >>> 0, k = len - 1, value;
+    var t = Object(this),
+      len = t.length >>> 0,
+      k = len - 1,
+      value;
     if (arguments.length >= 2) {
       value = arguments[1];
     } else {
@@ -273,7 +277,7 @@ if ('function' !== typeof Array.prototype.reduceRight) {
         k--;
       }
       if (k < 0) {
-        throw new TypeError('Reduce of empty array with no initial value');
+        throw new TypeError("Reduce of empty array with no initial value");
       }
       value = t[k--];
     }
@@ -292,7 +296,7 @@ if ('function' !== typeof Array.prototype.reduceRight) {
 ### Sum up all values within an array
 
 ```js
-var sum = [0, 1, 2, 3].reduceRight(function(a, b) {
+var sum = [0, 1, 2, 3].reduceRight(function (a, b) {
   return a + b;
 });
 // sum is 6
@@ -301,8 +305,12 @@ var sum = [0, 1, 2, 3].reduceRight(function(a, b) {
 ### Flatten an array of arrays
 
 ```js
-var flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
-    return a.concat(b);
+var flattened = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+].reduceRight(function (a, b) {
+  return a.concat(b);
 }, []);
 // flattened is [4, 5, 2, 3, 0, 1]
 ```
@@ -310,13 +318,17 @@ var flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
 ### Run a list of asynchronous functions with callbacks in series each passing their results to the next
 
 ```js
-const waterfall = (...functions) => (callback, ...args) =>
-  functions.reduceRight(
-    (composition, fn) => (...results) => fn(composition, ...results),
-    callback
-  )(...args);
+const waterfall =
+  (...functions) =>
+  (callback, ...args) =>
+    functions.reduceRight(
+      (composition, fn) =>
+        (...results) =>
+          fn(composition, ...results),
+      callback
+    )(...args);
 
-const randInt = max => Math.floor(Math.random() * max)
+const randInt = (max) => Math.floor(Math.random() * max);
 
 const add5 = (callback, x) => {
   setTimeout(callback, randInt(1000), x + 5);
@@ -338,28 +350,32 @@ const div4 = (callback, x) => {
 };
 
 const computation = waterfall(add5, mult3, sub2, split, add, div4);
-computation(console.log, 5) // -> 14
+computation(console.log, 5); // -> 14
 
 // same as:
 
 const computation2 = (input, callback) => {
-  const f6 = x=> div4(callback, x);
+  const f6 = (x) => div4(callback, x);
   const f5 = (x, y) => add(f6, x, y);
-  const f4 = x => split(f5, x);
-  const f3 = x => sub2(f4, x);
-  const f2 = x => mult3(f3, x);
+  const f4 = (x) => split(f5, x);
+  const f3 = (x) => sub2(f4, x);
+  const f2 = (x) => mult3(f3, x);
   add5(f2, input);
-}
+};
 ```
 
 ### Difference between `reduce` and `reduceRight`
 
 ```js
-var a = ['1', '2', '3', '4', '5'];
-var left  = a.reduce(function(prev, cur)      { return prev + cur; });
-var right = a.reduceRight(function(prev, cur) { return prev + cur; });
+var a = ["1", "2", "3", "4", "5"];
+var left = a.reduce(function (prev, cur) {
+  return prev + cur;
+});
+var right = a.reduceRight(function (prev, cur) {
+  return prev + cur;
+});
 
-console.log(left);  // "12345"
+console.log(left); // "12345"
 console.log(right); // "54321"
 ```
 
@@ -373,13 +389,16 @@ to implement function composition.
 See also [Function composition](<https://en.wikipedia.org/wiki/Function_composition_(computer_science)>) on Wikipedia.
 
 ```js
-const compose = (...args) => (value) => args.reduceRight((acc, fn) => fn(acc), value)
+const compose =
+  (...args) =>
+  (value) =>
+    args.reduceRight((acc, fn) => fn(acc), value);
 
 // Increment passed number
-const inc = (n) => n + 1
+const inc = (n) => n + 1;
 
 // Doubles the passed value
-const double = (n) => n * 2
+const double = (n) => n * 2;
 
 // using composition function
 console.log(compose(double, inc)(2)); // 6

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Map.@@iterator
 ---
+
 {{JSRef}}
 
 <p class="seoSummary">The initial value of the <strong><code>@@iterator</code></strong>
@@ -22,7 +23,7 @@ property is the same function object as the initial value of the
 ## Syntax
 
 ```js
-myMap[Symbol.iterator]
+myMap[Symbol.iterator];
 ```
 
 ### Return value
@@ -36,35 +37,35 @@ default.
 ### Using \[@@iterator]\()
 
 ```js
-const myMap = new Map()
-myMap.set('0', 'foo')
-myMap.set(1, 'bar')
-myMap.set({}, 'baz')
+const myMap = new Map();
+myMap.set("0", "foo");
+myMap.set(1, "bar");
+myMap.set({}, "baz");
 
-const mapIter = myMap[Symbol.iterator]()
+const mapIter = myMap[Symbol.iterator]();
 
-console.log(mapIter.next().value) // ["0", "foo"]
-console.log(mapIter.next().value) // [1, "bar"]
-console.log(mapIter.next().value) // [Object, "baz"]
+console.log(mapIter.next().value); // ["0", "foo"]
+console.log(mapIter.next().value); // [1, "bar"]
+console.log(mapIter.next().value); // [Object, "baz"]
 ```
 
 ### Using \[@@iterator]\() with for..of
 
 ```js
-const myMap = new Map()
-myMap.set('0', 'foo')
-myMap.set(1, 'bar')
-myMap.set({}, 'baz')
+const myMap = new Map();
+myMap.set("0", "foo");
+myMap.set(1, "bar");
+myMap.set({}, "baz");
 
 for (const entry of myMap) {
-  console.log(entry)
+  console.log(entry);
 }
 // ["0", "foo"]
 // [1, "bar"]
 // [{}, "baz"]
 
 for (const [key, value] of myMap) {
-  console.log(`${key}: ${value}`)
+  console.log(`${key}: ${value}`);
 }
 // 0: foo
 // 1: bar

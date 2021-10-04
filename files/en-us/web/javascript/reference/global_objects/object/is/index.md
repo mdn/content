@@ -13,6 +13,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.is
 ---
+
 {{JSRef}}
 
 The **`Object.is()`** method determines whether two values are
@@ -74,35 +75,35 @@ and `+0` as equal. Also, the `===` operator treats
 
 ```js
 // Case 1: Evaluation result is the same as using ===
-Object.is(25, 25);                // true
-Object.is('foo', 'foo');          // true
-Object.is('foo', 'bar');          // false
-Object.is(null, null);            // true
-Object.is(undefined, undefined);  // true
-Object.is(window, window);        // true
-Object.is([], []);                // false
+Object.is(25, 25); // true
+Object.is("foo", "foo"); // true
+Object.is("foo", "bar"); // false
+Object.is(null, null); // true
+Object.is(undefined, undefined); // true
+Object.is(window, window); // true
+Object.is([], []); // false
 var foo = { a: 1 };
 var bar = { a: 1 };
-Object.is(foo, foo);              // true
-Object.is(foo, bar);              // false
+Object.is(foo, foo); // true
+Object.is(foo, bar); // false
 
 // Case 2: Signed zero
-Object.is(0, -0);                 // false
-Object.is(+0, -0);                // false
-Object.is(-0, -0);                // true
-Object.is(0n, -0n);               // true
+Object.is(0, -0); // false
+Object.is(+0, -0); // false
+Object.is(-0, -0); // true
+Object.is(0n, -0n); // true
 
 // Case 3: NaN
-Object.is(NaN, 0/0);              // true
-Object.is(NaN, Number.NaN)        // true
+Object.is(NaN, 0 / 0); // true
+Object.is(NaN, Number.NaN); // true
 ```
 
 ## Polyfill
 
 ```js
 if (!Object.is) {
-  Object.defineProperty(Object, "is", {
-    value: function (x, y) {
+  Object.defineProperty(Object, "is", {
+    value: function (x, y) {
       // SameValue algorithm
       if (x === y) {
         // return true if x and y are not 0, OR
@@ -116,7 +117,7 @@ if (!Object.is) {
         // This checks for case 3.
         return x !== x && y !== y;
       }
-    }
+    },
   });
 }
 ```

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale`** object is a standard built-in property of the Intl object that represents a Unicode locale identifier.
@@ -80,7 +81,7 @@ Traditionally, the Intl API used strings to represent locales, just as Unicode d
 At its very simplest, the {{jsxref("Intl/Locale/Locale", "Intl.Locale")}} constructor takes a locale identifier string as its argument:
 
 ```js
-let us = new Intl.Locale('en-US');
+let us = new Intl.Locale("en-US");
 ```
 
 ### Using the Locale constructor with an options object
@@ -88,7 +89,7 @@ let us = new Intl.Locale('en-US');
 The constructor also takes an optional configuration object argument, which can contain any of several extension types. For example, set the {{jsxref("Intl/Locale/hourCycle", "hourCycle")}} property of the configuration object to your desired hour cycle type, and then pass it into the constructor:
 
 ```js
-let us12hour = new Intl.Locale("en-US", {hourCycle: "h12"});
+let us12hour = new Intl.Locale("en-US", { hourCycle: "h12" });
 console.log(us12hour.hourCycle); // Prints "h12"
 ```
 

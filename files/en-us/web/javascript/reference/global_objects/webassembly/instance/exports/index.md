@@ -11,6 +11,7 @@ tags:
   - instance
 browser-compat: javascript.builtins.WebAssembly.Instance.exports
 ---
+
 {{JSRef}}
 
 The **`exports`** readonly property of the
@@ -19,7 +20,7 @@ members all the functions exported from the WebAssembly module instance, to allo
 to be accessed and used by JavaScript.
 
 ```js
-instance.exports
+instance.exports;
 ```
 
 ## Examples
@@ -34,14 +35,15 @@ that is exported by the `Instance`.
 ```js
 var importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(obj => obj.instance.exports.exported_func());
+WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
+  (obj) => obj.instance.exports.exported_func()
+);
 ```
 
 > **Note:** You can also find this example as [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html)

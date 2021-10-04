@@ -11,6 +11,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.compile
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The deprecated **`compile()`**
@@ -20,7 +21,7 @@ basically the same as the `RegExp` constructor.
 ## Syntax
 
 ```js
-compile(pattern, flags)
+compile(pattern, flags);
 ```
 
 ### Parameters
@@ -57,8 +58,8 @@ The following example shows how to recompile a regular expression with a new pat
 and a new flag.
 
 ```js
-var regexObj = new RegExp('foo', 'gi');
-regexObj.compile('new foo', 'g');
+var regexObj = new RegExp("foo", "gi");
+regexObj.compile("new foo", "g");
 ```
 
 ## Specifications

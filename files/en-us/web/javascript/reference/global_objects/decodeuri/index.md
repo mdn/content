@@ -13,6 +13,7 @@ tags:
   - decoding
 browser-compat: javascript.builtins.decodeURI
 ---
+
 {{jsSidebar("Objects")}}
 
 The **`decodeURI()`** function decodes
@@ -24,7 +25,7 @@ a Uniform Resource Identifier (URI) previously created by {{jsxref("encodeURI",
 ## Syntax
 
 ```js
-decodeURI(encodedURI)
+decodeURI(encodedURI);
 ```
 
 ### Parameters
@@ -54,7 +55,9 @@ sequences.
 ### Decoding a Cyrillic URL
 
 ```js
-decodeURI('https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B');
+decodeURI(
+  "https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+);
 // "https://developer.mozilla.org/ru/docs/JavaScript_шеллы"
 ```
 
@@ -62,8 +65,8 @@ decodeURI('https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D
 
 ```js
 try {
-  var a = decodeURI('%E0%A4%A');
-} catch(e) {
+  var a = decodeURI("%E0%A4%A");
+} catch (e) {
   console.error(e);
 }
 

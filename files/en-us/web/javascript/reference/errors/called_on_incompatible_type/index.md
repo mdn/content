@@ -1,5 +1,5 @@
 ---
-title: 'TypeError: X.prototype.y called on incompatible type'
+title: "TypeError: X.prototype.y called on incompatible type"
 slug: Web/JavaScript/Reference/Errors/Called_on_incompatible_type
 tags:
   - Error
@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "called on incompatible target (or object)" occurs when a
@@ -48,28 +49,28 @@ force the `this` argument to the expected object.
 ### Invalid cases
 
 ```js example-bad
-var mySet = new Set;
-['bar', 'baz'].forEach(mySet.add);
+var mySet = new Set();
+["bar", "baz"].forEach(mySet.add);
 // mySet.add is a function, but "mySet" is not captured as this.
 
 var myFun = function () {
   console.log(this);
 };
-['bar', 'baz'].forEach(myFun.bind);
+["bar", "baz"].forEach(myFun.bind);
 // myFun.bind is a function, but "myFun" is not captured as this.
 ```
 
 ### Valid cases
 
 ```js example-good
-var mySet = new Set;
-['bar', 'baz'].forEach(mySet.add.bind(mySet));
+var mySet = new Set();
+["bar", "baz"].forEach(mySet.add.bind(mySet));
 // This works due to binding "mySet" as this.
 
 var myFun = function () {
   console.log(this);
 };
-['bar', 'baz'].forEach(x => myFun.bind(x));
+["bar", "baz"].forEach((x) => myFun.bind(x));
 // This works using the "bind" function. It creates a lambda forwarding the argument.
 ```
 

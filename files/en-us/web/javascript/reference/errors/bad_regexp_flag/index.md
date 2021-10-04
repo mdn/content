@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "invalid regular expression flag" occurs when the flags,
@@ -42,16 +43,16 @@ var re = /pattern/flags;
 or
 
 ```js
-var re = new RegExp('pattern', 'flags');
+var re = new RegExp("pattern", "flags");
 ```
 
-| Flag | Description                                                                                                                                        |
-| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `g`  | Global search.                                                                                                                                     |
-| i    | Case-insensitive search.                                                                                                                           |
-| m    | Multi-line search.                                                                                                                                 |
-| s    | Allow `.` to match newlines (added in ECMAScript 2018)                                                                                             |
-| u    | Unicode; treat pattern as a sequence of Unicode code points                                                                                        |
+| Flag | Description                                                                                                                             |
+| ---- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `g`  | Global search.                                                                                                                          |
+| i    | Case-insensitive search.                                                                                                                |
+| m    | Multi-line search.                                                                                                                      |
+| s    | Allow `.` to match newlines (added in ECMAScript 2018)                                                                                  |
+| u    | Unicode; treat pattern as a sequence of Unicode code points                                                                             |
 | y    | Perform a "sticky" search that matches starting at the current position in the target string. See {{jsxref("RegExp.sticky", "sticky")}} |
 
 ## Examples
@@ -80,7 +81,7 @@ string literal.
 
 ```js example-good
 let obj = {
-  url: '/docs/Web'
+  url: "/docs/Web",
 };
 ```
 

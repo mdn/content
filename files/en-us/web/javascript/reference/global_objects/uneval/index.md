@@ -11,6 +11,7 @@ tags:
   - uneval
 browser-compat: javascript.builtins.uneval
 ---
+
 {{JSSidebar("Objects")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`uneval()`** function creates a string representation of
@@ -19,7 +20,7 @@ the source code of an Object.
 ## Syntax
 
 ```js
-uneval(object)
+uneval(object);
 ```
 
 ### Parameters
@@ -46,12 +47,14 @@ A string representing the source code of `object`.
 var a = 1;
 uneval(a); // returns a String containing 1
 
-var b = '1';
+var b = "1";
 uneval(b); // returns a String containing "1"
 
 uneval(function foo() {}); // returns "(function foo(){})"
 
-var a = uneval(function foo() { return 'hi'; });
+var a = uneval(function foo() {
+  return "hi";
+});
 var foo = eval(a);
 foo(); // returns "hi"
 ```

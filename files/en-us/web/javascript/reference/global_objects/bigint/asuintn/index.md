@@ -9,6 +9,7 @@ tags:
   - asUintN
 browser-compat: javascript.builtins.BigInt.asUintN
 ---
+
 {{JSRef}}
 
 The **`BigInt.asUintN`** static method clamps a BigInt value to an unsigned integer value, and returns that value.

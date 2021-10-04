@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing : after property id'
+title: "SyntaxError: missing : after property id"
 slug: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 tags:
   - Error
@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing : after property id" occurs when objects are created
@@ -32,7 +33,7 @@ initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) 
 object's properties.
 
 ```js
-var obj = { propertyKey: 'value' };
+var obj = { propertyKey: "value" };
 ```
 
 ## Examples
@@ -51,12 +52,12 @@ Correct would be to use a colon, or to use square brackets to assign a new prope
 after the object has been created already.
 
 ```js example-good
-var obj = { propertyKey: 'value' };
+var obj = { propertyKey: "value" };
 
 // or alternatively
 
-var obj = { };
-obj['propertyKey'] = 'value';
+var obj = {};
+obj["propertyKey"] = "value";
 ```
 
 ### Empty properties
@@ -88,7 +89,7 @@ var obj = { 'b'+'ar': 'foo' };
 Put the expression in brackets `[]`:
 
 ```js example-good
-var obj = { ['b'+'ar']: 'foo' };
+var obj = { ["b" + "ar"]: "foo" };
 ```
 
 ## See also

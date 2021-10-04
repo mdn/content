@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.InternalError.InternalError
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 The **`InternalError()`** constructor creates an error that
@@ -17,10 +18,10 @@ indicates an error that occurred internally in the JavaScript engine. For exampl
 ## Syntax
 
 ```js
-new InternalError()
-new InternalError(message)
-new InternalError(message, fileName)
-new InternalError(message, fileName, lineNumber)
+new InternalError();
+new InternalError(message);
+new InternalError(message, fileName);
+new InternalError(message, fileName, lineNumber);
 ```
 
 ### Parameters

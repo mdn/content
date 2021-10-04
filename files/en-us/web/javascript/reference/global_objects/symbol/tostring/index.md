@@ -9,6 +9,7 @@ tags:
   - Symbol
 browser-compat: javascript.builtins.Symbol.toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the specified {{jsxref("Symbol")}} object.
@@ -18,7 +19,7 @@ The **`toString()`** method returns a string representing the specified {{jsxref
 ## Syntax
 
 ```js
-toString()
+toString();
 ```
 
 ### Return value
@@ -34,7 +35,7 @@ The {{jsxref("Symbol")}} object overrides the `toString` method of the {{jsxref(
 While you can call `toString()` on Symbols, you cannot use string concatenation with them:
 
 ```js
-Symbol('foo') + 'bar'        // TypeError: Can't convert symbol to string
+Symbol("foo") + "bar"; // TypeError: Can't convert symbol to string
 ```
 
 ## Examples
@@ -42,13 +43,13 @@ Symbol('foo') + 'bar'        // TypeError: Can't convert symbol to string
 ### Using toString()
 
 ```js
-Symbol('desc').toString()    // "Symbol(desc)"
+Symbol("desc").toString(); // "Symbol(desc)"
 
 // well-known symbols
-Symbol.iterator.toString()   // "Symbol(Symbol.iterator)
+Symbol.iterator.toString(); // "Symbol(Symbol.iterator)
 
 // global symbols
-Symbol.for('foo').toString() // "Symbol(foo)"
+Symbol.for("foo").toString(); // "Symbol(foo)"
 ```
 
 ## Specifications

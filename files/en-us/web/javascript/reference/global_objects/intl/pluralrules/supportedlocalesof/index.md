@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.PluralRules.supportedLocalesOf
 ---
+
 {{JSRef}}
 
 The **`Intl.PluralRules.supportedLocalesOf()`** method returns
@@ -20,8 +21,8 @@ formatting without having to fall back to the runtime's default locale.
 ## Syntax
 
 ```js
-Intl.PluralRules.supportedLocalesOf(locales)
-Intl.PluralRules.supportedLocalesOf(locales, options)
+Intl.PluralRules.supportedLocalesOf(locales);
+Intl.PluralRules.supportedLocalesOf(locales, options);
 ```
 
 ### Parameters
@@ -29,7 +30,7 @@ Intl.PluralRules.supportedLocalesOf(locales, options)
 - `locales`
   - : A string with a BCP 47 language tag, or an array of such strings. For the general
     form of the `locales` argument, see the {{jsxref("Intl",
-		"Intl", "#Locale_identification_and_negotiation", 1)}} page.
+    "Intl", "#Locale_identification_and_negotiation", 1)}} page.
 - `options` {{optional_inline}}
 
   - : An object that may have the following property:
@@ -66,9 +67,9 @@ adequate match for Balinese since most Balinese speakers also understand Indones
 and therefore return the Balinese language tag as well.
 
 ```js
-const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
-const options = { localeMatcher: 'lookup' };
-console.log(Intl.PluralRules.supportedLocalesOf(locales, options).join(', '));
+const locales = ["ban", "id-u-co-pinyin", "de-ID"];
+const options = { localeMatcher: "lookup" };
+console.log(Intl.PluralRules.supportedLocalesOf(locales, options).join(", "));
 // → "id-u-co-pinyin, de-ID"
 ```
 

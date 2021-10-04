@@ -10,6 +10,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Object.toSource
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`toSource()`** method returns a string representing the
@@ -18,7 +19,7 @@ source code of the object.
 ## Syntax
 
 ```js
-toSource()
+toSource();
 ```
 
 ### Return value
@@ -36,7 +37,7 @@ The `toSource()` method returns the following values:
     function Object() {
         [native code]
     }
-    ```
+  ```
 
 - For instances of {{jsxref("Object")}}, `toSource()` returns a string
   representing the source code.
@@ -54,10 +55,10 @@ function Person(name) {
 }
 
 Person.prototype.toSource = function Person_toSource() {
-  return 'new Person(' + uneval(this.name) + ')';
+  return "new Person(" + uneval(this.name) + ")";
 };
 
-console.log(new Person('Joe').toSource()); // ---> new Person("Joe")
+console.log(new Person("Joe").toSource()); // ---> new Person("Joe")
 ```
 
 ### Built-in toSource() methods
@@ -86,13 +87,13 @@ var obj1 = {};
 var obj2 = { a: obj1 };
 obj1.b = obj2;
 
-console.log('Cyclical: ' + (obj1.b.a == obj1));
+console.log("Cyclical: " + (obj1.b.a == obj1));
 
 var objSource = obj1.toSource(); // returns "({b:{a:{}}})"
 
 obj1 = eval(objSource);
 
-console.log('Cyclical: ' + (obj1.b.a == obj1));
+console.log("Cyclical: " + (obj1.b.a == obj1));
 ```
 
 If a cyclical structure is employed and `toSource()` is needed, the object
@@ -114,7 +115,7 @@ function Dog(name, breed, color, sex) {
   this.sex = sex;
 }
 
-theDog = new Dog('Gabby', 'Lab', 'chocolate', 'female');
+theDog = new Dog("Gabby", "Lab", "chocolate", "female");
 ```
 
 Calling the `toSource()` method of `theDog` displays the

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setFullYear
 ---
+
 {{JSRef}}
 
 The **`setFullYear()`** method sets the full year for a
@@ -19,9 +20,9 @@ specified date according to local time. Returns new timestamp.
 ## Syntax
 
 ```js
-setFullYear(yearValue)
-setFullYear(yearValue, monthValue)
-setFullYear(yearValue, monthValue, dateValue)
+setFullYear(yearValue);
+setFullYear(yearValue, monthValue);
+setFullYear(yearValue, monthValue, dateValue);
 ```
 
 ### Parameters

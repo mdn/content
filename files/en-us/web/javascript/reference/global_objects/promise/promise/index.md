@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Promise.Promise
 ---
+
 {{JSRef}}
 
 The **`Promise`** constructor is primarily used to wrap
@@ -19,7 +20,7 @@ functions that do not already support promises.
 ## Syntax
 
 ```js
-new Promise(executor)
+new Promise(executor);
 ```
 
 ### Parameters
@@ -106,11 +107,11 @@ To provide a function with promise functionality, have it return a promise:
 ```js
 function myAsyncFunction(url) {
   return new Promise((resolve, reject) => {
-    const xhr = new XMLHttpRequest()
-    xhr.open("GET", url)
-    xhr.onload = () => resolve(xhr.responseText)
-    xhr.onerror = () => reject(xhr.statusText)
-    xhr.send()
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", url);
+    xhr.onload = () => resolve(xhr.responseText);
+    xhr.onerror = () => reject(xhr.statusText);
+    xhr.send();
   });
 }
 ```

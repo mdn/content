@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.strike
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`strike()`** method creates a {{HTMLElement("strike")}}
@@ -19,7 +20,7 @@ HTML element that causes a string to be displayed as struck-out text.
 ## Syntax
 
 ```js
-strike()
+strike();
 ```
 
 ### Return value
@@ -38,7 +39,7 @@ element: "`<strike>str</strike>`".
 The following example uses string methods to change the formatting of a string:
 
 ```js
-var worldString = 'Hello, world';
+var worldString = "Hello, world";
 
 console.log(worldString.blink()); // <blink>Hello, world</blink>
 console.log(worldString.bold()); // <b>Hello, world</b>

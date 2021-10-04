@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getHours
 ---
+
 {{JSRef}}
 
 The **`getHours()`** method returns the hour for the specified
@@ -19,7 +20,7 @@ date, according to local time.
 ## Syntax
 
 ```js
-getHours()
+getHours();
 ```
 
 ### Return value
@@ -36,7 +37,7 @@ based on the value of the {{jsxref("Global_Objects/Date", "Date")}} object
 `Xmas95`.
 
 ```js
-let Xmas95 = new Date('December 25, 1995 23:15:30');
+let Xmas95 = new Date("December 25, 1995 23:15:30");
 let hours = Xmas95.getHours();
 
 console.log(hours); // 23

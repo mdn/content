@@ -9,6 +9,7 @@ tags:
   - Unary
 browser-compat: javascript.operators.void
 ---
+
 {{jsSidebar("Operators")}}
 
 The **`void` operator** evaluates the given
@@ -19,7 +20,7 @@ The **`void` operator** evaluates the given
 ## Syntax
 
 ```js
-void expression
+void expression;
 ```
 
 ## Description
@@ -38,8 +39,8 @@ parentheses can help clarify the resolution of the expression following the
 `void` operator:
 
 ```js
-void 2 == '2';   // (void 2) == '2', returns false
-void (2 == '2'); // void (2 == '2'), returns undefined
+void 2 == "2"; // (void 2) == '2', returns false
+void (2 == "2"); // void (2 == '2'), returns undefined
 ```
 
 ## Examples
@@ -51,11 +52,9 @@ expression](/en-US/docs/Glossary/IIFE), `void` can be used to force the `functio
 keyword to be treated as an expression instead of a declaration.
 
 ```js
-void function iife() {
-
-  console.log("Executed!");
-
-}();
+void (function iife() {
+  console.log("Executed!");
+})();
 
 // Output: "Executed!"
 ```
@@ -71,9 +70,7 @@ value is {{jsxref("undefined")}}. The `void` operator can be used to return
 `undefined`. For example:
 
 ```html
-<a href="javascript:void(0);">
-  Click here to do nothing
-</a>
+<a href="javascript:void(0);"> Click here to do nothing </a>
 
 <a href="javascript:void(document.body.style.backgroundColor='green');">
   Click here for green background

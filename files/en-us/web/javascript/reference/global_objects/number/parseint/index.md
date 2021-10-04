@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Number.parseInt
 ---
+
 {{JSRef}}
 
 The **`Number.parseInt()`** method parses a string argument and
@@ -19,8 +20,8 @@ returns an integer of the specified radix or base.
 ## Syntax
 
 ```js
-Number.parseInt(string)
-Number.parseInt(string, radix)
+Number.parseInt(string);
+Number.parseInt(string, radix);
 ```
 
 ### Parameters
@@ -49,7 +50,7 @@ If the `radix` is smaller than `2` or bigger than
 
 ```js
 if (Number.parseInt === undefined) {
-    Number.parseInt = window.parseInt
+  Number.parseInt = window.parseInt;
 }
 ```
 
@@ -61,7 +62,7 @@ This method has the same functionality as the global {{jsxref("parseInt",
   "parseInt()")}} function:
 
 ```js
-Number.parseInt === parseInt // true
+Number.parseInt === parseInt; // true
 ```
 
 and is part of ECMAScript 2015 (its purpose is modularization of globals). Please see

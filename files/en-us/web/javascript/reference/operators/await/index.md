@@ -9,6 +9,7 @@ tags:
   - Primary Expression
 browser-compat: javascript.operators.await
 ---
+
 {{jsSidebar("Operators")}}
 
 The `await` operator is used to wait for a {{jsxref("Promise")}}. It can only be used inside an {{jsxref("Statements/async_function", "async function")}} within regular JavaScript code; however it can be used on its own with [JavaScript modules.](/en-US/docs/Web/JavaScript/Guide/Modules)
@@ -16,7 +17,7 @@ The `await` operator is used to wait for a {{jsxref("Promise")}}. It can only be
 ## Syntax
 
 ```js
-[rv] = await expression
+[rv] = await expression;
 ```
 
 - `expression`
@@ -55,7 +56,7 @@ the `Promise` to be fulfilled and returns the fulfilled value.
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
@@ -77,11 +78,11 @@ the same.
 
 ```js
 async function f2() {
-  const thenable = {
-    then: function(resolve, _reject) {
-      resolve('resolved!')
-    }
-  };
+  const thenable = {
+    then: function (resolve, _reject) {
+      resolve("resolved!");
+    },
+  };
   console.log(await thenable); // resolved!
 }
 
@@ -110,7 +111,7 @@ If the `Promise` is rejected, the rejected value is thrown.
 async function f4() {
   try {
     var z = await Promise.reject(30);
-  } catch(e) {
+  } catch (e) {
     console.error(e); // 30
   }
 }
@@ -123,7 +124,9 @@ f4();
 Handle rejected `Promise` without try block.
 
 ```js
-var response = await promisedFunction().catch((err) => { console.error(err); });
+var response = await promisedFunction().catch((err) => {
+  console.error(err);
+});
 // response will be undefined if the promise is rejected
 ```
 
@@ -135,8 +138,7 @@ Here is an example of a simple module using the [Fetch API](/en-US/docs/Web/API/
 
 ```js
 // fetch request
-const colors = fetch('../data/colors.json')
-  .then(response => response.json());
+const colors = fetch("../data/colors.json").then((response) => response.json());
 
 export default await colors;
 ```

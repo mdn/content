@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "_x_ is (not) _y_" occurs when there was an
@@ -52,10 +53,10 @@ var foo = null;
 foo.substring(1); // TypeError: foo is null
 
 // Certain methods might require a specific type
-var foo = {}
+var foo = {};
 Symbol.keyFor(foo); // TypeError: foo is not a symbol
 
-var foo = 'bar'
+var foo = "bar";
 Object.create(foo); // TypeError: "foo" is not an object or null
 ```
 
@@ -69,7 +70,7 @@ if (foo !== undefined) {
   // Now we know that foo is defined, we are good to go.
 }
 
-if (typeof foo !== 'undefined') {
+if (typeof foo !== "undefined") {
   // The same good idea, but don't use this implementation - it can bring problems
   // because of the confusion between truly undefined and undeclared variables.
 }

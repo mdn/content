@@ -10,6 +10,7 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.values
 ---
+
 {{JSRef}}
 
 The **`values()`** method returns a new [Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) object that
@@ -25,7 +26,7 @@ contains the values for each element in the `Set` object in insertion order.
 ## Syntax
 
 ```js
-values()
+values();
 ```
 
 ### Return value
@@ -39,9 +40,9 @@ A new iterator object containing the values for each element in the given
 
 ```js
 var mySet = new Set();
-mySet.add('foo');
-mySet.add('bar');
-mySet.add('baz');
+mySet.add("foo");
+mySet.add("bar");
+mySet.add("baz");
 
 var setIter = mySet.values();
 

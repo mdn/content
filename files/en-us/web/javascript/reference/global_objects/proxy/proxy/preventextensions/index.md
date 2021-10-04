@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.preventExtensions
 ---
+
 {{JSRef}}
 
 The **`handler.preventExtensions()`** method is a trap for {{jsxref("Object.preventExtensions()")}}.
@@ -18,8 +19,7 @@ The **`handler.preventExtensions()`** method is a trap for {{jsxref("Object.prev
 
 ```js
 const p = new Proxy(target, {
-  preventExtensions: function(target) {
-  }
+  preventExtensions: function (target) {},
 });
 ```
 
@@ -58,26 +58,32 @@ If the following invariants are violated, the proxy will throw a {{jsxref("TypeE
 The following code traps {{jsxref("Object.preventExtensions()")}}.
 
 ```js
-const p = new Proxy({}, {
-  preventExtensions: function(target) {
-    console.log('called');
-    Object.preventExtensions(target);
-    return true;
+const p = new Proxy(
+  {},
+  {
+    preventExtensions: function (target) {
+      console.log("called");
+      Object.preventExtensions(target);
+      return true;
+    },
   }
-});
+);
 
 console.log(Object.preventExtensions(p)); // "called"
-                                          // false
+// false
 ```
 
 The following code violates the invariant.
 
 ```js example-bad
-const p = new Proxy({}, {
-  preventExtensions: function(target) {
-    return true;
+const p = new Proxy(
+  {},
+  {
+    preventExtensions: function (target) {
+      return true;
+    },
   }
-});
+);
 
 Object.preventExtensions(p); // TypeError is thrown
 ```

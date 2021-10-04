@@ -1,11 +1,12 @@
 ---
-title: 'Warning: JavaScript 1.6''s for-each-in loops are deprecated'
+title: "Warning: JavaScript 1.6's for-each-in loops are deprecated"
 slug: Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated
 tags:
   - Error
   - JavaScript
   - Warning
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript warning "JavaScript 1.6's for-each-in loops are deprecated; consider
@@ -55,8 +56,8 @@ var object = { a: 10, b: 20 };
 
 for (var key in object) {
   var x = object[key];
-  console.log(x);        // 10
-                         // 20
+  console.log(x); // 10
+  // 20
 }
 ```
 
@@ -68,8 +69,8 @@ values and iterate over the array like this:
 var object = { a: 10, b: 20 };
 
 for (var x of Object.values(object)) {
-  console.log(x);        // 10
-                         // 20
+  console.log(x); // 10
+  // 20
 }
 ```
 
@@ -99,9 +100,9 @@ as well.
 var array = [10, 20, 30];
 
 for (var x of array) {
-  console.log(x);        // 10
-                         // 20
-                         // 30
+  console.log(x); // 10
+  // 20
+  // 30
 }
 ```
 
@@ -140,10 +141,10 @@ function func(array) {
     }
   }
 }
-func([10, 20]);        // 10
-                       // 20
-func(null);            // prints nothing
-func(undefined);       // prints nothing
+func([10, 20]); // 10
+// 20
+func(null); // prints nothing
+func(undefined); // prints nothing
 ```
 
 ### Iterating over an object's key-value pair
@@ -173,8 +174,8 @@ var object = { a: 10, b: 20 };
 
 for (var key in object) {
   var value = object[key];
-  console.log(key, value);  // "a", 10
-                            // "b", 20
+  console.log(key, value); // "a", 10
+  // "b", 20
 }
 ```
 
@@ -186,8 +187,8 @@ values and iterate over the array like this:
 var object = { a: 10, b: 20 };
 
 for (var [key, value] of Object.entries(object)) {
-  console.log(key, value);  // "a", 10
-                            // "b", 20
+  console.log(key, value); // "a", 10
+  // "b", 20
 }
 ```
 

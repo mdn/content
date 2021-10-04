@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.find
 ---
+
 {{JSRef}}
 
 The `find()` method returns the value of the first
@@ -95,7 +96,7 @@ by `find` are set _before_ the first invocation of
 
 - `callbackFn` will not visit any elements added to the array
   after the call to `find` begins.
-- Elements which are assigned to indexes already visited, or to indexes 
+- Elements which are assigned to indexes already visited, or to indexes
   outside the range, will not be visited by `callbackFn`.
 - If an existing, yet-unvisited element of the array is changed by
   `callbackFn`, its value passed to the
@@ -111,13 +112,13 @@ by `find` are set _before_ the first invocation of
 
 ```js
 const inventory = [
-  {name: 'apples', quantity: 2},
-  {name: 'bananas', quantity: 0},
-  {name: 'cherries', quantity: 5}
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "cherries", quantity: 5 },
 ];
 
 function isCherries(fruit) {
-  return fruit.name === 'cherries';
+  return fruit.name === "cherries";
 }
 
 console.log(inventory.find(isCherries));
@@ -128,14 +129,14 @@ console.log(inventory.find(isCherries));
 
 ```js
 const inventory = [
-  {name: 'apples', quantity: 2},
-  {name: 'bananas', quantity: 0},
-  {name: 'cherries', quantity: 5}
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "cherries", quantity: 5 },
 ];
 
-const result = inventory.find( ({ name }) => name === 'cherries' );
+const result = inventory.find(({ name }) => name === "cherries");
 
-console.log(result) // { name: 'cherries', quantity: 5 }
+console.log(result); // { name: 'cherries', quantity: 5 }
 ```
 
 ### Find a prime number in an array
@@ -163,22 +164,22 @@ and that the value passed to the callback is their value when visited:
 
 ```js
 // Declare array with no elements at indexes 2, 3, and 4
-const array = [0,1,,,,5,6];
+const array = [0, 1, , , , 5, 6];
 
 // Shows all indexes, not just those with assigned values
-array.find(function(value, index) {
-  console.log('Visited index ', index, ' with value ', value);
+array.find(function (value, index) {
+  console.log("Visited index ", index, " with value ", value);
 });
 
 // Shows all indexes, including deleted
-array.find(function(value, index) {
+array.find(function (value, index) {
   // Delete element 5 on first iteration
   if (index === 0) {
-    console.log('Deleting array[5] with value ', array[5]);
+    console.log("Deleting array[5] with value ", array[5]);
     delete array[5];
   }
   // Element 5 is still visited even though deleted
-  console.log('Visited index ', index, ' with value ', value);
+  console.log("Visited index ", index, " with value ", value);
 });
 // expected output:
 // Deleting array[5] with value 5

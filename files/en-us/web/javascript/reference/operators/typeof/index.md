@@ -9,6 +9,7 @@ tags:
   - Unary
 browser-compat: javascript.operators.typeof
 ---
+
 {{JSSidebar("Operators")}}
 
 The **`typeof`** operator returns a string indicating the type
@@ -21,8 +22,8 @@ of the unevaluated operand.
 The `typeof` operator is followed by its operand:
 
 ```js
-typeof operand
-typeof(operand)
+typeof operand;
+typeof operand;
 ```
 
 ### Parameters
@@ -60,67 +61,67 @@ more information about types and primitives, see also the [JavaScript data struc
 
 ```js
 // Numbers
-typeof 37 === 'number';
-typeof 3.14 === 'number';
-typeof(42) === 'number';
-typeof Math.LN2 === 'number';
-typeof Infinity === 'number';
-typeof NaN === 'number'; // Despite being "Not-A-Number"
-typeof Number('1') === 'number';      // Number tries to parse things into numbers
-typeof Number('shoe') === 'number';   // including values that cannot be type coerced to a number
+typeof 37 === "number";
+typeof 3.14 === "number";
+typeof 42 === "number";
+typeof Math.LN2 === "number";
+typeof Infinity === "number";
+typeof NaN === "number"; // Despite being "Not-A-Number"
+typeof Number("1") === "number"; // Number tries to parse things into numbers
+typeof Number("shoe") === "number"; // including values that cannot be type coerced to a number
 
-typeof 42n === 'bigint';
+typeof 42n === "bigint";
 
 // Strings
-typeof '' === 'string';
-typeof 'bla' === 'string';
-typeof `template literal` === 'string';
-typeof '1' === 'string'; // note that a number within a string is still typeof string
-typeof (typeof 1) === 'string'; // typeof always returns a string
-typeof String(1) === 'string'; // String converts anything into a string, safer than toString
+typeof "" === "string";
+typeof "bla" === "string";
+typeof `template literal` === "string";
+typeof "1" === "string"; // note that a number within a string is still typeof string
+typeof typeof 1 === "string"; // typeof always returns a string
+typeof String(1) === "string"; // String converts anything into a string, safer than toString
 
 // Booleans
-typeof true === 'boolean';
-typeof false === 'boolean';
-typeof Boolean(1) === 'boolean'; // Boolean() will convert values based on if they're truthy or falsy
-typeof !!(1) === 'boolean'; // two calls of the ! (logical NOT) operator are equivalent to Boolean()
+typeof true === "boolean";
+typeof false === "boolean";
+typeof Boolean(1) === "boolean"; // Boolean() will convert values based on if they're truthy or falsy
+typeof !!1 === "boolean"; // two calls of the ! (logical NOT) operator are equivalent to Boolean()
 
 // Symbols
-typeof Symbol() === 'symbol'
-typeof Symbol('foo') === 'symbol'
-typeof Symbol.iterator === 'symbol'
+typeof Symbol() === "symbol";
+typeof Symbol("foo") === "symbol";
+typeof Symbol.iterator === "symbol";
 
 // Undefined
-typeof undefined === 'undefined';
-typeof declaredButUndefinedVariable === 'undefined';
-typeof undeclaredVariable === 'undefined';
+typeof undefined === "undefined";
+typeof declaredButUndefinedVariable === "undefined";
+typeof undeclaredVariable === "undefined";
 
 // Objects
-typeof {a: 1} === 'object';
+typeof { a: 1 } === "object";
 
 // use Array.isArray or Object.prototype.toString.call
 // to differentiate regular objects from arrays
-typeof [1, 2, 4] === 'object';
+typeof [1, 2, 4] === "object";
 
-typeof new Date() === 'object';
-typeof /regex/ === 'object'; // See Regular expressions section for historical results
+typeof new Date() === "object";
+typeof /regex/ === "object"; // See Regular expressions section for historical results
 
 // The following are confusing, dangerous, and wasteful. Avoid them.
-typeof new Boolean(true) === 'object';
-typeof new Number(1) === 'object';
-typeof new String('abc') === 'object';
+typeof new Boolean(true) === "object";
+typeof new Number(1) === "object";
+typeof new String("abc") === "object";
 
 // Functions
-typeof function() {} === 'function';
-typeof class C {} === 'function';
-typeof Math.sin === 'function';
+typeof function () {} === "function";
+typeof class C {} === "function";
+typeof Math.sin === "function";
 ```
 
 ### `typeof null`
 
 ```js
 // This stands since the beginning of JavaScript
-typeof null === 'object';
+typeof null === "object";
 ```
 
 In the first implementation of JavaScript, JavaScript values were represented as a type
@@ -136,7 +137,7 @@ rejected](https://web.archive.org/web/20160331031419/http://wiki.ecmascript.org:
 
 ```js
 // All constructor functions, with the exception of the Function constructor, will always be typeof 'object'
-let str = new String('String');
+let str = new String("String");
 let num = new Number(100);
 
 typeof str; // It will return 'object'
@@ -153,8 +154,8 @@ typeof func; // It will return 'function'
 // Parentheses can be used for determining the data type of expressions.
 let iData = 99;
 
-typeof iData + ' Wisen'; // 'number Wisen'
-typeof (iData + ' Wisen'); // 'string'
+typeof iData + " Wisen"; // 'number Wisen'
+typeof (iData + " Wisen"); // 'string'
 ```
 
 ### Regular expressions
@@ -162,8 +163,8 @@ typeof (iData + ' Wisen'); // 'string'
 Callable regular expressions were a non-standard addition in some browsers.
 
 ```js
-typeof /s/ === 'function'; // Chrome 1-12 Non-conform to ECMAScript 5.1
-typeof /s/ === 'object';   // Firefox 5+  Conform to ECMAScript 5.1
+typeof /s/ === "function"; // Chrome 1-12 Non-conform to ECMAScript 5.1
+typeof /s/ === "object"; // Firefox 5+  Conform to ECMAScript 5.1
 ```
 
 ### Errors
@@ -182,15 +183,15 @@ dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#The_temporal_dead
 during which, it will throw an error if accessed.
 
 ```js
-typeof undeclaredVariable === 'undefined';
+typeof undeclaredVariable === "undefined";
 
 typeof newLetVariable; // ReferenceError
 typeof newConstVariable; // ReferenceError
 typeof newClass; // ReferenceError
 
 let newLetVariable;
-const newConstVariable = 'hello';
-class newClass{};
+const newConstVariable = "hello";
+class newClass {}
 ```
 
 ### Exceptions
@@ -199,7 +200,7 @@ All current browsers expose a non-standard host object [`document.all`](/en-US/d
 with type `undefined`.
 
 ```js
-typeof document.all === 'undefined';
+typeof document.all === "undefined";
 ```
 
 Although the specification allows custom type tags for non-standard exotic objects, it
@@ -217,24 +218,32 @@ For greater specificity in checking types, a `typeof` wrapper for usage in
 production-level code would be as follows (provided `obj` exists):
 
 ```js
-  function type(obj, showFullClass) {
-
-    // get toPrototypeString() of obj (handles all types)
-    if (showFullClass && typeof obj === "object") {
-        return Object.prototype.toString.call(obj);
-    }
-    if (obj == null) { return (obj + '').toLowerCase(); } // implicit toString() conversion
-
-    var deepType = Object.prototype.toString.call(obj).slice(8,-1).toLowerCase();
-    if (deepType === 'generatorfunction') { return 'function' }
-
-    // Prevent overspecificity (for example, [object HTMLDivElement], etc).
-    // Account for functionish Regexp (Android <=2.3), functionish <object> element (Chrome <=57, Firefox <=52), etc.
-    // String.prototype.match is universally supported.
-
-    return deepType.match(/^(array|bigint|date|error|function|generator|regexp|symbol)$/) ? deepType :
-       (typeof obj === 'object' || typeof obj === 'function') ? 'object' : typeof obj;
+function type(obj, showFullClass) {
+  // get toPrototypeString() of obj (handles all types)
+  if (showFullClass && typeof obj === "object") {
+    return Object.prototype.toString.call(obj);
   }
+  if (obj == null) {
+    return (obj + "").toLowerCase();
+  } // implicit toString() conversion
+
+  var deepType = Object.prototype.toString.call(obj).slice(8, -1).toLowerCase();
+  if (deepType === "generatorfunction") {
+    return "function";
+  }
+
+  // Prevent overspecificity (for example, [object HTMLDivElement], etc).
+  // Account for functionish Regexp (Android <=2.3), functionish <object> element (Chrome <=57, Firefox <=52), etc.
+  // String.prototype.match is universally supported.
+
+  return deepType.match(
+    /^(array|bigint|date|error|function|generator|regexp|symbol)$/
+  )
+    ? deepType
+    : typeof obj === "object" || typeof obj === "function"
+    ? "object"
+    : typeof obj;
+}
 ```
 
 For checking non-existent variables that would otherwise throw
@@ -253,7 +262,7 @@ a {{JSxRef("ReferenceError")}}, use `typeof nonExistentVar === 'undefined'`.
 On IE 6, 7, and 8 a lot of host objects are objects and not functions. For example:
 
 ```js
-typeof alert === 'object'
+typeof alert === "object";
 ```
 
 Some non-standard IE properties return other values ([tc39/ecma262#1440

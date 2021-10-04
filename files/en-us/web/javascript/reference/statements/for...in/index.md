@@ -7,6 +7,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.for_in
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`for...in` statement** iterates over all [enumerable
@@ -19,7 +20,7 @@ including inherited enumerable properties.
 
 ```js
 for (variable in object) {
-  statement
+  statement;
 }
 ```
 
@@ -105,7 +106,7 @@ The `for...in` loop below iterates over all of the object's enumerable,
 non-Symbol properties and logs a string of the property names and their values.
 
 ```js
-var obj = {a: 1, b: 2, c: 3};
+var obj = { a: 1, b: 2, c: 3 };
 
 for (const prop in obj) {
   console.log(`obj.${prop} = ${obj[prop]}`);
@@ -124,10 +125,10 @@ The following function illustrates the use of
 properties are not displayed.
 
 ```js
-var triangle = {a: 1, b: 2, c: 3};
+var triangle = { a: 1, b: 2, c: 3 };
 
 function ColoredTriangle() {
-  this.color = 'red';
+  this.color = "red";
 }
 
 ColoredTriangle.prototype = triangle;

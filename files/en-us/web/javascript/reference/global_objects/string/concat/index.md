@@ -9,6 +9,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.concat
 ---
+
 {{JSRef}}
 
 The **`concat()`** method concatenates
@@ -55,18 +56,18 @@ the `concat()` method.
 The following example combines strings into a new string.
 
 ```js
-let hello = 'Hello, '
-console.log(hello.concat('Kevin', '. Have a nice day.'))
+let hello = "Hello, ";
+console.log(hello.concat("Kevin", ". Have a nice day."));
 // Hello, Kevin. Have a nice day.
 
-let greetList = ['Hello', ' ', 'Venkat', '!']
-"".concat(...greetList)  // "Hello Venkat!"
+let greetList = ["Hello", " ", "Venkat", "!"];
+"".concat(...greetList); // "Hello Venkat!"
 
-"".concat({})    // [object Object]
-"".concat([])    // ""
-"".concat(null)  // "null"
-"".concat(true)  // "true"
-"".concat(4, 5)  // "45"
+"".concat({}); // [object Object]
+"".concat([]); // ""
+"".concat(null); // "null"
+"".concat(true); // "true"
+"".concat(4, 5); // "45"
 ```
 
 ## Specifications

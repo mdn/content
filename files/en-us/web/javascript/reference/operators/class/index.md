@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.class
 ---
+
 {{jsSidebar("Operators")}}
 
 The **class expression** is one way to define a
@@ -51,16 +52,16 @@ expressions will always respond to {{jsxref("Operators/typeof", "typeof")}} with
 value "`function`".
 
 ```js
-'use strict';
-let Foo = class {};  // constructor property is optional
-Foo = class {};      // Re-declaration is allowed
+"use strict";
+let Foo = class {}; // constructor property is optional
+Foo = class {}; // Re-declaration is allowed
 
-typeof Foo;             // returns "function"
-typeof class {};        // returns "function"
+typeof Foo; // returns "function"
+typeof class {}; // returns "function"
 
-Foo instanceof Object;   // true
+Foo instanceof Object; // true
 Foo instanceof Function; // true
-class Foo {}            // Throws SyntaxError (class declarations do not allow re-declaration)
+class Foo {} // Throws SyntaxError (class declarations do not allow re-declaration)
 ```
 
 ## Examples
@@ -74,13 +75,13 @@ variable `Foo`.
 const Foo = class {
   constructor() {}
   bar() {
-    return 'Hello World!';
+    return "Hello World!";
   }
 };
 
 const instance = new Foo();
-instance.bar();  // "Hello World!"
-Foo.name;        // "Foo"
+instance.bar(); // "Hello World!"
+Foo.name; // "Foo"
 ```
 
 ### Named class expressions
@@ -95,11 +96,11 @@ const Foo = class NamedFoo {
   whoIsThere() {
     return NamedFoo.name;
   }
-}
+};
 const bar = new Foo();
-bar.whoIsThere();  // "NamedFoo"
-NamedFoo.name;     // ReferenceError: NamedFoo is not defined
-Foo.name;          // "NamedFoo"
+bar.whoIsThere(); // "NamedFoo"
+NamedFoo.name; // ReferenceError: NamedFoo is not defined
+Foo.name; // "NamedFoo"
 ```
 
 ## Specifications

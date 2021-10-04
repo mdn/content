@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.flatMap
 ---
+
 {{JSRef}}
 
 The **`flatMap()`** method returns a new array formed by
@@ -76,7 +77,7 @@ of depth 1.
 ```js
 var arr = [1, 2, 3, 4];
 
-arr.flatMap(x => [x, x * 2]);
+arr.flatMap((x) => [x, x * 2]);
 // is equivalent to
 arr.reduce((acc, x) => acc.concat([x, x * 2]), []);
 // [1, 2, 2, 4, 3, 6, 4, 8]
@@ -94,14 +95,14 @@ adding the new elements to the existing array.
 ```js
 let arr1 = [1, 2, 3, 4];
 
-arr1.map(x => [x * 2]);
+arr1.map((x) => [x * 2]);
 // [[2], [4], [6], [8]]
 
-arr1.flatMap(x => [x * 2]);
+arr1.flatMap((x) => [x * 2]);
 // [2, 4, 6, 8]
 
 // only one level is flattened
-arr1.flatMap(x => [[x * 2]]);
+arr1.flatMap((x) => [[x * 2]]);
 // [[2], [4], [6], [8]]
 ```
 
@@ -113,10 +114,10 @@ Let's generate a list of words from a list of sentences.
 ```js
 let arr1 = ["it's Sunny in", "", "California"];
 
-arr1.map(x => x.split(" "));
+arr1.map((x) => x.split(" "));
 // [["it's","Sunny","in"],[""],["California"]]
 
-arr1.flatMap(x => x.split(" "));
+arr1.flatMap((x) => x.split(" "));
 // ["it's","Sunny","in", "", "California"]
 ```
 
@@ -134,15 +135,11 @@ Return a 1-element array to keep the item, a multiple-element array to add items
 ```js
 // Let's say we want to remove all the negative numbers
 // and split the odd numbers into an even number and a 1
-let a = [5, 4, -3, 20, 17, -33, -4, 18]
+let a = [5, 4, -3, 20, 17, -33, -4, 18];
 //       |\  \  x   |  | \   x   x   |
 //      [4,1, 4,   20, 16, 1,       18]
 
-a.flatMap( (n) =>
-  (n < 0) ?      [] :
-  (n % 2 == 0) ? [n] :
-                 [n-1, 1]
-)
+a.flatMap((n) => (n < 0 ? [] : n % 2 == 0 ? [n] : [n - 1, 1]));
 
 // expected output: [4, 1, 4, 20, 16, 1, 18]
 ```

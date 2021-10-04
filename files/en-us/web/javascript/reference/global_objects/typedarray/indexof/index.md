@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.indexOf
 ---
+
 {{JSRef}}
 
 The **`indexOf()`** method returns the first index at which a
@@ -24,8 +25,8 @@ array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Type
 ## Syntax
 
 ```js
-indexOf(searchElement)
-indexOf(searchElement, fromIndex)
+indexOf(searchElement);
+indexOf(searchElement, fromIndex);
 ```
 
 ### Parameters
@@ -56,9 +57,9 @@ equality](/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Us
 
 ```js
 var uint8 = new Uint8Array([2, 5, 9]);
-uint8.indexOf(2);     // 0
-uint8.indexOf(7);     // -1
-uint8.indexOf(9, 2);  // 2
+uint8.indexOf(2); // 0
+uint8.indexOf(7); // -1
+uint8.indexOf(9, 2); // 2
 uint8.indexOf(2, -1); // -1
 uint8.indexOf(2, -3); // 0
 ```

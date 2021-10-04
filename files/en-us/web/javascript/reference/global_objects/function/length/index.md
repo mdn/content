@@ -7,6 +7,7 @@ tags:
   - Property
 browser-compat: javascript.builtins.Function.length
 ---
+
 {{JSRef}}
 
 The **`length`** property indicates the number of parameters expected by the function.
@@ -32,14 +33,14 @@ The length property of the {{jsxref("Function")}} prototype object has a value o
 ```js
 console.log(Function.length); /* 1 */
 
-console.log((function()        {}).length); /* 0 */
-console.log((function(a)       {}).length); /* 1 */
-console.log((function(a, b)    {}).length); /* 2 etc. */
+console.log(function () {}.length); /* 0 */
+console.log(function (a) {}.length); /* 1 */
+console.log(function (a, b) {}.length); /* 2 etc. */
 
-console.log((function(...args) {}).length);
+console.log(function (...args) {}.length);
 // 0, rest parameter is not counted
 
-console.log((function(a, b = 1, c) {}).length);
+console.log(function (a, b = 1, c) {}.length);
 // 1, only parameters before the first one with
 // a default value is counted
 ```

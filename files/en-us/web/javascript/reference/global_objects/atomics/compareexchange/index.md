@@ -8,6 +8,7 @@ tags:
   - Shared Memory
 browser-compat: javascript.builtins.Atomics.compareExchange
 ---
+
 {{JSRef}}
 
 The static
@@ -22,7 +23,7 @@ other write happens until the modified value is written back.
 ## Syntax
 
 ```js
-Atomics.compareExchange(typedArray, index, expectedValue, replacementValue)
+Atomics.compareExchange(typedArray, index, expectedValue, replacementValue);
 ```
 
 ### Parameters

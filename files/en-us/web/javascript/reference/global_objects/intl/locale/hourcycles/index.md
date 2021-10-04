@@ -13,6 +13,7 @@ tags:
   - hourCycles
 browser-compat: javascript.builtins.Intl.Locale.hourCycles
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale.prototype.hourCycles`** property is an accessor property which returns a list of one or more unique hour cycle identifiers for the `Locale`.

@@ -10,6 +10,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly
 ---
+
 {{JSRef}}
 
 The **`WebAssembly`** JavaScript object acts as the namespace for all [WebAssembly](/en-US/docs/WebAssembly)-related functionality.
@@ -63,10 +64,11 @@ The primary uses for the `WebAssembly` object are:
 The following example (see our [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html) also) directly streams a .wasm module from an underlying source then compiles and instantiates it, the promise fulfilling with a `ResultObject`. Because the `instantiateStreaming()`  function accepts a promise for a [`Response`](/en-US/docs/Web/API/Response "The Response interface of the Fetch API represents the response to a request.") object, you can directly pass it a [`fetch()`](/en-US/docs/Web/API/fetch) call, and it will pass the response into the function when it fulfills.
 
 ```js
-var importObject = { imports: { imported_func: arg => console.log(arg) } };
+var importObject = { imports: { imported_func: (arg) => console.log(arg) } };
 
-WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(obj => obj.instance.exports.exported_func());
+WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
+  (obj) => obj.instance.exports.exported_func()
+);
 ```
 
 The `ResultObject`'s instance member is then accessed, and the contained exported function invoked.

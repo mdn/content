@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Math.LOG10E
 ---
+
 {{JSRef}}
 
 The **`Math.LOG10E`** property represents the base 10 logarithm of e, approximately 0.434:

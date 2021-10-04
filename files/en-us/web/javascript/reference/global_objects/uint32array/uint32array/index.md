@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Uint32Array.Uint32Array
 ---
+
 {{JSRef}}
 
 The **`Uint32Array()`** typed array constructor creates an
@@ -71,7 +72,7 @@ console.log(uint32.length); // 2
 console.log(uint32.BYTES_PER_ELEMENT); // 4
 
 // From an array
-var arr = new Uint32Array([21,31]);
+var arr = new Uint32Array([21, 31]);
 console.log(arr[1]); // 31
 
 // From another TypedArray
@@ -84,7 +85,9 @@ var buffer = new ArrayBuffer(16);
 var z = new Uint32Array(buffer, 0, 4);
 
 // From an iterable
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var uint32 = new Uint32Array(iterable);
 // Uint32Array[1, 2, 3]
 ```

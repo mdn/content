@@ -8,6 +8,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.var
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`var` statement** declares a function-scoped or
@@ -48,7 +49,7 @@ in strict mode, and the variable will not lose its value, unless another assignm
 performed.
 
 ```js
-'use strict';
+"use strict";
 function foo() {
   var x = 1;
   function bar() {
@@ -68,12 +69,12 @@ Variables declared using `var` are created before any code is executed in a
 process known as hoisting. Their initial value is `undefined`.
 
 ```js
-'use strict';
-console.log(x);                // undefined (note: not ReferenceError)
-console.log('still going...'); // still going...
+"use strict";
+console.log(x); // undefined (note: not ReferenceError)
+console.log("still going..."); // still going...
 var x = 1;
-console.log(x);                // 1
-console.log('still going...'); // still going...
+console.log(x); // 1
+console.log("still going..."); // still going...
 ```
 
 In the global context, a variable declared using `var` is added as a
@@ -114,14 +115,14 @@ So you can just type:
 
 ```js
 function foo() {
-  String('s') // Note the function `String` is implicitly visible
+  String("s"); // Note the function `String` is implicitly visible
 }
 ```
 
 ...because
 
 ```js
-globalThis.hasOwnProperty('String') // true
+globalThis.hasOwnProperty("String"); // true
 ```
 
 So the global object will ultimately be searched for unqualified identifiers. You don't
@@ -131,8 +132,8 @@ unqualified identifiers will, if there is no variable of the same name declared 
 scope chain, assume you want to create a property with that name on the global object.
 
 ```js
-foo = 'f' // In non-strict mode, assumes you want to create a property named `foo` on the global object
-globalThis.hasOwnProperty('foo') // true
+foo = "f"; // In non-strict mode, assumes you want to create a property named `foo` on the global object
+globalThis.hasOwnProperty("foo"); // true
 ```
 
 In ECMAScript 5, this behavior was changed for [strict
@@ -192,24 +193,27 @@ function do_something() {
 ### Declaring and initializing two variables
 
 ```js
-var a = 0, b = 0;
+var a = 0,
+  b = 0;
 ```
 
 ### Assigning two variables with single string value
 
 ```js
-var a = 'A';
+var a = "A";
 var b = a;
 
 // ...is equivalent to:
 
-var a, b = a = 'A';
+var a,
+  b = (a = "A");
 ```
 
 Be mindful of the order:
 
 ```js
-var x = y, y = 'A';
+var x = y,
+  y = "A";
 console.log(x + y); // undefinedA
 ```
 
@@ -225,7 +229,7 @@ line, `x === undefined && y === 'A'`, hence the result.
 ```js
 var x = 0;
 function f() {
-  var x = y = 1; // Declares x locally; declares y globally.
+  var x = (y = 1); // Declares x locally; declares y globally.
 }
 f();
 
@@ -239,11 +243,11 @@ console.log(x, y); // 0 1
 The same example as above but with a strict mode:
 
 ```js
-'use strict';
+"use strict";
 
 var x = 0;
 function f() {
-  var x = y = 1; // Throws a ReferenceError in strict mode.
+  var x = (y = 1); // Throws a ReferenceError in strict mode.
 }
 f();
 
@@ -269,7 +273,7 @@ function a() {
     x = 3; // Assigns 3 to existing file scoped x.
     y = 4; // Assigns 4 to existing outer y.
     z = 5; // Creates a new global variable z, and assigns it a value of 5.
-           // (Throws a ReferenceError in strict mode.)
+    // (Throws a ReferenceError in strict mode.)
   }
 
   b(); // Creates z as a global variable.
@@ -277,7 +281,7 @@ function a() {
 }
 
 a(); // Also calls b.
-console.log(x, z);     // 3 5
+console.log(x, z); // 3 5
 console.log(typeof y); // "undefined", as y is local to function a
 ```
 

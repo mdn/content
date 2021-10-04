@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Math.log2
 ---
+
 {{JSRef}}
 
 The **`Math.log2()`** function returns the base 2 logarithm of
@@ -46,7 +47,7 @@ a number, that is
 ## Syntax
 
 ```js
-Math.log2(x)
+Math.log2(x);
 ```
 
 ### Parameters
@@ -78,9 +79,10 @@ imprecise values on some inputs (like 1 << 29), wrap into
 {{jsxref("Math.round()")}} if working with bit masks.
 
 ```js
-if (!Math.log2) Math.log2 = function(x) {
-  return Math.log(x) * Math.LOG2E;
-};
+if (!Math.log2)
+  Math.log2 = function (x) {
+    return Math.log(x) * Math.LOG2E;
+  };
 ```
 
 ## Examples
@@ -88,11 +90,11 @@ if (!Math.log2) Math.log2 = function(x) {
 ### Using Math.log2()
 
 ```js
-Math.log2(3);    // 1.584962500721156
-Math.log2(2);    // 1
-Math.log2(1);    // 0
-Math.log2(0);    // -Infinity
-Math.log2(-2);   // NaN
+Math.log2(3); // 1.584962500721156
+Math.log2(2); // 1
+Math.log2(1); // 0
+Math.log2(0); // -Infinity
+Math.log2(-2); // NaN
 Math.log2(1024); // 10
 ```
 

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.unsigned_right_shift
 ---
+
 {{jsSidebar("Operators")}}
 
 The **unsigned right shift operator (`>>>`)**
@@ -23,7 +24,7 @@ integer.
 ## Syntax
 
 ```js
-a >>> b
+a >>> b;
 ```
 
 ## Description
@@ -58,7 +59,7 @@ However, this is not the case for negative numbers. For example,
 ### Using unsigned right shift
 
 ```js
- 9 >>> 2; // 2
+9 >>> 2; // 2
 -9 >>> 2; // 1073741821
 ```
 

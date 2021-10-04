@@ -8,6 +8,7 @@ tags:
   - ReferenceError
   - Strict Mode
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript warning "reference to undefined property" occurs when a script attempted
@@ -54,12 +55,12 @@ var foo = {};
 
 // Define the bar property
 
-foo.bar = 'moon';
+foo.bar = "moon";
 console.log(foo.bar); // "moon"
 
 // Test to be sure bar exists before accessing it
 
-if (foo.hasOwnProperty('bar')) {
+if (foo.hasOwnProperty("bar")) {
   console.log(foo.bar);
 }
 ```

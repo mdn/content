@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.sub
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`sub()`** method creates a {{HTMLElement("sub")}} HTML
@@ -19,7 +20,7 @@ element that causes a string to be displayed as subscript.
 ## Syntax
 
 ```js
-sub()
+sub();
 ```
 
 ### Return value
@@ -39,13 +40,13 @@ The following example uses the `sub()` and
 {{jsxref("String.prototype.sup()", "sup()")}} methods to format a string:
 
 ```js
-var superText = 'superscript';
-var subText = 'subscript';
+var superText = "superscript";
+var subText = "subscript";
 
-console.log('This is what a ' + superText.sup() + ' looks like.');
+console.log("This is what a " + superText.sup() + " looks like.");
 // "This is what a <sup>superscript</sup> looks like."
 
-console.log('This is what a ' + subText.sub() + ' looks like.');
+console.log("This is what a " + subText.sub() + " looks like.");
 // "This is what a <sub>subscript</sub> looks like."
 ```
 

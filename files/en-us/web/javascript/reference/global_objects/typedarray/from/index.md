@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.from
 ---
+
 {{JSRef}}
 
 The **`TypedArray.from()`** method creates a new [typed
@@ -122,7 +123,7 @@ Uint8Array.from(s);
 ### From a string
 
 ```js
-Int16Array.from('123');
+Int16Array.from("123");
 // Int16Array [ 1, 2, 3 ]
 ```
 
@@ -131,14 +132,14 @@ Int16Array.from('123');
 Using an arrow function as the map function to manipulate the elements
 
 ```js
-Float32Array.from([1, 2, 3], x => x + x);
+Float32Array.from([1, 2, 3], (x) => x + x);
 // Float32Array [ 2, 4, 6 ]
 ```
 
 ### Generate a sequence of numbers
 
 ```js
-Uint8Array.from({length: 5}, (v, k) => k);
+Uint8Array.from({ length: 5 }, (v, k) => k);
 // Uint8Array [ 0, 1, 2, 3, 4 ]
 ```
 

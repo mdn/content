@@ -1,11 +1,12 @@
 ---
-title: 'Warning: String.x is deprecated; use String.prototype.x instead'
+title: "Warning: String.x is deprecated; use String.prototype.x instead"
 slug: Web/JavaScript/Reference/Errors/Deprecated_String_generics
 tags:
   - Error
   - JavaScript
   - Warning
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript warning about string generics occurs in Firefox versions prior to 68.
@@ -58,14 +59,14 @@ applied to any object.
 
 ```js example-bad
 var num = 15;
-String.replace(num, /5/, '2');
+String.replace(num, /5/, "2");
 ```
 
 ### Standard syntax
 
 ```js example-good
 var num = 15;
-String(num).replace(/5/, '2');
+String(num).replace(/5/, "2");
 ```
 
 ## Shim
@@ -76,8 +77,8 @@ The following is a shim to provide support to non-supporting browsers:
 /*globals define*/
 // Assumes all supplied String instance methods already present
 // (one may use shims for these if not available)
-(function() {
-  'use strict';
+(function () {
+  "use strict";
 
   var i,
     // We could also build the array of methods with the following, but the
@@ -86,16 +87,36 @@ The following is a shim to provide support to non-supporting browsers:
     //   return typeof String[methodName] === 'function';
     // });
     methods = [
-      'contains', 'substring', 'toLowerCase', 'toUpperCase', 'charAt',
-      'charCodeAt', 'indexOf', 'lastIndexOf', 'startsWith', 'endsWith',
-      'trim', 'trimLeft', 'trimRight', 'toLocaleLowerCase', 'normalize',
-      'toLocaleUpperCase', 'localeCompare', 'match', 'search', 'slice',
-      'replace', 'split', 'substr', 'concat', 'localeCompare'
+      "contains",
+      "substring",
+      "toLowerCase",
+      "toUpperCase",
+      "charAt",
+      "charCodeAt",
+      "indexOf",
+      "lastIndexOf",
+      "startsWith",
+      "endsWith",
+      "trim",
+      "trimLeft",
+      "trimRight",
+      "toLocaleLowerCase",
+      "normalize",
+      "toLocaleUpperCase",
+      "localeCompare",
+      "match",
+      "search",
+      "slice",
+      "replace",
+      "split",
+      "substr",
+      "concat",
+      "localeCompare",
     ],
     methodCount = methods.length,
-    assignStringGeneric = function(methodName) {
+    assignStringGeneric = function (methodName) {
       var method = String.prototype[methodName];
-      String[methodName] = function(arg1) {
+      String[methodName] = function (arg1) {
         return method.apply(arg1, Array.prototype.slice.call(arguments, 1));
       };
     };
@@ -103,7 +124,7 @@ The following is a shim to provide support to non-supporting browsers:
   for (i = 0; i < methodCount; i++) {
     assignStringGeneric(methods[i]);
   }
-}());
+})();
 ```
 
 ## See also

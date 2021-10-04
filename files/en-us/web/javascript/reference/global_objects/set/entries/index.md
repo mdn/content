@@ -10,6 +10,7 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.entries
 ---
+
 {{JSRef}}
 
 The **`entries()`** method returns a new [Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) object
@@ -25,7 +26,7 @@ returned.
 ## Syntax
 
 ```js
-entries()
+entries();
 ```
 
 ### Return value
@@ -39,9 +40,9 @@ element in the given `Set`, in insertion order.
 
 ```js
 var mySet = new Set();
-mySet.add('foobar');
+mySet.add("foobar");
 mySet.add(1);
-mySet.add('baz');
+mySet.add("baz");
 
 var setIter = mySet.entries();
 

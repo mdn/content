@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.trimEnd
 ---
+
 {{JSRef}}
 
 The **`trimEnd()`** method removes whitespace from the end of a
@@ -20,9 +21,9 @@ string. `trimRight()` is an alias of this method.
 ## Syntax
 
 ```js
-trimEnd()
+trimEnd();
 
-trimRight()
+trimRight();
 ```
 
 ### Return value
@@ -49,13 +50,13 @@ String.prototype.trimRight.name === "trimEnd";
 The following example displays the lowercase string `' foo'`:
 
 ```js
-var str = '   foo  ';
+var str = "   foo  ";
 
 console.log(str.length); // 8
 
 str = str.trimEnd();
 console.log(str.length); // 6
-console.log(str);        // '   foo'
+console.log(str); // '   foo'
 ```
 
 ## Specifications

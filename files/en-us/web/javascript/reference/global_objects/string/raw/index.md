@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.raw
 ---
+
 {{JSRef}}
 
 The static **`String.raw()`** method
@@ -25,9 +26,9 @@ It's used to get the raw string form of template literals, that is, substitution
 ## Syntax
 
 ```js
-String.raw(callSite, ...substitutions)
+String.raw(callSite, ...substitutions);
 
-String.raw`templateString`
+String.raw`templateString`;
 ```
 
 ### Parameters
@@ -67,7 +68,7 @@ re-implement it with normal JavaScript code.
 ### Using String.raw()
 
 ```js
-String.raw`Hi\n${2+3}!`;
+String.raw`Hi\n${2 + 3}!`;
 // 'Hi\\n5!', the character after 'Hi'
 // is not a newline character,
 // '\' and 'n' are two characters.
@@ -80,15 +81,19 @@ String.raw`Hi\u000A!`;
 // You can confirm this by checking the .length property
 // of the string.
 
-let name = 'Bob';
+let name = "Bob";
 String.raw`Hi\n${name}!`;
 // 'Hi\\nBob!', substitutions are processed.
 
 // Normally you would not call String.raw() as a function,
 // but to simulate `foo${2 + 3}bar${'Java' + 'Script'}baz` you can do:
-String.raw({
-  raw: ['foo', 'bar', 'baz']
-}, 2 + 3, 'Java' + 'Script'); // 'foo5barJavaScriptbaz'
+String.raw(
+  {
+    raw: ["foo", "bar", "baz"],
+  },
+  2 + 3,
+  "Java" + "Script"
+); // 'foo5barJavaScriptbaz'
 // Notice the first argument is an object with a 'raw' property,
 // whose value is an iterable representing the separated strings
 // in the template literal.
@@ -98,7 +103,7 @@ String.raw({
 // For example, 'test' is treated as ['t', 'e', 's', 't'].
 // The following is equivalent to
 // `t${0}e${1}s${2}t`:
-String.raw({ raw: 'test' }, 0, 1, 2); // 't0e1s2t'
+String.raw({ raw: "test" }, 0, 1, 2); // 't0e1s2t'
 ```
 
 ## Specifications

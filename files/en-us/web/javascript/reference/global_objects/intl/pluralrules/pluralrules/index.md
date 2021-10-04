@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.PluralRules.PluralRules
 ---
+
 {{JSRef}}
 
 The **`Intl.PluralRules()`** constructor creates
@@ -19,9 +20,9 @@ The **`Intl.PluralRules()`** constructor creates
 ## Syntax
 
 ```js
-new Intl.PluralRules()
-new Intl.PluralRules(locales)
-new Intl.PluralRules(locales, options)
+new Intl.PluralRules();
+new Intl.PluralRules(locales);
+new Intl.PluralRules(locales, options);
 ```
 
 ### Parameters
@@ -30,7 +31,7 @@ new Intl.PluralRules(locales, options)
   - : A string with a BCP 47 language tag, or an array of such strings. For the
     general form and interpretation of the `locales`
     argument, see the {{jsxref("Global_Objects/Intl", "Intl",
-			"#Locale_identification_and_negotiation", 1)}} page.
+    	"#Locale_identification_and_negotiation", 1)}} page.
 - `options` {{optional_inline}}
 
   - : An object with some or all of the following properties:
@@ -112,13 +113,13 @@ useful to figure out the ordinal indicator, e.g. "1st", "2nd", "3rd", "4th", "42
 and so forth.
 
 ```js
-var pr = new Intl.PluralRules('en-US', { type: 'ordinal' });
+var pr = new Intl.PluralRules("en-US", { type: "ordinal" });
 
 const suffixes = new Map([
-  ['one',   'st'],
-  ['two',   'nd'],
-  ['few',   'rd'],
-  ['other', 'th'],
+  ["one", "st"],
+  ["two", "nd"],
+  ["few", "rd"],
+  ["other", "th"],
 ]);
 const formatOrdinals = (n) => {
   const rule = pr.select(n);
@@ -126,14 +127,14 @@ const formatOrdinals = (n) => {
   return `${n}${suffix}`;
 };
 
-formatOrdinals(0);   // '0th'
-formatOrdinals(1);   // '1st'
-formatOrdinals(2);   // '2nd'
-formatOrdinals(3);   // '3rd'
-formatOrdinals(4);   // '4th'
-formatOrdinals(11);  // '11th'
-formatOrdinals(21);  // '21st'
-formatOrdinals(42);  // '42nd'
+formatOrdinals(0); // '0th'
+formatOrdinals(1); // '1st'
+formatOrdinals(2); // '2nd'
+formatOrdinals(3); // '3rd'
+formatOrdinals(4); // '4th'
+formatOrdinals(11); // '11th'
+formatOrdinals(21); // '21st'
+formatOrdinals(42); // '42nd'
 formatOrdinals(103); // '103rd'
 ```
 

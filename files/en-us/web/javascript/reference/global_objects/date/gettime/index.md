@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getTime
 ---
+
 {{JSRef}}
 
 The **`getTime()`** method returns the number of milliseconds\*
@@ -30,7 +31,7 @@ object. This method is functionally equivalent to the {{jsxref("Date.valueof",
 ## Syntax
 
 ```js
-getTime()
+getTime();
 ```
 
 ### Return value
@@ -95,7 +96,7 @@ for (var i = 0; i < 1000; i++) {
 }
 end = new Date();
 
-console.log('Operation took ' + (end.getTime() - start.getTime()) + ' msec');
+console.log("Operation took " + (end.getTime() - start.getTime()) + " msec");
 ```
 
 ## Specifications

@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Math.atanh
 ---
+
 {{JSRef}}
 
 The **`Math.atanh()`** function returns the hyperbolic
@@ -51,7 +52,7 @@ unique } \; y \; \text{such that} \; \tanh(y) = x</annotation></semantics></math
 ## Syntax
 
 ```js
-Math.atanh(x)
+Math.atanh(x);
 ```
 
 ### Parameters
@@ -74,12 +75,12 @@ created (`Math` is not a constructor).
 ### Using Math.atanh()
 
 ```js
-Math.atanh(-2);  // NaN
-Math.atanh(-1);  // -Infinity
-Math.atanh(0);   // 0
+Math.atanh(-2); // NaN
+Math.atanh(-1); // -Infinity
+Math.atanh(0); // 0
 Math.atanh(0.5); // 0.5493061443340548
-Math.atanh(1);   // Infinity
-Math.atanh(2);   // NaN
+Math.atanh(1); // Infinity
+Math.atanh(2); // NaN
 ```
 
 For values greater than 1 or less than -1, {{jsxref("NaN")}} is returned.
@@ -113,9 +114,11 @@ For <math><semantics><mrow><mrow><mo>|</mo>
 </semantics></math> so this can be emulated by the following function:
 
 ```js
-Math.atanh = Math.atanh || function(x) {
-  return Math.log((1+x)/(1-x)) / 2;
-};
+Math.atanh =
+  Math.atanh ||
+  function (x) {
+    return Math.log((1 + x) / (1 - x)) / 2;
+  };
 ```
 
 ## Specifications

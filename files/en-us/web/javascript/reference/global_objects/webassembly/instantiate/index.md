@@ -11,6 +11,7 @@ tags:
   - instantiate
 browser-compat: javascript.builtins.WebAssembly.instantiate
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.instantiate()`** function allows you to
@@ -115,19 +116,16 @@ that is exported by the `Instance`.
 ```js
 var importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes =>
-  WebAssembly.instantiate(bytes, importObject)
-).then(result =>
-  result.instance.exports.exported_func()
-);
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.instantiate(bytes, importObject))
+  .then((result) => result.instance.exports.exported_func());
 ```
 
 > **Note:** You can also find this example at [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html)
@@ -145,9 +143,8 @@ it live](https://mdn.github.io/webassembly-examples/js-api-examples/index-compil
 ```js
 var worker = new Worker("wasm_worker.js");
 
-WebAssembly.compileStreaming(fetch('simple.wasm'))
-.then(mod =>
-  worker.postMessage(mod)
+WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) =>
+  worker.postMessage(mod)
 );
 ```
 
@@ -161,17 +158,17 @@ exported function from inside it.
 ```js
 var importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-onmessage = function(e) {
-  console.log('module received from main thread');
+onmessage = function (e) {
+  console.log("module received from main thread");
   var mod = e.data;
 
-  WebAssembly.instantiate(mod, importObject).then(function(instance) {
+  WebAssembly.instantiate(mod, importObject).then(function (instance) {
     instance.exports.exported_func();
   });
 };

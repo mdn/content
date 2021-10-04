@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.JSON.stringify
 ---
+
 {{JSRef}}
 
 The **`JSON.stringify()`** method converts a JavaScript object
@@ -23,9 +24,9 @@ specified.
 ## Syntax
 
 ```js
-JSON.stringify(value)
-JSON.stringify(value, replacer)
-JSON.stringify(value, replacer, space)
+JSON.stringify(value);
+JSON.stringify(value, replacer);
+JSON.stringify(value, replacer, space);
 ```
 
 ### Parameters
@@ -48,8 +49,8 @@ JSON.stringify(value, replacer, space)
     `10`). Values less than 1 indicate that no space should be used.
 
     If this is a `String`, the string (or the first 10 characters of the
-    string, if it's longer than that) is used as white space. 
-    
+    string, if it's longer than that) is used as white space.
+
     If this parameter is not provided (or is {{JSxRef("null")}}), no white space is used.
 
 ### Return value
@@ -94,66 +95,87 @@ A JSON string representing the given value, or undefined.
 ### Using JSON.stringify
 
 ```js
-JSON.stringify({});                    // '{}'
-JSON.stringify(true);                  // 'true'
-JSON.stringify('foo');                 // '"foo"'
-JSON.stringify([1, 'false', false]);   // '[1,"false",false]'
+JSON.stringify({}); // '{}'
+JSON.stringify(true); // 'true'
+JSON.stringify("foo"); // '"foo"'
+JSON.stringify([1, "false", false]); // '[1,"false",false]'
 JSON.stringify([NaN, null, Infinity]); // '[null,null,null]'
-JSON.stringify({ x: 5 });              // '{"x":5}'
+JSON.stringify({ x: 5 }); // '{"x":5}'
 
-JSON.stringify(new Date(2006, 0, 2, 15, 4, 5))
+JSON.stringify(new Date(2006, 0, 2, 15, 4, 5));
 // '"2006-01-02T15:04:05.000Z"'
 
 JSON.stringify({ x: 5, y: 6 });
 // '{"x":5,"y":6}'
-JSON.stringify([new Number(3), new String('false'), new Boolean(false)]);
+JSON.stringify([new Number(3), new String("false"), new Boolean(false)]);
 // '[3,"false",false]'
 
 // String-keyed array elements are not enumerable and make no sense in JSON
-let a = ['foo', 'bar'];
-a['baz'] = 'quux';      // a: [ 0: 'foo', 1: 'bar', baz: 'quux' ]
+let a = ["foo", "bar"];
+a["baz"] = "quux"; // a: [ 0: 'foo', 1: 'bar', baz: 'quux' ]
 JSON.stringify(a);
 // '["foo","bar"]'
 
-JSON.stringify({ x: [10, undefined, function(){}, Symbol('')] });
+JSON.stringify({ x: [10, undefined, function () {}, Symbol("")] });
 // '{"x":[10,null,null,null]}'
 
 // Standard data structures
-JSON.stringify([new Set([1]), new Map([[1, 2]]), new WeakSet([{a: 1}]), new WeakMap([[{a: 1}, 2]])]);
+JSON.stringify([
+  new Set([1]),
+  new Map([[1, 2]]),
+  new WeakSet([{ a: 1 }]),
+  new WeakMap([[{ a: 1 }, 2]]),
+]);
 // '[{},{},{},{}]'
 
 // TypedArray
 JSON.stringify([new Int8Array([1]), new Int16Array([1]), new Int32Array([1])]);
 // '[{"0":1},{"0":1},{"0":1}]'
-JSON.stringify([new Uint8Array([1]), new Uint8ClampedArray([1]), new Uint16Array([1]), new Uint32Array([1])]);
+JSON.stringify([
+  new Uint8Array([1]),
+  new Uint8ClampedArray([1]),
+  new Uint16Array([1]),
+  new Uint32Array([1]),
+]);
 // '[{"0":1},{"0":1},{"0":1},{"0":1}]'
 JSON.stringify([new Float32Array([1]), new Float64Array([1])]);
 // '[{"0":1},{"0":1}]'
 
 // toJSON()
-JSON.stringify({ x: 5, y: 6, toJSON(){ return this.x + this.y; } });
+JSON.stringify({
+  x: 5,
+  y: 6,
+  toJSON() {
+    return this.x + this.y;
+  },
+});
 // '11'
 
 // Symbols:
-JSON.stringify({ x: undefined, y: Object, z: Symbol('') });
+JSON.stringify({ x: undefined, y: Object, z: Symbol("") });
 // '{}'
-JSON.stringify({ [Symbol('foo')]: 'foo' });
+JSON.stringify({ [Symbol("foo")]: "foo" });
 // '{}'
-JSON.stringify({ [Symbol.for('foo')]: 'foo' }, [Symbol.for('foo')]);
+JSON.stringify({ [Symbol.for("foo")]: "foo" }, [Symbol.for("foo")]);
 // '{}'
-JSON.stringify({ [Symbol.for('foo')]: 'foo' }, function(k, v) {
-  if (typeof k === 'symbol') {
-    return 'a symbol';
+JSON.stringify({ [Symbol.for("foo")]: "foo" }, function (k, v) {
+  if (typeof k === "symbol") {
+    return "a symbol";
   }
 });
 // undefined
 
 // Non-enumerable properties:
-JSON.stringify( Object.create(null, { x: { value: 'x', enumerable: false }, y: { value: 'y', enumerable: true } }) );
+JSON.stringify(
+  Object.create(null, {
+    x: { value: "x", enumerable: false },
+    y: { value: "y", enumerable: true },
+  })
+);
 // '{"y":"y"}'
 
 // BigInt values throw
-JSON.stringify({x: 2n});
+JSON.stringify({ x: 2n });
 // TypeError: BigInt value can't be serialized in JSON
 ```
 
@@ -194,13 +216,19 @@ It should return the value that should be added to the JSON string, as follows:
 ```js
 function replacer(key, value) {
   // Filtering out properties
-  if (typeof value === 'string') {
+  if (typeof value === "string") {
     return undefined;
   }
   return value;
 }
 
-var foo = {foundation: 'Mozilla', model: 'box', week: 45, transport: 'car', month: 7};
+var foo = {
+  foundation: "Mozilla",
+  model: "box",
+  week: 45,
+  transport: "car",
+  month: 7,
+};
 JSON.stringify(foo, replacer);
 // '{"week":45,"month":7}'
 ```
@@ -211,7 +239,7 @@ If `replacer` is an array, the array's values indicate the names
 of the properties in the object that should be included in the resulting JSON string.
 
 ```js
-JSON.stringify(foo, ['week', 'month']);
+JSON.stringify(foo, ["week", "month"]);
 // '{"week":45,"month":7}', only keep "week" and "month" properties
 ```
 
@@ -225,7 +253,7 @@ The `space` argument may be used to control spacing in the final string.
   string (or the first ten characters of it).
 
 ```js
-JSON.stringify({ a: 2 }, null, ' ');
+JSON.stringify({ a: 2 }, null, " ");
 // '{
 //  "a": 2
 // }'
@@ -234,7 +262,7 @@ JSON.stringify({ a: 2 }, null, ' ');
 Using a tab character mimics standard pretty-print appearance:
 
 ```js
-JSON.stringify({ uno: 1, dos: 2 }, null, '\t');
+JSON.stringify({ uno: 1, dos: 2 }, null, "\t");
 // returns the string:
 // '{
 //     "uno": 1,
@@ -258,14 +286,12 @@ For example:
 
 ```js
 var obj = {
-    data: 'data',
+  data: "data",
 
-    toJSON (key) {
-        if (key)
-            return `Now I am a nested object under key '${key}'`;
-        else
-            return this;
-    }
+  toJSON(key) {
+    if (key) return `Now I am a nested object under key '${key}'`;
+    else return this;
+  },
 };
 
 JSON.stringify(obj);
@@ -274,7 +300,7 @@ JSON.stringify(obj);
 JSON.stringify({ obj }); // Shorthand property names (ES2015).
 // '{"obj":"Now I am a nested object under key 'obj'"}'
 
-JSON.stringify([ obj ]);
+JSON.stringify([obj]);
 // '["Now I am a nested object under key '0'"]'
 ```
 
@@ -313,24 +339,24 @@ part of a [JSONP](https://en.wikipedia.org/wiki/JSONP) URL, and the following
 utility can be used:
 
 ```js
-function jsFriendlyJSONStringify (s) {
-    return JSON.stringify(s).
-        replace(/\u2028/g, '\\u2028').
-        replace(/\u2029/g, '\\u2029');
+function jsFriendlyJSONStringify(s) {
+  return JSON.stringify(s)
+    .replace(/\u2028/g, "\\u2028")
+    .replace(/\u2029/g, "\\u2029");
 }
 
 var s = {
-    a: String.fromCharCode(0x2028),
-    b: String.fromCharCode(0x2029)
+  a: String.fromCharCode(0x2028),
+  b: String.fromCharCode(0x2029),
 };
 try {
-    eval('(' + JSON.stringify(s) + ')');
+  eval("(" + JSON.stringify(s) + ")");
 } catch (e) {
-    console.log(e); // "SyntaxError: unterminated string literal"
+  console.log(e); // "SyntaxError: unterminated string literal"
 }
 
 // No need for a catch
-eval('(' + jsFriendlyJSONStringify(s) + ')');
+eval("(" + jsFriendlyJSONStringify(s) + ")");
 
 // console.log in Firefox unescapes the Unicode if
 //   logged to console, so we use alert
@@ -342,11 +368,11 @@ alert(jsFriendlyJSONStringify(s)); // {"a":"\u2028","b":"\u2029"}
 > same object within the stringification.
 
 ```js
-var a = JSON.stringify({ foo: "bar", baz: "quux" })
+var a = JSON.stringify({ foo: "bar", baz: "quux" });
 //'{"foo":"bar","baz":"quux"}'
-var b = JSON.stringify({ baz: "quux", foo: "bar" })
+var b = JSON.stringify({ baz: "quux", foo: "bar" });
 //'{"baz":"quux","foo":"bar"}'
-console.log(a !== b) // true
+console.log(a !== b); // true
 
 // some memoization functions use JSON.stringify to serialize arguments,
 // which may cause a cache miss when encountering the same object like above
@@ -361,23 +387,23 @@ the applicability of `JSON.stringify()`:
 ```js
 // Creating an example of JSON
 var session = {
-  'screens': [],
-  'state': true
+  screens: [],
+  state: true,
 };
-session.screens.push({ 'name': 'screenA', 'width': 450, 'height': 250 });
-session.screens.push({ 'name': 'screenB', 'width': 650, 'height': 350 });
-session.screens.push({ 'name': 'screenC', 'width': 750, 'height': 120 });
-session.screens.push({ 'name': 'screenD', 'width': 250, 'height': 60 });
-session.screens.push({ 'name': 'screenE', 'width': 390, 'height': 120 });
-session.screens.push({ 'name': 'screenF', 'width': 1240, 'height': 650 });
+session.screens.push({ name: "screenA", width: 450, height: 250 });
+session.screens.push({ name: "screenB", width: 650, height: 350 });
+session.screens.push({ name: "screenC", width: 750, height: 120 });
+session.screens.push({ name: "screenD", width: 250, height: 60 });
+session.screens.push({ name: "screenE", width: 390, height: 120 });
+session.screens.push({ name: "screenF", width: 1240, height: 650 });
 
 // Converting the JSON string with JSON.stringify()
 // then saving with localStorage in the name of session
-localStorage.setItem('session', JSON.stringify(session));
+localStorage.setItem("session", JSON.stringify(session));
 
 // Example of how to transform the String generated through
 // JSON.stringify() and saved in localStorage in JSON object again
-var restoredSession = JSON.parse(localStorage.getItem('session'));
+var restoredSession = JSON.parse(localStorage.getItem("session"));
 
 // Now restoredSession variable contains the object that was saved
 // in localStorage

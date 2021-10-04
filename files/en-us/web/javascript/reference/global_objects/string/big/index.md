@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.big
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`big()`** method creates a {{HTMLElement("big")}} HTML
@@ -23,7 +24,7 @@ element that causes a string to be displayed in a big font.
 ## Syntax
 
 ```js
-big()
+big();
 ```
 
 ### Return value
@@ -42,10 +43,10 @@ The `big()` method embeds a string in a `<big>` element:
 The following example uses string methods to change the size of a string:
 
 ```js
-var worldString = 'Hello, world';
+var worldString = "Hello, world";
 
-console.log(worldString.small());     // <small>Hello, world</small>
-console.log(worldString.big());       // <big>Hello, world</big>
+console.log(worldString.small()); // <small>Hello, world</small>
+console.log(worldString.big()); // <big>Hello, world</big>
 console.log(worldString.fontsize(7)); // <font size="7">Hello, world</font>
 ```
 
@@ -54,7 +55,7 @@ the element's `style` attribute and manipulate it more generically, for
 example:
 
 ```js
-document.getElementById('yourElemId').style.fontSize = '2em';
+document.getElementById("yourElemId").style.fontSize = "2em";
 ```
 
 ## Specifications

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DateTimeFormat.DateTimeFormat
 ---
+
 {{JSRef}}
 
 The **`Intl.DateTimeFormat()`** constructor creates
@@ -24,9 +25,9 @@ language-sensitive date and time formatting.
 ## Syntax
 
 ```js
-new Intl.DateTimeFormat()
-new Intl.DateTimeFormat(locales)
-new Intl.DateTimeFormat(locales, options)
+new Intl.DateTimeFormat();
+new Intl.DateTimeFormat(locales);
+new Intl.DateTimeFormat(locales, options);
 ```
 
 ### Parameters
@@ -38,7 +39,7 @@ new Intl.DateTimeFormat(locales, options)
     (for example "`en-US-u-ca-buddhist`"). For the general form and
     interpretation of the `locales` argument, see the
     {{jsxref("Global_Objects/Intl", "Intl",
-			"#Locale_identification_and_negotiation", 1)}} page. The following Unicode
+    	"#Locale_identification_and_negotiation", 1)}} page. The following Unicode
     extension keys are allowed:
 
     - `nu`
@@ -270,19 +271,19 @@ console.log(new Intl.DateTimeFormat().format(date));
 ### Using timeStyle and dateStyle
 
 ```js
-let o = new Intl.DateTimeFormat("en" , {
-  timeStyle: "short"
+let o = new Intl.DateTimeFormat("en", {
+  timeStyle: "short",
 });
 console.log(o.format(Date.now())); // "13:31 AM"
 
-let o = new Intl.DateTimeFormat("en" , {
-  dateStyle: "short"
+let o = new Intl.DateTimeFormat("en", {
+  dateStyle: "short",
 });
 console.log(o.format(Date.now())); // "07/07/20"
 
-let o = new Intl.DateTimeFormat("en" , {
+let o = new Intl.DateTimeFormat("en", {
   timeStyle: "medium",
-  dateStyle: "short"
+  dateStyle: "short",
 });
 console.log(o.format(Date.now())); // "07/07/20, 13:31:55 AM"
 ```
@@ -294,16 +295,34 @@ Use the `dayPeriod` option to output a string for the times of day ("in the morn
 ```js
 let date = Date.UTC(2012, 11, 17, 4, 0, 42);
 
-console.log(new Intl.DateTimeFormat('en-GB', { hour: 'numeric', hourCycle: 'h12', 
-dayPeriod: 'short', timeZone: 'UTC' }).format(date));
+console.log(
+  new Intl.DateTimeFormat("en-GB", {
+    hour: "numeric",
+    hourCycle: "h12",
+    dayPeriod: "short",
+    timeZone: "UTC",
+  }).format(date)
+);
 // > 4 at night"  (same formatting in en-GB for all dayPeriod values)
 
-console.log(new Intl.DateTimeFormat('fr', { hour: 'numeric', hourCycle: 'h12',
-    dayPeriod: 'narrow', timeZone: 'UTC' }).format(date));
+console.log(
+  new Intl.DateTimeFormat("fr", {
+    hour: "numeric",
+    hourCycle: "h12",
+    dayPeriod: "narrow",
+    timeZone: "UTC",
+  }).format(date)
+);
 // > "4 mat."  (same output in French for both narrow/short dayPeriod)
 
-console.log(new Intl.DateTimeFormat('fr', { hour: 'numeric', hourCycle: 'h12', 
-    dayPeriod: 'long', timeZone: 'UTC' }).format(date));
+console.log(
+  new Intl.DateTimeFormat("fr", {
+    hour: "numeric",
+    hourCycle: "h12",
+    dayPeriod: "long",
+    timeZone: "UTC",
+  }).format(date)
+);
 // > "4 du matin"
 ```
 
@@ -313,18 +332,25 @@ Use the `timeZoneName` option to output a string for the timezone ("GMT", "Pacif
 
 ```js
 var date = Date.UTC(2021, 11, 17, 3, 0, 42);
-const timezoneNames = ['short', 'long', 'shortOffset', 'longOffset', 'shortGeneric', 'longGeneric']
-	
+const timezoneNames = [
+  "short",
+  "long",
+  "shortOffset",
+  "longOffset",
+  "shortGeneric",
+  "longGeneric",
+];
+
 for (const zoneName of timezoneNames) {
   // Do something with currentValue
-  var formatter = new Intl.DateTimeFormat('en-US', {
-    timeZone: 'America/Los_Angeles',
+  var formatter = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Los_Angeles",
     timeZoneName: zoneName,
   });
-  console.log(zoneName + ": " + formatter.format(date) );
+  console.log(zoneName + ": " + formatter.format(date));
 }
-	
-// expected output: 
+
+// expected output:
 // > "short: 12/16/2021, PST"
 // > "long: 12/16/2021, Pacific Standard Time"
 // > "shortOffset: 12/16/2021, GMT-8"

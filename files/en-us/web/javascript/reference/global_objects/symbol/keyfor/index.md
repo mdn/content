@@ -8,6 +8,7 @@ tags:
   - Symbol
 browser-compat: javascript.builtins.Symbol.keyFor
 ---
+
 {{JSRef}}
 
 The **`Symbol.keyFor(sym)`** method retrieves a shared symbol
@@ -36,7 +37,7 @@ registry; otherwise, {{jsxref("undefined")}}.
 ### Using keyFor()
 
 ```js
-var globalSym = Symbol.for('foo'); // create a new global symbol
+var globalSym = Symbol.for("foo"); // create a new global symbol
 Symbol.keyFor(globalSym); // "foo"
 
 var localSym = Symbol();
@@ -44,7 +45,7 @@ Symbol.keyFor(localSym); // undefined
 
 // well-known symbols are not symbols registered
 // in the global symbol registry
-Symbol.keyFor(Symbol.iterator) // undefined
+Symbol.keyFor(Symbol.iterator); // undefined
 ```
 
 ## Specifications

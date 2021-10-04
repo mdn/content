@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.defineSetter
 ---
+
 {{JSRef}}
 
 > **Warning:** This feature is deprecated in favor of defining setters using the [object
@@ -24,7 +25,7 @@ a function to be called when an attempt is made to set that property.
 ## Syntax
 
 ```js
-__defineSetter__(prop, fun)
+__defineSetter__(prop, fun);
 ```
 
 ### Parameters
@@ -36,13 +37,14 @@ __defineSetter__(prop, fun)
   - : A function to be called when there is an attempt to set the specified property. This
     function takes the form
 
-    ```js
+    ````js
         function(val) { . . . }
         ```
 
     - `val`
       - : An alias for the variable that holds the value attempted to be assigned to
         `prop`.
+    ````
 
 ### Return value
 
@@ -59,7 +61,9 @@ The `__defineSetter__` method allows a {{jsxref("Functions/set", "setter",
 
 ```js
 var o = {};
-o.__defineSetter__('value', function(val) { this.anotherValue = val; });
+o.__defineSetter__("value", function (val) {
+  this.anotherValue = val;
+});
 o.value = 5;
 console.log(o.value); // undefined
 console.log(o.anotherValue); // 5
@@ -69,17 +73,21 @@ console.log(o.anotherValue); // 5
 
 ```js
 // Using the set operator
-var o = { set value(val) { this.anotherValue = val; } };
+var o = {
+  set value(val) {
+    this.anotherValue = val;
+  },
+};
 o.value = 5;
 console.log(o.value); // undefined
 console.log(o.anotherValue); // 5
 
 // Using Object.defineProperty
 var o = {};
-Object.defineProperty(o, 'value', {
-  set: function(val) {
+Object.defineProperty(o, "value", {
+  set: function (val) {
     this.anotherValue = val;
-  }
+  },
 });
 o.value = 5;
 console.log(o.value); // undefined

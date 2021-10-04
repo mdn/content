@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.has
 ---
+
 {{JSRef}}
 
 The **`handler.has()`** method is a trap for the
@@ -19,8 +20,7 @@ The **`handler.has()`** method is a trap for the
 
 ```js
 const p = new Proxy(target, {
-  has: function(target, prop) {
-  }
+  has: function (target, prop) {},
 });
 ```
 
@@ -69,15 +69,18 @@ If the following invariants are violated, the proxy will throw a
 The following code traps the {{jsxref("Operators/in", "in")}} operator.
 
 ```js
-const p = new Proxy({}, {
-  has: function(target, prop) {
-    console.log('called: ' + prop);
-    return true;
+const p = new Proxy(
+  {},
+  {
+    has: function (target, prop) {
+      console.log("called: " + prop);
+      return true;
+    },
   }
-});
+);
 
-console.log('a' in p); // "called: a"
-                       // true
+console.log("a" in p); // "called: a"
+// true
 ```
 
 The following code violates an invariant.
@@ -87,12 +90,12 @@ const obj = { a: 10 };
 Object.preventExtensions(obj);
 
 const p = new Proxy(obj, {
-  has: function(target, prop) {
+  has: function (target, prop) {
     return false;
-  }
+  },
 });
 
-'a' in p; // TypeError is thrown
+"a" in p; // TypeError is thrown
 ```
 
 ## Specifications

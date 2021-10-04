@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Number.EPSILON
 ---
+
 {{JSRef}}
 
 The **`Number.EPSILON`** property represents the difference between 1 and the smallest floating point number greater than 1.
@@ -29,14 +30,14 @@ The `EPSILON` property has a value of approximately `2.2204460492503130808472633
 x = 0.2;
 y = 0.3;
 z = 0.1;
-equal = (Math.abs(x - y + z) < Number.EPSILON);
+equal = Math.abs(x - y + z) < Number.EPSILON;
 ```
 
 ## Polyfill
 
 ```js
 if (Number.EPSILON === undefined) {
-    Number.EPSILON = Math.pow(2, -52);
+  Number.EPSILON = Math.pow(2, -52);
 }
 ```
 

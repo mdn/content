@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Math.cosh
 ---
+
 {{JSRef}}
 
 The **`Math.cosh()`** function returns the hyperbolic cosine of
@@ -31,7 +32,7 @@ e^{-x}}{2}</annotation></semantics></math>
 ## Syntax
 
 ```js
-Math.cosh(x)
+Math.cosh(x);
 ```
 
 ### Parameters
@@ -54,8 +55,8 @@ created (`Math` is not a constructor).
 ### Using Math.cosh()
 
 ```js
-Math.cosh(0);  // 1
-Math.cosh(1);  // 1.5430806348152437
+Math.cosh(0); // 1
+Math.cosh(1); // 1.5430806348152437
 Math.cosh(-1); // 1.5430806348152437
 ```
 
@@ -64,18 +65,22 @@ Math.cosh(-1); // 1.5430806348152437
 This can be emulated with the help of the {{jsxref("Math.exp()")}} function:
 
 ```js
-Math.cosh = Math.cosh || function(x) {
-  return (Math.exp(x) + Math.exp(-x)) / 2;
-}
+Math.cosh =
+  Math.cosh ||
+  function (x) {
+    return (Math.exp(x) + Math.exp(-x)) / 2;
+  };
 ```
 
 or using only one call to the {{jsxref("Math.exp()")}} function:
 
 ```js
-Math.cosh = Math.cosh || function(x) {
-  var y = Math.exp(x);
-  return (y + 1 / y) / 2;
-};
+Math.cosh =
+  Math.cosh ||
+  function (x) {
+    var y = Math.exp(x);
+    return (y + 1 / y) / 2;
+  };
 ```
 
 ## Specifications

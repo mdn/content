@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.SharedArrayBuffer
 ---
+
 {{JSRef}}
 
 The **`SharedArrayBuffer`** object is used to represent a generic, fixed-length raw binary data buffer, similar to the {{jsxref("ArrayBuffer")}} object, but in a way that they can be used to create views on shared memory. Unlike an `ArrayBuffer`, a `SharedArrayBuffer` cannot become detached.
@@ -56,9 +57,9 @@ To check if cross origin isolation has been successful, you can test against the
 
 ```js
 if (crossOriginIsolated) {
-  // Post SharedArrayBuffer
+  // Post SharedArrayBuffer
 } else {
-  // Do something else
+  // Do something else
 }
 ```
 
@@ -104,17 +105,17 @@ var sab = new SharedArrayBuffer(1024);
 ### Slicing the SharedArrayBuffer
 
 ```js
-sab.slice();    // SharedArrayBuffer { byteLength: 1024 }
-sab.slice(2);   // SharedArrayBuffer { byteLength: 1022 }
-sab.slice(-2);  // SharedArrayBuffer { byteLength: 2 }
+sab.slice(); // SharedArrayBuffer { byteLength: 1024 }
+sab.slice(2); // SharedArrayBuffer { byteLength: 1022 }
+sab.slice(-2); // SharedArrayBuffer { byteLength: 2 }
 sab.slice(0, 1); // SharedArrayBuffer { byteLength: 1 }
 ```
 
 ### Using it in a WebGL buffer
 
 ```js
-const canvas = document.querySelector('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.querySelector("canvas");
+const gl = canvas.getContext("webgl");
 const buffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);

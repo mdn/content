@@ -9,6 +9,7 @@ tags:
   - Object
 browser-compat: javascript.builtins.Object.preventExtensions
 ---
+
 {{JSRef}}
 
 The **`Object.preventExtensions()`** method prevents new
@@ -20,7 +21,7 @@ object).
 ## Syntax
 
 ```js
-Object.preventExtensions(obj)
+Object.preventExtensions(obj);
 ```
 
 ### Parameters
@@ -77,16 +78,16 @@ Object.isExtensible(empty); // === false
 // a new property to a non-extensible object.
 var nonExtensible = { removable: true };
 Object.preventExtensions(nonExtensible);
-Object.defineProperty(nonExtensible, 'new', {
-  value: 8675309
+Object.defineProperty(nonExtensible, "new", {
+  value: 8675309,
 }); // throws a TypeError
 
 // In strict mode, attempting to add new properties
 // to a non-extensible object throws a TypeError.
 function fail() {
-  'use strict';
+  "use strict";
   // throws a TypeError
-  nonExtensible.newProperty = 'FAIL';
+  nonExtensible.newProperty = "FAIL";
 }
 fail();
 ```
@@ -96,7 +97,7 @@ A non-extensible object's prototype is immutable:
 ```js
 var fixed = Object.preventExtensions({});
 // throws a 'TypeError'.
-fixed.__proto__ = { oh: 'hai' };
+fixed.__proto__ = { oh: "hai" };
 ```
 
 ### Non-object coercion

@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.getInt32
 ---
+
 {{JSRef}}
 
 The **`getInt32()`** method gets a signed 32-bit integer (long)
@@ -19,8 +20,8 @@ at the specified byte offset from the start of the {{jsxref("DataView")}}.
 ## Syntax
 
 ```js
-getInt32(byteOffset)
-getInt32(byteOffset, littleEndian)
+getInt32(byteOffset);
+getInt32(byteOffset, littleEndian);
 ```
 
 ### Parameters

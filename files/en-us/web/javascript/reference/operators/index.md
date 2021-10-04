@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators
 ---
+
 {{JSSidebar("Operators")}}
 
 This chapter documents all the JavaScript language operators, expressions and keywords.

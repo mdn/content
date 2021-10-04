@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Math.LOG2E
 ---
+
 {{JSRef}}
 
 The **`Math.LOG2E`** property represents the base 2 logarithm of e, approximately 1.442:

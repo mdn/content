@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Array.pop
 ---
+
 {{JSRef}}
 
 The **`pop()`** method removes the **last**
@@ -20,7 +21,7 @@ array.
 ## Syntax
 
 ```js
-pop()
+pop();
 ```
 
 ### Return value
@@ -51,7 +52,7 @@ The following code creates the `myFish` array containing four elements, then
 removes its last element.
 
 ```js
-var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+var myFish = ["angel", "clown", "mandarin", "sturgeon"];
 
 var popped = myFish.pop();
 
@@ -67,7 +68,13 @@ elements and a length parameter, then removes its last element and decrements th
 parameter.
 
 ```js
-var myFish = {0:'angel', 1:'clown', 2:'mandarin', 3:'sturgeon', length: 4};
+var myFish = {
+  0: "angel",
+  1: "clown",
+  2: "mandarin",
+  3: "sturgeon",
+  length: 4,
+};
 
 var popped = Array.prototype.pop.call(myFish); //same syntax for using apply( )
 
@@ -84,29 +91,29 @@ Note that in this example, we don't create an array to store a collection of obj
 
 ```js
 const collection = {
-    length: 0,
-    addElements: function(...elements) {
-        // obj.length will be incremented automatically
-        // every time an element is added.
-        
-        // Returning what push returns; that is
-        // the new value of length property.
-        return [].push.call(this, ...elements);
-    },
-    removeElement: function() {
-        // obj.length will be decremented automatically
-        // every time an element is removed.
-        
-        // Returning what pop returns; that is
-        // the removed element.
-        return [].pop.call(this);
-    }
-}
+  length: 0,
+  addElements: function (...elements) {
+    // obj.length will be incremented automatically
+    // every time an element is added.
+
+    // Returning what push returns; that is
+    // the new value of length property.
+    return [].push.call(this, ...elements);
+  },
+  removeElement: function () {
+    // obj.length will be decremented automatically
+    // every time an element is removed.
+
+    // Returning what pop returns; that is
+    // the removed element.
+    return [].pop.call(this);
+  },
+};
 
 collection.addElements(10, 20, 30);
-console.log(collection.length);  // 3
+console.log(collection.length); // 3
 collection.removeElement();
-console.log(collection.length);  // 2
+console.log(collection.length); // 2
 ```
 
 ## Specifications

@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.inequality
 ---
+
 {{jsSidebar("Operators")}}
 
 The inequality operator (`!=`) checks whether its two operands are not
@@ -20,7 +21,7 @@ different types.
 ## Syntax
 
 ```js
-x != y
+x != y;
 ```
 
 ## Description
@@ -30,9 +31,9 @@ of the [equality](/en-US/docs/Web/JavaScript/Reference/Operators/Equality)
 operator so the following two lines will always give the same result:
 
 ```js
-x != y
+x != y;
 
-!(x == y)
+!(x == y);
 ```
 
 For details of the comparison algorithm, see the page for the [equality](/en-US/docs/Web/JavaScript/Reference/Operators/Equality) operator.
@@ -57,39 +58,39 @@ inequality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality) op
 ### Comparison with no type conversion
 
 ```js
-1 != 2;              // true
-"hello" != "hola";   // true
+1 != 2; // true
+"hello" != "hola"; // true
 
-1 != 1;              // false
-"hello" != "hello";  // false
+1 != 1; // false
+"hello" != "hello"; // false
 ```
 
 ### Comparison with type conversion
 
 ```js
-"1" !=  1;            // false
-1 != "1";             // false
-0 != false;           // false
-0 != null;            // true
-0 != undefined;       // true
-0 != !!null;          // false, look at Logical NOT operator
-0 != !!undefined;     // false, look at Logical NOT operator
-null != undefined;    // false
+"1" != 1; // false
+1 != "1"; // false
+0 != false; // false
+0 != null; // true
+0 != undefined; // true
+0 != !!null; // false, look at Logical NOT operator
+0 != !!undefined; // false, look at Logical NOT operator
+null != undefined; // false
 
 const number1 = new Number(3);
 const number2 = new Number(3);
-number1 != 3;         // false
-number1 != number2;   // true
+number1 != 3; // false
+number1 != number2; // true
 ```
 
 ### Comparison of objects
 
 ```js
-const object1 = {"key": "value"}
-const object2 = {"key": "value"};
+const object1 = { key: "value" };
+const object2 = { key: "value" };
 
-object1 != object2 // true
-object2 != object2 // false
+object1 != object2; // true
+object2 != object2; // false
 ```
 
 ## Specifications

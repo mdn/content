@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Number.NEGATIVE_INFINITY
 ---
+
 {{JSRef}}
 
 The **`Number.NEGATIVE_INFINITY`** property represents the negative Infinity value.
@@ -41,7 +42,7 @@ Because `NEGATIVE_INFINITY` is a static property of {{jsxref("Number")}}, you al
 In the following example, the variable `smallNumber` is assigned a value that is smaller than the minimum value. When the {{jsxref("Statements/if...else", "if")}} statement executes, `smallNumber` has the value `-Infinity`, so `smallNumber` is set to a more manageable value before continuing.
 
 ```js
-var smallNumber = (-Number.MAX_VALUE) * 2;
+var smallNumber = -Number.MAX_VALUE * 2;
 
 if (smallNumber === Number.NEGATIVE_INFINITY) {
   smallNumber = returnFinite();

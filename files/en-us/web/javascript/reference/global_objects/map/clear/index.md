@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Map.clear
 ---
+
 {{JSRef}}
 
 The **`clear()`** method removes all elements from a `Map` object.
@@ -19,7 +20,7 @@ The **`clear()`** method removes all elements from a `Map` object.
 ## Syntax
 
 ```js
-clear()
+clear();
 ```
 
 ### Return value
@@ -32,16 +33,16 @@ clear()
 
 ```js
 var myMap = new Map();
-myMap.set('bar', 'baz');
-myMap.set(1, 'foo');
+myMap.set("bar", "baz");
+myMap.set(1, "foo");
 
-myMap.size;       // 2
-myMap.has('bar'); // true
+myMap.size; // 2
+myMap.has("bar"); // true
 
 myMap.clear();
 
-myMap.size;       // 0
-myMap.has('bar')  // false
+myMap.size; // 0
+myMap.has("bar"); // false
 ```
 
 ## Specifications

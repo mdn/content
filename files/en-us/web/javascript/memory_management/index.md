@@ -8,6 +8,7 @@ tags:
   - Performance
   - memory
 ---
+
 {{JsSidebar("Advanced")}}
 
 Low-level languages like C, have manual memory management primitives such as [malloc()](https://pubs.opengroup.org/onlinepubs/009695399/functions/malloc.html) and [free()](https://en.wikipedia.org/wiki/C_dynamic_memory_allocation#Overview_of_functions). In contrast, JavaScript automatically allocates memory when objects are created and frees it when they are not used anymore (_garbage collection_). This automaticity is a potential source of confusion: it can give developers the false impression that they don't need to worry about memory management.
@@ -30,25 +31,29 @@ In order to not bother the programmer with allocations, JavaScript will automati
 
 ```js
 var n = 123; // allocates memory for a number
-var s = 'azerty'; // allocates memory for a string
+var s = "azerty"; // allocates memory for a string
 
 var o = {
   a: 1,
-  b: null
+  b: null,
 }; // allocates memory for an object and contained values
 
 // (like object) allocates memory for the array and
 // contained values
-var a = [1, null, 'abra'];
+var a = [1, null, "abra"];
 
 function f(a) {
   return a + 2;
 } // allocates a function (which is a callable object)
 
 // function expressions also allocate an object
-someElement.addEventListener('click', function() {
-  someElement.style.backgroundColor = 'blue';
-}, false);
+someElement.addEventListener(
+  "click",
+  function () {
+    someElement.style.backgroundColor = "blue";
+  },
+  false
+);
 ```
 
 #### Allocation via function calls
@@ -58,20 +63,20 @@ Some function calls result in object allocation.
 ```js
 var d = new Date(); // allocates a Date object
 
-var e = document.createElement('div'); // allocates a DOM element
+var e = document.createElement("div"); // allocates a DOM element
 ```
 
 Some methods allocate new values or objects:
 
 ```js
-var s = 'azerty';
+var s = "azerty";
 var s2 = s.substr(0, 3); // s2 is a new string
 // Since strings are immutable values,
 // JavaScript may decide to not allocate memory,
 // but just store the [0, 3] range.
 
-var a = ['ouais ouais', 'nan nan'];
-var a2 = ['generation', 'nan nan'];
+var a = ["ouais ouais", "nan nan"];
+var a2 = ["generation", "nan nan"];
 var a3 = a.concat(a2);
 // new array with 4 elements being
 // the concatenation of a and a2 elements.
@@ -108,29 +113,29 @@ This is the most naive garbage collection algorithm. This algorithm reduces the 
 ```js
 var x = {
   a: {
-    b: 2
-  }
+    b: 2,
+  },
 };
 // 2 objects are created. One is referenced by the other as one of its properties.
 // The other is referenced by virtue of being assigned to the 'x' variable.
 // Obviously, none can be garbage-collected.
 
-var y = x;      // The 'y' variable is the second thing that has a reference to the object.
+var y = x; // The 'y' variable is the second thing that has a reference to the object.
 
-x = 1;          // Now, the object that was originally in 'x' has a unique reference
-                //   embodied by the 'y' variable.
+x = 1; // Now, the object that was originally in 'x' has a unique reference
+//   embodied by the 'y' variable.
 
-var z = y.a;    // Reference to 'a' property of the object.
-                //   This object now has 2 references: one as a property,
-                //   the other as the 'z' variable.
+var z = y.a; // Reference to 'a' property of the object.
+//   This object now has 2 references: one as a property,
+//   the other as the 'z' variable.
 
-y = 'mozilla';  // The object that was originally in 'x' has now zero
-                //   references to it. It can be garbage-collected.
-                //   However its 'a' property is still referenced by
-                //   the 'z' variable, so it cannot be freed.
+y = "mozilla"; // The object that was originally in 'x' has now zero
+//   references to it. It can be garbage-collected.
+//   However its 'a' property is still referenced by
+//   the 'z' variable, so it cannot be freed.
 
-z = null;       // The 'a' property of the object originally in x
-                //   has zero references to it. It can be garbage collected.
+z = null; // The 'a' property of the object originally in x
+//   has zero references to it. It can be garbage collected.
 ```
 
 #### Limitation: Circular references
@@ -141,10 +146,10 @@ There is a limitation when it comes to circular references. In the following exa
 function f() {
   var x = {};
   var y = {};
-  x.a = y;        // x references y
-  y.a = x;        // y references x
+  x.a = y; // x references y
+  y.a = x; // y references x
 
-  return 'azerty';
+  return "azerty";
 }
 
 f();
@@ -156,10 +161,10 @@ Internet Explorer 6 and 7 are known to have reference-counting garbage collector
 
 ```js
 var div;
-window.onload = function() {
-  div = document.getElementById('myDivElement');
+window.onload = function () {
+  div = document.getElementById("myDivElement");
   div.circularReference = div;
-  div.lotsOfData = new Array(10000).join('*');
+  div.lotsOfData = new Array(10000).join("*");
 };
 ```
 

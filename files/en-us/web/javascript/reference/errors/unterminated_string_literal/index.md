@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: unterminated string literal'
+title: "SyntaxError: unterminated string literal"
 slug: Web/JavaScript/Reference/Errors/Unterminated_string_literal
 tags:
   - Error
@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript error "unterminated string literal" occurs when there is an unterminated
@@ -55,9 +56,10 @@ operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition), a backslash,
 The `+` operator variant looks like this:
 
 ```js example-good
-var longString = 'This is a very long string which needs ' +
-                 'to wrap across multiple lines because ' +
-                 'otherwise my code is unreadable.';
+var longString =
+  "This is a very long string which needs " +
+  "to wrap across multiple lines because " +
+  "otherwise my code is unreadable.";
 ```
 
 Or you can use the backslash character ("\\") at the end of each line to indicate that
@@ -66,9 +68,10 @@ character after the backslash (except for a line break), or as an indent; otherw
 will not work. That form looks like this:
 
 ```js example-good
-var longString = 'This is a very long string which needs \
+var longString =
+  "This is a very long string which needs \
 to wrap across multiple lines because \
-otherwise my code is unreadable.';
+otherwise my code is unreadable.";
 ```
 
 Another possibility is to use [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals),

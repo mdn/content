@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.GeneratorFunction
 ---
+
 {{JSRef}}
 
 The **`GeneratorFunction` constructor** creates a new
@@ -20,7 +21,7 @@ Note that `GeneratorFunction` is not a global object. It could be obtained
 by evaluating the following code.
 
 ```js
-Object.getPrototypeOf(function*(){}).constructor
+Object.getPrototypeOf(function* () {}).constructor;
 ```
 
 ## Syntax
@@ -72,8 +73,8 @@ the `new` operator) has the same effect as invoking it as a constructor.
 ### Creating a generator function from a GeneratorFunction() constructor
 
 ```js
-var GeneratorFunction = Object.getPrototypeOf(function*(){}).constructor
-var g = new GeneratorFunction('a', 'yield a * 2');
+var GeneratorFunction = Object.getPrototypeOf(function* () {}).constructor;
+var g = new GeneratorFunction("a", "yield a * 2");
 var iterator = g(10);
 console.log(iterator.next().value); // 20
 ```

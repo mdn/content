@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.RegExp.@@match
 ---
+
 {{JSRef}}
 
 The **`[@@match]()`** method retrieves the matches when
@@ -21,7 +22,7 @@ matching a _string_ against a _regular expression_.
 ## Syntax
 
 ```js
-regexp[Symbol.match](str)
+regexp[Symbol.match](str);
 ```
 
 ### Parameters
@@ -41,9 +42,9 @@ This method is called internally in {{jsxref("String.prototype.match()")}}.
 For example, the following two examples return same result.
 
 ```js
-'abc'.match(/a/);
+"abc".match(/a/);
 
-/a/[Symbol.match]('abc');
+/a/[Symbol.match]("abc");
 ```
 
 This method exists for customizing match behavior within `RegExp`
@@ -59,9 +60,9 @@ different arguments order.
 
 ```js
 let re = /[0-9]+/g;
-let str = '2016-01-02';
+let str = "2016-01-02";
 let result = re[Symbol.match](str);
-console.log(result);  // ["2016", "01", "02"]
+console.log(result); // ["2016", "01", "02"]
 ```
 
 ### Using `@@match` in subclasses
@@ -77,13 +78,13 @@ class MyRegExp extends RegExp {
     return {
       group(n) {
         return result[n];
-      }
+      },
     };
   }
 }
 
-let re = new MyRegExp('([0-9]+)-([0-9]+)-([0-9]+)');
-let str = '2016-01-02';
+let re = new MyRegExp("([0-9]+)-([0-9]+)-([0-9]+)");
+let str = "2016-01-02";
 let result = str.match(re); // String.prototype.match calls re[@@match].
 console.log(result.group(1)); // 2016
 console.log(result.group(2)); // 01

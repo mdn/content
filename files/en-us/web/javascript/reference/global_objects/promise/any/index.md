@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Promise.any
 ---
+
 {{JSRef}}
 
 `Promise.any()` takes an iterable of {{JSxRef("Promise")}} objects and, as soon as one of the promises in the iterable fulfills, returns a single promise that resolves with the value from that promise. If no promises in the iterable fulfill (if all of the given promises are rejected), then the returned promise is rejected with an {{JSxRef("AggregateError")}}, a new subclass of {{JSxRef("Error")}} that groups together individual errors.
@@ -70,7 +71,7 @@ const pFast = new Promise((resolve, reject) => {
 Promise.any([pErr, pSlow, pFast]).then((value) => {
   console.log(value);
   // pFast fulfils first
-})
+});
 // expected output: "Done quick"
 ```
 
@@ -80,12 +81,12 @@ Promise.any([pErr, pSlow, pFast]).then((value) => {
 
 ```js
 const pErr = new Promise((resolve, reject) => {
-  reject('Always fails');
+  reject("Always fails");
 });
 
 Promise.any([pErr]).catch((err) => {
   console.log(err);
-})
+});
 // expected output: "AggregateError: No Promise in Promise.any was resolved"
 ```
 
@@ -95,27 +96,28 @@ In this example, we have a function that fetches an image and returns a blob. We
 
 ```js
 function fetchAndDecode(url) {
-  return fetch(url).then(response => {
-    if(!response.ok) {
+  return fetch(url).then((response) => {
+    if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     } else {
       return response.blob();
     }
-  })
+  });
 }
 
-let coffee = fetchAndDecode('coffee.jpg');
-let tea = fetchAndDecode('tea.jpg');
+let coffee = fetchAndDecode("coffee.jpg");
+let tea = fetchAndDecode("tea.jpg");
 
-Promise.any([coffee, tea]).then(value => {
-  let objectURL = URL.createObjectURL(value);
-  let image = document.createElement('img');
-  image.src = objectURL;
-  document.body.appendChild(image);
-})
-.catch(e => {
-  console.log(e.message);
-});
+Promise.any([coffee, tea])
+  .then((value) => {
+    let objectURL = URL.createObjectURL(value);
+    let image = document.createElement("img");
+    image.src = objectURL;
+    document.body.appendChild(image);
+  })
+  .catch((e) => {
+    console.log(e.message);
+  });
 ```
 
 ## Specifications

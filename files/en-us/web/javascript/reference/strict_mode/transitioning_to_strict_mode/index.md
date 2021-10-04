@@ -6,6 +6,7 @@ tags:
   - Guide
   - JavaScript
 ---
+
 {{jsSidebar("More")}}
 
 ECMAScript 5 introduced [strict mode](/en-US/docs/JavaScript/Strict_mode) which is now implemented in all major browsers (including IE10). While making web browsers interpret code as strict is easy (just add `'use strict';` at the top of your source code), transitioning an existing code base to strict mode requires a bit more work.
@@ -42,7 +43,7 @@ JavaScript used to silently fail in contexts where what was done was an error. S
 
 ```js
 function f(x) {
-  'use strict';
+  "use strict";
   var a = 12;
   b = a + x * 35; // error!
 }
@@ -53,9 +54,9 @@ This used to change a value on the global object which is rarely the expected ef
 
 ```js
 var global = this; // in the top-level context, "this" always
-                   // refers to the global object
+// refers to the global object
 function f(x) {
-  'use strict';
+  "use strict";
   var a = 12;
   global.b = a + x * 35;
 }
@@ -65,7 +66,7 @@ f(42);
 #### Trying to delete a non-configurable property
 
 ```js
-'use strict';
+"use strict";
 delete Object.prototype; // error!
 ```
 
@@ -77,27 +78,24 @@ Accessing `arguments.callee`, `arguments.caller`, `anyFunction.caller`, or `anyF
 
 ```js
 // example taken from vanillajs: http://vanilla-js.com/
-var s = document.getElementById('thing').style;
+var s = document.getElementById("thing").style;
 s.opacity = 1;
-(function() {
-  if ((s.opacity-=.1) < 0)
-    s.display = 'none';
-  else
-    setTimeout(arguments.callee, 40);
+(function () {
+  if ((s.opacity -= 0.1) < 0) s.display = "none";
+  else setTimeout(arguments.callee, 40);
 })();
 ```
 
 which can be rewritten as:
 
 ```js
-'use strict';
-var s = document.getElementById('thing').style;
+"use strict";
+var s = document.getElementById("thing").style;
 s.opacity = 1;
-(function fadeOut() { // name the function
-  if((s.opacity-=.1) < 0)
-    s.display = 'none';
-  else
-    setTimeout(fadeOut, 40); // use the name of the function
+(function fadeOut() {
+  // name the function
+  if ((s.opacity -= 0.1) < 0) s.display = "none";
+  else setTimeout(fadeOut, 40); // use the name of the function
 })();
 ```
 

@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.BigInt.BigInt
 ---
+
 {{JSRef}}
 
 The **`BigInt()`** constructor returns a value of type

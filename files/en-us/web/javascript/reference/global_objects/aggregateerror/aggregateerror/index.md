@@ -8,6 +8,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.AggregateError.AggregateError
 ---
+
 {{JSRef}}
 
 The **`AggregateError()`** constructor creates an error for
@@ -16,8 +17,8 @@ several errors that need to be wrapped in a single error.
 ## Syntax
 
 ```js
-new AggregateError(errors)
-new AggregateError(errors, message)
+new AggregateError(errors);
+new AggregateError(errors, message);
 ```
 
 ### Parameters
@@ -33,14 +34,12 @@ new AggregateError(errors, message)
 
 ```js
 try {
-  throw new AggregateError([
-    new Error("some error"),
-  ], 'Hello');
+  throw new AggregateError([new Error("some error")], "Hello");
 } catch (e) {
   console.log(e instanceof AggregateError); // true
-  console.log(e.message);                   // "Hello"
-  console.log(e.name);                      // "AggregateError"
-  console.log(e.errors);                    // [ Error: "some error" ]
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "AggregateError"
+  console.log(e.errors); // [ Error: "some error" ]
 }
 ```
 

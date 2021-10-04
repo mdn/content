@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Array.Array
 ---
+
 {{JSRef}}
 
 The **`Array()`** constructor is used to create
@@ -50,10 +51,10 @@ Arrays can be created using the [literal](/en-US/docs/Web/JavaScript/Reference/L
 notation:
 
 ```js
-let fruits = ['Apple', 'Banana'];
+let fruits = ["Apple", "Banana"];
 
 console.log(fruits.length); // 2
-console.log(fruits[0]);     // "Apple"
+console.log(fruits[0]); // "Apple"
 ```
 
 ### Array constructor with a single parameter
@@ -66,7 +67,7 @@ slots.
 let fruits = new Array(2);
 
 console.log(fruits.length); // 2
-console.log(fruits[0]);     // undefined
+console.log(fruits[0]); // undefined
 ```
 
 ### Array constructor with multiple parameters
@@ -75,10 +76,10 @@ If more than one argument is passed to the constructor, a new {{jsxref("Array")}
 the given elements is created.
 
 ```js
-let fruits = new Array('Apple', 'Banana');
+let fruits = new Array("Apple", "Banana");
 
 console.log(fruits.length); // 2
-console.log(fruits[0]);     // "Apple"
+console.log(fruits[0]); // "Apple"
 ```
 
 ## Specifications

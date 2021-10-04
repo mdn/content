@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.sort
 ---
+
 {{JSRef}}
 
 The **`sort()`** method sorts the elements of a typed array

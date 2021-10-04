@@ -8,6 +8,7 @@ tags:
   - Shared Memory
 browser-compat: javascript.builtins.Atomics.and
 ---
+
 {{JSRef}}
 
 The static **`Atomics.and()`**
@@ -20,7 +21,7 @@ write happens until the modified value is written back.
 ## Syntax
 
 ```js
-Atomics.and(typedArray, index, value)
+Atomics.and(typedArray, index, value);
 ```
 
 ### Parameters
@@ -79,7 +80,7 @@ const ta = new Uint8Array(sab);
 ta[0] = 5;
 
 Atomics.and(ta, 0, 1); // returns 0, the old value
-Atomics.load(ta, 0);  // 1
+Atomics.load(ta, 0); // 1
 ```
 
 ## Specifications

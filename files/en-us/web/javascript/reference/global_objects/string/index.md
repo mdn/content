@@ -9,6 +9,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String
 ---
+
 {{JSRef}}
 
 The **`String`** object is used to represent and manipulate a
@@ -30,7 +31,7 @@ Strings can be created as primitives, from string literals, or as objects, using
 
 ```js
 const string1 = "A string primitive";
-const string2 = 'Also a string primitive';
+const string2 = "Also a string primitive";
 const string3 = `Yet another string primitive`;
 ```
 
@@ -52,14 +53,14 @@ There are two ways to access an individual character in a string. The first is t
 {{jsxref("String.prototype.charAt()", "charAt()")}} method:
 
 ```js
-return 'cat'.charAt(1) // returns "a"
+return "cat".charAt(1); // returns "a"
 ```
 
 The other way (introduced in ECMAScript 5) is to treat the string as an array-like
 object, where individual characters correspond to a numerical index:
 
 ```js
-return 'cat'[1] // returns "a"
+return "cat"[1]; // returns "a"
 ```
 
 When using bracket notation for character access, attempting to delete or assign a
@@ -73,14 +74,15 @@ you just use the [less-than
 and greater-than operators](/en-US/docs/Web/JavaScript/Reference/Operators):
 
 ```js
-let a = 'a'
-let b = 'b'
-if (a < b) { // true
-  console.log(a + ' is less than ' + b)
+let a = "a";
+let b = "b";
+if (a < b) {
+  // true
+  console.log(a + " is less than " + b);
 } else if (a > b) {
-  console.log(a + ' is greater than ' + b)
+  console.log(a + " is greater than " + b);
 } else {
-  console.log(a + ' and ' + b + ' are equal.')
+  console.log(a + " and " + b + " are equal.");
 }
 ```
 
@@ -93,9 +95,8 @@ to compare without regard to upper or lower case characters, use a function simi
 this:
 
 ```js
-function isEqual(str1, str2)
-{
-    return str1.toUpperCase() === str2.toUpperCase()
+function isEqual(str1, str2) {
+  return str1.toUpperCase() === str2.toUpperCase();
 } // isEqual
 ```
 
@@ -118,11 +119,11 @@ will automatically wrap the string primitive and call the method or perform the 
 lookup.
 
 ```js
-let s_prim = 'foo'
-let s_obj = new String(s_prim)
+let s_prim = "foo";
+let s_obj = new String(s_prim);
 
-console.log(typeof s_prim) // Logs "string"
-console.log(typeof s_obj)  // Logs "object"
+console.log(typeof s_prim); // Logs "string"
+console.log(typeof s_obj); // Logs "object"
 ```
 
 String primitives and `String` objects also give different results when
@@ -131,10 +132,10 @@ using {{jsxref("Global_Objects/eval", "eval()")}}. Primitives passed to
 all other objects are, by returning the object. For example:
 
 ```js
-let s1 = '2 + 2'              // creates a string primitive
-let s2 = new String('2 + 2')  // creates a String object
-console.log(eval(s1))         // returns the number 4
-console.log(eval(s2))         // returns the string "2 + 2"
+let s1 = "2 + 2"; // creates a string primitive
+let s2 = new String("2 + 2"); // creates a String object
+console.log(eval(s1)); // returns the number 4
+console.log(eval(s2)); // returns the string "2 + 2"
 ```
 
 For these reasons, the code may break when it encounters `String` objects
@@ -145,7 +146,7 @@ A `String` object can always be converted to its primitive counterpart with
 the {{jsxref("String.prototype.valueOf()", "valueOf()")}} method.
 
 ```js
-console.log(eval(s2.valueOf()))  // returns the number 4
+console.log(eval(s2.valueOf())); // returns the number 4
 ```
 
 ### Escape sequences
@@ -181,9 +182,10 @@ You can use the [+](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
 operator to append multiple strings together, like this:
 
 ```js
-let longString = "This is a very long string which needs " +
-                 "to wrap across multiple lines because " +
-                 "otherwise my code is unreadable."
+let longString =
+  "This is a very long string which needs " +
+  "to wrap across multiple lines because " +
+  "otherwise my code is unreadable.";
 ```
 
 #### Method 2
@@ -196,9 +198,10 @@ otherwise it will not work.
 That form looks like this:
 
 ```js
-let longString = "This is a very long string which needs \
+let longString =
+  "This is a very long string which needs \
 to wrap across multiple lines because \
-otherwise my code is unreadable."
+otherwise my code is unreadable.";
 ```
 
 Both of the above methods result in identical strings.
@@ -397,12 +400,12 @@ used on {{jsxref("null")}} and {{jsxref("undefined")}}. For example:
 
 ```js
 var nullVar = null;
-nullVar.toString();       // TypeError: nullVar is null
-String(nullVar);          // "null"
+nullVar.toString(); // TypeError: nullVar is null
+String(nullVar); // "null"
 
 var undefinedVar;
-undefinedVar.toString();  // TypeError: undefinedVar is undefined
-String(undefinedVar);     // "undefined" 
+undefinedVar.toString(); // TypeError: undefinedVar is undefined
+String(undefinedVar); // "undefined"
 ```
 
 ## Specifications

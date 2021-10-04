@@ -10,6 +10,7 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.delete
 ---
+
 {{JSRef}}
 
 The **`delete()`** method removes a specified value from a
@@ -20,7 +21,7 @@ The **`delete()`** method removes a specified value from a
 ## Syntax
 
 ```js
-delete(value)
+delete value;
 ```
 
 ### Parameters
@@ -39,29 +40,29 @@ Returns `true` if `value` was already in
 
 ```js
 const mySet = new Set();
-mySet.add('foo');
+mySet.add("foo");
 
-mySet.delete('bar'); // Returns false. No "bar" element found to be deleted.
-mySet.delete('foo'); // Returns true. Successfully removed.
+mySet.delete("bar"); // Returns false. No "bar" element found to be deleted.
+mySet.delete("foo"); // Returns true. Successfully removed.
 
-mySet.has('foo');    // Returns false. The "foo" element is no longer present.
+mySet.has("foo"); // Returns false. The "foo" element is no longer present.
 ```
 
 Let's checkout below how to delete an Object from a Set.
 
 ```js
-const setObj = new Set();   // Create a new set.
+const setObj = new Set(); // Create a new set.
 
-setObj.add({x: 10, y: 20}); // Add object in the set.
+setObj.add({ x: 10, y: 20 }); // Add object in the set.
 
-setObj.add({x: 20, y: 30}); // Add object in the set.
+setObj.add({ x: 20, y: 30 }); // Add object in the set.
 
 // Delete any point with `x > 10`.
-setObj.forEach(function(point){
-  if (point.x > 10){
-    setObj.delete(point)
+setObj.forEach(function (point) {
+  if (point.x > 10) {
+    setObj.delete(point);
   }
-})
+});
 ```
 
 ## Specifications

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Array.join
 ---
+
 {{JSRef}}
 
 The **`join()`** method creates and
@@ -21,8 +22,8 @@ only one item, then that item will be returned without using the separator.
 ## Syntax
 
 ```js
-join()
-join(separator)
+join();
+join(separator);
 ```
 
 ### Parameters
@@ -54,11 +55,11 @@ the array four times: using the default separator, then a comma and a space, the
 and an empty string.
 
 ```js
-var a = ['Wind', 'Water', 'Fire'];
-a.join();      // 'Wind,Water,Fire'
-a.join(', ');  // 'Wind, Water, Fire'
-a.join(' + '); // 'Wind + Water + Fire'
-a.join('');    // 'WindWaterFire'
+var a = ["Wind", "Water", "Fire"];
+a.join(); // 'Wind,Water,Fire'
+a.join(", "); // 'Wind, Water, Fire'
+a.join(" + "); // 'Wind + Water + Fire'
+a.join(""); // 'WindWaterFire'
 ```
 
 ### Joining an array-like object
@@ -72,7 +73,7 @@ function f(a, b, c) {
   var s = Array.prototype.join.call(arguments);
   console.log(s); // '1,a,true'
 }
-f(1, 'a', true);
+f(1, "a", true);
 //expected output: "1,a,true"
 ```
 

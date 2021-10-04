@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Map.Map
 ---
+
 {{JSRef}}
 
 The **`Map()` constructor** creates {{jsxref("Map")}} objects.
@@ -16,8 +17,8 @@ The **`Map()` constructor** creates {{jsxref("Map")}} objects.
 ## Syntax
 
 ```js
-new Map()
-new Map(iterable)
+new Map();
+new Map(iterable);
 ```
 
 ### Parameters
@@ -35,10 +36,10 @@ new Map(iterable)
 
 ```js
 let myMap = new Map([
-  [1, 'one'],
-  [2, 'two'],
-  [3, 'three'],
-])
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
+]);
 ```
 
 ## Specifications

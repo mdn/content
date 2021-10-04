@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getUTCMinutes
 ---
+
 {{JSRef}}
 
 The **`getUTCMinutes()`** method returns the minutes in the
@@ -19,7 +20,7 @@ specified date according to universal time.
 ## Syntax
 
 ```js
-getUTCMinutes()
+getUTCMinutes();
 ```
 
 ### Return value

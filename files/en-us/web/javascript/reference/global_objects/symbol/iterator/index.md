@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Symbol.iterator
 ---
+
 {{JSRef}}
 
 The well-known **`Symbol.iterator`** symbol specifies the default iterator for an object. Used by [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of).
@@ -38,20 +39,20 @@ See also [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_pr
 We can make our own iterables like this:
 
 ```js
-var myIterable = {}
+var myIterable = {};
 myIterable[Symbol.iterator] = function* () {
-    yield 1;
-    yield 2;
-    yield 3;
+  yield 1;
+  yield 2;
+  yield 3;
 };
-[...myIterable] // [1, 2, 3]
+[...myIterable]; // [1, 2, 3]
 ```
 
 Or iterables can be defined directly inside a class or object using a [computed property](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names):
 
 ```js
 class Foo {
-  *[Symbol.iterator] () {
+  *[Symbol.iterator]() {
     yield 1;
     yield 2;
     yield 3;
@@ -59,13 +60,13 @@ class Foo {
 }
 
 const someObj = {
-  *[Symbol.iterator] () {
-    yield 'a';
-    yield 'b';
-  }
-}
+  *[Symbol.iterator]() {
+    yield "a";
+    yield "b";
+  },
+};
 
-console.log(...new Foo); // 1, 2, 3
+console.log(...new Foo()); // 1, 2, 3
 console.log(...someObj); // 'a', 'b'
 ```
 

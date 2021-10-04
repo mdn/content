@@ -9,6 +9,7 @@ tags:
   - Object
 browser-compat: javascript.builtins.Object.isExtensible
 ---
+
 {{JSRef}}
 
 The **`Object.isExtensible()`** method determines if an object
@@ -19,7 +20,7 @@ is extensible (whether it can have new properties added to it).
 ## Syntax
 
 ```js
-Object.isExtensible(obj)
+Object.isExtensible(obj);
 ```
 
 ### Parameters

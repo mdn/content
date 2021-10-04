@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.bitwise_xor
 ---
+
 {{jsSidebar("Operators")}}
 
 The bitwise XOR operator (`^`) returns a `1` in each bit position
@@ -19,7 +20,7 @@ for which the corresponding bits of either but not both operands are `1`s.
 ## Syntax
 
 ```js
-a ^ b
+a ^ b;
 ```
 
 ## Description
@@ -30,8 +31,8 @@ example, the following integer with more than 32 bits will be converted to a 32 
 integer:
 
 ```js
-Before: 11100110111110100000000000000110000000000001
-After:              10100000000000000110000000000001
+Before: 11100110111110100000000000000110000000000001;
+After: 10100000000000000110000000000001;
 ```
 
 Each bit in the first operand is paired with the corresponding bit in the second

@@ -8,6 +8,7 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.@@species
 ---
+
 {{JSRef}}
 
 The **`Set[Symbol.species]`** accessor property returns the `Set` constructor.
@@ -33,7 +34,9 @@ In a derived collection object (e.g. your custom set `MySet`), the `MySet` speci
 ```js
 class MySet extends Set {
   // Overwrite MySet species to the parent Set constructor
-  static get [Symbol.species]() { return Set; }
+  static get [Symbol.species]() {
+    return Set;
+  }
 }
 ```
 

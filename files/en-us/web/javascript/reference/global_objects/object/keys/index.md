@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.keys
 ---
+
 {{JSRef}}
 
 The **`Object.keys()`** method returns
@@ -21,7 +22,7 @@ in the same order that a normal loop would.
 ## Syntax
 
 ```js
-Object.keys(obj)
+Object.keys(obj);
 ```
 
 ### Parameters
@@ -46,23 +47,28 @@ manually.
 
 ```js
 // simple array
-const arr = ['a', 'b', 'c'];
+const arr = ["a", "b", "c"];
 console.log(Object.keys(arr)); // console: ['0', '1', '2']
 
 // array-like object
-const obj = { 0: 'a', 1: 'b', 2: 'c' };
+const obj = { 0: "a", 1: "b", 2: "c" };
 console.log(Object.keys(obj)); // console: ['0', '1', '2']
 
 // array-like object with random key ordering
-const anObj = { 100: 'a', 2: 'b', 7: 'c' };
+const anObj = { 100: "a", 2: "b", 7: "c" };
 console.log(Object.keys(anObj)); // console: ['2', '7', '100']
 
 // getFoo is a property which isn't enumerable
-const myObj = Object.create({}, {
-  getFoo: {
-    value: function () { return this.foo; }
+const myObj = Object.create(
+  {},
+  {
+    getFoo: {
+      value: function () {
+        return this.foo;
+      },
+    },
   }
-});
+);
 myObj.foo = 1;
 console.log(Object.keys(myObj)); // console: ['foo']
 ```
@@ -79,10 +85,10 @@ From ES2015 onwards, a non-object argument will be coerced to an object.
 
 ```js
 // In ES5
-Object.keys('foo');  // TypeError: "foo" is not an object
+Object.keys("foo"); // TypeError: "foo" is not an object
 
 // In ES2015+
-Object.keys('foo');  // ["0", "1", "2"]
+Object.keys("foo"); // ["0", "1", "2"]
 ```
 
 ## Polyfill
@@ -93,27 +99,32 @@ natively support it, copy the following snippet:
 ```js
 // From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 if (!Object.keys) {
-  Object.keys = (function() {
-    'use strict';
+  Object.keys = (function () {
+    "use strict";
     var hasOwnProperty = Object.prototype.hasOwnProperty,
-        hasDontEnumBug = !({ toString: null }).propertyIsEnumerable('toString'),
-        dontEnums = [
-          'toString',
-          'toLocaleString',
-          'valueOf',
-          'hasOwnProperty',
-          'isPrototypeOf',
-          'propertyIsEnumerable',
-          'constructor'
-        ],
-        dontEnumsLength = dontEnums.length;
+      hasDontEnumBug = !{ toString: null }.propertyIsEnumerable("toString"),
+      dontEnums = [
+        "toString",
+        "toLocaleString",
+        "valueOf",
+        "hasOwnProperty",
+        "isPrototypeOf",
+        "propertyIsEnumerable",
+        "constructor",
+      ],
+      dontEnumsLength = dontEnums.length;
 
-    return function(obj) {
-      if (typeof obj !== 'function' && (typeof obj !== 'object' || obj === null)) {
-        throw new TypeError('Object.keys called on non-object');
+    return function (obj) {
+      if (
+        typeof obj !== "function" &&
+        (typeof obj !== "object" || obj === null)
+      ) {
+        throw new TypeError("Object.keys called on non-object");
       }
 
-      var result = [], prop, i;
+      var result = [],
+        prop,
+        i;
 
       for (prop in obj) {
         if (hasOwnProperty.call(obj, prop)) {
@@ -130,7 +141,7 @@ if (!Object.keys) {
       }
       return result;
     };
-  }());
+  })();
 }
 ```
 

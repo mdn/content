@@ -9,6 +9,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Number.toSource
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`toSource()`** method returns a string representing the
@@ -17,7 +18,7 @@ source code of the object.
 ## Syntax
 
 ```js
-toSource()
+toSource();
 ```
 
 ### Return value

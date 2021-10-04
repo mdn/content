@@ -8,6 +8,7 @@ tags:
   - JavaScript
   - OOP
 ---
+
 {{jsSidebar("Advanced")}}
 
 JavaScript is a bit confusing for developers experienced in class-based languages (like Java or C++), as it is dynamic and does not provide a `class` implementation per se (the `class` keyword is introduced in ES2015, but is syntactical sugar, JavaScript remains prototype-based).
@@ -33,9 +34,9 @@ Here is what happens when trying to access a property:
 ```js
 // Let's create an object o from function F with its own properties a and b:
 let F = function () {
-   this.a = 1;
-   this.b = 2;
-}
+  this.a = 1;
+  this.b = 2;
+};
 let o = new F(); // {a: 1, b: 2}
 
 // add properties in F function's prototype
@@ -84,9 +85,9 @@ When an inherited function is executed, the value of [`this`](/en-US/docs/Web/Ja
 ```js
 var o = {
   a: 2,
-  m: function() {
+  m: function () {
     return this.a + 1;
-  }
+  },
 };
 
 console.log(o.m()); // 3
@@ -109,14 +110,14 @@ Let's look at what happens behind the scenes in a bit more detail.
 In JavaScript, as mentioned above, functions are able to have properties. All functions have a special property named `prototype`. Please note that the code below is free-standing (it is safe to assume there is no other JavaScript on the webpage other than the below code). For the best learning experience, it is highly recommended that you open a console, navigate to the "console" tab, copy-and-paste in the below JavaScript code, and run it by pressing the Enter/Return key. (The console is included in most web browser's Developer Tools. More information is available for [Firefox Developer Tools](/en-US/docs/Tools), [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/), and [Edge DevTools](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide).)
 
 ```js
-function doSomething(){}
-console.log( doSomething.prototype );
+function doSomething() {}
+console.log(doSomething.prototype);
 //  It does not matter how you declare the function; a
 //  function in JavaScript will always have a default
 //  prototype property — with one exception: an arrow
 //  function doesn't have a default prototype property:
 const doSomethingFromArrowFunction = () => {};
-console.log( doSomethingFromArrowFunction.prototype );
+console.log(doSomethingFromArrowFunction.prototype);
 ```
 
 As seen above, `doSomething()` has a default `prototype` property, as demonstrated by the console. After running this code, the console should have displayed an object that looks similar to this.
@@ -139,9 +140,9 @@ As seen above, `doSomething()` has a default `prototype` property, as demonstrat
 We can add properties to the prototype of `doSomething()`, as shown below.
 
 ```js
-function doSomething(){}
+function doSomething() {}
 doSomething.prototype.foo = "bar";
-console.log( doSomething.prototype );
+console.log(doSomething.prototype);
 ```
 
 This results in:
@@ -167,11 +168,11 @@ We can now use the `new` operator to create an instance of `doSomething()` based
 Try the following code:
 
 ```js
-function doSomething(){}
+function doSomething() {}
 doSomething.prototype.foo = "bar"; // add a property onto the prototype
 var doSomeInstancing = new doSomething();
 doSomeInstancing.prop = "some value"; // add a property onto the object
-console.log( doSomeInstancing );
+console.log(doSomeInstancing);
 ```
 
 This results in an output similar to the following:
@@ -206,7 +207,7 @@ If the property is not found in the `__proto__` of the `__proto__` of doSomeInst
 Let's try entering some more code into the console:
 
 ```js
-function doSomething(){}
+function doSomething() {}
 doSomething.prototype.foo = "bar";
 var doSomeInstancing = new doSomething();
 doSomeInstancing.prop = "some value";
@@ -234,7 +235,7 @@ doSomething.prototype.foo:  bar
 ### Objects created with syntax constructs
 
 ```js
-var o = {a: 1};
+var o = { a: 1 };
 
 // The newly created object o has Object.prototype as its [[Prototype]]
 // o has no own property named 'hasOwnProperty'
@@ -243,7 +244,7 @@ var o = {a: 1};
 // Object.prototype has null as its prototype.
 // o ---> Object.prototype ---> null
 
-var b = ['yo', 'whadup', '?'];
+var b = ["yo", "whadup", "?"];
 
 // Arrays inherit from Array.prototype
 // (which has methods indexOf, forEach, etc.)
@@ -269,9 +270,9 @@ function Graph() {
   this.edges = [];
 }
 
-Graph.prototype.addVertex = function(v) {
+Graph.prototype.addVertex = function (v) {
   this.vertices.push(v);
-}
+};
 
 var g = new Graph();
 // g is an object with own properties 'vertices' and 'edges'.
@@ -283,7 +284,7 @@ var g = new Graph();
 ECMAScript 5 introduced a new method: {{jsxref("Object.create()")}}. Calling this method creates a new object. The prototype of this object is the first argument of the function:
 
 ```js
-var a = {a: 1};
+var a = { a: 1 };
 // a ---> Object.prototype ---> null
 
 var b = Object.create(a);
@@ -304,19 +305,19 @@ console.log(d.hasOwnProperty);
 Using `Object.create` of another object demonstrates prototypical inheritance with the `delete` operation:
 
 ```js
-var a = {a: 1};
+var a = { a: 1 };
 
 var b = Object.create(a);
 
 console.log(a.a); // print 1
 console.log(b.a); // print 1
-b.a=5;
+b.a = 5;
 console.log(a.a); // print 1
 console.log(b.a); // print 5
 delete b.a;
 console.log(a.a); // print 1
 console.log(b.a); // print 1 (b.a value 5 is deleted but it showing value from its prototype chain)
-delete a.a;       // This can also be done via 'delete Object.getPrototypeOf(b).a'
+delete a.a; // This can also be done via 'delete Object.getPrototypeOf(b).a'
 console.log(a.a); // print undefined
 console.log(b.a); // print undefined
 ```
@@ -325,12 +326,12 @@ In the following example, calling `new Graph()` creates a `Graph` instance that 
 
 ```js
 function Graph() {
-  this.vertices = [4,4];
+  this.vertices = [4, 4];
 }
 
 var g = new Graph();
 console.log(g.vertices); // print [4,4]
-console.log(g.__proto__.vertices) // print undefined
+console.log(g.__proto__.vertices); // print undefined
 g.vertices = 25;
 console.log(g.vertices); // print 25
 delete g.vertices;
@@ -342,7 +343,7 @@ console.log(g.vertices); // print undefined
 ECMAScript 2015 introduced a new set of keywords implementing [classes](/en-US/docs/Web/JavaScript/Reference/Classes). The new keywords include {{jsxref("Statements/class", "class")}}, {{jsxref("Classes/constructor", "constructor")}}, {{jsxref("Classes/static", "static")}}, {{jsxref("Classes/extends", "extends")}}, and {{jsxref("Operators/super", "super")}}.
 
 ```js
-'use strict';
+"use strict";
 
 class Polygon {
   constructor(height, width) {
@@ -374,16 +375,16 @@ The lookup time for properties that are high up on the prototype chain can have 
 Also, when iterating over the properties of an object, **every** enumerable property that is on the prototype chain will be enumerated. To check whether an object has a property defined on _itself_ and not somewhere on its prototype chain, it is necessary to use the [`hasOwnProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) method which all objects inherit from `Object.prototype`. To give you a concrete example, let's take the above graph example code to illustrate it:
 
 ```js
-console.log(g.hasOwnProperty('vertices'));
+console.log(g.hasOwnProperty("vertices"));
 // true
 
-console.log(g.hasOwnProperty('nope'));
+console.log(g.hasOwnProperty("nope"));
 // false
 
-console.log(g.hasOwnProperty('addVertex'));
+console.log(g.hasOwnProperty("addVertex"));
 // false
 
-console.log(Object.getPrototypeOf(g).hasOwnProperty('addVertex'));
+console.log(Object.getPrototypeOf(g).hasOwnProperty("addVertex"));
 // true
 ```
 
@@ -406,9 +407,9 @@ Here are all 4 ways and their pros/cons. All of the examples listed below create
 #### Code example
 
 ```js
-function foo(){}
+function foo() {}
 foo.prototype.foo_prop = "foo val";
-function bar(){}
+function bar() {}
 var proto = new foo();
 proto.bar_prop = "bar val";
 bar.prototype = proto;
@@ -454,12 +455,10 @@ console.log(inst.bar_prop);
 
 ```js
 // Technique 1
-function foo(){}
+function foo() {}
 foo.prototype.foo_prop = "foo val";
-function bar(){}
-var proto = Object.create(
-  foo.prototype
-);
+function bar() {}
+var proto = Object.create(foo.prototype);
 proto.bar_prop = "bar val";
 bar.prototype = proto;
 var inst = new bar();
@@ -469,21 +468,18 @@ console.log(inst.bar_prop);
 
 ```js
 // Technique 2
-function foo(){}
+function foo() {}
 foo.prototype.foo_prop = "foo val";
-function bar(){}
-var proto = Object.create(
-  foo.prototype,
-  {
-    bar_prop: {
-      value: "bar val"
-    }
-  }
-);
+function bar() {}
+var proto = Object.create(foo.prototype, {
+  bar_prop: {
+    value: "bar val",
+  },
+});
 bar.prototype = proto;
 var inst = new bar();
 console.log(inst.foo_prop);
-console.log(inst.bar_prop)
+console.log(inst.bar_prop);
 ```
 
 <table class="standard-table">
@@ -520,15 +516,13 @@ console.log(inst.bar_prop)
 
 ```js
 // Technique 1
-function foo(){}
+function foo() {}
 foo.prototype.foo_prop = "foo val";
-function bar(){}
+function bar() {}
 var proto = {
-  bar_prop: "bar val"
+  bar_prop: "bar val",
 };
-Object.setPrototypeOf(
-  proto, foo.prototype
-);
+Object.setPrototypeOf(proto, foo.prototype);
 bar.prototype = proto;
 var inst = new bar();
 console.log(inst.foo_prop);
@@ -537,18 +531,15 @@ console.log(inst.bar_prop);
 
 ```js
 // Technique 2
-function foo(){}
+function foo() {}
 foo.prototype.foo_prop = "foo val";
-function bar(){}
+function bar() {}
 var proto;
-proto = Object.setPrototypeOf(
-  { bar_prop: "bar val" },
-  foo.prototype
-);
+proto = Object.setPrototypeOf({ bar_prop: "bar val" }, foo.prototype);
 bar.prototype = proto;
 var inst = new bar();
 console.log(inst.foo_prop);
-console.log(inst.bar_prop)
+console.log(inst.bar_prop);
 ```
 
 <table class="standard-table">
@@ -582,12 +573,12 @@ console.log(inst.bar_prop)
 
 ```js
 // Technique 1
-function A(){}
+function A() {}
 A.prototype.foo_prop = "foo val";
-function bar(){}
+function bar() {}
 var proto = {
   bar_prop: "bar val",
-  __proto__: A.prototype
+  __proto__: A.prototype,
 };
 bar.prototype = proto;
 var inst = new bar();
@@ -602,12 +593,12 @@ var inst = {
     bar_prop: "bar val",
     __proto__: {
       foo_prop: "foo val",
-      __proto__: Object.prototype
-    }
-  }
+      __proto__: Object.prototype,
+    },
+  },
 };
 console.log(inst.foo_prop);
-console.log(inst.bar_prop)
+console.log(inst.bar_prop);
 ```
 
 <table class="standard-table">

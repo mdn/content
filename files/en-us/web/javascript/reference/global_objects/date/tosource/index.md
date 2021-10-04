@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.toSource
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`toSource()`** method returns a string representing the
@@ -17,8 +18,8 @@ source code of the object.
 ## Syntax
 
 ```js
-dateObj.toSource()
-Date.toSource()
+dateObj.toSource();
+Date.toSource();
 ```
 
 ### Return value

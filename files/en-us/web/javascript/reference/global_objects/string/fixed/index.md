@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.fixed
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`fixed()`** method creates a {{HTMLElement("tt")}} HTML
@@ -20,7 +21,7 @@ element that causes a string to be displayed in fixed-pitch font.
 ## Syntax
 
 ```js
-fixed()
+fixed();
 ```
 
 ### Return value
@@ -40,7 +41,7 @@ The following example uses the `fixed` method to change the formatting of a
 string:
 
 ```js
-var worldString = 'Hello, world';
+var worldString = "Hello, world";
 console.log(worldString.fixed()); // "<tt>Hello, world</tt>"
 ```
 

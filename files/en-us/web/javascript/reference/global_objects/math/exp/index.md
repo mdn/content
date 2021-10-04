@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Math.exp
 ---
+
 {{JSRef}}
 
 The **`Math.exp()`** function returns
@@ -20,7 +21,7 @@ base of the natural logarithms.
 ## Syntax
 
 ```js
-Math.exp(x)
+Math.exp(x);
 ```
 
 ### Parameters
@@ -46,8 +47,8 @@ created (`Math` is not a constructor).
 
 ```js
 Math.exp(-1); // 0.36787944117144233
-Math.exp(0);  // 1
-Math.exp(1);  // 2.718281828459045
+Math.exp(0); // 1
+Math.exp(1); // 2.718281828459045
 ```
 
 ## Specifications

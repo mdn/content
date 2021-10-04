@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Number
 ---
+
 {{JSRef}}**`Number`** is a [primitive wrapper object](/en-US/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript) used to represent and manipulate numbers like `37` or `-9.25`.
 
 The `Number` constructor contains constants and methods for working with numbers. Values of other types can be converted to numbers using the `Number()` function.
@@ -26,19 +27,19 @@ When used as a function, `Number(value)` converts a string or other value to the
 ### Literal syntax
 
 ```js
-123    // one-hundred twenty-three
-123.0  // same
-123 === 123.0  // true
+123; // one-hundred twenty-three
+123.0; // same
+123 === 123.0; // true
 ```
 
 ### Function syntax
 
 ```js
-Number('123')  // returns the number 123
-Number('123') === 123  // true
+Number("123"); // returns the number 123
+Number("123") === 123; // true
 
-Number("unicorn")  // NaN
-Number(undefined)  // NaN
+Number("unicorn"); // NaN
+Number(undefined); // NaN
 ```
 
 ## Constructor
@@ -104,11 +105,11 @@ Number(undefined)  // NaN
 The following example uses the `Number` object's properties to assign values to several numeric variables:
 
 ```js
-const biggestNum     = Number.MAX_VALUE
-const smallestNum    = Number.MIN_VALUE
-const infiniteNum    = Number.POSITIVE_INFINITY
-const negInfiniteNum = Number.NEGATIVE_INFINITY
-const notANum        = Number.NaN
+const biggestNum = Number.MAX_VALUE;
+const smallestNum = Number.MIN_VALUE;
+const infiniteNum = Number.POSITIVE_INFINITY;
+const negInfiniteNum = Number.NEGATIVE_INFINITY;
+const notANum = Number.NaN;
 ```
 
 ### Integer range for Number
@@ -116,8 +117,8 @@ const notANum        = Number.NaN
 The following example shows the minimum and maximum integer values that can be represented as `Number` object. (More details on this are described in the ECMAScript standard, chapter _[6.1.6 The Number Type](https://tc39.github.io/ecma262/#sec-ecmascript-language-types-number-type)._)
 
 ```js
-const biggestInt  = Number.MAX_SAFE_INTEGER  //  (2**53 - 1) =>  9007199254740991
-const smallestInt = Number.MIN_SAFE_INTEGER  // -(2**53 - 1) => -9007199254740991
+const biggestInt = Number.MAX_SAFE_INTEGER; //  (2**53 - 1) =>  9007199254740991
+const smallestInt = Number.MIN_SAFE_INTEGER; // -(2**53 - 1) => -9007199254740991
 ```
 
 When parsing data that has been serialized to JSON, integer values falling outside of this range can be expected to become corrupted when JSON parser coerces them to `Number` type.
@@ -131,8 +132,8 @@ Larger numbers can be represented using the {{jsxref("BigInt")}} type.
 The following example converts the {{jsxref("Date")}} object to a numerical value using `Number` as a function:
 
 ```js
-let d = new Date('December 17, 1995 03:24:00')
-console.log(Number(d))
+let d = new Date("December 17, 1995 03:24:00");
+console.log(Number(d));
 ```
 
 This logs `819199440000`.
@@ -140,19 +141,19 @@ This logs `819199440000`.
 ### Convert numeric strings and null to numbers
 
 ```js
-Number('123')     // 123
-Number('123') === 123 // true
-Number('12.3')    // 12.3
-Number('12.00')   // 12
-Number('123e-1')  // 12.3
-Number('')        // 0
-Number(null)      // 0
-Number('0x11')    // 17
-Number('0b11')    // 3
-Number('0o11')    // 9
-Number('foo')     // NaN
-Number('100a')    // NaN
-Number('-Infinity') // -Infinity
+Number("123"); // 123
+Number("123") === 123; // true
+Number("12.3"); // 12.3
+Number("12.00"); // 12
+Number("123e-1"); // 12.3
+Number(""); // 0
+Number(null); // 0
+Number("0x11"); // 17
+Number("0b11"); // 3
+Number("0o11"); // 9
+Number("foo"); // NaN
+Number("100a"); // NaN
+Number("-Infinity"); // -Infinity
 ```
 
 ## Specifications

@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.RegExp.sticky
 ---
+
 {{JSRef}}
 
 The **`sticky`** property reflects whether or not the search is sticky (searches in strings only from the index indicated by the {{jsxref("RegExp.lastIndex", "lastIndex")}} property of this regular expression). `sticky` is a read-only property of an individual regular expression object.
@@ -29,7 +30,7 @@ You cannot change this property directly. It is read-only.
 ### Using a regular expression with the sticky flag
 
 ```js
-var str = '#foo#';
+var str = "#foo#";
 var regex = /foo/y;
 
 regex.lastIndex = 1;
@@ -50,13 +51,13 @@ Examples of correct behavior:
 ```js
 var regex = /^foo/y;
 regex.lastIndex = 2;
-regex.test('..foo');   // false - index 2 is not the beginning of the string
+regex.test("..foo"); // false - index 2 is not the beginning of the string
 
 var regex2 = /^foo/my;
 regex2.lastIndex = 2;
-regex2.test('..foo');  // false - index 2 is not the beginning of the string or line
+regex2.test("..foo"); // false - index 2 is not the beginning of the string or line
 regex2.lastIndex = 2;
-regex2.test('.\nfoo'); // true - index 2 is the beginning of a line
+regex2.test(".\nfoo"); // true - index 2 is the beginning of a line
 ```
 
 ## Specifications

@@ -7,6 +7,7 @@ tags:
   - Method
 browser-compat: javascript.builtins.Function.call
 ---
+
 {{JSRef}}
 
 The **`call()`** method calls a
@@ -35,7 +36,9 @@ call(thisArg, arg1, ... , argN)
     > not be the actual value seen by the method.
     >
     > If the method is a function in {{jsxref("Strict_mode", "non-strict mode", "",
+
         1)}}, {{jsxref("Global_Objects/null", "null")}} and
+
     > {{jsxref("Global_Objects/undefined", "undefined")}} will be replaced with the
     > global object, and primitive values will be converted to objects.
 
@@ -83,16 +86,16 @@ function Product(name, price) {
 
 function Food(name, price) {
   Product.call(this, name, price);
-  this.category = 'food';
+  this.category = "food";
 }
 
 function Toy(name, price) {
   Product.call(this, name, price);
-  this.category = 'toy';
+  this.category = "toy";
 }
 
-const cheese = new Food('feta', 5);
-const fun = new Toy('robot', 40);
+const cheese = new Food("feta", 5);
+const fun = new Toy("robot", 40);
 ```
 
 ### Using `call` to invoke an anonymous function
@@ -108,18 +111,17 @@ to every object, which is able to print the correct index of the object in the a
 
 ```js
 const animals = [
-  { species: 'Lion', name: 'King' },
-  { species: 'Whale', name: 'Fail' }
+  { species: "Lion", name: "King" },
+  { species: "Whale", name: "Fail" },
 ];
 
 for (let i = 0; i < animals.length; i++) {
-  (function(i) {
-    this.print = function() {
-      console.log('#' + i + ' ' + this.species
-                  + ': ' + this.name);
-    }
+  (function (i) {
+    this.print = function () {
+      console.log("#" + i + " " + this.species + ": " + this.name);
+    };
     this.print();
-  }).call(animals[i], i);
+  }.call(animals[i], i));
 }
 ```
 
@@ -130,15 +132,20 @@ will be bound to object `obj`.
 
 ```js
 function greet() {
-  const reply = [this.animal, 'typically sleep between', this.sleepDuration].join(' ');
+  const reply = [
+    this.animal,
+    "typically sleep between",
+    this.sleepDuration,
+  ].join(" ");
   console.log(reply);
 }
 
 const obj = {
-  animal: 'cats', sleepDuration: '12 and 16 hours'
+  animal: "cats",
+  sleepDuration: "12 and 16 hours",
 };
 
-greet.call(obj);  // cats typically sleep between 12 and 16 hours
+greet.call(obj); // cats typically sleep between 12 and 16 hours
 ```
 
 ### Using `call` to invoke a function and without specifying the first argument
@@ -148,25 +155,25 @@ first argument. If the first argument is not passed, the value of `this` is
 bound to the global object.
 
 ```js
-var sData = 'Wisen';
+var sData = "Wisen";
 
 function display() {
-  console.log('sData value is %s ', this.sData);
+  console.log("sData value is %s ", this.sData);
 }
 
-display.call();  // sData value is Wisen
+display.call(); // sData value is Wisen
 ```
 
 > **Note:** In strict mode, the value of `this` will be
 > `undefined`. See below.
 
 ```js
-'use strict';
+"use strict";
 
-var sData = 'Wisen';
+var sData = "Wisen";
 
 function display() {
-  console.log('sData value is %s ', this.sData);
+  console.log("sData value is %s ", this.sData);
 }
 
 display.call(); // Cannot read the property of 'sData' of undefined

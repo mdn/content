@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Math.expm1
 ---
+
 {{JSRef}}
 
 The **`Math.expm1()`** function returns
@@ -20,7 +21,7 @@ The **`Math.expm1()`** function returns
 ## Syntax
 
 ```js
-Math.expm1(x)
+Math.expm1(x);
 ```
 
 ### Parameters
@@ -45,8 +46,8 @@ created (`Math` is not a constructor).
 
 ```js
 Math.expm1(-1); // -0.6321205588285577
-Math.expm1(0);  // 0
-Math.expm1(1);  // 1.718281828459045
+Math.expm1(0); // 0
+Math.expm1(1); // 1.718281828459045
 ```
 
 ## Specifications

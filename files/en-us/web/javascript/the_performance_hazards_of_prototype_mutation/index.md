@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - Performance
 ---
+
 {{jsSidebar("Advanced")}}
 
 Every JavaScript object has a `[[Prototype]]`.  Getting a property on an object first searches that object, then its `[[Prototype]]`, then that object's `[[Prototype]]`, until the property is found or the chain ends.  The `[[Prototype]]` chain is especially useful for [object inheritance](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
@@ -63,8 +64,13 @@ Many properties don't exist _directly_ on the object: lookups often find propert
 var d = new Date();
 d.toDateString(); // Date.prototype.toDateString
 
-function Pair(x, y) { this.x = x; this.y = y; }
-Pair.prototype.sum = function() { return this.x + this.y; };
+function Pair(x, y) {
+  this.x = x;
+  this.y = y;
+}
+Pair.prototype.sum = function () {
+  return this.x + this.y;
+};
 
 var p = new Pair(3, 7);
 p.sum(); // Pair.prototype.sum
@@ -80,7 +86,7 @@ Predictable property accesses _usually_ find the property a constant number of h
 
   - : In this case, a shape match must imply that no intervening object's `[[Prototype]]` has been modified.  Therefore, when an object's `[[Prototype]]` is mutated, every object along its `[[Prototype]]` chain must also have its shape changed.
 
-    ```js
+    ````js
         var obj1 = {};
         var obj2 = Object.create(obj1);
         var obj3 = Object.create(obj2);
@@ -88,12 +94,13 @@ Predictable property accesses _usually_ find the property a constant number of h
         // Objects whose shapes would change: obj3, obj2, obj1, Object.prototype
         obj3.__proto__ = {};
         ```
+    ````
 
 - The shape of the object initially accessed can be checked.
 
   - : Every object that might inherit through a changed-`[[Prototype]]` object must change, reflecting the `[[Prototype]]` mutation having happened
 
-    ```js
+    ````js
         var obj1 = {};
         var obj2 = Object.create(obj1);
         var obj3 = Object.create(obj2);
@@ -101,6 +108,7 @@ Predictable property accesses _usually_ find the property a constant number of h
         // Objects whose shapes would change: obj1, obj2, obj3
         obj1.__proto__ = {};
         ```
+    ````
 
 ## Pernicious effects of `[[Prototype]]` mutation
 
@@ -119,14 +127,14 @@ var obj = {};
 obj.__proto__ = { x: 3 }; // gratuitous mutation
 
 var arr = [obj];
-for (var i = 0; i < 5; i++)
-  arr.push({ x: i });
+for (var i = 0; i < 5; i++) arr.push({ x: i });
 
 function f(v, i) {
   var elt = v[i];
-  var r =  elt.x > 2 // pessimized
-           ? elt
-           : { x: elt.x + 1 };
+  var r =
+    elt.x > 2 // pessimized
+      ? elt
+      : { x: elt.x + 1 };
   return r;
 }
 var c = f(arr, 0);

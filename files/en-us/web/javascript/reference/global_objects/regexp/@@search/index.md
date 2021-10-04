@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.RegExp.@@search
 ---
+
 {{JSRef}}
 
 The **`[@@search]()`** method executes a search for a match
@@ -21,7 +22,7 @@ between a `this` regular expression and a string.
 ## Syntax
 
 ```js
-regexp[Symbol.search](str)
+regexp[Symbol.search](str);
 ```
 
 ### Parameters
@@ -41,9 +42,9 @@ This method is called internally in {{jsxref("String.prototype.search()")}}. For
 example, the following two examples return the same result.
 
 ```js
-'abc'.search(/a/);
+"abc".search(/a/);
 
-/a/[Symbol.search]('abc');
+/a/[Symbol.search]("abc");
 ```
 
 This method exists for customizing the search behavior in `RegExp`
@@ -59,9 +60,9 @@ different arguments order.
 
 ```js
 var re = /-/g;
-var str = '2016-01-02';
+var str = "2016-01-02";
 var result = re[Symbol.search](str);
-console.log(result);  // 4
+console.log(result); // 4
 ```
 
 ### Using @@search in subclasses
@@ -72,7 +73,7 @@ modify the behavior.
 ```js
 class MyRegExp extends RegExp {
   constructor(str) {
-    super(str)
+    super(str);
     this.pattern = str;
   }
   [Symbol.search](str) {
@@ -80,8 +81,8 @@ class MyRegExp extends RegExp {
   }
 }
 
-var re = new MyRegExp('a+b');
-var str = 'ab a+b';
+var re = new MyRegExp("a+b");
+var str = "ab a+b";
 var result = str.search(re); // String.prototype.search calls re[@@search].
 console.log(result); // 3
 ```

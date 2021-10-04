@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.TypedArray.@@species
 ---
+
 {{JSRef}}
 
 The **`TypedArray[@@species]`** accessor property returns the constructor of a [typed array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects).
@@ -24,8 +25,8 @@ The `species` accessor property returns the default constructor for [typed array
 The `species` property returns the default constructor function, which is one of the typed array constructors for a given [typed array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) object:
 
 ```js
-Int8Array[Symbol.species];    // function Int8Array()
-Uint8Array[Symbol.species];   // function Uint8Array()
+Int8Array[Symbol.species]; // function Int8Array()
+Uint8Array[Symbol.species]; // function Uint8Array()
 Float32Array[Symbol.species]; // function Float32Array()
 ```
 
@@ -36,7 +37,9 @@ In a derived collection object (e.g. your custom typed array `MyTypedArray`), th
 ```js
 class MyTypedArray extends Uint8Array {
   // Overwrite MyTypedArray species to the parent Uint8Array constructor
-  static get [Symbol.species]() { return Uint8Array; }
+  static get [Symbol.species]() {
+    return Uint8Array;
+  }
 }
 ```
 

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getUTCMilliseconds
 ---
+
 {{JSRef}}
 
 The **`getUTCMilliseconds()`** method returns the milliseconds
@@ -19,7 +20,7 @@ portion of the time object's value.
 ## Syntax
 
 ```js
-getUTCMilliseconds()
+getUTCMilliseconds();
 ```
 
 ### Return value

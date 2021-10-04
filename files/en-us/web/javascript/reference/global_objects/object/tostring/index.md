@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the
@@ -19,7 +20,7 @@ object.
 ## Syntax
 
 ```js
-toString()
+toString();
 ```
 
 ### Return value
@@ -102,7 +103,7 @@ function Dog(name, breed, color, sex) {
   this.sex = sex;
 }
 
-theDog = new Dog('Gabby', 'Lab', 'chocolate', 'female');
+theDog = new Dog("Gabby", "Lab", "chocolate", "female");
 ```
 
 If you call the `toString()` method on this custom object, it returns the
@@ -119,9 +120,17 @@ object, in the form "`property = value;`".
 
 ```js
 Dog.prototype.toString = function dogToString() {
-  const ret = 'Dog ' + this.name + ' is a ' + this.sex + ' ' + this.color + ' ' + this.breed;
+  const ret =
+    "Dog " +
+    this.name +
+    " is a " +
+    this.sex +
+    " " +
+    this.color +
+    " " +
+    this.breed;
   return ret;
-}
+};
 ```
 
 Or, using {{jsxref("Template_literals", "template strings", "", 1)}}:
@@ -129,7 +138,7 @@ Or, using {{jsxref("Template_literals", "template strings", "", 1)}}:
 ```js
 Dog.prototype.toString = function dogToString() {
   return `Dog ${this.name} is a ${this.sex} ${this.color} ${this.breed}`;
-}
+};
 ```
 
 With the preceding code in place, any time `toString()` is used in a `Dog`
@@ -137,7 +146,7 @@ context, JavaScript automatically calls the `dogToString()` function, which
 returns the following string:
 
 ```js
-"Dog Gabby is a female chocolate Lab"
+"Dog Gabby is a female chocolate Lab";
 ```
 
 ### Using toString() to detect object class
@@ -153,13 +162,13 @@ it, passing the object you want to inspect as the first parameter (called
 ```js
 const toString = Object.prototype.toString;
 
-toString.call(new Date);    // [object Date]
-toString.call(new String);  // [object String]
-toString.call(Math);        // [object Math]
+toString.call(new Date()); // [object Date]
+toString.call(new String()); // [object String]
+toString.call(Math); // [object Math]
 
 // Since JavaScript 1.8.5
-toString.call(undefined);   // [object Undefined]
-toString.call(null);        // [object Null]
+toString.call(undefined); // [object Undefined]
+toString.call(null); // [object Null]
 ```
 
 Using `toString()` in this way is unreliable; objects can change the
@@ -168,12 +177,12 @@ behavior of `Object.prototype.toString()` by defining a
 
 ```js
 const myDate = new Date();
-Object.prototype.toString.call(myDate);     // [object Date]
+Object.prototype.toString.call(myDate); // [object Date]
 
-myDate[Symbol.toStringTag] = 'myDate';
-Object.prototype.toString.call(myDate);     // [object myDate]
+myDate[Symbol.toStringTag] = "myDate";
+Object.prototype.toString.call(myDate); // [object myDate]
 
-Date.prototype[Symbol.toStringTag] = 'prototype polluted';
+Date.prototype[Symbol.toStringTag] = "prototype polluted";
 Object.prototype.toString.call(new Date()); // [object prototype polluted]
 ```
 

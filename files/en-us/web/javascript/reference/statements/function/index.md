@@ -8,6 +8,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.function
 ---
+
 {{jsSidebar("Statements")}}
 
 The **function declaration** (function statement) defines a function with
@@ -56,9 +57,13 @@ conditional function creation, use function expressions instead.
 
 ```js
 var hoisted = "foo" in this;
-console.log(`'foo' name ${hoisted ? "is" : "is not"} hoisted. typeof foo is ${typeof foo}`);
+console.log(
+  `'foo' name ${hoisted ? "is" : "is not"} hoisted. typeof foo is ${typeof foo}`
+);
 if (false) {
-  function foo(){ return 1; }
+  function foo() {
+    return 1;
+  }
 }
 
 // In Chrome:
@@ -78,9 +83,13 @@ The results are exactly the same for a condition that evaluates to true
 
 ```js
 var hoisted = "foo" in this;
-console.log(`'foo' name ${hoisted ? "is" : "is not"} hoisted. typeof foo is ${typeof foo}`);
+console.log(
+  `'foo' name ${hoisted ? "is" : "is not"} hoisted. typeof foo is ${typeof foo}`
+);
 if (true) {
-  function foo(){ return 1; }
+  function foo() {
+    return 1;
+  }
 }
 
 // In Chrome:
@@ -105,7 +114,7 @@ global scope. You can use the function before you declared it:
 hoisted(); // logs "foo"
 
 function hoisted() {
-  console.log('foo');
+  console.log("foo");
 }
 ```
 
@@ -115,8 +124,8 @@ hoisted:
 ```js
 notHoisted(); // TypeError: notHoisted is not a function
 
-var notHoisted = function() {
-   console.log('bar');
+var notHoisted = function () {
+  console.log("bar");
 };
 ```
 
@@ -130,7 +139,7 @@ given the number of units sold of products `a`, `b`, and
 
 ```js
 function calc_sales(units_a, units_b, units_c) {
-   return units_a * 79 + units_b * 129 + units_c * 699;
+  return units_a * 79 + units_b * 129 + units_c * 699;
 }
 ```
 

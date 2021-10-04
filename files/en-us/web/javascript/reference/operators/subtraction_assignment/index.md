@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.subtraction_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The subtraction assignment operator (`-=`) subtracts the value of the right
@@ -19,7 +20,7 @@ operand from a variable and assigns the result to the variable.
 ## Syntax
 
 ```js
-x -= y // x = x - y
+x -= y; // x = x - y
 ```
 
 ## Examples
@@ -30,8 +31,8 @@ x -= y // x = x - y
 // Assuming the following variable
 //  bar = 5
 
-bar -= 2     // 3
-bar -= 'foo' // NaN
+bar -= 2; // 3
+bar -= "foo"; // NaN
 ```
 
 ## Specifications

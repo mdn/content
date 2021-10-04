@@ -12,6 +12,7 @@ tags:
   - exports
 browser-compat: javascript.builtins.WebAssembly.Module.exports
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.Module.exports()`** function returns an
@@ -21,7 +22,7 @@ array containing descriptions of all the declared exports of the given
 ## Syntax
 
 ```js
-WebAssembly.Module.exports(module)
+WebAssembly.Module.exports(module);
 ```
 
 ### Parameters
@@ -50,9 +51,8 @@ it live](https://mdn.github.io/webassembly-examples/js-api-examples/index-compil
 ```js
 var worker = new Worker("wasm_worker.js");
 
-WebAssembly.compileStreaming(fetch('simple.wasm'))
-.then(mod =>
-  worker.postMessage(mod)
+WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) =>
+  worker.postMessage(mod)
 );
 ```
 
@@ -67,17 +67,17 @@ available exports on a module using `WebAssembly.Module.exports`.
 ```js
 var importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-onmessage = function(e) {
-  console.log('module received from main thread');
+onmessage = function (e) {
+  console.log("module received from main thread");
   var mod = e.data;
 
-  WebAssembly.instantiate(mod, importObject).then(function(instance) {
+  WebAssembly.instantiate(mod, importObject).then(function (instance) {
     instance.exports.exported_func();
   });
 

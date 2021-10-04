@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.findIndex
 ---
+
 {{JSRef}}
 
 The **`findIndex()`** method returns
@@ -96,7 +97,7 @@ it will be used as the `this` inside each invocation of the
 used.
 
 The range of elements processed by `findIndex()` is set before the first
-invocation of `callbackFn`. Elements which are assigned to indexes already visited, or to indexes 
+invocation of `callbackFn`. Elements which are assigned to indexes already visited, or to indexes
 outside the range, will not be visited by `callbackFn`. `callbackFn` will
 not process the elements appended to the array after the call to
 `findIndex()` begins. If an existing, unvisited element of the array is
@@ -134,7 +135,7 @@ The following example finds the index of a fruit using an arrow function:
 ```js
 const fruits = ["apple", "banana", "cantaloupe", "blueberries", "grapefruit"];
 
-const index = fruits.findIndex(fruit => fruit === "blueberries");
+const index = fruits.findIndex((fruit) => fruit === "blueberries");
 
 console.log(index); // 3
 console.log(fruits[index]); // blueberries

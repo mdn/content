@@ -6,6 +6,7 @@ tags:
   - Guide
   - JavaScript
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 It’s common to want to make fields or methods private, but JavaScript has lacked such a feature since its inception. Conventions have arisen — such as prefixing fields and methods that should be treated as private with an underscore, like `_hidden` — but these are merely conventions. The underscored features are still fully public.
@@ -21,9 +22,9 @@ class PublicCounter {
   constructor(start = 0) {
     let _count = start;
     let _init = start;
-    this.increase = (x = 1) => _count += x;
-    this.decrease = (x = 1) => _count -= x;
-    this.reset = (x = _init) => _count = x;
+    this.increase = (x = 1) => (_count += x);
+    this.decrease = (x = 1) => (_count -= x);
+    this.reset = (x = _init) => (_count = x);
     this.getCount = () => _count;
   }
   get current() {
@@ -44,20 +45,26 @@ class PrivateCounter {
     this.#init = start;
     this.reset(start);
   }
-  increase(x = 1) { this.#count += x; }
-  decrease(x = 1) { this.#count -= x; }
-  reset(x = this.#init) { this.#count = x; }
+  increase(x = 1) {
+    this.#count += x;
+  }
+  decrease(x = 1) {
+    this.#count -= x;
+  }
+  reset(x = this.#init) {
+    this.#count = x;
+  }
   get current() {
-     return this.#count;
+    return this.#count;
   }
 }
 
 let total = new PrivateCounter(7);
-console.log(total.current);  // expected output: 7
-total.increase();            // #count now = 8
-total.increase(5);           // #count now = 13
-console.log(total.current);  // expected output: 13
-total.reset();               // #count now = 7
+console.log(total.current); // expected output: 7
+total.increase(); // #count now = 8
+total.increase(5); // #count now = 13
+console.log(total.current); // expected output: 13
+total.reset(); // #count now = 7
 ```
 
 The "ash mark" (`#`) is what marks a field as being private. It also prevents private fields and property names from ever being in conflict: private names **must** start with `#`, whereas property names can **never** start that way.
@@ -70,10 +77,10 @@ It's also the case that you **cannot** read a private value directly from code o
 let score = new PrivateCounter(); // #count and #init are now both 0
 score.increase(100);
 console.log(score.current);
-  // output: 100
+// output: 100
 console.log(score.#count);
-  // output:
-  // "Uncaught SyntaxError: Private field '#count' must be declared in an enclosing class"
+// output:
+// "Uncaught SyntaxError: Private field '#count' must be declared in an enclosing class"
 ```
 
 If you wish to read private data from outside a class, you must first invent a method or other function to return it. We had already done that with the `current()` getter that returns the current value of `#count`, but `#init` is locked away. Unless we add something like a `getInit()` method to the class, we can't even see the initial value from outside the class, let alone alter it, and the compiler will throw errors if we try.
@@ -106,9 +113,9 @@ There is another limitation: you can't declare private fields or methods via [ob
 
 ```js
 var planet = {
-  name: 'Terra',
+  name: "Terra",
   radiusKm: 6371,
-  radiusMiles: 3959
+  radiusMiles: 3959,
 };
 ```
 
@@ -155,11 +162,11 @@ class CustomClick extends HTMLElement {
     this.#handleClicked();
   }
   connectedCallback() {
-    this.addEventListener('click', this.#handleClicked)
+    this.addEventListener("click", this.#handleClicked);
   }
 }
 
-customElements.define('chci-interactive', CustomClick);
+customElements.define("chci-interactive", CustomClick);
 ```
 
 This can also be done for getters and setters, which is useful in any situation where you want to only get or set things from within the same class. As with fields and methods, prefix the name of the getter/setter with `#`.
@@ -202,7 +209,7 @@ class Scalar {
   constructor(value) {
     this.#total = value || this.#total;
   }
-  
+
   add(s) {
     // check the passed object defines #length
     if (!(#total in s)) {
@@ -213,8 +220,8 @@ class Scalar {
 }
 
 let scalar1 = new Scalar(1);
-scalar1.add(scalar1)
-scalar1.add({}) // throws informative exception
+scalar1.add(scalar1);
+scalar1.add({}); // throws informative exception
 ```
 
 ## See also

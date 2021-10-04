@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.globalThis
 ---
+
 {{jsSidebar("Objects")}}
 
 The global **`globalThis`** property contains the global `this` value, which is akin to the [global object](/en-US/docs/Glossary/Global_object).
@@ -42,15 +43,21 @@ Prior to `globalThis`, the only reliable cross-platform way to get the global ob
 
 ```js
 var getGlobal = function () {
-  if (typeof self !== 'undefined') { return self; }
-  if (typeof window !== 'undefined') { return window; }
-  if (typeof global !== 'undefined') { return global; }
-  throw new Error('unable to locate global object');
+  if (typeof self !== "undefined") {
+    return self;
+  }
+  if (typeof window !== "undefined") {
+    return window;
+  }
+  if (typeof global !== "undefined") {
+    return global;
+  }
+  throw new Error("unable to locate global object");
 };
 
 var globals = getGlobal();
 
-if (typeof globals.setTimeout !== 'function') {
+if (typeof globals.setTimeout !== "function") {
   // no setTimeout in this environment!
 }
 ```
@@ -58,7 +65,7 @@ if (typeof globals.setTimeout !== 'function') {
 With `globalThis` available, the additional search for the global across environments is not necessary anymore:
 
 ```js
-if (typeof globalThis.setTimeout !== 'function') {
+if (typeof globalThis.setTimeout !== "function") {
   // no setTimeout in this environment!
 }
 ```

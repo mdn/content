@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the
@@ -19,7 +20,7 @@ specified {{jsxref("Date")}} object.
 ## Syntax
 
 ```js
-toString()
+toString();
 ```
 
 ### Return value
@@ -91,7 +92,7 @@ to `myVar`:
 ```js
 var x = new Date();
 var myVar = x.toString(); // assigns a string value to myVar in the same format as:
-                          // Mon Sep 08 1998 14:36:22 GMT-0700 (PDT)
+// Mon Sep 08 1998 14:36:22 GMT-0700 (PDT)
 ```
 
 ## Specifications

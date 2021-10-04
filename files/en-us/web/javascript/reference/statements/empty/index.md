@@ -7,6 +7,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.empty
 ---
+
 {{jsSidebar("Statements")}}
 
 An **empty statement** is used to provide no statement, although the
@@ -17,7 +18,7 @@ JavaScript syntax would expect one.
 ## Syntax
 
 ```js
-;
+
 ```
 
 ## Description
@@ -40,7 +41,7 @@ with an empty loop body:
 let arr = [1, 2, 3];
 
 // Assign all array values to 0
-for (let i = 0; i < arr.length; arr[i++] = 0) /* empty statement */ ;
+for (let i = 0; i < arr.length; arr[i++] = 0 /* empty statement */);
 
 console.log(arr);
 // [0, 0, 0]
@@ -54,8 +55,8 @@ not really obvious to distinguish from a normal semicolon.
 In the following example, the usage is probably not intentional:
 
 ```js example-bad
-if (condition);       // Caution, this "if" does nothing!
-   killTheUniverse()  // So this always gets executed!!!
+if (condition); // Caution, this "if" does nothing!
+killTheUniverse(); // So this always gets executed!!!
 ```
 
 In the next example, an {{jsxref("Statements/if...else", "if...else")}} statement
@@ -66,16 +67,13 @@ not matter, and also the `launchRocket()` function in the `else`
 case will not be executed.
 
 ```js example-bad
-if (one)
-  doOne();
-else if (two)
-  doTwo();
-else if (three)
-  ; // nothing here
+if (one) doOne();
+else if (two) doTwo();
+else if (three);
 else if (four)
+  // nothing here
   doFour();
-else
-  launchRocket();
+else launchRocket();
 ```
 
 ## Specifications

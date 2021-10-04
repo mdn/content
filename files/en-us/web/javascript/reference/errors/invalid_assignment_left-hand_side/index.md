@@ -1,5 +1,5 @@
 ---
-title: 'ReferenceError: invalid assignment left-hand side'
+title: "ReferenceError: invalid assignment left-hand side"
 slug: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
 tags:
   - Error
@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - ReferenceError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "invalid assignment left-hand side" occurs when there was an
@@ -51,12 +52,10 @@ the string concatenation, the plus ("+") operator is needed.
 
 ```js example-good
 if (Math.PI == 3 || Math.PI == 4) {
-  console.log('no way!');
+  console.log("no way!");
 }
 
-var str = 'Hello, '
-+ 'from the '
-+ 'other side!';
+var str = "Hello, " + "from the " + "other side!";
 ```
 
 ## See also

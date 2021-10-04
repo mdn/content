@@ -8,6 +8,7 @@ tags:
   - Symbol
 browser-compat: javascript.builtins.Symbol.unscopables
 ---
+
 {{JSRef}}
 
 The **`Symbol.unscopables`** well-known symbol is used to specify an object value of whose own and inherited property names are excluded from the [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) environment bindings of the associated object.
@@ -32,7 +33,7 @@ The following code works fine in ES5 and below. However, in ECMAScript 2015 and
 var keys = [];
 
 with (Array.prototype) {
-  keys.push('something');
+  keys.push("something");
 }
 
 Object.keys(Array.prototype[Symbol.unscopables]);
@@ -47,12 +48,12 @@ You can also set `unscopables` for your own objects.
 ```js
 var obj = {
   foo: 1,
-  bar: 2
+  bar: 2,
 };
 
 obj[Symbol.unscopables] = {
   foo: false,
-  bar: true
+  bar: true,
 };
 
 with (obj) {

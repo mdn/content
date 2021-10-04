@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.setUint32
 ---
+
 {{JSRef}}
 
 The **`setUint32()`** method stores an unsigned 32-bit integer
@@ -20,8 +21,8 @@ The **`setUint32()`** method stores an unsigned 32-bit integer
 ## Syntax
 
 ```js
-setUint32(byteOffset, value)
-setUint32(byteOffset, value, littleEndian)
+setUint32(byteOffset, value);
+setUint32(byteOffset, value, littleEndian);
 ```
 
 ### Parameters

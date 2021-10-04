@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.bitwise_or_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The bitwise OR assignment operator (`|=`) uses the binary representation of
@@ -20,7 +21,7 @@ variable.
 ## Syntax
 
 ```js
-x |= y // x = x | y
+x |= y; // x = x | y
 ```
 
 ## Examples

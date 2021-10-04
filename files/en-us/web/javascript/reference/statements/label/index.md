@@ -7,6 +7,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.label
 ---
+
 {{jsSidebar("Statements")}}
 
 The **labeled statement** can be used with {{jsxref("Statements/break",
@@ -18,8 +19,7 @@ a statement with an identifier which you can refer to.
 ## Syntax
 
 ```js
-label :
-  statement
+label: statement;
 ```
 
 - `label`
@@ -48,15 +48,15 @@ can't use "`let`" as a label name. It will throw a {{jsxref("SyntaxError")}}
 ```js
 let i, j;
 
-loop1:
-for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
-   loop2:
-   for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
-      if (i === 1 && j === 1) {
-         continue loop1;
-      }
-      console.log('i = ' + i + ', j = ' + j);
-   }
+loop1: for (i = 0; i < 3; i++) {
+  //The first for statement is labeled "loop1"
+  loop2: for (j = 0; j < 3; j++) {
+    //The second for statement is labeled "loop2"
+    if (i === 1 && j === 1) {
+      continue loop1;
+    }
+    console.log("i = " + i + ", j = " + j);
+  }
 }
 
 // Output is:
@@ -79,8 +79,7 @@ that passes all the tests.
 let itemsPassed = 0;
 let i, j;
 
-top:
-for (i = 0; i < items.length; i++) {
+top: for (i = 0; i < items.length; i++) {
   for (j = 0; j < tests.length; j++) {
     if (!tests[j].pass(items[i])) {
       continue top;
@@ -96,15 +95,15 @@ for (i = 0; i < items.length; i++) {
 ```js
 let i, j;
 
-loop1:
-for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
-   loop2:
-   for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
-      if (i === 1 && j === 1) {
-         break loop1;
-      }
-      console.log('i = ' + i + ', j = ' + j);
-   }
+loop1: for (i = 0; i < 3; i++) {
+  //The first for statement is labeled "loop1"
+  loop2: for (j = 0; j < 3; j++) {
+    //The second for statement is labeled "loop2"
+    if (i === 1 && j === 1) {
+      break loop1;
+    }
+    console.log("i = " + i + ", j = " + j);
+  }
 }
 
 // Output is:
@@ -124,8 +123,7 @@ items pass all tests.
 let allPass = true;
 let i, j;
 
-top:
-for (i = 0; i < items.length; i++) {
+top: for (i = 0; i < items.length; i++) {
   for (j = 0; j < tests.length; j++) {
     if (!tests[j].pass(items[i])) {
       allPass = false;
@@ -142,16 +140,16 @@ make use of non-loop labels.
 
 ```js
 foo: {
-  console.log('face');
+  console.log("face");
   break foo;
-  console.log('this will not be executed');
+  console.log("this will not be executed");
 }
-console.log('swap');
+console.log("swap");
 
 // this will log:
 
 // "face"
-// "swap" 
+// "swap"
 ```
 
 ### Labeled function declarations

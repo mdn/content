@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.UTC
 ---
+
 {{JSRef}}
 
 The **`Date.UTC()`** method accepts parameters similar to the
@@ -19,13 +20,13 @@ milliseconds since January 1, 1970, 00:00:00 UTC.
 ## Syntax
 
 ```js
-Date.UTC(year)
-Date.UTC(year, month)
-Date.UTC(year, month, day)
-Date.UTC(year, month, day, hour)
-Date.UTC(year, month, day, hour, minute)
-Date.UTC(year, month, day, hour, minute, second)
-Date.UTC(year, month, day, hour, minute, second, millisecond)
+Date.UTC(year);
+Date.UTC(year, month);
+Date.UTC(year, month, day);
+Date.UTC(year, month, day, hour);
+Date.UTC(year, month, day, hour, minute);
+Date.UTC(year, month, day, hour, minute, second);
+Date.UTC(year, month, day, hour, minute, second, millisecond);
 ```
 
 - `year`

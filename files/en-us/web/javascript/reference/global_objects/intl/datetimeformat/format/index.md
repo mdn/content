@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DateTimeFormat.format
 ---
+
 {{JSRef}}
 
 The **`Intl.DateTimeFormat.prototype.format()`** method formats
@@ -26,7 +27,7 @@ a date according to the locale and formatting options of this
 ## Syntax
 
 ```js
-format(date)
+format(date);
 ```
 
 ### Parameters
@@ -47,8 +48,13 @@ Use the `format` getter function for formatting a single date, here for
 Serbia:
 
 ```js
-var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-var dateTimeFormat = new Intl.DateTimeFormat('sr-RS', options);
+var options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+var dateTimeFormat = new Intl.DateTimeFormat("sr-RS", options);
 console.log(dateTimeFormat.format(new Date()));
 // → "недеља, 7. април 2013."
 ```
@@ -62,10 +68,10 @@ from which it was obtained, so it can be passed directly to
 
 ```js
 var a = [new Date(2012, 08), new Date(2012, 11), new Date(2012, 03)];
-var options = { year: 'numeric', month: 'long' };
-var dateTimeFormat = new Intl.DateTimeFormat('pt-BR', options);
+var options = { year: "numeric", month: "long" };
+var dateTimeFormat = new Intl.DateTimeFormat("pt-BR", options);
 var formatted = a.map(dateTimeFormat.format);
-console.log(formatted.join('; '));
+console.log(formatted.join("; "));
 // → "setembro de 2012; dezembro de 2012; abril de 2012"
 ```
 
@@ -83,12 +89,12 @@ For this reason you cannot expect to be able to compare the results of
 ```js example-bad
 let d = new Date("2019-01-01T00:00:00.000000Z");
 let formattedDate = Intl.DateTimeFormat(undefined, {
-  year: 'numeric',
-  month: 'numeric',
-  day: 'numeric',
-  hour: 'numeric',
-  minute: 'numeric',
-  second: 'numeric'
+  year: "numeric",
+  month: "numeric",
+  day: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
 }).format(d);
 
 "1.1.2019, 01:00:00" === formattedDate;

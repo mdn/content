@@ -8,6 +8,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.getOwnPropertyDescriptors
 ---
+
 {{JSRef}}
 
 The **`Object.getOwnPropertyDescriptors()`** method returns all
@@ -18,7 +19,7 @@ own property descriptors of a given object.
 ## Syntax
 
 ```js
-Object.getOwnPropertyDescriptors(obj)
+Object.getOwnPropertyDescriptors(obj);
 ```
 
 ### Parameters
@@ -87,12 +88,9 @@ superclass.prototype = {
   // Define the superclass constructor, methods, and properties here
 };
 function subclass() {}
-subclass.prototype = Object.create(
-  superclass.prototype,
-  {
-    // Define the subclass constructor, methods, and properties here
-  }
-);
+subclass.prototype = Object.create(superclass.prototype, {
+  // Define the subclass constructor, methods, and properties here
+});
 ```
 
 ## Specifications

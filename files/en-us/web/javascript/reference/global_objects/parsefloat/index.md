@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.parseFloat
 ---
+
 {{jsSidebar("Objects")}}
 
 The **`parseFloat()`** function parses
@@ -18,7 +19,7 @@ point number.
 ## Syntax
 
 ```js
-parseFloat(string)
+parseFloat(string);
 ```
 
 ### Parameters
@@ -52,7 +53,7 @@ number.
   the above characters), `parseFloat` returns {{jsxref("NaN")}}.
 - `parseFloat` can also parse and return {{jsxref("Infinity")}}.
 - `parseFloat` converts {{jsxref("BigInt")}} syntax to {{jsxref("Number",
-		"Numbers")}}, losing precision. This happens because the trailing `n`
+  	"Numbers")}}, losing precision. This happens because the trailing `n`
   character is discarded.
 
 Consider {{jsxref("Number", "Number(value)")}} for stricter parsing, which converts to
@@ -71,12 +72,16 @@ The following examples all return `3.14`:
 
 ```js
 parseFloat(3.14);
-parseFloat('3.14');
-parseFloat('  3.14  ');
-parseFloat('314e-2');
-parseFloat('0.0314E+2');
-parseFloat('3.14some non-digit characters');
-parseFloat({ toString: function() { return "3.14" } });
+parseFloat("3.14");
+parseFloat("  3.14  ");
+parseFloat("314e-2");
+parseFloat("0.0314E+2");
+parseFloat("3.14some non-digit characters");
+parseFloat({
+  toString: function () {
+    return "3.14";
+  },
+});
 ```
 
 ### `parseFloat` returning `NaN`
@@ -84,7 +89,7 @@ parseFloat({ toString: function() { return "3.14" } });
 The following example returns `NaN`:
 
 ```js
-parseFloat('FF2');
+parseFloat("FF2");
 ```
 
 ### `parseFloat` and `BigInt`
@@ -94,7 +99,7 @@ the integer is too large to be represented as a float:
 
 ```js
 parseFloat(900719925474099267n);
-parseFloat('900719925474099267n');
+parseFloat("900719925474099267n");
 ```
 
 ## Specifications

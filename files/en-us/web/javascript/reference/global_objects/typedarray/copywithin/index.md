@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.copyWithin
 ---
+
 {{JSRef}}
 
 The **`copyWithin()`** method copies the sequence of array
@@ -26,8 +27,8 @@ array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Type
 ## Syntax
 
 ```js
-copyWithin(target, start)
-copyWithin(target, start, end)
+copyWithin(target, start);
+copyWithin(target, start, end);
 ```
 
 ### Parameters
@@ -54,9 +55,9 @@ See {{jsxref("Array.prototype.copyWithin")}} for more details.
 ```js
 var buffer = new ArrayBuffer(8);
 var uint8 = new Uint8Array(buffer);
-uint8.set([1,2,3]);
+uint8.set([1, 2, 3]);
 console.log(uint8); // Uint8Array [ 1, 2, 3, 0, 0, 0, 0, 0 ]
-uint8.copyWithin(3,0,3);
+uint8.copyWithin(3, 0, 3);
 console.log(uint8); // Uint8Array [ 1, 2, 3, 1, 2, 3, 0, 0 ]
 ```
 

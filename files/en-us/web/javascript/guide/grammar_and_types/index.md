@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - l10n:priority
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 This chapter discusses JavaScript's basic grammar, variable declarations, data types and literals.
@@ -17,7 +18,7 @@ JavaScript borrows most of its syntax from Java, C, and C++, but it has also bee
 JavaScript is **case-sensitive** and uses the **Unicode** character set. For example, the word Früh (which means "early" in German) could be used as a variable name.
 
 ```js
-let Früh = "foobar"
+let Früh = "foobar";
 ```
 
 But, the variable `früh` is not the same as `Früh` because JavaScript is case sensitive.
@@ -94,19 +95,19 @@ An attempt to access an undeclared variable results in a {{jsxref("ReferenceErro
 
 ```js
 var a;
-console.log('The value of a is ' + a); // The value of a is undefined
+console.log("The value of a is " + a); // The value of a is undefined
 
-console.log('The value of b is ' + b); // The value of b is undefined
+console.log("The value of b is " + b); // The value of b is undefined
 var b;
 // This one may puzzle you until you read 'Variable hoisting' below
 
-console.log('The value of c is ' + c); // Uncaught ReferenceError: c is not defined
+console.log("The value of c is " + c); // Uncaught ReferenceError: c is not defined
 
 let x;
-console.log('The value of x is ' + x); // The value of x is undefined
+console.log("The value of x is " + x); // The value of x is undefined
 
-console.log('The value of y is ' + y); // Uncaught ReferenceError: y is not defined
-let y; 
+console.log("The value of y is " + y); // Uncaught ReferenceError: y is not defined
+let y;
 ```
 
 You can use `undefined` to determine whether a variable has a value. In the following code, the variable `input` is not assigned a value, and the [`if`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement evaluates to `true`.
@@ -131,7 +132,7 @@ The `undefined` value converts to `NaN` when used in numeric context.
 
 ```js
 var a;
-a + 2;  // Evaluates to NaN
+a + 2; // Evaluates to NaN
 ```
 
 When you evaluate a {{jsxref("null")}} variable, the null value behaves as `0` in numeric contexts and as `false` in boolean contexts. For example:
@@ -153,7 +154,7 @@ For example, the following code will log `5`, because the scope of `x` is the gl
 if (true) {
   var x = 5;
 }
-console.log(x);  // x is 5
+console.log(x); // x is 5
 ```
 
 This behavior changes when using the `let` declaration (introduced in ECMAScript 2015).
@@ -162,7 +163,7 @@ This behavior changes when using the `let` declaration (introduced in ECMAScript
 if (true) {
   let y = 5;
 }
-console.log(y);  // ReferenceError: y is not defined
+console.log(y); // ReferenceError: y is not defined
 ```
 
 ### Variable hoisting
@@ -182,11 +183,11 @@ var x = 3;
  * Example 2
  */
 // will return a value of undefined
-var myvar = 'my value';
+var myvar = "my value";
 
-(function() {
+(function () {
   console.log(myvar); // undefined
-  var myvar = 'local value';
+  var myvar = "local value";
 })();
 ```
 
@@ -203,12 +204,12 @@ x = 3;
 /**
  * Example 2
  */
-var myvar = 'my value';
+var myvar = "my value";
 
-(function() {
+(function () {
   var myvar;
   console.log(myvar); // undefined
-  myvar = 'local value';
+  myvar = "local value";
 })();
 ```
 
@@ -231,15 +232,15 @@ In the case of functions, only function _declarations_ are hoisted—but _not_ t
 foo(); // "bar"
 
 function foo() {
-  console.log('bar');
+  console.log("bar");
 }
 
 /* Function expression */
 
 baz(); // TypeError: baz is not a function
 
-var baz = function() {
-  console.log('bar2');
+var baz = function () {
+  console.log("bar2");
 };
 ```
 
@@ -269,7 +270,7 @@ You cannot declare a constant with the same name as a function or variable in th
 
 ```js
 // THIS WILL CAUSE AN ERROR
-function f() {};
+function f() {}
 const f = 5;
 
 // THIS WILL CAUSE AN ERROR TOO
@@ -284,15 +285,15 @@ function f() {
 However, the properties of objects assigned to constants are not protected, so the following statement is executed without problems.
 
 ```js
-const MY_OBJECT = {'key': 'value'};
-MY_OBJECT.key = 'otherValue';
+const MY_OBJECT = { key: "value" };
+MY_OBJECT.key = "otherValue";
 ```
 
 Also, the contents of an array are not protected, so the following statement is executed without problems.
 
 ```js
-const MY_ARRAY = ['HTML','CSS'];
-MY_ARRAY.push('JAVASCRIPT');
+const MY_ARRAY = ["HTML", "CSS"];
+MY_ARRAY.push("JAVASCRIPT");
 console.log(MY_ARRAY); //logs ['HTML','CSS','JAVASCRIPT'];
 ```
 
@@ -329,7 +330,7 @@ var answer = 42;
 And later, you could assign the same variable a string value, for example:
 
 ```js
-answer = 'Thanks for all the fish...';
+answer = "Thanks for all the fish...";
 ```
 
 Because JavaScript is dynamically typed, this assignment does not cause an error message.
@@ -339,15 +340,15 @@ Because JavaScript is dynamically typed, this assignment does not cause an error
 In expressions involving numeric and string values with the `+` operator, JavaScript converts numeric values to strings. For example, consider the following statements:
 
 ```js
-x = 'The answer is ' + 42 // "The answer is 42"
-y = 42 + ' is the answer' // "42 is the answer"
+x = "The answer is " + 42; // "The answer is 42"
+y = 42 + " is the answer"; // "42 is the answer"
 ```
 
 With all other operators, JavaScript does _not_ convert numeric values to strings. For example:
 
 ```js
-'37' - 7 // 30
-'37' + 7 // "377"
+"37" - 7; // 30
+"37" + 7; // "377"
 ```
 
 ### Converting strings to numbers
@@ -362,14 +363,18 @@ In the case that a value representing a number is in memory as a string, there a
 > **Note:** Additionally, a best practice for `parseInt` is to always include the _radix_ parameter. The radix parameter is used to specify which numerical system is to be used.
 
 ```js
-parseInt('101', 2) // 5
+parseInt("101", 2); // 5
 ```
 
 An alternative method of retrieving a number from a string is with the `+` (unary plus) operator:
 
 ```js
-'1.1' + '1.1' // '1.11.1'
-(+'1.1') + (+'1.1') // 2.2
+"1.1" +
+  "1.1"(
+    // '1.11.1'
+    +"1.1"
+  ) +
+  +"1.1"; // 2.2
 // Note: the parentheses are added for clarity, not required.
 ```
 
@@ -392,7 +397,7 @@ An array literal is a list of zero or more expressions, each of which represents
 The following example creates the `coffees` array with three elements and a `length` of three:
 
 ```js
-let coffees = ['French Roast', 'Colombian', 'Kona'];
+let coffees = ["French Roast", "Colombian", "Kona"];
 ```
 
 > **Note:** An array literal is a type of _object initializer_. See [Using Object Initializers](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#using_object_initializers).
@@ -406,7 +411,7 @@ If an array is created using a literal in a top-level script, JavaScript interpr
 You do not have to specify all elements in an array literal. If you put two commas in a row, the array fills in the value `undefined` for the unspecified elements. The following example creates the `fish` array:
 
 ```js
-let fish = ['Lion', , 'Angel'];
+let fish = ["Lion", , "Angel"];
 ```
 
 This array has two elements with values and one empty element:
@@ -422,19 +427,19 @@ In the following example, the `length` of the array is three. There is no `myLis
 > **Note:** Trailing commas can create errors in older browser versions and it is a best practice to remove them.
 
 ```js
-let myList = ['home', , 'school', ];
+let myList = ["home", , "school"];
 ```
 
 In the following example, the `length` of the array is four, and `myList[0]` and `myList[2]` are missing.
 
 ```js
-let myList = [ ,'home', , 'school'];
+let myList = [, "home", , "school"];
 ```
 
 In the following example, the `length` of the array is four, and `myList[1]` and `myList[3]` are missing. **Only the last comma is ignored.**
 
 ```js
-let myList = ['home', , 'school', , ];
+let myList = ["home", , "school", ,];
 ```
 
 Understanding the behavior of extra commas is important to understanding JavaScript as a language.
@@ -505,27 +510,27 @@ An object literal is a list of zero or more pairs of property names and associat
 The following is an example of an object literal. The first element of the `car` object defines a property, `myCar`, and assigns to it a new string, "`Saturn`"; the second element, the `getCar` property, is immediately assigned the result of invoking the function `(carTypes("Honda"))`; the third element, the `special` property, uses an existing variable (`sales`).
 
 ```js
-var sales = 'Toyota';
+var sales = "Toyota";
 
 function carTypes(name) {
-  if (name === 'Honda') {
+  if (name === "Honda") {
     return name;
   } else {
     return "Sorry, we don't sell " + name + ".";
   }
 }
 
-var car = { myCar: 'Saturn', getCar: carTypes('Honda'), special: sales };
+var car = { myCar: "Saturn", getCar: carTypes("Honda"), special: sales };
 
-console.log(car.myCar);   // Saturn
-console.log(car.getCar);  // Honda
+console.log(car.myCar); // Saturn
+console.log(car.getCar); // Honda
 console.log(car.special); // Toyota
 ```
 
 Additionally, you can use a numeric or string literal for the name of a property or nest an object inside another. The following example uses these options.
 
 ```js
-var car = { manyCars: {a: 'Saab', b: 'Jeep'}, 7: 'Mazda' };
+var car = { manyCars: { a: "Saab", b: "Jeep" }, 7: "Mazda" };
 
 console.log(car.manyCars.b); // Jeep
 console.log(car[7]); // Mazda
@@ -554,17 +559,17 @@ Together, these also bring object literals and class declarations closer togethe
 
 ```js
 var obj = {
-    // __proto__
-    __proto__: theProtoObj,
-    // Shorthand for ‘handler: handler’
-    handler,
-    // Methods
-    toString() {
-     // Super calls
-     return 'd ' + super.toString();
-    },
-    // Computed (dynamic) property names
-    [ 'prop_' + (() => 42)() ]: 42
+  // __proto__
+  __proto__: theProtoObj,
+  // Shorthand for ‘handler: handler’
+  handler,
+  // Methods
+  toString() {
+    // Super calls
+    return "d " + super.toString();
+  },
+  // Computed (dynamic) property names
+  ["prop_" + (() => 42)()]: 42,
 };
 ```
 
@@ -583,11 +588,11 @@ A string literal is zero or more characters enclosed in double (`"`) or single (
 The following are examples of string literals:
 
 ```js
-'foo'
-"bar"
-'1234'
-'one line \n another line'
-"John's cat"
+"foo";
+"bar";
+"1234";
+"one line \n another line";
+"John's cat";
 ```
 
 You should use string literals unless you specifically need to use a `String` object. See {{jsxref("String")}} for details on `String` objects.
@@ -596,7 +601,7 @@ You can call any of the {{jsxref("String")}} object's methods on a string litera
 
 ```js
 // Will print the number of symbols in the string including whitespace.
-console.log("John's cat".length)  // In this case, 10.
+console.log("John's cat".length); // In this case, 10.
 ```
 
 [Template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals) are also available. Template literals are enclosed by the back-tick (`` ` ``) ([grave accent](https://en.wikipedia.org/wiki/Grave_accent)) character instead of double or single quotes.
@@ -605,24 +610,23 @@ Template literals provide syntactic sugar for constructing strings. (This is sim
 
 ```js
 // Basic literal string creation
-`In JavaScript '\n' is a line-feed.`
-
-// Multiline strings
+`In JavaScript '\n' is a line-feed.`// Multiline strings
 `In JavaScript, template strings can run
  over multiple lines, but double and single
- quoted strings cannot.`
+ quoted strings cannot.`;
 
 // String interpolation
-var name = 'Bob', time = 'today';
-`Hello ${name}, how are you ${time}?`
+var name = "Bob",
+  time = "today";
+`Hello ${name}, how are you ${time}?`;
 ```
 
 [Tagged templates](/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_template) are a compact syntax for specifying a template literal along with a call to a “tag” function for parsing it; the name of the template tag function precedes the template literal — as in the following example, where the template tag function is named "`myTag`":
 
 ```js
 let myTag = (str, name, age) => `${str[0]}${name}${str[1]}${age}${str[2]}`;
-let [name, age] = ['Mika', 28];
-myTag`Participant "${ name }" is ${ age } years old.`;
+let [name, age] = ["Mika", 28];
+myTag`Participant "${name}" is ${age} years old.`;
 // Participant "Mika" is 28 years old.
 ```
 
@@ -631,7 +635,7 @@ myTag`Participant "${ name }" is ${ age } years old.`;
 In addition to ordinary characters, you can also include special characters in strings, as shown in the following example.
 
 ```js
-'one line \n another line'
+"one line \n another line";
 ```
 
 The following table lists the special characters that you can use in JavaScript strings.
@@ -744,7 +748,7 @@ For characters not listed in the table, a preceding backslash is ignored, but th
 You can insert a quotation mark inside a string by preceding it with a backslash. This is known as _escaping_ the quotation mark. For example:
 
 ```js
-var quote = "He read \"The Cremation of Sam McGee\" by R.W. Service.";
+var quote = 'He read "The Cremation of Sam McGee" by R.W. Service.';
 console.log(quote);
 ```
 
@@ -755,37 +759,37 @@ The result of this would be:
 To include a literal backslash inside a string, you must escape the backslash character. For example, to assign the file path `c:\temp` to a string, use the following:
 
 ```js
-var home = 'c:\\temp';
+var home = "c:\\temp";
 ```
 
 You can also escape line breaks by preceding them with backslash. The backslash and line break are both removed from the value of the string.
 
 ```js
-var str = 'this string \
+var str =
+  "this string \
 is broken \
 across multiple \
-lines.'
-console.log(str);   // this string is broken across multiple lines.
+lines.";
+console.log(str); // this string is broken across multiple lines.
 ```
 
 Although JavaScript does not have "heredoc" syntax, you can get close by adding a line break escape and an escaped line break at the end of each line:
 
 ```js
 var poem =
-'Roses are red,\n\
+  "Roses are red,\n\
 Violets are blue.\n\
 Sugar is sweet,\n\
-and so is foo.'
+and so is foo.";
 ```
 
 ECMAScript 2015 introduces a new type of literal, namely [**template literals**](/en-US/docs/Web/JavaScript/Reference/Template_literals). This allows for many new features, including multiline strings!
 
 ```js
-var poem =
-`Roses are red,
+var poem = `Roses are red,
 Violets are blue.
 Sugar is sweet,
-and so is foo.` 
+and so is foo.`;
 ```
 
 ## More information

@@ -8,6 +8,7 @@ tags:
   - Syntax
   - l10n:priority
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling",
   "Web/JavaScript/Guide/Functions")}}
@@ -23,7 +24,7 @@ the idea "Go five steps to the east" could be expressed this way as a loop:
 ```js
 for (let step = 0; step < 5; step++) {
   // Runs 5 times, with values of step 0 through 4.
-  console.log('Walking east one step');
+  console.log("Walking east one step");
 }
 ```
 
@@ -56,7 +57,7 @@ A `for` statement looks as follows:
 
 ```js
 for ([initialExpression]; [conditionExpression]; [incrementExpression])
-  statement
+  statement;
 ```
 
 When a `for` loop executes, the following occurs:
@@ -87,7 +88,9 @@ element, performs the succeeding `if` statement, and increments
 ```html
 <form name="selectForm">
   <p>
-    <label for="musicTypes">Choose some music types, then click the button below:</label>
+    <label for="musicTypes"
+      >Choose some music types, then click the button below:</label
+    >
     <select id="musicTypes" name="musicTypes" multiple="multiple">
       <option selected="selected">R&B</option>
       <option>Jazz</option>
@@ -101,20 +104,22 @@ element, performs the succeeding `if` statement, and increments
 </form>
 
 <script>
-function howMany(selectObject) {
-  let numberSelected = 0;
-  for (let i = 0; i < selectObject.options.length; i++) {
-    if (selectObject.options[i].selected) {
-      numberSelected++;
+  function howMany(selectObject) {
+    let numberSelected = 0;
+    for (let i = 0; i < selectObject.options.length; i++) {
+      if (selectObject.options[i].selected) {
+        numberSelected++;
+      }
     }
+    return numberSelected;
   }
-  return numberSelected;
-}
 
-let btn = document.getElementById('btn');
-btn.addEventListener('click', function() {
-  alert('Number of options selected: ' + howMany(document.selectForm.musicTypes));
-});
+  let btn = document.getElementById("btn");
+  btn.addEventListener("click", function () {
+    alert(
+      "Number of options selected: " + howMany(document.selectForm.musicTypes)
+    );
+  });
 </script>
 ```
 
@@ -126,8 +131,7 @@ specified condition evaluates to false.
 A `do...while` statement looks as follows:
 
 ```js
-do
-  statement
+do statement;
 while (condition);
 ```
 
@@ -160,8 +164,7 @@ specified condition evaluates to `true`. A `while` statement looks
 as follows:
 
 ```js
-while (condition)
-  statement
+while (condition) statement;
 ```
 
 If the *`condition `*becomes `false`,
@@ -215,7 +218,7 @@ following `while` loop execute forever because the condition never becomes
 ```js example-bad
 // Infinite loops are bad!
 while (true) {
-  console.log('Hello, world!');
+  console.log("Hello, world!");
 }
 ```
 
@@ -229,8 +232,7 @@ to indicate whether a program should interrupt the loop or continue its executio
 The syntax of the labeled statement looks like the following:
 
 ```js
-label :
-   statement
+label: statement;
 ```
 
 The value of `label` may be any JavaScript identifier that is not a
@@ -242,9 +244,8 @@ any statement.
 In this example, the label `markLoop` identifies a `while` loop.
 
 ```js
-markLoop:
-while (theMark === true) {
-   doSomething();
+markLoop: while (theMark === true) {
+  doSomething();
 }
 ```
 
@@ -289,11 +290,11 @@ for (let i = 0; i < a.length; i++) {
 let x = 0;
 let z = 0;
 labelCancelLoops: while (true) {
-  console.log('Outer loops: ' + x);
+  console.log("Outer loops: " + x);
   x += 1;
   z = 1;
   while (true) {
-    console.log('Inner loops: ' + z);
+    console.log("Inner loops: " + z);
     z += 1;
     if (z === 10 && x === 10) {
       break labelCancelLoops;
@@ -351,7 +352,7 @@ let n = 0;
 while (i < 5) {
   i++;
   if (i === 3) {
-     // continue;
+    // continue;
   }
   n += i;
   console.log(n);
@@ -377,22 +378,20 @@ would continue at the top of the _`checkiandj`_ statement.
 ```js
 let i = 0;
 let j = 10;
-checkiandj:
-  while (i < 4) {
-    console.log(i);
-    i += 1;
-    checkj:
-      while (j > 4) {
-        console.log(j);
-        j -= 1;
-        if ((j % 2) === 0) {
-          continue checkj;
-        }
-        console.log(j + ' is odd.');
-      }
-      console.log('i = ' + i);
-      console.log('j = ' + j);
+checkiandj: while (i < 4) {
+  console.log(i);
+  i += 1;
+  checkj: while (j > 4) {
+    console.log(j);
+    j -= 1;
+    if (j % 2 === 0) {
+      continue checkj;
+    }
+    console.log(j + " is odd.");
   }
+  console.log("i = " + i);
+  console.log("j = " + j);
+}
 ```
 
 ## `for...in` statement
@@ -403,8 +402,7 @@ JavaScript executes the specified statements. A `for...in` statement looks as
 follows:
 
 ```js
-for (variable in object)
-  statement
+for (variable in object) statement;
 ```
 
 ### Example
@@ -415,11 +413,11 @@ names and their values.
 
 ```js
 function dump_props(obj, obj_name) {
-  let result = '';
+  let result = "";
   for (let i in obj) {
-    result += obj_name + '.' + i + ' = ' + obj[i] + '<br>';
+    result += obj_name + "." + i + " = " + obj[i] + "<br>";
   }
-  result += '<hr>';
+  result += "<hr>";
   return result;
 }
 ```
@@ -428,8 +426,8 @@ For an object `car` with properties `make` and
 `model`, `result` would be:
 
 ```js
-car.make = Ford
-car.model = Mustang
+car.make = Ford;
+car.model = Mustang;
 ```
 
 ### Arrays
@@ -452,8 +450,7 @@ over [iterable objects](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols
 iteration hook with statements to be executed for the value of each distinct property.
 
 ```js
-for (variable of object)
-  statement
+for (variable of object) statement;
 ```
 
 The following example shows the difference between a `for...of` loop and a
@@ -462,14 +459,14 @@ over property names, `for...of` iterates over property values:
 
 ```js
 const arr = [3, 5, 7];
-arr.foo = 'hello';
+arr.foo = "hello";
 
 for (let i in arr) {
-   console.log(i); // logs "0", "1", "2", "foo"
+  console.log(i); // logs "0", "1", "2", "foo"
 }
 
 for (let i of arr) {
-   console.log(i); // logs 3, 5, 7
+  console.log(i); // logs 3, 5, 7
 }
 ```
 

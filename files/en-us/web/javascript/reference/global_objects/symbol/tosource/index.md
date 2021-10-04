@@ -9,6 +9,7 @@ tags:
   - Symbol
 browser-compat: javascript.builtins.Symbol.toSource
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`toSource()`** method returns a string representing the
@@ -19,7 +20,7 @@ This method is usually called internally by JavaScript.
 ## Syntax
 
 ```js
-toSource()
+toSource();
 ```
 
 ### Return value
@@ -43,7 +44,7 @@ For instances of `Symbol`, `toSource` returns a string
 representing the source code.
 
 ```js
-"Symbol()"
+"Symbol()";
 ```
 
 ## Specifications

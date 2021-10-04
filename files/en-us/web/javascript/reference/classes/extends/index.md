@@ -8,6 +8,7 @@ tags:
   - Language feature
 browser-compat: javascript.classes.extends
 ---
+
 {{jsSidebar("Classes")}}
 
 The **`extends`** keyword is used in [class declarations](/en-US/docs/Web/JavaScript/Reference/Statements/class) or
@@ -45,7 +46,7 @@ class Square extends Polygon {
     super(length, length);
     // Note: In derived classes, super() must be called before you
     // can use 'this'. Leaving this out will cause a reference error.
-    this.name = 'Square';
+    this.name = "Square";
   }
 
   get area() {
@@ -62,10 +63,24 @@ demo](https://googlechrome.github.io/samples/classes-es6/index.html) [(source)](
 
 ```js
 class myDate extends Date {
-
   getFormattedDate() {
-    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    return this.getDate() + '-' + months[this.getMonth()] + '-' + this.getFullYear();
+    var months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    return (
+      this.getDate() + "-" + months[this.getMonth()] + "-" + this.getFullYear()
+    );
   }
 }
 ```

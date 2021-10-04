@@ -13,6 +13,7 @@ tags:
   - RelativeTimeFormat
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat.resolvedOptions
 ---
+
 {{JSRef}}
 
 The **`Intl.RelativeTimeFormat.prototype.resolvedOptions()`** method returns a new object with properties reflecting the locale and relative time formatting options computed during initialization of this {{jsxref("Intl.RelativeTimeFormat")}} object.
@@ -24,7 +25,7 @@ The **`Intl.RelativeTimeFormat.prototype.resolvedOptions()`** method returns a n
 ## Syntax
 
 ```js
-resolvedOptions()
+resolvedOptions();
 ```
 
 ### Return value
@@ -60,12 +61,12 @@ The resulting object has the following properties:
 ### Using the `resolvedOptions` method
 
 ```js
-var de = new Intl.RelativeTimeFormat('de-DE');
+var de = new Intl.RelativeTimeFormat("de-DE");
 var usedOptions = de.resolvedOptions();
 
-usedOptions.locale;          // "de-DE"
-usedOptions.style;           // "long"
-usedOptions.numeric;         // "always"
+usedOptions.locale; // "de-DE"
+usedOptions.style; // "long"
+usedOptions.numeric; // "always"
 usedOptions.numberingSystem; // "latn"
 ```
 

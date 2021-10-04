@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.strict_inequality
 ---
+
 {{jsSidebar("Operators")}}
 
 The strict inequality operator (`!==`) checks whether its two operands are
@@ -20,7 +21,7 @@ be different.
 ## Syntax
 
 ```js
-x !== y
+x !== y;
 ```
 
 ## Description
@@ -30,9 +31,9 @@ negation of the [strict
 equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) operator so the following two lines will always give the same result:
 
 ```js
-x !== y
+x !== y;
 
-!(x === y)
+!(x === y);
 ```
 
 For details of the comparison algorithm, see the page for the [strict
@@ -50,41 +51,41 @@ operands of different types to be different:
 ### Comparing operands of the same type
 
 ```js
-console.log("hello" !== "hello");   // false
-console.log("hello" !== "hola");    // true
+console.log("hello" !== "hello"); // false
+console.log("hello" !== "hola"); // true
 
-console.log(3 !== 3);               // false
-console.log(3 !== 4);               // true
+console.log(3 !== 3); // false
+console.log(3 !== 4); // true
 
-console.log(true !== true);         // false
-console.log(true !== false);        // true
+console.log(true !== true); // false
+console.log(true !== false); // true
 
-console.log(null !== null);         // false
+console.log(null !== null); // false
 ```
 
 ### Comparing operands of different types
 
 ```js
-console.log("3" !== 3);           // true
+console.log("3" !== 3); // true
 
-console.log(true !== 1);          // true
+console.log(true !== 1); // true
 
-console.log(null !== undefined);  // true
+console.log(null !== undefined); // true
 ```
 
 ### Comparing objects
 
 ```js
 const object1 = {
-  name: "hello"
-}
+  name: "hello",
+};
 
 const object2 = {
-  name: "hello"
-}
+  name: "hello",
+};
 
-console.log(object1 !== object2);  // true
-console.log(object1 !== object1);  // false
+console.log(object1 !== object2); // true
+console.log(object1 !== object1); // false
 ```
 
 ## Specifications

@@ -7,6 +7,7 @@ tags:
   - Property
 browser-compat: javascript.builtins.Number.MIN_VALUE
 ---
+
 {{JSRef}}
 
 The **`Number.MIN_VALUE`** property represents the smallest positive numeric value representable in JavaScript.

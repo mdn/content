@@ -8,6 +8,7 @@ tags:
   - arguments
 browser-compat: javascript.functions.arguments.length
 ---
+
 {{jsSidebar("Functions")}}
 
 The **`arguments.length`** property contains the number of arguments passed to the function.

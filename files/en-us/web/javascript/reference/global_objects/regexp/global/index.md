@@ -10,6 +10,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.global
 ---
+
 {{JSRef}}
 
 The **`global`** property indicates whether or not the "`g`" flag is used with the regular expression. `global` is a read-only property of an individual regular expression instance.
@@ -27,21 +28,21 @@ You cannot change this property directly.
 ### Using global
 
 ```js
-var regex = new RegExp('foo', 'g');
+var regex = new RegExp("foo", "g");
 
-console.log(regex.global);  // true
+console.log(regex.global); // true
 
-var str = 'fooexamplefoo';
+var str = "fooexamplefoo";
 
-var str1 = str.replace(regex, '');
+var str1 = str.replace(regex, "");
 
-console.log(str1);  // Output: example
+console.log(str1); // Output: example
 
-var regex1 = new RegExp('foo');
+var regex1 = new RegExp("foo");
 
-var str2 = str.replace(regex1, '');
+var str2 = str.replace(regex1, "");
 
-console.log(str2);  // Output: examplefoo
+console.log(str2); // Output: examplefoo
 ```
 
 ## Specifications

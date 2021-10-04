@@ -8,6 +8,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Error.toSource
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 The **`toSource()`** method returns code that could eval to the
@@ -16,7 +17,7 @@ same error.
 ## Syntax
 
 ```js
-toSource()
+toSource();
 ```
 
 ### Return value
@@ -34,7 +35,7 @@ evaluated to create an (approximately) equal object. Naturally, the string conta
 the source follows the structure of the {{jsxref("Error")}} constructor. For example:
 
 ```js
-(newname(message ,fileName,lineNumber))
+newname(message, fileName, lineNumber);
 ```
 
 where these attributes correspond to the respective properties of the error instance.

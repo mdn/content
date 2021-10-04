@@ -8,6 +8,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Memory.Memory
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.Memory()`** constructor creates a new
@@ -23,7 +24,7 @@ from both JavaScript and WebAssembly.
 ## Syntax
 
 ```js
-new WebAssembly.Memory(memoryDescriptor)
+new WebAssembly.Memory(memoryDescriptor);
 ```
 
 ### Parameters
@@ -68,7 +69,7 @@ property will return an
 [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
 
 ```js
-var memory = new WebAssembly.Memory({initial:10, maximum:100});
+var memory = new WebAssembly.Memory({ initial: 10, maximum: 100 });
 ```
 
 The second way to get a `WebAssembly.Memory` object is to have it exported
@@ -80,14 +81,15 @@ created in the line above. It then stores some values in that memory, then expor
 function and uses it to sum some values.
 
 ```js
-WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
-.then(obj => {
-  var i32 = new Uint32Array(memory.buffer);
-  for (var i = 0; i < 10; i++) {
-    i32[i] = i;
-  }
-  var sum = obj.instance.exports.accumulate(0, 10);
-  console.log(sum);
+WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
+  js: { mem: memory },
+}).then((obj) => {
+  var i32 = new Uint32Array(memory.buffer);
+  for (var i = 0; i < 10; i++) {
+    i32[i] = i;
+  }
+  var sum = obj.instance.exports.accumulate(0, 10);
+  console.log(sum);
 });
 ```
 
@@ -98,7 +100,11 @@ memory](/en-US/docs/WebAssembly/Understanding_the_text_format#Shared_memories) b
 object:
 
 ```js
-let memory = new WebAssembly.Memory({initial:10, maximum:100, shared:true});
+let memory = new WebAssembly.Memory({
+  initial: 10,
+  maximum: 100,
+  shared: true,
+});
 ```
 
 This memory's `buffer` property will return a

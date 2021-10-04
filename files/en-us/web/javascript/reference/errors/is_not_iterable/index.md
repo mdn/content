@@ -1,5 +1,5 @@
 ---
-title: 'TypeError: ''x'' is not iterable'
+title: "TypeError: 'x' is not iterable"
 slug: Web/JavaScript/Reference/Errors/is_not_iterable
 tags:
   - Error
@@ -7,6 +7,7 @@ tags:
   - Reference
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "is not iterable" occurs when the value which is given as the
@@ -45,9 +46,10 @@ protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_
 ](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)to iterate over the properties of an object.
 
 ```js example-bad
-var obj = { 'France': 'Paris', 'England': 'London' };
-for (let p of obj) { // TypeError: obj is not iterable
-    // …
+var obj = { France: "Paris", England: "London" };
+for (let p of obj) {
+  // TypeError: obj is not iterable
+  // …
 }
 ```
 
@@ -55,34 +57,32 @@ Instead you have to use {{jsxref("Object.keys")}} or {{jsxref("Object.entries")}
 iterate over the properties or entries of an object.
 
 ```js example-good
-var obj = { 'France': 'Paris', 'England': 'London' };
+var obj = { France: "Paris", England: "London" };
 // Iterate over the property names:
 for (let country of Object.keys(obj)) {
-    var capital = obj[country];
-    console.log(country, capital);
+  var capital = obj[country];
+  console.log(country, capital);
 }
 
 for (const [country, capital] of Object.entries(obj))
-    console.log(country, capital);
+  console.log(country, capital);
 ```
 
 Another option for this use case might be to use a {{jsxref("Map")}}:
 
 ```js example-good
-var map = new Map;
-map.set('France', 'Paris');
-map.set('England', 'London');
+var map = new Map();
+map.set("France", "Paris");
+map.set("England", "London");
 // Iterate over the property names:
 for (let country of map.keys()) {
-    let capital = map[country];
-    console.log(country, capital);
+  let capital = map[country];
+  console.log(country, capital);
 }
 
-for (let capital of map.values())
-    console.log(capital);
+for (let capital of map.values()) console.log(capital);
 
-for (const [country, capital] of map.entries())
-    console.log(country, capital);
+for (const [country, capital] of map.entries()) console.log(country, capital);
 ```
 
 ### Iterating over a generator
@@ -97,7 +97,7 @@ function* generate(a, b) {
 }
 
 for (let x of generate) // TypeError: generate is not iterable
-    console.log(x);
+  console.log(x);
 ```
 
 When they are not called, the {{jsxref("Function")}} object corresponding to the
@@ -107,12 +107,11 @@ generator.
 
 ```js example-good
 function* generate(a, b) {
-    yield a;
-    yield b;
+  yield a;
+  yield b;
 }
 
-for (let x of generate(1,2))
-    console.log(x);
+for (let x of generate(1, 2)) console.log(x);
 ```
 
 ### Iterating over a custom iterable
@@ -123,24 +122,24 @@ returns an object which is an iterator, which is to say it must have a next met
 
 ```js example-bad
 const myEmptyIterable = {
-    [Symbol.iterator]() {
-        return [] // [] is iterable, but it is not an iterator -- it has no next method.
-    }
-}
+  [Symbol.iterator]() {
+    return []; // [] is iterable, but it is not an iterator -- it has no next method.
+  },
+};
 
-Array.from(myEmptyIterable);  // TypeError: myEmptyIterable is not iterable
+Array.from(myEmptyIterable); // TypeError: myEmptyIterable is not iterable
 ```
 
 Here is a correct implementation:
 
 ```js example-good
 const myEmptyIterable = {
-    [Symbol.iterator]() {
-        return [][Symbol.iterator]()
-    }
-}
+  [Symbol.iterator]() {
+    return [][Symbol.iterator]();
+  },
+};
 
-Array.from(myEmptyIterable);  // []
+Array.from(myEmptyIterable); // []
 ```
 
 ## See also

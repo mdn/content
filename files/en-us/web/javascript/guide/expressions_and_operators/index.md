@@ -9,6 +9,7 @@ tags:
   - Operators
   - l10n:priority
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions",
   "Web/JavaScript/Guide/Numbers_and_dates")}}
 
@@ -126,11 +127,11 @@ data from arrays or objects using a syntax that mirrors the construction of arra
 object literals.
 
 ```js
-var foo = ['one', 'two', 'three'];
+var foo = ["one", "two", "three"];
 
 // without destructuring
-var one   = foo[0];
-var two   = foo[1];
+var one = foo[0];
+var two = foo[1];
 var three = foo[2];
 
 // with destructuring
@@ -623,33 +624,33 @@ The following code shows examples of the `&&` (logical AND)
 operator.
 
 ```js
-var a1 =  true && true;     // t && t returns true
-var a2 =  true && false;    // t && f returns false
-var a3 = false && true;     // f && t returns false
-var a4 = false && (3 == 4); // f && f returns false
-var a5 = 'Cat' && 'Dog';    // t && t returns Dog
-var a6 = false && 'Cat';    // f && t returns false
-var a7 = 'Cat' && false;    // t && f returns false
+var a1 = true && true; // t && t returns true
+var a2 = true && false; // t && f returns false
+var a3 = false && true; // f && t returns false
+var a4 = false && 3 == 4; // f && f returns false
+var a5 = "Cat" && "Dog"; // t && t returns Dog
+var a6 = false && "Cat"; // f && t returns false
+var a7 = "Cat" && false; // t && f returns false
 ```
 
 The following code shows examples of the || (logical OR) operator.
 
 ```js
-var o1 =  true || true;     // t || t returns true
-var o2 = false || true;     // f || t returns true
-var o3 =  true || false;    // t || f returns true
-var o4 = false || (3 == 4); // f || f returns false
-var o5 = 'Cat' || 'Dog';    // t || t returns Cat
-var o6 = false || 'Cat';    // f || t returns Cat
-var o7 = 'Cat' || false;    // t || f returns Cat
+var o1 = true || true; // t || t returns true
+var o2 = false || true; // f || t returns true
+var o3 = true || false; // t || f returns true
+var o4 = false || 3 == 4; // f || f returns false
+var o5 = "Cat" || "Dog"; // t || t returns Cat
+var o6 = false || "Cat"; // f || t returns Cat
+var o7 = "Cat" || false; // t || f returns Cat
 ```
 
 The following code shows examples of the ! (logical NOT) operator.
 
 ```js
-var n1 = !true;  // !t returns false
+var n1 = !true; // !t returns false
 var n2 = !false; // !f returns true
-var n3 = !'Cat'; // !t returns false
+var n3 = !"Cat"; // !t returns false
 ```
 
 #### Short-circuit evaluation
@@ -680,7 +681,7 @@ string that is the union of the two operand strings.
 For example,
 
 ```js
-console.log('my ' + 'string'); // console logs the string "my string".
+console.log("my " + "string"); // console logs the string "my string".
 ```
 
 The shorthand assignment operator += can also be used to concatenate strings.
@@ -688,8 +689,8 @@ The shorthand assignment operator += can also be used to concatenate strings.
 For example,
 
 ```js
-var mystring = 'alpha';
-mystring += 'bet'; // evaluates to "alphabet" and assigns this value to mystring.
+var mystring = "alpha";
+mystring += "bet"; // evaluates to "alphabet" and assigns this value to mystring.
 ```
 
 ### Conditional (ternary) operator
@@ -699,7 +700,7 @@ operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) i
 can have one of two values based on a condition. The syntax is:
 
 ```js
-condition ? val1 : val2
+condition ? val1 : val2;
 ```
 
 If `condition` is true, the operator has the value of `val1`.
@@ -709,7 +710,7 @@ anywhere you would use a standard operator.
 For example,
 
 ```js
-var status = (age >= 18) ? 'adult' : 'minor';
+var status = age >= 18 ? "adult" : "minor";
 ```
 
 This statement assigns the value "adult" to the variable `status` if
@@ -730,12 +731,12 @@ following code uses the comma operator to update two variables at once. The code
 the values of the diagonal elements in the array:
 
 ```js
-var x = [0,1,2,3,4,5,6,7,8,9]
+var x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var a = [x, x, x, x, x];
 
 for (var i = 0, j = 9; i <= j; i++, j--)
-//                                ^
-  console.log('a[' + i + '][' + j + ']= ' + a[i][j]);
+  //                                ^
+  console.log("a[" + i + "][" + j + "]= " + a[i][j]);
 ```
 
 ### Unary operators
@@ -766,7 +767,7 @@ returns `false` if the operation is not possible.
 ```js
 delete Math.PI; // returns false (cannot delete non-configurable properties)
 
-const myObj = {h: 4};
+const myObj = { h: 4 };
 delete myobj.h; // returns true (can delete user-defined properties)
 ```
 
@@ -786,8 +787,8 @@ The [`typeof`
 operator](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) is used in either of the following ways:
 
 ```js
-typeof operand
-typeof (operand)
+typeof operand;
+typeof operand;
 ```
 
 The `typeof` operator returns a string indicating the type of the
@@ -797,21 +798,21 @@ for which the type is to be returned. The parentheses are optional.
 Suppose you define the following variables:
 
 ```js
-var myFun = new Function('5 + 2');
-var shape = 'round';
+var myFun = new Function("5 + 2");
+var shape = "round";
 var size = 1;
-var foo = ['Apple', 'Mango', 'Orange'];
+var foo = ["Apple", "Mango", "Orange"];
 var today = new Date();
 ```
 
 The `typeof` operator returns the following results for these variables:
 
 ```js
-typeof myFun;       // returns "function"
-typeof shape;       // returns "string"
-typeof size;        // returns "number"
-typeof foo;         // returns "object"
-typeof today;       // returns "object"
+typeof myFun; // returns "function"
+typeof shape; // returns "string"
+typeof size; // returns "number"
+typeof foo; // returns "object"
+typeof today; // returns "object"
 typeof doesntExist; // returns "undefined"
 ```
 
@@ -826,8 +827,8 @@ typeof null; // returns "object"
 For a number or string, the `typeof` operator returns the following results:
 
 ```js
-typeof 62;            // returns "number"
-typeof 'Hello world'; // returns "string"
+typeof 62; // returns "number"
+typeof "Hello world"; // returns "string"
 ```
 
 For property values, the `typeof` operator returns the type of value the
@@ -835,27 +836,27 @@ property contains:
 
 ```js
 typeof document.lastModified; // returns "string"
-typeof window.length;         // returns "number"
-typeof Math.LN2;              // returns "number"
+typeof window.length; // returns "number"
+typeof Math.LN2; // returns "number"
 ```
 
 For methods and functions, the `typeof` operator returns results as follows:
 
 ```js
-typeof blur;        // returns "function"
-typeof eval;        // returns "function"
-typeof parseInt;    // returns "function"
+typeof blur; // returns "function"
+typeof eval; // returns "function"
+typeof parseInt; // returns "function"
 typeof shape.split; // returns "function"
 ```
 
 For predefined objects, the `typeof` operator returns results as follows:
 
 ```js
-typeof Date;     // returns "function"
+typeof Date; // returns "function"
 typeof Function; // returns "function"
-typeof Math;     // returns "object"
-typeof Option;   // returns "function"
-typeof String;   // returns "function"
+typeof Math; // returns "object"
+typeof Option; // returns "function"
+typeof String; // returns "function"
 ```
 
 #### `void`
@@ -864,8 +865,8 @@ The [`void`
 operator](/en-US/docs/Web/JavaScript/Reference/Operators/void) is used in either of the following ways:
 
 ```js
-void (expression)
-void expression
+void expression;
+void expression;
 ```
 
 The `void` operator specifies an expression to be evaluated without
@@ -884,7 +885,7 @@ operator](/en-US/docs/Web/JavaScript/Reference/Operators/in) returns `true` if t
 object. The syntax is:
 
 ```js
-propNameOrNumber in objectName
+propNameOrNumber in objectName;
 ```
 
 where `propNameOrNumber` is a string, numeric, or symbol expression
@@ -895,23 +896,23 @@ The following examples show some uses of the `in` operator.
 
 ```js
 // Arrays
-var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
-0 in trees;        // returns true
-3 in trees;        // returns true
-6 in trees;        // returns false
-'bay' in trees;    // returns false (you must specify the index number,
-                   // not the value at that index)
-'length' in trees; // returns true (length is an Array property)
+var trees = ["redwood", "bay", "cedar", "oak", "maple"];
+0 in trees; // returns true
+3 in trees; // returns true
+6 in trees; // returns false
+"bay" in trees; // returns false (you must specify the index number,
+// not the value at that index)
+"length" in trees; // returns true (length is an Array property)
 
 // built-in objects
-'PI' in Math;          // returns true
-var myString = new String('coral');
-'length' in myString;  // returns true
+"PI" in Math; // returns true
+var myString = new String("coral");
+"length" in myString; // returns true
 
 // Custom objects
-var mycar = { make: 'Honda', model: 'Accord', year: 1998 };
-'make' in mycar;  // returns true
-'model' in mycar; // returns true
+var mycar = { make: "Honda", model: "Accord", year: 1998 };
+"make" in mycar; // returns true
+"model" in mycar; // returns true
 ```
 
 #### `instanceof`
@@ -921,7 +922,7 @@ operator](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) returns `tr
 object type. The syntax is:
 
 ```js
-objectName instanceof objectType
+objectName instanceof objectType;
 ```
 
 where `objectName` is the name of the object to compare to
@@ -1011,8 +1012,8 @@ the calling object in a method. Use `this` either with the dot or the bracket
 notation:
 
 ```js
-this['propertyName']
-this.propertyName
+this["propertyName"];
+this.propertyName;
 ```
 
 Suppose a function called `validate` validates an object's
@@ -1020,8 +1021,7 @@ Suppose a function called `validate` validates an object's
 
 ```js
 function validate(obj, lowval, hival) {
-  if ((obj.value < lowval) || (obj.value > hival))
-    console.log('Invalid Value!');
+  if (obj.value < lowval || obj.value > hival) console.log("Invalid Value!");
 }
 ```
 
@@ -1031,7 +1031,7 @@ example:
 
 ```html
 <p>Enter a number between 18 and 99:</p>
-<input type="text" name="age" size=3 onChange="validate(this, 18, 99);">
+<input type="text" name="age" size="3" onChange="validate(this, 18, 99);" />
 ```
 
 #### Grouping operator
@@ -1046,16 +1046,20 @@ var b = 2;
 var c = 3;
 
 // default precedence
-a + b * c     // 7
+a + b * c; // 7
 // evaluated by default like this
-a + (b * c)   // 7
+a +
+  (b * c)(
+    // 7
 
-// now overriding precedence
-// addition before multiplication
-(a + b) * c   // 9
+    // now overriding precedence
+    // addition before multiplication
+    a + b
+  ) *
+    c; // 9
 
 // which is equivalent to
-a * c + b * c // 9
+a * c + b * c; // 9
 ```
 
 ### Left-hand-side expressions

@@ -8,6 +8,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.RuntimeError.RuntimeError
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.RuntimeError()`** constructor creates a new
@@ -17,10 +18,10 @@ WebAssembly specifies a [trap](https://webassembly.org/docs/semantics/#traps).
 ## Syntax
 
 ```js
-new WebAssembly.RuntimeError()
-new WebAssembly.RuntimeError(message)
-new WebAssembly.RuntimeError(message, fileName)
-new WebAssembly.RuntimeError(message, fileName, lineNumber)
+new WebAssembly.RuntimeError();
+new WebAssembly.RuntimeError(message);
+new WebAssembly.RuntimeError(message, fileName);
+new WebAssembly.RuntimeError(message, fileName, lineNumber);
 ```
 
 ### Parameters
@@ -41,15 +42,15 @@ details to the console:
 
 ```js
 try {
-  throw new WebAssembly.RuntimeError('Hello', 'someFile', 10);
+  throw new WebAssembly.RuntimeError("Hello", "someFile", 10);
 } catch (e) {
   console.log(e instanceof WebAssembly.RuntimeError); // true
-  console.log(e.message);                             // "Hello"
-  console.log(e.name);                                // "RuntimeError"
-  console.log(e.fileName);                            // "someFile"
-  console.log(e.lineNumber);                          // 10
-  console.log(e.columnNumber);                        // 0
-  console.log(e.stack);                               // returns the location where the code was run
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "RuntimeError"
+  console.log(e.fileName); // "someFile"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // returns the location where the code was run
 }
 ```
 

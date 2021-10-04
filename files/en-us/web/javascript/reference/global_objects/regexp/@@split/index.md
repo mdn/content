@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.RegExp.@@split
 ---
+
 {{JSRef}}
 
 The **`[@@split]()`** method splits a {{jsxref("String")}}
@@ -47,9 +48,9 @@ such as a {{jsxref("RegExp")}}. For example, the following two examples return t
 result.
 
 ```js
-'a-b-c'.split(/-/);
+"a-b-c".split(/-/);
 
-/-/[Symbol.split]('a-b-c');
+/-/[Symbol.split]("a-b-c");
 ```
 
 This method exists for customizing the behavior of `split()` in
@@ -65,9 +66,9 @@ different order of arguments.
 
 ```js
 let re = /-/g;
-let str = '2016-01-02';
+let str = "2016-01-02";
 let result = re[Symbol.split](str);
-console.log(result);  // ["2016", "01", "02"]
+console.log(result); // ["2016", "01", "02"]
 ```
 
 ### Using @@split in subclasses
@@ -79,12 +80,12 @@ modify the default behavior.
 class MyRegExp extends RegExp {
   [Symbol.split](str, limit) {
     let result = RegExp.prototype[Symbol.split].call(this, str, limit);
-    return result.map(x => "(" + x + ")");
+    return result.map((x) => "(" + x + ")");
   }
 }
 
-let re = new MyRegExp('-');
-let str = '2016-01-02';
+let re = new MyRegExp("-");
+let str = "2016-01-02";
 let result = str.split(re); // String.prototype.split calls re[@@split].
 console.log(result); // ["(2016)", "(01)", "(02)"]
 ```

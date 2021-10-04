@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.isExtensible
 ---
+
 {{JSRef}}
 
 The static
@@ -22,7 +23,7 @@ extensible (whether it can have new properties added to it). It is similar to
 ## Syntax
 
 ```js
-Reflect.isExtensible(target)
+Reflect.isExtensible(target);
 ```
 
 ### Parameters
@@ -52,20 +53,20 @@ See also {{jsxref("Object.isExtensible()")}}.
 
 ```js
 // New objects are extensible.
-let empty = {}
-Reflect.isExtensible(empty)  // === true
+let empty = {};
+Reflect.isExtensible(empty); // === true
 
 // ...but that can be changed.
-Reflect.preventExtensions(empty)
-Reflect.isExtensible(empty)  // === false
+Reflect.preventExtensions(empty);
+Reflect.isExtensible(empty); // === false
 
 // Sealed objects are by definition non-extensible.
-let sealed = Object.seal({})
-Reflect.isExtensible(sealed)  // === false
+let sealed = Object.seal({});
+Reflect.isExtensible(sealed); // === false
 
 // Frozen objects are also by definition non-extensible.
-let frozen = Object.freeze({})
-Reflect.isExtensible(frozen)  // === false
+let frozen = Object.freeze({});
+Reflect.isExtensible(frozen); // === false
 ```
 
 ### Difference to Object.isExtensible()
@@ -76,10 +77,10 @@ primitive), then it will cause a {{jsxref("TypeError")}}. With
 object at first.
 
 ```js
-Reflect.isExtensible(1)
+Reflect.isExtensible(1);
 // TypeError: 1 is not an object
 
-Object.isExtensible(1)
+Object.isExtensible(1);
 // false
 ```
 

@@ -9,6 +9,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.indexOf
 ---
+
 {{JSRef}}
 
 The **`indexOf()`** method returns the
@@ -24,8 +25,8 @@ specified value, starting the search at `fromIndex`. Returns
 ## Syntax
 
 ```js
-indexOf(searchValue)
-indexOf(searchValue, fromIndex)
+indexOf(searchValue);
+indexOf(searchValue, fromIndex);
 ```
 
 ### Parameters
@@ -72,10 +73,10 @@ lower than the string's `length`, the returned value is the same as the
 `fromIndex` value:
 
 ```js
-'hello world'.indexOf('') // returns 0
-'hello world'.indexOf('', 0) // returns 0
-'hello world'.indexOf('', 3) // returns 3
-'hello world'.indexOf('', 8) // returns 8
+"hello world".indexOf(""); // returns 0
+"hello world".indexOf("", 0); // returns 0
+"hello world".indexOf("", 3); // returns 3
+"hello world".indexOf("", 8); // returns 8
 ```
 
 However, with any `fromIndex` value equal to or greater than the
@@ -83,9 +84,9 @@ string's `length`, the returned value _is_ the string's
 `length`:
 
 ```js
-'hello world'.indexOf('', 11) // returns 11
-'hello world'.indexOf('', 13) // returns 11
-'hello world'.indexOf('', 22) // returns 11
+"hello world".indexOf("", 11); // returns 11
+"hello world".indexOf("", 13); // returns 11
+"hello world".indexOf("", 22); // returns 11
 ```
 
 In the former instance, JS seems to find an empty string just after the specified index
@@ -99,22 +100,22 @@ is `0`, and the index of the last character of a string called
 `stringName` is `stringName.length - 1`.
 
 ```js
-'Blue Whale'.indexOf('Blue')      // returns  0
-'Blue Whale'.indexOf('Blute')     // returns -1
-'Blue Whale'.indexOf('Whale', 0)  // returns  5
-'Blue Whale'.indexOf('Whale', 5)  // returns  5
-'Blue Whale'.indexOf('Whale', 7)  // returns -1
-'Blue Whale'.indexOf('')          // returns  0
-'Blue Whale'.indexOf('', 9)       // returns  9
-'Blue Whale'.indexOf('', 10)      // returns 10
-'Blue Whale'.indexOf('', 11)      // returns 10
+"Blue Whale".indexOf("Blue"); // returns  0
+"Blue Whale".indexOf("Blute"); // returns -1
+"Blue Whale".indexOf("Whale", 0); // returns  5
+"Blue Whale".indexOf("Whale", 5); // returns  5
+"Blue Whale".indexOf("Whale", 7); // returns -1
+"Blue Whale".indexOf(""); // returns  0
+"Blue Whale".indexOf("", 9); // returns  9
+"Blue Whale".indexOf("", 10); // returns 10
+"Blue Whale".indexOf("", 11); // returns 10
 ```
 
 The `indexOf()` method is case sensitive. For example, the following
 expression returns `-1`:
 
 ```js
-'Blue Whale'.indexOf('blue')  // returns -1
+"Blue Whale".indexOf("blue"); // returns -1
 ```
 
 ### Checking occurrences
@@ -124,8 +125,8 @@ doesn't evaluate to `false`. Therefore, when checking if a specific string
 exists within another string, the correct way to check would be:
 
 ```js
-'Blue Whale'.indexOf('Blue') !== -1  // true
-'Blue Whale'.indexOf('Bloe') !== -1  // false
+"Blue Whale".indexOf("Blue") !== -1; // true
+"Blue Whale".indexOf("Bloe") !== -1; // false
 ```
 
 ## Examples
@@ -136,10 +137,10 @@ The following example uses `indexOf()` to locate values in the string
 `"Brave new world"`.
 
 ```js
-const str = 'Brave new world'
+const str = "Brave new world";
 
-console.log('Index of first w from start is ' + str.indexOf('w'))   // logs 8
-console.log('Index of "new" from start is ' + str.indexOf('new'))   // logs 6
+console.log("Index of first w from start is " + str.indexOf("w")); // logs 8
+console.log('Index of "new" from start is ' + str.indexOf("new")); // logs 6
 ```
 
 ### `indexOf()` and case-sensitivity
@@ -153,12 +154,14 @@ because the `indexOf()` method is case sensitive, the string
 `console.log()` method displays `-1`.
 
 ```js
-const myString    = 'brie, pepper jack, cheddar'
-const myCapString = 'Brie, Pepper Jack, Cheddar'
+const myString = "brie, pepper jack, cheddar";
+const myCapString = "Brie, Pepper Jack, Cheddar";
 
-console.log('myString.indexOf("cheddar") is ' + myString.indexOf('cheddar'))
+console.log('myString.indexOf("cheddar") is ' + myString.indexOf("cheddar"));
 // logs 19
-console.log('myCapString.indexOf("cheddar") is ' + myCapString.indexOf('cheddar'))
+console.log(
+  'myCapString.indexOf("cheddar") is ' + myCapString.indexOf("cheddar")
+);
 // logs -1
 ```
 
@@ -168,16 +171,16 @@ The following example sets `count` to the number of occurrences of the
 letter `e` in the string `str`:
 
 ```js
-const str = 'To be, or not to be, that is the question.'
-let count = 0
-let position = str.indexOf('e')
+const str = "To be, or not to be, that is the question.";
+let count = 0;
+let position = str.indexOf("e");
 
 while (position !== -1) {
-  count++
-  position = str.indexOf('e', position + 1)
+  count++;
+  position = str.indexOf("e", position + 1);
 }
 
-console.log(count)  // displays 4
+console.log(count); // displays 4
 ```
 
 ## Specifications

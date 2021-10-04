@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.construct
 ---
+
 {{JSRef}}
 
 The static **`Reflect.construct()`** method acts like the
@@ -22,8 +23,8 @@ different prototype.
 ## Syntax
 
 ```js
-Reflect.construct(target, argumentsList)
-Reflect.construct(target, argumentsList, newTarget)
+Reflect.construct(target, argumentsList);
+Reflect.construct(target, argumentsList, newTarget);
 ```
 
 ### Parameters
@@ -57,8 +58,8 @@ syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) combined w
 operator](/en-US/docs/Web/JavaScript/Reference/Operators/new).)
 
 ```js
-let obj = new Foo(...args)
-let obj = Reflect.construct(Foo, args)
+let obj = new Foo(...args);
+let obj = Reflect.construct(Foo, args);
 ```
 
 ### `Reflect.construct()` vs `Object.create()`
@@ -116,26 +117,26 @@ parameter if supplied, or `target` if not.
 
 ```js
 function OneClass() {
-    console.log('OneClass')
-    console.log(new.target)
+  console.log("OneClass");
+  console.log(new.target);
 }
 function OtherClass() {
-    console.log('OtherClass')
-    console.log(new.target)
+  console.log("OtherClass");
+  console.log(new.target);
 }
 
-let obj1 = Reflect.construct(OneClass, args)
+let obj1 = Reflect.construct(OneClass, args);
 // Output:
 //     OneClass
 //     function OneClass { ... }
 
-let obj2 = Reflect.construct(OneClass, args, OtherClass)
+let obj2 = Reflect.construct(OneClass, args, OtherClass);
 // Output:
 //     OneClass
 //     function OtherClass { ... }
 
 let obj3 = Object.create(OtherClass.prototype);
-OneClass.apply(obj3, args)
+OneClass.apply(obj3, args);
 // Output:
 //     OneClass
 //     undefined
@@ -146,9 +147,9 @@ OneClass.apply(obj3, args)
 ### Using `Reflect.construct()`
 
 ```js
-let d = Reflect.construct(Date, [1776, 6, 4])
-d instanceof Date  // true
-d.getFullYear()    // 1776
+let d = Reflect.construct(Date, [1776, 6, 4]);
+d instanceof Date; // true
+d.getFullYear(); // 1776
 ```
 
 ## Specifications

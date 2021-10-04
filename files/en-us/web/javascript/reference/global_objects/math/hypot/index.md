@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Math.hypot
 ---
+
 {{JSRef}}
 
 The **`Math.hypot()`** function returns the square root of the
@@ -111,14 +112,14 @@ With one argument, `Math.hypot()` is equivalent to `Math.abs()`.
 ### Using Math.hypot()
 
 ```js
-Math.hypot(3, 4);          // 5
-Math.hypot(3, 4, 5);       // 7.0710678118654755
-Math.hypot();              // 0
-Math.hypot(NaN);           // NaN
+Math.hypot(3, 4); // 5
+Math.hypot(3, 4, 5); // 7.0710678118654755
+Math.hypot(); // 0
+Math.hypot(NaN); // NaN
 Math.hypot(NaN, Infinity); // Infinity
-Math.hypot(3, 4, 'foo');   // NaN, since +'foo' => NaN
-Math.hypot(3, 4, '5');     // 7.0710678118654755, +'5' => 5
-Math.hypot(-3);            // 3, the same as Math.abs(-3)
+Math.hypot(3, 4, "foo"); // NaN, since +'foo' => NaN
+Math.hypot(3, 4, "5"); // 7.0710678118654755, +'5' => 5
+Math.hypot(-3); // 3, the same as Math.abs(-3)
 ```
 
 ## Polyfill
@@ -126,37 +127,43 @@ Math.hypot(-3);            // 3, the same as Math.abs(-3)
 A naive approach that does not handle overflow/underflow issues:
 
 ```js
-if (!Math.hypot) Math.hypot = function() {
-  var y = 0, i = arguments.length, containsInfinity = false;
-  while (i--) {
-    var arg = arguments[i];
-    if (arg === Infinity || arg === -Infinity)
-      containsInfinity = true
-    y += arg * arg
-  }
-  return containsInfinity ? Infinity : Math.sqrt(y)
-}
+if (!Math.hypot)
+  Math.hypot = function () {
+    var y = 0,
+      i = arguments.length,
+      containsInfinity = false;
+    while (i--) {
+      var arg = arguments[i];
+      if (arg === Infinity || arg === -Infinity) containsInfinity = true;
+      y += arg * arg;
+    }
+    return containsInfinity ? Infinity : Math.sqrt(y);
+  };
 ```
 
 A polyfill that avoids underflows and overflows:
 
 ```js
-if (!Math.hypot) Math.hypot = function () {
-  var max = 0;
-  var s = 0;
-  var containsInfinity = false;
-  for (var i = 0; i < arguments.length; ++i) {
-    var arg = Math.abs(Number(arguments[i]));
-    if (arg === Infinity)
-      containsInfinity = true
-    if (arg > max) {
-      s *= (max / arg) * (max / arg);
-      max = arg;
+if (!Math.hypot)
+  Math.hypot = function () {
+    var max = 0;
+    var s = 0;
+    var containsInfinity = false;
+    for (var i = 0; i < arguments.length; ++i) {
+      var arg = Math.abs(Number(arguments[i]));
+      if (arg === Infinity) containsInfinity = true;
+      if (arg > max) {
+        s *= (max / arg) * (max / arg);
+        max = arg;
+      }
+      s += arg === 0 && max === 0 ? 0 : (arg / max) * (arg / max);
     }
-    s += arg === 0 && max === 0 ? 0 : (arg / max) * (arg / max);
-  }
-  return containsInfinity ? Infinity : (max === 1 / 0 ? 1 / 0 : max * Math.sqrt(s));
-};
+    return containsInfinity
+      ? Infinity
+      : max === 1 / 0
+      ? 1 / 0
+      : max * Math.sqrt(s);
+  };
 ```
 
 ## Specifications

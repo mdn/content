@@ -8,6 +8,7 @@ tags:
   - Shared Memory
 browser-compat: javascript.builtins.Atomics.exchange
 ---
+
 {{JSRef}}
 
 The static **`Atomics.exchange()`** method stores a given value
@@ -20,7 +21,7 @@ the write of the new value.
 ## Syntax
 
 ```js
-Atomics.exchange(typedArray, index, value)
+Atomics.exchange(typedArray, index, value);
 ```
 
 ### Parameters

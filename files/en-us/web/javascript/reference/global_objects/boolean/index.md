@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Boolean
 ---
+
 {{JSRef}}
 
 The **`Boolean`** object is an object wrapper for a boolean value.
@@ -39,18 +40,18 @@ if (x) {
 Do not use a `Boolean` object to convert a non-boolean value to a boolean value. To perform this task, instead, use `Boolean` as a function, or a [double NOT operator](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT):
 
 ```js
-var x = Boolean(expression);     // use this...
-var x = !!(expression);          // ...or this
+var x = Boolean(expression); // use this...
+var x = !!expression; // ...or this
 var x = new Boolean(expression); // don't use this!
 ```
 
 If you specify any object, including a `Boolean` object whose value is `false`, as the initial value of a `Boolean` object, the new `Boolean` object has a value of `true`.
 
 ```js
-var myFalse = new Boolean(false);   // initial value of false
-var g = Boolean(myFalse);       // initial value of true
-var myString = new String('Hello'); // string object
-var s = Boolean(myString);      // initial value of true
+var myFalse = new Boolean(false); // initial value of false
+var g = Boolean(myFalse); // initial value of true
+var myString = new String("Hello"); // string object
+var s = Boolean(myString); // initial value of true
 ```
 
 Do not use a `Boolean` object in place of a `Boolean` primitive.
@@ -60,11 +61,15 @@ Do not use a `Boolean` object in place of a `Boolean` primitive.
 When using `==` to loosely compare an object to a boolean primitive, it’s important to have a clear understanding of what’s actually being compared. Consider the following example:
 
 ```js
-if ([]) { console.log("[] is truthy")}         // logs "[] is truthy"
-if ([] == false) { console.log("[] == false")} // logs "[] == false"
+if ([]) {
+  console.log("[] is truthy");
+} // logs "[] is truthy"
+if ([] == false) {
+  console.log("[] == false");
+} // logs "[] == false"
 ```
 
-The reason for `[] == false` even though `[]` is truthy is: the comparison `[] == false` compares the *value* of `[]` to `false`. And to get the *value* of `[]`, the JavaScript engine first calls `[].toString()`. That results in `""`, and *that* is what’s actually compared to `false`. In other words, `[] == false` is equivalent to `"" == false`. And `""` is falsy — and so that’s what explains the behavior in the example.
+The reason for `[] == false` even though `[]` is truthy is: the comparison `[] == false` compares the _value_ of `[]` to `false`. And to get the _value_ of `[]`, the JavaScript engine first calls `[].toString()`. That results in `""`, and _that_ is what’s actually compared to `false`. In other words, `[] == false` is equivalent to `"" == false`. And `""` is falsy — and so that’s what explains the behavior in the example.
 
 ## Constructor
 
@@ -86,7 +91,7 @@ The reason for `[] == false` even though `[]` is truthy is: the comparison `[] =
 var bNoParam = new Boolean();
 var bZero = new Boolean(0);
 var bNull = new Boolean(null);
-var bEmptyString = new Boolean('');
+var bEmptyString = new Boolean("");
 var bfalse = new Boolean(false);
 ```
 
@@ -94,9 +99,9 @@ var bfalse = new Boolean(false);
 
 ```js
 var btrue = new Boolean(true);
-var btrueString = new Boolean('true');
-var bfalseString = new Boolean('false');
-var bSuLin = new Boolean('Su Lin');
+var btrueString = new Boolean("true");
+var bfalseString = new Boolean("false");
+var bSuLin = new Boolean("Su Lin");
 var bArrayProto = new Boolean([]);
 var bObjProto = new Boolean({});
 ```

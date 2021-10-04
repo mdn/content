@@ -8,6 +8,7 @@ tags:
   - WeakRef
 browser-compat: javascript.builtins.WeakRef.WeakRef
 ---
+
 {{JSRef}}
 
 The **`WeakRef`** constructor creates a {{jsxref("WeakRef")}}

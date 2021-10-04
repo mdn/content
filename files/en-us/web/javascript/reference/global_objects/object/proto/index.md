@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Object.proto
 ---
+
 {{JSRef}}{{Deprecated_header}}
 
 > **Warning:** Changing the `[[Prototype]]` of an object is, by the nature of how modern JavaScript engines optimize property accesses, a very slow operation, in **_every_** browser and JavaScript engine. The effects on the performance of altering inheritance are subtle and far-flung, and are not limited to the time spent in `obj.__proto__ = ...` statements, but may extend to **_any_** code that has access to **_any_** object whose `[[Prototype]]` has been altered. If you care about performance you should avoid setting the `[[Prototype]]` of an object. Instead, create a new object with the desired `[[Prototype]]` using {{JSxRef("Object.create()")}}.
@@ -38,7 +39,6 @@ The `__proto__` property is a simple accessor property on {{JSxRef("Object.proto
 ### Using \_\_proto\_\_
 
 ```js
-
 function Circle() {}
 const shape = {};
 const circle = new Circle();
@@ -48,15 +48,15 @@ const circle = new Circle();
 shape.__proto__ = circle;
 
 // Get the object prototype
-console.log(shape.__proto__ === Circle);  // false
+console.log(shape.__proto__ === Circle); // false
 
 const ShapeA = function () {};
 const ShapeB = {
-    a() {
-        console.log('aaa');
-    }
+  a() {
+    console.log("aaa");
+  },
 };
-console.log(ShapeA.prototype.__proto__ = ShapeB);
+console.log((ShapeA.prototype.__proto__ = ShapeB));
 
 const shapea = new ShapeA();
 shapea.a(); // aaa
@@ -65,9 +65,9 @@ console.log(ShapeA.prototype === shapea.__proto__); // true
 // or
 const ShapeC = function () {};
 const ShapeD = {
-    a() {
-        console.log('a');
-    }
+  a() {
+    console.log("a");
+  },
 };
 
 const shapeC = new ShapeC();
@@ -78,7 +78,7 @@ console.log(ShapeC.prototype === shapeC.__proto__); // false
 // or
 function Test() {}
 Test.prototype.myname = function () {
-    console.log('myname');
+  console.log("myname");
 };
 
 const a = new Test();
@@ -88,16 +88,14 @@ a.myname(); // myname
 // or
 const fn = function () {};
 fn.prototype.myname = function () {
-    console.log('myname');
+  console.log("myname");
 };
 
 var obj = {
-    __proto__: fn.prototype
+  __proto__: fn.prototype,
 };
 
 obj.myname(); // myname
-
- 
 ```
 
 ## Specifications

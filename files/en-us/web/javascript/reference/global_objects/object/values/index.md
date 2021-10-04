@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.values
 ---
+
 {{JSRef}}
 
 The **`Object.values()`** method
@@ -22,7 +23,7 @@ chain as well.)
 ## Syntax
 
 ```js
-Object.values(obj)
+Object.values(obj);
 ```
 
 ### Parameters
@@ -52,25 +53,34 @@ repositories.
 ### Using Object.values
 
 ```js
-const obj = { foo: 'bar', baz: 42 };
+const obj = { foo: "bar", baz: 42 };
 console.log(Object.values(obj)); // ['bar', 42]
 
 // Array-like object
-const arrayLikeObj1 = { 0: 'a', 1: 'b', 2: 'c' };
-console.log(Object.values(arrayLikeObj1 )); // ['a', 'b', 'c']
+const arrayLikeObj1 = { 0: "a", 1: "b", 2: "c" };
+console.log(Object.values(arrayLikeObj1)); // ['a', 'b', 'c']
 
 // Array-like object with random key ordering
 // When using numeric keys, the values are returned in the keys' numerical order
-const arrayLikeObj2 = { 100: 'a', 2: 'b', 7: 'c' };
-console.log(Object.values(arrayLikeObj2 )); // ['b', 'c', 'a']
+const arrayLikeObj2 = { 100: "a", 2: "b", 7: "c" };
+console.log(Object.values(arrayLikeObj2)); // ['b', 'c', 'a']
 
 // getFoo is property which isn't enumerable
-const my_obj = Object.create({}, { getFoo: { value: function() { return this.foo; } } });
-my_obj.foo = 'bar';
+const my_obj = Object.create(
+  {},
+  {
+    getFoo: {
+      value: function () {
+        return this.foo;
+      },
+    },
+  }
+);
+my_obj.foo = "bar";
 console.log(Object.values(my_obj)); // ['bar']
 
 // non-object argument will be coerced to an object
-console.log(Object.values('foo')); // ['f', 'o', 'o']
+console.log(Object.values("foo")); // ['f', 'o', 'o']
 ```
 
 ## Specifications

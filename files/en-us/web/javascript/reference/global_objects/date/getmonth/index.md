@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getMonth
 ---
+
 {{JSRef}}
 
 The **`getMonth()`** method returns the month in the specified
@@ -20,7 +21,7 @@ month of the year).
 ## Syntax
 
 ```js
-getMonth()
+getMonth();
 ```
 
 ### Return value
@@ -36,7 +37,7 @@ The second statement below assigns the value 11 to the variable `month`,
 based on the value of the {{jsxref("Date")}} object `Xmas95`.
 
 ```js
-var Xmas95 = new Date('December 25, 1995 23:15:30');
+var Xmas95 = new Date("December 25, 1995 23:15:30");
 var month = Xmas95.getMonth();
 
 console.log(month); // 11
@@ -49,10 +50,10 @@ console.log(month); // 11
 > made easier:
 >
 > ```js
-> var options = { month: 'long'};
-> console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
+> var options = { month: "long" };
+> console.log(new Intl.DateTimeFormat("en-US", options).format(Xmas95));
 > // December
-> console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));
+> console.log(new Intl.DateTimeFormat("de-DE", options).format(Xmas95));
 > // Dezember
 > ```
 

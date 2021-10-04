@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.entries
 ---
+
 {{JSRef}}
 
 The **`Object.entries()`** method returns an array of a given
@@ -29,7 +30,7 @@ the array should be sorted first, like
 ## Syntax
 
 ```js
-Object.entries(obj)
+Object.entries(obj);
 ```
 
 ### Parameters
@@ -63,14 +64,13 @@ not natively support it, you can use any of the following:
 
 ```js
 if (!Object.entries) {
-  Object.entries = function( obj ){
-    var ownProps = Object.keys( obj ),
-        i = ownProps.length,
-        resArray = new Array(i); // preallocate the Array
-    while (i--)
-      resArray[i] = [ownProps[i], obj[ownProps[i]]];
+  Object.entries = function (obj) {
+    var ownProps = Object.keys(obj),
+      i = ownProps.length,
+      resArray = new Array(i); // preallocate the Array
+    while (i--) resArray[i] = [ownProps[i], obj[ownProps[i]]];
 
-    return resArray;
+    return resArray;
   };
 }
 ```
@@ -82,24 +82,33 @@ also need an `Object.keys()` polyfill (such as the one found on the
 ## Examples
 
 ```js
-const obj = { foo: 'bar', baz: 42 };
+const obj = { foo: "bar", baz: 42 };
 console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
 
 // array like object
-const obj = { 0: 'a', 1: 'b', 2: 'c' };
+const obj = { 0: "a", 1: "b", 2: "c" };
 console.log(Object.entries(obj)); // [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ]
 
 // array like object with random key ordering
-const anObj = { 100: 'a', 2: 'b', 7: 'c' };
+const anObj = { 100: "a", 2: "b", 7: "c" };
 console.log(Object.entries(anObj)); // [ ['2', 'b'], ['7', 'c'], ['100', 'a'] ]
 
 // getFoo is property which isn't enumerable
-const myObj = Object.create({}, { getFoo: { value() { return this.foo; } } });
-myObj.foo = 'bar';
+const myObj = Object.create(
+  {},
+  {
+    getFoo: {
+      value() {
+        return this.foo;
+      },
+    },
+  }
+);
+myObj.foo = "bar";
 console.log(Object.entries(myObj)); // [ ['foo', 'bar'] ]
 
 // non-object argument will be coerced to an object
-console.log(Object.entries('foo')); // [ ['0', 'f'], ['1', 'o'], ['2', 'o'] ]
+console.log(Object.entries("foo")); // [ ['0', 'f'], ['1', 'o'], ['2', 'o'] ]
 
 // returns an empty array for any primitive type except for strings (see the above example), since primitives have no own properties
 console.log(Object.entries(100)); // [ ]
@@ -123,7 +132,7 @@ The {{jsxref("Map", "new Map()")}} constructor accepts an iterable of
 {{jsxref("Object")}} to {{jsxref("Map")}}:
 
 ```js
-const obj = { foo: 'bar', baz: 42 };
+const obj = { foo: "bar", baz: 42 };
 const map = new Map(Object.entries(obj));
 console.log(map); // Map(2) {"foo" => "bar", "baz" => 42}
 ```
@@ -134,7 +143,7 @@ Using [Array
 Destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring), you can iterate through objects easily.
 
 ```js
-const obj = { foo: 'bar', baz: 42 };
+const obj = { foo: "bar", baz: 42 };
 Object.entries(obj).forEach(([key, value]) => console.log(`${key}: ${value}`)); // "foo: bar", "baz: 42"
 ```
 

@@ -12,6 +12,7 @@ tags:
   - import
 browser-compat: javascript.statements.import
 ---
+
 {{jsSidebar("Statements")}}
 
 The static **`import`** statement is
@@ -73,7 +74,7 @@ This inserts `myModule` into the current scope, containing all the exports
 from the module in the file located in `/modules/my-module.js`.
 
 ```js
-import * as myModule from '/modules/my-module.js';
+import * as myModule from "/modules/my-module.js";
 ```
 
 Here, accessing the exports means using the module name ("myModule" in this case) as a
@@ -93,7 +94,7 @@ for example using `export * from 'another.js'`) or explicitly (using the
 into the current scope.
 
 ```js
-import {myExport} from '/modules/my-module.js';
+import { myExport } from "/modules/my-module.js";
 ```
 
 ### Import multiple exports from module
@@ -101,7 +102,7 @@ import {myExport} from '/modules/my-module.js';
 This inserts both `foo` and `bar` into the current scope.
 
 ```js
-import {foo, bar} from '/modules/my-module.js';
+import { foo, bar } from "/modules/my-module.js";
 ```
 
 ### Import an export with a more convenient alias
@@ -110,8 +111,7 @@ You can rename an export when importing it. For example, this inserts
 `shortName` into the current scope.
 
 ```js
-import {reallyReallyLongModuleExportName as shortName}
-  from '/modules/my-module.js';
+import { reallyReallyLongModuleExportName as shortName } from "/modules/my-module.js";
 ```
 
 ### Rename multiple exports during import
@@ -121,8 +121,8 @@ Import multiple exports from a module with convenient aliases.
 ```js
 import {
   reallyReallyLongModuleExportName as shortName,
-  anotherLongModuleName as short
-} from '/modules/my-module.js';
+  anotherLongModuleName as short,
+} from "/modules/my-module.js";
 ```
 
 ### Import a module for its side effects only
@@ -131,7 +131,7 @@ Import an entire module for side effects only, without importing anything. This 
 the module's global code, but doesn't actually import any values.
 
 ```js
-import '/modules/my-module.js';
+import "/modules/my-module.js";
 ```
 
 This works with {{anch("Dynamic Imports", "dynamic imports")}} as well:
@@ -139,9 +139,9 @@ This works with {{anch("Dynamic Imports", "dynamic imports")}} as well:
 ```js
 (async () => {
   if (somethingIsTrue) {
-    // import module for side effects
-    await import('/modules/my-module.js');
-  }
+    // import module for side effects
+    await import("/modules/my-module.js");
+  }
 })();
 ```
 
@@ -158,7 +158,7 @@ used to import such defaults.
 The simplest version directly imports the default:
 
 ```js
-import myDefault from '/modules/my-module.js';
+import myDefault from "/modules/my-module.js";
 ```
 
 It is also possible to use the default syntax with the ones seen above (namespace
@@ -166,14 +166,14 @@ imports or named imports). In such cases, the default import will have to be dec
 first. For instance:
 
 ```js
-import myDefault, * as myModule from '/modules/my-module.js';
+import myDefault, * as myModule from "/modules/my-module.js";
 // myModule used as a namespace
 ```
 
 or
 
 ```js
-import myDefault, {foo, bar} from '/modules/my-module.js';
+import myDefault, { foo, bar } from "/modules/my-module.js";
 // specific, named imports
 ```
 
@@ -184,7 +184,11 @@ returned object.
 ```js
 (async () => {
   if (somethingIsTrue) {
-    const { default: myDefault, foo, bar } = await import('/modules/my-module.js');
+    const {
+      default: myDefault,
+      foo,
+      bar,
+    } = await import("/modules/my-module.js");
   }
 })();
 ```
@@ -215,16 +219,15 @@ To dynamically import a module, the `import` keyword may be called as a
 function. When used this way, it returns a promise.
 
 ```js
-import('/modules/my-module.js')
-  .then((module) => {
-    // Do something with the module.
-  });
+import("/modules/my-module.js").then((module) => {
+  // Do something with the module.
+});
 ```
 
 This form also supports the `await` keyword.
 
 ```js
-let module = await import('/modules/my-module.js');
+let module = await import("/modules/my-module.js");
 ```
 
 ## Examples
@@ -240,24 +243,25 @@ AJAX JSON request.
 function getJSON(url, callback) {
   let xhr = new XMLHttpRequest();
   xhr.onload = function () {
-    callback(this.responseText)
+    callback(this.responseText);
   };
-  xhr.open('GET', url, true);
+  xhr.open("GET", url, true);
   xhr.send();
 }
 
 export function getUsefulContents(url, callback) {
-  getJSON(url, data => callback(JSON.parse(data)));
+  getJSON(url, (data) => callback(JSON.parse(data)));
 }
 ```
 
 #### The main program: main.js
 
 ```js
-import { getUsefulContents } from '/modules/file.js';
+import { getUsefulContents } from "/modules/file.js";
 
-getUsefulContents('http://www.example.com',
-    data => { doSomethingUseful(data); });
+getUsefulContents("http://www.example.com", (data) => {
+  doSomethingUseful(data);
+});
 ```
 
 ### Dynamic Import
@@ -270,14 +274,14 @@ supports `await`.
 ```js
 const main = document.querySelector("main");
 for (const link of document.querySelectorAll("nav > a")) {
-  link.addEventListener("click", e => {
+  link.addEventListener("click", (e) => {
     e.preventDefault();
 
-    import('/modules/my-module.js')
-      .then(module => {
+    import("/modules/my-module.js")
+      .then((module) => {
         module.loadPageInto(main);
       })
-      .catch(err => {
+      .catch((err) => {
         main.textContent = err.message;
       });
   });

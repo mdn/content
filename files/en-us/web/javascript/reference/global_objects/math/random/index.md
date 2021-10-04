@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Math.random
 ---
+
 {{JSRef}}
 
 The **`Math.random()`** function returns a floating-point,
@@ -23,12 +24,13 @@ generation algorithm; it cannot be chosen or reset by the user.
 > **Note:** `Math.random()` _does not_ provide cryptographically secure random
 > numbers. Do not use them for anything related to security. Use the Web Crypto API
 > instead, and more precisely the {{domxref("Crypto.getRandomValues",
+
     "window.crypto.getRandomValues()")}} method.
 
 ## Syntax
 
 ```js
-Math.random()
+Math.random();
 ```
 
 ### Return value
@@ -73,8 +75,8 @@ is no lower than `min` (or the next integer greater than `min` if
 
 ```js
 function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
+  min = Math.ceil(min);
+  max = Math.floor(max);
   return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
 }
 ```
@@ -92,8 +94,8 @@ accomplishes that.
 
 ```js
 function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
+  min = Math.ceil(min);
+  max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
 }
 ```

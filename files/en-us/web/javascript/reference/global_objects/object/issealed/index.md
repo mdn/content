@@ -9,6 +9,7 @@ tags:
   - Object
 browser-compat: javascript.builtins.Object.isSealed
 ---
+
 {{JSRef}}
 
 The **`Object.isSealed()`** method determines if an object is
@@ -19,7 +20,7 @@ sealed.
 ## Syntax
 
 ```js
-Object.isSealed(obj)
+Object.isSealed(obj);
 ```
 
 ### Parameters
@@ -54,14 +55,14 @@ Object.isSealed(empty); // === true
 
 // The same is not true of a non-empty object,
 // unless its properties are all non-configurable.
-var hasProp = { fee: 'fie foe fum' };
+var hasProp = { fee: "fie foe fum" };
 Object.preventExtensions(hasProp);
 Object.isSealed(hasProp); // === false
 
 // But make them all non-configurable
 // and the object becomes sealed.
-Object.defineProperty(hasProp, 'fee', {
-  configurable: false
+Object.defineProperty(hasProp, "fee", {
+  configurable: false,
 });
 Object.isSealed(hasProp); // === true
 
@@ -83,7 +84,11 @@ var s2 = Object.seal({ p: 3 });
 Object.isFrozen(s2); // === false
 // ('p' is still writable)
 
-var s3 = Object.seal({ get p() { return 0; } });
+var s3 = Object.seal({
+  get p() {
+    return 0;
+  },
+});
 Object.isFrozen(s3); // === true
 // (only configurability matters for accessor properties)
 ```

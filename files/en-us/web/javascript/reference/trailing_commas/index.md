@@ -11,6 +11,7 @@ tags:
   - Trailing comma
 browser-compat: javascript.grammar.trailing_commas
 ---
+
 {{JsSidebar("More")}}
 
 **Trailing commas** (sometimes called "final commas") can be useful when
@@ -40,11 +41,7 @@ function parameters and to named imports and named exports.
 JavaScript ignores trailing commas in arrays:
 
 ```js
-var arr = [
-  1,
-  2,
-  3,
-];
+var arr = [1, 2, 3];
 
 arr; // [1, 2, 3]
 arr.length; // 3
@@ -56,7 +53,7 @@ iterating arrays for example with {{jsxref("Array.prototype.forEach()")}} or
 {{jsxref("Array.prototype.map()")}}, array holes are skipped.
 
 ```js
-var arr = [1, 2, 3,,,];
+var arr = [1, 2, 3, , ,];
 arr.length; // 5
 ```
 
@@ -84,10 +81,10 @@ or their `arguments` object.
 
 ```js
 function f(p) {}
-function f(p,) {}
+function f(p) {}
 
 (p) => {};
-(p,) => {};
+(p) => {};
 ```
 
 The trailing comma also works with [method
@@ -95,13 +92,13 @@ definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) 
 
 ```js
 class C {
-  one(a,) {}
-  two(a, b,) {}
+  one(a) {}
+  two(a, b) {}
 }
 
 var obj = {
-  one(a,) {},
-  two(a, b,) {},
+  one(a) {},
+  two(a, b) {},
 };
 ```
 
@@ -111,10 +108,10 @@ The following function invocation pairs are legal and equivalent to each other.
 
 ```js
 f(p);
-f(p,);
+f(p);
 
 Math.max(10, 20);
-Math.max(10, 20,);
+Math.max(10, 20);
 ```
 
 #### Illegal trailing commas
@@ -139,14 +136,14 @@ assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignm
 
 ```js
 // array destructuring with trailing comma
-[a, b,] = [1, 2];
+[a, b] = [1, 2];
 
 // object destructuring with trailing comma
 var o = {
   p: 42,
   q: true,
 };
-var {p, q,} = o;
+var { p, q } = o;
 ```
 
 Again, when using a rest element, a {{jsxref("SyntaxError")}} will be thrown:
@@ -165,7 +162,7 @@ JSON**.
 Both lines will throw a `SyntaxError`:
 
 ```js example-bad
-JSON.parse('[1, 2, 3, 4, ]');
+JSON.parse("[1, 2, 3, 4, ]");
 JSON.parse('{"foo" : 1, }');
 // SyntaxError JSON.parse: unexpected character
 // at line 1 column 14 of the JSON data
@@ -174,7 +171,7 @@ JSON.parse('{"foo" : 1, }');
 Omit the trailing commas to parse the JSON correctly:
 
 ```js example-good
-JSON.parse('[1, 2, 3, 4 ]');
+JSON.parse("[1, 2, 3, 4 ]");
 JSON.parse('{"foo" : 1 }');
 ```
 
@@ -185,29 +182,21 @@ Trailing commas are valid in named imports and named exports.
 #### named imports
 
 ```js
-  import {
-    A,
-    B,
-    C,
-  } from 'D'
+import { A, B, C } from "D";
 
-  import { X, Y, Z } from 'W'
+import { X, Y, Z } from "W";
 
-  import { A as B, C as D, E as F } from 'Z'; //Renaming imports
+import { A as B, C as D, E as F } from "Z"; //Renaming imports
 ```
 
 #### named exports
 
 ```js
-  export {
-    A,
-    B,
-    C
-  }
+export { A, B, C };
 
-  export { A, B, C };
+export { A, B, C };
 
-  export { A as B, C as D, E as F }; // Renaming exports
+export { A as B, C as D, E as F }; // Renaming exports
 ```
 
 ### Quantifier prefix

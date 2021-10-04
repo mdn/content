@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Number.isNaN
 ---
+
 {{JSRef}}
 
 The **`Number.isNaN()`** method determines whether the passed
@@ -21,7 +22,7 @@ version of the original, global {{jsxref("isNaN", "isNaN()")}}.
 ## Syntax
 
 ```js
-Number.isNaN(value)
+Number.isNaN(value);
 ```
 
 ### Parameters
@@ -54,24 +55,24 @@ return `true`.
 ### Using isNaN
 
 ```js
-Number.isNaN(NaN);        // true
+Number.isNaN(NaN); // true
 Number.isNaN(Number.NaN); // true
-Number.isNaN(0 / 0);      // true
+Number.isNaN(0 / 0); // true
 
 // e.g. these would have been true with global isNaN()
-Number.isNaN('NaN');      // false
-Number.isNaN(undefined);  // false
-Number.isNaN({});         // false
-Number.isNaN('blabla');   // false
+Number.isNaN("NaN"); // false
+Number.isNaN(undefined); // false
+Number.isNaN({}); // false
+Number.isNaN("blabla"); // false
 
 // These all return false
 Number.isNaN(true);
 Number.isNaN(null);
 Number.isNaN(37);
-Number.isNaN('37');
-Number.isNaN('37.37');
-Number.isNaN('');
-Number.isNaN(' ');
+Number.isNaN("37");
+Number.isNaN("37.37");
+Number.isNaN("");
+Number.isNaN(" ");
 ```
 
 ## Polyfill
@@ -80,9 +81,11 @@ The following works because NaN is the only value in JavaScript which is not equ
 itself.
 
 ```js
-Number.isNaN = Number.isNaN || function isNaN(input) {
-    return typeof input === 'number' && input !== input;
-}
+Number.isNaN =
+  Number.isNaN ||
+  function isNaN(input) {
+    return typeof input === "number" && input !== input;
+  };
 ```
 
 ## Specifications

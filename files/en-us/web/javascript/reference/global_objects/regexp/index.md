@@ -9,6 +9,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp
 ---
+
 {{JSRef}}
 
 The **`RegExp`** object is used for matching text with a pattern.
@@ -28,8 +29,8 @@ The following three expressions create the same regular expression object:
 
 ```js
 let re = /ab+c/i; // literal notation
-let re = new RegExp('ab+c', 'i') // constructor with string pattern as first argument
-let re = new RegExp(/ab+c/, 'i') // constructor with regular expression literal as first argument (Starting with ECMAScript 6)
+let re = new RegExp("ab+c", "i"); // constructor with string pattern as first argument
+let re = new RegExp(/ab+c/, "i"); // constructor with regular expression literal as first argument (Starting with ECMAScript 6)
 ```
 
 The literal notation results in compilation of the regular expression when the expression is evaluated. Use literal notation when the regular expression will remain constant. For example, if you use literal notation to construct a regular expression used in a loop, the regular expression won't be recompiled on each iteration.
@@ -45,8 +46,8 @@ When using the constructor function, the normal string escape rules (preceding s
 For example, the following are equivalent:
 
 ```js
-let re = /\w+/
-let re = new RegExp('\\w+')
+let re = /\w+/;
+let re = new RegExp("\\w+");
 ```
 
 ### Perl-like RegExp properties
@@ -116,10 +117,10 @@ The following script uses the {{jsxref("String.prototype.replace()", "replace()"
 In the replacement text, the script uses `$1` and `$2` to indicate the results of the corresponding matching parentheses in the regular expression pattern.
 
 ```js
-let re = /(\w+)\s(\w+)/
-let str = 'John Smith'
-let newstr = str.replace(re, '$2, $1')
-console.log(newstr)
+let re = /(\w+)\s(\w+)/;
+let str = "John Smith";
+let newstr = str.replace(re, "$2, $1");
+console.log(newstr);
 ```
 
 This displays `"Smith, John"`.
@@ -129,9 +130,9 @@ This displays `"Smith, John"`.
 The default line ending varies depending on the platform (Unix, Windows, etc.). The line splitting provided in this example works on all platforms.
 
 ```js
-let text = 'Some text\nAnd some more\r\nAnd yet\rThis is the end'
-let lines = text.split(/\r\n|\r|\n/)
-console.log(lines) // logs [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
+let text = "Some text\nAnd some more\r\nAnd yet\rThis is the end";
+let lines = text.split(/\r\n|\r|\n/);
+console.log(lines); // logs [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
 ```
 
 Note that the order of the patterns in the regular expression matters.
@@ -139,7 +140,7 @@ Note that the order of the patterns in the regular expression matters.
 ### Using regular expression on multiple lines
 
 ```js
-let s = 'Please yes\nmake my day!'
+let s = "Please yes\nmake my day!";
 
 s.match(/yes.*day/);
 // Returns null
@@ -153,14 +154,14 @@ s.match(/yes[^]*day/);
 The {{JSxRef("Global_Objects/RegExp/sticky", "sticky")}} flag indicates that the regular expression performs sticky matching in the target string by attempting to match starting at {{jsxref("RegExp.prototype.lastIndex")}}.
 
 ```js
-let str = '#foo#'
-let regex = /foo/y
+let str = "#foo#";
+let regex = /foo/y;
 
-regex.lastIndex = 1
-regex.test(str)      // true
-regex.lastIndex = 5
-regex.test(str)      // false (lastIndex is taken into account with sticky flag)
-regex.lastIndex      // 0 (reset after match failure)
+regex.lastIndex = 1;
+regex.test(str); // true
+regex.lastIndex = 5;
+regex.test(str); // false (lastIndex is taken into account with sticky flag)
+regex.lastIndex; // 0 (reset after match failure)
 ```
 
 ### The difference between the sticky flag and the global flag
@@ -169,7 +170,8 @@ With the sticky flag `y`, the next match has to happen at the `lastIndex` positi
 
 ```js
 re = /\d/y;
-while (r = re.exec("123 456")) console.log(r, "AND re.lastIndex", re.lastIndex);
+while ((r = re.exec("123 456")))
+  console.log(r, "AND re.lastIndex", re.lastIndex);
 
 // [ '1', index: 0, input: '123 456', groups: undefined ] AND re.lastIndex 1
 // [ '2', index: 1, input: '123 456', groups: undefined ] AND re.lastIndex 2
@@ -188,16 +190,16 @@ To match characters from other languages such as Cyrillic or Hebrew, use `\uhhhh
 This example demonstrates how one can separate out Unicode characters from a word.
 
 ```js
-let text = 'Образец text на русском языке'
-let regex = /[\u0400-\u04FF]+/g
+let text = "Образец text на русском языке";
+let regex = /[\u0400-\u04FF]+/g;
 
-let match = regex.exec(text)
-console.log(match[0])        // logs 'Образец'
-console.log(regex.lastIndex) // logs '7'
+let match = regex.exec(text);
+console.log(match[0]); // logs 'Образец'
+console.log(regex.lastIndex); // logs '7'
 
-let match2 = regex.exec(text)
-console.log(match2[0])       // logs 'на' [did not log 'text']
-console.log(regex.lastIndex) // logs '15'
+let match2 = regex.exec(text);
+console.log(match2[0]); // logs 'на' [did not log 'text']
+console.log(regex.lastIndex); // logs '15'
 
 // and so on
 ```
@@ -207,8 +209,8 @@ The [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressi
 ### Extracting sub-domain name from URL
 
 ```js
-let url = 'http://xxx.domain.com'
-console.log(/[^.]+/.exec(url)[0].substr(7)) // logs 'xxx'
+let url = "http://xxx.domain.com";
+console.log(/[^.]+/.exec(url)[0].substr(7)); // logs 'xxx'
 ```
 
 > **Note:** Instead of using regular expressions for parsing URLs, it is usually better to use the browsers built-in URL parser by using the [URL API](/en-US/docs/Web/API/URL_API).
@@ -227,13 +229,13 @@ Starting with Firefox 34, in the case of a capturing group with quantifiers prev
 
 ```js
 // Firefox 33 or older
-'x'.replace(/x(.)?/g, function(m, group) {
+"x".replace(/x(.)?/g, function (m, group) {
   console.log("'group:" + group + "'");
 });
 // 'group:'
 
 // Firefox 34 or newer
-'x'.replace(/x(.)?/g, function(m, group) {
+"x".replace(/x(.)?/g, function (m, group) {
   console.log("'group:" + group + "'");
 });
 // 'group:undefined'

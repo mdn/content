@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing ) after argument list'
+title: "SyntaxError: missing ) after argument list"
 slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
 tags:
   - Error
@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing ) after argument list" occurs when there is an error
@@ -43,7 +44,7 @@ console.log('PI: ' Math.PI);
 You can correct the `log` call by adding the "`+`" operator:
 
 ```js example-good
-console.log('PI: ' + Math.PI);
+console.log("PI: " + Math.PI);
 // "PI: 3.141592653589793"
 ```
 
@@ -60,7 +61,7 @@ function `console.log`. To fix this, we could put  a`'` after the
 "Script" string:
 
 ```js example-good
-console.log('"Java" + "Script" = \"' + 'Java' + 'Script\"');
+console.log('"Java" + "Script" = "' + "Java" + 'Script"');
 // '"Java" + "Script" = "JavaScript"'
 ```
 

@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.Date
 ---
+
 {{JSRef}}
 
 Creates a JavaScript **`Date`**
@@ -20,16 +21,16 @@ milliseconds since 1 January 1970 UTC.
 ## Syntax
 
 ```js
-new Date()
-new Date(value)
-new Date(dateString)
+new Date();
+new Date(value);
+new Date(dateString);
 
-new Date(year, monthIndex)
-new Date(year, monthIndex, day)
-new Date(year, monthIndex, day, hours)
-new Date(year, monthIndex, day, hours, minutes)
-new Date(year, monthIndex, day, hours, minutes, seconds)
-new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
+new Date(year, monthIndex);
+new Date(year, monthIndex, day);
+new Date(year, monthIndex, day, hours);
+new Date(year, monthIndex, day, hours, minutes);
+new Date(year, monthIndex, day, hours, minutes, seconds);
+new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds);
 ```
 
 > **Note:** The only correct way to instantiate a new `Date`
@@ -124,11 +125,11 @@ The following examples show several ways to create JavaScript dates:
 > browser differences and inconsistencies.
 
 ```js
-let today = new Date()
-let birthday = new Date('December 17, 1995 13:24:00')
-let birthday = new Date('1995-12-17T13:24:00')
-let birthday = new Date(1995, 11, 17)            // the month is 0-indexed
-let birthday = new Date(1995, 11, 17, 13, 24, 0)
+let today = new Date();
+let birthday = new Date("December 17, 1995 13:24:00");
+let birthday = new Date("1995-12-17T13:24:00");
+let birthday = new Date(1995, 11, 17); // the month is 0-indexed
+let birthday = new Date(1995, 11, 17, 13, 24, 0);
 ```
 
 ## Specifications

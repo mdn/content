@@ -12,6 +12,7 @@ tags:
   - RelativeTimeFormat
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat.RelativeTimeFormat
 ---
+
 {{JSRef}}
 
 The **`Intl.RelativeTimeFormat()`** constructor creates {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}} objects.
@@ -19,9 +20,9 @@ The **`Intl.RelativeTimeFormat()`** constructor creates {{jsxref("Intl/RelativeT
 ## Syntax
 
 ```js
-new Intl.RelativeTimeFormat()
-new Intl.RelativeTimeFormat(locales)
-new Intl.RelativeTimeFormat(locales, options)
+new Intl.RelativeTimeFormat();
+new Intl.RelativeTimeFormat(locales);
+new Intl.RelativeTimeFormat(locales, options);
 ```
 
 ### Parameters
@@ -59,9 +60,9 @@ The following example shows how to create a relative time formatter using the En
 // Create a relative time formatter in your locale
 // with default values explicitly passed in.
 const rtf = new Intl.RelativeTimeFormat("en", {
-    localeMatcher: "best fit", // other values: "lookup"
-    numeric: "always", // other values: "auto"
-    style: "long", // other values: "short" or "narrow"
+  localeMatcher: "best fit", // other values: "lookup"
+  numeric: "always", // other values: "auto"
+  style: "long", // other values: "short" or "narrow"
 });
 
 // Format relative time using negative value (-1).

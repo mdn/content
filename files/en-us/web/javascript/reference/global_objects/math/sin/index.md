@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Math.sin
 ---
+
 {{JSRef}}
 
 The **`Math.sin()`** function returns the sine of a number.
@@ -17,7 +18,7 @@ The **`Math.sin()`** function returns the sine of a number.
 ## Syntax
 
 ```js
-Math.sin(x)
+Math.sin(x);
 ```
 
 ### Parameters
@@ -43,8 +44,8 @@ created (`Math` is not a constructor).
 ### Using Math.sin()
 
 ```js
-Math.sin(0);           // 0
-Math.sin(1);           // 0.8414709848078965
+Math.sin(0); // 0
+Math.sin(1); // 0.8414709848078965
 
 Math.sin(Math.PI / 2); // 1
 ```

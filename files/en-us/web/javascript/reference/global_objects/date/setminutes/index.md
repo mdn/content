@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setMinutes
 ---
+
 {{JSRef}}
 
 The **`setMinutes()`** method sets the minutes for a specified
@@ -19,9 +20,9 @@ date according to local time.
 ## Syntax
 
 ```js
-setMinutes(minutesValue)
-setMinutes(minutesValue, secondsValue)
-setMinutes(minutesValue, secondsValue, msValue)
+setMinutes(minutesValue);
+setMinutes(minutesValue, secondsValue);
+setMinutes(minutesValue, secondsValue, msValue);
 ```
 
 ### Parameters

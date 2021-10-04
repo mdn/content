@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.DataView.DataView
 ---
+
 {{JSRef}}
 
 The **`DataView()`** constructor is used to create
@@ -20,9 +21,9 @@ The **`DataView()`** constructor is used to create
 ## Syntax
 
 ```js
-new DataView(buffer)
-new DataView(buffer, byteOffset)
-new DataView(buffer, byteOffset, byteLength)
+new DataView(buffer);
+new DataView(buffer, byteOffset);
+new DataView(buffer, byteOffset, byteLength);
 ```
 
 ### Parameters

@@ -8,6 +8,7 @@ tags:
   - Namespace
 browser-compat: javascript.builtins.Intl
 ---
+
 {{JSRef}}
 
 The **`Intl`** object is the namespace for the ECMAScript Internationalization API, which provides language sensitive string comparison, number formatting, and date and time formatting. The **`Intl`** object provides access to several constructors as well as functionality common to the internationalization constructors and other language sensitive functions.
@@ -107,7 +108,9 @@ const date = new Date("2012-05-24");
 
 function log(locale) {
   console.log(
-    `${new Intl.DateTimeFormat(locale).format(date)} ${new Intl.NumberFormat(locale).format(count)}`
+    `${new Intl.DateTimeFormat(locale).format(date)} ${new Intl.NumberFormat(
+      locale
+    ).format(count)}`
   );
 }
 

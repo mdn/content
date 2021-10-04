@@ -10,6 +10,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.for_of
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`for...of` statement** creates a loop iterating over [iterable
@@ -25,7 +26,7 @@ statements to be executed for the value of each distinct property of the object.
 
 ```js
 for (variable of iterable) {
-  statement
+  statement;
 }
 ```
 
@@ -58,7 +59,7 @@ You can use {{jsxref("Statements/let", "let")}} instead of {{jsxref("Statements/
 const iterable = [10, 20, 30];
 
 for (let value of iterable) {
-  value += 1;
+  value += 1;
   console.log(value);
 }
 // 11
@@ -69,7 +70,7 @@ for (let value of iterable) {
 ### Iterating over a `String`
 
 ```js
-const iterable = 'boo';
+const iterable = "boo";
 
 for (const value of iterable) {
   console.log(value);
@@ -94,7 +95,11 @@ for (const value of iterable) {
 ### Iterating over a `Map`
 
 ```js
-const iterable = new Map([['a', 1], ['b', 2], ['c', 3]]);
+const iterable = new Map([
+  ["a", 1],
+  ["b", 2],
+  ["c", 3],
+]);
 
 for (const entry of iterable) {
   console.log(entry);
@@ -130,7 +135,7 @@ You can iterate over the {{jsxref("Functions/arguments", "arguments")}} object t
 examine all of the parameters passed into a JavaScript function:
 
 ```js
-(function() {
+(function () {
   for (const argument of arguments) {
     console.log(argument);
   }
@@ -150,10 +155,10 @@ descendants of an article:
 ```js
 // Note: This will only work in platforms that have
 // implemented NodeList.prototype[Symbol.iterator]
-const articleParagraphs = document.querySelectorAll('article > p');
+const articleParagraphs = document.querySelectorAll("article > p");
 
 for (const paragraph of articleParagraphs) {
-  paragraph.classList.add('read');
+  paragraph.classList.add("read");
 }
 ```
 
@@ -164,17 +169,17 @@ In `for...of` loops, abrupt iteration termination can be caused by
 iterator is closed.
 
 ```js
-function* foo(){
+function* foo() {
   yield 1;
   yield 2;
   yield 3;
-};
+}
 
 for (const o of foo()) {
   console.log(o);
   break; // closes iterator, execution continues outside of the loop
 }
-console.log('done');
+console.log("done");
 ```
 
 ### Iterating over generators
@@ -183,7 +188,8 @@ You can also iterate over [generators](/en-US/docs/Web/JavaScript/Reference/Stat
 functions generating an iterable object:
 
 ```js
-function* fibonacci() { // a generator function
+function* fibonacci() {
+  // a generator function
   let [prev, curr] = [0, 1];
   while (true) {
     [prev, curr] = [curr, prev + curr];
@@ -208,14 +214,14 @@ a loop, the generator is closed and trying to iterate over it again does not yie
 further results.
 
 ```js example-bad
-const gen = (function *(){
+const gen = (function* () {
   yield 1;
   yield 2;
   yield 3;
 })();
 for (const o of gen) {
   console.log(o);
-  break;  // Closes iterator
+  break; // Closes iterator
 }
 
 // The generator should not be re-used, the following does not make sense!
@@ -239,9 +245,9 @@ const iterable = {
           return { value: this.i++, done: false };
         }
         return { value: undefined, done: true };
-      }
+      },
     };
-  }
+  },
 };
 
 for (const value of iterable) {
@@ -267,20 +273,20 @@ The following example shows the difference between a `for...of` loop and a
 `for...in` loop when used with an {{jsxref("Array")}}.
 
 ```js
-Object.prototype.objCustom = function() {};
-Array.prototype.arrCustom = function() {};
+Object.prototype.objCustom = function () {};
+Array.prototype.arrCustom = function () {};
 
 const iterable = [3, 5, 7];
-iterable.foo = 'hello';
+iterable.foo = "hello";
 
 for (const i in iterable) {
   console.log(i); // logs "0", "1", "2", "foo", "arrCustom", "objCustom"
 }
 
 for (const i in iterable) {
-  if (iterable.hasOwnProperty(i)) {
-    console.log(i); // logs "0", "1", "2", "foo"
-  }
+  if (iterable.hasOwnProperty(i)) {
+    console.log(i); // logs "0", "1", "2", "foo"
+  }
 }
 
 for (const i of iterable) {
@@ -291,11 +297,11 @@ for (const i of iterable) {
 Let us look into the above code step by step.
 
 ```js
-Object.prototype.objCustom = function() {};
-Array.prototype.arrCustom = function() {};
+Object.prototype.objCustom = function () {};
+Array.prototype.arrCustom = function () {};
 
 const iterable = [3, 5, 7];
-iterable.foo = 'hello';
+iterable.foo = "hello";
 ```
 
 Every object will inherit the `objCustom` property and every object that is
@@ -325,7 +331,7 @@ thorough explanation of how {{jsxref("Statements/for...in", "array iteration and
 for (const i in iterable) {
   if (iterable.hasOwnProperty(i)) {
     console.log(i); // logs 0, 1, 2, "foo"
-  }
+  }
 }
 ```
 

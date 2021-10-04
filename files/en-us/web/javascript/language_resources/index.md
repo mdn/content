@@ -7,6 +7,7 @@ tags:
   - Guide
   - JavaScript
 ---
+
 {{JsSidebar}}
 
 **ECMAScript** is the scripting language that forms the basis of [JavaScript](/en-US/docs/Web/JavaScript). ECMAScript standardized by the [ECMA International](https://www.ecma-international.org/) standards organization in the **ECMA-262 and ECMA-402 specifications**. The following ECMAScript standards have been approved or are being worked on:
@@ -269,11 +270,11 @@ See [Wikipedia ECMAScript entry](https://en.wikipedia.org/wiki/ECMAScript) for m
 
 There are a variety of ways you can participate in or just track current work on the ECMAScript Language Specification and the ECMAScript Internationalization API Specification and related resources:
 
-Resource                          | Description
-----------------------------------|----------------------------------
-https://github.com/tc39/ecma262   | ECMAScript Language Specification repo
-https://github.com/tc39/ecma402   | ECMAScript Internationalization API Specification repo
-https://github.com/tc39/proposals | ECMAScript proposals repo
-https://github.com/tc39/test262   | ECMAScript conformance test suite repo
-https://es.discourse.group/       | ECMAScript spec discussion; current mailing list
-https://esdiscuss.org/            | ECMAScript spec discussion; historical mailing-list archives (until March 2021)
+| Resource                          | Description                                                                     |
+| --------------------------------- | ------------------------------------------------------------------------------- |
+| https://github.com/tc39/ecma262   | ECMAScript Language Specification repo                                          |
+| https://github.com/tc39/ecma402   | ECMAScript Internationalization API Specification repo                          |
+| https://github.com/tc39/proposals | ECMAScript proposals repo                                                       |
+| https://github.com/tc39/test262   | ECMAScript conformance test suite repo                                          |
+| https://es.discourse.group/       | ECMAScript spec discussion; current mailing list                                |
+| https://esdiscuss.org/            | ECMAScript spec discussion; historical mailing-list archives (until March 2021) |

@@ -8,6 +8,7 @@ tags:
   - JavaScript
   - l10n:priority
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
 
 This chapter introduces JavaScript and discusses some of its fundamental concepts.
@@ -97,9 +98,9 @@ The console works the exact same way as `eval`: the last expression entered is r
 
 ```js
 function greetMe(yourName) {
-  alert("Hello " + yourName)
+  alert("Hello " + yourName);
 }
-console.log(eval('3 + 5'))
+console.log(eval("3 + 5"));
 ```
 
 ### Multi-line input in the Web Console
@@ -111,15 +112,13 @@ The single-line input mode of the Web Console is great for quick testing of Java
 To get started with writing JavaScript, open the Web Console in multi-line mode, and write your first "Hello world" JavaScript code:
 
 ```js
-(function(){
-  "use strict";
-  /* Start of your code */
-  function greetMe(yourName) {
-    alert('Hello ' + yourName);
+(function () {
+  "use strict"; /* Start of your code */
+  function greetMe(yourName) {
+    alert("Hello " + yourName);
   }
 
-  greetMe('World');
-  /* End of your code */
+  greetMe("World"); /* End of your code */
 })();
 ```
 

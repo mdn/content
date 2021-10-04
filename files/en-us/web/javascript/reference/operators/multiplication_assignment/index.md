@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.multiplication_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The multiplication assignment operator (`*=`) multiplies a variable by the
@@ -19,7 +20,7 @@ value of the right operand and assigns the result to the variable.
 ## Syntax
 
 ```js
-x *= y // x = x * y
+x *= y; // x = x * y
 ```
 
 ## Examples
@@ -30,8 +31,8 @@ x *= y // x = x * y
 // Assuming the following variable
 //  bar = 5
 
-bar *= 2     // 10
-bar *= 'foo' // NaN
+bar *= 2; // 10
+bar *= "foo"; // NaN
 ```
 
 ## Specifications

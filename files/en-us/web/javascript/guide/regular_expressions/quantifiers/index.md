@@ -9,6 +9,7 @@ tags:
   - quantifiers
   - regex
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 Quantifiers indicate numbers of characters or expressions to match.
@@ -164,8 +165,8 @@ var loooongWord = /\b\w{13,}\b/g;
 var sentence = "Why do I have to learn multiplication table?";
 
 console.table(sentence.match(singleLetterWord)); // ["I"]
-console.table(sentence.match(notSoLongWord));    // [ "Why", "do", "I", "have", "to", "learn", "table" ]
-console.table(sentence.match(loooongWord));      // ["multiplication"]
+console.table(sentence.match(notSoLongWord)); // [ "Why", "do", "I", "have", "to", "learn", "table" ]
+console.table(sentence.match(loooongWord)); // ["multiplication"]
 ```
 
 ### Optional character

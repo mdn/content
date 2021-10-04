@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DateTimeFormat.formatToParts
 ---
+
 {{JSRef}}
 
 The **`Intl.DateTimeFormat.prototype.formatToParts()`** method
@@ -21,7 +22,7 @@ formatters.
 ## Syntax
 
 ```js
-formatToParts(date)
+formatToParts(date);
 ```
 
 ### Parameters
@@ -43,9 +44,9 @@ looks like this:
 
 ```js
 [
-  { type: 'day', value: '17' },
-  { type: 'weekday', value: 'Monday' }
-]
+  { type: "day", value: "17" },
+  { type: "weekday", value: "Monday" },
+];
 ```
 
 Possible types are the following:
@@ -99,17 +100,17 @@ manipulated directly:
 ```js
 var date = Date.UTC(2012, 11, 17, 3, 0, 42);
 
-var formatter = new Intl.DateTimeFormat('en-us', {
-  weekday: 'long',
-  year: 'numeric',
-  month: 'numeric',
-  day: 'numeric',
-  hour: 'numeric',
-  minute: 'numeric',
-  second: 'numeric',
+var formatter = new Intl.DateTimeFormat("en-us", {
+  weekday: "long",
+  year: "numeric",
+  month: "numeric",
+  day: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
   fractionalSecondDigits: 3,
   hour12: true,
-  timeZone: 'UTC'
+  timeZone: "UTC",
 });
 
 formatter.format(date);
@@ -125,23 +126,23 @@ formatter.formatToParts(date);
 
 // return value:
 [
-  { type: 'weekday',   value: 'Monday' },
-  { type: 'literal',   value: ', '     },
-  { type: 'month',     value: '12'     },
-  { type: 'literal',   value: '/'      },
-  { type: 'day',       value: '17'     },
-  { type: 'literal',   value: '/'      },
-  { type: 'year',      value: '2012'   },
-  { type: 'literal',   value: ', '     },
-  { type: 'hour',      value: '3'      },
-  { type: 'literal',   value: ':'      },
-  { type: 'minute',    value: '00'     },
-  { type: 'literal',   value: ':'      },
-  { type: 'second',    value: '42'     },
-  { type: 'fractionalSecond', value: '000' },
-  { type: 'literal',   value: ' '      },
-  { type: 'dayPeriod', value: 'AM'     }
-]
+  { type: "weekday", value: "Monday" },
+  { type: "literal", value: ", " },
+  { type: "month", value: "12" },
+  { type: "literal", value: "/" },
+  { type: "day", value: "17" },
+  { type: "literal", value: "/" },
+  { type: "year", value: "2012" },
+  { type: "literal", value: ", " },
+  { type: "hour", value: "3" },
+  { type: "literal", value: ":" },
+  { type: "minute", value: "00" },
+  { type: "literal", value: ":" },
+  { type: "second", value: "42" },
+  { type: "fractionalSecond", value: "000" },
+  { type: "literal", value: " " },
+  { type: "dayPeriod", value: "AM" },
+];
 ```
 
 Now the information is available separately and it can be formatted and concatenated
@@ -150,12 +151,17 @@ functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), a [s
 and {{jsxref("Array.prototype.join()")}}.
 
 ```js
-var dateString = formatter.formatToParts(date).map(({type, value}) => {
-  switch (type) {
-    case 'dayPeriod': return `<b>${value}</b>`;
-    default : return value;
-  }
-}).join('');
+var dateString = formatter
+  .formatToParts(date)
+  .map(({ type, value }) => {
+    switch (type) {
+      case "dayPeriod":
+        return `<b>${value}</b>`;
+      default:
+        return value;
+    }
+  })
+  .join("");
 ```
 
 This will make the day period bold, when using the `formatToParts()` method.
@@ -187,11 +193,11 @@ df.formatToParts(Date.UTC(2012, 11, 17, 3, 0, 42));
 
 // return value
 [
-  { type: 'relatedYear', value: '2012' },
-  { type: 'literal', value: '年' },
-  { type: 'month', value: '十一月' },
-  { type: 'day', value: '4' }
-]
+  { type: "relatedYear", value: "2012" },
+  { type: "literal", value: "年" },
+  { type: "month", value: "十一月" },
+  { type: "day", value: "4" },
+];
 ```
 
 If the `year` option is not set in the bag (to any value), the result will
@@ -203,11 +209,11 @@ df.formatToParts(Date.UTC(2012, 11, 17, 3, 0, 42));
 
 // return value
 [
-   { type: 'relatedYear', value: '2012' },
-   { type: 'literal', value: '年' },
-   { type: 'month', value: '十一月' },
-   { type: 'day', value: '4' }
-]
+  { type: "relatedYear", value: "2012" },
+  { type: "literal", value: "年" },
+  { type: "month", value: "十一月" },
+  { type: "day", value: "4" },
+];
 ```
 
 In cases where the `year` would be output, `.format()` may
@@ -224,30 +230,28 @@ df.format(Date.UTC(2012, 11, 17, 3, 0, 42));
 This also makes it possible to mix locale and calendar in both `format`:
 
 ```js
-let df = new Intl.DateTimeFormat("en-u-ca-chinese", {year: "numeric"});
+let df = new Intl.DateTimeFormat("en-u-ca-chinese", { year: "numeric" });
 let date = Date.UTC(2012, 11, 17, 3, 0, 42);
 df.format(date);
 
 // return value
-2012(ren-chen)
+2012(ren - chen);
 ```
 
 And `formatToParts`:
 
 ```js
-let opts = {month: 'numeric', day: 'numeric', year: "numeric"};
+let opts = { month: "numeric", day: "numeric", year: "numeric" };
 let df = new Intl.DateTimeFormat("en-u-ca-chinese", opts);
 let date = Date.UTC(2012, 11, 17, 3);
-df.formatToParts(date)
-
-// return value
-[
-  { type: 'month', value: '11' },
-  { type: 'literal', value: '/' },
-  { type: 'day', value: '4' },
-  { type: 'literal', value: '/' },
-  { type: 'relatedYear', value: '2012' }
-]
+df.formatToParts(date)[
+  // return value
+  ({ type: "month", value: "11" },
+  { type: "literal", value: "/" },
+  { type: "day", value: "4" },
+  { type: "literal", value: "/" },
+  { type: "relatedYear", value: "2012" })
+];
 ```
 
 ## Specifications

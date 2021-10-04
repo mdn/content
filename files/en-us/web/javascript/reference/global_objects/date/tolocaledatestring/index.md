@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.toLocaleDateString
 ---
+
 {{JSRef}}
 
 The **`toLocaleDateString()`** method returns a string with a
@@ -26,9 +27,9 @@ entirely implementation dependent.
 ## Syntax
 
 ```js
-toLocaleDateString()
-toLocaleDateString(locales)
-toLocaleDateString(locales, options)
+toLocaleDateString();
+toLocaleDateString(locales);
+toLocaleDateString(locales, options);
 ```
 
 ### Parameters
@@ -85,9 +86,9 @@ exception:
 ```js
 function toLocaleDateStringSupportsLocales() {
   try {
-    new Date().toLocaleDateString('i');
+    new Date().toLocaleDateString("i");
   } catch (e) {
-    return e.name === 'RangeError';
+    return e.name === "RangeError";
   }
   return false;
 }
@@ -107,33 +108,33 @@ var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 // America/Los_Angeles for the US
 
 // US English uses month-day-year order
-console.log(date.toLocaleDateString('en-US'));
+console.log(date.toLocaleDateString("en-US"));
 // → "12/19/2012"
 
 // British English uses day-month-year order
-console.log(date.toLocaleDateString('en-GB'));
+console.log(date.toLocaleDateString("en-GB"));
 // → "20/12/2012"
 
 // Korean uses year-month-day order
-console.log(date.toLocaleDateString('ko-KR'));
+console.log(date.toLocaleDateString("ko-KR"));
 // → "2012. 12. 20."
 
 // Event for Persian, It's hard to manually convert date to Solar Hijri
-console.log(date.toLocaleDateString('fa-IR'));
+console.log(date.toLocaleDateString("fa-IR"));
 // → "۱۳۹۱/۹/۳۰"
 
 // Arabic in most Arabic speaking countries uses real Arabic digits
-console.log(date.toLocaleDateString('ar-EG'));
+console.log(date.toLocaleDateString("ar-EG"));
 // → "٢٠‏/١٢‏/٢٠١٢"
 
 // for Japanese, applications may want to use the Japanese calendar,
 // where 2012 was the year 24 of the Heisei era
-console.log(date.toLocaleDateString('ja-JP-u-ca-japanese'));
+console.log(date.toLocaleDateString("ja-JP-u-ca-japanese"));
 // → "24/12/20"
 
 // when requesting a language that may not be supported, such as
 // Balinese, include a fallback language, in this case Indonesian
-console.log(date.toLocaleDateString(['ban', 'id']));
+console.log(date.toLocaleDateString(["ban", "id"]));
 // → "20/12/2012"
 ```
 
@@ -146,14 +147,19 @@ The results provided by `toLocaleDateString()` can be customized using the
 var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // request a weekday along with a long date
-var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-console.log(date.toLocaleDateString('de-DE', options));
+var options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+console.log(date.toLocaleDateString("de-DE", options));
 // → "Donnerstag, 20. Dezember 2012"
 
 // an application may want to use UTC and make that visible
-options.timeZone = 'UTC';
-options.timeZoneName = 'short';
-console.log(date.toLocaleDateString('en-US', options));
+options.timeZone = "UTC";
+options.timeZoneName = "short";
+console.log(date.toLocaleDateString("en-US", options));
 // → "Thursday, December 20, 2012, UTC"
 ```
 

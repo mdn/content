@@ -10,6 +10,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.toLocaleUpperCase
 ---
+
 {{JSRef}}
 
 The **`toLocaleUpperCase()`** method returns the calling string
@@ -66,14 +67,14 @@ implies that the conversion is not stable, so i.E. the following can return
 ### Using toLocaleUpperCase()
 
 ```js
-'alphabet'.toLocaleUpperCase(); // 'ALPHABET'
+"alphabet".toLocaleUpperCase(); // 'ALPHABET'
 
-'Gesäß'.toLocaleUpperCase(); // 'GESÄSS'
+"Gesäß".toLocaleUpperCase(); // 'GESÄSS'
 
-'i\u0307'.toLocaleUpperCase('lt-LT'); // 'I'
+"i\u0307".toLocaleUpperCase("lt-LT"); // 'I'
 
-let locales = ['lt', 'LT', 'lt-LT', 'lt-u-co-phonebk', 'lt-x-lietuva'];
-'i\u0307'.toLocaleUpperCase(locales); // 'I'
+let locales = ["lt", "LT", "lt-LT", "lt-u-co-phonebk", "lt-x-lietuva"];
+"i\u0307".toLocaleUpperCase(locales); // 'I'
 ```
 
 ## Specifications

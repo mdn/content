@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Array
 ---
+
 {{JSRef}}
 
 The JavaScript **`Array`** class is a global object that is used in the construction of arrays; which are high-level, list-like objects.
@@ -25,28 +26,28 @@ Arrays cannot use strings as element indexes (as in an [associative array](https
 **Create an Array**
 
 ```js
-let fruits = ['Apple', 'Banana']
+let fruits = ["Apple", "Banana"];
 
-console.log(fruits.length)
+console.log(fruits.length);
 // 2
 ```
 
 **Access an Array item using the index position**
 
 ```js
-let first = fruits[0]
+let first = fruits[0];
 // Apple
 
-let last = fruits[fruits.length - 1]
+let last = fruits[fruits.length - 1];
 // Banana
 ```
 
 **Loop over an Array**
 
 ```js
-fruits.forEach(function(item, index, array) {
-  console.log(item, index)
-})
+fruits.forEach(function (item, index, array) {
+  console.log(item, index);
+});
 // Apple 0
 // Banana 1
 ```
@@ -54,45 +55,45 @@ fruits.forEach(function(item, index, array) {
 **Add an item to the end of an Array**
 
 ```js
-let newLength = fruits.push('Orange')
+let newLength = fruits.push("Orange");
 // ["Apple", "Banana", "Orange"]
 ```
 
 **Remove an item from the end of an Array**
 
 ```js
-let last = fruits.pop() // remove Orange (from the end)
+let last = fruits.pop(); // remove Orange (from the end)
 // ["Apple", "Banana"]
 ```
 
 **Remove an item from the beginning of an Array**
 
 ```js
-let first = fruits.shift() // remove Apple from the front
+let first = fruits.shift(); // remove Apple from the front
 // ["Banana"]
 ```
 
 **Add an item to the beginning of an Array**
 
 ```js
-let newLength = fruits.unshift('Strawberry') // add to the front
+let newLength = fruits.unshift("Strawberry"); // add to the front
 // ["Strawberry", "Banana"]
 ```
 
 **Find the index of an item in the Array**
 
 ```js
-fruits.push('Mango')
+fruits.push("Mango");
 // ["Strawberry", "Banana", "Mango"]
 
-let pos = fruits.indexOf('Banana')
+let pos = fruits.indexOf("Banana");
 // 1
 ```
 
 **Remove an item by index position**
 
 ```js
-let removedItem = fruits.splice(pos, 1) // this is how to remove an item
+let removedItem = fruits.splice(pos, 1); // this is how to remove an item
 
 // ["Strawberry", "Mango"]
 ```
@@ -100,28 +101,28 @@ let removedItem = fruits.splice(pos, 1) // this is how to remove an item
 **Remove items from an index position**
 
 ```js
-let vegetables = ['Cabbage', 'Turnip', 'Radish', 'Carrot']
-console.log(vegetables)
+let vegetables = ["Cabbage", "Turnip", "Radish", "Carrot"];
+console.log(vegetables);
 // ["Cabbage", "Turnip", "Radish", "Carrot"]
 
-let pos = 1
-let n = 2
+let pos = 1;
+let n = 2;
 
-let removedItems = vegetables.splice(pos, n)
+let removedItems = vegetables.splice(pos, n);
 // this is how to remove items, n defines the number of items to be removed,
 // starting at the index position specified by pos and progressing toward the end of array.
 
-console.log(vegetables)
+console.log(vegetables);
 // ["Cabbage", "Carrot"] (the original array is changed)
 
-console.log(removedItems)
+console.log(removedItems);
 // ["Turnip", "Radish"]
 ```
 
 **Copy an Array**
 
 ```js
-let shallowCopy = fruits.slice() // this is how to make a copy
+let shallowCopy = fruits.slice(); // this is how to make a copy
 // ["Strawberry", "Mango"]
 ```
 
@@ -132,10 +133,14 @@ JavaScript arrays are zero-indexed. The first element of an array is at index `0
 Using an invalid index number returns `undefined`.
 
 ```js
-let arr = ['this is the first element', 'this is the second element', 'this is the last element']
-console.log(arr[0])              // logs 'this is the first element'
-console.log(arr[1])              // logs 'this is the second element'
-console.log(arr[arr.length - 1]) // logs 'this is the last element'
+let arr = [
+  "this is the first element",
+  "this is the second element",
+  "this is the last element",
+];
+console.log(arr[0]); // logs 'this is the first element'
+console.log(arr[1]); // logs 'this is the second element'
+console.log(arr[arr.length - 1]); // logs 'this is the last element'
 ```
 
 Array elements are object properties in the same way that `toString` is a property (to be specific, however, `toString()` is a method). Nevertheless, trying to access an element of an array as follows throws a syntax error because the property name is not valid:
@@ -164,7 +169,7 @@ In the `3d` example, `'3d'` *had* to be quoted (because it begins with a digit)
 The `2` in `years[2]` is coerced into a string by the JavaScript engine through an implicit `toString` conversion. As a result, `'2'` and `'02'` would refer to two different slots on the `years` object, and the following example could be `true`:
 
 ```js
-console.log(years['2'] != years['02'])
+console.log(years["2"] != years["02"]);
 ```
 
 ### Relationship between length and numerical properties
@@ -176,37 +181,37 @@ Several of the built-in array methods (e.g., {{jsxref("Array.join", "join()")}},
 Other methods (e.g., {{jsxref("Array.push", "push()")}}, {{jsxref("Array.splice", "splice()")}}, etc.) also result in updates to an array's {{jsxref("Array.length", "length")}} property.
 
 ```js
-const fruits = []
-fruits.push('banana', 'apple', 'peach')
+const fruits = [];
+fruits.push("banana", "apple", "peach");
 
-console.log(fruits.length) // 3
+console.log(fruits.length); // 3
 ```
 
 When setting a property on a JavaScript array when the property is a valid array index and that index is outside the current bounds of the array, the engine will update the array's {{jsxref("Array.length", "length")}} property accordingly:
 
 ```js
-fruits[5] = 'mango'
-console.log(fruits[5])            // 'mango'
-console.log(Object.keys(fruits))  // ['0', '1', '2', '5']
-console.log(fruits.length)        // 6
+fruits[5] = "mango";
+console.log(fruits[5]); // 'mango'
+console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
+console.log(fruits.length); // 6
 ```
 
 Increasing the {{jsxref("Array.length", "length")}}.
 
 ```js
-fruits.length = 10
-console.log(fruits)              // ['banana', 'apple', 'peach', empty x 2, 'mango', empty x 4]
-console.log(Object.keys(fruits)) // ['0', '1', '2', '5']
-console.log(fruits.length)       // 10
-console.log(fruits[8])           // undefined
+fruits.length = 10;
+console.log(fruits); // ['banana', 'apple', 'peach', empty x 2, 'mango', empty x 4]
+console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
+console.log(fruits.length); // 10
+console.log(fruits[8]); // undefined
 ```
 
 Decreasing the {{jsxref("Array.length", "length")}} property does, however, delete elements.
 
 ```js
-fruits.length = 2
-console.log(Object.keys(fruits)) // ['0', '1']
-console.log(fruits.length)       // 2
+fruits.length = 2;
+console.log(Object.keys(fruits)); // ['0', '1']
+console.log(fruits.length); // 2
 ```
 
 This is explained further on the {{jsxref("Array.length")}} page.
@@ -222,8 +227,8 @@ To help explain these properties and elements, see this example and then refer t
 // Remember matched b's and the following d
 // Ignore case
 
-const myRe = /d(b+)(d)/i
-const myArray = myRe.exec('cdbBdbsbz')
+const myRe = /d(b+)(d)/i;
+const myArray = myRe.exec("cdbBdbsbz");
 ```
 
 The properties and elements returned from this match are as follows:
@@ -315,7 +320,7 @@ The properties and elements returned from this match are as follows:
 - {{jsxref("Array.prototype.findIndex()")}}
   - : Returns the found index in the array, if an element in the array satisfies the testing function, or `-1` if not found.
 - {{jsxref("Array.prototype.flat()")}}
-  - : Returns a new array with all sub-array elements concatenated into it recursively up to the specified depth. 
+  - : Returns a new array with all sub-array elements concatenated into it recursively up to the specified depth.
 - {{jsxref("Array.prototype.flatMap()")}}
   - : Returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level.
 - {{jsxref("Array.prototype.forEach()")}}
@@ -370,12 +375,12 @@ The properties and elements returned from this match are as follows:
 The following example creates an array, `msgArray`, with a length of `0`, then assigns values to `msgArray[0]` and `msgArray[99]`, changing the `length` of the array to `100`.
 
 ```js
-let msgArray = []
-msgArray[0] = 'Hello'
-msgArray[99] = 'world'
+let msgArray = [];
+msgArray[0] = "Hello";
+msgArray[99] = "world";
 
 if (msgArray.length === 100) {
-  console.log('The length is 100.')
+  console.log("The length is 100.");
 }
 ```
 
@@ -385,21 +390,22 @@ The following creates a chessboard as a two-dimensional array of strings. The fi
 
 ```js
 let board = [
-  ['R','N','B','Q','K','B','N','R'],
-  ['P','P','P','P','P','P','P','P'],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  ['p','p','p','p','p','p','p','p'],
-  ['r','n','b','q','k','b','n','r'] ]
+  ["R", "N", "B", "Q", "K", "B", "N", "R"],
+  ["P", "P", "P", "P", "P", "P", "P", "P"],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  ["p", "p", "p", "p", "p", "p", "p", "p"],
+  ["r", "n", "b", "q", "k", "b", "n", "r"],
+];
 
-console.log(board.join('\n') + '\n\n')
+console.log(board.join("\n") + "\n\n");
 
 // Move King's Pawn forward 2
-board[4][4] = board[6][4]
-board[6][4] = ' '
-console.log(board.join('\n'))
+board[4][4] = board[6][4];
+board[6][4] = " ";
+console.log(board.join("\n"));
 ```
 
 Here is the output:
@@ -427,14 +433,11 @@ r,n,b,q,k,b,n,r
 ### Using an array to tabulate a set of values
 
 ```js
-values = []
-for (let x = 0; x < 10; x++){
- values.push([
-  2 ** x,
-  2 * x ** 2
- ])
+values = [];
+for (let x = 0; x < 10; x++) {
+  values.push([2 ** x, 2 * x ** 2]);
 }
-console.table(values)
+console.table(values);
 ```
 
 Results in

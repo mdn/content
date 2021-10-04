@@ -8,6 +8,7 @@ tags:
   - Symbol
 browser-compat: javascript.builtins.Symbol.species
 ---
+
 {{JSRef}}
 
 The well-known symbol **`Symbol.species`** specifies a function-valued property that the constructor function uses to create derived objects.
@@ -29,13 +30,15 @@ You might want to return {{jsxref("Array")}} objects in your derived array class
 ```js
 class MyArray extends Array {
   // Overwrite species to the parent Array constructor
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
-let a = new MyArray(1,2,3);
-let mapped = a.map(x => x * x);
+let a = new MyArray(1, 2, 3);
+let mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array);   // true
+console.log(mapped instanceof Array); // true
 ```
 
 ## Specifications

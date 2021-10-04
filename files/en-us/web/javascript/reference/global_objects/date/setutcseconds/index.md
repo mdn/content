@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setUTCSeconds
 ---
+
 {{JSRef}}
 
 The **`setUTCSeconds()`** method sets the seconds for a
@@ -19,8 +20,8 @@ specified date according to universal time.
 ## Syntax
 
 ```js
-setUTCSeconds(secondsValue)
-setUTCSeconds(secondsValue, msValue)
+setUTCSeconds(secondsValue);
+setUTCSeconds(secondsValue, msValue);
 ```
 
 ### Parameters

@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.entries
 ---
+
 {{JSRef}}
 
 The **`entries()`** method returns a new **Array
@@ -22,7 +23,7 @@ array.
 ## Syntax
 
 ```js
-entries()
+entries();
 ```
 
 ### Return value
@@ -34,10 +35,9 @@ A new {{jsxref("Array")}} iterator object.
 ### Iterating with index and element
 
 ```js
-const a = ['a', 'b', 'c'];
+const a = ["a", "b", "c"];
 
-for (const [index, element] of a.entries())
-  console.log(index, element);
+for (const [index, element] of a.entries()) console.log(index, element);
 
 // 0 'a'
 // 1 'b'
@@ -47,7 +47,7 @@ for (const [index, element] of a.entries())
 ### Using a `for…of` loop
 
 ```js
-var a = ['a', 'b', 'c'];
+var a = ["a", "b", "c"];
 var iterator = a.entries();
 
 for (let e of iterator) {

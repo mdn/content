@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing } after function body'
+title: "SyntaxError: missing } after function body"
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_function_body
 tags:
   - Error
@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing } after function body" occurs when there is a syntax
@@ -48,7 +49,7 @@ var charge = function() {
 Correct would be:
 
 ```js example-good
-var charge = function() {
+var charge = function () {
   if (sunny) {
     useSolarCells();
   } else {
@@ -68,7 +69,7 @@ Oftentimes, indenting differently or double checking indentation helps to spot t
 errors.
 
 ```js example-good
-(function() {
+(function () {
   if (true) {
     return false;
   }

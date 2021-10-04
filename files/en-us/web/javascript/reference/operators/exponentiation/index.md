@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.exponentiation
 ---
+
 {{jsSidebar("Operators")}}
 
 The exponentiation operator (`**`) returns the result of raising the first
@@ -19,7 +20,7 @@ except it also accepts BigInts as operands.
 ## Syntax
 
 ```js
-x ** y
+x ** y;
 ```
 
 ## Description
@@ -56,19 +57,23 @@ logical XOR operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR
 ### Basic exponentiation
 
 ```js
-2 ** 3   // 8
-3 ** 2   // 9
-3 ** 2.5 // 15.588457268119896
-10 ** -1 // 0.1
-NaN ** 2 // NaN
+2 ** 3; // 8
+3 ** 2; // 9
+3 ** 2.5; // 15.588457268119896
+10 ** -1; // 0.1
+NaN ** 2; // NaN
 ```
 
 ### Associativity
 
 ```js
-2 ** 3 ** 2   // 512
-2 ** (3 ** 2) // 512
-(2 ** 3) ** 2 // 64
+2 ** (3 ** 2); // 512
+2 **
+  ((3 ** 2)(
+    // 512
+    2 ** 3
+  ) **
+    2); // 64
 ```
 
 ### Usage with unary operators
@@ -76,13 +81,13 @@ NaN ** 2 // NaN
 To invert the sign of the result of an exponentiation expression:
 
 ```js
--(2 ** 2) // -4
+-(2 ** 2); // -4
 ```
 
 To force the base of an exponentiation expression to be a negative number:
 
 ```js
-(-2) ** 2 // 4
+(-2) ** 2; // 4
 ```
 
 ## Specifications

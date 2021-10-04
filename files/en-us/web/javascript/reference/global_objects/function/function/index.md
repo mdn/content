@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Function.Function
 ---
+
 {{JSRef}}
 
 The **`Function` constructor** creates
@@ -64,7 +65,7 @@ The following code creates a `Function` object that takes two arguments.
 // Example can be run directly in your JavaScript console
 
 // Create a function that takes two arguments, and returns the sum of those arguments
-const adder = new Function('a', 'b', 'return a + b');
+const adder = new Function("a", "b", "return a + b");
 
 // Call the function
 adder(2, 6);

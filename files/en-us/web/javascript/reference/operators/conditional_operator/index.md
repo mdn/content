@@ -14,6 +14,7 @@ tags:
   - ternary
 browser-compat: javascript.operators.conditional
 ---
+
 {{jsSidebar("Operators")}}
 
 The **conditional (ternary) operator** is the
@@ -29,7 +30,7 @@ statement.
 ## Syntax
 
 ```js
-condition ? exprIfTrue : exprIfFalse
+condition ? exprIfTrue : exprIfFalse;
 ```
 
 ### Parameters
@@ -59,7 +60,7 @@ result of the conditional expression will be the result of executing the express
 
 ```js
 var age = 26;
-var beverage = (age >= 21) ? "Beer" : "Juice";
+var beverage = age >= 21 ? "Beer" : "Juice";
 console.log(beverage); // "Beer"
 ```
 
@@ -68,13 +69,13 @@ console.log(beverage); // "Beer"
 One common usage is to handle a value that may be `null`:
 
 ```js
-let greeting = person => {
-    let name = person ? person.name : `stranger`
-    return `Howdy, ${name}`
-}
+let greeting = (person) => {
+  let name = person ? person.name : `stranger`;
+  return `Howdy, ${name}`;
+};
 
-console.log(greeting({name: `Alice`}));  // "Howdy, Alice"
-console.log(greeting(null));             // "Howdy, stranger"
+console.log(greeting({ name: `Alice` })); // "Howdy, Alice"
+console.log(greeting(null)); // "Howdy, stranger"
 ```
 
 ### Conditional chains

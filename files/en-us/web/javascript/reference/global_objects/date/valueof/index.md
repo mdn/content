@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.valueOf
 ---
+
 {{JSRef}}
 
 The **`valueOf()`** method returns the primitive value of a
@@ -19,7 +20,7 @@ The **`valueOf()`** method returns the primitive value of a
 ## Syntax
 
 ```js
-valueOf()
+valueOf();
 ```
 
 ### Return value
@@ -43,7 +44,7 @@ This method is usually called internally by JavaScript and not explicitly in cod
 
 ```js
 var x = new Date(56, 6, 17);
-var myVar = x.valueOf();      // assigns -424713600000 to myVar
+var myVar = x.valueOf(); // assigns -424713600000 to myVar
 ```
 
 ## Specifications

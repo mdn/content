@@ -1,5 +1,5 @@
 ---
-title: 'TypeError: Reduce of empty array with no initial value'
+title: "TypeError: Reduce of empty array with no initial value"
 slug: Web/JavaScript/Reference/Errors/Reduce_of_empty_array_with_no_initial_value
 tags:
   - Error
@@ -7,6 +7,7 @@ tags:
   - Reference
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "reduce of empty array with no initial value" occurs when a
@@ -48,8 +49,9 @@ value.
 
 ```js example-bad
 var ints = [0, -1, -2, -3, -4, -5];
-ints.filter(x => x > 0)         // removes all elements
-    .reduce((x, y) => x + y)    // no more elements to use for the initial value.
+ints
+  .filter((x) => x > 0) // removes all elements
+  .reduce((x, y) => x + y); // no more elements to use for the initial value.
 ```
 
 Similarly, the same issue can happen if there is a typo in a selector, or an unexpected
@@ -57,7 +59,10 @@ number of elements in a list:
 
 ```js example-bad
 var names = document.getElementsByClassName("names");
-var name_list = Array.prototype.reduce.call(names, (acc, name) => acc + ", " + name);
+var name_list = Array.prototype.reduce.call(
+  names,
+  (acc, name) => acc + ", " + name
+);
 ```
 
 ### Valid cases
@@ -70,8 +75,9 @@ a concatenation.
 
 ```js example-good
 var ints = [0, -1, -2, -3, -4, -5];
-ints.filter(x => x > 0)         // removes all elements
-    .reduce((x, y) => x + y, 0) // the initial value is the neutral element of the addition
+ints
+  .filter((x) => x > 0) // removes all elements
+  .reduce((x, y) => x + y, 0); // the initial value is the neutral element of the addition
 ```
 
 Another way would be to handle the empty case, either before calling
@@ -82,14 +88,22 @@ var names = document.getElementsByClassName("names");
 
 var name_list1 = "";
 if (names1.length >= 1)
-  name_list1 = Array.prototype.reduce.call(names, (acc, name) => acc + ", " + name);
+  name_list1 = Array.prototype.reduce.call(
+    names,
+    (acc, name) => acc + ", " + name
+  );
 // name_list1 == "" when names is empty.
 
-var name_list2 = Array.prototype.reduce.call(names, (acc, name) => {
-  if (acc == "") // initial value
-    return name;
-  return acc + ", " + name;
-}, "");
+var name_list2 = Array.prototype.reduce.call(
+  names,
+  (acc, name) => {
+    if (acc == "")
+      // initial value
+      return name;
+    return acc + ", " + name;
+  },
+  ""
+);
 // name_list2 == "" when names is empty.
 ```
 

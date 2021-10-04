@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.keys
 ---
+
 {{JSRef}}
 
 The **`keys()`** method returns a new **Array
@@ -22,7 +23,7 @@ Iterator** object that contains the keys for each index in the array.
 ## Syntax
 
 ```js
-keys()
+keys();
 ```
 
 ### Return value
@@ -34,11 +35,11 @@ A new {{jsxref("Array")}} iterator object.
 ### Key iterator doesn't ignore holes
 
 ```js
-var arr = ['a', , 'c'];
+var arr = ["a", , "c"];
 var sparseKeys = Object.keys(arr);
 var denseKeys = [...arr.keys()];
 console.log(sparseKeys); // ['0', '2']
-console.log(denseKeys);  // [0, 1, 2]
+console.log(denseKeys); // [0, 1, 2]
 ```
 
 ## Specifications

@@ -8,6 +8,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Array.@@species
 ---
+
 {{JSRef}}
 
 The **`Array[@@species]`** accessor property returns the
@@ -16,7 +17,7 @@ The **`Array[@@species]`** accessor property returns the
 ## Syntax
 
 ```js
-Array[Symbol.species]
+Array[Symbol.species];
 ```
 
 ### Return value
@@ -50,7 +51,9 @@ derived class methods:
 ```js
 class MyArray extends Array {
   // Overwrite MyArray species to the parent Array constructor
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
 ```
 

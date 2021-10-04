@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.functions.rest_parameters
 ---
+
 {{jsSidebar("Functions")}}
 
 The **rest parameter** syntax allows a function to accept an indefinite number of arguments as an array, providing a way to represent [variadic functions](https://en.wikipedia.org/wiki/Variadic_function) in JavaScript.
@@ -28,13 +29,13 @@ A function definition's last parameter can be prefixed with "`...`" (three U+002
 Only the last parameter in a function definition can be a rest parameter.
 
 ```js
-function myFun(a,  b, ...manyMoreArgs) {
-  console.log("a", a)
-  console.log("b", b)
-  console.log("manyMoreArgs", manyMoreArgs)
+function myFun(a, b, ...manyMoreArgs) {
+  console.log("a", a);
+  console.log("b", b);
+  console.log("manyMoreArgs", manyMoreArgs);
 }
 
-myFun("one", "two", "three", "four", "five", "six")
+myFun("one", "two", "three", "four", "five", "six");
 
 // Console Output:
 // a, one
@@ -47,18 +48,18 @@ myFun("one", "two", "three", "four", "five", "six")
 A function definition can have only one `...`_restParam_.
 
 ```js example-bad
-foo(...one, ...wrong, ...wrong)
+foo(...one, ...wrong, ...wrong);
 ```
 
 The rest parameter must be the last parameter in the function
 definition.
 
 ```js example-bad
-foo(...wrong, arg2, arg3)
+foo(...wrong, arg2, arg3);
 ```
 
 ```js example-good
-foo(arg1, arg2, ...correct)
+foo(arg1, arg2, ...correct);
 ```
 
 ### The difference between rest parameters and the `arguments` object
@@ -88,21 +89,21 @@ for converting a set of arguments to an array.
 // Before rest parameters, "arguments" could be converted to a normal array using:
 
 function f(a, b) {
-  let normalArray = Array.prototype.slice.call(arguments)
+  let normalArray = Array.prototype.slice.call(arguments);
   // -- or --
-  let normalArray = [].slice.call(arguments)
+  let normalArray = [].slice.call(arguments);
   // -- or --
-  let normalArray = Array.from(arguments)
+  let normalArray = Array.from(arguments);
 
-  let first = normalArray.shift()  // OK, gives the first argument
-  let first = arguments.shift()    // ERROR (arguments is not a normal array)
+  let first = normalArray.shift(); // OK, gives the first argument
+  let first = arguments.shift(); // ERROR (arguments is not a normal array)
 }
 
 // Now, you can easily gain access to a normal array using a rest parameter
 
 function f(...args) {
-  let normalArray = args
-  let first = normalArray.shift() // OK, gives the first argument
+  let normalArray = args;
+  let first = normalArray.shift(); // OK, gives the first argument
 }
 ```
 
@@ -118,12 +119,12 @@ the third, fourth, fifth, sixth ... nth — as many arguments that the user incl
 
 ```js
 function myFun(a, b, ...manyMoreArgs) {
-  console.log("a", a)
-  console.log("b", b)
-  console.log("manyMoreArgs", manyMoreArgs)
+  console.log("a", a);
+  console.log("b", b);
+  console.log("manyMoreArgs", manyMoreArgs);
 }
 
-myFun("one", "two", "three", "four", "five", "six")
+myFun("one", "two", "three", "four", "five", "six");
 
 // a, "one"
 // b, "two"
@@ -136,7 +137,7 @@ array.
 ```js
 // using the same function definition from example above
 
-myFun("one", "two", "three")
+myFun("one", "two", "three");
 
 // a, "one"
 // b, "two"
@@ -149,7 +150,7 @@ array (albeit an empty one).
 ```js
 // using the same function definition from example above
 
-myFun("one", "two")
+myFun("one", "two");
 
 // a, "one"
 // b, "two"
@@ -162,12 +163,12 @@ Since `theArgs` is an array, a count of its elements is given by the {{jsxref("A
 
 ```js
 function fun1(...theArgs) {
-  console.log(theArgs.length)
+  console.log(theArgs.length);
 }
 
-fun1()         // 0
-fun1(5)        // 1
-fun1(5, 6, 7)  // 3
+fun1(); // 0
+fun1(5); // 1
+fun1(5, 6, 7); // 3
 ```
 
 ### Using rest parameters in combination with ordinary parameters
@@ -178,13 +179,13 @@ then multiplied by the first parameter, and the array is returned:
 
 ```js
 function multiply(multiplier, ...theArgs) {
-  return theArgs.map(element => {
-    return multiplier * element
-  })
+  return theArgs.map((element) => {
+    return multiplier * element;
+  });
 }
 
-let arr = multiply(2, 15, 25, 42)
-console.log(arr)  // [30, 50, 84]
+let arr = multiply(2, 15, 25, 42);
+console.log(arr); // [30, 50, 84]
 ```
 
 ### Rest parameters are real arrays; the arguments object is not.
@@ -194,18 +195,18 @@ console.log(arr)  // [30, 50, 84]
 
 ```js
 function sortRestArgs(...theArgs) {
-  let sortedArgs = theArgs.sort()
-  return sortedArgs
+  let sortedArgs = theArgs.sort();
+  return sortedArgs;
 }
 
-console.log(sortRestArgs(5, 3, 7, 1)) // 1, 3, 5, 7
+console.log(sortRestArgs(5, 3, 7, 1)); // 1, 3, 5, 7
 
 function sortArguments() {
-  let sortedArgs = arguments.sort()
-  return sortedArgs  // this will never happen
+  let sortedArgs = arguments.sort();
+  return sortedArgs; // this will never happen
 }
 
-console.log(sortArguments(5, 3, 7, 1))
+console.log(sortArguments(5, 3, 7, 1));
 // throws a TypeError (arguments.sort is not a function)
 ```
 
@@ -214,11 +215,11 @@ converted to a real array first.
 
 ```js
 function sortArguments() {
-  let args = Array.from(arguments)
-  let sortedArgs = args.sort()
-  return sortedArgs
+  let args = Array.from(arguments);
+  let sortedArgs = args.sort();
+  return sortedArgs;
 }
-console.log(sortArguments(5, 3, 7, 1))  // 1, 3, 5, 7
+console.log(sortArguments(5, 3, 7, 1)); // 1, 3, 5, 7
 ```
 
 ## Specifications

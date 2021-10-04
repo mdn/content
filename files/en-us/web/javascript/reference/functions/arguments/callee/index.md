@@ -9,6 +9,7 @@ tags:
   - arguments
 browser-compat: javascript.functions.arguments.callee
 ---
+
 {{jsSidebar("Functions")}}
 
 The **`arguments.callee`** property contains the currently executing function.
@@ -28,8 +29,8 @@ Early versions of JavaScript did not allow named function expressions, and for t
 For example, this syntax worked:
 
 ```js
-function factorial (n) {
-    return !(n > 1) ? 1 : factorial(n - 1) * n;
+function factorial(n) {
+  return !(n > 1) ? 1 : factorial(n - 1) * n;
 }
 
 [1, 2, 3, 4, 5].map(factorial);
@@ -38,16 +39,16 @@ function factorial (n) {
 but:
 
 ```js
-[1, 2, 3, 4, 5].map(function(n) {
-    return !(n > 1) ? 1 : /* what goes here? */ (n - 1) * n;
+[1, 2, 3, 4, 5].map(function (n) {
+  return !(n > 1) ? 1 : /* what goes here? */ (n - 1) * n;
 });
 ```
 
 did not. To get around this `arguments.callee` was added so you could do
 
 ```js
-[1, 2, 3, 4, 5].map(function(n) {
-    return !(n > 1) ? 1 : arguments.callee(n - 1) * n;
+[1, 2, 3, 4, 5].map(function (n) {
+  return !(n > 1) ? 1 : arguments.callee(n - 1) * n;
 });
 ```
 
@@ -56,14 +57,16 @@ However, this was actually a really bad solution as this (in conjunction with ot
 ```js
 var global = this;
 
-var sillyFunction = function(recursed) {
-    if (!recursed) { return arguments.callee(true); }
-    if (this !== global) {
-        alert('This is: ' + this);
-    } else {
-        alert('This is the global');
-    }
-}
+var sillyFunction = function (recursed) {
+  if (!recursed) {
+    return arguments.callee(true);
+  }
+  if (this !== global) {
+    alert("This is: " + this);
+  } else {
+    alert("This is the global");
+  }
+};
 
 sillyFunction();
 ```
@@ -72,7 +75,7 @@ ECMAScript 3 resolved these issues by allowing named function expressions. For e
 
 ```js
 [1, 2, 3, 4, 5].map(function factorial(n) {
-    return !(n > 1) ? 1 : factorial(n - 1)*n;
+  return !(n > 1) ? 1 : factorial(n - 1) * n;
 });
 ```
 
@@ -85,7 +88,9 @@ This has numerous benefits:
 Another feature that was deprecated was `arguments.callee.caller`, or more specifically `Function.caller`. Why is this? Well, at any point in time you can find the deepest caller of any function on the stack, and as I said above looking at the call stack has one single major effect: it makes a large number of optimizations impossible, or much more difficult. For example, if you cannot guarantee that a function `f` will not call an unknown function, it is not possible to inline `f`. Basically it means that any call site that may have been trivially inlinable accumulates a large number of guards:
 
 ```js
-function f(a, b, c, d, e) { return a ? b * c : d * e; }
+function f(a, b, c, d, e) {
+  return a ? b * c : d * e;
+}
 ```
 
 If the JavaScript interpreter cannot guarantee that all the provided arguments are numbers at the point that the call is made, it needs to either insert checks for all the arguments before the inlined code, or it cannot inline the function. Now in this particular case a smart interpreter should be able to rearrange the checks to be more optimal and not check any values that would not be used. However in many cases that's just not possible and therefore it becomes impossible to inline.
@@ -100,11 +105,10 @@ The following example defines a function, which, in turn, defines and returns a 
 
 ```js
 function create() {
-   return function(n) {
-      if (n <= 1)
-         return 1;
-      return n * arguments.callee(n - 1);
-   };
+  return function (n) {
+    if (n <= 1) return 1;
+    return n * arguments.callee(n - 1);
+  };
 }
 
 var result = create()(5); // returns 120 (5 * 4 * 3 * 2 * 1)
@@ -116,12 +120,12 @@ However, in a case like the following, there are not alternatives to `arguments.
 
 ```js
 function createPerson(sIdentity) {
-    var oPerson = new Function('alert(arguments.callee.identity);');
-    oPerson.identity = sIdentity;
-    return oPerson;
+  var oPerson = new Function("alert(arguments.callee.identity);");
+  oPerson.identity = sIdentity;
+  return oPerson;
 }
 
-var john = createPerson('John Smith');
+var john = createPerson("John Smith");
 
 john();
 ```

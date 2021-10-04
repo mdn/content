@@ -9,6 +9,7 @@ tags:
   - Deprecated
 browser-compat: javascript.builtins.Function.toSource
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`toSource()`** method returns a string representing the
@@ -19,7 +20,7 @@ the contents of an object.
 ## Syntax
 
 ```js
-toSource()
+toSource();
 ```
 
 ### Return value

@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.preventExtensions
 ---
+
 {{JSRef}}
 
 The static
@@ -23,7 +24,7 @@ some [differences](#difference_from_object.preventExtensions).
 ## Syntax
 
 ```js
-Reflect.preventExtensions(target)
+Reflect.preventExtensions(target);
 ```
 
 ### Parameters
@@ -55,12 +56,12 @@ See also {{jsxref("Object.preventExtensions()")}}.
 
 ```js
 // Objects are extensible by default.
-let empty = {}
-Reflect.isExtensible(empty)  // === true
+let empty = {};
+Reflect.isExtensible(empty); // === true
 
 // ...but that can be changed.
-Reflect.preventExtensions(empty)
-Reflect.isExtensible(empty)  // === false
+Reflect.preventExtensions(empty);
+Reflect.isExtensible(empty); // === false
 ```
 
 ### Difference from Object.preventExtensions()
@@ -71,10 +72,10 @@ primitive), then it will cause a {{jsxref("TypeError")}}. With
 will be coerced to an object.
 
 ```js
-Reflect.preventExtensions(1)
+Reflect.preventExtensions(1);
 // TypeError: 1 is not an object
 
-Object.preventExtensions(1)
+Object.preventExtensions(1);
 // 1
 ```
 

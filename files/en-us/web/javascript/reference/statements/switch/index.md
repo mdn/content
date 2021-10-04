@@ -9,6 +9,7 @@ tags:
   - Web
 browser-compat: javascript.statements.switch
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`switch`** statement evaluates
@@ -97,24 +98,24 @@ would also be executed.
 
 ```js
 switch (expr) {
-  case 'Oranges':
-    console.log('Oranges are $0.59 a pound.');
+  case "Oranges":
+    console.log("Oranges are $0.59 a pound.");
     break;
-  case 'Apples':
-    console.log('Apples are $0.32 a pound.');
+  case "Apples":
+    console.log("Apples are $0.32 a pound.");
     break;
-  case 'Bananas':
-    console.log('Bananas are $0.48 a pound.');
+  case "Bananas":
+    console.log("Bananas are $0.48 a pound.");
     break;
-  case 'Cherries':
-    console.log('Cherries are $3.00 a pound.');
+  case "Cherries":
+    console.log("Cherries are $3.00 a pound.");
     break;
-  case 'Mangoes':
-  case 'Papayas':
-    console.log('Mangoes and papayas are $2.79 a pound.');
+  case "Mangoes":
+  case "Papayas":
+    console.log("Mangoes and papayas are $2.79 a pound.");
     break;
   default:
-    console.log('Sorry, we are out of ' + expr + '.');
+    console.log("Sorry, we are out of " + expr + ".");
 }
 
 console.log("Is there anything else you'd like?");
@@ -132,11 +133,11 @@ See example here:
 var foo = 0;
 switch (foo) {
   case -1:
-    console.log('negative 1');
+    console.log("negative 1");
     break;
   case 0: // foo is 0 so criteria met here so this block will run
     console.log(0);
-    // NOTE: the forgotten break would have been here
+  // NOTE: the forgotten break would have been here
   case 1: // no break statement in 'case 0:' so this case will run as well
     console.log(1);
     break; // it encounters this break so will not continue into 'case 2:'
@@ -144,7 +145,7 @@ switch (foo) {
     console.log(2);
     break;
   default:
-    console.log('default');
+    console.log("default");
 }
 ```
 
@@ -160,10 +161,10 @@ switch (foo) {
     console.log(2);
     break; // it encounters this break so will not continue into 'default:'
   default:
-    console.log('default')
-    // fall-through
+    console.log("default");
+  // fall-through
   case 1:
-    console.log('1');
+    console.log("1");
 }
 ```
 
@@ -184,17 +185,17 @@ This is an example of a single operation sequential `case` statement, where
 four different values perform exactly the same.
 
 ```js
-var Animal = 'Giraffe';
+var Animal = "Giraffe";
 switch (Animal) {
-  case 'Cow':
-  case 'Giraffe':
-  case 'Dog':
-  case 'Pig':
-    console.log('This animal is not extinct.');
+  case "Cow":
+  case "Giraffe":
+  case "Dog":
+  case "Pig":
+    console.log("This animal is not extinct.");
     break;
-  case 'Dinosaur':
+  case "Dinosaur":
   default:
-    console.log('This animal is extinct.');
+    console.log("This animal is extinct.");
 }
 ```
 
@@ -208,27 +209,27 @@ strings into these `case` statements as well.
 
 ```js
 var foo = 1;
-var output = 'Output: ';
+var output = "Output: ";
 switch (foo) {
   case 0:
-    output += 'So ';
+    output += "So ";
   case 1:
-    output += 'What ';
-    output += 'Is ';
+    output += "What ";
+    output += "Is ";
   case 2:
-    output += 'Your ';
+    output += "Your ";
   case 3:
-    output += 'Name';
+    output += "Name";
   case 4:
-    output += '?';
+    output += "?";
     console.log(output);
     break;
   case 5:
-    output += '!';
+    output += "!";
     console.log(output);
     break;
   default:
-    console.log('Please pick a number from 0 to 5!');
+    console.log("Please pick a number from 0 to 5!");
 }
 ```
 
@@ -253,18 +254,18 @@ be cases where you would want to use {{jsxref("Statements/let", "let")}} and
 Take a look at this example:
 
 ```js
-const action = 'say_hello';
+const action = "say_hello";
 switch (action) {
-  case 'say_hello':
-    let message = 'hello';
+  case "say_hello":
+    let message = "hello";
     console.log(message);
     break;
-  case 'say_hi':
-    let message = 'hi';
+  case "say_hi":
+    let message = "hi";
     console.log(message);
     break;
   default:
-    console.log('Empty action received.');
+    console.log("Empty action received.");
     break;
 }
 ```
@@ -282,20 +283,23 @@ of the same variable name within the same block scope.
 We can easily fix this by wrapping our `case` clauses with brackets:
 
 ```js
-const action = 'say_hello';
+const action = "say_hello";
 switch (action) {
-  case 'say_hello': { // added brackets
-    let message = 'hello';
+  case "say_hello": {
+    // added brackets
+    let message = "hello";
     console.log(message);
     break;
   } // added brackets
-  case 'say_hi': { // added brackets
-    let message = 'hi';
+  case "say_hi": {
+    // added brackets
+    let message = "hi";
     console.log(message);
     break;
   } // added brackets
-  default: { // added brackets
-    console.log('Empty action received.');
+  default: {
+    // added brackets
+    console.log("Empty action received.");
     break;
   } // added brackets
 }

@@ -1,5 +1,5 @@
 ---
-title: 'Warning: -file- is being assigned a //# sourceMappingURL, but already has one'
+title: "Warning: -file- is being assigned a //# sourceMappingURL, but already has one"
 slug: Web/JavaScript/Reference/Errors/Already_has_pragma
 tags:
   - Error
@@ -8,6 +8,7 @@ tags:
   - Source maps
   - Warning
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript warning "-file- is being assigned a //# sourceMappingURL, but already has one." occurs when a source map has been specified more than once for a given JavaScript source.

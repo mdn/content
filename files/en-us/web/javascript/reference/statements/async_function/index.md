@@ -9,6 +9,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.async_function
 ---
+
 {{jsSidebar("Statements")}}
 
 An async function is a function declared with the `async` keyword, and the `await` keyword is permitted within them. The `async` and `await` keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains.
@@ -62,7 +63,7 @@ For example, the following:
 
 ```js
 async function foo() {
-   return 1
+  return 1;
 }
 ```
 
@@ -70,7 +71,7 @@ async function foo() {
 
 ```js
 function foo() {
-   return Promise.resolve(1)
+  return Promise.resolve(1);
 }
 ```
 
@@ -85,7 +86,7 @@ function foo() {
 > ```js
 > const p = new Promise((res, rej) => {
 >   res(1);
-> })
+> });
 >
 > async function asyncReturn() {
 >   return p;
@@ -109,7 +110,7 @@ For example:
 
 ```js
 async function foo() {
-   await 1
+  await 1;
 }
 ```
 
@@ -117,7 +118,7 @@ async function foo() {
 
 ```js
 function foo() {
-   return Promise.resolve(1).then(() => undefined)
+  return Promise.resolve(1).then(() => undefined);
 }
 ```
 
@@ -147,10 +148,14 @@ function `foo` in three stages.
 
 ```js
 async function foo() {
-   const result1 = await new Promise((resolve) => setTimeout(() => resolve('1')))
-   const result2 = await new Promise((resolve) => setTimeout(() => resolve('2')))
+  const result1 = await new Promise((resolve) =>
+    setTimeout(() => resolve("1"))
+  );
+  const result2 = await new Promise((resolve) =>
+    setTimeout(() => resolve("2"))
+  );
 }
-foo()
+foo();
 ```
 
 Note how the promise chain is not built-up in one go. Instead, the promise chain is
@@ -165,11 +170,11 @@ control returns from `p1`.
 
 ```js
 async function foo() {
-   const p1 = new Promise((resolve) => setTimeout(() => resolve('1'), 1000))
-   const p2 = new Promise((_,reject) => setTimeout(() => reject('2'), 500))
-   const results = [await p1, await p2] // Do not do this! Use Promise.all or Promise.allSettled instead.
+  const p1 = new Promise((resolve) => setTimeout(() => resolve("1"), 1000));
+  const p2 = new Promise((_, reject) => setTimeout(() => reject("2"), 500));
+  const results = [await p1, await p2]; // Do not do this! Use Promise.all or Promise.allSettled instead.
 }
-foo().catch(() => {}) // Attempt to swallow all errors...
+foo().catch(() => {}); // Attempt to swallow all errors...
 ```
 
 ## Examples
@@ -178,74 +183,76 @@ foo().catch(() => {}) // Attempt to swallow all errors...
 
 ```js
 function resolveAfter2Seconds() {
-  console.log("starting slow promise")
-  return new Promise(resolve => {
-    setTimeout(function() {
-      resolve("slow")
-      console.log("slow promise is done")
-    }, 2000)
-  })
+  console.log("starting slow promise");
+  return new Promise((resolve) => {
+    setTimeout(function () {
+      resolve("slow");
+      console.log("slow promise is done");
+    }, 2000);
+  });
 }
 
 function resolveAfter1Second() {
-  console.log("starting fast promise")
-  return new Promise(resolve => {
-    setTimeout(function() {
-      resolve("fast")
-      console.log("fast promise is done")
-    }, 1000)
-  })
+  console.log("starting fast promise");
+  return new Promise((resolve) => {
+    setTimeout(function () {
+      resolve("fast");
+      console.log("fast promise is done");
+    }, 1000);
+  });
 }
 
 async function sequentialStart() {
-  console.log('==SEQUENTIAL START==')
+  console.log("==SEQUENTIAL START==");
 
   // 1. Execution gets here almost instantly
-  const slow = await resolveAfter2Seconds()
-  console.log(slow) // 2. this runs 2 seconds after 1.
+  const slow = await resolveAfter2Seconds();
+  console.log(slow); // 2. this runs 2 seconds after 1.
 
-  const fast = await resolveAfter1Second()
-  console.log(fast) // 3. this runs 3 seconds after 1.
+  const fast = await resolveAfter1Second();
+  console.log(fast); // 3. this runs 3 seconds after 1.
 }
 
 async function concurrentStart() {
-  console.log('==CONCURRENT START with await==');
-  const slow = resolveAfter2Seconds() // starts timer immediately
-  const fast = resolveAfter1Second() // starts timer immediately
+  console.log("==CONCURRENT START with await==");
+  const slow = resolveAfter2Seconds(); // starts timer immediately
+  const fast = resolveAfter1Second(); // starts timer immediately
 
   // 1. Execution gets here almost instantly
-  console.log(await slow) // 2. this runs 2 seconds after 1.
-  console.log(await fast) // 3. this runs 2 seconds after 1., immediately after 2., since fast is already resolved
+  console.log(await slow); // 2. this runs 2 seconds after 1.
+  console.log(await fast); // 3. this runs 2 seconds after 1., immediately after 2., since fast is already resolved
 }
 
 function concurrentPromise() {
-  console.log('==CONCURRENT START with Promise.all==')
-  return Promise.all([resolveAfter2Seconds(), resolveAfter1Second()]).then((messages) => {
-    console.log(messages[0]) // slow
-    console.log(messages[1]) // fast
-  })
+  console.log("==CONCURRENT START with Promise.all==");
+  return Promise.all([resolveAfter2Seconds(), resolveAfter1Second()]).then(
+    (messages) => {
+      console.log(messages[0]); // slow
+      console.log(messages[1]); // fast
+    }
+  );
 }
 
 async function parallel() {
-  console.log('==PARALLEL with await Promise.all==')
+  console.log("==PARALLEL with await Promise.all==");
 
   // Start 2 "jobs" in parallel and wait for both of them to complete
   await Promise.all([
-      (async()=>console.log(await resolveAfter2Seconds()))(),
-      (async()=>console.log(await resolveAfter1Second()))()
-  ])
+    (async () => console.log(await resolveAfter2Seconds()))(),
+    (async () => console.log(await resolveAfter1Second()))(),
+  ]);
 }
 
-sequentialStart() // after 2 seconds, logs "slow", then after 1 more second, "fast"
+sequentialStart(); // after 2 seconds, logs "slow", then after 1 more second, "fast"
 
 // wait above to finish
-setTimeout(concurrentStart, 4000) // after 2 seconds, logs "slow" and then "fast"
+setTimeout(concurrentStart, 4000); // after 2 seconds, logs "slow" and then "fast"
 
 // wait again
-setTimeout(concurrentPromise, 7000) // same as concurrentStart
+setTimeout(concurrentPromise, 7000); // same as concurrentStart
 
 // wait again
-setTimeout(parallel, 10000) // truly parallel: after 1 second, logs "fast", then after 1 more second, "slow"
+setTimeout(parallel, 10000); // truly parallel: after 1 second, logs "fast", then after 1 more second, "slow"
 ```
 
 #### await and parallelism
@@ -287,12 +294,12 @@ splits the function into many parts. Consider the following code:
 ```js
 function getProcessedData(url) {
   return downloadData(url) // returns a promise
-    .catch(e => {
-      return downloadFallbackData(url)  // returns a promise
+    .catch((e) => {
+      return downloadFallbackData(url); // returns a promise
     })
-    .then(v => {
-      return processDataInWorker(v)  // returns a promise
-    })
+    .then((v) => {
+      return processDataInWorker(v); // returns a promise
+    });
 }
 ```
 
@@ -300,13 +307,13 @@ it can be rewritten with a single async function as follows:
 
 ```js
 async function getProcessedData(url) {
-  let v
+  let v;
   try {
-    v = await downloadData(url)
-  } catch(e) {
-    v = await downloadFallbackData(url)
+    v = await downloadData(url);
+  } catch (e) {
+    v = await downloadFallbackData(url);
   }
-  return processDataInWorker(v)
+  return processDataInWorker(v);
 }
 ```
 

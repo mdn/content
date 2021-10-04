@@ -12,6 +12,7 @@ tags:
   - await
 browser-compat: javascript.statements.for_await_of
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`for await...of` statement** creates a loop iterating over async iterable objects as well as on sync iterables, including: built-in {{jsxref("String")}}, {{jsxref("Array")}}, `Array`-like objects (e.g., {{jsxref("Functions/arguments", "arguments")}} or {{DOMxRef("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, and user-defined async/sync iterables. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object. This statement can only be used inside an {{jsxref("Statements/async_function", "async function", "", 1)}}.
@@ -23,7 +24,7 @@ The **`for await...of` statement** creates a loop iterating over async iterable 
 
 ```js
 for await (variable of iterable) {
-  statement
+  statement;
 }
 ```
 
@@ -51,15 +52,15 @@ const asyncIterable = {
         }
 
         return Promise.resolve({ done: true });
-      }
+      },
     };
-  }
+  },
 };
 
-(async function() {
-   for await (let num of asyncIterable) {
-     console.log(num);
-   }
+(async function () {
+  for await (let num of asyncIterable) {
+    console.log(num);
+  }
 })();
 
 // 0
@@ -80,7 +81,7 @@ async function* asyncGenerator() {
   }
 }
 
-(async function() {
+(async function () {
   for await (let num of asyncGenerator()) {
     console.log(num);
   }
@@ -126,7 +127,7 @@ async function getResponseSize(url) {
   // expected output: "Response Size: 1071472"
   return responseSize;
 }
-getResponseSize('https://jsonplaceholder.typicode.com/photos');
+getResponseSize("https://jsonplaceholder.typicode.com/photos");
 ```
 
 ### Iterating over sync iterables and generators
@@ -144,7 +145,7 @@ function* generator() {
   yield 4;
 }
 
-(async function() {
+(async function () {
   for await (let num of generator()) {
     console.log(num);
   }
@@ -183,17 +184,17 @@ function* generatorWithRejectedPromises() {
     yield 4;
     throw 5;
   } finally {
-    console.log('called finally')
+    console.log("called finally");
   }
 }
 
-(async function() {
+(async function () {
   try {
     for await (let num of generatorWithRejectedPromises()) {
       console.log(num);
     }
   } catch (e) {
-    console.log('caught', e)
+    console.log("caught", e);
   }
 })();
 // 0
@@ -208,7 +209,7 @@ try {
     console.log(numOrPromise);
   }
 } catch (e) {
-  console.log('caught', e)
+  console.log("caught", e);
 }
 // 0
 // 1
@@ -225,15 +226,15 @@ appropriate form of the loop, `for await...of` for the async generator and
 loop.
 
 ```js
-(async function() {
+(async function () {
   try {
     for (let numOrPromise of generatorWithRejectedPromises()) {
       console.log(await numOrPromise);
     }
   } catch (e) {
-    console.log('caught', e)
+    console.log("caught", e);
   }
-})()
+})();
 // 0
 // 1
 // 2

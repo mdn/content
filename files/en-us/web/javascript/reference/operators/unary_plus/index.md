@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.unary_plus
 ---
+
 {{jsSidebar("Operators")}}
 
 The unary plus operator (`+`) precedes its operand and evaluates to its
@@ -18,7 +19,7 @@ operand but attempts to convert it into a number, if it isn't already.
 ## Syntax
 
 ```js
-+x
++x;
 ```
 
 ## Description
@@ -49,11 +50,13 @@ console.log(+y);
 ### Usage with non-numbers
 
 ```js
-+true  // 1
-+false // 0
-+null  // 0
-+function(val){ return val } // NaN
-+1n    // throws TypeError: Cannot convert BigInt value to number
++true + // 1
+  false + // 0
+  null + // 0
+  function (val) {
+    return val;
+  } + // NaN
+  1n; // throws TypeError: Cannot convert BigInt value to number
 ```
 
 ## Specifications

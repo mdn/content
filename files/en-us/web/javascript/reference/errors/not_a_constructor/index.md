@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "is not a constructor" occurs when there was an attempt to use
@@ -61,8 +62,8 @@ new Math();
 new Symbol();
 // TypeError: Symbol is not a constructor
 
-function* f() {};
-var obj = new f;
+function* f() {}
+var obj = new f();
 // TypeError: f is not a constructor
 ```
 
@@ -83,7 +84,7 @@ function Car(make, model, year) {
 Now you can create an object called `mycar` as follows:
 
 ```js
-var mycar = new Car('Eagle', 'Talon TSi', 1993);
+var mycar = new Car("Eagle", "Talon TSi", 1993);
 ```
 
 ### In Promises
@@ -105,7 +106,9 @@ methods](<https://en.wikipedia.org/wiki/Method_(computer_programming)#Static_met
 
 ```js
 // This is legal, but unnecessarily long:
-return new Promise((resolve, reject) => { resolve(true); })
+return new Promise((resolve, reject) => {
+  resolve(true);
+});
 
 // Instead, return the static method:
 return Promise.resolve(true);

@@ -8,6 +8,7 @@ tags:
   - Property
 browser-compat: javascript.builtins.Map.@@species
 ---
+
 {{JSRef}}
 
 The **`Map[@@species]`** accessor property returns the `Map` constructor.
@@ -37,7 +38,9 @@ in order to return parent `Map` objects in your derived class methods:
 ```js
 class MyMap extends Map {
   // Overwrite MyMap species to the parent Map constructor
-  static get [Symbol.species]() { return Map; }
+  static get [Symbol.species]() {
+    return Map;
+  }
 }
 ```
 

@@ -9,6 +9,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Array.@@unscopables
 ---
+
 {{JSRef}}
 
 The **`@@unscopable`** symbol property contains property names that were not included in the ECMAScript standard prior to the ES2015 version. These properties are excluded from [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement bindings.
@@ -41,7 +42,7 @@ The following code works fine in ES5 and below. However, in ECMAScript 2015 and 
 var keys = [];
 
 with (Array.prototype) {
-  keys.push('something');
+  keys.push("something");
 }
 
 Object.keys(Array.prototype[Symbol.unscopables]);

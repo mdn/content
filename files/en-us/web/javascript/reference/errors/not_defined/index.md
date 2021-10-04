@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - ReferenceError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "_variable_ is not defined" occurs when there is a
@@ -43,7 +44,7 @@ The "foo" variable isn't defined anywhere. It needs to be some string, so that t
 {{jsxref("String.prototype.substring()")}} method will work.
 
 ```js example-good
-var foo = 'bar';
+var foo = "bar";
 foo.substring(1); // "ar"
 ```
 
@@ -57,7 +58,7 @@ scope of the function
 ```js example-bad
 function numbers() {
   var num1 = 2,
-      num2 = 3;
+    num2 = 3;
   return num1 + num2;
 }
 
@@ -70,7 +71,7 @@ all variables defined in the global scope.
 
 ```js example-good
 var num1 = 2,
-    num2 = 3;
+  num2 = 3;
 
 function numbers() {
   return num1 + num2;

@@ -11,6 +11,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.class
 ---
+
 {{jsSidebar("Statements")}}
 
 The **class declaration** creates a new class
@@ -52,7 +53,7 @@ keyword can be used.
 ```js
 class Polygon {
   constructor(height, width) {
-    this.name = 'Polygon';
+    this.name = "Polygon";
     this.height = height;
     this.width = width;
   }
@@ -61,7 +62,7 @@ class Polygon {
 class Square extends Polygon {
   constructor(length) {
     super(length, length);
-    this.name = 'Square';
+    this.name = "Square";
   }
 }
 ```
@@ -71,8 +72,8 @@ class Square extends Polygon {
 Re-declaring a class using the class declaration throws a {{jsxref("SyntaxError")}}.
 
 ```js example-bad
-class Foo {};
-class Foo {}; // Uncaught SyntaxError: Identifier 'Foo' has already been declared
+class Foo {}
+class Foo {} // Uncaught SyntaxError: Identifier 'Foo' has already been declared
 ```
 
 The same error is thrown when a class has been defined before using the class
@@ -80,7 +81,7 @@ expression.
 
 ```js example-bad
 let Foo = class {};
-class Foo {}; // Uncaught SyntaxError: Identifier 'Foo' has already been declared
+class Foo {} // Uncaught SyntaxError: Identifier 'Foo' has already been declared
 ```
 
 ## Specifications

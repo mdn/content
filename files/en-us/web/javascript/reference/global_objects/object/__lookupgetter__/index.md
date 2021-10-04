@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.lookupGetter
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`__lookupGetter__`** method returns the function bound as
@@ -18,7 +19,7 @@ a getter to the specified property.
 ## Syntax
 
 ```js
-__lookupGetter__(sprop)
+__lookupGetter__(sprop);
 ```
 
 ### Parameters
@@ -48,12 +49,12 @@ It is now possible to do this in a standardized way using
 ```js
 var obj = {
   get foo() {
-    return Math.random() > 0.5 ? 'foo' : 'bar';
-  }
+    return Math.random() > 0.5 ? "foo" : "bar";
+  },
 };
 
 // Non-standard and deprecated way
-obj.__lookupGetter__('foo');
+obj.__lookupGetter__("foo");
 // (function() { return Math.random() > 0.5 ? 'foo' : 'bar'; })
 
 // Standard-compliant way

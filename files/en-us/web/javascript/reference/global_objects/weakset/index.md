@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.WeakSet
 ---
+
 {{JSRef}}
 
 The **`WeakSet`** object lets you store weakly held _objects_ in a collection.
@@ -32,31 +33,28 @@ Functions that call themselves recursively need a way of guarding against circul
 
 ```js
 // Execute a callback on everything stored inside an object
-function execRecursively(fn, subject, _refs = null){
-  if(!_refs)
-    _refs = new WeakSet();
+function execRecursively(fn, subject, _refs = null) {
+  if (!_refs) _refs = new WeakSet();
 
   // Avoid infinite recursion
-  if(_refs.has(subject))
-    return;
+  if (_refs.has(subject)) return;
 
   fn(subject);
-  if("object" === typeof subject){
+  if ("object" === typeof subject) {
     _refs.add(subject);
-    for(let key in subject)
-      execRecursively(fn, subject[key], _refs);
+    for (let key in subject) execRecursively(fn, subject[key], _refs);
   }
 }
 
 const foo = {
   foo: "Foo",
   bar: {
-    bar: "Bar"
-  }
+    bar: "Bar",
+  },
 };
 
 foo.bar.baz = foo; // Circular reference!
-execRecursively(obj => console.log(obj), foo);
+execRecursively((obj) => console.log(obj), foo);
 ```
 
 Here, a `WeakSet` is created on the first run, and passed along with every subsequent function call (using the internal `_refs` parameter).
@@ -89,12 +87,12 @@ const bar = {};
 ws.add(foo);
 ws.add(bar);
 
-ws.has(foo);    // true
-ws.has(bar);    // true
+ws.has(foo); // true
+ws.has(bar); // true
 
 ws.delete(foo); // removes foo from the set
-ws.has(foo);    // false, foo has been removed
-ws.has(bar);    // true, bar is retained
+ws.has(foo); // false, foo has been removed
+ws.has(bar); // true, bar is retained
 ```
 
 Note that `foo !== bar`. While they are similar objects, _they are not **the same object**_. And so they are both added to the set.

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Array.push
 ---
+
 {{JSRef}}
 
 The **`push()`** method adds one or more elements to the end of
@@ -60,11 +61,11 @@ appends two elements to it. The `total` variable contains the new length of
 the array.
 
 ```js
-let sports = ['soccer', 'baseball']
-let total = sports.push('football', 'swimming')
+let sports = ["soccer", "baseball"];
+let total = sports.push("football", "swimming");
 
-console.log(sports)  // ['soccer', 'baseball', 'football', 'swimming']
-console.log(total)   // 4
+console.log(sports); // ['soccer', 'baseball', 'football', 'swimming']
+console.log(total); // 4
 ```
 
 ### Merging two arrays
@@ -73,13 +74,13 @@ This example uses {{jsxref("Operators/Spread_syntax", "spread syntax", "", "1")}
 second array into the first one.
 
 ```js
-let vegetables = ['parsnip', 'potato']
-let moreVegs = ['celery', 'beetroot']
+let vegetables = ["parsnip", "potato"];
+let moreVegs = ["celery", "beetroot"];
 
 // Merge the second array into the first one
 vegetables.push(...moreVegs);
 
-console.log(vegetables)  // ['parsnip', 'potato', 'celery', 'beetroot']
+console.log(vegetables); // ['parsnip', 'potato', 'celery', 'beetroot']
 ```
 
 Merging two arrays can also be done with the {{jsxref("Array.prototype.concat()", "concat()")}} method.
@@ -98,19 +99,19 @@ execution context in any way we want.
 
 ```js
 let obj = {
-    length: 0,
+  length: 0,
 
-    addElem: function addElem(elem) {
-        // obj.length is automatically incremented
-        // every time an element is added.
-        [].push.call(this, elem)
-    }
-}
+  addElem: function addElem(elem) {
+    // obj.length is automatically incremented
+    // every time an element is added.
+    [].push.call(this, elem);
+  },
+};
 
 // Let's add some empty objects just to illustrate.
-obj.addElem({})
-obj.addElem({})
-console.log(obj.length)
+obj.addElem({});
+obj.addElem({});
+console.log(obj.length);
 // → 2
 ```
 

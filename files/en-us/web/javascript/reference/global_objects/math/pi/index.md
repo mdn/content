@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Math.PI
 ---
+
 {{JSRef}}
 
 The **`Math.PI`** property represents the ratio of the circumference of a circle to its diameter, approximately 3.14159:
@@ -31,7 +32,7 @@ function calculateCircumference(radius) {
   return Math.PI * (radius + radius);
 }
 
-calculateCircumference(1);  // 6.283185307179586
+calculateCircumference(1); // 6.283185307179586
 ```
 
 ## Specifications
