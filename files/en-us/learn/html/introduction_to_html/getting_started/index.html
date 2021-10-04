@@ -67,10 +67,7 @@ tags:
 
 <p>If you make a mistake, you can clear your work using the <em>Reset</em> button. If you get really stuck, press the <em>Show solution</em> button to see the answer.</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
 
@@ -87,7 +84,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
 }
 
@@ -108,7 +105,7 @@ body {
 }
 </pre>
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -187,7 +184,7 @@ textarea.onkeyup = function(){
 };</pre>
 </div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 400, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Active_learning_creating_your_first_HTML_element', 700, 400, "", "") }}</p>
 
 <h3 id="Nesting_elements">Nesting elements</h3>
 
@@ -243,7 +240,7 @@ textarea.onkeyup = function(){
 
 <p>This would output the following:</p>
 
-<p>{{ EmbedLiveSample('Empty_elements', 700, 300, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Empty_elements', 700, 300, "", "") }}</p>
 
 <div class="note">
 <p><strong>Note:</strong> Empty elements are sometimes called <em>void elements</em>.</p>
@@ -287,10 +284,7 @@ textarea.onkeyup = function(){
 
 <p>If you make a mistake, you can always reset it using the <em>Reset</em> button. If you get really stuck, press the <em>Show solution</em> button to see the answer.</p>
 
-<div class="hidden">
-<h6 id="Playable_code2">Playable code2</h6>
-
-<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -307,7 +301,7 @@ textarea.onkeyup = function(){
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -327,7 +321,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -406,7 +400,7 @@ textarea.onkeyup = function(){
 };</pre>
 </div>
 
-<p>{{ EmbedLiveSample('Playable_code2', 700, 400, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Active_learning_Adding_attributes_to_an_element', 700, 400, "", "") }}</p>
 
 <h3 id="Boolean_attributes">Boolean attributes</h3>
 
@@ -425,7 +419,7 @@ textarea.onkeyup = function(){
 
 <p>For reference, the example above also includes a non-disabled form input element.The HTML from the example above produces this result:</p>
 
-<p>{{ EmbedLiveSample('Boolean_attributes', 700, 100, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Boolean_attributes', 700, 100, "", "") }}</p>
 
 <h3 id="Omitting_quotes_around_attribute_values">Omitting quotes around attribute values</h3>
 
@@ -439,7 +433,7 @@ textarea.onkeyup = function(){
 
 <p>As written above, the browser misinterprets the markup, mistaking the <code>title</code> attribute for three attributes:  a title attribute with the value <em>The</em>, and two Boolean attributes, <code>Mozilla</code> and <code>homepage</code>. Obviously, this is not intended! It will cause errors or unexpected behavior, as you can see in the live example below. Try hovering over the link to view the title text!</p>
 
-<p>{{ EmbedLiveSample('Omitting_quotes_around_attribute_values', 700, 100, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Omitting_quotes_around_attribute_values', 700, 100, "", "") }}</p>
 
 <p>Always include the attribute quotes. It avoids such problems, and results in more readable code.</p>
 
@@ -526,10 +520,7 @@ textarea.onkeyup = function(){
 
 <p>If you make a mistake, you can always reset it using the <em>Reset</em> button. If you get really stuck, press the <em>Show solution</em> button to see the answer.</p>
 
-<div class="hidden">
-<h6 id="Playable_code3">Playable code3</h6>
-
-<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -546,7 +537,7 @@ textarea.onkeyup = function(){
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -574,7 +565,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -653,7 +644,7 @@ textarea.onkeyup = function(){
 };</pre>
 </div>
 
-<p>{{ EmbedLiveSample('Playable_code3', 700, 1075, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Active_learning_Adding_some_features_to_an_HTML_document', 700, 1075, "", "") }}</p>
 
 <h3 id="Whitespace_in_HTML">Whitespace in HTML</h3>
 
@@ -715,7 +706,7 @@ textarea.onkeyup = function(){
 
 <p>In the live output below, you can see that the first paragraph has gone wrong. The browser interprets the second instance of <code>&lt;p&gt;</code> as starting a new paragraph. The second paragraph looks fine because it has angle brackets with character references.</p>
 
-<p>{{ EmbedLiveSample('Entity_references_Including_special_characters_in_HTML', 700, 200, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Entity_references_Including_special_characters_in_HTML', 700, 200, "", "") }}</p>
 
 <div class="note">
 <p><strong>Note:</strong> You don't need to use entity references for any other symbols, as modern browsers will handle the actual symbols just fine as long as your HTML's <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#specifying_your_documents_character_encoding">character encoding is set to UTF-8</a>.</p>
@@ -733,7 +724,7 @@ textarea.onkeyup = function(){
 
 <p>As you can see below, only the first paragraph displays in the live output.</p>
 
-<p>{{ EmbedLiveSample('HTML_comments', 700, 100, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('HTML_comments', 700, 100, "", "") }}</p>
 
 <h2 id="Summary">Summary</h2>
 

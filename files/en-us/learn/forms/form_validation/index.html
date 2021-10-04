@@ -194,15 +194,13 @@ input:valid {
 &lt;/form&gt;
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">input:invalid {
+<pre class="brush: css hidden">input:invalid {
   border: 2px dashed red;
 }
 
 input:valid {
   border: 2px solid black;
 }</pre>
-</div>
 
 <p>This gives us the following update — try it out:</p>
 
@@ -259,8 +257,7 @@ input:valid {
  <li>We've also given the <code>number</code> field a <code>min</code> of one and a <code>max</code> of ten. Entered numbers outside this range will show as invalid; users won't be able to use the increment/decrement arrows to move the value outside of this range. If the user manually enters a number outside of this range, the data is invalid. The number is not required, so removing the value will still result in a valid value.</li>
 </ul>
 
-<div class="hidden">
-<pre class="brush: css">input:invalid {
+<pre class="brush: css hidden">input:invalid {
   border: 2px dashed red;
 }
 
@@ -271,7 +268,6 @@ input:valid {
 div {
   margin-bottom: 10px;
 }</pre>
-</div>
 
 <p>Here is the example running live:</p>
 

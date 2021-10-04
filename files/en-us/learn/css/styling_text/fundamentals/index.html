@@ -82,8 +82,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <p>This will cause the paragraphs to become red, rather than the standard browser default of black, like so:</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
 
 &lt;p&gt;Well I remember it as though it were a meal ago...&lt;/p&gt;
 
@@ -93,7 +92,6 @@ had met its demise while staring point blank down the cavernous barrel of
  this awesome prowling machine. Truly a wonder of nature this urban
 predator — Tommy the cat had many a story to tell. But it was a rare
 occasion such as this that he did.&lt;/p&gt;</pre>
-</div>
 
 <p>{{ EmbedLiveSample('Color', '100%', 230) }}</p>
 
@@ -235,8 +233,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <p>This gives us the following result:</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
 
 &lt;p&gt;Well I remember it as though it were a meal ago...&lt;/p&gt;
 
@@ -246,7 +243,6 @@ had met its demise while staring point blank down the cavernous barrel of
  this awesome prowling machine. Truly a wonder of nature this urban
 predator — Tommy the cat had many a story to tell. But it was a rare
 occasion such as this that he did.&lt;/p&gt;</pre>
-</div>
 
 <p>{{ EmbedLiveSample('A_font-family_example', '100%', 220) }}</p>
 
@@ -277,8 +273,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <p>Our new result is like so:</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
 
 &lt;p&gt;Well I remember it as though it were a meal ago...&lt;/p&gt;
 
@@ -289,7 +284,6 @@ had met its demise while staring point blank down the cavernous barrel of
 predator — Tommy the cat had many a story to tell. But it was a rare
 occasion such as this that he did.&lt;/p&gt;
 </pre>
-</div>
 
 <pre class="brush: css">html {
   font-size: 10px;
@@ -349,8 +343,7 @@ p {
 
 <p>Our new result is like so:</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
 
 &lt;p&gt;Well I remember it as though it were a meal ago...&lt;/p&gt;
 
@@ -361,7 +354,6 @@ had met its demise while staring point blank down the cavernous barrel of
 predator — Tommy the cat had many a story to tell. But it was a rare
 occasion such as this that he did.&lt;/p&gt;
 </pre>
-</div>
 
 <pre class="brush: css">html {
   font-size: 10px;
@@ -403,15 +395,15 @@ p {
 
 <p>You can apply multiple shadows to the same text by including multiple shadow values separated by commas, for example:</p>
 
-<pre class="brush: css">text-shadow: 1px 1px 1px red,
-             2px 2px 1px red;</pre>
+<pre class="brush: css">
+h1 {
+  text-shadow: 1px 1px 1px red,
+               2px 2px 1px red;
+}</pre>
 
 <p>If we applied this to the {{htmlelement("h1")}} element in our Tommy The Cat example, we'd end up with this:</p>
 
-<div class="hidden">
-<h5 id="Hidden_example1">Hidden example1</h5>
-
-<pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
 
 &lt;p&gt;Well I remember it as though it were a meal ago...&lt;/p&gt;
 
@@ -423,15 +415,13 @@ predator — Tommy the cat had many a story to tell. But it was a rare
 occasion such as this that he did.&lt;/p&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-size: 10px;
 }
 
 h1 {
   font-size: 5rem;
   text-transform: capitalize;
-  text-shadow: 1px 1px 1px red,
-               2px 2px 1px red;
 }
 
 h1 + p {
@@ -443,9 +433,8 @@ p {
   color: red;
   font-family: Helvetica, Arial, sans-serif;
 }</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Hidden_example1', '100%', 260) }}</p>
+<p>{{ EmbedLiveSample('Multiple_shadows', '100%', 260) }}</p>
 
 <div class="note">
 <p><strong>Note:</strong> You can see more interesting examples of <code>text-shadow</code> usage in the Sitepoint article <a href="https://www.sitepoint.com/moonlighting-css-text-shadow/">Moonlighting with CSS text-shadow</a>.</p>
@@ -468,8 +457,7 @@ p {
 
 <p>If we applied <code>text-align: center;</code> to the {{htmlelement("h1")}} in our example, we'd end up with this:</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
 
 &lt;p&gt;Well I remember it as though it were a meal ago...&lt;/p&gt;
 
@@ -502,7 +490,6 @@ p {
   color: red;
   font-family: Helvetica, Arial, sans-serif;
 }</pre>
-</div>
 
 <p>{{ EmbedLiveSample('Text_alignment', '100%', 260) }}</p>
 
@@ -510,14 +497,14 @@ p {
 
 <p>The {{cssxref("line-height")}} property sets the height of each line of text. This property can not only take most <a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size">length and size units</a>, but can also take a unitless value, which acts as a multiplier and is generally considered the best option. With a unitless value, the {{cssxref("font-size")}} gets multiplied and results in the <code>line-height</code>. Body text generally looks nicer and is easier to read when the lines are spaced apart. The recommended line height is around 1.5 – 2 (double spaced.) To set our lines of text to 1.6 times the height of the font, we'd use:</p>
 
-<pre class="brush: css">line-height: 1.6;</pre>
+<pre class="brush: css">
+p {
+  line-height: 1.6;
+}</pre>
 
 <p>Applying this to the {{htmlelement("p")}} elements in our example would give us this result:</p>
 
-<div class="hidden">
-<h5 id="Hidden_example2">Hidden example2</h5>
-
-<pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
 
 &lt;p&gt;Well I remember it as though it were a meal ago...&lt;/p&gt;
 
@@ -549,11 +536,9 @@ p {
   font-size: 1.5rem;
   color: red;
   font-family: Helvetica, Arial, sans-serif;
-  line-height: 1.6;
 }</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Hidden_example2', '100%', 300) }}</p>
+<p>{{ EmbedLiveSample('Line_height', '100%', 300) }}</p>
 
 <h3 id="Letter_and_word_spacing">Letter and word spacing</h3>
 
@@ -568,8 +553,7 @@ p {
 
 <p>This renders our HTML as:</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
 
 &lt;p&gt;Well I remember it as though it were a meal ago...&lt;/p&gt;
 
@@ -598,11 +582,6 @@ h1 + p {
   font-weight: bold;
 }
 
-p::first-line {
-  letter-spacing: 4px;
-  word-spacing: 4px;
-}
-
 p {
   font-size: 1.5rem;
   color: red;
@@ -610,7 +589,6 @@ p {
   line-height: 1.6;
   letter-spacing: 1px;
 }</pre>
-</div>
 
 <p>{{ EmbedLiveSample('Letter_and_word_spacing', '100%', 330) }}</p>
 
@@ -670,10 +648,7 @@ p {
 
 <p>If you make a mistake, you can always reset it using the <em>Reset</em> button.</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
+<pre class="brush: html hidden">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
   &lt;h2&gt;HTML Input&lt;/h2&gt;
   &lt;textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"&gt;
 &lt;p&gt;Some sample text for your delight&lt;/p&gt;
@@ -720,9 +695,8 @@ htmlInput.addEventListener("input", drawOutput);
 cssInput.addEventListener("input", drawOutput);
 window.addEventListener("load", drawOutput);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 800) }}</p>
+<p>{{ EmbedLiveSample('Active_learning_Playing_with_styling_text', 700, 800) }}</p>
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
