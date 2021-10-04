@@ -16,12 +16,9 @@ tags:
 
 ### Properties
 
-- {{cssxref("letter-spacing")}}
-- {{cssxref("text-align")}}
 - {{cssxref("text-decoration")}}
 - {{cssxref("text-decoration-color")}}
 - {{cssxref("text-decoration-line")}}
-- {{cssxref("text-decoration-offset")}}
 - {{cssxref("text-decoration-skip-ink")}}
 - {{cssxref("text-decoration-style")}}
 - {{cssxref("text-decoration-thickness")}}
@@ -29,12 +26,9 @@ tags:
 - {{cssxref("text-emphasis-color")}}
 - {{cssxref("text-emphasis-position")}}
 - {{cssxref("text-emphasis-style")}}
-- {{cssxref("text-indent")}}
-- {{cssxref("text-rendering")}}
 - {{cssxref("text-shadow")}}
-- {{cssxref("text-transform")}}
-- {{cssxref("white-space")}}
-- {{cssxref("word-spacing")}}
+- {{cssxref("text-underline-offset")}}
+- {{cssxref("text-underline-position")}}
 
 ## Guides
 
