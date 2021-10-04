@@ -20,6 +20,7 @@ tags:
   - Web
 browser-compat: html.elements.video
 ---
+
 {{HTMLRef}}
 
 The **`<video>`** [HTML](/en-US/docs/Web/HTML) element embeds a media player which supports video playback into the document. You can use `<video>` for audio content as well, but the {{HTMLElement("audio")}} element may provide a more appropriate user experience.
@@ -34,67 +35,77 @@ The content inside the opening and closing `<video></video>` tags is shown as a 
 
 Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-*   {{htmlattrdef("autoplay")}}
-    *   : A Boolean attribute; if specified, the video automatically begins to play back as soon as it can do so without stopping to finish loading the data.
+- {{htmlattrdef("autoplay")}}
 
-        > **Note:** Sites that automatically play audio (or videos with an audio track) can be an unpleasant experience for users, so should be avoided when possible. If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it). However, this can be useful when creating media elements whose source will be set at a later time, under user control. See our [autoplay guide](/en-US/docs/Web/Media/Autoplay_guide) for additional information about how to properly use autoplay.
+  - : A Boolean attribute; if specified, the video automatically begins to play back as soon as it can do so without stopping to finish loading the data.
 
-        To disable video autoplay, `autoplay="false"` will not work; the video will autoplay if the attribute is there in the `<video>` tag at all. To remove autoplay, the attribute needs to be removed altogether.
+    > **Note:** Sites that automatically play audio (or videos with an audio track) can be an unpleasant experience for users, so should be avoided when possible. If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it). However, this can be useful when creating media elements whose source will be set at a later time, under user control. See our [autoplay guide](/en-US/docs/Web/Media/Autoplay_guide) for additional information about how to properly use autoplay.
 
-        In some browsers (e.g. Chrome 70.0) autoplay doesn't work if no `muted` attribute is present.
-*   {{htmlattrdef("autopictureinpicture")}} {{experimental_inline}}
-    *   : A Boolean attribute which if `true` indicates that the element should automatically toggle picture-in-picture mode when the user switches back and forth between this document and another document or application.
-*   {{htmlattrdef("controls")}}
-    *   : If this attribute is present, the browser will offer controls to allow the user to control video playback, including volume, seeking, and pause/resume playback.
-*   {{htmlattrdef("controlslist")}} {{experimental_inline}}
-    *   : The [`controlslist`](https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist) attribute, when specified, helps the browser select what controls to show on the media element whenever the browser shows its own set of controls (e.g. when the `controls` attribute is specified).
+    To disable video autoplay, `autoplay="false"` will not work; the video will autoplay if the attribute is there in the `<video>` tag at all. To remove autoplay, the attribute needs to be removed altogether.
 
-        The allowed values are `nodownload`, `nofullscreen` and `noremoteplayback`.
+    In some browsers (e.g. Chrome 70.0) autoplay doesn't work if no `muted` attribute is present.
 
-        Use the [`disablepictureinpicture`](#attr-disablepictureinpicture) attribute if you want to disable the Picture-In-Picture mode (and the control).
-*   {{htmlattrdef("crossorigin")}}
-    *   : This enumerated attribute indicates whether to use CORS to fetch the related video. [CORS-enabled resources](/en-US/docs/Web/HTML/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being *tainted*. The allowed values are:
+- {{htmlattrdef("autopictureinpicture")}} {{experimental_inline}}
+  - : A Boolean attribute which if `true` indicates that the element should automatically toggle picture-in-picture mode when the user switches back and forth between this document and another document or application.
+- {{htmlattrdef("controls")}}
+  - : If this attribute is present, the browser will offer controls to allow the user to control video playback, including volume, seeking, and pause/resume playback.
+- {{htmlattrdef("controlslist")}} {{experimental_inline}}
 
-        *   `anonymous`
-            *   : Sends a cross-origin request without a credential. In other words, it sends the `Origin:` HTTP header without a cookie, X.509 certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (by not setting the `Access-Control-Allow-Origin:` HTTP header), the image will be *tainted*, and its usage restricted.
-        *   `use-credentials`
-            *   : Sends a cross-origin request with a credential. In other words, it sends the `Origin:` HTTP header with a cookie, a certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (through `Access-Control-Allow-Credentials:` HTTP header), the image will be *tainted* and its usage restricted.
+  - : The [`controlslist`](https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist) attribute, when specified, helps the browser select what controls to show on the media element whenever the browser shows its own set of controls (e.g. when the `controls` attribute is specified).
 
-        When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted used in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword `anonymous` was used. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for additional information.
-*   {{htmlattrdef("disablepictureinpicture")}} {{experimental_inline}}
-    *   : Prevents the browser from suggesting a Picture-in-Picture context menu or to request Picture-in-Picture automatically in some cases.
-*   {{htmlattrdef("disableremoteplayback")}} {{experimental_inline}}
-    *   : A Boolean attribute used to disable the capability of remote playback in devices that are attached using wired (HDMI, DVI, etc.) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, etc).
+    The allowed values are `nodownload`, `nofullscreen` and `noremoteplayback`.
 
-        In Safari, you can use [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) as a fallback.
-*   {{htmlattrdef("height")}}
-    *   : The height of the video's display area, in [CSS pixels](https://drafts.csswg.org/css-values/#px) (absolute values only; [no percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes).)
-*   {{htmlattrdef("loop")}}
-    *   : A Boolean attribute; if specified, the browser will automatically seek back to the start upon reaching the end of the video.
-*   {{htmlattrdef("muted")}}
-    *   : A Boolean attribute that indicates the default setting of the audio contained in the video. If set, the audio will be initially silenced. Its default value is `false`, meaning that the audio will be played when the video is played.
-*   {{htmlattrdef("playsinline")}}
-    *   : A Boolean attribute indicating that the video is to be played "inline", that is within the element's playback area. Note that the absence of this attribute *does not* imply that the video will always be played in fullscreen.
-*   {{htmlattrdef("poster")}}
-    *   : A URL for an image to be shown while the video is downloading. If this attribute isn't specified, nothing is displayed until the first frame is available, then the first frame is shown as the poster frame.
-*   {{htmlattrdef("preload")}}
-    *   : This enumerated attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience with regards to what content is loaded before the video is played. It may have one of the following values:
+    Use the [`disablepictureinpicture`](#attr-disablepictureinpicture) attribute if you want to disable the Picture-In-Picture mode (and the control).
 
-        *   `none`: Indicates that the video should not be preloaded.
-        *   `metadata`: Indicates that only video metadata (e.g. length) is fetched.
-        *   `auto`: Indicates that the whole video file can be downloaded, even if the user is not expected to use it.
-        *   *empty string*: Synonym of the `auto` value.
+- {{htmlattrdef("crossorigin")}}
 
-        The default value is different for each browser. The spec advises it to be set to `metadata`.
+  - : This enumerated attribute indicates whether to use CORS to fetch the related video. [CORS-enabled resources](/en-US/docs/Web/HTML/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
 
-        > **Note:**
-        >
-        > *   The `autoplay` attribute has precedence over `preload`. If `autoplay` is specified, the browser would obviously need to start downloading the video for playback.
-        > *   The specification does not force the browser to follow the value of this attribute; it is a mere hint.
-*   {{htmlattrdef("src")}}
-    *   : The URL of the video to embed. This is optional; you may instead use the {{HTMLElement("source")}} element within the video block to specify the video to embed.
-*   {{htmlattrdef("width")}}
-    *   : The width of the video's display area, in [CSS pixels](https://drafts.csswg.org/css-values/#px) (absolute values only; [no percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes)).
+    - `anonymous`
+      - : Sends a cross-origin request without a credential. In other words, it sends the `Origin:` HTTP header without a cookie, X.509 certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (by not setting the `Access-Control-Allow-Origin:` HTTP header), the image will be _tainted_, and its usage restricted.
+    - `use-credentials`
+      - : Sends a cross-origin request with a credential. In other words, it sends the `Origin:` HTTP header with a cookie, a certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (through `Access-Control-Allow-Credentials:` HTTP header), the image will be _tainted_ and its usage restricted.
+
+    When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted used in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword `anonymous` was used. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for additional information.
+
+- {{htmlattrdef("disablepictureinpicture")}} {{experimental_inline}}
+  - : Prevents the browser from suggesting a Picture-in-Picture context menu or to request Picture-in-Picture automatically in some cases.
+- {{htmlattrdef("disableremoteplayback")}} {{experimental_inline}}
+
+  - : A Boolean attribute used to disable the capability of remote playback in devices that are attached using wired (HDMI, DVI, etc.) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, etc).
+
+    In Safari, you can use [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) as a fallback.
+
+- {{htmlattrdef("height")}}
+  - : The height of the video's display area, in [CSS pixels](https://drafts.csswg.org/css-values/#px) (absolute values only; [no percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes).)
+- {{htmlattrdef("loop")}}
+  - : A Boolean attribute; if specified, the browser will automatically seek back to the start upon reaching the end of the video.
+- {{htmlattrdef("muted")}}
+  - : A Boolean attribute that indicates the default setting of the audio contained in the video. If set, the audio will be initially silenced. Its default value is `false`, meaning that the audio will be played when the video is played.
+- {{htmlattrdef("playsinline")}}
+  - : A Boolean attribute indicating that the video is to be played "inline", that is within the element's playback area. Note that the absence of this attribute _does not_ imply that the video will always be played in fullscreen.
+- {{htmlattrdef("poster")}}
+  - : A URL for an image to be shown while the video is downloading. If this attribute isn't specified, nothing is displayed until the first frame is available, then the first frame is shown as the poster frame.
+- {{htmlattrdef("preload")}}
+
+  - : This enumerated attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience with regards to what content is loaded before the video is played. It may have one of the following values:
+
+    - `none`: Indicates that the video should not be preloaded.
+    - `metadata`: Indicates that only video metadata (e.g. length) is fetched.
+    - `auto`: Indicates that the whole video file can be downloaded, even if the user is not expected to use it.
+    - _empty string_: Synonym of the `auto` value.
+
+    The default value is different for each browser. The spec advises it to be set to `metadata`.
+
+    > **Note:**
+    >
+    > - The `autoplay` attribute has precedence over `preload`. If `autoplay` is specified, the browser would obviously need to start downloading the video for playback.
+    > - The specification does not force the browser to follow the value of this attribute; it is a mere hint.
+
+- {{htmlattrdef("src")}}
+  - : The URL of the video to embed. This is optional; you may instead use the {{HTMLElement("source")}} element within the video block to specify the video to embed.
+- {{htmlattrdef("width")}}
+  - : The width of the video's display area, in [CSS pixels](https://drafts.csswg.org/css-values/#px) (absolute values only; [no percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes)).
 
 ## Events
 
@@ -281,12 +292,12 @@ We offer a substantive and thorough [guide to media file types](/en-US/docs/Web/
 
 Other usage notes:
 
-*   If you don't specify the `controls` attribute, the video won't include the browser's default controls; you can create your own custom controls using JavaScript and the {{domxref("HTMLMediaElement")}} API. See [Creating a cross-browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player) for more details.
-*   To allow precise control over your video (and audio) content, `HTMLMediaElement`s fire many different [events](/en-US/docs/Web/API/HTMLMediaElement#events). In addition to providing controllability, these events let you monitor the progress of both download and playback of the media, as well as the playback state and position.
-*   You can use the {{cssxref("object-position")}} property to adjust the positioning of the video within the element's frame, and the {{cssxref("object-fit")}} property to control how the video's size is adjusted to fit within the frame.
-*   To show subtitles/captions along with your video, you can use some JavaScript along with the {{htmlelement("track")}} element and the [WebVTT](/en-US/docs/Web/API/WebVTT_API) format. See [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5\_video) for more information.
-*   You can play audio files using a `<video>` element. This can be useful if, for example, you need to perform audio with a [WebVTT](/en-US/docs/Web/API/WebVTT_API) transcript, since the {{HTMLElement("audio")}} element doesn't allow captions using WebVTT.
-*   To test the fallback content on browsers that support the element, you can replace `<video>` with a non-existing element like `<notavideo>`.
+- If you don't specify the `controls` attribute, the video won't include the browser's default controls; you can create your own custom controls using JavaScript and the {{domxref("HTMLMediaElement")}} API. See [Creating a cross-browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player) for more details.
+- To allow precise control over your video (and audio) content, `HTMLMediaElement`s fire many different [events](/en-US/docs/Web/API/HTMLMediaElement#events). In addition to providing controllability, these events let you monitor the progress of both download and playback of the media, as well as the playback state and position.
+- You can use the {{cssxref("object-position")}} property to adjust the positioning of the video within the element's frame, and the {{cssxref("object-fit")}} property to control how the video's size is adjusted to fit within the frame.
+- To show subtitles/captions along with your video, you can use some JavaScript along with the {{htmlelement("track")}} element and the [WebVTT](/en-US/docs/Web/API/WebVTT_API) format. See [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) for more information.
+- You can play audio files using a `<video>` element. This can be useful if, for example, you need to perform audio with a [WebVTT](/en-US/docs/Web/API/WebVTT_API) transcript, since the {{HTMLElement("audio")}} element doesn't allow captions using WebVTT.
+- To test the fallback content on browsers that support the element, you can replace `<video>` with a non-existing element like `<notavideo>`.
 
 A good general source of information on using HTML `<video>` is the [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) beginner's tutorial.
 
@@ -300,12 +311,12 @@ There are no special considerations for styling `<video>`; a common strategy is 
 
 You can detect when tracks are added to and removed from a `<video>` element using the {{event("addtrack")}} and {{event("removetrack")}} events. However, these events aren't sent directly to the `<video>` element itself. Instead, they're sent to the track list object within the `<video>` element's {{domxref("HTMLMediaElement")}} that corresponds to the type of track that was added to the element:
 
-*   {{domxref("HTMLMediaElement.audioTracks")}}
-    *   : An {{domxref("AudioTrackList")}} containing all of the media element's audio tracks. You can add a listener for `addtrack` to this object to be alerted when new audio tracks are added to the element.
-*   {{domxref("HTMLMediaElement.videoTracks")}}
-    *   : Add an `addtrack` listener to this {{domxref("VideoTrackList")}} object to be informed when video tracks are added to the element.
-*   {{domxref("HTMLMediaElement.textTracks")}}
-    *   : Add an `addtrack` event listener to this {{domxref("TextTrackList")}} to be notified when new text tracks are added to the element.
+- {{domxref("HTMLMediaElement.audioTracks")}}
+  - : An {{domxref("AudioTrackList")}} containing all of the media element's audio tracks. You can add a listener for `addtrack` to this object to be alerted when new audio tracks are added to the element.
+- {{domxref("HTMLMediaElement.videoTracks")}}
+  - : Add an `addtrack` listener to this {{domxref("VideoTrackList")}} object to be informed when video tracks are added to the element.
+- {{domxref("HTMLMediaElement.textTracks")}}
+  - : Add an `addtrack` event listener to this {{domxref("TextTrackList")}} to be notified when new text tracks are added to the element.
 
 For example, to detect when audio tracks are added to or removed from a `<video>` element, you can use code like this:
 
@@ -398,7 +409,7 @@ Your web host may provide an easy interface to MIME type configuration changes f
 
 ## Accessibility concerns
 
-Videos should provide both captions and transcripts that accurately describe its content (see [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5\_video) for more information on how to implement these). Captions allow people who are experiencing hearing loss to understand a video's audio content as the video is being played, while transcripts allow people who need additional time to be able to review audio content at a pace and format that is comfortable for them.
+Videos should provide both captions and transcripts that accurately describe its content (see [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) for more information on how to implement these). Captions allow people who are experiencing hearing loss to understand a video's audio content as the video is being played, while transcripts allow people who need additional time to be able to review audio content at a pace and format that is comfortable for them.
 
 It's worth noting that while you can caption audio-only media, you can only do so when playing audio in a {{HTMLElement("video")}} element, since the video region of the element is used to present the captions. This is one of the special scenarios in which it's useful to play audio in a video element.
 
@@ -424,12 +435,12 @@ In addition to spoken dialog, subtitles and transcripts should also identify mus
 
 Captions should not obstruct the main subject of the video. They can be positioned using [the `align` VTT cue setting](/en-US/docs/Web/API/WebVTT_API#cue_settings).
 
-*   [MDN Subtitles and closed caption — Plugins](/en-US/docs/Plugins/Flash_to_HTML5/Video/Subtitles_captions)
-*   [Web Video Text Tracks Format (WebVTT)](/en-US/docs/Web/API/WebVTT_API)
-*   [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
-*   [MDN Understanding WCAG, Guideline 1.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline\_1.2\_—\_providing_text_alternatives_for_time-based_media)
-*   [Understanding Success Criterion 1.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
-*   [Understanding Success Criterion 1.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
+- [MDN Subtitles and closed caption — Plugins](/en-US/docs/Plugins/Flash_to_HTML5/Video/Subtitles_captions)
+- [Web Video Text Tracks Format (WebVTT)](/en-US/docs/Web/API/WebVTT_API)
+- [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
+- [MDN Understanding WCAG, Guideline 1.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
+- [Understanding Success Criterion 1.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
+- [Understanding Success Criterion 1.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
 
 ## Technical summary
 
@@ -504,13 +515,14 @@ Captions should not obstruct the main subject of the video. They can be position
 
 ## See also
 
-*   [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
+- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
 
-    *   [Media container formats (file types)](/en-US/docs/Web/Media/Formats/Containers)
-    *   [Web video codec guide](/en-US/docs/Web/Media/Formats/Video_codecs)
-    *   [Web audio codec guide](/en-US/docs/Web/Media/Formats/Audio_codecs)
-*   Positioning and sizing the picture within its frame: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
-*   {{htmlelement("audio")}}
-*   [Using HTML5 audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-*   [Manipulating video using canvas](/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
-*   [Configuring servers for Ogg media](/en-US/docs/Web/HTTP/Configuring_servers_for_Ogg_media)
+  - [Media container formats (file types)](/en-US/docs/Web/Media/Formats/Containers)
+  - [Web video codec guide](/en-US/docs/Web/Media/Formats/Video_codecs)
+  - [Web audio codec guide](/en-US/docs/Web/Media/Formats/Audio_codecs)
+
+- Positioning and sizing the picture within its frame: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
+- {{htmlelement("audio")}}
+- [Using HTML5 audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Manipulating video using canvas](/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
+- [Configuring servers for Ogg media](/en-US/docs/Web/HTTP/Configuring_servers_for_Ogg_media)

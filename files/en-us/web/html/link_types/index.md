@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: html.elements.link.rel
 ---
+
 {{HTMLSidebar}}
 
 In HTML, link types indicate the relationship between two documents, in which one links to the other using an {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}, or {{HTMLElement("link")}} element.

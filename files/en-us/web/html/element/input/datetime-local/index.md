@@ -16,6 +16,7 @@ tags:
   - datetime-local
 browser-compat: html.elements.input.input-datetime-local
 ---
+
 {{HTMLRef("Input_types")}}
 
 {{htmlelement("input")}} elements of type **`datetime-local`** create input controls that let the user easily enter both a date and a time, including the year, month, and day as well as the time in hours and minutes.
@@ -24,7 +25,7 @@ browser-compat: html.elements.input.input-datetime-local
 
 The control's UI varies in general from browser to browser. In browsers with no support, these degrade gracefully to simple [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text) controls.
 
-The control is intended to represent *a local date and time*, not necessarily *the user's local date and time*. In other words, an implementation should allow any valid combination of year, month, day, hour, and minute—even if such a combination is invalid in the user's local time zone (such as times within a daylight saving time spring-forward transition gap). Some mobile browsers (particularly on iOS) do not currently implement this correctly.
+The control is intended to represent _a local date and time_, not necessarily _the user's local date and time_. In other words, an implementation should allow any valid combination of year, month, day, hour, and minute—even if such a combination is invalid in the user's local time zone (such as times within a daylight saving time spring-forward transition gap). Some mobile browsers (particularly on iOS) do not currently implement this correctly.
 
 Because of the limited browser support for `datetime-local`, and the variations in how the inputs work, it may currently still be best to use a framework or library to present these, or to use a custom input of your own. Another option is to use separate `date` and `time` inputs, each of which is more widely supported than `datetime-local`.
 
@@ -124,7 +125,7 @@ A string value of `any` means that no stepping is implied, and any value is allo
 
 For `datetime-local` inputs, the value of `step` is given in seconds, with a scaling factor of 1000 (since the underlying numeric value is in milliseconds). The default value of `step` is 60, indicating 60 seconds (or 1 minute, or 60,000 milliseconds).
 
-*At this time, it's unclear what a value of `any` means for `step` when used with `datetime-local` inputs. This will be updated as soon as that information is determined.*
+_At this time, it's unclear what a value of `any` means for `step` when used with `datetime-local` inputs. This will be updated as soon as that information is determined._
 
 ## Using datetime-local inputs
 
@@ -160,8 +161,8 @@ You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "inpu
 
 The result here is that:
 
-*   Only days in June 2017 can be selected — only the "days" part of the date value will be editable, and dates outside June can't be scrolled to in the datepicker widget.
-*   Depending on what browser you are using, you might find that times outside the specified values might not be selectable in the time picker (e.g. Edge), or invalid (see {{anch("Validation")}}) but still available (e.g. Chrome).
+- Only days in June 2017 can be selected — only the "days" part of the date value will be editable, and dates outside June can't be scrolled to in the datepicker widget.
+- Depending on what browser you are using, you might find that times outside the specified values might not be selectable in the time picker (e.g. Edge), or invalid (see {{anch("Validation")}}) but still available (e.g. Chrome).
 
 > **Note:** You should be able to use the {{htmlattrxref("step", "input")}} attribute to vary the number of days jumped each time the date is incremented (e.g. maybe you only want to make Saturdays selectable). However, this does not seem to work effectively in any implementation at the time of writing.
 
@@ -243,7 +244,7 @@ input:valid+span:after {
 }
 ```
 
-> **Warning:** HTML form validation is *not* a substitute for scripts that ensure that the entered data is in the proper format.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).
+> **Warning:** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).
 
 ## Handling browser support
 
@@ -251,14 +252,14 @@ As mentioned above, non-supporting browsers gracefully degrade to a text input, 
 
 The second problem is the most serious; as we mentioned earlier, with a `datetime-local` input, the actual value is always normalized to the format `YYYY-MM-DDThh:mm`. With a text input on the other hand, by default the browser has no recognition of what format the date should be in, and there are lots of different ways in which people write dates and times, for example:
 
-*   `DDMMYYYY`
-*   `DD/MM/YYYY`
-*   `MM/DD/YYYY`
-*   `DD-MM-YYYY`
-*   `MM-DD-YYYY`
-*   `MM-DD-YYYY hh:mm` (12 hour clock)
-*   `MM-DD-YYYY HH:mm` (24 hour clock)
-*   etc.
+- `DDMMYYYY`
+- `DD/MM/YYYY`
+- `MM/DD/YYYY`
+- `DD-MM-YYYY`
+- `MM-DD-YYYY`
+- `MM-DD-YYYY hh:mm` (12 hour clock)
+- `MM-DD-YYYY HH:mm` (24 hour clock)
+- etc.
 
 One way around this is to put a {{htmlattrxref("pattern", "input")}} attribute on your `datetime-local` input. Even though the `datetime-local` input doesn't use it, the text input fallback will. For example, try viewing the following demo in a non-supporting browser:
 
@@ -318,7 +319,7 @@ The best way to deal with dates in forms in a cross-browser way at the moment is
 
 JavaScript uses double precision floating points to store dates, as with all numbers, meaning that JavaScript code will not suffer from the Y2K38 problem unless integer coercion/bit-hacks are used because all JavaScript bit operators use 32-bit signed 2s-complement integers.
 
-The problem is with the server side of things: storage of dates greater than 2^31 - 1. To fix this problem, you must store all dates using either unsigned 32-bit integers, signed 64-bit integers, or double-precision floating points on the server. If your server is written in PHP, the fix may be as simple as upgrading to PHP 8 or 7, and upgrading your hardware to x86\_64 or IA64. If you are stuck with other hardware, you can try to emulate 64-bit hardware inside a 32-bit virtual machine, but most VMs don't support this kind of virtualization, since stability may suffer, and performance will definitely suffer greatly.
+The problem is with the server side of things: storage of dates greater than 2^31 - 1. To fix this problem, you must store all dates using either unsigned 32-bit integers, signed 64-bit integers, or double-precision floating points on the server. If your server is written in PHP, the fix may be as simple as upgrading to PHP 8 or 7, and upgrading your hardware to x86_64 or IA64. If you are stuck with other hardware, you can try to emulate 64-bit hardware inside a 32-bit virtual machine, but most VMs don't support this kind of virtualization, since stability may suffer, and performance will definitely suffer greatly.
 
 ## The Y10k Problem (often client-side)
 
@@ -591,8 +592,8 @@ daySelect.onchange = function() {
 
 ## See also
 
-*   The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
-*   [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date) and [`<input type="time">`](/en-US/docs/Web/HTML/Element/input/time)
-*   [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
-*   [Date and Time picker tutorial](/en-US/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
-*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
+- [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date) and [`<input type="time">`](/en-US/docs/Web/HTML/Element/input/time)
+- [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
+- [Date and Time picker tutorial](/en-US/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
+- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

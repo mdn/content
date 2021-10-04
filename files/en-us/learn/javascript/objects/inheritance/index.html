@@ -24,7 +24,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}</div>
 
-<p class="summary">With most of the gory details of OOJS now explained, this article shows how to create "child" object classes (constructors) that inherit features from their "parent" classes. In addition, we present some advice on when and where you might use OOJS, and look at how classes are dealt with in modern ECMAScript syntax.</p>
+<p>With most of the gory details of OOJS now explained, this article shows how to create "child" object classes (constructors) that inherit features from their "parent" classes. In addition, we present some advice on when and where you might use OOJS, and look at how classes are dealt with in modern ECMAScript syntax.</p>
 
 <table>
 	<tbody>
@@ -66,7 +66,7 @@ tags:
 };</pre>
 
 <div class="note">
-<p><strong>Note</strong>: In the source code, you'll also see <code>bio()</code> and <code>farewell()</code> methods defined. Later you'll see how these can be inherited by other constructors.</p>
+<p><strong>Note:</strong> In the source code, you'll also see <code>bio()</code> and <code>farewell()</code> methods defined. Later you'll see how these can be inherited by other constructors.</p>
 </div>
 
 <p>Say we wanted to create a <code>Teacher</code> class, like the one we described in our initial object-oriented definition, which inherits all the members from <code>Person</code>, but also includes:</p>
@@ -185,7 +185,7 @@ teacher1.farewell();</pre>
 <p>These should all work just fine. The queries on lines 1, 2, 3, and 6 access members inherited from the generic <code>Person()</code> constructor (class). The query on line 4 accesses a member that is available only on the more specialized <code>Teacher()</code> constructor (class). The query on line 5 would have accessed a member inherited from <code>Person()</code>, except for the fact that <code>Teacher()</code> has its own member with the same name, so the query accesses that member.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If you have trouble getting this to work, compare your code to our <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-finished.html">finished version</a> (see it <a href="https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html">running live</a> also).</p>
+<p><strong>Note:</strong> If you have trouble getting this to work, compare your code to our <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-finished.html">finished version</a> (see it <a href="https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html">running live</a> also).</p>
 </div>
 
 <p>The technique we covered here is not the only way to create inheriting classes in JavaScript, but it works OK, and it gives you a good idea about how to implement inheritance in JavaScript.</p>
@@ -197,7 +197,7 @@ teacher1.farewell();</pre>
 <p>In our <a href="/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS#object-oriented_programming_from_10000_meters">OOP theory section</a>, we also included a <code>Student</code> class as a concept, which inherits all the features of <code>Person</code>, and also has a different <code>greeting()</code> method from <code>Person</code> that is much more informal than the <code>Teacher</code>'s greeting. Have a look at what the student's greeting looks like in that section, and try implementing your own <code>Student()</code> constructor that inherits all the features of <code>Person()</code>, and implements the different <code>greeting()</code> function.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If you have trouble getting this to work, have a look at our <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html">finished version</a> (see it <a href="https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html">running live</a> also).</p>
+<p><strong>Note:</strong> If you have trouble getting this to work, have a look at our <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html">finished version</a> (see it <a href="https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html">running live</a> also).</p>
 </div>
 
 <h2 id="Object_member_summary">Object member summary</h2>
@@ -218,7 +218,7 @@ teacher1.farewell();</pre>
 <p>ECMAScript 2015 introduces <a href="/en-US/docs/Web/JavaScript/Reference/Classes">class syntax</a> to JavaScript as a way to write reusable classes using easier, cleaner syntax, which is more similar to classes in C++ or Java. In this section we'll convert the Person and Teacher examples from prototypal inheritance to classes, to show you how it's done.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This modern way of writing classes is supported in all modern browsers, but it is still worth knowing about the underlying prototypal inheritance in case you work on a project that requires supporting a browser that doesn't support this syntax (most notably Internet Explorer).</p>
+<p><strong>Note:</strong> This modern way of writing classes is supported in all modern browsers, but it is still worth knowing about the underlying prototypal inheritance in case you work on a project that requires supporting a browser that doesn't support this syntax (most notably Internet Explorer).</p>
 </div>
 
 <p>Let's look at a rewritten version of the Person example, class-style:</p>
@@ -263,7 +263,7 @@ leia.farewell();
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: Under the hood, your classes are being converted into Prototypal Inheritance models — this is just syntactic sugar. But I'm sure you'll agree that it's easier to write.</p>
+<p><strong>Note:</strong> Under the hood, your classes are being converted into Prototypal Inheritance models — this is just syntactic sugar. But I'm sure you'll agree that it's easier to write.</p>
 </div>
 
 <h3 id="Inheritance_with_class_syntax">Inheritance with class syntax</h3>
@@ -342,7 +342,7 @@ snape.subject; // Dark arts
 <p>Like we did with Teachers, we could create other subclasses of <code>Person</code> to make them more specialized without modifying the base class.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can find this example on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-class-inheritance.html">es2015-class-inheritance.html</a> (<a href="https://mdn.github.io/learning-area/javascript/oojs/advanced/es2015-class-inheritance.html">see it live also</a>).</p>
+<p><strong>Note:</strong> You can find this example on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-class-inheritance.html">es2015-class-inheritance.html</a> (<a href="https://mdn.github.io/learning-area/javascript/oojs/advanced/es2015-class-inheritance.html">see it live also</a>).</p>
 </div>
 
 <h2 id="Getters_and_Setters">Getters and Setters</h2>
@@ -395,7 +395,7 @@ console.log(snape.subject) // Returns "Balloon animals"
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: You can find this example on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-getters-setters.html">es2015-getters-setters.html</a> (<a href="https://mdn.github.io/learning-area/javascript/oojs/advanced/es2015-getters-setters.html">see it live also</a>).</p>
+<p><strong>Note:</strong> You can find this example on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-getters-setters.html">es2015-getters-setters.html</a> (<a href="https://mdn.github.io/learning-area/javascript/oojs/advanced/es2015-getters-setters.html">see it live also</a>).</p>
 </div>
 
 <div class="notecard note">
@@ -411,7 +411,7 @@ console.log(snape.subject) // Returns "Balloon animals"
 <p>In terms of using inheritance in your own code, you probably won't use it often, especially to begin with, and in small projects. It is a waste of time to use objects and inheritance just for the sake of it when you don't need them. But as your code bases get larger, you are more likely to find a need for it. If you find yourself starting to create a number of objects that have similar features, then creating a generic object type to contain all the shared functionality and inheriting those features in more specialized object types can be convenient and useful.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Because of the way JavaScript works, with the prototype chain, etc., the sharing of functionality between objects is often called <strong>delegation</strong>. Specialized objects delegate functionality to a generic object type.</p>
+<p><strong>Note:</strong> Because of the way JavaScript works, with the prototype chain, etc., the sharing of functionality between objects is often called <strong>delegation</strong>. Specialized objects delegate functionality to a generic object type.</p>
 </div>
 
 <p>When using inheritance, you are advised to not have too many levels of inheritance, and to keep careful track of where you define your methods and properties. It is possible to start writing code that temporarily modifies the prototypes of built-in browser objects, but you should not do this unless you have a really good reason. Too much inheritance can lead to endless confusion, and endless pain when you try to debug such code.</p>

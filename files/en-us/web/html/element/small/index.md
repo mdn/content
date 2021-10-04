@@ -10,6 +10,7 @@ tags:
   - font-size
 browser-compat: html.elements.small
 ---
+
 {{HTMLRef}}
 
 The **`<small>`** [HTML](/en-US/docs/Web/HTML) element represents side-comments and small print, like copyright and legal text, independent of its styled presentation. By default, it renders text within it one font-size smaller, such as from `small` to `x-small`.
@@ -113,8 +114,8 @@ Although the `<small>` element, like the {{htmlelement("b")}} and {{htmlelement(
 
 ## See also
 
-*   {{HTMLElement("b")}}
-*   {{HTMLElement("sub")}} and {{HTMLElement("sup")}}
-*   {{HTMLElement("font")}}
-*   {{HTMLElement("style")}}
-*   HTML 4.01 Specification: [Font Styles](https://www.w3.org/TR/html4/present/graphics.html#h-15.2)
+- {{HTMLElement("b")}}
+- {{HTMLElement("sub")}} and {{HTMLElement("sup")}}
+- {{HTMLElement("font")}}
+- {{HTMLElement("style")}}
+- HTML 4.01 Specification: [Font Styles](https://www.w3.org/TR/html4/present/graphics.html#h-15.2)

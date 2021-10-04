@@ -17,7 +17,7 @@ tags:
 
 <div>{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}</div>
 
-<p class="summary">First up, we'll start by looking at APIs from a high level — what are they, how do they work, how to use them in your code, and how are they structured? We'll also take a look at what the different main classes of APIs are, and what kind of uses they have.</p>
+<p>First up, we'll start by looking at APIs from a high level — what are they, how do they work, how to use them in your code, and how are they structured? We'll also take a look at what the different main classes of APIs are, and what kind of uses they have.</p>
 
 <table>
  <tbody>
@@ -45,7 +45,7 @@ tags:
 <p>In the same way, if you want to say, program some 3D graphics, it is a lot easier to do it using an API written in a higher-level language such as JavaScript or Python, rather than try to directly write low level code (say C or C++) that directly controls the computer's GPU or other graphics functions.</p>
 
 <div class="note">
-<p><strong>Note</strong>: See also the <a href="/en-US/docs/Glossary/API">API glossary entry</a> for further description.</p>
+<p><strong>Note:</strong> See also the <a href="/en-US/docs/Glossary/API">API glossary entry</a> for further description.</p>
 </div>
 
 <h3 id="APIs_in_client-side_JavaScript">APIs in client-side JavaScript</h3>
@@ -104,7 +104,7 @@ tags:
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: You can find information on a lot more 3rd party APIs at the <a href="https://www.programmableweb.com/category/all/apis">Programmable Web API directory</a>.</p>
+<p><strong>Note:</strong> You can find information on a lot more 3rd party APIs at the <a href="https://www.programmableweb.com/category/all/apis">Programmable Web API directory</a>.</p>
 </div>
 
 <h2 id="How_do_APIs_work">How do APIs work?</h2>
@@ -116,7 +116,7 @@ tags:
 <p>Your code interacts with APIs using one or more <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript objects</a>, which serve as containers for the data the API uses (contained in object properties), and the functionality the API makes available (contained in object methods).</p>
 
 <div class="note">
-<p><strong>Note</strong>: If you are not already familiar with how objects work, you should go back and work through our <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript objects</a> module before continuing.</p>
+<p><strong>Note:</strong> If you are not already familiar with how objects work, you should go back and work through our <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript objects</a> module before continuing.</p>
 </div>
 
 <p>Let's return to the example of the Web Audio API — this is a fairly complex API, which consists of a number of objects. The most obvious ones are:</p>
@@ -181,7 +181,7 @@ audioElement.addEventListener('ended', function() {
 });</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Some of you may notice that the <code>play()</code> and <code>pause()</code> methods being used to play and pause the track are not part of the Web Audio API; they are part of the {{domxref("HTMLMediaElement")}} API, which is different but closely-related.</p>
+<p><strong>Note:</strong> Some of you may notice that the <code>play()</code> and <code>pause()</code> methods being used to play and pause the track are not part of the Web Audio API; they are part of the {{domxref("HTMLMediaElement")}} API, which is different but closely-related.</p>
 </div>
 
 <p>Next, we create a {{domxref("GainNode")}} object using the {{domxref("BaseAudioContext/createGain", "AudioContext.createGain()")}} method, which can be used to adjust the volume of audio fed through it, and create another event handler that changes the value of the audio graph's gain (volume) whenever the slider value is changed:</p>
@@ -224,7 +224,7 @@ const ctx = canvas.getContext('2d');</pre>
 };</pre>
 
 <div class="note">
-<p><strong>Note</strong>: You can see this code in action in our <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html">bouncing balls demo</a> (see it <a href="https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html">running live</a> also).</p>
+<p><strong>Note:</strong> You can see this code in action in our <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html">bouncing balls demo</a> (see it <a href="https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html">running live</a> also).</p>
 </div>
 
 <h3 id="They_use_events_to_handle_changes_in_state">They use events to handle changes in state</h3>
@@ -252,7 +252,7 @@ request.onload = function() {
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: You can see this code in action in our <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html">ajax.html</a> example (<a href="https://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html">see it live</a> also).</p>
+<p><strong>Note:</strong> You can see this code in action in our <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html">ajax.html</a> example (<a href="https://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html">see it live</a> also).</p>
 </div>
 
 <p>The first five lines specify the location of the resource we want to fetch, create a new instance of a request object using the <code>XMLHttpRequest()</code> constructor, open an HTTP <code>GET</code> request to retrieve the specified resource, specify that the response should be sent in JSON format, then send the request.</p>
@@ -270,7 +270,7 @@ request.onload = function() {
 <p>The Web Audio and {{domxref("HTMLMediaElement")}} APIs are subject to a security mechanism called <a href="/en-US/docs/Web/API/Web_Audio_API/Best_practices#autoplay_policy">autoplay policy</a> — this basically means that you can't automatically play audio when a page loads — you've got to allow your users to initiate audio play through a control like a button. This is done because autoplaying audio is usually really annoying and we really shouldn't be subjecting our users to it.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Depending on how strict the browser is, such security mechanisms might even stop the example from working locally, i.e. if you load the local example file in your browser instead of running it from a web server. At the time of writing, our Web Audio API example wouldn't work locally on Google Chrome — we had to upload it to GitHub before it would work.</p>
+<p><strong>Note:</strong> Depending on how strict the browser is, such security mechanisms might even stop the example from working locally, i.e. if you load the local example file in your browser instead of running it from a web server. At the time of writing, our Web Audio API example wouldn't work locally on Google Chrome — we had to upload it to GitHub before it would work.</p>
 </div>
 
 <h2 id="Summary">Summary</h2>

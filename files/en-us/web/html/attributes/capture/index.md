@@ -9,6 +9,7 @@ tags:
   - Constraint validation
   - HTML
 ---
+
 {{HTMLSidebar}}{{draft}}
 
 The **`capture`** attribute specifies that, optionally, a new file should be captured, and which device should be used to capture that new media of a type defined by the [`accept`](accept) attribute.
@@ -72,6 +73,6 @@ Note these work better on mobile devices; if your device is a desktop computer, 
 
 ## See also
 
-*   [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
-*   [File API](/en-US/docs/Web/API/File)
-*   {{domxref('HTMLInputElement.files')}}
+- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
+- [File API](/en-US/docs/Web/API/File)
+- {{domxref('HTMLInputElement.files')}}

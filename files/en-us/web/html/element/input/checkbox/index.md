@@ -12,6 +12,7 @@ tags:
   - form
 browser-compat: html.elements.input.input-checkbox
 ---
+
 {{HTMLRef}}
 
 {{htmlelement("input")}} elements of type **`checkbox`** are rendered by default as boxes that are checked (ticked) when activated, like you might see in an official government paper form. The exact appearance depends upon the operating system configuration under which the browser is running. Generally this is a square but it may have rounded corners. A checkbox allows you to select single values for submission in a form (or not).
@@ -81,11 +82,13 @@ If the `value` attribute was omitted, the default value for the checkbox is `on`
 In addition to the common attributes shared by all {{HTMLElement("input")}} elements, "`checkbox`" inputs support the following attributes.
 
 - {{htmlattrdef("checked")}}
-  - : A Boolean attribute indicating whether or not this checkbox is checked by default (when the page loads). It does *not* indicate whether this checkbox is currently checked: if the checkbox’s state is changed, this content attribute does not reflect the change. (Only the {{domxref("HTMLInputElement")}}’s `checked` IDL attribute is updated.)
+
+  - : A Boolean attribute indicating whether or not this checkbox is checked by default (when the page loads). It does _not_ indicate whether this checkbox is currently checked: if the checkbox’s state is changed, this content attribute does not reflect the change. (Only the {{domxref("HTMLInputElement")}}’s `checked` IDL attribute is updated.)
     > **Note:** Unlike other input controls, a checkbox's value is only included in the submitted data if the checkbox is currently `checked`. If it is, then the value of the checkbox's `value` attribute is reported as the input's value.
-    Unlike other browsers, Firefox by default [persists the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.
+    > Unlike other browsers, Firefox by default [persists the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.
 
 - {{htmlattrdef("indeterminate")}}
+
   - : If the `indeterminate` attribute is present on the {{HTMLElement("input")}} element defining a checkbox, the checkbox's value is neither `true` nor `false`, but is instead **indeterminate**, meaning that its state cannot be determined or stated in pure binary terms. This may happen, for instance, if the state of the checkbox depends on multiple other checkboxes, and those checkboxes have different values.
 
     Essentially, then, the `indeterminate` attribute adds a third possible state to the checkbox: "I don't know." In this state, the browser may draw the checkbox in grey or with a different mark inside the checkbox. For instance, browsers on macOS may draw the checkbox with a hyphen "-" inside to indicate an unexpected state.
@@ -164,9 +167,9 @@ There are not many use cases for this property. The most common is when a checkb
 
 This can be seen in the below example (thanks to [CSS Tricks](https://css-tricks.com/indeterminate-checkboxes/) for the inspiration). In this example we keep track of the ingredients we are collecting for a recipe. When you check or uncheck an ingredient's checkbox, a JavaScript function checks the total number of checked ingredients:
 
-*   If none are checked, the recipe name's checkbox is set to unchecked.
-*   If one or two are checked, the recipe name's checkbox is set to `indeterminate`.
-*   If all three are checked, the recipe name's checkbox is set to `checked`.
+- If none are checked, the recipe name's checkbox is set to unchecked.
+- If one or two are checked, the recipe name's checkbox is set to `indeterminate`.
+- If all three are checked, the recipe name's checkbox is set to `checked`.
 
 So in this case the `indeterminate` state is used to state that collecting the ingredients has started, but the recipe is not yet complete.
 
@@ -310,6 +313,6 @@ otherCheckbox.addEventListener('change', () => {
 
 ## See also
 
-*   {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
-*   The {{cssxref(":checked")}} and {{cssxref(":indeterminate")}} CSS selectors let you style checkboxes based on their current state
-*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
+- The {{cssxref(":checked")}} and {{cssxref(":indeterminate")}} CSS selectors let you style checkboxes based on their current state
+- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: html.elements.input.input-email
 ---
+
 {{HTMLRef}}
 
 {{HTMLElement("input")}} elements of type **`email`** are used to let the user enter and edit an e-mail address, or, if the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) attribute is specified, a list of e-mail addresses.
@@ -113,7 +114,7 @@ See the section {{anch("Pattern validation")}} for details and an example.
 
 ### `placeholder`
 
-The `placeholder` attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text *must not* include carriage returns or line feeds.
+The `placeholder` attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text _must not_ include carriage returns or line feeds.
 
 If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossary("RTL")}}) but needs to present the placeholder in the opposite directionality, you can use Unicode bidirectional algorithm formatting characters to override directionality within the placeholder; see {{SectionOnPage("/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Overriding BiDi using Unicode control characters")}} for those characters.
 
@@ -129,7 +130,7 @@ A Boolean attribute which, if present, means this field cannot be edited by the 
 
 The `size` attribute is a numeric value indicating how many characters wide the input field should be. The value must be a number greater than zero, and the default value is 20. Since character widths vary, this may or may not be exact and should not be relied upon to be so; the resulting input may be narrower or wider than the specified number of characters, depending on the characters and the font ({{cssxref("font")}} settings in use).
 
-This does *not* set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the `{{anch("maxlength")}}` attribute.
+This does _not_ set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the `{{anch("maxlength")}}` attribute.
 
 ## Using email inputs
 
@@ -137,7 +138,7 @@ E-mail addresses are among the most frequently-inputted textual data forms on th
 
 It's important, however, to note that this is not enough to ensure that the specified text is an e-mail address which actually exists, corresponds to the user of the site, or is acceptable in any other way. It ensures that the value of the field is properly formatted to be an e-mail address.
 
-> **Note:** It's also crucial to remember that a user can tinker with your HTML behind the scenes, so your site *must not* use this validation for any security purposes. You *must* verify the e-mail address on the server side of any transaction in which the provided text may have any security implications of any kind.
+> **Note:** It's also crucial to remember that a user can tinker with your HTML behind the scenes, so your site _must not_ use this validation for any security purposes. You _must_ verify the e-mail address on the server side of any transaction in which the provided text may have any security implications of any kind.
 
 ### A simple email input
 
@@ -163,22 +164,22 @@ By adding the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) Boolean att
 
 The input is now considered valid when a single e-mail address is entered, or when any number of e-mail addresses separated by commas and, optionally, some number of whitespace characters are present.
 
-> **Note:** When `multiple` is used, the value *is* allowed to be empty.
+> **Note:** When `multiple` is used, the value _is_ allowed to be empty.
 
 Some examples of valid strings when `multiple` is specified:
 
-*   `""`
-*   `"me@example"`
-*   `"me@example.org"`
-*   `"me@example.org,you@example.org"`
-*   `"me@example.org, you@example.org"`
-*   `"me@example.org,you@example.org,    us@example.org"`
+- `""`
+- `"me@example"`
+- `"me@example.org"`
+- `"me@example.org,you@example.org"`
+- `"me@example.org, you@example.org"`
+- `"me@example.org,you@example.org, us@example.org"`
 
 Some examples of invalid strings:
 
-*   `","`
-*   `"me"`
-*   `"me@example.org you@example.org"`
+- `","`
+- `"me"`
+- `"me@example.org you@example.org"`
 
 ### Placeholders
 
@@ -254,7 +255,7 @@ With the {{HTMLElement("datalist")}} element and its {{HTMLElement("option")}}s 
 
 There are two levels of content validation available for `email` inputs. First, there's the standard level of validation offered to all {{HTMLElement("input")}}s, which automatically ensures that the contents meet the requirements to be a valid e-mail address. But there's also the option to add additional filtering to ensure that your own specialized needs are met, if you have any.
 
-> **Warning:** HTML form validation is *not* a substitute for scripts that ensure that the entered data is in the proper format.It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it completely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.
+> **Warning:** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format.It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it completely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.
 
 ### Basic validation
 
@@ -275,7 +276,7 @@ If you need the entered e-mail address to be restricted further than just "any s
 
 For example, let's say you're building a page for employees of Best Startup Ever, Inc. which will let them contact their IT department for help. In our simplified form, the user needs to enter their e-mail address and a message describing the problem they need help with. We want to ensure that not only does the user provide a valid e-mail address, but for security purposes, we require that the address be an internal corporate e-mail address.
 
-Since inputs of type `email` validate against both the standard e-mail address validation *and* the specified {{htmlattrxref("pattern", "input")}}, you can implement this easily. Let's see how:
+Since inputs of type `email` validate against both the standard e-mail address validation _and_ the specified {{htmlattrxref("pattern", "input")}}, you can implement this easily. Let's see how:
 
 ```css hidden
 body {
@@ -327,11 +328,11 @@ An appropriate {{htmlattrxref("placeholder", "input")}} is provided—`username@
 
 ![](enter-valid-email-address.png)
 
-If we left things at that, we would at least be validating on legitimate e-mail addresses. But we want to go one step farther: we want to make sure that the e-mail address is in fact in the form "*username*@beststartupever.com". This is where we'll use {{htmlattrxref("pattern", "input")}}. We set `pattern` to `.+@beststartupever.com`. This simple regular expression requests a string that consists of at least one character of any kind, then an "@" followed by the domain name "beststartupever.com".
+If we left things at that, we would at least be validating on legitimate e-mail addresses. But we want to go one step farther: we want to make sure that the e-mail address is in fact in the form "_username_@beststartupever.com". This is where we'll use {{htmlattrxref("pattern", "input")}}. We set `pattern` to `.+@beststartupever.com`. This simple regular expression requests a string that consists of at least one character of any kind, then an "@" followed by the domain name "beststartupever.com".
 
-Note that this is not even close to an adequate filter for valid e-mail addresses; it would allow things such as " @beststartupever.com" (note the leading space) or "@@beststartupever.com", neither of which is valid. However, the browser runs both the standard e-mail address filter *and* our custom pattern against the specified text. As a result, we wind up with a validation which says "make sure this resembles a valid e-mail address, and if it is, make sure it's also a beststartupever.com address."
+Note that this is not even close to an adequate filter for valid e-mail addresses; it would allow things such as " @beststartupever.com" (note the leading space) or "@@beststartupever.com", neither of which is valid. However, the browser runs both the standard e-mail address filter _and_ our custom pattern against the specified text. As a result, we wind up with a validation which says "make sure this resembles a valid e-mail address, and if it is, make sure it's also a beststartupever.com address."
 
-It's advisable to use the {{htmlattrxref("title")}} attribute along with `pattern`. If you do, the `title` *must* describe the pattern. That is, it should explain what format the data should take on, rather than any other information. That's because the `title` may be displayed or spoken as part of a validation error message. For example, the browser might present the message "The entered text doesn't match the required pattern." followed by your specified `title`. If your `title` is something like "E-mail address", the result would be the message "The entered text doesn't match the required pattern. E-mail address", which isn't very good.
+It's advisable to use the {{htmlattrxref("title")}} attribute along with `pattern`. If you do, the `title` _must_ describe the pattern. That is, it should explain what format the data should take on, rather than any other information. That's because the `title` may be displayed or spoken as part of a validation error message. For example, the browser might present the message "The entered text doesn't match the required pattern." followed by your specified `title`. If your `title` is something like "E-mail address", the result would be the message "The entered text doesn't match the required pattern. E-mail address", which isn't very good.
 
 That's why, instead, we specify the string "Please provide only a Best Startup Ever corporate e-mail address" By doing that, the resulting full error message might be something like "The entered text doesn't match the required pattern. Please provide only a Best Startup Ever corporate e-mail address."
 
@@ -371,18 +372,19 @@ As an added touch, the {{HTMLElement("label")}} element is used to establish a l
 
 ## See also
 
-*   [HTML forms guide](/en-US/docs/Learn/Forms)
-*   {{HTMLElement("input")}}
-*   [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel)
-*   [`<input type="url">`](/en-US/docs/Web/HTML/Element/input/url)
-*   Attributes:
+- [HTML forms guide](/en-US/docs/Learn/Forms)
+- {{HTMLElement("input")}}
+- [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel)
+- [`<input type="url">`](/en-US/docs/Web/HTML/Element/input/url)
+- Attributes:
 
-    *   [`list`](/en-US/docs/Web/HTML/Attributes/list)
-    *   [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength)
-    *   [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength)
-    *   [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple)
-    *   [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern)
-    *   [`placeholder`](/en-US/docs/Web/HTML/Attributes/placeholder)
-    *   [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly)
-    *   [`size`](/en-US/docs/Web/HTML/Attributes/size)
-*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+  - [`list`](/en-US/docs/Web/HTML/Attributes/list)
+  - [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength)
+  - [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength)
+  - [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple)
+  - [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern)
+  - [`placeholder`](/en-US/docs/Web/HTML/Attributes/placeholder)
+  - [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly)
+  - [`size`](/en-US/docs/Web/HTML/Attributes/size)
+
+- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

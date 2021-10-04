@@ -15,6 +15,7 @@ tags:
   - Time
 browser-compat: html.elements.input.input-time
 ---
+
 {{HTMLRef("Input_types")}}
 
 {{htmlelement("input")}} elements of type **`time`** create input fields designed to let the user easily enter a time (hours and minutes, and optionally seconds).
@@ -182,7 +183,7 @@ A string value of `any` means that no stepping is implied, and any value is allo
 
 For `time` inputs, the value of `step` is given in seconds, with a scaling factor of 1000 (since the underlying numeric value is in milliseconds). The default value of `step` is 60, indicating 60 seconds (or 1 minute, or 60,000 milliseconds).
 
-*At this time, it's unclear what a value of `any` means for `step` when used with `time` inputs. This will be updated as soon as that information is determined.*
+_At this time, it's unclear what a value of `any` means for `step` when used with `time` inputs. This will be updated as soon as that information is determined._
 
 ## Using time inputs
 
@@ -222,7 +223,7 @@ It takes an integer value that equates to the number of seconds you want to incr
 
 In Chrome and Opera, which are the only browsers to show up/down iteration arrows, clicking the arrows changes the seconds value by two seconds, but doesn't affect the hours or minutes. Minutes (or hours) can only be used for stepping when you specify a number of minutes (or hours) in seconds, such as 120 for 2 minutes, or 7200 for 2 hours).
 
-In Firefox, there are no arrows, so the `step` value isn't used. However, providing it *does* add the seconds input area adjacent to the minutes section.
+In Firefox, there are no arrows, so the `step` value isn't used. However, providing it _does_ add the seconds input area adjacent to the minutes section.
 
 The steps value seems to have no effect in Edge.
 
@@ -278,8 +279,8 @@ input:valid+span:after {
 
 The result here is that:
 
-*   Only times between 12:00 and 18:00 will be seen as valid; times outside that range will be denoted as invalid.
-*   Depending on what browser you're using, you might find that times outside the specified range might not even be selectable in the time picker (e.g. Edge).
+- Only times between 12:00 and 18:00 will be seen as valid; times outside that range will be denoted as invalid.
+- Depending on what browser you're using, you might find that times outside the specified range might not even be selectable in the time picker (e.g. Edge).
 
 #### Making min and max cross midnight
 
@@ -323,7 +324,7 @@ If you try to submit the form with an incomplete time (or with a time outside th
 
 {{ EmbedLiveSample('Making_times_required', 600, 120) }}
 
-> **Warning:** HTML form validation is *not* a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, of the wrong type, and so forth).
+> **Warning:** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, of the wrong type, and so forth).
 
 ## Handling browser support
 
@@ -335,11 +336,11 @@ Browsers that don't support time inputs gracefully degrade to a text input, but 
 
 The second problem is the more serious; as mentioned previously, `time` inputs' values are always normalized to the format `hh:mm` or `hh:mm:ss`. With a text input, on the other hand, by default the browser has no idea of what format the time should be in, and there are multiple ways in which people write times, such as:
 
-*   `3.00 pm`
-*   `3:00pm`
-*   `15:00`
-*   `3 o'clock in the afternoon`
-*   etc.
+- `3.00 pm`
+- `3:00pm`
+- `15:00`
+- `3 o'clock in the afternoon`
+- etc.
 
 One way around this is to put a {{htmlattrxref("pattern", "input")}} attribute on your `time` input. Even though the `time` input doesn't use it, the `text` input fallback will. For example, try viewing the following demo in a browser that doesn't support time inputs:
 
@@ -532,8 +533,8 @@ function populateMinutes() {
 
 ## See also
 
-*   The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
-*   [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
-*   [Date and Time picker tutorial](/en-US/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
-*   [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date), [`<input type="week">`](/en-US/docs/Web/HTML/Element/input/week), and [`<input type="month">`](/en-US/docs/Web/HTML/Element/input/month)
-*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
+- [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
+- [Date and Time picker tutorial](/en-US/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
+- [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date), [`<input type="week">`](/en-US/docs/Web/HTML/Element/input/week), and [`<input type="month">`](/en-US/docs/Web/HTML/Element/input/month)
+- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

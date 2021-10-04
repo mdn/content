@@ -22,7 +22,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}</div>
 
-<p class="summary">A great deal of web content can be made accessible just by making sure the correct Hypertext Markup Language elements are used for the correct purpose at all times. This article looks in detail at how HTML can be used to ensure maximum accessibility.</p>
+<p>A great deal of web content can be made accessible just by making sure the correct Hypertext Markup Language elements are used for the correct purpose at all times. This article looks in detail at how HTML can be used to ensure maximum accessibility.</p>
 
 <table>
  <tbody>
@@ -62,7 +62,7 @@ tags:
 <p>Let's get on and look at accessible HTML in more detail.</p>
 
 <div class="note">
-<p><strong>Note</strong>: It is a good idea to have a screen reader set up on your local computer so that you can do some testing of the examples shown below. See our <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders">Screen readers guide</a> for more details.</p>
+<p><strong>Note:</strong> It is a good idea to have a screen reader set up on your local computer so that you can do some testing of the examples shown below. See our <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders">Screen readers guide</a> for more details.</p>
 </div>
 
 <h2 id="Good_semantics">Good semantics</h2>
@@ -256,7 +256,7 @@ This is the second subsection of my content. I think is more interesting than th
 <p>Another consideration when creating layouts is using HTML5 semantic elements as seen in the above example (see <a href="/en-US/docs/Web/HTML/Element#content_sectioning">content sectioning</a>) — you can create a layout using only nested {{htmlelement("div")}} elements, but it is better to use appropriate sectioning elements to wrap your main navigation ({{htmlelement("nav")}}), footer ({{htmlelement("footer")}}), repeating content units ({{htmlelement("article")}}), etc. These provide extra semantics for screen readers (and other tools) to give user extra clues about the content they are navigating (see <a href="https://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/">Screen Reader Support for new HTML5 Section Elements</a> for an idea of what screen reader support is like).</p>
 
 <div class="note">
-<p><strong>Note</strong>: In addition to having good semantics and an attractive layout, your content should make logical sense in its source order — you can always place it where you want using CSS later on, but you should get the source order right to start with, so what screen reader users get read out to them will make sense.</p>
+<p><strong>Note:</strong> In addition to having good semantics and an attractive layout, your content should make logical sense in its source order — you can always place it where you want using CSS later on, but you should get the source order right to start with, so what screen reader users get read out to them will make sense.</p>
 </div>
 
 <h3 id="UI_controls">UI controls</h3>
@@ -268,13 +268,13 @@ This is the second subsection of my content. I think is more interesting than th
 <p><img alt="" src="button-focused-unfocused.png"></p>
 
 <div class="notecard note">
-<p>From Firefox 84 you can also enable an overlay that shows the page tabbing order. For more information see: <a href="/en-US/docs/Tools/Accessibility_inspector#show_web_page_tabbing_order">Accessibility Inspector &gt; Show web page tabbing order</a>.</p>
+<p><strong>Note:</strong> From Firefox 84 you can also enable an overlay that shows the page tabbing order. For more information see: <a href="/en-US/docs/Tools/Accessibility_inspector#show_web_page_tabbing_order">Accessibility Inspector &gt; Show web page tabbing order</a>.</p>
 </div>
 
 <p>You can then press Enter/Return to follow a focused link or press a button (we've included some JavaScript to make the buttons alert a message), or start typing to enter text in a text input. Other form elements have different controls, for example, the {{htmlelement("select")}} element can have its options displayed and cycled between using the up and down arrow keys.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Different browsers may have different keyboard control options available. See <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#using_native_keyboard_accessibility">Using native keyboard accessibility</a> for more details.</p>
+<p><strong>Note:</strong> Different browsers may have different keyboard control options available. See <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#using_native_keyboard_accessibility">Using native keyboard accessibility</a> for more details.</p>
 </div>
 
 <p>You essentially get this behavior for free, just by using the appropriate elements, e.g.</p>
@@ -369,7 +369,7 @@ This is the second subsection of my content. I think is more interesting than th
 <pre class="brush: html example-bad">&lt;p&gt;Whales are really awesome creatures. To find more out about whales, &lt;a href="whales.html"&gt;click here&lt;/a&gt;.&lt;/p&gt;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: You can find a lot more about link implementation and best practices in our <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">Creating hyperlinks</a> article. You can also see some good and bad examples at <a href="https://mdn.github.io/learning-area/accessibility/html/good-links.html">good-links.html</a> and <a href="https://mdn.github.io/learning-area/accessibility/html/bad-links.html">bad-links.html</a>.</p>
+<p><strong>Note:</strong> You can find a lot more about link implementation and best practices in our <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">Creating hyperlinks</a> article. You can also see some good and bad examples at <a href="https://mdn.github.io/learning-area/accessibility/html/good-links.html">good-links.html</a> and <a href="https://mdn.github.io/learning-area/accessibility/html/bad-links.html">bad-links.html</a>.</p>
 </div>
 
 <p>Form labels are also important for giving you a clue about what you need to enter into each form input. The following seems like a reasonable enough example:</p>
@@ -392,7 +392,7 @@ This is the second subsection of my content. I think is more interesting than th
 <p>As an added bonus, in most browsers associating a label with a form input means that you can click the label to select or activate the form element. This gives the input a bigger hit area, making it easier to select.</p>
 
 <div class="note">
-<p><strong>Note</strong>: you can see some good and bad form examples in <a href="https://mdn.github.io/learning-area/accessibility/html/good-form.html">good-form.html</a> and <a href="https://mdn.github.io/learning-area/accessibility/html/bad-form.html">bad-form.html</a>.</p>
+<p><strong>Note:</strong> You can see some good and bad form examples in <a href="https://mdn.github.io/learning-area/accessibility/html/good-form.html">good-form.html</a> and <a href="https://mdn.github.io/learning-area/accessibility/html/bad-form.html">bad-form.html</a>.</p>
 </div>
 
 <p>You can find a nice explanation of the importance of proper text labels, and how to investigate text label issues using the <a href="/en-US/docs/Tools/Accessibility_inspector">Firefox Accessibility Inspector</a>, in the following video:</p>
@@ -436,7 +436,7 @@ This is the second subsection of my content. I think is more interesting than th
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: See our <a href="/en-US/docs/Learn/HTML/Tables/Advanced">HTML table advanced features and accessibility</a> article for more details about accessible data tables.</p>
+<p><strong>Note:</strong> See our <a href="/en-US/docs/Learn/HTML/Tables/Advanced">HTML table advanced features and accessibility</a> article for more details about accessible data tables.</p>
 </div>
 
 <h2 id="Text_alternatives">Text alternatives</h2>
@@ -462,7 +462,7 @@ This is the second subsection of my content. I think is more interesting than th
 <p>The first image, when viewed by a screen reader, doesn't really offer the user much help — VoiceOver for example reads out "/dinosaur.png, image". It reads out the filename to try to provide some help. In this example the user will at least know it is a dinosaur of some kind, but often files may be uploaded with machine-generated file names (e.g. from a digital camera) and these file names would likely provide no context to the image's content.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This is why you should never include text content inside an image — screen readers can't access it. There are other disadvantages too — you can't select it and copy/paste it. Just don't do it!</p>
+<p><strong>Note:</strong> This is why you should never include text content inside an image — screen readers can't access it. There are other disadvantages too — you can't select it and copy/paste it. Just don't do it!</p>
 </div>
 
 <p>When a screen reader encounters the second image, it reads out the full alt attribute — "A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.".</p>
@@ -472,7 +472,7 @@ This is the second subsection of my content. I think is more interesting than th
 <p>One thing to consider is whether your images have meaning inside your content, or whether they are purely for visual decoration, and thus have no meaning. If they are decorative, it is better to write an empty text as a value for <code>alt</code> attribute (see <a href="#empty_alt_attributes">Empty alt attributes</a>) or to just include them in the page as CSS background images.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Read <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in HTML</a> and <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive images</a> for a lot more information about image implementation and best practices.</p>
+<p><strong>Note:</strong> Read <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in HTML</a> and <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive images</a> for a lot more information about image implementation and best practices.</p>
 </div>
 
 <p>If you do want to provide extra contextual information, you should put it in the text surrounding the image, or inside a <code>title</code> attribute, as shown above. In this case, most screen readers will read out the alt text, the title attribute, and the filename. In addition, browsers display title text as tooltips when moused over.</p>
@@ -488,7 +488,7 @@ This is the second subsection of my content. I think is more interesting than th
 <p>In this case, we are not using the <code>alt</code> attribute at all — instead, we have presented our description of the image as a regular text paragraph, given it an <code>id</code>, and then used the <code>aria-labelledby</code> attribute to refer to that <code>id</code>, which causes screen readers to use that paragraph as the alt text/label for that image. This is especially useful if you want to use the same text as a label for multiple images — something that isn't possible with <code>alt</code>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: <code>aria-labelledby</code> is part of the <a href="https://www.w3.org/TR/wai-aria-1.1/">WAI-ARIA</a> spec, which allows developers to add in extra semantics to their markup to improve screen reader accessibility where needed. To find out more about how it works, read our <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA Basics</a> article.</p>
+<p><strong>Note:</strong> <code>aria-labelledby</code> is part of the <a href="https://www.w3.org/TR/wai-aria-1.1/">WAI-ARIA</a> spec, which allows developers to add in extra semantics to their markup to improve screen reader accessibility where needed. To find out more about how it works, read our <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA Basics</a> article.</p>
 </div>
 
 <h3 id="Other_text_alternative_mechanisms">Other text alternative mechanisms</h3>
@@ -520,7 +520,7 @@ This is the second subsection of my content. I think is more interesting than th
 <p>The reason to use an empty <code>alt</code> instead of not including it is because many screen readers announce the whole image URL if no <code>alt</code> is provided. In the above example, the image is acting as a visual decoration to the heading it's associated with. In cases like this, and in cases where an image is only decoration and has no content value, you should include an empty <code>alt</code> in your <code>img</code> elements. Another alternative is to use the aria <code><a href="/en-US/docs/Web/accessibility/ARIA/roles">role</a></code> attribute <code><a href="/en-US/docs/Web/accessibility/ARIA/roles/presentation_role">role="presentation"</a></code> as this also stops screen readers from reading out alternative text.</p>
 
 <div class="note">
-<p><strong>Note</strong>: if possible you should use CSS to display images that are only decorative.</p>
+<p><strong>Note:</strong> If possible you should use CSS to display images that are only decorative.</p>
 </div>
 
 <h2 id="More_on_links">More on links</h2>

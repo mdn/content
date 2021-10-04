@@ -8,6 +8,7 @@ tags:
   - Forms
   - required
 ---
+
 {{HTMLSidebar}}
 
 The Boolean **`required`** attribute, if present, indicates that the user must specify a value for the input before the owning form can be submitted.
@@ -103,7 +104,7 @@ Provide an indication to users informing them the form control is required. Ensu
 
 ## See also
 
-*   {{cssxref('validityState.valueMissing')}}
-*   {{cssxref(':required')}} and {{cssxref(':optional')}}
-*   {{htmlelement('input')}}
-*   {{htmlelement('select')}}
+- {{cssxref('validityState.valueMissing')}}
+- {{cssxref(':required')}} and {{cssxref(':optional')}}
+- {{htmlelement('input')}}
+- {{htmlelement('select')}}

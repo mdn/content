@@ -9,6 +9,7 @@ tags:
   - Web
 browser-compat: html.elements.param
 ---
+
 {{HTMLRef}}
 
 The **`<param>`** [HTML](/en-US/docs/Web/HTML) element defines parameters for an {{HTMLElement("object")}} element.
@@ -66,21 +67,22 @@ The **`<param>`** [HTML](/en-US/docs/Web/HTML) element defines parameters for an
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-*   {{htmlattrdef("name")}}
-    *   : Name of the parameter.
-*   {{htmlattrdef("value")}}
-    *   : Specifies the value of the parameter.
+- {{htmlattrdef("name")}}
+  - : Name of the parameter.
+- {{htmlattrdef("value")}}
+  - : Specifies the value of the parameter.
 
 ### Deprecated attributes
 
-*   {{htmlattrdef("type")}} {{deprecated_inline}}
-    *   : Only used if the `valuetype` is set to `ref`. Specifies the MIME type of values found at the URI specified by value.
-*   {{htmlattrdef("valuetype")}} {{deprecated_inline}}
-    *   : Specifies the type of the `value` attribute. Possible values are:
+- {{htmlattrdef("type")}} {{deprecated_inline}}
+  - : Only used if the `valuetype` is set to `ref`. Specifies the MIME type of values found at the URI specified by value.
+- {{htmlattrdef("valuetype")}} {{deprecated_inline}}
 
-        *   `data`: Default value. The value is passed to the object's implementation as a string.
-        *   `ref`: The value is a URI to a resource where run-time values are stored.
-        *   `object`: An ID of another {{HTMLElement("object")}} in the same document.
+  - : Specifies the type of the `value` attribute. Possible values are:
+
+    - `data`: Default value. The value is passed to the object's implementation as a string.
+    - `ref`: The value is a URI to a resource where run-time values are stored.
+    - `object`: An ID of another {{HTMLElement("object")}} in the same document.
 
 ## Examples
 
@@ -96,4 +98,4 @@ Please see the {{HTMLElement("object")}} page for examples on `<param>`.
 
 ## See also
 
-*   {{HTMLElement("object")}}
+- {{HTMLElement("object")}}

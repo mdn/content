@@ -14,6 +14,7 @@ tags:
   - text input
 browser-compat: html.elements.input.input-text
 ---
+
 {{HTMLRef("Input_types")}}
 
 {{HTMLElement("input")}} elements of type **`text`** create basic single-line text fields.
@@ -105,7 +106,7 @@ See {{anch("Specifying a pattern")}} for further details and an example.
 
 ### placeholder
 
-The `placeholder` attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text *must not* include carriage returns or line feeds.
+The `placeholder` attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text _must not_ include carriage returns or line feeds.
 
 If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossary("RTL")}}) but needs to present the placeholder in the opposite directionality, you can use Unicode bidirectional algorithm formatting characters to override directionality within the placeholder; see {{SectionOnPage("/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Overriding BiDi using Unicode control characters")}} for those characters.
 
@@ -121,18 +122,18 @@ A Boolean attribute which, if present, means this field cannot be edited by the 
 
 The `size` attribute is a numeric value indicating how many characters wide the input field should be. The value must be a number greater than zero, and the default value is 20. Since character widths vary, this may or may not be exact and should not be relied upon to be so; the resulting input may be narrower or wider than the specified number of characters, depending on the characters and the font ({{cssxref("font")}} settings in use).
 
-This does *not* set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the `{{anch("maxlength")}}` attribute.
+This does _not_ set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the `{{anch("maxlength")}}` attribute.
 
 ### spellcheck
 
 `spellcheck` is a global attribute which is used to indicate whether or not to enable spell checking for an element. It can be used on any editable content, but here we consider specifics related to the use of `spellcheck` on {{HTMLElement("input")}} elements. The permitted values for `spellcheck` are:
 
-*   `false`
-    *   : Disable spell checking for this element.
-*   `true`
-    *   : Enable spell checking for this element.
-*   "" (empty string) or no value
-    *   : Follow the element's default behavior for spell checking. This may be based upon a parent's `spellcheck` setting or other factors.
+- `false`
+  - : Disable spell checking for this element.
+- `true`
+  - : Enable spell checking for this element.
+- "" (empty string) or no value
+  - : Follow the element's default behavior for spell checking. This may be based upon a parent's `spellcheck` setting or other factors.
 
 An input field can have spell checking enabled if it doesn't have the {{anch("readonly")}} attribute set and is not disabled.
 
@@ -146,10 +147,10 @@ The following non-standard attributes are also available on some browsers. As a 
 
 A Safari extension, the `autocorrect` attribute is a string which indicates whether or not to activate automatic correction while the user is editing this field. Permitted values are:
 
-*   `on`
-    *   : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
-*   `off`
-    *   : Disable automatic correction and text substitutions.
+- `on`
+  - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
+- `off`
+  - : Disable automatic correction and text substitutions.
 
 ### mozactionhint
 
@@ -230,7 +231,7 @@ The physical size of the input box can be controlled using the {{htmlattrxref("s
 
 `<input>` elements of type `text` have no automatic validation applied to them (since a basic text input needs to be capable of accepting any arbitrary string), but there are some client-side validation options available, which we'll discuss below.
 
-> **Note:** HTML form validation is *not* a substitute for server-scripts that ensure the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.
+> **Note:** HTML form validation is _not_ a substitute for server-scripts that ensure the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.
 
 ### A note on styling
 
@@ -419,8 +420,8 @@ You can see good examples of text inputs used in context in our [Your first HTML
 
 ## See also
 
-*   [HTML Forms](/en-US/docs/Learn/Forms)
-*   {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon.
-*   [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
-*   {{HTMLElement("textarea")}}: Multi-line text input
-*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [HTML Forms](/en-US/docs/Learn/Forms)
+- {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon.
+- [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
+- {{HTMLElement("textarea")}}: Multi-line text input
+- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

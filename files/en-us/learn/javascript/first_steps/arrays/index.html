@@ -20,7 +20,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}</div>
 
-<p class="summary">In the final article of this module, we'll look at arrays — a neat way of storing a list of data items under a single variable name. Here we look at why this is useful, then explore how to create an array, retrieve, add, and remove items stored in an array, and more besides.</p>
+<p>In the final article of this module, we'll look at arrays — a neat way of storing a list of data items under a single variable name. Here we look at why this is useful, then explore how to create an array, retrieve, add, and remove items stored in an array, and more besides.</p>
 
 <table>
  <tbody>
@@ -73,7 +73,9 @@ let random = ['tree', 795, [0, 1, 2]];</pre>
 shopping;
 // shopping will now return [ "tahini", "milk", "cheese", "hummus", "noodles" ]</pre>
 
-  <div class="note"><strong>Note</strong>: We've said it before, but just as a reminder — computers start counting from 0!</div>
+  <div class="note">
+  <p><strong>Note:</strong> We've said it before, but just as a reminder — computers start counting from 0!</p>
+  </div>
  </li>
  <li>Note that an array inside an array is called a multidimensional array. You can access an item inside an array that is itself inside another array by chaining two sets of square brackets together. For example, to access one of the items inside the array that is the third item inside the <code>random</code> array (see previous section), we could do something like this:
   <pre class="brush: js">random[2][2];</pre>
@@ -112,7 +114,7 @@ for (let i = 0; i &lt; sequence.length; i++) {
 <p>Often you'll be presented with some raw data contained in a big long string, and you might want to separate the useful items out into a more useful form and then do things to them, like display them in a data table. To do this, we can use the {{jsxref("String.prototype.split()","split()")}} method. In its simplest form, this takes a single parameter, the character you want to separate the string at, and returns the substrings between the separator as items in an array.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Okay, this is technically a string method, not an array method, but we've put it in with arrays as it goes well here.</p>
+<p><strong>Note:</strong> Okay, this is technically a string method, not an array method, but we've put it in with arrays as it goes well here.</p>
 </div>
 
 <ol>
@@ -186,7 +188,7 @@ removedItem;</pre>
  </li>
 </ol>
 
-<h2 id="Active_learning_Printing_those_products!">Active learning: Printing those products!</h2>
+<h2 id="Active_learning_Printing_those_products">Active learning: Printing those products</h2>
 
 <p>Let's return to the example we described earlier — printing out product names and prices on an invoice, then totaling the prices and printing them at the bottom. In the editable example below there are comments containing numbers — each of these marks a place where you have to add something to the code. They are as follows:</p>
 
@@ -199,10 +201,7 @@ removedItem;</pre>
  <li>We want you to change the line just below <code>// number 5</code> so that the <code>itemText</code> variable is made equal to "current item name — $current item price", for example "Shoes — $23.99" in each case, so the correct information for each item is printed on the invoice. This is just simple string concatenation, which should be familiar to you.</li>
 </ol>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 150px;"&gt;
 
@@ -253,7 +252,7 @@ totalBox.textContent = 'Total: $' + total.toFixed(2);
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js">const textarea = document.getElementById('code');
+<pre class="brush: js hidden">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 let code = textarea.value;
@@ -330,7 +329,7 @@ textarea.onkeyup = function(){
   updateCode();
 };</pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -349,9 +348,8 @@ body {
   margin: 10px;
   background-color: #f5f9fa;
 }</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', '100%', 730, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Active_learning_Printing_those_products', '100%', 750) }}</p>
 
 <h2 id="Active_learning_Top_5_searches">Active learning: Top 5 searches</h2>
 
@@ -360,7 +358,7 @@ body {
 <p>In this example we're going to show a much simpler use — here we're giving you a fake search site, with a search box. The idea is that when terms are entered in the search box, the top 5 previous search terms are displayed in the list. When the number of terms goes over 5, the last term starts being deleted each time a new term is added to the top, so the 5 previous terms are always displayed.</p>
 
 <div class="note">
-<p><strong>Note</strong>: In a real search app, you'd probably be able to click the previous search terms to return to previous searches, and it would display actual search results! We are just keeping it simple for now.</p>
+<p><strong>Note:</strong> In a real search app, you'd probably be able to click the previous search terms to return to previous searches, and it would display actual search results! We are just keeping it simple for now.</p>
 </div>
 
 <p>To complete the app, we need you to:</p>
@@ -370,10 +368,7 @@ body {
  <li>Add a line below the <code>// number 2</code> comment that removes the value currently at the end of the array.</li>
 </ol>
 
-<div class="hidden">
-<h6 id="Playable_code_2">Playable code 2</h6>
-
-<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
 &lt;div class="output" style="min-height: 150px;"&gt;
 
 &lt;input type="text"&gt;&lt;button&gt;Search&lt;/button&gt;
@@ -432,7 +427,7 @@ searchBtn.onclick = function() {
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -452,7 +447,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js">const textarea = document.getElementById('code');
+<pre class="brush: js hidden">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 let code = textarea.value;
@@ -528,9 +523,8 @@ textarea.onkeyup = function(){
 
   updateCode();
 };</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_2', '100%', 700, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Active_learning_Top_5_searches', '100%', 700) }}</p>
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 

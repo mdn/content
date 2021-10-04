@@ -10,6 +10,7 @@ tags:
   - text-decoration
 browser-compat: html.elements.s
 ---
+
 {{HTMLRef}}
 
 The **`<s>`** [HTML](/en-US/docs/Web/HTML) element renders text with a strikethrough, or a line through it. Use the `<s>` element to represent things that are no longer relevant or no longer accurate. However, `<s>` is not appropriate when indicating document edits; for that, use the {{HTMLElement("del")}} and {{HTMLElement("ins")}} elements, as appropriate.
@@ -114,8 +115,8 @@ s::after {
 
 Some people who use screen readers deliberately disable announcing content that creates extra verbosity. Because of this, it is important to not abuse this technique and only apply it in situations where not knowing content has been struck out would adversely affect understanding.
 
-*   [Short note on making your mark (more accessible) | The Paciello Group](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
-*   [Tweaking Text Level Styles | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+- [Short note on making your mark (more accessible) | The Paciello Group](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
+- [Tweaking Text Level Styles | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
 ## Specifications
 
@@ -127,6 +128,6 @@ Some people who use screen readers deliberately disable announcing content that 
 
 ## See also
 
-*   The {{HTMLElement("strike")}} element, alter ego of the {{HTMLElement("s")}} element is obsolete and should not be used on Web sites any more.
-*   The {{HTMLElement("del")}} element is to be used instead if the data has been *deleted*.
-*   The CSS {{cssxref("text-decoration-line")}} property is to be used to achieve the former visual aspect of the {{HTMLElement("s")}} element.
+- The {{HTMLElement("strike")}} element, alter ego of the {{HTMLElement("s")}} element is obsolete and should not be used on Web sites any more.
+- The {{HTMLElement("del")}} element is to be used instead if the data has been _deleted_.
+- The CSS {{cssxref("text-decoration-line")}} property is to be used to achieve the former visual aspect of the {{HTMLElement("s")}} element.

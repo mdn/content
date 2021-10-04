@@ -17,6 +17,7 @@ tags:
   - submit button
 browser-compat: html.elements.input.input-submit
 ---
+
 {{HTMLRef("Input_types")}}
 
 {{HTMLElement("input")}} elements of type **`submit`** are rendered as buttons. When the {{domxref("Element/click_event", "click")}} event occurs (typically because the user clicked the button), the {{Glossary("user agent")}} attempts to submit the form to the server.
@@ -85,12 +86,12 @@ This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTM
 
 A string that identifies the encoding method to use when submitting the form data to the server. There are three permitted values:
 
-*   `application/x-www-form-urlencoded`
-    *   : This, the default value, sends the form data as a string after URL encoding the text using an algorithm such as {{jsxref("encodeURI", "encodeURI()")}}.
-*   `multipart/form-data`
-    *   : Uses the {{domxref("FormData")}} API to manage the data, allowing for files to be submitted to the server. You *must* use this encoding type if your form includes any {{HTMLElement("input")}} elements of {{htmlattrxref("type", "input")}} `file` ([`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file)).
-*   `text/plain`
-    *   : Plain text; mostly useful only for debugging, so you can easily see the data that's to be submitted.
+- `application/x-www-form-urlencoded`
+  - : This, the default value, sends the form data as a string after URL encoding the text using an algorithm such as {{jsxref("encodeURI", "encodeURI()")}}.
+- `multipart/form-data`
+  - : Uses the {{domxref("FormData")}} API to manage the data, allowing for files to be submitted to the server. You _must_ use this encoding type if your form includes any {{HTMLElement("input")}} elements of {{htmlattrxref("type", "input")}} `file` ([`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file)).
+- `text/plain`
+  - : Plain text; mostly useful only for debugging, so you can easily see the data that's to be submitted.
 
 If specified, the value of the `formenctype` attribute overrides the owning form's {{htmlattrxref("action", "form")}} attribute.
 
@@ -100,12 +101,12 @@ This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTM
 
 A string indicating the HTTP method to use when submitting the form's data; this value overrides any {{htmlattrxref("method", "form")}} attribute given on the owning form. Permitted values are:
 
-*   `get`
-    *   : A URL is constructed by starting with the URL given by the `formaction` or {{htmlattrxref("action", "form")}} attribute, appending a question mark ("?") character, then appending the form's data, encoded as described by `formenctype` or the form's {{htmlattrxref("enctype", "form")}} attribute. This URL is then sent to the server using an HTTP {{HTTPMethod("get")}} request. This method works well for simple forms that contain only ASCII characters and have no side effects. This is the default value.
-*   `post`
-    *   : The form's data is included in the body of the request that is sent to the URL given by the `formaction` or {{htmlattrxref("action", "form")}} attribute using an HTTP {{HTTPMethod("post")}} method. This method supports complex data and file attachments.
-*   `dialog`
-    *   : This method is used to indicate that the button closes the dialog with which the input is associated, and does not transmit the form data at all.
+- `get`
+  - : A URL is constructed by starting with the URL given by the `formaction` or {{htmlattrxref("action", "form")}} attribute, appending a question mark ("?") character, then appending the form's data, encoded as described by `formenctype` or the form's {{htmlattrxref("enctype", "form")}} attribute. This URL is then sent to the server using an HTTP {{HTTPMethod("get")}} request. This method works well for simple forms that contain only ASCII characters and have no side effects. This is the default value.
+- `post`
+  - : The form's data is included in the body of the request that is sent to the URL given by the `formaction` or {{htmlattrxref("action", "form")}} attribute using an HTTP {{HTTPMethod("post")}} method. This method supports complex data and file attachments.
+- `dialog`
+  - : This method is used to indicate that the button closes the dialog with which the input is associated, and does not transmit the form data at all.
 
 This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) and {{HTMLElement("button")}} elements.
 
@@ -121,14 +122,14 @@ A string which specifies a name or keyword that indicates where to display the r
 
 In addition to the actual names of tabs, windows, or inline frames, there are a few special keywords that can be used:
 
-*   `_self`
-    *   : Loads the response into the same browsing context as the one that contains the form. This will replace the current document with the received data. This is the default value used if none is specified.
-*   `_blank`
-    *   : Loads the response into a new, unnamed, browsing context. This is typically a new tab in the same window as the current document, but may differ depending on the configuration of the {{Glossary("user agent")}}.
-*   `_parent`
-    *   : Loads the response into the parent browsing context of the current one. If there is no parent context, this behaves the same as `_self`.
-*   `_top`
-    *   : Loads the response into the top-level browsing context; this is the browsing context that is the topmost ancestor of the current context. If the current context is the topmost context, this behaves the same as `_self`.
+- `_self`
+  - : Loads the response into the same browsing context as the one that contains the form. This will replace the current document with the received data. This is the default value used if none is specified.
+- `_blank`
+  - : Loads the response into a new, unnamed, browsing context. This is typically a new tab in the same window as the current document, but may differ depending on the configuration of the {{Glossary("user agent")}}.
+- `_parent`
+  - : Loads the response into the parent browsing context of the current one. If there is no parent context, this behaves the same as `_self`.
+- `_top`
+  - : Loads the response into the top-level browsing context; this is the browsing context that is the topmost ancestor of the current context. If the current context is the topmost context, this behaves the same as `_self`.
 
 This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) and {{HTMLElement("button")}} elements.
 
@@ -219,9 +220,9 @@ We've included simple examples above. There isn't really anything more to say ab
 
 ## See also
 
-*   {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
-*   [Forms and buttons](/en-US/docs/Learn/Forms/Basic_native_form_controls#actual_buttons)
-*   [Forms (accessibility)](/en-US/docs/Web/Accessibility/ARIA/forms)
-*   [HTML forms](/en-US/docs/Learn/Forms)
-*   The {{HTMLElement("button")}} element
-*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
+- [Forms and buttons](/en-US/docs/Learn/Forms/Basic_native_form_controls#actual_buttons)
+- [Forms (accessibility)](/en-US/docs/Web/Accessibility/ARIA/forms)
+- [HTML forms](/en-US/docs/Learn/Forms)
+- The {{HTMLElement("button")}} element
+- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

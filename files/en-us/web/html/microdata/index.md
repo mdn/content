@@ -10,12 +10,13 @@ tags:
   - SEO
   - Search
 ---
+
 Microdata is part of the {{glossary("WHATWG")}} HTML Standard and is used to nest metadata within existing content on web pages. Search engines and web crawlers can extract and process microdata from a web page and use it to provide a richer browsing experience for users. Search engines benefit greatly from direct access to this structured data because it allows search engines to understand the information on web pages and provide more relevant results to users. Microdata uses a supporting vocabulary to describe an item and name-value pairs to assign values to its properties. Microdata is an attempt to provide a simpler way of annotating HTML elements with machine-readable tags than the similar approaches of using RDFa and classic microformats.
 
 At a high level, microdata consists of a group of name-value pairs. The groups are called items, and each name-value pair is a property. Items and properties are represented by regular elements.
 
-*   To create an item, the **itemscope** attribute is used.
-*   To add a property to an item, the **itemprop** attribute is used on one of the item's descendants.
+- To create an item, the **itemscope** attribute is used.
+- To add a property to an item, the **itemprop** attribute is used on one of the item's descendants.
 
 ## Vocabularies
 
@@ -27,18 +28,18 @@ Microdata vocabularies provide the semantics or meaning of an Item. Web develope
 
 Commonly used vocabularies:
 
-*   Creative works: [CreativeWork](http://schema.org/CreativeWork), [Book](http://schema.org/Book), [Movie](http://schema.org/Movie), [MusicRecording](http://schema.org/MusicRecording), [Recipe](http://schema.org/Recipe), [TVSeries](http://schema.org/TVSeries)
-*   Embedded non-text objects: [AudioObject](http://schema.org/AudioObject), [ImageObject](http://schema.org/ImageObject), [VideoObject](http://schema.org/VideoObject)
-*   [Event](http://schema.org/Event)
-*   [Health and medical types](http://schema.org/docs/meddocs.html): Notes on the health and medical types under [MedicalEntity](http://schema.org/MedicalEntity)
-*   [Organization](http://schema.org/Organization)
-*   [Person](http://schema.org/Person)
-*   [Place](http://schema.org/Place), [LocalBusiness](http://schema.org/LocalBusiness), [Restaurant](http://schema.org/Restaurant)
-*   [Product](http://schema.org/Product), [Offer](http://schema.org/Offer), [AggregateOffer](http://schema.org/AggregateOffer)
-*   [Review](http://schema.org/Review), [AggregateRating](http://schema.org/AggregateRating)
-*   [Action](http://schema.org/Action)
-*   [Thing](http://schema.org/Thing)
-*   [Intangible](http://schema.org/Intangible)
+- Creative works: [CreativeWork](http://schema.org/CreativeWork), [Book](http://schema.org/Book), [Movie](http://schema.org/Movie), [MusicRecording](http://schema.org/MusicRecording), [Recipe](http://schema.org/Recipe), [TVSeries](http://schema.org/TVSeries)
+- Embedded non-text objects: [AudioObject](http://schema.org/AudioObject), [ImageObject](http://schema.org/ImageObject), [VideoObject](http://schema.org/VideoObject)
+- [Event](http://schema.org/Event)
+- [Health and medical types](http://schema.org/docs/meddocs.html): Notes on the health and medical types under [MedicalEntity](http://schema.org/MedicalEntity)
+- [Organization](http://schema.org/Organization)
+- [Person](http://schema.org/Person)
+- [Place](http://schema.org/Place), [LocalBusiness](http://schema.org/LocalBusiness), [Restaurant](http://schema.org/Restaurant)
+- [Product](http://schema.org/Product), [Offer](http://schema.org/Offer), [AggregateOffer](http://schema.org/AggregateOffer)
+- [Review](http://schema.org/Review), [AggregateRating](http://schema.org/AggregateRating)
+- [Action](http://schema.org/Action)
+- [Thing](http://schema.org/Thing)
+- [Intangible](http://schema.org/Intangible)
 
 Major search engine operators like Google, Microsoft, and Yahoo! rely on the [schema.org](http://schema.org/) vocabulary to improve search results. For some purposes, an ad-hoc vocabulary is adequate. For others, a vocabulary will need to be designed. Where possible, authors are encouraged to re-use existing vocabularies, as this makes content re-use easier.
 
@@ -153,6 +154,6 @@ Supported in Firefox 16. Removed in Firefox 49.
 
 ## See also
 
-*   [Global Attributes](/en-US/docs/Web/HTML/Global_attributes)
+- [Global Attributes](/en-US/docs/Web/HTML/Global_attributes)
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/HTML")}}

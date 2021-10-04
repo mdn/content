@@ -12,7 +12,7 @@ browser-compat: http.headers.Connection
 ---
 {{HTTPSidebar}}
 
-The **`Connection`** general header controls whether or not the
+The **`Connection`** general header controls whether the
 network connection stays open after the current transaction finishes. If the value sent
 is `keep-alive`, the connection is persistent and not closed, allowing for
 subsequent requests to the same server to be done.
@@ -21,7 +21,7 @@ subsequent requests to the same server to be done.
 > {{HTTPHeader("Keep-Alive")}} are
 > [prohibited in HTTP/2](https://datatracker.ietf.org/doc/html/rfc7540#section-8.1.2.2).
 > Chrome and Firefox ignore them in HTTP/2 responses, but Safari conforms to the HTTP/2
-> spec requirements and won't load any response which contains them.
+> spec requirements and does not load any response that contains them.
 
 Except for the standard hop-by-hop headers ({{HTTPHeader("Keep-Alive")}},
 {{HTTPHeader("Transfer-Encoding")}}, {{HTTPHeader("TE")}}, {{HTTPHeader("Connection")}},
@@ -60,8 +60,8 @@ Connection: close
   - : Indicates that either the client or the server would like to close the connection.
     This is the default on HTTP/1.0 requests.
 - any comma-separated list of HTTP headers \[Usually `keep-alive` only]
-  - : Indicates that the client would like to keep the connection open. Having a
-    persistent connection is the default on HTTP/1.1 requests. The list of headers are the
+  - : Indicates that the client would like to keep the connection open. Keeping a connection open
+    is the default on HTTP/1.1 requests. The list of headers are the
     name of the header to be removed by the first non-transparent proxy or cache
     in-between: these headers define the connection between the emitter and the first
     entity, not the destination node.

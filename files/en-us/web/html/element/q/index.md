@@ -15,6 +15,7 @@ tags:
   - quote
 browser-compat: html.elements.q
 ---
+
 {{HTMLRef}}
 
 The **`<q>`** [HTML](/en-US/docs/Web/HTML) element indicates that the enclosed text is a short inline quotation. Most modern browsers implement this by surrounding the text in quotation marks. This element is intended for short quotations that don't require paragraph breaks; for long quotations use the {{HTMLElement("blockquote")}} element.
@@ -84,8 +85,8 @@ The **`<q>`** [HTML](/en-US/docs/Web/HTML) element indicates that the enclosed t
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-*   {{htmlattrdef("cite")}}
-    *   : The value of this attribute is a URL that designates a source document or message for the information quoted. This attribute is intended to point to information explaining the context or the reference for the quote.
+- {{htmlattrdef("cite")}}
+  - : The value of this attribute is a URL that designates a source document or message for the information quoted. This attribute is intended to point to information explaining the context or the reference for the quote.
 
 ## Example
 
@@ -108,5 +109,5 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## See also
 
-*   The {{HTMLElement("blockquote")}} element for long quotations.
-*   The {{HTMLElement("cite")}} element for source citations.
+- The {{HTMLElement("blockquote")}} element for long quotations.
+- The {{HTMLElement("cite")}} element for source citations.

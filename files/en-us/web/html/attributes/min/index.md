@@ -9,6 +9,7 @@ tags:
   - min
   - Reference
 ---
+
 {{HTMLSidebar}}
 
 The **`min`** attribute defines the minimum value that is acceptable and valid for the input containing the attribute. If the [`value`](/en-US/docs/Web/HTML/Element/input#attr-value) of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation). This value must be less than or equal to the value of the `max` attribute. If a value is specified for `min` that isn't a valid number, the input has no minimum value.
@@ -173,12 +174,12 @@ Provide instructions to help users understand how to complete the form and use i
 
 ## See also
 
-*   [`step`](/en-US/docs/Web/HTML/Attributes/step)
-*   [`max`](/en-US/docs/Web/HTML/Attributes/max)
-*   other meter attributes: [`low`](/en-US/docs/Web/HTML/Attributes/low), [`high`](/en-US/docs/Web/HTML/Attributes/high), [`optimum`](/en-US/docs/Web/HTML/Attributes/optimum)
-*   [Constraint validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)
-*   [Constraint validation API](/en-US/docs/Web/API/Constraint_validation)
-*   {{domxref('validityState.rangeUnderflow')}}
-*   {{cssxref(':out-of-range')}}
-*   {{htmlelement('input')}}
-*   {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types, and the {{htmlelement('meter')}}
+- [`step`](/en-US/docs/Web/HTML/Attributes/step)
+- [`max`](/en-US/docs/Web/HTML/Attributes/max)
+- other meter attributes: [`low`](/en-US/docs/Web/HTML/Attributes/low), [`high`](/en-US/docs/Web/HTML/Attributes/high), [`optimum`](/en-US/docs/Web/HTML/Attributes/optimum)
+- [Constraint validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Constraint validation API](/en-US/docs/Web/API/Constraint_validation)
+- {{domxref('validityState.rangeUnderflow')}}
+- {{cssxref(':out-of-range')}}
+- {{htmlelement('input')}}
+- {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types, and the {{htmlelement('meter')}}

@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: html.elements.pre
 ---
+
 {{HTMLRef}}
 
 The **`<pre>`** [HTML](/en-US/docs/Web/HTML) element represents preformatted text which is to be presented exactly as written in the HTML file. The text is typically rendered using a non-proportional, or "[monospaced](https://en.wikipedia.org/wiki/Monospaced_font), font. Whitespace inside this element is displayed as written.
@@ -74,12 +75,12 @@ The **`<pre>`** [HTML](/en-US/docs/Web/HTML) element represents preformatted tex
 
 This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-*   {{htmlattrdef("cols")}} {{non-standard_inline}}{{deprecated_inline}}
-    *   : Contains the *preferred* count of characters that a line should have. It was a non-standard synonym of {{htmlattrxref("width", "pre")}}. To achieve such an effect, use CSS {{Cssxref("width")}} instead.
-*   {{htmlattrdef("width")}} {{deprecated_inline}}
-    *   : Contains the *preferred* count of characters that a line should have. Though technically still implemented, this attribute has no visual effect; to achieve such an effect, use CSS {{Cssxref("width")}} instead.
-*   {{htmlattrdef("wrap")}} {{non-standard_inline}}
-    *   : Is a *hint* indicating how the overflow must happen. In modern browser this hint is ignored and no visual effect results in its present; to achieve such an effect, use CSS {{Cssxref("white-space")}} instead.
+- {{htmlattrdef("cols")}} {{non-standard_inline}}{{deprecated_inline}}
+  - : Contains the _preferred_ count of characters that a line should have. It was a non-standard synonym of {{htmlattrxref("width", "pre")}}. To achieve such an effect, use CSS {{Cssxref("width")}} instead.
+- {{htmlattrdef("width")}} {{deprecated_inline}}
+  - : Contains the _preferred_ count of characters that a line should have. Though technically still implemented, this attribute has no visual effect; to achieve such an effect, use CSS {{Cssxref("width")}} instead.
+- {{htmlattrdef("wrap")}} {{non-standard_inline}}
+  - : Is a _hint_ indicating how the overflow must happen. In modern browser this hint is ignored and no visual effect results in its present; to achieve such an effect, use CSS {{Cssxref("white-space")}} instead.
 
 ## Example
 
@@ -124,8 +125,8 @@ A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}}
       </figcaption>
     </figure>
 
-*   [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline\_1.1\_—\_providing_text_alternatives_for_non-text_content)
-*   [H86: Providing text alternatives for ASCII art, emoticons, and leetspeak | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H86.html)
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [H86: Providing text alternatives for ASCII art, emoticons, and leetspeak | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H86.html)
 
 ## Specifications
 
@@ -137,5 +138,5 @@ A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}}
 
 ## See also
 
-*   CSS: {{Cssxref('white-space')}}, {{Cssxref('word-break')}}
-*   Related element: {{HTMLElement("code")}}
+- CSS: {{Cssxref('white-space')}}, {{Cssxref('word-break')}}
+- Related element: {{HTMLElement("code")}}

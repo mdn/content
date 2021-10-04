@@ -10,6 +10,7 @@ tags:
   - Web Standards
   - XHTML
 ---
+
 {{HTMLRef}}
 
 In the old days of the web, pages were typically written in two versions: One for Netscape Navigator, and one for Microsoft Internet Explorer. When the web standards were made at W3C, browsers could not just start using them, as doing so would break most existing sites on the web. Browsers therefore introduced two modes to treat new standards compliant sites differently from old legacy sites.
@@ -48,6 +49,6 @@ If you serve XHTML-like content using the `text/html` MIME type, browsers will r
 
 ## How do I see which mode is used?
 
-In Firefox, select *Page Info* from the *Tools* menu bar, and look for *Render Mode*. ([Learn more about the Firefox Page Info window](https://support.mozilla.org/en-US/kb/firefox-page-info-window))
+In Firefox, select _Page Info_ from the _Tools_ menu bar, and look for _Render Mode_. ([Learn more about the Firefox Page Info window](https://support.mozilla.org/en-US/kb/firefox-page-info-window))
 
-In Internet Explorer, press *F12*, and look for *Document Mode*.
+In Internet Explorer, press _F12_, and look for _Document Mode_.

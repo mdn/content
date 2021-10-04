@@ -11,6 +11,7 @@ tags:
   - slot
 browser-compat: html.elements.slot
 ---
+
 {{HTMLRef}}
 
 The **`<slot>`** [HTML](/en-US/docs/Web/HTML) element—part of the [Web Components](/en-US/docs/Web/Web_Components) technology suite—is a placeholder inside a web component that you can fill with your own markup, which lets you create separate DOM trees and present them together.
@@ -81,10 +82,11 @@ The **`<slot>`** [HTML](/en-US/docs/Web/HTML) element—part of the [Web Compone
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-*   {{htmlattrdef("name")}}
-    *   : The slot's name.
+- {{htmlattrdef("name")}}
 
-        A ***named slot*** is a `<slot>` element with a `name` attribute.
+  - : The slot's name.
+
+    A **_named slot_** is a `<slot>` element with a `name` attribute.
 
 ## Examples
 

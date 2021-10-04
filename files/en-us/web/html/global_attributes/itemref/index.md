@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: html.global_attributes.itemref
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 Properties that are not descendants of an element with the {{HTMLAttrxRef("itemscope")}} attribute can be associated with an item using the [global attribute](/en-US/docs/Web/HTML/Global_attributes) **`itemref`**.
@@ -64,11 +65,11 @@ The `itemref` attribute can only be specified on elements that have an `itemscop
 
 ## See also
 
-*   [Other different global attributes](/en-US/docs/Web/HTML/Global_attributes)
-*   Other, microdata related, global attributes:
+- [Other different global attributes](/en-US/docs/Web/HTML/Global_attributes)
+- Other, microdata related, global attributes:
 
-    *   {{htmlattrxref("itemid")}}
-    *   {{htmlattrxref("itemprop")}}
-    *   {{htmlattrxref("itemref")}}
-    *   {{htmlattrxref("itemscope")}}
-    *   {{htmlattrxref("itemtype")}}
+  - {{htmlattrxref("itemid")}}
+  - {{htmlattrxref("itemprop")}}
+  - {{htmlattrxref("itemref")}}
+  - {{htmlattrxref("itemscope")}}
+  - {{htmlattrxref("itemtype")}}

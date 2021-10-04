@@ -14,6 +14,7 @@ tags:
   - details
 browser-compat: html.elements.dd
 ---
+
 {{HTMLRef}}
 
 The **`<dd>`** [HTML](/en-US/docs/Web/HTML) element provides the description, definition, or value for the preceding term ({{HTMLElement("dt")}}) in a description list ({{HTMLElement("dl")}}).
@@ -77,8 +78,8 @@ The **`<dd>`** [HTML](/en-US/docs/Web/HTML) element provides the description, de
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-*   {{htmlattrdef("nowrap")}} {{Non-standard_inline}}
-    *   : If the value of this attribute is set to `yes`, the definition text will not wrap. The default value is `no`.
+- {{htmlattrdef("nowrap")}} {{Non-standard_inline}}
+  - : If the value of this attribute is set to `yes`, the definition text will not wrap. The default value is `no`.
 
 ## Examples
 
@@ -94,5 +95,5 @@ For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web
 
 ## See also
 
-*   {{HTMLElement("dl")}}
-*   {{HTMLElement("dt")}}
+- {{HTMLElement("dl")}}
+- {{HTMLElement("dt")}}

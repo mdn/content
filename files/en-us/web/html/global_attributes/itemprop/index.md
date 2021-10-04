@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: html.global_attributes.itemprop
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 The **`itemprop`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is used to add properties to an item. Every HTML element can have an `itemprop` attribute specified, and an `itemprop` consists of a name-value pair. Each name-value pair is called a **property**, and a group of one or more properties forms an **item**. Property values are either a string or a URL and can be associated with a very wide range of elements including {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}} , {{HTMLElement("track")}}, and {{HTMLElement("video")}}.
@@ -293,6 +294,7 @@ A property is an unordered set of unique tokens that are case-sensitive and repr
     1.  A defined property name, or
     2.  A valid URL, which refers to the vocabulary definition, or
     3.  A valid URL that is used as a proprietary item property name (i.e. one not defined in a public specification), or
+
 2.  If the item is not a typed item it must be:
 
     1.  A string that contains no "`.`" (U+002E FULL STOP) characters and no "`:`" characters (U+003A COLON) and is used as a proprietary item property name (again, one not defined in a public specification).
@@ -303,34 +305,41 @@ A property is an unordered set of unique tokens that are case-sensitive and repr
 
 The property value of a name-value pair is as given for the first matching case in the following list:
 
-*   If the element has an `itemscope` attribute
+- If the element has an `itemscope` attribute
 
-    *   The value is the **item** created by the element.
-*   If the element is a `meta` element
+  - The value is the **item** created by the element.
 
-    *   The value is the value of the element's `content` attribute
-*   If the element is an `audio`, `embed`, `iframe`, `img`, `source`, `track`, or `video` element
+- If the element is a `meta` element
 
-    *   The value is the resulting URL string that results from parsing the value of the element's src attribute relative to the node document (part of the [Microdata DOM API](/en-US/docs/Web/API/Microdata_DOM_API)) of the element at the time the attribute is set
-*   If the element is an `a`, `area`, or `link` element
+  - The value is the value of the element's `content` attribute
 
-    *   The value is the resulting URL string that results from parsing the value of the element's href attribute relative to the node document of the element at the time the attribute is set
-*   If the element is an `object` element
+- If the element is an `audio`, `embed`, `iframe`, `img`, `source`, `track`, or `video` element
 
-    *   The value is the resulting URL string that results from parsing the value of the element's data attribute relative to the node document of the element at the time the attribute is set
-*   If the element is a `data` element
+  - The value is the resulting URL string that results from parsing the value of the element's src attribute relative to the node document (part of the [Microdata DOM API](/en-US/docs/Web/API/Microdata_DOM_API)) of the element at the time the attribute is set
 
-    *   The value is the value of the element's value attribute
-*   If the element is a `meter` element
+- If the element is an `a`, `area`, or `link` element
 
-    *   The value is the value of the element's `value` attribute
-*   If the element is a `time` element
+  - The value is the resulting URL string that results from parsing the value of the element's href attribute relative to the node document of the element at the time the attribute is set
 
-    *   The value is the element's `datetime` value
+- If the element is an `object` element
+
+  - The value is the resulting URL string that results from parsing the value of the element's data attribute relative to the node document of the element at the time the attribute is set
+
+- If the element is a `data` element
+
+  - The value is the value of the element's value attribute
+
+- If the element is a `meter` element
+
+  - The value is the value of the element's `value` attribute
+
+- If the element is a `time` element
+
+  - The value is the element's `datetime` value
 
 Otherwise
 
-*   The value is the element's *textContent*.
+- The value is the element's _textContent_.
 
 If a property's value is a `URL`, the property must be specified using a URL property element. The URL property elements are the `a`, `area`, `audio`, `embed`, `iframe`, `img`, `link`, `object`, `source`, `track`, and `video` elements.
 
@@ -338,7 +347,7 @@ If a property's value is a `URL`, the property must be specified using a URL pro
 
 Names are unordered relative to each other, but if a particular name has multiple values, they do have a relative order.
 
-In the following example, the "a" property has the values "1" and "2", *in that order*, but whether the "a" property comes before the "b" property or not is not important
+In the following example, the "a" property has the values "1" and "2", _in that order_, but whether the "a" property comes before the "b" property or not is not important
 
 ```html
 <div itemscope>
@@ -442,11 +451,11 @@ And the following
 
 ## See also
 
-*   [Other different global attributes](/en-US/docs/Web/HTML/Global_attributes)
-*   Other, microdata related, global attributes:
+- [Other different global attributes](/en-US/docs/Web/HTML/Global_attributes)
+- Other, microdata related, global attributes:
 
-    *   {{htmlattrxref("itemid")}}
-    *   {{htmlattrxref("itemprop")}}
-    *   {{htmlattrxref("itemref")}}
-    *   {{htmlattrxref("itemscope")}}
-    *   {{htmlattrxref("itemtype")}}
+  - {{htmlattrxref("itemid")}}
+  - {{htmlattrxref("itemprop")}}
+  - {{htmlattrxref("itemref")}}
+  - {{htmlattrxref("itemscope")}}
+  - {{htmlattrxref("itemtype")}}

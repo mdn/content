@@ -19,7 +19,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}</div>
 
-<p class="summary">By now you should really be getting the hang of embedding things into your web pages, including images, video and audio. At this point we'd like to take somewhat of a sideways step, looking at some elements that allow you to embed a wide variety of content types into your webpages: the {{htmlelement("iframe")}}, {{htmlelement("embed")}} and {{htmlelement("object")}} elements. <code>&lt;iframe&gt;</code>s are for embedding other web pages, and the other two allow you to embed PDFs, SVG, and even Flash — a technology that is on the way out, but which you'll still see semi-regularly.</p>
+<p>By now you should really be getting the hang of embedding things into your web pages, including images, video and audio. At this point we'd like to take somewhat of a sideways step, looking at some elements that allow you to embed a wide variety of content types into your webpages: the {{htmlelement("iframe")}}, {{htmlelement("embed")}} and {{htmlelement("object")}} elements. <code>&lt;iframe&gt;</code>s are for embedding other web pages, and the other two allow you to embed PDFs, SVG, and even Flash — a technology that is on the way out, but which you'll still see semi-regularly.</p>
 
 <table>
  <tbody>
@@ -67,10 +67,7 @@ tags:
 
 <p>If you make a mistake, you can always reset it using the <em>Reset</em> button. If you get really stuck, press the <em>Show solution</em> button to see an answer.</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 250px;"&gt;
 &lt;/div&gt;
@@ -86,7 +83,7 @@ tags:
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -106,7 +103,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js">const textarea = document.getElementById('code');
+<pre class="brush: js hidden">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 const output = document.querySelector('.output');
@@ -183,9 +180,8 @@ textarea.onkeyup = function(){
 
   updateCode();
 };</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 600, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Active_learning_classic_embedding_uses', 700, 600) }}</p>
 
 <h2 id="Iframes_in_detail">Iframes in detail</h2>
 
@@ -227,7 +223,7 @@ textarea.onkeyup = function(){
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: In order to improve speed, it's a good idea to set the iframe's <code>src</code> attribute with JavaScript after the main content is done with loading. This makes your page usable sooner and decreases your official page load time (an important {{glossary("SEO")}} metric.)</p>
+<p><strong>Note:</strong> In order to improve speed, it's a good idea to set the iframe's <code>src</code> attribute with JavaScript after the main content is done with loading. This makes your page usable sooner and decreases your official page load time (an important {{glossary("SEO")}} metric.)</p>
 </div>
 
 <h3 id="Security_concerns">Security concerns</h3>
@@ -237,7 +233,7 @@ textarea.onkeyup = function(){
 <p>Browser makers and Web developers have learned the hard way that iframes are a common target (official term: <strong>attack vector</strong>) for bad people on the Web (often termed <strong>hackers</strong>, or more accurately, <strong>crackers</strong>) to attack if they are trying to maliciously modify your webpage, or trick people into doing something they don't want to do, such as reveal sensitive information like usernames and passwords. Because of this, spec engineers and browser developers have developed various security mechanisms for making <code>&lt;iframe&gt;</code>s more secure, and there are also best practices to consider — we'll cover some of these below.</p>
 
 <div class="note">
-<p>{{interwiki('wikipedia','Clickjacking')}} is one kind of common iframe attack where hackers embed an invisible iframe into your document (or embed your document into their own malicious website) and use it to capture users' interactions. This is a common way to mislead users or steal sensitive data.</p>
+<p><strong>Note:</strong> {{interwiki('wikipedia','Clickjacking')}} is one kind of common iframe attack where hackers embed an invisible iframe into your document (or embed your document into their own malicious website) and use it to capture users' interactions. This is a common way to mislead users or steal sensitive data.</p>
 </div>
 
 <p>A quick example first though — try loading the previous example we showed above into your browser — you can <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html">find it live on GitHub</a> (<a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html">see the source code</a> too.) Instead of the page you expected, you'll probably see some kind of message to the effect of "I can't open this page", and if you look at the <em>Console</em> in the <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">browser developer tools</a>, you'll see a message telling you why. In Firefox, you'll get told something like <em>The loading of “https://developer.mozilla.org/en-US/docs/Glossary” in a frame is denied by “X-Frame-Options“ directive set to “DENY“.</em>. This is because the developers that built MDN have included a setting on the server that serves the website pages to disallow them from being embedded inside <code>&lt;iframe&gt;</code>s (see {{anch("Configure CSP directives")}}, below.) This makes sense — an entire MDN page doesn't really make sense to be embedded in other pages unless you want to do something like embed them on your site and claim them as your own — or attempt to steal data via clickjacking, which are both really bad things to do. Plus if everybody started to do this, all the additional bandwidth would start to cost Mozilla a lot of money.</p>
@@ -262,7 +258,7 @@ textarea.onkeyup = function(){
 <p>HTTPS-enabling your site requires a special security certificate to be installed. Many hosting providers offer HTTPS-enabled hosting without you needing to do any setup on your own to put a certificate in place. But if you <em>do</em> need to set up HTTPS support for your site on your own, <a href="https://letsencrypt.org/">Let's Encrypt</a> provides tools and instructions you can use for automatically creating and installing the necessary certificate — with built-in support for the most widely-used web servers, including the Apache web server, Nginx, and others. The Let's Encrypt tooling is designed to make the process as easy as possible, so there’s really no good reason to avoid using it or other available means to HTTPS-enable your site.</p>
 
 <div class="note">
-<p><strong>Note</strong>: <a href="/en-US/docs/Learn/Common_questions/Using_Github_pages">GitHub pages</a> allow content to be served via HTTPS by default, so it is useful for hosting content. If you are using a different hosting provider and are not sure, ask them about it.</p>
+<p><strong>Note:</strong> <a href="/en-US/docs/Learn/Common_questions/Using_Github_pages">GitHub pages</a> allow content to be served via HTTPS by default, so it is useful for hosting content. If you are using a different hosting provider and are not sure, ask them about it.</p>
 </div>
 
 <h4 id="Always_use_the_sandbox_attribute">Always use the <code>sandbox</code> attribute</h4>
@@ -274,7 +270,7 @@ textarea.onkeyup = function(){
 <p>If absolutely required, you can add permissions back one by one (inside the <code>sandbox=""</code> attribute value) — see the {{htmlattrxref('sandbox','iframe')}} reference entry for all the available options. One important note is that you should <em>never</em> add both <code>allow-scripts</code> and <code>allow-same-origin</code> to your <code>sandbox</code> attribute — in that case, the embedded content could bypass the <a href="/en-US/docs/Glossary/Same-origin_policy">Same-origin policy</a> that stops sites from executing scripts, and use JavaScript to turn off sandboxing altogether.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Sandboxing provides no protection if attackers can fool people into visiting malicious content directly (outside an <code>iframe</code>). If there's any chance that certain content may be malicious (e.g., user-generated content), please serve it from a different {{glossary("domain")}} to your main site.</p>
+<p><strong>Note:</strong> Sandboxing provides no protection if attackers can fool people into visiting malicious content directly (outside an <code>iframe</code>). If there's any chance that certain content may be malicious (e.g., user-generated content), please serve it from a different {{glossary("domain")}} to your main site.</p>
 </div>
 
 <h4 id="configure_csp_directives">Configure CSP directives</h4>
@@ -282,7 +278,7 @@ textarea.onkeyup = function(){
 <p>{{Glossary("CSP")}} stands for <strong><a href="/en-US/docs/Web/HTTP/CSP">content security policy</a></strong> and provides <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">a set of HTTP Headers</a> (metadata sent along with your web pages when they are served from a web server) designed to improve the security of your HTML document. When it comes to securing <code>&lt;iframe&gt;</code>s, you can <em><a href="/en-US/docs/Web/HTTP/Headers/X-Frame-Options">configure your server to send an appropriate <code>X-Frame-Options</code>  header.</a></em> This can prevent other websites from embedding your content in their web pages (which would enable {{interwiki('wikipedia','clickjacking')}} and a host of other attacks), which is exactly what the MDN developers have done, as we saw earlier on.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can read Frederik Braun's post <a href="https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/">On the X-Frame-Options Security Header</a> for more background information on this topic. Obviously, it's rather out of scope for a full explanation in this article.</p>
+<p><strong>Note:</strong> You can read Frederik Braun's post <a href="https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/">On the X-Frame-Options Security Header</a> for more background information on this topic. Obviously, it's rather out of scope for a full explanation in this article.</p>
 </div>
 
 <h2 id="The_&lt;embed&gt;_and_&lt;object&gt;_elements">The &lt;embed&gt; and &lt;object&gt; elements</h2>
@@ -290,7 +286,7 @@ textarea.onkeyup = function(){
 <p>The {{htmlelement("embed")}} and {{htmlelement("object")}} elements serve a different function to {{htmlelement("iframe")}} — these elements are general purpose embedding tools for embedding multiple types of external content, which include plugin technologies like Java Applets and Flash, PDF (which can be shown in a browser with a PDF plugin), and even content like videos, SVG and images!</p>
 
 <div class="note">
-<p><strong>Note</strong>: A <strong>plugin</strong>, in this context, refers to software that provides access to content the browser cannot read natively.</p>
+<p><strong>Note:</strong> A <strong>plugin</strong>, in this context, refers to software that provides access to content the browser cannot read natively.</p>
 </div>
 
 <p>However, you are unlikely to use these elements very much — Applets haven't been used for years, Flash is no longer very popular, due to a number of reasons (see {{anch("The case against plugins")}}, below), PDFs tend to be better linked to than embedded, and other content such as images and video have much better, easier elements to handle those. Plugins and these embedding methods are really a legacy technology, and we are mainly mentioning them in case you come across them in certain circumstances like intranets, or enterprise projects.</p>

@@ -19,7 +19,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}</div>
 
-<p class="summary">When styling <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">links</a>, it's important to understand how to make use of pseudo-classes to style their states effectively. It's also important to know how to style links for use in common interface features whose content varies, such as navigation menus and tabs. We'll look at both these topics in this article.</p>
+<p>When styling <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">links</a>, it's important to understand how to make use of pseudo-classes to style their states effectively. It's also important to know how to style links for use in common interface features whose content varies, such as navigation menus and tabs. We'll look at both these topics in this article.</p>
 
 <table>
  <tbody>
@@ -65,8 +65,7 @@ tags:
 <p>{{ EmbedLiveSample('Default_styles', '100%', 120) }}</p>
 
 <div class="notecard note">
-  <h4>Note:</h4>
-<p>All the links in the examples on this page are fake links — a <code>#</code> (hash/pound sign) is put in place of the real URL. This is because if the real links were included, clicking on them would break the examples (you'd end up with an error or a page loaded in the embedded example that you couldn't get back from.) <code>#</code> just links to the current page.</p>
+<p><strong>Note:</strong> All the links in the examples on this page are fake links — a <code>#</code> (hash/pound sign) is put in place of the real URL. This is because if the real links were included, clicking on them would break the examples (you'd end up with an error or a page loaded in the embedded example that you couldn't get back from.) <code>#</code> just links to the current page.</p>
 </div>
 
 <p>You'll notice a few things as you explore the default styles:</p>
@@ -96,8 +95,7 @@ tags:
 </ul>
 
 <div class="notecard note">
-<h4>Note</h4>
-<p>You are not just limited to the above properties to style your links — you are free to use any properties you like.</p>
+<p><strong>Note:</strong> You are not just limited to the above properties to style your links — you are free to use any properties you like.</p>
 </div>
 
 <h3 id="Styling_some_links">Styling some links</h3>
@@ -205,10 +203,7 @@ Firefox&lt;/a&gt;, &lt;a href="#"&gt;Google Chrome&lt;/a&gt;, and
 
 <p>If you make a mistake, you can always reset it using the <em>Reset</em> button. If you get really stuck, press the <em>Show solution</em> button to insert the example we showed above.</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
+<pre class="brush: html hidden">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
   &lt;h2&gt;HTML Input&lt;/h2&gt;
   &lt;textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"&gt;&lt;p&gt;There are several browsers available, such as &lt;a href="#"&gt;Mozilla
  Firefox&lt;/a&gt;, &lt;a href="#"&gt;Google Chrome&lt;/a&gt;, and
@@ -248,7 +243,7 @@ a:active {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js">var htmlInput = document.querySelector(".html-input");
+<pre class="brush: js hidden">var htmlInput = document.querySelector(".html-input");
 var cssInput = document.querySelector(".css-input");
 var reset = document.getElementById("reset");
 var htmlCode = htmlInput.value;
@@ -281,9 +276,8 @@ htmlInput.addEventListener("input", drawOutput);
 cssInput.addEventListener("input", drawOutput);
 window.addEventListener("load", drawOutput);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 800) }}</p>
+<p>{{ EmbedLiveSample('Active_learning_Style_your_own_links', 700, 800) }}</p>
 
 <h2 id="Including_icons_on_links">Including icons on links</h2>
 
@@ -348,13 +342,11 @@ a[href*="#"] {
 <p>So that's it. Try revisiting the active learning section above and trying this new technique out!</p>
 
 <div class="notecard note">
-  <h4>Note:</h4>
-<p>The <code>href</code> values look strange — we've used dummy links here that don't really go anywhere. The reason for this is that if we used real links, you would be able to load an external site in the <code>&lt;iframe&gt;</code> the live example is embedded in, thereby losing the example.</p>
+<p><strong>Note:</strong> The <code>href</code> values look strange — we've used dummy links here that don't really go anywhere. The reason for this is that if we used real links, you would be able to load an external site in the <code>&lt;iframe&gt;</code> the live example is embedded in, thereby losing the example.</p>
 </div>
 
 <div class="notecard note">
-  <h4>Note:</h4>
-<p>Don't worry if you are not familiar with <a href="/en-US/docs/Learn/CSS/Building_blocks">backgrounds</a> and <a href="/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks">responsive web design</a> yet; these are explained in other places.</p>
+<p><strong>Note:</strong> Don't worry if you are not familiar with <a href="/en-US/docs/Learn/CSS/Building_blocks">backgrounds</a> and <a href="/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks">responsive web design</a> yet; these are explained in other places.</p>
 </div>
 
 <h2 id="Styling_links_as_buttons">Styling links as buttons</h2>
@@ -433,8 +425,7 @@ a:active {
 </ul>
 
 <div class="notecard note">
-  <h4>Note:</h4>
-<p>You may have noticed that the list items in the HTML are all put on the same line as each other. This is done because spaces/line breaks in between inline block elements create spaces on the page, just like the spaces in between words; however, such spaces would break our horizontal navigation menu layout. So we've removed them. You can find more information about this problem (and solutions) at <a href="https://css-tricks.com/fighting-the-space-between-inline-block-elements/">Fighting the space between inline block elements</a>.</p>
+<p><strong>Note:</strong> You may have noticed that the list items in the HTML are all put on the same line as each other. This is done because spaces/line breaks in between inline block elements create spaces on the page, just like the spaces in between words; however, such spaces would break our horizontal navigation menu layout. So we've removed them. You can find more information about this problem (and solutions) at <a href="https://css-tricks.com/fighting-the-space-between-inline-block-elements/">Fighting the space between inline block elements</a>.</p>
 </div>
 
 <h2 id="Test_your_skills!">Test your skills!</h2>

@@ -9,7 +9,7 @@ tags:
   - NavigatorUAData
 browser-compat: api.Navigator.userAgentData
 ---
-{{APIRef("User-Agent Client Hints API")}}
+{{securecontext_header}}{{APIRef("User-Agent Client Hints API")}}
 
 The **`userAgentData`** read-only property of the {{domxref("Navigator")}} interface returns a {{domxref("NavigatorUAData")}} object
 which can be used to access the {{domxref("User-Agent Client Hints API")}}.

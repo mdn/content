@@ -561,6 +561,6 @@ Here are a few tips that may help you if you are having trouble getting your mod
 - [Using JavaScript modules on the web](https://developers.google.com/web/fundamentals/primers/modules#mjs), by Addy Osmani and Mathias Bynens
 - [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
-- Axel Rauschmayer's book [Exploring JS: Modules](http://exploringjs.com/es6/ch_modules.html)
+- Axel Rauschmayer's book [Exploring JS: Modules](https://exploringjs.com/es6/ch_modules.html)
 
 {{Previous("Web/JavaScript/Guide/Meta_programming")}}

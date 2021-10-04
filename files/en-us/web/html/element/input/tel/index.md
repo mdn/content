@@ -15,6 +15,7 @@ tags:
   - Reference
 browser-compat: html.elements.input.input-tel
 ---
+
 {{HTMLRef("Input_types")}}
 
 {{HTMLElement("input")}} elements of type **`tel`** are used to let the user enter and edit a telephone number. Unlike [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) and [`<input type="url">`](/en-US/docs/Web/HTML/Element/input/url) , the input value is not automatically validated to a particular format before the form can be submitted, because formats for telephone numbers vary so much around the world.
@@ -109,7 +110,7 @@ See {{anch("Pattern validation")}} below for details and an example.
 
 ### placeholder
 
-The `placeholder` attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text *must not* include carriage returns or line feeds.
+The `placeholder` attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text _must not_ include carriage returns or line feeds.
 
 If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossary("RTL")}}) but needs to present the placeholder in the opposite directionality, you can use Unicode bidirectional algorithm formatting characters to override directionality within the placeholder; see {{SectionOnPage("/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Overriding BiDi using Unicode control characters")}} for those characters.
 
@@ -125,7 +126,7 @@ A Boolean attribute which, if present, means this field cannot be edited by the 
 
 The `size` attribute is a numeric value indicating how many characters wide the input field should be. The value must be a number greater than zero, and the default value is 20. Since character widths vary, this may or may not be exact and should not be relied upon to be so; the resulting input may be narrower or wider than the specified number of characters, depending on the characters and the font ({{cssxref("font")}} settings in use).
 
-This does *not* set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the `{{anch("maxlength")}}` attribute.
+This does _not_ set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the `{{anch("maxlength")}}` attribute.
 
 ## Non-standard attributes
 
@@ -135,10 +136,10 @@ The following non-standard attributes are available to telephone number input fi
 
 A Safari extension, the `autocorrect` attribute is a string which indicates whether or not to activate automatic correction while the user is editing this field. Permitted values are:
 
-*   `on`
-    *   : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
-*   `off`
-    *   : Disable automatic correction and text substitutions.
+- `on`
+  - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
+- `off`
+  - : Disable automatic correction and text substitutions.
 
 ### mozactionhint
 
@@ -259,7 +260,7 @@ Here's a screenshot of what that might look like:
 
 As we've touched on before, it's quite difficult to provide a one-size-fits-all client-side validation solution for phone numbers. So what can we do? Let's consider some options.
 
-> **Warning:** HTML form validation is *not* a substitute for server-side scripts that ensure the entered data is in the proper format before it is allowed into the database.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.
+> **Warning:** HTML form validation is _not_ a substitute for server-side scripts that ensure the entered data is in the proper format before it is allowed into the database.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.
 
 ### Making telephone numbers required
 
@@ -503,10 +504,11 @@ input:valid+span:after {
 
 ## See also
 
-*   [HTML forms guide](/en-US/docs/Learn/Forms)
-*   [Forms and accessibility](/en-US/docs/Web/Accessibility/ARIA/forms)
-*   {{HTMLElement("input")}}
+- [HTML forms guide](/en-US/docs/Learn/Forms)
+- [Forms and accessibility](/en-US/docs/Web/Accessibility/ARIA/forms)
+- {{HTMLElement("input")}}
 
-    *   [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text)
-    *   [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email)
-*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+  - [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text)
+  - [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email)
+
+- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: html.elements.head
 ---
+
 {{HTMLRef}}
 
 The **`<head>`** [HTML](/en-US/docs/Web/HTML) element contains machine-readable information ({{glossary("metadata")}}) about the document, like its [title](/en-US/docs/Web/HTML/Element/title), [scripts](/en-US/docs/Web/HTML/Element/script), and [style sheets](/en-US/docs/Web/HTML/Element/style).
@@ -78,8 +79,8 @@ The **`<head>`** [HTML](/en-US/docs/Web/HTML) element contains machine-readable 
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-*   {{htmlattrdef("profile")}} {{deprecated_inline}}
-    *   : The {{glossary("URI")}}s of one or more metadata profiles, separated by {{Glossary("whitespace", "white space")}}.
+- {{htmlattrdef("profile")}} {{deprecated_inline}}
+  - : The {{glossary("URI")}}s of one or more metadata profiles, separated by {{Glossary("whitespace", "white space")}}.
 
 ## Example
 
@@ -106,13 +107,13 @@ HTML5-compliant browsers automatically create a `<head>` element if its tags are
 
 ## See also
 
-*   Elements that can be used inside the `<head>`:
+- Elements that can be used inside the `<head>`:
 
-    *   {{HTMLElement("title")}}
-    *   {{HTMLElement("base")}}
-    *   {{HTMLElement("link")}}
-    *   {{HTMLElement("style")}}
-    *   {{HTMLElement("meta")}}
-    *   {{HTMLElement("script")}}
-    *   {{HTMLElement("noscript")}}
-    *   {{HTMLElement("template")}}
+  - {{HTMLElement("title")}}
+  - {{HTMLElement("base")}}
+  - {{HTMLElement("link")}}
+  - {{HTMLElement("style")}}
+  - {{HTMLElement("meta")}}
+  - {{HTMLElement("script")}}
+  - {{HTMLElement("noscript")}}
+  - {{HTMLElement("template")}}

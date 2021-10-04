@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: html.elements.image
 ---
+
 {{deprecated_header}}{{non-standard_header}}
 
 The **`<image>`** [HTML](/en-US/docs/Web/HTML) element is an obsolete remnant of an ancient version of HTML lost in the mists of time; use the standard {{HTMLElement("img")}} element instead. Seriously, the specification even literally uses the words "Don't ask" when describing this element.
@@ -34,7 +35,7 @@ However, that doesn't mean this is a good idea to use. It's not.
 
 ## See also
 
-*   {{HTMLElement("img")}}: The correct way to display an image in a document
-*   {{HTMLElement("picture")}}: A more powerful correct way to display an image in a document
+- {{HTMLElement("img")}}: The correct way to display an image in a document
+- {{HTMLElement("picture")}}: A more powerful correct way to display an image in a document
 
 {{HTMLRef}}

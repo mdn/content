@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: html.elements.code
 ---
+
 {{HTMLRef}}
 
 The **`<code>`** [HTML](/en-US/docs/Web/HTML) element displays its contents styled in a fashion intended to indicate that the text is a short fragment of computer code. By default, the content text is displayed using the {{Glossary("user agent", "user agent's")}} default monospace font.
@@ -111,8 +112,8 @@ A CSS rule can be defined for the `code` selector to override the browser's defa
 
 ## See also
 
-*   {{HTMLElement("samp")}}
-*   {{HTMLElement("kbd")}}
-*   {{HTMLElement("command")}} (deprecated)
-*   {{HTMLElement("var")}}
-*   {{HTMLElement("pre")}}
+- {{HTMLElement("samp")}}
+- {{HTMLElement("kbd")}}
+- {{HTMLElement("command")}} (deprecated)
+- {{HTMLElement("var")}}
+- {{HTMLElement("pre")}}

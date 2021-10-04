@@ -16,7 +16,7 @@ tags:
 ---
 <div>{{LearnSidebar}}</div>
 
-<p class="summary">This article acts as a box of tricks, providing an introduction to some interesting advanced styling features such as box shadows, blend modes, and filters.</p>
+<p>This article acts as a box of tricks, providing an introduction to some interesting advanced styling features such as box shadows, blend modes, and filters.</p>
 
 <table>
  <tbody>
@@ -81,11 +81,9 @@ article {
 
 <p>You can also specify multiple box shadows in a single <code>box-shadow</code> declaration, by separating them with commas:</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;article class="multiple"&gt;
+<pre class="brush: html hidden">&lt;article class="multiple"&gt;
   &lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt;: The thermostat on the cosmic transcender has reached a critical level.&lt;/p&gt;
 &lt;/article&gt;</pre>
-</div>
 
 <pre class="brush: css">p {
   margin: 0;
@@ -152,7 +150,7 @@ button:active {
 <p>When the button is pressed in, the active state causes the first box shadow to be swapped for a very dark inset shadow, giving the appearance of the button being pressed in.</p>
 
 <div class="note">
-<p><strong>Note</strong>: There is another item that can be set in the <code>box-shadow</code> value — another length value can be optionally set just before the color value, which is a <strong>spread radius</strong>. If set, this causes the shadow to become bigger than the original box. It is not very commonly used, but worth mentioning.</p>
+<p><strong>Note:</strong> There is another item that can be set in the <code>box-shadow</code> value — another length value can be optionally set just before the color value, which is a <strong>spread radius</strong>. If set, this causes the shadow to become bigger than the original box. It is not very commonly used, but worth mentioning.</p>
 </div>
 
 <h2 id="Filters">Filters</h2>
@@ -187,7 +185,7 @@ button:active {
 <p>You can find a lot more examples than are available here in our <a href="https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html">blend-modes.html</a> example page (see <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/blend-modes.html">source code</a>), and on the {{cssxref("&lt;blend-mode&gt;")}} reference page.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Blend modes are also very new, and slightly less well supported than filters. There is no support as yet in Edge, and Safari only supports some of the blend mode options.</p>
+<p><strong>Note:</strong> Blend modes are also very new, and slightly less well supported than filters. There is no support as yet in Edge, and Safari only supports some of the blend mode options.</p>
 </div>
 
 <h3 id="background-blend-mode">background-blend-mode</h3>
@@ -285,7 +283,7 @@ article div:last-child {
 <p>You can see here that the multiply mix blend has blended together not only the two background images, but also the color from the <code>&lt;div&gt;</code> below it too.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Don't worry if you don't understand some of the layout properties above, like {{cssxref("position")}}, {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("z-index")}}, etc. We will cover these in detail in our <a href="/en-US/docs/Learn/CSS/CSS_layout">CSS Layout</a> module.</p>
+<p><strong>Note:</strong> Don't worry if you don't understand some of the layout properties above, like {{cssxref("position")}}, {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("z-index")}}, etc. We will cover these in detail in our <a href="/en-US/docs/Learn/CSS/CSS_layout">CSS Layout</a> module.</p>
 </div>
 
 <h2 id="CSS_shapes">CSS shapes</h2>
@@ -301,7 +299,7 @@ article div:last-child {
 <p>The shape in this example is not reacting to the content of the image file. Instead, the circle function is taking its centre point from the centre of the image file, as if we had put a compass in the middle of the file and drawn a circle that fits inside the file. It is that circle that the text flows around.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: In Firefox you can use the DevTools <a href="/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes">Shapes Inspector</a> to inspect Shapes.</p>
+<p><strong>Note:</strong> In Firefox you can use the DevTools <a href="/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes">Shapes Inspector</a> to inspect Shapes.</p>
 </div>
 
 <p>The <code>circle()</code> function is just one of a few basic shapes that are defined, however there are a number of different ways to create shapes. For more information and example code for CSS Shapes see the <a href="/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes">Guides to CSS Shapes</a> on MDN.</p>
@@ -320,7 +318,7 @@ article div:last-child {
 <p>If you do want to use such features in your production work, make sure to test across browsers thoroughly and check that, where these features don't work, the site is still usable.</p>
 
 <div class="note">
-<p><strong>Note</strong>: For a full <code>-webkit-background-clip: text</code> code example, see <a href="https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html">background-clip-text.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html">source code</a>).</p>
+<p><strong>Note:</strong> For a full <code>-webkit-background-clip: text</code> code example, see <a href="https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html">background-clip-text.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html">source code</a>).</p>
 </div>
 
 <h2 id="Summary">Summary</h2>

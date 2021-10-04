@@ -15,7 +15,7 @@ tags:
 ---
 <div>{{LearnSidebar}}{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}</div>
 
-<p class="summary">Once the form data has been validated on the client-side, it is okay to submit the form. And, since we covered validation in the previous article, we're ready to submit! This article looks at what happens when a user submits a form — where does the data go, and how do we handle it when it gets there? We also look at some of the security concerns associated with sending form data.</p>
+<p>Once the form data has been validated on the client-side, it is okay to submit the form. And, since we covered validation in the previous article, we're ready to submit! This article looks at what happens when a user submits a form — where does the data go, and how do we handle it when it gets there? We also look at some of the security concerns associated with sending form data.</p>
 
 <table>
  <tbody>
@@ -41,7 +41,7 @@ tags:
 <p>An HTML form on a web page is nothing more than a convenient user-friendly way to configure an HTTP request to send data to a server. This enables the user to provide information to be delivered in the HTTP request.</p>
 
 <div class="note">
-<p><strong>Note</strong>: To get a better idea of how client-server architectures work, read our <a href="/en-US/docs/Learn/Server-side/First_steps">Server-side website programming first steps</a> module.</p>
+<p><strong>Note:</strong> To get a better idea of how client-server architectures work, read our <a href="/en-US/docs/Learn/Server-side/First_steps">Server-side website programming first steps</a> module.</p>
 </div>
 
 <h2 id="On_the_client_side_defining_how_to_send_the_data">On the client side: defining how to send the data</h2>
@@ -113,7 +113,7 @@ tags:
 Host: foo.com</pre>
 
 <div class="note">
-<p><strong>Note</strong>: You can find this example on GitHub — see <a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/get-method.html">get-method.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html">see it live also</a>).</p>
+<p><strong>Note:</strong> You can find this example on GitHub — see <a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/get-method.html">get-method.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html">see it live also</a>).</p>
 </div>
 
 <h4 id="The_POST_method">The POST method</h4>
@@ -148,7 +148,7 @@ say=Hi&amp;to=Mom</pre>
 <p>The <code>Content-Length</code> header indicates the size of the body, and the <code>Content-Type</code> header indicates the type of resource sent to the server. We'll discuss these headers later on.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can find this example on GitHub — see <a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/post-method.html">post-method.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html">see it live also</a>).</p>
+<p><strong>Note:</strong> You can find this example on GitHub — see <a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/post-method.html">post-method.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html">see it live also</a>).</p>
 </div>
 
 <h3 id="Viewing_HTTP_requests">Viewing HTTP requests</h3>
@@ -196,7 +196,7 @@ say=Hi&amp;to=Mom</pre>
 <p><img alt="" src="php-result.png"></p>
 
 <div class="note">
-<p><strong>Note</strong>: This example won't work when you load it into a browser locally — browsers cannnot interpret PHP code, so when the form is submitted the browser will just offer to download the PHP file for you. To get it to work, you need to run the example through a PHP server of some kind. Good options for local PHP testing are <a href="https://www.mamp.info/en/downloads/">MAMP</a> (Mac and Windows) and <a href="https://ampps.com/download">AMPPS</a> (Mac, Windows, Linux).<br>
+<p><strong>Note:</strong> This example won't work when you load it into a browser locally — browsers cannnot interpret PHP code, so when the form is submitted the browser will just offer to download the PHP file for you. To get it to work, you need to run the example through a PHP server of some kind. Good options for local PHP testing are <a href="https://www.mamp.info/en/downloads/">MAMP</a> (Mac and Windows) and <a href="https://ampps.com/download">AMPPS</a> (Mac, Windows, Linux).<br>
  <br>
  Note also that if you are using MAMP but don't have MAMP Pro installed (or if the MAMP Pro demo time trial has expired), you might have trouble getting it working. To get it working again, we have found that you can load up the MAMP app, then choose the menu options <em>MAMP</em> &gt; <em>Preferences</em> &gt; <em>PHP</em>, and set "Standard Version:" to "7.2.x" (x will differ depending on what version you have installed).</p>
 </div>
@@ -228,7 +228,7 @@ if __name__ == "__main__":
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: Again, this code won't work if you just try to load it into a browser directly. Python works a bit differently to PHP — to run this code locally you'll need to <a href="/en-US/docs/Learn/Server-side/Django/development_environment#installing_python_3">install Python/PIP</a>, then install Flask using <code>pip3 install flask</code>. At this point you should be able to run the example using <code>python3 python-example.py</code>, then navigating to <code>localhost:5000</code> in your browser.</p>
+<p><strong>Note:</strong> Again, this code won't work if you just try to load it into a browser directly. Python works a bit differently to PHP — to run this code locally you'll need to <a href="/en-US/docs/Learn/Server-side/Django/development_environment#installing_python_3">install Python/PIP</a>, then install Flask using <code>pip3 install flask</code>. At this point you should be able to run the example using <code>python3 python-example.py</code>, then navigating to <code>localhost:5000</code> in your browser.</p>
 </div>
 
 <h3 id="Other_languages_and_frameworks">Other languages and frameworks</h3>
@@ -246,7 +246,7 @@ if __name__ == "__main__":
 <p>It's worth noting that even using these frameworks, working with forms isn't necessarily <em>easy</em>. But it's much easier than trying to write all the functionality yourself from scratch, and will save you a lot of time.</p>
 
 <div class="note">
-<p><strong>Note</strong>: It is beyond the scope of this article to teach you any server-side languages or frameworks. The links above will give you some help, should you wish to learn them.</p>
+<p><strong>Note:</strong> It is beyond the scope of this article to teach you any server-side languages or frameworks. The links above will give you some help, should you wish to learn them.</p>
 </div>
 
 <h2 id="A_special_case_sending_files">A special case: sending files</h2>

@@ -12,7 +12,7 @@ browser-compat: api.Window.transitionrun_event
 ---
 {{APIRef}} {{SeeCompatTable}}
 
-The **`transitionrun`** event is fired when a [CSS transition](/en-US/docs/CSS/Using_CSS_transitions) is first created, i.e. before any {{cssxref("transition-delay")}} has begun.
+The **`transitionrun`** event is fired when a [CSS transition](/en-US/docs/Web/CSS/Using_CSS_transitions) is first created, i.e. before any {{cssxref("transition-delay")}} has begun.
 
 <table class="properties">
   <tbody>

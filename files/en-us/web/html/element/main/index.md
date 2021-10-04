@@ -9,6 +9,7 @@ tags:
   - main
 browser-compat: html.elements.main
 ---
+
 {{HTMLRef}}
 
 The **`<main>`** [HTML](/en-US/docs/Web/HTML) element represents the dominant content of the {{HTMLElement("body")}} of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the central functionality of an application.
@@ -141,13 +142,13 @@ Adding an {{htmlattrxref("id")}} attribute to the `<main>` element lets it be a 
 </body>
 ```
 
-*   [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
+- [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
 
 ### Reader mode
 
 Browser reader mode functionality looks for the presence of the `<main>` element, as well as [heading](/en-US/docs/Web/HTML/Element/Heading_Elements) and [content sectioning elements](/en-US/docs/Web/HTML/Element#content_sectioning) when converting content into a specialized reader view.
 
-*   [Building websites for Safari Reader Mode and other reading apps.](https://medium.com/@mandy.michael/building-websites-for-safari-reader-mode-and-other-reading-apps-1562913c86c9)
+- [Building websites for Safari Reader Mode and other reading apps.](https://medium.com/@mandy.michael/building-websites-for-safari-reader-mode-and-other-reading-apps-1562913c86c9)
 
 ## Specifications
 
@@ -161,6 +162,6 @@ To support Internet Explorer 11 and lower, you can add an {{glossary("ARIA")}} r
 
 ## See also
 
-*   Basic structural elements: {{HTMLElement("html")}}, {{HTMLElement("head")}}, {{HTMLElement("body")}}
-*   Section-related elements: {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, or {{HTMLElement("nav")}}
-*   [ARIA: Main role](/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role)
+- Basic structural elements: {{HTMLElement("html")}}, {{HTMLElement("head")}}, {{HTMLElement("body")}}
+- Section-related elements: {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, or {{HTMLElement("nav")}}
+- [ARIA: Main role](/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role)

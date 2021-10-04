@@ -11,7 +11,7 @@ browser-compat: css.properties.background-size
 ---
 {{CSSRef}}
 
-The **`background-size`** [CSS](/en-US/docs/CSS) property sets the size of the element's background image. The image can be left to its natural size, stretched, or constrained to fit the available space.
+The **`background-size`** [CSS](/en-US/docs/Web/CSS) property sets the size of the element's background image. The image can be left to its natural size, stretched, or constrained to fit the available space.
 
 {{EmbedInteractiveExample("pages/css/background-size.html")}}
 
@@ -177,6 +177,6 @@ See [Scaling background images](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/
 
 ## See also
 
-- [Scaling background images](/en-US/docs/CSS/Scaling_background_images)
+- [Scaling background images](/en-US/docs/Web/CSS/Scaling_background_images)
 - [Scaling of SVG backgrounds](/en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds)
 - {{cssxref("object-fit")}}
