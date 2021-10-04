@@ -12,7 +12,7 @@ tags:
 
 <h2 id="Controller">Controller</h2>
 
-<p>The book list controller function needs to get a list of all <code>Book</code> objects in the database, and then pass these to the template for rendering.</p>
+<p>The book list controller function needs to get a list of all <code>Book</code> objects in the database, sort them, and then pass these to the template for rendering.</p>
 
 <p>Open <strong>/controllers/bookController.js</strong>. Find the exported <code>book_list()</code> controller method and replace it with the following code.</p>
 
@@ -30,7 +30,7 @@ exports.book_list = function(req, res, next) {
 
 };</pre>
 
-<p>The method uses the model's <code>find()</code> function to return all <code>Book</code> objects, selecting to return only the <code>title</code> and <code>author</code> as we don't need the other fields (it will also return the <code>_id</code> and virtual fields), and then sorts the results by the title alphabetically using the <code>find()</code> method. Here we also call <code>populate()</code> on <code>Book</code>, specifying the <code>author</code> field—this will replace the stored book author id with the full author details.</p>
+<p>The method uses the model's <code>find()</code> function to return all <code>Book</code> objects, selecting to return only the <code>title</code> and <code>author</code> as we don't need the other fields (it will also return the <code>_id</code> and virtual fields), and then sorts the results by the title alphabetically using the <code>sort()</code> method. Here we also call <code>populate()</code> on <code>Book</code>, specifying the <code>author</code> field—this will replace the stored book author id with the full author details.</p>
 
 <p>On success, the callback passed to the query renders the <strong>book_list</strong>(.pug) template, passing the <code>title</code> and <code>book_list</code> (list of books with authors) as variables.</p>
 
@@ -38,7 +38,7 @@ exports.book_list = function(req, res, next) {
 
 <p>Create <strong>/views/book_list.pug</strong> and copy in the text below.</p>
 
-<pre class="brush: js">extends layout
+<pre class="brush: plain">extends layout
 
 block content
   h1= title
