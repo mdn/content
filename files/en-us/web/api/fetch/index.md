@@ -137,8 +137,7 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
   - : The request was aborted due to a call to the {{domxref("AbortController")}}
     {{domxref("AbortController.abort", "abort()")}} method.
 - `TypeError`
-  - : The specified URL string includes user credentials. This information should instead
-    be provided using an {{HTTPHeader("Authorization")}} header.
+  - : The specified URL string includes user credentials that should instead be passed with an {{HTTPHeader("Authorization")}} header, or a `NetworkError` has happened (this can include [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors)).
 
 ## Examples
 
