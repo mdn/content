@@ -41,8 +41,8 @@ An event handler function which is to be called whenever the
 indicating that the user has changed payment methods within the same payment handler.
 
 The {{event("paymentmethodchange")}} event is triggered by a user-agent controlled
-interaction (i.e., the end-user switches from a debit to a credit card in the payment
-UI). To make sure you receive the event, you should add event listeners to
+interaction (e.g., the end-user switches from a debit to a credit card in the payment
+app). To make sure you receive the event, you should add event listeners to
 {{domxref('PaymentRequest')}} object after instantiation, but before you call
 `show()`.
 

@@ -7,19 +7,17 @@ tags:
   - Guide
   - HTML
 ---
-<p>{{draft}}</p>
-
 <p>While using {{Glossary("HTML")}} it can be very handy to have an easy way to remember how to use HTML tags properly and how to apply them. MDN provides you with an extended <a href="/en-US/docs/Web/HTML/Element">HTML documentation</a> as well as a deep instructional <a href="/en-US/docs/Learn/HTML/Howto">HTML how-to</a>. However, in many cases we just need some quick hints as we go. That's the whole purpose of the cheatsheet, to give you some quick accurate ready to use code snippets for common usages.</p>
 
 <div class="note">
-<p>Remember that HTML tags must be used for their semantic, not their appearance. It's always possible to totally change the look and feel of a given tag using {{Glossary("CSS")}} so, when using HTML, take the time to focus on the meaning rather than the appearance.</p>
+<p><strong>Note:</strong> HTML tags must be used for their semantic, not their appearance. It's always possible to totally change the look and feel of a given tag using {{Glossary("CSS")}} so, when using HTML, take the time to focus on the meaning rather than the appearance.</p>
 </div>
 
 <h2 id="Inline_elements">Inline elements</h2>
 
 <p>An "element" is a single part of a webpage. Some elements are large and hold smaller elements like containers. Some elements are small and are "nested" inside larger ones. By default, "inline elements" appear next to one another in a webpage. They take up only as much width as they need in a page and fit together horizontally like words in a sentence or books shelved side-by-side in a row.All inline elements can be implemented within the &lt;body&gt;&lt;/body&gt; tags.</p>
 
-<table class="nostripe standard-table">
+<table class="standard-table">
  <thead>
   <tr>
    <th scope="col">Usage</th>
@@ -173,8 +171,8 @@ This text is in predefined format.</pre>
    <td>Embedded Video</td>
    <td>&lt;video controls src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"&gt;The &lt;code&gt;video&lt;/code&gt; element is unsupported.&lt;/video&gt;</td>
    <td>
-    <div class="hidden" id="sampleVideo">
-      <pre class="brush: html">&lt;video controls src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" style="width: 100%;" &gt;The &lt;code&gt;video&lt;/code&gt; element is unsupported.&lt;/video&gt;</pre>
+    <div id="sampleVideo">
+      <pre class="brush: html hidden">&lt;video controls src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" style="width: 100%;" &gt;The &lt;code&gt;video&lt;/code&gt; element is unsupported.&lt;/video&gt;</pre>
     </div>
     {{EmbedLiveSample("sampleVideo",300,180,"","", "nobutton")}}
    </td>
@@ -186,7 +184,7 @@ This text is in predefined format.</pre>
 
 <p>"Block elements," on the other hand, take up the entire width of a webpage. They also take up a full line of a webpage; they do not fit together side-by-side. Instead, they stack like paragraphs in an essay or toy blocks in a tower.</p>
 
-<table class="nostripe standard-table">
+<table class="standard-table">
  <thead>
   <tr>
    <th scope="col">Usage</th>

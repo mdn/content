@@ -12,7 +12,7 @@ tags:
 
 The CSS Object Model (CSSOM), part of the DOM, exposes specific interfaces allowing manipulation of a wide amount of information regarding CSS. Initially defined in the _DOM Level 2 Style_ recommendation, these interfaces forms now a specification, _CSS Object Model (CSSOM)_ which aims at superseding it.
 
-In many cases, and where possible, it really is best practice to dynamically manipulate classes via the {{ domxref("element.className", "className") }} property since the ultimate appearance of all of the styling hooks can be controlled in a single stylesheet. One's JavaScript code also becomes cleaner since instead of being dedicated to styling details, it can focus on the overall semantics of each section it is creating or manipulating, leaving the precise style details to the stylesheet. However, there are cases where actually obtaining or manipulating the rules can be useful (whether for whole stylesheets or individual elements), and that is described in further detail below. Note also that, as with individual element's DOM styles, when speaking of manipulating the stylesheets, this is not actually manipulating the physical document(s), but merely the internal representation of the document.
+In many cases, and where possible, it is best practice to dynamically manipulate classes via the {{ domxref("element.className", "className") }} property since the ultimate appearance of all of the styling hooks can be controlled in a single stylesheet. One's JavaScript code also becomes cleaner since instead of being dedicated to styling details, it can focus on the overall semantics of each section it is creating or manipulating, leaving the precise style details to the stylesheet. However, there are cases where actually obtaining or manipulating the rules can be useful (whether for whole stylesheets or individual elements), and that is described in further detail below. Note also that, as with individual element's DOM styles, when speaking of manipulating the stylesheets, this is not actually manipulating the physical document(s), but merely the internal representation of the document.
 
 The basic `style` object exposes the {{domxref("Stylesheet")}} and the {{domxref("CSSStylesheet")}} interfaces. Those interfaces contain members like `insertRule`, `selectorText`, and `parentStyleSheet` for accessing and manipulating the individual style rules that make up a CSS stylesheet.
 
@@ -33,7 +33,7 @@ body {
 </style>
 <script type="text/javascript">
 var stylesheet = document.styleSheets[0];
-stylesheet.cssRules[0].style.backgroundColor="blue";
+stylesheet.cssRules[0].style.backgroundColor="aqua";
 </script>
 </head>
 <body>

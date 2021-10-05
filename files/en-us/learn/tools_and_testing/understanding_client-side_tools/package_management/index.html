@@ -15,7 +15,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line","Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}</div>
 
-<p class="summary">In this article we'll look at package managers in some detail to understand how we can use them in our own projects — to install project tool dependencies, keep them up-to-date, and more.</p>
+<p>In this article we'll look at package managers in some detail to understand how we can use them in our own projects — to install project tool dependencies, keep them up-to-date, and more.</p>
 
 <table>
  <tbody>
@@ -68,7 +68,7 @@ tags:
 <p>To see local dependencies really shine, all you need to do is try to download and run an existing project — if it works and all the dependencies work right out of the box, then you have local dependencies to thank for the fact that the code is portable.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: npm is not the only package manager available. A successful and popular alternative package manager is <a href="https://yarnpkg.com/">Yarn</a>. Yarn resolves the dependencies using a different algorithm that can mean a faster user experience. There are also a number of other emerging clients, such as <a href="https://pnpm.js.org/">pnpm</a>.</p>
+<p><strong>Note:</strong> npm is not the only package manager available. A successful and popular alternative package manager is <a href="https://yarnpkg.com/">Yarn</a>. Yarn resolves the dependencies using a different algorithm that can mean a faster user experience. There are also a number of other emerging clients, such as <a href="https://pnpm.js.org/">pnpm</a>.</p>
 </div>
 
 <h2 id="Package_registries">Package registries</h2>
@@ -180,7 +180,7 @@ cd parcel-experiment
 ✨  Built in 193ms.</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: If you have trouble with the terminal returning a "command not found" type error, try running the above command with the <code>npx</code> utility, i.e. <code>npx parcel index.html</code>.</p>
+<p><strong>Note:</strong> If you have trouble with the terminal returning a "command not found" type error, try running the above command with the <code>npx</code> utility, i.e. <code>npx parcel index.html</code>.</p>
 </div>
 
 <p>Now we're ready to benefit from the full JavaScript package ecosystem. For a start, there is now a local web server running at <code>http://localhost:1234</code>. Go there now and you’ll not see anything for now, but what is cool is that when you do make changes to your app, Parcel will rebuild it and refresh the server automatically so you can instantly see the effect your update had.</p>
@@ -270,7 +270,7 @@ dist/index.html                   288 B    753ms</pre>
 <p>If we were to release this project to a server, we would only release the files in the <code>dist</code> folder. Parcel has automatically handled all the filename changes for us. We would recommend having a look at the source code in <code>dist/index.html</code> just so you can see what changes Parcel has performed automatically.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: At time of writing, Parcel 2 had not been released. However when it does, these commands will all still work because the authors of Parcel have had the good sense to name the tool slightly differently. To install Parcel 1.x you have to install <code>parcel-bundler</code>, but parcel 2.x is called <code>parcel</code>.</p>
+<p><strong>Note:</strong> At time of writing, Parcel 2 had not been released. However when it does, these commands will all still work because the authors of Parcel have had the good sense to name the tool slightly differently. To install Parcel 1.x you have to install <code>parcel-bundler</code>, but parcel 2.x is called <code>parcel</code>.</p>
 </div>
 
 <p>There's a lot of tools available and the JavaScript package ecosystem is growing at an unprecedented rate, which has pros and cons. There's improvements being made all the time and the choice, for better or worse, is constantly increasing. Faced with the overwhelming choice of tooling, probably the most important lesson is to learn what the tool you select is capable of.</p>
@@ -294,7 +294,7 @@ dist/index.html                   288 B    753ms</pre>
 <p>yarn is often thought to be quicker than npm in terms of installation process (though your mileage may vary). This is important to developers because there can be a significant amount of time wasted on waiting for dependencies to install (and copy to the computer).</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> The npm package manager is <strong>not</strong> required to install packages from the npm registry, even though they share the same name. pnpm and yarn can consume the same <code class="highlighter-rouge">package.json</code> format as npm, and can install any package from the npm and other package registries.</p>
+<p><strong>Note:</strong> The npm package manager is <strong>not</strong> required to install packages from the npm registry, even though they share the same name. pnpm and yarn can consume the same <code>package.json</code> format as npm, and can install any package from the npm and other package registries.</p>
 </div>
 
 <p>Let’s review the common actions you’ll want to perform with package managers.</p>

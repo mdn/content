@@ -79,11 +79,6 @@
     "url": "https://wicg.github.io/shape-detection-api/",
     "status": "Draft"
   },
-  "Basic Card Payment": {
-    "name": "Basic Card Payment",
-    "url": "https://w3c.github.io/payment-method-basic-card/",
-    "status": "WD"
-  },
   "Battery API": {
     "name": "Battery Status API",
     "url": "https://w3c.github.io/battery/",

@@ -8,9 +8,8 @@ tags:
   - resources
   - urls
 ---
-<div class="summary">
+
 <p>This article discusses Uniform Resource Locators (URLs), explaining what they are and how they're structured.</p>
-</div>
 
 <table>
  <tbody>
@@ -46,13 +45,11 @@ https://developer.mozilla.org/en-US/search?q=URL</pre>
 <img alt="full  url" src="mdn-url-all.png">
 
 <div class="notecard note">
-  <h4>Tip</h4>
-  <p>You might think of a URL like a regular postal mail address: the <em>scheme</em> represents the postal service you want to use, the <em>domain name</em> is the city or town, and the <em>port</em> is like the zip code; the <em>path</em> represents the building where your mail should be delivered; the <em>parameters</em> represent extra information such as the number of the apartment in the building; and, finally, the <em>anchor</em> represents the actual person to whom you've addressed your mail.</p>
+  <p><strong>Note:</strong> You might think of a URL like a regular postal mail address: the <em>scheme</em> represents the postal service you want to use, the <em>domain name</em> is the city or town, and the <em>port</em> is like the zip code; the <em>path</em> represents the building where your mail should be delivered; the <em>parameters</em> represent extra information such as the number of the apartment in the building; and, finally, the <em>anchor</em> represents the actual person to whom you've addressed your mail.</p>
 </div>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>There are <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Locator">some extra parts and some extra rules</a> regarding URLs, but they are not relevant for regular users or Web developers. Don't worry about this, you don't need to know them to build and use fully functional URLs.</p>
+  <p><strong>Note:</strong> There are <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Locator">some extra parts and some extra rules</a> regarding URLs, but they are not relevant for regular users or Web developers. Don't worry about this, you don't need to know them to build and use fully functional URLs.</p>
 </div>
 
 <h2 id="Scheme">Scheme</h2>
@@ -73,8 +70,7 @@ https://developer.mozilla.org/en-US/search?q=URL</pre>
 </ul>
 
 <div class="notecard note">
-  <h4>Note</h4>
-<p>The separator between the scheme and authority is <code>://</code>. The colon separates the scheme from the next part of the URL, while <code>//</code> indicates that the next part of the URL is the authority.</p>
+<p><strong>Note:</strong> The separator between the scheme and authority is <code>://</code>. The colon separates the scheme from the next part of the URL, while <code>//</code> indicates that the next part of the URL is the authority.</p>
 <p>One example of a URL that doesn't use an authority is the mail client (<code>mailto:foobar</code>). It contains a scheme but doesn't use an authority component. Therefore, the colon is not followed by two slashes and only acts as a delimiter between the scheme and mail address.</p>
 </div>
 
@@ -110,8 +106,7 @@ https://developer.mozilla.org/en-US/search?q=URL</pre>
 </ul>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>When specifying URLs to load resources as part of a page (such as when using the <code>&lt;script&gt;</code>, <code>&lt;audio&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;video&gt;</code>, and the like), you should generally only use HTTP and HTTPS URLs, with few exceptions (one notable one being <code>data:</code>; see <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">Data URLs</a>). Using FTP, for example, is not secure and is no longer supported by modern browsers.</p>
+  <p><strong>Note:</strong> When specifying URLs to load resources as part of a page (such as when using the <code>&lt;script&gt;</code>, <code>&lt;audio&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;video&gt;</code>, and the like), you should generally only use HTTP and HTTPS URLs, with few exceptions (one notable one being <code>data:</code>; see <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">Data URLs</a>). Using FTP, for example, is not secure and is no longer supported by modern browsers.</p>
 </div>
 
 <p>Other technologies, such as {{Glossary("CSS")}} or {{Glossary("JavaScript")}}, use URLs extensively, and these are really the heart of the Web.</p>
@@ -128,41 +123,47 @@ https://developer.mozilla.org/en-US/search?q=URL</pre>
 
 <h3 id="Examples_of_absolute_URLs">Examples of absolute URLs</h3>
 
-<dl>
- <dt>Full URL (the same as the one we used before)</dt>
- <dd>
- <pre>https://developer.mozilla.org/en-US/docs/Learn</pre>
- </dd>
- <dt>Implicit protocol</dt>
- <dd>
- <pre>//developer.mozilla.org/en-US/docs/Learn</pre>
-
- <p>In this case, the browser will call that URL with the same protocol as the one used to load the document hosting that URL.</p>
- </dd>
- <dt>Implicit domain name</dt>
- <dd>
- <pre>/en-US/docs/Learn</pre>
-
- <p>This is the most common use case for an absolute URL within an HTML document. The browser will use the same protocol and the same domain name as the one used to load the document hosting that URL. <strong>Note:</strong> <em>it isn't possible to omit the domain name without omitting the protocol as well</em>.</p>
- </dd>
-</dl>
+<table>
+  <tr>
+    <td>Full URL (the same as the one we used before)</td>
+    <td><pre>https://developer.mozilla.org/en-US/docs/Learn</pre></td>
+  </tr>
+  <tr>
+    <td>Implicit protocol</td>
+    <td>
+     <pre>//developer.mozilla.org/en-US/docs/Learn</pre>
+     <p>In this case, the browser will call that URL with the same protocol as the one used to load the document hosting that URL.</p>
+   </td>
+  </tr>
+  <tr>
+    <td>Implicit domain name</td>
+    <td>
+     <pre>/en-US/docs/Learn</pre>
+     <p>This is the most common use case for an absolute URL within an HTML document. The browser will use the same protocol and the same domain name as the one used to load the document hosting that URL. <strong>Note:</strong> <em>it isn't possible to omit the domain name without omitting the protocol as well</em>.</p>
+   </td>
+  </tr>
+</table>
 
 <h3 id="Examples_of_relative_URLs">Examples of relative URLs</h3>
 
 <p>To better understand the following examples, let's assume that the URLs are called from within the document located at the following URL: <code>https://developer.mozilla.org/en-US/docs/Learn</code></p>
 
-<dl>
- <dt>Sub-resources</dt>
- <dd>
- <pre>Skills/Infrastructure/Understanding_URLs</pre>
- Because that URL does not start with <code>/</code>, the browser will attempt to find the document in a sub-directory of the one containing the current resource. So in this example,  we really want to reach this URL: <code>https://developer.mozilla.org/en-US/docs/Learn/Skills/Infrastructure/Understanding_URLs</code></dd>
- <dt>Going back in the directory tree</dt>
- <dd>
- <pre>../CSS/display</pre>
-
- <p>In this case, we use the <code>../</code> writing convention — inherited from the UNIX file system world — to tell the browser we want to go up from one directory. Here we want to reach this URL: <code>https://developer.mozilla.org/en-US/docs/Learn/../CSS/display</code>, which can be simplified to: <code>https://developer.mozilla.org/en-US/docs/CSS/display</code></p>
- </dd>
-</dl>
+<table>
+  <tr>
+    <td>Sub-resources</td>
+    <td>
+      <pre>Skills/Infrastructure/Understanding_URLs</pre>
+      <p>Because that URL does not start with <code>/</code>, the browser will attempt to find the document in a sub-directory of the one containing the current resource. So in this example,  we really want to reach this URL: https://developer.mozilla.org/en-US/docs/Learn/Skills/Infrastructure/Understanding_URLs.</p>
+   </td>
+  </tr>
+  <tr>
+    <td>Going back in the directory tree</td>
+    <td>
+      <pre>../CSS/display</pre>
+      <p>In this case, we use the <code>../</code> writing convention — inherited from the UNIX file system world — to tell the browser we want to go up from one directory. Here we want to reach this URL: https://developer.mozilla.org/en-US/docs/Learn/../CSS/display, which can be simplified to: https://developer.mozilla.org/en-US/docs/CSS/display.</p>
+   </td>
+  </tr>
+</table>
 
 <h2 id="Semantic_URLs">Semantic URLs</h2>
 

@@ -99,5 +99,5 @@ for (var i = 0; i < array.length; i++) {
 ## See also
 
 - [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)
-- {{ domxref("Window.crypto") }} to get a {{domxref("Crypto")}} object.
+- {{ domxref("crypto_property", "crypto") }} to get a {{domxref("Crypto")}} object.
 - {{jsxref("Math.random")}}, a non-cryptographic source of random numbers.

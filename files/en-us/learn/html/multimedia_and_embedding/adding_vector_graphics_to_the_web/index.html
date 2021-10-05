@@ -18,9 +18,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}</div>
 
-<div class="summary">
 <p>Vector graphics are very useful in many circumstances — they have small file sizes and are highly scalable, so they don't pixelate when zoomed in or blown up to a large size. In this article we'll show you how to include one in your webpage.</p>
-</div>
 
 <table>
  <tbody>
@@ -36,7 +34,7 @@ tags:
 </table>
 
 <div class="note">
-<p><strong>Note</strong>: This article doesn't intend to teach you SVG; just what it is, and how to add it to web pages.</p>
+<p><strong>Note:</strong> This article doesn't intend to teach you SVG; just what it is, and how to add it to web pages.</p>
 </div>
 
 <h2 id="What_are_vector_graphics">What are vector graphics?</h2>
@@ -57,7 +55,7 @@ tags:
 <p><img alt="Two star images zoomed in, one crisp and the other blurry" src="raster-vector-zoomed.png"></p>
 
 <div class="note">
-<p><strong>Note</strong>: The images above are actually all PNGs — with the left-hand star in each case representing a raster image, and the right-hand star representing a vector image. Again, go to the <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html">vector-versus-raster.html</a> demo for a real example!</p>
+<p><strong>Note:</strong> The images above are actually all PNGs — with the left-hand star in each case representing a raster image, and the right-hand star representing a vector image. Again, go to the <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html">vector-versus-raster.html</a> demo for a real example!</p>
 </div>
 
 <p>Moreover, vector image files are much lighter than their raster equivalents, because they only need to hold a handful of algorithms, rather than information on every pixel in the image individually.</p>
@@ -78,7 +76,7 @@ tags:
 
 <p>This creates the following output:</p>
 
-<p>{{ EmbedLiveSample('What_is_SVG', 300, 200, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('What_is_SVG', 300, 240, "", "") }}</p>
 
 <p>From the example above, you may get the impression that SVG is easy to handcode. Yes, you can handcode simple SVG in a text editor, but for a complex image this quickly starts to get very difficult. For creating SVG images, most people use a vector graphics editor like <a href="https://inkscape.org/en/">Inkscape</a> or <a href="https://en.wikipedia.org/wiki/Adobe_Illustrator">Illustrator</a>. These packages allow you to create a variety of illustrations using various graphics tools, and create approximations of photos (for example Inkscape's Trace Bitmap feature.)</p>
 
@@ -100,7 +98,7 @@ tags:
 <p>Raster graphics are arguably better for complex precision images such as photos, for the reasons described above.</p>
 
 <div class="note">
-<p><strong>Note</strong>: In Inkscape, save your files as Plain SVG to save space. Also, please refer to this <a href="http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html">article describing how to prepare SVGs for the Web</a>.</p>
+<p><strong>Note:</strong> In Inkscape, save your files as Plain SVG to save space. Also, please refer to this <a href="http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html">article describing how to prepare SVGs for the Web</a>.</p>
 </div>
 
 <h2 id="Adding_SVG_to_your_pages">Adding SVG to your pages</h2>
@@ -201,10 +199,7 @@ background-size: contain;</pre>
 
 <p>If you get stuck and can't get your code working, you can always reset it using the <em>Reset</em> button.</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -229,7 +224,7 @@ background-size: contain;</pre>
   &lt;input id="solution" type="button" value="Show solution" disabled&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -249,7 +244,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js">const textarea = document.getElementById('code');
+<pre class="brush: js hidden">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 const output = document.querySelector('.output');
@@ -326,9 +321,8 @@ textarea.onkeyup = function(){
 
   updateCode();
 };</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 500, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Active_Learning_Playing_with_SVG', 700, 540) }}</p>
 
 <h2 id="Summary">Summary</h2>
 

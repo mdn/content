@@ -7,7 +7,7 @@ tags:
   - CodingScripting
   - Learn
 ---
-<p class="summary">CSS boxes are the building blocks of any web page styled with CSS. Making them nice looking is both fun and challenging. It's fun because it's all about turning a design idea into working code; it's challenging because of the constraints of CSS. Let's do some fancy boxes.</p>
+<p>CSS boxes are the building blocks of any web page styled with CSS. Making them nice looking is both fun and challenging. It's fun because it's all about turning a design idea into working code; it's challenging because of the constraints of CSS. Let's do some fancy boxes.</p>
 
 <p>Before we start getting into the practical side of it, make sure you are familiar with <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">the CSS box model</a>. It's also a good idea, but not a prerequisite, to be familiar with some <a href="/en-US/docs/Learn/CSS/CSS_layout/Introduction">CSS layout basics</a>.</p>
 
@@ -34,9 +34,7 @@ tags:
 
 <h3 id="Making_circles">Making circles</h3>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="fancy"&gt;Hi! I want to be fancy.&lt;/div&gt;</pre>
-</div>
+<pre class="brush: html hidden">&lt;div class="fancy"&gt;Hi! I want to be fancy.&lt;/div&gt;</pre>
 
 <p>This is something that is both very simple and very fun. The {{cssxref("border-radius")}} property is made to create a rounded corner applied to boxes, but what happens if the radius size is equal or larger than the actual width of the box?</p>
 
@@ -80,9 +78,7 @@ tags:
  <li>Backgrounds can be either solid colors or images: solid color always fills the whole surface but images can be scaled and positioned.</li>
 </ul>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="fancy"&gt;Hi! I want to be fancy.&lt;/div&gt;</pre>
-</div>
+<pre class="brush: html hidden">&lt;div class="fancy"&gt;Hi! I want to be fancy.&lt;/div&gt;</pre>
 
 <p>Okay, let's have fun with backgrounds:</p>
 
@@ -118,7 +114,7 @@ tags:
 <p>{{ EmbedLiveSample('Backgrounds', '100%', '200') }}</p>
 
 <div class="note">
-<p>Gradients can be used in some very creative ways. If you want to see some creative examples, take a look at <a href="https://lea.verou.me/css3patterns/">Lea Verou's CSS patterns</a>. Just remember that such use of gradient is quite expensive, performance wise. If you want to learn more about gradient, feel free to get into <a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">our dedicated article</a>.</p>
+<p><strong>Note:</strong> Gradients can be used in some very creative ways. If you want to see some creative examples, take a look at <a href="https://lea.verou.me/css3patterns/">Lea Verou's CSS patterns</a>. Just remember that such use of gradient is quite expensive, performance wise. If you want to learn more about gradient, feel free to get into <a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">our dedicated article</a>.</p>
 </div>
 
 <h2 id="Pseudo-elements">Pseudo-elements</h2>
@@ -127,9 +123,7 @@ tags:
 
 <h3 id="A_cloud">A cloud</h3>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="fancy"&gt;Hi! I want to be fancy.&lt;/div&gt;</pre>
-</div>
+<pre class="brush: html hidden">&lt;div class="fancy"&gt;Hi! I want to be fancy.&lt;/div&gt;</pre>
 
 <p>Let's have an example by turning our box into a cloud:</p>
 
@@ -270,9 +264,7 @@ blockquote i {
 
 <p>So it's possible to create a wonderful effect when we mix all of this together. At some point, to accomplish such box embellishment is a matter of creativity, both in design and technical use of CSS properties. By doing such it's possible to create optical illusions that can bring your boxes alive like in this example:</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="fancy"&gt;Hi! I want to be fancy.&lt;/div&gt;</pre>
-</div>
+<pre class="brush: html hidden">&lt;div class="fancy"&gt;Hi! I want to be fancy.&lt;/div&gt;</pre>
 
 <p>Let's create some partial drop shadow effect.  The {{cssxref("box-shadow")}} property allow us to create inner light and a flat drop shadow effect, but with some little extra work it becomes possible to create a more natural geometry by using pseudo-element and the {{cssxref("transform")}} property.</p>
 

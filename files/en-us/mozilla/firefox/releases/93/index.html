@@ -35,7 +35,9 @@ tags:
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
+  <li>The properties <code>imageOrientation</code> and <code>premultiplyAlpha</code> can be passed to the method {{domxref("createImageBitmap()")}} using the <code>options</code> object ({{bug(1367251)}}).</li>
   <li>{{jsxref("Intl.supportedValuesOf()")}} is now supported, allowing code to enumerate values supported by an implementation, This might be used, for example, to download a polyfill for just the missing category of values ({{bug(1670033)}}).</li>
+  <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks">Class <code>static</code> initialization blocks</a> are now supported, allowing more flexible initialization of {{jsxref("Classes/static", "static")}} properties ({{bug(1725689)}}).</li>
 </ul>
 
 <h4 id="removals_js">Removals</h4>
@@ -58,6 +60,7 @@ tags:
 <ul>
   <li>{{domxref("ElementInternals.shadowRoot")}} and {{domxref("HTMLElement.attachInternals")}} are now supported ({{bug(1723521)}}).</li>
   <li>The value <code>device-pixel-content-box</code> is now supported for {{domxref("ResizeObserver.Observe()")}} ({{bug(1587973)}}).</li>
+  <li>The {{domxref("reportError()")}} global function is now supported, allowing scripts to report errors to the console or global event handlers, emulating an uncaught JavaScript exception ({{bug(1722448)}}).</li>
 </ul>
 
 <h4 id="DOM">DOM</h4>
@@ -82,6 +85,10 @@ tags:
 <h4 id="removals_wasm">Removals</h4>
 
 <h3 id="webdriver_conformance_marionette">WebDriver conformance (Marionette)</h3>
+
+<ul>
+  <li>Fixed a bug which caused <code>WebDriver:Print</code> to fail for large documents ({{bug(1721982)}}).</li>
+</ul>
 
 <h4 id="removals_webdriver">Removals</h4>
 

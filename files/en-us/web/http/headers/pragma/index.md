@@ -14,13 +14,13 @@ browser-compat: http.headers.Pragma
 
 The **`Pragma`** HTTP/1.0 general header is an
 implementation-specific header that may have various effects along the request-response
-chain. It is used for backwards compatibility with HTTP/1.0 caches where the
-{{HTTPHeader("Cache-Control")}} HTTP/1.1 header is not yet present.
+chain. This header serves for backwards compatibility with the HTTP/1.0 caches that do not have a 
+{{HTTPHeader("Cache-Control")}} HTTP/1.1 header.
 
 > **Note:** `Pragma` is not specified for HTTP responses and is
 > therefore not a reliable replacement for the general HTTP/1.1
-> `Cache-Control` header, although it does behave the same as
-> `Cache-Control: no-cache`, if the `Cache-Control` header field
+> `Cache-Control` header, although its behavior is the same as
+> `Cache-Control: no-cache` if the `Cache-Control` header field
 > is omitted in a request. Use `Pragma` only for backwards compatibility with
 > HTTP/1.0 clients.
 
@@ -57,7 +57,7 @@ Pragma: no-cache
 
 - no-cache
   - : Same as `Cache-Control: no-cache`. Forces caches to submit the request
-    to the origin server for validation before releasing a cached copy.
+    to the origin server for validation before a cached copy is released.
 
 ## Examples
 

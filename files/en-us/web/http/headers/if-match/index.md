@@ -13,20 +13,20 @@ browser-compat: http.headers.If-Match
 
 The **`If-Match`** HTTP request header makes the request
 conditional. For {{HTTPMethod("GET")}} and {{HTTPMethod("HEAD")}} methods, the server
-will send back the requested resource only if it matches one of the listed
+will return the requested resource only if it matches one of the listed
 `ETags`. For {{HTTPMethod("PUT")}} and other non-safe methods, it will only
 upload the resource in this case.
 
 The comparison with the stored {{HTTPHeader("ETag")}} uses the _strong comparison
-algorithm_, meaning two files are considered identical byte to byte only. If a
-listed `ETag` has the `W/` prefix indicating a weak entity tag, it
-will never match under this comparison algorithm.
+algorithm_, meaning two files are considered identical byte by byte only. If a
+listed `ETag` has the `W/` prefix indicating a weak entity tag, this comparison 
+algorithm will never match it.
 
 There are two common use cases:
 
 - For {{HTTPMethod("GET")}} and {{HTTPMethod("HEAD")}} methods, used in combination
   with a {{HTTPHeader("Range")}} header, it can guarantee that the new ranges requested
-  comes from the same resource than the previous one. If it doesn't match, then a
+  come from the same resource as the previous one. If it doesn't match, then a
   {{HTTPStatus("416")}} (Range Not Satisfiable) response is returned.
 - For other methods, and in particular for {{HTTPMethod("PUT")}},
   `If-Match` can be used to prevent the [lost update problem](https://www.w3.org/1999/04/Editing/#3.1). It can check
@@ -61,7 +61,7 @@ If-Match: <etag_value>, <etag_value>, …
   - : Entity tags uniquely representing the requested resources. They are a string of
     ASCII characters placed between double quotes (like `"675af34563dc-tr34"`).
     They may be prefixed by `W/` to indicate that they are "weak", i.e. that
-    they represent the resource semantically, but not byte-for-byte. However, in an
+    they represent the resource semantically but not byte-by-byte. However, in an
     **`If-Match`** header, weak entity tags will never match.
 - `*`
   - : The asterisk is a special value representing any resource.

@@ -33,7 +33,7 @@ The _obsolete_ and _non-standard_ **`mousewheel`** event is fired asynchronously
     <tr>
       <th scope="row">Interface</th>
       <td>
-        {{domxref("MouseWheelEvent")}} {{deprecated_inline}}
+        {{domxref("WheelEvent")}}
       </td>
     </tr>
     <tr>
@@ -107,6 +107,5 @@ Not part of any specification.
 
 ## See also
 
-- {{ domxref("MouseWheelEvent") }}
 - Gecko's legacy mouse wheel events: `DOMMouseScroll`, `MozMousePixelScroll`
 - Standardized wheel event: `wheel`

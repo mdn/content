@@ -353,7 +353,6 @@
         "KeyboardEvent",
         "MouseEvent",
         "MouseScrollEvent",
-        "MouseWheelEvent",
         "MutationEvent",
         "ProgressEvent",
         "UIEvent",
@@ -995,8 +994,6 @@
       ],
       "dictionaries": [
         "AddressErrors",
-        "BasicCardRequest",
-        "BasicCardResponse",
         "PaymentMethodData",
         "PaymentCurrencyAmount",
         "PaymentDetailsModifier",

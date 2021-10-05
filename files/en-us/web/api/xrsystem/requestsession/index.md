@@ -55,13 +55,11 @@ requestSession(mode, options)
 
 - `options` {{optional_inline}}
 
-  - : An object to configure the {{domxref("XRSession")}}. If none are included, the device will use a default feature
-    configuration for all options. For more information, see [Session features](#session_features) below.
-
+  - : An object to configure the {{domxref("XRSession")}}. If none are included, the device will use a default feature configuration for all options.
     - `requiredFeatures` {{optional_inline}}: An array of values which the returned {{domxref("XRSession")}}
-      _must_ support.
+      _must_ support. See [Session features](#session_features) below.
     - `optionalFeatures` {{optional_inline}}: An array of values identifying features which the returned
-      {{domxref("XRSession")}} may optionally support.
+      {{domxref("XRSession")}} may optionally support. See [Session features](#session_features) below.
     - `domOverlay` {{optional_inline}}: An object with a required `root` property that specifies the overlay element that will be displayed to the user as the content of the DOM overlay. See the [example below](#requesting_a_session_with_a_dom_overlay).
     - `depthSensing` {{optional_inline}}: An object with two required properties {{domxref("XRSession.depthUsage", "usagePreference")}} and {{domxref("XRSession.depthDataFormat", "dataFormatPreference")}} to configure how to perform depth sensing. See the [example below](#requesting_a_depth-sensing_session).
 

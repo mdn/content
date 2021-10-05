@@ -18,7 +18,7 @@ tags:
 
 <div>{{PreviousMenu("Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}</div>
 
-<p class="summary">In this article, we will teach you how to install your own automation environment and run your own tests using Selenium/WebDriver and a testing library such as selenium-webdriver for Node. We will also look at how to integrate your local testing environment with commercial tools like the ones discussed in the previous article.</p>
+<p>In this article, we will teach you how to install your own automation environment and run your own tests using Selenium/WebDriver and a testing library such as selenium-webdriver for Node. We will also look at how to integrate your local testing environment with commercial tools like the ones discussed in the previous article.</p>
 
 <table>
  <tbody>
@@ -44,7 +44,7 @@ tags:
 <p>We will cover writing and running Selenium tests using Node.js, as it is quick and easy to get started, and a more familiar environment for front end devs.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If you want to find out how to use WebDriver with other server-side environments, also check out <a href="https://www.selenium.dev/downloads/">Platforms Supported by Selenium</a> for some useful links.</p>
+<p><strong>Note:</strong> If you want to find out how to use WebDriver with other server-side environments, also check out <a href="https://www.selenium.dev/downloads/">Platforms Supported by Selenium</a> for some useful links.</p>
 </div>
 
 <h3 id="Setting_up_Selenium_in_Node">Setting up Selenium in Node</h3>
@@ -57,7 +57,7 @@ tags:
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: It is still a good idea to follow these steps even if you previously installed selenium-webdriver and downloaded the browser drivers. You should make sure that everything is up-to-date.</p>
+<p><strong>Note:</strong> It is still a good idea to follow these steps even if you previously installed selenium-webdriver and downloaded the browser drivers. You should make sure that everything is up-to-date.</p>
 </div>
 
 <p>Next, you need to download the relevant drivers to allow WebDriver to control the browsers you want to test. You can find details of where to get them from on the <a href="https://www.npmjs.com/package/selenium-webdriver">selenium-webdriver</a> page (see the table in the first section.) Obviously, some of the browsers are OS-specific, but we're going to stick with Firefox and Chrome, as they are available across all the main OSes.</p>
@@ -69,7 +69,7 @@ tags:
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: Just to reiterate, the path you add to <code>PATH</code> needs to be the path to the directory containing the drivers, not the paths to the drivers themselves! This is a common mistake.</p>
+<p><strong>Note:</strong> Just to reiterate, the path you add to <code>PATH</code> needs to be the path to the directory containing the drivers, not the paths to the drivers themselves! This is a common mistake.</p>
 </div>
 
 <p>To set your <code>PATH</code> variable on a macOS system and on most Linux systems:</p>
@@ -233,10 +233,10 @@ var driver = new webdriver.Builder()
 
 <p>To load the page you actually want to test, you use the <code>get()</code> method of the driver instance you created earlier, for example:</p>
 
-<pre class="brush: js"><span class="nx">driver</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'http://www.google.com'</span><span class="p">);</span></pre>
+<pre class="brush: js">driver.get('http://www.google.com');</pre>
 
 <div class="note">
-<p><span class="p"><strong>Note</strong>: See the <a href="https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html">WebDriver class reference</a> for details of the features in this section and the ones below it.</span></p>
+<p><strong>Note:</strong> See the <a href="https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html">WebDriver class reference</a> for details of the features in this section and the ones below it.</p>
 </div>
 
 <p>You can use any URL to point to your resource, including a <code>file://</code> URL to test a local document:</p>
@@ -257,17 +257,17 @@ var driver = new webdriver.Builder()
 
 <p>Now we've got a document to test, we need to interact with it in some way, which usually involves first selecting a specific element to test something about. You can <a href="https://www.seleniumhq.org/docs/03_webdriver.jsp#locating-ui-elements-webelements">select UI elements in many ways</a> in WebDriver, including by ID, class, element name, etc. The actual selection is done by the <code>findElement()</code> method, which accepts as a parameter a selection method. For example, to select an element by ID:</p>
 
-<pre class="brush: js"><span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="nx">driver</span><span class="p">.</span><span class="nx">findElement</span><span class="p">(</span><span class="nx">By</span><span class="p">.</span><span class="nx">id</span><span class="p">(</span><span class="s1">'myElementId'</span><span class="p">));</span></pre>
+<pre class="brush: js">const element = driver.findElement(By.id('myElementId'));</pre>
 
 <p>One of the most useful ways to find an element by CSS — the  By.css method allows you to select an element using a CSS selector</p>
 
 <p>Enter the following at the bottom of your <code>quick_test.js</code> code now:</p>
 
-<pre class="brush: js"><span class="kd">const</span> <span class="nx">button</span> <span class="o">=</span> <span class="nx">driver</span><span class="p">.</span><span class="nx">findElement</span><span class="p">(</span><span class="nx">By</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">'</span>button:nth-of-type(1)<span class="s1">'</span><span class="p">));</span></pre>
+<pre class="brush: js">const button = driver.findElement(By.css('button:nth-of-type(1)'));</pre>
 
-<h3 id="Testing_your_element"><span class="p">Testing your element</span></h3>
+<h3 id="Testing_your_element">Testing your element</h3>
 
-<p><span class="p">There are many ways to interact with your web documents and elements on them. You can see useful common examples starting at <a href="https://www.seleniumhq.org/docs/03_webdriver.jsp#getting-text-values">Getting text values</a> on the </span>WebDriver docs.</p>
+<p>There are many ways to interact with your web documents and elements on them. You can see useful common examples starting at <a href="https://www.seleniumhq.org/docs/03_webdriver.jsp#getting-text-values">Getting text values</a> on the WebDriver docs.</p>
 
 <p>If we wanted to get the text inside our button, we could do this:</p>
 
@@ -277,13 +277,13 @@ var driver = new webdriver.Builder()
 
 <p>Add this to <code>quick_test.js</code> now.</p>
 
-<p><span class="p">Making sure you are inside your project directory, try running the test:</span></p>
+<p>Making sure you are inside your project directory, try running the test:</p>
 
-<pre class="brush: bash"><span class="p">node quick_test.js</span></pre>
+<pre class="brush: bash">node quick_test.js</pre>
 
-<p><span class="p">You should see the button's text label reported inside the console.</span></p>
+<p>You should see the button's text label reported inside the console.</p>
 
-<p><span class="p">let's do something a bit more useful. delete the previous code entry, then add this line at the bottom instead:</span></p>
+<p>let's do something a bit more useful. delete the previous code entry, then add this line at the bottom instead:</p>
 
 <pre class="brush: js">button.click();</pre>
 
@@ -301,8 +301,8 @@ alert.accept();</pre>
 
 <p>Next, let's try entering some text into one of the form elements. Add the following code and try running your test again:</p>
 
-<pre class="brush: js"><span class="kd">const</span> input <span class="o">=</span> <span class="nx">driver</span><span class="p">.</span><span class="nx">findElement</span><span class="p">(</span><span class="nx">By</span><span class="p">.</span><span class="nx">id</span><span class="p">(</span><span class="s1">'name'</span><span class="p">));
-input.</span>sendKeys('Filling in my form');</pre>
+<pre class="brush: js">const input = driver.findElement(By.id('name'));
+input.sendKeys('Filling in my form');</pre>
 
 <p>You can submit key presses that can't be represented by normal characters using properties of the <code>webdriver.Key</code> object. For example, above we used this construct to tab out of the form input before submitting it:</p>
 
@@ -343,16 +343,16 @@ input.</span>sendKeys('Filling in my form');</pre>
 <p>WebDriver will now wait for 2 seconds before filling in the form field. We then test whether its value got filled in (i.e. is not empty) by using <code>getAttribute()</code> to retrieve it's <code>value</code> attribute value, and print a message to the console if it is not empty.</p>
 
 <div class="note">
-<p><strong>Note</strong>: There is also a method called <code><a href="https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html#wait">wait()</a></code>, which repeatedly tests a condition for a certain length of time, and then carries on executing the code. This also makes use of the <a href="https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html">util library</a>, which defines common conditions to use along with <code>wait()</code>.</p>
+<p><strong>Note:</strong> There is also a method called <code><a href="https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html#wait">wait()</a></code>, which repeatedly tests a condition for a certain length of time, and then carries on executing the code. This also makes use of the <a href="https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html">util library</a>, which defines common conditions to use along with <code>wait()</code>.</p>
 </div>
 
 <h3 id="Shutting_down_drivers_after_use">Shutting down drivers after use</h3>
 
 <p>After you've finished running a test, you should shut down any driver instances you've opened, to make sure that you don't end up with loads of rogue browser instances open on your machine! This is done using the <code>quit()</code> method. Call this on your driver instance when you are finished with it. Add this line to the bottom of your <code>quick_test.js</code> test now:</p>
 
-<pre class="brush: js"><span class="nx">driver</span><span class="p">.</span><span class="nx">quit</span><span class="p">();</span></pre>
+<pre class="brush: js">driver.quit();</pre>
 
-<p><span class="p">When you run it, you should now see the test execute and the browser instance shut down again after the test is complete. This is useful for not cluttering up your computer with loads of browser instances, especially if you have so many that it is causing the computer to slow down.</span></p>
+<p>When you run it, you should now see the test execute and the browser instance shut down again after the test is complete. This is useful for not cluttering up your computer with loads of browser instances, especially if you have so many that it is causing the computer to slow down.</p>
 
 <h2 id="Test_best_practices">Test best practices</h2>
 
@@ -378,7 +378,7 @@ input.</span>sendKeys('Filling in my form');</pre>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: <a href="https://github.com/saucelabs-sample-test-frameworks">saucelabs-sample-test-frameworks</a> contains several useful examples showing how to set up different combinations of test/assertion tools.</p>
+<p><strong>Note:</strong> <a href="https://github.com/saucelabs-sample-test-frameworks">saucelabs-sample-test-frameworks</a> contains several useful examples showing how to set up different combinations of test/assertion tools.</p>
 </div>
 
 <h2 id="Running_remote_tests">Running remote tests</h2>
@@ -458,11 +458,11 @@ searchTextOnGoogle();
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: The <em>HELP</em>  button on LambdaTest Automation Dashboard will provide you with an ample amount of information to help you get started with LambdaTest automation. You can also follow our documentation about <a href="https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/">running first Selenium script in Node JS</a>.</p>
+<p><strong>Note:</strong> The <em>HELP</em>  button on LambdaTest Automation Dashboard will provide you with an ample amount of information to help you get started with LambdaTest automation. You can also follow our documentation about <a href="https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/">running first Selenium script in Node JS</a>.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: If you don't want to write out the capabilities objects for your tests by hand, you can generate them using the <a href="https://www.lambdatest.com/capabilities-generator/">Selenium Desired Capabilities Generator</a>. </p>
+<p><strong>Note:</strong> If you don't want to write out the capabilities objects for your tests by hand, you can generate them using the <a href="https://www.lambdatest.com/capabilities-generator/">Selenium Desired Capabilities Generator</a>. </p>
 </div>
 
 <h4 id="Filling_in_test_details_on_LambdaTest_programmatically">Filling in test details on LambdaTest programmatically</h4>
@@ -544,11 +544,11 @@ driver.quit();</pre>
 <p>If you click on the link for your test, you'll get to a new screen where you will be able to see a video recording of the test, and multiple detailed logs of information pertaining to it.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The <em>Resources</em> menu option on the Browserstack automation dashboard contains a wealth of useful information on using it to run automated tests. See <a href="https://www.browserstack.com/automate/node">Node JS Documentation for writing automate test scripts in Node JS</a> for the node-specific information. Explore the docs to find out all the useful things BrowserStack can do.</p>
+<p><strong>Note:</strong> The <em>Resources</em> menu option on the Browserstack automation dashboard contains a wealth of useful information on using it to run automated tests. See <a href="https://www.browserstack.com/automate/node">Node JS Documentation for writing automate test scripts in Node JS</a> for the node-specific information. Explore the docs to find out all the useful things BrowserStack can do.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: If you don't want to write out the capabilities objects for your tests by hand, you can generate them using the generators embedded in the docs. See <a href="https://www.browserstack.com/automate/node#run-tests-on-mobile">Run tests on mobile browsers</a> and <a href="https://www.browserstack.com/automate/node#setting-os-and-browser">Run tests on desktop browsers</a>.</p>
+<p><strong>Note:</strong> If you don't want to write out the capabilities objects for your tests by hand, you can generate them using the generators embedded in the docs. See <a href="https://www.browserstack.com/automate/node#run-tests-on-mobile">Run tests on mobile browsers</a> and <a href="https://www.browserstack.com/automate/node#setting-os-and-browser">Run tests on desktop browsers</a>.</p>
 </div>
 
 <h4 id="Filling_in_BrowserStack_test_details_programmatically">Filling in BrowserStack test details programmatically</h4>
@@ -650,11 +650,11 @@ driver.quit();</pre>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: Sauce Labs' <a href="https://wiki.saucelabs.com/display/DOCS/Platform+Configurator/#/">Platform Configurator</a> is a useful tool for generating capability objects to feed to your driver instances, based on what browser/OS you want to test on.</p>
+<p><strong>Note:</strong> Sauce Labs' <a href="https://wiki.saucelabs.com/display/DOCS/Platform+Configurator/#/">Platform Configurator</a> is a useful tool for generating capability objects to feed to your driver instances, based on what browser/OS you want to test on.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: for more useful details on testing with Sauce Labs and Selenium, check out <a href="https://wiki.saucelabs.com/display/DOCS/Getting+Started+with+Selenium+for+Automated+Website+Testing">Getting Started with Selenium for Automated Website Testing</a>, and <a href="https://wiki.saucelabs.com/display/DOCS/Instant+Selenium+Node.js+Tests">Instant Selenium Node.js Tests</a>.</p>
+<p><strong>Note:</strong> for more useful details on testing with Sauce Labs and Selenium, check out <a href="https://wiki.saucelabs.com/display/DOCS/Getting+Started+with+Selenium+for+Automated+Website+Testing">Getting Started with Selenium for Automated Website Testing</a>, and <a href="https://wiki.saucelabs.com/display/DOCS/Instant+Selenium+Node.js+Tests">Instant Selenium Node.js Tests</a>.</p>
 </div>
 
 <h4 id="Filling_in_Sauce_Labs_test_details_programmatically">Filling in Sauce Labs test details programmatically</h4>
@@ -755,7 +755,7 @@ driver.quit();</pre>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: If you wish to perform continuous testing with <strong>codeless automation</strong> then you can use <a href="https://endtest.io">Endtest</a> or <a href="https://testingbot.com">TestingBot</a>.</p>
+<p><strong>Note:</strong> If you wish to perform continuous testing with <strong>codeless automation</strong> then you can use <a href="https://endtest.io">Endtest</a> or <a href="https://testingbot.com">TestingBot</a>.</p>
 </div>
 
 <h2 id="Summary">Summary</h2>

@@ -11,7 +11,7 @@ browser-compat: api.AbortController
 ---
 <div>{{MDNSidebar}}</div>
 
-<p><span class="seoSummary">MDN has a standard format for compatibility tables for our open web documentation; that is, documentation of technologies such as the DOM, HTML, CSS, JavaScript, SVG, and so forth, that are shared across all browsers.</span> This article is a "getting started" guide to how to add to and maintain the database from which the compatibility tables are generated, as well as how to integrate the tables into articles.</p>
+<p>MDN has a standard format for compatibility tables for our open web documentation; that is, documentation of technologies such as the DOM, HTML, CSS, JavaScript, SVG, and so forth, that are shared across all browsers. This article is a "getting started" guide to how to add to and maintain the database from which the compatibility tables are generated, as well as how to integrate the tables into articles.</p>
 
 <p>For more advanced documentation, as well as the very latest changes to the processes and JSON schemas used to represent the data, take a look at the data repository's <a href="https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md">contributor guide</a> as well as the <a href="https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines.md">data guidelines guide</a>.</p>
 
@@ -387,7 +387,7 @@ browser-compat: api.AbortController
   }
 ],</pre>
 
-<div class="notecard note">
+<div class="note">
 <p><strong>Note:</strong> You should put the most current or important support point first in the array — this makes the data easier to read for people who just want to scan it for the latest info.</p>
 </div>
 
@@ -397,7 +397,7 @@ browser-compat: api.AbortController
 
 <p>To include such a case in the browser compat data, you can include a support information point that specifies the alternative name inside an "alternative_name" member.</p>
 
-<div class="notecard note">
+<div class="note">
 <p><strong>Note:</strong> The alternative name might not be an exact alias — it might have differing behavior to the standard version.</p>
 </div>
 
@@ -461,7 +461,7 @@ git push</pre>
 <p>The compatibility data query should be specified in the page front-matter using the <code>browser-compat</code> key.
   For example, for the {{domxref("AbortController")}} this would be added as shown below:</p>
   
-<pre>---
+<pre class="brush: plain">---
 title: AbortController
 slug: Web/API/AbortController
 

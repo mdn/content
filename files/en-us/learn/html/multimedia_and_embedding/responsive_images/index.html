@@ -26,9 +26,9 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}</div>
 
-<p class="summary">In this article, we'll learn about the concept of responsive images — images that work well on devices with widely differing screen sizes, resolutions, and other such features — and look at what tools HTML provides to help implement them. This helps to improve performance across different devices. Responsive images are just one part of <a href="/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">responsive design</a>, a future CSS topic for you to learn.</p>
+<p>In this article, we'll learn about the concept of responsive images — images that work well on devices with widely differing screen sizes, resolutions, and other such features — and look at what tools HTML provides to help implement them. This helps to improve performance across different devices. Responsive images are just one part of <a href="/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">responsive design</a>, a future CSS topic for you to learn.</p>
 
-<table class="learn-box nostripe standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -77,7 +77,7 @@ tags:
 <p>This kind of problem didn't exist when the web first existed, in the early to mid 90s — back then the only devices in existence to browse the Web were desktops and laptops, so browser engineers and spec writers didn't even think to implement solutions. <em>Responsive image technologies</em> were implemented recently to solve the problems indicated above by letting you offer the browser several image files, either all showing the same thing but containing different numbers of pixels (<em>resolution switching</em>), or different images suitable for different space allocations (<em>art direction</em>).</p>
 
 <div class="note">
-<p><strong>Note</strong>: The new features discussed in this article — {{htmlattrxref("srcset", "img")}}/{{htmlattrxref("sizes", "img")}}/{{htmlelement("picture")}} — are all supported in modern desktop and mobile browsers (including Microsoft's Edge browser, although not Internet Explorer.) </p>
+<p><strong>Note:</strong> The new features discussed in this article — {{htmlattrxref("srcset", "img")}}/{{htmlattrxref("sizes", "img")}}/{{htmlelement("picture")}} — are all supported in modern desktop and mobile browsers (including Microsoft's Edge browser, although not Internet Explorer.) </p>
 </div>
 
 <h2 id="How_do_you_create_responsive_images">How do you create responsive images?</h2>
@@ -118,7 +118,7 @@ tags:
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: For the slot width, you may provide an absolute length (<code>px</code>, <code>em</code>) or a length relative to the viewport (<code>vw</code>), but not percentages. You may have noticed that the last slot width has no media condition (this is the default that is chosen when none of the media conditions are true). The browser ignores everything after the first matching condition, so be careful how you order the media conditions.</p>
+<p><strong>Note:</strong> For the slot width, you may provide an absolute length (<code>px</code>, <code>em</code>) or a length relative to the viewport (<code>vw</code>), but not percentages. You may have noticed that the last slot width has no media condition (this is the default that is chosen when none of the media conditions are true). The browser ignores everything after the first matching condition, so be careful how you order the media conditions.</p>
 </div>
 
 <p>So, with these attributes in place, the browser will:</p>
@@ -133,7 +133,7 @@ tags:
 <p>And that's it! At this point, if a supporting browser with a viewport width of 480px loads the page, the <code>(max-width: 600px)</code> media condition will be true, and so the browser chooses the <code>480px</code> slot. The <code>elva-fairy-480w.jpg</code> will be loaded, as its inherent width (<code>480w</code>) is closest to the slot size. The 800px picture is 128KB on disk, whereas the 480px version is only 63KB — a saving of 65KB. Now, imagine if this was a page that had many pictures on it. Using this technique could save mobile users a lot of bandwidth.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: When testing this with a desktop browser, if the browser fails to load the narrower images when you've got its window set to the narrowest width, have a look at what the viewport is (you can approximate it by going into the browser's JavaScript console and typing in <code>document.querySelector('html').clientWidth</code>). Different browsers have minimum sizes that they'll let you reduce the window width to, and they might be wider than you'd think. When testing it with a mobile browser, you can use tools like Firefox's <code>about:debugging</code> page to inspect the page loaded on the mobile using the desktop developer tools.<br>
+<p><strong>Note:</strong> When testing this with a desktop browser, if the browser fails to load the narrower images when you've got its window set to the narrowest width, have a look at what the viewport is (you can approximate it by going into the browser's JavaScript console and typing in <code>document.querySelector('html').clientWidth</code>). Different browsers have minimum sizes that they'll let you reduce the window width to, and they might be wider than you'd think. When testing it with a mobile browser, you can use tools like Firefox's <code>about:debugging</code> page to inspect the page loaded on the mobile using the desktop developer tools.<br>
  <br>
  To see which images were loaded, you can use Firefox DevTools's <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> tab.</p>
 </div>
@@ -141,7 +141,7 @@ tags:
 <p>Older browsers that don't support these features will just ignore them. Instead, those browsers will go ahead and load the image referenced in the {{htmlattrxref("src", "img")}} attribute as normal.</p>
 
 <div class="note">
-<p><strong>Note</strong>: In the {{htmlelement("head")}} of the example linked above, you'll find the line <code>&lt;meta name="viewport" content="width=device-width"&gt;</code>: this forces mobile browsers to adopt their real viewport width for loading web pages (some mobile browsers lie about their viewport width, and instead load pages at a larger viewport width then shrink the loaded page down, which is not very helpful for responsive images or design).</p>
+<p><strong>Note:</strong> In the {{htmlelement("head")}} of the example linked above, you'll find the line <code>&lt;meta name="viewport" content="width=device-width"&gt;</code>: this forces mobile browsers to adopt their real viewport width for loading web pages (some mobile browsers lie about their viewport width, and instead load pages at a larger viewport width then shrink the loaded page down, which is not very helpful for responsive images or design).</p>
 </div>
 
 <h3 id="Resolution_switching_Same_size_different_resolutions">Resolution switching: Same size, different resolutions</h3>
@@ -191,7 +191,7 @@ tags:
 <p><img alt="Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center." src="picture-element-wide.png"><img alt="Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen" src="picture-element-narrow.png"></p>
 
 <div class="note">
-<p><strong>Note</strong>: You should use the <code>media</code> attribute only in art direction scenarios; when you do use <code>media</code>, don't also offer media conditions within the <code>sizes</code> attribute.</p>
+<p><strong>Note:</strong> You should use the <code>media</code> attribute only in art direction scenarios; when you do use <code>media</code>, don't also offer media conditions within the <code>sizes</code> attribute.</p>
 </div>
 
 <h3 id="Why_cant_we_just_do_this_using_CSS_or_JavaScript">Why can't we just do this using CSS or JavaScript?</h3>

@@ -14,7 +14,7 @@ tags:
 
 <p>{{PreviousMenuNext("Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard", "Games/Techniques/Control_mechanisms/Other", "Games/Techniques/Control_mechanisms")}}</p>
 
-<p class="summary">Now we'll look at adding something extra — support for gamepad controls, via the Gamepad API. It brings a console-like experience to your web games.</p>
+<p>Now we'll look at adding something extra — support for gamepad controls, via the Gamepad API. It brings a console-like experience to your web games.</p>
 
 <p>The Gamepad API gives you the ability to connect a gamepad to your computer and detect pressed buttons directly from the JavaScript code thanks to the browsers implementing such feature. An API exposes all the information you need to hook up your game's logic and successfully control the user interface and gameplay.</p>
 
@@ -102,7 +102,7 @@ function gamepadHandler(e) {
 
 <p>In this case, we are checking the four D-Pad buttons (0-3) and the A button (11).</p>
 
-<p class="note"><strong>Note</strong>: Please remember that different devices may have different key mappings, i.e. the D-Pad Right button have an index of 3 on the wireless XBox 360, but may have a different one on another device.</p>
+<div class="note"><p><strong>Note:</strong> Please remember that different devices may have different key mappings, i.e. the D-Pad Right button have an index of 3 on the wireless XBox 360, but may have a different one on another device.</p></div>
 
 <p>You could also create a helper function that would assign proper names to the listed buttons, so for example instead of checking out if <code>gamepadButtonPressedHandler(3)</code> is pressed, you could do a more descriptive check: <code>gamepadButtonPressedHandler('DPad-Right')</code>.</p>
 

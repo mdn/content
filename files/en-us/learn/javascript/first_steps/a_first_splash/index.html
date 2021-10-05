@@ -19,7 +19,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}</div>
 
-<p class="summary">Now you've learned something about the theory of JavaScript and what you can do with it, we are going to give you an idea of what the process of creating a simple JavaScript program is like, by guiding you through a practical tutorial. Here you'll build up a simple "Guess the number" game, step by step.</p>
+<p>Now you've learned something about the theory of JavaScript and what you can do with it, we are going to give you an idea of what the process of creating a simple JavaScript program is like, by guiding you through a practical tutorial. Here you'll build up a simple "Guess the number" game, step by step.</p>
 
 <table>
  <tbody>
@@ -37,7 +37,7 @@ tags:
 <p>We want to set really clear expectations here: You won't be expected to learn JavaScript by the end of this article, or even understand all the code we are asking you to write. Instead, we want to give you an idea of how JavaScript's features work together, and what writing JavaScript feels like. In subsequent articles you'll revisit all the features shown here in a lot more detail, so don't worry if you don't understand it all immediately!</p>
 
 <div class="note">
-  <p><strong>Note</strong>: Many of the code features you'll see in JavaScript are the same as in other programming languages — functions, loops, etc. The code syntax looks different, but the concepts are still largely the same.</p>
+  <p><strong>Note:</strong> Many of the code features you'll see in JavaScript are the same as in other programming languages — functions, loops, etc. The code syntax looks different, but the concepts are still largely the same.</p>
 </div>
 
 <h2 id="Thinking_like_a_programmer">Thinking like a programmer</h2>
@@ -52,118 +52,7 @@ tags:
 
 <p>In this article we'll show you how to build up the simple game you can see below:</p>
 
-<div class="hidden">
-<h6 id="Top_hidden_code">Top hidden code</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-
-&lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;Number guessing game&lt;/title&gt;
-    &lt;style&gt;
-        html {
-            font-family: sans-serif;
-        }
-
-        body {
-            width: 50%;
-            max-width: 800px;
-            min-width: 480px;
-            margin: 0 auto;
-        }
-
-        .lastResult {
-            color: white;
-            padding: 3px;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-    &lt;h1&gt;Number guessing game&lt;/h1&gt;
-    &lt;p&gt;We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.&lt;/p&gt;
-    &lt;div class="form"&gt; &lt;label for="guessField"&gt;Enter a guess: &lt;/label&gt;&lt;input type="text" id="guessField" class="guessField"&gt; &lt;input type="submit" value="Submit guess" class="guessSubmit"&gt; &lt;/div&gt;
-    &lt;div class="resultParas"&gt;
-        &lt;p class="guesses"&gt;&lt;/p&gt;
-        &lt;p class="lastResult"&gt;&lt;/p&gt;
-        &lt;p class="lowOrHi"&gt;&lt;/p&gt;
-    &lt;/div&gt;
-&lt;script&gt;
-    // Your JavaScript goes here
-    let randomNumber = Math.floor(Math.random() * 100) + 1;
-    const guesses = document.querySelector('.guesses');
-    const lastResult = document.querySelector('.lastResult');
-    const lowOrHi = document.querySelector('.lowOrHi');
-    const guessSubmit = document.querySelector('.guessSubmit');
-    const guessField = document.querySelector('.guessField');
-    let guessCount = 1;
-    let resetButton;
-
-    function checkGuess() {
-      let userGuess = Number(guessField.value);
-      if (guessCount === 1) {
-        guesses.textContent = 'Previous guesses: ';
-      }
-
-      guesses.textContent += userGuess + ' ';
-
-      if (userGuess === randomNumber) {
-        lastResult.textContent = 'Congratulations! You got it right!';
-        lastResult.style.backgroundColor = 'green';
-        lowOrHi.textContent = '';
-        setGameOver();
-      } else if (guessCount === 10) {
-        lastResult.textContent = '!!!GAME OVER!!!';
-        lowOrHi.textContent = '';
-        setGameOver();
-      } else {
-        lastResult.textContent = 'Wrong!';
-        lastResult.style.backgroundColor = 'red';
-        if (userGuess &lt; randomNumber) {
-          lowOrHi.textContent = 'Last guess was too low!' ;
-        } else if(userGuess &gt; randomNumber) {
-          lowOrHi.textContent = 'Last guess was too high!';
-        }
-      }
-
-      guessCount++;
-      guessField.value = '';
-    }
-
-    guessSubmit.addEventListener('click', checkGuess);
-
-    function setGameOver() {
-      guessField.disabled = true;
-      guessSubmit.disabled = true;
-      resetButton = document.createElement('button');
-      resetButton.textContent = 'Start new game';
-      document.body.append(resetButton);
-      resetButton.addEventListener('click', resetGame);
-    }
-
-    function resetGame() {
-      guessCount = 1;
-      const resetParas = document.querySelectorAll('.resultParas p');
-      for(let i = 0 ; i &lt; resetParas.length ; i++) {
-        resetParas[i].textContent = '';
-      }
-
-      resetButton.parentNode.removeChild(resetButton);
-      guessField.disabled = false;
-      guessSubmit.disabled = false;
-      guessField.value = '';
-      guessField.focus();
-      lastResult.style.backgroundColor = 'white';
-      randomNumber = Math.floor(Math.random() * 100) + 1;
-    }
-&lt;/script&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;</pre>
-</div>
-
-<p>{{ EmbedLiveSample('Top_hidden_code', '100%', 320, "", "", "hide-codepen-jsfiddle") }}</p>
+{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game", 900, 300)}}
 
 <p>Have a go at playing it — familiarize yourself with the game before you move on.</p>
 
@@ -260,7 +149,7 @@ let resetButton;</pre>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: You'll learn a lot more about variables/constants later on in the course, starting with the <a href="/en-US/docs/Learn/JavaScript/First_steps/Variables">next article</a>.</p>
+<p><strong>Note:</strong> You'll learn a lot more about variables/constants later on in the course, starting with the <a href="/en-US/docs/Learn/JavaScript/First_steps/Variables">next article</a>.</p>
 </div>
 
 <h3 id="Functions">Functions</h3>
@@ -282,7 +171,7 @@ let resetButton;</pre>
 <p>After pressing <kbd>Return</kbd>/<kbd>Enter</kbd>, you should see an alert come up that says <code>I am a placeholder</code>; we have defined a function in our code that creates an alert whenever we call it.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You'll learn a lot more about functions <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">later in the course</a>.</p>
+<p><strong>Note:</strong> You'll learn a lot more about functions <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">later in the course</a>.</p>
 </div>
 
 <h3 id="Operators">Operators</h3>

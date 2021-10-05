@@ -49,5 +49,5 @@ console.log(uuid); // for example "36b8f84d-df4e-4d49-b662-bcde71a8764f"
 ## See also
 
 - {{ domxref("Web Crypto API") }}
-- {{ domxref("Window.crypto") }} to get a {{domxref("Crypto")}} object.
+- {{ domxref("crypto_property", "crypto") }} to get a {{domxref("Crypto")}} object.
 - {{ domxref("Crypto.getRandomValues") }}, a source for arbitrary amounts of secure random bytes.

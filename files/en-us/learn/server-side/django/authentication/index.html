@@ -92,7 +92,7 @@ user.save()
 </pre>
 
 <p>It is highly recommended to set up a custom user model when starting an actual project. You'll be able to easily customize it in the future if the need arises. For more information, see <a href="https://docs.djangoproject.com/en/3.1/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project">Using a custom user model when starting</a> (Django docs).</p>
- 
+
 </div>
 
 <p>Below we'll first create a group and then a user. Even though we don't have any permissions to add for our library members yet, if we need to later, it will be much easier to add them once to the group than individually to each member.</p>
@@ -197,7 +197,7 @@ Exception Value:    registration/login.html</pre>
 
 <p>Then import the <code>os</code> module (add the following line near the top of the file).</p>
     <pre class="brush: python">import os # needed by code below</pre>
- 
+
 <p>Update the <code>TEMPLATES</code> section's <code>'DIRS'</code> line as shown:</p>
 
 <pre class="brush: python">    ...
@@ -257,7 +257,7 @@ Exception Value:    registration/login.html</pre>
 
 {% endblock %}</pre>
 
-<p id="sect1">This template shares some similarities with the ones we've seen before — it extends our base template and overrides the <code>content</code> block. The rest of the code is fairly standard form handling code, which we will discuss in a later tutorial. All you need to know for now is that this will display a form in which you can enter your username and password, and that if you enter invalid values you will be prompted to enter correct values when the page refreshes.</p>
+<p>This template shares some similarities with the ones we've seen before — it extends our base template and overrides the <code>content</code> block. The rest of the code is fairly standard form handling code, which we will discuss in a later tutorial. All you need to know for now is that this will display a form in which you can enter your username and password, and that if you enter invalid values you will be prompted to enter correct values when the page refreshes.</p>
 
 <p>Navigate back to the login page (<a href="http://127.0.0.1:8000/accounts/login/">http://127.0.0.1:8000/accounts/login/</a>) once you've saved your template, and you should see something like this:</p>
 
@@ -597,7 +597,7 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
    &lt;li&gt;User: \{{ user.get_username }}&lt;/li&gt;
 
    &lt;li&gt;&lt;a href="{% url 'my-borrowed' %}"&gt;My Borrowed&lt;/a&gt;&lt;/li&gt;
-   
+
    &lt;li&gt;&lt;a href="{% url 'logout'%}?next=\{{request.path}}"&gt;Logout&lt;/a&gt;&lt;/li&gt;
    {% else %}
    &lt;li&gt;&lt;a href="{% url 'login'%}?next=\{{request.path}}"&gt;Login&lt;/a&gt;&lt;/li&gt;
