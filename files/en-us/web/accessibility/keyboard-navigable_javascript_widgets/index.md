@@ -20,61 +20,12 @@ The order in which elements gain focus when using a keyboard, is the source orde
 
 The following table describes `tabindex` behavior in modern browsers:
 
-<table class="fullwidth-table" style="width: 75% !important">
-  <tbody>
-    <tr>
-      <th>`tabindex` attribute</th>
-      <th>
-        Focusable with mouse or JavaScript via `element.focus()`
-      </th>
-      <th>Tab navigable</th>
-    </tr>
-    <tr>
-      <td>not present</td>
-      <td>
-        Follows the platform convention of the element (yes for form controls,
-        links, etc.).
-      </td>
-      <td>Follows the platform convention of the element.</td>
-    </tr>
-    <tr>
-      <td>Negative (i.e. `tabindex="-1"`)</td>
-      <td>Yes</td>
-      <td>
-        No; author must focus the element with
-        <code
-          ><a
-            class="external text"
-            href="../../../../En/DOM/Element.focus"
-            rel="nofollow"
-            >focus()</a
-          ></code
-        >
-        in response to arrow or other key presses.
-      </td>
-    </tr>
-    <tr>
-      <td>Zero (i.e. `tabindex="0"`)</td>
-      <td>Yes</td>
-      <td>
-        In tab order relative to element's position in document (note that
-        interactive elements like {{ HTMLElement("a") }} have this
-        behavior by default, they don't need the attribute).
-      </td>
-    </tr>
-    <tr>
-      <td>Positive (e.g. `tabindex="33"`)</td>
-      <td>Yes</td>
-      <td>
-        `tabindex` value determines where this element is positioned
-        in the tab order: smaller values will position elements earlier in the
-        tab order than larger values (for example,
-        `tabindex="7"` will be positioned before
-        `tabindex="11"`).
-      </td>
-    </tr>
-  </tbody>
-</table>
+| `tabindex` attribute |  Focusable with mouse or JavaScript via `element.focus()` | Tab navigable  |
+| ----- | ----- | ----- |
+  | not present | Follows the platform convention of the element (yes for form controls,links, etc.). | Follows the platform convention of the element. |
+| Negative (i.e. `tabindex="-1"`) | Yes | No; author must focus the element with [`focus()`](/en-US/docs/Web/API/Element/focus_event) in response to arrow or other key presses.|
+| Zero (i.e. `tabindex="0"`)  | Yes |        In tab order relative to element's position in document (note that interactive elements like {{ HTMLElement("a") }} have this behavior by default, they don't need the attribute).  |
+| Positive (e.g. `tabindex="33"`) | Yes | `tabindex` value determines where this element is positioned in the tab order: smaller values will position elements earlier in the tab order than larger values (for example, `tabindex="7"` will be positioned before `tabindex="11"`). |
 
 #### Non-native controls
 
@@ -84,7 +35,7 @@ Authors can also make a {{ HTMLElement("div") }} or {{ HTMLElement("span") }} ke
 
 #### Grouping controls
 
-For grouping widgets such as menus, tablists, grids, or tree views, the parent element should be in the tab order (`tabindex="0"`), and each descendent choice/tab/cell/row should be removed from the tab order (`tabindex="-1"`). Users should be able to navigate the descendent elements using arrow keys. (For a full description of the keyboard support that is normally expected for typical widgets, see the <a class="external text" href="https://www.w3.org/TR/wai-aria-practices-1.1/" rel="nofollow">WAI-ARIA Authoring Practices</a>.)
+For grouping widgets such as menus, tablists, grids, or tree views, the parent element should be in the tab order (`tabindex="0"`), and each descendent choice/tab/cell/row should be removed from the tab order (`tabindex="-1"`). Users should be able to navigate the descendent elements using arrow keys. (For a full description of the keyboard support that is normally expected for typical widgets, see the [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices-1.1/).)
 
 The example below shows this technique used with a nested menu control. Once keyboard focus lands on the containing {{ HTMLElement("ul") }} element, the JavaScript developer must programmatically manage focus and respond to arrow keys. For techniques for managing focus within widgets, see "Managing focus inside groups" below.
 
@@ -139,23 +90,23 @@ Bind a key down handler to each element in the group, and when an arrow key is u
 2.  update the `tabindex` of the focused element to "0", and
 3.  update the `tabindex` of the previously focused element to "-1".
 
-Here's an example of a <a class="external text" href="https://files.paciellogroup.com/training/WWW2012/samples/Samples/aria/tree/index.html" rel="nofollow">WAI-ARIA tree view</a> using this technique.
+Here's an example of a [WAI-ARIA tree view](https://files.paciellogroup.com/training/WWW2012/samples/Samples/aria/tree/index.html) using this technique.
 
-##### Tips
+### Tips
 
-<h6 id="Use_element.focus()_to_set_focus">Use element.focus() to set focus</h6>
+#### Use element.focus() to set focus
 
 Do not use `createEvent()`, `initEvent()` and `dispatchEvent()` to send focus to an element. DOM focus events are considered informational only: generated by the system after something is focused, but not actually used to set focus. Use `element.focus()` instead.
 
-<h6 id="Use_onfocus_to_track_the_current_focus">Use onfocus to track the current focus</h6>
+#### Use onfocus to track the current focus</h6>
 
 Don't assume that all focus changes will come via key and mouse events: assistive technologies such as screen readers can set the focus to any focusable element. Track focus using `onfocus` and `onblur` instead.
 
 `onfocus` and `onblur` can now be used with every element. There is no standard DOM interface to get the current document focus. If you want to track the focus status, you can use the [document.activeElement](/en-US/docs/Web/API/Document/activeElement) to get the active element. You can also use [document.hasFocus](/en-US/docs/Web/API/Document/hasFocus) to make sure if the current document focus.
 
-#### Technique 2: aria-activedescendant
+### Technique 2: `aria-activedescendant`
 
-This technique involves binding a single event handler to the container widget and using the `aria-activedescendant` to track a "virtual" focus. (For more information about ARIA, see this <a class="external text" href="/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets" rel="nofollow">overview of accessible web applications and widgets</a>.)
+This technique involves binding a single event handler to the container widget and using the `aria-activedescendant` to track a "virtual" focus. (For more information about ARIA, see this [overview of accessible web applications and widgets](/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets).)
 
 The `aria-activedescendant` property identifies the ID of the descendent element that currently has the virtual focus. The event handler on the container must respond to key and mouse events by updating the value of `aria-activedescendant` and ensuring that the current item is styled appropriately (for example, with a border or background color).
 
