@@ -7,13 +7,13 @@ tags:
 ---
 ## Guidelines and Regulations
 
-1.  <a class="ex-ref" href="https://www.section508.gov/index.cfm?FuseAction=Content&#x26;ID=12#Web">Section 508 Guidelines for web authors</a>
+1.  [Section 508 Guidelines for web authors](https://www.section508.gov/index.cfm?FuseAction=Content&#x26;ID=12#Web)
 
     These guidelines must be followed by U.S. websites. Other organizations such as schools are starting to follow these guidelines as well.
 
-2.  <a class="ex-ref" href="https://www.w3.org/TR/WAI-WEBCONTENT/"><dfn>Web Content Accessibility Guidelines (WCAG)</dfn> 1.0</a>
+2.  [<dfn>Web Content Accessibility Guidelines (WCAG)</dfn> 1.0](https://www.w3.org/TR/WAI-WEBCONTENT/)
 
-    Another important set of guidelines from the W3C _Web Accessibility Initiative (WAI)_. The European Union is looking to base their upcoming accessibility regulations on these guidelines. These guidelines are discussed on the <a class="ex-ref" href="https://www.w3.org/WAI/IG/"><abbr title="Web Accessibility Initiative">WAI</abbr> interest group discussion list</a>.
+    Another important set of guidelines from the W3C _Web Accessibility Initiative (WAI)_. The European Union is looking to base their upcoming accessibility regulations on these guidelines. These guidelines are discussed on the [<abbr title="Web Accessibility Initiative">WAI</abbr> interest group discussion list](https://www.w3.org/WAI/IG/).
 
 ## How-to's
 
@@ -21,11 +21,11 @@ tags:
 
     This document discusses how to use tabindex, element.focus() and onkeypress to make custom DHTML widgets such as menus or tree views keyboard accessible.
 
-2.  <a class="ex-ref" href="https://www.ibm.com/able/guidelines/web/accessweb.html">Accessible Web Page Authoring</a>
+2.  [Accessible Web Page Authoring](https://www.ibm.com/able/guidelines/web/accessweb.html)
 
     IBM has put together a simple, practical resource for web authors to learn accessibility the fast and painless way. Highly recommended, an excellent resource.
 
-3.  <a class="ex-ref" href="http://diveintoaccessibility.org/">Dive Into Accessibility</a>
+3.  [Dive Into Accessibility](http://diveintoaccessibility.org/)
 
     by Mark Pilgrim
 
@@ -33,33 +33,24 @@ tags:
 
 ### Automated Checking & Repair
 
-1.  <a class="ex-ref" href="https://www.contentquality.com/">Cynthia says™</a>
+1.  [Cynthia says™](https://www.contentquality.com/)
 
     from HiSoftware® Company
 
     "Cynthia says™" is a free online webpage accessibility validation service that is designed to identify errors in webpage related to Section 508 standards and/or the WCAG guidelines. It can perform a "Complete Webpage Quality Check" for accessibility, privacy, searchability, metadata and even alt text attribute quality. The web author chooses the guidelines (as a basis for errors and warnings) to be used by "Cynthia says™": Section 508, WCAG Priorities 1, 2 and 3. The output data report is displayed in a clear and well structured table where each and all checkpoints are identified and described (along with an helpful clickable link to the related reference guideline) into logical groups and according to measurable results: passed, warning, failed for automated verification, warning for manual verification, not selected, not available, not related, etc.
 
-2.  <a class="ex-ref" href="http://valet.webthing.com/access/url.html">Accessibility Valet</a>
+2.  [Accessibility Valet](http://valet.webthing.com/access/url.html)
 
     from WebThing
 
-    Description and summary to be written.
 
-3.  <a class="ex-ref" href="https://wave.webaim.org/"><dfn>WAVE 4.0 beta (Web Accessibility Versatile Evaluator)</dfn></a>
-
-    from
-
-    <a class="ex-ref" href="https://www.webaim.org/">WebAIM</a>
-
-    and sponsored by
-
-    <a class="ex-ref" href="https://disabilities.temple.edu/">Temple University Institute on Disabilities</a>
+3.  [<dfn>WAVE 4.0 beta (Web Accessibility Versatile Evaluator)</dfn>](https://wave.webaim.org/) from  [WebAIM](https://www.webaim.org/)
 
     WAVE 4.0 beta is another powerful, free online webpage accessibility validation service that identifies accessibility errors and reports accessibility warnings about webpage related to Section 508 standards and/or the WCAG guidelines. Its purpose is to aid humans in the web accessibility evaluation process. Rather than providing a complex technical report, WAVE 4.0 shows the original web page with embedded icons and indicators that reveal the accessibility information within your page. You can get accessibility report for errors, warnings. You can view the structure and order view of the document. You can see a text-only view and outline view of the document.
 
     You can install a custom WAVE toolbar in Firefox for a quick, easy and convenient evaluation of web pages directly within Firefox. You can also add a WAVE bookmarklet in Firefox or even WAVE direct links for checking a webpage.
 
-4.  <a class="ex-ref" href="http://users.skynet.be/mgueury/mozilla/index.html">HTML advanced validator (Firefox extension)</a>
+4.  [HTML advanced validator](http://users.skynet.be/mgueury/mozilla/index.html) (Firefox extension)</a>
 
     by Marc Gueury
 
@@ -69,21 +60,16 @@ tags:
 
     The HTML advanced validator may also be downloaded from [Firefox Add-ons: HTML Validator](https://addons.mozilla.org/firefox/addon/249).
 
-5.  <a class="ex-ref" href="https://juicystudio.com/services/colourcontrast.php#contrast">Color contrast analyzer</a>
+5.  [Color contrast analyzer](https://juicystudio.com/services/colourcontrast.php#contrast)
 
     by Juicy Studio
+    How can a web author establish easily and quickly if the background color and foreground (text) color in use in his webpages have sufficient color contrast difference and sufficient color brightness difference? [Color contrast analyzer](https://juicystudio.com/services/colourcontrast.php#contrast) is an excellent tool for such task. Effective color contrast and effective color brightness difference have a **decisive importance for reading**, furthermore for people with partial color deficiency (see the excellent examples in [Effective Color Contrast](http://www.lighthouse.org/accessibility/effective-color-contrast/) by Lighthouse International). 
 
-    <blockquote cite="https://msdn.microsoft.com/en-us/library/bb263947(VS.85).aspx"><p>"Contrast is the perceived difference between two adjacent colors. (...) Contrast is extremely important in Web design."</p><address><a class="ex-ref" href="https://msdn.microsoft.com/en-us/library/bb263947%28VS.85%29.aspx">Wheel of Color: Pump up the Contrast, Robert Hess, MSDN</a></address></blockquote>
-
-    <blockquote cite="http://www.useit.com/alertbox/designmistakes.html"><p>"For this year's list of worst design mistakes, (...) I asked readers of my newsletter to nominate the usability problems they found the most irritating. (...) about one-third complained about <strong>low contrast between text and background</strong>."</p><address><a class="ex-ref" href="http://www.useit.com/alertbox/designmistakes.html">Top Ten Web Design Mistakes of 2005: 1. Legibility Problems</a></address></blockquote>
-
-    How can a web author establish easily and quickly if the background color and foreground (text) color in use in his webpages have sufficient color contrast difference and sufficient color brightness difference? <a class="ex-ref" href="https://juicystudio.com/services/colourcontrast.php#contrast">Color contrast analyzer</a> is an excellent tool for such task. Effective color contrast and effective color brightness difference have a **decisive importance for reading**, furthermore for people with partial color deficiency (see the excellent examples in <a class="ex-ref" href="http://www.lighthouse.org/accessibility/effective-color-contrast/">Effective Color Contrast</a> by Lighthouse International). A study has established that <a class="ex-ref" href="https://msdn.microsoft.com/en-us/library/bb263953.aspx">about 8 percent of all men have some form of color deficiency</a>. Color contrast analyzer algorithm is based on the formula provided in <a class="ex-ref" href="https://www.w3.org/TR/AERT#color-contrast">Techniques For Accessibility Evaluation And Repair Tools</a> from W3C.
-
-    The <a class="ex-ref" href="https://juicystudio.com/services/csstest.php">Juicy Studio CSS analyzer</a> will also analyze and report the color contrast and color brightness differences involved in your stylesheets.
+    The [Juicy Studio CSS analyzer](https://juicystudio.com/services/csstest.php) will also analyze and report the color contrast and color brightness differences involved in your stylesheets.
 
 ### The Future: Accessible DHTML
 
-[DHTML Accessibility Roadmap](/en-US/docs/Web/Accessibility/ARIA): a peek into how DHTML will be made accessible in the future. This document gives a plan which is being developed by IBM, Mozilla and <a class="ex-ref" href="https://www.w3.org/WAI/PF/">WAI Protocols and Formats Working Group (PFWG)</a> to address the issue of Accessible DHTML.
+[DHTML Accessibility Roadmap](/en-US/docs/Web/Accessibility/ARIA): a peek into how DHTML will be made accessible in the future. This document gives a plan which is being developed by IBM, Mozilla and [WAI Protocols and Formats Working Group (PFWG)](https://www.w3.org/WAI/PF/) to address the issue of Accessible DHTML.
 
 Dynamic web content is not accessible, because it uses vanilla {{HTMLElement('div')}}'s and {{HTMLElement('span')}}'s combined with Javascript rather than declarative markup to describe the behavior of custom widgets such as menus and tree views. These widgets are usually not even keyboard focusable. Furthermore, assistive technologies do not understand what these widgets are supposed to be, or what state they are in or what they are capable of.
 
