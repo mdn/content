@@ -22,20 +22,15 @@ To access the API you would use the constructor, which creates a {{domxref('Sani
 The most common use-case - preventing XSS - is handled by the built-in default lists, so that creating a {{domxref('Sanitizer.Sanitizer')}} with a custom config is necessary only to handle additional, application-specific use cases.
 
 The API has two methods to sanitize strings.
-One returns a document fragment. The other applies a string using a Sanitzer directly to an existing element node.
-
-partial interface Element {
-  undefined setHTML(DOMString input, Sanitizer sanitizer);
-};
+One returns a document fragment.
+The other applies a string using a Sanitzer directly to an existing element node.
 
 ## Interfaces
 
 - {{domxref('Sanitizer')}}
   - : The **`Sanitizer`** interface provides the functionality to take untrusted strings of HTML, and sanitize them for safe insertion into a document’s DOM.
 - {{domxref('Element/setHTML','Element.setHTML()')}}
-  - : The method applies a string using a `Sanitizer` directly to an existing element node.
-
-  {{domxref('Element')}}
+  - : The `setHTML` method of the {{domxref('Element')}} interface applies a string using a `Sanitizer` directly to an existing element node.
 
 ## Examples
 
