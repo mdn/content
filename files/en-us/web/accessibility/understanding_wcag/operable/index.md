@@ -18,7 +18,7 @@ tags:
 ---
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Operable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Operable states that user interface components and navigation must be operable.
 
-<div class="note"><p><strong>Note</strong>: To read the W3C definitions for Operable and its guidelines and success criteria, see <a href="https://www.w3.org/TR/WCAG21/#operable">Principle 2: Operable — User interface components and navigation must be operable.</a></p></div>
+> **Note:** To read the W3C definitions for Operable and its guidelines and success criteria, see <a href="https://www.w3.org/TR/WCAG21/#operable">Principle 2: Operable — User interface components and navigation must be operable.</a></p></div>
 
 ## Guideline 2.1 — Keyboard Accessible: Make all functionality available from a keyboard
 
@@ -116,7 +116,7 @@ This guideline covers the necessity of making core website functionality availab
   </tbody>
 </table>
 
-<div class="note"><p><strong>Note</strong>: Also see the WCAG description for <a href="https://www.w3.org/TR/WCAG21/#keyboard-accessible">Guideline 2.1 Keyboard Accessible: Make all functionality available from a keyboard</a>.</p></div>
+> **Note:** Also see the WCAG description for <a href="https://www.w3.org/TR/WCAG21/#keyboard-accessible">Guideline 2.1 Keyboard Accessible: Make all functionality available from a keyboard</a>.</p></div>
 
 ## Guideline 2.2 — Enough Time: Provide users enough time to read and use content
 
@@ -218,7 +218,7 @@ This guideline covers situations in which functionality may have a time limit. F
   </tbody>
 </table>
 
-<div class="note"><p><strong>Note</strong>: Also see the WCAG description for <a href="https://www.w3.org/TR/WCAG21/#enough-time">Guideline 2.2 Enough Time: Provide users enough time to read and use content</a>.</p></div>
+> **Note:** Also see the WCAG description for <a href="https://www.w3.org/TR/WCAG21/#enough-time">Guideline 2.2 Enough Time: Provide users enough time to read and use content</a>.</p></div>
 
 ## Guideline 2.3 — Seizures and Physical Reactions: Do not design content in a way that is known to cause seizures or physical reactions
 
@@ -230,7 +230,7 @@ This refers to content that, if not changed, could cause seizures in users with
 | 2.3.2 Three flashes (AAA)                                                                                         | Content doesn't contain any aspect that Flashes more than three times per second.                                                                                                                               |                                                                                                         |
 | 2.3.3 Animations from Interactions (AAA) *[added in 2.1](https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1)* | Allow users to disable animations from interactions (unless the animation is essential).                                                                                                                        | [Understanding Animations from Interactions](https://www.w3.org/TR/WCAG21/#animation-from-interactions) |
 
-<div class="note"><p><strong>Note</strong>: Also see the WCAG description for <a href="https://www.w3.org/TR/WCAG21/#seizures-and-physical-reactions">Guideline 2.3 Seizures and Physical Reactions: Do not design content in a way that is known to cause seizures or physical reactions</a>.</p></div>
+> **Note:** Also see the WCAG description for <a href="https://www.w3.org/TR/WCAG21/#seizures-and-physical-reactions">Guideline 2.3 Seizures and Physical Reactions: Do not design content in a way that is known to cause seizures or physical reactions</a>.</p></div>
 
 ## Guideline 2.4 — Navigable: Provide ways to help users navigate, find content, and determine where they are
 
@@ -452,7 +452,7 @@ The conformance criteria under this guideline relate to ways in which users can 
   </tbody>
 </table>
 
-<div class="note"><p><strong>Note</strong>: Also see the WCAG description for <a href="https://www.w3.org/TR/WCAG21/#navigable">Guideline 2.4 Navigable: Provide ways to help users navigate, find content, and determine where they are</a>.</p></div>
+> **Note:** Also see the WCAG description for <a href="https://www.w3.org/TR/WCAG21/#navigable">Guideline 2.4 Navigable: Provide ways to help users navigate, find content, and determine where they are</a>.</p></div>
 
 ## Guideline 2.5 Input Modalities: Make it easier for users to operate functionality through various inputs beyond keyboard.
 
@@ -467,7 +467,7 @@ The conformance criteria under this guideline ensures that users are able to int
 | 2.5.5 Target Size (AAA) _[added in 2.1](https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1)_                 | The size of an actionable item's touch target must be at least 44 CSS pixels in both width and height.  Exceptions exist.                                                                                                                                                                                                                              | [Understanding Target Size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)                                |
 | 2.5.6 Concurrent Input Mechanisms (AAA) _[added in 2.1](https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1)_ | Make sure people can use and switch between different modes of input when interacting with digital content including touchscreen, keyboard, mouse, voice commands, or alternative input devices.  An essential exception exists.                                                                                                                       | [Understanding Concurrent Input Mechanism](https://www.w3.org/WAI/WCAG21/Understanding/concurrent-input-mechanisms.html) |
 
-<div class="note"><p><strong>Note</strong>: Also see the WCAG description for <a href="https://www.w3.org/TR/WCAG21/#input-modalities">Guideline 2.5: Input Modalities: Make it easier for users to operate functionality through various inputs beyond keyboard</a>.</p></div>
+> **Note:** Also see the WCAG description for <a href="https://www.w3.org/TR/WCAG21/#input-modalities">Guideline 2.5: Input Modalities: Make it easier for users to operate functionality through various inputs beyond keyboard</a>.</p></div>
 
 ## See also
 

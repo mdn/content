@@ -13,7 +13,7 @@ tags:
 ---
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Perceivable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Perceivable states that users must be able to perceive it in some way, using one or more of their senses.
 
-<div class="note"><p><strong>Note</strong>: To read the W3C definitions for Perceivable and its guidelines and success criteria, see <a href="https://www.w3.org/TR/WCAG21/#perceivable">Principle 1: Perceivable - Information and user interface components must be presentable to users in ways they can perceive.</a></p></div>
+> **Note:** To read the W3C definitions for Perceivable and its guidelines and success criteria, see <a href="https://www.w3.org/TR/WCAG21/#perceivable">Principle 1: Perceivable - Information and user interface components must be presentable to users in ways they can perceive.</a></p></div>
 
 ## Guideline 1.1 — Providing text alternatives for non-text content
 
@@ -44,7 +44,7 @@ The key here is that text can be converted to other forms that people with disab
       <td>
         Complex images or charts should have an accessible alternative provided,
         either on the same page or via a link. Use a regular link instead of
-        a <code>longdesc</code> attribute.
+        a `longdesc` attribute.
       </td>
       <td>
         <p>
@@ -56,7 +56,7 @@ The key here is that text can be converted to other forms that people with disab
             href="/en-US/docs/Learn/Accessibility/HTML#other_text_alternative_mechanisms"
             >Other text alternative mechanisms</a
           >
-          for the argument against <code>longdesc</code>.
+          for the argument against `longdesc`.
         </p>
       </td>
     </tr>
@@ -114,7 +114,7 @@ The key here is that text can be converted to other forms that people with disab
             >Backgrounds</a
           >).  If you have to include an image via an
           {{htmlelement("img")}} element, give it a blank alt
-          (<code>alt=""</code>). Otherwise, screenreaders may try to read out
+          (`alt=""`). Otherwise, screenreaders may try to read out
           the filepath, etc.
         </p>
         <p>
@@ -127,7 +127,7 @@ The key here is that text can be converted to other forms that people with disab
   </tbody>
 </table>
 
-<div class="note"><p><strong>Note</strong>: Also see the <a href="https://www.w3.org/TR/WCAG21/#text-alternatives">WCAG description for Guideline 1.1: Text alternatives</a>.</p></div>
+> **Note:** Also see the <a href="https://www.w3.org/TR/WCAG21/#text-alternatives">WCAG description for Guideline 1.1: Text alternatives</a>.</p></div>
 
 ## Guideline 1.2 — Providing text alternatives for time-based media
 
@@ -145,7 +145,7 @@ Time-based media refers to multimedia with a duration, such as audio and video. 
 | 1.2.8 Provide an alternative for prerecorded media (AAA)                          | For all content that features video, a descriptive text transcript should be provided, for example a script of the movie you are watching. This is for the benefit of hearing-impaired viewers who cannot hear the content.                                                                      | See [Audio transcripts](/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts) for transcript information.                                                                                                                                                                                                                                                   |
 | 1.2.9 Provide a transcript for live audio (AAA)                                   | For any live audio content being broadcast, a descriptive text should be provided, for example a script of the play or musical you are listening to. This is for the benefit of hearing-impaired viewers who cannot hear the content.                                                            | See [Audio transcripts](/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts) for transcript information.                                                                                                                                                                                                                                                   |
 
-<div class="note"><p><strong>Note</strong>: Also see the <a href="https://www.w3.org/TR/WCAG21/#time-based-media">WCAG description for Guideline 1.2: Time-based Media: Provide alternatives for time-based media</a>.</p></div>
+> **Note:** Also see the <a href="https://www.w3.org/TR/WCAG21/#time-based-media">WCAG description for Guideline 1.2: Time-based Media: Provide alternatives for time-based media</a>.</p></div>
 
 ## Guideline 1.3 — Create content that can be presented in different ways
 
@@ -175,7 +175,7 @@ This guideline refers to the ability of content to be consumed by users in multi
           <li>
             Image alt text. Content images should have text available that
             clearly describes the image's contents, which can be
-            programmatically associated with it (e.g., <code>alt</code> text),
+            programmatically associated with it (e.g., `alt` text),
             or otherwise is easy to associate (e.g., describes it and is sat
             right next to it). This should mean that the full meaning can still
             be inferred even if you can't see the image.
@@ -330,7 +330,7 @@ This guideline refers to the ability of content to be consumed by users in multi
   </tbody>
 </table>
 
-<div class="note"><p><strong>Note</strong>: Also see the WCAG description for <a href="https://www.w3.org/TR/WCAG21/#adaptable">Guideline 1.3: Adaptable: Create content that can be presented in different ways without losing information or structure.</a></p></div>
+> **Note:** Also see the WCAG description for <a href="https://www.w3.org/TR/WCAG21/#adaptable">Guideline 1.3: Adaptable: Create content that can be presented in different ways without losing information or structure.</a></p></div>
 
 ## Guideline 1.4: Make it easier for users to see and hear content including separating foreground from background
 
@@ -374,7 +374,7 @@ This guideline relates to making sure core content is easy to discern from backg
         volume.
       </td>
       <td>
-        Use native <code>&#x3C;button></code>s to provide accessible keyboard
+        Use native `&#x3C;button>`s to provide accessible keyboard
         controls, as shown in
         <a
           href="/en-US/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics"
@@ -474,7 +474,7 @@ This guideline relates to making sure core content is easy to discern from backg
           </li>
           <li>
             Line height should be at least 1.5 times the text size within
-            paragraphs (e.g., <code>line-height: 1.5;</code>), and at least 2.25
+            paragraphs (e.g., `line-height: 1.5;`), and at least 2.25
             times the text size between paragraphs (e.g., <code
               >padding: 2.25rem;</code
             >).
@@ -612,7 +612,7 @@ This guideline relates to making sure core content is easy to discern from backg
   </thead>
 </table>
 
-<div class="note"><p><strong>Note</strong>: Also see the WCAG description for <a href="https://www.w3.org/TR/WCAG21/#distinguishable">Guideline 1.4: Distinguishable: Make it easier for users to see and hear content including separating foreground from background.</a><a href="https://www.w3.org/TR/WCAG21/#distinguishable">.</a></p></div>
+> **Note:** Also see the WCAG description for <a href="https://www.w3.org/TR/WCAG21/#distinguishable">Guideline 1.4: Distinguishable: Make it easier for users to see and hear content including separating foreground from background.</a><a href="https://www.w3.org/TR/WCAG21/#distinguishable">.</a></p></div>
 
 ## See also
 

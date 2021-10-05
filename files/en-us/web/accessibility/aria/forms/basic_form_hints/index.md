@@ -8,7 +8,7 @@ tags:
 ---
 When implementing forms using traditional HTML form-related elements, it is important to provide labels for controls, and explicitly associate a label with its control. When a screen reader user navigates a page, the screen reader will describe form controls. Without a direct association between the control and its label, the screen reader has no way of knowing which label is the correct one.
 
-The example below shows a simple form with labels. Note that each {{ HTMLElement("input") }} element has an `id`, and each {{ HTMLElement("label") }} element has a `for` attribute, indicating the `id` of the associated {{ HTMLElement("input") }}.
+The example below shows a simple form with labels. Note that each {{ HTMLElement("input") }} element has an `id`, and each {{ HTMLElement("label") }} element has a `for` attribute, indicating the `id` of the associated {{HTMLElement("input")}}.
 
 ```html
 <form>
@@ -67,11 +67,11 @@ The example below shows a {{ HTMLElement("button") }} element that is described 
                             since the last save.</div>
 ```
 
-<div class="note"><p><strong>Note</strong>: The <code>aria-describedby</code> attribute is used for other purposes, in addition to form controls.</p></div>
+> **Note:** The `aria-describedby` attribute is used for other purposes, in addition to form controls.
 
 ## Required and invalid fields
 
-<div class="note"><p><strong>Note</strong>: Now that <code>required</code> is available to more than 97% of users globally, it is no longer recommended that you use both <code>required</code> and <code>aria-required</code>.</p></div>
+> **Note:** Now that `required` is available to more than 97% of users globally, it is no longer recommended that you use both `required` and `aria-required`.</p></div>
 
 Web developers typically use presentational strategies to indicate required or invalid fields. Assistive technologies (ATs) cannot necessarily infer this information from the presentation. ARIA provides attributes for indicating that form controls are required or invalid:
 

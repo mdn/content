@@ -23,9 +23,9 @@ The following table describes `tabindex` behavior in modern browsers:
 <table class="fullwidth-table" style="width: 75% !important">
   <tbody>
     <tr>
-      <th><code>tabindex</code> attribute</th>
+      <th>`tabindex` attribute</th>
       <th>
-        Focusable with mouse or JavaScript via <code>element.focus()</code>
+        Focusable with mouse or JavaScript via `element.focus()`
       </th>
       <th>Tab navigable</th>
     </tr>
@@ -38,7 +38,7 @@ The following table describes `tabindex` behavior in modern browsers:
       <td>Follows the platform convention of the element.</td>
     </tr>
     <tr>
-      <td>Negative (i.e. <code>tabindex="-1"</code>)</td>
+      <td>Negative (i.e. `tabindex="-1"`)</td>
       <td>Yes</td>
       <td>
         No; author must focus the element with
@@ -54,7 +54,7 @@ The following table describes `tabindex` behavior in modern browsers:
       </td>
     </tr>
     <tr>
-      <td>Zero (i.e. <code>tabindex="0"</code>)</td>
+      <td>Zero (i.e. `tabindex="0"`)</td>
       <td>Yes</td>
       <td>
         In tab order relative to element's position in document (note that
@@ -63,14 +63,14 @@ The following table describes `tabindex` behavior in modern browsers:
       </td>
     </tr>
     <tr>
-      <td>Positive (e.g. <code>tabindex="33"</code>)</td>
+      <td>Positive (e.g. `tabindex="33"`)</td>
       <td>Yes</td>
       <td>
-        <code>tabindex</code> value determines where this element is positioned
+        `tabindex` value determines where this element is positioned
         in the tab order: smaller values will position elements earlier in the
         tab order than larger values (for example,
-        <code>tabindex="7"</code> will be positioned before
-        <code>tabindex="11"</code>).
+        `tabindex="7"` will be positioned before
+        `tabindex="11"`).
       </td>
     </tr>
   </tbody>
