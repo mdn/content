@@ -27,7 +27,7 @@ aspect-ratio: unset;
 
 ### Values
 
-- {{cssxref("&lt;auto&gt;")}}
+- `auto`
   - : [Replaced elements](/en-US/docs/Web/CSS/Replaced_element) with an intrinsic aspect ratio use _that_ aspect ratio, otherwise the box has no preferred aspect ratio. Size calculations involving intrinsic aspect ratio always work with the content box dimensions.
 - {{cssxref("&lt;ratio&gt;")}}
   - : The box’s preferred aspect ratio is the specified ratio of `width` / `height`. If `height` and the preceding slash character are omitted, `height` defaults to `1`. Size calculations involving preferred aspect ratio work with the dimensions of the box specified by `box-sizing`.
