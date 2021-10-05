@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{GamesSidebar}}</div>
 
-<p class="summary"><span class="seosummary">Shaders use GLSL (</span><span class="ILfuVd">OpenGL Shading Language</span>)<span class="seosummary">, a special OpenGL Shading Language with syntax similar to C. GLSL is executed directly by the graphics pipeline. There are <a href="https://www.khronos.org/opengl/wiki/Shader">several different kinds of shaders</a>, but two are commonly used to create graphics on the web: Vertex Shaders and Fragment (Pixel) Shaders. Vertex Shaders transform shape positions into 3D drawing coordinates. Fragment Shaders compute the renderings of a shape's colors and other attributes.</span></p>
+<p>Shaders use GLSL (OpenGL Shading Language), a special OpenGL Shading Language with syntax similar to C. GLSL is executed directly by the graphics pipeline. There are <a href="https://www.khronos.org/opengl/wiki/Shader">several different kinds of shaders</a>, but two are commonly used to create graphics on the web: Vertex Shaders and Fragment (Pixel) Shaders. Vertex Shaders transform shape positions into 3D drawing coordinates. Fragment Shaders compute the renderings of a shape's colors and other attributes.</p>
 
 <p>GLSL is not as intuitive as JavaScript. GLSL is strongly typed and there is a lot of math involving vectors and matrices. It can get very complicated — very quickly. In this article we will make a simple code example that renders a cube. To speed up the background code we will be using the Three.js API.</p>
 
@@ -39,7 +39,7 @@ tags:
 <p>Let's build a simple demo to explain those shaders in action. Be sure to read <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js">Three.js tutorial</a> first to grasp the concept of the scene, its objects, and materials.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Remember that you don't have to use Three.js or any other library to write your shaders — pure <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> (Web Graphics Library) is more than enough. We've used Three.js here to make the background code a lot simpler and clearer to understand, so you can just focus on the shader code. Three.js and other 3D libraries abstract a lot of things for you — if you wanted to create such an example in raw WebGL, you'd have to write a lot of extra code to actually make it work.</p>
+<p><strong>Note:</strong> Remember that you don't have to use Three.js or any other library to write your shaders — pure <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> (Web Graphics Library) is more than enough. We've used Three.js here to make the background code a lot simpler and clearer to understand, so you can just focus on the shader code. Three.js and other 3D libraries abstract a lot of things for you — if you wanted to create such an example in raw WebGL, you'd have to write a lot of extra code to actually make it work.</p>
 </div>
 
 <h3 id="Environment_setup">Environment setup</h3>
@@ -109,7 +109,7 @@ tags:
 <p>The resulting <code>gl_Position</code> is calculated by multiplying the model-view and the projection matrices by each vector to get the final vertex position, in each case.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can learn more about <em>model</em>, <em>view</em>, and <em>projection transformations</em> from the <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Basic_theory#vertex_processing">vertex processing paragraph</a>, and you can also check out the links at the end of this article to learn more about it.</p>
+<p><strong>Note:</strong> You can learn more about <em>model</em>, <em>view</em>, and <em>projection transformations</em> from the <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Basic_theory#vertex_processing">vertex processing paragraph</a>, and you can also check out the links at the end of this article to learn more about it.</p>
 </div>
 
 <p>Both <code>projectionMatrix</code> and <code>modelViewMatrix</code> are provided by Three.js and the vector is passed with the new 3D position, which results in the original cube moving 10 units along the <code>x</code> axis and 5 units along the <code>z</code> axis, translated via a shader. We can ignore the fourth parameter and leave it with the default <code>1.0</code> value; this is used to manipulate the clipping of the vertex position in the 3D space, but we don't need in our case.</p>

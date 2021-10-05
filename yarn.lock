@@ -39,16 +39,16 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.0.5.tgz#21905dcc1520f095631a0d72a9f15605039ac7ff"
   integrity sha512-KPSNaHUl5aikqsQU7LpBntFzaPbhm5OJxD88Wv00OKDc4wudyid2wDFqLeb7VcYT9x5bND8PPFloWdK5DY0pHA==
 
-"@mdn/yari@0.4.784":
-  version "0.4.784"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.784.tgz#2c418dba4574866eb0094883ba133a4aa62c7ff1"
-  integrity sha512-SSuBA5MKUm8DCwEz8hHJIXPMPd8hcsA/csB98WnIu3G0Uuy3y/H0A0dVo7TyZAACOyjgmGtlpQvzKKuZ4F60aQ==
+"@mdn/yari@0.4.789":
+  version "0.4.789"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.789.tgz#07c0a8d6d2310a79cd9243ea110237177af52a25"
+  integrity sha512-9EJ3LZBOZCQ4qSMhFTj0rxgFKYnQLhuNrYevfAplGOqNwdlV0gaeUsl0YWshLhEczzjAoQu/9GxwjceTjRCiBg==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
     "@mdn/browser-compat-data" "4.0.5"
     accept-language-parser "1.5.0"
-    browser-specs "^2.14.0"
+    browser-specs "^2.15.0"
     chalk "4.1.2"
     cheerio "1.0.0-rc.10"
     cli-progress "^3.9.1"
@@ -548,10 +548,10 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^2.14.0:
-  version "2.14.1"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-2.14.1.tgz#19617db971f4fb13a41847dc0b12908821bdae72"
-  integrity sha512-DKzCDdLvXgnHqX3cjI0GBpenerDYYkkllSDpanqFdE4Rd/yaWwPbqMoiWQgjc2ieeN6LvsyQgpsGFSNDwajFyA==
+browser-specs@^2.15.0:
+  version "2.15.0"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-2.15.0.tgz#6fd62ae7cb7d812e4dd1a10ce3847ca97cc61529"
+  integrity sha512-bSiKUhvZaFatHPZ5/CAcjrEmoigcvolI4ORiVATmW+w0jblEVzP2c8pQm7bEA1lVRcnflwz93yDpwH4U0rx6+w==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
