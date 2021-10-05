@@ -7,16 +7,14 @@ tags:
   - sanitize
 browser-compat: api.Sanitizer.sanitizeToString
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
+{{draft}}{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
 
-The **`sanitizeToString()`** method of the
-{{domxref("Sanitizer")}} interface returns a sanitized {{jsxref('String')}} from an
-input, removing any offending elements or attributes.
+The **`sanitizeToString()`** method of the {{domxref("Sanitizer")}} interface returns a sanitized {{jsxref('String')}} from an input, removing any offending elements or attributes.
 
 ## Syntax
 
 ```js
-var String = sanitizer.sanitizeToString(input);
+sanitizeToString(input)
 ```
 
 ### Parameters
@@ -34,8 +32,7 @@ None.
 
 ## Examples
 
-This example uses the `sanitizeToString` method to remove disallowed
-`script` and `blink` elements from a string input.
+This example uses the `sanitizeToString` method to remove disallowed `script` and `blink` elements from a string input.
 
 ```js
 // our input string to clean
