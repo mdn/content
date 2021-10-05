@@ -5,6 +5,6 @@ tags:
   - Accessibility
   - Index
 ---
-<p class="summary"><span class="seoSummary">This document provides a list of links to all accessibility articles on the Mozilla Developer Network.</span></p>
+This document provides a list of links to all accessibility articles on the Mozilla Developer Network.
 
 {{Index("/en-US/docs/Web/Accessibility")}}
