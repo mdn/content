@@ -7,7 +7,7 @@ tags:
 browser-compat: html.elements.html.manifest
 ---
 
-{{Deprecated_Header}}{{Non-standard_Header}}
+{{securecontext_header}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`manifest`** attribute of the `<html>` element specifies a URL of a application cache manifest that is downloaded in the early stages of page load.
 
