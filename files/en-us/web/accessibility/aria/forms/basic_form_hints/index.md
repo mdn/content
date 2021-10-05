@@ -71,7 +71,7 @@ The example below shows a {{ HTMLElement("button") }} element that is described 
 
 ## Required and invalid fields
 
-> **Note:** Now that `required` is available to more than 97% of users globally, it is no longer recommended that you use both `required` and `aria-required`.</p></div>
+> **Note:** Now that `required` is available to more than 97% of users globally, it is no longer recommended that you use both `required` and `aria-required`.
 
 Web developers typically use presentational strategies to indicate required or invalid fields. Assistive technologies (ATs) cannot necessarily infer this information from the presentation. ARIA provides attributes for indicating that form controls are required or invalid:
 
