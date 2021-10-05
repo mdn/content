@@ -7,9 +7,8 @@ tags:
 ---
 The state of ARIA technology has always depended on the community. If you notice an implementation issue, please take a little time and let the developers know. Here's where to file bugs:
 
-<div class="note">When finding a bug, please also update the relevant compatibility tables in the <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Test_Cases">examples page</a>.</div>
+> **Note:** When finding a bug, please also update the relevant compatibility tables in the [examples page](/en-US/docs/Web/Accessibility/ARIA/ARIA_Test_Cases).
 
-TBD: add proper accessibility markup to table
 
 <table style="width: 100%">
   <thead>
@@ -24,23 +23,17 @@ TBD: add proper accessibility markup to table
     <tr>
       <td rowspan="3">Screen readers</td>
       <td>
-        <a
-          href="https://www.freedomscientific.com/products/fs/jaws-product-page.asp"
-          >Freedom Scientific JAWS</a
-        >
+         [Freedom Scientific JAWS](https://www.freedomscientific.com/products/fs/jaws-product-page.asp)
+          
       </td>
       <td>
-        <a href="https://www.freedomscientific.com/Forms/TechSupport"
-          >JAWS technical support form</a
-        >
+        [JAWS technical support form](https://www.freedomscientific.com/Forms/TechSupport)
       </td>
       <td></td>
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Mozilla/Developer_guide/Inner_and_outer_windows"
-          >GW Micro Window Eyes</a
-        >
+        [GW Micro Window Eyes](/en-US/docs/Mozilla/Developer_guide/Inner_and_outer_windows)
       </td>
       <td>
         <a class="link-mailto" href="mailto:support@gwmicro.com"
@@ -52,14 +45,10 @@ TBD: add proper accessibility markup to table
     </tr>
     <tr>
       <td>
-        <a href="http://www.nvda-project.org/"
-          >Non Visual Desktop Access (NVDA)</a
-        >
+        [Non Visual Desktop Access (NVDA)](http://www.nvda-project.org/)
       </td>
       <td>
-        <a href="http://www.nvda-project.org/wiki/ReportingIssues"
-          >File NVDA bugs</a
-        >
+        [File NVDA bugs](http://www.nvda-project.org/wiki/ReportingIssues)
       </td>
       <td>Discuss NVDA issues</td>
     </tr>
@@ -67,61 +56,42 @@ TBD: add proper accessibility markup to table
       <td rowspan="6">Browsers</td>
       <td>Apple Safari</td>
       <td>
-        <a href="https://www.webkit.org/quality/reporting.html"
-          >File WebKit.org bugs</a
-        >
+        [File WebKit.org bugs](https://www.webkit.org/quality/reporting.html)
       </td>
       <td></td>
     </tr>
     <tr>
       <td>Google Chrome</td>
       <td>
-        <a href="https://code.google.com/p/chromium/issues/list"
-          >File Chromium bugs</a
-        >
+        [File Chromium bugs](https://code.google.com/p/chromium/issues/list)
       </td>
       <td></td>
     </tr>
     <tr>
       <td>Microsoft Internet Explorer</td>
       <td>
-        <a
-          class="link-https"
-          href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/"
-          >File IE bugs</a
-        >
+         [File IE bugs](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/)
       </td>
       <td></td>
     </tr>
     <tr>
       <td>Microsoft Edge</td>
       <td>
-        <a
-          class="link-https"
-          href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/"
-          >File MS Edge Bugs</a
-        >
+         [File MS Edge Bugs](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/)
       </td>
       <td>
-        <a
-          class="external text"
-          href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&#x26;q=ARIA"
-          rel="nofollow"
-          >View existing MS Edge ARIA bugs</a
-        >
+          [View existing MS Edge ARIA bugs](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&#x26;q=ARIA)
       </td>
     </tr>
     <tr>
       <td>Mozilla Firefox</td>
-      <td><a href="https://bugzilla.mozilla.org/">File Firefox bugs</a></td>
+      <td>[File Firefox bugs](https://bugzilla.mozilla.org/)></td>
       <td>Use Component: Disability Access APIs</td>
     </tr>
     <tr>
       <td>Opera</td>
       <td>
-        <a class="link-https" href="https://bugs.opera.com/wizard/"
-          >File Opera bugs</a
-        >
+        [File Opera bugs](https://bugs.opera.com/wizard/)
       </td>
       <td><span>Use [ARIA] in the summary field</span></td>
     </tr>
@@ -129,20 +99,14 @@ TBD: add proper accessibility markup to table
       <td rowspan="2">JS Libraries</td>
       <td>Dojo Toolkit</td>
       <td>
-        <a href="https://dojotoolkit.org/blog/how-file-dojo-bug-report"
-          >File Dojo bug</a
-        >
+        [File Dojo bug](https://dojotoolkit.org/blog/how-file-dojo-bug-report)
       </td>
       <td><span>Put Accessibility in the component field</span></td>
     </tr>
     <tr>
       <td>Yahoo User Interface</td>
       <td>
-        <a
-          href="https://sourceforge.net/tracker/?func=add&#x26;group_id=165715&#x26;atid=836476"
-          rel="external"
-          >File YUI bugs</a
-        >
+        [File YUI bugs](https://sourceforge.net/tracker/?func=add&#x26;group_id=165715&#x26;atid=836476)
       </td>
       <td>
         <span
