@@ -43,7 +43,7 @@ Seizures can be fatal, but even the ones that are "only" debilitating can be of 
 
 That same article continues that many factors must combine to trigger the photosensitive reaction. Of note is that it includes the wavelength of light as a possible factor; wavelengths in the red part of the spectrum seem to be especially problematic. In the article, "**[Understanding WCAG 2.0 Three Flashes or Below Threshold](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html)**" notes generally that: “_Individuals who have photosensitive seizure disorders can have a seizure triggered by content that flashes at certain frequencies for more than a few flashes_” and goes on to note, very specifically that: “**_People are even more sensitive to red flashing than to other colors, so a special test is provided for saturated red flashing_**”.
 
-You don't even need an image or video to cause harm. A `<div>` element set to change color and luminosity at high frequency, easily done via JavaScript, can cause real harm. And, flickering can occur everywhere. For example, "spinners" commonly used to display while pages load, can easily "flicker" while spinning.
+You don't even need an image or video to cause harm. A {{HTMLElement('div')}} element set to change color and luminosity at high frequency, easily done via JavaScript, can cause real harm. And, flickering can occur everywhere. For example, "spinners" commonly used to display while pages load, can easily "flicker" while spinning.
 
 Additional concerns exist for individuals with motor-skills problems. For example, the page for Trace Research & Development Center’s **[Photosensitive Epilepsy Analysis Tool](https://trace.umd.edu/peat)** notes that “_Photosensitive seizures can be provoked by certain types of flashing in web or computer content, including mouse-overs that cause large areas of the screen to rapidly flash on and off repeatedly_.”
 
@@ -241,7 +241,7 @@ div {
 
 ### Ensure the user can also stop animations as well as start them
 
-**`<video>`** with no attributes will not play automatically, but also will have no controls. Ensure that you add the **`controls`** attribute to the video element so that the user can stop the video as well as start it.
+**{{HTMLElement('video')}}** with no attributes will not play automatically, but also will have no controls. Ensure that you add the **`controls`** attribute to the video element so that the user can stop the video as well as start it.
 
 ```html
 <video controls>
@@ -286,7 +286,7 @@ Taking that same example and applying it to audio,
 
 ##### Audio as part of Video
 
-Note that the audio in videos can be controlled by the muted content attribute, even though the content is within the **`<video>`** element rather than the **`<audio>`** element. This example is from the section on **[muted media attribute](https://html.spec.whatwg.org/multipage/media.html#concept-media-muted)** description from the HTML Living Standard. It explains that the video will autoplay quietly in the background until the user takes action to unmute the audio.
+Note that the audio in videos can be controlled by the muted content attribute, even though the content is within the **{{HTMLElement('video')}}** element rather than the **{{HTMLElement('audio')}}** element. This example is from the section on **[muted media attribute](https://html.spec.whatwg.org/multipage/media.html#concept-media-muted)** description from the HTML Living Standard. It explains that the video will autoplay quietly in the background until the user takes action to unmute the audio.
 
 ```html
 <video src="adverts.cgi?kind=video" controls autoplay loop muted></video>
@@ -316,7 +316,7 @@ Translations and transformations can animate text in a div, and do harm. Althoug
 
 ### CSS for animation
 
-In the style sheet or within the **`<style>`** element, many options can combine together to create a powerful experience for the user. We've already mentioned the **`animation`** property earlier in this document. It's actually shorthand for all animation properties, including:
+In the style sheet or within the **{{HTMLElement('style')}}** element, many options can combine together to create a powerful experience for the user. We've already mentioned the **`animation`** property earlier in this document. It's actually shorthand for all animation properties, including:
 
 - **`animation-play-state`**
 - **`animation-duration`** has a value of **`<time>;`** this is the duration an animation takes to complete one cycle. This may be specified in either seconds **`(s)`** or milliseconds **`(ms)`.** A default value of 0s indicates no animation should occur.
@@ -326,7 +326,7 @@ The animation property is powerful on its own, of course, but combined with othe
 
 ### JavaScript animation
 
-JavaScript is often used to control \<canvas> elements and SVGs. Most JavaScript code that applies to HTML5 video also applies to audio. **`HTMLMediaElement.playbackRate`** is used to implement user controls for the playback rate for both video and audio. A value of 1.0 is default and considered normal speed; a value of 0.5 is half the speed, a value of 2.0 is twice the speed. A negative number plays the video or audio backwards. Set the playback rate property: **`HTMLMediaElement.playbackRate = playbackspeed`**
+JavaScript is often used to control {{HTMLElement('canvas')}} elements and SVGs. Most JavaScript code that applies to HTML5 video also applies to audio. **`HTMLMediaElement.playbackRate`** is used to implement user controls for the playback rate for both video and audio. A value of 1.0 is default and considered normal speed; a value of 0.5 is half the speed, a value of 2.0 is twice the speed. A negative number plays the video or audio backwards. Set the playback rate property: **`HTMLMediaElement.playbackRate = playbackspeed`**
 
 **[document.getAnimations()](/en-US/docs/Web/API/Document/getAnimations)** is an experimental technology, and includes **[CSS Animations](/en-US/docs/Web/CSS/CSS_Animations)**, **[CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions)**, and **[Web Animations](/en-US/docs/Web/API/Web_Animations_API)**. The MDN document, **[Document.getAnimations()](/en-US/docs/Web/API/Document/getAnimations)** provides the following code sample of how to slow down all animations on a page to half speed.
 
@@ -416,11 +416,11 @@ Modern browsers will display the alternate CSS available in alternate style shee
 
 It's important to know that certain users, such as those who rely on speech-recognition systems, often depend on legacy buttons and links because their disability prevents them from using a mouse, or to be able to take advantage of touch events on mobile tablets.
 
-Common ways to include the alternative stylesheets into your HTML documents are to use the **`<link>`** element, and **`@import`.**
+Common ways to include the alternative stylesheets into your HTML documents are to use the **{{HTMLElement('link')}}** element, and **`@import`.**
 
-**The `<link>` element**
+**The {{HTMLElement('link')}} element**
 
-Use the **`<link>`** element, alongside with and together with the attributes of **`rel="alternate stylesheet"`** and for title,** `title="…"`** in the **`<HEAD>`** section of the webpage.
+Use the **{{HTMLElement('link')}}** element, alongside with and together with the attributes of **`rel="alternate stylesheet"`** and for title,** `title="…"`** in the **{{HTMLElement('HEAD')}}** section of the webpage.
 
 ```html
 <head>
@@ -433,7 +433,7 @@ Use the **`<link>`** element, alongside with and together with the attributes of
 
 <p id="sect3">@import</p>
 
-**`@import `**is also a way to incorporate style sheets, but it is not quite as well supported as the **`<link>`** element.
+**`@import `**is also a way to incorporate style sheets, but it is not quite as well supported as the **{{HTMLElement('link')}}** element.
 
 ```html
 <STYLE type="text/css">
@@ -456,7 +456,7 @@ A separate, alternative stylesheet that prevents images from being displayed is 
 img { display:none;}
 ```
 
-#### Take advantage of media queries with `<style>`
+#### Take advantage of media queries with {{HTMLElement('style')}}
 
 In setting up media queries, you are enabling controls by the user; these controls are made available in the browser or in the OS. See the MDN document, "**[Accessibility: What users can do to browse more safely](/en-US/docs/Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely)**" to see more details of how a user accesses the controls.
 

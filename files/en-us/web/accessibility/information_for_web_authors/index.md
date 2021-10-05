@@ -85,7 +85,7 @@ tags:
 
 [DHTML Accessibility Roadmap](/en-US/docs/Web/Accessibility/ARIA): a peek into how DHTML will be made accessible in the future. This document gives a plan which is being developed by IBM, Mozilla and <a class="ex-ref" href="https://www.w3.org/WAI/PF/">WAI Protocols and Formats Working Group (PFWG)</a> to address the issue of Accessible DHTML.
 
-Dynamic web content is not accessible, because it uses vanilla \<div>'s and \<span>'s combined with Javascript rather than declarative markup to describe the behavior of custom widgets such as menus and tree views. These widgets are usually not even keyboard focusable. Furthermore, assistive technologies do not understand what these widgets are supposed to be, or what state they are in or what they are capable of.
+Dynamic web content is not accessible, because it uses vanilla {{HTMLElement('div')}}'s and {{HTMLElement('span')}}'s combined with Javascript rather than declarative markup to describe the behavior of custom widgets such as menus and tree views. These widgets are usually not even keyboard focusable. Furthermore, assistive technologies do not understand what these widgets are supposed to be, or what state they are in or what they are capable of.
 
 This document tackles such difficulties and shows several interactive desktop-style widgets such as tree views, menu bars and spreadsheets which are accessible both with the keyboard and assistive technologies such as screen readers, screen magnifiers and alternative input devices.
 

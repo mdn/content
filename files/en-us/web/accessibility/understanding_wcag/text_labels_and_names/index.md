@@ -181,7 +181,7 @@ In addition to having a {{htmlelement("label")}} for every form element, those l
 
 Frame elements, both {{htmlelement("iframe")}} and the older, obsolete {{htmlelement("frame")}}, must have a title to describe the contents of the frame. Use the `title` attribute to label a frame element. Without a title, users of assistive technologies have to navigate into the frame in order to understand what it contains, which can be difficult and confusing.
 
-The `<frame>` element is no longer part of the HTML specification as of HTML5. Support for it may be dropped by browsers in the future. In addition, it is difficult for screen readers to navigate pages with `<frame>` elements. For best accessibility and future maintenance, redesign any pages that use frames to use CSS to achieve a similar layout.
+The {{HTMLElement('frame')}} element is no longer part of the HTML specification as of HTML5. Support for it may be dropped by browsers in the future. In addition, it is difficult for screen readers to navigate pages with {{HTMLElement('frame')}} elements. For best accessibility and future maintenance, redesign any pages that use frames to use CSS to achieve a similar layout.
 
 As a best practice, also provide a {{htmlelement("title")}} for the document that is enclosed in the frame, with content identical to the frame's `title` attribute. (This assumes that the enclosed document is under your control; if not, try to match the frame's `title` attribute to the document's title.) Some screen readers replace the contents of the `title` attribute with the contents of the enclosed document's {{htmlelement("title")}}. It's safest and most accessible to provide the same title in both places.
 
@@ -206,7 +206,7 @@ Also, be sure you are using [heading elements](/en-US/docs/Web/HTML/Element/Head
 
 Make sure that your headings have non-empty text content, and are not hidden, such as with CSS `display:none` or `aria-hidden=true`. Users of screen readers rely on headings to understand the structure and content of a document. Do not use heading elements to mark up images or other graphical content.
 
-## Use title attribute to describe \<iframe> content
+## Use title attribute to describe {{HTMLElement('iframe')}} content
 
 Make sure that {{htmlelement("iframe")}} elements have a `title` attribute to describe the contents of the frame. Without a title, users of assistive technologies have to navigate into the frame in order to understand what it contains, which can be difficult and confusing.
 
@@ -233,7 +233,7 @@ In an {{htmlelement("optgroup")}} element, use the `label` attribute to describe
 
 ### Example
 
-In this example, the `label` attribute on the `<optgroup>` elements gives a category name for the group of options.
+In this example, the `label` attribute on the {{HTMLElement('optgroup')}} elements gives a category name for the group of options.
 
 ```html
 <label for="dino-select">Choose a dinosaur:</label>

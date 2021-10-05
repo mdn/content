@@ -8,7 +8,8 @@ tags:
 ---
 Using JavaScript, it is possible to dynamically change parts of a page without requiring the entire page to reload — for instance, to update a list of search results on the fly, or to display a discreet alert or notification which does not require user interaction. While these changes are usually visually apparent to users who can see the page, they may not be obvious to users of assistive technologies. ARIA live regions fill this gap and provide a way to programmatically expose dynamic content changes in a way that can be announced by assistive technologies.
 
-<div class="note"><p><strong>Note</strong>: Assistive technologies will announce <em>dynamic</em> changes in the content of a live region.</p><p>Including an <code>aria-live</code> attribute or a specialized live region <code>role</code> (such as <code>role="alert"</code>) on the element you want to announce changes to works as long as you add the attribute before the changes occur — either in the original markup, or dynamically using JavaScript.</p></div>
+> **Note:** Assistive technologies will announce _dynamic_ changes in the content of a live region.
+> Including an `aria-live` attribute or a specialized live region `role` (such as [`role="alert"`](/en-us/web/accessibility/aria/roles/alert_role)) on the element you want to announce changes to works as long as you add the attribute before the changes occur — either in the original markup, or dynamically using JavaScript.
 
 ## Live regions
 
@@ -104,7 +105,7 @@ Here is a screenshot of VoiceOver on Mac announcing the update (via subtitles) t
 
 ## Roles with implicit live region attributes
 
-Elements with the following `role="..."` values act as live regions by default:
+Elements with the following [`role="..."`](/en-us/web/accessibility/aria/roles) values act as live regions by default:
 
 <table style="width: 100%">
   <thead>
@@ -116,15 +117,15 @@ Elements with the following `role="..."` values act as live regions by default:
   </thead>
   <tbody>
     <tr>
-      <td>log</td>
+      <td>[`log`](/en-us/web/accessibility/aria/roles/log_role)</td>
       <td>Chat, error, game or other type of log</td>
       <td>
         To maximize compatibility, add a redundant
-        <code>aria-live="polite"</code> when using this role.
+        `aria-live="polite"` when using this role.
       </td>
     </tr>
     <tr>
-      <td>status</td>
+      <td>[`status`](/en-us/web/accessibility/aria/roles/status_role)</td>
       <td>
         A status bar or area of the screen that provides an updated status of
         some kind. Screen reader users have a special command to read the
@@ -132,42 +133,38 @@ Elements with the following `role="..."` values act as live regions by default:
       </td>
       <td>
         To maximize compatibility, add a redundant
-        <code>aria-live="polite"</code> when using this role.
+        `aria-live="polite"` when using this role.
       </td>
     </tr>
     <tr>
-      <td>alert</td>
+      <td>[`alert`](/en-us/web/accessibility/aria/roles/alert_role)</td>
       <td>
         Error or warning message that flashes on the screen. Alerts are
         particularly important for client side validation notices to users.
-        <a
-          href="https://www.w3.org/TR/wai-aria-practices/examples/alert/alert.html"
-          >Alert Example.</a
-        >
       </td>
       <td>
         To maximize compatibility, some people recommend adding a redundant
-        <code>aria-live="assertive"</code> when using this role. However, adding
-        both <code>aria-live</code> and <code>role="alert"</code> causes double
+        `aria-live="assertive"` when using this role. However, adding
+        both `aria-live` and `role="alert"` causes double
         speaking issues in VoiceOver on iOS.
       </td>
     </tr>
     <tr>
-      <td>progressbar</td>
+      <td>[`progressbar`](/en-us/web/accessibility/aria/roles/progressbar_role)</td>
       <td>
         A hybrid between a widget and a live region. Use this with
-        <code>aria-valuemin</code>, <code>aria-valuenow</code> and
-        <code>aria-valuemax</code>. (TBD: add more info here).
+        `aria-valuemin`, `aria-valuenow` and
+        `aria-valuemax`. (TBD: add more info here).
       </td>
       <td></td>
     </tr>
     <tr>
-      <td>marquee</td>
+      <td>[`marquee`](/en-us/web/accessibility/aria/roles/marquee_role)</td>
       <td>for text which scrolls, such as a stock ticker.</td>
       <td></td>
     </tr>
     <tr>
-      <td>timer</td>
+      <td>[`timer`](/en-us/web/accessibility/aria/roles/timer_role)</td>
       <td>
         or any kind of timer or clock, such as a countdown timer or stopwatch
         readout.
@@ -186,7 +183,7 @@ General support for Live Regions was added to JAWS on version 10.0. In Windows E
 The Paciello Group has some [information about the state of the support of Live Regions ](https://www.paciellogroup.com/blog/2014/03/screen-reader-support-aria-live-regions/)(2014). Paul J. Adam has researched [the support of `aria-atomic` and `aria-relevant`](https://pauljadam.com/demos/aria-atomic-relevant.html) in particular.
 
 1.  **`aria-atomic`**: The `aria-atomic=BOOLEAN` is used to set whether or not the screen reader should always present the live region as a whole, even if only part of the region changes. The possible settings are: `false` or `true`. The default setting is `false`.
-2.  <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute"><strong>aria-relevant</strong></a></code>
+2.  [**`aria-relevant`**](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute)
 
     : The `aria-relevant=[LIST_OF_CHANGES]` is used to set what types of changes are relevant to a live region. The possible settings are one or more of: `additions`, `removals`, `text`, `all`. The default setting is: `additions text`.
 

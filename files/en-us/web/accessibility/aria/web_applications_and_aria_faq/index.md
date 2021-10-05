@@ -76,7 +76,7 @@ For more information about JavaScript toolkit accessibility:
 <div id="percent-loaded" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" />
 ```
 
-This progress bar is built using a `<div>`, which is not very descriptive. Unfortunately, there isn't a more semantic element available to developers in HTML 4, so we need to include ARIA roles and properties. These are specified by adding attributes to the element. In this example, the `role="progressbar"` attribute informs the browser that this element is actually a JavaScript-powered progress bar widget. The **aria-valuemin** and **aria-valuemax** attributes specify the minimum and maximum values for the progress bar, and the **aria-valuenow** describes the current state of it.
+This progress bar is built using a {{HTMLElement('div')}}, which is not very descriptive. Unfortunately, there isn't a more semantic element available to developers in HTML 4, so we need to include ARIA roles and properties. These are specified by adding attributes to the element. In this example, the `role="progressbar"` attribute informs the browser that this element is actually a JavaScript-powered progress bar widget. The **aria-valuemin** and **aria-valuemax** attributes specify the minimum and maximum values for the progress bar, and the **aria-valuenow** describes the current state of it.
 
 Along with placing them directly in the markup, ARIA attributes can be added to the element and updated dynamically using JavaScript code like this:
 
@@ -119,11 +119,11 @@ Another alternative is to use the HTML5 doctype, which includes built-in support
 
 ## How does HTML5 relate to ARIA?
 
-HTML5 introduces a number of useful new semantic elements to HTML. A few of these elements overlap directly with roles available in ARIA, such as the new `<progress>` element. In cases where the browser supports an HTML5 element that also exists in ARIA, there is usually no need to also add ARIA roles and states to the element. ARIA includes many roles, states, and properties that aren't available in HTML5, so these will continue to be useful to developers who use HTML5. For more information, Steve Faulkner has written a good [overview of the relationship between HTML5 and ARIA](https://www.paciellogroup.com/blog/2010/04/html5-and-the-myth-of-wai-aria-redundance/).
+HTML5 introduces a number of useful new semantic elements to HTML. A few of these elements overlap directly with roles available in ARIA, such as the new {{HTMLElement('progress')}} element. In cases where the browser supports an HTML5 element that also exists in ARIA, there is usually no need to also add ARIA roles and states to the element. ARIA includes many roles, states, and properties that aren't available in HTML5, so these will continue to be useful to developers who use HTML5. For more information, Steve Faulkner has written a good [overview of the relationship between HTML5 and ARIA](https://www.paciellogroup.com/blog/2010/04/html5-and-the-myth-of-wai-aria-redundance/).
 
 #### Degrading Gracefully from HTML5 to ARIA
 
-When delivering content to browsers that aren't HTML5-aware, you may want to consider gracefully degrading to the use of ARIA where necessary. So, using the example of a progress bar, you can degrade gracefully to a `role="progressbar"` in cases where the `<progressbar>` element isn't supported.
+When delivering content to browsers that aren't HTML5-aware, you may want to consider gracefully degrading to the use of ARIA where necessary. So, using the example of a progress bar, you can degrade gracefully to a `role="progressbar"` in cases where the {{HTMLElement('progressbar')}} element isn't supported.
 
 Here is an example of the markup used for an HTML5 progress bar:
 

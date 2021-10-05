@@ -1752,7 +1752,7 @@ Thank you to Charles Chen for developing the <a class="external text" href="htt
 
 **Markup used:**
 
-- \<table>
+- {{HTMLElement('table')}}
 - aria-live="polite"
 
 **Notes:**

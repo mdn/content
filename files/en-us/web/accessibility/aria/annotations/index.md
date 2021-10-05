@@ -21,8 +21,8 @@ Below we'll introduce the new features associated with ARIA annotations, and hav
 The ARIA attributes providing these new abilities are as follows:
 
 - `aria-description=""` — provides a detailed description of an HTML element, as opposed to the brief label provided by [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute).
-- `role="insertion"` and `role="deletion"` — semantically denote HTML elements whose contents represent an insertion to or deletion from the overall document. These are semantically equivalent to the HTML [`<ins>`](/en-US/docs/Web/HTML/Element/ins) and [`<del>`](/en-US/docs/Web/HTML/Element/del) elements. Note that these aren’t part of the new ARIA annotations features, but they are of central relevance.
-- `role="mark"` — semantically denotes HTML elements containing text that is marked/highlighted for reference purposes. This is semantically equivalent to the HTML [`<mark>`](/en-US/docs/Web/HTML/Element/mark) element.
+- `role="insertion"` and `role="deletion"` — semantically denote HTML elements whose contents represent an insertion to or deletion from the overall document. These are semantically equivalent to the HTML {{HTMLElement('ins')}} and {{HTMLElement('del')}} elements. Note that these aren’t part of the new ARIA annotations features, but they are of central relevance.
+- `role="mark"` — semantically denotes HTML elements containing text that is marked/highlighted for reference purposes. This is semantically equivalent to the HTML {{HTMLElement('mark')}} element.
 - `role="suggestion"` — semantically denotes a single proposed change to an editable document. This should be used on an element that wraps a single insertion and deletion (see `role="insertion"` and `role="deletion"` above).
 - `role="comment"` — semantically denotes a comment/reaction to some content on the page, or to a previous comment.
 
@@ -40,7 +40,7 @@ Unfortunately, you won’t be able to use any of these yet, as screenreader supp
 There are a number of different ways in which you can associate UI features with text labels or descriptions for accessibility purposes. It is useful to know when to use each. You’ll see examples of most of these later on in the article, but briefly:
 
 - `aria-label=""` can be set on an element to provide a brief descriptive label when it isn't appropriate to have the label actually appearing in the UI, for example a [search input](/en-US/docs/Web/HTML/Element/input/search) in a horizontal nav bar.
-- `aria-labelledby=""` can be set on an element and given a value the same as the ID of an element that contains a label for the element. This is useful when the element’s label is available in the UI, but for some reason a conventional `<label>` won’t work.
+- `aria-labelledby=""` can be set on an element and given a value the same as the ID of an element that contains a label for the element. This is useful when the element’s label is available in the UI, but for some reason a conventional {{HTMLElement('label')}} won’t work.
 - `aria-description=""` works the same as `aria-label=""`, but is used when you want to give an element a more detailed description, rather than a short label.
 - `aria-describedby=""` works the same as `aria-labelledby=""`, but is used when you want to associate the element with a more detailed description, rather than a short label.
 - `aria-details=""` works in the same way as `aria-describedby=""`, except that it denotes more complex sets of details, rather than simple text descriptions. You can learn more about this in the next section.
@@ -110,13 +110,13 @@ If the descriptive text does appear in the UI, you can link the description to t
 
 ## Insertions and deletions
 
-A common wish in online document systems like Google Docs is to be able to track changes, to see what reviewers or editors have suggested as changes to the text, before the managing editor or author accepts or rejects those changes. The semantics for this have long been available in HTML, via the [`<ins>`](/en-US/docs/Web/HTML/Element/ins) and [`<del>`](/en-US/docs/Web/HTML/Element/del) elements:
+A common wish in online document systems like Google Docs is to be able to track changes, to see what reviewers or editors have suggested as changes to the text, before the managing editor or author accepts or rejects those changes. The semantics for this have long been available in HTML, via the {{HTMLElement('ins')}} and {{HTMLElement('del')}} elements:
 
 ```html
 <p>Freida’s pet is a <del>black Cat called Luna</del><ins>purple Tyrannosaurus Rex called Tiny</ins>.</p>
 ```
 
-With the new additions, you now have new roles available to provide the same semantics, should you be unable to use `<ins>` and `<del>` elements for some reason:
+With the new additions, you now have new roles available to provide the same semantics, should you be unable to use {{HTMLElement('ins')}} and {{HTMLElement('del')}} elements for some reason:
 
 ```html
 <p>Freida’s pet is a <span role="deletion">black Cat called Luna</span><span role="insertion">purple Tyrannosaurus Rex called Tiny</span>.</p>
@@ -137,7 +137,7 @@ We could even provide an information box saying who made the suggestion and when
   <span role="suggestion" aria-details="comment-source"><span role="deletion">black Cat called Luna</span><span role="insertion">purple Tyrannosaurus Rex called Tiny</span></span>.
 </p>
 
-<div id="comment-source">Suggested by Chris, <time datetime="2019-03-30T19:29">March 30 2019, 19:29</time></div>
+<div id="comment-source">Suggested by Chris, <time datetime="2019-03-30T19:29">March 30 2021, 19:29</time></div>
 ```
 
 Browsers tend to provide a default black strikethrough for deletions, and a black underline for insertions, but you’ll probably want to use some more interesting styling of your own, for example:
@@ -175,7 +175,7 @@ Let’s say we have a comment box like so:
 </div>
 ```
 
-We’ve used `role="comment"` to mark this up as a comment. To associate the comment with the text being commented, we need to wrap the commented text with an element containing the `aria-details` attribute, the value of which should be the ID of the comment. `<mark>` is a suitable element for this purpose (a comment is a reference annotation), so the annotation could look like this:
+We’ve used `role="comment"` to mark this up as a comment. To associate the comment with the text being commented, we need to wrap the commented text with an element containing the `aria-details` attribute, the value of which should be the ID of the comment. {{HTMLElement('mark')}} is a suitable element for this purpose (a comment is a reference annotation), so the annotation could look like this:
 
 ```html
 <p>The last half of the song is a slow-rising crescendo that peaks at the
@@ -188,7 +188,7 @@ We’ve used `role="comment"` to mark this up as a comment. To associate the com
 </div>
 ```
 
-> **Note:** If for some reason you can’t use the `<mark>` element in your application, you could also use `<span role="mark"></span>`.
+> **Note:** If for some reason you can’t use the {{HTMLElement('mark')}} element in your application, you could also use [`<span role="mark"></span>`](/en-us/web/accessibility/aria/roles/mark_role).
 
 Since `aria-details` can now accept multiple IDs, we can associate multiple comments with the same annotation, like so:
 

@@ -69,7 +69,7 @@ background-color: #fae6fa;
 
 {{EmbedLiveSample('example1', '100%', '100')}}
 
-The "bad" `<div>` on the other hand has a very dark purple background, which makes the text much harder to read:
+The "bad" {{HTMLElement('div')}} on the other hand has a very dark purple background, which makes the text much harder to read:
 
 <div class="hidden"><h4 id="example2">example2</h4><pre class="brush: html">    &#x3C;div class="bad">
       Bad contrast

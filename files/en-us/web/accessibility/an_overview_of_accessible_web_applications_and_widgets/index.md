@@ -8,7 +8,7 @@ tags:
   - Web apps
   - Widget
 ---
-Most JavaScript libraries offer a library of client-side widgets that mimic the behavior of familiar desktop interfaces. Sliders, menu bars, file list views, and more can be built with a combination of JavaScript, CSS, and HTML. Since the HTML4 specification doesn't provide built-in tags that semantically describe these kinds of widgets, developers typically resort to using generic elements such as \<div> and \<span>. While this results in a widget that looks like its desktop counterpart, there usually isn't enough semantic information in the markup to be usable by an assistive technology.
+Most JavaScript libraries offer a library of client-side widgets that mimic the behavior of familiar desktop interfaces. Sliders, menu bars, file list views, and more can be built with a combination of JavaScript, CSS, and HTML. Since the HTML4 specification doesn't provide built-in tags that semantically describe these kinds of widgets, developers typically resort to using generic elements such as {{HTMLElement('div')}} and {{HTMLElement('span')}}. While this results in a widget that looks like its desktop counterpart, there usually isn't enough semantic information in the markup to be usable by an assistive technology.
 
 ## The problem
 
@@ -37,11 +37,11 @@ _Example 1: Markup for a tabs widget built without ARIA labeling. There's no inf
 </div>
 ```
 
-_Example 2: How the tabs widget might be styled visually. Users might recognize it visually, but there are no machine-readable semantics for an assistive technology._ <img alt="Screenshot of the tabs widget" class="default internal" src="tabs_widget.png">
+_Example 2: How the tabs widget might be styled visually. Users might recognize it visually, but there are no machine-readable semantics for an assistive technology._ ![Screenshot of the tabs widget](tabs_widget.png)
 
 ## ARIA
 
-ARIA enables developers to describe their widgets in more detail by adding special attributes to the markup. Designed to fill the gap between standard HTML tags and the desktop-style controls found in dynamic web applications, ARIA provides roles and states that describe the behavior of most familiar UI widgets.
+**ARIA** enables developers to describe their widgets in more detail by adding special attributes to the markup. Designed to fill the gap between standard HTML tags and the desktop-style controls found in dynamic web applications, ARIA provides roles and states that describe the behavior of most familiar UI widgets.
 
 > **Warning:** Many of these were later added in HTML5, and **developers should always prefer using the correct semantic HTML element over using ARIA**.
 
@@ -147,7 +147,7 @@ Do not do this. Instead, implement the "view" mode using a different element alt
 
 ### Asynchronous content changes
 
-<div class="note">Under construction. See also <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">Live Regions</a></div>
+> **Note:** Under construction. See also [Live Regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
 
 ## Keyboard navigation
 
@@ -163,7 +163,7 @@ Here's a summary of how keyboard navigation should work in an ARIA-enabled web a
 - Within a form, the Spacebar key should select or activate the control, while the Enter key should submit the form's default action.
 - If in doubt, mimic the standard desktop behavior of the control you are creating.
 
-So, for the Tabs widget example above, the user should be able to navigate into and out of the widget's container (the \<ol> in our markup) using the Tab and Shift-Tab keys. Once keyboard focus is inside the container, the arrow keys should allow the user to navigate between each tab (the \<li> elements). From here, conventions vary from platform to platform. On Windows, the next tab should automatically be activated when the user presses the arrow keys. On Mac OS X, the user can press either Enter or the Spacebar to activate the next tab. An in-depth tutorial for creating [Keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets) describes how to implement this behavior with JavaScript.
+So, for the Tabs widget example above, the user should be able to navigate into and out of the widget's container (the {{HTMLElement('ol')}} in our markup) using the Tab and Shift-Tab keys. Once keyboard focus is inside the container, the arrow keys should allow the user to navigate between each tab (the {{HTMLElement('li')}} elements). From here, conventions vary from platform to platform. On Windows, the next tab should automatically be activated when the user presses the arrow keys. On Mac OS X, the user can press either Enter or the Spacebar to activate the next tab. An in-depth tutorial for creating [Keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets) describes how to implement this behavior with JavaScript.
 
 ## See also
 
