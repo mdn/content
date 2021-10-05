@@ -7,7 +7,9 @@ tags:
   - Beginner
   - WebGL
 ---
-<div>{{GamesSidebar}}</div><p class="summary"><span class="seosummary"><a href="https://babylonjs.com/">Babylon.js</a> is one of the most popular 3D game engines used by developers. As with any other 3D library it provides built-in functions to help you implement common 3D functionality more quickly. In this article we'll take you through the real basics of using Babylon.js, including setting up a development environment, structuring the necessary HTML, and writing the JavaScript code.</span></p>
+<div>{{GamesSidebar}}</div>
+
+<p><a href="https://babylonjs.com/">Babylon.js</a> is one of the most popular 3D game engines used by developers. As with any other 3D library it provides built-in functions to help you implement common 3D functionality more quickly. In this article we'll take you through the real basics of using Babylon.js, including setting up a development environment, structuring the necessary HTML, and writing the JavaScript code.</p>
 
 <p>We will try to create a simple demo first — a cube rendered on the screen. If you have already worked through our <em>Building up a basic demo</em> <a href="/en-US/docs/Games/Techniques/3D_on_the_web">series</a> with <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js">Three.js</a>, <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas">PlayCanvas</a> or <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame">A-Frame</a> (or you are familiar with other 3D libraries) you'll notice that Babylon.js works on similar concepts: camera, light and objects.</p>
 
@@ -91,7 +93,7 @@ engine.runRenderLoop(renderLoop);
 <p>There are many <a href="https://doc.babylonjs.com/tutorials/Cameras">cameras</a> available in Babylon.js; <code>FreeCamera</code> is the most basic and universal one. To initialize it you need to pass it three parameters: any name you want to use for it, the coordinates where you want it to be positioned in the 3D space, and the scene you want to add it to.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You probably noticed the <code>BABYLON.Vector3()</code> method in use here — this defines a 3D position on the scene. Babylon.js is bundled with a complete math library for handling vectors, colors, matrices etc.</p>
+<p><strong>Note:</strong> You probably noticed the <code>BABYLON.Vector3()</code> method in use here — this defines a 3D position on the scene. Babylon.js is bundled with a complete math library for handling vectors, colors, matrices etc.</p>
 </div>
 
 <h2 id="Let_there_be_light">Let there be light</h2>
@@ -113,7 +115,7 @@ engine.runRenderLoop(renderLoop);
 <p>A mesh is a way the engine creates geometric shapes, so material can be easily applied to them later on. In this case we're creating a box using the <code>Mesh.CreateBox</code> method with it's own name, a size of 2, and a declaration of which scene we want it added to.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The size or position values (e.g. for the box size) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.</p>
+<p><strong>Note:</strong> The size or position values (e.g. for the box size) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.</p>
 </div>
 
 <p>If you save and refresh now, your object will look like a square, because it's facing the camera. The good thing about objects is that we can move them on the scene however we want, for example rotating and scaling. Let's apply a little bit of rotation to the box, so we can see more than one face — again, add these lines below the previous one:</p>

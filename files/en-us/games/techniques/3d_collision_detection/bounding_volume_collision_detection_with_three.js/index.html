@@ -13,7 +13,7 @@ tags:
 ---
 <div>{{GamesSidebar}}</div>
 
-<p class="summary">This article shows how to implement <strong>collision detection between bounding boxes and spheres using the Three.js</strong> library. It is assumed that before reading this you have read our <a href="/en-US/docs/Games/Techniques/3D_collision_detection">3D collision detection</a> introductory article first, and have basic knowledge about Three.js.</p>
+<p>This article shows how to implement <strong>collision detection between bounding boxes and spheres using the Three.js</strong> library. It is assumed that before reading this you have read our <a href="/en-US/docs/Games/Techniques/3D_collision_detection">3D collision detection</a> introductory article first, and have basic knowledge about Three.js.</p>
 
 <h2 id="Using_Box3_and_Sphere">Using <code>Box3</code> and <code>Sphere</code></h2>
 
@@ -34,7 +34,7 @@ var knotBBox = new Box3(
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: The <code>boundingBox</code> property takes the <code>Geometry</code> itself as reference, and not the <code>Mesh</code>. So any transformations such as scale, position, etc. applied to the <code>Mesh</code> will be ignored while computing the calculating box.</p>
+<p><strong>Note:</strong> The <code>boundingBox</code> property takes the <code>Geometry</code> itself as reference, and not the <code>Mesh</code>. So any transformations such as scale, position, etc. applied to the <code>Mesh</code> will be ignored while computing the calculating box.</p>
 </div>
 
 <p>A more simple alternative that fixes the previous issue is to set those boundaries later on with <code>Box3.setFromObject</code>, which will compute the dimensions taking into account a 3D entity's <strong>transformations <em>and</em> any child meshes</strong> as well.</p>
@@ -81,7 +81,7 @@ knotBBox.containsPoint(point);</pre>
 <pre class="brush: js">knotBbox.intersectsBox(otherBox);</pre>
 
 <div class="note">
-<p><strong>Note</strong>: This is different from the <code>Box3.containsBox</code> method, which checks whether the Box3 <em>fully</em> wraps another one.</p>
+<p><strong>Note:</strong> This is different from the <code>Box3.containsBox</code> method, which checks whether the Box3 <em>fully</em> wraps another one.</p>
 </div>
 
 <h4 id="Sphere_vs._Sphere"><code>Sphere</code> vs. <code>Sphere</code></h4>
