@@ -40,18 +40,18 @@ Here is a simple form:
  </form>
 ```
 
-## <span class="mw-headline" id="Checking_for_validity_and_notifying_the_user">Checking for validity and notifying the user</span>
+## Checking for validity and notifying the user
 
 Form validations consists of several steps:
 
 1.  Checking if the e-mail address or entered name are valid. Each field has a set of criteria which must be met in order to pass validation.  In order to simplify this example, we’ll check whether the e-mail address contains the “@” symbol, and if the name entry contains at least 1 character.
 2.  If the above criteria is not met, the field’s `aria-invalid` attribute will be given a value of “`true`”.
-3.  If the criteria was not met, the user will be notified via an alert. Instead of using the JavaScript ‘`alert`’ function, we’ll use a simple WAI-ARIA widget for notification. This notifies the user of the error, but allows for them continue modifying the form without losing focus (caused by the “`onblur`” handler in JavaScript's default ‘`alert`’ function).
+3.  If the criteria was not met, the user will be notified via an alert. Instead of using the JavaScript ‘`alert`’ function, we’ll use a WAI-ARIA widget for notification. This notifies the user of the error, but allows for them continue modifying the form without losing focus caused by the “`onblur`” handler in JavaScript's default ‘`alert`’ function.
 
-Below is example JavaScript code which could be inserted above the closing “`head`” tag:
+Below is example JavaScript code which could be inserted above the closing {{HTMLElement('head')}} tag:
 
 ```js
- <script type="application/javascript">
+ <script>
  function removeOldAlert()
  {
    var oldAlert = document.getElementById("alert");
@@ -86,7 +86,7 @@ Below is example JavaScript code which could be inserted above the closing “`h
  </script>
 ```
 
-## <span class="mw-headline" id="The_checkValidity_function">The <code>checkValidity</code> function</span>
+## The `checkValidity` function
 
 The primary method in JavaScript used for form validation is the `checkValidity` function. This method takes three parameters: The ID of the `input` that is to be validated, the term to search for to ensure validity, and the error message to be inserted into the alert.
 
@@ -99,17 +99,17 @@ If invalid, the function does two things:
 
 If the search term is found, the `aria-invalid` attribute is reset to “`false`”. In addition, any leftover alerts are removed.
 
-## <span class="mw-headline" id="The_addAlert_function">The <code>addAlert</code> function</span>
+## The `addAlert` function
 
 This function first removes any old alerts. The function is simple: It looks for an element with id “`alert`”, and if found, removes that from the [document object model](/en-US/docs/Mozilla/Tech/XUL/Tutorial/Document_Object_Model).
 
-Next, the function creates a `div` element to hold the alert text. It gets an ID of “`alert`”. And it gets a role set of “alert”. This is actually ARIA-inspired, even though it doesn’t say “aria” in the attribute name. This is because that role is based on the <a class="external text" href="https://www.w3.org/TR/xhtml-role/">XHTML Role Attribute Module</a> that was ported to HTML for simplicity.
+Next, the function creates a {{HTMLElement('div')}} element to hold the alert text. It gets an ID of “`alert`”. And it gets a [role set of “alert”](/en-US/docs/Web/Accessibility/ARIA/Roles/Alert_role). 
 
 The text is added to the `div` element, and the `div` element is added to the document.
 
 The moment this happens, Firefox will fire an “alert” event to assistive technologies when this `div` appears. Most screen readers will pick this one up automatically and speak it. This is similar to the Notification Bar in Firefox that prompts you whether you want to save a password. The alert we just created does not have any buttons to press, it just tells us what’s wrong.
 
-## <span class="mw-headline" id="Adding_the_magic_to_the_.E2.80.9Conblur.E2.80.9D_event">Modifying the “<code>onblur</code>” event</span>
+## Modifying the `onblur` event
 
 All that’s left now is add the event handler. We need to change the two inputs for e-mail and name for this:
 
@@ -130,11 +130,11 @@ If you use Firefox 3 and a currently-supported screen reader, try the following:
 
 In both cases, when returning focus to the field in question, your screen reader should tell you that this field is invalid. JAWS 9 supports this, but JAWS 8 does not, so this may not work in all versions of the screen readers supported.
 
-## <span class="mw-headline" id="A_few_questions_that_you_might_have">A few questions that you might have</span>
+## A few questions that you might have
 
 - Q. Why did you put both “`(required)`” in the label text and the `aria-required` attribute on some of the inputs?
   - : A. If this were a real live form, and the site was being visited by a browser that does not yet support ARIA, we’d still want to give an indication that this is a required field.
 - Q. Why don’t you set focus back to the invalid field automatically?
   - : A. Because this is not allowed by the Windows API specs, and possibly others. Also, letting the focus jump around without real user interaction too often is not a nice thing to do in general.
 
-<div class="warning">TBD: let's rethink this -- personally, I think setting focus might be good if done without causing a keyboard trap.</div>
+> **Warning:** TBD: let's rethink this -- personally, I think setting focus might be good if done without causing a keyboard trap.
