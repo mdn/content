@@ -142,6 +142,7 @@ As you will notice from looking around these guidelines, the code blocks that ar
 To do this, you first use the MDN editor controls to put your code block in a `<pre>` block and give it appropriate syntax highlighting. The source of the code will look something like this:
 
 ```js
+<pre class="brush: js">
 function myFunc() {
   console.log('Hello!');
 };</pre>

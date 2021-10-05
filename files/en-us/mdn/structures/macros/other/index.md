@@ -50,7 +50,9 @@ We have some macros specifically designed to create [quicklinks](/en-US/docs/MDN
 
 #### Example without heading
 
-\\{{Page("/en-US/docs/MDN/About", "How you can help")}}
+```js
+\{{Page("/en-US/docs/MDN/About", "How you can help")}}
+```
 
 Result:
 
@@ -58,7 +60,9 @@ Result:
 
 #### Example with heading
 
-\\{{Page("/en-US/docs/MDN/About", "How you can help", 0, 1)}}
+```js
+\{{Page("/en-US/docs/MDN/About", "How you can help", 0, 1)}}
+```
 
 Result:
 
