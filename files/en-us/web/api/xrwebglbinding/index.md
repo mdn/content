@@ -27,6 +27,8 @@ The **`XRWebGLBinding`** interface is used to create layers that have a GPU bac
 
 ## Methods
 
+- {{domxref("XRWebGLBinding.createCubeLayer()")}}
+  - : Returns an {{domxref("XRCubeLayer")}} object, which is a layer that renders directly from a [cubemap](https://en.wikipedia.org/wiki/Cube_mapping), and projects it onto the inside faces of a cube.
 - {{domxref("XRWebGLBinding.createEquirectLayer()")}}
   - : Returns an {{domxref("XREquirectLayer")}} object which is a layer that maps [equirectangular](https://en.wikipedia.org/wiki/Equirectangular_projection) coded data onto the inside of a sphere.
 - {{domxref("XRWebGLBinding.createProjectionLayer()")}}
