@@ -17,7 +17,7 @@ tags:
   - getusermedia
 browser-compat: api.MediaDevices.getUserMedia
 ---
-{{APIRef("Media Capture and Streams")}}
+{{securecontext_header}}{{APIRef("Media Capture and Streams")}}
 
 The
 {{domxref("MediaDevices")}}**`.getUserMedia()`** method
