@@ -16,7 +16,7 @@ It clones by recursing through the input object while maintaining a map of previ
 ## Things that don't work with structured clone
 
 - {{jsxref("Function")}} objects cannot be duplicated by the structured clone algorithm; attempting to throws a `DATA_CLONE_ERR` exception.
-- Cloning DOM nodes likewise throws a `DATA_CLONE_ERR` exception. 
+- Cloning DOM nodes likewise throws a `DataCloneError` exception. 
 - Certain object properties are not preserved:
 
   - The `lastIndex` property of {{jsxref("RegExp")}} objects is not preserved.
