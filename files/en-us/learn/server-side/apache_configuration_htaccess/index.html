@@ -91,7 +91,7 @@ tags:
   &lt;/IfModule&gt;
 &lt;/IfModule&gt;</pre>
 
-<p class="brush: bash">Google Chrome's <a href="https://developers.google.com/fonts/docs/troubleshooting">Google Fonts troubleshooting guide</a> tells us that, while Google Fonts may send the CORS header with every response, some proxy servers may strip it before the browser can use it to render the font.</p>
+<p>Google Chrome's <a href="https://developers.google.com/fonts/docs/troubleshooting">Google Fonts troubleshooting guide</a> tells us that, while Google Fonts may send the CORS header with every response, some proxy servers may strip it before the browser can use it to render the font.</p>
 
 <pre class="brush: bash">&lt;IfModule mod_headers.c&gt;
   &lt;FilesMatch "\.(eot|otf|tt[cf]|woff2?)$"&gt;

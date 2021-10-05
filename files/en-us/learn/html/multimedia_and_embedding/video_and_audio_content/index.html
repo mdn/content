@@ -16,7 +16,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}</div>
 
-<p><span class="seoSummary">Now that we are comfortable with adding simple images to a webpage, the next step is to start adding video and audio players to your HTML documents! In this article we'll look at doing just that with the {{htmlelement("video")}} and {{htmlelement("audio")}} elements; we'll then finish off by looking at how to add captions/subtitles to your videos.</span></p>
+<p>Now that we are comfortable with adding simple images to a webpage, the next step is to start adding video and audio players to your HTML documents! In this article we'll look at doing just that with the {{htmlelement("video")}} and {{htmlelement("audio")}} elements; we'll then finish off by looking at how to add captions/subtitles to your videos.</p>
 
 <table>
  <tbody>
@@ -100,7 +100,7 @@ tags:
 
 <div class="notecard note">
   <p><strong>Note:</strong> Why do we have this problem? It turns out that several popular formats, such as MP3 and MP4/H.264, are excellent but are encumbered by patents; that is, there are patents covering some or all of the technology that they're based upon. In the United States, patents covered MP3 until 2017, and H.264 is encumbered by patents through at least 2027.</p>
-  
+
   <p>Because of those patents, browsers that wish to implement support for those codecs must pay typically enormous license fees. In addition, some people prefer to avoid restricted software and prefer to use only open formats. Due to these legal and preferential reasons, web developers find themselves having to support multiple formats to capture their entire audience.</p>
 </div>
 
@@ -227,7 +227,7 @@ tags:
 
 <p>A typical WebVTT file will look something like this:</p>
 
-<pre class="eval line-numbers  language-html"><code class="language-html">WEBVTT
+<pre class="brush: plain">WEBVTT
 
 1
 00:00:22.230 --&gt; 00:00:24.606
@@ -237,7 +237,7 @@ This is the first subtitle.
 00:00:30.739 --&gt; 00:00:34.074
 This is the second.
 
-  ...</code>
+  ...
 </pre>
 
 <p>To get this displayed along with the HTML media playback, you need to:</p>

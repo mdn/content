@@ -188,7 +188,7 @@ removedItem;</pre>
  </li>
 </ol>
 
-<h2 id="Active_learning_Printing_those_products!">Active learning: Printing those products!</h2>
+<h2 id="Active_learning_Printing_those_products">Active learning: Printing those products</h2>
 
 <p>Let's return to the example we described earlier — printing out product names and prices on an invoice, then totaling the prices and printing them at the bottom. In the editable example below there are comments containing numbers — each of these marks a place where you have to add something to the code. They are as follows:</p>
 
@@ -201,10 +201,7 @@ removedItem;</pre>
  <li>We want you to change the line just below <code>// number 5</code> so that the <code>itemText</code> variable is made equal to "current item name — $current item price", for example "Shoes — $23.99" in each case, so the correct information for each item is printed on the invoice. This is just simple string concatenation, which should be familiar to you.</li>
 </ol>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 150px;"&gt;
 
@@ -255,7 +252,7 @@ totalBox.textContent = 'Total: $' + total.toFixed(2);
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js">const textarea = document.getElementById('code');
+<pre class="brush: js hidden">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 let code = textarea.value;
@@ -332,7 +329,7 @@ textarea.onkeyup = function(){
   updateCode();
 };</pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -351,9 +348,8 @@ body {
   margin: 10px;
   background-color: #f5f9fa;
 }</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', '100%', 730, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Active_learning_Printing_those_products', '100%', 750) }}</p>
 
 <h2 id="Active_learning_Top_5_searches">Active learning: Top 5 searches</h2>
 
@@ -372,10 +368,7 @@ body {
  <li>Add a line below the <code>// number 2</code> comment that removes the value currently at the end of the array.</li>
 </ol>
 
-<div class="hidden">
-<h6 id="Playable_code_2">Playable code 2</h6>
-
-<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
 &lt;div class="output" style="min-height: 150px;"&gt;
 
 &lt;input type="text"&gt;&lt;button&gt;Search&lt;/button&gt;
@@ -434,7 +427,7 @@ searchBtn.onclick = function() {
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -454,7 +447,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js">const textarea = document.getElementById('code');
+<pre class="brush: js hidden">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 let code = textarea.value;
@@ -530,9 +523,8 @@ textarea.onkeyup = function(){
 
   updateCode();
 };</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_2', '100%', 700, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Active_learning_Top_5_searches', '100%', 700) }}</p>
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 

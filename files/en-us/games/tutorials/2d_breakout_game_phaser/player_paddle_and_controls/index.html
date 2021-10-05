@@ -14,11 +14,9 @@ tags:
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_Phaser/Game_over")}}</p>
 
-<div class="summary">
 <p>This is the <strong>7th step</strong> out of 16 of the <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser">Gamedev Phaser tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson07.html">Gamedev-Phaser-Content-Kit/demos/lesson07.html</a>.</p>
-</div>
 
-<p><span class="seoSummary">We have the ball moving and bouncing off the walls, but it quickly gets boring — there's no interactivity! We need a way to introduce gameplay, so in this article we'll create a paddle to move around and hit the ball with.</span></p>
+<p>We have the ball moving and bouncing off the walls, but it quickly gets boring — there's no interactivity! We need a way to introduce gameplay, so in this article we'll create a paddle to move around and hit the ball with.</p>
 
 <h2 id="Rendering_the_paddle">Rendering the paddle</h2>
 
@@ -96,7 +94,7 @@ tags:
 
 <h2 id="Position_the_ball">Position the ball</h2>
 
-<p>We have the paddle working as expected, so let's position the ball on it. It's very similar to positioning the paddle — we need to have it placed in the middle of the screen horizontally and at the bottom vertically with a little offset from the bottom. To place it exactly as we want it we will set the anchor to the exact middle of the ball. Find the existing <code>ball <span class="keyword operator">=</span> game.add.</code><span class="call function"><code>sprite( ... )</code> line, and replace it with the following two lines:</span></p>
+<p>We have the paddle working as expected, so let's position the ball on it. It's very similar to positioning the paddle — we need to have it placed in the middle of the screen horizontally and at the bottom vertically with a little offset from the bottom. To place it exactly as we want it we will set the anchor to the exact middle of the ball. Find the existing <code>ball = game.add.sprite( ... )</code> line, and replace it with the following two lines:</p>
 
 <pre class="brush: js">ball = game.add.sprite(game.world.width*0.5, game.world.height-25, 'ball');
 ball.anchor.set(0.5);</pre>

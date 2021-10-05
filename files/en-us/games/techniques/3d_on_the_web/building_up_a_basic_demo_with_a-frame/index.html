@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{GamesSidebar}}</div>
 
-<p class="summary">The <a href="/en-US/docs/Games/Techniques/3D_on_the_web/WebVR">WebVR</a> and <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> APIs already enable us to start creating virtual reality (VR) experiences inside web browsers, but the community is still waiting for tools and libraries to appear, to make this easier. Mozilla's <a href="https://aframe.io/">A-Frame</a> framework provides a markup language allowing us to build 3D VR landscapes using a system familiar to web developers, which follows game development coding principles; this is useful for quickly and successfully building prototypes and demos, without having to write a lot of JavaScript or GLSL. This article explains how to get up and running with A-Frame, and how to use it to build up a simple demo.</p>
+<p>The <a href="/en-US/docs/Games/Techniques/3D_on_the_web/WebVR">WebVR</a> and <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> APIs already enable us to start creating virtual reality (VR) experiences inside web browsers, but the community is still waiting for tools and libraries to appear, to make this easier. Mozilla's <a href="https://aframe.io/">A-Frame</a> framework provides a markup language allowing us to build 3D VR landscapes using a system familiar to web developers, which follows game development coding principles; this is useful for quickly and successfully building prototypes and demos, without having to write a lot of JavaScript or GLSL. This article explains how to get up and running with A-Frame, and how to use it to build up a simple demo.</p>
 
 <h2 id="High_level_overview">High level overview</h2>
 
@@ -55,7 +55,7 @@ tags:
 <p>A scene is the place where everything happens. When creating new objects in the demo, we will be adding them all to the scene to make them visible on the screen. In A-Frame, the scene is represented by a <a href="https://aframe.io/docs/core/scene.html">Scene entity</a>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: An Entity is any element — it can be an object like a box, cylinder or cone, but it can also be a camera, light or sound source.</p>
+<p><strong>Note:</strong> An Entity is any element — it can be an object like a box, cylinder or cone, but it can also be a camera, light or sound source.</p>
 </div>
 
 <p>Let's create the scene by adding an <code>&lt;a-scene&gt;</code> element inside the <code>&lt;body&gt;</code> element:</p>
@@ -78,7 +78,7 @@ tags:
 <p>It contains a few parameters already defined: <code>color</code>, <code>position</code> and <code>rotation</code> — these are fairly obvious, and define the base color of the cube, the position inside the 3D scene, and the rotation of the cube.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The distance values (e.g. for the cube y position) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.</p>
+<p><strong>Note:</strong> The distance values (e.g. for the cube y position) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.</p>
 </div>
 
 <h3 id="Adding_a_background_Sky_box">Adding a background: Sky box</h3>
@@ -275,7 +275,7 @@ render();
 <p>If you have a VR device available, now is a good time to try out your scene with it too.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can also <a href="https://github.com/end3r/MDN-Games-3D/blob/gh-pages/A-Frame/shapes.html">check it out on GitHub</a>.</p>
+<p><strong>Note:</strong> You can also <a href="https://github.com/end3r/MDN-Games-3D/blob/gh-pages/A-Frame/shapes.html">check it out on GitHub</a>.</p>
 </div>
 
 <p>That was easier than you thought, right? A-Frame targets web developers by offering easy to use web markup and all the advantages that brings, such as JavaScript manipulation. It is easy to start with, but also provides a powerful API for advanced concepts, as well as dealing with cross browser differences and suchlike. The community is growing, just like the number of supported VR devices — it's a great time to start experimenting with such frameworks.</p>

@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{GamesSidebar}}</div>
 
-<p class="summary">This article provides an introduction to the different bounding volume techniques used to implement collision detection in 3D environments. Followup articles will cover implementations in specific 3D libraries.</p>
+<p>This article provides an introduction to the different bounding volume techniques used to implement collision detection in 3D environments. Followup articles will cover implementations in specific 3D libraries.</p>
 
 
 <h2 id="Axis-aligned_bounding_boxes">Axis-aligned bounding boxes</h2>
@@ -86,7 +86,7 @@ tags:
 </pre>
 
 <div class="note">
-<p>The code above features a square root, which can be expensive to calculate. An easy optimization to avoid it consists of comparing the squared distance with the squared radius, so the optimized equation would instead involve <code>distanceSqr &lt; sphere.radius * sphere.radius</code>.</p>
+<p><strong>Note:</strong> The code above features a square root, which can be expensive to calculate. An easy optimization to avoid it consists of comparing the squared distance with the squared radius, so the optimized equation would instead involve <code>distanceSqr &lt; sphere.radius * sphere.radius</code>.</p>
 </div>
 
 <h3 id="Sphere_vs._sphere">Sphere vs. sphere</h3>

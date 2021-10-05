@@ -79,7 +79,7 @@ tags:
 
 <p>One of the best accessibility aids a screen reader user can have is an excellent content structure with headings, paragraphs, lists, etc. An excellent semantic example might look something like the following:</p>
 
-<pre class="brush: html example-good line-numbers language-html">&lt;h1&gt;My heading&lt;/h1&gt;
+<pre class="brush: html example-good">&lt;h1&gt;My heading&lt;/h1&gt;
 
 &lt;p&gt;This is the first section of my document.&lt;/p&gt;
 
@@ -110,7 +110,7 @@ tags:
 
 <p>People sometimes write headings, paragraphs, etc. using presentational HTML and line breaks, something like the following:</p>
 
-<pre class="brush: html example-bad line-numbers language-html">&lt;font size="7"&gt;My heading&lt;/font&gt;
+<pre class="brush: html example-bad">&lt;font size="7"&gt;My heading&lt;/font&gt;
 &lt;br&gt;&lt;br&gt;
 This is the first section of my document.
 &lt;br&gt;&lt;br&gt;
@@ -342,7 +342,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 <p>Whilst the above addition allows us to tab to the buttons, it does not allow us to activate them via the Enter/Return key. To do that, we had to add the following bit of JavaScript trickery:</p>
 
-<pre class="brush: js line-numbers  language-js">document.onkeydown = function(e) {
+<pre class="brush: js">document.onkeydown = function(e) {
   if(e.keyCode === 13) { // The Enter/Return key
     document.activeElement.click();
   }

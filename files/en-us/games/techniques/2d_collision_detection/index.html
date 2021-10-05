@@ -9,9 +9,7 @@ tags:
 ---
 <div>{{GamesSidebar}}</div>
 
-<div class="summary">
 <p>Algorithms to detect collision in 2D games depend on the type of shapes that can collide (e.g. Rectangle to Rectangle, Rectangle to Circle, Circle to Circle). Generally you will have a simple generic shape that covers the entity known as a "hitbox" so even though collision may not be pixel perfect, it will look good enough and be performant across multiple entities. This article provides a review of the most common techniques used to provide collision detection in 2D games.</p>
-</div>
 
 <h2 id="Axis-Aligned_Bounding_Box">Axis-Aligned Bounding Box</h2>
 
@@ -73,7 +71,7 @@ rect2.bind("EnterFrame", function () {
 <p>{{ EmbedLiveSample('Rect_code', '700', '300', '', 'Games/Techniques/2D_collision_detection') }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: <a href="https://jsfiddle.net/jlr7245/217jrozd/3/">Another example without Canvas or external libraries</a>.</p>
+<p><strong>Note:</strong> <a href="https://jsfiddle.net/jlr7245/217jrozd/3/">Another example without Canvas or external libraries</a>.</p>
 </div>
 
 <h2 id="Circle_Collision">Circle Collision</h2>
@@ -162,7 +160,7 @@ if (distance &lt; circle1.radius + circle2.radius) {
 
 <p>{{ EmbedLiveSample('Playable_code', '700', '300', '', 'Games/Techniques/2D_collision_detection') }}</p>
 
-<p><strong>Note</strong>:  <a href="https://jsfiddle.net/jlr7245/teb4znk0/20/">Here is another example without Canvas or external libraries.</a></p>
+<p><strong>Note:</strong> <a href="https://jsfiddle.net/jlr7245/teb4znk0/20/">Here is another example without Canvas or external libraries.</a></p>
 
 <h2 id="Separating_Axis_Theorem">Separating Axis Theorem</h2>
 

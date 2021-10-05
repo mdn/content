@@ -76,7 +76,7 @@ tags:
 
 <p>Each line of the request contains information about it. The first part is called the <strong>header</strong>, and contains useful information about the request, in the same way that an <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">HTML head</a> contains useful information about an HTML document (but not the actual content itself, which is in the body):</p>
 
-<pre class="brush: http">GET /en-US/search?q=client+server+overview&amp;topic=apps&amp;topic=html&amp;topic=css&amp;topic=js&amp;topic=api&amp;topic=webdev HTTP/1.1
+<pre class="brush: plain">GET /en-US/search?q=client+server+overview&amp;topic=apps&amp;topic=html&amp;topic=css&amp;topic=js&amp;topic=api&amp;topic=webdev HTTP/1.1
 Host: developer.mozilla.org
 Connection: keep-alive
 Pragma: no-cache
@@ -127,7 +127,7 @@ Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; csrftoken=zIPUJsAZv6pcgCBJSC
 
 <p>At the end of the message we see the <strong>body</strong> content — which contains the actual HTML returned by the request.</p>
 
-<pre class="brush: http">HTTP/1.1 200 OK
+<pre class="brush: plain">HTTP/1.1 200 OK
 Server: Apache
 X-Backend-Server: developer1.webapp.scl3.mozilla.com
 Vary: Accept,Cookie, Accept-Encoding
@@ -159,7 +159,7 @@ Content-Length: 41823
 
 <p>The text below shows the HTTP request made when a user submits new profile details on this site. The format of the request is almost the same as the <code>GET</code> request example shown previously, though the first line identifies this request as a <code>POST</code>. </p>
 
-<pre class="brush: http">POST /en-US/profiles/hamishwillee/edit HTTP/1.1
+<pre class="brush: plain">POST /en-US/profiles/hamishwillee/edit HTTP/1.1
 Host: developer.mozilla.org
 Connection: keep-alive
 Content-Length: 432
@@ -183,7 +183,7 @@ csrfmiddlewaretoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT&amp;user-username=hamishwil
 
 <p>The response from the request is shown below. The status code of "<code>302 Found</code>" tells the browser that the post succeeded, and that it must issue a second HTTP request to load the page specified in the <code>Location</code> field. The information is otherwise similar to that for the response to a <code>GET</code> request.</p>
 
-<pre class="brush: http">HTTP/1.1 302 FOUND
+<pre class="brush: plain">HTTP/1.1 302 FOUND
 Server: Apache
 X-Backend-Server: developer3.webapp.scl3.mozilla.com
 Vary: Cookie

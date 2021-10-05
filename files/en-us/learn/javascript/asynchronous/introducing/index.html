@@ -67,9 +67,7 @@ btn.addEventListener('click', () =&gt; {
 
 <p>So in the example above, after you've clicked the button the paragraph won't appear until after the OK button is pressed in the alert box. You can try it for yourself:</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;<span class="pl-ent">button</span>&gt;Click me&lt;/<span class="pl-ent">button</span>&gt;</pre>
-</div>
+<pre class="brush: html hidden">&lt;<span class="pl-ent">button</span>&gt;Click me&lt;/<span class="pl-ent">button</span>&gt;</pre>
 
 <p>{{EmbedLiveSample('Synchronous_JavaScript', '100%', '110px')}}</p>
 
@@ -81,7 +79,7 @@ btn.addEventListener('click', () =&gt; {
 
 <p>For reasons illustrated earlier (e.g. related to blocking), many Web API features now use asynchronous code to run, especially those that access or fetch some kind of resource from an external device, such as fetching a file from the network, accessing a database and returning data from it, accessing a video stream from a web cam, or broadcasting the display to a VR headset.</p>
 
-<p>Why is this difficult to get to work using synchronous code? Let's look at a quick example. When you fetch an image from a server, you can't return the result immediately. That means that the following (pseudocode) wouldn't work:</p>
+<p>Why is this difficult to get to work using asynchronous code? Let's look at a quick example. When you fetch an image from a server, you can't return the result immediately. That means that the following (pseudocode) wouldn't work:</p>
 
 <pre class="brush: js">let response = fetch('myImage.png'); // fetch is asynchronous
 let blob = response.blob();
