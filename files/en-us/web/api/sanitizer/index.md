@@ -7,7 +7,7 @@ tags:
   - sanitize
 browser-compat: api.Sanitizer
 ---
-{{draft}}{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
+{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
 
 The **`Sanitizer`** interface of the {{domxref('HTML Sanitizer API')}} allows developers to take untrusted strings of HTML, and sanitize them for safe insertion into a document’s DOM.
 

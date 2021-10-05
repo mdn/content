@@ -8,7 +8,7 @@ tags:
   - sanitize
 browser-compat: api.Sanitizer.Sanitizer
 ---
-{{draft}}{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
+{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
 
 The **`Sanitizer()`** constructor creates a new {{domxref("Sanitizer")}} object which allows developers to take untrusted strings of HTML, and sanitize them for safe insertion into a document’s DOM.
 

@@ -7,7 +7,7 @@ tags:
   - sanitize
 browser-compat: api.Sanitizer.sanitize
 ---
-{{draft}}{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
+{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
 
 The **`sanitize()`** method of the {{domxref("sanitizer")}} interface returns a sanitized {{domxref('DocumentFragment')}} from an input, removing any offending elements or attributes.
 
