@@ -36,10 +36,10 @@ new Sanitizer()
     - `dropAttributes` {{optional_inline}}
       - : An {{jsxref('Array')}} of {{jsxref('String','strings')}} indicating attributes the sanitizer should remove.
     - `allowCustomElements` {{optional_inline}}
-      - : `false` (default) Drops custom elements and their children.
-        `true` ensures that custom elements are checked against build-in and custom configuration checks.
+      - : `false` (default) to remove custom elements and their children.
+        `true` to ensure sanitize custom elements using build-in and custom configuration checks.
     - `allowComments` {{optional_inline}}
-      - : `false` (default) Drops HTML comments.
+      - : `false` (default) to remove HTML comments.
         `true` ensures that comments are retained.
 
 > **Note:** At the time of writing the default elements within each configuration property above are still under consideration.
