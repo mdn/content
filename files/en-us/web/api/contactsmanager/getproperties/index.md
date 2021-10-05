@@ -59,7 +59,7 @@ async function checkProperties() {
 }
 ```
 
-## Select Using Only Supported Properties
+### Select Using Only Supported Properties
 
 The following example is similar to one for the {{domxref("ContactsManager.select", "select()")}} method. Instead of hard-coding the properties passed to `select()`, it uses `getProperties()` to ensure that only supported properties are passed. Otherwise, `select()` might throw a {{jsxref("TypeError")}}. `handleResults()` is a developer defined function.
 

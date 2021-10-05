@@ -62,9 +62,7 @@ Returns a {{jsxref('Promise')}} that resolves with an array of objects containin
 ### Exceptions
 
 - `InvalidStateError`
-  - : The browsing context is not top-level or the contact picker is showing a flag. A
-    flag denotes an already existing contact picker, only one picker can exist at any
-    time.
+  - : The browsing context is not top-level or the contact picker is showing a flag. A flag denotes an already existing contact picker, only one picker can exist at any time.
 - `SecurityError`
   - : If the method is not triggered by user interaction.
 - `TypeError`
@@ -73,7 +71,7 @@ Returns a {{jsxref('Promise')}} that resolves with an array of objects containin
 
 ## Examples
 
-## Basic Example
+### Basic Example
 
 The following example sets an array of properties to be retrieved for each contact, as
 well as setting an options object to allow for multiple contacts to be selected.
@@ -96,7 +94,7 @@ async function getContacts() {
 }
 ```
 
-## Select Using Only Supported Properties
+### Select Using Only Supported Properties
 
 The following example uses {{jsxref("ContactsManager.getProperties", "getProperties()")}} to ensure that only supported properties are passed. Otherwise, `select()` might throw a {{jsxref("TypeError")}}. `handleResults()` is a developer defined function.
 
@@ -112,7 +110,6 @@ async function getContacts() {
   }
 }
 ```
-
 
 ## Specifications
 
