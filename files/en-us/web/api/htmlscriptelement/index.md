@@ -71,7 +71,9 @@ _No specific methods; inherits methods from its parent, {{domxref("HTMLElement")
 
 ### Dynamically importing scripts
 
-Let's create a function that imports new scripts within a document creating a {{HTMLElement("script")}} node _immediately before_ the {{HTMLElement("script")}} that hosts the following code (through {{domxref("document.currentScript")}}). These scripts will be **asynchronously** executed. For more details, see the [`defer`](#defer_property) and [`async`](#async_property) properties.
+Let's create a function that imports new scripts within a document creating a {{HTMLElement("script")}} node _immediately before_ the {{HTMLElement("script")}} that hosts the following code (through {{domxref("document.currentScript")}}).
+These scripts will be **asynchronously** executed.
+For more details, see the [`defer`](#defer_property) and [`async`](#async_property) properties.
 
 ```js
 function loadError(oError) {
@@ -109,6 +111,22 @@ Sample usage:
 affixScriptToHead("myScript1.js");
 affixScriptToHead("myScript2.js", function () { alert("The script \"myScript2.js\" has been correctly loaded."); });
 ```
+
+### Checking if a script type is supported
+
+{{domxref("HTMLScriptElement.supports()")}} provides a unified mechanism for checking whether a browser supports particular types of scripts.
+
+The example below shows how to check for module support, using the existance of the `noModule` attribute as a fallback.
+```js
+function checkModuleSupport() {
+  if ('supports' in HTMLScriptElement) {
+    return HTMLScriptElement.supports('module');
+  }
+  return 'noModule' in document.createElement('script');
+}
+```
+
+Classic scripts are assumed to be supported on all browsers.
 
 ## Specifications
 

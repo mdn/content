@@ -67,27 +67,6 @@ else
 {{ EmbedLiveSample('Examples') }}
 
 
-### Unsupported browsers
-
-Browsers that do not support `HTMLScriptElement.supports()` can simply assume that classic scripts are supported.
-
-Module support can be checked using the `noModule` attribute:
-```js
-function checkModuleSupport() {
-  if ('supports' in HTMLScriptElement) {
-    return HTMLScriptElement.supports('module');
-  }
-  return 'noModule' in document.createElement('script');
-}
-```
-
-You can also use the {{HTMLElement("script")}} element `nomodule` attribute to [fallback to classic scripts when loading modules](/en-US/docs/Web/HTML/Element/script#module_fallback) if needed:
-```html
-<script type="module" src="app.mjs"></script>
-<script nomodule defer src="classic-app-bundle.js"></script>
-```
-
-
 ## Specifications
 
 {{Specifications}}
