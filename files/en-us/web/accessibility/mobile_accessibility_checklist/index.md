@@ -8,7 +8,7 @@ tags:
   - Mobile
   - checklist
 ---
-<div class="summary"><p><span class="seoSummary">This document provides a concise checklist of accessibility requirements for mobile app developers. It is intended to continuously evolve as more patterns arise.</span></p></div>
+<div class="summary"><p><span class="seoSummary">This document provides a concise checklist of accessibility requirements for mobile app developers. It is intended to continuously evolve as more patterns arise.</span>
 
 ## Color
 
@@ -79,4 +79,4 @@ tags:
 
 - Touch targets must be large enough for the user to interact with (see the [BBC Mobile Accessibility Guidelines](http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size) for useful touch target size guidelines).
 
-> **Note:** The <a href="https://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html">original version of this document</a> was written by <a href="https://yzen.github.io/">Yura Zenevich</a>.</p></div>
+> **Note:** The <a href="https://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html">original version of this document</a> was written by <a href="https://yzen.github.io/">Yura Zenevich</a>.

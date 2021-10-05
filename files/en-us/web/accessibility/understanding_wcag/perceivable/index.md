@@ -13,7 +13,7 @@ tags:
 ---
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Perceivable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Perceivable states that users must be able to perceive it in some way, using one or more of their senses.
 
-> **Note:** To read the W3C definitions for Perceivable and its guidelines and success criteria, see <a href="https://www.w3.org/TR/WCAG21/#perceivable">Principle 1: Perceivable - Information and user interface components must be presentable to users in ways they can perceive.</a></p></div>
+> **Note:** To read the W3C definitions for Perceivable and its guidelines and success criteria, see <a href="https://www.w3.org/TR/WCAG21/#perceivable">Principle 1: Perceivable - Information and user interface components must be presentable to users in ways they can perceive.</a>
 
 ## Guideline 1.1 — Providing text alternatives for non-text content
 
@@ -127,7 +127,7 @@ The key here is that text can be converted to other forms that people with disab
   </tbody>
 </table>
 
-> **Note:** Also see the <a href="https://www.w3.org/TR/WCAG21/#text-alternatives">WCAG description for Guideline 1.1: Text alternatives</a>.</p></div>
+> **Note:** Also see the <a href="https://www.w3.org/TR/WCAG21/#text-alternatives">WCAG description for Guideline 1.1: Text alternatives</a>.
 
 ## Guideline 1.2 — Providing text alternatives for time-based media
 
@@ -145,7 +145,7 @@ Time-based media refers to multimedia with a duration, such as audio and video. 
 | 1.2.8 Provide an alternative for prerecorded media (AAA)                          | For all content that features video, a descriptive text transcript should be provided, for example a script of the movie you are watching. This is for the benefit of hearing-impaired viewers who cannot hear the content.                                                                      | See [Audio transcripts](/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts) for transcript information.                                                                                                                                                                                                                                                   |
 | 1.2.9 Provide a transcript for live audio (AAA)                                   | For any live audio content being broadcast, a descriptive text should be provided, for example a script of the play or musical you are listening to. This is for the benefit of hearing-impaired viewers who cannot hear the content.                                                            | See [Audio transcripts](/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts) for transcript information.                                                                                                                                                                                                                                                   |
 
-> **Note:** Also see the <a href="https://www.w3.org/TR/WCAG21/#time-based-media">WCAG description for Guideline 1.2: Time-based Media: Provide alternatives for time-based media</a>.</p></div>
+> **Note:** Also see the <a href="https://www.w3.org/TR/WCAG21/#time-based-media">WCAG description for Guideline 1.2: Time-based Media: Provide alternatives for time-based media</a>.
 
 ## Guideline 1.3 — Create content that can be presented in different ways
 
@@ -330,7 +330,7 @@ This guideline refers to the ability of content to be consumed by users in multi
   </tbody>
 </table>
 
-> **Note:** Also see the WCAG description for <a href="https://www.w3.org/TR/WCAG21/#adaptable">Guideline 1.3: Adaptable: Create content that can be presented in different ways without losing information or structure.</a></p></div>
+> **Note:** Also see the WCAG description for <a href="https://www.w3.org/TR/WCAG21/#adaptable">Guideline 1.3: Adaptable: Create content that can be presented in different ways without losing information or structure.</a>
 
 ## Guideline 1.4: Make it easier for users to see and hear content including separating foreground from background
 
@@ -612,7 +612,7 @@ This guideline relates to making sure core content is easy to discern from backg
   </thead>
 </table>
 
-> **Note:** Also see the WCAG description for <a href="https://www.w3.org/TR/WCAG21/#distinguishable">Guideline 1.4: Distinguishable: Make it easier for users to see and hear content including separating foreground from background.</a><a href="https://www.w3.org/TR/WCAG21/#distinguishable">.</a></p></div>
+> **Note:** Also see the WCAG description for <a href="https://www.w3.org/TR/WCAG21/#distinguishable">Guideline 1.4: Distinguishable: Make it easier for users to see and hear content including separating foreground from background.</a><a href="https://www.w3.org/TR/WCAG21/#distinguishable">.</a>
 
 ## See also
 

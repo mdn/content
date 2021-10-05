@@ -371,7 +371,7 @@ Using the function shown below:
   }
 }</pre>
 
-<div class="note notecard"><h4>Important Note</h4><p>Those familiar with the WCAG 2.x contrast math may notice that the above code uses the threshold value of 0.04045. This is the official IEC standard. The WCAG 2.x guidelines were drafted citing an obsolete value. While the WCAG 2.x version is technically incorrect, with 8-bit color there is no functional difference for the purpose of WCAG 2.x contrast. For the record, the WCAG 2.x value is 0.03928.</p></div>
+<div class="note notecard"><h4>Important Note</h4><p>Those familiar with the WCAG 2.x contrast math may notice that the above code uses the threshold value of 0.04045. This is the official IEC standard. The WCAG 2.x guidelines were drafted citing an obsolete value. While the WCAG 2.x version is technically incorrect, with 8-bit color there is no functional difference for the purpose of WCAG 2.x contrast. For the record, the WCAG 2.x value is 0.03928.
 
 #### Step three: Spectrally Weighted Luminance
 
