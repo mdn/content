@@ -61,7 +61,7 @@ const result = new Sanitizer().sanitize(stringToClean);
     </tr>
     <tr>
       <td>
-        {{SpecName('HTML Sanitizer API','#sanitizer-api','sanitizeToString')}}
+        {{SpecName('HTML Sanitizer API','#sanitizer-api')}}
       </td>
       <td>{{Spec2('HTML Sanitizer API')}}</td>
       <td>Initial definition.</td>
