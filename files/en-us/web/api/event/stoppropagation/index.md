@@ -21,7 +21,7 @@ bubbling phases. It does not, however, prevent any default behaviors from occurr
 instance, clicks on links are still processed. If you want to stop those behaviors, see
 the {{domxref("Event.preventDefault", "preventDefault()")}} method. It also does not
 prevent immediate propagation to other event-handlers - if you want to stop those,
-see {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}} method.
+see {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}.
 
 ## Syntax
 
