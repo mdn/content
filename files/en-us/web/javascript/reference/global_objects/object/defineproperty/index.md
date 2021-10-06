@@ -59,11 +59,11 @@ properties using `Object.defineProperty()`):
 - `configurable`
   - : `true` if the type of this property descriptor may be changed and if the
     property may be deleted from the corresponding object.
-    **Defaults to `false`.**
+    **Defaults to `true`.**
 - `enumerable`
   - : `true` if and only if this property shows up during enumeration of the
     properties on the corresponding object.
-    **Defaults to `false`.**
+    **Defaults to `true`.**
 
 A **data descriptor** also has the following optional keys:
 
@@ -74,7 +74,7 @@ A **data descriptor** also has the following optional keys:
 - `writable`
   - : `true` if the value associated with the property may be changed with an
     {{jsxref("Operators#assignment_operators", "assignment operator", "", 1)}}.
-    **Defaults to `false`.**
+    **Defaults to `true`.**
 
 An **accessor descriptor** also has the following optional keys:
 
