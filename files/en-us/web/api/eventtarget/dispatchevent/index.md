@@ -1,5 +1,5 @@
 ---
-title: EventTarget.dispatchEvent()
+title: EventTarget.prototype.dispatchEvent()
 slug: Web/API/EventTarget/dispatchEvent
 tags:
   - API
@@ -7,7 +7,7 @@ tags:
   - DOM Element Methods
   - Gecko
   - Method
-browser-compat: api.EventTarget.dispatchEvent
+browser-compat: api.EventTarget.prototype.dispatchEvent
 ---
 {{APIRef("DOM Events")}}
 
