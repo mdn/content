@@ -94,7 +94,7 @@ Additional timing criteria to consider are:
 
 [Guideline 2.4](https://www.w3.org/WAI/WCAG21/Understanding/navigable) states "provide ways to help users navigate, find content, and determine where they are," and provides 10 guidelines to ensure the site is navigable and content is findable:
 
-### Include a {{HTMLElement('title')}}
+### Include a `<title>`
 
 Make sure to include a {{HTMLElement('title')}} for the document, as titles provide a quick and easy to reference description of the screen's main point. People with cognitive disabilities, limited short-term memory, and reading disabilities all benefit from being able to identify the purpose of content this way.
 
