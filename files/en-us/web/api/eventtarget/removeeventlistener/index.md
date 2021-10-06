@@ -1,5 +1,5 @@
 ---
-title: EventTarget.removeEventListener()
+title: EventTarget.prototype.removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
 tags:
   - API
@@ -11,12 +11,12 @@ tags:
   - Reference
   - browser compatibility
   - removeEventListener
-browser-compat: api.EventTarget.removeEventListener
+browser-compat: api.EventTarget.prototype.removeEventListener
 ---
 {{APIRef("DOM Events")}}
 
 The
-**`EventTarget.removeEventListener()`** method removes from
+**`EventTarget..prototype.removeEventListener()`** method removes from
 the {{domxref("EventTarget")}} an event listener previously registered with
 {{domxref("EventTarget.addEventListener()")}}. The event listener to be removed is
 identified using a combination of the event type, the event listener function itself,
