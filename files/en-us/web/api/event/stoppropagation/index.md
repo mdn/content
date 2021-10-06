@@ -20,7 +20,7 @@ interface prevents further propagation of the current event in the capturing and
 bubbling phases. It does not, however, prevent any default behaviors from occurring; for
 instance, clicks on links are still processed. If you want to stop those behaviors, see
 the {{domxref("Event.preventDefault", "preventDefault()")}} method. It also does not
-prevent immediate propagation to other event-handlers - if you want to stop those,
+prevent immediate propagation to other event-handlers. If you want to stop those,
 see {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}.
 
 ## Syntax
