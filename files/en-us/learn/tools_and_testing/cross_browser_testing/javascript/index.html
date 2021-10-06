@@ -275,13 +275,15 @@ showHeroes(superHeroes);</pre>
 
 <p>The idea behind feature detection is that you can run a test to determine whether a JavaScript feature is supported in the current browser, and then conditionally run code to provide an acceptable experience both in browsers that do and don't support the feature. As a quick example, the <a href="/en-US/docs/Web/API/Geolocation_API">Geolocation API</a>  (which exposes available location data for the device the web browser is running on) has a main entry point for its use — a <code>geolocation</code> property available on the global <a href="/en-US/docs/Web/API/Navigator">Navigator</a> object. Therefore, you can detect whether the browser supports geolocation or not by using something like the following:</p>
 
-<pre class="language-js"><span class="keyword token">if</span><span class="punctuation token">(</span><span class="string token">"geolocation"</span> <span class="keyword token">in</span> navigator<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  navigator<span class="punctuation token">.</span>geolocation<span class="punctuation token">.</span><span class="function token">getCurrentPosition</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>position<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+<pre class="brush: js">
+if ("geolocation" in navigator) {
+  navigator.geolocation.getCurrentPosition(function(position) {
     // show the location on a map, perhaps using the Google Maps API
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;
-}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
+  });
+} else {
   // Give the user a choice of static maps instead perhaps
-<span class="punctuation token">}</span></pre>
+}
+</pre>
 
 <p>You could also write such a test for a CSS feature, for example by testing for the existence of <em><a href="/en-US/docs/Web/API/HTMLElement/style">element.style.property</a></em> (e.g. <code>paragraph.style.transform !== undefined</code>). But for both CSS and JavaScript, it is probably better to use an established feature detection library rather than writing your own all the time. Modernizr is the industry standard for feature detection tests.</p>
 
