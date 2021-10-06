@@ -1,6 +1,6 @@
 ---
 title: Cognitive accessibility
-slug: Web/Accessibility/Cognitive_accessibility
+slug: Web/Accessibility/Cognitive_accessibility 
 tags:
   - Accessibility
   - Best practices
@@ -8,299 +8,277 @@ tags:
   - WCAG
   - cognitive accessibility
 ---
-<p><span class="seoSummary">Cognitive accessibility covers accessibility considerations for people with cognition and learning disabilities. This document introduces cognitive accessibility and improving accessibility of the web for people with cognitive and learning differences.</span></p>
+Cognitive accessibility covers accessibility considerations for people with cognition and learning disabilities. This document introduces cognitive accessibility and improving accessibility of the web for people with cognitive and learning differences.
 
-<p>Cognitive impairment refers to a broad range of disabilities, from people with intellectual disabilities who may have the most-limited capabilities, to age-related issues with thinking and remembering. The range includes people with mental illnesses, such as depression and schizophrenia. It also includes people with learning disabilities, such as dyslexia and attention deficit hyperactivity disorder (ADHD).</p>
+Cognitive impairment refers to a broad range of disabilities, from people with intellectual disabilities who may have the most-limited capabilities, to age-related issues with thinking and remembering. The range includes people with mental illnesses, such as depression and schizophrenia. It also includes people with learning disabilities, such as dyslexia and attention deficit hyperactivity disorder (ADHD).
 
-<p>Though there is a lot of diversity within clinical definitions of cognitive impairments, people with them experience a common set of functional problems. These problems include difficulty with understanding content, remembering how to complete tasks, and confusion caused by inconsistent or non-traditional web page layouts. In this document, we focus on steps developers should take to improve the cognitive accessibility of their web sites and applications.</p>
+Though there is a lot of diversity within clinical definitions of cognitive impairments, people with them experience a common set of functional problems. These problems include difficulty with understanding content, remembering how to complete tasks, and confusion caused by inconsistent or non-traditional web page layouts. In this document, we focus on steps developers should take to improve the cognitive accessibility of their web sites and applications.
 
-<h2 id="Overview">Overview</h2>
+## Overview
 
-<p>Cognitive and intellectual disabilities cover a large spectrum, and may be momentary, temporary, or permanent conditions. For example, dementia and Alzheimer's are permanent cognitive impairments that get progressively worse. Other permanent cognitive impairments include aphasia, speech and language, autism, ADD/ADHD, dyslexia, and dyscalculia.</p>
+Cognitive and intellectual disabilities cover a large spectrum, and may be momentary, temporary, or permanent conditions. For example, dementia and Alzheimer's are permanent cognitive impairments that get progressively worse. Other permanent cognitive impairments include aphasia, speech and language, autism, ADD/ADHD, dyslexia, and dyscalculia.
 
-<p>An example of a temporary cognitive impairment could be people affected by substances such as alcohol or drugs. Another form it can take is depression, such as when mourning the loss of a loved one, or being momentarily saddened by a tweet or video they just saw online. A third example could be sleep deprivation.</p>
+An example of a temporary cognitive impairment could be people affected by substances such as alcohol or drugs. Another form it can take is depression, such as when mourning the loss of a loved one, or being momentarily saddened by a tweet or video they just saw online. A third example could be sleep deprivation.
 
-<p>It may seem like an overwhelming challenge to address the wide range of cognitive differences, especially when solutions for two different people may be conflicting. One way to handle this is to focus on cognitive skills. Cognitive skills include:</p>
+It may seem like an overwhelming challenge to address the wide range of cognitive differences, especially when solutions for two different people may be conflicting. One way to handle this is to focus on cognitive skills. Cognitive skills include:
 
-<ul>
- <li>attention</li>
- <li>memory</li>
- <li>processing speed</li>
- <li>time management</li>
- <li>letters and language</li>
- <li>numbers symbols and math</li>
- <li>understanding and making choices</li>
-</ul>
+- attention
+- memory
+- processing speed
+- time management
+- letters and language
+- numbers symbols and math
+- understanding and making choices
 
-<p>A solid approach to providing accessible solutions for people with cognitive impairments includes:</p>
+A solid approach to providing accessible solutions for people with cognitive impairments includes:
 
-<ul>
- <li>delivering content in more than one way, such as by text-to-speech or by video;</li>
- <li>providing easily-understood content, such as text written using plain-language standards;</li>
- <li>focusing attention on important content;</li>
- <li>minimizing distractions, such as unnecessary content or advertisements;</li>
- <li>providing consistent web page layout and navigation;</li>
- <li>incorporating familiar elements, such as underlined links that are blue when not visited and purple when visited;</li>
- <li>dividing processes into logical, essential steps with progress indicators;</li>
- <li>making website authentication as easy as possible without compromising security; and</li>
- <li>making forms easy to complete, such as with clear error messages and simple error recovery.</li>
-</ul>
+- delivering content in more than one way, such as by text-to-speech or by video;
+- providing easily-understood content, such as text written using plain-language standards;
+- focusing attention on important content;
+- minimizing distractions, such as unnecessary content or advertisements;
+- providing consistent web page layout and navigation;
+- incorporating familiar elements, such as underlined links that are blue when not visited and purple when visited;
+- dividing processes into logical, essential steps with progress indicators;
+- making website authentication as easy as possible without compromising security; and
+- making forms easy to complete, such as with clear error messages and simple error recovery.
 
-<h2 id="WCAG_Guidelines">WCAG Guidelines</h2>
+## WCAG Guidelines
 
-<p>WCAG, Web Content Accessibility Guidelines, includes several guidelines to improve cognitive accessibility. These <span class="js-about-item-abstr">guidelines are published by the Web Accessibility Initiative (WAI) of the World Wide Web Consortium (W3C), the main international standards organization for the Internet. This group is also responsible for the <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Guides">Accessible Rich Internet Application (ARIA)</a> guidelines.</span></p>
+WCAG, Web Content Accessibility Guidelines, includes several guidelines to improve cognitive accessibility. These guidelines are published by the Web Accessibility Initiative (WAI) of the World Wide Web Consortium (W3C), the main international standards organization for the Internet. This group is also responsible for the [Accessible Rich Internet Application (ARIA)](/en-US/docs/Web/Accessibility/ARIA/ARIA_Guides guidelines.
 
-<p>WCAG are guided by four principles: websites must be Perceivable, Operable, Understandable, and Robust. To this end, they define 17 specific guidelines, of which six are especially relevant for cognitive accessibility.</p>
+WCAG are guided by four principles: websites must be Perceivable, Operable, Understandable, and Robust. To this end, they define 17 specific guidelines, of which six are especially relevant for cognitive accessibility.
 
-<p>All of the following guidelines help more than just people with cognitive disabilities. For example, being able to extend the expiration time on an application requiring an authentication code sent to a mobile device via text message helps with the following scenarios:</p>
+All of the following guidelines help more than just people with cognitive disabilities. For example, being able to extend the expiration time on an application requiring an authentication code sent to a mobile device via text message helps with the following scenarios:
 
-<ul>
- <li>People with attention or anxiety disorders.</li>
- <li>People who have a poor short-term memory, or who are multitasking.</li>
- <li>People who are less technologically literate.</li>
- <li>People who have poor wireless reception.</li>
- <li>People who have motor control issues.</li>
-</ul>
+- People with attention or anxiety disorders.
+- People who have a poor short-term memory, or who are multitasking.
+- People who are less technologically literate.
+- People who have poor wireless reception.
+- People who have motor control issues.
 
-<h3 id="Adaptability">Adaptability</h3>
+## Adaptability
 
-<p><a href="https://www.w3.org/WAI/WCAG21/Understanding/adaptable">Guideline 1.3</a> states "content should be <strong>adaptable</strong>." Create content that can be presented in different ways without losing information or structure. For example, provide {{glossary('responsive web design', 'responsive')}} layouts, with a single column mobile design.</p>
+[Guideline 1.3](https://www.w3.org/WAI/WCAG21/Understanding/adaptable) states "content should be **adaptable**." Create content that can be presented in different ways without losing information or structure. For example, provide {{glossary('responsive web design', 'responsive')}} layouts, with a single column mobile design.
 
-<p>All information, including structure and relationships conveyed through the presentation, should be available in a form that can be perceived by all users to achieve this goal. For example, the information could be spoken aloud via a narration tool. Making your content capable of being understood by the software is a good way to help ensure it can be used by alternate presentational modes.</p>
+All information, including structure and relationships conveyed through the presentation, should be available in a form that can be perceived by all users to achieve this goal. For example, the information could be spoken aloud via a narration tool. Making your content capable of being understood by the software is a good way to help ensure it can be used by alternate presentational modes.
 
-<h3 id="Time">Time</h3>
+## Time
 
-<p>It is important to allow users the time they require to complete tasks. <a href="https://www.w3.org/WAI/WCAG21/Understanding/enough-time">Guideline 2.2</a> states "provide users enough <strong>time</strong> to read and use content."</p>
+It is important to allow users the time they require to complete tasks. [Guideline 2.2](https://www.w3.org/WAI/WCAG21/Understanding/enough-time) states "provide users enough **time** to read and use content."
 
-<p>A <strong>time limit</strong> is any process that happens without user initiation after a set time or on a periodic basis, such as being logged out after 30 minutes or having 15 minutes to make a purchase. People with cognitive disabilities may require more time to read content, or to perform functions such as filling out forms. Solutions include providing users enough additional time to complete tasks or eliminate time constraints altogether.</p>
+A **time limit** is any process that happens without user initiation after a set time or on a periodic basis, such as being logged out after 30 minutes or having 15 minutes to make a purchase. People with cognitive disabilities may require more time to read content, or to perform functions such as filling out forms. Solutions include providing users enough additional time to complete tasks or eliminate time constraints altogether.
 
-<h4 id="Timers">Timers</h4>
+### Timers
 
-<p>Options for adjusting time requirements include:</p>
+Options for adjusting time requirements include:
 
-<ul>
- <li>Allowing the user to turn off or adjust the time to at least 10 times the original limit before encountering it.</li>
- <li>Alerting the user and providing a buffer of at least 20 seconds to extend the timeout duration by a factor of 10 with a simple action, such as hitting the space bar. </li>
-</ul>
+- Allowing the user to turn off or adjust the time to at least 10 times the original limit before encountering it.
+- Alerting the user and providing a buffer of at least 20 seconds to extend the timeout duration by a factor of 10 with a simple action, such as hitting the space bar.
 
-<p>Provide a toggle on content that allows users to enable a longer session time limit, or no session time limit at all. Examples of timed content include forms, timed reading exercises, and training materials. If the time limit is longer than 20 hours, accommodations are not required.</p>
+Provide a toggle on content that allows users to enable a longer session time limit, or no session time limit at all. Examples of timed content include forms, timed reading exercises, and training materials. If the time limit is longer than 20 hours, accommodations are not required.
 
-<h4 id="Moving_blinking_scrolling">Moving, blinking, scrolling</h4>
+### Moving, blinking, scrolling
 
-<p>It is important not to distract users, especially ones with cognitive disabilities.</p>
+It is important not to distract users, especially ones with cognitive disabilities.
 
-<p>If moving, blinking, scrolling, or auto-updating information starts automatically, lasts more than five seconds, and is presented in parallel with other content, the user must able to pause, stop, hide or control it, unless it's an essential functionality. "Essential" means that removing the moving, blinking, scrolling, or auto-updating information would fundamentally change the meaning of the content and/or functionality, <strong>and</strong> information and functionality cannot be achieved in another way that would conform. This includes animated gifs, if the gif animates for more than 5 seconds.</p>
+If moving, blinking, scrolling, or auto-updating information starts automatically, lasts more than five seconds, and is presented in parallel with other content, the user must able to pause, stop, hide or control it, unless it's an essential functionality. "Essential" means that removing the moving, blinking, scrolling, or auto-updating information would fundamentally change the meaning of the content and/or functionality, **and** information and functionality cannot be achieved in another way that would conform. This includes animated gifs, if the gif animates for more than 5 seconds.
 
-<p>Additional timing criteria to consider are:</p>
+Additional timing criteria to consider are:
 
-<ul>
- <li>People who have cognitive or language limitations may need more time to read and to understand. For improved usability remove any time limit. Timed content should also be avoided, with exceptions for non-interactive synchronized media and real-time events.</li>
- <li>People with attention deficit disorders should be able to focus on content without distractions. The user should be able to postpone or suppress interruptions, except situations involving altering a person to an emergency. This provides access to people with cognitive disabilities by enabling them to focus on the main purpose of the content. Enable the user to postpone content updates by providing a way to request content updates rather than updating automatically. Also, enable a way to make nonessential alerts optional.</li>
- <li>Ensure that people can continue an activity without loss of data after re-authenticating an expired session, for example, saving the state of a questionnaire. Make sure to save data in such a way that it can be modified after a user re-authenticates. Before re-authenticating, encode the data as hidden or encrypted.</li>
- <li>Providing warnings about inactivity that could result in data loss. When a timeout is used, tell people exactly how much time will cause the session to time out and result in lost data. The exception to this is preserving data for more than 20 hours when no actions are taken.</li>
-</ul>
+- People who have cognitive or language limitations may need more time to read and to understand. For improved usability remove any time limit. Timed content should also be avoided, with exceptions for non-interactive synchronized media and real-time events.
+- People with attention deficit disorders should be able to focus on content without distractions. The user should be able to postpone or suppress interruptions, except situations involving altering a person to an emergency. This provides access to people with cognitive disabilities by enabling them to focus on the main purpose of the content. Enable the user to postpone content updates by providing a way to request content updates rather than updating automatically. Also, enable a way to make nonessential alerts optional.
+- Ensure that people can continue an activity without loss of data after re-authenticating an expired session, for example, saving the state of a questionnaire. Make sure to save data in such a way that it can be modified after a user re-authenticates. Before re-authenticating, encode the data as hidden or encrypted.
+- Providing warnings about inactivity that could result in data loss. When a timeout is used, tell people exactly how much time will cause the session to time out and result in lost data. The exception to this is preserving data for more than 20 hours when no actions are taken.
 
-<h3 id="Navigation">Navigation</h3>
+## Navigation
 
-<p><a href="https://www.w3.org/WAI/WCAG21/Understanding/navigable">Guideline 2.4</a> states "provide ways to help users navigate, find content, and determine where they are," and provides 10 guidelines to ensure the site is navigable and content is findable:</p>
+[Guideline 2.4](https://www.w3.org/WAI/WCAG21/Understanding/navigable) states "provide ways to help users navigate, find content, and determine where they are," and provides 10 guidelines to ensure the site is navigable and content is findable:
 
-<h4 id="Include_a_&lt;title&gt;">Include a <code>&lt;title&gt;</code></h4>
+### Include a {{HTMLElement('title')}}
 
-<p>Make sure to include a <code>&lt;title&gt;</code> for the document, as titles provide a quick and easy to reference description of the screen's main point. People with cognitive disabilities, limited short-term memory, and reading disabilities all benefit from being able to identify the purpose of content this way.</p>
+Make sure to include a {{HTMLElement('title')}} for the document, as titles provide a quick and easy to reference description of the screen's main point. People with cognitive disabilities, limited short-term memory, and reading disabilities all benefit from being able to identify the purpose of content this way.
 
-<h4 id="Heading_and_labels">Heading and labels</h4>
+### Heading and labels
 
-<p>Include clear and descriptive headings so users can easily find information and understand relationships between different content sections. Descriptive labels help users identify specific components within the content. People who read slowly and people with limited short-term memory benefit when section titles make it possible to predict what each section contains.</p>
+Include clear and descriptive headings so users can easily find information and understand relationships between different content sections. Descriptive labels help users identify specific components within the content. People who read slowly and people with limited short-term memory benefit when section titles make it possible to predict what each section contains.
 
-<h4 id="Section_headings">Section headings</h4>
+### Section headings
 
-<p>Headings help define overall organization of page content. They help facilitate navigation through page content sections, and provide a mechanism to aid comprehension. Examples of headings include chapters, sections and subsections of content, and so on.</p>
+Headings help define overall organization of page content. They help facilitate navigation through page content sections, and provide a mechanism to aid comprehension. Examples of headings include chapters, sections and subsections of content, and so on.
 
-<p>Headings are more obvious navigational aids compared to other methods to identify page content sections (borders, whitespace, horizontal rules, etc.).</p>
+Headings are more obvious navigational aids compared to other methods to identify page content sections (borders, whitespace, horizontal rules, etc.).
 
-<h4 id="Multiple_ways_to_find_content">Multiple ways to find content</h4>
+### Multiple ways to find content
 
-<p>Different users prefer different methods of finding information, so it is important to provide multiple ways for users to locate content on your site.</p>
+Different users prefer different methods of finding information, so it is important to provide multiple ways for users to locate content on your site.
 
-<p>Providing more than one way to navigate your site can help people find information faster. Some users may prefer a table of contents, site map, or search functionality rather than reading and traversing through several pages to find what they need. Others may prefer to explore the site in a sequential manner, moving from page to page in order to best understand the site's layout, content, and concepts.</p>
+Providing more than one way to navigate your site can help people find information faster. Some users may prefer a table of contents, site map, or search functionality rather than reading and traversing through several pages to find what they need. Others may prefer to explore the site in a sequential manner, moving from page to page in order to best understand the site's layout, content, and concepts.
 
-<h4 id="Ability_to_bypass_blocks_of_content">Ability to bypass blocks of content</h4>
+### Ability to bypass blocks of content
 
-<p>Providing a mechanism, such as a <a href="/en-US/docs/Web/HTML/Element/a#skip_links">skiplink</a>, to bypass blocks of content that are repeated on multiple web pages.</p>
+Providing a mechanism, such as a [skiplink](/en-US/docs/Web/HTML/Element/a#skip_links), to bypass blocks of content that are repeated on multiple web pages.
 
-<h4 id="Focus_order_makes_sense">Focus order makes sense</h4>
+### Focus order makes sense
 
-<p>The order of focus for interactive elements should make sense. To achieve this, the DOM order should match the visual order, which in turn should match the tabbing order. If the tab order jumps around, especially in a way that does not match the visual order when navigating with a keyboard, users can become disoriented.</p>
+The order of focus for interactive elements should make sense. To achieve this, the DOM order should match the visual order, which in turn should match the tabbing order. If the tab order jumps around, especially in a way that does not match the visual order when navigating with a keyboard, users can become disoriented.
 
-<h4 id="Focused_elements_should_be_visibly_focused">Focused elements should be visibly focused</h4>
+### Focused elements should be visibly focused
 
-<p>When a user navigates using a keyboard, the UI should make it obvious which element currently has focus. Don't alter or remove the browser's default <code><a href="/en-US/docs/Web/CSS/:focus">:focus</a></code> styling, unless you're making focus even more obvious.</p>
+When a user navigates using a keyboard, the UI should make it obvious which element currently has focus. Don't alter or remove the browser's default [`:focus`](/en-US/docs/Web/CSS/:focus) styling, unless you're making focus even more obvious.
 
-<h4 id="Link_text_conveys_meaning">Link text conveys meaning</h4>
+### Link text conveys meaning
 
-<p>The link's text should clearly and concisely communicate what the user should expect to be navigated to next if they choose to activate it. Poorly phrased link text may confuse users as to its purpose or destination.</p>
+The link's text should clearly and concisely communicate what the user should expect to be navigated to next if they choose to activate it. Poorly phrased link text may confuse users as to its purpose or destination.
 
-<p>Some forms of assistive technology allow users to navigate by lists of all the links present on the page. Links will be removed from the context of their surrounding non-link content, making the need for understandable link text even more important. An example of a poor experience is a page full of links whose text reads, "Click here." Without indicating where "here" will take you, the link's purpose is unclear.</p>
+Some forms of assistive technology allow users to navigate by lists of all the links present on the page. Links will be removed from the context of their surrounding non-link content, making the need for understandable link text even more important. An example of a poor experience is a page full of links whose text reads, "Click here." Without indicating where "here" will take you, the link's purpose is unclear.
 
-<p>For screen readers, it is vital that linked text describes the purpose of each link. If you have added content to links for screen readers, and that content is verbose and potentially confusing to sighted readers, consider clipping the added text to visually hide it from those not using assistive technologies.</p>
+For screen readers, it is vital that linked text describes the purpose of each link. If you have added content to links for screen readers, and that content is verbose and potentially confusing to sighted readers, consider clipping the added text to visually hide it from those not using assistive technologies.
 
-<h4 id="Current_location_is_available">Current location is available</h4>
+### Current location is available
 
-<p>Users should be able to orient themselves within a site or application. This is especially important and helpful for people with short attention spans who may become confused when following a long series of navigation steps.</p>
+Users should be able to orient themselves within a site or application. This is especially important and helpful for people with short attention spans who may become confused when following a long series of navigation steps.
 
-<p>All users benefit from information about where they are in a site's hierarchy, especially for sites or applications with large amounts of content or many subsections. <a href="/en-US/docs/Glossary/Breadcrumb">Breadcrumbs</a>, <a href="/en-US/docs/Glossary/Site_map">site maps</a>, and identifying the current page in the navigation as "current" are all techniques that help communicate the current location.</p>
+All users benefit from information about where they are in a site's hierarchy, especially for sites or applications with large amounts of content or many subsections. [Breadcrumbs](/en-US/docs/Glossary/Breadcrumb), [site maps](/en-US/docs/Glossary/Site_map), and identifying the current page in the navigation as "current" are all techniques that help communicate the current location.
 
-<h3 id="Readability">Readability</h3>
+## Readability
 
-<p><a href="https://www.w3.org/WAI/WCAG21/Understanding/readable">Guideline 3.1  </a>states "make text content readable and understandable." For some users, it is difficult to infer the meaning of a word or phrase from context, especially when the word or phrase is used in an unusual way, or has been given a specialized meaning.</p>
+[Guideline 3.1](https://www.w3.org/WAI/WCAG21/Understanding/readable) states "make text content readable and understandable." For some users, it is difficult to infer the meaning of a word or phrase from context, especially when the word or phrase is used in an unusual way, or has been given a specialized meaning.
 
-<p>For these users, the ability to read and understand may depend on the availability of specific definitions or the expanded forms of acronyms or abbreviations. Some users may experience great difficulty in recognizing written words yet they understand extremely complex and sophisticated documents when the text is read aloud, or when key processes and ideas are illustrated visually.</p>
+For these users, the ability to read and understand may depend on the availability of specific definitions or the expanded forms of acronyms or abbreviations. Some users may experience great difficulty in recognizing written words yet they understand extremely complex and sophisticated documents when the text is read aloud, or when key processes and ideas are illustrated visually.
 
-<h4 id="Declare_the_language_of_the_page_and_any_content_not_in_that_main_language.">Declare the language of the page and any content not in that main language.</h4>
+### Declare the language of the page and any content not in that main language.
 
-<p>The language of every page must be declared by using the <code><a href="/en-US/docs/Web/HTML/Global_attributes/lang">lang</a></code> attribute on the <a href="/en-US/docs/Web/HTML/Element/html"><code>&lt;html&gt;</code> </a>element. Include the <code>lang</code> attribute again on text that is in a language other than the main language of the document.</p>
+The language of every page must be declared by using the [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute on the {{HTMLElement('html')}} element. Include the `lang` attribute again on text that is in a language other than the main language of the document.
 
-<p>Proper use of <code>lang</code> allows some screen readers to announce the text properly when converting it into synthetic speech. It also helps people who use text-to-speech software.</p>
+Proper use of `lang` allows some screen readers to announce the text properly when converting it into synthetic speech. It also helps people who use text-to-speech software.
 
-<h4 id="Define_unusual_words_and_word_usage">Define unusual words and word usage</h4>
+### Define unusual words and word usage
 
-<p>Some disabilities make it difficult to understand nonliteral word usage, such as idioms, colloquialisms, and specialized jargon. Non-native language speakers may also struggle with these terms. If a word or phrase has a unique meaning, in the document provide a definition inline or linked, within a glossary, or to an online dictionary. If a word or phrase is used to mean more than one thing, define each use.</p>
+Some disabilities make it difficult to understand nonliteral word usage, such as idioms, colloquialisms, and specialized jargon. Non-native language speakers may also struggle with these terms. If a word or phrase has a unique meaning, in the document provide a definition inline or linked, within a glossary, or to an online dictionary. If a word or phrase is used to mean more than one thing, define each use.
 
-<h4 id="Define_abbreviations">Define abbreviations</h4>
+### Define abbreviations
 
-<p>Abbreviations can be confusing for people who:</p>
+Abbreviations can be confusing for people who:
 
-<ul>
- <li>Have difficulty decoding words.</li>
- <li>Have limited memory.</li>
- <li>Have difficulty using context to aid understanding.</li>
- <li>Rely on screen magnifiers (which often reduce contextual cues).</li>
-</ul>
+- Have difficulty decoding words.
+- Have limited memory.
+- Have difficulty using context to aid understanding.
+- Rely on screen magnifiers (which often reduce contextual cues).
 
-<p>Provide an expanded form of the abbreviation the first time it is used, followed by the abbreviation placed within an <code><a href="/en-US/docs/Web/HTML/Element/abbr">&lt;abbr&gt;</a></code> element. If an abbreviation has no expanded form, or is an abbreviation for a word that is not in the document's main language (such as Latin), explain its meaning. Also, consider using <a href="/en-US/docs/Web/HTML/Element/ruby">ruby text</a> for initialism (pronunciation of acronyms).</p>
+Provide an expanded form of the abbreviation the first time it is used, followed by the abbreviation placed within an {{HTMLElement('abbr')}} element. If an abbreviation has no expanded form, or is an abbreviation for a word that is not in the document's main language (such as Latin), explain its meaning. Also, consider using [ruby text](/en-US/docs/Web/HTML/Element/ruby) for initialism (pronunciation of acronyms).
 
-<h4 id="Reading_level">Reading level</h4>
+### Reading level
 
-<p>Content should be written as clearly and as possible. A good rule to go by is to make content simple enough that it can be understood the first time. Methods to achieve this include:</p>
+Content should be written as clearly and as possible. A good rule to go by is to make content simple enough that it can be understood the first time. Methods to achieve this include:
 
-<ul>
- <li>Using short, simple words.</li>
- <li>Writing short sentences.</li>
- <li>Using active voice in the present tense.</li>
- <li>Using correct grammar and spelling.</li>
-</ul>
+- Using short, simple words.
+- Writing short sentences.
+- Using active voice in the present tense.
+- Using correct grammar and spelling.
 
-<p>It helps users with cognitive disabilities to provide a text summary (sometimes referred to as a TL;DR; [too long, didn't read]) at a low reading level. Another technique you can use is providing accompanying visuals to help explain ideas, events, and processes.</p>
+It helps users with cognitive disabilities to provide a text summary (sometimes referred to as a TL;DR; , or "too long, didn't read") at a low reading level. Another technique you can use is providing accompanying visuals to help explain ideas, events, and processes.
 
-<p>There are tools that can rate the level of your content. For example, this document has an average grade level of about 11. This means it should be easily understood by a native English speaker aged 16 to 17. Some tools can even provide suggestions to help simplify it.</p>
+There are tools that can rate the level of your content. For example, this document has an average grade level of about 11. This means it should be easily understood by a native English speaker aged 16 to 17. Some tools can even provide suggestions to help simplify it.
 
-<h4 id="Pronunciation">Pronunciation</h4>
+### Pronunciation
 
-<p>There are multiple techniques that can help teach people how to pronounce words:</p>
+There are multiple techniques that can help teach people how to pronounce words:
 
-<ul>
- <li>Provide the pronunciation immediately following the word.</li>
- <li>Link to a list of pronunciations.</li>
- <li>Provide a glossary with pronunciation.</li>
- <li>Use the <code><a href="/en-US/docs/Web/HTML/Element/ruby">&lt;ruby&gt;</a></code> element to illustrate how a word is pronounced.</li>
-</ul>
+- Provide the pronunciation immediately following the word.
+- Link to a list of pronunciations.
+- Provide a glossary with pronunciation.
+- Use the {{HTMLElement('ruby')}} element to illustrate how a word is pronounced.
 
-<p>Providing guidance on how to pronounce words helps many different kinds of people, including those who prefer to read aloud, non-native language speakers, and people who may unfamiliar with the meaning of a term in context.</p>
+Providing guidance on how to pronounce words helps many different kinds of people, including those who prefer to read aloud, non-native language speakers, and people who may unfamiliar with the meaning of a term in context.
 
-<p>Another solution is to use glyphs or diacritical marks to illustrate pronunciation. However, if this technique is used, there must be a mechanism to turn it off. Further, it is helpful to link to a guide to the marks being used, as their meaning may not be obvious.</p>
+Another solution is to use glyphs or diacritical marks to illustrate pronunciation. However, if this technique is used, there must be a mechanism to turn it off. Further, it is helpful to link to a guide to the marks being used, as their meaning may not be obvious.
 
-<h3 id="Predictability">Predictability</h3>
+## Predictability
 
-<p>WCAG <a href="https://www.w3.org/WAI/WCAG21/Understanding/predictable">Guideline 3.2</a> states "make web pages appear and operate in predictable ways." This is a tenet of good user experience design. Consistency is especially important for people with cognitive difficulties. This includes consistency in page layout and predictable interactive components.</p>
+WCAG [Guideline 3.2](https://www.w3.org/WAI/WCAG21/Understanding/predictable) states "make web pages appear and operate in predictable ways." This is a tenet of good user experience design. Consistency is especially important for people with cognitive difficulties. This includes consistency in page layout and predictable interactive components.
 
-<h4 id="Use_activation_not_focus_to_change_context">Use activation, not focus to change context</h4>
+### Use activation, not focus to change context
 
-<p>Creating a change in context should be intentional. Because of this, when a UI feature receives <a href="/en-US/docs/Web/API/HTMLElement/focus">focus</a>, it should not trigger further user-facing actions. Rather, users should need to "activate" a feature to trigger the change.</p>
+Creating a change in context should be intentional. Because of this, when a UI feature receives [focus](/en-US/docs/Web/API/HTMLElement/focus), it should not trigger further user-facing actions. Rather, users should need to "activate" a feature to trigger the change.
 
-<h4 id="Change_setting_based_on_an_active_request">Change setting based on an active request</h4>
+### Change setting based on an active request
 
-<p>Form control operation and data entry should result in predictable behavior. Changes in context can confuse users with cognitive disabilities, and should therefore only occur when it is clear that such a change will happen in response to the user's action.</p>
+Form control operation and data entry should result in predictable behavior. Changes in context can confuse users with cognitive disabilities, and should therefore only occur when it is clear that such a change will happen in response to the user's action.
 
-<p>Changing state should require intentional user action. Examples of this are checking a checkbox, entering data or changing a select option. Also be sure to provide a submit button to initiate the change of context, and describe what will happen before the change is made.</p>
+Changing state should require intentional user action. Examples of this are checking a checkbox, entering data or changing a select option. Also be sure to provide a submit button to initiate the change of context, and describe what will happen before the change is made.
 
-<h4 id="Keep_navigation_consistent_throughout_the_site">Keep navigation consistent throughout the site</h4>
+### Keep navigation consistent throughout the site
 
-<p>Keep the navigation order consistent between pages. For example, if you have a navigation bar on multiple pages, make that navigation uniform across the site with the same links in the same location. This doesn't just apply to navigation: present all repeated components in the same relative order each time they appear.</p>
+Keep the navigation order consistent between pages. For example, if you have a navigation bar on multiple pages, make that navigation uniform across the site with the same links in the same location. This doesn't just apply to navigation: present all repeated components in the same relative order each time they appear.
 
-<h4 id="Provide_consistent_labeling">Provide consistent labeling</h4>
+### Provide consistent labeling
 
-<p>Identical functions should have similar labels every time they are utilized. Consistent button labels, alternative text for icons, and iconography for similar interactions and so on, even on different sections of your site, help all your users.</p>
+Identical functions should have similar labels every time they are utilized. Consistent button labels, alternative text for icons, and iconography for similar interactions and so on, even on different sections of your site, help all your users.
 
-<h4 id="Be_consistent_and_predictable_and_use_norms">Be consistent and predictable, and use norms</h4>
+### Be consistent and predictable, and use norms
 
-<p>While unlabeled iconography is not the most effective method of conveying information, keeping the use of the icons (and if labeled, their label text) consistent helps people to understand what the icon represents. Similarly, don't change defaults like the browser's back button. If you need to redirect a user, let the user know about it beforehand.</p>
+While unlabeled iconography is not the most effective method of conveying information, keeping the use of the icons (and if labeled, their label text) consistent helps people to understand what the icon represents. Similarly, don't change defaults like the browser's back button. If you need to redirect a user, let the user know about it beforehand.
 
-<h3 id="Input_Assistance">Input Assistance</h3>
+## Input Assistance
 
-<p><a href="https://www.w3.org/WAI/WCAG21/Understanding/input-assistance">Guideline 3.3</a> helps to ensure accurate data entry, stating "help users avoid and correct mistakes." While we all make mistakes, some people are more likely to make mistakes, less likely to notice a mistake, or have a harder time correcting a mistake once they make one.</p>
+[Guideline 3.3](https://www.w3.org/WAI/WCAG21/Understanding/input-assistance) helps to ensure accurate data entry, stating "help users avoid and correct mistakes." While we all make mistakes, some people are more likely to make mistakes, less likely to notice a mistake, or have a harder time correcting a mistake once they make one.
 
-<p>Input Assistance guidelines aim to reduce the likelihood that users, especially those with disabilities, make a mistake, and, if they do make a mistake, increase the likelihood that they see and comprehend the error message and can successfully fix any errors.</p>
+Input Assistance guidelines aim to reduce the likelihood that users, especially those with disabilities, make a mistake, and, if they do make a mistake, increase the likelihood that they see and comprehend the error message and can successfully fix any errors.
 
-<h4 id="Convey_automated_error_detection">Convey automated error detection</h4>
+### Convey automated error detection
 
-<p>Users need to be alerted to the error and informed of what is wrong. If there is client side error detection, observe the following guidelines to make the error as effective as possible when conveyed to the user:</p>
+Users need to be alerted to the error and informed of what is wrong. If there is client side error detection, observe the following guidelines to make the error as effective as possible when conveyed to the user:
 
-<ul>
- <li>The error must be described in the text.</li>
- <li>Ensure that the error message is as specific as possible.</li>
- <li>Provide text to identify incomplete required fields and text descriptions if a value entered is invalid. </li>
- <li>If the error prevented a form submission, focus on the error. If multiple errors are present, provide a summary, with each error linking to the related input.</li>
- <li>Include text along with use of icons, images, color and so on. Some people have difficulty understanding the meaning of icons and other visual cues.</li>
- <li>Other people may have difficulty understanding the text version of your error message. For these people, also provide things like icons and colors.</li>
- <li>Also, provide feedback on when there is a successful form submission.</li>
-</ul>
+- The error must be described in the text.
+- Ensure that the error message is as specific as possible.
+- Provide text to identify incomplete required fields and text descriptions if a value entered is invalid.
+- If the error prevented a form submission, focus on the error. If multiple errors are present, provide a summary, with each error linking to the related input.
+- Include text along with use of icons, images, color and so on. Some people have difficulty understanding the meaning of icons and other visual cues.
+- Other people may have difficulty understanding the text version of your error message. For these people, also provide things like icons and colors.
+- Also, provide feedback on when there is a successful form submission.
 
-<h4 id="Provide_instructions_for_user_input">Provide instructions for user input</h4>
+### Provide instructions for user input
 
-<p>Start the form with text instructions on how to operate it. Include labels or instructions when users need to input information, using the <code><a href="/en-US/docs/Web/HTML/Element/label">&lt;label&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/fieldset">&lt;fieldset&gt;</a></code>, and <code><a href="/en-US/docs/Web/HTML/Element/legend">&lt;legend&gt;</a></code> elements to do so.</p>
+Start the form with text instructions on how to operate it. Include labels or instructions when users need to input information, using the {{HTMLElement('label')}}, {{HTMLElement('fieldset')}}, and {{HTMLElement('legend')}} elements to do so.
 
-<p>Labels should be descriptive and positioned close to the input they relate to. When requiring a specific format for input, provide an example formatted in the proper way. Additionally, consider performing server-side validation to help format input data, to aid in the ease of user input.</p>
+Labels should be descriptive and positioned close to the input they relate to. When requiring a specific format for input, provide an example formatted in the proper way. Additionally, consider performing server-side validation to help format input data, to aid in the ease of user input.
 
-<p>If a form control is required, indicate it both visually and <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute">via code</a>. If a form control changes context, describe what will happen in a way that the user will understand it before they cause the context change to happen.</p>
+If a form control is required, indicate it both visually and [via code](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute). If a form control changes context, describe what will happen in a way that the user will understand it before they cause the context change to happen.
 
-<h4 id="Error_Suggestion">Error Suggestion</h4>
+### Error Suggestion
 
-<p>Provide suggested input to the user if an input error is automatically detected and suggestions for correction are known (unless doing so would jeopardize the security or purpose of the content).</p>
+Provide suggested input to the user if an input error is automatically detected and suggestions for correction are known (unless doing so would jeopardize the security or purpose of the content).
 
-<h4 id="Prevent_catastrophes">Prevent catastrophes</h4>
+### Prevent catastrophes
 
-<p>For submissions that cause, or can lead to, legal, financial, or other significant consequences, ensure that the submissions can be reviewed, confirmed, and/or are reversible.</p>
+For submissions that cause, or can lead to, legal, financial, or other significant consequences, ensure that the submissions can be reviewed, confirmed, and/or are reversible.
 
-<p>Data entered by the user should be checked for errors before submission, and the user should be given the opportunity to correct them. The user should be able to review, confirm, and correct information before final submission. Also, be sure to include a confirmation checkbox in addition to a submit button.</p>
+Data entered by the user should be checked for errors before submission, and the user should be given the opportunity to correct them. The user should be able to review, confirm, and correct information before final submission. Also, be sure to include a confirmation checkbox in addition to a submit button.
 
-<p>If a submission causes a legal or financial transaction to occur, provide a stated time within which the request can be amended or canceled by the user.</p>
+If a submission causes a legal or financial transaction to occur, provide a stated time within which the request can be amended or canceled by the user.
 
-<h4 id="Provide_help">Provide help</h4>
+### Provide help
 
-<p>Context-sensitive help should be made available. If a form requires text input, provide form instructions describing the purpose and the necessary input. Include spell checking and suggestions for long-form text input, as well as links to help and support material. If a specific data format is expected for input, provide an example.</p>
+Context-sensitive help should be made available. If a form requires text input, provide form instructions describing the purpose and the necessary input. Include spell checking and suggestions for long-form text input, as well as links to help and support material. If a specific data format is expected for input, provide an example.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>The above are good design practices. They will benefit everyone.</p>
+The above are good design practices. They will benefit everyone.
 
-<ul>
- <li>Many people with cognitive impairments also have physical disabilities. Websites must conform with the W3C’s <a class="external external-icon" href="https://www.w3.org/WAI/standards-guidelines/wcag/" rel="noopener">Web Content Accessibility Guidelines</a>.</li>
- <li>The W3C’s <a class="external external-icon" href="https://www.w3.org/WAI/GL/task-forces/coga/" rel="noopener">Cognitive and Learning Disabilities Accessibility Task Force</a> produces web accessibility guidelines for people with cognitive impairments.</li>
- <li>WebAIM has a <a class="external external-icon" href="https://webaim.org/articles/cognitive/" rel="noopener">Cognitive page</a> of relevant information and resources<a name="_GoBack"></a>.</li>
- <li>The United States Centers for Disease Control estimate that, as of 2018, 1 in 4 U.S. citizens have a disability and, of them, <a class="external external-icon" href="https://www.cdc.gov/media/releases/2018/p0816-disability.html" rel="noopener">cognitive impairment is the most common for young people</a>.</li>
- <li>In the U.S., “intellectual disabilities” used to be called “mental retardation.” In the U.K., “intellectual disabilities” is commonly called “learning disabilities” or “learning difficulties”.</li>
-</ul>
+- Many people with cognitive impairments also have physical disabilities. Websites must conform with the W3C’s [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/).
+- The W3C’s [Cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/) produces web accessibility guidelines for people with cognitive impairments.
+- WebAIM has a [Cognitive page](https://webaim.org/articles/cognitive/) of relevant information and resources.
+- The United States Centers for Disease Control estimate that, as of 2018, 1 in 4 U.S. citizens have a disability and, of them, [cognitive impairment is the most common for young people](https://www.cdc.gov/media/releases/2018/p0816-disability.html).
+- In the U.S., “intellectual disabilities” used to be called “mental retardation.” In the U.K., “intellectual disabilities” is commonly called “learning disabilities” or “learning difficulties”.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://extensionworkshop.com/documentation/develop/build-an-accessible-extension/">Accessibility Guidelines </a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/What_is_accessibility">What is accessibility</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Seizure_disorders">Accessibility for seizure disorders</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG">Understanding WCAG Guidelines</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility">Accessibility overview</a></li>
- <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines</a>, including <a href="/en-US/docs/Web/Accessibility/Cognitive_accessibility#guidelines">cognitive accessibility guidelines</a>.</li>
- <li><a href="https://www.w3.org/WAI/GL/task-forces/coga/">CThe W3Cs cognitive and Learning Disabilities Accessibility Task Force</a></li>
- <li><a href="https://webaim.org/articles/cognitive/">WebAIM Cognitive information</a></li>
- <li><a href="https://www.cdc.gov/media/releases/2018/p0816-disability.html">CDC information on disabilities.</a></li>
-</ul>
+- [Accessibility Guidelines](https://extensionworkshop.com/documentation/develop/build-an-accessible-extension/)
+- [What is accessibility](/en-US/docs/Learn/Accessibility/What_is_accessibility)
+- [Accessibility for seizure disorders](/en-US/docs/Web/Accessibility/Seizure_disorders)
+- [Understanding WCAG Guidelines](/en-US/docs/Web/Accessibility/Understanding_WCAG)
+- [Accessibility overview](/en-US/docs/Learn/Accessibility)
+- [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/), including [cognitive accessibility guidelines](/en-US/docs/Web/Accessibility/Cognitive_accessibility#guidelines).
+- [CThe W3Cs cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/)
+- [WebAIM Cognitive information](https://webaim.org/articles/cognitive/)
+- [CDC information on disabilities.](https://www.cdc.gov/media/releases/2018/p0816-disability.html)

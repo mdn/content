@@ -1,6 +1,6 @@
 ---
 title: Mobile accessibility checklist
-slug: Web/Accessibility/Mobile_accessibility_checklist
+slug: Web/Accessibility/Mobile_accessibility_checklist 
 tags:
   - Accessibility
   - Firefox OS
@@ -8,102 +8,75 @@ tags:
   - Mobile
   - checklist
 ---
-<div class="summary">
-<p><span class="seoSummary">This document provides a concise checklist of accessibility requirements for mobile app developers. It is intended to continuously evolve as more patterns arise.</span></p>
-</div>
+<div class="summary"><p><span class="seoSummary">This document provides a concise checklist of accessibility requirements for mobile app developers. It is intended to continuously evolve as more patterns arise.</span>
 
-<h2 id="color">Color</h2>
+## Color
 
-<ul>
-	<li>Color contrast must comply with <a href="https://www.w3.org/TR/WCAG/#contrast-minimum">WCAG 2.1 AA level requirements</a>:
+- Color contrast must comply with [WCAG 2.1 AA level requirements](https://www.w3.org/TR/WCAG/#contrast-minimum):
 
-	<ul>
-		<li>Contrast ratio of 4.5:1 for normal text (less than 18 point or 14 point bold.)</li>
-		<li>Contrast ratio of 3:1 for large text (at least 18 point or 14 point bold.)</li>
-	</ul>
-	</li>
-	<li>Information conveyed via color must be also available by other means too (underlined text for links, etc.)</li>
-</ul>
+  - Contrast ratio of 4.5:1 for normal text (less than 18 point or 14 point bold.)
+  - Contrast ratio of 3:1 for large text (at least 18 point or 14 point bold.)
 
-<h2 id="Visibility">Visibility</h2>
+- Information conveyed via color must be also available by other means too (underlined text for links, etc.)
 
-<ul>
-	<li>Content hiding techniques such as zero opacity, z-index order and off-screen placement must not be used exclusively to handle visibility.</li>
-	<li>Everything other than the currently visible screen must be <em>truly</em> invisible (especially relevant for single page apps with multiple <em>cards</em>):
-	<ul>
-		<li>Use the <code>hidden</code> attribute or <code>visibility</code> or <code>display</code> style properties.</li>
-		<li>Unless absolutely unavoidable, <code>aria-hidden</code> attribute should not be used.</li>
-	</ul>
-	</li>
-</ul>
+## Visibility
 
-<h2 id="Focus">Focus</h2>
+- Content hiding techniques such as zero opacity, z-index order and off-screen placement must not be used exclusively to handle visibility.
+- Everything other than the currently visible screen must be _truly_ invisible (especially relevant for single page apps with multiple _cards_):
 
-<ul>
-	<li>All activatable elements must be focusable:
+  - Use the `hidden` attribute or `visibility` or `display` style properties.
+  - Unless absolutely unavoidable, `aria-hidden` attribute should not be used.
 
-	<ul>
-		<li>Standard controls such as links, buttons, and form fields are focusable by default.</li>
-		<li>Non-standard controls must have an appropriate <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">ARIA Role</a> assigned to them, such as <code>button</code>, <code>link</code>, or <code>checkbox</code>.</li>
-	</ul>
-	</li>
-	<li>Focus should be handled in a logical order and consistent manner.</li>
-</ul>
+## Focus
 
-<h2 id="Text_Equivalents">Text equivalents</h2>
+- All activatable elements must be focusable:
 
-<ul>
-	<li>Text equivalent must be provided for every non-strictly presentational non-text element within the app.
+  - Standard controls such as links, buttons, and form fields are focusable by default.
+  - Non-standard controls must have an appropriate [ARIA Role](/en-US/docs/Web/Accessibility/ARIA/Roles) assigned to them, such as `button`, `link`, or `checkbox`.
 
-	<ul>
-		<li>Use <em>alt</em> and <em>title</em> where appropriate (<em>s</em>ee Steve Faulkner's post about <a href="http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/">Using the HTML title attribute</a> for a good guide.)</li>
-		<li>If the above attributes are not applicable, use appropriate <a href="https://www.w3.org/TR/wai-aria-1.1/#state_prop_def">ARIA States and Properties</a> such as <code>aria-label</code>, <code>aria-labelledby</code>, or <code>aria-describedby</code>.</li>
-	</ul>
-	</li>
-	<li>Images of text must be avoided.</li>
-	<li>All user interface components with visible text (or image of text) as labels must have the same text available in the programmatic <a href="https://www.w3.org/TR/WCAG21/#dfn-name">name</a> of the component. <a href="https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html">WCAG 2.1: Label in name.</a></li>
-	<li>All form controls must have labels ({{ htmlelement("label") }} elements) for the benefit of screen reader users.</li>
-</ul>
+- Focus should be handled in a logical order and consistent manner.
 
-<h2 id="Handling_State">Handling state</h2>
+## Text equivalents
 
-<ul>
-	<li>Standard controls such as radio buttons and checkboxes are handled by the operating system. However, for other custom controls state changes must be provided via <a href="https://www.w3.org/TR/wai-aria-1.1/#state_prop_def">ARIA States</a> such as<code> aria-checked</code>, <code>aria-disabled</code>, <code>aria-selected</code>, <code>aria-expanded</code>, and <code>aria-pressed</code>.</li>
-</ul>
+- Text equivalent must be provided for every non-strictly presentational non-text element within the app.
 
-<h2 id="Orientation">Orientation</h2>
+  - Use _alt_ and _title_ where appropriate (*s*ee Steve Faulkner's post about [Using the HTML title attribute](http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/) for a good guide.)
+  - If the above attributes are not applicable, use appropriate [ARIA States and Properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) such as `aria-label`, `aria-labelledby`, or `aria-describedby`.
 
-<ul>
-	<li>Content should not be restricted to a single orientation, such as portrait or landscape, unless essential. <a href="https://www.w3.org/WAI/WCAG21/Understanding/orientation.html">WCAG 2.1: Orientation</a>
+- Images of text must be avoided.
+- All user interface components with visible text (or image of text) as labels must have the same text available in the programmatic [name](https://www.w3.org/TR/WCAG21/#dfn-name) of the component. [WCAG 2.1: Label in name.](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html)
+- All form controls must have labels ({{ htmlelement("label") }} elements) for the benefit of screen reader users.
 
-	<ul>
-		<li>Examples of when an orientation is essential is a piano application or a bank check.</li>
-	</ul>
-	</li>
-</ul>
+## Handling state
 
-<h2 id="General_Guidelines">General guidelines</h2>
+- Standard controls such as radio buttons and checkboxes are handled by the operating system. However, for other custom controls state changes must be provided via [ARIA States](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) such as` aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded`, and `aria-pressed`.
 
-<ul>
-	<li>An app title must be provided.</li>
-	<li>Headings must not break hierarchical structure
-	<pre class="brush: html">&lt;h1&gt;Top level heading&lt;/h1&gt;
-  &lt;h2&gt;Secondary heading&lt;/h2&gt;
-  &lt;h2&gt;Another secondary heading&lt;/h2&gt;
-    &lt;h3&gt;Low level heading&lt;/h3&gt;</pre>
-	</li>
-	<li><a href="https://www.washington.edu/accessibility/web/landmarks/">ARIA Landmark Roles</a> should be used to describe an app or document structure, such as <code>banner</code>, <code>complementary</code>, <code>contentinfo</code>, <code>main</code>, <code>navigation</code>, <code>search</code>.</li>
-	<li>For touch events, at least one of the following must be true (<a href="https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html">WCAG 2.1: Pointer Cancellation</a>):
-	<ul>
-		<li>The down-event should not be used to trigger any action</li>
-		<li>The action is triggered on the up event and an option to abort the action before its completion is available or an option to undo the action after its completion</li>
-		<li>The up-event will undo any action that was triggered on a down event</li>
-		<li>It is essential to trigger the action on the down event. For example, playing a game or a piano application.</li>
-	</ul>
-	</li>
-	<li>Touch targets must be large enough for the user to interact with (see the <a href="http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size">BBC Mobile Accessibility Guidelines</a> for useful touch target size guidelines).</li>
-</ul>
+## Orientation
 
-<div class="note">
-<p><strong>Note</strong>: The <a href="https://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html">original version of this document</a> was written by <a href="https://yzen.github.io/">Yura Zenevich</a>.</p>
-</div>
+- Content should not be restricted to a single orientation, such as portrait or landscape, unless essential. [WCAG 2.1: Orientation](https://www.w3.org/WAI/WCAG21/Understanding/orientation.html)
+
+  - Examples of when an orientation is essential is a piano application or a bank check.
+
+## General guidelines
+
+- An app title must be provided.
+- Headings must not break hierarchical structure
+
+  ```html
+  <h1>Top level heading</h1>
+    <h2>Secondary heading</h2>
+    <h2>Another secondary heading</h2>
+      <h3>Low level heading</h3>
+  ```
+
+- [ARIA Landmark Roles](https://www.washington.edu/accessibility/web/landmarks/) should be used to describe an app or document structure, such as `banner`, `complementary`, `contentinfo`, `main`, `navigation`, `search`.
+- For touch events, at least one of the following must be true ([WCAG 2.1: Pointer Cancellation](https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html)):
+
+  - The down-event should not be used to trigger any action
+  - The action is triggered on the up event and an option to abort the action before its completion is available or an option to undo the action after its completion
+  - The up-event will undo any action that was triggered on a down event
+  - It is essential to trigger the action on the down event. For example, playing a game or a piano application.
+
+- Touch targets must be large enough for the user to interact with (see the [BBC Mobile Accessibility Guidelines](http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size) for useful touch target size guidelines).
+
+> **Note:** The <a href="https://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html">original version of this document</a> was written by <a href="https://yzen.github.io/">Yura Zenevich</a>.

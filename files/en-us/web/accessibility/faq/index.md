@@ -1,21 +1,22 @@
 ---
 title: Accessibility FAQ
-slug: Web/Accessibility/FAQ
+slug: Web/Accessibility/FAQ 
 tags:
   - Accessibility
   - FAQ
 ---
-<h2 id="Where_can_I_find_more_about_accessibility">Where can I find more about accessibility?</h2>
+## Where can I find more about accessibility?
 
-<p><a href="/en-US/docs/Web/Accessibility">Mozilla Accessibility Project</a></p>
+[Mozilla Accessibility Project](/en-US/docs/Web/Accessibility)
 
-<h2 id="Which_assistive_technologies_support_Firefox_and_Thunderbird">Which assistive technologies support Firefox and Thunderbird?</h2>
+## Which assistive technologies support Firefox and Thunderbird?
 
-<p><a href="https://support.mozilla.com/en-US/kb/Assistive%20technology%20compatibility">Assistive Technology Compatibility</a> - Documents assistive technologies for Windows, Linux, UNIX, Mac OS X and the degree of compatibility with Firefox</p>
+[Assistive Technology Compatibility](https://support.mozilla.com/en-US/kb/Assistive%20technology%20compatibility) - Documents assistive technologies for Windows, Linux, UNIX, Mac OS X and the degree of compatibility with Firefox
 
-<h2 id="What_can_I_do_to_make_sure_my_Mozilla_extensions_are_accessible">What can I do to make sure my Mozilla extensions are accessible?</h2>
+## What can I do to make sure my Mozilla extensions are accessible?
 
-<p>Make sure your extension follows <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility">the regular web page accessibility principles</a>.</p>
+Make sure your extension follows [the regular web page accessibility principles](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility).
 
-<h2 id="I'm_interested_in_helping_promote_the_fine_accessibility_features_that_Firefox_provides_what_can_I_do">I'm interested in helping promote the fine accessibility features that Firefox provides, what can I do?</h2>
-<p>Join the <a href="http://accessfirefox.com/">Firefox Accessibility Advocates</a></p>
+## I'm interested in helping promote the fine accessibility features that Firefox provides, what can I do?
+
+Join the [Firefox Accessibility Advocates](http://accessfirefox.com/)
