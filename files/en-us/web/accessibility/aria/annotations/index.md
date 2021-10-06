@@ -1,6 +1,6 @@
 ---
 title: ARIA annotations
-slug: Web/Accessibility/ARIA/Annotations
+slug: Web/Accessibility/ARIA/Annotations 
 tags:
   - ARIA
   - Accessibility
@@ -10,131 +10,140 @@ tags:
   - details
   - suggestions
 ---
-<p>WAI-ARIA version 1.3 sees the addition of a set of new features, collectively known as ARIA annotations, which allow the creation of accessible annotations inside web documents. Typical use cases include edit suggestions (i.e. an addition and/or deletion in an editable document), and comments (e.g. an editorial comment related to a part of a document under review).</p>
+WAI-ARIA version 1.3 sees the addition of a set of new features, collectively known as ARIA annotations, which allow the creation of accessible annotations inside web documents. Typical use cases include edit suggestions (i.e. an addition and/or deletion in an editable document), and comments (e.g. an editorial comment related to a part of a document under review).
 
-<p>Below we'll introduce the new features associated with ARIA annotations, and have a look at some code examples that show them in action.</p>
+Below we'll introduce the new features associated with ARIA annotations, and have a look at some code examples that show them in action.
 
-<div class="note">
-  <p><strong>Note:</strong> You can find all the examples discussed in this article in a demo file at <a href="https://mdn.github.io/html-examples/aria-annotations/">aria-annotations</a>.</p>
+> **Note:** You can find all the examples discussed in this article in a demo file at [aria-annotations](https://mdn.github.io/html-examples/aria-annotations/).
+
+## ARIA annotations features
+
+The ARIA attributes providing these new abilities are as follows:
+
+- `aria-description=""` — provides a detailed description of an HTML element, as opposed to the brief label provided by [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute).
+- `role="insertion"` and `role="deletion"` — semantically denote HTML elements whose contents represent an insertion to or deletion from the overall document. These are semantically equivalent to the HTML {{HTMLElement('ins')}} and {{HTMLElement('del')}} elements. Note that these aren’t part of the new ARIA annotations features, but they are of central relevance.
+- `role="mark"` — semantically denotes HTML elements containing text that is marked/highlighted for reference purposes. This is semantically equivalent to the HTML {{HTMLElement('mark')}} element.
+- `role="suggestion"` — semantically denotes a single proposed change to an editable document. This should be used on an element that wraps a single insertion and deletion (see `role="insertion"` and `role="deletion"` above).
+- `role="comment"` — semantically denotes a comment/reaction to some content on the page, or to a previous comment.
+
+To provide a semantic association between the document content being annotated and the annotation, an `aria-details` attribute can be set on the annotated content that contains the ID of the annotated element. aria-details has been updated so that it can support multiple IDs — this makes sense, for example you can easily envisage having multiple comments relating to the same bit of text.
+
+ARIA annotation roles and objects are currently exposed in:
+
+- Firefox from version 75 onwards, on Windows and Linux (on macOS, we are first waiting for Apple to define what Safari will expose as Apple-dialect attributes to VoiceOver, and will then follow suit.)
+- Chrome from version 81 onwards, currently behind the `#enable-accessibility-expose-aria-annotations` flag (go to `chrome://flags` to enable this.)
+
+Unfortunately, you won’t be able to use any of these yet, as screenreader support is currently not there. For the moment, you can see the annotations data being exposed with tools like [Firefox Accessibility Inspector](/en-US/docs/Tools/Accessibility_inspector). The annotations should just work once screenreader support is added.
+
+## Associating annotated elements with their details
+
+There are a number of different ways in which you can associate UI features with text labels or descriptions for accessibility purposes. It is useful to know when to use each. You’ll see examples of most of these later on in the article, but briefly:
+
+- `aria-label=""` can be set on an element to provide a brief descriptive label when it isn't appropriate to have the label actually appearing in the UI, for example a [search input](/en-US/docs/Web/HTML/Element/input/search) in a horizontal nav bar.
+- `aria-labelledby=""` can be set on an element and given a value the same as the ID of an element that contains a label for the element. This is useful when the element’s label is available in the UI, but for some reason a conventional {{HTMLElement('label')}} won’t work.
+- `aria-description=""` works the same as `aria-label=""`, but is used when you want to give an element a more detailed description, rather than a short label.
+- `aria-describedby=""` works the same as `aria-labelledby=""`, but is used when you want to associate the element with a more detailed description, rather than a short label.
+- `aria-details=""` works in the same way as `aria-describedby=""`, except that it denotes more complex sets of details, rather than simple text descriptions. You can learn more about this in the next section.
+
+### aria-details versus aria-describedby
+
+We have already alluded to the difference between these two above — `aria-describedby` is for textual descriptions, whereas `aria-details` is for more complex sets of details. But what does this actually mean?
+
+`aria-describedby` is appropriate for associating an element with a simple text description, where you don’t have much in the way of meaningful semantics contained within. For example:
+
+```html
+<p id="description-id">An extended text description of some kind...</p>
+
+<div aria-describedby="description-id">
+  <!-- Some kind of UI feature that needs an accessible description  -->
+</div>
+```
+
+`aria-details` is appropriate when linking to descriptions or annotations that are a bit more complex — rather than a simple text string, it might contain multiple bits of semantic information:
+
+```html
+<div id="detail-id">
+  <h2>A heading</h2>
+  <p>An extended text description of some kind…</p>
+  <p><time datetime="...">A timestamp</time></p>
 </div>
 
-<h2 id="ARIA_annotations_features">ARIA annotations features</h2>
+<div aria-details="detail-id">
+  <!-- Some kind of UI feature that needs an accessible description  -->
+</div>
+```
 
-<p>The ARIA attributes providing these new abilities are as follows:</p>
+This difference really becomes apparent when you get to how the content is actually interpreted in the accessibility layer, and read out by screenreaders. Content marked up with `aria-describedby` is flattened into a simple string, whereas `aria-details` content is not — so use `aria-details` if you want to preserve more complex semantics that go beyond a simple text string.
 
-<ul>
- <li><code>aria-description=""</code> — provides a detailed description of an HTML element, as opposed to the brief label provided by <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">aria-label</a></code>.</li>
- <li><code>role="insertion"</code> and <code>role="deletion"</code> — semantically denote HTML elements whose contents represent an insertion to or deletion from the overall document. These are semantically equivalent to the HTML <code><a href="/en-US/docs/Web/HTML/Element/ins">&lt;ins&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/del">&lt;del&gt;</a></code> elements. Note that these aren’t part of the new ARIA annotations features, but they are of central relevance.</li>
- <li><code>role="mark"</code> — semantically denotes HTML elements containing text that is marked/highlighted for reference purposes. This is semantically equivalent to the HTML <code><a href="/en-US/docs/Web/HTML/Element/mark">&lt;mark&gt;</a></code> element.</li>
- <li><code>role="suggestion"</code> — semantically denotes a single proposed change to an editable document. This should be used on an element that wraps a single insertion and deletion (see <code>role="insertion"</code> and <code>role="deletion"</code> above).</li>
- <li><code>role="comment"</code> — semantically denotes a comment/reaction to some content on the page, or to a previous comment.</li>
-</ul>
+## A basic description
 
-<p>To provide a semantic association between the document content being annotated and the annotation, an <code>aria-details</code> attribute can be set on the annotated content that contains the ID of the annotated element. aria-details has been updated so that it can support multiple IDs — this makes sense, for example you can easily envisage having multiple comments relating to the same bit of text.</p>
+Simple descriptions basically just involve usage of `aria-description` on an element to provide a description that can’t be gotten from the element’s text alone. As an example, let’s say you have a poll/voting UI widget that shows numbers of votes, but you want to summarize the purpose of the widget in a clear description because the UI does not make it clear:
 
-<p>ARIA annotation roles and objects are currently exposed in:</p>
+```html
+<section aria-description="Choose your favourite fruit — the fruit with the highest number of votes will be added to the lunch options next week.">
+  <p>Pick your favourite fruit:</p>
+  <form>
+    <ul>
+      <li><label>Apple: <input type="radio" name="fruit" value="apple"></label></li>
+      <li><label>Orange: <input type="radio" name="fruit" value="orange"></label></li>
+      <li><label>Banana: <input type="radio" name="fruit" value="banana"></label></li>
+    </ul>
+  </form>
+</section>
+```
 
-<ul>
- <li>Firefox from version 75 onwards, on Windows and Linux (on macOS, we are first waiting for Apple to define what Safari will expose as Apple-dialect attributes to VoiceOver, and will then follow suit.)</li>
- <li>Chrome from version 81 onwards, currently behind the <code>#enable-accessibility-expose-aria-annotations</code> flag (go to <code>chrome://flags</code> to enable this.)</li>
-</ul>
+If the descriptive text does appear in the UI, you can link the description to the widget using `aria-describedby`, like so:
 
-<p>Unfortunately, you won’t be able to use any of these yet, as screenreader support is currently not there. For the moment, you can see the annotations data being exposed with tools like <a href="/en-US/docs/Tools/Accessibility_inspector">Firefox Accessibility Inspector</a>. The annotations should just work once screenreader support is added.</p>
+```html
+<p id="fruit-desc">Choose your favourite fruit — the fruit with the highest number of votes will be added to the lunch options next week.</p>
 
-<h2 id="Associating_annotated_elements_with_their_details">Associating annotated elements with their details</h2>
+<section aria-describedby="fruit-desc">
+  <form>
+    <ul>
+      <li><label>Apple: <input type="radio" name="fruit" value="apple"></label></li>
+      <li><label>Orange: <input type="radio" name="fruit" value="orange"></label></li>
+      <li><label>Banana: <input type="radio" name="fruit" value="banana"></label></li>
+    </ul>
+  </form>
+</section>
+```
 
-<p>There are a number of different ways in which you can associate UI features with text labels or descriptions for accessibility purposes. It is useful to know when to use each. You’ll see examples of most of these later on in the article, but briefly:</p>
+## Insertions and deletions
 
-<ul>
- <li><code>aria-label=""</code> can be set on an element to provide a brief descriptive label when it isn't appropriate to have the label actually appearing in the UI, for example a <a href="/en-US/docs/Web/HTML/Element/input/search">search input</a> in a horizontal nav bar.</li>
- <li><code>aria-labelledby=""</code> can be set on an element and given a value the same as the ID of an element that contains a label for the element. This is useful when the element’s label is available in the UI, but for some reason a conventional <code>&lt;label&gt;</code> won’t work.</li>
- <li><code>aria-description=""</code> works the same as <code>aria-label=""</code>, but is used when you want to give an element a more detailed description, rather than a short label.</li>
- <li><code>aria-describedby=""</code> works the same as <code>aria-labelledby=""</code>, but is used when you want to associate the element with a more detailed description, rather than a short label.</li>
- <li><code>aria-details=""</code> works in the same way as <code>aria-describedby=""</code>, except that it denotes more complex sets of details, rather than simple text descriptions. You can learn more about this in the next section.</li>
-</ul>
+A common wish in online document systems like Google Docs is to be able to track changes, to see what reviewers or editors have suggested as changes to the text, before the managing editor or author accepts or rejects those changes. The semantics for this have long been available in HTML, via the {{HTMLElement('ins')}} and {{HTMLElement('del')}} elements:
 
-<h3 id="aria-details_versus_aria-describedby">aria-details versus aria-describedby</h3>
+```html
+<p>Freida’s pet is a <del>black Cat called Luna</del><ins>purple Tyrannosaurus Rex called Tiny</ins>.</p>
+```
 
-<p>We have already alluded to the difference between these two above — <code>aria-describedby</code> is for textual descriptions, whereas <code>aria-details</code> is for more complex sets of details. But what does this actually mean?</p>
+With the new additions, you now have new roles available to provide the same semantics, should you be unable to use {{HTMLElement('ins')}} and {{HTMLElement('del')}} elements for some reason:
 
-<p><code>aria-describedby</code> is appropriate for associating an element with a simple text description, where you don’t have much in the way of meaningful semantics contained within. For example:</p>
+```html
+<p>Freida’s pet is a <span role="deletion">black Cat called Luna</span><span role="insertion">purple Tyrannosaurus Rex called Tiny</span>.</p>
+```
 
-<pre class="brush: html">&lt;p id="description-id"&gt;An extended text description of some kind...&lt;/p&gt;
+However, this often isn’t enough — when you’ve got a content change like the one above that involves an insertion _and_ a deletion, there is no way for a screenreader user to work out if the two are related or not. This is the job of `role="suggestion"`, which should be set on an element wrapping both of them like so:
 
-&lt;div aria-describedby="description-id"&gt;
-  &lt;!-- Some kind of UI feature that needs an accessible description  --&gt;
-&lt;/div&gt;</pre>
+```html
+<p>Freida’s pet is a
+  <span role="suggestion"><span role="deletion">black Cat called Luna</span><span role="insertion">purple Tyrannosaurus Rex called Tiny</span></span>.
+</p>
+```
 
-<p><code>aria-details</code> is appropriate when linking to descriptions or annotations that are a bit more complex — rather than a simple text string, it might contain multiple bits of semantic information:</p>
+We could even provide an information box saying who made the suggestion and when, and associate it with the suggestion via `aria-details`:
 
-<pre class="brush: html">&lt;div id="detail-id"&gt;
-  &lt;h2&gt;A heading&lt;/h2&gt;
-  &lt;p&gt;An extended text description of some kind…&lt;/p&gt;
-  &lt;p&gt;&lt;time datetime="..."&gt;A timestamp&lt;/time&gt;&lt;/p&gt;
-&lt;/div&gt;
+```html
+<p>Freida’s pet is a
+  <span role="suggestion" aria-details="comment-source"><span role="deletion">black Cat called Luna</span><span role="insertion">purple Tyrannosaurus Rex called Tiny</span></span>.
+</p>
 
-&lt;div aria-details="detail-id"&gt;
-  &lt;!-- Some kind of UI feature that needs an accessible description  --&gt;
-&lt;/div&gt;</pre>
+<div id="comment-source">Suggested by Chris, <time datetime="2019-03-30T19:29">March 30 2021, 19:29</time></div>
+```
 
-<p>This difference really becomes apparent when you get to how the content is actually interpreted in the accessibility layer, and read out by screenreaders. Content marked up with <code>aria-describedby</code> is flattened into a simple string, whereas <code>aria-details</code> content is not — so use <code>aria-details</code> if you want to preserve more complex semantics that go beyond a simple text string.</p>
+Browsers tend to provide a default black strikethrough for deletions, and a black underline for insertions, but you’ll probably want to use some more interesting styling of your own, for example:
 
-<h2 id="A_basic_description">A basic description</h2>
-
-<p>Simple descriptions basically just involve usage of <code>aria-description</code> on an element to provide a description that can’t be gotten from the element’s text alone. As an example, let’s say you have a poll/voting UI widget that shows numbers of votes, but you want to summarize the purpose of the widget in a clear description because the UI does not make it clear:</p>
-
-<pre class="brush: html">&lt;section aria-description="Choose your favourite fruit — the fruit with the highest number of votes will be added to the lunch options next week."&gt;
-  &lt;p&gt;Pick your favourite fruit:&lt;/p&gt;
-  &lt;form&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;label&gt;Apple: &lt;input type="radio" name="fruit" value="apple"&gt;&lt;/label&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;label&gt;Orange: &lt;input type="radio" name="fruit" value="orange"&gt;&lt;/label&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;label&gt;Banana: &lt;input type="radio" name="fruit" value="banana"&gt;&lt;/label&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/form&gt;
-&lt;/section&gt;</pre>
-
-<p>If the descriptive text does appear in the UI, you can link the description to the widget using <code>aria-describedby</code>, like so:</p>
-
-<pre class="brush: html">&lt;p id="fruit-desc"&gt;Choose your favourite fruit — the fruit with the highest number of votes will be added to the lunch options next week.&lt;/p&gt;
-
-&lt;section aria-describedby="fruit-desc"&gt;
-  &lt;form&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;label&gt;Apple: &lt;input type="radio" name="fruit" value="apple"&gt;&lt;/label&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;label&gt;Orange: &lt;input type="radio" name="fruit" value="orange"&gt;&lt;/label&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;label&gt;Banana: &lt;input type="radio" name="fruit" value="banana"&gt;&lt;/label&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/form&gt;
-&lt;/section&gt;</pre>
-
-<h2 id="Insertions_and_deletions">Insertions and deletions</h2>
-
-<p>A common wish in online document systems like Google Docs is to be able to track changes, to see what reviewers or editors have suggested as changes to the text, before the managing editor or author accepts or rejects those changes. The semantics for this have long been available in HTML, via the <code><a href="/en-US/docs/Web/HTML/Element/ins">&lt;ins&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/del">&lt;del&gt;</a></code> elements:</p>
-
-<pre class="brush: html">&lt;p&gt;Freida’s pet is a &lt;del&gt;black Cat called Luna&lt;/del&gt;&lt;ins&gt;purple Tyrannosaurus Rex called Tiny&lt;/ins&gt;.&lt;/p&gt;</pre>
-
-<p>With the new additions, you now have new roles available to provide the same semantics, should you be unable to use <code>&lt;ins&gt;</code> and <code>&lt;del&gt;</code> elements for some reason:</p>
-
-<pre class="brush: html">&lt;p&gt;Freida’s pet is a &lt;span role="deletion"&gt;black Cat called Luna&lt;/span&gt;&lt;span role="insertion"&gt;purple Tyrannosaurus Rex called Tiny&lt;/span&gt;.&lt;/p&gt;</pre>
-
-<p>However, this often isn’t enough — when you’ve got a content change like the one above that involves an insertion <em>and</em> a deletion, there is no way for a screenreader user to work out if the two are related or not. This is the job of <code>role="suggestion"</code>, which should be set on an element wrapping both of them like so:</p>
-
-<pre class="brush: html">&lt;p&gt;Freida’s pet is a
-  &lt;span role="suggestion"&gt;&lt;span role="deletion"&gt;black Cat called Luna&lt;/span&gt;&lt;span role="insertion"&gt;purple Tyrannosaurus Rex called Tiny&lt;/span&gt;&lt;/span&gt;.
-&lt;/p&gt;</pre>
-
-<p>We could even provide an information box saying who made the suggestion and when, and associate it with the suggestion via <code>aria-details</code>:</p>
-
-<pre class="brush: html">&lt;p&gt;Freida’s pet is a
-  &lt;span role="suggestion" aria-details="comment-source"&gt;&lt;span role="deletion"&gt;black Cat called Luna&lt;/span&gt;&lt;span role="insertion"&gt;purple Tyrannosaurus Rex called Tiny&lt;/span&gt;&lt;/span&gt;.
-&lt;/p&gt;
-
-&lt;div id="comment-source"&gt;Suggested by Chris, &lt;time datetime="2019-03-30T19:29"&gt;March 30 2019, 19:29&lt;/time&gt;&lt;/div&gt;</pre>
-
-<p>Browsers tend to provide a default black strikethrough for deletions, and a black underline for insertions, but you’ll probably want to use some more interesting styling of your own, for example:</p>
-
-<pre class="brush: css">ins, [role="insertion"] {
+```css
+ins, [role="insertion"] {
   color: #0c0;
   text-decoration: underline;
 }
@@ -149,66 +158,71 @@ ins, [role="insertion"], del, [role="deletion"] {
   background-color: #fee;
   padding: 2px 4px;
   margin: 0 1px;
-}</pre>
+}
+```
 
-<h2 id="Comments">Comments</h2>
+## Comments
 
-<p>Online document applications also commonly feature commenting systems, and it would be nice to have a way to semantically associate commented content and its comments. ARIA annotations can help us here too.</p>
+Online document applications also commonly feature commenting systems, and it would be nice to have a way to semantically associate commented content and its comments. ARIA annotations can help us here too.
 
-<p>Let’s say we have a comment box like so:</p>
+Let’s say we have a comment box like so:
 
-<pre class="brush: html">&lt;div role="comment" id="thread-1" data-author="chris"&gt;
-  &lt;h3&gt;Chris said&lt;/h3&gt;
-  &lt;p class="comment-text"&gt;I really think this could use more cowbell.&lt;/p&gt;
-  &lt;p&gt;&lt;time datetime="2019-03-30T19:29"&gt;March 30 2019, 19:29&lt;/time&gt;&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div role="comment" id="thread-1" data-author="chris">
+  <h3>Chris said</h3>
+  <p class="comment-text">I really think this could use more cowbell.</p>
+  <p><time datetime="2019-03-30T19:29">March 30 2019, 19:29</time></p>
+</div>
+```
 
-<p>We’ve used <code>role="comment"</code> to mark this up as a comment. To associate the comment with the text being commented, we need to wrap the commented text with an element containing the <code>aria-details</code> attribute, the value of which should be the ID of the comment. <code>&lt;mark&gt;</code> is a suitable element for this purpose (a comment is a reference annotation), so the annotation could look like this:</p>
+We’ve used `role="comment"` to mark this up as a comment. To associate the comment with the text being commented, we need to wrap the commented text with an element containing the `aria-details` attribute, the value of which should be the ID of the comment. {{HTMLElement('mark')}} is a suitable element for this purpose (a comment is a reference annotation), so the annotation could look like this:
 
-<pre class="brush: html">&lt;p&gt;The last half of the song is a slow-rising crescendo that peaks at the
-&lt;mark aria-details="thread-1"&gt;end of the guitar solo&lt;/mark&gt;, before fading away sharply.&lt;/p&gt;
+```html
+<p>The last half of the song is a slow-rising crescendo that peaks at the
+<mark aria-details="thread-1">end of the guitar solo</mark>, before fading away sharply.</p>
 
-&lt;div role="comment" id="thread-1" data-author="chris"&gt;
-  &lt;h3&gt;Chris said&lt;/h3&gt;
-  &lt;p class="comment-text"&gt;I really think this moment could use more cowbell.&lt;/p&gt;
-  &lt;p&gt;&lt;time datetime="2019-03-30T19:29"&gt;March 30 2019, 19:29&lt;/time&gt;&lt;/p&gt;
-&lt;/div&gt;</pre>
+<div role="comment" id="thread-1" data-author="chris">
+  <h3>Chris said</h3>
+  <p class="comment-text">I really think this moment could use more cowbell.</p>
+  <p><time datetime="2019-03-30T19:29">March 30 2019, 19:29</time></p>
+</div>
+```
 
-<div class="note">
-  <p><strong>Note:</strong> If for some reason you can’t use the <code>&lt;mark&gt;</code> element in your application, you could also use <code>&lt;span role="mark"&gt;&lt;/span&gt;</code>.</p>
+> **Note:** If for some reason you can’t use the {{HTMLElement('mark')}} element in your application, you could also use [`<span role="mark"></span>`](/en-us/web/accessibility/aria/roles/mark_role).
+
+Since `aria-details` can now accept multiple IDs, we can associate multiple comments with the same annotation, like so:
+
+```html
+<p>The last half of the song is a slow-rising crescendo that peaks at the
+<mark aria-details="thread-1 thread-2">end of the guitar solo</mark>, before fading away sharply.</p>
+
+<div role="comment" id="thread-1" data-author="chris">
+  <h3>Chris said</h3>
+  <p class="comment-text">I really think this moment could use more cowbell.</p>
+  <p><time datetime="2019-03-30T19:29">March 30 2019, 19:29</time></p>
 </div>
 
-<p>Since <code>aria-details</code> can now accept multiple IDs, we can associate multiple comments with the same annotation, like so:</p>
+<div role="comment" id="thread-2" data-author="chris">
+  <h3>Marcus said</h3>
+  <p class="comment-text">The guitar solo could do with a touch more chorus,
+    and a slightly lower volume.</p>
+  <p><time datetime="2019-03-29T15:35">March 29 2019, 15:35</time></p>
+</div>
+```
 
-<pre class="brush: html">&lt;p&gt;The last half of the song is a slow-rising crescendo that peaks at the
-&lt;mark aria-details="thread-1 thread-2"&gt;end of the guitar solo&lt;/mark&gt;, before fading away sharply.&lt;/p&gt;
+Nested comments are also possible with ARIA annotations — nest the comments inside one another, like so:
 
-&lt;div role="comment" id="thread-1" data-author="chris"&gt;
-  &lt;h3&gt;Chris said&lt;/h3&gt;
-  &lt;p class="comment-text"&gt;I really think this moment could use more cowbell.&lt;/p&gt;
-  &lt;p&gt;&lt;time datetime="2019-03-30T19:29"&gt;March 30 2019, 19:29&lt;/time&gt;&lt;/p&gt;
-&lt;/div&gt;
+```html
+<div role="comment" id="thread-1" data-author="chris">
+  <h3>Chris said</h3>
+  <p class="comment-text">I really think this moment could use more cowbell.</p>
+  <p><time datetime="2019-03-30T19:29">March 30 2019, 19:29</time></p>
 
-&lt;div role="comment" id="thread-2" data-author="chris"&gt;
-  &lt;h3&gt;Marcus said&lt;/h3&gt;
-  &lt;p class="comment-text"&gt;The guitar solo could do with a touch more chorus,
-    and a slightly lower volume.&lt;/p&gt;
-  &lt;p&gt;&lt;time datetime="2019-03-29T15:35"&gt;March 29 2019, 15:35&lt;/time&gt;&lt;/p&gt;
-&lt;/div&gt;</pre>
-
-<p>Nested comments are also possible with ARIA annotations — nest the comments inside one another, like so:</p>
-
-<pre class="brush: html">&lt;div role="comment" id="thread-1" data-author="chris"&gt;
-  &lt;h3&gt;Chris said&lt;/h3&gt;
-  &lt;p class="comment-text"&gt;I really think this moment could use more cowbell.&lt;/p&gt;
-  &lt;p&gt;&lt;time datetime="2019-03-30T19:29"&gt;March 30 2019, 19:29&lt;/time&gt;&lt;/p&gt;
-
-  &lt;div role="comment" data-author="marcus"&gt;
-    &lt;h3&gt;Marcus replied&lt;/h3&gt;
-    &lt;p class="comment-text"&gt;I don't know about that.
-      I think the cowbell could distract from the solo.&lt;/p&gt;
-    &lt;p&gt;&lt;time datetime="2019-03-30T21:02"&gt;March 30 2019, 21:02&lt;/time&gt;&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-</pre>
+  <div role="comment" data-author="marcus">
+    <h3>Marcus replied</h3>
+    <p class="comment-text">I don't know about that.
+      I think the cowbell could distract from the solo.</p>
+    <p><time datetime="2019-03-30T21:02">March 30 2019, 21:02</time></p>
+  </div>
+</div>
+```
