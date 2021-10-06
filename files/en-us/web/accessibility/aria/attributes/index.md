@@ -3,10 +3,10 @@ title: WAI-ARIA Attributes
 slug: Web/Accessibility/ARIA/Attributes
 tags:
   - ARIA
-  - ARIA Roles
+  - ARIA attributes
   - Accessibility
   - Reference
-  - Roles
+  - Attributes
 ---
 This page lists reference pages covering all the WAI-ARIA attributes discussed on MDN. For a full list of attributes, see [Using ARIA: Roles, States, and Properties](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques)
 
