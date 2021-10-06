@@ -8,7 +8,7 @@ tags:
   - Mobile
   - checklist
 ---
-<div class="summary"><p><span class="seoSummary">This document provides a concise checklist of accessibility requirements for mobile app developers. It is intended to continuously evolve as more patterns arise.</span>
+This document provides a concise checklist of accessibility requirements for mobile app developers. It is intended to continuously evolve as more patterns arise.
 
 ## Color
 
@@ -77,6 +77,6 @@ tags:
   - The up-event will undo any action that was triggered on a down event
   - It is essential to trigger the action on the down event. For example, playing a game or a piano application.
 
-- Touch targets must be large enough for the user to interact with (see the [BBC Mobile Accessibility Guidelines](http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size) for useful touch target size guidelines).
+- Touch targets must be large enough for the user to interact with (see the [BBC Mobile Accessibility Guidelines](https://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size) for useful touch target size guidelines).
 
 > **Note:** The <a href="https://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html">original version of this document</a> was written by <a href="https://yzen.github.io/">Yura Zenevich</a>.
