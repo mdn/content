@@ -206,7 +206,7 @@ Also, be sure you are using [heading elements](/en-US/docs/Web/HTML/Element/Head
 
 Make sure that your headings have non-empty text content, and are not hidden, such as with CSS `display:none` or `aria-hidden=true`. Users of screen readers rely on headings to understand the structure and content of a document. Do not use heading elements to mark up images or other graphical content.
 
-## Use title attribute to describe {{HTMLElement('iframe')}} content
+## Use title attribute to describe `<iframe>` content
 
 Make sure that {{htmlelement("iframe")}} elements have a `title` attribute to describe the contents of the frame. Without a title, users of assistive technologies have to navigate into the frame in order to understand what it contains, which can be difficult and confusing.
 
