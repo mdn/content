@@ -7,15 +7,13 @@ tags:
   - Shadow Tree
   - shadow dom
 ---
-<p>A <strong>shadow tree</strong> is a tree of DOM {{Glossary("node", "nodes")}} whose topmost node is a <strong>shadow root</strong>; that is, the topmost node within a <strong>shadow DOM</strong>. A shadow tree is a hidden set of standard DOM nodes which is attached to a standard DOM node that serves as a host. The hidden nodes are not directly visible using regular DOM functionality, but require the use of a special <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM API</a> to access.</p>
+A **shadow tree** is a tree of DOM {{Glossary("node", "nodes")}} whose topmost node is a **shadow root**; that is, the topmost node within a **shadow DOM**. A shadow tree is a hidden set of standard DOM nodes which is attached to a standard DOM node that serves as a host. The hidden nodes are not directly visible using regular DOM functionality, but require the use of a special [Shadow DOM API](/en-US/docs/Web/Web_Components/Using_shadow_DOM) to access.
 
-<p>Nodes within the shadow tree are not affected by anything applied outside the shadow tree, and vice versa. This provides a way to encapsulate implementation details, which is especially useful for custom elements and other advanced design paradigms.</p>
+Nodes within the shadow tree are not affected by anything applied outside the shadow tree, and vice versa. This provides a way to encapsulate implementation details, which is especially useful for custom elements and other advanced design paradigms.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">Using shadow DOM</a></li>
- <li>{{domxref("Element.shadowRoot")}} and {{domxref("Element.attachShadow()")}}</li>
- <li>{{domxref("ShadowRoot")}}</li>
- <li>{{HTMLElement("slot")}}</li>
-</ul>
+- [Using shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM)
+- {{domxref("Element.shadowRoot")}} and {{domxref("Element.attachShadow()")}}
+- {{domxref("ShadowRoot")}}
+- {{HTMLElement("slot")}}

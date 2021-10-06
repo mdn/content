@@ -6,37 +6,32 @@ tags:
   - Glossary
   - NeedsContent
 ---
-<p><em>Mutable</em> is a type of variable that can be changed. In {{glossary("JavaScript")}}, only {{Glossary("Object","objects")}} and {{Glossary("Array","arrays")}} are mutable, not {{Glossary("primitive", "primitive values")}}.</p>
+_Mutable_ is a type of variable that can be changed. In {{glossary("JavaScript")}}, only {{Glossary("Object","objects")}} and {{Glossary("Array","arrays")}} are mutable, not {{Glossary("primitive", "primitive values")}}.
 
-<p>(You <em>can</em> make a variable name point to a new value, but the previous value is still held in memory. Hence the need for garbage collection.)</p>
+(You _can_ make a variable name point to a new value, but the previous value is still held in memory. Hence the need for garbage collection.)
 
-<p>A <strong>mutable object</strong> is an object whose state can be modified after it is created.</p>
+A **mutable object** is an object whose state can be modified after it is created.
 
-<p><strong>Immutables</strong> are the objects whose state cannot be changed once the object is created.</p>
+**Immutables** are the objects whose state cannot be changed once the object is created.
 
-<p><strong>Strings and Numbers</strong> are <strong>Immutable</strong>. Lets understand this with an example:</p>
+**Strings and Numbers** are **Immutable**. Lets understand this with an example:
 
-<pre>var immutableString = "Hello";
+    var immutableString = "Hello";
 
-// In the above code, a new object with string value is created.
+    // In the above code, a new object with string value is created.
 
-immutableString = immutableString + "World";
+    immutableString = immutableString + "World";
 
-// We are now appending "World" to the existing value.
-</pre>
+    // We are now appending "World" to the existing value.
 
-<p>On appending the "immutableString" with a string value, following events occur:</p>
+On appending the "immutableString" with a string value, following events occur:
 
-<ol>
- <li>Existing value of "immutableString" is retrieved</li>
- <li>"World" is appended to the existing value of "immutableString"</li>
- <li>The resultant value is then allocated to a new block of memory</li>
- <li>"immutableString" object now points to the newly created memory space</li>
- <li>Previously created memory space is now available for garbage collection.</li>
-</ol>
+1.  Existing value of "immutableString" is retrieved
+2.  "World" is appended to the existing value of "immutableString"
+3.  The resultant value is then allocated to a new block of memory
+4.  "immutableString" object now points to the newly created memory space
+5.  Previously created memory space is now available for garbage collection.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Immutable object")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Immutable object")}} on Wikipedia

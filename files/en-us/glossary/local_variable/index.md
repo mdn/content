@@ -6,19 +6,18 @@ tags:
   - Glossary
   - NeedsContent
 ---
-<p>A {{glossary("variable")}} whose name is bound to its {{glossary("value")}} only within a {{Glossary("local scope")}}.</p>
+A {{glossary("variable")}} whose name is bound to its {{glossary("value")}} only within a {{Glossary("local scope")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var global = 5; //is a global variable
+```js
+var global = 5; //is a global variable
 
 function fun(){
     var local = 10; //is a local variable
 }
-</pre>
+```
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{interwiki("wikipedia", "Local variable", "Local variable")}} on Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "Local variable", "Local variable")}} on Wikipedia

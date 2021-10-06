@@ -7,26 +7,22 @@ tags:
   - flex item
   - flexbox
 ---
-<p>The direct children of a {{glossary("Flex Container")}} (elements with <code>display: flex</code> or <code>display: inline-flex</code> set on them) become <strong>flex items</strong>.</p>
+The direct children of a {{glossary("Flex Container")}} (elements with `display: flex` or `display: inline-flex` set on them) become **flex items**.
 
-<p>Continuous runs of text inside flex containers will also become flex items.</p>
+Continuous runs of text inside flex containers will also become flex items.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<h3 id="Property_reference">Property reference</h3>
+### Property reference
 
-<ul>
- <li>{{cssxref("align-self")}}</li>
- <li>{{cssxref("flex-basis")}}</li>
- <li>{{cssxref("flex-grow")}}</li>
- <li>{{cssxref("flex-shrink")}}</li>
- <li>{{cssxref("order")}}</li>
-</ul>
+- {{cssxref("align-self")}}
+- {{cssxref("flex-basis")}}
+- {{cssxref("flex-grow")}}
+- {{cssxref("flex-shrink")}}
+- {{cssxref("order")}}
 
-<h3 id="Further_reading">Further reading</h3>
+### Further reading
 
-<ul>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic Concepts of Flexbox</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items">Ordering flex items</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Controlling Ratios of flex items along the main axis</a></em></li>
-</ul>
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox Guide: _[Ordering flex items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_
+- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_

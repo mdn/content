@@ -5,37 +5,37 @@ tags:
   - CodingScripting
   - Glossary
 ---
-<p>The act of a function calling itself, recursion is used to solve problems that contain smaller sub-problems. A recursive function can receive two inputs: a base case (ends recursion) or a recursive case (resumes recursion).</p>
+The act of a function calling itself, recursion is used to solve problems that contain smaller sub-problems. A recursive function can receive two inputs: a base case (ends recursion) or a recursive case (resumes recursion).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Recursive_function_calls_itself_until_condition_met">Recursive function calls itself until condition met</h3>
+### Recursive function calls itself until condition met
 
-<p>The following Python code defines a function that takes a number, prints it, and then calls itself again with the number's value -1. It keeps going until the number is equal to 0, in which case it stops.</p>
+The following Python code defines a function that takes a number, prints it, and then calls itself again with the number's value -1. It keeps going until the number is equal to 0, in which case it stops.
 
-<pre class="brush: js">def recurse(x):
-   if x &gt; 0:
+```js
+def recurse(x):
+   if x > 0:
        print(x)
        recurse(x - 1)
 
-recurse(10)</pre>
+recurse(10)
+```
 
-<p>The output will look like this:</p>
+The output will look like this:
 
-<p>10<br>
- 9<br>
- 8<br>
- 7<br>
- 6<br>
- 5<br>
- 4<br>
- 3<br>
- 2<br>
- 1</p>
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
 
- <h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Recursion (computer science)")}} on Wikipedia</li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Functions#recursion">More details about recursion in JavaScript</a></li>
-</ul>
+- {{Interwiki("wikipedia", "Recursion (computer science)")}} on Wikipedia
+- [More details about recursion in JavaScript](/en-US/docs/Web/JavaScript/Guide/Functions#recursion)

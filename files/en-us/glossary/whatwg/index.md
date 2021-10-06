@@ -11,11 +11,9 @@ tags:
   - Web
   - standards
 ---
-<p>The WHATWG (<em>Web Hypertext Application Technology Working Group</em>) is a community that <a href="https://spec.whatwg.org/">maintains and develops web standards</a>, including {{Glossary("DOM")}}, Fetch, and {{Glossary("HTML")}}. Employees of Apple, Mozilla, and Opera established WHATWG in 2004.</p>
+The WHATWG (_Web Hypertext Application Technology Working Group_) is a community that [maintains and develops web standards](https://spec.whatwg.org/), including {{Glossary("DOM")}}, Fetch, and {{Glossary("HTML")}}. Employees of Apple, Mozilla, and Opera established WHATWG in 2004.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "WHATWG")}} on Wikipedia</li>
- <li><a href="https://whatwg.org/">WHATWG website</a></li>
-</ul>
+- {{Interwiki("wikipedia", "WHATWG")}} on Wikipedia
+- [WHATWG website](https://whatwg.org/)

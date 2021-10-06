@@ -7,10 +7,8 @@ tags:
   - Navigation
   - urn
 ---
-<p>URN (Uniform Resource Name) is a {{Glossary("URI")}} in a standard format, referring to a resource without specifying its location or whether it exists. This example comes from <a href="https://www.ietf.org/rfc/rfc3986.txt">RFC3986</a>: <code> urn:oasis:names:specification:docbook:dtd:xml:4.1.2</code></p>
+URN (Uniform Resource Name) is a {{Glossary("URI")}} in a standard format, referring to a resource without specifying its location or whether it exists. This example comes from [RFC3986](https://www.ietf.org/rfc/rfc3986.txt): `urn:oasis:names:specification:docbook:dtd:xml:4.1.2`
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "URN")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "URN")}} on Wikipedia

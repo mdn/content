@@ -5,24 +5,20 @@ tags:
   - CodingScripting
   - Glossary
 ---
-<p>XLink is a W3C standard which is used to describe links between XML and XML or other documents. Some its behaviors are left to the implementation to determine how to handle.</p>
+XLink is a W3C standard which is used to describe links between XML and XML or other documents. Some its behaviors are left to the implementation to determine how to handle.
 
-<p>Simple XLinks are "supported" in Firefox (at least in SVG and MathML), though they do not work as links if one loads a plain XML document with XLinks and attempts to click on the relevant points in the XML tree.</p>
+Simple XLinks are "supported" in Firefox (at least in SVG and MathML), though they do not work as links if one loads a plain XML document with XLinks and attempts to click on the relevant points in the XML tree.
 
-<p>For those who may have found XLink 1.0 cumbersome for regular links, XLink 1.1 drops the need to specify <code>xlink:type="simple"</code> for simple links.</p>
+For those who may have found XLink 1.0 cumbersome for regular links, XLink 1.1 drops the need to specify `xlink:type="simple"` for simple links.
 
-<p>XLink is used in <a href="/en-US/docs/Web/SVG">SVG</a>, <a href="/en-US/docs/Web/MathML">MathML</a>, and other important standards.</p>
+XLink is used in [SVG](/en-US/docs/Web/SVG), [MathML](/en-US/docs/Web/MathML), and other important standards.
 
-<h3 id="Specifications">Specifications</h3>
+### Specifications
 
-<ul>
- <li><a href="https://www.w3.org/TR/xlink/">XLink 1.0</a></li>
- <li><a href="https://www.w3.org/TR/xlink11/">XLink 1.1</a> (currently a Working Draft)</li>
-</ul>
+- [XLink 1.0](https://www.w3.org/TR/xlink/)
+- [XLink 1.1](https://www.w3.org/TR/xlink11/) (currently a Working Draft)
 
-<h3 id="See_also">See also</h3>
+### See also
 
-<ul>
- <li><a href="/en-US/docs/Web/XML">XML</a></li>
- <li><a href="/en-US/docs/Web/API/Element/getAttributeNS">Code snippets:getAttributeNS</a> - a wrapper for dealing with some browsers not supporting this DOM method</li>
-</ul>
+- [XML](/en-US/docs/Web/XML)
+- [Code snippets:getAttributeNS](/en-US/docs/Web/API/Element/getAttributeNS) - a wrapper for dealing with some browsers not supporting this DOM method

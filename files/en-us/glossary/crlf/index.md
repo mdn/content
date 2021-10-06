@@ -10,18 +10,14 @@ tags:
   - carriage return
   - line feed
 ---
-<p>CR and LF are <a href="https://en.wikipedia.org/wiki/Control_character">control characters</a> or <a href="https://en.wikipedia.org/wiki/Bytecode">bytecode</a> that can be used to mark a line break in a text file.</p>
+CR and LF are [control characters](https://en.wikipedia.org/wiki/Control_character) or [bytecode](https://en.wikipedia.org/wiki/Bytecode) that can be used to mark a line break in a text file.
 
-<ul>
- <li>CR = <strong>Carriage Return</strong> (<code>\r</code>, <code>0x0D</code> in hexadecimal, 13 in decimal) — moves the cursor to the beginning of the line without advancing to the next line.</li>
- <li>LF = <strong>Line Feed</strong> (<code>\n</code>, <code>0x0A</code> in hexadecimal, 10 in decimal) — moves the cursor down to the next line without returning to the beginning of the line.</li>
-</ul>
+- CR = **Carriage Return** (`\r`, `0x0D` in hexadecimal, 13 in decimal) — moves the cursor to the beginning of the line without advancing to the next line.
+- LF = **Line Feed** (`\n`, `0x0A` in hexadecimal, 10 in decimal) — moves the cursor down to the next line without returning to the beginning of the line.
 
-<p>A CR immediately followed by a LF (CRLF, <code>\r\n</code>, or <code>0x0D0A</code>) moves the cursor down to the next line and then to the beginning of the line.</p>
+A CR immediately followed by a LF (CRLF, `\r\n`, or `0x0D0A`) moves the cursor down to the next line and then to the beginning of the line.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{interwiki("wikipedia", "Newline#In_programming_languages", "Newline")}} on Wikipedia</li>
- <li>{{interwiki("wikipedia", "Carriage_return#Computers", "Carriage return")}} on Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "Newline#In_programming_languages", "Newline")}} on Wikipedia
+- {{interwiki("wikipedia", "Carriage_return#Computers", "Carriage return")}} on Wikipedia

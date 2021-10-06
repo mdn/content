@@ -6,13 +6,11 @@ tags:
   - Stub
   - WebMechanics
 ---
-<p><strong>Ecma International</strong> (formally <em>European Computer Manufacturers Association</em>) is a non-profit organization that develops standards in computer hardware, communications, and programming languages.</p>
+**Ecma International** (formally _European Computer Manufacturers Association_) is a non-profit organization that develops standards in computer hardware, communications, and programming languages.
 
-<p>On the web it is famous for being the organization which maintain <a href="https://www.ecma-international.org/publications/standards/Ecma-262.htm">the ECMA-262 specification</a> (aka. {{Glossary("ECMAScript")}}) which is the core specification for the {{Glossary("JavaScript")}} language.</p>
+On the web it is famous for being the organization which maintain [the ECMA-262 specification](https://www.ecma-international.org/publications/standards/Ecma-262.htm) (aka. {{Glossary("ECMAScript")}}) which is the core specification for the {{Glossary("JavaScript")}} language.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{interwiki("wikipedia", "Ecma_International", "Ecma International")}} on Wikipedia</li>
- <li><a href="https://www.ecma-international.org/">The Ecma International web site</a></li>
-</ul>
+- {{interwiki("wikipedia", "Ecma_International", "Ecma International")}} on Wikipedia
+- [The Ecma International web site](https://www.ecma-international.org/)

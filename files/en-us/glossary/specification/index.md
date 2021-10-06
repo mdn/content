@@ -6,10 +6,8 @@ tags:
   - OpenPractices
   - Standardization
 ---
-<p>A <strong>specification </strong>is a document that lays out in detail what functionality or attributes a product must include before delivery. In the context of describing the Web, the term "specification" (often shortened to "spec") generally means a document describing a language, technology, or {{Glossary("API")}} which makes up the complete set of open Web technologies.</p>
+A **specification** is a document that lays out in detail what functionality or attributes a product must include before delivery. In the context of describing the Web, the term "specification" (often shortened to "spec") generally means a document describing a language, technology, or {{Glossary("API")}} which makes up the complete set of open Web technologies.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Specification")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Specification")}} on Wikipedia

@@ -7,11 +7,8 @@ tags:
   - Reference
   - Web Performance
 ---
-<p><strong>Perceived performance</strong> is a measure of how fast, responsive, and reliable a website <em>feels</em> to its users. The perception of how well a site is performing can have more impact on the user experience that the actual load and response times.</p>
+**Perceived performance** is a measure of how fast, responsive, and reliable a website _feels_ to its users. The perception of how well a site is performing can have more impact on the user experience that the actual load and response times.
 
+## See also
 
-<h2 id="see_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Learn/Performance/Perceived_performance">Perceived performance</a></li>
-</ul>
+- [Perceived performance](/en-US/docs/Learn/Performance/Perceived_performance)

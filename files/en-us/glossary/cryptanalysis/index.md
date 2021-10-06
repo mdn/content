@@ -7,10 +7,8 @@ tags:
   - Privacy
   - Security
 ---
-<p><strong>Cryptanalysis</strong> is the branch of {{glossary("cryptography")}} that studies how to break codes and cryptosystems. Cryptanalysis creates techniques to break {{glossary("cipher","ciphers")}}, in particular by methods more efficient than a <a href="https://en.wikipedia.org/wiki/Brute-force_search">brute-force search</a>. In addition to traditional methods like <a href="https://en.wikipedia.org/wiki/Frequency_analysis">frequency analysis</a> and <a href="https://en.wikipedia.org/wiki/Index_of_coincidence">index of coincidence</a>, cryptanalysis includes more recent methods, like <a href="https://en.wikipedia.org/wiki/Linear_cryptanalysis">linear cryptanalysis</a> or <a href="https://en.wikipedia.org/wiki/Differential_cryptanalysis">differential cryptanalysis</a>, that can break more advanced ciphers.</p>
+**Cryptanalysis** is the branch of {{glossary("cryptography")}} that studies how to break codes and cryptosystems. Cryptanalysis creates techniques to break {{glossary("cipher","ciphers")}}, in particular by methods more efficient than a [brute-force search](https://en.wikipedia.org/wiki/Brute-force_search). In addition to traditional methods like [frequency analysis](https://en.wikipedia.org/wiki/Frequency_analysis) and [index of coincidence](https://en.wikipedia.org/wiki/Index_of_coincidence), cryptanalysis includes more recent methods, like [linear cryptanalysis](https://en.wikipedia.org/wiki/Linear_cryptanalysis) or [differential cryptanalysis](https://en.wikipedia.org/wiki/Differential_cryptanalysis), that can break more advanced ciphers.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Cryptanalysis")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Cryptanalysis")}} on Wikipedia

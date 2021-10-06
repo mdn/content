@@ -6,20 +6,18 @@ tags:
   - Input
   - accent
 ---
-<p>An <strong>accent</strong> is a typically bright color that contrasts with the more utilitarian background and foreground colors within a color scheme. These are present in the visual style of many platforms (though not all).</p>
+An **accent** is a typically bright color that contrasts with the more utilitarian background and foreground colors within a color scheme. These are present in the visual style of many platforms (though not all).
 
-<p>On the web, an accent is sometimes used in {{HTMLElement("input")}} elements for the active portion of the control, for instance the background of a checked <a href="/en-US/docs/Web/HTML/Element/input/checkbox">checkbox</a>.</p>
+On the web, an accent is sometimes used in {{HTMLElement("input")}} elements for the active portion of the control, for instance the background of a checked [checkbox](/en-US/docs/Web/HTML/Element/input/checkbox).
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<h3 id="CSS_related_to_the_accent">CSS related to the accent</h3>
+### CSS related to the accent
 
-<p>You can set the color of the accent for a given element by setting the element's CSS {{cssxref("accent-color")}} property to the appropriate {{cssxref("&lt;color&gt;")}} value.</p>
+You can set the color of the accent for a given element by setting the element's CSS {{cssxref("accent-color")}} property to the appropriate {{cssxref("&lt;color&gt;")}} value.
 
-<h3 id="HTML_elements_that_may_present_an_accent">HTML elements that may have an accent</h3>
+### HTML elements that may have an accent
 
-<ul>
-	<li><code><a href="/en-US/docs/Web/HTML/Element/input/checkbox">&lt;input type="checkbox"&gt;</a></code></li>
-	<li><code><a href="/en-US/docs/Web/HTML/Element/input/radio">&lt;input type="radio"&gt;</a></code></li>
-	<li><code><a href="/en-US/docs/Web/HTML/Element/input/range">&lt;input type="range"&gt;</a></code></li>
-</ul>
+- [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)
+- [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio)
+- [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)

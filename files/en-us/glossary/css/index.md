@@ -8,30 +8,30 @@ tags:
   - Web
   - l10n:priority
 ---
-<p><strong>CSS</strong> (Cascading Style Sheets) is a declarative language that controls how webpages look in the {{glossary("browser")}}.</p>
+**CSS** (Cascading Style Sheets) is a declarative language that controls how webpages look in the {{glossary("browser")}}.
 
-<p>The browser applies CSS style declarations to selected elements to display them properly. A style declaration contains the properties and their values, which determine how a webpage looks.</p>
+The browser applies CSS style declarations to selected elements to display them properly. A style declaration contains the properties and their values, which determine how a webpage looks.
 
-<p>CSS is one of the three core Web technologies, along with {{Glossary("HTML")}} and {{Glossary("JavaScript")}}. CSS usually styles {{Glossary("Element","HTML elements")}}, but can be also used with other markup languages like {{Glossary("SVG")}} or {{Glossary("XML")}}.</p>
+CSS is one of the three core Web technologies, along with {{Glossary("HTML")}} and {{Glossary("JavaScript")}}. CSS usually styles {{Glossary("Element","HTML elements")}}, but can be also used with other markup languages like {{Glossary("SVG")}} or {{Glossary("XML")}}.
 
-<p>A CSS rule is a set of {{Glossary("property/CSS","properties")}} associated with a {{Glossary("CSS selector", "selector")}}. Here is an example that makes every HTML paragraph yellow against a black background:</p>
+A CSS rule is a set of {{Glossary("property/CSS","properties")}} associated with a {{Glossary("CSS selector", "selector")}}. Here is an example that makes every HTML paragraph yellow against a black background:
 
-<pre class="brush: css">/* The selector "p" indicates that all paragraphs in the document will be affected by that rule */
+```css
+/* The selector "p" indicates that all paragraphs in the document will be affected by that rule */
 p {
   /* The "color" property defines the text color, in this case yellow. */
   color: yellow;
 
   /* The "background-color" property defines the background color, in this case black. */
   background-color: black
-}</pre>
+}
+```
 
-<p>"Cascading" refers to the rules that govern how selectors are prioritized to change a page's appearance. This is a very important feature, since a complex website can have thousands of CSS rules.</p>
+"Cascading" refers to the rules that govern how selectors are prioritized to change a page's appearance. This is a very important feature, since a complex website can have thousands of CSS rules.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn/CSS">Learn CSS</a></li>
- <li>{{interwiki("wikipedia", "CSS")}} on Wikipedia</li>
- <li><a href="/en-US/docs/Web/CSS">The CSS documentation on MDN</a></li>
- <li><a href="https://www.w3.org/Style/CSS/current-work">The CSS Working Group current work</a></li>
-</ul>
+- [Learn CSS](/en-US/docs/Learn/CSS)
+- {{interwiki("wikipedia", "CSS")}} on Wikipedia
+- [The CSS documentation on MDN](/en-US/docs/Web/CSS)
+- [The CSS Working Group current work](https://www.w3.org/Style/CSS/current-work)

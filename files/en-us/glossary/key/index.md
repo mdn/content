@@ -6,30 +6,26 @@ tags:
   - Glossary
   - Security
 ---
-<p>A key is a piece of information used by a {{Glossary("cipher")}} for {{Glossary("encryption")}} and/or {{Glossary("decryption")}}.</p>
+A key is a piece of information used by a {{Glossary("cipher")}} for {{Glossary("encryption")}} and/or {{Glossary("decryption")}}.
 
-<p>Encrypted messages should remain secure even if everything about the {{Glossary("cryptosystem")}}, except for the key, is public knowledge.</p>
+Encrypted messages should remain secure even if everything about the {{Glossary("cryptosystem")}}, except for the key, is public knowledge.
 
-<p>In {{Glossary("symmetric-key cryptography")}}, the same key is used for both encryption and decryption. In {{Glossary("public-key cryptography")}}, there exists a pair of related keys known as the <em>public key</em> and <em>private key</em>. The public key is freely available, whereas the private key is kept secret. The public key is able to encrypt messages that only the corresponding private key is able to decrypt, and vice versa.</p>
+In {{Glossary("symmetric-key cryptography")}}, the same key is used for both encryption and decryption. In {{Glossary("public-key cryptography")}}, there exists a pair of related keys known as the _public key_ and _private key_. The public key is freely available, whereas the private key is kept secret. The public key is able to encrypt messages that only the corresponding private key is able to decrypt, and vice versa.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
-   <li><a href="https://en.wikipedia.org/wiki/Kerckhoffs%27s_principle">Kerckhoffs's principle</a> on Wikipedia</li>
-   <li><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a>
-    <ul>
-    <li>{{Glossary("Block cipher mode of operation")}}</li>
-    <li>{{Glossary("Cipher")}}</li>
-    <li>{{Glossary("Ciphertext")}}</li>
-    <li>{{Glossary("Cipher suite")}}</li>
-    <li>{{Glossary("Cryptanalysis")}}</li>
-    <li>{{Glossary("Cryptography")}}</li>
-    <li>{{Glossary("Decryption")}}</li>
-    <li>{{Glossary("Encryption")}}</li>
-    <li>{{Glossary("Key")}}</li>
-    <li>{{Glossary("Plaintext")}}</li>
-    <li>{{Glossary("Public-key cryptography")}}</li>
-    <li>{{Glossary("Symmetric-key cryptography")}}</li>
-    </ul>
-  </li>
-</ul>
+- [Kerckhoffs's principle](https://en.wikipedia.org/wiki/Kerckhoffs%27s_principle) on Wikipedia
+- [MDN Web Docs Glossary](/en-US/docs/Glossary)
+
+  - {{Glossary("Block cipher mode of operation")}}
+  - {{Glossary("Cipher")}}
+  - {{Glossary("Ciphertext")}}
+  - {{Glossary("Cipher suite")}}
+  - {{Glossary("Cryptanalysis")}}
+  - {{Glossary("Cryptography")}}
+  - {{Glossary("Decryption")}}
+  - {{Glossary("Encryption")}}
+  - {{Glossary("Key")}}
+  - {{Glossary("Plaintext")}}
+  - {{Glossary("Public-key cryptography")}}
+  - {{Glossary("Symmetric-key cryptography")}}

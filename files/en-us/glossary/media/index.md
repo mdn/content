@@ -5,12 +5,10 @@ tags:
   - Disambiguation
   - Glossary
 ---
-<p>The term <strong>media</strong> is an overloaded one when talking about the web; it takes on different meanings depending on the context.</p>
+The term **media** is an overloaded one when talking about the web; it takes on different meanings depending on the context.
 
-<p>{{GlossaryDisambiguation}}</p>
+{{GlossaryDisambiguation}}
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{interwiki("wikipedia", "Media")}} on Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "Media")}} on Wikipedia

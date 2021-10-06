@@ -8,20 +8,19 @@ tags:
   - Glossary
   - Programming Language
 ---
-<p>Abstraction in {{Glossary("computer programming")}} is a way to reduce complexity and allow efficient design and implementation in complex software systems. It hides the technical complexity of systems behind simpler {{Glossary("API", "APIs")}}.</p>
+Abstraction in {{Glossary("computer programming")}} is a way to reduce complexity and allow efficient design and implementation in complex software systems. It hides the technical complexity of systems behind simpler {{Glossary("API", "APIs")}}.
 
-<h2 id="Advantages_of_Data_Abstraction">Advantages of Data Abstraction</h2>
+## Advantages of Data Abstraction
 
-<ul>
- <li>Helps the user to avoid writing low level code.</li>
- <li>Avoids code duplication and increases reusability.</li>
- <li>Can change internal implementation of class independently without affecting the user.</li>
- <li>Helps to increase security of an application or program as only important details are provided to the user.</li>
-</ul>
+- Helps the user to avoid writing low level code.
+- Avoids code duplication and increases reusability.
+- Can change internal implementation of class independently without affecting the user.
+- Helps to increase security of an application or program as only important details are provided to the user.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">class ImplementAbstraction {
+```js
+class ImplementAbstraction {
   // method to set values of internal members
   set(x, y) {
     this.a = x;
@@ -38,10 +37,9 @@ const obj = new ImplementAbstraction();
 obj.set(10, 20);
 obj.display();
 // a = 10
-// b = 20</pre>
+// b = 20
+```
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{interwiki("wikipedia", "Abstraction (computer science)", "Abstraction")}} on Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "Abstraction (computer science)", "Abstraction")}} on Wikipedia

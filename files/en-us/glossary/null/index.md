@@ -5,31 +5,28 @@ tags:
   - CodingScripting
   - Glossary
 ---
-<p>In computer science, a <strong><code>null</code></strong> value represents a reference that points, generally intentionally, to a nonexistent or invalid {{glossary("object")}} or address. The meaning of a null reference varies among language implementations.</p>
+In computer science, a **`null`** value represents a reference that points, generally intentionally, to a nonexistent or invalid {{glossary("object")}} or address. The meaning of a null reference varies among language implementations.
 
-<p>In {{Glossary("JavaScript")}}, <code>null</code> is marked as one of the {{Glossary("Primitive", "primitive values")}}, because its behavior is seemingly primitive.</p>
+In {{Glossary("JavaScript")}}, `null` is marked as one of the {{Glossary("Primitive", "primitive values")}}, because its behavior is seemingly primitive.
 
-<p>But in certain cases, <code>null</code> is not as "primitive" as it first seems! Every Object is derived from <code>null</code> value, and therefore <code>typeof</code> operator returns <code>object</code> for it:</p>
+But in certain cases, `null` is not as "primitive" as it first seems! Every Object is derived from `null` value, and therefore `typeof` operator returns `object` for it:
 
-<pre class="brush: js">typeof null === 'object' // true</pre>
+```js
+typeof null === 'object' // true
+```
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Data_structures">JavaScript data types</a></li>
- <li>The JavaScript global object: {{jsxref("null")}}</li>
- <li>{{Interwiki("wikipedia", "Null pointer")}} on Wikipedia</li>  
- <li><strong><a href="/en-US/docs/Glossary">Glossary</a></strong>
-  <ul>
-   <li>{{Glossary("JavaScript")}}</li>
-   <li>{{Glossary("string")}}</li>
-   <li>{{Glossary("number")}}</li>
-   <li>{{Glossary("bigint")}}</li>
-   <li>{{Glossary("boolean")}}</li>
-   <li>{{Glossary("null")}}</li>
-   <li>{{Glossary("undefined")}}</li>
-   <li>{{Glossary("symbol")}}</li>
-  </ul>
- </li>
-</ul>
+- [JavaScript data types](/en-US/docs/Web/JavaScript/Data_structures)
+- The JavaScript global object: {{jsxref("null")}}
+- {{Interwiki("wikipedia", "Null pointer")}} on Wikipedia
+- **[Glossary](/en-US/docs/Glossary)**
 
+  - {{Glossary("JavaScript")}}
+  - {{Glossary("string")}}
+  - {{Glossary("number")}}
+  - {{Glossary("bigint")}}
+  - {{Glossary("boolean")}}
+  - {{Glossary("null")}}
+  - {{Glossary("undefined")}}
+  - {{Glossary("symbol")}}

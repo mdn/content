@@ -6,10 +6,8 @@ tags:
   - Glossary
   - Type
 ---
-<p>A <strong>statically-typed </strong>language is a language (such as Java, C, or C++) where variable types are known at compile time. In most of these languages, types must be expressly indicated by the programmer; in other cases (such as OCaml), type inference allows the programmer to not indicate their variable types.</p>
+A **statically-typed** language is a language (such as Java, C, or C++) where variable types are known at compile time. In most of these languages, types must be expressly indicated by the programmer; in other cases (such as OCaml), type inference allows the programmer to not indicate their variable types.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Type system")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Type system")}} on Wikipedia

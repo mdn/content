@@ -5,17 +5,15 @@ tags:
   - Glossary
   - WebMechanics
 ---
-<p>A <strong>MIME type</strong> (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled <code>audio/ogg</code>, or an image file <code>image/png</code>).</p>
+A **MIME type** (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled `audio/ogg`, or an image file `image/png`).
 
-<p>It serves the same purpose as filename extensions traditionally do on Windows. The name originates from the {{glossary("mime","MIME")}} standard originally used in E-Mail.</p>
+It serves the same purpose as filename extensions traditionally do on Windows. The name originates from the {{glossary("mime","MIME")}} standard originally used in E-Mail.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{interwiki("wikipedia", "Internet media type", "Internet media type")}} on Wikipedia</li>
- <li><a href="https://www.iana.org/assignments/media-types/media-types.xhtml">List of MIME types</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Configuring_server_MIME_types">Properly Configuring Server MIME Types</a></li>
- <li>Details information about the usage of <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME Types</a> in a Web context.</li>
- <li><a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">Incomplete list of MIME types</a></li>
- <li><a href="/en-US/docs/Web/API/MediaRecorder/mimeType">MediaRecorder.mimeType</a></li>
-</ul>
+- {{interwiki("wikipedia", "Internet media type", "Internet media type")}} on Wikipedia
+- [List of MIME types](https://www.iana.org/assignments/media-types/media-types.xhtml)
+- [Properly Configuring Server MIME Types](/en-US/docs/Learn/Server-side/Configuring_server_MIME_types)
+- Details information about the usage of [MIME Types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) in a Web context.
+- [Incomplete list of MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)
+- [MediaRecorder.mimeType](/en-US/docs/Web/API/MediaRecorder/mimeType)

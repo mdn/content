@@ -11,6 +11,6 @@ tags:
   - Television
   - standards
 ---
-<p>The <strong>Society of Motion Picture and Television Engineers</strong> (<strong><a href="https://www.smpte.org/">SMPTE</a></strong>) is the professional association of engineers and scientists that develop and define standards and technologies used to create, broadcast, store, and present entertainment media.</p>
+The **Society of Motion Picture and Television Engineers** (**[SMPTE](https://www.smpte.org/)**) is the professional association of engineers and scientists that develop and define standards and technologies used to create, broadcast, store, and present entertainment media.
 
-<p>For example, SMPTE defines the standards used for digital cinema used by modern digital movie theaters.</p>
+For example, SMPTE defines the standards used for digital cinema used by modern digital movie theaters.

@@ -7,10 +7,8 @@ tags:
   - Infrastructure
   - WebM
 ---
-<p><strong>WebM</strong> is royalty-free and is an open web video format natively supported in Mozilla Firefox.</p>
+**WebM** is royalty-free and is an open web video format natively supported in Mozilla Firefox.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://en.wikipedia.org/wiki/WebM">WebM </a>on Wikipedia</li>
-</ul>
+- [WebM ](https://en.wikipedia.org/wiki/WebM)on Wikipedia

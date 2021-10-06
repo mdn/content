@@ -6,22 +6,21 @@ tags:
   - Glossary
   - HTML
 ---
-<p>An <strong>attribute</strong> extends an {{Glossary("element")}}, changing its behavior or providing metadata.</p>
+An **attribute** extends an {{Glossary("element")}}, changing its behavior or providing metadata.
 
-<p>An attribute always has the form <code>name="value"</code> (the attribute's identifier followed by its associated value).</p>
+An attribute always has the form `name="value"` (the attribute's identifier followed by its associated value).
 
-<p>You may see attributes without the equals sign or a value. That is a shorthand for providing the empty string in HTML, or the attribute’s name in XML.</p>
+You may see attributes without the equals sign or a value. That is a shorthand for providing the empty string in HTML, or the attribute’s name in XML.
 
-<pre class="brush: html">&lt;input required&gt;
-&lt;!-- is the same as… --&gt;
-&lt;input required=""&gt;
-&lt;!-- or --&gt;
-&lt;input required="required"&gt;
-</pre>
+```html
+<input required>
+<!-- is the same as… -->
+<input required="">
+<!-- or -->
+<input required="required">
+```
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTML/Attributes">HTML attribute reference</a></li>
- <li>Information about HTML's <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a></li>
-</ul>
+- [HTML attribute reference](/en-US/docs/Web/HTML/Attributes)
+- Information about HTML's [global attributes](/en-US/docs/Web/HTML/Global_attributes)

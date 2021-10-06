@@ -8,21 +8,17 @@ tags:
   - Style Origin
   - origin
 ---
-<p>In {{Glossary("CSS")}}, there are three categories of sources for style changes. These categories are called <strong>style origins</strong>. They are the <strong>user agent origin</strong>, <strong>user origin</strong>, and the <strong>author origin</strong>.</p>
+In {{Glossary("CSS")}}, there are three categories of sources for style changes. These categories are called **style origins**. They are the **user agent origin**, **user origin**, and the **author origin**.
 
-<dl>
- <dt>User-agent origin</dt>
- <dd>The user agent origin is the style origin comprised of the default styles used by the user's web browser. If no other styles are applied to content, the user agent origin's styles are used while rendering elements.</dd>
- <dt> User origin</dt>
- <dd>The user origin is the style origin containing any CSS that the user of the web browser has added. These may be from adding styles using a developer tool or from a browser extension that automatically applies custom styles to content, such as <a href="https://add0n.com/stylus.html">Stylus</a> or <a href="https://userstyles.org/">Stylish</a>.</dd>
- <dt> Author origin</dt>
- <dd>The author origin is the style origin which contains all of the styles which are part of the document, whether embedded within the {{Glossary("HTML")}} or loaded from an external stylesheet file.</dd>
-</dl>
+- User-agent origin
+  - : The user agent origin is the style origin comprised of the default styles used by the user's web browser. If no other styles are applied to content, the user agent origin's styles are used while rendering elements.
+- User origin
+  - : The user origin is the style origin containing any CSS that the user of the web browser has added. These may be from adding styles using a developer tool or from a browser extension that automatically applies custom styles to content, such as [Stylus](https://add0n.com/stylus.html) or [Stylish](https://userstyles.org/).
+- Author origin
+  - : The author origin is the style origin which contains all of the styles which are part of the document, whether embedded within the {{Glossary("HTML")}} or loaded from an external stylesheet file.
 
-<p>The style origins are used to determine where to stop rolling back (or backtracking through) the cascade of styles that have been applied to an element when removing styles, such as when using the {{cssxref("unset")}} or {{cssxref("revert")}} keywords.</p>
+The style origins are used to determine where to stop rolling back (or backtracking through) the cascade of styles that have been applied to an element when removing styles, such as when using the {{cssxref("unset")}} or {{cssxref("revert")}} keywords.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://drafts.csswg.org/css-cascade-4/#cascading-origins">CSS Cascading and Inheritance: Cascading Origins</a></li>
-</ul>
+- [CSS Cascading and Inheritance: Cascading Origins](https://drafts.csswg.org/css-cascade-4/#cascading-origins)

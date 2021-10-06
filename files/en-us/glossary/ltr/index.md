@@ -6,42 +6,32 @@ tags:
   - Glossary
   - Localization
 ---
-<p><strong>LTR</strong> (<strong>Left To Right</strong>) is a {{Glossary("locale")}} property indicating that text is written from left to right. For example, the <code>en-US</code> locale (for US English) specifies left-to-right.</p>
+**LTR** (**Left To Right**) is a {{Glossary("locale")}} property indicating that text is written from left to right. For example, the `en-US` locale (for US English) specifies left-to-right.
 
-<p>Most Western languages, as well as many others around the world, are written LTR.</p>
+Most Western languages, as well as many others around the world, are written LTR.
 
-<p>The opposite of LTR, {{Glossary("RTL")}} (Right To Left) is used in other common languages, including Arabic (<code>ar</code>) and Hebrew (<code>he</code>).</p>
+The opposite of LTR, {{Glossary("RTL")}} (Right To Left) is used in other common languages, including Arabic (`ar`) and Hebrew (`he`).
 
-<h2 id="Technical_reference">Technical reference</h2>
+## Technical reference
 
-<ul>
- <li><a href="/en-US/docs/Web/Localization">Localization and internationalization</a></li>
-</ul>
+- [Localization and internationalization](/en-US/docs/Web/Localization)
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a>
+- [MDN Web Docs Glossary](/en-US/docs/Glossary)
 
-  <ul>
-   <li>{{Glossary("locale")}}</li>
-   <li>{{Glossary("LTR")}}</li>
-   <li>{{Glossary("RTL")}}</li>
-  </ul>
- </li>
- <li><a href="/en-US/docs/Web/HTML/Global_attributes">HTML global attributes</a>
-  <ul>
-   <li>{{htmlattrxref("dir")}}</li>
-   <li>{{htmlattrxref("lang")}}</li>
-  </ul>
- </li>
- <li><a href="/en-US/docs/Web/CSS">CSS</a>
-  <ul>
-   <li>{{cssxref(":dir")}}</li>
-   <li>{{cssxref("direction")}}</li>
-   <li>{{cssxref("unicode-bidi")}}</li>
-   <li>{{cssxref("writing-mode")}}</li>
-  </ul>
- </li>
-</ul>
+  - {{Glossary("locale")}}
+  - {{Glossary("LTR")}}
+  - {{Glossary("RTL")}}
 
+- [HTML global attributes](/en-US/docs/Web/HTML/Global_attributes)
+
+  - {{htmlattrxref("dir")}}
+  - {{htmlattrxref("lang")}}
+
+- [CSS](/en-US/docs/Web/CSS)
+
+  - {{cssxref(":dir")}}
+  - {{cssxref("direction")}}
+  - {{cssxref("unicode-bidi")}}
+  - {{cssxref("writing-mode")}}

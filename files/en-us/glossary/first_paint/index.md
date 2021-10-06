@@ -7,12 +7,10 @@ tags:
   - Performance
   - Web Performance
 ---
-<p><strong>First Paint</strong>, part of the <a href="/en-US/docs/Web/PerformancePaintTiming">Paint Timing API</a>, is the time between navigation and when the browser renders the first pixels to the screen, rendering anything that is visually different from what was on the screen prior to navigation. It answers the question "Is it happening?"</p>
+**First Paint**, part of the [Paint Timing API](/en-US/docs/Web/PerformancePaintTiming), is the time between navigation and when the browser renders the first pixels to the screen, rendering anything that is visually different from what was on the screen prior to navigation. It answers the question "Is it happening?"
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Glossary/first_meaningful_paint">First meaningful paint</a></li>
- <li><a href="/en-US/docs/Glossary/First_contentful_paint">First contentful paint</a></li>
- <li><a href="/en-US/docs/Web/PerformancePaintTiming">Paint Timing API</a></li>
-</ul>
+- [First meaningful paint](/en-US/docs/Glossary/first_meaningful_paint)
+- [First contentful paint](/en-US/docs/Glossary/First_contentful_paint)
+- [Paint Timing API](/en-US/docs/Web/PerformancePaintTiming)

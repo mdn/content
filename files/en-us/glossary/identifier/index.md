@@ -7,22 +7,18 @@ tags:
   - Glossary
   - Sharing
 ---
-<p>An <strong>identifier</strong> is a sequence of characters in the code that identifies a {{glossary("variable")}}, {{glossary("function")}}, or {{glossary("property")}}.</p>
+An **identifier** is a sequence of characters in the code that identifies a {{glossary("variable")}}, {{glossary("function")}}, or {{glossary("property")}}.
 
-<p>In {{glossary("JavaScript")}}, identifiers are case-sensitive and can contain {{glossary("Unicode")}} letters, <code>$</code>, <code>_</code>, and digits (0-9), but may not start with a digit.</p>
+In {{glossary("JavaScript")}}, identifiers are case-sensitive and can contain {{glossary("Unicode")}} letters, `$`, `_`, and digits (0-9), but may not start with a digit.
 
-<p>An identifier differs from a string in that a {{glossary("string")}} is data, while an identifier is part of the code. In JavaScript, there is no way to convert identifiers to strings, but sometimes it is possible to parse strings into identifiers.</p>
+An identifier differs from a string in that a {{glossary("string")}} is data, while an identifier is part of the code. In JavaScript, there is no way to convert identifiers to strings, but sometimes it is possible to parse strings into identifiers.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{interwiki("wikipedia", "Identifier#In_computer_science", "Identifier")}} on Wikipedia</li>
- <li><a href="/en-US/docs/Glossary">Glossary</a>
-  <ul>
-   <li>{{glossary("Identifier")}}</li>
-   <li>{{glossary("Scope")}}</li>
-   <li>{{glossary("string")}}</li>
-   <li>{{glossary("Unicode")}}</li>
-  </ul>
- </li>
-</ul>
+- {{interwiki("wikipedia", "Identifier#In_computer_science", "Identifier")}} on Wikipedia
+- [Glossary](/en-US/docs/Glossary)
+
+  - {{glossary("Identifier")}}
+  - {{glossary("Scope")}}
+  - {{glossary("string")}}
+  - {{glossary("Unicode")}}

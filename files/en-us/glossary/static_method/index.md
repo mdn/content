@@ -9,33 +9,33 @@ tags:
   - Static
   - Static Method
 ---
-<p>A static method (or <em>static function</em>) is a {{Glossary("method")}} defined as a member of an {{Glossary("object")}} but is accessible directly from an API object's constructor, rather than from an object instance created via the constructor.</p>
+A static method (or _static function_) is a {{Glossary("method")}} defined as a member of an {{Glossary("object")}} but is accessible directly from an API object's constructor, rather than from an object instance created via the constructor.
 
-<p>In a <a href="/en-US/docs/Web/API">Web API</a>, a static method is one which is defined by an interface but can be called without instantiating an object of that type first.</p>
+In a [Web API](/en-US/docs/Web/API), a static method is one which is defined by an interface but can be called without instantiating an object of that type first.
 
-<p>Methods called on object instances are called <em>instance methods</em>.</p>
+Methods called on object instances are called _instance methods_.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a>, the {{domxref("Notification.requestPermission()")}} method is called on the actual {{domxref("Notification")}} constructor itself — it is a static method:</p>
+In the [Notifications API](/en-US/docs/Web/API/Notifications_API), the {{domxref("Notification.requestPermission()")}} method is called on the actual {{domxref("Notification")}} constructor itself — it is a static method:
 
-<pre class="brush: js">let promise = Notification.requestPermission();</pre>
+```js
+let promise = Notification.requestPermission();
+```
 
-<p>The {{domxref("Notification.close()")}} method on the other hand, is an instance method — it is called on an specific notification object instance to close the system notification it represents:</p>
+The {{domxref("Notification.close()")}} method on the other hand, is an instance method — it is called on an specific notification object instance to close the system notification it represents:
 
-<pre class="brush: js">let myNotification = new Notification('This is my notification');
+```js
+let myNotification = new Notification('This is my notification');
 
-myNotification.close();</pre>
+myNotification.close();
+```
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://www.techopedia.com/definition/24034/static-method">Static Method</a> on Techopedia</li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes/static">static</a></li>
-  <li><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a>
-    <ul>
-      <li>{{Glossary("Object")}}</li>
-      <li>{{Glossary("Method")}}</li>
-    </ul>
-  </li>
-</ul>
+- [Static Method](https://www.techopedia.com/definition/24034/static-method) on Techopedia
+- [static](/en-US/docs/Web/JavaScript/Reference/Classes/static)
+- [MDN Web Docs Glossary](/en-US/docs/Glossary)
+
+  - {{Glossary("Object")}}
+  - {{Glossary("Method")}}

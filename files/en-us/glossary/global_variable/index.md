@@ -5,12 +5,10 @@ tags:
   - CodingScripting
   - Glossary
 ---
-<p>A global variable is a {{glossary("variable")}} that is declared in the {{glossary("global scope")}} in other words, a variable that is visible from all other scopes.</p>
+A global variable is a {{glossary("variable")}} that is declared in the {{glossary("global scope")}} in other words, a variable that is visible from all other scopes.
 
-<p>In JavaScript it is a {{glossary("property")}} of the {{glossary("global object")}}.</p>
+In JavaScript it is a {{glossary("property")}} of the {{glossary("global object")}}.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Global variable")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Global variable")}} on Wikipedia

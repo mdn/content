@@ -6,12 +6,10 @@ tags:
   - Constant
   - Glossary
 ---
-<p>A constant is a value that the programmer cannot change, for example numbers (1, 2, 42). With {{glossary("variable","variables")}}, on the other hand, the programmer can assign a new {{glossary("value")}} to a variable name already in use.</p>
+A constant is a value that the programmer cannot change, for example numbers (1, 2, 42). With {{glossary("variable","variables")}}, on the other hand, the programmer can assign a new {{glossary("value")}} to a variable name already in use.
 
-<p>Like variables, some constants are bound to identifiers. For example, the identifier <code>pi</code> could be bound to the value 3.14... .</p>
+Like variables, some constants are bound to identifiers. For example, the identifier `pi` could be bound to the value 3.14... .
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Constant_(computer_programming)", "Constant")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Constant_(computer_programming)", "Constant")}} on Wikipedia

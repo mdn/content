@@ -7,29 +7,25 @@ tags:
   - flex container
   - flexbox
 ---
-<p>A {{glossary("flexbox")}} layout is defined using the <code>flex</code> or <code>inline-flex</code> values of the <code>display</code> property on the parent item. This element then becomes a <strong>flex container</strong>, and each one of its children becomes a {{glossary("flex item")}}.</p>
+A {{glossary("flexbox")}} layout is defined using the `flex` or `inline-flex` values of the `display` property on the parent item. This element then becomes a **flex container**, and each one of its children becomes a {{glossary("flex item")}}.
 
-<p>A value of <code>flex</code> causes the element to become a block level flex container, and <code>inline-flex</code> an inline level flex container. These values create a <strong>flex formatting context</strong> for the element, which is similar to a block formatting context in that floats will not intrude into the container, and the margins on the container will not collapse with those of the items.</p>
+A value of `flex` causes the element to become a block level flex container, and `inline-flex` an inline level flex container. These values create a **flex formatting context** for the element, which is similar to a block formatting context in that floats will not intrude into the container, and the margins on the container will not collapse with those of the items.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<h3 id="Property_reference">Property reference</h3>
+### Property reference
 
-<ul>
- <li>{{cssxref("align-content")}}</li>
- <li>{{cssxref("align-items")}}</li>
- <li>{{cssxref("flex")}}</li>
- <li>{{cssxref("flex-direction")}}</li>
- <li>{{cssxref("flex-flow")}}</li>
- <li>{{cssxref("flex-wrap")}}</li>
- <li>{{cssxref("justify-content")}}</li>
-</ul>
+- {{cssxref("align-content")}}
+- {{cssxref("align-items")}}
+- {{cssxref("flex")}}
+- {{cssxref("flex-direction")}}
+- {{cssxref("flex-flow")}}
+- {{cssxref("flex-wrap")}}
+- {{cssxref("justify-content")}}
 
-<h3 id="Further_reading">Further reading</h3>
+### Further reading
 
-<ul>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic Concepts of Flexbox</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning items in a flex container</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items">Mastering wrapping of flex items</a></em></li>
- <li>Firefox Developer Tools &gt; How to: <em><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts">CSS Flexbox Inspector: Examine Flexbox layouts</a></em></li>
-</ul>
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox Guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
+- CSS Flexbox Guide: _[Mastering wrapping of flex items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_
+- Firefox Developer Tools > How to: *[CSS Flexbox Inspector: Examine Flexbox layouts](/en-US/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts)*

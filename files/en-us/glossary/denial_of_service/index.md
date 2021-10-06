@@ -8,6 +8,6 @@ tags:
   - Intro
   - Security
 ---
-<p>DoS (Denial of Service) is a category of network attack that consumes available server resources, typically by flooding the server with requests. The server is then sluggish or unavailable for legitimate users.</p>
+DoS (Denial of Service) is a category of network attack that consumes available server resources, typically by flooding the server with requests. The server is then sluggish or unavailable for legitimate users.
 
-<p>See <a href="/en-US/docs/Glossary/DOS_attack">DoS attack</a> for more information.</p>
+See [DoS attack](/en-US/docs/Glossary/DOS_attack) for more information.

@@ -5,13 +5,12 @@ tags:
   - Glossary
   - WebMechanics
 ---
-<p>A cookie is a small piece of information left on a visitor's computer by a website, via a web browser.</p>
+A cookie is a small piece of information left on a visitor's computer by a website, via a web browser.
 
-<p>Cookies are used to personalize a user’s web experience with a website. It may contain the user’s preferences or inputs when accessing that website. A user can customize their web browser to accept, reject, or delete cookies.</p>
+Cookies are used to personalize a user’s web experience with a website. It may contain the user’s preferences or inputs when accessing that website. A user can customize their web browser to accept, reject, or delete cookies.
 
-<p>Cookies can be set and modified at the server level using the <code>Set-Cookie</code> <a href="/en-US/docs/Web/HTTP/Cookies">HTTP header</a>, or with JavaScript using <code><a href="/en-US/docs/Web/API/Document/cookie">document.cookie</a></code>.</p>
+Cookies can be set and modified at the server level using the `Set-Cookie` [HTTP header](/en-US/docs/Web/HTTP/Cookies), or with JavaScript using [`document.cookie`](/en-US/docs/Web/API/Document/cookie).
 
-<h2 id="see_also">See also</h2>
-<ul>
- <li><a href="https://en.wikipedia.org/wiki/HTTP_cookie">HTTP cookie</a> on Wikipedia</li>
-</ul>
+## See also
+
+- [HTTP cookie](https://en.wikipedia.org/wiki/HTTP_cookie) on Wikipedia

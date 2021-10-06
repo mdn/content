@@ -6,19 +6,15 @@ tags:
   - Glossary
   - Wrapper
 ---
-<p>In programming languages such as JavaScript, a wrapper is a function that is intended to call one or more other functions, sometimes purely for convenience, and sometimes adapting them to do a slightly different task in the process.</p>
+In programming languages such as JavaScript, a wrapper is a function that is intended to call one or more other functions, sometimes purely for convenience, and sometimes adapting them to do a slightly different task in the process.
 
-<p>For example, SDK Libraries for AWS are examples of wrappers.</p>
+For example, SDK Libraries for AWS are examples of wrappers.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{Interwiki("wikipedia", "Wrapper function")}} (Wikipedia)</li>
-  <li><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a>
-    <ul>
-      <li>{{Glossary("API")}}</li>
-      <li>{{Glossary("Class")}}</li>
-      <li>{{Glossary("Function")}}</li>
-     </ul>
-  </li>
-</ul>
+- {{Interwiki("wikipedia", "Wrapper function")}} (Wikipedia)
+- [MDN Web Docs Glossary](/en-US/docs/Glossary)
+
+  - {{Glossary("API")}}
+  - {{Glossary("Class")}}
+  - {{Glossary("Function")}}

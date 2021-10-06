@@ -12,10 +12,8 @@ tags:
   - unit
   - width
 ---
-<p>The term <strong>CSS pixel</strong> is synonymous with the CSS unit of absolute length <em>px</em> — which is <a href="https://drafts.csswg.org/css-values/#absolute-lengths">normatively defined</a> as being exactly 1/96th of 1 inch.</p>
+The term **CSS pixel** is synonymous with the CSS unit of absolute length _px_ — which is [normatively defined](https://drafts.csswg.org/css-values/#absolute-lengths) as being exactly 1/96th of 1 inch.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://hacks.mozilla.org/2013/09/css-length-explained/">CSS Length Explained</a> on the MDN Hacks Blog</li>
-</ul>
+- [CSS Length Explained](https://hacks.mozilla.org/2013/09/css-length-explained/) on the MDN Hacks Blog

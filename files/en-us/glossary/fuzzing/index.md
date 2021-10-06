@@ -9,11 +9,9 @@ tags:
   - Security
   - Testing
 ---
-<p><strong>Fuzzing</strong> is a technique for testing software using automated tools to provide invalid or unexpected input to a program or function in a program, then checking the results to see if the program crashes or otherwise acts inappropriately. This is an important way to ensure that software is stable, reliable, and secure, and we use fuzzing a lot at Mozilla.</p>
+**Fuzzing** is a technique for testing software using automated tools to provide invalid or unexpected input to a program or function in a program, then checking the results to see if the program crashes or otherwise acts inappropriately. This is an important way to ensure that software is stable, reliable, and secure, and we use fuzzing a lot at Mozilla.
 
-<ul>
- <li><a href="https://www.squarefree.com/categories/fuzzing/">Jesse's blog posts about fuzzing</a></li>
- <li><a href="https://en.wikipedia.org/wiki/Fuzz_testing">Wikipedia: Fuzz testing</a></li>
- <li><a href="https://github.com/fuzzdb-project/fuzzdb">fuzzdb</a></li>
- <li><a href="https://github.com/fuzzitdev/jsfuzz">jsfuzz - coverage guided javascript fuzzer</a></li>
-</ul>
+- [Jesse's blog posts about fuzzing](https://www.squarefree.com/categories/fuzzing/)
+- [Wikipedia: Fuzz testing](https://en.wikipedia.org/wiki/Fuzz_testing)
+- [fuzzdb](https://github.com/fuzzdb-project/fuzzdb)
+- [jsfuzz - coverage guided javascript fuzzer](https://github.com/fuzzitdev/jsfuzz)

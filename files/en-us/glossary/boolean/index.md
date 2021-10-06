@@ -9,39 +9,38 @@ tags:
   - Programming Languages
   - data types
 ---
-<p>In computer science, a <strong>Boolean</strong> is a logical data type that can have only the values <code>true</code> or <code>false</code>.</p> 
+In computer science, a **Boolean** is a logical data type that can have only the values `true` or `false`.
 
-<p>For example, in JavaScript, Boolean conditionals are often used to decide which sections of code to execute (such as in <a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if statements</a>) or repeat (such as in <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for loops</a>).</p>
+For example, in JavaScript, Boolean conditionals are often used to decide which sections of code to execute (such as in [if statements](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)) or repeat (such as in [for loops](/en-US/docs/Web/JavaScript/Reference/Statements/for)).
 
-<p>Below is some JavaScript pseudocode (it's not truly executable code) demonstrating this concept.</p>
+Below is some JavaScript pseudocode (it's not truly executable code) demonstrating this concept.
 
-<pre class="brush: js">/* JavaScript if statement */
-if (<em>boolean conditional</em>) {
+```js
+/* JavaScript if statement */
+if (boolean conditional) {
    // code to execute if the conditional is true
 }
 
-if (<em>boolean conditional</em>) {
+if (boolean conditional) {
   console.log("boolean conditional resolved to true");
 } else {
   console.log("boolean conditional resolved to false");
 }
 
 /* JavaScript for loop */
-for (<em>control variable</em>; <em>boolean conditional</em>; <em>counter</em>) {
+for (control variable; boolean conditional; counter) {
   // code to execute repeatedly if the conditional is true
 }
 
-for (var i=0; i &lt; 4; i++) {
+for (var i=0; i < 4; i++) {
   console.log("I print only when the boolean conditional is true");
 }
-</pre>
+```
 
-<p>The Boolean value is named after English mathematician {{interwiki("wikipedia", "George Boole")}}, who pioneered the field of mathematical logic.</p>
+The Boolean value is named after English mathematician {{interwiki("wikipedia", "George Boole")}}, who pioneered the field of mathematical logic.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Boolean data type", "Boolean")}} on Wikipedia</li>
- <li>The JavaScript global object: {{jsxref("Boolean")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Data_structures">JavaScript data types and data structures</a></li>
-</ul>
+- {{Interwiki("wikipedia", "Boolean data type", "Boolean")}} on Wikipedia
+- The JavaScript global object: {{jsxref("Boolean")}}
+- [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)

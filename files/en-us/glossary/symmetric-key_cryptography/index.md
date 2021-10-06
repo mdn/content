@@ -7,23 +7,19 @@ tags:
   - Security
   - Symmetric-key cryptography
 ---
-<p>Symmetric-key cryptography is a term used for cryptographic algorithms that use the same key for encryption and for decryption. The key is usually called a "symmetric key" or a "secret key".</p>
+Symmetric-key cryptography is a term used for cryptographic algorithms that use the same key for encryption and for decryption. The key is usually called a "symmetric key" or a "secret key".
 
-<p>This is usually contrasted with {{Glossary("public-key cryptography")}}, in which keys are generated in pairs and the transformation made by one key can only be reversed using the other key.</p>
+This is usually contrasted with {{Glossary("public-key cryptography")}}, in which keys are generated in pairs and the transformation made by one key can only be reversed using the other key.
 
-<p>Symmetric-key algorithms should be secure when used properly and are highly efficient, so they can be used to encrypt large amounts of data without having a negative effect on performance.</p>
+Symmetric-key algorithms should be secure when used properly and are highly efficient, so they can be used to encrypt large amounts of data without having a negative effect on performance.
 
-<p>Most symmetric-key algorithms currently in use are block ciphers: this means that they encrypt data one block at a time. The size of each block is fixed and determined by the algorithm: for example {{Glossary("AES")}} uses 16-byte blocks. Block ciphers are always used with a <em>{{Glossary("Block cipher mode of operation", "mode")}}</em>, which specifies how to securely encrypt messages that are longer than the block size. For example, AES is a cipher, while CTR, CBC, and GCM are all modes. Using an inappropriate mode, or using a mode incorrectly, can completely undermine the security provided by the underlying cipher.</p>
+Most symmetric-key algorithms currently in use are block ciphers: this means that they encrypt data one block at a time. The size of each block is fixed and determined by the algorithm: for example {{Glossary("AES")}} uses 16-byte blocks. Block ciphers are always used with a _{{Glossary("Block cipher mode of operation", "mode")}}_, which specifies how to securely encrypt messages that are longer than the block size. For example, AES is a cipher, while CTR, CBC, and GCM are all modes. Using an inappropriate mode, or using a mode incorrectly, can completely undermine the security provided by the underlying cipher.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a>
-  <ul>
-   <li>{{Glossary("Block cipher mode of operation")}}</li>
-   <li>{{Glossary("Cryptography")}}</li>
-   <li>{{Glossary("Cryptographic hash function")}}</li>
-   <li>{{Glossary("Symmetric-key cryptography")}}</li>
-  </ul>
- </li>
-</ul>
+- [MDN Web Docs Glossary](/en-US/docs/Glossary)
+
+  - {{Glossary("Block cipher mode of operation")}}
+  - {{Glossary("Cryptography")}}
+  - {{Glossary("Cryptographic hash function")}}
+  - {{Glossary("Symmetric-key cryptography")}}

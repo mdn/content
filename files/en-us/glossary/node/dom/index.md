@@ -5,11 +5,9 @@ tags:
   - CodingScripting
   - Glossary
 ---
-<p>In the context of the {{Glossary("DOM")}}, a <strong>node</strong> is a single point in the node tree. Various things that are nodes are the document itself, elements, text, and comments.</p>
+In the context of the {{Glossary("DOM")}}, a **node** is a single point in the node tree. Various things that are nodes are the document itself, elements, text, and comments.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>The <a href="https://dom.spec.whatwg.org/#concept-node">node tree</a> WHATWG spec</li>
- <li><a href="/en-US/docs/Web/API/Node">Node</a> objects</li>
-</ul>
+- The [node tree](https://dom.spec.whatwg.org/#concept-node) WHATWG spec
+- [Node](/en-US/docs/Web/API/Node) objects

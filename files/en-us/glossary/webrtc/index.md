@@ -11,23 +11,19 @@ tags:
   - Web
   - WebRTC
 ---
-<p><strong>WebRTC</strong> (<em>Web Real-Time Communication</em>) is an {{Glossary("API")}} that can be used by video-chat, voice-calling, and P2P-file-sharing Web apps.</p>
+**WebRTC** (_Web Real-Time Communication_) is an {{Glossary("API")}} that can be used by video-chat, voice-calling, and P2P-file-sharing Web apps.
 
-<p>WebRTC consists mainly of these parts:</p>
+WebRTC consists mainly of these parts:
 
-<dl>
- <dt>{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}</dt>
- <dd>Grants access to a device's camera and/or microphone, and can plug in their signals to a RTC connection.</dd>
- <dt>{{domxref("RTCPeerConnection")}}</dt>
- <dd>An interface to configure video chat or voice calls.</dd>
- <dt>{{domxref("RTCDataChannel")}}</dt>
- <dd>Provides a method to set up a {{Glossary("P2P", "peer-to-peer")}} data pathway between browsers.</dd>
-</dl>
+- {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}
+  - : Grants access to a device's camera and/or microphone, and can plug in their signals to a RTC connection.
+- {{domxref("RTCPeerConnection")}}
+  - : An interface to configure video chat or voice calls.
+- {{domxref("RTCDataChannel")}}
+  - : Provides a method to set up a {{Glossary("P2P", "peer-to-peer")}} data pathway between browsers.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "WebRTC")}} on Wikipedia</li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API on MDN</a></li>
- <li><a href="https://caniuse.com/rtcpeerconnection">Browser support for WebRTC</a></li>
-</ul>
+- {{Interwiki("wikipedia", "WebRTC")}} on Wikipedia
+- [WebRTC API on MDN](/en-US/docs/Web/API/WebRTC_API)
+- [Browser support for WebRTC](https://caniuse.com/rtcpeerconnection)

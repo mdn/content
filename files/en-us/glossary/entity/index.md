@@ -7,52 +7,23 @@ tags:
   - Glossary
   - HTML
 ---
-<p>An {{glossary("HTML")}} <strong>entity </strong>is a piece of text ("string") that begins with an ampersand (<code>&amp;</code>) and ends with a semicolon (<code>;</code>) . Entities are frequently used to display reserved characters (which would otherwise be interpreted as HTML code), and invisible characters (like non-breaking spaces). You can also use them in place of other characters that are difficult to type with a standard keyboard.</p>
+An {{glossary("HTML")}} **entity** is a piece of text ("string") that begins with an ampersand (`&`) and ends with a semicolon (`;`) . Entities are frequently used to display reserved characters (which would otherwise be interpreted as HTML code), and invisible characters (like non-breaking spaces). You can also use them in place of other characters that are difficult to type with a standard keyboard.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Many characters have memorable entities. For example, the entity for the copyright symbol (<code>©</code>) is <code>&amp;copy;</code>. For less memorable characters, such as <code>&amp;#8212;</code> or <code>&amp;#x2014;</code>, you can use a <a href="https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references">reference chart</a> or <a href="https://mothereff.in/html-entities">decoder tool</a>.</p>
-</div>
+> **Note:** Many characters have memorable entities. For example, the entity for the copyright symbol (`©`) is `&copy;`. For less memorable characters, such as `&#8212;` or `&#x2014;`, you can use a [reference chart](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references) or [decoder tool](https://mothereff.in/html-entities).
 
-<h2 id="Reserved_characters">Reserved characters</h2>
+## Reserved characters
 
-<p>Some special characters are reserved for use in HTML, meaning that your browser will parse them as HTML code. For example, if you use the less-than (<code>&lt;</code>) sign, the browser interprets any text that follows as a {{Glossary('tag')}}.</p>
+Some special characters are reserved for use in HTML, meaning that your browser will parse them as HTML code. For example, if you use the less-than (`<`) sign, the browser interprets any text that follows as a {{Glossary('tag')}}.
 
-<p>To display these characters as text, replace them with their corresponding character entities, as shown in the following table.</p>
+To display these characters as text, replace them with their corresponding character entities, as shown in the following table.
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Character</th>
-   <th scope="col">Entity</th>
-   <th scope="col">Note</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>&amp;</td>
-   <td><code>&amp;amp;</code></td>
-   <td>Interpreted as the beginning of an entity or character reference.</td>
-  </tr>
-  <tr>
-   <td>&lt;</td>
-   <td><code>&amp;lt;</code></td>
-   <td>Interpreted as the beginning of a {{Glossary('tag')}}</td>
-  </tr>
-  <tr>
-   <td>&gt;</td>
-   <td><code>&amp;gt;</code></td>
-   <td>Interpreted as the ending of a {{Glossary('tag')}}</td>
-  </tr>
-  <tr>
-   <td>"</td>
-   <td><code>&amp;quot;</code></td>
-   <td>Interpreted as the beginning and end of an {{Glossary('attribute')}}'s value.</td>
-  </tr>
- </tbody>
-</table>
+| Character | Entity   | Note                                                                                 |
+| --------- | -------- | ------------------------------------------------------------------------------------ |
+| &         | `&amp;`  | Interpreted as the beginning of an entity or character reference.                    |
+| <         | `&lt;`   | Interpreted as the beginning of a {{Glossary('tag')}}                           |
+| >         | `&gt;`   | Interpreted as the ending of a {{Glossary('tag')}}                              |
+| "         | `&quot;` | Interpreted as the beginning and end of an {{Glossary('attribute')}}'s value. |
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references">Official list of character entities</a></li>
-</ul>
+- [Official list of character entities](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references)

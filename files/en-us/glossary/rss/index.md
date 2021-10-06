@@ -8,11 +8,9 @@ tags:
   - Sharing
   - WebMechanics
 ---
-<p><strong>RSS</strong> (Really Simple Syndication) refers to several XML document formats designed for publishing site updates. When you subscribe to a website's RSS feed, the website sends information and updates to your RSS reader in an RSS document called a <em>feed</em>, so you don't need to check all your favorite websites manually.</p>
+**RSS** (Really Simple Syndication) refers to several XML document formats designed for publishing site updates. When you subscribe to a website's RSS feed, the website sends information and updates to your RSS reader in an RSS document called a _feed_, so you don't need to check all your favorite websites manually.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "RSS")}} on Wikipedia</li>
- <li><a href="https://www.rssboard.org/rss-specification">Latest specification</a></li>
-</ul>
+- {{Interwiki("wikipedia", "RSS")}} on Wikipedia
+- [Latest specification](https://www.rssboard.org/rss-specification)

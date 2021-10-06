@@ -7,47 +7,41 @@ tags:
   - cross axis
   - flexbox
 ---
-<p>The cross axis in {{glossary("flexbox")}} runs perpendicular to the {{glossary("main axis")}}, therefore if your {{cssxref("flex-direction")}} is either <code>row</code> or <code>row-reverse</code> then the cross axis runs down the columns.</p>
+The cross axis in {{glossary("flexbox")}} runs perpendicular to the {{glossary("main axis")}}, therefore if your {{cssxref("flex-direction")}} is either `row` or `row-reverse` then the cross axis runs down the columns.
 
-<p><img alt="The cross axis runs down the column" src="basics3.png"></p>
+![The cross axis runs down the column](basics3.png)
 
-<p>If your main axis is <code>column</code> or <code>column-reverse</code> then the cross axis runs along the rows.</p>
+If your main axis is `column` or `column-reverse` then the cross axis runs along the rows.
 
-<p><img alt="The cross axis runs along the row." src="basics4.png"></p>
+![The cross axis runs along the row.](basics4.png)
 
-<p>Alignment of items on the cross axis is achieved with the <code>align-items</code> property on the flex container or <code>align-self</code> property on individual items. In the case of a multi-line flex container, with additional space on the cross axis, you can use <code>align-content</code> to control the spacing of the rows.</p>
+Alignment of items on the cross axis is achieved with the `align-items` property on the flex container or `align-self` property on individual items. In the case of a multi-line flex container, with additional space on the cross axis, you can use `align-content` to control the spacing of the rows.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<h3 id="Property_reference">Property reference</h3>
+### Property reference
 
-<ul>
- <li>{{cssxref("align-content")}}</li>
- <li>{{cssxref("align-items")}}</li>
- <li>{{cssxref("align-self")}}</li>
- <li>{{cssxref("flex-wrap")}}</li>
- <li>{{cssxref("flex-direction")}}</li>
- <li>{{cssxref("flex")}}</li>
- <li>{{cssxref("flex-basis")}}</li>
- <li>{{cssxref("flex-flow")}}</li>
- <li>{{cssxref("flex-grow")}}</li>
- <li>{{cssxref("flex-shrink")}}</li>
- <li>{{cssxref("justify-content")}}</li>
- <li>{{cssxref("order")}}</li>
-</ul>
+- {{cssxref("align-content")}}
+- {{cssxref("align-items")}}
+- {{cssxref("align-self")}}
+- {{cssxref("flex-wrap")}}
+- {{cssxref("flex-direction")}}
+- {{cssxref("flex")}}
+- {{cssxref("flex-basis")}}
+- {{cssxref("flex-flow")}}
+- {{cssxref("flex-grow")}}
+- {{cssxref("flex-shrink")}}
+- {{cssxref("justify-content")}}
+- {{cssxref("order")}}
 
-<h3 id="Further_reading">Further reading</h3>
+### Further reading
 
-<ul>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic Concepts of Flexbox</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning items in a flex container</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items">Mastering wrapping of flex items</a></em></li>
- <li><a href="/en-US/docs/Glossary">Glossary</a>
-  <ul>
-   <li>{{Glossary("Flex")}}</li>
-   <li>{{Glossary("Flex Container")}}</li>
-   <li>{{Glossary("Flex Item")}}</li>
-   <li>{{Glossary("Grid")}}</li>
-  </ul>
- </li>
-</ul>
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox Guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
+- CSS Flexbox Guide: _[Mastering wrapping of flex items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_
+- [Glossary](/en-US/docs/Glossary)
+
+  - {{Glossary("Flex")}}
+  - {{Glossary("Flex Container")}}
+  - {{Glossary("Flex Item")}}
+  - {{Glossary("Grid")}}

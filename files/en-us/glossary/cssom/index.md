@@ -7,10 +7,8 @@ tags:
   - DOM
   - Glossary
 ---
-<p>The <a href="/en-US/docs/Web/API/CSS_Object_Model"><strong>CSS Object Model (CSSOM)</strong></a> is a set of APIs for reading and modifying a document’s style-related (CSS) information. In other words, similar to the way in which the <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a> enables a document’s structure and content to be read and modified from JavaScript, the CSSOM allows the document’s styling to be read and modified from JavaScript.</p>
+The [**CSS Object Model (CSSOM)**](/en-US/docs/Web/API/CSS_Object_Model) is a set of APIs for reading and modifying a document’s style-related (CSS) information. In other words, similar to the way in which the [DOM](/en-US/docs/Web/API/Document_Object_Model) enables a document’s structure and content to be read and modified from JavaScript, the CSSOM allows the document’s styling to be read and modified from JavaScript.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Performance/How_browsers_work">Populating the page: how browsers work</a></li>
-</ul>
+- [Populating the page: how browsers work](/en-US/docs/Web/Performance/How_browsers_work)

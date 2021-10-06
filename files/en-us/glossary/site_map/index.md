@@ -7,6 +7,6 @@ tags:
   - Search
   - Site map
 ---
-<p>A <strong>site map</strong> or <strong>sitemap</strong> is a list of pages of a web site.</p>
+A **site map** or **sitemap** is a list of pages of a web site.
 
-<p>Structured listings of a site's page help with <a href="/en-US/docs/Glossary/SEO">search engine optimization</a>, providing a link for web crawlers such as search engines to follow. Site maps also help users with site navigation by providing an overview of a site's content in a single glance.</p>
+Structured listings of a site's page help with [search engine optimization](/en-US/docs/Glossary/SEO), providing a link for web crawlers such as search engines to follow. Site maps also help users with site navigation by providing an overview of a site's content in a single glance.

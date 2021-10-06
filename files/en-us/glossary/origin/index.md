@@ -7,49 +7,40 @@ tags:
   - WebMechanics
   - origin
 ---
-<p>Web content's <strong>origin</strong> is defined by the <em>scheme</em> (protocol), <em>hostname</em> (domain), and <em>port</em> of the {{Glossary("URL")}} used to access it. Two objects have the same origin only when the scheme, hostname, and port all match.</p>
+Web content's **origin** is defined by the _scheme_ (protocol), _hostname_ (domain), and _port_ of the {{Glossary("URL")}} used to access it. Two objects have the same origin only when the scheme, hostname, and port all match.
 
-<p>Some operations are restricted to same-origin content, and this restriction can be lifted using {{Glossary("CORS")}}.</p>
+Some operations are restricted to same-origin content, and this restriction can be lifted using {{Glossary("CORS")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>These are same origin because they have the same scheme (<code>http</code>) and hostname (<code>example.com</code>), and the different file path does not matter:</p>
-    <ul>
-      <li><code>http://example.com/app1/index.html</code></li>
-      <li><code>http://example.com/app2/index.html</code></li>
-    </ul>
+These are same origin because they have the same scheme (`http`) and hostname (`example.com`), and the different file path does not matter:
 
-<p>These are same origin because a server delivers HTTP content through port 80 by default:</p>
-    <ul>
-      <li><code>http://Example.com:80</code></li>
-      <li><code>http://example.com</code></li>
-    </ul>
+- `http://example.com/app1/index.html`
+- `http://example.com/app2/index.html`
 
-<p>These are not same origin because they use different schemes:</p>
-    <ul>
-      <li><code>http://example.com/app1</code></li>
-      <li><code>https://example.com/app2</code></li>
-    </ul>
+These are same origin because a server delivers HTTP content through port 80 by default:
 
-<p>These are not same origin because they use different hostnames:</p>
-    <ul>
-      <li><code>http://example.com</code></li>
-      <li><code>http://www.example.com</code></li>
-      <li><code>http://myapp.example.com</code></li>
-    </ul>
+- `http://Example.com:80`
+- `http://example.com`
 
-<p>These are not same origin because they use different ports:</p>
-    <ul>
-      <li><code>http://example.com</code></li>
-      <li><code>http://example.com:8080</code></li>
-    </ul>
+These are not same origin because they use different schemes:
 
+- `http://example.com/app1`
+- `https://example.com/app2`
 
-<h2 id="See_also">See also</h2>
+These are not same origin because they use different hostnames:
 
-<ul>
-  <li><a href="/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</a></li>
-  <li>{{Glossary("Site")}}</li>
-  <li><a href="https://html.spec.whatwg.org/multipage/origin.html#origin">HTML specification: origin</a></li>
-</ul>
+- `http://example.com`
+- `http://www.example.com`
+- `http://myapp.example.com`
 
+These are not same origin because they use different ports:
+
+- `http://example.com`
+- `http://example.com:8080`
+
+## See also
+
+- [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
+- {{Glossary("Site")}}
+- [HTML specification: origin](https://html.spec.whatwg.org/multipage/origin.html#origin)

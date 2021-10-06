@@ -9,10 +9,8 @@ tags:
   - Over the air
   - updates
 ---
-<p><em>Over The Air</em> (<strong>OTA</strong>) refers to automatic updating of software on connected devices from a central server. All device owners receiving a given set of updates are on the same "channel", and each device often can access several channels (e.g. for production or engineering builds).</p>
+_Over The Air_ (**OTA**) refers to automatic updating of software on connected devices from a central server. All device owners receiving a given set of updates are on the same "channel", and each device often can access several channels (e.g. for production or engineering builds).
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Over-the-air programming")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Over-the-air programming")}} on Wikipedia

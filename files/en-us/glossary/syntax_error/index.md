@@ -6,13 +6,11 @@ tags:
   - Glossary
   - JavaScript
 ---
-<p>An {{Glossary("exception")}} caused by the incorrect use of a pre-defined {{Glossary("syntax")}}. Syntax errors are detected while compiling or parsing source code.</p>
+An {{Glossary("exception")}} caused by the incorrect use of a pre-defined {{Glossary("syntax")}}. Syntax errors are detected while compiling or parsing source code.
 
-<p>For example, if you leave off a closing brace (<code>}</code>) when defining a {{Glossary("JavaScript")}} function, you trigger a syntax error.  Browser development tools display {{Glossary("JavaScript")}} and {{Glossary("CSS")}} syntax errors in the console.</p>
+For example, if you leave off a closing brace (`}`) when defining a {{Glossary("JavaScript")}} function, you trigger a syntax error.  Browser development tools display {{Glossary("JavaScript")}} and {{Glossary("CSS")}} syntax errors in the console.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Syntax error")}} on Wikipedia</li>
- <li>{{jsxref("SyntaxError")}} JavaScript object</li>
-</ul>
+- {{Interwiki("wikipedia", "Syntax error")}} on Wikipedia
+- {{jsxref("SyntaxError")}} JavaScript object

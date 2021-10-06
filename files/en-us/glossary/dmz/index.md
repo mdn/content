@@ -6,12 +6,10 @@ tags:
   - Networking
   - Security
 ---
-<p>A <strong>DMZ</strong> (DeMilitarized Zone) is a way to provide an insulated secure interface between an internal network (corporate or private) and the outside untrusted world — usually the Internet.</p>
+A **DMZ** (DeMilitarized Zone) is a way to provide an insulated secure interface between an internal network (corporate or private) and the outside untrusted world — usually the Internet.
 
-<p>It exposes only certain defined endpoints, while denying access to the internal network from {{Glossary('node/networking', 'external nodes')}}.</p>
+It exposes only certain defined endpoints, while denying access to the internal network from {{Glossary('node/networking', 'external nodes')}}.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{Interwiki("wikipedia", "DMZ (computing)", "DMZ")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "DMZ (computing)", "DMZ")}} on Wikipedia

@@ -8,10 +8,8 @@ tags:
   - Web Standards
   - web specifications
 ---
-<p><strong>ISO </strong>(International Organization for Standardization) is a global association that develops uniform criteria coordinating the companies in each major industry.</p>
+**ISO** (International Organization for Standardization) is a global association that develops uniform criteria coordinating the companies in each major industry.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.iso.org/iso/home.html">Official website</a></li>
-</ul>
+- [Official website](https://www.iso.org/iso/home.html)

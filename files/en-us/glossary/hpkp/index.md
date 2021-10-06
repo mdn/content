@@ -5,13 +5,11 @@ tags:
   - Glossary
   - Security
 ---
-<p><strong>HTTP Public Key Pinning</strong> (<strong>HPKP</strong>) is a security feature that tells a web client to associate a specific cryptographic public key with a certain web server to decrease the risk of {{Glossary("MITM")}} attacks with forged certificates.</p>
+**HTTP Public Key Pinning** (**HPKP**) is a security feature that tells a web client to associate a specific cryptographic public key with a certain web server to decrease the risk of {{Glossary("MITM")}} attacks with forged certificates.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Public-Key-Pins")}}</li>
- <li>{{HTTPHeader("Public-Key-Pins-Report-Only")}}</li>
- <li><a href="https://datatracker.ietf.org/doc/html/rfc7469">RFC 7469 </a></li>
- <li>Wikipedia: <a href="https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning">HTTP Public Key Pinning</a></li>
-</ul>
+- {{HTTPHeader("Public-Key-Pins")}}
+- {{HTTPHeader("Public-Key-Pins-Report-Only")}}
+- [RFC 7469](https://datatracker.ietf.org/doc/html/rfc7469)
+- Wikipedia: [HTTP Public Key Pinning](https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning)

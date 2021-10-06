@@ -8,19 +8,16 @@ tags:
   - Glossary
   - Infrastructure
 ---
-<p>Flash is a deprecated technology developed by Adobe for viewing expressive web applications, multimedia content, and streaming media. Adobe Flash can run from supporting {{Glossary("Browser","web browsers")}} via a browser plug-in.</p>
+Flash is a deprecated technology developed by Adobe for viewing expressive web applications, multimedia content, and streaming media. Adobe Flash can run from supporting {{Glossary("Browser","web browsers")}} via a browser plug-in.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.adobe.com/products/flashruntimes.html">Official web site</a></li>
- <li><a href="https://mozilla.github.io/shumway/">Shumway, a free implementation by Mozilla</a></li>
- <li><a href="http://gnashdev.org/">Gnash, a free implementation by GNU</a></li>
- <li><a href="https://ruffle.rs">Ruffle, a free implementation</a></li>
- <li><a href="/en-US/docs/Glossary">Glossary</a>
-  <ol>
-   <li>{{Glossary("Browser")}}</li>
-  </ol>
- </li>
- <li>{{Interwiki("wikipedia", "Adobe Flash")}} (Wikipedia)</li>
-</ul>
+- [Official web site](https://www.adobe.com/products/flashruntimes.html)
+- [Shumway, a free implementation by Mozilla](https://mozilla.github.io/shumway/)
+- [Gnash, a free implementation by GNU](http://gnashdev.org/)
+- [Ruffle, a free implementation](https://ruffle.rs)
+- [Glossary](/en-US/docs/Glossary)
+
+  1.  {{Glossary("Browser")}}
+
+- {{Interwiki("wikipedia", "Adobe Flash")}} (Wikipedia)

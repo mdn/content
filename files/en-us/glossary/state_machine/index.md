@@ -11,40 +11,36 @@ tags:
   - State Machine
   - Turing Machine
 ---
-<p>A state machine is a mathematical abstraction used to design algorithms. A state machine reads a set of inputs and changes to a different state based on those inputs.</p>
+A state machine is a mathematical abstraction used to design algorithms. A state machine reads a set of inputs and changes to a different state based on those inputs.
 
-<p>A state is a description of the status of a system waiting to execute a transition. A transition is a set of actions to execute when a condition is fulfilled or an event received. In a state diagram, circles represent each possible state and arrows represent transitions between states.</p>
+A state is a description of the status of a system waiting to execute a transition. A transition is a set of actions to execute when a condition is fulfilled or an event received. In a state diagram, circles represent each possible state and arrows represent transitions between states.
 
-<p>Looking at the final state, you can discern something about the series of inputs leading to that state.</p>
+Looking at the final state, you can discern something about the series of inputs leading to that state.
 
-<p>There are two types of basic state machines:</p>
+There are two types of basic state machines:
 
-<dl>
- <dt>deterministic finite state machine</dt>
- <dd>This kind allows only one possible transition for any allowed input. This is like the "if" {{Glossary("statement")}} in that <code>if x == true then doThis <em>else</em> doThat</code> is not possible. The computer must perform <em>one</em> of the two options.</dd>
- <dt>non-deterministic finite state machine</dt>
- <dd>Given some state, an input can lead to more than one different state.</dd>
-</dl>
+- deterministic finite state machine
+  - : This kind allows only one possible transition for any allowed input. This is like the "if" {{Glossary("statement")}} in that `if x == true then doThis else doThat` is not possible. The computer must perform _one_ of the two options.
+- non-deterministic finite state machine
+  - : Given some state, an input can lead to more than one different state.
 
-<p><em>Figure 1: Deterministic Finite State Machine</em></p>
+_Figure 1: Deterministic Finite State Machine_
 
-<p><img alt="" src="statemachine1.png"></p>
+![](statemachine1.png)
 
-<p>In <em>Figure 1</em>, the state begins in State 1; the state changes to State 2 given input 'X', or to State 3 given input 'Y'.</p>
+In _Figure 1_, the state begins in State 1; the state changes to State 2 given input 'X', or to State 3 given input 'Y'.
 
-<p><em>Figure 2: Non-Deterministic Finite State Machine</em></p>
+_Figure 2: Non-Deterministic Finite State Machine_
 
-<p><a href="http://postimg.org/image/mpq3nz82h/"><img alt="" src="statemachine2.png"></a></p>
+[![](statemachine2.png)](http://postimg.org/image/mpq3nz82h/)
 
-<p>In <em>Figure 2</em>, given input 'X', the state can persist or change to State 2.</p>
+In _Figure 2_, given input 'X', the state can persist or change to State 2.
 
-<p>Note that any {{Glossary("regular expression")}} can be represented by a state machine.</p>
+Note that any {{Glossary("regular expression")}} can be represented by a state machine.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Finite-state machine")}} on Wikipedia</li>
- <li>{{Interwiki("wikipedia", "UML state machine")}} on Wikipedia</li>
- <li>{{Interwiki("wikipedia", "Moore machine")}} on Wikipedia</li>
- <li>{{Interwiki("wikipedia", "Mealy machine")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Finite-state machine")}} on Wikipedia
+- {{Interwiki("wikipedia", "UML state machine")}} on Wikipedia
+- {{Interwiki("wikipedia", "Moore machine")}} on Wikipedia
+- {{Interwiki("wikipedia", "Mealy machine")}} on Wikipedia

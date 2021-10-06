@@ -6,26 +6,21 @@ tags:
   - Glossary
   - grid
 ---
-<p>Using the value <code>grid</code> or <code>inline-grid</code> on an element turns it into a <strong>grid container</strong> using <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>, and any direct children of this element become grid items.</p>
+Using the value `grid` or `inline-grid` on an element turns it into a **grid container** using [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout), and any direct children of this element become grid items.
 
-<p>When an element becomes a grid container it establishes a <strong>grid formatting context</strong>. The direct children can now lay themselves out on any explicit grid defined using {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}, or on the <em>implicit grid</em> created when an item is placed outside of the <em>explicit grid</em>.</p>
+When an element becomes a grid container it establishes a **grid formatting context**. The direct children can now lay themselves out on any explicit grid defined using {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}, or on the _implicit grid_ created when an item is placed outside of the _explicit grid_.
 
+## See also
 
-<h2 id="see_also">See also</h2>
+### Property reference
 
-<h3 id="Property_reference">Property reference</h3>
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-rows")}}
+- {{cssxref("grid-auto-columns")}}
+- {{cssxref("grid-auto-rows")}}
+- {{cssxref("grid")}}
+- {{cssxref("grid-template")}}
 
-<ul>
- <li>{{cssxref("grid-template-columns")}}</li>
- <li>{{cssxref("grid-template-rows")}}</li>
- <li>{{cssxref("grid-auto-columns")}}</li>
- <li>{{cssxref("grid-auto-rows")}}</li>
- <li>{{cssxref("grid")}}</li>
- <li>{{cssxref("grid-template")}}</li>
-</ul>
+### Further reading
 
-<h3 id="Further_reading">Further reading</h3>
-
-<ul>
- <li>CSS Grid Layout guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basic concepts of grid layout</a></em></li>
-</ul>
+- CSS Grid Layout guide: _[Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_

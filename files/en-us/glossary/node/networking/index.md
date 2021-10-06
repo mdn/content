@@ -5,10 +5,8 @@ tags:
   - Glossary
   - Infrastructure
 ---
-<p>In networking, a <strong>node</strong> is a connection point in the network. In physical networks, a node is usually a device, like a computer or a router.</p>
+In networking, a **node** is a connection point in the network. In physical networks, a node is usually a device, like a computer or a router.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Node (networking)", "Node")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Node (networking)", "Node")}} on Wikipedia

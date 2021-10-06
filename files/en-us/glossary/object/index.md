@@ -7,18 +7,13 @@ tags:
   - Intro
   - Object
 ---
+In JavaScript, objects can be seen as a collection of properties. With the [object literal syntax](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals), a limited set of properties are initialized; then properties can be added and removed. Property values can be values of any type, including other objects, which enables building complex data structures. Properties are identified using _key_ values. A _key_ value is either a {{Glossary("String", "String value")}} or a {{Glossary("Symbol", "Symbol value")}}.
 
-<p>In JavaScript, objects can be seen as a collection of properties. With the <a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals">object literal syntax</a>, a limited set of properties are initialized; then properties can be added and removed. Property values can be values of any type, including other objects, which enables building complex data structures. Properties are identified using <em>key</em> values. A <em>key</em> value is either a {{Glossary("String", "String value")}} or a {{Glossary("Symbol", "Symbol value")}}.</p>
+There are two types of object properties: The [_data_ property](/en-US/docs/Web/JavaScript/Data_structures#data_property) and the [_accessor_ property](/en-US/docs/Web/JavaScript/Data_structures#accessor_property).
 
-<p>There are two types of object properties: The <a href="/en-US/docs/Web/JavaScript/Data_structures#data_property"><em>data</em> property</a> and the <a href="/en-US/docs/Web/JavaScript/Data_structures#accessor_property"><em>accessor</em> property</a>.</p>
+> **Note:** It’s important to recognize it’s accessor _property_ — not accessor _method_. We can give a JavaScript object class-_like_ accessors by using a function as a value — but that doesn't make the object a class.
 
-<div class="notecard note">
-<p><strong>Note:</strong> It’s important to recognize it’s accessor <em>property</em> — not accessor <em>method</em>. We can give a JavaScript object class-<em>like</em> accessors by using a function as a value — but that doesn't make the object a class.</p>
-</div>
+## See also
 
-<h2 id="see_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Data_structures#objects">Detailed explanation of JavaScript objects</a> in the <a href="/en-US/docs/Web/JavaScript/Data_structures">JavaScript data types and data structures</a> article</li>
- <li>{{jsxref("Object")}} in the <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript reference</a></li>
-</ul>
+- [Detailed explanation of JavaScript objects](/en-US/docs/Web/JavaScript/Data_structures#objects) in the [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Data_structures) article
+- {{jsxref("Object")}} in the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference)

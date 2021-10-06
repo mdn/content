@@ -8,11 +8,9 @@ tags:
   - Opera
   - Opera Browser
 ---
-<p><strong>Opera</strong> is the fifth most used web {{glossary("browser")}}, publicly released in 1996 and initially running on Windows only. Opera uses {{glossary("Blink")}} as its layout engine since 2013 (before that, {{glossary("Presto")}}). Opera also exists in mobile and tablet versions.</p>
+**Opera** is the fifth most used web {{glossary("browser")}}, publicly released in 1996 and initially running on Windows only. Opera uses {{glossary("Blink")}} as its layout engine since 2013 (before that, {{glossary("Presto")}}). Opera also exists in mobile and tablet versions.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Opera Browser")}} on Wikipedia</li>
- <li><a href="https://www.opera.com/">Opera browser web site</a></li>
-</ul>
+- {{Interwiki("wikipedia", "Opera Browser")}} on Wikipedia
+- [Opera browser web site](https://www.opera.com/)

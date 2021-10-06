@@ -7,11 +7,12 @@ tags:
   - CodingScripting
   - Glossary
 ---
-<p>A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.</p>
+A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
 
-<p>Here is a quick example:</p>
+Here is a quick example:
 
-<pre class="brush: js">function greeting(name) {
+```js
+function greeting(name) {
   alert('Hello ' + name);
 }
 
@@ -20,14 +21,13 @@ function processUserInput(callback) {
   callback(name);
 }
 
-processUserInput(greeting);</pre>
+processUserInput(greeting);
+```
 
-<p>The above example is a {{glossary("synchronous")}} callback, as it is executed immediately.</p>
+The above example is a {{glossary("synchronous")}} callback, as it is executed immediately.
 
-<p>Note, however, that callbacks are often used to continue code execution after an {{glossary("asynchronous")}} operation has completed — these are called asynchronous callbacks. A good example is the callback functions executed inside a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">.then()</a></code> block chained onto the end of a promise after that promise fulfills or rejects. This structure is used in many modern web APIs, such as <code><a href="/en-US/docs/Web/API/fetch">fetch()</a></code>.</p>
+Note, however, that callbacks are often used to continue code execution after an {{glossary("asynchronous")}} operation has completed — these are called asynchronous callbacks. A good example is the callback functions executed inside a [`.then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) block chained onto the end of a promise after that promise fulfills or rejects. This structure is used in many modern web APIs, such as [`fetch()`](/en-US/docs/Web/API/fetch).
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{interwiki("wikipedia", "Callback_(computer_programming)", "Callback")}} on Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "Callback_(computer_programming)", "Callback")}} on Wikipedia

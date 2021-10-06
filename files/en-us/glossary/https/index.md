@@ -7,19 +7,15 @@ tags:
   - Infrastructure
   - Security
 ---
-<p><strong>HTTPS</strong> (<strong><em>HyperText Transfer Protocol Secure</em></strong>) is an encrypted version of the {{Glossary("HTTP")}} protocol. It uses {{Glossary("SSL")}} or {{Glossary("TLS")}} to encrypt all communication between a client and a server. This secure connection allows clients to safely exchange sensitive data with a server, such as when performing banking activities or online shopping.</p>
+**HTTPS** (**_HyperText Transfer Protocol Secure_**) is an encrypted version of the {{Glossary("HTTP")}} protocol. It uses {{Glossary("SSL")}} or {{Glossary("TLS")}} to encrypt all communication between a client and a server. This secure connection allows clients to safely exchange sensitive data with a server, such as when performing banking activities or online shopping.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
-   <li>{{Interwiki("wikipedia", "HTTPS")}} on Wikipedia</li>
-   <li><a href="https://movingtohttps.com/">Moving to HTTPS community guide</a></li>
-   <li><a href="/en-US/docs/Web/Security/Secure_Contexts">Secure Contexts</a></li>
-    <li><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a>
-      <ul>
-      <li>{{glossary("HTTP")}}</li>
-      <li>{{glossary("SSL")}}</li>
-      <li>{{glossary("TLS")}}</li>
-      </ul>
-    </li>   
-</ul>
+- {{Interwiki("wikipedia", "HTTPS")}} on Wikipedia
+- [Moving to HTTPS community guide](https://movingtohttps.com/)
+- [Secure Contexts](/en-US/docs/Web/Security/Secure_Contexts)
+- [MDN Web Docs Glossary](/en-US/docs/Glossary)
+
+  - {{glossary("HTTP")}}
+  - {{glossary("SSL")}}
+  - {{glossary("TLS")}}

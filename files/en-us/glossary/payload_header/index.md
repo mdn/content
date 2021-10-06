@@ -7,24 +7,20 @@ tags:
   - Headers
   - WebMechanics
 ---
+A **payload header** is an {{Glossary("HTTP_header", "HTTP header")}} that describes the payload information related to safe transport and reconstruction of the original resource {{Glossary("Representation header", "representation")}}, from one or more messages. This includes information like the length of the message payload, which part of the resource is carried in this payload (for a multi-part message), any encoding applied for transport, message integrity checks, etc.
 
-<p>A <strong>payload header</strong> is an {{Glossary("HTTP_header", "HTTP header")}} that describes the payload information related to safe transport and reconstruction of the original resource {{Glossary("Representation header", "representation")}}, from one or more messages. This includes information like the length of the message payload, which part of the resource is carried in this payload (for a multi-part message), any encoding applied for transport, message integrity checks, etc.</p>
+Payload headers may be present in both HTTP request and response messages (i.e. in any message that is carrying payload data).
 
-<p>Payload headers may be present in both HTTP request and response messages (i.e. in any message that is carrying payload data).</p>
+The payload headers include: {{HTTPHeader("Content-Length")}}, {{HTTPHeader("Content-Range")}}, {{HTTPHeader("Trailer")}}, and {{HTTPHeader("Transfer-Encoding")}}.
 
-<p>The payload headers include: {{HTTPHeader("Content-Length")}}, {{HTTPHeader("Content-Range")}}, {{HTTPHeader("Trailer")}}, and {{HTTPHeader("Transfer-Encoding")}}.</p>
+## See also
 
-<h2 id="see_also">See also</h2>
+- [List of all HTTP headers](/en-US/docs/Web/HTTP/Headers)
 
-<ul>
-  <li><a href="/en-US/docs/Web/HTTP/Headers">List of all HTTP headers</a>
-    <ul>
-      <li>{{HTTPHeader("Content-Length")}}</li>
-      <li>{{HTTPHeader("Content-Range")}}</li>
-      <li>{{HTTPHeader("Trailer")}}</li>
-      <li>{{HTTPHeader("Transfer-Encoding")}}</li>
-      <li>{{Glossary("Representation header")}}</li>
-    </ul>
-  </li>
-  <li><a href="https://datatracker.ietf.org/doc/html/rfc7231#section-3.3">RFC 7231, section 3.3: Payload semantics</a></li>
-</ul>
+  - {{HTTPHeader("Content-Length")}}
+  - {{HTTPHeader("Content-Range")}}
+  - {{HTTPHeader("Trailer")}}
+  - {{HTTPHeader("Transfer-Encoding")}}
+  - {{Glossary("Representation header")}}
+
+- [RFC 7231, section 3.3: Payload semantics](https://datatracker.ietf.org/doc/html/rfc7231#section-3.3)

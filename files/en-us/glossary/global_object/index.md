@@ -6,64 +6,64 @@ tags:
   - Glossary
   - NeedsContent
 ---
-<p>A global object is an {{glossary("object")}} that always exists in the {{glossary("global scope")}}.</p>
+A global object is an {{glossary("object")}} that always exists in the {{glossary("global scope")}}.
 
-<p>In JavaScript, there's always a global object defined. In a web browser, when scripts create global variables defined with the <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a></code> keyword, they're created as members of the global object. (In {{Glossary("Node.js")}} this is not the case.) The global object's {{Glossary("interface")}} depends on the execution context in which the script is running. For example:</p>
+In JavaScript, there's always a global object defined. In a web browser, when scripts create global variables defined with the [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var) keyword, they're created as members of the global object. (In {{Glossary("Node.js")}} this is not the case.) The global object's {{Glossary("interface")}} depends on the execution context in which the script is running. For example:
 
-<ul>
- <li>In a web browser, any code which the script doesn't specifically start up as a background task has a {{domxref("Window")}} as its global object. This is the vast majority of JavaScript code on the Web.</li>
- <li>Code running in a {{domxref("Worker")}} has a {{domxref("WorkerGlobalScope")}} object as its global object.</li>
- <li>Scripts running under {{Glossary("Node.js")}} have an object called <code><a href="https://nodejs.org/api/globals.html#globals_global">global</a></code> as their global object.</li>
-</ul>
+- In a web browser, any code which the script doesn't specifically start up as a background task has a {{domxref("Window")}} as its global object. This is the vast majority of JavaScript code on the Web.
+- Code running in a {{domxref("Worker")}} has a {{domxref("WorkerGlobalScope")}} object as its global object.
+- Scripts running under {{Glossary("Node.js")}} have an object called [`global`](https://nodejs.org/api/globals.html#globals_global) as their global object.
 
-<h2 id="window_object_in_the_Browser"><code>window</code> object in the Browser</h2>
+## `window` object in the Browser
 
-<p>The <code>window</code> object is the Global Object in the Browser. Any Global Variables or Functions can be accessed as <em>properties</em> of the <code>window</code> object.</p>
+The `window` object is the Global Object in the Browser. Any Global Variables or Functions can be accessed as _properties_ of the `window` object.
 
-<h3 id="Access_Global_Variables">Access Global Variables</h3>
+### Access Global Variables
 
-<pre class="brush: js">var foo = "foobar";
+```js
+var foo = "foobar";
 foo === window.foo; // Returns: true
-</pre>
+```
 
-<p>After defining a Global Variable <code>foo</code>, we can access its value directly from the <code>window</code> object, by using the variable name <code>foo</code> as a property name of the Global Object <code>window</code><code>.foo</code>.</p>
+After defining a Global Variable `foo`, we can access its value directly from the `window` object, by using the variable name `foo` as a property name of the Global Object ` window``.foo `.
 
-<h4 id="Explanation">Explanation:</h4>
+#### Explanation:
 
-<p>The global variable <code>foo</code> was stored in the <code>window</code> object, like this:</p>
+The global variable `foo` was stored in the `window` object, like this:
 
-<pre class="brush: js">foo: "foobar"</pre>
+```js
+foo: "foobar"
+```
 
-<h3 id="Access_Global_Functions">Access Global Functions</h3>
+### Access Global Functions
 
-<pre class="brush: js">function greeting() {
+```js
+function greeting() {
    console.log("Hi!");
 }
 
 window.greeting(); // It is the same as the normal invoking: greeting();
-</pre>
+```
 
-<p>The example above explains how Global Functions are stored as <em>properties</em> in the <code>window</code> object. We created a Global Function called <code>greeting</code>, then invoked it using the <code>window</code> object.</p>
+The example above explains how Global Functions are stored as _properties_ in the `window` object. We created a Global Function called `greeting`, then invoked it using the `window` object.
 
-<h4 id="Explanation_2">Explanation:</h4>
+#### Explanation:
 
-<p>The global function <code>greeting</code> was stored in the <code>window</code> object, like this:</p>
+The global function `greeting` was stored in the `window` object, like this:
 
-<pre class="brush: js">greeting: function greeting() {
+```js
+greeting: function greeting() {
    console.log("Hi!");
-}</pre>
+}
+```
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a>
-  <ul>
-   <li>{{glossary("global scope")}}</li>
-   <li>{{glossary("object")}}</li>
-  </ul>
- </li>
- <li>{{domxref("Window")}}</li>
- <li>{{domxref("WorkerGlobalScope")}}</li>
- <li><code><a href="https://nodejs.org/api/globals.html#globals_global">global</a></code></li>
-</ul>
+- [MDN Web Docs Glossary](/en-US/docs/Glossary)
 
+  - {{glossary("global scope")}}
+  - {{glossary("object")}}
+
+- {{domxref("Window")}}
+- {{domxref("WorkerGlobalScope")}}
+- [`global`](https://nodejs.org/api/globals.html#globals_global)

@@ -7,12 +7,10 @@ tags:
   - Infrastructure
   - MIME
 ---
-<p><strong>MIME</strong> "Multipurpose internet mail extensions" is a standard to describe documents in other forms beside ASCII text, e.g. audio, video and images. Initially used for E-Mail attachments, it has become the de facto standard to define types of documents anywhere.</p>
+**MIME** "Multipurpose internet mail extensions" is a standard to describe documents in other forms beside ASCII text, e.g. audio, video and images. Initially used for E-Mail attachments, it has become the de facto standard to define types of documents anywhere.
 
-<p>See also <a href="/en-US/docs/Glossary/MIME_type">MIME-Type</a></p>
+See also [MIME-Type](/en-US/docs/Glossary/MIME_type)
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://en.wikipedia.org/wiki/MIME">MIME </a>on Wikipedia</li>
-</ul>
+- [MIME ](https://en.wikipedia.org/wiki/MIME)on Wikipedia

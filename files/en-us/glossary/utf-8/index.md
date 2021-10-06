@@ -8,13 +8,11 @@ tags:
   - JavaScript
   - Utf-8
 ---
-<p>UTF-8 (UCS Transformation Format 8) is the World Wide Web's most common {{Glossary("Character encoding", "character encoding")}}. Each character is represented by one to four bytes. UTF-8 is backward-compatible with {{Glossary("ASCII")}} and can represent any standard Unicode character.</p>
+UTF-8 (UCS Transformation Format 8) is the World Wide Web's most common {{Glossary("Character encoding", "character encoding")}}. Each character is represented by one to four bytes. UTF-8 is backward-compatible with {{Glossary("ASCII")}} and can represent any standard Unicode character.
 
-<p>The first 128 UTF-8 characters precisely match the first 128 ASCII characters (numbered 0-127), meaning that existing ASCII text is already valid UTF-8. All other characters use two to four bytes. Each byte has some bits reserved for encoding purposes. Since non-ASCII characters require more than one byte for storage, they run the risk of being corrupted if the bytes are separated and not recombined.</p>
+The first 128 UTF-8 characters precisely match the first 128 ASCII characters (numbered 0-127), meaning that existing ASCII text is already valid UTF-8. All other characters use two to four bytes. Each byte has some bits reserved for encoding purposes. Since non-ASCII characters require more than one byte for storage, they run the risk of being corrupted if the bytes are separated and not recombined.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "UTF-8")}} on Wikipedia</li>
- <li><a href="https://www.unicode.org/faq/utf_bom.html#UTF8">FAQ about UTF-8 on Unicode website</a></li>
-</ul>
+- {{Interwiki("wikipedia", "UTF-8")}} on Wikipedia
+- [FAQ about UTF-8 on Unicode website](https://www.unicode.org/faq/utf_bom.html#UTF8)

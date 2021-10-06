@@ -5,11 +5,12 @@ tags:
   - CodingScripting
   - Glossary
 ---
-<p>A <strong>CSS property</strong> is a characteristic (like color) whose associated value defines one aspect of how the browser should display the element.</p>
+A **CSS property** is a characteristic (like color) whose associated value defines one aspect of how the browser should display the element.
 
-<p>Here's an example of a CSS rule:</p>
+Here's an example of a CSS rule:
 
-<pre class="brush: css">/* "div" is a selector indicating that all the div elements */
+```css
+/* "div" is a selector indicating that all the div elements */
 /* in the document will be styled by that rule */
 div {
   /* The property "color" with the value "black" indicates */
@@ -19,12 +20,11 @@ div {
   /* The property "background-color" with the value "white" indicates */
   /* that the background color of the elements will be white */
   background-color: white;
-}</pre>
+}
+```
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn/CSS">Learn CSS</a></li>
- <li><a href="/en-US/docs/Web/CSS/Reference">The CSS reference on MDN</a></li>
- <li><a href="https://www.w3.org/Style/CSS/current-work">The CSS Working Group current work</a></li>
-</ul>
+- [Learn CSS](/en-US/docs/Learn/CSS)
+- [The CSS reference on MDN](/en-US/docs/Web/CSS/Reference)
+- [The CSS Working Group current work](https://www.w3.org/Style/CSS/current-work)

@@ -6,27 +6,23 @@ tags:
   - Glossary
   - alignment
 ---
-<p>In <a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">CSS Box Alignment</a>, a fallback alignment is specified in order to deal with cases where the requested alignment cannot be fulfilled. For example, if you specify <code>justify-content: space-between</code> there must be more than one <a href="/en-US/docs/Glossary/Alignment_Subject">alignment subject</a>. If there is not, the fallback alignment is used. This is specified per alignment method, as detailed below.</p>
+In [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment), a fallback alignment is specified in order to deal with cases where the requested alignment cannot be fulfilled. For example, if you specify `justify-content: space-between` there must be more than one [alignment subject](/en-US/docs/Glossary/Alignment_Subject). If there is not, the fallback alignment is used. This is specified per alignment method, as detailed below.
 
-<dl>
- <dt>First baseline</dt>
- <dd><code>start</code></dd>
- <dt>Last baseline</dt>
- <dd><code>safe end</code></dd>
- <dt>Baseline</dt>
- <dd><code>start</code></dd>
- <dt>Space-between</dt>
- <dd><code>flex-start</code> (start)</dd>
- <dt>Space-around</dt>
- <dd><code>center</code></dd>
- <dt>Space-evenly</dt>
- <dd><code>center</code></dd>
- <dt>Stretch</dt>
- <dd><code>flex-start</code> (start)</dd>
-</dl>
+- First baseline
+  - : `start`
+- Last baseline
+  - : `safe end`
+- Baseline
+  - : `start`
+- Space-between
+  - : `flex-start` (start)
+- Space-around
+  - : `center`
+- Space-evenly
+  - : `center`
+- Stretch
+  - : `flex-start` (start)
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">CSS Box Alignment</a></li>
-</ul>
+- [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)

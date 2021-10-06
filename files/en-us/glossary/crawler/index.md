@@ -7,11 +7,9 @@ tags:
   - Glossary
   - Infrastructure
 ---
-<p>A web crawler is a program, often called a bot or robot, which systematically browses the {{glossary("World Wide Web","Web")}} to collect data from webpages. Typically search engines (e.g. Google, Bing, etc.) use crawlers to build indexes.</p>
+A web crawler is a program, often called a bot or robot, which systematically browses the {{glossary("World Wide Web","Web")}} to collect data from webpages. Typically search engines (e.g. Google, Bing, etc.) use crawlers to build indexes.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Web crawler")}} on Wikipedia</li>
- <li>{{Glossary("Search engine")}} (Glossary)</li>
-</ul>
+- {{Interwiki("wikipedia", "Web crawler")}} on Wikipedia
+- {{Glossary("Search engine")}} (Glossary)

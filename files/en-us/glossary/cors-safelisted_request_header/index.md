@@ -5,34 +5,28 @@ tags:
   - CORS
   - Fetch
 ---
-<p>A <a href="https://fetch.spec.whatwg.org/#cors-safelisted-request-header">CORS-safelisted request header</a> is one of the following <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a>:</p>
+A [CORS-safelisted request header](https://fetch.spec.whatwg.org/#cors-safelisted-request-header) is one of the following [HTTP headers](/en-US/docs/Web/HTTP/Headers):
 
-<ul>
- <li>{{HTTPHeader("Accept")}},</li>
- <li>{{HTTPHeader("Accept-Language")}},</li>
- <li>{{HTTPHeader("Content-Language")}},</li>
- <li>{{HTTPHeader("Content-Type")}}.</li>
-</ul>
+- {{HTTPHeader("Accept")}},
+- {{HTTPHeader("Accept-Language")}},
+- {{HTTPHeader("Content-Language")}},
+- {{HTTPHeader("Content-Type")}}.
 
-<p>When containing only these headers (and values that meet the additional requirements laid out below), a requests doesn't need to send a {{glossary("preflight request")}} in the context of <a href="/en-US/docs/Glossary/CORS">CORS</a>.</p>
+When containing only these headers (and values that meet the additional requirements laid out below), a requests doesn't need to send a {{glossary("preflight request")}} in the context of [CORS](/en-US/docs/Glossary/CORS).
 
-<p>You can safelist more headers using the {{HTTPHeader("Access-Control-Allow-Headers")}} header and also list the above headers there to circumvent the following additional restrictions:</p>
+You can safelist more headers using the {{HTTPHeader("Access-Control-Allow-Headers")}} header and also list the above headers there to circumvent the following additional restrictions:
 
-<h4 id="Additional_restrictions">Additional restrictions</h4>
+#### Additional restrictions
 
-<p>CORS-safelisted headers must also fulfill the following requirements in order to be a CORS-safelisted request header:</p>
+CORS-safelisted headers must also fulfill the following requirements in order to be a CORS-safelisted request header:
 
-<ul>
- <li>For {{HTTPHeader("Accept-Language")}} and {{HTTPHeader("Content-Language")}}: can only have values consisting of <code>0-9</code>, <code>A-Z</code>, <code>a-z</code>, space or <code>*,-.;=</code>.</li>
- <li>For {{HTTPHeader("Accept")}} and {{HTTPHeader("Content-Type")}}: can't contain a <em>CORS-unsafe request header byte</em>: <code>0x00-0x1F</code> (except for <code>0x09 (HT)</code>, which is allowed), <code>"():&lt;&gt;?@[\]{}</code>, and <code>0x7F (DEL)</code>.</li>
- <li>For {{HTTPHeader("Content-Type")}}: needs to have a MIME type of its parsed value (ignoring parameters) of either <code>application/x-www-form-urlencoded</code>, <code>multipart/form-data</code>, or <code>text/plain</code>.</li>
- <li>For any header: the value’s length can't be greater than 128.</li>
-</ul>
+- For {{HTTPHeader("Accept-Language")}} and {{HTTPHeader("Content-Language")}}: can only have values consisting of `0-9`, `A-Z`, `a-z`, space or `*,-.;=`.
+- For {{HTTPHeader("Accept")}} and {{HTTPHeader("Content-Type")}}: can't contain a _CORS-unsafe request header byte_: `0x00-0x1F` (except for `0x09 (HT)`, which is allowed), `"():<>?@[\]{}`, and `0x7F (DEL)`.
+- For {{HTTPHeader("Content-Type")}}: needs to have a MIME type of its parsed value (ignoring parameters) of either `application/x-www-form-urlencoded`, `multipart/form-data`, or `text/plain`.
+- For any header: the value’s length can't be greater than 128.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Glossary("CORS-safelisted response header")}}</li>
- <li>{{Glossary("Forbidden header name")}}</li>
- <li>{{Glossary("Request header")}}</li>
-</ul>
+- {{Glossary("CORS-safelisted response header")}}
+- {{Glossary("Forbidden header name")}}
+- {{Glossary("Request header")}}

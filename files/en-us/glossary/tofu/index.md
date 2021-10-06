@@ -6,14 +6,12 @@ tags:
   - SSH
   - Security
 ---
-<p><strong>Trust On First Use</strong> <strong>(TOFU</strong>) is a security model in which a client needs to create a trust relationship with an unknown server. To do that, clients will look for identifiers (for example public keys) stored locally. If an identifier is found, the client can establish the connection. If no identifier is found, the client can prompt the user to determine if the client should trust the identifier.</p>
+**Trust On First Use** **(TOFU**) is a security model in which a client needs to create a trust relationship with an unknown server. To do that, clients will look for identifiers (for example public keys) stored locally. If an identifier is found, the client can establish the connection. If no identifier is found, the client can prompt the user to determine if the client should trust the identifier.
 
-<p>TOFU is used in the SSH protocol, in <a href="/en-US/docs/Web/HTTP/Public_Key_Pinning">HTTP Public Key Pinning</a> ({{Glossary("HPKP")}}) where the browsers will accept the first public key returned by the server, and in {{HTTPHeader("Strict-Transport-Security")}}  ({{Glossary("HSTS")}}) where a browser will obey the redirection rule.</p>
+TOFU is used in the SSH protocol, in [HTTP Public Key Pinning](/en-US/docs/Web/HTTP/Public_Key_Pinning) ({{Glossary("HPKP")}}) where the browsers will accept the first public key returned by the server, and in {{HTTPHeader("Strict-Transport-Security")}}  ({{Glossary("HSTS")}}) where a browser will obey the redirection rule.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Public_Key_Pinning">HTTP Public Key Pinning</a> ({{Glossary("HPKP")}})</li>
- <li>{{HTTPHeader("Public-Key-Pins")}}</li>
- <li>Wikipedia: <a href="https://en.wikipedia.org/wiki/Trust_on_first_use">TOFU</a></li>
-</ul>
+- [HTTP Public Key Pinning](/en-US/docs/Web/HTTP/Public_Key_Pinning) ({{Glossary("HPKP")}})
+- {{HTTPHeader("Public-Key-Pins")}}
+- Wikipedia: [TOFU](https://en.wikipedia.org/wiki/Trust_on_first_use)

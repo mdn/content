@@ -5,12 +5,10 @@ tags:
   - CodingScripting
   - Glossary
 ---
-<p>A <strong>parser</strong> is the module of a compiler or interpreter that {{glossary("parse","parses")}} a source code file.</p>
+A **parser** is the module of a compiler or interpreter that {{glossary("parse","parses")}} a source code file.
 
-<p>More generally, it's a piece of software that parses text and transforms its content to another representation.</p>
+More generally, it's a piece of software that parses text and transforms its content to another representation.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://en.wikipedia.org/wiki/Parsing#Parser">Parser</a> on Wikipedia</li>
-</ul>
+- [Parser](https://en.wikipedia.org/wiki/Parsing#Parser) on Wikipedia
