@@ -39,6 +39,13 @@ browser-compat: webextensions.api.cookies.remove
   <dd>A <code>string</code> representing the first-party domain with which the cookie to remove is associated. This property must be supplied if the browser has first-party isolation enabled. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation">First-party isolation</a>.</dd>
   <dt><code>name</code></dt>
   <dd>A <code>string</code> representing the name of the cookie to remove.</dd>
+  <dt><code>partitionKey</code></dt>
+  <dd>An <code>object</code> representing the storage partition containing the cookie. Omit this object to a remove a cookie that is not in partitioned storage. This object contains:
+   <dl class="reference-values">
+   <dt><code>topLevelSite</code></dt>
+   <dd>A <code>string</code> representing the first-party URL of the top-level site partition containing the cookie.</dd>
+   </dl>
+  </dd>
   <dt><code>storeId</code>{{optional_inline}}</dt>
   <dd>A <code>string</code> representing the ID of the cookie store to find the cookie in. If unspecified, the cookie is looked for by default in the current execution context's cookie store.</dd>
   <dt><code>url</code></dt>
