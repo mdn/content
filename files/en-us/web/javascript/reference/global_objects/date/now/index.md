@@ -27,20 +27,6 @@ Date.now()
 
 A {{jsxref("Number")}} representing the milliseconds elapsed since the UNIX epoch.
 
-## Polyfill
-
-This method was standardized in ECMA-262 5th edition. Engines which have not
-been updated to support this method can work around the absence of this method using the
-following shim:
-
-```js
-if (!Date.now) {
-  Date.now = function now() {
-    return new Date().getTime();
-  };
-}
-```
-
 ## Examples
 
 ### Reduced time precision
@@ -81,7 +67,6 @@ is larger.
 
 ## See also
 
-- A polyfill of `Date.now` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-date)
 - {{domxref("Performance.now()")}} — provides timestamps with sub-millisecond
   resolution for use in measuring web page performance
 - {{domxref("console.time()")}} / {{domxref("console.timeEnd()")}}
