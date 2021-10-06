@@ -88,7 +88,7 @@ var downPressed = false;</pre>
 <p><strong>Note:</strong> You can also find a list of the different keycodes and what keys they relate to in the <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a> reference page.</p>
 </div>
 
-<p><img alt="Pure JavaScript demo containing player's ship (with stars in the background) that can be controlled with keyboard and mouse." src="controls-purejsgame.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="Pure JavaScript demo containing player's ship (with stars in the background) that can be controlled with keyboard and mouse." src="controls-purejsgame.png"></p>
 
 <p>You can see this example in action online at <a href="https://end3r.github.io/JavaScript-Game-Controls/">end3r.github.io/JavaScript-Game-Controls</a> and the full source code can be found at <a href="https://github.com/end3r/JavaScript-Game-Controls/">github.com/end3r/JavaScript-Game-Controls</a>.</p>
 
@@ -130,7 +130,7 @@ this.game.input.mousePointer.rightButton.isDown;</pre>
 
 <p>The whole game can be controlled with just the keyboard and nothing else. The built-in <code>this.game.input.keyboard</code> object manages the input from the keyboard, and has <a href="https://phaser.io/docs/2.6.1/Phaser.Keyboard.html#methods">a few helpful methods</a> like <code>addKey()</code> and <code>isDown()</code>. There's also the <a href="https://phaser.io/docs/2.6.1/Phaser.KeyCode.html#members">Phaser.KeyCode</a> object, which contains all the available keyboard keys:</p>
 
-<p><img alt="A full list of Phaser Key codes available inside the game." src="controls-keycodes.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="A full list of Phaser Key codes available inside the game." src="controls-keycodes.png"></p>
 
 <p>In the main menu of the game, we can add an extra way to begin playing. The Start button can be clicked to do so, but we can use the <kbd>Enter</kbd> key to do the same:</p>
 
@@ -218,7 +218,7 @@ else {
 
 <p>If the game is running on desktop, the cursor and <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> keys message will be shown. If not, then the mobile touch controls message will be.</p>
 
-<p><img alt="How to play screen of a player's ship (with stars in the background) which can be controlled by keyboard and mouse, and the visible message: &quot;arrow keys or WASD to move&quot; and &quot;X or Space to shoot&quot;." src="controls-howtoplay.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="How to play screen of a player's ship (with stars in the background) which can be controlled by keyboard and mouse, and the visible message: &quot;arrow keys or WASD to move&quot; and &quot;X or Space to shoot&quot;." src="controls-howtoplay.png"></p>
 
 <p>To skip the how to play screen, we can listen for any key being pressed and move on:</p>
 
