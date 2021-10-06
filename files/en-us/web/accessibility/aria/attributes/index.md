@@ -1,6 +1,6 @@
 ---
 title: WAI-ARIA Attributes
-slug: Web/Accessibility/ARIA/Roles
+slug: Web/Accessibility/ARIA/Attributes
 tags:
   - ARIA
   - ARIA Roles
