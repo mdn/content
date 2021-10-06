@@ -117,7 +117,7 @@ Elements with the following [`role="..."`](/en-US/Docs/Web/Accessibility/ARIA/Ro
   </thead>
   <tbody>
     <tr>
-      <td>[`log`](/en-us/web/accessibility/aria/roles/log_role)</td>
+      <td>[`log`](/en-us/docs/web/accessibility/aria/roles/log_role)</td>
       <td>Chat, error, game or other type of log</td>
       <td>
         To maximize compatibility, add a redundant
@@ -125,7 +125,7 @@ Elements with the following [`role="..."`](/en-US/Docs/Web/Accessibility/ARIA/Ro
       </td>
     </tr>
     <tr>
-      <td>[`status`](/en-us/web/accessibility/aria/roles/status_role)</td>
+      <td>[`status`](/en-us/docs/web/accessibility/aria/roles/status_role)</td>
       <td>
         A status bar or area of the screen that provides an updated status of
         some kind. Screen reader users have a special command to read the
@@ -137,7 +137,7 @@ Elements with the following [`role="..."`](/en-US/Docs/Web/Accessibility/ARIA/Ro
       </td>
     </tr>
     <tr>
-      <td>[`alert`](/en-us/web/accessibility/aria/roles/alert_role)</td>
+      <td>[`alert`](/en-us/docs/web/accessibility/aria/roles/alert_role)</td>
       <td>
         Error or warning message that flashes on the screen. Alerts are
         particularly important for client side validation notices to users.
@@ -150,7 +150,7 @@ Elements with the following [`role="..."`](/en-US/Docs/Web/Accessibility/ARIA/Ro
       </td>
     </tr>
     <tr>
-      <td>[`progressbar`](/en-us/web/accessibility/aria/roles/progressbar_role)</td>
+      <td>[`progressbar`](/en-us/docs/web/accessibility/aria/roles/progressbar_role)</td>
       <td>
         A hybrid between a widget and a live region. Use this with
         `aria-valuemin`, `aria-valuenow` and
@@ -159,12 +159,12 @@ Elements with the following [`role="..."`](/en-US/Docs/Web/Accessibility/ARIA/Ro
       <td></td>
     </tr>
     <tr>
-      <td>[`marquee`](/en-us/web/accessibility/aria/roles/marquee_role)</td>
+      <td>[`marquee`](/en-us/docs/web/accessibility/aria/roles/marquee_role)</td>
       <td>for text which scrolls, such as a stock ticker.</td>
       <td></td>
     </tr>
     <tr>
-      <td>[`timer`](/en-us/web/accessibility/aria/roles/timer_role)</td>
+      <td>[`timer`](/en-us/docs/web/accessibility/aria/roles/timer_role)</td>
       <td>
         or any kind of timer or clock, such as a countdown timer or stopwatch
         readout.
