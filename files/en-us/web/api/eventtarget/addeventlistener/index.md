@@ -1,5 +1,5 @@
 ---
-title: EventTarget.addEventListener()
+title: EventTarget.prototype.addEventListener()
 slug: Web/API/EventTarget/addEventListener
 tags:
   - API
@@ -18,7 +18,7 @@ tags:
   - attachEvent
   - events
   - mselementresize
-browser-compat: api.EventTarget.addEventListener
+browser-compat: api.EventTarget.prototype.addEventListener
 ---
 {{APIRef("DOM Events")}}
 
