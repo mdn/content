@@ -9,7 +9,7 @@ tags:
 Using JavaScript, it is possible to dynamically change parts of a page without requiring the entire page to reload — for instance, to update a list of search results on the fly, or to display a discreet alert or notification which does not require user interaction. While these changes are usually visually apparent to users who can see the page, they may not be obvious to users of assistive technologies. ARIA live regions fill this gap and provide a way to programmatically expose dynamic content changes in a way that can be announced by assistive technologies.
 
 > **Note:** Assistive technologies will announce _dynamic_ changes in the content of a live region.
-> Including an `aria-live` attribute or a specialized live region `role` (such as [`role="alert"`](/en-US/Socs/Web/Accessibility/ARIA/Roles/Alert_role)) on the element you want to announce changes to works as long as you add the attribute before the changes occur — either in the original markup, or dynamically using JavaScript.
+> Including an `aria-live` attribute or a specialized live region `role` (such as [`role="alert"`](/en-US/Docs/Web/Accessibility/ARIA/Roles/Alert_role)) on the element you want to announce changes to works as long as you add the attribute before the changes occur — either in the original markup, or dynamically using JavaScript.
 
 ## Live regions
 
@@ -105,7 +105,7 @@ Here is a screenshot of VoiceOver on Mac announcing the update (via subtitles) t
 
 ## Roles with implicit live region attributes
 
-Elements with the following [`role="..."`](/en-US/Socs/Web/Accessibility/ARIA/Roles) values act as live regions by default:
+Elements with the following [`role="..."`](/en-US/Docs/Web/Accessibility/ARIA/Roles) values act as live regions by default:
 
 <table>
   <thead>
