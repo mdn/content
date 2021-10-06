@@ -1,5 +1,5 @@
 ---
-title: <li>
+title: <li>: The List Item element
 slug: Web/HTML/Element/li
 tags:
   - Element
