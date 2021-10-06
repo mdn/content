@@ -1698,7 +1698,7 @@
         "AudioData",
         "AudioDecoder",
         "AudioEncoder",
-        "AudioEncoderChunk",
+        "EncodedAudioChunk",
         "EncodedVideoChunk",
         "ImageDecoder",
         "ImageTrack",
