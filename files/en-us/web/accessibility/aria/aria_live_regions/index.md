@@ -107,7 +107,7 @@ Here is a screenshot of VoiceOver on Mac announcing the update (via subtitles) t
 
 Elements with the following [`role="..."`](/en-US/Socs/Web/Accessibility/ARIA/Roles) values act as live regions by default:
 
-<table style="width: 100%">
+<table>
   <thead>
     <tr>
       <th scope="col">Role</th>
