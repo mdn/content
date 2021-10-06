@@ -188,7 +188,7 @@ We’ve used `role="comment"` to mark this up as a comment. To associate the com
 </div>
 ```
 
-> **Note:** If for some reason you can’t use the {{HTMLElement('mark')}} element in your application, you could also use [`<span role="mark"></span>`](/en-us/web/accessibility/aria/roles/mark_role).
+> **Note:** If for some reason you can’t use the {{HTMLElement('mark')}} element in your application, you could also use [`<span role="mark"></span>`](/en-us/docs/web/accessibility/aria/roles/mark_role).
 
 Since `aria-details` can now accept multiple IDs, we can associate multiple comments with the same annotation, like so:
 
