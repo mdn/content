@@ -6,30 +6,25 @@ tags:
   - Glossary
   - JavaScript
 ---
-<p><strong>Type</strong> is a characteristic of a {{glossary("value")}} affecting what kind of data it can store, and the structure that the data will adhere to. For example, a {{Glossary("boolean")}} <a href="/en-US/docs/Web/JavaScript/Data_structures">Data Type</a> can hold only a <code>true</code> or <code>false</code> value at any given time, whereas a {{Glossary("string")}} has the ability to hold a string or a sequence of characters, a {{Glossary("number")}} can hold numerical values of any kind, and so on.</p>
+**Type** is a characteristic of a {{glossary("value")}} affecting what kind of data it can store, and the structure that the data will adhere to. For example, a {{Glossary("boolean")}} [Data Type](/en-US/docs/Web/JavaScript/Data_structures) can hold only a `true` or `false` value at any given time, whereas a {{Glossary("string")}} has the ability to hold a string or a sequence of characters, a {{Glossary("number")}} can hold numerical values of any kind, and so on.
 
-<p>A value's data type also affects the operations that are valid on that value. For example, a value of type number can be multiplied by another number, but not by a string - even if that string contains <em>only</em> a number, such as the string "2".</p>
+A value's data type also affects the operations that are valid on that value. For example, a value of type number can be multiplied by another number, but not by a string - even if that string contains _only_ a number, such as the string "2".
 
-<p>Types also provides us with useful knowledge about the comparison between different values. Comparison between structured types is not always an easy assumption, as even if the previous data structure is the same, there could be inherited structures inside of the <a href="/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Prototype Chain</a>.</p>
+Types also provides us with useful knowledge about the comparison between different values. Comparison between structured types is not always an easy assumption, as even if the previous data structure is the same, there could be inherited structures inside of the [Prototype Chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
-<p>If you are unsure of the type of a value, you can use the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof"><code>typeof</code></a> operator.</p>
+If you are unsure of the type of a value, you can use the [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) operator.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Data type")}} on Wikipedia</li>
- <li><a href="/en-US/docs/Web/JavaScript/Data_structures">JavaScript data types</a></li>
- <li><a href="/en-US/docs/Glossary">Glossary</a>
-  <ul>
-   <li>{{Glossary("JavaScript")}}</li>
-   <li>{{Glossary("string")}}</li>
-   <li>{{Glossary("number")}}</li>
-   <li>{{Glossary("bigint")}}</li>
-   <li>{{Glossary("boolean")}}</li>
-   <li>{{Glossary("null")}}</li>
-   <li>{{Glossary("undefined")}}</li>
-   <li>{{Glossary("symbol")}}</li>
-  </ul>
- </li>
-</ul>
+- {{Interwiki("wikipedia", "Data type")}} on Wikipedia
+- [JavaScript data types](/en-US/docs/Web/JavaScript/Data_structures)
+- [Glossary](/en-US/docs/Glossary)
 
+  - {{Glossary("JavaScript")}}
+  - {{Glossary("string")}}
+  - {{Glossary("number")}}
+  - {{Glossary("bigint")}}
+  - {{Glossary("boolean")}}
+  - {{Glossary("null")}}
+  - {{Glossary("undefined")}}
+  - {{Glossary("symbol")}}

@@ -8,20 +8,16 @@ tags:
   - QA
   - Testing
 ---
-<p>A smoke test consists of functional or unit tests of critical software functionality. Smoke testing comes before further, in-depth testing.</p>
+A smoke test consists of functional or unit tests of critical software functionality. Smoke testing comes before further, in-depth testing.
 
-<p>Smoke testing answers questions like</p>
+Smoke testing answers questions like
 
-<ul>
- <li>"Does the program start up correctly?"</li>
- <li>"Do the main control buttons function?"</li>
- <li>"Can you save a simple blank new test user account?"</li>
-</ul>
+- "Does the program start up correctly?"
+- "Do the main control buttons function?"
+- "Can you save a simple blank new test user account?"
 
-<p>If this basic functionality fails, there is no point investing time in more detailed QA work at this stage.</p>
+If this basic functionality fails, there is no point investing time in more detailed QA work at this stage.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Smoke testing (software)")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Smoke testing (software)")}} on Wikipedia

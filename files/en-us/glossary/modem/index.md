@@ -5,14 +5,12 @@ tags:
   - Infrastructure
   - Navigation
 ---
-<p>A modem ("<strong>modulator-demodulator</strong>") is a device that converts digital information to analog signals and vice-versa, for sending data through networks.</p>
+A modem ("**modulator-demodulator**") is a device that converts digital information to analog signals and vice-versa, for sending data through networks.
 
-<p>Different kinds are used for different networks: DSL modems for telephone wires, WiFi modems for short-range wireless radio signals, 3G modems for cellular data towers, and so on.</p>
+Different kinds are used for different networks: DSL modems for telephone wires, WiFi modems for short-range wireless radio signals, 3G modems for cellular data towers, and so on.
 
-<p>Modems are different from {{Glossary("Router","routers")}}, but many companies sell modems combined with routers.</p>
+Modems are different from {{Glossary("Router","routers")}}, but many companies sell modems combined with routers.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Modem")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Modem")}} on Wikipedia

@@ -8,33 +8,27 @@ tags:
   - Reference
   - Web Performance
 ---
-<p><strong>Quick UDP Internet Connection</strong>, or <strong>QUIC</strong>, is an experimental multiplexed transport protocol implemented on UDP. It was developed by Google as a way to experiment with ways to improve TCP and web application delivery.</p>
+**Quick UDP Internet Connection**, or **QUIC**, is an experimental multiplexed transport protocol implemented on UDP. It was developed by Google as a way to experiment with ways to improve TCP and web application delivery.
 
-<p>As TCP is built into the kernel of many operating systems being able to experiment with changes, test them and implement modifications is an extremely slow process. The creation of QUIC allows developers to conduct experiments and try new things faster.</p>
+As TCP is built into the kernel of many operating systems being able to experiment with changes, test them and implement modifications is an extremely slow process. The creation of QUIC allows developers to conduct experiments and try new things faster.
 
-<p>QUIC was designed to support the semantics of HTTP/2. It provides multiplexing, flow control, security and congestion control.</p>
+QUIC was designed to support the semantics of HTTP/2. It provides multiplexing, flow control, security and congestion control.
 
-<p>Key features of QUIC include:</p>
+Key features of QUIC include:
 
-<ul>
- <li>Reduction in connection establishment time.</li>
- <li>Improved congestion control.</li>
- <li>Multiplexing without head-of-line blocking.</li>
- <li>Forward error correction.</li>
- <li>Connection migration.</li>
-</ul>
+- Reduction in connection establishment time.
+- Improved congestion control.
+- Multiplexing without head-of-line blocking.
+- Forward error correction.
+- Connection migration.
 
-<p>There is limited browser and server support for QUIC today.</p>
+There is limited browser and server support for QUIC today.
 
-<h3 id="Resources">Resources</h3>
+### Resources
 
-<ul>
- <li><a href="https://www.chromium.org/quic">Chromium Projects Documentation</a></li>
- <li><a href="https://datatracker.ietf.org/doc/html/draft-tsvwg-quic-protocol-02">IETF Draft</a></li>
-</ul>
+- [Chromium Projects Documentation](https://www.chromium.org/quic)
+- [IETF Draft](https://datatracker.ietf.org/doc/html/draft-tsvwg-quic-protocol-02)
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Glossary/HTTP_2">HTTP/2</a></li>
-</ul>
+- [HTTP/2](/en-US/docs/Glossary/HTTP_2)

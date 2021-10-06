@@ -6,12 +6,10 @@ tags:
   - Design
   - Glossary
 ---
-<p>A <strong>ligature</strong> is a joining of two characters into one shape. For example, in French "œ" is a ligature of "oe".</p>
+A **ligature** is a joining of two characters into one shape. For example, in French "œ" is a ligature of "oe".
 
-<p>You can implement ligatures in your webpage with {{cssxref("font-variant-ligatures")}}.</p>
+You can implement ligatures in your webpage with {{cssxref("font-variant-ligatures")}}.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{interwiki("wikipedia", "Typographic ligature", "Ligature")}} on Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "Typographic ligature", "Ligature")}} on Wikipedia

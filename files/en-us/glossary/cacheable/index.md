@@ -5,47 +5,47 @@ tags:
   - Glossary
   - WebMechanics
 ---
-<p>A <strong>cacheable</strong> response is an HTTP response that can be cached, that is stored to be retrieved and used later, saving a new request to the server. Not all HTTP responses can be cached, these are the following constraints for an HTTP response to be cached:</p>
+A **cacheable** response is an HTTP response that can be cached, that is stored to be retrieved and used later, saving a new request to the server. Not all HTTP responses can be cached, these are the following constraints for an HTTP response to be cached:
 
-<ul>
- <li>The method used in the request is itself <em>cacheable</em>, that is either a {{HTTPMethod("GET")}} or a {{HTTPMethod("HEAD")}} method. A response to a {{HTTPMethod("POST")}} or {{HTTPMethod("PATCH")}} request can also be cached if freshness is indicated and the {{HTTPHeader("Content-Location")}} header is set, but this is rarely implemented. (For example, Firefox does not support it per <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=109553">https://bugzilla.mozilla.org/show_bug.cgi?id=109553</a>.) Other methods, like {{HTTPMethod("PUT")}} or {{HTTPMethod("DELETE")}} are not cacheable and their result cannot be cached.</li>
- <li>The status code of the response is <em>known</em> by the application caching, and it is considered <em>cacheable</em>. The following status code are cacheable: {{HTTPStatus("200")}}, {{HTTPStatus("203")}}, {{HTTPStatus("204")}}, {{HTTPStatus("206")}}, {{HTTPStatus("300")}}, {{HTTPStatus("301")}}, {{HTTPStatus("404")}}, {{HTTPStatus("405")}}, {{HTTPStatus("410")}}, {{HTTPStatus("414")}}, and {{HTTPStatus("501")}}.</li>
- <li>There are <em>specific headers</em> in the response, like {{HTTPHeader("Cache-Control")}}, that prevents caching.</li>
-</ul>
+- The method used in the request is itself _cacheable_, that is either a {{HTTPMethod("GET")}} or a {{HTTPMethod("HEAD")}} method. A response to a {{HTTPMethod("POST")}} or {{HTTPMethod("PATCH")}} request can also be cached if freshness is indicated and the {{HTTPHeader("Content-Location")}} header is set, but this is rarely implemented. (For example, Firefox does not support it per <https://bugzilla.mozilla.org/show_bug.cgi?id=109553>.) Other methods, like {{HTTPMethod("PUT")}} or {{HTTPMethod("DELETE")}} are not cacheable and their result cannot be cached.
+- The status code of the response is _known_ by the application caching, and it is considered _cacheable_. The following status code are cacheable: {{HTTPStatus("200")}}, {{HTTPStatus("203")}}, {{HTTPStatus("204")}}, {{HTTPStatus("206")}}, {{HTTPStatus("300")}}, {{HTTPStatus("301")}}, {{HTTPStatus("404")}}, {{HTTPStatus("405")}}, {{HTTPStatus("410")}}, {{HTTPStatus("414")}}, and {{HTTPStatus("501")}}.
+- There are _specific headers_ in the response, like {{HTTPHeader("Cache-Control")}}, that prevents caching.
 
-<p>Note that some non-cacheable requests/responses to a specific URI may invalidate previously cached responses on the same URI. For example, a {{HTTPMethod("PUT")}} to pageX.html will invalidate all cached {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} requests to the same URI.</p>
+Note that some non-cacheable requests/responses to a specific URI may invalidate previously cached responses on the same URI. For example, a {{HTTPMethod("PUT")}} to pageX.html will invalidate all cached {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} requests to the same URI.
 
-<p>When both, the method of the request and the status of the response, are cacheable, the response to the request can be cached:</p>
+When both, the method of the request and the status of the response, are cacheable, the response to the request can be cached:
 
-<pre class="brush: plain">GET /pageX.html HTTP/1.1
+```plain
+GET /pageX.html HTTP/1.1
 (…)
 
 200 OK
 (…)
-</pre>
+```
 
-<p>A {{HTTPMethod("PUT")}} request cannot be cached. Moreover, it invalidates cached data for request to the same URI done via {{HTTPMethod("HEAD")}} or {{HTTPMethod("GET")}}:</p>
+A {{HTTPMethod("PUT")}} request cannot be cached. Moreover, it invalidates cached data for request to the same URI done via {{HTTPMethod("HEAD")}} or {{HTTPMethod("GET")}}:
 
-<pre class="brush: plain">PUT /pageX.html HTTP/1.1
+```plain
+PUT /pageX.html HTTP/1.1
 (…)
 
 200 OK
 (…)
-</pre>
+```
 
-<p>A specific {{HTTPHeader("Cache-Control")}} header in the response can prevent caching:</p>
+A specific {{HTTPHeader("Cache-Control")}} header in the response can prevent caching:
 
-<pre class="brush: plain">GET /pageX.html HTTP/1.1
+```plain
+GET /pageX.html HTTP/1.1
 (…)
 
 200 OK
 Cache-Control: no-cache
-(…)</pre>
+(…)
+```
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
-  <li>Definition of <a href="https://datatracker.ietf.org/doc/html/rfc7231#section-4.2.3">cacheable</a> in the HTTP specification.</li>
-  <li>Description of common cacheable methods: {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}</li>
-  <li>Description of common non-cacheable methods: {{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}}, often {{HTTPMethod("POST")}}</li>
-</ul>
+- Definition of [cacheable](https://datatracker.ietf.org/doc/html/rfc7231#section-4.2.3) in the HTTP specification.
+- Description of common cacheable methods: {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}
+- Description of common non-cacheable methods: {{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}}, often {{HTTPMethod("POST")}}

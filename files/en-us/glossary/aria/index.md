@@ -5,12 +5,10 @@ tags:
   - Accessibility
   - Glossary
 ---
-<p><strong>ARIA</strong> (<em>Accessible Rich {{glossary("Internet")}} Applications</em>) is a {{Glossary("W3C")}} specification for adding semantics and other metadata to {{Glossary("HTML")}} to cater to users of assistive technology.</p>
+**ARIA** (_Accessible Rich {{glossary("Internet")}} Applications_) is a {{Glossary("W3C")}} specification for adding semantics and other metadata to {{Glossary("HTML")}} to cater to users of assistive technology.
 
-<p>For example, you could add the attribute <code>role="alert"</code> to a {{HTMLElement("p")}} {{glossary("tag")}} to notify a sight-challenged user that the information is important and time-sensitive (which you might otherwise convey through text color).</p>
+For example, you could add the attribute `role="alert"` to a {{HTMLElement("p")}} {{glossary("tag")}} to notify a sight-challenged user that the information is important and time-sensitive (which you might otherwise convey through text color).
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA">ARIA </a></li>
-</ul>
+- [ARIA](/en-US/docs/Web/Accessibility/ARIA)

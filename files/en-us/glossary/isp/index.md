@@ -8,11 +8,9 @@ tags:
   - Web
   - WebMechanics
 ---
-<p>An ISP (Internet Service Provider) sells Internet access, and sometimes email, web hosting, and voice over IP, either by a dial-up connection over a phone line (formerly more common), or through a broadband connection such as a cable modem or DSL service.</p>
+An ISP (Internet Service Provider) sells Internet access, and sometimes email, web hosting, and voice over IP, either by a dial-up connection over a phone line (formerly more common), or through a broadband connection such as a cable modem or DSL service.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn/Common_questions/How_does_the_Internet_work">How the Internet works</a> (explanation for beginners)</li>
- <li>{{interwiki("wikipedia", "Internet service provider", "Internet service provider")}} on Wikipedia</li>
-</ul>
+- [How the Internet works](/en-US/docs/Learn/Common_questions/How_does_the_Internet_work) (explanation for beginners)
+- {{interwiki("wikipedia", "Internet service provider", "Internet service provider")}} on Wikipedia

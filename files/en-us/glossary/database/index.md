@@ -6,23 +6,18 @@ tags:
   - Glossary
   - Sql
 ---
-<p>A <strong>database</strong> is a storing system that collects organized data, to make some works easier like searching, structure, and extend.</p>
+A **database** is a storing system that collects organized data, to make some works easier like searching, structure, and extend.
 
-<p>In web development, most databases use the relational database management system (RDBMS) to organize data and programming in {{glossary("SQL")}}. Some databases, however, don't follow the former mechanism to organized data, which called NoSQL.</p>
+In web development, most databases use the relational database management system (RDBMS) to organize data and programming in {{glossary("SQL")}}. Some databases, however, don't follow the former mechanism to organized data, which called NoSQL.
 
-<p>Some famous server-side RDBMS are <em>MySQL</em>(or <em>MariaDB</em> which is a fork of it), <em>SQL Server</em>, and <em>Oracle Database</em>. On the other hand, some famous NoSQL examples are <em>MongoDB</em>, <em>Cassandra</em>, and <em>Redis</em>.</p>
+Some famous server-side RDBMS are _MySQL_(or _MariaDB_ which is a fork of it), _SQL Server_, and _Oracle Database_. On the other hand, some famous NoSQL examples are _MongoDB_, _Cassandra_, and _Redis_.
 
-<p>Browsers also have their own database system called {{glossary("IndexedDB")}}.</p>
+Browsers also have their own database system called {{glossary("IndexedDB")}}.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Database")}} on Wikipedia</li>
- <li>Glossary
-  <ul>
-   <li>{{Glossary("IndexedDB")}}</li>
-   <li>{{Glossary("SQL")}}</li>
-  </ul>
- </li>
-</ul>
+- {{Interwiki("wikipedia", "Database")}} on Wikipedia
+- Glossary
 
+  - {{Glossary("IndexedDB")}}
+  - {{Glossary("SQL")}}

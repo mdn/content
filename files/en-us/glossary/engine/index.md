@@ -6,10 +6,8 @@ tags:
   - Glossary
   - NeedsContent
 ---
-<p>The {{glossary("JavaScript")}} engine is an interpreter that parses and executes a JavaScript program.</p>
+The {{glossary("JavaScript")}} engine is an interpreter that parses and executes a JavaScript program.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "JavaScript engine")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "JavaScript engine")}} on Wikipedia

@@ -9,27 +9,21 @@ tags:
   - OpenPractices
   - i18n
 ---
-<p>i18n (from "internationalization", a 20-letter word) is the best practice that enables products or services to be readily adapted to any target culture.</p>
+i18n (from "internationalization", a 20-letter word) is the best practice that enables products or services to be readily adapted to any target culture.
 
-<blockquote>
-<p><strong>Internationalization</strong> is the design and development of a product, application or document content that <em><strong>enables</strong></em> easy localization for target audiences that vary in culture, region, or language. (The {{Glossary("W3C")}} definition)</p>
-</blockquote>
+> **Internationalization** is the design and development of a product, application or document content that **_enables_** easy localization for target audiences that vary in culture, region, or language. (The {{Glossary("W3C")}} definition)
 
-<p>Among other things, i18n requires support for multiple</p>
+Among other things, i18n requires support for multiple
 
-<ul>
- <li>character sets (usually via <a href="https://searchcio-midmarket.techtarget.com/definition/Unicode">Unicode</a>)</li>
- <li>units of measure (currency, °C/°F, km/miles, etc.)</li>
- <li>time and date formats</li>
- <li>keyboard layouts</li>
- <li>text directions</li>
-</ul>
+- character sets (usually via [Unicode](https://searchcio-midmarket.techtarget.com/definition/Unicode))
+- units of measure (currency, °C/°F, km/miles, etc.)
+- time and date formats
+- keyboard layouts
+- text directions
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{interwiki("wikipedia", "Internationalization and localization", "i18n")}} on Wikipedia</li>
- <li><a href="https://www.w3.org/International/questions/qa-i18n.en#Internationalization">i18n on W3C</a></li>
- <li><a href="https://www.gala-global.org/what-internationalization">i18n on gala-global.org</a></li>
- <li><a href="http://www.i18nguy.com/">i18n material on i18nguy.com </a></li>
-</ul>
+- {{interwiki("wikipedia", "Internationalization and localization", "i18n")}} on Wikipedia
+- [i18n on W3C](https://www.w3.org/International/questions/qa-i18n.en#Internationalization)
+- [i18n on gala-global.org](https://www.gala-global.org/what-internationalization)
+- [i18n material on i18nguy.com](http://www.i18nguy.com/)

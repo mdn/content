@@ -9,15 +9,13 @@ tags:
   - W3C
   - Web consortium
 ---
-<p>The <em>World Wide Web Consortium</em> (W3C) is an international body that maintains {{Glossary("World Wide Web", "Web-related")}} rules and frameworks.</p>
+The _World Wide Web Consortium_ (W3C) is an international body that maintains {{Glossary("World Wide Web", "Web-related")}} rules and frameworks.
 
-<p>It consists of over 350 member-organizations that jointly develop Web standards, run outreach programs, and maintain an open forum for talking about the Web. The W3C coordinates companies in the industry to make sure they implement the same W3C standards.</p>
+It consists of over 350 member-organizations that jointly develop Web standards, run outreach programs, and maintain an open forum for talking about the Web. The W3C coordinates companies in the industry to make sure they implement the same W3C standards.
 
-<p>Each standard passes through four stages of maturity: Working Draft (WD), Candidate Recommendation (CR), Proposed Recommendation (PR), and W3C Recommendation (REC).</p>
+Each standard passes through four stages of maturity: Working Draft (WD), Candidate Recommendation (CR), Proposed Recommendation (PR), and W3C Recommendation (REC).
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.w3.org/">W3C website</a></li>
- <li>{{Interwiki("wikipedia", "World Wide Web Consortium", "W3C")}} on Wikipedia</li>
-</ul>
+- [W3C website](https://www.w3.org/)
+- {{Interwiki("wikipedia", "World Wide Web Consortium", "W3C")}} on Wikipedia

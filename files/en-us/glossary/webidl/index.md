@@ -6,15 +6,13 @@ tags:
   - Glossary
   - WebIDL
 ---
-<p><strong>WebIDL </strong>is the interface description language used to describe the {{Glossary("type", "data types")}}, {{Glossary("interface", "interfaces")}}, {{Glossary("method", "methods")}}, {{Glossary("property", "properties")}}, and other components which make up a Web application programming interface ({{Glossary("API")}}). It uses a somewhat stylized syntax which is independent of any specific programming language, so that the underlying code which is used to build each API can be written in whatever language is most appropriate, while still being possible to map the API's components to JavaScript-compatible constructs.</p>
+**WebIDL** is the interface description language used to describe the {{Glossary("type", "data types")}}, {{Glossary("interface", "interfaces")}}, {{Glossary("method", "methods")}}, {{Glossary("property", "properties")}}, and other components which make up a Web application programming interface ({{Glossary("API")}}). It uses a somewhat stylized syntax which is independent of any specific programming language, so that the underlying code which is used to build each API can be written in whatever language is most appropriate, while still being possible to map the API's components to JavaScript-compatible constructs.
 
-<p>WebIDL is used in nearly every API {{Glossary("specification")}} for the Web, and due to its standard format and syntax, the programmers who create Web browsers can more easily ensure that their browsers are compatible with one another, regardless of how they choose to write the code to implement the API.</p>
+WebIDL is used in nearly every API {{Glossary("specification")}} for the Web, and due to its standard format and syntax, the programmers who create Web browsers can more easily ensure that their browsers are compatible with one another, regardless of how they choose to write the code to implement the API.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.w3.org/TR/WebIDL/">Specification</a></li>
- <li><a href="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file">Information contained in a WebIDL file</a></li>
- <li><a href="/en-US/docs/Mozilla/WebIDL_bindings">WebIDL bindings</a></li>
- <li>{{interwiki("wikipedia", "WebIDL")}}</li>
-</ul>
+- [Specification](https://www.w3.org/TR/WebIDL/)
+- [Information contained in a WebIDL file](/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file)
+- [WebIDL bindings](/en-US/docs/Mozilla/WebIDL_bindings)
+- {{interwiki("wikipedia", "WebIDL")}}

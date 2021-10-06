@@ -5,24 +5,18 @@ tags:
   - CodingScripting
   - Glossary
 ---
-<p>A <strong>JavaScript property</strong> is a characteristic of an object, often describing attributes associated with a data structure.</p>
+A **JavaScript property** is a characteristic of an object, often describing attributes associated with a data structure.
 
-<p>There are two kinds of properties: </p>
+There are two kinds of properties:
 
-<ul>
- <li><em>Instance properties</em> hold data that are specific to a given object instance. </li>
- <li><em>Static properties</em> hold data that are shared among all object instances.</li>
-</ul>
+- _Instance properties_ hold data that are specific to a given object instance.
+- _Static properties_ hold data that are shared among all object instances.
 
-<p>A property has a name (a {{glossary("string")}}, or {{glossary("symbol")}}) and a value ({{glossary("primitive")}}, {{glossary("method")}}, or {{glossary("object reference")}}).</p>
+A property has a name (a {{glossary("string")}}, or {{glossary("symbol")}}) and a value ({{glossary("primitive")}}, {{glossary("method")}}, or {{glossary("object reference")}}).
 
-<div class="notecard note">
-  <p><strong>Note:</strong> When we say that "a property holds an object", that is shorthand for "a property holds an object <em>reference</em>".  This distinction matters because the original referenced object remains unchanged when you change the property's value.</p>
-</div>
+> **Note:** When we say that "a property holds an object", that is shorthand for "a property holds an object _reference_".  This distinction matters because the original referenced object remains unchanged when you change the property's value.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{InterWiki('wikipedia','Property (programming)')}} on Wikipedia</li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects">Introduction to object-oriented JavaScript</a></li>
-</ul>
+- {{InterWiki('wikipedia','Property (programming)')}} on Wikipedia
+- [Introduction to object-oriented JavaScript](/en-US/docs/Learn/JavaScript/Objects)

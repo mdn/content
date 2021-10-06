@@ -5,11 +5,9 @@ tags:
   - CodingScripting
   - Glossary
 ---
-<p>The binding which defines the <strong>{{glossary("scope")}}</strong> of execution. In {{glossary("JavaScript")}}, <strong>{{glossary("function","functions")}}</strong> create a closure context.</p>
+The binding which defines the **{{glossary("scope")}}** of execution. In {{glossary("JavaScript")}}, **{{glossary("function","functions")}}** create a closure context.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Closure_%28computer_programming%29", "Closure")}} on Wikipedia</li>
- <li><a href="/en-US/docs/Web/JavaScript/Closures">Closure</a> on MDN</li>
-</ul>
+- {{Interwiki("wikipedia", "Closure_%28computer_programming%29", "Closure")}} on Wikipedia
+- [Closure](/en-US/docs/Web/JavaScript/Closures) on MDN

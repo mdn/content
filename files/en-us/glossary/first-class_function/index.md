@@ -6,30 +6,30 @@ tags:
   - Glossary
   - JavaScript
 ---
-<p>A programming language is said to have <strong>First-class functions</strong> when functions in that language are treated like any other variable. For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.</p>
+A programming language is said to have **First-class functions** when functions in that language are treated like any other variable. For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.
 
-<h2 id="Example_Assign_a_function_to_a_variable">Example | Assign a function to a variable</h2>
+## Example | Assign a function to a variable
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const foo = function() {
+```js
+const foo = function() {
    console.log("foobar");
 }
 foo(); // Invoke it using the variable
 // foobar
-</pre>
+```
 
-<p>We assigned an <strong>Anonymous Function</strong> in a {{glossary("Variable")}}, then we used that variable to invoke the function by adding parentheses <code>()</code> at the end.</p>
+We assigned an **Anonymous Function** in a {{glossary("Variable")}}, then we used that variable to invoke the function by adding parentheses `()` at the end.
 
-<div class="notecard note">
-<p><strong>Note:</strong> <strong>Even if your function was named,</strong> you can use the variable name to invoke it. Naming it will be helpful when debugging your code. <em>But it won't affect the way we invoke it.</em></p>
-</div>
+> **Note:** **Even if your function was named,** you can use the variable name to invoke it. Naming it will be helpful when debugging your code. _But it won't affect the way we invoke it._
 
-<h2 id="Example_Pass_a_function_as_an_Argument">Example | Pass a function as an Argument</h2>
+## Example | Pass a function as an Argument
 
-<h3 id="JavaScript_2">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function sayHello() {
+```js
+function sayHello() {
    return "Hello, ";
 }
 function greeting(helloMessage, name) {
@@ -38,36 +38,34 @@ function greeting(helloMessage, name) {
 // Pass `sayHello` as an argument to `greeting` function
 greeting(sayHello, "JavaScript!");
 // Hello, JavaScript!
-</pre>
+```
 
-<p>We are passing our <code>sayHello()</code> function as an argument to the <code>greeting()</code> function, this explains how we are treating the function as a <strong>value</strong>.</p>
+We are passing our `sayHello()` function as an argument to the `greeting()` function, this explains how we are treating the function as a **value**.
 
-<div class="notecard note">
-<p><strong>Note:</strong> The function that we pass as an argument to another function, is called a <strong>{{glossary("Callback function")}}</strong>. <em><code>sayHello</code> is a Callback function.</em></p>
-</div>
+> **Note:** The function that we pass as an argument to another function, is called a **{{glossary("Callback function")}}**. _`sayHello` is a Callback function._
 
-<h2 id="Example_Return_a_function">Example | Return a function</h2>
+## Example | Return a function
 
-<h3 id="JavaScript_3">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function sayHello() {
+```js
+function sayHello() {
    return function() {
       console.log("Hello!");
    }
 }
-</pre>
+```
 
-<p>In this example; We need to return a function from another function - <em>We can return a function because we treated function in JavaScript as a <strong>value</strong>.</em></p>
+In this example; We need to return a function from another function - _We can return a function because we treated function in JavaScript as a **value**._
 
-<div class="notecard note">
-<p><strong>Note:</strong> A function that returns a function is called a <strong>Higher-Order Function</strong>.</p>
-</div>
+> **Note:** A function that returns a function is called a **Higher-Order Function**.
 
-<p>Back to our example; Now, we need to invoke <code>sayHello</code> function and its returned <code>Anonymous Function</code>. To do so, we have two ways:</p>
+Back to our example; Now, we need to invoke `sayHello` function and its returned `Anonymous Function`. To do so, we have two ways:
 
-<h3 id="1-_Using_a_variable">1- Using a variable</h3>
+### 1- Using a variable
 
-<pre class="brush: js">const sayHello = function() {
+```js
+const sayHello = function() {
    return function() {
       console.log("Hello!");
    }
@@ -75,37 +73,31 @@ greeting(sayHello, "JavaScript!");
 const myFunc = sayHello();
 myFunc();
 // Hello!
-</pre>
+```
 
-<p>This way, it returns the <code>Hello!</code> message.</p>
+This way, it returns the `Hello!` message.
 
-<div class="notecard note">
-<p><strong>Note:</strong> You have to use another variable. If you invoked <code>sayHello</code> directly, it would return the function itself <strong>without invoking its returned function</strong>.</p>
-</div>
+> **Note:** You have to use another variable. If you invoked `sayHello` directly, it would return the function itself **without invoking its returned function**.
 
-<h3 id="2-_Using_double_parentheses">2- Using double parentheses</h3>
+### 2- Using double parentheses
 
-<pre class="brush: js">function sayHello() {
+```js
+function sayHello() {
    return function() {
       console.log("Hello!");
    }
 }
 sayHello()();
 // Hello!
-</pre>
+```
 
-<p>We are using double parentheses <code>()()</code> to invoke the returned function as well.</p>
+We are using double parentheses `()()` to invoke the returned function as well.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "First-class_function", "First-class functions")}} on Wikipedia</li>
- <li><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a>
-  <ul>
-   <li>{{glossary("Callback function")}}</li>
-   <li>{{glossary("Function")}}</li>
-   <li>{{glossary("Variable")}}</li>
-  </ul>
- </li>
-</ul>
+- {{Interwiki("wikipedia", "First-class_function", "First-class functions")}} on Wikipedia
+- [MDN Web Docs Glossary](/en-US/docs/Glossary)
 
+  - {{glossary("Callback function")}}
+  - {{glossary("Function")}}
+  - {{glossary("Variable")}}

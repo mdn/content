@@ -5,24 +5,22 @@ tags:
   - CSS
   - CSS Grids
 ---
-<p>CSS Grid Layout is a two-dimensional layout method enabling the laying out of content in <em>rows</em> and <em>columns</em>. Therefore in any grid we have two axes. The <em>block or column axis</em>, and the <em>inline or row axis</em>.</p>
+CSS Grid Layout is a two-dimensional layout method enabling the laying out of content in _rows_ and _columns_. Therefore in any grid we have two axes. The _block or column axis_, and the _inline or row axis_.
 
-<p>It is along these axes that items can be aligned and justified using the properties defined in the <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box Alignment specification</a>.</p>
+It is along these axes that items can be aligned and justified using the properties defined in the [Box Alignment specification](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout).
 
-<p>In CSS the <em>block or column axis</em> is the axis used when laying out blocks of text. If you have two paragraphs and are working in a right to left, top to bottom language they lay out one below the other, on the block axis.</p>
+In CSS the _block or column axis_ is the axis used when laying out blocks of text. If you have two paragraphs and are working in a right to left, top to bottom language they lay out one below the other, on the block axis.
 
-<p><img alt="Diagram showing the block axis in CSS Grid Layout." src="7_block_axis.png"></p>
+![Diagram showing the block axis in CSS Grid Layout.](7_block_axis.png)
 
-<p>The <em>inline or row axis</em> runs across the Block Axis and is the direction along which regular text flows. These are our rows in CSS Grid Layout.</p>
+The _inline or row axis_ runs across the Block Axis and is the direction along which regular text flows. These are our rows in CSS Grid Layout.
 
-<p><img alt="Diagram showing the inline axis in CSS Grid Layout." src="7_inline_axis.png"></p>
+![Diagram showing the inline axis in CSS Grid Layout.](7_inline_axis.png)
 
-<p>The physical direction of these axes can change according to the <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes">writing mode</a> of the document.</p>
+The physical direction of these axes can change according to the [writing mode](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes) of the document.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>CSS Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basic concepts of grid layout</a></em></li>
- <li>CSS Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in Grid Layout</a></em></li>
- <li>CSS Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes">Grids, logical values and writing modes</a></em></li>
-</ul>
+- CSS Grid Layout Guide: _[Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
+- CSS Grid Layout Guide: _[Box alignment in Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- CSS Grid Layout Guide: _[Grids, logical values and writing modes](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes)_

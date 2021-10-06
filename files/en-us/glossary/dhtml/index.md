@@ -7,10 +7,8 @@ tags:
   - Glossary
   - HTML
 ---
-<p><strong>DHTML</strong> (Dynamic {{glossary("HTML")}}) refers to the code behind interactive webpages that need no plugins like {{Glossary("Adobe Flash","Flash")}} or {{Glossary("Java")}}. DHTML aggregates the combined functionality of {{Glossary("HTML")}}, {{Glossary("CSS")}}, the {{Glossary("DOM")}}, and {{Glossary("JavaScript")}}.</p>
+**DHTML** (Dynamic {{glossary("HTML")}}) refers to the code behind interactive webpages that need no plugins like {{Glossary("Adobe Flash","Flash")}} or {{Glossary("Java")}}. DHTML aggregates the combined functionality of {{Glossary("HTML")}}, {{Glossary("CSS")}}, the {{Glossary("DOM")}}, and {{Glossary("JavaScript")}}.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{interwiki("wikipedia", "Dynamic HTML", "DHTML")}} on Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "Dynamic HTML", "DHTML")}} on Wikipedia

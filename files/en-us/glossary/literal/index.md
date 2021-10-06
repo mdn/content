@@ -6,40 +6,40 @@ tags:
   - JavaScript
   - Glossary
 ---
-<p><strong>Literals</strong> represent values in JavaScript. These are fixed values—not variables—that you <em>literally</em> provide in your script.</p>
+**Literals** represent values in JavaScript. These are fixed values—not variables—that you _literally_ provide in your script.
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals">Array literals</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#boolean_literals">Boolean literals</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#floating-point_literals">Floating-point literals</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#numeric_literals">Numeric literals</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals">Object literals</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#regexp_literals">RegExp literals</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#string_literals">String literals</a></li>
-</ul>
+- [Array literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals)
+- [Boolean literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#boolean_literals)
+- [Floating-point literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#floating-point_literals)
+- [Numeric literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#numeric_literals)
+- [Object literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals)
+- [RegExp literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#regexp_literals)
+- [String literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#string_literals)
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="String_literals">String literals</h3>
+### String literals
 
-<p>A string literal is zero or more characters enclosed in double (<code>"</code>) or single quotation marks (<code>'</code>). A string must be delimited by quotation marks of the same type (that is, either both single quotation marks, or both double quotation marks).</p>
+A string literal is zero or more characters enclosed in double (`"`) or single quotation marks (`'`). A string must be delimited by quotation marks of the same type (that is, either both single quotation marks, or both double quotation marks).
 
-<p>The following are examples of string literals:</p>
+The following are examples of string literals:
 
-<pre class="brush: js">'foo'
+```js
+'foo'
 "bar"
 '1234'
 'one line \n new line'
 "John's cat"
-</pre>
+```
 
-<h3 id="Object_literals">Object literals</h3>
+### Object literals
 
-<p>An object literal is a list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (<code>{}</code>).</p>
+An object literal is a list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`).
 
-<p>The following is an example of an object literal. The first element of the <code>car</code> object defines a property, <code>myCar</code>, and assigns to it a new string, "<code>Toyota</code>"; the second element, the <code>getCar</code> property, is immediately assigned the result of invoking the function <code>carTypes('Honda')</code>; the third element, the <code>special</code> property, uses an existing variable (<code>sales</code>).</p>
+The following is an example of an object literal. The first element of the `car` object defines a property, `myCar`, and assigns to it a new string, "`Toyota`"; the second element, the `getCar` property, is immediately assigned the result of invoking the function `carTypes('Honda')`; the third element, the `special` property, uses an existing variable (`sales`).
 
-<pre class="brush: js">var sales = 'BMW';
+```js
+var sales = 'BMW';
 
 function carTypes(name) {
   if (name == 'Honda') {
@@ -54,11 +54,8 @@ var car = { myCar: 'Toyota', getCar: carTypes('Honda'), special: sales };
 console.log(car.myCar);   // Toyota
 console.log(car.getCar);  // Honda
 console.log(car.special); // BMW
-</pre>
+```
 
+## See also
 
-<h2 id="see_also">See also</h2>
-
-<ul>
-  <li>{{interwiki("wikipedia", "Literal (computer programming)", "Literal")}} on Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "Literal (computer programming)", "Literal")}} on Wikipedia

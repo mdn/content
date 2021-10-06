@@ -7,10 +7,8 @@ tags:
   - Content management system
   - Glossary
 ---
-<p>A CMS (Content Management System) is software that allows users to publish, organize, change, or remove various kinds of content, not only text but also embedded images, video, audio, and interactive code.</p>
+A CMS (Content Management System) is software that allows users to publish, organize, change, or remove various kinds of content, not only text but also embedded images, video, audio, and interactive code.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Content management system")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Content management system")}} on Wikipedia

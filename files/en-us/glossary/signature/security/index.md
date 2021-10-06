@@ -7,22 +7,18 @@ tags:
   - Privacy
   - Security
 ---
-<p>A <strong>signature</strong>, or <em>digital signature</em>, is a {{glossary("protocol")}} showing that a message is authentic.</p>
+A **signature**, or _digital signature_, is a {{glossary("protocol")}} showing that a message is authentic.
 
-<p>From the {{glossary("hash")}} of a given message, the <strong>signing process</strong> first generates a digital signature linked to the signing entity, using the entity's private {{glossary("key")}}.</p>
+From the {{glossary("hash")}} of a given message, the **signing process** first generates a digital signature linked to the signing entity, using the entity's private {{glossary("key")}}.
 
-<p>On receiving the message, the <strong>verification process </strong></p>
+On receiving the message, the **verification process**
 
-<ul>
- <li><em>authenticates the sender -</em> uses the sender's public key to {{glossary("decryption","decrypt")}} the signature and recover the hash, which can only be created with the sender's private key, and</li>
- <li><em>checks message integrity -</em> compares the hash with a newly calculated one from the received document (the two hashes will differ if the document has been tampered with)</li>
-</ul>
+- _authenticates the sender -_ uses the sender's public key to {{glossary("decryption","decrypt")}} the signature and recover the hash, which can only be created with the sender's private key, and
+- _checks message integrity -_ compares the hash with a newly calculated one from the received document (the two hashes will differ if the document has been tampered with)
 
-<p>The system fails if the private key is compromised or the recipient is deceitfully given the wrong public key.</p>
+The system fails if the private key is compromised or the recipient is deceitfully given the wrong public key.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Digital signature")}} on Wikipedia</li>
- <li>See {{glossary("digest")}}, {{glossary("encryption")}}</li>
-</ul>
+- {{Interwiki("wikipedia", "Digital signature")}} on Wikipedia
+- See {{glossary("digest")}}, {{glossary("encryption")}}

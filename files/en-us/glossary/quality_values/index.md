@@ -5,79 +5,47 @@ tags:
   - Glossary
   - WebMechanics
 ---
-<p><strong>Quality values</strong>, or <em>q-values</em> and <em>q-factors</em>, are used to describe the order of priority of values in a comma-separated list. It is a special syntax allowed in some <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> and in HTML.</p>
+**Quality values**, or _q-values_ and _q-factors_, are used to describe the order of priority of values in a comma-separated list. It is a special syntax allowed in some [HTTP headers](/en-US/docs/Web/HTTP/Headers) and in HTML.
 
-<p>The importance of a value is marked by the suffix <code>';q='</code> immediately followed by a value between <code>0</code> and <code>1</code> included, with up to three decimal digits, the highest value denoting the highest priority. When not present, the default value is <code>1</code>.</p>
+The importance of a value is marked by the suffix `';q='` immediately followed by a value between `0` and `1` included, with up to three decimal digits, the highest value denoting the highest priority. When not present, the default value is `1`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following syntax</p>
+The following syntax
 
-<pre class="brush: plain">text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</pre>
+```plain
+text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+```
 
-<p>indicates the order of priority:</p>
+indicates the order of priority:
 
-<table>
-	<thead>
-		<tr>
-			<th scope="col">Value</th>
-			<th scope="col">Priority</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>text/html</code> and <code>application/xhtml+xml</code></td>
-			<td><code>1.0</code></td>
-		</tr>
-		<tr>
-			<td><code>application/xml</code></td>
-			<td><code>0.9</code></td>
-		</tr>
-		<tr>
-			<td><code>*/*</code></td>
-			<td><code>0.8</code></td>
-		</tr>
-	</tbody>
-</table>
+| Value                                   | Priority |
+| --------------------------------------- | -------- |
+| `text/html` and `application/xhtml+xml` | `1.0`    |
+| `application/xml`                       | `0.9`    |
+| `*/*`                                   | `0.8`    |
 
-<p>If there is no priority defined for the first two values, the order in the list is irrelevant. Nevertheless, with the same quality, more specific values have priority over less specific ones:</p>
+If there is no priority defined for the first two values, the order in the list is irrelevant. Nevertheless, with the same quality, more specific values have priority over less specific ones:
 
-<pre class="brush: plain">text/html;q=0.8,text/*;q=0.8,*/*;q=0.8</pre>
+```plain
+text/html;q=0.8,text/*;q=0.8,*/*;q=0.8
+```
 
-<table>
-	<thead>
-		<tr>
-			<th scope="col">Value</th>
-			<th scope="col">Priority</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>text/html</code></td>
-			<td><code>0.8</code> (but totally specified)</td>
-		</tr>
-		<tr>
-			<td><code>text/*</code></td>
-			<td><code>0.8</code> (partially specified)</td>
-		</tr>
-		<tr>
-			<td><code>*/*</code></td>
-			<td><code>0.8</code> (not specified)</td>
-		</tr>
-	</tbody>
-</table>
+| Value       | Priority                      |
+| ----------- | ----------------------------- |
+| `text/html` | `0.8` (but totally specified) |
+| `text/*`    | `0.8` (partially specified)   |
+| `*/*`       | `0.8` (not specified)         |
 
-<p>Some syntax, like the one of {{HTTPHeader("Accept")}}, allow additional specifiers like <code>text/html;level=1</code>. These increase the specificity of the value. Their use is extremely rare.</p>
+Some syntax, like the one of {{HTTPHeader("Accept")}}, allow additional specifiers like `text/html;level=1`. These increase the specificity of the value. Their use is extremely rare.
 
-<h2 id="Browser-specific_information">Browser-specific information</h2>
+## Browser-specific information
 
-<h3 id="Firefox">Firefox</h3>
+### Firefox
 
-<p>Starting with Firefox 18, the quality factor values are clamped to 2 decimal places. They used to be clamped to only 1 decimal place in earlier versions ({{bug(672448)}}).</p>
+Starting with Firefox 18, the quality factor values are clamped to 2 decimal places. They used to be clamped to only 1 decimal place in earlier versions ({{bug(672448)}}).
 
-<h2 id="More_information">More information</h2>
+## More information
 
-<ul>
-	<li><a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> using q-values in their syntax: {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("TE")}}.</li>
-	<li><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html">Header field definitions.</a></li>
-</ul>
+- [HTTP headers](/en-US/docs/Web/HTTP/Headers) using q-values in their syntax: {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("TE")}}.
+- [Header field definitions.](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html)

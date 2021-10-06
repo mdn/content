@@ -6,18 +6,14 @@ tags:
   - JavaScript
   - Reference
 ---
-<p>JavaScript's <strong>strict mode</strong> is a way to <em>opt in</em> to a restricted variant of JavaScript, thereby implicitly opting-out of "{{Glossary("Sloppy_mode", "sloppy mode")}}". Strict mode isn't just a subset: it <em>intentionally</em> has different semantics from normal code.</p>
+JavaScript's **strict mode** is a way to _opt in_ to a restricted variant of JavaScript, thereby implicitly opting-out of "{{Glossary("Sloppy_mode", "sloppy mode")}}". Strict mode isn't just a subset: it _intentionally_ has different semantics from normal code.
 
-<p>Strict mode for an entire script is invoked by including the statement <code>"use strict";</code> before any other statements.</p>
+Strict mode for an entire script is invoked by including the statement `"use strict";` before any other statements.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">Strict mode</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode">Transitioning to strict mode</a></li>
- <li><a href="/en-US/docs/Glossary">Glossary</a>
-  <ul>
-   <li>{{Glossary("Sloppy mode")}}</li>
-  </ul>
- </li>
-</ul>
+- [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+- [Transitioning to strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)
+- [Glossary](/en-US/docs/Glossary)
+
+  - {{Glossary("Sloppy mode")}}

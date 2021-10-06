@@ -8,10 +8,8 @@ tags:
   - Infrastructure
   - WebP
 ---
-<p><strong>WebP</strong> is a lossless and lossy compression image format developed by Google.</p>
+**WebP** is a lossless and lossy compression image format developed by Google.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://en.wikipedia.org/wiki/WebP">WebP </a>on Wikipedia</li>
-</ul>
+- [WebP ](https://en.wikipedia.org/wiki/WebP)on Wikipedia

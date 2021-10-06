@@ -11,10 +11,8 @@ tags:
   - Web
   - WebMechanics
 ---
-<p>The Internet is a worldwide network of networks that uses the Internet protocol suite (also named {{glossary("TCP")}}/{{glossary("IPv6","IP")}} from its two most important {{glossary("protocol","protocols")}}).</p>
+The Internet is a worldwide network of networks that uses the Internet protocol suite (also named {{glossary("TCP")}}/{{glossary("IPv6","IP")}} from its two most important {{glossary("protocol","protocols")}}).
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn/Common_questions/How_does_the_Internet_work">How the Internet works</a> (introduction for beginners)</li>
-</ul>
+- [How the Internet works](/en-US/docs/Learn/Common_questions/How_does_the_Internet_work) (introduction for beginners)

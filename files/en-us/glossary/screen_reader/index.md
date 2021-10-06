@@ -8,42 +8,36 @@ tags:
   - Voice Over
   - Voiceover
 ---
-<p>Screen readers are software applications that attempt to convey what is seen on a screen display in a non-visual way, usually as text to speech, but also into braille or sound icons. Screen readers are essential to people who are blind, as well as useful to people who are visually impaired, illiterate, or have a learning disability. There are some browser extension screen readers, but most screen readers operate system-wide for all user applications, not just the browser.</p>
+Screen readers are software applications that attempt to convey what is seen on a screen display in a non-visual way, usually as text to speech, but also into braille or sound icons. Screen readers are essential to people who are blind, as well as useful to people who are visually impaired, illiterate, or have a learning disability. There are some browser extension screen readers, but most screen readers operate system-wide for all user applications, not just the browser.
 
-<p>In terms of web accessibility, most user agents provide an accessibility object model and screen readers interact with dedicated accessibility APIs, using various operating system features and employing hooking techniques.</p>
+In terms of web accessibility, most user agents provide an accessibility object model and screen readers interact with dedicated accessibility APIs, using various operating system features and employing hooking techniques.
 
-<h2 id="VoiceOver">VoiceOver</h2>
+## VoiceOver
 
-<p>macOS comes with VoiceOver, a built-in screen reader. To access VoiceOver, go to System Preferences &gt; Accessibility &gt; VoiceOver. You can also toggle VoiceOver on and off with fn+command + F5. VoiceOver both reads aloud and displays content. The content read aloud is displayed in a dark grey box.</p>
+macOS comes with VoiceOver, a built-in screen reader. To access VoiceOver, go to System Preferences > Accessibility > VoiceOver. You can also toggle VoiceOver on and off with fn+command + F5. VoiceOver both reads aloud and displays content. The content read aloud is displayed in a dark grey box.
 
-<p>Desktop/laptop screen reader users navigate websites with a keyboard or other non-pointing device. The best way to emulate use is to do the same.</p>
+Desktop/laptop screen reader users navigate websites with a keyboard or other non-pointing device. The best way to emulate use is to do the same.
 
-<p>Just like keyboard navigation without VoiceOver, you can navigate through interactive elements using the tab key and the arrow keys:</p>
+Just like keyboard navigation without VoiceOver, you can navigate through interactive elements using the tab key and the arrow keys:
 
-<ul>
- <li>Next interactive element: Tab</li>
- <li>Previous interactive element: Shift + Tab</li>
- <li>Next radio button in a same named-group: right or down arrow</li>
- <li>Previous radio button in a same named-group: left or up arrow</li>
-</ul>
+- Next interactive element: Tab
+- Previous interactive element: Shift + Tab
+- Next radio button in a same named-group: right or down arrow
+- Previous radio button in a same named-group: left or up arrow
 
-<p>Navigating through the content of a page is done with the tab key and a series of other keys along with Control + Option keys</p>
+Navigating through the content of a page is done with the tab key and a series of other keys along with Control + Option keys
 
-<ul>
- <li>Next heading: Control + Option + H</li>
- <li>Next list: Control + Option + X</li>
- <li>Next graphic: Control + Option + G</li>
- <li>Next table: Control + Option + T</li>
- <li>Down an HTML hierarchical order Control + Option + right arrow</li>
- <li>Previous heading: Shift + Control + Option + H</li>
- <li>Previous list: Shift + Control + Option + X</li>
- <li>Previous graphic: Shift + Control + Option + G</li>
- <li>Previous table: Shift + Control + Option + T</li>
- <li>Up an HTML hierarchical order: Control + Option + left arrow</li>
-</ul>
+- Next heading: Control + Option + H
+- Next list: Control + Option + X
+- Next graphic: Control + Option + G
+- Next table: Control + Option + T
+- Down an HTML hierarchical order Control + Option + right arrow
+- Previous heading: Shift + Control + Option + H
+- Previous list: Shift + Control + Option + X
+- Previous graphic: Shift + Control + Option + G
+- Previous table: Shift + Control + Option + T
+- Up an HTML hierarchical order: Control + Option + left arrow
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA">ARIA </a></li>
-</ul>
+- [ARIA](/en-US/docs/Web/Accessibility/ARIA)

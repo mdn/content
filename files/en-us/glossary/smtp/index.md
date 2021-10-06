@@ -8,20 +8,16 @@ tags:
   - Infrastructure
   - Sharing
 ---
-<p><strong>SMTP</strong> (Simple Mail Transfer Protocol) is a {{glossary("protocol")}} used to send a new email.  Like {{glossary("POP")}} and {{glossary("NNTP")}}, it is a {{Glossary("state machine")}}-driven protocol.</p>
+**SMTP** (Simple Mail Transfer Protocol) is a {{glossary("protocol")}} used to send a new email.  Like {{glossary("POP")}} and {{glossary("NNTP")}}, it is a {{Glossary("state machine")}}-driven protocol.
 
-<p>The protocol is relatively straightforward. Primary complications include supporting various authentication mechanisms (<a href="https://en.wikipedia.org/wiki/Generic_Security_Services_Application_Program_Interface"><abbr title="Generic Security Services Application Program Interface">GSSAPI</abbr></a>, <a href="https://en.wikipedia.org/wiki/CRAM-MD5"><abbr title="challenge-response authentication mechanism">CRAM-MD5</abbr></a>, <a href="https://en.wikipedia.org/wiki/NTLM"><abbr title="NT LAN Manager">NTLM</abbr></a>, MSN, AUTH LOGIN, AUTH PLAIN, etc.), handling error responses, and falling back when authentication mechanisms fail (e.g., the server claims to support a mechanism, but doesn't).</p>
+The protocol is relatively straightforward. Primary complications include supporting various authentication mechanisms ([GSSAPI](https://en.wikipedia.org/wiki/Generic_Security_Services_Application_Program_Interface), [CRAM-MD5](https://en.wikipedia.org/wiki/CRAM-MD5), [NTLM](https://en.wikipedia.org/wiki/NTLM), MSN, AUTH LOGIN, AUTH PLAIN, etc.), handling error responses, and falling back when authentication mechanisms fail (e.g., the server claims to support a mechanism, but doesn't).
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{Interwiki("wikipedia", "SMTP")}} (Wikipedia)</li>
-  <li><a href="/en-US/docs/Glossary">Glossary</a>
-    <ul>
-     <li>{{glossary("NNTP")}}</li>
-     <li>{{glossary("POP")}}</li>
-     <li>{{glossary("protocol")}}</li>
-     <li>{{Glossary("state machine")}}</li>
-    </ul>
-   </li>
-</ul>
+- {{Interwiki("wikipedia", "SMTP")}} (Wikipedia)
+- [Glossary](/en-US/docs/Glossary)
+
+  - {{glossary("NNTP")}}
+  - {{glossary("POP")}}
+  - {{glossary("protocol")}}
+  - {{Glossary("state machine")}}

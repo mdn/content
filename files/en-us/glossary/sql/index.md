@@ -7,12 +7,10 @@ tags:
   - Glossary
   - Sql
 ---
-<p><strong>SQL </strong>(Structured Query Language) is a descriptive computer language designed for updating, retrieving, and calculating data in table-based databases.</p>
+**SQL** (Structured Query Language) is a descriptive computer language designed for updating, retrieving, and calculating data in table-based databases.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "SQL")}} on Wikipedia</li>
- <li><a href="https://sqlzoo.net/wiki/SQL_Tutorial">Learn SQL on sqlzoo.net</a></li>
- <li><a href="https://www.tutorialspoint.com/sql/">Tutorials Point</a></li>
-</ul>
+- {{Interwiki("wikipedia", "SQL")}} on Wikipedia
+- [Learn SQL on sqlzoo.net](https://sqlzoo.net/wiki/SQL_Tutorial)
+- [Tutorials Point](https://www.tutorialspoint.com/sql/)

@@ -9,12 +9,10 @@ tags:
   - HTML
   - Intro
 ---
-<p>In {{Glossary("HTML")}}, the doctype is the required "<code>&lt;!DOCTYPE html&gt;</code>" preamble found at the top of all documents. Its sole purpose is to prevent a {{Glossary("browser")}} from switching into so-called <a href="/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode">“quirks mode”</a> when rendering a document; that is, the "<code>&lt;!DOCTYPE html&gt;</code>" doctype ensures that the browser makes a best-effort attempt at following the relevant specifications, rather than using a different rendering mode that is incompatible with some specifications.</p>
+In {{Glossary("HTML")}}, the doctype is the required "`<!DOCTYPE html>`" preamble found at the top of all documents. Its sole purpose is to prevent a {{Glossary("browser")}} from switching into so-called [“quirks mode”](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) when rendering a document; that is, the "`<!DOCTYPE html>`" doctype ensures that the browser makes a best-effort attempt at following the relevant specifications, rather than using a different rendering mode that is incompatible with some specifications.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://html.spec.whatwg.org/multipage/syntax.html#the-doctype">Definition of the DOCTYPE in the HTML specification</a></li>
- <li><a href="/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode">Quirks Mode and Standards Mode</a></li>
- <li><a href="/en-US/docs/Web/API/Document/doctype">Document.doctype</a>, a JavaScript method that returns the doctype</li>
-</ul>
+- [Definition of the DOCTYPE in the HTML specification](https://html.spec.whatwg.org/multipage/syntax.html#the-doctype)
+- [Quirks Mode and Standards Mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
+- [Document.doctype](/en-US/docs/Web/API/Document/doctype), a JavaScript method that returns the doctype

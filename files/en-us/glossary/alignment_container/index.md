@@ -7,10 +7,8 @@ tags:
   - Glossary
   - alignment
 ---
-<p>The <strong>alignment container</strong> is the rectangle that the <a href="/en-US/docs/Glossary/Alignment_Subject">alignment subject</a> is aligned within. This is defined by the layout mode; it is usually the alignment subject’s containing block, and assumes the writing mode of the box establishing the containing block.</p>
+The **alignment container** is the rectangle that the [alignment subject](/en-US/docs/Glossary/Alignment_Subject) is aligned within. This is defined by the layout mode; it is usually the alignment subject’s containing block, and assumes the writing mode of the box establishing the containing block.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">CSS Box Alignment</a></li>
-</ul>
+- [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)

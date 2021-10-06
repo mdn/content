@@ -7,12 +7,10 @@ tags:
   - Infrastructure
   - Internet
 ---
-<p>The Internet Engineering Task Force (<strong>IETF</strong>) is a worldwide organization that drafts {{glossary('specification','specifications')}} governing the mechanisms behind the {{glossary("Internet")}}, especially the {{glossary("TCP")}}/{{glossary("IPv6","IP")}} or Internet {{glossary("Protocol")}} Suite.</p>
+The Internet Engineering Task Force (**IETF**) is a worldwide organization that drafts {{glossary('specification','specifications')}} governing the mechanisms behind the {{glossary("Internet")}}, especially the {{glossary("TCP")}}/{{glossary("IPv6","IP")}} or Internet {{glossary("Protocol")}} Suite.
 
-<p>The IETF is open, run by volunteers, and sponsored by the <a href="https://www.internetsociety.org/">Internet Society</a>.</p>
+The IETF is open, run by volunteers, and sponsored by the [Internet Society](https://www.internetsociety.org/).
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.ietf.org/">Official website</a></li>
-</ul>
+- [Official website](https://www.ietf.org/)

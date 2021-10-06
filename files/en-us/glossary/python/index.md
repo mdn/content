@@ -8,28 +8,23 @@ tags:
   - Python
   - programming
 ---
-<p><strong>Python</strong> is a high level general-purpose programming language. It uses a multi-paradigm approach, meaning it supports procedural, object-oriented, and some functional programming constructs.</p>
+**Python** is a high level general-purpose programming language. It uses a multi-paradigm approach, meaning it supports procedural, object-oriented, and some functional programming constructs.
 
-<p>It was created by Guido van Rossum as a successor to another language (called ABC) between 1985 and 1990, and is currently used on a large array of domains like web development, desktop applications, data science, DevOps, and automation/productivity.</p>
+It was created by Guido van Rossum as a successor to another language (called ABC) between 1985 and 1990, and is currently used on a large array of domains like web development, desktop applications, data science, DevOps, and automation/productivity.
 
-<p>Python is developed under an OSI-approved open source license, making it freely usable and distributable, even for commercial use. Python's license is administered by the <a href="https://www.python.org/psf">Python Software Foundation</a>.</p>
+Python is developed under an OSI-approved open source license, making it freely usable and distributable, even for commercial use. Python's license is administered by the [Python Software Foundation](https://www.python.org/psf).
 
+## See also
 
-<h2 id="see_also">See also</h2>
+- {{interwiki('wikipedia','Python (programming language)','Python')}} on Wikipedia
+- [Official Python docs tutorials](https://docs.python.org/3/tutorial/index.html)
+- [Tutorials Point Python tutorial](https://www.tutorialspoint.com/python/index.htm)
+- [AlphaCodingSkills Python Tutorial](https://www.alphacodingskills.com/python/python-tutorial.php)
+- [Django Web Framework (Python)](/en-US/docs/Learn/Server-side/Django) on MDN
+- [Glossary](/en-US/docs/Glossary)
 
-<ul>
-   <li>{{interwiki('wikipedia','Python (programming language)','Python')}} on Wikipedia</li>
-   <li><a href="https://docs.python.org/3/tutorial/index.html">Official Python docs tutorials</a></li>
-   <li><a href="https://www.tutorialspoint.com/python/index.htm">Tutorials Point Python tutorial</a></li>
-   <li><a href="https://www.alphacodingskills.com/python/python-tutorial.php">AlphaCodingSkills Python Tutorial</a></li>
-   <li><a href="/en-US/docs/Learn/Server-side/Django">Django Web Framework (Python)</a> on MDN</li>
- <li><a href="/en-US/docs/Glossary">Glossary</a>
-  <ul>
-   <li>{{Glossary("Java")}}</li>
-   <li>{{Glossary("JavaScript")}}</li>
-   <li>{{Glossary("PHP")}}</li>
-   <li>{{Glossary("Python")}}</li>
-   <li>{{Glossary("Ruby")}}</li>
-  </ul>
- </li>
-</ul>
+  - {{Glossary("Java")}}
+  - {{Glossary("JavaScript")}}
+  - {{Glossary("PHP")}}
+  - {{Glossary("Python")}}
+  - {{Glossary("Ruby")}}

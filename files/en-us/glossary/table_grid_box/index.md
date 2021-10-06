@@ -6,4 +6,4 @@ tags:
   - CSS
   - Tables
 ---
-<p>The <strong>Table Grid Box</strong> is a block level box which contains all of the table internal boxes, excluding the caption. The box which includes the caption is referred to as the <a href="/en-US/docs/Glossary/Table_Wrapper_Box">Table Wrapper Box</a>.</p>
+The **Table Grid Box** is a block level box which contains all of the table internal boxes, excluding the caption. The box which includes the caption is referred to as the [Table Wrapper Box](/en-US/docs/Glossary/Table_Wrapper_Box).

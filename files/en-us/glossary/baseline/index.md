@@ -8,15 +8,13 @@ tags:
   - alignment
   - typography
 ---
-<p>The <strong>baseline</strong> is a term used in European and West Asian typography meaning an imaginary line upon which the characters of a font rest.</p>
+The **baseline** is a term used in European and West Asian typography meaning an imaginary line upon which the characters of a font rest.
 
-<p>The descenders of characters like g and p extend below this line. {{Glossary("glyph", "Glyphs")}} with rounded lower and upper extents like C or 3 slightly extend below it.</p>
+The descenders of characters like g and p extend below this line. {{Glossary("glyph", "Glyphs")}} with rounded lower and upper extents like C or 3 slightly extend below it.
 
-<p>East Asian scripts have no baseline. Their glyphs are placed in a square box without ascenders or descenders.</p>
+East Asian scripts have no baseline. Their glyphs are placed in a square box without ascenders or descenders.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://en.wikipedia.org/wiki/Baseline_(typography)">Baseline</a> on Wikipedia</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment#types_of_alignment">CSS Box Alignment</a> on MDN</li>
-</ul>
+- [Baseline](<https://en.wikipedia.org/wiki/Baseline_(typography)>) on Wikipedia
+- [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment#types_of_alignment) on MDN

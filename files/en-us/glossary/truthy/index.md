@@ -6,13 +6,14 @@ tags:
   - Glossary
   - JavaScript
 ---
-<p>In {{Glossary("JavaScript")}}, a <strong>truthy</strong> value is a value that is considered <code>true</code> when encountered in a {{Glossary("Boolean")}} context. All values are truthy unless they are defined as {{Glossary("Falsy", "falsy")}} (i.e., except for <code>false</code>, <code>0</code>, <code>-0</code>, <code>0n</code>, <code>""</code>, <code>null</code>, <code>undefined</code>, and <code>NaN</code>).</p>
+In {{Glossary("JavaScript")}}, a **truthy** value is a value that is considered `true` when encountered in a {{Glossary("Boolean")}} context. All values are truthy unless they are defined as {{Glossary("Falsy", "falsy")}} (i.e., except for `false`, `0`, `-0`, `0n`, `""`, `null`, `undefined`, and `NaN`).
 
-<p>{{Glossary("JavaScript")}} uses type {{Glossary("Type_Conversion", "coercion")}} in Boolean contexts.</p>
+{{Glossary("JavaScript")}} uses type {{Glossary("Type_Conversion", "coercion")}} in Boolean contexts.
 
-<p>Examples of <em>truthy</em> values in JavaScript (which will be coerced to true in boolean contexts, and thus execute the <code>if</code> block):</p>
+Examples of _truthy_ values in JavaScript (which will be coerced to true in boolean contexts, and thus execute the `if` block):
 
-<pre class="brush: js">if (true)
+```js
+if (true)
 if ({})
 if ([])
 if (42)
@@ -25,13 +26,10 @@ if (3.14)
 if (-3.14)
 if (Infinity)
 if (-Infinity)
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Glossary("Falsy")}}</li>
- <li>{{Glossary("Type_Conversion", "Coercion")}}</li>
- <li>{{Glossary("Boolean")}}</li>
-</ul>
-
+- {{Glossary("Falsy")}}
+- {{Glossary("Type_Conversion", "Coercion")}}
+- {{Glossary("Boolean")}}

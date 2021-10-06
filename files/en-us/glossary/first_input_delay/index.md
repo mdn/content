@@ -6,15 +6,13 @@ tags:
   - Reference
   - Web Performance
 ---
-<p><strong>First input delay</strong> (FID) measures the time from when a user first interacts with your site (i.e. when they click a link, tap on a button, or use a custom, JavaScript-powered control) to the time when the browser is actually able to respond to that interaction.</p>
+**First input delay** (FID) measures the time from when a user first interacts with your site (i.e. when they click a link, tap on a button, or use a custom, JavaScript-powered control) to the time when the browser is actually able to respond to that interaction.
 
-<p>It is the length of time, in milliseconds, between the first user interaction on a web page and the browser’s response to that interaction. Scrolling and zooming are not included in this metric.</p>
+It is the length of time, in milliseconds, between the first user interaction on a web page and the browser’s response to that interaction. Scrolling and zooming are not included in this metric.
 
-<p>The time between when content is painted to the page and when all the functionality becomes responsive to human interaction often varies based on the size and complexity of the JavaScript needing to be downloaded, parsed, and executed on the main thread, and on the device speed or lack thereof (think low end mobile devices). The longer the delay, the worse the user experience. Reducing site initialization time and eliminating<a href="/en-US/docs/Web/API/Long_Tasks_API"> long tasks</a> can help eliminate first input delays.</p>
+The time between when content is painted to the page and when all the functionality becomes responsive to human interaction often varies based on the size and complexity of the JavaScript needing to be downloaded, parsed, and executed on the main thread, and on the device speed or lack thereof (think low end mobile devices). The longer the delay, the worse the user experience. Reducing site initialization time and eliminating[ long tasks](/en-US/docs/Web/API/Long_Tasks_API) can help eliminate first input delays.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Window/requestIdleCallback">requestIdleCallback </a></li>
- <li><a href="/en-US/docs/Web/Performance/Lazy_loading">lazy loading</a></li>
-</ul>
+- [requestIdleCallback](/en-US/docs/Web/API/Window/requestIdleCallback)
+- [lazy loading](/en-US/docs/Web/Performance/Lazy_loading)

@@ -9,12 +9,10 @@ tags:
   - Security
   - Trustworthy
 ---
-<p><strong>Certified</strong> means that an application, content or data transmission has successfully undergone evaluation by professionals with expertise in the relevant field, thereby indicating completeness, security and trustworthiness.</p>
+**Certified** means that an application, content or data transmission has successfully undergone evaluation by professionals with expertise in the relevant field, thereby indicating completeness, security and trustworthiness.
 
-<p>For details on certification in {{glossary("Cryptography")}}, please refer to {{glossary("Digital Certificate")}}.</p>
+For details on certification in {{glossary("Cryptography")}}, please refer to {{glossary("Digital Certificate")}}.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Professional_certification_(computer_technology)#Information_systems_security", "Certification")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Professional_certification_(computer_technology)#Information_systems_security", "Certification")}} on Wikipedia

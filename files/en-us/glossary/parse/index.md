@@ -10,18 +10,16 @@ tags:
   - JavaScript
   - Web Performance
 ---
-<p>Parsing means analyzing and converting a program into an internal format that a runtime environment can actually run, for example the {{glossary("JavaScript")}} engine inside browsers.</p>
+Parsing means analyzing and converting a program into an internal format that a runtime environment can actually run, for example the {{glossary("JavaScript")}} engine inside browsers.
 
-<p>The <a href="/en-US/docs/Learn/HTML">browser parses HTML</a> into a {{glossary('DOM')}} tree. HTML parsing involves <a href="/en-US/docs/Web/API/DOMTokenList">tokenization</a> and tree construction. HTML tokens include start and end tags, as well as attribute names and values. If the document is well-formed, parsing it is straightforward and faster. The parser parses tokenized input into the document, building up the document tree.</p>
+The [browser parses HTML](/en-US/docs/Learn/HTML) into a {{glossary('DOM')}} tree. HTML parsing involves [tokenization](/en-US/docs/Web/API/DOMTokenList) and tree construction. HTML tokens include start and end tags, as well as attribute names and values. If the document is well-formed, parsing it is straightforward and faster. The parser parses tokenized input into the document, building up the document tree.
 
-<p>When the HTML parser finds non-blocking resources, such as an image, the browser will request those resources and continue parsing. Parsing can continue when a CSS file is encountered, but <code>&lt;script&gt;</code> tags—particularly those without an <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async</a></code> or <code>defer</code> attribute—blocks rendering, and pauses parsing of HTML.</p>
+When the HTML parser finds non-blocking resources, such as an image, the browser will request those resources and continue parsing. Parsing can continue when a CSS file is encountered, but `<script>` tags—particularly those without an [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) or `defer` attribute—blocks rendering, and pauses parsing of HTML.
 
-<p>When the browser encounters CSS styles, it parses the text into the CSS Object Model (or {{glossary('CSSOM')}}), a data structure it then uses for styling layouts and painting. The browser then creates a render tree from both these structures to be able to paint the content to the screen. JavaScript is also downloaded, parsed, and then execute.</p>
+When the browser encounters CSS styles, it parses the text into the CSS Object Model (or {{glossary('CSSOM')}}), a data structure it then uses for styling layouts and painting. The browser then creates a render tree from both these structures to be able to paint the content to the screen. JavaScript is also downloaded, parsed, and then execute.
 
-<p>JavaScript parsing is done during {{glossary("compile time")}} or whenever the {{glossary("parser")}} is invoked, such as during a call to a method.</p>
+JavaScript parsing is done during {{glossary("compile time")}} or whenever the {{glossary("parser")}} is invoked, such as during a call to a method.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://en.wikipedia.org/wiki/Parsing">Parse</a> on Wikipedia</li>
-</ul>
+- [Parse](https://en.wikipedia.org/wiki/Parsing) on Wikipedia

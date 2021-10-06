@@ -5,17 +5,13 @@ tags:
   - CodingScripting
   - Glossary
 ---
-<p>An immutable {{glossary("object")}} is one whose content cannot be changed.<br>
- An object can be immutable for various reasons, for example:</p>
+An immutable {{glossary("object")}} is one whose content cannot be changed.
+An object can be immutable for various reasons, for example:
 
-<ul>
- <li>To improve performance (no planning for the object's future changes)</li>
- <li>To reduce memory use (make {{glossary("object reference","object references")}} instead of cloning the whole object)</li>
- <li>Thread-safety (multiple threads can reference the same object without interfering with one other)</li>
-</ul>
+- To improve performance (no planning for the object's future changes)
+- To reduce memory use (make {{glossary("object reference","object references")}} instead of cloning the whole object)
+- Thread-safety (multiple threads can reference the same object without interfering with one other)
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{interwiki("wikipedia", "Immutable object", "Immutable")}} on Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "Immutable object", "Immutable")}} on Wikipedia

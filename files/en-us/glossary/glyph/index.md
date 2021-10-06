@@ -6,13 +6,11 @@ tags:
   - SVG
   - typography
 ---
-<p>A <strong>glyph</strong> is a term used in typography for the visual representation of one or more {{Glossary("character", "characters")}}.</p>
+A **glyph** is a term used in typography for the visual representation of one or more {{Glossary("character", "characters")}}.
 
-<p>The fonts used by a website contain different sets of glyphs, which represent the characters of the font.</p>
+The fonts used by a website contain different sets of glyphs, which represent the characters of the font.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://en.wikipedia.org/wiki/Glyph">Glyph</a> on Wikipedia</li>
- <li><a href="https://www.quora.com/Whats-the-difference-between-a-character-a-glyph-and-a-grapheme/answer/Thomas-Phinney">Glyph, character and grapheme</a> on Quora</li>
-</ul>
+- [Glyph](https://en.wikipedia.org/wiki/Glyph) on Wikipedia
+- [Glyph, character and grapheme](https://www.quora.com/Whats-the-difference-between-a-character-a-glyph-and-a-grapheme/answer/Thomas-Phinney) on Quora

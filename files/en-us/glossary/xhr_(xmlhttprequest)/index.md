@@ -8,13 +8,11 @@ tags:
   - Glossary
   - XMLHttpRequest
 ---
-<p>{{domxref("XMLHttpRequest")}} (XHR) is a {{Glossary("JavaScript")}} {{Glossary("API")}} to create {{Glossary("AJAX")}} requests. Its methods provide the ability to send network requests between the {{Glossary("browser")}} and a {{Glossary("server")}}.</p>
+{{domxref("XMLHttpRequest")}} (XHR) is a {{Glossary("JavaScript")}} {{Glossary("API")}} to create {{Glossary("AJAX")}} requests. Its methods provide the ability to send network requests between the {{Glossary("browser")}} and a {{Glossary("server")}}.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{interwiki("wikipedia", "XMLHttpRequest")}} on Wikipedia</li>
- <li><a href="https://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/">Synchronous vs. Asynchronous Communications</a></li>
- <li>The {{domxref("XMLHttpRequest")}} object</li>
- <li>The <a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">documentation on MDN about how to use XMLHttpRequest</a></li>
-</ul>
+- {{interwiki("wikipedia", "XMLHttpRequest")}} on Wikipedia
+- [Synchronous vs. Asynchronous Communications](https://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/)
+- The {{domxref("XMLHttpRequest")}} object
+- The [documentation on MDN about how to use XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)

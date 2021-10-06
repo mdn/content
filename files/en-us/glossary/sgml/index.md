@@ -7,13 +7,11 @@ tags:
   - Glossary
   - SGML
 ---
-<p>The <em>Standard Generalized Markup Language</em> (<strong>SGML</strong>) is an {{Glossary("ISO")}} specification for defining declarative markup languages.</p>
+The _Standard Generalized Markup Language_ (**SGML**) is an {{Glossary("ISO")}} specification for defining declarative markup languages.
 
-<p>On the web, {{Glossary("HTML")}} 4, {{Glossary("XHTML")}}, and {{Glossary("XML")}} are popular SGML-based languages. It is worth noting that since its fifth edition, HTML is no longer SGML-based and has its own parsing rules.</p>
+On the web, {{Glossary("HTML")}} 4, {{Glossary("XHTML")}}, and {{Glossary("XML")}} are popular SGML-based languages. It is worth noting that since its fifth edition, HTML is no longer SGML-based and has its own parsing rules.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "SGML")}} on Wikipedia</li>
- <li><a href="https://www.isgmlug.org/">Introduction to SGML</a></li>
-</ul>
+- {{Interwiki("wikipedia", "SGML")}} on Wikipedia
+- [Introduction to SGML](https://www.isgmlug.org/)

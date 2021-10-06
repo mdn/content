@@ -6,4 +6,4 @@ tags:
   - Glossary
   - HTTP
 ---
-<p>Old term for {{Glossary("CORS-safelisted response header")}}.</p>
+Old term for {{Glossary("CORS-safelisted response header")}}.

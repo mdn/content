@@ -7,27 +7,23 @@ tags:
   - WWW
   - World Wide Web
 ---
-<p>The <em>World Wide Web</em>—commonly referred to as <strong>WWW</strong>, <strong>W3</strong>, or <strong>the Web</strong>—is an interconnected system of public webpages accessible through the {{Glossary("Internet")}}. The Web is not the same as the Internet: the Web is one of many applications built on top of the Internet.</p>
+The _World Wide Web_—commonly referred to as **WWW**, **W3**, or **the Web**—is an interconnected system of public webpages accessible through the {{Glossary("Internet")}}. The Web is not the same as the Internet: the Web is one of many applications built on top of the Internet.
 
-<p>Tim Berners-Lee proposed the architecture of what became known as the World Wide Web. He created the first web {{Glossary("Server","server")}}, web {{Glossary("Browser","browser")}}, and webpage on his computer at the CERN physics research lab in 1990. In 1991, he announced his creation on the alt.hypertext newsgroup, marking the moment the Web was first made public.</p>
+Tim Berners-Lee proposed the architecture of what became known as the World Wide Web. He created the first web {{Glossary("Server","server")}}, web {{Glossary("Browser","browser")}}, and webpage on his computer at the CERN physics research lab in 1990. In 1991, he announced his creation on the alt.hypertext newsgroup, marking the moment the Web was first made public.
 
-<p>The system we know today as "the Web" consists of several components:</p>
+The system we know today as "the Web" consists of several components:
 
-<ul>
- <li>The <strong>{{Glossary("HTTP")}}</strong> protocol governs data transfer between a server and a client.</li>
- <li>To access a Web component, a client supplies a unique universal identifier, called a <strong>{{Glossary("URL")}}</strong> (uniform resource locator) or {{Glossary("URI")}} (uniform resource identifier) (formally called Universal Document Identifier (UDI)).</li>
- <li><strong>{{Glossary("HTML")}}</strong> (hypertext markup language) is the most common format for publishing web documents.</li>
-</ul>
+- The **{{Glossary("HTTP")}}** protocol governs data transfer between a server and a client.
+- To access a Web component, a client supplies a unique universal identifier, called a **{{Glossary("URL")}}** (uniform resource locator) or {{Glossary("URI")}} (uniform resource identifier) (formally called Universal Document Identifier (UDI)).
+- **{{Glossary("HTML")}}** (hypertext markup language) is the most common format for publishing web documents.
 
-<p>Linking, or connecting resources through {{Glossary("Hyperlink","hyperlinks")}}, is a defining concept of the Web, aiding its identity as a collection of connected documents.</p>
+Linking, or connecting resources through {{Glossary("Hyperlink","hyperlinks")}}, is a defining concept of the Web, aiding its identity as a collection of connected documents.
 
-<p>Soon after inventing the Web, Tim Berners-Lee founded the {{Glossary("W3C")}} (World Wide Web Consortium) to standardize and develop the Web further. This consortium consists of core Web interest groups, such as web browser developers, government entities, researchers, and universities. Its mission includes education and outreach.</p>
+Soon after inventing the Web, Tim Berners-Lee founded the {{Glossary("W3C")}} (World Wide Web Consortium) to standardize and develop the Web further. This consortium consists of core Web interest groups, such as web browser developers, government entities, researchers, and universities. Its mission includes education and outreach.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn">Learn the Web</a></li>
- <li><a href="https://learning.mozilla.org/web-literacy">Web literacy map</a> (an inventory of skills needed in Web development)</li>
- <li>{{Interwiki("wikipedia", "World Wide Web")}} on Wikipedia</li>
- <li><a href="https://w3.org">The W3C website</a></li>
-</ul>
+- [Learn the Web](/en-US/docs/Learn)
+- [Web literacy map](https://learning.mozilla.org/web-literacy) (an inventory of skills needed in Web development)
+- {{Interwiki("wikipedia", "World Wide Web")}} on Wikipedia
+- [The W3C website](https://w3.org)

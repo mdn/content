@@ -8,11 +8,9 @@ tags:
   - head
   - metadata
 ---
-<p>The <strong>Head</strong> is the part of an {{glossary("HTML")}} document that contains {{glossary("metadata")}} about that document, such as author, description, and links to {{glossary("CSS")}} or {{glossary("JavaScript")}} files that should be applied to the HTML.</p>
+The **Head** is the part of an {{glossary("HTML")}} document that contains {{glossary("metadata")}} about that document, such as author, description, and links to {{glossary("CSS")}} or {{glossary("JavaScript")}} files that should be applied to the HTML.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{htmlelement("head")}} element reference on MDN</li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">The HTML &lt;head&gt;</a> on the MDN Learning Area</li>
-</ul>
+- {{htmlelement("head")}} element reference on MDN
+- [The HTML \<head>](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML) on the MDN Learning Area

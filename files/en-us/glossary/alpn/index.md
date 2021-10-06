@@ -8,53 +8,20 @@ tags:
   - NeedsContent
   - TLS
 ---
-<p><strong>Application-Layer {{Glossary("Protocol")}} Negotiation</strong> (<strong>ALPN</strong>) is a {{Glossary("TLS")}} extension which indicates what application layer protocol is negotiating the encrypted connection without requiring additional round trips.</p>
+**Application-Layer {{Glossary("Protocol")}} Negotiation** (**ALPN**) is a {{Glossary("TLS")}} extension which indicates what application layer protocol is negotiating the encrypted connection without requiring additional round trips.
 
-<table class="standard-table">
- <caption>Important protocol identifiers:</caption>
- <thead>
-  <tr>
-   <th scope="col">Protocol</th>
-   <th scope="col">Identification sequence</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{Glossary("HTTP")}}/1.1</td>
-   <td><code>0x68 0x74 0x74 0x70 0x2F 0x31 0x2E 0x31</code> ("http/1.1")</td>
-  </tr>
-  <tr>
-   <td>{{Glossary("HTTP 2", "HTTP/2")}}</td>
-   <td><code>0x68 0x32</code> ("h2")</td>
-  </tr>
-  <tr>
-   <td>HTTP/2 over cleartext {{Glossary("TCP")}}</td>
-   <td><code>0x68 0x32 0x63</code> ("h2c")</td>
-  </tr>
- </tbody>
-</table>
+| Protocol                                       | Identification sequence                                |
+| ---------------------------------------------- | ------------------------------------------------------ |
+| {{Glossary("HTTP")}}/1.1               | `0x68 0x74 0x74 0x70 0x2F 0x31 0x2E 0x31` ("http/1.1") |
+| {{Glossary("HTTP 2", "HTTP/2")}}   | `0x68 0x32` ("h2")                                     |
+| HTTP/2 over cleartext {{Glossary("TCP")}} | `0x68 0x32 0x63` ("h2c")                               |
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Notes</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC(7301)}}</td>
-   <td>IETF RFC</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification    | Status   | Notes               |
+| ---------------- | -------- | ------------------- |
+| {{RFC(7301)}} | IETF RFC | Initial definition. |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.iana.org/assignments/tls-extensiontype-values/tls-extensiontype-values.xhtml#alpn-protocol-ids">IANA registered ALPN identifiers</a></li>
-</ul>
+- [IANA registered ALPN identifiers](https://www.iana.org/assignments/tls-extensiontype-values/tls-extensiontype-values.xhtml#alpn-protocol-ids)

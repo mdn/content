@@ -5,10 +5,8 @@ tags:
   - CodingScripting
   - Glossary
 ---
-<p>An <strong>operand</strong> is the part of an instruction representing the data manipulated by the {{glossary("operator")}}. For example, when you add two numbers, the numbers are the operand and "+" is the operator.</p>
+An **operand** is the part of an instruction representing the data manipulated by the {{glossary("operator")}}. For example, when you add two numbers, the numbers are the operand and "+" is the operator.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Operand")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Operand")}} on Wikipedia

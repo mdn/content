@@ -6,10 +6,8 @@ tags:
   - Data structure
   - Glossary
 ---
-<p><strong>Data structure</strong> is a particular way of organizing <em>data</em> so that it can be used efficiently.</p>
+**Data structure** is a particular way of organizing *data* so that it can be used efficiently.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{interwiki("wikipedia", "Data_structure", "Data structure")}} on Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "Data_structure", "Data structure")}} on Wikipedia

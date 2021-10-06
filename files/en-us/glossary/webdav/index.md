@@ -5,30 +5,23 @@ tags:
   - Glossary
   - Infrastructure
 ---
-<p><strong>WebDAV</strong> (<em>Web Distributed Authoring and Versioning</em>) is an {{Glossary("HTTP")}} Extension that lets web developers update their content remotely from a client.</p>
+**WebDAV** (_Web Distributed Authoring and Versioning_) is an {{Glossary("HTTP")}} Extension that lets web developers update their content remotely from a client.
 
-<p>WebDAV is rarely used alone, but two extensions are very common: {{Glossary("CalDAV")}} (remote-access calendar) and {{Glossary("CardDAV")}} (remote-access address book).</p>
+WebDAV is rarely used alone, but two extensions are very common: {{Glossary("CalDAV")}} (remote-access calendar) and {{Glossary("CardDAV")}} (remote-access address book).
 
-<p>WebDAV allows clients to</p>
+WebDAV allows clients to
 
-<ul>
- <li>add, delete, and retrieve webpage metadata (e.g. author or creation date)</li>
- <li>link pages of any media type to related pages</li>
- <li>create sets of documents and retrieve hierarchical list</li>
- <li>copy and move webpages</li>
- <li>lock a document from being edited by more than one person at a time</li>
-</ul>
+- add, delete, and retrieve webpage metadata (e.g. author or creation date)
+- link pages of any media type to related pages
+- create sets of documents and retrieve hierarchical list
+- copy and move webpages
+- lock a document from being edited by more than one person at a time
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "WebDAV")}} on Wikipedia</li>
- <li>Specifications:
-  <ul>
-   <li>{{rfc(2518)}}</li>
-   <li>{{rfc(3253)}}</li>
-   <li>{{rfc(3744)}}</li>
-  </ul>
- </li>
-</ul>
+- {{Interwiki("wikipedia", "WebDAV")}} on Wikipedia
+- Specifications:
 
+  - {{rfc(2518)}}
+  - {{rfc(3253)}}
+  - {{rfc(3744)}}

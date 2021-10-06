@@ -7,10 +7,8 @@ tags:
   - Response
   - forbidden
 ---
-<p>A <dfn>forbidden response header name</dfn> is an <a href="/en-US/docs/Web/HTTP/Headers">HTTP header</a> name (either `<code>Set-Cookie</code>` or `<code>Set-Cookie2</code>`) that cannot be modified programmatically.</p>
+A _forbidden response header name_ is an [HTTP header](/en-US/docs/Web/HTTP/Headers) name (either \``Set-Cookie`\` or \``Set-Cookie2`\`) that cannot be modified programmatically.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://fetch.spec.whatwg.org/#forbidden-response-header-name">Fetch specification: forbidden response-header name</a></li>
-</ul>
+- [Fetch specification: forbidden response-header name](https://fetch.spec.whatwg.org/#forbidden-response-header-name)

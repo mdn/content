@@ -6,12 +6,10 @@ tags:
   - Glossary
   - Graphics
 ---
-<p>A pixel is the smallest building block of a graphical display like a computer screen.</p>
+A pixel is the smallest building block of a graphical display like a computer screen.
 
-<p>Display resolution is expressed in the unit of pixels. eg: A “800 x 600” pixel resolution means that 800 pixels can be displayed in width and 600 pixels in height.</p>
+Display resolution is expressed in the unit of pixels. eg: A “800 x 600” pixel resolution means that 800 pixels can be displayed in width and 600 pixels in height.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://en.wikipedia.org/wiki/Pixel">Pixel </a>on Wikipedia</li>
-</ul>
+- [Pixel ](https://en.wikipedia.org/wiki/Pixel)on Wikipedia

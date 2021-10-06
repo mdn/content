@@ -6,33 +6,37 @@ tags:
   - JQuery
   - JavaScript
 ---
-<p><strong>jQuery</strong> is a {{Glossary("JavaScript")}} {{Glossary("Library")}} that focuses on simplifying {{Glossary("DOM")}} manipulation, {{Glossary("AJAX")}} calls, and {{Glossary("Event")}} handling.</p>
+**jQuery** is a {{Glossary("JavaScript")}} {{Glossary("Library")}} that focuses on simplifying {{Glossary("DOM")}} manipulation, {{Glossary("AJAX")}} calls, and {{Glossary("Event")}} handling.
 
-<p>jQuery uses a format, <code>$(selector).action()</code> to assign an element(s) to an event. To explain it in detail, <code>$(selector)</code> will call jQuery to select <code>selector</code> element(s), and assign it to an event {{Glossary("API")}} called <code>.action()</code>.</p>
+jQuery uses a format, `$(selector).action()` to assign an element(s) to an event. To explain it in detail, `$(selector)` will call jQuery to select `selector` element(s), and assign it to an event {{Glossary("API")}} called `.action()`.
 
-<pre class="brush: js">$(document).ready(function(){
+```js
+$(document).ready(function(){
   alert("Hello World!");
   $("#blackBox").hide();
-});</pre>
+});
+```
 
-<p>The above code carries out the same function as the following code:</p>
+The above code carries out the same function as the following code:
 
-<pre class="brush: js">window.onload = function() {
+```js
+window.onload = function() {
   alert("Hello World!");
   document.getElementById("blackBox").style.display = "none";
-};</pre>
+};
+```
 
-<p>Or:</p>
+Or:
 
-<pre class="brush: js">window.addEventListener("load", () =&gt; {
+```js
+window.addEventListener("load", () => {
   alert("Hello World!");
   document.getElementById("blackBox").style.display = "none";
-});</pre>
+});
+```
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "jQuery")}} on Wikipedia</li>
- <li><a href="https://jquery.com/">jQuery Official Website</a></li>
- <li><a href="https://api.jquery.com/">Official API reference documentation</a><a href="https://api.jquery.com/"> </a></li>
-</ul>
+- {{Interwiki("wikipedia", "jQuery")}} on Wikipedia
+- [jQuery Official Website](https://jquery.com/)
+- [Official API reference documentation](https://api.jquery.com/)[](https://api.jquery.com/)

@@ -7,4 +7,4 @@ tags:
   - HTTP
   - Infrastructure
 ---
-<p>Old term for {{Glossary("CORS-safelisted request header")}}.</p>
+Old term for {{Glossary("CORS-safelisted request header")}}.

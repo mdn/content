@@ -8,52 +8,48 @@ tags:
   - MVC
   - Model View Controller
 ---
-<p><strong>MVC</strong> (Model-View-Controller) is a pattern in software design commonly used to implement user interfaces, data, and controlling logic. It emphasizes a separation between the software’s business logic and display. This "separation of concerns" provides for a better division of labor and improved maintenance. Some other design patterns are based on MVC, such as MVVM (Model-View-Viewmodel), MVP (Model-View-Presenter), and MVW (Model-View-Whatever).</p>
+**MVC** (Model-View-Controller) is a pattern in software design commonly used to implement user interfaces, data, and controlling logic. It emphasizes a separation between the software’s business logic and display. This "separation of concerns" provides for a better division of labor and improved maintenance. Some other design patterns are based on MVC, such as MVVM (Model-View-Viewmodel), MVP (Model-View-Presenter), and MVW (Model-View-Whatever).
 
-<p>The three parts of the MVC software-design pattern can be described as follows:</p>
+The three parts of the MVC software-design pattern can be described as follows:
 
-<ol>
- <li>Model: Manages data and business logic.</li>
- <li>View: Handles layout and display.</li>
- <li>Controller: Routes commands to the model and view parts.</li>
-</ol>
+1.  Model: Manages data and business logic.
+2.  View: Handles layout and display.
+3.  Controller: Routes commands to the model and view parts.
 
-<h2 id="Model_View_Controller_example">Model View Controller example</h2>
+## Model View Controller example
 
-<p>Imagine a simple shopping list app. All we want is a list of the name, quantity and price of each item we need to buy this week. Below we'll describe how we could implement some of this functionality using MVC.</p>
+Imagine a simple shopping list app. All we want is a list of the name, quantity and price of each item we need to buy this week. Below we'll describe how we could implement some of this functionality using MVC.
 
-<p><img alt="Diagram to show the different parts of the mvc architecture." src="model-view-controller-light-blue.png"></p>
+![Diagram to show the different parts of the mvc architecture.](model-view-controller-light-blue.png)
 
-<h3 id="The_Model">The Model</h3>
+### The Model
 
-<p>The model defines what data the app should contain. If the state of this data changes, then the model will usually notify the view (so the display can change as needed) and sometimes the controller (if different logic is needed to control the updated view).</p>
+The model defines what data the app should contain. If the state of this data changes, then the model will usually notify the view (so the display can change as needed) and sometimes the controller (if different logic is needed to control the updated view).
 
-<p>Going back to our shopping list app, the model would specify what data the list items should contain — item, price, etc. — and what list items are already present.</p>
+Going back to our shopping list app, the model would specify what data the list items should contain — item, price, etc. — and what list items are already present.
 
-<h3 id="The_View">The View</h3>
+### The View
 
-<p>The view defines how the app's data should be displayed.</p>
+The view defines how the app's data should be displayed.
 
-<p>In our shopping list app, the view would define how the list is presented to the user, and receive the data to display from the model.</p>
+In our shopping list app, the view would define how the list is presented to the user, and receive the data to display from the model.
 
-<h3 id="The_Controller">The Controller</h3>
+### The Controller
 
-<p>The controller contains logic that updates the model and/or view in response to input from the users of the app.</p>
+The controller contains logic that updates the model and/or view in response to input from the users of the app.
 
-<p>So for example, our shopping list could have input forms and buttons that allow us to add or delete items. These actions require the model to be updated, so the input is sent to the controller, which then manipulates the model as appropriate, which then sends updated data to the view.</p>
+So for example, our shopping list could have input forms and buttons that allow us to add or delete items. These actions require the model to be updated, so the input is sent to the controller, which then manipulates the model as appropriate, which then sends updated data to the view.
 
-<p>You might however also want to just update the view to display the data in a different format, e.g., change the item order to alphabetical, or lowest to highest price. In this case the controller could handle this directly without needing to update the model.</p>
+You might however also want to just update the view to display the data in a different format, e.g., change the item order to alphabetical, or lowest to highest price. In this case the controller could handle this directly without needing to update the model.
 
-<h2 id="MVC_on_the_web">MVC on the web</h2>
+## MVC on the web
 
-<p>As a web developer, this pattern will probably be quite familiar even if you've never consciously used it before. Your data model is probably contained in some kind of database (be it a traditional server-side database like MySQL, or a client-side solution such as <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB [en-US]</a>.) Your app's controlling code is probably written in HTML/JavaScript, and your user interface is probably written using HTML/CSS/whatever else you like. This sounds very much like MVC, but MVC makes these components follow a more rigid pattern.</p>
+As a web developer, this pattern will probably be quite familiar even if you've never consciously used it before. Your data model is probably contained in some kind of database (be it a traditional server-side database like MySQL, or a client-side solution such as [IndexedDB \[en-US\]](/en-US/docs/Web/API/IndexedDB_API).) Your app's controlling code is probably written in HTML/JavaScript, and your user interface is probably written using HTML/CSS/whatever else you like. This sounds very much like MVC, but MVC makes these components follow a more rigid pattern.
 
-<p>In the early days of the Web, MVC architecture was mostly implemented on the server-side, with the client requesting updates via forms or links, and receiving updated views back to display in the browser. However, these days, more of the logic is pushed to the client with the advent of client-side data stores, and XMLHttpRequest allowing partial page updates as required.</p>
+In the early days of the Web, MVC architecture was mostly implemented on the server-side, with the client requesting updates via forms or links, and receiving updated views back to display in the browser. However, these days, more of the logic is pushed to the client with the advent of client-side data stores, and XMLHttpRequest allowing partial page updates as required.
 
-<p>Web frameworks such as <a href="https://en.wikipedia.org/wiki/AngularJS">AngularJS</a> and <a href="https://en.wikipedia.org/wiki/Ember.js" title="Ember.js">Ember.js</a> all implement an MVC architecture, albeit in slightly different ways.</p>
+Web frameworks such as [AngularJS](https://en.wikipedia.org/wiki/AngularJS) and [Ember.js](https://en.wikipedia.org/wiki/Ember.js "Ember.js") all implement an MVC architecture, albeit in slightly different ways.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{interwiki("wikipedia", "Model–view–controller")}} on Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "Model–view–controller")}} on Wikipedia

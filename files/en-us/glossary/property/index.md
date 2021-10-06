@@ -5,6 +5,6 @@ tags:
   - Disambiguation
   - Glossary
 ---
-<p>The term <strong>property</strong> can have several meanings depending on the context. It may refer to:</p>
+The term **property** can have several meanings depending on the context. It may refer to:
 
-<p>{{GlossaryDisambiguation}}</p>
+{{GlossaryDisambiguation}}

@@ -6,27 +6,23 @@ tags:
   - HTTP
   - Security
 ---
-<p><strong>{{Glossary("CSP")}} navigation directives</strong> are used in a {{HTTPHeader("Content-Security-Policy")}} header and govern to which location a user can navigate to or submit a form to, for example.</p>
+**{{Glossary("CSP")}} navigation directives** are used in a {{HTTPHeader("Content-Security-Policy")}} header and govern to which location a user can navigate to or submit a form to, for example.
 
-<p>Navigation directives don't fall back to the {{CSP("default-src")}} directive.</p>
+Navigation directives don't fall back to the {{CSP("default-src")}} directive.
 
-<p>See <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#navigation_directives">Navigation directives</a> for a complete list.</p>
+See [Navigation directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#navigation_directives) for a complete list.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.w3.org/TR/CSP/#directives-navigation">https://www.w3.org/TR/CSP/#directives-navigation</a></li>
- <li>Other kinds of directives:
-  <ul>
-   <li>{{Glossary("Fetch directive")}}</li>
-   <li>{{Glossary("Document directive")}}</li>
-   <li>{{Glossary("Reporting directive")}}</li>
-   <li><code><a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content">block-all-mixed-content</a></code></li>
-   <li><code><a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests">upgrade-insecure-requests</a></code></li>
-   <li><code><a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for">require-sri-for</a></code></li>
-   <li><code><a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types">trusted-types</a></code></li>
-  </ul>
- </li>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
-</ul>
+- <https://www.w3.org/TR/CSP/#directives-navigation>
+- Other kinds of directives:
 
+  - {{Glossary("Fetch directive")}}
+  - {{Glossary("Document directive")}}
+  - {{Glossary("Reporting directive")}}
+  - [`block-all-mixed-content`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content)
+  - [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests)
+  - [`require-sri-for`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for)
+  - [`trusted-types`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types)
+
+- {{HTTPHeader("Content-Security-Policy")}}

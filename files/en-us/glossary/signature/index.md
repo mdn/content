@@ -5,12 +5,10 @@ tags:
   - Disambiguation
   - Glossary
 ---
-<p>The term <strong>signature</strong> can have several meanings depending on the context. It may refer to:</p>
+The term **signature** can have several meanings depending on the context. It may refer to:
 
-<p>{{GlossaryDisambiguation}}</p>
+{{GlossaryDisambiguation}}
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Signature_(disambiguation)", "Signature")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Signature_(disambiguation)", "Signature")}} on Wikipedia

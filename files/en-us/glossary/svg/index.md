@@ -9,19 +9,17 @@ tags:
   - SVG
   - l10n:priority
 ---
-<p><em>Scalable Vector Graphics</em> (<strong>SVG</strong>) is a 2D vector image format based on an {{Glossary("XML")}} syntax.</p>
+_Scalable Vector Graphics_ (**SVG**) is a 2D vector image format based on an {{Glossary("XML")}} syntax.
 
-<p>The {{Glossary("W3C")}} began work on SVG in the late 1990s, but SVG only became popular when {{Glossary("Microsoft Internet Explorer", "Internet Explorer")}} 9 came out with SVG support. All major {{Glossary("browser","browsers")}} now support SVG.</p>
+The {{Glossary("W3C")}} began work on SVG in the late 1990s, but SVG only became popular when {{Glossary("Microsoft Internet Explorer", "Internet Explorer")}} 9 came out with SVG support. All major {{Glossary("browser","browsers")}} now support SVG.
 
-<p>Based on an {{Glossary("XML")}} syntax, SVG can be styled with {{Glossary("CSS")}} and made interactive using {{Glossary("JavaScript")}}. HTML5 now allows direct embedding of SVG {{Glossary("Tag","tags")}} in an {{Glossary("HTML")}} document.</p>
+Based on an {{Glossary("XML")}} syntax, SVG can be styled with {{Glossary("CSS")}} and made interactive using {{Glossary("JavaScript")}}. HTML5 now allows direct embedding of SVG {{Glossary("Tag","tags")}} in an {{Glossary("HTML")}} document.
 
-<p>As a <a href="https://en.wikipedia.org/wiki/Vector_graphics">vector image format</a>, SVG graphics can scale infinitely, making them invaluable in {{Glossary("responsive web design", "responsive design")}}, since you can create interface elements and graphics that scale to any screen size. SVG also provides a useful set of tools, such as clipping, masking, filters, and animations.</p>
+As a [vector image format](https://en.wikipedia.org/wiki/Vector_graphics), SVG graphics can scale infinitely, making them invaluable in {{Glossary("responsive web design", "responsive design")}}, since you can create interface elements and graphics that scale to any screen size. SVG also provides a useful set of tools, such as clipping, masking, filters, and animations.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "SVG")}} on Wikipedia</li>
- <li><a href="https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html">W3.org's SVG Primer</a></li>
- <li><a href="/en-US/docs/Web/SVG">SVG documentation on MDN</a></li>
- <li><a href="https://www.w3.org/TR/SVG/">Latest SVG specification</a></li>
-</ul>
+- {{Interwiki("wikipedia", "SVG")}} on Wikipedia
+- [W3.org's SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html)
+- [SVG documentation on MDN](/en-US/docs/Web/SVG)
+- [Latest SVG specification](https://www.w3.org/TR/SVG/)

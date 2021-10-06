@@ -5,19 +5,19 @@ tags:
   - CodingScripting
   - Glossary
 ---
-<p>A Proxy Auto-Configuration file (<strong>PAC file</strong>) is a file which contains a function, <code>FindProxyForURL()</code>, which is used by the browser to determine whether requests (including HTTP, HTTPS, and FTP) should go directly to the destination or if they need to be forwarded through a web proxy server.</p>
+A Proxy Auto-Configuration file (**PAC file**) is a file which contains a function, `FindProxyForURL()`, which is used by the browser to determine whether requests (including HTTP, HTTPS, and FTP) should go directly to the destination or if they need to be forwarded through a web proxy server.
 
-<pre class="brush: js">function FindProxyForURL(url, host) {
+```js
+function FindProxyForURL(url, host) {
   /* ... */
 }
 
-ret = FindProxyForURL(url, host)</pre>
+ret = FindProxyForURL(url, host)
+```
 
-<p>See <a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file">Proxy Auto-Configuration (PAC) file</a> for details about how these are used and how to create new ones.</p>
+See [Proxy Auto-Configuration (PAC) file](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) for details about how these are used and how to create new ones.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://en.wikipedia.org/wiki/Proxy_auto-config" title="Read about PAC files on Wikipedia">PAC</a> on Wikipedia</li>
- <li><a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file">Proxy Auto-Configuration file</a> on MDN</li>
-</ul>
+- [PAC](https://en.wikipedia.org/wiki/Proxy_auto-config "Read about PAC files on Wikipedia") on Wikipedia
+- [Proxy Auto-Configuration file](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) on MDN

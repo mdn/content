@@ -6,13 +6,11 @@ tags:
   - Glossary
   - Progressive web apps
 ---
-<p>Progressive web apps is a term used to describe the modern state of web app development. This involves taking standard web sites/apps that enjoy all the best parts of the Web — such as discoverability via search engines, being linkable via {{Glossary("URL")}}s, and working across multiple form factors — and supercharging them with modern APIs (such as <a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a> and <a href="/en-US/docs/Web/API/Push_API">Push</a>) and features that confer other benefits more commonly attributed to native apps.</p>
+Progressive web apps is a term used to describe the modern state of web app development. This involves taking standard web sites/apps that enjoy all the best parts of the Web — such as discoverability via search engines, being linkable via {{Glossary("URL")}}s, and working across multiple form factors — and supercharging them with modern APIs (such as [Service Workers](/en-US/docs/Web/API/Service_Worker_API) and [Push](/en-US/docs/Web/API/Push_API)) and features that confer other benefits more commonly attributed to native apps.
 
-<p>These features include being installable, working offline, and being easy to sync with and re-engage the user from the server.</p>
+These features include being installable, working offline, and being easy to sync with and re-engage the user from the server.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>The <a href="/en-US/docs/Web/Progressive_web_apps">App Center</a> on MDN</li>
- <li><a href="https://web.dev/progressive-web-apps/">Progressive web apps</a> on Google Developers</li>
-</ul>
+- The [App Center](/en-US/docs/Web/Progressive_web_apps) on MDN
+- [Progressive web apps](https://web.dev/progressive-web-apps/) on Google Developers

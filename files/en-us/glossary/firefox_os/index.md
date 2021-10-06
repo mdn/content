@@ -9,4 +9,4 @@ tags:
   - Infrastructure
   - Intro
 ---
-<p>Firefox OS is a discontinued open source mobile operating system developed by Mozilla. See {{interwiki("wikipedia", "Firefox OS")}} for more details.</p>
+Firefox OS is a discontinued open source mobile operating system developed by Mozilla. See {{interwiki("wikipedia", "Firefox OS")}} for more details.

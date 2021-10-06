@@ -5,11 +5,9 @@ tags:
   - Accessibility
   - Glossary
 ---
-<p>WAI or Web Accessibility Initiative is an effort by the World Wide Web Consortium (W3C) to improve accessibility for people with various challenges, who may need a nonstandard {{Glossary("browser")}} or devices.</p>
+WAI or Web Accessibility Initiative is an effort by the World Wide Web Consortium (W3C) to improve accessibility for people with various challenges, who may need a nonstandard {{Glossary("browser")}} or devices.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.w3.org/WAI/">WAI website</a></li>
- <li>{{Interwiki("wikipedia", "Web Accessibility Initiative")}} on Wikipedia</li>
-</ul>
+- [WAI website](https://www.w3.org/WAI/)
+- {{Interwiki("wikipedia", "Web Accessibility Initiative")}} on Wikipedia

@@ -6,32 +6,33 @@ tags:
   - HTTP Header
   - WebMechanics
 ---
-<p>An <strong>HTTP header</strong> is a field of an HTTP request or response that passes additional context and metadata about the request or response. For example, a request message can use headers to indicate it's preferred media formats, while a response can use header to indicate the media format of the returned body. Headers are case-insensitive, begin at the start of a line and are immediately followed by a <code>':'</code> and a header-dependent value. The value finishes at the next CRLF or at the end of the message.</p>
+An **HTTP header** is a field of an HTTP request or response that passes additional context and metadata about the request or response. For example, a request message can use headers to indicate it's preferred media formats, while a response can use header to indicate the media format of the returned body. Headers are case-insensitive, begin at the start of a line and are immediately followed by a `':'` and a header-dependent value. The value finishes at the next CRLF or at the end of the message.
 
-<p>The HTTP and Fetch specifications refer to a number of header categories, including:</p>
+The HTTP and Fetch specifications refer to a number of header categories, including:
 
-<ul>
- <li>{{Glossary("Request header")}}: Headers containing more information about the resource to be fetched or about the client itself.</li>
- <li>{{Glossary("Response header")}}: Headers with additional information about the response, like its location or about the server itself (name, version, …).</li>
- <li>{{Glossary("Representation header")}}: metadata about the resource in the message body (e.g. encoding, media type, etc.).</li>
- <li>{{Glossary("Fetch metadata request header")}}: Headers with metadata about the resource in the message body (e.g. encoding, media type, etc.).</li>
-</ul>
+- {{Glossary("Request header")}}: Headers containing more information about the resource to be fetched or about the client itself.
+- {{Glossary("Response header")}}: Headers with additional information about the response, like its location or about the server itself (name, version, …).
+- {{Glossary("Representation header")}}: metadata about the resource in the message body (e.g. encoding, media type, etc.).
+- {{Glossary("Fetch metadata request header")}}: Headers with metadata about the resource in the message body (e.g. encoding, media type, etc.).
 
-<p>A basic request with one header:</p>
+A basic request with one header:
 
-<pre class="brush: plain">GET /example.http HTTP/1.1
+```plain
+GET /example.http HTTP/1.1
 Host: example.com
-</pre>
+```
 
-<p>Redirects have mandatory headers ({{HTTPHeader("Location")}}):</p>
+Redirects have mandatory headers ({{HTTPHeader("Location")}}):
 
-<pre class="brush: plain">302 Found
+```plain
+302 Found
 Location: /NewPage.html
-</pre>
+```
 
-<p>A typical set of headers:</p>
+A typical set of headers:
 
-<pre class="brush: plain">304 Not Modified
+```plain
+304 Not Modified
 Access-Control-Allow-Origin: *
 Age: 2318192
 Cache-Control: public, max-age=315360000
@@ -44,35 +45,25 @@ X-Amz-Cf-Id: TOl0FEm6uI4fgLdrKJx0Vao5hpkKGZULYN2TWD2gAWLtr7vlNjTvZw==
 X-Backend-Server: developer6.webapp.scl3.mozilla.com
 X-Cache: Hit from cloudfront
 X-Cache-Info: cached
-</pre>
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Older versions of the specification referred to:</p>
-  
-  <ul>
-   <li>{{Glossary("General header")}}: Headers applying to both requests and responses but with no relation to the data eventually transmitted in the body.</li>
-   <li>{{Glossary("Entity header")}}: Headers containing more information about the body of the entity, like its content length or its MIME-type (this is a superset of what are now referred to as the Representation metadata headers)</li>
-  </ul>
-  </div>
-  
+> **Note:** Older versions of the specification referred to:
+>
+> - {{Glossary("General header")}}: Headers applying to both requests and responses but with no relation to the data eventually transmitted in the body.
+> - {{Glossary("Entity header")}}: Headers containing more information about the body of the entity, like its content length or its MIME-type (this is a superset of what are now referred to as the Representation metadata headers)
 
-  <h2 id="see_also">See also</h2>
+## See also
 
-  <ul>
-   <li><a href="/en-US/docs/Web/HTTP/Headers">List of all HTTP headers</a></li>
-   <li>Syntax of <a href="https://datatracker.ietf.org/doc/html/rfc7230#section-3.2">headers</a> in the HTTP specification</li>  
-    <li><a href="/en-US/docs/Glossary">Glossary</a>
-      <ul>
-      <li>{{Glossary("HTTP header")}}</li>
-      <li>{{Glossary("Request header")}}</li>
-      <li>{{Glossary("Response header")}}</li>
-      <li>{{Glossary("Representation header")}}</li>
-      <li>{{Glossary("Fetch metadata request header")}}</li>
-      <li>{{Glossary("Forbidden header name")}}</li>
-      <li>{{Glossary("Forbidden response header name")}}</li>
-      <li>{{Glossary("CORS-safelisted request header")}}</li>
-      <li>{{Glossary("CORS-safelisted response header")}}</li>
-      </ul>
-    </li>
-  </ul>
+- [List of all HTTP headers](/en-US/docs/Web/HTTP/Headers)
+- Syntax of [headers](https://datatracker.ietf.org/doc/html/rfc7230#section-3.2) in the HTTP specification
+- [Glossary](/en-US/docs/Glossary)
 
+  - {{Glossary("HTTP header")}}
+  - {{Glossary("Request header")}}
+  - {{Glossary("Response header")}}
+  - {{Glossary("Representation header")}}
+  - {{Glossary("Fetch metadata request header")}}
+  - {{Glossary("Forbidden header name")}}
+  - {{Glossary("Forbidden response header name")}}
+  - {{Glossary("CORS-safelisted request header")}}
+  - {{Glossary("CORS-safelisted response header")}}

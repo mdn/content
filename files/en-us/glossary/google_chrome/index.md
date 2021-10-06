@@ -10,29 +10,23 @@ tags:
   - WebMechanics
   - google chrome
 ---
-<p>Google Chrome is a free Web {{glossary("browser")}} developed by Google. It's based on the <a href="https://www.chromium.org/">Chromium</a> open source project. Some key differences are described on the <a href="https://code.google.com/p/chromium/wiki/ChromiumBrowserVsGoogleChrome">Chromium wiki</a>. Chrome supports its own layout called {{glossary("Blink")}}. Note that the iOS version of Chrome uses that platform's WebView, not Blink.</p>
+Google Chrome is a free Web {{glossary("browser")}} developed by Google. It's based on the [Chromium](https://www.chromium.org/) open source project. Some key differences are described on the [Chromium wiki](https://code.google.com/p/chromium/wiki/ChromiumBrowserVsGoogleChrome). Chrome supports its own layout called {{glossary("Blink")}}. Note that the iOS version of Chrome uses that platform's WebView, not Blink.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{interwiki("wikipedia", "Google Chrome", "Google Chrome")}} on Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "Google Chrome", "Google Chrome")}} on Wikipedia
 
-<h3 id="For_Chrome_Users">For Chrome Users</h3>
+### For Chrome Users
 
-<p>Use one of these links if you're an everyday user.</p>
+Use one of these links if you're an everyday user.
 
-<ul>
- <li><a href="https://play.google.com/store/apps/details?id=com.android.chrome">Android</a></li>
- <li><a href="https://apps.apple.com/us/app/chrome-web-browser-by-google/id535886823">iOS</a></li>
- <li><a href="https://www.google.com/chrome/">Desktop</a></li>
-</ul>
+- [Android](https://play.google.com/store/apps/details?id=com.android.chrome)
+- [iOS](https://apps.apple.com/us/app/chrome-web-browser-by-google/id535886823)
+- [Desktop](https://www.google.com/chrome/)
 
-<h3 id="For_Web_Developers">For Web Developers</h3>
+### For Web Developers
 
-<p>If you want to try the latest Chrome features, install one of the pre-stable builds. Google pushes updates frequently and has designed the distributions to run side-by-side with the stable version. Visit the <a href="https://chromereleases.googleblog.com">Chrome Releases Blog</a> to learn what's new.</p>
+If you want to try the latest Chrome features, install one of the pre-stable builds. Google pushes updates frequently and has designed the distributions to run side-by-side with the stable version. Visit the [Chrome Releases Blog](https://chromereleases.googleblog.com) to learn what's new.
 
-<ul>
- <li><a href="https://play.google.com/store/apps/details?id=com.chrome.dev">Chrome Dev for Android</a></li>
- <li><a href="https://www.google.com/chrome/browser/canary.html">Chrome Canary for desktop</a>. </li>
-</ul>
+- [Chrome Dev for Android](https://play.google.com/store/apps/details?id=com.chrome.dev)
+- [Chrome Canary for desktop](https://www.google.com/chrome/browser/canary.html).

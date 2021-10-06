@@ -5,13 +5,14 @@ tags:
   - Glossary
   - WebMechanics
 ---
-<p>A <strong>response header</strong> is an {{glossary("HTTP header")}} that can be used in an HTTP response and that doesn't relate to the content of the message. Response headers, like {{HTTPHeader("Age")}}, {{HTTPHeader("Location")}} or {{HTTPHeader("Server")}} are used to give a more detailed context of the response.</p>
+A **response header** is an {{glossary("HTTP header")}} that can be used in an HTTP response and that doesn't relate to the content of the message. Response headers, like {{HTTPHeader("Age")}}, {{HTTPHeader("Location")}} or {{HTTPHeader("Server")}} are used to give a more detailed context of the response.
 
-<p>Not all headers appearing in a response are categorized as <em>response headers</em> by the specification. For example, the {{HTTPHeader("Content-Type")}} header is a {{glossary("representation header")}} indicating the original type of data in the body of the response message (prior to the encoding in the {{HTTPHeader("Content-Encoding")}} representation header being applied). However, "conversationally" all headers are usually referred to as response headers in a response message.</p>
+Not all headers appearing in a response are categorized as *response headers* by the specification. For example, the {{HTTPHeader("Content-Type")}} header is a {{glossary("representation header")}} indicating the original type of data in the body of the response message (prior to the encoding in the {{HTTPHeader("Content-Encoding")}} representation header being applied). However, "conversationally" all headers are usually referred to as response headers in a response message.
 
-<p>The following shows a few response and representation headers after a {{HTTPMethod("GET")}} request.</p>
+The following shows a few response and representation headers after a {{HTTPMethod("GET")}} request.
 
-<pre class="brush: plain">200 OK
+```plain
+200 OK
 Access-Control-Allow-Origin: *
 Connection: Keep-Alive
 Content-Encoding: gzip
@@ -27,19 +28,16 @@ Vary: Cookie, Accept-Encoding
 X-Backend-Server: developer2.webapp.scl3.mozilla.com
 X-Cache-Info: not cacheable; meta data too large
 X-kuma-revision: 1085259
-x-frame-options: DENY</pre>
+x-frame-options: DENY
+```
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Headers">List of all HTTP headers</a></li>
- <li><a href="/en-US/docs/Glossary">Glossary</a>
-  <ul>
-   <li>{{Glossary("Representation header")}}</li>
-   <li>{{Glossary("HTTP header")}}</li>
-   <li>{{Glossary("Response header")}}</li>
-   <li>{{Glossary("Fetch metadata response header")}}</li>
-   <li>{{Glossary("Request header")}}</li>
-  </ul>
- </li>
-</ul>
+- [List of all HTTP headers](/en-US/docs/Web/HTTP/Headers)
+- [Glossary](/en-US/docs/Glossary)
+
+  - {{Glossary("Representation header")}}
+  - {{Glossary("HTTP header")}}
+  - {{Glossary("Response header")}}
+  - {{Glossary("Fetch metadata response header")}}
+  - {{Glossary("Request header")}}

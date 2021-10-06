@@ -5,6 +5,6 @@ tags:
   - Disambiguation
   - Glossary
 ---
-<p>The term <strong>block</strong> can have several meanings depending on the context. It may refer to:</p>
+The term **block** can have several meanings depending on the context. It may refer to:
 
-<p>{{GlossaryDisambiguation}}</p>
+{{GlossaryDisambiguation}}

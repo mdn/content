@@ -7,12 +7,10 @@ tags:
   - Reference
   - Web Performance
 ---
-<p><strong>Lazy loading</strong> is a strategy that delays the loading of some assets (e.g., images) until they are needed by the user based on the user's activity and navigation pattern; typically, these assets are only loaded when they are scrolled into view. </p>
+**Lazy loading** is a strategy that delays the loading of some assets (e.g., images) until they are needed by the user based on the user's activity and navigation pattern; typically, these assets are only loaded when they are scrolled into view.
 
-<p>If correctly implemented, this delay in asset loading is seamless to the user experience and might help improve initial load performance, including <a href="/en-US/docs/Glossary/Time_to_interactive">time to interactive</a>, as fewer assets are required for the page to start working.</p>
+If correctly implemented, this delay in asset loading is seamless to the user experience and might help improve initial load performance, including [time to interactive](/en-US/docs/Glossary/Time_to_interactive), as fewer assets are required for the page to start working.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Performance/Lazy_loading">Lazy loading</a></li>
-</ul>
+- [Lazy loading](/en-US/docs/Web/Performance/Lazy_loading)

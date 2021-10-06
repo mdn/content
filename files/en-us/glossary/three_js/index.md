@@ -8,11 +8,9 @@ tags:
   - Programming Language
   - three.js
 ---
-<p>three.js is a {{Glossary("JavaScript")}}-based {{Glossary("WebGL")}} engine that can run GPU-powered games and other graphics-powered apps straight from the {{Glossary("browser")}}. The three.js library provides many features and {{Glossary("API","APIs")}} for drawing 3D scenes in your browser. </p>
+three.js is a {{Glossary("JavaScript")}}-based {{Glossary("WebGL")}} engine that can run GPU-powered games and other graphics-powered apps straight from the {{Glossary("browser")}}. The three.js library provides many features and {{Glossary("API","APIs")}} for drawing 3D scenes in your browser.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Three.js")}} on Wikipedia</li>
- <li><a href="https://threejs.org/">three.js official website</a></li>
-</ul>
+- {{Interwiki("wikipedia", "Three.js")}} on Wikipedia
+- [three.js official website](https://threejs.org/)

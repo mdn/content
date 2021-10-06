@@ -6,12 +6,10 @@ tags:
   - Glossary
   - Operating System
 ---
-<p>Namespace is a context for identifiers, a logical grouping of names used in a program. Within the same context and same scope,  an identifier must uniquely identify an entity.</p>
+Namespace is a context for identifiers, a logical grouping of names used in a program. Within the same context and same scope,  an identifier must uniquely identify an entity.
 
-<p>In an operating system a directory is a namespace. Each file or subdirectory has a unique name, but one file may use the same name multiple times.  </p>
+In an operating system a directory is a namespace. Each file or subdirectory has a unique name, but one file may use the same name multiple times.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Namespace")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Namespace")}} on Wikipedia

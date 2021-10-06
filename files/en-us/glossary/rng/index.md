@@ -5,24 +5,19 @@ tags:
   - CodingScripting
   - Glossary
 ---
-<p>A <strong>PRNG</strong> (pseudorandom number generator) is an algorithm that outputs numbers in a complex, seemingly unpredictable pattern. Truly random numbers (say, from a radioactive source) are utterly unpredictable, whereas all algorithms are predictable, and a PRNG returns the same numbers when passed the same starting parameters or <em>seed</em>.</p>
+A **PRNG** (pseudorandom number generator) is an algorithm that outputs numbers in a complex, seemingly unpredictable pattern. Truly random numbers (say, from a radioactive source) are utterly unpredictable, whereas all algorithms are predictable, and a PRNG returns the same numbers when passed the same starting parameters or *seed*.
 
-<p>PRNGs can be used for a variety of applications, such as games.</p>
+PRNGs can be used for a variety of applications, such as games.
 
-<p>A cryptographically secure PRNG is a PRNG with certain extra properties making it suitable for use in cryptography. These include:</p>
+A cryptographically secure PRNG is a PRNG with certain extra properties making it suitable for use in cryptography. These include:
 
-<ul>
- <li>that it's computationally unfeasible for an attacker (without knowledge of the seed) to predict its output</li>
- <li>that if an attacker can work out its current state, this should not enable the attacker to work out previously emitted numbers.</li>
-</ul>
+- that it's computationally unfeasible for an attacker (without knowledge of the seed) to predict its output
+- that if an attacker can work out its current state, this should not enable the attacker to work out previously emitted numbers.
 
-<p>Most PRNGs are not cryptographically secure.</p>
+Most PRNGs are not cryptographically secure.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Interwiki("wikipedia", "Pseudorandom number generator")}} on Wikipedia</li>
- <li>{{jsxref("Math.random()")}}, a built-in JavaScript PRNG function. Note that this is not a cryptographically secure PRNG.</li>
- <li>{{domxref("Crypto.getRandomValues()")}}: this is intended to provide cryptographically secure numbers.</li>
-</ul>
-
+- {{Interwiki("wikipedia", "Pseudorandom number generator")}} on Wikipedia
+- {{jsxref("Math.random()")}}, a built-in JavaScript PRNG function. Note that this is not a cryptographically secure PRNG.
+- {{domxref("Crypto.getRandomValues()")}}: this is intended to provide cryptographically secure numbers.

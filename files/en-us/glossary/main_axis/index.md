@@ -7,42 +7,36 @@ tags:
   - Main axis
   - flexbox
 ---
-<p>The main axis in {{glossary("flexbox")}} is defined by the direction set by the {{cssxref("flex-direction")}} property. There are four possible values for <code>flex-direction</code>. These are:</p>
+The main axis in {{glossary("flexbox")}} is defined by the direction set by the {{cssxref("flex-direction")}} property. There are four possible values for `flex-direction`. These are:
 
-<ul>
- <li><code>row</code></li>
- <li><code>row-reverse</code></li>
- <li><code>column</code></li>
- <li><code>column-reverse</code></li>
-</ul>
+- `row`
+- `row-reverse`
+- `column`
+- `column-reverse`
 
-<p>Should you choose <code>row</code> or <code>row-reverse</code> then your main axis will run along the row in the inline direction.</p>
+Should you choose `row` or `row-reverse` then your main axis will run along the row in the inline direction.
 
-<p><img alt="In this image the flex-direction is row which forms the main axis" src="basics1.png"></p>
+![In this image the flex-direction is row which forms the main axis](basics1.png)
 
-<p>Choose <code>column</code> or <code>column-reverse</code> and your main axis will run top to bottom of the page in the block direction.</p>
+Choose `column` or `column-reverse` and your main axis will run top to bottom of the page in the block direction.
 
-<p><img alt="" src="basics2.png"></p>
+![](basics2.png)
 
-<p>On the main axis you can control the sizing of flex items by adding any available space to the items themselves, by way of <code>flex</code> properties on the items. Or, you can control the space between and around items by using the <code>justify-content</code> property.</p>
+On the main axis you can control the sizing of flex items by adding any available space to the items themselves, by way of `flex` properties on the items. Or, you can control the space between and around items by using the `justify-content` property.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<h3 id="Property_reference">Property reference</h3>
+### Property reference
 
-<ul>
- <li>{{cssxref("flex-basis")}}</li>
- <li>{{cssxref("flex-direction")}}</li>
- <li>{{cssxref("flex-grow")}}</li>
- <li>{{cssxref("flex-shrink")}}</li>
- <li>{{cssxref("justify-content")}}</li>
- <li>{{cssxref("flex")}}</li>
-</ul>
+- {{cssxref("flex-basis")}}
+- {{cssxref("flex-direction")}}
+- {{cssxref("flex-grow")}}
+- {{cssxref("flex-shrink")}}
+- {{cssxref("justify-content")}}
+- {{cssxref("flex")}}
 
-<h3 id="Further_reading">Further reading</h3>
+### Further reading
 
-<ul>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic Concepts of Flexbox</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning items in a flex container</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Controlling Ratios of flex items along the main axis</a></em></li>
-</ul>
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox Guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
+- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_

@@ -9,17 +9,15 @@ tags:
   - Rest
   - WebMechanics
 ---
-<p><strong>REST</strong> (Representational State Transfer) refers to a group of software architecture design constraints that bring about efficient, reliable and scalable distributed systems.</p>
+**REST** (Representational State Transfer) refers to a group of software architecture design constraints that bring about efficient, reliable and scalable distributed systems.
 
-<p>The basic idea of REST is that a resource, e.g. a document, is transferred via well-recognized, language-agnostic, and reliably standardized client/server interactions. Services are deemed RESTful when they adhere to these constraints.</p>
+The basic idea of REST is that a resource, e.g. a document, is transferred via well-recognized, language-agnostic, and reliably standardized client/server interactions. Services are deemed RESTful when they adhere to these constraints.
 
-<p>HTTP APIs in general are sometimes colloquially referred to as RESTful APIs, RESTful services, or REST services, although they don't necessarily adhere to all REST constraints. Beginners can assume a REST API means an HTTP service that can be called using standard web libraries and tools.</p>
+HTTP APIs in general are sometimes colloquially referred to as RESTful APIs, RESTful services, or REST services, although they don't necessarily adhere to all REST constraints. Beginners can assume a REST API means an HTTP service that can be called using standard web libraries and tools.
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.restapitutorial.com/">restapitutorial.com</a></li>
- <li><a href="https://restcookbook.com/">restcookbook.com</a></li>
- <li>{{Interwiki("wikipedia", "Representational_state_transfer", "REST")}} on Wikipedia</li>
- <li><a href="https://www.service-architecture.com/articles/web-services/representational_state_transfer_rest.html">REST Architecture</a></li>
-</ul>
+- [restapitutorial.com](https://www.restapitutorial.com/)
+- [restcookbook.com](https://restcookbook.com/)
+- {{Interwiki("wikipedia", "Representational_state_transfer", "REST")}} on Wikipedia
+- [REST Architecture](https://www.service-architecture.com/articles/web-services/representational_state_transfer_rest.html)

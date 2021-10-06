@@ -9,13 +9,14 @@ tags:
   - HTML
   - Selector
 ---
-<p>A <strong>CSS selector</strong> is the part of a CSS rule that describes what elements in a document the rule will match. The matching elements will have the rule's specified style applied to them.</p>
+A **CSS selector** is the part of a CSS rule that describes what elements in a document the rule will match. The matching elements will have the rule's specified style applied to them.
 
-<h2>Example</h2>
+## Example
 
-<p>Consider this CSS:</p>
+Consider this CSS:
 
-<pre class="brush: css">p {
+```css
+p {
   color: green;
 }
 
@@ -30,61 +31,56 @@ div.warning {
 #customized {
   font: 16px Lucida Grande, Arial, Helvetica, sans-serif;
 }
-</pre>
+```
 
-<p>The selectors here are <code>"p"</code> (which applies the color green to the text inside any {{HTMLElement("p")}} element), <code>"div.warning"</code> (which makes any {{HTMLElement("div")}} element with the {{Glossary("CSS class", "class")}} <code>"warning"</code> look like a warning box), and <code>"#customized"</code>, which sets the base font of the element with the ID <code>"customized"</code> to 16-pixel tall Lucida Grande or one of a few fallback fonts.</p>
+The selectors here are `"p"` (which applies the color green to the text inside any {{HTMLElement("p")}} element), `"div.warning"` (which makes any {{HTMLElement("div")}} element with the {{Glossary("CSS class", "class")}} `"warning"` look like a warning box), and `"#customized"`, which sets the base font of the element with the ID `"customized"` to 16-pixel tall Lucida Grande or one of a few fallback fonts.
 
-<p>We can then apply this CSS to some HTML, such as:</p>
+We can then apply this CSS to some HTML, such as:
 
-<pre class="brush: html">&lt;p&gt;This is happy text.&lt;/p&gt;
+```html
+<p>This is happy text.</p>
 
-&lt;div class="warning"&gt;
+<div class="warning">
   Be careful! There are wizards present, and they are quick to anger!
-&lt;/div&gt;
+</div>
 
-&lt;div id="customized"&gt;
-  &lt;p&gt;This is happy text.&lt;/p&gt;
+<div id="customized">
+  <p>This is happy text.</p>
 
-  &lt;div class="warning"&gt;
+  <div class="warning">
     Be careful! There are wizards present, and they are quick to anger!
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+  </div>
+</div>
+```
 
-<p>The resulting page content is styled like this:</p>
+The resulting page content is styled like this:
 
-<p>{{EmbedLiveSample("Example", 640, 240)}}</p>
+{{EmbedLiveSample("Example", 640, 240)}}
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">Learn more about CSS selectors</a> in our introduction to CSS.</li>
- <li>Basic selectors
-  <ul>
-   <li><a href="/en-US/docs/Web/CSS/Type_selectors">Type selectors</a> <code>elementname</code></li>
-   <li><a href="/en-US/docs/Web/CSS/Class_selectors">Class selectors</a> <code>.classname</code></li>
-   <li><a href="/en-US/docs/Web/CSS/ID_selectors">ID selectors</a> <code>#idname</code></li>
-   <li><a href="/en-US/docs/Web/CSS/Universal_selectors">Universal selectors</a> <code>* ns|* *|*</code></li>
-   <li><a href="/en-US/docs/Web/CSS/Attribute_selectors">Attribute selectors</a> <code>[attr=value]</code></li>
-   <li><a href="/en-US/docs/Web/CSS/Pseudo-classes">State selectors</a> <code>a:active, a:visited</code></li>
-  </ul>
- </li>
- <li>Grouping selectors
-  <ul>
-   <li><a href="/en-US/docs/Web/CSS/Selector_list">Selector list</a> <code>A, B</code></li>
-  </ul>
- </li>
- <li>Combinators
-  <ul>
-   <li><a href="/en-US/docs/Web/CSS/Adjacent_sibling_combinator">Adjacent sibling selectors</a> <code>A + B</code></li>
-   <li><a href="/en-US/docs/Web/CSS/General_sibling_combinator">General sibling selectors</a> <code>A ~ B</code></li>
-   <li><a href="/en-US/docs/Web/CSS/Child_combinator">Child selectors</a> <code>A &gt; B</code></li>
-   <li><a href="/en-US/docs/Web/CSS/Descendant_combinator">Descendant selectors</a> <code>A B</code></li>
-  </ul>
- </li>
- <li>Pseudo
-  <ul>
-   <li><a href="/en-US/docs/Web/CSS/Pseudo-classes">Pseudo classes</a> <code>:</code></li>
-   <li><a href="/en-US/docs/Web/CSS/Pseudo-elements">Pseudo elements</a> <code>::</code></li>
-  </ul>
- </li>
-</ul>
+- [Learn more about CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) in our introduction to CSS.
+- Basic selectors
+
+  - [Type selectors](/en-US/docs/Web/CSS/Type_selectors) `elementname`
+  - [Class selectors](/en-US/docs/Web/CSS/Class_selectors) `.classname`
+  - [ID selectors](/en-US/docs/Web/CSS/ID_selectors) `#idname`
+  - [Universal selectors](/en-US/docs/Web/CSS/Universal_selectors) `* ns|* *|*`
+  - [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) `[attr=value]`
+  - [State selectors](/en-US/docs/Web/CSS/Pseudo-classes) `a:active, a:visited`
+
+- Grouping selectors
+
+  - [Selector list](/en-US/docs/Web/CSS/Selector_list) `A, B`
+
+- Combinators
+
+  - [Adjacent sibling selectors](/en-US/docs/Web/CSS/Adjacent_sibling_combinator) `A + B`
+  - [General sibling selectors](/en-US/docs/Web/CSS/General_sibling_combinator) `A ~ B`
+  - [Child selectors](/en-US/docs/Web/CSS/Child_combinator) `A > B`
+  - [Descendant selectors](/en-US/docs/Web/CSS/Descendant_combinator) `A B`
+
+- Pseudo
+
+  - [Pseudo classes](/en-US/docs/Web/CSS/Pseudo-classes) `:`
+  - [Pseudo elements](/en-US/docs/Web/CSS/Pseudo-elements) `::`
