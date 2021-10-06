@@ -31,7 +31,7 @@ This creates confusion for keyboard-only users when the focus order differs from
 
 - [tabindex](/en-US/docs/Web/HTML/Global_attributes/tabindex) global HTML attribute
 - [Understanding focus order](https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html)
-- [Don't use tabindex greater than 0](http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html)
+- [Don't use tabindex greater than 0](https://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html)
 
 ## Clickable elements must be focusable and should have interactive semantics
 
