@@ -72,6 +72,12 @@ The output looks like this:
 
 {{ EmbedLiveSample('Examples', '100%', 60) }}
 
+The second parameter can be used to determine whether the class is included or not. This next example would include the 'c' class only if the browser window is over 1000 pixels wide:
+
+```js
+span.classList.toggle("c", window.innerWidth > 1000);
+```
+
 ## Specifications
 
 {{Specifications}}
