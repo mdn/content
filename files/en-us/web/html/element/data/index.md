@@ -1,5 +1,5 @@
 ---
-title: <data>
+title: <data>: The Data element
 slug: Web/HTML/Element/data
 tags:
   - Element
