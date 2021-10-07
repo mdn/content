@@ -19,7 +19,7 @@ select a directory.
 ## Syntax
 
 ```js
-var FileSystemDirectoryHandle = Window.showDirectoryPicker();
+var FileSystemDirectoryHandle = window.showDirectoryPicker();
 ```
 
 ### Parameters

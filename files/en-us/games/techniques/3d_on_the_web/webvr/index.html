@@ -9,20 +9,20 @@ tags:
 ---
 <div>{{GamesSidebar}}</div>
 
-<p class="summary">The concept of virtual reality in itself isn't new, but now we have the technology to have it working as it should be, and a JavaScript API to make use of it in web applications. This article introduced WebVR from the perspective of its use in games.</p>
+<p>The concept of virtual reality in itself isn't new, but now we have the technology to have it working as it should be, and a JavaScript API to make use of it in web applications. This article introduced WebVR from the perspective of its use in games.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: WebVR API is replaced by <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a>. WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.</p>
+<p><strong>Note:</strong> WebVR API is replaced by <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a>. WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.</p>
 </div>
 
 <h2 id="VR_devices">VR devices</h2>
 
 <p>With the popularity of Oculus Rift and a lot of other devices in production coming soon to the market, the future looks bright — we already have sufficient technology to make the VR experience "good enough" for playing games. There are many devices to chose from: desktop ones like Oculus Rift or HTC Vive, through consoles with Playstation VR (which admittedly doesn't support WebVR at this time), to mobile experiences like Gear VR or Google Cardboard.</p>
 
-<p><img alt="" src="hmds.jpg" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="hmds.jpg"></p>
 
 <div class="note">
-<p><strong>Note</strong>: For more information, read our <a href="/en-US/docs/Web/API/WebVR_API/Concepts">WebVR Concepts</a> article.</p>
+<p><strong>Note:</strong> For more information, read our <a href="/en-US/docs/Web/API/WebVR_API/Concepts">WebVR Concepts</a> article.</p>
 </div>
 
 <h2 id="The_WebVR_API">The WebVR API</h2>
@@ -30,7 +30,7 @@ tags:
 <p>The <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> is the central API for capturing information on VR Devices connected to a computer and headset position/orientation/velocity/acceleration information, and converting that into useful data you can use in your games and other applications.</p>
 
 <div class="note">
-<p><strong>Note</strong>: There are of course other APIs useful for creating games, for example <a href="/en-US/docs/Web/API/Gamepad_API">The Gamepad API</a> for control inputs, and the <a href="/en-US/docs/Web/API/Detecting_device_orientation">Device Orientation API</a> for handling display orientation on mobile.</p>
+<p><strong>Note:</strong> There are of course other APIs useful for creating games, for example <a href="/en-US/docs/Web/API/Gamepad_API">The Gamepad API</a> for control inputs, and the <a href="/en-US/docs/Web/API/Detecting_device_orientation">Device Orientation API</a> for handling display orientation on mobile.</p>
 </div>
 
 <h3 id="Browser_support_and_spec_status">Browser support and spec status</h3>
@@ -101,7 +101,7 @@ tags:
 
 <p>The first WebVR experiments and demos used Three.js as it's probably the most popular 3D engine for the web. See the <a href="https://github.com/mrdoob/three.js/blob/master/examples/js/effects/VREffect.js">VREffect</a> and <a href="https://github.com/mrdoob/three.js/blob/master/examples/js/controls/VRControls.js">VRControls</a> functions available on the Three.js github to help you implement and handle WebVR with Three.js.</p>
 
-<p><img alt="" src="sechelt.jpg" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="sechelt.jpg"></p>
 
 <p>Boris Smus has written about the concept of <a href="https://smus.com/responsive-vr/">Responsive WebVR</a>, where a single web game can be played on various devices like laptops without VR hardware, PCs with Oculus Rift, or smartphones inside Google Cardboard and still deliver a unique and valuable experience across all of them. It's like responsive design, but applied to the VR world — write once and run in any VR headset ... or without it. You can check the <a href="https://github.com/borismus/webvr-boilerplate">WebVR Boilerplate</a> sources — it's a good example to start learning WebVR from, and a starting point for any web-based VR experience.</p>
 

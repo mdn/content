@@ -15,11 +15,13 @@ tags:
   - lighting
   - rendering
 ---
-<div>{{GamesSidebar}}</div><p class="summary"><span class="seoSummary">Built for modern browsers, <strong>PlayCanvas</strong> is a fully-featured 3D game engine with resource loading, an entity and component system, advanced graphics manipulation, collision and physics engine (built with <a href="https://github.com/kripken/ammo.js/">ammo.js</a>), audio, and facilities to handle control inputs from various devices (including gamepads).</span></p>
+<div>{{GamesSidebar}}</div>
+
+<p>Built for modern browsers, <strong>PlayCanvas</strong> is a fully-featured 3D game engine with resource loading, an entity and component system, advanced graphics manipulation, collision and physics engine (built with <a href="https://github.com/kripken/ammo.js/">ammo.js</a>), audio, and facilities to handle control inputs from various devices (including gamepads).</p>
 
 <p>That's quite an impressive list of features — let's see some in action.</p>
 
-<p><img alt="PlayCanvas engine repository on GitHub." src="playcanvas-github.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="PlayCanvas engine repository on GitHub." src="playcanvas-github.png"></p>
 
 <p>We will try putting together a simple demo first — a cube rendered on the screen. If you have already worked through our <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js">Building up a basic demo with Three.js</a> article (or you are familiar with other 3D libraries) you'll notice that PlayCanvas works on similar concepts: camera, light and objects.</p>
 
@@ -95,13 +97,13 @@ camera.setPosition(0, 0, 7);
 <p>The code above will create a new <code>Entity</code>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: An Entity is any object used in the scene — it can be an object like a box, cylinder or cone, but it can also be a camera, light or sound source.</p>
+<p><strong>Note:</strong> An Entity is any object used in the scene — it can be an object like a box, cylinder or cone, but it can also be a camera, light or sound source.</p>
 </div>
 
 <p>Then it adds a <code>camera</code> component to it with the light gray <code>clearColor</code> — the color will be visible as the background. Next, the <code>camera</code> object is added to the root of our application and positioned to be 7 units away from the center of the scene on the <code>z</code> axis. This allows us to make some space to visualize the objects that we will create later on.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The distance values (e.g. for the camera z position) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.</p>
+<p><strong>Note:</strong> The distance values (e.g. for the camera z position) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.</p>
 </div>
 
 <p>Try saving the file and loading it in your browser. You should now see a gray window. Congratulations!</p>
@@ -150,14 +152,14 @@ box.model.model.meshInstances[0].material = boxMaterial;
 <p>By diffusing the light on the object we can give it it's own color —we'll choose a nice familiar blue.</p>
 
 <div class="note">
-<p><strong>Note</strong>: In PlayCanvas, the color channel values are provided as floats in the range <code>0-1</code>, instead of integers of <code>0-255</code> as you might be used to using on the Web.</p>
+<p><strong>Note:</strong> In PlayCanvas, the color channel values are provided as floats in the range <code>0-1</code>, instead of integers of <code>0-255</code> as you might be used to using on the Web.</p>
 </div>
 
 <p>After the material is created and its color is set, it has to be updated so our changes are going to be applied. Then all we need to do is set the <code>box</code>'s material to the newly created <code>boxMaterial</code>.</p>
 
 <p>Congratulations, you've created your first object in a 3D environment using PlayCanvas! It was easier than you thought, right? Here's how it should look:</p>
 
-<p><img alt="Blue cube on a gray background rendered with PlayCanvas." src="cube-playcanvas.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="Blue cube on a gray background rendered with PlayCanvas." src="cube-playcanvas.png"></p>
 
 <p>And here's the code we have created so far:</p>
 
@@ -211,7 +213,7 @@ cone.model.model.meshInstances[0].material = coneMaterial;
 
 <p>Here's how it should look right now:</p>
 
-<p><img alt="Shapes: blue cube, yellow cylinder and gray cone on a light gray background rendered with PlayCanvas." src="shapes-playcanvas.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="Shapes: blue cube, yellow cylinder and gray cone on a light gray background rendered with PlayCanvas." src="shapes-playcanvas.png"></p>
 
 <p>This works, but it is a bit boring. In a game something is usually happening — we can see animations and such — so let's try to breathe a little life into those shapes by animating them.</p>
 

@@ -227,7 +227,7 @@ export default class TodoListComponent extends Component {
 
 <p>With a dynamic <code>#each</code> block (which is basically syntactic sugar over the top of JavaScript's <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">forEach()</a></code>) that creates a <code>&lt;Todo /&gt;</code> component for each todo available in the list of todos returned by the service’s <code>all()</code> getter:</p>
 
-<pre class="brush: js" dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">\{{#each this.todos.all as |todo|}}
+<pre class="brush: js">\{{#each this.todos.all as |todo|}}
   &lt;Todo @todo=\{{todo}} /&gt;
 \{{/each}}</pre>
 

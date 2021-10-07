@@ -35,17 +35,18 @@ tags:
 
 <p>Performance optimizations should include:</p>
 
-<dl>
- <dt>Reducing the amount of JavaScript that is needed.</dt>
- <dd>Some features requiring complex JavaScript can be done with a few lines of JavaScript. Requiring a library for other features may improve developer experience, but is all that JavaScript required? Is there a lighter weight or home spun solutions? Some features may not be necessary, and though they may add some bling, is the cost of the feature in terms of performance worth it?</dd>
- <dt>Remove unused code</dt>
- <dd></dd>
- <dt>Split the JavaScript into smaller files</dt>
- <dd>Code-split JavaScript into critical and non-critical parts. Module bundlers like webpack support code-splitting.</dd>
- <dt>Optimize these smaller files</dt>
- <dd><a href="/en-US/docs/Glossary/minification">Minification</a> reduces the number of characters in your file, thereby reducing the number of bytes or weight of your JavaScript. <a href="/en-US/docs/Glossary/GZip_compression">Gzipping</a> compresses the file further, and should be used even if you don't minify. <a href="/en-US/docs/Glossary/brotli_compression">Brotli</a> is similar to Gzip, generally outperforming Gzip's compression.</dd>
- <dd></dd>
-</dl>
+<ul>
+ <li>
+   <p><strong>Reducing the amount of JavaScript that is needed.</strong> Some features requiring complex JavaScript can be done with a few lines of JavaScript. Requiring a library for other features may improve developer experience, but is all that JavaScript required? Is there a lighter weight or home spun solutions? Some features may not be necessary, and though they may add some bling, is the cost of the feature in terms of performance worth it?</p>
+ </li>
+ <li><strong>Remove unused code.</strong></li>
+ <li>
+   <p><strong>Split the JavaScript into smaller files.</strong> Code-split JavaScript into critical and non-critical parts. Module bundlers like webpack support code-splitting.</p>
+ </li>
+ <li>
+   <p><strong>Optimize these smaller files.</strong> <a href="/en-US/docs/Glossary/minification">Minification</a> reduces the number of characters in your file, thereby reducing the number of bytes or weight of your JavaScript. <a href="/en-US/docs/Glossary/GZip_compression">Gzipping</a> compresses the file further, and should be used even if you don't minify. <a href="/en-US/docs/Glossary/brotli_compression">Brotli</a> is similar to Gzip, generally outperforming Gzip's compression.</p>
+ </li>
+</ul>
 
 <h2 id="Render_impact">Render impact</h2>
 

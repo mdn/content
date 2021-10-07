@@ -113,11 +113,11 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <p>The list of actual web safe fonts will change as operating systems evolve, but it's reasonable to consider the following fonts web safe, at least for now (many of them have been popularized thanks to the Microsoft <em><a href="https://en.wikipedia.org/wiki/Core_fonts_for_the_Web">Core fonts for the Web</a></em> initiative in the late 90s and early 2000s):</p>
 
-<table class="standard-table">
+<table class="standard-table no-markdown">
  <thead>
   <tr>
    <th scope="col">Name</th>
-   <th scope="col" style="white-space: nowrap;">Generic type</th>
+   <th scope="col">Generic type</th>
    <th scope="col">Notes</th>
   </tr>
  </thead>
@@ -133,12 +133,12 @@ occasion such as this that he did.&lt;/p&gt;</pre>
    <td>Some OSes have an alternative (possibly older) version of the <em>Courier New</em> font called <em>Courier</em>. It's considered best practice to use both with <em>Courier New</em> as the preferred alternative.</td>
   </tr>
   <tr>
-   <td style="white-space: nowrap;">Georgia</td>
+   <td>Georgia</td>
    <td>serif</td>
    <td></td>
   </tr>
   <tr>
-   <td style="white-space: nowrap;">Times New Roman</td>
+   <td>Times New Roman</td>
    <td>serif</td>
    <td>Some OSes have an alternative (possibly older) version of the <em>Times New Roman</em> font called <em>Times</em>. It's considered best practice to use both with <em>Times New Roman</em> as the preferred alternative.</td>
   </tr>
@@ -169,7 +169,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <p>The five names are defined as follows:</p>
 
-<table class="standard-table">
+<table class="standard-table no-markdown">
  <thead>
   <tr>
    <th scope="col">Term</th>
@@ -181,27 +181,57 @@ occasion such as this that he did.&lt;/p&gt;</pre>
   <tr>
    <td><code>serif</code></td>
    <td>Fonts that have serifs (the flourishes and other small details you see at the ends of the strokes in some typefaces)</td>
-   <td><span style="font-family: serif;">My big red elephant</span></td>
+   <td id="serif-example">
+     <pre class="brush: html hidden">My big red elephant</pre>
+     <pre class="brush: css hidden">body {
+  font-family: serif;
+}</pre>
+{{EmbedLiveSample("serif-example", 100, 60)}}
+   </td>
   </tr>
   <tr>
    <td><code>sans-serif</code></td>
    <td>Fonts that don't have serifs.</td>
-   <td><span style="font-family: sans-serif;">My big red elephant</span></td>
+   <td id="sans-serif-example">
+     <pre class="brush: html hidden">My big red elephant</pre>
+     <pre class="brush: css hidden">body {
+  font-family: sans-serif;
+}</pre>
+{{EmbedLiveSample("sans-serif-example", 100, 60)}}
+   </td>
   </tr>
   <tr>
    <td><code>monospace</code></td>
    <td>Fonts where every character has the same width, typically used in code listings.</td>
-   <td><span style="font-family: monospace;">My big red elephant</span></td>
+   <td id="monospace-example">
+     <pre class="brush: html hidden">My big red elephant</pre>
+     <pre class="brush: css hidden">body {
+  font-family: monospace;
+}</pre>
+{{EmbedLiveSample("monospace-example", 100, 60)}}
+   </td>
   </tr>
   <tr>
    <td><code>cursive</code></td>
    <td>Fonts that are intended to emulate handwriting, with flowing, connected strokes.</td>
-   <td><span style="font-family: cursive;">My big red elephant</span></td>
+   <td id="cursive-example">
+     <pre class="brush: html hidden">My big red elephant</pre>
+     <pre class="brush: css hidden">body {
+  font-family: cursive;
+}</pre>
+{{EmbedLiveSample("cursive-example", 100, 60)}}
+   </td>
   </tr>
   <tr>
    <td><code>fantasy</code></td>
    <td>Fonts that are intended to be decorative.</td>
-   <td><span style="font-family: fantasy;">My big red elephant</span></td>
+   <td id="fantasy-example">
+     <pre class="brush: html hidden">My big red elephant</pre>
+     <pre class="brush: css hidden">body {
+  font-family: fantasy;
+}</pre>
+{{EmbedLiveSample("fantasy-example", 100, 60)}}
+   </td>
   </tr>
  </tbody>
 </table>
@@ -309,13 +339,13 @@ p {
  <li>{{cssxref("font-style")}}: Used to turn italic text on or off. Possible values are as follows (you'll rarely use this, unless you want to turn some italic styling off for some reason):
   <ul>
    <li><code>normal</code>: Sets the text to the normal font (turns existing italics off.)</li>
-   <li><code>italic</code>: Sets the text to use the <em>italic version of the font</em>, if available; if not, it will simulate italics with oblique instead.</li>
-   <li><code>oblique</code>: Sets the text to use a simulated version of an italic font, created by <span style="font-style: oblique;">slanting the normal version</span>.</li>
+   <li><code>italic</code>: Sets the text to use the italic version of the font, if available; if not, it will simulate italics with oblique instead.</li>
+   <li><code>oblique</code>: Sets the text to use a simulated version of an italic font, created by slanting the normal version.</li>
   </ul>
  </li>
  <li>{{cssxref("font-weight")}}: Sets how bold the text is. This has many values available in case you have many font variants available (such as <em>-light</em>, <em>-normal</em>, <em>-bold</em>, <em>-extrabold</em>, <em>-black</em>, etc.), but realistically you'll rarely use any of them except for <code>normal</code> and <code>bold</code>:
   <ul>
-   <li><code>normal</code>, <code>bold</code>: Normal and <strong style="font-weight: bold;">bold</strong> font weight</li>
+   <li><code>normal</code>, <code>bold</code>: Normal and bold font weight</li>
    <li><code>lighter</code>, <code>bolder</code>: Sets the current element's boldness to be one step lighter or heavier than its parent element's boldness.</li>
    <li><code>100</code>–<code>900</code>: Numeric boldness values that provide finer grained control than the above keywords, if needed. </li>
   </ul>
@@ -323,20 +353,20 @@ p {
  <li>{{cssxref("text-transform")}}: Allows you to set your font to be transformed. Values include:
   <ul>
    <li><code>none</code>: Prevents any transformation.</li>
-   <li><code>uppercase</code>: Transforms <span style="text-transform: uppercase;">all text to capitals</span>.</li>
+   <li><code>uppercase</code>: Transforms all text to capitals.</li>
    <li><code>lowercase</code>: Transforms all text to lower case.</li>
-   <li><code>capitalize</code>: Transforms all words to <span style="text-transform: capitalize;">have the first letter capitalized</span>.</li>
-   <li><code>full-width</code>: Transforms all glyphs to be <span style="text-transform: full-width;">written inside a fixed-width square</span>, similar to a monospace font, allowing aligning of, e.g., Latin characters along with Asian language glyphs (like Chinese, Japanese, Korean).</li>
+   <li><code>capitalize</code>: Transforms all words to have the first letter capitalized.</li>
+   <li><code>full-width</code>: Transforms all glyphs to be written inside a fixed-width square, similar to a monospace font, allowing aligning of, e.g., Latin characters along with Asian language glyphs (like Chinese, Japanese, Korean).</li>
   </ul>
  </li>
  <li>{{cssxref("text-decoration")}}: Sets/unsets text decorations on fonts (you'll mainly use this to unset the default underline on links when styling them.) Available values are:
   <ul>
    <li><code>none</code>: Unsets any text decorations already present.</li>
-   <li><code>underline</code>: <u>Underlines the text</u>.</li>
-   <li><code>overline</code>: <span style="text-decoration: overline;">Gives the text an overline</span>.</li>
-   <li><code>line-through</code>: Puts a <s style="text-decoration: line-through;">strikethrough over the text</s>.</li>
+   <li><code>underline</code>: Underlines the text.</li>
+   <li><code>overline</code>: Gives the text an overline.</li>
+   <li><code>line-through</code>: Puts a strikethrough over the text.</li>
   </ul>
-  You should note that {{cssxref("text-decoration")}} can accept multiple values at once if you want to add multiple decorations simultaneously, for example, <span style="text-decoration: underline overline;"><code>text-decoration: underline overline</code></span>. Also note that {{cssxref("text-decoration")}} is a shorthand property for {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, and {{cssxref("text-decoration-color")}}. You can use combinations of these property values to create interesting effects, for example <span style="text-decoration: line-through red wavy;"><code>text-decoration: line-through red wavy</code>.</span></li>
+  You should note that {{cssxref("text-decoration")}} can accept multiple values at once if you want to add multiple decorations simultaneously, for example, <code>text-decoration: underline overline</code>. Also note that {{cssxref("text-decoration")}} is a shorthand property for {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, and {{cssxref("text-decoration-color")}}. You can use combinations of these property values to create interesting effects, for example: <code>text-decoration: line-through red wavy</code>.</li>
 </ul>
 
 <p>Let's look at adding a couple of these properties to our example:</p>
