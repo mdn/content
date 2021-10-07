@@ -1,5 +1,5 @@
 ---
-title: <wbr>
+title: <wbr> The word break element
 slug: Web/HTML/Element/wbr
 tags:
   - Element
