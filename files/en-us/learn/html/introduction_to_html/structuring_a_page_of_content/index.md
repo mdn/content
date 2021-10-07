@@ -12,114 +12,103 @@ tags:
   - Structure
   - semantics
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
 
-<div>{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}</div>
-
-<p>Structuring a page of content ready for laying it out using CSS is a very important skill to master, so in this assessment you'll be tested on your ability to think about how a page might end up looking, and choose appropriate structural semantics to build a layout on top of.</p>
+Structuring a page of content ready for laying it out using CSS is a very important skill to master, so in this assessment you'll be tested on your ability to think about how a page might end up looking, and choose appropriate structural semantics to build a layout on top of.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>Before attempting this assessment you should have already worked through the rest of the course, with a particular emphasis on <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure">Document and website structure</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To test knowledge of web page structures, and how to represent a prospective layout design in markup.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        Before attempting this assessment you should have already worked through
+        the rest of the course, with a particular emphasis on
+        <a
+          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure"
+          >Document and website structure</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        To test knowledge of web page structures, and how to represent a
+        prospective layout design in markup.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Starting_point">Starting point</h2>
+## Starting point
 
-<p>To get this assessment started, you should go and grab the <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/structuring-a-page-of-content-start/assets.zip?raw=true">zip file containing all the starting assets</a>.</p>
+To get this assessment started, you should go and grab the [zip file containing all the starting assets](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/structuring-a-page-of-content-start/assets.zip?raw=true).
 
-<p><br>
- The zip file contains:</p>
+The zip file contains:
 
-<ul>
- <li>The HTML you need to add structural markup to.</li>
- <li>CSS to style your markup.</li>
- <li>Images that are used on the page.</li>
-</ul>
+- The HTML you need to add structural markup to.
+- CSS to style your markup.
+- Images that are used on the page.
 
-<p>Create the example on your local computer, or alternatively use an online tool such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a> to work on the tasks.</p>
+Create the example on your local computer, or alternatively use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 
-<div class="notecard note">
-<p><strong>Note:</strong> If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.</p>
-</div>
+> **Note:** If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
 
-<h2 id="Project_brief">Project brief</h2>
+## Project brief
 
-<p>For this project, your task is to take the content for the homepage of a bird watching website and add structural elements to it so it can have a page layout applied to it. It needs to have:</p>
+For this project, your task is to take the content for the homepage of a bird watching website and add structural elements to it so it can have a page layout applied to it. It needs to have:
 
-<ul>
- <li>A header spanning the full width of the site containing the main title for the page, the site logo, and the navigation menu. The title and logo appear side by side once styling is applied, and the navigation appears below those two items.</li>
- <li>A main content area containing two columns — a main block to contain the welcome text, and a sidebar to contain image thumbnails.</li>
- <li>A footer containing copyright information and credits.</li>
-</ul>
+- A header spanning the full width of the site containing the main title for the page, the site logo, and the navigation menu. The title and logo appear side by side once styling is applied, and the navigation appears below those two items.
+- A main content area containing two columns — a main block to contain the welcome text, and a sidebar to contain image thumbnails.
+- A footer containing copyright information and credits.
 
-<p>You need to add a suitable wrapper for:</p>
+You need to add a suitable wrapper for:
 
-<ul>
- <li>The header</li>
- <li>The navigation menu</li>
- <li>The main content</li>
- <li>The welcome text</li>
- <li>The image sidebar</li>
- <li>The footer</li>
-</ul>
+- The header
+- The navigation menu
+- The main content
+- The welcome text
+- The image sidebar
+- The footer
 
-<p>You should also:</p>
+You should also:
 
-<ul>
- <li>Apply the provided CSS to the page by adding another {{htmlelement("link")}} element just below the existing one provided at the start.</li>
-</ul>
+- Apply the provided CSS to the page by adding another {{htmlelement("link")}} element just below the existing one provided at the start.
 
-<h2 id="Hints_and_tips">Hints and tips</h2>
+## Hints and tips
 
-<ul>
- <li>Use the <a href="https://validator.w3.org/nu/">W3C Nu HTML Checker</a> to catch unintended mistakes in your HTML, CSS, and SVG — mistakes you might have otherwise missed — so that you can fix them.</li>
- <li>You don't need to know any CSS to do this assessment; you just need to put the provided CSS inside an HTML element.</li>
- <li>The provided CSS is designed so that when the correct structural elements are added to the markup, they will appear green in the rendered page.</li>
- <li>If you are getting stuck and can't envisage what elements to put where, draw out a simple block diagram of the page layout, and write on the elements you think should wrap each block. This is extremely helpful.</li>
-</ul>
+- Use the [W3C Nu HTML Checker](https://validator.w3.org/nu/) to catch unintended mistakes in your HTML, CSS, and SVG — mistakes you might have otherwise missed — so that you can fix them.
+- You don't need to know any CSS to do this assessment; you just need to put the provided CSS inside an HTML element.
+- The provided CSS is designed so that when the correct structural elements are added to the markup, they will appear green in the rendered page.
+- If you are getting stuck and can't envisage what elements to put where, draw out a simple block diagram of the page layout, and write on the elements you think should wrap each block. This is extremely helpful.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following screenshot shows an example of what the homepage might look like after being marked up.</p>
+The following screenshot shows an example of what the homepage might look like after being marked up.
 
-<p><img alt='The finished example for the assessment; a simple webpage about birdwatching, including a heading of "Birdwatching", bird photos, and a welcome message' src="example-page.png"></p>
+![The finished example for the assessment; a simple webpage about birdwatching, including a heading of "Birdwatching", bird photos, and a welcome message](example-page.png)
 
-<h2 id="Assessment_or_further_help">Assessment or further help</h2>
+## Assessment or further help
 
-<p>If you would like your work assessed, or are stuck and want to ask for help:</p>
+If you would like your work assessed, or are stuck and want to ask for help:
 
-<ol>
- <li>Put your work into an online shareable editor such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a>.</li>
- <li>Write a post asking for assessment and/or help at the <a class="external external-icon" href="https://discourse.mozilla.org/c/mdn/learn" rel="noopener">MDN Discourse forum Learning category</a>. Your post should include:
-  <ul>
-   <li>A descriptive title such as "Assessment wanted for Structuring a page of content".</li>
-   <li>Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.</li>
-   <li>A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.</li>
-   <li>A link to the actual task or assessment page, so we can find the question you want help with.</li>
-  </ul>
- </li>
-</ol>
+1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
 
-<p>{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}</p>
+    - A descriptive title such as "Assessment wanted for Structuring a page of content".
+    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
+    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
+    - A link to the actual task or assessment page, so we can find the question you want help with.
 
-<h2 id="In_this_module">In this module</h2>
+{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
 
-<ul>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Getting started with HTML</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">What’s in the head? Metadata in HTML</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML text fundamentals</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">Creating hyperlinks</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting">Advanced text formatting</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure">Document and website structure</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">Debugging HTML</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter">Marking up a letter</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content">Structuring a page of content</a></li>
-</ul>
+## In this module
+
+- [Getting started with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
+- [What’s in the head? Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [HTML text fundamentals](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
+- [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
+- [Advanced text formatting](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
+- [Document and website structure](/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
+- [Debugging HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
+- [Marking up a letter](/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
+- [Structuring a page of content](/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

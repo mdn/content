@@ -1,86 +1,76 @@
 ---
 title: 'Test your skills: Loops'
-slug: 'Learn/JavaScript/Building_blocks/Test_your_skills:_Loops'
+slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Loops
 tags:
   - Beginner
   - JavaScript
   - Learn
   - Loops
 ---
-<div>{{learnsidebar}}</div>
+{{learnsidebar}}
 
-<p>This aim of this skill test is to assess whether you've understood our <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">Looping code</a> article.</p>
+This aim of this skill test is to assess whether you've understood our [Looping code](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code) article.
 
-<div class="notecard note">
-<p><strong>Note:</strong> You can try out solutions for the tasks below by downloading the code, putting it in an online tool such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a>, then working on the tasks. We didn't provide live editable versions of these tasks because of the risk of creating infinite loops and crashing the assessment page!<br>
- <br>
- If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.</p>
-</div>
+> **Note:** You can try out solutions for the tasks below by downloading the code, putting it in an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/), then working on the tasks. We didn't provide live editable versions of these tasks because of the risk of creating infinite loops and crashing the assessment page!
+>
+> If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
 
-<h2 id="DOM_manipulation_considered_useful">DOM manipulation: considered useful</h2>
+## DOM manipulation: considered useful
 
-<p>Some of the questions below require you to write some <a href="/en-US/docs/Glossary/DOM">DOM</a> manipulation code to complete them — such as creating new HTML elements, setting their text contents to equal specific string values, and nesting them inside existing elements on the page — all via JavaScript.</p>
+Some of the questions below require you to write some [DOM](/en-US/docs/Glossary/DOM) manipulation code to complete them — such as creating new HTML elements, setting their text contents to equal specific string values, and nesting them inside existing elements on the page — all via JavaScript.
 
-<p>We haven't explicitly taught this yet in the course, but you'll have seen some examples that make use of it, and we'd like you to do some research into what DOM APIs you need to successfully answer the questions. A good starting place is our <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">Manipulating documents</a> tutorial.</p>
+We haven't explicitly taught this yet in the course, but you'll have seen some examples that make use of it, and we'd like you to do some research into what DOM APIs you need to successfully answer the questions. A good starting place is our [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents) tutorial.
 
-<h2 id="Loops_1">Loops 1</h2>
+## Loops 1
 
-<p>In our first looping task we want you start by creating a simple loop that goes through all the items in the provided <code>myArray</code> and prints them out on the screen inside list items (i.e., <code><a href="/en-US/docs/Web/HTML/Element/li">&lt;li&gt;</a></code> elements), which are appended to the provided <code>list</code>.</p>
+In our first looping task we want you start by creating a simple loop that goes through all the items in the provided `myArray` and prints them out on the screen inside list items (i.e., [`<li>`](/en-US/docs/Web/HTML/Element/li) elements), which are appended to the provided `list`.
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/loops/loops1-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/loops/loops1-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Loops_2">Loops 2</h2>
+## Loops 2
 
-<p>In this next task, we want you to write a simple program that, given a name, searches an array of <a href="/en-US/docs/Glossary/Object">objects</a> containing names and phone numbers (<code>phonebook</code>) and, if it finds the name, outputs the name and phone number into the paragraph (<code>para</code>) and then exits the loop before it has run its course. </p>
+In this next task, we want you to write a simple program that, given a name, searches an array of [objects](/en-US/docs/Glossary/Object) containing names and phone numbers (`phonebook`) and, if it finds the name, outputs the name and phone number into the paragraph (`para`) and then exits the loop before it has run its course.
 
-<p>If you haven't read about objects yet, don't worry! For now, all you need to know is how to access a member-value pair. You can read up on objects in the <a href="/en-US/docs/Learn/JavaScript/Objects/Basics">JavaScript object basics</a> tutorial.</p>
+If you haven't read about objects yet, don't worry! For now, all you need to know is how to access a member-value pair. You can read up on objects in the [JavaScript object basics](/en-US/docs/Learn/JavaScript/Objects/Basics) tutorial.
 
-<p>You are given three variables to begin with:</p>
+You are given three variables to begin with:
 
-<ul>
- <li><code>i</code> — starts off with a value of 0; intended to be used as an iterator.</li>
- <li><code>name</code> — contains a name to search for</li>
- <li><code>para</code> — contains a reference to a paragraph, which will be used to report the results.</li>
-</ul>
+- `i` — starts off with a value of 0; intended to be used as an iterator.
+- `name` — contains a name to search for
+- `para` — contains a reference to a paragraph, which will be used to report the results.
 
-<p>You should use a type of loop that you've not used in the previous task.</p>
+You should use a type of loop that you've not used in the previous task.
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/loops/loops2-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/loops/loops2-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Loops_3">Loops 3</h2>
+## Loops 3
 
-<p>In this final task, you are provided with the following:</p>
+In this final task, you are provided with the following:
 
-<ul>
- <li><code>i</code> — starts off with a value of 500; intended to be used as an iterator.</li>
- <li><code>para</code> — contains a reference to a paragraph, which will be used to report the results.</li>
- <li><code>isPrime()</code> — a function that, when passed a number, returns <code>true</code> if the number is a prime number, and <code>false</code> if not.</li>
-</ul>
+- `i` — starts off with a value of 500; intended to be used as an iterator.
+- `para` — contains a reference to a paragraph, which will be used to report the results.
+- `isPrime()` — a function that, when passed a number, returns `true` if the number is a prime number, and `false` if not.
 
-<p>You need to use a loop to go through the numbers 2 to 500 backwards (1 is not counted as a prime number), and run the provided <code>isPrime()</code> function on them. For each number that isn't a prime number, continue on to the next loop iteration. For each one that is a prime number, add it to the paragraph's <code>textContent</code> along with some kind of separator.</p>
+You need to use a loop to go through the numbers 2 to 500 backwards (1 is not counted as a prime number), and run the provided `isPrime()` function on them. For each number that isn't a prime number, continue on to the next loop iteration. For each one that is a prime number, add it to the paragraph's `textContent` along with some kind of separator.
 
-<p>You should use a type of loop that you've not used in the previous two tasks.</p>
+You should use a type of loop that you've not used in the previous two tasks.
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/loops/loops3-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/loops/loops3-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Assessment_or_further_help">Assessment or further help</h2>
+## Assessment or further help
 
-<p>If you would like your work assessed, or are stuck and want to ask for help:</p>
+If you would like your work assessed, or are stuck and want to ask for help:
 
-<ol>
- <li>Put your work into an online shareable editor such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a>. You can write the code yourself, or use the starting point files linked to in the above sections.</li>
- <li>Write a post asking for assessment and/or help at the <a href="https://discourse.mozilla.org/c/mdn/learn">MDN Discourse forum Learning category</a>. Your post should include:
-  <ul>
-   <li>A descriptive title such as "Assessment wanted for Loops 1 skill test".</li>
-   <li>Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.</li>
-   <li>A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.</li>
-   <li>A link to the actual task or assessment page, so we can find the question you want help with.</li>
-  </ul>
- </li>
-</ol>
+1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
+2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+
+    - A descriptive title such as "Assessment wanted for Loops 1 skill test".
+    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
+    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
+    - A link to the actual task or assessment page, so we can find the question you want help with.

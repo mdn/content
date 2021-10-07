@@ -1,6 +1,6 @@
 ---
 title: 'Test your skills: Advanced HTML text'
-slug: 'Learn/HTML/Introduction_to_HTML/Test_your_skills:_Advanced_HTML_text'
+slug: Learn/HTML/Introduction_to_HTML/Test_your_skills:_Advanced_HTML_text
 tags:
   - Beginner
   - HTML
@@ -8,61 +8,53 @@ tags:
   - advanced text
   - test your skills
 ---
-<div>{{learnsidebar}}</div>
+{{learnsidebar}}
 
-<p>The aim of this skill test is to assess whether you've understood our <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting">Advanced text formatting</a> article.</p>
+The aim of this skill test is to assess whether you've understood our [Advanced text formatting](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting) article.
 
-<div class="notecard note">
-<p><strong>Note:</strong> You can try out solutions in the interactive editors below; however, it may be helpful to download the code and use an online tool such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a> to work on the tasks.<br>
- <br>
- If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.</p>
-</div>
+> **Note:** You can try out solutions in the interactive editors below; however, it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+>
+> If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
 
-<h2 id="Advanced_HTML_text_1">Advanced HTML text 1</h2>
+## Advanced HTML text 1
 
-<p>In this task we want you to turn the provided animals and their definitions into a description list.</p>
+In this task we want you to turn the provided animals and their definitions into a description list.
 
-<p>Try updating the live code below to recreate the finished example:</p>
+Try updating the live code below to recreate the finished example:
 
-<p>{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text1.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text1.html", '100%', 700)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/advanced-text/advanced-text1-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/advanced-text/advanced-text1-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Advanced_HTML_text_2">Advanced HTML text 2</h2>
+## Advanced HTML text 2
 
-<p>In this task we want you to add some semantics to the provided HTML as follows:</p>
+In this task we want you to add some semantics to the provided HTML as follows:
 
-<ul>
- <li>Turn the second paragraph into a block-level quote, and semantically indicate that the quote is taken from <a href="/en-US/docs/Learn/Accessibility">Accessibility</a>.</li>
- <li>Semantically mark up "HTML" and "CSS" as acronyms, providing expansions as tooltips.</li>
- <li>Semantically associate machine-readable dates with the dates in the text.</li>
- <li>Use subscript and superscript to provide correct semantics for the chemical formulae and dates, and make them display correctly.</li>
-</ul>
+- Turn the second paragraph into a block-level quote, and semantically indicate that the quote is taken from [Accessibility](/en-US/docs/Learn/Accessibility).
+- Semantically mark up "HTML" and "CSS" as acronyms, providing expansions as tooltips.
+- Semantically associate machine-readable dates with the dates in the text.
+- Use subscript and superscript to provide correct semantics for the chemical formulae and dates, and make them display correctly.
 
-<p>Try updating the live code below to recreate the finished example:</p>
+Try updating the live code below to recreate the finished example:
 
-<p>{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text2.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text2.html", '100%', 700)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/advanced-text/advanced-text2-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/advanced-text/advanced-text2-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Assessment_or_further_help">Assessment or further help</h2>
+## Assessment or further help
 
-<p>You can practice these examples in the Interactive Editors above.</p>
+You can practice these examples in the Interactive Editors above.
 
-<p>If you would like your work assessed, or are stuck and want to ask for help:</p>
+If you would like your work assessed, or are stuck and want to ask for help:
 
-<ol>
- <li>Put your work into an online shareable editor such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a>. You can write the code yourself, or use the starting point files linked to in the above sections.</li>
- <li>Write a post asking for assessment and/or help at the <a class="external external-icon" href="https://discourse.mozilla.org/c/mdn/learn" rel="noopener">MDN Discourse forum Learning category</a>. Your post should include:
-  <ul>
-   <li>A descriptive title such as "Assessment wanted for Advanced HTML text 1 skill test".</li>
-   <li>Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.</li>
-   <li>A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.</li>
-   <li>A link to the actual task or assessment page, so we can find the question you want help with.</li>
-  </ul>
- </li>
-</ol>
+1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
+2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+
+    - A descriptive title such as "Assessment wanted for Advanced HTML text 1 skill test".
+    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
+    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
+    - A link to the actual task or assessment page, so we can find the question you want help with.

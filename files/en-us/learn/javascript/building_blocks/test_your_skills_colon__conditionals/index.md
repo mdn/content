@@ -1,127 +1,111 @@
 ---
 title: 'Test your skills: Conditionals'
-slug: 'Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals'
+slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals
 tags:
   - Beginner
   - Conditionals
   - JavaScript
   - Learn
 ---
-<div>{{learnsidebar}}</div>
+{{learnsidebar}}
 
-<p>The aim of this skill test is to assess whether you've understood our <a href="/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">Making decisions in your code — conditionals</a> article.</p>
+The aim of this skill test is to assess whether you've understood our [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals) article.
 
-<div class="notecard note">
-<p><strong>Note:</strong> You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a> to work on the tasks.<br>
- <br>
- If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.</p>
-</div>
+> **Note:** You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+>
+> If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
 
-<div class="notecard note">
-<p><strong>Note:</strong> In the examples below, if there is an error in your code it will be outputted into the results panel on the page, to help you try to figure out the answer (or into the browser's JavaScript console, in the case of the downloadable version).</p>
-</div>
+> **Note:** In the examples below, if there is an error in your code it will be outputted into the results panel on the page, to help you try to figure out the answer (or into the browser's JavaScript console, in the case of the downloadable version).
 
-<h2 id="Conditionals_1">Conditionals 1</h2>
+## Conditionals 1
 
-<p>In this task you are provided with two variables:</p>
+In this task you are provided with two variables:
 
-<ul>
- <li><code>season</code> — contains a string that says what the current season is.</li>
- <li><code>response</code> — begins uninitialized, but is later used to store a response that will be printed to the output panel.</li>
-</ul>
+- `season` — contains a string that says what the current season is.
+- `response` — begins uninitialized, but is later used to store a response that will be printed to the output panel.
 
-<p>We want you to create a conditional that checks whether <code>season</code> contains the string "summer", and if so assigns a string to <code>response</code> that gives the user an appropriate message about the season. If not, it should assign a generic string to <code>response</code> that tells the user we don't know what season it is.</p>
+We want you to create a conditional that checks whether `season` contains the string "summer", and if so assigns a string to `response` that gives the user an appropriate message about the season. If not, it should assign a generic string to `response` that tells the user we don't know what season it is.
 
-<p>To finish off, you should then add another test that checks whether <code>season</code> contains the string "winter", and again assigns an appropriate string to <code>response</code>.</p>
+To finish off, you should then add another test that checks whether `season` contains the string "winter", and again assigns an appropriate string to `response`.
 
-<p>Try updating the live code below to recreate the finished example:</p>
+Try updating the live code below to recreate the finished example:
 
-<p>{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/conditionals/conditionals1.html", '100%', 400)}}</p>
+{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/conditionals/conditionals1.html", '100%', 400)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/conditionals/conditionals1-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/conditionals/conditionals1-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Conditionals_2">Conditionals 2</h2>
+## Conditionals 2
 
-<p>For this task you are given three variables:</p>
+For this task you are given three variables:
 
-<ul>
- <li><code>machineActive</code> — contains an indicator of whether the answer machine is switched on or not (<code>true</code>/<code>false</code>)</li>
- <li><code>score</code> — Contains your score in an imaginary game. This score is fed into the answer machine, which provides a response to indicate how well you did.</li>
- <li><code>response</code> — begins uninitialized, but is later used to store a response that will be printed to the output panel.</li>
-</ul>
+- `machineActive` — contains an indicator of whether the answer machine is switched on or not (`true`/`false`)
+- `score` — Contains your score in an imaginary game. This score is fed into the answer machine, which provides a response to indicate how well you did.
+- `response` — begins uninitialized, but is later used to store a response that will be printed to the output panel.
 
-<p>You need to create an <code>if...else</code> structure that checks whether the machine is switched on and puts a message into the <code>response</code> variable if it isn't, telling the user to switch the machine on.</p>
+You need to create an `if...else` structure that checks whether the machine is switched on and puts a message into the `response` variable if it isn't, telling the user to switch the machine on.
 
-<p>Inside the first, you need to nest an <code>if...else if...else</code> that puts appropriate messages into the <code>response</code> variable depending on what the value of score is — if the machine is turned on. The different conditional tests (and resulting responses) are as follows:</p>
+Inside the first, you need to nest an `if...else if...else` that puts appropriate messages into the `response` variable depending on what the value of score is — if the machine is turned on. The different conditional tests (and resulting responses) are as follows:
 
-<ul>
- <li>Score of less than 0 or more than 100 — "This is not possible, an error has occurred."</li>
- <li>Score of 0 to 19 — "That was a terrible score — total fail!"</li>
- <li>Score of 20 to 39 — "You know some things, but it\'s a pretty bad score. Needs improvement."</li>
- <li>Score of 40 to 69 — "You did a passable job, not bad!"</li>
- <li>Score of 70 to 89 — "That\'s a great score, you really know your stuff."</li>
- <li>Score of 90 to 100 — "What an amazing score! Did you cheat? Are you for real?"</li>
-</ul>
+- Score of less than 0 or more than 100 — "This is not possible, an error has occurred."
+- Score of 0 to 19 — "That was a terrible score — total fail!"
+- Score of 20 to 39 — "You know some things, but it\\'s a pretty bad score. Needs improvement."
+- Score of 40 to 69 — "You did a passable job, not bad!"
+- Score of 70 to 89 — "That\\'s a great score, you really know your stuff."
+- Score of 90 to 100 — "What an amazing score! Did you cheat? Are you for real?"
 
-<p>Try updating the live code below to recreate the finished example. After you've entered your code, try changing <code>machineActive</code> to <code>true</code>, to see if it works.</p>
+Try updating the live code below to recreate the finished example. After you've entered your code, try changing `machineActive` to `true`, to see if it works.
 
-<p>{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/conditionals/conditionals2.html", '100%', 400)}}</p>
+{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/conditionals/conditionals2.html", '100%', 400)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/conditionals/conditionals2-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/conditionals/conditionals2-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Conditionals_3">Conditionals 3</h2>
+## Conditionals 3
 
-<p>In this task you need to take the code you wrote for the second task, and rewrite the inner <code>if...else if...else</code> to use a <code>switch</code> statement instead.</p>
+In this task you need to take the code you wrote for the second task, and rewrite the inner `if...else if...else` to use a `switch` statement instead.
 
-<p>Try updating the live code below to recreate the finished example:</p>
+Try updating the live code below to recreate the finished example:
 
-<p>{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/conditionals/conditionals3.html", '100%', 400)}}</p>
+{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/conditionals/conditionals3.html", '100%', 400)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/conditionals/conditionals3-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/conditionals/conditionals3-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Conditionals_4">Conditionals 4</h2>
+## Conditionals 4
 
-<p>For the final task you are given four variables:</p>
+For the final task you are given four variables:
 
-<ul>
- <li><code>machineActive</code> — contains an indicator of whether the login machine is switched on or not (<code>true</code>/<code>false</code>).</li>
- <li><code>pwd</code> — Contains the user's login password.</li>
- <li><code>machineResult</code> — begins uninitialized, but is later used to store a response that will be printed to the output panel, letting the user know whether the machine is switched on.</li>
- <li><code>pwdResult</code> — begins uninitialized, but is later used to store a response that will be printed to the output panel, letting the user know whether their login attempt was successful.</li>
-</ul>
+- `machineActive` — contains an indicator of whether the login machine is switched on or not (`true`/`false`).
+- `pwd` — Contains the user's login password.
+- `machineResult` — begins uninitialized, but is later used to store a response that will be printed to the output panel, letting the user know whether the machine is switched on.
+- `pwdResult` — begins uninitialized, but is later used to store a response that will be printed to the output panel, letting the user know whether their login attempt was successful.
 
-<p>We'd like you to create an <code>if...else</code> structure that checks whether the machine is switched on and puts a message into the <code>machineResult</code> variable telling the user whether it is on or off.</p>
+We'd like you to create an `if...else` structure that checks whether the machine is switched on and puts a message into the `machineResult` variable telling the user whether it is on or off.
 
-<p>If the machine is on, we also want a second conditional to run that checks whether the <code>pwd</code> is equal to <code>cheese</code>. If so, it should assign a string to <code>pwdResult</code> telling the user they logged in successfully. If not, it should assign a different string to <code>pwdResult</code> telling the user their login attempt was not successful. We'd like you to do this in a single line, using something that isn't an <code>if ... else</code> structure.</p>
+If the machine is on, we also want a second conditional to run that checks whether the `pwd` is equal to `cheese`. If so, it should assign a string to `pwdResult` telling the user they logged in successfully. If not, it should assign a different string to `pwdResult` telling the user their login attempt was not successful. We'd like you to do this in a single line, using something that isn't an `if ... else` structure.
 
-<p>Try updating the live code below to recreate the finished example:</p>
+Try updating the live code below to recreate the finished example:
 
-<p>{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/conditionals/conditionals4.html", '100%', 400)}}</p>
+{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/conditionals/conditionals4.html", '100%', 400)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/conditionals/conditionals4-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/conditionals/conditionals4-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Assessment_or_further_help">Assessment or further help</h2>
+## Assessment or further help
 
-<p>You can practice these examples in the Interactive Editors above.</p>
+You can practice these examples in the Interactive Editors above.
 
-<p>If you would like your work assessed, or are stuck and want to ask for help:</p>
+If you would like your work assessed, or are stuck and want to ask for help:
 
-<ol>
- <li>Put your work into an online shareable editor such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a>. You can write the code yourself, or use the starting point files linked to in the above sections.</li>
- <li>Write a post asking for assessment and/or help at the <a href="https://discourse.mozilla.org/c/mdn/learn">MDN Discourse forum Learning category</a>. Your post should include:
-  <ul>
-   <li>A descriptive title such as "Assessment wanted for Conditionals 1 skill test".</li>
-   <li>Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.</li>
-   <li>A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.</li>
-   <li>A link to the actual task or assessment page, so we can find the question you want help with.</li>
-  </ul>
- </li>
-</ol>
+1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
+2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+
+    - A descriptive title such as "Assessment wanted for Conditionals 1 skill test".
+    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
+    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
+    - A link to the actual task or assessment page, so we can find the question you want help with.

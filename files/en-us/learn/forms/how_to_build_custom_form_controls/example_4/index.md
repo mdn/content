@@ -9,36 +9,39 @@ tags:
   - HTML
   - Web
 ---
-<p>This is the fourth example that explain <a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">how to build custom form widgets</a>.</p>
+This is the fourth example that explain [how to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls).
 
-<h2 id="Change_states">Change states</h2>
+## Change states
 
-<h3 id="HTML_Content">HTML Content</h3>
+### HTML Content
 
-<pre class="brush: html">&lt;form class="no-widget"&gt;
-  &lt;select name="myFruit"&gt;
-    &lt;option&gt;Cherry&lt;/option&gt;
-    &lt;option&gt;Lemon&lt;/option&gt;
-    &lt;option&gt;Banana&lt;/option&gt;
-    &lt;option&gt;Strawberry&lt;/option&gt;
-    &lt;option&gt;Apple&lt;/option&gt;
-  &lt;/select&gt;
+```html
+<form class="no-widget">
+  <select name="myFruit">
+    <option>Cherry</option>
+    <option>Lemon</option>
+    <option>Banana</option>
+    <option>Strawberry</option>
+    <option>Apple</option>
+  </select>
 
-  &lt;div class="select"&gt;
-    &lt;span class="value"&gt;Cherry&lt;/span&gt;
-    &lt;ul class="optList hidden"&gt;
-      &lt;li class="option"&gt;Cherry&lt;/li&gt;
-      &lt;li class="option"&gt;Lemon&lt;/li&gt;
-      &lt;li class="option"&gt;Banana&lt;/li&gt;
-      &lt;li class="option"&gt;Strawberry&lt;/li&gt;
-      &lt;li class="option"&gt;Apple&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+  <div class="select">
+    <span class="value">Cherry</span>
+    <ul class="optList hidden">
+      <li class="option">Cherry</li>
+      <li class="option">Lemon</li>
+      <li class="option">Banana</li>
+      <li class="option">Strawberry</li>
+      <li class="option">Apple</li>
+    </ul>
+  </div>
+</form>
+```
 
-<h3 id="CSS_Content">CSS Content</h3>
+### CSS Content
 
-<pre class="brush: css">.widget select,
+```css
+.widget select,
 .no-widget .select {
   position : absolute;
   left     : -5000em;
@@ -159,11 +162,13 @@ tags:
 .select .highlight {
   background: #000;
   color: #FFFFFF;
-}</pre>
+}
+```
 
-<h3 id="JavaScript_Content">JavaScript Content</h3>
+### JavaScript Content
 
-<pre class="brush: js">// ------- //
+```js
+// ------- //
 // HELPERS //
 // ------- //
 
@@ -227,11 +232,11 @@ function getIndex(select) {
 // Event binding //
 // ------------- //
 
-window.addEventListener(&quot;load&quot;, function () {
+window.addEventListener("load", function () {
   var form = document.querySelector('form');
 
-  form.classList.remove(&quot;no-widget&quot;);
-  form.classList.add(&quot;widget&quot;);
+  form.classList.remove("no-widget");
+  form.classList.add("widget");
 });
 
 window.addEventListener('load', function () {
@@ -283,14 +288,15 @@ window.addEventListener('load', function () {
           index  = getIndex(select);
 
       if (event.keyCode === 27) { deactivateSelect(select); }
-      if (event.keyCode === 40 &amp;&amp; index &lt; length - 1) { index++; }
-      if (event.keyCode === 38 &amp;&amp; index &gt; 0) { index--; }
+      if (event.keyCode === 40 && index < length - 1) { index++; }
+      if (event.keyCode === 38 && index > 0) { index--; }
 
       updateValue(select, index);
     });
   });
-});</pre>
+});
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Change_states') }}</p>
+{{ EmbedLiveSample('Change_states') }}

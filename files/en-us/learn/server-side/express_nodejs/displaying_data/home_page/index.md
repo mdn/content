@@ -11,52 +11,59 @@ tags:
   - part 5
   - server-side
 ---
-<p>The first page we'll create will be the website home page, which is accessible from either the site (<code>'/'</code>) or catalog (<code>catalog/</code>) root. This will display some static text describing the site, along with dynamically calculated "counts" of different record types in the database.</p>
+The first page we'll create will be the website home page, which is accessible from either the site (`'/'`) or catalog (`catalog/`) root. This will display some static text describing the site, along with dynamically calculated "counts" of different record types in the database.
 
-<p>We've already created a route for the home page. In order to complete the page we need to update our controller function to fetch "counts" of records from the database, and create a view (template) that we can use to render the page.</p>
+We've already created a route for the home page. In order to complete the page we need to update our controller function to fetch "counts" of records from the database, and create a view (template) that we can use to render the page.
 
-<h2 id="Route">Route</h2>
+## Route
 
-<p>We created our index page routes in a <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes">previous tutorial.</a> As a reminder, all the route functions are defined in <strong>/routes/catalog.js</strong>:</p>
+We created our index page routes in a [previous tutorial.](/en-US/docs/Learn/Server-side/Express_Nodejs/routes) As a reminder, all the route functions are defined in **/routes/catalog.js**:
 
-<pre class="brush: js">// GET catalog home page.
-router.get('/', book_controller.index);  //This actually maps to /catalog/ because we import the route with a /catalog prefix</pre>
+```js
+// GET catalog home page.
+router.get('/', book_controller.index);  //This actually maps to /catalog/ because we import the route with a /catalog prefix
+```
 
-<p>Where the callback function parameter (<code>book_controller.index</code>) is defined in <strong>/controllers/bookController.js</strong>:</p>
+Where the callback function parameter (`book_controller.index`) is defined in **/controllers/bookController.js**:
 
-<pre class="brush: js">exports.index = function(req, res, next) {
+```js
+exports.index = function(req, res, next) {
     res.send('NOT IMPLEMENTED: Site Home Page');
-}</pre>
+}
+```
 
-<p>It is this controller function that we extend to get information from our models and then render it using a template (view).</p>
+It is this controller function that we extend to get information from our models and then render it using a template (view).
 
-<h2 id="Controller">Controller</h2>
+## Controller
 
-<p>The index controller function needs to fetch information about how many <code>Book</code>, <code>BookInstance</code>, available <code>BookInstance</code>, <code>Author</code>, and <code>Genre</code> records we have in the database, render this data in a template to create an HTML page, and then return it in an HTTP response.</p>
+The index controller function needs to fetch information about how many `Book`, `BookInstance`, available `BookInstance`, `Author`, and `Genre` records we have in the database, render this data in a template to create an HTML page, and then return it in an HTTP response.
 
-<div class="notecard note">
-<p><strong>Note:</strong> We use the <code><a href="https://mongoosejs.com/docs/api.html#model_Model.countDocuments" rel="noopener">countDocuments()</a></code> method to get the number of instances of each model. This is called on a model, with an optional set of conditions to match against in the first argument, and a callback in the second argument (as discussed in <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">Using a Database (with Mongoose)</a>, and you can also return a <code>Query</code> and then execute it with a callback later). The callback will be invoked when the database returns the count, with an error value as the first parameter (or <code>null</code>) and the count of documents as the second parameter (or <code>null</code> if there was an error) .</p>
+> **Note:** We use the [`countDocuments()`](https://mongoosejs.com/docs/api.html#model_Model.countDocuments) method to get the number of instances of each model. This is called on a model, with an optional set of conditions to match against in the first argument, and a callback in the second argument (as discussed in [Using a Database (with Mongoose)](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose), and you can also return a `Query` and then execute it with a callback later). The callback will be invoked when the database returns the count, with an error value as the first parameter (or `null`) and the count of documents as the second parameter (or `null` if there was an error) .
+>
+> ```js
+> SomeModel.countDocuments({ a_model_field: 'match_value' }, function (err, count) {
+>  // ... do something if there is an err
+>  // ... do something with the count if there was no error
+>  });
+> ```
 
-<pre class="brush: js">SomeModel.countDocuments({ a_model_field: 'match_value' }, function (err, count) {
- // ... do something if there is an err
- // ... do something with the count if there was no error
- });</pre>
-</div>
+Open **/controllers/bookController.js**. Near the top of the file you should see the exported `index()` function.
 
-<p>Open <strong>/controllers/bookController.js</strong>. Near the top of the file you should see the exported <code>index()</code> function.</p>
-
-<pre class="brush: python">var Book = require('../models/book')
+```python
+var Book = require('../models/book')
 
 exports.index = function(req, res, next) {
  res.send('NOT IMPLEMENTED: Site Home Page');
-}</pre>
+}
+```
 
-<p>Replace all the code above with the following code fragment.
-The first thing this does is import (<code>require()</code>) all the models.
+Replace all the code above with the following code fragment.
+The first thing this does is import (`require()`) all the models.
 We need to do this because we'll be using them to get our counts of documents.
-It then imports the <em>async</em> module (which we discussed previously in <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async">Asynchronous flow control using async</a>).</p>
+It then imports the _async_ module (which we discussed previously in [Asynchronous flow control using async](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async)).
 
-<pre class="brush: js">var Book = require('../models/book');
+```js
+var Book = require('../models/book');
 var Author = require('../models/author');
 var Genre = require('../models/genre');
 var BookInstance = require('../models/bookinstance');
@@ -84,21 +91,21 @@ exports.index = function(req, res) {
     }, function(err, results) {
         res.render('index', { title: 'Local Library Home', error: err, data: results });
     });
-};</pre>
+};
+```
 
-<p>The <code>async.parallel()</code> method is passed an object with functions for getting the counts for each of our models. These functions are all started at the same time. When all of them have completed the final callback is invoked with the counts in the <code>results</code> parameter (or an error).</p>
+The `async.parallel()` method is passed an object with functions for getting the counts for each of our models. These functions are all started at the same time. When all of them have completed the final callback is invoked with the counts in the `results` parameter (or an error).
 
-<p>On success the callback function calls <code><a href="https://expressjs.com/en/4x/api.html#res.render" rel="noopener">res.render()</a></code>, specifying a view (template) named '<strong>index</strong>' and an object containing the data that is to be inserted into it (this includes the <code>results</code> object that contains our model counts). The data is supplied as key-value pairs, and can be accessed in the template using the key.</p>
+On success the callback function calls [`res.render()`](https://expressjs.com/en/4x/api.html#res.render), specifying a view (template) named '**index**' and an object containing the data that is to be inserted into it (this includes the `results` object that contains our model counts). The data is supplied as key-value pairs, and can be accessed in the template using the key.
 
-<div class="notecard note">
-<p><strong>Note:</strong> The callback function from <code>async.parallel()</code> above is a little unusual in that we render the page whether or not there was an error (normally you might use a separate execution path for handling the display of errors).</p>
-</div>
+> **Note:** The callback function from `async.parallel()` above is a little unusual in that we render the page whether or not there was an error (normally you might use a separate execution path for handling the display of errors).
 
-<h2 id="View">View</h2>
+## View
 
-<p>Open <strong>/views/index.pug</strong> and replace its content with the text below.</p>
+Open **/views/index.pug** and replace its content with the text below.
 
-<pre class="brush: js">extends layout
+```js
+extends layout
 
 block content
   h1= title
@@ -116,29 +123,24 @@ block content
       li #[strong Copies:] !{data.book_instance_count}
       li #[strong Copies available:] !{data.book_instance_available_count}
       li #[strong Authors:] !{data.author_count}
-      li #[strong Genres:] !{data.genre_count}</pre>
+      li #[strong Genres:] !{data.genre_count}
+```
 
-<p>The view is straightforward. We extend the <strong>layout.pug</strong> base template, overriding the <code>block</code> named '<strong>content</strong>'. The first <code>h1</code> heading will be the escaped text for the <code>title</code> variable that was passed into the <code>render()</code> function—note the use of the '<code>h1=</code>' so that the following text is treated as a JavaScript expression. We then include a paragraph introducing the LocalLibrary.</p>
+The view is straightforward. We extend the **layout.pug** base template, overriding the `block` named '**content**'. The first `h1` heading will be the escaped text for the `title` variable that was passed into the `render()` function—note the use of the '`h1=`' so that the following text is treated as a JavaScript expression. We then include a paragraph introducing the LocalLibrary.
 
-<p>Under the <em>Dynamic content</em> heading we check whether the error variable passed in from the <code>render()</code> function has been defined. If so, we note the error. If not, we get and list the number of copies of each model from the <code>data</code> variable.</p>
+Under the _Dynamic content_ heading we check whether the error variable passed in from the `render()` function has been defined. If so, we note the error. If not, we get and list the number of copies of each model from the `data` variable.
 
-<div class="notecard note">
-<p><strong>Note:</strong> We didn't escape the count values (i.e. we used the <code>!{}</code> syntax) because the count values are calculated. If the information was supplied by end-users then we'd escape the variable for display.</p>
-</div>
+> **Note:** We didn't escape the count values (i.e. we used the `!{}` syntax) because the count values are calculated. If the information was supplied by end-users then we'd escape the variable for display.
 
-<h2 id="What_does_it_look_like">What does it look like?</h2>
+## What does it look like?
 
-<p>At this point we should have created everything needed to display the index page. Run the application and open your browser to <a href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>. If everything is set up correctly, your site should look something like the following screenshot.</p>
+At this point we should have created everything needed to display the index page. Run the application and open your browser to <http://localhost:3000/>. If everything is set up correctly, your site should look something like the following screenshot.
 
-<p><img alt="Home page - Express Local Library site" src="locallibary_express_home.png"></p>
+![Home page - Express Local Library site](locallibary_express_home.png)
 
-<div class="notecard note">
-<p><strong>Note:</strong> You won't be able to <em>use</em> the sidebar links yet because the urls, views, and templates for those pages haven't been defined. If you try you'll get errors like "NOT IMPLEMENTED: Book list" for example, depending on the link you click on.  These string literals (which will be replaced with proper data) were specified in the different controllers that live inside your "controllers" file.</p>
-</div>
+> **Note:** You won't be able to _use_ the sidebar links yet because the urls, views, and templates for those pages haven't been defined. If you try you'll get errors like "NOT IMPLEMENTED: Book list" for example, depending on the link you click on.  These string literals (which will be replaced with proper data) were specified in the different controllers that live inside your "controllers" file.
 
-<h2 id="Next_steps">Next steps</h2>
+## Next steps
 
-<ul>
- <li>Return to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</li>
- <li>Proceed to the next subarticle of part 5: <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page">Book list page</a>.</li>
-</ul>
+- Return to [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
+- Proceed to the next subarticle of part 5: [Book list page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page).

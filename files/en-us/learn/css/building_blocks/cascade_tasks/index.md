@@ -5,44 +5,38 @@ tags:
   - Beginner
   - CSS
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}
 
-<p>The aim of this task is to help you check your understanding of some of the values and units that we looked at in the lesson on <a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">The Cascade and Inheritance</a>.</p>
+The aim of this task is to help you check your understanding of some of the values and units that we looked at in the lesson on [The Cascade and Inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
 
-<div class="notecard note">
-<p><strong>Note:</strong> You can try out solutions in the interactive editors below, however, it may be helpful to download the code and use an online tool such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a> to work on the tasks.<br>
- <br>
- If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.</p>
-</div>
+> **Note:** You can try out solutions in the interactive editors below, however, it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+>
+> If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
 
-<h2 id="Task_One">Task One</h2>
+## Task One
 
-<p>In this task, you need to use one of the special values we looked at in the <a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#controlling_inheritance">Controlling inheritance</a> section to write a declaration in a new rule that will reset the background color back to white, without using an actual color value.</p>
+In this task, you need to use one of the special values we looked at in the [Controlling inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#controlling_inheritance) section to write a declaration in a new rule that will reset the background color back to white, without using an actual color value.
 
-<p><img alt="Barely visible yellow links on a white background." src="mdn-cascade.png"></p>
+![Barely visible yellow links on a white background.](mdn-cascade.png)
 
-<p>In the example below see if you can match the image above.</p>
+In the example below see if you can match the image above.
 
-<p>{{EmbedGHLiveSample("css-examples/learn/tasks/cascade/cascade.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/tasks/cascade/cascade.html", '100%', 700)}}
 
-<div class="callout">
-<p>For assessment or further work purposes, <a href="https://github.com/mdn/css-examples/blob/master/learn/tasks/cascade/cascade-download.html">download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/cascade/cascade-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Assessment_or_further_help">Assessment or further help</h2>
+## Assessment or further help
 
-<p>You can practice these examples in the Interactive Editors mentioned above.</p>
+You can practice these examples in the Interactive Editors mentioned above.
 
-<p>If you would like your work assessed, or are stuck and want to ask for help:</p>
+If you would like your work assessed, or are stuck and want to ask for help:
 
-<ol>
- <li>Put your work into an online shareable editor such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a>. You can write the code yourself, or use the starting point files linked to in the above sections.</li>
- <li>Write a post asking for assessment and/or help at the <a class="external external-icon" href="https://discourse.mozilla.org/c/mdn/learn" rel="noopener">MDN Discourse forum Learning category</a>. Your post should include:
-  <ul>
-   <li>A descriptive title such as "Assessment wanted for Cascade skill test 1".</li>
-   <li>Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.</li>
-   <li>A link to the example you want to be assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.</li>
-   <li>A link to the actual task or assessment page, so we can find the question you want help with.</li>
-  </ul>
- </li>
-</ol>
+1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
+2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+
+    - A descriptive title such as "Assessment wanted for Cascade skill test 1".
+    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
+    - A link to the example you want to be assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
+    - A link to the actual task or assessment page, so we can find the question you want help with.

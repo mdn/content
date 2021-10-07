@@ -12,88 +12,108 @@ tags:
   - client-side
   - resources
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
-
-<p>In the previous article we learned about Svelte's TypeScript support, and how to use it to make your application more robust. In this final article we will look at how to deploy your application and get it online, and also share some of the resources that you should go on to, to continue your Svelte learning journey.</p>
+In the previous article we learned about Svelte's TypeScript support, and how to use it to make your application more robust. In this final article we will look at how to deploy your application and get it online, and also share some of the resources that you should go on to, to continue your Svelte learning journey.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>
-    <p>At minimum, it is recommended that you are familiar with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, and have knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
-
-    <p>You'll need a terminal with node + npm installed to compile and build your app.</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>Learn how to prepare our Svelte app for production, and what learning resources you should visit next.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        <p>
+          At minimum, it is recommended that you are familiar with the core
+          <a href="/en-US/docs/Learn/HTML">HTML</a>,
+          <a href="/en-US/docs/Learn/CSS">CSS</a>, and
+          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, and
+          have knowledge of the
+          <a
+            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            >terminal/command line</a
+          >.
+        </p>
+        <p>
+          You'll need a terminal with node + npm installed to compile and build
+          your app.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        Learn how to prepare our Svelte app for production, and what learning
+        resources you should visit next.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Code_along_with_us">Code along with us</h2>
+## Code along with us
 
-<h3 id="Git">Git</h3>
+### Git
 
-<p>Clone the github repo (if you haven't already done it) with:</p>
+Clone the github repo (if you haven't already done it) with:
 
-<pre class="brush: bash">git clone https://github.com/opensas/mdn-svelte-tutorial.git</pre>
+```bash
+git clone https://github.com/opensas/mdn-svelte-tutorial.git
+```
 
-<p>Then to get to the current app state, run</p>
+Then to get to the current app state, run
 
-<pre class="brush: bash">cd mdn-svelte-tutorial/08-next-steps</pre>
+```bash
+cd mdn-svelte-tutorial/08-next-steps
+```
 
-<p>Or directly download the folder's content:</p>
+Or directly download the folder's content:
 
-<pre class="brush: bash">npx degit opensas/mdn-svelte-tutorial/08-next-steps</pre>
+```bash
+npx degit opensas/mdn-svelte-tutorial/08-next-steps
+```
 
-<p>Remember to run <code>npm install &amp;&amp; npm run dev</code> to start your app in development mode.</p>
+Remember to run `npm install && npm run dev` to start your app in development mode.
 
-<h2 id="Compiling_our_app">Compiling our app</h2>
+## Compiling our app
 
-<p>So far we've been running our app in development mode with <code>npm run dev</code>. As we saw earlier, this instruction tells Svelte to compile our components and JavaScript files into a <code>public/build/bundle.js</code> file and all the CSS sections of our components into <code>public/build/bundle.css</code>. It also starts a development server and watches for changes, recompiling the app and refreshing the page when a change occurs.</p>
+So far we've been running our app in development mode with `npm run dev`. As we saw earlier, this instruction tells Svelte to compile our components and JavaScript files into a `public/build/bundle.js` file and all the CSS sections of our components into `public/build/bundle.css`. It also starts a development server and watches for changes, recompiling the app and refreshing the page when a change occurs.
 
-<p>Your generated <code>bundle.js</code> and <code>bundle.css</code> files will be something like this (file size on the left):</p>
+Your generated `bundle.js` and `bundle.css` files will be something like this (file size on the left):
 
-<pre>  504 Jul 13 02:43 bundle.css
-95981 Jul 13 02:43 bundle.js</pre>
+      504 Jul 13 02:43 bundle.css
+    95981 Jul 13 02:43 bundle.js
 
-<p>To compile our application for production we have to run <code>npm run build</code> instead. In this case, Svelte won't launch a web server or keep watching for changes. It will however minify and compress our JavaScript files using <a href="https://terser.org/">terser</a>.</p>
+To compile our application for production we have to run `npm run build` instead. In this case, Svelte won't launch a web server or keep watching for changes. It will however minify and compress our JavaScript files using [terser](https://terser.org/).
 
-<p>So, after running <code>npm run build</code>, our generated <code>bundle.js</code> and <code>bundle.css</code> files will be more like this:</p>
+So, after running `npm run build`, our generated `bundle.js` and `bundle.css` files will be more like this:
 
-<pre>  504 Jul 13 02:43 bundle.css
-21782 Jul 13 02:43 bundle.js</pre>
+      504 Jul 13 02:43 bundle.css
+    21782 Jul 13 02:43 bundle.js
 
-<p>Try running <code>npm run build</code> in your app's root directory now. You might get a warning, but you can ignore this for now.</p>
+Try running `npm run build` in your app's root directory now. You might get a warning, but you can ignore this for now.
 
-<p>Our whole app is now just 21 KB — 8.3 KB when gzipped. There are no additional runtimes or dependencies to download, parse, execute, and keep running in memory. Svelte analyzed our components and compiled the code to vanilla JavaScript.</p>
+Our whole app is now just 21 KB — 8.3 KB when gzipped. There are no additional runtimes or dependencies to download, parse, execute, and keep running in memory. Svelte analyzed our components and compiled the code to vanilla JavaScript.
 
-<h2 id="A_look_behind_the_Svelte_compilation_process">A look behind the Svelte compilation process</h2>
+## A look behind the Svelte compilation process
 
-<p>By default, when you create a new app with <code>npx degit sveltejs/template my-svelte-project</code>, Svelte will use <a href="https://rollupjs.org/">rollup</a> as the module bundler.</p>
+By default, when you create a new app with `npx degit sveltejs/template my-svelte-project`, Svelte will use [rollup](https://rollupjs.org/) as the module bundler.
 
-<div class="notecard note">
-<p><strong>Note:</strong> There is also an official template for using <a href="https://webpack.js.org/">webpack</a> and also many <a href="https://github.com/sveltejs/integrations#bundler-plugins">community-maintained plugins</a> for other bundlers.</p>
-</div>
+> **Note:** There is also an official template for using [webpack](https://webpack.js.org/) and also many [community-maintained plugins](https://github.com/sveltejs/integrations#bundler-plugins) for other bundlers.
 
-<p>In the file <code>package.json</code> you can see that the <code>dev</code> and <code>start</code> scripts are just calling rollup:</p>
+In the file `package.json` you can see that the `dev` and `start` scripts are just calling rollup:
 
-<pre class="brush: json">"scripts": {
+```json
+"scripts": {
   "build": "rollup -c",
   "dev": "rollup -c -w",
   "start": "sirv public"
-},</pre>
+},
+```
 
-<p>In the <code>dev</code> script we are passing the <code>-w</code> argument, which tells rollup to watch files and rebuild on changes.</p>
+In the `dev` script we are passing the `-w` argument, which tells rollup to watch files and rebuild on changes.
 
-<p>If we have a look at the <code>rollup.config.js</code> file, we can see that the Svelte compiler is just a rollup plugin:</p>
+If we have a look at the `rollup.config.js` file, we can see that the Svelte compiler is just a rollup plugin:
 
-<pre class="brush: js">import svelte from 'rollup-plugin-svelte';
+```js
+import svelte from 'rollup-plugin-svelte';
 [...]
 import { terser } from 'rollup-plugin-terser';
 
@@ -113,308 +133,273 @@ export default {
       dev: !production,
       // we'll extract any component CSS out into
       // a separate file - better for performance
-      css: css =&gt; {
+      css: css => {
         css.write('public/build/bundle.css');
       }
     }),
+```
 
-</pre>
+Later on in the same file you'll also see how rollup minimizes our scripts in production mode and launches a local server in development mode:
 
-<p>Later on in the same file you'll also see how rollup minimizes our scripts in production mode and launches a local server in development mode:</p>
-
-<pre class="brush: js">    // In dev mode, call `npm run start` once
+```js
+    // In dev mode, call `npm run start` once
     // the bundle has been generated
-    !production &amp;&amp; serve(),
+    !production && serve(),
 
     // Watch the `public` directory and refresh the
     // browser on changes when not in production
-    !production &amp;&amp; livereload('public'),
+    !production && livereload('public'),
 
     // If we're building for production (npm run build
     // instead of npm run dev), minify
-    production &amp;&amp; terser()
-  ],</pre>
+    production && terser()
+  ],
+```
 
-<p>There are <a href="https://github.com/rollup/awesome">many plugins for rollup</a> that allow you to customize its behavior. A particularly useful plugin which is also maintained by the Svelte team is <a href="https://github.com/sveltejs/svelte-preprocess">svelte-preprocess</a>, which pre-processes many different languages in Svelte files such as PostCSS, SCSS, Less, CoffeeScript, SASS, and TypeScript.</p>
+There are [many plugins for rollup](https://github.com/rollup/awesome) that allow you to customize its behavior. A particularly useful plugin which is also maintained by the Svelte team is [svelte-preprocess](https://github.com/sveltejs/svelte-preprocess), which pre-processes many different languages in Svelte files such as PostCSS, SCSS, Less, CoffeeScript, SASS, and TypeScript.
 
-<h2 id="Deploying_your_Svelte_application">Deploying your Svelte application</h2>
+## Deploying your Svelte application
 
-<p>From the point of view of a web server, a Svelte application is nothing more than a bunch of HTML, CSS, and JavaScript files. All you need is a web server capable of serving static files, which means you have plenty of options to choose from. Let's look at a couple of examples.</p>
+From the point of view of a web server, a Svelte application is nothing more than a bunch of HTML, CSS, and JavaScript files. All you need is a web server capable of serving static files, which means you have plenty of options to choose from. Let's look at a couple of examples.
 
-<div class="notecard note">
-<p><strong>Note:</strong> the following section could be applied to any client-side static web site requiring a build step, not just Svelte apps.</p>
-</div>
+> **Note:** the following section could be applied to any client-side static web site requiring a build step, not just Svelte apps.
 
-<h3 id="Deploying_with_Vercel">Deploying with Vercel</h3>
+### Deploying with Vercel
 
-<p>One of the easiest ways to deploy a Svelte application is using <a href="https://vercel.com/home">Vercel</a>. Vercel is a cloud platform specifically tailored for static sites, which has out-of-the-box support for most common front-end tools, Svelte being one of them.</p>
+One of the easiest ways to deploy a Svelte application is using [Vercel](https://vercel.com/home). Vercel is a cloud platform specifically tailored for static sites, which has out-of-the-box support for most common front-end tools, Svelte being one of them.
 
-<p>To deploy our app, follow these steps.</p>
+To deploy our app, follow these steps.
 
-<ol>
- <li>
-  <p><a href="https://vercel.com/signup">register for an account with Vercel</a>.</p>
- </li>
- <li>
-  <p>Navigate to the root of your app and run <code>npx vercel</code>; the first time you do it, you'll be prompted to enter your email address, and follow the steps in the email sent to that address, for security purposes.</p>
- </li>
- <li>
-  <p>Run <code>npx vercel</code> again, and you'll be prompted to answer a few questions, like this:</p>
+1.  [register for an account with Vercel](https://vercel.com/signup).
+2.  Navigate to the root of your app and run `npx vercel`; the first time you do it, you'll be prompted to enter your email address, and follow the steps in the email sent to that address, for security purposes.
+3.  Run `npx vercel` again, and you'll be prompted to answer a few questions, like this:
 
-  <pre class="brush: bash">&gt; npx vercel
-Vercel CLI 19.1.2
-? Set up and deploy “./mdn-svelte-tutorial”? [Y/n] y
-? Which scope do you want to deploy to? opensas
-? Link to existing project? [y/N] n
-? What’s your project’s name? mdn-svelte-tutorial
-? In which directory is your code located? ./
-Auto-detected Project Settings (Svelte):
-- Build Command: `npm run build` or `rollup -c`
-- Output Directory: public
-- Development Command: sirv public --single --dev --port $PORT
-? Want to override the settings? [y/N] n
-   Linked to opensas/mdn-svelte-tutorial (created .vercel)
-   Inspect: https://vercel.com/opensas/mdn-svelte-tutorial/[...] [1s]
-✅  Production: https://mdn-svelte-tutorial.vercel.app [copied to clipboard] [19s]
-   Deployed to production. Run `vercel --prod` to overwrite later (https://vercel.link/2F).
-   To change the domain or build command, go to https://zeit.co/opensas/mdn-svelte-tutorial/settings</pre>
- </li>
- <li>
-  <p>Accept all the defaults, and you'll be fine.</p>
- </li>
- <li>
-  <p>Once it has finished deploying, go to the "Production" URL in your browser, and you'll see the app deployed!</p>
- </li>
-</ol>
+    ```bash
+    > npx vercel
+    Vercel CLI 19.1.2
+    ? Set up and deploy “./mdn-svelte-tutorial”? [Y/n] y
+    ? Which scope do you want to deploy to? opensas
+    ? Link to existing project? [y/N] n
+    ? What’s your project’s name? mdn-svelte-tutorial
+    ? In which directory is your code located? ./
+    Auto-detected Project Settings (Svelte):
+    - Build Command: `npm run build` or `rollup -c`
+    - Output Directory: public
+    - Development Command: sirv public --single --dev --port $PORT
+    ? Want to override the settings? [y/N] n
+       Linked to opensas/mdn-svelte-tutorial (created .vercel)
+       Inspect: https://vercel.com/opensas/mdn-svelte-tutorial/[...] [1s]
+    ✅  Production: https://mdn-svelte-tutorial.vercel.app [copied to clipboard] [19s]
+       Deployed to production. Run `vercel --prod` to overwrite later (https://vercel.link/2F).
+       To change the domain or build command, go to https://zeit.co/opensas/mdn-svelte-tutorial/settings
+    ```
 
-<p>You can also <a href="https://vercel.com/import/svelte">import a Svelte git project</a> into Vercel from <a href="https://github.com/">GitHub</a>, <a href="https://about.gitlab.com/">GitLab</a>, or <a href="https://bitbucket.org/product">BitBucket</a>.</p>
+4.  Accept all the defaults, and you'll be fine.
+5.  Once it has finished deploying, go to the "Production" URL in your browser, and you'll see the app deployed!
 
-<div class="notecard note">
-<p><strong>Note:</strong> you can globally install Vercel with <code>npm i -g vercel</code> so you don't have to use <code>npx</code> to run it.</p>
-</div>
+You can also [import a Svelte git project](https://vercel.com/import/svelte) into Vercel from [GitHub](https://github.com/), [GitLab](https://about.gitlab.com/), or [BitBucket](https://bitbucket.org/product).
 
-<h3 id="Automatic_deployment_to_GitLab_pages">Automatic deployment to GitLab pages</h3>
+> **Note:** you can globally install Vercel with `npm i -g vercel` so you don't have to use `npx` to run it.
 
-<p>For hosting static files there are several online services that allow you to automatically deploy your site whenever you push changes to a git repository. Most of them involve setting up a deployment pipeline that gets triggered on every <code>git push</code>, and takes care of building and deploying your web site.</p>
+### Automatic deployment to GitLab pages
 
-<p>To demonstrate this, we will deploy our todos app to <a href="https://about.gitlab.com/stages-devops-lifecycle/pages/">GitLab Pages</a>.</p>
+For hosting static files there are several online services that allow you to automatically deploy your site whenever you push changes to a git repository. Most of them involve setting up a deployment pipeline that gets triggered on every `git push`, and takes care of building and deploying your web site.
 
-<ol>
- <li>
-  <p>First you'll have to <a href="https://gitlab.com/users/sign_up">register at GitLab</a> and then <a href="https://gitlab.com/projects/new">create a new project</a>. Give you new project a short, easy name like "mdn-svelte-todo". You will have a remote url that points to your new GitLab git repository, like <code>git@gitlab.com:[your-user]/[your-project].git</code>.</p>
- </li>
- <li>
-  <p>Before you start to upload content to your git repository, it is a good practice to add a <code>.gitignore</code> file to tell git which files to exclude from source control. In our case we will tell git to exclude files in the <code>node_modules</code> directory by creating a <code>.gitignore</code> file in the root folder of your local project, with the following content:</p>
+To demonstrate this, we will deploy our todos app to [GitLab Pages](https://about.gitlab.com/stages-devops-lifecycle/pages/).
 
-  <pre class="brush: bash">node_modules/</pre>
- </li>
- <li>
-  <p>Now let's go back to GitLab. After creating a new repo GitLab will greet you with a message explaining different options to upload your existing files. Follow the steps listed under the <em>Push an existing folder</em> heading:</p>
+1.  First you'll have to [register at GitLab](https://gitlab.com/users/sign_up) and then [create a new project](https://gitlab.com/projects/new). Give you new project a short, easy name like "mdn-svelte-todo". You will have a remote url that points to your new GitLab git repository, like `git@gitlab.com:[your-user]/[your-project].git`.
+2.  Before you start to upload content to your git repository, it is a good practice to add a `.gitignore` file to tell git which files to exclude from source control. In our case we will tell git to exclude files in the `node_modules` directory by creating a `.gitignore` file in the root folder of your local project, with the following content:
 
-  <pre class="brush: bash">cd your_root_directory # Go into your project's root directory
-git init
-git remote add origin https://gitlab.com/[your-user]/mdn-svelte-todo.git
-git add .
-git commit -m "Initial commit"
-git push -u origin master</pre>
+    ```bash
+    node_modules/
+    ```
 
-  <div class="notecard note">
-  <p><strong>Note:</strong> You could use <a href="https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols#_the_git_protocol">the <code>git</code> protocol</a> instead of <code>https</code>, which is faster and saves you from typing your username and password every time you access your origin repo. To use it you'll have to <a href="https://docs.gitlab.com/ee/ssh/README.html#generating-a-new-ssh-key-pair">create an SSH key pair</a>. Your origin URL will be like this: <code>git@gitlab.com:[your-user]/mdn-svelte-todo.git</code>.</p>
-  </div>
- </li>
-</ol>
+3.  Now let's go back to GitLab. After creating a new repo GitLab will greet you with a message explaining different options to upload your existing files. Follow the steps listed under the _Push an existing folder_ heading:
 
-<p>With these instructions we initialize a local git repository, then set our remote origin (where we will push our code to) as our repo on GitLab. Next we commit all the files to the local git repo, and then push those to the remote origin on GitLab.</p>
+    ```bash
+    cd your_root_directory # Go into your project's root directory
+    git init
+    git remote add origin https://gitlab.com/[your-user]/mdn-svelte-todo.git
+    git add .
+    git commit -m "Initial commit"
+    git push -u origin master
+    ```
 
-<p>GitLab uses a built-in tool called GitLab CI/CD to build your site and publish it to the GitLab Pages server. The sequence of scripts that GitLab CI/CD runs to accomplish this task is created from a file named <code>.gitlab-ci.yml</code>, which you can create and modify at will. A specific job called <code>pages</code> in the configuration file will make GitLab aware that you are deploying a GitLab Pages website.</p>
+    > **Note:** You could use [the `git` protocol](https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols#_the_git_protocol) instead of `https`, which is faster and saves you from typing your username and password every time you access your origin repo. To use it you'll have to [create an SSH key pair](https://docs.gitlab.com/ee/ssh/README.html#generating-a-new-ssh-key-pair). Your origin URL will be like this: `git@gitlab.com:[your-user]/mdn-svelte-todo.git`.
 
-<p>Let's have a go at doing this now.</p>
+With these instructions we initialize a local git repository, then set our remote origin (where we will push our code to) as our repo on GitLab. Next we commit all the files to the local git repo, and then push those to the remote origin on GitLab.
 
-<ol>
- <li>
-  <p>Create a <code>.gitlab-ci.yml</code> file inside your project's root and give it the following content:</p>
+GitLab uses a built-in tool called GitLab CI/CD to build your site and publish it to the GitLab Pages server. The sequence of scripts that GitLab CI/CD runs to accomplish this task is created from a file named `.gitlab-ci.yml`, which you can create and modify at will. A specific job called `pages` in the configuration file will make GitLab aware that you are deploying a GitLab Pages website.
 
-  <pre>image: node:latest
-pages:
-  stage: deploy
-  script:
-    - npm install
-    - npm run build
-  artifacts:
-    paths:
-      - public
-  only:
-    - master</pre>
+Let's have a go at doing this now.
 
-  <p>Here we are telling GitLab to use an image with the latest version of node to build our app. Next we are declaring a <code>pages</code> job, to enable GitLab Pages. Whenever there's a push to our repo, GitLab will run <code>npm install</code> and <code>npm run build</code> to build our application. We are also telling GitLab to deploy the contents of the <code>public</code> folder. On the last line, we are configuring GitLab to redeploy our app only when there's a push to our master branch.</p>
- </li>
- <li>
-  <p>Since our app will be published at a subdirectory (like <code>https://your-user.gitlab.io/mdn-svelte-todo</code>), we'll have to make the references to the JavaScript and CSS files in our <code>public/index.html</code> file relative. To do this, we just remove the leading slashes (<code>/</code>) from the <code>/global.css</code>, <code>/build/bundle.css</code>, and <code>/build/bundle.js</code> URLs, like this:</p>
+1.  Create a `.gitlab-ci.yml` file inside your project's root and give it the following content:
 
-  <pre class="brush: html">&lt;title&gt;Svelte To-Do list&lt;/title&gt;
+        image: node:latest
+        pages:
+          stage: deploy
+          script:
+            - npm install
+            - npm run build
+          artifacts:
+            paths:
+              - public
+          only:
+            - master
 
-&lt;link rel='icon' type='image/png' href='favicon.png'&gt;
-&lt;link rel='stylesheet' href='global.css'&gt;
-&lt;link rel='stylesheet' href='build/bundle.css'&gt;
+    Here we are telling GitLab to use an image with the latest version of node to build our app. Next we are declaring a `pages` job, to enable GitLab Pages. Whenever there's a push to our repo, GitLab will run `npm install` and `npm run build` to build our application. We are also telling GitLab to deploy the contents of the `public` folder. On the last line, we are configuring GitLab to redeploy our app only when there's a push to our master branch.
 
-&lt;script defer src='build/bundle.js'&gt;&lt;/script&gt;</pre>
+2.  Since our app will be published at a subdirectory (like `https://your-user.gitlab.io/mdn-svelte-todo`), we'll have to make the references to the JavaScript and CSS files in our `public/index.html` file relative. To do this, we just remove the leading slashes (`/`) from the `/global.css`, `/build/bundle.css`, and `/build/bundle.js` URLs, like this:
 
-  <p>Do this now.</p>
- </li>
- <li>
-  <p>Now we just have to commit and push our changes to GitLab. Do this by running the following commands:</p>
+    ```html
+    <title>Svelte To-Do list</title>
 
-  <pre class="brush: bash">&gt; git add public/index.html
-&gt; git add .gitlab-ci.yml
-&gt; git commit -m "Added .gitlab-ci.yml file and fixed index.html absolute paths"
-&gt; git push
-Counting objects: 5, done.
-Delta compression using up to 8 threads.
-Compressing objects: 100% (5/5), done.
-Writing objects: 100% (5/5), 541 bytes | 541.00 KiB/s, done.
-Total 5 (delta 3), reused 0 (delta 0)
-To gitlab.com:opensas/mdn-svelte-todo.git
-   7dac9f3..5725f46  master -&gt; master</pre>
- </li>
-</ol>
+    <link rel='icon' type='image/png' href='favicon.png'>
+    <link rel='stylesheet' href='global.css'>
+    <link rel='stylesheet' href='build/bundle.css'>
 
-<p>Whenever there's a job running GitLab will display an icon showing the process of the job. Clicking on it will let you inspect the output of the job.</p>
+    <script defer src='build/bundle.js'></script>
+    ```
 
-<p><img alt="gitlab screenshot showing a deployed commit, which add a gitlab ci file, and changes bundle paths to relative" src="01-gitlab-pages-deploy.png"></p>
+    Do this now.
 
-<p>You can also check the progress of the current and previous jobs from the <em>CI / CD</em> &gt; <em>Jobs</em> menu option of your GitLab project.</p>
+3.  Now we just have to commit and push our changes to GitLab. Do this by running the following commands:
 
-<p><img alt="a gitlab ci job shown in the gitlab ui, running a lot of commands" src="02-gitlab-pages-job.png"></p>
+    ```bash
+    > git add public/index.html
+    > git add .gitlab-ci.yml
+    > git commit -m "Added .gitlab-ci.yml file and fixed index.html absolute paths"
+    > git push
+    Counting objects: 5, done.
+    Delta compression using up to 8 threads.
+    Compressing objects: 100% (5/5), done.
+    Writing objects: 100% (5/5), 541 bytes | 541.00 KiB/s, done.
+    Total 5 (delta 3), reused 0 (delta 0)
+    To gitlab.com:opensas/mdn-svelte-todo.git
+       7dac9f3..5725f46  master -> master
+    ```
 
-<p>Once GitLab finishes building and publishing your app, it will be accessible at <code>https://your-user.gitlab.io/mdn-svelte-todo/</code>; in my case it's <code>https://opensas.gitlab.io/mdn-svelte-todo/</code>. You can check your page's URL in GitLab's UI — see the <em>Settings</em> &gt; <em>Pages</em> menu option.</p>
+Whenever there's a job running GitLab will display an icon showing the process of the job. Clicking on it will let you inspect the output of the job.
 
-<p>With this configuration, whenever you push changes to the GitLab repo, the application will be automatically rebuilt and deployed to GitLab Pages.</p>
+![gitlab screenshot showing a deployed commit, which add a gitlab ci file, and changes bundle paths to relative](01-gitlab-pages-deploy.png)
 
-<h2 id="Learning_more_about_Svelte">Learning more about Svelte</h2>
+You can also check the progress of the current and previous jobs from the _CI / CD_ > _Jobs_ menu option of your GitLab project.
 
-<p>In this section we'll give you some resources and projects to go and check out, to take your Svelte learning further.</p>
+![a gitlab ci job shown in the gitlab ui, running a lot of commands](02-gitlab-pages-job.png)
 
-<h3 id="Svelte_documentation">Svelte documentation</h3>
+Once GitLab finishes building and publishing your app, it will be accessible at `https://your-user.gitlab.io/mdn-svelte-todo/`; in my case it's `https://opensas.gitlab.io/mdn-svelte-todo/`. You can check your page's URL in GitLab's UI — see the _Settings_ > _Pages_ menu option.
 
-<p>To go further and learn more about Svelte, you should definitely visit the <a href="https://svelte.dev/">Svelte homepage</a>. There you'll find <a href="https://svelte.dev/blog">many articles</a> explaining Svelte's philosophy. If you haven't already done it, make sure you go through the <a href="https://svelte.dev/tutorial/basics">Svelte interactive tutorial</a>. We already covered most of its content, so it won't take you much time to complete it — you should consider it as practice!</p>
+With this configuration, whenever you push changes to the GitLab repo, the application will be automatically rebuilt and deployed to GitLab Pages.
 
-<p>You can also consult the <a href="https://svelte.dev/docs">Svelte API docs</a> and the available <a href="https://svelte.dev/examples#hello-world">examples</a>.</p>
+## Learning more about Svelte
 
-<p>To understand the motivations behind Svelte, you should read <a href="https://twitter.com/Rich_Harris">Rich Harris</a>'s <a href="https://www.youtube.com/watch?v=AdNJ3fydeao&amp;t=47s">Rethinking reactivity</a> presentation on YouTube. He is the creator of Svelte, so he has a couple of things to say about it. You also have the interactive slides available here which are, unsurprisingly, built with Svelte. If you liked it, you will also enjoy <a href="https://www.youtube.com/watch?v=BzX4aTRPzno">The Return of 'Write Less, Do More'</a> presentation, which Rich Harris gave at <a href="https://jscamp.tech/2019/">JSCAMP 2019</a>.</p>
+In this section we'll give you some resources and projects to go and check out, to take your Svelte learning further.
 
-<h3 id="Related_projects">Related projects</h3>
+### Svelte documentation
 
-<p>There are other projects related to Svelte that are worth checking out:</p>
+To go further and learn more about Svelte, you should definitely visit the [Svelte homepage](https://svelte.dev/). There you'll find [many articles](https://svelte.dev/blog) explaining Svelte's philosophy. If you haven't already done it, make sure you go through the [Svelte interactive tutorial](https://svelte.dev/tutorial/basics). We already covered most of its content, so it won't take you much time to complete it — you should consider it as practice!
 
-<ul>
- <li><a href="https://sapper.svelte.dev/">Sapper</a>: An application framework powered by Svelte that provides server-side rendering (SSR), code splitting, file-based routing and offline support, and more. Think of it as <a href="https://nextjs.org/">Next.js</a> for Svelte. If you are planning to develop a fairly complex web application you should definitely have a look at this project.</li>
- <li><a href="https://svelte-native.technology/">Svelte Native</a>: A mobile application framework powered by Svelte. Think of it as <a href="https://reactnative.dev/">React Native</a> for Svelte.</li>
- <li><a href="https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode">Svelte for VS Code</a>: The officially supported VS Code plugin for working with <code>.svelte</code> files, which we looked at in our <a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript article</a>.</li>
-</ul>
+You can also consult the [Svelte API docs](https://svelte.dev/docs) and the available [examples](https://svelte.dev/examples#hello-world).
 
-<h3 id="Other_learning_resources">Other learning resources</h3>
+To understand the motivations behind Svelte, you should read [Rich Harris](https://twitter.com/Rich_Harris)'s [Rethinking reactivity](https://www.youtube.com/watch?v=AdNJ3fydeao&t=47s) presentation on YouTube. He is the creator of Svelte, so he has a couple of things to say about it. You also have the interactive slides available here which are, unsurprisingly, built with Svelte. If you liked it, you will also enjoy [The Return of 'Write Less, Do More'](https://www.youtube.com/watch?v=BzX4aTRPzno) presentation, which Rich Harris gave at [JSCAMP 2019](https://jscamp.tech/2019/).
 
-<ul>
- <li>There's a <a href="https://frontendmasters.com/courses/svelte/">complete course about Svelte and Sapper</a> by Rich Harris, available at Frontend Masters.</li>
- <li>Even though Svelte is a relatively young project there are lots of tutorials and <a href="https://www.udemy.com/topic/svelte-framework/?sort=popularity">courses</a> available on the web, so it's difficult to make a recommendation.</li>
- <li>Nevertheless, <a href="https://www.udemy.com/course/sveltejs-the-complete-guide/">Svelte.js — The Complete Guide</a> by <a href="https://academind.com/">Academind</a> is a very popular option with great ratings.</li>
- <li><a href="https://www.freecodecamp.org/news/the-svelte-handbook/">The Svelte Handbook</a>, by <a href="https://flaviocopes.com/">Flavio Copes</a>, is also a useful reference for learning the main Svelte concepts.</li>
- <li>If you prefer to read books, there's <a href="https://www.manning.com/books/svelte-and-sapper-in-action">Svelte and Sapper in Action</a> by <a href="https://twitter.com/mark_volkmann">Mark Volkman</a>, expected to be published in September 2020, but which you can already <a href="https://livebook.manning.com/book/svelte-and-sapper-in-action/welcome/v-5/">preview online</a> for free.</li>
- <li>If you want dive deeper and understand the inner working of Svelte's compiler you should check <a href="https://twitter.com/lihautan">Tan Li Hau</a>'s Compile <a href="https://lihautan.com/compile-svelte-in-your-head-part-1/">Svelte in your head</a> blog posts. Here's <a href="https://lihautan.com/compile-svelte-in-your-head-part-1/">Part 1</a>, <a href="https://lihautan.com/compile-svelte-in-your-head-part-2/">Part 2</a>, and <a href="https://lihautan.com/compile-svelte-in-your-head-part-3/">Part 3</a>.</li>
-</ul>
+### Related projects
 
-<h3 id="Interacting_with_the_community">Interacting with the community</h3>
+There are other projects related to Svelte that are worth checking out:
 
-<p>There are a number of different ways to get support and interact with the Svelte community:</p>
+- [Sapper](https://sapper.svelte.dev/): An application framework powered by Svelte that provides server-side rendering (SSR), code splitting, file-based routing and offline support, and more. Think of it as [Next.js](https://nextjs.org/) for Svelte. If you are planning to develop a fairly complex web application you should definitely have a look at this project.
+- [Svelte Native](https://svelte-native.technology/): A mobile application framework powered by Svelte. Think of it as [React Native](https://reactnative.dev/) for Svelte.
+- [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode): The officially supported VS Code plugin for working with `.svelte` files, which we looked at in our [TypeScript article](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript).
 
-<ul>
- <li><a href="https://svelte.dev/chat">svelte.dev/chat</a>: Svelte's Discord server.</li>
- <li><a href="https://twitter.com/sveltejs">@sveltejs</a>: The official Twitter account.</li>
- <li><a href="https://twitter.com/sveltesociety">@sveltesociety</a>: Svelte community Twitter account.</li>
- <li><a href="https://github.com/svelte-society/recipes-mvp#recipes-mvp">Svelte Recipes</a>: Community-driven repository of recipes, tips, and best practices to solve common problems.</li>
- <li><a href="https://stackoverflow.com/questions/tagged/svelte">Svelte questions on StackOverflow</a>: Questions with the <code>svelte</code> tag at SO.</li>
- <li><a href="https://www.reddit.com/r/sveltejs/">Svelte reddit community</a>: Svelte community discussion and content rating site at reddit.</li>
- <li><a href="https://dev.to/t/svelte">Svelte DEV community</a>: A collection of Svelte-related technical articles and tutorials from the DEV.to community.</li>
-</ul>
+### Other learning resources
 
-<h2 id="Finito">Finito</h2>
+- There's a [complete course about Svelte and Sapper](https://frontendmasters.com/courses/svelte/) by Rich Harris, available at Frontend Masters.
+- Even though Svelte is a relatively young project there are lots of tutorials and [courses](https://www.udemy.com/topic/svelte-framework/?sort=popularity) available on the web, so it's difficult to make a recommendation.
+- Nevertheless, [Svelte.js — The Complete Guide](https://www.udemy.com/course/sveltejs-the-complete-guide/) by [Academind](https://academind.com/) is a very popular option with great ratings.
+- [The Svelte Handbook](https://www.freecodecamp.org/news/the-svelte-handbook/), by [Flavio Copes](https://flaviocopes.com/), is also a useful reference for learning the main Svelte concepts.
+- If you prefer to read books, there's [Svelte and Sapper in Action](https://www.manning.com/books/svelte-and-sapper-in-action) by [Mark Volkman](https://twitter.com/mark_volkmann), expected to be published in September 2020, but which you can already [preview online](https://livebook.manning.com/book/svelte-and-sapper-in-action/welcome/v-5/) for free.
+- If you want dive deeper and understand the inner working of Svelte's compiler you should check [Tan Li Hau](https://twitter.com/lihautan)'s Compile [Svelte in your head](https://lihautan.com/compile-svelte-in-your-head-part-1/) blog posts. Here's [Part 1](https://lihautan.com/compile-svelte-in-your-head-part-1/), [Part 2](https://lihautan.com/compile-svelte-in-your-head-part-2/), and [Part 3](https://lihautan.com/compile-svelte-in-your-head-part-3/).
 
-<p>Congratulations! You have completed the Svelte tutorial. In the previous articles we went from zero knowledge about Svelte to building and deploying a complete application.</p>
+### Interacting with the community
 
-<ul>
- <li>We learned about Svelte philosophy and what sets it apart from other front-end frameworks.</li>
- <li>We saw how to add dynamic behavior to our web site, how to organize our app in components and different ways to share information among them.</li>
- <li>We took advantage of the Svelte reactivity system and learned how to avoid common pitfalls.</li>
- <li>We also saw some advanced concepts and techniques to interact with DOM elements and to programmatically extend HTML element capabilities using the <code>use</code> directive.</li>
- <li>Then we saw how to use stores to work with a central data repository, and we created our own custom store to persist our application's data to Web Storage.</li>
- <li>We also took a look at Svelte's TypeScript support.</li>
-</ul>
+There are a number of different ways to get support and interact with the Svelte community:
 
-<p>In this article we've learned about a couple of zero-fuss options to deploy our app in production and seen how to setup a basic pipeline to deploy our app to GitLab on every commit. Then we provided you with a list of Svelte resources to go further with your Svelte learning.</p>
+- [svelte.dev/chat](https://svelte.dev/chat): Svelte's Discord server.
+- [@sveltejs](https://twitter.com/sveltejs): The official Twitter account.
+- [@sveltesociety](https://twitter.com/sveltesociety): Svelte community Twitter account.
+- [Svelte Recipes](https://github.com/svelte-society/recipes-mvp#recipes-mvp): Community-driven repository of recipes, tips, and best practices to solve common problems.
+- [Svelte questions on StackOverflow](https://stackoverflow.com/questions/tagged/svelte): Questions with the `svelte` tag at SO.
+- [Svelte reddit community](https://www.reddit.com/r/sveltejs/): Svelte community discussion and content rating site at reddit.
+- [Svelte DEV community](https://dev.to/t/svelte): A collection of Svelte-related technical articles and tutorials from the DEV.to community.
 
-<p>Congratulations! After completing this series of tutorials you should have a strong base from which to start developing professional web applications with Svelte.</p>
+## Finito
 
-<div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
+Congratulations! You have completed the Svelte tutorial. In the previous articles we went from zero knowledge about Svelte to building and deploying a complete application.
 
-<h2 id="In_this_module">In this module</h2>
+- We learned about Svelte philosophy and what sets it apart from other front-end frameworks.
+- We saw how to add dynamic behavior to our web site, how to organize our app in components and different ways to share information among them.
+- We took advantage of the Svelte reactivity system and learned how to avoid common pitfalls.
+- We also saw some advanced concepts and techniques to interact with DOM elements and to programmatically extend HTML element capabilities using the `use` directive.
+- Then we saw how to use stores to work with a central data repository, and we created our own custom store to persist our application's data to Web Storage.
+- We also took a look at Svelte's TypeScript support.
 
-<ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
- <li>React
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
-  </ul>
- </li>
- <li>Ember
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
-  </ul>
- </li>
- <li>Vue
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
-  </ul>
- </li>
- <li>Svelte
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
-  </ul>
- </li>
- <li>Angular
-   <ul>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
-   </ul>
- </li>
-</ul>
+In this article we've learned about a couple of zero-fuss options to deploy our app in production and seen how to setup a basic pipeline to deploy our app to GitLab on every commit. Then we provided you with a list of Svelte resources to go further with your Svelte learning.
+
+Congratulations! After completing this series of tutorials you should have a strong base from which to start developing professional web applications with Svelte.
+
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+
+## In this module
+
+- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- React
+
+  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+
+- Ember
+
+  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+
+- Vue
+
+  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+
+- Svelte
+
+  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+
+- Angular
+
+  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
+  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

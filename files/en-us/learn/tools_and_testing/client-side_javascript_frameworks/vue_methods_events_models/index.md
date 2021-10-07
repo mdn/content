@@ -14,411 +14,410 @@ tags:
   - models
   - vue
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
-
-<p>We now have sample data in place, and a loop that takes each bit of data and renders it inside a <code>ToDoItem</code> in our app. What we really need next is the ability to allow our users to enter their own todo items into the app, and for that we'll need a text <code>&lt;input&gt;</code>, an event to fire when the data is submitted, a method to fire upon submission to add the data and rerender the list, and a model to control the data. This is what we'll cover in this article.</p>
+We now have sample data in place, and a loop that takes each bit of data and renders it inside a `ToDoItem` in our app. What we really need next is the ability to allow our users to enter their own todo items into the app, and for that we'll need a text `<input>`, an event to fire when the data is submitted, a method to fire upon submission to add the data and rerender the list, and a model to control the data. This is what we'll cover in this article.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>
-    <p>Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
-
-    <p>Vue components are written as a combination of JavaScript objects that manage the app's data and an HTML-based template syntax that maps to the underlying DOM structure. For installation, and to use some of the more advanced features of Vue (like Single File Components or render functions), you'll need a terminal with node + npm installed.</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To learn about handling forms in Vue, and by association, events, models, and methods.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        <p>
+          Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
+          <a href="/en-US/docs/Learn/CSS">CSS</a>, and
+          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages,
+          knowledge of the
+          <a
+            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            >terminal/command line</a
+          >.
+        </p>
+        <p>
+          Vue components are written as a combination of JavaScript objects that
+          manage the app's data and an HTML-based template syntax that maps to
+          the underlying DOM structure. For installation, and to use some of the
+          more advanced features of Vue (like Single File Components or render
+          functions), you'll need a terminal with node + npm installed.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        To learn about handling forms in Vue, and by association, events,
+        models, and methods.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Creating_a_New_To-Do_form">Creating a New To-Do form</h2>
+## Creating a New To-Do form
 
-<p>We now have an app that displays a list of to-do items. However, we can't update our list of items without manually changing our code! Let's fix that. Let's create a new component that will allow us to add a new to-do item.</p>
+We now have an app that displays a list of to-do items. However, we can't update our list of items without manually changing our code! Let's fix that. Let's create a new component that will allow us to add a new to-do item.
 
-<ol>
- <li>
-  <p>In your components folder, create a new file called <code>ToDoForm.vue</code>.</p>
- </li>
- <li>
-  <p>Add a blank <code>&lt;template&gt;</code> and a <code>&lt;script&gt;</code> tag like before:</p>
+1.  In your components folder, create a new file called `ToDoForm.vue`.
+2.  Add a blank `<template>` and a `<script>` tag like before:
 
-  <pre class="brush: html">&lt;template&gt;&lt;/template&gt;
+    ```html
+    <template></template>
 
-&lt;script&gt;
-  export default {};
-&lt;/script&gt;</pre>
- </li>
- <li>
-  <p>Let's add in an HTML form that lets you enter a new todo item and submit it into the app. We need a <code><a href="/en-US/docs/Web/HTML/Element/form">&lt;form&gt;</a></code> with a <code><a href="/en-US/docs/Web/HTML/Element/label">&lt;label&gt;</a></code>, an <code><a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt;</a></code>, and a <code><a href="/en-US/docs/Web/HTML/Element/button">&lt;button&gt;</a></code>. Update your template as follows:</p>
+    <script>
+      export default {};
+    </script>
+    ```
 
-  <pre class="brush: html">&lt;template&gt;
-  &lt;form&gt;
-    &lt;label for="new-todo-input"&gt;
-      What needs to be done?
-    &lt;/label&gt;
-    &lt;input
+3.  Let's add in an HTML form that lets you enter a new todo item and submit it into the app. We need a [`<form>`](/en-US/docs/Web/HTML/Element/form) with a [`<label>`](/en-US/docs/Web/HTML/Element/label), an [`<input>`](/en-US/docs/Web/HTML/Element/input), and a [`<button>`](/en-US/docs/Web/HTML/Element/button). Update your template as follows:
+
+    ```html
+    <template>
+      <form>
+        <label for="new-todo-input">
+          What needs to be done?
+        </label>
+        <input
+          type="text"
+          id="new-todo-input"
+          name="new-todo"
+          autocomplete="off"
+        />
+        <button type="submit">
+          Add
+        </button>
+      </form>
+    </template>
+    ```
+
+    So we now have a form component into which we can enter the title of a new todo item (which will become a label for the corresponding `ToDoItem` when it is eventually rendered).
+
+4.  Let's load this component into our app. Go back to `App.vue` and add the following `import` statement just below the previous one, inside your `<script>` element:
+
+    ```js
+    import ToDoForm from './components/ToDoForm';
+    ```
+
+5.  You also need to register the new component in your App component — update the `components` property of the component object so that it looks like this:
+
+    ```js
+    components: {
+      ToDoItem,
+      ToDoForm
+    }
+    ```
+
+6.  Finally for this section, render your `ToDoForm` component inside your App by adding the `<to-do-form />` element inside your `App`'s `<template>`, like so:
+
+    ```html
+    <template>
+      <div id="app">
+        <h1>My To-Do List</h1>
+        <to-do-form></to-do-form>
+        <ul>
+          <li v-for="item in ToDoItems" :key="item.id">
+            <to-do-item :label="item.label" :done="item.done" :id="item.id"></to-do-item>
+          </li>
+        </ul>
+      </div>
+    </template>
+    ```
+
+Now when you view your running site, you should see the new form displayed.
+
+![Our todo list app rendered with a text input to enter new todos](rendered-form-with-text-input.png)
+
+If you fill it out and click the "Add" button, the page will post the form back to the server, but this isn’t really what we want. What we actually want to do is run a method on the [`submit` event](/en-US/docs/Web/API/HTMLFormElement/submit_event) that will add the new todo to the `ToDoItem` data list defined inside `App`. To do that, we'll need to add a method to the component instance.
+
+## Creating a method & binding it to an event with v-on
+
+To make a method available to the `ToDoForm` component, we need to add it to the component object, and this is done inside a `methods` property to our component, which goes in the same place as `data()`, `props`, etc. The `methods` property holds any methods we might need to call in our component. When referenced, methods are fully run, so it's not a good idea to use them to display information inside the template. For displaying data that comes from calculations, you should use a `computed` property, which we'll cover later.
+
+1.  In this component, we need to add an `onSubmit()` method to a `methods` property inside the `ToDoForm` component object.  We'll use this to handle the submit action.
+
+    Add this like so:
+
+    ```js
+    export default {
+       methods: {
+           onSubmit() {
+              console.log('form submitted')
+           }
+       }
+    }
+    ```
+
+2.  Next we need to bind the method to our `<form>` element's `submit` event handler. Much like how Vue uses the [`v-bind`](https://vuejs.org/v2/api/#v-bind) syntax for binding attributes, Vue has a special directive for event handling: [`v-on`](https://vuejs.org/v2/api/#v-on). The `v-on` directive works via the `v-on:event="method"` syntax. And much like `v-bind`, there’s also a shorthand syntax: `@event="method"`.
+
+    We'll use the shorthand syntax here for consistency. Add the `submit` handler to your `<form>` element like so:
+
+    ```html
+    <form @submit="onSubmit">
+    ```
+
+3.  When you run this, the app still posts the data to the server, causing a refresh. Since we're doing all of our processing on the client, there's no server to handle the postback. We also lose all local state on page refresh. To prevent the browser from posting to the server, we need to stop the event’s default action while bubbling up through the page ([`Event.preventDefault()`](/en-US/docs/Web/API/Event/preventDefault), in vanilla JavaScript). Vue has a special syntax called **event modifiers** that can handle this for us right in our template.
+
+    Modifiers are appended to the end of an event with a dot like so: `@event.modifier`. Here is a list of event modifiers:
+
+    - `.stop`: Stops the event from propagating. Equivalent to [`Event.stopPropagation()`](/en-US/docs/Web/API/Event/stopPropagation) in regular JavaScript events.
+    - `.prevent`: Prevents the event's default behavior. Equivalent to [`Event.preventDefault()`](/en-US/docs/Web/API/Event/preventDefault).
+    - `.self`: Triggers the handler only if the event was dispatched from this exact element.
+    - `{.key}`: Triggers the event handler only via the specified key. [MDN has a list of valid key values](/en-US/docs/Web/API/KeyboardEvent/key/Key_Values); multi-word keys just need to be converted to kebab case (e.g. `page-down`).
+    - `.native`: Listens for a native event on the root (outer-most wrapping) element on your component.
+    - `.once`: Listens for the event until it's been triggered once, and then no more.
+    - `.left`: Only triggers the handler via the left mouse button event.
+    - `.right`: Only triggers the handler via the right mouse button event.
+    - `.middle`: Only triggers the handler via the middle mouse button event.
+    - `.passive`: Equivalent to using the `{ passive: true }` parameter when creating an event listener in vanilla JavaScript using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener).
+
+    In this case, we need to use the `.prevent` handler to stop the browser’s default submit action. Add `.prevent` to the `@submit` handler in your template like so:
+
+    ```js
+    <form @submit.prevent="onSubmit">
+    ```
+
+If you try submitting the form now, you'll notice that the page doesn't reload. If you open the console, you can see the results of the [`console.log()`](/en-US/docs/Web/API/console/log) we added inside our `onSubmit()` method.
+
+## Binding data to inputs with v-model
+
+Next up, we need a way to get the value from the form's `<input>` so we can add the new to-do item to our `ToDoItems` data list.
+
+The first thing we need is a `data` property in our form to track the value of the to-do.
+
+1.  Add a `data()` method to our `ToDoForm` component object that returns a `label` field. We can set the initial value of the `label` to an empty string.
+
+    Your component object should now look something like this:
+
+    ```js
+    export default {
+      methods: {
+        onSubmit() {
+          console.log("form submitted");
+        }
+      },
+      data() {
+        return {
+          label: ""
+        };
+      }
+    };
+    ```
+
+2.  We now need some way to attach the value of the `new-todo-input` `<input>` field to the `label` field. Vue has a special directive for this: [`v-model`](https://vuejs.org/v2/api/#v-model). `v-model` binds to the data property you set on it and keeps it in sync with the `<input>`. `v-model` works across all the various input types, including check boxes, radios, and select inputs. To use `v-model`, you add an attribute with the structure `v-model="variable"` to the `<input>`.
+
+    So in our case, we would add it to our `new-todo-input` field as seen below. Do this now:
+
+    ```js
+    <input
       type="text"
       id="new-todo-input"
       name="new-todo"
       autocomplete="off"
-    /&gt;
-    &lt;button type="submit"&gt;
-      Add
-    &lt;/button&gt;
-  &lt;/form&gt;
-&lt;/template&gt;</pre>
+      v-model="label" />
+    ```
 
-  <p>So we now have a form component into which we can enter the title of a new todo item (which will become a label for the corresponding <code>ToDoItem</code> when it is eventually rendered).</p>
- </li>
- <li>
-  <p>Let's load this component into our app. Go back to <code>App.vue</code> and add the following <code>import</code> statement just below the previous one, inside your <code>&lt;script&gt;</code> element:</p>
+    > **Note:** You can also sync data with `<input>` values through a combination of events and `v-bind` attributes. In fact, this is what `v-model` does behind the scenes. However, the exact event and attribute combination varies depending on input types and will take more code than just using the `v-model` shortcut.
 
-  <pre class="brush: js">import ToDoForm from './components/ToDoForm';</pre>
- </li>
- <li>
-  <p>You also need to register the new component in your App component — update the <code>components</code> property of the component object so that it looks like this:</p>
+3.  Let's test out our use of `v-model` by logging the value of the data submitted in our `onSubmit()` method. In components, data attributes are accessed using the `this` keyword. So we access our `label` field using `this.label`.
 
-  <pre class="brush: js">components: {
-  ToDoItem,
-  ToDoForm
-}</pre>
- </li>
- <li>
-  <p>Finally for this section, render your <code>ToDoForm</code> component inside your App by adding the <code>&lt;to-do-form /&gt;</code> element inside your <code>App</code>'s <code>&lt;template&gt;</code>, like so:</p>
+    Update your `onSubmit()` method to look like this:
 
-  <pre class="brush: html">&lt;template&gt;
-  &lt;div id="app"&gt;
-    &lt;h1&gt;My To-Do List&lt;/h1&gt;
-    &lt;to-do-form&gt;&lt;/to-do-form&gt;
-    &lt;ul&gt;
-      &lt;li v-for="item in ToDoItems" :key="item.id"&gt;
-        &lt;to-do-item :label="item.label" :done="item.done" :id="item.id"&gt;&lt;/to-do-item&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/template&gt;</pre>
- </li>
-</ol>
+    ```js
+    methods: {
+      onSubmit() {
+        console.log('Label value: ', this.label);
+      }
+    },
+    ```
 
-<p>Now when you view your running site, you should see the new form displayed.</p>
+4.  Now go back to your running app, add some text to the `<input>` field, and click the "Add" button. You should see the value you entered logged to your console, for example:
 
-<p><img alt="Our todo list app rendered with a text input to enter new todos" src="rendered-form-with-text-input.png"></p>
+        Label value: My value
 
-<p>If you fill it out and click the "Add" button, the page will post the form back to the server, but this isn’t really what we want. What we actually want to do is run a method on the <a href="/en-US/docs/Web/API/HTMLFormElement/submit_event"><code>submit</code> event</a> that will add the new todo to the <code>ToDoItem</code> data list defined inside <code>App</code>. To do that, we'll need to add a method to the component instance.</p>
+## Changing `v-model` behavior with modifiers
 
-<h2 id="Creating_a_method_binding_it_to_an_event_with_v-on">Creating a method &amp; binding it to an event with v-on</h2>
+In a similar fashion to event modifiers, we can also add modifiers to change the behavior of `v-model`. In our case, there are two worth considering. The first, `.trim`, will remove whitespace from before or after the input. We can add the modifier to our `v-model` statement like so: `v-model.trim="label"`.
 
-<p>To make a method available to the <code>ToDoForm</code> component, we need to add it to the component object, and this is done inside a <code>methods</code> property to our component, which goes in the same place as <code>data()</code>, <code>props</code>, etc. The <code>methods</code> property holds any methods we might need to call in our component. When referenced, methods are fully run, so it's not a good idea to use them to display information inside the template. For displaying data that comes from calculations, you should use a <code>computed</code> property, which we'll cover later.</p>
+The second modifier we should consider is called `.lazy`. This modifier changes when `v-model` syncs the value for text inputs. As mentioned earlier, `v-model` syncing works by updating the variable using events. For text inputs, this sync happens using the [`input` event](/en-US/docs/Web/API/HTMLElement/input_event). Often, this means that Vue is syncing the data after every keystroke. The `.lazy` modifier causes `v-model` to use the [`change` event](/en-US/docs/Web/API/HTMLElement/change_event) instead. This means that Vue will only sync data when the input loses focus or the form is submitted. For our purposes, this is much more reasonable since we only need the final data.
 
-<ol>
- <li>
-  <p>In this component, we need to add an <code>onSubmit()</code> method to a <code>methods</code> property inside the <code>ToDoForm</code> component object.  We'll use this to handle the submit action.</p>
+To use both the `.lazy` modifier and the `.trim` modifier together, we can chain them, e.g. `v-model.lazy.trim="label"`.
 
-  <p>Add this like so:</p>
+Update your `v-model` attribute to chain `lazy` and `trim` as shown above, and then test your app again. Try for example, submitting a value with whitespace at each end.
 
-  <pre class="brush: js">export default {
-   methods: {
-       onSubmit() {
-          console.log('form submitted')
-       }
-   }
-}</pre>
- </li>
- <li>
-  <p>Next we need to bind the method to our <code>&lt;form&gt;</code> element's <code>submit</code> event handler. Much like how Vue uses the <code><a href="https://vuejs.org/v2/api/#v-bind">v-bind</a></code> syntax for binding attributes, Vue has a special directive for event handling: <code><a href="https://vuejs.org/v2/api/#v-on">v-on</a></code>. The <code>v-on</code> directive works via the <code>v-on:event="method"</code> syntax. And much like <code>v-bind</code>, there’s also a shorthand syntax: <code>@event="method"</code>.</p>
+## Passing data to parents with custom events
 
-  <p>We'll use the shorthand syntax here for consistency. Add the <code>submit</code> handler to your <code>&lt;form&gt;</code> element like so:</p>
+We now are very close to being able to add new to-do items to our list. The next thing we need to be able to do is pass the newly-created to-do item to our `App` component. To do that, we can have our `ToDoForm` emit a custom event that passes the data, and have `App` listen for it. This works very similarly to native events on HTML elements: a child component can emit an event which can be listened to via `v-on`.
 
-  <pre class="brush: html">&lt;form @submit="onSubmit"&gt;
-</pre>
- </li>
- <li>
-  <p>When you run this, the app still posts the data to the server, causing a refresh. Since we're doing all of our processing on the client, there's no server to handle the postback. We also lose all local state on page refresh. To prevent the browser from posting to the server, we need to stop the event’s default action while bubbling up through the page (<code><a href="/en-US/docs/Web/API/Event/preventDefault">Event.preventDefault()</a></code>, in vanilla JavaScript). Vue has a special syntax called <strong>event modifiers</strong> that can handle this for us right in our template.</p>
+In the `onSubmit` event of our `ToDoForm`, let's add a `todo-added` event. Custom events are emitted like this: `this.$emit("event-name")`. It's important to know that event handlers are case sensitive and cannot include spaces. Vue templates also get converted to lowercase, which means Vue templates cannot listen for events named with capital letters.
 
-  <p>Modifiers are appended to the end of an event with a dot like so: <code>@event.modifier</code>. Here is a list of event modifiers:</p>
+1.  Replace the `console.log()` in the `onSubmit()` method with the following:
 
-  <ul>
-   <li><code>.stop</code>: Stops the event from propagating. Equivalent to <code><a href="/en-US/docs/Web/API/Event/stopPropagation">Event.stopPropagation()</a></code> in regular JavaScript events.</li>
-   <li><code>.prevent</code>: Prevents the event's default behavior. Equivalent to <code><a href="/en-US/docs/Web/API/Event/preventDefault">Event.preventDefault()</a></code>.</li>
-   <li><code>.self</code>: Triggers the handler only if the event was dispatched from this exact element.</li>
-   <li><code>{.key}</code>: Triggers the event handler only via the specified key. <a href="/en-US/docs/Web/API/KeyboardEvent/key/Key_Values">MDN has a list of valid key values</a>; multi-word keys just need to be converted to kebab case (e.g. <code>page-down</code>).</li>
-   <li><code>.native</code>: Listens for a native event on the root (outer-most wrapping) element on your component.</li>
-   <li><code>.once</code>: Listens for the event until it's been triggered once, and then no more.</li>
-   <li><code>.left</code>: Only triggers the handler via the left mouse button event.</li>
-   <li><code>.right</code>: Only triggers the handler via the right mouse button event.</li>
-   <li><code>.middle</code>: Only triggers the handler via the middle mouse button event.</li>
-   <li><code>.passive</code>: Equivalent to using the <code>{ passive: true }</code> parameter when creating an event listener in vanilla JavaScript using <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>.</li>
-  </ul>
+    ```js
+    this.$emit("todo-added");
+    ```
 
-  <p>In this case, we need to use the <code>.prevent</code> handler to stop the browser’s default submit action. Add <code>.prevent</code> to the <code>@submit</code> handler in your template like so:</p>
+2.  Next, go back to `App.vue` and add a `methods` property to your component object containing an `addToDo()` method, as shown below. For now, this method can just log `To-do added` to the console.
 
-  <pre class="brush: js">&lt;form @submit.prevent="onSubmit"&gt;</pre>
- </li>
-</ol>
+    ```js
+    export default {
+      name: 'app',
+      components: {
+        ToDoItem,
+        ToDoForm
+      },
+     data() {
+        return {
+          ToDoItems: [
+            { id:uniqueId('todo-'), label: 'Learn Vue', done: false },
+            { id:uniqueId('todo-'), label: 'Create a Vue project with the CLI', done: true },
+            { id:uniqueId('todo-'), label: 'Have fun', done: true },
+            { id:uniqueId('todo-'), label: 'Create a to-do list', done: false }
+          ]
+        };
+      },
+      methods: {
+        addToDo() {
+          console.log('To-do added');
+        }
+      }
+    };
+    ```
 
-<p>If you try submitting the form now, you'll notice that the page doesn't reload. If you open the console, you can see the results of the <code><a href="/en-US/docs/Web/API/console/log">console.log()</a></code> we added inside our <code>onSubmit()</code> method.</p>
+3.  Next, add an event listener for the `todo-added` event to the `<to-do-form></to-do-form>`, which calls the `addToDo()` method when the event fires. Using the `@` shorthand, the listener would look like this: `@todo-added="addToDo"`:
 
-<h2 id="Binding_data_to_inputs_with_v-model">Binding data to inputs with v-model</h2>
+    ```html
+    <to-do-form @todo-added="addToDo"></to-do-form>
+    ```
 
-<p>Next up, we need a way to get the value from the form's <code>&lt;input&gt;</code> so we can add the new to-do item to our <code>ToDoItems</code> data list.</p>
+4.  When you submit your `ToDoForm`, you should see the console log from the `addToDo()` method. This is good, but we're still not passing any data back into the `App.vue` component. We can do that by passing additional arguments to the `this.$emit()` function back in the `ToDoForm` component.
 
-<p>The first thing we need is a <code>data</code> property in our form to track the value of the to-do.</p>
+    In this case, when we fire the event we want to pass the `label` data along with it. this is done by including the data you want to pass as another parameter in the `$emit()` method:  `this.$emit("todo-added", this.label)`. This is similar to how native JavaScript events include data, except custom Vue events include no event object by default. This means that the emitted event will directly match whatever object you submit. So in our case, our event object will just be a string.
 
-<ol>
- <li>
-  <p>Add a <code>data()</code> method to our <code>ToDoForm</code> component object that returns a <code>label</code> field. We can set the initial value of the <code>label</code> to an empty string.</p>
+    Update your `onSubmit()` method like so:
 
-  <p>Your component object should now look something like this:</p>
-
-  <pre class="brush: js">export default {
-  methods: {
+    ```js
     onSubmit() {
-      console.log("form submitted");
+      this.$emit('todo-added', this.label)
     }
-  },
-  data() {
-    return {
-      label: ""
-    };
-  }
-};</pre>
- </li>
- <li>
-  <p>We now need some way to attach the value of the <code>new-todo-input</code> <code>&lt;input&gt;</code> field to the <code>label</code> field. Vue has a special directive for this: <code><a href="https://vuejs.org/v2/api/#v-model">v-model</a></code>. <code>v-model</code> binds to the data property you set on it and keeps it in sync with the <code>&lt;input&gt;</code>. <code>v-model</code> works across all the various input types, including check boxes, radios, and select inputs. To use <code>v-model</code>, you add an attribute with the structure <code>v-model="variable"</code> to the <code>&lt;input&gt;</code>.</p>
+    ```
 
-  <p>So in our case, we would add it to our <code>new-todo-input</code> field as seen below. Do this now:</p>
+5.  To actually pick up this data inside `App.vue`, we need to add a parameter to our `addToDo()` method that includes the `label` of the new to-do item.
 
-  <pre class="brush: js">&lt;input
-  type="text"
-  id="new-todo-input"
-  name="new-todo"
-  autocomplete="off"
-  v-model="label" /&gt;
-</pre>
+    Go back to `App.vue` and update this now:
 
-  <div class="notecard note">
-  <p><strong>Note:</strong> You can also sync data with <code>&lt;input&gt;</code> values through a combination of events and <code>v-bind</code> attributes. In fact, this is what <code>v-model</code> does behind the scenes. However, the exact event and attribute combination varies depending on input types and will take more code than just using the <code>v-model</code> shortcut.</p>
-  </div>
- </li>
- <li>
-  <p>Let's test out our use of <code>v-model</code> by logging the value of the data submitted in our <code>onSubmit()</code> method. In components, data attributes are accessed using the <code>this</code> keyword. So we access our <code>label</code> field using <code>this.label</code>.</p>
-
-  <p>Update your <code>onSubmit()</code> method to look like this:</p>
-
-  <pre class="brush: js">methods: {
-  onSubmit() {
-    console.log('Label value: ', this.label);
-  }
-},</pre>
- </li>
- <li>
-  <p>Now go back to your running app, add some text to the <code>&lt;input&gt;</code> field, and click the "Add" button. You should see the value you entered logged to your console, for example:</p>
-
-  <pre>Label value: My value</pre>
- </li>
-</ol>
-
-<h2 id="Changing_v-model_behavior_with_modifiers">Changing <code>v-model</code> behavior with modifiers</h2>
-
-<p>In a similar fashion to event modifiers, we can also add modifiers to change the behavior of <code>v-model</code>. In our case, there are two worth considering. The first, <code>.trim</code>, will remove whitespace from before or after the input. We can add the modifier to our <code>v-model</code> statement like so: <code>v-model.trim="label"</code>.</p>
-
-<p>The second modifier we should consider is called <code>.lazy</code>. This modifier changes when <code>v-model</code> syncs the value for text inputs. As mentioned earlier, <code>v-model</code> syncing works by updating the variable using events. For text inputs, this sync happens using the <a href="/en-US/docs/Web/API/HTMLElement/input_event"><code>input</code> event</a>. Often, this means that Vue is syncing the data after every keystroke. The <code>.lazy</code> modifier causes <code>v-model</code> to use the <a href="/en-US/docs/Web/API/HTMLElement/change_event"><code>change</code> event</a> instead. This means that Vue will only sync data when the input loses focus or the form is submitted. For our purposes, this is much more reasonable since we only need the final data.</p>
-
-<p>To use both the <code>.lazy</code> modifier and the <code>.trim</code> modifier together, we can chain them, e.g. <code>v-model.lazy.trim="label"</code>.</p>
-
-<p>Update your <code>v-model</code> attribute to chain <code>lazy</code> and <code>trim</code> as shown above, and then test your app again. Try for example, submitting a value with whitespace at each end.</p>
-
-<h2 id="Passing_data_to_parents_with_custom_events">Passing data to parents with custom events</h2>
-
-<p>We now are very close to being able to add new to-do items to our list. The next thing we need to be able to do is pass the newly-created to-do item to our <code>App</code> component. To do that, we can have our <code>ToDoForm</code> emit a custom event that passes the data, and have <code>App</code> listen for it. This works very similarly to native events on HTML elements: a child component can emit an event which can be listened to via <code>v-on</code>.</p>
-
-<p>In the <code>onSubmit</code> event of our <code>ToDoForm</code>, let's add a <code>todo-added</code> event. Custom events are emitted like this: <code>this.$emit("event-name")</code>. It's important to know that event handlers are case sensitive and cannot include spaces. Vue templates also get converted to lowercase, which means Vue templates cannot listen for events named with capital letters.</p>
-
-<ol>
- <li>
-  <p>Replace the <code>console.log()</code> in the <code>onSubmit()</code> method with the following:</p>
-
-  <pre class="brush: js">this.$emit("todo-added");</pre>
- </li>
- <li>
-  <p>Next, go back to <code>App.vue</code> and add a <code>methods</code> property to your component object containing an <code>addToDo()</code> method, as shown below. For now, this method can just log <code>To-do added</code> to the console.</p>
-
-  <pre class="brush: js">export default {
-  name: 'app',
-  components: {
-    ToDoItem,
-    ToDoForm
-  },
- data() {
-    return {
-      ToDoItems: [
-        { id:uniqueId('todo-'), label: 'Learn Vue', done: false },
-        { id:uniqueId('todo-'), label: 'Create a Vue project with the CLI', done: true },
-        { id:uniqueId('todo-'), label: 'Have fun', done: true },
-        { id:uniqueId('todo-'), label: 'Create a to-do list', done: false }
-      ]
-    };
-  },
-  methods: {
-    addToDo() {
-      console.log('To-do added');
+    ```js
+    methods: {
+      addToDo(toDoLabel) {
+        console.log('To-do added:', toDoLabel);
+      }
     }
-  }
-};</pre>
- </li>
- <li>
-  <p>Next, add an event listener for the <code>todo-added</code> event to the <code>&lt;to-do-form&gt;&lt;/to-do-form&gt;</code>, which calls the <code>addToDo()</code> method when the event fires. Using the <code>@</code> shorthand, the listener would look like this: <code>@todo-added="addToDo"</code>:</p>
+    ```
 
-  <pre class="brush: html">&lt;to-do-form @todo-added="addToDo"&gt;&lt;/to-do-form&gt;</pre>
- </li>
- <li>
-  <p>When you submit your <code>ToDoForm</code>, you should see the console log from the <code>addToDo()</code> method. This is good, but we're still not passing any data back into the <code>App.vue</code> component. We can do that by passing additional arguments to the <code>this.$emit()</code> function back in the <code>ToDoForm</code> component.</p>
+If you test your form again, you'll see whatever text you enter logged in your console upon submission. Vue automatically passes the arguments after the event name in `this.$emit()` to your event handler.
 
-  <p>In this case, when we fire the event we want to pass the <code>label</code> data along with it. this is done by including the data you want to pass as another parameter in the <code>$emit()</code> method:  <code>this.$emit("todo-added", this.label)</code>. This is similar to how native JavaScript events include data, except custom Vue events include no event object by default. This means that the emitted event will directly match whatever object you submit. So in our case, our event object will just be a string.</p>
+## Adding the new todo into our data
 
-  <p>Update your <code>onSubmit()</code> method like so:</p>
+Now that we have the data from `ToDoForm` available in `App.vue`, we need to add an item representing it to the `ToDoItems` array. This can be done by pushing a new to-do item object to the array containing our new data.
 
-  <pre class="brush: js">onSubmit() {
-  this.$emit('todo-added', this.label)
-}</pre>
- </li>
- <li>
-  <p>To actually pick up this data inside <code>App.vue</code>, we need to add a parameter to our <code>addToDo()</code> method that includes the <code>label</code> of the new to-do item.</p>
+1.  Update your `addToDo()` method like so:
 
-  <p>Go back to <code>App.vue</code> and update this now:</p>
+    ```js
+    addToDo(toDoLabel) {
+      this.ToDoItems.push({id:uniqueId('todo-'), label: toDoLabel, done: false});
+    }
+    ```
 
-  <pre class="brush: js">methods: {
-  addToDo(toDoLabel) {
-    console.log('To-do added:', toDoLabel);
-  }
-}
-</pre>
- </li>
-</ol>
+2.  Try testing your form again, and you should see new to-do items get appended to the end of the list.
+3.  Let's make a further improvement before we move on. If you submit the form while the input is empy, todo items with no text still get added to the list. To fix that, we can prevent the todo-added event from firing when name is empty. Since name is already being trimmed by the `.trim` directive, we only need to test for the empty string.
 
-<p>If you test your form again, you'll see whatever text you enter logged in your console upon submission. Vue automatically passes the arguments after the event name in <code>this.$emit()</code> to your event handler.</p>
+    Go back to your `ToDoForm` component, and update the `onSubmit()` method like so. If the label value is empty, let's not emit the `todo-added` event.
 
-<h2 id="Adding_the_new_todo_into_our_data">Adding the new todo into our data</h2>
+    ```js
+    onSubmit() {
+      if(this.label === "") {
+        return;
+      }
+      this.$emit('todo-added', this.label);
+    }
+    ```
 
-<p>Now that we have the data from <code>ToDoForm</code> available in <code>App.vue</code>, we need to add an item representing it to the <code>ToDoItems</code> array. This can be done by pushing a new to-do item object to the array containing our new data.</p>
+4.  Try your form again. Now you will not be able to add empty items to the to-do list.
 
-<ol>
- <li>
-  <p>Update your <code>addToDo()</code> method like so:</p>
+![Our todo list app rendered with a text input to enter new todos](rendered-form-with-new-items.png)
 
-  <pre class="brush: js">addToDo(toDoLabel) {
-  this.ToDoItems.push({id:uniqueId('todo-'), label: toDoLabel, done: false});
-}</pre>
- </li>
- <li>
-  <p>Try testing your form again, and you should see new to-do items get appended to the end of the list.</p>
- </li>
- <li>
-  <p>Let's make a further improvement before we move on. If you submit the form while the input is empy, todo items with no text still get added to the list. To fix that, we can prevent the todo-added event from firing when name is empty. Since name is already being trimmed by the <code>.trim</code> directive, we only need to test for the empty string.</p>
+## Using `v-model` to update an input value
 
-  <p>Go back to your <code>ToDoForm</code> component, and update the <code>onSubmit()</code> method like so. If the label value is empty, let's not emit the <code>todo-added</code> event.</p>
+There's one more thing to fix in our `ToDoForm` component — after submitting, the `<input>` still contains the old value. But this is easy to fix — because we're using `v-model` to bind the data to the `<input>` in `ToDoForm`, if we set the name parameter to equal an empty string, the input will update as well.
 
-  <pre class="brush: js">onSubmit() {
-  if(this.label === "") {
-    return;
-  }
-  this.$emit('todo-added', this.label);
-}</pre>
- </li>
- <li>
-  <p>Try your form again. Now you will not be able to add empty items to the to-do list.</p>
- </li>
-</ol>
+Update your `ToDoForm` component’s `onSubmit()` method to this:
 
-<p><img alt="Our todo list app rendered with a text input to enter new todos" src="rendered-form-with-new-items.png"></p>
-
-<h2 id="Using_v-model_to_update_an_input_value">Using <code>v-model</code> to update an input value</h2>
-
-<p>There's one more thing to fix in our <code>ToDoForm</code> component — after submitting, the <code>&lt;input&gt;</code> still contains the old value. But this is easy to fix — because we're using <code>v-model</code> to bind the data to the <code>&lt;input&gt;</code> in <code>ToDoForm</code>, if we set the name parameter to equal an empty string, the input will update as well.</p>
-
-<p>Update your <code>ToDoForm</code> component’s <code>onSubmit()</code> method to this:</p>
-
-<pre class="brush: js">onSubmit() {
+```js
+onSubmit() {
   if(this.label === "") {
     return;
   }
   this.$emit('todo-added', this.label);
   this.label = "";
-}</pre>
+}
+```
 
-<p>Now when you click the "Add" button, the "new-todo-input" will clear itself.</p>
+Now when you click the "Add" button, the "new-todo-input" will clear itself.
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>Excellent. We can now add todo items to our form! Our app is now starting to feel interactive, but one issue is that we've completely ignored its look and feel up to now. In the next article, we'll concentrate on fixing this, looking at the different ways Vue provides to style components.</p>
+Excellent. We can now add todo items to our form! Our app is now starting to feel interactive, but one issue is that we've completely ignored its look and feel up to now. In the next article, we'll concentrate on fixing this, looking at the different ways Vue provides to style components.
 
-<p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<h2 id="In_this_module">In this module</h2>
+## In this module
 
-<ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
- <li>React
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
-  </ul>
- </li>
- <li>Ember
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
-  </ul>
- </li>
- <li>Vue
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
-  </ul>
- </li>
- <li>Svelte
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
-  </ul>
- </li>
- <li>Angular
-   <ul>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
-   </ul>
- </li>
-</ul>
+- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- React
+
+  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+
+- Ember
+
+  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+
+- Vue
+
+  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+
+- Svelte
+
+  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+
+- Angular
+
+  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
+  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

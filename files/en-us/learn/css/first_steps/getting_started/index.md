@@ -12,252 +12,289 @@ tags:
   - Syntax
   - state
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
 
-<div>{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}</div>
-
-<p>In this article we will take a simple HTML document and apply CSS to it, learning some practical things about the language along the way.</p>
+In this article we will take a simple HTML document and apply CSS to it, learning some practical things about the language along the way.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, <a href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, and HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>.)</td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To understand the basics of linking a CSS document to an HTML file, and be able to do simple text formatting with CSS.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        Basic computer literacy,
+        <a
+          href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          >basic software installed</a
+        >, basic knowledge of
+        <a
+          href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          >working with files</a
+        >, and HTML basics (study
+        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          >Introduction to HTML</a
+        >.)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        To understand the basics of linking a CSS document to an HTML file, and
+        be able to do simple text formatting with CSS.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Starting_with_some_HTML">Starting with some HTML</h2>
+## Starting with some HTML
 
-<p>Our starting point is an HTML document. You can copy the code from below if you want to work on your own computer. Save the code below as <code>index.html</code> in a folder on your machine.</p>
+Our starting point is an HTML document. You can copy the code from below if you want to work on your own computer. Save the code below as `index.html` in a folder on your machine.
 
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;Getting started with CSS&lt;/title&gt;
-&lt;/head&gt;
+```html
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Getting started with CSS</title>
+</head>
 
-&lt;body&gt;
+<body>
 
-    &lt;h1&gt;I am a level one heading&lt;/h1&gt;
+    <h1>I am a level one heading</h1>
 
-    &lt;p&gt;This is a paragraph of text. In the text is a &lt;span&gt;span element&lt;/span&gt;
-and also a &lt;a href="https://example.com"&gt;link&lt;/a&gt;.&lt;/p&gt;
+    <p>This is a paragraph of text. In the text is a <span>span element</span>
+and also a <a href="https://example.com">link</a>.</p>
 
-    &lt;p&gt;This is the second paragraph. It contains an &lt;em&gt;emphasized&lt;/em&gt; element.&lt;/p&gt;
+    <p>This is the second paragraph. It contains an <em>emphasized</em> element.</p>
 
-    &lt;ul&gt;
-        &lt;li&gt;Item &lt;span&gt;one&lt;/span&gt;&lt;/li&gt;
-        &lt;li&gt;Item two&lt;/li&gt;
-        &lt;li&gt;Item &lt;em&gt;three&lt;/em&gt;&lt;/li&gt;
-    &lt;/ul&gt;
+    <ul>
+        <li>Item <span>one</span></li>
+        <li>Item two</li>
+        <li>Item <em>three</em></li>
+    </ul>
 
-&lt;/body&gt;
+</body>
 
-&lt;/html&gt;
-</pre>
+</html>
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> If you are reading this on a device or an environment where you can't easily create files, then don't worry — live code editors are provided below to allow you to write example code right here in the page.</p>
-</div>
+> **Note:** If you are reading this on a device or an environment where you can't easily create files, then don't worry — live code editors are provided below to allow you to write example code right here in the page.
 
-<h2 id="Adding_CSS_to_our_document">Adding CSS to our document</h2>
+## Adding CSS to our document
 
-<p>The very first thing we need to do is to tell the HTML document that we have some CSS rules we want it to use. There are three different ways to apply CSS to an HTML document that you'll commonly come across, however, for now, we will look at the most usual and useful way of doing so — linking CSS from the head of your document.</p>
+The very first thing we need to do is to tell the HTML document that we have some CSS rules we want it to use. There are three different ways to apply CSS to an HTML document that you'll commonly come across, however, for now, we will look at the most usual and useful way of doing so — linking CSS from the head of your document.
 
-<p>Create a file in the same folder as your HTML document and save it as <code>styles.css</code>. The <code>.css</code> extension shows that this is a CSS file.</p>
+Create a file in the same folder as your HTML document and save it as `styles.css`. The `.css` extension shows that this is a CSS file.
 
-<p>To link <code>styles.css</code> to <code>index.html</code> add the following line somewhere inside the {{htmlelement("head")}} of the HTML document:</p>
+To link `styles.css` to `index.html` add the following line somewhere inside the {{htmlelement("head")}} of the HTML document:
 
-<pre class="brush: html">&lt;link rel="stylesheet" href="styles.css"&gt;</pre>
+```html
+<link rel="stylesheet" href="styles.css">
+```
 
-<p>This {{htmlelement("link")}} element tells the browser that we have a stylesheet, using the <code>rel</code> attribute, and the location of that stylesheet as the value of the <code>href</code> attribute. You can test that the CSS works by adding a rule to <code>styles.css</code>. Using your code editor add the following to your CSS file:</p>
+This {{htmlelement("link")}} element tells the browser that we have a stylesheet, using the `rel` attribute, and the location of that stylesheet as the value of the `href` attribute. You can test that the CSS works by adding a rule to `styles.css`. Using your code editor add the following to your CSS file:
 
-<pre class="brush: css">h1 {
+```css
+h1 {
   color: red;
-}</pre>
+}
+```
 
-<p>Save your HTML and CSS files and reload the page in a web browser. The level one heading at the top of the document should now be red. If that happens, congratulations — you have successfully applied some CSS to an HTML document. If that doesn't happen, carefully check that you've typed everything correctly.</p>
+Save your HTML and CSS files and reload the page in a web browser. The level one heading at the top of the document should now be red. If that happens, congratulations — you have successfully applied some CSS to an HTML document. If that doesn't happen, carefully check that you've typed everything correctly.
 
-<p>You can continue to work in <code>styles.css</code> locally, or you can use our interactive editor below to continue with this tutorial. The interactive editor acts as if the CSS in the first panel is linked to the HTML document, just as we have with our document above.</p>
+You can continue to work in `styles.css` locally, or you can use our interactive editor below to continue with this tutorial. The interactive editor acts as if the CSS in the first panel is linked to the HTML document, just as we have with our document above.
 
-<h2 id="Styling_HTML_elements">Styling HTML elements</h2>
+## Styling HTML elements
 
-<p>By making our heading red we have already demonstrated that we can target and style an HTML element. We do this by targeting an <em>element selector</em> — this is a selector that directly matches an HTML element name. To target all paragraphs in the document you would use the selector <code>p</code>. To turn all paragraphs green you would use:</p>
+By making our heading red we have already demonstrated that we can target and style an HTML element. We do this by targeting an _element selector_ — this is a selector that directly matches an HTML element name. To target all paragraphs in the document you would use the selector `p`. To turn all paragraphs green you would use:
 
-<pre class="brush: css">p {
+```css
+p {
   color: green;
-}</pre>
+}
+```
 
-<p>You can target multiple selectors at once, by separating the selectors with a comma. If I want all paragraphs and all list items to be green my rule looks like this:</p>
+You can target multiple selectors at once, by separating the selectors with a comma. If I want all paragraphs and all list items to be green my rule looks like this:
 
-<pre class="brush: css">p, li {
+```css
+p, li {
     color: green;
-}</pre>
+}
+```
 
-<p>Try this out in the interactive editor below (edit the code boxes), or in your local CSS document.</p>
+Try this out in the interactive editor below (edit the code boxes), or in your local CSS document.
 
-<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started1.html", '100%', 900)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/getting-started/started1.html", '100%', 900)}}
 
-<h2 id="Changing_the_default_behavior_of_elements">Changing the default behavior of elements</h2>
+## Changing the default behavior of elements
 
-<p>When we look at a well-marked up HTML document, even something as simple as our example, we can see how the browser is making the HTML readable by adding some default styling. Headings are large and bold and our list has bullets. This happens because browsers have internal stylesheets containing default styles, which they apply to all pages by default; without them all of the text would run together in a clump and we would have to style everything from scratch. All modern browsers display HTML content by default in pretty much the same way.</p>
+When we look at a well-marked up HTML document, even something as simple as our example, we can see how the browser is making the HTML readable by adding some default styling. Headings are large and bold and our list has bullets. This happens because browsers have internal stylesheets containing default styles, which they apply to all pages by default; without them all of the text would run together in a clump and we would have to style everything from scratch. All modern browsers display HTML content by default in pretty much the same way.
 
-<p>However, you will often want something other than the choice the browser has made. This can be done by choosing the HTML element that you want to change, and using a CSS rule to change the way it looks. A good example is our <code>&lt;ul&gt;</code>, an unordered list. It has list bullets, and if I decide I don't want those bullets I can remove them like so:</p>
+However, you will often want something other than the choice the browser has made. This can be done by choosing the HTML element that you want to change, and using a CSS rule to change the way it looks. A good example is our `<ul>`, an unordered list. It has list bullets, and if I decide I don't want those bullets I can remove them like so:
 
-<pre class="brush: css">li {
+```css
+li {
   list-style-type: none;
-}</pre>
+}
+```
 
-<p>Try adding this to your CSS now.</p>
+Try adding this to your CSS now.
 
-<p>The <code>list-style-type</code> property is a good property to look at on MDN to see which values are supported. Take a look at the page for <code><a href="/en-US/docs/Web/CSS/list-style-type">list-style-type</a></code> and you will find an interactive example at the top of the page to try some different values in, then all allowable values are detailed further down the page.</p>
+The `list-style-type` property is a good property to look at on MDN to see which values are supported. Take a look at the page for [`list-style-type`](/en-US/docs/Web/CSS/list-style-type) and you will find an interactive example at the top of the page to try some different values in, then all allowable values are detailed further down the page.
 
-<p>Looking at that page you will discover that in addition to removing the list bullets you can change them — try changing them to square bullets by using a value of <code>square</code>.</p>
+Looking at that page you will discover that in addition to removing the list bullets you can change them — try changing them to square bullets by using a value of `square`.
 
-<h2 id="Adding_a_class">Adding a class</h2>
+## Adding a class
 
-<p>So far we have styled elements based on their HTML element names. This works as long as you want all of the elements of that type in your document to look the same. Most of the time that isn't the case and so you will need to find a way to select a subset of the elements without changing the others. The most common way to do this is to add a class to your HTML element and target that class.</p>
+So far we have styled elements based on their HTML element names. This works as long as you want all of the elements of that type in your document to look the same. Most of the time that isn't the case and so you will need to find a way to select a subset of the elements without changing the others. The most common way to do this is to add a class to your HTML element and target that class.
 
-<p>In your HTML document, add a <a href="/en-US/docs/Web/HTML/Global_attributes/class">class attribute</a> to the second list item. Your list will now look like this:</p>
+In your HTML document, add a [class attribute](/en-US/docs/Web/HTML/Global_attributes/class) to the second list item. Your list will now look like this:
 
-<pre class="brush: html; highlight[3]">&lt;ul&gt;
-  &lt;li&gt;Item one&lt;/li&gt;
-  &lt;li class="special"&gt;Item two&lt;/li&gt;
-  &lt;li&gt;Item &lt;em&gt;three&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul>
+  <li>Item one</li>
+  <li class="special">Item two</li>
+  <li>Item <em>three</em></li>
+</ul>
+```
 
-<p>In your CSS you can target the class of <code>special</code> by creating a selector that starts with a full stop character. Add the following to your CSS file:</p>
+In your CSS you can target the class of `special` by creating a selector that starts with a full stop character. Add the following to your CSS file:
 
-<pre class="brush: css">.special {
+```css
+.special {
   color: orange;
   font-weight: bold;
-}</pre>
+}
+```
 
-<p>Save and refresh to see what the result is.</p>
+Save and refresh to see what the result is.
 
-<p>You can apply the class of <code>special</code> to any element on your page that you want to have the same look as this list item. For example, you might want the <code>&lt;span&gt;</code> in the paragraph to also be orange and bold. Try adding a <code>class</code> of <code>special</code> to it, then reload your page and see what happens.</p>
+You can apply the class of `special` to any element on your page that you want to have the same look as this list item. For example, you might want the `<span>` in the paragraph to also be orange and bold. Try adding a `class` of `special` to it, then reload your page and see what happens.
 
-<p>Sometimes you will see rules with a selector that lists the HTML element selector along with the class:</p>
+Sometimes you will see rules with a selector that lists the HTML element selector along with the class:
 
-<pre class="brush: css">li.special {
+```css
+li.special {
   color: orange;
   font-weight: bold;
-}</pre>
+}
+```
 
-<p>This syntax means "target any <code>li</code> element that has a class of special". If you were to do this then you would no longer be able to apply the class to a <code>&lt;span&gt;</code> or another element by adding the class to it; you would have to add that element to the list of selectors:</p>
+This syntax means "target any `li` element that has a class of special". If you were to do this then you would no longer be able to apply the class to a `<span>` or another element by adding the class to it; you would have to add that element to the list of selectors:
 
-<pre class="brush: css">li.special,
+```css
+li.special,
 span.special {
   color: orange;
   font-weight: bold;
-}</pre>
+}
+```
 
-<p>As you can imagine, some classes might be applied to many elements and you don't want to have to keep editing your CSS every time something new needs to take on that style. Therefore it is sometimes best to bypass the element and refer to the class, unless you know that you want to create some special rules for one element alone, and perhaps want to make sure they are not applied to other things.</p>
+As you can imagine, some classes might be applied to many elements and you don't want to have to keep editing your CSS every time something new needs to take on that style. Therefore it is sometimes best to bypass the element and refer to the class, unless you know that you want to create some special rules for one element alone, and perhaps want to make sure they are not applied to other things.
 
-<h2 id="Styling_things_based_on_their_location_in_a_document">Styling things based on their location in a document</h2>
+## Styling things based on their location in a document
 
-<p>There are times when you will want something to look different based on where it is in the document. There are a number of selectors that can help you here, but for now we will look at just a couple. In our document, there are two <code>&lt;em&gt;</code> elements — one inside a paragraph and the other inside a list item. To select only an <code>&lt;em&gt;</code> that is nested inside an <code>&lt;li&gt;</code> element I can use a selector called the <strong>descendant combinator</strong>, which takes the form of a space between two other selectors.</p>
+There are times when you will want something to look different based on where it is in the document. There are a number of selectors that can help you here, but for now we will look at just a couple. In our document, there are two `<em>` elements — one inside a paragraph and the other inside a list item. To select only an `<em>` that is nested inside an `<li>` element I can use a selector called the **descendant combinator**, which takes the form of a space between two other selectors.
 
-<p>Add the following rule to your stylesheet.</p>
+Add the following rule to your stylesheet.
 
-<pre class="brush: css">li em {
+```css
+li em {
   color: rebeccapurple;
-}</pre>
+}
+```
 
-<p>This selector will select any <code>&lt;em&gt;</code> element that is inside (a descendant of) an <code>&lt;li&gt;</code>. So in your example document, you should find that the <code>&lt;em&gt;</code> in the third list item is now purple, but the one inside the paragraph is unchanged.</p>
+This selector will select any `<em>` element that is inside (a descendant of) an `<li>`. So in your example document, you should find that the `<em>` in the third list item is now purple, but the one inside the paragraph is unchanged.
 
-<p>Something else you might like to try is styling a paragraph when it comes directly after a heading at the same hierarchy level in the HTML. To do so place a <code>+</code> (an <strong>adjacent sibling combinator</strong>) between the selectors.</p>
+Something else you might like to try is styling a paragraph when it comes directly after a heading at the same hierarchy level in the HTML. To do so place a `+` (an **adjacent sibling combinator**) between the selectors.
 
-<p>Try adding this rule to your stylesheet as well:</p>
+Try adding this rule to your stylesheet as well:
 
-<pre class="brush: css">h1 + p {
+```css
+h1 + p {
   font-size: 200%;
-}</pre>
+}
+```
 
-<p>The live example below includes the two rules above. Try adding a rule to make a span red, if it is inside a paragraph. You will know if you have it right as the span in the first paragraph will be red, but the one in the first list item will not change color.</p>
+The live example below includes the two rules above. Try adding a rule to make a span red, if it is inside a paragraph. You will know if you have it right as the span in the first paragraph will be red, but the one in the first list item will not change color.
 
-<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started2.html", '100%', 1100)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/getting-started/started2.html", '100%', 1100)}}
 
-<div class="notecard note">
-<p><strong>Note:</strong> As you can see, CSS gives us several ways to target elements, and we've only scratched the surface so far! We will be taking a proper look at all of these selectors and many more in our <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">Selectors</a> articles later on in the course.</p>
-</div>
+> **Note:** As you can see, CSS gives us several ways to target elements, and we've only scratched the surface so far! We will be taking a proper look at all of these selectors and many more in our [Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) articles later on in the course.
 
-<h2 id="Styling_things_based_on_state">Styling things based on state</h2>
+## Styling things based on state
 
-<p>The final type of styling we shall take a look at in this tutorial is the ability to style things based on their state. A straightforward example of this is when styling links. When we style a link we need to target the <code><a href="/en-US/docs/Web/HTML/Element/a">&lt;a&gt;</a></code> (anchor) element. This has different states depending on whether it is unvisited, visited, being hovered over, focused via the keyboard, or in the process of being clicked (activated). You can use CSS to target these different states — the CSS below styles unvisited links pink and visited links green.</p>
+The final type of styling we shall take a look at in this tutorial is the ability to style things based on their state. A straightforward example of this is when styling links. When we style a link we need to target the [`<a>`](/en-US/docs/Web/HTML/Element/a) (anchor) element. This has different states depending on whether it is unvisited, visited, being hovered over, focused via the keyboard, or in the process of being clicked (activated). You can use CSS to target these different states — the CSS below styles unvisited links pink and visited links green.
 
-<pre class="brush: css">a:link {
+```css
+a:link {
   color: pink;
 }
 
 a:visited {
   color: green;
-}</pre>
+}
+```
 
-<p>You can change the way the link looks when the user hovers over it, for example by removing the underline, which is achieved by the next rule:</p>
+You can change the way the link looks when the user hovers over it, for example by removing the underline, which is achieved by the next rule:
 
-<pre class="brush: css">a:hover {
+```css
+a:hover {
   text-decoration: none;
-}</pre>
+}
+```
 
-<p>In the live example below, you can play with different values for the various states of a link. I have added the rules above to it, and now realize that the pink color is quite light and hard to read — why not change that to a better color? Can you make the links bold?</p>
+In the live example below, you can play with different values for the various states of a link. I have added the rules above to it, and now realize that the pink color is quite light and hard to read — why not change that to a better color? Can you make the links bold?
 
-<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started3.html", '100%', 900)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/getting-started/started3.html", '100%', 900)}}
 
-<p>We have removed the underline on our link on hover. You could remove the underline from all states of a link. It is worth remembering however that in a real site, you want to ensure that visitors know that a link is a link. Leaving the underline in place can be an important clue for people to realize that some text inside a paragraph can be clicked on — this is the behavior they are used to. As with everything in CSS, there is the potential to make the document less accessible with your changes — we will aim to highlight potential pitfalls in appropriate places.</p>
+We have removed the underline on our link on hover. You could remove the underline from all states of a link. It is worth remembering however that in a real site, you want to ensure that visitors know that a link is a link. Leaving the underline in place can be an important clue for people to realize that some text inside a paragraph can be clicked on — this is the behavior they are used to. As with everything in CSS, there is the potential to make the document less accessible with your changes — we will aim to highlight potential pitfalls in appropriate places.
 
-<div class="notecard note">
-<p><strong>Note:</strong> you will often see mention of <a href="/en-US/docs/Learn/Accessibility">accessibility</a> in these lessons and across MDN. When we talk about accessibility we are referring to the requirement for our webpages to be understandable and usable by everyone.</p>
+> **Note:** you will often see mention of [accessibility](/en-US/docs/Learn/Accessibility) in these lessons and across MDN. When we talk about accessibility we are referring to the requirement for our webpages to be understandable and usable by everyone.
+>
+> Your visitor may well be on a computer with a mouse or trackpad, or a phone with a touchscreen. Or they might be using a screenreader, which reads out the content of the document, or they may need to use much larger text, or be navigating the site using the keyboard only.
+>
+> A plain HTML document is generally accessible to everyone — as you start to style that document it is important that you don't make it less accessible.
 
-<p>Your visitor may well be on a computer with a mouse or trackpad, or a phone with a touchscreen. Or they might be using a screenreader, which reads out the content of the document, or they may need to use much larger text, or be navigating the site using the keyboard only.</p>
+## Combining selectors and combinators
 
-<p>A plain HTML document is generally accessible to everyone — as you start to style that document it is important that you don't make it less accessible.</p>
-</div>
+It is worth noting that you can combine multiple selectors and combinators together. For example:
 
-<h2 id="Combining_selectors_and_combinators">Combining selectors and combinators</h2>
-
-<p>It is worth noting that you can combine multiple selectors and combinators together. For example:</p>
-
-<pre class="brush: css">/* selects any &lt;span&gt; that is inside a &lt;p&gt;, which is inside an &lt;article&gt;  */
+```css
+/* selects any <span> that is inside a <p>, which is inside an <article>  */
 article p span { ... }
 
-/* selects any &lt;p&gt; that comes directly after a &lt;ul&gt;, which comes directly after an &lt;h1&gt;  */
-h1 + ul + p { ... }</pre>
+/* selects any <p> that comes directly after a <ul>, which comes directly after an <h1>  */
+h1 + ul + p { ... }
+```
 
-<p>You can combine multiple types together, too. Try adding the following into your code:</p>
+You can combine multiple types together, too. Try adding the following into your code:
 
-<pre class="brush: css">body h1 + p .special {
+```css
+body h1 + p .special {
   color: yellow;
   background-color: black;
   padding: 5px;
-}</pre>
+}
+```
 
-<p>This will style any element with a class of <code>special</code>, which is inside a <code>&lt;p&gt;</code>, which comes just after an <code>&lt;h1&gt;</code>, which is inside a <code>&lt;body&gt;</code>. Phew!</p>
+This will style any element with a class of `special`, which is inside a `<p>`, which comes just after an `<h1>`, which is inside a `<body>`. Phew!
 
-<p>In the original HTML we provided, the only element styled is <code>&lt;span class="special"&gt;</code>.</p>
+In the original HTML we provided, the only element styled is `<span class="special">`.
 
-<p>Don't worry if this seems complicated at the moment — you'll soon start to get the hang of it as you write more CSS.</p>
+Don't worry if this seems complicated at the moment — you'll soon start to get the hang of it as you write more CSS.
 
-<h2 id="Wrapping_up">Wrapping up</h2>
+## Wrapping up
 
-<p>In this tutorial, we have taken a look at a number of ways in which you can style a document using CSS. We will be developing this knowledge as we move through the rest of the lessons. However you now already know enough to style text, apply CSS based on different ways of targeting elements in the document, and look up properties and values in the MDN documentation.</p>
+In this tutorial, we have taken a look at a number of ways in which you can style a document using CSS. We will be developing this knowledge as we move through the rest of the lessons. However you now already know enough to style text, apply CSS based on different ways of targeting elements in the document, and look up properties and values in the MDN documentation.
 
-<p>In the next lesson we will be taking a look at how CSS is structured.</p>
+In the next lesson we will be taking a look at how CSS is structured.
 
-<p>{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}</p>
+{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
 
-<h2 id="In_this_module">In this module</h2>
+## In this module
 
-<ol>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/What_is_CSS">What is CSS?</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/Getting_started">Getting started with CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured">How CSS is structured</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_works">How CSS works</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge">Using your new knowledge</a></li>
-</ol>
+1.  [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
+2.  [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
+3.  [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4.  [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
+5.  [Using your new knowledge](/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

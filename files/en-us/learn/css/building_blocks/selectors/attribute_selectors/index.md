@@ -8,153 +8,150 @@ tags:
   - Learn
   - Selectors
 ---
-<p>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}</p>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
 
-<p>As you know from your study of HTML, elements can have attributes that give further detail about the element being marked up. In CSS you can use attribute selectors to target elements with certain attributes. This lesson will show you how to use these very useful selectors.</p>
+As you know from your study of HTML, elements can have attributes that give further detail about the element being marked up. In CSS you can use attribute selectors to target elements with certain attributes. This lesson will show you how to use these very useful selectors.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, <a href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of how CSS works (study <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>.)</td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To learn what attribute selectors are and how to use them.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        Basic computer literacy,
+        <a
+          href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          >basic software installed</a
+        >, basic knowledge of
+        <a
+          href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          >working with files</a
+        >, HTML basics (study
+        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          >Introduction to HTML</a
+        >), and an idea of how CSS works (study
+        <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>.)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>To learn what attribute selectors are and how to use them.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Presence_and_value_selectors">Presence and value selectors</h2>
+## Presence and value selectors
 
-<p>These selectors enable the selection of an element based on the presence of an attribute alone (for example <code>href</code>), or on various different matches against the value of the attribute.</p>
+These selectors enable the selection of an element based on the presence of an attribute alone (for example `href`), or on various different matches against the value of the attribute.
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Selector</th>
-   <th scope="col">Example</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>[<em>attr</em>]</code></td>
-   <td><code>a[title]</code></td>
-   <td>Matches elements with an <em>attr</em> attribute (whose name is the value in square brackets).</td>
-  </tr>
-  <tr>
-   <td><code>[<em>attr</em>=<em>value</em>]</code></td>
-   <td><code>a[href="https://example.com"]</code></td>
-   <td>Matches elements with an <em>attr</em> attribute whose value is exactly <em>value</em> — the string inside the quotes.</td>
-  </tr>
-  <tr>
-   <td><code>[<em>attr</em>~=<em>value</em>]</code></td>
-   <td><code>p[class~="special"]</code></td>
-   <td>
-    <p><br>
-     Matches elements with an <em>attr</em> attribute whose value is exactly <em>value</em>, or contains <em>value</em> in its (space separated) list of values.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>[<em>attr</em>|=<em>value</em>]</code></td>
-   <td><code>div[lang|="zh"]</code></td>
-   <td>Matches elements with an <em>attr</em> attribute whose value is exactly <em>value</em> or begins with <em>value</em> immediately followed by a hyphen.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Selector</th>
+      <th scope="col">Example</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>[<em>attr</em>]</code></td>
+      <td><code>a[title]</code></td>
+      <td>
+        Matches elements with an <em>attr</em> attribute (whose name is the
+        value in square brackets).
+      </td>
+    </tr>
+    <tr>
+      <td><code>[<em>attr</em>=<em>value</em>]</code></td>
+      <td><code>a[href="https://example.com"]</code></td>
+      <td>
+        Matches elements with an <em>attr</em> attribute whose value is exactly
+        <em>value</em> — the string inside the quotes.
+      </td>
+    </tr>
+    <tr>
+      <td><code>[<em>attr</em>~=<em>value</em>]</code></td>
+      <td><code>p[class~="special"]</code></td>
+      <td>
+        <p>
+          <br />Matches elements with an <em>attr</em> attribute whose value is
+          exactly <em>value</em>, or contains <em>value</em> in its (space
+          separated) list of values.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>[<em>attr</em>|=<em>value</em>]</code></td>
+      <td><code>div[lang|="zh"]</code></td>
+      <td>
+        Matches elements with an <em>attr</em> attribute whose value is exactly
+        <em>value</em> or begins with <em>value</em> immediately followed by a
+        hyphen.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>In the example below you can see these selectors being used.</p>
+In the example below you can see these selectors being used.
 
-<ul>
- <li>By using <code>li[class]</code> we can match any list item with a class attribute. This matches all of the list items except the first one.</li>
- <li><code>li[class="a"]</code> matches a selector with a class of <code>a</code>, but not a selector with a class of <code>a</code> with another space-separated class as part of the value. It selects the second list item.</li>
- <li><code>li[class~="a"]</code> will match a class of <code>a</code> but also a value that contains the class of <code>a</code> as part of a whitespace-separated list. It selects the second and third list items.</li>
-</ul>
+- By using `li[class]` we can match any list item with a class attribute. This matches all of the list items except the first one.
+- `li[class="a"]` matches a selector with a class of `a`, but not a selector with a class of `a` with another space-separated class as part of the value. It selects the second list item.
+- `li[class~="a"]` will match a class of `a` but also a value that contains the class of `a` as part of a whitespace-separated list. It selects the second and third list items.
 
-<p>{{EmbedGHLiveSample("css-examples/learn/selectors/attribute.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/selectors/attribute.html", '100%', 800)}}
 
-<h2 id="Substring_matching_selectors">Substring matching selectors</h2>
+## Substring matching selectors
 
-<p>These selectors allow for more advanced matching of substrings inside the value of your attribute. For example, if you had classes of <code>box-warning</code> and <code>box-error</code> and wanted to match everything that started with the string "box-", you could use <code>[class^="box-"]</code> to select them both (or <code>[class|="box"]</code> as described in section above).</p>
+These selectors allow for more advanced matching of substrings inside the value of your attribute. For example, if you had classes of `box-warning` and `box-error` and wanted to match everything that started with the string "box-", you could use `[class^="box-"]` to select them both (or `[class|="box"]` as described in section above).
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Selector</th>
-   <th scope="col">Example</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>[<em>attr</em>^=<em>value</em>]</code></td>
-   <td><code>li[class^="box-"]</code></td>
-   <td>Matches elements with an <em>attr</em> attribute, whose value begins with <em>value</em>.</td>
-  </tr>
-  <tr>
-   <td><code>[<em>attr</em>$=<em>value</em>]</code></td>
-   <td><code>li[class$="-box"]</code></td>
-   <td>Matches elements with an <em>attr</em> attribute whose value ends with <em>value</em>.</td>
-  </tr>
-  <tr>
-   <td><code>[<em>attr</em>*=<em>value</em>]</code></td>
-   <td><code>li[class*="box"]</code></td>
-   <td>Matches elements with an <em>attr</em> attribute whose value contains <em>value</em> anywhere within the string.</td>
-  </tr>
- </tbody>
-</table>
+| Selector        | Example             | Description                                                                                        |
+| --------------- | ------------------- | -------------------------------------------------------------------------------------------------- |
+| `[attr^=value]` | `li[class^="box-"]` | Matches elements with an _attr_ attribute, whose value begins with _value_.                        |
+| `[attr$=value]` | `li[class$="-box"]` | Matches elements with an _attr_ attribute whose value ends with _value_.                           |
+| `[attr*=value]` | `li[class*="box"]`  | Matches elements with an _attr_ attribute whose value contains _value_ anywhere within the string. |
 
-<p>(Aside: It may help to note that <code>^</code> and <code>$</code> have long been used as <em>anchors</em> in so-called <em>regular expressions</em> to mean <em>begins with</em> and <em>ends with</em> respectively.)</p>
+(Aside: It may help to note that `^` and `$` have long been used as _anchors_ in so-called _regular expressions_ to mean _begins with_ and _ends with_ respectively.)
 
-<p>The next example shows usage of these selectors:</p>
+The next example shows usage of these selectors:
 
-<ul>
- <li><code>li[class^="a"]</code> matches any attribute value which starts with <code>a</code>, so matches the first two list items.</li>
- <li><code>li[class$="a"]</code> matches any attribute value that ends with <code>a</code>, so matches the first and third list item.</li>
- <li><code>li[class*="a"]</code> matches any attribute value where <code>a</code> appears anywhere in the string, so it matches all of our list items.</li>
-</ul>
+- `li[class^="a"]` matches any attribute value which starts with `a`, so matches the first two list items.
+- `li[class$="a"]` matches any attribute value that ends with `a`, so matches the first and third list item.
+- `li[class*="a"]` matches any attribute value where `a` appears anywhere in the string, so it matches all of our list items.
 
-<p>{{EmbedGHLiveSample("css-examples/learn/selectors/attribute-substring.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/selectors/attribute-substring.html", '100%', 800)}}
 
-<h2 id="Case-sensitivity">Case-sensitivity</h2>
+## Case-sensitivity
 
-<p>If you want to match attribute values case-insensitively you can use the value <code>i</code> before the closing bracket. This flag tells the browser to match ASCII characters case-insensitively. Without the flag the values will be matched according to the case-sensitivity of the document language — in HTML's case it will be case sensitive.</p>
+If you want to match attribute values case-insensitively you can use the value `i` before the closing bracket. This flag tells the browser to match ASCII characters case-insensitively. Without the flag the values will be matched according to the case-sensitivity of the document language — in HTML's case it will be case sensitive.
 
-<p>In the example below, the first selector will match a value that begins with <code>a</code> — it only matches the first list item because the other two list items start with an uppercase A. The second selector uses the case-insensitive flag and so matches all of the list items.</p>
+In the example below, the first selector will match a value that begins with `a` — it only matches the first list item because the other two list items start with an uppercase A. The second selector uses the case-insensitive flag and so matches all of the list items.
 
-<p>{{EmbedGHLiveSample("css-examples/learn/selectors/attribute-case.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/selectors/attribute-case.html", '100%', 800)}}
 
-<div class="notecard note">
-<p><strong>Note:</strong> There is also a newer value <code>s</code>, which will force case-sensitive matching in contexts where matching is normally case-insensitive, however this is less well supported in browsers and isn't very useful in an HTML context.</p>
-</div>
+> **Note:** There is also a newer value `s`, which will force case-sensitive matching in contexts where matching is normally case-insensitive, however this is less well supported in browsers and isn't very useful in an HTML context.
 
-<h2 id="Next_steps">Next steps</h2>
+## Next steps
 
-<p>Now that we are done with attribute selectors, you can continue on to the next article and read about <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">pseudo-class and pseudo-element selectors</a>.</p>
+Now that we are done with attribute selectors, you can continue on to the next article and read about [pseudo-class and pseudo-element selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements).
 
-<p>{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}</p>
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
 
-<h2 id="In_this_module">In this module</h2>
+## In this module
 
-<ol>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascade and inheritance</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">CSS selectors</a>
-  <ul>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">Type, class, and ID selectors</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Attribute selectors</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Pseudo-classes and pseudo-elements</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators">Combinators</a></li>
-  </ul>
- </li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">The box model</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Backgrounds and borders</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling different text directions</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content">Overflowing content</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">Values and units</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Sizing items in CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Images, media, and form elements</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Styling_tables">Styling tables</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS">Debugging CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Organizing">Organizing your CSS</a></li>
-</ol>
+1.  [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2.  [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+
+    - [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+    - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+    - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+    - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+
+3.  [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+4.  [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5.  [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6.  [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7.  [Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+8.  [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9.  [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+10. [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
+11. [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
+12. [Organizing your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing)

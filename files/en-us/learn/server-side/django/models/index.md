@@ -12,66 +12,70 @@ tags:
   - django
   - server-side
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
 
-<div>{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}</div>
-
-<p>This article shows how to define models for the LocalLibrary website. It explains what a model is, how it is declared, and some of the main field types. It also briefly shows a few of the main ways you can access model data.</p>
+This article shows how to define models for the LocalLibrary website. It explains what a model is, how it is declared, and some of the main field types. It also briefly shows a few of the main ways you can access model data.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td><a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">Django Tutorial Part 2: Creating a skeleton website</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>
-    <p>To be able to design and create your own models, choosing fields appropriately.</p>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website"
+          >Django Tutorial Part 2: Creating a skeleton website</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        <p>
+          To be able to design and create your own models, choosing fields
+          appropriately.
+        </p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Overview">Overview</h2>
+## Overview
 
-<p>Django web applications access and manage data through Python objects referred to as models. Models define the <em>structure</em> of stored data, including the field <em>types</em> and possibly also their maximum size, default values, selection list options, help text for documentation, label text for forms, etc. The definition of the model is independent of the underlying database — you can choose one of several as part of your project settings. Once you've chosen what database you want to use, you don't need to talk to it directly at all — you just write your model structure and other code, and Django handles all the dirty work of communicating with the database for you.</p>
+Django web applications access and manage data through Python objects referred to as models. Models define the _structure_ of stored data, including the field _types_ and possibly also their maximum size, default values, selection list options, help text for documentation, label text for forms, etc. The definition of the model is independent of the underlying database — you can choose one of several as part of your project settings. Once you've chosen what database you want to use, you don't need to talk to it directly at all — you just write your model structure and other code, and Django handles all the dirty work of communicating with the database for you.
 
-<p>This tutorial shows how to define and access the models for the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary website</a> example.</p>
+This tutorial shows how to define and access the models for the [LocalLibrary website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) example.
 
-<h2 id="Designing_the_LocalLibrary_models">Designing the LocalLibrary models</h2>
+## Designing the LocalLibrary models
 
-<p>Before you jump in and start coding the models, it's worth taking a few minutes to think about what data we need to store and the relationships between the different objects.</p>
+Before you jump in and start coding the models, it's worth taking a few minutes to think about what data we need to store and the relationships between the different objects.
 
-<p>We know that we need to store information about books (title, summary, author, written language, category, ISBN) and that we might have multiple copies available (with globally unique id, availability status, etc.). We might need to store more information about the author than just their name, and there might be multiple authors with the same or similar names. We want to be able to sort information based on book title, author, written language, and category.</p>
+We know that we need to store information about books (title, summary, author, written language, category, ISBN) and that we might have multiple copies available (with globally unique id, availability status, etc.). We might need to store more information about the author than just their name, and there might be multiple authors with the same or similar names. We want to be able to sort information based on book title, author, written language, and category.
 
-<p>When designing your models it makes sense to have separate models for every "object" (a group of related information). In this case, the obvious objects are books, book instances, and authors.</p>
+When designing your models it makes sense to have separate models for every "object" (a group of related information). In this case, the obvious objects are books, book instances, and authors.
 
-<p>You might also want to use models to represent selection-list options (e.g. like a drop down list of choices), rather than hard coding the choices into the website itself — this is recommended when all the options aren't known up front or may change. Obvious candidates for models, in this case, include the book genre (e.g. Science Fiction, French Poetry, etc.) and language (English, French, Japanese).</p>
+You might also want to use models to represent selection-list options (e.g. like a drop down list of choices), rather than hard coding the choices into the website itself — this is recommended when all the options aren't known up front or may change. Obvious candidates for models, in this case, include the book genre (e.g. Science Fiction, French Poetry, etc.) and language (English, French, Japanese).
 
-<p>Once we've decided on our models and field, we need to think about the relationships. Django allows you to define relationships that are one to one (<code>OneToOneField</code>), one to many (<code>ForeignKey</code>) and many to many (<code>ManyToManyField</code>).</p>
+Once we've decided on our models and field, we need to think about the relationships. Django allows you to define relationships that are one to one (`OneToOneField`), one to many (`ForeignKey`) and many to many (`ManyToManyField`).
 
-<p>With that in mind, the UML association diagram below shows the models we'll define in this case (as boxes).</p>
+With that in mind, the UML association diagram below shows the models we'll define in this case (as boxes).
 
-<p><img alt="LocalLibrary Model UML with fixed Author multiplicity inside the Book class" src="local_library_model_uml.svg"></p>
+![LocalLibrary Model UML with fixed Author multiplicity inside the Book class](local_library_model_uml.svg)
 
-<p>We've created models for the book (the generic details of the book), book instance (status of specific physical copies of the book available in the system), and author. We have also decided to have a model for the genre so that values can be created/selected through the admin interface. We've decided not to have a model for the <code>BookInstance:status</code> — we've hardcoded the values (<code>LOAN_STATUS</code>) because we don't expect these to change. Within each of the boxes, you can see the model name, the field names, and types, and also the methods and their return types.</p>
+We've created models for the book (the generic details of the book), book instance (status of specific physical copies of the book available in the system), and author. We have also decided to have a model for the genre so that values can be created/selected through the admin interface. We've decided not to have a model for the `BookInstance:status` — we've hardcoded the values (`LOAN_STATUS`) because we don't expect these to change. Within each of the boxes, you can see the model name, the field names, and types, and also the methods and their return types.
 
-<p>The diagram also shows the relationships between the models, including their <em>multiplicities</em>. The multiplicities are the numbers on the diagram showing the numbers (maximum and minimum) of each model that may be present in the relationship. For example, the connecting line between the boxes shows that Book and a Genre are related. The numbers close to the Genre model show that a book must have one or more Genres (as many as you like), while the numbers on the other end of the line next to the Book model show that a Genre can have zero or many associated books.</p>
+The diagram also shows the relationships between the models, including their _multiplicities_. The multiplicities are the numbers on the diagram showing the numbers (maximum and minimum) of each model that may be present in the relationship. For example, the connecting line between the boxes shows that Book and a Genre are related. The numbers close to the Genre model show that a book must have one or more Genres (as many as you like), while the numbers on the other end of the line next to the Book model show that a Genre can have zero or many associated books.
 
-<div class="notecard note">
-    <p><strong>Note:</strong> The next section provides a basic primer explaining how models are defined and used. As you read it, consider how we will construct each of the models in the diagram above.</p>
-</div>
+> **Note:** The next section provides a basic primer explaining how models are defined and used. As you read it, consider how we will construct each of the models in the diagram above.
 
-<h2 id="Model_primer">Model primer</h2>
+## Model primer
 
-<p>This section provides a brief overview of how a model is defined and some of the more important fields and field arguments.</p>
+This section provides a brief overview of how a model is defined and some of the more important fields and field arguments.
 
-<h3 id="Model_definition">Model definition</h3>
+### Model definition
 
-<p>Models are usually defined in an application's <strong>models.py</strong> file. They are implemented as subclasses of <code>django.db.models.Model</code>, and can include fields, methods and metadata. The code fragment below shows a "typical" model, named <code>MyModelName</code>:</p>
+Models are usually defined in an application's **models.py** file. They are implemented as subclasses of `django.db.models.Model`, and can include fields, methods and metadata. The code fragment below shows a "typical" model, named `MyModelName`:
 
-<pre class="brush: python">from django.db import models
+```python
+from django.db import models
 
 class MyModelName(models.Model):
     """A typical class defining a model, derived from the Model class."""
@@ -91,201 +95,210 @@ class MyModelName(models.Model):
 
     def __str__(self):
         """String for representing the MyModelName object (in Admin site etc.)."""
-        return self.my_field_name</pre>
+        return self.my_field_name
+```
 
-<p>In the below sections we'll explore each of the features inside the model in detail:</p>
+In the below sections we'll explore each of the features inside the model in detail:
 
-<h4 id="Fields">Fields</h4>
+#### Fields
 
-<p>A model can have an arbitrary number of fields, of any type — each one represents a column of data that we want to store in one of our database tables. Each database record (row) will consist of one of each field value. Let's look at the example seen below:</p>
+A model can have an arbitrary number of fields, of any type — each one represents a column of data that we want to store in one of our database tables. Each database record (row) will consist of one of each field value. Let's look at the example seen below:
 
-<pre class="brush: python">my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')</pre>
+```python
+my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
+```
 
-<p>Our above example has a single field called <code>my_field_name</code>, of type <code>models.CharField</code> — which means that this field will contain strings of alphanumeric characters. The field types are assigned using specific classes, which determine the type of record that is used to store the data in the database, along with validation criteria to be used when values are received from an HTML form (i.e. what constitutes a valid value). The field types can also take arguments that further specify how the field is stored or can be used. In this case we are giving our field two arguments:</p>
+Our above example has a single field called `my_field_name`, of type `models.CharField` — which means that this field will contain strings of alphanumeric characters. The field types are assigned using specific classes, which determine the type of record that is used to store the data in the database, along with validation criteria to be used when values are received from an HTML form (i.e. what constitutes a valid value). The field types can also take arguments that further specify how the field is stored or can be used. In this case we are giving our field two arguments:
 
-<ul>
- <li><code>max_length=20</code> — States that the maximum length of a value in this field is 20 characters.</li>
- <li><code>help_text='Enter field documentation'</code> — provides a text label to display to help users know what value to provide when this value is to be entered by a user via an HTML form.</li>
-</ul>
+- `max_length=20` — States that the maximum length of a value in this field is 20 characters.
+- `help_text='Enter field documentation'` — provides a text label to display to help users know what value to provide when this value is to be entered by a user via an HTML form.
 
-<p>The field name is used to refer to it in queries and templates. Fields also have a label specified as an argument (<code>verbose_name</code>), the default value of which is <code>None</code>, meaning replacing any underscores in the field name with a space (for example <code>my_field_name</code> would have a default label of <em>my field name</em>). Note that when the label is used as a form label through Django frame, the first letter of the label is capitalised (for example <code>my_field_name</code> would be <em>My field name</em>).</p>
+The field name is used to refer to it in queries and templates. Fields also have a label specified as an argument (`verbose_name`), the default value of which is `None`, meaning replacing any underscores in the field name with a space (for example `my_field_name` would have a default label of _my field name_). Note that when the label is used as a form label through Django frame, the first letter of the label is capitalised (for example `my_field_name` would be _My field name_).
 
-<p>The order that fields are declared will affect their default order if a model is rendered in a form (e.g. in the Admin site), though this may be overridden.</p>
+The order that fields are declared will affect their default order if a model is rendered in a form (e.g. in the Admin site), though this may be overridden.
 
-<h5 id="Common_field_arguments">Common field arguments</h5>
+##### Common field arguments
 
-<p>The following common arguments can be used when declaring many/most of the different field types:</p>
+The following common arguments can be used when declaring many/most of the different field types:
 
-<ul>
- <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#help-text">help_text</a>: Provides a text label for HTML forms (e.g. in the admin site), as described above.</li>
- <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#verbose-name">verbose_name</a>: A human-readable name for the field used in field labels. If not specified, Django will infer the default verbose name from the field name.</li>
- <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#default">default</a>: The default value for the field. This can be a value or a callable object, in which case the object will be called every time a new record is created.</li>
- <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#null">null</a>: If <code>True</code>, Django will store blank values as <code>NULL</code> in the database for fields where this is appropriate (a <code>CharField</code> will instead store an empty string). The default is <code>False</code>.</li>
- <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#blank">blank</a>: If <code>True</code>, the field is allowed to be blank in your forms. The default is <code>False</code>, which means that Django's form validation will force you to enter a value. This is often used with <code>null=True</code> , because if you're going to allow blank values, you also want the database to be able to represent them appropriately.</li>
- <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#choices">choices</a>: A group of choices for this field. If this is provided, the default corresponding form widget will be a select box with these choices instead of the standard text field.</li>
- <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#primary-key">primary_key</a>: If <code>True</code>, sets the current field as the primary key for the model (A primary key is a special database column designated to uniquely identify all the different table records). If no field is specified as the primary key then Django will automatically add a field for this purpose.</li>
-</ul>
+- [help_text](https://docs.djangoproject.com/en/3.1/ref/models/fields/#help-text): Provides a text label for HTML forms (e.g. in the admin site), as described above.
+- [verbose_name](https://docs.djangoproject.com/en/3.1/ref/models/fields/#verbose-name): A human-readable name for the field used in field labels. If not specified, Django will infer the default verbose name from the field name.
+- [default](https://docs.djangoproject.com/en/3.1/ref/models/fields/#default): The default value for the field. This can be a value or a callable object, in which case the object will be called every time a new record is created.
+- [null](https://docs.djangoproject.com/en/3.1/ref/models/fields/#null): If `True`, Django will store blank values as `NULL` in the database for fields where this is appropriate (a `CharField` will instead store an empty string). The default is `False`.
+- [blank](https://docs.djangoproject.com/en/3.1/ref/models/fields/#blank): If `True`, the field is allowed to be blank in your forms. The default is `False`, which means that Django's form validation will force you to enter a value. This is often used with `null=True` , because if you're going to allow blank values, you also want the database to be able to represent them appropriately.
+- [choices](https://docs.djangoproject.com/en/3.1/ref/models/fields/#choices): A group of choices for this field. If this is provided, the default corresponding form widget will be a select box with these choices instead of the standard text field.
+- [primary_key](https://docs.djangoproject.com/en/3.1/ref/models/fields/#primary-key): If `True`, sets the current field as the primary key for the model (A primary key is a special database column designated to uniquely identify all the different table records). If no field is specified as the primary key then Django will automatically add a field for this purpose.
 
-<p>There are many other options — you can view the <a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#field-options">full list of field options here</a>.</p>
+There are many other options — you can view the [full list of field options here](https://docs.djangoproject.com/en/3.1/ref/models/fields/#field-options).
 
-<h5 id="Common_field_types">Common field types</h5>
+##### Common field types
 
-<p>The following list describes some of the more commonly used types of fields. </p>
+The following list describes some of the more commonly used types of fields.
 
-<ul>
- <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#django.db.models.CharField">CharField</a> is used to define short-to-mid sized fixed-length strings. You must specify the <code>max_length</code> of the data to be stored.</li>
- <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#django.db.models.TextField">TextField</a> is used for large arbitrary-length strings. You may specify a <code>max_length</code> for the field, but this is used only when the field is displayed in forms (it is not enforced at the database level).</li>
- <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#django.db.models.IntegerField" title="django.db.models.IntegerField">IntegerField</a> is a field for storing integer (whole number) values, and for validating entered values as integers in forms.</li>
- <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#datefield">DateField</a> and <a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#datetimefield">DateTimeField</a> are used for storing/representing dates and date/time information (as Python <code>datetime.date</code> in and <code>datetime.datetime</code> objects, respectively). These fields can additionally declare the (mutually exclusive) parameters <code>auto_now=True</code> (to set the field to the current date every time the model is saved), <code>auto_now_add</code> (to only set the date when the model is first created) , and <code>default</code> (to set a default date that can be overridden by the user).</li>
- <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#emailfield">EmailField</a> is used to store and validate email addresses.</li>
- <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#filefield">FileField</a> and <a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#imagefield">ImageField</a> are used to upload files and images respectively (the <code>ImageField</code> adds additional validation that the uploaded file is an image). These have parameters to define how and where the uploaded files are stored.</li>
- <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#autofield">AutoField</a> is a special type of <code>IntegerField</code> that automatically increments. A primary key of this type is automatically added to your model if you don’t explicitly specify one.</li>
- <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#foreignkey">ForeignKey</a> is used to specify a one-to-many relationship to another database model (e.g. a car has one manufacturer, but a manufacturer can make many cars). The "one" side of the relationship is the model that contains the "key" (models containing a "foreign key" referring to that "key", are on the "many" side of such a relationship).</li>
- <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#manytomanyfield">ManyToManyField</a> is used to specify a many-to-many relationship (e.g. a book can have several genres, and each genre can contain several books). In our library app we will use these very similarly to <code>ForeignKeys</code>, but they can be used in more complicated ways to describe the relationships between groups. These have the parameter <code>on_delete</code> to define what happens when the associated record is deleted (e.g. a value of <code>models.SET_NULL</code> would set the value to <code>NULL</code>).</li>
-</ul>
+- [CharField](https://docs.djangoproject.com/en/3.1/ref/models/fields/#django.db.models.CharField) is used to define short-to-mid sized fixed-length strings. You must specify the `max_length` of the data to be stored.
+- [TextField](https://docs.djangoproject.com/en/3.1/ref/models/fields/#django.db.models.TextField) is used for large arbitrary-length strings. You may specify a `max_length` for the field, but this is used only when the field is displayed in forms (it is not enforced at the database level).
+- [IntegerField](https://docs.djangoproject.com/en/3.1/ref/models/fields/#django.db.models.IntegerField "django.db.models.IntegerField") is a field for storing integer (whole number) values, and for validating entered values as integers in forms.
+- [DateField](https://docs.djangoproject.com/en/3.1/ref/models/fields/#datefield) and [DateTimeField](https://docs.djangoproject.com/en/3.1/ref/models/fields/#datetimefield) are used for storing/representing dates and date/time information (as Python `datetime.date` in and `datetime.datetime` objects, respectively). These fields can additionally declare the (mutually exclusive) parameters `auto_now=True` (to set the field to the current date every time the model is saved), `auto_now_add` (to only set the date when the model is first created) , and `default` (to set a default date that can be overridden by the user).
+- [EmailField](https://docs.djangoproject.com/en/3.1/ref/models/fields/#emailfield) is used to store and validate email addresses.
+- [FileField](https://docs.djangoproject.com/en/3.1/ref/models/fields/#filefield) and [ImageField](https://docs.djangoproject.com/en/3.1/ref/models/fields/#imagefield) are used to upload files and images respectively (the `ImageField` adds additional validation that the uploaded file is an image). These have parameters to define how and where the uploaded files are stored.
+- [AutoField](https://docs.djangoproject.com/en/3.1/ref/models/fields/#autofield) is a special type of `IntegerField` that automatically increments. A primary key of this type is automatically added to your model if you don’t explicitly specify one.
+- [ForeignKey](https://docs.djangoproject.com/en/3.1/ref/models/fields/#foreignkey) is used to specify a one-to-many relationship to another database model (e.g. a car has one manufacturer, but a manufacturer can make many cars). The "one" side of the relationship is the model that contains the "key" (models containing a "foreign key" referring to that "key", are on the "many" side of such a relationship).
+- [ManyToManyField](https://docs.djangoproject.com/en/3.1/ref/models/fields/#manytomanyfield) is used to specify a many-to-many relationship (e.g. a book can have several genres, and each genre can contain several books). In our library app we will use these very similarly to `ForeignKeys`, but they can be used in more complicated ways to describe the relationships between groups. These have the parameter `on_delete` to define what happens when the associated record is deleted (e.g. a value of `models.SET_NULL` would set the value to `NULL`).
 
-<p>There are many other types of fields, including fields for different types of numbers (big integers, small integers, floats), booleans, URLs, slugs, unique ids, and other "time-related" information (duration, time, etc.). You can view the <a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#field-types">full list here</a>.</p>
+There are many other types of fields, including fields for different types of numbers (big integers, small integers, floats), booleans, URLs, slugs, unique ids, and other "time-related" information (duration, time, etc.). You can view the [full list here](https://docs.djangoproject.com/en/3.1/ref/models/fields/#field-types).
 
-<h4 id="Metadata">Metadata</h4>
+#### Metadata
 
-<p>You can declare model-level metadata for your Model by declaring <code>class Meta</code>, as shown.</p>
+You can declare model-level metadata for your Model by declaring `class Meta`, as shown.
 
-<pre class="brush: python">class Meta:
+```python
+class Meta:
     ordering = ['-my_field_name']
-</pre>
+```
 
-<p>One of the most useful features of this metadata is to control the <em>default ordering</em> of records returned when you query the model type. You do this by specifying the match order in a list of field names to the <code>ordering</code> attribute, as shown above. The ordering will depend on the type of field (character fields are sorted alphabetically, while date fields are sorted in chronological order). As shown above, you can prefix the field name with a minus symbol (-) to reverse the sorting order.</p>
+One of the most useful features of this metadata is to control the _default ordering_ of records returned when you query the model type. You do this by specifying the match order in a list of field names to the `ordering` attribute, as shown above. The ordering will depend on the type of field (character fields are sorted alphabetically, while date fields are sorted in chronological order). As shown above, you can prefix the field name with a minus symbol (-) to reverse the sorting order.
 
-<p>So as an example, if we chose to sort books like this by default:</p>
+So as an example, if we chose to sort books like this by default:
 
-<pre class="brush: python">ordering = ['title', '-pubdate']</pre>
+```python
+ordering = ['title', '-pubdate']
+```
 
-<p>the books would be sorted alphabetically by title, from A-Z, and then by publication date inside each title, from newest to oldest.</p>
+the books would be sorted alphabetically by title, from A-Z, and then by publication date inside each title, from newest to oldest.
 
-<p>Another common attribute is <code>verbose_name</code>, a verbose name for the class in singular and plural form:</p>
+Another common attribute is `verbose_name`, a verbose name for the class in singular and plural form:
 
-<pre class="brush: python">verbose_name = 'BetterName'</pre>
+```python
+verbose_name = 'BetterName'
+```
 
-<p>Other useful attributes allow you to create and apply new "access permissions" for the model (default permissions are applied automatically), allow ordering based on another field, or to declare that the class is "abstract" (a base class that you cannot create records for, and will instead be derived from to create other models).</p>
+Other useful attributes allow you to create and apply new "access permissions" for the model (default permissions are applied automatically), allow ordering based on another field, or to declare that the class is "abstract" (a base class that you cannot create records for, and will instead be derived from to create other models).
 
-<p>Many of the other metadata options control what database must be used for the model and how the data is stored (these are really only useful if you need to map a model to an existing database).</p>
+Many of the other metadata options control what database must be used for the model and how the data is stored (these are really only useful if you need to map a model to an existing database).
 
-<p>The full list of metadata options are available here: <a href="https://docs.djangoproject.com/en/3.1/ref/models/options/">Model metadata options</a> (Django docs).</p>
+The full list of metadata options are available here: [Model metadata options](https://docs.djangoproject.com/en/3.1/ref/models/options/) (Django docs).
 
-<h4 id="Methods">Methods</h4>
+#### Methods
 
-<p>A model can also have methods.</p>
+A model can also have methods.
 
-<p><strong>Minimally, in every model you should define the standard Python class method <code>__str__()</code> to return a human-readable string for each object.</strong> This string is used to represent individual records in the administration site (and anywhere else you need to refer to a model instance). Often this will return a title or name field from the model.</p>
+**Minimally, in every model you should define the standard Python class method `__str__()` to return a human-readable string for each object.** This string is used to represent individual records in the administration site (and anywhere else you need to refer to a model instance). Often this will return a title or name field from the model.
 
-<pre class="brush: python">def __str__(self):
-    return self.field_name</pre>
+```python
+def __str__(self):
+    return self.field_name
+```
 
-<p>Another common method to include in Django models is <code>get_absolute_url()</code>, which returns a URL for displaying individual model records on the website (if you define this method then Django will automatically add a "View on Site" button to the model's record editing screens in the Admin site). A typical pattern for <code>get_absolute_url()</code> is shown below.</p>
+Another common method to include in Django models is `get_absolute_url()`, which returns a URL for displaying individual model records on the website (if you define this method then Django will automatically add a "View on Site" button to the model's record editing screens in the Admin site). A typical pattern for `get_absolute_url()` is shown below.
 
-<pre class="brush: python">def get_absolute_url(self):
+```python
+def get_absolute_url(self):
     """Returns the url to access a particular instance of the model."""
     return reverse('model-detail-view', args=[str(self.id)])
-</pre>
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Assuming you will use URLs like <code>/myapplication/mymodelname/2</code> to display individual records for your model (where "2" is the <code>id</code> for a particular record), you will need to create a URL mapper to pass the response and id to a "model detail view" (which will do the work required to display the record). The <code>reverse()</code> function above is able to "reverse" your url mapper (in the above case named <em>'model-detail-view'</em>) in order to create a URL of the right format.</p>
-    <p>Of course to make this work you still have to write the URL mapping, view, and template!</p>
-</div>
+> **Note:** Assuming you will use URLs like `/myapplication/mymodelname/2` to display individual records for your model (where "2" is the `id` for a particular record), you will need to create a URL mapper to pass the response and id to a "model detail view" (which will do the work required to display the record). The `reverse()` function above is able to "reverse" your url mapper (in the above case named _'model-detail-view'_) in order to create a URL of the right format.
+>
+> Of course to make this work you still have to write the URL mapping, view, and template!
 
-<p>You can also define any other methods you like, and call them from your code or templates (provided that they don't take any parameters).</p>
+You can also define any other methods you like, and call them from your code or templates (provided that they don't take any parameters).
 
-<h3 id="Model_management">Model management</h3>
+### Model management
 
-<p>Once you've defined your model classes you can use them to create, update, or delete records, and to run queries to get all records or particular subsets of records. We'll show you how to do that in the tutorial when we define our views, but here is a brief summary.</p>
+Once you've defined your model classes you can use them to create, update, or delete records, and to run queries to get all records or particular subsets of records. We'll show you how to do that in the tutorial when we define our views, but here is a brief summary.
 
-<h4 id="Creating_and_modifying_records">Creating and modifying records</h4>
+#### Creating and modifying records
 
-<p>To create a record you can define an instance of the model and then call <code>save()</code>.</p>
+To create a record you can define an instance of the model and then call `save()`.
 
-<pre class="brush: python"># Create a new record using the model's constructor.
+```python
+# Create a new record using the model's constructor.
 record = MyModelName(my_field_name="Instance #1")
 
 # Save the object into the database.
 record.save()
-</pre>
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong> If you haven't declared any field as a <code>primary_key</code>, the new record will be given one automatically, with the field name <code>id</code>. You could query this field after saving the above record, and it would have a value of 1.</p>
-</div>
+> **Note:** If you haven't declared any field as a `primary_key`, the new record will be given one automatically, with the field name `id`. You could query this field after saving the above record, and it would have a value of 1.
 
-<p>You can access the fields in this new record using the dot syntax, and change the values. You have to call <code>save()</code> to store modified values to the database.</p>
+You can access the fields in this new record using the dot syntax, and change the values. You have to call `save()` to store modified values to the database.
 
-<pre class="brush: python"># Access model field values using Python attributes.
+```python
+# Access model field values using Python attributes.
 print(record.id) # should return 1 for the first record.
 print(record.my_field_name) # should print 'Instance #1'
 
 # Change record by modifying the fields, then calling save().
 record.my_field_name = "New Instance Name"
-record.save()</pre>
+record.save()
+```
 
-<h4 id="Searching_for_records">Searching for records</h4>
+#### Searching for records
 
-<p>You can search for records that match certain criteria using the model's <code>objects</code> attribute (provided by the base class).</p>
+You can search for records that match certain criteria using the model's `objects` attribute (provided by the base class).
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Explaining how to search for records using "abstract" model and field names can be a little confusing. In the discussion below we'll refer to a <code>Book</code> model with <code>title</code> and <code>genre</code> fields, where genre is also a model with a single field <code>name</code>.</p>
-</div>
+> **Note:** Explaining how to search for records using "abstract" model and field names can be a little confusing. In the discussion below we'll refer to a `Book` model with `title` and `genre` fields, where genre is also a model with a single field `name`.
 
-<p>We can get all records for a model as a <code>QuerySet</code>, using <code>objects.all()</code>. The <code>QuerySet</code> is an iterable object, meaning that it contains a number of objects that we can iterate/loop through.</p>
+We can get all records for a model as a `QuerySet`, using `objects.all()`. The `QuerySet` is an iterable object, meaning that it contains a number of objects that we can iterate/loop through.
 
-<pre class="brush: python">all_books = Book.objects.all()
-</pre>
+```python
+all_books = Book.objects.all()
+```
 
-<p>Django's <code>filter()</code> method allows us to filter the returned <code>QuerySet</code> to match a specified <strong>text</strong> or <strong>numeric</strong> field against particular criteria. For example, to filter for books that contain "wild" in the title and then count them, we could do the following.</p>
+Django's `filter()` method allows us to filter the returned `QuerySet` to match a specified **text** or **numeric** field against particular criteria. For example, to filter for books that contain "wild" in the title and then count them, we could do the following.
 
-<pre class="brush: python">wild_books = Book.objects.filter(title__contains='wild')
+```python
+wild_books = Book.objects.filter(title__contains='wild')
 number_wild_books = wild_books.count()
-</pre>
+```
 
-<p>The fields to match and the type of match are defined in the filter parameter name, using the format: <code>field_name__match_type</code> (note the <em>double underscore</em> between <code>title</code> and <code>contains</code> above). Above we're filtering <code>title</code> with a case-sensitive match. There are many other types of matches you can do: <code>icontains</code> (case insensitive), <code>iexact</code> (case-insensitive exact match), <code>exact</code> (case-sensitive exact match) and <code>in</code>, <code>gt</code> (greater than), <code>startswith</code>, etc. The <a href="https://docs.djangoproject.com/en/3.1/ref/models/querysets/#field-lookups">full list is here</a>.</p>
+The fields to match and the type of match are defined in the filter parameter name, using the format: `field_name__match_type` (note the _double underscore_ between `title` and `contains` above). Above we're filtering `title` with a case-sensitive match. There are many other types of matches you can do: `icontains` (case insensitive), `iexact` (case-insensitive exact match), `exact` (case-sensitive exact match) and `in`, `gt` (greater than), `startswith`, etc. The [full list is here](https://docs.djangoproject.com/en/3.1/ref/models/querysets/#field-lookups).
 
-<p>In some cases you'll need to filter on a field that defines a one-to-many relationship to another model (e.g. a <code>ForeignKey</code>). In this case you can "index" to fields within the related model with additional double underscores.
-So for example to filter for books with a specific genre pattern, you will have to index to the <code>name</code> through the <code>genre</code> field, as shown below:</p>
+In some cases you'll need to filter on a field that defines a one-to-many relationship to another model (e.g. a `ForeignKey`). In this case you can "index" to fields within the related model with additional double underscores.
+So for example to filter for books with a specific genre pattern, you will have to index to the `name` through the `genre` field, as shown below:
 
-<pre class="brush: python"># Will match on: Fiction, Science fiction, non-fiction etc.
+```python
+# Will match on: Fiction, Science fiction, non-fiction etc.
 books_containing_genre = Book.objects.filter(genre__name__icontains='fiction')
-</pre>
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong> You can use underscores (<code>__</code>) to navigate as many levels of relationships (<code>ForeignKey</code>/<code>ManyToManyField</code>) as you like.
-  For example, a <code>Book</code> that had different types, defined using a further "cover" relationship might have a parameter name: <code>type__cover__name__exact='hard'.</code></p>
-</div>
+> **Note:** You can use underscores (`__`) to navigate as many levels of relationships (`ForeignKey`/`ManyToManyField`) as you like.
+> For example, a `Book` that had different types, defined using a further "cover" relationship might have a parameter name: `type__cover__name__exact='hard'.`
 
-<p>There is a lot more you can do with queries, including backwards searches from related models, chaining filters, returning a smaller set of values etc. For more information see <a href="https://docs.djangoproject.com/en/3.1/topics/db/queries/">Making queries</a> (Django Docs).</p>
+There is a lot more you can do with queries, including backwards searches from related models, chaining filters, returning a smaller set of values etc. For more information see [Making queries](https://docs.djangoproject.com/en/3.1/topics/db/queries/) (Django Docs).
 
-<h2 id="Defining_the_LocalLibrary_Models">Defining the LocalLibrary Models</h2>
+## Defining the LocalLibrary Models
 
-<p>In this section we will start defining the models for the library. Open <em>models.py (in /locallibrary/catalog/)</em>. The boilerplate at the top of the page imports the <em>models</em> module, which contains the model base class <code>models.Model</code> that our models will inherit from.</p>
+In this section we will start defining the models for the library. Open _models.py (in /locallibrary/catalog/)_. The boilerplate at the top of the page imports the _models_ module, which contains the model base class `models.Model` that our models will inherit from.
 
-<pre class="brush: python">from django.db import models
+```python
+from django.db import models
 
-# Create your models here.</pre>
+# Create your models here.
+```
 
-<h3 id="Genre_model">Genre model</h3>
+### Genre model
 
-<p>Copy the <code>Genre</code> model code shown below and paste it into the bottom of your <code>models.py</code> file. This model is used to store information about the book category — for example whether it is fiction or non-fiction, romance or military history, etc. As mentioned above, we've created the Genre as a model rather than as free text or a selection list so that the possible values can be managed through the database rather than being hard coded.</p>
+Copy the `Genre` model code shown below and paste it into the bottom of your `models.py` file. This model is used to store information about the book category — for example whether it is fiction or non-fiction, romance or military history, etc. As mentioned above, we've created the Genre as a model rather than as free text or a selection list so that the possible values can be managed through the database rather than being hard coded.
 
-<pre class="brush: python">class Genre(models.Model):
+```python
+class Genre(models.Model):
     """Model representing a book genre."""
     name = models.CharField(max_length=200, help_text='Enter a book genre (e.g. Science Fiction)')
 
     def __str__(self):
         """String for representing the Model object."""
-        return self.name</pre>
+        return self.name
+```
 
-<p>The model has a single <code>CharField</code> field (<code>name</code>), which is used to describe the genre (this is limited to 200 characters and has some <code>help_text</code>. At the end of the model we declare a <code>__str__()</code> method, which returns the name of the genre defined by a particular record. No verbose name has been defined, so the field will be called <code>Name</code> in forms.</p>
+The model has a single `CharField` field (`name`), which is used to describe the genre (this is limited to 200 characters and has some `help_text`. At the end of the model we declare a `__str__()` method, which returns the name of the genre defined by a particular record. No verbose name has been defined, so the field will be called `Name` in forms.
 
-<h3 id="Book_model">Book model</h3>
+### Book model
 
-<p>Copy the <code>Book</code> model below and again paste it into the bottom of your file. The <code>Book</code> model represents all information about an available book in a general sense, but not a particular physical "instance" or "copy" available for loan. The model uses a <code>CharField</code> to represent the book's <code>title</code> and <code>isbn</code> . For <code>isbn</code>, note how the first unnamed parameter explicitly sets the label as "ISBN" (otherwise it would default to "Isbn").  We also set parameter <code>unique</code> as <code>true</code> in order to ensure all books have a unique ISBN (the unique parameter makes the field value globally unique in a table). The model uses <code>TextField</code> for the <code>summary</code>, because this text may need to be quite long.</p>
+Copy the `Book` model below and again paste it into the bottom of your file. The `Book` model represents all information about an available book in a general sense, but not a particular physical "instance" or "copy" available for loan. The model uses a `CharField` to represent the book's `title` and `isbn` . For `isbn`, note how the first unnamed parameter explicitly sets the label as "ISBN" (otherwise it would default to "Isbn").  We also set parameter `unique` as `true` in order to ensure all books have a unique ISBN (the unique parameter makes the field value globally unique in a table). The model uses `TextField` for the `summary`, because this text may need to be quite long.
 
-<pre class="brush: python">from django.urls import reverse # Used to generate URLs by reversing the URL patterns
+```python
+from django.urls import reverse # Used to generate URLs by reversing the URL patterns
 
 class Book(models.Model):
     """Model representing a book (but not a specific copy of a book)."""
@@ -297,7 +310,7 @@ class Book(models.Model):
 
     summary = models.TextField(max_length=1000, help_text='Enter a brief description of the book')
     isbn = models.CharField('ISBN', max_length=13, unique=True,
-                             help_text='13 Character &lt;a href="https://www.isbn-international.org/content/what-isbn"&gt;ISBN number&lt;/a&gt;')
+                             help_text='13 Character <a href="https://www.isbn-international.org/content/what-isbn">ISBN number</a>')
 
     # ManyToManyField used because genre can contain many books. Books can cover many genres.
     # Genre class has already been defined so we can specify the object above.
@@ -310,30 +323,27 @@ class Book(models.Model):
     def get_absolute_url(self):
         """Returns the url to access a detail record for this book."""
         return reverse('book-detail', args=[str(self.id)])
-</pre>
+```
 
-<p>The genre is a <code>ManyToManyField</code>, so that a book can have multiple genres and a genre can have many books. The author is declared as <code>ForeignKey</code>, so each book will only have one author, but an author may have many books (in practice a book might have multiple authors, but not in this implementation!)</p>
+The genre is a `ManyToManyField`, so that a book can have multiple genres and a genre can have many books. The author is declared as `ForeignKey`, so each book will only have one author, but an author may have many books (in practice a book might have multiple authors, but not in this implementation!)
 
-<p>In both field types the related model class is declared as the first unnamed parameter using either the model class or a string containing the name of the related model. You must use the name of the model as a string if the associated class has not yet been defined in this file before it is referenced! The other parameters of interest in the <code>author</code> field are <code>null=True</code>, which allows the database to store a <code>Null</code> value if no author is selected, and <code>on_delete=models.SET_NULL</code>, which will set the value of the book's author field to <code>Null</code> if the associated author record is deleted.</p>
+In both field types the related model class is declared as the first unnamed parameter using either the model class or a string containing the name of the related model. You must use the name of the model as a string if the associated class has not yet been defined in this file before it is referenced! The other parameters of interest in the `author` field are `null=True`, which allows the database to store a `Null` value if no author is selected, and `on_delete=models.SET_NULL`, which will set the value of the book's author field to `Null` if the associated author record is deleted.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> By default <code>on_delete=models.CASCADE</code>, which means that if the author was deleted, this book would be deleted too! We use <code>SET_NULL</code> here, but we could also use <code>PROTECT</code> or <code>RESTRICT</code> to prevent the author being deleted while any book uses it.</p>
-</div>
+> **Warning:** By default `on_delete=models.CASCADE`, which means that if the author was deleted, this book would be deleted too! We use `SET_NULL` here, but we could also use `PROTECT` or `RESTRICT` to prevent the author being deleted while any book uses it.
 
-<p>The model also defines <code>__str__()</code> , using the book's <code>title</code> field to represent a <code>Book</code> record. The final method, <code>get_absolute_url()</code> returns a URL that can be used to access a detail record for this model (for this to work we will have to define a URL mapping that has the name <code>book-detail</code>, and define an associated view and template).</p>
+The model also defines `__str__()` , using the book's `title` field to represent a `Book` record. The final method, `get_absolute_url()` returns a URL that can be used to access a detail record for this model (for this to work we will have to define a URL mapping that has the name `book-detail`, and define an associated view and template).
 
-<h3 id="BookInstance_model">BookInstance model</h3>
+### BookInstance model
 
-<p>Next, copy the <code>BookInstance</code> model (shown below) under the other models. The <code>BookInstance</code> represents a specific copy of a book that someone might borrow, and includes information about whether the copy is available or on what date it is expected back, "imprint" or version details, and a unique id for the book in the library.</p>
+Next, copy the `BookInstance` model (shown below) under the other models. The `BookInstance` represents a specific copy of a book that someone might borrow, and includes information about whether the copy is available or on what date it is expected back, "imprint" or version details, and a unique id for the book in the library.
 
-<p>Some of the fields and methods will now be familiar. The model uses:</p>
+Some of the fields and methods will now be familiar. The model uses:
 
-<ul>
- <li><code>ForeignKey</code> to identify the associated <code>Book</code> (each book can have many copies, but a copy can only have one <code>Book</code>). The key specifies <code>on_delete=models.RESTRICT</code> to ensure that the <code>Book</code> cannot be deleted while referenced by a <code>BookInstance</code>.</li>
- <li><code>CharField</code> to represent the imprint (specific release) of the book.</li>
-</ul>
+- `ForeignKey` to identify the associated `Book` (each book can have many copies, but a copy can only have one `Book`). The key specifies `on_delete=models.RESTRICT` to ensure that the `Book` cannot be deleted while referenced by a `BookInstance`.
+- `CharField` to represent the imprint (specific release) of the book.
 
-<pre class="brush: python">import uuid # Required for unique book instances
+```python
+import uuid # Required for unique book instances
 
 class BookInstance(models.Model):
     """Model representing a specific copy of a book (i.e. that can be borrowed from the library)."""
@@ -362,31 +372,28 @@ class BookInstance(models.Model):
 
     def __str__(self):
         """String for representing the Model object."""
-        return f'{self.id} ({self.book.title})'</pre>
+        return f'{self.id} ({self.book.title})'
+```
 
-<p>We additionally declare a few new types of field:</p>
+We additionally declare a few new types of field:
 
-<ul>
- <li><code>UUIDField</code> is used for the <code>id</code> field to set it as the <code>primary_key</code> for this model. This type of field allocates a globally unique value for each instance (one for every book you can find in the library).</li>
- <li><code>DateField</code> is used for the <code>due_back</code> date (at which the book is expected to become available after being borrowed or in maintenance). This value can be <code>blank</code> or <code>null</code> (needed for when the book is available). The model metadata (<code>Class Meta</code>) uses this field to order records when they are returned in a query.</li>
- <li><code>status</code> is a <code>CharField</code> that defines a choice/selection list. As you can see, we define a tuple containing tuples of key-value pairs and pass it to the choices argument. The value in a key/value pair is a display value that a user can select, while the keys are the values that are actually saved if the option is selected. We've also set a default value of 'm' (maintenance) as books will initially be created unavailable before they are stocked on the shelves.</li>
-</ul>
+- `UUIDField` is used for the `id` field to set it as the `primary_key` for this model. This type of field allocates a globally unique value for each instance (one for every book you can find in the library).
+- `DateField` is used for the `due_back` date (at which the book is expected to become available after being borrowed or in maintenance). This value can be `blank` or `null` (needed for when the book is available). The model metadata (`Class Meta`) uses this field to order records when they are returned in a query.
+- `status` is a `CharField` that defines a choice/selection list. As you can see, we define a tuple containing tuples of key-value pairs and pass it to the choices argument. The value in a key/value pair is a display value that a user can select, while the keys are the values that are actually saved if the option is selected. We've also set a default value of 'm' (maintenance) as books will initially be created unavailable before they are stocked on the shelves.
 
-<p>The method <code>__str__()</code> represents the <code>BookInstance</code> object using a combination of its unique id and the associated <code>Book</code>'s title.</p>
+The method `__str__()` represents the `BookInstance` object using a combination of its unique id and the associated `Book`'s title.
 
-<div class="notecard note">
-    <p><strong>Note:</strong> A little Python:</p>
-    <ul>
-        <li>Starting with Python 3.6, you can use the string interpolation syntax (also known as f-strings): <code>f'{self.id} ({self.book.title})'</code>.</li>
-        <li>In older versions of this tutorial, we were using a <a href="https://www.python.org/dev/peps/pep-3101/">formatted string</a> syntax, which is also a valid way of formatting strings in Python (e.g. <code>'{0} ({1})'.format(self.id,self.book.title)</code>).</li>
-     </ul>
-</div>
+> **Note:** A little Python:
+>
+> - Starting with Python 3.6, you can use the string interpolation syntax (also known as f-strings): `f'{self.id} ({self.book.title})'`.
+> - In older versions of this tutorial, we were using a [formatted string](https://www.python.org/dev/peps/pep-3101/) syntax, which is also a valid way of formatting strings in Python (e.g. `'{0} ({1})'.format(self.id,self.book.title)`).
 
-<h3 id="Author_model">Author model</h3>
+### Author model
 
-<p>Copy the <code>Author</code> model (shown below) underneath the existing code in <strong>models.py</strong>.</p>
+Copy the `Author` model (shown below) underneath the existing code in **models.py**.
 
-<pre class="brush: python">class Author(models.Model):
+```python
+class Author(models.Model):
     """Model representing an author."""
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
@@ -403,67 +410,65 @@ class BookInstance(models.Model):
     def __str__(self):
         """String for representing the Model object."""
         return f'{self.last_name}, {self.first_name}'
-</pre>
+```
 
-<p>All of the fields/methods should now be familiar. The model defines an author as having a first name, last name, and dates of birth and death (both optional). It specifies that by default the <code>__str__()</code> returns the name in <em>last name</em>, <em>firstname</em> order. The <code>get_absolute_url()</code> method reverses the <code>author-detail</code> URL mapping to get the URL for displaying an individual author.</p>
+All of the fields/methods should now be familiar. The model defines an author as having a first name, last name, and dates of birth and death (both optional). It specifies that by default the `__str__()` returns the name in _last name_, _firstname_ order. The `get_absolute_url()` method reverses the `author-detail` URL mapping to get the URL for displaying an individual author.
 
-<h2 id="Re-run_the_database_migrations">Re-run the database migrations</h2>
+## Re-run the database migrations
 
-<p>All your models have now been created. Now re-run your database migrations to add them to your database.</p>
+All your models have now been created. Now re-run your database migrations to add them to your database.
 
-<pre class="brush: bash">python3 manage.py makemigrations
-python3 manage.py migrate</pre>
+```bash
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
 
-<h2 id="Language_model_—_challenge">Language model — challenge</h2>
+## Language model — challenge
 
-<p>Imagine a local benefactor donates a number of new books written in another language (say, Farsi). The challenge is to work out how these would be best represented in our library website, and then to add them to the models.</p>
+Imagine a local benefactor donates a number of new books written in another language (say, Farsi). The challenge is to work out how these would be best represented in our library website, and then to add them to the models.
 
-<p>Some things to consider:</p>
+Some things to consider:
 
-<ul>
- <li>Should "language" be associated with a <code>Book</code>, <code>BookInstance</code>, or some other object?</li>
- <li>Should the different languages be represented using model, a free text field, or a hard-coded selection list?</li>
-</ul>
+- Should "language" be associated with a `Book`, `BookInstance`, or some other object?
+- Should the different languages be represented using model, a free text field, or a hard-coded selection list?
 
-<p>After you've decided, add the field. You can see what we decided on Github <a href="https://github.com/mdn/django-locallibrary-tutorial/blob/master/catalog/models.py">here</a>.</p>
+After you've decided, add the field. You can see what we decided on Github [here](https://github.com/mdn/django-locallibrary-tutorial/blob/master/catalog/models.py).
 
-<p>Don't forget that after a change to your model, you should again re-run your database migrations to add the changes.</p>
+Don't forget that after a change to your model, you should again re-run your database migrations to add the changes.
 
-<pre class="brush: bash">python3 manage.py makemigrations
-python3 manage.py migrate</pre>
+```bash
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>In this article we've learned how models are defined, and then used this information to design and implement appropriate models for the <em>LocalLibrary</em> website.</p>
+In this article we've learned how models are defined, and then used this information to design and implement appropriate models for the _LocalLibrary_ website.
 
-<p>At this point we'll divert briefly from creating the site, and check out the <em>Django Administration site</em>. This site will allow us to add some data to the library, which we can then display using our (yet to be created) views and templates.</p>
+At this point we'll divert briefly from creating the site, and check out the _Django Administration site_. This site will allow us to add some data to the library, which we can then display using our (yet to be created) views and templates.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://docs.djangoproject.com/en/3.1/intro/tutorial02/">Writing your first Django app, part 2</a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/3.1/topics/db/queries/">Making queries</a> (Django Docs)</li>
- <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/querysets/">QuerySet API Reference</a> (Django Docs)</li>
-</ul>
+- [Writing your first Django app, part 2](https://docs.djangoproject.com/en/3.1/intro/tutorial02/) (Django docs)
+- [Making queries](https://docs.djangoproject.com/en/3.1/topics/db/queries/) (Django Docs)
+- [QuerySet API Reference](https://docs.djangoproject.com/en/3.1/ref/models/querysets/) (Django Docs)
 
-<p>{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}</p>
+{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
 
-<h2 id="In_this_module">In this module</h2>
+## In this module
 
-<ul>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Introduction">Django introduction</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/development_environment">Setting up a Django development environment</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django Tutorial: The Local Library website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">Django Tutorial Part 2: Creating a skeleton website</a></li>
- <li><strong>Django Tutorial Part 3: Using models</strong></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django Tutorial Part 4: Django admin site</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Home_page">Django Tutorial Part 5: Creating our home page</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Generic_views">Django Tutorial Part 6: Generic list and detail views</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django Tutorial Part 7: Sessions framework</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Authentication">Django Tutorial Part 8: User authentication and permissions</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Testing">Django Tutorial Part 10: Testing a Django web application</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Django Tutorial Part 11: Deploying Django to production</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/web_application_security">Django web application security</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a></li>
-</ul>
+- [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
+- [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment)
+- [Django Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
+- [Django Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website)
+- **Django Tutorial Part 3: Using models**
+- [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site)
+- [Django Tutorial Part 5: Creating our home page](/en-US/docs/Learn/Server-side/Django/Home_page)
+- [Django Tutorial Part 6: Generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views)
+- [Django Tutorial Part 7: Sessions framework](/en-US/docs/Learn/Server-side/Django/Sessions)
+- [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication)
+- [Django Tutorial Part 9: Working with forms](/en-US/docs/Learn/Server-side/Django/Forms)
+- [Django Tutorial Part 10: Testing a Django web application](/en-US/docs/Learn/Server-side/Django/Testing)
+- [Django Tutorial Part 11: Deploying Django to production](/en-US/docs/Learn/Server-side/Django/Deployment)
+- [Django web application security](/en-US/docs/Learn/Server-side/Django/web_application_security)
+- [DIY Django mini blog](/en-US/docs/Learn/Server-side/Django/django_assessment_blog)

@@ -12,248 +12,259 @@ tags:
   - Style
   - client-side
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
+Let's say that we’ve been tasked with creating a proof-of-concept in React – an app that allows users to add, edit, and delete tasks they want to work on, and also mark tasks as complete without deleting them. This article will walk you through putting the basic `App` component structure and styling in place, ready for individual component definition and interactivity, which we'll add later.
 
-<p>Let's say that we’ve been tasked with creating a proof-of-concept in React – an app that allows users to add, edit, and delete tasks they want to work on, and also mark tasks as complete without deleting them. This article will walk you through putting the basic <code>App</code> component structure and styling in place, ready for individual component definition and interactivity, which we'll add later.</p>
-
-<div class="notecard note">
-<p><strong>Note:</strong> If you need to check your code against our version, you can find a finished version of the sample React app code in our <a href="https://github.com/mdn/todo-react">todo-react repository</a>. For a running live version, see <a href="https://mdn.github.io/todo-react-build/">https://mdn.github.io/todo-react-build/</a>.</p>
-</div>
+> **Note:** If you need to check your code against our version, you can find a finished version of the sample React app code in our [todo-react repository](https://github.com/mdn/todo-react). For a running live version, see <https://mdn.github.io/todo-react-build/>.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>
-    <p>Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To introduce our todo list case study, and get the basic <code>App</code> structure and styling in place.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        <p>
+          Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
+          <a href="/en-US/docs/Learn/CSS">CSS</a>, and
+          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages,
+          knowledge of the
+          <a
+            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            >terminal/command line</a
+          >.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        To introduce our todo list case study, and get the basic
+        <code>App</code> structure and styling in place.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Our_apps_user_stories">Our app's user stories</h2>
+## Our app's user stories
 
-<p>In software development, a user story is an actionable goal from the perspective of the user. Defining user stories before we begin our work will help us focus our work. Our app should fulfill the following stories:</p>
+In software development, a user story is an actionable goal from the perspective of the user. Defining user stories before we begin our work will help us focus our work. Our app should fulfill the following stories:
 
-<p>As a user, I can</p>
+As a user, I can
 
-<ul>
- <li>read a list of tasks.</li>
- <li>add a task using the mouse or keyboard.</li>
- <li>mark any task as completed, using the mouse or keyboard.</li>
- <li>delete any task, using the mouse or keyboard.</li>
- <li>edit any task, using the mouse or keyboard.</li>
- <li>view a specific subset of tasks: All tasks, only the active task, or only the completed tasks.</li>
-</ul>
+- read a list of tasks.
+- add a task using the mouse or keyboard.
+- mark any task as completed, using the mouse or keyboard.
+- delete any task, using the mouse or keyboard.
+- edit any task, using the mouse or keyboard.
+- view a specific subset of tasks: All tasks, only the active task, or only the completed tasks.
 
-<p>We'll tackle these stories one-by-one.</p>
+We'll tackle these stories one-by-one.
 
-<h2 id="Pre-project_housekeeping">Pre-project housekeeping</h2>
+## Pre-project housekeeping
 
-<p>create-react-app has made a few files we won't be using at all for our project.</p>
+create-react-app has made a few files we won't be using at all for our project.
 
-<ul>
- <li>We're not going to write per-component stylesheets, so first delete the <code>App.css</code> import from the top of <code>App.js</code>.</li>
- <li>We are also not going to be using the <code>logo.svg</code> file, so remove that import too.</li>
-</ul>
+- We're not going to write per-component stylesheets, so first delete the `App.css` import from the top of `App.js`.
+- We are also not going to be using the `logo.svg` file, so remove that import too.
 
-<p>Then, copy and paste the following commands into your terminal to delete some unneeded files. Make sure you’re starting in the app's root directory!</p>
+Then, copy and paste the following commands into your terminal to delete some unneeded files. Make sure you’re starting in the app's root directory!
 
-<pre class="brush: bash"># Move into the src directory of your project
+```bash
+# Move into the src directory of your project
 cd src
 # Delete a few files
 rm -- App.test.js App.css logo.svg serviceWorker.js setupTests.js
 # Move back up to the root of the project
-cd ..</pre>
+cd ..
+```
 
-<p>Notes:</p>
+Notes:
 
-<ul>
- <li>Two of the files we’re deleting are for testing the application. We will not cover testing here.</li>
- <li>If you stopped your server to do the terminal tasks mentioned above, you’ll have to start it again using <code>npm start</code>.</li>
-</ul>
+- Two of the files we’re deleting are for testing the application. We will not cover testing here.
+- If you stopped your server to do the terminal tasks mentioned above, you’ll have to start it again using `npm start`.
 
-<h2 id="Project_starter_code">Project starter code</h2>
+## Project starter code
 
-<p>As a starting point for this project, we're going to provide two things: An <code>App()</code> function to replace the one you have now, and some CSS to style your app.</p>
+As a starting point for this project, we're going to provide two things: An `App()` function to replace the one you have now, and some CSS to style your app.
 
-<h3 id="The_JSX">The JSX</h3>
+### The JSX
 
-<p>Copy the following snippet to your clipboard, then paste it into <code>App.js</code> so that it replaces the existing <code>App()</code> function:</p>
+Copy the following snippet to your clipboard, then paste it into `App.js` so that it replaces the existing `App()` function:
 
-<pre class="brush: js">function App(props) {
+```js
+function App(props) {
   return (
-    &lt;div className="todoapp stack-large"&gt;
-      &lt;h1&gt;TodoMatic&lt;/h1&gt;
-      &lt;form&gt;
-        &lt;h2 className="label-wrapper"&gt;
-          &lt;label htmlFor="new-todo-input" className="label__lg"&gt;
+    <div className="todoapp stack-large">
+      <h1>TodoMatic</h1>
+      <form>
+        <h2 className="label-wrapper">
+          <label htmlFor="new-todo-input" className="label__lg">
             What needs to be done?
-          &lt;/label&gt;
-        &lt;/h2&gt;
-        &lt;input
+          </label>
+        </h2>
+        <input
           type="text"
           id="new-todo-input"
           className="input input__lg"
           name="text"
           autoComplete="off"
-        /&gt;
-        &lt;button type="submit" className="btn btn__primary btn__lg"&gt;
+        />
+        <button type="submit" className="btn btn__primary btn__lg">
           Add
-        &lt;/button&gt;
-      &lt;/form&gt;
-      &lt;div className="filters btn-group stack-exception"&gt;
-        &lt;button type="button" className="btn toggle-btn" aria-pressed="true"&gt;
-          &lt;span className="visually-hidden"&gt;Show &lt;/span&gt;
-          &lt;span&gt;all&lt;/span&gt;
-          &lt;span className="visually-hidden"&gt; tasks&lt;/span&gt;
-        &lt;/button&gt;
-        &lt;button type="button" className="btn toggle-btn" aria-pressed="false"&gt;
-          &lt;span className="visually-hidden"&gt;Show &lt;/span&gt;
-          &lt;span&gt;Active&lt;/span&gt;
-          &lt;span className="visually-hidden"&gt; tasks&lt;/span&gt;
-        &lt;/button&gt;
-        &lt;button type="button" className="btn toggle-btn" aria-pressed="false"&gt;
-          &lt;span className="visually-hidden"&gt;Show &lt;/span&gt;
-          &lt;span&gt;Completed&lt;/span&gt;
-          &lt;span className="visually-hidden"&gt; tasks&lt;/span&gt;
-        &lt;/button&gt;
-      &lt;/div&gt;
-      &lt;h2 id="list-heading"&gt;
+        </button>
+      </form>
+      <div className="filters btn-group stack-exception">
+        <button type="button" className="btn toggle-btn" aria-pressed="true">
+          <span className="visually-hidden">Show </span>
+          <span>all</span>
+          <span className="visually-hidden"> tasks</span>
+        </button>
+        <button type="button" className="btn toggle-btn" aria-pressed="false">
+          <span className="visually-hidden">Show </span>
+          <span>Active</span>
+          <span className="visually-hidden"> tasks</span>
+        </button>
+        <button type="button" className="btn toggle-btn" aria-pressed="false">
+          <span className="visually-hidden">Show </span>
+          <span>Completed</span>
+          <span className="visually-hidden"> tasks</span>
+        </button>
+      </div>
+      <h2 id="list-heading">
         3 tasks remaining
-      &lt;/h2&gt;
-      &lt;ul
+      </h2>
+      <ul
         role="list"
         className="todo-list stack-large stack-exception"
         aria-labelledby="list-heading"
-      &gt;
-        &lt;li className="todo stack-small"&gt;
-          &lt;div className="c-cb"&gt;
-            &lt;input id="todo-0" type="checkbox" defaultChecked={true} /&gt;
-            &lt;label className="todo-label" htmlFor="todo-0"&gt;
+      >
+        <li className="todo stack-small">
+          <div className="c-cb">
+            <input id="todo-0" type="checkbox" defaultChecked={true} />
+            <label className="todo-label" htmlFor="todo-0">
               Eat
-            &lt;/label&gt;
-          &lt;/div&gt;
-          &lt;div className="btn-group"&gt;
-            &lt;button type="button" className="btn"&gt;
-              Edit &lt;span className="visually-hidden"&gt;Eat&lt;/span&gt;
-            &lt;/button&gt;
-            &lt;button type="button" className="btn btn__danger"&gt;
-              Delete &lt;span className="visually-hidden"&gt;Eat&lt;/span&gt;
-            &lt;/button&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li className="todo stack-small"&gt;
-          &lt;div className="c-cb"&gt;
-            &lt;input id="todo-1" type="checkbox" /&gt;
-            &lt;label className="todo-label" htmlFor="todo-1"&gt;
+            </label>
+          </div>
+          <div className="btn-group">
+            <button type="button" className="btn">
+              Edit <span className="visually-hidden">Eat</span>
+            </button>
+            <button type="button" className="btn btn__danger">
+              Delete <span className="visually-hidden">Eat</span>
+            </button>
+          </div>
+        </li>
+        <li className="todo stack-small">
+          <div className="c-cb">
+            <input id="todo-1" type="checkbox" />
+            <label className="todo-label" htmlFor="todo-1">
               Sleep
-            &lt;/label&gt;
-          &lt;/div&gt;
-          &lt;div className="btn-group"&gt;
-            &lt;button type="button" className="btn"&gt;
-              Edit &lt;span className="visually-hidden"&gt;Sleep&lt;/span&gt;
-            &lt;/button&gt;
-            &lt;button type="button" className="btn btn__danger"&gt;
-              Delete &lt;span className="visually-hidden"&gt;Sleep&lt;/span&gt;
-            &lt;/button&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li className="todo stack-small"&gt;
-          &lt;div className="c-cb"&gt;
-            &lt;input id="todo-2" type="checkbox" /&gt;
-            &lt;label className="todo-label" htmlFor="todo-2"&gt;
+            </label>
+          </div>
+          <div className="btn-group">
+            <button type="button" className="btn">
+              Edit <span className="visually-hidden">Sleep</span>
+            </button>
+            <button type="button" className="btn btn__danger">
+              Delete <span className="visually-hidden">Sleep</span>
+            </button>
+          </div>
+        </li>
+        <li className="todo stack-small">
+          <div className="c-cb">
+            <input id="todo-2" type="checkbox" />
+            <label className="todo-label" htmlFor="todo-2">
               Repeat
-            &lt;/label&gt;
-          &lt;/div&gt;
-          &lt;div className="btn-group"&gt;
-            &lt;button type="button" className="btn"&gt;
-              Edit &lt;span className="visually-hidden"&gt;Repeat&lt;/span&gt;
-            &lt;/button&gt;
-            &lt;button type="button" className="btn btn__danger"&gt;
-              Delete &lt;span className="visually-hidden"&gt;Repeat&lt;/span&gt;
-            &lt;/button&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
+            </label>
+          </div>
+          <div className="btn-group">
+            <button type="button" className="btn">
+              Edit <span className="visually-hidden">Repeat</span>
+            </button>
+            <button type="button" className="btn btn__danger">
+              Delete <span className="visually-hidden">Repeat</span>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
   );
-}</pre>
+}
+```
 
-<p>Now open <code>public/index.html</code> and change the <code><a href="/en-US/docs/Web/HTML/Element/title">&lt;title&gt;</a></code> element’s text to <code>TodoMatic</code>. This way, it will match the <code><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;</a></code> at the top of our app.</p>
+Now open `public/index.html` and change the [`<title>`](/en-US/docs/Web/HTML/Element/title) element’s text to `TodoMatic`. This way, it will match the [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) at the top of our app.
 
-<pre class="brush: html">&lt;title&gt;TodoMatic&lt;/title&gt;</pre>
+```html
+<title>TodoMatic</title>
+```
 
-<p>When your browser refreshes, you should see something like this:</p>
+When your browser refreshes, you should see something like this:
 
-<p><img alt="todo-matic app, unstyled, showing a jumbled mess of labels, inputs, and buttons" src="unstyled-app.png"></p>
+![todo-matic app, unstyled, showing a jumbled mess of labels, inputs, and buttons](unstyled-app.png)
 
-<p>It's ugly, and doesn’t function yet, but that's okay — we'll style it in a moment. First, consider the JSX we have, and how it corresponds to our user stories:</p>
+It's ugly, and doesn’t function yet, but that's okay — we'll style it in a moment. First, consider the JSX we have, and how it corresponds to our user stories:
 
-<ul>
- <li>We have a <code><a href="/en-US/docs/Web/HTML/Element/form">&lt;form&gt;</a></code> element, with an <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> for writing out a new task, and a button to submit the form.</li>
- <li>We have an array of buttons that will be used to filter our tasks.</li>
- <li>We have a heading that tells us how many tasks remain.</li>
- <li>We have our 3 tasks, arranged in an un-ordered list. Each task is a list item (<code><a href="/en-US/docs/Web/HTML/Element/li">&lt;li&gt;</a></code>), and has buttons to edit and delete it and a checkbox to check it off as done.</li>
-</ul>
+- We have a [`<form>`](/en-US/docs/Web/HTML/Element/form) element, with an [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text) for writing out a new task, and a button to submit the form.
+- We have an array of buttons that will be used to filter our tasks.
+- We have a heading that tells us how many tasks remain.
+- We have our 3 tasks, arranged in an un-ordered list. Each task is a list item ([`<li>`](/en-US/docs/Web/HTML/Element/li)), and has buttons to edit and delete it and a checkbox to check it off as done.
 
-<p>The form will allow us to <em>make</em> tasks; the buttons will let us <em>filter</em> them; the heading and list are our way to <em>read</em> them. The UI for <em>editing</em> a task is conspicuously absent for now. That's okay – we'll write that later.</p>
+The form will allow us to _make_ tasks; the buttons will let us _filter_ them; the heading and list are our way to _read_ them. The UI for _editing_ a task is conspicuously absent for now. That's okay – we'll write that later.
 
-<h3 id="Accessibility_features">Accessibility features</h3>
+### Accessibility features
 
-<p>You may notice some unusual attributes here. For example:</p>
+You may notice some unusual attributes here. For example:
 
-<pre class="brush: html">&lt;button type="button" className="btn toggle-btn" aria-pressed="true"&gt;
-  &lt;span className="visually-hidden"&gt;Show &lt;/span&gt;
-  &lt;span&gt;all&lt;/span&gt;
-  &lt;span className="visually-hidden"&gt; tasks&lt;/span&gt;
-&lt;/button&gt;</pre>
+```html
+<button type="button" className="btn toggle-btn" aria-pressed="true">
+  <span className="visually-hidden">Show </span>
+  <span>all</span>
+  <span className="visually-hidden"> tasks</span>
+</button>
+```
 
-<p>Here, <code>aria-pressed</code> tells assistive technology (like screen readers) that the button can be in one of two states: <code>pressed</code> or <code>unpressed</code>. Think of these as analogs for <code>on</code> and <code>off</code>. Setting a value of <code>true</code> means that the button is pressed by default.</p>
+Here, `aria-pressed` tells assistive technology (like screen readers) that the button can be in one of two states: `pressed` or `unpressed`. Think of these as analogs for `on` and `off`. Setting a value of `true` means that the button is pressed by default.
 
-<p>The class <code>visually-hidden</code> has no effect yet, because we have not included any CSS. Once we have put our styles in place, though, any element with this class will be hidden from sighted users and still available to screen reader users — this is because these words are not needed by sighted users; they are there to provide more information about what the button does for screenreader users that do not have the extra visual context to help them.</p>
+The class `visually-hidden` has no effect yet, because we have not included any CSS. Once we have put our styles in place, though, any element with this class will be hidden from sighted users and still available to screen reader users — this is because these words are not needed by sighted users; they are there to provide more information about what the button does for screenreader users that do not have the extra visual context to help them.
 
-<p>Further down, you can find our <code><a href="/en-US/docs/Web/HTML/Element/ul">&lt;ul&gt;</a></code> element:</p>
+Further down, you can find our [`<ul>`](/en-US/docs/Web/HTML/Element/ul) element:
 
-<pre class="brush: html">&lt;ul
+```html
+<ul
   role="list"
   className="todo-list stack-large stack-exception"
   aria-labelledby="list-heading"
-&gt;</pre>
+>
+```
 
-<p>The <code>role</code> attribute helps assistive technology explain what kind of element a tag represents. A <code>&lt;ul&gt;</code> is treated like a list by default, but the styles we're about to add will break that functionality. This role will restore the "list" meaning to the <code>&lt;ul&gt;</code>  element. If you want to learn more about why this is necessary, you can check out <a href="https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html">Scott O'Hara’s article, “Fixing Lists”</a>.</p>
+The `role` attribute helps assistive technology explain what kind of element a tag represents. A `<ul>` is treated like a list by default, but the styles we're about to add will break that functionality. This role will restore the "list" meaning to the `<ul>`  element. If you want to learn more about why this is necessary, you can check out [Scott O'Hara’s article, “Fixing Lists”](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html).
 
-<p>The <code>aria-labelledby</code> attribute tells assistive technologies that we're treating our list heading as the label that describes the purpose of the list beneath it. Making this association gives the list a more informative context, which could help screen reader users better understand the purpose of it.</p>
+The `aria-labelledby` attribute tells assistive technologies that we're treating our list heading as the label that describes the purpose of the list beneath it. Making this association gives the list a more informative context, which could help screen reader users better understand the purpose of it.
 
-<p>Finally, the labels and inputs in our list items have some attributes unique to JSX:</p>
+Finally, the labels and inputs in our list items have some attributes unique to JSX:
 
-<pre class="brush: html">&lt;input id="todo-0" type="checkbox" defaultChecked={true} /&gt;
-&lt;label className="todo-label" htmlFor="todo-0"&gt;
+```html
+<input id="todo-0" type="checkbox" defaultChecked={true} />
+<label className="todo-label" htmlFor="todo-0">
   Eat
-&lt;/label&gt;</pre>
+</label>
+```
 
-<p>The <code>defaultChecked</code> attribute in the <code>&lt;input/ &gt;</code>  tag tells React to check this checkbox initially. If we were to use <code>checked</code>, as we would in regular HTML, React would log some warnings into our browser console relating to handling events on the checkbox, which we want to avoid. Don't worry too much about this for now — we will cover this later on when we get to using events.</p>
+The `defaultChecked` attribute in the `<input/ >`  tag tells React to check this checkbox initially. If we were to use `checked`, as we would in regular HTML, React would log some warnings into our browser console relating to handling events on the checkbox, which we want to avoid. Don't worry too much about this for now — we will cover this later on when we get to using events.
 
-<p>The <code>htmlFor</code> attribute corresponds to the <code>for</code> attribute used in HTML. We cannot use <code>for</code> as an attribute in JSX because <code>for</code> is a reserved word, so  React uses <code>htmlFor</code> instead.</p>
+The `htmlFor` attribute corresponds to the `for` attribute used in HTML. We cannot use `for` as an attribute in JSX because `for` is a reserved word, so  React uses `htmlFor` instead.
 
-<p>Notes:</p>
+Notes:
 
-<ul>
- <li>To use boolean values (<code>true</code> and <code>false</code>) in JSX attributes, you must enclose them in curly braces. If you write <code>defaultChecked="true"</code>, the value of <code>defaultChecked</code> will be <code>"true"</code> — a string literal. Remember — this is actually JavaScript, not HTML!</li>
- <li>The <code>aria-pressed</code> attribute used in our earlier code snippet has a value of <code>"true"</code> because <code>aria-pressed</code> is not a true boolean attribute in the way <code>checked</code> is.</li>
-</ul>
+- To use boolean values (`true` and `false`) in JSX attributes, you must enclose them in curly braces. If you write `defaultChecked="true"`, the value of `defaultChecked` will be `"true"` — a string literal. Remember — this is actually JavaScript, not HTML!
+- The `aria-pressed` attribute used in our earlier code snippet has a value of `"true"` because `aria-pressed` is not a true boolean attribute in the way `checked` is.
 
-<h3 id="Implementing_our_styles">Implementing our styles</h3>
+### Implementing our styles
 
-<p>Paste the following CSS code into <code>src/index.css</code> so that it replaces what's currently there:</p>
+Paste the following CSS code into `src/index.css` so that it replaces what's currently there:
 
-<pre class="brush: css">/* RESETS */
+```css
+/* RESETS */
 *,
 *::before,
 *::after {
@@ -324,7 +335,7 @@ body {
 }
 /*END RESETS*/
 /* GLOBAL STYLES */
-.form-group &gt; input[type="text"] {
+.form-group > input[type="text"] {
   display: inline-block;
   margin-top: 0.4rem;
 }
@@ -358,10 +369,10 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.btn-group &gt; * {
+.btn-group > * {
   flex: 1 1 49%;
 }
-.btn-group &gt; * + * {
+.btn-group > * + * {
   margin-left: 0.8rem;
 }
 .label-wrapper {
@@ -378,21 +389,21 @@ body {
   clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap;
 }
-[class*="stack"] &gt; * {
+[class*="stack"] > * {
   margin-top: 0;
   margin-bottom: 0;
 }
-.stack-small &gt; * + * {
+.stack-small > * + * {
   margin-top: 1.25rem;
 }
-.stack-large &gt; * + * {
+.stack-large > * + * {
   margin-top: 2.5rem;
 }
 @media screen and (min-width: 550px) {
-  .stack-small &gt; * + * {
+  .stack-small > * + * {
     margin-top: 1.4rem;
   }
-  .stack-large &gt; * + * {
+  .stack-large > * + * {
     margin-top: 2.8rem;
   }
 }
@@ -412,15 +423,15 @@ body {
     padding: 4rem;
   }
 }
-.todoapp &gt; * {
+.todoapp > * {
   max-width: 50rem;
   margin-left: auto;
   margin-right: auto;
 }
-.todoapp &gt; form {
+.todoapp > form {
   max-width: 100%;
 }
-.todoapp &gt; h1 {
+.todoapp > h1 {
   display: block;
   max-width: 100%;
   text-align: center;
@@ -465,7 +476,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
 }
-.todo &gt; * {
+.todo > * {
   flex: 0 0 100%;
 }
 .todo-text {
@@ -491,15 +502,15 @@ body {
   padding-left: 40px;
   clear: left;
 }
-.c-cb &gt; label::before,
-.c-cb &gt; input[type="checkbox"] {
+.c-cb > label::before,
+.c-cb > input[type="checkbox"] {
   box-sizing: border-box;
   top: -2px;
   left: -2px;
   width: 44px;
   height: 44px;
 }
-.c-cb &gt; input[type="checkbox"] {
+.c-cb > input[type="checkbox"] {
   -webkit-font-smoothing: antialiased;
   cursor: pointer;
   position: absolute;
@@ -507,7 +518,7 @@ body {
   margin: 0;
   opacity: 0;
 }
-.c-cb &gt; label {
+.c-cb > label {
   font-size: inherit;
   font-family: inherit;
   line-height: inherit;
@@ -517,17 +528,17 @@ body {
   cursor: pointer;
   touch-action: manipulation;
 }
-.c-cb &gt; label::before {
+.c-cb > label::before {
   content: "";
   position: absolute;
   border: 2px solid currentColor;
   background: transparent;
 }
-.c-cb &gt; input[type="checkbox"]:focus + label::before {
+.c-cb > input[type="checkbox"]:focus + label::before {
   border-width: 4px;
   outline: 3px dashed #228bec;
 }
-.c-cb &gt; label::after {
+.c-cb > label::after {
   box-sizing: content-box;
   content: "";
   position: absolute;
@@ -542,77 +553,70 @@ body {
   opacity: 0;
   background: transparent;
 }
-.c-cb &gt; input[type="checkbox"]:checked + label::after {
+.c-cb > input[type="checkbox"]:checked + label::after {
   opacity: 1;
-}</pre>
+}
+```
 
-<p>Save and look back at your browser, and your app should now have reasonable styling.</p>
+Save and look back at your browser, and your app should now have reasonable styling.
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>Now our todo list app actually looks a bit more like a real app! The problem is: it doesn’t actually do anything. We’ll start fixing that in the next chapter!</p>
+Now our todo list app actually looks a bit more like a real app! The problem is: it doesn’t actually do anything. We’ll start fixing that in the next chapter!
 
-<p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<h2 id="In_this_module">In this module</h2>
+## In this module
 
-<ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
- <li>React
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
-  </ul>
- </li>
- <li>Ember
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
-  </ul>
- </li>
- <li>Vue
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
-  </ul>
- </li>
- <li>Svelte
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
-  </ul>
- </li>
- <li>Angular
-   <ul>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
-   </ul>
- </li>
-</ul>
+- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- React
+
+  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+
+- Ember
+
+  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+
+- Vue
+
+  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+
+- Svelte
+
+  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+
+- Angular
+
+  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
+  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

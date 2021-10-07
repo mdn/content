@@ -14,71 +14,94 @@ tags:
   - decorators
   - events
 ---
-<div>{{LearnSidebar}}<br>
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
+{{LearnSidebar}}
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<p>At this point we'll start adding some interactivity to our app, providing the ability to add and display new todo items. Along the way, we'll look at using events in Ember, creating component classes to contain JavaScript code to control interactive features, and setting up a service to keep track of the data state of our app.</p>
+At this point we'll start adding some interactivity to our app, providing the ability to add and display new todo items. Along the way, we'll look at using events in Ember, creating component classes to contain JavaScript code to control interactive features, and setting up a service to keep track of the data state of our app.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>
-    <p>At minimum, it is recommended that you are familiar with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, and have knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
-
-    <p>A deeper understanding of modern JavaScript features (such as classes, modules, etc), will be extremely beneficial, as Ember makes heavy use of them.</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To learn how to create component classes and use events to control interactivity, and keep track of app state using a service.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        <p>
+          At minimum, it is recommended that you are familiar with the core
+          <a href="/en-US/docs/Learn/HTML">HTML</a>,
+          <a href="/en-US/docs/Learn/CSS">CSS</a>, and
+          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, and
+          have knowledge of the
+          <a
+            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            >terminal/command line</a
+          >.
+        </p>
+        <p>
+          A deeper understanding of modern JavaScript features (such as classes,
+          modules, etc), will be extremely beneficial, as Ember makes heavy use
+          of them.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        To learn how to create component classes and use events to control
+        interactivity, and keep track of app state using a service.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Adding_Interactivity">Adding Interactivity</h2>
+## Adding Interactivity
 
-<p>Now we've got a refactored componentized version of our todo app, lets walk through how we can add the interactivity we need to make the app functional.</p>
+Now we've got a refactored componentized version of our todo app, lets walk through how we can add the interactivity we need to make the app functional.
 
-<p>When beginning to think about interactivity, it's good to declare what each component's goals and responsibilities are. In the below sections we’ll do this for each component, and then walk you through how the functionality can be implemented.</p>
+When beginning to think about interactivity, it's good to declare what each component's goals and responsibilities are. In the below sections we’ll do this for each component, and then walk you through how the functionality can be implemented.
 
-<h2 id="Creating_todos">Creating todos</h2>
+## Creating todos
 
-<p>For our card-header / todo input, we'll want to be able to submit our typed in todo task when we press the <kbd>Enter</kbd> key and have it appear in the todos list.</p>
+For our card-header / todo input, we'll want to be able to submit our typed in todo task when we press the <kbd>Enter</kbd> key and have it appear in the todos list.
 
-<p>We want to be able to capture the text typed into the input. We do this so that our JavaScript code knows what we typed in, and we can save our todo and pass that text along to the todo list component to display.</p>
+We want to be able to capture the text typed into the input. We do this so that our JavaScript code knows what we typed in, and we can save our todo and pass that text along to the todo list component to display.
 
-<p>We can capture the <code><a href="/en-US/docs/Web/API/Document/keydown_event">keydown</a></code> event via the <a href="https://api.emberjs.com/ember/3.16/classes/Ember.Templates.helpers/methods/on?anchor=on">on modifier</a>, which is just Ember syntactic sugar around <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> and <code><a href="/en-US/docs/Web/API/EventTarget/removeEventListener">removeEventListener</a></code> (see <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#addeventlistener_and_removeeventlistener">this explanation</a> if needed).</p>
+We can capture the [`keydown`](/en-US/docs/Web/API/Document/keydown_event) event via the [on modifier](https://api.emberjs.com/ember/3.16/classes/Ember.Templates.helpers/methods/on?anchor=on), which is just Ember syntactic sugar around [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) and [`removeEventListener`](/en-US/docs/Web/API/EventTarget/removeEventListener) (see [this explanation](/en-US/docs/Learn/JavaScript/Building_blocks/Events#addeventlistener_and_removeeventlistener) if needed).
 
-<p>Add the new line shown below to your <code>header.hbs</code> file:</p>
+Add the new line shown below to your `header.hbs` file:
 
-<pre class="brush: html">&lt;input
+```html
+<input
   class='new-todo'
   aria-label='What needs to be done?'
   placeholder='What needs to be done?'
   autofocus
   \{{on 'keydown' this.onKeyDown}}
-&gt;</pre>
+>
+```
 
-<p>This new attribute is inside double curly braces, which tells you it is part of Ember's dynamic templating syntax. The first argument passed to <code>on</code> is the type of event to respond to (<code>keydown</code>), and the last argument is the event handler — the code that will run in response to the <code>keydown</code> event firing. As you may expect from dealing with <a href="/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS">vanilla JavaScript objects</a>, the <code>this</code> keyword refers to the "context" or "scope" of the component. One component's <code>this</code> will be different from another component's <code>this</code>.</p>
+This new attribute is inside double curly braces, which tells you it is part of Ember's dynamic templating syntax. The first argument passed to `on` is the type of event to respond to (`keydown`), and the last argument is the event handler — the code that will run in response to the `keydown` event firing. As you may expect from dealing with [vanilla JavaScript objects](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS), the `this` keyword refers to the "context" or "scope" of the component. One component's `this` will be different from another component's `this`.
 
-<p>We can define what is available inside <code>this</code> by generating a component class to go along with your component. This is a vanilla JavaScript class and has no special meaning to Ember, other than <em>extending</em> from the <code>Component</code> super-class.</p>
+We can define what is available inside `this` by generating a component class to go along with your component. This is a vanilla JavaScript class and has no special meaning to Ember, other than _extending_ from the `Component` super-class.
 
-<p>To create a header class to go with your header component, type this in to your terminal:</p>
+To create a header class to go with your header component, type this in to your terminal:
 
-<pre class="brush: bash">ember generate component-class header</pre>
+```bash
+ember generate component-class header
+```
 
-<p>This will create the following empty class file — <code>todomvc/app/components/header.js</code>:</p>
+This will create the following empty class file — `todomvc/app/components/header.js`:
 
-<pre class="brush: js">import Component from '@glimmer/component';
+```js
+import Component from '@glimmer/component';
 
 export default class HeaderComponent extends Component {
 
-}</pre>
+}
+```
 
-<p>Inside this file we will implement the event handler code. Update the content to the following:</p>
+Inside this file we will implement the event handler code. Update the content to the following:
 
-<pre class="brush: js">import Component from '@glimmer/component';
+```js
+import Component from '@glimmer/component';
 import { action } from '@ember/object';
 
 export default class HeaderComponent extends Component {
@@ -88,77 +111,87 @@ export default class HeaderComponent extends Component {
     let text = target.value.trim();
     let hasValue = Boolean(text);
 
-    if (key === 'Enter' &amp;&amp; hasValue) {
+    if (key === 'Enter' && hasValue) {
       alert(text);
 
       target.value = ''
     }
   }
-}</pre>
+}
+```
 
-<p>The <code>@action</code> decorator is the only Ember-specific code here (aside from extending from the <code>Component</code> superclass, and the Ember-specific items we are importing using <a href="/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript module syntax</a>) — the rest of the file is vanilla JavaScript, and would work in any application. The <code>@action</code> decorator declares that the function is an "action", meaning it's a type of function that will be invoked from an event that occurred in the template. <code>@action</code> also binds the <code>this</code> of the function to the class instance.</p>
+The `@action` decorator is the only Ember-specific code here (aside from extending from the `Component` superclass, and the Ember-specific items we are importing using [JavaScript module syntax](/en-US/docs/Web/JavaScript/Guide/Modules)) — the rest of the file is vanilla JavaScript, and would work in any application. The `@action` decorator declares that the function is an "action", meaning it's a type of function that will be invoked from an event that occurred in the template. `@action` also binds the `this` of the function to the class instance.
 
-<div class="notecard note">
-<p><strong>Note:</strong> A decorator is basically a wrapper function, which wraps and calls other functions or properties, providing additional functionality along the way. For example, the <code>@tracked</code> decorator (see slightly later on) runs code it is applied to, but additionally tracks it and automatically updates the app when values change. <a href="https://www.sitepoint.com/javascript-decorators-what-they-are/">Read JavaScript Decorators: What They Are and When to Use Them</a> for more general information on decorators.</p>
-</div>
+> **Note:** A decorator is basically a wrapper function, which wraps and calls other functions or properties, providing additional functionality along the way. For example, the `@tracked` decorator (see slightly later on) runs code it is applied to, but additionally tracks it and automatically updates the app when values change. [Read JavaScript Decorators: What They Are and When to Use Them](https://www.sitepoint.com/javascript-decorators-what-they-are/) for more general information on decorators.
 
-<p>Coming back to our browser tab with the app running, we can type whatever we want, and when we hit <kbd>Enter</kbd> we'll be greeted with an alert message telling us exactly what we typed.</p>
+Coming back to our browser tab with the app running, we can type whatever we want, and when we hit <kbd>Enter</kbd> we'll be greeted with an alert message telling us exactly what we typed.
 
-<p><img alt="the initial placeholder state of the add function, showing the text entered into the input elements being alerted back to you." src="todos-hello-there-alert.png"></p>
+![the initial placeholder state of the add function, showing the text entered into the input elements being alerted back to you.](todos-hello-there-alert.png)
 
-<p>With the interactivity of the header input out of the way, we need a place to store todos so that other components can access them.</p>
+With the interactivity of the header input out of the way, we need a place to store todos so that other components can access them.
 
-<h2 id="Storing_Todos_with_a_service">Storing Todos with a service</h2>
+## Storing Todos with a service
 
-<p>Ember has built-in application-level <strong>state</strong> management that we can use to manage the storage of our todos and allow each of our components to access data from that application-level state. Ember calls these constructs <a href="https://guides.emberjs.com/release/services/">Services</a>, and they live for the entire lifetime of the page (a page refresh will clear them; persisting the data for longer is beyond the scope of this tutorial).</p>
+Ember has built-in application-level **state** management that we can use to manage the storage of our todos and allow each of our components to access data from that application-level state. Ember calls these constructs [Services](https://guides.emberjs.com/release/services/), and they live for the entire lifetime of the page (a page refresh will clear them; persisting the data for longer is beyond the scope of this tutorial).
 
-<p>Run this terminal command to generate a service for us to store our todo-list data in:</p>
+Run this terminal command to generate a service for us to store our todo-list data in:
 
-<pre class="brush: bash">ember generate service todo-data</pre>
+```bash
+ember generate service todo-data
+```
 
-<p>This should give you a terminal output like so:</p>
+This should give you a terminal output like so:
 
-<pre>installing service
-  create app/services/todo-data.js
-installing service-test
-  create tests/unit/services/todo-data-test.js</pre>
+    installing service
+      create app/services/todo-data.js
+    installing service-test
+      create tests/unit/services/todo-data-test.js
 
-<p>This creates a <code>todo-data.js</code> file inside the <code>todomvc/app/services</code> directory to contain our service, which initially contains an import statement and an empty class:</p>
+This creates a `todo-data.js` file inside the `todomvc/app/services` directory to contain our service, which initially contains an import statement and an empty class:
 
-<pre class="brush: js">import Service from '@ember/service';
+```js
+import Service from '@ember/service';
 
 export default class TodoDataService extends Service {
 
-}</pre>
+}
+```
 
-<p>First of all, we want to define <em>what a todo is</em>. We know that we want to track both the text of a todo, and whether or not it is completed.</p>
+First of all, we want to define _what a todo is_. We know that we want to track both the text of a todo, and whether or not it is completed.
 
-<p>Add the following <code>import</code> statement below the existing one:</p>
+Add the following `import` statement below the existing one:
 
-<pre class="brush: js">import { tracked } from '@glimmer/tracking';</pre>
+```js
+import { tracked } from '@glimmer/tracking';
+```
 
-<p>Now add the following class below the previous line you added:</p>
+Now add the following class below the previous line you added:
 
-<pre class="brush: js">class Todo {
+```js
+class Todo {
   @tracked text = '';
   @tracked isCompleted = false;
 
   constructor(text) {
     this.text = text;
   }
-}</pre>
+}
+```
 
-<p>This class represents a todo — it contains a <code>@tracked</code> <code>text</code> property containing the text of the todo, and a <code>@tracked</code> <code>isCompleted</code> property that specifies whether the todo has been completed or not. When instantiated, a <code>Todo</code> object will have an initial <code>text</code> value equal to the text given to it when created (see below), and an <code>isCompleted</code> value of <code>false</code>. The only Ember-specific part of this class is the <code>@tracked</code> decorator — this hooks in to the reactivity system and allows Ember to update what you're seeing in your app automatically if the tracked properties change. <a href="https://api.emberjs.com/ember/3.15/functions/@glimmer%2Ftracking/tracked">More information on tracked can be found here</a>.</p>
+This class represents a todo — it contains a `@tracked` `text` property containing the text of the todo, and a `@tracked` `isCompleted` property that specifies whether the todo has been completed or not. When instantiated, a `Todo` object will have an initial `text` value equal to the text given to it when created (see below), and an `isCompleted` value of `false`. The only Ember-specific part of this class is the `@tracked` decorator — this hooks in to the reactivity system and allows Ember to update what you're seeing in your app automatically if the tracked properties change. [More information on tracked can be found here](https://api.emberjs.com/ember/3.15/functions/@glimmer%2Ftracking/tracked).
 
-<p>Now it's time to add to the body of the service.</p>
+Now it's time to add to the body of the service.
 
-<p>First add another <code>import</code> statement below the previous one, to make actions available inside the service:</p>
+First add another `import` statement below the previous one, to make actions available inside the service:
 
-<pre class="brush: js">import { action } from '@ember/object';</pre>
+```js
+import { action } from '@ember/object';
+```
 
-<p>Update the existing <code>export default class TodoDataService extends Service { … }</code> block as follows:</p>
+Update the existing `export default class TodoDataService extends Service { … }` block as follows:
 
-<pre class="brush: js">export default class TodoDataService extends Service {
+```js
+export default class TodoDataService extends Service {
   @tracked todos = [];
 
   @action
@@ -167,157 +200,168 @@ export default class TodoDataService extends Service {
 
     this.todos = [...this.todos, newTodo];
   }
-}</pre>
+}
+```
 
-<p>Here, the <code>todos</code> property on the service will maintain our list of todos contained inside an array, and we'll mark it with <code>@tracked</code>, because when the value of <code>todos</code> is updated we want the UI to update as well.</p>
+Here, the `todos` property on the service will maintain our list of todos contained inside an array, and we'll mark it with `@tracked`, because when the value of `todos` is updated we want the UI to update as well.
 
-<p>And just like before, the <code>add()</code> function that will be called from the template gets annotated with the <code>@action</code> decorator to bind it to the class instance. This function's contents are fairly easy to understand — when the function is invoked, a new <code>Todo</code> object instance is created with a text value of <code>text</code>, and the <code>todos</code> property value is updated to all of the current items inside the array (accessed conveniently using <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread syntax</a>), <em>plus</em> the new todo.</p>
+And just like before, the `add()` function that will be called from the template gets annotated with the `@action` decorator to bind it to the class instance. This function's contents are fairly easy to understand — when the function is invoked, a new `Todo` object instance is created with a text value of `text`, and the `todos` property value is updated to all of the current items inside the array (accessed conveniently using [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)), _plus_ the new todo.
 
-<h2 id="Using_the_service_from_our_header_component">Using the service from our header component</h2>
+## Using the service from our header component
 
-<p>Now that we've defined a way to add todos, we can interact with this service from the <code>header.js</code> input component to actually start adding them.</p>
+Now that we've defined a way to add todos, we can interact with this service from the `header.js` input component to actually start adding them.
 
-<p>First of all, the service needs to be injected into the template via the <code>@inject</code> decorator, which we’ll rename to <code>@service</code> for semantic clarity. To do this, add the following <code>import</code> line to <code>header.js</code>, beneath the two existing <code>import</code> lines:</p>
+First of all, the service needs to be injected into the template via the `@inject` decorator, which we’ll rename to `@service` for semantic clarity. To do this, add the following `import` line to `header.js`, beneath the two existing `import` lines:
 
-<pre class="brush: js">import { inject as service } from '@ember/service';</pre>
+```js
+import { inject as service } from '@ember/service';
+```
 
-<p>With this import in place, we can now make the <code>todo-data</code> service available inside the <code>HeaderComponent</code> class via the <code>todos</code> object, using the <code>@service</code> decorator. Add the following line just below the opening <code>export...</code> line:</p>
+With this import in place, we can now make the `todo-data` service available inside the `HeaderComponent` class via the `todos` object, using the `@service` decorator. Add the following line just below the opening `export...` line:
 
-<pre class="brush: js">@service('todo-data') todos;</pre>
+```js
+@service('todo-data') todos;
+```
 
-<p>Now the placeholder <code>alert(text);</code> line can be replaced with a call to our new <code>add()</code> function. Replace it with the following:</p>
+Now the placeholder `alert(text);` line can be replaced with a call to our new `add()` function. Replace it with the following:
 
-<pre class="brush: js">this.todos.add(text);</pre>
+```js
+this.todos.add(text);
+```
 
-<p>If we try this out in the todo app in our browser (<code>npm start</code>, go to <code>localhost:4200</code>), it will look like nothing happens after hitting the <kbd>Enter</kbd> key (although the fact that the app builds without any errors is a good sign). Using the <a href="https://guides.emberjs.com/release/ember-inspector/installation/">Ember Inspector</a> however, we can see that our todo was added:</p>
+If we try this out in the todo app in our browser (`npm start`, go to `localhost:4200`), it will look like nothing happens after hitting the <kbd>Enter</kbd> key (although the fact that the app builds without any errors is a good sign). Using the [Ember Inspector](https://guides.emberjs.com/release/ember-inspector/installation/) however, we can see that our todo was added:
 
-<p><img alt="The app being shown in the ember inspector, to prove that added todos are being stored by the service, even if they are not being displayed in the UI yet" src="todos-in-ember-inspector.gif"></p>
+![The app being shown in the ember inspector, to prove that added todos are being stored by the service, even if they are not being displayed in the UI yet](todos-in-ember-inspector.gif)
 
-<h2 id="Displaying_our_todos">Displaying our todos</h2>
+## Displaying our todos
 
-<p>Now that we know that we can create todos, there needs to be a way to swap out our static "Buy Movie Tickets" todos with the todos we're actually creating. In the <code>TodoList</code> component, we'll want to get the todos out of the service, and render a <code>Todo</code> component for each todo.</p>
+Now that we know that we can create todos, there needs to be a way to swap out our static "Buy Movie Tickets" todos with the todos we're actually creating. In the `TodoList` component, we'll want to get the todos out of the service, and render a `Todo` component for each todo.
 
-<p>In order to retrieve the todos from the service, our <code>TodoList</code> component first needs a backing component class to contain this functionality. Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to stop the development server, and enter the following terminal command:</p>
+In order to retrieve the todos from the service, our `TodoList` component first needs a backing component class to contain this functionality. Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to stop the development server, and enter the following terminal command:
 
-<pre class="brush: bash">ember generate component-class todo-list</pre>
+```bash
+ember generate component-class todo-list
+```
 
-<p>This generates the new component class <code>todomvc/app/components/todo-list.js</code>.</p>
+This generates the new component class `todomvc/app/components/todo-list.js`.
 
-<p>Populate this file with the following code, which exposes the <code>todo-data</code> service, via the <code>todos</code> property, to our template. This makes it accessible via <code>this.todos</code> inside both the class and the template:</p>
+Populate this file with the following code, which exposes the `todo-data` service, via the `todos` property, to our template. This makes it accessible via `this.todos` inside both the class and the template:
 
-<pre class="brush: js">import Component from '@glimmer/component';
+```js
+import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
 
 export default class TodoListComponent extends Component {
   @service('todo-data') todos;
-}</pre>
+}
+```
 
-<p>One issue here is that our service is called <code>todos</code>, but the list of todos is also called <code>todos</code>, so currently we would access the data using <code>this.todos.todos</code>. This is not intuitive, so we'll add a <a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">getter</a> to the <code>todos</code> service called <code>all</code>, which will represent all todos.</p>
+One issue here is that our service is called `todos`, but the list of todos is also called `todos`, so currently we would access the data using `this.todos.todos`. This is not intuitive, so we'll add a [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) to the `todos` service called `all`, which will represent all todos.
 
-<p>To do this, go back to your <code>todo-data.js</code> file and add the following below the <code>@tracked todos = [];</code> line:</p>
+To do this, go back to your `todo-data.js` file and add the following below the `@tracked todos = [];` line:
 
-<pre class="brush: js">get all() {
+```js
+get all() {
   return this.todos;
-}</pre>
+}
+```
 
-<p>Now we can access the data using <code>this.todos.all</code>, which is much more intuitive. To put this in action, go to your <code>todo-list.hbs</code> component, and replace the static component calls:</p>
+Now we can access the data using `this.todos.all`, which is much more intuitive. To put this in action, go to your `todo-list.hbs` component, and replace the static component calls:
 
-<pre class="brush: js">&lt;Todo /&gt;
-&lt;Todo /&gt;</pre>
+```js
+<Todo />
+<Todo />
+```
 
-<p>With a dynamic <code>#each</code> block (which is basically syntactic sugar over the top of JavaScript's <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">forEach()</a></code>) that creates a <code>&lt;Todo /&gt;</code> component for each todo available in the list of todos returned by the service’s <code>all()</code> getter:</p>
+With a dynamic `#each` block (which is basically syntactic sugar over the top of JavaScript's [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)) that creates a `<Todo />` component for each todo available in the list of todos returned by the service’s `all()` getter:
 
-<pre class="brush: js">\{{#each this.todos.all as |todo|}}
-  &lt;Todo @todo=\{{todo}} /&gt;
-\{{/each}}</pre>
+```js
+\{{#each this.todos.all as |todo|}}
+  <Todo @todo=\{{todo}} />
+\{{/each}}
+```
 
-<p>Another way to look at this:</p>
+Another way to look at this:
 
-<ul>
- <li> <code>this</code> — the rendering context / component instance.</li>
- <li> <code>todos</code> — a property on <code>this</code>, which we defined in the <code>todo-list.js</code> component using <code>@service('todo-data') todos;</code>. This is a reference to the <code>todo-data</code> service, allowing us to interact with the service instance directly.</li>
- <li> <code>all</code> — a getter on the <code>todo-data</code> service that returns all the todos.</li>
-</ul>
+- `this` — the rendering context / component instance.
+- `todos` — a property on `this`, which we defined in the `todo-list.js` component using `@service('todo-data') todos;`. This is a reference to the `todo-data` service, allowing us to interact with the service instance directly.
+- `all` — a getter on the `todo-data` service that returns all the todos.
 
-<p>Try starting the server again and navigating to our app, and you'll find that it works! Well, sort of. Whenever you enter a new Todo item, a new list item appears below the text input, but unfortunately it always says "Buy Movie Tickets".</p>
+Try starting the server again and navigating to our app, and you'll find that it works! Well, sort of. Whenever you enter a new Todo item, a new list item appears below the text input, but unfortunately it always says "Buy Movie Tickets".
 
-<p>This is because the text label inside each list item is hardcoded to that text, as seen in <code>todo.hbs</code>:</p>
+This is because the text label inside each list item is hardcoded to that text, as seen in `todo.hbs`:
 
-<pre class="brush: html">&lt;label&gt;Buy Movie Tickets&lt;/label&gt;</pre>
+```html
+<label>Buy Movie Tickets</label>
+```
 
-<p>Update this line to use the Argument <code>@todo</code> — which will represent the Todo that we passed in to this component when it was invoked in <code>todo-list.hbs</code>, in the line <code>&lt;Todo @todo=\{{todo}} /&gt;</code>:</p>
+Update this line to use the Argument `@todo` — which will represent the Todo that we passed in to this component when it was invoked in `todo-list.hbs`, in the line `<Todo @todo=\{{todo}} />`:
 
-<pre class="brush: js">&lt;label&gt;\{{@todo.text}}&lt;/label&gt;</pre>
+```js
+<label>\{{@todo.text}}</label>
+```
 
-<p>OK, try it again. You should find that now the text submitted in the <code>&lt;input&gt;</code> is properly reflected in the UI:</p>
+OK, try it again. You should find that now the text submitted in the `<input>` is properly reflected in the UI:
 
-<p><img alt="The app being shown in its final state of this article, with entered todo items being shown in the UI" src="todos-being-appended-with-correct-text.gif"></p>
+![The app being shown in its final state of this article, with entered todo items being shown in the UI](todos-being-appended-with-correct-text.gif)
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>OK, so that's great progress for now. We can now add todo items to our app, and the state of the data is tracked using our service. Next we'll move on to getting our footer functionality working, including the todo counter, and look at conditional rendering, including correctly styling todos when they've been checked. We'll also wire up our "Clear completed" button. </p>
+OK, so that's great progress for now. We can now add todo items to our app, and the state of the data is tracked using our service. Next we'll move on to getting our footer functionality working, including the todo counter, and look at conditional rendering, including correctly styling todos when they've been checked. We'll also wire up our "Clear completed" button.
 
-<p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<h2 id="In_this_module">In this module</h2>
+## In this module
 
-<ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
- <li>React
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
-  </ul>
- </li>
- <li>Ember
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
-  </ul>
- </li>
- <li>Vue
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
-  </ul>
- </li>
- <li>Svelte
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
-  </ul>
- </li>
- <li>Angular
-   <ul>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
-   </ul>
- </li>
-</ul>
+- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- React
+
+  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+
+- Ember
+
+  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+
+- Vue
+
+  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+
+- Svelte
+
+  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+
+- Angular
+
+  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
+  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

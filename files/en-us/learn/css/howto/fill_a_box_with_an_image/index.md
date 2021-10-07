@@ -9,20 +9,18 @@ tags:
   - Guide
   - Web
 ---
-<p>{{LearnSidebar}}</p>
+{{LearnSidebar}}
 
-<p>In this guide you can learn a technique for causing an HTML image to completely fill a box.</p>
+In this guide you can learn a technique for causing an HTML image to completely fill a box.
 
-<h2>Using object-fit</h2>
+## Using object-fit
 
-<p>When you add an image to a page using the HTML {{htmlelement("img")}} element, the image will maintain the size and aspect ratio of the image file, or that of any HTML {{htmlattrxref("width")}} or {{htmlattrxref("height")}} attributes. Sometimes you would like the image to completely fill the box that you have placed it in. In that case you first need to decide what happens if the image is the wrong aspect ratio for the container. </p>
+When you add an image to a page using the HTML {{htmlelement("img")}} element, the image will maintain the size and aspect ratio of the image file, or that of any HTML {{htmlattrxref("width")}} or {{htmlattrxref("height")}} attributes. Sometimes you would like the image to completely fill the box that you have placed it in. In that case you first need to decide what happens if the image is the wrong aspect ratio for the container.
 
-<ol>
-  <li>The image should completely fill the box, retaining aspect ratio, and cropping any excess on the side that is too big to fit.</li>
-  <li>The image should fit inside the box, with the background showing through as bars on the too-small side.</li>
-  <li>The image should fill the box and stretch, which may mean it displays at the wrong aspect ratio.</li>
-</ol>
+1.  The image should completely fill the box, retaining aspect ratio, and cropping any excess on the side that is too big to fit.
+2.  The image should fit inside the box, with the background showing through as bars on the too-small side.
+3.  The image should fill the box and stretch, which may mean it displays at the wrong aspect ratio.
 
-<p>The {{cssxref("object-fit")}} property makes each of these approaches possible. In the example below you can see how different values of <code>object-fit</code> work when using the same image. Select the approach that works best for your design.</p>
+The {{cssxref("object-fit")}} property makes each of these approaches possible. In the example below you can see how different values of `object-fit` work when using the same image. Select the approach that works best for your design.
 
-<p>{{EmbedGHLiveSample("css-examples/howto/object-fit.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/howto/object-fit.html", '100%', 800)}}

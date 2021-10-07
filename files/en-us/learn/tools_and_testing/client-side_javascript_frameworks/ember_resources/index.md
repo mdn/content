@@ -10,75 +10,85 @@ tags:
   - client-side
   - resources
 ---
-<div>{{LearnSidebar}}<br>
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
+{{LearnSidebar}}
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<p>Our final Ember article provides you with a list of resources that you can use to go further in your learning, plus some useful troubleshooting and other information.</p>
+Our final Ember article provides you with a list of resources that you can use to go further in your learning, plus some useful troubleshooting and other information.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>
-    <p>At minimum, it is recommended that you are familiar with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, and have knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
-
-    <p>A deeper understanding of modern JavaScript features (such as classes, modules, etc), will be extremely beneficial, as Ember makes heavy use of them.</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To provide further resource links and troubleshooting information.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        <p>
+          At minimum, it is recommended that you are familiar with the core
+          <a href="/en-US/docs/Learn/HTML">HTML</a>,
+          <a href="/en-US/docs/Learn/CSS">CSS</a>, and
+          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, and
+          have knowledge of the
+          <a
+            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            >terminal/command line</a
+          >.
+        </p>
+        <p>
+          A deeper understanding of modern JavaScript features (such as classes,
+          modules, etc), will be extremely beneficial, as Ember makes heavy use
+          of them.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        To provide further resource links and troubleshooting information.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Further_resources">Further resources</h2>
+## Further resources
 
-<ul>
- <li><a href="https://guides.emberjs.com/release/">Ember.JS Guides</a>
+- [Ember.JS Guides](https://guides.emberjs.com/release/)
 
-  <ul>
-   <li> <a href="https://guides.emberjs.com/release/tutorial/part-1/">Tutorial: Super Rentals</a></li>
-  </ul>
- </li>
- <li><a href="https://api.emberjs.com/ember/release">Ember.JS API Documentation</a></li>
- <li><a href="https://discord.gg/emberjs">Ember.JS Discord Server</a> — a forum/chat server where you can meet the Ember community, ask for help, and help others!</li>
-</ul>
+  - [Tutorial: Super Rentals](https://guides.emberjs.com/release/tutorial/part-1/)
 
-<h2 id="General_troubleshooting_gotchas_and_misconceptions">General troubleshooting, gotchas, and misconceptions</h2>
+- [Ember.JS API Documentation](https://api.emberjs.com/ember/release)
+- [Ember.JS Discord Server](https://discord.gg/emberjs) — a forum/chat server where you can meet the Ember community, ask for help, and help others!
 
-<p>This is nowhere near an extensive list, but it is a list of things that came up around the time of writing (latest update, May 2020).</p>
+## General troubleshooting, gotchas, and misconceptions
 
-<h3 id="How_do_I_debug_whats_going_on_in_the_framework">How do I debug what's going on in the framework?</h3>
+This is nowhere near an extensive list, but it is a list of things that came up around the time of writing (latest update, May 2020).
 
-<p>For <em>framework-specific</em> things, there is the <a href="https://guides.emberjs.com/release/ember-inspector/">ember-inspector add-on</a>, which allows inspection of:</p>
+### How do I debug what's going on in the framework?
 
-<ul>
- <li> Routes &amp; Controllers</li>
- <li> Components</li>
- <li> Services</li>
- <li> Promises</li>
- <li> Data (i.e: from a remote API — from ember-data, by default)</li>
- <li> Deprecation Information</li>
- <li> Render Performance</li>
-</ul>
+For _framework-specific_ things, there is the [ember-inspector add-on](https://guides.emberjs.com/release/ember-inspector/), which allows inspection of:
 
-<p>For general JavaScript debugging, check out our <a href="/en-US/docs/Tools/Debugger">guides on JavaScript Debugging</a><br>
- as well as interacting with the <a href="/en-US/docs/Tools">browser's other debugging tools</a>. In any default Ember<br>
- project, there will be two main JavaScript files, <code>vendor.js</code> and <code>{app-name}.js</code>. Both of<br>
- these files are generated with sourcemaps, so when you open the <code>vendor.js</code> or <code>{app-name}.js</code> to search for relevant code, when a debugger is placed, the sourcemap will be loaded and the breakpoint will be placed in the pre-transpiled code for easier correlation to your project code.</p>
+- Routes & Controllers
+- Components
+- Services
+- Promises
+- Data (i.e: from a remote API — from ember-data, by default)
+- Deprecation Information
+- Render Performance
 
-<p>For more information on sourcemaps, why they're needed, and what the ember-cli does with them, see the <a href="https://cli.emberjs.com/release/advanced-use/asset-compilation/">Advanced Use: Asset Compilation</a> guide. Note that sourcemaps are enabled by default.</p>
+For general JavaScript debugging, check out our [guides on JavaScript Debugging](/en-US/docs/Tools/Debugger)
+as well as interacting with the [browser's other debugging tools](/en-US/docs/Tools). In any default Ember
+project, there will be two main JavaScript files, `vendor.js` and `{app-name}.js`. Both of
+these files are generated with sourcemaps, so when you open the `vendor.js` or `{app-name}.js` to search for relevant code, when a debugger is placed, the sourcemap will be loaded and the breakpoint will be placed in the pre-transpiled code for easier correlation to your project code.
 
-<h3 id="ember-data_comes_pre-installed_do_I_need_it"><code>ember-data</code> comes pre-installed; do I need it?</h3>
+For more information on sourcemaps, why they're needed, and what the ember-cli does with them, see the [Advanced Use: Asset Compilation](https://cli.emberjs.com/release/advanced-use/asset-compilation/) guide. Note that sourcemaps are enabled by default.
 
-<p>Not at all. While <code>ember-data</code> solves <em>the most common problems</em> that any app dealing with<br>
- data will run in to, it is possible to roll your own front-end data client. A common<br>
- alternative is to any fully-featured front-end data client is <a href="/en-US/docs/Web/API/Fetch_API/Using_Fetch">The Fetch API</a>.</p>
+### `ember-data` comes pre-installed; do I need it?
 
-<p>Using the design patterns provided by the framework, a <code>Route</code> using <code>fetch()</code> would look something  like this:</p>
+Not at all. While `ember-data` solves _the most common problems_ that any app dealing with
+data will run in to, it is possible to roll your own front-end data client. A common
+alternative is to any fully-featured front-end data client is [The Fetch API](/en-US/docs/Web/API/Fetch_API/Using_Fetch).
 
-<pre class="brush: js">import Route from '@ember/routing/route';
+Using the design patterns provided by the framework, a `Route` using `fetch()` would look something  like this:
+
+```js
+import Route from '@ember/routing/route';
 
 export default class MyRoute extends Route {
   async model() {
@@ -89,34 +99,38 @@ export default class MyRoute extends Route {
       data: json
     };
   }
-}</pre>
+}
+```
 
-<p>See more information on <a href="https://guides.emberjs.com/release/routing/specifying-a-routes-model/">specifying the <code>Route</code>'s model</a> here.</p>
+See more information on [specifying the `Route`'s model](https://guides.emberjs.com/release/routing/specifying-a-routes-model/) here.
 
-<h3 id="Why_cant_I_just_use_JavaScript">Why can't I just use JavaScript?</h3>
+### Why can't I just use JavaScript?
 
-<p>This is the <em>most</em> common question Ember folks hear from people who have previous<br>
- experience with <a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">React</a>. While it is technically possible to use JSX, or any<br>
- other form of DOM creation, there has yet to be anything as robust as Ember's<br>
- templating system. The intentional minimalism forces certain decisions, and allows<br>
- for more consistent code, while keeping the template more structural rather than having them filled with bespoke logic.</p>
+This is the _most_ common question Ember folks hear from people who have previous
+experience with [React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started). While it is technically possible to use JSX, or any
+other form of DOM creation, there has yet to be anything as robust as Ember's
+templating system. The intentional minimalism forces certain decisions, and allows
+for more consistent code, while keeping the template more structural rather than having them filled with bespoke logic.
 
-<p>See also: <a href="https://www.youtube.com/watch?v=nXCSloXZ-wc">ReactiveConf 2017: Secrets of the Glimmer VM</a></p>
+See also: [ReactiveConf 2017: Secrets of the Glimmer VM](https://www.youtube.com/watch?v=nXCSloXZ-wc)
 
-<h3 id="What_is_the_state_of_the_mut_helper">What is the state of the <code>mut</code> helper?</h3>
+### What is the state of the `mut` helper?
 
-<p><code>mut</code> was not covered in this tutorial and is really baggage from a transitional time when Ember was moving from two-way bound data to the more common and easier-to-reason-about one-way bound data flow. It could be thought of as a build-time transform that wraps its argument with a setter function.</p>
+`mut` was not covered in this tutorial and is really baggage from a transitional time when Ember was moving from two-way bound data to the more common and easier-to-reason-about one-way bound data flow. It could be thought of as a build-time transform that wraps its argument with a setter function.
 
-<p>More concretely, using <code>mut</code> allows for template-only settings functions to be declared:</p>
+More concretely, using `mut` allows for template-only settings functions to be declared:
 
-<pre class="brush: js">&lt;Checkbox
+```js
+<Checkbox
   @value=\{{this.someData}}
   @onToggle=\{{fn (mut this.someData) (not this.someData)}}
-/&gt;</pre>
+/>
+```
 
-<p>Whereas, without <code>mut</code>, a component class would be needed:</p>
+Whereas, without `mut`, a component class would be needed:
 
-<pre class="brush: js">import Component from '@glimmer/component';
+```js
+import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 
@@ -127,135 +141,128 @@ export default class Example extends Component {
   setData(newValue) {
     this.someData = newValue;
   }
-}</pre>
+}
+```
 
-<p>Which would then be called in the template like so:</p>
+Which would then be called in the template like so:
 
-<pre class="brush: js">&lt;Checkbox @data=\{{this.someData}} @onChange=\{{this.setData}} /&gt;</pre>
+```js
+<Checkbox @data=\{{this.someData}} @onChange=\{{this.setData}} />
+```
 
-<p>Due to the conciseness of using <code>mut</code>, it may be desireable to reach for it. However, <code>mut</code> has unnatural semantics and has caused much confusion over the term of its existence.</p>
+Due to the conciseness of using `mut`, it may be desireable to reach for it. However, `mut` has unnatural semantics and has caused much confusion over the term of its existence.
 
-<p>There have been a couple of new ideas put together into the form of addons that use the public apis, <code><a href="https://github.com/pzuraq/ember-set-helper">ember-set-helper</a></code> and <code><a href="https://github.com/pzuraq/ember-box">ember-box</a></code>. Both of these try to solve the problems of <code>mut</code><br>
- by introducing more obvious / "less magic" concepts, avoiding build-time transforms and<br>
- implicit Glimmer VM behavior.</p>
+There have been a couple of new ideas put together into the form of addons that use the public apis, [`ember-set-helper`](https://github.com/pzuraq/ember-set-helper) and [`ember-box`](https://github.com/pzuraq/ember-box). Both of these try to solve the problems of `mut`
+by introducing more obvious / "less magic" concepts, avoiding build-time transforms and
+implicit Glimmer VM behavior.
 
-<p>With <code>ember-set-helper</code>:</p>
+With `ember-set-helper`:
 
-<pre class="brush: js">&lt;Checkbox
+```js
+<Checkbox
   @value=\{{this.someData}}
   @onToggle=\{{set this "someData" (not this.someData)}}
-/&gt;</pre>
+/>
+```
 
-<p>With <code>ember-box</code>:</p>
+With `ember-box`:
 
-<pre class="brush: js">\{{#let (box this.someData) as |someData|}}
-  &lt;Checkbox
+```js
+\{{#let (box this.someData) as |someData|}}
+  <Checkbox
     @value=\{{unwrap someData}}
     @onToggle=\{{update someData (not this.someData)}}
-  /&gt;
-\{{/let}}</pre>
+  />
+\{{/let}}
+```
 
-<p>Note that none of these solutions are particularly common among members of the community, and as a whole, people are still trying to figure out an ergonomic and simple API for setting data in a template-only context, without backing JS.</p>
+Note that none of these solutions are particularly common among members of the community, and as a whole, people are still trying to figure out an ergonomic and simple API for setting data in a template-only context, without backing JS.
 
-<h3 id="What_is_the_purpose_of_Controllers">What is the purpose of Controllers?</h3>
+### What is the purpose of Controllers?
 
-<p><a href="https://guides.emberjs.com/release/routing/controllers/">Controllers</a> are <a href="https://en.wikipedia.org/wiki/Singleton_pattern">Singletons</a>, which may help manage the rendering context of the<br>
- active route. On the surface, they function much the same as the backing JavaScript of a Component. Controllers are (as of January 2020), the only way to manage URL Query Params.</p>
+[Controllers](https://guides.emberjs.com/release/routing/controllers/) are [Singletons](https://en.wikipedia.org/wiki/Singleton_pattern), which may help manage the rendering context of the
+active route. On the surface, they function much the same as the backing JavaScript of a Component. Controllers are (as of January 2020), the only way to manage URL Query Params.
 
-<p>Ideally, controllers should be fairly light in their responsibilities, delegating to Components<br>
- and Services where possible.</p>
+Ideally, controllers should be fairly light in their responsibilities, delegating to Components
+and Services where possible.
 
-<h3 id="What_is_the_purpose_of_Routes">What is the purpose of Routes?</h3>
+### What is the purpose of Routes?
 
-<p>A <a href="https://guides.emberjs.com/release/routing/defining-your-routes/">Route</a> represents part of the URL when a user navigates from place to place in the app.<br>
- A Route has only a couple responsibilities:</p>
+A [Route](https://guides.emberjs.com/release/routing/defining-your-routes/) represents part of the URL when a user navigates from place to place in the app.
+A Route has only a couple responsibilities:
 
-<ul>
- <li> Load the <em>minimally required data</em> to render the route (or view-sub-tree).</li>
- <li> Gate access to the route and redirect if needed.</li>
- <li> Handle loading and error states from the minimally required data.</li>
-</ul>
+- Load the _minimally required data_ to render the route (or view-sub-tree).
+- Gate access to the route and redirect if needed.
+- Handle loading and error states from the minimally required data.
 
-<p>A Route only has 3 lifecycle hooks, all of which are optional:</p>
+A Route only has 3 lifecycle hooks, all of which are optional:
 
-<ul>
- <li> <code>beforeModel</code> — gate access to the route.</li>
- <li> <code>model</code> — where data is loaded.</li>
- <li> <code>afterModel</code> — verify access.</li>
-</ul>
+- `beforeModel` — gate access to the route.
+- `model` — where data is loaded.
+- `afterModel` — verify access.
 
-<p>Last, a Route has the ability to handle common events resulting from configuring the <code>model</code>:</p>
+Last, a Route has the ability to handle common events resulting from configuring the `model`:
 
-<ul>
- <li> <code>loading</code> — what to do when the <code>model</code> hook is loading.</li>
- <li> <code>error</code> — what to do when an error is thrown from <code>model</code>.</li>
-</ul>
+- `loading` — what to do when the `model` hook is loading.
+- `error` — what to do when an error is thrown from `model`.
 
-<p>Both <code>loading</code> and <code>error</code> can render default templates as well as customized templates defined elsewhere in the application, unifying loading/error states.</p>
+Both `loading` and `error` can render default templates as well as customized templates defined elsewhere in the application, unifying loading/error states.
 
-<p>More information on <a href="https://api.emberjs.com/ember/release/classes/Route/">everything a Route can do is found in the API documentation</a>.</p>
+More information on [everything a Route can do is found in the API documentation](https://api.emberjs.com/ember/release/classes/Route/).
 
-<p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<h2 id="In_this_module">In this module</h2>
+## In this module
 
-<ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
- <li>React
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
-  </ul>
- </li>
- <li>Ember
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
-  </ul>
- </li>
- <li>Vue
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
-  </ul>
- </li>
- <li>Svelte
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
-  </ul>
- </li>
- <li>Angular
-   <ul>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
-   </ul>
- </li>
-</ul>
+- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- React
+
+  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+
+- Ember
+
+  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+
+- Vue
+
+  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+
+- Svelte
+
+  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+
+- Angular
+
+  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
+  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

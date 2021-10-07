@@ -12,140 +12,132 @@ tags:
   - Objects
   - l10n:priority
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
 
-<div>{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}</div>
-
-<p>In this assessment, you are expected to use the bouncing balls demo from the previous article as a starting point, and add some new and interesting features to it.</p>
+In this assessment, you are expected to use the bouncing balls demo from the previous article as a starting point, and add some new and interesting features to it.
 
 <table>
-	<tbody>
-		<tr>
-			<th scope="row">Prerequisites:</th>
-			<td>Before attempting this assessment you should have already worked through all the articles in this module.</td>
-		</tr>
-		<tr>
-			<th scope="row">Objective:</th>
-			<td>To test comprehension of JavaScript objects and object-oriented constructs</td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        Before attempting this assessment you should have already worked through
+        all the articles in this module.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        To test comprehension of JavaScript objects and object-oriented
+        constructs
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Starting_point">Starting point</h2>
+## Starting point
 
-<p>To get this assessment started, make a local copy of <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index-finished.html">index-finished.html</a>, <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css">style.css</a>, and <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js">main-finished.js</a> from our last article in a new directory in your local computer.</p>
+To get this assessment started, make a local copy of [index-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index-finished.html), [style.css](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css), and [main-finished.js](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) from our last article in a new directory in your local computer.
 
-<p>Alternatively, you could use a site like <a class="external external-icon" href="https://jsbin.com/">JSBin</a> or <a class="external external-icon" href="https://glitch.com/">Glitch</a> to do your assessment. You could paste the HTML, CSS and JavaScript into one of these online editors. If the online editor you are using doesn't have separate JavaScript/CSS panels, feel free to put them inline <code>&lt;script&gt;</code>/<code>&lt;style&gt;</code> elements inside the HTML page.</p>
+Alternatively, you could use a site like [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/) to do your assessment. You could paste the HTML, CSS and JavaScript into one of these online editors. If the online editor you are using doesn't have separate JavaScript/CSS panels, feel free to put them inline `<script>`/`<style>` elements inside the HTML page.
 
-<div class="note">
-<p><strong>Note:</strong> If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.</p>
-</div>
+> **Note:** If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
 
-<h2 id="Hints_and_tips">Hints and tips</h2>
+## Hints and tips
 
-<p>A couple of pointers before you get started.</p>
+A couple of pointers before you get started.
 
-<ul>
-	<li>This assessment is quite challenging. Read the whole assessment before you start coding, and take each step slowly and carefully.</li>
-	<li>It might be a good idea to save a separate copy of the demo after you get each stage working, so you can refer back to it if you find yourself in trouble later on.</li>
-</ul>
+- This assessment is quite challenging. Read the whole assessment before you start coding, and take each step slowly and carefully.
+- It might be a good idea to save a separate copy of the demo after you get each stage working, so you can refer back to it if you find yourself in trouble later on.
 
-<h2 id="Project_brief">Project brief</h2>
+## Project brief
 
-<p>Our bouncy ball demo is fun, but now we want to make it a little bit more interactive by adding a user-controlled evil circle, which will eat the balls if it catches them. We also want to test your object-building skills by creating a generic <code>Shape()</code> object that our balls and evil circle can inherit from. Finally, we want to add a score counter to track the number of balls left to capture.</p>
+Our bouncy ball demo is fun, but now we want to make it a little bit more interactive by adding a user-controlled evil circle, which will eat the balls if it catches them. We also want to test your object-building skills by creating a generic `Shape()` object that our balls and evil circle can inherit from. Finally, we want to add a score counter to track the number of balls left to capture.
 
-<p>The following screenshot gives you an idea of what the finished program should look like:</p>
+The following screenshot gives you an idea of what the finished program should look like:
 
-<p><img alt="" src="bouncing-evil-circle.png"></p>
+![](bouncing-evil-circle.png)
 
-<p>To give you more of an idea, have a look at the <a href="https://mdn.github.io/learning-area/javascript/oojs/assessment/">finished example</a> (no peeking at the source code!)</p>
+To give you more of an idea, have a look at the [finished example](https://mdn.github.io/learning-area/javascript/oojs/assessment/) (no peeking at the source code!)
 
-<h2 id="Steps_to_complete">Steps to complete</h2>
+## Steps to complete
 
-<p>The following sections describe what you need to do.</p>
+The following sections describe what you need to do.
 
-<h3 id="Creating_our_new_objects">Creating our new objects</h3>
+### Creating our new objects
 
-<p>First of all, change your existing <code>Ball()</code> constructor so that it becomes a <code>Shape()</code> constructor and add a new <code>Ball()</code> constructor:</p>
+First of all, change your existing `Ball()` constructor so that it becomes a `Shape()` constructor and add a new `Ball()` constructor:
 
-<ol>
-	<li>The <code>Shape()</code> constructor should define the <code>x</code>, <code>y</code>, <code>velX</code>, and <code>velY</code> properties in the same way as the <code>Ball()</code> constructor did originally, but not the <code>color</code> and <code>size</code> properties.</li>
-	<li>It should also define a new property called <code>exists</code>, which is used to track whether the balls exist in the program (have not been eaten by the evil circle). This should be a boolean (<code>true</code>/<code>false</code>).</li>
-	<li>The <code>Ball()</code> constructor should inherit the <code>x</code>, <code>y</code>, <code>velX</code>, <code>velY</code>, and <code>exists</code> properties from the <code>Shape()</code> constructor.</li>
-	<li>It should also define a <code>color</code> and a <code>size</code> property, like the original <code>Ball()</code> constructor did.</li>
-	<li>Remember to set the <code>Ball()</code> constructor's <code>prototype</code> and <code>constructor</code> appropriately.</li>
-	<li>
-		The <code>Ball</code> prototype's <code>collisionDetect()</code> method needs a small update. If the code were kept as-is, the <code>EvilCircle</code> would start eating the bouncing balls by setting the <code>exists</code> property to <code>false</code>. And that would reduce the number of balls involved in collision detection. A ball needs to be considered for collision detection only if the <code>exists</code> property is <code>true</code>. So, replace the existing <code>collisionDetect()</code> code with the following code:
-		<pre class="brush: js">
-Ball.prototype.collisionDetect = function() {
-  for (let j = 0; j &lt; balls.length; j++) {
-    if (!(this === balls[j]) && balls[j].exists) {
-      const dx = this.x - balls[j].x;
-      const dy = this.y - balls[j].y;
-      const distance = Math.sqrt(dx * dx + dy * dy);
+1.  The `Shape()` constructor should define the `x`, `y`, `velX`, and `velY` properties in the same way as the `Ball()` constructor did originally, but not the `color` and `size` properties.
+2.  It should also define a new property called `exists`, which is used to track whether the balls exist in the program (have not been eaten by the evil circle). This should be a boolean (`true`/`false`).
+3.  The `Ball()` constructor should inherit the `x`, `y`, `velX`, `velY`, and `exists` properties from the `Shape()` constructor.
+4.  It should also define a `color` and a `size` property, like the original `Ball()` constructor did.
+5.  Remember to set the `Ball()` constructor's `prototype` and `constructor` appropriately.
+6.  The `Ball` prototype's `collisionDetect()` method needs a small update. If the code were kept as-is, the `EvilCircle` would start eating the bouncing balls by setting the `exists` property to `false`. And that would reduce the number of balls involved in collision detection. A ball needs to be considered for collision detection only if the `exists` property is `true`. So, replace the existing `collisionDetect()` code with the following code:
 
-      if (distance &lt; this.size + balls[j].size) {
-        balls[j].color = this.color = 'rgb(' + random(0, 255) + ',' + random(0, 255) + ',' + random(0, 255) +')';
+    ```js
+    Ball.prototype.collisionDetect = function() {
+      for (let j = 0; j < balls.length; j++) {
+        if (!(this === balls[j]) && balls[j].exists) {
+          const dx = this.x - balls[j].x;
+          const dy = this.y - balls[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < this.size + balls[j].size) {
+            balls[j].color = this.color = 'rgb(' + random(0, 255) + ',' + random(0, 255) + ',' + random(0, 255) +')';
+          }
+        }
       }
     }
-  }
-}</pre>
-As discussed above, the only addition is to check if the ball exists — by using <code>balls[j].exists</code> in the <code>if</code> conditional.
-	</li>
+    ```
 
+    As discussed above, the only addition is to check if the ball exists — by using `balls[j].exists` in the `if` conditional.
 
-</ol>
+The ball `draw()` and `update()` method definitions should be able to stay exactly the same as they were before.
 
-<p>The ball <code>draw()</code> and <code>update()</code> method definitions should be able to stay exactly the same as they were before.</p>
+You also need to add a new parameter to the `new Ball() ( ... )` constructor call — the `exists` parameter should be the 5th parameter, and should be given a value of `true`.
 
-<p>You also need to add a new parameter to the <code>new Ball() ( ... )</code> constructor call — the <code>exists</code> parameter should be the 5th parameter, and should be given a value of <code>true</code>.</p>
+At this point, try reloading the code — it should work just the same as it did before, with our redesigned objects.
 
-<p>At this point, try reloading the code — it should work just the same as it did before, with our redesigned objects.</p>
+### Defining EvilCircle()
 
-<h3 id="Defining_EvilCircle">Defining EvilCircle()</h3>
+Now it's time to meet the bad guy — the `EvilCircle()`! Our game is only going to involve one evil circle, but we are still going to define it using a constructor that inherits from `Shape()` to give you some practice. You might want to add another circle to the app later on that can be controlled by another player, or have several computer-controlled evil circles. You're probably not going to take over the world with a single evil circle, but it will do for this assessment.
 
-<p>Now it's time to meet the bad guy — the <code>EvilCircle()</code>! Our game is only going to involve one evil circle, but we are still going to define it using a constructor that inherits from <code>Shape()</code> to give you some practice. You might want to add another circle to the app later on that can be controlled by another player, or have several computer-controlled evil circles. You're probably not going to take over the world with a single evil circle, but it will do for this assessment.</p>
+The `EvilCircle()` constructor should inherit `x`, `y`, `velX`, `velY`, and `exists` from `Shape()`, but `velX` and `velY` should always equal 20.
 
-<p>The <code>EvilCircle()</code> constructor should inherit <code>x</code>, <code>y</code>, <code>velX</code>, <code>velY</code>, and <code>exists</code> from <code>Shape()</code>, but <code>velX</code> and <code>velY</code> should always equal 20.</p>
+You should do this something like `Shape.call(this, x, y, 20, 20, exists);`
 
-<p>You should do this something like <code>Shape.call(this, x, y, 20, 20, exists);</code></p>
+It should also define its own properties, as follows:
 
-<p>It should also define its own properties, as follows:</p>
+- `color` — `'white'`
+- `size` — `10`
 
-<ul>
-	<li><code>color</code> — <code>'white'</code></li>
-	<li><code>size</code> — <code>10</code></li>
-</ul>
+Again, remember to define your inherited properties as parameters in the constructor, and set the `prototype` and `constructor` properties correctly.
 
-<p>Again, remember to define your inherited properties as parameters in the constructor, and set the <code>prototype</code> and <code>constructor</code> properties correctly.</p>
+### Defining EvilCircle()'s methods
 
-<h3 id="Defining_EvilCircles_methods">Defining EvilCircle()'s methods</h3>
+`EvilCircle()` should have four methods, as described below.
 
-<p><code>EvilCircle()</code> should have four methods, as described below.</p>
+#### `draw()`
 
-<h4 id="draw"><code>draw()</code></h4>
+This method has the same purpose as `Ball()`'s `draw()` method: It draws the object instance on the canvas. It will work in a very similar way, so you can start by copying the `Ball.prototype.draw` definition. You should then make the following changes:
 
-<p>This method has the same purpose as <code>Ball()</code>'s <code>draw()</code> method: It draws the object instance on the canvas. It will work in a very similar way, so you can start by copying the <code>Ball.prototype.draw</code> definition. You should then make the following changes:</p>
+- We want the evil circle to not be filled in, but rather just have an outer line (stroke). You can achieve this by updating [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) and [`fill()`](/en-US/docs/Web/API/CanvasRenderingContext2D/fill) to [`strokeStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle) and [`stroke()`](/en-US/docs/Web/API/CanvasRenderingContext2D/stroke).
+- We also want to make the stroke a bit thicker, so you can see the evil circle a bit more easily. This can be achieved by setting a value for [`lineWidth`](/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth) somewhere after the [`beginPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath) call (3 will do).
 
-<ul>
-	<li>We want the evil circle to not be filled in, but rather just have an outer line (stroke). You can achieve this by updating <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle">fillStyle</a></code> and <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/fill">fill()</a></code> to <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle">strokeStyle</a></code> and <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/stroke">stroke()</a></code>.</li>
-	<li>We also want to make the stroke a bit thicker, so you can see the evil circle a bit more easily. This can be achieved by setting a value for <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth">lineWidth</a></code> somewhere after the <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath">beginPath()</a></code> call (3 will do).</li>
-</ul>
+#### `checkBounds()`
 
-<h4 id="checkBounds"><code>checkBounds()</code></h4>
+This method will do the same thing as the first part of `Ball()`'s `update()` function — look to see whether the evil circle is going to go off the edge of the screen, and stop it from doing so. Again, you can mostly just copy the `Ball.prototype.update` definition, but there are a few changes you should make:
 
-<p>This method will do the same thing as the first part of <code>Ball()</code>'s <code>update()</code> function — look to see whether the evil circle is going to go off the edge of the screen, and stop it from doing so. Again, you can mostly just copy the <code>Ball.prototype.update</code> definition, but there are a few changes you should make:</p>
+- Get rid of the last two lines — we don't want to automatically update the evil circle's position on every frame, because we will be moving it in some other way, as you'll see below.
+- Inside the `if()` statements, if the tests return true we don't want to update `velX`/`velY`; we want to instead change the value of `x`/`y` so the evil circle is bounced back onto the screen slightly. Adding or subtracting (as appropriate) the evil circle's `size` property would make sense.
 
-<ul>
-	<li>Get rid of the last two lines — we don't want to automatically update the evil circle's position on every frame, because we will be moving it in some other way, as you'll see below.</li>
-	<li>Inside the <code>if()</code> statements, if the tests return true we don't want to update <code>velX</code>/<code>velY</code>; we want to instead change the value of <code>x</code>/<code>y</code> so the evil circle is bounced back onto the screen slightly. Adding or subtracting (as appropriate) the evil circle's <code>size</code> property would make sense.</li>
-</ul>
+#### `setControls()`
 
-<h4 id="setControls"><code>setControls()</code></h4>
+This method will add an `onkeydown` event listener to the `window` object so that when certain keyboard keys are pressed, we can move the evil circle around. The following code block should be put inside the method definition:
 
-<p>This method will add an <code>onkeydown</code> event listener to the <code>window</code> object so that when certain keyboard keys are pressed, we can move the evil circle around. The following code block should be put inside the method definition:</p>
-
-<pre class="brush: js">let _this = this;
+```js
+let _this = this;
 window.onkeydown = function(e) {
     if (e.key === 'a') {
       _this.x -= _this.velX;
@@ -156,82 +148,72 @@ window.onkeydown = function(e) {
     } else if (e.key === 's') {
       _this.y += _this.velY;
     }
-  }</pre>
+  }
+```
 
-<p>So when a key is pressed, the event object's <code><a href="/en-US/docs/Web/API/KeyboardEvent/key">key</a></code> property is consulted to see which key is pressed. If it is one of the four specified keys, then the evil circle will move left/right/up/down.</p>
+So when a key is pressed, the event object's [`key`](/en-US/docs/Web/API/KeyboardEvent/key) property is consulted to see which key is pressed. If it is one of the four specified keys, then the evil circle will move left/right/up/down.
 
-<p>For a bonus point, can you tell us why we've had to set <code>let _this = this;</code> in the position it is in? It is something to do with function scope.</p>
+For a bonus point, can you tell us why we've had to set `let _this = this;` in the position it is in? It is something to do with function scope.
 
-<h4 id="collisionDetect"><code>collisionDetect()</code></h4>
+#### `collisionDetect()`
 
-<p>This method will act in a very similar way to <code>Ball()</code>'s <code>collisionDetect()</code> method, so you can use a copy of that as the basis of this new method. But there are a couple of differences:</p>
+This method will act in a very similar way to `Ball()`'s `collisionDetect()` method, so you can use a copy of that as the basis of this new method. But there are a couple of differences:
 
-<ul>
-	<li>In the outer <code>if</code> statement, you no longer need to check whether the current ball in the iteration is the same as the ball that is doing the checking — because it is no longer a ball, it is the evil circle! Instead, you need to do a test to see if the ball being checked exists (with which property could you do this with?). If it doesn't exist, it has already been eaten by the evil circle, so there is no need to check it again.</li>
-	<li>In the inner <code>if</code> statement, you no longer want to make the objects change color when a collision is detected — instead, you want to set any balls that collide with the evil circle to not exist any more (again, how do you think you'd do that?).</li>
-</ul>
+- In the outer `if` statement, you no longer need to check whether the current ball in the iteration is the same as the ball that is doing the checking — because it is no longer a ball, it is the evil circle! Instead, you need to do a test to see if the ball being checked exists (with which property could you do this with?). If it doesn't exist, it has already been eaten by the evil circle, so there is no need to check it again.
+- In the inner `if` statement, you no longer want to make the objects change color when a collision is detected — instead, you want to set any balls that collide with the evil circle to not exist any more (again, how do you think you'd do that?).
 
-<h3 id="Bringing_the_evil_circle_into_the_program">Bringing the evil circle into the program</h3>
+### Bringing the evil circle into the program
 
-<p>Now we've defined the evil circle, we need to actually make it appear in our scene. To do this, you need to make some changes to the <code>loop()</code> function.</p>
+Now we've defined the evil circle, we need to actually make it appear in our scene. To do this, you need to make some changes to the `loop()` function.
 
-<ul>
-	<li>First of all, create a new evil circle object instance (specifying the necessary parameters), then call its <code>setControls()</code> method. You only need to do these two things once, not on every iteration of the loop.</li>
-	<li>At the point where you loop through every ball and call the <code>draw()</code>, <code>update()</code>, and <code>collisionDetect()</code> functions for each one, make it so that these functions are only called if the current ball exists.</li>
-	<li>Call the evil ball instance's <code>draw()</code>, <code>checkBounds()</code>, and <code>collisionDetect()</code> methods on every iteration of the loop.</li>
-</ul>
+- First of all, create a new evil circle object instance (specifying the necessary parameters), then call its `setControls()` method. You only need to do these two things once, not on every iteration of the loop.
+- At the point where you loop through every ball and call the `draw()`, `update()`, and `collisionDetect()` functions for each one, make it so that these functions are only called if the current ball exists.
+- Call the evil ball instance's `draw()`, `checkBounds()`, and `collisionDetect()` methods on every iteration of the loop.
 
-<h3 id="Implementing_the_score_counter">Implementing the score counter</h3>
+### Implementing the score counter
 
-<p>To implement the score counter, follow the following steps:</p>
+To implement the score counter, follow the following steps:
 
-<ol>
-	<li>In your HTML file, add a {{HTMLElement("p")}} element just below the {{HTMLElement("h1")}} element containing the text "Ball count: ".</li>
-	<li>In your CSS file, add the following rule at the bottom:
-	<pre class="brush: css">p {
-  position: absolute;
-  margin: 0;
-  top: 35px;
-  right: 5px;
-  color: #aaa;
-}</pre>
-	</li>
-	<li>In your JavaScript, make the following updates:
-	<ul>
-		<li>Create a variable that stores a reference to the paragraph.</li>
-		<li>Keep a count of the number of balls on screen in some way.</li>
-		<li>Increment the count and display the updated number of balls each time a ball is added to the scene.</li>
-		<li>Decrement the count and display the updated number of balls each time the evil circle eats a ball (causes it not to exist).</li>
-	</ul>
-	</li>
-</ol>
+1.  In your HTML file, add a {{HTMLElement("p")}} element just below the {{HTMLElement("h1")}} element containing the text "Ball count: ".
+2.  In your CSS file, add the following rule at the bottom:
 
-<h2 id="Assessment_or_further_help">Assessment or further help</h2>
+    ```css
+    p {
+      position: absolute;
+      margin: 0;
+      top: 35px;
+      right: 5px;
+      color: #aaa;
+    }
+    ```
 
-<p>If you would like your work assessed, or are stuck and want to ask for help:</p>
+3.  In your JavaScript, make the following updates:
 
-<ol>
-	<li>Put your work into an online shareable editor such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a>.</li>
-	<li>Write a post asking for assessment and/or help at the <a href="https://discourse.mozilla.org/c/mdn/learn">MDN Discourse forum Learning category</a>. Your post should include:
-	<ul>
-		<li>A descriptive title such as "Assessment wanted for Adding bouncing balls features".</li>
-		<li>Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.</li>
-		<li>A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.</li>
-		<li>A link to the actual task or assessment page, so we can find the question you want help with.</li>
-	</ul>
-	</li>
-</ol>
+    - Create a variable that stores a reference to the paragraph.
+    - Keep a count of the number of balls on screen in some way.
+    - Increment the count and display the updated number of balls each time a ball is added to the scene.
+    - Decrement the count and display the updated number of balls each time the evil circle eats a ball (causes it not to exist).
 
-<p>{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}</p>
+## Assessment or further help
 
-<h2 id="In_this_module">In this module</h2>
+If you would like your work assessed, or are stuck and want to ask for help:
 
-<ul>
-	<li><a href="/en-US/docs/Learn/JavaScript/Objects/Basics">Object basics</a></li>
-	<li><a href="/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS">Object-oriented JavaScript for beginners</a></li>
-	<li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">Object prototypes</a></li>
-	<li><a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance">Inheritance in JavaScript</a></li>
-	<li><a href="/en-US/docs/Learn/JavaScript/Objects/JSON">Working with JSON data</a></li>
-	<li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_building_practice">Object building practice</a></li>
-	<li><a href="/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features">Adding features to our bouncing balls demo</a></li>
-</ul>
+1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+
+    - A descriptive title such as "Assessment wanted for Adding bouncing balls features".
+    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
+    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
+    - A link to the actual task or assessment page, so we can find the question you want help with.
+
+{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
+
+## In this module
+
+- [Object basics](/en-US/docs/Learn/JavaScript/Objects/Basics)
+- [Object-oriented JavaScript for beginners](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS)
+- [Object prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
+- [Inheritance in JavaScript](/en-US/docs/Learn/JavaScript/Objects/Inheritance)
+- [Working with JSON data](/en-US/docs/Learn/JavaScript/Objects/JSON)
+- [Object building practice](/en-US/docs/Learn/JavaScript/Objects/Object_building_practice)
+- [Adding features to our bouncing balls demo](/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

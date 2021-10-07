@@ -8,13 +8,14 @@ tags:
   - part 6
   - server-side
 ---
-<p>This final subarticle shows how to define a page to update <code>Book</code> objects. Form handling when updating a book is much like that for creating a book, except that you must populate the form in the <code>GET</code> route with values from the database.</p>
+This final subarticle shows how to define a page to update `Book` objects. Form handling when updating a book is much like that for creating a book, except that you must populate the form in the `GET` route with values from the database.
 
-<h2 id="Controller—get_route">Controller—get route</h2>
+## Controller—get route
 
-<p>Open <strong>/controllers/bookController.js</strong>. Find the exported <code>book_update_get()</code> controller method and replace it with the following code.</p>
+Open **/controllers/bookController.js**. Find the exported `book_update_get()` controller method and replace it with the following code.
 
-<pre class="brush: js">// Display book update form on GET.
+```js
+// Display book update form on GET.
 exports.book_update_get = function(req, res, next) {
 
     // Get book, authors and genres for form.
@@ -37,8 +38,8 @@ exports.book_update_get = function(req, res, next) {
             }
             // Success.
             // Mark our selected genres as checked.
-            for (var all_g_iter = 0; all_g_iter &lt; results.genres.length; all_g_iter++) {
-                for (var book_g_iter = 0; book_g_iter &lt; results.book.genre.length; book_g_iter++) {
+            for (var all_g_iter = 0; all_g_iter < results.genres.length; all_g_iter++) {
+                for (var book_g_iter = 0; book_g_iter < results.book.genre.length; book_g_iter++) {
                     if (results.genres[all_g_iter]._id.toString()===results.book.genre[book_g_iter]._id.toString()) {
                         results.genres[all_g_iter].checked='true';
                     }
@@ -47,27 +48,27 @@ exports.book_update_get = function(req, res, next) {
             res.render('book_form', { title: 'Update Book', authors: results.authors, genres: results.genres, book: results.book });
         });
 
-};</pre>
+};
+```
 
-<p>The controller gets the id of the <code>Book</code> to be updated from the URL parameter (<code>req.params.id</code>). It uses the <code>async.parallel()</code> method to get the specified <code>Book</code> record (populating its genre and author fields) and lists of all the <code>Author</code> and <code>Genre</code> objects.</p>
+The controller gets the id of the `Book` to be updated from the URL parameter (`req.params.id`). It uses the `async.parallel()` method to get the specified `Book` record (populating its genre and author fields) and lists of all the `Author` and `Genre` objects.
 
-<p>When the operations complete it checks for any errors in the find operation, and also whether any books were found.</p>
+When the operations complete it checks for any errors in the find operation, and also whether any books were found.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Not finding any book results is <strong>not an error</strong> for a search — but it is for this application because we know there must be a matching book record! The code above compares for (<code>results==null</code>) in the callback, but it could equally well have daisy chained the method <a href="https://mongoosejs.com/docs/api.html#query_Query-orFail">orFail()</a> to the query. </p>
-</div>
+> **Note:** Not finding any book results is **not an error** for a search — but it is for this application because we know there must be a matching book record! The code above compares for (`results==null`) in the callback, but it could equally well have daisy chained the method [orFail()](https://mongoosejs.com/docs/api.html#query_Query-orFail) to the query.
 
-<p>We then mark the currently selected genres as checked and then render the <strong>book_form.pug</strong> view, passing variables for <code>title</code>, book, all <code>authors</code>, and all <code>genres</code>.</p>
+We then mark the currently selected genres as checked and then render the **book_form.pug** view, passing variables for `title`, book, all `authors`, and all `genres`.
 
-<h2 id="Controller—post_route">Controller—post route</h2>
+## Controller—post route
 
-<p>Find the exported <code>book_update_post()</code> controller method, and replace it with the following code.</p>
+Find the exported `book_update_post()` controller method, and replace it with the following code.
 
-<pre class="brush: js">// Handle book update on POST.
+```js
+// Handle book update on POST.
 exports.book_update_post = [
 
     // Convert the genre to an array
-    (req, res, next) =&gt; {
+    (req, res, next) => {
         if(!(req.body.genre instanceof Array)){
             if(typeof req.body.genre==='undefined')
             req.body.genre=[];
@@ -85,7 +86,7 @@ exports.book_update_post = [
     body('genre.*').escape(),
 
     // Process request after validation and sanitization.
-    (req, res, next) =&gt; {
+    (req, res, next) => {
 
         // Extract the validation errors from a request.
         const errors = validationResult(req);
@@ -115,8 +116,8 @@ exports.book_update_post = [
                 if (err) { return next(err); }
 
                 // Mark our selected genres as checked.
-                for (let i = 0; i &lt; results.genres.length; i++) {
-                    if (book.genre.indexOf(results.genres[i]._id) &gt; -1) {
+                for (let i = 0; i < results.genres.length; i++) {
+                    if (book.genre.indexOf(results.genres[i]._id) > -1) {
                         results.genres[i].checked='true';
                     }
                 }
@@ -133,18 +134,20 @@ exports.book_update_post = [
                 });
         }
     }
-];</pre>
+];
+```
 
-<p>This is very similar to the post route used when creating a Book. First we validate and sanitize the book data from the form and use it to create a new <code>Book</code> object (setting its <code>_id</code> value to the id of the object to update). If there are errors when we validate the data then we re-render the form, additionally displaying the data entered by the user, the errors, and lists of genres and authors. If there are no errors then we call <code>Book.findByIdAndUpdate()</code> to update the <code>Book</code> document, and then redirect to its detail page.</p>
+This is very similar to the post route used when creating a Book. First we validate and sanitize the book data from the form and use it to create a new `Book` object (setting its `_id` value to the id of the object to update). If there are errors when we validate the data then we re-render the form, additionally displaying the data entered by the user, the errors, and lists of genres and authors. If there are no errors then we call `Book.findByIdAndUpdate()` to update the `Book` document, and then redirect to its detail page.
 
-<h2 id="View">View</h2>
+## View
 
-<p>Open <strong>/views/book_form.pug</strong> and update the section where the author form control is set to have the conditional code shown below.</p>
+Open **/views/book_form.pug** and update the section where the author form control is set to have the conditional code shown below.
 
-<pre class="brush: plain">    div.form-group
+```plain
+    div.form-group
       label(for='author') Author:
       select#author.form-control(type='select' placeholder='Select author' name='author' required='true' )
-        - authors.sort(function(a, b) {let textA = a.family_name.toUpperCase(); let textB = b.family_name.toUpperCase(); return (textA &lt; textB) ? -1 : (textA &gt; textB) ? 1 : 0;});
+        - authors.sort(function(a, b) {let textA = a.family_name.toUpperCase(); let textB = b.family_name.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
         for author in authors
           if book
             //- Handle GET form, where book.author is an object, and POST form, where it is a string.
@@ -156,38 +159,35 @@ exports.book_update_post = [
               ) ? 'selected' : false
             ) #{author.name}
           else
-            option(value=author._id) #{author.name}</pre>
+            option(value=author._id) #{author.name}
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This code change is required so that the book_form can be used for both creating and updating book objects (without this, there is an error on the <code>GET</code> route when creating a form).</p>
-</div>
+> **Note:** This code change is required so that the book_form can be used for both creating and updating book objects (without this, there is an error on the `GET` route when creating a form).
 
-<h2 id="Add_an_update_button">Add an update button</h2>
+## Add an update button
 
-<p>Open the <strong>book_detail.pug</strong> view and make sure there are links for both deleting and updating books at the bottom of the page, as shown below.</p>
+Open the **book_detail.pug** view and make sure there are links for both deleting and updating books at the bottom of the page, as shown below.
 
-<pre class="brush: plain">  hr
+```plain
+  hr
   p
     a(href=book.url+'/delete') Delete Book
   p
-    a(href=book.url+'/update') Update Book</pre>
+    a(href=book.url+'/update') Update Book
+```
 
-<p>You should now be able to update books from the <em>Book detail</em> page.</p>
+You should now be able to update books from the _Book detail_ page.
 
-<h2 id="What_does_it_look_like">What does it look like?</h2>
+## What does it look like?
 
-<p>Run the application, open your browser to <a href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>, select the <em>All books</em> link, then select a particular book. Finally select the <em>Update Book</em> link.</p>
+Run the application, open your browser to <http://localhost:3000/>, select the _All books_ link, then select a particular book. Finally select the _Update Book_ link.
 
-<p>The form should look just like the <em>Create book</em> page, only with a title of 'Update book', and pre-populated with record values.</p>
+The form should look just like the _Create book_ page, only with a title of 'Update book', and pre-populated with record values.
 
-<p><img alt="" src="locallibary_express_book_update_noerrors.png"></p>
+![](locallibary_express_book_update_noerrors.png)
 
-<div class="notecard note">
-<p><strong>Note:</strong> The other pages for updating objects can be implemented in much the same way. We've left that as a challenge.</p>
-</div>
+> **Note:** The other pages for updating objects can be implemented in much the same way. We've left that as a challenge.
 
-<h2 id="Next_steps">Next steps</h2>
+## Next steps
 
-<ul>
- <li>Return to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a>.</li>
-</ul>
+- Return to [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms).

@@ -16,52 +16,42 @@ tags:
   - setInterval
   - setTimeout
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}
 
-<p><span class="seoSummary">In this module we take a look at {{Glossary("asynchronous")}} {{Glossary("JavaScript")}}, why it is important, and how it can be used to effectively handle potential blocking operations such as fetching resources from a server.</span></p>
+In this module we take a look at {{Glossary("asynchronous")}} {{Glossary("JavaScript")}}, why it is important, and how it can be used to effectively handle potential blocking operations such as fetching resources from a server.
 
-<div class="callout">
-  <h4 id="Looking_to_become_a_front-end_web_developer">Looking to become a front-end web
-    developer?</h4>
+> **Callout:**
+>
+> #### Looking to become a front-end web developer?
+>
+> We have put together a course that includes all the essential information you need to
+> work towards your goal.
+>
+> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
 
-  <p>We have put together a course that includes all the essential information you need to
-    work towards your goal.</p>
+## Prerequisites
 
-  <p><a href="/en-US/docs/Learn/Front-end_web_developer"><strong>Get started</strong></a></p>
+Asynchronous JavaScript is a fairly advanced topic, and you are advised to work through [JavaScript first steps](/en-US/docs/Learn/JavaScript/First_steps) and [JavaScript building blocks](/en-US/docs/Learn/JavaScript/Building_blocks) modules before attempting this.
 
-</div>
+If you are not familiar with the concept of asynchronous programming, you should definitely start with the [General asynchronous programming concepts](/en-US/docs/Learn/JavaScript/Asynchronous/Concepts) article in this module. If you are, then you can probably skip to the [Introducing asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing) module.
 
-<h2 id="Prerequisites">Prerequisites</h2>
+> **Note:** If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you can try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com).
 
-<p>Asynchronous JavaScript is a fairly advanced topic, and you are advised to work through <a href="/en-US/docs/Learn/JavaScript/First_steps">JavaScript first steps</a> and <a href="/en-US/docs/Learn/JavaScript/Building_blocks">JavaScript building blocks</a> modules before attempting this.</p>
+## Guides
 
-<p>If you are not familiar with the concept of asynchronous programming, you should definitely start with the <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Concepts">General asynchronous programming concepts</a> article in this module. If you are, then you can probably skip to the <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">Introducing asynchronous JavaScript</a> module.</p>
+- [General asynchronous programming concepts](/en-US/docs/Learn/JavaScript/Asynchronous/Concepts)
+  - : In this article we'll run through a number of important concepts relating to asynchronous programming, and how this looks in web browsers and JavaScript. You should understand these concepts before working through the other articles in the module.
+- [Introducing asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)
+  - : In this article we briefly recap the problems associated with synchronous JavaScript, and take a first look at some of the different asynchronous JavaScript techniques you'll encounter, showing how they can help us solve such problems.
+- [Cooperative asynchronous JavaScript: Timeouts and intervals](/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
+  - : Here we look at the traditional methods JavaScript has available for running code asynchronously after a set time period has elapsed, or at a regular interval (e.g. a set number of times per second), talk about what they are useful for, and look at their inherent issues.
+- [Handling async operations gracefully with Promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
+  - : Promises are a comparatively new feature of the JavaScript language that allow you to defer further actions until after the previous action has completed, or respond to its failure. This is really useful for setting up a sequence of operations to work correctly. This article shows you how promises work, where you'll see them in use in WebAPIs, and how to write your own.
+- [Making asynchronous programming easier with async and await](/en-US/docs/Learn/JavaScript/Asynchronous/Async_await)
+  - : Promises can be somewhat complex to set up and understand, and so modern browsers have implemented `async` functions and the `await` operator. The former allows standard functions to implicitly behave asynchronously with promises, whereas the latter can be used inside `async` functions to wait for promises before the function continues. This makes chaining promises simpler and easier to read.
+- [Choosing the right approach](/en-US/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)
+  - : To finish this module off, we'll consider the different coding techniques and features we've discussed throughout, looking at which ones you should use when, with recommendations and reminders of common pitfalls where appropriate.
 
-<div class="note">
-<p><strong>Note:</strong> If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you can try out (most of) the code examples in an online coding program such as <a href="https://jsbin.com/">JSBin</a> or <a href="https://glitch.com">Glitch</a>.</p>
-</div>
+## See also
 
-<h2 id="Guides">Guides</h2>
-
-<dl>
- <dt><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Concepts">General asynchronous programming concepts</a></dt>
- <dd>
- <p>In this article we'll run through a number of important concepts relating to asynchronous programming, and how this looks in web browsers and JavaScript. You should understand these concepts before working through the other articles in the module.</p>
- </dd>
- <dt><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">Introducing asynchronous JavaScript</a></dt>
- <dd>In this article we briefly recap the problems associated with synchronous JavaScript, and take a first look at some of the different asynchronous JavaScript techniques you'll encounter, showing how they can help us solve such problems.</dd>
- <dt><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Cooperative asynchronous JavaScript: Timeouts and intervals</a></dt>
- <dd>Here we look at the traditional methods JavaScript has available for running code asynchronously after a set time period has elapsed, or at a regular interval (e.g. a set number of times per second), talk about what they are useful for, and look at their inherent issues.</dd>
- <dt><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">Handling async operations gracefully with Promises</a></dt>
- <dd>Promises are a comparatively new feature of the JavaScript language that allow you to defer further actions until after the previous action has completed, or respond to its failure. This is really useful for setting up a sequence of operations to work correctly. This article shows you how promises work, where you'll see them in use in WebAPIs, and how to write your own.</dd>
- <dt><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Async_await">Making asynchronous programming easier with async and await</a></dt>
- <dd>Promises can be somewhat complex to set up and understand, and so modern browsers have implemented <code>async</code> functions and the <code>await</code> operator. The former allows standard functions to implicitly behave asynchronously with promises, whereas the latter can be used inside <code>async</code> functions to wait for promises before the function continues. This makes chaining promises simpler and easier to read.</dd>
- <dt><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach">Choosing the right approach</a></dt>
- <dd>To finish this module off, we'll consider the different coding techniques and features we've discussed throughout, looking at which ones you should use when, with recommendations and reminders of common pitfalls where appropriate.</dd>
-</dl>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://eloquentjavascript.net/11_async.html">Asynchronous Programming</a> from the fantastic <a href="https://eloquentjavascript.net/">Eloquent JavaScript</a> online book by Marijn Haverbeke.</li>
-</ul>
+- [Asynchronous Programming](https://eloquentjavascript.net/11_async.html) from the fantastic [Eloquent JavaScript](https://eloquentjavascript.net/) online book by Marijn Haverbeke.

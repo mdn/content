@@ -5,31 +5,29 @@ tags:
   - Basic
   - Beginner
   - CSS
-  - 'CSS:Getting_Started'
+  - CSS:Getting_Started
   - Guide
   - Web
 ---
-<p>{{LearnSidebar}}</p>
+{{LearnSidebar}}
 
-<p>In this guide you can find out how to highlight the first paragraph inside a container.</p>
+In this guide you can find out how to highlight the first paragraph inside a container.
 
-<h2>Styling the first paragraph</h2>
+## Styling the first paragraph
 
-<p>You would like to make the first paragraph larger and bold. You could add a class to the first paragraph and select it that way, however using a pseudo-class selector is more flexible — it means that you can target the paragraph based on its location in the document, and you won't have to manually move the class if the source order changes.</p>
+You would like to make the first paragraph larger and bold. You could add a class to the first paragraph and select it that way, however using a pseudo-class selector is more flexible — it means that you can target the paragraph based on its location in the document, and you won't have to manually move the class if the source order changes.
 
-<h2>Using a pseudo-class</h2>
+## Using a pseudo-class
 
-<p>A {{cssxref("pseudo-classes","pseudo-class")}} acts as if you have applied a class; however, rather than using a class selector CSS selects based on the document structure. There are a number of different pseudo-classes that can select different things. In our case we are going to use {{cssxref(":first-child")}}. This will select the element that is the first-child of a parent.</p>
+A {{cssxref("pseudo-classes","pseudo-class")}} acts as if you have applied a class; however, rather than using a class selector CSS selects based on the document structure. There are a number of different pseudo-classes that can select different things. In our case we are going to use {{cssxref(":first-child")}}. This will select the element that is the first-child of a parent.
 
-<p>{{EmbedGHLiveSample("css-examples/howto/highlight_first_para.html", '100%', 770)}}</p>
+{{EmbedGHLiveSample("css-examples/howto/highlight_first_para.html", '100%', 770)}}
 
-<p>You can try changing {{cssxref(":first-child")}} to {{cssxref(":last-child")}} in the live example above, and you will select the last paragraph.</p>
+You can try changing {{cssxref(":first-child")}} to {{cssxref(":last-child")}} in the live example above, and you will select the last paragraph.
 
-<p>Whenever you need to target something in your document, you can check to see if one of the available {{cssxref("pseudo-classes")}} can do it for you.</p>
+Whenever you need to target something in your document, you can check to see if one of the available {{cssxref("pseudo-classes")}} can do it for you.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{cssxref("pseudo-classes")}} reference page.</li>
-  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Learn CSS: Pseudo-classes and pseudo-elements.</a></li>
-</ul>
+- The {{cssxref("pseudo-classes")}} reference page.
+- [Learn CSS: Pseudo-classes and pseudo-elements.](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)

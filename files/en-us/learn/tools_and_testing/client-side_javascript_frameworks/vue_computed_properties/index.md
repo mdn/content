@@ -11,160 +11,176 @@ tags:
   - computed properties
   - vue
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
-
-<p>In this article we'll add a counter that displays the number of completed todo items, using a feature of Vue called computed properties. These work similarly to methods, but only re-run when one of their dependencies changes.</p>
+In this article we'll add a counter that displays the number of completed todo items, using a feature of Vue called computed properties. These work similarly to methods, but only re-run when one of their dependencies changes.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>
-    <p>Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
-
-    <p>Vue components are written as a combination of JavaScript objects that manage the app's data and an HTML-based template syntax that maps to the underlying DOM structure. For installation, and to use some of the more advanced features of Vue (like Single File Components or render functions), you'll need a terminal with node + npm installed.</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To learn how to use Vue computed properties.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        <p>
+          Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
+          <a href="/en-US/docs/Learn/CSS">CSS</a>, and
+          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages,
+          knowledge of the
+          <a
+            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            >terminal/command line</a
+          >.
+        </p>
+        <p>
+          Vue components are written as a combination of JavaScript objects that
+          manage the app's data and an HTML-based template syntax that maps to
+          the underlying DOM structure. For installation, and to use some of the
+          more advanced features of Vue (like Single File Components or render
+          functions), you'll need a terminal with node + npm installed.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>To learn how to use Vue computed properties.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Using_computed_properties">Using computed properties</h2>
+## Using computed properties
 
-<p>The aim here is to add a summary count of our to-do list. This can be useful for users, while also serving to label the list for assistive technology. If we have 2 of 5 items completed in our to-do list, our summary could read "2 items completed out of 5".  While it might be tempting to do something like this:</p>
+The aim here is to add a summary count of our to-do list. This can be useful for users, while also serving to label the list for assistive technology. If we have 2 of 5 items completed in our to-do list, our summary could read "2 items completed out of 5".  While it might be tempting to do something like this:
 
-<pre class="brush: js">&lt;h2&gt;\{{ToDoItems.filter(item =&gt; item.done).length}} out of \{{ToDoItems.length}} items completed&lt;/h2&gt;</pre>
+```js
+<h2>\{{ToDoItems.filter(item =&gt; item.done).length}} out of \{{ToDoItems.length}} items completed</h2>
+```
 
-<p>It would be recalculated on every render. For a small app like this, that probably doesn't matter too much. For bigger apps, or when the expression is more complicated, that could cause a serious performance problem.</p>
+It would be recalculated on every render. For a small app like this, that probably doesn't matter too much. For bigger apps, or when the expression is more complicated, that could cause a serious performance problem.
 
-<p>A better solution is to use Vue’s <strong><a href="https://vuejs.org/v2/guide/computed.html">computed properties</a></strong>. Computed Properties work similarly to methods, but only re-run when one of their dependencies changes. In our case, this would only re-run when the <code>ToDoItems</code> array changes.</p>
+A better solution is to use Vue’s **[computed properties](https://vuejs.org/v2/guide/computed.html)**. Computed Properties work similarly to methods, but only re-run when one of their dependencies changes. In our case, this would only re-run when the `ToDoItems` array changes.
 
-<p>To create a computed property, we need to add a <code>computed</code> property to our component object, much like the <code>methods</code> property we've used previously.</p>
+To create a computed property, we need to add a `computed` property to our component object, much like the `methods` property we've used previously.
 
-<h2 id="Adding_a_summary_counter">Adding a summary counter</h2>
+## Adding a summary counter
 
-<p>Add the following code to your <code>App</code> component object, below the <code>methods</code> property. The list summary method will get the number of finished <code>ToDoItems</code>, and return a string reporting this.</p>
+Add the following code to your `App` component object, below the `methods` property. The list summary method will get the number of finished `ToDoItems`, and return a string reporting this.
 
-<pre class="brush: js">computed: {
+```js
+computed: {
   listSummary() {
-    const numberFinishedItems = this.ToDoItems.filter(item =&gt;item.done).length
+    const numberFinishedItems = this.ToDoItems.filter(item =>item.done).length
     return `${numberFinishedItems} out of ${this.ToDoItems.length} items completed`
   }
-}</pre>
+}
+```
 
-<p>Now we can add <code>\{{listSummary}}</code> directly to our template; we'll add this inside an <code>&lt;h2&gt;</code> element, just above our <code>&lt;ul&gt;</code>. We'll also add an <code>id</code> and an <code>aria-labelledby</code> attribute to assign the <code>&lt;h2&gt;</code> contents to be a label for the <code>&lt;ul&gt;</code> element.</p>
+Now we can add `\{{listSummary}}` directly to our template; we'll add this inside an `<h2>` element, just above our `<ul>`. We'll also add an `id` and an `aria-labelledby` attribute to assign the `<h2>` contents to be a label for the `<ul>` element.
 
-<p>Add the described <code>&lt;h2&gt;</code> and update the <code>&lt;ul&gt;</code> inside your App's template as follows:</p>
+Add the described `<h2>` and update the `<ul>` inside your App's template as follows:
 
-<pre class="brush: html">&lt;h2 id="list-summary"&gt;\{{listSummary}}&lt;/h2&gt;
-&lt;ul aria-labelledby="list-summary" class="stack-large"&gt;
-  &lt;li v-for="item in ToDoItems" :key="item.id"&gt;
-    &lt;to-do-item :label="item.label" :done="item.done" :id="item.id"&gt;&lt;/to-do-item&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</pre>
-
-<p>You should now see the list summary in your app, and the total number of items update as you add more todo items! However, if you try checking and unchecking some items, you'll reveal a bug. Currently, we're not actually tracking the "done" data in any fashion, so the number of completed items does not change.</p>
-
-<h2 id="Tracking_changes_to_done">Tracking changes to "done"</h2>
-
-<p>We can use events to capture the checkbox update and manage our list accordingly.</p>
-
-<p>Since we're not relying on a button press to trigger the change, we can attach a <code>@change</code> event handler to each checkbox instead of using <code>v-model</code>.</p>
-
-<p>Update the <code>&lt;input&gt;</code> element in <code>ToDoItem.vue</code> to look like this.</p>
-
-<pre class="brush: html">&lt;input type="checkbox" class="checkbox" :id="id" :checked="isDone"
-       @change="$emit('checkbox-changed')" /&gt;</pre>
-
-<p>Since all we need to do is emit that the checkbox was checked, we can include the <code>$emit()</code> inline.</p>
-
-<p>In <code>App.vue</code>, add a new method called <code>updateDoneStatus()</code>, below your <code>addToDo()</code> method. This method should take one parameter: the todo item <em>id</em>. We want to find the item with the matching <code>id</code> and update its <code>done</code> status to be the opposite of its current status:</p>
-
-<pre class="brush: js">updateDoneStatus(toDoId) {
-  const toDoToUpdate = this.ToDoItems.find(item =&gt; item.id === toDoId)
-  toDoToUpdate.done = !toDoToUpdate.done
-}</pre>
-
-<p>We want to run this method whenever a <code>ToDoItem</code> emits a <code>checkbox-changed</code> event, and pass in its <code>item.id</code> as the parameter. Update your <code>&lt;to-do-item&gt;&lt;/to-do-item&gt;</code> call as follows:</p>
-
-<pre class="brush: html">&lt;to-do-item :label="item.label" :done="item.done" :id="item.id"
-            @checkbox-changed="updateDoneStatus(item.id)"&gt;
-&lt;/to-do-item&gt;</pre>
-
-<p>Now if you check a <code>ToDoItem</code>, you should see the summary update appropriately!</p>
-
-<p><img alt="Our app, with a completed todo counter added. It currently reads 3 out of 5 items completed" src="todo-counter.png"></p>
-
-<h2 id="Summary">Summary</h2>
-
-<p>In this article we've used a computed property to add a nice little feature to our app. We do however have bigger fish to fry — in the next article we will look at conditional rendering, and how we can use it to show an edit form when we want to edit existing todo items.</p>
-
-<p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
-
-<h2 id="In_this_module">In this module</h2>
-
-<ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
- <li>React
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
-  </ul>
- </li>
- <li>Ember
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
-  </ul>
- </li>
- <li>Vue
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
-  </ul>
- </li>
- <li>Svelte
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
-  </ul>
- </li>
- <li>Angular
-   <ul>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
-   </ul>
- </li>
+```html
+<h2 id="list-summary">\{{listSummary}}</h2>
+<ul aria-labelledby="list-summary" class="stack-large">
+  <li v-for="item in ToDoItems" :key="item.id">
+    <to-do-item :label="item.label" :done="item.done" :id="item.id"></to-do-item>
+  </li>
 </ul>
+```
+
+You should now see the list summary in your app, and the total number of items update as you add more todo items! However, if you try checking and unchecking some items, you'll reveal a bug. Currently, we're not actually tracking the "done" data in any fashion, so the number of completed items does not change.
+
+## Tracking changes to "done"
+
+We can use events to capture the checkbox update and manage our list accordingly.
+
+Since we're not relying on a button press to trigger the change, we can attach a `@change` event handler to each checkbox instead of using `v-model`.
+
+Update the `<input>` element in `ToDoItem.vue` to look like this.
+
+```html
+<input type="checkbox" class="checkbox" :id="id" :checked="isDone"
+       @change="$emit('checkbox-changed')" />
+```
+
+Since all we need to do is emit that the checkbox was checked, we can include the `$emit()` inline.
+
+In `App.vue`, add a new method called `updateDoneStatus()`, below your `addToDo()` method. This method should take one parameter: the todo item _id_. We want to find the item with the matching `id` and update its `done` status to be the opposite of its current status:
+
+```js
+updateDoneStatus(toDoId) {
+  const toDoToUpdate = this.ToDoItems.find(item => item.id === toDoId)
+  toDoToUpdate.done = !toDoToUpdate.done
+}
+```
+
+We want to run this method whenever a `ToDoItem` emits a `checkbox-changed` event, and pass in its `item.id` as the parameter. Update your `<to-do-item></to-do-item>` call as follows:
+
+```html
+<to-do-item :label="item.label" :done="item.done" :id="item.id"
+            @checkbox-changed="updateDoneStatus(item.id)">
+</to-do-item>
+```
+
+Now if you check a `ToDoItem`, you should see the summary update appropriately!
+
+![Our app, with a completed todo counter added. It currently reads 3 out of 5 items completed](todo-counter.png)
+
+## Summary
+
+In this article we've used a computed property to add a nice little feature to our app. We do however have bigger fish to fry — in the next article we will look at conditional rendering, and how we can use it to show an edit form when we want to edit existing todo items.
+
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+
+## In this module
+
+- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- React
+
+  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+
+- Ember
+
+  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+
+- Vue
+
+  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+
+- Svelte
+
+  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+
+- Angular
+
+  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
+  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

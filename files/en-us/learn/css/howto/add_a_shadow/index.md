@@ -9,36 +9,30 @@ tags:
   - Guide
   - Web
 ---
-<p>{{LearnSidebar}}</p>
+{{LearnSidebar}}
 
-<p>In this guide you can find out how to add a shadow to any box on your page.</p>
+In this guide you can find out how to add a shadow to any box on your page.
 
-<h2>Adding box shadows</h2>
+## Adding box shadows
 
-<p>Shadows are a common design feature that can help elements stand out on your page. In CSS, shadows on the boxes of elements are created using the {{cssxref("box-shadow")}} property (if you want to add a shadow to the text itself, you need {{cssxref("text-shadow")}}).</p>
+Shadows are a common design feature that can help elements stand out on your page. In CSS, shadows on the boxes of elements are created using the {{cssxref("box-shadow")}} property (if you want to add a shadow to the text itself, you need {{cssxref("text-shadow")}}).
 
-<p>The <code>box-shadow</code> property takes a number of values:</p>
+The `box-shadow` property takes a number of values:
 
-<ul>
-  <li>The offset on the x-axis</li>
-  <li>The offset on the y-axis</li>
-  <li>A blur radius</li>
-  <li>A spread radius</li>
-  <li>A color</li>
-  <li>The <code>inset</code> keyword</li>
-</ul>
+- The offset on the x-axis
+- The offset on the y-axis
+- A blur radius
+- A spread radius
+- A color
+- The `inset` keyword
 
-<p>In the example below we have set the X and Y axises to 5px, the blur to 10px and the spread to 2px. I am using a semi-transparent black as my color. Play with the different values to see how they change the shadow.</p>
+In the example below we have set the X and Y axises to 5px, the blur to 10px and the spread to 2px. I am using a semi-transparent black as my color. Play with the different values to see how they change the shadow.
 
-<p>{{EmbedGHLiveSample("css-examples/howto/box-shadow-button.html", '100%', 500)}}</p>
+{{EmbedGHLiveSample("css-examples/howto/box-shadow-button.html", '100%', 500)}}
 
-<div class="notecard note">
-  <p><strong>Note:</strong> We are not using <code>inset</code> in this example, this means that the shadow is the default drop shadow with the box on top of the shadow. Inset shadows appear inside the box as if the content were pushed back into the page.</p>
-</div>
+> **Note:** We are not using `inset` in this example, this means that the shadow is the default drop shadow with the box on top of the shadow. Inset shadows appear inside the box as if the content were pushed back into the page.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The <a href="/en-US/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator">Box shadow generator</a></li>
-  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Advanced_styling_effects">Learn CSS: Advanced styling effects.</a></li>
-</ul>
+- The [Box shadow generator](/en-US/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator)
+- [Learn CSS: Advanced styling effects.](/en-US/docs/Learn/CSS/Building_blocks/Advanced_styling_effects)

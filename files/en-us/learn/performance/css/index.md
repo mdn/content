@@ -7,71 +7,71 @@ tags:
   - Reference
   - Tutorial
 ---
-<p>{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}} {{draft}}</p>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}} {{draft}}
 
-<p>Painting an unstyled page, and then repainting it once styles are parsed would be bad user experience. For this reason, CSS is render blocking, unless the browser knows the CSS is not currently needed. The browser can paint the page once it has downloaded the CSS and built the CSS object model. Browsers follow a specific rendering path: paint only occurs after layout, which occurs after the render tree is created, which in turn requires both the DOM and the CSSOM trees. To optimize the CSSOM construction, remove unnecessary styles, minify, compress and cache it, and split CSS not required at page load into additional files to reduce CSS render blocking.</p>
+Painting an unstyled page, and then repainting it once styles are parsed would be bad user experience. For this reason, CSS is render blocking, unless the browser knows the CSS is not currently needed. The browser can paint the page once it has downloaded the CSS and built the CSS object model. Browsers follow a specific rendering path: paint only occurs after layout, which occurs after the render tree is created, which in turn requires both the DOM and the CSSOM trees. To optimize the CSSOM construction, remove unnecessary styles, minify, compress and cache it, and split CSS not required at page load into additional files to reduce CSS render blocking.
 
-<h3 id="Optimizing_for_render_blocking">Optimizing for render blocking</h3>
+### Optimizing for render blocking
 
-<p>CSS can scope styles to particular conditions with media queries. Media queries are important for a responsive web design and help us optimize a critical rendering path. The browser blocks rendering until it parses all of these styles but will not block rendering on styles it knows it will not use, such the print stylesheets. By splitting the CSS into multiple files based on media queries, you can prevent render blocking during download of unused CSS. To create a non-blocking CSS link, move the not-immediately used styles, such as print styles, into separate file, add a <code><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> to the HTML mark up, and add a media query, in this case stating it's a print stylesheet.</p>
+CSS can scope styles to particular conditions with media queries. Media queries are important for a responsive web design and help us optimize a critical rendering path. The browser blocks rendering until it parses all of these styles but will not block rendering on styles it knows it will not use, such the print stylesheets. By splitting the CSS into multiple files based on media queries, you can prevent render blocking during download of unused CSS. To create a non-blocking CSS link, move the not-immediately used styles, such as print styles, into separate file, add a [`<link>`](/en-US/docs/Web/HTML/Element/link) to the HTML mark up, and add a media query, in this case stating it's a print stylesheet.
 
-<pre class="brush: html">&lt;link rel="stylesheet" href="styles.css"&gt; &lt;!-- blocking --&gt;
-&lt;link rel="stylesheet" href="print.css" media="print"&gt; &lt;!-- not blocking --&gt;
-&lt;link rel="stylesheet" href="mobile.css" media="screen and (max-width: 480px)"&gt; &lt;!-- not blocking on large screens --&gt;</pre>
+```html
+<link rel="stylesheet" href="styles.css"> <!-- blocking -->
+<link rel="stylesheet" href="print.css" media="print"> <!-- not blocking -->
+<link rel="stylesheet" href="mobile.css" media="screen and (max-width: 480px)"> <!-- not blocking on large screens -->
+```
 
-<p>By default the browser assumes that each specified style sheet is render blocking. Tell the browser when the style sheet should be applied by adding a <code>media</code> attribute with the <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media query</a>. When the browser sees a style sheet it knows that it only needs to apply it for a specific scenario, it still downloads the stylesheet, but doesn't render block. By separating out the CSS into multiple files, the main render-blocking file, in this case <code>styles.css</code>, is much smaller, reducing the time that rendering is blocked.</p>
+By default the browser assumes that each specified style sheet is render blocking. Tell the browser when the style sheet should be applied by adding a `media` attribute with the [media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries). When the browser sees a style sheet it knows that it only needs to apply it for a specific scenario, it still downloads the stylesheet, but doesn't render block. By separating out the CSS into multiple files, the main render-blocking file, in this case `styles.css`, is much smaller, reducing the time that rendering is blocked.
 
-<h3 id="Animating_on_the_GPU">Animating on the GPU</h3>
+### Animating on the GPU
 
-<p>Browsers are optimized to handle CSS animations, and handle animating properties that do not trigger a reflow (and therefore also a repaint) very well. To improve performance, the node being animated can be moved off the main thread and onto the GPU. Properties that will lead to compositing include 3D transforms (<code><a href="/en-US/docs/Web/CSS/transform">transform: translateZ()</a></code>, <code><a href="/en-US/docs/Web/CSS/transform-function/rotate3d()">rotate3d()</a></code>, etc.), animating transform and <code><a href="/en-US/docs/Web/CSS/opacity">opacity</a></code>, <code><a href="/en-US/docs/Web/CSS/position">position: fixed</a></code>, <code><a href="/en-US/docs/Web/CSS/will-change">will-change</a></code>, and <code><a href="/en-US/docs/Web/CSS/filter">filter</a></code>. Some elements, including <code><a href="/en-US/docs/Web/HTML/Element/video">&lt;video&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/canvas">&lt;canvas&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code>, are also on their own layer. When an element is promoted as a layer, also known as composited, animating transform properties is done in the GPU, resulting in improved performance, especially on mobile.</p>
+Browsers are optimized to handle CSS animations, and handle animating properties that do not trigger a reflow (and therefore also a repaint) very well. To improve performance, the node being animated can be moved off the main thread and onto the GPU. Properties that will lead to compositing include 3D transforms ([`transform: translateZ()`](/en-US/docs/Web/CSS/transform), [`rotate3d()`](</en-US/docs/Web/CSS/transform-function/rotate3d()>), etc.), animating transform and [`opacity`](/en-US/docs/Web/CSS/opacity), [`position: fixed`](/en-US/docs/Web/CSS/position), [`will-change`](/en-US/docs/Web/CSS/will-change), and [`filter`](/en-US/docs/Web/CSS/filter). Some elements, including [`<video>`](/en-US/docs/Web/HTML/Element/video), [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas) and [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), are also on their own layer. When an element is promoted as a layer, also known as composited, animating transform properties is done in the GPU, resulting in improved performance, especially on mobile.
 
-<h3 id="will-change_property"><code>will-change</code> property</h3>
+### `will-change` property
 
-<p>The CSS <a href="/en-US/docs/Web/CSS/will-change"><code>will-change</code></a> property tells browsers which properties of an element are expected to change enabling browsers to set up optimizations before the element is actually changed, improving performance by doing potentially expensive work before it is required.</p>
+The CSS [`will-change`](/en-US/docs/Web/CSS/will-change) property tells browsers which properties of an element are expected to change enabling browsers to set up optimizations before the element is actually changed, improving performance by doing potentially expensive work before it is required.
 
-<pre class="brush: css">will-change: opacity, transform;</pre>
+```css
+will-change: opacity, transform;
+```
 
-<h3 id="The_cssxreffont-display_property">The <code>font-display</code> property</h3>
+### The `font-display` property
 
-<p>Applied to the <a href="/en-US/docs/Web/CSS/@font-face">@font-face</a> rule, the <a href="/en-US/docs/Web/CSS/@font-face/font-display">font-display</a> property defines how font files are loaded and displayed by the browser, allowing text to appear with a fallback font while a font loads, or fails to load. This improves performance by making the text visible instead of having a blank screen, with a trade-off being a flash of unstyled text.</p>
+Applied to the [@font-face](/en-US/docs/Web/CSS/@font-face) rule, the [font-display](/en-US/docs/Web/CSS/@font-face/font-display) property defines how font files are loaded and displayed by the browser, allowing text to appear with a fallback font while a font loads, or fails to load. This improves performance by making the text visible instead of having a blank screen, with a trade-off being a flash of unstyled text.
 
-<pre class="brush: css">@font-face {
+```css
+@font-face {
   font-family: someFont;
   src: url(/path/to/fonts/someFont.woff) format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: fallback;
-}</pre>
+}
+```
 
-<h3 id="The_cssxrefcontain_property">The <code>contain</code> property</h3>
+### The `contain` property
 
-<p>The {{cssxref('contain')}} CSS property allows an author to indicate that an element and its contents are, as much as possible, <em>independent</em> of the rest of the document tree. This allows the browser to recalculate layout, style, paint, size, or any combination of them for a limited area of the DOM and not the entire page.</p>
+The {{cssxref('contain')}} CSS property allows an author to indicate that an element and its contents are, as much as possible, _independent_ of the rest of the document tree. This allows the browser to recalculate layout, style, paint, size, or any combination of them for a limited area of the DOM and not the entire page.
 
-<h2 id="Conclusion">Conclusion</h2>
+## Conclusion
 
-<p>{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}}</p>
+{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}}
 
-<h2 id="In_this_module">In this module</h2>
+## In this module
 
-<ul>
- <li><a href="/en-US/docs/Learn/Performance/why_web_performance">The "why" of web performance</a></li>
- <li><a href="/en-US/docs/Learn/Performance/What_is_web_performance">What is web performance?</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Perceived_performance">How do users perceive performance?</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Measuring_performance">Measuring performance</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Multimedia">Multimedia: images</a></li>
- <li><a href="/en-US/docs/Learn/Performance/video">Multimedia: video</a></li>
- <li><a href="/en-US/docs/Learn/Performance/JavaScript">JavaScript performance best practices</a>.</li>
- <li><a href="/en-US/docs/Learn/Performance/HTML">HTML performance features</a></li>
- <li><a href="/en-US/docs/Learn/Performance/CSS">CSS performance features</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Fonts">Fonts and performance</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Mobile">Mobile performance</a></li>
- <li><a href="/en-US/docs/Learn/Performance/business_case_for_performance">Focusing on performance</a></li>
-</ul>
+- [The "why" of web performance](/en-US/docs/Learn/Performance/why_web_performance)
+- [What is web performance?](/en-US/docs/Learn/Performance/What_is_web_performance)
+- [How do users perceive performance?](/en-US/docs/Learn/Performance/Perceived_performance)
+- [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
+- [Multimedia: images](/en-US/docs/Learn/Performance/Multimedia)
+- [Multimedia: video](/en-US/docs/Learn/Performance/video)
+- [JavaScript performance best practices](/en-US/docs/Learn/Performance/JavaScript).
+- [HTML performance features](/en-US/docs/Learn/Performance/HTML)
+- [CSS performance features](/en-US/docs/Learn/Performance/CSS)
+- [Fonts and performance](/en-US/docs/Learn/Performance/Fonts)
+- [Mobile performance](/en-US/docs/Learn/Performance/Mobile)
+- [Focusing on performance](/en-US/docs/Learn/Performance/business_case_for_performance)
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>
-  <p><a href="/en-US/docs/Web/Performance/CSS_JavaScript_animation_performance">CSS animation performance</a></p>
- </li>
-</ul>
+- [CSS animation performance](/en-US/docs/Web/Performance/CSS_JavaScript_animation_performance)

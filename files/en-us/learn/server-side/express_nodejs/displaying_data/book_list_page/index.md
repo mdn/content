@@ -8,15 +8,16 @@ tags:
   - part 5
   - server-side
 ---
-<p>Next we'll implement our book list page. This page needs to display a list of all books in the database along with their author, with each book title being a hyperlink to its associated book detail page.</p>
+Next we'll implement our book list page. This page needs to display a list of all books in the database along with their author, with each book title being a hyperlink to its associated book detail page.
 
-<h2 id="Controller">Controller</h2>
+## Controller
 
-<p>The book list controller function needs to get a list of all <code>Book</code> objects in the database, sort them, and then pass these to the template for rendering.</p>
+The book list controller function needs to get a list of all `Book` objects in the database, sort them, and then pass these to the template for rendering.
 
-<p>Open <strong>/controllers/bookController.js</strong>. Find the exported <code>book_list()</code> controller method and replace it with the following code.</p>
+Open **/controllers/bookController.js**. Find the exported `book_list()` controller method and replace it with the following code.
 
-<pre class="brush: js">// Display list of all Books.
+```js
+// Display list of all Books.
 exports.book_list = function(req, res, next) {
 
   Book.find({}, 'title author')
@@ -28,17 +29,19 @@ exports.book_list = function(req, res, next) {
       res.render('book_list', { title: 'Book List', book_list: list_books });
     });
 
-};</pre>
+};
+```
 
-<p>The method uses the model's <code>find()</code> function to return all <code>Book</code> objects, selecting to return only the <code>title</code> and <code>author</code> as we don't need the other fields (it will also return the <code>_id</code> and virtual fields), and then sorts the results by the title alphabetically using the <code>sort()</code> method. Here we also call <code>populate()</code> on <code>Book</code>, specifying the <code>author</code> field—this will replace the stored book author id with the full author details.</p>
+The method uses the model's `find()` function to return all `Book` objects, selecting to return only the `title` and `author` as we don't need the other fields (it will also return the `_id` and virtual fields), and then sorts the results by the title alphabetically using the `sort()` method. Here we also call `populate()` on `Book`, specifying the `author` field—this will replace the stored book author id with the full author details.
 
-<p>On success, the callback passed to the query renders the <strong>book_list</strong>(.pug) template, passing the <code>title</code> and <code>book_list</code> (list of books with authors) as variables.</p>
+On success, the callback passed to the query renders the **book_list**(.pug) template, passing the `title` and `book_list` (list of books with authors) as variables.
 
-<h2 id="View">View</h2>
+## View
 
-<p>Create <strong>/views/book_list.pug</strong> and copy in the text below.</p>
+Create **/views/book_list.pug** and copy in the text below.
 
-<pre class="brush: plain">extends layout
+```plain
+extends layout
 
 block content
   h1= title
@@ -50,25 +53,22 @@ block content
         |  (#{book.author.name})
 
     else
-      li There are no books.</pre>
+      li There are no books.
+```
 
-<p>The view extends the <strong>layout.pug</strong> base template and overrides the <code>block</code> named '<strong>content</strong>'. It displays the <code>title</code> we passed in from the controller (via the <code>render()</code> method) and iterates through the <code>book_list</code> variable using the <code>each</code>-<code>in</code>-<code>else</code> syntax. A list item is created for each book displaying the book title as a link to the book's detail page followed by the author name. If there are no books in the <code>book_list</code> then the <code>else</code> clause is executed, and displays the text 'There are no books.'</p>
+The view extends the **layout.pug** base template and overrides the `block` named '**content**'. It displays the `title` we passed in from the controller (via the `render()` method) and iterates through the `book_list` variable using the `each`-`in`-`else` syntax. A list item is created for each book displaying the book title as a link to the book's detail page followed by the author name. If there are no books in the `book_list` then the `else` clause is executed, and displays the text 'There are no books.'
 
-<div class="notecard note">
-<p><strong>Note:</strong> We use <code>book.url</code> to provide the link to the detail record for each book (we've implemented this route, but not the page yet). This is a virtual property of the <code>Book</code> model which uses the model instance's <code>_id</code> field to produce a unique URL path.</p>
-</div>
+> **Note:** We use `book.url` to provide the link to the detail record for each book (we've implemented this route, but not the page yet). This is a virtual property of the `Book` model which uses the model instance's `_id` field to produce a unique URL path.
 
-<p>Of interest here is that each book is defined as two lines, using the pipe for the second line. This approach is needed because if the author name were on the previous line then it would be part of the hyperlink.</p>
+Of interest here is that each book is defined as two lines, using the pipe for the second line. This approach is needed because if the author name were on the previous line then it would be part of the hyperlink.
 
-<h2 id="What_does_it_look_like">What does it look like?</h2>
+## What does it look like?
 
-<p>Run the application (see <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes#testing_the_routes">Testing the routes</a> for the relevant commands) and open your browser to <a href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>. Then select the <em>All books</em> link. If everything is set up correctly, your site should look something like the following screenshot.</p>
+Run the application (see [Testing the routes](/en-US/docs/Learn/Server-side/Express_Nodejs/routes#testing_the_routes) for the relevant commands) and open your browser to <http://localhost:3000/>. Then select the _All books_ link. If everything is set up correctly, your site should look something like the following screenshot.
 
-<p><img alt="Book List Page - Express Local Library site" src="new_book_list.png"></p>
+![Book List Page - Express Local Library site](new_book_list.png)
 
-<h2 id="Next_steps">Next steps</h2>
+## Next steps
 
-<ul>
- <li>Return to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</li>
- <li>Proceed to the next subarticle of part 5: <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page">BookInstance list page</a>.</li>
-</ul>
+- Return to [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
+- Proceed to the next subarticle of part 5: [BookInstance list page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page).

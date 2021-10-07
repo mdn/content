@@ -12,622 +12,620 @@ tags:
   - conditional rendering
   - passing data
 ---
-<div>{{LearnSidebar}}<br>
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
+{{LearnSidebar}}
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<p>In the last article we started developing our Todo list app. The central objective of this article is to look at how to break our app into manageable components and share information between them. We'll componentize our app, then add more functionality to allow users to update existing components.</p>
+In the last article we started developing our Todo list app. The central objective of this article is to look at how to break our app into manageable components and share information between them. We'll componentize our app, then add more functionality to allow users to update existing components.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>
-    <p>At minimum, it is recommended that you are familiar with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, and have knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
-
-    <p>You'll need a terminal with node + npm installed to compile and build your app.</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To learn how to break our app into components and share information among them.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        <p>
+          At minimum, it is recommended that you are familiar with the core
+          <a href="/en-US/docs/Learn/HTML">HTML</a>,
+          <a href="/en-US/docs/Learn/CSS">CSS</a>, and
+          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, and
+          have knowledge of the
+          <a
+            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            >terminal/command line</a
+          >.
+        </p>
+        <p>
+          You'll need a terminal with node + npm installed to compile and build
+          your app.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        To learn how to break our app into components and share information
+        among them.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Code_along_with_us">Code along with us</h2>
+## Code along with us
 
-<h3 id="Git">Git</h3>
+### Git
 
-<p>Clone the github repo (if you haven't already done it) with:</p>
+Clone the github repo (if you haven't already done it) with:
 
-<pre class="brush: bash">git clone https://github.com/opensas/mdn-svelte-tutorial.git</pre>
+```bash
+git clone https://github.com/opensas/mdn-svelte-tutorial.git
+```
 
-<p>Then to get to the current app state, run</p>
+Then to get to the current app state, run
 
-<pre class="brush: bash">cd mdn-svelte-tutorial/04-componentizing-our-app</pre>
+```bash
+cd mdn-svelte-tutorial/04-componentizing-our-app
+```
 
-<p>Or directly download the folder's content:</p>
+Or directly download the folder's content:
 
-<pre class="brush: bash">npx degit opensas/mdn-svelte-tutorial/04-componentizing-our-app</pre>
+```bash
+npx degit opensas/mdn-svelte-tutorial/04-componentizing-our-app
+```
 
-<p>Remember to run <code>npm install &amp;&amp; npm run dev</code> to start your app in development mode.</p>
+Remember to run `npm install && npm run dev` to start your app in development mode.
 
-<h3 id="REPL">REPL</h3>
+### REPL
 
-<p>To code along with us using the REPL, start at</p>
+To code along with us using the REPL, start at
 
-<p><a href="https://svelte.dev/repl/99b9eb228b404a2f8c8959b22c0a40d3?version=3.23.2">https://svelte.dev/repl/99b9eb228b404a2f8c8959b22c0a40d3?version=3.23.2</a></p>
+<https://svelte.dev/repl/99b9eb228b404a2f8c8959b22c0a40d3?version=3.23.2>
 
-<h2 id="Breaking_the_app_into_components">Breaking the app into components</h2>
+## Breaking the app into components
 
-<p>In Svelte, an application is composed from one or more components. A component is a reusable, self-contained block of code that encapsulates HTML, CSS and JavaScript that belong together, written into a <code>.svelte</code> file. Components can be big or small, but they are usually clearly defined: the most effective components serve a single, obvious purpose.</p>
+In Svelte, an application is composed from one or more components. A component is a reusable, self-contained block of code that encapsulates HTML, CSS and JavaScript that belong together, written into a `.svelte` file. Components can be big or small, but they are usually clearly defined: the most effective components serve a single, obvious purpose.
 
-<p>The benefits of defining components are comparable to the more general best practice of organizing your code into manageable pieces. It will help you understand how they relate to each other, it will promote reuse, and it will make your code easier to reason about, maintain, and extend.</p>
+The benefits of defining components are comparable to the more general best practice of organizing your code into manageable pieces. It will help you understand how they relate to each other, it will promote reuse, and it will make your code easier to reason about, maintain, and extend.
 
-<p>But how do you know what should be split into its own component?</p>
+But how do you know what should be split into its own component?
 
-<p>There are no hard rules for this. Some people prefer an intuitive approach and start looking at the markup and drawing boxes around every component and subcomponent that seems to have its own logic.</p>
+There are no hard rules for this. Some people prefer an intuitive approach and start looking at the markup and drawing boxes around every component and subcomponent that seems to have its own logic.
 
-<p>Other people apply the same techniques used for deciding if you should create a new function or object. One such technique is the single responsibility principle — that is, a component should ideally only do one thing. If it ends up growing, it should be split into smaller subcomponents.</p>
+Other people apply the same techniques used for deciding if you should create a new function or object. One such technique is the single responsibility principle — that is, a component should ideally only do one thing. If it ends up growing, it should be split into smaller subcomponents.
 
-<p>Both approaches should complement each other, and help you decide how to better organize your components.</p>
+Both approaches should complement each other, and help you decide how to better organize your components.
 
-<p>Eventually, we will split up our app into the following components:</p>
+Eventually, we will split up our app into the following components:
 
-<ul>
- <li><code>Alert.svelte</code>: A general notification box for communicating actions that have occurred.</li>
- <li><code>NewTodo.svelte</code>: The text input and button that allow you to enter a new todo item.</li>
- <li><code>FilterButton.svelte</code>: The <em>All</em>, <em>Active</em>, and <em>Completed</em> buttons that allow you to apply filters to the displayed todo items.</li>
- <li><code>TodosStatus.svelte</code>: The "x out of y items completed" heading.</li>
- <li><code>Todo.svelte</code>: An individual todo item. Each visible todo item will be displayed in a separate copy of this component.</li>
- <li><code>MoreActions.svelte</code>: The <em>Check All</em> and <em>Remove Completed</em> buttons at the bottom of the UI that allow you to perform mass actions on the todo items.</li>
-</ul>
+- `Alert.svelte`: A general notification box for communicating actions that have occurred.
+- `NewTodo.svelte`: The text input and button that allow you to enter a new todo item.
+- `FilterButton.svelte`: The _All_, _Active_, and _Completed_ buttons that allow you to apply filters to the displayed todo items.
+- `TodosStatus.svelte`: The "x out of y items completed" heading.
+- `Todo.svelte`: An individual todo item. Each visible todo item will be displayed in a separate copy of this component.
+- `MoreActions.svelte`: The _Check All_ and _Remove Completed_ buttons at the bottom of the UI that allow you to perform mass actions on the todo items.
 
-<p><img alt="graphical representation of the list of components in our app" src="01-todo-components.png"></p>
+![graphical representation of the list of components in our app](01-todo-components.png)
 
-<p>In this article we will concentrate on creating the <code>FilterButton</code> and <code>Todo</code> components; we'll get to the others in future articles.</p>
+In this article we will concentrate on creating the `FilterButton` and `Todo` components; we'll get to the others in future articles.
 
-<p>Let's get started.</p>
+Let's get started.
 
-<div class="notecard note">
-<p><strong>Note:</strong> In the process of creating our first couple of components, we will also learn different techniques to communicate between components, and the pros and cons of each.</p>
-</div>
+> **Note:** In the process of creating our first couple of components, we will also learn different techniques to communicate between components, and the pros and cons of each.
 
-<h2 id="Extracting_our_filter_component">Extracting our filter component</h2>
+## Extracting our filter component
 
-<p>We'll begin by creating our <code>FilterButton.svelte</code>.</p>
+We'll begin by creating our `FilterButton.svelte`.
 
-<ol>
- <li>
-  <p>First of all, create a new file — <code>components/FilterButton.svelte</code>.</p>
- </li>
- <li>
-  <p>Inside this file we will declare a <code>filter</code> prop, and then copy the relevant markup over to it from <code>Todos.svelte</code>. Add the following content into the file:</p>
+1.  First of all, create a new file — `components/FilterButton.svelte`.
+2.  Inside this file we will declare a `filter` prop, and then copy the relevant markup over to it from `Todos.svelte`. Add the following content into the file:
 
-  <pre class="brush: html">&lt;script&gt;
-  export let filter = 'all'
-&lt;/script&gt;
+    ```html
+    <script>
+      export let filter = 'all'
+    </script>
 
-&lt;div class="filters btn-group stack-exception"&gt;
-  &lt;button class="btn toggle-btn" class:btn__primary={filter === 'all'} aria-pressed={filter === 'all'} on:click={()=&gt; filter = 'all'} &gt;
-    &lt;span class="visually-hidden"&gt;Show&lt;/span&gt;
-    &lt;span&gt;All&lt;/span&gt;
-    &lt;span class="visually-hidden"&gt;tasks&lt;/span&gt;
-  &lt;/button&gt;
-  &lt;button class="btn toggle-btn" class:btn__primary={filter === 'active'} aria-pressed={filter === 'active'} on:click={()=&gt; filter = 'active'} &gt;
-    &lt;span class="visually-hidden"&gt;Show&lt;/span&gt;
-    &lt;span&gt;Active&lt;/span&gt;
-    &lt;span class="visually-hidden"&gt;tasks&lt;/span&gt;
-  &lt;/button&gt;
-  &lt;button class="btn toggle-btn" class:btn__primary={filter === 'completed'} aria-pressed={filter === 'completed'} on:click={()=&gt; filter = 'completed'} &gt;
-    &lt;span class="visually-hidden"&gt;Show&lt;/span&gt;
-    &lt;span&gt;Completed&lt;/span&gt;
-    &lt;span class="visually-hidden"&gt;tasks&lt;/span&gt;
-  &lt;/button&gt;
-&lt;/div&gt;</pre>
- </li>
- <li>
-  <p>Back in our <code>Todos.svelte</code> component, we want to make use of our <code>FilterButton</code> component. First of all, we need to import it — add the following line at the top of the <code>Todos.svelte &lt;script&gt;</code> section:</p>
+    <div class="filters btn-group stack-exception">
+      <button class="btn toggle-btn" class:btn__primary={filter === 'all'} aria-pressed={filter === 'all'} on:click={()=> filter = 'all'} >
+        <span class="visually-hidden">Show</span>
+        <span>All</span>
+        <span class="visually-hidden">tasks</span>
+      </button>
+      <button class="btn toggle-btn" class:btn__primary={filter === 'active'} aria-pressed={filter === 'active'} on:click={()=> filter = 'active'} >
+        <span class="visually-hidden">Show</span>
+        <span>Active</span>
+        <span class="visually-hidden">tasks</span>
+      </button>
+      <button class="btn toggle-btn" class:btn__primary={filter === 'completed'} aria-pressed={filter === 'completed'} on:click={()=> filter = 'completed'} >
+        <span class="visually-hidden">Show</span>
+        <span>Completed</span>
+        <span class="visually-hidden">tasks</span>
+      </button>
+    </div>
+    ```
 
-  <pre class="brush: js">import FilterButton from './FilterButton.svelte'</pre>
- </li>
- <li>
-  <p>Now, replace the <code>filters</code> <code>&lt;div&gt;</code> with a call to the <code>FilterButton</code> component, which takes the current filter as a prop — the below line is all you need:</p>
+3.  Back in our `Todos.svelte` component, we want to make use of our `FilterButton` component. First of all, we need to import it — add the following line at the top of the `Todos.svelte <script>` section:
 
-  <pre class="brush: html">&lt;FilterButton {filter} /&gt;</pre>
- </li>
-</ol>
+    ```js
+    import FilterButton from './FilterButton.svelte'
+    ```
 
-<div class="notecard note">
-<p><strong>Note:</strong> Remember that when the HTML attribute name and variable matches, they can be replaced with <code>{variable}</code>, that's why we could replace <code>&lt;FilterButton filter={filter} /&gt;</code> with <code>&lt;FilterButton {filter} /&gt;</code>.</p>
-</div>
+4.  Now, replace the `filters` `<div>` with a call to the `FilterButton` component, which takes the current filter as a prop — the below line is all you need:
 
-<p>So far so good! Let's try out the app now. You'll notice that when you click on the filter buttons, they are selected and the style updates appropriately. But! We have a problem — the todos aren't filtered. That's because the <code>filter</code> variable flows down from the <code>Todos</code> component to the <code>FilterButton</code> component through the prop, but changes occurring in the <code>FilterButton</code> component don't flow back up to its parent — the data binding is one-way by default. Let's look at a way to solve this.</p>
-
-<h2 id="Sharing_data_between_components_passing_a_handler_as_a_prop">Sharing data between components: passing a handler as a prop</h2>
-
-<p>One way to let child components notify their parents of any changes is to pass a handler as a prop. The child component will execute the handler, passing the needed information as a parameter, and the handler will modify the parent's state.</p>
-
-<p>In our case, the <code>FilterButton</code> component will receive an <code>onclick</code> handler from its parent. Whenever the user clicks on any filter button, the child will call the <code>onclick</code> handler, passing the selected filter as a parameter, back up to its parent.</p>
+    ```html
+    <FilterButton {filter} />
+    ```
 
-<p>We will just declare the <code>onclick</code> prop assigning a dummy handler to prevent errors, like this:</p>
-
-<pre class="brush: js">export let onclick = (clicked) =&gt; {}</pre>
-
-<p>And we'll declare the following reactive statement — <code>$: onclick(filter)</code> — to call the <code>onclick</code> handler whenever the <code>filter</code> variable is updated.</p>
-
-<ol>
- <li>
-  <p>The <code>&lt;script&gt;</code> section of our <code>FilterButton</code> component should end up looking like this — update it now:</p>
-
-  <pre class="brush: js">&lt;script&gt;
-  export let filter = 'all'
-  export let onclick = (clicked) =&gt; {}
-  $: onclick(filter)
-&lt;/script&gt;</pre>
- </li>
- <li>
-  <p>Now when we call <code>FilterButton</code> inside <code>Todos.svelte</code> we'll need to specify the handler. Update it like this:</p>
+> **Note:** Remember that when the HTML attribute name and variable matches, they can be replaced with `{variable}`, that's why we could replace `<FilterButton filter={filter} />` with `<FilterButton {filter} />`.
 
-  <pre class="brush: html">&lt;FilterButton {filter} onclick={ (clicked) =&gt; filter = clicked }/&gt;</pre>
- </li>
-</ol>
+So far so good! Let's try out the app now. You'll notice that when you click on the filter buttons, they are selected and the style updates appropriately. But! We have a problem — the todos aren't filtered. That's because the `filter` variable flows down from the `Todos` component to the `FilterButton` component through the prop, but changes occurring in the `FilterButton` component don't flow back up to its parent — the data binding is one-way by default. Let's look at a way to solve this.
 
-<p>When any filter button is clicked, we just update the filter variable with the new filter. Now our <code>FilterButton</code> component will work again.</p>
+## Sharing data between components: passing a handler as a prop
 
-<h2 id="Easier_two-way_data_binding_with_the_bind_directive">Easier two-way data binding with the bind directive</h2>
+One way to let child components notify their parents of any changes is to pass a handler as a prop. The child component will execute the handler, passing the needed information as a parameter, and the handler will modify the parent's state.
 
-<p>In the previous example we realized that our <code>FilterButton</code> component wasn't working because our application state was flowing down from parent to child through the <code>filter</code> prop — but it wasn't going back up. So we added an <code>onclick</code> prop to let the child component communicate the new <code>filter</code> value to its parent.</p>
+In our case, the `FilterButton` component will receive an `onclick` handler from its parent. Whenever the user clicks on any filter button, the child will call the `onclick` handler, passing the selected filter as a parameter, back up to its parent.
 
-<p>It works ok, but Svelte provides us an easier and more straightforward way to achieve two-way data binding. Data ordinarily flows down from parent to child using props. If we want it to also flow the other way — from child to parent — we can use <a href="https://svelte.dev/docs#bind_element_property">the <code>bind:</code> directive</a>.</p>
+We will just declare the `onclick` prop assigning a dummy handler to prevent errors, like this:
 
-<p>Using <code>bind</code>, we will tell Svelte that any changes made to the <code>filter</code> prop in the <code>FilterButton</code> component should propagate back up to the parent component, <code>Todos</code>. That is, we will bind the <code>filter</code> variable's value in the parent to its value in the child.</p>
+```js
+export let onclick = (clicked) => {}
+```
 
-<ol>
- <li>
-  <p>In <code>Todos.svelte</code>, update the call to the <code>FilterButton</code> component as follows:</p>
+And we'll declare the following reactive statement — `$: onclick(filter)` — to call the `onclick` handler whenever the `filter` variable is updated.
 
-  <pre class="brush: html">&lt;FilterButton bind:filter={filter} /&gt;</pre>
+1.  The `<script>` section of our `FilterButton` component should end up looking like this — update it now:
 
-  <p>As usual, Svelte provides us with a nice shorthand — <code>bind:value={value}</code> is equivalent to <code>bind:value</code>. So in the above example you could just write <code>&lt;FilterButton bind:filter /&gt;</code>.</p>
- </li>
- <li>
-  <p>The child component can now modify the value of the parent's filter variable, so we no longer need the <code>onclick</code> prop. Modify your <code>FilterButton</code> <code>&lt;script&gt;</code> like this:</p>
+    ```js
+    <script>
+      export let filter = 'all'
+      export let onclick = (clicked) => {}
+      $: onclick(filter)
+    </script>
+    ```
 
-  <pre class="brush: html">&lt;script&gt;
-  export let filter = 'all'
-&lt;/script&gt;</pre>
- </li>
- <li>
-  <p>Try your app again, and you should still see your filters working correctly.</p>
- </li>
-</ol>
+2.  Now when we call `FilterButton` inside `Todos.svelte` we'll need to specify the handler. Update it like this:
 
-<h2 id="Creating_our_Todo_component">Creating our Todo component</h2>
+    ```html
+    <FilterButton {filter} onclick={ (clicked) => filter = clicked }/>
+    ```
 
-<p>Now we will create a <code>Todo</code> component to encapsulate each individual todo — including the checkbox and some editing logic so you can change an existing todo.</p>
+When any filter button is clicked, we just update the filter variable with the new filter. Now our `FilterButton` component will work again.
 
-<p>Our <code>Todo</code> component will receive a single <code>todo</code> object as a prop. Let's declare the <code>todo</code> prop and move the code from the Todos component. Just for now, we'll replace the call to <code>removeTodo</code> with an alert. We'll add that functionality back in later on.</p>
+## Easier two-way data binding with the bind directive
 
-<ol>
- <li>
-  <p>Create a new component file — <code>components/Todo.svelte</code>.</p>
- </li>
- <li>
-  <p>Put the following contents inside this file:</p>
+In the previous example we realized that our `FilterButton` component wasn't working because our application state was flowing down from parent to child through the `filter` prop — but it wasn't going back up. So we added an `onclick` prop to let the child component communicate the new `filter` value to its parent.
 
-  <pre class="brush: html">&lt;script&gt;
-  export let todo
-&lt;/script&gt;
+It works ok, but Svelte provides us an easier and more straightforward way to achieve two-way data binding. Data ordinarily flows down from parent to child using props. If we want it to also flow the other way — from child to parent — we can use [the `bind:` directive](https://svelte.dev/docs#bind_element_property).
 
-&lt;div class="stack-small"&gt;
-  &lt;div class="c-cb"&gt;
-    &lt;input type="checkbox" id="todo-{todo.id}"
-      on:click={() =&gt; todo.completed = !todo.completed}
-      checked={todo.completed}
-    /&gt;
-    &lt;label for="todo-{todo.id}" class="todo-label"&gt;{todo.name}&lt;/label&gt;
-  &lt;/div&gt;
-  &lt;div class="btn-group"&gt;
-    &lt;button type="button" class="btn"&gt;
-      Edit &lt;span class="visually-hidden"&gt;{todo.name}&lt;/span&gt;
-    &lt;/button&gt;
-    &lt;button type="button" class="btn btn__danger" on:click={() =&gt; alert('not implemented')}&gt;
-      Delete &lt;span class="visually-hidden"&gt;{todo.name}&lt;/span&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
- </li>
- <li>
-  <p>Now we need to import our <code>Todo</code> component into <code>Todos.svelte</code>. Go to this file now, and add the following <code>import</code> statement below your previous one:</p>
+Using `bind`, we will tell Svelte that any changes made to the `filter` prop in the `FilterButton` component should propagate back up to the parent component, `Todos`. That is, we will bind the `filter` variable's value in the parent to its value in the child.
 
-  <pre class="brush: js">import Todo from './Todo.svelte'</pre>
- </li>
- <li>
-  <p>Next, we need to update our <code>{#each}</code> block to include a <code>&lt;Todo&gt;</code> component for each todo, rather than the code that has been moved out to <code>Todo.svelte</code>. We are also passing the current <code>todo</code> object into the component as a prop.</p>
+1.  In `Todos.svelte`, update the call to the `FilterButton` component as follows:
 
-  <p>Update the <code>{#each}</code> block inside <code>Todos.svelte</code> like so:</p>
+    ```html
+    <FilterButton bind:filter={filter} />
+    ```
 
-  <pre class="brush: html">&lt;ul role="list" class="todo-list stack-large" aria-labelledby="list-heading"&gt;
-  {#each filterTodos(filter, todos) as todo (todo.id)}
-    &lt;li class="todo"&gt;
-      &lt;Todo {todo} /&gt;
-    &lt;/li&gt;
-  {:else}
-    &lt;li&gt;Nothing to do here!&lt;/li&gt;
-  {/each}
-&lt;/ul&gt;</pre>
- </li>
-</ol>
+    As usual, Svelte provides us with a nice shorthand — `bind:value={value}` is equivalent to `bind:value`. So in the above example you could just write `<FilterButton bind:filter />`.
 
-<p>The list of todos is displayed on the page, and the checkboxes should work (try checking/unchecking a couple, and then observing that the filters still work as expected), but our "x out of y items completed" status heading will no longer update accordingly. That's because our <code>Todo</code> component is receiving the todo via the prop, but it's not sending any information back to its parent. We'll fix this later on.</p>
+2.  The child component can now modify the value of the parent's filter variable, so we no longer need the `onclick` prop. Modify your `FilterButton` `<script>` like this:
 
-<h2 id="Sharing_data_between_components_props-down_events-up_pattern">Sharing data between components: props-down, events-up pattern</h2>
+    ```html
+    <script>
+      export let filter = 'all'
+    </script>
+    ```
 
-<p>The <code>bind</code> directive is pretty straightforward and allows you to share data between a parent and child component with minimal fuss. However, when your application grows larger and more complex it can easily get difficult to keep track of all your bound values. A different approach is the "props-down, events-up" communication pattern.</p>
+3.  Try your app again, and you should still see your filters working correctly.
 
-<p>Basically, this pattern relies on child components receiving data from their parents via props and parent components updating their state by handling events emitted from child components. So props <em>flow down</em> from parent to child and events <em>bubble up</em> from child to parent. This pattern establishes a two-way flow of information, which is predictable and easier to reason about.</p>
+## Creating our Todo component
 
-<p>Let's look at how to emit our own events to re-implement the missing <em>Delete</em> button functionality.</p>
+Now we will create a `Todo` component to encapsulate each individual todo — including the checkbox and some editing logic so you can change an existing todo.
 
-<p>To create custom events we'll use the <code>createEventDispatcher</code> utility. This will return a <code>dispatch()</code> function that will allow us to emit custom events. When you dispatch an event you have to pass the name of the event and, optionally, an object with additional information that you want to pass to every listener. This additional data will be available on the <code>detail</code> property of the event object.</p>
+Our `Todo` component will receive a single `todo` object as a prop. Let's declare the `todo` prop and move the code from the Todos component. Just for now, we'll replace the call to `removeTodo` with an alert. We'll add that functionality back in later on.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Custom events in Svelte share the same API as regular DOM events. Moreover, you can bubble up an event to your parent component by specifying <code>on:event</code> without any handler.</p>
-</div>
+1.  Create a new component file — `components/Todo.svelte`.
+2.  Put the following contents inside this file:
 
-<p>We'll edit our <code>Todo</code> component to emit a <code>remove</code> event, passing the todo being removed as additional information.</p>
+    ```html
+    <script>
+      export let todo
+    </script>
 
-<ol>
- <li>
-  <p>First of all, add the following lines to the top of the <code>Todo</code> component's <code>&lt;script&gt;</code> section:</p>
+    <div class="stack-small">
+      <div class="c-cb">
+        <input type="checkbox" id="todo-{todo.id}"
+          on:click={() => todo.completed = !todo.completed}
+          checked={todo.completed}
+        />
+        <label for="todo-{todo.id}" class="todo-label">{todo.name}</label>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn">
+          Edit <span class="visually-hidden">{todo.name}</span>
+        </button>
+        <button type="button" class="btn btn__danger" on:click={() => alert('not implemented')}>
+          Delete <span class="visually-hidden">{todo.name}</span>
+        </button>
+      </div>
+    </div>
+    ```
 
-  <pre class="brush: js">import { createEventDispatcher } from 'svelte'
-const dispatch = createEventDispatcher()</pre>
- </li>
- <li>
-  <p>Now update the <em>Delete</em> button in the markup section of the same file to look like so:</p>
+3.  Now we need to import our `Todo` component into `Todos.svelte`. Go to this file now, and add the following `import` statement below your previous one:
 
-  <pre class="brush: html">&lt;button type="button" class="btn btn__danger" on:click={() =&gt; dispatch('remove', todo)}&gt;
-  Delete &lt;span class="visually-hidden"&gt;{todo.name}&lt;/span&gt;
-&lt;/button&gt;</pre>
+    ```js
+    import Todo from './Todo.svelte'
+    ```
 
-  <p>With <code>dispatch('remove', todo)</code> we are emitting a <code>remove</code> event, and passing as additional data the <code>todo</code> being deleted. The handler will be called with an event object available, with the additional data available in the <code>event.detail</code> property.</p>
- </li>
- <li>
-  <p>Now we have to listen to that event from inside <code>Todos.svelte</code> and act accordingly. Go back to this file and update your <code>&lt;Todo&gt;</code> component call like so:</p>
+4.  Next, we need to update our `{#each}` block to include a `<Todo>` component for each todo, rather than the code that has been moved out to `Todo.svelte`. We are also passing the current `todo` object into the component as a prop.
 
-  <pre class="brush: html">&lt;Todo {todo} on:remove={e =&gt; removeTodo(e.detail)} /&gt;</pre>
+    Update the `{#each}` block inside `Todos.svelte` like so:
 
-  <p>Our handler receives the <code>e</code> parameter (the event object), which as described before holds the todo being deleted in the <code>detail</code> property.</p>
- </li>
- <li>
-  <p>At this point, if you try out your app again, you should see that the <em>Delete</em> functionality now works again! So our custom event has worked as we hoped. In addition, the <code>remove</code> event listener is sending the data change back up to the parent, so our "x out of y items completed" status heading will now update appropriately when todos are deleted.</p>
- </li>
-</ol>
+    ```html
+    <ul role="list" class="todo-list stack-large" aria-labelledby="list-heading">
+      {#each filterTodos(filter, todos) as todo (todo.id)}
+        <li class="todo">
+          <Todo {todo} />
+        </li>
+      {:else}
+        <li>Nothing to do here!</li>
+      {/each}
+    </ul>
+    ```
 
-<p>Now we'll take care of the <code>update</code> event, so that our parent component can get notified of any modified todo.</p>
+The list of todos is displayed on the page, and the checkboxes should work (try checking/unchecking a couple, and then observing that the filters still work as expected), but our "x out of y items completed" status heading will no longer update accordingly. That's because our `Todo` component is receiving the todo via the prop, but it's not sending any information back to its parent. We'll fix this later on.
 
-<h2 id="Updating_todos">Updating todos</h2>
+## Sharing data between components: props-down, events-up pattern
 
-<p>We still have to implement functionality to allow us to edit existing todos. We'll have to include an editing mode in the <code>Todo</code> component. When entering editing mode we'll show an <code>&lt;input&gt;</code> field to allow us to edit the current todo name, with two buttons to confirm or cancel our changes.</p>
+The `bind` directive is pretty straightforward and allows you to share data between a parent and child component with minimal fuss. However, when your application grows larger and more complex it can easily get difficult to keep track of all your bound values. A different approach is the "props-down, events-up" communication pattern.
 
-<h3 id="Handling_the_events">Handling the events</h3>
+Basically, this pattern relies on child components receiving data from their parents via props and parent components updating their state by handling events emitted from child components. So props _flow down_ from parent to child and events _bubble up_ from child to parent. This pattern establishes a two-way flow of information, which is predictable and easier to reason about.
 
-<ol>
- <li>
-  <p>We'll need one variable to track whether we are in editing mode and another to store the name of the task being updated. Add the following variable definitions at the bottom of the <code>&lt;script&gt;</code> section of the <code>Todo</code> component:</p>
+Let's look at how to emit our own events to re-implement the missing _Delete_ button functionality.
 
-  <pre class="brush: js">let editing = false                     // track editing mode
-let name = todo.name                    // hold the name of the todo being edited</pre>
- </li>
- <li>
-  <p>We have to decide what events our <code>Todo</code> component will emit:</p>
+To create custom events we'll use the `createEventDispatcher` utility. This will return a `dispatch()` function that will allow us to emit custom events. When you dispatch an event you have to pass the name of the event and, optionally, an object with additional information that you want to pass to every listener. This additional data will be available on the `detail` property of the event object.
 
-  <ul>
-   <li>We could emit different events for the status toggle and editing of the name. (e.g. <code>updateTodoStatus</code> and <code>updateTodoName</code>).</li>
-   <li>Or we could take a more generic approach and emit a single <code>update</code> event for both operations.</li>
-  </ul>
+> **Note:** Custom events in Svelte share the same API as regular DOM events. Moreover, you can bubble up an event to your parent component by specifying `on:event` without any handler.
 
-  <p>We will take the second approach so we can demonstrate a different technique. The advantage of this approach is that later we can add more fields to the todos and still handle all updates with the same event.</p>
+We'll edit our `Todo` component to emit a `remove` event, passing the todo being removed as additional information.
 
-  <p>Let's create an <code>update()</code> function that will receive the changes and will emit an update event with the modified todo. Add the following, again to the bottom of the <code>&lt;script&gt;</code> section:</p>
+1.  First of all, add the following lines to the top of the `Todo` component's `<script>` section:
 
-  <pre class="brush: js">function update(updatedTodo) {
-  todo = { ...todo, ...updatedTodo }    // applies modifications to todo
-  dispatch('update', todo)              // emit update event
-}</pre>
+    ```js
+    import { createEventDispatcher } from 'svelte'
+    const dispatch = createEventDispatcher()
+    ```
 
-  <p>Here we are using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread syntax</a> to return the original todo with the modifications applied to it.</p>
- </li>
- <li>
-  <p>Next we'll create different functions to handle each user action. When the Todo is in editing mode, the user can save or cancel the changes. When it's not in editing mode, the user can delete the todo, edit it, or toggle its status between completed and active.</p>
+2.  Now update the _Delete_ button in the markup section of the same file to look like so:
 
-  <p>Add the following set of functions below your previous function to handle these actions:</p>
+    ```html
+    <button type="button" class="btn btn__danger" on:click={() => dispatch('remove', todo)}>
+      Delete <span class="visually-hidden">{todo.name}</span>
+    </button>
+    ```
 
-  <pre class="brush: js">function onCancel() {
-  name = todo.name                      // restores name to its initial value and
-  editing = false                       // and exit editing mode
-}
+    With `dispatch('remove', todo)` we are emitting a `remove` event, and passing as additional data the `todo` being deleted. The handler will be called with an event object available, with the additional data available in the `event.detail` property.
 
-function onSave() {
-  update({ name: name })                // updates todo name
-  editing = false                       // and exit editing mode
-}
+3.  Now we have to listen to that event from inside `Todos.svelte` and act accordingly. Go back to this file and update your `<Todo>` component call like so:
 
-function onRemove() {
-  dispatch('remove', todo)              // emit remove event
-}
+    ```html
+    <Todo {todo} on:remove={e => removeTodo(e.detail)} />
+    ```
 
-function onEdit() {
-  editing = true                        // enter editing mode
-}
+    Our handler receives the `e` parameter (the event object), which as described before holds the todo being deleted in the `detail` property.
 
-function onToggle() {
-  update({ completed: !todo.completed}) // updates todo status
-}</pre>
- </li>
-</ol>
+4.  At this point, if you try out your app again, you should see that the _Delete_ functionality now works again! So our custom event has worked as we hoped. In addition, the `remove` event listener is sending the data change back up to the parent, so our "x out of y items completed" status heading will now update appropriately when todos are deleted.
 
-<h3 id="Updating_the_markup">Updating the markup</h3>
+Now we'll take care of the `update` event, so that our parent component can get notified of any modified todo.
 
-<p>Now we need to update our <code>Todo</code> component's markup to call the above functions when the appropriate actions are taken.</p>
+## Updating todos
 
-<p>To handle the editing mode we are using the <code>editing</code> variable, which is a boolean. When it's <code>true</code>, it should display the <code>&lt;input&gt;</code> field for editing the todo name, and the <em>Cancel</em> and <em>Save</em> buttons. When it's not in editing mode it will display the checkbox, the todo name and the buttons to edit and delete the todo.</p>
+We still have to implement functionality to allow us to edit existing todos. We'll have to include an editing mode in the `Todo` component. When entering editing mode we'll show an `<input>` field to allow us to edit the current todo name, with two buttons to confirm or cancel our changes.
 
-<p>To achieve this we will use an <a href="https://svelte.dev/docs#if"><code>if</code> block</a>. The <code>if</code> block conditionally renders some markup. Take into account that it won't just show or hide the markup based on the condition — it will dynamically add and remove the elements from the DOM, depending on the condition.</p>
+### Handling the events
 
-<p>When <code>editing</code> is <code>true</code>, for example, Svelte will show the update form; when it's <code>false</code>, it will remove it from the DOM and add in the checkbox. Thanks to Svelte reactivity, assigning the value of the editing variable will be enough to display the correct HTML elements.</p>
+1.  We'll need one variable to track whether we are in editing mode and another to store the name of the task being updated. Add the following variable definitions at the bottom of the `<script>` section of the `Todo` component:
 
-<p>The following gives you an idea of what the basic <code>if</code> block structure looks like:</p>
+    ```js
+    let editing = false                     // track editing mode
+    let name = todo.name                    // hold the name of the todo being edited
+    ```
 
-<pre class="brush: html">&lt;div class="stack-small"&gt;
+2.  We have to decide what events our `Todo` component will emit:
+
+    - We could emit different events for the status toggle and editing of the name. (e.g. `updateTodoStatus` and `updateTodoName`).
+    - Or we could take a more generic approach and emit a single `update` event for both operations.
+
+    We will take the second approach so we can demonstrate a different technique. The advantage of this approach is that later we can add more fields to the todos and still handle all updates with the same event.
+
+    Let's create an `update()` function that will receive the changes and will emit an update event with the modified todo. Add the following, again to the bottom of the `<script>` section:
+
+    ```js
+    function update(updatedTodo) {
+      todo = { ...todo, ...updatedTodo }    // applies modifications to todo
+      dispatch('update', todo)              // emit update event
+    }
+    ```
+
+    Here we are using the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to return the original todo with the modifications applied to it.
+
+3.  Next we'll create different functions to handle each user action. When the Todo is in editing mode, the user can save or cancel the changes. When it's not in editing mode, the user can delete the todo, edit it, or toggle its status between completed and active.
+
+    Add the following set of functions below your previous function to handle these actions:
+
+    ```js
+    function onCancel() {
+      name = todo.name                      // restores name to its initial value and
+      editing = false                       // and exit editing mode
+    }
+
+    function onSave() {
+      update({ name: name })                // updates todo name
+      editing = false                       // and exit editing mode
+    }
+
+    function onRemove() {
+      dispatch('remove', todo)              // emit remove event
+    }
+
+    function onEdit() {
+      editing = true                        // enter editing mode
+    }
+
+    function onToggle() {
+      update({ completed: !todo.completed}) // updates todo status
+    }
+    ```
+
+### Updating the markup
+
+Now we need to update our `Todo` component's markup to call the above functions when the appropriate actions are taken.
+
+To handle the editing mode we are using the `editing` variable, which is a boolean. When it's `true`, it should display the `<input>` field for editing the todo name, and the _Cancel_ and _Save_ buttons. When it's not in editing mode it will display the checkbox, the todo name and the buttons to edit and delete the todo.
+
+To achieve this we will use an [`if` block](https://svelte.dev/docs#if). The `if` block conditionally renders some markup. Take into account that it won't just show or hide the markup based on the condition — it will dynamically add and remove the elements from the DOM, depending on the condition.
+
+When `editing` is `true`, for example, Svelte will show the update form; when it's `false`, it will remove it from the DOM and add in the checkbox. Thanks to Svelte reactivity, assigning the value of the editing variable will be enough to display the correct HTML elements.
+
+The following gives you an idea of what the basic `if` block structure looks like:
+
+```html
+<div class="stack-small">
 {#if editing}
-  &lt;!-- markup for editing todo: label, input text, Cancel and Save Button --&gt;
+  <!-- markup for editing todo: label, input text, Cancel and Save Button -->
 {:else}
-  &lt;!-- markup for displaying todo: checkbox, label, Edit and Delete Button --&gt;
+  <!-- markup for displaying todo: checkbox, label, Edit and Delete Button -->
 {/if}
-&lt;/div&gt;</pre>
+</div>
+```
 
-<p>The non-editing section — that is, the <code>{:else}</code> part (lower half) of the <code>if</code> block — will be very similar to the one we had in our Todos component. The only difference is that we are calling <code>onToggle()</code>, <code>onEdit()</code>, and <code>onRemove()</code>, depending on the user action.</p>
+The non-editing section — that is, the `{:else}` part (lower half) of the `if` block — will be very similar to the one we had in our Todos component. The only difference is that we are calling `onToggle()`, `onEdit()`, and `onRemove()`, depending on the user action.
 
-<pre class="brush: html">{:else}
-  &lt;div class="c-cb"&gt;
-    &lt;input type="checkbox" id="todo-{todo.id}"
+```html
+{:else}
+  <div class="c-cb">
+    <input type="checkbox" id="todo-{todo.id}"
       on:click={onToggle} checked={todo.completed}
-    &gt;
-    &lt;label for="todo-{todo.id}" class="todo-label"&gt;{todo.name}&lt;/label&gt;
-  &lt;/div&gt;
-  &lt;div class="btn-group"&gt;
-    &lt;button type="button" class="btn" on:click={onEdit}&gt;
-      Edit&lt;span class="visually-hidden"&gt; {todo.name}&lt;/span&gt;
-    &lt;/button&gt;
-    &lt;button type="button" class="btn btn__danger" on:click={onRemove}&gt;
-      Delete&lt;span class="visually-hidden"&gt; {todo.name}&lt;/span&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-{/if}
-&lt;/div&gt;</pre>
-
-<p>It is worth noting that:</p>
-
-<ul>
- <li>When the user presses the <em>Edit</em> button we execute <code>onEdit()</code>, which just sets the <code>editing</code> variable to <code>true</code>.</li>
- <li>When the user clicks on the checkbox we call the <code>onToggle()</code> function, which executes <code>update()</code>, passing an object with the new <code>completed</code> value as a parameter.</li>
- <li>The <code>update()</code> function emits the <code>update</code> event, passing as additional information a copy of the original todo with the changes applied.</li>
- <li>Finally, the <code>onRemove()</code> function emits the <code>remove</code> event, passing the <code>todo</code> to be deleted as additional data.</li>
-</ul>
-
-<p>The editing UI (the upper half) will contain an <code>&lt;input&gt;</code> field and two buttons to cancel or save the changes:</p>
-
-<pre class="brush: html">&lt;div class="stack-small"&gt;
-{#if editing}
-  &lt;form on:submit|preventDefault={onSave} class="stack-small" on:keydown={e =&gt; e.key === 'Escape' &amp;&amp; onCancel()}&gt;
-    &lt;div class="form-group"&gt;
-      &lt;label for="todo-{todo.id}" class="todo-label"&gt;New name for '{todo.name}'&lt;/label&gt;
-      &lt;input bind:value={name} type="text" id="todo-{todo.id}" autoComplete="off" class="todo-text" /&gt;
-    &lt;/div&gt;
-    &lt;div class="btn-group"&gt;
-      &lt;button class="btn todo-cancel" on:click={onCancel} type="button"&gt;
-        Cancel&lt;span class="visually-hidden"&gt;renaming {todo.name}&lt;/span&gt;
-        &lt;/button&gt;
-      &lt;button class="btn btn__primary todo-edit" type="submit" disabled={!name}&gt;
-        Save&lt;span class="visually-hidden"&gt;new name for {todo.name}&lt;/span&gt;
-      &lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/form&gt;
-{:else}
-[...]</pre>
-
-<p>When the user presses the <em>Edit</em> button, the <code>editing</code> variable will be set to <code>true</code>, and Svelte will remove the markup in the <code>{:else}</code> part of the DOM and replace it with the markup in the <code>{#if...}</code> section.</p>
-
-<p>The <code>&lt;input&gt;</code>'s <code>value</code> property will be bound to the <code>name</code> variable, and the buttons to cancel and save the changes call <code>onCancel()</code> and <code>onSave()</code> respectively (we added those functions earlier):</p>
-
-<ul>
- <li>When <code>onCancel()</code> is invoked, <code>name</code> is restored to its original value (when passed in as a prop) and we exit editing mode (by setting <code>editing</code> to <code>false</code>).</li>
- <li>When <code>onSave()</code> in invoked, we run the <code>update()</code> function — passing it the modified <code>name</code> — and exit editing mode.</li>
-</ul>
-
-<p>We also disable the <em>Save</em> button when the <code>&lt;input&gt;</code> is empty, using the <code>disabled={!name}</code> attribute, and allow the user to cancel the edit using the <kbd>Escape</kbd> key, like this:</p>
-
-<pre class="brush: js">on:keydown={e =&gt; e.key === 'Escape' &amp;&amp; onCancel()}.</pre>
-
-<p>We also use <code>todo.id</code> to create unique ids for the new input controls and labels.</p>
-
-<ol>
- <li>
-  <p>The complete updated markup of our <code>Todo</code> component looks like the following. Update yours now:</p>
-
-  <pre class="brush: html">&lt;div class="stack-small"&gt;
-{#if editing}
-  &lt;!-- markup for editing todo: label, input text, Cancel and Save Button --&gt;
-  &lt;form on:submit|preventDefault={onSave} class="stack-small" on:keydown={e =&gt; e.key === 'Escape' &amp;&amp; onCancel()}&gt;
-    &lt;div class="form-group"&gt;
-      &lt;label for="todo-{todo.id}" class="todo-label"&gt;New name for '{todo.name}'&lt;/label&gt;
-      &lt;input bind:value={name} type="text" id="todo-{todo.id}" autoComplete="off" class="todo-text" /&gt;
-    &lt;/div&gt;
-    &lt;div class="btn-group"&gt;
-      &lt;button class="btn todo-cancel" on:click={onCancel} type="button"&gt;
-        Cancel&lt;span class="visually-hidden"&gt;renaming {todo.name}&lt;/span&gt;
-        &lt;/button&gt;
-      &lt;button class="btn btn__primary todo-edit" type="submit" disabled={!name}&gt;
-        Save&lt;span class="visually-hidden"&gt;new name for {todo.name}&lt;/span&gt;
-      &lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/form&gt;
-{:else}
-  &lt;!-- markup for displaying todo: checkbox, label, Edit and Delete Button --&gt;
-  &lt;div class="c-cb"&gt;
-    &lt;input type="checkbox" id="todo-{todo.id}"
-      on:click={onToggle} checked={todo.completed}
-    &gt;
-    &lt;label for="todo-{todo.id}" class="todo-label"&gt;{todo.name}&lt;/label&gt;
-  &lt;/div&gt;
-  &lt;div class="btn-group"&gt;
-    &lt;button type="button" class="btn" on:click={onEdit}&gt;
-      Edit&lt;span class="visually-hidden"&gt; {todo.name}&lt;/span&gt;
-    &lt;/button&gt;
-    &lt;button type="button" class="btn btn__danger" on:click={onRemove}&gt;
-      Delete&lt;span class="visually-hidden"&gt; {todo.name}&lt;/span&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-{/if}
-&lt;/div&gt;</pre>
-
-  <div class="notecard note">
-  <p><strong>Note:</strong> We could further split this into two different components, one for editing the todo and the other for displaying it. In the end, it boils down to how comfortable you feel dealing with this level of complexity in a single component. You should also consider whether splitting it further would enable reusing this component in a different context.</p>
+    >
+    <label for="todo-{todo.id}" class="todo-label">{todo.name}</label>
   </div>
- </li>
- <li>
-  <p>To get the update functionality working, we have to handle the <code>update</code> event from the <code>Todos</code> component. In its <code>&lt;script&gt;</code> section, add this handler:</p>
-
-  <pre class="brush: js">function updateTodo(todo) {
-  const i = todos.findIndex(t =&gt; t.id === todo.id)
-  todos[i] = { ...todos[i], ...todo }
-}</pre>
-
-  <p>We find the <code>todo</code> by <code>id</code> in our <code>todos</code> array, and update its content using spread syntax. In this case we could have also just used <code>todos[i] = todo</code>, but this implementation is more bullet-proof, allowing the <code>Todo</code> component to return only the updated parts of the todo.</p>
- </li>
- <li>
-  <p>Next we have to listen for the <code>update</code> event on our <code>&lt;Todo&gt;</code> component call, and run our <code>updateTodo()</code> function when this occurs to change the <code>name</code> and <code>completed</code> status. Update your &lt;Todo&gt; call like this:</p>
-
-  <pre class="brush: js">{#each filterTodos(filter, todos) as todo (todo.id)}
-  &lt;li class="todo"&gt;
-    &lt;Todo {todo}
-      on:update={e =&gt; updateTodo(e.detail)}
-      on:remove={e =&gt; removeTodo(e.detail)}
-    /&gt;
-  &lt;/li&gt;</pre>
- </li>
- <li>
-  <p>Try your app again, and you should see that you can delete, add, edit, cancel editing of, and toggle completion status of todos! And our "x out of y items completed" status heading will now update appropriately when todos are completed.</p>
- </li>
-</ol>
-
-<p>As you can see, it's easy to implement the "props-down, events-up" pattern in Svelte. Nevertheless, for simple components <code>bind</code> can be a good choice; Svelte will let you choose.</p>
-
-<div class="notecard note">
-<p><strong>Note:</strong> Svelte provides more advanced mechanisms to share information among components: the <a href="https://svelte.dev/docs#setContext">Context API</a> and <a href="https://svelte.dev/docs#svelte_store">Stores</a>. The Context API provides a mechanism for components and their descendants to "talk" to each other without passing around data and functions as props, or dispatching lots of events. Stores allows you to share reactive data among components that are not hierarchically related. We will look at Stores later on in the series.</p>
+  <div class="btn-group">
+    <button type="button" class="btn" on:click={onEdit}>
+      Edit<span class="visually-hidden"> {todo.name}</span>
+    </button>
+    <button type="button" class="btn btn__danger" on:click={onRemove}>
+      Delete<span class="visually-hidden"> {todo.name}</span>
+    </button>
+  </div>
+{/if}
 </div>
+```
 
-<h2 id="The_code_so_far">The code so far</h2>
+It is worth noting that:
 
-<h3 id="Git_2">Git</h3>
+- When the user presses the _Edit_ button we execute `onEdit()`, which just sets the `editing` variable to `true`.
+- When the user clicks on the checkbox we call the `onToggle()` function, which executes `update()`, passing an object with the new `completed` value as a parameter.
+- The `update()` function emits the `update` event, passing as additional information a copy of the original todo with the changes applied.
+- Finally, the `onRemove()` function emits the `remove` event, passing the `todo` to be deleted as additional data.
 
-<p>To see the state of the code as it should be at the end of this article, access your copy of our repo like this:</p>
+The editing UI (the upper half) will contain an `<input>` field and two buttons to cancel or save the changes:
 
-<pre class="brush: bash">cd mdn-svelte-tutorial/05-advanced-concepts</pre>
+```html
+<div class="stack-small">
+{#if editing}
+  <form on:submit|preventDefault={onSave} class="stack-small" on:keydown={e => e.key === 'Escape' && onCancel()}>
+    <div class="form-group">
+      <label for="todo-{todo.id}" class="todo-label">New name for '{todo.name}'</label>
+      <input bind:value={name} type="text" id="todo-{todo.id}" autoComplete="off" class="todo-text" />
+    </div>
+    <div class="btn-group">
+      <button class="btn todo-cancel" on:click={onCancel} type="button">
+        Cancel<span class="visually-hidden">renaming {todo.name}</span>
+        </button>
+      <button class="btn btn__primary todo-edit" type="submit" disabled={!name}>
+        Save<span class="visually-hidden">new name for {todo.name}</span>
+      </button>
+    </div>
+  </form>
+{:else}
+[...]
+```
 
-<p>Or directly download the folder's content:</p>
+When the user presses the _Edit_ button, the `editing` variable will be set to `true`, and Svelte will remove the markup in the `{:else}` part of the DOM and replace it with the markup in the `{#if...}` section.
 
-<pre class="brush: bash">npx degit opensas/mdn-svelte-tutorial/05-advanced-concepts</pre>
+The `<input>`'s `value` property will be bound to the `name` variable, and the buttons to cancel and save the changes call `onCancel()` and `onSave()` respectively (we added those functions earlier):
 
-<p>Remember to run <code>npm install &amp;&amp; npm run dev</code> to start your app in development mode.</p>
+- When `onCancel()` is invoked, `name` is restored to its original value (when passed in as a prop) and we exit editing mode (by setting `editing` to `false`).
+- When `onSave()` in invoked, we run the `update()` function — passing it the modified `name` — and exit editing mode.
 
-<h3 id="REPL_2">REPL</h3>
+We also disable the _Save_ button when the `<input>` is empty, using the `disabled={!name}` attribute, and allow the user to cancel the edit using the <kbd>Escape</kbd> key, like this:
 
-<p>To see the current state of the code in a REPL, visit:</p>
+```js
+on:keydown={e => e.key === 'Escape' && onCancel()}.
+```
 
-<p><a href="https://svelte.dev/repl/76cc90c43a37452e8c7f70521f88b698?version=3.23.2">https://svelte.dev/repl/76cc90c43a37452e8c7f70521f88b698?version=3.23.2</a></p>
+We also use `todo.id` to create unique ids for the new input controls and labels.
 
-<h2 id="Summary">Summary</h2>
+1.  The complete updated markup of our `Todo` component looks like the following. Update yours now:
 
-<p>Now we have all of our app's required functionality in place. We can display, add, edit and delete todos, mark them as completed, and filter by status.</p>
+    ```html
+    <div class="stack-small">
+    {#if editing}
+      <!-- markup for editing todo: label, input text, Cancel and Save Button -->
+      <form on:submit|preventDefault={onSave} class="stack-small" on:keydown={e => e.key === 'Escape' && onCancel()}>
+        <div class="form-group">
+          <label for="todo-{todo.id}" class="todo-label">New name for '{todo.name}'</label>
+          <input bind:value={name} type="text" id="todo-{todo.id}" autoComplete="off" class="todo-text" />
+        </div>
+        <div class="btn-group">
+          <button class="btn todo-cancel" on:click={onCancel} type="button">
+            Cancel<span class="visually-hidden">renaming {todo.name}</span>
+            </button>
+          <button class="btn btn__primary todo-edit" type="submit" disabled={!name}>
+            Save<span class="visually-hidden">new name for {todo.name}</span>
+          </button>
+        </div>
+      </form>
+    {:else}
+      <!-- markup for displaying todo: checkbox, label, Edit and Delete Button -->
+      <div class="c-cb">
+        <input type="checkbox" id="todo-{todo.id}"
+          on:click={onToggle} checked={todo.completed}
+        >
+        <label for="todo-{todo.id}" class="todo-label">{todo.name}</label>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn" on:click={onEdit}>
+          Edit<span class="visually-hidden"> {todo.name}</span>
+        </button>
+        <button type="button" class="btn btn__danger" on:click={onRemove}>
+          Delete<span class="visually-hidden"> {todo.name}</span>
+        </button>
+      </div>
+    {/if}
+    </div>
+    ```
 
-<p>In this article, we covered the following topics:</p>
+    > **Note:** We could further split this into two different components, one for editing the todo and the other for displaying it. In the end, it boils down to how comfortable you feel dealing with this level of complexity in a single component. You should also consider whether splitting it further would enable reusing this component in a different context.
 
-<ul>
- <li>Extracting functionality to a new component.</li>
- <li>Passing information from child to parent using a handler received as a prop.</li>
- <li>Passing information from child to parent using the <code>bind</code> directive.</li>
- <li>Conditionally rendering blocks of markup using the <code>if</code> block.</li>
- <li>Implementing the "props-down, events-up" communication pattern.</li>
- <li>Creating and listening to custom events.</li>
-</ul>
+2.  To get the update functionality working, we have to handle the `update` event from the `Todos` component. In its `<script>` section, add this handler:
 
-<p>In the next article we will continue componentizing our app and look at some advanced techniques for working with the DOM.</p>
+    ```js
+    function updateTodo(todo) {
+      const i = todos.findIndex(t => t.id === todo.id)
+      todos[i] = { ...todos[i], ...todo }
+    }
+    ```
 
-<p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
+    We find the `todo` by `id` in our `todos` array, and update its content using spread syntax. In this case we could have also just used `todos[i] = todo`, but this implementation is more bullet-proof, allowing the `Todo` component to return only the updated parts of the todo.
 
-<h2 id="In_this_module">In this module</h2>
+3.  Next we have to listen for the `update` event on our `<Todo>` component call, and run our `updateTodo()` function when this occurs to change the `name` and `completed` status. Update your \<Todo> call like this:
 
-<ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
- <li>React
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
-  </ul>
- </li>
- <li>Ember
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
-  </ul>
- </li>
- <li>Vue
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
-  </ul>
- </li>
- <li>Svelte
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
-  </ul>
- </li>
- <li>Angular
-   <ul>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
-   </ul>
- </li>
-</ul>
+    ```js
+    {#each filterTodos(filter, todos) as todo (todo.id)}
+      <li class="todo">
+        <Todo {todo}
+          on:update={e => updateTodo(e.detail)}
+          on:remove={e => removeTodo(e.detail)}
+        />
+      </li>
+    ```
+
+4.  Try your app again, and you should see that you can delete, add, edit, cancel editing of, and toggle completion status of todos! And our "x out of y items completed" status heading will now update appropriately when todos are completed.
+
+As you can see, it's easy to implement the "props-down, events-up" pattern in Svelte. Nevertheless, for simple components `bind` can be a good choice; Svelte will let you choose.
+
+> **Note:** Svelte provides more advanced mechanisms to share information among components: the [Context API](https://svelte.dev/docs#setContext) and [Stores](https://svelte.dev/docs#svelte_store). The Context API provides a mechanism for components and their descendants to "talk" to each other without passing around data and functions as props, or dispatching lots of events. Stores allows you to share reactive data among components that are not hierarchically related. We will look at Stores later on in the series.
+
+## The code so far
+
+### Git
+
+To see the state of the code as it should be at the end of this article, access your copy of our repo like this:
+
+```bash
+cd mdn-svelte-tutorial/05-advanced-concepts
+```
+
+Or directly download the folder's content:
+
+```bash
+npx degit opensas/mdn-svelte-tutorial/05-advanced-concepts
+```
+
+Remember to run `npm install && npm run dev` to start your app in development mode.
+
+### REPL
+
+To see the current state of the code in a REPL, visit:
+
+<https://svelte.dev/repl/76cc90c43a37452e8c7f70521f88b698?version=3.23.2>
+
+## Summary
+
+Now we have all of our app's required functionality in place. We can display, add, edit and delete todos, mark them as completed, and filter by status.
+
+In this article, we covered the following topics:
+
+- Extracting functionality to a new component.
+- Passing information from child to parent using a handler received as a prop.
+- Passing information from child to parent using the `bind` directive.
+- Conditionally rendering blocks of markup using the `if` block.
+- Implementing the "props-down, events-up" communication pattern.
+- Creating and listening to custom events.
+
+In the next article we will continue componentizing our app and look at some advanced techniques for working with the DOM.
+
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+
+## In this module
+
+- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- React
+
+  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+
+- Ember
+
+  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+
+- Vue
+
+  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+
+- Svelte
+
+  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+
+- Angular
+
+  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
+  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

@@ -1,6 +1,6 @@
 ---
 title: 'Test your skills: Object basics'
-slug: 'Learn/JavaScript/Objects/Test_your_skills:_Object_basics'
+slug: Learn/JavaScript/Objects/Test_your_skills:_Object_basics
 tags:
   - Beginner
   - JavaScript
@@ -8,101 +8,87 @@ tags:
   - Objects
   - test your skills
 ---
-<div>{{learnsidebar}}</div>
+{{learnsidebar}}
 
-<p>The aim of this skill test is to assess whether you've understood our <a href="/en-US/docs/Learn/JavaScript/Objects/Basics">JavaScript object basics</a> article.</p>
+The aim of this skill test is to assess whether you've understood our [JavaScript object basics](/en-US/docs/Learn/JavaScript/Objects/Basics) article.
 
-<div class="notecard note">
-<p><strong>Note:</strong> You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a> to work on the tasks.<br>
- <br>
- If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.</p>
-</div>
+> **Note:** You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+>
+> If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
 
-<div class="notecard note">
-<p><strong>Note:</strong> In the examples below, if there is an error in your code it will be outputted into the results panel on the page, to help you try to figure out the answer (or into the browser's JavaScript console, in the case of the downloadable version).</p>
-</div>
+> **Note:** In the examples below, if there is an error in your code it will be outputted into the results panel on the page, to help you try to figure out the answer (or into the browser's JavaScript console, in the case of the downloadable version).
 
-<h2 id="Object_basics_1">Object basics 1</h2>
+## Object basics 1
 
-<p>In this task you are provided with an object literal, and your tasks are to</p>
+In this task you are provided with an object literal, and your tasks are to
 
-<ul>
- <li>Store the value of the <code>name</code> property inside the <code>catName</code> variable, using bracket notation.</li>
- <li>Run the <code>greeting()</code> method using dot notation (it will log the greeting to the browser DevTools' console).</li>
- <li>Update the <code>color</code> property value to <code>black</code>.</li>
-</ul>
+- Store the value of the `name` property inside the `catName` variable, using bracket notation.
+- Run the `greeting()` method using dot notation (it will log the greeting to the browser DevTools' console).
+- Update the `color` property value to `black`.
 
-<p>Try updating the live code below to recreate the finished example:</p>
+Try updating the live code below to recreate the finished example:
 
-<p>{{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/object-basics/object-basics1.html", '100%', 400)}}</p>
+{{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/object-basics/object-basics1.html", '100%', 400)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/object-basics/object-basics1-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/object-basics/object-basics1-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Object_basics_2">Object basics 2</h2>
+## Object basics 2
 
-<p>In our next task, we want you to have a go at creating your own object literal to represent one of your favorite bands. The required members are:</p>
+In our next task, we want you to have a go at creating your own object literal to represent one of your favorite bands. The required members are:
 
-<ul>
- <li><code>name</code>: A string representing the band name.</li>
- <li><code>nationality</code>: A string representing the country the band comes from.</li>
- <li><code>genre</code>: What type of music the band plays.</li>
- <li><code>members</code>: A number representing the number of members the band has.</li>
- <li><code>formed</code>: A number representing the year the band formed.</li>
- <li><code>split</code>: A number representing the year the band split up, or <code>false</code> if they are still together.</li>
- <li><code>albums</code>: An array representing the albums released by the band. Each array item should be an object containing the following members:
-  <ul>
-   <li><code>name</code>: A string representing the name of the album.</li>
-   <li><code>released</code>: A number representing the year the album was released.</li>
-  </ul>
- </li>
-</ul>
+- `name`: A string representing the band name.
+- `nationality`: A string representing the country the band comes from.
+- `genre`: What type of music the band plays.
+- `members`: A number representing the number of members the band has.
+- `formed`: A number representing the year the band formed.
+- `split`: A number representing the year the band split up, or `false` if they are still together.
+- `albums`: An array representing the albums released by the band. Each array item should be an object containing the following members:
 
-<p>Include at least two albums in the <code>albums</code> array.   </p>
+  - `name`: A string representing the name of the album.
+  - `released`: A number representing the year the album was released.
 
-<p>Once you've done this, you should then write a string to the variable <code>bandInfo</code>, which will contain a small biography detailing their name, nationality, years active, and style, and the title and release date of their first album.</p>
+Include at least two albums in the `albums` array.
 
-<p>Try updating the live code below to recreate the finished example:</p>
+Once you've done this, you should then write a string to the variable `bandInfo`, which will contain a small biography detailing their name, nationality, years active, and style, and the title and release date of their first album.
 
-<p>{{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/object-basics/object-basics2.html", '100%', 400)}}</p>
+Try updating the live code below to recreate the finished example:
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/object-basics/object-basics2-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+{{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/object-basics/object-basics2.html", '100%', 400)}}
 
-<h2 id="Object_basics_3">Object basics 3</h2>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/object-basics/object-basics2-download.html) to work in your own editor or in an online editor.
 
-<p>Finally for our object basics assessment, we want you to return to the <code>cat</code> object literal from Task #1. We want you to rewrite the <code>greeting()</code> method so that it logs <code>"Hello, said Bertie the Cymric."</code> to the browser DevTools' console, but in a way that will work across <em>any</em> cat object of the same structure, regardless of its name or breed.</p>
+## Object basics 3
 
-<p>When you are done, write your own object called <code>cat2</code>, which has the same structure, exactly the same <code>greeting()</code> method, but a different <code>name</code>, <code>breed</code>, and <code>color</code>.</p>
+Finally for our object basics assessment, we want you to return to the `cat` object literal from Task #1. We want you to rewrite the `greeting()` method so that it logs `"Hello, said Bertie the Cymric."` to the browser DevTools' console, but in a way that will work across _any_ cat object of the same structure, regardless of its name or breed.
 
-<p>Call both <code>greeting()</code> methods to check that they log appropriate greetings to the console.</p>
+When you are done, write your own object called `cat2`, which has the same structure, exactly the same `greeting()` method, but a different `name`, `breed`, and `color`.
 
-<p>The code is not very <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a> (each bit of code should only be defined once) — you've got the same method defined twice, for example. Describe how you'd make it more DRY? If you are not sure, then don't worry — this is what we'll be looking at in future articles in the series!</p>
+Call both `greeting()` methods to check that they log appropriate greetings to the console.
 
-<p>Try updating the live code below to recreate the finished example:</p>
+The code is not very [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (each bit of code should only be defined once) — you've got the same method defined twice, for example. Describe how you'd make it more DRY? If you are not sure, then don't worry — this is what we'll be looking at in future articles in the series!
 
-<p>{{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/object-basics/object-basics3.html", '100%', 400)}}</p>
+Try updating the live code below to recreate the finished example:
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/object-basics/object-basics3-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+{{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/object-basics/object-basics3.html", '100%', 400)}}
 
-<h2 id="Assessment_or_further_help">Assessment or further help</h2>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/object-basics/object-basics3-download.html) to work in your own editor or in an online editor.
 
-<p>You can practice these examples in the Interactive Editors above.</p>
+## Assessment or further help
 
-<p>If you would like your work assessed, or are stuck and want to ask for help:</p>
+You can practice these examples in the Interactive Editors above.
 
-<ol>
- <li>Put your work into an online shareable editor such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a>. You can write the code yourself, or use the starting point files linked to in the above sections.</li>
- <li>Write a post asking for assessment and/or help at the <a href="https://discourse.mozilla.org/c/mdn/learn">MDN Discourse forum Learning category</a>. Your post should include:
-  <ul>
-   <li>A descriptive title such as "Assessment wanted for Object basics 1 skill test".</li>
-   <li>Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.</li>
-   <li>A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.</li>
-   <li>A link to the actual task or assessment page, so we can find the question you want help with.</li>
-  </ul>
- </li>
-</ol>
+If you would like your work assessed, or are stuck and want to ask for help:
+
+1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
+2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+
+    - A descriptive title such as "Assessment wanted for Object basics 1 skill test".
+    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
+    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
+    - A link to the actual task or assessment page, so we can find the question you want help with.

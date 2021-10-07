@@ -11,372 +11,373 @@ tags:
   - Learn
   - client-side
 ---
-<div>{{LearnSidebar}}<br>
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
+{{LearnSidebar}}
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<p>In this article we'll get right on with planning out the structure of our TodoMVC Ember app, adding in the HTML for it, and then breaking that HTML structure into components.</p>
+In this article we'll get right on with planning out the structure of our TodoMVC Ember app, adding in the HTML for it, and then breaking that HTML structure into components.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>
-    <p>At minimum, it is recommended that you are familiar with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, and have knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
-
-    <p>A deeper understanding of modern JavaScript features (such as classes, modules, etc), will be extremely beneficial, as Ember makes heavy use of them.</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To learn how to structure an Ember app, and then break that structure into components.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        <p>
+          At minimum, it is recommended that you are familiar with the core
+          <a href="/en-US/docs/Learn/HTML">HTML</a>,
+          <a href="/en-US/docs/Learn/CSS">CSS</a>, and
+          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, and
+          have knowledge of the
+          <a
+            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            >terminal/command line</a
+          >.
+        </p>
+        <p>
+          A deeper understanding of modern JavaScript features (such as classes,
+          modules, etc), will be extremely beneficial, as Ember makes heavy use
+          of them.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        To learn how to structure an Ember app, and then break that structure
+        into components.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Planning_out_the_layout_of_the_TodoMVC_app">Planning out the layout of the TodoMVC app</h2>
+## Planning out the layout of the TodoMVC app
 
-<p>In the last article we set up a new Ember project, then added and configured our CSS styles. At this point we add some HTML, planning out the structure and semantics of our TodoMVC app.</p>
+In the last article we set up a new Ember project, then added and configured our CSS styles. At this point we add some HTML, planning out the structure and semantics of our TodoMVC app.
 
-<p>The landing page HTML of our application is defined in <code>app/templates/application.hbs</code>. This already exists, and its contents currently look like so:</p>
+The landing page HTML of our application is defined in `app/templates/application.hbs`. This already exists, and its contents currently look like so:
 
-<pre class="brush: html">\{{!-- The following component displays Ember's default welcome message. --}}
-&lt;WelcomePage /&gt;
+```html
+\{{!-- The following component displays Ember's default welcome message. --}}
+<WelcomePage />
 \{{!-- Feel free to remove this! --}}
 
 \{{outlet}}
-</pre>
+```
 
-<p><code>&lt;WelcomePage /&gt;</code> is a component provided by an Ember addon that renders the default welcome page we saw in the previous article, when we first navigated to our server at <code>localhost:4200</code>. </p>
+`<WelcomePage />` is a component provided by an Ember addon that renders the default welcome page we saw in the previous article, when we first navigated to our server at `localhost:4200`.
 
-<p>However, we don't want this. Instead, we want it to contain the TodoMVC app structure. To start with, delete the contents of <code>application.hbs</code> and replace them with the following:</p>
+However, we don't want this. Instead, we want it to contain the TodoMVC app structure. To start with, delete the contents of `application.hbs` and replace them with the following:
 
-<pre class="brush: html">&lt;section class="todoapp"&gt;
-  &lt;h1&gt;todos&lt;/h1&gt;
-  &lt;input
+```html
+<section class="todoapp">
+  <h1>todos</h1>
+  <input
     class="new-todo"
     aria-label="What needs to be done?"
     placeholder="What needs to be done?"
     autofocus
-  &gt;
-&lt;/section&gt;</pre>
+  >
+</section>
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">aria-label</a></code> provides a label for assistive technology to make use of — for example, for a screenreader to read out. This is useful in such cases where we have an <code><a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt;</a></code> being used with no corresponding HTML text that could be turned into a label.</p>
-</div>
+> **Note:** [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) provides a label for assistive technology to make use of — for example, for a screenreader to read out. This is useful in such cases where we have an [`<input>`](/en-US/docs/Web/HTML/Element/input) being used with no corresponding HTML text that could be turned into a label.
 
-<p>When you save <code>application.hbs</code>, the development server you started earlier will automatically rebuild the app and refresh the browser. The rendered output should now look like this:</p>
+When you save `application.hbs`, the development server you started earlier will automatically rebuild the app and refresh the browser. The rendered output should now look like this:
 
-<p><img alt="todo app rendered in the browser with only the new todo input field showing" src="todos-initial-render.png"></p>
+![todo app rendered in the browser with only the new todo input field showing](todos-initial-render.png)
 
-<p>It doesn't take too much effort to get our HTML looking like a fully-featured to-do list app. Update the <code>application.hbs</code> file again so its content looks like this:</p>
+It doesn't take too much effort to get our HTML looking like a fully-featured to-do list app. Update the `application.hbs` file again so its content looks like this:
 
-<pre class="brush: html">&lt;section class="todoapp"&gt;
-  &lt;h1&gt;todos&lt;/h1&gt;
-  &lt;input
+```html
+<section class="todoapp">
+  <h1>todos</h1>
+  <input
     class="new-todo"
     aria-label="What needs to be done?"
     placeholder="What needs to be done?"
     autofocus
-  &gt;
+  >
 
-  &lt;section class="main"&gt;
-    &lt;input id="mark-all-complete" class="toggle-all" type="checkbox"&gt;
-    &lt;label for="mark-all-complete"&gt;Mark all as complete&lt;/label&gt;
+  <section class="main">
+    <input id="mark-all-complete" class="toggle-all" type="checkbox">
+    <label for="mark-all-complete">Mark all as complete</label>
 
-    &lt;ul class="todo-list"&gt;
-      &lt;li&gt;
-        &lt;div class="view"&gt;
-          &lt;input
+    <ul class="todo-list">
+      <li>
+        <div class="view">
+          <input
             aria-label="Toggle the completion of this todo"
             class="toggle"
             type="checkbox"
-          &gt;
-          &lt;label&gt;Buy Movie Tickets&lt;/label&gt;
-          &lt;button
+          >
+          <label>Buy Movie Tickets</label>
+          <button
             type="button"
             class="destroy"
             title="Remove this todo"
-          &gt;&lt;/button&gt;
-        &lt;/div&gt;
+          ></button>
+        </div>
 
-        &lt;input autofocus class="edit" value="Todo Text"&gt;
-      &lt;/li&gt;
+        <input autofocus class="edit" value="Todo Text">
+      </li>
 
-      &lt;li&gt;
-        &lt;div class="view"&gt;
-          &lt;input
+      <li>
+        <div class="view">
+          <input
             aria-label="Toggle the completion of this todo"
             class="toggle"
             type="checkbox"
-          &gt;
-          &lt;label&gt;Go to Movie&lt;/label&gt;
-          &lt;button
+          >
+          <label>Go to Movie</label>
+          <button
             type="button"
             class="destroy"
             title="Remove this todo"
-           &gt;&lt;/button&gt;
-        &lt;/div&gt;
+           ></button>
+        </div>
 
-        &lt;input autofocus class="edit" value="Todo Text"&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/section&gt;
+        <input autofocus class="edit" value="Todo Text">
+      </li>
+    </ul>
+  </section>
 
-  &lt;footer class="footer"&gt;
-    &lt;span class="todo-count"&gt;
-      &lt;strong&gt;0&lt;/strong&gt; todos left
-    &lt;/span&gt;
+  <footer class="footer">
+    <span class="todo-count">
+      <strong>0</strong> todos left
+    </span>
 
-    &lt;ul class="filters"&gt;
-      &lt;li&gt;
-        &lt;a href="#"&gt;All&lt;/a&gt;
-        &lt;a href="#"&gt;Active&lt;/a&gt;
-        &lt;a href="#"&gt;Completed&lt;/a&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
+    <ul class="filters">
+      <li>
+        <a href="#">All</a>
+        <a href="#">Active</a>
+        <a href="#">Completed</a>
+      </li>
+    </ul>
 
-    &lt;button type="button" class="clear-completed"&gt;
+    <button type="button" class="clear-completed">
       Clear Completed
-    &lt;/button&gt;
-  &lt;/footer&gt;
-&lt;/section&gt;</pre>
+    </button>
+  </footer>
+</section>
+```
 
-<p>The rendered output should now be as follows:</p>
+The rendered output should now be as follows:
 
-<p><img alt="todo app rendered in the browser with new todo input field and existing todos showing, - buy movie tickets and go to movie" src="todos-with-todo-items.png"></p>
+![todo app rendered in the browser with new todo input field and existing todos showing, - buy movie tickets and go to movie](todos-with-todo-items.png)
 
-<p>This looks pretty complete, but remember that this is only a static prototype. Now we need to break up our HTML code into dynamic components; later we'll turn it into a fully interactive app.</p>
+This looks pretty complete, but remember that this is only a static prototype. Now we need to break up our HTML code into dynamic components; later we'll turn it into a fully interactive app.
 
-<p>Looking at the code next to the rendered todo app, there are a number of ways we could decide how to break up the UI, but let's plan on splitting the HTML out into the following components:</p>
+Looking at the code next to the rendered todo app, there are a number of ways we could decide how to break up the UI, but let's plan on splitting the HTML out into the following components:
 
-<p><img alt="code screenshot annotated to show what parts of the code will go into which component" src="todos-ui-component-breakdown.png"></p>
+![code screenshot annotated to show what parts of the code will go into which component](todos-ui-component-breakdown.png)
 
-<p>The component groupings are as follows:</p>
+The component groupings are as follows:
 
-<ul>
- <li>The main input / "new-todo" (red in the image)</li>
- <li>The containing body of the todo list + the <code>mark-all-complete</code> button (purple in the image)
-  <ul>
-   <li>The <code>mark-all-complete button</code>, explicitly highlighted for reasons given below (yellow in the image)</li>
-   <li>Each todo is an individual component (green in the image)</li>
-  </ul>
- </li>
- <li>The footer (blue in the image)</li>
-</ul>
+- The main input / "new-todo" (red in the image)
+- The containing body of the todo list + the `mark-all-complete` button (purple in the image)
 
-<p>Something odd to note is that the <code>mark-all-complete</code> checkbox (marked in yellow), while in the "main" section, is rendered next to the "new-todo" input. This is because the default CSS absolutely positions the checkbox + label with negative top and left values to move it next to the input, rather than it being inside the "main" section.</p>
+  - The `mark-all-complete button`, explicitly highlighted for reasons given below (yellow in the image)
+  - Each todo is an individual component (green in the image)
 
-<p><img alt="todo app looked at through devtools" src="todos-devtools-view.png"></p>
+- The footer (blue in the image)
 
-<h2 id="Using_the_CLI_to_create_our_components_for_us">Using the CLI to create our components for us</h2>
+Something odd to note is that the `mark-all-complete` checkbox (marked in yellow), while in the "main" section, is rendered next to the "new-todo" input. This is because the default CSS absolutely positions the checkbox + label with negative top and left values to move it next to the input, rather than it being inside the "main" section.
 
-<p>So to represent our app, we want to create 4 components:</p>
+![todo app looked at through devtools](todos-devtools-view.png)
 
-<ul>
- <li>Header</li>
- <li>List</li>
- <li>Individual Todo</li>
- <li>Footer</li>
-</ul>
+## Using the CLI to create our components for us
 
-<p>To create a component, we use the <code>ember generate component</code> command, followed by the name of the component. Let’s create the header component first. To do so:</p>
+So to represent our app, we want to create 4 components:
 
-<ol>
- <li>
-  <p>Stop the server running by going to the terminal and pressing <kbd>Ctrl</kbd> + <kbd>C</kbd>.</p>
- </li>
- <li>
-  <p>Enter the following command into your terminal:</p>
+- Header
+- List
+- Individual Todo
+- Footer
 
-  <pre class="brush: bash">ember generate component header</pre>
+To create a component, we use the `ember generate component` command, followed by the name of the component. Let’s create the header component first. To do so:
 
-  <p>These will generate some new files, as shown in the resulting terminal output:</p>
+1.  Stop the server running by going to the terminal and pressing <kbd>Ctrl</kbd> + <kbd>C</kbd>.
+2.  Enter the following command into your terminal:
 
-  <pre>installing component
-  create app/components/header.hbs
-  skip app/components/header.js
-  tip to add a class, run `ember generate component-class header`
-installing component-test
-  create tests/integration/components/header-test.js</pre>
- </li>
-</ol>
+    ```bash
+    ember generate component header
+    ```
 
-<p><code>header.hbs</code> is the template file where we’ll include the HTML structure for just that component. Later on we'll add the required dynamic functionality such as data bindings, responding to user interaction, etc.</p>
+    These will generate some new files, as shown in the resulting terminal output:
 
-<div class="notecard note">
-<p><strong>Note:</strong> The <code>header.js</code> file (shown as skipped) is for connection to a backing Glimmer Component Class, which we don't need for now, as they are for adding interactivity and state manipulation. By default, <code>generate component</code> generates template-only components, because in large applications, template-only components end up being the majority of the components.</p>
-</div>
+        installing component
+          create app/components/header.hbs
+          skip app/components/header.js
+          tip to add a class, run `ember generate component-class header`
+        installing component-test
+          create tests/integration/components/header-test.js
 
-<p><code>header-test.js</code> is for writing automated tests to ensure that our app continues to work over time as we upgrade, add features, refactor, etc. Testing is outside the scope of this tutorial, although generally testing should be implemented as you develop, rather than after, otherwise it tends to be forgotten about. If you're curious about testing, or why you would want to have automated tests, check out the <a href="https://guides.emberjs.com/release/tutorial/part-1/automated-testing/">official Ember tutorial on testing</a>.</p>
+`header.hbs` is the template file where we’ll include the HTML structure for just that component. Later on we'll add the required dynamic functionality such as data bindings, responding to user interaction, etc.
 
-<p>Before we start adding any component code, let’s create the scaffolding for the other components. Enter the following lines into your terminal, one by one:</p>
+> **Note:** The `header.js` file (shown as skipped) is for connection to a backing Glimmer Component Class, which we don't need for now, as they are for adding interactivity and state manipulation. By default, `generate component` generates template-only components, because in large applications, template-only components end up being the majority of the components.
 
-<pre class="brush: bash">ember generate component todo-list
+`header-test.js` is for writing automated tests to ensure that our app continues to work over time as we upgrade, add features, refactor, etc. Testing is outside the scope of this tutorial, although generally testing should be implemented as you develop, rather than after, otherwise it tends to be forgotten about. If you're curious about testing, or why you would want to have automated tests, check out the [official Ember tutorial on testing](https://guides.emberjs.com/release/tutorial/part-1/automated-testing/).
+
+Before we start adding any component code, let’s create the scaffolding for the other components. Enter the following lines into your terminal, one by one:
+
+```bash
+ember generate component todo-list
 ember generate component todo
-ember generate component footer</pre>
+ember generate component footer
+```
 
-<p>You’ll now see the following inside your <code>todomvc/app/components</code> directory:</p>
+You’ll now see the following inside your `todomvc/app/components` directory:
 
-<p><img alt="the app components directory, showing the component template files we've created" src="todos-components-directory.png"></p>
+![the app components directory, showing the component template files we've created](todos-components-directory.png)
 
-<p>Now that we have all of our component structure files, we can cut and paste the HTML for each component out of the <code>application.hbs</code> file and into each of those components, and then re-write the <code>application.hbs</code> to reflect our new abstractions.</p>
+Now that we have all of our component structure files, we can cut and paste the HTML for each component out of the `application.hbs` file and into each of those components, and then re-write the `application.hbs` to reflect our new abstractions.
 
-<ol>
- <li>
-  <p>The <code>header.hbs</code> file should be updated to contain the following:</p>
+1.  The `header.hbs` file should be updated to contain the following:
 
-  <pre class="brush: html">&lt;input
-  class="new-todo"
-  aria-label="What needs to be done?"
-  placeholder="What needs to be done?"
-  autofocus
-&gt;</pre>
- </li>
- <li>
-  <p><code>todo-list.hbs</code> should be updated to contain this chunk of code:</p>
+    ```html
+    <input
+      class="new-todo"
+      aria-label="What needs to be done?"
+      placeholder="What needs to be done?"
+      autofocus
+    >
+    ```
 
-  <pre class="brush: html">&lt;section class="main"&gt;
-  &lt;input id="mark-all-complete" class="toggle-all" type="checkbox"&gt;
-  &lt;label for="mark-all-complete"&gt;Mark all as complete&lt;/label&gt;
+2.  `todo-list.hbs` should be updated to contain this chunk of code:
 
-  &lt;ul class="todo-list"&gt;
-    &lt;Todo /&gt;
-    &lt;Todo /&gt;
-  &lt;/ul&gt;
-&lt;/section&gt;</pre>
+    ```html
+    <section class="main">
+      <input id="mark-all-complete" class="toggle-all" type="checkbox">
+      <label for="mark-all-complete">Mark all as complete</label>
 
-  <div class="notecard note">
-  <p><strong>Note:</strong> The only non-HTML in this new <code>todo-list.hbs</code> is the <code>&lt;Todo /&gt;</code> component invocation. In Ember, a component invocation is similar to declaring an HTML element, but the first letter starts with a capital letter, and the names are written in upper camel case, as you'll see with <code>&lt;TodoList /&gt;</code> later on. The contents of the <code>todo.hbs</code> file below will replace <code>&lt;Todo /&gt;</code> in the rendered page as our application loads.</p>
-  </div>
- </li>
- <li>
-  <p>Add the following into the <code>todo.hbs</code> file:</p>
+      <ul class="todo-list">
+        <Todo />
+        <Todo />
+      </ul>
+    </section>
+    ```
 
-  <pre class="brush: html">&lt;li&gt;
-  &lt;div class="view"&gt;
-    &lt;input
-      aria-label="Toggle the completion of this todo"
-      class="toggle"
-      type="checkbox"
-    &gt;
-    &lt;label&gt;Buy Movie Tickets&lt;/label&gt;
-    &lt;button
-      type="button"
-      class="destroy"
-      title="Remove this todo"
-    &gt;&lt;/button&gt;
-  &lt;/div&gt;
+    > **Note:** The only non-HTML in this new `todo-list.hbs` is the `<Todo />` component invocation. In Ember, a component invocation is similar to declaring an HTML element, but the first letter starts with a capital letter, and the names are written in upper camel case, as you'll see with `<TodoList />` later on. The contents of the `todo.hbs` file below will replace `<Todo />` in the rendered page as our application loads.
 
-  &lt;input autofocus class="edit" value="Todo Text"&gt;
-&lt;/li&gt;</pre>
- </li>
- <li>
-  <p><code>footer.hbs</code> should be updated to contain the following:</p>
+3.  Add the following into the `todo.hbs` file:
 
-  <pre class="brush: html">&lt;footer class="footer"&gt;
-  &lt;span class="todo-count"&gt;
-    &lt;strong&gt;0&lt;/strong&gt; todos left
-  &lt;/span&gt;
+    ```html
+    <li>
+      <div class="view">
+        <input
+          aria-label="Toggle the completion of this todo"
+          class="toggle"
+          type="checkbox"
+        >
+        <label>Buy Movie Tickets</label>
+        <button
+          type="button"
+          class="destroy"
+          title="Remove this todo"
+        ></button>
+      </div>
 
-  &lt;ul class="filters"&gt;
-    &lt;li&gt;
-      &lt;a href="#"&gt;All&lt;/a&gt;
-      &lt;a href="#"&gt;Active&lt;/a&gt;
-      &lt;a href="#"&gt;Completed&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
+      <input autofocus class="edit" value="Todo Text">
+    </li>
+    ```
 
-  &lt;button type="button" class="clear-completed"&gt;
-    Clear Completed
-  &lt;/button&gt;
-&lt;/footer&gt;</pre>
- </li>
- <li>
-  <p>Finally, the contents of <code>application.hbs</code> should be updated so that they call the appropriate components, like so:</p>
+4.  `footer.hbs` should be updated to contain the following:
 
-  <pre class="brush: html">&lt;section class="todoapp"&gt;
-  &lt;h1&gt;todos&lt;/h1&gt;
+    ```html
+    <footer class="footer">
+      <span class="todo-count">
+        <strong>0</strong> todos left
+      </span>
 
-  &lt;Header /&gt;
-  &lt;TodoList /&gt;
-  &lt;Footer /&gt;
+      <ul class="filters">
+        <li>
+          <a href="#">All</a>
+          <a href="#">Active</a>
+          <a href="#">Completed</a>
+        </li>
+      </ul>
 
-&lt;/section&gt;</pre>
- </li>
- <li>
-  <p>With these changes made, run <code>npm start</code> in your terminal again, then head over to <code>http://localhost:4200</code> to ensure that the todo app still looks as it did before the refactor.</p>
- </li>
-</ol>
+      <button type="button" class="clear-completed">
+        Clear Completed
+      </button>
+    </footer>
+    ```
 
-<p><img alt="todo app rendered in the browser with new todo input field and existing todos showing, both saying buy movie tickets" src="todos-components-render.png"></p>
+5.  Finally, the contents of `application.hbs` should be updated so that they call the appropriate components, like so:
 
-<p>Notice how the todo items both say "Buy Movie Tickets" — this is because the same component is being invoked twice, and the todo text is hardcoded into it. We'll look at showing different todo items in the next article!</p>
+    ```html
+    <section class="todoapp">
+      <h1>todos</h1>
 
-<h2 id="Summary">Summary</h2>
+      <Header />
+      <TodoList />
+      <Footer />
 
-<p>Great! Everything looks as it should. We have successfully refactored our HTML into components! In the next article we'll start looking into adding interactivity to our Ember application.</p>
+    </section>
+    ```
 
-<p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
+6.  With these changes made, run `npm start` in your terminal again, then head over to `http://localhost:4200` to ensure that the todo app still looks as it did before the refactor.
 
-<h2 id="In_this_module">In this module</h2>
+![todo app rendered in the browser with new todo input field and existing todos showing, both saying buy movie tickets](todos-components-render.png)
 
-<ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
- <li>React
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
-  </ul>
- </li>
- <li>Ember
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
-  </ul>
- </li>
- <li>Vue
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
-  </ul>
- </li>
- <li>Svelte
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
-  </ul>
- </li>
- <li>Angular
-   <ul>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
-   </ul>
- </li>
-</ul>
+Notice how the todo items both say "Buy Movie Tickets" — this is because the same component is being invoked twice, and the todo text is hardcoded into it. We'll look at showing different todo items in the next article!
+
+## Summary
+
+Great! Everything looks as it should. We have successfully refactored our HTML into components! In the next article we'll start looking into adding interactivity to our Ember application.
+
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+
+## In this module
+
+- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- React
+
+  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+
+- Ember
+
+  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+
+- Vue
+
+  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+
+- Svelte
+
+  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+
+- Angular
+
+  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
+  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

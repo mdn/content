@@ -11,52 +11,63 @@ tags:
   - client-side
   - vue
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
-
-<p>The time has finally come to make our app look a bit nicer. In this article we'll explore the different ways of styling Vue components with CSS.</p>
+The time has finally come to make our app look a bit nicer. In this article we'll explore the different ways of styling Vue components with CSS.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>
-    <p>Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
-
-    <p>Vue components are written as a combination of JavaScript objects that manage the app's data and an HTML-based template syntax that maps to the underlying DOM structure. For installation, and to use some of the more advanced features of Vue (like Single File Components or render functions), you'll need a terminal with node + npm installed.</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To learn about styling Vue components.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        <p>
+          Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
+          <a href="/en-US/docs/Learn/CSS">CSS</a>, and
+          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages,
+          knowledge of the
+          <a
+            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            >terminal/command line</a
+          >.
+        </p>
+        <p>
+          Vue components are written as a combination of JavaScript objects that
+          manage the app's data and an HTML-based template syntax that maps to
+          the underlying DOM structure. For installation, and to use some of the
+          more advanced features of Vue (like Single File Components or render
+          functions), you'll need a terminal with node + npm installed.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>To learn about styling Vue components.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Styling_Vue_components_with_CSS">Styling Vue components with CSS</h2>
+## Styling Vue components with CSS
 
-<p>Before we move on to add more advanced features to our app, we should add some basic CSS to make it look better. Vue has three common approaches to styling apps:</p>
+Before we move on to add more advanced features to our app, we should add some basic CSS to make it look better. Vue has three common approaches to styling apps:
 
-<ul>
- <li>External CSS files.</li>
- <li>Global styles in Single File Components (<code>.vue</code> files).</li>
- <li>Component-scoped styles in Single File Components.</li>
-</ul>
+- External CSS files.
+- Global styles in Single File Components (`.vue` files).
+- Component-scoped styles in Single File Components.
 
-<p>To help familiarize you with each one, we'll use a combination of all three to give our app a nicer look and feel.</p>
+To help familiarize you with each one, we'll use a combination of all three to give our app a nicer look and feel.
 
-<h2 id="Styling_with_external_CSS_files">Styling with external CSS files</h2>
+## Styling with external CSS files
 
-<p>You can include external CSS files and apply them globally to your app. Let's look at how this is done.</p>
+You can include external CSS files and apply them globally to your app. Let's look at how this is done.
 
-<p>To start with, create a file called <code>reset.css</code> in the <code>src/assets</code> directory. Files in this folder get processed by Webpack. This means we can use CSS pre-processors (like SCSS) or post-processors (like PostCSS).</p>
+To start with, create a file called `reset.css` in the `src/assets` directory. Files in this folder get processed by Webpack. This means we can use CSS pre-processors (like SCSS) or post-processors (like PostCSS).
 
-<p>While this tutorial will not be using such tools, it's good to know that when including such code in the assets folder it will be processed automatically.</p>
+While this tutorial will not be using such tools, it's good to know that when including such code in the assets folder it will be processed automatically.
 
-<p>Add the following contents to the <code>reset.css</code> file:</p>
+Add the following contents to the `reset.css` file:
 
-<pre class="brush: css">/*reset.css*/
+```css
+/*reset.css*/
 /* RESETS */
 *,
 *::before,
@@ -128,33 +139,37 @@ body {
     line-height: 1.31579;
   }
 }
-/*END RESETS*/</pre>
+/*END RESETS*/
+```
 
-<p>Next, in your <code>src/main.js</code> file, import the <code>reset.css</code> file like so:</p>
+Next, in your `src/main.js` file, import the `reset.css` file like so:
 
-<pre class="brush: js">import './assets/reset.css';</pre>
+```js
+import './assets/reset.css';
+```
 
-<p>This will cause the file to get picked up during the build step and automatically added to our site.</p>
+This will cause the file to get picked up during the build step and automatically added to our site.
 
-<p>The reset styles should be applied to the app now. The images below show the look of the app before and after the reset is applied.</p>
+The reset styles should be applied to the app now. The images below show the look of the app before and after the reset is applied.
 
-<p>Before:</p>
+Before:
 
-<p><img alt="the todo app with partial styling added; the app is now in a card, but some of the internal features still need styling" src="todo-app-unstyled.png"></p>
+![the todo app with partial styling added; the app is now in a card, but some of the internal features still need styling](todo-app-unstyled.png)
 
-<p>After:<img alt="the todo app with partial styling added; the app is now in a card, but some of the internal features still need styling" src="todo-app-reset-styles.png"></p>
+After:![the todo app with partial styling added; the app is now in a card, but some of the internal features still need styling](todo-app-reset-styles.png)
 
-<p>Noticeable changes include the removal of the list bullets, background color changes, and changes to the base button and input styles.</p>
+Noticeable changes include the removal of the list bullets, background color changes, and changes to the base button and input styles.
 
-<h2 id="Adding_global_styles_to_Single_File_Components">Adding global styles to Single File Components</h2>
+## Adding global styles to Single File Components
 
-<p>Now that we've reset our CSS to be uniform across browsers, we need to customize the styles a bit more. There are some styles that we want to apply across components in our app. While adding these files directly to the <code>reset.css</code> stylesheet would work, we'll instead add them to the <code>&lt;style&gt;</code> tags in <code>App.vue</code> to demonstrate how this can be used.</p>
+Now that we've reset our CSS to be uniform across browsers, we need to customize the styles a bit more. There are some styles that we want to apply across components in our app. While adding these files directly to the `reset.css` stylesheet would work, we'll instead add them to the `<style>` tags in `App.vue` to demonstrate how this can be used.
 
-<p>There are already some styles present in the file. Let's remove those and replace them with the styles below. These styles do a few things — adding some styling to buttons and inputs, and customizing the <code>#app</code> element and its children.</p>
+There are already some styles present in the file. Let's remove those and replace them with the styles below. These styles do a few things — adding some styling to buttons and inputs, and customizing the `#app` element and its children.
 
-<p>Update your <code>App.vue</code> file’s <code>&lt;style&gt;</code> element so it looks like so:</p>
+Update your `App.vue` file’s `<style>` element so it looks like so:
 
-<pre class="brush: css">&lt;style&gt;
+```css
+<style>
 /* Global styles */
 .btn {
   padding: 0.8rem 1rem 0.7rem;
@@ -181,10 +196,10 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.btn-group &gt; * {
+.btn-group > * {
   flex: 1 1 auto;
 }
-.btn-group &gt; * + * {
+.btn-group > * + * {
   margin-left: 0.8rem;
 }
 .label-wrapper {
@@ -215,21 +230,21 @@ body {
   clip-path: rect(1px, 1px, 1px, 1px);
   white-space: nowrap;
 }
-[class*="stack"] &gt; * {
+[class*="stack"] > * {
   margin-top: 0;
   margin-bottom: 0;
 }
-.stack-small &gt; * + * {
+.stack-small > * + * {
   margin-top: 1.25rem;
 }
-.stack-large &gt; * + * {
+.stack-large > * + * {
   margin-top: 2.5rem;
 }
 @media screen and (min-width: 550px) {
-  .stack-small &gt; * + * {
+  .stack-small > * + * {
     margin-top: 1.4rem;
   }
-  .stack-large &gt; * + * {
+  .stack-large > * + * {
     margin-top: 2.8rem;
   }
 }
@@ -247,12 +262,12 @@ body {
     padding: 4rem;
   }
 }
-#app &gt; * {
+#app > * {
   max-width: 50rem;
   margin-left: auto;
   margin-right: auto;
 }
-#app &gt; form {
+#app > form {
   max-width: 100%;
 }
 #app h1 {
@@ -263,65 +278,75 @@ body {
   margin: 0;
   margin-bottom: 1rem;
 }
-&lt;/style&gt;</pre>
+</style>
+```
 
-<p>If you check the app, you'll see that our todo list is now in a card, and we have some better formatting of our to-do items. Now we can go through and begin editing our components to use some of these styles.</p>
+If you check the app, you'll see that our todo list is now in a card, and we have some better formatting of our to-do items. Now we can go through and begin editing our components to use some of these styles.
 
-<p><img alt="the todo app with partial styling added; the app is now in a card, but some of the internal features still need styling" src="todo-app-partial-styles.png"></p>
+![the todo app with partial styling added; the app is now in a card, but some of the internal features still need styling](todo-app-partial-styles.png)
 
-<h3 id="Adding_CSS_classes_in_Vue">Adding CSS classes in Vue</h3>
+### Adding CSS classes in Vue
 
-<p>We should apply the button CSS classes to the <code>&lt;button&gt;</code> in our <code>ToDoForm</code> component. Since Vue templates are valid HTML, this is done in the same way to how you might do it in plain HTML — by adding a <code>class=""</code> attribute to the element.</p>
+We should apply the button CSS classes to the `<button>` in our `ToDoForm` component. Since Vue templates are valid HTML, this is done in the same way to how you might do it in plain HTML — by adding a `class=""` attribute to the element.
 
-<p>Add <code>class="btn btn__primary btn__lg"</code> to your form’s <code>&lt;button&gt;</code> element:</p>
+Add `class="btn btn__primary btn__lg"` to your form’s `<button>` element:
 
-<pre class="brush: html">&lt;button type="submit" class="btn btn__primary btn__lg"&gt;
+```html
+<button type="submit" class="btn btn__primary btn__lg">
   Add
-&lt;/button&gt;</pre>
+</button>
+```
 
-<p>While we're here, there's one more semantic and styling change we can make. Since our form denotes a specific section of our page, it could benefit from an <code>&lt;h2&gt;</code> element. The label, however, already denotes the purpose of the form. To avoid repeating ourselves, let's wrap our label in an <code>&lt;h2&gt;</code>. There are a few other global CSS styles which we can add as well. We'll also add the <code>input__lg</code> class to our <code>&lt;input&gt;</code> element.</p>
+While we're here, there's one more semantic and styling change we can make. Since our form denotes a specific section of our page, it could benefit from an `<h2>` element. The label, however, already denotes the purpose of the form. To avoid repeating ourselves, let's wrap our label in an `<h2>`. There are a few other global CSS styles which we can add as well. We'll also add the `input__lg` class to our `<input>` element.
 
-<p>Update your <code>ToDoForm</code> template so that it looks like this:</p>
+Update your `ToDoForm` template so that it looks like this:
 
-<pre class="brush: html">&lt;template&gt;
-  &lt;form @submit.prevent="onSubmit"&gt;
-    &lt;h2 class="label-wrapper"&gt;
-      &lt;label for="new-todo-input" class="label__lg"&gt;
+```html
+<template>
+  <form @submit.prevent="onSubmit">
+    <h2 class="label-wrapper">
+      <label for="new-todo-input" class="label__lg">
         What needs to be done?
-      &lt;/label&gt;
-    &lt;/h2&gt;
-    &lt;input
+      </label>
+    </h2>
+    <input
       type="text"
       id="new-todo-input"
       name="new-todo"
       autocomplete="off"
       v-model.lazy.trim="label"
       class="input__lg"
-    /&gt;
-    &lt;button type="submit" class="btn btn__primary btn__lg"&gt;
+    />
+    <button type="submit" class="btn btn__primary btn__lg">
       Add
-    &lt;/button&gt;
-  &lt;/form&gt;
-&lt;/template&gt;</pre>
+    </button>
+  </form>
+</template>
+```
 
-<p>Let's also add the <code>stack-large</code> class to the <code>&lt;ul&gt;</code> tag in our <code>App.vue</code> file. This will help improve the spacing of our to-do items a bit.</p>
+Let's also add the `stack-large` class to the `<ul>` tag in our `App.vue` file. This will help improve the spacing of our to-do items a bit.
 
-<p>Update it as follows:</p>
+Update it as follows:
 
-<pre class="brush: html">&lt;ul aria-labelledby="list-summary" class="stack-large"&gt;</pre>
+```html
+<ul aria-labelledby="list-summary" class="stack-large">
+```
 
-<h2 id="Adding_scoped_styles">Adding scoped styles</h2>
+## Adding scoped styles
 
-<p>The last component we want to style is our <code>ToDoItem</code> component. To keep the style definitions close to the component we can add a <code>&lt;style&gt;</code> element inside it. However, if these styles alter things outside of this component, it could be challenging to track down the styles responsible, and fix the problem. This is where the <code>scoped</code> attribute can be useful — this attaches a unique HTML <code>data</code> attribute selector to all of your styles, preventing them from colliding globally.</p>
+The last component we want to style is our `ToDoItem` component. To keep the style definitions close to the component we can add a `<style>` element inside it. However, if these styles alter things outside of this component, it could be challenging to track down the styles responsible, and fix the problem. This is where the `scoped` attribute can be useful — this attaches a unique HTML `data` attribute selector to all of your styles, preventing them from colliding globally.
 
-<p>To use the <code>scoped</code> modifier, create a <code>&lt;style&gt;</code> element inside <code>ToDoItem.vue</code>, at the bottom of the file, and give it a <code>scoped</code> attribute:</p>
+To use the `scoped` modifier, create a `<style>` element inside `ToDoItem.vue`, at the bottom of the file, and give it a `scoped` attribute:
 
-<pre class="brush: html">&lt;style scoped&gt;
-&lt;/style&gt;</pre>
+```html
+<style scoped>
+</style>
+```
 
-<p>Next, copy the following CSS into the newly created <code>&lt;style&gt;</code> element:</p>
+Next, copy the following CSS into the newly created `<style>` element:
 
-<pre class="brush: css">.custom-checkbox &gt; .checkbox-label {
+```css
+.custom-checkbox > .checkbox-label {
   font-family: Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -333,7 +358,7 @@ body {
   display: block;
   margin-bottom: 5px;
 }
-.custom-checkbox &gt; .checkbox {
+.custom-checkbox > .checkbox {
   font-family: Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -353,7 +378,7 @@ body {
   -moz-appearance: none;
   appearance: none;
 }
-.custom-checkbox &gt; input:focus {
+.custom-checkbox > input:focus {
   outline: 3px dashed #fd0;
   outline-offset: 0;
   box-shadow: inset 0 0 0 2px;
@@ -371,7 +396,7 @@ body {
   padding-left: 40px;
   clear: left;
 }
-.custom-checkbox &gt; input[type="checkbox"] {
+.custom-checkbox > input[type="checkbox"] {
   -webkit-font-smoothing: antialiased;
   cursor: pointer;
   position: absolute;
@@ -383,7 +408,7 @@ body {
   margin: 0;
   opacity: 0;
 }
-.custom-checkbox &gt; .checkbox-label {
+.custom-checkbox > .checkbox-label {
   font-size: inherit;
   font-family: inherit;
   line-height: inherit;
@@ -393,7 +418,7 @@ body {
   cursor: pointer;
   touch-action: manipulation;
 }
-.custom-checkbox &gt; label::before {
+.custom-checkbox > label::before {
   content: "";
   box-sizing: border-box;
   position: absolute;
@@ -404,11 +429,11 @@ body {
   border: 2px solid currentColor;
   background: transparent;
 }
-.custom-checkbox &gt; input[type="checkbox"]:focus + label::before {
+.custom-checkbox > input[type="checkbox"]:focus + label::before {
   border-width: 4px;
   outline: 3px dashed #228bec;
 }
-.custom-checkbox &gt; label::after {
+.custom-checkbox > label::after {
   box-sizing: content-box;
   content: "";
   position: absolute;
@@ -423,7 +448,7 @@ body {
   opacity: 0;
   background: transparent;
 }
-.custom-checkbox &gt; input[type="checkbox"]:checked + label::after {
+.custom-checkbox > input[type="checkbox"]:checked + label::after {
   opacity: 1;
 }
 @media only screen and (min-width: 40rem) {
@@ -434,81 +459,74 @@ body {
     font-size: 1.9rem;
     line-height: 1.31579;
   }
-}</pre>
+}
+```
 
-<p>Now we need to add some CSS classes to our template to connect the styles.</p>
+Now we need to add some CSS classes to our template to connect the styles.
 
-<p>To the root <code>&lt;div&gt;</code>, add a <code>custom-checkbox</code> class. To the <code>&lt;input&gt;</code>, add a <code>checkbox</code> class. Last of all, to the <code>&lt;label&gt;</code> add a <code>checkbox-label</code> class. The updated template is below:</p>
+To the root `<div>`, add a `custom-checkbox` class. To the `<input>`, add a `checkbox` class. Last of all, to the `<label>` add a `checkbox-label` class. The updated template is below:
 
-<p>The app should now have custom checkboxes. Your app should look something like the screenshot below.</p>
+The app should now have custom checkboxes. Your app should look something like the screenshot below.
 
-<p><img alt="the todo app with complete styling. The input form is now styled properly, and the todo items now have spacing and custom checkboxes" src="todo-app-complete-styles.png"></p>
+![the todo app with complete styling. The input form is now styled properly, and the todo items now have spacing and custom checkboxes](todo-app-complete-styles.png)
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>Our work is done on the styling of our sample app. In the next article we'll return to adding some more functionality to our app, namely using a computed property to add a count of completed todo items to our app.</p>
+Our work is done on the styling of our sample app. In the next article we'll return to adding some more functionality to our app, namely using a computed property to add a count of completed todo items to our app.
 
-<p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<h2 id="In_this_module">In this module</h2>
+## In this module
 
-<ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
- <li>React
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
-  </ul>
- </li>
- <li>Ember
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
-  </ul>
- </li>
- <li>Vue
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
-  </ul>
- </li>
- <li>Svelte
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
-  </ul>
- </li>
- <li>Angular
-   <ul>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
-   </ul>
- </li>
-</ul>
+- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- React
+
+  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+
+- Ember
+
+  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+
+- Vue
+
+  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+
+- Svelte
+
+  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+
+- Angular
+
+  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
+  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

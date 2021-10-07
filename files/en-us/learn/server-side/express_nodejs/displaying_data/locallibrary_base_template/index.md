@@ -8,11 +8,12 @@ tags:
   - part 5
   - server-side
 ---
-<p>Now that we understand how to extend templates using Pug, let's start by creating a base template for the project. This will have a sidebar with links for the pages we hope to create across the tutorial articles (e.g. to display and create books, genres, authors, etc.) and a main content area that we'll override in each of our individual pages.</p>
+Now that we understand how to extend templates using Pug, let's start by creating a base template for the project. This will have a sidebar with links for the pages we hope to create across the tutorial articles (e.g. to display and create books, genres, authors, etc.) and a main content area that we'll override in each of our individual pages.
 
-<p>Open <strong>/views/layout.pug</strong> and replace the content with the code below.</p>
+Open **/views/layout.pug** and replace the content with the code below.
 
-<pre class="brush: plain">doctype html
+```plain
+doctype html
 html(lang='en')
   head
     title= title
@@ -51,25 +52,25 @@ html(lang='en')
 
         div(class='col-sm-10')
           block content
-</pre>
+```
 
-<p>The template uses (and includes) JavaScript and CSS from <a href="https://getbootstrap.com/" rel="noopener">Bootstrap</a> to improve the layout and presentation of the HTML page. Using Bootstrap or another client-side web framework is a quick way to create an attractive page that can scale well on different browser sizes, and it also allows us to deal with the page presentation without having to get into any of the details—we just want to focus on the server-side code here!</p>
+The template uses (and includes) JavaScript and CSS from [Bootstrap](https://getbootstrap.com/) to improve the layout and presentation of the HTML page. Using Bootstrap or another client-side web framework is a quick way to create an attractive page that can scale well on different browser sizes, and it also allows us to deal with the page presentation without having to get into any of the details—we just want to focus on the server-side code here!
 
-<p>The layout should be fairly obvious if you've read our above <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data#template_primer">Template primer</a>. Note the use of <code>block content</code> as a placeholder for where the content for our individual pages will be placed.</p>
+The layout should be fairly obvious if you've read our above [Template primer](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data#template_primer). Note the use of `block content` as a placeholder for where the content for our individual pages will be placed.
 
-<p>The base template also references a local css file (<strong>style.css</strong>) that provides a little additional styling. Open <strong>/public/stylesheets/style.css</strong> and replace its content with the following CSS code:</p>
+The base template also references a local css file (**style.css**) that provides a little additional styling. Open **/public/stylesheets/style.css** and replace its content with the following CSS code:
 
-<pre class="brush: css">.sidebar-nav {
+```css
+.sidebar-nav {
     margin-top: 20px;
     padding: 0;
     list-style: none;
-}</pre>
+}
+```
 
-<p>Now we have a base template for creating pages with a sidebar. In the next sections we will use it to define the individual pages.</p>
+Now we have a base template for creating pages with a sidebar. In the next sections we will use it to define the individual pages.
 
-<h2 id="Next_steps">Next steps</h2>
+## Next steps
 
-<ul>
- <li>Return to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</li>
- <li>Proceed to the next subarticle of part 5: <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page">Home page</a>.</li>
-</ul>
+- Return to [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
+- Proceed to the next subarticle of part 5: [Home page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page).

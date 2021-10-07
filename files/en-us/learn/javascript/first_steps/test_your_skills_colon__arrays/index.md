@@ -1,6 +1,6 @@
 ---
 title: 'Test your skills: Arrays'
-slug: 'Learn/JavaScript/First_steps/Test_your_skills:_Arrays'
+slug: Learn/JavaScript/First_steps/Test_your_skills:_Arrays
 tags:
   - Arrays
   - Beginner
@@ -8,85 +8,73 @@ tags:
   - Learn
   - test your skills
 ---
-<div>{{learnsidebar}}</div>
+{{learnsidebar}}
 
-<p>The aim of this skill test is to assess whether you've understood our <a href="/en-US/docs/Learn/JavaScript/First_steps/Arrays">Arrays</a> article.</p>
+The aim of this skill test is to assess whether you've understood our [Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays) article.
 
-<div class="notecard note">
-<p><strong>Note:</strong> You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a> to work on the tasks.<br>
- <br>
- If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.</p>
-</div>
+> **Note:** You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+>
+> If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
 
-<div class="notecard note">
-<p><strong>Note:</strong> In the examples below, if there is an error in your code it will be outputted into the results panel on the page, to help you try to figure out the answer (or into the browser's JavaScript console, in the case of the downloadable version).</p>
-</div>
+> **Note:** In the examples below, if there is an error in your code it will be outputted into the results panel on the page, to help you try to figure out the answer (or into the browser's JavaScript console, in the case of the downloadable version).
 
-<h2 id="Arrays_1">Arrays 1</h2>
+## Arrays 1
 
-<p>Let's start off with some basic array practice. In this task we'd like you to create an array of three items, stored inside a variable called <code>myArray</code>. The items can be anything you want — how about your favorite foods or bands?</p>
+Let's start off with some basic array practice. In this task we'd like you to create an array of three items, stored inside a variable called `myArray`. The items can be anything you want — how about your favorite foods or bands?
 
-<p>Next, modify the first two items in the array using simple bracket notation and assignment. Then add a new item to the beginning of the array.</p>
+Next, modify the first two items in the array using simple bracket notation and assignment. Then add a new item to the beginning of the array.
 
-<p>Try updating the live code below to recreate the finished example:</p>
+Try updating the live code below to recreate the finished example:
 
-<p>{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/arrays/arrays1.html", '100%', 400)}}</p>
+{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/arrays/arrays1.html", '100%', 400)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/arrays/arrays1-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/arrays/arrays1-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Arrays_2">Arrays 2</h2>
+## Arrays 2
 
-<p>Now let's move on to another task. Here you are provided with a string to work with. We'd like you to:</p>
+Now let's move on to another task. Here you are provided with a string to work with. We'd like you to:
 
-<ol>
- <li>Convert the string into an array, removing the <code>+</code> characters in the process. Save the result in a variable called <code>myArray</code>.</li>
- <li>Store the length of the array in a variable called <code>arrayLength</code>.</li>
- <li>Store the last item in the array in a variable called <code>lastItem</code>.</li>
-</ol>
+1.  Convert the string into an array, removing the `+` characters in the process. Save the result in a variable called `myArray`.
+2.  Store the length of the array in a variable called `arrayLength`.
+3.  Store the last item in the array in a variable called `lastItem`.
 
-<p>Try updating the live code below to recreate the finished example:</p>
+Try updating the live code below to recreate the finished example:
 
-<p>{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/arrays/arrays2.html", '100%', 400)}}</p>
+{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/arrays/arrays2.html", '100%', 400)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/arrays/arrays2-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/arrays/arrays2-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Arrays_3">Arrays 3</h2>
+## Arrays 3
 
-<p>For this final array task, we provide you with a starting array, and you will work in somewhat the opposite direction. You need to:</p>
+For this final array task, we provide you with a starting array, and you will work in somewhat the opposite direction. You need to:
 
-<ol>
- <li>Remove the last item in the array.</li>
- <li>Add two new names to the end of the array.</li>
- <li>Go over each item in the array and add its index number after the name inside parentheses, for example <code>Ryu (0)</code>. Note that we don't teach how to do this in the Arrays article, so you'll have to do some research.</li>
- <li>Finally, join the array items together in a single string called <code>myString</code>, with a separator of "<code> - </code>".</li>
-</ol>
+1.  Remove the last item in the array.
+2.  Add two new names to the end of the array.
+3.  Go over each item in the array and add its index number after the name inside parentheses, for example `Ryu (0)`. Note that we don't teach how to do this in the Arrays article, so you'll have to do some research.
+4.  Finally, join the array items together in a single string called `myString`, with a separator of "` - `".
 
-<p>Try updating the live code below to recreate the finished example:</p>
+Try updating the live code below to recreate the finished example:
 
-<p>{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/arrays/arrays3.html", '100%', 400)}}</p>
+{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/arrays/arrays3.html", '100%', 400)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/arrays/arrays3-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/arrays/arrays3-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Assessment_or_further_help">Assessment or further help</h2>
+## Assessment or further help
 
-<p>You can practice these examples in the Interactive Editors above.</p>
+You can practice these examples in the Interactive Editors above.
 
-<p>If you would like your work assessed, or are stuck and want to ask for help:</p>
+If you would like your work assessed, or are stuck and want to ask for help:
 
-<ol>
- <li>Put your work into an online shareable editor such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a>. You can write the code yourself, or use the starting point files linked to in the above sections.</li>
- <li>Write a post asking for assessment and/or help at the <a href="https://discourse.mozilla.org/c/mdn/learn">MDN Discourse forum Learning category</a>. Your post should include:
-  <ul>
-   <li>A descriptive title such as "Assessment wanted for Variables 1 skill test".</li>
-   <li>Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.</li>
-   <li>A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.</li>
-   <li>A link to the actual task or assessment page, so we can find the question you want help with.</li>
-  </ul>
- </li>
-</ol>
+1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
+2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+
+    - A descriptive title such as "Assessment wanted for Variables 1 skill test".
+    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
+    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
+    - A link to the actual task or assessment page, so we can find the question you want help with.

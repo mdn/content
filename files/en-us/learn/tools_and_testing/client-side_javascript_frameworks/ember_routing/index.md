@@ -10,47 +10,63 @@ tags:
   - Routing
   - client-side
 ---
-<div>{{LearnSidebar}}<br>
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
+{{LearnSidebar}}
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<p>In this article we learn about <strong>routing</strong>, or URL-based filtering as it is sometimes referred to. We'll use it to provide a unique URL for each of the three todo views — "All", "Active", and "Completed".</p>
+In this article we learn about **routing**, or URL-based filtering as it is sometimes referred to. We'll use it to provide a unique URL for each of the three todo views — "All", "Active", and "Completed".
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>
-    <p>At minimum, it is recommended that you are familiar with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, and have knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
-
-    <p>A deeper understanding of modern JavaScript features (such as classes, modules, etc), will be extremely beneficial, as Ember makes heavy use of them.</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To learn about implementing routing in Ember.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        <p>
+          At minimum, it is recommended that you are familiar with the core
+          <a href="/en-US/docs/Learn/HTML">HTML</a>,
+          <a href="/en-US/docs/Learn/CSS">CSS</a>, and
+          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, and
+          have knowledge of the
+          <a
+            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            >terminal/command line</a
+          >.
+        </p>
+        <p>
+          A deeper understanding of modern JavaScript features (such as classes,
+          modules, etc), will be extremely beneficial, as Ember makes heavy use
+          of them.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>To learn about implementing routing in Ember.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="URL-based_filtering">URL-based filtering</h2>
+## URL-based filtering
 
-<p>Ember comes with a routing system that has a tight integration with the browser URL. Typically, when writing web applications, you want the page to be represented by the URL so that if (for any reason), the page needs to refresh, the user isn't surprised by the state of the web app — they can link directly to significant views of the app.</p>
+Ember comes with a routing system that has a tight integration with the browser URL. Typically, when writing web applications, you want the page to be represented by the URL so that if (for any reason), the page needs to refresh, the user isn't surprised by the state of the web app — they can link directly to significant views of the app.
 
-<p>At the moment, we already have the "All" page, as we are currently not doing any filtering in the page that we've been working with, but we will need to reorganize it a bit to handle a different view for the "Active" and "Completed" todos.</p>
+At the moment, we already have the "All" page, as we are currently not doing any filtering in the page that we've been working with, but we will need to reorganize it a bit to handle a different view for the "Active" and "Completed" todos.
 
-<p>An Ember application has a default "application" route, which is tied to the <code>app/templates/application.hbs</code> template. Because that application template is the entry point to our todo app, we'll need to make some changes to allow for routing.</p>
+An Ember application has a default "application" route, which is tied to the `app/templates/application.hbs` template. Because that application template is the entry point to our todo app, we'll need to make some changes to allow for routing.
 
-<h2 id="Creating_the_routes">Creating the routes</h2>
+## Creating the routes
 
-<p>Let's start by creating three new routes: "Index", "Active" and "Completed". To do this you’ll need to enter the following commands into your terminal, inside the root directory of your app:</p>
+Let's start by creating three new routes: "Index", "Active" and "Completed". To do this you’ll need to enter the following commands into your terminal, inside the root directory of your app:
 
-<pre class="brush: bash">ember generate route index
+```bash
+ember generate route index
 ember generate route completed
-ember generate route active</pre>
+ember generate route active
+```
 
-<p>The second and third commands should have not only generated new files, but also updated an existing file, <code>app/router.js</code>. It contains the following contents:</p>
+The second and third commands should have not only generated new files, but also updated an existing file, `app/router.js`. It contains the following contents:
 
-<pre class="brush: js">import EmberRouter from '@ember/routing/router';
+```js
+import EmberRouter from '@ember/routing/router';
 import config from './config/environment';
 
 export default class Router extends EmberRouter {
@@ -59,61 +75,71 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
-  <strong>this.route('completed');
-  this.route('active');</strong>
-});</pre>
+  this.route('completed');
+  this.route('active');
+});
+```
 
-<p>The highlighted lines were added when the 2nd and 3rd commands above were run.</p>
+The highlighted lines were added when the 2nd and 3rd commands above were run.
 
-<p><code>router.js</code> behaves as a "sitemap" for developers to be able to quickly see how the entire app is structured.  It also tells Ember how to interact with your route, such as when loading arbitrary data, handling errors while loading that data, or interpreting dynamic segments of the URL. Since our data is static, we won't get to any of those fancy features, but we'll still make sure that the route provides the minimally required data to view a page.</p>
+`router.js` behaves as a "sitemap" for developers to be able to quickly see how the entire app is structured.  It also tells Ember how to interact with your route, such as when loading arbitrary data, handling errors while loading that data, or interpreting dynamic segments of the URL. Since our data is static, we won't get to any of those fancy features, but we'll still make sure that the route provides the minimally required data to view a page.
 
-<p>Creating the "Index" route did not add a route definition line to <code>router.js</code>, because like with URL navigation and JavaScript module loading, "Index" is a special word that indicates the default route to render, load, etc.</p>
+Creating the "Index" route did not add a route definition line to `router.js`, because like with URL navigation and JavaScript module loading, "Index" is a special word that indicates the default route to render, load, etc.
 
-<p>To adjust our old way of rendering the TodoList app, we'll first need to replace the TodoList component invocation from the application template with an <code>\{{outlet}}</code> call, which means "any sub-route will be rendered in place here".</p>
+To adjust our old way of rendering the TodoList app, we'll first need to replace the TodoList component invocation from the application template with an `\{{outlet}}` call, which means "any sub-route will be rendered in place here".
 
-<p>Go to the <code>todomvc/app/templates/application.hbs</code> file and replace</p>
+Go to the `todomvc/app/templates/application.hbs` file and replace
 
-<pre class="brush: html">&lt;TodoList /&gt;</pre>
+```html
+<TodoList />
+```
 
-<p>With</p>
+With
 
-<pre class="brush: js">\{{outlet}}</pre>
+```js
+\{{outlet}}
+```
 
-<p>Next, in our <code>index.hbs</code>, <code>completed.hbs</code>, and <code>active.hbs</code> templates (also found in the templates directory) we can for now just enter the TodoList component invocation.</p>
+Next, in our `index.hbs`, `completed.hbs`, and `active.hbs` templates (also found in the templates directory) we can for now just enter the TodoList component invocation.
 
-<p>In each case, replace</p>
+In each case, replace
 
-<pre class="brush: js">\{{outlet}}</pre>
+```js
+\{{outlet}}
+```
 
-<p>with</p>
+with
 
-<pre class="brush: html">&lt;TodoList /&gt;</pre>
+```html
+<TodoList />
+```
 
-<p>So at this point, if you try the app again and visit any of the three routes</p>
+So at this point, if you try the app again and visit any of the three routes
 
-<p><code>localhost:4200<br>
- localhost:4200/active<br>
- localhost:4200/completed</code></p>
+`localhost:4200 localhost:4200/active localhost:4200/completed`
 
-<p>you'll see exactly the same thing. At each URL, the template that corresponds to the specific path ("Active", "Completed", or "Index"), will render the <code>&lt;TodoList /&gt;</code> component. The location in the page where <code>&lt;TodoList /&gt;</code> is rendered is determined by the <code>\{{ outlet }}</code> inside the parent route, which in this case is <code>application.hbs</code>. So we have our routes in place. Great!</p>
+you'll see exactly the same thing. At each URL, the template that corresponds to the specific path ("Active", "Completed", or "Index"), will render the `<TodoList />` component. The location in the page where `<TodoList />` is rendered is determined by the `\{{ outlet }}` inside the parent route, which in this case is `application.hbs`. So we have our routes in place. Great!
 
-<p>But now we need a way to differentiate between each of these routes, so that they show what they are supposed to show.</p>
+But now we need a way to differentiate between each of these routes, so that they show what they are supposed to show.
 
-<p>First of all, return once more to our <code>todo-data.js</code> file. It already contains a getter that returns all todos, and a getter that returns incomplete todos. The getter we are missing is one to return just the completed todos. Add the following below the existing getters:</p>
+First of all, return once more to our `todo-data.js` file. It already contains a getter that returns all todos, and a getter that returns incomplete todos. The getter we are missing is one to return just the completed todos. Add the following below the existing getters:
 
-<pre class="brush: js">get completed() {
-  return this.todos.filter(todo =&gt; todo.isCompleted);
-}</pre>
+```js
+get completed() {
+  return this.todos.filter(todo => todo.isCompleted);
+}
+```
 
-<h2 id="Models">Models</h2>
+## Models
 
-<p>Now we need to add models to our route JavaScript files to allow us to easily return specific data sets to display in those models. <code>model</code> is a data loading lifecycle hook. For TodoMVC, the capabilities of model aren't that important to us; you can find more information in the <a href="https://guides.emberjs.com/release/routing/specifying-a-routes-model/">Ember model guide</a> if you want to dig deeper. We also provide access to the service, like we did for the components.</p>
+Now we need to add models to our route JavaScript files to allow us to easily return specific data sets to display in those models. `model` is a data loading lifecycle hook. For TodoMVC, the capabilities of model aren't that important to us; you can find more information in the [Ember model guide](https://guides.emberjs.com/release/routing/specifying-a-routes-model/) if you want to dig deeper. We also provide access to the service, like we did for the components.
 
-<h3 id="The_index_route_model">The index route model</h3>
+### The index route model
 
-<p>First of all, update <code>todomvc/app/routes/index.js</code> so it looks as follows:</p>
+First of all, update `todomvc/app/routes/index.js` so it looks as follows:
 
-<pre class="brush: js">import Route from '@ember/routing/route';
+```js
+import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
 
 export default class IndexRoute extends Route {
@@ -128,23 +154,29 @@ export default class IndexRoute extends Route {
       }
     }
   }
-}</pre>
+}
+```
 
-<p>We can now update the <code>todomvc/app/templates/index.hbs</code> file so that when it includes the <code>&lt;TodoList /&gt;</code> component, it does so explicitly with the available model, calling its <code>allTodos()</code> getter to make sure all of the todos are shown.</p>
+We can now update the `todomvc/app/templates/index.hbs` file so that when it includes the `<TodoList />` component, it does so explicitly with the available model, calling its `allTodos()` getter to make sure all of the todos are shown.
 
-<p>In this file, change</p>
+In this file, change
 
-<pre class="brush: js">&lt;TodoList /&gt;</pre>
+```js
+<TodoList />
+```
 
-<p>To</p>
+To
 
-<pre class="brush: js">&lt;TodoList @todos=\{{ @model.allTodos }}/&gt;</pre>
+```js
+<TodoList @todos=\{{ @model.allTodos }}/>
+```
 
-<h3 id="The_completed_route_model">The completed route model</h3>
+### The completed route model
 
-<p>Now update <code>todomvc/app/routes/completed.js</code> so it looks as follows:</p>
+Now update `todomvc/app/routes/completed.js` so it looks as follows:
 
-<pre class="brush: js">import Route from '@ember/routing/route';
+```js
+import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
 
 export default class CompletedRoute extends Route {
@@ -159,23 +191,29 @@ export default class CompletedRoute extends Route {
       }
     }
   }
-}</pre>
+}
+```
 
-<p>We can now update the <code>todomvc/app/templates/completed.hbs</code> file so that when it includes the <code>&lt;TodoList /&gt;</code> component, it does so explicitly with the available model, calling its <code>completedTodos()</code> getter to make sure only the completed todos are shown.</p>
+We can now update the `todomvc/app/templates/completed.hbs` file so that when it includes the `<TodoList />` component, it does so explicitly with the available model, calling its `completedTodos()` getter to make sure only the completed todos are shown.
 
-<p>In this file, change</p>
+In this file, change
 
-<pre class="brush: js">&lt;TodoList /&gt;</pre>
+```js
+<TodoList />
+```
 
-<p>To</p>
+To
 
-<pre class="brush: js">&lt;TodoList @todos=\{{ @model.completedTodos }}/&gt;</pre>
+```js
+<TodoList @todos=\{{ @model.completedTodos }}/>
+```
 
-<h3 id="The_active_route_model">The active route model</h3>
+### The active route model
 
-<p>Finally for the routes, let's sort out our active route. Start by updating <code>todomvc/app/routes/active.js</code> so it looks as follows:</p>
+Finally for the routes, let's sort out our active route. Start by updating `todomvc/app/routes/active.js` so it looks as follows:
 
-<pre class="brush: js">import Route from '@ember/routing/route';
+```js
+import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
 
 export default class ActiveRoute extends Route {
@@ -190,121 +228,126 @@ export default class ActiveRoute extends Route {
       }
     }
   }
-}</pre>
+}
+```
 
-<p>We can now update the <code>todomvc/app/templates/active.hbs</code> file so that when it includes the <code>&lt;TodoList /&gt;</code> component, it does so explicitly with the available model, calling its <code>activeTodos()</code> getter to make sure only the active (incomplete) todos are shown.</p>
+We can now update the `todomvc/app/templates/active.hbs` file so that when it includes the `<TodoList />` component, it does so explicitly with the available model, calling its `activeTodos()` getter to make sure only the active (incomplete) todos are shown.
 
-<p>In this file, change</p>
+In this file, change
 
-<pre class="brush: js">&lt;TodoList /&gt;</pre>
+```js
+<TodoList />
+```
 
-<p>To</p>
+To
 
-<pre class="brush: js">&lt;TodoList @todos=\{{ @model.activeTodos }}/&gt;</pre>
+```js
+<TodoList @todos=\{{ @model.activeTodos }}/>
+```
 
-<p>Note that, in each of the route model hooks, we are returning an object with a getter instead of a static object, or more just the static list of todos (for example, <code>this.todos.completed</code>). The reason for this is that we want the template to have a dynamic reference to the todo list, and if we returned the list directly, the data would never re-compute, which would result in the navigations appearing to fail / not actually filter. By having a getter defined in the return object from the model data, the todos are re-looked-up so that our changes to the todo list are represented in the rendered list.</p>
+Note that, in each of the route model hooks, we are returning an object with a getter instead of a static object, or more just the static list of todos (for example, `this.todos.completed`). The reason for this is that we want the template to have a dynamic reference to the todo list, and if we returned the list directly, the data would never re-compute, which would result in the navigations appearing to fail / not actually filter. By having a getter defined in the return object from the model data, the todos are re-looked-up so that our changes to the todo list are represented in the rendered list.
 
-<h2 id="Getting_the_footer_links_working">Getting the footer links working</h2>
+## Getting the footer links working
 
-<p>So our route functionality is now all in place, but we can't access them from our app. Let's get the footer links active so that clicking on them goes to the desired routes.</p>
+So our route functionality is now all in place, but we can't access them from our app. Let's get the footer links active so that clicking on them goes to the desired routes.
 
-<p>Go back to <code>todomvc/app/components/footer.hbs</code>, and find the following bit of markup:</p>
+Go back to `todomvc/app/components/footer.hbs`, and find the following bit of markup:
 
-<pre class="brush: html">&lt;a href="#"&gt;All&lt;/a&gt;
-&lt;a href="#"&gt;Active&lt;/a&gt;
-&lt;a href="#"&gt;Completed&lt;/a&gt;</pre>
+```html
+<a href="#">All</a>
+<a href="#">Active</a>
+<a href="#">Completed</a>
+```
 
-<p>Update it to</p>
+Update it to
 
-<pre class="brush: js">&lt;LinkTo @route='index'&gt;All&lt;/LinkTo&gt;
-&lt;LinkTo @route='active'&gt;Active&lt;/LinkTo&gt;
-&lt;LinkTo @route='completed'&gt;Completed&lt;/LinkTo&gt;</pre>
+```js
+<LinkTo @route='index'>All</LinkTo>
+<LinkTo @route='active'>Active</LinkTo>
+<LinkTo @route='completed'>Completed</LinkTo>
+```
 
-<p><code>&lt;LinkTo&gt;</code> is a built-in Ember component that handles all the state changes when navigating routes, as well as setting an "active" class on any link that matches the URL, in case there is a desire to style it differently from inactive links.</p>
+`<LinkTo>` is a built-in Ember component that handles all the state changes when navigating routes, as well as setting an "active" class on any link that matches the URL, in case there is a desire to style it differently from inactive links.
 
-<h2 id="Updating_the_todos_display_inside_TodoList">Updating the todos display inside TodoList</h2>
+## Updating the todos display inside TodoList
 
-<p>One small final thing that we need to fix is that previously, inside <code>todomvc/app/components/todo-list.hbs</code>, we were accessing the todo-data service directly and looping over all todos, as shown here:</p>
+One small final thing that we need to fix is that previously, inside `todomvc/app/components/todo-list.hbs`, we were accessing the todo-data service directly and looping over all todos, as shown here:
 
-<pre class="brush: js">\{{#each this.todos.all as |todo| }}</pre>
+```js
+\{{#each this.todos.all as |todo| }}
+```
 
-<p>Since we now want to have our TodoList component show a filtered list, we'll want to pass an argument to the TodoList component representing the "current list of todos", as shown here:</p>
+Since we now want to have our TodoList component show a filtered list, we'll want to pass an argument to the TodoList component representing the "current list of todos", as shown here:
 
-<pre class="brush: js">\{{#each @todos as |todo| }}</pre>
+```js
+\{{#each @todos as |todo| }}
+```
 
-<p>And that's it for this tutorial! Your app should now have fully working links in the footer that display the "Index"/default, "Active", and "Completed" routes.</p>
+And that's it for this tutorial! Your app should now have fully working links in the footer that display the "Index"/default, "Active", and "Completed" routes.
 
-<p><img alt="The todo list app, showing the routing working for all, active, and completed todos." src="todos-navigation.gif"></p>
+![The todo list app, showing the routing working for all, active, and completed todos.](todos-navigation.gif)
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>Congratulations! You've finished this tutorial!</p>
+Congratulations! You've finished this tutorial!
 
-<p>There is a lot more to be implemented before what we've covered here has parity with the original <a href="https://todomvc.com">TodoMVC app</a>, such as editing, deleting, and persisting todos across page reloads.</p>
+There is a lot more to be implemented before what we've covered here has parity with the original [TodoMVC app](https://todomvc.com), such as editing, deleting, and persisting todos across page reloads.
 
-<p>To see our finished Ember implementation, checkout the finished app folder in the repository for <a href="https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc">the code of this tutorial</a> or see the <a href="https://nullvoxpopuli.github.io/ember-todomvc-tutorial/">live deployed version</a> here. Study the code to learn more about Ember, and also check out the next article, which provides links to more resources and some troubleshooting advice.</p>
+To see our finished Ember implementation, checkout the finished app folder in the repository for [the code of this tutorial](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc) or see the [live deployed version](https://nullvoxpopuli.github.io/ember-todomvc-tutorial/) here. Study the code to learn more about Ember, and also check out the next article, which provides links to more resources and some troubleshooting advice.
 
-<p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<h2 id="In_this_module">In this module</h2>
+## In this module
 
-<ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
- <li>React
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
-  </ul>
- </li>
- <li>Ember
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
-  </ul>
- </li>
- <li>Vue
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
-  </ul>
- </li>
- <li>Svelte
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
-  </ul>
- </li>
- <li>Angular
-   <ul>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
-   </ul>
- </li>
-</ul>
+- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- React
+
+  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+
+- Ember
+
+  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+
+- Vue
+
+  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+
+- Svelte
+
+  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+
+- Angular
+
+  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
+  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

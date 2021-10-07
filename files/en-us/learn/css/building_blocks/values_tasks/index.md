@@ -6,87 +6,77 @@ tags:
   - CSS
   - Example
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}
 
-<p>The aim of this task is to help you check your understanding of some of the values and units that we looked at in the lesson on <a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">CSS Values and Units</a>.</p>
+The aim of this task is to help you check your understanding of some of the values and units that we looked at in the lesson on [CSS Values and Units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units).
 
-<div class="notecard note">
-<p><strong>Note:</strong> You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a> to work on the tasks.<br>
- <br>
- If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.</p>
-</div>
+> **Note:** You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+>
+> If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
 
-<h2 id="Task_One">Task One</h2>
+## Task One
 
-<p>In this task, the first list item has been given a background color using hex color codes. Your task is to complete the CSS using the same color in different formats, plus a final list item where you should make the background semi-opaque.</p>
+In this task, the first list item has been given a background color using hex color codes. Your task is to complete the CSS using the same color in different formats, plus a final list item where you should make the background semi-opaque.
 
-<ul>
- <li>The second list item should use RGB color.</li>
- <li>The third should use HSL color.</li>
- <li>The fourth should use RGB color but with the alpha channel set to .2.</li>
-</ul>
+- The second list item should use RGB color.
+- The third should use HSL color.
+- The fourth should use RGB color but with the alpha channel set to .2.
 
-<p>You can find conversions for the hex color at <a href="https://convertingcolors.com/hex-color-86DEFA.html">this link</a>. You need to figure out how to use the values in CSS.</p>
+You can find conversions for the hex color at [this link](https://convertingcolors.com/hex-color-86DEFA.html). You need to figure out how to use the values in CSS.
 
-<p><img alt="Four list items. The first three with the same background color and the last with a lighter background." src="mdn-value-color.png"></p>
+![Four list items. The first three with the same background color and the last with a lighter background.](mdn-value-color.png)
 
-<p>Try updating the live code below to recreate the finished example:</p>
+Try updating the live code below to recreate the finished example:
 
-<p>{{EmbedGHLiveSample("css-examples/learn/tasks/values/color.html", '100%', 1000)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/tasks/values/color.html", '100%', 1000)}}
 
-<div class="callout">
-<p>For assessment or further work purposes, <a href="https://github.com/mdn/css-examples/blob/master/learn/tasks/values/color-download.html">download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/values/color-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Task_Two">Task Two</h2>
+## Task Two
 
-<p>In this task you need to set the size of various items of text.</p>
+In this task you need to set the size of various items of text.
 
-<ul>
- <li>The {{HTMLElement("h1")}} should be 50 pixels.</li>
- <li>The {{HTMLElement("h2")}} should be 2em.</li>
- <li>All {{HTMLElement("p")}} elements should be 16 pixels.</li>
- <li>A {{HTMLElement("p")}} element that is directly after an {{HTMLElement("h1")}} should be 120%.</li>
-</ul>
+- The {{HTMLElement("h1")}} should be 50 pixels.
+- The {{HTMLElement("h2")}} should be 2em.
+- All {{HTMLElement("p")}} elements should be 16 pixels.
+- A {{HTMLElement("p")}} element that is directly after an {{HTMLElement("h1")}} should be 120%.
 
-<p><img alt="Some text at varying sizes." src="mdn-value-length.png"></p>
+![Some text at varying sizes.](mdn-value-length.png)
 
-<p>Try updating the live code below to recreate the example as displayed in the image:</p>
+Try updating the live code below to recreate the example as displayed in the image:
 
-<p>{{EmbedGHLiveSample("css-examples/learn/tasks/values/length.html", '100%', 1000)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/tasks/values/length.html", '100%', 1000)}}
 
-<div class="callout">
-<p>For assessment or further work purposes, <a href="https://github.com/mdn/css-examples/blob/master/learn/tasks/values/length-download.html">download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/values/length-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Task_Three">Task Three</h2>
+## Task Three
 
-<p>In this task you need to move the background image so that it is centered horizontally, and 20% from the top of the box.</p>
+In this task you need to move the background image so that it is centered horizontally, and 20% from the top of the box.
 
-<p><img alt="A stat centered horizontally in a box and a short distance from the top of the box." src="mdn-value-position.png"></p>
+![A stat centered horizontally in a box and a short distance from the top of the box.](mdn-value-position.png)
 
-<p>Try updating the live code below to recreate the example as displayed in the image:</p>
+Try updating the live code below to recreate the example as displayed in the image:
 
-<p>{{EmbedGHLiveSample("css-examples/learn/tasks/values/position.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/tasks/values/position.html", '100%', 800)}}
 
-<div class="callout">
-<p>For assessment or further work purposes, <a href="https://github.com/mdn/css-examples/blob/master/learn/tasks/values/position-download.html">download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/values/position-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Assessment_or_further_help">Assessment or further help</h2>
+## Assessment or further help
 
-<p>You can practice these examples in the Interactive Editors mentioned above.</p>
+You can practice these examples in the Interactive Editors mentioned above.
 
-<p>If you would like your work assessed, or are stuck and want to ask for help:</p>
+If you would like your work assessed, or are stuck and want to ask for help:
 
-<ol>
- <li>Put your work into an online shareable editor such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a>. You can write the code yourself, or use the starting point files linked to in the above sections.</li>
- <li>Write a post asking for assessment and/or help at the <a class="external external-icon" href="https://discourse.mozilla.org/c/mdn/learn" rel="noopener">MDN Discourse forum Learning category</a>. Your post should include:
-  <ul>
-   <li>A descriptive title such as "Assessment wanted for values and units skill test 1".</li>
-   <li>Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.</li>
-   <li>A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.</li>
-   <li>A link to the actual task or assessment page, so we can find the question you want help with.</li>
-  </ul>
- </li>
-</ol>
+1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
+2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+
+    - A descriptive title such as "Assessment wanted for values and units skill test 1".
+    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
+    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
+    - A link to the actual task or assessment page, so we can find the question you want help with.

@@ -12,117 +12,129 @@ tags:
   - django
   - server-side
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
-<div>{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}</div>
-
-<p>This second article in our <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django Tutorial</a> shows how you can create a "skeleton" website project as a basis, which you can then populate with site-specific settings, paths, models, views, and templates.</p>
+This second article in our [Django Tutorial](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) shows how you can create a "skeleton" website project as a basis, which you can then populate with site-specific settings, paths, models, views, and templates.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td><a href="/en-US/docs/Learn/Server-side/Django/development_environment">Set up a Django development environment</a>. Review the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django Tutorial</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To be able to use Django's tools to start your own new website projects.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        <a href="/en-US/docs/Learn/Server-side/Django/development_environment"
+          >Set up a Django development environment</a
+        >. Review the
+        <a
+          href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website"
+          >Django Tutorial</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        To be able to use Django's tools to start your own new website projects.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Overview">Overview</h2>
+## Overview
 
-<p>This article shows how you can create a "skeleton" website, which you can then populate with site-specific settings, paths, models, views, and templates (we discuss these in later articles).</p>
+This article shows how you can create a "skeleton" website, which you can then populate with site-specific settings, paths, models, views, and templates (we discuss these in later articles).
 
-<p>To get started:</p>
+To get started:
 
-<ol>
- <li>Use the <code>django-admin</code> tool to generate a project folder, the basic file templates, and <strong>manage.py</strong>, which serves as your project management script.</li>
- <li>Use <strong>manage.py</strong> to create one or more <em>applications</em>.
-    <div class="notecard note">
-        <p><strong>Note:</strong> A website may consist of one or more sections. For example, main site, blog, wiki, downloads area, etc. Django encourages you to develop these components as separate <em>applications</em>, which could then be re-used in different projects if desired.</p>
-    </div>
- </li>
- <li>Register the new applications to include them in the project.</li>
- <li>Hook up the <strong>url/path</strong> mapper for each application.</li>
-</ol>
+1.  Use the `django-admin` tool to generate a project folder, the basic file templates, and **manage.py**, which serves as your project management script.
+2.  Use **manage.py** to create one or more _applications_.
 
-<p>For the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Local Library website</a>, the website and project folders are named <em>locallibrary</em>, and includes one application named <em>catalog</em>.
-The top-level folder structure will therefore be as follows:</p>
+    > **Note:** A website may consist of one or more sections. For example, main site, blog, wiki, downloads area, etc. Django encourages you to develop these components as separate _applications_, which could then be re-used in different projects if desired.
 
-<pre class="brush: bash">locallibrary/         # Website folder
+3.  Register the new applications to include them in the project.
+4.  Hook up the **url/path** mapper for each application.
+
+For the [Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website), the website and project folders are named *locallibrary*, and includes one application named _catalog_.
+The top-level folder structure will therefore be as follows:
+
+```bash
+locallibrary/         # Website folder
     manage.py         # Script to run Django tools for this project (created using django-admin)
     locallibrary/     # Website/project folder (created using django-admin)
     catalog/          # Application folder (created using manage.py)
-</pre>
+```
 
-<p>The following sections discuss the process steps in detail, and show how you can test your changes.
-At the end of this article, we discuss other site-wide configuration you might also do at this stage.</p>
+The following sections discuss the process steps in detail, and show how you can test your changes.
+At the end of this article, we discuss other site-wide configuration you might also do at this stage.
 
-<h2 id="Creating_the_project">Creating the project</h2>
+## Creating the project
 
-<ol>
- <li>Open a command shell (or a terminal window), and make sure you are in your <a href="/en-US/docs/Learn/Server-side/Django/development_environment#using_a_virtual_environment">virtual environment</a>.</li>
- <li>Navigate to where you want to store your Django apps (make it somewhere easy to find like inside your <em>Documents</em> folder), and create a folder for your new website (in this case: <em>django_projects</em>). Then change into your newly-created directory:
- <pre class="brush: bash">mkdir django_projects
-cd django_projects</pre>
- </li>
- <li>Create the new project using the <code>django-admin startproject</code> command as shown, and then change into the project folder:
-   <pre class="brush: bash">django-admin startproject locallibrary
-cd locallibrary</pre>
- </li>
-</ol>
+1.  Open a command shell (or a terminal window), and make sure you are in your [virtual environment](/en-US/docs/Learn/Server-side/Django/development_environment#using_a_virtual_environment).
+2.  Navigate to where you want to store your Django apps (make it somewhere easy to find like inside your _Documents_ folder), and create a folder for your new website (in this case: _django_projects_). Then change into your newly-created directory:
 
-<p>The <code>django-admin</code> tool creates a folder/file structure as follows:</p>
+    ```bash
+    mkdir django_projects
+    cd django_projects
+    ```
 
-<pre class="brush: bash">locallibrary/
+3.  Create the new project using the `django-admin startproject` command as shown, and then change into the project folder:
+
+    ```bash
+    django-admin startproject locallibrary
+    cd locallibrary
+    ```
+
+The `django-admin` tool creates a folder/file structure as follows:
+
+```bash
+locallibrary/
     manage.py
     locallibrary/
         __init__.py
         settings.py
         urls.py
         wsgi.py
-        asgi.py</pre>
+        asgi.py
+```
 
-<p>Our current working directory should look something like this:</p>
+Our current working directory should look something like this:
 
-<pre class="brush: python">../django_projects/locallibrary/</pre>
+```python
+../django_projects/locallibrary/
+```
 
-<p>The <em>locallibrary</em> project sub-folder is the entry point for the website:</p>
+The _locallibrary_ project sub-folder is the entry point for the website:
 
-<ul>
- <li><strong>__init__.py</strong> is an empty file that instructs Python to treat this directory as a Python package.</li>
- <li><strong>settings.py</strong> contains all the website settings, including registering any applications we create, the location of our static files, database configuration details, etc.  </li>
- <li><strong>urls.py</strong> defines the site URL-to-view mappings. While this could contain <em>all</em> the URL mapping code, it is more common to delegate some of the mappings to particular applications, as you'll see later.</li>
- <li><strong>wsgi.py</strong> is used to help your Django application communicate with the webserver. You can treat this as boilerplate.</li>
- <li><strong>asgi.py</strong> is a standard for Python asynchronous web apps and servers to communicate with each other. ASGI is the asynchronous successor to WSGI and provides a standard for both asynchronous and synchronous Python apps (whereas WSGI provided a standard for synchronous apps only). It is backward-compatible with WSGI and supports multiple servers and application frameworks.</li>
-</ul>
+- **\_\_init\_\_.py** is an empty file that instructs Python to treat this directory as a Python package.
+- **settings.py** contains all the website settings, including registering any applications we create, the location of our static files, database configuration details, etc.
+- **urls.py** defines the site URL-to-view mappings. While this could contain _all_ the URL mapping code, it is more common to delegate some of the mappings to particular applications, as you'll see later.
+- **wsgi.py** is used to help your Django application communicate with the webserver. You can treat this as boilerplate.
+- **asgi.py** is a standard for Python asynchronous web apps and servers to communicate with each other. ASGI is the asynchronous successor to WSGI and provides a standard for both asynchronous and synchronous Python apps (whereas WSGI provided a standard for synchronous apps only). It is backward-compatible with WSGI and supports multiple servers and application frameworks.
 
-<p>The <strong>manage.py</strong> script is used to create applications, work with databases, and start the development web server.</p>
+The **manage.py** script is used to create applications, work with databases, and start the development web server.
 
-<h2 id="Creating_the_catalog_application">Creating the catalog application</h2>
+## Creating the catalog application
 
-<p>Next, run the following command to create the <em>catalog</em> application that will live inside our <em>locallibrary</em> project. Make sure to run this command from the same folder as your project's <strong>manage.py</strong>:</p>
+Next, run the following command to create the _catalog_ application that will live inside our _locallibrary_ project. Make sure to run this command from the same folder as your project's **manage.py**:
 
-<pre class="brush: bash">python3 manage.py startapp catalog</pre>
+```bash
+python3 manage.py startapp catalog
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The example command is for Linux/macOS X. On Windows, the command should be: </p>
+> **Note:** The example command is for Linux/macOS X. On Windows, the command should be:
+>
+> `py -3 manage.py startapp catalog`
+>
+> If you're working on Windows, replace `python3` with `py -3` throughout this module.
+>
+> If you are using Python 3.7.0 or later, you should only use  `py manage.py startapp catalog`
 
-  <p><code>py -3 manage.py startapp catalog</code></p>
+The tool creates a new folder and populates it with files for the different parts of the application (shown in the following example).
+Most of the files are named after their purpose (e.g. views should be stored in **views.py**, models in **models.py**, tests in **tests.py**, administration site configuration in **admin.py**, application registration in **apps.py**) and contain some minimal boilerplate code for working with the associated objects.
 
-  <p>If you're working on Windows, replace <code>python3</code> with <code>py -3</code> throughout this module.</p>
+The updated project directory should now look like this:
 
-  <p>If you are using Python 3.7.0 or later, you should only use  <code>py manage.py startapp catalog</code></p>
-</div>
-
-<p>The tool creates a new folder and populates it with files for the different parts of the application (shown in the following example).
-Most of the files are named after their purpose (e.g. views should be stored in <strong>views.py</strong>, models in <strong>models.py</strong>, tests in <strong>tests.py</strong>, administration site configuration in <strong>admin.py</strong>, application registration in <strong>apps.py</strong>) and contain some minimal boilerplate code for working with the associated objects.</p>
-
-<p>The updated project directory should now look like this:</p>
-
-<pre class="brush: bash">locallibrary/
+```bash
+locallibrary/
     manage.py
     locallibrary/
     catalog/
@@ -133,26 +145,23 @@ Most of the files are named after their purpose (e.g. views should be stored in 
         views.py
         __init__.py
         migrations/
-</pre>
+```
 
-<p>In addition we now have:</p>
+In addition we now have:
 
-<ul>
- <li>A <em>migrations</em> folder, used to store "migrations" — files that allow you to automatically update your database as you modify your models. </li>
- <li><strong>__init__.py</strong> — an empty file created here so that Django/Python will recognize the folder as a <a href="https://docs.python.org/3/tutorial/modules.html#packages">Python Package</a> and allow you to use its objects within other parts of the project.</li>
-</ul>
+- A _migrations_ folder, used to store "migrations" — files that allow you to automatically update your database as you modify your models.
+- **\_\_init\_\_.py** — an empty file created here so that Django/Python will recognize the folder as a [Python Package](https://docs.python.org/3/tutorial/modules.html#packages) and allow you to use its objects within other parts of the project.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Have you noticed what is missing from the files list above? While there is a place for your views and models, there is nowhere for you to put your url mappings, templates, and static files. We'll show you how to create them further along (these aren't needed in every website but they are needed in this example).</p>
-</div>
+> **Note:** Have you noticed what is missing from the files list above? While there is a place for your views and models, there is nowhere for you to put your url mappings, templates, and static files. We'll show you how to create them further along (these aren't needed in every website but they are needed in this example).
 
-<h2 id="Registering_the_catalog_application">Registering the catalog application</h2>
+## Registering the catalog application
 
-<p>Now that the application has been created, we have to register it with the project so that it will be included when any tools are run (like adding models to the database for example). Applications are registered by adding them to the <code>INSTALLED_APPS</code> list in the project settings.</p>
+Now that the application has been created, we have to register it with the project so that it will be included when any tools are run (like adding models to the database for example). Applications are registered by adding them to the `INSTALLED_APPS` list in the project settings.
 
-<p>Open the project settings file, <strong>django_projects/locallibrary/locallibrary/settings.py</strong>, and find the definition for the <code>INSTALLED_APPS</code> list. Then add a new line at the end of the list, as shown below:</p>
+Open the project settings file, **django_projects/locallibrary/locallibrary/settings.py**, and find the definition for the `INSTALLED_APPS` list. Then add a new line at the end of the list, as shown below:
 
-<pre class="brush: bash">INSTALLED_APPS = [
+```bash
+INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -161,50 +170,51 @@ Most of the files are named after their purpose (e.g. views should be stored in 
     'django.contrib.staticfiles',
     # Add our new application
     'catalog.apps.CatalogConfig', #This object was created for us in /catalog/apps.py
-]</pre>
+]
+```
 
-<p>The new line specifies the application configuration object (<code>CatalogConfig</code>) that was generated for you in <strong>/locallibrary/catalog/apps.py</strong> when you created the application.</p>
+The new line specifies the application configuration object (`CatalogConfig`) that was generated for you in **/locallibrary/catalog/apps.py** when you created the application.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> You'll notice that there are already a lot of other <code>INSTALLED_APPS</code> (and <code>MIDDLEWARE</code>, further down in the settings file). These enable support for the <a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django administration site</a> and the functionality it uses (including sessions, authentication, etc).</p>
-</div>
+> **Note:** You'll notice that there are already a lot of other `INSTALLED_APPS` (and `MIDDLEWARE`, further down in the settings file). These enable support for the [Django administration site](/en-US/docs/Learn/Server-side/Django/Admin_site) and the functionality it uses (including sessions, authentication, etc).
 
-<h2 id="Specifying_the_database">Specifying the database</h2>
+## Specifying the database
 
-<p>This is also the point where you would normally specify the database to be used for the project. It makes sense to use the same database for development and production where possible, in order to avoid minor differences in behavior.  You can find out about the different options in <a href="https://docs.djangoproject.com/en/3.1/ref/settings/#databases">Databases</a> (Django docs).</p>
+This is also the point where you would normally specify the database to be used for the project. It makes sense to use the same database for development and production where possible, in order to avoid minor differences in behavior.  You can find out about the different options in [Databases](https://docs.djangoproject.com/en/3.1/ref/settings/#databases) (Django docs).
 
-<p>We'll use the SQLite database for this example, because we don't expect to require a lot of concurrent access on a demonstration database, and it requires no additional work to set up! You can see how this database is configured in <strong>settings.py</strong>:</p>
+We'll use the SQLite database for this example, because we don't expect to require a lot of concurrent access on a demonstration database, and it requires no additional work to set up! You can see how this database is configured in **settings.py**:
 
-<pre class="brush: python">DATABASES = {
+```python
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-</pre>
+```
 
-<p>Because we are using SQLite, we don't need to do any further setup here. Let's move on!</p>
+Because we are using SQLite, we don't need to do any further setup here. Let's move on!
 
-<h2 id="Other_project_settings">Other project settings</h2>
+## Other project settings
 
-<p>The <strong>settings.py</strong> file is also used for configuring a number of other settings, but at this point, you probably only want to change the <a href="https://docs.djangoproject.com/en/3.1/ref/settings/#std:setting-TIME_ZONE">TIME_ZONE</a> — this should be made equal to a string from the standard <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">List of tz database time zones</a> (the TZ column in the table contains the values you want). Change your <code>TIME_ZONE</code> value to one of these strings appropriate for your time zone, for example:</p>
+The **settings.py** file is also used for configuring a number of other settings, but at this point, you probably only want to change the [TIME_ZONE](https://docs.djangoproject.com/en/3.1/ref/settings/#std:setting-TIME_ZONE) — this should be made equal to a string from the standard [List of tz database time zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (the TZ column in the table contains the values you want). Change your `TIME_ZONE` value to one of these strings appropriate for your time zone, for example:
 
-<pre class="brush: python">TIME_ZONE = 'Europe/London'</pre>
+```python
+TIME_ZONE = 'Europe/London'
+```
 
-<p>There are two other settings you won't change now, but that you should be aware of:</p>
+There are two other settings you won't change now, but that you should be aware of:
 
-<ul>
- <li><code>SECRET_KEY</code>. This is a secret key that is used as part of Django's website security strategy. If you're not protecting this code in development, you'll need to use a different code (perhaps read from an environment variable or file) when putting it into production. </li>
- <li><code>DEBUG</code>. This enables debugging logs to be displayed on error, rather than HTTP status code responses. This should be set to <code>False</code> in production as debug information is useful for attackers, but for now we can keep it set to <code>True</code>.</li>
-</ul>
+- `SECRET_KEY`. This is a secret key that is used as part of Django's website security strategy. If you're not protecting this code in development, you'll need to use a different code (perhaps read from an environment variable or file) when putting it into production.
+- `DEBUG`. This enables debugging logs to be displayed on error, rather than HTTP status code responses. This should be set to `False` in production as debug information is useful for attackers, but for now we can keep it set to `True`.
 
-<h2 id="Hooking_up_the_URL_mapper">Hooking up the URL mapper</h2>
+## Hooking up the URL mapper
 
-<p>The website is created with a URL mapper file (<strong>urls.py</strong>) in the project folder. While you can use this file to manage all your URL mappings, it is more usual to defer mappings to the associated application.</p>
+The website is created with a URL mapper file (**urls.py**) in the project folder. While you can use this file to manage all your URL mappings, it is more usual to defer mappings to the associated application.
 
-<p>Open <strong>locallibrary/locallibrary/urls.py</strong> and note the instructional text which explains some of the ways to use the URL mapper.</p>
+Open **locallibrary/locallibrary/urls.py** and note the instructional text which explains some of the ways to use the URL mapper.
 
-<pre class="brush: python">"""locallibrary URL Configuration
+```python
+"""locallibrary URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -225,121 +235,116 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
-</pre>
+```
 
-<p>The URL mappings are managed through the <code>urlpatterns</code> variable, which is a Python <em>list</em> of <code>path()</code> functions. Each <code>path()</code> function either associates a URL pattern to a <em>specific view</em>, which will be displayed when the pattern is matched, or with another list of URL pattern testing code (in this second case, the pattern becomes the "base URL" for patterns defined in the target module). The <code>urlpatterns</code> list initially defines a single function that maps all URLs with the pattern <em>admin/</em> to the module <code>admin.site.urls</code> , which contains the Administration application's own URL mapping definitions.</p>
+The URL mappings are managed through the `urlpatterns` variable, which is a Python _list_ of `path()` functions. Each `path()` function either associates a URL pattern to a _specific view_, which will be displayed when the pattern is matched, or with another list of URL pattern testing code (in this second case, the pattern becomes the "base URL" for patterns defined in the target module). The `urlpatterns` list initially defines a single function that maps all URLs with the pattern _admin/_ to the module `admin.site.urls` , which contains the Administration application's own URL mapping definitions.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The route in <code>path()</code> is a string defining a URL pattern to match. This string might include a named variable (in angle brackets), e.g. <code>'catalog/&lt;id&gt;/'</code>. This pattern will match a URL like <strong>/catalog/</strong><em>any_chars</em><strong>/</strong> and pass <em>any_chars</em> to the view as a string with parameter name <code>id</code>. We discuss path methods and route patterns further in later topics.</p>
-</div>
+> **Note:** The route in `path()` is a string defining a URL pattern to match. This string might include a named variable (in angle brackets), e.g. `'catalog/<id>/'`. This pattern will match a URL like **/catalog/\***any_chars**\*/** and pass *any_chars* to the view as a string with parameter name `id`. We discuss path methods and route patterns further in later topics.
 
-<p>To add a new list item to the <code>urlpatterns</code> list, add the following lines to the bottom of the file. This new item includes a <code>path()</code> that forwards requests with the pattern <code>catalog/</code> to the module <code>catalog.urls</code> (the file with the relative URL <strong>catalog/urls.py</strong>).</p>
+To add a new list item to the `urlpatterns` list, add the following lines to the bottom of the file. This new item includes a `path()` that forwards requests with the pattern `catalog/` to the module `catalog.urls` (the file with the relative URL **catalog/urls.py**).
 
-<pre class="brush: python"># Use include() to add paths from the catalog application
+```python
+# Use include() to add paths from the catalog application
 from django.urls import include
 
 urlpatterns += [
     path('catalog/', include('catalog.urls')),
 ]
+```
 
-</pre>
+> **Note:** Note that we included the import line (`from django.urls import include`) with the code that uses it (so it is easy to see what we've added), but it is common to include all your import lines at the top of a Python file.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Note that we included the import line (<code>from django.urls import include</code>) with the code that uses it (so it is easy to see what we've added), but it is common to include all your import lines at the top of a Python file.</p>
-</div>
+Now let's redirect the root URL of our site (i.e. `127.0.0.1:8000`) to the URL `127.0.0.1:8000/catalog/.` This is the only app we'll be using in this project. To do this, we'll use a special view function, `RedirectView`, which takes the new relative URL to redirect to (`/catalog/`) as its first argument when the URL pattern specified in the `path()` function is matched (the root URL, in this case).
 
-<p>Now let's redirect the root URL of our site (i.e. <code>127.0.0.1:8000</code>) to the URL <code>127.0.0.1:8000/catalog/.</code> This is the only app we'll be using in this project. To do this, we'll use a special view function, <code>RedirectView</code>, which takes the new relative URL to redirect to (<code>/catalog/</code>) as its first argument when the URL pattern specified in the <code>path()</code> function is matched (the root URL, in this case).</p>
+Add the following lines to the bottom of the file:
 
-<p>Add the following lines to the bottom of the file:</p>
-
-<pre class="brush: python">#Add URL maps to redirect the base URL to our application
+```python
+#Add URL maps to redirect the base URL to our application
 from django.views.generic import RedirectView
 urlpatterns += [
     path('', RedirectView.as_view(url='catalog/', permanent=True)),
 ]
-</pre>
+```
 
-<p>Leave the first parameter of the path function empty to imply '/'. If you write the first parameter as '/' Django will give you the following warning when you start the development server:</p>
+Leave the first parameter of the path function empty to imply '/'. If you write the first parameter as '/' Django will give you the following warning when you start the development server:
 
-<pre class="brush: python">System check identified some issues:
+```python
+System check identified some issues:
 
 WARNINGS:
 ?: (urls.W002) Your URL pattern '/' has a route beginning with a '/'.
 Remove this slash as it is unnecessary.
 If this pattern is targeted in an include(), ensure the include() pattern has a trailing '/'.
-</pre>
+```
 
-<p>Django does not serve static files like CSS, JavaScript, and images by default, but it can be useful for the development web server to do so while you're creating your site. As a final addition to this URL mapper, you can enable the serving of static files during development by appending the following lines.</p>
+Django does not serve static files like CSS, JavaScript, and images by default, but it can be useful for the development web server to do so while you're creating your site. As a final addition to this URL mapper, you can enable the serving of static files during development by appending the following lines.
 
-<p>Add the following final block to the bottom of the file now:</p>
+Add the following final block to the bottom of the file now:
 
-<pre class="brush: python"># Use static() to add url mapping to serve static files during development (only)
+```python
+# Use static() to add url mapping to serve static files during development (only)
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-</pre>
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong> There are a number of ways to extend the <code>urlpatterns</code> list (previously, we just appended a new list item using the <code>+=</code> operator to clearly separate the old and new code). We could have instead just included this new pattern-map in the original list definition:</p>
+> **Note:** There are a number of ways to extend the `urlpatterns` list (previously, we just appended a new list item using the `+=` operator to clearly separate the old and new code). We could have instead just included this new pattern-map in the original list definition:
+>
+> ```python
+> urlpatterns = [
+>     path('admin/', admin.site.urls),
+>     path('catalog/', include('catalog.urls')),
+>     path('', RedirectView.as_view(url='catalog/')),
+> ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+> ```
 
-<pre class="brush: python">urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('catalog/', include('catalog.urls')),
-    path('', RedirectView.as_view(url='catalog/')),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-</pre>
-</div>
+As a final step, create a file inside your catalog folder called **urls.py**, and add the following text to define the (empty) imported `urlpatterns`. This is where we'll add our patterns as we build the application.
 
-<p>As a final step, create a file inside your catalog folder called <strong>urls.py</strong>, and add the following text to define the (empty) imported <code>urlpatterns</code>. This is where we'll add our patterns as we build the application.</p>
-
-<pre class="brush: python">from django.urls import path
+```python
+from django.urls import path
 from . import views
 
 urlpatterns = [
 
 ]
-</pre>
+```
 
-<h2 id="Testing_the_website_framework">Testing the website framework</h2>
+## Testing the website framework
 
-<p>At this point we have a complete skeleton project. The website doesn't actually <em>do</em> anything yet, but it's worth running it to make sure that none of our changes have broken anything.</p>
+At this point we have a complete skeleton project. The website doesn't actually *do* anything yet, but it's worth running it to make sure that none of our changes have broken anything.
 
-<p>Before we do that, we should first run a <em>database migration</em>. This updates our database (to include any models in our installed applications) and removes some build warnings.</p>
+Before we do that, we should first run a _database migration_. This updates our database (to include any models in our installed applications) and removes some build warnings.
 
-<h3 id="Running_database_migrations">Running database migrations</h3>
+### Running database migrations
 
-<p>Django uses an Object-Relational-Mapper (ORM) to map model definitions in the Django code to the data structure used by the underlying database. As we change our model definitions, Django tracks the changes and can create database migration scripts (in <strong>/locallibrary/catalog/migrations/</strong>) to automatically migrate the underlying data structure in the database to match the model.</p>
+Django uses an Object-Relational-Mapper (ORM) to map model definitions in the Django code to the data structure used by the underlying database. As we change our model definitions, Django tracks the changes and can create database migration scripts (in **/locallibrary/catalog/migrations/**) to automatically migrate the underlying data structure in the database to match the model.
 
-<p>When we created the website, Django automatically added a number of models for use by the admin section of the site (which we'll look at later). Run the following commands to define tables for those models in the database (make sure you are in the directory that contains <strong>manage.py</strong>):</p>
+When we created the website, Django automatically added a number of models for use by the admin section of the site (which we'll look at later). Run the following commands to define tables for those models in the database (make sure you are in the directory that contains **manage.py**):
 
-<pre class="brush: bash">python3 manage.py makemigrations
+```bash
+python3 manage.py makemigrations
 python3 manage.py migrate
-</pre>
+```
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> You'll need to run these commands every time your models change in a way that will affect the structure of the data that needs to be stored (including both addition and removal of whole models and individual fields).</p>
-</div>
+> **Warning:** You'll need to run these commands every time your models change in a way that will affect the structure of the data that needs to be stored (including both addition and removal of whole models and individual fields).
 
-<p>The <code>makemigrations</code> command <em>creates</em> (but does not apply) the migrations for all applications installed in your project. You can specify the application name as well to just run a migration for a single project. This gives you a chance to check out the code for these migrations before they are applied. If you're a Django expert, you may choose to tweak them slightly!</p>
+The `makemigrations` command *creates* (but does not apply) the migrations for all applications installed in your project. You can specify the application name as well to just run a migration for a single project. This gives you a chance to check out the code for these migrations before they are applied. If you're a Django expert, you may choose to tweak them slightly!
 
-<p>The <code>migrate</code> command is what applies the migrations to your database. Django tracks which ones have been added to the current database.</p>
+The `migrate` command is what applies the migrations to your database. Django tracks which ones have been added to the current database.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> See <a href="https://docs.djangoproject.com/en/3.1/topics/migrations/">Migrations</a> (Django docs) for additional information about the lesser-used migration commands.</p>
-</div>
+> **Note:** See [Migrations](https://docs.djangoproject.com/en/3.1/topics/migrations/) (Django docs) for additional information about the lesser-used migration commands.
 
-<h3 id="Running_the_website">Running the website</h3>
+### Running the website
 
-<p>During development, you can serve the website first using the <em>development web server</em>, and then viewing it on your local web browser.</p>
+During development, you can serve the website first using the _development web server_, and then viewing it on your local web browser.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The development web server is not robust or performant enough for production use, but it is a very easy way to get your Django website up and running during development to give it a convenient quick test. By default it will serve the site to your local computer (<code>http://127.0.0.1:8000/)</code>, but you can also specify other computers on your network to serve to. For more information see <a href="https://docs.djangoproject.com/en/3.1/ref/django-admin/#runserver">django-admin and manage.py: runserver</a> (Django docs).</p>
-</div>
+> **Note:** The development web server is not robust or performant enough for production use, but it is a very easy way to get your Django website up and running during development to give it a convenient quick test. By default it will serve the site to your local computer (`http://127.0.0.1:8000/)`, but you can also specify other computers on your network to serve to. For more information see [django-admin and manage.py: runserver](https://docs.djangoproject.com/en/3.1/ref/django-admin/#runserver) (Django docs).
 
-<p>Run the <em>development web server</em> by calling the <code>runserver</code> command (in the same directory as <strong>manage.py</strong>):</p>
+Run the _development web server_ by calling the `runserver` command (in the same directory as **manage.py**):
 
-<pre class="brush: bash">python3 manage.py runserver
+```bash
+python3 manage.py runserver
 
  Performing system checks...
 
@@ -348,61 +353,53 @@ python3 manage.py migrate
  Django version 2.1, using settings 'locallibrary.settings'
  Starting development server at http://127.0.0.1:8000/
  Quit the server with CTRL-BREAK.
-</pre>
+```
 
-<p>Once the server is running, you can view the site by navigating to <code>http://127.0.0.1:8000/</code> in your local web browser. You should see a site error page that looks like this:</p>
+Once the server is running, you can view the site by navigating to `http://127.0.0.1:8000/` in your local web browser. You should see a site error page that looks like this:
 
-<p><img alt="Django Debug page for Django 2.0" src="django_404_debug_page.png"></p>
+![Django Debug page for Django 2.0](django_404_debug_page.png)
 
-<p>Don't worry! This error page is expected because we don't have any pages/urls defined in the <code>catalog.urls</code> module (which we're redirected to when we get a URL to the root of the site).</p>
+Don't worry! This error page is expected because we don't have any pages/urls defined in the `catalog.urls` module (which we're redirected to when we get a URL to the root of the site).
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The example page demonstrates a great Django feature — automated debug logging. Whenever a page cannot be found, Django displays an error screen with useful information or any error raised by the code. In this case, we can see that the URL we've supplied doesn't match any of our URL patterns (as listed). Logging is turned off in production (which is when we put the site live on the Web), in which case a less informative but more user-friendly page will be served.</p>
-</div>
+> **Note:** The example page demonstrates a great Django feature — automated debug logging. Whenever a page cannot be found, Django displays an error screen with useful information or any error raised by the code. In this case, we can see that the URL we've supplied doesn't match any of our URL patterns (as listed). Logging is turned off in production (which is when we put the site live on the Web), in which case a less informative but more user-friendly page will be served.
 
-<p>At this point, we know that Django is working! </p>
+At this point, we know that Django is working!
 
-<div class="notecard note">
-  <p><strong>Note:</strong> You should re-run migrations and re-test the site whenever you make significant changes. It doesn't take very long!</p>
-</div>
+> **Note:** You should re-run migrations and re-test the site whenever you make significant changes. It doesn't take very long!
 
-<h2 id="Challenge_yourself">Challenge yourself</h2>
+## Challenge yourself
 
-<p>The <strong>catalog/</strong> directory contains files for the views, models, and other parts of the application. Open these files and inspect the boilerplate.</p>
+The **catalog/** directory contains files for the views, models, and other parts of the application. Open these files and inspect the boilerplate.
 
-<p>As you saw previously, a URL-mapping for the Admin site has already been added in the project's <strong>urls.py</strong>. Navigate to the admin area in your browser and see what happens (you can infer the correct URL from the mapping).</p>
+As you saw previously, a URL-mapping for the Admin site has already been added in the project's **urls.py**. Navigate to the admin area in your browser and see what happens (you can infer the correct URL from the mapping).
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>You have now created a complete skeleton website project, which you can go on to populate with urls, models, views, and templates.</p>
+You have now created a complete skeleton website project, which you can go on to populate with urls, models, views, and templates.
 
-<p>Now that the skeleton for the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Local Library website</a> is complete and running, it's time to start writing the code that makes this website do what it is supposed to do.</p>
+Now that the skeleton for the [Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) is complete and running, it's time to start writing the code that makes this website do what it is supposed to do.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://docs.djangoproject.com/en/3.1/intro/tutorial01/">Writing your first Django app - part 1</a>  (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/3.1/ref/applications/#configuring-applications">Applications</a> (Django Docs). Contains information on configuring applications.</li>
-</ul>
+- [Writing your first Django app - part 1](https://docs.djangoproject.com/en/3.1/intro/tutorial01/)  (Django docs)
+- [Applications](https://docs.djangoproject.com/en/3.1/ref/applications/#configuring-applications) (Django Docs). Contains information on configuring applications.
 
-<p>{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}</p>
+{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
-<h2 id="In_this_module">In this module</h2>
+## In this module
 
-<ul>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Introduction">Django introduction</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/development_environment">Setting up a Django development environment</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django Tutorial: The Local Library website</a></li>
- <li><strong>Django Tutorial Part 2: Creating a skeleton website</strong></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Models">Django Tutorial Part 3: Using models</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django Tutorial Part 4: Django admin site</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Home_page">Django Tutorial Part 5: Creating our home page</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Generic_views">Django Tutorial Part 6: Generic list and detail views</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django Tutorial Part 7: Sessions framework</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Authentication">Django Tutorial Part 8: User authentication and permissions</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Testing">Django Tutorial Part 10: Testing a Django web application</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Django Tutorial Part 11: Deploying Django to production</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/web_application_security">Django web application security</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a></li>
-</ul>
+- [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
+- [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment)
+- [Django Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
+- **Django Tutorial Part 2: Creating a skeleton website**
+- [Django Tutorial Part 3: Using models](/en-US/docs/Learn/Server-side/Django/Models)
+- [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site)
+- [Django Tutorial Part 5: Creating our home page](/en-US/docs/Learn/Server-side/Django/Home_page)
+- [Django Tutorial Part 6: Generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views)
+- [Django Tutorial Part 7: Sessions framework](/en-US/docs/Learn/Server-side/Django/Sessions)
+- [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication)
+- [Django Tutorial Part 9: Working with forms](/en-US/docs/Learn/Server-side/Django/Forms)
+- [Django Tutorial Part 10: Testing a Django web application](/en-US/docs/Learn/Server-side/Django/Testing)
+- [Django Tutorial Part 11: Deploying Django to production](/en-US/docs/Learn/Server-side/Django/Deployment)
+- [Django web application security](/en-US/docs/Learn/Server-side/Django/web_application_security)
+- [DIY Django mini blog](/en-US/docs/Learn/Server-side/Django/django_assessment_blog)

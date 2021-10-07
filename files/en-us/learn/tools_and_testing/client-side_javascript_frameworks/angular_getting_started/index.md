@@ -1,6 +1,7 @@
 ---
 title: Getting started with Angular
-slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
+slug: >-
+  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
 tags:
   - Beginner
   - Frameworks
@@ -10,164 +11,191 @@ tags:
   - client-side
   - Angular
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
-
-<p>It is now time to look at Google's Angular framework, another popular option that you'll come across often. In this article we look at what Angular has to offer, install the prerequisites and set up a sample app, and look at Angular's basic architecture.</p>
+It is now time to look at Google's Angular framework, another popular option that you'll come across often. In this article we look at what Angular has to offer, install the prerequisites and set up a sample app, and look at Angular's basic architecture.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To setup a local Angular development environment, create a starter app, and understand the basics of how it works.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
+        <a href="/en-US/docs/Learn/CSS">CSS</a>, and
+        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages,
+        knowledge of the
+        <a
+          href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+          >terminal/command line</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        To setup a local Angular development environment, create a starter app,
+        and understand the basics of how it works.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="what_is_angular">What is Angular?</h2>
+## What is Angular?
 
-<p>Angular is a development platform, built on <a href="https://www.typescriptlang.org/">TypeScript</a>. As a platform, Angular includes:</p>
+Angular is a development platform, built on [TypeScript](https://www.typescriptlang.org/). As a platform, Angular includes:
 
-<ul>
-  <li>A component-based framework for building scalable web applications</li>
-  <li>A collection of well-integrated libraries that cover a wide variety of features, including routing, forms management, client-server communication, and more</li>
-  <li>A suite of developer tools to help you develop, build, test, and update your code</li>
-</ul>
+- A component-based framework for building scalable web applications
+- A collection of well-integrated libraries that cover a wide variety of features, including routing, forms management, client-server communication, and more
+- A suite of developer tools to help you develop, build, test, and update your code
 
-<p>When you build applications with Angular, you're taking advantage of a platform that can scale from single-developer projects to enterprise-level applications. Angular is designed to make updating as easy as possible, so you can take advantage of the latest developments with a minimum of effort. Best of all, the Angular ecosystem consists of a diverse group of over 1.7 million developers, library authors, and content creators.</p>
+When you build applications with Angular, you're taking advantage of a platform that can scale from single-developer projects to enterprise-level applications. Angular is designed to make updating as easy as possible, so you can take advantage of the latest developments with a minimum of effort. Best of all, the Angular ecosystem consists of a diverse group of over 1.7 million developers, library authors, and content creators.
 
-<p>Before you start exploring the Angular platform, you should know about the Angular CLI. The Angular CLI is the fastest, easiest, and recommended way to develop Angular applications. The Angular CLI makes a number of tasks easy. Here are some examples:</p>
+Before you start exploring the Angular platform, you should know about the Angular CLI. The Angular CLI is the fastest, easiest, and recommended way to develop Angular applications. The Angular CLI makes a number of tasks easy. Here are some examples:
 
 <table class="standard-table">
-<tr>
-<td><code><a href="https://angular.io/cli/build">ng build</a></code></td>
-<td>Compiles an Angular app into an output directory.</td>
-</tr>
-<tr>
-<td><code><a href="https://angular.io/cli/serve">ng serve</a></code></td>
-<td>Builds and serves your application, rebuilding on file changes.</td>
-</tr>
-<tr>
-<td><code><a href="https://angular.io/cli/generate">ng generate</a></code></td>
-<td>Generates or modifies files based on a schematic.</td>
-</tr>
-<tr>
-<td><code><a href="https://angular.io/cli/test">ng test</a></code></td>
-<td>Runs unit tests on a given project.</td>
-</tr>
-<tr>
-<td><code><a href="https://angular.io/cli/e2e">ng e2e</a></code></td>
-<td>Builds and serves an Angular application, then runs end-to-end tests.</td>
-</tr>
+  <tbody>
+    <tr>
+      <td>
+        <code><a href="https://angular.io/cli/build">ng build</a></code>
+      </td>
+      <td>Compiles an Angular app into an output directory.</td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="https://angular.io/cli/serve">ng serve</a></code>
+      </td>
+      <td>Builds and serves your application, rebuilding on file changes.</td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="https://angular.io/cli/generate">ng generate</a></code>
+      </td>
+      <td>Generates or modifies files based on a schematic.</td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="https://angular.io/cli/test">ng test</a></code>
+      </td>
+      <td>Runs unit tests on a given project.</td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="https://angular.io/cli/e2e">ng e2e</a></code>
+      </td>
+      <td>
+        Builds and serves an Angular application, then runs end-to-end tests.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>You'll find the Angular CLI to be a valuable tool for building out your applications.</p>
+You'll find the Angular CLI to be a valuable tool for building out your applications.
 
-<h2 id="what-you-ll-build">What you'll build</h2>
+## What you'll build
 
-<p>This tutorial series guides you through building a to-do list application. Via this application you'll learn how to use Angular to manage, edit, add, delete, and filter items.</p>
+This tutorial series guides you through building a to-do list application. Via this application you'll learn how to use Angular to manage, edit, add, delete, and filter items.
 
-<h2 id="prerequisites">Prerequisites</h2>
+## Prerequisites
 
-<p>To install Angular on your local system, you need the following:</p>
+To install Angular on your local system, you need the following:
 
-<ul>
-  <li><p><strong>Node.js</strong></p>
-    <p>Angular requires a <a href="https://nodejs.org/about/releases">current, active LTS, or maintenance LTS</a> version of Node.js. For information about specific version requirements, see the <code>engines</code> key in the <a href="https://unpkg.com/@angular/cli/package.json">package.json</a> file.</p>
-    <p>For more information on installing Node.js, see <a href="https://nodejs.org" title="Nodejs.org">nodejs.org</a>.
-If you are unsure what version of Node.js runs on your system, run <code>node -v</code> in a terminal window.</p>
-  </li>
-  <li><p><strong>npm package manager</strong></p>
-    <p>Angular, the Angular CLI, and Angular applications depend on <a href="https://docs.npmjs.com/getting-started/what-is-npm">npm packages</a> for many features and functions.
-    To download and install npm packages, you need an npm package manager.
-    This guide uses the <a href="https://docs.npmjs.com/cli/install">npm client</a> command line interface, which is installed with <code>Node.js</code> by default.
-    To check that you have the npm client installed, run <code>npm -v</code> in a terminal window.</p>
-  </li>
-</ul>
+- **Node.js**
 
-<h2 id="set_up_your_application">Set up your application</h2>
+  Angular requires a [current, active LTS, or maintenance LTS](https://nodejs.org/about/releases) version of Node.js. For information about specific version requirements, see the `engines` key in the [package.json](https://unpkg.com/@angular/cli/package.json) file.
 
-<p>You can use the Angular CLI to run commands in your terminal for generating, building, testing, and deploying Angular applications.
-To install the Angular CLI, run the following command in your terminal:</p>
+  For more information on installing Node.js, see [nodejs.org](https://nodejs.org "Nodejs.org").
+  If you are unsure what version of Node.js runs on your system, run `node -v` in a terminal window.
 
-<pre class="brush: js">npm install -g @angular/cli</pre>
+- **npm package manager**
 
-<p>Angular CLI commands all start with <code>ng</code>, followed by what you'd like the CLI to do.
-In the Desktop directory, use the following <code>ng new</code> command to create a new application called <code>todo</code>:</p>
+  Angular, the Angular CLI, and Angular applications depend on [npm packages](https://docs.npmjs.com/getting-started/what-is-npm) for many features and functions.
+  To download and install npm packages, you need an npm package manager.
+  This guide uses the [npm client](https://docs.npmjs.com/cli/install) command line interface, which is installed with `Node.js` by default.
+  To check that you have the npm client installed, run `npm -v` in a terminal window.
 
-<pre class="brush: js">ng new todo --routing=false --style=css</pre>
+## Set up your application
 
-<p>The <code>ng new</code> command creates a minimal starter Angular application on your Desktop.
-The additional flags, <code>--routing</code> and <code>--style</code>, define how to handle navigation and styles in the application.
-This tutorial describes these features later in more detail.</p>
+You can use the Angular CLI to run commands in your terminal for generating, building, testing, and deploying Angular applications.
+To install the Angular CLI, run the following command in your terminal:
 
-<p>If you are prompted to enforce stricter type checking, you can respond with yes.</p>
+```js
+npm install -g @angular/cli
+```
 
-<p>Navigate into your new project with the following <code>cd</code> command:</p>
+Angular CLI commands all start with `ng`, followed by what you'd like the CLI to do.
+In the Desktop directory, use the following `ng new` command to create a new application called `todo`:
 
-<pre class="brush: js">cd todo</pre>
+```js
+ng new todo --routing=false --style=css
+```
 
-<p>To run your <code>todo</code> application, use <code>ng serve</code>:</p>
+The `ng new` command creates a minimal starter Angular application on your Desktop.
+The additional flags, `--routing` and `--style`, define how to handle navigation and styles in the application.
+This tutorial describes these features later in more detail.
 
-<pre class="brush: js">ng serve</pre>
+If you are prompted to enforce stricter type checking, you can respond with yes.
 
-<p>When the CLI prompts you about analytics, answer <code>no</code>.</p>
+Navigate into your new project with the following `cd` command:
 
-<p>In the browser, navigate to <a href="http://localhost:4200/">http://localhost:4200/</a> to see your new starter application.
-If you change any of the source files, the application automatically reloads.</p>
+```js
+cd todo
+```
 
-<p>While <code>ng serve</code> is running, you might want to open a second terminal tab or window in order to run commands.
-If at any point you would like to stop serving your application, press <code>Ctrl+c</code> while in the terminal.</p>
+To run your `todo` application, use `ng serve`:
 
-<h2 id="get_familiar_with_your_angular_application">Get familiar with your Angular application</h2>
+```js
+ng serve
+```
 
-<p>The application source files that this tutorial focuses on are in <code>src/app</code>.
-Key files that the CLI generates automatically include the following:</p>
+When the CLI prompts you about analytics, answer `no`.
 
-<ol>
-  <li><code>app.module.ts</code>: Specifies the files that the application uses.
-This file acts as a central hub for the other files in your application.</li>
-  <li><code>app.component.ts</code>: Also known as the class, contains the logic for the application&#39;s main page.</li>
-  <li><code>app.component.html</code>: Contains the HTML for <code>AppComponent</code>. The contents of this file are also known as the template.
-The template determines the view or what you see in the browser.</li>
-  <li><code>app.component.css</code>: Contains the styles for <code>AppComponent</code>. You use this file when you want to define styles that only apply to a specific component, as opposed to your application overall.</li>
-</ol>
+In the browser, navigate to <http://localhost:4200/> to see your new starter application.
+If you change any of the source files, the application automatically reloads.
 
-<p>A component in Angular is made up of three main parts&mdash;the template, styles, and the class.
-For example, <code>app.component.ts</code>, <code>app.component.html</code>, and <code>app.component.css</code> together constitute the <code>AppComponent</code>.
-This structure separates the logic, view, and styles so that the application is more maintainable and scalable.</p>
+While `ng serve` is running, you might want to open a second terminal tab or window in order to run commands.
+If at any point you would like to stop serving your application, press `Ctrl+c` while in the terminal.
 
-<p>In this way, you are using the best practices from the very beginning.</p>
+## Get familiar with your Angular application
 
-<p>The Angular CLI also generates a file for component testing called <code>app.component.spec.ts</code>, but this tutorial doesn't go into testing, so you can ignore that file.</p>
+The application source files that this tutorial focuses on are in `src/app`.
+Key files that the CLI generates automatically include the following:
 
-<p>Whenever you generate a component, the CLI creates these four files in a directory with the name you specify.</p>
+1.  `app.module.ts`: Specifies the files that the application uses.
+    This file acts as a central hub for the other files in your application.
+2.  `app.component.ts`: Also known as the class, contains the logic for the application's main page.
+3.  `app.component.html`: Contains the HTML for `AppComponent`. The contents of this file are also known as the template.
+    The template determines the view or what you see in the browser.
+4.  `app.component.css`: Contains the styles for `AppComponent`. You use this file when you want to define styles that only apply to a specific component, as opposed to your application overall.
 
-<h2 id="the_structure_of_an_angular_application">The structure of an Angular application</h2>
+A component in Angular is made up of three main parts—the template, styles, and the class.
+For example, `app.component.ts`, `app.component.html`, and `app.component.css` together constitute the `AppComponent`.
+This structure separates the logic, view, and styles so that the application is more maintainable and scalable.
 
-<p>Angular is built with TypeScript.
+In this way, you are using the best practices from the very beginning.
+
+The Angular CLI also generates a file for component testing called `app.component.spec.ts`, but this tutorial doesn't go into testing, so you can ignore that file.
+
+Whenever you generate a component, the CLI creates these four files in a directory with the name you specify.
+
+## The structure of an Angular application
+
+Angular is built with TypeScript.
 TypeScript is a superset of JavaScript meaning that any valid JavaScript is valid TypeScript.
-TypeScript offers typing and a more concise syntax than plain JavaScript, which gives you a tool for creating more maintainable code and minimizing bugs.</p>
+TypeScript offers typing and a more concise syntax than plain JavaScript, which gives you a tool for creating more maintainable code and minimizing bugs.
 
-<p>Components are the building blocks of an Angular application.
-A component includes a TypeScript class that has a <code>@Component()</code> decorator, an HTML template, and styles.</p>
+Components are the building blocks of an Angular application.
+A component includes a TypeScript class that has a `@Component()` decorator, an HTML template, and styles.
 
-<h3 id="the_class">The class</h3>
+### The class
 
-<p>The class is where you put any logic your component needs.
+The class is where you put any logic your component needs.
 This code can include functions, event listeners, properties, and references to services to name a few.
-The class is in a file with a name such as <code>feature.component.ts</code>, where <code>feature</code> is the name of your component.
-So, you could have files with names such as <code>header.component.ts</code>, <code>signup.component.ts</code>, or <code>feed.component.ts</code>.
-You create a component with a <code>@Component()</code> decorator that has metadata that tells Angular where to find the HTML and CSS.
-A typical component is as follows:</p>
+The class is in a file with a name such as `feature.component.ts`, where `feature` is the name of your component.
+So, you could have files with names such as `header.component.ts`, `signup.component.ts`, or `feed.component.ts`.
+You create a component with a `@Component()` decorator that has metadata that tells Angular where to find the HTML and CSS.
+A typical component is as follows:
 
-<pre class="brush: js">
+```js
 import { Component } from '@angular/core';
 
 @Component({
@@ -179,51 +207,59 @@ import { Component } from '@angular/core';
 
 export class ItemComponent {
 // your code goes here
-}</pre>
+}
+```
 
-<p>This component is called <code>ItemComponent</code>, and its selector is <code>app-item</code>.
+This component is called `ItemComponent`, and its selector is `app-item`.
 You use a selector just like regular HTML tags by placing it within other templates.
 When a selector is in a template, the browser renders the template of that component.
-This tutorial guides you through creating two components and using one within the other.</p>
+This tutorial guides you through creating two components and using one within the other.
 
-<p>Angular&#39;s component model offers strong encapsulation and an intuitive application structure.
-Components also make your application easier to unit test and can improve the overall readability of your code.</p>
+Angular's component model offers strong encapsulation and an intuitive application structure.
+Components also make your application easier to unit test and can improve the overall readability of your code.
 
-<h3 id="the_html_template">The HTML template</h3>
+### The HTML template
 
-<p>Every component has an HTML template that declares how that component renders.
-You can define this template either inline or by file path.</p>
+Every component has an HTML template that declares how that component renders.
+You can define this template either inline or by file path.
 
-<p>To refer to an external HTML file, use the <code>templateUrl</code> property:</p>
+To refer to an external HTML file, use the `templateUrl` property:
 
-<pre class="brush: js">@Component({
+```js
+@Component({
   selector: 'app-root',
   templateUrl: './app.component.html'
 })
 
 export class AppComponent {
-}</pre>
+}
+```
 
-<p>To write inline HTML, use the <code>template</code> property and write your HTML within backticks:</p>
+To write inline HTML, use the `template` property and write your HTML within backticks:
 
-<pre class="brush: js">@Component({
+```js
+@Component({
   selector: 'app-root',
-  template: `&lt;h1&gt;Hi!&lt;/h1&gt;`,
+  template: `<h1>Hi!</h1>`,
 })
 
 export class AppComponent {
-}</pre>
+}
+```
 
-<p>Angular extends HTML with additional syntax that lets you insert dynamic values from your component.
+Angular extends HTML with additional syntax that lets you insert dynamic values from your component.
 Angular automatically updates the rendered DOM when your component’s state changes.
-One use of this feature is inserting dynamic text, as shown in the following example.</p>
+One use of this feature is inserting dynamic text, as shown in the following example.
 
-<pre class="brush: html">&lt;h1&gt;\{{ title }}&lt;/h1&gt;</pre>
+```html
+<h1>\{{ title }}</h1>
+```
 
-<p>The double curly braces instruct Angular to interpolate the contents within them.
-The value for <code>title</code> comes from the component class:</p>
+The double curly braces instruct Angular to interpolate the contents within them.
+The value for `title` comes from the component class:
 
-<pre class="brush: js">import { Component } from '@angular/core';
+```js
+import { Component } from '@angular/core';
 
 @Component ({
   selector: 'app-root',
@@ -233,101 +269,99 @@ The value for <code>title</code> comes from the component class:</p>
 
 export class AppComponent {
     title = 'To do application';
-}</pre>
+}
+```
 
-<p>When the application loads the component and its template, the browser sees the following:</p>
+When the application loads the component and its template, the browser sees the following:
 
-<pre class="brush: html">&lt;h1&gt;To do application&lt;/h1&gt;
-</pre>
+```html
+<h1>To do application</h1>
+```
 
-<h3 id="styles">Styles</h3>
+### Styles
 
-<p>A component can inherit global styles from the application&#39;s <code>styles.css</code> file and augment or override them with its own styles.
-You can write component-specific styles directly in the <code>@Component()</code> decorator or specify the path to a CSS file.</p>
+A component can inherit global styles from the application's `styles.css` file and augment or override them with its own styles.
+You can write component-specific styles directly in the `@Component()` decorator or specify the path to a CSS file.
 
-<p>To include the styles directly in the component decorator, use the <code>styles</code> property:</p>
+To include the styles directly in the component decorator, use the `styles` property:
 
-<pre class="brush: js">@Component({
+```js
+@Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styles: ['h1 { color: red; }']
-})</pre>
+})
+```
 
-<p>Typically, a component uses styles in a separate file using the <code>styleUrls</code> property:</p>
+Typically, a component uses styles in a separate file using the `styleUrls` property:
 
-<pre class="brush: js">@Component({
+```js
+@Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
-})</pre>
+})
+```
 
-<p>With component-specific styles, you can organize your CSS so that it is easily maintainable and portable.</p>
+With component-specific styles, you can organize your CSS so that it is easily maintainable and portable.
 
-<h2 id="summary">Summary</h2>
+## Summary
 
-<p>That's it for your first introduction to Angular. At this point you should be set up and ready to build an Angular app, and have a basic understanding of how Angular works. In the next article we'll deepen that knowledge and start to build up the structure of our to-do list application.</p>
+That's it for your first introduction to Angular. At this point you should be set up and ready to build an Angular app, and have a basic understanding of how Angular works. In the next article we'll deepen that knowledge and start to build up the structure of our to-do list application.
 
-<div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<h2 id="In_this_module">In this module</h2>
+## In this module
 
-<ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
- <li>React
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
-  </ul>
- </li>
- <li>Ember
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
-  </ul>
- </li>
- <li>Vue
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
-  </ul>
- </li>
- <li>Svelte
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
-  </ul>
- </li>
- <li>Angular
-   <ul>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
-   </ul>
- </li>
-</ul>
+- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- React
+
+  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+
+- Ember
+
+  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+
+- Vue
+
+  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+
+- Svelte
+
+  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+
+- Angular
+
+  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
+  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

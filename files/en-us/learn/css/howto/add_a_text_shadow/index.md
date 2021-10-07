@@ -9,27 +9,23 @@ tags:
   - Guide
   - Web
 ---
-<p>{{LearnSidebar}}</p>
+{{LearnSidebar}}
 
-<p>In this guide you can find out how to add a shadow to any text on your page.</p>
+In this guide you can find out how to add a shadow to any text on your page.
 
-<h2>Adding shadows to text</h2>
+## Adding shadows to text
 
-<p>In our <a href="/en-US/docs/Learn/CSS/Howto/Add_a_shadow">guide to adding a shadow to boxes</a>, you can find out how to add a shadow to any element on your page. However, that technique only adds shadows to the element's surrounding box. To add a drop shadow to the text inside the box you need a different CSS property &mdash; {{cssxref("text-shadow")}}.</p>
+In our [guide to adding a shadow to boxes](/en-US/docs/Learn/CSS/Howto/Add_a_shadow), you can find out how to add a shadow to any element on your page. However, that technique only adds shadows to the element's surrounding box. To add a drop shadow to the text inside the box you need a different CSS property — {{cssxref("text-shadow")}}.
 
-<p>The <code>text-shadow</code> property takes a number of values:</p>
+The `text-shadow` property takes a number of values:
 
-<ul>
-  <li>The offset on the x-axis</li>
-  <li>The offset on the y-axis</li>
-  <li>A blur radius</li>
-  <li>A color</li>
-</ul>
+- The offset on the x-axis
+- The offset on the y-axis
+- A blur radius
+- A color
 
-<p>In the example below we have set the x-axis offset to 2px, the y-axis offset to 4px, the blur radius to 4px, and the color to a semi-transparent blue. Play with the different values to see how they change the shadow.</p>
+In the example below we have set the x-axis offset to 2px, the y-axis offset to 4px, the blur radius to 4px, and the color to a semi-transparent blue. Play with the different values to see how they change the shadow.
 
-<p>{{EmbedGHLiveSample("css-examples/howto/text-shadow.html", '100%', 500)}}</p>
+{{EmbedGHLiveSample("css-examples/howto/text-shadow.html", '100%', 500)}}
 
-<div class="notecard note">
-  <p><strong>Note:</strong> It can be quite easy to make text hard to read with text shadows. Make sure that the choices you make still leave your text readable and provide enough <a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast">color contrast</a> for visitors who have difficulty with low-contrast text.</p>
-</div>
+> **Note:** It can be quite easy to make text hard to read with text shadows. Make sure that the choices you make still leave your text readable and provide enough [color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) for visitors who have difficulty with low-contrast text.

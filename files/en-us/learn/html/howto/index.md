@@ -5,122 +5,96 @@ tags:
   - CodingScripting
   - HTML
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}
 
-<p>The following links point to solutions to common everyday problems you'll need to solve with HTML.</p>
+The following links point to solutions to common everyday problems you'll need to solve with HTML.
 
-<h3 id="Basic_structure">Basic structure</h3>
+### Basic structure
 
-<p>The most basic application of HTML is document structure. If you're new to HTML you should start with this.</p>
+The most basic application of HTML is document structure. If you're new to HTML you should start with this.
 
-<ul>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomy_of_an_html_document">How to create a basic HTML document</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure">How to divide a webpage into logical sections</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#the_basics_headings_and_paragraphs">How to set up a proper structure of headings and paragraphs</a></li>
-</ul>
+- [How to create a basic HTML document](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomy_of_an_html_document)
+- [How to divide a webpage into logical sections](/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
+- [How to set up a proper structure of headings and paragraphs](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#the_basics_headings_and_paragraphs)
 
-<h3 id="Basic_text-level_semantics">Basic text-level semantics</h3>
+### Basic text-level semantics
 
-<p>HTML specializes in providing semantic information for a document, so HTML answers many questions you might have about how to get your message across best in your document.</p>
+HTML specializes in providing semantic information for a document, so HTML answers many questions you might have about how to get your message across best in your document.
 
-<ul>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists">How to create a list of items with HTML</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#emphasis_and_importance">How to stress or emphasize content</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#emphasis_and_importance">How to indicate that text is important</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#representing_computer_code">How to display computer code with HTML</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#annotating_images_with_figures_and_figure_captions">How to annotate images and graphics</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abbreviations">How to mark abbreviations and make them understandable</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#quotations">How to add quotations and citations to web pages</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Howto/Define_terms_with_HTML">How to define terms with HTML</a></li>
-</ul>
+- [How to create a list of items with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists)
+- [How to stress or emphasize content](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#emphasis_and_importance)
+- [How to indicate that text is important](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#emphasis_and_importance)
+- [How to display computer code with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#representing_computer_code)
+- [How to annotate images and graphics](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#annotating_images_with_figures_and_figure_captions)
+- [How to mark abbreviations and make them understandable](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abbreviations)
+- [How to add quotations and citations to web pages](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#quotations)
+- [How to define terms with HTML](/en-US/docs/Learn/HTML/Howto/Define_terms_with_HTML)
 
-<h3 id="Hyperlinks">Hyperlinks</h3>
+### Hyperlinks
 
-<p>One of the main reasons for HTML is making navigation easy with {{Glossary("hyperlink", "hyperlinks")}}, which can be used in many different ways:</p>
+One of the main reasons for HTML is making navigation easy with {{Glossary("hyperlink", "hyperlinks")}}, which can be used in many different ways:
 
-<ul>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">How to create a hyperlink</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#active_learning_creating_a_navigation_menu">How to create a table of contents with HTML</a></li>
-</ul>
+- [How to create a hyperlink](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
+- [How to create a table of contents with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#active_learning_creating_a_navigation_menu)
 
-<h3 id="Images_multimedia">Images &amp; multimedia</h3>
+### Images & multimedia
 
-<ul>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#how_do_we_put_an_image_on_a_webpage">How to add images to a webpage</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">How to add video content to a webpage</a></li>
-</ul>
+- [How to add images to a webpage](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#how_do_we_put_an_image_on_a_webpage)
+- [How to add video content to a webpage](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 
-<h3 id="Scripting_styling">Scripting &amp; styling</h3>
+### Scripting & styling
 
-<p>HTML only sets up document structure. To solve presentation issues, use {{glossary("CSS")}}, or use scripting to make your page interactive.</p>
+HTML only sets up document structure. To solve presentation issues, use {{glossary("CSS")}}, or use scripting to make your page interactive.
 
-<ul>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_works#how_to_apply_your_css_to_your_html">How to use CSS within a webpage</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Howto/Use_JavaScript_within_a_webpage">How to use JavaScript within a webpage</a></li>
-</ul>
+- [How to use CSS within a webpage](/en-US/docs/Learn/CSS/First_steps/How_CSS_works#how_to_apply_your_css_to_your_html)
+- [How to use JavaScript within a webpage](/en-US/docs/Learn/HTML/Howto/Use_JavaScript_within_a_webpage)
 
-<h3 id="Embedded_content">Embedded content</h3>
+### Embedded content
 
-<ul>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">How to embed a webpage within another webpage</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#the_%3cembed%3e_and_%3cobject%3e_elements">How to add Flash content within a webpage</a></li>
-</ul>
+- [How to embed a webpage within another webpage](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
+- [How to add Flash content within a webpage](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#the_%3cembed%3e_and_%3cobject%3e_elements)
 
-<h2 id="Uncommon_or_advanced_problems">Uncommon or advanced problems</h2>
+## Uncommon or advanced problems
 
-<p>Beyond the basics, HTML is very rich and offers advanced features for solving complex problems. These articles help you tackle the less common use cases you may face:</p>
+Beyond the basics, HTML is very rich and offers advanced features for solving complex problems. These articles help you tackle the less common use cases you may face:
 
-<h3 id="Forms">Forms</h3>
+### Forms
 
-<p>Forms are a complex HTML structure made to send data from a webpage to a web server. We encourage you to go over our <a href="/en-US/docs/Learn/Forms">full dedicated guide</a>. Here is where you should start:</p>
+Forms are a complex HTML structure made to send data from a webpage to a web server. We encourage you to go over our [full dedicated guide](/en-US/docs/Learn/Forms). Here is where you should start:
 
-<ul>
- <li><a href="/en-US/docs/Learn/Forms/Your_first_form">How to create a simple Web form</a></li>
- <li><a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form">How to structure a Web form</a></li>
-</ul>
+- [How to create a simple Web form](/en-US/docs/Learn/Forms/Your_first_form)
+- [How to structure a Web form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
 
-<h3 id="Tabular_information">Tabular information</h3>
+### Tabular information
 
-<p>Some information, called tabular data, needs to be organized into tables with columns and rows. It's one of the most complex HTML structures, and mastering it is not easy:</p>
+Some information, called tabular data, needs to be organized into tables with columns and rows. It's one of the most complex HTML structures, and mastering it is not easy:
 
-<ul>
- <li><a href="/en-US/docs/Learn/HTML/Tables/Basics">How to create a data table</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Tables/Advanced">How to make HTML tables accessible</a></li>
-</ul>
+- [How to create a data table](/en-US/docs/Learn/HTML/Tables/Basics)
+- [How to make HTML tables accessible](/en-US/docs/Learn/HTML/Tables/Advanced)
 
-<h3 id="Data_representation">Data representation</h3>
+### Data representation
 
-<ul>
- <li>How to represent numeric and code values with HTML — see <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#superscript_and_subscript">Superscript and Subscript</a>, and <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#representing_computer_code">Representing computer code</a>.</li>
- <li><a href="/en-US/docs/Learn/HTML/Howto/Use_data_attributes">How to use data attributes</a></li>
-</ul>
+- How to represent numeric and code values with HTML — see [Superscript and Subscript](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#superscript_and_subscript), and [Representing computer code](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#representing_computer_code).
+- [How to use data attributes](/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
 
-<h3 id="Advanced_text_semantics">Advanced text semantics</h3>
+### Advanced text semantics
 
-<ul>
- <li><a href="/en-US/docs/Web/HTML/Element/br">How to take control of HTML line breaking</a></li>
- <li>How to mark changes (added and removed text) — see the {{htmlelement("ins")}} and {{htmlelement("del")}} elements.</li>
-</ul>
+- [How to take control of HTML line breaking](/en-US/docs/Web/HTML/Element/br)
+- How to mark changes (added and removed text) — see the {{htmlelement("ins")}} and {{htmlelement("del")}} elements.
 
-<h3 id="Advanced_images_multimedia">Advanced images &amp; multimedia</h3>
+### Advanced images & multimedia
 
-<ul>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">How to add a responsive image to a webpage</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">How to add vector image to a webpage</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image">How to add a hit map on top of an image</a></li>
-</ul>
+- [How to add a responsive image to a webpage](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [How to add vector image to a webpage](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
+- [How to add a hit map on top of an image](/en-US/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image)
 
-<h3 id="Internationalization">Internationalization</h3>
+### Internationalization
 
-<p>HTML is not monolingual. It provides tools to handle common internationalization issues.</p>
+HTML is not monolingual. It provides tools to handle common internationalization issues.
 
-<ul>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#setting_the_primary_language_of_the_document">How to add multiple languages into a single webpage</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#marking_up_times_and_dates">How to display time and date with HTML</a></li>
-</ul>
+- [How to add multiple languages into a single webpage](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#setting_the_primary_language_of_the_document)
+- [How to display time and date with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#marking_up_times_and_dates)
 
-<h3 id="Performance">Performance</h3>
+### Performance
 
-<ul>
- <li><a href="/en-US/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages">How to author fast-loading HTML pages</a></li>
-</ul>
+- [How to author fast-loading HTML pages](/en-US/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages)

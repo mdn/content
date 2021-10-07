@@ -6,4 +6,4 @@ tags:
   - Learn
   - MDN Meta
 ---
-<p>{{Index("/en-US/docs/Learn")}}</p>
+{{Index("/en-US/docs/Learn")}}

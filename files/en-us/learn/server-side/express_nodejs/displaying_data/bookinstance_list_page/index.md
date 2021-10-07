@@ -8,16 +8,17 @@ tags:
   - part 5
   - server-side
 ---
-<p>Next we'll implement our list of all book copies (<code>BookInstance</code>) in the library. This page needs to include the title of the <code>Book</code> associated with each <code>BookInstance</code> (linked to its detail page) along with other information in the <code>BookInstance</code> model, including the status, imprint, and unique id of each copy. The unique id text should be linked to the <code>BookInstance</code> detail page.</p>
+Next we'll implement our list of all book copies (`BookInstance`) in the library. This page needs to include the title of the `Book` associated with each `BookInstance` (linked to its detail page) along with other information in the `BookInstance` model, including the status, imprint, and unique id of each copy. The unique id text should be linked to the `BookInstance` detail page.
 
-<h2 id="Controller">Controller</h2>
+## Controller
 
-<p>The <code>BookInstance</code> list controller function needs to get a list of all book instances, populate the associated book information, and then pass the list to the template for rendering.</p>
+The `BookInstance` list controller function needs to get a list of all book instances, populate the associated book information, and then pass the list to the template for rendering.
 
-<p>Open <code>/controllers/bookinstanceController.js</code>.
-Find the exported <code>bookinstance_list()</code> controller method and replace it with the following code.</p>
+Open `/controllers/bookinstanceController.js`.
+Find the exported `bookinstance_list()` controller method and replace it with the following code.
 
-<pre class="brush: js">// Display list of all BookInstances.
+```js
+// Display list of all BookInstances.
 exports.bookinstance_list = function(req, res, next) {
 
   BookInstance.find()
@@ -28,17 +29,19 @@ exports.bookinstance_list = function(req, res, next) {
       res.render('bookinstance_list', { title: 'Book Instance List', bookinstance_list: list_bookinstances });
     });
 
-};</pre>
+};
+```
 
-<p>The method uses the model's <code>find()</code> function to return all <code>BookInstance</code> objects. It then daisy-chains a call to <code>populate()</code> with the <code>book</code> field—this will replace the book id stored for each <code>BookInstance</code> with a full <code>Book</code> document.</p>
+The method uses the model's `find()` function to return all `BookInstance` objects. It then daisy-chains a call to `populate()` with the `book` field—this will replace the book id stored for each `BookInstance` with a full `Book` document.
 
-<p>On success, the callback passed to the query renders the <strong>bookinstance_list</strong>(.pug) template, passing the <code>title</code> and <code>bookinstance_list</code> as variables.</p>
+On success, the callback passed to the query renders the **bookinstance_list**(.pug) template, passing the `title` and `bookinstance_list` as variables.
 
-<h2 id="View">View</h2>
+## View
 
-<p>Create <strong>/views/bookinstance_list.pug</strong> and copy in the text below.</p>
+Create **/views/bookinstance_list.pug** and copy in the text below.
 
-<pre class="brush: js">extends layout
+```js
+extends layout
 
 block content
   h1= title
@@ -57,19 +60,18 @@ block content
           span  (Due: #{val.due_back} )
 
     else
-      li There are no book copies in this library.</pre>
+      li There are no book copies in this library.
+```
 
-<p>This view is much the same as all the others. It extends the layout, replacing the <em>content</em> block, displays the <code>title</code> passed in from the controller, and iterates through all the book copies in <code>bookinstance_list</code>. For each copy we display its status (color coded) and if the book is not available, its expected return date. One new feature is introduced—we can use dot notation after a tag to assign a class. So <code>span.text-success</code> will be compiled to <code>&lt;span class="text-success"&gt;</code> (and might also be written in Pug as <code>span(class="text-success")</code>.</p>
+This view is much the same as all the others. It extends the layout, replacing the _content_ block, displays the `title` passed in from the controller, and iterates through all the book copies in `bookinstance_list`. For each copy we display its status (color coded) and if the book is not available, its expected return date. One new feature is introduced—we can use dot notation after a tag to assign a class. So `span.text-success` will be compiled to `<span class="text-success">` (and might also be written in Pug as `span(class="text-success")`.
 
-<h2 id="What_does_it_look_like">What does it look like?</h2>
+## What does it look like?
 
-<p>Run the application, open your browser to <a href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>, then select the <em>All book-instances</em> link. If everything is set up correctly, your site should look something like the following screenshot.</p>
+Run the application, open your browser to <http://localhost:3000/>, then select the _All book-instances_ link. If everything is set up correctly, your site should look something like the following screenshot.
 
-<p><img alt="BookInstance List Page - Express Local Library site" src="locallibary_express_bookinstance_list.png"></p>
+![BookInstance List Page - Express Local Library site](locallibary_express_bookinstance_list.png)
 
-<h2 id="Next_steps">Next steps</h2>
+## Next steps
 
-<ul>
- <li>Return to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</li>
- <li>Proceed to the next subarticle of part 5: <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment">Date formatting using luxon</a>.</li>
-</ul>
+- Return to [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
+- Proceed to the next subarticle of part 5: [Date formatting using luxon](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment).

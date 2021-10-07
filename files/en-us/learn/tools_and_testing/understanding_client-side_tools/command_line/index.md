@@ -11,468 +11,501 @@ tags:
   - client-side
   - npm
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
-<div>{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}</div>
-
-<p>In your development process you'll undoubtedly be required to run some command in the terminal (or on the "command line" — these are effectively the same thing). This article provides an introduction to the terminal, the essential commands you'll need to enter into it, how to chain commands together, and how to add your own command line interface (CLI) tools.</p>
+In your development process you'll undoubtedly be required to run some command in the terminal (or on the "command line" — these are effectively the same thing). This article provides an introduction to the terminal, the essential commands you'll need to enter into it, how to chain commands together, and how to add your own command line interface (CLI) tools.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To understand what the terminal/command line is, what basic commands you should learn, and how to install new command line tools.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
+        <a href="/en-US/docs/Learn/CSS">CSS</a>, and
+        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        To understand what the terminal/command line is, what basic commands you
+        should learn, and how to install new command line tools.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Welcome_to_the_terminal">Welcome to the terminal</h2>
+## Welcome to the terminal
 
-<p>The terminal is a text interface for executing text-based programs. If you're running any tooling for web development there's a near-guaranteed chance that you'll have to pop open the command line and run some commands to use your chosen tools (you'll often see such tools referred to as <strong>CLI tools</strong> — command line interface tools).</p>
+The terminal is a text interface for executing text-based programs. If you're running any tooling for web development there's a near-guaranteed chance that you'll have to pop open the command line and run some commands to use your chosen tools (you'll often see such tools referred to as **CLI tools** — command line interface tools).
 
-<p>A large number of tools can be used by typing commands into the command line; many come pre-installed on your system, and a huge number of others are installable from package registries. Package registries are like app stores, but (mostly) for command line based tools and software. We’ll see how to install some tools later on in this chapter, and we’ll learn more about package registries in the next chapter.</p>
+A large number of tools can be used by typing commands into the command line; many come pre-installed on your system, and a huge number of others are installable from package registries. Package registries are like app stores, but (mostly) for command line based tools and software. We’ll see how to install some tools later on in this chapter, and we’ll learn more about package registries in the next chapter.
 
-<p>One of the biggest criticisms of the command line is that it lacks hugely in user experience. Viewing the command line for the first time can be a daunting experience: a blank screen and a blinking cursor, with very little obvious help available on what to do.</p>
+One of the biggest criticisms of the command line is that it lacks hugely in user experience. Viewing the command line for the first time can be a daunting experience: a blank screen and a blinking cursor, with very little obvious help available on what to do.
 
-<p>On the surface they’re far from welcoming but there’s a lot you can do with them, and we promise that, with a bit of guidance and practice, using them will get easier! This is why we are providing this chapter — to help you get started in this seemingly unfriendly environment.</p>
+On the surface they’re far from welcoming but there’s a lot you can do with them, and we promise that, with a bit of guidance and practice, using them will get easier! This is why we are providing this chapter — to help you get started in this seemingly unfriendly environment.
 
-<h3 id="Where_did_the_terminal_come_from">Where did the terminal come from?</h3>
+### Where did the terminal come from?
 
-<p>The terminal originates from around the 1950s-60s and its original form really doesn’t resemble what we use today (for that we should be thankful). You can read a bit of the history on Wikipedia’s entry for <a href="https://en.wikipedia.org/wiki/Computer_terminal">Computer Terminal</a>.</p>
+The terminal originates from around the 1950s-60s and its original form really doesn’t resemble what we use today (for that we should be thankful). You can read a bit of the history on Wikipedia’s entry for [Computer Terminal](https://en.wikipedia.org/wiki/Computer_terminal).
 
-<p>Since then, the terminal has remained a constant feature of all operating systems — from desktop machines, to servers tucked away in the cloud, to microcomputers like the Raspberry PI Zero, and even to mobile phones. It provides direct access to the computer’s underlying file system and low-level features, and is therefore incredibly useful for performing complex tasks rapidly, if you know what you are doing.</p>
+Since then, the terminal has remained a constant feature of all operating systems — from desktop machines, to servers tucked away in the cloud, to microcomputers like the Raspberry PI Zero, and even to mobile phones. It provides direct access to the computer’s underlying file system and low-level features, and is therefore incredibly useful for performing complex tasks rapidly, if you know what you are doing.
 
-<p>It is also useful for automation — for example to write a command to update the titles of hundreds of files instantly, say from “ch01-xxxx.png”  to “ch02-xxxx.png”. If you updated the file names using your finder or explorer GUI app, it would take you a long time.</p>
+It is also useful for automation — for example to write a command to update the titles of hundreds of files instantly, say from “ch01-xxxx.png”  to “ch02-xxxx.png”. If you updated the file names using your finder or explorer GUI app, it would take you a long time.
 
-<p>Anyway, the terminal is not going away anytime soon.</p>
+Anyway, the terminal is not going away anytime soon.
 
-<h3 id="What_does_the_terminal_look_like">What does the terminal look like?</h3>
+### What does the terminal look like?
 
-<p>Below you can see some of the different flavours of programs that are available that can get you to a terminal.</p>
+Below you can see some of the different flavours of programs that are available that can get you to a terminal.
 
-<p>The next images show the command prompts available in Windows — there’s a good range of options from the "cmd" program to "powershell" — which can be run from the start menu by typing the program name.</p>
+The next images show the command prompts available in Windows — there’s a good range of options from the "cmd" program to "powershell" — which can be run from the start menu by typing the program name.
 
-<p><img alt="A vanilla windows cmd line window, and a windows powershell window" src="win-terminals.png"></p>
+![A vanilla windows cmd line window, and a windows powershell window](win-terminals.png)
 
-<p>And below, you can see the macOS terminal application.</p>
+And below, you can see the macOS terminal application.
 
-<p><img alt="A basic vanilla mac terminal" src="mac-terminal.png"></p>
+![A basic vanilla mac terminal](mac-terminal.png)
 
-<h3 id="How_do_you_access_the_terminal">How do you access the terminal?</h3>
+### How do you access the terminal?
 
-<p>Many developers today are using Unix-based tools (e.g. the terminal, and the tools you can access through it). Many tutorials and tools that exist on the web today support (and sadly assume) Unix-based systems, but not to worry — they are available on most systems. In this section, we’ll look at how to get access to the terminal on your chosen system.</p>
+Many developers today are using Unix-based tools (e.g. the terminal, and the tools you can access through it). Many tutorials and tools that exist on the web today support (and sadly assume) Unix-based systems, but not to worry — they are available on most systems. In this section, we’ll look at how to get access to the terminal on your chosen system.
 
-<h4 id="LinuxUnix">Linux/Unix</h4>
+#### Linux/Unix
 
-<p>As hinted at above, Linux/Unix systems have a terminal available by default, listed among your Applications.</p>
+As hinted at above, Linux/Unix systems have a terminal available by default, listed among your Applications.
 
-<h4 id="macOS">macOS</h4>
+#### macOS
 
-<p>macOS has a system called Darwin that sits underneath the graphical user interface. Darwin is the Unix-like system, which provides the terminal, and access to the low-level tools. macOS Darwin mostly has parity with Unix, certainly good enough to not cause us any worries as we work through this article.</p>
+macOS has a system called Darwin that sits underneath the graphical user interface. Darwin is the Unix-like system, which provides the terminal, and access to the low-level tools. macOS Darwin mostly has parity with Unix, certainly good enough to not cause us any worries as we work through this article.
 
-<p>The terminal is available on macOS at Applications/Utilities/Terminal.</p>
+The terminal is available on macOS at Applications/Utilities/Terminal.
 
-<h4 id="Windows">Windows</h4>
+#### Windows
 
-<p>As with some other programming tools, using the terminal (or command line) on Windows has traditionally not been as simple or easy as on other operating systems. But things are getting better.</p>
+As with some other programming tools, using the terminal (or command line) on Windows has traditionally not been as simple or easy as on other operating systems. But things are getting better.
 
-<p>Windows has traditionally had its own terminal-like program called cmd (“the command prompt”) for a long time, but this definitely doesn’t have parity with Unix commands, and is equivalent to the old-style Windows DOS prompt. </p>
+Windows has traditionally had its own terminal-like program called cmd (“the command prompt”) for a long time, but this definitely doesn’t have parity with Unix commands, and is equivalent to the old-style Windows DOS prompt.
 
-<p>Better programs exist for providing a terminal experience on Windows, such as Powershell (<a href="https://github.com/PowerShell/PowerShell">see here to find installers</a>), and Gitbash (which comes as part of the <a href="https://gitforwindows.org/">git for Windows</a> toolset)</p>
+Better programs exist for providing a terminal experience on Windows, such as Powershell ([see here to find installers](https://github.com/PowerShell/PowerShell)), and Gitbash (which comes as part of the [git for Windows](https://gitforwindows.org/) toolset)
 
-<p>However, the best option for Windows in the modern day is the Windows Subsystem for Linux (WSL) — a compatibility layer for running Linux operating systems directly from inside Windows 10, allowing you to run a “true terminal” directly on Windows, without needing a virtual machine.</p>
+However, the best option for Windows in the modern day is the Windows Subsystem for Linux (WSL) — a compatibility layer for running Linux operating systems directly from inside Windows 10, allowing you to run a “true terminal” directly on Windows, without needing a virtual machine.
 
-<p>This can be installed directly from the Windows store for free. You can find all the documentation you need in the <a href="https://docs.microsoft.com/en-us/windows/wsl">Windows Subsystem for Linux Documentation</a>.</p>
+This can be installed directly from the Windows store for free. You can find all the documentation you need in the [Windows Subsystem for Linux Documentation](https://docs.microsoft.com/en-us/windows/wsl).
 
-<p><img alt="a screenshot of the windows subsystem for linux documentation" src="wsl.png"></p>
+![a screenshot of the windows subsystem for linux documentation](wsl.png)
 
-<p>In terms of what option to choose on Windows, we’d strongly recommend trying to install the WSL. You could stick with the default command prompt (<code>cmd</code>), and many tools will work OK, but you’ll find everything easier if you have better parity with Unix tools.</p>
+In terms of what option to choose on Windows, we’d strongly recommend trying to install the WSL. You could stick with the default command prompt (`cmd`), and many tools will work OK, but you’ll find everything easier if you have better parity with Unix tools.
 
-<h4 id="Side_note_whats_the_difference_between_a_command_line_and_a_terminal">Side note: what's the difference between a command line and a terminal?</h4>
+#### Side note: what's the difference between a command line and a terminal?
 
-<p>Generally you'll find these two terms used interchangeably. Technically, a terminal is software that starts and connects to a shell. A shell is your session and session environment (where things like the prompt and shortcuts might be customised). The command line is the literal line where you enter commands and the cursor blinks.</p>
+Generally you'll find these two terms used interchangeably. Technically, a terminal is software that starts and connects to a shell. A shell is your session and session environment (where things like the prompt and shortcuts might be customised). The command line is the literal line where you enter commands and the cursor blinks.
 
-<h3 id="Do_you_have_to_use_the_terminal">Do you <em>have</em> to use the terminal?</h3>
+### Do you _have_ to use the terminal?
 
-<p>Although there's a great wealth of tools available from the command line, if you're using tools like <a href="https://code.visualstudio.com/">Visual Studio Code</a> there's also a mass of extensions that can be used as a proxy to using terminal commands without needing to use the terminal directly. However, you won’t find a code editor extension for everything you want to do — you’ll have to get some experience with the terminal eventually.</p>
+Although there's a great wealth of tools available from the command line, if you're using tools like [Visual Studio Code](https://code.visualstudio.com/) there's also a mass of extensions that can be used as a proxy to using terminal commands without needing to use the terminal directly. However, you won’t find a code editor extension for everything you want to do — you’ll have to get some experience with the terminal eventually.
 
-<h2 id="Basic_built-in_terminal_commands">Basic built-in terminal commands</h2>
+## Basic built-in terminal commands
 
-<p>Enough talk — let’s start looking at some terminal commands! Out of the box, here are just a few of the things the command line can do, along with names of relevant tools in each case:</p>
+Enough talk — let’s start looking at some terminal commands! Out of the box, here are just a few of the things the command line can do, along with names of relevant tools in each case:
 
-<ul>
- <li>Navigate your computer’s file system along with base level tasks such as create, copy, rename and delete:
-  <ul>
-   <li>Move around your directory structure: <code>cd</code></li>
-   <li>Create directories: <code>mkdir</code></li>
-   <li>Create files (and modify their metadata): <code>touch</code></li>
-   <li>Copy files: <code>cp</code></li>
-   <li>Move files: <code>mv</code></li>
-   <li>Delete files or directories: <code>rm</code></li>
-  </ul>
- </li>
- <li>Download files found at specific URLs: <code>curl</code></li>
- <li>Search for fragments of text inside larger bodies of text: <code>grep</code></li>
- <li>View a file's contents page by page: <code>less</code>, <code>cat</code></li>
- <li>Manipulate and transform streams of text (for example changing all the instances of <code>&lt;div&gt;</code>s in an HTML file to <code>&lt;article&gt;</code>): <code>awk</code>, <code>tr</code>, <code>sed</code></li>
-</ul>
+- Navigate your computer’s file system along with base level tasks such as create, copy, rename and delete:
 
-<div class="notecard note">
-<p><strong>Note:</strong> There are a number of good tutorials on the web that go much deeper into the command line on the web — this is only a brief introduction!</p>
-</div>
+  - Move around your directory structure: `cd`
+  - Create directories: `mkdir`
+  - Create files (and modify their metadata): `touch`
+  - Copy files: `cp`
+  - Move files: `mv`
+  - Delete files or directories: `rm`
 
-<p>Let's move forward and look at using a few of these tools on the command line. Before you go any further, open your terminal program!</p>
+- Download files found at specific URLs: `curl`
+- Search for fragments of text inside larger bodies of text: `grep`
+- View a file's contents page by page: `less`, `cat`
+- Manipulate and transform streams of text (for example changing all the instances of `<div>`s in an HTML file to `<article>`): `awk`, `tr`, `sed`
 
-<h3 id="Navigation_on_the_command_line">Navigation on the command line</h3>
+> **Note:** There are a number of good tutorials on the web that go much deeper into the command line on the web — this is only a brief introduction!
 
-<p>When you visit the command line you will inevitably need to navigate to a particular directory to "do something". All the operating systems (assuming a default setup) will launch their terminal program in your "home" directory, and from there you’re likely to want to move to a different place.</p>
+Let's move forward and look at using a few of these tools on the command line. Before you go any further, open your terminal program!
 
-<p>The <code>cd</code> command lets you Change Directory. Technically, cd isn’t a program but a built-in. This means your operating system provides it out of the box, and also that you can’t accidentally delete it — thank goodness!  You don’t need to worry too much about whether a command is a built-in or not, but bear in mind that built-ins appear on all unix-based systems.</p>
+### Navigation on the command line
 
-<p>To change directory, you type <code>cd</code> into your terminal, followed by the directory you want to move to. Assuming the directory is inside your home directory, you can use <code>cd Desktop</code> (see the screenshots below).</p>
+When you visit the command line you will inevitably need to navigate to a particular directory to "do something". All the operating systems (assuming a default setup) will launch their terminal program in your "home" directory, and from there you’re likely to want to move to a different place.
 
-<p><img alt="results of the cd Desktop command being run in a variety of windows terminals - the terminal location moves into the desktop" src="win-terminals-cd.png"></p>
+The `cd` command lets you Change Directory. Technically, cd isn’t a program but a built-in. This means your operating system provides it out of the box, and also that you can’t accidentally delete it — thank goodness!  You don’t need to worry too much about whether a command is a built-in or not, but bear in mind that built-ins appear on all unix-based systems.
 
-<p>Try typing this into your system's terminal:</p>
+To change directory, you type `cd` into your terminal, followed by the directory you want to move to. Assuming the directory is inside your home directory, you can use `cd Desktop` (see the screenshots below).
 
-<pre class="brush: bash">cd Desktop</pre>
+![results of the cd Desktop command being run in a variety of windows terminals - the terminal location moves into the desktop](win-terminals-cd.png)
 
-<p>If you want to move back up to the previous directory, you can use two dots:</p>
+Try typing this into your system's terminal:
 
-<pre class="brush: bash">cd ..</pre>
+```bash
+cd Desktop
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> A very useful terminal shortcut is using the <kbd>tab</kbd> key to autocomplete names that you know are present, rather than having to type out the whole thing. For example, after typing the above two commands, try typing <code>cd D</code> and pressing <kbd>tab</kbd> — it should autocomplete the directory name <code>Desktop</code> for you, provided it is present in the current directory. Bear this in mind as you move forward.</p>
-</div>
+If you want to move back up to the previous directory, you can use two dots:
 
-<p>If the directory you want to go to is nested deep, you need to know the path to get to it. This usually becomes easier as you get more familiar with the structure of your file system, but if you are not sure of the path you can usually figure it out with a combination of the <code>ls</code> command (see below), and by clicking around in your Explorer/Finder window to see where a directory is, relative to where you currently are.</p>
+```bash
+cd ..
+```
 
-<p>For example, if you wanted to go to a directory called <code>src</code>, located inside a directory called <code>project</code>, located on the <code>Desktop</code>, you could type these three commands to get there from your home folder:</p>
+> **Note:** A very useful terminal shortcut is using the <kbd>tab</kbd> key to autocomplete names that you know are present, rather than having to type out the whole thing. For example, after typing the above two commands, try typing `cd D` and pressing <kbd>tab</kbd> — it should autocomplete the directory name `Desktop` for you, provided it is present in the current directory. Bear this in mind as you move forward.
 
-<pre class="brush: bash">cd Desktop
+If the directory you want to go to is nested deep, you need to know the path to get to it. This usually becomes easier as you get more familiar with the structure of your file system, but if you are not sure of the path you can usually figure it out with a combination of the `ls` command (see below), and by clicking around in your Explorer/Finder window to see where a directory is, relative to where you currently are.
+
+For example, if you wanted to go to a directory called `src`, located inside a directory called `project`, located on the `Desktop`, you could type these three commands to get there from your home folder:
+
+```bash
+cd Desktop
 cd project
-cd src</pre>
+cd src
+```
 
-<p>But this a waste of time — instead, you can type one command, with the different items in the path separated by forward slashes, just like you do when specifying paths to images or other assets in CSS, HTML, or JavaScript code:</p>
+But this a waste of time — instead, you can type one command, with the different items in the path separated by forward slashes, just like you do when specifying paths to images or other assets in CSS, HTML, or JavaScript code:
 
-<pre class="brush: bash">cd Desktop/project/src</pre>
+```bash
+cd Desktop/project/src
+```
 
-<p>Note that including a leading slash on your path makes the path absolute, for example <code>/Users/your-user-name/Desktop</code>. Omitting the leading slash like we’ve done above makes the path relative to the your present working directory. This is exactly the same as you would see with URLs in your web browser. A leading slash means "at the root of the web site", whereas omitting the slash means "the URL is relative to my current page".</p>
+Note that including a leading slash on your path makes the path absolute, for example `/Users/your-user-name/Desktop`. Omitting the leading slash like we’ve done above makes the path relative to the your present working directory. This is exactly the same as you would see with URLs in your web browser. A leading slash means "at the root of the web site", whereas omitting the slash means "the URL is relative to my current page".
 
-<div class="notecard note">
-<p><strong>Note:</strong> On windows you use backslashes instead of forward slashes, e.g. <code>cd Desktop\project\src</code> — this may seem really odd, but if you are interested in why, <a href="https://www.youtube.com/watch?v=5T3IJfBfBmI">watch this YouTube clip</a> featuring an explanation by one of Microsoft’s Principal engineers.</p>
-</div>
+> **Note:** On windows you use backslashes instead of forward slashes, e.g. `cd Desktop\project\src` — this may seem really odd, but if you are interested in why, [watch this YouTube clip](https://www.youtube.com/watch?v=5T3IJfBfBmI) featuring an explanation by one of Microsoft’s Principal engineers.
 
-<h3 id="Listing_directory_contents">Listing directory contents</h3>
+### Listing directory contents
 
-<p>Another built-in Unix command is <code>ls</code> (short for list), which lists the contents of the directory you’re currently in. Note that this won’t work if you’re using the default Windows command prompt (<code>cmd</code>) — the equivalent there is <code>dir</code>.</p>
+Another built-in Unix command is `ls` (short for list), which lists the contents of the directory you’re currently in. Note that this won’t work if you’re using the default Windows command prompt (`cmd`) — the equivalent there is `dir`.
 
-<p>Try running this now in your terminal:</p>
+Try running this now in your terminal:
 
-<pre class="brush: bash">ls</pre>
+```bash
+ls
+```
 
-<p>This gives you a list of the files and directories in your present working directory, but the information is really basic — you only get the name of each item present, not whether it is a file or a directory, or anything else. Fortunately, a small change to the command usage can give you a lot more information.</p>
+This gives you a list of the files and directories in your present working directory, but the information is really basic — you only get the name of each item present, not whether it is a file or a directory, or anything else. Fortunately, a small change to the command usage can give you a lot more information.
 
-<h3 id="Introducing_command_options">Introducing command options</h3>
+### Introducing command options
 
-<p>Most terminal commands have options — these are modifiers that you add onto the end of a command, which make it behave in a slightly different way. These usually consist of a space after the command name, followed by a dash, followed by one or more letters.</p>
+Most terminal commands have options — these are modifiers that you add onto the end of a command, which make it behave in a slightly different way. These usually consist of a space after the command name, followed by a dash, followed by one or more letters.
 
-<p>For example, give this a go and see what you get:</p>
+For example, give this a go and see what you get:
 
-<pre class="brush: bash">ls -l </pre>
+```bash
+ls -l
+```
 
-<p>In the case of <code>ls</code>, the <code>-l</code> (<em>dash ell</em>) option gives you a listing with one file or directory on each line, and a lot more information shown. Directories can be identified by looking for a letter "d" on the very left-hand side of the lines. Those are the ones we can <code>cd</code> into.</p>
+In the case of `ls`, the `-l` (_dash ell_) option gives you a listing with one file or directory on each line, and a lot more information shown. Directories can be identified by looking for a letter "d" on the very left-hand side of the lines. Those are the ones we can `cd` into.
 
-<p>Below is a screenshot with a “vanilla” macOS terminal at the top, and a customised terminal with some extra icons and colors to keep it looking lively — both showing the results of running <code>ls -l</code>:</p>
+Below is a screenshot with a “vanilla” macOS terminal at the top, and a customised terminal with some extra icons and colors to keep it looking lively — both showing the results of running `ls -l`:
 
-<p><img alt="A vanilla mac terminal and a more colorful custom mac terminal, showing a file listing - the result of running the ls -l command" src="mac-terminals-ls.png"></p>
+![A vanilla mac terminal and a more colorful custom mac terminal, showing a file listing - the result of running the ls -l command](mac-terminals-ls.png)
 
-<div class="notecard note">
-<p><strong>Note:</strong> To find out exactly what options each command has available, you can look at its <a href="https://en.wikipedia.org/wiki/Man_page">man page</a>. This is done by typing the <code>man</code> command, followed by the name of the command you want to look up, for example <code>man ls</code>. This will open up the man page in the terminal’s default text file viewer (for example, <code><a href="https://en.wikipedia.org/wiki/Less_(Unix)">less</a></code> in my terminal), and you should then be able to scroll through the page using the arrow keys, or some similar mechanism. The man page lists all the options in great detail, which may be a bit intimidating to begin with, but at least you know it’s there if you need it. Once you are finished looking through the man page, you need to quit out of it using your text viewer’s quit command ("q" in <code>less</code>; you may have to search on the web to find it if it isn’t obvious).</p>
-</div>
+> **Note:** To find out exactly what options each command has available, you can look at its [man page](https://en.wikipedia.org/wiki/Man_page). This is done by typing the `man` command, followed by the name of the command you want to look up, for example `man ls`. This will open up the man page in the terminal’s default text file viewer (for example, [`less`](<https://en.wikipedia.org/wiki/Less_(Unix)>) in my terminal), and you should then be able to scroll through the page using the arrow keys, or some similar mechanism. The man page lists all the options in great detail, which may be a bit intimidating to begin with, but at least you know it’s there if you need it. Once you are finished looking through the man page, you need to quit out of it using your text viewer’s quit command ("q" in `less`; you may have to search on the web to find it if it isn’t obvious).
 
-<div class="notecard note">
-<p><strong>Note:</strong> To run a command with multiple options at the same time, you can usually put them all in a single string after the dash character, for example <code>ls -lah</code>, or <code>ls -ltrh</code>. Try looking at the <code>ls</code> man page to work out what these extra options do!</p>
-</div>
+> **Note:** To run a command with multiple options at the same time, you can usually put them all in a single string after the dash character, for example `ls -lah`, or `ls -ltrh`. Try looking at the `ls` man page to work out what these extra options do!
 
-<p>Now that we’ve discussed two fundamental commands, have a little poke around your directory and see if you can navigate from one place to the next.</p>
+Now that we’ve discussed two fundamental commands, have a little poke around your directory and see if you can navigate from one place to the next.
 
-<h3 id="Creating_copying_moving_removing">Creating, copying, moving, removing</h3>
+### Creating, copying, moving, removing
 
-<p>There are a number of other basic utility commands that you’ll probably end up using quite a lot as you work with the terminal. They are pretty simple, so we won’t explain them all in quite as much detail as the previous couple.</p>
+There are a number of other basic utility commands that you’ll probably end up using quite a lot as you work with the terminal. They are pretty simple, so we won’t explain them all in quite as much detail as the previous couple.
 
-<p>Have a play with them in a test directory you’ve created somewhere so that you don’t accidentally delete anything important, using the example commands below for guidance:</p>
+Have a play with them in a test directory you’ve created somewhere so that you don’t accidentally delete anything important, using the example commands below for guidance:
 
-<ul>
- <li><code>mkdir</code> — this creates a new directory inside the current directory you are in, with the name you provide after the command name. For example, <code>mkdir my-awesome-website</code> will make a new directory called <code>my-awesome-website</code>.</li>
- <li><code>rmdir</code> — removes the named directory, but only if it’s empty. For example <code>rmdir my-awesome-website</code> will remove the directory we created above. If you want to remove a directory that is not empty (and also remove everything it contains), then you can use the <code>-r</code> option (recursive), but this is dangerous. Make sure there is nothing you might need inside the directory later on, as it will be gone forever.</li>
- <li><code>touch</code> — creates a new empty file, inside the current directory. For example, <code>touch mdn-example.md</code> creates a new empty file called <code>mdn-example.md</code>.</li>
- <li><code>mv</code> — moves a file from the first specified file location to the second specified file location, for example <code>mv mdn-example.md mdn-example.txt</code> (the locations are written as file paths). This command moves a file called <code>mdn-example.md</code> in the current directory to a file called <code>mdn-example.txt</code> in the current directory. Technically the file is being moved, but from a practical perspective, this command is actually renaming the file.</li>
- <li><code>cp</code> — similar in usage to <code>mv</code>, <code>cp</code> creates a copy of the file in the first location specified, in the second location specified. For example, <code>cp mdn-example.txt mdn-example.txt.bak</code> creates a copy of <code>mdn-example.txt</code> called <code>mdn-example.txt.bak</code> (you can of course call it something else if you wish).</li>
- <li><code>rm</code> — removes the specified file. For example, <code>rm mdn-example.txt</code> deletes a single file called <code>mdn-example.txt</code>. Note that this delete is permanent and can’t be undone via the recycle bin that you might have on your desktop user interface.</li>
-</ul>
+- `mkdir` — this creates a new directory inside the current directory you are in, with the name you provide after the command name. For example, `mkdir my-awesome-website` will make a new directory called `my-awesome-website`.
+- `rmdir` — removes the named directory, but only if it’s empty. For example `rmdir my-awesome-website` will remove the directory we created above. If you want to remove a directory that is not empty (and also remove everything it contains), then you can use the `-r` option (recursive), but this is dangerous. Make sure there is nothing you might need inside the directory later on, as it will be gone forever.
+- `touch` — creates a new empty file, inside the current directory. For example, `touch mdn-example.md` creates a new empty file called `mdn-example.md`.
+- `mv` — moves a file from the first specified file location to the second specified file location, for example `mv mdn-example.md mdn-example.txt` (the locations are written as file paths). This command moves a file called `mdn-example.md` in the current directory to a file called `mdn-example.txt` in the current directory. Technically the file is being moved, but from a practical perspective, this command is actually renaming the file.
+- `cp` — similar in usage to `mv`, `cp` creates a copy of the file in the first location specified, in the second location specified. For example, `cp mdn-example.txt mdn-example.txt.bak` creates a copy of `mdn-example.txt` called `mdn-example.txt.bak` (you can of course call it something else if you wish).
+- `rm` — removes the specified file. For example, `rm mdn-example.txt` deletes a single file called `mdn-example.txt`. Note that this delete is permanent and can’t be undone via the recycle bin that you might have on your desktop user interface.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Many terminal commands allow you to use asterisks as "wild card" characters, meaning "any sequence of characters". This allows you to run an operation against a potentially large number of files at once, all of which match the specified pattern. As an example, <code>rm mdn-*</code> would delete all files beginning with <code>mdn-</code>. <code>rm mdn-*.bak</code> would delete all files that start with <code>mdn-</code> and end with <code>.bak</code>.</p>
-</div>
+> **Note:** Many terminal commands allow you to use asterisks as "wild card" characters, meaning "any sequence of characters". This allows you to run an operation against a potentially large number of files at once, all of which match the specified pattern. As an example, `rm mdn-*` would delete all files beginning with `mdn-`. `rm mdn-*.bak` would delete all files that start with `mdn-` and end with `.bak`.
 
-<h2 id="Terminal_—_considered_harmful">Terminal — considered harmful?</h2>
+## Terminal — considered harmful?
 
-<p>We’ve alluded to this before, but to be clear — you need to be careful with the terminal. Simple commands do not carry too much danger, but as you start putting together more complex commands, you need to think carefully about what the command will do, and try testing them out first before you finally run them in the intended directory.</p>
+We’ve alluded to this before, but to be clear — you need to be careful with the terminal. Simple commands do not carry too much danger, but as you start putting together more complex commands, you need to think carefully about what the command will do, and try testing them out first before you finally run them in the intended directory.
 
-<p>Let’s say you had 1000 text files in a directory, and you wanted to go through them all and only delete the ones that have a certain substring inside the filename. If you are not careful, then you might end up deleting something important, losing you a load of your work in the process.<br>
- One good habit to get into is to write your terminal command out inside a text editor, figure out how you think it should look, and then make a backup copy of your directory and try running the command on that first, to test it.</p>
+Let’s say you had 1000 text files in a directory, and you wanted to go through them all and only delete the ones that have a certain substring inside the filename. If you are not careful, then you might end up deleting something important, losing you a load of your work in the process.
+One good habit to get into is to write your terminal command out inside a text editor, figure out how you think it should look, and then make a backup copy of your directory and try running the command on that first, to test it.
 
-<p>Another good tip — if you’re not comfortable trying terminal commands out on your own machine, a nice safe place to try them is over at <a href="https://glitch.com/">Glitch.com</a>. Along with being a great place to try out web development code, the projects also give you access to a terminal, so you can run all these commands directly in that terminal, safe in the knowledge that you won’t break your own machine.</p>
+Another good tip — if you’re not comfortable trying terminal commands out on your own machine, a nice safe place to try them is over at [Glitch.com](https://glitch.com/). Along with being a great place to try out web development code, the projects also give you access to a terminal, so you can run all these commands directly in that terminal, safe in the knowledge that you won’t break your own machine.
 
-<p><img alt="a double screenshot showing the glitch.com home page, and the glitch terminal emulator" src="glitch.png"></p>
+![a double screenshot showing the glitch.com home page, and the glitch terminal emulator](glitch.png)
 
-<p>A great resource for getting a quick overview of specific terminal commands is <a href="https://tldr.sh/">tldr.sh</a>. This is a community-driven documentation service, similar to MDN, but specific to terminal commands.</p>
+A great resource for getting a quick overview of specific terminal commands is [tldr.sh](https://tldr.sh/). This is a community-driven documentation service, similar to MDN, but specific to terminal commands.
 
-<p>In the next section let’s step it up a notch (or several notches in fact) and see how we can connect tools together on the command line to really see how the terminal can be advantageous over the regular desktop user interface.</p>
+In the next section let’s step it up a notch (or several notches in fact) and see how we can connect tools together on the command line to really see how the terminal can be advantageous over the regular desktop user interface.
 
-<h2 id="Connecting_commands_together_with_pipes">Connecting commands together with pipes</h2>
+## Connecting commands together with pipes
 
-<p>The terminal really comes into its own when you start to chain commands together using the <code>|</code> (pipe) symbol. Let’s look at a very quick example of what this means.</p>
+The terminal really comes into its own when you start to chain commands together using the `|` (pipe) symbol. Let’s look at a very quick example of what this means.
 
-<p>We’ve already looked at <code>ls</code>, which outputs the contents of the current directory:</p>
+We’ve already looked at `ls`, which outputs the contents of the current directory:
 
-<pre class="brush: bash">ls</pre>
+```bash
+ls
+```
 
-<p>But what if we wanted to quickly count the number of files and directories inside the current directory? <code>ls</code> can’t do that on its own.</p>
+But what if we wanted to quickly count the number of files and directories inside the current directory? `ls` can’t do that on its own.
 
-<p>There is another Unix tool available called <code>wc</code>. This counts the number of words, lines, characters, or bytes of whatever is inputted into it. This can be a text file — the below example outputs the number of lines in <code>myfile.txt</code>:</p>
+There is another Unix tool available called `wc`. This counts the number of words, lines, characters, or bytes of whatever is inputted into it. This can be a text file — the below example outputs the number of lines in `myfile.txt`:
 
-<pre class="brush: bash">wc -l myfile.txt</pre>
+```bash
+wc -l myfile.txt
+```
 
-<p>But it can also count the number of lines of whatever output is <strong>piped</strong> into it. For example, the below command counts the number of lines outputted by the <code>ls</code> command (what it would normally print to the terminal if run on its own) and outputs that count to the terminal instead:</p>
+But it can also count the number of lines of whatever output is **piped** into it. For example, the below command counts the number of lines outputted by the `ls` command (what it would normally print to the terminal if run on its own) and outputs that count to the terminal instead:
 
-<pre class="brush: bash">ls | wc -l</pre>
+```bash
+ls | wc -l
+```
 
-<p>Since <code>ls</code> prints each file or directory on its own line, that effectively gives us a directory and file count.</p>
+Since `ls` prints each file or directory on its own line, that effectively gives us a directory and file count.
 
-<p>So what is going on here? A general philosophy of (unix) command line tools is that they print text to the terminal (also referred to "printing to standard output" or <code>STDOUT</code>). A good deal of commands can also read content from streamed input (known as "standard input" or <code>STDIN</code>).</p>
+So what is going on here? A general philosophy of (unix) command line tools is that they print text to the terminal (also referred to "printing to standard output" or `STDOUT`). A good deal of commands can also read content from streamed input (known as "standard input" or `STDIN`).
 
-<p>The pipe operator can <em>connect</em> these inputs and outputs together, allowing us to build up increasingly more complex operations to suit our needs — the output from one command can become the input to the next command. In this case, <code>ls</code> would normally print its output to <code>STDOUT</code>, but instead <code>ls</code>’s output is being piped into <code>wc</code>, which takes that output as an input, counting the number of lines it contains, and prints that count to <code>STDOUT</code> instead.</p>
+The pipe operator can _connect_ these inputs and outputs together, allowing us to build up increasingly more complex operations to suit our needs — the output from one command can become the input to the next command. In this case, `ls` would normally print its output to `STDOUT`, but instead `ls`’s output is being piped into `wc`, which takes that output as an input, counting the number of lines it contains, and prints that count to `STDOUT` instead.
 
-<h2 id="A_slightly_more_complex_example">A slightly more complex example</h2>
+## A slightly more complex example
 
-<p>Let’s go through something a bit more complicated. We will first try to fetch the contents of MDN's "fetch" page using the <code>curl</code> command (which can be used to request content from URLs), from <a href="/en-US/docs/Web/API/fetch">https://developer.mozilla.org/en-US/docs/Web/API/fetch</a>.</p>
+Let’s go through something a bit more complicated. We will first try to fetch the contents of MDN's "fetch" page using the `curl` command (which can be used to request content from URLs), from [https://developer.mozilla.org/en-US/docs/Web/API/fetch](/en-US/docs/Web/API/fetch).
 
-<p>However, this URL is the old location of the page. If you enter it in a new browser tab, you’ll (eventually) get redirected to <a href="/en-US/docs/Web/API/fetch">https://developer.mozilla.org/en-US/docs/Web/API/fetch</a>.</p>
+However, this URL is the old location of the page. If you enter it in a new browser tab, you’ll (eventually) get redirected to [https://developer.mozilla.org/en-US/docs/Web/API/fetch](/en-US/docs/Web/API/fetch).
 
-<p>Therefore, if you use curl to request https://developer.mozilla.org/docs/Web/API/fetch, you won’t get an output. Try it now:</p>
+Therefore, if you use curl to request https\://developer.mozilla.org/docs/Web/API/fetch, you won’t get an output. Try it now:
 
-<pre class="brush: bash">curl https://developer.mozilla.org/en-US/docs/Web/API/fetch</pre>
+```bash
+curl https://developer.mozilla.org/en-US/docs/Web/API/fetch
+```
 
-<p>We need to explicitly tell <code>curl</code> to follow redirects using the <code>-L</code> flag.</p>
+We need to explicitly tell `curl` to follow redirects using the `-L` flag.
 
-<p>Let's also look at the headers that <code>developer.mozilla.org</code> returns using <code>curl</code>'s <code>-I</code> flag, and print all the location redirects it sends to the terminal, by piping the output of <code>curl</code> into <code>grep</code> (we will ask <code>grep</code> to return all the lines that contain the word "location").</p>
+Let's also look at the headers that `developer.mozilla.org` returns using `curl`'s `-I` flag, and print all the location redirects it sends to the terminal, by piping the output of `curl` into `grep` (we will ask `grep` to return all the lines that contain the word "location").
 
-<p>Try running the following, and you’ll see that in fact there are three redirects happening before we reach the final page:</p>
+Try running the following, and you’ll see that in fact there are three redirects happening before we reach the final page:
 
-<pre class="brush: bash">curl https://developer.mozilla.org/docs/Web/API/fetch -L -I | grep location</pre>
+```bash
+curl https://developer.mozilla.org/docs/Web/API/fetch -L -I | grep location
+```
 
-<p>Your output should look something like this (<code>curl</code> will first output some download counters and suchlike):</p>
+Your output should look something like this (`curl` will first output some download counters and suchlike):
 
-<pre class="brush: bash">location: /en-US/docs/Web/API/fetch
+```bash
+location: /en-US/docs/Web/API/fetch
 location: /en-US/docs/Web/API/GlobalFetch/GlobalFetch.fetch()
 location: /en-US/docs/Web/API/GlobalFetch/fetch
-location: /en-US/docs/Web/API/fetch</pre>
+location: /en-US/docs/Web/API/fetch
+```
 
-<p>Although contrived, we could take this result a little further and transform the <code>location:</code> line contents, adding the base origin to the start of each one so that we get complete URLs printed out. For that, we'll add <code>awk</code> to the mix (which is a programming language akin to JavaScript or Ruby or Python, just a lot older!).</p>
+Although contrived, we could take this result a little further and transform the `location:` line contents, adding the base origin to the start of each one so that we get complete URLs printed out. For that, we'll add `awk` to the mix (which is a programming language akin to JavaScript or Ruby or Python, just a lot older!).
 
-<p>Try running this:</p>
+Try running this:
 
-<pre class="brush: bash">curl https://developer.mozilla.org/docs/Web/API/fetch -L -I | grep location | awk '{ print "https://developer.mozilla.org" $2 }'</pre>
+```bash
+curl https://developer.mozilla.org/docs/Web/API/fetch -L -I | grep location | awk '{ print "https://developer.mozilla.org" $2 }'
+```
 
-<p>Your final output should look something like this:</p>
+Your final output should look something like this:
 
-<pre class="brush: bash">https://developer.mozilla.org/en-US/docs/Web/API/fetch
+```bash
+https://developer.mozilla.org/en-US/docs/Web/API/fetch
 https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/GlobalFetch.fetch()
 https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch
-https://developer.mozilla.org/en-US/docs/Web/API/fetch</pre>
+https://developer.mozilla.org/en-US/docs/Web/API/fetch
+```
 
-<p>By combining these commands we've customised the output to show the full URLs that the Mozilla server is redirecting through when we request the <code>/docs/Web/API/fetch</code> URL.<br>
- Getting to know your system will prove useful in years to come — learn how these single serving tools work and how they can become part of your arsenal to solve niche problems.</p>
+By combining these commands we've customised the output to show the full URLs that the Mozilla server is redirecting through when we request the `/docs/Web/API/fetch` URL.
+Getting to know your system will prove useful in years to come — learn how these single serving tools work and how they can become part of your arsenal to solve niche problems.
 
-<h2 id="Adding_powerups">Adding powerups</h2>
+## Adding powerups
 
-<p>Now we’ve had a look at some of the built-in commands your system comes equipped with, let’s look at how we can install a third-party CLI tool and make use of it.</p>
+Now we’ve had a look at some of the built-in commands your system comes equipped with, let’s look at how we can install a third-party CLI tool and make use of it.
 
-<p>The vast ecosystem of installable tools for front end web development currently exists mostly inside <a href="https://www.npmjs.com">npm</a>, a privately owned, package hosting service that works closely together with Node.js. This is slowly expanding — you can expect to see more package providers as time goes on.</p>
+The vast ecosystem of installable tools for front end web development currently exists mostly inside [npm](https://www.npmjs.com), a privately owned, package hosting service that works closely together with Node.js. This is slowly expanding — you can expect to see more package providers as time goes on.
 
-<p><a href="https://nodejs.org/en/">Installing Node.js</a> also installs the npm command line tool (and a supplementary npm-centric tool called npx), which offers a gateway to installing additional command line tools. Node.js and npm work the same across all systems: macOS, Windows, and Linux.</p>
+[Installing Node.js](https://nodejs.org/en/) also installs the npm command line tool (and a supplementary npm-centric tool called npx), which offers a gateway to installing additional command line tools. Node.js and npm work the same across all systems: macOS, Windows, and Linux.
 
-<p>Install npm on your system now, by going to the URL above and downloading and running a Node.js installer appropriate to your operating system. If prompted, make sure to include npm as part of the installation.</p>
+Install npm on your system now, by going to the URL above and downloading and running a Node.js installer appropriate to your operating system. If prompted, make sure to include npm as part of the installation.
 
-<p><img alt="the node.js installer on windows, showing the option to include npm" src="npm-install-option.png"></p>
+![the node.js installer on windows, showing the option to include npm](npm-install-option.png)
 
-<p>Although we'll look at a number of different tools in the next article onwards, we'll cut our teeth on <a href="https://prettier.io/">Prettier</a>. Prettier is an opinionated code formatter that has "few options". Fewer options tends to mean simpler. Given how tooling can sometimes get out of hand in terms of complexity, "few options" can be very appealing.</p>
+Although we'll look at a number of different tools in the next article onwards, we'll cut our teeth on [Prettier](https://prettier.io/). Prettier is an opinionated code formatter that has "few options". Fewer options tends to mean simpler. Given how tooling can sometimes get out of hand in terms of complexity, "few options" can be very appealing.
 
-<h3 id="Where_to_install_our_CLI_tools">Where to install our CLI tools?</h3>
+### Where to install our CLI tools?
 
-<p>Before we dive into installing Prettier, there's a question to answer — "where should we install to?"</p>
+Before we dive into installing Prettier, there's a question to answer — "where should we install to?"
 
-<p>With <code>npm</code> we have the choice of installing tools globally — so we can access them anywhere — or locally to the current project directory.</p>
+With `npm` we have the choice of installing tools globally — so we can access them anywhere — or locally to the current project directory.
 
-<p>There's pros and cons each way — and this list of pros and cons for globally installing is far from exhaustive:</p>
+There's pros and cons each way — and this list of pros and cons for globally installing is far from exhaustive:
 
 <table class="standard-table no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Pros of installing globally</th>
-   <th scope="col">Cons of installing globally</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Accessible anywhere in your terminal</td>
-   <td>May not be compatible with your project's codebase</td>
-  </tr>
-  <tr>
-   <td>Only install once</td>
-   <td>Other developers in your team won't have access to these tools, for example if you are sharing the codebase over a tool like git.</td>
-  </tr>
-  <tr>
-   <td>Uses less disk space</td>
-   <td>Related to the previous point, it makes project code harder to replicate (if you install your tools locally, they can be set up as dependencies and installed with <code>npm install</code>).</td>
-  </tr>
-  <tr>
-   <td>Always the same version</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>Feels like any other unix command</td>
-   <td></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Pros of installing globally</th>
+      <th scope="col">Cons of installing globally</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Accessible anywhere in your terminal</td>
+      <td>May not be compatible with your project's codebase</td>
+    </tr>
+    <tr>
+      <td>Only install once</td>
+      <td>
+        Other developers in your team won't have access to these tools, for
+        example if you are sharing the codebase over a tool like git.
+      </td>
+    </tr>
+    <tr>
+      <td>Uses less disk space</td>
+      <td>
+        Related to the previous point, it makes project code harder to replicate
+        (if you install your tools locally, they can be set up as dependencies
+        and installed with <code>npm install</code>).
+      </td>
+    </tr>
+    <tr>
+      <td>Always the same version</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Feels like any other unix command</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Although the <em>cons</em> list is shorter, the negative impact of global installing is potentially much larger than the benefits. However, for now we'll err on the side of simplicity and install globally to keep things simple. We'll look more at local installs and why they're good in the next article.</p>
+Although the _cons_ list is shorter, the negative impact of global installing is potentially much larger than the benefits. However, for now we'll err on the side of simplicity and install globally to keep things simple. We'll look more at local installs and why they're good in the next article.
 
-<h3 id="Installing_Prettier">Installing Prettier</h3>
+### Installing Prettier
 
-<p>For this article we will install Prettier as a global command line utility.</p>
+For this article we will install Prettier as a global command line utility.
 
-<p>Prettier is an opinionated code formatting tool for front end developers, focusing around JavaScript-based languages and adding support for HTML, CSS, SCSS, JSON and more.<br>
- Prettier can:</p>
+Prettier is an opinionated code formatting tool for front end developers, focusing around JavaScript-based languages and adding support for HTML, CSS, SCSS, JSON and more.
+Prettier can:
 
-<ul>
- <li>Save the cognitive overhead of getting the style consistent manually across all your code files; Prettier can do this for you automatically.</li>
- <li>Help newcomers to web development format their code in best-practice fashion.</li>
- <li>Be installed on any operating system and even as a direct part of project tooling, ensuring that colleagues and friends who work on your code use the code style you’re using.</li>
- <li>Be configured to run upon save, as you type, or even before publishing your code (with additional tooling that we’ll see later on in the module).</li>
-</ul>
+- Save the cognitive overhead of getting the style consistent manually across all your code files; Prettier can do this for you automatically.
+- Help newcomers to web development format their code in best-practice fashion.
+- Be installed on any operating system and even as a direct part of project tooling, ensuring that colleagues and friends who work on your code use the code style you’re using.
+- Be configured to run upon save, as you type, or even before publishing your code (with additional tooling that we’ll see later on in the module).
 
-<p>Once you've installed node, open up the terminal and run the following command to install Prettier:</p>
+Once you've installed node, open up the terminal and run the following command to install Prettier:
 
-<pre class="brush: bash">npm install --global prettier</pre>
+```bash
+npm install --global prettier
+```
 
-<p>Once the command has finished running, the Prettier tool is now available in your terminal, at any location in your file system.</p>
+Once the command has finished running, the Prettier tool is now available in your terminal, at any location in your file system.
 
-<p>Running the command without any arguments, as with many other commands, will offer up usage and help information. Try this now:</p>
+Running the command without any arguments, as with many other commands, will offer up usage and help information. Try this now:
 
-<pre class="brush: bash">prettier</pre>
+```bash
+prettier
+```
 
-<p>Your output should look something like this:</p>
+Your output should look something like this:
 
-<pre class="brush: bash">Usage: prettier [options] [file/glob ...]
+```bash
+Usage: prettier [options] [file/glob ...]
 
 By default, output is written to stdout.
 Stdin is read if it is piped to Prettier and no files are given.
 
-…</pre>
+…
+```
 
-<p>It's always worth at the very least skimming over the usage information, even if it is long. It'll help you to understand better how the tool is intended to be used.</p>
+It's always worth at the very least skimming over the usage information, even if it is long. It'll help you to understand better how the tool is intended to be used.
 
-<h3 id="Playing_with_Prettier">Playing with Prettier</h3>
+### Playing with Prettier
 
-<p>Let’s have a quick play with Prettier, so you can see how it works.</p>
+Let’s have a quick play with Prettier, so you can see how it works.
 
-<p>First of all, create a new directory somewhere on your file system that is easy to find. Maybe a directory called <code>prettier-test</code> on your <code>Desktop</code>.</p>
+First of all, create a new directory somewhere on your file system that is easy to find. Maybe a directory called `prettier-test` on your `Desktop`.
 
-<p>Now save the following code in a new file called <code>index.js</code>, inside your test directory:</p>
+Now save the following code in a new file called `index.js`, inside your test directory:
 
-<pre class="brush: js">const myObj = {
+```js
+const myObj = {
 a:1,b:{c:2}}
 function printMe(obj){console.log(obj.b.c)}
-printMe(myObj)</pre>
+printMe(myObj)
+```
 
-<p>We can run prettier against a codebase to just check if our code wants adjusting. <code>cd</code> into your directory, and try running this command:</p>
+We can run prettier against a codebase to just check if our code wants adjusting. `cd` into your directory, and try running this command:
 
-<pre class="brush: bash">prettier --check index.js</pre>
+```bash
+prettier --check index.js
+```
 
-<p>You should get on output along the lines of</p>
+You should get on output along the lines of
 
-<pre class="brush: bash">Checking formatting...
+```bash
+Checking formatting...
 index.js
-Code style issues found in the above file(s). Forgot to run Prettier?</pre>
+Code style issues found in the above file(s). Forgot to run Prettier?
+```
 
-<p>So there's some code styles that can be fixed. No problem. Adding the <code>--write</code> option to the prettier command will fix those up, leaving us to focus on actually writing useful code.</p>
+So there's some code styles that can be fixed. No problem. Adding the `--write` option to the prettier command will fix those up, leaving us to focus on actually writing useful code.
 
-<p>Now try running this version of the command:</p>
+Now try running this version of the command:
 
-<pre class="brush: bash">prettier --write index.js</pre>
+```bash
+prettier --write index.js
+```
 
-<p>You’ll get an output like this</p>
+You’ll get an output like this
 
-<pre class="brush: bash">Checking formatting...
+```bash
+Checking formatting...
 index.js
-Code style issues fixed in the above file(s).</pre>
+Code style issues fixed in the above file(s).
+```
 
-<p>But more importantly, if you look back at your JavaScript file you’ll find it has been reformatted to something like this:</p>
+But more importantly, if you look back at your JavaScript file you’ll find it has been reformatted to something like this:
 
-<pre class="brush: js">const myObj = {
+```js
+const myObj = {
   a: 1,
   b: { c: 2 },
 };
 function printMe(obj) {
   console.log(obj.b.c);
 }
-printMe(myObj);</pre>
+printMe(myObj);
+```
 
-<p>Depending on your workflow (or the workflow that you pick) you can make this an automated part of your process. Automation is really where tools excel; our personal preference is the kind of automation that "just happens" without having to configure anything.</p>
+Depending on your workflow (or the workflow that you pick) you can make this an automated part of your process. Automation is really where tools excel; our personal preference is the kind of automation that "just happens" without having to configure anything.
 
-<p>With Prettier there's a number of ways automation can be achieved and though they're beyond the scope of this article, there's some excellent resources online to help (some of which have been linked to). You can invoke prettier:</p>
+With Prettier there's a number of ways automation can be achieved and though they're beyond the scope of this article, there's some excellent resources online to help (some of which have been linked to). You can invoke prettier:
 
-<ul>
- <li>Before you commit your code into a git repository using <a href="https://github.com/typicode/husky">Husky</a>.</li>
- <li>Whenever you hit "save" in your code editor, be it <a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode">VS Code</a>, <a href="https://atom.io/packages/prettier-atom">Atom</a>, or <a href="https://packagecontrol.io/packages/JsPrettier">Sublime Text</a>.</li>
- <li>As part of continuous integration checks using tools like <a href="https://github.com/features/actions">Github Actions</a>.</li>
-</ul>
+- Before you commit your code into a git repository using [Husky](https://github.com/typicode/husky).
+- Whenever you hit "save" in your code editor, be it [VS Code](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), [Atom](https://atom.io/packages/prettier-atom), or [Sublime Text](https://packagecontrol.io/packages/JsPrettier).
+- As part of continuous integration checks using tools like [Github Actions](https://github.com/features/actions).
 
-<p>Our personal preference is the second one — while using say VS Code, Prettier kicks in and cleans up any formatting it needs to do every time we hit save. You can find a lot more information about using Prettier in different ways in the <a href="https://prettier.io/docs/en/">Prettier docs</a>.</p>
+Our personal preference is the second one — while using say VS Code, Prettier kicks in and cleans up any formatting it needs to do every time we hit save. You can find a lot more information about using Prettier in different ways in the [Prettier docs](https://prettier.io/docs/en/).
 
-<h2 id="Other_tools_to_play_with">Other tools to play with</h2>
+## Other tools to play with
 
-<p>If you want to play with a few more tools, here’s a brief list that are fun to try out:</p>
+If you want to play with a few more tools, here’s a brief list that are fun to try out:
 
-<ul>
- <li><code><a href="https://github.com/sharkdp/bat">bat</a></code> — A “nicer” <code>cat</code> (<code>cat</code> is used to print the contents of files).</li>
- <li><code><a href="https://denilson.sa.nom.br/prettyping/">prettyping</a></code> — <code>ping</code> on the command line, but visualized (<code>ping</code> is a useful tool to check if a server is responding).</li>
- <li><code><a href="https://hisham.hm/htop/">htop</a></code> — A process viewer, useful for when something is making your CPU fan behave like a jet engine and you want to identify the offending program.</li>
- <li><code><a href="https://tldr.sh/#installation">tldr</a></code> — mentioned earlier in this chapter, but available as a command line tool.</li>
-</ul>
+- [`bat`](https://github.com/sharkdp/bat) — A “nicer” `cat` (`cat` is used to print the contents of files).
+- [`prettyping`](https://denilson.sa.nom.br/prettyping/) — `ping` on the command line, but visualized (`ping` is a useful tool to check if a server is responding).
+- [`htop`](https://hisham.hm/htop/) — A process viewer, useful for when something is making your CPU fan behave like a jet engine and you want to identify the offending program.
+- [`tldr`](https://tldr.sh/#installation) — mentioned earlier in this chapter, but available as a command line tool.
 
-<p>Note that some of the above suggestions may need installing using npm, like we did with Prettier.</p>
+Note that some of the above suggestions may need installing using npm, like we did with Prettier.
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>That brings us to the end of our brief tour of the terminal/command line. Next up we’ll be looking in more detail at package managers, and what we can do with them.</p>
+That brings us to the end of our brief tour of the terminal/command line. Next up we’ll be looking in more detail at package managers, and what we can do with them.
 
-<p>{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}</p>
+{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
-<h2 id="In_this_module">In this module</h2>
+## In this module
 
-<ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview">Client-side tooling overview</a></li>
- <li><strong>Command line crash course</strong></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management">Package management basics</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain">Introducing a complete toolchain</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment">Deploying our app</a></li>
-</ul>
+- [Client-side tooling overview](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)
+- **Command line crash course**
+- [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)
+- [Introducing a complete toolchain](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain)
+- [Deploying our app](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment)

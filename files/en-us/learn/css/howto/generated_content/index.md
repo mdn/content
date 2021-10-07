@@ -5,67 +5,72 @@ tags:
   - Basic
   - Beginner
   - CSS
-  - 'CSS:Getting_Started'
+  - CSS:Getting_Started
   - Graphics
   - Guide
   - NeedsUpdate
   - Web
 ---
-<p>{{LearnSidebar}}</p>
+{{LearnSidebar}}
 
-<p><span class="seoSummary">This article describes some ways in which you can use CSS to add content when a document is displayed. You modify your stylesheet to add text content or images.</span></p>
+This article describes some ways in which you can use CSS to add content when a document is displayed. You modify your stylesheet to add text content or images.
 
-<p>One of the important advantages of CSS is that it helps you to separate a document's style from its content. However, there are situations where it makes sense to specify certain content as part of the stylesheet, not as part of the document. You can specify text or image content within a stylesheet when that content is closely linked to the document's structure. </p>
+One of the important advantages of CSS is that it helps you to separate a document's style from its content. However, there are situations where it makes sense to specify certain content as part of the stylesheet, not as part of the document. You can specify text or image content within a stylesheet when that content is closely linked to the document's structure.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Content specified in a stylesheet does not become part of the DOM.</p>
-</div>
+> **Note:** Content specified in a stylesheet does not become part of the DOM.
 
-<p>Specifying content in a stylesheet can cause complications. For example, you might have different language versions of your document that share a stylesheet. If you specify content in your stylesheet that requires translation, you have to put those parts of your stylesheet in different files and arrange for them to be linked with the appropriate language versions of your document.</p>
+Specifying content in a stylesheet can cause complications. For example, you might have different language versions of your document that share a stylesheet. If you specify content in your stylesheet that requires translation, you have to put those parts of your stylesheet in different files and arrange for them to be linked with the appropriate language versions of your document.
 
-<p>This issue does not arise if the content you specify consists of symbols or images that apply in all languages and cultures.</p>
+This issue does not arise if the content you specify consists of symbols or images that apply in all languages and cultures.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Text_content">Text content</h3>
+### Text content
 
-<p>CSS can insert text content before or after an element. To specify this, make a rule and add {{ cssxref("::before") }} or {{ cssxref("::after") }} to the selector. In the declaration, specify the {{ cssxref("content") }} property with the text content as its value.</p>
+CSS can insert text content before or after an element. To specify this, make a rule and add {{ cssxref("::before") }} or {{ cssxref("::after") }} to the selector. In the declaration, specify the {{ cssxref("content") }} property with the text content as its value.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">A text where I need to &lt;span class="ref"&gt;something&lt;/span&gt;
-</pre>
+```html
+A text where I need to <span class="ref">something</span>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.ref::before {
+```css
+.ref::before {
   font-weight: bold;
   color: navy;
   content: "Reference ";
-}</pre>
+}
+```
 
-<h4 id="Output">Output</h4>
+#### Output
 
-<p>{{ EmbedLiveSample('Text_content', 600, 30) }}</p>
+{{ EmbedLiveSample('Text_content', 600, 30) }}
 
-<p>The character set of a stylesheet is UTF-8 by default, but it can also be specified in the link, in the stylesheet itself, or in other ways. For details, see <a href="https://www.w3.org/TR/CSS21/syndata.html#q23">4.4 CSS style sheet representation</a> in the CSS Specification.</p>
+The character set of a stylesheet is UTF-8 by default, but it can also be specified in the link, in the stylesheet itself, or in other ways. For details, see [4.4 CSS style sheet representation](https://www.w3.org/TR/CSS21/syndata.html#q23) in the CSS Specification.
 
-<p>Individual characters can also be specified by an escape mechanism that uses backslash as the escape character. For example, "\265B" is the chess symbol for a black queen ♛. For details, see <a href="https://www.w3.org/TR/CSS21/syndata.html#q24">Referring to characters not represented in a character encoding</a> and <a href="https://www.w3.org/TR/CSS21/syndata.html#q6">Characters and case</a> in the CSS Specification.</p>
+Individual characters can also be specified by an escape mechanism that uses backslash as the escape character. For example, "\265B" is the chess symbol for a black queen ♛. For details, see [Referring to characters not represented in a character encoding](https://www.w3.org/TR/CSS21/syndata.html#q24) and [Characters and case](https://www.w3.org/TR/CSS21/syndata.html#q6) in the CSS Specification.
 
-<h3 id="Image_content">Image content</h3>
+### Image content
 
-<p>To add an image before or after an element, you can specify the URL of an image file in the value of the {{ cssxref("content") }} property.</p>
+To add an image before or after an element, you can specify the URL of an image file in the value of the {{ cssxref("content") }} property.
 
-<p>This rule adds a space and an icon after every link that has the class <code>glossary</code>:</p>
+This rule adds a space and an icon after every link that has the class `glossary`:
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;a href="developer.mozilla.org" class="glossary"&gt;developer.mozilla.org&lt;/a&gt;</pre>
+```html
+<a href="developer.mozilla.org" class="glossary">developer.mozilla.org</a>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">a.glossary::after {
+```css
+a.glossary::after {
    content: " " url("glossary-icon.gif");
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Image_content', 600, 40) }}</p>
+{{ EmbedLiveSample('Image_content', 600, 40) }}

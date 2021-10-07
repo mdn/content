@@ -13,115 +13,91 @@ tags:
   - publishing
   - web server
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
 
-<div>{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}</div>
+Once you finish writing the code and organizing the files that make up your website, you need to put it all online so people can find it. This article explains how to get your simple sample code online with little effort.
 
-<div class="summary">
-<p>Once you finish writing the code and organizing the files that make up your website, you need to put it all online so people can find it. This article explains how to get your simple sample code online with little effort.</p>
-</div>
+## What are the options?
 
-<h2 id="What_are_the_options">What are the options?</h2>
+Publishing a website is a complex topic because there are many ways to go about it. This article doesn't attempt to document all the possible methods. Instead, it explains the advantages and disadvantages of three approaches that are practical for beginners. Then it steps through one method that can work right away for many readers.
 
-<p>Publishing a website is a complex topic because there are many ways to go about it. This article doesn't attempt to document all the possible methods. Instead, it explains the advantages and disadvantages of three approaches that are practical for beginners. Then it steps through one method that can work right away for many readers.</p>
+### Getting hosting and a domain name
 
-<h3 id="Getting_hosting_and_a_domain_name">Getting hosting and a domain name</h3>
+To have more control over content and website appearance, most people choose to buy web hosting and a domain name:
 
-<p>To have more control over content and website appearance, most people choose to buy web hosting and a domain name:</p>
+- Web hosting is rented file space on a hosting company's [web server](/en-US/docs/Learn/Common_questions/What_is_a_web_server). You put website files on the web server. The web server provides website content to website visitors.
+- A [domain name](/en-US/docs/Learn/Common_questions/What_is_a_domain_name) is the unique address where people find your website, such as `http://www.mozilla.org` or `http://www.bbc.co.uk`. You can rent your domain name for as many years as you want from a **domain registrar**.
 
-<ul>
- <li>Web hosting is rented file space on a hosting company's <a href="/en-US/docs/Learn/Common_questions/What_is_a_web_server">web server</a>. You put website files on the web server. The web server provides website content to website visitors.</li>
- <li>A <a href="/en-US/docs/Learn/Common_questions/What_is_a_domain_name">domain name</a> is the unique address where people find your website, such as <code>http://www.mozilla.org</code> or <code>http://www.bbc.co.uk</code>. You can rent your domain name for as many years as you want from a <strong>domain registrar</strong>.</li>
-</ul>
+Many professional websites go online this way.
 
-<p>Many professional websites go online this way.</p>
+In addition, you will need a {{Glossary("FTP", "File Transfer Protocol (FTP)")}} program (see [How much does it cost: software](/en-US/docs/Learn/Common_questions/How_much_does_it_cost#software) for more details) to actually transfer the website files over to the server. FTP  programs vary widely, but generally, you have to connect to your web server using details provided by your hosting company (typically username, password, hostname). Then the program shows you your local files and the web server's files in two windows, and provides a way for you to transfer files back and forth.
 
-<p>In addition, you will need a {{Glossary("FTP", "File Transfer Protocol (FTP)")}} program (see <a href="/en-US/docs/Learn/Common_questions/How_much_does_it_cost#software">How much does it cost: software</a> for more details) to actually transfer the website files over to the server. FTP  programs vary widely, but generally, you have to connect to your web server using details provided by your hosting company (typically username, password, hostname). Then the program shows you your local files and the web server's files in two windows, and provides a way for you to transfer files back and forth.</p>
+![](ftp.jpg)
 
-<p><img alt="" src="ftp.jpg"></p>
+#### Tips for finding hosting and domains
 
-<h4 id="Tips_for_finding_hosting_and_domains">Tips for finding hosting and domains</h4>
+- MDN does not promote specific commercial hosting companies or domain name registrars. To find hosting companies and registrars, just search for "web hosting" and "domain names". All registrars will have a feature to allow you to check if the domain name you want is available.
+- Your home or office {{Glossary("ISP", "internet service provider")}} may provide some limited hosting for a small website. The available feature set will be limited, but it might be perfect for your first experiments.
+- There are also free services available like [Neocities](https://neocities.org/), [Google Sites](https://sites.google.com/), [Blogger](https://www.blogger.com), and [WordPress](https://wordpress.com/). Sometimes you get what you pay for, but sometimes these resources are good enough for your initial experiments.
+- Many companies provide hosting and domains.
 
-<ul>
- <li>MDN does not promote specific commercial hosting companies or domain name registrars. To find hosting companies and registrars, just search for "web hosting" and "domain names". All registrars will have a feature to allow you to check if the domain name you want is available.</li>
- <li>Your home or office {{Glossary("ISP", "internet service provider")}} may provide some limited hosting for a small website. The available feature set will be limited, but it might be perfect for your first experiments.</li>
- <li>There are also free services available like <a href="https://neocities.org/">Neocities</a>, <a href="https://sites.google.com/">Google Sites</a>, <a href="https://www.blogger.com">Blogger</a>, and <a href="https://wordpress.com/">WordPress</a>. Sometimes you get what you pay for, but sometimes these resources are good enough for your initial experiments.</li>
- <li>Many companies provide hosting and domains.</li>
-</ul>
+### Using an online tool like GitHub or Google App Engine
 
-<h3 id="Using_an_online_tool_like_GitHub_or_Google_App_Engine">Using an online tool like GitHub or Google App Engine</h3>
+Some tools let you publish your website online:
 
-<p>Some tools let you publish your website online:</p>
+- [GitHub](https://github.com/) is a "social coding" site. It allows you to upload code repositories for storage in the [Git](https://git-scm.com/) **version control system.** You can then collaborate on code projects, and the system is open-source by default, meaning that anyone in the world can find your GitHub code, use it, learn from it, and improve on it. GitHub has a very useful feature called [GitHub Pages](https://pages.github.com/), which allows you to expose website code live on the web.
+- [Google App Engine](https://cloud.google.com/appengine/ "App Engine - Build Scalable Web & Mobile Backends in Any Language  |  Google Cloud Platform") is a powerful platform that lets you build and run applications on Google’s infrastructure — whether you need to build a multi-tiered web application from scratch or host a static website. See [How do you host your website on Google App Engine?](/en-US/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine) for more information.
 
-<ul>
- <li><a href="https://github.com/">GitHub</a> is a "social coding" site. It allows you to upload code repositories for storage in the <a href="https://git-scm.com/">Git</a> <strong>version control system.</strong> You can then collaborate on code projects, and the system is open-source by default, meaning that anyone in the world can find your GitHub code, use it, learn from it, and improve on it. GitHub has a very useful feature called <a href="https://pages.github.com/">GitHub Pages</a>, which allows you to expose website code live on the web.</li>
- <li><a href="https://cloud.google.com/appengine/" title="App Engine - Build Scalable Web &amp; Mobile Backends in Any Language  |  Google Cloud Platform">Google App Engine</a> is a powerful platform that lets you build and run applications on Google’s infrastructure — whether you need to build a multi-tiered web application from scratch or host a static website. See <a href="/en-US/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine">How do you host your website on Google App Engine?</a> for more information.</li>
-</ul>
+These options are usually free, but you may outgrow the limited feature-set.
 
-<p>These options are usually free, but you may outgrow the limited feature-set.</p>
+### Using a web-based IDE such as CodePen
 
-<h3 id="Using_a_web-based_IDE_such_as_CodePen">Using a web-based IDE such as CodePen</h3>
+There are a number of web apps that emulate a website development environment, allowing you to enter HTML, CSS and JavaScript, and then display the result of that code as a website — all in one browser tab. Generally speaking, these tools are relatively easy, great for learning, good for sharing code (for example, if you want to share a technique with or ask for debugging help from colleagues in a different office), and free (for basic features). They host your rendered page at a unique web address. However, the features are limited, and these apps usually don't provide hosting space for assets (like images).
 
-<p>There are a number of web apps that emulate a website development environment, allowing you to enter HTML, CSS and JavaScript, and then display the result of that code as a website — all in one browser tab. Generally speaking, these tools are relatively easy, great for learning, good for sharing code (for example, if you want to share a technique with or ask for debugging help from colleagues in a different office), and free (for basic features). They host your rendered page at a unique web address. However, the features are limited, and these apps usually don't provide hosting space for assets (like images).</p>
+Try playing with some of these examples to find out which one works best for you:
 
-<p>Try playing with some of these examples to find out which one works best for you:</p>
+- [JSFiddle](https://jsfiddle.net/)
+- [Glitch](https://glitch.com/)
+- [JS Bin](https://jsbin.com/)
+- [CodePen](https://codepen.io/)
 
-<ul>
- <li><a href="https://jsfiddle.net/">JSFiddle</a></li>
- <li><a href="https://glitch.com/">Glitch</a></li>
- <li><a href="https://jsbin.com/">JS Bin</a></li>
- <li><a href="https://codepen.io/">CodePen</a></li>
-</ul>
+![](jsbin-screen.png)
 
-<p><img alt="" src="jsbin-screen.png"></p>
+## Publishing via GitHub
 
-<h2 id="Publishing_via_GitHub">Publishing via GitHub</h2>
+Now let's examine how to easily publish your site via GitHub Pages.
 
-<p>Now let's examine how to easily publish your site via GitHub Pages.</p>
+1.  First of all, [sign up for GitHub](https://github.com/) and verify your email address.
+2.  Next, you need to [create a repository](https://github.com/new) to store files.
+3.  On this page, in the _Repository name_ box, enter _username_.github.io, where _username_ is your username. For example, our friend Bob Smith would enter _bobsmith.github.io_.
+    Check the "_Initialize this repository with a README"_ box. Then click *Create repository*.![](github-create-repo.png)
+4.  Drag and drop the content of your website folder into your repository. Then click _Commit changes_.
 
-<ol>
- <li>First of all, <a href="https://github.com/">sign up for GitHub</a> and verify your email address.</li>
- <li>Next, you need to <a href="https://github.com/new">create a repository</a> to store files.</li>
- <li>On this page, in the <em>Repository name</em> box, enter <em>username</em>.github.io, where <em>username</em> is your username. For example, our friend Bob Smith would enter <em>bobsmith.github.io</em>.<br>
-  Check the "<em>Initialize this repository with a README"</em> box. Then click <em>Create repository</em>.<img alt="" src="github-create-repo.png"></li>
- <li>Drag and drop the content of your website folder into your repository. Then click <em>Commit changes</em>.<br>
+    > **Note:** Make sure your folder has an `index.html` file.
 
-  <div class="note">
-  <p><strong>Note:</strong> Make sure your folder has an <code>index.html</code> file.</p>
-  </div>
- </li>
- <li>
-  <p>Navigate your browser to <em>username</em>.github.io to see your website online. For example, for the username <em>chrisdavidmills</em>, go to <a href="https://chrisdavidmills.github.io/"><em>chrisdavidmills</em>.github.io</a>.</p>
+5.  Navigate your browser to _username_.github.io to see your website online. For example, for the username _chrisdavidmills_, go to [_chrisdavidmills_.github.io](https://chrisdavidmills.github.io/).
 
-  <div class="note">
-  <p><strong>Note:</strong> It may take a few minutes for your website to go live. If your website does not display immediately, wait a few minutes. Try again.</p>
-  </div>
- </li>
-</ol>
+    > **Note:** It may take a few minutes for your website to go live. If your website does not display immediately, wait a few minutes. Try again.
 
-<p>To learn more, see <a href="https://help.github.com/categories/github-pages-basics/">GitHub Pages Help</a>.</p>
+To learn more, see [GitHub Pages Help](https://help.github.com/categories/github-pages-basics/).
 
-<h2 id="Further_reading">Further reading</h2>
+## Further reading
 
-<ul>
- <li><a href="/en-US/docs/Learn/Common_questions/What_is_a_web_server">What is a web server</a></li>
- <li><a href="/en-US/docs/Learn/Common_questions/What_is_a_domain_name">Understanding domain names</a></li>
- <li><a href="/en-US/docs/Learn/Common_questions/How_much_does_it_cost">How much does it cost to do something on the web?</a></li>
- <li><a href="https://www.codecademy.com/learn/deploy-a-website">Deploy a Website</a>: A nice tutorial from Codecademy that goes a bit further and shows some additional techniques.</li>
- <li><a href="https://alignedleft.com/resources/cheap-web-hosting">Cheap or Free Static Website Hosting</a> by Scott Murray has some useful ideas on available services.</li>
-</ul>
+- [What is a web server](/en-US/docs/Learn/Common_questions/What_is_a_web_server)
+- [Understanding domain names](/en-US/docs/Learn/Common_questions/What_is_a_domain_name)
+- [How much does it cost to do something on the web?](/en-US/docs/Learn/Common_questions/How_much_does_it_cost)
+- [Deploy a Website](https://www.codecademy.com/learn/deploy-a-website): A nice tutorial from Codecademy that goes a bit further and shows some additional techniques.
+- [Cheap or Free Static Website Hosting](https://alignedleft.com/resources/cheap-web-hosting) by Scott Murray has some useful ideas on available services.
 
-<p>{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}</p>
+{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
 
-<h2 id="In_this_module">In this module</h2>
+## In this module
 
-<ul>
- <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">Installing basic software</a></li>
- <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">What will your website look like?</a></li>
- <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">Dealing with files</a></li>
- <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML basics</a></li>
- <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">CSS basics</a></li>
- <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript basics</a></li>
- <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website">Publishing your website</a></li>
- <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works">How the web works</a></li>
-</ul>
+- [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
+- [What will your website look like?](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
+- [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
+- [HTML basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
+- [CSS basics](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
+- [JavaScript basics](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
+- [Publishing your website](/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
+- [How the web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

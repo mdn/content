@@ -13,86 +13,97 @@ tags:
   - fixed
   - relative
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
 
-<div>{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}</div>
-
-<p>Positioning allows you to take elements out of normal document flow and make them behave differently, for example, by sitting on top of one another or by always remaining in the same place inside the browser viewport. This article explains the different {{cssxref("position")}} values and how to use them.</p>
+Positioning allows you to take elements out of normal document flow and make them behave differently, for example, by sitting on top of one another or by always remaining in the same place inside the browser viewport. This article explains the different {{cssxref("position")}} values and how to use them.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of How CSS works (study <a href="/en-US/docs/Learn/CSS/First_steps">Introduction to CSS</a>.)</td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To learn how CSS positioning works.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        HTML basics (study
+        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          >Introduction to HTML</a
+        >), and an idea of How CSS works (study
+        <a href="/en-US/docs/Learn/CSS/First_steps">Introduction to CSS</a>.)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>To learn how CSS positioning works.</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>We'd like you to do the following exercises on your local computer. If possible, grab a copy of <code><a href="https://mdn.github.io/learning-area/css/css-layout/positioning/0_basic-flow.html">0_basic-flow.html</a></code> from our GitHub repo (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/0_basic-flow.html">source code here</a>) and use that as a starting point.</p>
+We'd like you to do the following exercises on your local computer. If possible, grab a copy of [`0_basic-flow.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/0_basic-flow.html) from our GitHub repo ([source code here](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/0_basic-flow.html)) and use that as a starting point.
 
-<h2 id="Introducing_positioning">Introducing positioning</h2>
+## Introducing positioning
 
-<p>Positioning allows us to produce interesting results by overriding normal document flow. What if you want to slightly alter the position of some boxes from their default flow position to give a slightly quirky, distressed feel? Positioning is your tool. Or what if you want to create a UI element that floats over the top of other parts of the page and/or always sits in the same place inside the browser window no matter how much the page is scrolled? Positioning makes such layout work possible.</p>
+Positioning allows us to produce interesting results by overriding normal document flow. What if you want to slightly alter the position of some boxes from their default flow position to give a slightly quirky, distressed feel? Positioning is your tool. Or what if you want to create a UI element that floats over the top of other parts of the page and/or always sits in the same place inside the browser window no matter how much the page is scrolled? Positioning makes such layout work possible.
 
-<p>There are a number of different types of positioning that you can put into effect on HTML elements. To make a specific type of positioning active on an element, we use the {{cssxref("position")}} property.</p>
+There are a number of different types of positioning that you can put into effect on HTML elements. To make a specific type of positioning active on an element, we use the {{cssxref("position")}} property.
 
-<h2 id="Static_positioning">Static positioning</h2>
+## Static positioning
 
-<p>Static positioning is the default that every element gets. It just means "put the element into its normal position in the document flow — nothing special to see here."</p>
+Static positioning is the default that every element gets. It just means "put the element into its normal position in the document flow — nothing special to see here."
 
-<p>To see this (and get your example set up for future sections) first add a <code>class</code> of <code>positioned</code> to the second {{htmlelement("p")}} in the HTML:</p>
+To see this (and get your example set up for future sections) first add a `class` of `positioned` to the second {{htmlelement("p")}} in the HTML:
 
-<pre class="brush: html">&lt;p class="positioned"&gt; ... &lt;/p&gt;</pre>
+```html
+<p class="positioned"> ... </p>
+```
 
-<p>Now add the following rule to the bottom of your CSS:</p>
+Now add the following rule to the bottom of your CSS:
 
-<pre class="brush: css">.positioned {
+```css
+.positioned {
   position: static;
   background: yellow;
-}</pre>
+}
+```
 
-<p>If you save and refresh, you'll see no difference at all, except for the updated background color of the 2nd paragraph. This is fine — as we said before, static positioning is the default behavior!</p>
+If you save and refresh, you'll see no difference at all, except for the updated background color of the 2nd paragraph. This is fine — as we said before, static positioning is the default behavior!
 
-<div class="note">
-<p><strong>Note:</strong> You can see the example at this point live at <code><a href="https://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html">1_static-positioning.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html">see source code</a>).</p>
-</div>
+> **Note:** You can see the example at this point live at [`1_static-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html) ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html)).
 
-<h2 id="Relative_positioning">Relative positioning</h2>
+## Relative positioning
 
-<p>Relative positioning is the first position type we'll take a look at. This is very similar to static positioning, except that once the positioned element has taken its place in the normal flow, you can then modify its final position, including making it overlap other elements on the page. Go ahead and update the <code>position</code> declaration in your code:</p>
+Relative positioning is the first position type we'll take a look at. This is very similar to static positioning, except that once the positioned element has taken its place in the normal flow, you can then modify its final position, including making it overlap other elements on the page. Go ahead and update the `position` declaration in your code:
 
-<pre class="brush: css">position: relative;</pre>
+```css
+position: relative;
+```
 
-<p>If you save and refresh at this stage, you won't see a change in the result at all.  So how do you modify the element's position? You need to use the {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}} properties, which we'll explain in the next section.</p>
+If you save and refresh at this stage, you won't see a change in the result at all.  So how do you modify the element's position? You need to use the {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}} properties, which we'll explain in the next section.
 
-<h3 id="Introducing_top_bottom_left_and_right">Introducing top, bottom, left, and right</h3>
+### Introducing top, bottom, left, and right
 
-<p>{{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}} are used alongside {{cssxref("position")}} to specify exactly where to move the positioned element to. To try this out, add the following declarations to the <code>.positioned</code> rule in your CSS:</p>
+{{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}} are used alongside {{cssxref("position")}} to specify exactly where to move the positioned element to. To try this out, add the following declarations to the `.positioned` rule in your CSS:
 
-<pre class="brush: css">top: 30px;
-left: 30px;</pre>
+```css
+top: 30px;
+left: 30px;
+```
 
-<div class="note">
-<p><strong>Note:</strong> The values of these properties can take any <a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">units</a> you'd reasonably expect: pixels, mm, rems, %, etc.</p>
-</div>
+> **Note:** The values of these properties can take any [units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units) you'd reasonably expect: pixels, mm, rems, %, etc.
 
-<p>If you now save and refresh, you'll get a result something like this:</p>
+If you now save and refresh, you'll get a result something like this:
 
-<pre class="brush: html hidden">&lt;h1&gt;Relative positioning&lt;/h1&gt;
+```html hidden
+<h1>Relative positioning</h1>
 
-&lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
+<p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
 
-&lt;p class="positioned"&gt;By default we span 100% of the width of our parent element, and we are as tall as our child content. Our total width and height is our content + padding + border width/height.&lt;/p&gt;
+<p class="positioned">By default we span 100% of the width of our parent element, and we are as tall as our child content. Our total width and height is our content + padding + border width/height.</p>
 
-&lt;p&gt;We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.&lt;/p&gt;
+<p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
 
-&lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="long.jpg"&gt;&lt;/p&gt;</pre>
+<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg"></p>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   width: 500px;
   margin: 0 auto;
 }
@@ -114,40 +125,43 @@ span {
   background: yellow;
   top: 30px;
   left: 30px;
-}</pre>
-</div>
+}
+```
 
-<p>{{ EmbedLiveSample('Introducing_top_bottom_left_and_right', '100%', 500) }}</p>
+{{ EmbedLiveSample('Introducing_top_bottom_left_and_right', '100%', 500) }}
 
-<p>Cool, huh? Ok, so this probably wasn't what you were expecting. Why has it moved to the bottom and to the right if we specified <em>top</em> and <em>left</em>? This may seem counterintuitive. You need to think of it as if there's an invisible force that pushes the specified side of the positioned box, moving it in the opposite direction. So, for example, if you specify <code>top: 30px;</code>, it's as if a force will push the top of the box, causing it to move downwards by 30px.</p>
+Cool, huh? Ok, so this probably wasn't what you were expecting. Why has it moved to the bottom and to the right if we specified _top_ and _left_? This may seem counterintuitive. You need to think of it as if there's an invisible force that pushes the specified side of the positioned box, moving it in the opposite direction. So, for example, if you specify `top: 30px;`, it's as if a force will push the top of the box, causing it to move downwards by 30px.
 
-<div class="note">
-<p><strong>Note:</strong> You can see the example at this point live at <code><a href="https://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html">2_relative-positioning.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/2_relative-positioning.html">see source code</a>).</p>
-</div>
+> **Note:** You can see the example at this point live at [`2_relative-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html) ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/2_relative-positioning.html)).
 
-<h2 id="Absolute_positioning">Absolute positioning</h2>
+## Absolute positioning
 
-<p>Absolute positioning brings very different results.
+Absolute positioning brings very different results.
 
-<h3>Setting position: absolute</h3>
+### Setting position: absolute
 
-<p>Let's try changing the position declaration in your code as follows:</p>
+Let's try changing the position declaration in your code as follows:
 
-<pre class="brush: css">position: absolute;</pre>
+```css
+position: absolute;
+```
 
-<p>If you now save and refresh, you should see something like so:</p>
+If you now save and refresh, you should see something like so:
 
-<pre class="brush: html hidden">&lt;h1&gt;Absolute positioning&lt;/h1&gt;
+```html hidden
+<h1>Absolute positioning</h1>
 
-&lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
+<p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
 
-&lt;p class="positioned"&gt;By default we span 100% of the width of our parent element, and we are as tall as our child content. Our total width and height is our content + padding + border width/height.&lt;/p&gt;
+<p class="positioned">By default we span 100% of the width of our parent element, and we are as tall as our child content. Our total width and height is our content + padding + border width/height.</p>
 
-&lt;p&gt;We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.&lt;/p&gt;
+<p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
 
-&lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="long.jpg"&gt;&lt;/p&gt;</pre>
+<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg"></p>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   width: 500px;
   margin: 0 auto;
 }
@@ -169,49 +183,49 @@ span {
   background: yellow;
   top: 30px;
   left: 30px;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Setting_position_absolute', '100%', 450) }}</p>
+{{ EmbedLiveSample('Setting_position_absolute', '100%', 450) }}
 
-<p>First of all, note that the gap where the positioned element should be in the document flow is no longer there — the first and third elements have closed together like it no longer exists! Well, in a way, this is true. An absolutely positioned element no longer exists in the normal document flow. Instead, it sits on its own layer separate from everything else. This is very useful: it means that we can create isolated UI features that don't interfere with the layout of other elements on the page.  For example, popup information boxes, control menus, rollover panels, UI features that can be dragged and dropped anywhere on the page, and so on.</p>
+First of all, note that the gap where the positioned element should be in the document flow is no longer there — the first and third elements have closed together like it no longer exists! Well, in a way, this is true. An absolutely positioned element no longer exists in the normal document flow. Instead, it sits on its own layer separate from everything else. This is very useful: it means that we can create isolated UI features that don't interfere with the layout of other elements on the page.  For example, popup information boxes, control menus, rollover panels, UI features that can be dragged and dropped anywhere on the page, and so on.
 
-<p>Second, notice that the position of the element has changed. This is because {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}} behave in a different way with absolute positioning. Rather than positioning the element based on its relative position within the normal document flow, they specify the distance the element should be from each of the containing element's sides. So in this case, we are saying that the absolutely positioned element should sit 30px from the top of the "containing element" and 30px from the left. (In this case, the "containing element" is the <strong>initial containing block</strong>. See the section below for more information)</p>
+Second, notice that the position of the element has changed. This is because {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}} behave in a different way with absolute positioning. Rather than positioning the element based on its relative position within the normal document flow, they specify the distance the element should be from each of the containing element's sides. So in this case, we are saying that the absolutely positioned element should sit 30px from the top of the "containing element" and 30px from the left. (In this case, the "containing element" is the **initial containing block**. See the section below for more information)
 
-<div class="note">
-<p><strong>Note:</strong> You can use {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}} to resize elements if you need to. Try setting <code>top: 0; bottom: 0; left: 0; right: 0;</code> and <code>margin: 0;</code> on your positioned elements and see what happens! Put it back again afterwards...</p>
-</div>
+> **Note:** You can use {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}} to resize elements if you need to. Try setting `top: 0; bottom: 0; left: 0; right: 0;` and `margin: 0;` on your positioned elements and see what happens! Put it back again afterwards...
 
-<div class="note">
-<p><strong>Note:</strong> Yes, margins still affect positioned elements. Margin collapsing doesn't, however.</p>
-</div>
+> **Note:** Yes, margins still affect positioned elements. Margin collapsing doesn't, however.
 
-<div class="note">
-<p><strong>Note:</strong> You can see the example at this point live at <code><a href="https://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html">3_absolute-positioning.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/3_absolute-positioning.html">see source code</a>).</p>
-</div>
+> **Note:** You can see the example at this point live at [`3_absolute-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html) ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/3_absolute-positioning.html)).
 
-<h3 id="Positioning_contexts">Positioning contexts</h3>
+### Positioning contexts
 
-<p>Which element is the "containing element" of an absolutely positioned element? This is very much dependent on the position property of the ancestors of the positioned element (See <a href="/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block">Identifying the containing block</a>). </p>
+Which element is the "containing element" of an absolutely positioned element? This is very much dependent on the position property of the ancestors of the positioned element (See [Identifying the containing block](/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block)).
 
-<p>If no ancestor elements have their position property explicitly defined, then by default all ancestor elements will have a static position. The result of this is the absolutely positioned element will be contained in the <strong>initial containing block</strong>. The initial containing block has the dimensions of the viewport and is also the block that contains the {{htmlelement("html")}} element. In other words, the absolutely positioned element will be displayed outside of the {{htmlelement("html")}} element and be positioned relative to the initial viewport. </p>
+If no ancestor elements have their position property explicitly defined, then by default all ancestor elements will have a static position. The result of this is the absolutely positioned element will be contained in the **initial containing block**. The initial containing block has the dimensions of the viewport and is also the block that contains the {{htmlelement("html")}} element. In other words, the absolutely positioned element will be displayed outside of the {{htmlelement("html")}} element and be positioned relative to the initial viewport.
 
-<p>The positioned element is nested inside the {{htmlelement("body")}} in the HTML source, but in the final layout it's 30px away from the top and the left edges of the page. We can change the <strong>positioning context</strong>, that is, which element the absolutely positioned element is positioned relative to. This is done by setting positioning on one of the element's ancestors: to one of the elements it's nested inside of (you can't position it relative to an element it's not nested inside of). To see this, add the following declaration to your <code>body</code> rule:</p>
+The positioned element is nested inside the {{htmlelement("body")}} in the HTML source, but in the final layout it's 30px away from the top and the left edges of the page. We can change the **positioning context**, that is, which element the absolutely positioned element is positioned relative to. This is done by setting positioning on one of the element's ancestors: to one of the elements it's nested inside of (you can't position it relative to an element it's not nested inside of). To see this, add the following declaration to your `body` rule:
 
-<pre class="brush: css">position: relative;</pre>
+```css
+position: relative;
+```
 
-<p>This should give the following result:</p>
+This should give the following result:
 
-<pre class="brush: html hidden">&lt;h1&gt;Positioning context&lt;/h1&gt;
+```html hidden
+<h1>Positioning context</h1>
 
-&lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
+<p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
 
-&lt;p class="positioned"&gt;Now I'm absolutely positioned relative to the &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt; element, not the &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; element!&lt;/p&gt;
+<p class="positioned">Now I'm absolutely positioned relative to the <code>&lt;body&gt;</code> element, not the <code>&lt;html&gt;</code> element!</p>
 
-&lt;p&gt;We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.&lt;/p&gt;
+<p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
 
-&lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="long.jpg"&gt;&lt;/p&gt;</pre>
+<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg"></p>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   width: 500px;
   margin: 0 auto;
   position: relative;
@@ -234,52 +248,58 @@ span {
   background: yellow;
   top: 30px;
   left: 30px;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Positioning_contexts', '100%', 420) }}</p>
+{{ EmbedLiveSample('Positioning_contexts', '100%', 420) }}
 
-<p>The positioned element now sits relative to the {{htmlelement("body")}} element.</p>
+The positioned element now sits relative to the {{htmlelement("body")}} element.
 
-<div class="note">
-<p><strong>Note:</strong> You can see the example at this point live at <code><a href="https://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html">4_positioning-context.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/4_positioning-context.html">see source code</a>).</p>
-</div>
+> **Note:** You can see the example at this point live at [`4_positioning-context.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html) ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/4_positioning-context.html)).
 
-<h3 id="Introducing_z-index">Introducing z-index</h3>
+### Introducing z-index
 
-<p>All this absolute positioning is good fun, but there's another feature we haven't considered yet. When elements start to overlap, what determines which elements appear over others and which elements appear under others? In the example we've seen so far, we only have one positioned element in the positioning context, and it appears on the top since positioned elements win over non-positioned elements. What about when we have more than one?</p>
+All this absolute positioning is good fun, but there's another feature we haven't considered yet. When elements start to overlap, what determines which elements appear over others and which elements appear under others? In the example we've seen so far, we only have one positioned element in the positioning context, and it appears on the top since positioned elements win over non-positioned elements. What about when we have more than one?
 
-<p>Try adding the following to your CSS to make the first paragraph absolutely positioned too:</p>
+Try adding the following to your CSS to make the first paragraph absolutely positioned too:
 
-<pre class="brush: css">p:nth-of-type(1) {
+```css
+p:nth-of-type(1) {
   position: absolute;
   background: lime;
   top: 10px;
   right: 30px;
-}</pre>
+}
+```
 
-<p>At this point you'll see the first paragraph colored lime, moved out of the document flow, and positioned a bit above from where it originally was. It's also stacked below the original <code>.positioned</code> paragraph where the two overlap. This is because the <code>.positioned</code> paragraph is the second paragraph in the source order, and positioned elements later in the source order win over positioned elements earlier in the source order.</p>
+At this point you'll see the first paragraph colored lime, moved out of the document flow, and positioned a bit above from where it originally was. It's also stacked below the original `.positioned` paragraph where the two overlap. This is because the `.positioned` paragraph is the second paragraph in the source order, and positioned elements later in the source order win over positioned elements earlier in the source order.
 
-<p>Can you change the stacking order? Yes, you can, by using the {{cssxref("z-index")}} property. "z-index" is a reference to the z-axis. You may recall from previous points in the course where we discussed web pages using horizontal (x-axis) and vertical (y-axis) coordinates to work out positioning for things like background images and drop shadow offsets. For languages that run left to right, (0,0) is at the top left of the page (or element), and the x- and y-axes run across to the right and down the page.</p>
+Can you change the stacking order? Yes, you can, by using the {{cssxref("z-index")}} property. "z-index" is a reference to the z-axis. You may recall from previous points in the course where we discussed web pages using horizontal (x-axis) and vertical (y-axis) coordinates to work out positioning for things like background images and drop shadow offsets. For languages that run left to right, (0,0) is at the top left of the page (or element), and the x- and y-axes run across to the right and down the page.
 
-<p>Web pages also have a z-axis: an imaginary line that runs from the surface of your screen towards your face (or whatever else you like to have in front of the screen). {{cssxref("z-index")}} values affect where positioned elements sit on that axis; positive values move them higher up the stack, negative values move them lower down the stack. By default, positioned elements all have a <code>z-index</code> of <code>auto</code>, which is effectively 0.</p>
+Web pages also have a z-axis: an imaginary line that runs from the surface of your screen towards your face (or whatever else you like to have in front of the screen). {{cssxref("z-index")}} values affect where positioned elements sit on that axis; positive values move them higher up the stack, negative values move them lower down the stack. By default, positioned elements all have a `z-index` of `auto`, which is effectively 0.
 
-<p>To change the stacking order, try adding the following declaration to your <code>p:nth-of-type(1)</code> rule:</p>
+To change the stacking order, try adding the following declaration to your `p:nth-of-type(1)` rule:
 
-<pre class="brush: css">z-index: 1;</pre>
+```css
+z-index: 1;
+```
 
-<p>You should now see the lime paragraph on top:</p>
+You should now see the lime paragraph on top:
 
-<pre class="brush: html hidden">&lt;h1&gt;z-index&lt;/h1&gt;
+```html hidden
+<h1>z-index</h1>
 
-&lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
+<p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
 
-&lt;p class="positioned"&gt;Now I'm absolutely positioned relative to the &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt; element, not the &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; element!&lt;/p&gt;
+<p class="positioned">Now I'm absolutely positioned relative to the <code>&lt;body&gt;</code> element, not the <code>&lt;html&gt;</code> element!</p>
 
-&lt;p&gt;We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.&lt;/p&gt;
+<p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
 
-&lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="long.jpg"&gt;&lt;/p&gt;</pre>
+<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg"></p>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   width: 500px;
   margin: 0 auto;
   position: relative;
@@ -311,62 +331,69 @@ p:nth-of-type(1) {
   right: 30px;
   z-index: 1;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Introducing_z-index', '100%', 400) }}</p>
+{{ EmbedLiveSample('Introducing_z-index', '100%', 400) }}
 
-<p>Note that <code>z-index</code> only accepts unitless index values; you can't specify that you want one element to be 23 pixels up the Z-axis — it doesn't work like that. Higher values will go above lower values and it's up to you what values you use. Using values of 2 or 3 would give the same effect as values of 300 or 40000.</p>
+Note that `z-index` only accepts unitless index values; you can't specify that you want one element to be 23 pixels up the Z-axis — it doesn't work like that. Higher values will go above lower values and it's up to you what values you use. Using values of 2 or 3 would give the same effect as values of 300 or 40000.
 
-<div class="note">
-<p><strong>Note:</strong> You can see an example for this live at <code><a href="https://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html">5_z-index.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/5_z-index.html">see source code</a>).</p>
-</div>
+> **Note:** You can see an example for this live at [`5_z-index.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html) ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/5_z-index.html)).
 
-<h2 id="Fixed_positioning">Fixed positioning</h2>
+## Fixed positioning
 
-<p>Let's now look at fixed positioning. This works in exactly the same way as absolute positioning, with one key difference: whereas absolute positioning fixes an element in place relative to its nearest positioned ancestor (the initial containing block if there isn't one),<strong> fixed positioning</strong> <em>usually</em> fixes an element in place relative to the visible portion of the viewport. (An exception to this occurs if one of the element's ancestors is a fixed containing block because its <a href="/en-US/docs/Web/CSS/transform">transform property</a> has a value other than <em>none</em>.) This means that you can create useful UI items that are fixed in place, like persistent navigation menus that are always visible no matter how much the page scrolls.</p>
+Let's now look at fixed positioning. This works in exactly the same way as absolute positioning, with one key difference: whereas absolute positioning fixes an element in place relative to its nearest positioned ancestor (the initial containing block if there isn't one), **fixed positioning** _usually_ fixes an element in place relative to the visible portion of the viewport. (An exception to this occurs if one of the element's ancestors is a fixed containing block because its [transform property](/en-US/docs/Web/CSS/transform) has a value other than _none_.) This means that you can create useful UI items that are fixed in place, like persistent navigation menus that are always visible no matter how much the page scrolls.
 
-<p>Let's put together a simple example to show what we mean. First of all, delete the existing <code>p:nth-of-type(1)</code> and <code>.positioned</code> rules from your CSS.</p>
+Let's put together a simple example to show what we mean. First of all, delete the existing `p:nth-of-type(1)` and `.positioned` rules from your CSS.
 
-<p>Now update the <code>body</code> rule to remove the <code>position: relative;</code> declaration and add a fixed height, like so:</p>
+Now update the `body` rule to remove the `position: relative;` declaration and add a fixed height, like so:
 
-<pre class="brush: css">body {
+```css
+body {
   width: 500px;
   height: 1400px;
   margin: 0 auto;
-}</pre>
+}
+```
 
-<p>Now we're going to give the {{htmlelement("h1")}} element <code>position: fixed;</code> and have it sit at the top of the viewport. Add the following rule to your CSS:</p>
+Now we're going to give the {{htmlelement("h1")}} element `position: fixed;` and have it sit at the top of the viewport. Add the following rule to your CSS:
 
-<pre class="brush: css">h1 {
+```css
+h1 {
   position: fixed;
   top: 0;
   width: 500px;
   margin-top: 0;
   background: white;
   padding: 10px;
-}</pre>
+}
+```
 
-<p>The <code>top: 0;</code> is required to make it stick to the top of the screen. We give the heading the same width as the content column and then a white background and some padding and margin so the content won't be visible underneath it.</p>
+The `top: 0;` is required to make it stick to the top of the screen. We give the heading the same width as the content column and then a white background and some padding and margin so the content won't be visible underneath it.
 
-<p>If you save and refresh, you'll see a fun little effect of the heading staying fixed — the content appears to scroll up and disappear underneath it. But notice how some of the content is initially clipped under the heading. This is because the positioned heading no longer appears in the document flow, so the rest of the content moves up to the top. We could improve this by moving the paragraphs all down a bit. We can do this by setting some top margin on the first paragraph. Add this now:</p>
+If you save and refresh, you'll see a fun little effect of the heading staying fixed — the content appears to scroll up and disappear underneath it. But notice how some of the content is initially clipped under the heading. This is because the positioned heading no longer appears in the document flow, so the rest of the content moves up to the top. We could improve this by moving the paragraphs all down a bit. We can do this by setting some top margin on the first paragraph. Add this now:
 
-<pre class="brush: css">p:nth-of-type(1) {
+```css
+p:nth-of-type(1) {
   margin-top: 60px;
-}</pre>
+}
+```
 
-<p>You should now see the finished example:</p>
+You should now see the finished example:
 
-<pre class="brush: html hidden">&lt;h1&gt;Fixed positioning&lt;/h1&gt;
+```html hidden
+<h1>Fixed positioning</h1>
 
-&lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
+<p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
 
-&lt;p class="positioned"&gt;I'm not positioned any more...&lt;/p&gt;
+<p class="positioned">I'm not positioned any more...</p>
 
-&lt;p&gt;We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.&lt;/p&gt;
+<p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
 
-&lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="long.jpg"&gt;&lt;/p&gt;</pre>
+<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg"></p>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   width: 500px;
   height: 1400px;
   margin: 0 auto;
@@ -394,33 +421,35 @@ h1 {
 
 p:nth-of-type(1) {
   margin-top: 60px;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Fixed_positioning', '100%', 400) }}</p>
+{{ EmbedLiveSample('Fixed_positioning', '100%', 400) }}
 
-<div class="note">
-<p><strong>Note:</strong> You can see an example for this live at <code><a href="https://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html">6_fixed-positioning.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/6_fixed-positioning.html">see source code</a>).</p>
-</div>
+> **Note:** You can see an example for this live at [`6_fixed-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html) ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/6_fixed-positioning.html)).
 
-<h2 id="position_sticky">Sticky positioning</h2>
+## Sticky positioning
 
-<p>There is another position value available called <code>position: sticky</code>, which is somewhat newer than the others. This is basically a hybrid between relative and fixed position. It allows a positioned element to act like it's relatively positioned until it's scrolled to a certain threshold (e.g., 10px from the top of the viewport), after which it becomes fixed.</p>
+There is another position value available called `position: sticky`, which is somewhat newer than the others. This is basically a hybrid between relative and fixed position. It allows a positioned element to act like it's relatively positioned until it's scrolled to a certain threshold (e.g., 10px from the top of the viewport), after which it becomes fixed.
 
-<h3>Basic example</h3>
+### Basic example
 
-<p>Sticky positioning can be used, for example, to cause a navigation bar to scroll with the page until a certain point and then stick to the top of the page. </p>
+Sticky positioning can be used, for example, to cause a navigation bar to scroll with the page until a certain point and then stick to the top of the page.
 
-<pre class="brush: html hidden">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
+```html hidden
+<h1>Sticky positioning</h1>
 
-&lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
+<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
 
-&lt;div class="positioned"&gt;Sticky&lt;/div&gt;
+<div class="positioned">Sticky</div>
 
-&lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
+<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
 
-&lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;       </pre>
+<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   width: 500px;
   margin: 0 auto;
 }
@@ -431,54 +460,59 @@ p:nth-of-type(1) {
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
-}</pre>
+}
+```
 
-<pre class="brush: css">.positioned {
+```css
+.positioned {
   position: sticky;
   top: 30px;
   left: 30px;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Basic_example', '100%', 200) }}</p>
+{{ EmbedLiveSample('Basic_example', '100%', 200) }}
 
-<h3>Scrolling index</h3>
+### Scrolling index
 
-<p>An interesting and common use of <code>position: sticky</code> is to create a scrolling index page where different headings stick to the top of the page as they reach it. The markup for such an example might look like so:</p>
+An interesting and common use of `position: sticky` is to create a scrolling index page where different headings stick to the top of the page as they reach it. The markup for such an example might look like so:
 
-<pre class="brush: html">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
+```html
+<h1>Sticky positioning</h1>
 
-&lt;dl&gt;
-    &lt;dt&gt;A&lt;/dt&gt;
-    &lt;dd&gt;Apple&lt;/dd&gt;
-    &lt;dd&gt;Ant&lt;/dd&gt;
-    &lt;dd&gt;Altimeter&lt;/dd&gt;
-    &lt;dd&gt;Airplane&lt;/dd&gt;
-    &lt;dt&gt;B&lt;/dt&gt;
-    &lt;dd&gt;Bird&lt;/dd&gt;
-    &lt;dd&gt;Buzzard&lt;/dd&gt;
-    &lt;dd&gt;Bee&lt;/dd&gt;
-    &lt;dd&gt;Banana&lt;/dd&gt;
-    &lt;dd&gt;Beanstalk&lt;/dd&gt;
-    &lt;dt&gt;C&lt;/dt&gt;
-    &lt;dd&gt;Calculator&lt;/dd&gt;
-    &lt;dd&gt;Cane&lt;/dd&gt;
-    &lt;dd&gt;Camera&lt;/dd&gt;
-    &lt;dd&gt;Camel&lt;/dd&gt;
-    &lt;dt&gt;D&lt;/dt&gt;
-    &lt;dd&gt;Duck&lt;/dd&gt;
-    &lt;dd&gt;Dime&lt;/dd&gt;
-    &lt;dd&gt;Dipstick&lt;/dd&gt;
-    &lt;dd&gt;Drone&lt;/dd&gt;
-    &lt;dt&gt;E&lt;/dt&gt;
-    &lt;dd&gt;Egg&lt;/dd&gt;
-    &lt;dd&gt;Elephant&lt;/dd&gt;
-    &lt;dd&gt;Egret&lt;/dd&gt;
-&lt;/dl&gt;
-</pre>
+<dl>
+    <dt>A</dt>
+    <dd>Apple</dd>
+    <dd>Ant</dd>
+    <dd>Altimeter</dd>
+    <dd>Airplane</dd>
+    <dt>B</dt>
+    <dd>Bird</dd>
+    <dd>Buzzard</dd>
+    <dd>Bee</dd>
+    <dd>Banana</dd>
+    <dd>Beanstalk</dd>
+    <dt>C</dt>
+    <dd>Calculator</dd>
+    <dd>Cane</dd>
+    <dd>Camera</dd>
+    <dd>Camel</dd>
+    <dt>D</dt>
+    <dd>Duck</dd>
+    <dd>Dime</dd>
+    <dd>Dipstick</dd>
+    <dd>Drone</dd>
+    <dt>E</dt>
+    <dd>Egg</dd>
+    <dd>Elephant</dd>
+    <dd>Egret</dd>
+</dl>
+```
 
-<p>The CSS might look as follows. In normal flow the {{htmlelement("dt")}} elements will scroll with the content. When we add <code>position: sticky</code> to the {{htmlelement("dt")}} element, along with a {{cssxref("top")}} value of 0, supporting browsers will stick the headings to the top of the viewport as they reach that position. Each subsequent header will then replace the previous one as it scrolls up to that position.</p>
+The CSS might look as follows. In normal flow the {{htmlelement("dt")}} elements will scroll with the content. When we add `position: sticky` to the {{htmlelement("dt")}} element, along with a {{cssxref("top")}} value of 0, supporting browsers will stick the headings to the top of the viewport as they reach that position. Each subsequent header will then replace the previous one as it scrolls up to that position.
 
-<pre class="brush: css">dt {
+```css
+dt {
   background-color: black;
   color: white;
   padding: 10px;
@@ -487,84 +521,80 @@ p:nth-of-type(1) {
   left: 0;
   margin: 1em 0;
 }
-</pre>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   width: 500px;
   height: 1400px;
   margin: 0 auto;
 }
-</pre>
+```
 
-<pre class="brush: html hidden">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
+```html hidden
+<h1>Sticky positioning</h1>
 
-&lt;dl&gt;
-    &lt;dt&gt;A&lt;/dt&gt;
-    &lt;dd&gt;Apple&lt;/dd&gt;
-    &lt;dd&gt;Ant&lt;/dd&gt;
-    &lt;dd&gt;Altimeter&lt;/dd&gt;
-    &lt;dd&gt;Airplane&lt;/dd&gt;
-    &lt;dt&gt;B&lt;/dt&gt;
-    &lt;dd&gt;Bird&lt;/dd&gt;
-    &lt;dd&gt;Buzzard&lt;/dd&gt;
-    &lt;dd&gt;Bee&lt;/dd&gt;
-    &lt;dd&gt;Banana&lt;/dd&gt;
-    &lt;dd&gt;Beanstalk&lt;/dd&gt;
-    &lt;dt&gt;C&lt;/dt&gt;
-    &lt;dd&gt;Calculator&lt;/dd&gt;
-    &lt;dd&gt;Cane&lt;/dd&gt;
-    &lt;dd&gt;Camera&lt;/dd&gt;
-    &lt;dd&gt;Camel&lt;/dd&gt;
-    &lt;dt&gt;D&lt;/dt&gt;
-    &lt;dd&gt;Duck&lt;/dd&gt;
-    &lt;dd&gt;Dime&lt;/dd&gt;
-    &lt;dd&gt;Dipstick&lt;/dd&gt;
-    &lt;dd&gt;Drone&lt;/dd&gt;
-    &lt;dt&gt;E&lt;/dt&gt;
-    &lt;dd&gt;Egg&lt;/dd&gt;
-    &lt;dd&gt;Elephant&lt;/dd&gt;
-    &lt;dd&gt;Egret&lt;/dd&gt;
-&lt;/dl&gt;
-</pre>
+<dl>
+    <dt>A</dt>
+    <dd>Apple</dd>
+    <dd>Ant</dd>
+    <dd>Altimeter</dd>
+    <dd>Airplane</dd>
+    <dt>B</dt>
+    <dd>Bird</dd>
+    <dd>Buzzard</dd>
+    <dd>Bee</dd>
+    <dd>Banana</dd>
+    <dd>Beanstalk</dd>
+    <dt>C</dt>
+    <dd>Calculator</dd>
+    <dd>Cane</dd>
+    <dd>Camera</dd>
+    <dd>Camel</dd>
+    <dt>D</dt>
+    <dd>Duck</dd>
+    <dd>Dime</dd>
+    <dd>Dipstick</dd>
+    <dd>Drone</dd>
+    <dt>E</dt>
+    <dd>Egg</dd>
+    <dd>Elephant</dd>
+    <dd>Egret</dd>
+</dl>
+```
 
-<p>{{ EmbedLiveSample('Scrolling_index', '100%', 200) }}</p>
+{{ EmbedLiveSample('Scrolling_index', '100%', 200) }}
 
-<p>Sticky elements are "sticky" relative to the nearest ancestor with a "scrolling mechanism", which is determined by its ancestors' <a href="/en-US/docs/Web/CSS/position">position</a> property.</p>
+Sticky elements are "sticky" relative to the nearest ancestor with a "scrolling mechanism", which is determined by its ancestors' [position](/en-US/docs/Web/CSS/position) property.
 
-<div class="note">
-<p><strong>Note:</strong> You can see this example live at <code><a href="https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html">7_sticky-positioning.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/7_sticky-positioning.html">see source code</a>).</p>
-</div>
+> **Note:** You can see this example live at [`7_sticky-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/7_sticky-positioning.html)).
 
-<h2 id="Test_your_skills!">Test your skills!</h2>
+## Test your skills!
 
-<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/CSS/CSS_layout/Position_skills">Test your skills: Positioning</a>.</p>
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Positioning](/en-US/docs/Learn/CSS/CSS_layout/Position_skills).
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>I'm sure you had fun playing with basic positioning. While it's not an ideal method to use for entire layouts, there are many specific objectives it's suited for.</p>
+I'm sure you had fun playing with basic positioning. While it's not an ideal method to use for entire layouts, there are many specific objectives it's suited for.
 
-<p>{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}</p>
+{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{cssxref("position")}} property reference.</li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples">Practical positioning examples</a>, for some more useful ideas.</li>
-</ul>
+- The {{cssxref("position")}} property reference.
+- [Practical positioning examples](/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples), for some more useful ideas.
 
-<h2 id="In_this_module">In this module</h2>
+## In this module
 
-<ul>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Introduction">Introduction to CSS layout</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow">Normal flow</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">Grid</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">Floats</a></li>
- <li>Positioning</li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column layout</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">Responsive design</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Media_queries">Beginner's guide to media queries</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">Legacy layout methods</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers">Supporting older browsers</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension">Fundamental layout comprehension assessment</a></li>
-</ul>
+- [Introduction to CSS layout](/en-US/docs/Learn/CSS/CSS_layout/Introduction)
+- [Normal flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)
+- [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
+- [Grid](/en-US/docs/Learn/CSS/CSS_layout/Grids)
+- [Floats](/en-US/docs/Learn/CSS/CSS_layout/Floats)
+- Positioning
+- [Multiple-column layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
+- [Beginner's guide to media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
+- [Legacy layout methods](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
+- [Supporting older browsers](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
+- [Fundamental layout comprehension assessment](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

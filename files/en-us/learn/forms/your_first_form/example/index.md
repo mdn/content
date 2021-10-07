@@ -11,36 +11,39 @@ tags:
   - Learn
   - Web
 ---
-<p>This is the example code for the article <a href="/en-US/docs/Learn/Forms/Your_first_form">Your first HTML form</a>.</p>
+This is the example code for the article [Your first HTML form](/en-US/docs/Learn/Forms/Your_first_form).
 
-<h2 id="A_simple_form">A simple form</h2>
+## A simple form
 
-<h3 id="HTML_Content">HTML Content</h3>
+### HTML Content
 
-<pre class="brush: html">&lt;form action="<span class="pl-s">/my-handling-form-page</span>" method="post"&gt;
-  &lt;div&gt;
-    &lt;label for="name"&gt;Name:&lt;/label&gt;
-    &lt;input type="text" id="name" name="user_name"&gt;
-  &lt;/div&gt;
+```html
+<form action="/my-handling-form-page" method="post">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="user_name">
+  </div>
 
-  &lt;div&gt;
-    &lt;label for="mail"&gt;E-mail:&lt;/label&gt;
-    &lt;input type="email" id="mail" name="user_email"&gt;
-  &lt;/div&gt;
+  <div>
+    <label for="mail">E-mail:</label>
+    <input type="email" id="mail" name="user_email">
+  </div>
 
-  &lt;div&gt;
-    &lt;label for="msg"&gt;Message:&lt;/label&gt;
-    &lt;textarea id="msg" name="user_message"&gt;&lt;/textarea&gt;
-  &lt;/div&gt;
+  <div>
+    <label for="msg">Message:</label>
+    <textarea id="msg" name="user_message"></textarea>
+  </div>
 
-  &lt;div class="button"&gt;
-    &lt;button type="submit"&gt;Send your message&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+  <div class="button">
+    <button type="submit">Send your message</button>
+  </div>
+</form>
+```
 
-<h3 id="CSS_Content">CSS Content</h3>
+### CSS Content
 
-<pre class="brush: css">form {
+```css
+form {
   /* Just to center the form on the page */
   margin: 0 auto;
   width: 400px;
@@ -73,7 +76,7 @@ input, textarea {
   -moz-box-sizing: border-box;
        box-sizing: border-box;
 
-  /* To harmonize the look &amp; feel of text field border */
+  /* To harmonize the look & feel of text field border */
   border: 1px solid #999;
 }
 
@@ -103,8 +106,9 @@ button {
   /* This extra margin represent the same space as the space between
      the labels and their text fields */
   margin-left: .5em;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('A_simple_form', '100%', '280') }}</p>
+{{ EmbedLiveSample('A_simple_form', '100%', '280') }}

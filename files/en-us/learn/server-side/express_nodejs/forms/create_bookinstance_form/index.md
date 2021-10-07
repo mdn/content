@@ -8,24 +8,28 @@ tags:
   - part 6
   - server-side
 ---
-<p>This subarticle shows how to define a page/form to create <code>BookInstance</code> objects. This is very much like the form we used to create <code>Book</code> objects.</p>
+This subarticle shows how to define a page/form to create `BookInstance` objects. This is very much like the form we used to create `Book` objects.
 
-<h2 id="Import_validation_and_sanitisation_methods">Import validation and sanitisation methods</h2>
+## Import validation and sanitisation methods
 
-<p>Open <strong>/controllers/bookinstanceController.js</strong>, and add the following lines at the top of the file:</p>
+Open **/controllers/bookinstanceController.js**, and add the following lines at the top of the file:
 
-<pre class="brush: js">const { body,validationResult } = require('express-validator');
-</pre>
+```js
+const { body,validationResult } = require('express-validator');
+```
 
-<h2 id="Controller—get_route">Controller—get route</h2>
+## Controller—get route
 
-<p>At the top of the file, require the <em>Book</em> module (needed because each <code>BookInstance</code> is associated with a particular <code>Book</code>).</p>
+At the top of the file, require the _Book_ module (needed because each `BookInstance` is associated with a particular `Book`).
 
-<pre class="brush: js">var Book = require('../models/book');</pre>
+```js
+var Book = require('../models/book');
+```
 
-<p>Find the exported <code>bookinstance_create_get()</code> controller method and replace it with the following code.</p>
+Find the exported `bookinstance_create_get()` controller method and replace it with the following code.
 
-<pre class="brush: js">// Display BookInstance create form on GET.
+```js
+// Display BookInstance create form on GET.
 exports.bookinstance_create_get = function(req, res, next) {
 
     Book.find({},'title')
@@ -35,15 +39,17 @@ exports.bookinstance_create_get = function(req, res, next) {
       res.render('bookinstance_form', {title: 'Create BookInstance', book_list: books});
     });
 
-};</pre>
+};
+```
 
-<p>The controller gets a list of all books (<code>book_list</code>) and passes it to the view <code><strong>bookinstance_form.pug</strong></code> (along with the <code>title</code>)</p>
+The controller gets a list of all books (`book_list`) and passes it to the view **`bookinstance_form.pug`** (along with the `title`)
 
-<h2 id="Controller—post_route">Controller—post route</h2>
+## Controller—post route
 
-<p>Find the exported <code>bookinstance_create_post()</code> controller method and replace it with the following code.</p>
+Find the exported `bookinstance_create_post()` controller method and replace it with the following code.
 
-<pre class="brush: js">// Handle BookInstance create on POST.
+```js
+// Handle BookInstance create on POST.
 exports.bookinstance_create_post = [
 
     // Validate and sanitise fields.
@@ -53,7 +59,7 @@ exports.bookinstance_create_post = [
     body('due_back', 'Invalid date').optional({ checkFalsy: true }).isISO8601().toDate(),
 
     // Process request after validation and sanitization.
-    (req, res, next) =&gt; {
+    (req, res, next) => {
 
         // Extract the validation errors from a request.
         const errors = validationResult(req);
@@ -85,15 +91,17 @@ exports.bookinstance_create_post = [
                 });
         }
     }
-];</pre>
+];
+```
 
-<p>The structure and behavior of this code is the same as for creating our other objects. First we validate and sanitize the data. If the data is invalid, we then re-display the form along with the data that was originally entered by the user and a list of error messages. If the data is valid, we save the new <code>BookInstance</code> record and redirect the user to the detail page.</p>
+The structure and behavior of this code is the same as for creating our other objects. First we validate and sanitize the data. If the data is invalid, we then re-display the form along with the data that was originally entered by the user and a list of error messages. If the data is valid, we save the new `BookInstance` record and redirect the user to the detail page.
 
-<h2 id="View">View</h2>
+## View
 
-<p>Create <strong>/views/bookinstance_form.pug</strong> and copy in the text below.</p>
+Create **/views/bookinstance_form.pug** and copy in the text below.
 
-<pre class="brush: plain">extends layout
+```plain
+extends layout
 
 block content
   h1=title
@@ -102,7 +110,7 @@ block content
     div.form-group
       label(for='book') Book:
       select#book.form-control(type='select' placeholder='Select book' name='book' required='true')
-        - book_list.sort(function(a, b) {let textA = a.title.toUpperCase(); let textB = b.title.toUpperCase(); return (textA &lt; textB) ? -1 : (textA &gt; textB) ? 1 : 0;});
+        - book_list.sort(function(a, b) {let textA = a.title.toUpperCase(); let textB = b.title.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
         for book in book_list
           if bookinstance
             option(value=book._id selected=(bookinstance.book.toString()==book._id.toString() ? 'selected' : false)) #{book.title}
@@ -129,23 +137,20 @@ block content
   if errors
     ul
       for error in errors
-        li!= error.msg</pre>
+        li!= error.msg
+```
 
-<p>The view structure and behavior is almost the same as for the <strong>book_form.pug</strong> template, so we won't go over it again.</p>
+The view structure and behavior is almost the same as for the **book_form.pug** template, so we won't go over it again.
 
-<div class="notecard note">
-<p><strong>Note:</strong> The above template hard-codes the <em>Status</em> values (Maintenance, Available, etc.) and does not "remember" the user's entered values. Should you so wish, consider reimplementing the list, passing in option data from the controller and setting the selected value when the form is re-displayed.</p>
-</div>
+> **Note:** The above template hard-codes the _Status_ values (Maintenance, Available, etc.) and does not "remember" the user's entered values. Should you so wish, consider reimplementing the list, passing in option data from the controller and setting the selected value when the form is re-displayed.
 
-<h2 id="What_does_it_look_like">What does it look like?</h2>
+## What does it look like?
 
-<p>Run the application and open your browser to <a href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>. Then select the <em>Create new book instance (copy)</em> link. If everything is set up correctly, your site should look something like the following screenshot. After you submit a valid <code>BookInstance</code>, it should be saved and you'll be taken to the detail page.</p>
+Run the application and open your browser to <http://localhost:3000/>. Then select the _Create new book instance (copy)_ link. If everything is set up correctly, your site should look something like the following screenshot. After you submit a valid `BookInstance`, it should be saved and you'll be taken to the detail page.
 
-<p><img alt="" src="locallibary_express_bookinstance_create_empty.png"></p>
+![](locallibary_express_bookinstance_create_empty.png)
 
-<h2 id="Next_steps">Next steps</h2>
+## Next steps
 
-<ul>
- <li>Return to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a>.</li>
- <li>Proceed to the next subarticle of part 6: <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form">Delete Author form</a>.</li>
-</ul>
+- Return to [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms).
+- Proceed to the next subarticle of part 6: [Delete Author form](/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form).

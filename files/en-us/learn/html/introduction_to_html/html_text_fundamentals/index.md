@@ -13,114 +13,125 @@ tags:
   - paragraphs
   - semantics
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
 
-<div>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}</div>
-
-<p>One of HTML's main jobs is to give text structure so that a browser can display an HTML document the way its developer intends. This article explains the way {{glossary("HTML")}} can be used to structure a page of text by adding headings and paragraphs, emphasizing words, creating lists, and more.</p>
+One of HTML's main jobs is to give text structure so that a browser can display an HTML document the way its developer intends. This article explains the way {{glossary("HTML")}} can be used to structure a page of text by adding headings and paragraphs, emphasizing words, creating lists, and more.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>Basic HTML familiarity, as covered in <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Getting started with HTML</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>Learn how to mark up a basic page of text to give it structure and meaning—including paragraphs, headings, lists, emphasis, and quotations.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        Basic HTML familiarity, as covered in
+        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+          >Getting started with HTML</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        Learn how to mark up a basic page of text to give it structure and
+        meaning—including paragraphs, headings, lists, emphasis, and quotations.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="The_basics_headings_and_paragraphs">The basics: headings and paragraphs</h2>
+## The basics: headings and paragraphs
 
-<p>Most structured text consists of headings and paragraphs, whether you are reading a story, a newspaper, a college textbook, a magazine, etc.</p>
+Most structured text consists of headings and paragraphs, whether you are reading a story, a newspaper, a college textbook, a magazine, etc.
 
-<p><img alt="An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs." src="newspaper_small.jpg" title="An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs."></p>
+![An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs.](newspaper_small.jpg "An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs.")
 
-<p>Structured content makes the reading experience easier and more enjoyable.</p>
+Structured content makes the reading experience easier and more enjoyable.
 
-<p>In HTML, each paragraph has to be wrapped in a {{htmlelement("p")}} element, like so:</p>
+In HTML, each paragraph has to be wrapped in a {{htmlelement("p")}} element, like so:
 
-<pre class="brush: html">&lt;p&gt;I am a paragraph, oh yes I am.&lt;/p&gt;</pre>
+```html
+<p>I am a paragraph, oh yes I am.</p>
+```
 
-<p>Each heading has to be wrapped in a heading element:</p>
+Each heading has to be wrapped in a heading element:
 
-<pre class="brush: html">&lt;h1&gt;I am the title of the story.&lt;/h1&gt;</pre>
+```html
+<h1>I am the title of the story.</h1>
+```
 
-<p>There are six heading elements: {{htmlelement("h1")}}, {{htmlelement("h2")}}, {{htmlelement("h3")}}, {{htmlelement("h4")}}, {{htmlelement("h5")}}, and {{htmlelement("h6")}}. Each element represents a different level of content in the document; <code>&lt;h1&gt;</code> represents the main heading, <code>&lt;h2&gt;</code> represents subheadings, <code>&lt;h3&gt;</code> represents sub-subheadings, and so on.</p>
+There are six heading elements: {{htmlelement("h1")}}, {{htmlelement("h2")}}, {{htmlelement("h3")}}, {{htmlelement("h4")}}, {{htmlelement("h5")}}, and {{htmlelement("h6")}}. Each element represents a different level of content in the document; `<h1>` represents the main heading, `<h2>` represents subheadings, `<h3>` represents sub-subheadings, and so on.
 
-<h3 id="Implementing_structural_hierarchy">Implementing structural hierarchy</h3>
+### Implementing structural hierarchy
 
-<p>For example, in this story, the <code>&lt;h1&gt;</code> element represents the title of the story, the <code>&lt;h2&gt;</code> elements represent the title of each chapter, and the <code>&lt;h3&gt;</code> elements represent sub-sections of each chapter:</p>
+For example, in this story, the `<h1>` element represents the title of the story, the `<h2>` elements represent the title of each chapter, and the `<h3>` elements represent sub-sections of each chapter:
 
-<pre class="brush: html">&lt;h1&gt;The Crushing Bore&lt;/h1&gt;
+```html
+<h1>The Crushing Bore</h1>
 
-&lt;p&gt;By Chris Mills&lt;/p&gt;
+<p>By Chris Mills</p>
 
-&lt;h2&gt;Chapter 1: The dark night&lt;/h2&gt;
+<h2>Chapter 1: The dark night</h2>
 
-&lt;p&gt;It was a dark night. Somewhere, an owl hooted. The rain lashed down on the ...&lt;/p&gt;
+<p>It was a dark night. Somewhere, an owl hooted. The rain lashed down on the ...</p>
 
-&lt;h2&gt;Chapter 2: The eternal silence&lt;/h2&gt;
+<h2>Chapter 2: The eternal silence</h2>
 
-&lt;p&gt;Our protagonist could not so much as a whisper out of the shadowy figure ...&lt;/p&gt;
+<p>Our protagonist could not so much as a whisper out of the shadowy figure ...</p>
 
-&lt;h3&gt;The specter speaks&lt;/h3&gt;
+<h3>The specter speaks</h3>
 
-&lt;p&gt;Several more hours had passed, when all of a sudden the specter sat bolt upright and exclaimed, "Please have mercy on my soul!"&lt;/p&gt;</pre>
+<p>Several more hours had passed, when all of a sudden the specter sat bolt upright and exclaimed, "Please have mercy on my soul!"</p>
+```
 
-<p>It's really up to you what the elements involved represent, as long as the hierarchy makes sense. You just need to bear in mind a few best practices as you create such structures:</p>
+It's really up to you what the elements involved represent, as long as the hierarchy makes sense. You just need to bear in mind a few best practices as you create such structures:
 
-<ul>
- <li>Preferably, you should use a single <code>&lt;h1&gt;</code> per page—this is the top level heading, and all others sit below this in the hierarchy.</li>
- <li>Make sure you use the headings in the correct order in the hierarchy. Don't use <code>&lt;h3&gt;</code> elements to represent subheadings, followed by <code>&lt;h2&gt;</code> elements to represent sub-subheadings—that doesn't make sense and will lead to weird results.</li>
- <li>Of the six heading levels available, you should aim to use no more than three per page, unless you feel it is necessary. Documents with many levels (i.e., a deep heading hierarchy) become unwieldy and difficult to navigate. On such occasions, it is advisable to spread the content over multiple pages if possible.</li>
-</ul>
+- Preferably, you should use a single `<h1>` per page—this is the top level heading, and all others sit below this in the hierarchy.
+- Make sure you use the headings in the correct order in the hierarchy. Don't use `<h3>` elements to represent subheadings, followed by `<h2>` elements to represent sub-subheadings—that doesn't make sense and will lead to weird results.
+- Of the six heading levels available, you should aim to use no more than three per page, unless you feel it is necessary. Documents with many levels (i.e., a deep heading hierarchy) become unwieldy and difficult to navigate. On such occasions, it is advisable to spread the content over multiple pages if possible.
 
-<h3 id="Why_do_we_need_structure">Why do we need structure?</h3>
+### Why do we need structure?
 
-<p>To answer this question, let's take a look at <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/html-text-formatting/text-start.html">text-start.html</a>—the starting point of our running example for this article (a nice hummus recipe). You should save a copy of this file on your local machine, as you'll need it for the exercises later on. This document's body currently contains multiple pieces of content. They aren't marked up in any way, but they are separated with linebreaks (Enter/Return pressed to go onto the next line).</p>
+To answer this question, let's take a look at [text-start.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/html-text-formatting/text-start.html)—the starting point of our running example for this article (a nice hummus recipe). You should save a copy of this file on your local machine, as you'll need it for the exercises later on. This document's body currently contains multiple pieces of content. They aren't marked up in any way, but they are separated with linebreaks (Enter/Return pressed to go onto the next line).
 
-<p>However, when you open the document in your browser, you'll see that the text appears as a big chunk!</p>
+However, when you open the document in your browser, you'll see that the text appears as a big chunk!
 
-<p><img alt="A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it." src="screen_shot_2017-03-29_at_09.20.35.png" title="A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it."></p>
+![A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it.](screen_shot_2017-03-29_at_09.20.35.png "A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it.")
 
-<p>This is because there are no elements to give the content structure, so the browser does not know what is a heading and what is a paragraph. Furthermore:</p>
+This is because there are no elements to give the content structure, so the browser does not know what is a heading and what is a paragraph. Furthermore:
 
-<ul>
- <li>Users looking at a web page tend to scan quickly to find relevant content, often just reading the headings, to begin with. (We usually <a class="external external-icon" href="https://www.nngroup.com/articles/how-long-do-users-stay-on-web-pages/">spend a very short time on a web page</a>.) If they can't see anything useful within a few seconds, they'll likely get frustrated and go somewhere else.</li>
- <li>Search engines indexing your page consider the contents of headings as important keywords for influencing the page's search rankings. Without headings, your page will perform poorly in terms of {{glossary("SEO")}} (Search Engine Optimization).</li>
- <li>Severely visually impaired people often don't read web pages; they listen to them instead. This is done with software called a <a class="external external-icon" href="https://en.wikipedia.org/wiki/Screen_reader" title="screen readers">screen reader</a>. This software provides ways to get fast access to given text content. Among the various techniques used, they provide an outline of the document by reading out the headings, allowing their users to find the information they need quickly. If headings are not available, they will be forced to listen to the whole document read out loud.</li>
- <li>To style content with {{glossary("CSS")}}, or make it do interesting things with {{glossary("JavaScript")}}, you need to have elements wrapping the relevant content, so CSS/JavaScript can effectively target it.</li>
-</ul>
+- Users looking at a web page tend to scan quickly to find relevant content, often just reading the headings, to begin with. (We usually [spend a very short time on a web page](https://www.nngroup.com/articles/how-long-do-users-stay-on-web-pages/).) If they can't see anything useful within a few seconds, they'll likely get frustrated and go somewhere else.
+- Search engines indexing your page consider the contents of headings as important keywords for influencing the page's search rankings. Without headings, your page will perform poorly in terms of {{glossary("SEO")}} (Search Engine Optimization).
+- Severely visually impaired people often don't read web pages; they listen to them instead. This is done with software called a [screen reader](https://en.wikipedia.org/wiki/Screen_reader "screen readers"). This software provides ways to get fast access to given text content. Among the various techniques used, they provide an outline of the document by reading out the headings, allowing their users to find the information they need quickly. If headings are not available, they will be forced to listen to the whole document read out loud.
+- To style content with {{glossary("CSS")}}, or make it do interesting things with {{glossary("JavaScript")}}, you need to have elements wrapping the relevant content, so CSS/JavaScript can effectively target it.
 
-<p>Therefore, we need to give our content structural markup.</p>
+Therefore, we need to give our content structural markup.
 
-<h3 id="Active_learning_Giving_our_content_structure">Active learning: Giving our content structure</h3>
+### Active learning: Giving our content structure
 
-<p>Let's jump straight in with a live example. In the example below, add elements to the raw text in the <em>Input</em> field so that it appears as a heading and two paragraphs in the <em>Output</em> field.</p>
+Let's jump straight in with a live example. In the example below, add elements to the raw text in the _Input_ field so that it appears as a heading and two paragraphs in the _Output_ field.
 
-<p>If you make a mistake, you can always reset it using the <em>Reset</em> button. If you get stuck, press the <em>Show solution</em> button to see the answer.</p>
+If you make a mistake, you can always reset it using the _Reset_ button. If you get stuck, press the _Show solution_ button to see the answer.
 
-<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
+```html hidden
+<h2>Live output</h2>
 
-&lt;div class="output" style="min-height: 50px;"&gt;
-&lt;/div&gt;
+<div class="output" style="min-height: 50px;">
+</div>
 
-&lt;h2&gt;Editable code&lt;/h2&gt;
-&lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
+<h2>Editable code</h2>
+<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
 
-&lt;textarea id="code" class="input" style="min-height: 100px; width: 95%"&gt;My short story I am a statistician and my name is Trish.
+<textarea id="code" class="input" style="min-height: 100px; width: 95%">My short story I am a statistician and my name is Trish.
 
-My legs are made of cardboard and I am married to a fish.&lt;/textarea&gt;
+My legs are made of cardboard and I am married to a fish.</textarea>
 
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="Reset"&gt;
-  &lt;input id="solution" type="button" value="Show solution"&gt;
-&lt;/div&gt;</pre>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+```
 
-<pre class="brush: css hidden">html {
+```css hidden
+html {
   font-family: sans-serif;
 }
 
@@ -138,9 +149,11 @@ h2 {
 body {
   margin: 10px;
   background: #f5f9fa;
-}</pre>
+}
+```
 
-<pre class="brush: js hidden">var textarea = document.getElementById('code');
+```js hidden
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -170,7 +183,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var htmlSolution = '&lt;h1&gt;My short story&lt;/h1&gt;\n&lt;p&gt;I am a statistician and my name is Trish.&lt;/p&gt;\n&lt;p&gt;My legs are made of cardboard and I am married to a fish.&lt;/p&gt;';
+var htmlSolution = '<h1>My short story</h1>\n<p>I am a statistician and my name is Trish.</p>\n<p>My legs are made of cardboard and I am married to a fish.</p>';
 var solutionEntry = htmlSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -216,80 +229,92 @@ textarea.onkeyup = function(){
   }
 
   updateCode();
-};</pre>
+};
+```
 
-<p>{{ EmbedLiveSample('Active_learning_Giving_our_content_structure', 700, 400, "", "") }}</p>
+{{ EmbedLiveSample('Active_learning_Giving_our_content_structure', 700, 400, "", "") }}
 
-<h3 id="Why_do_we_need_semantics">Why do we need semantics?</h3>
+### Why do we need semantics?
 
-<p>Semantics are relied on everywhere around us—we rely on previous experience to tell us what the function of an everyday object is; when we see something, we know what its function will be. So, for example, we expect a red traffic light to mean "stop," and a green traffic light to mean "go." Things can get tricky very quickly if the wrong semantics are applied. (Do any countries use red to mean "go"? We hope not.)</p>
+Semantics are relied on everywhere around us—we rely on previous experience to tell us what the function of an everyday object is; when we see something, we know what its function will be. So, for example, we expect a red traffic light to mean "stop," and a green traffic light to mean "go." Things can get tricky very quickly if the wrong semantics are applied. (Do any countries use red to mean "go"? We hope not.)
 
-<p>In a similar vein, we need to make sure we are using the correct elements, giving our content the correct meaning, function, or appearance. In this context, the {{htmlelement("h1")}} element is also a semantic element, which gives the text it wraps around the role (or meaning) of "a top level heading on your page."</p>
+In a similar vein, we need to make sure we are using the correct elements, giving our content the correct meaning, function, or appearance. In this context, the {{htmlelement("h1")}} element is also a semantic element, which gives the text it wraps around the role (or meaning) of "a top level heading on your page."
 
-<pre class="brush: html">&lt;h1&gt;This is a top level heading&lt;/h1&gt;</pre>
+```html
+<h1>This is a top level heading</h1>
+```
 
-<p>By default, the browser will give it a large font size to make it look like a heading (although you could style it to look like anything you wanted using CSS). More importantly, its semantic value will be used in multiple ways, for example by search engines and screen readers (as mentioned above).</p>
+By default, the browser will give it a large font size to make it look like a heading (although you could style it to look like anything you wanted using CSS). More importantly, its semantic value will be used in multiple ways, for example by search engines and screen readers (as mentioned above).
 
-<p>On the other hand, you could make any element <em>look</em> like a top level heading. Consider the following:</p>
+On the other hand, you could make any element _look_ like a top level heading. Consider the following:
 
-<pre class="brush: html">&lt;span style="font-size: 32px; margin: 21px 0; display: block;"&gt;Is this a top level heading?&lt;/span&gt;</pre>
+```html
+<span style="font-size: 32px; margin: 21px 0; display: block;">Is this a top level heading?</span>
+```
 
-<p>This is a {{htmlelement("span")}} element. It has no semantics. You use it to wrap content when you want to apply CSS to it (or do something to it with JavaScript) without giving it any extra meaning. (You'll find out more about these later on in the course.) We've applied some CSS to it to make it look like a top level heading, but since it has no semantic value, it will not get any of the extra benefits described above. It is a good idea to use the relevant HTML element for the job.</p>
+This is a {{htmlelement("span")}} element. It has no semantics. You use it to wrap content when you want to apply CSS to it (or do something to it with JavaScript) without giving it any extra meaning. (You'll find out more about these later on in the course.) We've applied some CSS to it to make it look like a top level heading, but since it has no semantic value, it will not get any of the extra benefits described above. It is a good idea to use the relevant HTML element for the job.
 
-<h2 id="Lists">Lists</h2>
+## Lists
 
-<p>Now let's turn our attention to lists. Lists are everywhere in life—from your shopping list to the list of directions you subconsciously follow to get to your house every day, to the lists of instructions you are following in these tutorials! Lists are everywhere on the web, too, and we've got three different types to worry about.</p>
+Now let's turn our attention to lists. Lists are everywhere in life—from your shopping list to the list of directions you subconsciously follow to get to your house every day, to the lists of instructions you are following in these tutorials! Lists are everywhere on the web, too, and we've got three different types to worry about.
 
-<h3 id="Unordered">Unordered</h3>
+### Unordered
 
-<p>Unordered lists are used to mark up lists of items for which the order of the items doesn't matter. Let's take a shopping list as an example:</p>
+Unordered lists are used to mark up lists of items for which the order of the items doesn't matter. Let's take a shopping list as an example:
 
-<pre>milk
-eggs
-bread
-hummus</pre>
+    milk
+    eggs
+    bread
+    hummus
 
-<p>Every unordered list starts off with a {{htmlelement("ul")}} element—this wraps around all the list items:</p>
+Every unordered list starts off with a {{htmlelement("ul")}} element—this wraps around all the list items:
 
-<pre class="brush: html">&lt;ul&gt;
+```html
+<ul>
 milk
 eggs
 bread
 hummus
-&lt;/ul&gt;</pre>
+</ul>
+```
 
-<p>The last step is to wrap each list item in a {{htmlelement("li")}} (list item) element:</p>
+The last step is to wrap each list item in a {{htmlelement("li")}} (list item) element:
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;milk&lt;/li&gt;
-  &lt;li&gt;eggs&lt;/li&gt;
-  &lt;li&gt;bread&lt;/li&gt;
-  &lt;li&gt;hummus&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul>
+  <li>milk</li>
+  <li>eggs</li>
+  <li>bread</li>
+  <li>hummus</li>
+</ul>
+```
 
-<h4 id="Active_learning_Marking_up_an_unordered_list">Active learning: Marking up an unordered list</h4>
+#### Active learning: Marking up an unordered list
 
-<p>Try editing the live sample below to create your very own HTML unordered list.</p>
+Try editing the live sample below to create your very own HTML unordered list.
 
-<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
+```html hidden
+<h2>Live output</h2>
 
-&lt;div class="output" style="min-height: 50px;"&gt;
-&lt;/div&gt;
+<div class="output" style="min-height: 50px;">
+</div>
 
-&lt;h2&gt;Editable code&lt;/h2&gt;
-&lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
+<h2>Editable code</h2>
+<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
 
-&lt;textarea id="code" class="input" style="min-height: 100px; width: 95%"&gt;milk
+<textarea id="code" class="input" style="min-height: 100px; width: 95%">milk
 eggs
 bread
-hummus&lt;/textarea&gt;
+hummus</textarea>
 
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="Reset"&gt;
-  &lt;input id="solution" type="button" value="Show solution"&gt;
-&lt;/div&gt;</pre>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+```
 
-<pre class="brush: css hidden">html {
+```css hidden
+html {
   font-family: sans-serif;
 }
 
@@ -307,9 +332,11 @@ h2 {
 body {
   margin: 10px;
   background: #f5f9fa;
-}</pre>
+}
+```
 
-<pre class="brush: js hidden">var textarea = document.getElementById('code');
+```js hidden
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -339,7 +366,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var htmlSolution = '&lt;ul&gt;\n&lt;li&gt;milk&lt;/li&gt;\n&lt;li&gt;eggs&lt;/li&gt;\n&lt;li&gt;bread&lt;/li&gt;\n&lt;li&gt;hummus&lt;/li&gt;\n&lt;/ul&gt;';
+var htmlSolution = '<ul>\n<li>milk</li>\n<li>eggs</li>\n<li>bread</li>\n<li>hummus</li>\n</ul>';
 var solutionEntry = htmlSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -385,54 +412,60 @@ textarea.onkeyup = function(){
   }
 
   updateCode();
-};</pre>
+};
+```
 
-<p>{{ EmbedLiveSample('Active_learning_Marking_up_an_unordered_list', 700, 400, "", "") }}</p>
+{{ EmbedLiveSample('Active_learning_Marking_up_an_unordered_list', 700, 400, "", "") }}
 
-<h3 id="Ordered">Ordered</h3>
+### Ordered
 
-<p>Ordered lists are lists in which the order of the items <em>does</em> matter. Let's take a set of directions as an example:</p>
+Ordered lists are lists in which the order of the items _does_ matter. Let's take a set of directions as an example:
 
-<pre>Drive to the end of the road
+    Drive to the end of the road
+    Turn right
+    Go straight across the first two roundabouts
+    Turn left at the third roundabout
+    The school is on your right, 300 meters up the road
+
+The markup structure is the same as for unordered lists, except that you have to wrap the list items in an {{htmlelement("ol")}} element, rather than `<ul>`:
+
+```html
+<ol>
+  <li>Drive to the end of the road</li>
+  <li>Turn right</li>
+  <li>Go straight across the first two roundabouts</li>
+  <li>Turn left at the third roundabout</li>
+  <li>The school is on your right, 300 meters up the road</li>
+</ol>
+```
+
+#### Active learning: Marking up an ordered list
+
+Try editing the live sample below to create your very own HTML ordered list.
+
+```html hidden
+<h2>Live output</h2>
+
+<div class="output" style="min-height: 50px;">
+</div>
+
+<h2>Editable code</h2>
+<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+
+<textarea id="code" class="input" style="min-height: 200px; width: 95%">Drive to the end of the road
 Turn right
 Go straight across the first two roundabouts
 Turn left at the third roundabout
-The school is on your right, 300 meters up the road</pre>
+The school is on your right, 300 meters up the road</textarea>
 
-<p>The markup structure is the same as for unordered lists, except that you have to wrap the list items in an {{htmlelement("ol")}} element, rather than <code>&lt;ul&gt;</code>:</p>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+```
 
-<pre class="brush: html">&lt;ol&gt;
-  &lt;li&gt;Drive to the end of the road&lt;/li&gt;
-  &lt;li&gt;Turn right&lt;/li&gt;
-  &lt;li&gt;Go straight across the first two roundabouts&lt;/li&gt;
-  &lt;li&gt;Turn left at the third roundabout&lt;/li&gt;
-  &lt;li&gt;The school is on your right, 300 meters up the road&lt;/li&gt;
-&lt;/ol&gt;</pre>
-
-<h4 id="Active_learning_Marking_up_an_ordered_list">Active learning: Marking up an ordered list</h4>
-
-<p>Try editing the live sample below to create your very own HTML ordered list.</p>
-
-<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
-
-&lt;div class="output" style="min-height: 50px;"&gt;
-&lt;/div&gt;
-
-&lt;h2&gt;Editable code&lt;/h2&gt;
-&lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
-
-&lt;textarea id="code" class="input" style="min-height: 200px; width: 95%"&gt;Drive to the end of the road
-Turn right
-Go straight across the first two roundabouts
-Turn left at the third roundabout
-The school is on your right, 300 meters up the road&lt;/textarea&gt;
-
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="Reset"&gt;
-  &lt;input id="solution" type="button" value="Show solution"&gt;
-&lt;/div&gt;</pre>
-
-<pre class="brush: css hidden">html {
+```css hidden
+html {
   font-family: sans-serif;
 }
 
@@ -450,9 +483,11 @@ h2 {
 body {
   margin: 10px;
   background: #f5f9fa;
-}</pre>
+}
+```
 
-<pre class="brush: js hidden">var textarea = document.getElementById('code');
+```js hidden
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -482,7 +517,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var htmlSolution = '&lt;ol&gt;\n&lt;li&gt;Drive to the end of the road&lt;/li&gt;\n&lt;li&gt;Turn right&lt;/li&gt;\n&lt;li&gt;Go straight across the first two roundabouts&lt;/li&gt;\n&lt;li&gt;Turn left at the third roundabout&lt;/li&gt;\n&lt;li&gt;The school is on your right, 300 meters up the road&lt;/li&gt;\n&lt;/ol&gt;';
+var htmlSolution = '<ol>\n<li>Drive to the end of the road</li>\n<li>Turn right</li>\n<li>Go straight across the first two roundabouts</li>\n<li>Turn left at the third roundabout</li>\n<li>The school is on your right, 300 meters up the road</li>\n</ol>';
 var solutionEntry = htmlSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -528,23 +563,25 @@ textarea.onkeyup = function(){
   }
 
   updateCode();
-};</pre>
+};
+```
 
-<p>{{ EmbedLiveSample('Active_learning_Marking_up_an_ordered_list', 700, 500, "", "") }}</p>
+{{ EmbedLiveSample('Active_learning_Marking_up_an_ordered_list', 700, 500, "", "") }}
 
-<h3 id="Active_learning_Marking_up_our_recipe_page">Active learning: Marking up our recipe page</h3>
+### Active learning: Marking up our recipe page
 
-<p>So at this point in the article, you have all the information you need to mark up our recipe page example. You can choose to either save a local copy of our <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/html-text-formatting/text-start.html">text-start.html</a> starting file and do the work there or do it in the editable example below. Doing it locally will probably be better, as then you'll get to save the work you are doing, whereas if you fill it in to the editable example, it will be lost the next time you open the page. Both have pros and cons.</p>
+So at this point in the article, you have all the information you need to mark up our recipe page example. You can choose to either save a local copy of our [text-start.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/html-text-formatting/text-start.html) starting file and do the work there or do it in the editable example below. Doing it locally will probably be better, as then you'll get to save the work you are doing, whereas if you fill it in to the editable example, it will be lost the next time you open the page. Both have pros and cons.
 
-<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
+```html hidden
+<h2>Live output</h2>
 
-&lt;div class="output" style="min-height: 50px;"&gt;
-&lt;/div&gt;
+<div class="output" style="min-height: 50px;">
+</div>
 
-&lt;h2&gt;Editable code&lt;/h2&gt;
-&lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
+<h2>Editable code</h2>
+<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
 
-&lt;textarea id="code" class="input" style="min-height: 200px; width: 95%"&gt;Quick hummus recipe
+<textarea id="code" class="input" style="min-height: 200px; width: 95%">Quick hummus recipe
 
   This recipe makes quick, tasty hummus, with no messing. It has been adapted from a number of different recipes that I have read over the years.
 
@@ -575,14 +612,16 @@ textarea.onkeyup = function(){
 
   Refrigerate the finished hummus in a sealed container. You should be able to use it for about a week after you've made it. If it starts to become fizzy, you should definitely discard it.
 
-  Hummus is suitable for freezing; you should thaw it and use it within a couple of months.&lt;/textarea&gt;
+  Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</textarea>
 
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="Reset"&gt;
-  &lt;input id="solution" type="button" value="Show solution"&gt;
-&lt;/div&gt;</pre>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+```
 
-<pre class="brush: css hidden">html {
+```css hidden
+html {
   font-family: sans-serif;
 }
 
@@ -600,9 +639,11 @@ h2 {
 body {
   margin: 10px;
   background: #f5f9fa;
-}</pre>
+}
+```
 
-<pre class="brush: js hidden">var textarea = document.getElementById('code');
+```js hidden
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -632,7 +673,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var htmlSolution = '&lt;h1&gt;Quick hummus recipe&lt;/h1&gt;\n\n&lt;p&gt;This recipe makes quick, tasty hummus, with no messing. It has been adapted from a number of different recipes that I have read over the years.&lt;/p&gt;\n\n&lt;p&gt;Hummus is a delicious thick paste used heavily in Greek and Middle Eastern dishes. It is very tasty with salad, grilled meats and pitta breads.&lt;/p&gt;\n\n&lt;h2&gt;Ingredients&lt;/h2&gt;\n\n&lt;ul&gt;\n&lt;li&gt;1 can (400g) of chick peas (garbanzo beans)&lt;/li&gt;\n&lt;li&gt;175g of tahini&lt;/li&gt;\n&lt;li&gt;6 sundried tomatoes&lt;/li&gt;\n&lt;li&gt;Half a red pepper&lt;/li&gt;\n&lt;li&gt;A pinch of cayenne pepper&lt;/li&gt;\n&lt;li&gt;1 clove of garlic&lt;/li&gt;\n&lt;li&gt;A dash of olive oil&lt;/li&gt;\n&lt;/ul&gt;\n\n&lt;h2&gt;Instructions&lt;/h2&gt;\n\n&lt;ol&gt;\n&lt;li&gt;Remove the skin from the garlic, and chop coarsely.&lt;/li&gt;\n&lt;li&gt;Remove all the seeds and stalk from the pepper, and chop coarsely.&lt;/li&gt;\n&lt;li&gt;Add all the ingredients into a food processor.&lt;/li&gt;\n&lt;li&gt;Process all the ingredients into a paste.&lt;/li&gt;\n&lt;li&gt;If you want a coarse "chunky" hummus, process it for a short time.&lt;/li&gt;\n&lt;li&gt;If you want a smooth hummus, process it for a longer time.&lt;/li&gt;\n&lt;/ol&gt;\n\n&lt;p&gt;For a different flavour, you could try blending in a small measure of lemon and coriander, chili pepper, lime and chipotle, harissa and mint, or spinach and feta cheese. Experiment and see what works for you.&lt;/p&gt;\n\n&lt;h2&gt;Storage&lt;/h2&gt;\n\n&lt;p&gt;Refrigerate the finished hummus in a sealed container. You should be able to use it for about a week after you\'ve made it. If it starts to become fizzy, you should definitely discard it.&lt;/p&gt;\n\n&lt;p&gt;Hummus is suitable for freezing; you should thaw it and use it within a couple of months.&lt;/p&gt;';
+var htmlSolution = '<h1>Quick hummus recipe</h1>\n\n<p>This recipe makes quick, tasty hummus, with no messing. It has been adapted from a number of different recipes that I have read over the years.</p>\n\n<p>Hummus is a delicious thick paste used heavily in Greek and Middle Eastern dishes. It is very tasty with salad, grilled meats and pitta breads.</p>\n\n<h2>Ingredients</h2>\n\n<ul>\n<li>1 can (400g) of chick peas (garbanzo beans)</li>\n<li>175g of tahini</li>\n<li>6 sundried tomatoes</li>\n<li>Half a red pepper</li>\n<li>A pinch of cayenne pepper</li>\n<li>1 clove of garlic</li>\n<li>A dash of olive oil</li>\n</ul>\n\n<h2>Instructions</h2>\n\n<ol>\n<li>Remove the skin from the garlic, and chop coarsely.</li>\n<li>Remove all the seeds and stalk from the pepper, and chop coarsely.</li>\n<li>Add all the ingredients into a food processor.</li>\n<li>Process all the ingredients into a paste.</li>\n<li>If you want a coarse "chunky" hummus, process it for a short time.</li>\n<li>If you want a smooth hummus, process it for a longer time.</li>\n</ol>\n\n<p>For a different flavour, you could try blending in a small measure of lemon and coriander, chili pepper, lime and chipotle, harissa and mint, or spinach and feta cheese. Experiment and see what works for you.</p>\n\n<h2>Storage</h2>\n\n<p>Refrigerate the finished hummus in a sealed container. You should be able to use it for about a week after you\'ve made it. If it starts to become fizzy, you should definitely discard it.</p>\n\n<p>Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</p>';
 var solutionEntry = htmlSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -678,105 +719,119 @@ textarea.onkeyup = function(){
   }
 
   updateCode();
-};</pre>
+};
+```
 
-<p>{{ EmbedLiveSample('Active_learning_Marking_up_our_recipe_page', 900, 620, "", "") }}</p>
+{{ EmbedLiveSample('Active_learning_Marking_up_our_recipe_page', 900, 620, "", "") }}
 
-<p>If you get stuck, you can always press the <em>Show solution</em> button, or check out our <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/html-text-formatting/text-complete.html">text-complete.html</a> example on our github repo.</p>
+If you get stuck, you can always press the _Show solution_ button, or check out our [text-complete.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/html-text-formatting/text-complete.html) example on our github repo.
 
-<h3 id="Nesting_lists">Nesting lists</h3>
+### Nesting lists
 
-<p>It is perfectly ok to nest one list inside another one. You might want to have some sub-bullets sitting below a top-level bullet. Let's take the second list from our recipe example:</p>
+It is perfectly ok to nest one list inside another one. You might want to have some sub-bullets sitting below a top-level bullet. Let's take the second list from our recipe example:
 
-<pre class="brush: html">&lt;ol&gt;
-  &lt;li&gt;Remove the skin from the garlic, and chop coarsely.&lt;/li&gt;
-  &lt;li&gt;Remove all the seeds and stalk from the pepper, and chop coarsely.&lt;/li&gt;
-  &lt;li&gt;Add all the ingredients into a food processor.&lt;/li&gt;
-  &lt;li&gt;Process all the ingredients into a paste.&lt;/li&gt;
-  &lt;li&gt;If you want a coarse "chunky" hummus, process it for a short time.&lt;/li&gt;
-  &lt;li&gt;If you want a smooth hummus, process it for a longer time.&lt;/li&gt;
-&lt;/ol&gt;</pre>
+```html
+<ol>
+  <li>Remove the skin from the garlic, and chop coarsely.</li>
+  <li>Remove all the seeds and stalk from the pepper, and chop coarsely.</li>
+  <li>Add all the ingredients into a food processor.</li>
+  <li>Process all the ingredients into a paste.</li>
+  <li>If you want a coarse "chunky" hummus, process it for a short time.</li>
+  <li>If you want a smooth hummus, process it for a longer time.</li>
+</ol>
+```
 
-<p>Since the last two bullets are very closely related to the one before them (they read like sub-instructions or choices that fit below that bullet), it might make sense to nest them inside their own unordered list and put that list inside the current fourth bullet. This would look like so:</p>
+Since the last two bullets are very closely related to the one before them (they read like sub-instructions or choices that fit below that bullet), it might make sense to nest them inside their own unordered list and put that list inside the current fourth bullet. This would look like so:
 
-<pre class="brush: html">&lt;ol&gt;
-  &lt;li&gt;Remove the skin from the garlic, and chop coarsely.&lt;/li&gt;
-  &lt;li&gt;Remove all the seeds and stalk from the pepper, and chop coarsely.&lt;/li&gt;
-  &lt;li&gt;Add all the ingredients into a food processor.&lt;/li&gt;
-  &lt;li&gt;Process all the ingredients into a paste.
-    &lt;ul&gt;
-      &lt;li&gt;If you want a coarse "chunky" hummus, process it for a short time.&lt;/li&gt;
-      &lt;li&gt;If you want a smooth hummus, process it for a longer time.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</pre>
+```html
+<ol>
+  <li>Remove the skin from the garlic, and chop coarsely.</li>
+  <li>Remove all the seeds and stalk from the pepper, and chop coarsely.</li>
+  <li>Add all the ingredients into a food processor.</li>
+  <li>Process all the ingredients into a paste.
+    <ul>
+      <li>If you want a coarse "chunky" hummus, process it for a short time.</li>
+      <li>If you want a smooth hummus, process it for a longer time.</li>
+    </ul>
+  </li>
+</ol>
+```
 
-<p>Try going back to the previous active learning example and updating the second list like this.</p>
+Try going back to the previous active learning example and updating the second list like this.
 
-<h2 id="Emphasis_and_importance">Emphasis and importance</h2>
+## Emphasis and importance
 
-<p>In human language, we often emphasize certain words to alter the meaning of a sentence, and we often want to mark certain words as important or different in some way. HTML provides various semantic elements to allow us to mark up textual content with such effects, and in this section, we'll look at a few of the most common ones.</p>
+In human language, we often emphasize certain words to alter the meaning of a sentence, and we often want to mark certain words as important or different in some way. HTML provides various semantic elements to allow us to mark up textual content with such effects, and in this section, we'll look at a few of the most common ones.
 
-<h3 id="Emphasis">Emphasis</h3>
+### Emphasis
 
-<p>When we want to add emphasis in spoken language, we <em>stress</em> certain words, subtly altering the meaning of what we are saying. Similarly, in written language we tend to stress words by putting them in italics. For example, the following two sentences have different meanings.</p>
+When we want to add emphasis in spoken language, we _stress_ certain words, subtly altering the meaning of what we are saying. Similarly, in written language we tend to stress words by putting them in italics. For example, the following two sentences have different meanings.
 
-<p>I am glad you weren't late.</p>
+I am glad you weren't late.
 
+I am _glad_ you weren't _late_.
+
+The first sentence sounds genuinely relieved that the person wasn't late. In contrast, the second one sounds sarcastic or passive-aggressive, expressing annoyance that the person arrived a bit late.
+
+In HTML we use the {{htmlelement("em")}} (emphasis) element to mark up such instances. As well as making the document more interesting to read, these are recognized by screen readers and spoken out in a different tone of voice. Browsers style this as italic by default, but you shouldn't use this tag purely to get italic styling. To do that, you'd use a {{htmlelement("span")}} element and some CSS, or perhaps an {{htmlelement("i")}} element (see below).
+
+```html
 <p>I am <em>glad</em> you weren't <em>late</em>.</p>
+```
 
-<p>The first sentence sounds genuinely relieved that the person wasn't late. In contrast, the second one sounds sarcastic or passive-aggressive, expressing annoyance that the person arrived a bit late.</p>
+### Strong importance
 
-<p>In HTML we use the {{htmlelement("em")}} (emphasis) element to mark up such instances. As well as making the document more interesting to read, these are recognized by screen readers and spoken out in a different tone of voice. Browsers style this as italic by default, but you shouldn't use this tag purely to get italic styling. To do that, you'd use a {{htmlelement("span")}} element and some CSS, or perhaps an {{htmlelement("i")}} element (see below).</p>
+To emphasize important words, we tend to stress them in spoken language and **bold** them in written language. For example:
 
-<pre class="brush: html">&lt;p&gt;I am &lt;em&gt;glad&lt;/em&gt; you weren't &lt;em&gt;late&lt;/em&gt;.&lt;/p&gt;</pre>
+This liquid is **highly toxic**.
 
-<h3 id="Strong_importance">Strong importance</h3>
+I am counting on you. **Do not** be late!
 
-<p>To emphasize important words, we tend to stress them in spoken language and <strong>bold</strong> them in written language. For example:</p>
+In HTML we use the {{htmlelement("strong")}} (strong importance) element to mark up such instances. As well as making the document more useful, again these are recognized by screen readers and spoken in a different tone of voice. Browsers style this as bold text by default, but you shouldn't use this tag purely to get bold styling. To do that, you'd use a {{htmlelement("span")}} element and some CSS, or perhaps a {{htmlelement("b")}} element (see below).
 
+```html
 <p>This liquid is <strong>highly toxic</strong>.</p>
 
 <p>I am counting on you. <strong>Do not</strong> be late!</p>
+```
 
-<p>In HTML we use the {{htmlelement("strong")}} (strong importance) element to mark up such instances. As well as making the document more useful, again these are recognized by screen readers and spoken in a different tone of voice. Browsers style this as bold text by default, but you shouldn't use this tag purely to get bold styling. To do that, you'd use a {{htmlelement("span")}} element and some CSS, or perhaps a {{htmlelement("b")}} element (see below).</p>
+You can nest strong and emphasis inside one another if desired:
 
-<pre class="brush: html">&lt;p&gt;This liquid is &lt;strong&gt;highly toxic&lt;/strong&gt;.&lt;/p&gt;
+```html
+<p>This liquid is <strong>highly toxic</strong> —
+if you drink it, <strong>you may <em>die</em></strong>.</p>
+```
 
-&lt;p&gt;I am counting on you. &lt;strong&gt;Do not&lt;/strong&gt; be late!&lt;/p&gt;</pre>
+### Active learning: Let's be important
 
-<p>You can nest strong and emphasis inside one another if desired:</p>
+In this active learning section, we've provided an editable example. Inside it, we'd like you to try adding emphasis and strong importance to the words you think need them, just to have some practice.
 
-<pre class="brush: html">&lt;p&gt;This liquid is &lt;strong&gt;highly toxic&lt;/strong&gt; —
-if you drink it, &lt;strong&gt;you may &lt;em&gt;die&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;</pre>
+```html hidden
+<h2>Live output</h2>
 
-<h3>Active learning: Let's be important</h3>
+<div class="output" style="min-height: 50px;">
+</div>
 
-<p>In this active learning section, we've provided an editable example. Inside it, we'd like you to try adding emphasis and strong importance to the words you think need them, just to have some practice.</p>
+<h2>Editable code</h2>
+<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
 
-<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
-
-&lt;div class="output" style="min-height: 50px;"&gt;
-&lt;/div&gt;
-
-&lt;h2&gt;Editable code&lt;/h2&gt;
-&lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
-
-&lt;textarea id="code" class="input" style="min-height: 200px; width: 95%"&gt;&lt;h1&gt;Important notice&lt;/h1&gt;
-&lt;p&gt;On Sunday January 9th 2010, a gang of goths were
+<textarea id="code" class="input" style="min-height: 200px; width: 95%"><h1>Important notice</h1>
+<p>On Sunday January 9th 2010, a gang of goths were
   spotted stealing several garden gnomes from a
   shopping center in downtown Milwaukee. They were
   all wearing green jumpsuits and silly hats, and
   seemed to be having a whale of a time. If anyone
    has any information about this incident, please
-    contact the police now.&lt;/p&gt;&lt;/textarea&gt;
+    contact the police now.</p></textarea>
 
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="Reset"&gt;
-  &lt;input id="solution" type="button" value="Show solution"&gt;
-&lt;/div&gt;</pre>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+```
 
-<pre class="brush: css hidden">html {
+```css hidden
+html {
   font-family: sans-serif;
 }
 
@@ -794,9 +849,11 @@ h2 {
 body {
   margin: 10px;
   background: #f5f9fa;
-}</pre>
+}
+```
 
-<pre class="brush: js hidden">var textarea = document.getElementById('code');
+```js hidden
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -826,7 +883,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var htmlSolution = '&lt;h1&gt;Important notice&lt;/h1&gt;\n&lt;p&gt;On &lt;strong&gt;Sunday January 9th 2010&lt;/strong&gt;, a gang of &lt;em&gt;goths&lt;/em&gt; were spotted stealing &lt;strong&gt;&lt;em&gt;several&lt;/em&gt; garden gnomes&lt;/strong&gt; from a shopping center in downtown &lt;strong&gt;Milwaukee&lt;/strong&gt;. They were all wearing &lt;em&gt;green jumpsuits&lt;/em&gt; and &lt;em&gt;silly hats&lt;/em&gt;, and seemed to be having a whale of a time. If anyone has &lt;strong&gt;any&lt;/strong&gt; information about this incident, please contact the police &lt;strong&gt;now&lt;/strong&gt;.&lt;/p&gt;';
+var htmlSolution = '<h1>Important notice</h1>\n<p>On <strong>Sunday January 9th 2010</strong>, a gang of <em>goths</em> were spotted stealing <strong><em>several</em> garden gnomes</strong> from a shopping center in downtown <strong>Milwaukee</strong>. They were all wearing <em>green jumpsuits</em> and <em>silly hats</em>, and seemed to be having a whale of a time. If anyone has <strong>any</strong> information about this incident, please contact the police <strong>now</strong>.</p>';
 var solutionEntry = htmlSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -872,76 +929,73 @@ textarea.onkeyup = function(){
   }
 
   updateCode();
-};</pre>
+};
+```
 
-<p>{{ EmbedLiveSample('Active_learning_Lets_be_important', 700, 520, "", "") }}</p>
+{{ EmbedLiveSample('Active_learning_Lets_be_important', 700, 520, "", "") }}
 
-<h3 id="Italic_bold_underline...">Italic, bold, underline...</h3>
+### Italic, bold, underline...
 
-<p>The elements we've discussed so far have clearcut associated semantics. The situation with {{htmlelement("b")}}, {{htmlelement("i")}}, and {{htmlelement("u")}} is somewhat more complicated. They came about so people could write bold, italics, or underlined text in an era when CSS was still supported poorly or not at all. Elements like this, which only affect presentation and not semantics, are known as <strong>presentational elements</strong> and should no longer be used because, as we've seen before, semantics is so important to accessibility, SEO, etc.</p>
+The elements we've discussed so far have clearcut associated semantics. The situation with {{htmlelement("b")}}, {{htmlelement("i")}}, and {{htmlelement("u")}} is somewhat more complicated. They came about so people could write bold, italics, or underlined text in an era when CSS was still supported poorly or not at all. Elements like this, which only affect presentation and not semantics, are known as **presentational elements** and should no longer be used because, as we've seen before, semantics is so important to accessibility, SEO, etc.
 
-<p>HTML5 redefined <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>, and <code>&lt;u&gt;</code> with new, somewhat confusing, semantic roles.</p>
+HTML5 redefined `<b>`, `<i>`, and `<u>` with new, somewhat confusing, semantic roles.
 
-<p>Here's the best rule of thumb: It's likely appropriate to use <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>, or <code>&lt;u&gt;</code> to convey a meaning traditionally conveyed with bold, italics, or underline, provided there is no more suitable element. However, it always remains critical to keep an accessibility mindset. The concept of italics isn't very helpful to people using screen readers, or to people using a writing system other than the Latin alphabet.</p>
+Here's the best rule of thumb: It's likely appropriate to use `<b>`, `<i>`, or `<u>` to convey a meaning traditionally conveyed with bold, italics, or underline, provided there is no more suitable element. However, it always remains critical to keep an accessibility mindset. The concept of italics isn't very helpful to people using screen readers, or to people using a writing system other than the Latin alphabet.
 
-<ul>
- <li>{{HTMLElement('i')}} is used to convey a meaning traditionally conveyed by italic: foreign words, taxonomic designation, technical terms, a thought...</li>
- <li>{{HTMLElement('b')}} is used to convey a meaning traditionally conveyed by bold: key words, product names, lead sentence...</li>
- <li>{{HTMLElement('u')}} is used to convey a meaning traditionally conveyed by underline: proper name, misspelling...</li>
-</ul>
+- {{HTMLElement('i')}} is used to convey a meaning traditionally conveyed by italic: foreign words, taxonomic designation, technical terms, a thought...
+- {{HTMLElement('b')}} is used to convey a meaning traditionally conveyed by bold: key words, product names, lead sentence...
+- {{HTMLElement('u')}} is used to convey a meaning traditionally conveyed by underline: proper name, misspelling...
 
-<div class="note">
-<p><strong>Note:</strong> People strongly associate underlining with hyperlinks. Therefore, on the web, it's best to underline only links. Use the <code>&lt;u&gt;</code> element when it's semantically appropriate, but consider using CSS to change the default underline to something more appropriate on the web. The example below illustrates how it can be done.</p>
-</div>
+> **Note:** People strongly associate underlining with hyperlinks. Therefore, on the web, it's best to underline only links. Use the `<u>` element when it's semantically appropriate, but consider using CSS to change the default underline to something more appropriate on the web. The example below illustrates how it can be done.
 
-<pre class="brush: html">&lt;!-- scientific names --&gt;
-&lt;p&gt;
-  The Ruby-throated Hummingbird (&lt;i&gt;Archilochus colubris&lt;/i&gt;)
+```html
+<!-- scientific names -->
+<p>
+  The Ruby-throated Hummingbird (<i>Archilochus colubris</i>)
   is the most common hummingbird in Eastern North America.
-&lt;/p&gt;
+</p>
 
-&lt;!-- foreign words --&gt;
-&lt;p&gt;
-  The menu was a sea of exotic words like &lt;i lang="uk-latn"&gt;vatrushka&lt;/i&gt;,
-  &lt;i lang="id"&gt;nasi goreng&lt;/i&gt; and &lt;i lang="fr"&gt;soupe à l'oignon&lt;/i&gt;.
-&lt;/p&gt;
+<!-- foreign words -->
+<p>
+  The menu was a sea of exotic words like <i lang="uk-latn">vatrushka</i>,
+  <i lang="id">nasi goreng</i> and <i lang="fr">soupe à l'oignon</i>.
+</p>
 
-&lt;!-- a known misspelling --&gt;
-&lt;p&gt;
-  Someday I'll learn how to &lt;u style="text-decoration-line: underline; text-decoration-style: wavy;"&gt;spel&lt;/u&gt; better.
-&lt;/p&gt;
+<!-- a known misspelling -->
+<p>
+  Someday I'll learn how to <u style="text-decoration-line: underline; text-decoration-style: wavy;">spel</u> better.
+</p>
 
-&lt;!-- Highlight keywords in a set of instructions --&gt;
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;b&gt;Slice&lt;/b&gt; two pieces of bread off the loaf.
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;b&gt;Insert&lt;/b&gt; a tomato slice and a leaf of
+<!-- Highlight keywords in a set of instructions -->
+<ol>
+  <li>
+    <b>Slice</b> two pieces of bread off the loaf.
+  </li>
+  <li>
+    <b>Insert</b> a tomato slice and a leaf of
     lettuce between the slices of bread.
-  &lt;/li&gt;
-&lt;/ol&gt;</pre>
+  </li>
+</ol>
+```
 
-<h2 id="Test_your_skills!">Test your skills!</h2>
+## Test your skills!
 
-<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on—see <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_HTML_text_basics">Test your skills: HTML text basics</a>.</p>
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on—see [Test your skills: HTML text basics](/en-US/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_HTML_text_basics).
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>That's it for now! This article should have given you a good idea of how to start marking up text in HTML and introduced you to some of the most important elements in this area. There are a lot more semantic elements to cover in this area, and we'll look at a lot more in our <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting">Advanced text formatting</a> article later on in the course. In the next article, we'll be looking in detail at how to <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">create hyperlinks</a>, possibly the most important element on the web.</p>
+That's it for now! This article should have given you a good idea of how to start marking up text in HTML and introduced you to some of the most important elements in this area. There are a lot more semantic elements to cover in this area, and we'll look at a lot more in our [Advanced text formatting](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting) article later on in the course. In the next article, we'll be looking in detail at how to [create hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), possibly the most important element on the web.
 
-<p>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}</p>
+{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
 
-<h2 id="In_this_module">In this module</h2>
+## In this module
 
-<ul>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Getting started with HTML</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">What’s in the head? Metadata in HTML</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML text fundamentals</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">Creating hyperlinks</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting">Advanced text formatting</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure">Document and website structure</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">Debugging HTML</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter">Marking up a letter</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content">Structuring a page of content</a></li>
-</ul>
+- [Getting started with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
+- [What’s in the head? Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [HTML text fundamentals](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
+- [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
+- [Advanced text formatting](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
+- [Document and website structure](/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
+- [Debugging HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
+- [Marking up a letter](/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
+- [Structuring a page of content](/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

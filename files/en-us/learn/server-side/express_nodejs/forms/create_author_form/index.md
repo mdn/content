@@ -8,31 +8,35 @@ tags:
   - part 6
   - server-side
 ---
-<p>This subarticle shows how to define a page for creating <code>Author</code> objects.</p>
+This subarticle shows how to define a page for creating `Author` objects.
 
-<h2 id="Import_validation_and_sanitization_methods">Import validation and sanitization methods</h2>
+## Import validation and sanitization methods
 
-<p>As with the genre form, to use <em>express-validator</em> we have to <em>require</em> the functions we want to use.</p>
+As with the genre form, to use _express-validator_ we have to *require* the functions we want to use.
 
-<p>Open <strong>/controllers/authorController.js</strong>, and add the following lines at the top of the file:</p>
+Open **/controllers/authorController.js**, and add the following lines at the top of the file:
 
-<pre class="brush: js">const { body,validationResult } = require('express-validator');
-</pre>
+```js
+const { body,validationResult } = require('express-validator');
+```
 
-<h2 id="Controller—get_route">Controller—get route</h2>
+## Controller—get route
 
-<p>Find the exported <code>author_create_get()</code> controller method and replace it with the following code. This renders the <strong>author_form.pug</strong> view, passing a <code>title</code> variable.</p>
+Find the exported `author_create_get()` controller method and replace it with the following code. This renders the **author_form.pug** view, passing a `title` variable.
 
-<pre class="brush: js">// Display Author create form on GET.
+```js
+// Display Author create form on GET.
 exports.author_create_get = function(req, res, next) {
     res.render('author_form', { title: 'Create Author'});
-};</pre>
+};
+```
 
-<h2 id="Controller—post_route">Controller—post route</h2>
+## Controller—post route
 
-<p>Find the exported <code>author_create_post()</code> controller method, and replace it with the following code.</p>
+Find the exported `author_create_post()` controller method, and replace it with the following code.
 
-<pre class="brush: js">// Handle Author create on POST.
+```js
+// Handle Author create on POST.
 exports.author_create_post = [
 
     // Validate and sanitize fields.
@@ -44,7 +48,7 @@ exports.author_create_post = [
     body('date_of_death', 'Invalid date of death').optional({ checkFalsy: true }).isISO8601().toDate(),
 
     // Process request after validation and sanitization.
-    (req, res, next) =&gt; {
+    (req, res, next) => {
 
         // Extract the validation errors from a request.
         const errors = validationResult(req);
@@ -72,37 +76,39 @@ exports.author_create_post = [
             });
         }
     }
-];</pre>
+];
+```
 
-<p>The structure and behavior of this code is almost exactly the same as for creating a <code>Genre</code> object. First we validate and sanitize the data. If the data is invalid then we re-display the form along with the data that was originally entered by the user and a list of error messages. If the data is valid then we save the new author record and redirect the user to the author detail page.</p>
+The structure and behavior of this code is almost exactly the same as for creating a `Genre` object. First we validate and sanitize the data. If the data is invalid then we re-display the form along with the data that was originally entered by the user and a list of error messages. If the data is valid then we save the new author record and redirect the user to the author detail page.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Unlike with the <code>Genre</code> post handler, we don't check whether the <code>Author</code> object already exists before saving it. Arguably we should, though as it is now we can have multiple authors with the same name.</p>
-</div>
+> **Note:** Unlike with the `Genre` post handler, we don't check whether the `Author` object already exists before saving it. Arguably we should, though as it is now we can have multiple authors with the same name.
 
-<p>The validation code demonstrates several new features:</p>
+The validation code demonstrates several new features:
 
-<ul>
- <li>We can daisy chain validators, using <code>withMessage()</code> to specify the error message to display if the previous validation method fails. This makes it very easy to provide specific error messages without lots of code duplication.
+- We can daisy chain validators, using `withMessage()` to specify the error message to display if the previous validation method fails. This makes it very easy to provide specific error messages without lots of code duplication.
 
-  <pre class="brush: js">// Validate fields.
-body('first_name').trim().isLength({ min: 1 }).escape().withMessage('First name must be specified.')
-    .isAlphanumeric().withMessage('First name has non-alphanumeric characters.'),</pre>
- </li>
- <li>We can use the <code>optional()</code> function to run a subsequent validation only if a field has been entered (this allows us to validate optional fields). For example, below we check that the optional date of birth is an ISO8601-compliant date (the <code>checkFalsy</code> flag means that we'll accept either an empty string or <code>null</code> as an empty value).
-  <pre class="brush: js">body('date_of_birth', 'Invalid date of birth').optional({ checkFalsy: true }).isISO8601().toDate(),</pre>
- </li>
-</ul>
+  ```js
+  // Validate fields.
+  body('first_name').trim().isLength({ min: 1 }).escape().withMessage('First name must be specified.')
+      .isAlphanumeric().withMessage('First name has non-alphanumeric characters.'),
+  ```
 
-<ul>
- <li>Parameters are received from the request as strings. We can use <code>toDate()</code> (or <code>toBoolean()</code>) to cast these to the proper JavaScript types (as shown at the end of the validator chain above).</li>
-</ul>
+- We can use the `optional()` function to run a subsequent validation only if a field has been entered (this allows us to validate optional fields). For example, below we check that the optional date of birth is an ISO8601-compliant date (the `checkFalsy` flag means that we'll accept either an empty string or `null` as an empty value).
 
-<h2 id="View">View</h2>
+  ```js
+  body('date_of_birth', 'Invalid date of birth').optional({ checkFalsy: true }).isISO8601().toDate(),
+  ```
 
-<p>Create <strong>/views/author_form.pug</strong> and copy in the text below.</p>
+<!---->
 
-<pre class="brush: plain">extends layout
+- Parameters are received from the request as strings. We can use `toDate()` (or `toBoolean()`) to cast these to the proper JavaScript types (as shown at the end of the validator chain above).
+
+## View
+
+Create **/views/author_form.pug** and copy in the text below.
+
+```plain
+extends layout
 
 block content
   h1=title
@@ -120,31 +126,26 @@ block content
   if errors
     ul
       for error in errors
-        li!= error.msg</pre>
+        li!= error.msg
+```
 
-<p>The structure and behavior for this view is exactly the same as for the <strong>genre_form.pug</strong> template, so we won't describe it again.</p>
+The structure and behavior for this view is exactly the same as for the **genre_form.pug** template, so we won't describe it again.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Some browsers don’t support the input <code>type=“date”</code>, so you won’t get the datepicker widget or the default <em><code>dd/mm/yyyy</code></em> placeholder, but will instead get an empty plain text field. One workaround is to explicitly add the attribute <code>placeholder='dd/mm/yyyy'</code> so that on less capable browsers you will still get information about the desired text format.</p>
-</div>
+> **Note:** Some browsers don’t support the input `type=“date”`, so you won’t get the datepicker widget or the default *`dd/mm/yyyy`* placeholder, but will instead get an empty plain text field. One workaround is to explicitly add the attribute `placeholder='dd/mm/yyyy'` so that on less capable browsers you will still get information about the desired text format.
 
-<h3 id="Challenge_Adding_the_date_of_death">Challenge: Adding the date of death</h3>
+### Challenge: Adding the date of death
 
-<p>The template above is missing a field for entering the <code>date_of_death</code>. Create the field following the same pattern as the date of birth form group!</p>
+The template above is missing a field for entering the `date_of_death`. Create the field following the same pattern as the date of birth form group!
 
-<h2 id="What_does_it_look_like">What does it look like?</h2>
+## What does it look like?
 
-<p>Run the application, open your browser to <a href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>, then select the <em>Create new author</em> link. If everything is set up correctly, your site should look something like the following screenshot. After you enter a value, it should be saved and you'll be taken to the author detail page.</p>
+Run the application, open your browser to <http://localhost:3000/>, then select the _Create new author_ link. If everything is set up correctly, your site should look something like the following screenshot. After you enter a value, it should be saved and you'll be taken to the author detail page.
 
-<p><img alt="Author Create Page - Express Local Library site" src="locallibary_express_author_create_empty.png"></p>
+![Author Create Page - Express Local Library site](locallibary_express_author_create_empty.png)
 
-<div class="notecard note">
-<p><strong>Note:</strong> If you experiment with various input formats for the dates, you may find that the format <code>yyyy-mm-dd</code> misbehaves. This is because JavaScript treats date strings as including the time of 0 hours, but additionally treats date strings in that format (the ISO 8601 standard) as including the time 0 hours UTC, rather than the local time. If your time zone is west of UTC, the date display, being local, will be one day before the date you entered. This is one of several complexities (such as multi-word family names and multi-author books) that we are not addressing here.</p>
-</div>
+> **Note:** If you experiment with various input formats for the dates, you may find that the format `yyyy-mm-dd` misbehaves. This is because JavaScript treats date strings as including the time of 0 hours, but additionally treats date strings in that format (the ISO 8601 standard) as including the time 0 hours UTC, rather than the local time. If your time zone is west of UTC, the date display, being local, will be one day before the date you entered. This is one of several complexities (such as multi-word family names and multi-author books) that we are not addressing here.
 
-<h2 id="Next_steps">Next steps</h2>
+## Next steps
 
-<ul>
- <li>Return to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a>.</li>
- <li>Proceed to the next subarticle of part 6: <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_book_form">Create Book form</a>.</li>
-</ul>
+- Return to [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms).
+- Proceed to the next subarticle of part 6: [Create Book form](/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_book_form).
