@@ -23,7 +23,7 @@ The **`HTMLImageElement`** interface represents an HTML {{HTMLElement("img")}} e
 ## Constructor
 
 - {{domxref("HTMLImageElement.Image()", "Image()")}}
-  - : The `Image()` constructor creates and returns a new `HTMLImageElement` object representing an HTML {{HTMLElement("img")}} element which is not attached to any DOM tree. It accepts optional width and height parameters. When called without parameters, ` new ``Image() ` is equivalent to calling {{DOMxRef("Document.createElement()", 'document.createElement("img")')}}.
+  - : The `Image()` constructor creates and returns a new `HTMLImageElement` object representing an HTML {{HTMLElement("img")}} element which is not attached to any DOM tree. It accepts optional width and height parameters. When called without parameters, `new Image()` is equivalent to calling {{DOMxRef("Document.createElement()", 'document.createElement("img")')}}.
 
 ## Properties
 

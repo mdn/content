@@ -81,7 +81,7 @@ When copy pasting code from external sources, there might be invalid characters.
 out!
 
 ```js example-bad
-var foo = 'bar';
+var foo = 'bar';​
 // SyntaxError: illegal character
 ```
 

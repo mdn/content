@@ -113,7 +113,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <p>The list of actual web safe fonts will change as operating systems evolve, but it's reasonable to consider the following fonts web safe, at least for now (many of them have been popularized thanks to the Microsoft <em><a href="https://en.wikipedia.org/wiki/Core_fonts_for_the_Web">Core fonts for the Web</a></em> initiative in the late 90s and early 2000s):</p>
 
-<table class="standard-table">
+<table class="standard-table no-markdown">
  <thead>
   <tr>
    <th scope="col">Name</th>
@@ -169,7 +169,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <p>The five names are defined as follows:</p>
 
-<table class="standard-table">
+<table class="standard-table no-markdown">
  <thead>
   <tr>
    <th scope="col">Term</th>
@@ -181,27 +181,57 @@ occasion such as this that he did.&lt;/p&gt;</pre>
   <tr>
    <td><code>serif</code></td>
    <td>Fonts that have serifs (the flourishes and other small details you see at the ends of the strokes in some typefaces)</td>
-   <td><span style="font-family: serif;">My big red elephant</span></td>
+   <td id="serif-example">
+     <pre class="brush: html hidden">My big red elephant</pre>
+     <pre class="brush: css hidden">body {
+  font-family: serif;
+}</pre>
+{{EmbedLiveSample("serif-example", 100, 60)}}
+   </td>
   </tr>
   <tr>
    <td><code>sans-serif</code></td>
    <td>Fonts that don't have serifs.</td>
-   <td><span style="font-family: sans-serif;">My big red elephant</span></td>
+   <td id="sans-serif-example">
+     <pre class="brush: html hidden">My big red elephant</pre>
+     <pre class="brush: css hidden">body {
+  font-family: sans-serif;
+}</pre>
+{{EmbedLiveSample("sans-serif-example", 100, 60)}}
+   </td>
   </tr>
   <tr>
    <td><code>monospace</code></td>
    <td>Fonts where every character has the same width, typically used in code listings.</td>
-   <td><span style="font-family: monospace;">My big red elephant</span></td>
+   <td id="monospace-example">
+     <pre class="brush: html hidden">My big red elephant</pre>
+     <pre class="brush: css hidden">body {
+  font-family: monospace;
+}</pre>
+{{EmbedLiveSample("monospace-example", 100, 60)}}
+   </td>
   </tr>
   <tr>
    <td><code>cursive</code></td>
    <td>Fonts that are intended to emulate handwriting, with flowing, connected strokes.</td>
-   <td><span style="font-family: cursive;">My big red elephant</span></td>
+   <td id="cursive-example">
+     <pre class="brush: html hidden">My big red elephant</pre>
+     <pre class="brush: css hidden">body {
+  font-family: cursive;
+}</pre>
+{{EmbedLiveSample("cursive-example", 100, 60)}}
+   </td>
   </tr>
   <tr>
    <td><code>fantasy</code></td>
    <td>Fonts that are intended to be decorative.</td>
-   <td><span style="font-family: fantasy;">My big red elephant</span></td>
+   <td id="fantasy-example">
+     <pre class="brush: html hidden">My big red elephant</pre>
+     <pre class="brush: css hidden">body {
+  font-family: fantasy;
+}</pre>
+{{EmbedLiveSample("fantasy-example", 100, 60)}}
+   </td>
   </tr>
  </tbody>
 </table>
