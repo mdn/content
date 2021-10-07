@@ -24,13 +24,13 @@ The **`ariaRelevant`** property of the {{domxref("Element")}} interface reflects
 
 A {{domxref("DOMString")}} containing one or more of the following values, space separated:
 
-- "additions"
+- `"additions"`
   - : Additions of Element Nodes within the live region should be considered relevant.
-- "removals"
+- `"removals"`
   - : Deletion of Nodes from the live region should be considered relevant.
-- "text"
+- `"text"`
   - : Changes to the textual content of existing nodes should be considered relevant.
-- "all"
+- `"all"`
   - : Equivalent to `"additions removals text"`.
 
 ## Examples

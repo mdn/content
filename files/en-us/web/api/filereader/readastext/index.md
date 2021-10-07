@@ -11,20 +11,17 @@ browser-compat: api.FileReader.readAsText
 ---
 {{APIRef("File API")}}
 
-The **`readAsText()`** method is used to read the contents of
-the specified {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is
-complete, the {{domxref("FileReader.readyState","readyState")}} is changed to
-`DONE`, the {{domxref("FileReader/loadend_event", "loadend")}} event is triggered, and the
-{{domxref("FileReader.result","result")}} property contains the contents of the file as
-a text string.
+The **`readAsText()`** method is used to read the contents of the specified {{domxref("Blob")}} or {{domxref("File")}}.
+When the read operation is complete, the {{domxref("FileReader.readyState","readyState")}} is changed to `DONE`,
+the {{domxref("FileReader/loadend_event", "loadend")}} event is triggered, and the {{domxref("FileReader.result","result")}} property contains the contents of the file as a text string.
 
-> **Note:** The {{domxref("Blob.text()")}} method is a newer promise-based API to read a file as
-> text.
+> **Note:** The {{domxref("Blob.text()")}} method is a newer promise-based API to read a file as text.
 
 ## Syntax
 
 ```js
-instanceOfFileReader.readAsText(blob[, encoding]);
+readAsText(blob)
+readAsText(blob, encoding)
 ```
 
 ### Parameters
@@ -32,8 +29,39 @@ instanceOfFileReader.readAsText(blob[, encoding]);
 - `blob`
   - : The {{domxref("Blob")}} or {{domxref("File")}} from which to read.
 - `encoding` {{optional_inline}}
-  - : A string specifying the encoding to use for the returned data. By default, UTF-8 is
-    assumed if this parameter is not specified.
+  - : A string specifying the encoding to use for the returned data. By default, UTF-8 is assumed if this parameter is not specified.
+
+## Example
+
+### HTML
+
+```html
+<input type="file" onchange="previewFile()"><br>
+<p class="content"></p>
+```
+
+### JavaScript
+
+```js
+function previewFile() {
+  const content = document.querySelector('.content');
+  const [file] = document.querySelector('input[type=file]').files;
+  const reader = new FileReader();
+
+  reader.addEventListener("load", () => {
+    // this will then display a text file
+    content.innerText = reader.result;
+  }, false);
+
+  if (file) {
+    reader.readAsText(file);
+  }
+}
+```
+
+### Result
+
+{{EmbedLiveSample("Example", "100%", 240)}}
 
 ## Specifications
 

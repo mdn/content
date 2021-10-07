@@ -58,7 +58,7 @@ None
 
 In the following example, is [excerpted
 from a demo](https://rsolomakhin.github.io/samples/paymentrequest/can-make-payment/) that asynchronously builds a `PaymentRequest` object for
-both Apple Pay and credit cards. It wraps the call to `canMakePayment()` in
+both Apple Pay and Example Pay. It wraps the call to `canMakePayment()` in
 feature detection, and calls an appropriate callback depending on the resolution of the
 `Promise`.
 
@@ -85,14 +85,14 @@ async function initPaymentRquest() {
     return;
   }
 
-  // Otherwise... let's see if we can use basic card
-  const supportsBasicCard = await new PaymentRequest(
-    [{ supportedMethods: "basic-card" }],
+  // Otherwise... let's see if we can use Example Pay
+  const supportsExamplePay = await new PaymentRequest(
+    [{ supportedMethods: "https://example.com/pay" }],
     details
   ).canMakePayment();
 
-  if (supportsBasicCard) {
-    // show basic card support
+  if (supportsExamplePay) {
+    // show Example Pay support
     return;
   }
 

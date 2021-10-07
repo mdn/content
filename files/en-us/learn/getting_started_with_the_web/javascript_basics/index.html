@@ -42,7 +42,7 @@ tags:
 <p>However, getting comfortable with JavaScript is more challenging than getting comfortable with HTML and CSS. You may have to start small, and progress gradually. To begin, let's examine how to add JavaScript to your page for creating a <em>Hello world!</em> example. (<em>Hello world!</em> is<a href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program"> the standard for introductory programming examples</a>.)</p>
 
 <div class="warning">
-<p><strong>Important</strong>: If you haven't been following along with the rest of our course, <a href="https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip">download this example code</a> and use it as a starting point.</p>
+<p><strong>Warning:</strong> If you haven't been following along with the rest of our course, <a href="https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip">download this example code</a> and use it as a starting point.</p>
 </div>
 
 <ol>
@@ -59,7 +59,7 @@ myHeading.textContent = 'Hello world!';</pre>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: The reason the instructions (above) place the {{htmlelement("script")}} element near the bottom of the HTML file is that <strong>the browser reads code in the order it appears in the file</strong>.</p>
+<p><strong>Note:</strong> The reason the instructions (above) place the {{htmlelement("script")}} element near the bottom of the HTML file is that <strong>the browser reads code in the order it appears in the file</strong>.</p>
 
 <p>If the JavaScript loads first and it is supposed to affect the HTML that hasn't loaded yet, there could be problems. Placing JavaScript near the bottom of an HTML page is one way to accommodate this dependency. To learn more about alternative approaches, see <a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#script_loading_strategies">Script loading strategies</a>.</p>
 </div>
@@ -71,7 +71,7 @@ myHeading.textContent = 'Hello world!';</pre>
 <p>Following that, the code set the value of the <code>myHeading</code> variable's <code>{{domxref("Node.textContent", "textContent")}}</code> property (which represents the content of the heading) to <em>Hello world!</em>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Both of the features you used in this exercise are parts of the <a href="/en-US/docs/Web/API/Document_Object_Model">Document Object Model (DOM) API</a>, which has the capability to manipulate documents.</p>
+<p><strong>Note:</strong> Both of the features you used in this exercise are parts of the <a href="/en-US/docs/Web/API/Document_Object_Model">Document Object Model (DOM) API</a>, which has the capability to manipulate documents.</p>
 </div>
 
 <h2 id="Language_basics_crash_course">Language basics crash course</h2>
@@ -79,7 +79,7 @@ myHeading.textContent = 'Hello world!';</pre>
 <p>To give you a better understanding of how JavaScript works, let's explain some of the core features of the language. It's worth noting that these features are common to all programming languages. If you master these fundamentals, you have a head start on coding in other languages too!</p>
 
 <div class="warning">
-<p><strong>Important</strong>: In this article, try entering the example code lines into your JavaScript console to see what happens. For more details on JavaScript consoles, see <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">Discover browser developer tools</a>.</p>
+<p><strong>Warning:</strong> In this article, try entering the example code lines into your JavaScript console to see what happens. For more details on JavaScript consoles, see <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">Discover browser developer tools</a>.</p>
 </div>
 
 <h3 id="Variables">Variables</h3>
@@ -89,19 +89,19 @@ myHeading.textContent = 'Hello world!';</pre>
 <pre class="brush: js">let myVariable;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: A semicolon at the end of a line indicates where a statement ends. It is only required when you need to separate statements on a single line. However, some people believe it's good practice to have semicolons at the end of each statement. There are other rules for when you should and shouldn't use semicolons. For more details, see <a href="https://news.codecademy.com/your-guide-to-semicolons-in-javascript/">Your Guide to Semicolons in JavaScript</a>.</p>
+<p><strong>Note:</strong> A semicolon at the end of a line indicates where a statement ends. It is only required when you need to separate statements on a single line. However, some people believe it's good practice to have semicolons at the end of each statement. There are other rules for when you should and shouldn't use semicolons. For more details, see <a href="https://news.codecademy.com/your-guide-to-semicolons-in-javascript/">Your Guide to Semicolons in JavaScript</a>.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: You can name a variable nearly anything, but there are some restrictions. (See <a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variables">this section about naming rules</a>.) If you are unsure, you can <a href="https://mothereff.in/js-variables">check your variable name</a> to see if it's valid.</p>
+<p><strong>Note:</strong> You can name a variable nearly anything, but there are some restrictions. (See <a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variables">this section about naming rules</a>.) If you are unsure, you can <a href="https://mothereff.in/js-variables">check your variable name</a> to see if it's valid.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: JavaScript is case sensitive. This means <code>myVariable</code> is not the same as <code>myvariable</code>. If you have problems in your code, check the case!</p>
+<p><strong>Note:</strong> JavaScript is case sensitive. This means <code>myVariable</code> is not the same as <code>myvariable</code>. If you have problems in your code, check the case!</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: For more details about the difference between <code>var</code> and <code>let</code>, see <a href="/en-US/docs/Learn/JavaScript/First_steps/Variables#the_difference_between_var_and_let">The difference between var and let</a>.</p>
+<p><strong>Note:</strong> For more details about the difference between <code>var</code> and <code>let</code>, see <a href="/en-US/docs/Learn/JavaScript/First_steps/Variables#the_difference_between_var_and_let">The difference between var and let</a>.</p>
 </div>
 
 <p>After declaring a variable, you can give it a value:</p>
@@ -176,7 +176,7 @@ Everything in between is a comment.
 
 <p>If your comment contains no line breaks, it's an option to put it behind two slashes like this:</p>
 
-<pre class="brush: js" style="font-size: 14px;">// This is a comment
+<pre class="brush: js">// This is a comment
 </pre>
 
 <h3 id="Operators">Operators</h3>
@@ -243,7 +243,7 @@ Everything in between is a comment.
 <p>There are a lot more operators to explore, but this is enough for now. See <a href="/en-US/docs/Web/JavaScript/Reference/Operators">Expressions and operators</a> for a complete list.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Mixing data types can lead to some strange results when performing calculations. Be careful that you are referring to your variables correctly, and getting the results you expect. For example, enter <code>'35' + '25'</code> into your console. Why don't you get the result you expected? Because the quote marks turn the numbers into strings, so you've ended up concatenating strings rather than adding numbers. If you enter <code>35 + 25</code> you'll get the total of the two numbers.</p>
+<p><strong>Note:</strong> Mixing data types can lead to some strange results when performing calculations. Be careful that you are referring to your variables correctly, and getting the results you expect. For example, enter <code>'35' + '25'</code> into your console. Why don't you get the result you expected? Because the quote marks turn the numbers into strings, so you've ended up concatenating strings rather than adding numbers. If you enter <code>35 + 25</code> you'll get the total of the two numbers.</p>
 </div>
 
 <h3 id="Conditionals">Conditionals</h3>
@@ -292,7 +292,7 @@ multiply(20, 20);
 multiply(0.5, 3);</pre>
 
 <div class="note">
-<p><strong>Note</strong>: The <a href="/en-US/docs/Web/JavaScript/Reference/Statements/return"><code>return</code></a> statement tells the browser to return the <code>result</code> variable out of the function so it is available to use. This is necessary because variables defined inside functions are only available inside those functions. This is called variable {{Glossary("Scope", "scoping")}}. (Read more about <a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variable_scope">variable scoping</a>.)</p>
+<p><strong>Note:</strong> The <a href="/en-US/docs/Web/JavaScript/Reference/Statements/return"><code>return</code></a> statement tells the browser to return the <code>result</code> variable out of the function so it is available to use. This is necessary because variables defined inside functions are only available inside those functions. This is called variable {{Glossary("Scope", "scoping")}}. (Read more about <a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variable_scope">variable scoping</a>.)</p>
 </div>
 
 <h3 id="Events">Events</h3>
@@ -437,12 +437,12 @@ let myHeading = document.querySelector('h1');</pre>
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li id="Installing_basic_software"><a href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">Installing basic software</a></li>
- <li id="What_will_your_website_look_like"><a href="/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">What will your website look like?</a></li>
- <li id="Dealing_with_files"><a href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">Dealing with files</a></li>
- <li id="HTML_basics"><a href="/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML basics</a></li>
- <li id="CSS_basics"><a href="/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">CSS basics</a></li>
- <li id="JavaScript_basics"><a href="/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript basics</a></li>
- <li id="Publishing_your_website"><a href="/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website">Publishing your website</a></li>
- <li id="How_the_web_works"><a href="/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works">How the web works</a></li>
+ <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">Installing basic software</a></li>
+ <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">What will your website look like?</a></li>
+ <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">Dealing with files</a></li>
+ <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML basics</a></li>
+ <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">CSS basics</a></li>
+ <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript basics</a></li>
+ <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website">Publishing your website</a></li>
+ <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works">How the web works</a></li>
 </ul>

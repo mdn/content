@@ -158,4 +158,4 @@ checkbox.addEventListener('change', () => {
 
 ## See also
 
-- [Using CSS transforms](/en-US/docs/CSS/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/Using_CSS_transforms)

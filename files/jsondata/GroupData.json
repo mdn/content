@@ -353,7 +353,6 @@
         "KeyboardEvent",
         "MouseEvent",
         "MouseScrollEvent",
-        "MouseWheelEvent",
         "MutationEvent",
         "ProgressEvent",
         "UIEvent",
@@ -995,8 +994,6 @@
       ],
       "dictionaries": [
         "AddressErrors",
-        "BasicCardRequest",
-        "BasicCardResponse",
         "PaymentMethodData",
         "PaymentCurrencyAmount",
         "PaymentDetailsModifier",
@@ -1536,6 +1533,13 @@
       "properties": [],
       "events": []
     },
+    "URL Pattern API": {
+      "overview": ["URL Pattern API"],
+      "interfaces": ["URLPattern"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "User Timing API": {
       "interfaces": [
         "Performance",
@@ -1694,7 +1698,7 @@
         "AudioData",
         "AudioDecoder",
         "AudioEncoder",
-        "AudioEncoderChunk",
+        "EncodedAudioChunk",
         "EncodedVideoChunk",
         "ImageDecoder",
         "ImageTrack",

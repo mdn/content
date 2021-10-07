@@ -16,9 +16,9 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}</div>
 
-<p class="summary">Events are actions or occurrences that happen in the system you are programming, which the system tells you about so you can respond to them in some way if desired. For example, if the user selects a button on a webpage, you might want to respond to that action by displaying an information box. In this article, we discuss some important concepts surrounding events, and look at how they work in browsers. This won't be an exhaustive study; just what you need to know at this stage.</p>
+<p>Events are actions or occurrences that happen in the system you are programming, which the system tells you about so you can respond to them in some way if desired. For example, if the user selects a button on a webpage, you might want to respond to that action by displaying an information box. In this article, we discuss some important concepts surrounding events, and look at how they work in browsers. This won't be an exhaustive study; just what you need to know at this stage.</p>
 
-<table class="learn-box">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -54,8 +54,7 @@ tags:
 <p>Each available event has an <strong>event handler</strong>, which is a block of code (usually a JavaScript function that you as a programmer create) that runs when the event fires. When such a block of code is defined to run in response to an event, we say we are <strong>registering an event handler</strong>. Note: Event handlers are sometimes called <strong>event listeners</strong> — they are pretty much interchangeable for our purposes, although strictly speaking, they work together. The listener listens out for the event happening, and the handler is the code that is run in response to it happening.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Web events are not part of the core JavaScript language — they are defined as part of the APIs built into the browser.</p>
+  <p><strong>Note:</strong> Web events are not part of the core JavaScript language — they are defined as part of the APIs built into the browser.</p>
 </div>
 
 <h3 id="A_simple_example">A simple example</h3>
@@ -85,7 +84,7 @@ btn.onclick = function() {
 
 <p>The example output is as follows:</p>
 
-<p>{{ EmbedLiveSample('A_simple_example', '100%', 200, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('A_simple_example', '100%', 200, "", "") }}</p>
 
 <h3 id="Its_not_just_web_pages">It's not just web pages</h3>
 
@@ -151,8 +150,7 @@ btn.onclick = bgChange;</pre>
 }</pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>You can find the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerattributes.html">full source code</a> for this example on GitHub (also <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html">see it running live</a>).</p>
+  <p><strong>Note:</strong> You can find the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerattributes.html">full source code</a> for this example on GitHub (also <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html">see it running live</a>).</p>
 </div>
 
 <p>The earliest method of registering event handlers found on the Web involved <strong>event handler HTML attributes</strong> (or <strong>inline event handlers</strong>) like the one shown above — the attribute value is literally the JavaScript code you want to run when the event occurs. The above example invokes a function defined inside a {{htmlelement("script")}} element on the same page, but you could also insert JavaScript directly inside the attribute, for example:</p>
@@ -178,8 +176,7 @@ for (let i = 0; i &lt; buttons.length; i++) {
 });</pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Separating your programming logic from your content also makes your site more friendly to search engines.</p>
+  <p><strong>Note:</strong> Separating your programming logic from your content also makes your site more friendly to search engines.</p>
 </div>
 
 <h3 id="adding_and_removing_event_handlers">Adding and removing event handlers</h3>
@@ -196,7 +193,7 @@ function bgChange() {
 btn.addEventListener('click', bgChange);</pre>
 
 <div class="note">
-<p><strong>Note</strong>: You can find the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html">full source code</a> for this example on GitHub (also <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html">see it running live</a>).</p>
+<p><strong>Note:</strong> You can find the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html">full source code</a> for this example on GitHub (also <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html">see it running live</a>).</p>
 </div>
 
 <p>Inside the <code>addEventListener()</code> function, we specify two parameters: the name of the event we want to register this handler for, and the code that comprises the handler function we want to run in response to it. Note: It is perfectly appropriate to put all the code inside the <code>addEventListener()</code> function, in an anonymous function, like this:</p>
@@ -279,20 +276,36 @@ etc.</pre>
 btn.addEventListener('click', bgChange);</pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>You can find the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html">full source code</a> for this example on GitHub (also <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html">see it running live</a>).</p>
+  <p><strong>Note:</strong> You can find the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html">full source code</a> for this example on GitHub (also <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html">see it running live</a>).</p>
 </div>
 
 <p>Here you can see we are including an event object, <strong>e</strong>, in the function, and in the function setting a background color style on <code>e.target</code> — which is the button itself. The <code>target</code> property of the event object is always a reference to the element the event occurred upon. So, in this example, we are setting a random background color on the button, not the page.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>You can use any name you like for the event object — you just need to choose a name that you can then use to reference it inside the event handler function. <code>e</code>/<code>evt</code>/<code>event</code> are most commonly used by developers because they are short and easy to remember. It's always good to be consistent — with yourself, and with others if possible.</p>
+  <p><strong>Note:</strong> You can use any name you like for the event object — you just need to choose a name that you can then use to reference it inside the event handler function. <code>e</code>/<code>evt</code>/<code>event</code> are most commonly used by developers because they are short and easy to remember. It's always good to be consistent — with yourself, and with others if possible.</p>
 </div>
+
+<h4>Using event targets</h4>
 
 <p><code>e.target</code> is incredibly useful when you want to set the same event handler on multiple elements and do something to all of them when an event occurs on them. You might, for example, have a set of 16 tiles that disappear when selected. It is useful to always be able to just set the thing to disappear as <code>e.target</code>, rather than having to select it in some more difficult way. In the following example (see <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/useful-eventtarget.html">useful-eventtarget.html</a> for the full source code; also see it <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html">running live</a> here), we create 16 {{htmlelement("div")}} elements using JavaScript. We then select all of them using {{domxref("document.querySelectorAll()")}}, then loop through each one, adding an <code>onclick</code> handler to each that makes it so that a random color is applied to each one when selected:</p>
 
-<pre class="brush: js">const divs = document.querySelectorAll('div');
+<pre class="brush: js">
+for (let i = 1; i &lt;= 16; i++) {
+  const myDiv = document.createElement('div');
+  myDiv.style.backgroundColor = "red";
+  document.body.appendChild(myDiv);
+}
+
+function random(number) {
+  return Math.floor(Math.random()*number);
+}
+
+function bgChange() {
+  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  return rndCol;
+}
+
+const divs = document.querySelectorAll('div');
 
 for (let i = 0; i &lt; divs.length; i++) {
   divs[i].onclick = function(e) {
@@ -302,52 +315,14 @@ for (let i = 0; i &lt; divs.length; i++) {
 
 <p>The output is as follows (try clicking around on it — have fun):</p>
 
-<div class="hidden">
-<h6 id="Hidden_example">Hidden example</h6>
+<pre class="brush: css hidden">
+div {
+  height: 100px;
+  width: 25%;
+  float: left;
+}</pre>
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;Useful event target example&lt;/title&gt;
-    &lt;style&gt;
-      div {
-        height: 100px;
-        width: 25%;
-        float: left;
-      }
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;script&gt;
-      for (let i = 1; i &lt;= 16; i++) {
-        const myDiv = document.createElement('div');
-        myDiv.style.backgroundColor = "red";
-        document.body.appendChild(myDiv);
-      }
-
-      function random(number) {
-        return Math.floor(Math.random()*number);
-      }
-
-      function bgChange() {
-        var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
-        return rndCol;
-      }
-
-      const divs = document.querySelectorAll('div');
-
-      for (let i = 0; i &lt; divs.length; i++) {
-        divs[i].onclick = function(e) {
-          e.target.style.backgroundColor = bgChange();
-        }
-      }
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
-</div>
-
-<p>{{ EmbedLiveSample('Hidden_example', '100%', 400, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Using_event_targets', '100%', 430, "", "") }}</p>
 
 <p>Most event handlers you'll encounter have a standard set of properties and functions (methods) available on the event object; see the {{domxref("Event")}} object reference for a full list. Some more advanced handlers, however, add specialist properties containing extra data that they need to function. The <a href="/en-US/docs/Web/API/MediaStream_Recording_API">Media Recorder API</a>, for example, has a <code>dataavailable</code> event, which fires when some audio or video has been recorded and is available for doing something with (for example saving it, or playing it back). The corresponding <a href="/en-US/docs/Web/API/MediaRecorder/ondataavailable">ondataavailable</a> handler's event object has a <code>data</code> property available containing the recorded audio or video data to allow you to access it and do something with it.</p>
 
@@ -395,122 +370,97 @@ form.onsubmit = function(e) {
 
 <p>Obviously, this is pretty weak form validation — it wouldn't stop the user validating the form with spaces or numbers entered into the fields, for example — but it is OK for example purposes. The output is as follows:</p>
 
-<p>{{ EmbedLiveSample('Preventing_default_behavior', '100%', 140, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Preventing_default_behavior', '100%', 140, "", "") }}</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>for the full source code, see <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/preventdefault-validation.html">preventdefault-validation.html</a> (also see it <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html">running live</a> here.)</p>
+  <p><strong>Note:</strong> for the full source code, see <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/preventdefault-validation.html">preventdefault-validation.html</a> (also see it <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html">running live</a> here.)</p>
 </div>
 
 <h3 id="Event_bubbling_and_capture">Event bubbling and capture</h3>
 
-<p>The final subject to cover here is something that you won't come across often, but it can be a real pain if you don't understand it. Event bubbling and capture are two mechanisms that describe what happens when two handlers of the same event type are activated on one element. Let's look at an example to make this easier — open up the <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box.html">show-video-box.html</a> example in a new tab (and the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html">source code</a> in another tab.) It is also available live below:</p>
+<p>The final subject to cover here is something that you won't come across often, but it can be a real pain if you don't understand it. Event bubbling and capture are two mechanisms that describe what happens when two handlers of the same event type are activated on one element.</p>
 
-<div class="hidden">
-<h6 id="Hidden_video_example">Hidden video example</h6>
+<h4>Video player example</h4>
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;Show video box example&lt;/title&gt;
-    &lt;style&gt;
-      div {
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%,-50%);
-        width: 480px;
-        height: 380px;
-        border-radius: 10px;
-        background-color: #eee;
-        background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.1));
-      }
+<p>Let's look at an example to make this easier — open up the <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box.html">show-video-box.html</a> example in a new tab (and the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html">source code</a> in another tab.) It is also available live below:</p>
 
-      .hidden {
-        left: -50%;
-      }
+<p>{{ EmbedLiveSample('Video_player_example', '100%', 500, "", "") }}</p>
 
-      .showing {
-        left: 50%;
-      }
-
-      div video {
-        display: block;
-        width: 400px;
-        margin: 40px auto;
-      }
-
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;button&gt;Display video&lt;/button&gt;
-
-    &lt;div class="hidden"&gt;
-      &lt;video&gt;
-        &lt;source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.mp4" type="video/mp4"&gt;
-        &lt;source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.webm" type="video/webm"&gt;
-        &lt;p&gt;Your browser doesn't support HTML5 video. Here is a &lt;a href="rabbit320.mp4"&gt;link to the video&lt;/a&gt; instead.&lt;/p&gt;
-      &lt;/video&gt;
-    &lt;/div&gt;
-
-    &lt;script&gt;
-
-      const btn = document.querySelector('button');
-      const videoBox = document.querySelector('div');
-      const video = document.querySelector('video');
-
-      btn.onclick = function() {
-        displayVideo();
-      }
-
-      function displayVideo() {
-        if(videoBox.getAttribute('class') === 'hidden') {
-          videoBox.setAttribute('class','showing');
-        }
-      }
-
-      videoBox.addEventListener('click',function() {
-        videoBox.setAttribute('class','hidden');
-      });
-
-      video.addEventListener('click',function() {
-        video.play();
-      });
-
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
-</div>
-
-<p>{{ EmbedLiveSample('Hidden_video_example', '100%', 500, "", "", "hide-codepen-jsfiddle") }}</p>
-
-<p>This is a pretty simple example that shows and hides a {{htmlelement("div")}} with a {{htmlelement("video")}} element inside it:</p>
+<p>This example shows and hides a {{htmlelement("div")}} with a {{htmlelement("video")}} element inside it:</p>
 
 <pre class="brush: html">&lt;button&gt;Display video&lt;/button&gt;
 
 &lt;div class="hidden"&gt;
   &lt;video&gt;
-    &lt;source src="rabbit320.mp4" type="video/mp4"&gt;
-    &lt;source src="rabbit320.webm" type="video/webm"&gt;
+    &lt;source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.mp4" type="video/mp4"&gt;
+    &lt;source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.webm" type="video/webm"&gt;
     &lt;p&gt;Your browser doesn't support HTML5 video. Here is a &lt;a href="rabbit320.mp4"&gt;link to the video&lt;/a&gt; instead.&lt;/p&gt;
   &lt;/video&gt;
-&lt;/div&gt;</pre>
+&lt;/div&gt;
+</pre>
 
-<p>When the {{htmlelement("button")}} is selected, the video is displayed, by changing the class attribute on the <code>&lt;div&gt;</code> from <code>hidden</code> to <code>showing</code> (the example's CSS contains these two classes, which position the box off the screen and on the screen, respectively):</p>
+<p>When the {{htmlelement("button")}} is clicked, the video is displayed, by changing the class attribute on the <code>&lt;div&gt;</code> from <code>hidden</code> to <code>showing</code> (the example's CSS contains these two classes, which position the box off the screen and on the screen, respectively):</p>
 
-<pre class="brush: js">btn.onclick = function() {
-  videoBox.setAttribute('class', 'showing');
-}</pre>
+<pre class="brush: js">
+  const btn = document.querySelector('button');
+  const videoBox = document.querySelector('div');
 
-<p>We then add a couple more <code>onclick</code> event handlers — the first one to the <code>&lt;div&gt;</code> and the second one to the <code>&lt;video&gt;</code>. Now, when the area of the <code>&lt;div&gt;</code> outside the video is selected, the box should be hidden again and when the video itself is selected, the video should start to play.</p>
+  btn.onclick = function() {
+    displayVideo();
+  }
+
+  function displayVideo() {
+    if(videoBox.getAttribute('class') === 'hidden') {
+      videoBox.setAttribute('class','showing');
+    }
+  }
+
+  videoBox.addEventListener('click',function() {
+    videoBox.setAttribute('class','hidden');
+  });
+</pre>
+
+
+<pre class="brush: css hidden">
+div {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 480px;
+  height: 380px;
+  border-radius: 10px;
+  background-color: #eee;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.1));
+}
+
+.hidden {
+  left: -50%;
+}
+
+.showing {
+  left: 50%;
+}
+
+div video {
+  display: block;
+  width: 400px;
+  margin: 40px auto;
+}
+</pre>
+
+<p>We then add a couple more <code>onclick</code> event handlers — the first one to the <code>&lt;div&gt;</code> and the second one to the <code>&lt;video&gt;</code>:</p>
 
 <pre class="brush: js">videoBox.onclick = function() {
   videoBox.setAttribute('class', 'hidden');
 };
 
+const video = document.querySelector('video');
+
 video.onclick = function() {
   video.play();
 };</pre>
+
+<p>Now, when the area of the <code>&lt;div&gt;</code> outside the video is selected, the box should be hidden again and when the video itself is selected, the video should start to play.</p>
 
 <p>But there's a problem — currently, when you select the video it starts to play, but it causes the <code>&lt;div&gt;</code> to be hidden at the same time. This is because the video is inside the <code>&lt;div&gt;</code> — it is part of it — so selecting the video actually runs <em>both</em> the above event handlers.</p>
 
@@ -546,20 +496,18 @@ video.onclick = function() {
 </ul>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>All JavaScript events go through the capturing and target phases. Whether an event enters the bubbling phase can be checked by the read-only {{domxref("Event.bubbles", "bubbles")}} property.</p>
+  <p><strong>Note:</strong> All JavaScript events go through the capturing and target phases. Whether an event enters the bubbling phase can be checked by the read-only {{domxref("Event.bubbles", "bubbles")}} property.</p>
 </div>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Event listeners registered for the <code>&lt;html&gt;</code> element aren’t at the top of hierarchy. For example, event listeners registered for the {{domxref("Window", "window")}} and {{domxref("Document", "document")}} objects are higher in the hierarchy.</p>
+  <p><strong>Note:</strong> Event listeners registered for the <code>&lt;html&gt;</code> element aren’t at the top of hierarchy. For example, event listeners registered for the {{domxref("Window", "window")}} and {{domxref("Document", "document")}} objects are higher in the hierarchy.</p>
 </div>
 
 <p>The following example demonstrates the behavior described above. Hover over the numbers and click on them to trigger events, and then observe the output that gets logged.</p>
 
-{{EmbedLiveSample("example_code_event_phases", "85ch", "400")}}
+{{EmbedLiveSample("Example_code_event_phases", "85ch", "400")}}
 
-<h5 id="example_code_event_phases">Example code: event phases</h5>
+<h5>Example code: event phases</h5>
 
 <pre class="brush: html">
 &lt;div&gt;1
@@ -596,7 +544,7 @@ div:hover {
 </pre>
 
 <pre class="brush: js">
-/* 
+/*
  * source 1: https://dom.spec.whatwg.org/#dom-event-eventphase
  * source 2: https://stackoverflow.com/a/4616720/15266715
 */
@@ -646,13 +594,11 @@ clearButton.addEventListener('click', clearOutput);
 <p>You can try making a local copy of the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html">show-video-box.html source code</a> and fixing it yourself, or looking at the fixed result in <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html">show-video-box-fixed.html</a> (also see the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box-fixed.html">source code</a> here).</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Why bother with both capturing and bubbling? Well, in the bad old days when browsers were much less cross-compatible than they are now, Netscape only used event capturing, and Internet Explorer used only event bubbling. When the W3C decided to try to standardize the behavior and reach a consensus, they ended up with this system that included both, which is the one modern browsers implemented.</p>
+  <p><strong>Note:</strong> Why bother with both capturing and bubbling? Well, in the bad old days when browsers were much less cross-compatible than they are now, Netscape only used event capturing, and Internet Explorer used only event bubbling. When the W3C decided to try to standardize the behavior and reach a consensus, they ended up with this system that included both, which is the one modern browsers implemented.</p>
 </div>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>As mentioned above, by default all event handlers are registered in the bubbling phase, and this makes more sense most of the time. If you really want to register an event in the capturing phase instead, you can do so by registering your handler using <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>, and setting the optional third property to <code>true</code>.</p>
+  <p><strong>Note:</strong> As mentioned above, by default all event handlers are registered in the bubbling phase, and this makes more sense most of the time. If you really want to register an event in the capturing phase instead, you can do so by registering your handler using <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>, and setting the optional third property to <code>true</code>.</p>
 </div>
 
 <h4 id="Event_delegation">Event delegation</h4>

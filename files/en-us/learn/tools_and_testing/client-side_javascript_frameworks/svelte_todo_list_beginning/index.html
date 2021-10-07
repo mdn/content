@@ -15,9 +15,9 @@ tags:
 <div>{{LearnSidebar}}<br>
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
-<p class="summary">Now that we have a basic understanding of how things work in Svelte, we can start building our example app: a todo list. In this article we will first have a look at the desired functionality of our app, then we'll create a <code>Todos.svelte</code> component and put static markup and styles in place, leaving everything ready to start developing our To-Do list app features, which we'll go on to in subsequent articles.</p>
+<p>Now that we have a basic understanding of how things work in Svelte, we can start building our example app: a todo list. In this article we will first have a look at the desired functionality of our app, then we'll create a <code>Todos.svelte</code> component and put static markup and styles in place, leaving everything ready to start developing our To-Do list app features, which we'll go on to in subsequent articles.</p>
 
-<p class="summary">We want our users to be able to browse, add and delete tasks, and also to mark them as complete. This will be the basic functionality that we'll be developing in this tutorial series, plus we'll look at some more advanced concepts along the way too.</p>
+<p>We want our users to be able to browse, add and delete tasks, and also to mark them as complete. This will be the basic functionality that we'll be developing in this tutorial series, plus we'll look at some more advanced concepts along the way too.</p>
 
 <table>
  <tbody>
@@ -88,7 +88,7 @@ tags:
   <p>Create a new folder — <code>src/components</code>.</p>
 
   <div class="notecard note">
-  <p><strong>Note</strong>: you can put your components anywhere inside the <code>src</code> folder, but the <code>components</code> folder is a recognized convention to follow, allowing you to find your components easily.</p>
+  <p><strong>Note:</strong> you can put your components anywhere inside the <code>src</code> folder, but the <code>components</code> folder is a recognized convention to follow, allowing you to find your components easily.</p>
   </div>
  </li>
  <li>
@@ -330,7 +330,7 @@ created public/build/bundle.js in 220ms
 </pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: With VSCode you can automatically add this ignore comment by clicking on the <em>Quick fix...</em> link or pressing <kbd>Ctrl</kbd> + <kbd>.</kbd>.</p>
+<p><strong>Note:</strong> With VSCode you can automatically add this ignore comment by clicking on the <em>Quick fix...</em> link or pressing <kbd>Ctrl</kbd> + <kbd>.</kbd>.</p>
 </div>
 
 <p>If you want to globally disable this warning you can add this <code>onwarn</code> handler to your <code>rollup.config.js</code> file inside the configuration for the <code>Svelte</code> plugin, like this:</p>
@@ -360,7 +360,7 @@ created public/build/bundle.js in 220ms
 <p>By design, these warnings are implemented in the compiler itself, and not as a plug-in that you may choose to add to your project. The idea is to check for a11y issues in your markup by default and let you opt-out of specific warnings.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: you should only disable these warnings if you have good reasons to do so, for example while building a quick prototype. It's important to be a good web citizen and make your pages accessible to the broadest possible userbase.</p>
+<p><strong>Note:</strong> you should only disable these warnings if you have good reasons to do so, for example while building a quick prototype. It's important to be a good web citizen and make your pages accessible to the broadest possible userbase.</p>
 </div>
 
 <p>The accessibility rules checked by Svelte are taken from <a href="https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#supported-rules">eslint-plugin-jsx-a11y</a>, a plugin for eslint that provides static checks for many accessibility rules on JSX elements. Svelte aims to implement all of them in its compiler, and most of them have already been ported to Svelte. On GitHub you can see <a href="https://github.com/sveltejs/svelte/issues/820">which accessibility checks are still missing</a>. You can check the meaning of each rule by clicking on its link.</p>

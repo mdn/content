@@ -18,7 +18,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Concepts", "Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous")}}</div>
 
-<p class="summary">In this article we briefly recap the problems associated with synchronous JavaScript, and take a first look at some of the different asynchronous techniques you'll encounter, showing how they can help us solve such problems.</p>
+<p>In this article we briefly recap the problems associated with synchronous JavaScript, and take a first look at some of the different asynchronous techniques you'll encounter, showing how they can help us solve such problems.</p>
 
 <table>
  <tbody>
@@ -67,21 +67,19 @@ btn.addEventListener('click', () =&gt; {
 
 <p>So in the example above, after you've clicked the button the paragraph won't appear until after the OK button is pressed in the alert box. You can try it for yourself:</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;<span class="pl-ent">button</span>&gt;Click me&lt;/<span class="pl-ent">button</span>&gt;</pre>
-</div>
+<pre class="brush: html hidden">&lt;<span class="pl-ent">button</span>&gt;Click me&lt;/<span class="pl-ent">button</span>&gt;</pre>
 
 <p>{{EmbedLiveSample('Synchronous_JavaScript', '100%', '110px')}}</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: It is important to remember that <code><a href="/en-US/docs/Web/API/Window/alert">alert()</a></code>, while being very useful for demonstrating a synchronous blocking operation, is terrible for use in real world applications.</p>
+<p><strong>Note:</strong> It is important to remember that <code><a href="/en-US/docs/Web/API/Window/alert">alert()</a></code>, while being very useful for demonstrating a synchronous blocking operation, is terrible for use in real world applications.</p>
 </div>
 
 <h2 id="Asynchronous_JavaScript">Asynchronous JavaScript</h2>
 
 <p>For reasons illustrated earlier (e.g. related to blocking), many Web API features now use asynchronous code to run, especially those that access or fetch some kind of resource from an external device, such as fetching a file from the network, accessing a database and returning data from it, accessing a video stream from a web cam, or broadcasting the display to a VR headset.</p>
 
-<p>Why is this difficult to get to work using synchronous code? Let's look at a quick example. When you fetch an image from a server, you can't return the result immediately. That means that the following (pseudocode) wouldn't work:</p>
+<p>Why is this difficult to get to work using asynchronous code? Let's look at a quick example. When you fetch an image from a server, you can't return the result immediately. That means that the following (pseudocode) wouldn't work:</p>
 
 <pre class="brush: js">let response = fetch('myImage.png'); // fetch is asynchronous
 let blob = response.blob();
@@ -161,7 +159,7 @@ gods.forEach(function (eachName, index){
 });</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You can find the finished version on GitHub (<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-script.js">see the source here</a>, and also <a href="https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/">see it running live</a>).</p>
+<p><strong>Note:</strong> You can find the finished version on GitHub (<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-script.js">see the source here</a>, and also <a href="https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/">see it running live</a>).</p>
 </div>
 
 <p>Here we see <code>fetch</code><code>()</code> taking a single parameter — the URL of a resource you want to fetch from the network — and returning a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promise</a>. The promise is an object representing the completion or failure of the async operation. It represents an intermediate state, as it were. In essence, it's the browser's way of saying "I promise to get back to you with the answer as soon as I can," hence the name "promise."</p>
@@ -174,7 +172,7 @@ gods.forEach(function (eachName, index){
 </ul>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You'll learn a lot more about promises later on in the module, so don't worry if you don't understand them fully yet.</p>
+<p><strong>Note:</strong> You'll learn a lot more about promises later on in the module, so don't worry if you don't understand them fully yet.</p>
 </div>
 
 <h3 id="The_event_queue">The event queue</h3>
@@ -252,7 +250,7 @@ console.log("all done");</pre>
 <p>This is because at the time the browser tries to run the third <code>console.log()</code> statement, the <code>fetch()</code> block has not finished running so the <code>image</code> variable has not been given a value.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: For security reasons, you can't <code>fetch()</code> files from your local filesystem (or run other such operations locally); to run the above example locally you'll have to run the example through a <a href="/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">local webserver</a>.</p>
+<p><strong>Note:</strong> For security reasons, you can't <code>fetch()</code> files from your local filesystem (or run other such operations locally); to run the above example locally you'll have to run the example through a <a href="/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">local webserver</a>.</p>
 </div>
 
 <h2 id="Active_learning_make_it_all_async!">Active learning: make it all async!</h2>
@@ -260,7 +258,7 @@ console.log("all done");</pre>
 <p>To fix the problematic <code>fetch()</code> example and make the three <code>console.log()</code> statements appear in the desired order, you could make the third <code>console.log()</code> statement run async as well. This can be done by moving it inside another <code>.then()</code> block chained onto the end of the second one, or by moving it inside the second <code>then()</code> block. Try fixing this now.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: If you get stuck, you can <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync-fixed.html">find an answer here</a> (see it <a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync-fixed.html">running live</a> also). You can also find a lot more information on promises in our <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">Graceful asynchronous programming with Promises</a> guide, later on in the module.</p>
+<p><strong>Note:</strong> If you get stuck, you can <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync-fixed.html">find an answer here</a> (see it <a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync-fixed.html">running live</a> also). You can also find a lot more information on promises in our <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">Graceful asynchronous programming with Promises</a> guide, later on in the module.</p>
 </div>
 
 <h2 id="Conclusion">Conclusion</h2>

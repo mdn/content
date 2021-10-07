@@ -19,7 +19,7 @@ tags:
 
 <div>{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}</div>
 
-<p class="summary">In any programming language, the code needs to make decisions and carry out actions accordingly depending on different inputs. For example, in a game, if the player's number of lives is 0, then it's game over. In a weather app, if it is being looked at in the morning, show a sunrise graphic; show stars and a moon if it is nighttime. In this article, we'll explore how so-called conditional statements work in JavaScript.</p>
+<p>In any programming language, the code needs to make decisions and carry out actions accordingly depending on different inputs. For example, in a game, if the player's number of lives is 0, then it's game over. In a weather app, if it is being looked at in the morning, show a sunrise graphic; show stars and a moon if it is nighttime. In this article, we'll explore how so-called conditional statements work in JavaScript.</p>
 
 <table>
  <tbody>
@@ -101,7 +101,7 @@ if (shoppingDone === true) {
 <p>This code as shown always results in the <code>shoppingDone</code> variable returning <code>false</code>, meaning disappointment for our poor child. It'd be up to us to provide a mechanism for the parent to set the <code>shoppingDone</code> variable to <code>true</code> if the child did the shopping.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can see a more <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html">complete version of this example on GitHub</a> (also see it <a href="https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html">running live</a>.)</p>
+<p><strong>Note:</strong> You can see a more <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html">complete version of this example on GitHub</a> (also see it <a href="https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html">running live</a>.)</p>
 </div>
 
 <h3 id="else_if">else if</h3>
@@ -144,7 +144,7 @@ function setWeather() {
 
 </pre>
 
-<p>{{ EmbedLiveSample('else_if', '100%', 100, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('else_if', '100%', 100, "", "") }}</p>
 
 <ol>
  <li>Here we've got an HTML {{htmlelement("select")}} element allowing us to make different weather choices, and a simple paragraph.</li>
@@ -154,7 +154,7 @@ function setWeather() {
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: You can also <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html">find this example on GitHub</a> (<a href="https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html">see it running live</a> on there also.)</p>
+<p><strong>Note:</strong> You can also <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html">find this example on GitHub</a> (<a href="https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html">see it running live</a> on there also.)</p>
 </div>
 
 <h3 id="A_note_on_comparison_operators">A note on comparison operators</h3>
@@ -168,7 +168,7 @@ function setWeather() {
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: Review the material at the previous link if you want to refresh your memories on these.</p>
+<p><strong>Note:</strong> Review the material at the previous link if you want to refresh your memories on these.</p>
 </div>
 
 <p>We wanted to make a special mention of testing boolean (<code>true</code>/<code>false</code>) values, and a common pattern you'll come across again and again. Any value that is not <code>false</code>, <code>undefined</code>, <code>null</code>, <code>0</code>, <code>NaN</code>, or an empty string (<code>''</code>) actually returns <code>true</code> when tested as a conditional statement, therefore you can use a variable name on its own to test whether it is <code>true</code>, or even that it exists (that is, it is not undefined.) So for example:</p>
@@ -295,7 +295,7 @@ if (shoppingDone) { // don't need to explicitly specify '=== true'
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: You don't have to include the <code>default</code> section — you can safely omit it if there is no chance that the expression could end up equaling an unknown value. If there is a chance of this, however, you need to include it to handle unknown cases.</p>
+<p><strong>Note:</strong> You don't have to include the <code>default</code> section — you can safely omit it if there is no chance that the expression could end up equaling an unknown value. If there is a chance of this, however, you need to include it to handle unknown cases.</p>
 </div>
 
 <h3 id="A_switch_example">A switch example</h3>
@@ -339,10 +339,10 @@ function setWeather() {
   }
 }</pre>
 
-<p>{{ EmbedLiveSample('A_switch_example', '100%', 100, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('A_switch_example', '100%', 100, "", "") }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can also <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html">find this example on GitHub</a> (see it <a href="https://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html">running live</a> on there also.)</p>
+<p><strong>Note:</strong> You can also <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html">find this example on GitHub</a> (see it <a href="https://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html">running live</a> on there also.)</p>
 </div>
 
 <h2 id="Ternary_operator">Ternary operator</h2>
@@ -383,14 +383,14 @@ select.onchange = function() {
 }
 </pre>
 
-<p>{{ EmbedLiveSample('Ternary_operator_example', '100%', 300, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Ternary_operator_example', '100%', 300, "", "") }}</p>
 
 <p>Here we've got a {{htmlelement('select')}} element to choose a theme (black or white), plus a simple {{htmlelement('h1')}} to display a website title. We also have a function called <code>update()</code>, which takes two colors as parameters (inputs). The website's background color is set to the first provided color, and its text color is set to the second provided color.</p>
 
 <p>Finally, we've also got an <a href="/en-US/docs/Web/API/GlobalEventHandlers/onchange">onchange</a> event listener that serves to run a function containing a ternary operator. It starts with a test condition — <code>select.value === 'black'</code>. If this returns <code>true</code>, we run the <code>update()</code> function with parameters of black and white, meaning that we end up with background color of black and text color of white. If it returns <code>false</code>, we run the <code>update()</code> function with parameters of white and black, meaning that the site color are inverted.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can also <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html">find this example on GitHub</a> (see it <a href="https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html">running live</a> on there also.)</p>
+<p><strong>Note:</strong> You can also <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html">find this example on GitHub</a> (see it <a href="https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html">running live</a> on there also.)</p>
 </div>
 
 <h2 id="Active_learning_A_simple_calendar">Active learning: A simple calendar</h2>
@@ -419,10 +419,7 @@ select.onchange = function() {
 
 <p>If you make a mistake, you can always reset the example with the "Reset" button. If you get really stuck, press "Show solution" to see a solution.</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
 &lt;div class="output" style="height: 500px;overflow: auto;"&gt;
   &lt;label for="month"&gt;Select month: &lt;/label&gt;
   &lt;select id="month"&gt;
@@ -480,7 +477,7 @@ createCalendar(31,'January');
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css">.output * {
+<pre class="brush: css hidden">.output * {
   box-sizing: border-box;
 }
 
@@ -519,7 +516,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js">const textarea = document.getElementById('code');
+<pre class="brush: js hidden">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 let code = textarea.value;
@@ -595,11 +592,10 @@ textarea.onkeyup = function(){
 
   updateCode();
 };</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', '100%', 1110, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Active_learning_A_simple_calendar', '100%', 1110) }}</p>
 
-<h2 id="Active_learning_More_color_choices!">Active learning: More color choices!</h2>
+<h2 id="Active_learning_More_color_choices">Active learning: More color choices</h2>
 
 <p>In this example, you are going to take the ternary operator example we saw earlier and convert the ternary operator into a switch statement to allow us to apply more choices to the simple website. Look at the {{htmlelement("select")}} — this time you'll see that it has not two theme options, but five. You need to add a switch statement just underneath the <code>// ADD SWITCH STATEMENT</code> comment:</p>
 
@@ -611,10 +607,7 @@ textarea.onkeyup = function(){
 
 <p>If you make a mistake, you can always reset the example with the "Reset" button. If you get really stuck, press "Show solution" to see a solution.</p>
 
-<div class="hidden">
-<h6 id="Playable_code_2">Playable code 2</h6>
-
-<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
 &lt;div class="output" style="height: 300px;"&gt;
   &lt;label for="theme"&gt;Select theme: &lt;/label&gt;
   &lt;select id="theme"&gt;
@@ -652,7 +645,7 @@ function update(bgColor, textColor) {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -672,7 +665,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js">const textarea = document.getElementById('code');
+<pre class="brush: js hidden">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 let code = textarea.value;
@@ -748,9 +741,8 @@ textarea.onkeyup = function(){
 
   updateCode();
 };</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_2', '100%', 950, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Active_learning_More_color_choices', '100%', 950) }}</p>
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 

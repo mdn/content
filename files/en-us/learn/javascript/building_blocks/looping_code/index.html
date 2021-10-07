@@ -20,7 +20,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}</div>
 
-<p class="summary">Programming languages are very useful for rapidly completing repetitive tasks, from multiple basic calculations to just about any other situation where you've got a lot of similar items of work to complete. Here we'll look at the loop structures available in JavaScript that handle such needs.</p>
+<p>Programming languages are very useful for rapidly completing repetitive tasks, from multiple basic calculations to just about any other situation where you've got a lot of similar items of work to complete. Here we'll look at the loop structures available in JavaScript that handle such needs.</p>
 
 <table>
  <tbody>
@@ -72,12 +72,11 @@ tags:
 
 <p>Often, the code will be slightly different on each successive iteration of the loop, which means that you can complete a whole load of tasks that are similar but slightly different; if you've got a lot of different calculations to do, you want to do each different one, not the same one over and over again!</p>
 
-<p>Let's look at an example to perfectly illustrate why loops are such a good thing. Let's say we wanted to draw 100 random circles on a {{htmlelement("canvas")}} element (press the <em>Update</em> button to run the example again and again to see different random sets):</p>
+<h4>Looping code example</h4>
 
-<div class="hidden">
-<h6 id="Hidden_code">Hidden code</h6>
+<p>Let's look at an example to illustrate why loops are such a good thing. Let's say we wanted to draw 100 random circles on a {{htmlelement("canvas")}} element (press the <em>Update</em> button to run the example again and again to see different random sets):</p>
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -141,9 +140,10 @@ tags:
 
   &lt;/body&gt;
 &lt;/html&gt;</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Hidden_code', '100%', 400, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Looping_code_example', '100%', 400) }}</p>
+
+<h4>With and without a loop</h4>
 
 <p>You don't have to understand all the code for now, but let's look at the part of the code that actually draws the 100 circles:</p>
 
@@ -192,7 +192,13 @@ ctx.fill();</pre>
  <li>Some curly braces that contain a block of code — this code will be run each time the loop iterates.</li>
 </ol>
 
+<h3>Listing my cats</h3>
+
 <p>Let's look at a real example so we can visualize what these do more clearly.</p>
+
+<pre class="brush: html hidden">
+  &lt;p&gt;&lt;/p&gt;
+</pre>
 
 <pre class="brush: js">const cats = ['Bill', 'Jeff', 'Pete', 'Biggles', 'Jasmin'];
 let info = 'My cats are called ';
@@ -206,43 +212,10 @@ para.textContent = info;</pre>
 
 <p>This gives us the following output:</p>
 
-<div class="hidden">
-<h6 id="Hidden_code_2">Hidden code 2</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;Basic for loop example&lt;/title&gt;
-    &lt;style&gt;
-
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-
-  &lt;p&gt;&lt;/p&gt;
-
-    &lt;script&gt;
-    const cats = ['Bill', 'Jeff', 'Pete', 'Biggles', 'Jasmin'];
-    let info = 'My cats are called ';
-    const para = document.querySelector('p');
-
-    for (let i = 0; i &lt; cats.length; i++) {
-      info += cats[i] + ', ';
-    }
-
-    para.textContent = info;
-
-    &lt;/script&gt;
-
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
-</div>
-
-<p>{{ EmbedLiveSample('Hidden_code_2', '100%', 60, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Listing_my_cats', '100%', 80) }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can find this <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html">example code on GitHub</a> too (also <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html">see it running live</a>).</p>
+<p><strong>Note:</strong> You can find this <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html">example code on GitHub</a> too (also <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html">see it running live</a>).</p>
 </div>
 
 <p>This shows a loop is used to iterate over the items in an array and do something with each of them — a very common pattern in JavaScript. Here:</p>
@@ -261,12 +234,14 @@ para.textContent = info;</pre>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: We have made the condition <code>i &lt; cats.length</code>, not <code>i &lt;= cats.length</code>, because computers count from 0, not 1 — we are starting <code>i</code> at <code>0</code>, and going up to <code>i = 4</code> (the index of the last array item). <code>cats.length</code> returns 5, as there are 5 items in the array, but we don't want to get up to <code>i = 5</code>, as that would return <code>undefined</code> for the last item (there is no array item with an index of 5). So, therefore, we want to go up to 1 less than <code>cats.length</code> (<code>i &lt;</code>), not the same as <code>cats.length</code> (<code>i &lt;=</code>).</p>
+<p><strong>Note:</strong> We have made the condition <code>i &lt; cats.length</code>, not <code>i &lt;= cats.length</code>, because computers count from 0, not 1 — we are starting <code>i</code> at <code>0</code>, and going up to <code>i = 4</code> (the index of the last array item). <code>cats.length</code> returns 5, as there are 5 items in the array, but we don't want to get up to <code>i = 5</code>, as that would return <code>undefined</code> for the last item (there is no array item with an index of 5). So, therefore, we want to go up to 1 less than <code>cats.length</code> (<code>i &lt;</code>), not the same as <code>cats.length</code> (<code>i &lt;=</code>).</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: A common mistake with conditions is making them use "equal to" (<code>===</code>) rather than say "less than or equal to" (<code>&lt;=</code>). If we wanted to run our loop up to <code>i = 5</code>, the exit condition would need to be <code>i &lt;= cats.length</code>. If we set it to <code>i === cats.length</code>, the loop would not run at all because <code>i</code> is not equal to <code>5</code> on the first loop iteration, so it would stop immediately.</p>
+<p><strong>Note:</strong> A common mistake with conditions is making them use "equal to" (<code>===</code>) rather than say "less than or equal to" (<code>&lt;=</code>). If we wanted to run our loop up to <code>i = 5</code>, the exit condition would need to be <code>i &lt;= cats.length</code>. If we set it to <code>i === cats.length</code>, the loop would not run at all because <code>i</code> is not equal to <code>5</code> on the first loop iteration, so it would stop immediately.</p>
 </div>
+
+<h3>Handling the last cat</h3>
 
 <p>One small problem we are left with is that the final output sentence isn't very well-formed:</p>
 
@@ -276,20 +251,34 @@ para.textContent = info;</pre>
 
 <p>Ideally, we want to change the concatenation on the final loop iteration so that we haven't got a comma on the end of the sentence. Well, no problem — we can quite happily insert a conditional inside our for loop to handle this special case:</p>
 
-<pre class="brush: js">for (let i = 0; i &lt; cats.length; i++) {
+<pre class="brush: html hidden">
+  &lt;p&gt;&lt;/p&gt;
+</pre>
+
+<pre class="brush: js">
+const cats = ['Bill', 'Jeff', 'Pete', 'Biggles', 'Jasmin'];
+let info = 'My cats are called ';
+const para = document.querySelector('p');
+
+for (let i = 0; i &lt; cats.length; i++) {
   if (i === cats.length - 1) {
     info += 'and ' + cats[i] + '.';
   } else {
     info += cats[i] + ', ';
   }
-}</pre>
+}
+
+para.textContent = info;
+</pre>
+
+<p>{{ EmbedLiveSample('Handling_the_last_cat', '100%', 80) }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can find this <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html">example code on GitHub</a> too (also <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html">see it running live</a>).</p>
+<p><strong>Note:</strong> You can find this <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html">example code on GitHub</a> too (also <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html">see it running live</a>).</p>
 </div>
 
 <div class="warning">
-<p><strong>Important</strong>: With for — as with all loops — you must make sure that the initializer is incremented or, depending on the case, decremented, so that it eventually reaches the point where the condition is not true. If not, the loop will go on forever, and either the browser will force it to stop, or it will crash. This is called an <strong>infinite loop</strong>.</p>
+<p><strong>Warning:</strong> With for — as with all loops — you must make sure that the initializer is incremented or, depending on the case, decremented, so that it eventually reaches the point where the condition is not true. If not, the loop will go on forever, and either the browser will force it to stop, or it will crash. This is called an <strong>infinite loop</strong>.</p>
 </div>
 
 <h2 id="Exiting_loops_with_break">Exiting loops with break</h2>
@@ -308,7 +297,8 @@ para.textContent = info;</pre>
 
 <p>Now on to the JavaScript:</p>
 
-<pre class="brush: js">const contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
+<pre class="brush: js">
+const contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
 const para = document.querySelector('p');
 const input = document.querySelector('input');
 const btn = document.querySelector('button');
@@ -322,58 +312,12 @@ btn.addEventListener('click', function() {
     if (splitContact[0].toLowerCase() === searchName) {
       para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
       break;
-    } else if (i === contacts.length - 1) {
+    } else if (i === contacts.length-1)
       para.textContent = 'Contact not found.';
-    }
   }
 });</pre>
 
-<div class="hidden">
-<h6 id="Hidden_code_3">Hidden code 3</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;Simple contact search example&lt;/title&gt;
-    &lt;style&gt;
-
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-
-  &lt;label for="search"&gt;Search by contact name: &lt;/label&gt;
-  &lt;input id="search" type="text"&gt;
-  &lt;button&gt;Search&lt;/button&gt;
-
-  &lt;p&gt;&lt;/p&gt;
-
-    &lt;script&gt;
-    const contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
-    const para = document.querySelector('p');
-    const input = document.querySelector('input');
-    const btn = document.querySelector('button');
-
-    btn.addEventListener('click', function() {
-      let searchName = input.value.toLowerCase();
-      input.value = '';
-      input.focus();
-      for (let i = 0; i &lt; contacts.length; i++) {
-        let splitContact = contacts[i].split(':');
-        if (splitContact[0].toLowerCase() === searchName) {
-          para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
-          break;
-        } else if (i === contacts.length-1)
-              para.textContent = 'Contact not found.';
-        }
-    });
-    &lt;/script&gt;
-
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
-</div>
-
-<p>{{ EmbedLiveSample('Hidden_code_3', '100%', 100, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Exiting_loops_with_break', '100%', 100) }}</p>
 
 <ol>
  <li>First of all, we have some variable definitions — we have an array of contact information, with each item being a string containing a name and phone number separated by a colon.</li>
@@ -392,74 +336,47 @@ btn.addEventListener('click', function() {
 </ol>
 
 <div class="note">
-<p>Note: You can view the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html">full source code on GitHub</a> too (also <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html">see it running live</a>).</p>
+<p><strong>Note:</strong> You can view the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html">full source code on GitHub</a> too (also <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html">see it running live</a>).</p>
 </div>
 
 <h2 id="Skipping_iterations_with_continue">Skipping iterations with continue</h2>
 
 <p>The <a href="/en-US/docs/Web/JavaScript/Reference/Statements/continue">continue</a> statement works in a similar manner to <code>break</code>, but instead of breaking out of the loop entirely, it skips to the next iteration of the loop. Let's look at another example that takes a number as an input, and returns only the numbers that are squares of integers (whole numbers).</p>
 
-<p>The HTML is basically the same as the last example — a simple text input, and a paragraph for output. The JavaScript is mostly the same too, although the loop itself is a bit different:</p>
+<p>The HTML is basically the same as the last example — a simple text input, and a paragraph for output.</p>
 
-<pre class="brush: js">let num = input.value;
+<pre class="brush: html">
+&lt;label for="number"&gt;Enter number: &lt;/label&gt;
+&lt;input id="number" type="text"&gt;
+&lt;button&gt;Generate integer squares&lt;/button&gt;
 
-for (let i = 1; i &lt;= num; i++) {
-  let sqRoot = Math.sqrt(i);
-  if (Math.floor(sqRoot) !== sqRoot) {
-    continue;
+&lt;p&gt;Output: &lt;/p&gt;
+</pre>
+
+<p>The JavaScript is mostly the same too, although the loop itself is a bit different:</p>
+
+<pre class="brush: js">
+const para = document.querySelector('p');
+const input = document.querySelector('input');
+const btn = document.querySelector('button');
+
+btn.addEventListener('click', function() {
+  para.textContent = 'Output: ';
+  let num = input.value;
+  input.value = '';
+  input.focus();
+  for (let i = 1; i &lt;= num; i++) {
+    let sqRoot = Math.sqrt(i);
+    if (Math.floor(sqRoot) !== sqRoot) {
+      continue;
+    }
+    para.textContent += i + ' ';
   }
-
-  para.textContent += i + ' ';
-}</pre>
+});</pre>
 
 <p>Here's the output:</p>
 
-<div class="hidden">
-<h6 id="Hidden_code_4">Hidden code 4</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;Integer squares generator&lt;/title&gt;
-    &lt;style&gt;
-
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-
-  &lt;label for="number"&gt;Enter number: &lt;/label&gt;
-  &lt;input id="number" type="text"&gt;
-  &lt;button&gt;Generate integer squares&lt;/button&gt;
-
-  &lt;p&gt;Output: &lt;/p&gt;
-
-    &lt;script&gt;
-    const para = document.querySelector('p');
-    const input = document.querySelector('input');
-    const btn = document.querySelector('button');
-
-    btn.addEventListener('click', function() {
-      para.textContent = 'Output: ';
-      let num = input.value;
-      input.value = '';
-      input.focus();
-      for (let i = 1; i &lt;= num; i++) {
-        let sqRoot = Math.sqrt(i);
-        if (Math.floor(sqRoot) !== sqRoot) {
-          continue;
-        }
-
-        para.textContent += i + ' ';
-      }
-    });
-    &lt;/script&gt;
-
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
-</div>
-
-<p>{{ EmbedLiveSample('Hidden_code_4', '100%', 100, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Skipping_iterations_with_continue', '100%', 100) }}</p>
 
 <ol>
  <li>In this case, the input should be a number (<code>num</code>). The <code>for</code> loop is given a counter starting at 1 (as we are not interested in 0 in this case), an exit condition that says the loop will stop when the counter becomes bigger than the input <code>num</code>, and an iterator that adds 1 to the counter each time.</li>
@@ -469,7 +386,7 @@ for (let i = 1; i &lt;= num; i++) {
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: You can view the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html">full source code on GitHub</a> too (also <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html">see it running live</a>).</p>
+<p><strong>Note:</strong> You can view the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html">full source code on GitHub</a> too (also <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html">see it running live</a>).</p>
 </div>
 
 <h2 id="while_and_do_..._while">while and do ... while</h2>
@@ -504,7 +421,7 @@ while (i &lt; cats.length) {
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: This still works just the same as expected — have a look at it <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html">running live on GitHub</a> (also view the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html">full source code</a>).</p>
+<p><strong>Note:</strong> This still works just the same as expected — have a look at it <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html">running live on GitHub</a> (also view the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html">full source code</a>).</p>
 </div>
 
 <p>The <a href="/en-US/docs/Web/JavaScript/Reference/Statements/do...while">do...while</a> loop is very similar, but provides a variation on the while structure:</p>
@@ -535,14 +452,14 @@ do {
 } while (i &lt; cats.length);</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Again, this works just the same as expected — have a look at it <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html">running live on GitHub</a> (also view the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html">full source code</a>).</p>
+<p><strong>Note:</strong> Again, this works just the same as expected — have a look at it <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html">running live on GitHub</a> (also view the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html">full source code</a>).</p>
 </div>
 
 <div class="warning">
-<p><strong>Important</strong>: With while and do...while — as with all loops — you must make sure that the initializer is incremented or, depending on the case, decremented, so the condition eventually becomes false. If not, the loop will go on forever, and either the browser will force it to stop, or it will crash. This is called an <strong>infinite loop</strong>.</p>
+<p><strong>Warning:</strong> With while and do...while — as with all loops — you must make sure that the initializer is incremented or, depending on the case, decremented, so the condition eventually becomes false. If not, the loop will go on forever, and either the browser will force it to stop, or it will crash. This is called an <strong>infinite loop</strong>.</p>
 </div>
 
-<h2 id="Active_learning_Launch_countdown!">Active learning: Launch countdown!</h2>
+<h2 id="Active_learning_Launch_countdown">Active learning: Launch countdown</h2>
 
 <p>In this exercise, we want you to print out a simple launch countdown to the output box, from 10 down to Blastoff. Specifically, we want you to:</p>
 
@@ -566,15 +483,12 @@ do {
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: If you start typing the loop (for example (while(i&gt;=0)), the browser might stuck because you have not yet entered the end condition. So be careful with this. You can start writing your code in a comment to deal with this issue and remove the comment after you finish.</p>
+<p><strong>Note:</strong> If you start typing the loop (for example (while(i&gt;=0)), the browser might stuck because you have not yet entered the end condition. So be careful with this. You can start writing your code in a comment to deal with this issue and remove the comment after you finish.</p>
 </div>
 
 <p>If you make a mistake, you can always reset the example with the "Reset" button. If you get really stuck, press "Show solution" to see a solution.</p>
 
-<div class="hidden">
-<h6 id="Active_learning">Active learning</h6>
-
-<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
 &lt;div class="output" style="height: 410px;overflow: auto;"&gt;
 
 &lt;/div&gt;
@@ -598,8 +512,6 @@ output.innerHTML = '';
 &lt;/div&gt;
 </pre>
 
-<p class="brush: js"></p>
-
 <pre class="brush: css">html {
   font-family: sans-serif;
 }
@@ -620,9 +532,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<p class="brush: js"></p>
-
-<pre class="brush: js">const textarea = document.getElementById('code');
+<pre class="brush: js hidden">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 let code = textarea.value;
@@ -699,10 +609,7 @@ textarea.onkeyup = function(){
   updateCode();
 };</pre>
 
-<p class="brush: js"></p>
-</div>
-
-<p>{{ EmbedLiveSample('Active_learning', '100%', 880, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Active_learning_Launch_countdown', '100%', 900) }}</p>
 
 <h2 id="Active_learning_Filling_in_a_guest_list">Active learning: Filling in a guest list</h2>
 
@@ -732,10 +639,7 @@ textarea.onkeyup = function(){
 
 <p>If you make a mistake, you can always reset the example with the "Reset" button. If you get really stuck, press "Show solution" to see a solution.</p>
 
-<div class="hidden">
-<h6 id="Active_learning_2">Active learning 2</h6>
-
-<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
 &lt;div class="output" style="height: 100px;overflow: auto;"&gt;
   &lt;p class="admitted"&gt;Admit: &lt;/p&gt;
   &lt;p class="refused"&gt;Refuse: &lt;/p&gt;
@@ -764,7 +668,7 @@ refused.textContent = 'Refuse: '
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -784,7 +688,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js">const textarea = document.getElementById('code');
+<pre class="brush: js hidden">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 let code = textarea.value;
@@ -860,9 +764,8 @@ textarea.onkeyup = function(){
 
   updateCode();
 };</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Active_learning_2', '100%', 680, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Active_learning_Filling_in_a_guest_list', '100%', 680) }}</p>
 
 <h2 id="Which_loop_type_should_you_use">Which loop type should you use?</h2>
 
@@ -895,7 +798,7 @@ do {
 <p>We would recommend <code>for</code>, at least to begin with, as it is probably the easiest for remembering everything — the initializer, condition, and final-expression all have to go neatly into the parentheses, so it is easy to see where they are and check that you aren't missing them.</p>
 
 <div class="note">
-<p><strong>Note</strong>: There are other loop types/features too, which are useful in advanced/specialized situations and beyond the scope of this article. If you want to go further with your loop learning, read our advanced <a href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration">Loops and iteration guide</a>.</p>
+<p><strong>Note:</strong> There are other loop types/features too, which are useful in advanced/specialized situations and beyond the scope of this article. If you want to go further with your loop learning, read our advanced <a href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration">Loops and iteration guide</a>.</p>
 </div>
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
@@ -916,7 +819,7 @@ do {
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/while">while</a> and <a href="/en-US/docs/Web/JavaScript/Reference/Statements/do...while">do...while</a> references</li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/break">break</a> and <a href="/en-US/docs/Web/JavaScript/Reference/Statements/continue">continue</a> references</li>
  <li>
-  <p class="entry-title"><a href="https://www.impressivewebs.com/javascript-for-loop/">What’s the Best Way to Write a JavaScript For Loop?</a> — some advanced loop best practices</p>
+  <p><a href="https://www.impressivewebs.com/javascript-for-loop/">What’s the Best Way to Write a JavaScript For Loop?</a> — some advanced loop best practices</p>
  </li>
 </ul>
 

@@ -15,7 +15,9 @@ tags:
   - lighting
   - rendering
 ---
-<div>{{GamesSidebar}}</div><p class="summary"><span class="seoSummary">Built for modern browsers, <strong>PlayCanvas</strong> is a fully-featured 3D game engine with resource loading, an entity and component system, advanced graphics manipulation, collision and physics engine (built with <a href="https://github.com/kripken/ammo.js/">ammo.js</a>), audio, and facilities to handle control inputs from various devices (including gamepads).</span></p>
+<div>{{GamesSidebar}}</div>
+
+<p>Built for modern browsers, <strong>PlayCanvas</strong> is a fully-featured 3D game engine with resource loading, an entity and component system, advanced graphics manipulation, collision and physics engine (built with <a href="https://github.com/kripken/ammo.js/">ammo.js</a>), audio, and facilities to handle control inputs from various devices (including gamepads).</p>
 
 <p>That's quite an impressive list of features — let's see some in action.</p>
 
@@ -95,13 +97,13 @@ camera.setPosition(0, 0, 7);
 <p>The code above will create a new <code>Entity</code>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: An Entity is any object used in the scene — it can be an object like a box, cylinder or cone, but it can also be a camera, light or sound source.</p>
+<p><strong>Note:</strong> An Entity is any object used in the scene — it can be an object like a box, cylinder or cone, but it can also be a camera, light or sound source.</p>
 </div>
 
 <p>Then it adds a <code>camera</code> component to it with the light gray <code>clearColor</code> — the color will be visible as the background. Next, the <code>camera</code> object is added to the root of our application and positioned to be 7 units away from the center of the scene on the <code>z</code> axis. This allows us to make some space to visualize the objects that we will create later on.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The distance values (e.g. for the camera z position) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.</p>
+<p><strong>Note:</strong> The distance values (e.g. for the camera z position) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.</p>
 </div>
 
 <p>Try saving the file and loading it in your browser. You should now see a gray window. Congratulations!</p>
@@ -150,7 +152,7 @@ box.model.model.meshInstances[0].material = boxMaterial;
 <p>By diffusing the light on the object we can give it it's own color —we'll choose a nice familiar blue.</p>
 
 <div class="note">
-<p><strong>Note</strong>: In PlayCanvas, the color channel values are provided as floats in the range <code>0-1</code>, instead of integers of <code>0-255</code> as you might be used to using on the Web.</p>
+<p><strong>Note:</strong> In PlayCanvas, the color channel values are provided as floats in the range <code>0-1</code>, instead of integers of <code>0-255</code> as you might be used to using on the Web.</p>
 </div>
 
 <p>After the material is created and its color is set, it has to be updated so our changes are going to be applied. Then all we need to do is set the <code>box</code>'s material to the newly created <code>boxMaterial</code>.</p>

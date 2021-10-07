@@ -15,7 +15,7 @@ tags:
 
 <p>{{PreviousMenuNext("Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}</p>
 
-<p class="summary">Grid systems are a very common feature used in CSS layouts, and before CSS Grid Layout they tended to be implemented using floats or other layout features. You imagine your layout as a set number of columns (e.g. 4, 6, or 12), and then fit your content columns inside these imaginary columns. In this article we'll explore how these older methods work, in order that you understand how they were used if you work on an older project.</p>
+<p>Grid systems are a very common feature used in CSS layouts, and before CSS Grid Layout they tended to be implemented using floats or other layout features. You imagine your layout as a set number of columns (e.g. 4, 6, or 12), and then fit your content columns inside these imaginary columns. In this article we'll explore how these older methods work, in order that you understand how they were used if you work on an older project.</p>
 
 <table>
  <tbody>
@@ -91,48 +91,12 @@ div:nth-of-type(2) {
 
 <p>Putting this all together should give us a result like so:</p>
 
-<div id="Floated_Two_Col">
-<div class="hidden">
-<h6 id="Simple_two-column_layout">Simple two-column layout</h6>
-
-<pre class="brush: html">&lt;h1&gt;2 column layout example&lt;/h1&gt;
-
-&lt;div&gt;
-  &lt;h2&gt;First column&lt;/h2&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div&gt;
-  &lt;h2&gt;Second column&lt;/h2&gt;
-  &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css">body {
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-div:nth-of-type(1) {
-  width: 48%;
-  float: left;
-}
-
-div:nth-of-type(2) {
-  width: 48%;
-  float: right;
-}
-</pre>
-</div>
-</div>
-
-<p>{{ EmbedLiveSample('Floated_Two_Col', '100%', 520) }}</p>
+<p>{{ EmbedLiveSample('A_two_column_layout', '100%', 520) }}</p>
 
 <p>You'll notice here that we are using percentages for all the widths — this is quite a good strategy, as it creates a <strong>liquid layout</strong>, one that adjusts to different screen sizes and keeps the same proportions for the column widths at smaller screen sizes. Try adjusting the width of your browser window to see for yourself. This is a valuable tool for responsive web design.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can see this example running at <a href="https://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html">0_two-column-layout.html</a> (see also <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/0_two-column-layout.html">the source code</a>).</p>
+<p><strong>Note:</strong> You can see this example running at <a href="https://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html">0_two-column-layout.html</a> (see also <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/0_two-column-layout.html">the source code</a>).</p>
 </div>
 
 <h2 id="Creating_simple_legacy_grid_frameworks">Creating simple legacy grid frameworks</h2>
@@ -215,7 +179,7 @@ body {
 <p>The top row of single columns will now lay out neatly as a grid.</p>
 
 <div class="note">
-<p><strong>Note</strong>: We've also given each column a light red color so you can see exactly how much space each one takes up.</p>
+<p><strong>Note:</strong> We've also given each column a light red color so you can see exactly how much space each one takes up.</p>
 </div>
 
 <p>Layout containers that we want to span more than one column need to be given special classes to adjust their {{cssxref("width")}} values to the required number of columns (plus gutters in between). We need to create an additional class to allow containers to span 2 to 12 columns. Each width is the result of adding up the column width of that number of columns plus the gutter widths, which will always number one less than the number of columns.</p>
@@ -240,7 +204,7 @@ body {
 <p>With these classes created we can now lay out different width columns on the grid. Try saving and loading the page in your browser to see the effects.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If you are having trouble getting the above example to work, try comparing it against our <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid-finished.html">finished version</a> on GitHub (<a href="https://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html">see it running live</a> also).</p>
+<p><strong>Note:</strong> If you are having trouble getting the above example to work, try comparing it against our <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid-finished.html">finished version</a> on GitHub (<a href="https://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html">see it running live</a> also).</p>
 </div>
 
 <p>Try modifying the classes on your elements or even adding and removing some containers, to see how you can vary the layout. For example, you could make the second row look like this:</p>
@@ -321,7 +285,7 @@ body {
 <p>Now save your code, load it in a browser, and try changing the viewport width — you should see the column widths adjust nicely to suit.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If you are having trouble getting the above example to work, try comparing it against our <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid.html">finished version on GitHub</a> (<a href="https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html">see it running live</a> also).</p>
+<p><strong>Note:</strong> If you are having trouble getting the above example to work, try comparing it against our <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid.html">finished version on GitHub</a> (<a href="https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html">see it running live</a> also).</p>
 </div>
 
 <h3 id="Easier_calculations_using_the_calc()_function">Easier calculations using the calc() function</h3>
@@ -349,11 +313,11 @@ body {
 .col.span12 { width: calc((6.25%*12) + (2.08333333%*11)); }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: You can see our finished version in <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-calc.html">fluid-grid-calc.html</a> (also <a href="https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html">see it live</a>).</p>
+<p><strong>Note:</strong> You can see our finished version in <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-calc.html">fluid-grid-calc.html</a> (also <a href="https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html">see it live</a>).</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: If you can't get this to work, it might be because your browser does not support the <code>calc()</code> function, although it is fairly well supported across browsers — as far back as IE9.</p>
+<p><strong>Note:</strong> If you can't get this to work, it might be because your browser does not support the <code>calc()</code> function, although it is fairly well supported across browsers — as far back as IE9.</p>
 </div>
 
 <h3 id="Semantic_versus_“unsemantic”_grid_systems">Semantic versus “unsemantic” grid systems</h3>
@@ -367,7 +331,7 @@ body {
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: If you were to use a preprocessor such as <a href="https://sass-lang.com/">Sass</a>, you could create a simple mixin to insert that value for you.</p>
+<p><strong>Note:</strong> If you were to use a preprocessor such as <a href="https://sass-lang.com/">Sass</a>, you could create a simple mixin to insert that value for you.</p>
 </div>
 
 <h3 id="Enabling_offset_containers_in_our_grid">Enabling offset containers in our grid</h3>
@@ -399,7 +363,7 @@ body {
 <pre class="brush: html">&lt;div class="col span5 offset-by-one"&gt;14&lt;/div&gt;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Notice that you need to reduce the number of columns spanned, to make room for the offset!</p>
+<p><strong>Note:</strong> Notice that you need to reduce the number of columns spanned, to make room for the offset!</p>
 </div>
 
 <p>Try loading and refreshing to see the difference, or check out our <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-offset.html">fluid-grid-offset.html</a> example (see it <a href="https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html">running live</a> also). The finished example should look like this:</p>
@@ -407,7 +371,7 @@ body {
 <p><img alt="" src="offset-grid-finished.png"></p>
 
 <div class="note">
-<p><strong>Note</strong>: As an extra exercise, can you implement an <code>offset-by-two</code> class?</p>
+<p><strong>Note:</strong> As an extra exercise, can you implement an <code>offset-by-two</code> class?</p>
 </div>
 
 <h3 id="Floated_grid_limitations">Floated grid limitations</h3>
@@ -482,7 +446,7 @@ body {
 <p>Skeleton includes more than a grid system — it also contains CSS for typography and other page elements that you can use as a starting point. We’ll leave these at the defaults for now, however — it’s the grid we are really interested in here.</p>
 
 <div class="note">
-<p><strong>Note</strong>: <a href="https://necolas.github.io/normalize.css/">Normalize</a> is a really useful little CSS library written by Nicolas Gallagher, which automatically does some useful basic layout fixes and makes default element styling more consistent across browsers.</p>
+<p><strong>Note:</strong> <a href="https://necolas.github.io/normalize.css/">Normalize</a> is a really useful little CSS library written by Nicolas Gallagher, which automatically does some useful basic layout fixes and makes default element styling more consistent across browsers.</p>
 </div>
 
 <p>We will use similar HTML to our earlier example. Add the following into your HTML body:</p>
@@ -551,7 +515,7 @@ body {
 <p>Try saving your HTML file and loading it in your browser to see the effect.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If you are having trouble getting this example to work, try comparing it to our <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton-finished.html">html-skeleton-finished.html</a> file (see it <a href="https://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html">running live</a> also).</p>
+<p><strong>Note:</strong> If you are having trouble getting this example to work, try comparing it to our <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton-finished.html">html-skeleton-finished.html</a> file (see it <a href="https://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html">running live</a> also).</p>
 </div>
 
 <p>If you look in the skeleton.css file you can see how this works. For example, Skeleton has the following defined to style elements with “three columns” classes added to them.</p>
@@ -580,7 +544,7 @@ body {
  <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column layout</a></li>
  <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">Responsive design</a></li>
  <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Media_queries">Beginner's guide to media queries</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">Legacy layout methods</a></li>
+ <li>Legacy layout methods</li>
  <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers">Supporting older browsers</a></li>
  <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension">Fundamental layout comprehension assessment</a></li>
 </ul>

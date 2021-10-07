@@ -47,7 +47,7 @@ a |= 2; // 7
 ## See also
 
 - [Assignment
-  operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+  operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
 - [Bitwise OR
   operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR)
 - [Logical

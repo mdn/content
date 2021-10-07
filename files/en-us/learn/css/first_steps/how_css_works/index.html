@@ -10,7 +10,7 @@ tags:
 <p>{{LearnSidebar}}<br>
  {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}</p>
 
-<p class="summary">We have learned the basics of CSS, what it is for and how to write simple stylesheets. In this lesson we will take a look at how a browser takes CSS and HTML and turns that into a webpage.</p>
+<p>We have learned the basics of CSS, what it is for and how to write simple stylesheets. In this lesson we will take a look at how a browser takes CSS and HTML and turns that into a webpage.</p>
 
 <table>
  <tbody>
@@ -62,7 +62,7 @@ tags:
 &lt;/p&gt;
 </pre>
 
-<p>In the DOM, the node corresponding to our <code>&lt;p&gt;</code> element is a parent. Its children are a text node and the three nodes corresponding to our <code>&lt;span&gt;</code> elements. The <code>SPAN</code> nodes are also <span style="background-color: #f5f6f5;">parents</span>, with text nodes as their children:</p>
+<p>In the DOM, the node corresponding to our <code>&lt;p&gt;</code> element is a parent. Its children are a text node and the three nodes corresponding to our <code>&lt;span&gt;</code> elements. The <code>SPAN</code> nodes are also parents, with text nodes as their children:</p>
 
 <pre>P
 ├─ "Let's use:"
@@ -78,9 +78,7 @@ tags:
 
 <p>{{EmbedLiveSample('A_real_DOM_representation', '100%', 55)}}</p>
 
-<div class="hidden">
-<pre class="brush: css">p {margin:0;}</pre>
-</div>
+<pre class="brush: css hidden">p {margin:0;}</pre>
 
 <h2 id="Applying_CSS_to_the_DOM">Applying CSS to the DOM</h2>
 
@@ -120,7 +118,6 @@ tags:
 
 <p>In the example below I have used the British English spelling for color, which makes that property invalid as it is not recognized. So my paragraph has not been colored blue. All of the other CSS have been applied however; only the invalid line is ignored.</p>
 
-<div id="Skipping_example">
 <pre class="brush: html">&lt;p&gt; I want this text to be large, bold and blue.&lt;/p&gt;</pre>
 
 <pre class="brush: css">p {
@@ -128,9 +125,8 @@ tags:
   colour: blue; /* incorrect spelling of the color property */
   font-size: 200%;
 }</pre>
-</div>
 
-<p>{{EmbedLiveSample('Skipping_example', '100%', 200)}}</p>
+<p>{{EmbedLiveSample('What_happens_if_a_browser_encounters_CSS_it_doesnt_understand', '100%', 200)}}</p>
 
 <p>This behavior is very useful. It means that you can use new CSS as an enhancement, knowing that no error will occur if it is not understood — the browser will either get the new feature or not. This enables basic fallback styling.</p>
 
@@ -155,6 +151,6 @@ tags:
  <li><a href="/en-US/docs/Learn/CSS/First_steps/What_is_CSS">What is CSS?</a></li>
  <li><a href="/en-US/docs/Learn/CSS/First_steps/Getting_started">Getting started with CSS</a></li>
  <li><a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured">How CSS is structured</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_works">How CSS works</a></li>
+ <li>How CSS works</li>
  <li><a href="/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge">Using your new knowledge</a></li>
 </ol>

@@ -20,7 +20,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}</div>
 
-<p class="summary">At this point in the course we discuss math in JavaScript — how we can use {{Glossary("Operator","operators")}} and other features to successfully manipulate numbers to do our bidding.</p>
+<p>At this point in the course we discuss math in JavaScript — how we can use {{Glossary("Operator","operators")}} and other features to successfully manipulate numbers to do our bidding.</p>
 
 <table>
  <tbody>
@@ -64,7 +64,7 @@ tags:
 <p>The second bit of good news is that unlike some other programming languages, JavaScript only has one data type for numbers, both integers and decimals — you guessed it, {{jsxref("Number")}}. This means that whatever type of numbers you are dealing with in JavaScript, you handle them in exactly the same way.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Actually, JavaScript has a second number type, {{Glossary("BigInt")}}, used for very, very large integers. But for the purposes of this course, we'll just worry about <code>Number</code> values.</p>
+<p><strong>Note:</strong> Actually, JavaScript has a second number type, {{Glossary("BigInt")}}, used for very, very large integers. But for the purposes of this course, we'll just worry about <code>Number</code> values.</p>
 </div>
 
 <h3 id="Its_all_numbers_to_me">It's all numbers to me</h3>
@@ -171,11 +171,11 @@ myNumber + 3;</pre>
 </table>
 
 <div class="note">
-<p><strong>Note</strong>: You'll sometimes see numbers involved in arithmetic referred to as {{Glossary("Operand", "operands")}}.</p>
+<p><strong>Note:</strong> You'll sometimes see numbers involved in arithmetic referred to as {{Glossary("Operand", "operands")}}.</p>
 </div>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You may sometimes see exponents expressed using the older {{jsxref("Math.pow()")}} method, which works in a very similar way. For example, in <code>Math.pow(7, 3)</code>, <code>7</code> is the base and <code>3</code> is the exponent, so the result of the expression is <code>343</code>. <code>Math.pow(7, 3)</code> is equivalent to <code>7**3</code>.</p>
+<p><strong>Note:</strong> You may sometimes see exponents expressed using the older {{jsxref("Math.pow()")}} method, which works in a very similar way. For example, in <code>Math.pow(7, 3)</code>, <code>7</code> is the base and <code>3</code> is the exponent, so the result of the expression is <code>343</code>. <code>Math.pow(7, 3)</code> is equivalent to <code>7**3</code>.</p>
 </div>
 
 <p>We probably don't need to teach you how to do basic math, but we would like to test your understanding of the syntax involved. Try entering the examples below into your <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">developer tools JavaScript console</a> to familiarize yourself with the syntax.</p>
@@ -221,7 +221,7 @@ num2 + num1 / 8 + 2;</pre>
 <p>Try it and see.</p>
 
 <div class="note">
-<p><strong>Note</strong>: A full list of all JavaScript operators and their precedence can be found in <a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#operator_precedence">Expressions and operators</a>.</p>
+<p><strong>Note:</strong> A full list of all JavaScript operators and their precedence can be found in <a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#operator_precedence">Expressions and operators</a>.</p>
 </div>
 
 <h2 id="Increment_and_decrement_operators">Increment and decrement operators</h2>
@@ -231,7 +231,7 @@ num2 + num1 / 8 + 2;</pre>
 <pre class="brush: js">guessCount++;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: These operators are most commonly used in <a href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration">loops</a>, which you'll learn about later on in the course. For example, say you wanted to loop through a list of prices, and add sales tax to each one. You'd use a loop to go through each value in turn and do the necessary calculation for adding the sales tax in each case. The incrementor is used to move to the next value when needed. We've actually provided a simple example showing how this is done — <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/loop.html">check it out live</a>, and <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/maths/loop.html">look at the source code</a> to see if you can spot the incrementors! We'll look at loops in detail later on in the course.</p>
+<p><strong>Note:</strong> These operators are most commonly used in <a href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration">loops</a>, which you'll learn about later on in the course. For example, say you wanted to loop through a list of prices, and add sales tax to each one. You'd use a loop to go through each value in turn and do the necessary calculation for adding the sales tax in each case. The incrementor is used to move to the next value when needed. We've actually provided a simple example showing how this is done — <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/loop.html">check it out live</a>, and <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/maths/loop.html">look at the source code</a> to see if you can spot the incrementors! We'll look at loops in detail later on in the course.</p>
 </div>
 
 <p>Let's try playing with these in your console. For a start, note that you can't apply these directly to a number, which might seem strange, but we are assigning a variable a new updated value, not operating on the value itself. The following will return an error:</p>
@@ -254,7 +254,7 @@ num2--;
 num2;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: You can make the browser do it the other way round — increment/decrement the variable <em>then</em> return the value — by putting the operator at the start of the variable instead of the end. Try the above examples again, but this time use <code>++num1</code> and <code>--num2</code>.</p>
+<p><strong>Note:</strong> You can make the browser do it the other way round — increment/decrement the variable <em>then</em> return the value — by putting the operator at the start of the variable instead of the end. Try the above examples again, but this time use <code>++num1</code> and <code>--num2</code>.</p>
 </div>
 
 <h2 id="Assignment_operators">Assignment operators</h2>
@@ -267,7 +267,7 @@ x = y; // x now contains the same value y contains, 4</pre>
 
 <p>But there are some more complex types, which provide useful shortcuts to keep your code neater and more efficient. The most common are listed below:</p>
 
-<table class="standard-table">
+<table class="standard-table no-markdown">
  <thead>
   <tr>
    <th scope="col">Operator</th>
@@ -282,29 +282,29 @@ x = y; // x now contains the same value y contains, 4</pre>
    <td><code>+=</code></td>
    <td>Addition assignment</td>
    <td>Adds the value on the right to the variable value on the left, then returns the new variable value</td>
-   <td style="white-space: nowrap;"><code>x += 4;</code></td>
-   <td style="white-space: nowrap;"><code>x = x + 4;</code></td>
+   <td><code>x += 4;</code></td>
+   <td><code>x = x + 4;</code></td>
   </tr>
   <tr>
    <td><code>-=</code></td>
    <td>Subtraction assignment</td>
    <td>Subtracts the value on the right from the variable value on the left, and returns the new variable value</td>
-   <td style="white-space: nowrap;"><code>x -= 3;</code></td>
-   <td style="white-space: nowrap;"><code>x = x - 3;</code></td>
+   <td><code>x -= 3;</code></td>
+   <td><code>x = x - 3;</code></td>
   </tr>
   <tr>
    <td><code>*=</code></td>
    <td>Multiplication assignment</td>
    <td>Multiplies the variable value on the left by the value on the right, and returns the new variable value</td>
-   <td style="white-space: nowrap;"><code>x *= 3;</code></td>
-   <td style="white-space: nowrap;"><code>x = x * 3;</code></td>
+   <td><code>x *= 3;</code></td>
+   <td><code>x = x * 3;</code></td>
   </tr>
   <tr>
    <td><code>/=</code></td>
    <td>Division assignment</td>
    <td>Divides the variable value on the left by the value on the right, and returns the new variable value</td>
-   <td style="white-space: nowrap;"><code>x /= 5;</code></td>
-   <td style="white-space: nowrap;"><code>x = x / 5;</code></td>
+   <td><code>x /= 5;</code></td>
+   <td><code>x = x / 5;</code></td>
   </tr>
  </tbody>
 </table>
@@ -318,7 +318,7 @@ let y = 4; // y contains the value 4
 x *= y; // x now contains the value 12</pre>
 
 <div class="note">
-<p><strong>Note</strong>: There are lots of <a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators">other assignment operators available</a>, but these are the basic ones you should learn now.</p>
+<p><strong>Note:</strong> There are lots of <a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators">other assignment operators available</a>, but these are the basic ones you should learn now.</p>
 </div>
 
 <h2 id="Active_learning_sizing_a_canvas_box">Active learning: sizing a canvas box</h2>
@@ -394,7 +394,7 @@ x *= y; // x now contains the value 12</pre>
 </table>
 
 <div class="note">
-<p><strong>Note</strong>: You may see some people using <code>==</code> and <code>!=</code> in their tests for equality and non-equality. These are valid operators in JavaScript, but they differ from <code>===</code>/<code>!==</code>. The former versions test whether the values are the same but not whether the values' datatypes are the same. The latter, strict versions test the equality of both the values and their datatypes. The strict versions tend to result in fewer errors, so we recommend you use them.</p>
+<p><strong>Note:</strong> You may see some people using <code>==</code> and <code>!=</code> in their tests for equality and non-equality. These are valid operators in JavaScript, but they differ from <code>===</code>/<code>!==</code>. The former versions test whether the values are the same but not whether the values' datatypes are the same. The latter, strict versions test the equality of both the values and their datatypes. The strict versions tend to result in fewer errors, so we recommend you use them.</p>
 </div>
 
 <p>If you try entering some of these values in a console, you'll see that they all return <code>true</code>/<code>false</code> values — those booleans we mentioned in the last article. These are very useful, as they allow us to make decisions in our code, and they are used every time we want to make a choice of some kind. For example, booleans can be used to:</p>
@@ -434,7 +434,7 @@ function updateBtn() {
 <p>You can see the equality operator being used just inside the <code>updateBtn()</code> function. In this case, we are not testing if two mathematical expressions have the same value — we are testing whether the text content of a button contains a certain string — but it is still the same principle at work. If the button is currently saying "Start machine" when it is pressed, we change its label to  "Stop machine", and update the label as appropriate. If the button is currently saying "Stop machine" when it is pressed, we swap the display back again.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Such a control that swaps between two states is generally referred to as a <strong>toggle</strong>. It toggles between one state and another — light on, light off, etc.</p>
+<p><strong>Note:</strong> Such a control that swaps between two states is generally referred to as a <strong>toggle</strong>. It toggles between one state and another — light on, light off, etc.</p>
 </div>
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
@@ -448,7 +448,7 @@ function updateBtn() {
 <p>In the next article, we'll explore text and how JavaScript allows us to manipulate it.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If you do enjoy math and want to read more about how it is implemented in JavaScript, you can find a lot more detail in MDN's main JavaScript section. Great places to start are our <a href="/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates">Numbers and dates</a> and <a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators">Expressions and operators</a> articles.</p>
+<p><strong>Note:</strong> If you do enjoy math and want to read more about how it is implemented in JavaScript, you can find a lot more detail in MDN's main JavaScript section. Great places to start are our <a href="/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates">Numbers and dates</a> and <a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators">Expressions and operators</a> articles.</p>
 </div>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}</p>

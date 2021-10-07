@@ -25,27 +25,21 @@ tags:
 <p>The <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/Glossary.ejs">Glossary</a></code> macro creates a link to a specified term's entry in the MDN <a href="/en-US/docs/Glossary">glossary</a>. This macro accepts one required parameter and one optional parameter:</p>
 
 <ol>
-  <li>The term's name (such as "HTML").
-    <ul>
-      <li><code>\{{Glossary("HTML")}}</code> yields {{Glossary("HTML")}}</li>
-     </ul>
+  <li>The term's name (such as "HTML"): <code>\{{Glossary("HTML")}}</code> yields {{Glossary("HTML")}}</li>
+  <li>Optional: The text to display in the article instead of the term name: <code>\{{Glossary("CSS", "Cascading Style Sheets")}}</code> yields {{Glossary("CSS", "Cascading Style Sheets")}}</li>
+</ol>
+
+
+<h3 id="Links_to_in-page_sections">Links to in-page sections</h3>
+
+<p><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/anch.ejs">anch</a></code> - creates link to in-page section:</p>
+
+<ul>
+  <li><code>\{{anch("Linking to pages in references")}}</code>;</li>
+  <li>
+   <p>Demo: {{anch("Linking to pages in references")}}</p>
   </li>
-  <li>Optional: The text to display in the article instead of the term name.</li>
-  <ul>
-    <li><code>\{{Glossary("CSS", "Cascading Style Sheets")}}</code> yields {{Glossary("CSS", "Cascading Style Sheets")}}</li>
-   </ul>
- </ol>
-
-  <h3 id="Links_to_in-page_sections">Links to in-page sections</h3>
-
-  <p><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/anch.ejs">anch</a></code> - creates link to in-page section:</p>
-
-  <ul>
-    <li><code>\{{anch("Linking to pages in references")}}</code>;</li>
-    <li>
-     <p>Demo: {{anch("Linking to pages in references")}}</p>
-    </li>
-   </ul>
+</ul>
 
 <h3 id="Linking_to_pages_in_references">Linking to pages in references</h3>
 
@@ -119,9 +113,8 @@ tags:
         <td><a href="https://github.com/mdn/yari/blob/main/kumascript/macros/event.ejs">Event</a>.</td>
         <td><a href="/en-US/docs/Web/Events">Events reference</a> (/Web/Events)</td>
         <td>
-        <div class="notecard note">
-            <h4>Note</h4>
-            <p>This macro is not particularly useful because events are now under their associated DOM element. So to link to the wheel event you would use <code>\{{DOMxRef("Document.wheel_event")}}</code>: {{DOMxRef("Document.wheel_event")}}</p>
+        <div class="note">
+            <p><strong>Note:</strong> This macro is not particularly useful because events are now under their associated DOM element. So to link to the wheel event you would use <code>\{{DOMxRef("Document.wheel_event")}}</code>: {{DOMxRef("Document.wheel_event")}}</p>
         </div>
         </td>
       </tr>
@@ -246,7 +239,7 @@ tags:
 
 <h5 id="Syntax">Syntax</h5>
 
-<pre>\{{AvailableInWorkers}}
+<pre class="brush: plain">\{{AvailableInWorkers}}
 \{{AvailableInWorkers("notservice")}}</pre>
 
 <h5 id="Examples">Examples</h5>

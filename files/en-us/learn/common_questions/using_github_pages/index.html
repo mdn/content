@@ -10,7 +10,7 @@ tags:
   - git
   - publish
 ---
-<p class="summary"><a href="https://github.com/">GitHub</a> is a "social coding" site. It allows you to upload code repositories for storage in the <a href="https://git-scm.com/">Git</a> <strong>version control system.</strong> You can then collaborate on code projects, and the system is open-source by default, meaning that anyone in the world can find your GitHub code, use it, learn from it, and improve on it. You can do that with other people's code too! This article provides a basic guide to publishing content using Github's gh-pages feature.</p>
+<p><a href="https://github.com/">GitHub</a> is a "social coding" site. It allows you to upload code repositories for storage in the <a href="https://git-scm.com/">Git</a> <strong>version control system.</strong> You can then collaborate on code projects, and the system is open-source by default, meaning that anyone in the world can find your GitHub code, use it, learn from it, and improve on it. You can do that with other people's code too! This article provides a basic guide to publishing content using Github's gh-pages feature.</p>
 
 <h2 id="Publishing_content">Publishing content</h2>
 
@@ -47,10 +47,10 @@ tags:
 <p><img alt="" src="command-line.png"></p>
 
 <div class="note">
-<p><strong>Note</strong>: You could also consider using a <a href="https://git-scm.com/downloads/guis">Git graphical user interface</a> to do the same work, if you feel uncomfortable with the command line.</p>
+<p><strong>Note:</strong> You could also consider using a <a href="https://git-scm.com/downloads/guis">Git graphical user interface</a> to do the same work, if you feel uncomfortable with the command line.</p>
 </div>
 
-<p><span id="command-line">Every operating system comes with a command line tool:</span></p>
+<p>Every operating system comes with a command line tool:</p>
 
 <ul>
  <li><strong>Windows</strong>: <strong>Command Prompt</strong> can be accessed by pressing the Windows key, typing <em>Command Prompt</em>, and choosing it from the list that appears. Note that Windows has its own command conventions differing from Linux and OS X, so the commands below may vary on your machine.</li>
@@ -76,7 +76,7 @@ tags:
 <ol>
  <li>On the current page, you are interested in the section <em>…or push an existing repository from the command line</em>. You should see two lines of code listed in this section. Copy the whole of the first line, paste it into the command line, and press Enter. The command should look something like this:
 
-  <pre class="copyable-terminal-content js-zeroclipboard-target"><span class="user-select-contain">git remote add origin <span class="js-live-clone-url">https://github.com/chrisdavidmills/my-repository.git</span></span></pre>
+  <pre class="brush: bash">git remote add origin https://github.com/chrisdavidmills/my-repository.git</pre>
  </li>
  <li>Next, type the following two commands, pressing Enter after each one. These prepare the code for uploading to GitHub, and ask Git to manage these files.
   <pre class="brush: bash">git add --all

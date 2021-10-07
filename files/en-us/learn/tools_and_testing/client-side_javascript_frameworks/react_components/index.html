@@ -16,7 +16,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
-<p class="summary">At this point, our app is a monolith. Before we can make it do things, we need to break it apart into manageable, descriptive components. React doesn’t have any hard rules for what is and isn’t a component – that’s up to you! In this article we will show you a sensible way to break our app up into components.</p>
+<p>At this point, our app is a monolith. Before we can make it do things, we need to break it apart into manageable, descriptive components. React doesn’t have any hard rules for what is and isn’t a component – that’s up to you! In this article we will show you a sensible way to break our app up into components.</p>
 
 <table>
  <tbody>
@@ -87,7 +87,7 @@ touch src/components/Todo.js</pre>
 }</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Components must always return something. If at any point in the future you try to render a component that does not return anything, React will display an error in your browser.</p>
+<p><strong>Note:</strong> Components must always return something. If at any point in the future you try to render a component that does not return anything, React will display an error in your browser.</p>
 </div>
 
 <p>Our <code>Todo</code> component is complete, at least for now; now we can use it. In <code>App.js</code>, add the following line near the top of the file to import <code>Todo</code>:</p>
@@ -221,7 +221,7 @@ touch src/components/Todo.js</pre>
 <p>This array is now available to the App component as <code>props.tasks</code>. You can <code>console.log()</code> it to check, if you’d like.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: <code>ALL_CAPS</code> constant names have no special meaning in JavaScript; they’re a convention that tells other developers "this data will never change after being defined here”.</p>
+<p><strong>Note:</strong> <code>ALL_CAPS</code> constant names have no special meaning in JavaScript; they’re a convention that tells other developers "this data will never change after being defined here”.</p>
 </div>
 
 <h2 id="Rendering_with_iteration">Rendering with iteration</h2>
@@ -349,7 +349,7 @@ function FilterButton(props) {
 export default FilterButton;</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You might notice that we are making the same mistake here as we first made for the <code>&lt;Todo /&gt;</code> component, in that each button will be the same. That’s fine! We’re going to fix up this component later on, in <a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons">Back to the filter buttons</a>.</p>
+<p><strong>Note:</strong> You might notice that we are making the same mistake here as we first made for the <code>&lt;Todo /&gt;</code> component, in that each button will be the same. That’s fine! We’re going to fix up this component later on, in <a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons">Back to the filter buttons</a>.</p>
 </div>
 
 <h2 id="Importing_all_our_components">Importing all our components</h2>

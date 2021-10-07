@@ -2008,6 +2008,10 @@
       "inh": "",
       "impl": []
     },
+    "URLPattern": {
+      "inh": "",
+      "impl": []
+    },
     "USSDReceivedEvent": {
       "inh": "Event",
       "impl": []

@@ -453,7 +453,7 @@ when using it.
       <th scope="row">
         <code>0x0054 (<kbd>Alt</kbd> + <kbd>PrintScreen</kbd>)</code>
       </th>
-      <td><code>"PrintScreen"</code></td>
+      <td><code>"PrintScreen"</code> (⚠️ Not the same on Chrome)</td>
       <td><code>""</code> (❌ Missing)</td>
     </tr>
     <tr>
@@ -479,7 +479,7 @@ when using it.
     <tr>
       <th scope="row"><code>0x0059</code></th>
       <td><code>"NumpadEqual"</code></td>
-      <td><code>""</code> (❌ Missing)</td>
+      <td><code>"NumpadEqual"</code> (was "" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x005A</code></th>
@@ -488,18 +488,18 @@ when using it.
     </tr>
     <tr>
       <th scope="row"><code>0x005B</code></th>
-      <td><code>"Unidentified"</code> (❌ Missing)</td>
-      <td><code>"F13"</code> (⚠️ Not the same on Firefox)</td>
+      <td><code>"Unidentified"</code></td>
+      <td><code>""</code> (was "F13" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x005C</code></th>
-      <td><code>"Unidentified"</code> (❌ Missing)</td>
-      <td><code>"F14"</code> (⚠️ Not the same on Firefox)</td>
+      <td><code>"Unidentified"</code></td>
+      <td><code>""</code> (was "F14" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x005D</code></th>
-      <td><code>"Unidentified"</code> (❌ Missing)</td>
-      <td><code>"F15"</code> (⚠️ Not the same on Firefox)</td>
+      <td><code>"Unidentified"</code></td>
+      <td><code>""</code> (was "F15" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x005E</code></th>
@@ -528,63 +528,63 @@ when using it.
     </tr>
     <tr>
       <th scope="row"><code>0x0063</code></th>
-      <td><code>"Unidentified"</code> (❌ Missing)</td>
-      <td><code>"F16"</code></td>
+      <td><code>"Unidentified"</code></td>
+      <td><code>""</code> (was "F16" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x0064</code></th>
-      <td><code>"F13"</code> (⚠️ Not the same on Chrome)</td>
-      <td><code>"F17"</code> (⚠️ Not the same on Firefox)</td>
+      <td><code>"F13"</code></td>
+      <td><code>"F13"</code> (was "F17" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x0065</code></th>
-      <td><code>"F14"</code> (⚠️ Not the same on Chrome)</td>
-      <td><code>"F18"</code> (⚠️ Not the same on Firefox)</td>
+      <td><code>"F14"</code></td>
+      <td><code>"F14"</code> (was "F18" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x0066</code></th>
-      <td><code>"F15"</code> (⚠️ Not the same on Chrome)</td>
-      <td><code>"F19"</code> (⚠️ Not the same on Firefox)</td>
+      <td><code>"F15"</code></td>
+      <td><code>"F15"</code> (was "F19" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x0067</code></th>
-      <td><code>"F16"</code> (⚠️ Not the same on Chrome)</td>
-      <td><code>"F20"</code> (⚠️ Not the same on Firefox)</td>
+      <td><code>"F16"</code></td>
+      <td><code>"F16"</code> (was "F20" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x0068</code></th>
-      <td><code>"F17"</code> (⚠️ Not the same on Chrome)</td>
-      <td><code>"F21"</code> (⚠️ Not the same on Firefox)</td>
+      <td><code>"F17"</code></td>
+      <td><code>"F17"</code> (was "F21" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x0069</code></th>
-      <td><code>"F18"</code> (⚠️ Not the same on Chrome)</td>
-      <td><code>"F22"</code> (⚠️ Not the same on Firefox)</td>
+      <td><code>"F18"</code></td>
+      <td><code>"F18"</code> (was "F22" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x006A</code></th>
-      <td><code>"F19"</code> (⚠️ Not the same on Chrome)</td>
-      <td><code>"F23"</code> (⚠️ Not the same on Firefox)</td>
+      <td><code>"F19"</code></td>
+      <td><code>"F19"</code> (was "F23" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x006B</code></th>
-      <td><code>"F20"</code> (⚠️ Not the same on Chrome)</td>
-      <td><code>"F24"</code> (⚠️ Not the same on Firefox)</td>
+      <td><code>"F20"</code></td>
+      <td><code>"F20"</code> (was "F24" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x006C</code></th>
-      <td><code>"F21"</code> (⚠️ Not the same on Chrome)</td>
-      <td><code>""</code> (❌ Missing)</td>
+      <td><code>"F21"</code></td>
+      <td><code>"F21"</code> (was "" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x006D</code></th>
-      <td><code>"F22"</code> (⚠️ Not the same on Chrome)</td>
-      <td><code>""</code> (❌ Missing)</td>
+      <td><code>"F22"</code></td>
+      <td><code>"F22"</code> (was "" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x006E</code></th>
-      <td><code>"F23"</code> (⚠️ Not the same on Chrome)</td>
-      <td><code>""</code> (❌ Missing)</td>
+      <td><code>"F23"</code></td>
+      <td><code>"F23"</code> (was "" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x006F</code></th>
@@ -594,7 +594,7 @@ when using it.
     <tr>
       <th scope="row"><code>0x0070</code></th>
       <td><code>"KanaMode"</code></td>
-      <td><code>""</code> (❌ Missing)</td>
+      <td><code>"KanaMode"</code> (was "" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row">
@@ -602,7 +602,7 @@ when using it.
         layout)
       </th>
       <td><code>"Lang2"</code></td>
-      <td><code>""</code> (❌ Missing)</td>
+      <td><code>"Lang2"</code> (was "" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row">
@@ -610,12 +610,12 @@ when using it.
         layout)
       </th>
       <td><code>"Lang1"</code></td>
-      <td><code>""</code> (❌ Missing)</td>
+      <td><code>"Lang1"</code> (was "" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x0073</code></th>
       <td><code>"IntlRo"</code></td>
-      <td><code>""</code> (❌ Missing)</td>
+      <td><code>"IntlRo"</code> (was "" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x0074</code>, <code>0x0075</code></th>
@@ -624,18 +624,23 @@ when using it.
     </tr>
     <tr>
       <th scope="row"><code>0x0076</code></th>
-      <td><code>"F24"</code> (⚠️ Not the same on Chrome)</td>
-      <td><code>""</code> (❌ Missing)</td>
+      <td><code>"F24"</code></td>
+      <td><code>"F24"</code> (was "" prior to Chrome 48)</td>
     </tr>
     <tr>
-      <th scope="row"><code>0x0077</code>, <code>0x0078</code></th>
-      <td><code>"Unidentified"</code></td>
-      <td><code>""</code></td>
+      <th scope="row"><code>0x0077</code></th>
+      <td><code>"Unidentified"</code> (❌ Missing)</td>
+      <td><code>"Lang4"</code> (was "" prior to Chrome 48) (⚠️ Not the same on Firefox)</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>0x0077</code></th>
+      <td><code>"Unidentified"</code> (❌ Missing)</td>
+      <td><code>"Lang3"</code> (was "" prior to Chrome 48) (⚠️ Not the same on Firefox)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x0079</code></th>
       <td><code>"Convert"</code></td>
-      <td><code>""</code> (❌ Missing)</td>
+      <td><code>"Convert"</code> (was "" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x007A</code></th>
@@ -645,7 +650,7 @@ when using it.
     <tr>
       <th scope="row"><code>0x007B</code></th>
       <td><code>"NonConvert"</code></td>
-      <td><code>""</code> (❌ Missing)</td>
+      <td><code>"NonConvert"</code> (was "" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x007C</code></th>
@@ -660,7 +665,7 @@ when using it.
     <tr>
       <th scope="row"><code>0x007E</code></th>
       <td><code>"NumpadComma"</code></td>
-      <td><code>""</code> (❌ Missing)</td>
+      <td><code>"NumpadComma"</code> (was "" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x007F</code></th>
@@ -734,8 +739,8 @@ when using it.
     </tr>
     <tr>
       <th scope="row"><code>0xE01E</code></th>
-      <td><code>"Unidentified"</code> (❌ Missing)</td>
-      <td><code>"LaunchMail"</code> (⚠️ Not the same on Firefox)</td>
+      <td><code>"Unidentified"</code></td>
+      <td><code>""</code> (was "LaunchMail" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row"><code>0xE01F</code></th>
@@ -750,7 +755,7 @@ when using it.
     <tr>
       <th scope="row"><code>0xE021</code></th>
       <td><code>"LaunchApp2"</code></td>
-      <td><code>""</code> (❌ Missing)</td>
+      <td><code>"LaunchApp2"</code> (was "" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row"><code>0xE022</code></th>
@@ -784,10 +789,10 @@ when using it.
     </tr>
     <tr>
       <th scope="row"><code>0xE02E</code></th>
-      <td><code>"AudioVolumeDown"</code></td>
+      <td><code>"VolumeDown"</code> (⚠️ Not the same on Chrome)</td>
       <td>
-        <code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> until
-        Chrome 50)
+        <code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> prior to
+        Chrome 52)
       </td>
     </tr>
     <tr>
@@ -797,10 +802,10 @@ when using it.
     </tr>
     <tr>
       <th scope="row"><code>0xE030</code></th>
-      <td><code>"AudioVolumeUp"</code></td>
+      <td><code>"VolumeUp"</code> (⚠️ Not the same on Chrome)</td>
       <td>
-        <code>"AudioVolumeUp"</code> (was <code>"VolumeUp"</code> until Chrome
-        50)
+        <code>"AudioVolumeUp"</code> (was <code>"VolumeUp"</code> prior to Chrome
+        52)
       </td>
     </tr>
     <tr>
@@ -846,7 +851,7 @@ when using it.
     <tr>
       <th scope="row"><code>0xE03B</code></th>
       <td><code>"Unidentified"</code> (❌ Missing)</td>
-      <td><code>"Help"</code></td>
+      <td><code>"Help"</code> (⚠️ Not the same on Firefox)</td>
     </tr>
     <tr>
       <th scope="row"><code>0xE03C</code>～ <code>0xE044</code></th>
@@ -937,13 +942,13 @@ when using it.
     </tr>
     <tr>
       <th scope="row"><code>0xE05B</code></th>
-      <td><code>"MetaLeft"</code></td>
-      <td><code>"OSLeft"</code></td>
+      <td><code>"OSLeft"</code> (⚠️ Not the same on Chrome)</td>
+      <td><code>"MetaLeft"</code> (was "OSLeft" prior to Chrome 52)</td>
     </tr>
     <tr>
       <th scope="row"><code>0xE05C</code></th>
-      <td><code>"MetaRight"</code></td>
-      <td><code>"OSRight"</code></td>
+      <td><code>"OSRight"</code> (⚠️ Not the same on Chrome)</td>
+      <td><code>"MetaRight"</code> (was "OSRight" prior to Chrome 52)</td>
     </tr>
     <tr>
       <th scope="row"><code>0xE05D</code></th>
@@ -953,10 +958,25 @@ when using it.
     <tr>
       <th scope="row"><code>0xE05E</code></th>
       <td><code>"Power"</code></td>
-      <td><code>""</code> (❌ Missing)</td>
+      <td><code>"Power"</code> (was "" prior to Chrome 48)</td>
     </tr>
     <tr>
-      <th scope="row"><code>0xE05F</code> ～ <code>0xE064</code></th>
+      <th scope="row"><code>0xE05F</code></th>
+      <td><code>"Unidentified"</code> (❌ Missing)</td>
+      <td><code>"Sleep"</code> (was "" prior to Chrome 48) (⚠️ Not the same on Firefox)</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>0xE060</code> ～ <code>0xE062</code></th>
+      <td><code>"Unidentified"</code></td>
+      <td><code>""</code></td>
+    </tr>
+      <tr>
+      <th scope="row"><code>0xE063</code></th>
+      <td><code>"Unidentified"</code> (❌ Missing)</td>
+      <td><code>"WakeUp"</code> (was "" prior to Chrome 48) (⚠️ Not the same on Firefox)</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>0xE064</code></th>
       <td><code>"Unidentified"</code></td>
       <td><code>""</code></td>
     </tr>
@@ -993,20 +1013,17 @@ when using it.
     <tr>
       <th scope="row"><code>0xE06B</code></th>
       <td><code>"LaunchApp1"</code></td>
-      <td><code>""</code> (❌ Missing)</td>
+      <td><code>"LaunchApp1"</code> (was "" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row"><code>0xE06C</code></th>
-      <td><code>"LaunchMail"</code> (⚠️ Not the same on Chrome)</td>
-      <td><code>""</code> (❌ Missing)</td>
+      <td><code>"LaunchMail"</code></td>
+      <td><code>"LaunchMail"</code> (was "" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row"><code>0xE06D</code></th>
-      <td>
-        <code>"LaunchMediaPlayer"</code> (<code>"MediaSelect"</code> prior to
-        Firefox 49)
-      </td>
-      <td><code>""</code> (❌ Missing)</td>
+      <td><code>"MediaSelect"</code></td>
+      <td><code>"MediaSelect"</code> (was "" prior to Chrome 48)</td>
     </tr>
     <tr>
       <th scope="row"><code>0xE06E ～ 0xE0F0</code></th>
@@ -1017,7 +1034,7 @@ when using it.
       <th scope="row">
         <code>0xE0F1</code> (<kbd>Hanja</kbd> key with Korean keyboard layout)
       </th>
-      <td><code>"Lang2"</code></td>
+      <td><code>"Lang2"</code> (⚠️ Not the same on Chrome)</td>
       <td><code>""</code> (❌ Missing)</td>
     </tr>
     <tr>
@@ -1025,7 +1042,7 @@ when using it.
         <code>0xE0F2</code> (<kbd>Han/Yeong</kbd> key with Korean keyboard
         layout)
       </th>
-      <td><code>"Lang1"</code></td>
+      <td><code>"Lang1"</code> (⚠️ Not the same on Chrome)</td>
       <td><code>""</code> (❌ Missing)</td>
     </tr>
   </tbody>
@@ -1401,34 +1418,34 @@ In the cells,
     <tr>
       <th scope="row"><code>kVK_VolumeUp (0x48)</code></th>
       <td>
-        <code>"AudioVolumeUp" </code>(was <code>"VolumeUp"</code> until Firefox
+        <code>"AudioVolumeUp" </code>(was <code>"VolumeUp"</code> prior to Firefox
         48)
       </td>
       <td>
-        <code>"AudioVolumeUp" </code>(was <code>"VolumeUp"</code> until Chrome
-        50)
+        <code>"AudioVolumeUp" </code>(was <code>"VolumeUp"</code> prior to Chrome
+        52)
       </td>
     </tr>
     <tr>
       <th scope="row"><code>kVK_VolumeDown (0x49)</code></th>
       <td>
-        <code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> until
+        <code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> prior to
         Firefox 49)
       </td>
       <td>
-        <code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> until
-        Chrome 50)
+        <code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> prior to
+        Chrome 52)
       </td>
     </tr>
     <tr>
       <th scope="row"><code>kVK_Mute (0x4A)</code></th>
       <td>
-        <code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> until
+        <code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> prior to
         Firefox 49)
       </td>
       <td>
-        <code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> until
-        Chrome 50)
+        <code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> prior to
+        Chrome 52)
       </td>
     </tr>
     <tr>
@@ -2243,24 +2260,24 @@ In the cells, "(❌ Missing)" means that this code value cannot be detected on t
       <th scope="row"><code>0x0079</code></th>
       <td><code>"AudioVolumeMute"</code></td>
       <td>
-        <code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> until
-        Chrome 50)
+        <code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> prior to
+        Chrome 52)
       </td>
     </tr>
     <tr>
       <th scope="row"><code>0x007A</code></th>
       <td><code>"AudioVolumeDown"</code></td>
       <td>
-        <code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> until
-        Chrome 50)
+        <code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> prior to
+        Chrome 52)
       </td>
     </tr>
     <tr>
       <th scope="row"><code>0x007B</code></th>
       <td><code>"AudioVolumeUp"</code></td>
       <td>
-        <code>"AudioVolumeUp"</code> (was <code>"VolumeUp"</code> until Chrome
-        50)
+        <code>"AudioVolumeUp"</code> (was <code>"VolumeUp"</code> prior to Chrome
+        52)
       </td>
     </tr>
     <tr>

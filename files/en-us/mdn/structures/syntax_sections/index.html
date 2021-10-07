@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{MDNSidebar}}</div>
 
-<p class="summary">The syntax section of an MDN reference page contains a syntax box defining the exact syntax that a feature has (e.g. what parameters can it accept, which ones are optional?) This article explains how to write syntax boxes for reference articles.</p>
+<p>The syntax section of an MDN reference page contains a syntax box defining the exact syntax that a feature has (e.g. what parameters can it accept, which ones are optional?) This article explains how to write syntax boxes for reference articles.</p>
 
 <h2 id="API_reference_syntax">API reference syntax</h2>
 
@@ -146,9 +146,8 @@ unshift(element0, element1, ... , elementN)
 
 <p>The name of each parameter in the list should be contained in a {{HTMLElement("code")}} block.</p>
 
-<div class="notecard note">
-  <h4>Note</h4>
-  <p>If the feature does not take any parameters, you don't need to include a "Parameters" section, but you can if you wish include it with content of "None".</p>
+<div class="note">
+  <p><strong>Note:</strong> If the feature does not take any parameters, you don't need to include a "Parameters" section, but you can if you wish include it with content of "None".</p>
 </div>
 
 <h4 id="Return_value_section">Return value section</h4>
@@ -163,9 +162,8 @@ unshift(element0, element1, ... , elementN)
 
 <p>The exception names and explanations should be included in a description list.</p>
 
-<div class="notecard note">
-  <h4>Note</h4>
-  <p>If no exceptions can be raised on the feature, you don't need to include an "Exceptions" section, but you can if you wish include it with content of "None".</p>
+<div class="note">
+  <p><strong>Note:</strong> If no exceptions can be raised on the feature, you don't need to include an "Exceptions" section, but you can if you wish include it with content of "None".</p>
 </div>
 
 <h3 id="Properties">Properties</h3>
@@ -205,9 +203,8 @@ unshift(element0, element1, ... , elementN)
 
 <p>CSS property reference pages include a "Syntax" section, which used to be found at the top of the page but is increasingly commonly found below a section containing a block of code showing typical usage of the feature, plus a live example to illustrate what the feature does (see {{CSSxRef("animation")}} for example).</p>
 
-<div class="notecard note">
-  <h4>Note</h4>
-  <p>We do this because CSS formal syntax is complex, not used by many of the MDN readership, and offputting for beginners. Real syntax and examples are more useful to the majority of people.</p>
+<div class="note">
+  <p><strong>Note:</strong> We do this because CSS formal syntax is complex, not used by many of the MDN readership, and offputting for beginners. Real syntax and examples are more useful to the majority of people.</p>
 </div>
 
 <p>Inside the syntax section you'll find the following contents.</p>
@@ -254,7 +251,7 @@ unshift(element0, element1, ... , elementN)
 
 <p>The "Syntax" section shows what a header's syntax will look like, using a syntax block styled using the "Syntax Box" style, including formal syntax to show exactly what directives can be included in the value, in what order, etc. For example, the {{HTTPHeader("If-None-Match")}} header's syntax block looks like this:</p>
 
-<pre class="brush: http">If-None-Match: &lt;etag_value&gt;
+<pre class="brush: plain">If-None-Match: &lt;etag_value&gt;
 If-None-Match: &lt;etag_value&gt;, &lt;etag_value&gt;, …
 If-None-Match: *</pre>
 
@@ -268,7 +265,7 @@ If-None-Match: *</pre>
 
 <p>Request method syntax is really simple, just containing a syntax block styled using the "Syntax Box" style that shows how the method syntax is structured. The syntax for the <a href="/en-US/docs/Web/HTTP/Methods/GET">GET method</a> looks like this:</p>
 
-<pre class="brush: http">GET /index.html</pre>
+<pre class="brush: plain">GET /index.html</pre>
 
 <h3 id="HTTP_response_status_codes">HTTP response status codes</h3>
 

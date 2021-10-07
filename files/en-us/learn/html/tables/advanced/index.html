@@ -23,7 +23,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}</div>
 
-<p class="summary">In the second article in this module, we look at some more advanced features of HTML tables — such as captions/summaries and grouping your rows into table head, body and footer sections — as well as looking at the accessibility of tables for visually impaired users.</p>
+<p>In the second article in this module, we look at some more advanced features of HTML tables — such as captions/summaries and grouping your rows into table head, body and footer sections — as well as looking at the accessibility of tables for visually impaired users.</p>
 
 <table>
  <tbody>
@@ -53,7 +53,7 @@ tags:
 <p>A caption is placed directly beneath the <code>&lt;table&gt;</code> tag.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The {{htmlattrxref("summary","table")}} attribute can also be used on the <code>&lt;table&gt;</code> element to provide a description — this is also read out by screenreaders. We'd recommend using the <code>&lt;caption&gt;</code> element instead, however, as <code>summary</code> is deprecated by the HTML5 spec, and can't be read by sighted users (it doesn't appear on the page.)</p>
+<p><strong>Note:</strong> The {{htmlattrxref("summary","table")}} attribute can also be used on the <code>&lt;table&gt;</code> element to provide a description — this is also read out by screenreaders. We'd recommend using the <code>&lt;caption&gt;</code> element instead, however, as <code>summary</code> is deprecated by the HTML5 spec, and can't be read by sighted users (it doesn't appear on the page.)</p>
 </div>
 
 <h3 id="Active_learning_Adding_a_caption">Active learning: Adding a caption</h3>
@@ -67,7 +67,7 @@ tags:
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: You can find our version on GitHub — see <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html">timetable-caption.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html">see it live also</a>).</p>
+<p><strong>Note:</strong> You can find our version on GitHub — see <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html">timetable-caption.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html">see it live also</a>).</p>
 </div>
 
 <h2 id="Adding_structure_with_&lt;thead&gt;_&lt;tfoot&gt;_and_&lt;tbody&gt;">Adding structure with &lt;thead&gt;, &lt;tfoot&gt;, and &lt;tbody&gt;</h2>
@@ -85,7 +85,7 @@ tags:
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: <code>&lt;tbody&gt;</code> is always included in every table, implicitly if you don't specify it in your code. To check this, open up one of your previous examples that doesn't include <code>&lt;tbody&gt;</code> and look at the HTML code in your <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">browser developer tools</a> — you will see that the browser has added this tag for you. You might wonder why you ought to bother including it at all — you should, because it gives you more control over your table structure and styling.</p>
+<p><strong>Note:</strong> <code>&lt;tbody&gt;</code> is always included in every table, implicitly if you don't specify it in your code. To check this, open up one of your previous examples that doesn't include <code>&lt;tbody&gt;</code> and look at the HTML code in your <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">browser developer tools</a> — you will see that the browser has added this tag for you. You might wonder why you ought to bother including it at all — you should, because it gives you more control over your table structure and styling.</p>
 </div>
 
 <h3 id="Active_learning_Adding_table_structure">Active learning: Adding table structure</h3>
@@ -113,7 +113,7 @@ tfoot {
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: We don't expect you to fully understand the CSS right now. You'll learn more about this when you go through our CSS modules (<a href="/en-US/docs/Learn/CSS/First_steps">Introduction to CSS</a> is a good place to start; we also have an article specifically on <a href="/en-US/docs/Learn/CSS/Building_blocks/Styling_tables">styling tables</a>).</p>
+<p><strong>Note:</strong> We don't expect you to fully understand the CSS right now. You'll learn more about this when you go through our CSS modules (<a href="/en-US/docs/Learn/CSS/First_steps">Introduction to CSS</a> is a good place to start; we also have an article specifically on <a href="/en-US/docs/Learn/CSS/Building_blocks/Styling_tables">styling tables</a>).</p>
 </div>
 
 <p>Your finished table should look something like the following:</p>
@@ -228,7 +228,7 @@ tfoot {
 <p>{{ EmbedLiveSample('Active_learning_Adding_table_structure', '100%', 300, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can also find it on Github as <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html">spending-record-finished.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html">see it live also</a>).</p>
+<p><strong>Note:</strong> You can also find it on Github as <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html">spending-record-finished.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html">see it live also</a>).</p>
 </div>
 
 <h2 id="Nesting_Tables">Nesting Tables</h2>
@@ -347,18 +347,18 @@ tfoot {
 <p>But what if you cannot make those visual associations? How then can you read a table like the above? Visually impaired people often use a screenreader that reads out information on web pages to them. This is no problem when you're reading plain text but interpreting a table can be quite a challenge for a blind person. Nevertheless, with the proper markup we can replace visual associations by programmatic ones.</p>
 
 <div class="note">
-<p><strong>Note</strong>: There are around 253 Million people living with Visual Impairment according to <a href="https://www.who.int/mediacentre/factsheets/fs282/en/" title="Vision Impairment Data">WHO data in 2017</a>.</p>
+<p><strong>Note:</strong> There are around 253 Million people living with Visual Impairment according to <a href="https://www.who.int/mediacentre/factsheets/fs282/en/" title="Vision Impairment Data">WHO data in 2017</a>.</p>
 </div>
 
 <p>This section of the article provides further techniques for making tables as accessible as possible.</p>
 
-<h3 class="attTitle" id="Using_column_and_row_headers">Using column and row headers</h3>
+<h3 id="Using_column_and_row_headers">Using column and row headers</h3>
 
 <p>Screenreaders will identify all headers and use them to make programmatic associations between those headers and the cells they relate to. The combination of column and row headers will identify and interpret the data in each cell so that screenreader users can interpret the table similarly to how a sighted user does.</p>
 
 <p>We already covered headers in our previous article — see <a href="/en-US/docs/Learn/HTML/Tables/Basics#adding_headers_with_%3cth%3e_elements">Adding headers with &lt;th&gt; elements</a>.</p>
 
-<h3 class="attTitle" id="The_scope_attribute">The scope attribute</h3>
+<h3 id="The_scope_attribute">The scope attribute</h3>
 
 <p>A new topic for this article is the {{htmlattrxref("scope","th")}} attribute, which can be added to the <code>&lt;th&gt;</code> element to tell screenreaders exactly what cells the header is a header for — is it a header for the row it is in, or the column, for example? Looking back to our spending record example from earlier on, you could unambiguously define the column headers as column headers like this:</p>
 
@@ -386,7 +386,7 @@ tfoot {
 
 <p><code>scope</code> has two more possible values — <code>colgroup</code> and <code>rowgroup</code>. these are used for headings that sit over the top of multiple columns or rows. If you look back at the "Items Sold August 2016" table at the start of this section of the article, you'll see that the "Clothes" cell sits above the "Trousers", "Skirts", and "Dresses" cells. All of these cells should be marked up as headers (<code>&lt;th&gt;</code>), but "Clothes" is a heading that sits over the top and defines the other three subheadings. "Clothes" therefore should get an attribute of <code>scope="colgroup"</code>, whereas the others would get an attribute of <code>scope="col"</code>.</p>
 
-<h3 class="attTitle" id="The_id_and_headers_attributes">The id and headers attributes</h3>
+<h3 id="The_id_and_headers_attributes">The id and headers attributes</h3>
 
 <p>An alternative to using the <code>scope</code> attribute is to use {{htmlattrxref("id")}} and {{htmlattrxref("headers", "td")}} attributes to create associations between headers and cells. The way they are used is as follows:</p>
 
@@ -422,7 +422,7 @@ tfoot {
 &lt;/tbody&gt;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: This method creates very precise associations between headers and data cells but it uses <strong>a lot</strong> more markup and does not leave any room for errors.  The <code>scope</code> approach is usually enough for most tables.</p>
+<p><strong>Note:</strong> This method creates very precise associations between headers and data cells but it uses <strong>a lot</strong> more markup and does not leave any room for errors.  The <code>scope</code> approach is usually enough for most tables.</p>
 </div>
 
 <h3 id="Active_learning_playing_with_scope_and_headers">Active learning: playing with scope and headers</h3>
@@ -434,7 +434,7 @@ tfoot {
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: You can check your work against our finished examples — see <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html">items-sold-scope.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html">also see this live</a>) and <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html">items-sold-headers.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html">see this live too</a>).</p>
+<p><strong>Note:</strong> You can check your work against our finished examples — see <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html">items-sold-scope.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html">also see this live</a>) and <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html">items-sold-headers.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html">see this live too</a>).</p>
 </div>
 
 <h2 id="Summary">Summary</h2>

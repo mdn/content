@@ -105,11 +105,7 @@ First, we declare the variables `supportedHandlers`, which is compatible with {{
 ```js
 let supportedHandlers = [
   {
-    supportedMethods: "basic-card",
-    data: {
-      supportedNetworks: ["visa", "mastercard", "amex", "discover"],
-      supportedTypes: ["credit", "debit"]
-    }
+    supportedMethods: "https://example.com/pay"
   }
 ];
 
@@ -132,7 +128,7 @@ let defaultPaymentDetails = {
 };
 ```
 
-`supportedHandlers` describes the supported payment handlers and the details for those. In this example, only the Basic Card handler is supported, and it's configured to permit both debit and credit cards from Visa, Master Card, American Express, and Discover.
+`supportedHandlers` describes the supported payment handlers and the details for those. In this example, only the Example Pay payment handler is supported.
 
 `defaultPaymentDetails` describes the payment being requested. A description of the total amount being requested (including a label and the currency used), a list of the line items (in this case only one, "Original donation amount"), and a list of shipping options available; in this case only one.
 

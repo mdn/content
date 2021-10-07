@@ -99,7 +99,9 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Schedules a function to execute every time a given number of milliseconds elapses.
 - {{domxref("setTimeout()")}}
   - : Schedules a function to execute in a given amount of time.
-
+- {{domxref("reportError()")}}
+  - : Reports an error in a script, emulating an unhandled exception.
+  
 ## Example
 
 You won't access `WorkerGlobalScope` directly in your code; however, its properties and methods are inherited by more specific global scopes such as {{domxref("DedicatedWorkerGlobalScope")}} and {{domxref("SharedWorkerGlobalScope")}}. For example, you could import another script into the worker and print out the contents of the worker scope's `navigator` object using the following two lines:

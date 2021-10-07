@@ -187,9 +187,7 @@ dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
 
 ```css
 /* 3-deep (or more) unordered lists use a square */
-:is(ol, ul, menu, dir) :is(ol, ul, menu, dir) ul,
-:is(ol, ul, menu, dir) :is(ol, ul, menu, dir) menu,
-:is(ol, ul, menu, dir) :is(ol, ul, menu, dir) dir {
+:is(ol, ul, menu, dir) :is(ol, ul, menu, dir) :is(ul, menu, dir) {
   list-style-type: square;
 }
 ```

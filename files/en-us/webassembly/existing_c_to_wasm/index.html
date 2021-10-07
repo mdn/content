@@ -30,7 +30,7 @@ int version() {
 
 <p>This is a good simple program to test whether you can get the source code of libwebp to compile, as it doesn't require any parameters or complex data structures to invoke this function.</p>
 
-<p>To compile this program, you need to tell the compiler where it can find libwebp's header files using the -I flag and also pass it all the C files of libwebp that it needs. A useful strategy is just gave it <strong>all</strong> the C files and relied on the compiler to strip out everything that was unnecessary. It seemed to work brilliantly:</p>
+<p>To compile this program, you need to tell the compiler where it can find libwebp's header files using the <code>-I</code> flag and also pass it all the C files of libwebp that it needs. A useful strategy is to just give it <strong>all</strong> the C files and rely on the compiler to strip out everything that is unnecessary. It seems to work brilliantly for this library:</p>
 
 <pre class="brush: bash">$ emcc -O3 -s WASM=1 -s EXTRA_EXPORTED_RUNTIME_METHODS='["cwrap"]' \
     -I libwebp \

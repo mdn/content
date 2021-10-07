@@ -1,0 +1,200 @@
+---
+title: '<section>: The Generic Section element'
+slug: Web/HTML/Element/section
+tags:
+  - Element
+  - HTML
+  - HTML sections
+  - Reference
+  - Section
+  - Web
+browser-compat: html.elements.section
+---
+
+{{HTMLRef}}
+
+The **`<section>`** [HTML](/en-US/docs/Web/HTML) element represents a generic standalone section of a document, which doesn't have a more specific semantic element to represent it. Sections should always have a heading, with very few exceptions.
+
+{{EmbedInteractiveExample("pages/tabbed/section.html", "tabbed-standard")}}
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a
+          href="/en-US/docs/Web/Guide/HTML/Content_categories#sectioning_content"
+          >Sectioning content</a
+        >, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >flow content</a
+        >. Note that a <code>&#x3C;section></code> element must not be a
+        descendant of an {{HTMLElement("address")}} element.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role"
+            >region</a
+          ></code
+        >
+        if the element has an
+        <a
+          href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/"
+          >accessible name</a
+        >, otherwise
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >no corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>
+        {{ARIARole("alert")}}, {{ARIARole("alertdialog")}},
+        {{ARIARole("application")}}, {{ARIARole("banner")}},
+        {{ARIARole("complementary")}},
+        {{ARIARole("contentinfo")}}, {{ARIARole("dialog")}},
+        {{ARIARole("document")}}, {{ARIARole("feed")}},
+        {{ARIARole("log")}}, {{ARIARole("main")}},
+        {{ARIARole("marquee")}}, {{ARIARole("navigation")}},
+        {{ARIARole("none")}}, {{ARIARole("note")}},
+        {{ARIARole("presentation")}}, {{ARIARole("search")}},
+        {{ARIARole("status")}}, {{ARIARole("tabpanel")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
+
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Usage notes
+
+As mentioned above, `<section>` is a generic sectioning element, and should only be used if there isn't a more specific element to represent it. As an example, a navigation menu should be wrapped in a {{htmlelement("nav")}} element, but a list of search results or a map display and its controls don't have specific elements, and could be put inside a `<section>`.
+
+Also consider these cases:
+
+- If the contents of the element represent a standalone, atomic unit of content that makes sense syndicated as a standalone piece (e.g. a blog post or blog comment, or a newspaper article), the {{HTMLElement("article")}} element would be a better choice.
+- If the contents represent useful tangential information that works alongside the main content, but is not directly part of it (like related links, or an author bio), use an {{HTMLElement("aside")}}.
+- If the contents represent the main content area of a document, use {{HTMLElement("main")}}.
+- If you are only using the element as a styling wrapper, use a {{HTMLElement("div")}}. A rule of thumb is that a `<section>` should logically appear in the outline of a document.
+
+To reiterate, each `<section>` should be identified, typically by including a heading ({{HTMLElement('h1')}}-{{HTMLElement('h6')}} element) as a child of the `<section>` element, wherever possible. See below for examples of where you might see a `<section>` without a heading.
+
+## Examples
+
+### Simple usage example
+
+#### Before
+
+```html
+<div>
+  <h2>Heading</h2>
+  <p>Bunch of awesome content</p>
+</div>
+```
+
+#### After
+
+```html
+<section>
+  <h2>Heading</h2>
+  <p>Bunch of awesome content</p>
+</section>
+```
+
+### Using a section without a heading
+
+Circumstances where you might see `<section>` used without a heading are typically found in web application/UI sections rather than in traditional document structures. In a document, it doesn't really make any sense to have a separate section of content without a heading to describe its contents. Such headings are useful for all readers, but particularly useful for users of assistive technologies like screenreaders, and they are also good for SEO.
+
+Consider however a secondary navigation mechanism. If the global navigation is already wrapped in a `<nav>` element, you could conceiveably wrap a previous/next menu in a `<section>`:
+
+```html
+<section>
+  <a href="#">Previous article</a>
+  <a href="#">Next article</a>
+</section>
+```
+
+Or what about some kind of button bar for controlling your app? This might not necessarily want a heading, but it is still a distinct section of the document:
+
+```html
+<section>
+  <button class="reply">Reply</button>
+  <button class="reply-all">Reply to all</button>
+  <button class="fwd">Forward</button>
+  <button class="del">Delete</button>
+</section>
+```
+
+Sections with no headings do not appear in the document outline. If you did want force the inclusion of such an HTML block inside the document outline but not affect the visual output in any way, you could include a heading but hide it:
+
+```html
+<section>
+  <h2 class="hidden">Controls</h2>
+  <button class="reply">Reply</button>
+  <button class="reply-all">Reply to all</button>
+  <button class="fwd">Forward</button>
+  <button class="del">Delete</button>
+</section>
+```
+
+Make sure to use some assistive technology and screenreader-friendly CSS to hide it, like so:
+
+```css
+.hidden {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+```
+
+Depending on the content, including a heading could also be good for SEO, so it is an option to consider.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
+- [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
+- [ARIA: Region role](/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role)
+- [Why You Should Choose HTML5 article Over section](https://www.smashingmagazine.com/2020/01/html5-article-section/), by Bruce Lawson

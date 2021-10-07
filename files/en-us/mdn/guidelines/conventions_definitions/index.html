@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{MDNSidebar}}</div>
 
-<p class="summary">This article defines some conventions and definitions that are commonly used on MDN, which might not be obvious to some people when they come across them in the documentation.</p>
+<p>This article defines some conventions and definitions that are commonly used on MDN, which might not be obvious to some people when they come across them in the documentation.</p>
 
 <h2 id="Definitions">Definitions</h2>
 
@@ -111,7 +111,7 @@ tags:
 <p>Sometimes during the development of a new specification, or over the course of the evolution of living standards such as HTML, new elements, methods, properties, and so forth are added to the specification, stay there for a while, then get removed again. Sometimes this happens very quickly, and sometimes these new items remain in the specification for months or even years before being removed. This can make it tricky to decide how to handle the removal of the item from the spec. Here are some guidelines to help you decide what to do.</p>
 
 <div class="note">
-<p>For the purposes of this discussion, the word "item" is used to mean anything which can be part of a specification: an element or an attribute of an element, an interface or any individual method, property, or other member of an interface, and so forth.</p>
+  <p><strong>Note:</strong> For the purposes of this discussion, the word "item" is used to mean anything which can be part of a specification: an element or an attribute of an element, an interface or any individual method, property, or other member of an interface, and so forth.</p>
 </div>
 
 <ul>
@@ -173,7 +173,9 @@ tags:
    <li>Paste the content from the clipboard.</li>
   </ol>
 
-  <div class="note"><strong>Chrome users:</strong> Chrome does not generally include the classes applied to content when copying and pasting across documents in our editor. You need to review the content after doing this and re-apply the lost styles. Check tables, syntax boxes, syntax highlighting, and hidden sections of content in particular.</div>
+  <div class="note">
+    <p><strong>Note:</strong> Chrome does not generally include the classes applied to content when copying and pasting across documents in our editor. You need to review the content after doing this and re-apply the lost styles. Check tables, syntax boxes, syntax highlighting, and hidden sections of content in particular.</p>
+  </div>
  </li>
  <li>Sometimes you literally want to use the same content on many pages. In this case, you might be best off placing the content in one page, then using the {{TemplateLink("Page")}} macro to transclude the material from one page into another. This way, whenever the text on the source page is updated, the destination page will update as well (that is, this will happen on a forced-refresh or when the target page goes through a scheduled rebuild).</li>
 </ul>
@@ -195,6 +197,6 @@ tags:
 
 <p>Note that sometimes (but rarely) there is a conflict between different spec versions (usually W3C versus WHATWG), e.g. one version might have a feature listed as deprecated, while the other doesn't. In such cases, consider what the reality is — i.e. what browsers are actually doing — and write an "important" note to summarize that latest status. For example, as of Jan 2019 the <code><a href="/en-US/docs/Web/HTML/Global_attributes/inputmode">inputmode</a></code> global attribute has a conflict, which was summarized like so:</p>
 
-<div class="notecard warning">
-<p><strong>Spec conflict</strong>: The <a href="https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode">WHATWG spec lists <code>inputmode</code></a>, and modern browsers are working towards supporting it. The <a href="https://www.w3.org/TR/html52/index.html#contents">W3C HTML 5.2 spec</a> however no longer lists it (i.e. marks it as obsolete). You should consider the WHATWG definition as correct, until a consensus is reached.=</p>
+<div class="warning">
+<p><strong>Warning:</strong> Spec conflict: The <a href="https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode">WHATWG spec lists <code>inputmode</code></a>, and modern browsers are working towards supporting it. The <a href="https://www.w3.org/TR/html52/index.html#contents">W3C HTML 5.2 spec</a> however no longer lists it (i.e. marks it as obsolete). You should consider the WHATWG definition as correct, until a consensus is reached.=</p>
 </div>

@@ -1415,7 +1415,7 @@
 /en-US/docs/DOM/MediaStreamTrack	/en-US/docs/Web/API/MediaStreamTrack
 /en-US/docs/DOM/MouseEvent	/en-US/docs/Web/API/MouseEvent
 /en-US/docs/DOM/MouseScrollEvent	/en-US/docs/Web/API/MouseScrollEvent
-/en-US/docs/DOM/MouseWheelEvent	/en-US/docs/Web/API/MouseWheelEvent
+/en-US/docs/DOM/MouseWheelEvent	/en-US/docs/Web/API/WheelEvent
 /en-US/docs/DOM/Mouse_gesture_events	/en-US/docs/Web/Events/Mouse_gesture_events
 /en-US/docs/DOM/Mozilla_event_reference	/en-US/docs/Web/Events
 /en-US/docs/DOM/Mozilla_event_reference/DOMContentLoaded	/en-US/docs/Web/API/Window/DOMContentLoaded_event
@@ -2128,7 +2128,7 @@
 /en-US/docs/DOM/window.closed	/en-US/docs/Web/API/Window/closed
 /en-US/docs/DOM/window.confirm	/en-US/docs/Web/API/Window/confirm
 /en-US/docs/DOM/window.content	/en-US/docs/Web/API/Window/content
-/en-US/docs/DOM/window.crypto	/en-US/docs/Web/API/Window/crypto
+/en-US/docs/DOM/window.crypto	/en-US/docs/Web/API/crypto_property
 /en-US/docs/DOM/window.crypto.getRandomValues	/en-US/docs/Web/API/Crypto/getRandomValues
 /en-US/docs/DOM/window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
 /en-US/docs/DOM/window.dialogArguments	/en-US/docs/Web/API/Window/dialogArguments
@@ -2145,7 +2145,6 @@
 /en-US/docs/DOM/window.getDefaultComputedStyle	/en-US/docs/Web/API/window/getDefaultComputedStyle
 /en-US/docs/DOM/window.getSelection	/en-US/docs/Web/API/Window/getSelection
 /en-US/docs/DOM/window.history	/en-US/docs/Web/API/Window/history
-/en-US/docs/DOM/window.home	/en-US/docs/Web/API/Window/home
 /en-US/docs/DOM/window.innerHeight	/en-US/docs/Web/API/Window/innerHeight
 /en-US/docs/DOM/window.innerWidth	/en-US/docs/Web/API/Window/innerWidth
 /en-US/docs/DOM/window.length	/en-US/docs/Web/API/Window/length
@@ -2153,10 +2152,10 @@
 /en-US/docs/DOM/window.locationbar	/en-US/docs/Web/API/Window/locationbar
 /en-US/docs/DOM/window.matchMedia	/en-US/docs/Web/API/Window/matchMedia
 /en-US/docs/DOM/window.menubar	/en-US/docs/Web/API/Window/menubar
-/en-US/docs/DOM/window.minimize	/en-US/docs/Web/API/Window/minimize
+/en-US/docs/DOM/window.minimize	/en-US/docs/Web/API/Window
 /en-US/docs/DOM/window.moveBy	/en-US/docs/Web/API/Window/moveBy
 /en-US/docs/DOM/window.moveTo	/en-US/docs/Web/API/Window/moveTo
-/en-US/docs/DOM/window.mozAnimationStartTime	/en-US/docs/Web/API/Window/mozAnimationStartTime
+/en-US/docs/DOM/window.mozAnimationStartTime	/en-US/docs/Web/API/Animation/startTime
 /en-US/docs/DOM/window.mozInnerScreenX	/en-US/docs/Web/API/Window/mozInnerScreenX
 /en-US/docs/DOM/window.mozInnerScreenY	/en-US/docs/Web/API/Window/mozInnerScreenY
 /en-US/docs/DOM/window.mozPaintCount	/en-US/docs/Web/API/Window/mozPaintCount
@@ -2234,10 +2233,9 @@
 /en-US/docs/DOM/window.outerHeight	/en-US/docs/Web/API/Window/outerHeight
 /en-US/docs/DOM/window.outerWidth	/en-US/docs/Web/API/Window/outerWidth
 /en-US/docs/DOM/window.parent	/en-US/docs/Web/API/Window/parent
-/en-US/docs/DOM/window.performance	/en-US/docs/Web/API/Window/performance
+/en-US/docs/DOM/window.performance	/en-US/docs/Web/API/performance_property
 /en-US/docs/DOM/window.performance.now	/en-US/docs/Web/API/Performance/now
 /en-US/docs/DOM/window.personalbar	/en-US/docs/Web/API/Window/personalbar
-/en-US/docs/DOM/window.pkcs11	/en-US/docs/Web/API/Window/pkcs11
 /en-US/docs/DOM/window.postMessage	/en-US/docs/Web/API/Window/postMessage
 /en-US/docs/DOM/window.print	/en-US/docs/Web/API/Window/print
 /en-US/docs/DOM/window.prompt	/en-US/docs/Web/API/Window/prompt
@@ -2595,7 +2593,7 @@
 /en-US/docs/DOM:window.closed	/en-US/docs/Web/API/Window/closed
 /en-US/docs/DOM:window.confirm	/en-US/docs/Web/API/Window/confirm
 /en-US/docs/DOM:window.content	/en-US/docs/Web/API/Window/content
-/en-US/docs/DOM:window.crypto	/en-US/docs/Web/API/Window/crypto
+/en-US/docs/DOM:window.crypto	/en-US/docs/Web/API/crypto_property
 /en-US/docs/DOM:window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
 /en-US/docs/DOM:window.document	/en-US/docs/Web/API/Window/document
 /en-US/docs/DOM:window.dump	/en-US/docs/Web/API/Window/dump
@@ -2609,7 +2607,6 @@
 /en-US/docs/DOM:window.getComputedStyle	/en-US/docs/Web/API/Window/getComputedStyle
 /en-US/docs/DOM:window.getSelection	/en-US/docs/Web/API/Window/getSelection
 /en-US/docs/DOM:window.history	/en-US/docs/Web/API/Window/history
-/en-US/docs/DOM:window.home	/en-US/docs/Web/API/Window/home
 /en-US/docs/DOM:window.innerHeight	/en-US/docs/Web/API/Window/innerHeight
 /en-US/docs/DOM:window.innerWidth	/en-US/docs/Web/API/Window/innerWidth
 /en-US/docs/DOM:window.length	/en-US/docs/Web/API/Window/length
@@ -2671,7 +2668,6 @@
 /en-US/docs/DOM:window.outerWidth	/en-US/docs/Web/API/Window/outerWidth
 /en-US/docs/DOM:window.parent	/en-US/docs/Web/API/Window/parent
 /en-US/docs/DOM:window.personalbar	/en-US/docs/Web/API/Window/personalbar
-/en-US/docs/DOM:window.pkcs11	/en-US/docs/Web/API/Window/pkcs11
 /en-US/docs/DOM:window.postMessage	/en-US/docs/Web/API/Window/postMessage
 /en-US/docs/DOM:window.print	/en-US/docs/Web/API/Window/print
 /en-US/docs/DOM:window.prompt	/en-US/docs/Web/API/Window/prompt
@@ -3318,7 +3314,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.closed	/en-US/docs/Web/API/Window/closed
 /en-US/docs/Document_Object_Model_(DOM)/window.confirm	/en-US/docs/Web/API/Window/confirm
 /en-US/docs/Document_Object_Model_(DOM)/window.content	/en-US/docs/Web/API/Window/content
-/en-US/docs/Document_Object_Model_(DOM)/window.crypto	/en-US/docs/Web/API/Window/crypto
+/en-US/docs/Document_Object_Model_(DOM)/window.crypto	/en-US/docs/Web/API/crypto_property
 /en-US/docs/Document_Object_Model_(DOM)/window.crypto.getRandomValues	/en-US/docs/Web/API/Crypto/getRandomValues
 /en-US/docs/Document_Object_Model_(DOM)/window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
 /en-US/docs/Document_Object_Model_(DOM)/window.dialogArguments	/en-US/docs/Web/API/Window/dialogArguments
@@ -3338,10 +3334,10 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.locationbar	/en-US/docs/Web/API/Window/locationbar
 /en-US/docs/Document_Object_Model_(DOM)/window.matchMedia	/en-US/docs/Web/API/Window/matchMedia
 /en-US/docs/Document_Object_Model_(DOM)/window.menubar	/en-US/docs/Web/API/Window/menubar
-/en-US/docs/Document_Object_Model_(DOM)/window.minimize	/en-US/docs/Web/API/Window/minimize
+/en-US/docs/Document_Object_Model_(DOM)/window.minimize	/en-US/docs/Web/API/Window
 /en-US/docs/Document_Object_Model_(DOM)/window.moveBy	/en-US/docs/Web/API/Window/moveBy
 /en-US/docs/Document_Object_Model_(DOM)/window.moveTo	/en-US/docs/Web/API/Window/moveTo
-/en-US/docs/Document_Object_Model_(DOM)/window.mozAnimationStartTime	/en-US/docs/Web/API/Window/mozAnimationStartTime
+/en-US/docs/Document_Object_Model_(DOM)/window.mozAnimationStartTime	/en-US/docs/Web/API/Animation/startTime
 /en-US/docs/Document_Object_Model_(DOM)/window.mozInnerScreenX	/en-US/docs/Web/API/Window/mozInnerScreenX
 /en-US/docs/Document_Object_Model_(DOM)/window.mozInnerScreenY	/en-US/docs/Web/API/Window/mozInnerScreenY
 /en-US/docs/Document_Object_Model_(DOM)/window.mozPaintCount	/en-US/docs/Web/API/Window/mozPaintCount
@@ -3401,7 +3397,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.outerWidth	/en-US/docs/Web/API/Window/outerWidth
 /en-US/docs/Document_Object_Model_(DOM)/window.parent	/en-US/docs/Web/API/Window/parent
 /en-US/docs/Document_Object_Model_(DOM)/window.personalbar	/en-US/docs/Web/API/Window/personalbar
-/en-US/docs/Document_Object_Model_(DOM)/window.pkcs11	/en-US/docs/Web/API/Window/pkcs11
 /en-US/docs/Document_Object_Model_(DOM)/window.postMessage	/en-US/docs/Web/API/Window/postMessage
 /en-US/docs/Document_Object_Model_(DOM)/window.prompt	/en-US/docs/Web/API/Window/prompt
 /en-US/docs/Document_Object_Model_(DOM)/window.releaseEvents	/en-US/docs/Web/API/Window/releaseEvents
@@ -5723,6 +5718,7 @@
 /en-US/docs/Mozilla/MathML_Project/Fonts	/en-US/docs/Web/MathML/Fonts
 /en-US/docs/Mozilla/Performance/Scroll-linked_effects	https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html
 /en-US/docs/Mozilla/QA/Bug_writing_guidelines	https://bugzilla.mozilla.org/page.cgi?id=bug-writing.html
+/en-US/docs/Mozilla/Tech/Xray_vision	https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html
 /en-US/docs/Mozilla/Virtualenv	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/virtualenv
 /en-US/docs/Mozilla_CSS_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/Mozilla_MathML_Project/Authoring	/en-US/docs/Web/MathML/Authoring
@@ -6226,7 +6222,6 @@
 /en-US/docs/SVG/filter	/en-US/docs/Web/CSS/filter
 /en-US/docs/SVG/g	/en-US/docs/Web/SVG/Element/g
 /en-US/docs/SVG/line	/en-US/docs/Web/SVG/Element/line
-/en-US/docs/SVG/mimeTypes.rdf_corruption	/en-US/docs/Web/SVG/mimeTypes.rdf_corruption
 /en-US/docs/SVG/polyline	/en-US/docs/Web/SVG/Element/polyline
 /en-US/docs/SVG/rect	/en-US/docs/Web/SVG/Element/rect
 /en-US/docs/SVG/use	/en-US/docs/Web/SVG/Element/use
@@ -6246,7 +6241,6 @@
 /en-US/docs/SVG:ellipse	/en-US/docs/Web/SVG/Element/ellipse
 /en-US/docs/SVG:g	/en-US/docs/Web/SVG/Element/g
 /en-US/docs/SVG:line	/en-US/docs/Web/SVG/Element/line
-/en-US/docs/SVG:mimeTypes.rdf_corruption	/en-US/docs/Web/SVG/mimeTypes.rdf_corruption
 /en-US/docs/SVG:polyline	/en-US/docs/Web/SVG/Element/polyline
 /en-US/docs/SVG:rect	/en-US/docs/Web/SVG/Element/rect
 /en-US/docs/SVG:use	/en-US/docs/Web/SVG/Element/use
@@ -7407,6 +7401,7 @@
 /en-US/docs/Web/API/File.type	/en-US/docs/Web/API/Blob/type
 /en-US/docs/Web/API/File/fileName	/en-US/docs/Web/API/File/name
 /en-US/docs/Web/API/File/fileSize	/en-US/docs/Web/API/Blob/size
+/en-US/docs/Web/API/File/size	/en-US/docs/Web/API/Blob/size
 /en-US/docs/Web/API/FileEntry	/en-US/docs/Web/API/FileSystemFileEntry
 /en-US/docs/Web/API/FileHandle	/en-US/docs/Web/API/IDBMutableFile
 /en-US/docs/Web/API/FileHandle.getFile	/en-US/docs/Web/API/IDBMutableFile/getFile
@@ -7989,6 +7984,7 @@
 /en-US/docs/Web/API/MouseEvent/MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN	/en-US/docs/Web/API/MouseEvent/WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN
 /en-US/docs/Web/API/MouseEvent/MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN	/en-US/docs/Web/API/MouseEvent/WEBKIT_FORCE_AT_MOUSE_DOWN
 /en-US/docs/Web/API/MouseEvent/which	/en-US/docs/Web/API/UIEvent/which
+/en-US/docs/Web/API/MouseWheelEvent	/en-US/docs/Web/API/WheelEvent
 /en-US/docs/Web/API/MsAudioCategory	/en-US/docs/Web/API/HTMLAudioElement/msAudioCategory
 /en-US/docs/Web/API/MsAudioDeviceType	/en-US/docs/Web/API/HTMLAudioElement/msAudioDeviceType
 /en-US/docs/Web/API/MsClearEffects	/en-US/docs/Web/API/HTMLMediaElement/msClearEffects
@@ -8457,6 +8453,10 @@
 /en-US/docs/Web/API/ScriptProcessorNode.bufferSize	/en-US/docs/Web/API/ScriptProcessorNode/bufferSize
 /en-US/docs/Web/API/ScriptProcessorNode.onaudioprocess	/en-US/docs/Web/API/ScriptProcessorNode/onaudioprocess
 /en-US/docs/Web/API/ScriptProcessorNode/audioprocess	/en-US/docs/Web/API/ScriptProcessorNode/audioprocess_event
+/en-US/docs/Web/API/ScrollToOptions	/en-US/docs/Web/API/Window/scroll
+/en-US/docs/Web/API/ScrollToOptions/behavior	/en-US/docs/Web/API/Window/scroll
+/en-US/docs/Web/API/ScrollToOptions/left	/en-US/docs/Web/API/Window/scroll
+/en-US/docs/Web/API/ScrollToOptions/top	/en-US/docs/Web/API/Window/scroll
 /en-US/docs/Web/API/Selection.addRange	/en-US/docs/Web/API/Selection/addRange
 /en-US/docs/Web/API/Selection.anchorNode	/en-US/docs/Web/API/Selection/anchorNode
 /en-US/docs/Web/API/Selection.anchorOffset	/en-US/docs/Web/API/Selection/anchorOffset
@@ -8850,8 +8850,11 @@
 /en-US/docs/Web/API/Window/clearTimeout	/en-US/docs/Web/API/clearTimeout
 /en-US/docs/Web/API/Window/convertPointFromNodeToPage	/en-US/docs/Web/API/Window/webkitConvertPointFromNodeToPage
 /en-US/docs/Web/API/Window/convertPointFromPageToNode	/en-US/docs/Web/API/Window/webkitConvertPointFromPageToNode
+/en-US/docs/Web/API/Window/crypto	/en-US/docs/Web/API/crypto_property
 /en-US/docs/Web/API/Window/fetch	/en-US/docs/Web/API/fetch
 /en-US/docs/Web/API/Window/indexedDB	/en-US/docs/Web/API/indexedDB
+/en-US/docs/Web/API/Window/minimize	/en-US/docs/Web/API/Window
+/en-US/docs/Web/API/Window/mozAnimationStartTime	/en-US/docs/Web/API/Animation/startTime
 /en-US/docs/Web/API/Window/mozRequestAnimationFrame	/en-US/docs/Web/API/window/requestAnimationFrame
 /en-US/docs/Web/API/Window/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
 /en-US/docs/Web/API/Window/onafterprint	/en-US/docs/Web/API/WindowEventHandlers/onafterprint
@@ -8889,6 +8892,7 @@
 /en-US/docs/Web/API/Window/onuserproximity	/en-US/docs/Web/API/UserProximityEvent
 /en-US/docs/Web/API/Window/onvrdisplayconnected	/en-US/docs/Web/API/Window/onvrdisplayconnect
 /en-US/docs/Web/API/Window/onvrdisplaydisconnected	/en-US/docs/Web/API/Window/onvrdisplaydisconnect
+/en-US/docs/Web/API/Window/performance	/en-US/docs/Web/API/performance_property
 /en-US/docs/Web/API/Window/removeEventListener	/en-US/docs/Web/API/EventTarget/removeEventListener
 /en-US/docs/Web/API/Window/resolveLocalFileSystemURL	/en-US/docs/Web/API/LocalFileSystem#resolvelocalfilesystemurl()
 /en-US/docs/Web/API/Window/restore	/en-US/docs/Web/API/Window/moveTo
@@ -8957,7 +8961,7 @@
 /en-US/docs/Web/API/WorkerGlobalScope.onlanguagechange	/en-US/docs/Web/API/WorkerGlobalScope/onlanguagechange
 /en-US/docs/Web/API/WorkerGlobalScope.onoffline	/en-US/docs/Web/API/WorkerGlobalScope/onoffline
 /en-US/docs/Web/API/WorkerGlobalScope.ononline	/en-US/docs/Web/API/WorkerGlobalScope/ononline
-/en-US/docs/Web/API/WorkerGlobalScope.performance	/en-US/docs/Web/API/WorkerGlobalScope/performance
+/en-US/docs/Web/API/WorkerGlobalScope.performance	/en-US/docs/Web/API/performance_property
 /en-US/docs/Web/API/WorkerGlobalScope.self	/en-US/docs/Web/API/WorkerGlobalScope/self
 /en-US/docs/Web/API/WorkerGlobalScope/WorkerGlobalScope.caches	/en-US/docs/Web/API/caches
 /en-US/docs/Web/API/WorkerGlobalScope/atob	/en-US/docs/Web/API/atob
@@ -8969,6 +8973,7 @@
 /en-US/docs/Web/API/WorkerGlobalScope/fetch	/en-US/docs/Web/API/fetch
 /en-US/docs/Web/API/WorkerGlobalScope/indexedDB	/en-US/docs/Web/API/indexedDB
 /en-US/docs/Web/API/WorkerGlobalScope/onclose	/en-US/docs/Web/API/DedicatedWorkerGlobalScope/close
+/en-US/docs/Web/API/WorkerGlobalScope/performance	/en-US/docs/Web/API/performance_property
 /en-US/docs/Web/API/WorkerGlobalScope/requestFileSystemSync	/en-US/docs/Web/API/LocalFileSystemSync/requestFileSystemSync
 /en-US/docs/Web/API/WorkerGlobalScope/setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Web/API/WorkerGlobalScope/setTimeout	/en-US/docs/Web/API/setTimeout
@@ -9378,7 +9383,7 @@
 /en-US/docs/Web/API/window.closed	/en-US/docs/Web/API/Window/closed
 /en-US/docs/Web/API/window.confirm	/en-US/docs/Web/API/Window/confirm
 /en-US/docs/Web/API/window.content	/en-US/docs/Web/API/Window/content
-/en-US/docs/Web/API/window.crypto	/en-US/docs/Web/API/Window/crypto
+/en-US/docs/Web/API/window.crypto	/en-US/docs/Web/API/crypto_property
 /en-US/docs/Web/API/window.crypto.getRandomValues	/en-US/docs/Web/API/Crypto/getRandomValues
 /en-US/docs/Web/API/window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
 /en-US/docs/Web/API/window.dialogArguments	/en-US/docs/Web/API/Window/dialogArguments
@@ -9395,7 +9400,6 @@
 /en-US/docs/Web/API/window.getDefaultComputedStyle	/en-US/docs/Web/API/window/getDefaultComputedStyle
 /en-US/docs/Web/API/window.getSelection	/en-US/docs/Web/API/Window/getSelection
 /en-US/docs/Web/API/window.history	/en-US/docs/Web/API/Window/history
-/en-US/docs/Web/API/window.home	/en-US/docs/Web/API/Window/home
 /en-US/docs/Web/API/window.innerHeight	/en-US/docs/Web/API/Window/innerHeight
 /en-US/docs/Web/API/window.innerWidth	/en-US/docs/Web/API/Window/innerWidth
 /en-US/docs/Web/API/window.length	/en-US/docs/Web/API/Window/length
@@ -9403,10 +9407,10 @@
 /en-US/docs/Web/API/window.locationbar	/en-US/docs/Web/API/Window/locationbar
 /en-US/docs/Web/API/window.matchMedia	/en-US/docs/Web/API/Window/matchMedia
 /en-US/docs/Web/API/window.menubar	/en-US/docs/Web/API/Window/menubar
-/en-US/docs/Web/API/window.minimize	/en-US/docs/Web/API/Window/minimize
+/en-US/docs/Web/API/window.minimize	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/window.moveBy	/en-US/docs/Web/API/Window/moveBy
 /en-US/docs/Web/API/window.moveTo	/en-US/docs/Web/API/Window/moveTo
-/en-US/docs/Web/API/window.mozAnimationStartTime	/en-US/docs/Web/API/Window/mozAnimationStartTime
+/en-US/docs/Web/API/window.mozAnimationStartTime	/en-US/docs/Web/API/Animation/startTime
 /en-US/docs/Web/API/window.mozInnerScreenX	/en-US/docs/Web/API/Window/mozInnerScreenX
 /en-US/docs/Web/API/window.mozInnerScreenY	/en-US/docs/Web/API/Window/mozInnerScreenY
 /en-US/docs/Web/API/window.mozPaintCount	/en-US/docs/Web/API/Window/mozPaintCount
@@ -9483,10 +9487,9 @@
 /en-US/docs/Web/API/window.outerHeight	/en-US/docs/Web/API/Window/outerHeight
 /en-US/docs/Web/API/window.outerWidth	/en-US/docs/Web/API/Window/outerWidth
 /en-US/docs/Web/API/window.parent	/en-US/docs/Web/API/Window/parent
-/en-US/docs/Web/API/window.performance	/en-US/docs/Web/API/Window/performance
+/en-US/docs/Web/API/window.performance	/en-US/docs/Web/API/performance_property
 /en-US/docs/Web/API/window.performance.now	/en-US/docs/Web/API/Performance/now
 /en-US/docs/Web/API/window.personalbar	/en-US/docs/Web/API/Window/personalbar
-/en-US/docs/Web/API/window.pkcs11	/en-US/docs/Web/API/Window/pkcs11
 /en-US/docs/Web/API/window.postMessage	/en-US/docs/Web/API/Window/postMessage
 /en-US/docs/Web/API/window.print	/en-US/docs/Web/API/Window/print
 /en-US/docs/Web/API/window.prompt	/en-US/docs/Web/API/Window/prompt
@@ -11240,6 +11243,7 @@
 /en-US/docs/Web/Web_APIs	/en-US/docs/Web/API
 /en-US/docs/Web/Web_Components/Custom_Elements	/en-US/docs/Web/Web_Components/Using_custom_elements
 /en-US/docs/Web/Web_Components/Custom_Elements/Custom_Elements_with_Classes	/en-US/docs/Web/Web_Components/Using_custom_elements
+/en-US/docs/Web/Web_Components/HTML_Imports	/en-US/docs/Web/Web_Components
 /en-US/docs/Web/Web_Components/Shadow_DOM	/en-US/docs/Web/Web_Components/Using_shadow_DOM
 /en-US/docs/Web/XSLT/EXSLT	/en-US/docs/Web/EXSLT
 /en-US/docs/Web/XSLT/Elements	/en-US/docs/Web/XSLT/Element
@@ -11624,6 +11628,7 @@
 /en-US/docs/XSL_Transformations_in_Mozilla_FAQ	/en-US/docs/Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ
 /en-US/docs/XSL_Transformations_in_Mozilla_FAQ_(external)	/en-US/docs/Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ
 /en-US/docs/XSL_Transforms	/en-US/docs/Web/API/XSLTProcessor
+/en-US/docs/Xray_vision	https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html
 /en-US/docs/acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset
 /en-US/docs/adData	/en-US/docs/Web/API/Web_Bluetooth_API
 /en-US/docs/addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener
@@ -11873,7 +11878,7 @@
 /en-US/docs/window.close	/en-US/docs/Web/API/Window/close
 /en-US/docs/window.closed	/en-US/docs/Web/API/Window/closed
 /en-US/docs/window.confirm	/en-US/docs/Web/API/Window/confirm
-/en-US/docs/window.crypto	/en-US/docs/Web/API/Window/crypto
+/en-US/docs/window.crypto	/en-US/docs/Web/API/crypto_property
 /en-US/docs/window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
 /en-US/docs/window.document	/en-US/docs/Web/API/Window/document
 /en-US/docs/window.dump	/en-US/docs/Web/API/Window/dump
@@ -11898,7 +11903,6 @@
 /en-US/docs/window.outerWidth	/en-US/docs/Web/API/Window/outerWidth
 /en-US/docs/window.parent	/en-US/docs/Web/API/Window/parent
 /en-US/docs/window.personalbar	/en-US/docs/Web/API/Window/personalbar
-/en-US/docs/window.pkcs11	/en-US/docs/Web/API/Window/pkcs11
 /en-US/docs/window.prompt	/en-US/docs/Web/API/Window/prompt
 /en-US/docs/window.releaseEvents	/en-US/docs/Web/API/Window/releaseEvents
 /en-US/docs/window.resizeBy	/en-US/docs/Web/API/Window/resizeBy

@@ -15,7 +15,7 @@ The **`Forwarded`** header contains information from the [reverse proxy servers]
 
 The alternative and de-facto standard versions of this header are the {{HTTPHeader("X-Forwarded-For")}}, {{HTTPHeader("X-Forwarded-Host")}} and {{HTTPHeader("X-Forwarded-Proto")}} headers.
 
-This header is used for debugging, statistics, and generating location-dependent content and by design it exposes privacy sensitive information, such as the IP address of the client. Therefore the user's privacy must be kept in mind when deploying this header.
+This header is used for debugging, statistics, and generating location-dependent content, and by design, it exposes privacy sensitive information, such as the IP address of the client. Therefore, the user's privacy must be kept in mind when deploying this header.
 
 <table class="properties">
   <tbody>
@@ -74,7 +74,7 @@ Forwarded: for=192.0.2.43, for=198.51.100.17
 
 ### Transitioning from `X-Forwarded-For` to `Forwarded`
 
-If your application, server, or proxy supports the standardized `Forwarded` header, the {{HTTPHeader("X-Forwarded-For")}} header can be replaced. Note that IPv6 address are quoted and enclosed in square brackets in `Forwarded`.
+If your application, server, or proxy supports the standardized `Forwarded` header, the {{HTTPHeader("X-Forwarded-For")}} header can be replaced. Note that IPv6 address is quoted and enclosed in square brackets in `Forwarded`.
 
 ```
 X-Forwarded-For: 123.34.567.89

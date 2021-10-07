@@ -15,7 +15,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}</div>
 
-<p class="summary">In the <a href="/en-US/docs/Learn/Forms/Basic_native_form_controls">previous article</a> we looked at the {{htmlelement("input")}} element, covering the original values of the <code>type</code> attribute available since the early days of HTML. Now we'll look at the functionality of newer form controls in detail, including some new input types, which were added in HTML5 to allow collection of specific types of data.</p>
+<p>In the <a href="/en-US/docs/Learn/Forms/Basic_native_form_controls">previous article</a> we looked at the {{htmlelement("input")}} element, covering the original values of the <code>type</code> attribute available since the early days of HTML. Now we'll look at the functionality of newer form controls in detail, including some new input types, which were added in HTML5 to allow collection of specific types of data.</p>
 
 <table>
  <tbody>
@@ -31,7 +31,7 @@ tags:
 </table>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Most of the features discussed in this article have wide support across browsers. We'll note any exceptions. If you want more detail on browser support, you should consult our <a href="/en-US/docs/Web/HTML/Element#forms">HTML forms element reference</a>, and in particular our extensive <a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt; types</a> reference.</p>
+<p><strong>Note:</strong> Most of the features discussed in this article have wide support across browsers. We'll note any exceptions. If you want more detail on browser support, you should consult our <a href="/en-US/docs/Web/HTML/Element#forms">HTML forms element reference</a>, and in particular our extensive <a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt; types</a> reference.</p>
 </div>
 
 <p>Because HTML form control appearance may be quite different from a designer's specifications, web developers sometimes build their own custom form controls. We cover this in an advanced tutorial: <a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form widgets</a>.</p>
@@ -55,7 +55,7 @@ tags:
 <p><img alt="firefox for android email keyboard, with ampersand displayed by default." src="fx-android-email-type-keyboard.jpg"></p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You can find examples of the basic text input types at <a href="https://mdn.github.io/learning-area/html/forms/basic-input-examples/">basic input examples</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/basic-input-examples/index.html">source code</a> also).</p>
+<p><strong>Note:</strong> You can find examples of the basic text input types at <a href="https://mdn.github.io/learning-area/html/forms/basic-input-examples/">basic input examples</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/basic-input-examples/index.html">source code</a> also).</p>
 </div>
 
 <p>This is another good reason for using these newer input types, improving the user experience for users of these devices.</p>
@@ -69,7 +69,7 @@ tags:
 <p>Note that <code>a@b</code> is a valid email address according to the default provided constraints. This is because the <code>email</code> input type allows intranet email addresses by default. To implement different validation behavior, you can use the <code><a href="/en-US/docs/Web/HTML/Attributes/pattern">pattern</a></code> attribute, and you can also customize the error messages; we'll talk how to use these features in the <a href="/en-US/docs/Learn/Forms/Form_validation">Client-side form validation</a> article later on.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If the data entered is not an email address, the {{cssxref(':invalid')}} pseudo-class will match, and the {{domxref('validityState.typeMismatch')}} property will return <code>true</code>.</p>
+<p><strong>Note:</strong> If the data entered is not an email address, the {{cssxref(':invalid')}} pseudo-class will match, and the {{domxref('validityState.typeMismatch')}} property will return <code>true</code>.</p>
 </div>
 
 <h2 id="Search_field">Search field</h2>
@@ -114,7 +114,8 @@ tags:
 
 <p><img alt="firefox for android email keyboard, with ampersand displayed by default." src="fx-android-url-type-keyboard.jpg"></p>
 
-<div class="note"><strong>Note:</strong> Just because the URL is well-formed doesn't necessarily mean that it refers to a location that actually exists!</div>
+<div class="note">
+<p><strong>Note:</strong> Just because the URL is well-formed doesn't necessarily mean that it refers to a location that actually exists!</p></div>
 
 <h2 id="Numeric_field">Numeric field</h2>
 
@@ -174,8 +175,7 @@ price.addEventListener('input', function() {
 <p>Here we store references to the <code>range</code> input and the <code>output</code> in two variables. Then we immediately set the <code>output</code>'s <code><a href="/en-US/docs/Web/API/Node/textContent">textContent</a></code> to the current <code>value</code> of the input. Finally, an event listener is set to ensure that whenever the range slider is moved, the <code>output</code>'s <code>textContent</code> is updated to the new value.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>There is a nice tutorial covering this subject on CSS Tricks: <a href="https://css-tricks.com/the-output-element/">The Output Element</a>.</p>
+  <p><strong>Note:</strong> There is a nice tutorial covering this subject on CSS Tricks: <a href="https://css-tricks.com/the-output-element/">The Output Element</a>.</p>
 </div>
 
 <h2 id="Date_and_time_pickers">Date and time pickers</h2>

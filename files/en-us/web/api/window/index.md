@@ -59,7 +59,7 @@ Note that properties which are objects (e.g.,. for overriding the prototype of b
   - : Returns a reference to the console object which provides access to the browser's debugging console.
 - {{domxref("Window.customElements")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("CustomElementRegistry")}} object, which can be used to register new [custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements) and get information about previously registered custom elements.
-- {{domxref("Window.crypto")}} {{readOnlyInline}}
+- {{domxref("crypto_property", "Window.crypto")}} {{readOnlyInline}}
   - : Returns the browser crypto object.
 - {{domxref("Window.devicePixelRatio")}} {{ReadOnlyInline}}
   - : Returns the ratio between physical pixels and device independent pixels in the current display.
@@ -189,14 +189,10 @@ Note that properties which are objects (e.g.,. for overriding the prototype of b
   - : Gets/sets the status bar text for the given window.
 - {{domxref("Window.dialogArguments")}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : Gets the arguments passed to the window (if it's a dialog box) at the time {{domxref("window.showModalDialog()")}} was called. This is an {{Interface("nsIArray")}}.
-- {{domxref("Window.mozAnimationStartTime")}} {{Non-standard_inline}} {{deprecated_inline}}
-  - : The time in milliseconds since epoch at which the current animation cycle began. Use {{domxref("Animation.startTime")}} instead.
 - {{domxref("Window.mozPaintCount")}} {{non-standard_inline}} {{deprecated_inline}}
   - : Returns the number of times the current document has been rendered to the screen in this window. This can be used to compute rendering performance.
 - {{domxref("Window.orientation")}} {{readOnlyInline}} {{deprecated_inline}}
   - : Returns the orientation in degrees (in 90 degree increments) of the viewport relative to the device's natural orientation.
-- {{domxref("Window.pkcs11")}} {{deprecated_inline}}
-  - : Formerly provided access to install and remove PKCS11 modules.
 - {{domxref("Window.returnValue")}} {{deprecated_inline}}
   - : The return value to be returned to the function that called {{domxref("window.showModalDialog()")}} to display the window as a modal dialog.
 
@@ -232,10 +228,6 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Returns the selection object representing the selected item(s).
 - {{domxref("Window.matchMedia()")}}
   - : Returns a {{domxref("MediaQueryList")}} object representing the specified media query string.
-- {{domxref("Window.maximize()")}}
-  - : {{todo("NeedsContents")}}
-- {{domxref("Window.minimize()")}} (top-level XUL windows only)
-  - : Minimizes the window.
 - {{domxref("Window.moveBy()")}}
   - : Moves the current window by a specified amount.
 - {{domxref("Window.moveTo()")}}
@@ -307,6 +299,9 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Schedules a function to execute every time a given number of milliseconds elapses.
 - {{domxref("setTimeout()")}}
   - : Schedules a function to execute in a given amount of time.
+- {{domxref("reportError()")}}
+  - : Reports an error in a script, emulating an unhandled exception.
+
 
 ### Deprecated methods
 

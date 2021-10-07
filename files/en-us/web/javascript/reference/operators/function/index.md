@@ -162,8 +162,8 @@ An anonymous function is created and called:
 
 ## See also
 
-- {{jsxref("Arrow_functions", "Arrow functions", "", 1)}}
-- {{jsxref("Functions_and_function_scope", "Functions and function scope", "", 1)}}
+- {{jsxref("Functions/Arrow_functions", "Arrow functions", "", 1)}}
+- {{jsxref("Functions", "Functions", "", 1)}}
 - {{jsxref("Function")}}
 - {{jsxref("Statements/function", "function")}} statement
 - {{jsxref("Statements/function*", "function*")}} statement

@@ -16,7 +16,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
-<p class="summary">As we near the end of our React journey (for now at least), we'll add the finishing touches to the main areas of functionality in our Todo list app. This includes allowing you to edit existing tasks, and filtering the list of tasks between all, completed, and incomplete tasks. We'll look at conditional UI rendering along the way.</p>
+<p>As we near the end of our React journey (for now at least), we'll add the finishing touches to the main areas of functionality in our Todo list app. This includes allowing you to edit existing tasks, and filtering the list of tasks between all, completed, and incomplete tasks. We'll look at conditional UI rendering along the way.</p>
 
 <table>
  <tbody>
@@ -33,7 +33,7 @@ tags:
  </tbody>
 </table>
 
-<h2 id="Editing_the_name_of_a_task"><span class="author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovvlb5z71z71z86zgz69zz79z4z67z49z87zz71ziz80zz77z8z67zz83ztz83zz79zz84zz73zbi2">Editing the name of a task</span></h2>
+<h2 id="Editing_the_name_of_a_task">Editing the name of a task</h2>
 
 <p>We don’t have a user interface for editing the name of a task yet. We'll get to that in a moment. To start with, we can at least implement an <code>editTask()</code> function in <code>App.js</code>. It’ll be similar to <code>deleteTask()</code> because it'll take an <code>id</code> to find its target object, but it'll also take a <code>newName</code> property containing the name to update the task to. We'll use <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">Array.prototype.map()</a></code> instead of <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">Array.prototype.filter()</a></code> because we want to return a new array with some changes, instead of deleting something from the array.</p>
 
@@ -265,7 +265,7 @@ const viewTemplate = (
 <pre class="brush: js">const FILTER_NAMES = Object.keys(FILTER_MAP);</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: We are defining these constants outside our <code>App()</code> function because if they were defined inside it, they would be recalculated every time the <code>&lt;App /&gt;</code> component re-renders, and we don’t want that. This information will never change no matter what our application does.</p>
+<p><strong>Note:</strong> We are defining these constants outside our <code>App()</code> function because if they were defined inside it, they would be recalculated every time the <code>&lt;App /&gt;</code> component re-renders, and we don’t want that. This information will never change no matter what our application does.</p>
 </div>
 
 <h3 id="Rendering_the_filters">Rendering the filters</h3>
@@ -369,7 +369,7 @@ const viewTemplate = (
 
 <h2 id="Summary">Summary</h2>
 
-<p>So that's it — our app is now functionally complete. <span class="author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovvlb5z71z71z86zgz69zz79z4z67z49z87zz71ziz80zz77z8z67zz83ztz83zz79zz84zz73zbi2">However, now that we’ve implemented all of our features, we can make a few improvements to ensure that a wider range of users can use our app. Our next article rounds things off for our React tutorials by looking at </span>including focus management in React, which can improve usability and reduce confusion for both keyboard-only and screenreader users.</p>
+<p>So that's it — our app is now functionally complete. However, now that we’ve implemented all of our features, we can make a few improvements to ensure that a wider range of users can use our app. Our next article rounds things off for our React tutorials by looking at including focus management in React, which can improve usability and reduce confusion for both keyboard-only and screenreader users.</p>
 
 <p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
 

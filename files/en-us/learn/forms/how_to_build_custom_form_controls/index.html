@@ -31,49 +31,37 @@ tags:
 
 <p>In terms of behavior, we are recreating a native HTML element. Therefore it should have the same behaviors and semantics as the native HTML element. We require our control to be usable with a mouse as well as with a keyboard, and comprehensible to a screen reader, just like any native control. Let's start by defining how the control reaches each state:</p>
 
-<dl>
- <dt>The control is in its normal state when:</dt>
- <dd>
- <ul>
+<p><strong>The control is in its normal state when:</strong></p>
+<ul>
   <li>the page loads.</li>
   <li>the control was active and the user clicks anywhere outside it.</li>
   <li>the control was active and the user moves the focus to another control using the keyboard (e.g. the <kbd>Tab</kbd> key).</li>
- </ul>
- </dd>
- <dt>The control is in its active state when:</dt>
- <dd>
- <ul>
-  <li>the user clicks on it or touches it on a touch screen.</li>
-  <li>the user hits the tab key and it gains focus.</li>
-  <li>the control was in its open state and the user clicks on it.</li>
- </ul>
- </dd>
- <dt>The control is in its open state when:</dt>
- <dd>
- <ul>
-  <li>the control is in any other state than open and the user clicks on it.</li>
- </ul>
- </dd>
-</dl>
+</ul>
+
+<p><strong>The control is in its active state when:</strong></p>
+<ul>
+ <li>the user clicks on it or touches it on a touch screen.</li>
+ <li>the user hits the tab key and it gains focus.</li>
+ <li>the control was in its open state and the user clicks on it.</li>
+</ul>
+<p><strong>The control is in its open state when:</strong></p>
+<ul>
+ <li>the control is in any other state than open and the user clicks on it.</li>
+</ul>
 
 <p>Once we know how to change states, it is important to define how to change the control's value:</p>
 
-<dl>
- <dt>The value changes when:</dt>
- <dd>
- <ul>
-  <li>the user clicks on an option when the control is in the open state.</li>
-  <li>the user hits the up or down arrow keys when the control is in its active state.</li>
- </ul>
- </dd>
- <dt>The value does not change when:</dt>
- <dd>
- <ul>
-  <li>the user hits the up arrow key when the first option is selected.</li>
-  <li>the user hits the down arrow key when the last option is selected.</li>
- </ul>
- </dd>
-</dl>
+<p><strong>The value changes when:</strong></p>
+<ul>
+ <li>the user clicks on an option when the control is in the open state.</li>
+ <li>the user hits the up or down arrow keys when the control is in its active state.</li>
+</ul>
+
+<p><strong>The value does not change when:</strong></p>
+<ul>
+ <li>the user hits the up arrow key when the first option is selected.</li>
+ <li>the user hits the down arrow key when the last option is selected.</li>
+</ul>
 
 <p>Finally, let's define how the control's options will behave:</p>
 
@@ -185,7 +173,7 @@ tags:
 }</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: We could also have used <code>transform: scale(1, 0)</code> to give the optionlist no height and full width.</p>
+<p><strong>Note:</strong> We could also have used <code>transform: scale(1, 0)</code> to give the optionlist no height and full width.</p>
 </div>
 
 <h3 id="Beautification">Beautification</h3>
@@ -295,9 +283,9 @@ tags:
 <table>
  <thead>
   <tr>
-   <th scope="col" style="text-align: center;">Basic state</th>
-   <th scope="col" style="text-align: center;">Active state</th>
-   <th scope="col" style="text-align: center;">Open state</th>
+   <th scope="col">Basic state</th>
+   <th scope="col">Active state</th>
+   <th scope="col">Open state</th>
   </tr>
  </thead>
  <tbody>
@@ -307,7 +295,7 @@ tags:
    <td>{{EmbedLiveSample("Open_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}</td>
   </tr>
   <tr>
-   <td colspan="3" style="text-align: center;"><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_1">Check out the source code</a></td>
+   <td colspan="3"><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_1">Check out the source code</a></td>
   </tr>
  </tbody>
 </table>
@@ -392,8 +380,8 @@ tags:
 <table>
  <thead>
   <tr>
-   <th scope="col" style="text-align: center;">Without JS</th>
-   <th scope="col" style="text-align: center;">With JS</th>
+   <th scope="col">Without JS</th>
+   <th scope="col">With JS</th>
   </tr>
  </thead>
  <tbody>
@@ -402,7 +390,7 @@ tags:
    <td>{{EmbedLiveSample("JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}</td>
   </tr>
   <tr>
-   <td colspan="2" style="text-align: center;"><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2">Check out the source code</a></td>
+   <td colspan="2"><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2">Check out the source code</a></td>
   </tr>
  </tbody>
 </table>
@@ -570,7 +558,7 @@ window.addEventListener('load', function () {
 <table>
  <thead>
   <tr>
-   <th scope="col" style="text-align: center;">Live example</th>
+   <th scope="col">Live example</th>
   </tr>
  </thead>
  <tbody>
@@ -578,7 +566,7 @@ window.addEventListener('load', function () {
    <td>{{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3")}}</td>
   </tr>
   <tr>
-   <td style="text-align: center;"><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3">Check out the source code</a></td>
+   <td><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3">Check out the source code</a></td>
   </tr>
  </tbody>
 </table>
@@ -677,7 +665,7 @@ window.addEventListener('load', function () {
 <table>
  <thead>
   <tr>
-   <th scope="col" style="text-align: center;">Live example</th>
+   <th scope="col">Live example</th>
   </tr>
  </thead>
  <tbody>
@@ -685,7 +673,7 @@ window.addEventListener('load', function () {
    <td>{{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4")}}</td>
   </tr>
   <tr>
-   <td style="text-align: center;"><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4">Check out the source code</a></td>
+   <td><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4">Check out the source code</a></td>
   </tr>
  </tbody>
 </table>
@@ -755,7 +743,7 @@ window.addEventListener('load', function () {
 <table>
  <thead>
   <tr>
-   <th scope="col" style="text-align: center;">Live example</th>
+   <th scope="col">Live example</th>
   </tr>
  </thead>
  <tbody>
@@ -763,7 +751,7 @@ window.addEventListener('load', function () {
    <td>{{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5")}}</td>
   </tr>
   <tr>
-   <td style="text-align: center;"><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5">Check out the final source code</a></td>
+   <td><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5">Check out the final source code</a></td>
   </tr>
  </tbody>
 </table>

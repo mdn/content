@@ -59,4 +59,3 @@ The keyword value of `both` for the resize property works whether you are think
 
 {{EmbedGHLiveSample("css-examples/logical/size-resize.html", "100%", 700)}}
 
-> **Warning:** Note that currently the logical values for resize are only supported by Firefox.

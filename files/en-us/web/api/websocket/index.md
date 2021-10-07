@@ -22,15 +22,6 @@ To construct a `WebSocket`, use the [`WebSocket()`](/en-US/docs/Web/API/WebSocke
 - {{domxref("WebSocket.WebSocket", "WebSocket(url[, protocols])")}}
   - : Returns a newly created `WebSocket` object.
 
-## Constants
-
-| Constant               | Value |
-| ---------------------- | ----- |
-| `WebSocket.CONNECTING` | `0`   |
-| `WebSocket.OPEN`       | `1`   |
-| `WebSocket.CLOSING`    | `2`   |
-| `WebSocket.CLOSED`     | `3`   |
-
 ## Properties
 
 - {{domxref("WebSocket.binaryType")}}
