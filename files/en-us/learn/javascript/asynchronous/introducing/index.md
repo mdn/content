@@ -171,7 +171,7 @@ fetch('products.json').then(function(response) {
 
 > **Note:** You can find the finished version on GitHub ([see the source here](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-script.js), and also [see it running live](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/)).
 
-Here we see ` fetch``() ` taking a single parameter — the URL of a resource you want to fetch from the network — and returning a [promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). The promise is an object representing the completion or failure of the async operation. It represents an intermediate state, as it were. In essence, it's the browser's way of saying "I promise to get back to you with the answer as soon as I can," hence the name "promise."
+Here we see `fetch()` taking a single parameter — the URL of a resource you want to fetch from the network — and returning a [promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). The promise is an object representing the completion or failure of the async operation. It represents an intermediate state, as it were. In essence, it's the browser's way of saying "I promise to get back to you with the answer as soon as I can," hence the name "promise."
 
 This concept can take practice to get used to; it feels a little like {{interwiki("wikipedia", "Schrödinger's cat")}} in action. Neither of the possible outcomes have happened yet, so the fetch operation is currently waiting on the result of the browser trying to complete the operation at some point in the future. We've then got three further code blocks chained onto the end of the `fetch()`:
 

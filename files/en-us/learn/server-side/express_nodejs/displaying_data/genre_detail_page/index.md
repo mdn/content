@@ -19,7 +19,7 @@ var Book = require('../models/book');
 var async = require('async');
 ```
 
-Find the exported ` genre_detail``() ` controller method and replace it with the following code.
+Find the exported `genre_detail()` controller method and replace it with the following code.
 
 ```js
 // Display detail page for a specific Genre.
