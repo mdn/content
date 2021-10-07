@@ -58,10 +58,7 @@ tags:
 
 <h3 id="Concurrent_audio_playback">Concurrent audio playback</h3>
 
-<p>A requirement of many games is the need to play more than one piece of audio at the same time; for example, there might be background music playing along with sound effects for various things happening in the game. Although the situation is soon going to get better with the adoption of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>, the current most widely-supported method — using the vanilla {{htmlelement("audio")}} element — leads to patchy results on mobile devices.
-
- <audio>element — results in patchy results on mobile devices.</audio>
-</p>
+<p>A requirement of many games is the need to play more than one piece of audio at the same time; for example, there might be background music playing along with sound effects for various things happening in the game. Although the situation is soon going to get better with the adoption of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>, the current most widely-supported method — using the vanilla {{htmlelement("audio")}} element — leads to patchy results on mobile devices.</p>
 
 <h3 id="Testing_and_support">Testing and support</h3>
 
@@ -214,19 +211,13 @@ myAudio.addEventListener('timeupdate', function() {
 
 <p>Music in games can have a powerful emotional effect. You can mix and match various music samples and assuming you can control the volume of your audio element you could cross-fade different musical pieces. Using the <code><a href="/en-US/docs/Web/API/HTMLMediaElement/playbackRate">playbackRate()</a></code> method you can even adjust the speed of your music without affecting the pitch, to sync it up better with the action.</p>
 
-<p>All this is possible using the standard {{htmlelement("audio")}} element and associated {{domxref("HTMLMediaElement")}}, but it becomes much easier and more flexible with the more advanced <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>. Let's look at this next.
-
- <audio>element and associated HTMLMediaElement API, but it becomes much easier and more flexible with the more advanced Web Audio API. Let's look at this next.</audio>
-</p>
+<p>All this is possible using the standard {{htmlelement("audio")}} element and associated {{domxref("HTMLMediaElement")}}, but it becomes much easier and more flexible with the more advanced <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>. Let's look at this next.</p>
 
 <h3 id="Web_Audio_API_for_games">Web Audio API for games</h3>
 
 <p>The Web Audio API is supported across all modern desktop and mobile browsers, with the exception of Opera Mini. With that in mind, it's an acceptable approach for many situations to use the Web Audio API (see the <a href="https://caniuse.com/#feat=audio-api">Can I use Web Audio API</a> page<a href="https://caniuse.com/#feat=audio-api"> </a>for more on browser compatibility). The Web Audio API is an advanced audio JavaScript API that is ideal for game audio. Developers can generate audio and manipulate audio samples as well as positioning sound in 3D game space.</p>
 
-<p>A feasible cross-browser strategy would be to provide basic audio using the standard <code>&lt;audio&gt;</code> element and, where supported, enhance the experience using the Web Audio API.
-
- <audio>element and, where supported, enhance the experience using the Web Audio API.</audio>
-</p>
+<p>A feasible cross-browser strategy would be to provide basic audio using the standard <code>&lt;audio&gt;</code> element and, where supported, enhance the experience using the Web Audio API.</p>
 
 <div class="note">
 <p><strong>Note:</strong> Significantly, iOS Safari now supports the Web Audio API, which means it's now possible to write web-based games with native-quality audio for iOS.</p>
@@ -236,10 +227,7 @@ myAudio.addEventListener('timeupdate', function() {
 
 <h3 id="Background_music_with_the_Web_Audio_API">Background music with the Web Audio API</h3>
 
-<p>Although we can use the <code>&lt;audio&gt;</code> element to deliver linear background music that doesn't change in reaction to the game environment, the Web Audio API is ideal for implementing a more dynamic musical experience. You may want music to change depending on whether you are trying to build suspense or encourage the player in some way. Music is an important part of the gaming experience and depending on the type of game you are making you may wish to invest significant effort into getting it right.
-
- <audio>element to deliver linear background music that doesn't change in reaction to the game environment, the Web Audio API is ideal for implementing a more dynamic musical experience. You may want music to change depending on whether you are trying to build suspense or encourage the player in some way. Music is an important part of the gaming experience and depending on the type of game you are making you may wish to invest significant effort into getting it right.</audio>
-</p>
+<p>Although we can use the <code>&lt;audio&gt;</code> element to deliver linear background music that doesn't change in reaction to the game environment, the Web Audio API is ideal for implementing a more dynamic musical experience. You may want music to change depending on whether you are trying to build suspense or encourage the player in some way. Music is an important part of the gaming experience and depending on the type of game you are making you may wish to invest significant effort into getting it right.</p>
 
 <p>One way you can make your music soundtrack more dynamic is by splitting it up into component loops or tracks. This is often the way that musicians compose music anyway, and the Web Audio API is extremely good at keeping these parts in sync. Once you have the various tracks that make up your piece you can bring tracks in and out as appropriate.</p>
 

@@ -22,7 +22,7 @@ tags:
 
 <p>The earliest demo of <a class="external external-icon" href="https://rogers2.enclavegames.com/demo/">Captain Rogers: Battle at Andromeda</a> was adjusted to work on a huge TV. Interestingly enough, the first Captain Rogers game (Asteroid Belt of Sirius) was optimized for low-end, small-screen, cheap smartphones running Firefox OS, so you can see the difference three years can make — you can read the whole story in our <a href="https://hacks.mozilla.org/2016/01/building-games-for-firefox-os-tv/">Building games for Firefox OS TV</a> Hacks post.</p>
 
-<p><img alt="Panasonic TV remote controls for the game Captain Rogers: Battle at Andromeda." src="controls-tvremote.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="Panasonic TV remote controls for the game Captain Rogers: Battle at Andromeda." src="controls-tvremote.png"></p>
 
 <p>Using a TV remote to control the game ended up being surprisingly easy, because the events fired by the controller are emulating conventional keyboard keys. Captain Rogers had the keyboard controls implemented already:</p>
 
@@ -40,7 +40,7 @@ if(this.cursors.right.isDown) {
 
 <p>Every key pressed on the remote will show its key code in the console. You can also check this handy cheat sheet seen below if you're working with Panasonic TVs running Firefox OS:</p>
 
-<p><img alt="Remote control key codes for Panasonic TV." src="controls-tvkeys.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Remote control key codes for Panasonic TV." src="controls-tvkeys.png"></p>
 
 <p>You can add moving between states, starting a new game, controlling the ship and blowing stuff up, pausing and restarting the game. All that is needed is checking for key presses:</p>
 
@@ -123,7 +123,7 @@ var grabStrength = 0;</pre>
 
 <p>If the <code>horizontalDegree</code> value is greater than our <code>degreeThreshold</code>, which is 30 in this case, then the ship will be moved left 5 pixels on every frame. If its value is lower than the threshold's negative value, then the ship is moved right. up/down movement works in the same sort of way. The last value is <code>grabStrength</code>, which is a float between 0 and 1 — when reaching 1 (fist fully clenched), we show an alert for now (in a full game this could be replaced with the shooting logic.)</p>
 
-<p><img alt="Leap Motion controller support in the game, with visible output for roll, pitch and strength." src="controls-leapmotion.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Leap Motion controller support in the game, with visible output for roll, pitch and strength." src="controls-leapmotion.png"></p>
 
 <p>That's it — everything you needed for a working Leap Motion example in JavaScript is here already. You can explore the <code>hand</code>'s properties and implement any behavior you like right inside your game.</p>
 
@@ -131,7 +131,7 @@ var grabStrength = 0;</pre>
 
 <p>There's a very interesting article available on <a href="https://danielrapp.github.io/doppler/">Motion sensing using the doppler effect</a>, which mixes together waving your hand and using the microphone. This time it's about detecting sound waves bouncing off objects and returning to the microphone.</p>
 
-<p><img alt="Doppler effect as a way to control the scroll of an article on a laptop using hand gesture." src="controls-doppler.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Doppler effect as a way to control the scroll of an article on a laptop using hand gesture." src="controls-doppler.png"></p>
 
 <p>If the frequency of the bounced sound is shifted from the original one, then we can detect that the movement of that object occurred. That way we can detect a hand movement by using only a built-in microphone!</p>
 
@@ -150,7 +150,7 @@ var grabStrength = 0;</pre>
 
 <p>If you want to go completely bananas you can use <a href="https://makeymakey.com/">MaKey MaKey</a>, a board that can turn anything into a controller — it's all about connecting real-world, conductive objects to a computer and using them as touch interfaces.</p>
 
-<p><img alt="Controlling a banana piano using Makey Makey." src="controls-banana.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Controlling a banana piano using Makey Makey." src="controls-banana.png"></p>
 
 <p>Check out the <a href="https://www.youtube.com/watch?v=_DWQ6ce2Ags">banana piano video</a>, and be sure to visit the <a href="https://learn.sparkfun.com/tutorials/makey-makey-quickstart-guide">quick start guide</a> for all the needed info.</p>
 

@@ -64,7 +64,7 @@ document.addEventListener("touchmove", touchHandler);</pre>
 
 <p>If the touch occurs (<code>touches</code> object is not empty), then we will have all the info we need in that object. We can get the first touch (<code>e.touches[0]</code>, our example is not multitouch-enabled), extract the <code>pageX</code> and <code>pageY</code> variables and set the player's ship position on the screen by subtracting the Canvas offset (distance from the Canvas and the edge of the screen) and half the player's width and height.</p>
 
-<p><img alt="Touch controls for the player's ship, with visible output of the x and y position." src="controls-touch.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Touch controls for the player's ship, with visible output of the x and y position." src="controls-touch.png"></p>
 
 <p>To see if it's working correctly we can output the <code>x</code> and <code>y</code> positions using the <code>output</code> element. The <code>preventDefault()</code> function is needed to prevent the browser from moving — without it you'd have the default behavior, and the Canvas would be dragged around the page, which would show the browser scroll bars and look messy.</p>
 
