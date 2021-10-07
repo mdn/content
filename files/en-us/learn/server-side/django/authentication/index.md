@@ -271,7 +271,7 @@ LOGIN_REDIRECT_URL = '/'
 
 If you navigate to the logout URL (<http://127.0.0.1:8000/accounts/logout/>) then you'll see some odd behavior — your user will be logged out sure enough, but you'll be taken to the **Admin** logout page. That's not what you want, if only because the login link on that page takes you to the Admin login screen (and that is only available to users who have the `is_staff` permission).
 
-Create and open /**locallibrary/templates/registration/logged_out.html**. Copy in the text below:
+Create and open **/locallibrary/templates/registration/logged_out.html**. Copy in the text below:
 
 ```html
 {% extends "base_generic.html" %}
