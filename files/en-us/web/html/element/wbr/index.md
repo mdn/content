@@ -1,5 +1,5 @@
 ---
-title: <wbr>: The word break element
+title: <wbr>: The line break opportunity element
 slug: Web/HTML/Element/wbr
 tags:
   - Element
