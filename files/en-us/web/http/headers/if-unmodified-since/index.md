@@ -11,11 +11,11 @@ browser-compat: http.headers.If-Unmodified-Since
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`If-Unmodified-Since`** request header makes the
-request conditional: the server will either send the requested resource or accept it in
-the case of a {{HTTPMethod("POST")}} or another non-{{Glossary("Safe/HTTP", "safe")}} method only if the resource has not been modified after the given date. If the resource has been modified
-after the given date, the response will be a {{HTTPStatus("412 Precondition Failed")}} error.
+request for the resource conditional: the server will send the requested resource or accept it in
+the case of a {{HTTPMethod("POST")}} or another non-{{Glossary("Safe/HTTP", "safe")}} method only if the resource has not been modified after the date specified by this HTTP header. If the resource has been modified
+after the specified date, the response will be a {{HTTPStatus("412 Precondition Failed")}} error.
 
-The following are common situations for using the **`If-Unmodified-Since`** HTTP header:
+The **`If-Unmodified-Since`** HTTP header is commonly used in the following situations:
 
 - In conjunction with non-{{Glossary("Safe/HTTP", "safe")}} methods, like {{HTTPMethod("POST")}},
   this header can be used to implement an [optimistic
