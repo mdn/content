@@ -80,8 +80,7 @@ elements are sorted according to the return value of the compare function (all
 | === 0                                | keep original order of `a` and `b` |
 
 > **Note:** `compareFunction(a, b)` must always return the same value when given a specific pair of
-> elements `a` and `b` as its two arguments. If inconsistent results are returned, then the sort order
-> is `undefined`.
+> elements `a` and `b` as its two arguments.
 
 So, the compare function has the following form:
 
