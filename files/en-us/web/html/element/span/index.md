@@ -1,5 +1,5 @@
 ---
-title: <span>: the Span element
+title: <span>: The Span element
 slug: Web/HTML/Element/span
 tags:
   - Element
