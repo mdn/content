@@ -157,7 +157,7 @@ All is good so far, but we have a problem. We have defined a new constructor, an
 
     Here our friend [`create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) comes to the rescue again. In this case we are using it to create a new object and make it the value of `Teacher.prototype`. The new object has `Person.prototype` as its prototype and will therefore inherit, if and when needed, all the methods available on `Person.prototype`.
 
-2.  We need to do one more thing before we move on. After adding the last line, ` Teacher.``prototype `'s `constructor` property is now equal to `Person()`, because we just set `Teacher.prototype` to reference an object that inherits its properties from `Person.prototype`! Try saving your code, loading the page in a browser, and entering `Teacher.prototype.constructor` into the console to verify.
+2.  We need to do one more thing before we move on. After adding the last line, the `constructor` property of `Teacher.prototype` is now equal to `Person()`, because we just set `Teacher.prototype` to reference an object that inherits its properties from `Person.prototype`! Try saving your code, loading the page in a browser, and entering `Teacher.prototype.constructor` into the console to verify.
 3.  This can become a problem, so we need to set this right. You can do so by going back to your source code and adding the following line at the bottom:
 
     ```js
