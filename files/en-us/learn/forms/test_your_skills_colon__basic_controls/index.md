@@ -1,6 +1,6 @@
 ---
 title: 'Test your skills: Basic controls'
-slug: 'Learn/Forms/Test_your_skills:_Basic_controls'
+slug: Learn/Forms/Test_your_skills:_Basic_controls
 tags:
   - Assessment
   - Beginner
@@ -9,85 +9,73 @@ tags:
   - basic controls
   - test your skills
 ---
-<div>{{learnsidebar}}</div>
+{{learnsidebar}}
 
-<p>This aim of this skill test is to assess whether you've understood our <a href="/en-US/docs/Learn/Forms/Basic_native_form_controls">Basic native form controls</a> article.</p>
+This aim of this skill test is to assess whether you've understood our [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls) article.
 
-<div class="notecard note">
-<p><strong>Note:</strong> You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a> to work on the tasks.<br>
- <br>
- If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.</p>
-</div>
+> **Note:** You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+>
+> If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
 
-<h2 id="Basic_controls_1">Basic controls 1</h2>
+## Basic controls 1
 
-<p>This task starts you off nice and gently by asking you to create two <code>&lt;input&gt;</code> elements, for a user's ID and password, along with a submit button.</p>
+This task starts you off nice and gently by asking you to create two `<input>` elements, for a user's ID and password, along with a submit button.
 
-<ol>
- <li>Create appropriate inputs for user ID and password.</li>
- <li>You should also associate them with their text labels semantically.</li>
- <li>Create a submit button inside the remaining list item, with button text of "Log in".</li>
-</ol>
+1.  Create appropriate inputs for user ID and password.
+2.  You should also associate them with their text labels semantically.
+3.  Create a submit button inside the remaining list item, with button text of "Log in".
 
-<p>Try updating the live code below to recreate the finished example:</p>
+Try updating the live code below to recreate the finished example:
 
-<p>{{EmbedGHLiveSample("learning-area/html/forms/tasks/basic-controls/basic-controls1.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("learning-area/html/forms/tasks/basic-controls/basic-controls1.html", '100%', 700)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/blob/master/html/forms/tasks/basic-controls/basic-controls1-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/basic-controls/basic-controls1-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Basic_controls_2">Basic controls 2</h2>
+## Basic controls 2
 
-<p>The next task requires you to create working sets of checkboxes and radio buttons, from the provided text labels.</p>
+The next task requires you to create working sets of checkboxes and radio buttons, from the provided text labels.
 
-<ol>
- <li>Turn the first <code>&lt;fieldset&gt;</code>'s contents into a set of radio buttons — you should only be able to select one pony character at once.</li>
- <li>Make it so that the first radio button is selected upon page load.</li>
- <li>Turn the second <code>&lt;fieldset&gt;</code>'s content into a set of checkboxes.</li>
- <li>Add a couple more hotdog choices of your own.</li>
-</ol>
+1.  Turn the first `<fieldset>`'s contents into a set of radio buttons — you should only be able to select one pony character at once.
+2.  Make it so that the first radio button is selected upon page load.
+3.  Turn the second `<fieldset>`'s content into a set of checkboxes.
+4.  Add a couple more hotdog choices of your own.
 
-<p>Try updating the live code below to recreate the finished example:</p>
+Try updating the live code below to recreate the finished example:
 
-<p>{{EmbedGHLiveSample("learning-area/html/forms/tasks/basic-controls/basic-controls2.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("learning-area/html/forms/tasks/basic-controls/basic-controls2.html", '100%', 700)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/blob/master/html/forms/tasks/basic-controls/basic-controls2-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/basic-controls/basic-controls2-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Basic_controls_3">Basic controls 3</h2>
+## Basic controls 3
 
-<p>The final task in this set requires you to create a file picker.</p>
+The final task in this set requires you to create a file picker.
 
-<ol>
- <li>Create a basic file picker.</li>
- <li>Allow the user to pick multiple files at once.</li>
- <li>Allow the file picker to accept JPG and PNG images only.</li>
-</ol>
+1.  Create a basic file picker.
+2.  Allow the user to pick multiple files at once.
+3.  Allow the file picker to accept JPG and PNG images only.
 
-<p>Try updating the live code below to recreate the finished example:</p>
+Try updating the live code below to recreate the finished example:
 
-<p>{{EmbedGHLiveSample("learning-area/html/forms/tasks/basic-controls/basic-controls3.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("learning-area/html/forms/tasks/basic-controls/basic-controls3.html", '100%', 700)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/blob/master/html/forms/tasks/basic-controls/basic-controls3-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/basic-controls/basic-controls3-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Assessment_or_further_help">Assessment or further help</h2>
+## Assessment or further help
 
-<p>You can practice these examples in the Interactive Editors above.</p>
+You can practice these examples in the Interactive Editors above.
 
-<p>If you would like your work assessed, or are stuck and want to ask for help:</p>
+If you would like your work assessed, or are stuck and want to ask for help:
 
-<ol>
- <li>Put your work into an online shareable editor such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a>. You can write the code yourself, or use the starting point files linked to in the above sections.</li>
- <li>Write a post asking for assessment and/or help at the <a class="external external-icon" href="https://discourse.mozilla.org/c/mdn/learn" rel="noopener">MDN Discourse forum Learning category</a>. Your post should include:
-  <ul>
-   <li>A descriptive title such as "Assessment wanted for Basic controls 1 skill test".</li>
-   <li>Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.</li>
-   <li>A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.</li>
-   <li>A link to the actual task or assessment page, so we can find the question you want help with.</li>
-  </ul>
- </li>
-</ol>
+1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
+2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+
+    - A descriptive title such as "Assessment wanted for Basic controls 1 skill test".
+    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
+    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
+    - A link to the actual task or assessment page, so we can find the question you want help with.

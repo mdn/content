@@ -5,39 +5,35 @@ tags:
   - Basic
   - Beginner
   - CSS
-  - 'CSS:Getting_Started'
+  - CSS:Getting_Started
   - Guide
   - Web
 ---
-<p>{{LearnSidebar}}</p>
+{{LearnSidebar}}
 
-<p>In this guide you will find out how to highlight the first line of text in a paragraph, even if you don't know how long that line will be.</p>
+In this guide you will find out how to highlight the first line of text in a paragraph, even if you don't know how long that line will be.
 
-<h2>Styling the first line of text</h2>
+## Styling the first line of text
 
-<p>You would like to make the first line of a paragraph larger and bold. Wrapping a <code>&lt;span&gt;</code> around the first line means that you can style it however, if the first line becomes shorter due to a smaller viewport size, the styled text will wrap onto the next line.</p>
+You would like to make the first line of a paragraph larger and bold. Wrapping a `<span>` around the first line means that you can style it however, if the first line becomes shorter due to a smaller viewport size, the styled text will wrap onto the next line.
 
-<h2>Using a pseudo-element</h2>
+## Using a pseudo-element
 
-<p>A {{cssxref("pseudo-elements", "pseudo-element")}} can take the place of the <code>&lt;span&gt;</code>; however, it is more flexible — the exact content selected by a pseudo-element is calculated once the browser has rendered the content, so it will work even if the viewport size changes.</p>
+A {{cssxref("pseudo-elements", "pseudo-element")}} can take the place of the `<span>`; however, it is more flexible — the exact content selected by a pseudo-element is calculated once the browser has rendered the content, so it will work even if the viewport size changes.
 
-<p>In this case we need to use the {{cssxref("::first-line")}} pseudo-element. It selects the first formatted line of each paragraph, meaning that you can style it as you require.</p>
+In this case we need to use the {{cssxref("::first-line")}} pseudo-element. It selects the first formatted line of each paragraph, meaning that you can style it as you require.
 
-<p>{{EmbedGHLiveSample("css-examples/howto/highlight_first_line.html", '100%', 750)}}</p>
+{{EmbedGHLiveSample("css-examples/howto/highlight_first_line.html", '100%', 750)}}
 
-<div class="notecard note">
-  <p><strong>Note:</strong> All pseudo-elements act in this way. They behave as if you had inserted an element into the document, but they do so dynamically based on the content as it displays at runtime.</p>
-</div>
+> **Note:** All pseudo-elements act in this way. They behave as if you had inserted an element into the document, but they do so dynamically based on the content as it displays at runtime.
 
-<h2>Combining pseudo-elements with other selectors</h2>
+## Combining pseudo-elements with other selectors
 
-<p>In the example above, the pseudo-element selects the first line of every paragraph. To select only the first line of the first paragraph, you can combine it with another selector. That could be a class, or in this case the {{cssxref(":first-child")}} {{cssxref("pseudo-classes", "pseudo-class")}}. This allows us to select the first line of the first-child of <code>.wrapper</code>.</p>
+In the example above, the pseudo-element selects the first line of every paragraph. To select only the first line of the first paragraph, you can combine it with another selector. That could be a class, or in this case the {{cssxref(":first-child")}} {{cssxref("pseudo-classes", "pseudo-class")}}. This allows us to select the first line of the first-child of `.wrapper`.
 
-<p>{{EmbedGHLiveSample("css-examples/howto/highlight_first_line2.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("css-examples/howto/highlight_first_line2.html", '100%', 700)}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{cssxref("pseudo-elements", "pseudo-elements")}} reference page.</li>
-  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Learn CSS: Pseudo-classes and pseudo-elements.</a></li>
-</ul>
+- The {{cssxref("pseudo-elements", "pseudo-elements")}} reference page.
+- [Learn CSS: Pseudo-classes and pseudo-elements.](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)

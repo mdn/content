@@ -7,142 +7,138 @@ tags:
   - HTML
   - Learn
 ---
-<div class="summary">
-<p>HTML provides several ways to convey description semantics,  whether inline or as structured glossaries. In this article, we'll cover how to properly mark up keywords when you're defining them.</p>
-</div>
+HTML provides several ways to convey description semantics,  whether inline or as structured glossaries. In this article, we'll cover how to properly mark up keywords when you're defining them.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>You need to be familiar with how to <a href="/en-US/docs/Learn/Getting_started_with_the_web">create a basic HTML document</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>Learn how to introduce new keywords and how to build description lists.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        You need to be familiar with how to
+        <a href="/en-US/docs/Learn/Getting_started_with_the_web"
+          >create a basic HTML document</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        Learn how to introduce new keywords and how to build description lists.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>When you need a term defined, you probably go straight to a dictionary or glossary. Dictionaries and glossaries <em>formally</em> associate keywords with one or more descriptions, as in this case:</p>
+When you need a term defined, you probably go straight to a dictionary or glossary. Dictionaries and glossaries _formally_ associate keywords with one or more descriptions, as in this case:
 
-<blockquote>
-<dl>
- <dt>Blue (<em>Adjective</em>)</dt>
- <dd>Of a color like the sky in a sunny day.<br>
- <em><q>The clear blue sky</q></em></dd>
-</dl>
-</blockquote>
+> - Blue (_Adjective_)
+>   - : Of a color like the sky in a sunny day.
+>     _"The clear blue sky"_
 
-<p>But we're constantly defining keywords informally, as here:</p>
+But we're constantly defining keywords informally, as here:
 
-<blockquote>
-<p><em><dfn>Firefox</dfn></em> is the web browser created by the Mozilla Foundation.</p>
-</blockquote>
+> **Firefox** is the web browser created by the Mozilla Foundation.
 
-<p>To deal with these use cases, {{Glossary("HTML")}} provides {{Glossary("tag","tags")}} to mark descriptions and words described, so that your meaning gets across properly to your readers.</p>
+To deal with these use cases, {{Glossary("HTML")}} provides {{Glossary("tag","tags")}} to mark descriptions and words described, so that your meaning gets across properly to your readers.
 
-<h2 id="How_to_mark_informal_description">How to mark informal description</h2>
+## How to mark informal description
 
-<p>In textbooks, the first time a keyword occurs, it's common to put the keyword in bold and define it right away.</p>
+In textbooks, the first time a keyword occurs, it's common to put the keyword in bold and define it right away.
 
-<p>We do that in HTML too, except HTML is not a visual medium and so we don't use bold. We use {{htmlelement("dfn")}}, which is a special element just for marking the first occurrence of keywords. Note that <code>&lt;dfn&gt;</code> tags go around the <em>word to be defined,</em> not the definition (the definition consists of the entire paragraph):</p>
+We do that in HTML too, except HTML is not a visual medium and so we don't use bold. We use {{htmlelement("dfn")}}, which is a special element just for marking the first occurrence of keywords. Note that `<dfn>` tags go around the _word to be defined,_ not the definition (the definition consists of the entire paragraph):
 
-<pre class="brush: html">&lt;p&gt;&lt;dfn&gt;Firefox&lt;/dfn&gt; is the web browser created by the Mozilla Foundation.&lt;/p&gt;
-</pre>
+```html
+<p><dfn>Firefox</dfn> is the web browser created by the Mozilla Foundation.</p>
+```
 
-<div class="note">
-<p><strong>Note:</strong> Another use for bold is to emphasize content. Bold itself is a concept foreign to HTML, but there are <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#emphasis_and_importance">tags for indicating emphasis.</a></p>
-</div>
+> **Note:** Another use for bold is to emphasize content. Bold itself is a concept foreign to HTML, but there are [tags for indicating emphasis.](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#emphasis_and_importance)
 
-<h3 id="Special_case_Abbreviations">Special case: Abbreviations</h3>
+### Special case: Abbreviations
 
-<p>It's best to<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abbreviations"> mark abbreviations specially</a> with {{htmlelement("abbr")}}, so that screen readers read them appropriately and so that you can operate on all abbreviations uniformly. Just as with any new keyword, you should define your abbreviations the first time they occur.</p>
+It's best to[ mark abbreviations specially](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abbreviations) with {{htmlelement("abbr")}}, so that screen readers read them appropriately and so that you can operate on all abbreviations uniformly. Just as with any new keyword, you should define your abbreviations the first time they occur.
 
-<pre class="brush: html">&lt;p&gt;
-  &lt;dfn&gt;&lt;abbr&gt;HTML&lt;/abbr&gt; (hypertext markup language)&lt;/dfn&gt;
+```html
+<p>
+  <dfn><abbr>HTML</abbr> (hypertext markup language)</dfn>
    is a description language used to structure documents on the web.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<div class="note">
-<p><strong>Note:</strong> The HTML spec does indeed <a href="https://www.w3.org/TR/html/text-level-semantics.html#the-abbr-element">set aside the <code>title</code> attribute</a> for expanding the abbreviation. However, this is not an acceptable alternative for providing an inline expansion. The contents of <code>title</code> are completely hidden from your users, unless they're using a mouse and they happen to hover over the abbreviation. The spec duly <a href="https://www.w3.org/TR/html/dom.html#attr-title">acknowledges this as well.</a></p>
-</div>
+> **Note:** The HTML spec does indeed [set aside the `title` attribute](https://www.w3.org/TR/html/text-level-semantics.html#the-abbr-element) for expanding the abbreviation. However, this is not an acceptable alternative for providing an inline expansion. The contents of `title` are completely hidden from your users, unless they're using a mouse and they happen to hover over the abbreviation. The spec duly [acknowledges this as well.](https://www.w3.org/TR/html/dom.html#attr-title)
 
-<h3 id="Improve_accessibility">Improve accessibility</h3>
+### Improve accessibility
 
-<p>{{HTMLElement('dfn')}} marks the keyword defined, and indicates that the current paragraph defines the keyword. In other words, there's an implicit relationship between the <code>&lt;dfn&gt;</code> element and its container. If you want a more formal relationship, or your definition consists of only one sentence rather than the whole paragraph, you can use the <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute">aria-describedby</a></code> attribute to associate a term more formally with its definition:</p>
+{{HTMLElement('dfn')}} marks the keyword defined, and indicates that the current paragraph defines the keyword. In other words, there's an implicit relationship between the `<dfn>` element and its container. If you want a more formal relationship, or your definition consists of only one sentence rather than the whole paragraph, you can use the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute) attribute to associate a term more formally with its definition:
 
-<pre class="brush: html">&lt;p&gt;
-  &lt;span id="ff"&gt;
-    &lt;dfn aria-describedby="ff"&gt;Firefox&lt;/dfn&gt;
+```html
+<p>
+  <span id="ff">
+    <dfn aria-describedby="ff">Firefox</dfn>
     is the web browser created by the Mozilla Foundation.
-  &lt;/span&gt;
-  You can download it at &lt;a href="https://www.mozilla.org"&gt;mozilla.org&lt;/a&gt;
-&lt;/p&gt;</pre>
+  </span>
+  You can download it at <a href="https://www.mozilla.org">mozilla.org</a>
+</p>
+```
 
-<p>Assistive technology can often use this attribute to find a text alternative to a given term. You can use <code>aria-describedby</code> on any tag enclosing a keyword to be defined (not just the <code>&lt;dfn&gt;</code> element). <code>aria-describedby</code> references the {{htmlattrxref('id')}} of the element containing the description.</p>
+Assistive technology can often use this attribute to find a text alternative to a given term. You can use `aria-describedby` on any tag enclosing a keyword to be defined (not just the `<dfn>` element). `aria-describedby` references the {{htmlattrxref('id')}} of the element containing the description.
 
-<h2 id="How_to_build_a_description_list">How to build a description list</h2>
+## How to build a description list
 
-<p>Description lists are just what they claim to be: a list of terms and their matching descriptions (e.g., definition lists, dictionary entries, FAQs, and key-value pairs).</p>
+Description lists are just what they claim to be: a list of terms and their matching descriptions (e.g., definition lists, dictionary entries, FAQs, and key-value pairs).
 
-<div class="note">
-<p><strong>Note:</strong> Description lists are <a href="https://www.w3.org/TR/html5/grouping-content.html#the-dl-element">not suitable for marking up dialog,</a> because conversation does not directly describe the speakers. Here are <a href="https://www.w3.org/TR/html5/common-idioms.html#conversations">recommendations for marking up dialog</a>.</p>
-</div>
+> **Note:** Description lists are [not suitable for marking up dialog,](https://www.w3.org/TR/html5/grouping-content.html#the-dl-element) because conversation does not directly describe the speakers. Here are [recommendations for marking up dialog](https://www.w3.org/TR/html5/common-idioms.html#conversations).
 
-<p>The terms described go inside {{htmlelement("dt")}} elements. The matching description follows immediately, contained within one or more {{htmlelement("dd")}} elements. Enclose the whole description list with a {{htmlelement("dl")}} element.</p>
+The terms described go inside {{htmlelement("dt")}} elements. The matching description follows immediately, contained within one or more {{htmlelement("dd")}} elements. Enclose the whole description list with a {{htmlelement("dl")}} element.
 
-<h3 id="A_simple_example">A simple example</h3>
+### A simple example
 
-<p>Here's a simple example describing kinds of food and drink:</p>
+Here's a simple example describing kinds of food and drink:
 
-<pre class="brush: html">&lt;dl&gt;
-  &lt;dt&gt;jambalaya&lt;/dt&gt;
-    &lt;dd&gt;
+```html
+<dl>
+  <dt>jambalaya</dt>
+    <dd>
       rice-based entree typically containing chicken,
       sausage, seafood, and spices
-    &lt;/dd&gt;
+    </dd>
 
-  &lt;dt&gt;sukiyaki&lt;/dt&gt;
-    &lt;dd&gt;
+  <dt>sukiyaki</dt>
+    <dd>
       Japanese specialty consisting of thinly sliced meat,
       vegetables, and noodles, cooked in sake and soy sauce
-    &lt;/dd&gt;
+    </dd>
 
-  &lt;dt&gt;chianti&lt;/dt&gt;
-    &lt;dd&gt;
+  <dt>chianti</dt>
+    <dd>
       dry Italian red wine originating in Tuscany
-    &lt;/dd&gt;
-&lt;/dl&gt;
-</pre>
+    </dd>
+</dl>
+```
 
-<div class="note">
-<p><strong>Note:</strong> The basic pattern, as you can see, is to alternate <code>&lt;dt&gt;</code> terms with <code>&lt;dd&gt;</code> descriptions. If two or more terms occur in a row, the following description applies to all of them. If two or more descriptions occur in a row, they all apply to the last given term.</p>
-</div>
+> **Note:** The basic pattern, as you can see, is to alternate `<dt>` terms with `<dd>` descriptions. If two or more terms occur in a row, the following description applies to all of them. If two or more descriptions occur in a row, they all apply to the last given term.
 
-<h3 id="Improving_the_visual_output">Improving the visual output</h3>
+### Improving the visual output
 
-<p>Here's how a graphical browser displays the foregoing list:</p>
+Here's how a graphical browser displays the foregoing list:
 
-<p>{{EmbedLiveSample("A_simple_example", 600, 180)}}</p>
+{{EmbedLiveSample("A_simple_example", 600, 180)}}
 
-<p>If you want the keywords to stand out better, you could try bolding them. Remember, HTML is not a visual medium; we need {{glossary("CSS")}} for all visual effects. The CSS {{cssxref("font-weight")}} property is what you need here:</p>
+If you want the keywords to stand out better, you could try bolding them. Remember, HTML is not a visual medium; we need {{glossary("CSS")}} for all visual effects. The CSS {{cssxref("font-weight")}} property is what you need here:
 
-<pre class="brush: css">dt {
+```css
+dt {
   font-weight: bold;
 }
-</pre>
+```
 
-<p>This produces the slightly more readable result below:</p>
+This produces the slightly more readable result below:
 
-<p>{{EmbedLiveSample("How_to_build_a_description_list", 600, 180)}}</p>
+{{EmbedLiveSample("How_to_build_a_description_list", 600, 180)}}
 
-<h2 id="Learn_more">Learn more</h2>
+## Learn more
 
-<ul>
- <li>{{htmlelement("dfn")}}</li>
- <li>{{htmlelement("dl")}}</li>
- <li>{{htmlelement("dt")}}</li>
- <li>{{htmlelement("dd")}}</li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute">How to use the aria-describedby attribute</a></li>
-</ul>
+- {{htmlelement("dfn")}}
+- {{htmlelement("dl")}}
+- {{htmlelement("dt")}}
+- {{htmlelement("dd")}}
+- [How to use the aria-describedby attribute](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute)

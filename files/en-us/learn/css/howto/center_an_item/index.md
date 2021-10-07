@@ -9,25 +9,21 @@ tags:
   - Guide
   - Web
 ---
-<p>{{LearnSidebar}}</p>
+{{LearnSidebar}}
 
-<p>In this guide you can find out how to center an item inside another element, both horizontally and vertically.</p>
+In this guide you can find out how to center an item inside another element, both horizontally and vertically.
 
-<h2>Center a box</h2>
+## Center a box
 
-<p>To center one box inside another using CSS you will need to use <a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">CSS box alignment</a> properties on the parent container. As these alignment properties do not yet have browser support for block and inline layout you will need to make the parent a <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">flex</a> or <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">grid</a> container to turn on the ability to use alignment.</p>
+To center one box inside another using CSS you will need to use [CSS box alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment) properties on the parent container. As these alignment properties do not yet have browser support for block and inline layout you will need to make the parent a [flex](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) or [grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) container to turn on the ability to use alignment.
 
-<p>In the example below we have given the parent container <code>display: flex</code>; then set {{cssxref("justify-content")}} to center to align it horizonally, and {{cssxref("align-items")}} to center to align it vertically.</p>
+In the example below we have given the parent container `display: flex`; then set {{cssxref("justify-content")}} to center to align it horizonally, and {{cssxref("align-items")}} to center to align it vertically.
 
-<p>{{EmbedGHLiveSample("css-examples/howto/center.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("css-examples/howto/center.html", '100%', 700)}}
 
-<div class="notecard note">
-  <p><strong>Note:</strong> You can use this technique to do any kind of alignment of one or more elements inside another. In the example above you can try changing the values to any valid values for {{cssxref("justify-content")}} and {{cssxref("align-items")}}.</p>
-</div>
+> **Note:** You can use this technique to do any kind of alignment of one or more elements inside another. In the example above you can try changing the values to any valid values for {{cssxref("justify-content")}} and {{cssxref("align-items")}}.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox">Box alignment in Flexbox</a></li>
-  <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout">Box alignment in Grid layout</a></li>
-</ul>
+- [Box alignment in Flexbox](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
+- [Box alignment in Grid layout](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout)

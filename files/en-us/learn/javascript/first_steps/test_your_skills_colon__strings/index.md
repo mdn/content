@@ -1,6 +1,6 @@
 ---
 title: 'Test your skills: Strings'
-slug: 'Learn/JavaScript/First_steps/Test_your_skills:_Strings'
+slug: Learn/JavaScript/First_steps/Test_your_skills:_Strings
 tags:
   - Beginner
   - JavaScript
@@ -8,112 +8,94 @@ tags:
   - strings
   - test your skills
 ---
-<div>{{learnsidebar}}</div>
+{{learnsidebar}}
 
-<p>The aim of this skill test is to assess whether you've understood our <a href="/en-US/docs/Learn/JavaScript/First_steps/Strings">Handling text — strings in JavaScript</a> and <a href="/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods">Useful string methods</a> articles.</p>
+The aim of this skill test is to assess whether you've understood our [Handling text — strings in JavaScript](/en-US/docs/Learn/JavaScript/First_steps/Strings) and [Useful string methods](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods) articles.
 
-<div class="notecard note">
-<p><strong>Note:</strong> You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a> to work on the tasks.<br>
- <br>
- If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.</p>
-</div>
+> **Note:** You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+>
+> If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
 
-<div class="notecard note">
-<p><strong>Note:</strong> In the examples below, if there is an error in your code it will be outputted into the results panel on the page, to help you try to figure out the answer (or into the browser's JavaScript console, in the case of the downloadable version).</p>
-</div>
+> **Note:** In the examples below, if there is an error in your code it will be outputted into the results panel on the page, to help you try to figure out the answer (or into the browser's JavaScript console, in the case of the downloadable version).
 
-<h2 id="Strings_1">Strings 1</h2>
+## Strings 1
 
-<p>In our first strings task, we start off small. You already have half of a famous quote inside a variable called <code>quoteStart</code>; we would like you to:</p>
+In our first strings task, we start off small. You already have half of a famous quote inside a variable called `quoteStart`; we would like you to:
 
-<ol>
- <li>Look up the other half of the quote, and add it to the example inside a variable called <code>quoteEnd</code>.</li>
- <li>Concatenate the two strings together to make a single string containing the complete quote. Save the result inside a variable called <code>finalQuote</code>.</li>
-</ol>
+1.  Look up the other half of the quote, and add it to the example inside a variable called `quoteEnd`.
+2.  Concatenate the two strings together to make a single string containing the complete quote. Save the result inside a variable called `finalQuote`.
 
-<p>You'll find that you get an error at this point. Can you fix the problem with <code>quoteStart</code>, so that the full quote displays correctly?</p>
+You'll find that you get an error at this point. Can you fix the problem with `quoteStart`, so that the full quote displays correctly?
 
-<p>Try updating the live code below to recreate the finished example:</p>
+Try updating the live code below to recreate the finished example:
 
-<p>{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/strings/strings1.html", '100%', 400)}}</p>
+{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/strings/strings1.html", '100%', 400)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/strings/strings1-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/strings/strings1-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Strings_2">Strings 2</h2>
+## Strings 2
 
-<p>In this task you are provided with two variables, <code>quote</code> and <code>substring</code>, which contain two strings. We would like you to:</p>
+In this task you are provided with two variables, `quote` and `substring`, which contain two strings. We would like you to:
 
-<ol>
- <li>Retrieve the length of the quote, and store it in a variable called <code>quoteLength</code>.</li>
- <li>Find the index position where <code>substring</code> appears in <code>quote</code>, and store that value in a  variable called <code>index</code>.</li>
- <li>Use a combination of the variables you have and available string properties/methods to trim down the original quote to "I do not like green eggs and ham.", and store it in a variable called <code>revisedQuote</code>.</li>
-</ol>
+1.  Retrieve the length of the quote, and store it in a variable called `quoteLength`.
+2.  Find the index position where `substring` appears in `quote`, and store that value in a  variable called `index`.
+3.  Use a combination of the variables you have and available string properties/methods to trim down the original quote to "I do not like green eggs and ham.", and store it in a variable called `revisedQuote`.
 
-<p>Try updating the live code below to recreate the finished example:</p>
+Try updating the live code below to recreate the finished example:
 
-<p>{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/strings/strings2.html", '100%', 400)}}</p>
+{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/strings/strings2.html", '100%', 400)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/strings/strings2-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/strings/strings2-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Strings_3">Strings 3</h2>
+## Strings 3
 
-<p>In the next string task, you are given the same quote that you ended up with in the previous task, but it is somewhat broken! We want you to fix and update it, like so:</p>
+In the next string task, you are given the same quote that you ended up with in the previous task, but it is somewhat broken! We want you to fix and update it, like so:
 
-<ol>
- <li>Change the casing to correct sentence case (all lowercase, except for upper case first letter). Store the new quote in a variable called <code>fixedQuote</code>.</li>
- <li>In <code>fixedQuote</code>, replace "green eggs and ham" with another food that you really don't like.</li>
- <li>There is one more small fix to do — add a full stop onto the end of the quote, and save the final version in a variable called <code>finalQuote</code>.</li>
-</ol>
+1.  Change the casing to correct sentence case (all lowercase, except for upper case first letter). Store the new quote in a variable called `fixedQuote`.
+2.  In `fixedQuote`, replace "green eggs and ham" with another food that you really don't like.
+3.  There is one more small fix to do — add a full stop onto the end of the quote, and save the final version in a variable called `finalQuote`.
 
-<p>Try updating the live code below to recreate the finished example:</p>
+Try updating the live code below to recreate the finished example:
 
-<p>{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/strings/strings3.html", '100%', 400)}}</p>
+{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/strings/strings3.html", '100%', 400)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/strings/strings3-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/strings/strings3-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Strings_4">Strings 4</h2>
+## Strings 4
 
-<p>In the final string task, we have given you the name of a theorem, two numeric values, and an incomplete string (the bits that need adding are marked with asterisks (<code>*</code>)). We want you to change the value of the string as follows:</p>
+In the final string task, we have given you the name of a theorem, two numeric values, and an incomplete string (the bits that need adding are marked with asterisks (`*`)). We want you to change the value of the string as follows:
 
-<ol>
- <li>Change it from a regular string literal into a template literal.</li>
- <li>Replace the four asterisks with four template literal placeholders. These should be:
-  <ol>
-   <li>The name of the theorem.</li>
-   <li>The two number values we have.</li>
-   <li>The length of the hypotenuse of a right-angled triangle, given that the two other side lengths are the same as the two values we have. You'll need to look up how to calculate this from what you have. Do the calculation inside the placeholder.</li>
-  </ol>
- </li>
-</ol>
+1.  Change it from a regular string literal into a template literal.
+2.  Replace the four asterisks with four template literal placeholders. These should be:
 
-<p>Try updating the live code below to recreate the finished example:</p>
+    1.  The name of the theorem.
+    2.  The two number values we have.
+    3.  The length of the hypotenuse of a right-angled triangle, given that the two other side lengths are the same as the two values we have. You'll need to look up how to calculate this from what you have. Do the calculation inside the placeholder.
 
-<p>{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/strings/strings4.html", '100%', 400)}}</p>
+Try updating the live code below to recreate the finished example:
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/strings/strings4-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/strings/strings4.html", '100%', 400)}}
 
-<h2 id="Assessment_or_further_help">Assessment or further help</h2>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/strings/strings4-download.html) to work in your own editor or in an online editor.
 
-<p>You can practice these examples in the Interactive Editors above.</p>
+## Assessment or further help
 
-<p>If you would like your work assessed, or are stuck and want to ask for help:</p>
+You can practice these examples in the Interactive Editors above.
 
-<ol>
- <li>Put your work into an online shareable editor such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a>. You can write the code yourself, or use the starting point files linked to in the above sections.</li>
- <li>Write a post asking for assessment and/or help at the <a href="https://discourse.mozilla.org/c/mdn/learn">MDN Discourse forum Learning category</a>. Your post should include:
-  <ul>
-   <li>A descriptive title such as "Assessment wanted for Strings 1 skill test".</li>
-   <li>Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.</li>
-   <li>A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.</li>
-   <li>A link to the actual task or assessment page, so we can find the question you want help with.</li>
-  </ul>
- </li>
-</ol>
+If you would like your work assessed, or are stuck and want to ask for help:
+
+1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
+2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+
+    - A descriptive title such as "Assessment wanted for Strings 1 skill test".
+    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
+    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
+    - A link to the actual task or assessment page, so we can find the question you want help with.

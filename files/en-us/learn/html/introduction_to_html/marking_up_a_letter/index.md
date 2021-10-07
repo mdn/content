@@ -10,108 +10,114 @@ tags:
   - Text
   - head
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Learn/HTML/Introduction_to_HTML")}}
 
-<div>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Learn/HTML/Introduction_to_HTML")}}</div>
-
-<p>We all learn to write a letter sooner or later; it is also a useful example to test our text formatting skills. In this assignment, you'll have a letter to mark up as a test for your HTML text formatting skills, as well as hyperlinks and proper use of the HTML <code>&lt;head&gt;</code> element.</p>
+We all learn to write a letter sooner or later; it is also a useful example to test our text formatting skills. In this assignment, you'll have a letter to mark up as a test for your HTML text formatting skills, as well as hyperlinks and proper use of the HTML `<head>` element.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>Before attempting this assessment you should have already worked through <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Getting started with HTML</a>, <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">What's in the head? Metadata in HTML</a>, <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML text fundamentals</a>, <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">Creating hyperlinks</a>, and <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting">Advanced text formatting</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>Test basic and advanced HTML text formatting, use of hyperlinks, and use of HTML &lt;head&gt;.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        Before attempting this assessment you should have already worked through
+        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+          >Getting started with HTML</a
+        >,
+        <a
+          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML"
+          >What's in the head? Metadata in HTML</a
+        >,
+        <a
+          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          >HTML text fundamentals</a
+        >,
+        <a
+          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
+          >Creating hyperlinks</a
+        >, and
+        <a
+          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting"
+          >Advanced text formatting</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        Test basic and advanced HTML text formatting, use of hyperlinks, and use
+        of HTML &#x3C;head>.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Starting_point">Starting point</h2>
+## Starting point
 
-<p>To begin, get the <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt">raw text you need to mark up</a>, and the <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/css.txt">CSS to style the HTML</a>. Create a new <code>.html</code> file using your text editor or use an online tool such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a> to complete the tasks.</p>
+To begin, get the [raw text you need to mark up](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt), and the [CSS to style the HTML](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/css.txt). Create a new `.html` file using your text editor or use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to complete the tasks.
 
-<div class="notecard note">
-<p><strong>Note:</strong> If you get stuck, then ask us for help. See the {{anch("Assessment or further help")}} section at the bottom of this page.</p>
-</div>
+> **Note:** If you get stuck, then ask us for help. See the {{anch("Assessment or further help")}} section at the bottom of this page.
 
-<h2 id="Project_brief">Project brief</h2>
+## Project brief
 
-<p>For this project, your task is to mark up a letter that needs to be hosted on a university intranet. The letter is a response from a research fellow to a prospective PhD student concerning their application to the university.</p>
+For this project, your task is to mark up a letter that needs to be hosted on a university intranet. The letter is a response from a research fellow to a prospective PhD student concerning their application to the university.
 
-<h3 id="Blockstructural_semantics">Block/structural semantics</h3>
+### Block/structural semantics
 
-<ul>
- <li>Use appropriate document structure including doctype, and {{htmlelement("html")}}, {{htmlelement("head")}} and {{htmlelement("body")}} elements.</li>
- <li>In general, the letter should be marked up as an organization of headings and  paragraphs, with the following exception. There is one top level heading (the "Re:" line) and three second level headings.</li>
- <li>Use an appropriate list type to mark up the semester start dates, study subjects, and exotic dances.</li>
- <li>Put the two addresses inside {{htmlelement("address")}} elements. Each line of the address should sit on a new line, but not be in a new paragraph.</li>
-</ul>
+- Use appropriate document structure including doctype, and {{htmlelement("html")}}, {{htmlelement("head")}} and {{htmlelement("body")}} elements.
+- In general, the letter should be marked up as an organization of headings and  paragraphs, with the following exception. There is one top level heading (the "Re:" line) and three second level headings.
+- Use an appropriate list type to mark up the semester start dates, study subjects, and exotic dances.
+- Put the two addresses inside {{htmlelement("address")}} elements. Each line of the address should sit on a new line, but not be in a new paragraph.
 
-<h3 id="Inline_semantics">Inline semantics</h3>
+### Inline semantics
 
-<ul>
- <li>The names of the sender and receiver (and <em>Tel</em> and <em>Email</em>) should be marked up with strong importance.</li>
- <li>The four dates in the document should have appropriate elements containing machine-readable dates.</li>
- <li>The first address and first date in the letter should have a class attribute value of <em>sender-column</em>. The CSS you'll add later will cause these to be right aligned, as it should be in the case in a classic letter layout.</li>
- <li>Mark up the following five acronyms/abbreviations in the main text of the letter — "PhD," "HTML," "CSS," "BC," and "Esq." — to provide expansions of each one.</li>
- <li>The six sub/superscripts should be marked up appropriately — in the chemical formulae,  and the numbers 103 and 104 (they should be 10 to the power of 3 and 4, respectively).</li>
- <li>Try to mark up at least two appropriate words in the text with strong importance/emphasis.</li>
- <li>There are two places where the letter should have a hyperlink. Add appropriate links with titles. For the location that the links point to, you may use http://example.com as the URL.</li>
- <li>Mark up the university motto quote and citation with appropriate elements.</li>
-</ul>
+- The names of the sender and receiver (and _Tel_ and _Email_) should be marked up with strong importance.
+- The four dates in the document should have appropriate elements containing machine-readable dates.
+- The first address and first date in the letter should have a class attribute value of _sender-column_. The CSS you'll add later will cause these to be right aligned, as it should be in the case in a classic letter layout.
+- Mark up the following five acronyms/abbreviations in the main text of the letter — "PhD," "HTML," "CSS," "BC," and "Esq." — to provide expansions of each one.
+- The six sub/superscripts should be marked up appropriately — in the chemical formulae,  and the numbers 103 and 104 (they should be 10 to the power of 3 and 4, respectively).
+- Try to mark up at least two appropriate words in the text with strong importance/emphasis.
+- There are two places where the letter should have a hyperlink. Add appropriate links with titles. For the location that the links point to, you may use http\://example.com as the URL.
+- Mark up the university motto quote and citation with appropriate elements.
 
-<h3 id="The_head_of_the_document">The head of the document</h3>
+### The head of the document
 
-<ul>
- <li>The character set of the document should be set as utf-8 using the appropriate meta tag.</li>
- <li>The author of the letter should be specified in an appropriate meta tag.</li>
- <li>The provided CSS should be included inside an appropriate tag.</li>
-</ul>
+- The character set of the document should be set as utf-8 using the appropriate meta tag.
+- The author of the letter should be specified in an appropriate meta tag.
+- The provided CSS should be included inside an appropriate tag.
 
-<h2 id="Hints_and_tips">Hints and tips</h2>
+## Hints and tips
 
-<ul>
- <li>Use the <a href="https://validator.w3.org/">W3C HTML validator</a> to validate your HTML. Award yourself bonus points if it validates.</li>
- <li>You don't need to know any CSS to do this assignment.  You just need to put the provided CSS inside an HTML element.</li>
-</ul>
+- Use the [W3C HTML validator](https://validator.w3.org/) to validate your HTML. Award yourself bonus points if it validates.
+- You don't need to know any CSS to do this assignment.  You just need to put the provided CSS inside an HTML element.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following screenshot shows an example of what the letter might look like after being marked up.</p>
+The following screenshot shows an example of what the letter might look like after being marked up.
 
-<p><img alt="Example" src="letter-update.png"></p>
+![Example](letter-update.png)
 
-<h2 id="Assessment_or_further_help">Assessment or further help</h2>
+## Assessment or further help
 
-<p>If you would like your work assessed, or if you get stuck and want to ask for help:</p>
+If you would like your work assessed, or if you get stuck and want to ask for help:
 
-<ol>
- <li>Put your work in an online shareable editor such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a>.</li>
- <li>Write a post asking for assessment and/or help at the <a href="https://discourse.mozilla.org/c/mdn/learn">MDN Discourse forum Learning category</a>. Your post should include:
-  <ul>
-   <li>A descriptive title such as "Assessment wanted for Marking up a letter".</li>
-   <li>Details of what you have already tried, and what you would like us to do (if you are stuck and need help, or if you want an assessment).</li>
-   <li>A link to the example you want evaluated or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good habit to develop. It's very hard to help someone with a coding problem without seeing their code.</li>
-   <li>A link to the actual task or assessment page, so we can read the exact wording of the relevant question(s).</li>
-  </ul>
- </li>
-</ol>
+1.  Put your work in an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
 
-<p>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Learn/HTML/Introduction_to_HTML")}}</p>
+    - A descriptive title such as "Assessment wanted for Marking up a letter".
+    - Details of what you have already tried, and what you would like us to do (if you are stuck and need help, or if you want an assessment).
+    - A link to the example you want evaluated or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good habit to develop. It's very hard to help someone with a coding problem without seeing their code.
+    - A link to the actual task or assessment page, so we can read the exact wording of the relevant question(s).
 
-<h2 id="In_this_module">In this module</h2>
+{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Learn/HTML/Introduction_to_HTML")}}
 
-<ul>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Getting started with HTML</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">What’s in the head? Metadata in HTML</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML text fundamentals</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">Creating hyperlinks</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting">Advanced text formatting</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure">Document and website structure</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">Debugging HTML</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter">Marking up a letter</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content">Structuring a page of content</a></li>
-</ul>
+## In this module
+
+- [Getting started with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
+- [What’s in the head? Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [HTML text fundamentals](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
+- [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
+- [Advanced text formatting](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
+- [Document and website structure](/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
+- [Debugging HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
+- [Marking up a letter](/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
+- [Structuring a page of content](/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

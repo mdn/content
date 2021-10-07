@@ -11,163 +11,164 @@ tags:
   - WebMechanics
   - troubleshooting
 ---
-<p>In this article we go over various troubleshooting steps for a website and some basic actions to take in order to solve these issues.</p>
+In this article we go over various troubleshooting steps for a website and some basic actions to take in order to solve these issues.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>You need to know how to <a href="/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server">upload files to a web server</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>You will learn how to diagnose and resolve some basic issues you can run into with your website.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        You need to know how to
+        <a
+          href="/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server"
+          >upload files to a web server</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        You will learn how to diagnose and resolve some basic issues you can run
+        into with your website.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>So you've published your website online? Very good! But are you sure it works properly?</p>
+So you've published your website online? Very good! But are you sure it works properly?
 
-<p>A distant web server often behaves quite differently from a local one, so it's a good idea to test your website once it's online. You might be surprised at how many problems come up: images don't show up, pages don't load or load slowly, and so on. Most of the time it's no big deal, just a simple mistake or an issue with your web hosting configuration.</p>
+A distant web server often behaves quite differently from a local one, so it's a good idea to test your website once it's online. You might be surprised at how many problems come up: images don't show up, pages don't load or load slowly, and so on. Most of the time it's no big deal, just a simple mistake or an issue with your web hosting configuration.
 
-<p>Let's see how to diagnose and solve those problems.</p>
+Let's see how to diagnose and solve those problems.
 
-<h2 id="Active_Learning">Active Learning</h2>
+## Active Learning
 
-<p><em>There is no active learning available yet. <a href="/en-US/docs/MDN/Contribute/Getting_started">Please, consider contributing</a>.</em></p>
+_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Contribute/Getting_started)._
 
-<h2 id="Dig_deeper">Dig deeper</h2>
+## Dig deeper
 
-<h3 id="Test_in_your_browser">Test in your browser</h3>
+### Test in your browser
 
-<p>If you want to know whether your website works correctly, the first thing to do is fire up your browser and go to the page you want to test.</p>
+If you want to know whether your website works correctly, the first thing to do is fire up your browser and go to the page you want to test.
 
-<h4 id="Uh-oh_where's_the_image">Uh-oh, where's the image?</h4>
+#### Uh-oh, where's the image?
 
-<p>Let's look at our personal website, <code>http://demozilla.examplehostingprovider.net/</code>. It's not showing the image we expected!</p>
+Let's look at our personal website, `http://demozilla.examplehostingprovider.net/`. It's not showing the image we expected!
 
-<p><img alt="Oops, the ‘unicorn’ image is missing" src="image-missing.png"></p>
+![Oops, the ‘unicorn’ image is missing](image-missing.png)
 
-<p>Open Firefox's Network tool (<strong>Tools ➤ Web Developer ➤ Network</strong>) and reload the page:</p>
+Open Firefox's Network tool (**Tools ➤ Web Developer ➤ Network**) and reload the page:
 
-<p><img alt="The image has a 404 error" src="error404.png"></p>
+![The image has a 404 error](error404.png)
 
-<p>There's the problem, that "404" at the bottom. "404" means "resource not found", and that's why we didn't see the image.</p>
+There's the problem, that "404" at the bottom. "404" means "resource not found", and that's why we didn't see the image.
 
-<h4 id="HTTP_statuses">HTTP statuses</h4>
+#### HTTP statuses
 
-<p>Servers respond with a status message whenever they receive a request. Here are the most common statuses:</p>
+Servers respond with a status message whenever they receive a request. Here are the most common statuses:
 
-<dl>
- <dt><strong>200: OK</strong></dt>
- <dd>The resource you asked for was delivered.</dd>
- <dt><strong>301: Moved permanently</strong></dt>
- <dd>The resource has moved to a new location. You won't see this much in your browser, but it's good to know about "301" since search engines use this information a lot to update their indexes.</dd>
- <dt><strong>304: Not modified</strong></dt>
- <dd>The file has not changed since the last time you asked for it, so your browser can display the version from its cache, resulting in faster response times and more efficient use of bandwidth.</dd>
- <dt><strong>403: Forbidden</strong></dt>
- <dd>You aren't allowed to display the resource. Usually it has to do with a configuration mistake (e.g. your hosting provider forgot to give you access rights to a directory).</dd>
- <dt><strong>404: Not found</strong></dt>
- <dd>Self-explanatory. We'll discuss how to solve this below.</dd>
- <dt><strong>500: Internal server error</strong></dt>
- <dd>Something went wrong on the server. For instance, maybe the server-side language ({{Glossary("PHP")}}, .Net, etc.) stopped working, or the web server itself has a configuration problem. Usually it's best to resort to your hosting provider's support team.</dd>
- <dt><strong>503: Service unavailable</strong></dt>
- <dd>Usually resulting from a short term system overload. The server has some sort of problem. Try again in a little while.</dd>
-</dl>
+- **200: OK**
+  - : The resource you asked for was delivered.
+- **301: Moved permanently**
+  - : The resource has moved to a new location. You won't see this much in your browser, but it's good to know about "301" since search engines use this information a lot to update their indexes.
+- **304: Not modified**
+  - : The file has not changed since the last time you asked for it, so your browser can display the version from its cache, resulting in faster response times and more efficient use of bandwidth.
+- **403: Forbidden**
+  - : You aren't allowed to display the resource. Usually it has to do with a configuration mistake (e.g. your hosting provider forgot to give you access rights to a directory).
+- **404: Not found**
+  - : Self-explanatory. We'll discuss how to solve this below.
+- **500: Internal server error**
+  - : Something went wrong on the server. For instance, maybe the server-side language ({{Glossary("PHP")}}, .Net, etc.) stopped working, or the web server itself has a configuration problem. Usually it's best to resort to your hosting provider's support team.
+- **503: Service unavailable**
+  - : Usually resulting from a short term system overload. The server has some sort of problem. Try again in a little while.
 
-<p>As beginners checking our (simple) website, we'll deal most often with 200, 304, 403, and 404.</p>
+As beginners checking our (simple) website, we'll deal most often with 200, 304, 403, and 404.
 
-<h4 id="Fixing_the_404">Fixing the 404</h4>
+#### Fixing the 404
 
-<p>So what went wrong?</p>
+So what went wrong?
 
-<p><img alt="Le list of images in our project" src="demozilla-images-list.png"></p>
+![Le list of images in our project](demozilla-images-list.png)
 
-<p>At first glance, the image we asked for seems to be in the right place... but the Network tool reported a "404". It turns out that we made a typo in our HTML code: <code>unicorn_pics.png</code> rather than <code>unicorn_pic.png</code>. So correct the typo in your code editor by changing the image's <code>src</code> attribute:</p>
+At first glance, the image we asked for seems to be in the right place... but the Network tool reported a "404". It turns out that we made a typo in our HTML code: `unicorn_pics.png` rather than `unicorn_pic.png`. So correct the typo in your code editor by changing the image's `src` attribute:
 
-<p><img alt="Deleting the ‘s’" src="code-correct.png"></p>
+![Deleting the ‘s’](code-correct.png)
 
-<p>Save, <a href="/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server">push to the server</a>, and reload the page in your browser:</p>
+Save, [push to the server](/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server), and reload the page in your browser:
 
-<p><img alt="The image loads correctly in the browser" src="image-corrected.png"></p>
+![The image loads correctly in the browser](image-corrected.png)
 
-<p>There you go! Let's look at the {{Glossary("HTTP")}} statuses again:</p>
+There you go! Let's look at the {{Glossary("HTTP")}} statuses again:
 
-<ul>
- <li><strong>200</strong> for <code>/</code> and for <code>unicorn_pic.png</code> means that we succeeded in reloading the page and the image.</li>
- <li><strong>304</strong> for <code>basic.css</code> means that this file has not changed since the last request, so the browser can use the file in its cache rather than receiving a fresh copy.</li>
-</ul>
+- **200** for `/` and for `unicorn_pic.png` means that we succeeded in reloading the page and the image.
+- **304** for `basic.css` means that this file has not changed since the last request, so the browser can use the file in its cache rather than receiving a fresh copy.
 
-<p>So we fixed the error and learned a few HTTP statuses along the way!</p>
+So we fixed the error and learned a few HTTP statuses along the way!
 
-<h3 id="Frequent_errors">Frequent errors</h3>
+### Frequent errors
 
-<p>The most frequent errors that we find are these:</p>
+The most frequent errors that we find are these:
 
-<h4 id="Typos_in_the_address">Typos in the address</h4>
+#### Typos in the address
 
-<p>We wanted to type <code>http://demozilla.examplehostingprovider.net/</code> but typed too fast and forgot an “l”:</p>
+We wanted to type `http://demozilla.examplehostingprovider.net/` but typed too fast and forgot an “l”:
 
-<p><img alt="Address unreachable" src="cannot-find-server.png"></p>
+![Address unreachable](cannot-find-server.png)
 
-<p>The address cannot be found. Indeed.</p>
+The address cannot be found. Indeed.
 
-<h4 id="404_errors">404 errors</h4>
+#### 404 errors
 
-<p>Many times the error just results just from a typo, but sometimes maybe you either forgot to upload a resource or you lost your network connection while you were uploading your resources. First check the spelling and accuracy of the file path, and if there's still a problem, upload your files again. That will likely fix the problem.</p>
+Many times the error just results just from a typo, but sometimes maybe you either forgot to upload a resource or you lost your network connection while you were uploading your resources. First check the spelling and accuracy of the file path, and if there's still a problem, upload your files again. That will likely fix the problem.
 
-<h4 id="JavaScript_errors">JavaScript errors</h4>
+#### JavaScript errors
 
-<p>Someone (possibly you) added a script to the page and made a mistake. This will not prevent the page from loading but you will feel something went wrong.</p>
+Someone (possibly you) added a script to the page and made a mistake. This will not prevent the page from loading but you will feel something went wrong.
 
-<p>Open the console (<strong>Tools ➤ Web developer ➤ Web Console</strong>) and reload the page:</p>
+Open the console (**Tools ➤ Web developer ➤ Web Console**) and reload the page:
 
-<p><img alt="A Javascript error is shown in the Console" src="js-error.png"></p>
+![A Javascript error is shown in the Console](js-error.png)
 
-<p>In this example, we learn (quite clearly) what the error is, and we can go fix it (we will cover JavaScript in <a href="/en-US/docs/Learn/JavaScript">another series </a>of articles).</p>
+In this example, we learn (quite clearly) what the error is, and we can go fix it (we will cover JavaScript in [another series ](/en-US/docs/Learn/JavaScript)of articles).
 
-<h3 id="More_things_to_check">More things to check</h3>
+### More things to check
 
-<p>We have listed a few simple ways to check that your website works properly, as well as the most common errors you may run across and how to fix them. You can also test if your page meets these criteria:</p>
+We have listed a few simple ways to check that your website works properly, as well as the most common errors you may run across and how to fix them. You can also test if your page meets these criteria:
 
-<h4 id="How's_the_performance">How's the performance?</h4>
+#### How's the performance?
 
-<p>Does the page load fast enough? Resources like <a href="https://www.webpagetest.org/">WebPageTest.org</a> or browser add-ons like <a href="https://addons.mozilla.org/en-US/firefox/addon/yslow/">YSlow</a> can tell you a few interesting things:</p>
+Does the page load fast enough? Resources like [WebPageTest.org](https://www.webpagetest.org/) or browser add-ons like [YSlow](https://addons.mozilla.org/en-US/firefox/addon/yslow/) can tell you a few interesting things:
 
-<p><img alt="Yslow diagnostics" src="yslow-diagnostics.png"></p>
+![Yslow diagnostics](yslow-diagnostics.png)
 
-<p>Grades go from A to F. Our page is just small and meets most criteria. But we can already note it would have been better to use a {{Glossary("CDN")}}. That doesn't matter very much when we're only serving one image, but it would be critical for a high-bandwidth website serving many thousands of images.</p>
+Grades go from A to F. Our page is just small and meets most criteria. But we can already note it would have been better to use a {{Glossary("CDN")}}. That doesn't matter very much when we're only serving one image, but it would be critical for a high-bandwidth website serving many thousands of images.
 
-<h4 id="Is_the_server_responsive_enough">Is the server responsive enough?</h4>
+#### Is the server responsive enough?
 
-<p><code>ping</code> is a useful shell tool that tests the domain name you provide and tells you if the server's responding or not:</p>
+`ping` is a useful shell tool that tests the domain name you provide and tells you if the server's responding or not:
 
-<pre>$ ping mozilla.org
-PING mozilla.org (63.245.215.20): 56 data bytes
-64 bytes from 63.245.215.20: icmp_seq=0 ttl=44 time=148.741 ms
-64 bytes from 63.245.215.20: icmp_seq=1 ttl=44 time=148.541 ms
-64 bytes from 63.245.215.20: icmp_seq=2 ttl=44 time=148.734 ms
-64 bytes from 63.245.215.20: icmp_seq=3 ttl=44 time=147.857 ms
-^C
---- mozilla.org ping statistics ---
-4 packets transmitted, 4 packets received, 0.0% packet loss
-round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms</pre>
+    $ ping mozilla.org
+    PING mozilla.org (63.245.215.20): 56 data bytes
+    64 bytes from 63.245.215.20: icmp_seq=0 ttl=44 time=148.741 ms
+    64 bytes from 63.245.215.20: icmp_seq=1 ttl=44 time=148.541 ms
+    64 bytes from 63.245.215.20: icmp_seq=2 ttl=44 time=148.734 ms
+    64 bytes from 63.245.215.20: icmp_seq=3 ttl=44 time=147.857 ms
+    ^C
+    --- mozilla.org ping statistics ---
+    4 packets transmitted, 4 packets received, 0.0% packet loss
+    round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms
 
-<p>Just keep in mind a handy keyboard shortcut: <strong>Ctrl+C</strong>.  Ctrl+C sends an “interrupt” signal to the runtime and tells it to stop.  If you don't stop the runtime, <code>ping</code> will ping the server indefinitely.</p>
+Just keep in mind a handy keyboard shortcut: **Ctrl+C**.  Ctrl+C sends an “interrupt” signal to the runtime and tells it to stop.  If you don't stop the runtime, `ping` will ping the server indefinitely.
 
-<h3 id="A_simple_checklist">A simple checklist</h3>
+### A simple checklist
 
-<ul>
- <li>Check for 404s</li>
- <li>Make sure all webpages are behaving as you expect</li>
- <li>Check your website in several browsers to make sure it renders consistently</li>
-</ul>
+- Check for 404s
+- Make sure all webpages are behaving as you expect
+- Check your website in several browsers to make sure it renders consistently
 
-<h2 id="Next_steps">Next steps</h2>
+## Next steps
 
-<p>Congratulations, your website is up and running for anyone to visit. That's a huge achievement. Now, you can start digging deeper into various subjects.</p>
+Congratulations, your website is up and running for anyone to visit. That's a huge achievement. Now, you can start digging deeper into various subjects.
 
-<ul>
- <li>Since people can come to your website from all over the world, you should consider making it <a href="/en-US/docs/Learn/Common_questions/What_is_accessibility">accessible to everybody</a>.</li>
- <li>Is the design of your website a bit too rough? It's time to <a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_works">learn more about CSS</a>.</li>
-</ul>
+- Since people can come to your website from all over the world, you should consider making it [accessible to everybody](/en-US/docs/Learn/Common_questions/What_is_accessibility).
+- Is the design of your website a bit too rough? It's time to [learn more about CSS](/en-US/docs/Learn/CSS/First_steps/How_CSS_works).

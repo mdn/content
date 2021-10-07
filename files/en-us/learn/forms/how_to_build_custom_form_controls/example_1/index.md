@@ -6,26 +6,29 @@ tags:
   - Guide
   - HTML
 ---
-<p>This is the first example of code that explains <a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">how to build a custom form widget</a>.</p>
+This is the first example of code that explains [how to build a custom form widget](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls).
 
-<h2 id="Basic_state">Basic state</h2>
+## Basic state
 
-<h3 id="Basic_state_HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="select"&gt;
-  &lt;span class="value"&gt;Cherry&lt;/span&gt;
-  &lt;ul class="optList hidden"&gt;
-    &lt;li class="option"&gt;Cherry&lt;/li&gt;
-    &lt;li class="option"&gt;Lemon&lt;/li&gt;
-    &lt;li class="option"&gt;Banana&lt;/li&gt;
-    &lt;li class="option"&gt;Strawberry&lt;/li&gt;
-    &lt;li class="option"&gt;Apple&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="select">
+  <span class="value">Cherry</span>
+  <ul class="optList hidden">
+    <li class="option">Cherry</li>
+    <li class="option">Lemon</li>
+    <li class="option">Banana</li>
+    <li class="option">Strawberry</li>
+    <li class="option">Apple</li>
+  </ul>
+</div>
+```
 
-<h3 id="Basic_state_CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">/* --------------- */
+```css
+/* --------------- */
 /* Required Styles */
 /* --------------- */
 
@@ -137,30 +140,33 @@ tags:
   background: #000;
   color: #FFFFFF;
 }
-</pre>
+```
 
-<h3 id="Result_for_basic_state">Result for basic state</h3>
+### Result for basic state
 
-<div>{{ EmbedLiveSample('Basic_state', 120, 130) }}</div>
+{{ EmbedLiveSample('Basic_state', 120, 130) }}
 
-<h2 id="Active_state">Active state</h2>
+## Active state
 
-<h3 id="Active_state_HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html">&lt;div class="select active"&gt;
-  &lt;span class="value"&gt;Cherry&lt;/span&gt;
-  &lt;ul class="optList hidden"&gt;
-    &lt;li class="option"&gt;Cherry&lt;/li&gt;
-    &lt;li class="option"&gt;Lemon&lt;/li&gt;
-    &lt;li class="option"&gt;Banana&lt;/li&gt;
-    &lt;li class="option"&gt;Strawberry&lt;/li&gt;
-    &lt;li class="option"&gt;Apple&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="select active">
+  <span class="value">Cherry</span>
+  <ul class="optList hidden">
+    <li class="option">Cherry</li>
+    <li class="option">Lemon</li>
+    <li class="option">Banana</li>
+    <li class="option">Strawberry</li>
+    <li class="option">Apple</li>
+  </ul>
+</div>
+```
 
-<h3 id="Active_state_CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">/* --------------- */
+```css
+/* --------------- */
 /* Required Styles */
 /* --------------- */
 
@@ -270,30 +276,34 @@ tags:
 .select .highlight {
   background: #000;
   color: #FFFFFF;
-}</pre>
+}
+```
 
-<h3 id="Result_for_active_state">Result for active state</h3>
+### Result for active state
 
-<div>{{ EmbedLiveSample('Active_state', 120, 130) }}</div>
+{{ EmbedLiveSample('Active_state', 120, 130) }}
 
-<h2 id="Open_state">Open state</h2>
+## Open state
 
-<h3 id="Open_state_HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html">&lt;div class="select active"&gt;
-  &lt;span class="value"&gt;Cherry&lt;/span&gt;
-  &lt;ul class="optList"&gt;
-    &lt;li class="option highlight"&gt;Cherry&lt;/li&gt;
-    &lt;li class="option"&gt;Lemon&lt;/li&gt;
-    &lt;li class="option"&gt;Banana&lt;/li&gt;
-    &lt;li class="option"&gt;Strawberry&lt;/li&gt;
-    &lt;li class="option"&gt;Apple&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="select active">
+  <span class="value">Cherry</span>
+  <ul class="optList">
+    <li class="option highlight">Cherry</li>
+    <li class="option">Lemon</li>
+    <li class="option">Banana</li>
+    <li class="option">Strawberry</li>
+    <li class="option">Apple</li>
+  </ul>
+</div>
+```
 
-<h3 id="Open_state_CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">/* --------------- */
+```css
+/* --------------- */
 /* Required Styles */
 /* --------------- */
 
@@ -404,8 +414,9 @@ tags:
 .select .highlight {
   background: #000;
   color: #FFF;
-}</pre>
+}
+```
 
-<h3 id="Result_for_open_state">Result for open state</h3>
+### Result for open state
 
-<div>{{ EmbedLiveSample('Open_state', 120, 130) }}</div>
+{{ EmbedLiveSample('Open_state', 120, 130) }}

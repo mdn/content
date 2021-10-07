@@ -7,15 +7,16 @@ tags:
   - Node
   - server-side
 ---
-<p>This subarticle shows how to define a page to delete <code>Author</code> objects.</p>
+This subarticle shows how to define a page to delete `Author` objects.
 
-<p>As discussed in the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms#form_design">form design</a> section, our strategy will be to only allow deletion of objects that are not referenced by other objects (in this case that means we won't allow an <code>Author</code> to be deleted if it is referenced by a <code>Book</code>). In terms of implementation this means that the form needs to confirm that there are no associated books before the author is deleted. If there are associated books, it should display them, and state that they must be deleted before the <code>Author</code> object can be deleted.</p>
+As discussed in the [form design](/en-US/docs/Learn/Server-side/Express_Nodejs/forms#form_design) section, our strategy will be to only allow deletion of objects that are not referenced by other objects (in this case that means we won't allow an `Author` to be deleted if it is referenced by a `Book`). In terms of implementation this means that the form needs to confirm that there are no associated books before the author is deleted. If there are associated books, it should display them, and state that they must be deleted before the `Author` object can be deleted.
 
-<h2 id="Controller—get_route">Controller—get route</h2>
+## Controller—get route
 
-<p>Open <strong>/controllers/authorController.js</strong>. Find the exported <code>author_delete_get()</code> controller method and replace it with the following code.</p>
+Open **/controllers/authorController.js**. Find the exported `author_delete_get()` controller method and replace it with the following code.
 
-<pre class="brush: js">// Display Author delete form on GET.
+```js
+// Display Author delete form on GET.
 exports.author_delete_get = function(req, res, next) {
 
     async.parallel({
@@ -34,25 +35,27 @@ exports.author_delete_get = function(req, res, next) {
         res.render('author_delete', { title: 'Delete Author', author: results.author, author_books: results.authors_books } );
     });
 
-};</pre>
+};
+```
 
-<p>The controller gets the id of the <code>Author</code> instance to be deleted from the URL parameter (<code>req.params.id</code>). It uses the <code>async.parallel()</code> method to get the author record and all associated books in parallel. When both operations have completed it renders the <code><strong>author_delete</strong></code><strong>.pug</strong> view, passing variables for the <code>title</code>, <code>author</code>, and <code>author_books</code>.</p>
+The controller gets the id of the `Author` instance to be deleted from the URL parameter (`req.params.id`). It uses the `async.parallel()` method to get the author record and all associated books in parallel. When both operations have completed it renders the **`author_delete`\*\***.pug\*\* view, passing variables for the `title`, `author`, and `author_books`.
 
-<div class="notecard note">
-<p><strong>Note:</strong> If  <code>findById()</code> returns no results the author is not in the database. In this case there is nothing to delete, so we immediately render the list of all authors. </p>
+> **Note:** If  `findById()` returns no results the author is not in the database. In this case there is nothing to delete, so we immediately render the list of all authors.
+>
+> ```js
+> }, function(err, results) {
+>     if (err) { return next(err); }
+>     if (results.author==null) { // No results.
+>         res.redirect('/catalog/authors')
+>     }
+> ```
 
-<pre class="brush: js">}, function(err, results) {
-    if (err) { return next(err); }
-    if (results.author==null) { // No results.
-        res.redirect('/catalog/authors')
-    }</pre>
-</div>
+## Controller—post route
 
-<h2 id="Controller—post_route">Controller—post route</h2>
+Find the exported `author_delete_post()` controller method, and replace it with the following code.
 
-<p>Find the exported <code>author_delete_post()</code> controller method, and replace it with the following code.</p>
-
-<pre class="brush: js">// Handle Author delete on POST.
+```js
+// Handle Author delete on POST.
 exports.author_delete_post = function(req, res, next) {
 
     async.parallel({
@@ -65,7 +68,7 @@ exports.author_delete_post = function(req, res, next) {
     }, function(err, results) {
         if (err) { return next(err); }
         // Success
-        if (results.authors_books.length &gt; 0) {
+        if (results.authors_books.length > 0) {
             // Author has books. Render in same way as for GET route.
             res.render('author_delete', { title: 'Delete Author', author: results.author, author_books: results.authors_books } );
             return;
@@ -79,19 +82,19 @@ exports.author_delete_post = function(req, res, next) {
             })
         }
     });
-};</pre>
+};
+```
 
-<p>First we validate that an id has been provided (this is sent via the form body parameters, rather than using the version in the URL). Then we get the author and their associated books in the same way as for the <code>GET</code> route. If there are no books then we delete the author object and redirect to the list of all authors. If there are still books then we just re-render the form, passing in the author and list of books to be deleted.</p>
+First we validate that an id has been provided (this is sent via the form body parameters, rather than using the version in the URL). Then we get the author and their associated books in the same way as for the `GET` route. If there are no books then we delete the author object and redirect to the list of all authors. If there are still books then we just re-render the form, passing in the author and list of books to be deleted.
 
-<div class="notecard note">
-<p><strong>Note:</strong> We could check if the call to <code>findById()</code> returns any result, and if not,  immediately render the list of all authors.  We've left the code as it is above for brevity (it will still return the list of authors if the id is not found, but this will happen after <code>findByIdAndRemove()</code>).</p>
-</div>
+> **Note:** We could check if the call to `findById()` returns any result, and if not,  immediately render the list of all authors.  We've left the code as it is above for brevity (it will still return the list of authors if the id is not found, but this will happen after `findByIdAndRemove()`).
 
-<h2 id="View">View</h2>
+## View
 
-<p>Create <strong>/views/author_delete.pug</strong> and copy in the text below.</p>
+Create **/views/author_delete.pug** and copy in the text below.
 
-<pre class="brush: plain">extends layout
+```plain
+extends layout
 
 block content
   h1 #{title}: #{author.name}
@@ -118,52 +121,47 @@ block content
       div.form-group
         input#authorid.form-control(type='hidden',name='authorid', required='true', value=author._id )
 
-      button.btn.btn-primary(type='submit') Delete</pre>
+      button.btn.btn-primary(type='submit') Delete
+```
 
-<p>The view extends the layout template, overriding the block named <code>content</code>. At the top it displays the author details. It then includes a conditional statement based on the number of <code><strong>author_books</strong></code> (the <code>if</code> and <code>else</code> clauses).</p>
+The view extends the layout template, overriding the block named `content`. At the top it displays the author details. It then includes a conditional statement based on the number of **`author_books`** (the `if` and `else` clauses).
 
-<ul>
- <li>If there <em>are</em> books associated with the author then the page lists the books and states that these must be deleted before this <code>Author</code> may be deleted.</li>
- <li>If there <em>are no</em> books then the page displays a confirmation prompt. If the <strong>Delete</strong> button is clicked then the author id is sent to the server in a <code>POST</code> request and that author's record will be deleted.</li>
-</ul>
+- If there _are_ books associated with the author then the page lists the books and states that these must be deleted before this `Author` may be deleted.
+- If there _are no_ books then the page displays a confirmation prompt. If the **Delete** button is clicked then the author id is sent to the server in a `POST` request and that author's record will be deleted.
 
-<h2 id="Add_a_delete_control">Add a delete control</h2>
+## Add a delete control
 
-<p>Next we will add a <strong>Delete</strong> control to the <em>Author detail</em> view (the detail page is a good place from which to delete a record).</p>
+Next we will add a **Delete** control to the _Author detail_ view (the detail page is a good place from which to delete a record).
 
-<div class="notecard note">
-<p><strong>Note:</strong> In a full implementation the control would be made visible only to authorized users. However at this point we haven't got an authorization system in place!</p>
-</div>
+> **Note:** In a full implementation the control would be made visible only to authorized users. However at this point we haven't got an authorization system in place!
 
-<p>Open the <strong>author_detail.pug</strong> view and add the following lines at the bottom.</p>
+Open the **author_detail.pug** view and add the following lines at the bottom.
 
-<pre class="brush: plain">hr
+```plain
+hr
 p
-  a(href=author.url+'/delete') Delete author</pre>
+  a(href=author.url+'/delete') Delete author
+```
 
-<p>The control should now appear as a link, as shown below on the <em>Author detail</em> page.</p>
+The control should now appear as a link, as shown below on the _Author detail_ page.
 
-<p><img alt="" src="locallibary_express_author_detail_delete.png"></p>
+![](locallibary_express_author_detail_delete.png)
 
-<h2 id="What_does_it_look_like">What does it look like?</h2>
+## What does it look like?
 
-<p>Run the application and open your browser to <a href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>. Then select the <em>All authors</em> link, and then select a particular author. Finally select the <em>Delete author</em> link.</p>
+Run the application and open your browser to <http://localhost:3000/>. Then select the _All authors_ link, and then select a particular author. Finally select the _Delete author_ link.
 
-<p>If the author has no books, you'll be presented with a page like this. After pressing delete, the server will delete the author and redirect to the author list.</p>
+If the author has no books, you'll be presented with a page like this. After pressing delete, the server will delete the author and redirect to the author list.
 
-<p><img alt="" src="locallibary_express_author_delete_nobooks.png"></p>
+![](locallibary_express_author_delete_nobooks.png)
 
-<p>If the author does have books, then you'll be presented with a view like the following. You can then delete the books from their detail pages (once that code is implemented!).</p>
+If the author does have books, then you'll be presented with a view like the following. You can then delete the books from their detail pages (once that code is implemented!).
 
-<p><img alt="" src="locallibary_express_author_delete_withbooks.png"></p>
+![](locallibary_express_author_delete_withbooks.png)
 
-<div class="notecard note">
-<p><strong>Note:</strong> The other pages for deleting objects can be implemented in much the same way. We've left that as a challenge.</p>
-</div>
+> **Note:** The other pages for deleting objects can be implemented in much the same way. We've left that as a challenge.
 
-<h2 id="Next_steps">Next steps</h2>
+## Next steps
 
-<ul>
- <li>Return to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a>.</li>
- <li>Proceed to the final subarticle of part 6: <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form">Update Book form</a>.</li>
-</ul>
+- Return to [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms).
+- Proceed to the final subarticle of part 6: [Update Book form](/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form).

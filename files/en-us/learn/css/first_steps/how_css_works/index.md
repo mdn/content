@@ -7,150 +7,174 @@ tags:
   - DOM
   - Learn
 ---
-<p>{{LearnSidebar}}<br>
- {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}</p>
+{{LearnSidebar}}
+{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
 
-<p>We have learned the basics of CSS, what it is for and how to write simple stylesheets. In this lesson we will take a look at how a browser takes CSS and HTML and turns that into a webpage.</p>
+We have learned the basics of CSS, what it is for and how to write simple stylesheets. In this lesson we will take a look at how a browser takes CSS and HTML and turns that into a webpage.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, <a href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, and HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>.)</td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To understand the basics of how CSS and HTML are parsed by the browser, and what happens when a browser encounters CSS it does not understand.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        Basic computer literacy,
+        <a
+          href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          >basic software installed</a
+        >, basic knowledge of
+        <a
+          href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          >working with files</a
+        >, and HTML basics (study
+        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          >Introduction to HTML</a
+        >.)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        To understand the basics of how CSS and HTML are parsed by the browser,
+        and what happens when a browser encounters CSS it does not understand.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="How_does_CSS_actually_work">How does CSS actually work?</h2>
+## How does CSS actually work?
 
-<p>When a browser displays a document, it must combine the document's content with its style information. It processes the document in a number of stages, which we've listed below. Bear in mind that this is a very simplified version of what happens when a browser loads a webpage, and that different browsers will handle the process in different ways. But this is roughly what happens.</p>
+When a browser displays a document, it must combine the document's content with its style information. It processes the document in a number of stages, which we've listed below. Bear in mind that this is a very simplified version of what happens when a browser loads a webpage, and that different browsers will handle the process in different ways. But this is roughly what happens.
 
-<ol>
- <li>The browser loads the HTML (e.g. receives it from the network).</li>
- <li>It converts the {{Glossary("HTML")}} into a {{Glossary("DOM")}} (<em>Document Object Model</em>). The DOM represents the document in the computer's memory. The DOM is explained in a bit more detail in the next section.</li>
- <li>The browser then fetches most of the resources that are linked to by the HTML document, such as embedded images and videos ... and linked CSS! JavaScript is handled a bit later on in the process, and we won't talk about it here to keep things simpler.</li>
- <li>The browser parses the fetched CSS, and sorts the different rules by their selector types into different "buckets", e.g. element, class, ID, and so on. Based on the selectors it finds, it works out which rules should be applied to which nodes in the DOM, and attaches style to them as required (this intermediate step is called a render tree).</li>
- <li>The render tree is laid out in the structure it should appear in after the rules have been applied to it.</li>
- <li>The visual display of the page is shown on the screen (this stage is called painting).</li>
-</ol>
+1.  The browser loads the HTML (e.g. receives it from the network).
+2.  It converts the {{Glossary("HTML")}} into a {{Glossary("DOM")}} (_Document Object Model_). The DOM represents the document in the computer's memory. The DOM is explained in a bit more detail in the next section.
+3.  The browser then fetches most of the resources that are linked to by the HTML document, such as embedded images and videos ... and linked CSS! JavaScript is handled a bit later on in the process, and we won't talk about it here to keep things simpler.
+4.  The browser parses the fetched CSS, and sorts the different rules by their selector types into different "buckets", e.g. element, class, ID, and so on. Based on the selectors it finds, it works out which rules should be applied to which nodes in the DOM, and attaches style to them as required (this intermediate step is called a render tree).
+5.  The render tree is laid out in the structure it should appear in after the rules have been applied to it.
+6.  The visual display of the page is shown on the screen (this stage is called painting).
 
-<p>The following diagram also offers a simple view of the process.</p>
+The following diagram also offers a simple view of the process.
 
-<p><img alt="Rendering process overview" src="rendering.svg"></p>
+![Rendering process overview](rendering.svg)
 
-<h2 id="About_the_DOM">About the DOM</h2>
+## About the DOM
 
-<p>A DOM has a tree-like structure. Each element, attribute, and piece of text in the markup language becomes a {{Glossary("Node/DOM","DOM node")}} in the tree structure. The nodes are defined by their relationship to other DOM nodes. Some elements are parents of child nodes, and child nodes have siblings.</p>
+A DOM has a tree-like structure. Each element, attribute, and piece of text in the markup language becomes a {{Glossary("Node/DOM","DOM node")}} in the tree structure. The nodes are defined by their relationship to other DOM nodes. Some elements are parents of child nodes, and child nodes have siblings.
 
-<p>Understanding the DOM helps you design, debug and maintain your CSS because the DOM is where your CSS and the document's content meet up. When you start working with browser DevTools you will be navigating the DOM as you select items in order to see which rules apply.</p>
+Understanding the DOM helps you design, debug and maintain your CSS because the DOM is where your CSS and the document's content meet up. When you start working with browser DevTools you will be navigating the DOM as you select items in order to see which rules apply.
 
-<h2 id="A_real_DOM_representation">A real DOM representation</h2>
+## A real DOM representation
 
-<p>Rather than a long, boring explanation, let's look at an example to see how a real HTML snippet is converted into a DOM.</p>
+Rather than a long, boring explanation, let's look at an example to see how a real HTML snippet is converted into a DOM.
 
-<p>Take the following HTML code:</p>
+Take the following HTML code:
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   Let's use:
-  &lt;span&gt;Cascading&lt;/span&gt;
-  &lt;span&gt;Style&lt;/span&gt;
-  &lt;span&gt;Sheets&lt;/span&gt;
-&lt;/p&gt;
-</pre>
+  <span>Cascading</span>
+  <span>Style</span>
+  <span>Sheets</span>
+</p>
+```
 
-<p>In the DOM, the node corresponding to our <code>&lt;p&gt;</code> element is a parent. Its children are a text node and the three nodes corresponding to our <code>&lt;span&gt;</code> elements. The <code>SPAN</code> nodes are also parents, with text nodes as their children:</p>
+In the DOM, the node corresponding to our `<p>` element is a parent. Its children are a text node and the three nodes corresponding to our `<span>` elements. The `SPAN` nodes are also parents, with text nodes as their children:
 
-<pre>P
-├─ "Let's use:"
-├─ SPAN
-|  └─ "Cascading"
-├─ SPAN
-|  └─ "Style"
-└─ SPAN
-   └─ "Sheets"
-</pre>
+    P
+    ├─ "Let's use:"
+    ├─ SPAN
+    |  └─ "Cascading"
+    ├─ SPAN
+    |  └─ "Style"
+    └─ SPAN
+       └─ "Sheets"
 
-<p>This is how a browser interprets the previous HTML snippet —it renders the above DOM tree and then outputs it in the browser like so:</p>
+This is how a browser interprets the previous HTML snippet —it renders the above DOM tree and then outputs it in the browser like so:
 
-<p>{{EmbedLiveSample('A_real_DOM_representation', '100%', 55)}}</p>
+{{EmbedLiveSample('A_real_DOM_representation', '100%', 55)}}
 
-<pre class="brush: css hidden">p {margin:0;}</pre>
+```css hidden
+p {margin:0;}
+```
 
-<h2 id="Applying_CSS_to_the_DOM">Applying CSS to the DOM</h2>
+## Applying CSS to the DOM
 
-<p>Let's say we added some CSS to our document, to style it. Again, the HTML is as follows:</p>
+Let's say we added some CSS to our document, to style it. Again, the HTML is as follows:
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   Let's use:
-  &lt;span&gt;Cascading&lt;/span&gt;
-  &lt;span&gt;Style&lt;/span&gt;
-  &lt;span&gt;Sheets&lt;/span&gt;
-&lt;/p&gt;</pre>
+  <span>Cascading</span>
+  <span>Style</span>
+  <span>Sheets</span>
+</p>
+```
 
-<p>Let's suppose we apply the following CSS to it:</p>
+Let's suppose we apply the following CSS to it:
 
-<pre class="brush: css">span {
+```css
+span {
   border: 1px solid black;
   background-color: lime;
-}</pre>
+}
+```
 
-<p>The browser will parse the HTML and create a DOM from it, then parse the CSS. Since the only rule available in the CSS has a <code>span</code> selector, the browser will be able to sort the CSS very quickly! It will apply that rule to each one of the three <code>&lt;span&gt;</code>s, then paint the final visual representation to the screen.</p>
+The browser will parse the HTML and create a DOM from it, then parse the CSS. Since the only rule available in the CSS has a `span` selector, the browser will be able to sort the CSS very quickly! It will apply that rule to each one of the three `<span>`s, then paint the final visual representation to the screen.
 
-<p>The updated output is as follows:</p>
+The updated output is as follows:
 
-<p>{{EmbedLiveSample('Applying_CSS_to_the_DOM', '100%', 55)}}</p>
+{{EmbedLiveSample('Applying_CSS_to_the_DOM', '100%', 55)}}
 
-<p>In our <a href="/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS">Debugging CSS</a> article in the next module we will be using browser DevTools to debug CSS problems, and will learn more about how the browser interprets CSS.</p>
+In our [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS) article in the next module we will be using browser DevTools to debug CSS problems, and will learn more about how the browser interprets CSS.
 
-<h2 id="What_happens_if_a_browser_encounters_CSS_it_doesnt_understand">What happens if a browser encounters CSS it doesn't understand?</h2>
+## What happens if a browser encounters CSS it doesn't understand?
 
-<p><a href="/en-US/docs/Learn/CSS/First_steps/What_is_CSS#browser_support">In an earlier lesson</a> I mentioned that browsers do not all implement new CSS at the same time. In addition, many people are not using the latest version of a browser. Given that CSS is being developed all the time, and is therefore ahead of what browsers can recognize, you might wonder what happens if a browser encounters a CSS selector or declaration it doesn't recognize.</p>
+[In an earlier lesson](/en-US/docs/Learn/CSS/First_steps/What_is_CSS#browser_support) I mentioned that browsers do not all implement new CSS at the same time. In addition, many people are not using the latest version of a browser. Given that CSS is being developed all the time, and is therefore ahead of what browsers can recognize, you might wonder what happens if a browser encounters a CSS selector or declaration it doesn't recognize.
 
-<p>The answer is that it does nothing, and just moves on to the next bit of CSS!</p>
+The answer is that it does nothing, and just moves on to the next bit of CSS!
 
-<p>If a browser is parsing your rules, and encounters a property or value that it doesn't understand, it ignores it and moves on to the next declaration. It will do this if you have made an error and misspelled a property or value, or if the property or value is just too new and the browser doesn't yet support it.</p>
+If a browser is parsing your rules, and encounters a property or value that it doesn't understand, it ignores it and moves on to the next declaration. It will do this if you have made an error and misspelled a property or value, or if the property or value is just too new and the browser doesn't yet support it.
 
-<p>Similarly, if a browser encounters a selector that it doesn't understand, it will just ignore the whole rule and move on to the next one.</p>
+Similarly, if a browser encounters a selector that it doesn't understand, it will just ignore the whole rule and move on to the next one.
 
-<p>In the example below I have used the British English spelling for color, which makes that property invalid as it is not recognized. So my paragraph has not been colored blue. All of the other CSS have been applied however; only the invalid line is ignored.</p>
+In the example below I have used the British English spelling for color, which makes that property invalid as it is not recognized. So my paragraph has not been colored blue. All of the other CSS have been applied however; only the invalid line is ignored.
 
-<pre class="brush: html">&lt;p&gt; I want this text to be large, bold and blue.&lt;/p&gt;</pre>
+```html
+<p> I want this text to be large, bold and blue.</p>
+```
 
-<pre class="brush: css">p {
+```css
+p {
   font-weight: bold;
   colour: blue; /* incorrect spelling of the color property */
   font-size: 200%;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('What_happens_if_a_browser_encounters_CSS_it_doesnt_understand', '100%', 200)}}</p>
+{{EmbedLiveSample('What_happens_if_a_browser_encounters_CSS_it_doesnt_understand', '100%', 200)}}
 
-<p>This behavior is very useful. It means that you can use new CSS as an enhancement, knowing that no error will occur if it is not understood — the browser will either get the new feature or not. This enables basic fallback styling.</p>
+This behavior is very useful. It means that you can use new CSS as an enhancement, knowing that no error will occur if it is not understood — the browser will either get the new feature or not. This enables basic fallback styling.
 
-<p>This works particularly well when you want to use a value that is quite new and not supported everywhere. For example, some older browsers do not support <code>calc()</code> as a value. I might give a fallback width for a box in pixels, then go on to give a width with a <code>calc()</code> value of <code>100% - 50px</code>. Old browsers will use the pixel version, ignoring the line about <code>calc()</code> as they don't understand it. New browsers will interpret the line using pixels, but then override it with the line using <code>calc()</code> as that line appears later in the cascade.</p>
+This works particularly well when you want to use a value that is quite new and not supported everywhere. For example, some older browsers do not support `calc()` as a value. I might give a fallback width for a box in pixels, then go on to give a width with a `calc()` value of `100% - 50px`. Old browsers will use the pixel version, ignoring the line about `calc()` as they don't understand it. New browsers will interpret the line using pixels, but then override it with the line using `calc()` as that line appears later in the cascade.
 
-<pre class="brush: css">.box {
+```css
+.box {
   width: 500px;
   width: calc(100% - 50px);
-}</pre>
+}
+```
 
-<p>We will look at many more ways to support varying browsers in later lessons.</p>
+We will look at many more ways to support varying browsers in later lessons.
 
-<h2 id="And_finally">And finally</h2>
+## And finally
 
-<p>You've nearly finished this module; we only have one more thing to do. In the next article you'll <a href="/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge">use your new knowledge</a> to restyle an example, testing out some CSS in the process.</p>
+You've nearly finished this module; we only have one more thing to do. In the next article you'll [use your new knowledge](/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge) to restyle an example, testing out some CSS in the process.
 
-<p>{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}</p>
+{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
 
-<h2 id="In_this_module">In this module</h2>
+## In this module
 
-<ol>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/What_is_CSS">What is CSS?</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/Getting_started">Getting started with CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured">How CSS is structured</a></li>
- <li>How CSS works</li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge">Using your new knowledge</a></li>
-</ol>
+1.  [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
+2.  [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
+3.  [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4.  How CSS works
+5.  [Using your new knowledge](/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

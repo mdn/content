@@ -6,60 +6,54 @@ tags:
   - Example
   - Guide
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}
 
-<p>The aim of this task is to get you working with the CSS {{CSSxRef("position")}} property and values covered in our lesson on <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">Position</a>. You will be working through two small tasks which use different elements of the material you have just covered.</p>
+The aim of this task is to get you working with the CSS {{CSSxRef("position")}} property and values covered in our lesson on [Position](/en-US/docs/Learn/CSS/CSS_layout/Positioning). You will be working through two small tasks which use different elements of the material you have just covered.
 
-<div class="notecard note">
-<p><strong>Note:</strong> You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a> to work on the tasks.<br>
- <br>
- If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.</p>
-</div>
+> **Note:** You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+>
+> If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
 
-<h2 id="Positioning_One">Positioning One</h2>
+## Positioning One
 
-<p>In this task you need to position the item with a class of target to the top and right of the container, which has the 5px grey border.</p>
+In this task you need to position the item with a class of target to the top and right of the container, which has the 5px grey border.
 
-<p><img alt="The green box is at the top right of a container with a grey border." src="position-task1.png"></p>
+![The green box is at the top right of a container with a grey border.](position-task1.png)
 
-<p>Try updating the live code below to recreate the finished example:</p>
+Try updating the live code below to recreate the finished example:
 
-<p>{{EmbedGHLiveSample("css-examples/learn/tasks/position/position1.html", '100%', 1000)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/tasks/position/position1.html", '100%', 1000)}}
 
-<p>As an extra challenge, can you change the target to display underneath the text?</p>
+As an extra challenge, can you change the target to display underneath the text?
 
-<div class="callout">
-<p>For assessment or further work purposes, <a href="https://github.com/mdn/css-examples/blob/master/learn/tasks/position/position1-download.html">download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/position/position1-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Position_Two">Position Two</h2>
+## Position Two
 
-<p>In the below example if you scroll the box the sidebar scrolls with the content. Change it so that the sidebar stays in place and only the content scrolls.</p>
+In the below example if you scroll the box the sidebar scrolls with the content. Change it so that the sidebar stays in place and only the content scrolls.
 
-<p><img alt="The content is scrolled but the sidebar has stayed in place." src="position-task2.png"></p>
+![The content is scrolled but the sidebar has stayed in place.](position-task2.png)
 
-<p>Try updating the live code below to recreate the finished example:</p>
+Try updating the live code below to recreate the finished example:
 
-<p>{{EmbedGHLiveSample("css-examples/learn/tasks/position/position2.html", '100%', 1000)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/tasks/position/position2.html", '100%', 1000)}}
 
-<div class="callout">
-<p>For assessment or further work purposes, <a href="https://github.com/mdn/css-examples/blob/master/learn/tasks/position/position2-download.html">download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/position/position2-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Assessment_or_further_help">Assessment or further help</h2>
+## Assessment or further help
 
-<p>You can practice these examples in the Interactive Editors mentioned above.</p>
+You can practice these examples in the Interactive Editors mentioned above.
 
-<p>If you would like your work assessed, or are stuck and want to ask for help:</p>
+If you would like your work assessed, or are stuck and want to ask for help:
 
-<ol>
- <li>Put your work into an online shareable editor such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a>. You can write the code yourself, or use the starting point files linked to in the above sections.</li>
- <li>Write a post asking for assessment and/or help at the <a class="external external-icon" href="https://discourse.mozilla.org/c/mdn/learn" rel="noopener">MDN Discourse forum Learning category</a>. Your post should include:
-  <ul>
-   <li>A descriptive title such as "Assessment wanted for Position skill test 1".</li>
-   <li>Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.</li>
-   <li>A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.</li>
-   <li>A link to the actual task or assessment page, so we can find the question you want help with.</li>
-  </ul>
- </li>
-</ol>
+1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
+2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+
+    - A descriptive title such as "Assessment wanted for Position skill test 1".
+    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
+    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
+    - A link to the actual task or assessment page, so we can find the question you want help with.

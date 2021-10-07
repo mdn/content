@@ -8,116 +8,126 @@ tags:
   - Video
   - Web Performance
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/Multimedia", "Learn/Performance/javascript_performance", "Learn/Performance")}}
 
-<div>{{PreviousMenuNext("Learn/Performance/Multimedia", "Learn/Performance/javascript_performance", "Learn/Performance")}}</div>
-
-<p>As we learned in the previous section, media, namely images and video, account for over 70% of the bytes downloaded for the average website. We have already taken a look at optimizing images. <span class="seoSummary">This article looks at optimizing video to improve web performance.</span></p>
+As we learned in the previous section, media, namely images and video, account for over 70% of the bytes downloaded for the average website. We have already taken a look at optimizing images. This article looks at optimizing video to improve web performance.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, <a href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, and basic knowledge of <a href="/en-US/docs/Learn/Getting_started_with_the_web">client-side web technologies</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To learn about the various video formats, their impact on performance, and how to reduce video impact on overall page load time while serving the smallest video file size based on each browsers file type support.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        Basic computer literacy,
+        <a
+          href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          >basic software installed</a
+        >, and basic knowledge of
+        <a href="/en-US/docs/Learn/Getting_started_with_the_web"
+          >client-side web technologies</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        To learn about the various video formats, their impact on performance,
+        and how to reduce video impact on overall page load time while serving
+        the smallest video file size based on each browsers file type support.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Why_optimize_your_multimedia">Why optimize your multimedia?</h2>
+## Why optimize your multimedia?
 
-<p>For the average website, <a href="https://discuss.httparchive.org/t/state-of-the-web-top-image-optimization-strategies/1367">25% of bandwidth comes from video</a>. Optimizing video has the potential for very large bandwidth savings that translate into better website performance.</p>
+For the average website, [25% of bandwidth comes from video](https://discuss.httparchive.org/t/state-of-the-web-top-image-optimization-strategies/1367). Optimizing video has the potential for very large bandwidth savings that translate into better website performance.
 
-<h2 id="Optimizing_video_delivery">Optimizing video delivery</h2>
+## Optimizing video delivery
 
-<p>It's best to<a href="#compress"> compress all video</a>, <a href="#omptimize">optimize <code>&lt;source&gt;</code> order</a>, set <a href="/en-US/docs/Learn/Performance/Multimedia#video_autoplay">autoplay</a>, <a href="#muted">remove audio from muted video</a>, <a href="/en-US/docs/Learn/Performance/Multimedia#video_preload">optimize video preload</a>, and <a href="/en-US/docs/Learn/Performance/Multimedia#consider_streaming">consider streaming</a> the video. The sections below describe each of these optimization techniques.</p>
+It's best to[ compress all video](#compress), [optimize `<source>` order](#omptimize), set [autoplay](/en-US/docs/Learn/Performance/Multimedia#video_autoplay), [remove audio from muted video](#muted), [optimize video preload](/en-US/docs/Learn/Performance/Multimedia#video_preload), and [consider streaming](/en-US/docs/Learn/Performance/Multimedia#consider_streaming) the video. The sections below describe each of these optimization techniques.
 
-<h3 id="Compress_all_videos">Compress all videos</h3>
+### Compress all videos
 
-<p>Most video compression work compares adjacent frames within a video, with the intent of removing detail that is identical in both frames. Compress the video and export to multiple video formats, including WebM, MPEG-4/H.264, and Ogg/Theora.</p>
+Most video compression work compares adjacent frames within a video, with the intent of removing detail that is identical in both frames. Compress the video and export to multiple video formats, including WebM, MPEG-4/H.264, and Ogg/Theora.
 
-<p>Your video editing software probably has a feature to reduce file size. If not, there are online tools, such as <a href="https://www.ffmpeg.org/">FFmpeg</a> (discussed in section below), that encode, decode, convert, and perform other optimization functions.</p>
+Your video editing software probably has a feature to reduce file size. If not, there are online tools, such as [FFmpeg](https://www.ffmpeg.org/) (discussed in section below), that encode, decode, convert, and perform other optimization functions.
 
-<h3 id="Optimize_&lt;source&gt;_order">Optimize <code>&lt;source&gt;</code> order</h3>
+### Optimize `<source>` order
 
-<p>Order video source from smallest to largest.  For example, given video compressions in three different formats at 10MB, 12MB, and 13MB, declare the smallest first and the largest last:</p>
+Order video source from smallest to largest.  For example, given video compressions in three different formats at 10MB, 12MB, and 13MB, declare the smallest first and the largest last:
 
-<pre>&lt;video width="400" height="300" controls="controls"&gt;
-  &lt;!-- WebM: 10 MB --&gt;
-  &lt;source src="video.webm" type="video/webm" /&gt;
-  &lt;!-- MPEG-4/H.264: 12 MB --&gt;
-  &lt;source src="video.mp4" type="video/mp4" /&gt;
-  &lt;!-- Ogg/Theora: 13 MB --&gt;
-  &lt;source src="video.ogv" type="video/ogv" /&gt;
-&lt;/video&gt;</pre>
+    <video width="400" height="300" controls="controls">
+      <!-- WebM: 10 MB -->
+      <source src="video.webm" type="video/webm" />
+      <!-- MPEG-4/H.264: 12 MB -->
+      <source src="video.mp4" type="video/mp4" />
+      <!-- Ogg/Theora: 13 MB -->
+      <source src="video.ogv" type="video/ogv" />
+    </video>
 
-<p>The browser downloads the first format it understands. The goal is to offer smaller versions ahead of larger versions. With the smallest version, make sure that the most compressed video still looks good. There are some compression algorithms that can make video look (bad) like an animated GIF. While a 128 Kb video may seem like it could provide a better user experience than a 10 MB download, a grainy GIF-like video may reflect poorly on the brand or project.</p>
+The browser downloads the first format it understands. The goal is to offer smaller versions ahead of larger versions. With the smallest version, make sure that the most compressed video still looks good. There are some compression algorithms that can make video look (bad) like an animated GIF. While a 128 Kb video may seem like it could provide a better user experience than a 10 MB download, a grainy GIF-like video may reflect poorly on the brand or project.
 
-<p>See <a href="https://caniuse.com/#search=video">CanIUse.com</a> for current browser support of video and other media types.  </p>
+See [CanIUse.com](https://caniuse.com/#search=video) for current browser support of video and other media types.
 
-<h3 id="Video_autoplay">Video autoplay</h3>
+### Video autoplay
 
-<p>To ensure that a looping background video autoplays, you must add several attributes to the video tag: <code>autoplay</code>, <code>muted</code>, and <code>playsinline.</code></p>
+To ensure that a looping background video autoplays, you must add several attributes to the video tag: `autoplay`, `muted`, and `playsinline.`
 
-<pre>&lt;video autoplay="" loop="" muted="true" playsinline="" src="backgroundvideo.mp4"&gt;</pre>
+    <video autoplay="" loop="" muted="true" playsinline="" src="backgroundvideo.mp4">
 
-<p>While the <code>loop</code> and <code>autoplay</code> make sense for a looping and autoplaying video, the <code>muted</code> attribute is required for autoplay in mobile browsers.</p>
+While the `loop` and `autoplay` make sense for a looping and autoplaying video, the `muted` attribute is required for autoplay in mobile browsers.
 
-<p><code>Playsinline</code> is required for mobile Safari, allowing videos to play without forcing fullscreen mode.</p>
+`Playsinline` is required for mobile Safari, allowing videos to play without forcing fullscreen mode.
 
-<h3 id="Remove_audio_from_muted_hero_videos">Remove audio from muted hero videos</h3>
+### Remove audio from muted hero videos
 
-<p>For hero-video or other video without audio, removing audio is smart.</p>
+For hero-video or other video without audio, removing audio is smart.
 
-<pre>&lt;video autoplay="" loop="" muted="true" playsinline="" id="hero-video"&gt;
-  &lt;source src="banner_video.webm"
-          type='video/webm; codecs="vp8, vorbis"'&gt;
-  &lt;source src="web_banner.mp4" type="video/mp4"&gt;
-&lt;/video&gt;</pre>
+    <video autoplay="" loop="" muted="true" playsinline="" id="hero-video">
+      <source src="banner_video.webm"
+              type='video/webm; codecs="vp8, vorbis"'>
+      <source src="web_banner.mp4" type="video/mp4">
+    </video>
 
-<p>This hero-video code (above) is common to conference websites and corporate home pages. It includes a video that is auto-playing, looping, and muted. There are no controls, so there is no way to hear audio. The audio is often empty, but still present, and still using bandwidth. There is no reason to serve audio with video that is always muted. <strong>Removing audio can save 20% of the bandwidth.</strong></p>
+This hero-video code (above) is common to conference websites and corporate home pages. It includes a video that is auto-playing, looping, and muted. There are no controls, so there is no way to hear audio. The audio is often empty, but still present, and still using bandwidth. There is no reason to serve audio with video that is always muted. **Removing audio can save 20% of the bandwidth.**
 
-<p>Depending on your choice of software, you might be able to remove audio during export and compression. If not, a free utility called <a href="https://www.ffmpeg.org/">FFmpeg</a> can do it for you. This is the FFmpeg command string to remove audio:</p>
+Depending on your choice of software, you might be able to remove audio during export and compression. If not, a free utility called [FFmpeg](https://www.ffmpeg.org/) can do it for you. This is the FFmpeg command string to remove audio:
 
-<pre><a href="https://www.ffmpeg.org/">ffmpeg</a> -i original.mp4 -an -c:v copy audioFreeVersion.mp4</pre>
+    ffmpeg -i original.mp4 -an -c:v copy audioFreeVersion.mp4
 
-<h3 id="Video_preload">Video preload</h3>
+### Video preload
 
-<p>The preload attribute has three available options: <code>auto</code>|<code>metadata</code>|<code>none</code>. The default setting is <code>metadata</code>. These settings control how much of a video file downloads with page load. You can save data by deferring download for less popular videos.</p>
+The preload attribute has three available options: `auto`|`metadata`|`none`. The default setting is `metadata`. These settings control how much of a video file downloads with page load. You can save data by deferring download for less popular videos.
 
-<p>Setting <code>preload="none"</code> results in none of the video being downloaded until playback. It delays startup, but offers significant data savings for videos with a low probability of playback.</p>
+Setting `preload="none"` results in none of the video being downloaded until playback. It delays startup, but offers significant data savings for videos with a low probability of playback.
 
-<p>Offering more modest bandwidth savings, setting <code>preload="metadata"</code> may download up to 3% of the video on page load. This is a useful option for some small or moderately sized files.</p>
+Offering more modest bandwidth savings, setting `preload="metadata"` may download up to 3% of the video on page load. This is a useful option for some small or moderately sized files.
 
-<p>Changing the setting to <code>auto</code> tells the browser to automatically download the entire video. Do this only when playback is very likely. Otherwise, it wastes a lot of bandwidth.<br>
-  </p>
+Changing the setting to `auto` tells the browser to automatically download the entire video. Do this only when playback is very likely. Otherwise, it wastes a lot of bandwidth.
 
-<h3 id="Consider_streaming">Consider streaming</h3>
 
-<p><a href="https://www.smashingmagazine.com/2018/10/video-playback-on-the-web-part-2/">Video streaming allows the proper video size and bandwidth</a> (based on network speed) to be delivered to the end user.  Similar to responsive images, the correct size video is delivered to the browser, ensuring fast video startup, low buffering, and optimized playback.</p>
 
-<h2 id="Conclusion">Conclusion</h2>
+### Consider streaming
 
-<p>Optimizing video has the potential to significantly improve website performance. Video files are relatively large compared to other website files, and always worthy of attention. This article explains how to optimize website video through reducing file size, with (HTML) download settings, and with streaming.</p>
+[Video streaming allows the proper video size and bandwidth](https://www.smashingmagazine.com/2018/10/video-playback-on-the-web-part-2/) (based on network speed) to be delivered to the end user.  Similar to responsive images, the correct size video is delivered to the browser, ensuring fast video startup, low buffering, and optimized playback.
 
-<p>{{PreviousMenuNext("Learn/Performance/Multimedia", "Learn/Performance/javascript_performance", "Learn/Performance")}}</p>
+## Conclusion
 
-<h2 id="In_this_module">In this module</h2>
+Optimizing video has the potential to significantly improve website performance. Video files are relatively large compared to other website files, and always worthy of attention. This article explains how to optimize website video through reducing file size, with (HTML) download settings, and with streaming.
 
-<ul>
- <li><a href="/en-US/docs/Learn/Performance/why_web_performance">The "why" of web performance</a></li>
- <li><a href="/en-US/docs/Learn/Performance/What_is_web_performance">What is web performance?</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Perceived_performance">How do users perceive performance?</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Measuring_performance">Measuring performance</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Multimedia">Multimedia: images</a></li>
- <li><a href="/en-US/docs/Learn/Performance/video">Multimedia: video</a></li>
- <li><a href="/en-US/docs/Learn/Performance/JavaScript">JavaScript performance best practices</a>.</li>
- <li><a href="/en-US/docs/Learn/Performance/HTML">HTML performance features</a></li>
- <li><a href="/en-US/docs/Learn/Performance/CSS">CSS performance features</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Fonts">Fonts and performance</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Mobile">Mobile performance</a></li>
- <li><a href="/en-US/docs/Learn/Performance/business_case_for_performance">Focusing on performance</a></li>
-</ul>
+{{PreviousMenuNext("Learn/Performance/Multimedia", "Learn/Performance/javascript_performance", "Learn/Performance")}}
+
+## In this module
+
+- [The "why" of web performance](/en-US/docs/Learn/Performance/why_web_performance)
+- [What is web performance?](/en-US/docs/Learn/Performance/What_is_web_performance)
+- [How do users perceive performance?](/en-US/docs/Learn/Performance/Perceived_performance)
+- [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
+- [Multimedia: images](/en-US/docs/Learn/Performance/Multimedia)
+- [Multimedia: video](/en-US/docs/Learn/Performance/video)
+- [JavaScript performance best practices](/en-US/docs/Learn/Performance/JavaScript).
+- [HTML performance features](/en-US/docs/Learn/Performance/HTML)
+- [CSS performance features](/en-US/docs/Learn/Performance/CSS)
+- [Fonts and performance](/en-US/docs/Learn/Performance/Fonts)
+- [Mobile performance](/en-US/docs/Learn/Performance/Mobile)
+- [Focusing on performance](/en-US/docs/Learn/Performance/business_case_for_performance)

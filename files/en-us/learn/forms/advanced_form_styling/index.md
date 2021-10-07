@@ -10,131 +10,137 @@ tags:
   - HTML
   - Web
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
 
-<div>{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}</div>
-
-<p>In this article, we will see what can be done with CSS to style the types of form control that are more difficult to style — the "bad" and "ugly" categories. As we saw <a href="/en-US/docs/Learn/Forms/Styling_web_forms"> in the previous article</a>, text fields and buttons are perfectly easy to style; now we will dig into styling the bits that are more problematic.</p>
+In this article, we will see what can be done with CSS to style the types of form control that are more difficult to style — the "bad" and "ugly" categories. As we saw [in the previous article](/en-US/docs/Learn/Forms/Styling_web_forms), text fields and buttons are perfectly easy to style; now we will dig into styling the bits that are more problematic.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, and a basic understanding of <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML</a> and <a href="/en-US/docs/Learn/CSS/First_steps">CSS</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To understand what parts of forms are hard to style, and why; to learn what can be done to customize them.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        Basic computer literacy, and a basic understanding of
+        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML</a> and
+        <a href="/en-US/docs/Learn/CSS/First_steps">CSS</a>.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        To understand what parts of forms are hard to style, and why; to learn
+        what can be done to customize them.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>To recap what we said in the previous article, we have:</p>
+To recap what we said in the previous article, we have:
 
-<p><strong>The bad</strong>: Some elements are more difficult to style, requiring more complex CSS or some more specific tricks:</p>
+**The bad**: Some elements are more difficult to style, requiring more complex CSS or some more specific tricks:
 
-<ul>
- <li>Checkboxes and radio buttons</li>
- <li><code><a href="/en-US/docs/Web/HTML/Element/input/search">&lt;input type="search"&gt;</a></code></li>
-</ul>
+- Checkboxes and radio buttons
+- [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
 
-<p><strong>The ugly</strong>: Some elements can't be styled thoroughly using CSS. These include:</p>
+**The ugly**: Some elements can't be styled thoroughly using CSS. These include:
 
-<ul>
- <li>Elements involved in creating dropdown widgets, including {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} and {{HTMLElement("datalist")}}.</li>
- <li><code><a href="/en-US/docs/Web/HTML/Element/input/color">&lt;input type="color"&gt;</a></code></li>
- <li>Date-related controls such as <code><a href="/en-US/docs/Web/HTML/Element/input/datetime-local">&lt;input type="datetime-local"&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/HTML/Element/input/range">&lt;input type="range"&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/HTML/Element/input/file">&lt;input type="file"&gt;</a></code></li>
- <li>{{HTMLElement("progress")}} and {{HTMLElement("meter")}}</li>
-</ul>
+- Elements involved in creating dropdown widgets, including {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} and {{HTMLElement("datalist")}}.
+- [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color)
+- Date-related controls such as [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local)
+- [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)
+- [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file)
+- {{HTMLElement("progress")}} and {{HTMLElement("meter")}}
 
-<p>Let's first talk about the <code><a href="/en-US/docs/Web/CSS/appearance">appearance</a></code> property, which is pretty useful for making all of the above more stylable.</p>
+Let's first talk about the [`appearance`](/en-US/docs/Web/CSS/appearance) property, which is pretty useful for making all of the above more stylable.
 
-<h2 id="appearance_controlling_OS-level_styling">appearance: controlling OS-level styling</h2>
+## appearance: controlling OS-level styling
 
-<p>In the previous article we said that historically, styling of web form controls was largely taken from the underlying operating system, which is part of the problem with customizing the look of these controls.</p>
+In the previous article we said that historically, styling of web form controls was largely taken from the underlying operating system, which is part of the problem with customizing the look of these controls.
 
-<p>The {{cssxref("appearance")}} property was created as a way to control what OS- or system-level styling was applied to web form controls. Unfortunately, the behavior of this property's original implementations was very different across browsers, making it not very usable. Newer implementations are more consistent in behavior; interestingly enough, both Chromium-based browsers (Chrome, Opera, Edge), Safari, and Firefox all support the <code>-webkit-</code>  prefixed version (<code>-webkit-appearance</code>). Firefox settled on this because web developers mostly seemed to be using the <code>-webkit-</code> prefixed version, so it was better for compatibility.</p>
+The {{cssxref("appearance")}} property was created as a way to control what OS- or system-level styling was applied to web form controls. Unfortunately, the behavior of this property's original implementations was very different across browsers, making it not very usable. Newer implementations are more consistent in behavior; interestingly enough, both Chromium-based browsers (Chrome, Opera, Edge), Safari, and Firefox all support the `-webkit-`  prefixed version (`-webkit-appearance`). Firefox settled on this because web developers mostly seemed to be using the `-webkit-` prefixed version, so it was better for compatibility.
 
-<p>If you look at the reference page you'll see a lot of different possible values listed for <code>-webkit-appearance</code>, however by far the most helpful value, and probably the only one you'll use, is <code>none</code>. This stops any control you apply it to from using system-level styling, as much as possible, and lets you build up the styles yourself using CSS.</p>
+If you look at the reference page you'll see a lot of different possible values listed for `-webkit-appearance`, however by far the most helpful value, and probably the only one you'll use, is `none`. This stops any control you apply it to from using system-level styling, as much as possible, and lets you build up the styles yourself using CSS.
 
-<p>For example, let's take the following controls:</p>
+For example, let's take the following controls:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;p&gt;
-    &lt;label for="search"&gt;search: &lt;/label&gt;
-    &lt;input id="search" name="search" type="search"&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;label for="text"&gt;text: &lt;/label&gt;
-    &lt;input id="text" name="text" type="text"&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;label for="date"&gt;date: &lt;/label&gt;
-    &lt;input id="date" name="date" type="datetime-local"&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;label for="radio"&gt;radio: &lt;/label&gt;
-    &lt;input id="radio" name="radio" type="radio"&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;label for="checkbox"&gt;checkbox: &lt;/label&gt;
-    &lt;input id="checkbox" name="checkbox" type="checkbox"&gt;
-  &lt;/p&gt;
-  &lt;p&gt;&lt;input type="submit" value="submit"&gt;&lt;/p&gt;
-  &lt;p&gt;&lt;input type="button" value="button"&gt;&lt;/p&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <p>
+    <label for="search">search: </label>
+    <input id="search" name="search" type="search">
+  </p>
+  <p>
+    <label for="text">text: </label>
+    <input id="text" name="text" type="text">
+  </p>
+  <p>
+    <label for="date">date: </label>
+    <input id="date" name="date" type="datetime-local">
+  </p>
+  <p>
+    <label for="radio">radio: </label>
+    <input id="radio" name="radio" type="radio">
+  </p>
+  <p>
+    <label for="checkbox">checkbox: </label>
+    <input id="checkbox" name="checkbox" type="checkbox">
+  </p>
+  <p><input type="submit" value="submit"></p>
+  <p><input type="button" value="button"></p>
+</form>
+```
 
-<p>Applying the following CSS to them removes system-level styling.</p>
+Applying the following CSS to them removes system-level styling.
 
-<pre class="brush: css">input {
+```css
+input {
   -webkit-appearance: none;
   appearance: none;
-}</pre>
+}
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> It is a good idea to always include both declarations — prefixed and unprefixed — when using a prefixed property. Prefixed usually means "work in progress", so in the future browser vendors may come to a consensus to drop the prefix. The above code is good for future-proofing against such an eventuality.</p>
-</div>
+> **Note:** It is a good idea to always include both declarations — prefixed and unprefixed — when using a prefixed property. Prefixed usually means "work in progress", so in the future browser vendors may come to a consensus to drop the prefix. The above code is good for future-proofing against such an eventuality.
 
-<p>The following live example shows you what they look like in your system — default on the left, and with the above CSS applied on the right (<a href="https://mdn.github.io/learning-area/html/forms/styling-examples/appearence-tester.html">find it here also</a> if you want to test it on other systems).</p>
+The following live example shows you what they look like in your system — default on the left, and with the above CSS applied on the right ([find it here also](https://mdn.github.io/learning-area/html/forms/styling-examples/appearence-tester.html) if you want to test it on other systems).
 
-<p>{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/appearence-tester.html", '100%', 400)}}</p>
+{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/appearence-tester.html", '100%', 400)}}
 
-<p>In most cases, the effect is to remove the stylized border, which makes CSS styling a bit easier, but isn't really essential. In a couple of cases — search and radio buttons/checkboxes, it becomes way more useful. We'll look at those now.</p>
+In most cases, the effect is to remove the stylized border, which makes CSS styling a bit easier, but isn't really essential. In a couple of cases — search and radio buttons/checkboxes, it becomes way more useful. We'll look at those now.
 
-<h3 id="Taming_search_boxes">Taming search boxes</h3>
+### Taming search boxes
 
-<p><code><a href="/en-US/docs/Web/HTML/Element/input/search">&lt;input type="search"&gt;</a></code> is basically just a text input, so why is <code>appearance: none;</code> useful here? The answer is that in Chromium-based browsers on macOS, search boxes have some styling restrictions — you can't adjust their <code>height</code> or <code>font-size</code> freely, for example. This is because non-macOS <a href="https://www.wired.com/2013/04/blink/">Chrome browsers no longer use the WebKit rendering engine</a>, which enabled Aqua appearance by default for certain form controls. With Aqua enabled, some form controls are not <a href="https://webkit.org/blog/28/buttons/">scalable</a>. </p>
+[`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search) is basically just a text input, so why is `appearance: none;` useful here? The answer is that in Chromium-based browsers on macOS, search boxes have some styling restrictions — you can't adjust their `height` or `font-size` freely, for example. This is because non-macOS [Chrome browsers no longer use the WebKit rendering engine](https://www.wired.com/2013/04/blink/), which enabled Aqua appearance by default for certain form controls. With Aqua enabled, some form controls are not [scalable](https://webkit.org/blog/28/buttons/).
 
-<p>This can be fixed using our friend <code>appearance: none;</code>, which disables the default Aqua appearance:</p>
+This can be fixed using our friend `appearance: none;`, which disables the default Aqua appearance:
 
-<pre class="brush: css">input[type="search"] {
+```css
+input[type="search"] {
     -webkit-appearance: none;
     appearance: none;
-}</pre>
+}
+```
 
-<p>In the example below, you can see two identical styled search boxes. The right one has <code>appearance: none;</code> applied, and the left one doesn't. If you look at it in macOS Chrome you'll see that the left one isn't sized properly.</p>
+In the example below, you can see two identical styled search boxes. The right one has `appearance: none;` applied, and the left one doesn't. If you look at it in macOS Chrome you'll see that the left one isn't sized properly.
 
-<p>{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/search-appearence.html", '100%', 200)}}</p>
+{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/search-appearence.html", '100%', 200)}}
 
-<p>Interestingly, setting border/background on the search field also fixes this problem, as it <a href="https://webkit.org/blog/28/buttons/">disables</a> or "breaks" the Aqua appearance too. The following styled search doesn't have <code>appearance: none;</code> applied, but it doesn't suffer from the same problem in macOS Chrome as the previous example.</p>
+Interestingly, setting border/background on the search field also fixes this problem, as it [disables](https://webkit.org/blog/28/buttons/) or "breaks" the Aqua appearance too. The following styled search doesn't have `appearance: none;` applied, but it doesn't suffer from the same problem in macOS Chrome as the previous example.
 
-<p>{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/styled-search.html", '100%', 200)}}</p>
+{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/styled-search.html", '100%', 200)}}
 
-<div class="notecard note">
-<p><strong>Note:</strong> You may have noticed that in the search field, the "x" delete icon disappears when the input loses focus in Edge and Chrome, but stays put in Safari. To remove via CSS, you can use <code>input[type="search"]::-webkit-search-cancel-button { display: none; }</code>. However, this seems to get rid of the icon <em>with</em> focus too, with no apparent way to get it back.</p>
-</div>
+> **Note:** You may have noticed that in the search field, the "x" delete icon disappears when the input loses focus in Edge and Chrome, but stays put in Safari. To remove via CSS, you can use `input[type="search"]::-webkit-search-cancel-button { display: none; }`. However, this seems to get rid of the icon _with_ focus too, with no apparent way to get it back.
 
-<h3 id="Styling_checkboxes_and_radio_buttons">Styling checkboxes and radio buttons</h3>
+### Styling checkboxes and radio buttons
 
-<p>Styling a checkbox or a radio button is tricky by default. The sizes of check boxes and radio buttons are not meant to be changed with their default designs, and browsers react very differently when you try.</p>
+Styling a checkbox or a radio button is tricky by default. The sizes of check boxes and radio buttons are not meant to be changed with their default designs, and browsers react very differently when you try.
 
-<p>For example, consider this simple test case:</p>
+For example, consider this simple test case:
 
-<pre class="brush: html">&lt;span&gt;&lt;input type="checkbox"&gt;&lt;/span&gt;</pre>
+```html
+<span><input type="checkbox"></span>
+```
 
-<pre class="brush: css">span {
+```css
+span {
     display: inline-block;
     background: red;
 }
@@ -142,85 +148,64 @@ tags:
 input[type="checkbox"] {
     width: 100px;
     height: 100px;
-}</pre>
+}
+```
 
-<p>Different browsers handle this in many different, often ugly ways:</p>
+Different browsers handle this in many different, often ugly ways:
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Browser</th>
-   <th scope="col">Rendering</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Firefox 71 (macOS)</td>
-   <td><img alt="" src="firefox-mac-checkbox.png"></td>
-  </tr>
-  <tr>
-   <td>Firefox 57 (Windows 10)</td>
-   <td><img alt="" src="firefox-windows-checkbox.png"></td>
-  </tr>
-  <tr>
-   <td>Chrome 77 (macOS), Safari 13, Opera</td>
-   <td><img alt="" src="chrome-mac-checkbox.png"></td>
-  </tr>
-  <tr>
-   <td>Chrome 63 (Windows 10)</td>
-   <td><img alt="" src="chrome-windows-checkbox.png"></td>
-  </tr>
-  <tr>
-   <td>Internet Explorer 11 (Windows 10)</td>
-   <td><img alt="" src="ie11-checkbox.png"></td>
-  </tr>
-  <tr>
-   <td>Edge 16 (Windows 10)</td>
-   <td><img alt="" src="edge-checkbox.png"></td>
-  </tr>
- </tbody>
-</table>
+| Browser                             | Rendering                         |
+| ----------------------------------- | --------------------------------- |
+| Firefox 71 (macOS)                  | ![](firefox-mac-checkbox.png)     |
+| Firefox 57 (Windows 10)             | ![](firefox-windows-checkbox.png) |
+| Chrome 77 (macOS), Safari 13, Opera | ![](chrome-mac-checkbox.png)      |
+| Chrome 63 (Windows 10)              | ![](chrome-windows-checkbox.png)  |
+| Internet Explorer 11 (Windows 10)   | ![](ie11-checkbox.png)            |
+| Edge 16 (Windows 10)                | ![](edge-checkbox.png)            |
 
-<h4 id="Using_appearance_none_on_radioscheckboxes">Using appearance: none on radios/checkboxes</h4>
+#### Using appearance: none on radios/checkboxes
 
-<p>As we showed before, you can remove the default appearance of a checkbox or radio button altogether with {{cssxref('appearance')}}<code>:none;</code> Let's take this example HTML:</p>
+As we showed before, you can remove the default appearance of a checkbox or radio button altogether with {{cssxref('appearance')}}`:none;` Let's take this example HTML:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;fieldset&gt;
-    &lt;legend&gt;Fruit preferences&lt;/legend&gt;
+```html
+<form>
+  <fieldset>
+    <legend>Fruit preferences</legend>
 
-    &lt;p&gt;
-      &lt;label&gt;
-        &lt;input type="checkbox" name="fruit-1" value="cherry"&gt;
+    <p>
+      <label>
+        <input type="checkbox" name="fruit-1" value="cherry">
         I like cherry
-      &lt;/label&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;label&gt;
-        &lt;input type="checkbox" name="fruit-2" value="banana" disabled&gt;
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" name="fruit-2" value="banana" disabled>
         I can't like banana
-      &lt;/label&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;label&gt;
-        &lt;input type="checkbox" name="fruit-3" value="strawberry"&gt;
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" name="fruit-3" value="strawberry">
         I like strawberry
-      &lt;/label&gt;
-    &lt;/p&gt;
-  &lt;/fieldset&gt;
-&lt;/form&gt;</pre>
+      </label>
+    </p>
+  </fieldset>
+</form>
+```
 
-<p>Now, let's style these with a custom checkbox design. Let's start by unstyling the original check boxes:</p>
+Now, let's style these with a custom checkbox design. Let's start by unstyling the original check boxes:
 
-<pre class="brush: css">input[type="checkbox"] {
+```css
+input[type="checkbox"] {
   -webkit-appearance: none;
   appearance: none;
 }
-</pre>
+```
 
-<p>We can use the {{cssxref(":checked")}} and {{cssxref(":disabled")}} pseudo-classes to change the appearance of our custom checkbox as its state changes:</p>
+We can use the {{cssxref(":checked")}} and {{cssxref(":disabled")}} pseudo-classes to change the appearance of our custom checkbox as its state changes:
 
-<pre class="brush: css">input[type="checkbox"] {
+```css
+input[type="checkbox"] {
   position: relative;
   width: 1em;
   height: 1em;
@@ -249,53 +234,49 @@ input[type="checkbox"]:disabled {
   border-color: black;
   background: #ddd;
   color: gray;
-}</pre>
+}
+```
 
-<p>You'll find more out about such pseudo-classes and more in the <a href="/en-US/docs/Learn/Forms/UI_pseudo-classes">next article</a>; the above ones do the following:</p>
+You'll find more out about such pseudo-classes and more in the [next article](/en-US/docs/Learn/Forms/UI_pseudo-classes); the above ones do the following:
 
-<ul>
- <li><code>:checked</code> — the checkbox (or radio button) is in a checked state — the user has clicked/activated it.</li>
- <li><code>:disabled</code> — the checkbox (or radio button) is in a disabled state — it cannot be interacted with.</li>
-</ul>
+- `:checked` — the checkbox (or radio button) is in a checked state — the user has clicked/activated it.
+- `:disabled` — the checkbox (or radio button) is in a disabled state — it cannot be interacted with.
 
-<p>You can see the live result:</p>
+You can see the live result:
 
-<p>{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/checkboxes-styled.html", '100%', 200)}}</p>
+{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/checkboxes-styled.html", '100%', 200)}}
 
-<p>We've also created a couple of other examples to give you more ideas:</p>
+We've also created a couple of other examples to give you more ideas:
 
-<ul>
- <li><a href="https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html">Styled radio buttons</a>: Custom radio button styling.</li>
- <li><a href="https://mdn.github.io/learning-area/html/forms/toggle-switch-example/">Toggle switch example</a>: A checkbox styled to look like a toggle switch.</li>
-</ul>
+- [Styled radio buttons](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html): Custom radio button styling.
+- [Toggle switch example](https://mdn.github.io/learning-area/html/forms/toggle-switch-example/): A checkbox styled to look like a toggle switch.
 
-<p>If you view these checkboxes in a browser that doesn't support {{cssxref("appearance")}}, your custom design will be lost, but they will still look like checkboxes and be usable.</p>
+If you view these checkboxes in a browser that doesn't support {{cssxref("appearance")}}, your custom design will be lost, but they will still look like checkboxes and be usable.
 
-<div class="notecard note">
-<p><strong>Note:</strong> While Internet Explorer doesn't support any version of <code>appearance</code>, the <code>input[type=checkbox]::-ms-check</code> enables the targeting of checkboxes in IE only. This technique works for radio buttons too, despite the name <code>-ms-<em><strong>check</strong></em></code>.</p>
-</div>
+> **Note:** While Internet Explorer doesn't support any version of `appearance`, the `input[type=checkbox]::-ms-check` enables the targeting of checkboxes in IE only. This technique works for radio buttons too, despite the name `-ms-check`.
 
-<h2 id="What_can_be_done_about_the_ugly_elements">What can be done about the "ugly" elements?</h2>
+## What can be done about the "ugly" elements?
 
-<p>Now let's turn our attention to the "ugly" controls — the ones that are really hard to thoroughly  style. In short, these are drop-down boxes, complex control types like <code><a href="/en-US/docs/Web/HTML/Element/input/color">color</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/input/datetime-local">datetime-local</a></code>, and feedback—oriented controls like {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.</p>
+Now let's turn our attention to the "ugly" controls — the ones that are really hard to thoroughly  style. In short, these are drop-down boxes, complex control types like [`color`](/en-US/docs/Web/HTML/Element/input/color) and [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local), and feedback—oriented controls like {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
 
-<p>The problem is that these elements have very different default looks across browsers, and while you can style them in some ways, some parts of their internals are literally impossible to style.</p>
+The problem is that these elements have very different default looks across browsers, and while you can style them in some ways, some parts of their internals are literally impossible to style.
 
-<p>If you are prepared to live with some differences in look and feel, you can get away with some simple styling to make sizing consistent, uniform styling of things like background-colors, and usage of appearance to get rid of some system-level styling.</p>
+If you are prepared to live with some differences in look and feel, you can get away with some simple styling to make sizing consistent, uniform styling of things like background-colors, and usage of appearance to get rid of some system-level styling.
 
-<p>Take the following example, which shows a number of the "ugly" form features in action:</p>
+Take the following example, which shows a number of the "ugly" form features in action:
 
-<p>{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/ugly-controls.html", '100%', 750)}}</p>
+{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/ugly-controls.html", '100%', 750)}}
 
-<p>This example has the following CSS applied to it:</p>
+This example has the following CSS applied to it:
 
-<pre class="brush: css">body {
+```css
+body {
   font-family: 'Josefin Sans', sans-serif;
   margin: 20px auto;
   max-width: 400px;
 }
 
-form &gt; div {
+form > div {
   margin-bottom: 20px;
 }
 
@@ -339,19 +320,19 @@ label {
 button {
   width: 60%;
   margin: 0 auto;
-}</pre>
+}
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> If you want to test these examples across a number of browsers simultaneously, you can <a href="https://mdn.github.io/learning-area/html/forms/styling-examples/ugly-controls.html">find it live here</a> (also <a href="https://github.com/mdn/learning-area/blob/master/html/forms/styling-examples/ugly-controls.html">see here for the source code</a>).</p>
+> **Note:** If you want to test these examples across a number of browsers simultaneously, you can [find it live here](https://mdn.github.io/learning-area/html/forms/styling-examples/ugly-controls.html) (also [see here for the source code](https://github.com/mdn/learning-area/blob/master/html/forms/styling-examples/ugly-controls.html)).
+>
+> Also bear in mind that we've added some JavaScript to the page that lists the files selected by the file picker, below the control itself. This is a simplified version of the example found on the [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file#examples) reference page.
 
-<p>Also bear in mind that we've added some JavaScript to the page that lists the files selected by the file picker, below the control itself. This is a simplified version of the example found on the <code><a href="/en-US/docs/Web/HTML/Element/input/file#examples">&lt;input type="file"&gt;</a></code> reference page.</p>
-</div>
+As you can see, we've done fairly well at getting these to look uniform across modern browsers.
 
-<p>As you can see, we've done fairly well at getting these to look uniform across modern browsers.</p>
+We've applied some global normalizing CSS to all the controls and their labels, to get them to size in the same way, adopt their parent font, etc., as mentioned in the previous article:
 
-<p>We've applied some global normalizing CSS to all the controls and their labels, to get them to size in the same way, adopt their parent font, etc., as mentioned in the previous article:</p>
-
-<pre class="brush: css">button, label, input, select, progress, meter {
+```css
+button, label, input, select, progress, meter {
   display: block;
   font-family: inherit;
   font-size: 100%;
@@ -360,43 +341,51 @@ button {
   width: 100%;
   padding: 5px;
   height: 30px;
-}</pre>
+}
+```
 
-<p>We also added some uniform shadow and rounded corners to the controls on which it made sense:</p>
+We also added some uniform shadow and rounded corners to the controls on which it made sense:
 
-<pre class="brush: css">input[type="text"], input[type="datetime-local"], input[type="color"], select {
+```css
+input[type="text"], input[type="datetime-local"], input[type="color"], select {
   box-shadow: inset 1px 1px 3px #ccc;
   border-radius: 5px;
-}</pre>
+}
+```
 
-<p>on other controls like range types, progress bars, and meters they just add an ugly box around the control area, so it doesn't make sense.</p>
+on other controls like range types, progress bars, and meters they just add an ugly box around the control area, so it doesn't make sense.
 
-<p>Let's talk about some specifics of each of these types of control, highlighting difficulties along the way.</p>
+Let's talk about some specifics of each of these types of control, highlighting difficulties along the way.
 
-<h3 id="Selects_and_datalists">Selects and datalists</h3>
+### Selects and datalists
 
-<p>In modern browsers, selects and datalists are generally not too bad to style provided you don't want to vary the look and feel too much from the defaults.</p>
+In modern browsers, selects and datalists are generally not too bad to style provided you don't want to vary the look and feel too much from the defaults.
 
-<p>We've managed to get the basic look of the boxes looking pretty uniform and consistent. The datalist control is <code>&lt;input type="text"&gt;</code> anyway, so we knew this wouldn't be a problem.</p>
+We've managed to get the basic look of the boxes looking pretty uniform and consistent. The datalist control is `<input type="text">` anyway, so we knew this wouldn't be a problem.
 
-<p>Two things are slightly more problematic. First of all, the select's "arrow" icon that indicates it is a dropdown differs across browsers. It also tends to change if you increase the size of the select box, or resize in an ugly fashion. To fix this in our example we first used our old friend <code>appearance: none</code> to get rid of the icon altogether:</p>
+Two things are slightly more problematic. First of all, the select's "arrow" icon that indicates it is a dropdown differs across browsers. It also tends to change if you increase the size of the select box, or resize in an ugly fashion. To fix this in our example we first used our old friend `appearance: none` to get rid of the icon altogether:
 
-<pre class="brush: css">select {
+```css
+select {
   -webkit-appearance: none;
   appearance: none;
-}</pre>
+}
+```
 
-<p>We then created our own icon using generated content. We put an extra wrapper around the control, because <code><a href="/en-US/docs/Web/CSS/::before">::before</a></code>/<code><a href="/en-US/docs/Web/CSS/::after">::after</a></code> don't work on <code>&lt;select&gt;</code> elements (this is because generated content is placed relative to an element's formatting box, but form inputs work more like replaced elements — their display is generated by the browser and put in place — and therefore don't have one):</p>
+We then created our own icon using generated content. We put an extra wrapper around the control, because [`::before`](/en-US/docs/Web/CSS/::before)/[`::after`](/en-US/docs/Web/CSS/::after) don't work on `<select>` elements (this is because generated content is placed relative to an element's formatting box, but form inputs work more like replaced elements — their display is generated by the browser and put in place — and therefore don't have one):
 
-<pre class="brush: html">&lt;div class="select-wrapper"&gt;&lt;select id="select" name="select"&gt;
-  &lt;option&gt;Banana&lt;/option&gt;
-  &lt;option&gt;Cherry&lt;/option&gt;
-  &lt;option&gt;Lemon&lt;/option&gt;
-&lt;/select&gt;&lt;/div&gt;</pre>
+```html
+<div class="select-wrapper"><select id="select" name="select">
+  <option>Banana</option>
+  <option>Cherry</option>
+  <option>Lemon</option>
+</select></div>
+```
 
-<p>We then use generated content to generate a little down arrow, and put it in the right place using positioning:</p>
+We then use generated content to generate a little down arrow, and put it in the right place using positioning:
 
-<pre class="brush: css">.select-wrapper {
+```css
+.select-wrapper {
   position: relative;
 }
 
@@ -406,73 +395,81 @@ button {
   top: 6px;
   right: 10px;
   position: absolute;
-}</pre>
+}
+```
 
-<p>The second, slightly more major issue is that you don't have control over the box that appears containing the options when you click on the <code>&lt;select&gt;</code> box to open it. You'll notice that the options don't inherit the font set on the parent. You also can't consistently set things like spacing and colors. For example, Firefox will apply <code><a href="/en-US/docs/Web/CSS/color">color</a></code> and <code><a href="/en-US/docs/Web/CSS/background-color">background-color</a></code> when set on the <code><a href="/en-US/docs/Web/HTML/Element/option">&lt;option&gt;</a></code> elements, Chrome won't. Neither of them will apply any kind of spacing (e.g. <code><a href="/en-US/docs/Web/CSS/padding">padding</a></code>). The same is also true of the autocomplete list that appears for the datalist.</p>
+The second, slightly more major issue is that you don't have control over the box that appears containing the options when you click on the `<select>` box to open it. You'll notice that the options don't inherit the font set on the parent. You also can't consistently set things like spacing and colors. For example, Firefox will apply [`color`](/en-US/docs/Web/CSS/color) and [`background-color`](/en-US/docs/Web/CSS/background-color) when set on the [`<option>`](/en-US/docs/Web/HTML/Element/option) elements, Chrome won't. Neither of them will apply any kind of spacing (e.g. [`padding`](/en-US/docs/Web/CSS/padding)). The same is also true of the autocomplete list that appears for the datalist.
 
-<p>If you really need full control over the option styling, you'll have to either use some kind of library to generate a custom control, or build your own custom control, or in the case of select use the <code>multiple</code> attribute, which makes all the options appear on the page, sidestepping this particular problem:</p>
+If you really need full control over the option styling, you'll have to either use some kind of library to generate a custom control, or build your own custom control, or in the case of select use the `multiple` attribute, which makes all the options appear on the page, sidestepping this particular problem:
 
-<pre class="brush: html">&lt;select id="select" name="select" multiple&gt;
+```html
+<select id="select" name="select" multiple>
   ...
-&lt;/select&gt;</pre>
+</select>
+```
 
-<p>Of course, this might also not fit in with the design you are going for, but it's worth noting!</p>
+Of course, this might also not fit in with the design you are going for, but it's worth noting!
 
-<h3 id="Date_input_types">Date input types</h3>
+### Date input types
 
-<p>The date/time input types (<code><a href="/en-US/docs/Web/HTML/Element/input/datetime-local">datetime-local</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/input/time">time</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/input/week">week</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/input/month">month</a></code>) all have the same major associated issue. The actual containing box is as easy to style as any text input, and what we've got in this demo looks fine.</p>
+The date/time input types ([`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local), [`time`](/en-US/docs/Web/HTML/Element/input/time), [`week`](/en-US/docs/Web/HTML/Element/input/week), [`month`](/en-US/docs/Web/HTML/Element/input/month)) all have the same major associated issue. The actual containing box is as easy to style as any text input, and what we've got in this demo looks fine.
 
-<p>However, the internal parts of the control (e.g. the popup calendar that you use pick a date, the spinner that you can use to increment/decrement values) are not stylable at all, and you can't get rid of them using <code>appearance: none;</code>. If you really need full control over the styling, you'll have to either use some kind of library to generate a custom control, or build your own.</p>
+However, the internal parts of the control (e.g. the popup calendar that you use pick a date, the spinner that you can use to increment/decrement values) are not stylable at all, and you can't get rid of them using `appearance: none;`. If you really need full control over the styling, you'll have to either use some kind of library to generate a custom control, or build your own.
 
-<div class="notecard note">
-<p><strong>Note:</strong> It is worth mentioning <code><a href="/en-US/docs/Web/HTML/Element/input/number">&lt;input type="number"&gt;</a></code> here too — this also has a spinner that you can use to increment/decrement values, so potentially suffers from the same problem. However, in the case of the <code>number</code> type the data being collected is simpler, and it is easy to just use a <code>text</code> input type instead if desired (or <code>tel</code> if you want mobile browsers to show the numeric keypad).</p>
-</div>
+> **Note:** It is worth mentioning [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number) here too — this also has a spinner that you can use to increment/decrement values, so potentially suffers from the same problem. However, in the case of the `number` type the data being collected is simpler, and it is easy to just use a `text` input type instead if desired (or `tel` if you want mobile browsers to show the numeric keypad).
 
-<h3 id="Range_input_types">Range input types</h3>
+### Range input types
 
-<p><code><a href="/en-US/docs/Web/HTML/Element/input/range">&lt;input type="range"&gt;</a></code> is annoying to style. You can use something like the following to remove the default slider track completely and replace it with a custom style (a thin red track, in this case):</p>
+[`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range) is annoying to style. You can use something like the following to remove the default slider track completely and replace it with a custom style (a thin red track, in this case):
 
-<pre class="brush: css">input[type="range"] {
+```css
+input[type="range"] {
   appearance: none;
   -webkit-appearance: none;
   background: red;
   height: 2px;
   padding: 0;
   outline: 1px solid transparent;
-}</pre>
+}
+```
 
-<p>However, it is very difficult to customize the style of the range control's drag handle — to get full control over range styling you'll need to use a whole bunch of complex CSS code, including multiple non-standard, browser-specific pseudo-elements. Check out <a href="https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/">Styling Cross-Browser Compatible Range Inputs with CSS</a> on CSS tricks for a detailed write up of what's needed.</p>
+However, it is very difficult to customize the style of the range control's drag handle — to get full control over range styling you'll need to use a whole bunch of complex CSS code, including multiple non-standard, browser-specific pseudo-elements. Check out [Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/) on CSS tricks for a detailed write up of what's needed.
 
-<h3 id="Color_input_types">Color input types</h3>
+### Color input types
 
-<p>Input controls of type color are not too bad. In supporting browsers, they tend to just give you a block of solid color with a small border.</p>
+Input controls of type color are not too bad. In supporting browsers, they tend to just give you a block of solid color with a small border.
 
-<p>You can remove the border, just leaving the block of color, using something like this:</p>
+You can remove the border, just leaving the block of color, using something like this:
 
-<pre class="brush: css">input[type="color"] {
+```css
+input[type="color"] {
   border: 0;
   padding: 0;
-}</pre>
+}
+```
 
-<p>However, a custom solution is the only way to get anything significantly different.</p>
+However, a custom solution is the only way to get anything significantly different.
 
-<h3 id="File_input_types">File input types</h3>
+### File input types
 
-<p>Inputs of type file are generally OK — as you saw in our example, it is fairly easy to create something that fits in OK with the rest of the page — the output line that is part of the control will inherit the parent font if you tell the input to do so, and you can style the custom list of file names and sizes in any way you want; we created it after all.</p>
+Inputs of type file are generally OK — as you saw in our example, it is fairly easy to create something that fits in OK with the rest of the page — the output line that is part of the control will inherit the parent font if you tell the input to do so, and you can style the custom list of file names and sizes in any way you want; we created it after all.
 
-<p>The only problem with file pickers is that the button provided that you press to open the file picker is completely unstylable — it can't be sized or colored, and it won't even accept a different font.</p>
+The only problem with file pickers is that the button provided that you press to open the file picker is completely unstylable — it can't be sized or colored, and it won't even accept a different font.
 
-<p>One way around this is to take advantage of the fact that if you have a label associated with a form control, clicking the label will activate the control. So you could hide the actual form input using something like this:</p>
+One way around this is to take advantage of the fact that if you have a label associated with a form control, clicking the label will activate the control. So you could hide the actual form input using something like this:
 
-<pre class="brush: css">input[type="file"] {
+```css
+input[type="file"] {
   height: 0;
   padding: 0;
   opacity: 0;
-}</pre>
+}
+```
 
-<p>And then style the label to act like a button, which when pressed will open the file picker as expected:</p>
+And then style the label to act like a button, which when pressed will open the file picker as expected:
 
-<pre class="brush: css">label[for="file"] {
+```css
+label[for="file"] {
   box-shadow: 1px 1px 3px #ccc;
   background: linear-gradient(to bottom, #eee, #ccc);
   border: 1px solid rgb(169, 169, 169);
@@ -487,69 +484,62 @@ label[for="file"]:hover {
 
 label[for="file"]:active {
   box-shadow: inset 1px 1px 3px #ccc;
-}</pre>
+}
+```
 
-<p>You can see the result of the above CSS styling in the below live example (see also <a href="https://mdn.github.io/learning-area/html/forms/styling-examples/styled-file-picker.html">styled-file-picker.html</a> live, and the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/styling-examples/styled-file-picker.html">source code</a>).</p>
+You can see the result of the above CSS styling in the below live example (see also [styled-file-picker.html](https://mdn.github.io/learning-area/html/forms/styling-examples/styled-file-picker.html) live, and the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/styling-examples/styled-file-picker.html)).
 
-<p>{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/styled-file-picker.html", '100%', 200)}}</p>
+{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/styled-file-picker.html", '100%', 200)}}
 
-<h3 id="Meters_and_progress_bars">Meters and progress bars</h3>
+### Meters and progress bars
 
-<p><code><a href="/en-US/docs/Web/HTML/Element/meter">&lt;meter&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/progress">&lt;progress&gt;</a></code> are possibly the worst of the lot. As you saw in the earlier example, we can set them to a desired width relatively accurately. But beyond that, they are really difficult to style in any way. They don't handle height settings consistently between each other and between browsers, you can color the background, but not the foreground bar, and setting <code>appearance: none</code> on them makes things worse, not better.</p>
+[`<meter>`](/en-US/docs/Web/HTML/Element/meter) and [`<progress>`](/en-US/docs/Web/HTML/Element/progress) are possibly the worst of the lot. As you saw in the earlier example, we can set them to a desired width relatively accurately. But beyond that, they are really difficult to style in any way. They don't handle height settings consistently between each other and between browsers, you can color the background, but not the foreground bar, and setting `appearance: none` on them makes things worse, not better.
 
-<p>It is easier to just create your own custom solution for these features, if you want to be able to control the styling, or use a third-party solution such as <a href="https://kimmobrunfeldt.github.io/progressbar.js/#examples">progressbar.js</a>.</p>
+It is easier to just create your own custom solution for these features, if you want to be able to control the styling, or use a third-party solution such as [progressbar.js](https://kimmobrunfeldt.github.io/progressbar.js/#examples).
 
-<h2 id="The_road_to_nicer_forms_useful_libraries_and_polyfills">The road to nicer forms: useful libraries and polyfills</h2>
+## The road to nicer forms: useful libraries and polyfills
 
-<p>As we've mentioned above a few times, if you want to gain full control over the "ugly" control types, you have no choice but to rely on JavaScript. In the article <a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form controls</a> you will see how to do it on your own, but there are some very useful libraries out there that can help you:</p>
+As we've mentioned above a few times, if you want to gain full control over the "ugly" control types, you have no choice but to rely on JavaScript. In the article [How to build custom form controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls) you will see how to do it on your own, but there are some very useful libraries out there that can help you:
 
-<ul>
- <li><a href="https://github.com/draganbabic/uni-form" rel="external">Uni-form</a> is a framework that standardizes form markup, styling it with CSS. It also offers a few additional features when used with jQuery, but that's optional.</li>
- <li><a href="https://formalize.me/" rel="external">Formalize</a> is an extension to common JavaScript frameworks (such as jQuery, Dojo, YUI, etc.) that helps to normalize and customize your forms.</li>
- <li><a href="https://www.emblematiq.com/lab/niceforms/" rel="external">Niceforms</a> is a standalone JavaScript method that provides complete customization of web forms. You can use some of the built in themes, or create your own.</li>
-</ul>
+- [Uni-form](https://github.com/draganbabic/uni-form) is a framework that standardizes form markup, styling it with CSS. It also offers a few additional features when used with jQuery, but that's optional.
+- [Formalize](https://formalize.me/) is an extension to common JavaScript frameworks (such as jQuery, Dojo, YUI, etc.) that helps to normalize and customize your forms.
+- [Niceforms](https://www.emblematiq.com/lab/niceforms/) is a standalone JavaScript method that provides complete customization of web forms. You can use some of the built in themes, or create your own.
 
-<p>The following libraries aren't just about forms, but they have very interesting features for dealing with HTML forms:</p>
+The following libraries aren't just about forms, but they have very interesting features for dealing with HTML forms:
 
-<ul>
- <li><a href="https://jqueryui.com/" rel="external">jQuery UI</a> offers customizable widgets such as date pickers (with special attention given to accessibility).</li>
- <li><a href="https://twitter.github.com/bootstrap/base-css.html#forms" rel="external">Twitter Bootstrap</a> can help normalize your forms.</li>
- <li><a href="https://afarkas.github.io/webshim/demos/" rel="external">WebShim</a> is a huge tool that can help you deal with browser HTML5 support. The web forms part can be really helpful.</li>
-</ul>
+- [jQuery UI](https://jqueryui.com/) offers customizable widgets such as date pickers (with special attention given to accessibility).
+- [Twitter Bootstrap](https://twitter.github.com/bootstrap/base-css.html#forms) can help normalize your forms.
+- [WebShim](https://afarkas.github.io/webshim/demos/) is a huge tool that can help you deal with browser HTML5 support. The web forms part can be really helpful.
 
-<p>Remember that CSS and JavaScript can have side effects. So if you choose to use one of those libraries, you should always have robust fallback HTML in case the script fails. There are many reasons why scripts may fail, especially in the mobile world, and you need to design your Web site or app to handle these cases as well as possible.</p>
+Remember that CSS and JavaScript can have side effects. So if you choose to use one of those libraries, you should always have robust fallback HTML in case the script fails. There are many reasons why scripts may fail, especially in the mobile world, and you need to design your Web site or app to handle these cases as well as possible.
 
-<h2 id="Test_your_skills!">Test your skills!</h2>
+## Test your skills!
 
-<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/Forms/Test_your_skills:_Advanced_styling">Test your skills: Advanced styling</a>. Bear in mind that some questions in this assessment series assume knowledge of the <a href="/en-US/docs/Learn/Forms/UI_pseudo-classes">next article</a> too, so you might want to work through that article first before attempting it.</p>
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Advanced styling](/en-US/docs/Learn/Forms/Test_your_skills:_Advanced_styling). Bear in mind that some questions in this assessment series assume knowledge of the [next article](/en-US/docs/Learn/Forms/UI_pseudo-classes) too, so you might want to work through that article first before attempting it.
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>While there are still difficulties using CSS with HTML forms, there are ways to get around many of the problems. There are no clean, universal solutions, but modern browsers offer new possibilities. For now, the best solution is to learn more about the way the different browsers support CSS when applied to HTML form controls.</p>
+While there are still difficulties using CSS with HTML forms, there are ways to get around many of the problems. There are no clean, universal solutions, but modern browsers offer new possibilities. For now, the best solution is to learn more about the way the different browsers support CSS when applied to HTML form controls.
 
-<p>In the next article of this module, we will explore the different <a href="/en-US/docs/Learn/Forms/UI_pseudo-classes">UI pseudo-classes</a> available to us in modern browsers for styling forms in different states.</p>
+In the next article of this module, we will explore the different [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes) available to us in modern browsers for styling forms in different states.
 
-<p>{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}</p>
+{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
 
-<h2 id="In_this_module">In this module</h2>
+## In this module
 
-<ul>
- <li><a href="/en-US/docs/Learn/Forms/Your_first_form">Your first form</a></li>
- <li><a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form">How to structure a web form</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls">Basic native form controls</a></li>
- <li><a href="/en-US/docs/Learn/Forms/HTML5_input_types">The HTML5 input types</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Other_form_controls">Other form controls</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling web forms</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Advanced_form_styling">Advanced form styling</a></li>
- <li><a href="/en-US/docs/Learn/Forms/UI_pseudo-classes">UI pseudo-classes</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Form_validation">Client-side form validation</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data">Sending form data</a></li>
-</ul>
+- [Your first form](/en-US/docs/Learn/Forms/Your_first_form)
+- [How to structure a web form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
+- [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)
+- [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types)
+- [Other form controls](/en-US/docs/Learn/Forms/Other_form_controls)
+- [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
+- [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)
+- [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
+- [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
-<h3 id="Advanced_Topics">Advanced Topics</h3>
+### Advanced Topics
 
-<ul>
- <li><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form controls</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript">Sending forms through JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Property compatibility table for form widgets</a></li>
-</ul>
+- [How to build custom form controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [Sending forms through JavaScript](/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [Property compatibility table for form widgets](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

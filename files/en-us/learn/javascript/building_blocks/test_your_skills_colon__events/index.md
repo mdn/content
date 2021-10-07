@@ -1,6 +1,6 @@
 ---
 title: 'Test your skills: Events'
-slug: 'Learn/JavaScript/Building_blocks/Test_your_skills:_Events'
+slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Events
 tags:
   - Beginner
   - JavaScript
@@ -8,86 +8,76 @@ tags:
   - events
   - test your skills
 ---
-<div>{{learnsidebar}}</div>
+{{learnsidebar}}
 
-<p>This aim of this skill test is to assess whether you've understood our <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a> article.</p>
+This aim of this skill test is to assess whether you've understood our [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events) article.
 
-<div class="notecard note">
-<p><strong>Note:</strong> You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a> to work on the tasks.<br>
- <br>
- If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.</p>
-</div>
+> **Note:** You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+>
+> If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
 
-<div class="notecard note">
-<p><strong>Note:</strong> In the examples below, if there is an error in your code it will be outputted into the results panel on the page, to help you try to figure out the answer (or into the browser's JavaScript console, in the case of the downloadable version).</p>
-</div>
+> **Note:** In the examples below, if there is an error in your code it will be outputted into the results panel on the page, to help you try to figure out the answer (or into the browser's JavaScript console, in the case of the downloadable version).
 
-<h2 id="DOM_manipulation_considered_useful">DOM manipulation: considered useful</h2>
+## DOM manipulation: considered useful
 
-<p>Some of the questions below require you to write some <a href="/en-US/docs/Glossary/DOM">DOM</a> manipulation code to complete them — such as creating new HTML elements, setting their text contents to equal specific string values, and nesting them inside existing elements on the page — all via JavaScript.</p>
+Some of the questions below require you to write some [DOM](/en-US/docs/Glossary/DOM) manipulation code to complete them — such as creating new HTML elements, setting their text contents to equal specific string values, and nesting them inside existing elements on the page — all via JavaScript.
 
-<p>We haven't explicitly taught this yet in the course, but you'll have seen some examples that make use of it, and we'd like you to do some research into what DOM APIs you need to successfully answer the questions. A good starting place is our <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">Manipulating documents</a> tutorial.</p>
+We haven't explicitly taught this yet in the course, but you'll have seen some examples that make use of it, and we'd like you to do some research into what DOM APIs you need to successfully answer the questions. A good starting place is our [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents) tutorial.
 
-<h2 id="Events_1">Events 1</h2>
+## Events 1
 
-<p>In our first events-related task, you need to create a simple event handler that causes the text inside the button (<code>btn</code>) to change when it is clicked on, and change back when it is clicked again.</p>
+In our first events-related task, you need to create a simple event handler that causes the text inside the button (`btn`) to change when it is clicked on, and change back when it is clicked again.
 
-<p>The HTML should not be changed; just the JavaScript.</p>
+The HTML should not be changed; just the JavaScript.
 
-<p>Try updating the live code below to recreate the finished example:</p>
+Try updating the live code below to recreate the finished example:
 
-<p>{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/events/events1.html", '100%', 400)}}</p>
+{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/events/events1.html", '100%', 400)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/events/events1-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/events/events1-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Events_2">Events 2</h2>
+## Events 2
 
-<p>Now we'll look at keyboard events. To pass this assessment you need to build an event handler that moves the circle around the provided canvas when the WASD keys are pressed on the keyboard. The circle is drawn with the function <code>drawCircle()</code>, which takes the following parameters as inputs:</p>
+Now we'll look at keyboard events. To pass this assessment you need to build an event handler that moves the circle around the provided canvas when the WASD keys are pressed on the keyboard. The circle is drawn with the function `drawCircle()`, which takes the following parameters as inputs:
 
-<ul>
- <li><code>x</code> — the x coordinate of the circle.</li>
- <li><code>y</code> — the y coordinate of the circle.</li>
- <li><code>size</code> — the radius of the circle.</li>
-</ul>
+- `x` — the x coordinate of the circle.
+- `y` — the y coordinate of the circle.
+- `size` — the radius of the circle.
 
-<p>Try updating the live code below to recreate the finished example:</p>
+Try updating the live code below to recreate the finished example:
 
-<p>{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/events/events2.html", '100%', 400)}}</p>
+{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/events/events2.html", '100%', 400)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/events/events2-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/events/events2-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Events_3">Events 3</h2>
+## Events 3
 
-<p>In our final events-related task, you need to set an event listener on the <code>&lt;button&gt;</code>s' parent element (<code>&lt;div class="button-bar"&gt; ... &lt;/div&gt;</code>), which when invoked by clicking any of the buttons will set the background of the <code>button-bar</code> to the color contained in the button's <code>data-color</code> attribute.</p>
+In our final events-related task, you need to set an event listener on the `<button>`s' parent element (`<div class="button-bar"> ... </div>`), which when invoked by clicking any of the buttons will set the background of the `button-bar` to the color contained in the button's `data-color` attribute.
 
-<p>We want you to solve this without looping through all the buttons and giving each one their own event listener.</p>
+We want you to solve this without looping through all the buttons and giving each one their own event listener.
 
-<p>Try updating the live code below to recreate the finished example:</p>
+Try updating the live code below to recreate the finished example:
 
-<p>{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/events/events3.html", '100%', 400)}}</p>
+{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/events/events3.html", '100%', 400)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/events/events3-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/events/events3-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Assessment_or_further_help">Assessment or further help</h2>
+## Assessment or further help
 
-<p>You can practice these examples in the Interactive Editors above.</p>
+You can practice these examples in the Interactive Editors above.
 
-<p>If you would like your work assessed, or are stuck and want to ask for help:</p>
+If you would like your work assessed, or are stuck and want to ask for help:
 
-<ol>
- <li>Put your work into an online shareable editor such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a>. You can write the code yourself, or use the starting point files linked to in the above sections.</li>
- <li>Write a post asking for assessment and/or help at the <a href="https://discourse.mozilla.org/c/mdn/learn">MDN Discourse forum Learning category</a>. Your post should include:
-  <ul>
-   <li>A descriptive title such as "Assessment wanted for Events 1 skill test".</li>
-   <li>Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.</li>
-   <li>A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.</li>
-   <li>A link to the actual task or assessment page, so we can find the question you want help with.</li>
-  </ul>
- </li>
-</ol>
+1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
+2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+
+    - A descriptive title such as "Assessment wanted for Events 1 skill test".
+    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
+    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
+    - A link to the actual task or assessment page, so we can find the question you want help with.

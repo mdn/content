@@ -14,108 +14,101 @@ tags:
   - server-side
   - servers
 ---
-<div class="summary">
-<p>This article explains how to set up a simple local testing server on your machine, and the basics of how to use it.</p>
-</div>
+This article explains how to set up a simple local testing server on your machine, and the basics of how to use it.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>You need to first know <a href="/en-US/docs/Learn/Common_questions/How_does_the_Internet_work">how the Internet works</a>, and <a href="/en-US/docs/Learn/Common_questions/What_is_a_web_server">what a Web server is</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>You will learn how to set up a local testing server.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        You need to first know
+        <a href="/en-US/docs/Learn/Common_questions/How_does_the_Internet_work"
+          >how the Internet works</a
+        >, and
+        <a href="/en-US/docs/Learn/Common_questions/What_is_a_web_server"
+          >what a Web server is</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>You will learn how to set up a local testing server.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Local_files_vs._remote_files">Local files vs. remote files</h2>
+## Local files vs. remote files
 
-<p>Throughout most of the learning area, we tell you to just open your examples directly in a browser — this can be done by double clicking the HTML file, dragging and dropping it into the browser window, or choosing <em>File</em> &gt; <em>Open...</em> and navigating to the HTML file. There are many ways to achieve this.</p>
+Throughout most of the learning area, we tell you to just open your examples directly in a browser — this can be done by double clicking the HTML file, dragging and dropping it into the browser window, or choosing _File_ > _Open..._ and navigating to the HTML file. There are many ways to achieve this.
 
-<p>If the web address path starts with <code>file://</code> followed by the path to the file on your local hard drive, a local file is being used. In contrast, if you view one of our examples hosted on GitHub (or an example on some other remote server), the web address will start with <code>http://</code> or <code>https://</code>, to show that the file has been received via HTTP.</p>
+If the web address path starts with `file://` followed by the path to the file on your local hard drive, a local file is being used. In contrast, if you view one of our examples hosted on GitHub (or an example on some other remote server), the web address will start with `http://` or `https://`, to show that the file has been received via HTTP.
 
-<h2 id="The_problem_with_testing_local_files">The problem with testing local files</h2>
+## The problem with testing local files
 
-<p>Some examples won't run if you open them as local files. This can be due to a variety of reasons, the most likely being:</p>
+Some examples won't run if you open them as local files. This can be due to a variety of reasons, the most likely being:
 
-<ul>
- <li><strong>They feature asynchronous requests</strong>. Some browsers (including Chrome) will not run async requests (see <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">Fetching data from the server</a>) if you just run the example from a local file. This is because of security restrictions (for more on web security, read <a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a>).</li>
- <li><strong>They feature a server-side language</strong>. Server-side languages (such as PHP or Python) require a special server to interpret the code and deliver the results.</li>
-</ul>
+- **They feature asynchronous requests**. Some browsers (including Chrome) will not run async requests (see [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)) if you just run the example from a local file. This is because of security restrictions (for more on web security, read [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security)).
+- **They feature a server-side language**. Server-side languages (such as PHP or Python) require a special server to interpret the code and deliver the results.
 
-<h2 id="Running_a_simple_local_HTTP_server">Running a simple local HTTP server</h2>
+## Running a simple local HTTP server
 
-<p>To get around the problem of async requests, we need to test such examples by running them through a local web server. One of the easiest ways to do this for our purposes is to use Python's <code>http.server</code> module.
+To get around the problem of async requests, we need to test such examples by running them through a local web server. One of the easiest ways to do this for our purposes is to use Python's `http.server` module.
 
-<div class="notecard note">
- <p><strong>Note:</strong> Older versions of Python (up to version 2.7) provided a similar module named <code>SimpleHTTPServer</code>. If you are using Python 2.x, you can follow this guide by replacing all uses of <code>http.server</code> with <code>SimpleHTTPServer</code>. However, we recommend you use the latest version of Python.</p>
-</div>
+> **Note:** Older versions of Python (up to version 2.7) provided a similar module named `SimpleHTTPServer`. If you are using Python 2.x, you can follow this guide by replacing all uses of `http.server` with `SimpleHTTPServer`. However, we recommend you use the latest version of Python.
 
-<p>To do this:</p>
+To do this:
 
-<ol>
- <li>
-  <p>Install Python. If you are using Linux or macOS, it should be available on your system already. If you are a Windows user, you can get an installer from the Python homepage and follow the instructions to install it:</p>
+1.  Install Python. If you are using Linux or macOS, it should be available on your system already. If you are a Windows user, you can get an installer from the Python homepage and follow the instructions to install it:
 
-  <ul>
-   <li>Go to <a href="https://www.python.org/">python.org</a></li>
-   <li>Under the Download section, click the link for Python "3.xxx".</li>
-   <li>At the bottom of the page, click the <em>Windows Installer</em> link to download the installer file.</li>
-   <li>When it has downloaded, run it.</li>
-   <li>On the first installer page, make sure you check the "Add Python 3.xxx to PATH" checkbox.</li>
-   <li>Click <em>Install</em>, then click <em>Close</em> when the installation has finished.</li>
-  </ul>
- </li>
- <li>
-  <p>Open your command prompt (Windows) / terminal (macOS/ Linux). To check if Python is installed, enter the following command:</p>
+    - Go to [python.org](https://www.python.org/)
+    - Under the Download section, click the link for Python "3.xxx".
+    - At the bottom of the page, click the _Windows Installer_ link to download the installer file.
+    - When it has downloaded, run it.
+    - On the first installer page, make sure you check the "Add Python 3.xxx to PATH" checkbox.
+    - Click _Install_, then click _Close_ when the installation has finished.
 
-  <pre class="brush: bash">python -V
-# If the above fails, try:
-python3 -V
-# Or, if the &quot;py&quot; command is available, try:
-py -V
-</pre>
- </li>
- <li>
-  <p>This should return a version number. If this is OK, navigate to the directory that your example is inside, using the <code>cd</code> command.</p>
+2.  Open your command prompt (Windows) / terminal (macOS/ Linux). To check if Python is installed, enter the following command:
 
-  <pre class="brush: bash"># include the directory name to enter it, for example
-cd Desktop
-# use two dots to jump up one directory level if you need to
-cd ..</pre>
- </li>
- <li>
-  <p>Enter the command to start up the server in that directory:</p>
+    ```bash
+    python -V
+    # If the above fails, try:
+    python3 -V
+    # Or, if the "py" command is available, try:
+    py -V
+    ```
 
-  <pre class="brush: bash"># If Python version returned above is 3.X
-# On Windows, try &quot;python -m http.server&quot; or &quot;py -3 -m http.server&quot;
-python3 -m http.server
-# If Python version returned above is 2.X
-python -m SimpleHTTPServer</pre>
- </li>
- <li>
-  <p>By default, this will run the contents of the directory on a local web server, on port 8000. You can go to this server by going to the URL <code>localhost:8000</code> in your web browser. Here you'll see the contents of the directory listed — click the HTML file you want to run.</p>
- </li>
-</ol>
+3.  This should return a version number. If this is OK, navigate to the directory that your example is inside, using the `cd` command.
 
-<div class="note">
-<p><strong>Note:</strong> If you already have something running on port 8000, you can choose another port by running the server command followed by an alternative port number, e.g. <code>python3 -m http.server 7800</code> (Python 3.x) or <code>python -m SimpleHTTPServer 7800</code> (Python 2.x). You can then access your content at <code>localhost:7800</code>.</p>
-</div>
+    ```bash
+    # include the directory name to enter it, for example
+    cd Desktop
+    # use two dots to jump up one directory level if you need to
+    cd ..
+    ```
 
-<h2 id="Running_server-side_languages_locally">Running server-side languages locally</h2>
+4.  Enter the command to start up the server in that directory:
 
-  <p>Python's <code>http.server</code> (or <code>SimpleHTTPServer</code> for Python 2) module is useful, but it is merely a <em>static</em> file server; it doesn't know how to run code written in languages such as Python, PHP or JavaScript. To handle them, you'll need something more — exactly what you'll need depends on the server-side language you are trying to run. Here are a few examples:</p>
+    ```bash
+    # If Python version returned above is 3.X
+    # On Windows, try "python -m http.server" or "py -3 -m http.server"
+    python3 -m http.server
+    # If Python version returned above is 2.X
+    python -m SimpleHTTPServer
+    ```
 
-<ul>
- <li>To run Python server-side code, you'll need to use a Python web framework. There are many popular Python web frameworks, such as Django (a <a href="/en-US/docs/Learn/Server-side/Django">guide</a> is available), <a href="https://flask.palletsprojects.com/">Flask</a>, and <a href="https://trypyramid.com">Pyramid</a>.</li>
- <li>To run Node.js (JavaScript) server-side code, you'll need to use raw node or a framework built on top of it. Express is a good choice — see <a href="/en-US/docs/Learn/Server-side/Express_Nodejs">Express Web Framework (Node.js/JavaScript)</a>.</li>
- <li>
-  <p>To run PHP server-side code, launch <a href="https://php.net/manual/en/features.commandline.webserver.php">PHP's built-in development server</a>:</p>
+5.  By default, this will run the contents of the directory on a local web server, on port 8000. You can go to this server by going to the URL `localhost:8000` in your web browser. Here you'll see the contents of the directory listed — click the HTML file you want to run.
 
-  <pre class="brush: bash">$ cd path/to/your/php/code
-$ php -S localhost:8000</pre>
- </li>
-</ul>
+> **Note:** If you already have something running on port 8000, you can choose another port by running the server command followed by an alternative port number, e.g. `python3 -m http.server 7800` (Python 3.x) or `python -m SimpleHTTPServer 7800` (Python 2.x). You can then access your content at `localhost:7800`.
+
+## Running server-side languages locally
+
+Python's `http.server` (or `SimpleHTTPServer` for Python 2) module is useful, but it is merely a _static_ file server; it doesn't know how to run code written in languages such as Python, PHP or JavaScript. To handle them, you'll need something more — exactly what you'll need depends on the server-side language you are trying to run. Here are a few examples:
+
+- To run Python server-side code, you'll need to use a Python web framework. There are many popular Python web frameworks, such as Django (a [guide](/en-US/docs/Learn/Server-side/Django) is available), [Flask](https://flask.palletsprojects.com/), and [Pyramid](https://trypyramid.com).
+- To run Node.js (JavaScript) server-side code, you'll need to use raw node or a framework built on top of it. Express is a good choice — see [Express Web Framework (Node.js/JavaScript)](/en-US/docs/Learn/Server-side/Express_Nodejs).
+- To run PHP server-side code, launch [PHP's built-in development server](https://php.net/manual/en/features.commandline.webserver.php):
+
+  ```bash
+  $ cd path/to/your/php/code
+  $ php -S localhost:8000
+  ```

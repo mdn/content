@@ -9,56 +9,48 @@ tags:
   - Learn
   - Topic
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}
 
-<p>To build websites, you should know about {{Glossary('HTML')}} — the fundamental technology used to define the structure of a webpage. HTML is used to specify whether your web content should be recognized as a paragraph, list, heading, link, image, multimedia player, form, or one of many other available elements or even a new element that you define.</p>
+To build websites, you should know about {{Glossary('HTML')}} — the fundamental technology used to define the structure of a webpage. HTML is used to specify whether your web content should be recognized as a paragraph, list, heading, link, image, multimedia player, form, or one of many other available elements or even a new element that you define.
 
-<div class="callout">
-	<h4 id="Looking_to_become_a_front-end_web_developer">Looking to become a front-end web
-	  developer?</h4>
+> **Callout:**
+>
+> #### Looking to become a front-end web developer?
+>
+> We have put together a course that includes all the essential information you need to
+> work towards your goal.
+>
+> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
 
-	<p>We have put together a course that includes all the essential information you need to
-	  work towards your goal.</p>
+## Prerequisites
 
-  <p><a href="/en-US/docs/Learn/Front-end_web_developer"><strong>Get started</strong></a></p>
+Before starting this topic, you should have at least basic familiarity with using computers and using the web passively (i.e. just looking at it, consuming the content). You should have a basic work environment set up as detailed in [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software), and understand how to create and manage files, as detailed in [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files) — both are parts of our [Getting started with the web](/en-US/docs/Learn/Getting_started_with_the_web) complete beginner's module.
 
-  </div>
+It is recommended that you work through [Getting started with the web ](/en-US/docs/Learn/Getting_started_with_the_web)before attempting this topic. However, this isn't absolutely necessary; much of what is covered in the [HTML basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) article is also covered in our [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module, albeit in a lot more detail.
 
-<h2 id="Prerequisites">Prerequisites</h2>
+After learning HTML, you can then move on to learning about more advanced topics such as:
 
-<p>Before starting this topic, you should have at least basic familiarity with using computers and using the web passively (i.e. just looking at it, consuming the content). You should have a basic work environment set up as detailed in <a href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">Installing basic software</a>, and understand how to create and manage files, as detailed in <a href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">Dealing with files</a> — both are parts of our <a href="/en-US/docs/Learn/Getting_started_with_the_web">Getting started with the web</a> complete beginner's module.</p>
+- [CSS](/en-US/docs/Learn/CSS), and how to use it to style HTML (for example alter your text size and fonts used, add borders and drop shadows, layout your page with multiple columns, add animations and other visual effects.)
+- [JavaScript](/en-US/docs/Learn/JavaScript), and how to use it to add dynamic functionality to web pages (for example find your location and plot it on a map, make UI elements appear/disappear when you toggle a button, save users' data locally on their computers, and much more.)
 
-<p>It is recommended that you work through <a href="/en-US/docs/Learn/Getting_started_with_the_web">Getting started with the web </a>before attempting this topic. However, this isn't absolutely necessary; much of what is covered in the <a href="/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML basics</a> article is also covered in our <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a> module, albeit in a lot more detail.</p>
+## Modules
 
-<p>After learning HTML, you can then move on to learning about more advanced topics such as:</p>
+This topic contains the following modules, in a suggested order for working through them. You should definitely start with the first one.
 
-<ul>
-	<li><a href="/en-US/docs/Learn/CSS">CSS</a>, and how to use it to style HTML (for example alter your text size and fonts used, add borders and drop shadows, layout your page with multiple columns, add animations and other visual effects.)</li>
-	<li><a href="/en-US/docs/Learn/JavaScript">JavaScript</a>, and how to use it to add dynamic functionality to web pages (for example find your location and plot it on a map, make UI elements appear/disappear when you toggle a button, save users' data locally on their computers, and much more.)</li>
-</ul>
+- [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML)
+  - : This module sets the stage, getting you used to important concepts and syntax, looking at applying HTML to text, how to create hyperlinks, and how to use HTML to structure a webpage.
+- [Multimedia and embedding](/en-US/docs/Learn/HTML/Multimedia_and_embedding)
+  - : This module explores how to use HTML to include multimedia in your web pages, including the different ways that images can be included, and how to embed video, audio, and even entire other webpages.
+- [HTML tables](/en-US/docs/Learn/HTML/Tables)
+  - : Representing tabular data on a webpage in an understandable, {{glossary("Accessibility", "accessible")}} way can be a challenge. This module covers basic table markup, along with more complex features such as implementing captions and summaries.
 
-<h2 id="Modules">Modules</h2>
+## Solving common HTML problems
 
-<p>This topic contains the following modules, in a suggested order for working through them. You should definitely start with the first one.</p>
+[Use HTML to solve common problems](/en-US/docs/Learn/HTML/Howto) provides links to sections of content explaining how to use HTML to solve very common problems when creating a webpage: dealing with titles, adding images or videos, emphasizing content, creating a basic form, etc.
 
-<dl>
-	<dt><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a></dt>
-	<dd>This module sets the stage, getting you used to important concepts and syntax, looking at applying HTML to text, how to create hyperlinks, and how to use HTML to structure a webpage.</dd>
-	<dt><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding">Multimedia and embedding</a></dt>
-	<dd>This module explores how to use HTML to include multimedia in your web pages, including the different ways that images can be included, and how to embed video, audio, and even entire other webpages.</dd>
-	<dt><a href="/en-US/docs/Learn/HTML/Tables">HTML tables</a></dt>
-	<dd>Representing tabular data on a webpage in an understandable, {{glossary("Accessibility", "accessible")}} way can be a challenge. This module covers basic table markup, along with more complex features such as implementing captions and summaries.</dd>
-</dl>
+## See also
 
-<h2 id="Solving_common_HTML_problems">Solving common HTML problems</h2>
-
-<p><a href="/en-US/docs/Learn/HTML/Howto">Use HTML to solve common problems</a> provides links to sections of content explaining how to use HTML to solve very common problems when creating a webpage: dealing with titles, adding images or videos, emphasizing content, creating a basic form, etc.</p>
-
-<h2 id="See_also">See also</h2>
-
-<dl>
-	<dt><a href="/en-US/docs/Learn/Forms">Web forms</a></dt>
-	<dd>This module provides a series of articles that will help you master the essentials of web forms. Web forms are a very powerful tool for interacting with users — most commonly they are used for collecting data from users, or allowing them to control a user interface. However, for historical and technical reasons it's not always obvious how to use them to their full potential. We'll cover all the essential aspects of Web forms including marking up their HTML structure, styling form controls, validating form data, and submitting data to the server.</dd>
-	<dt><a href="/en-US/docs/Web/HTML">HTML (HyperText Markup Language)</a></dt>
-	<dd>The main entry point for HTML reference documentation on MDN, including detailed element and attribute references — if you want to know what attributes an element has or what values an attribute has, for example, this is a great place to start.</dd>
-</dl>
+- [Web forms](/en-US/docs/Learn/Forms)
+  - : This module provides a series of articles that will help you master the essentials of web forms. Web forms are a very powerful tool for interacting with users — most commonly they are used for collecting data from users, or allowing them to control a user interface. However, for historical and technical reasons it's not always obvious how to use them to their full potential. We'll cover all the essential aspects of Web forms including marking up their HTML structure, styling form controls, validating form data, and submitting data to the server.
+- [HTML (HyperText Markup Language)](/en-US/docs/Web/HTML)
+  - : The main entry point for HTML reference documentation on MDN, including detailed element and attribute references — if you want to know what attributes an element has or what values an attribute has, for example, this is a great place to start.

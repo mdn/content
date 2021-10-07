@@ -11,129 +11,122 @@ tags:
   - Learn
   - Web
 ---
-<p>{{LearnSidebar}}</p>
+{{LearnSidebar}}
 
-<p>Welcome to the MDN learning area. This set of articles aims to guide complete beginners to web development with all that they need to start coding websites.</p>
+Welcome to the MDN learning area. This set of articles aims to guide complete beginners to web development with all that they need to start coding websites.
 
-<p>The aim of this area of MDN is not to take you from "beginner" to "expert" but to take you from "beginner" to "comfortable." From there, you should be able to start making your way, learning from <a href="/en-US/">the rest of MDN</a>, and other intermediate to advanced resources that assume a lot of previous knowledge.</p>
+The aim of this area of MDN is not to take you from "beginner" to "expert" but to take you from "beginner" to "comfortable." From there, you should be able to start making your way, learning from [the rest of MDN](/en-US/), and other intermediate to advanced resources that assume a lot of previous knowledge.
 
-<p>If you are a complete beginner, web development can be challenging — we will hold your hand and provide enough detail for you to feel comfortable and learn the topics properly. You should feel at home whether you are a student learning web development (on your own or as part of a class), a teacher looking for class materials, a hobbyist, or someone who just wants to understand more about how web technologies work.</p>
+If you are a complete beginner, web development can be challenging — we will hold your hand and provide enough detail for you to feel comfortable and learn the topics properly. You should feel at home whether you are a student learning web development (on your own or as part of a class), a teacher looking for class materials, a hobbyist, or someone who just wants to understand more about how web technologies work.
 
-<h2 id="Whats_new">What's new?</h2>
+## What's new?
 
-<p>The content in the learning area is being added to regularly. We have started keeping <a href="/en-US/docs/Learn/Release_notes">Learning area release notes</a> to show what has changed — keep checking back frequently!</p>
+The content in the learning area is being added to regularly. We have started keeping [Learning area release notes](/en-US/docs/Learn/Release_notes) to show what has changed — keep checking back frequently!
 
-<p>If you have questions regarding topics you'd like to see covered or feel are missing, drop us a message on our <a href="https://discourse.mozilla.org/c/mdn">Discourse forum</a>.</p>
+If you have questions regarding topics you'd like to see covered or feel are missing, drop us a message on our [Discourse forum](https://discourse.mozilla.org/c/mdn).
 
-<div class="callout">
-  <h4 id="Looking_to_become_a_front-end_web_developer">Looking to become a front-end web
-    developer?</h4>
+> **Callout:**
+>
+> #### Looking to become a front-end web developer?
+>
+> We have put together a course that includes all the essential information you need to
+> work towards your goal.
+>
+> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
 
-  <p>We have put together a course that includes all the essential information you need to
-    work towards your goal.</p>
+## Where to start
 
-  <p><a href="/en-US/docs/Learn/Front-end_web_developer"><strong>Get started</strong></a></p>
+- Complete beginner
+  - : If you are a complete beginner to web development, we'd recommend that you start by working through our [Getting started with the web](/en-US/docs/Learn/Getting_started_with_the_web) module, which provides a practical introduction to web development.
+- Beyond the basics
+  - : If you have a bit of knowledge already, the next step is to learn {{glossary("HTML")}} and {{glossary("CSS")}} in detail: start with our [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module and move on to our [CSS first steps](/en-US/docs/Learn/CSS/First_steps) module.
+- Moving onto scripting
+  - : If you are comfortable with HTML and CSS already, or you are mainly interested in coding, you'll want to move on to {{glossary("JavaScript")}} or server-side development. Begin with our [JavaScript first steps](/en-US/docs/Learn/JavaScript/First_steps) and [Server-side first steps](/en-US/docs/Learn/Server-side/First_steps) modules.
+- Frameworks and tooling
+  - : After mastering the essentials of vanilla HTML, CSS, and JavaScript, you should learn about [client-side web development tools](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools), and then consider digging into [client-side JavaScript frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks), and [server-side website programming](/en-US/docs/Learn/Server-side).
 
-</div>
+> **Note:** Our [glossary](/en-US/docs/Glossary) provides terminology definitions. Besides, if you have a specific question about web development, our [Common questions](/en-US/docs/Learn/Common_questions) section may have something to help you.
 
-<h2 id="Where_to_start">Where to start</h2>
+{{LearnBox({"title":"Random glossary entry"})}}
 
-<dl>
- <dt>Complete beginner</dt>
- <dd>If you are a complete beginner to web development, we'd recommend that you start by working through our <a href="/en-US/docs/Learn/Getting_started_with_the_web">Getting started with the web</a> module, which provides a practical introduction to web development.</dd>
- <dt>Beyond the basics</dt>
- <dd>If you have a bit of knowledge already, the next step is to learn {{glossary("HTML")}} and {{glossary("CSS")}} in detail: start with our <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a> module and move on to our <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a> module.</dd>
- <dt>Moving onto scripting</dt>
- <dd>If you are comfortable with HTML and CSS already, or you are mainly interested in coding, you'll want to move on to {{glossary("JavaScript")}} or server-side development. Begin with our <a href="/en-US/docs/Learn/JavaScript/First_steps">JavaScript first steps</a> and <a href="/en-US/docs/Learn/Server-side/First_steps">Server-side first steps</a> modules.</dd>
- <dt>Frameworks and tooling</dt>
- <dd>After mastering the essentials of vanilla HTML, CSS, and JavaScript, you should learn about <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools">client-side web development tools</a>, and then consider digging into <a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks">client-side JavaScript frameworks</a>, and <a href="/en-US/docs/Learn/Server-side">server-side website programming</a>.</dd>
-</dl>
+## Topics covered
 
-<div class="note">
-<p><strong>Note:</strong> Our <a href="/en-US/docs/Glossary">glossary</a> provides terminology definitions. Besides, if you have a specific question about web development, our <a href="/en-US/docs/Learn/Common_questions">Common questions</a> section may have something to help you.</p>
-</div>
+The following is a list of all the topics we cover in the MDN learning area.
 
-<p>{{LearnBox({"title":"Random glossary entry"})}}</p>
+- [Getting started with the web](/en-US/docs/Learn/Getting_started_with_the_web)
+  - : Provides a practical introduction to web development for complete beginners.
+- [HTML — Structuring the web](/en-US/docs/Learn/HTML)
+  - : HTML is the language that we use to structure the different parts of our content and define what their meaning or purpose is. This topic teaches HTML in detail.
+- [CSS — Styling the web](/en-US/docs/Learn/CSS)
+  - : CSS is the language that we can use to style and layout our web content, as well as adding behavior like animation. This topic provides comprehensive coverage of CSS.
+- [JavaScript — Dynamic client-side scripting](/en-US/docs/Learn/JavaScript)
+  - : JavaScript is the scripting language used to add dynamic functionality to web pages. This topic teaches all the essentials needed to become comfortable with writing and understanding JavaScript.
+- [Web forms — Working with user data](/en-US/docs/Learn/Forms)
+  - : Web forms are a potent tool for interacting with users — most commonly, they are used for collecting data from users, or allowing them to control a user interface. In the articles listed below, we'll cover all the essential aspects of structuring, styling, and interacting with web forms.
+- [Accessibility — make the web usable by everyone](/en-US/docs/Learn/Accessibility)
+  - : Accessibility is the practice of making web content available to as many people as possible regardless of disability, device, locale, or other differentiating factors. This topic gives you all you need to know.
+- [Web Performance — making websites fast and responsive](/en-US/docs/Learn/Performance)
+  - : Web performance is the art of making sure web applications download fast and are responsive to user interaction, regardless of a user's bandwidth, screen size, network, or device capabilities.
+- [Tools and testing](/en-US/docs/Learn/Tools_and_testing)
+  - : This topic covers the tools developers use to facilitate their work, such as cross-browser testing tools, linters, formatters, transformation tools, version control systems, deployment tools, and client-side JavaScript frameworks.
+- [Server-side website programming](/en-US/docs/Learn/Server-side)
+  - : Even if you are concentrating on client-side web development, it is still useful to know how servers and server-side code features work. This topic provides a general introduction to how the server-side works and detailed tutorials showing how to build up a server-side app using two popular frameworks: Django (Python) and Express (Node.js).
 
-<h2 id="Topics_covered">Topics covered</h2>
+## Getting our code examples
 
-<p>The following is a list of all the topics we cover in the MDN learning area.</p>
+The code examples you'll encounter in the Learning Area are all [available on GitHub](https://github.com/mdn/learning-area/). If you want to copy them all to your computer, the easiest way is to [download a ZIP of the latest master code branch](https://github.com/mdn/learning-area/archive/master.zip).
 
-<dl>
- <dt><a href="/en-US/docs/Learn/Getting_started_with_the_web">Getting started with the web</a></dt>
- <dd>Provides a practical introduction to web development for complete beginners.</dd>
- <dt><a href="/en-US/docs/Learn/HTML">HTML — Structuring the web</a></dt>
- <dd>HTML is the language that we use to structure the different parts of our content and define what their meaning or purpose is. This topic teaches HTML in detail.</dd>
- <dt><a href="/en-US/docs/Learn/CSS">CSS — Styling the web</a></dt>
- <dd>CSS is the language that we can use to style and layout our web content, as well as adding behavior like animation. This topic provides comprehensive coverage of CSS.</dd>
- <dt><a href="/en-US/docs/Learn/JavaScript">JavaScript — Dynamic client-side scripting</a></dt>
- <dd>JavaScript is the scripting language used to add dynamic functionality to web pages. This topic teaches all the essentials needed to become comfortable with writing and understanding JavaScript.</dd>
- <dt><a href="/en-US/docs/Learn/Forms">Web forms — Working with user data</a></dt>
- <dd>Web forms are a potent tool for interacting with users — most commonly, they are used for collecting data from users, or allowing them to control a user interface. In the articles listed below, we'll cover all the essential aspects of structuring, styling, and interacting with web forms.</dd>
- <dt><a href="/en-US/docs/Learn/Accessibility">Accessibility — make the web usable by everyone</a></dt>
- <dd>Accessibility is the practice of making web content available to as many people as possible regardless of disability, device, locale, or other differentiating factors. This topic gives you all you need to know.</dd>
- <dt><a href="/en-US/docs/Learn/Performance">Web Performance — making websites fast and responsive</a></dt>
- <dd>Web performance is the art of making sure web applications download fast and are responsive to user interaction, regardless of a user's bandwidth, screen size, network, or device capabilities.</dd>
- <dt><a href="/en-US/docs/Learn/Tools_and_testing">Tools and testing</a></dt>
- <dd>This topic covers the tools developers use to facilitate their work, such as cross-browser testing tools, linters, formatters, transformation tools, version control systems, deployment tools, and client-side JavaScript frameworks.</dd>
- <dt><a href="/en-US/docs/Learn/Server-side">Server-side website programming</a></dt>
- <dd>Even if you are concentrating on client-side web development, it is still useful to know how servers and server-side code features work. This topic provides a general introduction to how the server-side works and detailed tutorials showing how to build up a server-side app using two popular frameworks: Django (Python) and Express (Node.js).</dd>
-</dl>
+If you prefer to copy the repo in a more flexible way that allows for automatic updates, you can follow the more complex instructions:
 
-<h2 id="Getting_our_code_examples">Getting our code examples</h2>
+1.  [Install Git](https://git-scm.com/downloads) on your machine. This is the underlying version control system software that GitHub works on top of.
+2.  Open your computer's [command prompt](https://www.lifewire.com/how-to-open-command-prompt-2618089) (Windows) or terminal ([Linux](https://help.ubuntu.com/community/UsingTheTerminal), [macOS](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)).
+3.  To copy the learning area repo to a folder called learning-area in the current location your command prompt/terminal is pointing to, use the following command:
 
-<p>The code examples you'll encounter in the Learning Area are all <a href="https://github.com/mdn/learning-area/">available on GitHub</a>. If you want to copy them all to your computer, the easiest way is to <a href="https://github.com/mdn/learning-area/archive/master.zip">download a ZIP of the latest master code branch</a>.</p>
+    ```bash
+    git clone https://github.com/mdn/learning-area
+    ```
 
-<p>If you prefer to copy the repo in a more flexible way that allows for automatic updates, you can follow the more complex instructions:</p>
+4.  You can now enter the directory and find the files you are after (either using your Finder/File Explorer or the [`cd` command](<https://en.wikipedia.org/wiki/Cd_(command)>)).
 
-<ol>
- <li><a href="https://git-scm.com/downloads">Install Git</a> on your machine. This is the underlying version control system software that GitHub works on top of.</li>
- <li>Open your computer's <a href="https://www.lifewire.com/how-to-open-command-prompt-2618089">command prompt</a> (Windows) or terminal (<a href="https://help.ubuntu.com/community/UsingTheTerminal">Linux</a>, <a href="https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line">macOS</a>).</li>
- <li>To copy the learning area repo to a folder called learning-area in the current location your command prompt/terminal is pointing to, use the following command:
-  <pre class="brush: bash">git clone https://github.com/mdn/learning-area</pre>
- </li>
- <li>You can now enter the directory and find the files you are after (either using your Finder/File Explorer or the <a href="https://en.wikipedia.org/wiki/Cd_(command)"><code>cd</code> command</a>).</li>
-</ol>
+You can update the `learning-area` repository with any changes made to the master version on GitHub with the following steps:
 
-<p>You can update the <code>learning-area</code> repository with any changes made to the master version on GitHub with the following steps:</p>
+1.  In your command prompt/terminal, go inside the `learning-area` directory using `cd`. For example, if you were in the parent directory:
 
-<ol>
- <li>In your command prompt/terminal, go inside the <code>learning-area</code> directory using <code>cd</code>. For example, if you were in the parent directory:
+    ```bash
+    cd learning-area
+    ```
 
-  <pre class="brush: bash">cd learning-area</pre>
- </li>
- <li>Update the repository using the following command:
-  <pre class="brush: bash">git pull</pre>
- </li>
-</ol>
+2.  Update the repository using the following command:
 
-<h2 id="Contact_us">Contact us</h2>
+    ```bash
+    git pull
+    ```
 
-<p>If you want to get in touch with us about anything, the best way is to drop us a message on our <a href="https://discourse.mozilla.org/c/mdn">Discourse forum</a>. We'd like to hear from you about anything you think is wrong or missing on the site, requests for new learning topics, requests for help with items you don't understand, or any other questions or concerns.</p>
+## Contact us
 
-<p>If you're interested in helping develop/improve the content, take a look at <a href="/en-US/docs/MDN/Contribute">how you can help</a> and get in touch! We are more than happy to talk to you, whether you are a learner, teacher, experienced web developer, or someone else interested in helping to improve the learning experience.</p>
+If you want to get in touch with us about anything, the best way is to drop us a message on our [Discourse forum](https://discourse.mozilla.org/c/mdn). We'd like to hear from you about anything you think is wrong or missing on the site, requests for new learning topics, requests for help with items you don't understand, or any other questions or concerns.
 
-<h2 id="See_also">See also</h2>
+If you're interested in helping develop/improve the content, take a look at [how you can help](/en-US/docs/MDN/Contribute) and get in touch! We are more than happy to talk to you, whether you are a learner, teacher, experienced web developer, or someone else interested in helping to improve the learning experience.
 
-<dl>
- <dt><a href="https://www.mozilla.org/en-US/newsletter/developer/">Mozilla developer newsletter</a></dt>
- <dd>Our newsletter for web developers, which is an excellent resource for all levels of experience.</dd>
- <dt><a href="https://learnjavascript.online/">Learn JavaScript</a></dt>
- <dd>An excellent resource for aspiring web developers — Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free, and the complete course is available for a small one-time payment.</dd>
- <dt><a href="https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g">Web demystified</a></dt>
- <dd>A great series of videos explaining web fundamentals, aimed at absolute beginners to web development. Created by <a href="https://twitter.com/JeremiePat">Jérémie Patonnier</a>.</dd>
- <dt><a href="https://www.codecademy.com/">Codecademy</a></dt>
- <dd>A great interactive site for learning programming languages from scratch.</dd>
- <dt><a href="https://www.bitdegree.org/learn/">BitDegree</a></dt>
- <dd>Basic coding theory with a gamified learning process. Mainly focused on beginners.</dd>
- <dt><a href="https://code.org/">Code.org</a></dt>
- <dd>Basic coding theory and practice, primarily aimed at children/complete beginners.</dd>
- <dt><a href="https://exlskills.com/learn-en/courses">EXLskills</a></dt>
- <dd>Free and open courses for learning tech skills, with mentorship and project-based learning.</dd>
- <dt><a href="https://www.freecodecamp.org/">freeCodeCamp.org</a></dt>
- <dd>Interactive site with tutorials and projects to learn web development.</dd>
- <dt><a href="https://foundation.mozilla.org/en/initiatives/web-literacy/core-curriculum/">Web literacy map</a></dt>
- <dd>A framework for entry-level web literacy and 21st-century skills, which also provides access to teaching activities sorted by category.</dd>
- <dt><a href="https://edabit.com/challenges/javascript">Edabit</a></dt>
- <dd>Thousands of interactive JavaScript challenges.</dd>
-</dl>
+## See also
+
+- [Mozilla developer newsletter](https://www.mozilla.org/en-US/newsletter/developer/)
+  - : Our newsletter for web developers, which is an excellent resource for all levels of experience.
+- [Learn JavaScript](https://learnjavascript.online/)
+  - : An excellent resource for aspiring web developers — Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free, and the complete course is available for a small one-time payment.
+- [Web demystified](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g)
+  - : A great series of videos explaining web fundamentals, aimed at absolute beginners to web development. Created by [Jérémie Patonnier](https://twitter.com/JeremiePat).
+- [Codecademy](https://www.codecademy.com/)
+  - : A great interactive site for learning programming languages from scratch.
+- [BitDegree](https://www.bitdegree.org/learn/)
+  - : Basic coding theory with a gamified learning process. Mainly focused on beginners.
+- [Code.org](https://code.org/)
+  - : Basic coding theory and practice, primarily aimed at children/complete beginners.
+- [EXLskills](https://exlskills.com/learn-en/courses)
+  - : Free and open courses for learning tech skills, with mentorship and project-based learning.
+- [freeCodeCamp.org](https://www.freecodecamp.org/)
+  - : Interactive site with tutorials and projects to learn web development.
+- [Web literacy map](https://foundation.mozilla.org/en/initiatives/web-literacy/core-curriculum/)
+  - : A framework for entry-level web literacy and 21st-century skills, which also provides access to teaching activities sorted by category.
+- [Edabit](https://edabit.com/challenges/javascript)
+  - : Thousands of interactive JavaScript challenges.

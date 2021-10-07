@@ -9,222 +9,204 @@ tags:
   - Web
   - questions
 ---
-<p>In this article, you'll find some frequently-asked questions (FAQs) about CSS, along with answers that may help you on your quest to become a web developer.</p>
+In this article, you'll find some frequently-asked questions (FAQs) about CSS, along with answers that may help you on your quest to become a web developer.
 
-<h2 id="Why_doesn't_my_CSS_which_is_valid_render_correctly">Why doesn't my CSS, which is valid, render correctly?</h2>
+## Why doesn't my CSS, which is valid, render correctly?
 
-<p>Browsers use the <code>DOCTYPE</code> declaration to choose whether to show the document using a mode that is more compatible  with Web standards or with old browser bugs. Using a correct and modern <code>DOCTYPE</code> declaration at the start of your HTML will improve browser standards compliance.</p>
+Browsers use the `DOCTYPE` declaration to choose whether to show the document using a mode that is more compatible  with Web standards or with old browser bugs. Using a correct and modern `DOCTYPE` declaration at the start of your HTML will improve browser standards compliance.
 
-<p>Modern browsers have two main rendering modes:</p>
+Modern browsers have two main rendering modes:
 
-<ul>
- <li><em>Quirks Mode</em>: also called backwards-compatibility mode, allows legacy webpages to be rendered as their authors intended, following the non-standard rendering rules used by older browsers. Documents with an incomplete, incorrect, or missing <code>DOCTYPE</code> declaration or a known <code>DOCTYPE</code> declaration in common use before 2001 will be rendered in Quirks Mode.</li>
- <li><em>Standards Mode</em>: the browser attempts to follow the W3C standards strictly. New HTML pages are expected to be designed for standards-compliant browsers, and as a result, pages with a modern <code>DOCTYPE</code> declaration will be rendered with Standards Mode.</li>
-</ul>
+- _Quirks Mode_: also called backwards-compatibility mode, allows legacy webpages to be rendered as their authors intended, following the non-standard rendering rules used by older browsers. Documents with an incomplete, incorrect, or missing `DOCTYPE` declaration or a known `DOCTYPE` declaration in common use before 2001 will be rendered in Quirks Mode.
+- _Standards Mode_: the browser attempts to follow the W3C standards strictly. New HTML pages are expected to be designed for standards-compliant browsers, and as a result, pages with a modern `DOCTYPE` declaration will be rendered with Standards Mode.
 
-<p>Gecko-based browsers, have a third <em><a href="/en-US/docs/Mozilla/Gecko_Almost_Standards_Mode" title="Gecko's_&quot;Almost_Standards&quot;_Mode">Almost Standards Mode</a></em> that has only a few minor quirks.</p>
+Gecko-based browsers, have a third _[Almost Standards Mode](/en-US/docs/Mozilla/Gecko_Almost_Standards_Mode (Gecko's_"Almost_Standards"_Mode))_ that has only a few minor quirks.
 
-<p>This is a list of the most commonly used <code>DOCTYPE</code> declarations that will trigger Standards or Almost Standards mode:</p>
+This is a list of the most commonly used `DOCTYPE` declarations that will trigger Standards or Almost Standards mode:
 
-<pre>&lt;!DOCTYPE html&gt; /* This is the HTML5 doctype. Given that each modern browser uses an HTML5
-                   parser, this is the recommended doctype */
+    <!DOCTYPE html> /* This is the HTML5 doctype. Given that each modern browser uses an HTML5
+                       parser, this is the recommended doctype */
 
-&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd"&gt;
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
 
-&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd"&gt;
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
 
-&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
-</pre>
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<p>When at all possible, you should just use the HTML5 doctype.</p>
+When at all possible, you should just use the HTML5 doctype.
 
-<h2 id="My_CSS_is_valid.2C_but_not_correctly_rendered">Why doesn't my CSS, which is valid, render at all?</h2>
+## Why doesn't my CSS, which is valid, render at all?
 
-<p>Here are some possible causes:</p>
+Here are some possible causes:
 
-<ul>
- <li>You've got the path to CSS file wrong.</li>
- <li>To be applied, a CSS stylesheet must be served with a <code>text/css</code> MIME type. If the Web server doesn't serve it with this type, it won't be applied.</li>
-</ul>
+- You've got the path to CSS file wrong.
+- To be applied, a CSS stylesheet must be served with a `text/css` MIME type. If the Web server doesn't serve it with this type, it won't be applied.
 
-<h2 id="Difference_between_id_and_class">What is the difference between <code>id</code> and <code>class</code>?</h2>
+## What is the difference between `id` and `class`?
 
-<p>HTML elements can have an <code>id</code> and/or <code>class</code> attribute. The <code>id</code> attribute assigns a name to the element it is applied to, and for valid markup, there can be only one element with that name. The <code>class</code> attribute assigns a class name to the element, and that name can be used on many elements within the page. CSS allows you to apply styles to particular <code>id</code> and/or <code>class</code> names.</p>
+HTML elements can have an `id` and/or `class` attribute. The `id` attribute assigns a name to the element it is applied to, and for valid markup, there can be only one element with that name. The `class` attribute assigns a class name to the element, and that name can be used on many elements within the page. CSS allows you to apply styles to particular `id` and/or `class` names.
 
-<ul>
- <li>Use a class-specific style when you want to apply the styling rules to many blocks and elements within the page, or when you currently only have element to style with that style, but you might want to add more later.</li>
- <li>Use an id-specific style when you need to restrict the applied styling rules to one specific block or element. This style will only be used by the element with that particular id.</li>
-</ul>
+- Use a class-specific style when you want to apply the styling rules to many blocks and elements within the page, or when you currently only have element to style with that style, but you might want to add more later.
+- Use an id-specific style when you need to restrict the applied styling rules to one specific block or element. This style will only be used by the element with that particular id.
 
-<p>It is generally recommended to use classes as much as possible, and to use ids only when absolutely necessary for specific uses (like to connect label and form elements or for styling elements that must be semantically unique):</p>
+It is generally recommended to use classes as much as possible, and to use ids only when absolutely necessary for specific uses (like to connect label and form elements or for styling elements that must be semantically unique):
 
-<ul>
- <li>Using classes makes your styling extensible — even if you only have one element to style with a particular ruleset now, you might want to add more later.</li>
- <li>Classes allow you to style multiple elements, therefore they can lead to shorter stylesheets, rather than having to write out the same styling information in multiple rules that use id selectors. Shorter stylesheets are more performant.</li>
- <li>Class selectors have lower <a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity">specificity</a> than id selectors, so are easier to override if needed.</li>
-</ul>
+- Using classes makes your styling extensible — even if you only have one element to style with a particular ruleset now, you might want to add more later.
+- Classes allow you to style multiple elements, therefore they can lead to shorter stylesheets, rather than having to write out the same styling information in multiple rules that use id selectors. Shorter stylesheets are more performant.
+- Class selectors have lower [specificity](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity) than id selectors, so are easier to override if needed.
 
-<div class="note">
-<p><strong>Note:</strong> See <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">Selectors</a> for more information.</p>
-</div>
+> **Note:** See [Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) for more information.
 
-<h2 id="Restoring_the_default_property_value">How do I restore the default value of a property?</h2>
+## How do I restore the default value of a property?
 
-<p>Initially CSS didn't provide a "default" keyword and the only way to restore the default value of a property is to explicitly re-declare that property. For example:</p>
+Initially CSS didn't provide a "default" keyword and the only way to restore the default value of a property is to explicitly re-declare that property. For example:
 
-<pre class="brush: css">/* Heading default color is black */
+```css
+/* Heading default color is black */
 h1 { color: red; }
-h1 { color: black; }</pre>
+h1 { color: black; }
+```
 
-<p>This has changed with CSS 2; the keyword <a href="/en-US/docs/Web/CSS/initial">initial</a> is now a valid value for a CSS property. It resets it to its default value, which is defined in the CSS specification of the given property.</p>
+This has changed with CSS 2; the keyword [initial](/en-US/docs/Web/CSS/initial) is now a valid value for a CSS property. It resets it to its default value, which is defined in the CSS specification of the given property.
 
-<pre class="brush: css">/* Heading default color is black */
+```css
+/* Heading default color is black */
 h1 { color: red; }
-h1 { color: initial; }</pre>
+h1 { color: initial; }
+```
 
-<h2 id="Derived_styles">How do I derive one style from another?</h2>
+## How do I derive one style from another?
 
-<p>CSS does not exactly allow one style to be defined in terms of another. (See <a href="http://archivist.incutio.com/viewlist/css-discuss/2685">Eric Meyer's note about the Working Group's stance</a>). However, assigning multiple classes to a single element can provide the same effect, and <a href="/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS Variables</a> now provide a way to define style information in one place that can be reused in multiple places.</p>
+CSS does not exactly allow one style to be defined in terms of another. (See [Eric Meyer's note about the Working Group's stance](http://archivist.incutio.com/viewlist/css-discuss/2685)). However, assigning multiple classes to a single element can provide the same effect, and [CSS Variables](/en-US/docs/Web/CSS/Using_CSS_custom_properties) now provide a way to define style information in one place that can be reused in multiple places.
 
-<h2 id="Assigning_multiple_classes">How do I assign multiple classes to an element?</h2>
+## How do I assign multiple classes to an element?
 
-<p>HTML elements can be assigned multiple classes by listing the classes in the <code>class</code> attribute, with a blank space to separate them.</p>
+HTML elements can be assigned multiple classes by listing the classes in the `class` attribute, with a blank space to separate them.
 
-<pre>&lt;style type="text/css"&gt;
-.news { background: black; color: white; }
-.today { font-weight: bold; }
-&lt;/style&gt;
+    <style type="text/css">
+    .news { background: black; color: white; }
+    .today { font-weight: bold; }
+    </style>
 
-&lt;div class="news today"&gt;
-... content of today's news ...
-&lt;/div&gt;
-</pre>
+    <div class="news today">
+    ... content of today's news ...
+    </div>
 
-<p>If the same property is declared in both rules, the conflict is resolved first through specificity, then according to the order of the CSS declarations. The order of classes in the <code>class</code> attribute is not relevant.</p>
+If the same property is declared in both rules, the conflict is resolved first through specificity, then according to the order of the CSS declarations. The order of classes in the `class` attribute is not relevant.
 
-<h2 id="Style_rules_that_don.27t_work">Why don't my style rules work properly?</h2>
+## Why don't my style rules work properly?
 
-<p>Style rules that are syntactically correct may not apply in certain situations. You can use <a href="/en-US/docs/Tools/Add-ons/DOM_Inspector">DOM Inspector</a>'s <em>CSS Style Rules</em> view to debug problems of this kind, but the most frequent instances of ignored style rules are listed below.</p>
+Style rules that are syntactically correct may not apply in certain situations. You can use [DOM Inspector](/en-US/docs/Tools/Add-ons/DOM_Inspector)'s _CSS Style Rules_ view to debug problems of this kind, but the most frequent instances of ignored style rules are listed below.
 
-<h3 id="HTML_elements_hierarchy">HTML elements hierarchy</h3>
+### HTML elements hierarchy
 
-<p>The way CSS styles are applied to HTML elements depends also on the elements hierarchy. It is important to remember that a rule applied to a descendent overrides the style of the parent, in spite of any specificity or priority of CSS rules.</p>
+The way CSS styles are applied to HTML elements depends also on the elements hierarchy. It is important to remember that a rule applied to a descendent overrides the style of the parent, in spite of any specificity or priority of CSS rules.
 
-<pre>.news { color: black; }
-.corpName { font-weight: bold; color: red; }
+    .news { color: black; }
+    .corpName { font-weight: bold; color: red; }
 
-&lt;!-- news item text is black, but corporate name is red and in bold --&gt;
-&lt;div class="news"&gt;
-   (Reuters) &lt;span class="corpName"&gt;General Electric&lt;/span&gt; (GE.NYS) announced on Thursday...
-&lt;/div&gt;
-</pre>
+    <!-- news item text is black, but corporate name is red and in bold -->
+    <div class="news">
+       (Reuters) <span class="corpName">General Electric</span> (GE.NYS) announced on Thursday...
+    </div>
 
-<p>In case of complex HTML hierarchies, if a rule seems to be ignored, check if the element is inside another element with a different style.</p>
+In case of complex HTML hierarchies, if a rule seems to be ignored, check if the element is inside another element with a different style.
 
-<h3 id="Explicitly_re-defined_style_rule">Explicitly re-defined style rule</h3>
+### Explicitly re-defined style rule
 
-<p>In CSS stylesheets, order <strong>is</strong> important. If you define a rule and then you re-define the same rule, the last definition is used.</p>
+In CSS stylesheets, order **is** important. If you define a rule and then you re-define the same rule, the last definition is used.
 
-<pre>#stockTicker { font-weight: bold; }
-.stockSymbol { color: red; }
-/*  other rules             */
-/*  other rules             */
-/*  other rules             */
-.stockSymbol { font-weight: normal; }
+    #stockTicker { font-weight: bold; }
+    .stockSymbol { color: red; }
+    /*  other rules             */
+    /*  other rules             */
+    /*  other rules             */
+    .stockSymbol { font-weight: normal; }
 
-&lt;!-- most text is in bold, except "GE", which is red and not bold --&gt;
-&lt;div id="stockTicker"&gt;
-   NYS: &lt;span class="stockSymbol"&gt;GE&lt;/span&gt; +1.0 ...
-&lt;/div&gt;
-</pre>
+    <!-- most text is in bold, except "GE", which is red and not bold -->
+    <div id="stockTicker">
+       NYS: <span class="stockSymbol">GE</span> +1.0 ...
+    </div>
 
-<p>To avoid this kind of error, try to define rules only once for a certain selector, and group all rules belonging to that selector.</p>
+To avoid this kind of error, try to define rules only once for a certain selector, and group all rules belonging to that selector.
 
-<h3 id="Use_of_a_shorthand_property">Use of a shorthand property</h3>
+### Use of a shorthand property
 
-<p>Using shorthand properties for defining style rules is good because it uses a very compact syntax. Using shorthand with only some attributes is possible and correct, but it must be remembered that undeclared attributes are automatically reset to their default values. This means that a previous rule for a single attribute could be implicitly overridden.</p>
+Using shorthand properties for defining style rules is good because it uses a very compact syntax. Using shorthand with only some attributes is possible and correct, but it must be remembered that undeclared attributes are automatically reset to their default values. This means that a previous rule for a single attribute could be implicitly overridden.
 
-<pre>#stockTicker { font-size: 12px; font-family: Verdana; font-weight: bold; }
-.stockSymbol { font: 14px Arial; color: red; }
+    #stockTicker { font-size: 12px; font-family: Verdana; font-weight: bold; }
+    .stockSymbol { font: 14px Arial; color: red; }
 
-&lt;div id="stockTicker"&gt;
-   NYS: &lt;span class="stockSymbol"&gt;GE&lt;/span&gt; +1.0 ...
-&lt;/div&gt;
-</pre>
+    <div id="stockTicker">
+       NYS: <span class="stockSymbol">GE</span> +1.0 ...
+    </div>
 
-<p>In the previous example the problem occurred on rules belonging to different elements, but it could happen also for the same element, because rule order <strong>is</strong> important.</p>
+In the previous example the problem occurred on rules belonging to different elements, but it could happen also for the same element, because rule order **is** important.
 
-<pre>#stockTicker {
-   font-weight: bold;
-   font: 12px Verdana;  /* font-weight is now set to normal */
-}
-</pre>
+    #stockTicker {
+       font-weight: bold;
+       font: 12px Verdana;  /* font-weight is now set to normal */
+    }
 
-<h3 id="Use_of_the_.2A_selector">Use of the <code>*</code> selector</h3>
+### Use of the `*` selector
 
-<p>The <code>*</code> wildcard selector refers to any element, and it has to be used with particular care.</p>
+The `*` wildcard selector refers to any element, and it has to be used with particular care.
 
-<pre>body * { font-weight: normal; }
-#stockTicker { font: 12px Verdana; }
-.corpName { font-weight: bold; }
-.stockUp { color: red; }
+    body * { font-weight: normal; }
+    #stockTicker { font: 12px Verdana; }
+    .corpName { font-weight: bold; }
+    .stockUp { color: red; }
 
-&lt;div id="section"&gt;
-   NYS: &lt;span class="corpName"&gt;&lt;span class="stockUp"&gt;GE&lt;/span&gt;&lt;/span&gt; +1.0 ...
-&lt;/div&gt;
-</pre>
+    <div id="section">
+       NYS: <span class="corpName"><span class="stockUp">GE</span></span> +1.0 ...
+    </div>
 
-<p>In this example the <code>body *</code> selector applies the rule to all elements inside body, at any hierarchy level, including the <code>.stockUp</code> class. So <code>font-weight: bold;</code> applied to the <code>.corpName</code> class is overridden by <code>font-weight: normal;</code> applied to all elements in the body.</p>
+In this example the `body *` selector applies the rule to all elements inside body, at any hierarchy level, including the `.stockUp` class. So `font-weight: bold;` applied to the `.corpName` class is overridden by `font-weight: normal;` applied to all elements in the body.
 
-<p>The use of the * selector should be minimized as it is a slow selector, especially when not used as the first element of a selector. Its use should be avoided as much as possible.</p>
+The use of the \* selector should be minimized as it is a slow selector, especially when not used as the first element of a selector. Its use should be avoided as much as possible.
 
-<h3 id="Specificity_in_CSS">Specificity in CSS</h3>
+### Specificity in CSS
 
-<p>When multiple rules apply to a certain element, the rule chosen depends on its style <a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity">specificity</a>. Inline style (in HTML <code>style</code> attributes) has the highest specificity and will override any selectors, followed by ID selectors, then class selectors, and eventually element selectors. The text color of the below {{htmlelement("div")}} will therefore be red.</p>
+When multiple rules apply to a certain element, the rule chosen depends on its style [specificity](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity). Inline style (in HTML `style` attributes) has the highest specificity and will override any selectors, followed by ID selectors, then class selectors, and eventually element selectors. The text color of the below {{htmlelement("div")}} will therefore be red.
 
-<pre>div { color: black; }
-#orange { color: orange; }
-.green { color: green; }
+    div { color: black; }
+    #orange { color: orange; }
+    .green { color: green; }
 
-&lt;div id="orange" class="green" style="color: red;"&gt;This is red&lt;/div&gt;
-</pre>
+    <div id="orange" class="green" style="color: red;">This is red</div>
 
-<p>The rules are more complicated when the selector has multiple parts. More detailed information about how selector specificity is calculated can be found in the <a href="https://www.w3.org/TR/CSS21/cascade.html#specificity">CSS 2.1 Specification chapter 6.4.3</a>.</p>
+The rules are more complicated when the selector has multiple parts. More detailed information about how selector specificity is calculated can be found in the [CSS 2.1 Specification chapter 6.4.3](https://www.w3.org/TR/CSS21/cascade.html#specificity).
 
-<h2 id="What_do_the_-moz-.2A_properties_do.3F">What do the -moz-*, -ms-*, -webkit-*, -o-* and -khtml-* properties do?</h2>
+## What do the -moz-\*, -ms-\*, -webkit-\*, -o-\* and -khtml-\* properties do?
 
-<p>These properties, called <em>prefixed properties</em>, are extensions to the CSS standard. They allow use of experimental and non-standard features in browsers without polluting the regular namespace, preventing future incompatibilities to arise when the standard is extended.</p>
+These properties, called _prefixed properties_, are extensions to the CSS standard. They allow use of experimental and non-standard features in browsers without polluting the regular namespace, preventing future incompatibilities to arise when the standard is extended.
 
-<p>The use of such properties on production websites is not recommended — they have already created a huge web compatibility mess. For example, many developers only using the <code>-webkit-</code> prefixed version of a property when the non-prefixed version is supported across all browsers meant that a feature relying on that property would break in non-webkit-based browsers, completely needlessly. This problem got so bad that other browsers started to implement <code>-webkit-</code> prefixed aliases to improve web compatibility, as specified in the <a href="https://compat.spec.whatwg.org/">Compatibility Living Standard</a>.</p>
+The use of such properties on production websites is not recommended — they have already created a huge web compatibility mess. For example, many developers only using the `-webkit-` prefixed version of a property when the non-prefixed version is supported across all browsers meant that a feature relying on that property would break in non-webkit-based browsers, completely needlessly. This problem got so bad that other browsers started to implement `-webkit-` prefixed aliases to improve web compatibility, as specified in the [Compatibility Living Standard](https://compat.spec.whatwg.org/).
 
-<p>In fact most browsers now do not use CSS prefixes when implementing experimental features, instead implementing those features only on Nightly browser versions or similar.</p>
+In fact most browsers now do not use CSS prefixes when implementing experimental features, instead implementing those features only on Nightly browser versions or similar.
 
-<p>If you need to use prefixes in your work, you are advised to write your code in a way that uses the prefixed versions first, but then includes a non-prefixed standard version afterwards so it can automatically override the prefixed versions where supported. For example:</p>
+If you need to use prefixes in your work, you are advised to write your code in a way that uses the prefixed versions first, but then includes a non-prefixed standard version afterwards so it can automatically override the prefixed versions where supported. For example:
 
-<pre class="brush: css">-ms-transform: rotate(90deg);
+```css
+-ms-transform: rotate(90deg);
 -webkit-transform: rotate(90deg);
-transform: rotate(90deg);</pre>
+transform: rotate(90deg);
+```
 
-<div class="note">
-<p><strong>Note:</strong> For more information on dealing with prefixed properties, see <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#handling_css_prefixes">Handling common HTML and CSS problems — Handling CSS prefixes</a> from our <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing">Cross-browser testing</a> module.</p>
-</div>
+> **Note:** For more information on dealing with prefixed properties, see [Handling common HTML and CSS problems — Handling CSS prefixes](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#handling_css_prefixes) from our [Cross-browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) module.
 
-<div class="note">
-<p><strong>Note:</strong> See the <a href="/en-US/docs/Web/CSS/Mozilla_Extensions" title="CSS Reference/Mozilla Extensions">Mozilla CSS Extensions</a> page for more information on the Mozilla-prefixed CSS properties.</p>
-</div>
+> **Note:** See the [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Mozilla_Extensions "CSS Reference/Mozilla Extensions") page for more information on the Mozilla-prefixed CSS properties.
 
-<h2 id="How_does_z-index_relate_to_positioning">How does z-index relate to positioning?</h2>
+## How does z-index relate to positioning?
 
-<p>The z-index property specifies the stack order of elements.</p>
+The z-index property specifies the stack order of elements.
 
-<p>An element with a higher z-index/stack order is always rendered in front of an element with a lower z-index/stack order on the screen. Z-index will only work on elements that have a specified position (<code>position:absolute</code>, <code>position:relative</code>, or <code>position:fixed</code>).</p>
+An element with a higher z-index/stack order is always rendered in front of an element with a lower z-index/stack order on the screen. Z-index will only work on elements that have a specified position (`position:absolute`, `position:relative`, or `position:fixed`).
 
-<div class="note">
-<p><strong>Note:</strong> For more information, see our <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a> learning article, and in particular the <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning#introducing_z-index">Introducing z-index</a> section.</p>
-</div>
+> **Note:** For more information, see our [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning) learning article, and in particular the [Introducing z-index](/en-US/docs/Learn/CSS/CSS_layout/Positioning#introducing_z-index) section.

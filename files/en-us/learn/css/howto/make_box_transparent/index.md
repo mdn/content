@@ -5,34 +5,30 @@ tags:
   - Basic
   - Beginner
   - CSS
-  - 'CSS:Getting_Started'
+  - CSS:Getting_Started
   - Guide
   - Web
 ---
-<p>{{LearnSidebar}}</p>
+{{LearnSidebar}}
 
-<p>This guide will help you to understand the ways to make a box semi-transparent using CSS.</p>
+This guide will help you to understand the ways to make a box semi-transparent using CSS.
 
-<h2>Change the opacity of the box and content</h2>
+## Change the opacity of the box and content
 
-<p>If you would like the box and all of the contents of the box to change opacity, then the CSS {{cssxref("opacity")}} property is the tool to reach for. Opacity is the opposite of transparency; therefore <code>opacity: 1</code> is fully opaque&mdash;you will not see through the box at all.</p>
+If you would like the box and all of the contents of the box to change opacity, then the CSS {{cssxref("opacity")}} property is the tool to reach for. Opacity is the opposite of transparency; therefore `opacity: 1` is fully opaque—you will not see through the box at all.
 
-<p>Using a value of <code>0</code> would make the box completely transparent, and values between the two will change the opacity, with higher values giving less transparency.</p>
+Using a value of `0` would make the box completely transparent, and values between the two will change the opacity, with higher values giving less transparency.
 
-<h2>Changing the opacity of the background color only</h2>
+## Changing the opacity of the background color only
 
-<p>In many cases you will only want to make the background color itself partly transparent, keeping the text and other elements fully opaque. To achieve this, use a color value which has an alpha channel&mdash;such as <a href="/en-US/docs/Web/CSS/color_value#rgb_colors">rgba</a>. As with <code>opacity</code>, a value of <code>1</code> for the alpha channel value makes the color fully opaque. Therefore <code>background-color: rgba(0,0,0,.5);</code> will set the background color to 50% opacity.</p>
+In many cases you will only want to make the background color itself partly transparent, keeping the text and other elements fully opaque. To achieve this, use a color value which has an alpha channel—such as [rgba](/en-US/docs/Web/CSS/color_value#rgb_colors). As with `opacity`, a value of `1` for the alpha channel value makes the color fully opaque. Therefore `background-color: rgba(0,0,0,.5);` will set the background color to 50% opacity.
 
-<p>Try changing the opacity and alpha channel values in the below examples to see more or less of the background image behind the box.</p>
+Try changing the opacity and alpha channel values in the below examples to see more or less of the background image behind the box.
 
-<p>{{EmbedGHLiveSample("css-examples/howto/opacity.html", '100%', 770)}}</p>
+{{EmbedGHLiveSample("css-examples/howto/opacity.html", '100%', 770)}}
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Take care that your text retains enough contrast with the background in cases where you are overlaying an image; otherwise you may make the content hard to read.</p>
-</div>
+> **Note:** Take care that your text retains enough contrast with the background in cases where you are overlaying an image; otherwise you may make the content hard to read.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/HTML/Applying_color">Applying color to HTML elements using CSS.</a></li>
-</ul>
+- [Applying color to HTML elements using CSS.](/en-US/docs/Web/HTML/Applying_color)

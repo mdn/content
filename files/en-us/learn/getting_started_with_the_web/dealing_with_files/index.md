@@ -11,104 +11,89 @@ tags:
   - theory
   - website
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
 
-<div>{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}</div>
+A website consists of many files: text content, code, stylesheets, media content, and so on. When you're building a website, you need to assemble these files into a sensible structure on your local computer, make sure they can talk to one another, and get all your content looking right before you eventually [upload them to a server](/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website). _Dealing with files_ discusses some issues you should be aware of so you can set up a sensible file structure for your website.
 
-<p>A website consists of many files: text content, code, stylesheets, media content, and so on. When you're building a website, you need to assemble these files into a sensible structure on your local computer, make sure they can talk to one another, and get all your content looking right before you eventually <a href="/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website">upload them to a server</a>. <em>Dealing with files</em> discusses some issues you should be aware of so you can set up a sensible file structure for your website.</p>
+## Where should your website live on your computer?
 
-<h2 id="Where_should_your_website_live_on_your_computer">Where should your website live on your computer?</h2>
+When you are working on a website locally on your computer, you should keep all the related files in a single folder that mirrors the published website's file structure on the server. This folder can live anywhere you like, but you should put it somewhere where you can easily find it, maybe on your Desktop, in your Home folder, or at the root of your hard drive.
 
-<p>When you are working on a website locally on your computer, you should keep all the related files in a single folder that mirrors the published website's file structure on the server. This folder can live anywhere you like, but you should put it somewhere where you can easily find it, maybe on your Desktop, in your Home folder, or at the root of your hard drive.</p>
+1.  Choose a place to store your website projects. Inside your chosen place, create a new folder called `web-projects` (or similar). This is where all your website projects will live.
+2.  Inside this first folder, create another folder to store your first website in. Call it `test-site` (or something more imaginative).
 
-<ol>
- <li>Choose a place to store your website projects. Inside your chosen place, create a new folder called <code>web-projects</code> (or similar). This is where all your website projects will live.</li>
- <li>Inside this first folder, create another folder to store your first website in. Call it <code>test-site</code> (or something more imaginative).</li>
-</ol>
+## An aside on casing and spacing
 
-<h2 id="An_aside_on_casing_and_spacing">An aside on casing and spacing</h2>
+You'll notice that throughout this article, we ask you to name folders and files completely in lowercase with no spaces. This is because:
 
-<p>You'll notice that throughout this article, we ask you to name folders and files completely in lowercase with no spaces. This is because:</p>
+1.  Many computers, particularly web servers, are case-sensitive. So for example, if you put an image on your website at `test-site/MyImage.jpg` and then in a different file you try to invoke the image as `test-site/myimage.jpg`, it may not work.
+2.  Browsers, web servers, and programming languages do not handle spaces consistently. For example, if you use spaces in your filename, some systems may treat the filename as two filenames. Some servers will replace the areas in your filenames with "%20" (the character code for spaces in URIs), resulting in all your links being broken. It's better to separate words with hyphens, rather than underscores: `my-file.html` vs. `my_file.html`.
 
-<ol>
- <li>Many computers, particularly web servers, are case-sensitive. So for example, if you put an image on your website at <code>test-site/MyImage.jpg</code> and then in a different file you try to invoke the image as <code>test-site/myimage.jpg</code>, it may not work.</li>
- <li>Browsers, web servers, and programming languages do not handle spaces consistently. For example, if you use spaces in your filename, some systems may treat the filename as two filenames. Some servers will replace the areas in your filenames with "%20" (the character code for spaces in URIs), resulting in all your links being broken. It's better to separate words with hyphens, rather than underscores: <code>my-file.html</code> vs. <code>my_file.html</code>.</li>
-</ol>
+The short answer is that you should use a hyphen for your file names. The Google search engine treats a hyphen as a word separator but does not regard an underscore that way. For these reasons, it is best to get into the habit of writing your folder and file names lowercase with no spaces and with words separated by hyphens, at least until you know what you're doing. That way you'll bump into fewer problems later down the road.
 
-<p>The short answer is that you should use a hyphen for your file names. The Google search engine treats a hyphen as a word separator but does not regard an underscore that way. For these reasons, it is best to get into the habit of writing your folder and file names lowercase with no spaces and with words separated by hyphens, at least until you know what you're doing. That way you'll bump into fewer problems later down the road.</p>
+## What structure should your website have?
 
-<h2 id="What_structure_should_your_website_have">What structure should your website have?</h2>
+Next, let's look at what structure our test site should have. The most common things we'll have on any website project we create are an index HTML file and folders to contain images, style files, and script files. Let's create these now:
 
-<p>Next, let's look at what structure our test site should have. The most common things we'll have on any website project we create are an index HTML file and folders to contain images, style files, and script files. Let's create these now:</p>
+1.  **`index.html`**: This file will generally contain your homepage content, that is, the text and images that people see when they first go to your site. Using your text editor, create a new file called `index.html` and save it just inside your `test-site` folder.
+2.  **`images` folder**: This folder will contain all the images that you use on your site. Create a folder called `images`, inside your `test-site` folder.
+3.  **`styles` folder**: This folder will contain the CSS code used to style your content (for example, setting text and background colors). Create a folder called `styles`, inside your `test-site` folder.
+4.  **`scripts` folder**: This folder will contain all the JavaScript code used to add interactive functionality to your site (e.g. buttons that load data when clicked). Create a folder called `scripts`, inside your `test-site` folder.
 
-<ol>
- <li><code><strong>index.html</strong></code>: This file will generally contain your homepage content, that is, the text and images that people see when they first go to your site. Using your text editor, create a new file called <code>index.html</code> and save it just inside your <code>test-site</code> folder.</li>
- <li><strong><code>images</code> folder</strong>: This folder will contain all the images that you use on your site. Create a folder called <code>images</code>, inside your <code>test-site</code> folder.</li>
- <li><strong><code>styles</code> folder</strong>: This folder will contain the CSS code used to style your content (for example, setting text and background colors). Create a folder called <code>styles</code>, inside your <code>test-site</code> folder.</li>
- <li><strong><code>scripts</code> folder</strong>: This folder will contain all the JavaScript code used to add interactive functionality to your site (e.g. buttons that load data when clicked). Create a folder called <code>scripts</code>, inside your <code>test-site</code> folder.</li>
-</ol>
+> **Note:** On Windows computers, you might have trouble seeing the file names, because Windows has an option called **Hide extensions for known file types** turned on by default. Generally, you can turn this off by going to Windows Explorer, selecting the **Folder options...** option, unchecking the **Hide extensions for known file types** check box, then clicking **OK**. For more specific information covering your version of Windows, you can search on the web.
 
-<div class="note">
-<p><strong>Note:</strong> On Windows computers, you might have trouble seeing the file names, because Windows has an option called <strong>Hide extensions for known file types</strong> turned on by default. Generally, you can turn this off by going to Windows Explorer, selecting the <strong>Folder options...</strong> option, unchecking the <strong>Hide extensions for known file types</strong> check box, then clicking <strong>OK</strong>. For more specific information covering your version of Windows, you can search on the web. </p>
-</div>
+## File paths
 
-<h2 id="File_paths">File paths</h2>
+To make files talk to one another, you have to provide a file path between them — basically a route, so one file knows where another one is. To demonstrate this, we will insert a little bit of HTML into our `index.html` file, and make it display the image you chose in the article ["What will your website look like?"](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like) Alternatively, you can choose an existing image at your disposal, on your computer or from the Web, and use it in the following steps:
 
-<p>To make files talk to one another, you have to provide a file path between them — basically a route, so one file knows where another one is. To demonstrate this, we will insert a little bit of HTML into our <code>index.html</code> file, and make it display the image you chose in the article <a href="/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">"What will your website look like?"</a> Alternatively, you can choose an existing image at your disposal, on your computer or from the Web, and use it in the following steps:</p>
+1.  Copy the image you chose earlier into your `images` folder.
+2.  Open up your `index.html` file, and insert the following code into the file exactly as shown. Don't worry about what it all means for now — we'll look at the structures in more detail later in the series.
 
-<ol>
- <li>Copy the image you chose earlier into your <code>images</code> folder.</li>
- <li>Open up your <code>index.html</code> file, and insert the following code into the file exactly as shown. Don't worry about what it all means for now — we'll look at the structures in more detail later in the series.
-  <pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;My test page&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;img src="" alt="My test image"&gt;
-  &lt;/body&gt;
-&lt;/html&gt; </pre>
- </li>
- <li>The line <code>&lt;img src="" alt="My test image"&gt;</code> is the HTML code that inserts an image into the page. We need to tell the HTML where the image is. The image is inside the <em>images</em> directory, which is in the same directory as <code>index.html</code>. To walk down the file structure from <code>index.html</code> to our image, the file path we'd need is <code>images/your-image-filename</code>. For example, our image is called <code>firefox-icon.png</code>, so the file path is <code>images/firefox-icon.png</code>.</li>
- <li>Insert the file path into your HTML code between the double quote marks of the <code>src=""</code> code.</li>
- <li>Save your HTML file, then load it in your web browser (double-click the file). You should see your new webpage displaying your image! </li>
-</ol>
+    ```html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <title>My test page</title>
+      </head>
+      <body>
+        <img src="" alt="My test image">
+      </body>
+    </html>
+    ```
 
-<p><img alt="A screenshot of our basic website showing just the firefox logo - a flaming fox wrapping the world" src="website-screenshot.png"></p>
+3.  The line `<img src="" alt="My test image">` is the HTML code that inserts an image into the page. We need to tell the HTML where the image is. The image is inside the _images_ directory, which is in the same directory as `index.html`. To walk down the file structure from `index.html` to our image, the file path we'd need is `images/your-image-filename`. For example, our image is called `firefox-icon.png`, so the file path is `images/firefox-icon.png`.
+4.  Insert the file path into your HTML code between the double quote marks of the `src=""` code.
+5.  Save your HTML file, then load it in your web browser (double-click the file). You should see your new webpage displaying your image!
 
-<p>Some general rules for file paths:</p>
+![A screenshot of our basic website showing just the firefox logo - a flaming fox wrapping the world](website-screenshot.png)
 
-<ul>
- <li>To link to a target file in the same directory as the invoking HTML file, just use the filename, e.g. <code>my-image.jpg</code>.</li>
- <li>To reference a file in a subdirectory, write the directory name in front of the path, plus a forward slash, e.g. <code>subdirectory/my-image.jpg</code>.</li>
- <li>To link to a target file in the directory <strong>above</strong> the invoking HTML file, write two dots. So for example, if <code>index.html</code> was inside a subfolder of <code>test-site</code> and <code>my-image.jpg</code> was inside <code>test-site</code>, you could reference <code>my-image.jpg</code> from <code>index.html</code> using <code>../my-image.jpg</code>.</li>
- <li>You can combine these as much as you like, for example <code>../subdirectory/another-subdirectory/my-image.jpg</code>.</li>
-</ul>
+Some general rules for file paths:
 
-<p>For now, this is about all you need to know.</p>
+- To link to a target file in the same directory as the invoking HTML file, just use the filename, e.g. `my-image.jpg`.
+- To reference a file in a subdirectory, write the directory name in front of the path, plus a forward slash, e.g. `subdirectory/my-image.jpg`.
+- To link to a target file in the directory **above** the invoking HTML file, write two dots. So for example, if `index.html` was inside a subfolder of `test-site` and `my-image.jpg` was inside `test-site`, you could reference `my-image.jpg` from `index.html` using `../my-image.jpg`.
+- You can combine these as much as you like, for example `../subdirectory/another-subdirectory/my-image.jpg`.
 
-<div class="note">
-<p><strong>Note:</strong> The Windows file system tends to use backslashes, not forward slashes, e.g. <code>C:\windows</code>. This doesn't matter in HTML — even if you are developing your website on Windows, you should still use forward slashes in your code.</p>
-</div>
+For now, this is about all you need to know.
 
-<h2 id="What_else_should_be_done">What else should be done?</h2>
+> **Note:** The Windows file system tends to use backslashes, not forward slashes, e.g. `C:\windows`. This doesn't matter in HTML — even if you are developing your website on Windows, you should still use forward slashes in your code.
 
-<p>That is about it for now. Your folder structure should look something like this:</p>
+## What else should be done?
 
-<p><img alt="A file structure in mac os x finder, showing an images folder with an image in, empty scripts and styles folders, and an index.html file" src="file-structure.png"></p>
+That is about it for now. Your folder structure should look something like this:
 
-<p>{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}</p>
+![A file structure in mac os x finder, showing an images folder with an image in, empty scripts and styles folders, and an index.html file](file-structure.png)
 
-<h2 id="In_this_module">In this module</h2>
+{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
 
-<ul>
- <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">Installing basic software</a></li>
- <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">What will your website look like?</a></li>
- <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">Dealing with files</a></li>
- <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML basics</a></li>
- <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">CSS basics</a></li>
- <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript basics</a></li>
- <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website">Publishing your website</a></li>
- <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works">How the web works</a></li>
-</ul>
+## In this module
+
+- [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
+- [What will your website look like?](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
+- [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
+- [HTML basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
+- [CSS basics](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
+- [JavaScript basics](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
+- [Publishing your website](/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
+- [How the web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

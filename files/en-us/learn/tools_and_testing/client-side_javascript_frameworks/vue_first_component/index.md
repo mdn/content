@@ -12,236 +12,253 @@ tags:
   - state
   - vue
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
+Now it's time to dive deeper into Vue, and create our own custom component — we'll start by creating a component to represent each item in the todo list. Along the way, we'll learn about a few important concepts such as calling components inside other components, passing data to them via props, and saving data state.
 
-<p>Now it's time to dive deeper into Vue, and create our own custom component — we'll start by creating a component to represent each item in the todo list. Along the way, we'll learn about a few important concepts such as calling components inside other components, passing data to them via props, and saving data state.</p>
-
-<div class="notecard note">
-<p><strong>Note:</strong> If you need to check your code against our version, you can find a finished version of the sample Vue app code in our <a href="https://github.com/mdn/todo-vue">todo-vue repository</a>. For a running live version, see <a href="https://mdn.github.io/todo-vue/dist/">https://mdn.github.io/todo-vue/dist/</a>.</p>
-</div>
+> **Note:** If you need to check your code against our version, you can find a finished version of the sample Vue app code in our [todo-vue repository](https://github.com/mdn/todo-vue). For a running live version, see <https://mdn.github.io/todo-vue/dist/>.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>
-    <p>Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
-
-    <p>Vue components are written as a combination of JavaScript objects that manage the app's data and an HTML-based template syntax that maps to the underlying DOM structure. For installation, and to use some of the more advanced features of Vue (like Single File Components or render functions), you'll need a terminal with <a href="https://nodejs.org/en/download/" rel="noopener noreferrer" target="_blank">Node</a> and <a href="https://www.npmjs.com/get-npm" rel="noopener noreferrer" target="_blank">npm</a> installed.</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To learn how to create a Vue component, render it inside another component, pass data into it using props, and save its state.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        <p>
+          Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
+          <a href="/en-US/docs/Learn/CSS">CSS</a>, and
+          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages,
+          knowledge of the
+          <a
+            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            >terminal/command line</a
+          >.
+        </p>
+        <p>
+          Vue components are written as a combination of JavaScript objects that
+          manage the app's data and an HTML-based template syntax that maps to
+          the underlying DOM structure. For installation, and to use some of the
+          more advanced features of Vue (like Single File Components or render
+          functions), you'll need a terminal with
+          <a
+            href="https://nodejs.org/en/download/"
+            rel="noopener noreferrer"
+            target="_blank"
+            >Node</a
+          >
+          and
+          <a
+            href="https://www.npmjs.com/get-npm"
+            rel="noopener noreferrer"
+            target="_blank"
+            >npm</a
+          >
+          installed.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        To learn how to create a Vue component, render it inside another
+        component, pass data into it using props, and save its state.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Creating_a_ToDoItem_component">Creating a ToDoItem component</h2>
+## Creating a ToDoItem component
 
-<p>Let's create our first component, which will display a single todo item. We'll use this to build our list of todos.</p>
+Let's create our first component, which will display a single todo item. We'll use this to build our list of todos.
 
-<ol>
- <li>In your <code>moz-todo-vue/src/components</code> directory, create a new file named <code>ToDoItem.vue</code>. Open the file in your code editor.</li>
- <li>Create the component's template section by adding <code>&lt;template&gt;&lt;/template&gt;</code> to the top of the file.</li>
- <li>Create a <code>&lt;script&gt;&lt;/script&gt;</code> section below your template section. Inside the <code>&lt;script&gt;</code> tags, add a default exported object <code>export default {}</code>, which is your component object.</li>
-</ol>
+1.  In your `moz-todo-vue/src/components` directory, create a new file named `ToDoItem.vue`. Open the file in your code editor.
+2.  Create the component's template section by adding `<template></template>` to the top of the file.
+3.  Create a `<script></script>` section below your template section. Inside the `<script>` tags, add a default exported object `export default {}`, which is your component object.
 
-<p>Your file should now look like this:</p>
+Your file should now look like this:
 
-<pre class="brush: html">&lt;template&gt; &lt;/template&gt;
-&lt;script&gt;
+```html
+<template> </template>
+<script>
   export default {};
-&lt;/script&gt;</pre>
+</script>
+```
 
-<p>We can now begin to add actual content to our <code>ToDoItem</code>. Vue templates are currently only allowed a single root element — one element needs to wrap everything inside the template section (this will change when Vue 3 comes out). We'll use a <code><a href="/en-US/docs/Web/HTML/Element/div">&lt;div&gt;</a></code> for that root element.</p>
+We can now begin to add actual content to our `ToDoItem`. Vue templates are currently only allowed a single root element — one element needs to wrap everything inside the template section (this will change when Vue 3 comes out). We'll use a [`<div>`](/en-US/docs/Web/HTML/Element/div) for that root element.
 
-<ol>
- <li>
-  <p>Add an empty <code>&lt;div&gt;</code> inside your component template now.</p>
- </li>
- <li>
-  <p>Inside that <code>&lt;div&gt;</code>, let's add a checkbox and a corresponding label. Add an <code>id</code> to the checkbox, and a <code>for</code> attribute mapping the checkbox to the label, as shown below.</p>
+1.  Add an empty `<div>` inside your component template now.
+2.  Inside that `<div>`, let's add a checkbox and a corresponding label. Add an `id` to the checkbox, and a `for` attribute mapping the checkbox to the label, as shown below.
 
-  <pre class="brush: html">&lt;template&gt;
-  &lt;div&gt;
-    &lt;input type="checkbox" id="todo-item" checked="false" /&gt;
-    &lt;label for="todo-item"&gt;My Todo Item&lt;/label&gt;
-  &lt;/div&gt;
-&lt;/template&gt;</pre>
- </li>
-</ol>
+    ```html
+    <template>
+      <div>
+        <input type="checkbox" id="todo-item" checked="false" />
+        <label for="todo-item">My Todo Item</label>
+      </div>
+    </template>
+    ```
 
-<h3 id="Using_TodoItem_inside_our_app">Using TodoItem inside our app</h3>
+### Using TodoItem inside our app
 
-<p>This is all fine, but we haven’t added the component to our app yet, so there’s no way to test it and see if everything is working. Let’s add it now.</p>
+This is all fine, but we haven’t added the component to our app yet, so there’s no way to test it and see if everything is working. Let’s add it now.
 
-<ol>
- <li>
-  <p>Open up <code>App.vue</code> again.</p>
- </li>
- <li>
-  <p>At the top of your <code>&lt;script&gt;</code> tag, add the following to import your <code>ToDoItem</code> component:</p>
+1.  Open up `App.vue` again.
+2.  At the top of your `<script>` tag, add the following to import your `ToDoItem` component:
 
-  <pre class="brush: js">import ToDoItem from './components/ToDoItem.vue';</pre>
- </li>
- <li>
-  <p>Inside your component object, add the <code>components</code> property, and inside it add your <code>ToDoItem</code> component to register it.</p>
- </li>
-</ol>
+    ```js
+    import ToDoItem from './components/ToDoItem.vue';
+    ```
 
-<p>Your <code>&lt;script&gt;</code> contents should now look like this:</p>
+3.  Inside your component object, add the `components` property, and inside it add your `ToDoItem` component to register it.
 
-<pre class="brush: js">import ToDoItem from './components/ToDoItem.vue';
+Your `<script>` contents should now look like this:
+
+```js
+import ToDoItem from './components/ToDoItem.vue';
 
 export default {
   name: 'app',
   components: {
     ToDoItem
   }
-};</pre>
+};
+```
 
-<p>This is the same way that the <code>HelloWorld</code> component was registered by the Vue CLI earlier.</p>
+This is the same way that the `HelloWorld` component was registered by the Vue CLI earlier.
 
-<p>To actually render the <code>ToDoItem</code> component in the app, you need to go up into your <code>&lt;template&gt;</code> element and call it as a <code>&lt;to-do-item&gt;&lt;/to-do-item&gt;</code> element. Note that the component file name and its representation in JavaScript is always in PascalCase (e.g. <code>ToDoList</code>), and the equivalent custom element is always in kebab-case (e.g. <code>&lt;to-do-list&gt;</code>).</p>
+To actually render the `ToDoItem` component in the app, you need to go up into your `<template>` element and call it as a `<to-do-item></to-do-item>` element. Note that the component file name and its representation in JavaScript is always in PascalCase (e.g. `ToDoList`), and the equivalent custom element is always in kebab-case (e.g. `<to-do-list>`).
 
-<ol>
- <li>Underneath the <code><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;</a></code>, create an unordered list (<code><a href="/en-US/docs/Web/HTML/Element/ul">&lt;ul&gt;</a></code>) containing a single list item (<code><a href="/en-US/docs/Web/HTML/Element/li">&lt;li&gt;</a></code>).</li>
- <li>Inside the list item add <code>&lt;to-do-item&gt;&lt;/to-do-item&gt;</code>.</li>
-</ol>
+1.  Underneath the [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements), create an unordered list ([`<ul>`](/en-US/docs/Web/HTML/Element/ul)) containing a single list item ([`<li>`](/en-US/docs/Web/HTML/Element/li)).
+2.  Inside the list item add `<to-do-item></to-do-item>`.
 
-<p>Your <code>App.vue</code> <code>&lt;template&gt;</code> contents should now look something like this:</p>
+Your `App.vue` `<template>` contents should now look something like this:
 
-<pre class="brush: html">&lt;div id="app"&gt;
-  &lt;h1&gt;To-Do List&lt;/h1&gt;
-  &lt;ul&gt;
-    &lt;li&gt;
-      &lt;to-do-item&gt;&lt;/to-do-item&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;</pre>
-
-<p>If you check your rendered app again, you should now see your rendered <code>ToDoItem</code>, consisting of a checkbox and a label.</p>
-
-<p><img alt="The current rendering state of the app, which includes a title of To-Do List, and a single checkbox and label" src="rendered-todoitem.png"></p>
-
-<h2 id="Making_components_dynamic_with_props">Making components dynamic with props</h2>
-
-<p>Our <code>ToDoItem</code> component is still not very useful because we can only really include this once on a page (IDs need to be unique), and we have no way to set the label text. Nothing about this is dynamic.</p>
-
-<p>What we need is some component state. This can be achieved by adding props to our component. You can think of props as being similar to inputs in a function. The value of a prop gives components an initial state that affects their display.</p>
-
-<h3 id="Registering_props">Registering props</h3>
-
-<p>In Vue, there are two ways to register props:</p>
-
-<ul>
- <li>The first way is to just list props out as an array of strings. Each entry in the array corresponds to the name of a prop.</li>
- <li>The second way is to define props as an object, with each key corresponding to the prop name. Listing props as an object allows you to specify default values, mark props as required, perform basic object typing (specifically around JavaScript primitive types), and perform simple prop validation.</li>
-</ul>
-
-<div class="notecard note">
-<p><strong>Note:</strong> Prop validation only happens in development mode, so you can't strictly rely on it in production. Additionally, prop validation functions are invoked before the component instance is created, so they do not have access to the component state (or other props).</p>
+```html
+<div id="app">
+  <h1>To-Do List</h1>
+  <ul>
+    <li>
+      <to-do-item></to-do-item>
+    </li>
+  </ul>
 </div>
+```
 
-<p>For this component, we’ll use the object registration method.</p>
+If you check your rendered app again, you should now see your rendered `ToDoItem`, consisting of a checkbox and a label.
 
-<ol>
- <li>Go back to your <code>ToDoItem.vue</code> file.</li>
- <li>Add a <code>props</code> property inside the export <code>default {}</code> object, which contains an empty object.</li>
- <li>Inside this object, add two properties with the keys <code>label</code> and <code>done</code>.</li>
- <li>The <code>label</code> key's value should be an object with 2 properties (or <strong>props</strong>, as they are called in the context of being available to the components).
-  <ol>
-   <li>The first is a <code>required</code> property, which will have a value of <code>true</code>. This will tell Vue that we expect every instance of this component to have a label field. Vue will warn us if a <code>ToDoItem</code> component does not have a label field.</li>
-   <li>The second property we'll add is a <code>type</code> property. Set the value for this property as the JavaScript <code>String</code> type (note the capital "S"). This tells Vue that we expect the value of this property to be a string.</li>
-  </ol>
- </li>
- <li>Now on to the <code>done</code> prop.
-  <ol>
-   <li>First add a <code>default</code> field, with a value of <code>false</code>. This means that when no <code>done</code> prop is passed to a <code>ToDoItem</code> component, the <code>done</code> prop will have a value of false (bear in mind that this is not required — we only need <code>default</code> on non-required props).</li>
-   <li>Next add a <code>type</code> field with a value of <code>Boolean</code>. This tells Vue we expect the value prop to be a JavaScript boolean type.</li>
-  </ol>
- </li>
-</ol>
+![The current rendering state of the app, which includes a title of To-Do List, and a single checkbox and label](rendered-todoitem.png)
 
-<p>Your component object should now look like this:</p>
+## Making components dynamic with props
 
-<pre class="brush: js">&lt;script&gt;
+Our `ToDoItem` component is still not very useful because we can only really include this once on a page (IDs need to be unique), and we have no way to set the label text. Nothing about this is dynamic.
+
+What we need is some component state. This can be achieved by adding props to our component. You can think of props as being similar to inputs in a function. The value of a prop gives components an initial state that affects their display.
+
+### Registering props
+
+In Vue, there are two ways to register props:
+
+- The first way is to just list props out as an array of strings. Each entry in the array corresponds to the name of a prop.
+- The second way is to define props as an object, with each key corresponding to the prop name. Listing props as an object allows you to specify default values, mark props as required, perform basic object typing (specifically around JavaScript primitive types), and perform simple prop validation.
+
+> **Note:** Prop validation only happens in development mode, so you can't strictly rely on it in production. Additionally, prop validation functions are invoked before the component instance is created, so they do not have access to the component state (or other props).
+
+For this component, we’ll use the object registration method.
+
+1.  Go back to your `ToDoItem.vue` file.
+2.  Add a `props` property inside the export `default {}` object, which contains an empty object.
+3.  Inside this object, add two properties with the keys `label` and `done`.
+4.  The `label` key's value should be an object with 2 properties (or **props**, as they are called in the context of being available to the components).
+
+    1.  The first is a `required` property, which will have a value of `true`. This will tell Vue that we expect every instance of this component to have a label field. Vue will warn us if a `ToDoItem` component does not have a label field.
+    2.  The second property we'll add is a `type` property. Set the value for this property as the JavaScript `String` type (note the capital "S"). This tells Vue that we expect the value of this property to be a string.
+
+5.  Now on to the `done` prop.
+
+    1.  First add a `default` field, with a value of `false`. This means that when no `done` prop is passed to a `ToDoItem` component, the `done` prop will have a value of false (bear in mind that this is not required — we only need `default` on non-required props).
+    2.  Next add a `type` field with a value of `Boolean`. This tells Vue we expect the value prop to be a JavaScript boolean type.
+
+Your component object should now look like this:
+
+```js
+<script>
   export default {
     props: {
       label: { required: true, type: String },
       done: { default: false, type: Boolean }
     }
   };
-&lt;/script&gt;</pre>
+</script>
+```
 
-<h3 id="Using_registered_props">Using registered props</h3>
+### Using registered props
 
-<p>With these props defined inside the component object, we can now use these variable values inside our template. Let's start by adding the <code>label</code> prop to the component template.</p>
+With these props defined inside the component object, we can now use these variable values inside our template. Let's start by adding the `label` prop to the component template.
 
-<p>In your <code>&lt;template&gt;</code>, replace the contents of the <code>&lt;label&gt;</code> element with <code>\{{label}}</code>.</p>
+In your `<template>`, replace the contents of the `<label>` element with `\{{label}}`.
 
-<p><code>\{{}}</code> is a special template syntax in Vue, which lets us print the result of JavaScript expressions defined in our class, inside our template, including values and methods. It’s important to know that content inside <code>\{{}}</code> is displayed as text and not HTML. In this case, we’re printing the value of the <code>label</code> prop.</p>
+`\{{}}` is a special template syntax in Vue, which lets us print the result of JavaScript expressions defined in our class, inside our template, including values and methods. It’s important to know that content inside `\{{}}` is displayed as text and not HTML. In this case, we’re printing the value of the `label` prop.
 
-<p>Your component’s template section should now look like this:</p>
+Your component’s template section should now look like this:
 
-<pre class="brush: html">&lt;template&gt;
-  &lt;div&gt;
-    &lt;input type="checkbox" id="todo-item" checked="false" /&gt;
-    &lt;label for="todo-item"&gt;\{{label}}&lt;/label&gt;
-  &lt;/div&gt;
-&lt;/template&gt;</pre>
+```html
+<template>
+  <div>
+    <input type="checkbox" id="todo-item" checked="false" />
+    <label for="todo-item">\{{label}}</label>
+  </div>
+</template>
+```
 
-<p>Go back to your browser and you'll see the todo item rendered as before, but without a label (oh no!). Go to your browser's DevTools and you’ll see a warning along these lines in the console:</p>
+Go back to your browser and you'll see the todo item rendered as before, but without a label (oh no!). Go to your browser's DevTools and you’ll see a warning along these lines in the console:
 
-<pre>[Vue warn]: Missing required prop: "label"
+    [Vue warn]: Missing required prop: "label"
 
-found in
+    found in
 
----&gt; &lt;ToDoItem&gt; at src/components/ToDoItem.vue
-       &lt;App&gt; at src/App.vue
-         &lt;Root&gt;
-</pre>
+    ---> <ToDoItem> at src/components/ToDoItem.vue
+           <App> at src/App.vue
+             <Root>
 
-<p>This is because we marked the <code>label</code> as a required prop, but we never gave the component that prop — we've defined where inside the template we want it used, but we haven't passed it into the component when calling it. Let’s fix that.</p>
+This is because we marked the `label` as a required prop, but we never gave the component that prop — we've defined where inside the template we want it used, but we haven't passed it into the component when calling it. Let’s fix that.
 
-<p>Inside your <code>App.vue</code> file, add a <code>label</code> prop to the <code>&lt;to-do-item&gt;&lt;/to-do-item&gt;</code> component, just like a regular HTML attribute:</p>
+Inside your `App.vue` file, add a `label` prop to the `<to-do-item></to-do-item>` component, just like a regular HTML attribute:
 
-<pre class="brush: html">&lt;to-do-item label="My ToDo Item"&gt;&lt;/to-do-item&gt;</pre>
+```html
+<to-do-item label="My ToDo Item"></to-do-item>
+```
 
-<p>Now you'll see the label in your app, and the warning won't be spat out in the console again.</p>
+Now you'll see the label in your app, and the warning won't be spat out in the console again.
 
-<p>So that's props in a nutshell. Next we'll move on to how Vue persists data state.</p>
+So that's props in a nutshell. Next we'll move on to how Vue persists data state.
 
-<h2 id="Vues_data_object">Vue's data object</h2>
+## Vue's data object
 
-<p>If you change the value of the <code>label</code> prop passed into the <code>&lt;to-do-item&gt;&lt;/to-do-item&gt;</code> call in your App component, you should see it update. This is great. We have a checkbox, with an updatable label. However, we're currently not doing anything with the "done" prop — we can check the checkboxes in the UI, but nowhere in the app are we recording whether a todo item is actually done.</p>
+If you change the value of the `label` prop passed into the `<to-do-item></to-do-item>` call in your App component, you should see it update. This is great. We have a checkbox, with an updatable label. However, we're currently not doing anything with the "done" prop — we can check the checkboxes in the UI, but nowhere in the app are we recording whether a todo item is actually done.
 
-<p>To achieve this, we want to bind the component's <code>done</code> prop to the <code>checked</code> attribute on the <code><a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt;</a></code> element, so that it can serve as a record of whether the checkbox is checked or not. However, it's important that props serve as one-way data binding — a component should never alter the value of its own props. There are a lot of reasons for this. In part, components editing props can make debugging a challenge. If a value is passed to multiple children, it could be hard to track where the changes to that value were coming from. In addition, changing props can cause components to re-render. So mutating props in a component would trigger the component to rerender, which may in-turn trigger the mutation again.</p>
+To achieve this, we want to bind the component's `done` prop to the `checked` attribute on the [`<input>`](/en-US/docs/Web/HTML/Element/input) element, so that it can serve as a record of whether the checkbox is checked or not. However, it's important that props serve as one-way data binding — a component should never alter the value of its own props. There are a lot of reasons for this. In part, components editing props can make debugging a challenge. If a value is passed to multiple children, it could be hard to track where the changes to that value were coming from. In addition, changing props can cause components to re-render. So mutating props in a component would trigger the component to rerender, which may in-turn trigger the mutation again.
 
-<p>To work around this, we can manage the <code>done</code> state using Vue’s <code>data</code> property. The <code>data</code> property is where you can manage local state in a component, it lives inside the component object alongside the <code>props</code> property and has the following structure:</p>
+To work around this, we can manage the `done` state using Vue’s `data` property. The `data` property is where you can manage local state in a component, it lives inside the component object alongside the `props` property and has the following structure:
 
-<pre class="brush: js">data() {
+```js
+data() {
   return {
     key: value
   }
-}</pre>
+}
+```
 
-<p>You'll note that the <code>data</code> property is a function. This is to keep the data values unique for each instance of a component at runtime — the function is invoked separately for each component instance. If you declared data as just an object, all instances of that component would share the same values. This is a side-effect of the way Vue registers components and something you do not want.</p>
+You'll note that the `data` property is a function. This is to keep the data values unique for each instance of a component at runtime — the function is invoked separately for each component instance. If you declared data as just an object, all instances of that component would share the same values. This is a side-effect of the way Vue registers components and something you do not want.
 
-<p>You use <code>this</code> to access a component's props and other properties from inside data, as you may expect. We'll see an example of this shortly.</p>
+You use `this` to access a component's props and other properties from inside data, as you may expect. We'll see an example of this shortly.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Because of the way that <code>this</code> works in arrow functions (binding to the parent’s context), you wouldn’t be able to access any of the necessary attributes from inside <code>data</code> if you used an arrow function. So don’t use an arrow function for the <code>data</code> property.</p>
-</div>
+> **Note:** Because of the way that `this` works in arrow functions (binding to the parent’s context), you wouldn’t be able to access any of the necessary attributes from inside `data` if you used an arrow function. So don’t use an arrow function for the `data` property.
 
-<p>So let's add a <code>data</code> property to our <code>ToDoItem</code> component. This will return an object containing a single property that we'll call <code>isDone</code>, whose value is <code>this.done</code>.</p>
+So let's add a `data` property to our `ToDoItem` component. This will return an object containing a single property that we'll call `isDone`, whose value is `this.done`.
 
-<p>Update the component object like so:</p>
+Update the component object like so:
 
-<pre class="brush: js">export default {
+```js
+export default {
   props: {
     label: { required: true, type: String },
     done: { default: false, type: Boolean }
@@ -251,63 +268,70 @@ found in
       isDone: this.done
     };
   }
-};</pre>
+};
+```
 
-<p>Vue does a little magic here — it binds all of your props directly to the component instance, so we don’t have to call <code>this.props.done</code>. It also binds other attributes (<code>data</code>, which you’ve already seen, and others like <code>methods</code>, <code>computed</code>, etc.) directly to the instance. This is, in part, to make them available to your template. The down-side to this is that you need to keep the keys unique across these attributes. This is why we called our <code>data</code> attribute <code>isDone</code> instead of <code>done</code>.</p>
+Vue does a little magic here — it binds all of your props directly to the component instance, so we don’t have to call `this.props.done`. It also binds other attributes (`data`, which you’ve already seen, and others like `methods`, `computed`, etc.) directly to the instance. This is, in part, to make them available to your template. The down-side to this is that you need to keep the keys unique across these attributes. This is why we called our `data` attribute `isDone` instead of `done`.
 
-<p>So now we need to attach the <code>isDone</code> property to our component. In a similar fashion to how Vue uses <code>\{{}}</code> expressions to display JavaScript expressions inside templates, Vue has a special syntax to bind JavaScript expressions to HTML elements and components: <code><strong>v-bind</strong></code>. The <code>v-bind</code> expression looks like this:</p>
+So now we need to attach the `isDone` property to our component. In a similar fashion to how Vue uses `\{{}}` expressions to display JavaScript expressions inside templates, Vue has a special syntax to bind JavaScript expressions to HTML elements and components: **`v-bind`**. The `v-bind` expression looks like this:
 
-<pre>v-bind:attribute="expression"</pre>
+    v-bind:attribute="expression"
 
-<p>In other words, you prefix whatever attribute/prop you want to bind to with <code>v-bind:</code>. In most cases, you can use a shorthand for the <code>v-bind</code> property, which is to just prefix the attribute/prop with a colon. So <code>:attribute="expression"</code> works the same as <code>v-bind:attribute="expression"</code>.</p>
+In other words, you prefix whatever attribute/prop you want to bind to with `v-bind:`. In most cases, you can use a shorthand for the `v-bind` property, which is to just prefix the attribute/prop with a colon. So `:attribute="expression"` works the same as `v-bind:attribute="expression"`.
 
-<p>So in the case of the checkbox in our <code>ToDoItem</code> component, we can use <code>v-bind</code> to map the <code>isDone</code> property to the <code>checked</code> attribute on the <code>&lt;input&gt;</code> element. Both of the following are equivalent:</p>
+So in the case of the checkbox in our `ToDoItem` component, we can use `v-bind` to map the `isDone` property to the `checked` attribute on the `<input>` element. Both of the following are equivalent:
 
-<pre class="brush: html">&lt;input type="checkbox" id="todo-item" v-bind:checked="isDone" /&gt;
+```html
+<input type="checkbox" id="todo-item" v-bind:checked="isDone" />
 
-&lt;input type="checkbox" id="todo-item" :checked="isDone" /&gt;</pre>
+<input type="checkbox" id="todo-item" :checked="isDone" />
+```
 
-<p>You're free to use whichever pattern you would like. It's best to keep it consistent though. Because the shorthand syntax is more commonly used, this tutorial will stick to that pattern.</p>
+You're free to use whichever pattern you would like. It's best to keep it consistent though. Because the shorthand syntax is more commonly used, this tutorial will stick to that pattern.
 
-<p>So let's do this. Update your <code>&lt;input&gt;</code> element now to replace <code>checked="false"</code> with <code>:checked="isDone"</code>.</p>
+So let's do this. Update your `<input>` element now to replace `checked="false"` with `:checked="isDone"`.
 
-<p>Test out your component by passing <code>:done="true"</code> to the <code>ToDoItem</code> call in <code>App.vue</code>. Note that you need to use the <code>v-bind</code> syntax, because otherwise <code>true</code> is passed as a string. The displayed checkbox should be checked.</p>
+Test out your component by passing `:done="true"` to the `ToDoItem` call in `App.vue`. Note that you need to use the `v-bind` syntax, because otherwise `true` is passed as a string. The displayed checkbox should be checked.
 
-<pre class="brush: js">&lt;template&gt;
-  &lt;div id="app"&gt;
-    &lt;h1&gt;My To-Do List&lt;/h1&gt;
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;to-do-item label="My ToDo Item" :done="true"&gt;&lt;/to-do-item&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
-</pre>
+```js
+<template>
+  <div id="app">
+    <h1>My To-Do List</h1>
+    <ul>
+      <li>
+        <to-do-item label="My ToDo Item" :done="true"></to-do-item>
+      </li>
+    </ul>
+  </div>
+</template>
+```
 
-<p>Try changing <code>true</code> to <code>false</code> and back again, reloading your app in between to see how the state changes.</p>
+Try changing `true` to `false` and back again, reloading your app in between to see how the state changes.
 
-<h2 id="Giving_Todos_a_unique_id">Giving Todos a unique id</h2>
+## Giving Todos a unique id
 
-<p>Great! We now have a working checkbox where we can set the state programmatically. However, we can currently only add one <code>ToDoList</code> component to the page because the <code>id</code> is hardcoded. This would result in errors with assistive technology since the <code>id</code> is needed to correctly map labels to their checkboxes. To fix this, we can programmatically set the <code>id</code> in the component data.</p>
+Great! We now have a working checkbox where we can set the state programmatically. However, we can currently only add one `ToDoList` component to the page because the `id` is hardcoded. This would result in errors with assistive technology since the `id` is needed to correctly map labels to their checkboxes. To fix this, we can programmatically set the `id` in the component data.
 
-<p>We can use the <a href="https://www.npmjs.com/package/lodash">lodash</a> package's <code>uniqueid()</code> method to help keep the index unique. This package exports a function that takes in a string and appends a unique integer to the end of the prefix. This will be sufficient for keeping component <code>id</code>s unique.</p>
+We can use the [lodash](https://www.npmjs.com/package/lodash) package's `uniqueid()` method to help keep the index unique. This package exports a function that takes in a string and appends a unique integer to the end of the prefix. This will be sufficient for keeping component `id`s unique.
 
-<p>Let’s add the package to our project with npm; stop your server and enter the following command into your terminal:</p>
+Let’s add the package to our project with npm; stop your server and enter the following command into your terminal:
 
-<pre class="brush: bash">npm install --save lodash.uniqueid</pre>
+```bash
+npm install --save lodash.uniqueid
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> If you prefer yarn, you could instead use <code>yarn add lodash.uniqueid</code>.</p>
-</div>
+> **Note:** If you prefer yarn, you could instead use `yarn add lodash.uniqueid`.
 
-<p>We can now import this package into our <code>ToDoItem</code> component. Add the following line at the top of <code>ToDoItem.vue</code>’s <code>&lt;script&gt;</code> element:</p>
+We can now import this package into our `ToDoItem` component. Add the following line at the top of `ToDoItem.vue`’s `<script>` element:
 
-<pre class="brush: js">import uniqueId from 'lodash.uniqueid';</pre>
+```js
+import uniqueId from 'lodash.uniqueid';
+```
 
-<p>Next, add an <code>id</code> field to our data property, so the component object ends up looking like so (<code>uniqueId()</code> returns the specified prefix — <code>todo-</code> — with a unique string appended to it):</p>
+Next, add an `id` field to our data property, so the component object ends up looking like so (`uniqueId()` returns the specified prefix — `todo-` — with a unique string appended to it):
 
-<pre class="brush: js">import uniqueId from 'lodash.uniqueid';
+```js
+import uniqueId from 'lodash.uniqueid';
 
 export default {
   props: {
@@ -320,84 +344,79 @@ export default {
       id: uniqueId('todo-')
     };
   }
-};</pre>
+};
+```
 
-<p>Next, bind the <code>id</code> to both our checkbox’s <code>id</code> attribute and the label’s <code>for</code> attribute, updating the existing <code>id</code> and <code>for</code> attributes as shown:</p>
+Next, bind the `id` to both our checkbox’s `id` attribute and the label’s `for` attribute, updating the existing `id` and `for` attributes as shown:
 
-<pre class="brush: js">&lt;template&gt;
-  &lt;div&gt;
-    &lt;input type="checkbox" :id="id" :checked="isDone" /&gt;
-    &lt;label :for="id"&gt;\{{label}}&lt;/label&gt;
-  &lt;/div&gt;
-&lt;/template&gt;</pre>
+```js
+<template>
+  <div>
+    <input type="checkbox" :id="id" :checked="isDone" />
+    <label :for="id">\{{label}}</label>
+  </div>
+</template>
+```
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>And that will do for this article. At this point we have a nicely-working <code>ToDoItem</code> component that can be passed a label to display, will store its checked state, and will be rendered with a unique <code>id</code> each time it is called. You can check if the unique <code>id</code>s are working by temporarily adding more <code>&lt;to-do-item&gt;&lt;/to-do-item&gt;</code> calls into <code>App.vue</code>, and then checking their rendered output with your browser's DevTools.</p>
+And that will do for this article. At this point we have a nicely-working `ToDoItem` component that can be passed a label to display, will store its checked state, and will be rendered with a unique `id` each time it is called. You can check if the unique `id`s are working by temporarily adding more `<to-do-item></to-do-item>` calls into `App.vue`, and then checking their rendered output with your browser's DevTools.
 
-<p>Now we're ready to add multiple <code>ToDoItem</code> components to our App. In our next article we'll look at adding a set of todo item data to our <code>App.vue</code> component, which we'll then loop through and display inside <code>ToDoItem</code> components using the <code>v-for</code> directive.</p>
+Now we're ready to add multiple `ToDoItem` components to our App. In our next article we'll look at adding a set of todo item data to our `App.vue` component, which we'll then loop through and display inside `ToDoItem` components using the `v-for` directive.
 
-<p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<h2 id="In_this_module">In this module</h2>
+## In this module
 
-<ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
- <li>React
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
-  </ul>
- </li>
- <li>Ember
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
-  </ul>
- </li>
- <li>Vue
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
-  </ul>
- </li>
- <li>Svelte
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
-  </ul>
- </li>
- <li>Angular
-   <ul>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
-   </ul>
- </li>
-</ul>
+- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- React
+
+  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+
+- Ember
+
+  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+
+- Vue
+
+  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+
+- Svelte
+
+  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+
+- Angular
+
+  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
+  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

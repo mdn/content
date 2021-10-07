@@ -12,124 +12,103 @@ tags:
   - list
   - web font
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
-<div>{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}</div>
-
-<p>In this assessment, we'll test your understanding of all the text styling techniques we've covered throughout this module by getting you to style the text for a community school's homepage. You might just have some fun along the way.</p>
+In this assessment, we'll test your understanding of all the text styling techniques we've covered throughout this module by getting you to style the text for a community school's homepage. You might just have some fun along the way.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>Before attempting this assessment you should have already worked through all the articles in this module.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To test comprehension of CSS text styling techniques.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        Before attempting this assessment you should have already worked through
+        all the articles in this module.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>To test comprehension of CSS text styling techniques.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Starting_point">Starting point</h2>
+## Starting point
 
-<p>To get this assessment started, you should:</p>
+To get this assessment started, you should:
 
-<ul>
- <li>Go and grab the <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/index.html">HTML</a> and <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/style.css">CSS</a> files for the exercise, and the provided <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/external-link-52.png">external link icon</a>.</li>
- <li>Make a copy of them on your local computer.</li>
-</ul>
+- Go and grab the [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/index.html) and [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/style.css) files for the exercise, and the provided [external link icon](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/external-link-52.png).
+- Make a copy of them on your local computer.
 
-<p>Alternatively, you could use a site like <a class="external external-icon" href="https://jsbin.com/">JSBin</a> or <a href="https://glitch.com/">Glitch</a> to do your assessment. You could paste the HTML and fill in the CSS into one of these online editors, and use <a href="https://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png">this URL</a> to point to the background image. If the online editor you are using doesn't have a separate CSS panel, feel free to put it in a <code>&lt;style&gt;</code> element in the head of the document.</p>
+Alternatively, you could use a site like [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/) to do your assessment. You could paste the HTML and fill in the CSS into one of these online editors, and use [this URL](https://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png) to point to the background image. If the online editor you are using doesn't have a separate CSS panel, feel free to put it in a `<style>` element in the head of the document.
 
-<div class="notecard note">
-<p><strong>Note:</strong> If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.</p>
-</div>
+> **Note:** If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
 
-<h2 id="Project_brief">Project brief</h2>
+## Project brief
 
-<p>You've been provided with some raw HTML for the homepage of an imaginary community college, plus some CSS that styles the page into a three column layout and provides some other rudimentary styling. You're to write your CSS additions below the comment at the bottom of the CSS file to make sure it's easy to mark the bits you've done. Don't worry if some of the selectors are repetitious; we'll let you off in this instance.</p>
+You've been provided with some raw HTML for the homepage of an imaginary community college, plus some CSS that styles the page into a three column layout and provides some other rudimentary styling. You're to write your CSS additions below the comment at the bottom of the CSS file to make sure it's easy to mark the bits you've done. Don't worry if some of the selectors are repetitious; we'll let you off in this instance.
 
-<p>Fonts:</p>
+Fonts:
 
-<ul>
- <li>First of all, download a couple of free-to-use fonts. Because this is a college, the fonts should be chosen to give the page a fairly serious, formal, trustworthy feel: a serif site-wide font for the general body text, coupled with a sans-serif or slab serif for the headings might be nice.</li>
- <li>Use a suitable service to generate bulletproof <code>@font-face</code> code for these two fonts.</li>
- <li>Apply your body font to the whole page, and your heading font to your headings.</li>
-</ul>
+- First of all, download a couple of free-to-use fonts. Because this is a college, the fonts should be chosen to give the page a fairly serious, formal, trustworthy feel: a serif site-wide font for the general body text, coupled with a sans-serif or slab serif for the headings might be nice.
+- Use a suitable service to generate bulletproof `@font-face` code for these two fonts.
+- Apply your body font to the whole page, and your heading font to your headings.
 
-<p>General text styling:</p>
+General text styling:
 
-<ul>
- <li>Give the page a site-wide <code>font-size</code> of <code>10px</code>.</li>
- <li>Give your headings and other element types appropriate font-sizes defined using a suitable relative unit.</li>
- <li>Give your body text a suitable <code>line-height</code>.</li>
- <li>Center your top level heading on the page.</li>
- <li>Give your headings a little bit of <code>letter-spacing</code> to make them not too squashed, and allow the letters to breathe a bit.</li>
- <li>Give your body text some <code>letter-spacing</code> and <code>word-spacing</code>, as appropriate.</li>
- <li>Give the first paragraph after each heading in the <code>&lt;section&gt;</code> a little bit of text-indentation, say 20px.</li>
-</ul>
+- Give the page a site-wide `font-size` of `10px`.
+- Give your headings and other element types appropriate font-sizes defined using a suitable relative unit.
+- Give your body text a suitable `line-height`.
+- Center your top level heading on the page.
+- Give your headings a little bit of `letter-spacing` to make them not too squashed, and allow the letters to breathe a bit.
+- Give your body text some `letter-spacing` and `word-spacing`, as appropriate.
+- Give the first paragraph after each heading in the `<section>` a little bit of text-indentation, say 20px.
 
-<p>Links:</p>
+Links:
 
-<ul>
- <li>Give the link, visited, focus, and hover states some colors that go with the color of the horizontal bars at the top and bottom of the page.</li>
- <li>Make it so that links are underlined by default, but when you hover or focus them the underline disappears.</li>
- <li>Remove the default focus outline from ALL the links on the page.</li>
- <li>Give the active state a noticeably different styling so it stands out nicely, but make it still fit in with the overall page design.</li>
- <li>Make it so that <em>external</em> links have the external link icon inserted next to them.</li>
-</ul>
+- Give the link, visited, focus, and hover states some colors that go with the color of the horizontal bars at the top and bottom of the page.
+- Make it so that links are underlined by default, but when you hover or focus them the underline disappears.
+- Remove the default focus outline from ALL the links on the page.
+- Give the active state a noticeably different styling so it stands out nicely, but make it still fit in with the overall page design.
+- Make it so that _external_ links have the external link icon inserted next to them.
 
-<p>Lists:</p>
+Lists:
 
-<ul>
- <li>Make sure the spacing of your lists and list items works well with the styling of the overall page. Each list item should have the same <code>line-height</code> as a paragraph line, and each list should have the same spacing at its top and bottom as you have between paragraphs.</li>
- <li>Give your list items a nice bullet appropriate for the design of the page. It is up to you whether you choose a custom bullet image or something else.</li>
-</ul>
+- Make sure the spacing of your lists and list items works well with the styling of the overall page. Each list item should have the same `line-height` as a paragraph line, and each list should have the same spacing at its top and bottom as you have between paragraphs.
+- Give your list items a nice bullet appropriate for the design of the page. It is up to you whether you choose a custom bullet image or something else.
 
-<p>Navigation menu:</p>
+Navigation menu:
 
-<ul>
- <li>Style your navigation menu so that it harmonizes with the page.</li>
-</ul>
+- Style your navigation menu so that it harmonizes with the page.
 
-<h2 id="Hints_and_tips">Hints and tips</h2>
+## Hints and tips
 
-<ul>
- <li>You don't need to edit the HTML in any way for this exercise.</li>
- <li>You don't necessarily have to make the nav menu look like buttons, but it needs to be a bit taller so that it doesn't look silly on the side of the page; also remember that you need to make this one a vertical nav menu.</li>
-</ul>
+- You don't need to edit the HTML in any way for this exercise.
+- You don't necessarily have to make the nav menu look like buttons, but it needs to be a bit taller so that it doesn't look silly on the side of the page; also remember that you need to make this one a vertical nav menu.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following screenshot shows an example of what the finished design could look like:</p>
+The following screenshot shows an example of what the finished design could look like:
 
-<p><img alt="" src="example2.png"></p>
+![](example2.png)
 
-<h2 id="Assessment_or_further_help">Assessment or further help</h2>
+## Assessment or further help
 
-<p>If you would like your work assessed or are stuck and want to ask for help:</p>
+If you would like your work assessed or are stuck and want to ask for help:
 
-<ol>
- <li>Put your work into an online shareable editor such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a>.</li>
- <li>Write a post asking for assessment and/or help at the <a href="https://discourse.mozilla.org/c/mdn/learn">MDN Discourse forum Learning category</a>. Your post should include:
-  <ul>
-   <li>A descriptive title such as "Assessment wanted for Typesetting a community school homepage".</li>
-   <li>Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.</li>
-   <li>A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.</li>
-   <li>A link to the actual task or assessment page, so we can find the question you want help with.</li>
-  </ul>
- </li>
-</ol>
+1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
 
-<p>{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}</p>
+    - A descriptive title such as "Assessment wanted for Typesetting a community school homepage".
+    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
+    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
+    - A link to the actual task or assessment page, so we can find the question you want help with.
 
-<h2 id="In_this_module">In this module</h2>
+{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
-<ul>
- <li><a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental text and font styling</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Styling_text/Styling_lists">Styling lists</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Styling_text/Styling_links">Styling links</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Styling_text/Web_fonts">Web fonts</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage">Typesetting a community school homepage</a></li>
-</ul>
+## In this module
+
+- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+- [Styling lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists)
+- [Styling links](/en-US/docs/Learn/CSS/Styling_text/Styling_links)
+- [Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts)
+- [Typesetting a community school homepage](/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)

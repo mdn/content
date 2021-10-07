@@ -9,128 +9,123 @@ tags:
   - HTML
   - Web
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}
 
-<p>There are some cases where the available native HTML form controls may seem like they are not enough. For example, if you need to <a href="/en-US/docs/Learn/Forms/Advanced_form_styling">perform advanced styling</a> on some controls such as the {{HTMLElement("select")}} element or if you want to provide custom behaviors, you may consider building your own controls.</p>
+There are some cases where the available native HTML form controls may seem like they are not enough. For example, if you need to [perform advanced styling](/en-US/docs/Learn/Forms/Advanced_form_styling) on some controls such as the {{HTMLElement("select")}} element or if you want to provide custom behaviors, you may consider building your own controls.
 
-<p>In this article, we will discuss how to build a custom control. To that end, we will work with an example: rebuilding the {{HTMLElement("select")}} element. We will also discuss how, when, and whether building your own control makes sense, and what to consider when building a control is a requirement.</p>
+In this article, we will discuss how to build a custom control. To that end, we will work with an example: rebuilding the {{HTMLElement("select")}} element. We will also discuss how, when, and whether building your own control makes sense, and what to consider when building a control is a requirement.
 
-<div class="note">
-<p><strong>Note:</strong> We'll focus on building the control, not on how to make the code generic and reusable; that would involve some non-trivial JavaScript code and DOM manipulation in an unknown context, and that is out of the scope of this article.</p>
-</div>
+> **Note:** We'll focus on building the control, not on how to make the code generic and reusable; that would involve some non-trivial JavaScript code and DOM manipulation in an unknown context, and that is out of the scope of this article.
 
-<h2 id="Design_structure_and_semantics">Design, structure, and semantics</h2>
+## Design, structure, and semantics
 
-<p>Before building a custom control, you should start by figuring out exactly what you want. This will save you some precious time. In particular, it's important to clearly define all the states of your control. To do this, it's good to start with an existing control whose states and behavior are well known, so that you can mimic those as much as possible.</p>
+Before building a custom control, you should start by figuring out exactly what you want. This will save you some precious time. In particular, it's important to clearly define all the states of your control. To do this, it's good to start with an existing control whose states and behavior are well known, so that you can mimic those as much as possible.
 
-<p>In our example, we will rebuild the {{HTMLElement("select")}} element. Here is the result we want to achieve:</p>
+In our example, we will rebuild the {{HTMLElement("select")}} element. Here is the result we want to achieve:
 
-<p><img alt="The three states of a select box" src="custom-select.png"></p>
+![The three states of a select box](custom-select.png)
 
-<p>This screenshot shows the three main states of our control: the normal state (on the left); the active state (in the middle) and the open state (on the right).</p>
+This screenshot shows the three main states of our control: the normal state (on the left); the active state (in the middle) and the open state (on the right).
 
-<p>In terms of behavior, we are recreating a native HTML element. Therefore it should have the same behaviors and semantics as the native HTML element. We require our control to be usable with a mouse as well as with a keyboard, and comprehensible to a screen reader, just like any native control. Let's start by defining how the control reaches each state:</p>
+In terms of behavior, we are recreating a native HTML element. Therefore it should have the same behaviors and semantics as the native HTML element. We require our control to be usable with a mouse as well as with a keyboard, and comprehensible to a screen reader, just like any native control. Let's start by defining how the control reaches each state:
 
-<p><strong>The control is in its normal state when:</strong></p>
-<ul>
-  <li>the page loads.</li>
-  <li>the control was active and the user clicks anywhere outside it.</li>
-  <li>the control was active and the user moves the focus to another control using the keyboard (e.g. the <kbd>Tab</kbd> key).</li>
-</ul>
+**The control is in its normal state when:**
 
-<p><strong>The control is in its active state when:</strong></p>
-<ul>
- <li>the user clicks on it or touches it on a touch screen.</li>
- <li>the user hits the tab key and it gains focus.</li>
- <li>the control was in its open state and the user clicks on it.</li>
-</ul>
-<p><strong>The control is in its open state when:</strong></p>
-<ul>
- <li>the control is in any other state than open and the user clicks on it.</li>
-</ul>
+- the page loads.
+- the control was active and the user clicks anywhere outside it.
+- the control was active and the user moves the focus to another control using the keyboard (e.g. the
 
-<p>Once we know how to change states, it is important to define how to change the control's value:</p>
+  <kbd>Tab</kbd>
 
-<p><strong>The value changes when:</strong></p>
-<ul>
- <li>the user clicks on an option when the control is in the open state.</li>
- <li>the user hits the up or down arrow keys when the control is in its active state.</li>
-</ul>
+  key).
 
-<p><strong>The value does not change when:</strong></p>
-<ul>
- <li>the user hits the up arrow key when the first option is selected.</li>
- <li>the user hits the down arrow key when the last option is selected.</li>
-</ul>
+**The control is in its active state when:**
 
-<p>Finally, let's define how the control's options will behave:</p>
+- the user clicks on it or touches it on a touch screen.
+- the user hits the tab key and it gains focus.
+- the control was in its open state and the user clicks on it.
 
-<ul>
- <li>When the control is opened, the selected option is highlighted</li>
- <li>When the mouse is over an option, the option is highlighted and the previously highlighted option is returned to its normal state</li>
-</ul>
+**The control is in its open state when:**
 
-<p>For the purposes of our example, we'll stop with that; however, if you're a careful reader, you'll notice that some behaviors are missing. For example, what do you think will happen if the user hits the tab key while the control is in its open state? The answer is... nothing. OK, the right behavior seems obvious but the fact is, because it's not defined in our specs, it is very easy to overlook this behavior. This is especially true in a team environment when the people who design the control's behavior are different from the ones who implement it.</p>
+- the control is in any other state than open and the user clicks on it.
 
-<p>Another fun example: what will happen if the user hits the up or down arrow keys while the control is in the open state? This one is a little bit trickier. If you consider that the active state and the open state are completely different, the answer is again "nothing will happen" because we did not define any keyboard interactions for the opened state. On the other hand, if you consider that the active state and the open state overlap a bit, the value may change but the option will definitely not be highlighted accordingly, once again because we did not define any keyboard interactions over options when the control is in its opened state (we have only defined what should happen when the control is opened, but nothing after that).</p>
+Once we know how to change states, it is important to define how to change the control's value:
 
-<p>We have to think a little further: what about the escape key? Pressing <kbd>Esc</kbd> key closes an open select. Remember, if you want to provide the same functionality as the existing native {{htmlelement('select')}}, it should behave the exact same way as the select for all users, from keyboard to mouse to touch to screen reader, and any other input device.</p>
+**The value changes when:**
 
-<p>In our example, the missing specifications are obvious so we will handle them, but it can be a real problem for exotic new controls. When it comes to standardized elements, of which the {{htmlelement('select')}} is one, the specification authors spent an inordinate amount of time specifying all interactions for every use case for every input device. Creating new controls is not that easy, especially if you are creating something that has not been done before, and therefore which nobody has the slightest idea of what the expected behaviors and interactions are. At least select has been done before, so we know how it should behave!</p>
+- the user clicks on an option when the control is in the open state.
+- the user hits the up or down arrow keys when the control is in its active state.
 
-<p>Designing new interactions is generally only an option for very large industry players who have enough reach that an interaction they create can become a standard. For example, Apple introduced the scroll wheel with the iPod in 2001. They had the market share to successfully introduce a completely new way of interacting with a device, something most device companies can't do. </p>
+**The value does not change when:**
 
-<p>It is best not to invent new user interactions. For any interaction you do add, it is vital to spend time in the design stage; if you define a behavior poorly, or forget to define one, it will be very hard to redefine it once the users have gotten used to it. If you have doubts, ask for the opinions of others, and if you have the budget for it, do not hesitate to <a href="https://en.wikipedia.org/wiki/Usability_testing" rel="external">perform user tests</a>. This process is called UX Design. If you want to learn more about this topic, you should check out the following helpful resources:</p>
+- the user hits the up arrow key when the first option is selected.
+- the user hits the down arrow key when the last option is selected.
 
-<ul>
- <li><a href="https://www.uxmatters.com/" rel="external">UXMatters.com</a></li>
- <li><a href="http://uxdesign.com/" rel="external">UXDesign.com</a></li>
- <li><a href="https://uxdesign.smashingmagazine.com/" rel="external">The UX Design section of SmashingMagazine</a></li>
-</ul>
+Finally, let's define how the control's options will behave:
 
-<div class="note">
-<p><strong>Note:</strong> Also, in most systems there is a way to open the {{HTMLElement("select")}} element with the keyboard to look at all the available choices (this is the same as clicking the {{HTMLElement("select")}} element with a mouse). This is achieved with <kbd>Alt</kbd> + <kbd>Down</kbd>  on Windows. We didn't implement this in our example, but it would be easy to do so, as the mechanism has already been implemented for the <code>click</code> event.</p>
-</div>
+- When the control is opened, the selected option is highlighted
+- When the mouse is over an option, the option is highlighted and the previously highlighted option is returned to its normal state
 
-<h2 id="Defining_the_HTML_structure_and_some_semantics">Defining the HTML structure and (some) semantics</h2>
+For the purposes of our example, we'll stop with that; however, if you're a careful reader, you'll notice that some behaviors are missing. For example, what do you think will happen if the user hits the tab key while the control is in its open state? The answer is... nothing. OK, the right behavior seems obvious but the fact is, because it's not defined in our specs, it is very easy to overlook this behavior. This is especially true in a team environment when the people who design the control's behavior are different from the ones who implement it.
 
-<p>Now that the control's basic functionality has been decided upon, it's time to start building it. The first step is to define its HTML structure and to give it some basic semantics. Here is what we need to rebuild a {{HTMLElement("select")}} element:</p>
+Another fun example: what will happen if the user hits the up or down arrow keys while the control is in the open state? This one is a little bit trickier. If you consider that the active state and the open state are completely different, the answer is again "nothing will happen" because we did not define any keyboard interactions for the opened state. On the other hand, if you consider that the active state and the open state overlap a bit, the value may change but the option will definitely not be highlighted accordingly, once again because we did not define any keyboard interactions over options when the control is in its opened state (we have only defined what should happen when the control is opened, but nothing after that).
 
-<pre class="brush: html">&lt;!-- This is our main container for our control.
+We have to think a little further: what about the escape key? Pressing <kbd>Esc</kbd> key closes an open select. Remember, if you want to provide the same functionality as the existing native {{htmlelement('select')}}, it should behave the exact same way as the select for all users, from keyboard to mouse to touch to screen reader, and any other input device.
+
+In our example, the missing specifications are obvious so we will handle them, but it can be a real problem for exotic new controls. When it comes to standardized elements, of which the {{htmlelement('select')}} is one, the specification authors spent an inordinate amount of time specifying all interactions for every use case for every input device. Creating new controls is not that easy, especially if you are creating something that has not been done before, and therefore which nobody has the slightest idea of what the expected behaviors and interactions are. At least select has been done before, so we know how it should behave!
+
+Designing new interactions is generally only an option for very large industry players who have enough reach that an interaction they create can become a standard. For example, Apple introduced the scroll wheel with the iPod in 2001. They had the market share to successfully introduce a completely new way of interacting with a device, something most device companies can't do.
+
+It is best not to invent new user interactions. For any interaction you do add, it is vital to spend time in the design stage; if you define a behavior poorly, or forget to define one, it will be very hard to redefine it once the users have gotten used to it. If you have doubts, ask for the opinions of others, and if you have the budget for it, do not hesitate to [perform user tests](https://en.wikipedia.org/wiki/Usability_testing). This process is called UX Design. If you want to learn more about this topic, you should check out the following helpful resources:
+
+- [UXMatters.com](https://www.uxmatters.com/)
+- [UXDesign.com](http://uxdesign.com/)
+- [The UX Design section of SmashingMagazine](https://uxdesign.smashingmagazine.com/)
+
+> **Note:** Also, in most systems there is a way to open the {{HTMLElement("select")}} element with the keyboard to look at all the available choices (this is the same as clicking the {{HTMLElement("select")}} element with a mouse). This is achieved with <kbd>Alt</kbd> + <kbd>Down</kbd>  on Windows. We didn't implement this in our example, but it would be easy to do so, as the mechanism has already been implemented for the `click` event.
+
+## Defining the HTML structure and (some) semantics
+
+Now that the control's basic functionality has been decided upon, it's time to start building it. The first step is to define its HTML structure and to give it some basic semantics. Here is what we need to rebuild a {{HTMLElement("select")}} element:
+
+```html
+<!-- This is our main container for our control.
      The tabindex attribute is what allows the user to focus the control.
-     We'll see later that it's better to set it through JavaScript. --&gt;
-&lt;div class="select" tabindex="0"&gt;
+     We'll see later that it's better to set it through JavaScript. -->
+<div class="select" tabindex="0">
 
-  &lt;!-- This container will be used to display the current value of the control --&gt;
-  &lt;span class="value"&gt;Cherry&lt;/span&gt;
+  <!-- This container will be used to display the current value of the control -->
+  <span class="value">Cherry</span>
 
-  &lt;!-- This container will contain all the options available for our control.
-       Because it's a list, it makes sense to use the ul element. --&gt;
-  &lt;ul class="optList"&gt;
-    &lt;!-- Each option only contains the value to be displayed, we'll see later
-         how to handle the real value that will be sent with the form data --&gt;
-    &lt;li class="option"&gt;Cherry&lt;/li&gt;
-    &lt;li class="option"&gt;Lemon&lt;/li&gt;
-    &lt;li class="option"&gt;Banana&lt;/li&gt;
-    &lt;li class="option"&gt;Strawberry&lt;/li&gt;
-    &lt;li class="option"&gt;Apple&lt;/li&gt;
-  &lt;/ul&gt;
+  <!-- This container will contain all the options available for our control.
+       Because it's a list, it makes sense to use the ul element. -->
+  <ul class="optList">
+    <!-- Each option only contains the value to be displayed, we'll see later
+         how to handle the real value that will be sent with the form data -->
+    <li class="option">Cherry</li>
+    <li class="option">Lemon</li>
+    <li class="option">Banana</li>
+    <li class="option">Strawberry</li>
+    <li class="option">Apple</li>
+  </ul>
 
-&lt;/div&gt;</pre>
+</div>
+```
 
-<p>Note the use of class names; these identify each relevant part regardless of the actual underlying HTML elements used. This is important to make sure that we don't bind our CSS and JavaScript to a strong HTML structure, so that we can make implementation changes later without breaking code that uses the control. For example, what if you wish to implement the equivalent of the {{HTMLElement("optgroup")}} element later on?</p>
+Note the use of class names; these identify each relevant part regardless of the actual underlying HTML elements used. This is important to make sure that we don't bind our CSS and JavaScript to a strong HTML structure, so that we can make implementation changes later without breaking code that uses the control. For example, what if you wish to implement the equivalent of the {{HTMLElement("optgroup")}} element later on?
 
-<p>Class names, however, provide no semantic value. In this current state, the screen reader user only "sees" an unordered list. We will add ARIA semantics in a bit.</p>
+Class names, however, provide no semantic value. In this current state, the screen reader user only "sees" an unordered list. We will add ARIA semantics in a bit.
 
-<h2 id="Creating_the_look_and_feel_using_CSS">Creating the look and feel using CSS</h2>
+## Creating the look and feel using CSS
 
-<p>Now that we have a structure, we can start designing our control. The whole point of building this custom control is to be able to style it exactly how we want. To that end, we will split our CSS work into two parts: the first part will be the CSS rules absolutely necessary to make our control behave like a {{HTMLElement("select")}} element, and the second part will consist of the fancy styles used to make it look the way we want.</p>
+Now that we have a structure, we can start designing our control. The whole point of building this custom control is to be able to style it exactly how we want. To that end, we will split our CSS work into two parts: the first part will be the CSS rules absolutely necessary to make our control behave like a {{HTMLElement("select")}} element, and the second part will consist of the fancy styles used to make it look the way we want.
 
-<h3 id="Required_styles">Required styles</h3>
+### Required styles
 
-<p>The required styles are those necessary to handle the three states of our control.</p>
+The required styles are those necessary to handle the three states of our control.
 
-<pre class="brush: css">.select {
+```css
+.select {
   /* This will create a positioning context for the list of options;
      adding this to .select{{cssxref(':focus-within')}} will be a better option when fully supported
   */
@@ -138,22 +133,26 @@ tags:
 
   /* This will make our control become part of the text flow and sizable at the same time */
   display : inline-block;
-}</pre>
+}
+```
 
-<p>We need an extra class <code>active</code> to define the look and feel of our control when it is in its active state. Because our control is focusable, we double this custom style with the {{cssxref(":focus")}} pseudo-class in order to be sure they will behave the same.</p>
+We need an extra class `active` to define the look and feel of our control when it is in its active state. Because our control is focusable, we double this custom style with the {{cssxref(":focus")}} pseudo-class in order to be sure they will behave the same.
 
-<pre class="brush: css">.select .active,
+```css
+.select .active,
 .select:focus {
   outline: none;
 
   /* This {{cssxref('box-shadow')}} property is not exactly required, however it's imperative to ensure
      active state is visible, especially to keyboard users, that we use it as a default value. */
   box-shadow: 0 0 3px 1px #227755;
-}</pre>
+}
+```
 
-<p>Now, let's handle the list of options:</p>
+Now, let's handle the list of options:
 
-<pre class="brush: css">/* The .select selector here helps to make we only select
+```css
+/* The .select selector here helps to make we only select
    element inside our control. */
 .select .optList {
   /* This will make sure our list of options will be displayed below the value
@@ -161,26 +160,28 @@ tags:
   position : absolute;
   top      : 100%;
   left     : 0;
-}</pre>
+}
+```
 
-<p>We need an extra class to handle when the list of options is hidden. This is necessary in order to manage the differences between the active state and the open state that do not exactly match.</p>
+We need an extra class to handle when the list of options is hidden. This is necessary in order to manage the differences between the active state and the open state that do not exactly match.
 
-<pre class="brush: css">.select .optList.hidden {
+```css
+.select .optList.hidden {
   /* This is a simple way to hide the list in an accessible way;
      we will talk more about accessibility in the end */
   max-height: 0;
   visibility: hidden;
-}</pre>
+}
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> We could also have used <code>transform: scale(1, 0)</code> to give the optionlist no height and full width.</p>
-</div>
+> **Note:** We could also have used `transform: scale(1, 0)` to give the optionlist no height and full width.
 
-<h3 id="Beautification">Beautification</h3>
+### Beautification
 
-<p>So now that we have the basic functionality in place, the fun can start. The following is just an example of what is possible, and will match the screenshot at the beginning of this article. However, you should feel free to experiment and see what you can come up with.</p>
+So now that we have the basic functionality in place, the fun can start. The following is just an example of what is possible, and will match the screenshot at the beginning of this article. However, you should feel free to experiment and see what you can come up with.
 
-<pre class="brush: css">.select {
+```css
+.select {
   /* The computations are made assuming 1em == 16px which is the default value in most browsers.
      If you are lost with px to em conversion, try http://riddle.pl/emcalc/ */
   font-size   : 0.625em; /* this (10px) is the new font size context for em value in this context */
@@ -210,11 +211,13 @@ tags:
   white-space : nowrap;
   text-overflow: ellipsis;
   vertical-align: top;
-}</pre>
+}
+```
 
-<p>We don't need an extra element to design the down arrow; instead, we're using the {{cssxref(":after")}} pseudo-element. It could also be implemented using a simple background image on the <code>select</code> class.</p>
+We don't need an extra element to design the down arrow; instead, we're using the {{cssxref(":after")}} pseudo-element. It could also be implemented using a simple background image on the `select` class.
 
-<pre class="brush: css">.select:after {
+```css
+.select:after {
   content : "▼"; /* We use the unicode character U+25BC; make sure to set a charset meta tag */
   position: absolute;
   z-index : 1; /* This will be important to keep the arrow from overlapping the list of options */
@@ -233,11 +236,13 @@ tags:
   background-color : #000;
   color : #FFF;
   text-align : center;
-}</pre>
+}
+```
 
-<p>Next, let's style the list of options:</p>
+Next, let's style the list of options:
 
-<pre class="brush: css">.select .optList {
+```css
+.select .optList {
   z-index : 2; /* We explicitly said the list of options will always be on top of the down arrow */
 
   /* this will reset the default style of the ul element */
@@ -265,98 +270,111 @@ tags:
 
   box-shadow: 0 .2em .4em rgba(0,0,0,.4);
   background: #f0f0f0;
-}</pre>
+}
+```
 
-<p>For the options, we need to add a <code>highlight</code> class to be able to identify the value the user will pick (or has picked).</p>
+For the options, we need to add a `highlight` class to be able to identify the value the user will pick (or has picked).
 
-<pre class="brush: css">.select .option {
+```css
+.select .option {
   padding: .2em .3em; /* 2px 3px */
 }
 
 .select .highlight {
   background: #000;
   color: #FFFFFF;
-}</pre>
+}
+```
 
-<p>So here's the result with our three states:</p>
+So here's the result with our three states:
 
 <table>
- <thead>
-  <tr>
-   <th scope="col">Basic state</th>
-   <th scope="col">Active state</th>
-   <th scope="col">Open state</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{EmbedLiveSample("Basic_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}</td>
-   <td>{{EmbedLiveSample("Active_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}</td>
-   <td>{{EmbedLiveSample("Open_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}</td>
-  </tr>
-  <tr>
-   <td colspan="3"><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_1">Check out the source code</a></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Basic state</th>
+      <th scope="col">Active state</th>
+      <th scope="col">Open state</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{EmbedLiveSample("Basic_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
+      </td>
+      <td>
+        {{EmbedLiveSample("Active_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
+      </td>
+      <td>
+        {{EmbedLiveSample("Open_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <a
+          href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_1"
+          >Check out the source code</a
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Bringing_your_control_to_life_with_JavaScript">Bringing your control to life with JavaScript</h2>
+## Bringing your control to life with JavaScript
 
-<p>Now that our design and structure are ready, we can write the JavaScript code to make the control actually work.</p>
+Now that our design and structure are ready, we can write the JavaScript code to make the control actually work.
 
-<div class="warning">
-<p><strong>Warning:</strong> The following is educational code, not production code, and should not be used as-is. It is neither future-proof nor will not work on legacy browsers. It also has redundant parts that should be optimized in production code.</p>
-</div>
+> **Warning:** The following is educational code, not production code, and should not be used as-is. It is neither future-proof nor will not work on legacy browsers. It also has redundant parts that should be optimized in production code.
 
-<h3 id="Why_isnt_it_working">Why isn't it working?</h3>
+### Why isn't it working?
 
-<p>Before starting, it's important to remember <strong>JavaScript in the browser is an unreliable technology</strong>. Custom controls rely on JavaScript to tie everything together. However, there are cases in which JavaScript isn't able to run in the browser:</p>
+Before starting, it's important to remember **JavaScript in the browser is an unreliable technology**. Custom controls rely on JavaScript to tie everything together. However, there are cases in which JavaScript isn't able to run in the browser:
 
-<ul>
- <li>The user has turned off JavaScript: This is unusual; very few people turn off JavaScript nowadays.</li>
- <li>The script did not load: This is one of the most common cases, especially in the mobile world where the network is not very reliable.</li>
- <li>The script is buggy: You should always consider this possibility.</li>
- <li>The script is in conflict with a third party script: This can happen with tracking scripts or any bookmarklets the user uses.</li>
- <li>The script is in conflict with, or is affected by, a browser extension (such as Firefox's <a href="https://addons.mozilla.org/fr/firefox/addon/noscript/" rel="external">NoScript</a> extension or Chrome's <a href="https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn" rel="external">NotScripts</a> extension).</li>
- <li>The user is using a legacy browser, and one of the features you require is not supported: This will happen frequently when you make use of cutting-edge APIs.</li>
- <li>The user is interacting with the content before the JavaScript has been fully downloaded, parsed, and executed.</li>
-</ul>
+- The user has turned off JavaScript: This is unusual; very few people turn off JavaScript nowadays.
+- The script did not load: This is one of the most common cases, especially in the mobile world where the network is not very reliable.
+- The script is buggy: You should always consider this possibility.
+- The script is in conflict with a third party script: This can happen with tracking scripts or any bookmarklets the user uses.
+- The script is in conflict with, or is affected by, a browser extension (such as Firefox's [NoScript](https://addons.mozilla.org/fr/firefox/addon/noscript/) extension or Chrome's [NotScripts](https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn) extension).
+- The user is using a legacy browser, and one of the features you require is not supported: This will happen frequently when you make use of cutting-edge APIs.
+- The user is interacting with the content before the JavaScript has been fully downloaded, parsed, and executed.
 
-<p>Because of these risks, it's really important to seriously consider what will happen if your JavaScript doesn't work. We'll discuss options to consider and cover the basics in our example (a full discussion of solving this issue for all scenarios would require a book). Just remember, it is vital make your script generic and reusable.</p>
+Because of these risks, it's really important to seriously consider what will happen if your JavaScript doesn't work. We'll discuss options to consider and cover the basics in our example (a full discussion of solving this issue for all scenarios would require a book). Just remember, it is vital make your script generic and reusable.
 
-<p>In our example, if our JavaScript code isn't running, we'll fall back to displaying a standard {{HTMLElement("select")}} element. We include our control and the {{HTMLElement("select")}}; which one is displayed depends on the class of the body element, with the class of the body element being updated by the script that makes the control function, when it loads successfully</p>
+In our example, if our JavaScript code isn't running, we'll fall back to displaying a standard {{HTMLElement("select")}} element. We include our control and the {{HTMLElement("select")}}; which one is displayed depends on the class of the body element, with the class of the body element being updated by the script that makes the control function, when it loads successfully
 
-<p>To achieve this, we need two things:</p>
+To achieve this, we need two things:
 
-<p>First, we need to add a regular {{HTMLElement("select")}} element before each instance of our custom control. There is a benefit to having this "extra" select even if our JavaScript works as hoped: we will use this select to send data from our custom control along with the rest of our form data. We will discuss this in greater depth later.</p>
+First, we need to add a regular {{HTMLElement("select")}} element before each instance of our custom control. There is a benefit to having this "extra" select even if our JavaScript works as hoped: we will use this select to send data from our custom control along with the rest of our form data. We will discuss this in greater depth later.
 
-<pre class="brush: html">&lt;body class="no-widget"&gt;
-  &lt;form&gt;
-    &lt;select name="myFruit"&gt;
-      &lt;option&gt;Cherry&lt;/option&gt;
-      &lt;option&gt;Lemon&lt;/option&gt;
-      &lt;option&gt;Banana&lt;/option&gt;
-      &lt;option&gt;Strawberry&lt;/option&gt;
-      &lt;option&gt;Apple&lt;/option&gt;
-    &lt;/select&gt;
+```html
+<body class="no-widget">
+  <form>
+    <select name="myFruit">
+      <option>Cherry</option>
+      <option>Lemon</option>
+      <option>Banana</option>
+      <option>Strawberry</option>
+      <option>Apple</option>
+    </select>
 
-    &lt;div class="select"&gt;
-      &lt;span class="value"&gt;Cherry&lt;/span&gt;
-      &lt;ul class="optList hidden"&gt;
-        &lt;li class="option"&gt;Cherry&lt;/li&gt;
-        &lt;li class="option"&gt;Lemon&lt;/li&gt;
-        &lt;li class="option"&gt;Banana&lt;/li&gt;
-        &lt;li class="option"&gt;Strawberry&lt;/li&gt;
-        &lt;li class="option"&gt;Apple&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-  &lt;/form&gt;
+    <div class="select">
+      <span class="value">Cherry</span>
+      <ul class="optList hidden">
+        <li class="option">Cherry</li>
+        <li class="option">Lemon</li>
+        <li class="option">Banana</li>
+        <li class="option">Strawberry</li>
+        <li class="option">Apple</li>
+      </ul>
+    </div>
+  </form>
 
-&lt;/body&gt;</pre>
+</body>
+```
 
-<p>Second, we need two new classes to let us hide the unneeded element: we visually hide the "real" {{HTMLElement("select")}} element if our script isn't running, or the custom control if it is running. Note that, by default, our HTML code hides our custom control.</p>
+Second, we need two new classes to let us hide the unneeded element: we visually hide the "real" {{HTMLElement("select")}} element if our script isn't running, or the custom control if it is running. Note that, by default, our HTML code hides our custom control.
 
-<pre class="brush: css">.widget select,
+```css
+.widget select,
 .no-widget .select {
   /* This CSS selector basically says:
      - either we have set the body class to "widget" and thus we hide the actual {{HTMLElement("select")}} element
@@ -366,63 +384,74 @@ tags:
   left     : -5000em;
   height   : 0;
   overflow : hidden;
-}</pre>
+}
+```
 
-<p>This CSS visually hides one of the elements, but it is still available to screen readers.</p>
+This CSS visually hides one of the elements, but it is still available to screen readers.
 
-<p>Now we need a JavaScript switch to determine if the script is running or not. This switch is a couple of lines: if at page load time our script is running, it will remove the <code>no-widget</code> class and add the <code>widget</code> class, thereby swapping the visibility of the {{HTMLElement("select")}} element and the custom control.</p>
+Now we need a JavaScript switch to determine if the script is running or not. This switch is a couple of lines: if at page load time our script is running, it will remove the `no-widget` class and add the `widget` class, thereby swapping the visibility of the {{HTMLElement("select")}} element and the custom control.
 
-<pre class="brush: js">window.addEventListener("load", function () {
+```js
+window.addEventListener("load", function () {
   document.body.classList.remove("no-widget");
   document.body.classList.add("widget");
-});</pre>
+});
+```
 
 <table>
- <thead>
-  <tr>
-   <th scope="col">Without JS</th>
-   <th scope="col">With JS</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{EmbedLiveSample("No_JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}</td>
-   <td>{{EmbedLiveSample("JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}</td>
-  </tr>
-  <tr>
-   <td colspan="2"><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2">Check out the source code</a></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Without JS</th>
+      <th scope="col">With JS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{EmbedLiveSample("No_JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
+      </td>
+      <td>
+        {{EmbedLiveSample("JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <a
+          href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2"
+          >Check out the source code</a
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-<p><strong>Note:</strong> If you really want to make your code generic and reusable, instead of doing a class switch it's far better to just add the widget class to hide the {{HTMLElement("select")}} elements, and to dynamically add the DOM tree representing the custom control after every {{HTMLElement("select")}} element in the page.</p>
-</div>
+> **Note:** If you really want to make your code generic and reusable, instead of doing a class switch it's far better to just add the widget class to hide the {{HTMLElement("select")}} elements, and to dynamically add the DOM tree representing the custom control after every {{HTMLElement("select")}} element in the page.
 
-<h3 id="Making_the_job_easier">Making the job easier</h3>
+### Making the job easier
 
-<p>In the code we are about to build, we will use the standard JavaScript and DOM APIs to do all the work we need. The features we plan to use are the following:</p>
+In the code we are about to build, we will use the standard JavaScript and DOM APIs to do all the work we need. The features we plan to use are the following:
 
-<ol>
- <li>{{domxref("element.classList","classList")}}</li>
- <li>{{domxref("EventTarget.addEventListener","addEventListener()")}}</li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">forEach</a></code></li>
- <li>{{domxref("element.querySelector","querySelector()")}} and {{domxref("element.querySelectorAll","querySelectorAll()")}}</li>
-</ol>
+1.  {{domxref("element.classList","classList")}}
+2.  {{domxref("EventTarget.addEventListener","addEventListener()")}}
+3.  [`forEach`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+4.  {{domxref("element.querySelector","querySelector()")}} and {{domxref("element.querySelectorAll","querySelectorAll()")}}
 
-<p>Beyond the availability of those specific features, there is still one issue remaining before starting. The object returned by the {{domxref("element.querySelectorAll","querySelectorAll()")}} function is a {{domxref("NodeList")}} rather than an <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>. This is important because <code>Array</code> objects support the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">forEach</a></code> function, but {{domxref("NodeList")}} doesn't. Because {{domxref("NodeList")}} really looks like an <code>Array</code> and because <code>forEach</code> is so convenient to use, we can easily add the support of <code>forEach</code> to {{domxref("NodeList")}} in order to make our life easier, like so:</p>
+Beyond the availability of those specific features, there is still one issue remaining before starting. The object returned by the {{domxref("element.querySelectorAll","querySelectorAll()")}} function is a {{domxref("NodeList")}} rather than an [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array). This is important because `Array` objects support the [`forEach`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) function, but {{domxref("NodeList")}} doesn't. Because {{domxref("NodeList")}} really looks like an `Array` and because `forEach` is so convenient to use, we can easily add the support of `forEach` to {{domxref("NodeList")}} in order to make our life easier, like so:
 
-<pre class="brush: js">NodeList.prototype.forEach = function (callback) {
+```js
+NodeList.prototype.forEach = function (callback) {
   Array.prototype.forEach.call(this, callback);
-}</pre>
+}
+```
 
-<p>If you need to support legacy browsers, ensure the browsers support these features. If not, you can iterate through the list or you may need to use a library or polyfill.</p>
+If you need to support legacy browsers, ensure the browsers support these features. If not, you can iterate through the list or you may need to use a library or polyfill.
 
-<h3 id="Building_event_callbacks">Building event callbacks</h3>
+### Building event callbacks
 
-<p>The groundwork is done. We can now start to define all the functions that will be used each time the user interacts with our control.</p>
+The groundwork is done. We can now start to define all the functions that will be used each time the user interacts with our control.
 
-<pre class="brush: js">// This function will be used each time we want to deactivate a custom control
+```js
+// This function will be used each time we want to deactivate a custom control
 // It takes one parameter
 // select : the DOM node with the `select` class to deactivate
 function deactivateSelect(select) {
@@ -487,13 +516,15 @@ function highlightOption(select, option) {
 
   // We highlight the right option
   option.classList.add('highlight');
-};</pre>
+};
+```
 
-<p>You need these in order to handle the various states of the custom control.</p>
+You need these in order to handle the various states of the custom control.
 
-<p>Next, we bind these functions to the appropriate events:</p>
+Next, we bind these functions to the appropriate events:
 
-<pre class="brush: js">// We handle the event binding when the document is loaded.
+```js
+// We handle the event binding when the document is loaded.
 window.addEventListener('load', function () {
   var selectList = document.querySelectorAll('.select');
 
@@ -551,35 +582,25 @@ window.addEventListener('load', function () {
     });
 });
 });
-</pre>
+```
 
-<p>At that point, our control will change state according to our design, but its value doesn't get updated yet. We'll handle that next.</p>
+At that point, our control will change state according to our design, but its value doesn't get updated yet. We'll handle that next.
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Live example</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3")}}</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3">Check out the source code</a></td>
-  </tr>
- </tbody>
-</table>
+| Live example                                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3")}} |
+| [Check out the source code](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3)                                                 |
 
-<h3 id="Handling_the_controls_value">Handling the control's value</h3>
+### Handling the control's value
 
-<p>Now that our control is working, we have to add code to update its value according to user input and make it possible to send the value along with form data.</p>
+Now that our control is working, we have to add code to update its value according to user input and make it possible to send the value along with form data.
 
-<p>The easiest way to do this is to use a native control under the hood. Such a control will keep track of the value with all the built-in controls provided by the browser, and the value will be sent as usual when a form is submitted. There's no point in reinventing the wheel when we can have all this done for us.</p>
+The easiest way to do this is to use a native control under the hood. Such a control will keep track of the value with all the built-in controls provided by the browser, and the value will be sent as usual when a form is submitted. There's no point in reinventing the wheel when we can have all this done for us.
 
-<p>As seen previously, we already use a native select control as a fallback for accessibility reasons; we can synchronize its value with that of our custom control:</p>
+As seen previously, we already use a native select control as a fallback for accessibility reasons; we can synchronize its value with that of our custom control:
 
-<pre class="brush: js">// This function updates the displayed value and synchronizes it with the native control.
+```js
+// This function updates the displayed value and synchronizes it with the native control.
 // It takes two parameters:
 // select : the DOM node with the class `select` containing the value to update
 // index  : the index of the value to be selected
@@ -613,11 +634,13 @@ function getIndex(select) {
   var nativeWidget = select.previousElementSibling;
 
   return nativeWidget.selectedIndex;
-};</pre>
+};
+```
 
-<p>With these two functions, we can bind the native controls to the custom ones:</p>
+With these two functions, we can bind the native controls to the custom ones:
 
-<pre class="brush: js">// We handle event binding when the document is loaded.
+```js
+// We handle event binding when the document is loaded.
 window.addEventListener('load', function () {
   var selectList = document.querySelectorAll('.select');
 
@@ -648,77 +671,68 @@ window.addEventListener('load', function () {
           index  = getIndex(select);
 
       // When the user hits the down arrow, we jump to the next option
-      if (event.keyCode === 40 &amp;&amp; index &lt; length - 1) { index++; }
+      if (event.keyCode === 40 && index < length - 1) { index++; }
 
       // When the user hits the up arrow, we jump to the previous option
-      if (event.keyCode === 38 &amp;&amp; index &gt; 0) { index--; }
+      if (event.keyCode === 38 && index > 0) { index--; }
 
       updateValue(select, index);
     });
   });
-});</pre>
+});
+```
 
-<p>In the code above, it's worth noting the use of the <code><a href="/en-US/docs/Web/API/HTMLElement/tabIndex">tabIndex</a></code> property. Using this property is necessary to ensure that the native control will never gain focus, and to make sure that our custom control gains focus when the user uses their keyboard or mouse.</p>
+In the code above, it's worth noting the use of the [`tabIndex`](/en-US/docs/Web/API/HTMLElement/tabIndex) property. Using this property is necessary to ensure that the native control will never gain focus, and to make sure that our custom control gains focus when the user uses their keyboard or mouse.
 
-<p>With that, we're done! Here's the result:</p>
+With that, we're done! Here's the result:
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Live example</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4")}}</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4">Check out the source code</a></td>
-  </tr>
- </tbody>
-</table>
+| Live example                                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4")}} |
+| [Check out the source code](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4)                                                 |
 
-<p>But wait a second, are we really done?</p>
+But wait a second, are we really done?
 
-<h2 id="Making_it_accessible">Making it accessible</h2>
+## Making it accessible
 
-<p>We have built something that works and though we're far from a fully-featured select box, it works nicely. But what we've done is nothing more than fiddle with the DOM. It has no real semantics, and even though it looks like a select box, from the browser's point of view it isn't one, so assistive technologies won't be able to understand it's a select box. In short, this pretty new select box isn't accessible!</p>
+We have built something that works and though we're far from a fully-featured select box, it works nicely. But what we've done is nothing more than fiddle with the DOM. It has no real semantics, and even though it looks like a select box, from the browser's point of view it isn't one, so assistive technologies won't be able to understand it's a select box. In short, this pretty new select box isn't accessible!
 
-<p>Fortunately, there is a solution and it's called <a href="/en-US/docs/Web/Accessibility/ARIA">ARIA</a>. ARIA stands for "Accessible Rich Internet Application", and it's <a href="https://www.w3.org/TR/wai-aria/" rel="external">a W3C specification</a> specifically designed for what we are doing here: making web applications and custom controls accessible. It's basically a set of attributes that extend HTML so that we can better describe roles, states and properties as though the element we've just devised was the native element it tries to pass for. Using these attributes can be done by editing the HTML markup. We also update the ARIA attributes via JavaScript as the user updates their selected value.</p>
+Fortunately, there is a solution and it's called [ARIA](/en-US/docs/Web/Accessibility/ARIA). ARIA stands for "Accessible Rich Internet Application", and it's [a W3C specification](https://www.w3.org/TR/wai-aria/) specifically designed for what we are doing here: making web applications and custom controls accessible. It's basically a set of attributes that extend HTML so that we can better describe roles, states and properties as though the element we've just devised was the native element it tries to pass for. Using these attributes can be done by editing the HTML markup. We also update the ARIA attributes via JavaScript as the user updates their selected value.
 
-<h3 id="The_role_attribute">The <code>role</code> attribute</h3>
+### The `role` attribute
 
-<p>The key attribute used by <a href="/en-US/docs/Web/Accessibility/ARIA">ARIA</a> is the <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques"><code>role</code></a> attribute. The <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques"><code>role</code></a> attribute accepts a value that defines what an element is used for. Each role defines its own requirements and behaviors. In our example, we will use the <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a></code> role. It's a "composite role", which means elements with that role expect to have children, each with a specific role (in this case, at least one child with the <code>option</code> role).</p>
+The key attribute used by [ARIA](/en-US/docs/Web/Accessibility/ARIA) is the [`role`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques) attribute. The [`role`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques) attribute accepts a value that defines what an element is used for. Each role defines its own requirements and behaviors. In our example, we will use the [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role) role. It's a "composite role", which means elements with that role expect to have children, each with a specific role (in this case, at least one child with the `option` role).
 
-<p>It's also worth noting that ARIA defines roles that are applied by default to standard HTML markup. For example, the {{HTMLElement("table")}} element matches the role <code>grid</code>, and the {{HTMLElement("ul")}} element matches the role <code>list</code>. Because we use a {{HTMLElement("ul")}} element, we want to make sure the <code>listbox</code> role of our control will supersede the <code>list</code> role of the {{HTMLElement("ul")}} element. To that end, we will use the role <code>presentation</code>. This role is designed to let us indicate that an element has no special meaning, and is used solely to present information. We will apply it to our {{HTMLElement("ul")}} element.</p>
+It's also worth noting that ARIA defines roles that are applied by default to standard HTML markup. For example, the {{HTMLElement("table")}} element matches the role `grid`, and the {{HTMLElement("ul")}} element matches the role `list`. Because we use a {{HTMLElement("ul")}} element, we want to make sure the `listbox` role of our control will supersede the `list` role of the {{HTMLElement("ul")}} element. To that end, we will use the role `presentation`. This role is designed to let us indicate that an element has no special meaning, and is used solely to present information. We will apply it to our {{HTMLElement("ul")}} element.
 
-<p>To support the <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a></code> role, we just have to update our HTML like this:</p>
+To support the [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role) role, we just have to update our HTML like this:
 
-<pre class="brush: html">&lt;!-- We add the role="listbox" attribute to our top element --&gt;
-&lt;div class="select" role="listbox"&gt;
-  &lt;span class="value"&gt;Cherry&lt;/span&gt;
-  &lt;!-- We also add the role="presentation" to the ul element --&gt;
-  &lt;ul class="optList" role="presentation"&gt;
-    &lt;!-- And we add the role="option" attribute to all the li elements --&gt;
-    &lt;li role="option" class="option"&gt;Cherry&lt;/li&gt;
-    &lt;li role="option" class="option"&gt;Lemon&lt;/li&gt;
-    &lt;li role="option" class="option"&gt;Banana&lt;/li&gt;
-    &lt;li role="option" class="option"&gt;Strawberry&lt;/li&gt;
-    &lt;li role="option" class="option"&gt;Apple&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;</pre>
-
-<div class="note">
-<p><strong>Note:</strong> Including both the <code>role</code> attribute and a <code>class</code> attribute is not necessary. Instead of using <code>.option</code> use the <code>[role="option"]</code> <a href="/en-US/docs/Web/CSS/Attribute_selectors">attribute selectors</a> in your CSS .</p>
+```html
+<!-- We add the role="listbox" attribute to our top element -->
+<div class="select" role="listbox">
+  <span class="value">Cherry</span>
+  <!-- We also add the role="presentation" to the ul element -->
+  <ul class="optList" role="presentation">
+    <!-- And we add the role="option" attribute to all the li elements -->
+    <li role="option" class="option">Cherry</li>
+    <li role="option" class="option">Lemon</li>
+    <li role="option" class="option">Banana</li>
+    <li role="option" class="option">Strawberry</li>
+    <li role="option" class="option">Apple</li>
+  </ul>
 </div>
+```
 
-<h3 id="The_aria-selected_attribute">The <code>aria-selected</code> attribute</h3>
+> **Note:** Including both the `role` attribute and a `class` attribute is not necessary. Instead of using `.option` use the `[role="option"]` [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) in your CSS .
 
-<p>Using the <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques"><code>role</code></a> attribute is not enough. <a href="/en-US/docs/Web/Accessibility/ARIA">ARIA</a> also provides many states and property attributes. The more and better you use them, the better your control will be understood by assistive technologies. In our case, we will limit our usage to one attribute: <code>aria-selected</code>.</p>
+### The `aria-selected` attribute
 
-<p>The <code>aria-selected</code> attribute is used to mark which option is currently selected; this lets assistive technologies inform the user what the current selection is. We will use it dynamically with JavaScript to mark the selected option each time the user chooses one. To that end, we need to revise our <code>updateValue()</code> function:</p>
+Using the [`role`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques) attribute is not enough. [ARIA](/en-US/docs/Web/Accessibility/ARIA) also provides many states and property attributes. The more and better you use them, the better your control will be understood by assistive technologies. In our case, we will limit our usage to one attribute: `aria-selected`.
 
-<pre class="brush: js">function updateValue(select, index) {
+The `aria-selected` attribute is used to mark which option is currently selected; this lets assistive technologies inform the user what the current selection is. We will use it dynamically with JavaScript to mark the selected option each time the user chooses one. To that end, we need to revise our `updateValue()` function:
+
+```js
+function updateValue(select, index) {
   var nativeWidget = select.previousElementSibling;
   var value = select.querySelector('.value');
   var optionList = select.querySelectorAll('[role="option"]');
@@ -734,52 +748,45 @@ window.addEventListener('load', function () {
   nativeWidget.selectedIndex = index;
   value.innerHTML = optionList[index].innerHTML;
   highlightOption(select, optionList[index]);
-};</pre>
+};
+```
 
-<p>It might have seemed simpler to let a screen reader focus on the off-screen select and ignore our stylized one, but this is not an accessible solution. Screen readers are not limited to blind people; people with low vision and even perfect vision use them as well. For this reason, you can not have the screen reader focus on an off-screen element.</p>
+It might have seemed simpler to let a screen reader focus on the off-screen select and ignore our stylized one, but this is not an accessible solution. Screen readers are not limited to blind people; people with low vision and even perfect vision use them as well. For this reason, you can not have the screen reader focus on an off-screen element.
 
-<p>Here is the final result of all these changes (you'll get a better feel for this by trying it with an assistive technology such as <a href="http://www.nvda-project.org/" rel="external">NVDA</a> or <a href="https://www.apple.com/accessibility/voiceover/" rel="external">VoiceOver</a>):</p>
+Here is the final result of all these changes (you'll get a better feel for this by trying it with an assistive technology such as [NVDA](http://www.nvda-project.org/) or [VoiceOver](https://www.apple.com/accessibility/voiceover/)):
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Live example</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5")}}</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5">Check out the final source code</a></td>
-  </tr>
- </tbody>
-</table>
+| Live example                                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5")}} |
+| [Check out the final source code](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5)                                           |
 
-<p>If you want to move forward, the code in this example needs some improvement before it becomes generic and reusable. This is an exercise you can try to perform. Two hints to help you in this: the first argument for all our functions is the same, which means those functions need the same context. Building an object to share that context would be wise.</p>
+If you want to move forward, the code in this example needs some improvement before it becomes generic and reusable. This is an exercise you can try to perform. Two hints to help you in this: the first argument for all our functions is the same, which means those functions need the same context. Building an object to share that context would be wise.
 
-<h2 id="An_alternative_approach_Using_radio_buttons">An alternative approach: Using radio buttons</h2>
+## An alternative approach: Using radio buttons
 
-<p>In the above example, we reinvented a {{htmlelement('select')}} element using non-semantic HTML, CSS, and JavaScript. This select was selecting one option from a limited number of options, which is the same functionality of a same-named group of {{htmlelement('input/radio', 'radio')}} buttons.</p>
+In the above example, we reinvented a {{htmlelement('select')}} element using non-semantic HTML, CSS, and JavaScript. This select was selecting one option from a limited number of options, which is the same functionality of a same-named group of {{htmlelement('input/radio', 'radio')}} buttons.
 
-<p>We could therefore reinvent this using radio buttons instead; let's look at this option.</p>
+We could therefore reinvent this using radio buttons instead; let's look at this option.
 
-<p>We can start with a completely semantic, accessible, unordered list of {{htmlelement('input/radio','radio')}} buttons with an associated {{htmlelement('label')}}, labeling the entire group with a semantically appropriate {{htmlelement('fieldset')}} and {{htmlelement('legend')}} pair.</p>
+We can start with a completely semantic, accessible, unordered list of {{htmlelement('input/radio','radio')}} buttons with an associated {{htmlelement('label')}}, labeling the entire group with a semantically appropriate {{htmlelement('fieldset')}} and {{htmlelement('legend')}} pair.
 
-<pre class="brush: html"> &lt;fieldset&gt;
-  &lt;legend&gt;Pick a fruit&lt;/legend&gt;
-    &lt;ul class="styledSelect"&gt;
-      &lt;li&gt;&lt;input type="radio" name="fruit" value="Cherry" id="fruitCherry" checked&gt;&lt;label for="fruitCherry"&gt;Cherry&lt;/label&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;input type="radio" name="fruit" value="Lemon" id="fruitLemon"&gt;&lt;label for="fruitLemon"&gt;Lemon&lt;/label&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;input type="radio" name="fruit" value="Banana" id="fruitBanana"&gt;&lt;label for="fruitBanana""&gt;Banana&lt;/label&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;input type="radio" name="fruit" value="Strawberry" id="fruitStrawberry"&gt;&lt;label for="fruitStrawberry"&gt;Strawberry&lt;/label&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;input type="radio" name="fruit" value="Apple" id="fruitApple"&gt;&lt;label for="fruitApple"&gt;Apple&lt;/label&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/fieldset&gt;</pre>
+```html
+ <fieldset>
+  <legend>Pick a fruit</legend>
+    <ul class="styledSelect">
+      <li><input type="radio" name="fruit" value="Cherry" id="fruitCherry" checked><label for="fruitCherry">Cherry</label></li>
+      <li><input type="radio" name="fruit" value="Lemon" id="fruitLemon"><label for="fruitLemon">Lemon</label></li>
+      <li><input type="radio" name="fruit" value="Banana" id="fruitBanana"><label for="fruitBanana"">Banana</label></li>
+      <li><input type="radio" name="fruit" value="Strawberry" id="fruitStrawberry"><label for="fruitStrawberry">Strawberry</label></li>
+      <li><input type="radio" name="fruit" value="Apple" id="fruitApple"><label for="fruitApple">Apple</label></li>
+    </ul>
+  </fieldset>
+```
 
-<p>We'll  do a little styling of the radio button list (not the legend/fieldset) to make it look somewhat like the earlier example, just to show that it can be done:</p>
+We'll  do a little styling of the radio button list (not the legend/fieldset) to make it look somewhat like the earlier example, just to show that it can be done:
 
-<pre class="brush: css">.styledSelect {
+```css
+.styledSelect {
   display: inline-block;
   padding: 0;
 }
@@ -825,55 +832,50 @@ window.addEventListener('load', function () {
   background-color: #333;
   color: #fff;
   width: 100%;
-}</pre>
+}
+```
 
-<p>With no JavaScript, and just a little bit of CSS, we are able to style the list of radio buttons to display only the checked item. When the focus is within the <code>&lt;ul&gt;</code> in the <code>&lt;fieldset&gt;</code>, the list opens up, and the up and down (and left and right) arrows work to select the previous and next items. Try it out:</p>
+With no JavaScript, and just a little bit of CSS, we are able to style the list of radio buttons to display only the checked item. When the focus is within the `<ul>` in the `<fieldset>`, the list opens up, and the up and down (and left and right) arrows work to select the previous and next items. Try it out:
 
-<p>{{EmbedLiveSample("An_alternative_approach_Using_radio_buttons",200,240)}}</p>
+{{EmbedLiveSample("An_alternative_approach_Using_radio_buttons",200,240)}}
 
-<p>This works, to some extent, without JavaScript. We've created a similar control to our custom control, that works even if the JavaScript fails. Looks like a great solution, right? Well, not 100%. It does work with the keyboard, but not as expected with a mouse click. It likely makes more sense to use web standards as the basis for custom controls instead of relying on frameworks to create elements with no native semantics. However, our control doesn't have the same functionality that a <code>&lt;select&gt;</code> has natively.</p>
+This works, to some extent, without JavaScript. We've created a similar control to our custom control, that works even if the JavaScript fails. Looks like a great solution, right? Well, not 100%. It does work with the keyboard, but not as expected with a mouse click. It likely makes more sense to use web standards as the basis for custom controls instead of relying on frameworks to create elements with no native semantics. However, our control doesn't have the same functionality that a `<select>` has natively.
 
-<p>On the plus side, this control is fully accessible to a screen reader and fully navigable via the keyboard. However, this control isn't a {{htmlelement('select')}} replacement. There is functionality that differs and/or is missing. For example, all four arrows navigate through the options, but clicking the down arrow when the user is on the last button takes them to the first button; it doesn't stop at the top and bottom of the option list like a <code>&lt;select&gt;</code> does.</p>
+On the plus side, this control is fully accessible to a screen reader and fully navigable via the keyboard. However, this control isn't a {{htmlelement('select')}} replacement. There is functionality that differs and/or is missing. For example, all four arrows navigate through the options, but clicking the down arrow when the user is on the last button takes them to the first button; it doesn't stop at the top and bottom of the option list like a `<select>` does.
 
-<p>We'll leave adding this missing functionality as a reader exercise.</p>
+We'll leave adding this missing functionality as a reader exercise.
 
-<h2 id="Conclusion">Conclusion</h2>
+## Conclusion
 
-<p>We have seen all the basics of building a custom form control, but as you can see it's not trivial to do. Before creating your own customized control, consider whether HTML provides alternative elements that can be used to adequately support your requirements. If you do need to create a custom control, it is often easier to rely on third-party libraries instead of building your own. But, if you do create your own, modify existing elements, or use a framework to implement a pre-baked control, remember that creating a usable and accessible form control is more complicated than it looks.</p>
+We have seen all the basics of building a custom form control, but as you can see it's not trivial to do. Before creating your own customized control, consider whether HTML provides alternative elements that can be used to adequately support your requirements. If you do need to create a custom control, it is often easier to rely on third-party libraries instead of building your own. But, if you do create your own, modify existing elements, or use a framework to implement a pre-baked control, remember that creating a usable and accessible form control is more complicated than it looks.
 
-<p>Here are a few libraries you should consider before coding your own:</p>
+Here are a few libraries you should consider before coding your own:
 
-<ul>
- <li><a href="https://jqueryui.com/" rel="external">jQuery UI</a></li>
- <li><a href="https://www.webaxe.org/accessible-custom-select-dropdowns">AXE accessible custom select dropdowns</a></li>
- <li><a href="https://github.com/marghoobsuleman/ms-Dropdown" rel="external">msDropDown</a></li>
- <li><a href="https://www.emblematiq.com/lab/niceforms/" rel="external">Nice Forms</a></li>
-</ul>
+- [jQuery UI](https://jqueryui.com/)
+- [AXE accessible custom select dropdowns](https://www.webaxe.org/accessible-custom-select-dropdowns)
+- [msDropDown](https://github.com/marghoobsuleman/ms-Dropdown)
+- [Nice Forms](https://www.emblematiq.com/lab/niceforms/)
 
-<p>If you do create alternative controls via radio buttons, your own JavaScript, or with a 3rd party library, ensure it is accessible and feature-proof; that is, it needs to be able to work better with a variety of browsers whose compatibility with the Web standards they use vary. Have fun!</p>
+If you do create alternative controls via radio buttons, your own JavaScript, or with a 3rd party library, ensure it is accessible and feature-proof; that is, it needs to be able to work better with a variety of browsers whose compatibility with the Web standards they use vary. Have fun!
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<h3 id="Learning_path">Learning path</h3>
+### Learning path
 
-<ul>
- <li><a href="/en-US/docs/Learn/Forms/Your_first_form">Your first HTML form</a></li>
- <li><a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form">How to structure an HTML form</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls">The native form widgets</a></li>
- <li><a href="/en-US/docs/Learn/Forms/HTML5_input_types">HTML5 input types</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Other_form_controls">Additional form controls</a></li>
- <li><a href="/en-US/docs/Learn/Forms/UI_pseudo-classes">UI pseudo-classes</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling HTML forms</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Form_validation">Form data validation</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data">Sending form data</a></li>
-</ul>
+- [Your first HTML form](/en-US/docs/Learn/Forms/Your_first_form)
+- [How to structure an HTML form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
+- [The native form widgets](/en-US/docs/Learn/Forms/Basic_native_form_controls)
+- [HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types)
+- [Additional form controls](/en-US/docs/Learn/Forms/Other_form_controls)
+- [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
+- [Styling HTML forms](/en-US/docs/Learn/Forms/Styling_web_forms)
+- [Form data validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
-<h3 id="Advanced_Topics">Advanced Topics</h3>
+### Advanced Topics
 
-<ul>
- <li><a href="/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript">Sending forms through JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form widgets</a></li>
- <li><a href="/en-US/docs/Learn/Forms/HTML_forms_in_legacy_browsers">HTML forms in legacy browsers</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Advanced_form_styling">Advanced styling for HTML forms</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Property compatibility table for form widgets</a></li>
-</ul>
+- [Sending forms through JavaScript](/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [How to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [HTML forms in legacy browsers](/en-US/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
+- [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling)
+- [Property compatibility table for form widgets](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

@@ -13,225 +13,279 @@ tags:
   - l10n:priority
   - strings
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
 
-<div>{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}</div>
-
-<p>Next, we'll turn our attention to strings — this is what pieces of text are called in programming. In this article, we'll look at all the common things that you really ought to know about strings when learning JavaScript, such as creating strings, escaping quotes in strings, and joining strings together.</p>
+Next, we'll turn our attention to strings — this is what pieces of text are called in programming. In this article, we'll look at all the common things that you really ought to know about strings when learning JavaScript, such as creating strings, escaping quotes in strings, and joining strings together.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, a basic understanding of HTML and CSS, an understanding of what JavaScript is.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To gain familiarity with the basics of strings in JavaScript.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        Basic computer literacy, a basic understanding of HTML and CSS, an
+        understanding of what JavaScript is.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>To gain familiarity with the basics of strings in JavaScript.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="The_power_of_words">The power of words</h2>
+## The power of words
 
-<p>Words are very important to humans — they are a large part of how we communicate. Since the Web is a largely text-based medium designed to allow humans to communicate and share information, it is useful for us to have control over the words that appear on it. {{glossary("HTML")}} provides structure and meaning to our text, {{glossary("CSS")}} allows us to precisely style it, and JavaScript contains a number of features for manipulating strings, creating custom welcome messages and prompts, showing the right text labels when needed, sorting terms into the desired order, and much more.</p>
+Words are very important to humans — they are a large part of how we communicate. Since the Web is a largely text-based medium designed to allow humans to communicate and share information, it is useful for us to have control over the words that appear on it. {{glossary("HTML")}} provides structure and meaning to our text, {{glossary("CSS")}} allows us to precisely style it, and JavaScript contains a number of features for manipulating strings, creating custom welcome messages and prompts, showing the right text labels when needed, sorting terms into the desired order, and much more.
 
-<p>Pretty much all of the programs we've shown you so far in the course have involved some string manipulation.</p>
+Pretty much all of the programs we've shown you so far in the course have involved some string manipulation.
 
-<h2 id="Strings_—_the_basics">Strings — the basics</h2>
+## Strings — the basics
 
-<p>Strings are dealt with similarly to numbers at first glance, but when you dig deeper you'll start to see some notable differences. Let's start by entering some basic lines into the <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">browser developer console</a> to familiarize ourselves.</p>
+Strings are dealt with similarly to numbers at first glance, but when you dig deeper you'll start to see some notable differences. Let's start by entering some basic lines into the [browser developer console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) to familiarize ourselves.
 
-<h3 id="Creating_a_string">Creating a string</h3>
+### Creating a string
 
-<ol>
- <li>To start with, enter the following lines:
-  <pre class="brush: js">let string = 'The revolution will not be televised.';
-string;</pre>
-  Just like we did with numbers, we are declaring a variable, initializing it with a string value, and then returning the value. The only difference here is that when writing a string, you need to surround the value with quotes.</li>
- <li>If you don't do this, or miss one of the quotes, you'll get an error. Try entering the following lines:
-  <pre class="brush: js example-bad">let badString1 = This is a test;
-let badString2 = 'This is a test;
-let badString3 = This is a test';</pre>
-  These lines don't work because any text without quotes around it is assumed to be a variable name, property name, a reserved word, or similar. If the browser can't find it, then an error is raised (e.g. "missing; before statement"). If the browser can see where a string starts, but can't find the end of the string, as indicated by the 2nd quote, it complains with an error (with "unterminated string literal"). If your program is raising such errors, then go back and check all your strings to make sure you have no missing quote marks.</li>
- <li>The following will work if you previously defined the variable <code>string</code> — try it now:
-  <pre class="brush: js">let badString = string;
-badString;</pre>
-  <code>badString</code> is now set to have the same value as <code>string</code>.</li>
-</ol>
+1.  To start with, enter the following lines:
 
-<h3 id="Single_quotes_vs._double_quotes">Single quotes vs. double quotes</h3>
+    ```js
+    let string = 'The revolution will not be televised.';
+    string;
+    ```
 
-<ol>
- <li>In JavaScript, you can choose single quotes or double quotes to wrap your strings in. Both of the following will work okay:
-  <pre class="brush: js">let sgl = 'Single quotes.';
-let dbl = "Double quotes";
-sgl;
-dbl;</pre>
- </li>
- <li>There is very little difference between the two, and which you use is down to personal preference. You should choose one and stick to it, however; differently quoted code can be confusing, especially if you use two different quotes on the same string! The following will return an error:
-  <pre class="brush: js example-bad">let badQuotes = 'What on earth?";</pre>
- </li>
- <li>The browser will think the string has not been closed because the other type of quote you are not using to contain your strings can appear in the string. For example, both of these are okay:
-  <pre class="brush: js">let sglDbl = 'Would you eat a "fish supper"?';
-let dblSgl = "I'm feeling blue.";
-sglDbl;
-dblSgl;</pre>
- </li>
- <li>However, you can't include the same quote mark inside the string if it's being used to contain them. The following will error, as it confuses the browser as to where the string ends:
-  <pre class="brush: js example-bad">let bigmouth = 'I've got no right to take my place...';</pre>
-  This leads us very nicely into our next subject.</li>
-</ol>
+    Just like we did with numbers, we are declaring a variable, initializing it with a string value, and then returning the value. The only difference here is that when writing a string, you need to surround the value with quotes.
 
-<h3 id="Escaping_characters_in_a_string">Escaping characters in a string</h3>
+2.  If you don't do this, or miss one of the quotes, you'll get an error. Try entering the following lines:
 
-<p>To fix our previous problem code line, we need to escape the problem quote mark. Escaping characters means that we do something to them to make sure they are recognized as text, not part of the code. In JavaScript, we do this by putting a backslash just before the character. Try this:</p>
+    ```js example-bad
+    let badString1 = This is a test;
+    let badString2 = 'This is a test;
+    let badString3 = This is a test';
+    ```
 
-<pre class="brush: js">let bigmouth = 'I\'ve got no right to take my place...';
-bigmouth;</pre>
+    These lines don't work because any text without quotes around it is assumed to be a variable name, property name, a reserved word, or similar. If the browser can't find it, then an error is raised (e.g. "missing; before statement"). If the browser can see where a string starts, but can't find the end of the string, as indicated by the 2nd quote, it complains with an error (with "unterminated string literal"). If your program is raising such errors, then go back and check all your strings to make sure you have no missing quote marks.
 
-<p>This works fine. You can escape other characters in the same way, e.g. <code>\"</code>,  and there are some special codes besides. See <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences">Escape sequences</a> for more details.</p>
+3.  The following will work if you previously defined the variable `string` — try it now:
 
-<h2 id="Concatenating_strings">Concatenating strings</h2>
+    ```js
+    let badString = string;
+    badString;
+    ```
 
-<ol>
- <li>Concatenate is a fancy programming word that means "join together". Joining together strings in JavaScript uses the plus (+) operator, the same one we use to add numbers together, but in this context it does something different. Let's try an example in our console.
-  <pre class="brush: js">let one = 'Hello, ';
-let two = 'how are you?';
-let joined = one + two;
-joined;</pre>
-  The result of this is a variable called <code>joined</code>, which contains the value "Hello, how are you?".</li>
- <li>In the last instance, we joined only two strings, but you can join as many as you like, as long as you include a <code>+</code> between each pair. Try this:
-  <pre class="brush: js">let multiple = one + one + one + one + two;
-multiple;</pre>
- </li>
- <li>You can also use a mix of variables and actual strings. Try this:
-  <pre class="brush: js">let response = one + 'I am fine — ' + two;
-response;</pre>
- </li>
-</ol>
+    `badString` is now set to have the same value as `string`.
 
-<div class="note">
-<p><strong>Note:</strong> When you enter an actual string in your code, enclosed in single or double quotes, it is called a <strong>string literal</strong>.</p>
-</div>
+### Single quotes vs. double quotes
 
-<h3 id="Concatenation_in_context">Concatenation in context</h3>
+1.  In JavaScript, you can choose single quotes or double quotes to wrap your strings in. Both of the following will work okay:
 
-<p>Let's have a look at concatenation being used in action — here's an example from earlier in the course:</p>
+    ```js
+    let sgl = 'Single quotes.';
+    let dbl = "Double quotes";
+    sgl;
+    dbl;
+    ```
 
-<pre class="brush: html">&lt;button&gt;Press me&lt;/button&gt;</pre>
+2.  There is very little difference between the two, and which you use is down to personal preference. You should choose one and stick to it, however; differently quoted code can be confusing, especially if you use two different quotes on the same string! The following will return an error:
 
-<pre class="brush: js">const button = document.querySelector('button');
+    ```js example-bad
+    let badQuotes = 'What on earth?";
+    ```
+
+3.  The browser will think the string has not been closed because the other type of quote you are not using to contain your strings can appear in the string. For example, both of these are okay:
+
+    ```js
+    let sglDbl = 'Would you eat a "fish supper"?';
+    let dblSgl = "I'm feeling blue.";
+    sglDbl;
+    dblSgl;
+    ```
+
+4.  However, you can't include the same quote mark inside the string if it's being used to contain them. The following will error, as it confuses the browser as to where the string ends:
+
+    ```js example-bad
+    let bigmouth = 'I've got no right to take my place...';
+    ```
+
+    This leads us very nicely into our next subject.
+
+### Escaping characters in a string
+
+To fix our previous problem code line, we need to escape the problem quote mark. Escaping characters means that we do something to them to make sure they are recognized as text, not part of the code. In JavaScript, we do this by putting a backslash just before the character. Try this:
+
+```js
+let bigmouth = 'I\'ve got no right to take my place...';
+bigmouth;
+```
+
+This works fine. You can escape other characters in the same way, e.g. `\"`,  and there are some special codes besides. See [Escape sequences](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences) for more details.
+
+## Concatenating strings
+
+1.  Concatenate is a fancy programming word that means "join together". Joining together strings in JavaScript uses the plus (+) operator, the same one we use to add numbers together, but in this context it does something different. Let's try an example in our console.
+
+    ```js
+    let one = 'Hello, ';
+    let two = 'how are you?';
+    let joined = one + two;
+    joined;
+    ```
+
+    The result of this is a variable called `joined`, which contains the value "Hello, how are you?".
+
+2.  In the last instance, we joined only two strings, but you can join as many as you like, as long as you include a `+` between each pair. Try this:
+
+    ```js
+    let multiple = one + one + one + one + two;
+    multiple;
+    ```
+
+3.  You can also use a mix of variables and actual strings. Try this:
+
+    ```js
+    let response = one + 'I am fine — ' + two;
+    response;
+    ```
+
+> **Note:** When you enter an actual string in your code, enclosed in single or double quotes, it is called a **string literal**.
+
+### Concatenation in context
+
+Let's have a look at concatenation being used in action — here's an example from earlier in the course:
+
+```html
+<button>Press me</button>
+```
+
+```js
+const button = document.querySelector('button');
 
 button.onclick = function() {
   let name = prompt('What is your name?');
   alert('Hello ' + name + ', nice to see you!');
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Concatenation_in_context', '100%', 50, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('Concatenation_in_context', '100%', 50, "", "", "hide-codepen-jsfiddle") }}
 
-<p>Here we're using a {{domxref("window.prompt()", "window.prompt()")}} function in line 4, which asks the user to answer a question via a popup dialog box then stores the text they enter inside a given variable — in this case <code>name</code>. We then use a {{domxref("window.alert()", "window.alert()")}} function in line 5 to display another popup containing a string we've assembled from two string literals and the <code>name</code> variable, via concatenation.</p>
+Here we're using a {{domxref("window.prompt()", "window.prompt()")}} function in line 4, which asks the user to answer a question via a popup dialog box then stores the text they enter inside a given variable — in this case `name`. We then use a {{domxref("window.alert()", "window.alert()")}} function in line 5 to display another popup containing a string we've assembled from two string literals and the `name` variable, via concatenation.
 
-<h3 id="Numbers_vs._strings">Numbers vs. strings</h3>
+### Numbers vs. strings
 
-<ol>
- <li>So what happens when we try to add (or concatenate) a string and a number? Let's try it in our console:
-  <pre class="brush: js">'Front ' + 242;
-</pre>
-  You might expect this to return an error,  but it works just fine. Trying to represent a string as a number doesn't really make sense, but representing a number as a string does, so the browser rather cleverly converts the number to a string and concatenates the two strings.</li>
- <li>You can even do this with two numbers — you can force a number to become a string by wrapping it in quote marks. Try the following (we are using the <code>typeof</code> operator to check whether the variable is a number or a string):
-  <pre class="brush: js">let myDate = '19' + '67';
-typeof myDate;</pre>
- </li>
- <li>If you have a numeric variable that you want to convert to a string but not change otherwise, or a string variable that you want to convert to a number but not change otherwise, you can use the following two constructs:
-  <ul>
-   <li>The {{jsxref("Number")}} object converts anything passed to it into a number, if it can. Try the following:
-    <pre class="brush: js">let myString = '123';
-let myNum = Number(myString);
-typeof myNum;</pre>
-   </li>
-   <li>Conversely, every number has a method called <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString">toString()</a></code> that converts it to the equivalent string. Try this:
-    <pre class="brush: js">let myNum2 = 123;
-let myString2 = myNum2.toString();
-typeof myString2;</pre>
-   </li>
-  </ul>
-  These constructs can be really useful in some situations. For example, if a user enters a number into a form's text field, it's a string. However, if you want to add this number to something, you'll need it to be a number, so you could pass it through <code>Number()</code> to handle this. We did exactly this in our <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L54">Number Guessing Game, in line 54</a>.</li>
-</ol>
+1.  So what happens when we try to add (or concatenate) a string and a number? Let's try it in our console:
 
-<h2 id="Template_literals">Template literals</h2>
+    ```js
+    'Front ' + 242;
+    ```
 
-<p>Another type of string syntax that you may come across is <strong>template literals</strong> (sometimes referred to as template strings). This is a newer syntax that provides more flexible, easier to read strings.</p>
+    You might expect this to return an error,  but it works just fine. Trying to represent a string as a number doesn't really make sense, but representing a number as a string does, so the browser rather cleverly converts the number to a string and concatenates the two strings.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Try entering the below examples into your browser's JavaScript console, to see what results you get.</p>
-</div>
+2.  You can even do this with two numbers — you can force a number to become a string by wrapping it in quote marks. Try the following (we are using the `typeof` operator to check whether the variable is a number or a string):
 
-<p>To turn a standard string literal into a template literal, you have to replace the quote marks (<code>' '</code>, or <code>" "</code>) with backtick characters (<code>` `</code>). So, taking a simple example:</p>
+    ```js
+    let myDate = '19' + '67';
+    typeof myDate;
+    ```
 
-<pre class="brush: js">let song = 'Fight the Youth';</pre>
+3.  If you have a numeric variable that you want to convert to a string but not change otherwise, or a string variable that you want to convert to a number but not change otherwise, you can use the following two constructs:
 
-<p>Would be turned into a template literal like so:</p>
+    - The {{jsxref("Number")}} object converts anything passed to it into a number, if it can. Try the following:
 
-<pre class="brush: js">song = `Fight the Youth`;</pre>
+      ```js
+      let myString = '123';
+      let myNum = Number(myString);
+      typeof myNum;
+      ```
 
-<p>If we want to concatenate strings, or include expression results inside them, traditional strings can be fiddly to write:</p>
+    - Conversely, every number has a method called [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) that converts it to the equivalent string. Try this:
 
-<pre class="brush: js">let score = 9;
+      ```js
+      let myNum2 = 123;
+      let myString2 = myNum2.toString();
+      typeof myString2;
+      ```
+
+    These constructs can be really useful in some situations. For example, if a user enters a number into a form's text field, it's a string. However, if you want to add this number to something, you'll need it to be a number, so you could pass it through `Number()` to handle this. We did exactly this in our [Number Guessing Game, in line 54](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L54).
+
+## Template literals
+
+Another type of string syntax that you may come across is **template literals** (sometimes referred to as template strings). This is a newer syntax that provides more flexible, easier to read strings.
+
+> **Note:** Try entering the below examples into your browser's JavaScript console, to see what results you get.
+
+To turn a standard string literal into a template literal, you have to replace the quote marks (`' '`, or `" "`) with backtick characters (`` ` ` ``). So, taking a simple example:
+
+```js
+let song = 'Fight the Youth';
+```
+
+Would be turned into a template literal like so:
+
+```js
+song = `Fight the Youth`;
+```
+
+If we want to concatenate strings, or include expression results inside them, traditional strings can be fiddly to write:
+
+```js
+let score = 9;
 let highestScore = 10;
-let output = 'I like the song "' + song + '". I gave it a score of ' + (score/highestScore * 100) + '%.';</pre>
+let output = 'I like the song "' + song + '". I gave it a score of ' + (score/highestScore * 100) + '%.';
+```
 
-<p>Template literals simplify this enormously:</p>
+Template literals simplify this enormously:
 
-<pre class="brush: js">output = `I like the song "${ song }". I gave it a score of ${ score/highestScore * 100 }%.`;</pre>
+```js
+output = `I like the song "${ song }". I gave it a score of ${ score/highestScore * 100 }%.`;
+```
 
-<p>There is no more need to open and close multiple string pieces — the whole lot can just be wrapped in a single pair of backticks. When you want to include a variable or expression inside the string, you include it inside a <code>${ }</code> construct, which is called a <em>placeholder</em>.</p>
+There is no more need to open and close multiple string pieces — the whole lot can just be wrapped in a single pair of backticks. When you want to include a variable or expression inside the string, you include it inside a `${ }` construct, which is called a _placeholder_.
 
-<p>You can include complex expressions inside template literals, for example:</p>
+You can include complex expressions inside template literals, for example:
 
-<pre class="brush: js">let examScore = 45;
+```js
+let examScore = 45;
 let examHighestScore = 70;
-examReport = `You scored ${ examScore }/${ examHighestScore } (${ Math.round(examScore/examHighestScore*100) }%). ${ examScore &gt;= 49 ? 'Well done, you passed!' : 'Bad luck, you didn\'t pass this time.' }`;</pre>
+examReport = `You scored ${ examScore }/${ examHighestScore } (${ Math.round(examScore/examHighestScore*100) }%). ${ examScore >= 49 ? 'Well done, you passed!' : 'Bad luck, you didn\'t pass this time.' }`;
+```
 
-<ul>
- <li>The first two placeholders here are pretty simple, only including a simple value in the string.</li>
- <li>The third one calculates a percentage result and rounds it to the nearest integer.</li>
- <li>The fourth one includes a ternary operator to check whether the score is above a certain mark and print a pass or fail message depending on the result.</li>
-</ul>
+- The first two placeholders here are pretty simple, only including a simple value in the string.
+- The third one calculates a percentage result and rounds it to the nearest integer.
+- The fourth one includes a ternary operator to check whether the score is above a certain mark and print a pass or fail message depending on the result.
 
-<p>Another point to note is that if you want to split a traditional string over multiple lines, you need to include a newline character, <code>\n</code>:</p>
+Another point to note is that if you want to split a traditional string over multiple lines, you need to include a newline character, `\n`:
 
-<pre class="brush: js">output = 'I like the song "' + song + '".\nI gave it a score of ' + (score/highestScore * 100) + '%.';</pre>
+```js
+output = 'I like the song "' + song + '".\nI gave it a score of ' + (score/highestScore * 100) + '%.';
+```
 
-<p>Template literals respect the line breaks in the source code, so newline characters are no longer needed. This would achieve the same result:</p>
+Template literals respect the line breaks in the source code, so newline characters are no longer needed. This would achieve the same result:
 
-<pre class="brush: js">output = `I like the song "${ song }".
-I gave it a score of ${ score/highestScore * 100 }%.`;</pre>
+```js
+output = `I like the song "${ song }".
+I gave it a score of ${ score/highestScore * 100 }%.`;
+```
 
-<p>We would recommend that you get used to using template literals as soon as possible. They are well-supported in modern browsers, and the only place you'll find a lack of support is Internet Explorer. Many of our examples still use standard string literals, but we will include more template literals going forward.</p>
+We would recommend that you get used to using template literals as soon as possible. They are well-supported in modern browsers, and the only place you'll find a lack of support is Internet Explorer. Many of our examples still use standard string literals, but we will include more template literals going forward.
 
-<p>See our <a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">Template literals</a> reference page for more examples and details of advanced features.</p>
+See our [Template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals) reference page for more examples and details of advanced features.
 
-<h2 id="Test_your_skills!">Test your skills!</h2>
+## Test your skills!
 
-<p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings">Test your skills: Strings</a>. Note that this also requires knowledge from the next article, so you might want to read that first.</p>
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Strings](/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings). Note that this also requires knowledge from the next article, so you might want to read that first.
 
-<h2 id="Conclusion">Conclusion</h2>
+## Conclusion
 
-<p>So that's the very basics of strings covered in JavaScript. In the next article, we'll build on this, looking at some of the built-in methods available to strings in JavaScript and how we can use them to manipulate our strings into just the form we want.</p>
+So that's the very basics of strings covered in JavaScript. In the next article, we'll build on this, looking at some of the built-in methods available to strings in JavaScript and how we can use them to manipulate our strings into just the form we want.
 
-<p>{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}</p>
+{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
 
-<h2 id="In_this_module">In this module</h2>
+## In this module
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript">What is JavaScript?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/A_first_splash">A first splash into JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong">What went wrong? Troubleshooting JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Variables">Storing the information you need — Variables</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Math">Basic math in JavaScript — numbers and operators</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Strings">Handling text — strings in JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods">Useful string methods</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Arrays">Arrays</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator">Assessment: Silly story generator</a></li>
-</ul>
+- [What is JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+- [A first splash into JavaScript](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)
+- [What went wrong? Troubleshooting JavaScript](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)
+- [Storing the information you need — Variables](/en-US/docs/Learn/JavaScript/First_steps/Variables)
+- [Basic math in JavaScript — numbers and operators](/en-US/docs/Learn/JavaScript/First_steps/Math)
+- [Handling text — strings in JavaScript](/en-US/docs/Learn/JavaScript/First_steps/Strings)
+- [Useful string methods](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods)
+- [Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays)
+- [Assessment: Silly story generator](/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator)

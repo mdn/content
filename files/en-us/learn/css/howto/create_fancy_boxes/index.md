@@ -7,38 +7,41 @@ tags:
   - CodingScripting
   - Learn
 ---
-<p>CSS boxes are the building blocks of any web page styled with CSS. Making them nice looking is both fun and challenging. It's fun because it's all about turning a design idea into working code; it's challenging because of the constraints of CSS. Let's do some fancy boxes.</p>
+CSS boxes are the building blocks of any web page styled with CSS. Making them nice looking is both fun and challenging. It's fun because it's all about turning a design idea into working code; it's challenging because of the constraints of CSS. Let's do some fancy boxes.
 
-<p>Before we start getting into the practical side of it, make sure you are familiar with <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">the CSS box model</a>. It's also a good idea, but not a prerequisite, to be familiar with some <a href="/en-US/docs/Learn/CSS/CSS_layout/Introduction">CSS layout basics</a>.</p>
+Before we start getting into the practical side of it, make sure you are familiar with [the CSS box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model). It's also a good idea, but not a prerequisite, to be familiar with some [CSS layout basics](/en-US/docs/Learn/CSS/CSS_layout/Introduction).
 
-<p>On the technical side, Creating fancy boxes are all about mastering CSS border and background properties and how to apply them to a given box. But beyond the technics its also all about unleashing your creativity. It will not be done in one day, and some web developers spend their whole life having fun with it.</p>
+On the technical side, Creating fancy boxes are all about mastering CSS border and background properties and how to apply them to a given box. But beyond the technics its also all about unleashing your creativity. It will not be done in one day, and some web developers spend their whole life having fun with it.
 
-<p>We are about to see many examples, but we will always work on the most simple piece of HTML possible, a simple element:</p>
+We are about to see many examples, but we will always work on the most simple piece of HTML possible, a simple element:
 
-<pre class="brush: html">&lt;div class="fancy"&gt;Hi! I want to be fancy.&lt;/div&gt;</pre>
+```html
+<div class="fancy">Hi! I want to be fancy.</div>
+```
 
-<p>Ok, that's a very small bit of HTML, what can we tweak on that element? All of the following:</p>
+Ok, that's a very small bit of HTML, what can we tweak on that element? All of the following:
 
-<ul>
- <li>Its box model properties: {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("border")}}, etc.</li>
- <li>Its background properties: {{cssxref("background")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-position")}}, {{cssxref("background-size")}}, etc.</li>
- <li>Its pseudo-element: {{cssxref("::before")}} and {{cssxref("::after")}}</li>
- <li>and some aside properties like: {{cssxref("box-shadow")}}, {{cssxref("transform")}}, {{cssxref("outline")}}, etc.</li>
-</ul>
+- Its box model properties: {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("border")}}, etc.
+- Its background properties: {{cssxref("background")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-position")}}, {{cssxref("background-size")}}, etc.
+- Its pseudo-element: {{cssxref("::before")}} and {{cssxref("::after")}}
+- and some aside properties like: {{cssxref("box-shadow")}}, {{cssxref("transform")}}, {{cssxref("outline")}}, etc.
 
-<p>So we have a very large playground. Let the fun begin.</p>
+So we have a very large playground. Let the fun begin.
 
-<h2 id="Box_model_tweak">Box model tweak</h2>
+## Box model tweak
 
-<p>The box model alone allows us to do some basic stuff, like adding simple borders, making squares, etc.. It starts to get interesting when you push the properties to the limit by having negative <code>padding</code> and/or- <code>margin</code> by having <code>border-radius</code> larger than the actual size of the box.</p>
+The box model alone allows us to do some basic stuff, like adding simple borders, making squares, etc.. It starts to get interesting when you push the properties to the limit by having negative `padding` and/or- `margin` by having `border-radius` larger than the actual size of the box.
 
-<h3 id="Making_circles">Making circles</h3>
+### Making circles
 
-<pre class="brush: html hidden">&lt;div class="fancy"&gt;Hi! I want to be fancy.&lt;/div&gt;</pre>
+```html hidden
+<div class="fancy">Hi! I want to be fancy.</div>
+```
 
-<p>This is something that is both very simple and very fun. The {{cssxref("border-radius")}} property is made to create a rounded corner applied to boxes, but what happens if the radius size is equal or larger than the actual width of the box?</p>
+This is something that is both very simple and very fun. The {{cssxref("border-radius")}} property is made to create a rounded corner applied to boxes, but what happens if the radius size is equal or larger than the actual width of the box?
 
-<pre class="brush: css">.fancy {
+```css
+.fancy {
   /* Within a circle, centered text looks prettier. */
   text-align : center;
 
@@ -61,28 +64,30 @@ tags:
 
   /* and let's turn the square into a circle */
   border-radius: 100%;
-}</pre>
+}
+```
 
-<p>Yes, we get a circle:</p>
+Yes, we get a circle:
 
-<p>{{ EmbedLiveSample('Making_circles', '100%', '120') }}</p>
+{{ EmbedLiveSample('Making_circles', '100%', '120') }}
 
-<h2 id="Backgrounds">Backgrounds</h2>
+## Backgrounds
 
-<p>When we talk about a fancy box, the core properties to handle that are <a href="/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders">background-* properties</a>. When you start fiddling with backgrounds it's like your CSS box is turned into a blank canvas you'll fill.</p>
+When we talk about a fancy box, the core properties to handle that are [background-\* properties](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders). When you start fiddling with backgrounds it's like your CSS box is turned into a blank canvas you'll fill.
 
-<p>Before we jump to some practical examples, let's step back a bit as there are two things you should know about backgrounds.</p>
+Before we jump to some practical examples, let's step back a bit as there are two things you should know about backgrounds.
 
-<ul>
- <li>It's possible to set <a href="/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds">several backgrounds</a> on a single box. They are stacked on top of each other like layers.</li>
- <li>Backgrounds can be either solid colors or images: solid color always fills the whole surface but images can be scaled and positioned.</li>
-</ul>
+- It's possible to set [several backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds) on a single box. They are stacked on top of each other like layers.
+- Backgrounds can be either solid colors or images: solid color always fills the whole surface but images can be scaled and positioned.
 
-<pre class="brush: html hidden">&lt;div class="fancy"&gt;Hi! I want to be fancy.&lt;/div&gt;</pre>
+```html hidden
+<div class="fancy">Hi! I want to be fancy.</div>
+```
 
-<p>Okay, let's have fun with backgrounds:</p>
+Okay, let's have fun with backgrounds:
 
-<pre class="brush: css">.fancy {
+```css
+.fancy {
   padding : 1em;
   width: 100%;
   height: 200px;
@@ -109,25 +114,27 @@ tags:
                     linear-gradient( 85deg, rgba(0,0,0,0) 83%, #9f8fa4 83%),
                     linear-gradient(175deg, rgba(0,0,0,0) 70%, #74a6ae 70%),
                     linear-gradient( 85deg, rgba(0,0,0,0) 80%, #74a6ae 80%);
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Backgrounds', '100%', '200') }}</p>
+{{ EmbedLiveSample('Backgrounds', '100%', '200') }}
 
-<div class="note">
-<p><strong>Note:</strong> Gradients can be used in some very creative ways. If you want to see some creative examples, take a look at <a href="https://lea.verou.me/css3patterns/">Lea Verou's CSS patterns</a>. Just remember that such use of gradient is quite expensive, performance wise. If you want to learn more about gradient, feel free to get into <a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">our dedicated article</a>.</p>
-</div>
+> **Note:** Gradients can be used in some very creative ways. If you want to see some creative examples, take a look at [Lea Verou's CSS patterns](https://lea.verou.me/css3patterns/). Just remember that such use of gradient is quite expensive, performance wise. If you want to learn more about gradient, feel free to get into [our dedicated article](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients).
 
-<h2 id="Pseudo-elements">Pseudo-elements</h2>
+## Pseudo-elements
 
-<p>When styling a single box, you could find yourself limited and could wish to have more boxes to create even more amazing styles. Most of the time, that leads to polluting the DOM by adding extra HTML element for the unique purpose of style. Even if it is necessary, it's somewhat considered bad practice. One solution to avoid such pitfalls is to use <a href="/en-US/docs/Web/CSS/Pseudo-elements">CSS pseudo-elements</a>.</p>
+When styling a single box, you could find yourself limited and could wish to have more boxes to create even more amazing styles. Most of the time, that leads to polluting the DOM by adding extra HTML element for the unique purpose of style. Even if it is necessary, it's somewhat considered bad practice. One solution to avoid such pitfalls is to use [CSS pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements).
 
-<h3 id="A_cloud">A cloud</h3>
+### A cloud
 
-<pre class="brush: html hidden">&lt;div class="fancy"&gt;Hi! I want to be fancy.&lt;/div&gt;</pre>
+```html hidden
+<div class="fancy">Hi! I want to be fancy.</div>
+```
 
-<p>Let's have an example by turning our box into a cloud:</p>
+Let's have an example by turning our box into a cloud:
 
-<pre class="brush: css">.fancy {
+```css
+.fancy {
   text-align: center;
 
   /* Same trick as previously used to make circles */
@@ -198,20 +205,24 @@ tags:
      remains flat, we must make the bottom left
      corner of the right ear square. */
   border-bottom-left-radius: 0;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('A_cloud', '100%', '160') }}</p>
+{{ EmbedLiveSample('A_cloud', '100%', '160') }}
 
-<h3 id="Blockquote">Blockquote</h3>
+### Blockquote
 
-<p>A more practical example of using pseudo-elements is to build a nice formatting for HTML {{HTMLElement('blockquote')}} elements. So let's see an example with a slightly different HTML snippet (which provide us an opportunity to see how to also handle design localization):</p>
+A more practical example of using pseudo-elements is to build a nice formatting for HTML {{HTMLElement('blockquote')}} elements. So let's see an example with a slightly different HTML snippet (which provide us an opportunity to see how to also handle design localization):
 
-<pre class="brush: html">&lt;blockquote&gt;People who think they know everything are a great annoyance to those of us who do. &lt;i&gt;Isaac Asimov&lt;/i&gt;&lt;/blockquote&gt;
-&lt;blockquote lang="fr"&gt;L'intelligence, c'est comme les parachutes, quand on n'en a pas, on s'écrase. &lt;i&gt;Pierre Desproges&lt;/i&gt;&lt;/blockquote&gt;</pre>
+```html
+<blockquote>People who think they know everything are a great annoyance to those of us who do. <i>Isaac Asimov</i></blockquote>
+<blockquote lang="fr">L'intelligence, c'est comme les parachutes, quand on n'en a pas, on s'écrase. <i>Pierre Desproges</i></blockquote>
+```
 
-<p>So here comes our style:</p>
+So here comes our style:
 
-<pre class="brush: css">blockquote {
+```css
+blockquote {
   min-height: 5em;
   padding   : 1em 4em;
   font      : 1em/150% sans-serif;
@@ -256,19 +267,23 @@ blockquote i {
   margin-top: 1rem;
   text-style: italic;
   text-align: right;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Blockquote', '100%', '300') }}</p>
+{{ EmbedLiveSample('Blockquote', '100%', '300') }}
 
-<h2 id="All_together_and_more">All together and more</h2>
+## All together and more
 
-<p>So it's possible to create a wonderful effect when we mix all of this together. At some point, to accomplish such box embellishment is a matter of creativity, both in design and technical use of CSS properties. By doing such it's possible to create optical illusions that can bring your boxes alive like in this example:</p>
+So it's possible to create a wonderful effect when we mix all of this together. At some point, to accomplish such box embellishment is a matter of creativity, both in design and technical use of CSS properties. By doing such it's possible to create optical illusions that can bring your boxes alive like in this example:
 
-<pre class="brush: html hidden">&lt;div class="fancy"&gt;Hi! I want to be fancy.&lt;/div&gt;</pre>
+```html hidden
+<div class="fancy">Hi! I want to be fancy.</div>
+```
 
-<p>Let's create some partial drop shadow effect.  The {{cssxref("box-shadow")}} property allow us to create inner light and a flat drop shadow effect, but with some little extra work it becomes possible to create a more natural geometry by using pseudo-element and the {{cssxref("transform")}} property.</p>
+Let's create some partial drop shadow effect.  The {{cssxref("box-shadow")}} property allow us to create inner light and a flat drop shadow effect, but with some little extra work it becomes possible to create a more natural geometry by using pseudo-element and the {{cssxref("transform")}} property.
 
-<pre class="brush: css">.fancy {
+```css
+.fancy {
   position: relative;
   background-color: #FFC;
   padding: 2rem;
@@ -289,6 +304,7 @@ blockquote i {
 
   box-shadow: 0px 13px 10px black;
   transform: rotate(4deg);
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('All_together_and_more', '100%', '120') }}</p>
+{{ EmbedLiveSample('All_together_and_more', '100%', '120') }}

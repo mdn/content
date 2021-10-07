@@ -5,28 +5,25 @@ tags:
   - Basic
   - Beginner
   - CSS
-  - 'CSS:Getting_Started'
+  - CSS:Getting_Started
   - Guide
   - Web
 ---
-<p>{{LearnSidebar}}</p>
+{{LearnSidebar}}
 
-<p>In this guide you can find out how to highlight a paragraph that comes directly after a heading.</p>
+In this guide you can find out how to highlight a paragraph that comes directly after a heading.
 
-<h2>Styling the first paragraph after a heading</h2>
+## Styling the first paragraph after a heading
 
-<p>A common pattern is to style the first paragraph in an article differently to the ones that come after it. Usually this first paragraph will come right after a heading, and if this is the case in your design you can use that combination of elements to target the paragraph.</p>
+A common pattern is to style the first paragraph in an article differently to the ones that come after it. Usually this first paragraph will come right after a heading, and if this is the case in your design you can use that combination of elements to target the paragraph.
 
-<h2>The adjacent sibling combinator</h2>
+## The adjacent sibling combinator
 
-<p>CSS has a group of <a href="/en-US/docs/Web/CSS/CSS_Selectors">CSS Selectors</a> which are referred to as <strong>combinators</strong>, because they select things based on a combination of selectors. In our case, we will use the <a href="/en-US/docs/Web/CSS/Adjacent_sibling_combinator">adjacent sibling combinator</a>. This combinator selects an element based on it being next to another element. In our HTML we have a {{htmlelement("h1")}} followed by a {{htmlelement("p")}}. The <code>&lt;p&gt;</code> is an adjacent sibling of the <code>&lt;h1&gt;</code> so we can select it with <code>h1 + p</code>.</p>
+CSS has a group of [CSS Selectors](/en-US/docs/Web/CSS/CSS_Selectors) which are referred to as **combinators**, because they select things based on a combination of selectors. In our case, we will use the [adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator). This combinator selects an element based on it being next to another element. In our HTML we have a {{htmlelement("h1")}} followed by a {{htmlelement("p")}}. The `<p>` is an adjacent sibling of the `<h1>` so we can select it with `h1 + p`.
 
-<p>{{EmbedGHLiveSample("css-examples/howto/highlight_h1_plus_para.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/howto/highlight_h1_plus_para.html", '100%', 800)}}
 
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">Learn CSS: Selectors.</a></li>
-  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators">Learn CSS: Combinators.</a></li>
-</ul>
+- [Learn CSS: Selectors.](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+- [Learn CSS: Combinators.](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)

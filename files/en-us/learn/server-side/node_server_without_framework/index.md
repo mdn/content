@@ -8,27 +8,26 @@ tags:
   - Server
   - no framework
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}
 
-<p>This article provides a simple static file server built with pure Node.js without the use of a framework.</p>
+This article provides a simple static file server built with pure Node.js without the use of a framework.
 
-<p><a href="https://nodejs.org/en/">Node.js</a> has many frameworks to help you get your server up and running.</p>
+[Node.js](https://nodejs.org/en/) has many frameworks to help you get your server up and running.
 
-<p>The most popular are:</p>
+The most popular are:
 
-<ul>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs">Express</a>: A widely used framework.</li>
- <li><a href="https://hapijs.com/">Hapi.js</a>: A rich framework for building applications and services</li>
- <li><a href="https://www.totaljs.com/">Total</a>: The all-in-one Node.js framework, which does not depend on any other framework, or module.</li>
-</ul>
+- [Express](/en-US/docs/Learn/Server-side/Express_Nodejs): A widely used framework.
+- [Hapi.js](https://hapijs.com/): A rich framework for building applications and services
+- [Total](https://www.totaljs.com/): The all-in-one Node.js framework, which does not depend on any other framework, or module.
 
-<p>These will not suit every situation. A developer may need to build their own server without other dependencies.</p>
+These will not suit every situation. A developer may need to build their own server without other dependencies.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>A simple static file server built with Node.js:</p>
+A simple static file server built with Node.js:
 
-<pre class="brush: js">var http = require('http');
+```js
+var http = require('http');
 var fs = require('fs');
 var path = require('path');
 
@@ -81,39 +80,44 @@ http.createServer(function (request, response) {
     });
 
 }).listen(8125);
-console.log('Server running at http://127.0.0.1:8125/');</pre>
+console.log('Server running at http://127.0.0.1:8125/');
+```
 
-<h3 id="Breakdown">Breakdown</h3>
+### Breakdown
 
-<p>Lines 1 through 3 load modules provided by Node.js, roughly similar to imports.</p>
+Lines 1 through 3 load modules provided by Node.js, roughly similar to imports.
 
-<pre class="brush: js">var http = require('http');
+```js
+var http = require('http');
 var fs = require('fs');
 var path = require('path');
-</pre>
+```
 
-<p>Afterward is the function for creating the server. <code>https.createServer</code> returns a <code>Server</code> object, which we can start up by listening on port 8125.</p>
+Afterward is the function for creating the server. `https.createServer` returns a `Server` object, which we can start up by listening on port 8125.
 
-<pre class="brush: js">http.createServer(function (request, response) {
+```js
+http.createServer(function (request, response) {
     ...
 }).listen(8125);
-console.log('Server running at http://127.0.0.1:8125/');</pre>
-</pre>
+console.log('Server running at http://127.0.0.1:8125/');
+```
 
-<p>The following lines deal with logging the request URL and fixing it if it does not specify a file.</p>
+The following lines deal with logging the request URL and fixing it if it does not specify a file.
 
-<pre class="brush: js">console.log('request ', request.url);
+```js
+console.log('request ', request.url);
 var filePath = '.' + request.url;
 if (filePath == './') {
     filePath = './index.html';
 }
-</pre>
+```
 
-<p>For example, if the URL sent is <code>example.org</code>, it will be interpreted as <code>example.org/index.html</code>.</p>
+For example, if the URL sent is `example.org`, it will be interpreted as `example.org/index.html`.
 
-<p>Next, we lowercase and look for the extension of the file being requested to see if it matches with one of our <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME types</a>. If no matches are found, we use the <code>application/octet-stream</code> as the default type.</p>
+Next, we lowercase and look for the extension of the file being requested to see if it matches with one of our [MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types). If no matches are found, we use the `application/octet-stream` as the default type.
 
-<pre class="brush: js">var extname = String(path.extname(filePath)).toLowerCase();
+```js
+var extname = String(path.extname(filePath)).toLowerCase();
 var mimeTypes = {
     '.html': 'text/html',
     '.js': 'text/javascript',
@@ -133,26 +137,30 @@ var mimeTypes = {
 };
 
 var contentType = mimeTypes[extname] || 'application/octet-stream';
-</pre>
+```
 
-<p>Lastly, we respond to the client with the file information. This function reads the file using our previously prepared <code>filePath</code> variable.</p>
+Lastly, we respond to the client with the file information. This function reads the file using our previously prepared `filePath` variable.
 
-<pre class="brush: js">fs.readFile(filePath, function(error, content) {
+```js
+fs.readFile(filePath, function(error, content) {
     ...
 });
-</pre>
+```
 
-<p>The first thing we do is to compensate for any possible errors.</p>
-<pre class="brush: js">
+The first thing we do is to compensate for any possible errors.
+
+```js
 if (error) {
   ..
 } else {
   ..
 }
-</pre>
+```
 
-<p>Most often, the error will be <code>ENOENT</code>, in which case we reply with a 404 error.</p>
-<pre class="brush: js">if(error.code == 'ENOENT') {
+Most often, the error will be `ENOENT`, in which case we reply with a 404 error.
+
+```js
+if(error.code == 'ENOENT') {
     fs.readFile('./404.html', function(error, content) {
         response.writeHead(404, { 'Content-Type': 'text/html' });
         response.end(content, 'utf-8');
@@ -161,9 +169,12 @@ if (error) {
 else {
     response.writeHead(500);
     response.end('Sorry, check with the site admin for error: '+error.code+' ..\n');
-}</pre>
+}
+```
 
-<p>Finally, if there are no errors, we send over the requested file.</p>
+Finally, if there are no errors, we send over the requested file.
 
-<pre class="brush: js">response.writeHead(200, { 'Content-Type': contentType });
-response.end(content, 'utf-8');</pre>
+```js
+response.writeHead(200, { 'Content-Type': contentType });
+response.end(content, 'utf-8');
+```

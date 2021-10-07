@@ -14,92 +14,76 @@ tags:
   - l10n:priority
   - step by step
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 
-<div>{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}</div>
+_What will your website look like?_ discusses the planning and design work you have to do for your website before writing code, including "What information does my website offer?", "What fonts and colors do I want?", and "What does my site do?"
 
-<div class="summary">
-<p><em>What will your website look like?</em> discusses the planning and design work you have to do for your website before writing code, including "What information does my website offer?", "What fonts and colors do I want?", and "What does my site do?"</p>
-</div>
+## First things first: planning
 
-<h2 id="First_things_first_planning">First things first: planning</h2>
+Before doing anything, you need some ideas. What should your website actually do? A website can do basically anything, but, for your first try, you should keep things simple. We'll start by creating a simple webpage with a heading, an image, and a few paragraphs.
 
-<p>Before doing anything, you need some ideas. What should your website actually do? A website can do basically anything, but, for your first try, you should keep things simple. We'll start by creating a simple webpage with a heading, an image, and a few paragraphs.</p>
+To begin, you'll need to answer these questions:
 
-<p>To begin, you'll need to answer these questions:</p>
+1.  **What is your website about?** Do you like dogs, New York, or Pac-Man?
+2.  **What information are you presenting on the subject?** Write a title and a few paragraphs and think of an image you'd like to show on your page.
+3.  **What does your website look like,** in simple high-level terms? What's the background color? What kind of font is appropriate: formal, cartoony, bold and loud, subtle?
 
-<ol>
- <li><strong>What is your website about?</strong> Do you like dogs, New York, or Pac-Man?</li>
- <li><strong>What information are you presenting on the subject?</strong> Write a title and a few paragraphs and think of an image you'd like to show on your page.</li>
- <li><strong>What does your website look like,</strong> in simple high-level terms? What's the background color? What kind of font is appropriate: formal, cartoony, bold and loud, subtle?</li>
-</ol>
+> **Note:** Complex projects need detailed guidelines that go into all the details of colors, fonts, spacing between items on a page, appropriate writing style, and so on. This is sometimes called a design guide, design system, or brand book, and you can see an example at the [Firefox Photon Design System](https://design.firefox.com/photon/).
 
-<div class="note">
-<p><strong>Note:</strong> Complex projects need detailed guidelines that go into all the details of colors, fonts, spacing between items on a page, appropriate writing style, and so on. This is sometimes called a design guide, design system, or brand book, and you can see an example at the <a href="https://design.firefox.com/photon/">Firefox Photon Design System</a>.</p>
-</div>
+## Sketching out your design
 
-<h2 id="Sketching_out_your_design">Sketching out your design</h2>
+Next, grab pen and paper and sketch out roughly how you want your site to look. For your first simple webpage, there's not much to sketch out, but you should get in the habit of doing this now. It really helps — you don't have to be Van Gogh!
 
-<p>Next, grab pen and paper and sketch out roughly how you want your site to look. For your first simple webpage, there's not much to sketch out, but you should get in the habit of doing this now. It really helps — you don't have to be Van Gogh!</p>
+![](website-drawing-scan.png)
 
-<p><img alt="" src="website-drawing-scan.png"></p>
+> **Note:** Even on real, complex websites, the design teams usually start out with rough sketches on paper and later on build digital mockups using a graphics editor or web technologies.
+>
+> Web teams often include both a graphic designer and a {{Glossary("UX", "user experience")}} (UX) designer. Graphic designers put together the visuals of the website. UX designers have a somewhat more abstract role in addressing how users will experience and interact with the website.
 
-<div class="note">
-<p><strong>Note:</strong> Even on real, complex websites, the design teams usually start out with rough sketches on paper and later on build digital mockups using a graphics editor or web technologies.</p>
+## Choosing your assets
 
-<p>Web teams often include both a graphic designer and a {{Glossary("UX", "user experience")}} (UX) designer. Graphic designers put together the visuals of the website. UX designers have a somewhat more abstract role in addressing how users will experience and interact with the website.</p>
-</div>
+At this point, it's good to start putting together the content that will eventually appear on your webpage.
 
-<h2 id="Choosing_your_assets">Choosing your assets</h2>
+### Text
 
-<p>At this point, it's good to start putting together the content that will eventually appear on your webpage.</p>
+You should still have your paragraphs and title from earlier. Keep these close by.
 
-<h3 id="Text">Text</h3>
+### Theme color
 
-<p>You should still have your paragraphs and title from earlier. Keep these close by.</p>
+To choose a color, go to [the Color Picker](/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool) and find a color you like. When you click on a color, you'll see a strange six-character code like `#660066`. That's called a _hex code_ (short for hexadecimal), and represents your color. Copy the code down somewhere safe for now.
 
-<h3 id="Theme_color">Theme color</h3>
+![](color-picker.png)
 
-<p>To choose a color, go to <a href="/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool">the Color Picker</a> and find a color you like. When you click on a color, you'll see a strange six-character code like <code>#660066</code>. That's called a <em>hex code</em> (short for hexadecimal), and represents your color. Copy the code down somewhere safe for now.</p>
+### Images
 
-<p><img alt="" src="color-picker.png"></p>
+To choose an image, go to [Google Images](https://www.google.com/imghp?gws_rd=ssl) and search for something suitable.
 
-<h3 id="Images">Images</h3>
+1.  When you find the image you want, click on the image to get an enlarged view of it.
+2.  Right-click the image (Ctrl + click on a Mac), choose _Save Image As..._, and choose a safe place to save your image. Alternatively, copy the image's web address from your browser's address bar for later use.
 
-<p>To choose an image, go to <a href="https://www.google.com/imghp?gws_rd=ssl">Google Images</a> and search for something suitable.</p>
+![](updated-google-images.png)
 
-<ol>
- <li>When you find the image you want, click on the image to get an enlarged view of it.</li>
- <li>Right-click the image (Ctrl + click on a Mac), choose <em>Save Image As...</em>, and choose a safe place to save your image. Alternatively, copy the image's web address from your browser's address bar for later use.</li>
-</ol>
+Note that most images on the web, including in Google Images, are copyrighted. To reduce your likelihood of violating copyright, you can use Google's license filter. Click on the _Tools_ button, then on the resulting _Usage rights_ option that appears below. You should choose the option _Creative Commons licenses_.
 
-<p><img alt="" src="updated-google-images.png"></p>
+![](updated-google-images-licensing.png)
 
-<p>Note that most images on the web, including in Google Images, are copyrighted. To reduce your likelihood of violating copyright, you can use Google's license filter. Click on the <em>Tools</em> button, then on the resulting <em>Usage rights</em> option that appears below. You should choose the option <em>Creative Commons licenses</em>.</p>
+### Font
 
-<p><img alt="" src="updated-google-images-licensing.png"></p>
+To choose a font:
 
-<h3 id="Font">Font</h3>
+1.  Go to [Google Fonts](https://www.google.com/fonts) and find one you like.
+2.  Copy the lines of code Google gives you into your text editor to save for later.
+3.  For more details about using Google Fonts, see [this page](https://developers.google.com/fonts/docs/getting_started)
 
-<p>To choose a font:</p>
+{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 
-<ol>
- <li>Go to <a href="https://www.google.com/fonts">Google Fonts</a> and find one you like.</li>
- <li>Copy the lines of code Google gives you into your text editor to save for later.</li>
- <li>For more details about using Google Fonts, see <a href="https://developers.google.com/fonts/docs/getting_started">this page</a></li>
-</ol>
+## In this module
 
-<p>{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}</p>
-
-<h2 id="In_this_module">In this module</h2>
-
-<ul>
- <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">Installing basic software</a></li>
- <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">What will your website look like?</a></li>
- <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">Dealing with files</a></li>
- <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML basics</a></li>
- <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">CSS basics</a></li>
- <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript basics</a></li>
- <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website">Publishing your website</a></li>
- <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works">How the web works</a></li>
-</ul>
+- [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
+- [What will your website look like?](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
+- [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
+- [HTML basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
+- [CSS basics](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
+- [JavaScript basics](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
+- [Publishing your website](/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
+- [How the web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

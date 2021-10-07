@@ -12,59 +12,59 @@ tags:
   - publish
   - website
 ---
-<p><a href="https://cloud.google.com/appengine/" title="App Engine - Build Scalable Web &amp; Mobile Backends in Any Language  |  Google Cloud">Google App Engine</a> is a powerful platform that lets you build and run applications on Google’s infrastructure — whether you need to build a multi-tiered web application from scratch or host a static website. Here's a step-by-step guide to hosting your website on Google App Engine.</p>
+[Google App Engine](https://cloud.google.com/appengine/ "App Engine - Build Scalable Web & Mobile Backends in Any Language  |  Google Cloud") is a powerful platform that lets you build and run applications on Google’s infrastructure — whether you need to build a multi-tiered web application from scratch or host a static website. Here's a step-by-step guide to hosting your website on Google App Engine.
 
-<h2 id="Creating_a_Google_Cloud_Platform_project">Creating a Google Cloud Platform project</h2>
+## Creating a Google Cloud Platform project
 
-<p>To use Google's tools for your own site or app, you need to create a new project on Google Cloud Platform. This requires having a Google account.</p>
+To use Google's tools for your own site or app, you need to create a new project on Google Cloud Platform. This requires having a Google account.
 
-<ol>
- <li>Go to the <a href="https://console.cloud.google.com/projectselector/appengine">App Engine dashboard</a> on the Google Cloud Platform Console and press the <em>Create</em> button.</li>
- <li>If you've not created a project before, you'll need to select whether you want to receive email updates or not, agree to the Terms of Service, and then you should be able to continue.</li>
- <li>Enter a name for the project, edit your project ID and note it down. For this tutorial, the following values are used:
-  <ul>
-   <li>Project Name: <em>GAE Sample Site</em></li>
-   <li>Project ID: <em>gaesamplesite</em></li>
-  </ul>
- </li>
- <li>Click the <em>Create</em> button to create your project.</li>
-</ol>
+1.  Go to the [App Engine dashboard](https://console.cloud.google.com/projectselector/appengine) on the Google Cloud Platform Console and press the _Create_ button.
+2.  If you've not created a project before, you'll need to select whether you want to receive email updates or not, agree to the Terms of Service, and then you should be able to continue.
+3.  Enter a name for the project, edit your project ID and note it down. For this tutorial, the following values are used:
 
-<h2 id="Creating_an_application">Creating an application</h2>
+    - Project Name: _GAE Sample Site_
+    - Project ID: _gaesamplesite_
 
-<p>Each Cloud Platform project can contain one App Engine application. Let's prepare an app for our project.</p>
+4.  Click the _Create_ button to create your project.
 
-<ol>
- <li>We'll need a sample application to publish. If you've not got one to use, download and unzip this <a href="https://gaesamplesite.appspot.com/downloads.html">sample app</a>.</li>
- <li>Have a look at the sample application's structure — the <code>website</code> folder contains your website content and <code>app.yaml</code> is your application configuration file.
-  <ul>
-   <li>Your website content must go inside the <code>website</code> folder, and its landing page must be called <code>index.html</code>, but apart from that it can take whatever form you like.</li>
-   <li>The <code>app.yaml</code> file is a configuration file that tells App Engine how to map URLs to your static files. You don't need to edit it.</li>
-  </ul>
- </li>
-</ol>
+## Creating an application
 
-<h2 id="Publishing_your_application">Publishing your application</h2>
+Each Cloud Platform project can contain one App Engine application. Let's prepare an app for our project.
 
-<p>Now that we've got our project made and sample app files collected together, let's publish our app.</p>
+1.  We'll need a sample application to publish. If you've not got one to use, download and unzip this [sample app](https://gaesamplesite.appspot.com/downloads.html).
+2.  Have a look at the sample application's structure — the `website` folder contains your website content and `app.yaml` is your application configuration file.
 
-<ol>
- <li>Open <a href="https://console.cloud.google.com/cloudshell/editor">Google Cloud Shell</a>.</li>
- <li>Drag and drop the <code>sample-app</code> folder into the left pane of the code editor.</li>
- <li>Run the following in the command line to select your project:
-  <pre class="brush: bash">gcloud config set project <em>gaesamplesite</em></pre>
- </li>
- <li>Then run the following command to go to your app's directory:
-  <pre class="brush: bash">cd <em>sample-app</em></pre>
- </li>
- <li>You are now ready to deploy your application, i.e. upload your app to App Engine:
-  <pre class="brush: bash">gcloud app deploy</pre>
- </li>
- <li>Enter a number to choose the region where you want your application located.</li>
- <li>Enter <code>Y</code> to confirm.</li>
- <li>Now navigate your browser to <em>your-project-id</em>.appspot.com to see your website online. For example, for the project ID <em>gaesamplesite</em>, go to <a href="https://gaesamplesite.appspot.com/"><em>gaesamplesite</em>.appspot.com</a>.</li>
-</ol>
+    - Your website content must go inside the `website` folder, and its landing page must be called `index.html`, but apart from that it can take whatever form you like.
+    - The `app.yaml` file is a configuration file that tells App Engine how to map URLs to your static files. You don't need to edit it.
 
-<h2 id="See_also">See also</h2>
+## Publishing your application
 
-<p>To learn more, see <a href="https://cloud.google.com/appengine/docs/">Google App Engine Documentation</a>.</p>
+Now that we've got our project made and sample app files collected together, let's publish our app.
+
+1.  Open [Google Cloud Shell](https://console.cloud.google.com/cloudshell/editor).
+2.  Drag and drop the `sample-app` folder into the left pane of the code editor.
+3.  Run the following in the command line to select your project:
+
+    ```bash
+    gcloud config set project gaesamplesite
+    ```
+
+4.  Then run the following command to go to your app's directory:
+
+    ```bash
+    cd sample-app
+    ```
+
+5.  You are now ready to deploy your application, i.e. upload your app to App Engine:
+
+    ```bash
+    gcloud app deploy
+    ```
+
+6.  Enter a number to choose the region where you want your application located.
+7.  Enter `Y` to confirm.
+8.  Now navigate your browser to _your-project-id_.appspot.com to see your website online. For example, for the project ID _gaesamplesite_, go to [_gaesamplesite_.appspot.com](https://gaesamplesite.appspot.com/).
+
+## See also
+
+To learn more, see [Google App Engine Documentation](https://cloud.google.com/appengine/docs/).

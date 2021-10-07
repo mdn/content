@@ -8,71 +8,72 @@ tags:
   - Video
   - Web Performance
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/video", "Learn/Performance/HTML", "Learn/Performance")}}{{draft}}
 
-<div>{{PreviousMenuNext("Learn/Performance/video", "Learn/Performance/HTML", "Learn/Performance")}}{{draft}}</div>
-
-<p>While images and video account for over 70% of the bytes downloaded for the average website, byte per byte, JavaScript has a greater negative impact on performance. <span class="seoSummary">This article looks to introduce performance issues caused by scripts and introduces tips and tricks for optimizing JavaScript for web performance.</span></p>
+While images and video account for over 70% of the bytes downloaded for the average website, byte per byte, JavaScript has a greater negative impact on performance. This article looks to introduce performance issues caused by scripts and introduces tips and tricks for optimizing JavaScript for web performance.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, <a href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, and basic knowledge of <a href="/en-US/docs/Learn/Getting_started_with_the_web">client-side web technologies</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To learn about the effects of JavaScript on performance optimization, and how a JavaScript file size is not the only impact on web performance.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        Basic computer literacy,
+        <a
+          href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          >basic software installed</a
+        >, and basic knowledge of
+        <a href="/en-US/docs/Learn/Getting_started_with_the_web"
+          >client-side web technologies</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        To learn about the effects of JavaScript on performance optimization,
+        and how a JavaScript file size is not the only impact on web
+        performance.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Similar to images and video, the best way to improve performance is to omit what is not, in fact, necessary. But not all bytes downloaded have the same impact. JavaScript bytes have to be downloaded, parsed, and executed. JavaScript impacts download performance. We'll cover tips and tricks to minimize that impact on download. But JavaScript can also consume the main thread, the CPU, and the battery. It can make the UI feel unresponsive or janky. We'll introduce concepts for handling that as well.</p>
+Similar to images and video, the best way to improve performance is to omit what is not, in fact, necessary. But not all bytes downloaded have the same impact. JavaScript bytes have to be downloaded, parsed, and executed. JavaScript impacts download performance. We'll cover tips and tricks to minimize that impact on download. But JavaScript can also consume the main thread, the CPU, and the battery. It can make the UI feel unresponsive or janky. We'll introduce concepts for handling that as well.
 
-<h2 id="Download_impact">Download impact</h2>
+## Download impact
 
-<p>Web applications include a lot of JavaScript. Many applications are built with a JavaScript framework, or multiple, with several additional dependencies. Often times third party scripts and APIs are added, including A/B testing, tracking pixels, and features like maps and support features. All of this JavaScript must be downloaded. Eventually.</p>
+Web applications include a lot of JavaScript. Many applications are built with a JavaScript framework, or multiple, with several additional dependencies. Often times third party scripts and APIs are added, including A/B testing, tracking pixels, and features like maps and support features. All of this JavaScript must be downloaded. Eventually.
 
-<p>Performance optimizations should include:</p>
+Performance optimizations should include:
 
-<ul>
- <li>
-   <p><strong>Reducing the amount of JavaScript that is needed.</strong> Some features requiring complex JavaScript can be done with a few lines of JavaScript. Requiring a library for other features may improve developer experience, but is all that JavaScript required? Is there a lighter weight or home spun solutions? Some features may not be necessary, and though they may add some bling, is the cost of the feature in terms of performance worth it?</p>
- </li>
- <li><strong>Remove unused code.</strong></li>
- <li>
-   <p><strong>Split the JavaScript into smaller files.</strong> Code-split JavaScript into critical and non-critical parts. Module bundlers like webpack support code-splitting.</p>
- </li>
- <li>
-   <p><strong>Optimize these smaller files.</strong> <a href="/en-US/docs/Glossary/minification">Minification</a> reduces the number of characters in your file, thereby reducing the number of bytes or weight of your JavaScript. <a href="/en-US/docs/Glossary/GZip_compression">Gzipping</a> compresses the file further, and should be used even if you don't minify. <a href="/en-US/docs/Glossary/brotli_compression">Brotli</a> is similar to Gzip, generally outperforming Gzip's compression.</p>
- </li>
-</ul>
+- **Reducing the amount of JavaScript that is needed.** Some features requiring complex JavaScript can be done with a few lines of JavaScript. Requiring a library for other features may improve developer experience, but is all that JavaScript required? Is there a lighter weight or home spun solutions? Some features may not be necessary, and though they may add some bling, is the cost of the feature in terms of performance worth it?
+- **Remove unused code.**
+- **Split the JavaScript into smaller files.** Code-split JavaScript into critical and non-critical parts. Module bundlers like webpack support code-splitting.
+- **Optimize these smaller files.** [Minification](/en-US/docs/Glossary/minification) reduces the number of characters in your file, thereby reducing the number of bytes or weight of your JavaScript. [Gzipping](/en-US/docs/Glossary/GZip_compression) compresses the file further, and should be used even if you don't minify. [Brotli](/en-US/docs/Glossary/brotli_compression) is similar to Gzip, generally outperforming Gzip's compression.
 
-<h2 id="Render_impact">Render impact</h2>
+## Render impact
 
-<p>Web applications include a lot of JavaScript. Many applications are built with a JavaScript framework, or multiple, with several additional dependencies. Often times third party scripts and APIs are added, including A/B testing, tracking pixels, and features like maps and support features.</p>
+Web applications include a lot of JavaScript. Many applications are built with a JavaScript framework, or multiple, with several additional dependencies. Often times third party scripts and APIs are added, including A/B testing, tracking pixels, and features like maps and support features.
 
-<h2 id="Battery_impact">Battery impact</h2>
+## Battery impact
 
-<h2 id="Conclusion">Conclusion</h2>
+## Conclusion
 
-<p>While optimizing your media files and scripts will get you very far along in terms of web performance optimization, everything that touches a web pages impacts performance. In the next article we take a look at some HTML features that can impact performance, including some attributes specifically created to improve performance.</p>
+While optimizing your media files and scripts will get you very far along in terms of web performance optimization, everything that touches a web pages impacts performance. In the next article we take a look at some HTML features that can impact performance, including some attributes specifically created to improve performance.
 
-<p>{{PreviousMenuNext("Learn/Performance/video", "Learn/Performance/HTML", "Learn/Performance")}}</p>
+{{PreviousMenuNext("Learn/Performance/video", "Learn/Performance/HTML", "Learn/Performance")}}
 
-<h2 id="In_this_module">In this module</h2>
+## In this module
 
-<ul>
- <li><a href="/en-US/docs/Learn/Performance/why_web_performance">The "why" of web performance</a></li>
- <li><a href="/en-US/docs/Learn/Performance/What_is_web_performance">What is web performance?</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Perceived_performance">How do users perceive performance?</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Measuring_performance">Measuring performance</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Multimedia">Multimedia: images</a></li>
- <li><a href="/en-US/docs/Learn/Performance/video">Multimedia: video</a></li>
- <li><a href="/en-US/docs/Learn/Performance/JavaScript">JavaScript performance best practices</a>.</li>
- <li><a href="/en-US/docs/Learn/Performance/HTML">HTML performance features</a></li>
- <li><a href="/en-US/docs/Learn/Performance/CSS">CSS performance features</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Fonts">Fonts and performance</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Mobile">Mobile performance</a></li>
- <li><a href="/en-US/docs/Learn/Performance/business_case_for_performance">Focusing on performance</a></li>
-</ul>
+- [The "why" of web performance](/en-US/docs/Learn/Performance/why_web_performance)
+- [What is web performance?](/en-US/docs/Learn/Performance/What_is_web_performance)
+- [How do users perceive performance?](/en-US/docs/Learn/Performance/Perceived_performance)
+- [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
+- [Multimedia: images](/en-US/docs/Learn/Performance/Multimedia)
+- [Multimedia: video](/en-US/docs/Learn/Performance/video)
+- [JavaScript performance best practices](/en-US/docs/Learn/Performance/JavaScript).
+- [HTML performance features](/en-US/docs/Learn/Performance/HTML)
+- [CSS performance features](/en-US/docs/Learn/Performance/CSS)
+- [Fonts and performance](/en-US/docs/Learn/Performance/Fonts)
+- [Mobile performance](/en-US/docs/Learn/Performance/Mobile)
+- [Focusing on performance](/en-US/docs/Learn/Performance/business_case_for_performance)

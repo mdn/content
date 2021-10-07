@@ -8,59 +8,57 @@ tags:
   - part 5
   - server-side
 ---
-<p>The default rendering of dates from our models is very ugly: <em>Tue Oct 06 2020 15:49:58 GMT+1100 (AUS Eastern Daylight Time)</em>. In this section we'll show how you can update the <em>BookInstance List</em> page from the previous section to present the <code>due_date</code> field in a more friendly format: Oct 6th, 2020. </p>
+The default rendering of dates from our models is very ugly: _Tue Oct 06 2020 15:49:58 GMT+1100 (AUS Eastern Daylight Time)_. In this section we'll show how you can update the _BookInstance List_ page from the previous section to present the `due_date` field in a more friendly format: Oct 6th, 2020.
 
-<p>The approach we will use is to create a virtual property in our <code>BookInstance</code> model that returns the formatted date. We'll do the actual formatting using <a href="https://www.npmjs.com/package/luxon" rel="noopener">luxon</a>, a powerful, modern, and friendly library for parsing, validating, manipulating, formatting and localising dates.</p>
+The approach we will use is to create a virtual property in our `BookInstance` model that returns the formatted date. We'll do the actual formatting using [luxon](https://www.npmjs.com/package/luxon), a powerful, modern, and friendly library for parsing, validating, manipulating, formatting and localising dates.
 
-<div class="notecard note">
-<p><strong>Note:</strong> It is possible to use <em>luxon</em> to format the strings directly in our Pug templates, or we could format the string in a number of other places. Using a virtual property allows us to get the formatted date in exactly the same way as we get the <code>due_date</code> currently. </p>
-</div>
+> **Note:** It is possible to use *luxon* to format the strings directly in our Pug templates, or we could format the string in a number of other places. Using a virtual property allows us to get the formatted date in exactly the same way as we get the `due_date` currently.
 
-<div class="notecard note">
-<p><strong>Note:</strong> This tutorial previously used the <a href="https://www.npmjs.com/package/moment">moment</a> library for date formatting. We've moved to Luxon because moment has <a href="https://momentjs.com/docs/#/-project-status/">declared itself "legacy"</a>. Luxon is one of the <a href="https://momentjs.com/docs/#/-project-status/recommendations/">moment project's main recommendations</a> for a great alternative library.</p>
-</div>
+> **Note:** This tutorial previously used the [moment](https://www.npmjs.com/package/moment) library for date formatting. We've moved to Luxon because moment has [declared itself "legacy"](https://momentjs.com/docs/#/-project-status/). Luxon is one of the [moment project's main recommendations](https://momentjs.com/docs/#/-project-status/recommendations/) for a great alternative library.
 
-<h2 id="Install_luxon">Install luxon</h2>
+## Install luxon
 
-<p>Enter the following command in the root of the project:</p>
+Enter the following command in the root of the project:
 
-<pre class="brush: bash">npm install luxon</pre>
+```bash
+npm install luxon
+```
 
-<h2 id="Create_the_virtual_property">Create the virtual property</h2>
+## Create the virtual property
 
-<ol>
- <li>Open <strong>./models/bookinstance.js</strong>.</li>
- <li>At the top of the page, import <em>luxon</em>.
-  <pre class="brush: js">const { DateTime } = require("luxon");</pre>
- </li>
-</ol>
+1.  Open **./models/bookinstance.js**.
+2.  At the top of the page, import _luxon_.
 
-<p>Add the virtual property <code>due_back_formatted</code> just after the url property.</p>
+    ```js
+    const { DateTime } = require("luxon");
+    ```
 
-<pre class="brush: js">BookInstanceSchema
+Add the virtual property `due_back_formatted` just after the url property.
+
+```js
+BookInstanceSchema
 .virtual('due_back_formatted')
 .get(function () {
   return DateTime.fromJSDate(this.due_back).toLocaleString(DateTime.DATE_MED);
-});</pre>
+});
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> Luxon can import strings in many formats and export to both predefined and free-form formats. In this  case we use <code>fromJSDate()</code> to import a JavaScript date string and <code>toLocaleString()</code> to output the date in  <code>DATE_MED</code> format in English: Oct 6th, 2020.<br>
- For information about other formats and date string internationalisation see the Luxon documentation on <a href="https://github.com/moment/luxon/blob/master/docs/formatting.md#formatting">formatting</a>. </p>
-</div>
+> **Note:** Luxon can import strings in many formats and export to both predefined and free-form formats. In this  case we use `fromJSDate()` to import a JavaScript date string and `toLocaleString()` to output the date in  `DATE_MED` format in English: Oct 6th, 2020.
+> For information about other formats and date string internationalisation see the Luxon documentation on [formatting](https://github.com/moment/luxon/blob/master/docs/formatting.md#formatting).
 
-<h2 id="Update_the_view">Update the view</h2>
+## Update the view
 
-<p>Open <strong>/views/bookinstance_list.pug</strong> and replace <code>due_back</code> with <code>due_back_formatted</code>.</p>
+Open **/views/bookinstance_list.pug** and replace `due_back` with `due_back_formatted`.
 
-<pre class="brush: js">      if val.status != 'Available'
+```js
+      if val.status != 'Available'
         //span  (Due: #{val.due_back} )
-        span  (Due: #{val.due_back_formatted} )       </pre>
+        span  (Due: #{val.due_back_formatted} )
+```
 
-<p>That's it. If you go to <em>All book-instances</em> in the sidebar, you should now see all the due dates are far more attractive!</p>
+That's it. If you go to _All book-instances_ in the sidebar, you should now see all the due dates are far more attractive!
 
-<h2 id="Next_steps">Next steps</h2>
+## Next steps
 
-<ul>
- <li>Return to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</li>
- <li>Proceed to the next subarticle of part 5: <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page">Author list page and Genre list page challenge</a>.</li>
-</ul>
+- Return to [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
+- Proceed to the next subarticle of part 5: [Author list page and Genre list page challenge](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page).

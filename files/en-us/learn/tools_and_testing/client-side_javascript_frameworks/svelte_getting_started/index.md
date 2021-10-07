@@ -10,197 +10,198 @@ tags:
   - Svelte
   - client-side
 ---
-<div>{{LearnSidebar}}<br>
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
+{{LearnSidebar}}
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<p>In this article we'll provide a quick introduction to the <a href="https://svelte.dev/">Svelte framework</a>. We will see how Svelte works and what sets it apart from the rest of the frameworks and tools we've seen so far. Then we will learn how to setup our development environment, create a sample app, understand the structure of the project, and see how to run it locally and build it for production.</p>
+In this article we'll provide a quick introduction to the [Svelte framework](https://svelte.dev/). We will see how Svelte works and what sets it apart from the rest of the frameworks and tools we've seen so far. Then we will learn how to setup our development environment, create a sample app, understand the structure of the project, and see how to run it locally and build it for production.
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>
-    <p>At minimum, it is recommended that you are familiar with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, and have knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
-
-    <p>Svelte is a compiler that generates minimal and highly optimized JavaScript code from our sources; you'll need a terminal with node + npm installed to compile and build your app.</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To setup a local Svelte development environment, create and build a starter app, and understand the basics of how it works.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        <p>
+          At minimum, it is recommended that you are familiar with the core
+          <a href="/en-US/docs/Learn/HTML">HTML</a>,
+          <a href="/en-US/docs/Learn/CSS">CSS</a>, and
+          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, and
+          have knowledge of the
+          <a
+            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            >terminal/command line</a
+          >.
+        </p>
+        <p>
+          Svelte is a compiler that generates minimal and highly optimized
+          JavaScript code from our sources; you'll need a terminal with node +
+          npm installed to compile and build your app.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        To setup a local Svelte development environment, create and build a
+        starter app, and understand the basics of how it works.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Svelte_A_new_approach_to_building_rich_user_interfaces">Svelte: A new approach to building rich user interfaces</h2>
+## Svelte: A new approach to building rich user interfaces
 
-<p>Svelte provides a different approach to building web apps than some of the other frameworks covered in this module. While frameworks like React and Vue do the bulk of their work in the user's browser while the app is running, Svelte shifts that work into a compile step that happens only when you build your app, producing highly-optimized vanilla JavaScript.</p>
+Svelte provides a different approach to building web apps than some of the other frameworks covered in this module. While frameworks like React and Vue do the bulk of their work in the user's browser while the app is running, Svelte shifts that work into a compile step that happens only when you build your app, producing highly-optimized vanilla JavaScript.
 
-<p>The outcome of this approach is not only smaller application bundles and better performance, but also a developer experience that is more approachable for people that have limited experience of the modern tooling ecosystem.</p>
+The outcome of this approach is not only smaller application bundles and better performance, but also a developer experience that is more approachable for people that have limited experience of the modern tooling ecosystem.
 
-<p>Svelte sticks closely to the classic web development model of HTML, CSS, and JS, just adding a few extensions to HTML and JavaScript. It arguably has fewer concepts and tools to learn than some of the other framework options.</p>
+Svelte sticks closely to the classic web development model of HTML, CSS, and JS, just adding a few extensions to HTML and JavaScript. It arguably has fewer concepts and tools to learn than some of the other framework options.
 
-<p>It's main current disadvantages are that it is a young framework — its ecosystem is therefore more limited in terms of tooling, support, plugins, clear usage patterns, etc. than more mature frameworks, and there are also less job opportunities. But it's advantages should be enough to make you interested to explore it.</p>
+It's main current disadvantages are that it is a young framework — its ecosystem is therefore more limited in terms of tooling, support, plugins, clear usage patterns, etc. than more mature frameworks, and there are also less job opportunities. But it's advantages should be enough to make you interested to explore it.
 
-<div class="notecard note">
-<p><strong>Note:</strong> recently Svelte has added <a href="https://svelte.dev/blog/svelte-and-typescript">official TypeScript support</a>, one of its most requested features. We'll look at it later on in this tutorial series.</p>
-</div>
+> **Note:** recently Svelte has added [official TypeScript support](https://svelte.dev/blog/svelte-and-typescript), one of its most requested features. We'll look at it later on in this tutorial series.
 
-<p>We encourage you to go through the <a href="https://svelte.dev/tutorial/basics">Svelte tutorial</a> for a really quick introduction to the basic concepts, before returning to this tutorial series to learn how to build something slightly more in-depth. It should take you about 30 minutes to complete.</p>
+We encourage you to go through the [Svelte tutorial](https://svelte.dev/tutorial/basics) for a really quick introduction to the basic concepts, before returning to this tutorial series to learn how to build something slightly more in-depth. It should take you about 30 minutes to complete.
 
-<h2 id="Use_cases">Use cases</h2>
+## Use cases
 
-<p>Svelte can be used to develop small pieces of an interface or whole applications. You can either start from scratch letting Svelte drive your UI or you can incrementally integrate it into an existing application.</p>
+Svelte can be used to develop small pieces of an interface or whole applications. You can either start from scratch letting Svelte drive your UI or you can incrementally integrate it into an existing application.
 
-<p>Nevertheless, Svelte is particularly appropriate to tackle the following situations:</p>
+Nevertheless, Svelte is particularly appropriate to tackle the following situations:
 
-<ul>
- <li>Web applications intended for low power devices: Applications built with Svelte have smaller bundle sizes, which is ideal for devices with slow network connections and limited processing power. Less code means less KB to download, parse, execute, and keep hanging around in memory.</li>
- <li>Highly interactive pages or complex visualizations: If you are building data-visualizations that need to display a large number of DOM elements, the performance gains that come from a framework with no runtime overhead will ensure that user interactions are snappy and responsive.</li>
- <li>Onboarding people with basic web development knowledge: Svelte has a shallow learning curve. Web developers with basic HTML, CSS, and JavaScript knowledge can easily grasp Svelte specifics in a short time and start building web applications.</li>
-</ul>
+- Web applications intended for low power devices: Applications built with Svelte have smaller bundle sizes, which is ideal for devices with slow network connections and limited processing power. Less code means less KB to download, parse, execute, and keep hanging around in memory.
+- Highly interactive pages or complex visualizations: If you are building data-visualizations that need to display a large number of DOM elements, the performance gains that come from a framework with no runtime overhead will ensure that user interactions are snappy and responsive.
+- Onboarding people with basic web development knowledge: Svelte has a shallow learning curve. Web developers with basic HTML, CSS, and JavaScript knowledge can easily grasp Svelte specifics in a short time and start building web applications.
 
-<p>Moreover, with the help of <a href="https://sapper.svelte.dev/">Sapper</a> (a framework based on Svelte), you can also develop applications with advanced features like server-side rendering, code splitting, file-based routing and offline support. And then there's also <a href="https://svelte-native.technology/">Svelte Native</a>, which lets you build native mobile applications.</p>
+Moreover, with the help of [Sapper](https://sapper.svelte.dev/) (a framework based on Svelte), you can also develop applications with advanced features like server-side rendering, code splitting, file-based routing and offline support. And then there's also [Svelte Native](https://svelte-native.technology/), which lets you build native mobile applications.
 
-<h2 id="How_does_Svelte_work">How does Svelte work?</h2>
+## How does Svelte work?
 
-<p>Being a compiler, Svelte can extend HTML, CSS, and JavaScript, generating optimal JavaScript code without any runtime overhead. To achieve this, Svelte extends vanilla web technologies in the following ways:</p>
+Being a compiler, Svelte can extend HTML, CSS, and JavaScript, generating optimal JavaScript code without any runtime overhead. To achieve this, Svelte extends vanilla web technologies in the following ways:
 
-<ul>
- <li>It extends HTML by allowing JavaScript expressions in markup and providing directives to use conditions and loops, in a fashion similar to handlebars.</li>
- <li>It extends CSS by adding a scoping mechanism, allowing each component to define their own styles without the risk of clashing with other component's styles.</li>
- <li>It extends JavaScript by reinterpreting specific directives of the language to achieve true reactivity and ease component state management.</li>
-</ul>
+- It extends HTML by allowing JavaScript expressions in markup and providing directives to use conditions and loops, in a fashion similar to handlebars.
+- It extends CSS by adding a scoping mechanism, allowing each component to define their own styles without the risk of clashing with other component's styles.
+- It extends JavaScript by reinterpreting specific directives of the language to achieve true reactivity and ease component state management.
 
-<p>The compiler only intervenes in very specific situations and only in the context of Svelte components. Extensions to the JavaScript language are minimal and carefully picked in order to not break JavaScript syntax nor alienate developers. In fact, you will be mostly working with vanilla JavaScript.</p>
+The compiler only intervenes in very specific situations and only in the context of Svelte components. Extensions to the JavaScript language are minimal and carefully picked in order to not break JavaScript syntax nor alienate developers. In fact, you will be mostly working with vanilla JavaScript.
 
-<h2 id="First_steps_with_Svelte">First steps with Svelte</h2>
+## First steps with Svelte
 
-<p>Being a compiler, you can't just add a <code>&lt;script src="svelte.js"&gt;</code> tag to your page and import it into your app. You'll have to set up your development environment in order to let the compiler do its job.</p>
+Being a compiler, you can't just add a `<script src="svelte.js">` tag to your page and import it into your app. You'll have to set up your development environment in order to let the compiler do its job.
 
-<h3 id="Requirements">Requirements</h3>
+### Requirements
 
-<p>In order to work with Svelte you need to have <a href="https://nodejs.org/en/">Node.js</a> installed. It's recommended that you use the long-term support (LTS) version. Node includes npm (the node package manager), and npx (the node package runner). Note that you can also use the Yarn package manager in place of npm, but we'll assume you are using npm in this set of tutorials. See <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management">Package management basics</a> for more information on npm and yarn.</p>
+In order to work with Svelte you need to have [Node.js](https://nodejs.org/en/) installed. It's recommended that you use the long-term support (LTS) version. Node includes npm (the node package manager), and npx (the node package runner). Note that you can also use the Yarn package manager in place of npm, but we'll assume you are using npm in this set of tutorials. See [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) for more information on npm and yarn.
 
-<p>If you're using Windows, you will need to install some software to give you parity with Unix/macOS terminal in order to use the terminal commands mentioned in this tutorial. Gitbash (which comes as part of the <a href="https://gitforwindows.org/">git for Windows toolset</a>) or <a href="https://docs.microsoft.com/en-us/windows/wsl/about">Windows Subsystem for Linux (WSL)</a> are both suitable. <a href="https://cmder.net/">Cmder</a> is another very good and complete alternative. See <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">Command line crash course</a> for more information on these, and on terminal commands in general.</p>
+If you're using Windows, you will need to install some software to give you parity with Unix/macOS terminal in order to use the terminal commands mentioned in this tutorial. Gitbash (which comes as part of the [git for Windows toolset](https://gitforwindows.org/)) or [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/about) are both suitable. [Cmder](https://cmder.net/) is another very good and complete alternative. See [Command line crash course](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line) for more information on these, and on terminal commands in general.
 
-<p>Also see the following for more information:</p>
+Also see the following for more information:
 
-<ul>
- <li><a href="https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/">"What is npm"</a> on nodejs.org</li>
- <li><a href="https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner">"Introducing npx"</a> on the npm blog</li>
- <li><a href="https://svelte.dev/blog/the-easiest-way-to-get-started">"The easiest way to get started with Svelte"</a> on the svelte blog</li>
-</ul>
+- ["What is npm"](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/) on nodejs.org
+- ["Introducing npx"](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner) on the npm blog
+- ["The easiest way to get started with Svelte"](https://svelte.dev/blog/the-easiest-way-to-get-started) on the svelte blog
 
-<h3 id="Creating_your_first_Svelte_app">Creating your first Svelte app</h3>
+### Creating your first Svelte app
 
-<p>The easiest way to create a starter app template is to just download the starter template application. You can do that by visiting <a href="https://github.com/sveltejs/template">sveltejs/template</a> on GitHub or you can avoid having to download and unzip it and just use <a href="https://github.com/Rich-Harris/degit">degit</a>.</p>
+The easiest way to create a starter app template is to just download the starter template application. You can do that by visiting [sveltejs/template](https://github.com/sveltejs/template) on GitHub or you can avoid having to download and unzip it and just use [degit](https://github.com/Rich-Harris/degit).
 
-<p>To create your starter app template, run the following terminal commands:</p>
+To create your starter app template, run the following terminal commands:
 
-<pre class="brush: bash">npx degit sveltejs/template moz-todo-svelte
+```bash
+npx degit sveltejs/template moz-todo-svelte
 cd moz-todo-svelte
 npm install
-npm run dev</pre>
+npm run dev
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> degit doesn't do any kind of magic — it just lets you download and unzip the latest version of a git repo's contents. This is much quicker than using <code>git clone</code> because it will not download all the history of the repo, or create a complete local clone.</p>
-</div>
+> **Note:** degit doesn't do any kind of magic — it just lets you download and unzip the latest version of a git repo's contents. This is much quicker than using `git clone` because it will not download all the history of the repo, or create a complete local clone.
 
-<p>After running <code>npm run dev</code>, Svelte will compile and build your application. It will start a local server at <code>localhost:5000</code>. Svelte will watch for file updates, and automatically recompile and refresh the app for you when changes are made to the source files. Your browser will display something like this:</p>
+After running `npm run dev`, Svelte will compile and build your application. It will start a local server at `localhost:5000`. Svelte will watch for file updates, and automatically recompile and refresh the app for you when changes are made to the source files. Your browser will display something like this:
 
-<p><img alt="A simple start page that says hello world, and gives a link to the official svelte tutorials" src="01-svelte-starter-app.png"></p>
+![A simple start page that says hello world, and gives a link to the official svelte tutorials](01-svelte-starter-app.png)
 
-<h3 id="Application_structure">Application structure</h3>
+### Application structure
 
-<p>The starter template comes with the following structure:</p>
+The starter template comes with the following structure:
 
-<pre>moz-todo-svelte
-├── README.md
-├── package.json
-├── package-lock.json
-├── rollup.config.js
-├── .gitignore
-├── node_modules
-├── public
-│   ├── favicon.png
-│   ├── index.html
-│   ├── global.css
-│   └── build
-│       ├── bundle.css
-│       ├── bundle.js
-│       └── bundle.js.map
-├── scripts
-│   └── setupTypeScript.js
-└── src
-    ├── App.svelte
-    └── main.js</pre>
+    moz-todo-svelte
+    ├── README.md
+    ├── package.json
+    ├── package-lock.json
+    ├── rollup.config.js
+    ├── .gitignore
+    ├── node_modules
+    ├── public
+    │   ├── favicon.png
+    │   ├── index.html
+    │   ├── global.css
+    │   └── build
+    │       ├── bundle.css
+    │       ├── bundle.js
+    │       └── bundle.js.map
+    ├── scripts
+    │   └── setupTypeScript.js
+    └── src
+        ├── App.svelte
+        └── main.js
 
-<p>The contents are as follows:</p>
+The contents are as follows:
 
-<ul>
- <li><code>package.json</code> and <code>package-lock.json</code>: Contains information about the project that Node.js/npm uses to keep it organized. You don't need to understand this file at all to complete this tutorial, however, if you'd like to learn more about it, you can read <a href="https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/">What is the file <code>package.json</code></a>? on NodeJS.org; we also talk about it in our <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management">Package management basics tutorial</a>.</li>
- <li><code>node_modules</code>: This is where node saves the project dependencies. These dependencies won't be sent to production, they are just used for development purposes.</li>
- <li><code>.gitignore</code>: Tells git which files or folder to ignore from the project — useful if you decide to include your app in a git repo.</li>
- <li><code>rollup.config.js</code>: Svelte uses <a href="https://rollupjs.org/">rollup.js</a> as a module bundler. This configuration file tells rollup how to compile and build your app. If you prefer <a href="https://webpack.js.org/">webpack</a> you can create your starter project with <code>npx degit sveltejs/template-webpack svelte-app</code> instead.</li>
- <li><code>scripts</code>: Contains setup scripts as required. Currently should only contain <code>setupTypeScript.js</code>.
-  <ul>
-    <li><code>setupTypeScript.js</code>: This script that sets up TypeScript support in Svelte. We'll talk about this more in the last article.</li>
-  </ul>
- </li>
- <li><code>src</code>: This directory is where the source code for your application lives — where you'll be creating the code for your app.
-  <ul>
-   <li><code>App.svelte</code>: This is the top-level component of your app. So far it just renders the 'Hello World!' message.</li>
-   <li><code>main.js</code>: The entry point to our application. It just instantiates the <code>App</code> component and binds it to the body of our html page.</li>
-  </ul>
- </li>
- <li><code>public</code>: This directory contains all the files that will be published in production.
-  <ul>
-   <li><code>favicon.png</code>: This is the favicon for your app. Currently, it's the Svelte logo.</li>
-   <li><code>index.html</code>: This is the main page of your app. Initially it's just an empty HTML5 page that loads the css files and js bundles generated by Svelte.</li>
-   <li><code>global.css</code>: This file contains unscoped styles. It's a regular css file that will be applied to the whole application.</li>
-   <li><code>build</code>: This folder contains the generated CSS and JavaScript source code.
-    <ul>
-     <li><code>bundle.css</code>: The CSS file that Svelte generated from the styles defined for each component.</li>
-     <li><code>bundle.js</code>: The JavaScript file compiled from all your JavaScript source code.</li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
+- `package.json` and `package-lock.json`: Contains information about the project that Node.js/npm uses to keep it organized. You don't need to understand this file at all to complete this tutorial, however, if you'd like to learn more about it, you can read [What is the file `package.json`](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/)? on NodeJS.org; we also talk about it in our [Package management basics tutorial](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management).
+- `node_modules`: This is where node saves the project dependencies. These dependencies won't be sent to production, they are just used for development purposes.
+- `.gitignore`: Tells git which files or folder to ignore from the project — useful if you decide to include your app in a git repo.
+- `rollup.config.js`: Svelte uses [rollup.js](https://rollupjs.org/) as a module bundler. This configuration file tells rollup how to compile and build your app. If you prefer [webpack](https://webpack.js.org/) you can create your starter project with `npx degit sveltejs/template-webpack svelte-app` instead.
+- `scripts`: Contains setup scripts as required. Currently should only contain `setupTypeScript.js`.
 
-<h2 id="Having_a_look_at_our_first_Svelte_component">Having a look at our first Svelte component</h2>
+  - `setupTypeScript.js`: This script that sets up TypeScript support in Svelte. We'll talk about this more in the last article.
 
-<p>Components are the building blocks of Svelte applications. They are written into <code>.svelte</code> files using a superset of HTML.</p>
+- `src`: This directory is where the source code for your application lives — where you'll be creating the code for your app.
 
-<p>All three sections — <code>&lt;script&gt;</code>, <code>&lt;styles&gt;</code>, and markup — are optional, and can appear in any order you like.</p>
+  - `App.svelte`: This is the top-level component of your app. So far it just renders the 'Hello World!' message.
+  - `main.js`: The entry point to our application. It just instantiates the `App` component and binds it to the body of our html page.
 
-<pre class="brush: html">&lt;script&gt;
+- `public`: This directory contains all the files that will be published in production.
+
+  - `favicon.png`: This is the favicon for your app. Currently, it's the Svelte logo.
+  - `index.html`: This is the main page of your app. Initially it's just an empty HTML5 page that loads the css files and js bundles generated by Svelte.
+  - `global.css`: This file contains unscoped styles. It's a regular css file that will be applied to the whole application.
+  - `build`: This folder contains the generated CSS and JavaScript source code.
+
+    - `bundle.css`: The CSS file that Svelte generated from the styles defined for each component.
+    - `bundle.js`: The JavaScript file compiled from all your JavaScript source code.
+
+## Having a look at our first Svelte component
+
+Components are the building blocks of Svelte applications. They are written into `.svelte` files using a superset of HTML.
+
+All three sections — `<script>`, `<styles>`, and markup — are optional, and can appear in any order you like.
+
+```html
+<script>
   // logic goes here
-&lt;/script&gt;
+</script>
 
-&lt;style&gt;
+<style>
   /* styles go here */
-&lt;/style&gt;
+</style>
 
-&lt;!-- markup (zero or more HTML elements) goes here --&gt;</pre>
+<!-- markup (zero or more HTML elements) goes here -->
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> For more information on the component format, have a look at the <a href="https://svelte.dev/docs#Component_format">svelte documentation</a>.</p>
-</div>
+> **Note:** For more information on the component format, have a look at the [svelte documentation](https://svelte.dev/docs#Component_format).
 
-<p>With this in mind, let's have a look at the <code>src/App.svelte</code> file that came with the starter template. You should see something like the following:</p>
+With this in mind, let's have a look at the `src/App.svelte` file that came with the starter template. You should see something like the following:
 
-<pre class="brush: html">&lt;script&gt;
+```html
+<script>
   export let name;
-&lt;/script&gt;
+</script>
 
-&lt;main&gt;
-  &lt;h1&gt;Hello {name}!&lt;/h1&gt;
-  &lt;p&gt;Visit the &lt;a href="https://svelte.dev/tutorial"&gt;Svelte tutorial&lt;/a&gt; to learn how to build Svelte apps.&lt;/p&gt;
-&lt;/main&gt;
+<main>
+  <h1>Hello {name}!</h1>
+  <p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+</main>
 
-&lt;style&gt;
+<style>
   main {
     text-align: center;
     padding: 1em;
@@ -220,34 +221,40 @@ npm run dev</pre>
       max-width: none;
     }
   }
-&lt;/style&gt;</pre>
+</style>
+```
 
-<h3 id="The_&lt;script&gt;_section">The <code>&lt;script&gt;</code> section</h3>
+### The `<script>` section
 
-<p>The <code>&lt;script&gt;</code> block contains JavaScript that runs when a component instance is created. Variables declared (or imported) at the top level are 'visible' from the component's markup. Top-level variables is the way Svelte handles the component state, and they are reactive by default. We will explain in detail what this means later on.</p>
+The `<script>` block contains JavaScript that runs when a component instance is created. Variables declared (or imported) at the top level are 'visible' from the component's markup. Top-level variables is the way Svelte handles the component state, and they are reactive by default. We will explain in detail what this means later on.
 
-<pre class="brush: html">&lt;script&gt;
+```html
+<script>
   export let name;
-&lt;/script&gt;</pre>
+</script>
+```
 
-<p>Svelte uses the <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/export">export</a></code> keyword to mark a variable declaration as a property (or prop), which means it becomes accessible to consumers of the component (e.g. other components). This is one example of Svelte extending JavaScript syntax to make it more useful, while keeping it familiar.</p>
+Svelte uses the [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) keyword to mark a variable declaration as a property (or prop), which means it becomes accessible to consumers of the component (e.g. other components). This is one example of Svelte extending JavaScript syntax to make it more useful, while keeping it familiar.
 
-<h3 id="The_markup_section">The markup section</h3>
+### The markup section
 
-<p>In the markup section you can insert any HTML you like, and in addition you can insert valid JavaScript expression inside single curly brackets (<code>{}</code>). In this case we are embedding the value of the <code>name</code> prop right after the <code>Hello</code> text.</p>
+In the markup section you can insert any HTML you like, and in addition you can insert valid JavaScript expression inside single curly brackets (`{}`). In this case we are embedding the value of the `name` prop right after the `Hello` text.
 
-<pre class="brush: html">&lt;main&gt;
-  &lt;h1&gt;Hello {name}!&lt;/h1&gt;
-  &lt;p&gt;Visit the &lt;a href="https://svelte.dev/tutorial"&gt;Svelte tutorial&lt;/a&gt; to learn how to build Svelte apps.&lt;/p&gt;
-&lt;/main&gt;</pre>
+```html
+<main>
+  <h1>Hello {name}!</h1>
+  <p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+</main>
+```
 
-<p>Svelte also supports tags like <code>{#if...}</code>, <code>{#each...}</code>, and <code>{#await...}</code> — these examples allow you to conditionally render a portion of the markup, iterate through a list of elements, and work with async values, respectively.</p>
+Svelte also supports tags like `{#if...}`, `{#each...}`, and `{#await...}` — these examples allow you to conditionally render a portion of the markup, iterate through a list of elements, and work with async values, respectively.
 
-<h3 id="The_&lt;style&gt;_section">The <code>&lt;style&gt;</code> section</h3>
+### The `<style>` section
 
-<p>If you have experience working with CSS, the following snippet should make sense:</p>
+If you have experience working with CSS, the following snippet should make sense:
 
-<pre class="brush: html">&lt;style&gt;
+```html
+<style>
   main {
     text-align: center;
     padding: 1em;
@@ -267,40 +274,42 @@ npm run dev</pre>
       max-width: none;
     }
   }
-&lt;/style&gt;</pre>
+</style>
+```
 
-<p>We are applying a style to our <code><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;</a></code> element. What will happen to other components with <code>&lt;h1&gt;</code> elements in them?</p>
+We are applying a style to our [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element. What will happen to other components with `<h1>` elements in them?
 
-<p>In Svelte, CSS inside a component's <code>&lt;style&gt;</code> block will be scoped only to that component. This works by adding a class to selected elements, which is based on a hash of the component styles.</p>
+In Svelte, CSS inside a component's `<style>` block will be scoped only to that component. This works by adding a class to selected elements, which is based on a hash of the component styles.
 
-<p>You can see this in action by opening <code>localhost:5000</code> in a new browser tab, right/<kbd>Ctrl</kbd>-clicking on the <em>HELLO WORLD!</em> label, and choosing <em>Inspect</em>:</p>
+You can see this in action by opening `localhost:5000` in a new browser tab, right/<kbd>Ctrl</kbd>-clicking on the _HELLO WORLD!_ label, and choosing _Inspect_:
 
-<p><img alt="Svelte starter app with devtools open, showing classes for scoped styles" src="02-svelte-component-scoped-styles.png"></p>
+![Svelte starter app with devtools open, showing classes for scoped styles](02-svelte-component-scoped-styles.png)
 
-<p>When compiling the app, Svelte changes our <code>h1</code> styles definition to <code>h1.svelte-1tky8bj</code>, and then modifies every <code>&lt;h1&gt;</code> element in our component to <code>&lt;h1 class="svelte-1tky8bj"&gt;</code>, so that it picks up the styles as required.</p>
+When compiling the app, Svelte changes our `h1` styles definition to `h1.svelte-1tky8bj`, and then modifies every `<h1>` element in our component to `<h1 class="svelte-1tky8bj">`, so that it picks up the styles as required.
 
-<div class="notecard note">
-<p><strong>Note:</strong> You can override this behavior and apply styles to a selector globally using the <code>:global(...)</code> modifier (see the <a href="https://svelte.dev/docs#style">Svelte <code>&lt;style&gt;</code> docs</a> for more information).</p>
-</div>
+> **Note:** You can override this behavior and apply styles to a selector globally using the `:global(...)` modifier (see the [Svelte `<style>` docs](https://svelte.dev/docs#style) for more information).
 
-<h2 id="Making_a_couple_of_changes">Making a couple of changes</h2>
+## Making a couple of changes
 
-<p>Now that we have a general idea of how it all fits together, we can start making a few changes.<br>
- At this point you can try updating your <code>App.svelte</code> component — for example change the <code>&lt;h1&gt;</code> element on line 6 of <code>App.svelte</code> so that it reads like this:</p>
+Now that we have a general idea of how it all fits together, we can start making a few changes.
+At this point you can try updating your `App.svelte` component — for example change the `<h1>` element on line 6 of `App.svelte` so that it reads like this:
 
-<pre class="brush: html">&lt;h1&gt;Hello {name} from MDN!&lt;/h1&gt;</pre>
+```html
+<h1>Hello {name} from MDN!</h1>
+```
 
-<p>Just save your changes and the app running at <code>localhost:5000</code> will be automatically updated.</p>
+Just save your changes and the app running at `localhost:5000` will be automatically updated.
 
-<h3 id="A_first_look_at_Svelte_reactivity">A first look at Svelte reactivity</h3>
+### A first look at Svelte reactivity
 
-<p>In the context of a UI framework, reactivity means that the framework can automatically update the DOM when the state of any component is changed.</p>
+In the context of a UI framework, reactivity means that the framework can automatically update the DOM when the state of any component is changed.
 
-<p>In Svelte, reactivity is triggered by assigning a new value to any top level variable in a component. For example, we could include a <code>toggleName()</code> function in our <code>App</code> component, and a button to run it.</p>
+In Svelte, reactivity is triggered by assigning a new value to any top level variable in a component. For example, we could include a `toggleName()` function in our `App` component, and a button to run it.
 
-<p>Try updating your <code>&lt;script&gt;</code> and markup sections like so:</p>
+Try updating your `<script>` and markup sections like so:
 
-<pre class="brush: html">&lt;script&gt;
+```html
+<script>
   export let name;
 
   function toggleName() {
@@ -310,25 +319,27 @@ npm run dev</pre>
       name = 'world'
     }
   }
-&lt;/script&gt;
+</script>
 
-&lt;main&gt;
-  &lt;h1&gt;Hello {name}!&lt;/h1&gt;
-  &lt;button on:click={toggleName}&gt;Toggle name&lt;/button&gt;
-  &lt;p&gt;Visit the &lt;a href="https://svelte.dev/tutorial"&gt;Svelte tutorial&lt;/a&gt; to learn how to build Svelte apps.&lt;/p&gt;
-&lt;/main&gt;</pre>
+<main>
+  <h1>Hello {name}!</h1>
+  <button on:click={toggleName}>Toggle name</button>
+  <p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+</main>
+```
 
-<p>Whenever the button is clicked, Svelte executes the <code>toggleName()</code> function, which in turn updates the value of the <code>name</code> variable.</p>
+Whenever the button is clicked, Svelte executes the `toggleName()` function, which in turn updates the value of the `name` variable.
 
-<p>As you can see, the <code>&lt;h1&gt;</code> label is automatically updated. Behind the scenes, Svelte created the JavaScript code to update the DOM whenever the value of the name variable changes, without using any virtual DOM or other complex reconciliation mechanism.</p>
+As you can see, the `<h1>` label is automatically updated. Behind the scenes, Svelte created the JavaScript code to update the DOM whenever the value of the name variable changes, without using any virtual DOM or other complex reconciliation mechanism.
 
-<p>Note the use of <code>:</code> in <code>on:click</code>. That's Svelte's syntax for listening to DOM events.</p>
+Note the use of `:` in `on:click`. That's Svelte's syntax for listening to DOM events.
 
-<h2 id="Inspecting_main.js_the_entry_point_of_our_app">Inspecting main.js: the entry point of our app</h2>
+## Inspecting main.js: the entry point of our app
 
-<p>Let’s open <code>src/main.js</code>, which is where the <code>App</code> component is being imported and used. This file is the entry point for our app, and it initially looks like this:</p>
+Let’s open `src/main.js`, which is where the `App` component is being imported and used. This file is the entry point for our app, and it initially looks like this:
 
-<pre class="brush: js">import App from './App.svelte';
+```js
+import App from './App.svelte';
 
 const app = new App({
   target: document.body,
@@ -337,219 +348,211 @@ const app = new App({
   }
 });
 
-export default app;</pre>
+export default app;
+```
 
-<p><code>main.js</code> starts by importing the Svelte component that we are going to use. Then in line 3 it instantiates it, passing an option object with the following properties:</p>
+`main.js` starts by importing the Svelte component that we are going to use. Then in line 3 it instantiates it, passing an option object with the following properties:
 
-<ul>
- <li><code>target</code>: The DOM element inside which we want the component to be rendered, in this case the <code>&lt;body&gt;</code> element.</li>
- <li><code>props</code>: the values to assign to each prop of the <code>App</code> component.</li>
-</ul>
+- `target`: The DOM element inside which we want the component to be rendered, in this case the `<body>` element.
+- `props`: the values to assign to each prop of the `App` component.
 
-<h2 id="A_look_under_the_hood">A look under the hood</h2>
+## A look under the hood
 
-<p>How does Svelte manage to make all these files work together nicely?</p>
+How does Svelte manage to make all these files work together nicely?
 
-<p>The Svelte compiler processes the <code>&lt;style&gt;</code> section of every component and compiles them into the <code>public/build/bundle.css</code> file.</p>
+The Svelte compiler processes the `<style>` section of every component and compiles them into the `public/build/bundle.css` file.
 
-<p>It also compiles the markup and <code>&lt;script&gt;</code> section of every component and stores the result in <code>public/build/bundle.js</code>. It also adds the code in <code>src/main.js</code> to reference the features of each component.</p>
+It also compiles the markup and `<script>` section of every component and stores the result in `public/build/bundle.js`. It also adds the code in `src/main.js` to reference the features of each component.
 
-<p>Finally the file <code>public/index.html</code> includes the generated <code>bundle.css</code> and <code>bundle.js</code> files:</p>
+Finally the file `public/index.html` includes the generated `bundle.css` and `bundle.js` files:
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;meta charset='utf-8'&gt;
-  &lt;meta name='viewport' content='width=device-width,initial-scale=1'&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
 
-  &lt;title&gt;Svelte app&lt;/title&gt;
+  <title>Svelte app</title>
 
-  &lt;link rel='icon' type='image/png' href='/favicon.png'&gt;
-  &lt;link rel='stylesheet' href='/global.css'&gt;
-  &lt;link rel='stylesheet' href='/build/bundle.css'&gt;
+  <link rel='icon' type='image/png' href='/favicon.png'>
+  <link rel='stylesheet' href='/global.css'>
+  <link rel='stylesheet' href='/build/bundle.css'>
 
-  &lt;script defer src='/build/bundle.js'&gt;&lt;/script&gt;
-&lt;/head&gt;
+  <script defer src='/build/bundle.js'></script>
+</head>
 
-&lt;body&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+<body>
+</body>
+</html>
+```
 
-<p>The minified version of <code>bundle.js</code> weighs a little more than 3KB, which includes the "Svelte runtime" (just 300 lines of JavaScript code) and the <code>App.svelte</code> compiled component. As you can see, <code>bundle.js</code> is the only JavaScript file referenced by <code>index.html</code>. There are no other libraries loaded into the web page.</p>
+The minified version of `bundle.js` weighs a little more than 3KB, which includes the "Svelte runtime" (just 300 lines of JavaScript code) and the `App.svelte` compiled component. As you can see, `bundle.js` is the only JavaScript file referenced by `index.html`. There are no other libraries loaded into the web page.
 
-<p>This is a much smaller footprint than compiled bundles from other frameworks. Take into account that, in the case of code bundles, it's not just the size of the files you have to download that matter. This is executable code that needs to be parsed, executed, and kept in memory. So this really makes a difference, especially in low-powered devices or CPU-intensive applications.</p>
+This is a much smaller footprint than compiled bundles from other frameworks. Take into account that, in the case of code bundles, it's not just the size of the files you have to download that matter. This is executable code that needs to be parsed, executed, and kept in memory. So this really makes a difference, especially in low-powered devices or CPU-intensive applications.
 
-<h2 id="Following_this_tutorial">Following this tutorial</h2>
+## Following this tutorial
 
-<p>In this tutorial series you will be building a complete web application. We'll learn all the basics about Svelte and also quite a few advanced topics.</p>
+In this tutorial series you will be building a complete web application. We'll learn all the basics about Svelte and also quite a few advanced topics.
 
-<p>You can just read the content to get a good understanding of Svelte features, but you'll get the most out of this tutorial if you follow along coding the app with us as you go. To make it easier for you to follow each article, we provide a GitHub repository with a folder containing the source for the app as it is at the start of each tutorial.</p>
+You can just read the content to get a good understanding of Svelte features, but you'll get the most out of this tutorial if you follow along coding the app with us as you go. To make it easier for you to follow each article, we provide a GitHub repository with a folder containing the source for the app as it is at the start of each tutorial.
 
-<p>Svelte also provides an online repl, which is a playground for live-coding Svelte apps on the web without having to install anything on your machine. We provide a repl for each article so you can start coding along right away. Let's talk a bit more about how to use these tools.</p>
+Svelte also provides an online repl, which is a playground for live-coding Svelte apps on the web without having to install anything on your machine. We provide a repl for each article so you can start coding along right away. Let's talk a bit more about how to use these tools.
 
-<h3 id="Using_Git">Using Git</h3>
+### Using Git
 
-<p>The most popular version control system is Git, along with GitHub, a site that provides hosting for your repositories and several tools for working with them.</p>
+The most popular version control system is Git, along with GitHub, a site that provides hosting for your repositories and several tools for working with them.
 
-<p>We'll be using GitHub so that you can easily download the source code for each article. You will also be able to get the code as it should be after completing the article, just in case you get lost.</p>
+We'll be using GitHub so that you can easily download the source code for each article. You will also be able to get the code as it should be after completing the article, just in case you get lost.
 
-<p>After <a href="https://git-scm.com/downloads">installing git</a>, to clone the repository you should execute:</p>
+After [installing git](https://git-scm.com/downloads), to clone the repository you should execute:
 
-<pre class="brush: bash">git clone https://github.com/opensas/mdn-svelte-tutorial.git</pre>
+```bash
+git clone https://github.com/opensas/mdn-svelte-tutorial.git
+```
 
-<p>Then at the beginning of each article, you can just <code>cd</code> into the corresponding folder and start the app in dev mode to see what its current state should be, like this:</p>
+Then at the beginning of each article, you can just `cd` into the corresponding folder and start the app in dev mode to see what its current state should be, like this:
 
-<pre class="brush: bash">cd 02-starting-our-todo-app
+```bash
+cd 02-starting-our-todo-app
 npm install
-npm run dev</pre>
+npm run dev
+```
 
-<p>If you want lo learn more about git and GitHub, we've compiled a list of links to useful guides — see <a href="/en-US/docs/Learn/Tools_and_testing/GitHub">Git and GitHub</a>.</p>
+If you want lo learn more about git and GitHub, we've compiled a list of links to useful guides — see [Git and GitHub](/en-US/docs/Learn/Tools_and_testing/GitHub).
 
-<div class="notecard note">
-<p><strong>Note:</strong> If you just want to download the files without cloning the git repo, you can use the degit tool like this — <code>npx degit opensas/mdn-svelte-tutorial</code>. You can also download a specific folder with <code>npx degit opensas/mdn-svelte-tutorial/01-getting-started</code>. Degit won't create a local git repo, it will just download the files of the specified folder.</p>
-</div>
+> **Note:** If you just want to download the files without cloning the git repo, you can use the degit tool like this — `npx degit opensas/mdn-svelte-tutorial`. You can also download a specific folder with `npx degit opensas/mdn-svelte-tutorial/01-getting-started`. Degit won't create a local git repo, it will just download the files of the specified folder.
 
-<h3 id="Using_the_Svelte_REPL">Using the Svelte REPL</h3>
+### Using the Svelte REPL
 
-<p>A REPL (<a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">read–eval–print loop</a>) is an interactive environment that allows you to enter commands and immediately see the results — many programming languages provide a REPL.</p>
+A REPL ([read–eval–print loop](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)) is an interactive environment that allows you to enter commands and immediately see the results — many programming languages provide a REPL.
 
-<p>Svelte's REPL is much more than that. It's an online tool that allows you to create complete apps, save them online, and share with others.</p>
+Svelte's REPL is much more than that. It's an online tool that allows you to create complete apps, save them online, and share with others.
 
-<p>It's the easiest way to start playing with Svelte from any machine, without having to install anything. It is also widely used by Svelte community. If you want to share an idea, ask for help, or report an issue, it's always extremely useful to create a REPL instance demomstrating the issue.</p>
+It's the easiest way to start playing with Svelte from any machine, without having to install anything. It is also widely used by Svelte community. If you want to share an idea, ask for help, or report an issue, it's always extremely useful to create a REPL instance demomstrating the issue.
 
-<p>Let's have a quick look at the Svelte REPL and how you'd use it. It looks like so:</p>
+Let's have a quick look at the Svelte REPL and how you'd use it. It looks like so:
 
-<p><img alt="the svelte repl in action, showing component code on the left, and output on the right" src="03-svelte-repl-in-action.png"></p>
+![the svelte repl in action, showing component code on the left, and output on the right](03-svelte-repl-in-action.png)
 
-<p>To start a REPL, open your browser and navigate to <a href="https://svelte.dev/repl">https://svelte.dev/repl</a>.</p>
+To start a REPL, open your browser and navigate to <https://svelte.dev/repl>.
 
-<ul>
- <li>On the left side of the screen you'll see the code of your components, and on the right you'll see the running output of your app.</li>
- <li>The bar above the code lets you create <code>.svelte</code> and <code>.js</code> files and rearrange them. To create a file inside a folder just specify the complete pathname, like this — <code>components/MyComponent.svelte</code>. The folder will be automatically created.</li>
- <li>Above that bar you have the title of the REPL. Click on it to edit it.</li>
- <li>On the right side you have three tabs:
-  <ul>
-   <li>The <em>Result</em> tab shows your app output, and provides a console at the bottom.</li>
-   <li>The <em>JS output</em> tab lets you inspect the JavaScript code generated by Svelte, and set compiler options.</li>
-   <li>The <em>CSS output</em> tab shows the CSS generated by Svelte.</li>
-  </ul>
- </li>
- <li>Above the tabs, you'll find a toolbar that lets you enter full-screen mode, and download your app. If you login with a GitHub account, you'll also be able to fork and save the app. You'll also be able to see all your saved REPLs by clicking on your GitHub username profile and selecting Your saved apps.</li>
-</ul>
+- On the left side of the screen you'll see the code of your components, and on the right you'll see the running output of your app.
+- The bar above the code lets you create `.svelte` and `.js` files and rearrange them. To create a file inside a folder just specify the complete pathname, like this — `components/MyComponent.svelte`. The folder will be automatically created.
+- Above that bar you have the title of the REPL. Click on it to edit it.
+- On the right side you have three tabs:
 
-<p>Whenever you change any file on the REPL, Svelte will recompile the app and update the Result tab. To share your app share the url. For example, here's the link for a REPL running our complete app: <a href="https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2">https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2</a>.</p>
+  - The _Result_ tab shows your app output, and provides a console at the bottom.
+  - The _JS output_ tab lets you inspect the JavaScript code generated by Svelte, and set compiler options.
+  - The _CSS output_ tab shows the CSS generated by Svelte.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Notice how you can specify Svelte's version in the URL. This is useful when reporting issues related to a specific version of Svelte.</p>
-</div>
+- Above the tabs, you'll find a toolbar that lets you enter full-screen mode, and download your app. If you login with a GitHub account, you'll also be able to fork and save the app. You'll also be able to see all your saved REPLs by clicking on your GitHub username profile and selecting Your saved apps.
 
-<p>We will provide a REPL at the beginning and end of each article so that you can start coding with us right away.</p>
+Whenever you change any file on the REPL, Svelte will recompile the app and update the Result tab. To share your app share the url. For example, here's the link for a REPL running our complete app: <https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2>.
 
-<div class="notecard note">
-<p><strong>Note:</strong> at the moment the REPL can't handle folder names properly. If you are following the tutorial on the REPL, just create all your components inside the root folder. Then when you see a path in the code, for example <code>import Todos from './components/Todos.svelte'</code>, just replace it with a flat URL, e.g. <code>import Todos from './Todos.svelte'</code>.</p>
-</div>
+> **Note:** Notice how you can specify Svelte's version in the URL. This is useful when reporting issues related to a specific version of Svelte.
 
-<h2 id="The_code_so_far">The code so far</h2>
+We will provide a REPL at the beginning and end of each article so that you can start coding with us right away.
 
-<h3 id="Git">Git</h3>
+> **Note:** at the moment the REPL can't handle folder names properly. If you are following the tutorial on the REPL, just create all your components inside the root folder. Then when you see a path in the code, for example `import Todos from './components/Todos.svelte'`, just replace it with a flat URL, e.g. `import Todos from './Todos.svelte'`.
 
-<p>Clone the github repo (if you haven't already done it) with:</p>
+## The code so far
 
-<pre class="brush: bash">git clone https://github.com/opensas/mdn-svelte-tutorial.git</pre>
+### Git
 
-<p>Then to get to the current app state, run</p>
+Clone the github repo (if you haven't already done it) with:
 
-<pre class="brush: bash">cd mdn-svelte-tutorial/01-getting-started</pre>
+```bash
+git clone https://github.com/opensas/mdn-svelte-tutorial.git
+```
 
-<p>Or directly download the folder's content:</p>
+Then to get to the current app state, run
 
-<pre class="brush: bash">npx degit opensas/mdn-svelte-tutorial/01-getting-started</pre>
+```bash
+cd mdn-svelte-tutorial/01-getting-started
+```
 
-<p>Remember to run <code>npm install &amp;&amp; npm run dev</code> to start your app in development mode.</p>
+Or directly download the folder's content:
 
-<h3 id="REPL">REPL</h3>
+```bash
+npx degit opensas/mdn-svelte-tutorial/01-getting-started
+```
 
-<p>To code along with us using the REPL, start at</p>
+Remember to run `npm install && npm run dev` to start your app in development mode.
 
-<p><a href="https://svelte.dev/repl/fc68b4f059d34b9c84fa042d1cce586c?version=3.23.2">https://svelte.dev/repl/fc68b4f059d34b9c84fa042d1cce586c?version=3.23.2</a></p>
+### REPL
 
-<h2 id="Summary">Summary</h2>
+To code along with us using the REPL, start at
 
-<p>This brings us to the end of our initial look at Svelte, including how to install it locally, create a starter app, and how the basics work. In the next article we'll start building our first proper application — a todo list. Before we do that, however, let's recap some of the things we’ve learned.</p>
+<https://svelte.dev/repl/fc68b4f059d34b9c84fa042d1cce586c?version=3.23.2>
 
-<p>In Svelte:</p>
+## Summary
 
-<ul>
- <li>We define the script, style and markup of each component in a single <code>.svelte</code> file.</li>
- <li>Component props are declared with the <code>export</code> keyword.</li>
- <li>Svelte components can be used just by importing the corresponding <code>.svelte</code> file.</li>
- <li>Components styles are scoped, keeping them from clashing with each other.</li>
- <li>In the markup section you can include any JavaScript expression by putting it between curly braces.</li>
- <li>The top-level variables of a component constitute its state.</li>
- <li>Reactivity is fired just by assigning a new value to a top level variable.</li>
-</ul>
+This brings us to the end of our initial look at Svelte, including how to install it locally, create a starter app, and how the basics work. In the next article we'll start building our first proper application — a todo list. Before we do that, however, let's recap some of the things we’ve learned.
 
-<p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
+In Svelte:
 
-<h2 id="In_this_module">In this module</h2>
+- We define the script, style and markup of each component in a single `.svelte` file.
+- Component props are declared with the `export` keyword.
+- Svelte components can be used just by importing the corresponding `.svelte` file.
+- Components styles are scoped, keeping them from clashing with each other.
+- In the markup section you can include any JavaScript expression by putting it between curly braces.
+- The top-level variables of a component constitute its state.
+- Reactivity is fired just by assigning a new value to a top level variable.
 
-<ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
- <li>React
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
-  </ul>
- </li>
- <li>Ember
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
-  </ul>
- </li>
- <li>Vue
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
-  </ul>
- </li>
- <li>Svelte
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
-  </ul>
- </li>
- <li>Angular
-   <ul>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
-   </ul>
- </li>
-</ul>
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+
+## In this module
+
+- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- React
+
+  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+
+- Ember
+
+  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+
+- Vue
+
+  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+
+- Svelte
+
+  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+
+- Angular
+
+  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
+  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

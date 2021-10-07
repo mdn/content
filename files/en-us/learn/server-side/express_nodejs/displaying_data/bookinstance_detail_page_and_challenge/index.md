@@ -9,16 +9,17 @@ tags:
   - part 5
   - server-side
 ---
-<h2 id="BookInstance_detail_page">BookInstance detail page</h2>
+## BookInstance detail page
 
-<p>The <code>BookInstance</code> detail page needs to display the information for each <code>BookInstance</code>, identified using its (automatically generated) <code>_id</code> field value. This will include the <code>Book</code> name (as a link to the <em>Book detail page</em>) along with other information in the record.</p>
+The `BookInstance` detail page needs to display the information for each `BookInstance`, identified using its (automatically generated) `_id` field value. This will include the `Book` name (as a link to the _Book detail page_) along with other information in the record.
 
-<h3 id="Controller">Controller</h3>
+### Controller
 
-<p>Open <strong>/controllers/bookinstanceController.js</strong>.
-Find the exported <code>bookinstance_detail()</code> controller method and replace it with the following code.</p>
+Open **/controllers/bookinstanceController.js**.
+Find the exported `bookinstance_detail()` controller method and replace it with the following code.
 
-<pre class="brush: js">// Display detail page for a specific BookInstance.
+```js
+// Display detail page for a specific BookInstance.
 exports.bookinstance_detail = function(req, res, next) {
 
     BookInstance.findById(req.params.id)
@@ -35,16 +36,17 @@ exports.bookinstance_detail = function(req, res, next) {
     })
 
 };
-</pre>
+```
 
-<p>The method calls <code>BookInstance.findById()</code> with the ID of a specific book instance extracted from the URL (using the route), and accessed within the controller via the request parameters: <code>req.params.id</code>).
-It then calls <code>populate()</code> to get the details of the associated <code>Book</code>.</p>
+The method calls `BookInstance.findById()` with the ID of a specific book instance extracted from the URL (using the route), and accessed within the controller via the request parameters: `req.params.id`).
+It then calls `populate()` to get the details of the associated `Book`.
 
-<h3 id="View">View</h3>
+### View
 
-<p>Create <strong>/views/bookinstance_detail.pug</strong> and copy in the content below.</p>
+Create **/views/bookinstance_detail.pug** and copy in the content below.
 
-<pre class="brush: js">extends layout
+```js
+extends layout
 
 block content
 
@@ -64,34 +66,28 @@ block content
 
   if bookinstance.status!='Available'
     p #[strong Due back:] #{bookinstance.due_back}
-</pre>
+```
 
-<p>Everything in this template has been demonstrated in previous sections.</p>
+Everything in this template has been demonstrated in previous sections.
 
-<h3 id="What_does_it_look_like">What does it look like?</h3>
+### What does it look like?
 
-<p>Run the application and open your browser to <a href="http://localhost:3000/">http://localhost:3000/</a>. Select the <em>All book-instances</em> link, then select one of the items. If everything is set up correctly, your site should look something like the following screenshot.</p>
+Run the application and open your browser to <http://localhost:3000/>. Select the _All book-instances_ link, then select one of the items. If everything is set up correctly, your site should look something like the following screenshot.
 
-<p><img alt="BookInstance Detail Page - Express Local Library site" src="locallibary_express_bookinstance_detail.png"></p>
+![BookInstance Detail Page - Express Local Library site](locallibary_express_bookinstance_detail.png)
 
-<h2 id="Challenge">Challenge</h2>
+## Challenge
 
-<p>Currently most <em>dates</em> displayed on the site use the default JavaScript format (e.g. <em>Tue Oct 06 2020 15:49:58 GMT+1100 (AUS Eastern Daylight Time))</em>. The challenge for this article is to improve the appearance of the date display for <code>Author</code> lifespan information (date of death/birth) and for <em>BookInstance detail</em> pages to use the format: Oct 6th, 2016.</p>
+Currently most *dates* displayed on the site use the default JavaScript format (e.g. _Tue Oct 06 2020 15:49:58 GMT+1100 (AUS Eastern Daylight Time))_. The challenge for this article is to improve the appearance of the date display for `Author` lifespan information (date of death/birth) and for _BookInstance detail_ pages to use the format: Oct 6th, 2016.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> You can use the <a href="#">same approach</a> as we used for the <em>Book Instance List</em> (adding the virtual property for the lifespan to the <code>Author</code> model and use <a href="https://www.npmjs.com/package/luxon">luxon</a> to format the date strings).</p>
-</div>
+> **Note:** You can use the [same approach](#) as we used for the _Book Instance List_ (adding the virtual property for the lifespan to the `Author` model and use [luxon](https://www.npmjs.com/package/luxon) to format the date strings).
 
-<p>To complete this challenge, you must:</p>
+To complete this challenge, you must:
 
-<ol>
- <li>Replace the variable <code>due_back</code> with <code>due_back_formatted</code> in the <em>BookInstance detail</em> page.</li>
- <li>Update the <code>Author</code> model to add a lifespan virtual property. The lifespan should look like: <em>date_of_birth - date_of_death</em>, where both values have the same date format as <code>BookInstance.due_back_formatted</code>.</li>
- <li>Use <code>Author.lifespan</code> in all views where you currently explicitly use <code>date_of_birth</code> and <code>date_of_death</code>.</li>
-</ol>
+1.  Replace the variable `due_back` with `due_back_formatted` in the _BookInstance detail_ page.
+2.  Update the `Author` model to add a lifespan virtual property. The lifespan should look like: _date_of_birth - date_of_death_, where both values have the same date format as `BookInstance.due_back_formatted`.
+3.  Use `Author.lifespan` in all views where you currently explicitly use `date_of_birth` and `date_of_death`.
 
-<h2 id="Next_steps">Next steps</h2>
+## Next steps
 
-<ul>
- <li>Return to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data#displaying_library_data_tutorial_subarticles">Express Tutorial Part 5: Displaying library data</a>.</li>
-</ul>
+- Return to [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data#displaying_library_data_tutorial_subarticles).

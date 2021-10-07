@@ -1,6 +1,6 @@
 ---
 title: 'Test your skills: Functions'
-slug: 'Learn/JavaScript/Building_blocks/Test_your_skills:_Functions'
+slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Functions
 tags:
   - Beginner
   - Functions
@@ -8,92 +8,80 @@ tags:
   - Learn
   - test your skills
 ---
-<div>{{learnsidebar}}</div>
+{{learnsidebar}}
 
-<p>The aim of this skill test is to assess whether you've understood our <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">Functions — reusable blocks of code</a>, <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">Build your own function</a>, and <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Return_values">Function return values</a> articles.</p>
+The aim of this skill test is to assess whether you've understood our [Functions — reusable blocks of code](/en-US/docs/Learn/JavaScript/Building_blocks/Functions), [Build your own function](/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function), and [Function return values](/en-US/docs/Learn/JavaScript/Building_blocks/Return_values) articles.
 
-<div class="notecard note">
-<p><strong>Note:</strong> You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a> to work on the tasks.<br>
- <br>
- If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.</p>
-</div>
+> **Note:** You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+>
+> If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
 
-<div class="notecard note">
-<p><strong>Note:</strong> In the examples below, if there is an error in your code it will be outputted into the results panel on the page, to help you try to figure out the answer (or into the browser's JavaScript console, in the case of the downloadable version).</p>
-</div>
+> **Note:** In the examples below, if there is an error in your code it will be outputted into the results panel on the page, to help you try to figure out the answer (or into the browser's JavaScript console, in the case of the downloadable version).
 
-<h2 id="DOM_manipulation_considered_useful">DOM manipulation: considered useful</h2>
+## DOM manipulation: considered useful
 
-<p>Some of the questions below require you to write some <a href="/en-US/docs/Glossary/DOM">DOM</a> manipulation code to complete them — such as creating new HTML elements, setting their text contents to equal specific string values, and nesting them inside existing elements on the page — all via JavaScript.</p>
+Some of the questions below require you to write some [DOM](/en-US/docs/Glossary/DOM) manipulation code to complete them — such as creating new HTML elements, setting their text contents to equal specific string values, and nesting them inside existing elements on the page — all via JavaScript.
 
-<p>We haven't explicitly taught this yet in the course, but you'll have seen some examples that make use of it, and we'd like you to do some research into what DOM APIs you need to successfully answer the questions. A good starting place is our <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">Manipulating documents</a> tutorial.</p>
+We haven't explicitly taught this yet in the course, but you'll have seen some examples that make use of it, and we'd like you to do some research into what DOM APIs you need to successfully answer the questions. A good starting place is our [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents) tutorial.
 
-<h2 id="Functions_1">Functions 1</h2>
+## Functions 1
 
-<p>For the first task, you have to create a simple function — <code>chooseName()</code> — that prints a random name from the provided array (<code>names</code>) to the provided paragraph (<code>para</code>), and then run it once.</p>
+For the first task, you have to create a simple function — `chooseName()` — that prints a random name from the provided array (`names`) to the provided paragraph (`para`), and then run it once.
 
-<p>Try updating the live code below to recreate the finished example:</p>
+Try updating the live code below to recreate the finished example:
 
-<p>{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/functions/functions1.html", '100%', 400)}}</p>
+{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/functions/functions1.html", '100%', 400)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/functions/functions1-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/functions/functions1-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Functions_2">Functions 2</h2>
+## Functions 2
 
-<p>For our second functions-related task, you need to create a function that draws a rectangle on the provided <code>&lt;canvas&gt;</code> (reference variable <code>canvas</code>, context available in <code>ctx</code>), based on the five provided input variables:</p>
+For our second functions-related task, you need to create a function that draws a rectangle on the provided `<canvas>` (reference variable `canvas`, context available in `ctx`), based on the five provided input variables:
 
-<ul>
- <li><code>x</code> — the x coordinate of the rectangle.</li>
- <li><code>y</code> — the y coordinate of the rectangle.</li>
- <li><code>width</code> — the width of the rectangle.</li>
- <li><code>height</code> — the height of the rectangle.</li>
- <li><code>color</code> — the color of the rectangle.</li>
-</ul>
+- `x` — the x coordinate of the rectangle.
+- `y` — the y coordinate of the rectangle.
+- `width` — the width of the rectangle.
+- `height` — the height of the rectangle.
+- `color` — the color of the rectangle.
 
-<p>You'll want to clear the canvas before drawing, so that when the code is updated in the case of the live version, you don't get lots of rectangles drawn on top of one another.</p>
+You'll want to clear the canvas before drawing, so that when the code is updated in the case of the live version, you don't get lots of rectangles drawn on top of one another.
 
-<p>Try updating the live code below to recreate the finished example:</p>
+Try updating the live code below to recreate the finished example:
 
-<p>{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/functions/functions2.html", '100%', 400)}}</p>
+{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/functions/functions2.html", '100%', 400)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/functions/functions2-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/functions/functions2-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Functions_3">Functions 3</h2>
+## Functions 3
 
-<p>In this task, you return to the problem posed in Task 1, with the aim of improving it. The three improvements we want you to make are:</p>
+In this task, you return to the problem posed in Task 1, with the aim of improving it. The three improvements we want you to make are:
 
-<ol>
- <li>Refactor the code that generates the random number into a separate function called <code>random()</code>, which takes as parameters two generic bounds that the random number should be between, and returns the result.</li>
- <li>Update the <code>chooseName()</code> function so that it makes use of the random number function, takes the array to choose from as a parameter (making it more flexible), and returns the result.</li>
- <li>Print the returned result into the paragraph (<code>para</code>)'s <code>textContent</code>. </li>
-</ol>
+1.  Refactor the code that generates the random number into a separate function called `random()`, which takes as parameters two generic bounds that the random number should be between, and returns the result.
+2.  Update the `chooseName()` function so that it makes use of the random number function, takes the array to choose from as a parameter (making it more flexible), and returns the result.
+3.  Print the returned result into the paragraph (`para`)'s `textContent`.
 
-<p>Try updating the live code below to recreate the finished example:</p>
+Try updating the live code below to recreate the finished example:
 
-<p>{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/functions/functions3.html", '100%', 400)}}</p>
+{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/functions/functions3.html", '100%', 400)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/functions/functions3-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/functions/functions3-download.html) to work in your own editor or in an online editor.
 
-<h2 id="Assessment_or_further_help">Assessment or further help</h2>
+## Assessment or further help
 
-<p>You can practice these examples in the Interactive Editors above.</p>
+You can practice these examples in the Interactive Editors above.
 
-<p>If you would like your work assessed, or are stuck and want to ask for help:</p>
+If you would like your work assessed, or are stuck and want to ask for help:
 
-<ol>
- <li>Put your work into an online shareable editor such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a>. You can write the code yourself, or use the starting point files linked to in the above sections.</li>
- <li>Write a post asking for assessment and/or help at the <a href="https://discourse.mozilla.org/c/mdn/learn">MDN Discourse forum Learning category</a>. Your post should include:
-  <ul>
-   <li>A descriptive title such as "Assessment wanted for Functions 1 skill test".</li>
-   <li>Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.</li>
-   <li>A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.</li>
-   <li>A link to the actual task or assessment page, so we can find the question you want help with.</li>
-  </ul>
- </li>
-</ol>
+1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
+2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+
+    - A descriptive title such as "Assessment wanted for Functions 1 skill test".
+    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
+    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
+    - A link to the actual task or assessment page, so we can find the question you want help with.
