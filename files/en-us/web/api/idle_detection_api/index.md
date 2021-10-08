@@ -1,6 +1,6 @@
 ---
 title:
-slug: Web/API/
+slug: Web/API/Idle_Detection_API
 tags:
   - API
   - IdleDetector
