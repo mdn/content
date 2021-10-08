@@ -1,5 +1,5 @@
 ---
-title: '<xsl:decimal-format>'
+title: <xsl:decimal-format>
 slug: Web/XSLT/Element/decimal-format
 tags:
   - Element
@@ -7,94 +7,92 @@ tags:
   - XSLT
   - decimal-format
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>The <code>&lt;xsl:decimal-format&gt;</code> element defines the characters and symbols that are to be used in converting numbers into strings using the<em><code>format-number( )</code></em> function.</p>
+The `<xsl:decimal-format>` element defines the characters and symbols that are to be used in converting numbers into strings using the*`format-number( )`* function.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre>&lt;xsl:decimal-format
-	name=NAME
-	decimal-separator=CHARACTER
-	grouping-separator=CHARACTER
-	infinity=STRING
-	minus-sign=CHARACTER
-	NaN=STRING
-	percent=CHARACTER
-	per-mille=CHARACTER
-	zero-digit=CHARACTER
-	digit=CHARACTER
-	pattern-separator=CHARACTER /&gt;</pre>
+    <xsl:decimal-format
+    	name=NAME
+    	decimal-separator=CHARACTER
+    	grouping-separator=CHARACTER
+    	infinity=STRING
+    	minus-sign=CHARACTER
+    	NaN=STRING
+    	percent=CHARACTER
+    	per-mille=CHARACTER
+    	zero-digit=CHARACTER
+    	digit=CHARACTER
+    	pattern-separator=CHARACTER />
 
-<h3 id="Required_Attributes">Required Attributes</h3>
+### Required Attributes
 
-<p>None.</p>
+None.
 
-<h3 id="Optional_Attributes">Optional Attributes</h3>
+### Optional Attributes
 
-<dl>
- <dt><code>name</code></dt>
- <dd>Specifies a name for this format.</dd>
-</dl>
+- `name`
+  - : Specifies a name for this format.
 
-<dl>
- <dt><code>decimal-separator</code></dt>
- <dd>Specifies the decimal point character. The default is (<code>.</code>).</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>grouping-separator</code></dt>
- <dd>Specifies the thousands separator character. The default is (<code>,</code>).</dd>
-</dl>
+- `decimal-separator`
+  - : Specifies the decimal point character. The default is (`.`).
 
-<dl>
- <dt><code>infinity</code></dt>
- <dd>Specifies the string used to represent infinity. The default is the string "<code>Infinity</code>".</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>minus-sign</code></dt>
- <dd>Specifies the minus sign character. The default is the hyphen (<code>-</code>).</dd>
-</dl>
+- `grouping-separator`
+  - : Specifies the thousands separator character. The default is (`,`).
 
-<dl>
- <dt><code>NaN</code></dt>
- <dd>Specifies the string used when the value is not a number. The default is the string "<code>NaN</code>".</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>percent</code></dt>
- <dd>Specifies the percentage sign character. The default is (<code>%</code>).</dd>
-</dl>
+- `infinity`
+  - : Specifies the string used to represent infinity. The default is the string "`Infinity`".
 
-<dl>
- <dt><code>per-mille</code></dt>
- <dd>Specifies the per thousand character. The default is (<code>‰</code>).</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>zero-digit</code></dt>
- <dd>Specifies the digit zero character. The default is (<code>0</code>).</dd>
-</dl>
+- `minus-sign`
+  - : Specifies the minus sign character. The default is the hyphen (`-`).
 
-<dl>
- <dt><code>digit</code></dt>
- <dd>Specifies the character used in the format pattern to stand for a digit. The default is (<code>#</code>).</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>pattern-separator</code></dt>
- <dd>Specifies the character separating positive and negative subpatterns in a format pattern. The default is the semi-colon (<code>;</code>).</dd>
-</dl>
+- `NaN`
+  - : Specifies the string used when the value is not a number. The default is the string "`NaN`".
 
-<h3 id="Type">Type</h3>
+<!---->
 
-<p>Top-level, must be the child of <code>&lt;xsl:stylesheet&gt;</code> or <code>&lt;xsl:transform&gt;</code>.</p>
+- `percent`
+  - : Specifies the percentage sign character. The default is (`%`).
 
-<h3 id="Defined">Defined</h3>
+<!---->
 
-<p>XSLT, section 12.3.</p>
+- `per-mille`
+  - : Specifies the per thousand character. The default is (`‰`).
 
-<h3 id="Gecko_support">Gecko support</h3>
+<!---->
 
-<p>Supported as of 1.0 (Mozilla 1.0, Netscape 7.0).</p>
+- `zero-digit`
+  - : Specifies the digit zero character. The default is (`0`).
+
+<!---->
+
+- `digit`
+  - : Specifies the character used in the format pattern to stand for a digit. The default is (`#`).
+
+<!---->
+
+- `pattern-separator`
+  - : Specifies the character separating positive and negative subpatterns in a format pattern. The default is the semi-colon (`;`).
+
+### Type
+
+Top-level, must be the child of `<xsl:stylesheet>` or `<xsl:transform>`.
+
+### Defined
+
+XSLT, section 12.3.
+
+### Gecko support
+
+Supported as of 1.0 (Mozilla 1.0, Netscape 7.0).

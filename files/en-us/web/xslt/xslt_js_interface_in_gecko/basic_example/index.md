@@ -4,95 +4,100 @@ slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example
 tags:
   - XSLT
 ---
-<h2 id="Basic_Example">Basic Example</h2>
+## Basic Example
 
-<p>The basic example will load an XML file and apply a XSL transformation on it. These are the same files used in the <a href="/en-US/docs/Web/API/XSLTProcessor/Generating_HTML">Generating HTML</a> example in the <a href="/en-US/docs/Web/API/XSLTProcessor">XSLT in Netscape Gecko</a> article. The XML file describes an article and the XSL file formats the information for display.</p>
+The basic example will load an XML file and apply a XSL transformation on it. These are the same files used in the [Generating HTML](/en-US/docs/Web/API/XSLTProcessor/Generating_HTML) example in the [XSLT in Netscape Gecko](/en-US/docs/Web/API/XSLTProcessor) article. The XML file describes an article and the XSL file formats the information for display.
 
-<p><small><strong>Figure 4 : XML file</strong></small></p>
+**Figure 4 : XML file**
 
-<pre class="brush:xml">&lt;?xml version="1.0"?&gt;
-&lt;myNS:Article xmlns:myNS="http://devedge.netscape.com/2002/de"&gt;
-  &lt;myNS:Title&gt;My Article&lt;/myNS:Title&gt;
-  &lt;myNS:Authors&gt;
-    &lt;myNS:Author company="Foopy Corp."&gt;Mr. Foo&lt;/myNS:Author&gt;
-    &lt;myNS:Author&gt;Mr. Bar&lt;/myNS:Author&gt;
-  &lt;/myNS:Authors&gt;
-  &lt;myNS:Body&gt;
-    The &lt;b&gt;rain&lt;/b&gt; in &lt;u&gt;Spain&lt;/u&gt; stays mainly in the plains.
-  &lt;/myNS:Body&gt;
-&lt;/myNS:Article&gt;</pre>
+```xml
+<?xml version="1.0"?>
+<myNS:Article xmlns:myNS="http://devedge.netscape.com/2002/de">
+  <myNS:Title>My Article</myNS:Title>
+  <myNS:Authors>
+    <myNS:Author company="Foopy Corp.">Mr. Foo</myNS:Author>
+    <myNS:Author>Mr. Bar</myNS:Author>
+  </myNS:Authors>
+  <myNS:Body>
+    The <b>rain</b> in <u>Spain</u> stays mainly in the plains.
+  </myNS:Body>
+</myNS:Article>
+```
 
-<p><small><strong>Figure 5 : XSLT Stylesheet</strong></small></p>
+**Figure 5 : XSLT Stylesheet**
 
-<pre class="brush:xml">&lt;?xml version="1.0"?&gt;
-&lt;xsl:stylesheet version="1.0"
+```xml
+<?xml version="1.0"?>
+<xsl:stylesheet version="1.0"
                    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                   xmlns:myNS="http://devedge.netscape.com/2002/de"&gt;
+                   xmlns:myNS="http://devedge.netscape.com/2002/de">
 
-  &lt;xsl:output method="html" /&gt;
+  <xsl:output method="html" />
 
-  &lt;xsl:template match="/"&gt;
-    &lt;html&gt;
+  <xsl:template match="/">
+    <html>
 
-      &lt;head&gt;
+      <head>
 
-        &lt;title&gt;
-          &lt;xsl:value-of select="/myNS:Article/myNS:Title"/&gt;
-        &lt;/title&gt;
+        <title>
+          <xsl:value-of select="/myNS:Article/myNS:Title"/>
+        </title>
 
-        &lt;style type="text/css"&gt;
+        <style type="text/css">
           .myBox {margin:10px 155px 0 50px; border: 1px dotted #639ACE; padding:0 5px 0 5px;}
-        &lt;/style&gt;
+        </style>
 
-      &lt;/head&gt;
+      </head>
 
-      &lt;body&gt;
-        &lt;p class="myBox"&gt;
-          &lt;span class="title"&gt;
-            &lt;xsl:value-of select="/myNS:Article/myNS:Title"/&gt;
-          &lt;/span&gt; &lt;br /&gt;
+      <body>
+        <p class="myBox">
+          <span class="title">
+            <xsl:value-of select="/myNS:Article/myNS:Title"/>
+          </span> <br />
 
-          Authors:   &lt;br /&gt;
-            &lt;xsl:apply-templates select="/myNS:Article/myNS:Authors/myNS:Author"/&gt;
-          &lt;/p&gt;
+          Authors:   <br />
+            <xsl:apply-templates select="/myNS:Article/myNS:Authors/myNS:Author"/>
+          </p>
 
-        &lt;p class="myBox"&gt;
-          &lt;xsl:apply-templates select="//myNS:Body"/&gt;
-        &lt;/p&gt;
+        <p class="myBox">
+          <xsl:apply-templates select="//myNS:Body"/>
+        </p>
 
-      &lt;/body&gt;
+      </body>
 
-    &lt;/html&gt;
-  &lt;/xsl:template&gt;
+    </html>
+  </xsl:template>
 
-  &lt;xsl:template match="myNS:Author"&gt;
-     --   &lt;xsl:value-of select="." /&gt;
+  <xsl:template match="myNS:Author">
+     --   <xsl:value-of select="." />
 
-    &lt;xsl:if test="@company"&gt;
-     ::   &lt;b&gt;  &lt;xsl:value-of select="@company" /&gt;  &lt;/b&gt;
-    &lt;/xsl:if&gt;
+    <xsl:if test="@company">
+     ::   <b>  <xsl:value-of select="@company" />  </b>
+    </xsl:if>
 
-    &lt;br /&gt;
-  &lt;/xsl:template&gt;
+    <br />
+  </xsl:template>
 
-  &lt;xsl:template match="myNS:Body"&gt;
-    &lt;xsl:copy&gt;
-      &lt;xsl:apply-templates select="@*|node()"/&gt;
-    &lt;/xsl:copy&gt;
-  &lt;/xsl:template&gt;
+  <xsl:template match="myNS:Body">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
+  </xsl:template>
 
-  &lt;xsl:template match="@*|node()"&gt;
-      &lt;xsl:copy&gt;
-        &lt;xsl:apply-templates select="@*|node()"/&gt;
-      &lt;/xsl:copy&gt;
-  &lt;/xsl:template&gt;
-&lt;/xsl:stylesheet&gt;</pre>
+  <xsl:template match="@*|node()">
+      <xsl:copy>
+        <xsl:apply-templates select="@*|node()"/>
+      </xsl:copy>
+  </xsl:template>
+</xsl:stylesheet>
+```
 
-<p>The example loads using synchronous {{domxref("XMLHTTPRequest")}} both the .xsl (<code>xslStylesheet</code>) and the .xml (<code>xmlDoc</code>) files into memory. The .xsl file is then imported (<code>xsltProcessor.importStylesheet(xslStylesheet)</code>) and the transformation run (<code>xsltProcessor.transformToFragment(xmlDoc, document)</code>). This allows fetching of data after the page has been loaded, without initiating a fresh page load.</p>
+The example loads using synchronous {{domxref("XMLHTTPRequest")}} both the .xsl (`xslStylesheet`) and the .xml (`xmlDoc`) files into memory. The .xsl file is then imported (`xsltProcessor.importStylesheet(xslStylesheet)`) and the transformation run (`xsltProcessor.transformToFragment(xmlDoc, document)`). This allows fetching of data after the page has been loaded, without initiating a fresh page load.
 
-<p><small><strong>Figure 6 : Example</strong></small></p>
+**Figure 6 : Example**
 
-<pre class="brush: js">var xslStylesheet;
+```js
+var xslStylesheet;
 var xsltProcessor = new XSLTProcessor();
 var myDOM;
 
@@ -121,4 +126,5 @@ function Init(){
 
   myDOM = fragment;
   document.getElementById("example").appendChild(fragment);
-}</pre>
+}
+```

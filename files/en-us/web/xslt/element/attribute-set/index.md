@@ -1,5 +1,5 @@
 ---
-title: '<xsl:attribute-set>'
+title: <xsl:attribute-set>
 slug: Web/XSLT/Element/attribute-set
 tags:
   - Element
@@ -7,38 +7,34 @@ tags:
   - XSLT
   - attribute-set
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>The <code>&lt;xsl:attribute-set&gt;</code> element creates a named set of attributes, which can then be applied as whole to the output document, in a manner similar to named styles in CSS.</p>
+The `<xsl:attribute-set>` element creates a named set of attributes, which can then be applied as whole to the output document, in a manner similar to named styles in CSS.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre>&lt;xsl:attribute-set name=NAME use-attribute-sets=LIST-OF-NAMES&gt;
-	&lt;xsl:attribute&gt;
-&lt;/xsl:attribute-set&gt;</pre>
+    <xsl:attribute-set name=NAME use-attribute-sets=LIST-OF-NAMES>
+    	<xsl:attribute>
+    </xsl:attribute-set>
 
-<h3 id="Required_Attributes">Required Attributes</h3>
+### Required Attributes
 
-<dl>
- <dt><code>name</code></dt>
- <dd>Specifies the name of the attribute set. The name must be a valid QName.</dd>
-</dl>
+- `name`
+  - : Specifies the name of the attribute set. The name must be a valid QName.
 
-<h3 id="Optional_Attributes">Optional Attributes</h3>
+### Optional Attributes
 
-<dl>
- <dt><code>use-attribute-sets</code></dt>
- <dd>Builds an attribute set from other attribute sets. The names of the contributing sets must be separated with whitespace characters and must not directly or indirectly embed themselves.</dd>
-</dl>
+- `use-attribute-sets`
+  - : Builds an attribute set from other attribute sets. The names of the contributing sets must be separated with whitespace characters and must not directly or indirectly embed themselves.
 
-<h3 id="Type">Type</h3>
+### Type
 
-<p>Top-level, must be the child of <code>&lt;xsl:stylesheet&gt;</code> or <code>&lt;xsl:transform&gt;</code>.</p>
+Top-level, must be the child of `<xsl:stylesheet>` or `<xsl:transform>`.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p>XSLT, section 7.1.4.</p>
+XSLT, section 7.1.4.
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

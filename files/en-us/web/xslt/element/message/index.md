@@ -1,5 +1,5 @@
 ---
-title: '<xsl:message>'
+title: <xsl:message>
 slug: Web/XSLT/Element/message
 tags:
   - Element
@@ -7,35 +7,33 @@ tags:
   - XSLT
   - message
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>The <code>&lt;xsl:message&gt;</code> element outputs a message (to the JavaScript Console in NS) and optionally terminates execution of the stylesheet. It can be useful for debugging.</p>
+The `<xsl:message>` element outputs a message (to the JavaScript Console in NS) and optionally terminates execution of the stylesheet. It can be useful for debugging.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre>&lt;xsl:message terminate="yes" | "no" &gt;
-	TEMPLATE
-&lt;/xsl:message&gt;</pre>
+    <xsl:message terminate="yes" | "no" >
+    	TEMPLATE
+    </xsl:message>
 
-<h3 id="Required_Attributes">Required Attributes</h3>
+### Required Attributes
 
-<p>None.</p>
+None.
 
-<h3 id="Optional_Attributes">Optional Attributes</h3>
+### Optional Attributes
 
-<dl>
- <dt><code>terminate</code></dt>
- <dd>Set to "<code>yes</code>", indicates that execution should be terminated. The default value is "<code>no</code>", in which case the message is output and execution continues.</dd>
-</dl>
+- `terminate`
+  - : Set to "`yes`", indicates that execution should be terminated. The default value is "`no`", in which case the message is output and execution continues.
 
-<h3 id="Type">Type</h3>
+### Type
 
-<p>Instruction, appears within a template.</p>
+Instruction, appears within a template.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p>XSLT, section 13.</p>
+XSLT, section 13.
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

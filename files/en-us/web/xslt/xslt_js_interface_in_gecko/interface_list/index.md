@@ -5,6 +5,6 @@ tags:
   - NeedsContent
   - Reference
 ---
-<h2 id="Interface_List">Interface List</h2>
+## Interface List
 
-<p>See {{domxref("XSLTProcessor")}} in the Web API documentation section.</p>
+See {{domxref("XSLTProcessor")}} in the Web API documentation section.

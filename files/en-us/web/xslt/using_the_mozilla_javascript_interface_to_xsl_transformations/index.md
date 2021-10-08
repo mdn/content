@@ -4,24 +4,24 @@ slug: Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
 tags:
   - XSLT
 ---
-<p>This document describes the JavaScript interface in Mozilla 1.2 and up to the XSLT Processing Engine (TransforMiiX).</p>
+This document describes the JavaScript interface in Mozilla 1.2 and up to the XSLT Processing Engine (TransforMiiX).
 
-<h3 id="Creating_an_XSLTProcessor">Creating an XSLTProcessor</h3>
+### Creating an XSLTProcessor
 
-<p>To start, you need to create an {{domxref("XSLTProcessor")}} object:</p>
+To start, you need to create an {{domxref("XSLTProcessor")}} object:
 
+```js
+var processor = new XSLTProcessor();
+```
 
-<pre class="brush: js">var processor = new XSLTProcessor();</pre>
+### Specifying the stylesheet
 
-<h3 id="Specifying_the_stylesheet">Specifying the stylesheet</h3>
+Before you can use it, you must import a stylesheet with the {{domxref("XSLTProcessor.importStylesheet()")}} method. It has a single parameter, which is the DOM Node of the XSLT stylesheet to import.
 
-<p>Before you can use it, you must import a stylesheet with the {{domxref("XSLTProcessor.importStylesheet()")}} method. It has a single parameter, which is the DOM Node of the XSLT stylesheet to import.</p>
+> **Note:** The import is live, meaning that if you alter the stylesheet DOM after importing it, this will be reflected in the processing. Rather than modifying the DOM it is recommended to use stylesheet parameters which are usually easier and can give better performance.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The import is live, meaning that if you alter the stylesheet DOM after importing it, this will be reflected in the processing. Rather than modifying the DOM it is recommended to use stylesheet parameters which are usually easier and can give better performance.</p>
-</div>
-
-<pre class="brush: js">var testTransform = document.implementation.createDocument("", "test", null);
+```js
+var testTransform = document.implementation.createDocument("", "test", null);
 // just an example to get a transform into a script as a DOM
 // XMLDocument.load is asynchronous, so all processing happens in the
 // onload handler
@@ -30,90 +30,86 @@ testTransform.load("test-transform.xml");
 function onload() {
   processor.importStylesheet(testTransform);
 }
-</pre>
+```
 
-<p>{{domxref("XSLTProcessor.importStylesheet()")}} requires one argument, a DOM Node. If that node is a document node, you can pass in a full XSL Transform or a <a href="https://www.w3.org/TR/xslt#result-element-stylesheet">literal result element transform</a>, otherwise it must be an <code>xsl:stylesheet</code> or <code>xsl:transform</code> element.</p>
+{{domxref("XSLTProcessor.importStylesheet()")}} requires one argument, a DOM Node. If that node is a document node, you can pass in a full XSL Transform or a [literal result element transform](https://www.w3.org/TR/xslt#result-element-stylesheet), otherwise it must be an `xsl:stylesheet` or `xsl:transform` element.
 
-<h3 id="Transforming_the_document">Transforming the document</h3>
+### Transforming the document
 
-<p>You can use the {{domxref("XSLTProcessor.transformToDocument()")}} or {{domxref("XSLTProcessor.transformToFragment()")}} methods to transform a document using the imported XSLT stylesheet.</p>
+You can use the {{domxref("XSLTProcessor.transformToDocument()")}} or {{domxref("XSLTProcessor.transformToFragment()")}} methods to transform a document using the imported XSLT stylesheet.
 
-<h4 id="transformToDocument">transformToDocument</h4>
+#### transformToDocument
 
-<p>{{domxref("XSLTProcessor.transformToDocument()")}} takes one argument, the source node to transform, and returns a new {{domxref("Document")}} with the results of the transformation:</p>
+{{domxref("XSLTProcessor.transformToDocument()")}} takes one argument, the source node to transform, and returns a new {{domxref("Document")}} with the results of the transformation:
 
-<pre class="brush: js">var newDocument = processor.transformToDocument(domToBeTransformed);
-</pre>
+```js
+var newDocument = processor.transformToDocument(domToBeTransformed);
+```
 
-<p>The resultant object depends on the <a href="https://www.w3.org/TR/xslt#output">output method</a> of the stylesheet:</p>
+The resultant object depends on the [output method](https://www.w3.org/TR/xslt#output) of the stylesheet:
 
-<ul>
- <li><strong>html</strong> - {{domxref("HTMLDocument")}}</li>
- <li><strong>xml</strong> - {{domxref("XMLDocument")}}</li>
- <li><strong>text</strong> - {{domxref("XMLDocument")}} with a single root element <code>&lt;transformiix:result&gt;</code> with the text as a child</li>
-</ul>
+- **html** - {{domxref("HTMLDocument")}}
+- **xml** - {{domxref("XMLDocument")}}
+- **text** - {{domxref("XMLDocument")}} with a single root element `<transformiix:result>` with the text as a child
 
-<h4 id="transformToFragment">transformToFragment</h4>
+#### transformToFragment
 
-<p>You can also use {{domxref("XSLTProcessor.transformToFragment()")}} which will return a {{domxref("DocumentFragment")}} node. This is handy because appending a fragment to another node transparently appends all the children of that fragment, and the fragment itself is not merged. Fragments are therefore useful for moving nodes around and storing them without the overhead of a full document object.</p>
+You can also use {{domxref("XSLTProcessor.transformToFragment()")}} which will return a {{domxref("DocumentFragment")}} node. This is handy because appending a fragment to another node transparently appends all the children of that fragment, and the fragment itself is not merged. Fragments are therefore useful for moving nodes around and storing them without the overhead of a full document object.
 
-<p>{{domxref("XSLTProcessor.transformToFragment()")}} takes two arguments: the source document to be transformed (as above) and the {{domxref("Document")}} object that will own the fragment (all fragments must be owned by a document).</p>
+{{domxref("XSLTProcessor.transformToFragment()")}} takes two arguments: the source document to be transformed (as above) and the {{domxref("Document")}} object that will own the fragment (all fragments must be owned by a document).
 
-<pre class="brush: js">var ownerDocument = document.implementation.createDocument("", "test", null);
+```js
+var ownerDocument = document.implementation.createDocument("", "test", null);
 var newFragment = processor.transformToFragment(domToBeTransformed, ownerDocument);
-</pre>
+```
 
-<p>{{domxref("XSLTProcessor.transformToFragment()")}} will only produce HTML DOM objects if the owner document is itself an {{domxref("HTMLDocument")}}, or if the output method of the stylesheet is HTML. It will <strong>not</strong> produce an HTML DOM objects if only the toplevel element of the result is {{HTMLElement("html")}} as {{domxref("XSLTProcessor.transformToFragment()")}} is rarely used to create this element. If you want to override this, you can set the output method normally in the standard way.</p>
+{{domxref("XSLTProcessor.transformToFragment()")}} will only produce HTML DOM objects if the owner document is itself an {{domxref("HTMLDocument")}}, or if the output method of the stylesheet is HTML. It will **not** produce an HTML DOM objects if only the toplevel element of the result is {{HTMLElement("html")}} as {{domxref("XSLTProcessor.transformToFragment()")}} is rarely used to create this element. If you want to override this, you can set the output method normally in the standard way.
 
-<h4 id="transforming_HTML">transforming HTML</h4>
+#### transforming HTML
 
-<p>Unfortunately it is currently not supported to transform HTML nodes using XSLT. Some things work if you use lower case node-names in patterns and expressions, and treat the nodes as if they are in the null namespace, however this is not very well tested so it might not work in all situations. It is also possible that this will change in a future release.</p>
+Unfortunately it is currently not supported to transform HTML nodes using XSLT. Some things work if you use lower case node-names in patterns and expressions, and treat the nodes as if they are in the null namespace, however this is not very well tested so it might not work in all situations. It is also possible that this will change in a future release.
 
-<p>Transforming XHTML should work as expected though.</p>
+Transforming XHTML should work as expected though.
 
-<h3 id="Setting_parameters">Setting parameters</h3>
+### Setting parameters
 
-<p>You can control <a href="https://www.w3.org/TR/xslt#variables">parameters for the stylesheet</a> using the {{domxref("XSLTProcessor.setParameter()")}}, {{domxref("XSLTProcessor.getParameter()")}}, and {{domxref("XSLTProcessor.removeParameter()")}} methods. These all take a namespace URI and a local name as the first two parameters, with {{domxref("XSLTProcessor.setParameter()")}} taking a third - the value of the parameter to be set. See <a href="/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters">The XSLT/JavaScript Interface in Gecko</a> for an example.</p>
+You can control [parameters for the stylesheet](https://www.w3.org/TR/xslt#variables) using the {{domxref("XSLTProcessor.setParameter()")}}, {{domxref("XSLTProcessor.getParameter()")}}, and {{domxref("XSLTProcessor.removeParameter()")}} methods. These all take a namespace URI and a local name as the first two parameters, with {{domxref("XSLTProcessor.setParameter()")}} taking a third - the value of the parameter to be set. See [The XSLT/JavaScript Interface in Gecko](/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters) for an example.
 
-<h3 id="Resetting">Resetting</h3>
+### Resetting
 
-<p>The {{domxref("XSLTProcessor")}} object also implements a {{domxref("XSLTProcessor.reset()")}} method, which can be used to remove all stylesheets and parameters then put the processor back into its initial state. This method is implemented in Gecko 1.3 and later.</p>
+The {{domxref("XSLTProcessor")}} object also implements a {{domxref("XSLTProcessor.reset()")}} method, which can be used to remove all stylesheets and parameters then put the processor back into its initial state. This method is implemented in Gecko 1.3 and later.
 
-<h3 id="Resources">Resources</h3>
+### Resources
 
-<p>The following reflect the interface of the {{domxref("XSLTProcessor")}} object:</p>
+The following reflect the interface of the {{domxref("XSLTProcessor")}} object:
 
-<ul>
- <li>{{ Source("dom/xslt/nsIXSLTProcessor.idl", "nsIXSLTProcessor.idl") }}</li>
- <li>{{ Source("dom/webidl/XSLTProcessor.webidl", "XSLTProcessor.webidl") }}</li>
-</ul>
+- {{ Source("dom/xslt/nsIXSLTProcessor.idl", "nsIXSLTProcessor.idl") }}
+- {{ Source("dom/webidl/XSLTProcessor.webidl", "XSLTProcessor.webidl") }}
 
-<h3 id="Using_XSLTProcessor_from_XPCOM_components">Using XSLTProcessor from XPCOM components</h3>
+### Using XSLTProcessor from XPCOM components
 
-<p>Instantiating an {{domxref("XSLTProcessor")}} from an XPCOM component requires a different syntax as the constructor is not defined inside components.</p>
+Instantiating an {{domxref("XSLTProcessor")}} from an XPCOM component requires a different syntax as the constructor is not defined inside components.
 
-<p>Instead of this:</p>
+Instead of this:
 
-<pre class="brush: js">var processor = new XSLTProcessor();
-</pre>
+```js
+var processor = new XSLTProcessor();
+```
 
-<p>Do this:</p>
+Do this:
 
-<pre class="brush: js">var processor = Components.classes["@mozilla.org/document-transformer;1?type=xslt"]
+```js
+var processor = Components.classes["@mozilla.org/document-transformer;1?type=xslt"]
                           .createInstance(Components.interfaces.nsIXSLTProcessor);
-</pre>
+```
 
-<h3 id="See_also">See also</h3>
+### See also
 
-<ul>
- <li><a href="/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko">The XSLT JavaScript Interface in Gecko</a></li>
- <li><a href="/en-US/docs/Web/API/XMLDocument/load">document.load()</a> regarding the loading of XML documents (as used above)</li>
-</ul>
+- [The XSLT JavaScript Interface in Gecko](/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko)
+- [document.load()](/en-US/docs/Web/API/XMLDocument/load) regarding the loading of XML documents (as used above)
 
-<h3 id="Original_Document_Information">Original Document Information</h3>
+### Original Document Information
 
-<ul>
- <li>Author(s): Mike Hearn</li>
- <li>Last Updated Date: December 21, 2005</li>
- <li>Copyright Information: Copyright (C) Mike Hearn</li>
-</ul>
+- Author(s): Mike Hearn
+- Last Updated Date: December 21, 2005
+- Copyright Information: Copyright (C) Mike Hearn

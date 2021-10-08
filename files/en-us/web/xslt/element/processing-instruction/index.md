@@ -1,5 +1,5 @@
 ---
-title: '<xsl:processing-instruction>'
+title: <xsl:processing-instruction>
 slug: Web/XSLT/Element/processing-instruction
 tags:
   - Element
@@ -7,33 +7,31 @@ tags:
   - XSLT
   - processing-instruction
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>The <code>&lt;xsl:processing-instruction&gt;</code> element writes a processing instruction to the output document.</p>
+The `<xsl:processing-instruction>` element writes a processing instruction to the output document.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<p><code>&lt;xsl:processing-instruction name=NAME&gt; TEMPLATE &lt;/xsl:processing-instruction&gt;</code></p>
+`<xsl:processing-instruction name=NAME> TEMPLATE </xsl:processing-instruction>`
 
-<h3 id="Required_Attributes">Required Attributes</h3>
+### Required Attributes
 
-<dl>
- <dt><code>name</code></dt>
- <dd>Specifies the name of this processing instruction.</dd>
-</dl>
+- `name`
+  - : Specifies the name of this processing instruction.
 
-<h3 id="Optional_Attributes">Optional Attributes</h3>
+### Optional Attributes
 
-<p>None.</p>
+None.
 
-<h3 id="Type">Type</h3>
+### Type
 
-<p>Instruction, appears within a template.</p>
+Instruction, appears within a template.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p>XSLT, section 7.3</p>
+XSLT, section 7.3
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

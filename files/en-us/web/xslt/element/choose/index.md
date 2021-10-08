@@ -1,5 +1,5 @@
 ---
-title: '<xsl:choose>'
+title: <xsl:choose>
 slug: Web/XSLT/Element/choose
 tags:
   - Element
@@ -7,34 +7,34 @@ tags:
   - XSLT
   - choose
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>The <code>&lt;xsl:choose&gt;</code> element defines a choice among a number of alternatives. It behaves like a switch statement in procedural languages.</p>
+The `<xsl:choose>` element defines a choice among a number of alternatives. It behaves like a switch statement in procedural languages.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre>&lt;xsl:choose&gt;
-    &lt;xsl:when test="[whatever to test1]"&gt;&lt;/xsl:when&gt;
-    &lt;xsl:when test="[whatever to test2]"&gt;&lt;/xsl:when&gt;
-    &lt;xsl:otherwise&gt;&lt;/xsl:otherwise&gt; [optional]
-&lt;/xsl:choose&gt;</pre>
+    <xsl:choose>
+        <xsl:when test="[whatever to test1]"></xsl:when>
+        <xsl:when test="[whatever to test2]"></xsl:when>
+        <xsl:otherwise></xsl:otherwise> [optional]
+    </xsl:choose>
 
-<h3 id="Required_Attributes">Required Attributes</h3>
+### Required Attributes
 
-<p>None.</p>
+None.
 
-<h3 id="Optional_Attributes">Optional Attributes</h3>
+### Optional Attributes
 
-<p>None.</p>
+None.
 
-<h3 id="Type">Type</h3>
+### Type
 
-<p>Instruction, appears with a template. It contains one or more <code>&lt;xsl:when&gt;</code> elements, and, optionally, a final <code>&lt;xsl:otherwise&gt;</code> element.</p>
+Instruction, appears with a template. It contains one or more `<xsl:when>` elements, and, optionally, a final `<xsl:otherwise>` element.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p>XSLT, section 9.2.</p>
+XSLT, section 9.2.
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

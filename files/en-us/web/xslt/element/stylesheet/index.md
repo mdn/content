@@ -1,5 +1,5 @@
 ---
-title: '<xsl:stylesheet>'
+title: <xsl:stylesheet>
 slug: Web/XSLT/Element/stylesheet
 tags:
   - Element
@@ -7,86 +7,63 @@ tags:
   - StyleSheet
   - XSLT
 ---
-<div>{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/XSLT")}}</div>
+{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/XSLT")}}
 
-<p>The <code>&lt;xsl:stylesheet&gt;</code> element (or the equivalent <code>&lt;xsl:transform&gt;</code> element) is the outermost element of a stylesheet.</p>
+The `<xsl:stylesheet>` element (or the equivalent `<xsl:transform>` element) is the outermost element of a stylesheet.
 
-<h3 id="Namespace_Declaration">Namespace Declaration</h3>
+### Namespace Declaration
 
-<p>A pseudo-attribute required to identify the document as an XSLT stylesheet. Typically this is <code>xmlns:xsl="http://www.w3.org/1999/XSL/Transform"</code>.</p>
+A pseudo-attribute required to identify the document as an XSLT stylesheet. Typically this is `xmlns:xsl="http://www.w3.org/1999/XSL/Transform"`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: xml">&lt;xsl:stylesheet
+```xml
+<xsl:stylesheet
 	version="NUMBER"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	id="NAME"
 	extension-element-prefixes="LIST-OF-NAMES"
-	exclude-result-prefixes="LIST-OF-NAMES"&gt;
+	exclude-result-prefixes="LIST-OF-NAMES">
 		ENTIRE STYLESHEET
-&lt;/xsl:stylesheet&gt;</pre>
+</xsl:stylesheet>
+```
 
-<h3 id="Required_Attributes">Required Attributes</h3>
+### Required Attributes
 
-<dl>
- <dt><code>version</code></dt>
- <dd>Specifies the version of XSLT required by this stylesheet.</dd>
-</dl>
+- `version`
+  - : Specifies the version of XSLT required by this stylesheet.
 
-<h3 id="Optional_Attributes">Optional Attributes</h3>
+### Optional Attributes
 
-<dl>
- <dt><code>exclude-result-prefixes</code></dt>
- <dd>Specifies any namespace used in this document that should not be sent to the output document. The list is whitespace separated.</dd>
- <dt><code>extension-element-prefixes</code></dt>
- <dd>Specifies a space-separated list of any namespace prefixes for extension elements in this document.</dd>
- <dt><code>default-collation</code></dt>
- <dd>Specifies the default collation used by all {{Glossary("XPath")}} expressions appearing in attributes or text value templates that have the element as an ancestor, unless overridden by another <code>default-collation</code> attribute on an inner element. It also determines the collation used by certain XSLT constructs (such as <code><a href="/en-US/docs/Web/XSLT/Element/key">&lt;xsl:key&gt;</a></code> and <code><a href="/en-US/docs/Web/XSLT/Element/for-each-group">&lt;xsl:for-each-group&gt;</a></code>) within its scope.</dd>
- <dt><code>default-mode</code></dt>
- <dd>Defines the default value for the <code>mode</code> attribute of all <code><a href="/en-US/docs/Web/XSLT/Element/template">&lt;xsl:template&gt;</a></code> and <code><a href="/en-US/docs/Web/XSLT/Element/apply-templates">&lt;xsl:apply-templates&gt;</a></code> elements within its scope.</dd>
- <dt><code>default-validation</code></dt>
- <dd>Defines the default value of the <code>validation</code> attribute of all relevant instructions appearing within its scope.</dd>
- <dt><code>expand-text</code></dt>
- <dd>Determines whether descendant text nodes of the element are treated as text value templates.</dd>
- <dt><code>id</code></dt>
- <dd>Specifies an <code>id</code> for this stylesheet. This is most often used when the stylesheet is embedded in another XML document.</dd>
- <dt><code>input-type-annotations</code></dt>
- <dd>Specifies whether type annotations are stripped from the element so the same results are produced whether the source documents have been validated against a schema or not.</dd>
- <dt><code>use-when</code></dt>
- <dd>Determines whether the element and all the nodes that have it as ancestor are excluded from the stylesheet.</dd>
- <dt><code>xpath-default-namespace</code></dt>
- <dd>Specifies the namespace that will be used if the element name is unprefixed or an unprefixed type name within an XPath expression.</dd>
-</dl>
+- `exclude-result-prefixes`
+  - : Specifies any namespace used in this document that should not be sent to the output document. The list is whitespace separated.
+- `extension-element-prefixes`
+  - : Specifies a space-separated list of any namespace prefixes for extension elements in this document.
+- `default-collation`
+  - : Specifies the default collation used by all {{Glossary("XPath")}} expressions appearing in attributes or text value templates that have the element as an ancestor, unless overridden by another `default-collation` attribute on an inner element. It also determines the collation used by certain XSLT constructs (such as [`<xsl:key>`](/en-US/docs/Web/XSLT/Element/key) and [`<xsl:for-each-group>`](/en-US/docs/Web/XSLT/Element/for-each-group)) within its scope.
+- `default-mode`
+  - : Defines the default value for the `mode` attribute of all [`<xsl:template>`](/en-US/docs/Web/XSLT/Element/template) and [`<xsl:apply-templates>`](/en-US/docs/Web/XSLT/Element/apply-templates) elements within its scope.
+- `default-validation`
+  - : Defines the default value of the `validation` attribute of all relevant instructions appearing within its scope.
+- `expand-text`
+  - : Determines whether descendant text nodes of the element are treated as text value templates.
+- `id`
+  - : Specifies an `id` for this stylesheet. This is most often used when the stylesheet is embedded in another XML document.
+- `input-type-annotations`
+  - : Specifies whether type annotations are stripped from the element so the same results are produced whether the source documents have been validated against a schema or not.
+- `use-when`
+  - : Determines whether the element and all the nodes that have it as ancestor are excluded from the stylesheet.
+- `xpath-default-namespace`
+  - : Specifies the namespace that will be used if the element name is unprefixed or an unprefixed type name within an XPath expression.
 
-<h3 id="Type">Type</h3>
+### Type
 
-<p>Required outermost element of stylesheet.</p>
+Required outermost element of stylesheet.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("XSLT 3.0", "#stylesheet-element", "&lt;xsl:stylesheet&gt;")}}</td>
-   <td>{{Spec2("XSLT 3.0")}}</td>
-   <td>Added the attributes <code>default-mode</code>, <code>expand-text</code>, and <code>use-when</code>.</td>
-  </tr>
-  <tr>
-   <td><a href="https://www.w3.org/TR/xslt20/#stylesheet-element">XSLT 2.0</a></td>
-   <td></td>
-   <td>Added the attributes <code>xpath-default-namespace</code>, <code>default-validation</code>, <code>default-collation</code>, and <code>input-type-annotations</code> and made all attributes except <code>version</code> optional.</td>
-  </tr>
-  <tr>
-   <td><a href="https://www.w3.org/TR/xslt-10/#stylesheet-element">XSLT 1.0</a></td>
-   <td></td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                       | Comment                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName("XSLT 3.0", "#stylesheet-element", "&lt;xsl:stylesheet&gt;")}} | {{Spec2("XSLT 3.0")}} | Added the attributes `default-mode`, `expand-text`, and `use-when`.                                                                                                        |
+| [XSLT 2.0](https://www.w3.org/TR/xslt20/#stylesheet-element)                                     |                              | Added the attributes `xpath-default-namespace`, `default-validation`, `default-collation`, and `input-type-annotations` and made all attributes except `version` optional. |
+| [XSLT 1.0](https://www.w3.org/TR/xslt-10/#stylesheet-element)                                    |                              | Initial definition                                                                                                                                                         |

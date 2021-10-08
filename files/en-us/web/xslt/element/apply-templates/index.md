@@ -1,5 +1,5 @@
 ---
-title: '<xsl:apply-templates>'
+title: <xsl:apply-templates>
 slug: Web/XSLT/Element/apply-templates
 tags:
   - Element
@@ -7,38 +7,36 @@ tags:
   - XSLT
   - apply-templates
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>The <code>&lt;xsl:apply-templates&gt;</code> element selects a set of nodes in the input tree and instructs the processor to apply the proper templates to them.</p>
+The `<xsl:apply-templates>` element selects a set of nodes in the input tree and instructs the processor to apply the proper templates to them.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre>&lt;xsl:apply-templates select=EXPRESSION mode=NAME&gt;
-	&lt;xsl:with-param&gt; [optional]
-	&lt;xsl:sort&gt; [optional]
-&lt;/xsl:apply-templates&gt;</pre>
+    <xsl:apply-templates select=EXPRESSION mode=NAME>
+    	<xsl:with-param> [optional]
+    	<xsl:sort> [optional]
+    </xsl:apply-templates>
 
-<h3 id="Required_Attributes">Required Attributes</h3>
+### Required Attributes
 
-<p>None.</p>
+None.
 
-<h3 id="Optional_Attributes">Optional Attributes</h3>
+### Optional Attributes
 
-<dl>
- <dt><code>select</code></dt>
- <dd>Uses an XPath expression that specifies the nodes to be processed. An asterisk(<code>*</code>) selects the entire node-set. If this attribute is not set, all child nodes of the current node are selected.</dd>
- <dt><code>mode</code></dt>
- <dd>If there are multiple ways of processing defined for the same node, distinguishes among them.</dd>
-</dl>
+- `select`
+  - : Uses an XPath expression that specifies the nodes to be processed. An asterisk(`*`) selects the entire node-set. If this attribute is not set, all child nodes of the current node are selected.
+- `mode`
+  - : If there are multiple ways of processing defined for the same node, distinguishes among them.
 
-<h3 id="Type">Type</h3>
+### Type
 
-<p>Instruction, appears within a template.</p>
+Instruction, appears within a template.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p>XSLT section 5.4.</p>
+XSLT section 5.4.
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

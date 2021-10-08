@@ -1,5 +1,5 @@
 ---
-title: '<xsl:call-template>'
+title: <xsl:call-template>
 slug: Web/XSLT/Element/call-template
 tags:
   - Element
@@ -7,35 +7,33 @@ tags:
   - XSLT
   - call-template
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>The <code>&lt;xsl:call-template&gt;</code> element invokes a named template.</p>
+The `<xsl:call-template>` element invokes a named template.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre>&lt;xsl:call-template name=NAME&gt;
-	&lt;xsl:with-param&gt; [optional]
-&lt;/xsl:call-template&gt; </pre>
+    <xsl:call-template name=NAME>
+    	<xsl:with-param> [optional]
+    </xsl:call-template>
 
-<h3 id="Required_Attribute">Required Attribute</h3>
+### Required Attribute
 
-<dl>
- <dt><code>name</code></dt>
- <dd>Specifies the name of the template you wish to invoke.</dd>
-</dl>
+- `name`
+  - : Specifies the name of the template you wish to invoke.
 
-<h3 id="Optional_Attributes">Optional Attributes</h3>
+### Optional Attributes
 
-<p>None.</p>
+None.
 
-<h3 id="Type">Type</h3>
+### Type
 
-<p>Instruction, appears within a template.</p>
+Instruction, appears within a template.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p>XSLT, section 6.</p>
+XSLT, section 6.
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

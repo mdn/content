@@ -1,5 +1,5 @@
 ---
-title: '<xsl:number>'
+title: <xsl:number>
 slug: Web/XSLT/Element/number
 tags:
   - Element
@@ -7,82 +7,80 @@ tags:
   - Reference
   - XSLT
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>The <code>&lt;xsl:number&gt;</code> element counts things sequentially. It can also be used to quickly format a number.</p>
+The `<xsl:number>` element counts things sequentially. It can also be used to quickly format a number.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre>&lt;xsl:number
-	count=EXPRESSION
-	level="single" | "multiple" | "any"
-	from=EXPRESSION
-	value=EXPRESSION
-	format=FORMAT-STRING
-	lang=XML:LANG-CODE
-	letter-value="alphabetic" | "traditional"
-	grouping-separator=CHARACTER
-	grouping-size=NUMBER  /&gt;</pre>
+    <xsl:number
+    	count=EXPRESSION
+    	level="single" | "multiple" | "any"
+    	from=EXPRESSION
+    	value=EXPRESSION
+    	format=FORMAT-STRING
+    	lang=XML:LANG-CODE
+    	letter-value="alphabetic" | "traditional"
+    	grouping-separator=CHARACTER
+    	grouping-size=NUMBER  />
 
-<h3 id="Required_Attributes">Required Attributes</h3>
+### Required Attributes
 
-<p>None.</p>
+None.
 
-<h3 id="Optional_Attributes">Optional Attributes</h3>
+### Optional Attributes
 
-<dl>
- <dt><code>count</code></dt>
- <dd>Specifies what in the source tree should be numbered sequentially. It uses an XPath expression.</dd>
- <dt><code>level</code></dt>
- <dd>Defines how levels of the source tree should be considered in generating sequential numbers. It has three valid values: <code>single</code>, <code>multiple</code>, and <code>any</code>. The default value is <code>single</code>:
-  <dl>
-  <dt><code>single</code></dt>
-  <dd>Numbers sibling nodes sequentially, as in the items in a list. The processor goes to the first node in the <a href="/en-US/docs/Web/XPath/Axes/ancestor-or-self"><code>ancestor-or-self</code></a> axis that matches the <code>count</code> attribute and then counts that node plus all its preceding siblings (stopping when it reaches a match to the <code>from</code> attribute, if there is one) that also match the <code>count</code> attribute.If no match is found, the sequence will be an empty list.</dd>
-  <dt><code>multiple</code></dt>
-  <dd>Numbers nodes as a composite sequence that reflects the hierarchic position of the node, e.g. 1.2.2.5. (The nested format can be specified with the <code>format</code> attribute, e.g. A.1.1). The processor looks at all <a href="/en-US/docs/Web/XPath/Axes/ancestor"><code>ancestors</code></a> of the current node and the current node itself, stopping when it reaches a match for the <code>from</code> attribute, if there is one. For each node in this list that matches the <code>count</code> attribute, the processor counts how many preceding matching siblings it has, and adds one for the node itself. If no match is found, the sequence will be an empty list.</dd>
-  <dt><code>any</code> (Not supported at this time.)</dt>
-  <dd>Numbers all matching nodes, regardless of level, sequentially. The <a href="/en-US/docs/Web/XPath/Axes/ancestor"><code>ancestor</code></a>, <a href="/en-US/docs/Web/XPath/Axes/self"><code>self</code></a>, and <a href="/en-US/docs/Web/XPath/Axes/preceding"><code>preceding</code></a> axes are all considered. The processor starts at the current node and proceeds in reverse document order, stopping if it reaches a match to any <code>from</code> attribute. If no match to the <code>count</code> attribute is found, the sequence will be an empty list. This level is not supported at this time.</dd>
-  </dl>
- </dd>
- <dt>from</dt>
- <dd>Specifies where the numbering should start or start over. The sequence begins with the first descendant of the node that matches the <code>from</code> attribute.</dd>
- <dt>value</dt>
- <dd>Applies a given format to a number. This is a quick way to format a user-supplied number (as opposed to a node sequence number) in any of the standard <code>&lt;xsl:number&gt;</code> formats.</dd>
- <dt>format</dt>
- <dd>Defines the format of the generated number:
- <dl>
-  <dt>format="1"</dt>
-  <dd>1 2 3 . . . (This is the only format supported at this time)</dd>
-  <dt>format="01"</dt>
-  <dd>01 02 03 . . . 09 10 11 . . .</dd>
-  <dt>format="a"</dt>
-  <dd>a b c . . .y z aa ab . . .</dd>
-  <dt>format="A"</dt>
-  <dd>A B C . . . Y Z AA AB . . .</dd>
-  <dt>format="i"</dt>
-  <dd>i ii iii iv v . . .</dd>
-  <dt>format="I"</dt>
-  <dd>I II III IV V . . .</dd>
- </dl>
- </dd>
- <dt>lang (Not supported at this time.)</dt>
- <dd>Specifies which language's alphabet should be used in letter-based numbering formats.</dd>
- <dt>letter-value</dt>
- <dd>Disambiguates between numbering sequences that use letters. Some languages have more than one numbering system that use letters. If both systems begin with the same token, ambiguity can arise. This attribute can have the value "<code>alphabetic</code>" or "<code>traditional</code>". The default is "<code>alphabetic</code>".</dd>
- <dt>grouping-separator</dt>
- <dd>Specifies what character should be used as the group (e.g. thousands) separator. The default is the comma (<code>,</code>).</dd>
- <dt>grouping-size</dt>
- <dd>Indicates the number of digits that make up a numeric group. The default value is "<code>3</code>".</dd>
-</dl>
+- `count`
+  - : Specifies what in the source tree should be numbered sequentially. It uses an XPath expression.
+- `level`
 
-<h3 id="Type">Type</h3>
+  - : Defines how levels of the source tree should be considered in generating sequential numbers. It has three valid values: `single`, `multiple`, and `any`. The default value is `single`:
 
-<p>Instruction, appears within a template.</p>
+    - `single`
+      - : Numbers sibling nodes sequentially, as in the items in a list. The processor goes to the first node in the [`ancestor-or-self`](/en-US/docs/Web/XPath/Axes/ancestor-or-self) axis that matches the `count` attribute and then counts that node plus all its preceding siblings (stopping when it reaches a match to the `from` attribute, if there is one) that also match the `count` attribute.If no match is found, the sequence will be an empty list.
+    - `multiple`
+      - : Numbers nodes as a composite sequence that reflects the hierarchic position of the node, e.g. 1.2.2.5. (The nested format can be specified with the `format` attribute, e.g. A.1.1). The processor looks at all [`ancestors`](/en-US/docs/Web/XPath/Axes/ancestor) of the current node and the current node itself, stopping when it reaches a match for the `from` attribute, if there is one. For each node in this list that matches the `count` attribute, the processor counts how many preceding matching siblings it has, and adds one for the node itself. If no match is found, the sequence will be an empty list.
+    - `any` (Not supported at this time.)
+      - : Numbers all matching nodes, regardless of level, sequentially. The [`ancestor`](/en-US/docs/Web/XPath/Axes/ancestor), [`self`](/en-US/docs/Web/XPath/Axes/self), and [`preceding`](/en-US/docs/Web/XPath/Axes/preceding) axes are all considered. The processor starts at the current node and proceeds in reverse document order, stopping if it reaches a match to any `from` attribute. If no match to the `count` attribute is found, the sequence will be an empty list. This level is not supported at this time.
 
-<h3 id="Defined">Defined</h3>
+- from
+  - : Specifies where the numbering should start or start over. The sequence begins with the first descendant of the node that matches the `from` attribute.
+- value
+  - : Applies a given format to a number. This is a quick way to format a user-supplied number (as opposed to a node sequence number) in any of the standard `<xsl:number>` formats.
+- format
 
-<p>XSLT, section 7.7</p>
+  - : Defines the format of the generated number:
 
-<h3 id="Gecko_support">Gecko support</h3>
+    - format="1"
+      - : 1 2 3 . . . (This is the only format supported at this time)
+    - format="01"
+      - : 01 02 03 . . . 09 10 11 . . .
+    - format="a"
+      - : a b c . . .y z aa ab . . .
+    - format="A"
+      - : A B C . . . Y Z AA AB . . .
+    - format="i"
+      - : i ii iii iv v . . .
+    - format="I"
+      - : I II III IV V . . .
 
-<p>Partial support. See comments above.</p>
+- lang (Not supported at this time.)
+  - : Specifies which language's alphabet should be used in letter-based numbering formats.
+- letter-value
+  - : Disambiguates between numbering sequences that use letters. Some languages have more than one numbering system that use letters. If both systems begin with the same token, ambiguity can arise. This attribute can have the value "`alphabetic`" or "`traditional`". The default is "`alphabetic`".
+- grouping-separator
+  - : Specifies what character should be used as the group (e.g. thousands) separator. The default is the comma (`,`).
+- grouping-size
+  - : Indicates the number of digits that make up a numeric group. The default value is "`3`".
+
+### Type
+
+Instruction, appears within a template.
+
+### Defined
+
+XSLT, section 7.7
+
+### Gecko support
+
+Partial support. See comments above.

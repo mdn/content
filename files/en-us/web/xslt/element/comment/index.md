@@ -1,5 +1,5 @@
 ---
-title: '<xsl:comment>'
+title: <xsl:comment>
 slug: Web/XSLT/Element/comment
 tags:
   - Comment
@@ -7,32 +7,32 @@ tags:
   - Reference
   - XSLT
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>The <code>&lt;xsl:comment&gt;</code> element writes a comment to the output document. It must include only text.</p>
+The `<xsl:comment>` element writes a comment to the output document. It must include only text.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre>&lt;xsl:comment&gt;
-	TEMPLATE
-&lt;/xsl:comment&gt; </pre>
+    <xsl:comment>
+    	TEMPLATE
+    </xsl:comment>
 
-<h3 id="Required_Attributes">Required Attributes</h3>
+### Required Attributes
 
-<p>None.</p>
+None.
 
-<h3 id="Optional_Attributes">Optional Attributes</h3>
+### Optional Attributes
 
-<p>None.</p>
+None.
 
-<h3 id="Type">Type</h3>
+### Type
 
-<p>Instruction, appears within a template.</p>
+Instruction, appears within a template.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p>XSLT, section 7.4.</p>
+XSLT, section 7.4.
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

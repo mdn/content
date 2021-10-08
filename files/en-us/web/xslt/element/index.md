@@ -7,58 +7,56 @@ tags:
   - Reference
   - XSLT
 ---
-<div>{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/XSLT")}}</div>
+{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/XSLT")}}
 
-<p>There are two types of elements discussed here: top-level elements and instructions. A top-level element must appear as the child of either <code>&lt;xsl:stylesheet&gt;</code> or <code>&lt;xsl:transform&gt;</code>. An instruction, on the other hand, is associated with a template. A stylesheet may include several templates. A third type of element, not discussed here, is the literal result element (LRE). An LRE also appears in a template. It consists of any non-instruction element that should be copied as-is to the result document, for example, an <code>&lt;hr&gt;</code> element in an HTML conversion stylesheet.</p>
+There are two types of elements discussed here: top-level elements and instructions. A top-level element must appear as the child of either `<xsl:stylesheet>` or `<xsl:transform>`. An instruction, on the other hand, is associated with a template. A stylesheet may include several templates. A third type of element, not discussed here, is the literal result element (LRE). An LRE also appears in a template. It consists of any non-instruction element that should be copied as-is to the result document, for example, an `<hr>` element in an HTML conversion stylesheet.
 
-<p>On a related note, any attribute in an LRE and some attributes of a limited number of XSLT elements can also include what is known as an attribute value template. An attribute value template is a string that includes an embedded XPath expression which is used to specify the value of an attribute. At run-time the expression is evaluated and the result of the evaluation is substituted for the XPath expression. For example, assume that a variable "<code>image-dir</code>" is defined as follows:</p>
+On a related note, any attribute in an LRE and some attributes of a limited number of XSLT elements can also include what is known as an attribute value template. An attribute value template is a string that includes an embedded XPath expression which is used to specify the value of an attribute. At run-time the expression is evaluated and the result of the evaluation is substituted for the XPath expression. For example, assume that a variable "`image-dir`" is defined as follows:
 
-<pre>&lt;xsl:variable name="image-dir"&gt;/images&lt;/xsl:variable&gt;</pre>
+    <xsl:variable name="image-dir">/images</xsl:variable>
 
-<p>The expression to be evaluated is placed inside curly brackets:</p>
+The expression to be evaluated is placed inside curly brackets:
 
-<pre>&lt;img src="{$image-dir}/mygraphic.jpg"/&gt;</pre>
+    <img src="{$image-dir}/mygraphic.jpg"/>
 
-<p>This would result in the following:</p>
+This would result in the following:
 
-<pre>&lt;img src="/images/mygraphic.jpg"/&gt;</pre>
+    <img src="/images/mygraphic.jpg"/>
 
-<p>The element annotations that follow include a description, a syntax listing, a list of required and optional attributes, a description of type and position, its source in the W3C Recommendation and an explanation of the degree of present Gecko support.</p>
+The element annotations that follow include a description, a syntax listing, a list of required and optional attributes, a description of type and position, its source in the W3C Recommendation and an explanation of the degree of present Gecko support.
 
-<ul>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/apply-imports">&lt;xsl:apply-imports&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/apply-templates">&lt;xsl:apply-templates&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/attribute">&lt;xsl:attribute&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/attribute-set">&lt;xsl:attribute-set&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/call-template">&lt;xsl:call-template&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/choose">&lt;xsl:choose&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/comment">&lt;xsl:comment&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/copy">&lt;xsl:copy&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/copy-of">&lt;xsl:copy-of&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/decimal-format">&lt;xsl:decimal-format&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/element">&lt;xsl:element&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/fallback">&lt;xsl:fallback&gt;</a></code> <em>(not supported)</em></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/for-each">&lt;xsl:for-each&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/if">&lt;xsl:if&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/import">&lt;xsl:import&gt;</a></code> <em>(mostly supported)</em></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/include">&lt;xsl:include&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/key">&lt;xsl:key&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/message">&lt;xsl:message&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/namespace-alias">&lt;xsl:namespace-alias&gt;</a></code> <em>(not supported)</em></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/number">&lt;xsl:number&gt;</a></code> <em>(partially supported)</em></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/otherwise">&lt;xsl:otherwise&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/output">&lt;xsl:output&gt;</a></code> <em>(partially supported)</em></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/param">&lt;xsl:param&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/preserve-space">&lt;xsl:preserve-space&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/processing-instruction">&lt;xsl:processing-instruction&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/sort">&lt;xsl:sort&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/strip-space">&lt;xsl:strip-space&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/stylesheet">&lt;xsl:stylesheet&gt;</a></code> <em>(partially supported)</em></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/template">&lt;xsl:template&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/text">&lt;xsl:text&gt;</a></code> <em>(partially supported)</em></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/transform">&lt;xsl:transform&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/value-of">&lt;xsl:value-of&gt;</a></code> <em>(partially supported)</em></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/variable">&lt;xsl:variable&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/when">&lt;xsl:when&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/XSLT/Element/with-param">&lt;xsl:with-param&gt;</a></code></li>
-</ul>
+- [`<xsl:apply-imports>`](/en-US/docs/Web/XSLT/Element/apply-imports)
+- [`<xsl:apply-templates>`](/en-US/docs/Web/XSLT/Element/apply-templates)
+- [`<xsl:attribute>`](/en-US/docs/Web/XSLT/Element/attribute)
+- [`<xsl:attribute-set>`](/en-US/docs/Web/XSLT/Element/attribute-set)
+- [`<xsl:call-template>`](/en-US/docs/Web/XSLT/Element/call-template)
+- [`<xsl:choose>`](/en-US/docs/Web/XSLT/Element/choose)
+- [`<xsl:comment>`](/en-US/docs/Web/XSLT/Element/comment)
+- [`<xsl:copy>`](/en-US/docs/Web/XSLT/Element/copy)
+- [`<xsl:copy-of>`](/en-US/docs/Web/XSLT/Element/copy-of)
+- [`<xsl:decimal-format>`](/en-US/docs/Web/XSLT/Element/decimal-format)
+- [`<xsl:element>`](/en-US/docs/Web/XSLT/Element/element)
+- [`<xsl:fallback>`](/en-US/docs/Web/XSLT/Element/fallback) _(not supported)_
+- [`<xsl:for-each>`](/en-US/docs/Web/XSLT/Element/for-each)
+- [`<xsl:if>`](/en-US/docs/Web/XSLT/Element/if)
+- [`<xsl:import>`](/en-US/docs/Web/XSLT/Element/import) _(mostly supported)_
+- [`<xsl:include>`](/en-US/docs/Web/XSLT/Element/include)
+- [`<xsl:key>`](/en-US/docs/Web/XSLT/Element/key)
+- [`<xsl:message>`](/en-US/docs/Web/XSLT/Element/message)
+- [`<xsl:namespace-alias>`](/en-US/docs/Web/XSLT/Element/namespace-alias) _(not supported)_
+- [`<xsl:number>`](/en-US/docs/Web/XSLT/Element/number) _(partially supported)_
+- [`<xsl:otherwise>`](/en-US/docs/Web/XSLT/Element/otherwise)
+- [`<xsl:output>`](/en-US/docs/Web/XSLT/Element/output) _(partially supported)_
+- [`<xsl:param>`](/en-US/docs/Web/XSLT/Element/param)
+- [`<xsl:preserve-space>`](/en-US/docs/Web/XSLT/Element/preserve-space)
+- [`<xsl:processing-instruction>`](/en-US/docs/Web/XSLT/Element/processing-instruction)
+- [`<xsl:sort>`](/en-US/docs/Web/XSLT/Element/sort)
+- [`<xsl:strip-space>`](/en-US/docs/Web/XSLT/Element/strip-space)
+- [`<xsl:stylesheet>`](/en-US/docs/Web/XSLT/Element/stylesheet) _(partially supported)_
+- [`<xsl:template>`](/en-US/docs/Web/XSLT/Element/template)
+- [`<xsl:text>`](/en-US/docs/Web/XSLT/Element/text) _(partially supported)_
+- [`<xsl:transform>`](/en-US/docs/Web/XSLT/Element/transform)
+- [`<xsl:value-of>`](/en-US/docs/Web/XSLT/Element/value-of) _(partially supported)_
+- [`<xsl:variable>`](/en-US/docs/Web/XSLT/Element/variable)
+- [`<xsl:when>`](/en-US/docs/Web/XSLT/Element/when)
+- [`<xsl:with-param>`](/en-US/docs/Web/XSLT/Element/with-param)

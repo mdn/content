@@ -1,5 +1,5 @@
 ---
-title: '<xsl:fallback>'
+title: <xsl:fallback>
 slug: Web/XSLT/Element/fallback
 tags:
   - Element
@@ -7,32 +7,32 @@ tags:
   - XSLT
   - fallback
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>The <code>&lt;xsl:fallback&gt;</code> element specifies what template to use if a given extension (or, eventually, newer version) element is not supported.</p>
+The `<xsl:fallback>` element specifies what template to use if a given extension (or, eventually, newer version) element is not supported.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre>&lt;xsl:fallback&gt;
-	TEMPLATE
-&lt;/xsl:fallback&gt;</pre>
+    <xsl:fallback>
+    	TEMPLATE
+    </xsl:fallback>
 
-<h3 id="Required_Attributes">Required Attributes</h3>
+### Required Attributes
 
-<p>None.</p>
+None.
 
-<h3 id="Optional_Attributes">Optional Attributes</h3>
+### Optional Attributes
 
-<p>None.</p>
+None.
 
-<h3 id="Type">Type</h3>
+### Type
 
-<p>Instruction, appears within a template.</p>
+Instruction, appears within a template.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p>XSLT, section 15</p>
+XSLT, section 15
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Not supported at this time.</p>
+Not supported at this time.

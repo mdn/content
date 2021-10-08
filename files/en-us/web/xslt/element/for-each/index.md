@@ -1,5 +1,5 @@
 ---
-title: '<xsl:for-each>'
+title: <xsl:for-each>
 slug: Web/XSLT/Element/for-each
 tags:
   - Element
@@ -8,36 +8,34 @@ tags:
   - for
   - for-each
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>The <code>&lt;xsl:for-each&gt;</code> element selects a set of nodes and processes each of them in the same way. It is often used to iterate through a set of nodes or to change the current node. If one or more <code>&lt;xsl:sort&gt;</code> elements appear as the children of this element, sorting occurs before processing. Otherwise, nodes are processed in document order.</p>
+The `<xsl:for-each>` element selects a set of nodes and processes each of them in the same way. It is often used to iterate through a set of nodes or to change the current node. If one or more `<xsl:sort>` elements appear as the children of this element, sorting occurs before processing. Otherwise, nodes are processed in document order.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre>&lt;xsl:for-each select=EXPRESSION&gt;
-	&lt;xsl:sort&gt; [optional]
-	TEMPLATE
-&lt;/xsl:for-each&gt;</pre>
+    <xsl:for-each select=EXPRESSION>
+    	<xsl:sort> [optional]
+    	TEMPLATE
+    </xsl:for-each>
 
-<h3 id="Required_Attributes">Required Attributes</h3>
+### Required Attributes
 
-<dl>
- <dt><code>select</code></dt>
- <dd>Uses an XPath expression to select nodes to be processed.</dd>
-</dl>
+- `select`
+  - : Uses an XPath expression to select nodes to be processed.
 
-<h3 id="Optional_Attributes">Optional Attributes</h3>
+### Optional Attributes
 
-<p>None.</p>
+None.
 
-<h3 id="Type">Type</h3>
+### Type
 
-<p>Instruction, appears within a template.</p>
+Instruction, appears within a template.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p>XSLT, section 8.</p>
+XSLT, section 8.
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

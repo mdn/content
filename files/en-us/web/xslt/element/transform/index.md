@@ -1,5 +1,5 @@
 ---
-title: '<xsl:transform>'
+title: <xsl:transform>
 slug: Web/XSLT/Element/transform
 tags:
   - Element
@@ -7,10 +7,10 @@ tags:
   - XSLT
   - transform
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>The <code>&lt;xsl:transform&gt;</code> element is exactly equivalent to the <code><a href="/en-US/docs/Web/XSLT/Element/stylesheet">&lt;xsl:stylesheet&gt;</a></code> element.</p>
+The `<xsl:transform>` element is exactly equivalent to the [`<xsl:stylesheet>`](/en-US/docs/Web/XSLT/Element/stylesheet) element.
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.
