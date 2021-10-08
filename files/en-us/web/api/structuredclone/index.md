@@ -27,7 +27,7 @@ structuredClone(value, { transfer })
   - : The value to be cloned.
     This can be any [structured-clonable type](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 - `transfer` {{optional_inline}}
-  - : A sequence of objects that are [transferred](/en-US/docs/Web/API/Transferable) with value.
+  - : A sequence of objects that are {{Glossary("Transferable objects","transferred")}} with value.
     The ownership of these objects is transfered from the input value to the cloned value that is returned.
 
 ### Return value
