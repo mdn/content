@@ -11,66 +11,73 @@ tags:
   - Tutorial
   - movement
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
 
-<p>This is the <strong>2nd step</strong> out of 10 of the <a href="/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript">Gamedev Canvas tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html">Gamedev-Canvas-workshop/lesson2.html</a>.</p>
+This is the **2nd step** out of 10 of the [Gamedev Canvas tutorial](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). You can find the source code as it should look after completing this lesson at [Gamedev-Canvas-workshop/lesson2.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html).
 
-<p>You already know how to draw a ball from working through the previous article, so now let's make it move. Technically, we will be painting the ball on the screen, clearing it and then painting it again in a slightly different position every frame to make the impression of movement — just like how movement works with the movies.</p>
+You already know how to draw a ball from working through the previous article, so now let's make it move. Technically, we will be painting the ball on the screen, clearing it and then painting it again in a slightly different position every frame to make the impression of movement — just like how movement works with the movies.
 
-<h2 id="Defining_a_drawing_loop">Defining a drawing loop</h2>
+## Defining a drawing loop
 
-<p>To keep constantly updating the canvas drawing on each frame, we need to define a drawing function that will run over and over again, with a different set of variable values each time to change sprite positions, etc. You can run a function over and over again using a JavaScript timing function such as {{domxref("setInterval()")}} or {{domxref("window.requestAnimationFrame()", "requestAnimationFrame()")}}.</p>
+To keep constantly updating the canvas drawing on each frame, we need to define a drawing function that will run over and over again, with a different set of variable values each time to change sprite positions, etc. You can run a function over and over again using a JavaScript timing function such as {{domxref("setInterval()")}} or {{domxref("window.requestAnimationFrame()", "requestAnimationFrame()")}}.
 
-<p>Delete all the JavaScript you currently have inside your HTML file except for the first two lines, and add the following below them. The <code>draw()</code> function will be executed within <code>setInterval</code> every 10 milliseconds:</p>
+Delete all the JavaScript you currently have inside your HTML file except for the first two lines, and add the following below them. The `draw()` function will be executed within `setInterval` every 10 milliseconds:
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
     // drawing code
 }
-setInterval(draw, 10);</pre>
+setInterval(draw, 10);
+```
 
-<p>Thanks to the infinite nature of <code>setInterval</code> the <code>draw()</code> function will be called every 10 milliseconds forever, or until we stop it. Now, let's draw the ball — add the following inside your <code>draw()</code> function:</p>
+Thanks to the infinite nature of `setInterval` the `draw()` function will be called every 10 milliseconds forever, or until we stop it. Now, let's draw the ball — add the following inside your `draw()` function:
 
-<pre class="brush: js">ctx.beginPath();
+```js
+ctx.beginPath();
 ctx.arc(50, 50, 10, 0, Math.PI*2);
 ctx.fillStyle = "#0095DD";
 ctx.fill();
 ctx.closePath();
-</pre>
+```
 
-<p>Try your updated code now — the ball should be repainted on every frame.</p>
+Try your updated code now — the ball should be repainted on every frame.
 
-<h2 id="Making_it_move">Making it move</h2>
+## Making it move
 
-<p>You won't notice the ball being repainted constantly at the moment, as it's not moving. Let's change that. First, instead of a hardcoded position at (50,50) we will define a starting point at the bottom center part of the Canvas in variables called <code>x</code> and <code>y</code>, then use those to define the position the circle is drawn at.</p>
+You won't notice the ball being repainted constantly at the moment, as it's not moving. Let's change that. First, instead of a hardcoded position at (50,50) we will define a starting point at the bottom center part of the Canvas in variables called `x` and `y`, then use those to define the position the circle is drawn at.
 
-<p>First, add the following two lines above your <code>draw()</code> function, to define <code>x</code> and <code>y</code>:</p>
+First, add the following two lines above your `draw()` function, to define `x` and `y`:
 
-<pre class="brush: js">var x = canvas.width/2;
+```js
+var x = canvas.width/2;
 var y = canvas.height-30;
-</pre>
+```
 
-<p>Next update the <code>draw()</code> function to use the x and y variables in the {{domxref("CanvasRenderingContext2D.arc()","arc()")}} method, as shown in the following highlighted line:</p>
+Next update the `draw()` function to use the x and y variables in the {{domxref("CanvasRenderingContext2D.arc()","arc()")}} method, as shown in the following highlighted line:
 
-<pre class="brush: js highlight:[3]">function draw() {
+```js
+function draw() {
     ctx.beginPath();
     ctx.arc(x, y, 10, 0, Math.PI*2);
     ctx.fillStyle = "#0095DD";
     ctx.fill();
     ctx.closePath();
 }
-</pre>
+```
 
-<p>Now comes the important part: we want to add a small value to <code>x</code> and <code>y</code> after every frame has been drawn to make it appear that the ball is moving. Let's define these small values as <code>dx</code> and <code>dy</code> and set their values to 2 and -2 respectively. Add the following below your x and y variable definitions:</p>
+Now comes the important part: we want to add a small value to `x` and `y` after every frame has been drawn to make it appear that the ball is moving. Let's define these small values as `dx` and `dy` and set their values to 2 and -2 respectively. Add the following below your x and y variable definitions:
 
-<pre class="brush: js">var dx = 2;
+```js
+var dx = 2;
 var dy = -2;
-</pre>
+```
 
-<p>The last thing to do is to update <code>x</code> and <code>y</code> with our <code>dx</code> and <code>dy</code> variable on every frame, so the ball will be painted in the new position on every update. Add the following two new lines indicated below to your <code>draw()</code> function:</p>
+The last thing to do is to update `x` and `y` with our `dx` and `dy` variable on every frame, so the ball will be painted in the new position on every update. Add the following two new lines indicated below to your `draw()` function:
 
-<pre class="brush: js highlight:[7,8]">function draw() {
+```js
+function draw() {
     ctx.beginPath();
     ctx.arc(x, y, 10, 0, Math.PI*2);
     ctx.fillStyle = "#0095DD";
@@ -78,19 +85,21 @@ var dy = -2;
     ctx.closePath();
     x += dx;
     y += dy;
-}</pre>
+}
+```
 
-<p>Save your code again and try it in your browser. This works ok, although it appears that the ball is leaving a trail behind it:</p>
+Save your code again and try it in your browser. This works ok, although it appears that the ball is leaving a trail behind it:
 
-<p><img alt="" src="ball-trail.png"></p>
+![](ball-trail.png)
 
-<h2 id="Clearing_the_canvas_before_each_frame">Clearing the canvas before each frame</h2>
+## Clearing the canvas before each frame
 
-<p>The ball is leaving a trail because we're painting a new circle on every frame without removing the previous one. Don't worry, because there's a method to clear canvas content: {{domxref("CanvasRenderingContext2D.clearRect()","clearRect()")}}. This method takes four parameters: the x and y coordinates of the top left corner of a rectangle, and the x and y coordinates of the bottom right corner of a rectangle. The whole area covered by this rectangle will be cleared of any content previously painted there.</p>
+The ball is leaving a trail because we're painting a new circle on every frame without removing the previous one. Don't worry, because there's a method to clear canvas content: {{domxref("CanvasRenderingContext2D.clearRect()","clearRect()")}}. This method takes four parameters: the x and y coordinates of the top left corner of a rectangle, and the x and y coordinates of the bottom right corner of a rectangle. The whole area covered by this rectangle will be cleared of any content previously painted there.
 
-<p>Add the following highlighted new line to the <code>draw()</code> function:</p>
+Add the following highlighted new line to the `draw()` function:
 
-<pre class="brush: js highlight:[2]">function draw() {
+```js
+function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.beginPath();
     ctx.arc(x, y, 10, 0, Math.PI*2);
@@ -100,17 +109,18 @@ var dy = -2;
     x += dx;
     y += dy;
 }
-</pre>
+```
 
-<p>Save your code and try again, and this time you'll see the ball move without a trail. Every 10 milliseconds the canvas is cleared, the blue circle (our ball) will be drawn on a given position and the <code>x</code> and <code>y</code> values will be updated for the next frame.</p>
+Save your code and try again, and this time you'll see the ball move without a trail. Every 10 milliseconds the canvas is cleared, the blue circle (our ball) will be drawn on a given position and the `x` and `y` values will be updated for the next frame.
 
-<h2 id="Cleaning_up_our_code">Cleaning up our code</h2>
+## Cleaning up our code
 
-<p>We will be adding more and more commands to the <code>draw()</code> function in the next few articles, so it's good to keep it as simple and clean as possible. Let's start by moving the ball drawing code to a separate function.</p>
+We will be adding more and more commands to the `draw()` function in the next few articles, so it's good to keep it as simple and clean as possible. Let's start by moving the ball drawing code to a separate function.
 
-<p>Replace the existing draw() function with the following two functions:</p>
+Replace the existing draw() function with the following two functions:
 
-<pre class="brush: js">function drawBall() {
+```js
+function drawBall() {
     ctx.beginPath();
     ctx.arc(x, y, 10, 0, Math.PI*2);
     ctx.fillStyle = "#0095DD";
@@ -123,20 +133,19 @@ function draw() {
     drawBall();
     x += dx;
     y += dy;
-}</pre>
+}
+```
 
-<h2 id="Compare_your_code">Compare your code</h2>
+## Compare your code
 
-<p>You can check the finished code for this article for yourself in the live demo below, and play with it to understand better how it works:</p>
+You can check the finished code for this article for yourself in the live demo below, and play with it to understand better how it works:
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/3x5foxb1/","","395")}}</p>
+{{JSFiddleEmbed("https://jsfiddle.net/end3r/3x5foxb1/","","395")}}
 
-<div class="note">
-<p><strong>Note:</strong> Try changing the speed of the moving ball, or the direction it moves in.</p>
-</div>
+> **Note:** Try changing the speed of the moving ball, or the direction it moves in.
 
-<h2 id="Next_steps">Next steps</h2>
+## Next steps
 
-<p>We've drawn our ball and gotten it moving, but it keeps disappearing off the edge of the canvas. In the third chapter we'll explore how to make it <a href="/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls">bounce off the walls</a>.</p>
+We've drawn our ball and gotten it moving, but it keeps disappearing off the edge of the canvas. In the third chapter we'll explore how to make it [bounce off the walls](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls).
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}

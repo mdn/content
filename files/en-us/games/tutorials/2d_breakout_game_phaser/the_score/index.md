@@ -11,63 +11,64 @@ tags:
   - Tutorial
   - scoring
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Collision_detection", "Games/Workflows/2D_Breakout_game_Phaser/Win_the_game")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Collision_detection", "Games/Workflows/2D_Breakout_game_Phaser/Win_the_game")}}
 
-<p>This is the <strong>11th step</strong> out of 16 of the <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser">Gamedev Phaser tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson11.html">Gamedev-Phaser-Content-Kit/demos/lesson11.html</a>.</p>
+This is the **11th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). You can find the source code as it should look after completing this lesson at [Gamedev-Phaser-Content-Kit/demos/lesson11.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson11.html).
 
-<p>Having a score can also make the game more interesting — you can try to beat your own highscore, or your friend's. In this article we'll add a scoring system to our game.</p>
+Having a score can also make the game more interesting — you can try to beat your own highscore, or your friend's. In this article we'll add a scoring system to our game.
 
-<p>We will use a separate variable for storing the score and Phaser's <code>text()</code> method to print it out onto the screen.</p>
+We will use a separate variable for storing the score and Phaser's `text()` method to print it out onto the screen.
 
-<h2 id="New_variables">New variables</h2>
+## New variables
 
-<p>Add two new variables right after the previously defined ones:</p>
+Add two new variables right after the previously defined ones:
 
-<pre class="brush: js">// ...
+```js
+// ...
 var scoreText;
 var score = 0;
-</pre>
+```
 
-<h2 id="Adding_score_text_to_the_game_display">Adding score text to the game display</h2>
+## Adding score text to the game display
 
-<p>Now add this line at the end of the <code>create()</code> function:</p>
+Now add this line at the end of the `create()` function:
 
-<pre class="brush: js">scoreText = game.add.text(5, 5, 'Points: 0', { font: '18px Arial', fill: '#0095DD' });
-</pre>
+```js
+scoreText = game.add.text(5, 5, 'Points: 0', { font: '18px Arial', fill: '#0095DD' });
+```
 
-<p>The <code>text()</code> method can take four parameters:</p>
+The `text()` method can take four parameters:
 
-<ul>
- <li>The x and y coordinates to draw the text at.</li>
- <li>The actual text that will be rendered.</li>
- <li>The font style to render the text with.</li>
-</ul>
+- The x and y coordinates to draw the text at.
+- The actual text that will be rendered.
+- The font style to render the text with.
 
-<p>The last parameter looks very similar to CSS styling. In our case the score text will be blue, sized at 18 pixels, and use the Arial font.</p>
+The last parameter looks very similar to CSS styling. In our case the score text will be blue, sized at 18 pixels, and use the Arial font.
 
-<h2 id="Updating_the_score_when_bricks_are_destroyed">Updating the score when bricks are destroyed</h2>
+## Updating the score when bricks are destroyed
 
-<p>We will increase the number of points every time the ball hits a brick and update the <code>scoreText</code> to display the current score. This can be done using the <code>setText()</code> method — add the two new lines seen below to the <code>ballHitBrick()</code> function:</p>
+We will increase the number of points every time the ball hits a brick and update the `scoreText` to display the current score. This can be done using the `setText()` method — add the two new lines seen below to the `ballHitBrick()` function:
 
-<pre class="brush: js">function ballHitBrick(ball, brick) {
+```js
+function ballHitBrick(ball, brick) {
     brick.kill();
     score += 10;
     scoreText.setText('Points: '+score);
 }
-</pre>
+```
 
-<p>That's it for now — reload your <code>index.html</code> and check that the score updates on every brick hit.</p>
+That's it for now — reload your `index.html` and check that the score updates on every brick hit.
 
-<h2 id="Compare_your_code">Compare your code</h2>
+## Compare your code
 
-<p>You can check the finished code for this lesson in the live demo below, and play with it to understand better how it works:</p>
+You can check the finished code for this lesson in the live demo below, and play with it to understand better how it works:
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/n8o6rhrf/","","400")}}</p>
+{{JSFiddleEmbed("https://jsfiddle.net/end3r/n8o6rhrf/","","400")}}
 
-<h2 id="Next_steps">Next steps</h2>
+## Next steps
 
-<p>We now have a scoring system, but what's the point of playing and keeping score if you can't win? Let's see how we can add a victory state, allowing us to <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Win_the_game">win the game</a>.</p>
+We now have a scoring system, but what's the point of playing and keeping score if you can't win? Let's see how we can add a victory state, allowing us to [win the game](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Win_the_game).
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Collision_detection", "Games/Workflows/2D_Breakout_game_Phaser/Win_the_game")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Collision_detection", "Games/Workflows/2D_Breakout_game_Phaser/Win_the_game")}}

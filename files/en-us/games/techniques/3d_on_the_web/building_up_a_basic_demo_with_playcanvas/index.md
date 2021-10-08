@@ -14,40 +14,36 @@ tags:
   - lighting
   - rendering
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p><strong>PlayCanvas</strong> is a popular 3D WebGL game engine, originally created by Will Eastcott and Dave Evans. It is <a href="https://github.com/playcanvas/engine">open sourced on GitHub</a>, with an <a href="https://developer.playcanvas.com/en/user-manual/designer/">editor</a> available online and good <a href="https://developer.playcanvas.com/en/">documentation</a>. The online editor is free for public projects with up to two team members, but there are also <a href="https://playcanvas.com/plans">paid plans</a> if you'd like to run a commercial private project with more developers.</p>
+**PlayCanvas** is a popular 3D WebGL game engine, originally created by Will Eastcott and Dave Evans. It is [open sourced on GitHub](https://github.com/playcanvas/engine), with an [editor](https://developer.playcanvas.com/en/user-manual/designer/) available online and good [documentation](https://developer.playcanvas.com/en/). The online editor is free for public projects with up to two team members, but there are also [paid plans](https://playcanvas.com/plans) if you'd like to run a commercial private project with more developers.
 
-<p><img alt="PlayCanvas website." src="playcanvas-cover.png"></p>
+![PlayCanvas website.](playcanvas-cover.png)
 
-<h2 id="Games_and_demos">Games and demos</h2>
+## Games and demos
 
-<p>PlayCanvas has a few well-known demos published that showcase its possibilities.</p>
+PlayCanvas has a few well-known demos published that showcase its possibilities.
 
-<ul>
- <li><a href="https://playcanv.as/p/aP0oxhUr">Tanx</a> is a multiplayer tank game where you can drive your tank around, shooting at other players as you go.</li>
- <li><a href="https://playcanv.as/p/JtL2iqIH">Swooop</a> is a flying game where you pilot your plane around a magical island, collecting jewels and fuel as you go.</li>
- <li>Visualizations like the <a href="https://playcanv.as/b/FQbBsJTd">Star Lord</a> and <a href="https://playcanv.as/p/RqJJ9oU9">BMW i8</a> also take advantage of the engine and showcase what's possible.</li>
-</ul>
+- [Tanx](https://playcanv.as/p/aP0oxhUr) is a multiplayer tank game where you can drive your tank around, shooting at other players as you go.
+- [Swooop](https://playcanv.as/p/JtL2iqIH) is a flying game where you pilot your plane around a magical island, collecting jewels and fuel as you go.
+- Visualizations like the [Star Lord](https://playcanv.as/b/FQbBsJTd) and [BMW i8](https://playcanv.as/p/RqJJ9oU9) also take advantage of the engine and showcase what's possible.
 
-<p><img alt="A list of PlayCanvas demos: Tanx, Swooop, Star Lord, BMW i8." src="playcanvas-demos.png"></p>
+![A list of PlayCanvas demos: Tanx, Swooop, Star Lord, BMW i8.](playcanvas-demos.png)
 
-<div class="note">
-<p><strong>Note:</strong> Check out the list of <a href="https://playcanvas.com/explore">featured demos</a> to find more examples.</p>
-</div>
+> **Note:** Check out the list of [featured demos](https://playcanvas.com/explore) to find more examples.
 
-<h2 id="Engine_vs_editor">Engine vs editor</h2>
+## Engine vs editor
 
-<p>The engine itself can be used as a standard library by including its JavaScript file directly in your HTML, so you can start coding right away; in addition the PlayCanvas toolset comes with an online editor that you can use to drag and drop components onto the scene — a great way to create games and other apps requiring scenes if you're more of a designer than a coder. Those approaches are different but work equally well regarding achieving end goals.</p>
+The engine itself can be used as a standard library by including its JavaScript file directly in your HTML, so you can start coding right away; in addition the PlayCanvas toolset comes with an online editor that you can use to drag and drop components onto the scene — a great way to create games and other apps requiring scenes if you're more of a designer than a coder. Those approaches are different but work equally well regarding achieving end goals.
 
-<h2 id="PlayCanvas_engine">PlayCanvas engine</h2>
+## PlayCanvas engine
 
-<p>Built for modern browsers, PlayCanvas is a fully-featured 3D game engine with resource loading, an entity and component system, advanced graphics manipulation, collision and physics engine (built with <a href="https://github.com/kripken/ammo.js/">ammo.js</a>), audio, and facilities to handle control inputs from various devices (including gamepads). That's quite an impressive list of features — let's see some in action, check out the <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/engine">Building up a basic demo with PlayCanvas engine</a> for details.</p>
+Built for modern browsers, PlayCanvas is a fully-featured 3D game engine with resource loading, an entity and component system, advanced graphics manipulation, collision and physics engine (built with [ammo.js](https://github.com/kripken/ammo.js/)), audio, and facilities to handle control inputs from various devices (including gamepads). That's quite an impressive list of features — let's see some in action, check out the [Building up a basic demo with PlayCanvas engine](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/engine) for details.
 
-<h2 id="PlayCanvas_editor">PlayCanvas editor</h2>
+## PlayCanvas editor
 
-<p>Instead of coding everything from the beginning you can also use the online editor. This can be a more pleasant working environment if you are not someone who likes to code. See the <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/editor">Building up a basic demo with PlayCanvas editor</a> for details.</p>
+Instead of coding everything from the beginning you can also use the online editor. This can be a more pleasant working environment if you are not someone who likes to code. See the [Building up a basic demo with PlayCanvas editor](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/editor) for details.
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>Of course, it depends on your approach — designers may favor the online editor while programmers will prefer having the full control over the coding environment and will probably use the engine's source files. The good thing is that you have a choice and can pick whatever tools suit you best.</p>
+Of course, it depends on your approach — designers may favor the online editor while programmers will prefer having the full control over the coding environment and will probably use the engine's source files. The good thing is that you have a choice and can pick whatever tools suit you best.

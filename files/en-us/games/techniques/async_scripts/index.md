@@ -7,45 +7,55 @@ tags:
   - asm.js
   - async
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p>Every medium or large game should compile <a href="/en-US/docs/Games/Tools/asm.js">asm.js</a> code as part of an async script to give the browser the maximum flexibility to optimize the compilation process. In Gecko, async compilation allows the JavaScript engine to compile the asm.js off the main thread when the game is loading and cache the generated machine code so that the game doesn't need to be compiled on subsequent loads (starting in Firefox 28). To see the difference, toggle <code>javascript.options.parallel_parsing</code> in <code>about:config</code>.</p>
+Every medium or large game should compile [asm.js](/en-US/docs/Games/Tools/asm.js) code as part of an async script to give the browser the maximum flexibility to optimize the compilation process. In Gecko, async compilation allows the JavaScript engine to compile the asm.js off the main thread when the game is loading and cache the generated machine code so that the game doesn't need to be compiled on subsequent loads (starting in Firefox 28). To see the difference, toggle `javascript.options.parallel_parsing` in `about:config`.
 
-<h2 id="Putting_async_into_action">Putting async into action</h2>
+## Putting async into action
 
-<p>Getting async compilation is easy: when writing your JavaScript, just use the <code>async</code> attribute like so:</p>
+Getting async compilation is easy: when writing your JavaScript, just use the `async` attribute like so:
 
-<pre class="brush: js">&lt;script async src="file.js"&gt;&lt;/script&gt;</pre>
+```js
+<script async src="file.js"></script>
+```
 
-<p>or, to do the same thing via script:</p>
+or, to do the same thing via script:
 
-<pre class="brush: js">var script = document.createElement('script');
+```js
+var script = document.createElement('script');
 script.src = "file.js";
-document.body.appendChild(script);</pre>
+document.body.appendChild(script);
+```
 
-<p>(Scripts created from script default to <code>async</code>.) The default HTML shell Emscripten generates produces the latter.</p>
+(Scripts created from script default to `async`.) The default HTML shell Emscripten generates produces the latter.
 
-<h2 id="When_is_async_not_async">When is async not async?</h2>
+## When is async not async?
 
-<p>Two common situations in which a script is *not* async (as <a href="https://www.w3.org/TR/html5/scripting-1.html">defined by the HTML spec</a>) are:</p>
+Two common situations in which a script is \*not\* async (as [defined by the HTML spec](https://www.w3.org/TR/html5/scripting-1.html)) are:
 
-<pre class="brush: js">&lt;script async&gt;code&lt;/script&gt;</pre>
+```js
+<script async>code</script>
+```
 
-<p>and</p>
+and
 
-<pre class="brush: js">var script = document.createElement('script');
+```js
+var script = document.createElement('script');
 script.textContent = "code";
-document.body.appendChild(script);</pre>
+document.body.appendChild(script);
+```
 
-<p>Both are counted as 'inline' scripts and get compiled and then run immediately.</p>
+Both are counted as 'inline' scripts and get compiled and then run immediately.
 
-<p>What if your code is in a JS string? Instead of using <code>eval</code> or <code>innerHTML</code>, both of which trigger synchronous compilation, you should use a Blob with an object URL:</p>
+What if your code is in a JS string? Instead of using `eval` or `innerHTML`, both of which trigger synchronous compilation, you should use a Blob with an object URL:
 
-<pre class="brush: js">var blob = new Blob([codeString]);
+```js
+var blob = new Blob([codeString]);
 var script = document.createElement('script');
 var url = URL.createObjectURL(blob);
 script.onload = script.onerror = function() { URL.revokeObjectURL(url); };
 script.src = url;
-document.body.appendChild(script);</pre>
+document.body.appendChild(script);
+```
 
-<p>The setting of <code>src</code> rather than <code>innerHTML</code> is what makes this script async.</p>
+The setting of `src` rather than `innerHTML` is what makes this script async.

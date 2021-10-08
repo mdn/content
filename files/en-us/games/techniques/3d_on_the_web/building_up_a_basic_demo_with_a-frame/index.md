@@ -9,158 +9,175 @@ tags:
   - Web
   - WebGL
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p>The <a href="/en-US/docs/Games/Techniques/3D_on_the_web/WebVR">WebVR</a> and <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> APIs already enable us to start creating virtual reality (VR) experiences inside web browsers, but the community is still waiting for tools and libraries to appear, to make this easier. Mozilla's <a href="https://aframe.io/">A-Frame</a> framework provides a markup language allowing us to build 3D VR landscapes using a system familiar to web developers, which follows game development coding principles; this is useful for quickly and successfully building prototypes and demos, without having to write a lot of JavaScript or GLSL. This article explains how to get up and running with A-Frame, and how to use it to build up a simple demo.</p>
+The [WebVR](/en-US/docs/Games/Techniques/3D_on_the_web/WebVR) and [WebGL](/en-US/docs/Web/API/WebGL_API) APIs already enable us to start creating virtual reality (VR) experiences inside web browsers, but the community is still waiting for tools and libraries to appear, to make this easier. Mozilla's [A-Frame](https://aframe.io/) framework provides a markup language allowing us to build 3D VR landscapes using a system familiar to web developers, which follows game development coding principles; this is useful for quickly and successfully building prototypes and demos, without having to write a lot of JavaScript or GLSL. This article explains how to get up and running with A-Frame, and how to use it to build up a simple demo.
 
-<h2 id="High_level_overview">High level overview</h2>
+## High level overview
 
-<p>The current version of A-Frame is 0.3.2, which means it's highly experimental, but it already works and you can test it right away in the browser. It runs on desktop, mobile (iOS and Android), and Oculus Rift, Gear VR and HTC Vive.</p>
+The current version of A-Frame is 0.3.2, which means it's highly experimental, but it already works and you can test it right away in the browser. It runs on desktop, mobile (iOS and Android), and Oculus Rift, Gear VR and HTC Vive.
 
-<p>A-Frame is built on top of <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a>, and provides pre built components to use in applications — models, video players, skyboxes, geometries, controls, animations, cursors, etc. It is based on the <a href="https://en.wikipedia.org/wiki/Entity_component_system">entity component system</a>, which is known in the game development world, but it targets web developers with a familiar markup structure, manipulable with JavaScript. The end result is 3D web experiences, which are VR-enabled by default.</p>
+A-Frame is built on top of [WebGL](/en-US/docs/Web/API/WebGL_API), and provides pre built components to use in applications — models, video players, skyboxes, geometries, controls, animations, cursors, etc. It is based on the [entity component system](https://en.wikipedia.org/wiki/Entity_component_system), which is known in the game development world, but it targets web developers with a familiar markup structure, manipulable with JavaScript. The end result is 3D web experiences, which are VR-enabled by default.
 
-<h2 id="Environment_setup">Environment setup</h2>
+## Environment setup
 
-<p>Let's start by setting up an environment to create something with A-Frame. We'll then build up a demo and run it. You should start off by:</p>
+Let's start by setting up an environment to create something with A-Frame. We'll then build up a demo and run it. You should start off by:
 
-<ul>
- <li>Making sure you are using a modern browser with good WebGL support (and WebVR support if you have available VR hardware) such as the latest Firefox or Chrome — download <a href="https://nightly.mozilla.org/">Firefox Nightly</a> or Chrome (v54 or higher).</li>
- <li>(Optional) set up a VR device such as Oculus Rift or Google Cardboard.</li>
- <li>Create a new directory to store your project in.</li>
- <li>Save a copy of the latest <a href="https://github.com/aframevr/aframe/tree/master/dist">A-Frame JavaScript library file</a> inside your directory (check the GitHub repository for latest stable a dev builds).</li>
- <li>Open the <a href="https://aframe.io/docs/">A-Frame documentation</a> in a separate tab — it is useful to refer to.</li>
-</ul>
+- Making sure you are using a modern browser with good WebGL support (and WebVR support if you have available VR hardware) such as the latest Firefox or Chrome — download [Firefox Nightly](https://nightly.mozilla.org/) or Chrome (v54 or higher).
+- (Optional) set up a VR device such as Oculus Rift or Google Cardboard.
+- Create a new directory to store your project in.
+- Save a copy of the latest [A-Frame JavaScript library file](https://github.com/aframevr/aframe/tree/master/dist) inside your directory (check the GitHub repository for latest stable a dev builds).
+- Open the [A-Frame documentation](https://aframe.io/docs/) in a separate tab — it is useful to refer to.
 
-<h2 id="HTML_structure">HTML structure</h2>
+## HTML structure
 
-<p>The first step is to create an HTML document — inside your project directory, create a new <code>index.html</code> file, and save the follow HTML inside it:</p>
+The first step is to create an HTML document — inside your project directory, create a new `index.html` file, and save the follow HTML inside it:
 
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;MDN Games: A-Frame demo&lt;/title&gt;
-  &lt;script src="aframe.min.js"&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-	&lt;!-- HTML goes here --&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+```html
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MDN Games: A-Frame demo</title>
+  <script src="aframe.min.js"></script>
+</head>
+<body>
+	<!-- HTML goes here -->
+</body>
+</html>
+```
 
-<p>This contains some basic information like the document <code>charset</code> and {{htmlelement("title")}}. The {{htmlelement("script")}} element includes the A-Frame framework in the page; we will write our example code inside the {{htmlelement("body")}} element.</p>
+This contains some basic information like the document `charset` and {{htmlelement("title")}}. The {{htmlelement("script")}} element includes the A-Frame framework in the page; we will write our example code inside the {{htmlelement("body")}} element.
 
-<h3 id="Initializing_the_scene">Initializing the scene</h3>
+### Initializing the scene
 
-<p>A scene is the place where everything happens. When creating new objects in the demo, we will be adding them all to the scene to make them visible on the screen. In A-Frame, the scene is represented by a <a href="https://aframe.io/docs/core/scene.html">Scene entity</a>.</p>
+A scene is the place where everything happens. When creating new objects in the demo, we will be adding them all to the scene to make them visible on the screen. In A-Frame, the scene is represented by a [Scene entity](https://aframe.io/docs/core/scene.html).
 
-<div class="note">
-<p><strong>Note:</strong> An Entity is any element — it can be an object like a box, cylinder or cone, but it can also be a camera, light or sound source.</p>
-</div>
+> **Note:** An Entity is any element — it can be an object like a box, cylinder or cone, but it can also be a camera, light or sound source.
 
-<p>Let's create the scene by adding an <code>&lt;a-scene&gt;</code> element inside the <code>&lt;body&gt;</code> element:</p>
+Let's create the scene by adding an `<a-scene>` element inside the `<body>` element:
 
-<pre class="brush: html">&lt;a-scene&gt;
-&lt;/a-scene&gt;
-</pre>
+```html
+<a-scene>
+</a-scene>
+```
 
-<h3 id="Adding_a_cube">Adding a cube</h3>
+### Adding a cube
 
-<p>Adding the cube to the scene is done by adding a simple <code><a href="https://aframe.io/docs/primitives/a-box.html">&lt;a-box&gt;</a></code> element inside the <code>&lt;a-scene&gt;</code> element. Add it now:</p>
+Adding the cube to the scene is done by adding a simple [`<a-box>`](https://aframe.io/docs/primitives/a-box.html) element inside the `<a-scene>` element. Add it now:
 
-<pre class="brush: html">&lt;a-box
+```html
+<a-box
   color="#0095DD"
   position="0 1 0"
-  rotation="20 40 0"&gt;
-&lt;/a-box&gt;
-</pre>
+  rotation="20 40 0">
+</a-box>
+```
 
-<p>It contains a few parameters already defined: <code>color</code>, <code>position</code> and <code>rotation</code> — these are fairly obvious, and define the base color of the cube, the position inside the 3D scene, and the rotation of the cube.</p>
+It contains a few parameters already defined: `color`, `position` and `rotation` — these are fairly obvious, and define the base color of the cube, the position inside the 3D scene, and the rotation of the cube.
 
-<div class="note">
-<p><strong>Note:</strong> The distance values (e.g. for the cube y position) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.</p>
-</div>
+> **Note:** The distance values (e.g. for the cube y position) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.
 
-<h3 id="Adding_a_background_Sky_box">Adding a background: Sky box</h3>
+### Adding a background: Sky box
 
-<p>A sky box is a background for the 3D world, represented by an <code><a href="https://aframe.io/docs/primitives/a-sky.html">&lt;a-sky&gt;</a></code> element. In our case we will use a simple color, but it could also be an image, etc. Looking around would give an impression of being inside an open sky, a wooden barn — wherever you like! Add the following HTML before the <code>&lt;a-cube&gt;</code> element:</p>
+A sky box is a background for the 3D world, represented by an [`<a-sky>`](https://aframe.io/docs/primitives/a-sky.html) element. In our case we will use a simple color, but it could also be an image, etc. Looking around would give an impression of being inside an open sky, a wooden barn — wherever you like! Add the following HTML before the `<a-cube>` element:
 
-<pre class="brush: html">&lt;a-sky color="#DDDDDD"&gt;&lt;/a-sky&gt;
-</pre>
+```html
+<a-sky color="#DDDDDD"></a-sky>
+```
 
-<p>At this point, if you save the code and refresh your browser you can already see the cube on the screen with our custom background:</p>
+At this point, if you save the code and refresh your browser you can already see the cube on the screen with our custom background:
 
-<p><img alt="" src="cube.png"></p>
+![](cube.png)
 
-<p>Here's the code we have created so far:</p>
+Here's the code we have created so far:
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/m85148b4/","","350")}}</p>
+{{JSFiddleEmbed("https://jsfiddle.net/end3r/m85148b4/","","350")}}
 
-<p>You can also <a href="https://github.com/end3r/MDN-Games-3D/blob/gh-pages/A-Frame/cube.html">check it out on GitHub</a>.</p>
+You can also [check it out on GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/A-Frame/cube.html).
 
-<p>A-Frame takes care of setting up everything you need:</p>
+A-Frame takes care of setting up everything you need:
 
-<ul>
- <li>A default light source and camera are included, so the cube is visible.</li>
- <li>The controls are already working: you can use the mouse for looking around and the keyboard for movement (try the <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd>, and <kbd>D</kbd> keys.)</li>
- <li>There's even an "Enter VR mode" button in the bottom right corner of the screen, to allow you to shift to full screen, stereoscopic image viewing if you have the necessary VR hardware set up and ready.</li>
-</ul>
+- A default light source and camera are included, so the cube is visible.
+- The controls are already working: you can use the mouse for looking around and the keyboard for movement (try the
 
-<h3 id="Specifying_a_camera">Specifying a camera</h3>
+  <kbd>W</kbd>
 
-<p>A camera entity can be created by adding an <code><a href="https://aframe.io/docs/primitives/a-camera.html">&lt;a-camera&gt;</a></code> element to the scene. We can set the position of the camera explicitly and move it back a little bit from the center of the scene, so we'll be able to see the shapes. Add this just before the closing <code>&lt;/a-scene&gt;</code> element:</p>
+  ,
 
-<pre class="brush: html">&lt;a-camera
+  <kbd>A</kbd>
+
+  ,
+
+  <kbd>S</kbd>
+
+  , and
+
+  <kbd>D</kbd>
+
+  keys.)
+
+- There's even an "Enter VR mode" button in the bottom right corner of the screen, to allow you to shift to full screen, stereoscopic image viewing if you have the necessary VR hardware set up and ready.
+
+### Specifying a camera
+
+A camera entity can be created by adding an [`<a-camera>`](https://aframe.io/docs/primitives/a-camera.html) element to the scene. We can set the position of the camera explicitly and move it back a little bit from the center of the scene, so we'll be able to see the shapes. Add this just before the closing `</a-scene>` element:
+
+```html
+<a-camera
   position="0 1 4"
   cursor-visible="true"
   cursor-scale="2"
   cursor-color="#0095DD"
-  cursor-opacity="0.5"&gt;
-&lt;/a-camera&gt;
-</pre>
+  cursor-opacity="0.5">
+</a-camera>
+```
 
-<p>We've also defined a cursor for the given camera, using the <code>cursor-*</code> attributes (by default it is invisible.) — we've set its scale so it will more easily visible, its color, and some opacity so it won't completely covering the objects behind it.</p>
+We've also defined a cursor for the given camera, using the `cursor-*` attributes (by default it is invisible.) — we've set its scale so it will more easily visible, its color, and some opacity so it won't completely covering the objects behind it.
 
-<h3 id="Adding_lights">Adding lights</h3>
+### Adding lights
 
-<p>The basic light types in A-Frame are directional and ambient. The first type is a directional light placed somewhere on the scene while the second one reflects the light from the first type, so it looks more natural; this can be set globally. Add the new code below your previous additions — this uses the standard <code>&lt;a-light&gt;</code> element:</p>
+The basic light types in A-Frame are directional and ambient. The first type is a directional light placed somewhere on the scene while the second one reflects the light from the first type, so it looks more natural; this can be set globally. Add the new code below your previous additions — this uses the standard `<a-light>` element:
 
-<pre class="brush: html">&lt;a-light
+```html
+<a-light
   type="directional"
   color="#FFF"
   intensity="0.5"
-  position="-1 1 2"&gt;
-&lt;/a-light&gt;
-&lt;a-light
+  position="-1 1 2">
+</a-light>
+<a-light
   type="ambient"
-  color="#FFF"&gt;
-&lt;/a-light&gt;
-</pre>
+  color="#FFF">
+</a-light>
+```
 
-<p>The directional light has a white color, its intensity is set to <code>0.5</code>, and it is placed at position <code>-1 1 2</code>. The ambient light only needs a color, which is also white.</p>
+The directional light has a white color, its intensity is set to `0.5`, and it is placed at position `-1 1 2`. The ambient light only needs a color, which is also white.
 
-<h3 id="Adding_some_advanced_geometry">Adding some advanced geometry</h3>
+### Adding some advanced geometry
 
-<p>We have a cube on the scene already; now let's try adding more shapes. We are not limited to the default entities like <code>&lt;a-cube&gt;</code> — using <code>&lt;a-entity&gt;</code> we can create custom advanced shapes. Let's try adding a torus — add this element below the previous code:</p>
+We have a cube on the scene already; now let's try adding more shapes. We are not limited to the default entities like `<a-cube>` — using `<a-entity>` we can create custom advanced shapes. Let's try adding a torus — add this element below the previous code:
 
-<pre class="brush: html">&lt;a-entity
+```html
+<a-entity
   geometry="
     primitive: torus;
     radius: 1;
     radiusTubular: 0.1;
     segmentsTubular: 12;"
   rotation="10 0 0"
-  position="-3 1 0"&gt;
-&lt;/a-entity&gt;
-</pre>
+  position="-3 1 0">
+</a-entity>
+```
 
-<p>Our entity has a <a href="https://aframe.io/docs/components/geometry.html#Torus">torus primitive</a>, which represents its shape. We are passing some initial variables to that shape: the radius of the outer edge of the torus, the radius of the tube, and number of segments along the circumference of the tube face respectively. Rotation and position are set in the same way as we saw earlier.</p>
+Our entity has a [torus primitive](https://aframe.io/docs/components/geometry.html#Torus), which represents its shape. We are passing some initial variables to that shape: the radius of the outer edge of the torus, the radius of the tube, and number of segments along the circumference of the tube face respectively. Rotation and position are set in the same way as we saw earlier.
 
-<h3 id="Defining_a_material">Defining a material</h3>
+### Defining a material
 
-<p>The torus is now visible on the scene, but its color doesn't look very good — this is because we have to create a <a href="https://aframe.io/docs/components/material.html">material</a> to define the appearance of the entity. Edit the <code>&lt;a-entity&gt;</code> defining the torus to look like the following:</p>
+The torus is now visible on the scene, but its color doesn't look very good — this is because we have to create a [material](https://aframe.io/docs/components/material.html) to define the appearance of the entity. Edit the `<a-entity>` defining the torus to look like the following:
 
-<pre class="brush: html">&lt;a-entity
+```html
+<a-entity
   geometry="
     primitive: torus;
     radius: 1;
@@ -171,62 +188,65 @@ tags:
     roughness: 0.1;
     metalness: 0.5;"
   rotation="10 0 0"
-  position="-3 1 0"&gt;
-&lt;/a-entity&gt;
-</pre>
+  position="-3 1 0">
+</a-entity>
+```
 
-<p>In the new <code>material</code> attribute, we set up the <code>color</code> of the material, then its <code>roughness</code> (a rougher material will scatter reflected light in more directions than a smooth material) and <code>metalness</code> (how metallic the material is).</p>
+In the new `material` attribute, we set up the `color` of the material, then its `roughness` (a rougher material will scatter reflected light in more directions than a smooth material) and `metalness` (how metallic the material is).
 
-<h2 id="Adding_some_JavaScript_to_the_mix">Adding some JavaScript to the mix</h2>
+## Adding some JavaScript to the mix
 
-<p>It is possible to populate the scene with entities created using JavaScript too, so let's use it to add a third shape, a cylinder. Add a new {{htmlelement("script")}} element at the end of the <code>&lt;body&gt;</code> element, just after the <code>&lt;a-scene&gt;</code> element, then add the following JavaScript code inside it:</p>
+It is possible to populate the scene with entities created using JavaScript too, so let's use it to add a third shape, a cylinder. Add a new {{htmlelement("script")}} element at the end of the `<body>` element, just after the `<a-scene>` element, then add the following JavaScript code inside it:
 
-<pre class="brush: js">var scene = document.querySelector('a-scene');
+```js
+var scene = document.querySelector('a-scene');
 var cylinder = document.createElement('a-cylinder');
 cylinder.setAttribute('color', '#FF9500');
 cylinder.setAttribute('height', '2');
 cylinder.setAttribute('radius', '0.75');
 cylinder.setAttribute('position', '3 1 0');
 scene.appendChild(cylinder);
-</pre>
+```
 
-<p>We're getting a reference to the scene handler first, then we create the cylinder element as an A-Frame entity. After that it's all about setting the proper attributes: <code>color</code>, <code>height</code>, <code>radius</code> and <code>position</code>. The last line adds the newly created cylinder to the scene. That's it — you've created three different shapes with A-Frame! Here's how it looks right now:</p>
+We're getting a reference to the scene handler first, then we create the cylinder element as an A-Frame entity. After that it's all about setting the proper attributes: `color`, `height`, `radius` and `position`. The last line adds the newly created cylinder to the scene. That's it — you've created three different shapes with A-Frame! Here's how it looks right now:
 
-<p><img alt="" src="shapes.png"></p>
+![](shapes.png)
 
-<p>It is impressive to be able to create such a scene with just a few lines of HTML and JavaScript.</p>
+It is impressive to be able to create such a scene with just a few lines of HTML and JavaScript.
 
-<h2 id="Animation">Animation</h2>
+## Animation
 
-<p>We've already used <code>rotation</code> and <code>position</code> to move the shapes on the scene, and we can also scale them. These attributes can be manipulated to create the illusion of <a href="https://aframe.io/docs/core/animation.html">animation</a>.</p>
+We've already used `rotation` and `position` to move the shapes on the scene, and we can also scale them. These attributes can be manipulated to create the illusion of [animation](https://aframe.io/docs/core/animation.html).
 
-<h3 id="Rotation">Rotation</h3>
+### Rotation
 
-<p>There's a special <code><a href="https://aframe.io/docs/core/animation.html">&lt;a-animation&gt;</a></code> entity that can help us animate elements. Add the <code>&lt;a-animation&gt;</code> element seen below to the <code>&lt;a-box&gt;</code> element as a child, as shown:</p>
+There's a special [`<a-animation>`](https://aframe.io/docs/core/animation.html) entity that can help us animate elements. Add the `<a-animation>` element seen below to the `<a-box>` element as a child, as shown:
 
-<pre class="brush: html">&lt;a-box
+```html
+<a-box
   color="#0095DD"
   rotation="20 40 0"
-  position="0 1 0"&gt;
-  &lt;a-animation
+  position="0 1 0">
+  <a-animation
     attribute="rotation"
     from="20 0 0"
     to="20 360 0"
     direction="alternate"
     dur="4000"
     repeat="indefinite"
-    easing="ease"&gt;
-  &lt;/a-animation&gt;
-&lt;/a-box&gt;
-</pre>
+    easing="ease">
+  </a-animation>
+</a-box>
+```
 
-<p>As with any other entities, you can define key properties for the animation. We'll be animating the <code>rotation</code> attribute from <code>20 0 0</code> to <code>20 360 0</code>, so it will do a full spin. The animation direction is set to alternate so the animation will be played forward, and then back. The duration is set to 4 seconds, and it will be repeated indefinitely. The animation uses <code>ease</code> for easing, with <a href="https://github.com/tweenjs/tween.js/">tween.js</a> being implemented internally.</p>
+As with any other entities, you can define key properties for the animation. We'll be animating the `rotation` attribute from `20 0 0` to `20 360 0`, so it will do a full spin. The animation direction is set to alternate so the animation will be played forward, and then back. The duration is set to 4 seconds, and it will be repeated indefinitely. The animation uses `ease` for easing, with [tween.js](https://github.com/tweenjs/tween.js/) being implemented internally.
 
-<h3 id="Scaling">Scaling</h3>
+### Scaling
 
-<p>We can also add animation to entities with custom geometry like the torus, in much the same way. Add the following <code>&lt;a-animation&gt;</code> element to your torus:</p>
+We can also add animation to entities with custom geometry like the torus, in much the same way. Add the following `<a-animation>` element to your torus:
 
-<pre class="brush: html">&lt;a-entity
+```html
+<a-entity
   geometry="
     primitive: torus;
     radius: 1;
@@ -237,56 +257,53 @@ scene.appendChild(cylinder);
     roughness: 0.1;
     metalness: 0.5;"
   rotation="10 0 0"
-  position="-3 1 0"&gt;
-  &lt;a-animation
+  position="-3 1 0">
+  <a-animation
     attribute="scale"
     to="1 0.5 1"
     direction="alternate"
     dur="2000"
     repeat="indefinite"
-    easing="linear"&gt;
-  &lt;/a-animation&gt;
-&lt;/a-entity&gt;
-</pre>
+    easing="linear">
+  </a-animation>
+</a-entity>
+```
 
-<p>The attribute we want to animate for the torus is <code>scale</code>. The initial, default scale is <code>1 1 1</code>, and we're going to animate it to <code>1 0.5 1</code>, so the <code>y</code> axis will be scaled from <code>1</code> to <code>0.5</code>. The easing we're going to use is <code>linear</code>. By setting the direction to <code>alternate</code> the scale will be animated to <code>0.5</code>, and then animated back to <code>1</code> during 2 seconds. Again, the animation is being repeated indefinitely.</p>
+The attribute we want to animate for the torus is `scale`. The initial, default scale is `1 1 1`, and we're going to animate it to `1 0.5 1`, so the `y` axis will be scaled from `1` to `0.5`. The easing we're going to use is `linear`. By setting the direction to `alternate` the scale will be animated to `0.5`, and then animated back to `1` during 2 seconds. Again, the animation is being repeated indefinitely.
 
-<h3 id="Moving">Moving</h3>
+### Moving
 
-<p>We could use the <code>&lt;a-animation&gt;</code> to change the position of the third shape, or we could use JavaScript instead. Add this code at the end of the <code>&lt;script&gt;</code> tag:</p>
+We could use the `<a-animation>` to change the position of the third shape, or we could use JavaScript instead. Add this code at the end of the `<script>` tag:
 
-<pre class="brush: js">var t = 0;
+```js
+var t = 0;
 function render() {
   t += 0.01;
   requestAnimationFrame(render);
   cylinder.setAttribute('position', '3 '+(Math.sin(t*2)+1)+' 0');
 }
 render();
-</pre>
+```
 
-<p>We're using the <code>render()</code> function to update the cylinder's position on every frame. Try changing the given values on the <code>y</code> axis and see how it affects the movement.</p>
+We're using the `render()` function to update the cylinder's position on every frame. Try changing the given values on the `y` axis and see how it affects the movement.
 
-<h2 id="Conclusion">Conclusion</h2>
+## Conclusion
 
-<p>Everything is rendered properly and animating — congratulations on building your first A-Frame scene! Here's how the final version looks and works:</p>
+Everything is rendered properly and animating — congratulations on building your first A-Frame scene! Here's how the final version looks and works:
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/sq94qd6e/","","350")}}</p>
+{{JSFiddleEmbed("https://jsfiddle.net/end3r/sq94qd6e/","","350")}}
 
-<p>If you have a VR device available, now is a good time to try out your scene with it too.</p>
+If you have a VR device available, now is a good time to try out your scene with it too.
 
-<div class="note">
-<p><strong>Note:</strong> You can also <a href="https://github.com/end3r/MDN-Games-3D/blob/gh-pages/A-Frame/shapes.html">check it out on GitHub</a>.</p>
-</div>
+> **Note:** You can also [check it out on GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/A-Frame/shapes.html).
 
-<p>That was easier than you thought, right? A-Frame targets web developers by offering easy to use web markup and all the advantages that brings, such as JavaScript manipulation. It is easy to start with, but also provides a powerful API for advanced concepts, as well as dealing with cross browser differences and suchlike. The community is growing, just like the number of supported VR devices — it's a great time to start experimenting with such frameworks.</p>
+That was easier than you thought, right? A-Frame targets web developers by offering easy to use web markup and all the advantages that brings, such as JavaScript manipulation. It is easy to start with, but also provides a powerful API for advanced concepts, as well as dealing with cross browser differences and suchlike. The community is growing, just like the number of supported VR devices — it's a great time to start experimenting with such frameworks.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://aframe.io/">A-Frame website</a></li>
- <li><a href="https://mixedreality.mozilla.org/">Mozilla Mixed Reality website</a></li>
- <li><a href="https://aframe.io/blog/2015/12/16/introducing-aframe/">Introducing A-Frame 0.1.0 article</a></li>
- <li><a href="https://aframevr.tumblr.com/">Made with A-Frame Tumblr</a></li>
- <li><a href="https://github.com/ngokevin/aframe-physics-components">A-Frame physics plugin</a></li>
- <li><a href="https://github.com/donmccurdy/aframe-gamepad-controls">A-Frame gamepad controls plugin</a></li>
-</ul>
+- [A-Frame website](https://aframe.io/)
+- [Mozilla Mixed Reality website](https://mixedreality.mozilla.org/)
+- [Introducing A-Frame 0.1.0 article](https://aframe.io/blog/2015/12/16/introducing-aframe/)
+- [Made with A-Frame Tumblr](https://aframevr.tumblr.com/)
+- [A-Frame physics plugin](https://github.com/ngokevin/aframe-physics-components)
+- [A-Frame gamepad controls plugin](https://github.com/donmccurdy/aframe-gamepad-controls)

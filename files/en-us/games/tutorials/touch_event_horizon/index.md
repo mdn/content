@@ -5,36 +5,36 @@ tags:
   - NeedsContent
   - NeedsExample
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p>This article is for Touch Event Horizon and A Game Related To It</p>
+This article is for Touch Event Horizon and A Game Related To It
 
-<h2 id="Touch_Gestures_and_Events">Touch Gestures and Events</h2>
+## Touch Gestures and Events
 
-<p><a href="/en-US/docs/Web/Apps/Fundamentals/User_input_methods/Touch_Gestures_and_Events">Link</a></p>
+[Link](/en-US/docs/Web/Apps/Fundamentals/User_input_methods/Touch_Gestures_and_Events)
 
-<h2 id="The_example_game">The example game</h2>
+## The example game
 
-<p><img alt="" src="touch-to-start.png"></p>
+![](touch-to-start.png)
 
-<p><img alt="" src="tapping.png"></p>
+![](tapping.png)
 
-<p><a href="https://github.com/EnclaveGames/Touch-Event-Horizon">Github repository</a></p>
+[Github repository](https://github.com/EnclaveGames/Touch-Event-Horizon)
 
-<p><a href="https://touch.enclavegames.com/">Live demo</a></p>
+[Live demo](https://touch.enclavegames.com/)
 
-<h3 id="Setting_up_the_canvas">Setting up the canvas</h3>
+### Setting up the canvas
 
-<h3 id="Counting_the_taps">Counting the taps</h3>
+### Counting the taps
 
-<p>touchstart, touchend</p>
+touchstart, touchend
 
-<h3 id="Collecting_the_bonus">Collecting the bonus</h3>
+### Collecting the bonus
 
-<p>touchmove</p>
+touchmove
 
-<h2 id="Future_developments">Future developments</h2>
+## Future developments
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>This tutorial shows how to use Touch Events to create a game on a &lt;canvas&gt;. This is a multi-player game relying on the Tap and Drag gestures.</p>
+This tutorial shows how to use Touch Events to create a game on a \<canvas>. This is a multi-player game relying on the Tap and Drag gestures.

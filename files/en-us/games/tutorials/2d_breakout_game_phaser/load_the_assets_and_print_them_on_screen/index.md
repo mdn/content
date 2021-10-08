@@ -12,56 +12,57 @@ tags:
   - Sprites
   - Tutorial
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Scaling", "Games/Workflows/2D_Breakout_game_Phaser/Move the ball")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Scaling", "Games/Workflows/2D_Breakout_game_Phaser/Move the ball")}}
 
-<p>This is the <strong>3rd step</strong> out of 16 in the <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser">Gamedev Phaser tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson03.html">Gamedev-Phaser-Content-Kit/demos/lesson03.html</a>.</p>
+This is the **3rd step** out of 16 in the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). You can find the source code as it should look after completing this lesson at [Gamedev-Phaser-Content-Kit/demos/lesson03.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson03.html).
 
-<p>Our game will feature a ball rolling around the screen, bouncing off a paddle, and destroying bricks to earn points — familiar, huh? In this article we'll look at how to add sprites into our gameworld.</p>
+Our game will feature a ball rolling around the screen, bouncing off a paddle, and destroying bricks to earn points — familiar, huh? In this article we'll look at how to add sprites into our gameworld.
 
-<h2 id="Having_a_ball">Having a ball</h2>
+## Having a ball
 
-<p>Let's start by creating a JavaScript variable to represent our ball. Add the following line between the game initialization code (our <code>var game...</code> block) and the <code>preload()</code> function:</p>
+Let's start by creating a JavaScript variable to represent our ball. Add the following line between the game initialization code (our `var game...` block) and the `preload()` function:
 
-<pre class="brush: js">var ball;
-</pre>
+```js
+var ball;
+```
 
-<div class="note">
-<p><strong>Note:</strong> For the sake of this tutorial, we will use global variables. The purpose of the tutorial is to teach Phaser-specific approaches to game development rather than dwelling on subjective best approaches.</p>
-</div>
+> **Note:** For the sake of this tutorial, we will use global variables. The purpose of the tutorial is to teach Phaser-specific approaches to game development rather than dwelling on subjective best approaches.
 
-<h2 id="Loading_the_ball_sprite">Loading the ball sprite</h2>
+## Loading the ball sprite
 
-<p>Loading images and printing them on our canvas is a lot easier using Phaser than using pure JavaScript. To load the asset, we will use the <code>game</code> object created by Phaser, executing its <code>load.image()</code> method. Add the following new line just inside the <code>preload()</code> function, at the bottom:</p>
+Loading images and printing them on our canvas is a lot easier using Phaser than using pure JavaScript. To load the asset, we will use the `game` object created by Phaser, executing its `load.image()` method. Add the following new line just inside the `preload()` function, at the bottom:
 
-<pre class="brush: js">function preload() {
+```js
+function preload() {
     // ...
     game.load.image('ball', 'img/ball.png');
 }
-</pre>
+```
 
-<p>The first parameter we want to give the asset is the name that will be used across our game code — for example, in our <code>ball</code> variable name — so we need to make sure it is the same. The second parameter is the relative path to the graphic asset. In our case, we will load the image for our ball. (Note that the file name does not also have to be the same, but we'd recommend it, as it makes everything easier to follow.)</p>
+The first parameter we want to give the asset is the name that will be used across our game code — for example, in our `ball` variable name — so we need to make sure it is the same. The second parameter is the relative path to the graphic asset. In our case, we will load the image for our ball. (Note that the file name does not also have to be the same, but we'd recommend it, as it makes everything easier to follow.)
 
-<p>Of course, to load the image, it must be available in our code directory. <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/ball.png">Grab the ball image from Github</a>, and save it inside an <code>/img</code> directory in the same place as your <code>index.html</code> file.</p>
+Of course, to load the image, it must be available in our code directory. [Grab the ball image from Github](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/ball.png), and save it inside an `/img` directory in the same place as your `index.html` file.
 
-<p>Now, to show it on the screen we will use another Phaser method called <code>add.sprite()</code>;  add the following new code line inside the <code>create()</code> function as shown:</p>
+Now, to show it on the screen we will use another Phaser method called `add.sprite()`;  add the following new code line inside the `create()` function as shown:
 
-<pre class="brush: js">function create() {
+```js
+function create() {
     ball = game.add.sprite(50, 50, 'ball');
 }
-</pre>
+```
 
-<p>This will add the ball to the game and render it on the screen. The first two parameters are the x and y coordinates of the canvas where you want it added, and the third one is the name of the asset we defined earlier. That's it — if you load your <code>index.html</code> file you will see the image already loaded and rendered on the canvas!</p>
+This will add the ball to the game and render it on the screen. The first two parameters are the x and y coordinates of the canvas where you want it added, and the third one is the name of the asset we defined earlier. That's it — if you load your `index.html` file you will see the image already loaded and rendered on the canvas!
 
-<h2 id="Compare_your_code">Compare your code</h2>
+## Compare your code
 
-<p>You can check the finished code for this lesson for yourself in the live demo below, and play with it to better understand how it works:</p>
+You can check the finished code for this lesson for yourself in the live demo below, and play with it to better understand how it works:
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/98xrv9x5/","","400")}}</p>
+{{JSFiddleEmbed("https://jsfiddle.net/end3r/98xrv9x5/","","400")}}
 
-<h2 id="Next_steps">Next steps</h2>
+## Next steps
 
-<p>Printing out the ball was easy; next, we'll try <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball">moving the ball</a> on screen.</p>
+Printing out the ball was easy; next, we'll try [moving the ball](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball) on screen.
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Scaling", "Games/Workflows/2D_Breakout_game_Phaser/Move the ball")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Scaling", "Games/Workflows/2D_Breakout_game_Phaser/Move the ball")}}

@@ -10,52 +10,52 @@ tags:
   - Phaser
   - Tutorial
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework", "Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework", "Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}
 
-<p>This is the <strong>2nd step</strong> out of 16 of the <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser">Gamedev Phaser tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson02.html">Gamedev-Phaser-Content-Kit/demos/lesson02.html</a>.</p>
+This is the **2nd step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). You can find the source code as it should look after completing this lesson at [Gamedev-Phaser-Content-Kit/demos/lesson02.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson02.html).
 
-<p>Scaling refers to how the game canvas will scale on different screen sizes. We can make the game scale to fit on any screen size automatically during the preload stage, so we don't have to worry about it later.</p>
+Scaling refers to how the game canvas will scale on different screen sizes. We can make the game scale to fit on any screen size automatically during the preload stage, so we don't have to worry about it later.
 
-<h2 id="The_Phaser_scale_object">The Phaser scale object</h2>
+## The Phaser scale object
 
-<p>There's a special <code>scale</code> object available in Phaser with a few handy methods and properties available. Update your existing <code>preload()</code> function as follows:</p>
+There's a special `scale` object available in Phaser with a few handy methods and properties available. Update your existing `preload()` function as follows:
 
-<pre class="brush: js">function preload() {
+```js
+function preload() {
     game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
     game.scale.pageAlignHorizontally = true;
     game.scale.pageAlignVertically = true;
 }
-</pre>
+```
 
-<p><code>scaleMode</code> has a few different options available for how the Canvas can be scaled:</p>
+`scaleMode` has a few different options available for how the Canvas can be scaled:
 
-<ul>
- <li><code>NO_SCALE</code> — nothing is scaled.</li>
- <li><code>EXACT_FIT</code> — scale the canvas to fill all the available space both vertically and horizontally, without preserving the aspect ratio.</li>
- <li><code>SHOW_ALL</code> — scales the canvas, but keeps the aspect ratio untouched, so images won't be skewed like in the previous mode. There might be black stripes visible on the edges of the screen, but we can live with that.</li>
- <li><code>RESIZE</code> — creates the canvas with the same size as the available width and height, so you have to place the objects inside your game dynamically; this is more of an advanced mode.</li>
- <li><code>USER_SCALE</code> — allows you to have custom dynamic scaling, calculating the size, scale and ratio on your own; again, this is more of an advanced mode</li>
-</ul>
+- `NO_SCALE` — nothing is scaled.
+- `EXACT_FIT` — scale the canvas to fill all the available space both vertically and horizontally, without preserving the aspect ratio.
+- `SHOW_ALL` — scales the canvas, but keeps the aspect ratio untouched, so images won't be skewed like in the previous mode. There might be black stripes visible on the edges of the screen, but we can live with that.
+- `RESIZE` — creates the canvas with the same size as the available width and height, so you have to place the objects inside your game dynamically; this is more of an advanced mode.
+- `USER_SCALE` — allows you to have custom dynamic scaling, calculating the size, scale and ratio on your own; again, this is more of an advanced mode
 
-<p>The other two lines of code in the <code>preload()</code> function are responsible for aligning the canvas element horizontally and vertically, so it is always centered on screen regardless of size.</p>
+The other two lines of code in the `preload()` function are responsible for aligning the canvas element horizontally and vertically, so it is always centered on screen regardless of size.
 
-<h2 id="Adding_a_custom_canvas_background_color">Adding a custom canvas background color</h2>
+## Adding a custom canvas background color
 
-<p>We can also add a custom background color to our canvas, so it won't stay black. The <code>stage</code> object has a <code>backgroundColor</code> property for this purpose, which we can set using CSS color definition syntax. Add the following line below the other three you added earlier:</p>
+We can also add a custom background color to our canvas, so it won't stay black. The `stage` object has a `backgroundColor` property for this purpose, which we can set using CSS color definition syntax. Add the following line below the other three you added earlier:
 
-<pre class="brush: js">game.stage.backgroundColor = '#eee';
-</pre>
+```js
+game.stage.backgroundColor = '#eee';
+```
 
-<h2 id="Compare_your_code">Compare your code</h2>
+## Compare your code
 
-<p>You can check the finished code for this lesson in the live demo below, and play with it to understand better how it works:</p>
+You can check the finished code for this lesson in the live demo below, and play with it to understand better how it works:
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/6a64vecL/","","400")}}</p>
+{{JSFiddleEmbed("https://jsfiddle.net/end3r/6a64vecL/","","400")}}
 
-<h2 id="Next_steps">Next steps</h2>
+## Next steps
 
-<p>Now we've set up the scaling for our game, let's continue to the third lesson and work out how to <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen">load the assets and print them on screen</a>.</p>
+Now we've set up the scaling for our game, let's continue to the third lesson and work out how to [load the assets and print them on screen](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen).
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework", "Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework", "Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}

@@ -4,6 +4,6 @@ slug: Games/Index
 tags:
   - Meta
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p>{{Index("/en-US/docs/Games")}}</p>
+{{Index("/en-US/docs/Games")}}

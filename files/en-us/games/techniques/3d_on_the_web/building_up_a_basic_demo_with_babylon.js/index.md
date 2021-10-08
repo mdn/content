@@ -7,240 +7,248 @@ tags:
   - Beginner
   - WebGL
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p><a href="https://babylonjs.com/">Babylon.js</a> is one of the most popular 3D game engines used by developers. As with any other 3D library it provides built-in functions to help you implement common 3D functionality more quickly. In this article we'll take you through the real basics of using Babylon.js, including setting up a development environment, structuring the necessary HTML, and writing the JavaScript code.</p>
+[Babylon.js](https://babylonjs.com/) is one of the most popular 3D game engines used by developers. As with any other 3D library it provides built-in functions to help you implement common 3D functionality more quickly. In this article we'll take you through the real basics of using Babylon.js, including setting up a development environment, structuring the necessary HTML, and writing the JavaScript code.
 
-<p>We will try to create a simple demo first — a cube rendered on the screen. If you have already worked through our <em>Building up a basic demo</em> <a href="/en-US/docs/Games/Techniques/3D_on_the_web">series</a> with <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js">Three.js</a>, <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas">PlayCanvas</a> or <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame">A-Frame</a> (or you are familiar with other 3D libraries) you'll notice that Babylon.js works on similar concepts: camera, light and objects.</p>
+We will try to create a simple demo first — a cube rendered on the screen. If you have already worked through our _Building up a basic demo_ [series](/en-US/docs/Games/Techniques/3D_on_the_web) with [Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js), [PlayCanvas](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) or [A-Frame](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) (or you are familiar with other 3D libraries) you'll notice that Babylon.js works on similar concepts: camera, light and objects.
 
-<h2 id="Environment_setup">Environment setup</h2>
+## Environment setup
 
-<p>To start developing with Babylon.js, you don't need much. You should start off by:</p>
+To start developing with Babylon.js, you don't need much. You should start off by:
 
-<ul>
- <li>Making sure you are using a modern browser with good <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> support, such as the latest Firefox or Chrome.</li>
- <li>Creating a directory to store your experiments in.</li>
- <li>Saving a copy of the <a href="https://cdn.babylonjs.com/2-3/babylon.js">latest Babylon.js engine</a> inside your directory.</li>
- <li>Opening the <a href="https://doc.babylonjs.com/">Babylon.js documentation</a> in a separate tab — it is useful to refer to.</li>
-</ul>
+- Making sure you are using a modern browser with good [WebGL](/en-US/docs/Web/API/WebGL_API) support, such as the latest Firefox or Chrome.
+- Creating a directory to store your experiments in.
+- Saving a copy of the [latest Babylon.js engine](https://cdn.babylonjs.com/2-3/babylon.js) inside your directory.
+- Opening the [Babylon.js documentation](https://doc.babylonjs.com/) in a separate tab — it is useful to refer to.
 
-<h2 id="HTML_structure">HTML structure</h2>
+## HTML structure
 
-<p>Here's the HTML structure we will use: </p>
+Here's the HTML structure we will use:
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;MDN Games: Babylon.js demo&lt;/title&gt;
-    &lt;style&gt;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>MDN Games: Babylon.js demo</title>
+    <style>
         html,body,canvas { margin: 0; padding: 0; width: 100%; height: 100%; font-size: 0; }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;script src="babylon.js"&gt;&lt;/script&gt;
-&lt;canvas id="render-canvas"&gt;&lt;/canvas&gt;
-&lt;script&gt;
+    </style>
+</head>
+<body>
+<script src="babylon.js"></script>
+<canvas id="render-canvas"></canvas>
+<script>
     var canvas = document.getElementById("render-canvas");
     /* all our JavaScript code goes here */
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+</body>
+</html>
+```
 
-<p>It contains some basic information like the document {{htmlelement("title")}}, and some CSS to set the width and height of the {{htmlelement("canvas")}} element (which Babylon.js will use to render the content on) to fill the entire available viewport space. The first {{htmlelement("script")}} element includes the Babylon.js library in the page; we will write our example code in the second one. There is one helper variable already included, which will store a reference to the <code>&lt;canvas&gt;</code> element.</p>
+It contains some basic information like the document {{htmlelement("title")}}, and some CSS to set the width and height of the {{htmlelement("canvas")}} element (which Babylon.js will use to render the content on) to fill the entire available viewport space. The first {{htmlelement("script")}} element includes the Babylon.js library in the page; we will write our example code in the second one. There is one helper variable already included, which will store a reference to the `<canvas>` element.
 
-<p>Before reading on, copy this code to a new text file and save it in your working directory as <code>index.html</code>.</p>
+Before reading on, copy this code to a new text file and save it in your working directory as `index.html`.
 
-<h2 id="Initialising_the_Babylon.js_engine">Initialising the Babylon.js engine</h2>
+## Initialising the Babylon.js engine
 
-<p>We have to create a Babylon.js engine instance first (passing it the <code>&lt;canvas&gt;</code> element to render on) before we start developing our game. Add the following code to the bottom of your second <code>&lt;script&gt;</code> element:</p>
+We have to create a Babylon.js engine instance first (passing it the `<canvas>` element to render on) before we start developing our game. Add the following code to the bottom of your second `<script>` element:
 
-<pre class="brush: js">var engine = new BABYLON.Engine(canvas);
-</pre>
+```js
+var engine = new BABYLON.Engine(canvas);
+```
 
-<p>The <code>BABYLON</code> global object contains all the Babylon.js functions available in the engine.</p>
+The `BABYLON` global object contains all the Babylon.js functions available in the engine.
 
-<h2 id="Creating_a_scene">Creating a scene</h2>
+## Creating a scene
 
-<p>A scene is the place where all the game content is displayed. While creating new objects in the demo, we will be adding them all to the scene to make them visible on the screen. Let's create a scene by adding the following lines just below our previous code:</p>
+A scene is the place where all the game content is displayed. While creating new objects in the demo, we will be adding them all to the scene to make them visible on the screen. Let's create a scene by adding the following lines just below our previous code:
 
-<pre class="brush: js">var scene = new BABYLON.Scene(engine);
+```js
+var scene = new BABYLON.Scene(engine);
 scene.clearColor = new BABYLON.Color3(0.8, 0.8, 0.8);
-</pre>
+```
 
-<p>Thus, the scene is created and the second line sets the background color to light gray.</p>
+Thus, the scene is created and the second line sets the background color to light gray.
 
-<h2 id="Creating_a_rendering_loop">Creating a rendering loop</h2>
+## Creating a rendering loop
 
-<p>To make the scene actually visible we have to render it. Add these lines at the end of the <code>&lt;script&gt;</code> element, just before the closing <code>&lt;/script&gt;</code>.</p>
+To make the scene actually visible we have to render it. Add these lines at the end of the `<script>` element, just before the closing `</script>`.
 
-<pre class="brush: js">var renderLoop = function () {
+```js
+var renderLoop = function () {
     scene.render();
 };
 engine.runRenderLoop(renderLoop);
-</pre>
+```
 
-<p>We're using the engine's <code>runRenderLoop()</code> method to execute the <code>renderLoop()</code> function repeatedly on every frame — the loop will continue to render indefinitely until told to stop.</p>
+We're using the engine's `runRenderLoop()` method to execute the `renderLoop()` function repeatedly on every frame — the loop will continue to render indefinitely until told to stop.
 
-<h2 id="Creating_a_camera">Creating a camera</h2>
+## Creating a camera
 
-<p>Now the setup code is in place we need to think about implementing the standard scene components: camera, light and objects. Let's start with the camera — add this line to your code below the scene creation and the line where we defined the <code>clearColor</code>.</p>
+Now the setup code is in place we need to think about implementing the standard scene components: camera, light and objects. Let's start with the camera — add this line to your code below the scene creation and the line where we defined the `clearColor`.
 
-<pre class="brush: js">var camera = new BABYLON.FreeCamera("camera", new BABYLON.Vector3(0, 0, -10), scene);
-</pre>
+```js
+var camera = new BABYLON.FreeCamera("camera", new BABYLON.Vector3(0, 0, -10), scene);
+```
 
-<p>There are many <a href="https://doc.babylonjs.com/tutorials/Cameras">cameras</a> available in Babylon.js; <code>FreeCamera</code> is the most basic and universal one. To initialize it you need to pass it three parameters: any name you want to use for it, the coordinates where you want it to be positioned in the 3D space, and the scene you want to add it to.</p>
+There are many [cameras](https://doc.babylonjs.com/tutorials/Cameras) available in Babylon.js; `FreeCamera` is the most basic and universal one. To initialize it you need to pass it three parameters: any name you want to use for it, the coordinates where you want it to be positioned in the 3D space, and the scene you want to add it to.
 
-<div class="note">
-<p><strong>Note:</strong> You probably noticed the <code>BABYLON.Vector3()</code> method in use here — this defines a 3D position on the scene. Babylon.js is bundled with a complete math library for handling vectors, colors, matrices etc.</p>
-</div>
+> **Note:** You probably noticed the `BABYLON.Vector3()` method in use here — this defines a 3D position on the scene. Babylon.js is bundled with a complete math library for handling vectors, colors, matrices etc.
 
-<h2 id="Let_there_be_light">Let there be light</h2>
+## Let there be light
 
-<p>There are various <a href="https://doc.babylonjs.com/tutorials/Lights">light sources</a> available in Babylon.js. The most basic one is the <code>PointLight</code>, which works like a flashlight — shining a spotlight in a given direction. Add the following line below your camera definition: </p>
+There are various [light sources](https://doc.babylonjs.com/tutorials/Lights) available in Babylon.js. The most basic one is the `PointLight`, which works like a flashlight — shining a spotlight in a given direction. Add the following line below your camera definition:
 
-<pre class="brush: js">var light = new BABYLON.PointLight("light", new BABYLON.Vector3(10, 10, 0), scene);
-</pre>
+```js
+var light = new BABYLON.PointLight("light", new BABYLON.Vector3(10, 10, 0), scene);
+```
 
-<p>The parameters are very similar to the previously defined camera: the name of the light, a position in 3D space and the scene to which the light is added.</p>
+The parameters are very similar to the previously defined camera: the name of the light, a position in 3D space and the scene to which the light is added.
 
-<h2 id="Geometry">Geometry</h2>
+## Geometry
 
-<p>Now the scene is properly rendering we can start adding 3D shapes to it. To speed up development Babylon.js provides a bunch of <a href="https://doc.babylonjs.com/tutorials/Discover_Basic_Elements">predefined primitives</a> that you can use to create shapes instantly in a single line of code. There are cubes, spheres, cylinders and more complicated shapes available. Let's start by defining the geometry for a box shape — add the following new code below your previous additions:</p>
+Now the scene is properly rendering we can start adding 3D shapes to it. To speed up development Babylon.js provides a bunch of [predefined primitives](https://doc.babylonjs.com/tutorials/Discover_Basic_Elements) that you can use to create shapes instantly in a single line of code. There are cubes, spheres, cylinders and more complicated shapes available. Let's start by defining the geometry for a box shape — add the following new code below your previous additions:
 
-<pre class="brush: js">var box = BABYLON.Mesh.CreateBox("box", 2, scene);
-</pre>
+```js
+var box = BABYLON.Mesh.CreateBox("box", 2, scene);
+```
 
-<p>A mesh is a way the engine creates geometric shapes, so material can be easily applied to them later on. In this case we're creating a box using the <code>Mesh.CreateBox</code> method with it's own name, a size of 2, and a declaration of which scene we want it added to.</p>
+A mesh is a way the engine creates geometric shapes, so material can be easily applied to them later on. In this case we're creating a box using the `Mesh.CreateBox` method with it's own name, a size of 2, and a declaration of which scene we want it added to.
 
-<div class="note">
-<p><strong>Note:</strong> The size or position values (e.g. for the box size) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.</p>
-</div>
+> **Note:** The size or position values (e.g. for the box size) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.
 
-<p>If you save and refresh now, your object will look like a square, because it's facing the camera. The good thing about objects is that we can move them on the scene however we want, for example rotating and scaling. Let's apply a little bit of rotation to the box, so we can see more than one face — again, add these lines below the previous one:</p>
+If you save and refresh now, your object will look like a square, because it's facing the camera. The good thing about objects is that we can move them on the scene however we want, for example rotating and scaling. Let's apply a little bit of rotation to the box, so we can see more than one face — again, add these lines below the previous one:
 
-<pre class="brush: js">box.rotation.x = -0.2;
+```js
+box.rotation.x = -0.2;
 box.rotation.y = -0.4;
-</pre>
+```
 
-<p>The box looks black at the moment, because we haven't defined any material to apply to its faces. Let's deal with that next.</p>
+The box looks black at the moment, because we haven't defined any material to apply to its faces. Let's deal with that next.
 
-<h2 id="Material">Material</h2>
+## Material
 
-<p>Material is that thing covering the object — the colors or texture on its surface. In our case we will use a simple blue color to paint our box. There are many types of <a href="https://doc.babylonjs.com/tutorials/Materials">materials</a> that can be used, but for now the standard one should be enough for us. Add these lines below the previous ones:</p>
+Material is that thing covering the object — the colors or texture on its surface. In our case we will use a simple blue color to paint our box. There are many types of [materials](https://doc.babylonjs.com/tutorials/Materials) that can be used, but for now the standard one should be enough for us. Add these lines below the previous ones:
 
-<pre class="brush: js">var boxMaterial = new BABYLON.StandardMaterial("material", scene);
+```js
+var boxMaterial = new BABYLON.StandardMaterial("material", scene);
 boxMaterial.emissiveColor = new BABYLON.Color3(0, 0.58, 0.86);
 box.material = boxMaterial;
-</pre>
+```
 
-<p>The <code>StandardMaterial</code> takes two parameters: a name, and the scene you want to add it to. The second line defines an <code>emissiveColor</code> — the one that will be visible for us. We can use the built-in <code>Color3</code> function to define it. The third line assigns the newly created material to our box.</p>
+The `StandardMaterial` takes two parameters: a name, and the scene you want to add it to. The second line defines an `emissiveColor` — the one that will be visible for us. We can use the built-in `Color3` function to define it. The third line assigns the newly created material to our box.
 
-<p>Congratulations, you've created your first object in a 3D environment using Babylon.js! It was easier than you thought, right? Here's how it should look:</p>
+Congratulations, you've created your first object in a 3D environment using Babylon.js! It was easier than you thought, right? Here's how it should look:
 
-<p><img alt="Blue Babylon.js 3D box on the gray background." src="cube.png"></p>
+![Blue Babylon.js 3D box on the gray background.](cube.png)
 
-<p>And here's the code we have created so far:</p>
+And here's the code we have created so far:
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/9zoeo5sy/","","350")}}</p>
+{{JSFiddleEmbed("https://jsfiddle.net/end3r/9zoeo5sy/","","350")}}
 
-<p>You can also <a href="https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Babylon.js/cube.html">check it out on GitHub</a>.</p>
+You can also [check it out on GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Babylon.js/cube.html).
 
-<h2 id="More_shapes">More shapes</h2>
+## More shapes
 
-<p>We have a box on the scene already; now let's try adding more shapes.</p>
+We have a box on the scene already; now let's try adding more shapes.
 
-<h3 id="Torus">Torus</h3>
+### Torus
 
-<p>Let's try adding a torus — add the following lines below the previous code:</p>
+Let's try adding a torus — add the following lines below the previous code:
 
-<pre class="brush: js">var torus = BABYLON.Mesh.CreateTorus("torus", 2, 0.5, 15, scene);
+```js
+var torus = BABYLON.Mesh.CreateTorus("torus", 2, 0.5, 15, scene);
 torus.position.x = -5;
 torus.rotation.x = 1.5;
-</pre>
+```
 
-<p>This will create a torus and add it to the scene; the parameters are: name, diameter, thickness, tessellation (number of segments) and the scene to add it to. We also position it a bit to the left and rotate it on the <code>x</code> axis so it can be seen better. Now let's add a material:</p>
+This will create a torus and add it to the scene; the parameters are: name, diameter, thickness, tessellation (number of segments) and the scene to add it to. We also position it a bit to the left and rotate it on the `x` axis so it can be seen better. Now let's add a material:
 
-<pre class="brush: js">var torusMaterial = new BABYLON.StandardMaterial("material", scene);
+```js
+var torusMaterial = new BABYLON.StandardMaterial("material", scene);
 torusMaterial.emissiveColor = new BABYLON.Color3(0.4, 0.4, 0.4);
 torus.material = torusMaterial;
-</pre>
+```
 
-<p>It looks similar to the box element — we're creating the standard material, giving it a grayish color and assigning it to the torus.</p>
+It looks similar to the box element — we're creating the standard material, giving it a grayish color and assigning it to the torus.
 
-<h3 id="Cylinder">Cylinder</h3>
+### Cylinder
 
-<p>Creating a cylinder and its material is done in almost exactly the same way as we did for the torus. Add the following code, again at the bottom of your script:</p>
+Creating a cylinder and its material is done in almost exactly the same way as we did for the torus. Add the following code, again at the bottom of your script:
 
-<pre class="brush: js">var cylinder = BABYLON.Mesh.CreateCylinder("cylinder", 2, 2, 2, 12, 1, scene);
+```js
+var cylinder = BABYLON.Mesh.CreateCylinder("cylinder", 2, 2, 2, 12, 1, scene);
 cylinder.position.x = 5;
 cylinder.rotation.x = -0.2;
 var cylinderMaterial = new BABYLON.StandardMaterial("material", scene);
 cylinderMaterial.emissiveColor = new BABYLON.Color3(1, 0.58, 0);
 cylinder.material = cylinderMaterial;
-</pre>
+```
 
-<p>The cylinder parameters are: name, height, diameter at the top, diameter at the bottom, tessellation, height subdivisions and the scene to add it to. It is then positioned to the right of the cube, rotated a bit so its 3D shape can be seen, and given a yellow material.</p>
+The cylinder parameters are: name, height, diameter at the top, diameter at the bottom, tessellation, height subdivisions and the scene to add it to. It is then positioned to the right of the cube, rotated a bit so its 3D shape can be seen, and given a yellow material.
 
-<p>Here's how the scene should look right now:</p>
+Here's how the scene should look right now:
 
-<p><img alt="Light gray torus, blue box and yellow cylinder created with Babylon.js on the gray background." src="shapes.png"></p>
+![Light gray torus, blue box and yellow cylinder created with Babylon.js on the gray background.](shapes.png)
 
-<p>This works, but it is a bit boring. In a game something is usually happening — we can see animations and such — so let's try to breathe a little life into those shapes by animating them.</p>
+This works, but it is a bit boring. In a game something is usually happening — we can see animations and such — so let's try to breathe a little life into those shapes by animating them.
 
-<h2 id="Animation">Animation</h2>
+## Animation
 
-<p>We already used <code>position</code> and <code>rotation</code> to adjust the position of the shapes; we could also scale them. To show actual animation, we need to make changes to these values inside the rendering loop at the end of our code, so they are updated on every frame. Define a helper variable — <code>t</code> — that we will use for animations, just before the <code>renderLoop</code>, and decrement it on every frame inside the loop, like this:</p>
+We already used `position` and `rotation` to adjust the position of the shapes; we could also scale them. To show actual animation, we need to make changes to these values inside the rendering loop at the end of our code, so they are updated on every frame. Define a helper variable — `t` — that we will use for animations, just before the `renderLoop`, and decrement it on every frame inside the loop, like this:
 
-<pre class="brush: js">var t = 0;
+```js
+var t = 0;
 var renderLoop = function () {
     scene.render();
     t -= 0.01;
     // animation code goes here
 };
 engine.runRenderLoop(renderLoop);
-</pre>
+```
 
-<p>The <code>t</code> variable will be incremented on every rendered frame.</p>
+The `t` variable will be incremented on every rendered frame.
 
-<h3 id="Rotation">Rotation</h3>
+### Rotation
 
-<p>Applying rotation is as easy as adding this line at the end of the <code>renderLoop</code> function:</p>
+Applying rotation is as easy as adding this line at the end of the `renderLoop` function:
 
-<pre class="brush: js">box.rotation.y = t*2;
-</pre>
+```js
+box.rotation.y = t*2;
+```
 
-<p>It will rotate the box along the <code>y</code> axis.</p>
+It will rotate the box along the `y` axis.
 
-<h3 id="Scaling">Scaling</h3>
+### Scaling
 
-<p>Add this line below the previous one to scale the torus:</p>
+Add this line below the previous one to scale the torus:
 
-<pre class="brush: js">torus.scaling.z = Math.abs(Math.sin(t*2))+0.5;
-</pre>
+```js
+torus.scaling.z = Math.abs(Math.sin(t*2))+0.5;
+```
 
-<p>There's a little bit of adjustment made to make the animation look and feel nice. You can experiment with the values and see how it affects the animation.</p>
+There's a little bit of adjustment made to make the animation look and feel nice. You can experiment with the values and see how it affects the animation.
 
-<h3 id="Moving">Moving</h3>
+### Moving
 
-<p>By changing the position of the cylinder directly we can move it on the scene — add this line below the previous one:</p>
+By changing the position of the cylinder directly we can move it on the scene — add this line below the previous one:
 
-<pre class="brush: js">cylinder.position.y = Math.sin(t*3);
-</pre>
+```js
+cylinder.position.y = Math.sin(t*3);
+```
 
-<p>The cylinder will float up and down on the <code>y</code> axis thanks to the <code>Math.sin()</code> function.</p>
+The cylinder will float up and down on the `y` axis thanks to the `Math.sin()` function.
 
-<h2 id="Conclusion">Conclusion</h2>
+## Conclusion
 
-<p>Here's the final code listing, along with a viewable live example:</p>
+Here's the final code listing, along with a viewable live example:
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/8r66fdvp/","","350")}}</p>
+{{JSFiddleEmbed("https://jsfiddle.net/end3r/8r66fdvp/","","350")}}
 
-<p>You can also <a href="https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Babylon.js/shapes.html">see it on GitHub</a> and <a href="https://github.com/end3r/MDN-Games-3D/">fork the repository</a> if you want to play with it yourself locally. Now you know the basics of Babylon.js engine; happy experimentation!</p>
+You can also [see it on GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Babylon.js/shapes.html) and [fork the repository](https://github.com/end3r/MDN-Games-3D/) if you want to play with it yourself locally. Now you know the basics of Babylon.js engine; happy experimentation!
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="http://learningbabylonjs.com/">Learning Babylon.js book</a></li>
-</ul>
+- [Learning Babylon.js book](http://learningbabylonjs.com/)

@@ -10,110 +10,122 @@ tags:
   - Phaser
   - Tutorial
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_Phaser/Game_over")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_Phaser/Game_over")}}
 
-<p>This is the <strong>7th step</strong> out of 16 of the <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser">Gamedev Phaser tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson07.html">Gamedev-Phaser-Content-Kit/demos/lesson07.html</a>.</p>
+This is the **7th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). You can find the source code as it should look after completing this lesson at [Gamedev-Phaser-Content-Kit/demos/lesson07.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson07.html).
 
-<p>We have the ball moving and bouncing off the walls, but it quickly gets boring — there's no interactivity! We need a way to introduce gameplay, so in this article we'll create a paddle to move around and hit the ball with.</p>
+We have the ball moving and bouncing off the walls, but it quickly gets boring — there's no interactivity! We need a way to introduce gameplay, so in this article we'll create a paddle to move around and hit the ball with.
 
-<h2 id="Rendering_the_paddle">Rendering the paddle</h2>
+## Rendering the paddle
 
-<p>From the framework point of view the paddle is very similar to the ball — we need to add a variable to represent it, load the relevant image asset, and then do the magic.</p>
+From the framework point of view the paddle is very similar to the ball — we need to add a variable to represent it, load the relevant image asset, and then do the magic.
 
-<h3 id="Loading_the_paddle">Loading the paddle</h3>
+### Loading the paddle
 
-<p>First, add the <code>paddle</code> variable we will be using in our game, right after the <code>ball</code> variable:</p>
+First, add the `paddle` variable we will be using in our game, right after the `ball` variable:
 
-<pre class="brush: js">var paddle;
-</pre>
+```js
+var paddle;
+```
 
-<p>Then, in the <code>preload</code> function, load the <code>paddle</code> image by adding the following new <code>load.image()</code> call:</p>
+Then, in the `preload` function, load the `paddle` image by adding the following new `load.image()` call:
 
-<pre class="brush: js">function preload() {
+```js
+function preload() {
     // ...
     game.load.image('ball', 'img/ball.png');
     game.load.image('paddle', 'img/paddle.png');
 }
-</pre>
+```
 
-<h3 id="Adding_the_paddle_graphic">Adding the paddle graphic</h3>
+### Adding the paddle graphic
 
-<p>Just so we don't forget, at this point you should grab the <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/paddle.png">paddle graphic </a>from Github, and save it in your <code>/img</code> folder.</p>
+Just so we don't forget, at this point you should grab the [paddle graphic ](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/paddle.png)from Github, and save it in your `/img` folder.
 
-<h3 id="Rendering_the_paddle_with_physics">Rendering the paddle, with physics</h3>
+### Rendering the paddle, with physics
 
-<p>Next up, we will init our paddle by adding the following <code>add.sprite()</code> call inside the <code>create()</code> function — add it right at the bottom:</p>
+Next up, we will init our paddle by adding the following `add.sprite()` call inside the `create()` function — add it right at the bottom:
 
-<pre class="brush: js">paddle = game.add.sprite(game.world.width*0.5, game.world.height-5, 'paddle');
-</pre>
+```js
+paddle = game.add.sprite(game.world.width*0.5, game.world.height-5, 'paddle');
+```
 
-<p>We can use the <code>world.width</code> and <code>world.height</code> values to position the paddle exactly where we want it: <code>game.world.width*0.5</code> will be right in the middle of the screen. In our case the world is the same as the Canvas, but for other types of games, like side-scrollers for example, the world will be bigger, and you can tinker with it to create interesting effects.</p>
+We can use the `world.width` and `world.height` values to position the paddle exactly where we want it: `game.world.width*0.5` will be right in the middle of the screen. In our case the world is the same as the Canvas, but for other types of games, like side-scrollers for example, the world will be bigger, and you can tinker with it to create interesting effects.
 
-<p>As you'll notice if you reload your <code>index.html</code> at this point, the paddle is currently not exactly in the middle. Why? Because the anchor from which the position is calculated always starts from the top left edge of the object. We can change that to have the anchor in the middle of the paddle's width and at the bottom of it's height, so it's easier to position it against the bottom edge. Add the following line below the previous new one:</p>
+As you'll notice if you reload your `index.html` at this point, the paddle is currently not exactly in the middle. Why? Because the anchor from which the position is calculated always starts from the top left edge of the object. We can change that to have the anchor in the middle of the paddle's width and at the bottom of it's height, so it's easier to position it against the bottom edge. Add the following line below the previous new one:
 
-<pre class="brush: js">paddle.anchor.set(0.5,1);
-</pre>
+```js
+paddle.anchor.set(0.5,1);
+```
 
-<p>The paddle is now positioned right where we want it to be. Now, to make it collide with the ball we have to enable physics for the paddle. Continue by adding the following new line, again at the bottom of the <code>create()</code> function:</p>
+The paddle is now positioned right where we want it to be. Now, to make it collide with the ball we have to enable physics for the paddle. Continue by adding the following new line, again at the bottom of the `create()` function:
 
-<pre class="brush: js">game.physics.enable(paddle, Phaser.Physics.ARCADE);
-</pre>
+```js
+game.physics.enable(paddle, Phaser.Physics.ARCADE);
+```
 
-<p>Now the magic can start to happen — the framework can take care of checking the collision detection on every frame. To enable collision detection between the paddle and ball, add the <code>collide()</code> method to the <code>update()</code> function as shown:</p>
+Now the magic can start to happen — the framework can take care of checking the collision detection on every frame. To enable collision detection between the paddle and ball, add the `collide()` method to the `update()` function as shown:
 
-<pre class="brush: js">function update() {
+```js
+function update() {
     game.physics.arcade.collide(ball, paddle);
 }
-</pre>
+```
 
-<p>The first parameter is one of the objects we are interested in — the ball — and the second is the other one, the paddle. This works, but not quite as we expected it to — when the ball hits the paddle, the paddle falls off the screen! All we want is the ball bouncing off the paddle and the paddle staying in the same place. We can set the <code>body</code> of the paddle to be <code>immovable</code>, so it won't move when the ball hits it. To do this, add the below line at the bottom of the <code>create()</code> function:</p>
+The first parameter is one of the objects we are interested in — the ball — and the second is the other one, the paddle. This works, but not quite as we expected it to — when the ball hits the paddle, the paddle falls off the screen! All we want is the ball bouncing off the paddle and the paddle staying in the same place. We can set the `body` of the paddle to be `immovable`, so it won't move when the ball hits it. To do this, add the below line at the bottom of the `create()` function:
 
-<pre class="brush: js">paddle.body.immovable = true;
-</pre>
+```js
+paddle.body.immovable = true;
+```
 
-<p>Now it works as expected.</p>
+Now it works as expected.
 
-<h2 id="Controlling_the_paddle">Controlling the paddle</h2>
+## Controlling the paddle
 
-<p>The next problem is that we can't move the paddle. To do that we can use the system's default input (mouse or touch, depending on platform) and set the paddle position to where the <code>input</code> position is. Add the following new line to the <code>update()</code> function, as shown:</p>
+The next problem is that we can't move the paddle. To do that we can use the system's default input (mouse or touch, depending on platform) and set the paddle position to where the `input` position is. Add the following new line to the `update()` function, as shown:
 
-<pre class="brush: js">function update() {
+```js
+function update() {
     game.physics.arcade.collide(ball, paddle);
     paddle.x = game.input.x;
 }
-</pre>
+```
 
-<p>Now on every new frame the paddle's <code>x</code> position will adjust accordingly to the input's <code>x</code> position, however when we start the game, the position of the paddle is not in the middle. It's because the input position is not yet defined. To fix that we can set the default position (if an input position is not yet defined) to be the middle of the screen. Update the previous line as follows:</p>
+Now on every new frame the paddle's `x` position will adjust accordingly to the input's `x` position, however when we start the game, the position of the paddle is not in the middle. It's because the input position is not yet defined. To fix that we can set the default position (if an input position is not yet defined) to be the middle of the screen. Update the previous line as follows:
 
-<pre class="brush: js">paddle.x = game.input.x || game.world.width*0.5;
-</pre>
+```js
+paddle.x = game.input.x || game.world.width*0.5;
+```
 
-<p>If you haven't already done so, reload your <code>index.html</code> and try it out!</p>
+If you haven't already done so, reload your `index.html` and try it out!
 
-<h2 id="Position_the_ball">Position the ball</h2>
+## Position the ball
 
-<p>We have the paddle working as expected, so let's position the ball on it. It's very similar to positioning the paddle — we need to have it placed in the middle of the screen horizontally and at the bottom vertically with a little offset from the bottom. To place it exactly as we want it we will set the anchor to the exact middle of the ball. Find the existing <code>ball = game.add.sprite( ... )</code> line, and replace it with the following two lines:</p>
+We have the paddle working as expected, so let's position the ball on it. It's very similar to positioning the paddle — we need to have it placed in the middle of the screen horizontally and at the bottom vertically with a little offset from the bottom. To place it exactly as we want it we will set the anchor to the exact middle of the ball. Find the existing `ball = game.add.sprite( ... )` line, and replace it with the following two lines:
 
-<pre class="brush: js">ball = game.add.sprite(game.world.width*0.5, game.world.height-25, 'ball');
-ball.anchor.set(0.5);</pre>
+```js
+ball = game.add.sprite(game.world.width*0.5, game.world.height-25, 'ball');
+ball.anchor.set(0.5);
+```
 
-<p>The velocity stays almost the same — we're just changing the second parameter's value from 150 to -150, so the ball will start the game by moving up instead of down. Find the existing <code>ball.body.velocity.set( ... )</code> line and update it to the following:</p>
+The velocity stays almost the same — we're just changing the second parameter's value from 150 to -150, so the ball will start the game by moving up instead of down. Find the existing `ball.body.velocity.set( ... )` line and update it to the following:
 
-<pre class="brush: js">ball.body.velocity.set(150, -150);
-</pre>
+```js
+ball.body.velocity.set(150, -150);
+```
 
-<p>Now the ball will start right from the middle of the paddle.</p>
+Now the ball will start right from the middle of the paddle.
 
-<h2 id="Compare_your_code">Compare your code</h2>
+## Compare your code
 
-<p>You can check the finished code for this lesson in the live demo below, and play with it to understand better how it works:</p>
+You can check the finished code for this lesson in the live demo below, and play with it to understand better how it works:
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/ogqza0ye/","","400")}}</p>
+{{JSFiddleEmbed("https://jsfiddle.net/end3r/ogqza0ye/","","400")}}
 
-<h2 id="Next_steps">Next steps</h2>
+## Next steps
 
-<p>We can move the paddle and bounce the ball off it, but what's the point if the ball is bouncing off the bottom edge of the screen anyway? Let's introduce the possibility of losing — also known as <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Game_over">game over</a> logic.</p>
+We can move the paddle and bounce the ball off it, but what's the point if the ball is bouncing off the bottom edge of the screen anyway? Let's introduce the possibility of losing — also known as [game over](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Game_over) logic.
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_Phaser/Game_over")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_Phaser/Game_over")}}
