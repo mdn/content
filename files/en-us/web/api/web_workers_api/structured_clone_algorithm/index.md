@@ -15,7 +15,7 @@ It clones by recursing through the input object while maintaining a map of previ
 
 ## Things that don't work with structured clone
 
-- {{jsxref("Function")}} objects cannot be duplicated by the structured clone algorithm; attempting to throws a `DATA_CLONE_ERR` exception.
+- {{jsxref("Function")}} objects cannot be duplicated by the structured clone algorithm; attempting to throws a `DataCloneError` exception.
 - Cloning DOM nodes likewise throws a `DataCloneError` exception. 
 - Certain object properties are not preserved:
 
@@ -109,8 +109,9 @@ It clones by recursing through the input object while maintaining a map of previ
 
 ## See also
 
-- {{domxref("structuredClone()")}}
 - [HTML Specification: Safe passing of structured data](https://www.w3.org/TR/html5/infrastructure.html#safe-passing-of-structured-data)
+- {{Glossary("Transferable objects")}}
+- {{domxref("structuredClone()")}}
 - {{domxref("window.history")}}
 - {{domxref("window.postMessage()")}}
 - [Web Workers](/en-US/docs/Web/API/Web_Workers_API)
