@@ -97,7 +97,7 @@ The latest code looks (and works) like this, in case you want to compare and co
 
 {{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/b3z2Lpu9/","","395")}}
 
-> **Note:**: Try adding more points per brick hit, print out the number of collected points in the end game alert box.
+> **Note:** Try adding more points per brick hit, print out the number of collected points in the end game alert box.
 
 ## Next steps
 
