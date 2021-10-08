@@ -5,7 +5,14 @@ tags:
   - Transferable
   - Workers
 ---
-Browsers implement a method of passing certain types of objects to or from a {{domxref("Web Workers API", "Web Worker","","true")}} with high performance. **Transferable objects** are transferred from one context to another with a zero-copy operation, which results in a vast performance improvement when sending large data sets. Think of it as pass-by-reference if you're from the C/C++ world. However, unlike pass-by-reference, the 'version' from the calling context is no longer available once transferred. Its ownership is transferred to the new context. For example, when transferring an {{jsxref("ArrayBuffer")}} from your main app to a worker script, the original {{jsxref("ArrayBuffer")}} is cleared and no longer usable. Its content is (quite literally) transferred to the worker context.
+**Transferable objects** are objects for which the underlying resources can be transferred from one context to another using a zero-copy (high performance) operation.
+
+Transfer operations detach specified resources from the original object and move them to the new context.
+Following a transfer, attempts to use transferred objects in the original context will throw an exception.
+
+For example, {{jsxref("ArrayBuffer")}} is a _transferrable object_ that might be moved from a main app to a {{domxref("Web Workers API", "web worker script","","true")}}.
+After transfer the memory from the original `ArrayBuffer` is (quite literally) moved to another version of `ArrayBuffer` in the worker context.
+The `ArrayBuffer` in the original context is cleared/has no access to transferred memory. 
 
 ```js
 // Create a 32MB "file" and fill it.
@@ -14,8 +21,14 @@ for (var i = 0; i < uInt8Array.length; ++i) {
   uInt8Array[i] = i;
 }
 
+// Transfer the underlying buffer to a worker
 worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 ```
+
+Similarly, the {{domxref("structuredClone()")}} method can be used to make deep copies of a transferrable object, and may additionally transfer specified resources to the cloned object.
+This is useful when you want to safely perform operations on some data and also fail attempts to access the data while performing the operation.
+In this case you clone and transfer the object and peform the operations on the copied data: attempts to access the original object will fail.
+
 
 ## See also
 
