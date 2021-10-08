@@ -52,7 +52,7 @@ tags:
 <pre class="brush: js">var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
 </pre>
 
-<p><span class="comment">Or alternatively by using the <code>createNSResolver</code> method of a <code>XPathEvaluator</code> object.</span></p>
+<p>Or alternatively by using the <code>createNSResolver</code> method of a <code>XPathEvaluator</code> object.</p>
 <pre class="brush: js">var xpEvaluator = new XPathEvaluator();
 var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
 </pre>
@@ -130,8 +130,6 @@ alert( 'This document contains ' + paragraphCount.stringValue + ' paragraph elem
 
 <p>Note however, that if the document is mutated (the document tree is modified) between iterations that will invalidate the iteration and the <code>invalidIteratorState</code> property of <code>XPathResult</code> is set to <code>true</code>, and a <code>NS_ERROR_DOM_INVALID_STATE_ERR</code> exception is thrown.</p>
 
-<h6 id="Iterator_Example">Iterator Example</h6>
-
 <pre class="brush: js">var iterator = document.evaluate('//phoneNumber', documentNode, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null );
 
 try {
@@ -160,8 +158,6 @@ catch (e) {
 
 <p>Snapshots do not change with document mutations, so unlike the iterators, the snapshot does not become invalid, but it may not correspond to the current document, for example, the nodes may have been moved, it might contain nodes that no longer exist, or new nodes could have been added.</p>
 
-<h6 id="Snapshot_Example">Snapshot Example</h6>
-
 <pre class="brush: js">var nodesSnapshot = document.evaluate('//phoneNumber', documentNode, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
 
 for ( var i=0 ; i &lt; nodesSnapshot.snapshotLength; i++ )
@@ -183,8 +179,6 @@ for ( var i=0 ; i &lt; nodesSnapshot.snapshotLength; i++ )
 
 <p>Note that, for the unordered subtype the single node returned might not be the first in document order, but for the ordered subtype you are guaranteed to get the first matched node in the document order.</p>
 
-<h6 id="First_Node_Example">First Node Example</h6>
-
 <pre class="brush: js">var firstPhoneNumber = document.evaluate('//phoneNumber', documentNode, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null );
 
 alert( 'The first phone number found is ' + firstPhoneNumber.singleNodeValue.textContent );
@@ -196,7 +190,7 @@ alert( 'The first phone number found is ' + firstPhoneNumber.singleNodeValue.tex
 
 <p>It could be any of the simple types (<code>NUMBER_TYPE, STRING_TYPE, BOOLEAN_TYPE</code>), <strong>but</strong>, if the returned result type is a node-set then it will <strong>only</strong> be an <code>UNORDERED_NODE_ITERATOR_TYPE</code>.</p>
 
-<p>To determine that type after evaluation, we use the <code>resultType</code> property of the <code>XPathResult</code> object. The <a href="#xpathresult_defined_constants">constant</a> values of this property are defined in the appendix. <span class="comment">None Yet =====Any_Type Example===== &lt;pre&gt; &lt;/pre&gt;</span></p>
+<p>To determine that type after evaluation, we use the <code>resultType</code> property of the <code>XPathResult</code> object. The <a href="#xpathresult_defined_constants">constant</a> values of this property are defined in the appendix. None Yet =====Any_Type Example===== &lt;pre&gt; &lt;/pre&gt;</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -204,7 +198,7 @@ alert( 'The first phone number found is ' + firstPhoneNumber.singleNodeValue.tex
 
 <p>The following code is intended to be placed in any JavaScript fragment within or linked to the HTML document against which the XPath expression is to be evaluated.</p>
 
-<p>To extract all the <code>&lt;h2&gt;</code> heading elements in an HTML document using XPath, the <code>xpathExpression</code> is '<code>//h2</code>'. Where, <code>//</code> is the Recursive Descent Operator that matches elements with the nodeName <code>h2</code> anywhere in the document tree. The full code for this is: <span class="comment">link to introductory xpath doc</span></p>
+<p>To extract all the <code>&lt;h2&gt;</code> heading elements in an HTML document using XPath, the <code>xpathExpression</code> is '<code>//h2</code>'. Where, <code>//</code> is the Recursive Descent Operator that matches elements with the nodeName <code>h2</code> anywhere in the document tree. The full code for this is: link to introductory xpath doc</p>
 
 <pre class="brush: js">var headings = document.evaluate('//h2', document, null, XPathResult.ANY_TYPE, null );
 </pre>
@@ -347,9 +341,9 @@ var thisitemEl = thislevel.iterateNext();
 <table class="standard-table">
  <thead>
   <tr>
-   <td class="header">Result Type Defined Constant</td>
-   <td class="header">Value</td>
-   <td class="header">Description</td>
+   <th>Result Type Defined Constant</th>
+   <th>Value</th>
+   <th>Description</th>
   </tr>
  </thead>
  <tbody>
