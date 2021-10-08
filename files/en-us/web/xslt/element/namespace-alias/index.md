@@ -1,5 +1,5 @@
 ---
-title: '<xsl:namespace-alias>'
+title: <xsl:namespace-alias>
 slug: Web/XSLT/Element/namespace-alias
 tags:
   - Element
@@ -7,35 +7,33 @@ tags:
   - XSLT
   - namespace-alias
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>The <code>&lt;xsl:namespace-alias&gt;</code> element is a rarely used device that maps a namespace in the stylesheet to a different namespace in the output tree. The most common use for this element is in generating a stylesheet from another stylesheet. To prevent a normally <code>xsl:</code>-prefixed literal result element (which should be copied as-is to the result tree) from being misunderstood by the processor, it is assigned a temporary namespace which is appropriately re-converted back to the XSLT namespace in the output tree.</p>
+The `<xsl:namespace-alias>` element is a rarely used device that maps a namespace in the stylesheet to a different namespace in the output tree. The most common use for this element is in generating a stylesheet from another stylesheet. To prevent a normally `xsl:`-prefixed literal result element (which should be copied as-is to the result tree) from being misunderstood by the processor, it is assigned a temporary namespace which is appropriately re-converted back to the XSLT namespace in the output tree.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre>&lt;xsl:namespace-alias stylesheet-prefix=NAME result-prefix=NAME /&gt;</pre>
+    <xsl:namespace-alias stylesheet-prefix=NAME result-prefix=NAME />
 
-<h3 id="Required_Attributes">Required Attributes</h3>
+### Required Attributes
 
-<dl>
- <dt><code>stylesheet-prefix</code></dt>
- <dd>Specifies the temporary namespace.</dd>
- <dt><code>result-prefix</code></dt>
- <dd>Specifies the desired namespace for the output tree.</dd>
-</dl>
+- `stylesheet-prefix`
+  - : Specifies the temporary namespace.
+- `result-prefix`
+  - : Specifies the desired namespace for the output tree.
 
-<h3 id="Optional_Attributes">Optional Attributes</h3>
+### Optional Attributes
 
-<p>None.</p>
+None.
 
-<h3 id="Type">Type</h3>
+### Type
 
-<p>Top-level, must be the child of <code>&lt;xsl:stylesheet&gt;</code> or <code>&lt;xsl:transform&gt;</code>.</p>
+Top-level, must be the child of `<xsl:stylesheet>` or `<xsl:transform>`.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p>XSLT, section 7.1.1</p>
+XSLT, section 7.1.1
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Not supported at this time.</p>
+Not supported at this time.

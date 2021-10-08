@@ -6,6 +6,6 @@ tags:
   - Reference
   - XSLT
 ---
-<div>{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/XSLT")}}</div>
+{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/XSLT")}}
 
-<p>{{Index("/en-US/docs/Web/XSLT")}}</p>
+{{Index("/en-US/docs/Web/XSLT")}}

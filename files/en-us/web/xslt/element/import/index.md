@@ -1,5 +1,5 @@
 ---
-title: '<xsl:import>'
+title: <xsl:import>
 slug: Web/XSLT/Element/import
 tags:
   - Element
@@ -7,34 +7,31 @@ tags:
   - XSLT
   - import
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>The <code>&lt;xsl:import&gt;</code> element is a top-level element that serves to import the contents of one stylesheet into another stylesheet. Generally speaking, the contents of the imported stylesheet have a lower import precedence than that of the importing stylesheet. This is in contrast to <code>&lt;xsl:include&gt;</code> where the contents of the included stylesheet have exactly the same precedence as the contents of the including stylesheet.</p>
+The `<xsl:import>` element is a top-level element that serves to import the contents of one stylesheet into another stylesheet. Generally speaking, the contents of the imported stylesheet have a lower import precedence than that of the importing stylesheet. This is in contrast to `<xsl:include>` where the contents of the included stylesheet have exactly the same precedence as the contents of the including stylesheet.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre>&lt;xsl:import href=URI  /&gt;</pre>
+    <xsl:import href=URI  />
 
-<h3 id="Required_Attributes">Required Attributes</h3>
+### Required Attributes
 
-<dl>
- <dt><code>href</code></dt>
- <dd>Specifies the URI of the stylesheet to import.</dd>
-</dl>
+- `href`
+  - : Specifies the URI of the stylesheet to import.
 
-<h3 id="Optional_Attributes">Optional Attributes</h3>
+### Optional Attributes
 
-<p>None.</p>
+None.
 
-<h3 id="Type">Type</h3>
+### Type
 
-<p>Top-level, must appear before any other child of <code>&lt;xsl:stylesheet&gt;</code> or <code>&lt;xsl:transform&gt;</code> in the importing stylesheet.</p>
+Top-level, must appear before any other child of `<xsl:stylesheet>` or `<xsl:transform>` in the importing stylesheet.
 
+### Defined
 
-<h3 id="Defined">Defined</h3>
+XSLT, section 2.6.2.
 
-<p>XSLT, section 2.6.2.</p>
+### Gecko support
 
-<h3 id="Gecko_support">Gecko support</h3>
-
-<p>Mostly supported with a few issues with top level variables and parameters as of Mozilla 1.0.</p>
+Mostly supported with a few issues with top level variables and parameters as of Mozilla 1.0.

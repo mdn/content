@@ -1,5 +1,5 @@
 ---
-title: '<xsl:output>'
+title: <xsl:output>
 slug: Web/XSLT/Element/output
 tags:
   - Element
@@ -7,88 +7,86 @@ tags:
   - XSLT
   - output
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>The <code>&lt;xsl:output&gt;</code> element controls the characteristics of the output document. To function correctly in Netscape, this element, with the method attribute, must be used. As of 7.0, <code>method="text"</code> works as expected.</p>
+The `<xsl:output>` element controls the characteristics of the output document. To function correctly in Netscape, this element, with the method attribute, must be used. As of 7.0, `method="text"` works as expected.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre>&lt;xsl:output
-	method="xml" | "html" | "text"
-	version=STRING
-	encoding=STRING
-	omit-xml-declaration="yes" | "no"
-	standalone="yes" | "no"
-	doctype-public=STRING
-	doctype-system=STRING
-	cdata-section-elements=LIST-OF-NAMES
-	indent="yes" | "no"
-	media-type=STRING  /&gt;</pre>
+    <xsl:output
+    	method="xml" | "html" | "text"
+    	version=STRING
+    	encoding=STRING
+    	omit-xml-declaration="yes" | "no"
+    	standalone="yes" | "no"
+    	doctype-public=STRING
+    	doctype-system=STRING
+    	cdata-section-elements=LIST-OF-NAMES
+    	indent="yes" | "no"
+    	media-type=STRING  />
 
-<h3 id="Required_Attributes">Required Attributes</h3>
+### Required Attributes
 
-<p>None.</p>
+None.
 
-<h3 id="Optional_Attributes">Optional Attributes</h3>
+### Optional Attributes
 
-<dl>
- <dt><code>method</code></dt>
- <dd>Specifies output format.</dd>
-</dl>
+- `method`
+  - : Specifies output format.
 
-<dl>
- <dt><code>version</code></dt>
- <dd>Specifies the value of the version attribute of the XML or HTML declaration in the output document. This attribute is only used when <code>method="html"</code> or <code>method="xml"</code>.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>encoding</code></dt>
- <dd>Specifies the value of the <code>encoding</code> attribute in the output document.</dd>
-</dl>
+- `version`
+  - : Specifies the value of the version attribute of the XML or HTML declaration in the output document. This attribute is only used when `method="html"` or `method="xml"`.
 
-<dl>
- <dt><code>omit-xml-declaration</code></dt>
- <dd>Indicates whether or not to include an XML declaration in the output. Acceptable values are "<code>yes</code>" or "<code>no</code>".</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>standalone</code> (Not supported.)</dt>
- <dd>If present, indicates that a standalone declaration should occur in the output document and gives its value. Acceptable values are "yes" or "no".</dd>
-</dl>
+- `encoding`
+  - : Specifies the value of the `encoding` attribute in the output document.
 
-<dl>
- <dt><code>doctype-public</code></dt>
- <dd>Specifies the value of the <code>PUBLIC</code> attribute of the <code>DOCTYPE</code> declaration in the output document.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>doctype-system</code></dt>
- <dd>Specifies the value of the <code>SYSTEM</code> attribute of the <code>DOCTYPE</code> declaration in the output document.</dd>
-</dl>
+- `omit-xml-declaration`
+  - : Indicates whether or not to include an XML declaration in the output. Acceptable values are "`yes`" or "`no`".
 
-<dl>
- <dt><code>cdata-section-elements</code></dt>
- <dd>Lists elements whose text contents should be written as <code>CDATA</code> sections. Elements should be whitespace separated.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>indent</code> (Not supported.)</dt>
- <dd>Specifies if the output should be indented to indicate its hierarchic structure.</dd>
-</dl>
+- `standalone` (Not supported.)
+  - : If present, indicates that a standalone declaration should occur in the output document and gives its value. Acceptable values are "yes" or "no".
 
-<dl>
- <dt><code>media-type</code> (Not supported.)</dt>
- <dd>Specifies the output document MIME type.</dd>
-</dl>
+<!---->
 
-<h3 id="Type">Type</h3>
+- `doctype-public`
+  - : Specifies the value of the `PUBLIC` attribute of the `DOCTYPE` declaration in the output document.
 
-<p>Top-level, must be the child <code>&lt;xsl:stylesheet&gt;</code> or <code>&lt;xsl:transform&gt;</code>.</p>
+<!---->
 
-<h3 id="Defined">Defined</h3>
+- `doctype-system`
+  - : Specifies the value of the `SYSTEM` attribute of the `DOCTYPE` declaration in the output document.
 
-<p>XSLT, section 16.</p>
+<!---->
 
-<h3 id="Gecko_support">Gecko support</h3>
+- `cdata-section-elements`
+  - : Lists elements whose text contents should be written as `CDATA` sections. Elements should be whitespace separated.
 
-<p>Partial support. See comments above.</p>
+<!---->
+
+- `indent` (Not supported.)
+  - : Specifies if the output should be indented to indicate its hierarchic structure.
+
+<!---->
+
+- `media-type` (Not supported.)
+  - : Specifies the output document MIME type.
+
+### Type
+
+Top-level, must be the child `<xsl:stylesheet>` or `<xsl:transform>`.
+
+### Defined
+
+XSLT, section 16.
+
+### Gecko support
+
+Partial support. See comments above.

@@ -1,5 +1,5 @@
 ---
-title: '<xsl:include>'
+title: <xsl:include>
 slug: Web/XSLT/Element/include
 tags:
   - Element
@@ -7,33 +7,31 @@ tags:
   - XSLT
   - include
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>The <code>&lt;xsl:include&gt;</code> element merges the contents of one stylesheet with another. Unlike the case of <code>&lt;xsl:import&gt;</code>, the contents of an included stylesheet have exactly the same precedence as the contents of the including stylesheet.</p>
+The `<xsl:include>` element merges the contents of one stylesheet with another. Unlike the case of `<xsl:import>`, the contents of an included stylesheet have exactly the same precedence as the contents of the including stylesheet.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre>&lt;xsl:include href=URI /&gt;</pre>
+    <xsl:include href=URI />
 
-<h3 id="Required_Attributes">Required Attributes</h3>
+### Required Attributes
 
-<dl>
- <dt><code>href</code></dt>
- <dd>Specifies the URI of the stylesheet to include.</dd>
-</dl>
+- `href`
+  - : Specifies the URI of the stylesheet to include.
 
-<h3 id="Optional_Attributes">Optional Attributes</h3>
+### Optional Attributes
 
-<p>None.</p>
+None.
 
-<h3 id="Type">Type</h3>
+### Type
 
-<p>Top-level, may appear in any order as a child of <code>&lt;xsl:stylesheet&gt;</code> or <code>&lt;xsl:transform&gt;</code>.</p>
+Top-level, may appear in any order as a child of `<xsl:stylesheet>` or `<xsl:transform>`.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p>XSLT, section 2.6.1.</p>
+XSLT, section 2.6.1.
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

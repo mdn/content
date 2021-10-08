@@ -1,5 +1,5 @@
 ---
-title: '<xsl:key>'
+title: <xsl:key>
 slug: Web/XSLT/Element/key
 tags:
   - Element
@@ -7,38 +7,36 @@ tags:
   - Reference
   - XSLT
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>The <code>&lt;xsl:key&gt;</code> element declares a named key which can be used elsewhere in the stylesheet with the <code>key( )</code> function.</p>
+The `<xsl:key>` element declares a named key which can be used elsewhere in the stylesheet with the `key( )` function.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre>&lt;xsl:key name=NAME match=EXPRESSION
-	use=EXPRESSION /&gt; </pre>
+    <xsl:key name=NAME match=EXPRESSION
+    	use=EXPRESSION />
 
-<h3 id="Required_Attributes">Required Attributes</h3>
+### Required Attributes
 
-<dl>
- <dt><code>name</code></dt>
- <dd>Specifies a name for this key. Must be a QName.</dd>
- <dt><code>match</code></dt>
- <dd>Defines the nodes for which this key is applicable.</dd>
- <dt><code>use</code></dt>
- <dd>Specifies an XPath expression that will be used to determine the value of the key for each of the applicable nodes.</dd>
-</dl>
+- `name`
+  - : Specifies a name for this key. Must be a QName.
+- `match`
+  - : Defines the nodes for which this key is applicable.
+- `use`
+  - : Specifies an XPath expression that will be used to determine the value of the key for each of the applicable nodes.
 
-<h3 id="Optional_Attributes">Optional Attributes</h3>
+### Optional Attributes
 
-<p>None.</p>
+None.
 
-<h3 id="Type">Type</h3>
+### Type
 
-<p>Top-level, must be the child of <code>&lt;xsl:stylesheet&gt;</code> or <code>&lt;xsl:transform&gt;</code>.</p>
+Top-level, must be the child of `<xsl:stylesheet>` or `<xsl:transform>`.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p>XSLT, section 12.2.</p>
+XSLT, section 12.2.
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

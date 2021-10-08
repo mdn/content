@@ -1,5 +1,5 @@
 ---
-title: '<xsl:with-param>'
+title: <xsl:with-param>
 slug: Web/XSLT/Element/with-param
 tags:
   - Element
@@ -7,38 +7,34 @@ tags:
   - XSLT
   - with-param
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>The <code>&lt;xsl:with-param&gt;</code> element sets the value of a parameter to be passed into a template.</p>
+The `<xsl:with-param>` element sets the value of a parameter to be passed into a template.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre>&lt;xsl:with-param name=NAME select=EXPRESSION&gt;
-	TEMPLATE
-&lt;/xsl:with-param&gt;</pre>
+    <xsl:with-param name=NAME select=EXPRESSION>
+    	TEMPLATE
+    </xsl:with-param>
 
-<h3 id="Required_Attributes">Required Attributes</h3>
+### Required Attributes
 
-<dl>
- <dt><code>name</code></dt>
- <dd>Gives this parameter a name.</dd>
-</dl>
+- `name`
+  - : Gives this parameter a name.
 
-<h3 id="Optional_Attributes">Optional Attributes</h3>
+### Optional Attributes
 
-<dl>
- <dt><code>select</code></dt>
- <dd>Defines the value of the parameter through an XPath expression. If the element contains a template, this attribute is ignored.</dd>
-</dl>
+- `select`
+  - : Defines the value of the parameter through an XPath expression. If the element contains a template, this attribute is ignored.
 
-<h3 id="Type">Type</h3>
+### Type
 
-<p>Subinstruction, always appears within an <code>&lt;xsl:apply-templates&gt;</code> or an <code>&lt;xsl:call-template&gt;</code> element.</p>
+Subinstruction, always appears within an `<xsl:apply-templates>` or an `<xsl:call-template>` element.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p>XSLT 11.6</p>
+XSLT 11.6
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

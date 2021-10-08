@@ -1,5 +1,5 @@
 ---
-title: '<xsl:if>'
+title: <xsl:if>
 slug: Web/XSLT/Element/if
 tags:
   - Element
@@ -7,35 +7,33 @@ tags:
   - XSLT
   - if
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>The <code>&lt;xsl:if&gt;</code> element contains a test attribute and a template. If the test evaluates to true, the template is processed. In this it is similar to an if statement in other languages. To achieve the functionality of an if-then-else statement, however, use the <code>&lt;xsl:choose&gt;</code> element with one <code>&lt;xsl:when&gt;</code> and one <code>&lt;xsl:otherwise&gt;</code> children.</p>
+The `<xsl:if>` element contains a test attribute and a template. If the test evaluates to true, the template is processed. In this it is similar to an if statement in other languages. To achieve the functionality of an if-then-else statement, however, use the `<xsl:choose>` element with one `<xsl:when>` and one `<xsl:otherwise>` children.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre>&lt;xsl:if test=EXPRESSION&gt;
-	TEMPLATE
-&lt;/xsl:if&gt;</pre>
+    <xsl:if test=EXPRESSION>
+    	TEMPLATE
+    </xsl:if>
 
-<h3 id="Required_Attributes">Required Attributes</h3>
+### Required Attributes
 
-<dl>
- <dt><code>test</code></dt>
- <dd>Contains an XPath expression that can be evaluated (using the rules defined for <code>boolean( )</code> if necessary) to a Boolean value. If the value is true, the template is processed; if it is not, no action is taken.</dd>
-</dl>
+- `test`
+  - : Contains an XPath expression that can be evaluated (using the rules defined for `boolean( )` if necessary) to a Boolean value. If the value is true, the template is processed; if it is not, no action is taken.
 
-<h3 id="Optional_Attributes">Optional Attributes</h3>
+### Optional Attributes
 
-<p>None.</p>
+None.
 
-<h3 id="Type">Type</h3>
+### Type
 
-<p>Instruction, appears within a template.</p>
+Instruction, appears within a template.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p>XSL section 9.1.</p>
+XSL section 9.1.
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported</p>
+Supported

@@ -1,5 +1,5 @@
 ---
-title: '<xsl:apply-imports>'
+title: <xsl:apply-imports>
 slug: Web/XSLT/Element/apply-imports
 tags:
   - Element
@@ -7,30 +7,30 @@ tags:
   - XSLT
   - apply-imports
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>The <code>&lt;xsl:apply-imports&gt;</code> element is fairly arcane, used mostly in complex stylesheets. Import precedence requires that template rules in main stylesheets have higher precedence than template rules in imported stylesheets. Sometimes, however, it is useful to be able to force the processor to use a template rule from the (lower precedence) imported stylesheet rather than an equivalent rule in the main stylesheet.</p>
+The `<xsl:apply-imports>` element is fairly arcane, used mostly in complex stylesheets. Import precedence requires that template rules in main stylesheets have higher precedence than template rules in imported stylesheets. Sometimes, however, it is useful to be able to force the processor to use a template rule from the (lower precedence) imported stylesheet rather than an equivalent rule in the main stylesheet.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre>&lt;xsl:apply-imports/&gt;</pre>
+    <xsl:apply-imports/>
 
-<h3 id="Required_Attributes">Required Attributes</h3>
+### Required Attributes
 
-<p>None.</p>
+None.
 
-<h3 id="Optional_Attributes">Optional Attributes</h3>
+### Optional Attributes
 
-<p>None.</p>
+None.
 
-<h3 id="Type">Type</h3>
+### Type
 
-<p>Instruction, appears within a template.</p>
+Instruction, appears within a template.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p>XSLT, section 5.6.</p>
+XSLT, section 5.6.
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

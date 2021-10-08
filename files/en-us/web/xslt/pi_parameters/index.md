@@ -4,125 +4,114 @@ slug: Web/XSLT/PI_Parameters
 tags:
   - XSLT
 ---
+### Overview
 
-<h3 id="Overview">Overview</h3>
+XSLT supports the concept of passing parameters to a stylesheet when executing it. This has been possible for a while when using the [XSLTProcessor](/en-US/XSLTProcessor) in JavaScript. However when using an `<?xml-stylesheet?>` processing instruction (PI) there used to be no way to provide parameters.
 
-<p>XSLT supports the concept of passing parameters to a stylesheet when executing it. This has been possible for a while when using the <a href="/en-US/XSLTProcessor">XSLTProcessor</a> in JavaScript. However when using an <code>&lt;?xml-stylesheet?&gt;</code> processing instruction (PI) there used to be no way to provide parameters.</p>
+To solve this two new PIs are implemented in [Firefox 2](/en-US/Firefox_2) (see {{ Anch("Supported versions") }} below for details), `<?xslt-param?>` and `<?xslt-param-namespace?>`. Both PIs can contain "pseudo attributes" the same way that the `xml-stylesheet` PI does.
 
-<p>To solve this two new PIs are implemented in <a href="/en-US/Firefox_2">Firefox 2</a> (see {{ Anch("Supported versions") }} below for details), <code>&lt;?xslt-param?&gt;</code> and <code>&lt;?xslt-param-namespace?&gt;</code>. Both PIs can contain "pseudo attributes" the same way that the <code>xml-stylesheet</code> PI does.</p>
+The following document passes the two parameters "color" and "size" to the stylesheet "style.xsl".
 
-<p>The following document passes the two parameters "color" and "size" to the stylesheet "style.xsl".</p>
+```plain
+<?xslt-param name="color" value="blue"?>
+<?xslt-param name="size" select="2"?>
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+```
 
-<pre class="plain">&lt;?xslt-param name="color" value="blue"?&gt;
-&lt;?xslt-param name="size" select="2"?&gt;
-&lt;?xml-stylesheet type="text/xsl" href="style.xsl"?&gt;
-</pre>
+Note that these PIs have no effect when transformation is done using the `XSLTProcessor` object in JavaScript.
 
-<p>Note that these PIs have no effect when transformation is done using the <code>XSLTProcessor</code> object in JavaScript.</p>
+### Processing instructions
 
-<h3 id="Processing_instructions">Processing instructions</h3>
+The attributes in the `xslt-param` and `xslt-param-namespace` PIs are parsed using the rules defined in [xml-stylesheet](https://www.w3.org/TR/xml-stylesheet/). Any unrecognized attributes must be ignored. Parsing of any attribute must not fail due to the presence of an unrecognized attribute as long as that attribute follows the syntax in `xml-stylesheet`.
 
-<p>The attributes in the <code>xslt-param</code> and <code>xslt-param-namespace</code> PIs are parsed using the rules defined in <a href="https://www.w3.org/TR/xml-stylesheet/">xml-stylesheet</a>. Any unrecognized attributes must be ignored. Parsing of any attribute must not fail due to the presence of an unrecognized attribute as long as that attribute follows the syntax in <code>xml-stylesheet</code>.</p>
+Both the `xslt-param` and the `xslt-param-namespace` PIs must appear in the prolog of the document, i.e. before the first element tag. All PIs in the prolog must be honored, both ones occurring before and onces occurring after any `xml-stylesheet` PIs.
 
-<p>Both the <code>xslt-param</code> and the <code>xslt-param-namespace</code> PIs must appear in the prolog of the document, i.e. before the first element tag. All PIs in the prolog must be honored, both ones occurring before and onces occurring after any <code>xml-stylesheet</code> PIs.</p>
+If there are multiple `xml-stylesheet` PIs the parameters apply to all stylesheets as a consequence of that all stylesheets are imported into a single stylesheet per the XSLT spec.reference? Note that multiple `xml-stylesheet` XSLT PIs are not supported in Firefox currently.
 
-<p>If there are multiple <code>xml-stylesheet</code> PIs the parameters apply to all stylesheets as a consequence of that all stylesheets are imported into a single stylesheet per the XSLT spec.reference? Note that multiple <code>xml-stylesheet</code> XSLT PIs are not supported in Firefox currently.</p>
+#### xslt-param
 
-<h4 id="xslt-param">xslt-param</h4>
+The `xslt-param` PI supports 4 attributes:
 
-<p>The <code>xslt-param</code> PI supports 4 attributes:</p>
+- name
+  - : The local-name part of the parameter name. No syntax checking is done on the attribute, however if it is not a valid [NCName](https://www.w3.org/TR/REC-xml-names/#NT-NCName) it will never match any parameter in the stylesheet.
+- namespace
+  - : The namespace of the parameter name. No syntax checking is done on the attribute.
+- value
+  - : Contains the string value for the parameter. The value of the attribute is used as value for the parameter. The datatype will always be*string*.
+- select
+  - : An [XPath](/en-US/XPath) expression for the parameter. The value of the attribute is parsed as an XPath expression. The result of evaluating the expression is used as value for the parameter.
 
-<dl>
- <dt>name </dt>
- <dd>The local-name part of the parameter name. No syntax checking is done on the attribute, however if it is not a valid <a href="https://www.w3.org/TR/REC-xml-names/#NT-NCName">NCName</a> it will never match any parameter in the stylesheet.</dd>
- <dt>namespace </dt>
- <dd>The namespace of the parameter name. No syntax checking is done on the attribute.</dd>
- <dt>value </dt>
- <dd>Contains the string value for the parameter. The value of the attribute is used as value for the parameter. The datatype will always be<em>string</em>.</dd>
- <dt>select </dt>
- <dd>An <a href="/en-US/XPath">XPath</a> expression for the parameter. The value of the attribute is parsed as an XPath expression. The result of evaluating the expression is used as value for the parameter.</dd>
-</dl>
+If the **name** attribute is missing or empty the PI is ignored.
 
-<p>If the <strong>name</strong> attribute is missing or empty the PI is ignored.</p>
+If the **namespace** attribute is missing or empty the null namespace is used.
 
-<p>If the <strong>namespace</strong> attribute is missing or empty the null namespace is used.</p>
+It is not an error to specify a parameter name that does not exist in the stylesheet (or that is a variable in the stylesheet). The PI is ignored.
 
-<p>It is not an error to specify a parameter name that does not exist in the stylesheet (or that is a variable in the stylesheet). The PI is ignored.</p>
+If both **value** and **select** are present or if neither **value** nor **select** are present the PI is ignored.
 
-<p>If both <strong>value</strong> and <strong>select</strong> are present or if neither <strong>value</strong> nor <strong>select</strong> are present the PI is ignored.</p>
+Note that `value="..."` is not strictly equal to `select="'...'"` since the value can contain both apostrophe and quote characters.
 
-<p>Note that <code>value="..."</code> is not strictly equal to <code>select="'...'"</code> since the value can contain both apostrophe and quote characters.</p>
+##### Examples
 
-<h5 id="Examples">Examples</h5>
+Set the parameter 'color' to the string 'red':
 
-<p>Set the parameter 'color' to the string 'red':</p>
+    <?xslt-param name="color" value="red"?>
 
-<pre class="eval">&lt;?xslt-param name="color" value="red"?&gt;
-</pre>
+Set the parameter 'columns' to the number 2:
 
-<p>Set the parameter 'columns' to the number 2:</p>
+    <?xslt-param name="columns" select="2"?>
 
-<pre class="eval">&lt;?xslt-param name="columns" select="2"?&gt;
-</pre>
+Set the parameter 'books' to a nodeset containing all `<book>` elements in the null namespace:
 
-<p>Set the parameter 'books' to a nodeset containing all <code>&lt;book&gt;</code> elements in the null namespace:</p>
+    <?xslt-param name="books" select="//book"?>
 
-<pre class="eval">&lt;?xslt-param name="books" select="//book"?&gt;
-</pre>
+Set the parameter 'show-toc' to boolean `true`:
 
-<p>Set the parameter 'show-toc' to boolean <code>true</code>:</p>
+     <?xslt-param name="show-toc" select="true()"?>
 
-<pre class="eval"> &lt;?xslt-param name="show-toc" select="true()"?&gt;
-</pre>
+##### The select attribute context
 
-<h5 id="The_select_attribute_context">The select attribute context</h5>
+The following context is used to parse and evaluate the expression in the **select** attribute.
 
-<p>The following context is used to parse and evaluate the expression in the <strong>select</strong> attribute.</p>
+- The context node is the node used as initial current node used when executing the stylesheet.
+- The context position is the position of the context node in the initial current node list used when executing the stylesheet.
+- The context size is the size of the initial current node list used when executing the stylesheet.
+- No variables are available.
+- The function library is the standard XPath function library.
+- The namespace declarations are determined by the `xslt-param-namespace` PIs, see below.
 
-<ul>
- <li>The context node is the node used as initial current node used when executing the stylesheet.</li>
- <li>The context position is the position of the context node in the initial current node list used when executing the stylesheet.</li>
- <li>The context size is the size of the initial current node list used when executing the stylesheet.</li>
- <li>No variables are available.</li>
- <li>The function library is the standard XPath function library.</li>
- <li>The namespace declarations are determined by the <code>xslt-param-namespace</code> PIs, see below.</li>
-</ul>
+If the **select** attribute fails to parse or execute, the PI is ignored (in particular, it does not fall back to the **value** attribute).
 
-<p>If the <strong>select</strong> attribute fails to parse or execute, the PI is ignored (in particular, it does not fall back to the <strong>value</strong> attribute).</p>
+#### xslt-param-namespace
 
-<h4 id="xslt-param-namespace">xslt-param-namespace</h4>
+The `xslt-param-namespace` uses two attributes:
 
-<p>The <code>xslt-param-namespace</code> uses two attributes:</p>
+- prefix
+  - : The prefix that is mapped.
+- namespace
+  - : The namespace the prefix maps to.
 
-<dl>
- <dt>prefix </dt>
- <dd>The prefix that is mapped.</dd>
- <dt>namespace </dt>
- <dd>The namespace the prefix maps to.</dd>
-</dl>
+An `xslt-param-namespace` PI affects the expression in the **select** attribute for all `xslt-param`s following the PI. This applies even if there are other nodes such as comments or other PIs between the `xslt-param-namespace` and `xslt-param` PIs.
 
-<p>An <code>xslt-param-namespace</code> PI affects the expression in the <strong>select</strong> attribute for all <code>xslt-param</code>s following the PI. This applies even if there are other nodes such as comments or other PIs between the <code>xslt-param-namespace</code> and <code>xslt-param</code> PIs.</p>
+It is not an error for multiple PIs to use the same prefix, every new PI just changes what namespace the prefix maps to.
 
-<p>It is not an error for multiple PIs to use the same prefix, every new PI just changes what namespace the prefix maps to.</p>
+If **prefix** is missing, empty, or equals an invalid NCName, the PI is ignored.
 
-<p>If <strong>prefix</strong> is missing, empty, or equals an invalid NCName, the PI is ignored.</p>
+If **namespace** is missing, the PI is ignored. If **namespace** is empty, the prefix mapping is removed.
 
-<p>If <strong>namespace</strong> is missing, the PI is ignored. If <strong>namespace</strong> is empty, the prefix mapping is removed.</p>
+##### Examples
 
-<h5 id="Examples_2">Examples</h5>
+Set the parameter 'books' to a nodeset containing all `<book>` elements in the 'http\://www\.example.org/myNamespace' namespace:
 
-<p>Set the parameter 'books' to a nodeset containing all <code>&lt;book&gt;</code> elements in the 'http://www.example.org/myNamespace' namespace:</p>
+    <?xslt-param-namespace prefix="my" namespace="http://www.example.org/myNamespace"?>
+    <?xslt-param name="books" select="//my:book"?>
 
-<pre class="eval">&lt;?xslt-param-namespace prefix="my" namespace="http://www.example.org/myNamespace"?&gt;
-&lt;?xslt-param name="books" select="//my:book"?&gt;
-</pre>
+### Supported versions
 
-<h3 id="Supported_versions">Supported versions</h3>
+Supported as of Firefox 2.0.0.1. The **value** attribute is supported in Firefox 2, but the **select** attribute crashes for some expressions in the 2.0 release.
 
-<p>Supported as of Firefox 2.0.0.1. The <strong>value</strong> attribute is supported in Firefox 2, but the <strong>select</strong> attribute crashes for some expressions in the 2.0 release.</p>
+### Possible future developments
 
-<h3 id="Possible_future_developments">Possible future developments</h3>
+Should we allow any XSLT functions in the expression? `document()` seems useful, but it seems tricky to maintain the invariant that `generate-id()` should produce the same string for the same document.
 
-<p>Should we allow any XSLT functions in the expression? <code>document()</code> seems useful, but it seems tricky to maintain the invariant that <code>generate-id()</code> should produce the same string for the same document.</p>
-
-<p>What about querying URL parameters in the XSLT stylesheet? E.g. Passing them to specified &lt;xsl:param&gt;'s.</p>
+What about querying URL parameters in the XSLT stylesheet? E.g. Passing them to specified \<xsl:param>'s.

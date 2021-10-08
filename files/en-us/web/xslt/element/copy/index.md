@@ -1,5 +1,5 @@
 ---
-title: '<xsl:copy>'
+title: <xsl:copy>
 slug: Web/XSLT/Element/copy
 tags:
   - Element
@@ -7,35 +7,33 @@ tags:
   - XSLT
   - copy
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>The <code>&lt;xsl:copy&gt;</code> element transfers a shallow copy (the node and any associated namespace node) of the current node to the output document. It does not copy any children or attributes of the current node.</p>
+The `<xsl:copy>` element transfers a shallow copy (the node and any associated namespace node) of the current node to the output document. It does not copy any children or attributes of the current node.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre>&lt;xsl:copy use-attribute-sets=LIST-OF-NAMES&gt;
-	TEMPLATE
-&lt;/xsl:copy&gt;</pre>
+    <xsl:copy use-attribute-sets=LIST-OF-NAMES>
+    	TEMPLATE
+    </xsl:copy>
 
-<h3 id="Required_Attributes">Required Attributes</h3>
+### Required Attributes
 
-<p>None.</p>
+None.
 
-<h3 id="Optional_Attributes">Optional Attributes</h3>
+### Optional Attributes
 
-<dl>
- <dt><code>use-attribute-sets</code></dt>
- <dd>Lists attribute sets that should be applied to the output node, if it is an element. Names of the sets should be separated with whitespace characters.</dd>
-</dl>
+- `use-attribute-sets`
+  - : Lists attribute sets that should be applied to the output node, if it is an element. Names of the sets should be separated with whitespace characters.
 
-<h3 id="Type">Type</h3>
+### Type
 
-<p>Instruction, appears within a template.</p>
+Instruction, appears within a template.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p>XSLT, section 7.5.</p>
+XSLT, section 7.5.
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

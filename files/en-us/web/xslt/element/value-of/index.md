@@ -1,5 +1,5 @@
 ---
-title: '<xsl:value-of>'
+title: <xsl:value-of>
 slug: Web/XSLT/Element/value-of
 tags:
   - Element
@@ -7,36 +7,32 @@ tags:
   - XSLT
   - value-of
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>The <code>&lt;xsl:value-of&gt;</code> element evaluates an XPath expression, converts it to a string, and writes that string to the result tree.</p>
+The `<xsl:value-of>` element evaluates an XPath expression, converts it to a string, and writes that string to the result tree.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre>&lt;xsl:value-of select=EXPRESSION disable-output-escaping="yes" | "no"  /&gt;</pre>
+    <xsl:value-of select=EXPRESSION disable-output-escaping="yes" | "no"  />
 
-<h3 id="Required_Attributes">Required Attributes</h3>
+### Required Attributes
 
-<dl>
- <dt><code>select</code></dt>
- <dd>Specifies the XPath expression to be evaluated and written to the output tree.</dd>
-</dl>
+- `select`
+  - : Specifies the XPath expression to be evaluated and written to the output tree.
 
-<h3 id="Optional_Attributes">Optional Attributes</h3>
+### Optional Attributes
 
-<dl>
- <dt><code>disable-output-escaping</code> (Netscape does not serialize the result of transformation - the "output" below - so this attribute is essentially irrelevant in context. To output html-entities, use numerical values instead, eg <code>&amp;#160</code> for <code>&amp;nbsp</code>)</dt>
- <dd>Specifies whether special characters are escaped when written to the output. The available values are "<code>yes</code>" or "<code>no</code>". If "<code>yes</code>" is set, for example, the character &gt; is output as <code>&gt;</code>, not as "<code>&amp;gt</code>".</dd>
-</dl>
+- `disable-output-escaping` (Netscape does not serialize the result of transformation - the "output" below - so this attribute is essentially irrelevant in context. To output html-entities, use numerical values instead, eg `&#160` for `&nbsp`)
+  - : Specifies whether special characters are escaped when written to the output. The available values are "`yes`" or "`no`". If "`yes`" is set, for example, the character > is output as `>`, not as "`&gt`".
 
-<h3 id="Type">Type</h3>
+### Type
 
-<p>Instruction, appears with a template.</p>
+Instruction, appears with a template.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p>XSLT, section 7.6.1.</p>
+XSLT, section 7.6.1.
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported except as above.</p>
+Supported except as above.

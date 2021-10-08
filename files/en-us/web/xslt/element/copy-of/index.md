@@ -1,5 +1,5 @@
 ---
-title: '<xsl:copy-of>'
+title: <xsl:copy-of>
 slug: Web/XSLT/Element/copy-of
 tags:
   - Element
@@ -7,33 +7,31 @@ tags:
   - XSLT
   - copy-of
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>The <code>&lt;xsl:copy-of&gt;</code> element makes a deep copy (including descendant nodes) of whatever the select attribute specifies to the output document.</p>
+The `<xsl:copy-of>` element makes a deep copy (including descendant nodes) of whatever the select attribute specifies to the output document.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre>&lt;xsl:copy-of select=EXPRESSION /&gt; </pre>
+    <xsl:copy-of select=EXPRESSION />
 
-<h3 id="Required_Attributes">Required Attributes</h3>
+### Required Attributes
 
-<dl>
- <dt><code>select</code></dt>
- <dd>Uses an XPath expression that specifies what is to be copied.</dd>
-</dl>
+- `select`
+  - : Uses an XPath expression that specifies what is to be copied.
 
-<h3 id="Optional_Attributes">Optional Attributes</h3>
+### Optional Attributes
 
-<p>None.</p>
+None.
 
-<h3 id="Type">Type</h3>
+### Type
 
-<p>Instruction, appears within a template.</p>
+Instruction, appears within a template.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p>XSLT, section 11.3.</p>
+XSLT, section 11.3.
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

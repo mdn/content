@@ -1,5 +1,5 @@
 ---
-title: '<xsl:param>'
+title: <xsl:param>
 slug: Web/XSLT/Element/param
 tags:
   - Element
@@ -7,38 +7,34 @@ tags:
   - XSLT
   - param
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>The <code>&lt;xsl:param&gt;</code> element establishes a parameter by name and, optionally, a default value for that parameter. When used as a top-level element, the parameter is global . When used inside an <code>&lt;xsl:template&gt;</code> element, the parameter is local to that template. In this case it must be the first child element of the template.</p>
+The `<xsl:param>` element establishes a parameter by name and, optionally, a default value for that parameter. When used as a top-level element, the parameter is global . When used inside an `<xsl:template>` element, the parameter is local to that template. In this case it must be the first child element of the template.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre>&lt;xsl:param name=NAME select=EXPRESSION&gt;
-	TEMPLATE
-&lt;/xsl:param&gt;</pre>
+    <xsl:param name=NAME select=EXPRESSION>
+    	TEMPLATE
+    </xsl:param>
 
-<h3 id="Required_Attributes">Required Attributes</h3>
+### Required Attributes
 
-<dl>
- <dt><code>name</code></dt>
- <dd>Names the parameter. This must be a QName.</dd>
-</dl>
+- `name`
+  - : Names the parameter. This must be a QName.
 
-<h3 id="Optional_Attributes">Optional Attributes</h3>
+### Optional Attributes
 
-<dl>
- <dt><code>select</code></dt>
- <dd>Uses an XPath expression to provide a default value if none is specified.</dd>
-</dl>
+- `select`
+  - : Uses an XPath expression to provide a default value if none is specified.
 
-<h3 id="Type">Type</h3>
+### Type
 
-<p>Instruction, can appear as a top-level element or within a template.</p>
+Instruction, can appear as a top-level element or within a template.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p>XSLT, section 11.</p>
+XSLT, section 11.
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.
