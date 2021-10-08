@@ -8,7 +8,7 @@ tags:
   - IdleDetector
 browser-compat: api.IdleDetector.IdleDetector
 ---
-{{securecontext_header}}{{DefaultAPISidebar("")}}
+{{securecontext_header}}{{DefaultAPISidebar("Idle Detection API")}}
 
 The **`IdleDetector()`** constructor creates a new {{domxref("IdleDetector")}}
 object which provides events indicating when the user is no longer interacting

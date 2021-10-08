@@ -9,7 +9,7 @@ tags:
   - IdleDetector
 browser-compat: api.IdleDetector.start
 ---
-{{securecontext_header}}{{DefaultAPISidebar("")}}
+{{securecontext_header}}{{DefaultAPISidebar("Idle Detection API")}}
 
 The **`start()`** method of the {{domxref("IdleDetector")}} interface returns a
 {{jsxref("Promise")}} that resolves when the detector starts listening for changes in the

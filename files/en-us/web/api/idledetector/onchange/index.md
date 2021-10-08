@@ -9,7 +9,7 @@ tags:
   - IdleDetector
 browser-compat: api.IdleDetector.onchange
 ---
-{{securecontext_header}}{{DefaultAPISidebar("")}}
+{{securecontext_header}}{{DefaultAPISidebar("Idle Detection API")}}
 
 The **`onchange`** EventHandler of the {{domxref("IdleDetector")}} interface is
 called when the value of `userState` or `screenState` has changed. This method

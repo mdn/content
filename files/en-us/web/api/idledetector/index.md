@@ -8,7 +8,7 @@ tags:
   - IdleDetector
 browser-compat: api.IdleDetector
 ---
-{{securecontext_header}}{{DefaultAPISidebar("")}}
+{{securecontext_header}}{{DefaultAPISidebar("Idle Detection API")}}
 
 The **`IdleDetector`** interface of the {{domxref('','','','true')}}
 
