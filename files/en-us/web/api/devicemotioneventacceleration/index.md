@@ -10,7 +10,7 @@ tags:
   - Reference
 browser-compat: api.DeviceMotionEventAcceleration
 ---
-{{ ApiRef("Device Orientation Events") }}{{SeeCompatTable}}
+{{securecontext_header}}{{ ApiRef("Device Orientation Events") }}{{SeeCompatTable}}
 
 A **`DeviceMotionEventAcceleration`** object provides information about the amount of acceleration the device is experiencing along all three axes.
 

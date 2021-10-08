@@ -58,11 +58,18 @@ tags:
   This can be used to assign a handler for processing <a href="/en-US/docs/Web/API/HTMLSlotElement/slotchange_event"><code>slotchange</code></a> events, which are fired on {{HTMLElement("slot")}} elements when the node(s) contained in the slot change ({{bug(1501983)}}).</li>
 </ul>
 
-<h4 id="removals_media">Removals</h4>
+<h4 id="removals">Removals</h4>
 
 <ul>
   <li>{{domxref("KeyboardEvent.initKeyEvent()")}} has been moved behind the preference <code>dom.keyboardevent.init_key_event.enabled</code> and is disabled by default.
     The method is not present in any current specification or supported in other current browsers ({{bug(1717760)}}).</li>
+</ul>
+
+
+<h3 id="webdriver_conformance_marionette">WebDriver conformance (Marionette)</h3>
+
+<ul>
+  <li>Fixed a bug which caused <code>WebDriver:Print</code> to fail for large documents ({{bug(1721982)}}).</li>
 </ul>
 
 

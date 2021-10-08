@@ -14,7 +14,7 @@ tags:
 
 <p>{{PreviousMenuNext("Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard", "Games/Techniques/Control_mechanisms/Other", "Games/Techniques/Control_mechanisms")}}</p>
 
-<p class="summary">Now we'll look at adding something extra — support for gamepad controls, via the Gamepad API. It brings a console-like experience to your web games.</p>
+<p>Now we'll look at adding something extra — support for gamepad controls, via the Gamepad API. It brings a console-like experience to your web games.</p>
 
 <p>The Gamepad API gives you the ability to connect a gamepad to your computer and detect pressed buttons directly from the JavaScript code thanks to the browsers implementing such feature. An API exposes all the information you need to hook up your game's logic and successfully control the user interface and gameplay.</p>
 
@@ -39,7 +39,7 @@ function gamepadHandler(e) {
 
 <p>The second line in the <code>gamepadHandler</code> function shows up on the screen when the device is connected:</p>
 
-<p><img alt="Gamepad connected message under the Captain Rogers game - wireless XBox 360 controller." src="controls-gamepadtext.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Gamepad connected message under the Captain Rogers game - wireless XBox 360 controller." src="controls-gamepadtext.png"></p>
 
 <p>We can also show the <code>id</code> of the device — in the case above we're using the XBox 360 wireless controller.</p>
 
@@ -102,7 +102,7 @@ function gamepadHandler(e) {
 
 <p>In this case, we are checking the four D-Pad buttons (0-3) and the A button (11).</p>
 
-<p class="note"><strong>Note</strong>: Please remember that different devices may have different key mappings, i.e. the D-Pad Right button have an index of 3 on the wireless XBox 360, but may have a different one on another device.</p>
+<div class="note"><p><strong>Note:</strong> Please remember that different devices may have different key mappings, i.e. the D-Pad Right button have an index of 3 on the wireless XBox 360, but may have a different one on another device.</p></div>
 
 <p>You could also create a helper function that would assign proper names to the listed buttons, so for example instead of checking out if <code>gamepadButtonPressedHandler(3)</code> is pressed, you could do a more descriptive check: <code>gamepadButtonPressedHandler('DPad-Right')</code>.</p>
 
@@ -250,7 +250,7 @@ window.addEventListener("gamepaddisconnected", GamepadAPI.disconnect);</pre>
 
 <p>When pressing the <code>Start</code> button the relevant function will be called to begin the game, and the same approach is used for turning the audio on and off. There's an option wired up to show <code>screenGamepadHelp</code>, which holds an image with all the button controls explained — if the <code>Y</code> button is pressed and held, the help becomes visible; when it is released the help disappears.</p>
 
-<p><img alt="Gamepad info with all the available keys described and explained." src="controls-gamepadinfo.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="Gamepad info with all the available keys described and explained." src="controls-gamepadinfo.png"></p>
 
 <h2 id="On-screen_instructions">On-screen instructions</h2>
 

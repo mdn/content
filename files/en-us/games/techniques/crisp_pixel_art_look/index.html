@@ -12,28 +12,30 @@ tags:
   - image-rendering
   - pixel
 ---
-<div>{{GamesSidebar}}</div><p class="summary">This article discusses a useful technique for giving your canvas/WebGL games a crisp pixel art look, even on high definition monitors.</p>
+<div>{{GamesSidebar}}</div>
+
+<p>This article discusses a useful technique for giving your canvas/WebGL games a crisp pixel art look, even on high definition monitors.</p>
 
 <h2 id="The_concept">The concept</h2>
 
 <p>Retro <a href="https://wikipedia.org/wiki/Pixel_art">pixel art</a> aesthetics are getting popular, especially in <a href="https://wikipedia.org/wiki/Indie_game">indie games</a> or <a href="https://wikipedia.org/wiki/Game_jam">game jam</a> entries. But since today's screens render content at high resolutions, there is a problem with making sure the pixel art does not look blurry. Developers have been manually scaling up graphics so they are shown with blocks that represent pixels. Two downsides to this method are larger file sizes and <a href="https://wikipedia.org/wiki/Compression_artifact">compression artifacts</a>.</p>
 
-<table class="standard-table" style="margin: 0 auto 1.5em auto;">
+<table class="standard-table">
  <tbody>
   <tr>
-   <td style="text-align: center; vertical-align: middle;"><img alt="" src="technique_original.png"></td>
-   <td style="text-align: center; vertical-align: middle;"><img alt="" src="technique_original.png"></td>
-   <td style="text-align: center; vertical-align: middle;"><img alt="" src="technique_4x.png"></td>
+   <td><img alt="" src="technique_original.png"></td>
+   <td><img alt="" src="technique_original.png"></td>
+   <td><img alt="" src="technique_4x.png"></td>
   </tr>
   <tr>
-   <td style="text-align: center;">original size</td>
-   <td style="text-align: center;">4x size</td>
-   <td style="text-align: center;">4x size (scaled with an image editor)</td>
+   <td>original size</td>
+   <td>4x size</td>
+   <td>4x size (scaled with an image editor)</td>
   </tr>
   <tr>
-   <td style="text-align: center;">none</td>
-   <td style="text-align: center;">vendor's algorithm</td>
-   <td style="text-align: center;"><a href="https://wikipedia.org/wiki/Nearest-neighbor_interpolation">nearest-neighbor algorithm</a></td>
+   <td>none</td>
+   <td>vendor's algorithm</td>
+   <td><a href="https://wikipedia.org/wiki/Nearest-neighbor_interpolation">nearest-neighbor algorithm</a></td>
   </tr>
  </tbody>
 </table>
@@ -54,7 +56,7 @@ tags:
 
 <p>Let's have a look at an example. The original image we want to upscale looks like this:</p>
 
-<p><img alt="" src="cat.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="cat.png"></p>
 
 <p>Here's some HTML to create a simple canvas:</p>
 
@@ -89,5 +91,5 @@ image.src = 'cat.png';</pre>
 <p>{{ EmbedLiveSample('An_example', '100%', 520) }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can check out the <a href="https://github.com/belen-albeza/retro-canvas">original code on Github</a> (<a href="https://belen-albeza.github.io/retro-canvas/">and a live example</a>.)</p>
+<p><strong>Note:</strong> You can check out the <a href="https://github.com/belen-albeza/retro-canvas">original code on Github</a> (<a href="https://belen-albeza.github.io/retro-canvas/">and a live example</a>.)</p>
 </div>

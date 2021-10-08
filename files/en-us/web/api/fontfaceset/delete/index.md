@@ -26,7 +26,7 @@ FontFaceSet.delete(font)
 
 ### Return Value
 
-A {{domxref("Boolean")}} which is `true` if the deletion was successful.
+A boolean value which is `true` if the deletion was successful.
 
 > **Note:** if the font passed into this method was added via the CSS {{cssxref("@font-face")}} rule, the method will return `false` as it is not possible to modify fonts added via CSS.
 
