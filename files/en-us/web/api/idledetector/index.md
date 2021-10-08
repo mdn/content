@@ -10,13 +10,8 @@ browser-compat: api.IdleDetector
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Idle Detection API")}}
 
-The **`IdleDetector`** interface of the {{domxref('','','','true')}}
-
-## Description
-
-The `IdleDetector` interface of the Idle Detection API provides events
-indicating when the user is no longer interacting with their device or the
-screen has locked.
+The **`IdleDetector`** interface of the {{domxref('idle_detection_api','Idle
+Detection API','','true')}} provides methods and events for detecting user activity on a device or screen.
 
 This interface requires a secure context.
 
