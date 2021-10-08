@@ -11,76 +11,72 @@ tags:
   - tilemap
   - tiles
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p>Tilemaps are a very popular technique in 2D game development, consisting of building the game world or level map out of small, regular-shaped images called <strong>tiles</strong>. This results in performance and memory usage gains — big image files containing entire level maps are not needed, as they are constructed by small images or image fragments multiple times. This set of articles covers the basics of creating tile maps using <a href="/en-US/docs/Web/JavaScript">JavaScript</a> and <a href="/en-US/docs/Web/API/Canvas_API">Canvas</a> (although the same high level techniques could be used in any programming language.)</p>
+Tilemaps are a very popular technique in 2D game development, consisting of building the game world or level map out of small, regular-shaped images called **tiles**. This results in performance and memory usage gains — big image files containing entire level maps are not needed, as they are constructed by small images or image fragments multiple times. This set of articles covers the basics of creating tile maps using [JavaScript](/en-US/docs/Web/JavaScript) and [Canvas](/en-US/docs/Web/API/Canvas_API) (although the same high level techniques could be used in any programming language.)
 
-<p>Besides the performance gains, tilemaps can also be mapped to a logical grid, which can be used in other ways inside the game logic (for example creating a path-finding graph, or handling collisions) or to create a level editor.</p>
+Besides the performance gains, tilemaps can also be mapped to a logical grid, which can be used in other ways inside the game logic (for example creating a path-finding graph, or handling collisions) or to create a level editor.
 
-<p>Some popular games that use this technique are <em>Super Mario Bros</em>, <em>Pacman</em>, <em>Zelda: Link's Awakening</em>, <em>Starcraft</em>, and <em>Sim City 2000</em>. Think about any game that uses regularly repeating squares of background, and you'll probably find it uses tilemaps.</p>
+Some popular games that use this technique are _Super Mario Bros_, _Pacman_, _Zelda: Link's Awakening_, _Starcraft_, and _Sim City 2000_. Think about any game that uses regularly repeating squares of background, and you'll probably find it uses tilemaps.
 
-<h2 id="The_tile_atlas">The tile atlas</h2>
+## The tile atlas
 
-<p>The most efficient way to store the tile images is in an atlas or spritesheet. This is all of the required tiles grouped together in a single image file. When it's time to draw a tile, only a small section of this bigger image is rendered on the game canvas. The below images shows a tile atlas of 8 x 4 tiles:</p>
+The most efficient way to store the tile images is in an atlas or spritesheet. This is all of the required tiles grouped together in a single image file. When it's time to draw a tile, only a small section of this bigger image is rendered on the game canvas. The below images shows a tile atlas of 8 x 4 tiles:
 
-<p><img alt="Tile atlas image" src="tile_atlas.png"></p>
+![Tile atlas image](tile_atlas.png)
 
-<p>Using an atlas also has the advantage of naturally assigning every tile an <strong>index</strong>. This index is perfect to use as the tile identifier when creating the tilemap object.</p>
+Using an atlas also has the advantage of naturally assigning every tile an **index**. This index is perfect to use as the tile identifier when creating the tilemap object.
 
-<h2 id="The_tilemap_data_structure">The tilemap data structure</h2>
+## The tilemap data structure
 
-<p>It is common to group all the information needed to handle tilemaps into the same data structure or object. These data objects (<a href="https://github.com/mozdevs/gamedev-js-tiles/blob/gh-pages/square/no-scroll.js#L1-L18">map object example</a>) should include:</p>
+It is common to group all the information needed to handle tilemaps into the same data structure or object. These data objects ([map object example](https://github.com/mozdevs/gamedev-js-tiles/blob/gh-pages/square/no-scroll.js#L1-L18)) should include:
 
-<ul>
- <li><strong>Tile size</strong>: The size of each tile in pixels across / pixels down.</li>
- <li><strong>Image atlas</strong>: The Image atlas that will be used (one or many.)</li>
- <li><strong>Map dimensions</strong>: The dimensions of the map, either in tiles across / tiles down, or pixels across / pixels down.</li>
- <li><strong>Visual grid</strong>: Includes indices showing what type of tile should be placed on each position in the grid.</li>
- <li><strong>Logic grid</strong>: This can be a collision grid, a path-finding grid, etc., depending on the type of game.</li>
-</ul>
+- **Tile size**: The size of each tile in pixels across / pixels down.
+- **Image atlas**: The Image atlas that will be used (one or many.)
+- **Map dimensions**: The dimensions of the map, either in tiles across / tiles down, or pixels across / pixels down.
+- **Visual grid**: Includes indices showing what type of tile should be placed on each position in the grid.
+- **Logic grid**: This can be a collision grid, a path-finding grid, etc., depending on the type of game.
 
-<div class="notecard note">
-<p><strong>Note:</strong> For the visual grid, a special value (usually a negative number, <code>0</code> or <code>null</code>) is needed to represent empty tiles.</p>
-</div>
+> **Note:** For the visual grid, a special value (usually a negative number, `0` or `null`) is needed to represent empty tiles.
 
-<h2 id="Square_tiles">Square tiles</h2>
+## Square tiles
 
-<p>Square-based tilemaps are the most simple implementation. A more generic case would be rectangular-based tilemaps — instead of square — but they are far less common. Square tiles allow for two <strong>perspectives</strong>:</p>
+Square-based tilemaps are the most simple implementation. A more generic case would be rectangular-based tilemaps — instead of square — but they are far less common. Square tiles allow for two **perspectives**:
 
-<ul>
- <li>Top-down (like many RPG's or strategy games like <em>Warcraft 2</em> or <em>Final Fantasy</em>'s world view.)</li>
- <li>Side-view (like platformers such as <em>Super Mario Bros</em>.)</li>
-</ul>
+- Top-down (like many RPG's or strategy games like _Warcraft 2_ or _Final Fantasy_'s world view.)
+- Side-view (like platformers such as _Super Mario Bros_.)
 
-<h3 id="Static_tilemaps">Static tilemaps</h3>
+### Static tilemaps
 
-<p>A tilemap can either fit into the visible screen area screen or be larger. In the first case, the tilemap is <strong>static</strong> — it doesn't need to be scrolled to be fully shown. This case is very common in arcade games like <em>Pacman</em>, <em>Arkanoid</em>, or <em>Sokoban</em>.</p>
+A tilemap can either fit into the visible screen area screen or be larger. In the first case, the tilemap is **static** — it doesn't need to be scrolled to be fully shown. This case is very common in arcade games like _Pacman_, _Arkanoid_, or _Sokoban_.
 
-<p>Rendering static tilemaps is easy, and can be done with a nested loop iterating over columns and rows. A high-level algorithm could be:</p>
+Rendering static tilemaps is easy, and can be done with a nested loop iterating over columns and rows. A high-level algorithm could be:
 
-<pre class="brush: js">for (var column = 0; column &lt; map.columns; column++) {
-  for (var row = 0; row &lt; map.rows; row++) {
+```js
+for (var column = 0; column < map.columns; column++) {
+  for (var row = 0; row < map.rows; row++) {
     var tile = map.getTile(column, row);
     var x = column * map.tileSize;
     var y = row * map.tileSize;
     drawTile(tile, x, y);
   }
 }
-</pre>
+```
 
-<p>You can read more about this and see an example implementation in <a href="/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Static_maps">Square tilemaps implementation: Static maps</a>.</p>
+You can read more about this and see an example implementation in [Square tilemaps implementation: Static maps](/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Static_maps).
 
-<h3 id="Scrolling_tilemaps">Scrolling tilemaps</h3>
+### Scrolling tilemaps
 
-<p><strong>Scrolling</strong> tilemaps only show a small portion of the world at a time. They can follow a character — like in platformers or RPGs — or allow the player to control the camera — like in strategy or simulation games.</p>
+**Scrolling** tilemaps only show a small portion of the world at a time. They can follow a character — like in platformers or RPGs — or allow the player to control the camera — like in strategy or simulation games.
 
-<h4 id="Positioning_and_camera">Positioning and camera</h4>
+#### Positioning and camera
 
-<p>In all scrolling games, we need a translation between <strong>world coordinates </strong>(the position where sprites or other elements are located in the level or game world) and <strong>screen coordinates</strong> (the actual position where those elements are rendered on the screen). The world coordinates can be expressed in terms of tile position (row and column of the map) or in pixels across the map, depending on the game. To be able to transform world coordinates into screen coordinates, we need the coordinates of the camera, since they determine which section of the world is being displayed.</p>
+In all scrolling games, we need a translation between **world coordinates** (the position where sprites or other elements are located in the level or game world) and **screen coordinates** (the actual position where those elements are rendered on the screen). The world coordinates can be expressed in terms of tile position (row and column of the map) or in pixels across the map, depending on the game. To be able to transform world coordinates into screen coordinates, we need the coordinates of the camera, since they determine which section of the world is being displayed.
 
-<p>Here are examples showing how to translate from world coordinates to screen coordinates and back again:</p>
+Here are examples showing how to translate from world coordinates to screen coordinates and back again:
 
-<pre class="brush: js">// these functions assume that the camera points to the top left corner
+```js
+// these functions assume that the camera points to the top left corner
 
 function worldToScreen(x, y) {
   return {x: x - camera.x, y: y - camera.y};
@@ -88,64 +84,58 @@ function worldToScreen(x, y) {
 
 function screenToWorld(x,y) {
   return {x: x + camera.x, y: y + camera.y};
-}</pre>
+}
+```
 
-<h4 id="Rendering">Rendering</h4>
+#### Rendering
 
-<p>A trivial method for rendering would just be to iterate over all the tiles (like in static tilemaps) and draw them, subtracting the camera coordinates (like in the <code>worldToScreen()</code> example shown above) and letting the parts that fall outside the view window sit there, hidden. Drawing all the tiles that can not be seen is wasteful, however, and can take a toll on performance. <strong>Only tiles that are at visible should be rendered</strong> ideally — see the {{anch("Performance")}} section for more ideas on improving rendering performance.</p>
+A trivial method for rendering would just be to iterate over all the tiles (like in static tilemaps) and draw them, subtracting the camera coordinates (like in the `worldToScreen()` example shown above) and letting the parts that fall outside the view window sit there, hidden. Drawing all the tiles that can not be seen is wasteful, however, and can take a toll on performance. **Only tiles that are at visible should be rendered** ideally — see the {{anch("Performance")}} section for more ideas on improving rendering performance.
 
-<p>You can read more about implementing scrolling tilemaps and see some example implementations in <a href="/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Scrolling_maps">Square tilemaps implementation: Scrolling maps</a>.</p>
+You can read more about implementing scrolling tilemaps and see some example implementations in [Square tilemaps implementation: Scrolling maps](/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Scrolling_maps).
 
-<h3 id="Layers">Layers</h3>
+### Layers
 
-<p>The visual grid is often made up of several layers. This allows us to have a richer game world with less tiles, since the same image can be used with different backgrounds. For instance, a rock that could appear on top of several terrain types (like grass, sand or brick) could be included on it's own separate tile which is then rendered on a new layer, instead of several rock tiles, each with a different background terrain.</p>
+The visual grid is often made up of several layers. This allows us to have a richer game world with less tiles, since the same image can be used with different backgrounds. For instance, a rock that could appear on top of several terrain types (like grass, sand or brick) could be included on it's own separate tile which is then rendered on a new layer, instead of several rock tiles, each with a different background terrain.
 
-<p>If characters or other game sprites are drawn in the middle of the layer stack, this allows for interesting effects such as having characters walking behind trees or buildings.</p>
+If characters or other game sprites are drawn in the middle of the layer stack, this allows for interesting effects such as having characters walking behind trees or buildings.
 
-<p>The following screenshot shows an example of both points: a character appearing <em>behind</em> a tile (the knight appearing behind the top of a tree) and a tile (the bush) being rendered over different terrain types.</p>
+The following screenshot shows an example of both points: a character appearing _behind_ a tile (the knight appearing behind the top of a tree) and a tile (the bush) being rendered over different terrain types.
 
-<p><img alt="" src="screen_shot_2015-10-06_at_15.56.05.png"></p>
+![](screen_shot_2015-10-06_at_15.56.05.png)
 
-<h3 id="The_logic_grid">The logic grid</h3>
+### The logic grid
 
-<p>Since tilemaps are an actual grid of visual tiles, it is common to create a mapping between this visual grid and a logic grid. The most common case is to use this logic grid to handle collisions, but other uses are possible as well: character spawning points, detecting whether some elements are placed together in the right way to trigger a certain action (like in <em>Tetris</em> or <em>Bejeweled</em>), path-finding algorithms, etc.</p>
+Since tilemaps are an actual grid of visual tiles, it is common to create a mapping between this visual grid and a logic grid. The most common case is to use this logic grid to handle collisions, but other uses are possible as well: character spawning points, detecting whether some elements are placed together in the right way to trigger a certain action (like in _Tetris_ or _Bejeweled_), path-finding algorithms, etc.
 
-<div class="notecard note">
-<p><strong>Note:</strong> You can take a look at our demo that shows <a href="https://mozdevs.github.io/gamedev-js-tiles/square/logic-grid.html">how to use a logic grid to handle collisions</a>.</p>
-</div>
+> **Note:** You can take a look at our demo that shows [how to use a logic grid to handle collisions](https://mozdevs.github.io/gamedev-js-tiles/square/logic-grid.html).
 
-<h2 id="Isometric_tilemaps">Isometric tilemaps</h2>
+## Isometric tilemaps
 
-<p>Isometric tilemaps create the illusion of a 3D environment, and are extremely popular in 2D simulation, strategy or RPG games. Some of these games include <em>SimCity 2000</em>, <em>Pharaoh</em> or <em>Final Fantasy Tactics</em>. The below image shows an example of an atlas for an isometric tileset.</p>
+Isometric tilemaps create the illusion of a 3D environment, and are extremely popular in 2D simulation, strategy or RPG games. Some of these games include _SimCity 2000_, _Pharaoh_ or _Final Fantasy Tactics_. The below image shows an example of an atlas for an isometric tileset.
 
-<p><img alt="" src="iso_tiles.png"></p>
+![](iso_tiles.png)
 
-<h2 id="Performance">Performance</h2>
+## Performance
 
-<p>Drawing scrolling tile maps can take a toll on performance. Usually, some techniques need to be implemented so scrolling can be smooth. The first approach, as discussed above, is to <strong>only draw tiles that will be visible</strong>. But sometimes, this is not enough.</p>
+Drawing scrolling tile maps can take a toll on performance. Usually, some techniques need to be implemented so scrolling can be smooth. The first approach, as discussed above, is to **only draw tiles that will be visible**. But sometimes, this is not enough.
 
-<p>One simple technique consists of pre-rendering the map in a canvas on its own (when using the Canvas API) or on a texture (when using WebGL), so tiles don't need to be re-drawn every frame and rendering can be done in just one blitting operation. Of course, if the map is large this doesn't really solve the problem — and some systems don't have a very generous limit on how big a texture can be.</p>
+One simple technique consists of pre-rendering the map in a canvas on its own (when using the Canvas API) or on a texture (when using WebGL), so tiles don't need to be re-drawn every frame and rendering can be done in just one blitting operation. Of course, if the map is large this doesn't really solve the problem — and some systems don't have a very generous limit on how big a texture can be.
 
-<p>One way consists of <a href="https://mozdevs.github.io/gamedev-js-tiles/performance/offcanvas.html">drawing the section that will be visible off-canvas</a> (instead of the entire map.) That means that as long as there is no scrolling, the map doesn't need to be rendered.</p>
+One way consists of [drawing the section that will be visible off-canvas](https://mozdevs.github.io/gamedev-js-tiles/performance/offcanvas.html) (instead of the entire map.) That means that as long as there is no scrolling, the map doesn't need to be rendered.
 
-<p>A caveat of that approach is that when there <em>is</em> a scrolling, that technique is not very efficient. A better way would be to create a canvas that is 2x2 tiles bigger than the visible area, so there is one tile of "bleeding" around the edges. That means that the map only needs to be redrawn on canvas when the scrolling has advanced one full tile — instead of every frame — while scrolling.</p>
+A caveat of that approach is that when there _is_ a scrolling, that technique is not very efficient. A better way would be to create a canvas that is 2x2 tiles bigger than the visible area, so there is one tile of "bleeding" around the edges. That means that the map only needs to be redrawn on canvas when the scrolling has advanced one full tile — instead of every frame — while scrolling.
 
-<p>In fast games that might still not be enough.  An alternative method would be to split the tilemap into big sections (like a full map split into 10 x 10 chunks of tiles), pre-render each one off-canvas and then treat each rendered section as a "big tile" in combination with one of the algorithms discussed above.</p>
+In fast games that might still not be enough.  An alternative method would be to split the tilemap into big sections (like a full map split into 10 x 10 chunks of tiles), pre-render each one off-canvas and then treat each rendered section as a "big tile" in combination with one of the algorithms discussed above.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related articles on the MDN:
-  <ul>
-   <li><a href="/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Static_maps">Static square tile maps implementation with Canvas API</a></li>
-   <li><a href="/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Scrolling_maps">Scrolling square tile maps implementation with Canvas API</a></li>
-  </ul>
- </li>
- <li>External resources:
-  <ul>
-   <li><a href="https://mozdevs.github.io/gamedev-js-tiles/">Demos and source code</a></li>
-   <li><a href="http://www-cs-students.stanford.edu/~amitp/game-programming/grids/">Amit's thoughts on grids</a></li>
-   <li><a href="https://en.wikipedia.org/wiki/Isometric_graphics_in_video_games_and_pixel_art">Isometric graphics in videogames</a> (Wikipedia)</li>
-  </ul>
- </li>
-</ul>
+- Related articles on the MDN:
+
+  - [Static square tile maps implementation with Canvas API](/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Static_maps)
+  - [Scrolling square tile maps implementation with Canvas API](/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Scrolling_maps)
+
+- External resources:
+
+  - [Demos and source code](https://mozdevs.github.io/gamedev-js-tiles/)
+  - [Amit's thoughts on grids](http://www-cs-students.stanford.edu/~amitp/game-programming/grids/)
+  - [Isometric graphics in videogames](https://en.wikipedia.org/wiki/Isometric_graphics_in_video_games_and_pixel_art) (Wikipedia)

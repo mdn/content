@@ -10,70 +10,75 @@ tags:
   - collision
   - detection
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
 
-<p>This is the <strong>7th step</strong> out of 10 of the <a href="/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript">Gamedev Canvas tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html">Gamedev-Canvas-workshop/lesson7.html</a>.</p>
+This is the **7th step** out of 10 of the [Gamedev Canvas tutorial](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). You can find the source code as it should look after completing this lesson at [Gamedev-Canvas-workshop/lesson7.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html).
 
-<p>We have the bricks appearing on the screen already, but the game still isn't <em>that</em> interesting as the ball goes through them. We need to think about adding collision detection so it can bounce off the bricks and break them.</p>
+We have the bricks appearing on the screen already, but the game still isn't _that_ interesting as the ball goes through them. We need to think about adding collision detection so it can bounce off the bricks and break them.
 
-<p>It's our decision how to implement this, of course, but it can be tough to calculate whether the ball is touching the rectangle or not because there are no helper functions in Canvas for this. For the sake of this tutorial we will do it the easiest way possible. We will check if the center of the ball is colliding with any of the given bricks. This won't give a perfect result every time, and there are much more sophisticated ways to do collision detection, but this will work fine for teaching you the basic concepts.</p>
+It's our decision how to implement this, of course, but it can be tough to calculate whether the ball is touching the rectangle or not because there are no helper functions in Canvas for this. For the sake of this tutorial we will do it the easiest way possible. We will check if the center of the ball is colliding with any of the given bricks. This won't give a perfect result every time, and there are much more sophisticated ways to do collision detection, but this will work fine for teaching you the basic concepts.
 
-<h2 id="A_collision_detection_function">A collision detection function</h2>
+## A collision detection function
 
-<p>To kick this all off we want to create a collision detection function that will loop through all the bricks and compare every single brick's position with the ball's coordinates as each frame is drawn. For better readability of the code we will define the <code>b</code> variable for storing the brick object in every loop of the collision detection:</p>
+To kick this all off we want to create a collision detection function that will loop through all the bricks and compare every single brick's position with the ball's coordinates as each frame is drawn. For better readability of the code we will define the `b` variable for storing the brick object in every loop of the collision detection:
 
-<pre class="brush: js">function collisionDetection() {
-    for(var c=0; c&lt;brickColumnCount; c++) {
-        for(var r=0; r&lt;brickRowCount; r++) {
+```js
+function collisionDetection() {
+    for(var c=0; c<brickColumnCount; c++) {
+        for(var r=0; r<brickRowCount; r++) {
             var b = bricks[c][r];
             // calculations
         }
     }
-}</pre>
+}
+```
 
-<p>If the center of the ball is inside the coordinates of one of our bricks, we'll change the direction of the ball. For the center of the ball to be inside the brick, all four of the following statements need to be true:</p>
+If the center of the ball is inside the coordinates of one of our bricks, we'll change the direction of the ball. For the center of the ball to be inside the brick, all four of the following statements need to be true:
 
-<ul>
- <li>The x position of the ball is greater than the x position of the brick.</li>
- <li>The x position of the ball is less than the x position of the brick plus its width.</li>
- <li>The y position of the ball is greater than the y position of the brick.</li>
- <li>The y position of the ball is less than the y position of the brick plus its height.</li>
-</ul>
+- The x position of the ball is greater than the x position of the brick.
+- The x position of the ball is less than the x position of the brick plus its width.
+- The y position of the ball is greater than the y position of the brick.
+- The y position of the ball is less than the y position of the brick plus its height.
 
-<p>Let's write that down in code:</p>
+Let's write that down in code:
 
-<pre class="brush: js">function collisionDetection() {
-    for(var c=0; c&lt;brickColumnCount; c++) {
-        for(var r=0; r&lt;brickRowCount; r++) {
+```js
+function collisionDetection() {
+    for(var c=0; c<brickColumnCount; c++) {
+        for(var r=0; r<brickRowCount; r++) {
             var b = bricks[c][r];
-            if(x &gt; b.x &amp;&amp; x &lt; b.x+brickWidth &amp;&amp; y &gt; b.y &amp;&amp; y &lt; b.y+brickHeight) {
+            if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
                 dy = -dy;
             }
         }
     }
-}</pre>
+}
+```
 
-<p>Add the above block to your code, below the <code>keyUpHandler()</code> function.</p>
+Add the above block to your code, below the `keyUpHandler()` function.
 
-<h2 id="Making_the_bricks_disappear_after_they_are_hit">Making the bricks disappear after they are hit</h2>
+## Making the bricks disappear after they are hit
 
-<p>The above code will work as desired and the ball changes its direction. The problem is that the bricks are staying where they are. We have to figure out a way to get rid of the ones we've already hit with the ball. We can do that by adding an extra parameter to indicate whether we want to paint each brick on the screen or not. In the part of the code where we initialize the bricks, let's add a <code>status</code> property to each brick object. Update the following part of the code as indicated by the highlighted line:</p>
+The above code will work as desired and the ball changes its direction. The problem is that the bricks are staying where they are. We have to figure out a way to get rid of the ones we've already hit with the ball. We can do that by adding an extra parameter to indicate whether we want to paint each brick on the screen or not. In the part of the code where we initialize the bricks, let's add a `status` property to each brick object. Update the following part of the code as indicated by the highlighted line:
 
-<pre class="brush: js highlight:[5]">var bricks = [];
-for(var c=0; c&lt;brickColumnCount; c++) {
+```js
+var bricks = [];
+for(var c=0; c<brickColumnCount; c++) {
     bricks[c] = [];
-    for(var r=0; r&lt;brickRowCount; r++) {
+    for(var r=0; r<brickRowCount; r++) {
         bricks[c][r] = { x: 0, y: 0, status: 1 };
     }
-}</pre>
+}
+```
 
-<p>Next we'll check the value of each brick's <code>status</code> property in the <code>drawBricks()</code> function before drawing it — if <code>status</code> is <code>1</code>, then draw it, but if it's <code>0</code>, then it was hit by the ball and we don't want it on the screen anymore. Update your <code>drawBricks()</code> function as follows:</p>
+Next we'll check the value of each brick's `status` property in the `drawBricks()` function before drawing it — if `status` is `1`, then draw it, but if it's `0`, then it was hit by the ball and we don't want it on the screen anymore. Update your `drawBricks()` function as follows:
 
-<pre class="brush: js highlight:[4,5,6,7,8,9,10,11,12,13,14]">function drawBricks() {
-    for(var c=0; c&lt;brickColumnCount; c++) {
-        for(var r=0; r&lt;brickRowCount; r++) {
+```js
+function drawBricks() {
+    for(var c=0; c<brickColumnCount; c++) {
+        for(var r=0; r<brickRowCount; r++) {
             if(bricks[c][r].status == 1) {
                 var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
                 var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
@@ -87,45 +92,47 @@ for(var c=0; c&lt;brickColumnCount; c++) {
             }
         }
     }
-}</pre>
+}
+```
 
-<h2 id="Tracking_and_updating_the_status_in_the_collision_detection_function">Tracking and updating the status in the collision detection function</h2>
+## Tracking and updating the status in the collision detection function
 
-<p>Now we need to involve the brick <code>status</code> property in the <code>collisionDetection()</code> function: if the brick is active (its status is <code>1</code>) we will check whether the collision happens; if a collision does occur we'll set the status of the given brick to <code>0</code> so it won't be painted on the screen. Update your <code>collisionDetection()</code> function as indicated below:</p>
+Now we need to involve the brick `status` property in the `collisionDetection()` function: if the brick is active (its status is `1`) we will check whether the collision happens; if a collision does occur we'll set the status of the given brick to `0` so it won't be painted on the screen. Update your `collisionDetection()` function as indicated below:
 
-<pre class="brush: js highlight:[5,6,7,8,9,10]">function collisionDetection() {
-    for(var c=0; c&lt;brickColumnCount; c++) {
-        for(var r=0; r&lt;brickRowCount; r++) {
+```js
+function collisionDetection() {
+    for(var c=0; c<brickColumnCount; c++) {
+        for(var r=0; r<brickRowCount; r++) {
             var b = bricks[c][r];
             if(b.status == 1) {
-                if(x &gt; b.x &amp;&amp; x &lt; b.x+brickWidth &amp;&amp; y &gt; b.y &amp;&amp; y &lt; b.y+brickHeight) {
+                if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
                     dy = -dy;
                     b.status = 0;
                 }
             }
         }
     }
-}</pre>
+}
+```
 
-<h2 id="Activating_our_collision_detection">Activating our collision detection</h2>
+## Activating our collision detection
 
-<p>The last thing to do is to add a call to the <code>collisionDetection()</code> function to our main <code>draw()</code> function. Add the following line to the <code>draw()</code> function, just below the <code>drawPaddle()</code> call:</p>
+The last thing to do is to add a call to the `collisionDetection()` function to our main `draw()` function. Add the following line to the `draw()` function, just below the `drawPaddle()` call:
 
-<pre class="brush: js">collisionDetection();
-</pre>
+```js
+collisionDetection();
+```
 
-<h2 id="Compare_your_code">Compare your code</h2>
+## Compare your code
 
-<p>The collision detection of the ball is now checked on every frame, with every brick. Now we can destroy bricks! :-</p>
+The collision detection of the ball is now checked on every frame, with every brick. Now we can destroy bricks! :-
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/yumetodo/kaed3hbu/","","395")}}</p>
+{{JSFiddleEmbed("https://jsfiddle.net/yumetodo/kaed3hbu/","","395")}}
 
-<div class="note">
-<p><strong>Note:</strong> Try changing the color of the ball when it hits the brick.</p>
-</div>
+> **Note:** Try changing the color of the ball when it hits the brick.
 
-<h2 id="Next_steps">Next steps</h2>
+## Next steps
 
-<p>We are definitely getting there now; let's move on! In the eighth chapter we will be looking at how to <a href="/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win">Track the score and win</a>.</p>
+We are definitely getting there now; let's move on! In the eighth chapter we will be looking at how to [Track the score and win](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win).
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}

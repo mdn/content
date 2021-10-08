@@ -11,56 +11,63 @@ tags:
   - Tutorial
   - keyboard
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}
 
-<p>This is the <strong>4th step</strong> out of 10 of the <a href="/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript">Gamedev Canvas tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html">Gamedev-Canvas-workshop/lesson4.html</a>.</p>
+This is the **4th step** out of 10 of the [Gamedev Canvas tutorial](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). You can find the source code as it should look after completing this lesson at [Gamedev-Canvas-workshop/lesson4.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html).
 
-<p>The ball is bouncing off the walls freely and you can watch it indefinitely, but currently there's no interactivity. It's not a game if you cannot control it! So let's add some user interaction: a controllable paddle.</p>
+The ball is bouncing off the walls freely and you can watch it indefinitely, but currently there's no interactivity. It's not a game if you cannot control it! So let's add some user interaction: a controllable paddle.
 
-<h2 id="Defining_a_paddle_to_hit_the_ball">Defining a paddle to hit the ball</h2>
+## Defining a paddle to hit the ball
 
-<p>So, we need a paddle to hit the ball. Let's define a few variables for that. Add the following variables near the top of your code, beside your other variables:</p>
+So, we need a paddle to hit the ball. Let's define a few variables for that. Add the following variables near the top of your code, beside your other variables:
 
-<pre class="brush: js">var paddleHeight = 10;
+```js
+var paddleHeight = 10;
 var paddleWidth = 75;
-var paddleX = (canvas.width-paddleWidth) / 2;</pre>
+var paddleX = (canvas.width-paddleWidth) / 2;
+```
 
-<p>Here we're defining the height and width of the paddle and its starting point on the <code>x</code> axis for use in calculations further on down the code. Let's create a function that will draw the paddle on the screen. Add the following just below your <code>drawBall()</code> function:</p>
+Here we're defining the height and width of the paddle and its starting point on the `x` axis for use in calculations further on down the code. Let's create a function that will draw the paddle on the screen. Add the following just below your `drawBall()` function:
 
-<pre class="brush: js">function drawPaddle() {
+```js
+function drawPaddle() {
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
     ctx.fillStyle = "#0095DD";
     ctx.fill();
     ctx.closePath();
-}</pre>
+}
+```
 
-<h2 id="Allowing_the_user_to_control_the_paddle">Allowing the user to control the paddle</h2>
+## Allowing the user to control the paddle
 
-<p>We can draw the paddle wherever we want, but it should respond to the user's actions. It's time to implement some keyboard controls. We will need the following:</p>
+We can draw the paddle wherever we want, but it should respond to the user's actions. It's time to implement some keyboard controls. We will need the following:
 
-<ul>
- <li>Two variables for storing information on whether the left or right control button is pressed.</li>
- <li>Two event listeners for <code>keydown</code> and <code>keyup</code> events. We want to run some code to handle the paddle movement when the buttons are pressed.</li>
- <li>Two functions handling the <code>keydown</code> and <code>keyup</code> events  the code that will be run when the buttons are pressed.</li>
- <li>The ability to move the paddle left and right</li>
-</ul>
+- Two variables for storing information on whether the left or right control button is pressed.
+- Two event listeners for `keydown` and `keyup` events. We want to run some code to handle the paddle movement when the buttons are pressed.
+- Two functions handling the `keydown` and `keyup` events  the code that will be run when the buttons are pressed.
+- The ability to move the paddle left and right
 
-<p>Pressed buttons can be defined and initialized with boolean variables like in the example. Add these lines somewhere near the rest of your variables:</p>
+Pressed buttons can be defined and initialized with boolean variables like in the example. Add these lines somewhere near the rest of your variables:
 
-<pre class="brush: js">var rightPressed = false;
-var leftPressed = false;</pre>
+```js
+var rightPressed = false;
+var leftPressed = false;
+```
 
-<p>The default value for both is <code>false</code> because at the beginning the control buttons are not pressed. To listen for key presses, we will set up two event listeners. Add the following lines just above the <code>setInterval()</code> line at the bottom of your JavaScript:</p>
+The default value for both is `false` because at the beginning the control buttons are not pressed. To listen for key presses, we will set up two event listeners. Add the following lines just above the `setInterval()` line at the bottom of your JavaScript:
 
-<pre class="brush: js">document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);</pre>
+```js
+document.addEventListener("keydown", keyDownHandler, false);
+document.addEventListener("keyup", keyUpHandler, false);
+```
 
-<p>When the <code>keydown</code> event is fired on any of the keys on your keyboard (when they are pressed), the <code>keyDownHandler()</code> function will be executed. The same pattern is true for the second listener: <code>keyup</code> events will fire the <code>keyUpHandler()</code> function (when the keys stop being pressed). Add these to your code now, below the <code>addEventListener()</code> lines:</p>
+When the `keydown` event is fired on any of the keys on your keyboard (when they are pressed), the `keyDownHandler()` function will be executed. The same pattern is true for the second listener: `keyup` events will fire the `keyUpHandler()` function (when the keys stop being pressed). Add these to your code now, below the `addEventListener()` lines:
 
-<pre class="brush: js">function keyDownHandler(e) {
+```js
+function keyDownHandler(e) {
     if(e.key == "Right" || e.key == "ArrowRight") {
         rightPressed = true;
     }
@@ -76,59 +83,63 @@ function keyUpHandler(e) {
     else if(e.key == "Left" || e.key == "ArrowLeft") {
         leftPressed = false;
     }
-}</pre>
+}
+```
 
-<p>When we press a key down, this information is stored in a variable. The relevant variable in each case is set to <code>true</code>. When the key is released, the variable is set back to <code>false</code>.</p>
+When we press a key down, this information is stored in a variable. The relevant variable in each case is set to `true`. When the key is released, the variable is set back to `false`.
 
-<p>Both functions take an event as a parameter, represented by the <code>e</code> variable. From that you can get useful information: the <code>key</code> holds the information about the key that was pressed.  Most browsers use <code>ArrowRight</code> and <code>ArrowLeft</code> for the left/right cursor keys, but we need to also include <code>Right</code> and <code>Left</code> checks to support IE/Edge browsers. If the left cursor is pressed, then the <code>leftPressed</code> variable is set to <code>true</code>, and when it is released, the <code>leftPressed</code> variable is set to <code>false</code>. The same pattern follows with the right cursor and the <code>rightPressed</code> variable.</p>
+Both functions take an event as a parameter, represented by the `e` variable. From that you can get useful information: the `key` holds the information about the key that was pressed.  Most browsers use `ArrowRight` and `ArrowLeft` for the left/right cursor keys, but we need to also include `Right` and `Left` checks to support IE/Edge browsers. If the left cursor is pressed, then the `leftPressed` variable is set to `true`, and when it is released, the `leftPressed` variable is set to `false`. The same pattern follows with the right cursor and the `rightPressed` variable.
 
-<h3 id="The_paddle_moving_logic">The paddle moving logic</h3>
+### The paddle moving logic
 
-<p>We've now set up the variables for storing the info about the pressed keys, event listeners, and relevant functions. Next we'll get into the code to use all of the things we just set up and to move the paddle on the screen. Inside the <code>draw()</code> function, we will check if the left or right cursor keys are pressed when each frame is rendered. Our code might look like this:</p>
+We've now set up the variables for storing the info about the pressed keys, event listeners, and relevant functions. Next we'll get into the code to use all of the things we just set up and to move the paddle on the screen. Inside the `draw()` function, we will check if the left or right cursor keys are pressed when each frame is rendered. Our code might look like this:
 
-<pre class="brush: js">if(rightPressed) {
+```js
+if(rightPressed) {
     paddleX += 7;
 }
 else if(leftPressed) {
     paddleX -= 7;
-}</pre>
+}
+```
 
-<p>If the left cursor is pressed, the paddle will move seven pixels to the left, and if the right cursor is pressed, the paddle will move seven pixels to the right. This currently works, but the paddle disappears off the edge of the canvas if we hold either key for too long. We could improve that and move the paddle only within the boundaries of the canvas by changing the code like this:</p>
+If the left cursor is pressed, the paddle will move seven pixels to the left, and if the right cursor is pressed, the paddle will move seven pixels to the right. This currently works, but the paddle disappears off the edge of the canvas if we hold either key for too long. We could improve that and move the paddle only within the boundaries of the canvas by changing the code like this:
 
-<pre class="brush: js">if(rightPressed) {
+```js
+if(rightPressed) {
     paddleX += 7;
-    if (paddleX + paddleWidth &gt; canvas.width){
+    if (paddleX + paddleWidth > canvas.width){
         paddleX = canvas.width - paddleWidth;
     }
 }
 else if(leftPressed) {
     paddleX -= 7;
-    if (paddleX &lt; 0){
+    if (paddleX < 0){
         paddleX = 0;
     }
-}</pre>
+}
+```
 
-<p>The <code>paddleX</code> position we're using will move between <code>0</code> on the left side of the canvas and <code>canvas.width-paddleWidth</code> on the right hand side, which will work exactly as we want it to.</p>
+The `paddleX` position we're using will move between `0` on the left side of the canvas and `canvas.width-paddleWidth` on the right hand side, which will work exactly as we want it to.
 
-<p>Add the above code block into the <code>draw()</code> function at the bottom, just above the closing curly brace.</p>
+Add the above code block into the `draw()` function at the bottom, just above the closing curly brace.
 
-<p>The only thing left to do now is call the <code>drawPaddle()</code> function from within the <code>draw()</code> function, to actually print it on the screen. Add the following line inside your <code>draw()</code> function, just below the line that calls <code>drawBall()</code>:</p>
+The only thing left to do now is call the `drawPaddle()` function from within the `draw()` function, to actually print it on the screen. Add the following line inside your `draw()` function, just below the line that calls `drawBall()`:
 
-<pre class="brush: js">drawPaddle();
-</pre>
+```js
+drawPaddle();
+```
 
-<h2 id="Compare_your_code">Compare your code</h2>
+## Compare your code
 
-<p>Here's the working code for you to compare yours against:</p>
+Here's the working code for you to compare yours against:
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/L9xfn4up/1/","","395")}}</p>
+{{JSFiddleEmbed("https://jsfiddle.net/L9xfn4up/1/","","395")}}
 
-<div class="note">
-<p><strong>Note:</strong> Try making the paddle move faster or slower, or change its size.</p>
-</div>
+> **Note:** Try making the paddle move faster or slower, or change its size.
 
-<h2 id="Next_steps">Next steps</h2>
+## Next steps
 
-<p>Now we have something resembling a game. The only trouble now is that you can just continue hitting the ball with the paddle forever. This will all change in the fifth chapter, <a href="/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over">Game over</a>, when we start to add in an endgame state for our game.</p>
+Now we have something resembling a game. The only trouble now is that you can just continue hitting the ball with the paddle forever. This will all change in the fifth chapter, [Game over](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over), when we start to add in an endgame state for our game.
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}

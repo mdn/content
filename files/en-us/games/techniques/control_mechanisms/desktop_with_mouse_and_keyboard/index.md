@@ -9,35 +9,38 @@ tags:
   - keyboard
   - mouse
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p>{{PreviousMenuNext("Games/Techniques/Control_mechanisms/Mobile_touch", "Games/Techniques/Control_mechanisms/Desktop_with_gamepad", "Games/Techniques/Control_mechanisms")}}</p>
+{{PreviousMenuNext("Games/Techniques/Control_mechanisms/Mobile_touch", "Games/Techniques/Control_mechanisms/Desktop_with_gamepad", "Games/Techniques/Control_mechanisms")}}
 
-<p>Now, when we have our mobile controls in place and the game is playable on touch-enabled devices, it would be good to add mouse and keyboard support so the game can be playable on desktop also. That way we can broaden the list of supported platforms. We'll look at this below.</p>
+Now, when we have our mobile controls in place and the game is playable on touch-enabled devices, it would be good to add mouse and keyboard support so the game can be playable on desktop also. That way we can broaden the list of supported platforms. We'll look at this below.
 
-<p>It's also easier to test control-independent features like gameplay on desktop if you develop it there, so you don't have to push the files to a mobile device every time you make a change in the source code.</p>
+It's also easier to test control-independent features like gameplay on desktop if you develop it there, so you don't have to push the files to a mobile device every time you make a change in the source code.
 
-<div class="note">
-<p><strong>Note:</strong> the <a class="external external-icon" href="https://rogers2.enclavegames.com/demo/">Captain Rogers: Battle at Andromeda</a> is built with Phaser and managing the controls is Phaser-based, but it could also be done in pure JavaScript. The good thing about using Phaser is that it offers helper variables and functions for easier and faster development, but it's totally up to you which approach you chose.</p>
-</div>
+> **Note:** the [Captain Rogers: Battle at Andromeda](https://rogers2.enclavegames.com/demo/) is built with Phaser and managing the controls is Phaser-based, but it could also be done in pure JavaScript. The good thing about using Phaser is that it offers helper variables and functions for easier and faster development, but it's totally up to you which approach you chose.
 
-<h2 id="Pure_JavaScript_approach">Pure JavaScript approach</h2>
+## Pure JavaScript approach
 
-<p>Let's think about implementing pure JavaScript keyboard/mouse controls in the game first, to see how it would work. First, we'd need an event listener to listen for the pressed keys:</p>
+Let's think about implementing pure JavaScript keyboard/mouse controls in the game first, to see how it would work. First, we'd need an event listener to listen for the pressed keys:
 
-<pre class="brush: js">document.addEventListener('keydown', keyDownHandler, false);
-document.addEventListener('keyup', keyUpHandler, false);</pre>
+```js
+document.addEventListener('keydown', keyDownHandler, false);
+document.addEventListener('keyup', keyUpHandler, false);
+```
 
-<p>Whenever any key is pressed down, we're executing the <code>keyDownHandler</code> function, and when press finishes we're executing the <code>keyUpHandler</code> function, so we know when it's no longer pressed. To do that, we'll hold the information on whether the keys we are interested in are pressed or not:</p>
+Whenever any key is pressed down, we're executing the `keyDownHandler` function, and when press finishes we're executing the `keyUpHandler` function, so we know when it's no longer pressed. To do that, we'll hold the information on whether the keys we are interested in are pressed or not:
 
-<pre class="brush: js">var rightPressed = false;
+```js
+var rightPressed = false;
 var leftPressed = false;
 var upPressed = false;
-var downPressed = false;</pre>
+var downPressed = false;
+```
 
-<p>Then we will listen for the <code>keydown</code> and <code>keyup</code> events and act accordingly in both handler functions. Inside them we can get the code of the key that was pressed from the <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a> property of the event object, see which key it is, and then set the proper variable. There are no helpers so you have to remember what the given codes are (or <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode#value_of_keycode">look them up</a>); <code>37</code> is the left arrow:</p>
+Then we will listen for the `keydown` and `keyup` events and act accordingly in both handler functions. Inside them we can get the code of the key that was pressed from the [keyCode](/en-US/docs/Web/API/KeyboardEvent/keyCode) property of the event object, see which key it is, and then set the proper variable. There are no helpers so you have to remember what the given codes are (or [look them up](/en-US/docs/Web/API/KeyboardEvent/keyCode#value_of_keycode)); `37` is the left arrow:
 
-<pre class="brush: js">function keyDownHandler(event) {
+```js
+function keyDownHandler(event) {
     if(event.keyCode == 39) {
         rightPressed = true;
     }
@@ -50,11 +53,13 @@ var downPressed = false;</pre>
     else if(event.keyCode == 38) {
     	upPressed = true;
     }
-}</pre>
+}
+```
 
-<p>The <code>keyUpHandler</code> looks almost exactly the same as the <code>keyDownHandler</code> above, but instead of setting the pressed variables to <code>true</code>, we would set them to <code>false</code>. If the left arrow is pressed (<kbd>⬅︎</kbd>; key code 37), we can set the <code>leftPressed</code> variable to <code>true</code> and in the <code>draw</code> function perform the action assigned to it — move the ship left:</p>
+The `keyUpHandler` looks almost exactly the same as the `keyDownHandler` above, but instead of setting the pressed variables to `true`, we would set them to `false`. If the left arrow is pressed (<kbd>⬅︎</kbd>; key code 37), we can set the `leftPressed` variable to `true` and in the `draw` function perform the action assigned to it — move the ship left:
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     if(rightPressed) {
         playerX += 5;
@@ -70,100 +75,120 @@ var downPressed = false;</pre>
     }
     ctx.drawImage(img, playerX, playerY);
     requestAnimationFrame(draw);
-}</pre>
+}
+```
 
-<p>The <code>draw</code> function first clears the whole Canvas — we draw everything from scratch on every single frame. Then the pressed key variables are checked and the <code>playerX</code> and <code>playerY</code> variables (that we define earlier just after <code>leftPressed</code> and the others) holding the position of the ship are adjusted by a given amount, let's say 5 pixels. Then the player's ship is drawn on the screen and the next draw is called from within the <a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame</a>.</p>
+The `draw` function first clears the whole Canvas — we draw everything from scratch on every single frame. Then the pressed key variables are checked and the `playerX` and `playerY` variables (that we define earlier just after `leftPressed` and the others) holding the position of the ship are adjusted by a given amount, let's say 5 pixels. Then the player's ship is drawn on the screen and the next draw is called from within the [requestAnimationFrame](/en-US/docs/Web/API/window/requestAnimationFrame).
 
-<p>We could write our own <code>KeyCode</code> object containing the key codes. For example:</p>
+We could write our own `KeyCode` object containing the key codes. For example:
 
-<pre class="brush: js">var KeyboardHelper = { left: 37, up: 38, right: 39, down: 40 };</pre>
+```js
+var KeyboardHelper = { left: 37, up: 38, right: 39, down: 40 };
+```
 
-<p>That way instead of using the codes to compare the input in the handler functions, we could do something like this, which is arguably easier to remember:</p>
+That way instead of using the codes to compare the input in the handler functions, we could do something like this, which is arguably easier to remember:
 
-<pre class="brush: js">if(event.keyCode == KeyboardHelper.left) {
+```js
+if(event.keyCode == KeyboardHelper.left) {
     leftPressed = true;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note:</strong> You can also find a list of the different keycodes and what keys they relate to in the <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a> reference page.</p>
-</div>
+> **Note:** You can also find a list of the different keycodes and what keys they relate to in the [keyCode](/en-US/docs/Web/API/KeyboardEvent/keyCode) reference page.
 
-<p><img alt="Pure JavaScript demo containing player's ship (with stars in the background) that can be controlled with keyboard and mouse." src="controls-purejsgame.png"></p>
+![Pure JavaScript demo containing player's ship (with stars in the background) that can be controlled with keyboard and mouse.](controls-purejsgame.png)
 
-<p>You can see this example in action online at <a href="https://end3r.github.io/JavaScript-Game-Controls/">end3r.github.io/JavaScript-Game-Controls</a> and the full source code can be found at <a href="https://github.com/end3r/JavaScript-Game-Controls/">github.com/end3r/JavaScript-Game-Controls</a>.</p>
+You can see this example in action online at [end3r.github.io/JavaScript-Game-Controls](https://end3r.github.io/JavaScript-Game-Controls/) and the full source code can be found at [github.com/end3r/JavaScript-Game-Controls](https://github.com/end3r/JavaScript-Game-Controls/).
 
-<h2 id="Phaser_approach">Phaser approach</h2>
+## Phaser approach
 
-<p>As I mentioned before, you can write everything on your own, but you can also take advantage of built-in functions in frameworks like Phaser. These will make your life easier and development a lot faster. All the edge cases--differences between browser implementations, etc.--are handled by the framework, so you can focus on the actual task you want to do.</p>
+As I mentioned before, you can write everything on your own, but you can also take advantage of built-in functions in frameworks like Phaser. These will make your life easier and development a lot faster. All the edge cases--differences between browser implementations, etc.--are handled by the framework, so you can focus on the actual task you want to do.
 
-<h3 id="Mouse">Mouse</h3>
+### Mouse
 
-<p>The mouse interactions in the game are focused on clicking the buttons. In Phaser, the buttons you create will take any type of input, whether it's a touch on mobile or a click on desktop. That way, if you already implemented the buttons as shown in the <a href="/en-US/docs/Games/Techniques/Control_mechanisms/Mobile_touch">Mobile touch controls</a> article, it will work out of the box on the desktop too:</p>
+The mouse interactions in the game are focused on clicking the buttons. In Phaser, the buttons you create will take any type of input, whether it's a touch on mobile or a click on desktop. That way, if you already implemented the buttons as shown in the [Mobile touch controls](/en-US/docs/Games/Techniques/Control_mechanisms/Mobile_touch) article, it will work out of the box on the desktop too:
 
-<pre class="brush: js">var buttonEnclave = this.add.button(10, 10, 'logo-enclave', this.clickEnclave, this);</pre>
+```js
+var buttonEnclave = this.add.button(10, 10, 'logo-enclave', this.clickEnclave, this);
+```
 
-<p>The button will be placed ten pixels from the top left corner of the screen, use the <code>logo-enclave</code> image, and will execute the <code>clickEnclave()</code> function when clicked. We can assign actions directly to the buttons:</p>
+The button will be placed ten pixels from the top left corner of the screen, use the `logo-enclave` image, and will execute the `clickEnclave()` function when clicked. We can assign actions directly to the buttons:
 
-<pre class="brush: js">this.buttonShoot = this.add.button(this.world.width*0.5, 0, 'button-alpha', null, this);
+```js
+this.buttonShoot = this.add.button(this.world.width*0.5, 0, 'button-alpha', null, this);
 this.buttonShoot.onInputDown.add(this.shootingPressed, this);
-this.buttonShoot.onInputUp.add(this.shootingReleased, this);</pre>
+this.buttonShoot.onInputUp.add(this.shootingReleased, this);
+```
 
-<p>The button used for shooting works perfectly fine on both the mobile and desktop approach.</p>
+The button used for shooting works perfectly fine on both the mobile and desktop approach.
 
-<p>If you want to use the mouse's cursor position on the screen, you can do so with <code>this.game.input.mousePointer</code>. Let's assume you'd like to shoot a bullet when the right half of the screen is clicked with a mouse, it would be done something like this:</p>
+If you want to use the mouse's cursor position on the screen, you can do so with `this.game.input.mousePointer`. Let's assume you'd like to shoot a bullet when the right half of the screen is clicked with a mouse, it would be done something like this:
 
-<pre class="brush: js">if(this.game.input.mousePointer.isDown) {
-    if(this.game.input.mousePointer.x &gt; this.world.width*0.5) {
+```js
+if(this.game.input.mousePointer.isDown) {
+    if(this.game.input.mousePointer.x > this.world.width*0.5) {
         // shoot
     }
-}</pre>
+}
+```
 
-<p>If you'd like to differentiate the mouse buttons being pressed, there are three defaults you can pick from:</p>
+If you'd like to differentiate the mouse buttons being pressed, there are three defaults you can pick from:
 
-<pre class="brush: js">this.game.input.mousePointer.leftButton.isDown;
+```js
+this.game.input.mousePointer.leftButton.isDown;
 this.game.input.mousePointer.middleButton.isDown;
-this.game.input.mousePointer.rightButton.isDown;</pre>
+this.game.input.mousePointer.rightButton.isDown;
+```
 
-<p>Keep in mind that instead of <code>mousePointer</code>, it's better to use <code>activePointer</code> for platform-independent input, if you want to keep the support for mobile touch interactions.</p>
+Keep in mind that instead of `mousePointer`, it's better to use `activePointer` for platform-independent input, if you want to keep the support for mobile touch interactions.
 
-<h3 id="Keyboard">Keyboard</h3>
+### Keyboard
 
-<p>The whole game can be controlled with just the keyboard and nothing else. The built-in <code>this.game.input.keyboard</code> object manages the input from the keyboard, and has <a href="https://phaser.io/docs/2.6.1/Phaser.Keyboard.html#methods">a few helpful methods</a> like <code>addKey()</code> and <code>isDown()</code>. There's also the <a href="https://phaser.io/docs/2.6.1/Phaser.KeyCode.html#members">Phaser.KeyCode</a> object, which contains all the available keyboard keys:</p>
+The whole game can be controlled with just the keyboard and nothing else. The built-in `this.game.input.keyboard` object manages the input from the keyboard, and has [a few helpful methods](https://phaser.io/docs/2.6.1/Phaser.Keyboard.html#methods) like `addKey()` and `isDown()`. There's also the [Phaser.KeyCode](https://phaser.io/docs/2.6.1/Phaser.KeyCode.html#members) object, which contains all the available keyboard keys:
 
-<p><img alt="A full list of Phaser Key codes available inside the game." src="controls-keycodes.png"></p>
+![A full list of Phaser Key codes available inside the game.](controls-keycodes.png)
 
-<p>In the main menu of the game, we can add an extra way to begin playing. The Start button can be clicked to do so, but we can use the <kbd>Enter</kbd> key to do the same:</p>
+In the main menu of the game, we can add an extra way to begin playing. The Start button can be clicked to do so, but we can use the <kbd>Enter</kbd> key to do the same:
 
-<pre class="brush: js">var keyEnter = this.game.input.keyboard.addKey(Phaser.KeyCode.ENTER);
-var keyEnter.onDown.add(this.clickStart, this);</pre>
+```js
+var keyEnter = this.game.input.keyboard.addKey(Phaser.KeyCode.ENTER);
+var keyEnter.onDown.add(this.clickStart, this);
+```
 
-<p>You can use <code>addKey()</code> to add any key the <code>Phaser.KeyCode</code> object has to offer. The <code>onDown()</code> function is executed whenever the <kbd>Enter</kbd> key is pressed.It will launch the <code>clickStart()</code> method, which starts a new game.</p>
+You can use `addKey()` to add any key the `Phaser.KeyCode` object has to offer. The `onDown()` function is executed whenever the <kbd>Enter</kbd> key is pressed.It will launch the `clickStart()` method, which starts a new game.
 
-<p>It's useful to provide an option to play the game on desktop without using a mouse, so you don't have to take your hands off the keyboard.</p>
+It's useful to provide an option to play the game on desktop without using a mouse, so you don't have to take your hands off the keyboard.
 
-<h3 id="Controlling_the_game">Controlling the game</h3>
+### Controlling the game
 
-<p>We can support keyboard input in games built with Phaser by enabling the basic cursor keys in the <code>create()</code> function using the <code>createCursorKeys()</code> function:</p>
+We can support keyboard input in games built with Phaser by enabling the basic cursor keys in the `create()` function using the `createCursorKeys()` function:
 
-<pre class="brush: js">this.cursors = this.input.keyboard.createCursorKeys();</pre>
+```js
+this.cursors = this.input.keyboard.createCursorKeys();
+```
 
-<p>This creates four directional arrow keys for us:</p>
+This creates four directional arrow keys for us:
 
-<pre class="brush: js">this.cursors.left;
+```js
+this.cursors.left;
 this.cursors.right;
 this.cursors.up;
-this.cursors.down;</pre>
+this.cursors.down;
+```
 
-<p>You can also define the keys on your own and offer an alternative, <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> control mechanism. For example:</p>
+You can also define the keys on your own and offer an alternative, <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> control mechanism. For example:
 
-<pre class="brush: js">this.keyLeft = this.input.keyboard.addKey(Phaser.KeyCode.A);
+```js
+this.keyLeft = this.input.keyboard.addKey(Phaser.KeyCode.A);
 this.keyRight = this.input.keyboard.addKey(Phaser.KeyCode.D);
 this.keyUp = this.input.keyboard.addKey(Phaser.KeyCode.W);
-this.keyDown = this.input.keyboard.addKey(Phaser.KeyCode.S);</pre>
+this.keyDown = this.input.keyboard.addKey(Phaser.KeyCode.S);
+```
 
-<p>To support both the cursor and <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> keys, we need to do this:</p>
+To support both the cursor and <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> keys, we need to do this:
 
-<pre class="brush: js">if(this.cursors.left.isDown || this.keyLeft.isDown) {
+```js
+if(this.cursors.left.isDown || this.keyLeft.isDown) {
     // move left
 }
 else if(this.cursors.right.isDown || this.keyRight.isDown) {
@@ -174,68 +199,81 @@ if(this.cursors.up.isDown || this.keyUp.isDown) {
 }
 else if(this.cursors.down.isDown || this.keyDown.isDown) {
     // move down
-}</pre>
+}
+```
 
-<p>In the <code>update()</code> function we can now move the player's ship in any direction using one of the two sets of movement key options.</p>
+In the `update()` function we can now move the player's ship in any direction using one of the two sets of movement key options.
 
-<p>We can also offer firing control alternatives. For cursor keys the natural shooting button would be on the other side of the keyboard, so the player can use the other hand — for example the <kbd>X</kbd> key. For <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> keys it can be the Space bar:</p>
+We can also offer firing control alternatives. For cursor keys the natural shooting button would be on the other side of the keyboard, so the player can use the other hand — for example the <kbd>X</kbd> key. For <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> keys it can be the Space bar:
 
-<pre class="brush: js">this.keyFire1 = this.input.keyboard.addKey(Phaser.KeyCode.X);
-this.keyFire2 = this.input.keyboard.addKey(Phaser.KeyCode.SPACEBAR);</pre>
+```js
+this.keyFire1 = this.input.keyboard.addKey(Phaser.KeyCode.X);
+this.keyFire2 = this.input.keyboard.addKey(Phaser.KeyCode.SPACEBAR);
+```
 
-<p>In the <code>update()</code> function we can easily check if any of those two were pressed on each frame:</p>
+In the `update()` function we can easily check if any of those two were pressed on each frame:
 
-<pre class="brush: js">if(this.keyFire1.isDown || this.keyFire2.isDown) {
+```js
+if(this.keyFire1.isDown || this.keyFire2.isDown) {
     // fire the weapon
-}</pre>
+}
+```
 
-<p>If yes, then it's time to shoot some bullets!</p>
+If yes, then it's time to shoot some bullets!
 
-<p>We can even define a secret cheat button:</p>
+We can even define a secret cheat button:
 
-<pre class="brush: js">this.keyCheat = this.input.keyboard.addKey(Phaser.KeyCode.C);</pre>
+```js
+this.keyCheat = this.input.keyboard.addKey(Phaser.KeyCode.C);
+```
 
-<p>And then in the <code>update()</code> function, whenever <kbd>C</kbd> is pressed we'll do this:</p>
+And then in the `update()` function, whenever <kbd>C</kbd> is pressed we'll do this:
 
-<pre class="brush: js">if(this.keyCheat.isDown) {
+```js
+if(this.keyCheat.isDown) {
     this.player.health = this.player.maxHealth;
-}</pre>
+}
+```
 
-<p>We can set the health of the player to maximum. Remember: it's a secret, so <em>don't tell anyone</em>!</p>
+We can set the health of the player to maximum. Remember: it's a secret, so _don't tell anyone_!
 
-<h3 id="How_to_play">How to play</h3>
+### How to play
 
-<p>We've implemented the controls, and now we should inform the player about their options to control the game. They wouldn't know about them otherwise! When showing the how to play screen where the various ways to control the ship in the game are shown, instead of showing them all to everyone, we can detect whether the game is launched on desktop or mobile and just show the appropriate controls for the device:</p>
+We've implemented the controls, and now we should inform the player about their options to control the game. They wouldn't know about them otherwise! When showing the how to play screen where the various ways to control the ship in the game are shown, instead of showing them all to everyone, we can detect whether the game is launched on desktop or mobile and just show the appropriate controls for the device:
 
-<pre class="brush: js">if(this.game.device.desktop) {
+```js
+if(this.game.device.desktop) {
     moveText = 'Arrow keys or WASD to move';
     shootText = 'X or Space to shoot';
 }
 else {
     moveText = 'Tap and hold to move';
     shootText = 'Tap to shoot';
-}</pre>
+}
+```
 
-<p>If the game is running on desktop, the cursor and <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> keys message will be shown. If not, then the mobile touch controls message will be.</p>
+If the game is running on desktop, the cursor and <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> keys message will be shown. If not, then the mobile touch controls message will be.
 
-<p><img alt="How to play screen of a player's ship (with stars in the background) which can be controlled by keyboard and mouse, and the visible message: &quot;arrow keys or WASD to move&quot; and &quot;X or Space to shoot&quot;." src="controls-howtoplay.png"></p>
+![How to play screen of a player's ship (with stars in the background) which can be controlled by keyboard and mouse, and the visible message: "arrow keys or WASD to move" and "X or Space to shoot".](controls-howtoplay.png)
 
-<p>To skip the how to play screen, we can listen for any key being pressed and move on:</p>
+To skip the how to play screen, we can listen for any key being pressed and move on:
 
-<pre class="brush: js">this.input.keyboard.onDownCallback = function() {
+```js
+this.input.keyboard.onDownCallback = function() {
     if(this.stateStatus == 'intro') {
         this.hideIntro();
     }
-};</pre>
+};
+```
 
-<p>This hides the intro and starts the actual game without us having to set up another new key control just for this.</p>
+This hides the intro and starts the actual game without us having to set up another new key control just for this.
 
-<h3 id="Pause_and_game_over_screens">Pause and game over screens</h3>
+### Pause and game over screens
 
-<p>To make the game fully playable with the keyboard, it should be possible to go back to the main menu, continue playing, or restart the game from the pause and game over screens. It can be done exactly the same as before, by capturing key codes and performing actions. For example, by specifying <code>Phaser.KeyCode.Backspace</code> or <code>Phaser.KeyCode.Delete</code> you can hook up an action to fire when the <code><kbd>Delete</kbd>/<kbd>Backspace</kbd></code> button is pressed.</p>
+To make the game fully playable with the keyboard, it should be possible to go back to the main menu, continue playing, or restart the game from the pause and game over screens. It can be done exactly the same as before, by capturing key codes and performing actions. For example, by specifying `Phaser.KeyCode.Backspace` or `Phaser.KeyCode.Delete` you can hook up an action to fire when the `Delete/Backspace` button is pressed.
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>Ok, we've dealt with touch, keyboard, and mouse controls. Now let's move on to look at how to set up the game to be controlled using a console gamepad, using the <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a>.</p>
+Ok, we've dealt with touch, keyboard, and mouse controls. Now let's move on to look at how to set up the game to be controlled using a console gamepad, using the [Gamepad API](/en-US/docs/Web/API/Gamepad_API).
 
-<p>{{PreviousMenuNext("Games/Techniques/Control_mechanisms/Mobile_touch", "Games/Techniques/Control_mechanisms/Desktop_with_gamepad", "Games/Techniques/Control_mechanisms")}}</p>
+{{PreviousMenuNext("Games/Techniques/Control_mechanisms/Mobile_touch", "Games/Techniques/Control_mechanisms/Desktop_with_gamepad", "Games/Techniques/Control_mechanisms")}}

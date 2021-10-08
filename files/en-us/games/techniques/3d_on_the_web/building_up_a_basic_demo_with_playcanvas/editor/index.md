@@ -16,113 +16,108 @@ tags:
   - editor
   - rendering
 ---
-<p>Instead of coding everything from scratch you can also use the online <strong>PlayCanvas editor</strong>. This can be a more pleasant working environment if you are not someone who likes to code.</p>
+Instead of coding everything from scratch you can also use the online **PlayCanvas editor**. This can be a more pleasant working environment if you are not someone who likes to code.
 
-<h2 id="Creating_an_account">Creating an account</h2>
+## Creating an account
 
-<p>The PlayCanvas Editor is free — all you have to do to begin with is <a href="https://login.playcanvas.com/signup">register</a> your account and login:</p>
+The PlayCanvas Editor is free — all you have to do to begin with is [register](https://login.playcanvas.com/signup) your account and login:
 
-<p><img alt="PlayCanvas Editor - Login" src="playcanvas-editor-login.png"></p>
+![PlayCanvas Editor - Login](playcanvas-editor-login.png)
 
-<p>When you first sign up, you are taken straight into the editor and given a simple starter tutorial involving editing a 3D rolling ball game. You can finish this before you continue our tutorial if you like. When you are ready to continue with our tutorial, go to your canvas homepage — for example mine is <code>https://playcanvas.com/end3r</code>. Here's what the page looks like — you can create projects and manage them, change their settings etc.</p>
+When you first sign up, you are taken straight into the editor and given a simple starter tutorial involving editing a 3D rolling ball game. You can finish this before you continue our tutorial if you like. When you are ready to continue with our tutorial, go to your canvas homepage — for example mine is `https://playcanvas.com/end3r`. Here's what the page looks like — you can create projects and manage them, change their settings etc.
 
-<h2 id="Creating_a_new_project">Creating a new project</h2>
+## Creating a new project
 
-<p>Start a brand new project by clicking on the <em>New</em> button:</p>
+Start a brand new project by clicking on the _New_ button:
 
-<p><img alt="PlayCanvas Editor - Panel" src="playcanvas-editor-panel.png"></p>
+![PlayCanvas Editor - Panel](playcanvas-editor-panel.png)
 
-<p>The resulting dialog box will show a few different options. There are starter kits available, but we don't want to load models or start a platform game.</p>
+The resulting dialog box will show a few different options. There are starter kits available, but we don't want to load models or start a platform game.
 
-<ol>
- <li>We want to start small, so we will use the empty project — click on the Blank Project option and enter a name for it (we are using "MDN Games demo".)</li>
- <li>Enter a description if you want — it is optional.</li>
- <li>Click <em>Create</em> to have it created.</li>
-</ol>
+1.  We want to start small, so we will use the empty project — click on the Blank Project option and enter a name for it (we are using "MDN Games demo".)
+2.  Enter a description if you want — it is optional.
+3.  Click _Create_ to have it created.
 
-<p><img alt="PlayCanvas Editor - New project" src="playcanvas-editor-newproject.png"></p>
+![PlayCanvas Editor - New project](playcanvas-editor-newproject.png)
 
-<p>Next you'll see your project's page — there's not much yet. By clicking the <em>Editor</em> button we'll launch the online PlayCanvas editor where we'll create our scene with the shapes. Do this now.</p>
+Next you'll see your project's page — there's not much yet. By clicking the _Editor_ button we'll launch the online PlayCanvas editor where we'll create our scene with the shapes. Do this now.
 
-<p><img alt="PlayCanvas Editor - Project" src="playcanvas-editor-project.png"></p>
+![PlayCanvas Editor - Project](playcanvas-editor-project.png)
 
-<h2 id="Creating_the_scene">Creating the scene</h2>
+## Creating the scene
 
-<p>Here's how the scene looks initially in the editor. Even though it's a blank new project we don't have to start entirely from scratch — the camera and directional light are prepared already, so you don't have to worry about them.</p>
+Here's how the scene looks initially in the editor. Even though it's a blank new project we don't have to start entirely from scratch — the camera and directional light are prepared already, so you don't have to worry about them.
 
-<p><img alt="PlayCanvas Editor - Scene" src="playcanvas-editor-scene.png"></p>
+![PlayCanvas Editor - Scene](playcanvas-editor-scene.png)
 
-<p>Now onto the creative part. To add an entity to the scene you have to click on the big plus button located in the top left area of the editor, next to the Hierarchy text. When hovering over that button with your mouse the label will say 'Add Entity' — that's exactly what we want to do. An Entity is any object used in the scene — it cna be an object like a box, cylinder or cone, but it can also be a camera, light or sound source. After clicking the button you'll see a dropdown list containing a lot of various entities to choose from. Go ahead and click <em>Box</em> — it will be added to the scene.</p>
+Now onto the creative part. To add an entity to the scene you have to click on the big plus button located in the top left area of the editor, next to the Hierarchy text. When hovering over that button with your mouse the label will say 'Add Entity' — that's exactly what we want to do. An Entity is any object used in the scene — it cna be an object like a box, cylinder or cone, but it can also be a camera, light or sound source. After clicking the button you'll see a dropdown list containing a lot of various entities to choose from. Go ahead and click _Box_ — it will be added to the scene.
 
-<p><img alt="PlayCanvas Editor - New box" src="playcanvas-editor-newbox.png"></p>
+![PlayCanvas Editor - New box](playcanvas-editor-newbox.png)
 
-<p>The box is created with the default values — width, height and depth are set to 1, and it is placed in the middle of the scene. You can drag it around or apply new values in the right panel.</p>
+The box is created with the default values — width, height and depth are set to 1, and it is placed in the middle of the scene. You can drag it around or apply new values in the right panel.
 
-<p><img alt="PlayCanvas Editor - Box" src="playcanvas-editor-box.png"></p>
+![PlayCanvas Editor - Box](playcanvas-editor-box.png)
 
-<p>To add some colors to the scene we need a new material that will be used on the newly created box. Click on the plus button in the <em>Assets</em> tab, and click on the <em>Material</em> option in the dropdown list that appears to create a new material.</p>
+To add some colors to the scene we need a new material that will be used on the newly created box. Click on the plus button in the _Assets_ tab, and click on the _Material_ option in the dropdown list that appears to create a new material.
 
-<p><img alt="PlayCanvas Editor - New material" src="playcanvas-editor-newmaterial.png"></p>
+![PlayCanvas Editor - New material](playcanvas-editor-newmaterial.png)
 
-<p>Click on your new material in the assets tab and its entity inspector will appear on the right hand side of the display. Now edit the <em>Name</em> text field to give it a unique name (we've chosen <em>boxMaterial</em>). A unique name will help us remember what this material is for — we will add more later!</p>
+Click on your new material in the assets tab and its entity inspector will appear on the right hand side of the display. Now edit the _Name_ text field to give it a unique name (we've chosen _boxMaterial_). A unique name will help us remember what this material is for — we will add more later!
 
-<p><img alt="PlayCanvas Editor - Box material" src="playcanvas-editor-boxmaterial.png"></p>
+![PlayCanvas Editor - Box material](playcanvas-editor-boxmaterial.png)
 
-<p>To change its color we'll use the <em>Diffuse</em> option in the entity inspector. Click <em>Diffuse</em>, then select the colored box next to the Color label — it will open a color wheel. From here you can click your desired color or enter it in the bottom text field as a hex value. We've chosen a blue color with a hex value of <code>0095DD</code> — enter this code in the text field and press return for it to be accepted.</p>
+To change its color we'll use the _Diffuse_ option in the entity inspector. Click _Diffuse_, then select the colored box next to the Color label — it will open a color wheel. From here you can click your desired color or enter it in the bottom text field as a hex value. We've chosen a blue color with a hex value of `0095DD` — enter this code in the text field and press return for it to be accepted.
 
-<div class="note">
-<p><strong>Note:</strong> Yes, you read that right — you need to enter the hex value without the hash/pound symbol.</p>
-</div>
+> **Note:** Yes, you read that right — you need to enter the hex value without the hash/pound symbol.
 
-<p><img alt="PlayCanvas Editor - Diffuse color" src="playcanvas-editor-diffusecolor.png"></p>
+![PlayCanvas Editor - Diffuse color](playcanvas-editor-diffusecolor.png)
 
-<p>Now we can apply the colored material to the shape by clicking and dragging its icon from the bottom part of the screen (the little dot on the left hand side of the material's name — it can be a bit fiddly to select; just persevere) onto the box on the scene.</p>
+Now we can apply the colored material to the shape by clicking and dragging its icon from the bottom part of the screen (the little dot on the left hand side of the material's name — it can be a bit fiddly to select; just persevere) onto the box on the scene.
 
-<p><img alt="PlayCanvas Editor - Box drop" src="playcanvas-editor-boxdrop.png"></p>
+![PlayCanvas Editor - Box drop](playcanvas-editor-boxdrop.png)
 
-<p>So, at this point we've created a blue box. Click on the box to bring up its entity sidebar — you'll see options for changing its position, rotation, and scale. Try applying the rotation values X: 10 and Y: 20.</p>
+So, at this point we've created a blue box. Click on the box to bring up its entity sidebar — you'll see options for changing its position, rotation, and scale. Try applying the rotation values X: 10 and Y: 20.
 
-<p><img alt="PlayCanvas Editor - Rotate" src="playcanvas-editor-rotate.png"></p>
+![PlayCanvas Editor - Rotate](playcanvas-editor-rotate.png)
 
-<p>Now click on the play arrow in the top right corner of the scene to launch and render the scene — it will be opened in a separate browser tab.</p>
+Now click on the play arrow in the top right corner of the scene to launch and render the scene — it will be opened in a separate browser tab.
 
-<p><img alt="PlayCanvas Editor - Launch" src="playcanvas-editor-launch.png"></p>
+![PlayCanvas Editor - Launch](playcanvas-editor-launch.png)
 
-<p>This looks great! Let's add more shapes to the scene to make it look more interesting.</p>
+This looks great! Let's add more shapes to the scene to make it look more interesting.
 
-<p><img alt="PlayCanvas Editor - Boxrender" src="playcanvas-editor-boxrender.png"></p>
+![PlayCanvas Editor - Boxrender](playcanvas-editor-boxrender.png)
 
-<h2 id="Adding_more_shapes">Adding more shapes</h2>
+## Adding more shapes
 
-<p>To make way for more shapes, move the box to the left to make some room for the next shape. You can do this by giving it an X position value of -2.</p>
+To make way for more shapes, move the box to the left to make some room for the next shape. You can do this by giving it an X position value of -2.
 
-<p>Adding other shapes involves a very similar process to adding the box. Click on the Root folder in the hierarchy panel (to make sure that the new shape appears in the root, and not as a child of the Box) then Click on the big <em>Add Entity</em> (plus) button and select cylinder from the dropdown list — it will add a new cylinder shape to the scene.</p>
+Adding other shapes involves a very similar process to adding the box. Click on the Root folder in the hierarchy panel (to make sure that the new shape appears in the root, and not as a child of the Box) then Click on the big _Add Entity_ (plus) button and select cylinder from the dropdown list — it will add a new cylinder shape to the scene.
 
-<p><img alt="PlayCanvas Editor - Cylinder" src="playcanvas-editor-cylinder.png">Now follow the same steps as we did before when coloring the cube:</p>
+![PlayCanvas Editor - Cylinder](playcanvas-editor-cylinder.png)Now follow the same steps as we did before when coloring the cube:
 
-<ul>
- <li>Create a new material using the <em>Add Asset</em> (plus) button.</li>
- <li>Make sure the New Material in the Assets panel is selected, to bring up the entity inspector.</li>
- <li>Give the material a new name, along the lines of <code>cylinderMaterial</code>.</li>
- <li>Click diffuse, then click the color picker — give it an orange color (we used FF9500.)</li>
- <li>Drag and drop the <code>cylinderMaterial</code> icon onto the cylinder object on the screen to apply that color.</li>
-</ul>
+- Create a new material using the _Add Asset_ (plus) button.
+- Make sure the New Material in the Assets panel is selected, to bring up the entity inspector.
+- Give the material a new name, along the lines of `cylinderMaterial`.
+- Click diffuse, then click the color picker — give it an orange color (we used FF9500.)
+- Drag and drop the `cylinderMaterial` icon onto the cylinder object on the screen to apply that color.
 
-<p><img alt="PlayCanvas Editor - Cylinder material" src="playcanvas-editor-cylindermaterial.png"></p>
+![PlayCanvas Editor - Cylinder material](playcanvas-editor-cylindermaterial.png)
 
-<p>Follow the same approach again to add a cone to the scene, giving it a grayish color (we used EAEFF2.) You should now have three shapes on your scene, something like the below screenshot.</p>
+Follow the same approach again to add a cone to the scene, giving it a grayish color (we used EAEFF2.) You should now have three shapes on your scene, something like the below screenshot.
 
-<p><img alt="PlayCanvas Editor - Cone" src="playcanvas-editor-cone.png"></p>
+![PlayCanvas Editor - Cone](playcanvas-editor-cone.png)
 
-<h2 id="Animating_our_scene">Animating our scene</h2>
+## Animating our scene
 
-<p>Animating 3D models might be considered an <a href="https://developer.playcanvas.com/en/tutorials/intermediate/animation-blending/">advanced</a> thing to do, but all we want to do is to control a few properties of a given object — we can use a script component to do that. Click on the plus button in the Assets panel, select the Script option, and name your new script file <code>boxAnimation.js</code>.</p>
+Animating 3D models might be considered an [advanced](https://developer.playcanvas.com/en/tutorials/intermediate/animation-blending/) thing to do, but all we want to do is to control a few properties of a given object — we can use a script component to do that. Click on the plus button in the Assets panel, select the Script option, and name your new script file `boxAnimation.js`.
 
-<p><img alt="PlayCanvas Editor - Box animation" src="playcanvas-editor-boxanimation.png"></p>
+![PlayCanvas Editor - Box animation](playcanvas-editor-boxanimation.png)
 
-<p>If you double click on it, you'll be moved to a code editor. As you can see, the file contains some boilerplate code already:</p>
+If you double click on it, you'll be moved to a code editor. As you can see, the file contains some boilerplate code already:
 
-<pre class="brush: js">pc.script.create('boxAnimation', function (app) {
+```js
+pc.script.create('boxAnimation', function (app) {
     // Creates a new BoxAnimation instance
     var BoxAnimation = function (entity) {
         this.entity = entity;
@@ -139,69 +134,76 @@ tags:
     };
 
     return BoxAnimation;
-});</pre>
+});
+```
 
-<p>The most interesting part is the <code>update()</code> function, which is where we can put any code that we want repeated on every frame. Add the following line inside this function, to rotate the cube on every frame:</p>
+The most interesting part is the `update()` function, which is where we can put any code that we want repeated on every frame. Add the following line inside this function, to rotate the cube on every frame:
 
-<pre class="brush: js">this.entity.rotate(dt*10, dt*20, dt*30);</pre>
+```js
+this.entity.rotate(dt*10, dt*20, dt*30);
+```
 
-<p>In the line above <code>this.entity</code> refers to the object to which the script will be attached (the box); using the <code>dt</code> variable, which contains the delta time passed since the previous frame, we can rotate the box by a different amount around all three axes.</p>
+In the line above `this.entity` refers to the object to which the script will be attached (the box); using the `dt` variable, which contains the delta time passed since the previous frame, we can rotate the box by a different amount around all three axes.
 
-<ol>
- <li>Save the changes using the Save button in the top right of the code editor, then return to the main editor tab. Here, follow these steps:</li>
- <li>Be sure you have the box selected on the scene.</li>
- <li>Click on <em>Add component</em>, then <em>Script</em> in the entity inspector.</li>
- <li>At the bottom of the screen you can see the list of scripts available — for now there's only <code>boxAnimation.js</code> — clicking it will add the animation script to the box object.</li>
-</ol>
+1.  Save the changes using the Save button in the top right of the code editor, then return to the main editor tab. Here, follow these steps:
+2.  Be sure you have the box selected on the scene.
+3.  Click on _Add component_, then _Script_ in the entity inspector.
+4.  At the bottom of the screen you can see the list of scripts available — for now there's only `boxAnimation.js` — clicking it will add the animation script to the box object.
 
-<p><img alt="PlayCanvas Editor - Box script" src="playcanvas-editor-boxscript.png"></p>
+![PlayCanvas Editor - Box script](playcanvas-editor-boxscript.png)
 
-<h3 id="The_cylinder">The cylinder</h3>
+### The cylinder
 
-<p>Now we'll do the same steps for cylinder. First:</p>
+Now we'll do the same steps for cylinder. First:
 
-<ol>
- <li>Create a new Script asset.</li>
- <li>Name it <code>cylinderAnimation.js</code>.</li>
- <li>Double click the script icon to launch the code editor.</li>
-</ol>
+1.  Create a new Script asset.
+2.  Name it `cylinderAnimation.js`.
+3.  Double click the script icon to launch the code editor.
 
-<p>This time instead of rotating the object we will try to scale it. For that we'll need a timer to store the total amount of time passed since the start of the animation. Add this code to the <code>initialize()</code> function:</p>
+This time instead of rotating the object we will try to scale it. For that we'll need a timer to store the total amount of time passed since the start of the animation. Add this code to the `initialize()` function:
 
-<pre class="brush: js">this.timer = 0;</pre>
+```js
+this.timer = 0;
+```
 
-<p>And those two lines to the <code>update()</code> function:</p>
+And those two lines to the `update()` function:
 
-<pre class="brush: js">this.timer += dt;
-this.entity.setLocalScale(1, Math.abs(Math.sin(this.timer)), 1);</pre>
+```js
+this.timer += dt;
+this.entity.setLocalScale(1, Math.abs(Math.sin(this.timer)), 1);
+```
 
-<p>The <code>setLocalScale()</code> method applies the given values to the X, Y and Z axes of the object. In our case we're modifying the scale of the cylinder on the Y axis, giving it as a value the <code>Math.sin()</code> of the timer, with <code>Math.abs()</code> applied to the result of that to have the values always above zero (0-1; sin values are normally between -1 and 1.) This gives us a nice scaling effect as a result.</p>
+The `setLocalScale()` method applies the given values to the X, Y and Z axes of the object. In our case we're modifying the scale of the cylinder on the Y axis, giving it as a value the `Math.sin()` of the timer, with `Math.abs()` applied to the result of that to have the values always above zero (0-1; sin values are normally between -1 and 1.) This gives us a nice scaling effect as a result.
 
-<p>Remember to add the <code>cylinderAnimation.js</code> file to the Cylinder object to apply the given animations.</p>
+Remember to add the `cylinderAnimation.js` file to the Cylinder object to apply the given animations.
 
-<h3 id="The_cone">The cone</h3>
+### The cone
 
-<p>Time to play with the last object — the cone. Create a <code>coneAnimation.js</code> file and double click it to open it in the editor.</p>
+Time to play with the last object — the cone. Create a `coneAnimation.js` file and double click it to open it in the editor.
 
-<p>Next, add the following line to the <code>initialize()</code> function:</p>
+Next, add the following line to the `initialize()` function:
 
-<pre class="brush: js">this.timer = 0;</pre>
+```js
+this.timer = 0;
+```
 
-<p>To move the cone up and down we will use the <code>setPosition()</code> method — add the code below to the <code>update()</code> function:</p>
+To move the cone up and down we will use the `setPosition()` method — add the code below to the `update()` function:
 
-<pre class="brush: js">this.timer += dt;
-this.entity.setPosition(2, Math.sin(this.timer*2), 0);</pre>
+```js
+this.timer += dt;
+this.entity.setPosition(2, Math.sin(this.timer*2), 0);
+```
 
-<p>The position of the cone will be animated on each frame by being passed the <code>Math.sin()</code> value of the <code>timer</code> at each point in time — we have doubled the <code>this.timer</code> value to make it move higher.</p>
+The position of the cone will be animated on each frame by being passed the `Math.sin()` value of the `timer` at each point in time — we have doubled the `this.timer` value to make it move higher.
 
-<p>Add the <code>coneAnimation.js</code> script to the cone object, as before.</p>
+Add the `coneAnimation.js` script to the cone object, as before.
 
-<h2 id="Test_the_demo_out">Test the demo out</h2>
+## Test the demo out
 
-<p>Launch the demo to see the effects — all the shapes should animate. Congratulations, you've completed the tutorial!</p>
+Launch the demo to see the effects — all the shapes should animate. Congratulations, you've completed the tutorial!
 
-<p><img alt="PlayCanvas Editor - Shapes" src="playcanvas-editor-shapes.png"></p>
+![PlayCanvas Editor - Shapes](playcanvas-editor-shapes.png)
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>Now you can check the <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/engine">PlayCanvas engine</a> article if you haven't seen it yet, go back to the <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas">Building up a basic demo with PlayCanvas</a> page, or go back a level higher to the main <a href="/en-US/docs/Games/Techniques/3D_on_the_web">3D Games on the Web</a> page.</p>
+Now you can check the [PlayCanvas engine](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/engine) article if you haven't seen it yet, go back to the [Building up a basic demo with PlayCanvas](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) page, or go back a level higher to the main [3D Games on the Web](/en-US/docs/Games/Techniques/3D_on_the_web) page.

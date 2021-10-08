@@ -10,49 +10,49 @@ tags:
   - Phaser
   - Tutorial
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p>{{Previous("Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}</p>
+{{Previous("Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}
 
-<p>This is the <strong>16th step</strong> out of 16 of the <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser">Gamedev Phaser tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson16.html">Gamedev-Phaser-Content-Kit/demos/lesson16.html</a>.</p>
+This is the **16th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). You can find the source code as it should look after completing this lesson at [Gamedev-Phaser-Content-Kit/demos/lesson16.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson16.html).
 
-<p>Our game appears to be completed, but if you look close enough you'll notice that the ball is bouncing off the paddle at the same angle throughout the whole game. This means that every game is quite similar. To fix this and improve playability we should make the rebound angles more random, and in this article we'll look at how.</p>
+Our game appears to be completed, but if you look close enough you'll notice that the ball is bouncing off the paddle at the same angle throughout the whole game. This means that every game is quite similar. To fix this and improve playability we should make the rebound angles more random, and in this article we'll look at how.
 
-<h2 id="Making_rebounds_more_random">Making rebounds more random</h2>
+## Making rebounds more random
 
-<p>We can change the ball's velocity depending on the exact spot it hits the paddle, by modifying the <code>x</code> velocity each time the <code>ballHitPaddle()</code> function is run using a line along the lines of the below. Add this new line to your code now, and try it out.</p>
+We can change the ball's velocity depending on the exact spot it hits the paddle, by modifying the `x` velocity each time the `ballHitPaddle()` function is run using a line along the lines of the below. Add this new line to your code now, and try it out.
 
-<pre class="brush: js">function ballHitPaddle(ball, paddle) {
+```js
+function ballHitPaddle(ball, paddle) {
     ball.animations.play('wobble');
     ball.body.velocity.x = -1*5*(paddle.x-ball.x);
-}</pre>
+}
+```
 
-<p>It's a little bit of magic — the new velocity is higher, the larger the distance between the center of the paddle and the place where the ball hits it. Also, the direction (left or right) is determined by that value — if the ball hits the left side of the paddle it will bounce left, whereas hitting the right side will bounce it to the right. It ended up that way because of a little bit of experimentation with the given values, you can do your own experimentation and see what happens. It's not completely random of course, but it does make the gameplay a bit more unpredictable and therefore more interesting.</p>
+It's a little bit of magic — the new velocity is higher, the larger the distance between the center of the paddle and the place where the ball hits it. Also, the direction (left or right) is determined by that value — if the ball hits the left side of the paddle it will bounce left, whereas hitting the right side will bounce it to the right. It ended up that way because of a little bit of experimentation with the given values, you can do your own experimentation and see what happens. It's not completely random of course, but it does make the gameplay a bit more unpredictable and therefore more interesting.
 
-<h2 id="Compare_your_code">Compare your code</h2>
+## Compare your code
 
-<p>You can check the finished code for this lesson in the live demo below, and play with it to understand better how it works:</p>
+You can check the finished code for this lesson in the live demo below, and play with it to understand better how it works:
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/3yds5ege/","","400")}}</p>
+{{JSFiddleEmbed("https://jsfiddle.net/end3r/3yds5ege/","","400")}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>You've finished all the lessons — congratulations! By this point you would have learnt the basics of Phaser and the logic behind simple 2D games.</p>
+You've finished all the lessons — congratulations! By this point you would have learnt the basics of Phaser and the logic behind simple 2D games.
 
-<h3 id="Exercises_to_follow">Exercises to follow</h3>
+### Exercises to follow
 
-<p>You can do a lot more in the game — add whatever you feel would be best to make it more fun and interesting. It's a basic intro scratching the surface of the countless helpful methods that Phaser provides. Below are some suggestions as to how you could expand our little game, to get you started:</p>
+You can do a lot more in the game — add whatever you feel would be best to make it more fun and interesting. It's a basic intro scratching the surface of the countless helpful methods that Phaser provides. Below are some suggestions as to how you could expand our little game, to get you started:
 
-<ul>
- <li>Add a second ball or paddle.</li>
- <li>Change the color of the background on every hit.</li>
- <li>Change the images and use your own.</li>
- <li>Grant extra bonus points if bricks are destroyed rapidly, several-in-a-row (or other bonuses of your choosing.)</li>
- <li>Create levels with different brick layouts.</li>
-</ul>
+- Add a second ball or paddle.
+- Change the color of the background on every hit.
+- Change the images and use your own.
+- Grant extra bonus points if bricks are destroyed rapidly, several-in-a-row (or other bonuses of your choosing.)
+- Create levels with different brick layouts.
 
-<p>Be sure to check the ever growing list of <a href="https://examples.phaser.io/">examples</a> and the <a href="http://docs.phaser.io/">official documentation</a>, and visit the <a href="https://www.html5gamedevs.com/forum/14-phaser/">HTML5 Gamedevs forums</a> if you ever need any help.</p>
+Be sure to check the ever growing list of [examples](https://examples.phaser.io/) and the [official documentation](http://docs.phaser.io/), and visit the [HTML5 Gamedevs forums](https://www.html5gamedevs.com/forum/14-phaser/) if you ever need any help.
 
-<p>You could also go back to <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser">this tutorial series' index page</a>.</p>
+You could also go back to [this tutorial series' index page](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser).
 
-<p>{{Previous("Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}</p>
+{{Previous("Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}

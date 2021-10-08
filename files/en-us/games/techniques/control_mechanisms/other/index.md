@@ -10,41 +10,46 @@ tags:
   - TV Leap Motion
   - Voice
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p>{{PreviousMenu("Games/Techniques/Control_mechanisms/Desktop_with_gamepad", "Games/Techniques/Control_mechanisms")}}</p>
+{{PreviousMenu("Games/Techniques/Control_mechanisms/Desktop_with_gamepad", "Games/Techniques/Control_mechanisms")}}
 
-<p>Having different control mechanisms in your game helps reach broader audiences. Implementing mobile and desktop controls is recommended is a must, and gamepad controls add that extra experience. But imagine going even further — in this article we will explore various unconventional ways to control your web game, some more unconventional than others.</p>
+Having different control mechanisms in your game helps reach broader audiences. Implementing mobile and desktop controls is recommended is a must, and gamepad controls add that extra experience. But imagine going even further — in this article we will explore various unconventional ways to control your web game, some more unconventional than others.
 
-<h2 id="TV_remote">TV remote</h2>
+## TV remote
 
-<p>Playing games on a TV screen doesn't always have to be done through consoles. There's already a Gamepad API working on the desktop computers, so we can imitate the experience, but we can go even further. Modern smart TVs can handle HTML5 games, because they have a built-in browser that can be used as a gaming platform. Smart TVs are shipped with remote controls, which can be used to control your games if you know how.</p>
+Playing games on a TV screen doesn't always have to be done through consoles. There's already a Gamepad API working on the desktop computers, so we can imitate the experience, but we can go even further. Modern smart TVs can handle HTML5 games, because they have a built-in browser that can be used as a gaming platform. Smart TVs are shipped with remote controls, which can be used to control your games if you know how.
 
-<p>The earliest demo of <a class="external external-icon" href="https://rogers2.enclavegames.com/demo/">Captain Rogers: Battle at Andromeda</a> was adjusted to work on a huge TV. Interestingly enough, the first Captain Rogers game (Asteroid Belt of Sirius) was optimized for low-end, small-screen, cheap smartphones running Firefox OS, so you can see the difference three years can make — you can read the whole story in our <a href="https://hacks.mozilla.org/2016/01/building-games-for-firefox-os-tv/">Building games for Firefox OS TV</a> Hacks post.</p>
+The earliest demo of [Captain Rogers: Battle at Andromeda](https://rogers2.enclavegames.com/demo/) was adjusted to work on a huge TV. Interestingly enough, the first Captain Rogers game (Asteroid Belt of Sirius) was optimized for low-end, small-screen, cheap smartphones running Firefox OS, so you can see the difference three years can make — you can read the whole story in our [Building games for Firefox OS TV](https://hacks.mozilla.org/2016/01/building-games-for-firefox-os-tv/) Hacks post.
 
-<p><img alt="Panasonic TV remote controls for the game Captain Rogers: Battle at Andromeda." src="controls-tvremote.png"></p>
+![Panasonic TV remote controls for the game Captain Rogers: Battle at Andromeda.](controls-tvremote.png)
 
-<p>Using a TV remote to control the game ended up being surprisingly easy, because the events fired by the controller are emulating conventional keyboard keys. Captain Rogers had the keyboard controls implemented already:</p>
+Using a TV remote to control the game ended up being surprisingly easy, because the events fired by the controller are emulating conventional keyboard keys. Captain Rogers had the keyboard controls implemented already:
 
-<pre class="brush: js">this.cursors = this.input.keyboard.createCursorKeys();
+```js
+this.cursors = this.input.keyboard.createCursorKeys();
 //...
 if(this.cursors.right.isDown) {
     // move player right
-}</pre>
+}
+```
 
-<p>It works out of the box. The cursors are the four directional arrow keys on the keyboard, and these have exactly the same key codes as the arrow keys on the remote. How do you know the codes for the other remote keys? You can check them by printing the responses out in the console:</p>
+It works out of the box. The cursors are the four directional arrow keys on the keyboard, and these have exactly the same key codes as the arrow keys on the remote. How do you know the codes for the other remote keys? You can check them by printing the responses out in the console:
 
-<pre class="brush: js">window.addEventListener("keydown", function(event) {
+```js
+window.addEventListener("keydown", function(event) {
     console.log(event.keyCode);
-}, this);</pre>
+}, this);
+```
 
-<p>Every key pressed on the remote will show its key code in the console. You can also check this handy cheat sheet seen below if you're working with Panasonic TVs running Firefox OS:</p>
+Every key pressed on the remote will show its key code in the console. You can also check this handy cheat sheet seen below if you're working with Panasonic TVs running Firefox OS:
 
-<p><img alt="Remote control key codes for Panasonic TV." src="controls-tvkeys.png"></p>
+![Remote control key codes for Panasonic TV.](controls-tvkeys.png)
 
-<p>You can add moving between states, starting a new game, controlling the ship and blowing stuff up, pausing and restarting the game. All that is needed is checking for key presses:</p>
+You can add moving between states, starting a new game, controlling the ship and blowing stuff up, pausing and restarting the game. All that is needed is checking for key presses:
 
-<pre class="brush: js">window.addEventListener("keydown", function(event) {
+```js
+window.addEventListener("keydown", function(event) {
     switch(event.keyCode) {
         case 8: {
             // pause the game
@@ -56,61 +61,67 @@ if(this.cursors.right.isDown) {
         }
         // ...
     }
-}, this);</pre>
+}, this);
+```
 
-<p>You can see it in action by watching <a href="https://www.youtube.com/watch?v=Bh11sP0bcTY">this video</a>.</p>
+You can see it in action by watching [this video](https://www.youtube.com/watch?v=Bh11sP0bcTY).
 
-<h2 id="Leap_Motion">Leap Motion</h2>
+## Leap Motion
 
-<p>Have you ever thought about controlling a game only with your hands? It's possible with <a href="https://www.leapmotion.com/">Leap Motion</a>, an immersive controller for games and apps.</p>
+Have you ever thought about controlling a game only with your hands? It's possible with [Leap Motion](https://www.leapmotion.com/), an immersive controller for games and apps.
 
-<p>Leapmotion is becoming more and more popular due to very good integration with VR headsets — demoing <a href="https://mozilla.github.io/rainbow/">Rainbow Membrane</a> on an Oculus Rift with Leap Motion attached to it was voted one of the best WebVR experiences by JavaScript developers visiting demo booths at conferences around the world.</p>
+Leapmotion is becoming more and more popular due to very good integration with VR headsets — demoing [Rainbow Membrane](https://mozilla.github.io/rainbow/) on an Oculus Rift with Leap Motion attached to it was voted one of the best WebVR experiences by JavaScript developers visiting demo booths at conferences around the world.
 
-<p>As well as being great for virtual interfaces, it can also be used for a casual 2D gaming experiences. It would be very difficult to do everything with only your hands, but it's totally doable for the simple Captain Roger's gameplay — steering the ship and shooting the bullets.</p>
+As well as being great for virtual interfaces, it can also be used for a casual 2D gaming experiences. It would be very difficult to do everything with only your hands, but it's totally doable for the simple Captain Roger's gameplay — steering the ship and shooting the bullets.
 
-<p>There's good <a href="https://developer.leapmotion.com/documentation/javascript/devguide/Sample_Tutorial.html">Hello World</a> and <a href="https://developer.leapmotion.com/getting-started/javascript">Getting Started</a> JavaScript tutorials available on the Leap Motion documentation pages, which will get you through the basics. You can also check out the tutorial about <a href="https://gamedevelopment.tutsplus.com/tutorials/add-motion-control-to-a-kiwijs-game-with-the-leap-motion-controller--cms-20455">using Leap Motion plugin for Kiwi.js</a>, or the case study of <a href="https://arstechnica.com/business/2014/04/building-a-gesture-controlled-web-game-with-leap-motion/">building a web game with Leap Motion and Pixi.js</a>. Be sure to visit the <a href="https://github.com/leapmotion/leapjs">LeapJS repository on GitHub</a> to learn about the JavaScript client for the Leap Motion controller and read the documentation there. If all else fails, there's also a <a href="https://developer.leapmotion.com/gallery/category/javascript">gallery of working examples</a> you can look at.</p>
+There's good [Hello World](https://developer.leapmotion.com/documentation/javascript/devguide/Sample_Tutorial.html) and [Getting Started](https://developer.leapmotion.com/getting-started/javascript) JavaScript tutorials available on the Leap Motion documentation pages, which will get you through the basics. You can also check out the tutorial about [using Leap Motion plugin for Kiwi.js](https://gamedevelopment.tutsplus.com/tutorials/add-motion-control-to-a-kiwijs-game-with-the-leap-motion-controller--cms-20455), or the case study of [building a web game with Leap Motion and Pixi.js](https://arstechnica.com/business/2014/04/building-a-gesture-controlled-web-game-with-leap-motion/). Be sure to visit the [LeapJS repository on GitHub](https://github.com/leapmotion/leapjs) to learn about the JavaScript client for the Leap Motion controller and read the documentation there. If all else fails, there's also a [gallery of working examples](https://developer.leapmotion.com/gallery/category/javascript) you can look at.
 
-<p>To get the Leap Motion working on your computer you have to first install it by following the steps at <a href="https://leapmotion.com/setup">leapmotion.com/setup</a>. When everything is installed and the controller is connected to your computer we can proceed with implementing support in our <a href="https://github.com/end3r/JavaScript-Game-Controls/">little demo</a>. First, we add a <code>&lt;script&gt;</code> tag with the <code>url</code> pointing at <a href="https://js.leapmotion.com/leap-0.6.4.min.js">this file</a>, and add <code>&lt;div id="output"&gt;&lt;/div&gt;</code> just before the closing <code>&lt;/body&gt;</code> tag for outputting diagnostic information.</p>
+To get the Leap Motion working on your computer you have to first install it by following the steps at [leapmotion.com/setup](https://leapmotion.com/setup). When everything is installed and the controller is connected to your computer we can proceed with implementing support in our [little demo](https://github.com/end3r/JavaScript-Game-Controls/). First, we add a `<script>` tag with the `url` pointing at [this file](https://js.leapmotion.com/leap-0.6.4.min.js), and add `<div id="output"></div>` just before the closing `</body>` tag for outputting diagnostic information.
 
-<p>We will need a few helper variables for our code to work — one for the purpose of calculating the degrees from radians, two for holding the horizontal and vertical amount of degrees our hand is leaning above the controller, one for the threshold of that lean, and one for the state of our hand's grab status. We next add these lines after all the event listeners for keyboard and mouse, but before the <code>draw</code> method:</p>
+We will need a few helper variables for our code to work — one for the purpose of calculating the degrees from radians, two for holding the horizontal and vertical amount of degrees our hand is leaning above the controller, one for the threshold of that lean, and one for the state of our hand's grab status. We next add these lines after all the event listeners for keyboard and mouse, but before the `draw` method:
 
-<pre class="brush: js">var toDegrees = 1 / (Math.PI / 180);
+```js
+var toDegrees = 1 / (Math.PI / 180);
 var horizontalDegree = 0;
 var verticalDegree = 0;
 var degreeThreshold = 30;
-var grabStrength = 0;</pre>
+var grabStrength = 0;
+```
 
-<p>Right after that we use the Leap's <code>loop</code> method to get the information held in the <code>hand</code> variable on every frame:</p>
+Right after that we use the Leap's `loop` method to get the information held in the `hand` variable on every frame:
 
-<pre class="brush: js">Leap.loop({
+```js
+Leap.loop({
     hand: function(hand) {
         horizontalDegree = Math.round(hand.roll() * toDegrees);
         verticalDegree = Math.round(hand.pitch() * toDegrees);
         grabStrength = hand.grabStrength;
-        output.innerHTML = 'Leap Motion: &lt;br /&gt;'
-            + ' roll: ' + horizontalDegree + '° &lt;br /&gt;'
-            + ' pitch: ' + verticalDegree + '° &lt;br /&gt;'
+        output.innerHTML = 'Leap Motion: <br />'
+            + ' roll: ' + horizontalDegree + '° <br />'
+            + ' pitch: ' + verticalDegree + '° <br />'
             + ' strength: ' + grabStrength + '';
     }
-});</pre>
+});
+```
 
-<p>The code above is calculating and assigning the <code>horizontalDegree</code>, <code>verticalDegree</code> and <code>grabStrength</code> values that we will use later on, and outputting it in HTML so we can see the actual values. When those variables are up-to-date, we can use them in the <code>draw()</code> function to move the ship:</p>
+The code above is calculating and assigning the `horizontalDegree`, `verticalDegree` and `grabStrength` values that we will use later on, and outputting it in HTML so we can see the actual values. When those variables are up-to-date, we can use them in the `draw()` function to move the ship:
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // ...
 
-    if(horizontalDegree &gt; degreeThreshold) {
+    if(horizontalDegree > degreeThreshold) {
         playerX -= 5;
     }
-    else if(horizontalDegree &lt; -degreeThreshold) {
+    else if(horizontalDegree < -degreeThreshold) {
         playerX += 5;
     }
-    if(verticalDegree &gt; degreeThreshold) {
+    if(verticalDegree > degreeThreshold) {
         playerY += 5;
     }
-    else if(verticalDegree &lt; -degreeThreshold) {
+    else if(verticalDegree < -degreeThreshold) {
         playerY -= 5;
     }
     if(grabStrength == 1) {
@@ -119,44 +130,47 @@ var grabStrength = 0;</pre>
 
     ctx.drawImage(img, playerX, playerY);
     requestAnimationFrame(draw);
-}</pre>
+}
+```
 
-<p>If the <code>horizontalDegree</code> value is greater than our <code>degreeThreshold</code>, which is 30 in this case, then the ship will be moved left 5 pixels on every frame. If its value is lower than the threshold's negative value, then the ship is moved right. up/down movement works in the same sort of way. The last value is <code>grabStrength</code>, which is a float between 0 and 1 — when reaching 1 (fist fully clenched), we show an alert for now (in a full game this could be replaced with the shooting logic.)</p>
+If the `horizontalDegree` value is greater than our `degreeThreshold`, which is 30 in this case, then the ship will be moved left 5 pixels on every frame. If its value is lower than the threshold's negative value, then the ship is moved right. up/down movement works in the same sort of way. The last value is `grabStrength`, which is a float between 0 and 1 — when reaching 1 (fist fully clenched), we show an alert for now (in a full game this could be replaced with the shooting logic.)
 
-<p><img alt="Leap Motion controller support in the game, with visible output for roll, pitch and strength." src="controls-leapmotion.png"></p>
+![Leap Motion controller support in the game, with visible output for roll, pitch and strength.](controls-leapmotion.png)
 
-<p>That's it — everything you needed for a working Leap Motion example in JavaScript is here already. You can explore the <code>hand</code>'s properties and implement any behavior you like right inside your game.</p>
+That's it — everything you needed for a working Leap Motion example in JavaScript is here already. You can explore the `hand`'s properties and implement any behavior you like right inside your game.
 
-<h2 id="Doppler_effect">Doppler effect</h2>
+## Doppler effect
 
-<p>There's a very interesting article available on <a href="https://danielrapp.github.io/doppler/">Motion sensing using the doppler effect</a>, which mixes together waving your hand and using the microphone. This time it's about detecting sound waves bouncing off objects and returning to the microphone.</p>
+There's a very interesting article available on [Motion sensing using the doppler effect](https://danielrapp.github.io/doppler/), which mixes together waving your hand and using the microphone. This time it's about detecting sound waves bouncing off objects and returning to the microphone.
 
-<p><img alt="Doppler effect as a way to control the scroll of an article on a laptop using hand gesture." src="controls-doppler.png"></p>
+![Doppler effect as a way to control the scroll of an article on a laptop using hand gesture.](controls-doppler.png)
 
-<p>If the frequency of the bounced sound is shifted from the original one, then we can detect that the movement of that object occurred. That way we can detect a hand movement by using only a built-in microphone!</p>
+If the frequency of the bounced sound is shifted from the original one, then we can detect that the movement of that object occurred. That way we can detect a hand movement by using only a built-in microphone!
 
-<p>This can be accomplished using <a href="https://github.com/DanielRapp/doppler">a small library</a> created by Daniel Rapp — it can be as simple as calculating the difference between two frequencies:</p>
+This can be accomplished using [a small library](https://github.com/DanielRapp/doppler) created by Daniel Rapp — it can be as simple as calculating the difference between two frequencies:
 
-<pre class="brush: js">doppler.init(function(bandwidth) {
+```js
+doppler.init(function(bandwidth) {
     var diff = bandwidth.left - bandwidth.right;
-});</pre>
+});
+```
 
-<p>The <code>diff</code> would be the difference between the initial position of the hand and the final one.</p>
+The `diff` would be the difference between the initial position of the hand and the final one.
 
-<p>This approach won't give us the full flexibility of using a Gamepad, or even Leap Motion, but it's definitely an interesting, unconventional alternative. You can use it to scroll a page hands-free, or play theremin, but it should also be enough to move the ship up and down the screen if implemented correctly.</p>
+This approach won't give us the full flexibility of using a Gamepad, or even Leap Motion, but it's definitely an interesting, unconventional alternative. You can use it to scroll a page hands-free, or play theremin, but it should also be enough to move the ship up and down the screen if implemented correctly.
 
+## MaKey MaKey
 
-<h2 id="MaKey_MaKey">MaKey MaKey</h2>
+If you want to go completely bananas you can use [MaKey MaKey](https://makeymakey.com/), a board that can turn anything into a controller — it's all about connecting real-world, conductive objects to a computer and using them as touch interfaces.
 
-<p>If you want to go completely bananas you can use <a href="https://makeymakey.com/">MaKey MaKey</a>, a board that can turn anything into a controller — it's all about connecting real-world, conductive objects to a computer and using them as touch interfaces.</p>
+![Controlling a banana piano using Makey Makey.](controls-banana.png)
 
-<p><img alt="Controlling a banana piano using Makey Makey." src="controls-banana.png"></p>
+Check out the [banana piano video](https://www.youtube.com/watch?v=_DWQ6ce2Ags), and be sure to visit the [quick start guide](https://learn.sparkfun.com/tutorials/makey-makey-quickstart-guide) for all the needed info.
 
-<p>Check out the <a href="https://www.youtube.com/watch?v=_DWQ6ce2Ags">banana piano video</a>, and be sure to visit the <a href="https://learn.sparkfun.com/tutorials/makey-makey-quickstart-guide">quick start guide</a> for all the needed info.</p>
+There's even a [Cylon.js-supported Makey Button functionality](https://cylonjs.com/documentation/drivers/makey-button/) inspired by the MaKey MaKey board, so you can use the popular Cylon robotics framework for your experiments with Arduino or Raspberry Pi. Connecting the boards and using them may look like this:
 
-<p>There's even a <a href="https://cylonjs.com/documentation/drivers/makey-button/">Cylon.js-supported Makey Button functionality</a> inspired by the MaKey MaKey board, so you can use the popular Cylon robotics framework for your experiments with Arduino or Raspberry Pi. Connecting the boards and using them may look like this:</p>
-
-<pre class="brush: js">var Cylon = require('cylon');
+```js
+var Cylon = require('cylon');
 Cylon.robot({
   connections: {
     arduino: { adaptor: 'firmata', port: '/dev/ttyACM0' }
@@ -169,14 +183,15 @@ Cylon.robot({
       console.log("Button pushed!");
     });
   }
-}).start();</pre>
+}).start();
+```
 
-<p>As the description says: this GPIO driver allows you to connect a 10 MOhm resistor to a digital pin on your Arduino or Raspberry Pi to control your robots with bananas, clay, or drawable circuitry.</p>
+As the description says: this GPIO driver allows you to connect a 10 MOhm resistor to a digital pin on your Arduino or Raspberry Pi to control your robots with bananas, clay, or drawable circuitry.
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>I hope you liked the experiments — if you have any others that you think might interest other people, feel free to add details of them here.</p>
+I hope you liked the experiments — if you have any others that you think might interest other people, feel free to add details of them here.
 
-<p>And remember: have fun making games!</p>
+And remember: have fun making games!
 
-<p>{{PreviousMenu("Games/Techniques/Control_mechanisms/Desktop_with_gamepad", "Games/Techniques/Control_mechanisms")}}</p>
+{{PreviousMenu("Games/Techniques/Control_mechanisms/Desktop_with_gamepad", "Games/Techniques/Control_mechanisms")}}

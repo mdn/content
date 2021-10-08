@@ -11,102 +11,107 @@ tags:
   - JavaScript
   - Tutorial
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
 
-<p>This is the <strong>1st step</strong> out of 10 of the <a href="/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript">Gamedev Canvas tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html">Gamedev-Canvas-workshop/lesson1.html</a>.</p>
+This is the **1st step** out of 10 of the [Gamedev Canvas tutorial](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). You can find the source code as it should look after completing this lesson at [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html).
 
-<p>Before we can start writing the game's functionality, we need to create a basic structure to render the game inside. This can be done using HTML and the {{htmlelement("canvas")}} element.</p>
+Before we can start writing the game's functionality, we need to create a basic structure to render the game inside. This can be done using HTML and the {{htmlelement("canvas")}} element.
 
-<h2 id="The_games_HTML">The game's HTML</h2>
+## The game's HTML
 
-<p>The HTML document structure is quite simple, as the game will be rendered entirely on the {{htmlelement("canvas")}} element. Using your favorite text editor, create a new HTML document, save it as <code>index.html</code>, in a sensible location, and add the following code to it:</p>
+The HTML document structure is quite simple, as the game will be rendered entirely on the {{htmlelement("canvas")}} element. Using your favorite text editor, create a new HTML document, save it as `index.html`, in a sensible location, and add the following code to it:
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset="utf-8" /&gt;
-    &lt;title&gt;Gamedev Canvas Workshop&lt;/title&gt;
-    &lt;style&gt;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Gamedev Canvas Workshop</title>
+    <style>
     	* { padding: 0; margin: 0; }
     	canvas { background: #eee; display: block; margin: 0 auto; }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
+    </style>
+</head>
+<body>
 
-&lt;canvas id="myCanvas" width="480" height="320"&gt;&lt;/canvas&gt;
+<canvas id="myCanvas" width="480" height="320"></canvas>
 
-&lt;script&gt;
+<script>
 	// JavaScript code goes here
-&lt;/script&gt;
+</script>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<p>We have a <code>charset</code> defined, {{htmlelement("title")}} and some basic CSS in the header. The body contains {{htmlelement("canvas")}} and {{htmlelement("script")}} elements — we will render the game inside the first one and write the JavaScript code that controls it in the second one. The {{htmlelement("canvas")}} element has an <code>id</code> of <code>myCanvas</code> to allow us to easily grab a reference to it, and it is 480 pixels wide and 320 pixels high. All the JavaScript code we will write in this tutorial will go between the opening <code>&lt;script&gt;</code> and closing <code>&lt;/script&gt;</code> tags.</p>
+We have a `charset` defined, {{htmlelement("title")}} and some basic CSS in the header. The body contains {{htmlelement("canvas")}} and {{htmlelement("script")}} elements — we will render the game inside the first one and write the JavaScript code that controls it in the second one. The {{htmlelement("canvas")}} element has an `id` of `myCanvas` to allow us to easily grab a reference to it, and it is 480 pixels wide and 320 pixels high. All the JavaScript code we will write in this tutorial will go between the opening `<script>` and closing `</script>` tags.
 
-<h2 id="Canvas_basics">Canvas basics</h2>
+## Canvas basics
 
-<p>To actually be able to render graphics on the {{htmlelement("canvas")}} element, first we have to grab a reference to it in JavaScript. Add the following below your opening <code>&lt;script&gt;</code> tag.</p>
+To actually be able to render graphics on the {{htmlelement("canvas")}} element, first we have to grab a reference to it in JavaScript. Add the following below your opening `<script>` tag.
 
-<pre class="brush: js">var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");</pre>
+```js
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+```
 
-<p>Here we're storing a reference to the {{htmlelement("canvas")}} element to the <code>canvas</code> variable. Then we're creating the <code>ctx</code> variable to store the 2D rendering context — the actual tool we can use to paint on the Canvas.</p>
+Here we're storing a reference to the {{htmlelement("canvas")}} element to the `canvas` variable. Then we're creating the `ctx` variable to store the 2D rendering context — the actual tool we can use to paint on the Canvas.
 
-<p>Let's see an example piece of code that prints a red square on the canvas. Add this below your previous lines of JavaScript, then load your <code>index.html</code> in a browser to try it out.</p>
+Let's see an example piece of code that prints a red square on the canvas. Add this below your previous lines of JavaScript, then load your `index.html` in a browser to try it out.
 
-<pre class="brush: js">ctx.beginPath();
+```js
+ctx.beginPath();
 ctx.rect(20, 40, 50, 50);
 ctx.fillStyle = "#FF0000";
 ctx.fill();
-ctx.closePath();</pre>
+ctx.closePath();
+```
 
-<p>All the instructions are between the {{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}} and {{domxref("CanvasRenderingContext2D.closePath()","closePath()")}} methods. We are defining a rectangle using {{domxref("CanvasRenderingContext2D.rect()","rect()")}}: the first two values specify the coordinates of the top left corner of the rectangle on the canvas, while the second two specify the width and height of the rectangle. In our case the rectangle is painted 20 pixels from the left side of the screen and 40 pixels from the top side, and is 50 pixels wide and 50 pixels high, which makes it a perfect square. The {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} property stores a color that will be used by the {{domxref("CanvasRenderingContext2D.fill()","fill()")}} method to paint the square, in our case, red.</p>
+All the instructions are between the {{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}} and {{domxref("CanvasRenderingContext2D.closePath()","closePath()")}} methods. We are defining a rectangle using {{domxref("CanvasRenderingContext2D.rect()","rect()")}}: the first two values specify the coordinates of the top left corner of the rectangle on the canvas, while the second two specify the width and height of the rectangle. In our case the rectangle is painted 20 pixels from the left side of the screen and 40 pixels from the top side, and is 50 pixels wide and 50 pixels high, which makes it a perfect square. The {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} property stores a color that will be used by the {{domxref("CanvasRenderingContext2D.fill()","fill()")}} method to paint the square, in our case, red.
 
-<p>We're not limited to rectangles — here's a piece of code for printing out a green circle. Try adding this to the bottom of your JavaScript, saving and refreshing:</p>
+We're not limited to rectangles — here's a piece of code for printing out a green circle. Try adding this to the bottom of your JavaScript, saving and refreshing:
 
-<pre class="brush: js">ctx.beginPath();
+```js
+ctx.beginPath();
 ctx.arc(240, 160, 20, 0, Math.PI*2, false);
 ctx.fillStyle = "green";
 ctx.fill();
-ctx.closePath();</pre>
+ctx.closePath();
+```
 
-<p>As you can see we're using the {{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}} and {{domxref("CanvasRenderingContext2D.closePath()","closePath()")}} methods again. Between them, the most important part of the code above is the {{domxref("CanvasRenderingContext2D.arc()","arc()")}} method. It takes six parameters:</p>
+As you can see we're using the {{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}} and {{domxref("CanvasRenderingContext2D.closePath()","closePath()")}} methods again. Between them, the most important part of the code above is the {{domxref("CanvasRenderingContext2D.arc()","arc()")}} method. It takes six parameters:
 
-<ul>
- <li><code>x</code> and <code>y</code> coordinates of the arc's center</li>
- <li>arc radius</li>
- <li>start angle and end angle (what angle to start and finish drawing the circle, in radians)</li>
- <li>direction of drawing (<code>false</code> for clockwise, the default, or <code>true</code> for anti-clockwise.) This last parameter is optional.</li>
-</ul>
+- `x` and `y` coordinates of the arc's center
+- arc radius
+- start angle and end angle (what angle to start and finish drawing the circle, in radians)
+- direction of drawing (`false` for clockwise, the default, or `true` for anti-clockwise.) This last parameter is optional.
 
-<p>The {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} property looks different than before. This is because, just as with CSS, color can be specified as a hexadecimal value, a color keyword, the <code>rgba()</code> function, or any of the other available color methods.</p>
+The {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} property looks different than before. This is because, just as with CSS, color can be specified as a hexadecimal value, a color keyword, the `rgba()` function, or any of the other available color methods.
 
-<p>Instead of using {{domxref("CanvasRenderingContext2D.fill()","fill()")}} and filling the shapes with colors, we can use {{domxref("CanvasRenderingContext2D.stroke()","stroke()")}} to only color the outer stroke. Try adding this code to your JavaScript too:</p>
+Instead of using {{domxref("CanvasRenderingContext2D.fill()","fill()")}} and filling the shapes with colors, we can use {{domxref("CanvasRenderingContext2D.stroke()","stroke()")}} to only color the outer stroke. Try adding this code to your JavaScript too:
 
-<pre class="brush: js">ctx.beginPath();
+```js
+ctx.beginPath();
 ctx.rect(160, 10, 100, 40);
 ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
 ctx.stroke();
-ctx.closePath();</pre>
+ctx.closePath();
+```
 
-<p>The code above prints a blue-stroked empty rectangle. Thanks to the alpha channel in the <code>rgba()</code> function, the blue color is semi transparent.</p>
+The code above prints a blue-stroked empty rectangle. Thanks to the alpha channel in the `rgba()` function, the blue color is semi transparent.
 
-<h2 id="Compare_your_code">Compare your code</h2>
+## Compare your code
 
-<p>Here's the full source code of the first lesson, running live in a JSFiddle:</p>
+Here's the full source code of the first lesson, running live in a JSFiddle:
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","395")}}</p>
+{{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","395")}}
 
-<div class="note">
-<p><strong>Note:</strong> Try changing the size and color of the given shapes.</p>
-</div>
+> **Note:** Try changing the size and color of the given shapes.
 
-<h2 id="Next_steps">Next steps</h2>
+## Next steps
 
-<p>Now we've set up the basic HTML and learned a bit about canvas, lets continue to the second chapter and work out how to <a href="/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball">Move the ball in our game</a>.</p>
+Now we've set up the basic HTML and learned a bit about canvas, lets continue to the second chapter and work out how to [Move the ball in our game](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball).
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}

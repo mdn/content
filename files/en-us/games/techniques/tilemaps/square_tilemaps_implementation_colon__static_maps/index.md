@@ -12,49 +12,50 @@ tags:
   - tilemaps
   - tiles
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p>This article covers how to implement static square tilemaps using the <a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a>.</p>
+This article covers how to implement static square tilemaps using the [Canvas API](/en-US/docs/Web/API/Canvas_API).
 
-<div class="note">
-<p><strong>Note:</strong> When writing this article, we assumed previous reader knowledge of canvas basics such as how get a 2D canvas context, load images, etc., which is all explained in the <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas API tutorial</a>, as well as the basic information included in our <a href="/en-US/docs/Games/Techniques/Tilemaps">Tilemaps</a> introduction article.</p>
-</div>
+> **Note:** When writing this article, we assumed previous reader knowledge of canvas basics such as how get a 2D canvas context, load images, etc., which is all explained in the [Canvas API tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial), as well as the basic information included in our [Tilemaps](/en-US/docs/Games/Techniques/Tilemaps) introduction article.
 
-<h2 id="The_tile_atlas">The tile atlas</h2>
+## The tile atlas
 
-<p>A tilemap might use one or several atlases — or spritesheets — that contain all of the tile images. This is the atlas we will be using as an example, which features five different tiles:</p>
+A tilemap might use one or several atlases — or spritesheets — that contain all of the tile images. This is the atlas we will be using as an example, which features five different tiles:
 
-<p><img alt="Tiles packaged in an atlas" src="tiles.png"></p>
+![Tiles packaged in an atlas](tiles.png)
 
-<p>To draw a tile from the atlas into the canvas we make use of the {{domxref("CanvasRenderingContext2D.drawImage","drawImage()")}} method in a canvas 2D context. We need to supply the atlas image, the coordinates and dimensions of the tile inside the atlas, and the target coordinates and size (a different tile size in here would scale the tile.)</p>
+To draw a tile from the atlas into the canvas we make use of the {{domxref("CanvasRenderingContext2D.drawImage","drawImage()")}} method in a canvas 2D context. We need to supply the atlas image, the coordinates and dimensions of the tile inside the atlas, and the target coordinates and size (a different tile size in here would scale the tile.)
 
-<p>So, for instance, to draw the tree tile, which is the third in the atlas, at the screen coordinates <code>(128, 320)</code>, we would call <code>drawImage()</code> with these values:</p>
+So, for instance, to draw the tree tile, which is the third in the atlas, at the screen coordinates `(128, 320)`, we would call `drawImage()` with these values:
 
-<pre class="brush: js">context.drawImage(atlasImage, 192, 0, 64, 64, 128, 320, 64, 64);</pre>
+```js
+context.drawImage(atlasImage, 192, 0, 64, 64, 128, 320, 64, 64);
+```
 
-<p>In order to support atlases with multiple rows and columns, you would need to know how many rows and columns there are to be able to compute the source <code>x</code> and <code>y</code>.</p>
+In order to support atlases with multiple rows and columns, you would need to know how many rows and columns there are to be able to compute the source `x` and `y`.
 
-<h2 id="The_tilemap_data_structure">The tilemap data structure</h2>
+## The tilemap data structure
 
-<p>To store that map data, we can use a plain object or a custom class. For the sake of simplicity, in the example code a plain object has been used. It contains the basic map properties:</p>
+To store that map data, we can use a plain object or a custom class. For the sake of simplicity, in the example code a plain object has been used. It contains the basic map properties:
 
-<ul>
- <li><code>cols</code>: The width of the map, in columns.</li>
- <li><code>rows</code>: The height of the map, in rows.</li>
- <li><code>tsize</code>: The tile size, in pixels.</li>
- <li><code>tiles</code>: A 1-dimensional array containing the visual grid.</li>
- <li><code>getTile()</code>: A helper method that gets the tile index in a certain position.</li>
-</ul>
+- `cols`: The width of the map, in columns.
+- `rows`: The height of the map, in rows.
+- `tsize`: The tile size, in pixels.
+- `tiles`: A 1-dimensional array containing the visual grid.
+- `getTile()`: A helper method that gets the tile index in a certain position.
 
-<p><code>tiles</code> contains the actual visual map data. We are representing the tiles with indices, assigned to the tiles dependant on their position in the atlas (e.g. <code>0</code> for the left-most tile.) However, we must account for <strong>empty tiles</strong>, since they are crucial for implementing layers — empty tiles are usually assigned a negative index value, <code>0</code>, or a null value. In these examples, empty tiles will be represented by index <code>0</code>, so we will shift the indices of the atlases by one (and thus the first tile of the atlas will be assigned index <code>1</code>, the second index <code>2</code>, etc.)</p>
+`tiles` contains the actual visual map data. We are representing the tiles with indices, assigned to the tiles dependant on their position in the atlas (e.g. `0` for the left-most tile.) However, we must account for **empty tiles**, since they are crucial for implementing layers — empty tiles are usually assigned a negative index value, `0`, or a null value. In these examples, empty tiles will be represented by index `0`, so we will shift the indices of the atlases by one (and thus the first tile of the atlas will be assigned index `1`, the second index `2`, etc.)
 
-<p>The <code>getTile()</code> helper method returns the tile contained at the specified column and row. If <code>tiles</code> were a 2D matrix, then the returned value would just be <code>tiles[column][row]</code>. However, it's usually more common to represent the grid with a 1-dimensional array. In this case, we need to map the column and row to an array index:</p>
+The `getTile()` helper method returns the tile contained at the specified column and row. If `tiles` were a 2D matrix, then the returned value would just be `tiles[column][row]`. However, it's usually more common to represent the grid with a 1-dimensional array. In this case, we need to map the column and row to an array index:
 
-<pre class="brush: js">var index = row * map.cols + column;</pre>
+```js
+var index = row * map.cols + column;
+```
 
-<p>Wrapping up, an example of a tilemap object could look like the following. This features an 8 x 8 map with tiles 64 x 64 pixels in size:</p>
+Wrapping up, an example of a tilemap object could look like the following. This features an 8 x 8 map with tiles 64 x 64 pixels in size:
 
-<pre class="brush: js">var map = {
+```js
+var map = {
   cols: 8,
   rows: 8,
   tsize: 64,
@@ -71,22 +72,22 @@ tags:
   getTile: function(col, row) {
     return this.tiles[row * map.cols + col]
   }
-};</pre>
+};
+```
 
-<h2 id="Rendering_the_map">Rendering the map</h2>
+## Rendering the map
 
-<p>We can render the map by iterating over its columns and rows. This snippets assumes the following definitions:</p>
+We can render the map by iterating over its columns and rows. This snippets assumes the following definitions:
 
-<ul>
- <li><code>context</code>: A 2D canvas context.</li>
- <li><code>tileAtlas</code>: An image object containing the tile atlas.</li>
- <li><code>map</code>: The tilemap object discussed above.</li>
-</ul>
+- `context`: A 2D canvas context.
+- `tileAtlas`: An image object containing the tile atlas.
+- `map`: The tilemap object discussed above.
 
-<pre class="brush: js">for (var c = 0; c &lt; map.cols; c++) {
-  for (var r = 0; r &lt; map.rows; r++) {
+```js
+for (var c = 0; c < map.cols; c++) {
+  for (var r = 0; r < map.rows; r++) {
     var tile = map.getTile(c, r);
-    if (tile !== 0) { // 0 =&gt; empty tile
+    if (tile !== 0) { // 0 => empty tile
       context.drawImage(
         tileAtlas, // image
         (tile - 1) * map.tsize, // source x
@@ -100,10 +101,11 @@ tags:
       );
     }
   }
-}</pre>
+}
+```
 
-<h2 id="Demo">Demo</h2>
+## Demo
 
-<p>Our static tilemap implementation demo pulls the above code together to show what an implementation of this map looks like. You can see a <a href="https://mozdevs.github.io/gamedev-js-tiles/square/no-scroll.html">live demo</a> and grab the <a href="https://github.com/mozdevs/gamedev-js-tiles">full source code</a>.</p>
+Our static tilemap implementation demo pulls the above code together to show what an implementation of this map looks like. You can see a [live demo](https://mozdevs.github.io/gamedev-js-tiles/square/no-scroll.html) and grab the [full source code](https://github.com/mozdevs/gamedev-js-tiles).
 
-<p><a href="https://mozdevs.github.io/gamedev-js-tiles/square/no-scroll.html"><img alt="" src="no-scroll.png"></a></p>
+[![](no-scroll.png)](https://mozdevs.github.io/gamedev-js-tiles/square/no-scroll.html)

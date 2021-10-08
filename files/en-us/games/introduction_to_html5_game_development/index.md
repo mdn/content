@@ -7,91 +7,114 @@ tags:
   - HTML5
   - Mobile
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<h2 id="Advantages">Advantages</h2>
+## Advantages
 
-<ol>
- <li>Games built with HTML5 work on smartphones, tablets, PCs and Smart TVs.</li>
- <li>Advertise and promote your game all over the Web as well as other media.</li>
- <li>Payments. Charge what you want and use whatever payment processing service you like.</li>
- <li>Update your game whenever you want.</li>
- <li>Collect your own analytics!</li>
- <li>Connect with your customers more closely,</li>
- <li>Players can play the game anywhere, anytime.</li>
-</ol>
+1.  Games built with HTML5 work on smartphones, tablets, PCs and Smart TVs.
+2.  Advertise and promote your game all over the Web as well as other media.
+3.  Payments. Charge what you want and use whatever payment processing service you like.
+4.  Update your game whenever you want.
+5.  Collect your own analytics!
+6.  Connect with your customers more closely,
+7.  Players can play the game anywhere, anytime.
 
-<h2 id="Web_Technologies">Web Technologies</h2>
+## Web Technologies
 
 <table class="no-markdown standard-table">
- <thead>
-  <tr>
-   <th scope="col"><strong>Function</strong></th>
-   <th scope="col"><strong>Technology</strong></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><strong>Audio</strong></td>
-   <td><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></td>
-  </tr>
-  <tr>
-   <td><strong>Graphics</strong></td>
-   <td><a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> (<a href="https://www.khronos.org/opengles/">OpenGL ES</a> 2.0)</td>
-  </tr>
-  <tr>
-   <td><strong>Input</strong></td>
-   <td><a href="/en-US/docs/Web/API/Touch_events">Touch events</a>, <a href="/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Gamepad API</a>, device sensors, <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>, <a href="/en-US/docs/Web/API/Fullscreen_API">Full Screen API</a>, <a href="/en-US/docs/Web/API/Pointer_Lock_API">Pointer Lock API</a></td>
-  </tr>
-  <tr>
-   <td><strong>Language</strong></td>
-   <td><a href="/en-US/docs/Web/JavaScript">JavaScript</a> (or C/C++ using <a href="https://github.com/kripken/emscripten/wiki">Emscripten</a> to compile to JavaScript)</td>
-  </tr>
-  <tr>
-   <td><strong>Networking</strong></td>
-   <td><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> and/or <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a></td>
-  </tr>
-  <tr>
-   <td><strong>Storage</strong></td>
-   <td><a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> or the "cloud"</td>
-  </tr>
-  <tr>
-   <td><strong>Web</strong></td>
-   <td><a href="/en-US/docs/Web/HTML">HTML</a>, <a href="/en-US/docs/Web/CSS">CSS</a>, <a href="/en-US/docs/Web/SVG">SVG</a>, <a href="/en-US/docs/Social_API">Social API</a> (and much more!)</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col"><strong>Function</strong></th>
+      <th scope="col"><strong>Technology</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Audio</strong></td>
+      <td><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></td>
+    </tr>
+    <tr>
+      <td><strong>Graphics</strong></td>
+      <td>
+        <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> (<a
+          href="https://www.khronos.org/opengles/"
+          >OpenGL ES</a
+        >
+        2.0)
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Input</strong></td>
+      <td>
+        <a href="/en-US/docs/Web/API/Touch_events">Touch events</a>,
+        <a href="/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API"
+          >Gamepad API</a
+        >, device sensors, <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>,
+        <a href="/en-US/docs/Web/API/Fullscreen_API">Full Screen API</a>,
+        <a href="/en-US/docs/Web/API/Pointer_Lock_API">Pointer Lock API</a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Language</strong></td>
+      <td>
+        <a href="/en-US/docs/Web/JavaScript">JavaScript</a> (or C/C++ using
+        <a href="https://github.com/kripken/emscripten/wiki">Emscripten</a> to
+        compile to JavaScript)
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Networking</strong></td>
+      <td>
+        <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> and/or
+        <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Storage</strong></td>
+      <td>
+        <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> or the "cloud"
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Web</strong></td>
+      <td>
+        <a href="/en-US/docs/Web/HTML">HTML</a>,
+        <a href="/en-US/docs/Web/CSS">CSS</a>,
+        <a href="/en-US/docs/Web/SVG">SVG</a>,
+        <a href="/en-US/docs/Social_API">Social API</a> (and much more!)
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><a href="/en-US/docs/Web/API/Fullscreen_API">Full Screen API</a></dt>
- <dd>Full screen gameplay.</dd>
- <dt><a href="/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Gamepad API</a></dt>
- <dd>Use gamepads or other game controllers.</dd>
- <dt><a href="/en-US/docs/Web/HTML">HTML</a> and <a href="/en-US/docs/Web/CSS">CSS</a></dt>
- <dd>Build, style, and lay out your game's user interface.</dd>
- <dt><a href="/en-US/docs/Web/HTML/Element/audio">HTML audio</a></dt>
- <dd>Easily play simple sound effects and music.</dd>
- <dt><a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a></dt>
- <dd>Store user data on their own computer or device.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript">JavaScript</a></dt>
- <dd>Fast web programming language to write the code for your game.<br>
- To easily port your existing games <a href="https://github.com/kripken/emscripten/wiki">Emscripten</a> or <a href="http://asmjs.org/spec/latest/">Asm.js</a></dd>
- <dt><a href="/en-US/docs/Web/API/Pointer_Lock_API">Pointer Lock API</a></dt>
- <dd>Lock the mouse or other pointing device within your game's interface.</dd>
- <dt><a href="/en-US/docs/Web/SVG">SVG</a> (Scalable Vector Graphics)</dt>
- <dd>Build vector graphics that scale smoothly regardless of the size or resolution of the user's display.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Typed_arrays">Typed Arrays</a></dt>
- <dd>Access raw binary data from within JavaScript; Manipulate GL textures, game data, or anything else.</dd>
- <dt><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></dt>
- <dd>Control the playback, synthesis, and manipulation of audio in real time.</dd>
- <dt><a href="/en-US/docs/Web/API/WebGL_API">WebGL</a></dt>
- <dd>Create high-performance, hardware-accelerated 3D (and 2D) graphics. <a href="https://www.khronos.org/opengles/">OpenGL ES</a> 2.0.</dd>
- <dt><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></dt>
- <dd>Real-Time Communications to control audio and video data, including teleconferencing and transmitting other application data back and forth between two users like chat.</dd>
- <dt><a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a></dt>
- <dd>Connect your app or site to a server to transmit data back and forth in real-time. Perfect for multiplayer gaming action, chat services, and so forth.</dd>
- <dt><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web Workers</a></dt>
- <dd>Spawn background threads running their own JavaScript code for multi-core processors.</dd>
- <dt><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> and <a href="/en-US/docs/DOM/File_API">File API</a></dt>
- <dd>Send and receive any kind of data you want from a Web server like downloading new game levels and artwork to transmitting non-real-time game status information back and forth.</dd>
-</dl>
+- [Full Screen API](/en-US/docs/Web/API/Fullscreen_API)
+  - : Full screen gameplay.
+- [Gamepad API](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
+  - : Use gamepads or other game controllers.
+- [HTML](/en-US/docs/Web/HTML) and [CSS](/en-US/docs/Web/CSS)
+  - : Build, style, and lay out your game's user interface.
+- [HTML audio](/en-US/docs/Web/HTML/Element/audio)
+  - : Easily play simple sound effects and music.
+- [IndexedDB](/en-US/docs/Web/API/IndexedDB_API)
+  - : Store user data on their own computer or device.
+- [JavaScript](/en-US/docs/Web/JavaScript)
+  - : Fast web programming language to write the code for your game.
+    To easily port your existing games [Emscripten](https://github.com/kripken/emscripten/wiki) or [Asm.js](http://asmjs.org/spec/latest/)
+- [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API)
+  - : Lock the mouse or other pointing device within your game's interface.
+- [SVG](/en-US/docs/Web/SVG) (Scalable Vector Graphics)
+  - : Build vector graphics that scale smoothly regardless of the size or resolution of the user's display.
+- [Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+  - : Access raw binary data from within JavaScript; Manipulate GL textures, game data, or anything else.
+- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
+  - : Control the playback, synthesis, and manipulation of audio in real time.
+- [WebGL](/en-US/docs/Web/API/WebGL_API)
+  - : Create high-performance, hardware-accelerated 3D (and 2D) graphics. [OpenGL ES](https://www.khronos.org/opengles/) 2.0.
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+  - : Real-Time Communications to control audio and video data, including teleconferencing and transmitting other application data back and forth between two users like chat.
+- [WebSockets](/en-US/docs/Web/API/WebSockets_API)
+  - : Connect your app or site to a server to transmit data back and forth in real-time. Perfect for multiplayer gaming action, chat services, and so forth.
+- [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+  - : Spawn background threads running their own JavaScript code for multi-core processors.
+- [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) and [File API](/en-US/docs/DOM/File_API)
+  - : Send and receive any kind of data you want from a Web server like downloading new game levels and artwork to transmitting non-real-time game status information back and forth.

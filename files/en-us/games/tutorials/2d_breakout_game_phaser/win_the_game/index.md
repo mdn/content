@@ -11,25 +11,26 @@ tags:
   - Tutorial
   - winning
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/The_score", "Games/Workflows/2D_Breakout_game_Phaser/Extra_lives")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/The_score", "Games/Workflows/2D_Breakout_game_Phaser/Extra_lives")}}
 
-<p>This is the <strong>12th step</strong> out of 16 of the <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser">Gamedev Phaser tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson12.html">Gamedev-Phaser-Content-Kit/demos/lesson12.html</a>.</p>
+This is the **12th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). You can find the source code as it should look after completing this lesson at [Gamedev-Phaser-Content-Kit/demos/lesson12.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson12.html).
 
-<p>Implementing winning in our game is quite easy: if you happen to destroy all the bricks, then you win.</p>
+Implementing winning in our game is quite easy: if you happen to destroy all the bricks, then you win.
 
-<h2 id="How_to_win">How to win?</h2>
+## How to win?
 
-<p>Add the following new code into your <code>ballHitBrick()</code> function:</p>
+Add the following new code into your `ballHitBrick()` function:
 
-<pre class="brush: js">function ballHitBrick(ball, brick) {
+```js
+function ballHitBrick(ball, brick) {
     brick.kill();
     score += 10;
     scoreText.setText('Points: '+score);
 
     var count_alive = 0;
-    for (i = 0; i &lt; bricks.children.length; i++) {
+    for (i = 0; i < bricks.children.length; i++) {
       if (bricks.children[i].alive == true) {
         count_alive++;
       }
@@ -39,18 +40,18 @@ tags:
       location.reload();
     }
 }
-</pre>
+```
 
-<p>We loop through the bricks in the group using <code>bricks.children</code>, checking for the aliveness of each with each brick's <code>.alive() </code>method. If there are no more bricks left alive, then we show a winning message, restarting the game once the alert is dismissed.</p>
+We loop through the bricks in the group using `bricks.children`, checking for the aliveness of each with each brick's `.alive() `method. If there are no more bricks left alive, then we show a winning message, restarting the game once the alert is dismissed.
 
-<h2 id="Compare_your_code">Compare your code</h2>
+## Compare your code
 
-<p>You can check the finished code for this lesson in the live demo below, and play with it to understand better how it works:</p>
+You can check the finished code for this lesson in the live demo below, and play with it to understand better how it works:
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/u8waa4Lx/1/","","400")}}</p>
+{{JSFiddleEmbed("https://jsfiddle.net/u8waa4Lx/1/","","400")}}
 
-<h2 id="Next_steps">Next steps</h2>
+## Next steps
 
-<p>Both losing and winning are implemented, so the core gameplay of our game is finished. Now let's add something extra — we'll give the player three <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Extra_lives">lives</a> instead of one.</p>
+Both losing and winning are implemented, so the core gameplay of our game is finished. Now let's add something extra — we'll give the player three [lives](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Extra_lives) instead of one.
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/The_score", "Games/Workflows/2D_Breakout_game_Phaser/Extra_lives")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/The_score", "Games/Workflows/2D_Breakout_game_Phaser/Extra_lives")}}

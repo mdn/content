@@ -11,61 +11,57 @@ tags:
   - tilemap
   - tiles
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p>This article covers how to implement scrolling square tilemaps using the <a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a>.</p>
+This article covers how to implement scrolling square tilemaps using the [Canvas API](/en-US/docs/Web/API/Canvas_API).
 
-<div class="note">
-<p><strong>Note:</strong> When writing this article, we assumed previous reader knowledge of canvas basics such as how get a 2D canvas context, load images, etc., which is all explained in the <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas API tutorial</a>, as well as the basic information included in our <a href="/en-US/docs/Games/Techniques/Tilemaps">Tilemaps</a> introduction article. This article also builds upon <a href="/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation%3A_Static_maps">implementing static square tilemaps</a> — you should read that too if you've not done so already.</p>
-</div>
+> **Note:** When writing this article, we assumed previous reader knowledge of canvas basics such as how get a 2D canvas context, load images, etc., which is all explained in the [Canvas API tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial), as well as the basic information included in our [Tilemaps](/en-US/docs/Games/Techniques/Tilemaps) introduction article. This article also builds upon [implementing static square tilemaps](/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation%3A_Static_maps) — you should read that too if you've not done so already.
 
-<h2 id="The_camera">The camera</h2>
+## The camera
 
-<p>The camera is an object that holds information about which section of the game world or level is currently being shown. Cameras can either be free-form, controlled by the player (such as in strategy games) or follow an object (such as the main character in platform games.)</p>
+The camera is an object that holds information about which section of the game world or level is currently being shown. Cameras can either be free-form, controlled by the player (such as in strategy games) or follow an object (such as the main character in platform games.)
 
-<p>Regardless of the type of camera, we would always need information regarding its current position, viewport size, etc. In the <a href="https://mozdevs.github.io/gamedev-js-tiles/square/scroll.html">demo provided</a> along with this article, these are the parameters the camera has:</p>
+Regardless of the type of camera, we would always need information regarding its current position, viewport size, etc. In the [demo provided](https://mozdevs.github.io/gamedev-js-tiles/square/scroll.html) along with this article, these are the parameters the camera has:
 
-<ul>
- <li><code>x</code> and <code>y</code>: The current position of the camera. In this implementation, we are assuming that <code>(x,y)</code> points to the top left corner of visible portion of the map.</li>
- <li><code>width</code> and <code>height</code>: The size of the camera's viewport.</li>
- <li><code>maxX</code> and <code>maxY</code>: The limit for the camera's position — The lower limit will nearly always be (0,0), and in this case the upper limit is equal to the size of the world minus the size of the camera's viewport.</li>
-</ul>
+- `x` and `y`: The current position of the camera. In this implementation, we are assuming that `(x,y)` points to the top left corner of visible portion of the map.
+- `width` and `height`: The size of the camera's viewport.
+- `maxX` and `maxY`: The limit for the camera's position — The lower limit will nearly always be (0,0), and in this case the upper limit is equal to the size of the world minus the size of the camera's viewport.
 
-<h2 id="Rendering_the_map">Rendering the map</h2>
+## Rendering the map
 
-<p>There are two main differences between rendering scrolling maps vs. static maps:</p>
+There are two main differences between rendering scrolling maps vs. static maps:
 
-<ul>
- <li><strong>Partial tiles might be shown</strong>. In static maps, usually the rendering starts at the top left corner of a tile situated at the top left corner of a viewport. While rendering scrolling tilemaps, the first tile will often be clipped.</li>
-</ul>
+- **Partial tiles might be shown**. In static maps, usually the rendering starts at the top left corner of a tile situated at the top left corner of a viewport. While rendering scrolling tilemaps, the first tile will often be clipped.
 
-<p>TODO: show a diagram here explaining this.</p>
+TODO: show a diagram here explaining this.
 
-<ul>
- <li><strong>Only a section of the map will be rendered</strong>. If the map is bigger than the viewport, we can obviously only display a part of it at a time, whereas non-scrolling maps are usually rendered wholly.</li>
-</ul>
+- **Only a section of the map will be rendered**. If the map is bigger than the viewport, we can obviously only display a part of it at a time, whereas non-scrolling maps are usually rendered wholly.
 
-<p>To handle these issues, we need to slightly modify the rendering algorithm. Let's imagine that we have the camera pointing at <code>(5,10)</code>. That means that the first tile would be <code>0x0</code>. In the demo code, the starting point is stored at <code>startCol</code> and <code>startRow</code>. It's convenient to also pre-calculate the last tile to be rendered.</p>
+To handle these issues, we need to slightly modify the rendering algorithm. Let's imagine that we have the camera pointing at `(5,10)`. That means that the first tile would be `0x0`. In the demo code, the starting point is stored at `startCol` and `startRow`. It's convenient to also pre-calculate the last tile to be rendered.
 
-<pre class="brush: js">    var startCol = Math.floor(this.camera.x / map.tsize);
+```js
+    var startCol = Math.floor(this.camera.x / map.tsize);
     var endCol = startCol + (this.camera.width / map.tsize);
     var startRow = Math.floor(this.camera.y / map.tsize);
-    var endRow = startRow + (this.camera.height / map.tsize);</pre>
+    var endRow = startRow + (this.camera.height / map.tsize);
+```
 
-<p>Once we have the first tile, we need to calculate how much its rendering (and therefore the rendering of the other tiles) is offset by. Since the camera  is pointing at <code>(5, 10)</code>, we know that the first tile should be shifted by <code>(-5,-10)</code> pixels. In our demo the shifting amount is stored in the <code>offsetX</code> and <code>offsetY</code> variables.</p>
+Once we have the first tile, we need to calculate how much its rendering (and therefore the rendering of the other tiles) is offset by. Since the camera  is pointing at `(5, 10)`, we know that the first tile should be shifted by `(-5,-10)` pixels. In our demo the shifting amount is stored in the `offsetX` and `offsetY` variables.
 
-<pre class="brush: js">    var offsetX = -this.camera.x + startCol * map.tsize;
+```js
+    var offsetX = -this.camera.x + startCol * map.tsize;
     var offsetY = -this.camera.y + startRow * map.tsize;
-</pre>
+```
 
-<p>With these values in place, the loop that renders the map is quite similar to the one used for rendering static tilemaps. The main difference is that we are adding the <code>offsetX</code> and <code>offsetY</code> values to the target <code>x</code> and <code>y</code> coordinates, and these values are rounded, to avoid artifacts that would result from the camera pointing at positions with floating point numbers.</p>
+With these values in place, the loop that renders the map is quite similar to the one used for rendering static tilemaps. The main difference is that we are adding the `offsetX` and `offsetY` values to the target `x` and `y` coordinates, and these values are rounded, to avoid artifacts that would result from the camera pointing at positions with floating point numbers.
 
-<pre class="brush: js">for (var c = startCol; c &lt;= endCol; c++) {
-        for (var r = startRow; r &lt;= endRow; r++) {
+```js
+for (var c = startCol; c <= endCol; c++) {
+        for (var r = startRow; r <= endRow; r++) {
             var tile = map.getTile(c, r);
             var x = (c - startCol) * map.tsize + offsetX;
             var y = (r - startRow) * map.tsize + offsetY;
-            if (tile !== 0) { // 0 =&gt; empty tile
+            if (tile !== 0) { // 0 => empty tile
                 this.ctx.drawImage(
                     this.tileAtlas, // image
                     (tile - 1) * map.tsize, // source x
@@ -79,12 +75,13 @@ tags:
                 );
             }
         }
-    }</pre>
+    }
+```
 
-<h2 id="Demo">Demo</h2>
+## Demo
 
-<p>Our scrolling tilemap implementation demo pulls the above code together to show what an implementation of this map looks like. You can take a look at a <a href="https://mozdevs.github.io/gamedev-js-tiles/square/scroll.html">live demo</a>, and see <a href="https://github.com/mozdevs/gamedev-js-tiles">its source code</a>.</p>
+Our scrolling tilemap implementation demo pulls the above code together to show what an implementation of this map looks like. You can take a look at a [live demo](https://mozdevs.github.io/gamedev-js-tiles/square/scroll.html), and see [its source code](https://github.com/mozdevs/gamedev-js-tiles).
 
-<p><img alt="" src="untitled.gif"></p>
+![](untitled.gif)
 
-<p>There's <a href="https://mozdevs.github.io/gamedev-js-tiles/square/logic-grid.html">another demo available</a>, that shows how to make the camera follow a character.</p>
+There's [another demo available](https://mozdevs.github.io/gamedev-js-tiles/square/logic-grid.html), that shows how to make the camera follow a character.

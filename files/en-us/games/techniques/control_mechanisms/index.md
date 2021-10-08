@@ -13,63 +13,65 @@ tags:
   - mouse
   - touch
 ---
-<div>{{GamesSidebar}}</div><p>One of HTML5's main advantages as a game development platform is the ability to run on various platforms and devices. Streamlining cross device differences creates multiple challenges, not least when providing appropriate controls for different contexts. In this series of articles we will show you how you can approach building a game that can be played using touchscreen smartphones, mouse and keyboard, and also less common mechanisms such as gamepads.</p>
+{{GamesSidebar}}
 
-<h2 id="Case_study">Case study</h2>
+One of HTML5's main advantages as a game development platform is the ability to run on various platforms and devices. Streamlining cross device differences creates multiple challenges, not least when providing appropriate controls for different contexts. In this series of articles we will show you how you can approach building a game that can be played using touchscreen smartphones, mouse and keyboard, and also less common mechanisms such as gamepads.
 
-<p>We'll be using the <a href="https://rogers2.enclavegames.com/demo/">Captain Rogers: Battle at Andromeda demo</a> as an example.</p>
+## Case study
 
-<p><img alt="Captain Rogers: Battle at Andromeda - cover of the game containing Enclave Games and Blackmoon Design logos, Roger's space ship and title of the game." src="captainrogers2-cover.png"></p>
+We'll be using the [Captain Rogers: Battle at Andromeda demo](https://rogers2.enclavegames.com/demo/) as an example.
 
-<p>Captain Rogers was created using the <a href="https://phaser.io/">Phaser</a> framework, the most popular tool for simple 2D game development in JavaScript right now, but it should be fairly easy to reuse the knowledge contained within these articles when building games in pure JavaScript or any other framework. If you're looking for a good introduction to Phaser, then check the <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser">2D breakout game using Phaser</a> tutorial.</p>
+![Captain Rogers: Battle at Andromeda - cover of the game containing Enclave Games and Blackmoon Design logos, Roger's space ship and title of the game.](captainrogers2-cover.png)
 
-<p>In the following articles we will show how to implement various different control mechanisms for Captain Rogers to support different platforms — from touch on mobile, through keyboard/mouse/gamepad on desktop, to more unconventional ones like TV remote, shouting to or waving your hand in front of the laptop, or squeezing bananas.</p>
+Captain Rogers was created using the [Phaser](https://phaser.io/) framework, the most popular tool for simple 2D game development in JavaScript right now, but it should be fairly easy to reuse the knowledge contained within these articles when building games in pure JavaScript or any other framework. If you're looking for a good introduction to Phaser, then check the [2D breakout game using Phaser](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser) tutorial.
 
-<h2 id="Setting_up_the_environment">Setting up the environment</h2>
+In the following articles we will show how to implement various different control mechanisms for Captain Rogers to support different platforms — from touch on mobile, through keyboard/mouse/gamepad on desktop, to more unconventional ones like TV remote, shouting to or waving your hand in front of the laptop, or squeezing bananas.
 
-<p>Let's start with a quick overview of the game's folder structure, JavaScript files and in-game states, so we know what's happening where. The game's folders look like this:</p>
+## Setting up the environment
 
-<p><img alt="Captain Rogers: Battle at Andromeda - folder structure of the games' project containing JavaScript sources, images and fonts." src="captainrogers2-folderstructure.png"></p>
+Let's start with a quick overview of the game's folder structure, JavaScript files and in-game states, so we know what's happening where. The game's folders look like this:
 
-<p>As you can see there are folders for images, JavaScript files, fonts and sound effects. The <code>src</code> folder contains the JavaScript files split as a separate states — <code>Boot.js</code>, <code>Preloader.js</code>, <code>MainMenu.js</code> and <code>Game.js</code> — these are loaded into the index file in this exact order. The first one initializes Phaser, the second preloads all the assets, the third one controls the main menu welcoming the player, and the fourth controls the actual gameplay.</p>
+![Captain Rogers: Battle at Andromeda - folder structure of the games' project containing JavaScript sources, images and fonts.](captainrogers2-folderstructure.png)
 
-<p>Every state has its own default methods: <code>preload()</code>, <code>create()</code>, and <code>update()</code>. The first one is needed for preloading required assets, <code>create()</code> is executed once the state had started, and <code>update()</code> is executed on every frame.</p>
+As you can see there are folders for images, JavaScript files, fonts and sound effects. The `src` folder contains the JavaScript files split as a separate states — `Boot.js`, `Preloader.js`, `MainMenu.js` and `Game.js` — these are loaded into the index file in this exact order. The first one initializes Phaser, the second preloads all the assets, the third one controls the main menu welcoming the player, and the fourth controls the actual gameplay.
 
-<p>For example, you can define a button in the <code>create()</code> function:</p>
+Every state has its own default methods: `preload()`, `create()`, and `update()`. The first one is needed for preloading required assets, `create()` is executed once the state had started, and `update()` is executed on every frame.
 
-<pre class="brush: js">create: function() {
+For example, you can define a button in the `create()` function:
+
+```js
+create: function() {
 	// ...
 	var buttonEnclave = this.add.button(10, 10, 'logo-enclave', this.clickEnclave, this);
 	// ...
 }
-</pre>
+```
 
-<p>It will be created once at the start of the game, and will execute <code>this.clickEnclave()</code> action assigned to it when clicked, but you can also use the mouse's pointer value in the <code>update()</code> function to make an action:</p>
+It will be created once at the start of the game, and will execute `this.clickEnclave()` action assigned to it when clicked, but you can also use the mouse's pointer value in the `update()` function to make an action:
 
-<pre class="brush: js">update: function() {
+```js
+update: function() {
 	// ...
 	if(this.game.input.mousePointer.isDown) {
 	    // do something
 	}
 	// ...
 }
-</pre>
+```
 
-<p>This will be executed whenever the mouse button is pressed, and it will be checked against the input's <code>isDown</code> boolean variable on every frame of the game.</p>
+This will be executed whenever the mouse button is pressed, and it will be checked against the input's `isDown` boolean variable on every frame of the game.
 
-<p>That should give you some understanding of the project structure. We'll be playing mostly with the <code>MainMenu.js</code> and <code>Game.js</code> files, and we'll explain the code inside the <code>create()</code> and <code>update()</code> methods in much more detail in later articles.</p>
+That should give you some understanding of the project structure. We'll be playing mostly with the `MainMenu.js` and `Game.js` files, and we'll explain the code inside the `create()` and `update()` methods in much more detail in later articles.
 
-<h2 id="Pure_JavaScript_demo">Pure JavaScript demo</h2>
+## Pure JavaScript demo
 
-<p>There's also a <a href="https://end3r.github.io/JavaScript-Game-Controls/">small online demo</a> with full source code <a href="https://github.com/end3r/JavaScript-Game-Controls/">available on GitHub</a> where the basic support for the control mechanisms described in the articles is implemented in pure JavaScript. It will be explained in the given articles themselves below, but you can play with it already, and use the code however you want for learning purposes.</p>
+There's also a [small online demo](https://end3r.github.io/JavaScript-Game-Controls/) with full source code [available on GitHub](https://github.com/end3r/JavaScript-Game-Controls/) where the basic support for the control mechanisms described in the articles is implemented in pure JavaScript. It will be explained in the given articles themselves below, but you can play with it already, and use the code however you want for learning purposes.
 
-<h2 id="The_articles">The articles</h2>
+## The articles
 
-<p>JavaScript is the perfect choice for mobile gaming because of HTML5 being truly multiplatform; all of the following articles focus on the APIs provided for interfacing with different control mechanisms:</p>
+JavaScript is the perfect choice for mobile gaming because of HTML5 being truly multiplatform; all of the following articles focus on the APIs provided for interfacing with different control mechanisms:
 
-<ol>
- <li><a href="/en-US/docs/Games/Techniques/Control_mechanisms/Mobile_touch">Mobile touch controls</a> — The first article will kick off with touch, as the mobile first approach is very popular.</li>
- <li><a href="/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard">Desktop mouse and keyboard controls</a> — When playing on a desktop/laptop computer, providing keyboard and mouse controls is essential to provide an acceptable level of accessibility for the game.</li>
- <li><a href="/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_gamepad">Desktop gamepad controls</a> — The Gamepad API rather usefully allows gamepads to be used for controlling web apps on desktop/laptop, for that console feel.</li>
- <li><a href="/en-US/docs/Games/Techniques/Control_mechanisms/Other">Unconventional controls</a> — The final article showcases some unconventional control mechanisms, from the experimental to the slightly crazy, which you might not believe could be used to play the game.</li>
-</ol>
+1.  [Mobile touch controls](/en-US/docs/Games/Techniques/Control_mechanisms/Mobile_touch) — The first article will kick off with touch, as the mobile first approach is very popular.
+2.  [Desktop mouse and keyboard controls](/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard) — When playing on a desktop/laptop computer, providing keyboard and mouse controls is essential to provide an acceptable level of accessibility for the game.
+3.  [Desktop gamepad controls](/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_gamepad) — The Gamepad API rather usefully allows gamepads to be used for controlling web apps on desktop/laptop, for that console feel.
+4.  [Unconventional controls](/en-US/docs/Games/Techniques/Control_mechanisms/Other) — The final article showcases some unconventional control mechanisms, from the experimental to the slightly crazy, which you might not believe could be used to play the game.
