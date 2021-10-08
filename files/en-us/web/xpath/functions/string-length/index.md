@@ -5,31 +5,27 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- The <code>string-length</code> function returns a number equal to the number of characters in a given string.</p>
+The `string-length` function returns a number equal to the number of characters in a given string.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="eval">string-length( [<em>string</em>] )
-</pre>
+    string-length( [string] )
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><em><code>string</code></em>(optional)</dt>
- <dd>The string to evaluate. If omitted, string used will be the same as the context node converted to a string.</dd>
-</dl>
+- _`string`_(optional)
+  - : The string to evaluate. If omitted, string used will be the same as the context node converted to a string.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>An integer equal to the number of characters in the string.</p>
+An integer equal to the number of characters in the string.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p><a href="https://www.w3.org/TR/xpath#function-string-length">XPath 1.0 4.2</a></p>
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-string-length)
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

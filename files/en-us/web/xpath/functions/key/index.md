@@ -5,41 +5,35 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- The <code>key</code> function returns a node-set of nodes that have the given value for the given key.</p>
+The `key` function returns a node-set of nodes that have the given value for the given key.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="eval">key(<em>keyname</em> ,<em>value</em> )
-</pre>
+    key(keyname ,value )
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><code><em>keyname</em></code></dt>
- <dd>A string containing the name of the <code><a href="/en-US/docs/Web/XSLT/Element/key">xsl:key</a></code> element to be used.</dd>
- <dt><code><em>value</em></code></dt>
- <dd>The returned node-set will contain every node that has this value for the given key.</dd>
-</dl>
+- `keyname`
+  - : A string containing the name of the [`xsl:key`](/en-US/docs/Web/XSLT/Element/key) element to be used.
+- `value`
+  - : The returned node-set will contain every node that has this value for the given key.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A node set.</p>
+A node set.
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<ul>
- <li>The <code><a href="/en-US/docs/Web/XSLT/Element/key">xsl:key</a></code> element defines what attribute on what given elements will be used to match the key.</li>
-</ul>
+- The [`xsl:key`](/en-US/docs/Web/XSLT/Element/key) element defines what attribute on what given elements will be used to match the key.
 
-<p>This function is an XSLT-specific addition to XPath. It is not a part of the core XPath function library.</p>
+This function is an XSLT-specific addition to XPath. It is not a part of the core XPath function library.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p><a href="https://www.w3.org/TR/xslt#function-key">XSLT 1.0 12.2</a></p>
+[XSLT 1.0 12.2](https://www.w3.org/TR/xslt#function-key)
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

@@ -5,33 +5,29 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- The <code>starts-with</code> checks whether the first string starts with the second string and returns true or false.</p>
+The `starts-with` checks whether the first string starts with the second string and returns true or false.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="eval">starts-with(<em>haystack</em>, <em>needle</em>)
-</pre>
+    starts-with(haystack, needle)
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><em><code>haystack</code></em></dt>
- <dd>The string to look in.</dd>
- <dt><em><code>needle</code></em></dt>
- <dd>The string to look for.</dd>
-</dl>
+- _`haystack`_
+  - : The string to look in.
+- _`needle`_
+  - : The string to look for.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p><code>true</code> if <em><code>haystack</code></em> starts with <em><code>needle</code></em>. Otherwise, <code>false</code>.</p>
+`true` if *`haystack`* starts with *`needle`*. Otherwise, `false`.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p><a href="https://www.w3.org/TR/xpath#function-starts-with">XPath 1.0 4.2</a></p>
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-starts-with)
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

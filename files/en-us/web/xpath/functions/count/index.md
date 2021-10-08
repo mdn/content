@@ -5,31 +5,27 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- The <code>count</code> function counts the number of nodes in a node-set and returns an integer.</p>
+The `count` function counts the number of nodes in a node-set and returns an integer.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="eval">count(<em>node-set</em> )
-</pre>
+    count(node-set )
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><code><em>node-set</em></code></dt>
- <dd>The node set to be counted.</dd>
-</dl>
+- `node-set`
+  - : The node set to be counted.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>An integer representing the number of nodes in a node-set.</p>
+An integer representing the number of nodes in a node-set.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p><a href="https://www.w3.org/TR/xpath#function-count">XPath 1.0 4.1</a></p>
+[XPath 1.0 4.1](https://www.w3.org/TR/xpath#function-count)
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

@@ -5,4 +5,4 @@ tags:
   - Axe
   - XPath
 ---
-<p>The <code>preceding</code> axis indicates all the nodes that precede the context node in the document except any <code>ancestor</code>, <code>attribute</code> and <code>namespace</code> nodes.</p>
+The `preceding` axis indicates all the nodes that precede the context node in the document except any `ancestor`, `attribute` and `namespace` nodes.

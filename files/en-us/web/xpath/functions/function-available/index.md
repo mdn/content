@@ -5,31 +5,27 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- The <code>function-available</code> function determines if a given function is available and returns boolean true or false.</p>
+The `function-available` function determines if a given function is available and returns boolean true or false.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="eval">function-available(<em>name</em> )
-</pre>
+    function-available(name )
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><code><em>name</em></code></dt>
- <dd>The name of the function to test.</dd>
-</dl>
+- `name`
+  - : The name of the function to test.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>Boolean <code>true</code> or <code>false</code>.</p>
+Boolean `true` or `false`.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p><a href="https://www.w3.org/TR/xslt#function-function-available">XPath 1.0 15</a></p>
+[XPath 1.0 15](https://www.w3.org/TR/xslt#function-function-available)
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

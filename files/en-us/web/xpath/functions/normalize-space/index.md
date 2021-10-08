@@ -5,31 +5,27 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- The <code>normalize-space</code> function strips leading and trailing white-space from a string, replaces sequences of whitespace characters by a single space, and returns the resulting string.</p>
+The `normalize-space` function strips leading and trailing white-space from a string, replaces sequences of whitespace characters by a single space, and returns the resulting string.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="eval">normalize-space( [<em>string</em>] )
-</pre>
+    normalize-space( [string] )
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><code><em>string</em></code> (optional)</dt>
- <dd>The string to be normalized. If omitted, string used will be the same as the context node converted to a string.</dd>
-</dl>
+- `string` (optional)
+  - : The string to be normalized. If omitted, string used will be the same as the context node converted to a string.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>The normalized string.</p>
+The normalized string.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p><a href="https://www.w3.org/TR/xpath#function-normalize-space">XPath 1.0 4.2</a></p>
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-normalize-space)
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

@@ -6,44 +6,19 @@ tags:
   - XPath
 browser-compat: xpath.axes.child
 ---
-<p>The <code>child</code> axis indicates the children of the context node. If an XPath expression does not specify an axis, the <code>child</code> axis is understood by default. Since only the root node or element nodes have children, any other use will select nothing.</p>
+The `child` axis indicates the children of the context node. If an XPath expression does not specify an axis, the `child` axis is understood by default. Since only the root node or element nodes have children, any other use will select nothing.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("XPath3.1","#axes","child")}}</td>
-   <td>{{Spec2("XPath3.1")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("XPath3","#axes","child")}}</td>
-   <td>{{Spec2("XPath3")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("XPath2","#axes","child")}}</td>
-   <td>{{Spec2("XPath2")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("XPath1","#axes","child")}}</td>
-   <td>{{Spec2("XPath1")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                        | Status                       | Comment             |
+| ---------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName("XPath3.1","#axes","child")}} | {{Spec2("XPath3.1")}} |                     |
+| {{SpecName("XPath3","#axes","child")}} | {{Spec2("XPath3")}}     |                     |
+| {{SpecName("XPath2","#axes","child")}} | {{Spec2("XPath2")}}     |                     |
+| {{SpecName("XPath1","#axes","child")}} | {{Spec2("XPath1")}}     | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{QuickLinksWithSubpages("/en-US/docs/Web/XPath")}}</p>
+{{QuickLinksWithSubpages("/en-US/docs/Web/XPath")}}

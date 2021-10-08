@@ -5,30 +5,26 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- The <code>last</code> function returns a number equal to the context size from the expression evaluation context.</p>
+The `last` function returns a number equal to the context size from the expression evaluation context.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="eval">last()
-</pre>
+    last()
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>An integer equal to the context size from the expression evaluation context.</p>
+An integer equal to the context size from the expression evaluation context.
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<ul>
- <li>This is often used with the <a href="/en-US/docs/Web/XPath/Functions/position"> position()</a> function to determine if a particular node is the last in a node-set.</li>
-</ul>
+- This is often used with the [position()](/en-US/docs/Web/XPath/Functions/position) function to determine if a particular node is the last in a node-set.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p><a href="https://www.w3.org/TR/xpath#function-last">XPath 1.0 4.1</a></p>
+[XPath 1.0 4.1](https://www.w3.org/TR/xpath#function-last)
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

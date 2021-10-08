@@ -5,37 +5,31 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- The <code>local-name</code> function returns a string representing the local name of the first node in a given node-set.</p>
+The `local-name` function returns a string representing the local name of the first node in a given node-set.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="eval">local-name( [<em>node-set</em>] )
-</pre>
+    local-name( [node-set] )
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><code><em>node-set</em></code> (optional)</dt>
- <dd>The local name of the first node in this node-set will be returned. If this argument is omitted, the current context node will be used.</dd>
-</dl>
+- `node-set` (optional)
+  - : The local name of the first node in this node-set will be returned. If this argument is omitted, the current context node will be used.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A string.</p>
+A string.
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<ul>
- <li>The local name is the local part of an <a href="https://www.w3.org/TR/xpath#dt-expanded-name">expanded-name</a>.</li>
-</ul>
+- The local name is the local part of an [expanded-name](https://www.w3.org/TR/xpath#dt-expanded-name).
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p><a href="https://www.w3.org/TR/xpath#function-local-name">XPath 1.0 4.1</a></p>
+[XPath 1.0 4.1](https://www.w3.org/TR/xpath#function-local-name)
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

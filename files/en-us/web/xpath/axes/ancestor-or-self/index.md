@@ -5,4 +5,4 @@ tags:
   - Axe
   - XPath
 ---
-<p>The <code>ancestor-or-self</code> axis indicates the context node and all of its ancestors, including the root node.</p>
+The `ancestor-or-self` axis indicates the context node and all of its ancestors, including the root node.
