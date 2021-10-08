@@ -5,69 +5,57 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- The <code>translate</code> function evaluates a string and a set of characters to translate and returns the translated string.</p>
+The `translate` function evaluates a string and a set of characters to translate and returns the translated string.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="eval">translate(<em>string</em>, <em>abc</em>, <em>XYZ</em>)
-</pre>
+    translate(string, abc, XYZ)
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><em><code>string</code></em></dt>
- <dd>The string to evaluate.</dd>
- <dt><em><code>abc</code></em></dt>
- <dd>The string of characters that will be replaced.</dd>
- <dt><em><code>XYZ</code></em></dt>
- <dd>The string of characters used for replacement. The first character in <em><code>XYZ</code></em> will replace every occurrence of the first character in <em><code>abc</code></em> that appears in <em><code>string</code></em>.</dd>
-</dl>
+- _`string`_
+  - : The string to evaluate.
+- _`abc`_
+  - : The string of characters that will be replaced.
+- _`XYZ`_
+  - : The string of characters used for replacement. The first character in _`XYZ`_ will replace every occurrence of the first character in _`abc`_ that appears in _`string`_.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>The translated string.</p>
+The translated string.
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<p>XPath notes that the translate function is not a sufficient solution for case conversion in all languages. A future version of XPath may provide additional functions for case conversion.</p>
+XPath notes that the translate function is not a sufficient solution for case conversion in all languages. A future version of XPath may provide additional functions for case conversion.
 
-<p>However, this is the closest we have at present to a function that can convert a string to uppercase or lowercase.</p>
+However, this is the closest we have at present to a function that can convert a string to uppercase or lowercase.
 
-<p>Example</p>
+Example
 
-<pre class="eval">&lt;xsl:value-of select="translate('The quick brown fox.', 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')" /&gt;
-</pre>
+    <xsl:value-of select="translate('The quick brown fox.', 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
 
-<p>Output</p>
+Output
 
-<pre class="eval">THE QUICK BROWN FOX.
-</pre>
+    THE QUICK BROWN FOX.
 
-<ul>
- <li>If <em><code>abc</code></em> is longer than <em><code>XYZ</code></em>, then every occurrence of characters in <em><code>abc</code></em> that do not have a corresponding character in <em><code>XYZ</code></em> will be removed.</li>
-</ul>
+- If *`abc`* is longer than *`XYZ`*, then every occurrence of characters in *`abc`* that do not have a corresponding character in *`XYZ`* will be removed.
 
-<p>Example</p>
+Example
 
-<pre class="eval">&lt;xsl:value-of select="translate('The quick brown fox.', 'brown', 'red')" /&gt;
-</pre>
+    <xsl:value-of select="translate('The quick brown fox.', 'brown', 'red')" />
 
-<p>Output</p>
+Output
 
-<pre class="eval">The quick red fdx.
-</pre>
+    The quick red fdx.
 
-<ul>
- <li>If <em><code>XYZ</code></em> contains more characters than <em><code>abc</code></em>, the extra characters are ignored.</li>
-</ul>
+- If *`XYZ`* contains more characters than *`abc`*, the extra characters are ignored.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p><a href="https://www.w3.org/TR/xpath#function-translate">XPath 1.0 4.2</a></p>
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-translate)
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

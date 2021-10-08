@@ -5,49 +5,41 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- The <code>string</code> function converts the given argument to a string.</p>
+The `string` function converts the given argument to a string.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="eval">string( [<em>object</em>] )
-</pre>
+    string( [object] )
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><em><code>object</code></em>(optional)</dt>
- <dd>The object to convert to a string. If omitted, the context node is used.</dd>
-</dl>
+- _`object`_(optional)
+  - : The object to convert to a string. If omitted, the context node is used.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A string</p>
+A string
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<ul>
- <li>If the object is a node-set, the string value of the first node in the set is returned.</li>
- <li>A number is converted as follows:
-  <ul>
-   <li>NaN is converted to the string NaN.</li>
-   <li>Positive zero is converted to the string 0.</li>
-   <li>Negative zero is converted to the string 0.</li>
-   <li>Positive infinity is converted to the string Infinity.</li>
-   <li>Negative infinity is converted to the string -Infinity.</li>
-   <li>Decimal numbers between -1 and 1 are converted to a string with a single leading 0 before the decimal point.</li>
-   <li>Boolean true is converted to the string true.</li>
-   <li>Boolean false is converted to the string false.</li>
-  </ul>
- </li>
-</ul>
+- If the object is a node-set, the string value of the first node in the set is returned.
+- A number is converted as follows:
 
-<h3 id="Defined">Defined</h3>
+  - NaN is converted to the string NaN.
+  - Positive zero is converted to the string 0.
+  - Negative zero is converted to the string 0.
+  - Positive infinity is converted to the string Infinity.
+  - Negative infinity is converted to the string -Infinity.
+  - Decimal numbers between -1 and 1 are converted to a string with a single leading 0 before the decimal point.
+  - Boolean true is converted to the string true.
+  - Boolean false is converted to the string false.
 
-<p><a href="https://www.w3.org/TR/xpath#function-string">XPath 1.0 4.2</a></p>
+### Defined
 
-<h3 id="Gecko_support">Gecko support</h3>
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-string)
 
-<p>Supported.</p>
+### Gecko support
+
+Supported.

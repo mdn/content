@@ -5,46 +5,44 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- The <code>position</code> function returns a number equal to the context position from the expression evaluation context.</p>
+The `position` function returns a number equal to the context position from the expression evaluation context.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="eval">position()
-</pre>
+    position()
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>An integer equal to the context position from the expression evaluation context.</p>
+An integer equal to the context position from the expression evaluation context.
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<ul>
- <li>Note that a node's position in a context is not zero-based. The first node has a position of 1.</li>
-</ul>
+- Note that a node's position in a context is not zero-based. The first node has a position of 1.
 
-<ul>
- <li>The context is determined by the rest of the path.</li>
-</ul>
+<!---->
 
-<pre class="eval">&lt;xsl:template match="//a[position() = 5]"&gt;
- &lt;!-- this template matches the fifth a element
-         anywhere in the document. --&gt;
-&lt;/xsl:template&gt;
-</pre>
+- The context is determined by the rest of the path.
 
-<pre class="eval">&lt;xsl:template match="//div[@class='foo']/bar[position() = 1]"&gt;
- &lt;!-- this template matches the first bar element that is
-      a child of a div element with a class attribute equal to "foo" --&gt;
-&lt;/xsl:template&gt;
-</pre>
+<!---->
 
-<h3 id="Defined">Defined</h3>
+    <xsl:template match="//a[position() = 5]">
+     <!-- this template matches the fifth a element
+             anywhere in the document. -->
+    </xsl:template>
 
-<p><a href="https://www.w3.org/TR/xpath#function-position">XPath 1.0 4.1</a></p>
+<!---->
 
-<h3 id="Gecko_support">Gecko support</h3>
+    <xsl:template match="//div[@class='foo']/bar[position() = 1]">
+     <!-- this template matches the first bar element that is
+          a child of a div element with a class attribute equal to "foo" -->
+    </xsl:template>
 
-<p>Supported.</p>
+### Defined
+
+[XPath 1.0 4.1](https://www.w3.org/TR/xpath#function-position)
+
+### Gecko support
+
+Supported.

@@ -5,37 +5,31 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- The <code>name</code> function returns a string representing the QName of the first node in a given node-set.</p>
+The `name` function returns a string representing the QName of the first node in a given node-set.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="eval">name( [<em>node-set</em>] )
-</pre>
+    name( [node-set] )
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><code><em>node-set</em></code> (optional)</dt>
- <dd>The QName of the first node in this node-set will be returned. If this argument is omitted, the current context node will be used.</dd>
-</dl>
+- `node-set` (optional)
+  - : The QName of the first node in this node-set will be returned. If this argument is omitted, the current context node will be used.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A string representing the QName of a node.</p>
+A string representing the QName of a node.
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<ul>
- <li>The <a href="https://www.w3.org/TR/REC-xml-names/#NT-QName">QName</a> is the node's qualified name, including its namespace prefix and its local name.</li>
-</ul>
+- The [QName](https://www.w3.org/TR/REC-xml-names/#NT-QName) is the node's qualified name, including its namespace prefix and its local name.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p><a href="https://www.w3.org/TR/xpath#function-local-name">XPath 1.0 4.1</a></p>
+[XPath 1.0 4.1](https://www.w3.org/TR/xpath#function-local-name)
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

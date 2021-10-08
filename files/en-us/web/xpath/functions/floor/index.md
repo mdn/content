@@ -5,31 +5,27 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- The <code>floor</code> function evaluates a decimal number and returns the largest integer less than or equal to the decimal number.</p>
+The `floor` function evaluates a decimal number and returns the largest integer less than or equal to the decimal number.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="eval">floor( <em>number</em> )
-</pre>
+    floor( number )
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><code><em>number</em></code></dt>
- <dd>The decimal number to be evaluated.</dd>
-</dl>
+- `number`
+  - : The decimal number to be evaluated.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>The nearest integer less than or equal to <code><em>number</em></code>.</p>
+The nearest integer less than or equal to `number`.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p><a href="https://www.w3.org/TR/xpath#function-floor">XPath 1.0 4.4</a></p>
+[XPath 1.0 4.4](https://www.w3.org/TR/xpath#function-floor)
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

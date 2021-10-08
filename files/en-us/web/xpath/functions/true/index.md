@@ -5,24 +5,22 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- The <code>true</code> function returns a boolean value of true.</p>
+The `true` function returns a boolean value of true.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="eval">true()
-</pre>
+    true()
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>Boolean <code>true</code>.</p>
+Boolean `true`.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p><a href="https://www.w3.org/TR/xpath#function-true">XPath 1.0 4.3</a></p>
+[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-true)
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

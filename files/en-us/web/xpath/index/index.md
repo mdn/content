@@ -7,6 +7,6 @@ tags:
   - XPath
   - XSLT
 ---
-<p>{{Index("/en-US/docs/Web/XPath")}}</p>
+{{Index("/en-US/docs/Web/XPath")}}
 
-<p>{{QuickLinksWithSubpages("/en-US/docs/Web/XPath")}}</p>
+{{QuickLinksWithSubpages("/en-US/docs/Web/XPath")}}

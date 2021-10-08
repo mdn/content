@@ -5,59 +5,38 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>The <code>substring-after</code> function returns a string that is the rest of a given string after a given substring.</p>
+The `substring-after` function returns a string that is the rest of a given string after a given substring.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="eval">substring-after(<em>haystack</em> ,<em>needle</em> )
-</pre>
+    substring-after(haystack ,needle )
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><em><code>haystack</code></em></dt>
- <dd>The string to be evaluated. Part of this string will be returned.</dd>
- <dt><em><code>needle</code></em></dt>
- <dd>The substring to search for. Everything after the first occurrence of<em><code>needle</code></em> in<em><code>haystack</code></em> will be returned.</dd>
-</dl>
+- _`haystack`_
+  - : The string to be evaluated. Part of this string will be returned.
+- _`needle`_
+  - : The substring to search for. Everything after the first occurrence of*`needle`* in*`haystack`* will be returned.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A string.</p>
+A string.
 
-<h3 id="Examples">Examples</h3>
+### Examples
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>XPath Example</th>
-   <th>Output</th>
-  </tr>
-  <tr>
-   <td><code>substring-after('aa-bb','-')</code></td>
-   <td><code>bb</code></td>
-  </tr>
-  <tr>
-   <td><code>substring-after('aa-bb','a')</code></td>
-   <td><code>a-bb</code></td>
-  </tr>
-  <tr>
-   <td><code>substring-after('aa-bb','b')</code></td>
-   <td><code>b</code></td>
-  </tr>
-  <tr>
-   <td><code>substring-after('aa-bb','q')</code></td>
-   <td>(empty string)</td>
-  </tr>
- </tbody>
-</table>
+| XPath Example                  | Output         |
+| ------------------------------ | -------------- |
+| `substring-after('aa-bb','-')` | `bb`           |
+| `substring-after('aa-bb','a')` | `a-bb`         |
+| `substring-after('aa-bb','b')` | `b`            |
+| `substring-after('aa-bb','q')` | (empty string) |
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p><a href="https://www.w3.org/TR/xpath#function-substring-after">XPath 1.0 4.2</a></p>
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-substring-after)
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

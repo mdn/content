@@ -5,4 +5,4 @@ tags:
   - Axe
   - XPath
 ---
-<p>The <code>following-sibling</code> axis indicates all the nodes that have the same parent as the context node and appear after the context node in the source document.</p>
+The `following-sibling` axis indicates all the nodes that have the same parent as the context node and appear after the context node in the source document.

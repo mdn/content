@@ -5,63 +5,55 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- The <code>lang</code> function determines whether the context node matches the given language and returns boolean true or false.</p>
+The `lang` function determines whether the context node matches the given language and returns boolean true or false.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="eval">lang(<em>string</em> )
-</pre>
+    lang(string )
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><code><em>string</em></code></dt>
- <dd>The language code or localization (language and country) code to be matched.</dd>
-</dl>
+- `string`
+  - : The language code or localization (language and country) code to be matched.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p><code>true</code> if the context node matches the given languages. Otherwise, <code>false</code>.</p>
+`true` if the context node matches the given languages. Otherwise, `false`.
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<ul>
- <li>A node's language is determined by its <code>xml:lang</code> attribute. If the current node does not have an <code>xml:lang</code> attribute, then the value of the <code>xml:lang</code> attribute of the nearest ancestor that has an <code>xml:lang</code> attribute will determine the current node's language. If the language cannot be determined (no ancestor has an <code>xml:lang</code> attribute), this function will return false.</li>
-</ul>
+- A node's language is determined by its `xml:lang` attribute. If the current node does not have an `xml:lang` attribute, then the value of the `xml:lang` attribute of the nearest ancestor that has an `xml:lang` attribute will determine the current node's language. If the language cannot be determined (no ancestor has an `xml:lang` attribute), this function will return false.
 
-<ul>
- <li>If the given <code><em>string</em></code> does not specify a country code, this function will match nodes of that language with any country code. The converse is not true.</li>
-</ul>
+<!---->
 
-<p>Given this fragment of XML:</p>
+- If the given `string` does not specify a country code, this function will match nodes of that language with any country code. The converse is not true.
 
-<pre>&lt;p xml:lang="en"&gt;I went up a floor.&lt;/p&gt;
-&lt;p xml:lang="en-GB"&gt;I took the lift.&lt;/p&gt;
-&lt;p xml:lang="en-US"&gt;I rode the elevator.&lt;/p&gt;</pre>
+Given this fragment of XML:
 
-<p>And this part of an XSL template:</p>
+    <p xml:lang="en">I went up a floor.</p>
+    <p xml:lang="en-GB">I took the lift.</p>
+    <p xml:lang="en-US">I rode the elevator.</p>
 
-<pre class="eval">&lt;xsl:value-of select="count(//p[lang('en')])" /&gt;
-&lt;xsl:value-of select="count(//p[lang('en-GB')])" /&gt;
-&lt;xsl:value-of select="count(//p[lang('en-US')])" /&gt;
-&lt;xsl:value-of select="count(//p[lang('de')])" /&gt;
-</pre>
+And this part of an XSL template:
 
-<p>The output might be:</p>
+    <xsl:value-of select="count(//p[lang('en')])" />
+    <xsl:value-of select="count(//p[lang('en-GB')])" />
+    <xsl:value-of select="count(//p[lang('en-US')])" />
+    <xsl:value-of select="count(//p[lang('de')])" />
 
-<pre class="eval">3
-1
-1
-0
-</pre>
+The output might be:
 
-<h3 id="Defined">Defined</h3>
+    3
+    1
+    1
+    0
 
-<p><a href="https://www.w3.org/TR/xpath#function-lang">XPath 1.0 4.3</a></p>
+### Defined
 
-<h3 id="Gecko_support">Gecko support</h3>
+[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-lang)
 
-<p>Supported.</p>
+### Gecko support
+
+Supported.

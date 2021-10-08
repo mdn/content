@@ -5,31 +5,27 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- The <code>element-available</code> function determines if an element is available and returns true or false.</p>
+The `element-available` function determines if an element is available and returns true or false.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="eval">element-available(<em>QName</em> )
-</pre>
+    element-available(QName )
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><code><em>QName</em></code></dt>
- <dd>Must evaluate to a valid QName. The QName is expanded into an expanded-name using the namespace declarations in scope for the expression.</dd>
-</dl>
+- `QName`
+  - : Must evaluate to a valid QName. The QName is expanded into an expanded-name using the namespace declarations in scope for the expression.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>Returns true if and only if the expanded-name is the name of an instruction. If the expanded-name has a namespace URI equal to the XSLT namespace URI, then it refers to an element defined by XSLT. Otherwise, it refers to an extension element. If the expanded-name has a null namespace URI, the element-available function will return false.</p>
+Returns true if and only if the expanded-name is the name of an instruction. If the expanded-name has a namespace URI equal to the XSLT namespace URI, then it refers to an element defined by XSLT. Otherwise, it refers to an extension element. If the expanded-name has a null namespace URI, the element-available function will return false.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p><a href="https://www.w3.org/TR/xslt#function-element-available">XSLT 1.0 15</a></p>
+[XSLT 1.0 15](https://www.w3.org/TR/xslt#function-element-available)
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

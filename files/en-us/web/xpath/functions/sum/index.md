@@ -5,35 +5,31 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- The <code>sum</code> function returns a number that is the sum of the numeric values of each node in a given node-set.</p>
+The `sum` function returns a number that is the sum of the numeric values of each node in a given node-set.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="eval">sum(<em>node-set</em> )
-</pre>
+    sum(node-set )
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><em><code>node-set</code></em></dt>
- <dd>The node-set to be evaluated. Each node in this node-set is evaluated as if it were passed to the <a href="/en-US/docs/Web/XPath/Functions/number">number()</a> function, and a sum of the resulting numbers is returned.</dd>
-</dl>
+- _`node-set`_
+  - : The node-set to be evaluated. Each node in this node-set is evaluated as if it were passed to the [number()](/en-US/docs/Web/XPath/Functions/number) function, and a sum of the resulting numbers is returned.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A number.</p>
+A number.
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<p><em>(None)</em></p>
+_(None)_
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p><a href="https://www.w3.org/TR/xpath#function-sum">XPath 1.0 4.3</a></p>
+[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-sum)
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

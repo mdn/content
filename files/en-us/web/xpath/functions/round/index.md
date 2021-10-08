@@ -5,37 +5,31 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- The <code>round</code> function returns a number that is the nearest integer to the given number.</p>
+The `round` function returns a number that is the nearest integer to the given number.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="eval">round(<em>decimal</em> )
-</pre>
+    round(decimal )
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><em><code>decimal</code></em></dt>
- <dd>The decimal number to be rounded.</dd>
-</dl>
+- _`decimal`_
+  - : The decimal number to be rounded.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>The nearest integer less then, greater than, or equal to<em><code>decimal</code></em>.</p>
+The nearest integer less then, greater than, or equal to*`decimal`*.
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<ul>
- <li>-0.5 rounds to negative zero. 0.4 rounds to positive zero.</li>
-</ul>
+- \-0.5 rounds to negative zero. 0.4 rounds to positive zero.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p><a href="https://www.w3.org/TR/xpath#function-round">XPath 1.0 4.4</a></p>
+[XPath 1.0 4.4](https://www.w3.org/TR/xpath#function-round)
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

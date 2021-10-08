@@ -11,71 +11,43 @@ tags:
   - XPath
   - XSLT
 ---
-<div>{{XSLTRef}}</div>
+{{XSLTRef}}
 
-<p><span class="seoSummary">XPath stands for XML Path Language. It uses a non-XML syntax to provide a flexible way of addressing (pointing to) different parts of an <a href="/en-US/docs/Web/XML/XML_introduction">XML</a> document. It can also be used to test addressed nodes within a document to determine whether they match a pattern or not.</span></p>
+XPath stands for XML Path Language. It uses a non-XML syntax to provide a flexible way of addressing (pointing to) different parts of an [XML](/en-US/docs/Web/XML/XML_introduction) document. It can also be used to test addressed nodes within a document to determine whether they match a pattern or not.
 
-<p>XPath is mainly used in <a href="/en-US/docs/Web/XSLT">XSLT</a>, but can also be used as a much more powerful way of navigating through the <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a> of any XML-like language document using {{DOMxRef("XPathExpression")}}, such as <a href="/en-US/docs/Web/HTML">HTML</a> and <a href="/en-US/docs/Web/SVG">SVG</a>, instead of relying on the {{DOMxRef("Document.getElementById()")}} or {{DOMxRef("Document.querySelectorAll()")}} methods, the {{DOMxRef("Node.childNodes")}} properties, and other DOM Core features.</p>
+XPath is mainly used in [XSLT](/en-US/docs/Web/XSLT), but can also be used as a much more powerful way of navigating through the [DOM](/en-US/docs/Web/API/Document_Object_Model) of any XML-like language document using {{DOMxRef("XPathExpression")}}, such as [HTML](/en-US/docs/Web/HTML) and [SVG](/en-US/docs/Web/SVG), instead of relying on the {{DOMxRef("Document.getElementById()")}} or {{DOMxRef("Document.querySelectorAll()")}} methods, the {{DOMxRef("Node.childNodes")}} properties, and other DOM Core features.
 
-<p>XPath uses a path notation (as in URLs) for navigating through the hierarchical structure of an XML document. It uses a non-XML syntax so that it can be used in URIs and XML attribute values.</p>
+XPath uses a path notation (as in URLs) for navigating through the hierarchical structure of an XML document. It uses a non-XML syntax so that it can be used in URIs and XML attribute values.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Support for XPath varies widely; it's supported reasonably well in Firefox (although there are no plans to improve support further), while other browsers implement it to a lesser extent, if at all. If you need a polyfill, you may consider <a href="https://nchc.dl.sourceforge.net/project/js-xpath/js-xpath/1.0.0/xpath.js">js-xpath</a> or <a href="https://github.com/google/wicked-good-xpath">wicked-good-xpath</a>.</p>
-</div>
+> **Note:** Support for XPath varies widely; it's supported reasonably well in Firefox (although there are no plans to improve support further), while other browsers implement it to a lesser extent, if at all. If you need a polyfill, you may consider [js-xpath](https://nchc.dl.sourceforge.net/project/js-xpath/js-xpath/1.0.0/xpath.js) or [wicked-good-xpath](https://github.com/google/wicked-good-xpath).
 
-<h2 id="Documentation">Documentation</h2>
+## Documentation
 
-<dl>
- <dt><a href="/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript">Introduction to using XPath in JavaScript</a></dt>
- <dd>Describes a non-XSLT use of XPath.</dd>
- <dt><a href="/en-US/docs/Web/XPath/Axes">XPath:Axes</a></dt>
- <dd>List and definition of the axes defined in the XPath specification. Axes are used to describe the relationships between nodes.</dd>
- <dt><a href="/en-US/docs/Web/XPath/Functions">XPath:Functions</a></dt>
- <dd>List and description of the core XPath functions and XSLT-specific additions to XPath.</dd>
- <dt><a href="/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT">Transforming XML with XSLT</a></dt>
- <dd>XSLT uses XPath to address code segments in an XML document that it wishes to transform.</dd>
- <dt><a href="/en-US/docs/Web/XPath/Snippets">XPath snippets</a></dt>
- <dd>These are JavaScript utility functions, that can be used in your own code, based on  <a class="external external-icon" href="https://www.w3.org/TR/DOM-Level-3-XPath/">DOM Level 3 XPath </a>APIs.</dd>
- <dt><a href="https://www.xml.com/pub/a/2000/08/holman/">What is XSLT?</a></dt>
- <dd>This extensive introduction to XSLT and XPath assumes no prior knowledge of the technologies, and guides the reader through background, context, structure, concepts, and introductory terminology.</dd>
-</dl>
+- [Introduction to using XPath in JavaScript](/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript)
+  - : Describes a non-XSLT use of XPath.
+- [XPath:Axes](/en-US/docs/Web/XPath/Axes)
+  - : List and definition of the axes defined in the XPath specification. Axes are used to describe the relationships between nodes.
+- [XPath:Functions](/en-US/docs/Web/XPath/Functions)
+  - : List and description of the core XPath functions and XSLT-specific additions to XPath.
+- [Transforming XML with XSLT](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT)
+  - : XSLT uses XPath to address code segments in an XML document that it wishes to transform.
+- [XPath snippets](/en-US/docs/Web/XPath/Snippets)
+  - : These are JavaScript utility functions, that can be used in your own code, based on  [DOM Level 3 XPath ](https://www.w3.org/TR/DOM-Level-3-XPath/)APIs.
+- [What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/)
+  - : This extensive introduction to XSLT and XPath assumes no prior knowledge of the technologies, and guides the reader through background, context, structure, concepts, and introductory terminology.
 
-<h2 id="Tools">Tools</h2>
+## Tools
 
-<dl>
- <dt><a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/chropath-for-firefox/">ChroPath</a></dt>
- <dd>XPath panel that integrates tightly into FireBug, providing an editor and inspector (FireFox Add-On).</dd>
- <dt><a href="http://qutoric.com/xmlquire/">XMLQuire (formerly known as SketchPath)</a></dt>
- <dd>A Graphical XPath Builder/Debugger(.NET).</dd>
- <dt><a href="https://extendsclass.com/xpath-tester.html">XPath tester</a></dt>
- <dd>An online XPath Builder/Debugger.</dd>
-</dl>
+- [ChroPath](https://addons.mozilla.org/en-US/firefox/addon/chropath-for-firefox/)
+  - : XPath panel that integrates tightly into FireBug, providing an editor and inspector (FireFox Add-On).
+- [XMLQuire (formerly known as SketchPath)](http://qutoric.com/xmlquire/)
+  - : A Graphical XPath Builder/Debugger(.NET).
+- [XPath tester](https://extendsclass.com/xpath-tester.html)
+  - : An online XPath Builder/Debugger.
 
-<h2 id="Related_Topics">Related Topics</h2>
+## Related Topics
 
-<ul>
- <li><a href="/en-US/docs/Web/XSLT">XSLT</a>, <a href="/en-US/docs/Web/XML">XML</a>, <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a></li>
- <li><a href="/en-US/docs/Web/XPath/Comparison_with_CSS_selectors">Comparison of CSS Selectors and XPath</a></li>
-</ul>
+- [XSLT](/en-US/docs/Web/XSLT), [XML](/en-US/docs/Web/XML), [DOM](/en-US/docs/Web/API/Document_Object_Model)
+- [Comparison of CSS Selectors and XPath](/en-US/docs/Web/XPath/Comparison_with_CSS_selectors)
 
-<section id="Quick_links">
-<ol>
- <li><strong><a href="/en-US/docs/Web/XSLT">XSLT</a></strong></li>
- <li><strong><a href="/en-US/docs/Web/EXSLT">EXSLT</a></strong></li>
- <li><strong><a href="/en-US/docs/Web/XPath">XPath</a></strong></li>
- <li class="toggle">
-  <details open><summary>Guides</summary>
-  <ol>
-   <li><a href="/en-US/docs/Web/XPath/Comparison_with_CSS_selectors">Comparison of CSS Selectors and XPath</a></li>
-   <li><a href="/en-US/docs/Web/XPath/Snippets">XPath snippets</a></li>
-  </ol>
-  </details>
- </li>
- <li class="toggle">
-  <details open><summary><a href="/en-US/docs/Web/XPath/Axes">XPath Axes</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/XPath/Axes")}}</details>
- </li>
- <li class="toggle">
-  <details open><summary><a href="/en-US/docs/Web/XPath/Functions">XPath Functions</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/XPath/Functions")}}</details>
- </li>
-</ol>
-</section>
+<section id="Quick_links"><ol><li><strong><a href="/en-US/docs/Web/XSLT">XSLT</a></strong></li><li><strong><a href="/en-US/docs/Web/EXSLT">EXSLT</a></strong></li><li><strong><a href="/en-US/docs/Web/XPath">XPath</a></strong></li><li class="toggle"><details open><summary>Guides</summary><ol><li><a href="/en-US/docs/Web/XPath/Comparison_with_CSS_selectors">Comparison of CSS Selectors and XPath</a></li><li><a href="/en-US/docs/Web/XPath/Snippets">XPath snippets</a></li></ol></details></li><li class="toggle"><details open><summary><a href="/en-US/docs/Web/XPath/Axes">XPath Axes</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/XPath/Axes")}}</details></li><li class="toggle"><details open><summary><a href="/en-US/docs/Web/XPath/Functions">XPath Functions</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/XPath/Functions")}}</details></li></ol></section>

@@ -5,4 +5,4 @@ tags:
   - Axe
   - XPath
 ---
-<p>The <code>following</code> axis indicates all the nodes that appear after the context node, except any <code>descendant</code>, <code>attribute</code>, and <code>namespace</code> nodes.</p>
+The `following` axis indicates all the nodes that appear after the context node, except any `descendant`, `attribute`, and `namespace` nodes.

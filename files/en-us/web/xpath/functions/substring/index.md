@@ -5,39 +5,35 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- The <code>substring</code> function returns a part of a given string.</p>
+The `substring` function returns a part of a given string.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="eval">substring(<em>string</em> ,<em>start</em> [,<em>length</em>] )
-</pre>
+    substring(string ,start [,length] )
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><em><code>string</code></em></dt>
- <dd>The string to evaluate.</dd>
- <dt><em><code>start</code></em></dt>
- <dd>The position within<em><code>string</code></em> the substring begins</dd>
- <dt><em><code>length</code></em>(optional)</dt>
- <dd>The length of the substring. If omitted, the returned string will contain every character from the<em><code>start</code></em> position to the end of<em><code>string</code></em>.</dd>
-</dl>
+- _`string`_
+  - : The string to evaluate.
+- _`start`_
+  - : The position within*`string`* the substring begins
+- _`length`_(optional)
+  - : The length of the substring. If omitted, the returned string will contain every character from the*`start`* position to the end of*`string`*.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A string.</p>
+A string.
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<p>As in other XPath functions, the position is not zero-based. The first character in the string has a position of 1, not 0.</p>
+As in other XPath functions, the position is not zero-based. The first character in the string has a position of 1, not 0.
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p><a href="https://www.w3.org/TR/xpath#function-substring">XPath 1.0 4.2</a></p>
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-substring)
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

@@ -8,15 +8,16 @@ tags:
   - XPath
   - XSLT
 ---
-<p>This article provides some XPath code snippets — simple examples of how to a few simple <strong>utility functions</strong> based on standard interfaces from the <a href="https://www.w3.org/TR/DOM-Level-3-XPath/">DOM Level 3 XPath specification</a> that expose XPath functionality to JavaScript code<span class="seoSummary">. The snippets are functions you can use in the real world in your own code.</span></p>
+This article provides some XPath code snippets — simple examples of how to a few simple **utility functions** based on standard interfaces from the [DOM Level 3 XPath specification](https://www.w3.org/TR/DOM-Level-3-XPath/) that expose XPath functionality to JavaScript code. The snippets are functions you can use in the real world in your own code.
 
-<h3 id="Node-specific_evaluator_function">Node-specific <em>evaluator</em> function</h3>
+### Node-specific _evaluator_ function
 
-<p>The following custom utility function can be used to evaluate XPath expressions on given XML nodes. The first argument is a DOM node or Document object, while the second is a string defining an XPath expression.</p>
+The following custom utility function can be used to evaluate XPath expressions on given XML nodes. The first argument is a DOM node or Document object, while the second is a string defining an XPath expression.
 
-<h5 id="Example_Defining_a_custom_node-specific_evaluateXPath()_utility_function">Example: Defining a custom node-specific <code>evaluateXPath()</code> utility function</h5>
+##### Example: Defining a custom node-specific `evaluateXPath()` utility function
 
-<pre class="brush: js">// Evaluate an XPath expression aExpression against a given DOM node
+```js
+// Evaluate an XPath expression aExpression against a given DOM node
 // or Document object (aNode), returning the results as an array
 // thanks wanderingstan at morethanwarm dot mail dot com for the
 // initial work.
@@ -31,49 +32,53 @@ function evaluateXPath(aNode, aExpr) {
     found.push(res);
   return found;
 }
-</pre>
+```
 
-<p>This function uses the <strong><code>new XPathEvaluator()</code></strong> constructor, which is supported in Firefox, Chrome, Opera and Safari, but not in Edge or Internet Explorer. Scripts in a Web document which might be accessed by Edge or Internet Explorer users should replace the call to <strong><code>new XPathEvaluator()</code></strong> with the following fragment:</p>
+This function uses the **`new XPathEvaluator()`** constructor, which is supported in Firefox, Chrome, Opera and Safari, but not in Edge or Internet Explorer. Scripts in a Web document which might be accessed by Edge or Internet Explorer users should replace the call to **`new XPathEvaluator()`** with the following fragment:
 
-<pre class="brush: js">  // XPathEvaluator is implemented on objects that implement Document
+```js
+  // XPathEvaluator is implemented on objects that implement Document
   var xpe = aNode.ownerDocument || aNode;
-</pre>
+```
 
-<p>In that case the creation of the <a href="/en-US/docs/Web/API/Document/createNSResolver">XPathNSResolver</a> can be simplified as:</p>
+In that case the creation of the [XPathNSResolver](/en-US/docs/Web/API/Document/createNSResolver) can be simplified as:
 
-<pre class="brush: js">  var nsResolver = xpe.createNSResolver(xpe.documentElement);
-</pre>
+```js
+  var nsResolver = xpe.createNSResolver(xpe.documentElement);
+```
 
-<p>Note however that <code>createNSResolver</code> should only be used if you are sure the namespace prefixes in the XPath expression match those in the document you want to query (and that no default namespace is being used (though see <a href="/en-US/docs/Web/API/Document/createNSResolver">document.createNSResolver</a> for a workaround)). Otherwise, you have to provide your own implementation of XPathNSResolver.</p>
+Note however that `createNSResolver` should only be used if you are sure the namespace prefixes in the XPath expression match those in the document you want to query (and that no default namespace is being used (though see [document.createNSResolver](/en-US/docs/Web/API/Document/createNSResolver) for a workaround)). Otherwise, you have to provide your own implementation of XPathNSResolver.
 
-<p>If you are using <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> to read a local or remote XML file into a DOM tree (as described in <a href="/en-US/docs/Web/Guide/Parsing_and_serializing_XML">Parsing and serializing XML</a>), the first argument to <code>evaluateXPath()</code> should be <code>req.responseXML</code>.</p>
+If you are using [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) to read a local or remote XML file into a DOM tree (as described in [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)), the first argument to `evaluateXPath()` should be `req.responseXML`.
 
-<h4 id="Sample_usage">Sample usage</h4>
+#### Sample usage
 
-<p>Assume we have the following XML document (see also <a href="/en-US/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree">How to Create a DOM tree</a> and <a href="/en-US/docs/Web/Guide/Parsing_and_serializing_XML">Parsing and serializing XML</a>):</p>
+Assume we have the following XML document (see also [How to Create a DOM tree](/en-US/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree) and [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)):
 
-<h5 id="Example_An_XML_document_to_use_with_the_custom_evaluateXPath()_utility_function">Example: An XML document to use with the custom <code>evaluateXPath()</code> utility function </h5>
+##### Example: An XML document to use with the custom `evaluateXPath()` utility function 
 
-<pre class="brush: xml">&lt;?xml version="1.0"?&gt;
-&lt;people&gt;
-  &lt;person first-name="eric" middle-initial="H" last-name="jung"&gt;
-    &lt;address street="321 south st" city="denver" state="co" country="usa"/&gt;
-    &lt;address street="123 main st" city="arlington" state="ma" country="usa"/&gt;
-  &lt;/person&gt;
+```xml
+<?xml version="1.0"?>
+<people>
+  <person first-name="eric" middle-initial="H" last-name="jung">
+    <address street="321 south st" city="denver" state="co" country="usa"/>
+    <address street="123 main st" city="arlington" state="ma" country="usa"/>
+  </person>
 
-  &lt;person first-name="jed" last-name="brown"&gt;
-    &lt;address street="321 north st" city="atlanta" state="ga" country="usa"/&gt;
-    &lt;address street="123 west st" city="seattle" state="wa" country="usa"/&gt;
-    &lt;address street="321 south avenue" city="denver" state="co" country="usa"/&gt;
-  &lt;/person&gt;
-&lt;/people&gt;
-</pre>
+  <person first-name="jed" last-name="brown">
+    <address street="321 north st" city="atlanta" state="ga" country="usa"/>
+    <address street="123 west st" city="seattle" state="wa" country="usa"/>
+    <address street="321 south avenue" city="denver" state="co" country="usa"/>
+  </person>
+</people>
+```
 
-<p>You can now "query" the document with XPath expressions. Although walking the DOM tree can achieve similar results, using XPath expressions is much quicker and more powerful. If you can rely on <code>id</code> attributes, <code>document.getElementById()</code> is still powerful, but it's not nearly as powerful as XPath. Here are some examples.</p>
+You can now "query" the document with XPath expressions. Although walking the DOM tree can achieve similar results, using XPath expressions is much quicker and more powerful. If you can rely on `id` attributes, `document.getElementById()` is still powerful, but it's not nearly as powerful as XPath. Here are some examples.
 
-<h5 id="Example_JavaScript_code_with_the_custom_evaluateXPath()_utility_function">Example: JavaScript code with the custom <code>evaluateXPath()</code> utility function </h5>
+##### Example: JavaScript code with the custom `evaluateXPath()` utility function 
 
-<pre class="brush: js">// display the last names of all people in the doc
+```js
+// display the last names of all people in the doc
 var results = evaluateXPath(people, "//person/@last-name");
 for (var i in results)
   alert("Person #" + i + " has the last name " + results[i].value);
@@ -87,15 +92,16 @@ results = evaluateXPath(people, "//person[address/@city='denver']");
 // get all the addresses that have "south" in the street name
 results = evaluateXPath(people,  "//address[contains(@street, 'south')]");
 alert(results.length);
-</pre>
+```
 
-<h3 id="docEvaluateArray">docEvaluateArray</h3>
+### docEvaluateArray
 
-<p>The following is a simple utility function to get (ordered) XPath results into an array, regardless of whether there is a special need for namespace resolvers, etc. It avoids the more complex syntax of <code><a href="/en-US/docs/Web/API/Document/evaluate">document.evaluate()</a></code> for cases when it is not required as well as the need to use the special iterators on <code><a href="/en-US/docs/Web/API/XPathResult">XPathResult</a></code> (by returning an array instead).</p>
+The following is a simple utility function to get (ordered) XPath results into an array, regardless of whether there is a special need for namespace resolvers, etc. It avoids the more complex syntax of [`document.evaluate()`](/en-US/docs/Web/API/Document/evaluate) for cases when it is not required as well as the need to use the special iterators on [`XPathResult`](/en-US/docs/Web/API/XPathResult) (by returning an array instead).
 
-<h5 id="Example_Defining_a_simple_docEvaluateArray()_utility_function">Example: Defining a simple <code>docEvaluateArray()</code> utility function</h5>
+##### Example: Defining a simple `docEvaluateArray()` utility function
 
-<pre class="brush: js">// Example usage:
+```js
+// Example usage:
 // var els = docEvaluateArray('//a');
 // alert(els[0].nodeName); // gives 'A' in HTML document with at least one link
 
@@ -106,20 +112,21 @@ function docEvaluateArray (expr, doc, context, resolver) {
     context = context || doc;
 
     result = doc.evaluate(expr, context, resolver, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
-    for(i = 0; i &lt; result.snapshotLength; i++) {
+    for(i = 0; i < result.snapshotLength; i++) {
         a[i] = result.snapshotItem(i);
     }
     return a;
 }
-</pre>
+```
 
-<h3 id="getXPathForElement">getXPathForElement</h3>
+### getXPathForElement
 
-<p>The following function allows one to pass an element and an XML document to find a unique string XPath expression leading back to that element.</p>
+The following function allows one to pass an element and an XML document to find a unique string XPath expression leading back to that element.
 
-<h5 id="Example_Defining_a_getXPathForElement()_utility_function">Example: Defining a <code>getXPathForElement()</code> utility function</h5>
+##### Example: Defining a `getXPathForElement()` utility function
 
-<pre class="brush: js">function getXPathForElement(el, xml) {
+```js
+function getXPathForElement(el, xml) {
 	var xpath = '';
 	var pos, tempitem2;
 
@@ -127,7 +134,7 @@ function docEvaluateArray (expr, doc, context, resolver) {
 		pos = 0;
 		tempitem2 = el;
 		while(tempitem2) {
-			if (tempitem2.nodeType === 1 &amp;&amp; tempitem2.nodeName === el.nodeName) { // If it is ELEMENT_NODE of the same name
+			if (tempitem2.nodeType === 1 && tempitem2.nodeName === el.nodeName) { // If it is ELEMENT_NODE of the same name
 				pos += 1;
 			}
 			tempitem2 = tempitem2.previousSibling;
@@ -140,19 +147,16 @@ function docEvaluateArray (expr, doc, context, resolver) {
 	xpath = '/*'+"[name()='"+xml.documentElement.nodeName+"' and namespace-uri()='"+(el.namespaceURI===null?'':el.namespaceURI)+"']"+'/'+xpath;
 	xpath = xpath.replace(/\/$/, '');
 	return xpath;
-}</pre>
+}
+```
 
-<h3 id="Resources">Resources</h3>
+### Resources
 
-<ul>
- <li><a href="/en-US/docs/Web/XPath">XPath</a></li>
- <li><a href="http://forums.mozillazine.org/viewtopic.php?t=229106">Forum discussion on this topic</a></li>
-</ul>
+- [XPath](/en-US/docs/Web/XPath)
+- [Forum discussion on this topic](http://forums.mozillazine.org/viewtopic.php?t=229106)
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript">Introduction to using XPath in JavaScript</a></li>
-</ul>
+- [Introduction to using XPath in JavaScript](/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript)
 
-<p>{{QuickLinksWithSubpages("/en-US/docs/Web/XPath")}}</p>
+{{QuickLinksWithSubpages("/en-US/docs/Web/XPath")}}

@@ -5,33 +5,30 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- The <code>false</code> function returns boolean false.</p>
+The `false` function returns boolean false.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="eval">false()
-</pre>
+    false()
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>Boolean <code>false</code>.</p>
+Boolean `false`.
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<p>This function is useful part of a comparison:</p>
+This function is useful part of a comparison:
 
-<pre class="eval">&lt;xsl:if test="boolean((1 &amp;gt; 2) = false())"&gt;
- The expression evaluates as true
-&lt;/xsl:if&gt;
-</pre>
+    <xsl:if test="boolean((1 &gt; 2) = false())">
+     The expression evaluates as true
+    </xsl:if>
 
-<h3 id="Defined">Defined</h3>
+### Defined
 
-<p><a href="https://www.w3.org/TR/xpath#function-false">XPath 1.0 4.3</a></p>
+[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-false)
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported.</p>
+Supported.

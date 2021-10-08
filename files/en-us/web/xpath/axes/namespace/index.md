@@ -5,6 +5,6 @@ tags:
   - Axe
   - XPath
 ---
-<p><em>(not supported)</em></p>
+_(not supported)_
 
-<p>The <code>namespace</code> axis indicates all the nodes that are in scope for the context node. In this case, the context node must be an element node.</p>
+The `namespace` axis indicates all the nodes that are in scope for the context node. In this case, the context node must be an element node.

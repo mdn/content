@@ -6,34 +6,35 @@ tags:
   - XPath
   - XSLT
 ---
-<p>{{ XsltRef() }}</p>
-<p><br>
- The <code>choose</code> function returns one of the specified objects based on a boolean parameter.</p>
-<div class="note">
- <p><strong>Note:</strong> This method should be used instead of <code>if()</code>, which has been deprecated.</p></div>
-<h3 id="Syntax">Syntax</h3>
-<pre class="eval">choose( boolean , object1, object2 )
-</pre>
-<h3 id="Arguments">Arguments</h3>
-<dl>
- <dt>
-  <code><em>boolean</em></code></dt>
- <dd>
-  The boolean operation to use when determining which object to return.</dd>
- <dt>
-  <code><em>object1</em></code></dt>
- <dd>
-  The first object to consider returning.</dd>
- <dt>
-  <code><em>object2</em></code></dt>
- <dd>
-  The second object to consider returning.</dd>
-</dl>
-<h3 id="Returns">Returns</h3>
-<p>If the boolean parameter is true, the first object is returned; otherwise, the second object is returned.</p>
-<div class="note">
- <p><strong>Note:</strong> All parameters are evaluated, even the one that's not returned.</p></div>
-<h3 id="Defined">Defined</h3>
-<p><a href="https://www.w3.org/TR/xforms11/#fn-choose">XForms 1.1</a></p>
-<h3 id="Gecko_support">Gecko support</h3>
-<p>Supported.</p>
+{{ XsltRef() }}
+
+The `choose` function returns one of the specified objects based on a boolean parameter.
+
+> **Note:** This method should be used instead of `if()`, which has been deprecated.
+
+### Syntax
+
+    choose( boolean , object1, object2 )
+
+### Arguments
+
+- `boolean`
+  - : The boolean operation to use when determining which object to return.
+- `object1`
+  - : The first object to consider returning.
+- `object2`
+  - : The second object to consider returning.
+
+### Returns
+
+If the boolean parameter is true, the first object is returned; otherwise, the second object is returned.
+
+> **Note:** All parameters are evaluated, even the one that's not returned.
+
+### Defined
+
+[XForms 1.1](https://www.w3.org/TR/xforms11/#fn-choose)
+
+### Gecko support
+
+Supported.
