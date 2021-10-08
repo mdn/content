@@ -13,7 +13,7 @@ tags:
 
 <p>The following document passes the two parameters "color" and "size" to the stylesheet "style.xsl".</p>
 
-<pre class="eval">&lt;?xslt-param name="color" value="blue"?&gt;
+<pre class="plain">&lt;?xslt-param name="color" value="blue"?&gt;
 &lt;?xslt-param name="size" select="2"?&gt;
 &lt;?xml-stylesheet type="text/xsl" href="style.xsl"?&gt;
 </pre>
@@ -26,7 +26,7 @@ tags:
 
 <p>Both the <code>xslt-param</code> and the <code>xslt-param-namespace</code> PIs must appear in the prolog of the document, i.e. before the first element tag. All PIs in the prolog must be honored, both ones occurring before and onces occurring after any <code>xml-stylesheet</code> PIs.</p>
 
-<p>If there are multiple <code>xml-stylesheet</code> PIs the parameters apply to all stylesheets as a consequence of that all stylesheets are imported into a single stylesheet per the XSLT spec.<span class="comment">reference?</span> Note that multiple <code>xml-stylesheet</code> XSLT PIs are not supported in Firefox currently.</p>
+<p>If there are multiple <code>xml-stylesheet</code> PIs the parameters apply to all stylesheets as a consequence of that all stylesheets are imported into a single stylesheet per the XSLT spec.reference? Note that multiple <code>xml-stylesheet</code> XSLT PIs are not supported in Firefox currently.</p>
 
 <h4 id="xslt-param">xslt-param</h4>
 
