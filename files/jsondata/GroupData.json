@@ -524,19 +524,6 @@
         "Element: fullscreenerror"
       ]
     },
-    "Frame Timing API": {
-      "overview": ["Frame Timing API"],
-      "guides": ["/docs/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API"],
-      "interfaces": [
-        "Performance",
-        "PerformanceEntry",
-        "PerformanceFrameTiming",
-        "PerformanceObserver"
-      ],
-      "methods": [],
-      "properties": [],
-      "events": []
-    },
     "Gamepad API": {
       "overview": ["Gamepad API"],
       "guides": [
@@ -1023,7 +1010,6 @@
       "interfaces": [
         "Performance",
         "PerformanceEntry",
-        "PerformanceFrameTiming",
         "PerformanceLongTaskTiming",
         "PerformanceMark",
         "PerformanceMeasure",

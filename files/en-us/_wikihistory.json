@@ -46771,21 +46771,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/Frame_Timing_API": {
-    "modified": "2019-01-16T21:55:59.710Z",
-    "contributors": [
-      "teoli",
-      "rolfedh",
-      "AFBarstow"
-    ]
-  },
-  "Web/API/Frame_Timing_API/Using_the_Frame_Timing_API": {
-    "modified": "2019-03-23T22:41:07.570Z",
-    "contributors": [
-      "rolfedh",
-      "AFBarstow"
-    ]
-  },
   "Web/API/Fullscreen_API": {
     "modified": "2020-12-02T10:59:03.389Z",
     "contributors": [
@@ -67467,17 +67452,6 @@
     "contributors": [
       "Rumyra",
       "jpmedley"
-    ]
-  },
-  "Web/API/PerformanceFrameTiming": {
-    "modified": "2020-10-15T21:41:25.252Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "jpmedley",
-      "tophf",
-      "rolfedh",
-      "AFBarstow"
     ]
   },
   "Web/API/PerformanceLongTaskTiming": {
