@@ -101,7 +101,7 @@ Here is a trivial example:
 
 ```js
 async function hello() {
-  return greeting = await Promise.resolve("Hello");
+  return await Promise.resolve("Hello");
 };
 
 hello().then(alert);
