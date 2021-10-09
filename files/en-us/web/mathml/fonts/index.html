@@ -43,7 +43,7 @@ tags:
 </ol>
 
 <div class="note notecard">
-<p><strong>Note:</strong> A deprecated version of STIX is preinstalled starting with OS X Lion and should ensure relatively good MathML rendering. Enhancement requests have been submitted to Apple to ship OpenType MATH fonts <span class="probNo" id="displayFullDetailsProblemID">in the default installation. If you have a developer account, these are problems </span><span class="probNo" id="displayFullDetailsProblemID">16841023</span> and <span class="probNo" id="displayFullDetailsProblemID">17021145.</span></p>
+<p><strong>Note:</strong> A deprecated version of STIX is preinstalled starting with OS X Lion and should ensure relatively good MathML rendering. Enhancement requests have been submitted to Apple to ship OpenType MATH fonts in the default installation. If you have a developer account, these are problems 16841023 and 17021145.</p>
 </div>
 
 <h3 id="Linux">Linux</h3>
@@ -70,7 +70,7 @@ sudo urpmi texlive-dist texlive-fontsextra # Mageia
 
 <p>However, you might need to ensure that the fonts are known by your system. Typically,  use a fontconfig configuration <code>/etc/fonts/conf.avail/09-texlive-fonts.conf</code> that points to the <code>opentype</code> directory of TeXLive, such as:</p>
 
-<pre class="brush: tex">&lt;?xml version=&quot;1.0&quot;?&gt;
+<pre class="brush: plain">&lt;?xml version=&quot;1.0&quot;?&gt;
 &lt;!DOCTYPE fontconfig SYSTEM &quot;fonts.dtd&quot;&gt;
 &lt;fontconfig&gt;
   &lt;dir&gt;/your/path/to/texmf-dist/fonts/opentype&lt;/dir&gt;
@@ -95,12 +95,12 @@ fc-cache -sf
 <p>You must use the <a href="https://addons.mozilla.org/firefox/addon/mathml-fonts/">MathML-fonts add-on</a>.</p>
 
 <div class="note notecard">
-<p><strong>Note:</strong> We <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=775060">plan to bundle</a> a <a href="#math_fonts">MATH font</a> in the default installation.</p>
+<p><strong>Note:</strong> We <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=775060">plan to bundle</a> a <a href="#Fonts_with_a_MATH_table">MATH font</a> in the default installation.</p>
 </div>
 
 <h3 id="Other_systems">Other systems</h3>
 
-<p>On other systems, consider installing a <a href="#math_fonts">MATH font</a> using your package manager. Note that these fonts are generally delivered with TeX distributions such as <a href="https://www.tug.org/texlive/">TeX Live</a>, but you might need to follow specific instructions so that your system is aware of the fonts. As a last resort, install the <a href="https://addons.mozilla.org/firefox/addon/mathml-fonts/">MathML fonts add-on</a>.</p>
+<p>On other systems, consider installing a <a href="#Fonts_with_a_MATH_table">MATH font</a> using your package manager. Note that these fonts are generally delivered with TeX distributions such as <a href="https://www.tug.org/texlive/">TeX Live</a>, but you might need to follow specific instructions so that your system is aware of the fonts. As a last resort, install the <a href="https://addons.mozilla.org/firefox/addon/mathml-fonts/">MathML fonts add-on</a>.</p>
 
 <h2 id="Advanced_setup">Advanced setup</h2>
 
@@ -112,7 +112,6 @@ fc-cache -sf
 
 <p>If you need to install fonts on a system without adminstrator privilege, the easiest option is to use math font the <a href="https://addons.mozilla.org/firefox/addon/mathml-fonts/">MathML-fonts add-on</a>. Note that using the add-on is not optimal since it forces your Gecko browser to load a CSS stylesheet on each page you visit as well as Web math fonts on all pages with MathML content. A better alternative on UNIX systems is to install the OTF files for <a href="http://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip">Latin Modern Math</a> and <a href="https://github.com/stipub/stixfonts">STIX</a> into some local font folder and (if necessary) to run <code>fc-cache</code> on it. On OS X and Linux, the standard paths are <code>~/Library/Fonts/</code> and <code>~/.fonts</code>.</p>
 
-<a id="MATH_fonts"></a>
 <h3 id="Fonts_with_a_MATH_table">Fonts with a MATH table</h3>
 
 <p>You can actually render MathML using any font with a MATH table and related Open Font Format features. A list of such math fonts is provided below. You can use the <em>advanced font preference menu</em> to configure the default font for mathematics. Alternatively, you can try the <a href="https://addons.mozilla.org/en-US/firefox/addon/mathml-font-settings/">MathML-fontsettings add-on</a>.</p>
