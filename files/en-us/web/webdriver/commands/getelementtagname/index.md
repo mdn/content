@@ -8,66 +8,52 @@ tags:
   - WebDriver
 browser-compat: webdriver.commands.GetElementTagName
 ---
-<p>The <em>Get Element Tag Name</em> <a href="/en-US/docs/Web/WebDriver/Command">command</a> of the <a href="/en-US/docs/Web/WebDriver">WebDriver</a> API returns the tag name of the referenced <a href="/en-US/docs/Web/WebDriver/WebElement">web element</a>. If for example the element is an {{HTMLElement("img")}}, the returned tag name is <code>"IMG"</code>, which is equivalent to calling {{domxref("Element.tagName")}} on the element. For XML/XHTML documents it may be cased differently.</p>
+The _Get Element Tag Name_ [command](/en-US/docs/Web/WebDriver/Command) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the tag name of the referenced [web element](/en-US/docs/Web/WebDriver/WebElement). If for example the element is an {{HTMLElement("img")}}, the returned tag name is `"IMG"`, which is equivalent to calling {{domxref("Element.tagName")}} on the element. For XML/XHTML documents it may be cased differently.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Method</th>
-   <th scope="col">URI template</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>GET</code></td>
-   <td><code>/session/{<em>session id</em>}/element/{<em>element id</em>}/name</code></td>
-  </tr>
- </tbody>
-</table>
+| Method | URI template                                      |
+| ------ | ------------------------------------------------- |
+| `GET`  | `/session/{session id}/element/{element id}/name` |
 
-<h3 id="URL_parameters">URL parameters</h3>
+### URL parameters
 
-<dl>
- <dt><code>session id</code></dt>
- <dd>Identifier of the session.</dd>
- <dt><code>element id</code></dt>
- <dd>Identifier of the <a href="/en-US/docs/Web/WebDriver/WebElement">web element</a> to get the tag name of.</dd>
-</dl>
+- `session id`
+  - : Identifier of the session.
+- `element id`
+  - : Identifier of the [web element](/en-US/docs/Web/WebDriver/WebElement) to get the tag name of.
 
-<h3 id="Errors">Errors</h3>
+### Errors
 
-<dl>
- <dt><a href="/en-US/docs/Web/WebDriver/Errors/SessionNotCreated">Session not created</a></dt>
- <dd>Session does not exist.</dd>
- <dt><a href="/en-US/docs/Web/WebDriver/Errors/NoSuchWindow">No such window</a></dt>
- <dd>The <code><a href="/en-US/docs/Web/API/Window">window</a></code> object has been discarded, indicating that the tab or window has been closed.</dd>
- <dt><a href="/en-US/docs/Web/WebDriver/Errors/UnexpectedAlertOpen">Unexpected alert open</a></dt>
- <dd>A user prompt, such as <code><a href="/en-US/docs/Web/API/Window/alert">window.alert</a></code>, blocks execution of command until it is dealt with.</dd>
-</dl>
+- [Session not created](/en-US/docs/Web/WebDriver/Errors/SessionNotCreated)
+  - : Session does not exist.
+- [No such window](/en-US/docs/Web/WebDriver/Errors/NoSuchWindow)
+  - : The [`window`](/en-US/docs/Web/API/Window) object has been discarded, indicating that the tab or window has been closed.
+- [Unexpected alert open](/en-US/docs/Web/WebDriver/Errors/UnexpectedAlertOpen)
+  - : A user prompt, such as [`window.alert`](/en-US/docs/Web/API/Window/alert), blocks execution of command until it is dealt with.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Python:</p>
+Python:
 
-<pre class="brush: python">from selenium import webdriver
+```python
+from selenium import webdriver
 
 session = webdriver.Firefox()
 session.get("https://google.com/?hl=en")
 search_box = driver.find_element_by_id("q")
 
 print(search_box.tag_name)
-</pre>
+```
 
-<p>Output:</p>
+Output:
 
-<pre>INPUT</pre>
+    INPUT
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

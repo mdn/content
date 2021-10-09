@@ -3,77 +3,56 @@ title: New Window
 slug: Web/WebDriver/Commands/New_Window
 browser-compat: webdriver.commands.NewWindow
 ---
-<p>The <em>New Window</em> <a href="/en-US/docs/Web/WebDriver/Commands">command</a> of the <a href="/en-US/docs/Web/WebDriver">WebDriver</a> API opens a new top-level browsing context of type <em>window</em> or <em>tab</em>, and returns with a dictionary containing the <em>handle</em> of the new <a href="/en-US/docs/Web/WebDriver/WebWindow">WebWindow</a> and its created <em>type</em>. If the requested <em>type</em> cannot be created by the browser, the alternative type will be tried to create.</p>
+The _New Window_ [command](/en-US/docs/Web/WebDriver/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API opens a new top-level browsing context of type _window_ or _tab_, and returns with a dictionary containing the _handle_ of the new [WebWindow](/en-US/docs/Web/WebDriver/WebWindow) and its created _type_. If the requested _type_ cannot be created by the browser, the alternative type will be tried to create.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Method</th>
-   <th scope="col">URI template</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code><a href="/en-US/docs/Web/HTTP/Methods/DELETE">POST</a></code></td>
-   <td><code>/session/{<em>session id</em>}/window/new</code></td>
-  </tr>
- </tbody>
-</table>
+| Method                                        | URI template                       |
+| --------------------------------------------- | ---------------------------------- |
+| [`POST`](/en-US/docs/Web/HTTP/Methods/DELETE) | `/session/{session id}/window/new` |
 
-<h3 id="URL_parameters">URL parameters</h3>
+### URL parameters
 
-<dl>
- <dt><code>session id</code></dt>
- <dd>Identifier of the session.</dd>
-</dl>
+- `session id`
+  - : Identifier of the session.
 
-<h3 id="Payload">Payload</h3>
+### Payload
 
-<p>The input is an object:</p>
+The input is an object:
 
-<dl>
- <dt><code>type</code></dt>
- <dd>Requested type of top-level browsing context.</dd>
-</dl>
+- `type`
+  - : Requested type of top-level browsing context.
 
-<h3 id="Response">Response</h3>
+### Response
 
-<p>The response payload is an object:</p>
+The response payload is an object:
 
-<dl>
- <dt>handle</dt>
- <dd>The handle of the new <a href="/en-US/docs/Web/WebDriver/WebWindow">WebWindow.</a></dd>
- <dt>type</dt>
- <dd>The created type of top-level browsing context.</dd>
-</dl>
+- handle
+  - : The handle of the new [WebWindow.](/en-US/docs/Web/WebDriver/WebWindow)
+- type
+  - : The created type of top-level browsing context.
 
-<h3 id="Errors">Errors</h3>
+### Errors
 
-<dl>
- <dt><a href="/en-US/docs/Web/WebDriver/Errors/InvalidSessionID">Invalid session ID</a></dt>
- <dd>Session does not exist.</dd>
- <dt><a href="/en-US/docs/Web/WebDriver/Errors/NoSuchWindow">No such window</a></dt>
- <dd>If the <code><a href="/en-US/docs/Web/API/Window">window</a></code> has been closed.</dd>
- <dt><a href="/en-US/docs/Web/WebDriver/Errors/UnexpectedAlertOpen">Unexpected alert open</a></dt>
- <dd>A user prompt, such as <code><a href="/en-US/docs/Web/API/Window/alert">window.alert</a></code>, blocks execution of command until it is dealt with.</dd>
- <dt><a href="/en-US/docs/Web/WebDriver/Errors/UnsupportedOperation">Unsupported Operation</a></dt>
- <dd>The driver or browser doesn't support the command for some reason, eg. when it is not possible to create a new tab nor window.</dd>
-</dl>
+- [Invalid session ID](/en-US/docs/Web/WebDriver/Errors/InvalidSessionID)
+  - : Session does not exist.
+- [No such window](/en-US/docs/Web/WebDriver/Errors/NoSuchWindow)
+  - : If the [`window`](/en-US/docs/Web/API/Window) has been closed.
+- [Unexpected alert open](/en-US/docs/Web/WebDriver/Errors/UnexpectedAlertOpen)
+  - : A user prompt, such as [`window.alert`](/en-US/docs/Web/API/Window/alert), blocks execution of command until it is dealt with.
+- [Unsupported Operation](/en-US/docs/Web/WebDriver/Errors/UnsupportedOperation)
+  - : The driver or browser doesn't support the command for some reason, eg. when it is not possible to create a new tab nor window.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/WebDriver/Commands/CloseWindow">Close Window</a> command</li>
-</ul>
+- [Close Window](/en-US/docs/Web/WebDriver/Commands/CloseWindow) command

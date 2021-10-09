@@ -7,28 +7,25 @@ tags:
   - capabilities
   - acceptInsecureCerts
 ---
-<p>The <strong><code>acceptInsecureCerts</code> capability</strong> communicates whether expired or invalid <a href="/en-US/docs/Glossary/TLS">TLS certificates</a> are checked when <a href="/en-US/docs/Web/WebDriver/Commands/NavigateTo">navigating</a>. When the capability is false, an <a href="/en-US/docs/Web/WebDriver/Errors/InsecureCertificate">insecure certificate</a> error will be returned as navigation encounters domains with certificate problems. Otherwise, self-signed or otherwise invalid certificates will be implicitly trusted by the browser on navigation. The capability has effect for the lifetime of the session.</p>
+The **`acceptInsecureCerts` capability** communicates whether expired or invalid [TLS certificates](/en-US/docs/Glossary/TLS) are checked when [navigating](/en-US/docs/Web/WebDriver/Commands/NavigateTo). When the capability is false, an [insecure certificate](/en-US/docs/Web/WebDriver/Errors/InsecureCertificate) error will be returned as navigation encounters domains with certificate problems. Otherwise, self-signed or otherwise invalid certificates will be implicitly trusted by the browser on navigation. The capability has effect for the lifetime of the session.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Using the <code>acceptInsecureCerts</code> capability you can bypass, or implicitly trust, TLS certificates that the certificate service in the browser does not trust:</p>
+Using the `acceptInsecureCerts` capability you can bypass, or implicitly trust, TLS certificates that the certificate service in the browser does not trust:
 
-<pre>from selenium import webdriver
-from selenium.common import exceptions
+    from selenium import webdriver
+    from selenium.common import exceptions
 
-session = webdriver.Firefox(capabilities={"acceptInsecureCerts": True})
-session.get("https://self-signed.badssl.com/")
-print(session.current_url)</pre>
+    session = webdriver.Firefox(capabilities={"acceptInsecureCerts": True})
+    session.get("https://self-signed.badssl.com/")
+    print(session.current_url)
 
-<p>Output:</p>
+Output:
 
-<pre>https://self-signed.badssl.com/</pre>
+    https://self-signed.badssl.com/
 
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/WebDriver/Capabilities">List of WebDriver capabilities</a></li>
- <li><a href="/en-US/docs/Web/WebDriver/Commands/NavigateTo">Navigate To</a> command</li>
- <li><a href="/en-US/docs/Web/WebDriver/Commands/NewSession">New Session</a> command</li>
-</ul>
+- [List of WebDriver capabilities](/en-US/docs/Web/WebDriver/Capabilities)
+- [Navigate To](/en-US/docs/Web/WebDriver/Commands/NavigateTo) command
+- [New Session](/en-US/docs/Web/WebDriver/Commands/NewSession) command

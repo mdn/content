@@ -7,19 +7,20 @@ tags:
   - Stale element reference
   - WebDriver
 ---
-<p>The <strong>stale element reference</strong> error is a <a href="/en-US/docs/Web/WebDriver/Errors">WebDriver error</a> that occurs because the referenced <a href="/en-US/docs/Web/WebDriver/WebElement">web element</a> is no longer attached to the <a href="/en-US/docs/Glossary/DOM">DOM</a>.</p>
+The **stale element reference** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Errors) that occurs because the referenced [web element](/en-US/docs/Web/WebDriver/WebElement) is no longer attached to the [DOM](/en-US/docs/Glossary/DOM).
 
-<p>Every DOM element is represented in WebDriver by a unique identifying reference, known as a <em><a href="/en-US/docs/Web/WebDriver/WebElement">web element</a></em>. The web element reference is a UUID used to execute commands targeting specific elements, such as <a href="/en-US/docs/Web/WebDriver/Commands/GetElementTagName">getting an element’s tag name</a> and <a href="/en-US/docs/Web/WebDriver/Commands/GetElementProperty">retrieving a property</a> off an element.</p>
+Every DOM element is represented in WebDriver by a unique identifying reference, known as a _[web element](/en-US/docs/Web/WebDriver/WebElement)_. The web element reference is a UUID used to execute commands targeting specific elements, such as [getting an element’s tag name](/en-US/docs/Web/WebDriver/Commands/GetElementTagName) and [retrieving a property](/en-US/docs/Web/WebDriver/Commands/GetElementProperty) off an element.
 
-<p>When an element is no longer attached to the DOM, i.e. it has been removed from the document or the document has changed, it is said to be <em>stale</em>. Staleness occurs for example when you have a web element reference and the document it was retrieved from navigates.</p>
+When an element is no longer attached to the DOM, i.e. it has been removed from the document or the document has changed, it is said to be _stale_. Staleness occurs for example when you have a web element reference and the document it was retrieved from navigates.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Document_navigation">Document navigation</h3>
+### Document navigation
 
-<p>Upon navigation, all web element references to the previous document will be discarded along with the document. This will cause any subsequent interaction with the <a href="/en-US/docs/Web/WebDriver/WebElement">web element</a> to fail with the stale element reference error:</p>
+Upon navigation, all web element references to the previous document will be discarded along with the document. This will cause any subsequent interaction with the [web element](/en-US/docs/Web/WebDriver/WebElement) to fail with the stale element reference error:
 
-<pre class="brush: python">import urllib
+```python
+import urllib
 
 from selenium import webdriver
 from selenium.common import exceptions
@@ -28,25 +29,26 @@ def inline(doc):
     return "data:text/html;charset=utf-8,{}".format(urllib.quote(doc))
 
 session = webdriver.Firefox()
-session.get(inline("&lt;strong&gt;foo&lt;/strong&gt;"))
+session.get(inline("<strong>foo</strong>"))
 foo = session.find_element_by_css_selector("strong")
 
-session.get(inline("&lt;i&gt;bar&lt;/i&gt;"))
+session.get(inline("<i>bar</i>"))
 try:
     foo.tag_name
 except exceptions.StaleElementReferenceException as e:
     print(e)
-</pre>
+```
 
-<p>Output:</p>
+Output:
 
-<pre>StaleElementReferenceException: The element reference of e75a1764-ff73-40fa-93c1-08cb90394b65 is stale either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed</pre>
+    StaleElementReferenceException: The element reference of e75a1764-ff73-40fa-93c1-08cb90394b65 is stale either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
 
-<h3 id="Node_removal">Node removal</h3>
+### Node removal
 
-<p>When a document node is removed from the DOM, its web element reference will be invalidated. This will also cause any subsequent interaction with the <a href="/en-US/docs/Web/WebDriver/WebElement">web element</a> to fail with the stale element reference error:</p>
+When a document node is removed from the DOM, its web element reference will be invalidated. This will also cause any subsequent interaction with the [web element](/en-US/docs/Web/WebDriver/WebElement) to fail with the stale element reference error:
 
-<pre class="brush: python">import urllib
+```python
+import urllib
 
 from selenium import webdriver
 from selenium.common import exceptions
@@ -55,7 +57,7 @@ def inline(doc):
     return "data:text/html;charset=utf-8,{}".format(urllib.quote(doc))
 
 session = webdriver.Firefox()
-session.get(inline("&lt;button&gt;foo&lt;/button&gt;"))
+session.get(inline("<button>foo</button>"))
 button = session.find_element_by_css_selector("button")
 session.execute_script("""
     let [button] = arguments;
@@ -66,22 +68,18 @@ try:
     button.click()
 except exceptions.StaleElementReferenceException as e:
     print(e)
-</pre>
+```
 
-<p>Output:</p>
+Output:
 
-<pre>StaleElementReferenceException: The element reference of e75a1764-ff73-40fa-93c1-08cb90394b65 is stale either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed</pre>
+    StaleElementReferenceException: The element reference of e75a1764-ff73-40fa-93c1-08cb90394b65 is stale either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/WebDriver/WebElement">WebElement</a></li>
- <li>Associated commands:
-  <ul>
-   <li><a href="/en-US/docs/Web/WebDriver/Commands/FindElement">Find Element</a></li>
-   <li><a href="/en-US/docs/Web/WebDriver/Commands/FindElements">Find Elements</a></li>
-   <li><a href="/en-US/docs/Web/WebDriver/Commands/FindElementFromElement">Find Element From Element</a></li>
-   <li><a href="/en-US/docs/Web/WebDriver/Commands/FindElementsFromElement">Find Elements From Element</a></li>
-  </ul>
- </li>
-</ul>
+- [WebElement](/en-US/docs/Web/WebDriver/WebElement)
+- Associated commands:
+
+  - [Find Element](/en-US/docs/Web/WebDriver/Commands/FindElement)
+  - [Find Elements](/en-US/docs/Web/WebDriver/Commands/FindElements)
+  - [Find Element From Element](/en-US/docs/Web/WebDriver/Commands/FindElementFromElement)
+  - [Find Elements From Element](/en-US/docs/Web/WebDriver/Commands/FindElementsFromElement)

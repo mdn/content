@@ -8,46 +8,32 @@ tags:
   - WebDriver
 browser-compat: webdriver.commands.CloseWindow
 ---
-<p>The <em>Close Window</em> <a href="/en-US/docs/Web/WebDriver/Command">command</a> of the <a href="/en-US/docs/Web/WebDriver">WebDriver</a> API closes the current top-level browsing context (window or tab) and returns with the list of currently open <code><a href="/en-US/docs/Web/WebDriver/WebWindow">WebWindow</a></code>s. If it is the last window that is being closed, the WebDriver session will implicitly be deleted. Subsequent commands after the session is ended will therefore cause <a href="/en-US/docs/Web/WebDriver/Errors/InvalidSessionID">invalid session ID</a> errors.</p>
+The _Close Window_ [command](/en-US/docs/Web/WebDriver/Command) of the [WebDriver](/en-US/docs/Web/WebDriver) API closes the current top-level browsing context (window or tab) and returns with the list of currently open [`WebWindow`](/en-US/docs/Web/WebDriver/WebWindow)s. If it is the last window that is being closed, the WebDriver session will implicitly be deleted. Subsequent commands after the session is ended will therefore cause [invalid session ID](/en-US/docs/Web/WebDriver/Errors/InvalidSessionID) errors.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Method</th>
-   <th scope="col">URI template</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code><a href="/en-US/docs/Web/HTTP/Methods/DELETE">DELETE</a></code></td>
-   <td><code>/session/{<em>session id</em>}/window</code></td>
-  </tr>
- </tbody>
-</table>
+| Method                                          | URI template                   |
+| ----------------------------------------------- | ------------------------------ |
+| [`DELETE`](/en-US/docs/Web/HTTP/Methods/DELETE) | `/session/{session id}/window` |
 
-<h3 id="URL_parameters">URL parameters</h3>
+### URL parameters
 
-<dl>
- <dt><code>session id</code></dt>
- <dd>Identifier of the session.</dd>
-</dl>
+- `session id`
+  - : Identifier of the session.
 
-<h3 id="Errors">Errors</h3>
+### Errors
 
-<dl>
- <dt><a href="/en-US/docs/Web/WebDriver/Errors/InvalidSessionID">Invalid session ID</a></dt>
- <dd>Session does not exist.</dd>
- <dt><a href="/en-US/docs/Web/WebDriver/Errors/UnexpectedAlertOpen">Unexpected alert open</a></dt>
- <dd>A user prompt, such as <code><a href="/en-US/docs/Web/API/Window/alert">window.alert</a></code>, blocks execution of command until it is dealt with.</dd>
-</dl>
+- [Invalid session ID](/en-US/docs/Web/WebDriver/Errors/InvalidSessionID)
+  - : Session does not exist.
+- [Unexpected alert open](/en-US/docs/Web/WebDriver/Errors/UnexpectedAlertOpen)
+  - : A user prompt, such as [`window.alert`](/en-US/docs/Web/API/Window/alert), blocks execution of command until it is dealt with.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Python:</p>
+Python:
 
-<pre class="brush: python">from selenium import webdriver
+```python
+from selenium import webdriver
 
 session = webdriver.Firefox()
 original_window = session.window_handle
@@ -57,11 +43,12 @@ session.switch_to.window(new_window)
 
 session.close()
 session.switch_to.window(original_window)
-</pre>
+```
 
-<p>C#:</p>
+C#:
 
-<pre class="brush: cpp">using OpenQA.Selenium.Firefox;
+```cpp
+using OpenQA.Selenium.Firefox;
 
 namespace MDNWebDriverExamples
 {
@@ -80,20 +67,18 @@ namespace MDNWebDriverExamples
         }
     }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/WebDriver/Commands/SwitchToWindow">Switch To Window</a> command</li>
- <li><a href="/en-US/docs/Web/WebDriver/Commands/GetWindowHandle">Get Window Handle</a> command</li>
- <li><a href="/en-US/docs/Web/WebDriver/Commands/GetWindowHandles">Get Window Handles</a> command</li>
-</ul>
+- [Switch To Window](/en-US/docs/Web/WebDriver/Commands/SwitchToWindow) command
+- [Get Window Handle](/en-US/docs/Web/WebDriver/Commands/GetWindowHandle) command
+- [Get Window Handles](/en-US/docs/Web/WebDriver/Commands/GetWindowHandles) command

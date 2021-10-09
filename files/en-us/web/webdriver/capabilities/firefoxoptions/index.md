@@ -8,25 +8,26 @@ tags:
   - Extension capabilities
   - firefoxOptions
 ---
-<p>The <strong><code>moz:firefoxOptions</code> capability</strong> is a namespaced set of
-  capabilities specific to <a href="https://www.mozilla.org/en-US/firefox/">Firefox</a>. It is used to control the
-  behavior of Firefox and can be used as a member of
-  <code><a href="en-US/docs/Web/WebDriver/Capabilities#alwaysMatch">alwaysMatch</a></code> or as a member of one of the
-  <code><a href="en-US/docs/Web/WebDriver/Capabilities#firstMatch">firstMatch</a></code> entries.</p>
+The **`moz:firefoxOptions` capability** is a namespaced set of
+capabilities specific to [Firefox](https://www.mozilla.org/en-US/firefox/). It is used to control the
+behavior of Firefox and can be used as a member of
+[`alwaysMatch`](en-US/docs/Web/WebDriver/Capabilities#alwaysMatch) or as a member of one of the
+[`firstMatch`](en-US/docs/Web/WebDriver/Capabilities#firstMatch) entries.
 
-<p>It is used to define options which control how Firefox gets started and run.</p>
+It is used to define options which control how Firefox gets started and run.
 
-<p><code>moz:firefoxOptions</code> is a JSON Object which may contain any of the following fields:</p>
+`moz:firefoxOptions` is a JSON Object which may contain any of the following fields:
 
-<h5 id="binary_string"><code>binary</code> (string)</h5>
+##### `binary` (string)
 
+Absolute path to the custom Firefox binary to use.
 
-<p>Absolute path to the custom Firefox binary to use.</p>
-<p>On macOS you may either give the path to the application bundle, i.e. <code>/Applications/Firefox.app</code>, or the
-  absolute path to the executable binary inside this bundle, for example
-  <code>/Applications/Firefox.app/Contents/MacOS/firefox-bin</code>.</p>
-<p>geckodriver will attempt to deduce the default location of Firefox on the current system if left undefined. The
-  default locations of Firefox are:</p>
+On macOS you may either give the path to the application bundle, i.e. `/Applications/Firefox.app`, or the
+absolute path to the executable binary inside this bundle, for example
+`/Applications/Firefox.app/Contents/MacOS/firefox-bin`.
+
+geckodriver will attempt to deduce the default location of Firefox on the current system if left undefined. The
+default locations of Firefox are:
 
 <table class="standard-table">
   <thead>
@@ -40,169 +41,189 @@ tags:
       <td>macOS</td>
       <td>
         <ol>
-          <li><code>/Applications/Firefox.app/Contents/MacOS/firefox-bin</code></li>
-          <li><code>$HOME/Applications/Firefox.app/Contents/MacOS/firefox-bin</code></li>
+          <li>
+            <code>/Applications/Firefox.app/Contents/MacOS/firefox-bin</code>
+          </li>
+          <li>
+            <code
+              >$HOME/Applications/Firefox.app/Contents/MacOS/firefox-bin</code
+            >
+          </li>
         </ol>
       </td>
     </tr>
     <tr>
-      <td>Linux<br>
-        BSD</td>
+      <td>Linux<br />BSD</td>
       <td>
-        <p>First <code>firefox</code> found on the system path. This is equivalent to the output of running <a
-            href="https://manpages.debian.org/stretch/debianutils/which.1.en.html">which(1)</a>:</p>
-
+        <p>
+          First <code>firefox</code> found on the system path. This is
+          equivalent to the output of running
+          <a
+            href="https://manpages.debian.org/stretch/debianutils/which.1.en.html"
+            >which(1)</a
+          >:
+        </p>
         <pre class="brush: plain">
 % which firefox
 /usr/bin/firefox
-</pre>
+</pre
+        >
       </td>
     </tr>
     <tr>
       <td>Windows</td>
       <td>
         <p>From the Window system registry:</p>
-
         <ol>
-          <li><code>HKEY_LOCAL_MACHINE\SOFTWARE WOW6432Node\Mozilla\Mozilla Firefox\[VERSION]\Main\PathToExe</code>
+          <li>
+            <code
+              >HKEY_LOCAL_MACHINE\SOFTWARE WOW6432Node\Mozilla\Mozilla
+              Firefox\[VERSION]\Main\PathToExe</code
+            >
           </li>
-          <li><code>HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\Mozilla Firefox\[VERSION]\Main\PathToExe</code></li>
+          <li>
+            <code
+              >HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\Mozilla
+              Firefox\[VERSION]\Main\PathToExe</code
+            >
+          </li>
         </ol>
       </td>
     </tr>
   </tbody>
 </table>
 
-<h5 id="args_array_of_strings"><code>args</code> (array of strings)</h5>
+##### `args` (array of strings)
 
-<p>Command line arguments to pass to the Firefox binary. These must include the leading dash (<code>-</code>) where
-  required, e.g. <code>["<a href="https://hacks.mozilla.org/2017/12/using-headless-mode-in-firefox/">-headless</a>"]</code>.</p>
+Command line arguments to pass to the Firefox binary. These must include the leading dash (`-`) where
+required, e.g. `["-headless"]`.
 
-<p>To have geckodriver pick up an existing <a href="#profile">profile</a> on the local filesystem, you may pass
-  <code>["-profile", "/path/to/profile"]</code>. But if a profile has to be transferred to a target machine it is
-  recommended to use the <code>profile</code> entry.</p>
+To have geckodriver pick up an existing [profile](#profile) on the local filesystem, you may pass
+`["-profile", "/path/to/profile"]`. But if a profile has to be transferred to a target machine it is
+recommended to use the `profile` entry.
 
-<h5 id="profile_string"><code>profile</code> (string)</h5>
+##### `profile` (string)
 
-<p>Base64-encoded ZIP of a profile directory to use for the Firefox instance. This may be used to e.g. install
-  extensions or custom certificates, but for setting custom preferences we recommend using the <code>prefs</code> (<a
-    href="#prefs">Preferences Object</a>) entry instead.</p>
-<p>Profiles are created in the systems temporary folder. This is also where the encoded profile is extracted when
-  <code>profile</code> is provided. By default geckodriver will create a new profile in this location.</p>
+Base64-encoded ZIP of a profile directory to use for the Firefox instance. This may be used to e.g. install
+extensions or custom certificates, but for setting custom preferences we recommend using the `prefs` ([Preferences Object](#prefs)) entry instead.
 
-<p>The effective profile in use by the WebDriver session is returned to the user in the <code>moz:profile</code>
-  capability in the <a href="/en-US/docs/Web/WebDriver/Commands/NewSession">new session response</a>.</p>
+Profiles are created in the systems temporary folder. This is also where the encoded profile is extracted when
+`profile` is provided. By default geckodriver will create a new profile in this location.
 
-<p>To have geckodriver pick up an existing profile on the filesystem, please set the <code>args</code> field to
-  <code>{"args": ["-profile", "/path/to/your/profile"]}</code>. Note that if you use a remote client targeting a server
-  on a different system, the profile must already exist on the target system.</p>
+The effective profile in use by the WebDriver session is returned to the user in the `moz:profile`
+capability in the [new session response](/en-US/docs/Web/WebDriver/Commands/NewSession).
 
-<h5 id="log_Log_object"><code>log</code> (Log object)</h5>
+To have geckodriver pick up an existing profile on the filesystem, please set the `args` field to
+`{"args": ["-profile", "/path/to/your/profile"]}`. Note that if you use a remote client targeting a server
+on a different system, the profile must already exist on the target system.
 
-<p>To increase the logging verbosity of geckodriver and Firefox, you may pass a <code><a href="#log">log</a></code>
-  object that may look like <code>{"log": {"level": "trace"}}</code> to include all trace-level logs and above</p>
+##### `log` (Log object)
 
-<h5 id="prefs_Preferences_object"><code>prefs</code> (Preferences object)</h5>
+To increase the logging verbosity of geckodriver and Firefox, you may pass a [`log`](#log)
+object that may look like `{"log": {"level": "trace"}}` to include all trace-level logs and above
 
-<p>Map of preference name to preference value, which can be a string, a boolean or an integer.</p>
+##### `prefs` (Preferences object)
 
-<h5 id="env_Env_object"><code>env</code> (Env object)</h5>
+Map of preference name to preference value, which can be a string, a boolean or an integer.
 
-<p>Map of environment variable name to environment variable value, both of which must be strings.</p>
+##### `env` (Env object)
 
-<h3 id="Android">Android</h3>
+Map of environment variable name to environment variable value, both of which must be strings.
 
-<p>Starting with geckodriver 0.26.0 additional capabilities exist if Firefox or an application embedding <a href="https://wiki.mozilla.org/Mobile/GeckoView">GeckoView</a> has to be controlled on Android:</p>
+### Android
 
-<h5 id="androidPackage_string_required"><code>androidPackage</code> (string, required)</h5>
+Starting with geckodriver 0.26.0 additional capabilities exist if Firefox or an application embedding [GeckoView](https://wiki.mozilla.org/Mobile/GeckoView) has to be controlled on Android:
 
-<p>The package name of Firefox, e.g. <code>org.mozilla.firefox</code>,
-      <code>org.mozilla.firefox_beta,</code> or <code>org.mozilla.fennec</code> depending on the release
-  channel, or the package name of the application embedding GeckoView, e.g. <code>org.mozilla.geckoview_example</code>.</p>
+##### `androidPackage` (string, required)
 
-<h5 id="androidActivity_string_optional"><code>androidActivity</code> (string, optional)</h5>
+The package name of Firefox, e.g. `org.mozilla.firefox`,
+`org.mozilla.firefox_beta,` or `org.mozilla.fennec` depending on the release
+channel, or the package name of the application embedding GeckoView, e.g. `org.mozilla.geckoview_example`.
 
-<p>The fully qualified class name of the activity to be launched, e.g. <code>.GeckoViewActivity</code>. If not
-  specified, the package’s default activity will be used.</p>
+##### `androidActivity` (string, optional)
 
-<h5 id="androidDeviceSerial_string_optional"><code>androidDeviceSerial</code> (string, optional)</h5>
+The fully qualified class name of the activity to be launched, e.g. `.GeckoViewActivity`. If not
+specified, the package’s default activity will be used.
 
-<p>The serial number of the device on which to launch the application. If not specified and multiple devices are
-  attached, an error will be returned.</p>
+##### `androidDeviceSerial` (string, optional)
 
-<h5 id="androidIntentArguments_array_of_strings_optional"><code>androidIntentArguments</code> (array of strings, optional)</h5>
+The serial number of the device on which to launch the application. If not specified and multiple devices are
+attached, an error will be returned.
 
-<p>Arguments to launch the intent with.  Under the hood, geckodriver uses <a
-    href="https://developer.android.com/studio/command-line/adb#am">Android am </a>to start the Android application
-  under test.  The given intent arguments are appended to the <code>am start</code> command.  See Android's <a
-    href="https://developer.android.com/studio/command-line/adb#IntentSpec">specification for intent arguments</a> for
-  details.  This allows to control how the application is launched and to include optional extras for enabling and
-  disabling features.  For example, to launch with the view action and a specified URL before navigating as part of a
-  test, include:</p>
+##### `androidIntentArguments` (array of strings, optional)
 
-<pre class="brush: json">{
+Arguments to launch the intent with.  Under the hood, geckodriver uses [Android am ](https://developer.android.com/studio/command-line/adb#am)to start the Android application
+under test.  The given intent arguments are appended to the `am start` command.  See Android's [specification for intent arguments](https://developer.android.com/studio/command-line/adb#IntentSpec) for
+details.  This allows to control how the application is launched and to include optional extras for enabling and
+disabling features.  For example, to launch with the view action and a specified URL before navigating as part of a
+test, include:
+
+```json
+{
   "androidIntentArguments": [
     "-a", "android.intent.action.VIEW",
     "-d", "https://example.com"
   ]
 }
-</pre>
+```
 
-<p>For example, to specify a boolean extra that can be processed with <a href="https://developer.android.com/reference/android/content/Intent#getBooleanExtra(java.lang.String,%20boolean)">android.content.Intent.getBooleanExtra</a>, include:</p>
-<pre class="brush: json">{
+For example, to specify a boolean extra that can be processed with [android.content.Intent.getBooleanExtra](<https://developer.android.com/reference/android/content/Intent#getBooleanExtra(java.lang.String,%20boolean)>), include:
+
+```json
+{
   "androidIntentArguments": [
     "--ez", "customBooleanFlagName", "true"
   ]
 }
-</pre>
+```
 
-<h3 id="Log_object">Log object</h3>
+### Log object
 
-<p>A JSON Object that may have any of these fields:</p>
+A JSON Object that may have any of these fields:
 
-<h5 id="level_string"><code>level</code> (string)</h5>
+##### `level` (string)
 
-<p>Set the level of verbosity of geckodriver and Firefox. Available levels are <code>trace</code>, <code>debug</code>,
-  <code>config</code>, <code>info</code>, <code>warn</code>, <code>error</code>, and <code>fatal</code>. If left
-  undefined the default is <code>info</code>. The value is treated case-insensitively.</p>
+Set the level of verbosity of geckodriver and Firefox. Available levels are `trace`, `debug`,
+`config`, `info`, `warn`, `error`, and `fatal`. If left
+undefined the default is `info`. The value is treated case-insensitively.
 
-<h3 id="Preferences_object">Preferences object</h3>
+### Preferences object
 
-<p>A JSON Object with one entry per preference to set. The preference will be written to the <a
-    href="#profile">profile</a> before starting Firefox. A full list of available preferences is available from visiting
-  "about:config" in your Firefox browser. Some of these are documented in <a
-    href="https://searchfox.org/mozilla-central/source/modules/libpref/init/all.js">this source</a> file.</p>
+A JSON Object with one entry per preference to set. The preference will be written to the [profile](#profile) before starting Firefox. A full list of available preferences is available from visiting
+"about:config" in your Firefox browser. Some of these are documented in [this source](https://searchfox.org/mozilla-central/source/modules/libpref/init/all.js) file.
 
-<p>An example of a preference object:</p>
+An example of a preference object:
 
-<pre class="brush: json">{
+```json
+{
   "dom.ipc.processCount": 8,
   "javascript.options.showInConsole": false
 }
-</pre>
+```
 
-<h3 id="Env_object">Env object</h3>
+### Env object
 
-<p>A JSON Object with one entry per environment variable to set. On Desktop, the Firefox under test will launch with
-  given variable in its environment.  On Android, the GeckoView-based App will have the given variable added to the
-  <code>env</code> block in its configuration YAML.</p>
+A JSON Object with one entry per environment variable to set. On Desktop, the Firefox under test will launch with
+given variable in its environment.  On Android, the GeckoView-based App will have the given variable added to the
+`env` block in its configuration YAML.
 
-<p>An example of an env object:</p>
+An example of an env object:
 
-<pre class="brush: json">{
+```json
+{
   "MOZ_LOG": "nsHttp:5",
   "MOZ_LOG_FILE": "/mnt/sdcard/log"
 }
-</pre>
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following is an example of a full <a href="/en-US/docs/Web/WebDriver/Capabilities">capabilities object</a> that
-  selects a specific Firefox binary to run with a prepared <a href="#profile">profile</a> from the filesystem in <a
-    href="https://hacks.mozilla.org/2017/12/using-headless-mode-in-firefox/">headless mode</a>. It also increases the number of IPC processes
-  through a preference, turns off chrome errors/warnings in the console, and enables more verbose logging:</p>
+The following is an example of a full [capabilities object](/en-US/docs/Web/WebDriver/Capabilities) that
+selects a specific Firefox binary to run with a prepared [profile](#profile) from the filesystem in [headless mode](https://hacks.mozilla.org/2017/12/using-headless-mode-in-firefox/). It also increases the number of IPC processes
+through a preference, turns off chrome errors/warnings in the console, and enables more verbose logging:
 
-<pre class="brush: json">{
+```json
+{
   "capabilities": {
     "alwaysMatch": {
       "moz:firefoxOptions": {
@@ -221,28 +242,28 @@ tags:
     }
   }
 }
-</pre>
+```
 
-<p>The <a href="#firefoxoptions"><code>moz:firefoxOptions</code></a> must be placed—as above—inside
-    <a href="/en-US/docs/Web/WebDriver/Capabilities#alwaysmatch"><code>alwaysMatch</code></a>, or in one of the
-  <a href="/en-US/docs/Web/WebDriver/Capabilities#firstmatch"><code>firstMatch</code></a> <a
-    href="/en-US/docs/Web/WebDriver/Capabilities">capabilities objects</a> as seen here:</p>
+The [`moz:firefoxOptions`](#firefoxoptions) must be placed—as above—inside
+[`alwaysMatch`](/en-US/docs/Web/WebDriver/Capabilities#alwaysmatch), or in one of the
+[`firstMatch`](/en-US/docs/Web/WebDriver/Capabilities#firstmatch) [capabilities objects](/en-US/docs/Web/WebDriver/Capabilities) as seen here:
 
-<pre class="brush: json">{
+```json
+{
   "capabilities": {
     "firstMatch": [
       {"moz:firefoxOptions": …}
     ]
   }
 }
-</pre>
+```
 
-<h3 id="Android_2">Android</h3>
+### Android
 
-<p>This runs the GeckoView example application as installed on the first Android emulator running on the host machine:
-</p>
+This runs the GeckoView example application as installed on the first Android emulator running on the host machine:
 
-<pre class="brush: json">{
+```json
+{
   "capabilities": {
     "alwaysMatch": {
       "moz:firefoxOptions": {
@@ -252,7 +273,7 @@ tags:
         "androidIntentArguments": [
           "-d", "http://example.org"
         ],
-        "<a href="#env">env</a>": {
+        "env": {
           "MOZ_LOG": "nsHttp:5",
           "MOZ_LOG_FILE": "/mnt/sdcard/log"
         }
@@ -260,18 +281,15 @@ tags:
     }
   }
 }
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="https://firefox-source-docs.mozilla.org/testing/geckodriver/geckodriver/Capabilities.html#capabilities-example">geckodriver’s
-      documentation on supported Firefox capabilities</a></li>
-  <li><a href="https://chromedriver.chromium.org/capabilities">Chrome-specific WebDriver capabilities</a>
-    (<code>goog:chromeOptions)</code></li>
-  <li><a href="/en-US/docs/Web/WebDriver/Capabilities">List of WebDriver capabilities</a></li>
-  <li><a href="/en-US/docs/Web/WebDriver/Commands/NewSession">New Session</a> command</li>
-</ul>
+- [geckodriver’s
+  documentation on supported Firefox capabilities](https://firefox-source-docs.mozilla.org/testing/geckodriver/geckodriver/Capabilities.html#capabilities-example)
+- [Chrome-specific WebDriver capabilities](https://chromedriver.chromium.org/capabilities)
+  (`goog:chromeOptions)`
+- [List of WebDriver capabilities](/en-US/docs/Web/WebDriver/Capabilities)
+- [New Session](/en-US/docs/Web/WebDriver/Commands/NewSession) command
 
-<p>{{QuickLinksWithSubpages}}</p>
+{{QuickLinksWithSubpages}}

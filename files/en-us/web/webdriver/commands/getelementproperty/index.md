@@ -8,84 +8,65 @@ tags:
   - WebDriver
 browser-compat: webdriver.commands.GetElementProperty
 ---
-<p>The <em>Get Element Property</em> <a href="/en-US/docs/Web/WebDriver/Commands">command</a> of the <a href="/en-US/docs/Web/WebDriver">WebDriver</a> API returns the property of the referenced <a href="/en-US/docs/Web/WebDriver/WebElement">web element</a>. Given <code>&lt;input value=foo&gt;</code> where the user changes the value to <code>bar</code>, the returned property is <code>bar</code> rather than the initial value <code>foo</code>. This is equivalent to calling {{domxref("Element.getProperty")}} on the element.</p>
+The _Get Element Property_ [command](/en-US/docs/Web/WebDriver/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the property of the referenced [web element](/en-US/docs/Web/WebDriver/WebElement). Given `<input value=foo>` where the user changes the value to `bar`, the returned property is `bar` rather than the initial value `foo`. This is equivalent to calling {{domxref("Element.getProperty")}} on the element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Method</th>
-   <th scope="col">URI template</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>GET</code></td>
-   <td><code>/session/{<em>session id</em>}/element/{<em>element id</em>}/property/{<em>name</em>}</code></td>
-  </tr>
- </tbody>
-</table>
+| Method | URI template                                                 |
+| ------ | ------------------------------------------------------------ |
+| `GET`  | `/session/{session id}/element/{element id}/property/{name}` |
 
-<h3 id="URL_parameters">URL parameters</h3>
+### URL parameters
 
-<dl>
- <dt><code>session id</code></dt>
- <dd>Identifier of the session.</dd>
- <dt><code>element id</code></dt>
- <dd>Identifier of the <a href="/en-US/docs/Web/WebDriver/WebElement">web element</a> to get the tag name of.</dd>
- <dt><code>name</code></dt>
- <dd>Identifier of the property of <a href="/en-US/docs/Web/WebDriver/WebElement">web element</a> to get.</dd>
-</dl>
+- `session id`
+  - : Identifier of the session.
+- `element id`
+  - : Identifier of the [web element](/en-US/docs/Web/WebDriver/WebElement) to get the tag name of.
+- `name`
+  - : Identifier of the property of [web element](/en-US/docs/Web/WebDriver/WebElement) to get.
 
-<h3 id="Errors">Errors</h3>
+### Errors
 
-<dl>
- <dt><a href="/en-US/docs/Web/WebDriver/Errors/SessionNotCreated">Session not created</a></dt>
- <dd>Session does not exist.</dd>
- <dt><a href="/en-US/docs/Web/WebDriver/Errors/NoSuchWindow">No such window</a></dt>
- <dd>The <code><a href="/en-US/docs/Web/API/Window">window</a></code> object has been discarded, indicating that the tab or window has been closed.</dd>
- <dt><a href="/en-US/docs/Web/WebDriver/Errors/UnexpectedAlertOpen">Unexpected alert open</a></dt>
- <dd>A user prompt, such as <code><a href="/en-US/docs/Web/API/Window/alert">window.alert</a></code>, blocks execution of command until it is dealt with.</dd>
-</dl>
+- [Session not created](/en-US/docs/Web/WebDriver/Errors/SessionNotCreated)
+  - : Session does not exist.
+- [No such window](/en-US/docs/Web/WebDriver/Errors/NoSuchWindow)
+  - : The [`window`](/en-US/docs/Web/API/Window) object has been discarded, indicating that the tab or window has been closed.
+- [Unexpected alert open](/en-US/docs/Web/WebDriver/Errors/UnexpectedAlertOpen)
+  - : A user prompt, such as [`window.alert`](/en-US/docs/Web/API/Window/alert), blocks execution of command until it is dealt with.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Python:</p>
+Python:
 
-<pre>import urllib
+    import urllib
 
-from selenium import webdriver
+    from selenium import webdriver
 
-def inline(doc):
-    return "data:text/html;charset=utf-8,{}".format(urllib.quote(doc))
+    def inline(doc):
+        return "data:text/html;charset=utf-8,{}".format(urllib.quote(doc))
 
-session = webdriver.Firefox()
-session.get(inline("&lt;input value=foo&gt;"))
-textbox = driver.find_element_by_tag_name("input")
-textbox.send_keys("bar")
+    session = webdriver.Firefox()
+    session.get(inline("<input value=foo>"))
+    textbox = driver.find_element_by_tag_name("input")
+    textbox.send_keys("bar")
 
-print(text_box.get_attribute("value"))
-print(text_box.get_property("value"))
-</pre>
+    print(text_box.get_attribute("value"))
+    print(text_box.get_property("value"))
 
-<p>Output:</p>
+Output:
 
-<pre>foo
-bar
-</pre>
+    foo
+    bar
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/WebDriver/Commands/GetElementAttribute">Get Element Attribute</a> command</li>
- <li><em><a href="https://stackoverflow.com/questions/6003819/what-is-the-difference-between-properties-and-attributes-in-html">What is the difference between properties and attributes?</a></em> on Stack Overflow</li>
-</ul>
+- [Get Element Attribute](/en-US/docs/Web/WebDriver/Commands/GetElementAttribute) command
+- _[What is the difference between properties and attributes?](https://stackoverflow.com/questions/6003819/what-is-the-difference-between-properties-and-attributes-in-html)_ on Stack Overflow

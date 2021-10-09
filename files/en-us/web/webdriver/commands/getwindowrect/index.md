@@ -8,76 +8,55 @@ tags:
   - WebDriver
 browser-compat: webdriver.commands.GetWindowRect
 ---
-<p>The <em>Get Window Rect</em> <a href="/en-US/docs/Web/WebDriver/Commands">command</a> of the <a href="/en-US/docs/Web/WebDriver">WebDriver</a> API returns the size and position of the given <code><a href="/en-US/docs/Web/WebDriver/WebElement">WebElement</a></code>. Many <a href="/en-US/docs/Web/WebDriver/Clients">WebDriver clients</a> present separate API methods for getting an element’s location and dimensions, but as an optimization they both use this primitive.</p>
+The _Get Window Rect_ [command](/en-US/docs/Web/WebDriver/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the size and position of the given [`WebElement`](/en-US/docs/Web/WebDriver/WebElement). Many [WebDriver clients](/en-US/docs/Web/WebDriver/Clients) present separate API methods for getting an element’s location and dimensions, but as an optimization they both use this primitive.
 
-<p>The command operates on the currently selected window, and returns size and position of the operating system window. The returned <code><a href="/en-US/docs/Web/WebDriver/WindowRect">WindowRect</a></code> can be used as input for the <a href="/en-US/docs/Web/WebDriver/SetWindowRect">Set Window Rect</a> command, which is for manipulating a window’s position and dimensions.</p>
+The command operates on the currently selected window, and returns size and position of the operating system window. The returned [`WindowRect`](/en-US/docs/Web/WebDriver/WindowRect) can be used as input for the [Set Window Rect](/en-US/docs/Web/WebDriver/SetWindowRect) command, which is for manipulating a window’s position and dimensions.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Method</th>
-   <th scope="col">URI template</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code><a href="/en-US/docs/Web/HTTP/Methods/GET">GET</a></code></td>
-   <td><code>/session/{<em>session id</em>}/window/rect</code></td>
-  </tr>
- </tbody>
-</table>
+| Method                                    | URI template                        |
+| ----------------------------------------- | ----------------------------------- |
+| [`GET`](/en-US/docs/Web/HTTP/Methods/GET) | `/session/{session id}/window/rect` |
 
-<h3 id="URL_parameters">URL parameters</h3>
+### URL parameters
 
-<dl>
- <dt><code>session id</code></dt>
- <dd>Identifier of the session.</dd>
-</dl>
+- `session id`
+  - : Identifier of the session.
 
-<h3 id="Response">Response</h3>
+### Response
 
-<p>The response payload is a <code><a href="/en-US/docs/Web/WebDriver/WebWindow">WindowRect</a></code><a href="/en-US/docs/Web/WebDriver/WebWindow">:</a></p>
+The response payload is a [`WindowRect`](/en-US/docs/Web/WebDriver/WebWindow)[:](/en-US/docs/Web/WebDriver/WebWindow)
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Horizontal position of the operating system window associated with <code><a href="/en-US/docs/Web/API/Window">window</a></code>, equivalent to <code><a href="/en-US/docs/Web/API/Window/screenX">Window.screenX</a></code>.</dd>
- <dt><code>y</code></dt>
- <dd>Vertical position of the operating system window associated with <code><a href="/en-US/docs/Web/API/Window">window</a></code>, equivalent to <code><a href="/en-US/docs/Web/API/Window/screenY">Window.screenY</a></code>.</dd>
- <dt><code>width</code></dt>
- <dd>Width of outer bounds of the operating system window associated with <code><a href="/en-US/docs/Web/API/Window">window</a></code>, equivalent to <code><a href="/en-US/docs/Web/API/Window/outerWidth">Window.outerWidth</a></code>.</dd>
- <dt><code>height</code></dt>
- <dd>Height of the outer bounds of the operating system window associated with <code><a href="/en-US/docs/Web/API/Window">window</a></code>, equivalent to <code><a href="/en-US/docs/Web/API/Window/outerHeight">Window.outerHeight</a></code>.</dd>
-</dl>
+- `x`
+  - : Horizontal position of the operating system window associated with [`window`](/en-US/docs/Web/API/Window), equivalent to [`Window.screenX`](/en-US/docs/Web/API/Window/screenX).
+- `y`
+  - : Vertical position of the operating system window associated with [`window`](/en-US/docs/Web/API/Window), equivalent to [`Window.screenY`](/en-US/docs/Web/API/Window/screenY).
+- `width`
+  - : Width of outer bounds of the operating system window associated with [`window`](/en-US/docs/Web/API/Window), equivalent to [`Window.outerWidth`](/en-US/docs/Web/API/Window/outerWidth).
+- `height`
+  - : Height of the outer bounds of the operating system window associated with [`window`](/en-US/docs/Web/API/Window), equivalent to [`Window.outerHeight`](/en-US/docs/Web/API/Window/outerHeight).
 
-<h3 id="Errors">Errors</h3>
+### Errors
 
-<dl>
- <dt><a href="/en-US/docs/Web/WebDriver/Errors/InvalidSessionID">Invalid session ID</a></dt>
- <dd>Session does not exist.</dd>
- <dt><a href="/en-US/docs/Web/WebDriver/Errors/UnexpectedAlertOpen">Unexpected alert open</a></dt>
- <dd>A user prompt, such as <code><a href="/en-US/docs/Web/API/Window/alert">window.alert</a></code>, blocks execution of command until it is dealt with.</dd>
-</dl>
+- [Invalid session ID](/en-US/docs/Web/WebDriver/Errors/InvalidSessionID)
+  - : Session does not exist.
+- [Unexpected alert open](/en-US/docs/Web/WebDriver/Errors/UnexpectedAlertOpen)
+  - : A user prompt, such as [`window.alert`](/en-US/docs/Web/API/Window/alert), blocks execution of command until it is dealt with.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>WebWindow</li>
- <li>Associated commands:
-  <ul>
-   <li><a href="/en-US/docs/Web/WebDriver/Commands/SetWindowRect">Set Window Rect</a></li>
-   <li><a href="/en-US/docs/Web/WebDriver/Commands/GetWindowHandle">Get Window Handle</a></li>
-   <li><a href="/en-US/docs/Web/WebDriver/Commands/GetWindowHandles">Get Window Handles</a></li>
-   <li><a href="/en-US/docs/Web/WebDriver/Commands/CloseWindow">Close Window</a></li>
-  </ul>
- </li>
-</ul>
+- WebWindow
+- Associated commands:
+
+  - [Set Window Rect](/en-US/docs/Web/WebDriver/Commands/SetWindowRect)
+  - [Get Window Handle](/en-US/docs/Web/WebDriver/Commands/GetWindowHandle)
+  - [Get Window Handles](/en-US/docs/Web/WebDriver/Commands/GetWindowHandles)
+  - [Close Window](/en-US/docs/Web/WebDriver/Commands/CloseWindow)

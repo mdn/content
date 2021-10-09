@@ -8,12 +8,12 @@ tags:
   - commands
 browser-compat: webdriver.commands
 ---
-<p>The following is a list of the available WebDriver commands.</p>
+The following is a list of the available WebDriver commands.
 
-<p>{{SubpagesWithSummaries}}</p>
+{{SubpagesWithSummaries}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver")}}</p>
+{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver")}}

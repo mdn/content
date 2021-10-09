@@ -10,81 +10,78 @@ tags:
   - Web
   - WebDriver
 ---
-<p class="summary">WebDriver is a remote control interface that enables introspection and control of user agents. It provides a platform- and language-neutral wire protocol as a way for out-of-process programs to remotely instruct the behavior of web browsers.</p>
+WebDriver is a remote control interface that enables introspection and control of user agents. It provides a platform- and language-neutral wire protocol as a way for out-of-process programs to remotely instruct the behavior of web browsers.
 
-<p>To have the ability to write instruction sets that can be run interchangeably in many browsers on different platforms is critical to deliver a consistent experience to users. With the new wave of developments on the web platform, the increase diversity in devices and demands for real interoperability between the technologies, WebDriver provides tooling for <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">cross-browser testing</a>.</p>
+To have the ability to write instruction sets that can be run interchangeably in many browsers on different platforms is critical to deliver a consistent experience to users. With the new wave of developments on the web platform, the increase diversity in devices and demands for real interoperability between the technologies, WebDriver provides tooling for [cross-browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction).
 
-<p>Provided is a set of interfaces to discover and manipulate DOM elements in web documents and to control the behavior of a user agent. It is primarily intended to allow web authors to write tests that automate a user agent from a separate controlling process, but may also be used in such a way as to allow in-browser scripts to control a — possibly separate — browser.</p>
+Provided is a set of interfaces to discover and manipulate DOM elements in web documents and to control the behavior of a user agent. It is primarily intended to allow web authors to write tests that automate a user agent from a separate controlling process, but may also be used in such a way as to allow in-browser scripts to control a — possibly separate — browser.
 
-<h2 id="Usage">Usage</h2>
+## Usage
 
-<p>So what does WebDriver let you do and what does it look like? Since WebDriver is programming language neutral, the answer to this question depends on which WebDriver client you’re using and the choice of language.</p>
+So what does WebDriver let you do and what does it look like? Since WebDriver is programming language neutral, the answer to this question depends on which WebDriver client you’re using and the choice of language.
 
-<p>But using a popular client written in Python, your interaction with WebDriver might look like this:</p>
+But using a popular client written in Python, your interaction with WebDriver might look like this:
 
-<pre>
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support.expected_conditions import presence_of_element_located
-
+    from selenium import webdriver
+    from selenium.webdriver.common.by import By
+    from selenium.webdriver.common.keys import Keys
+    from selenium.webdriver.support.ui import WebDriverWait
+    from selenium.webdriver.support.expected_conditions import presence_of_element_located
 
 
-with webdriver.Firefox() as driver:
 
-    wait = WebDriverWait(driver, 10)
-    driver.get("http://google.com/ncr")
-    driver.find_element_by_name("q").send_keys("cheese" + Keys.RETURN)
+    with webdriver.Firefox() as driver:
 
-    wait.until(presence_of_element_located((By.CSS_SELECTOR, "h3&gt;a")))
+        wait = WebDriverWait(driver, 10)
+        driver.get("http://google.com/ncr")
+        driver.find_element_by_name("q").send_keys("cheese" + Keys.RETURN)
 
-    results = driver.find_elements_by_css_selector("h3&gt;a")
-    for i, result in results.iteritems():
-        print(f"#{i}: {result.text} ({result.get_property('href')})")
-</pre>
+        wait.until(presence_of_element_located((By.CSS_SELECTOR, "h3>a")))
 
-<p>This might produce output akin to this:</p>
+        results = driver.find_elements_by_css_selector("h3>a")
+        for i, result in results.iteritems():
+            print(f"#{i}: {result.text} ({result.get_property('href')})")
 
-<pre>#1 Cheese - Wikipedia (https://en.wikipedia.org/wiki/Cheese)
-</pre>
+This might produce output akin to this:
 
-<h2 id="Reference">Reference</h2>
+    #1 Cheese - Wikipedia (https://en.wikipedia.org/wiki/Cheese)
 
-<h3 id="Commands">Commands</h3>
+## Reference
 
-<p><a href="/en-US/docs/Web/WebDriver/Commands">Commands</a></p>
-<p>{{ListSubpages("/en-US/docs/Web/WebDriver/Commands")}}</p>
+### Commands
 
-<h3 id="Types">Types</h3>
+[Commands](/en-US/docs/Web/WebDriver/Commands)
 
-<p><a href="/en-US/docs/Web/WebDriver/Types">Types</a></p>
-<ul>
- <li><a href="/en-US/docs/Web/WebDriver/Errors#payload">Error object</a></li>
- <li><a href="/en-US/docs/Web/WebDriver/Timeouts">Timeouts object</a></li>
- <li><a href="/en-US/docs/Web/WebDriver/WebElement">WebElement</a></li>
- <li><a href="/en-US/docs/Web/WebDriver/WebWindow">WebWindow</a></li>
-</ul>
+{{ListSubpages("/en-US/docs/Web/WebDriver/Commands")}}
 
-<h3 id="Capabilities">Capabilities</h3>
-<p><a href="/en-US/docs/Web/WebDriver/Capabilities">Capabilities</a></p>
-<p>{{ListSubpages("/en-US/docs/Web/WebDriver/Capabilities")}}</p>
+### Types
 
-<h3 id="Errors">Errors</h3>
-<p><a href="/en-US/docs/Web/WebDriver/Errors">Errors</a></p>
-<p>{{ListSubpages("/en-US/docs/Web/WebDriver/Errors")}}</p>
+[Types](/en-US/docs/Web/WebDriver/Types)
 
-<h2 id="Specifications">Specifications</h2>
+- [Error object](/en-US/docs/Web/WebDriver/Errors#payload)
+- [Timeouts object](/en-US/docs/Web/WebDriver/Timeouts)
+- [WebElement](/en-US/docs/Web/WebDriver/WebElement)
+- [WebWindow](/en-US/docs/Web/WebDriver/WebWindow)
 
-<ul>
-  <li><a href="https://w3c.github.io/webdriver/">WebDriver</a></li>
-</ul>
+### Capabilities
 
-<h2 id="See_also">See also</h2>
+[Capabilities](/en-US/docs/Web/WebDriver/Capabilities)
 
-<ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing">Cross browser testing</a></li>
- <li><a href="https://www.selenium.dev/documentation/">Selenium documentation</a></li>
-</ul>
+{{ListSubpages("/en-US/docs/Web/WebDriver/Capabilities")}}
 
-<p>{{QuickLinksWithSubpages}}</p>
+### Errors
+
+[Errors](/en-US/docs/Web/WebDriver/Errors)
+
+{{ListSubpages("/en-US/docs/Web/WebDriver/Errors")}}
+
+## Specifications
+
+- [WebDriver](https://w3c.github.io/webdriver/)
+
+## See also
+
+- [Cross browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing)
+- [Selenium documentation](https://www.selenium.dev/documentation/)
+
+{{QuickLinksWithSubpages}}

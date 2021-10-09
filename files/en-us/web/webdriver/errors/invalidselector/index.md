@@ -7,21 +7,17 @@ tags:
   - WebDriver
   - invalid selector
 ---
-<p>The <strong>invalid selector</strong> error is a <a href="/en-US/docs/Web/WebDriver/Errors">WebDriver error</a> that occurs when an element retrieval command is used with an unknown <a href="/en-US/docs/Web/WebDriver/WebElement">web element</a> selector strategy.</p>
+The **invalid selector** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Errors) that occurs when an element retrieval command is used with an unknown [web element](/en-US/docs/Web/WebDriver/WebElement) selector strategy.
 
-<p>The available selector strategies are <a href="/en-US/docs/Web/WebDriver/WebElement#css-selector">CSS</a>, <a href="/en-US/docs/Web/WebDriver/WebElement#link-text-selector">link text</a>, <a href="/en-US/docs/Web/WebDriver/WebElement#partial-link-text-selector">partial link text</a>, <a href="/en-US/docs/Web/WebDriver/WebElement#tag-name-selector">tag name</a>, and <a href="/en-US/docs/Web/WebDriver/WebElement#tag-name-selector">XPath</a>. Any other selector strategy is rejected with this error.</p>
+The available selector strategies are [CSS](/en-US/docs/Web/WebDriver/WebElement#css-selector), [link text](/en-US/docs/Web/WebDriver/WebElement#link-text-selector), [partial link text](/en-US/docs/Web/WebDriver/WebElement#partial-link-text-selector), [tag name](/en-US/docs/Web/WebDriver/WebElement#tag-name-selector), and [XPath](/en-US/docs/Web/WebDriver/WebElement#tag-name-selector). Any other selector strategy is rejected with this error.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/WebDriver/Errors">List of WebDriver errors</a></li>
- <li><a href="/en-US/docs/Web/WebDriver/WebElement">WebElement</a></li>
- <li>Element retrieval commands:
-  <ul>
-   <li><a href="/en-US/docs/Web/WebDriver/Commands/FindElement">Find Element</a></li>
-   <li><a href="/en-US/docs/Web/WebDriver/Commands/FindElements">Find Elements</a></li>
-   <li><a href="/en-US/docs/Web/WebDriver/Commands/FindElementFromElement">Find Element From Element</a></li>
-   <li><a href="/en-US/docs/Web/WebDriver/Commands/FindElementsFromElement">Find Elements From Element</a></li>
-  </ul>
- </li>
-</ul>
+- [List of WebDriver errors](/en-US/docs/Web/WebDriver/Errors)
+- [WebElement](/en-US/docs/Web/WebDriver/WebElement)
+- Element retrieval commands:
+
+  - [Find Element](/en-US/docs/Web/WebDriver/Commands/FindElement)
+  - [Find Elements](/en-US/docs/Web/WebDriver/Commands/FindElements)
+  - [Find Element From Element](/en-US/docs/Web/WebDriver/Commands/FindElementFromElement)
+  - [Find Elements From Element](/en-US/docs/Web/WebDriver/Commands/FindElementsFromElement)
