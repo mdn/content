@@ -36,20 +36,16 @@ tags:
     <tr>
       <td><strong>Graphics</strong></td>
       <td>
-        <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> (<a
-          href="https://www.khronos.org/opengles/"
-          >OpenGL ES</a
-        >
-        2.0)
+        <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a>
+        (<a href="https://www.khronos.org/opengles/">OpenGL ES</a> 2.0)
       </td>
     </tr>
     <tr>
       <td><strong>Input</strong></td>
       <td>
         <a href="/en-US/docs/Web/API/Touch_events">Touch events</a>,
-        <a href="/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API"
-          >Gamepad API</a
-        >, device sensors, <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>,
+        <a href="/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Gamepad API</a>,
+        device sensors, <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>,
         <a href="/en-US/docs/Web/API/Fullscreen_API">Full Screen API</a>,
         <a href="/en-US/docs/Web/API/Pointer_Lock_API">Pointer Lock API</a>
       </td>
