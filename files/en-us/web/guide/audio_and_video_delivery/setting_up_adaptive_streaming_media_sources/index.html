@@ -113,15 +113,15 @@ tags:
 <p>A useful piece of software when dealing with MPEG-DASH is <a href="https://github.com/slederer/DASHEncoder">Dash Encoder</a>. This uses <a href="https://gpac.wp.mines-telecom.fr/mp4box/dash/">MP4Box</a> to encode media into MPEG-DASH format.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You will need to be comfortable with make files and installing dependencies to get this software up and running.</p>
+<p><strong>Note:</strong> You will need to be comfortable with make files and installing dependencies to get this software up and running.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: Since MPEG-DASH decoding is done partially using JavaScript and MSE files are often grabbed using XHR, keep same origin rules in mind.</p>
+<p><strong>Note:</strong> Since MPEG-DASH decoding is done partially using JavaScript and MSE files are often grabbed using XHR, keep same origin rules in mind.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: If you use WebM you can use the methods shown in this tutorial <a href="/en-US/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video">DASH Adaptive Streaming for HTML 5 Video</a>.</p>
+<p><strong>Note:</strong> If you use WebM you can use the methods shown in this tutorial <a href="/en-US/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video">DASH Adaptive Streaming for HTML 5 Video</a>.</p>
 </div>
 
 <p>Once encoded your file structure may look something like this:</p>
@@ -190,7 +190,7 @@ main segment folder -&gt;      /segments/main/
 <p>The MPD file tells the browser where the various pieces of media are located, it also includes meta data such as mimeType and codecs and there are other details such as byte-ranges in there too. Generally these files will be generated for you.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can also split out your audio and video streams into separate files, which can then be prioritized and served separately depending on bandwidth.</p>
+<p><strong>Note:</strong> You can also split out your audio and video streams into separate files, which can then be prioritized and served separately depending on bandwidth.</p>
 </div>
 
 <p>Once you have generated your MPD file you can reference as expected it from within the {{ htmlelement("video") }} element:</p>
@@ -207,7 +207,7 @@ main segment folder -&gt;      /segments/main/
 &lt;/video&gt;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: MPEG-DASH playback relies on <a href="https://github.com/Dash-Industry-Forum/dash.js/">dash.js</a> and browser support for <a href="https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html">Media Source Extensions</a>, see the latest <a href="https://dashif.org/reference/players/javascript/index.html">dash.js reference player</a>.</p>
+<p><strong>Note:</strong> MPEG-DASH playback relies on <a href="https://github.com/Dash-Industry-Forum/dash.js/">dash.js</a> and browser support for <a href="https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html">Media Source Extensions</a>, see the latest <a href="https://dashif.org/reference/players/javascript/index.html">dash.js reference player</a>.</p>
 </div>
 
 <h2 id="HLS_Encoding">HLS Encoding</h2>
@@ -227,7 +227,7 @@ main segment folder -&gt;      /segments/main/
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: You can find more details about these tools at <a href="https://developer.apple.com/library/mac/documentation/networkinginternet/conceptual/streamingmediaguide/UsingHTTPLiveStreaming/UsingHTTPLiveStreaming.html">Using HTTP Live Streaming</a>.</p>
+<p><strong>Note:</strong> You can find more details about these tools at <a href="https://developer.apple.com/library/mac/documentation/networkinginternet/conceptual/streamingmediaguide/UsingHTTPLiveStreaming/UsingHTTPLiveStreaming.html">Using HTTP Live Streaming</a>.</p>
 </div>
 
 <h3 id="Index_Files_(Playlists)">Index Files (Playlists)</h3>
@@ -251,7 +251,7 @@ http://media.example.com/segment2.ts
 #EXT-X-ENDLIST</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Comprehensive information on how to encode media for Apple's HLS format can be found on <a href="https://developer.apple.com/streaming/">Apple's Developer Pages</a>.</p>
+<p><strong>Note:</strong> Comprehensive information on how to encode media for Apple's HLS format can be found on <a href="https://developer.apple.com/streaming/">Apple's Developer Pages</a>.</p>
 </div>
 
 <h2 id="See_also">See also</h2>

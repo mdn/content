@@ -78,7 +78,7 @@ tags:
 For example,  <a href="https://web.archive.org/web/20170504035455/https://msopentech.com/blog/2014/01/03/streaming_video_player/">you could implement MPEG-DASH using JavaScript while offloading the decoding to MSE</a>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Time Shifting is the process of consuming a live stream sometime after it happened.</p>
+<p><strong>Note:</strong> Time Shifting is the process of consuming a live stream sometime after it happened.</p>
 </div>
 
 <h2 id="Video_Streaming_File_Formats">Video Streaming File Formats</h2>
@@ -86,7 +86,7 @@ For example,  <a href="https://web.archive.org/web/20170504035455/https://msope
 <p>A couple of HTTP-based live streaming video formats are beginning to see support across browsers.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can find a guide to encoding HLS and MPEG-DASH for use on the web at <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources">Setting up adaptive streaming media sources</a>.</p>
+<p><strong>Note:</strong> You can find a guide to encoding HLS and MPEG-DASH for use on the web at <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources">Setting up adaptive streaming media sources</a>.</p>
 </div>
 
 <h3 id="MPEG-DASH">MPEG-DASH</h3>
@@ -94,7 +94,7 @@ For example,  <a href="https://web.archive.org/web/20170504035455/https://msope
 <p>DASH stands for Dynamic Adaptive Streaming over HTTP and is a new format that has recently seen support added to Chrome, and Internet Explorer 11 running on Windows 8.1. It is supported via Media Source Extensions which are used by JavaScript libraries such as <a href="https://github.com/Dash-Industry-Forum/dash.js/">DASH.js</a>. This approach allows us to download chunks of the video stream using XHR and "append" the chunks to the stream that's played by the {{ htmlelement("video") }} element. So for example, if we detect that the network is slow, we can start requesting lower quality (smaller) chunks for the next segment. This technology also allows an advertising segment to be appended/inserted into the stream.</p>
 
 <div class="note">
-<p><strong>Note</strong>: you can also <a href="http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification">use WebM with the MPEG DASH adaptive streaming system</a>.</p>
+<p><strong>Note:</strong> you can also <a href="http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification">use WebM with the MPEG DASH adaptive streaming system</a>.</p>
 </div>
 
 <h3 id="HLS">HLS</h3>
@@ -207,7 +207,7 @@ One popular approach is to use a Flash fallback that supports RTMP. Of course, w
 Currently, Opus is supported by Firefox desktop and mobile as well as the latest versions of desktop Chrome and Opera.</p>
 
 <div class="note">
-<p><strong>Note</strong>: <a href="https://datatracker.ietf.org/doc/html/draft-ietf-rtcweb-audio-05">Opus is a mandatory format</a> for WebRTC browser implementations.</p>
+<p><strong>Note:</strong> <a href="https://datatracker.ietf.org/doc/html/draft-ietf-rtcweb-audio-05">Opus is a mandatory format</a> for WebRTC browser implementations.</p>
 </div>
 
 <h3 id="MP3_AAC_Ogg_Vorbis">MP3, AAC, Ogg Vorbis</h3>
@@ -232,13 +232,13 @@ Currently, Opus is supported by Firefox desktop and mobile as well as the latest
 
 <p><a href="https://en.wikipedia.org/wiki/SHOUTcast">SHOUTcast</a> is a cross-platform proprietary technology for streaming media. Developed by Nullsoft, it allows digital audio content in MP3 or AAC format to be broadcast. For web use, SHOUTcast streams are transmitted over HTTP.</p>
 
-<p><strong>Note</strong>: <a href="https://stackoverflow.com/questions/2743279/how-could-i-play-a-shoutcast-icecast-stream-using-html5">SHOUTcast URLs may require a semi-colon to be appended to them</a>.</p>
+<p><strong>Note:</strong> <a href="https://stackoverflow.com/questions/2743279/how-could-i-play-a-shoutcast-icecast-stream-using-html5">SHOUTcast URLs may require a semi-colon to be appended to them</a>.</p>
 
 <h3 id="Icecast">Icecast</h3>
 
 <p>The <a href="https://www.icecast.org/">Icecast</a> server is an open source technology for streaming media. Maintained by the <a href="https://www.xiph.org/">Xiph.org Foundation</a>, it streams Ogg Vorbis/Theora as well as MP3 and AAC format via the SHOUTcast protocol.</p>
 
-<p><strong>Note</strong>: SHOUTcast and Icecast are among the most established and popular technologies, but there are many <a href="https://en.wikipedia.org/wiki/List_of_streaming_media_systems#Servers">more streaming media systems available</a>.</p>
+<p><strong>Note:</strong> SHOUTcast and Icecast are among the most established and popular technologies, but there are many <a href="https://en.wikipedia.org/wiki/List_of_streaming_media_systems#Servers">more streaming media systems available</a>.</p>
 
 <h3 id="Streaming_Services">Streaming Services</h3>
 
