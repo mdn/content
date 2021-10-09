@@ -8,50 +8,47 @@ tags:
   - MathML:General Layout Schemata
 browser-compat: mathml.elements.msqrt
 ---
-<div>{{MathMLRef}}</div>
+{{MathMLRef}}
 
-<p class="summary">The MathML <code>&lt;msqrt&gt;</code> element is used to display square roots (no index is displayed). The square root accepts only one argument, which leads to the following syntax: <code>&lt;msqrt&gt; <em>base</em> &lt;/msqrt&gt;</code>.</p>
+The MathML `<msqrt>` element is used to display square roots (no index is displayed). The square root accepts only one argument, which leads to the following syntax: `<msqrt> base </msqrt>`.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt id="attr-class-id-style">class, id, style</dt>
- <dd>Provided for use with <a href="/en-US/docs/Web/CSS">stylesheets</a>.</dd>
- <dt id="attr-displaystyle"><code>displaystyle</code></dt>
- <dd>A Boolean value specifying whether more vertical space is used for displayed equations or, if set to <code>false</code>, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when <code>displaystyle</code> is set to <code>true</code>. See also <code>movablelimits</code> on {{ MathMLElement("mo") }}.</dd>
- <dt id="attr-href">href</dt>
- <dd>Used to set a hyperlink to a specified URI.</dd>
- <dt id="attr-mathbackground">mathbackground</dt>
- <dd>The background color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/Web/CSS/color_value#color_keywords">HTML color names</a>.</dd>
- <dt id="attr-mathcolor">mathcolor</dt>
- <dd>The text color and also the color of the root symbol itself. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/Web/CSS/color_value#color_keywords">HTML color names</a>.</dd>
-</dl>
+- class, id, style
+  - : Provided for use with [stylesheets](/en-US/docs/Web/CSS).
+- `displaystyle`
+  - : A Boolean value specifying whether more vertical space is used for displayed equations or, if set to `false`, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when `displaystyle` is set to `true`. See also `movablelimits` on {{ MathMLElement("mo") }}.
+- href
+  - : Used to set a hyperlink to a specified URI.
+- mathbackground
+  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
+- mathcolor
+  - : The text color and also the color of the root symbol itself. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Sample rendering: <img alt="root-x" src="msqrt.png"></p>
+Sample rendering: ![root-x](msqrt.png)
 
-<p>Rendering in your browser: <math> <msqrt> <mi>x</mi> </msqrt> </math></p>
+Rendering in your browser: <math><msqrt><mi>x</mi></msqrt></math>
 
-<pre class="brush: html">&lt;math&gt;
+```html
+<math>
 
- &lt;msqrt&gt;
-    &lt;mi&gt;x&lt;/mi&gt;
-  &lt;/msqrt&gt;
+ <msqrt>
+    <mi>x</mi>
+  </msqrt>
 
-&lt;/math&gt;
-</pre>
+</math>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{ MathMLElement("mroot") }} (Radical with an index)</li>
-</ul>
+- {{ MathMLElement("mroot") }} (Radical with an index)

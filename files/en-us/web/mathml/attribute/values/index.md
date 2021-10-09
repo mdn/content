@@ -6,140 +6,55 @@ tags:
   - MathML
   - MathML Reference
 ---
-<div>{{MathMLRef}}</div>
+{{MathMLRef}}
 
-<h2 id="Lengths">Lengths</h2>
+## Lengths
 
-<p>Several MathML presentation elements have attributes that accept length values used for size or spacing. MathML accepts different units and constants for specifying lengths.</p>
+Several MathML presentation elements have attributes that accept length values used for size or spacing. MathML accepts different units and constants for specifying lengths.
 
-<h3 id="Units">Units</h3>
+### Units
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Unit</th>
-   <th>Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>em</code></td>
-   <td>{{ Cssxref("font-size", "Font-relative") }} unit</td>
-  </tr>
-  <tr>
-   <td><code>ex</code></td>
-   <td>{{ Cssxref("font-size", "Font-relative") }} unit. (The "x"-height of the element, <code>1ex ≈ 0.5em</code> in many fonts)</td>
-  </tr>
-  <tr>
-   <td><code>px</code></td>
-   <td>Pixels</td>
-  </tr>
-  <tr>
-   <td><code>in</code></td>
-   <td>Inches (1 inch = 2.54 centimeters)</td>
-  </tr>
-  <tr>
-   <td><code>cm</code></td>
-   <td>Centimeters</td>
-  </tr>
-  <tr>
-   <td><code>mm</code></td>
-   <td>Millimeters</td>
-  </tr>
-  <tr>
-   <td><code>pt</code></td>
-   <td>Points (1 point = 1/72 inch)</td>
-  </tr>
-  <tr>
-   <td><code>pc</code></td>
-   <td>Picas (1 pica = 12 points)</td>
-  </tr>
-  <tr>
-   <td><code>%</code></td>
-   <td>Percentage of the default value.</td>
-  </tr>
- </tbody>
-</table>
+| Unit | Description                                                                                                                 |
+| ---- | --------------------------------------------------------------------------------------------------------------------------- |
+| `em` | {{ Cssxref("font-size", "Font-relative") }} unit                                                               |
+| `ex` | {{ Cssxref("font-size", "Font-relative") }} unit. (The "x"-height of the element, `1ex ≈ 0.5em` in many fonts) |
+| `px` | Pixels                                                                                                                      |
+| `in` | Inches (1 inch = 2.54 centimeters)                                                                                          |
+| `cm` | Centimeters                                                                                                                 |
+| `mm` | Millimeters                                                                                                                 |
+| `pt` | Points (1 point = 1/72 inch)                                                                                                |
+| `pc` | Picas (1 pica = 12 points)                                                                                                  |
+| `%`  | Percentage of the default value.                                                                                            |
 
-<h3 id="Constants">Constants</h3>
+### Constants
 
-<p>{{deprecated_header}}</p>
+{{deprecated_header}}
 
-<p>A replacement for the deprecated constants below is:</p>
+A replacement for the deprecated constants below is:
 
-<pre><code>veryverythinmathspace  =&gt; 0.05555555555555555em
-verythinmathspace      =&gt; 0.1111111111111111em
-thinmathspace          =&gt; 0.16666666666666666em
-mediummathspace        =&gt; 0.2222222222222222em
-thickmathspace         =&gt; 0.2777777777777778em
-verythickmathspace     =&gt; 0.3333333333333333em
-veryverythickmathspace =&gt; 0.3888888888888889em</code></pre>
+    veryverythinmathspace  => 0.05555555555555555em
+    verythinmathspace      => 0.1111111111111111em
+    thinmathspace          => 0.16666666666666666em
+    mediummathspace        => 0.2222222222222222em
+    thickmathspace         => 0.2777777777777778em
+    verythickmathspace     => 0.3333333333333333em
+    veryverythickmathspace => 0.3888888888888889em
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Constant</th>
-   <th>Value</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>veryverythinmathspace</code></td>
-   <td>1/18<code>em</code></td>
-  </tr>
-  <tr>
-   <td><code>verythinmathspace</code></td>
-   <td>2/18<code>em</code></td>
-  </tr>
-  <tr>
-   <td><code>thinmathspace</code></td>
-   <td>3/18<code>em</code></td>
-  </tr>
-  <tr>
-   <td><code>mediummathspace</code></td>
-   <td>4/18<code>em</code></td>
-  </tr>
-  <tr>
-   <td><code>thickmathspace</code></td>
-   <td>5/18<code>em</code></td>
-  </tr>
-  <tr>
-   <td><code>verythickmathspace</code></td>
-   <td>6/18<code>em</code></td>
-  </tr>
-  <tr>
-   <td><code>veryverythickmathspace</code></td>
-   <td>7/18<code>em</code></td>
-  </tr>
-  <tr>
-   <td><code>negativeveryverythinmathspace</code></td>
-   <td>-1/18<code>em</code></td>
-  </tr>
-  <tr>
-   <td><code>negativeverythinmathspace</code></td>
-   <td>-2/18<code>em</code></td>
-  </tr>
-  <tr>
-   <td><code>negativethinmathspace</code></td>
-   <td>-3/18<code>em</code></td>
-  </tr>
-  <tr>
-   <td><code>negativemediummathspace</code></td>
-   <td>-4/18<code>em</code></td>
-  </tr>
-  <tr>
-   <td><code>negativethickmathspace</code></td>
-   <td>-5/18<code>em</code></td>
-  </tr>
-  <tr>
-   <td><code>negativeverythickmathspace</code></td>
-   <td>-6/18<code>em</code></td>
-  </tr>
-  <tr>
-   <td><code>negativeveryverythickmathspace</code></td>
-   <td>-7/18<code>em</code></td>
-  </tr>
- </tbody>
-</table>
+| Constant                         | Value     |
+| -------------------------------- | --------- |
+| `veryverythinmathspace`          | 1/18`em`  |
+| `verythinmathspace`              | 2/18`em`  |
+| `thinmathspace`                  | 3/18`em`  |
+| `mediummathspace`                | 4/18`em`  |
+| `thickmathspace`                 | 5/18`em`  |
+| `verythickmathspace`             | 6/18`em`  |
+| `veryverythickmathspace`         | 7/18`em`  |
+| `negativeveryverythinmathspace`  | -1/18`em` |
+| `negativeverythinmathspace`      | -2/18`em` |
+| `negativethinmathspace`          | -3/18`em` |
+| `negativemediummathspace`        | -4/18`em` |
+| `negativethickmathspace`         | -5/18`em` |
+| `negativeverythickmathspace`     | -6/18`em` |
+| `negativeveryverythickmathspace` | -7/18`em` |
 
-<p>Note: <a href="https://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1" rel="external">Namedspace binding is deprecated</a> in MathML3 and has been removed in Gecko 15.0 {{ geckoRelease("15.0") }} (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=673759" rel="external">bug 673759</a>).</p>
+Note: [Namedspace binding is deprecated](https://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1) in MathML3 and has been removed in Gecko 15.0 {{ geckoRelease("15.0") }} ([bug 673759](https://bugzilla.mozilla.org/show_bug.cgi?id=673759)).

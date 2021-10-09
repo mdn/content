@@ -8,89 +8,135 @@ tags:
   - MathML:Token Elements
 browser-compat: mathml.elements.mn
 ---
-<div>{{MathMLRef}}</div>
+{{MathMLRef}}
 
-<p class="summary">The MathML <code>&lt;mn&gt;</code> element represents a numeric literal which is normally a sequence of digits with a possible separator (a dot or a comma). However,  it is also allowed to have arbitrary text in it which is actually a numeric quantity, for example "eleven".</p>
+The MathML `<mn>` element represents a numeric literal which is normally a sequence of digits with a possible separator (a dot or a comma). However,  it is also allowed to have arbitrary text in it which is actually a numeric quantity, for example "eleven".
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt id="attr-class-id-style">class, id, style</dt>
- <dd>Provided for use with <a href="/en-US/docs/Web/CSS">stylesheets</a>.</dd>
- <dt id="attr-dir">dir</dt>
- <dd>The text direction. Possible values are either <code>ltr</code> (left to right) or <code>rtl</code> (right to left).</dd>
- <dt id="attr-displaystyle"><code>displaystyle</code></dt>
- <dd>A Boolean value specifying whether more vertical space is used for displayed equations or, if set to <code>false</code>, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when <code>displaystyle</code> is set to <code>true</code>. See also <code>movablelimits</code> on {{ MathMLElement("mo") }}.</dd>
- <dt id="attr-href">href</dt>
- <dd>Used to set a hyperlink to a specified URI.</dd>
- <dt id="attr-mathbackground">mathbackground</dt>
- <dd>The background color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/Web/CSS/color_value#color_keywords">HTML color names</a>.</dd>
- <dt id="attr-mathcolor">mathcolor</dt>
- <dd>The text color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/Web/CSS/color_value#color_keywords">HTML color names</a>.</dd>
- <dt id="attr-mathsize">mathsize</dt>
- <dd>The size of the content. See <a href="/en-US/docs/Web/CSS/length">length</a> for possible values.<br>
- Deprecated values are: <code>small</code>, <code>normal</code> and <code>big</code>. These will be removed in the future.</dd>
- <dt id="attr-mathvariant">mathvariant</dt>
- <dd>This attribute specifies the logical class of the number which varies in typography. That is, although the names suggest the typographic style for the class, semantically, items with the same class are treated "the same" within an expression, which might or might not involve displaying them with the named typography. The following values are allowed:
- <ul>
-  <li><code>normal</code> (Default value) ; <math><mn mathvariant="normal">Example</mn></math></li>
-  <li><code>bold</code> ; <math><mn mathvariant="bold">Example</mn></math></li>
-  <li><code>italic</code> ; <math><mn mathvariant="italic">Example</mn></math></li>
-  <li><code>bold-italic</code> ; <math><mn mathvariant="bold-italic">Example</mn></math></li>
- </ul>
+- class, id, style
+  - : Provided for use with [stylesheets](/en-US/docs/Web/CSS).
+- dir
+  - : The text direction. Possible values are either `ltr` (left to right) or `rtl` (right to left).
+- `displaystyle`
+  - : A Boolean value specifying whether more vertical space is used for displayed equations or, if set to `false`, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when `displaystyle` is set to `true`. See also `movablelimits` on {{ MathMLElement("mo") }}.
+- href
+  - : Used to set a hyperlink to a specified URI.
+- mathbackground
+  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
+- mathcolor
+  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
+- mathsize
+  - : The size of the content. See [length](/en-US/docs/Web/CSS/length) for possible values.
+    Deprecated values are: `small`, `normal` and `big`. These will be removed in the future.
+- mathvariant
 
- <ul>
-  <li><code>double-struck</code> ; <math><mn mathvariant="double-struck">Example</mn></math></li>
-  <li><code>bold-fraktur</code> ; <math><mn mathvariant="bold-fraktur">Example</mn></math></li>
-  <li><code>script</code> ; <math><mn mathvariant="script">Example</mn></math></li>
-  <li><code>bold-script</code> ; <math><mn mathvariant="bold-script">Example</mn></math></li>
-  <li><code>fraktur</code> ; <math><mn mathvariant="fraktur">Example</mn></math></li>
- </ul>
+  - : This attribute specifies the logical class of the number which varies in typography. That is, although the names suggest the typographic style for the class, semantically, items with the same class are treated "the same" within an expression, which might or might not involve displaying them with the named typography. The following values are allowed:
 
- <ul>
-  <li><code>sans-serif</code> ; <math><mn mathvariant="sans-serif">Example</mn></math></li>
-  <li><code>bold-sans-serif</code> ; <math><mn mathvariant="bold-sans-serif">Example</mn></math></li>
-  <li><code>sans-serif-italic</code> ; <math><mn mathvariant="sans-serif-italic">Example</mn></math></li>
-  <li><code>sans-serif-bold-italic</code> ; <math><mn mathvariant="sans-serif-bold-italic">Example</mn></math></li>
-  <li><code>monospace</code> ; <math><mn mathvariant="monospace">Example</mn></math></li>
- </ul>
+    - `normal` (Default value) ;
 
- <ul>
-  <li><code>initial</code> ; <math><mn mathvariant="initial">مثال</mn></math></li>
-  <li><code>tailed</code> ; <math><mn mathvariant="tailed">مثال</mn></math></li>
-  <li><code>looped</code> ; <math><mn mathvariant="looped">مثال</mn></math></li>
-  <li><code>stretched</code> ; <math><mn mathvariant="stretched">مثال</mn></math></li>
- </ul>
- </dd>
-</dl>
+      <math><mn mathvariant="normal">Example</mn></math>
 
-<h2 id="Examples">Examples</h2>
+    - `bold` ;
 
-<pre class="brush: html">&lt;math&gt;
+      <math><mn mathvariant="bold">Example</mn></math>
 
-  &lt;mn&gt; 0 &lt;/mn&gt;
+    - `italic` ;
 
-  &lt;mn&gt; 1.337 &lt;/mn&gt;
+      <math><mn mathvariant="italic">Example</mn></math>
 
-  &lt;mn&gt; twelve &lt;/mn&gt;
+    - `bold-italic` ;
 
-  &lt;mn&gt; XVI &lt;/mn&gt;
+      <math><mn mathvariant="bold-italic">Example</mn></math>
 
-  &lt;mn&gt; 2e10 &lt;/mn&gt;
+    <!---->
 
-&lt;/math&gt;
-</pre>
+    - `double-struck` ;
 
-<h2 id="Specifications">Specifications</h2>
+      <math><mn mathvariant="double-struck">Example</mn></math>
 
-<p>{{Specifications}}</p>
+    - `bold-fraktur` ;
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+      <math><mn mathvariant="bold-fraktur">Example</mn></math>
 
-<p>{{Compat}}</p>
+    - `script` ;
 
-<h2 id="Gecko-specific_notes">Gecko-specific notes</h2>
+      <math><mn mathvariant="script">Example</mn></math>
 
-<ul>
- <li>Some <code>mathvariant</code> values are only implemented starting with Gecko 28.0 {{ geckoRelease("28.0") }} and require appropriate <a href="/en-US/docs/Mozilla/MathML_Project/Fonts">math fonts</a>.</li>
-</ul>
+    - `bold-script` ;
+
+      <math><mn mathvariant="bold-script">Example</mn></math>
+
+    - `fraktur` ;
+
+      <math><mn mathvariant="fraktur">Example</mn></math>
+
+    <!---->
+
+    - `sans-serif` ;
+
+      <math><mn mathvariant="sans-serif">Example</mn></math>
+
+    - `bold-sans-serif` ;
+
+      <math><mn mathvariant="bold-sans-serif">Example</mn></math>
+
+    - `sans-serif-italic` ;
+
+      <math><mn mathvariant="sans-serif-italic">Example</mn></math>
+
+    - `sans-serif-bold-italic` ;
+
+      <math><mn mathvariant="sans-serif-bold-italic">Example</mn></math>
+
+    - `monospace` ;
+
+      <math><mn mathvariant="monospace">Example</mn></math>
+
+    <!---->
+
+    - `initial` ;
+
+      <math><mn mathvariant="initial">مثال</mn></math>
+
+    - `tailed` ;
+
+      <math><mn mathvariant="tailed">مثال</mn></math>
+
+    - `looped` ;
+
+      <math><mn mathvariant="looped">مثال</mn></math>
+
+    - `stretched` ;
+
+      <math><mn mathvariant="stretched">مثال</mn></math>
+
+## Examples
+
+```html
+<math>
+
+  <mn> 0 </mn>
+
+  <mn> 1.337 </mn>
+
+  <mn> twelve </mn>
+
+  <mn> XVI </mn>
+
+  <mn> 2e10 </mn>
+
+</math>
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## Gecko-specific notes
+
+- Some `mathvariant` values are only implemented starting with Gecko 28.0 {{ geckoRelease("28.0") }} and require appropriate [math fonts](/en-US/docs/Mozilla/MathML_Project/Fonts).

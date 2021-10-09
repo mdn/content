@@ -8,68 +8,63 @@ tags:
   - MathML:General Layout Schemata
 browser-compat: mathml.elements.mrow
 ---
-<div>{{MathMLRef}}</div>
+{{MathMLRef}}
 
-<p class="summary">The MathML <code>&lt;mrow&gt;</code> element is used to group sub-expressions, which usually contain one or more <a href="/en-US/docs/Web/MathML/Element/mo">operators</a> with their respective operands (such as {{ MathMLElement("mi") }} and {{ MathMLElement("mn") }}). This element renders as a horizontal row containing its arguments.</p>
+The MathML `<mrow>` element is used to group sub-expressions, which usually contain one or more [operators](/en-US/docs/Web/MathML/Element/mo) with their respective operands (such as {{ MathMLElement("mi") }} and {{ MathMLElement("mn") }}). This element renders as a horizontal row containing its arguments.
 
-<p>When writing a MathML expression, you should group elements within an <code>&lt;mrow&gt;</code> in the same way as they are grouped in the mathematical interpretation of the expression. Proper grouping helps the rendering of the expression in several ways:</p>
+When writing a MathML expression, you should group elements within an `<mrow>` in the same way as they are grouped in the mathematical interpretation of the expression. Proper grouping helps the rendering of the expression in several ways:
 
-<ul>
- <li>It can improve the display by possibly affecting spacing.</li>
- <li>It allows for more intelligent line-breaking and indentation.</li>
- <li>It simplifies the interpretation of the expression by automated systems such as computer algebra systems and audio renderers.</li>
-</ul>
+- It can improve the display by possibly affecting spacing.
+- It allows for more intelligent line-breaking and indentation.
+- It simplifies the interpretation of the expression by automated systems such as computer algebra systems and audio renderers.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt id="attr-class-id-style">class, id, style</dt>
- <dd>Provided for use with <a href="/en-US/docs/Web/CSS">stylesheets</a>.</dd>
- <dt id="attr-displaystyle"><code>displaystyle</code></dt>
- <dd>A Boolean value specifying whether more vertical space is used for displayed equations or, if set to <code>false</code>, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when <code>displaystyle</code> is set to <code>true</code>. See also <code>movablelimits</code> on {{ MathMLElement("mo") }}.</dd>
- <dt id="attr-dir">dir</dt>
- <dd>Overall directionality of formulas. Possible values are either <code>ltr</code> (left to right) or <code>rtl</code> (right to left).</dd>
- <dt id="attr-href">href</dt>
- <dd>Used to set a hyperlink to a specified URI.</dd>
- <dt id="attr-mathbackground">mathbackground</dt>
- <dd>The background color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/Web/CSS/color_value#color_keywords">HTML color names</a>.</dd>
- <dt id="attr-mathcolor">mathcolor</dt>
- <dd>The text color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/Web/CSS/color_value#color_keywords">HTML color names</a>.</dd>
-</dl>
+- class, id, style
+  - : Provided for use with [stylesheets](/en-US/docs/Web/CSS).
+- `displaystyle`
+  - : A Boolean value specifying whether more vertical space is used for displayed equations or, if set to `false`, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when `displaystyle` is set to `true`. See also `movablelimits` on {{ MathMLElement("mo") }}.
+- dir
+  - : Overall directionality of formulas. Possible values are either `ltr` (left to right) or `rtl` (right to left).
+- href
+  - : Used to set a hyperlink to a specified URI.
+- mathbackground
+  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
+- mathcolor
+  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: html">&lt;math&gt;
+```html
+<math>
 
-  &lt;mrow&gt;
-    &lt;mn&gt; 1 &lt;/mn&gt;
-    &lt;mo&gt; + &lt;/mo&gt;
-    &lt;mn&gt; 1 &lt;/mn&gt;
-  &lt;/mrow&gt;
+  <mrow>
+    <mn> 1 </mn>
+    <mo> + </mo>
+    <mn> 1 </mn>
+  </mrow>
 
-  &lt;mrow&gt;
-    &lt;mo&gt; ( &lt;/mo&gt;
-    &lt;mrow&gt;
-      &lt;mi&gt; x &lt;/mi&gt;
-      &lt;mo&gt; , &lt;/mo&gt;
-      &lt;mi&gt; y &lt;/mi&gt;
-    &lt;/mrow&gt;
-    &lt;mo&gt; ) &lt;/mo&gt;
-  &lt;/mrow&gt;
+  <mrow>
+    <mo> ( </mo>
+    <mrow>
+      <mi> x </mi>
+      <mo> , </mo>
+      <mi> y </mi>
+    </mrow>
+    <mo> ) </mo>
+  </mrow>
 
-&lt;/math&gt;
-</pre>
+</math>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Grouping HTML elements: {{ HTMLElement("div") }}</li>
-</ul>
+- Grouping HTML elements: {{ HTMLElement("div") }}

@@ -8,115 +8,105 @@ tags:
   - MathML:Script and Limit Schemata
 browser-compat: mathml.elements.mmultiscripts
 ---
-<div>{{MathMLRef}}</div>
+{{MathMLRef}}
 
-<p class="summary">The MathML <code>&lt;mmultiscripts&gt;</code> element allows you to create tensor-like objects. In a descriptive way <a href="https://en.wikipedia.org/wiki/Tensor">tensors</a> are multidimensional matrices (mathematical imprecise but exemplified). The degree of a tensor depends on the dimensionality of a representative array. For example, a number is a 0-dimensional array, or a 0th-order tensor. A 1-dimensional array (e.g. vectors) is a 1st-order tensor and so 2nd-order tensors are needed to represent square matrices. To learn more about the mathematical background of tensors refer to the <a href="https://en.wikipedia.org/wiki/Tensor">entry on Wikipedia</a>.</p>
+The MathML `<mmultiscripts>` element allows you to create tensor-like objects. In a descriptive way [tensors](https://en.wikipedia.org/wiki/Tensor) are multidimensional matrices (mathematical imprecise but exemplified). The degree of a tensor depends on the dimensionality of a representative array. For example, a number is a 0-dimensional array, or a 0th-order tensor. A 1-dimensional array (e.g. vectors) is a 1st-order tensor and so 2nd-order tensors are needed to represent square matrices. To learn more about the mathematical background of tensors refer to the [entry on Wikipedia](https://en.wikipedia.org/wiki/Tensor).
 
-<p>MathML uses a special syntax to describe subscripts and superscripts for both, postscripts and prescripts, attached to a base expression:</p>
+MathML uses a special syntax to describe subscripts and superscripts for both, postscripts and prescripts, attached to a base expression:
 
-<pre class="brush: html">&lt;mmultiscripts&gt;
-    <em>base</em>
-     (<em>subscript superscript</em>)*
-     [ &lt;mprescripts/&gt; (<em>presubscript presuperscript</em>)* ]
-&lt;/mmultiscripts&gt;
-</pre>
+```html
+<mmultiscripts>
+    base
+     (subscript superscript)*
+     [ <mprescripts/> (presubscript presuperscript)* ]
+</mmultiscripts>
+```
 
-<p>After the base expression you can specify a postsubscript and a postsuperscript. Prescripts are optional and are separated by the empty tag <code>&lt;mprescripts/&gt;</code> (only one &lt;mprescripts /&gt; element is allowed, otherwise you will get an <code>DuplicateMprescripts</code> error in the <a href="/en-US/docs/Error_Console">Error Console</a> and "invalid-markup" in your rendering). In addition you are able to use <code>&lt;none/&gt;</code> as a placeholder for empty scripts (not for the base). See the examples section for a correct usage.</p>
+After the base expression you can specify a postsubscript and a postsuperscript. Prescripts are optional and are separated by the empty tag `<mprescripts/>` (only one \<mprescripts /> element is allowed, otherwise you will get an `DuplicateMprescripts` error in the [Error Console](/en-US/docs/Error_Console) and "invalid-markup" in your rendering). In addition you are able to use `<none/>` as a placeholder for empty scripts (not for the base). See the examples section for a correct usage.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt id="attr-class-id-style"><code>class</code>, <code>id</code>, <code>style</code></dt>
- <dd>Provided for use with <a href="/en-US/docs/Web/CSS">stylesheets</a>.</dd>
- <dt id="attr-displaystyle"><code>displaystyle</code></dt>
- <dd>A Boolean value specifying whether more vertical space is used for displayed equations or, if set to <code>false</code>, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when <code>displaystyle</code> is set to <code>true</code>. See also <code>movablelimits</code> on {{ MathMLElement("mo") }}.</dd>
- <dt id="attr-href"><code>href</code></dt>
- <dd>Used to set a hyperlink to a specified URI.</dd>
- <dt id="attr-mathbackground"><code>mathbackground</code></dt>
- <dd>The background color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/Web/CSS/color_value#color_keywords">HTML color names</a>.</dd>
- <dt id="attr-mathcolor"><code>mathcolor</code></dt>
- <dd>The text color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/Web/CSS/color_value#color_keywords">HTML color names</a>.</dd>
- <dt id="attr-subscriptshift"><code>subscriptshift</code> {{deprecated_inline}}</dt>
- <dd>The minimum space by which to shift the subscript below the baseline of the expression, as a <a href="/en-US/docs/Web/CSS/length">CSS length</a>.<br>
- This property is deprecated and will be removed in the future.</dd>
- <dt id="attr-superscriptshift"><code>superscriptshift</code> {{deprecated_inline}}</dt>
- <dd>The minimum space by which to shift the superscript above the baseline of the expression, as a <a href="/en-US/docs/Web/CSS/length">CSS length</a>.<br>
- This property is deprecated and will be removed in the future.</dd>
-</dl>
+- `class`, `id`, `style`
+  - : Provided for use with [stylesheets](/en-US/docs/Web/CSS).
+- `displaystyle`
+  - : A Boolean value specifying whether more vertical space is used for displayed equations or, if set to `false`, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when `displaystyle` is set to `true`. See also `movablelimits` on {{ MathMLElement("mo") }}.
+- `href`
+  - : Used to set a hyperlink to a specified URI.
+- `mathbackground`
+  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
+- `mathcolor`
+  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
+- `subscriptshift` {{deprecated_inline}}
+  - : The minimum space by which to shift the subscript below the baseline of the expression, as a [CSS length](/en-US/docs/Web/CSS/length).
+    This property is deprecated and will be removed in the future.
+- `superscriptshift` {{deprecated_inline}}
+  - : The minimum space by which to shift the superscript above the baseline of the expression, as a [CSS length](/en-US/docs/Web/CSS/length).
+    This property is deprecated and will be removed in the future.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_&lt;mprescripts&gt;">Using <code>&lt;mprescripts/&gt;</code></h3>
+### Using `<mprescripts/>`
 
-<p>Sample rendering: <img alt="" src="mmultiscripts_prescripts.png"></p>
+Sample rendering: ![](mmultiscripts_prescripts.png)
 
-<p>Rendering in your browser: <math> <mmultiscripts> <mi>X</mi> <mi>d</mi> <mi>c</mi> <mprescripts></mprescripts> <mi>b</mi> <mi>a</mi> </mmultiscripts> </math></p>
+Rendering in your browser: <math><mmultiscripts><mi>X</mi> <mi>d</mi> <mi>c</mi> <mprescripts></mprescripts><mi>b</mi> <mi>a</mi></mmultiscripts></math>
 
-<pre class="brush: html">&lt;math&gt;
+```html
+<math>
 
-    &lt;mmultiscripts&gt;
+    <mmultiscripts>
 
-        &lt;mi&gt;X&lt;/mi&gt;      &lt;!-- base expression --&gt;
+        <mi>X</mi>      <!-- base expression -->
 
-        &lt;mi&gt;d&lt;/mi&gt;      &lt;!-- postsubscript --&gt;
-        &lt;mi&gt;c&lt;/mi&gt;      &lt;!-- postsuperscript --&gt;
+        <mi>d</mi>      <!-- postsubscript -->
+        <mi>c</mi>      <!-- postsuperscript -->
 
-        &lt;mprescripts /&gt;
-        &lt;mi&gt;b&lt;/mi&gt;      &lt;!-- presubscript --&gt;
-        &lt;mi&gt;a&lt;/mi&gt;      &lt;!-- presuperscript --&gt;
+        <mprescripts />
+        <mi>b</mi>      <!-- presubscript -->
+        <mi>a</mi>      <!-- presuperscript -->
 
-    &lt;/mmultiscripts&gt;
+    </mmultiscripts>
 
-&lt;/math&gt;
-</pre>
+</math>
+```
 
-<h3 id="Using_&lt;none&gt;">Using <code>&lt;none/&gt;</code></h3>
+### Using `<none/>`
 
-<p>Sample rendering: <img alt="" src="mmultiscripts_none.png"></p>
+Sample rendering: ![](mmultiscripts_none.png)
 
-<p>Rendering in your browser:
-    <math>
-        <mmultiscripts>
-            <mi>X</mi>
-            <none />
-            <mi>c</mi>
-            <mprescripts />
-            <mi>b</mi>
-            <none />
-        </mmultiscripts>
-    </math>
-</p>
+Rendering in your browser: <math><mmultiscripts><mi>X</mi>
+<none></none><mi>c</mi>
+<mprescripts></mprescripts><mi>b</mi><none></none></mmultiscripts></math>
 
-<pre class="brush: html">&lt;math&gt;
+```html
+<math>
 
-    &lt;mmultiscripts&gt;
+    <mmultiscripts>
 
-        &lt;mi&gt;X&lt;/mi&gt;      &lt;!-- base expression --&gt;
+        <mi>X</mi>      <!-- base expression -->
 
-        &lt;none /&gt;        &lt;!-- postsubscript --&gt;
-        &lt;mi&gt;c&lt;/mi&gt;      &lt;!-- postsuperscript --&gt;
+        <none />        <!-- postsubscript -->
+        <mi>c</mi>      <!-- postsuperscript -->
 
-        &lt;mprescripts /&gt;
-        &lt;mi&gt;b&lt;/mi&gt;      &lt;!-- presubscript --&gt;
-        &lt;none /&gt;        &lt;!-- presuperscript --&gt;
+        <mprescripts />
+        <mi>b</mi>      <!-- presubscript -->
+        <none />        <!-- presuperscript -->
 
-    &lt;/mmultiscripts&gt;
+    </mmultiscripts>
 
-&lt;/math&gt;
-</pre>
+</math>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{ MathMLElement("msub") }} (Subscript)</li>
- <li>{{ MathMLElement("msup") }} (Superscript)</li>
- <li>{{ MathMLElement("msubsup") }} (Subscript-superscript pair)</li>
-</ul>
+- {{ MathMLElement("msub") }} (Subscript)
+- {{ MathMLElement("msup") }} (Superscript)
+- {{ MathMLElement("msubsup") }} (Subscript-superscript pair)

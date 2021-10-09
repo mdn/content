@@ -5,218 +5,170 @@ tags:
   - MathML
   - MathML Reference
 ---
-<p>{{MathMLRef}}</p>
+{{MathMLRef}}
 
-<p>This is an alphabetical list of MathML <strong>presentation</strong> elements.</p>
+This is an alphabetical list of MathML **presentation** elements.
 
-<p>The term <strong>presentation markup</strong> is used to describe the layout structure of mathematical notation whereas <strong>content markup</strong> provides the underlying mathematical meaning and is not supposed to be rendered by the MathML parser (see {{ bug(276028) }}). If you want to learn more about content markup you should consider <a href="https://www.w3.org/TR/MathML3/chapter4.html">Chapter 4</a> in the <a href="https://www.w3.org/TR/MathML3/">MathML 3 specification</a>.</p>
+The term **presentation markup** is used to describe the layout structure of mathematical notation whereas **content markup** provides the underlying mathematical meaning and is not supposed to be rendered by the MathML parser (see {{ bug(276028) }}). If you want to learn more about content markup you should consider [Chapter 4](https://www.w3.org/TR/MathML3/chapter4.html) in the [MathML 3 specification](https://www.w3.org/TR/MathML3/).
 
-<p>MathML elements implement the {{domxref("MathMLElement")}} class.</p>
+MathML elements implement the {{domxref("MathMLElement")}} class.
 
-<h2 id="MathML_presentation_elements_A_to_Z">MathML presentation elements A  to Z</h2>
+## MathML presentation elements A  to Z
 
-<h3 id="math">math</h3>
+### math
 
-<ul>
- <li>{{MathMLElement("math")}} (Top-level element)</li>
-</ul>
+- {{MathMLElement("math")}} (Top-level element)
 
-<h3 id="A">A</h3>
+### A
 
-<ul>
- <li>{{MathMLElement("maction")}} (Bound actions to sub-expressions)</li>
- <li>{{MathMLElement("maligngroup")}} (Alignment group)</li>
- <li>{{MathMLElement("malignmark")}} (Alignment points)</li>
-</ul>
+- {{MathMLElement("maction")}} (Bound actions to sub-expressions)
+- {{MathMLElement("maligngroup")}} (Alignment group)
+- {{MathMLElement("malignmark")}} (Alignment points)
 
-<h3 id="E">E</h3>
+### E
 
-<ul>
- <li>{{MathMLElement("menclose")}} (Enclosed contents)</li>
- <li>{{MathMLElement("merror")}} (Enclosed syntax error messages)</li>
-</ul>
+- {{MathMLElement("menclose")}} (Enclosed contents)
+- {{MathMLElement("merror")}} (Enclosed syntax error messages)
 
-<h3 id="F">F</h3>
+### F
 
-<ul>
- <li>{{MathMLElement("mfenced")}} (Parentheses) {{deprecated_inline}}</li>
- <li>{{MathMLElement("mfrac")}} (Fraction)</li>
-</ul>
+- {{MathMLElement("mfenced")}} (Parentheses) {{deprecated_inline}}
+- {{MathMLElement("mfrac")}} (Fraction)
 
-<h3 id="I">I</h3>
+### I
 
-<ul>
- <li>{{MathMLElement("mi")}} (Identifier)</li>
-</ul>
+- {{MathMLElement("mi")}} (Identifier)
 
-<h3 id="L">L</h3>
+### L
 
-<ul>
- <li>{{MathMLElement("mlongdiv")}} (Long division notation)</li>
-</ul>
+- {{MathMLElement("mlongdiv")}} (Long division notation)
 
-<h3 id="M">M</h3>
+### M
 
-<ul>
- <li>{{MathMLElement("mmultiscripts")}} (Prescripts and tensor indices)</li>
-</ul>
+- {{MathMLElement("mmultiscripts")}} (Prescripts and tensor indices)
 
-<h3 id="N">N</h3>
+### N
 
-<ul>
- <li>{{MathMLElement("mn")}} (Number)</li>
-</ul>
+- {{MathMLElement("mn")}} (Number)
 
-<h3 id="O">O</h3>
+### O
 
-<ul>
- <li>{{MathMLElement("mo")}} (Operator)</li>
- <li>{{MathMLElement("mover")}} (Overscript)</li>
-</ul>
+- {{MathMLElement("mo")}} (Operator)
+- {{MathMLElement("mover")}} (Overscript)
 
-<h3 id="P">P</h3>
+### P
 
-<ul>
- <li>{{MathMLElement("mpadded")}} (Space around content)</li>
- <li>{{MathMLElement("mphantom")}} (Invisible content with reserved space)</li>
-</ul>
+- {{MathMLElement("mpadded")}} (Space around content)
+- {{MathMLElement("mphantom")}} (Invisible content with reserved space)
 
-<h3 id="R">R</h3>
+### R
 
-<ul>
- <li>{{MathMLElement("mroot")}} (Radical with specified index)</li>
- <li>{{MathMLElement("mrow")}} (Grouped sub-expressions)</li>
-</ul>
+- {{MathMLElement("mroot")}} (Radical with specified index)
+- {{MathMLElement("mrow")}} (Grouped sub-expressions)
 
-<h3 id="S">S</h3>
+### S
 
-<ul>
- <li>{{MathMLElement("ms")}} (String literal)</li>
- <li>{{MathMLElement("mscarries")}} (Annotations such as carries)</li>
- <li>{{MathMLElement("mscarry")}} (Single carry, child element of {{MathMLElement("mscarries")}})</li>
- <li>{{MathMLElement("msgroup")}} (Grouped rows of {{MathMLElement("mstack")}} and {{MathMLElement("mlongdiv")}} elements)</li>
- <li>{{MathMLElement("msline")}} (Horizontal lines inside {{MathMLElement("mstack")}} elements)</li>
- <li>{{MathMLElement("mspace")}} (Space)</li>
- <li>{{MathMLElement("msqrt")}} (Square root without an index)</li>
- <li>{{MathMLElement("msrow")}} (Rows in {{MathMLElement("mstack")}} elements)</li>
- <li>{{MathMLElement("mstack")}} (Stacked alignment)</li>
- <li>{{MathMLElement("mstyle")}} (Style change)</li>
- <li>{{MathMLElement("msub")}} (Subscript)</li>
- <li>{{MathMLElement("msup")}} (Superscript)</li>
- <li>{{MathMLElement("msubsup")}} (Subscript-superscript pair)</li>
-</ul>
+- {{MathMLElement("ms")}} (String literal)
+- {{MathMLElement("mscarries")}} (Annotations such as carries)
+- {{MathMLElement("mscarry")}} (Single carry, child element of {{MathMLElement("mscarries")}})
+- {{MathMLElement("msgroup")}} (Grouped rows of {{MathMLElement("mstack")}} and {{MathMLElement("mlongdiv")}} elements)
+- {{MathMLElement("msline")}} (Horizontal lines inside {{MathMLElement("mstack")}} elements)
+- {{MathMLElement("mspace")}} (Space)
+- {{MathMLElement("msqrt")}} (Square root without an index)
+- {{MathMLElement("msrow")}} (Rows in {{MathMLElement("mstack")}} elements)
+- {{MathMLElement("mstack")}} (Stacked alignment)
+- {{MathMLElement("mstyle")}} (Style change)
+- {{MathMLElement("msub")}} (Subscript)
+- {{MathMLElement("msup")}} (Superscript)
+- {{MathMLElement("msubsup")}} (Subscript-superscript pair)
 
-<h3 id="T">T</h3>
+### T
 
-<ul>
- <li>{{MathMLElement("mtable")}} (Table or matrix)</li>
- <li>{{MathMLElement("mtd")}} (Cell in a table or a matrix)</li>
- <li>{{MathMLElement("mtext")}} (Text)</li>
- <li>{{MathMLElement("mtr")}} (Row in a table or a matrix)</li>
-</ul>
+- {{MathMLElement("mtable")}} (Table or matrix)
+- {{MathMLElement("mtd")}} (Cell in a table or a matrix)
+- {{MathMLElement("mtext")}} (Text)
+- {{MathMLElement("mtr")}} (Row in a table or a matrix)
 
-<h3 id="U">U</h3>
+### U
 
-<ul>
- <li>{{MathMLElement("munder")}} (Underscript)</li>
- <li>{{MathMLElement("munderover")}} (Underscript-overscript pair)</li>
-</ul>
+- {{MathMLElement("munder")}} (Underscript)
+- {{MathMLElement("munderover")}} (Underscript-overscript pair)
 
-<h3 id="Other_elements">Other elements</h3>
+### Other elements
 
-<ul>
- <li>{{MathMLElement("semantics")}} (Container for semantic annotations)</li>
- <li><a href="/en-US/docs/Web/MathML/Element/semantics#annotation"><code>&lt;annotation&gt;</code></a> (Data annotations)</li>
- <li><a href="/en-US/docs/Web/MathML/Element/semantics#annotation-xml"><code>&lt;annotation-xml&gt;</code></a> (XML annotations)</li>
-</ul>
+- {{MathMLElement("semantics")}} (Container for semantic annotations)
+- [`<annotation>`](/en-US/docs/Web/MathML/Element/semantics#annotation) (Data annotations)
+- [`<annotation-xml>`](/en-US/docs/Web/MathML/Element/semantics#annotation-xml) (XML annotations)
 
-<h2 id="MathML_presentation_elements_by_category">MathML presentation elements by category</h2>
+## MathML presentation elements by category
 
-<h3 id="Top-level_elements">Top-level elements</h3>
+### Top-level elements
 
-<ul>
- <li>{{MathMLElement("math")}}</li>
-</ul>
+- {{MathMLElement("math")}}
 
-<h3 id="Token_elements">Token elements</h3>
+### Token elements
 
-<ul>
- <li>{{MathMLElement("mi")}}</li>
- <li>{{MathMLElement("mn")}}</li>
- <li>{{MathMLElement("mo")}}</li>
- <li>{{MathMLElement("ms")}}</li>
- <li>{{MathMLElement("mspace")}}</li>
- <li>{{MathMLElement("mtext")}}</li>
-</ul>
+- {{MathMLElement("mi")}}
+- {{MathMLElement("mn")}}
+- {{MathMLElement("mo")}}
+- {{MathMLElement("ms")}}
+- {{MathMLElement("mspace")}}
+- {{MathMLElement("mtext")}}
 
-<h3 id="General_layout">General layout</h3>
+### General layout
 
-<ul>
- <li>{{MathMLElement("menclose")}}</li>
- <li>{{MathMLElement("merror")}}</li>
- <li>{{MathMLElement("mfenced")}} {{deprecated_inline}}</li>
- <li>{{MathMLElement("mfrac")}}</li>
- <li>{{MathMLElement("mpadded")}}</li>
- <li>{{MathMLElement("mphantom")}}</li>
- <li>{{MathMLElement("mroot")}}</li>
- <li>{{MathMLElement("mrow")}}</li>
- <li>{{MathMLElement("msqrt")}}</li>
- <li>{{MathMLElement("mstyle")}}</li>
-</ul>
+- {{MathMLElement("menclose")}}
+- {{MathMLElement("merror")}}
+- {{MathMLElement("mfenced")}} {{deprecated_inline}}
+- {{MathMLElement("mfrac")}}
+- {{MathMLElement("mpadded")}}
+- {{MathMLElement("mphantom")}}
+- {{MathMLElement("mroot")}}
+- {{MathMLElement("mrow")}}
+- {{MathMLElement("msqrt")}}
+- {{MathMLElement("mstyle")}}
 
-<h3 id="Script_and_limit_elements">Script and limit elements</h3>
+### Script and limit elements
 
-<ul>
- <li>{{MathMLElement("mmultiscripts")}}</li>
- <li>{{MathMLElement("mover")}}</li>
- <li>{{MathMLElement("mprescripts")}}</li>
- <li>{{MathMLElement("msub")}}</li>
- <li>{{MathMLElement("msubsup")}}</li>
- <li>{{MathMLElement("msup")}}</li>
- <li>{{MathMLElement("munder")}}</li>
- <li>{{MathMLElement("munderover")}}</li>
- <li>{{MathMLElement("none")}}</li>
-</ul>
+- {{MathMLElement("mmultiscripts")}}
+- {{MathMLElement("mover")}}
+- {{MathMLElement("mprescripts")}}
+- {{MathMLElement("msub")}}
+- {{MathMLElement("msubsup")}}
+- {{MathMLElement("msup")}}
+- {{MathMLElement("munder")}}
+- {{MathMLElement("munderover")}}
+- {{MathMLElement("none")}}
 
-<h3 id="Tabular_math">Tabular math</h3>
+### Tabular math
 
-<ul>
- <li>{{MathMLElement("maligngroup")}}</li>
- <li>{{MathMLElement("malignmark")}}</li>
- <li>{{MathMLElement("mtable")}}</li>
- <li>{{MathMLElement("mtd")}}</li>
- <li>{{MathMLElement("mtr")}}</li>
-</ul>
+- {{MathMLElement("maligngroup")}}
+- {{MathMLElement("malignmark")}}
+- {{MathMLElement("mtable")}}
+- {{MathMLElement("mtd")}}
+- {{MathMLElement("mtr")}}
 
-<h3 id="Elementary_math">Elementary math</h3>
+### Elementary math
 
-<ul>
- <li>{{MathMLElement("mlongdiv")}}</li>
- <li>{{MathMLElement("mscarries")}}</li>
- <li>{{MathMLElement("mscarry")}}</li>
- <li>{{MathMLElement("msgroup")}}</li>
- <li>{{MathMLElement("msline")}}</li>
- <li>{{MathMLElement("msrow")}}</li>
- <li>{{MathMLElement("mstack")}}</li>
-</ul>
+- {{MathMLElement("mlongdiv")}}
+- {{MathMLElement("mscarries")}}
+- {{MathMLElement("mscarry")}}
+- {{MathMLElement("msgroup")}}
+- {{MathMLElement("msline")}}
+- {{MathMLElement("msrow")}}
+- {{MathMLElement("mstack")}}
 
-<h3 id="Uncategorized_elements">Uncategorized elements</h3>
+### Uncategorized elements
 
-<ul>
- <li>{{MathMLElement("maction")}}</li>
-</ul>
+- {{MathMLElement("maction")}}
 
-<h2 id="Semantic_annotations">Semantic annotations</h2>
+## Semantic annotations
 
-<ul>
- <li><a href="/en-US/docs/Web/MathML/Element/semantics#annotation"><code>&lt;annotation&gt;</code></a></li>
- <li><a href="/en-US/docs/Web/MathML/Element/semantics#annotation-xml"><code>&lt;annotation-xml&gt;</code></a></li>
- <li>{{MathMLElement("semantics")}}</li>
-</ul>
+- [`<annotation>`](/en-US/docs/Web/MathML/Element/semantics#annotation)
+- [`<annotation-xml>`](/en-US/docs/Web/MathML/Element/semantics#annotation-xml)
+- {{MathMLElement("semantics")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/MathML">MathML</a></li>
- <li><a href="/en-US/docs/Web/MathML/Attribute">MathML attribute reference</a></li>
-</ul>
+- [MathML](/en-US/docs/Web/MathML)
+- [MathML attribute reference](/en-US/docs/Web/MathML/Attribute)

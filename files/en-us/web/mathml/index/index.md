@@ -5,6 +5,6 @@ tags:
   - Index
   - MathML
 ---
-<div>{{MathMLRef}}</div>
+{{MathMLRef}}
 
-<p>{{Index("/en-US/docs/Web/MathML")}}</p>
+{{Index("/en-US/docs/Web/MathML")}}

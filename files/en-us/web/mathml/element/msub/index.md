@@ -8,58 +8,55 @@ tags:
   - MathML:Script and Limit Schemata
 browser-compat: mathml.elements.msub
 ---
-<div>{{MathMLRef}}</div>
+{{MathMLRef}}
 
-<p><span class="seoSummary">The MathML <code>&lt;msub&gt;</code> element is used to attach a subscript to an expression.</span></p>
+The MathML `<msub>` element is used to attach a subscript to an expression.
 
-<p>It uses the following syntax: <code>&lt;msub&gt; <em>base subscript</em> &lt;/msub&gt;</code>.</p>
+It uses the following syntax: `<msub> base subscript </msub>`.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt id="attr-class-id-style"><code>class</code>, <code>id</code>, <code>style</code></dt>
- <dd>Provided for use with <a href="/en-US/docs/Web/CSS">stylesheets</a>.</dd>
- <dt id="attr-displaystyle"><code>displaystyle</code></dt>
- <dd>A Boolean value specifying whether more vertical space is used for displayed equations or, if set to <code>false</code>, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when <code>displaystyle</code> is set to <code>true</code>. See also <code>movablelimits</code> on {{ MathMLElement("mo") }}.</dd>
- <dt id="attr-href"><code>href</code></dt>
- <dd>Used to set a hyperlink to a specified URI.</dd>
- <dt id="attr-mathbackground"><code>mathbackground</code></dt>
- <dd>The background color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/Web/CSS/color_value#color_keywords">HTML color names</a>.</dd>
- <dt id="attr-mathcolor"><code>mathcolor</code></dt>
- <dd>The text color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/Web/CSS/color_value#color_keywords">HTML color names</a>.</dd>
- <dt id="attr-subscriptshift"><code>subscriptshift</code> {{deprecated_inline}}</dt>
- <dd>The minimum space by which to shift the subscript below the baseline of the expression, as a <a href="/en-US/docs/Web/MathML/Attribute/Values#lengths">length value</a>.<br>
- This attribute is deprecated and will be removed in the future.</dd>
-</dl>
+- `class`, `id`, `style`
+  - : Provided for use with [stylesheets](/en-US/docs/Web/CSS).
+- `displaystyle`
+  - : A Boolean value specifying whether more vertical space is used for displayed equations or, if set to `false`, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when `displaystyle` is set to `true`. See also `movablelimits` on {{ MathMLElement("mo") }}.
+- `href`
+  - : Used to set a hyperlink to a specified URI.
+- `mathbackground`
+  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
+- `mathcolor`
+  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
+- `subscriptshift` {{deprecated_inline}}
+  - : The minimum space by which to shift the subscript below the baseline of the expression, as a [length value](/en-US/docs/Web/MathML/Attribute/Values#lengths).
+    This attribute is deprecated and will be removed in the future.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Sample rendering: <img alt="x1" src="msub.png"></p>
+Sample rendering: ![x1](msub.png)
 
-<p>Rendering in your browser: <math> <msub> <mi>X</mi> <mn>1</mn> </msub> </math></p>
+Rendering in your browser: <math><msub><mi>X</mi> <mn>1</mn></msub></math>
 
-<pre class="brush: html">&lt;math&gt;
+```html
+<math>
 
-  &lt;msub&gt;
-    &lt;mi&gt;X&lt;/mi&gt;
-    &lt;mn&gt;1&lt;/mn&gt;
-  &lt;/msub&gt;
+  <msub>
+    <mi>X</mi>
+    <mn>1</mn>
+  </msub>
 
-&lt;/math&gt;
-</pre>
+</math>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{ MathMLElement("msup") }} (Superscript)</li>
- <li>{{ MathMLElement("msubsup") }} (Subscript-superscript pair)</li>
- <li>{{ MathMLElement("mmultiscripts") }} (Prescripts and tensor indices)</li>
-</ul>
+- {{ MathMLElement("msup") }} (Superscript)
+- {{ MathMLElement("msubsup") }} (Subscript-superscript pair)
+- {{ MathMLElement("mmultiscripts") }} (Prescripts and tensor indices)

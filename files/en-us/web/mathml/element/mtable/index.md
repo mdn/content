@@ -8,97 +8,94 @@ tags:
   - MathML:Tabular Math
 browser-compat: mathml.elements.mtable
 ---
-<div>{{MathMLRef}}</div>
+{{MathMLRef}}
 
-<p class="summary">The MathML <code>&lt;mtable&gt;</code> element allows you to create tables or matrices. Inside a <code>&lt;mtable&gt;</code> only {{ MathMLElement("mtr") }} and {{ MathMLElement("mtd") }} elements may appear. These elements are similar to {{ HTMLElement("table") }} , {{ HTMLElement("tr") }} and {{ HTMLElement("td") }} elements of <a href="/en-US/docs/Web/HTML">HTML</a>.</p>
+The MathML `<mtable>` element allows you to create tables or matrices. Inside a `<mtable>` only {{ MathMLElement("mtr") }} and {{ MathMLElement("mtd") }} elements may appear. These elements are similar to {{ HTMLElement("table") }} , {{ HTMLElement("tr") }} and {{ HTMLElement("td") }} elements of [HTML](/en-US/docs/Web/HTML).
 
-<div class="note">
-<p><strong>Note:</strong> The <code>&lt;mtable&gt;</code> element resets the <code>displaystyle</code> attribute to <code>false</code>. If you want to use this element as an inline-block, you might want to set <code>&lt;mtable displaystyle="true"&gt;...&lt;/mtable&gt;</code>.</p>
-</div>
+> **Note:** The `<mtable>` element resets the `displaystyle` attribute to `false`. If you want to use this element as an inline-block, you might want to set `<mtable displaystyle="true">...</mtable>`.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt id="attr-align">align</dt>
- <dd>Specifies the <strong>vertical</strong> alignment of the table with respect to its environment.<br>
- Possible values are:
- <ul>
-  <li><code>axis</code> (default): The vertical center of the table aligns on the environment's axis (typically the minus sign).</li>
-  <li><code>baseline</code>: The vertical center of the table aligns on the environment's baseline.</li>
-  <li><code>bottom</code>: The bottom of the table aligns on the environments baseline.</li>
-  <li><code>center</code>: See baseline.</li>
-  <li><code>top</code>: The top of the table aligns on the environments baseline.</li>
- </ul>
- In addition, values of the <code>align</code> attribute can end with a <em>rownumber</em> (e.g. <code>align="center 3"</code>). This allows you to align the specified row of the table rather than the whole table. A negative Integer value counts rows from the bottom of the table. Starting with Gecko 8.0 {{ geckoRelease("8.0") }} the interpretation of <em>negative</em> values has been corrected ({{ bug(601436) }}). In Gecko 17.0 {{geckoRelease("17.0")}} the parsing has been updated to treat whitespace correctly.</dd>
- <dt id="attr-class-id-style">class, id, style</dt>
- <dd>Provided for use with <a href="/en-US/docs/Web/CSS">stylesheets</a>.</dd>
- <dt id="attr-columnalign">columnalign</dt>
- <dd>Specifies the horizontal alignment of the cells. Multiple values separated by space are allowed and apply to the corresponding columns (e.g. <code>columnalign="left right center"</code>). Possible values are: <code>left</code>, <code>center</code> (default) and <code>right</code>.</dd>
- <dt id="attr-columnlines">columnlines</dt>
- <dd>Specifies column borders. Multiple values separated by space are allowed and apply to the corresponding columns (e.g. <code>columnlines="none none solid"</code>). Possible values are: <code>none</code> (default), <code>solid</code> and <code>dashed</code>.</dd>
- <dt id="attr-columnspacing">columnspacing</dt>
- <dd>Specifies the space between table columns.</dd>
- <dt id="attr-displaystyle">displaystyle</dt>
- <dd>A Boolean value specifying whether more vertical space is used for displayed equations or, if set to <code>false</code>, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when <code>displaystyle</code> is set to <code>true</code>.</dd>
- <dt id="attr-frame">frame</dt>
- <dd>Specifies borders of the entire table. Possible values are: <code>none</code> (default), <code>solid</code> and <code>dashed</code>.</dd>
- <dt id="attr-framespacing">framespacing</dt>
- <dd>Specifies additional space added between the table and frame.</dd>
- <dt id="attr-href">href</dt>
- <dd>Used to set a hyperlink to a specified URI.</dd>
- <dt id="attr-mathbackground">mathbackground</dt>
- <dd>The background color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/Web/CSS/color_value#color_keywords">HTML color names</a>.</dd>
- <dt id="attr-mathcolor">mathcolor</dt>
- <dd>The text color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/Web/CSS/color_value#color_keywords">HTML color names</a>.</dd>
- <dt id="attr-rowalign">rowalign</dt>
- <dd>Specifies the vertical alignment of the cells. Multiple values separated by space are allowed and apply to the corresponding rows (e.g. <code>rowalign="top bottom axis"</code>). Possible values are: <code>axis</code>, <code>baseline</code> (default), <code>bottom</code>, <code>center</code> and <code>top</code>.</dd>
- <dt id="attr-rowlines">rowlines</dt>
- <dd>Specifies row borders. Multiple values separated by space are allowed and apply to the corresponding rows (e.g. <code>rowlines="none none solid"</code>). Possible values are: <code>none</code> (default), <code>solid</code> and <code>dashed</code>.</dd>
- <dt id="attr-rowspacing">{{ unimplemented_inline() }} rowspacing</dt>
- <dd>Specifies the space between table rows.</dd>
- <dt id="attr-width">width</dt>
- <dd>Specifies the width of the entire table. Accepts <a href="/en-US/docs/Web/MathML/Attribute/Values#lengths">length values</a>.</dd>
-</dl>
+- align
 
-<h2 id="Examples">Examples</h2>
+  - : Specifies the **vertical** alignment of the table with respect to its environment.
+    Possible values are:
 
-<h3 id="Alignment_with_row_number">Alignment with row number</h3>
+    - `axis` (default): The vertical center of the table aligns on the environment's axis (typically the minus sign).
+    - `baseline`: The vertical center of the table aligns on the environment's baseline.
+    - `bottom`: The bottom of the table aligns on the environments baseline.
+    - `center`: See baseline.
+    - `top`: The top of the table aligns on the environments baseline.
 
-<p>Rendering: <img alt="" src="mtable-1.png"></p>
+    In addition, values of the `align` attribute can end with a _rownumber_ (e.g. `align="center 3"`). This allows you to align the specified row of the table rather than the whole table. A negative Integer value counts rows from the bottom of the table. Starting with Gecko 8.0 {{ geckoRelease("8.0") }} the interpretation of _negative_ values has been corrected ({{ bug(601436) }}). In Gecko 17.0 {{geckoRelease("17.0")}} the parsing has been updated to treat whitespace correctly.
 
-<pre class="brush: html">&lt;math&gt;
+- class, id, style
+  - : Provided for use with [stylesheets](/en-US/docs/Web/CSS).
+- columnalign
+  - : Specifies the horizontal alignment of the cells. Multiple values separated by space are allowed and apply to the corresponding columns (e.g. `columnalign="left right center"`). Possible values are: `left`, `center` (default) and `right`.
+- columnlines
+  - : Specifies column borders. Multiple values separated by space are allowed and apply to the corresponding columns (e.g. `columnlines="none none solid"`). Possible values are: `none` (default), `solid` and `dashed`.
+- columnspacing
+  - : Specifies the space between table columns.
+- displaystyle
+  - : A Boolean value specifying whether more vertical space is used for displayed equations or, if set to `false`, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when `displaystyle` is set to `true`.
+- frame
+  - : Specifies borders of the entire table. Possible values are: `none` (default), `solid` and `dashed`.
+- framespacing
+  - : Specifies additional space added between the table and frame.
+- href
+  - : Used to set a hyperlink to a specified URI.
+- mathbackground
+  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
+- mathcolor
+  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
+- rowalign
+  - : Specifies the vertical alignment of the cells. Multiple values separated by space are allowed and apply to the corresponding rows (e.g. `rowalign="top bottom axis"`). Possible values are: `axis`, `baseline` (default), `bottom`, `center` and `top`.
+- rowlines
+  - : Specifies row borders. Multiple values separated by space are allowed and apply to the corresponding rows (e.g. `rowlines="none none solid"`). Possible values are: `none` (default), `solid` and `dashed`.
+- {{ unimplemented_inline() }} rowspacing
+  - : Specifies the space between table rows.
+- width
+  - : Specifies the width of the entire table. Accepts [length values](/en-US/docs/Web/MathML/Attribute/Values#lengths).
 
-    &lt;mi&gt;X&lt;/mi&gt;
-    &lt;mo&gt;=&lt;/mo&gt;
-    &lt;mtable frame="solid" rowlines="solid" align="axis 3"&gt;
-        &lt;mtr&gt;
-             &lt;mtd&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;/mtd&gt;
-             &lt;mtd&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;/mtd&gt;
-        &lt;/mtr&gt;
-        &lt;mtr&gt;
-             &lt;mtd&gt;&lt;mi&gt;C&lt;/mi&gt;&lt;/mtd&gt;
-             &lt;mtd&gt;&lt;mi&gt;D&lt;/mi&gt;&lt;/mtd&gt;
-        &lt;/mtr&gt;
-        &lt;mtr&gt;
-             &lt;mtd&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;/mtd&gt;
-             &lt;mtd&gt;&lt;mi&gt;F&lt;/mi&gt;&lt;/mtd&gt;
-        &lt;/mtr&gt;
-    &lt;/mtable&gt;
+## Examples
 
-&lt;/math&gt;
-</pre>
+### Alignment with row number
 
-<h2 id="Specifications">Specifications</h2>
+Rendering: ![](mtable-1.png)
 
-<p>{{Specifications}}</p>
+```html
+<math>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+    <mi>X</mi>
+    <mo>=</mo>
+    <mtable frame="solid" rowlines="solid" align="axis 3">
+        <mtr>
+             <mtd><mi>A</mi></mtd>
+             <mtd><mi>B</mi></mtd>
+        </mtr>
+        <mtr>
+             <mtd><mi>C</mi></mtd>
+             <mtd><mi>D</mi></mtd>
+        </mtr>
+        <mtr>
+             <mtd><mi>E</mi></mtd>
+             <mtd><mi>F</mi></mtd>
+        </mtr>
+    </mtable>
 
-<p>{{Compat}}</p>
+</math>
+```
 
-<h2 id="See_also">See also</h2>
+## Specifications
 
-<ul>
- <li>{{ MathMLElement("mtd") }} (Table cell)</li>
- <li>{{ MathMLElement("mtr") }} (Table row)</li>
-</ul>
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{ MathMLElement("mtd") }} (Table cell)
+- {{ MathMLElement("mtr") }} (Table row)
