@@ -16,7 +16,7 @@ tags:
 
 <p>In this article, we will refer to the Video player with captions example. This example uses an excerpt from the <a href="https://www.sintel.org/">Sintel open movie</a>, created by the <a href="https://www.blender.org/foundation/">Blender Foundation</a>.</p>
 
-<p><img alt='Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."' src="video-player-with-captions.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt='Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."' src="video-player-with-captions.png"></p>
 
 <div class="note">
 <p><strong>Note:</strong> You can find the <a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions">source on Github</a>, and also <a href="https://iandevlin.github.io/mdn/video-player-with-captions/">view the example live</a>.</p>
@@ -72,7 +72,7 @@ tags:
 
 <p>In addition to adding the <code>&lt;track&gt;</code> elements, we have also added a new button to control the subtitles menu that we will build. As a consequence, the video controls now look as follows:</p>
 
-<pre class="brush: html;highlight[13]">&lt;div id="video-controls" class="controls" data-state="hidden"&gt;
+<pre class="brush: html">&lt;div id="video-controls" class="controls" data-state="hidden"&gt;
    &lt;button id="playpause" type="button" data-state="play"&gt;Play/Pause&lt;/button&gt;
    &lt;button id="stop" type="button" data-state="stop"&gt;Stop&lt;/button&gt;
    &lt;div class="progress"&gt;
@@ -289,10 +289,6 @@ var createMenuItem = function(id, lang, label) {
 <h3 id="Chrome_and_Opera">Chrome and Opera</h3>
 
 <p>These browsers have similar implementations again: subtitles are enabled by default and the default control set contains a 'cc' button that turns subtitles on and off. Chrome and Opera ignore the <code>default</code> attribute on the <code>&lt;track&gt;</code> element and will instead try to match the browser's language to the subtitle's language.</p>
-
-<h3 id="Firefox">Firefox</h3>
-
-<p>Firefox's implementation was completely broken due to a <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=981280">bug</a>, leading to Mozilla turning off WebVTT support by default (you can turn it on via the <code>media.webvtt.enabled</code> flag.) However, <s>this bug looks to have been fixed and WebVTT support re-enabled as of Gecko 31, so this will not be a problem for Firefox final release users for much longer (on Gecko 29 as of the time of this writing)</s> this has been fixed as of Firefox 31, and everything works as it should.</p>
 
 <h2 id="Plugins">Plugins</h2>
 

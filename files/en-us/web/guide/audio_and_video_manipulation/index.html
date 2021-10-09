@@ -135,10 +135,9 @@ tags:
 <pre class="brush: js">var myVideo = document.getElementById('my-video');
 myVideo.playbackRate = 2;</pre>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
+<h4>Editable example</h4>
 
-<pre class="brush: html">&lt;video id="my-video" controls="true" width="480" height="270"&gt;
+<pre class="brush: html hidden">&lt;video id="my-video" controls="true" width="480" height="270"&gt;
   &lt;source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm"&gt;
   &lt;source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4"&gt;
 &lt;/video&gt;
@@ -151,7 +150,7 @@ var myVideo = document.getElementById('my-video');
 myVideo.playbackRate = 2;&lt;/textarea&gt;
 </pre>
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var edit = document.getElementById('edit');
 var code = textarea.value;
@@ -172,9 +171,8 @@ edit.addEventListener('click', function() {
 textarea.addEventListener('input', setPlaybackRate);
 window.addEventListener('load', setPlaybackRate);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 425) }}</p>
+<p>{{ EmbedLiveSample('Editable_example', 700, 450) }}</p>
 
 <div class="note">
 <p><strong>Note:</strong> Try the <a href="https://jsbin.com/qomuvefu/2/edit">playbackRate example</a> live.</p>
@@ -238,10 +236,9 @@ filter.type = "lowshelf";
 filter.frequency.value = 1000;
 filter.gain.value = 25;</pre>
 
-<div class="hidden">
-<h6 id="Playable_code_2">Playable code</h6>
+<h4>Editable example</h4>
 
-<pre class="brush: html">&lt;video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous"&gt;
+<pre class="brush: html hidden">&lt;video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous"&gt;
   &lt;source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm"&gt;
   &lt;source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4"&gt;
 &lt;/video&gt;
@@ -254,7 +251,7 @@ filter.type = "lowshelf";
 filter.frequency.value = 1000;
 filter.gain.value = 25;&lt;/textarea&gt;</pre>
 
-<pre class="brush: js">var context     = new AudioContext(),
+<pre class="brush: js hidden">var context     = new AudioContext(),
     audioSource = context.createMediaElementSource(document.getElementById("my-video")),
     filter      = context.createBiquadFilter();
 audioSource.connect(filter);
@@ -281,9 +278,8 @@ edit.addEventListener('click', function() {
 textarea.addEventListener('input', setFilter);
 window.addEventListener('load', setFilter);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_2', 700, 425) }}</p>
+<p>{{ EmbedLiveSample('Editable_example_2', 700, 450) }}</p>
 
 <div class="note">
 <p><strong>Note:</strong> unless you have <a href="/en-US/docs/Web/HTTP/CORS">CORS</a> enabled, to avoid security issues your video should be on the same domain as your code.</p>

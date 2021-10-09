@@ -40,7 +40,6 @@ tags:
 
 <p>This example converts an XML fragment in a string into a DOM tree using a {{domxref("DOMParser")}}:</p>
 
-<div style="overflow: hidden;">
 <pre class="brush: js">const xmlStr = '&lt;a id="a"&gt;&lt;b id="b"&gt;hey!&lt;/b&gt;&lt;/a&gt;';
 const parser = new DOMParser();
 const doc = parser.parseFromString(xmlStr, "application/xml");
@@ -52,7 +51,6 @@ if (errorNode) {
   console.log(dom.documentElement.nodeName);
 }
 </pre>
-</div>
 
 <h3 id="Parsing_URL-addressable_resources_into_DOM_trees">Parsing URL-addressable resources into DOM trees</h3>
 

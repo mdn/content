@@ -48,7 +48,6 @@ tags:
 
 <h3 id="Contain_internal_floats">Contain internal floats</h3>
 
-<div id="example1">
 <p>Make float content and alongside content the same height.</p>
 
 <p>Let's have a look at a couple of these in order to see the effect creating a new <abbr title="Block Formatting Context">BFC</abbr>.</p>
@@ -112,12 +111,10 @@ tags:
     padding: 10px;
 }</pre>
 
-<p>{{EmbedLiveSample("example1", 200, 450)}}</p>
-</div>
+<p>{{EmbedLiveSample("Contain_internal_floats", 200, 480)}}</p>
 
 <h3 id="Exclude_external_floats">Exclude external floats</h3>
 
-<div id="example2">
 <p>In the following example, we are using <code>display:flow-root</code> and floats to implement double columns layout, because an element in the normal flow that establishes a new <abbr title="Block Formatting Context">BFC</abbr> must not overlap the margin box of any floats in the same block formatting context as the element itself.</p>
 
 <h4 id="HTML_2">HTML</h4>
@@ -157,12 +154,11 @@ tags:
 }
 </pre>
 
-<p>{{EmbedLiveSample("example2", 200, 300)}}</p>
+<p>{{EmbedLiveSample("Exclude_external_floats", 200, 330)}}</p>
 
 <p>Rather than inline-blocks with width:&lt;percentage&gt;, in this case we don't have to specify the width of the right div.</p>
 
 <p>Note that flexbox is a more efficient way to implement multi-column layout in modern CSS.</p>
-</div>
 
 <h3 id="Margin_collapsing">Margin collapsing</h3>
 
@@ -193,7 +189,7 @@ tags:
 }
 </pre>
 
-<p>{{EmbedLiveSample("Margin_collapsing", 120, 120)}}</p>
+<p>{{EmbedLiveSample("Margin_collapsing", 120, 170)}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
