@@ -1,6 +1,6 @@
 ---
-title: WebGLRenderingContext.bufferData()
-slug: Web/API/WebGLRenderingContext/bufferData
+title: WebGL2RenderingContext.bufferData()
+slug: Web/API/WebGL2RenderingContext/bufferData
 tags:
   - API
   - Buffer
@@ -8,22 +8,20 @@ tags:
   - Method
   - Reference
   - WebGL
-  - WebGLRenderingContext
-browser-compat: api.WebGLRenderingContext.bufferData
+  - WebGL2RenderingContext
+browser-compat: api.WebGL2RenderingContext.bufferData
 ---
-{{APIRef("WebGL")}}
+{{APIRef("WebGL2")}}
 
-> **Note:** This page describes the WebGL 1 version of this method.  Click [here](/en-US/docs/Web/API/WebGL2RenderingContext/bufferData) to read about the WebGL 2 version.
+> **Note:** This page describes the WebGL 2 version of this method.  Click [here](/en-US/docs/Web/API/WebGLRenderingContext/bufferData) to read about the WebGL 1 version.
 
-The **`WebGLRenderingContext.bufferData()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) initializes and creates the
+The **`WebGL2RenderingContext.bufferData()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) initializes and creates the
 buffer object's data store.
 
 ## Syntax
 
 ```js
-void gl.bufferData(target, size, usage);
-void gl.bufferData(target, ArrayBuffer? srcData, usage);
-void gl.bufferData(target, ArrayBufferView srcData, usage);
+void gl.bufferData(target, ArrayBufferView srcData, usage, srcOffset, length);
 ```
 
 ### Parameters
@@ -35,6 +33,18 @@ void gl.bufferData(target, ArrayBufferView srcData, usage);
     - `gl.ARRAY_BUFFER`: Buffer containing vertex attributes, such as
       vertex coordinates, texture coordinate data, or vertex color data.
     - `gl.ELEMENT_ARRAY_BUFFER`: Buffer used for element indices.
+    - `gl.COPY_READ_BUFFER`: Buffer for copying from one
+      buffer object to another.
+    - `gl.COPY_WRITE_BUFFER`: Buffer for copying from one
+      buffer object to another.
+    - `gl.TRANSFORM_FEEDBACK_BUFFER`: Buffer for transform
+      feedback operations.
+    - `gl.UNIFORM_BUFFER`: Buffer used for storing uniform
+      blocks.
+    - `gl.PIXEL_PACK_BUFFER`: Buffer used for pixel transfer
+      operations.
+    - `gl.PIXEL_UNPACK_BUFFER`: Buffer used for pixel
+      transfer operations.
 
 - `size`
   - : A {{domxref("WebGL_API/Types", "GLsizeiptr")}} setting the size in bytes of the buffer object's data
@@ -58,6 +68,26 @@ void gl.bufferData(target, ArrayBufferView srcData, usage);
     - `gl.STREAM_DRAW`: The contents are intended to be specified
       once by the application, and used at most a few times as the source for
       WebGL drawing and image specification commands.
+    - `gl.STATIC_READ`: The contents are intended to be
+      specified once by reading data from WebGL, and queried many times
+      by the application.
+    - `gl.DYNAMIC_READ`: The contents are intended to be
+      respecified repeatedly by reading data from WebGL, and queried
+      many times by the application.
+    - `gl.STREAM_READ`: The contents are intended to be
+      specified once by reading data from WebGL, and queried at most a
+      few times by the application
+    - `gl.STATIC_COPY`: The contents are intended to be
+      specified once by reading data from WebGL, and used many times as
+      the source for WebGL drawing and image specification commands.
+    - `gl.DYNAMIC_COPY`: The contents are intended to be
+      respecified repeatedly by reading data from WebGL, and used many
+      times as the source for WebGL drawing and image specification
+      commands.
+    - `gl.STREAM_COPY`: The contents are intended to be
+      specified once by reading data from WebGL, and used at most a few
+      times as the source for WebGL drawing and image specification
+      commands.
 
 - `srcOffset`
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the element index offset where to start reading
@@ -83,7 +113,7 @@ None.
 
 ```js
 var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var gl = canvas.getContext('webgl2');
 var buffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 gl.bufferData(gl.ARRAY_BUFFER, 1024, gl.STATIC_DRAW);
