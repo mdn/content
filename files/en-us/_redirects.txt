@@ -7379,8 +7379,6 @@
 /en-US/docs/Web/API/EventTarget/attachEvent	/en-US/docs/Web/API/EventTarget/addEventListener
 /en-US/docs/Web/API/EventTarget/detachEvent	/en-US/docs/Web/API/EventTarget/removeEventListener
 /en-US/docs/Web/API/EventTarget/fireEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
-/en-US/docs/Web/API/Fame_Timing_API	/en-US/docs/Web/API/Frame_Timing_API
-/en-US/docs/Web/API/Fame_Timing_API/Using_the_Frame_Timing_API	/en-US/docs/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API
 /en-US/docs/Web/API/FetchController	/en-US/docs/Web/API/AbortController
 /en-US/docs/Web/API/FetchController/FetchController	/en-US/docs/Web/API/AbortController/AbortController
 /en-US/docs/Web/API/FetchController/abort	/en-US/docs/Web/API/AbortController/abort
@@ -8606,8 +8604,6 @@
 /en-US/docs/Web/API/TouchEvent/TouchEvent()	/en-US/docs/Web/API/TouchEvent/TouchEvent
 /en-US/docs/Web/API/TouchList.item	/en-US/docs/Web/API/TouchList/item
 /en-US/docs/Web/API/TouchList.length	/en-US/docs/Web/API/TouchList/length
-/en-US/docs/Web/API/TrackDefaultList/TrackDefault	/en-US/docs/Web/API/TrackDefaultList
-/en-US/docs/Web/API/TrackDefaultList/TrackDefaultList.length	/en-US/docs/Web/API/TrackDefaultList/length
 /en-US/docs/Web/API/Transaction	/en-US/docs/Web/API/IDBTransaction
 /en-US/docs/Web/API/TransactionSync	/en-US/docs/Web/API/IDBTransactionSync
 /en-US/docs/Web/API/TransitionEvent.TransitionEvent	/en-US/docs/Web/API/TransitionEvent/TransitionEvent

@@ -16,7 +16,7 @@ browser-compat: webdriver.commands.SetWindowRect
 
 <p>When setting the width or height, it is not guaranteed that the resulting window size will exactly match that which was requested. The driver is expected to clamp values that are larger than the physical screen dimensions, or smaller than the minimum window size. Some drivers may also have other limitations such as not being able to resize in single-pixel increments. For this reason, the returned <code>width</code> and <code>height</code> might not exactly match <code><a href="/en-US/docs/Web/API/Window/outerWidth">Window.outerWidth</a></code> and <code><a href="/en-US/docs/Web/API/Window/outerHeight">Window.outerHeight</a></code>.</p>
 
-<p>Setting the window’s position is similar in nature to calling <code><a href="/en-US/docs/Web/API/Window/moveTo">Window.moveTo(<em>x</em>, <em>y</em>)</a></code>, but differences itself by bypassing security restrictions related to window manipulation.</p>
+<p>Setting the window’s position is similar in nature to calling <a href="/en-US/docs/Web/API/Window/moveTo"><code>Window.moveTo(x, y)</code></a>, but differences itself by bypassing security restrictions related to window manipulation.</p>
 
 <p>The Set Window Rect command is blocking.</p>
 
@@ -32,7 +32,7 @@ browser-compat: webdriver.commands.SetWindowRect
  <tbody>
   <tr>
    <td><a href="/en-US/docs/Web/HTTP/Methods/POST">POST</a></td>
-   <td><code>/session/{<em>session id</em>}/window/rect</code></td>
+   <td><code>/session/{session id}/window/rect</code></td>
   </tr>
  </tbody>
 </table>
@@ -50,13 +50,13 @@ browser-compat: webdriver.commands.SetWindowRect
 
 <dl>
  <dt><code>x</code></dt>
- <dd>Horizontal position of the <code><a href="/en-US/docs/Web/API/Window">window</a></code>, which equivalent to <code><a href="/en-US/docs/Web/API/Window/screenX">Window.screenX</a></code>. Must be a number in the −(2<sup>31</sup>) to 2<sup>31</sup> − 1 range, null, or undefined.</dd>
+ <dd>Horizontal position of the <code><a href="/en-US/docs/Web/API/Window">window</a></code>, which equivalent to <code><a href="/en-US/docs/Web/API/Window/screenX">Window.screenX</a></code>. Must be a number in the −(2^31</) to 2^31 − 1 range, null, or undefined.</dd>
  <dt><code>y</code></dt>
- <dd>Vertical position of the <code><a href="/en-US/docs/Web/API/Window">window</a></code>, which is equivalent to <code><a href="/en-US/docs/Web/API/Window/screenY">Window.screenY</a></code>. Must be a number in the −(2<sup>31</sup>) to 2<sup>31</sup> − 1 range, null, or undefined.</dd>
+ <dd>Vertical position of the <code><a href="/en-US/docs/Web/API/Window">window</a></code>, which is equivalent to <code><a href="/en-US/docs/Web/API/Window/screenY">Window.screenY</a></code>. Must be a number in the −(2^31) to 2^31 − 1 range, null, or undefined.</dd>
  <dt><code>width</code></dt>
- <dd>Outer width of the <code><a href="/en-US/docs/Web/API/Window">window</a></code>, which is equivalent to <code><a href="/en-US/docs/Web/API/Window/outerWidth">Window.outerWidth</a></code>. Must be a number in the 0 to 2<sup>31</sup> − 1 range, null, or undefined.</dd>
+ <dd>Outer width of the <code><a href="/en-US/docs/Web/API/Window">window</a></code>, which is equivalent to <code><a href="/en-US/docs/Web/API/Window/outerWidth">Window.outerWidth</a></code>. Must be a number in the 0 to 2^31 − 1 range, null, or undefined.</dd>
  <dt><code>height</code></dt>
- <dd>Outer width of the <code><a href="/en-US/docs/Web/API/Window">window</a></code>, which is equivalent to <code><a href="/en-US/docs/Web/API/Window/outerHeight">Window.outerHeight</a></code>. Must be a number in the 0 to 2<sup>31</sup> − 1 range, null, or undefined.</dd>
+ <dd>Outer width of the <code><a href="/en-US/docs/Web/API/Window">window</a></code>, which is equivalent to <code><a href="/en-US/docs/Web/API/Window/outerHeight">Window.outerHeight</a></code>. Must be a number in the 0 to 2^31 − 1 range, null, or undefined.</dd>
 </dl>
 
 <h3 id="Response">Response</h3>

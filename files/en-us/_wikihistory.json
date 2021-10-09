@@ -965,28 +965,6 @@
       "franciov"
     ]
   },
-  "Games/Visual-js_game_engine": {
-    "modified": "2019-05-26T11:52:15.174Z",
-    "contributors": [
-      "zlatnaspirala",
-      "codingdudecom",
-      "wbamberg",
-      "Biiinggg",
-      "david_ross"
-    ]
-  },
-  "Games/Visual_JS_GE": {
-    "modified": "2019-01-17T00:18:04.338Z",
-    "contributors": [
-      "thekosiguy",
-      "zlatnaspirala",
-      "wbamberg",
-      "chrisdavidmills",
-      "mikeputnam",
-      "Biiinggg",
-      "david_ross"
-    ]
-  },
   "Glossary": {
     "modified": "2020-12-14T11:30:09.332Z",
     "contributors": [
@@ -46793,21 +46771,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/Frame_Timing_API": {
-    "modified": "2019-01-16T21:55:59.710Z",
-    "contributors": [
-      "teoli",
-      "rolfedh",
-      "AFBarstow"
-    ]
-  },
-  "Web/API/Frame_Timing_API/Using_the_Frame_Timing_API": {
-    "modified": "2019-03-23T22:41:07.570Z",
-    "contributors": [
-      "rolfedh",
-      "AFBarstow"
-    ]
-  },
   "Web/API/Fullscreen_API": {
     "modified": "2020-12-02T10:59:03.389Z",
     "contributors": [
@@ -67491,17 +67454,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/PerformanceFrameTiming": {
-    "modified": "2020-10-15T21:41:25.252Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "jpmedley",
-      "tophf",
-      "rolfedh",
-      "AFBarstow"
-    ]
-  },
   "Web/API/PerformanceLongTaskTiming": {
     "modified": "2020-10-15T21:54:47.138Z",
     "contributors": [
@@ -78020,15 +77972,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/SourceBuffer/trackDefaults": {
-    "modified": "2020-10-15T21:39:14.875Z",
-    "contributors": [
-      "sideshowbarker",
-      "Wind1808",
-      "fscholz",
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/SourceBuffer/updating": {
     "modified": "2020-10-15T21:39:10.686Z",
     "contributors": [
@@ -81049,87 +80992,6 @@
       "FreshCapsule",
       "rolfedh",
       "AFBarstow"
-    ]
-  },
-  "Web/API/TrackDefault": {
-    "modified": "2020-10-15T21:39:16.115Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/TrackDefault/TrackDefault": {
-    "modified": "2020-10-15T21:39:15.045Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/TrackDefault/byteStreamTrackID": {
-    "modified": "2020-10-15T21:39:15.843Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/TrackDefault/kinds": {
-    "modified": "2020-10-15T21:39:17.069Z",
-    "contributors": [
-      "sideshowbarker",
-      "connorshea",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/TrackDefault/label": {
-    "modified": "2020-10-15T21:39:15.592Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/TrackDefault/language": {
-    "modified": "2020-10-15T21:39:15.612Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/TrackDefault/type": {
-    "modified": "2020-10-15T21:39:15.828Z",
-    "contributors": [
-      "sideshowbarker",
-      "connorshea",
-      "fscholz",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/TrackDefaultList": {
-    "modified": "2020-10-15T21:39:26.888Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/TrackDefaultList/TrackDefaultList": {
-    "modified": "2020-10-15T21:39:30.536Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/TrackDefaultList/length": {
-    "modified": "2020-10-15T21:39:30.537Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "chrisdavidmills"
     ]
   },
   "Web/API/TrackEvent": {

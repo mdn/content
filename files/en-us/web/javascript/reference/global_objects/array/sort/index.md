@@ -71,20 +71,16 @@ Unicode order. All `undefined` elements are sorted to the end of the array.
 If `compareFunction` is supplied, all non-`undefined` array
 elements are sorted according to the return value of the compare function (all
 `undefined` elements are sorted to the end of the array, with no call to
-`compareFunction`). If `a` and `b` are two elements
-being compared, then:
+`compareFunction`).
 
-- If `compareFunction(a, b)` returns a value > than 0, sort `b` before `a`.
-- If `compareFunction(a, b)` returns a value < than 0, sort `a` before `b`.
-- If `compareFunction(a, b)` returns 0, `a` and `b` are considered equal.
+| `compareFunction(a, b)` return value | sort order                         |
+|--------------------------------------|------------------------------------|
+| > 0                                  | sort `b` before `a`                |
+| < 0                                  | sort `a` before `b`                |
+| === 0                                | keep original order of `a` and `b` |
 
-  > **Note:** The [ECMAScript Standard, 10th edition](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-intro) (2019)
-  > algorithm mandates stable sorting, which means elements that compare equal must remain in their original order with respect to each other.
-  > This behaviour may not be respected by older browsers.
-
-- `compareFunction(a, b)` must always return the same value when given a
-  specific pair of elements `a` and `b` as its two arguments. If
-  inconsistent results are returned, then the sort order is undefined.
+> **Note:** `compareFunction(a, b)` must always return the same value when given a specific pair of
+> elements `a` and `b` as its two arguments.
 
 So, the compare function has the following form:
 

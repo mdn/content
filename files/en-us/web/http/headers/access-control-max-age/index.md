@@ -34,12 +34,11 @@ Access-Control-Max-Age: <delta-seconds>
 ## Directives
 
 - \<delta-seconds>
-  - : Maximum number of seconds the results can be cached.
+  - : Maximum number of seconds the results can be cached, as an unsigned non-negative integer.
     Firefox [caps this at 24 hours](https://searchfox.org/mozilla-central/source/netwerk/protocol/http/nsCORSListenerProxy.cpp#1118) (86400 seconds).
     Chromium (prior to v76) [caps at 10 minutes](https://cs.chromium.org/chromium/src/services/network/public/cpp/cors/preflight_result.cc?l=36&rcl=52002151773d8cd9ffc5f557cd7cc880fddcae3e) (600 seconds).
     Chromium (starting in v76) [caps at 2 hours](https://cs.chromium.org/chromium/src/services/network/public/cpp/cors/preflight_result.cc?l=31&rcl=49e7c0b4886cac1f3d09dc046bd528c9c811a0fa) (7200 seconds).
-    Chromium also specifies a default value of 5 seconds.
-    A value of **-1** will disable caching, requiring a preflight OPTIONS check for all calls.
+    The default value is 5 seconds.
 
 ## Examples
 

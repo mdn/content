@@ -59,7 +59,6 @@ observer.observe({ entryTypes: ["element"] });
 
 ## See also
 
-- {{domxref("PerformanceFrameTiming")}}
 - {{domxref("PerformanceNavigationTiming")}}
 - {{domxref("PerformanceResourceTiming")}}
 - {{domxref("PerformanceMark")}}
