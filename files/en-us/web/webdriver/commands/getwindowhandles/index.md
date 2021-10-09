@@ -8,46 +8,32 @@ tags:
   - WebDriver
 browser-compat: webdriver.commands.GetWindowHandles
 ---
-<p>The <em>Get Window Handles</em> <a href="/en-US/docs/Web/WebDriver/Command">command</a> of the <a href="/en-US/docs/Web/WebDriver">WebDriver</a> API returns a list of all <code><a href="/en-US/docs/Web/WebDriver/WebWindow">WebWindow</a></code>s. Each tab or window, depending on whether you are using a tabbed browser, is associated by a <em>window handle</em> that is used as a reference when <a href="/en-US/docs/Web/WebDriver/Commands/SwitchToWindow">switching to the window</a>.</p>
+The _Get Window Handles_ [command](/en-US/docs/Web/WebDriver/Command) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns a list of all [`WebWindow`](/en-US/docs/Web/WebDriver/WebWindow)s. Each tab or window, depending on whether you are using a tabbed browser, is associated by a _window handle_ that is used as a reference when [switching to the window](/en-US/docs/Web/WebDriver/Commands/SwitchToWindow).
 
-<p>In order to determine whether or not a particular interaction with the browser opens a new window, one can obtain the set of window handles before the interaction is performed and compare it with the set after the action is performed.</p>
+In order to determine whether or not a particular interaction with the browser opens a new window, one can obtain the set of window handles before the interaction is performed and compare it with the set after the action is performed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Method</th>
-   <th scope="col">URI template</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code><a href="/en-US/docs/Web/HTTP/Methods/GET">GET</a></code></td>
-   <td><code>/session/{<em>session id</em>}/window/handles</code></td>
-  </tr>
- </tbody>
-</table>
+| Method                                    | URI template                           |
+| ----------------------------------------- | -------------------------------------- |
+| [`GET`](/en-US/docs/Web/HTTP/Methods/GET) | `/session/{session id}/window/handles` |
 
-<h3 id="URL_parameters">URL parameters</h3>
+### URL parameters
 
-<dl>
- <dt><code>session id</code></dt>
- <dd>Identifier of the session.</dd>
-</dl>
+- `session id`
+  - : Identifier of the session.
 
-<h3 id="Errors">Errors</h3>
+### Errors
 
-<dl>
- <dt>Invalid session ID</dt>
- <dd>Session does not exist.</dd>
-</dl>
+- Invalid session ID
+  - : Session does not exist.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>C#:</p>
+C#:
 
-<pre class="brush: cpp">using System.Collections.ObjectModel;
+```cpp
+using System.Collections.ObjectModel;
 using OpenQA.Selenium.Firefox;
 
 namespace MDNWebDriverExamples
@@ -60,26 +46,22 @@ namespace MDNWebDriverExamples
 
             session.ExecuteScript("window.open()");
 
-            ReadOnlyCollection&lt;string&gt; currentWindowHandles = session.WindowHandles;
+            ReadOnlyCollection<string> currentWindowHandles = session.WindowHandles;
         }
     }
 }
+```
 
-</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-
-<ul>
- <li><a href="/en-US/docs/Web/WebDriver/Commands/SwitchToWindow">Switch To Window</a> command</li>
- <li><a href="/en-US/docs/Web/WebDriver/Commands/GetWindowHandle">Get Window Handle</a> command</li>
- <li><a href="/en-US/docs/Web/WebDriver/Commands/CloseWindow">Close Window</a> command</li>
-</ul>
+- [Switch To Window](/en-US/docs/Web/WebDriver/Commands/SwitchToWindow) command
+- [Get Window Handle](/en-US/docs/Web/WebDriver/Commands/GetWindowHandle) command
+- [Close Window](/en-US/docs/Web/WebDriver/Commands/CloseWindow) command

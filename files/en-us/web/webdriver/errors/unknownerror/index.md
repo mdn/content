@@ -7,13 +7,11 @@ tags:
   - Unknown error
   - WebDriver
 ---
-<p>The <strong>unknown element</strong> error is a <a href="/en-US/docs/Web/WebDriver/Errors">WebDriver error</a> that occurs when an unspecified error occurs in the driver whilst processing a <a href="/en-US/docs/Web/WebDriver/Commands" rel="nofollow">command</a>.</p>
+The **unknown element** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Errors) that occurs when an unspecified error occurs in the driver whilst processing a [command](/en-US/docs/Web/WebDriver/Commands).
 
-<p>An unknown error will usually be specific to a particular driver, so it’s a good idea to read the error message, if any, for an indication of what happened.</p>
+An unknown error will usually be specific to a particular driver, so it’s a good idea to read the error message, if any, for an indication of what happened.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/WebDriver/Errors">List of WebDriver errors</a></li>
- <li><a href="/en-US/docs/Web/WebDriver/Commands">List of WebDriver commands</a></li>
-</ul>
+- [List of WebDriver errors](/en-US/docs/Web/WebDriver/Errors)
+- [List of WebDriver commands](/en-US/docs/Web/WebDriver/Commands)

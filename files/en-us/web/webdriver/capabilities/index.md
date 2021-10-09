@@ -6,42 +6,45 @@ tags:
   - WebDriver
   - capabilities
 ---
-<p>WebDriver <strong><dfn>capabilities</dfn></strong> are used to communicate the features supported by a <a href="/en-US/docs/Web/WebDriver">session</a>. A client may also use capabilities to define which features it requires the driver to satisfy when <a href="/en-US/docs/Web/WebDriver/Commands/NewSession">creating a new session</a>.</p>
+WebDriver **_capabilities_** are used to communicate the features supported by a [session](/en-US/docs/Web/WebDriver). A client may also use capabilities to define which features it requires the driver to satisfy when [creating a new session](/en-US/docs/Web/WebDriver/Commands/NewSession).
 
-<p>When a WebDriver session is created it returns a set of capabilities describing the negotiated, effective capabilities of the session. Some of the capabilities included in this set are <a href="#list-of-capabilities">standard and shared between all browsers</a>, but the set may also contain <a href="#vendor-specific-capabilities">browser-specific capabilities</a> and these are always prefixed.</p>
+When a WebDriver session is created it returns a set of capabilities describing the negotiated, effective capabilities of the session. Some of the capabilities included in this set are [standard and shared between all browsers](#list-of-capabilities), but the set may also contain [browser-specific capabilities](#vendor-specific-capabilities) and these are always prefixed.
 
-<h2 id="Capabilities_negotiation">Capabilities negotiation</h2>
+## Capabilities negotiation
 
-<p>Capabilities can be used to require a driver that supports a certain subset of features. This can be used to require certain browser features, such as the <a href="/en-US/docs/Web/WebDriver/Capabilities/setWindowRect">ability to resize the window dimensions</a>, but is also used in distributed environments to select a particular browser configuration from a matrix of choices.</p>
+Capabilities can be used to require a driver that supports a certain subset of features. This can be used to require certain browser features, such as the [ability to resize the window dimensions](/en-US/docs/Web/WebDriver/Capabilities/setWindowRect), but is also used in distributed environments to select a particular browser configuration from a matrix of choices.
 
-<p>Selecting a particular web browser or platform only makes sense when you use a remote WebDriver. In this case the client makes contact with WebDriver through one or more intermediary nodes which negotiates which driver to return to you based on the capabilities it receives.</p>
+Selecting a particular web browser or platform only makes sense when you use a remote WebDriver. In this case the client makes contact with WebDriver through one or more intermediary nodes which negotiates which driver to return to you based on the capabilities it receives.
 
-<p>The capabilities object is a selection mechanism that limits which driver configurations the server will return. If you request a Firefox instance using <code>browserName</code> and Firefox is not installed on the remote, or macOS from a remote that only supports Linux, you may be out of luck. But occasionally you may not care which specific operating system or web browser your session has: you just want a session that has some <em>capability</em>.</p>
+The capabilities object is a selection mechanism that limits which driver configurations the server will return. If you request a Firefox instance using `browserName` and Firefox is not installed on the remote, or macOS from a remote that only supports Linux, you may be out of luck. But occasionally you may not care which specific operating system or web browser your session has: you just want a session that has some _capability_.
 
-<p>The selection process, or the <em>capabilities negotiation</em>, is done through <code>alwaysMatch</code> and <code>firstMatch</code>.</p>
+The selection process, or the _capabilities negotiation_, is done through `alwaysMatch` and `firstMatch`.
 
-<h3 id="alwaysMatch"><code>alwaysMatch</code></h3>
+### `alwaysMatch`
 
-<p>As the name suggests, capabilities described inside the <code>alwaysMatch</code> capabilities object are features you <em>require</em> the session to have. If the server can not provide what features you require, it will fail.</p>
+As the name suggests, capabilities described inside the `alwaysMatch` capabilities object are features you _require_ the session to have. If the server can not provide what features you require, it will fail.
 
-<p>If for example you ask for Firefox version 62 on a system that only has 60 installed, the session creation will fail:</p>
+If for example you ask for Firefox version 62 on a system that only has 60 installed, the session creation will fail:
 
-<pre class="brush: json">{
+```json
+{
   "capabilities": {
     "alwaysMatch": {
       "browserName": "firefox",
       "browserVersion": "60"
     }
   }
-}</pre>
+}
+```
 
-<h3 id="firstMatch"><code>firstMatch</code></h3>
+### `firstMatch`
 
-<p>The <code>firstMatch</code> field accepts <em>an array</em> of capabilities objects which will be matched in turn until one matches what the server can provide, or it will fail.</p>
+The `firstMatch` field accepts _an array_ of capabilities objects which will be matched in turn until one matches what the server can provide, or it will fail.
 
-<p>This can be useful when you want a driver that runs on macOS or Linux, but not Windows:</p>
+This can be useful when you want a driver that runs on macOS or Linux, but not Windows:
 
-<pre class="brush: json">{
+```json
+{
   "capabilities": {
     "firstMatch": [
       {"platformName": "macos"},
@@ -49,13 +52,14 @@ tags:
     ]
   }
 }
-</pre>
+```
 
-<h3 id="Combining_alwaysMatch_and_firstMatch">Combining <code>alwaysMatch</code> and <code>firstMatch</code></h3>
+### Combining `alwaysMatch` and `firstMatch`
 
-<p><code>firstMatch</code> can of course be combined with <code>alwaysMatch</code> to narrow down the selection. If for example you a driver that runs on macOS or Linux but it <em>has</em> to be Firefox:</p>
+`firstMatch` can of course be combined with `alwaysMatch` to narrow down the selection. If for example you a driver that runs on macOS or Linux but it _has_ to be Firefox:
 
-<pre class="brush: json">{
+```json
+{
   "capabilities": {
     "alwaysMatch": {
       "browserName": "firefox"
@@ -65,27 +69,31 @@ tags:
       {"platformName": "linux"}
     ]
   }
-}</pre>
+}
+```
 
-<p>The previous example is exactly equivalent to putting the Firefox requirement in each <code>firstMatch</code> arm:</p>
+The previous example is exactly equivalent to putting the Firefox requirement in each `firstMatch` arm:
 
-<pre class="brush: json">{
+```json
+{
   "capabilities":{
     "firstMatch":[
       {"browserName": "firefox", "platformName":"macos"},
       {"browserName": "firefox", "platformName":"linux"}
     ]
   }
-}</pre>
+}
+```
 
-<p>Which you choose of the two preceding examples is not important, but it can matter when pass along browser configuration. To avoid unnecessarily repeating data, such as profiles, it is advisable to make use of <code>alwaysMatch</code> so that this data is only transmitted across the wire once:</p>
+Which you choose of the two preceding examples is not important, but it can matter when pass along browser configuration. To avoid unnecessarily repeating data, such as profiles, it is advisable to make use of `alwaysMatch` so that this data is only transmitted across the wire once:
 
-<pre class="brush: json">{
+```json
+{
   "capabilities": {
     "alwaysMatch": {
       "browserName": "firefox",
       "moz:firefoxOptions": {
-        "profile": "&lt;base64 encoded profile&gt;",
+        "profile": "<base64 encoded profile>",
         "args": ["-headless"],
         "prefs": {"dom.ipc.processCount": 8},
         "log":{"level": "trace"}
@@ -96,54 +104,55 @@ tags:
       {"platformName": "linux"}
     ]
   }
-}</pre>
+}
+```
 
-<h2 id="List_of_capabilities">List of capabilities</h2>
+## List of capabilities
 
-<ul>
- <li><code><a href="/en-US/docs/Web/WebDriver/Capabilities/browserName" id="browserName">browserName</a></code></li>
- <li><code><a href="/en-US/docs/Web/WebDriver/Capabilities/browserVersion" id="browserVersion">browserVersion</a></code></li>
- <li><code><a href="/en-US/docs/Web/WebDriver/Capabilities/platformName" id="platformName">platformName</a></code></li>
- <li><code><a href="/en-US/docs/Web/WebDriver/Capabilities/acceptInsecureCerts">acceptInsecureCerts</a></code>: This capability communicates whether expired or invalid <a href="/en-US/docs/Glossary/TLS">TLS certificates</a> are checked when <a href="/en-US/docs/Web/WebDriver/Commands/NavigateTo">navigating</a>. If the capability is false, an <a href="/en-US/docs/Web/WebDriver/Errors/InsecureCertificate">insecure certificate</a> error will be returned as navigation encounters domains with certificate problems. Otherwise, self-signed or otherwise invalid certificates will be implicitly trusted by the browser on navigation. The capability has effect for the lifetime of the session.</li>
- <li><code><a href="/en-US/docs/Web/WebDriver/Capabilities/pageLoadStrategy" id="pageLoadStrategy">pageLoadStrategy</a></code></li>
- <li><code><a href="/en-US/docs/Web/WebDriver/Capabilities/proxy" id="proxy">proxy</a></code></li>
- <li><code><a href="/en-US/docs/Web/WebDriver/Capabilities/setWindowRect" id="setWindowRect">setWindowRect</a></code></li>
- <li><code><a href="/en-US/docs/Web/WebDriver/Capabilities/timeouts" id="timeouts">timeouts</a></code></li>
- <li><code><a href="/en-US/docs/Web/WebDriver/Capabilities/unhandledPromptBehavior" id="unhandledPromptBehavior">unhandledPromptBehavior</a></code></li>
-</ul>
+- [`browserName`](/en-US/docs/Web/WebDriver/Capabilities/browserName)
+- [`browserVersion`](/en-US/docs/Web/WebDriver/Capabilities/browserVersion)
+- [`platformName`](/en-US/docs/Web/WebDriver/Capabilities/platformName)
+- [`acceptInsecureCerts`](/en-US/docs/Web/WebDriver/Capabilities/acceptInsecureCerts): This capability communicates whether expired or invalid [TLS certificates](/en-US/docs/Glossary/TLS) are checked when [navigating](/en-US/docs/Web/WebDriver/Commands/NavigateTo). If the capability is false, an [insecure certificate](/en-US/docs/Web/WebDriver/Errors/InsecureCertificate) error will be returned as navigation encounters domains with certificate problems. Otherwise, self-signed or otherwise invalid certificates will be implicitly trusted by the browser on navigation. The capability has effect for the lifetime of the session.
+- [`pageLoadStrategy`](/en-US/docs/Web/WebDriver/Capabilities/pageLoadStrategy)
+- [`proxy`](/en-US/docs/Web/WebDriver/Capabilities/proxy)
+- [`setWindowRect`](/en-US/docs/Web/WebDriver/Capabilities/setWindowRect)
+- [`timeouts`](/en-US/docs/Web/WebDriver/Capabilities/timeouts)
+- [`unhandledPromptBehavior`](/en-US/docs/Web/WebDriver/Capabilities/unhandledPromptBehavior)
 
-<h2 id="Vendor-specific_capabilities">Vendor-specific capabilities</h2>
+## Vendor-specific capabilities
 
-<p>In addition to the <a href="#list-of-capabilities">standard capabilities</a> WebDriver allows third-parties to <em>extend</em> the set of capabilities to match their needs. Browser vendors and suppliers of drivers typically use extension capabilities to provide configuration to the browser, but they can also be used by intermediaries for arbitrary blobs of information.</p>
+In addition to the [standard capabilities](#list-of-capabilities) WebDriver allows third-parties to _extend_ the set of capabilities to match their needs. Browser vendors and suppliers of drivers typically use extension capabilities to provide configuration to the browser, but they can also be used by intermediaries for arbitrary blobs of information.
 
-<ul>
- <li><a href="/en-US/docs/Web/WebDriver/Capabilities/firefoxOptions">Firefox capabilities</a> (<code>moz:firefoxOptions</code>)</li>
- <li><a href="/en-US/docs/Web/WebDriver/Capabilities/goog/chromeOptions">Chrome capabilities</a> (<code>goog:chromeOptions</code>)</li>
-</ul>
+- [Firefox capabilities](/en-US/docs/Web/WebDriver/Capabilities/firefoxOptions) (`moz:firefoxOptions`)
+- [Chrome capabilities](/en-US/docs/Web/WebDriver/Capabilities/goog/chromeOptions) (`goog:chromeOptions`)
 
-<h2 id="Legacy_capabilities">Legacy capabilities</h2>
+## Legacy capabilities
 
-<p>The majority of Selenium clients use <code>desiredCapabilities</code> and <code>requiredCapabilities</code> to configure the new session. These are very similar to <code>firstMatch</code> and <code>alwaysMatch</code> described above. Some drivers support these legacy capabilities, but they are deprecated and should be avoided.</p>
+The majority of Selenium clients use `desiredCapabilities` and `requiredCapabilities` to configure the new session. These are very similar to `firstMatch` and `alwaysMatch` described above. Some drivers support these legacy capabilities, but they are deprecated and should be avoided.
 
-<p>Converting a legacy capabilities object into the new style is easy. The first thing you need to know is that <code>alwaysMatch</code>/<code>firstMatch</code> is <em>always</em> wrapped inside a <code>capabilities</code> JSON Object, whereas <code>desiredCapabilities</code>/<code>requiredCapabilities</code> exists at the top level. Generally speaking, anything that has previously gone in <code>desiredCapabilities</code> should go in a <code>firstMatch</code> branch arm to achieve the same effect.</p>
+Converting a legacy capabilities object into the new style is easy. The first thing you need to know is that `alwaysMatch`/`firstMatch` is _always_ wrapped inside a `capabilities` JSON Object, whereas `desiredCapabilities`/`requiredCapabilities` exists at the top level. Generally speaking, anything that has previously gone in `desiredCapabilities` should go in a `firstMatch` branch arm to achieve the same effect.
 
-<p>Take this deprecated capabilities object:</p>
+Take this deprecated capabilities object:
 
-<pre class="brush: json">{"desiredCapabilities": {"browserName": "firefox"}}</pre>
+```json
+{"desiredCapabilities": {"browserName": "firefox"}}
+```
 
-<p>This would be functionally equivalent in the new style:</p>
+This would be functionally equivalent in the new style:
 
-<pre class="brush: json">{"capabilities": {"firstMatch": [{"browserName": "firefox"}]}}</pre>
+```json
+{"capabilities": {"firstMatch": [{"browserName": "firefox"}]}}
+```
 
-<p>But because there is only one <code>firstMatch</code> arm, and we know that session creation will fail if the server doesn’t have a Firefox installed, it is also equivalent to this:</p>
+But because there is only one `firstMatch` arm, and we know that session creation will fail if the server doesn’t have a Firefox installed, it is also equivalent to this:
 
-<pre class="brush: json">{"capabilities": {"alwaysMatch": {"browserName": "firefox"}}}</pre>
+```json
+{"capabilities": {"alwaysMatch": {"browserName": "firefox"}}}
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/WebDriver/Commands/NewSession">New Session</a> command</li>
- <li><a href="/en-US/docs/Web/WebDriver/Commands/NewSession">Delete Session</a> command</li>
-</ul>
+- [New Session](/en-US/docs/Web/WebDriver/Commands/NewSession) command
+- [Delete Session](/en-US/docs/Web/WebDriver/Commands/NewSession) command
 
-<p>{{QuickLinksWithSubpages}}</p>
+{{QuickLinksWithSubpages}}

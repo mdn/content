@@ -8,64 +8,45 @@ tags:
   - WebDriver
 browser-compat: webdriver.commands.SetTimeouts
 ---
-<p>The <em>Set Timeouts</em> <a href="/en-US/docs/Web/WebDriver/Commands">command</a> of the <a href="/en-US/docs/Web/WebDriver">WebDriver</a> API sets the timeouts associated with the current session. The <a href="/en-US/docs/Web/WebDriver/Timeouts">session timeout</a> durations control such behavior as timeouts on <a href="/en-US/docs/Web/WebDriver/Timeouts#script">script injection</a>, <a href="/en-US/docs/Web/WebDriver/Timeouts#pageload">document navigation</a>, and <a href="/en-US/docs/Web/WebDriver/Timeouts#implicit">element retrieval</a>.</p>
+The _Set Timeouts_ [command](/en-US/docs/Web/WebDriver/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API sets the timeouts associated with the current session. The [session timeout](/en-US/docs/Web/WebDriver/Timeouts) durations control such behavior as timeouts on [script injection](/en-US/docs/Web/WebDriver/Timeouts#script), [document navigation](/en-US/docs/Web/WebDriver/Timeouts#pageload), and [element retrieval](/en-US/docs/Web/WebDriver/Timeouts#implicit).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Method</th>
-   <th scope="col">URI template</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code><a href="/en-US/docs/Web/HTTP/Methods/GET">POST</a></code></td>
-   <td><code>/session/{<em>session id</em>}/timeouts</code></td>
-  </tr>
- </tbody>
-</table>
+| Method                                     | URI template                     |
+| ------------------------------------------ | -------------------------------- |
+| [`POST`](/en-US/docs/Web/HTTP/Methods/GET) | `/session/{session id}/timeouts` |
 
-<h3 id="URL_parameters">URL parameters</h3>
+### URL parameters
 
-<dl>
- <dt><code>session id</code></dt>
- <dd>Identifier of the session.</dd>
-</dl>
+- `session id`
+  - : Identifier of the session.
 
-<h3 id="Payload">Payload</h3>
+### Payload
 
-<p>The input is a <code><a href="/en-US/docs/Web/WebDriver/Timeouts">Timeouts</a></code> object:</p>
+The input is a [`Timeouts`](/en-US/docs/Web/WebDriver/Timeouts) object:
 
-<dl>
- <dt><code>implicit</code></dt>
- <dd>Time in milliseconds to retry the <a href="/en-US/docs/Web/WebDriver/WebElement">element location strategy</a> when finding an element. This defaults to 0, meaning the strategy is run only once.</dd>
- <dt><code>pageLoad</code></dt>
- <dd>Time in milliseconds to wait for the document to finish loading. By default, WebDriver will wait five minutes (or 300,000 ms).</dd>
- <dt><code>script</code></dt>
- <dd>Scripts injected with <a href="/en-US/docs/Web/WebDriver/Commands/ExecuteScript">Execute Script</a> or <a href="/en-US/docs/Web/WebDriver/Commands/ExecuteAsyncScript">Execute Async Script</a> will run until they hit the script timeout duration, which is also given in milliseconds. The scripts will then be interrupted and a <a href="/en-US/docs/Web/WebDriver/Errors/ScriptTimeoutError">script timeout error</a> will be returned. Defaults to 30 seconds (or 30,000 ms).</dd>
-</dl>
+- `implicit`
+  - : Time in milliseconds to retry the [element location strategy](/en-US/docs/Web/WebDriver/WebElement) when finding an element. This defaults to 0, meaning the strategy is run only once.
+- `pageLoad`
+  - : Time in milliseconds to wait for the document to finish loading. By default, WebDriver will wait five minutes (or 300,000 ms).
+- `script`
+  - : Scripts injected with [Execute Script](/en-US/docs/Web/WebDriver/Commands/ExecuteScript) or [Execute Async Script](/en-US/docs/Web/WebDriver/Commands/ExecuteAsyncScript) will run until they hit the script timeout duration, which is also given in milliseconds. The scripts will then be interrupted and a [script timeout error](/en-US/docs/Web/WebDriver/Errors/ScriptTimeoutError) will be returned. Defaults to 30 seconds (or 30,000 ms).
 
-<h3 id="Errors">Errors</h3>
+### Errors
 
-<dl>
- <dt><a href="/en-US/docs/Web/WebDriver/Errors/InvalidSessionID">Invalid session ID</a></dt>
- <dd>Session does not exist.</dd>
-</dl>
+- [Invalid session ID](/en-US/docs/Web/WebDriver/Errors/InvalidSessionID)
+  - : Session does not exist.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><code><a href="/en-US/docs/Web/WebDriver/Timeouts">Timeouts</a></code> object</li>
- <li><a href="/en-US/docs/Web/WebDriver/Commands/SetTimeouts">Set Timeouts</a> command</li>
- <li><a href="/en-US/docs/Web/WebDriver/Commands">List of WebDriver commands</a></li>
-</ul>
+- [`Timeouts`](/en-US/docs/Web/WebDriver/Timeouts) object
+- [Set Timeouts](/en-US/docs/Web/WebDriver/Commands/SetTimeouts) command
+- [List of WebDriver commands](/en-US/docs/Web/WebDriver/Commands)

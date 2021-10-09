@@ -8,109 +8,91 @@ tags:
   - WebDriver
 browser-compat: webdriver.commands.SetWindowRect
 ---
-<p>The <em>Set Window Rect</em> <a href="/en-US/docs/Web/WebDriver/Commands">command</a> of the <a href="/en-US/docs/Web/WebDriver">WebDriver</a> API alters the size and position of the operating system window associated with the current <code><a href="/en-US/docs/Web/API/Window">window</a></code>. The command acts as the setter of <a href="/en-US/docs/Web/WebDriver/Commands/GetWindowRect">Get Window Rect</a>, which return object you can pass directly as this command’s payload.</p>
+The _Set Window Rect_ [command](/en-US/docs/Web/WebDriver/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API alters the size and position of the operating system window associated with the current [`window`](/en-US/docs/Web/API/Window). The command acts as the setter of [Get Window Rect](/en-US/docs/Web/WebDriver/Commands/GetWindowRect), which return object you can pass directly as this command’s payload.
 
-<p>Certain subsets of devices do not support setting the window dimensions or its position. On these configurations the command will return an <a href="/en-US/docs/Web/WebDriver/Errors/UnsupportedOperation">unsupported operating</a> error. To avoid running into situations where calling this might error it is possible to call it conditionally on whether the <a href="/en-US/docs/Web/WebDriver/Capabilities/setWindowRect"><code>setWindowRect</code> capability</a> is set to true for the session.</p>
+Certain subsets of devices do not support setting the window dimensions or its position. On these configurations the command will return an [unsupported operating](/en-US/docs/Web/WebDriver/Errors/UnsupportedOperation) error. To avoid running into situations where calling this might error it is possible to call it conditionally on whether the [`setWindowRect` capability](/en-US/docs/Web/WebDriver/Capabilities/setWindowRect) is set to true for the session.
 
-<p>Setting the window rect takes <code>x</code>, <code>y</code>, <code>width</code>, and <code>height</code> as input. All the fields are optional, e.g. the command may be called with an empty object, and in this case it will act as a no-op. To set the position both of <code>x</code> and <code>y</code> are required, and correspondingly both <code>width</code> and <code>height</code> are required for altering the window’s dimensions.</p>
+Setting the window rect takes `x`, `y`, `width`, and `height` as input. All the fields are optional, e.g. the command may be called with an empty object, and in this case it will act as a no-op. To set the position both of `x` and `y` are required, and correspondingly both `width` and `height` are required for altering the window’s dimensions.
 
-<p>When setting the width or height, it is not guaranteed that the resulting window size will exactly match that which was requested. The driver is expected to clamp values that are larger than the physical screen dimensions, or smaller than the minimum window size. Some drivers may also have other limitations such as not being able to resize in single-pixel increments. For this reason, the returned <code>width</code> and <code>height</code> might not exactly match <code><a href="/en-US/docs/Web/API/Window/outerWidth">Window.outerWidth</a></code> and <code><a href="/en-US/docs/Web/API/Window/outerHeight">Window.outerHeight</a></code>.</p>
+When setting the width or height, it is not guaranteed that the resulting window size will exactly match that which was requested. The driver is expected to clamp values that are larger than the physical screen dimensions, or smaller than the minimum window size. Some drivers may also have other limitations such as not being able to resize in single-pixel increments. For this reason, the returned `width` and `height` might not exactly match [`Window.outerWidth`](/en-US/docs/Web/API/Window/outerWidth) and [`Window.outerHeight`](/en-US/docs/Web/API/Window/outerHeight).
 
-<p>Setting the window’s position is similar in nature to calling <a href="/en-US/docs/Web/API/Window/moveTo"><code>Window.moveTo(x, y)</code></a>, but differences itself by bypassing security restrictions related to window manipulation.</p>
+Setting the window’s position is similar in nature to calling [`Window.moveTo(x, y)`](/en-US/docs/Web/API/Window/moveTo), but differences itself by bypassing security restrictions related to window manipulation.
 
-<p>The Set Window Rect command is blocking.</p>
+The Set Window Rect command is blocking.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Method</th>
-   <th scope="col">URI template</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="/en-US/docs/Web/HTTP/Methods/POST">POST</a></td>
-   <td><code>/session/{session id}/window/rect</code></td>
-  </tr>
- </tbody>
-</table>
+| Method                                    | URI template                        |
+| ----------------------------------------- | ----------------------------------- |
+| [POST](/en-US/docs/Web/HTTP/Methods/POST) | `/session/{session id}/window/rect` |
 
-<h3 id="URL_parameters">URL parameters</h3>
+### URL parameters
 
-<dl>
- <dt><code>session id</code></dt>
- <dd>Identifier of the session.</dd>
-</dl>
+- `session id`
+  - : Identifier of the session.
 
-<h3 id="Payload">Payload</h3>
+### Payload
 
-<p>The input is a <code><a href="/en-US/docs/Web/WebDriver/WindowRect">WindowRect</a></code> object:</p>
+The input is a [`WindowRect`](/en-US/docs/Web/WebDriver/WindowRect) object:
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Horizontal position of the <code><a href="/en-US/docs/Web/API/Window">window</a></code>, which equivalent to <code><a href="/en-US/docs/Web/API/Window/screenX">Window.screenX</a></code>. Must be a number in the −(2^31</) to 2^31 − 1 range, null, or undefined.</dd>
- <dt><code>y</code></dt>
- <dd>Vertical position of the <code><a href="/en-US/docs/Web/API/Window">window</a></code>, which is equivalent to <code><a href="/en-US/docs/Web/API/Window/screenY">Window.screenY</a></code>. Must be a number in the −(2^31) to 2^31 − 1 range, null, or undefined.</dd>
- <dt><code>width</code></dt>
- <dd>Outer width of the <code><a href="/en-US/docs/Web/API/Window">window</a></code>, which is equivalent to <code><a href="/en-US/docs/Web/API/Window/outerWidth">Window.outerWidth</a></code>. Must be a number in the 0 to 2^31 − 1 range, null, or undefined.</dd>
- <dt><code>height</code></dt>
- <dd>Outer width of the <code><a href="/en-US/docs/Web/API/Window">window</a></code>, which is equivalent to <code><a href="/en-US/docs/Web/API/Window/outerHeight">Window.outerHeight</a></code>. Must be a number in the 0 to 2^31 − 1 range, null, or undefined.</dd>
-</dl>
+- `x`
 
-<h3 id="Response">Response</h3>
+  - : Horizontal position of the [`window`](/en-US/docs/Web/API/Window), which equivalent to [`Window.screenX`](/en-US/docs/Web/API/Window/screenX). Must be a number in the −(2^31
 
-<p>The response payload is a <code><a href="/en-US/docs/Web/WebDriver/WebWindow">WindowRect</a></code><a href="/en-US/docs/Web/WebDriver/WebWindow">:</a></p>
+    <!--) to 2^31 − 1 range, null, or undefined.</dd-->
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Horizontal position of the operating system window associated with <code><a href="/en-US/docs/Web/API/Window">window</a></code>, equivalent to <code><a href="/en-US/docs/Web/API/Window/screenX">Window.screenX</a></code>.</dd>
- <dt><code>y</code></dt>
- <dd>Vertical position of the operating system window associated with <code><a href="/en-US/docs/Web/API/Window">window</a></code>, equivalent to <code><a href="/en-US/docs/Web/API/Window/screenY">Window.screenY</a></code>.</dd>
- <dt><code>width</code></dt>
- <dd>Width of outer bounds of the operating system window associated with <code><a href="/en-US/docs/Web/API/Window">window</a></code>, equivalent to <code><a href="/en-US/docs/Web/API/Window/outerWidth">Window.outerWidth</a></code>.</dd>
- <dt><code>height</code></dt>
- <dd>Height of the outer bounds of the operating system window associated with <code><a href="/en-US/docs/Web/API/Window">window</a></code>, equivalent to <code><a href="/en-US/docs/Web/API/Window/outerHeight">Window.outerHeight</a></code>.</dd>
-</dl>
+- `y`
+  - : Vertical position of the [`window`](/en-US/docs/Web/API/Window), which is equivalent to [`Window.screenY`](/en-US/docs/Web/API/Window/screenY). Must be a number in the −(2^31) to 2^31 − 1 range, null, or undefined.
+- `width`
+  - : Outer width of the [`window`](/en-US/docs/Web/API/Window), which is equivalent to [`Window.outerWidth`](/en-US/docs/Web/API/Window/outerWidth). Must be a number in the 0 to 2^31 − 1 range, null, or undefined.
+- `height`
+  - : Outer width of the [`window`](/en-US/docs/Web/API/Window), which is equivalent to [`Window.outerHeight`](/en-US/docs/Web/API/Window/outerHeight). Must be a number in the 0 to 2^31 − 1 range, null, or undefined.
 
-<h3 id="Errors">Errors</h3>
+### Response
 
-<dl>
- <dt>Invalid argument</dt>
- <dd>If any of the fields in the <code><a href="/en-US/docs/Web/WebDriver/WindowRect">WindowRect</a></code> payload object do not meet the type or bounds constraints, or if only one of the <code>x</code>/<code>y</code> pair or <code>width</code>/<code>height</code> pair fields are specified.</dd>
- <dt><a href="/en-US/docs/Web/WebDriver/Errors/InvalidSessionID">Invalid session ID</a></dt>
- <dd>Session does not exist.</dd>
- <dt><a href="/en-US/docs/Web/WebDriver/Errors/NoSuchWindow">No such window</a></dt>
- <dd>If the <code><a href="/en-US/docs/Web/API/Window">window</a></code> has been closed.</dd>
- <dt><a href="/en-US/docs/Web/WebDriver/Errors/UnexpectedAlertOpen">Unexpected alert open</a></dt>
- <dd>A user prompt, such as <code><a href="/en-US/docs/Web/API/Window/alert">window.alert</a></code>, blocks execution of command until it is dealt with.</dd>
- <dt><a href="/en-US/docs/Web/WebDriver/Errors/UnsupportedOperation">Unsupported operation</a></dt>
- <dd>If the driver does not support altering the window’s size or position. This is usually the case on mobile devices, where the browser has a set dimension and cannot be moved around on the screen.<br>
- <br>
- You can inspect the <a href="/en-US/docs/Web/WebDriver/Capabilities/setWindowRect"><code>setWindowRect</code> capability</a> to tell if the device supports this command.</dd>
-</dl>
+The response payload is a [`WindowRect`](/en-US/docs/Web/WebDriver/WebWindow)[:](/en-US/docs/Web/WebDriver/WebWindow)
 
-<h2 id="Specifications">Specifications</h2>
+- `x`
+  - : Horizontal position of the operating system window associated with [`window`](/en-US/docs/Web/API/Window), equivalent to [`Window.screenX`](/en-US/docs/Web/API/Window/screenX).
+- `y`
+  - : Vertical position of the operating system window associated with [`window`](/en-US/docs/Web/API/Window), equivalent to [`Window.screenY`](/en-US/docs/Web/API/Window/screenY).
+- `width`
+  - : Width of outer bounds of the operating system window associated with [`window`](/en-US/docs/Web/API/Window), equivalent to [`Window.outerWidth`](/en-US/docs/Web/API/Window/outerWidth).
+- `height`
+  - : Height of the outer bounds of the operating system window associated with [`window`](/en-US/docs/Web/API/Window), equivalent to [`Window.outerHeight`](/en-US/docs/Web/API/Window/outerHeight).
+
+### Errors
+
+- Invalid argument
+  - : If any of the fields in the [`WindowRect`](/en-US/docs/Web/WebDriver/WindowRect) payload object do not meet the type or bounds constraints, or if only one of the `x`/`y` pair or `width`/`height` pair fields are specified.
+- [Invalid session ID](/en-US/docs/Web/WebDriver/Errors/InvalidSessionID)
+  - : Session does not exist.
+- [No such window](/en-US/docs/Web/WebDriver/Errors/NoSuchWindow)
+  - : If the [`window`](/en-US/docs/Web/API/Window) has been closed.
+- [Unexpected alert open](/en-US/docs/Web/WebDriver/Errors/UnexpectedAlertOpen)
+  - : A user prompt, such as [`window.alert`](/en-US/docs/Web/API/Window/alert), blocks execution of command until it is dealt with.
+- [Unsupported operation](/en-US/docs/Web/WebDriver/Errors/UnsupportedOperation)
+
+  - : If the driver does not support altering the window’s size or position. This is usually the case on mobile devices, where the browser has a set dimension and cannot be moved around on the screen.
+
+    You can inspect the [`setWindowRect` capability](/en-US/docs/Web/WebDriver/Capabilities/setWindowRect) to tell if the device supports this command.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><code><a href="/en-US/docs/Web/WebDriver/WebWindow">WebWindow</a></code> object</li>
- <li>Associated commands:
-  <ul>
-   <li><a href="/en-US/docs/Web/WebDriver/Commands/GetWindowRect">Get Window Rect</a></li>
-   <li><a href="/en-US/docs/Web/WebDriver/Commands/GetWindowHandle">Get Window Handle</a></li>
-   <li><a href="/en-US/docs/Web/WebDriver/Commands/GetWindowHandles">Get Window Handles</a></li>
-   <li><a href="/en-US/docs/Web/WebDriver/Commands/CloseWindow">Close Window</a></li>
-  </ul>
- </li>
-</ul>
+- [`WebWindow`](/en-US/docs/Web/WebDriver/WebWindow) object
+- Associated commands:
 
-<p>{{QuickLinksWithSubpages}}</p>
+  - [Get Window Rect](/en-US/docs/Web/WebDriver/Commands/GetWindowRect)
+  - [Get Window Handle](/en-US/docs/Web/WebDriver/Commands/GetWindowHandle)
+  - [Get Window Handles](/en-US/docs/Web/WebDriver/Commands/GetWindowHandles)
+  - [Close Window](/en-US/docs/Web/WebDriver/Commands/CloseWindow)
+
+{{QuickLinksWithSubpages}}

@@ -7,15 +7,16 @@ tags:
   - WebDriver
   - invalid session id
 ---
-<p>The <strong>invalid session ID</strong> error is a <a href="/en-US/docs/Web/WebDriver/Errors">WebDriver error</a> that occurs when the server does not recognize the unique session identifier. This happens if the <a href="/en-US/docs/Web/WebDriver/Commands/DeleteSession">session has been deleted</a> or if the session ID is invalid.</p>
+The **invalid session ID** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Errors) that occurs when the server does not recognize the unique session identifier. This happens if the [session has been deleted](/en-US/docs/Web/WebDriver/Commands/DeleteSession) or if the session ID is invalid.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="Explicit_session_deletion">Explicit session deletion</h3>
+### Explicit session deletion
 
-<p>A WebDriver session is explicitly deleted when quitting:</p>
+A WebDriver session is explicitly deleted when quitting:
 
-<pre class="brush: python">from selenium import webdriver
+```python
+from selenium import webdriver
 from selenium.common import exceptions
 
 session = webdriver.Firefox()
@@ -26,18 +27,19 @@ try:
     session.get("https://mozilla.org")
 except exceptions.InvalidSessionIdException as e:
     print(e.message)
-</pre>
+```
 
-<p>Output:</p>
+Output:
 
-<pre>Current session is 46197c16-8373-469b-bc56-4c4d9e4132b4
-No active session with ID 46197c16-8373-469b-bc56-4c4d9e4132b4</pre>
+    Current session is 46197c16-8373-469b-bc56-4c4d9e4132b4
+    No active session with ID 46197c16-8373-469b-bc56-4c4d9e4132b4
 
-<h3 id="Implicit_session_deletion">Implicit session deletion</h3>
+### Implicit session deletion
 
-<p>The session can also be <em>implicitly deleted</em> if you close the last window or tab:</p>
+The session can also be _implicitly deleted_ if you close the last window or tab:
 
-<pre class="brush: python">from selenium import webdriver
+```python
+from selenium import webdriver
 from selenium.common import exceptions
 
 session = webdriver.Firefox()
@@ -50,22 +52,18 @@ try:
     session.get("https://mozilla.org")
 except exceptions.InvalidSessionIdException as e:
     print(e.message)
-</pre>
+```
 
-<p>Output:</p>
+Output:
 
-<pre>Current session is 46197c16-8373-469b-bc56-4c4d9e4132b4
-No active session with ID 46197c16-8373-469b-bc56-4c4d9e4132b4</pre>
+    Current session is 46197c16-8373-469b-bc56-4c4d9e4132b4
+    No active session with ID 46197c16-8373-469b-bc56-4c4d9e4132b4
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/WebDriver/Errors">List of WebDriver errors</a></li>
- <li><a href="/en-US/docs/Web/WebDriver/Errors/SessionNotCreated">Session not created</a></li>
- <li>Related WebDriver commands:
-  <ul>
-   <li><a href="/en-US/docs/Web/WebDriver/Commands/NewSession">New Session</a></li>
-   <li><a href="/en-US/docs/Web/WebDriver/Commands/DeleteSession">Delete Session</a></li>
-  </ul>
- </li>
-</ul>
+- [List of WebDriver errors](/en-US/docs/Web/WebDriver/Errors)
+- [Session not created](/en-US/docs/Web/WebDriver/Errors/SessionNotCreated)
+- Related WebDriver commands:
+
+  - [New Session](/en-US/docs/Web/WebDriver/Commands/NewSession)
+  - [Delete Session](/en-US/docs/Web/WebDriver/Commands/DeleteSession)

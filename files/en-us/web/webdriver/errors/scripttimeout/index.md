@@ -7,17 +7,18 @@ tags:
   - Script timeout
   - WebDriver
 ---
-<p>The <strong>script timeout</strong> error is a <a href="/en-US/docs/Web/WebDriver/Errors">WebDriver error</a> that occurs when a script the user has provided did not complete before the session’s <a href="/en-US/docs/Web/WebDriver/Capabilities#script-timeout">script timeout</a> duration expired.</p>
+The **script timeout** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Errors) that occurs when a script the user has provided did not complete before the session’s [script timeout](/en-US/docs/Web/WebDriver/Capabilities#script-timeout) duration expired.
 
-<p>The script timeout duration is a configurable capability, which means you can change how long it will take before the driver interrupts an injected script. The driver will by default wait 30 seconds before interrupting the script and returning with a script timeout error, but this can be both extended, limited, and be set to indefinite.</p>
+The script timeout duration is a configurable capability, which means you can change how long it will take before the driver interrupts an injected script. The driver will by default wait 30 seconds before interrupting the script and returning with a script timeout error, but this can be both extended, limited, and be set to indefinite.
 
-<p>If the session script timeout duration is set to indefinite by using a <code>null</code> value, you are at risk of putting the session into a non-recoverable state. Be aware that this should be used with caution.</p>
+If the session script timeout duration is set to indefinite by using a `null` value, you are at risk of putting the session into a non-recoverable state. Be aware that this should be used with caution.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Consider the following asynchronous script that will resolve the promise, or invoke the callback, after 35 seconds have passed:</p>
+Consider the following asynchronous script that will resolve the promise, or invoke the callback, after 35 seconds have passed:
 
-<pre class="brush: python">from selenium import webdriver
+```python
+from selenium import webdriver
 from selenium.common import exceptions
 
 session = webdriver.Firefox()
@@ -28,15 +29,16 @@ try:
         """)
 except exceptions.ScriptTimeoutException as e:
     print(e.message)
-</pre>
+```
 
-<p>Output:</p>
+Output:
 
-<pre>ScriptTimeoutException: Timed out after 35000 ms</pre>
+    ScriptTimeoutException: Timed out after 35000 ms
 
-<p>However, it is possible to <em>extend</em> the session’s default script timeout by using capabilities if you have a script that you expect will take longer:</p>
+However, it is possible to _extend_ the session’s default script timeout by using capabilities if you have a script that you expect will take longer:
 
-<pre class="brush: python">from selenium import webdriver
+```python
+from selenium import webdriver
 from selenium.common import exceptions
 
 session = webdriver.Firefox(capabilities={"alwaysMatch": {"timeouts": {"script": 150000}}})
@@ -45,21 +47,17 @@ session.execute_script("""
     window.setTimeout(resolve, 35000);
     """)
 print("finished successfully")
-</pre>
+```
 
-<p>Output:</p>
+Output:
 
-<pre>finished successfully</pre>
+    finished successfully
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/WebDriver/Errors">List of WebDriver errors</a></li>
- <li>Associated commands and types:
-  <ul>
-   <li><a href="/en-US/docs/Web/WebDriver/Errors/JavaScriptError">JavaScript error</a></li>
-   <li><a href="/en-US/docs/Web/WebDriver/Commands/ExecuteScript">Execute Script</a></li>
-   <li><a href="/en-US/docs/Web/WebDriver/Commands/ExecuteAsyncScript">Execute Async Script</a></li>
-  </ul>
- </li>
-</ul>
+- [List of WebDriver errors](/en-US/docs/Web/WebDriver/Errors)
+- Associated commands and types:
+
+  - [JavaScript error](/en-US/docs/Web/WebDriver/Errors/JavaScriptError)
+  - [Execute Script](/en-US/docs/Web/WebDriver/Commands/ExecuteScript)
+  - [Execute Async Script](/en-US/docs/Web/WebDriver/Commands/ExecuteAsyncScript)

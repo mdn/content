@@ -7,25 +7,23 @@ tags:
   - Unknown command
   - WebDriver
 ---
-<p>The <strong>unknown command</strong> error is a <a href="/en-US/docs/Web/WebDriver/Errors">WebDriver error</a> that occurs when the driver does not recognize the command/HTTP endpoint.</p>
+The **unknown command** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Errors) that occurs when the driver does not recognize the command/HTTP endpoint.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The <code>/session/{session id}/foo</code> endpoint does not exist, and will return an unknown command error with a <code><a href="/en-US/docs/Web/HTTP/Status/404">404 Not Found</a></code> HTTP status code:</p>
+The `/session/{session id}/foo` endpoint does not exist, and will return an unknown command error with a [`404 Not Found`](/en-US/docs/Web/HTTP/Status/404) HTTP status code:
 
-<pre>% curl -i -d '{}' http://localhost:4444/session/foo
-HTTP/1.1 404 Not Found
-Connection: close
-Content-Type: application/json; charset=utf-8
-Cache-Control: no-cache
-Content-Length: 113
-Date: Fri, 30 Mar 2018 15:30:51 GMT
+    % curl -i -d '{}' http://localhost:4444/session/foo
+    HTTP/1.1 404 Not Found
+    Connection: close
+    Content-Type: application/json; charset=utf-8
+    Cache-Control: no-cache
+    Content-Length: 113
+    Date: Fri, 30 Mar 2018 15:30:51 GMT
 
-{"value":{"error":"unknown command","message":"POST /session/asd did not match a known command","stacktrace":""}}</pre>
+    {"value":{"error":"unknown command","message":"POST /session/asd did not match a known command","stacktrace":""}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/WebDriver/Errors">List of WebDriver errors</a></li>
- <li><a href="/en-US/docs/Web/WebDriver/Commands">List of WebDriver commands</a></li>
-</ul>
+- [List of WebDriver errors](/en-US/docs/Web/WebDriver/Errors)
+- [List of WebDriver commands](/en-US/docs/Web/WebDriver/Commands)
