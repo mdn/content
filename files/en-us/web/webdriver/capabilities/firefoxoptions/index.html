@@ -8,7 +8,7 @@ tags:
   - Extension capabilities
   - firefoxOptions
 ---
-<p>The <a id="firefoxOptions"><strong><code>moz:firefoxOptions</code> capability</strong></a> is a namespaced set of
+<p>The <strong><code>moz:firefoxOptions</code> capability</strong> is a namespaced set of
   capabilities specific to <a href="https://www.mozilla.org/en-US/firefox/">Firefox</a>. It is used to control the
   behavior of Firefox and can be used as a member of
   <code><a href="en-US/docs/Web/WebDriver/Capabilities#alwaysMatch">alwaysMatch</a></code> or as a member of one of the
@@ -18,7 +18,7 @@ tags:
 
 <p><code>moz:firefoxOptions</code> is a JSON Object which may contain any of the following fields:</p>
 
-<h5 id="binary_string"><a id="binary"><code>binary</code></a> (string)</h5>
+<h5 id="binary_string"><code>binary</code> (string)</h5>
 
 
 <p>Absolute path to the custom Firefox binary to use.</p>
@@ -64,17 +64,15 @@ tags:
         <p>From the Window system registry:</p>
 
         <ol>
-          <li><code>HKEY_LOCAL_MACHINE\SOFTWARE </code><code
-              id="line-374"><span class="syn_string">WOW6432Node</span></code><code>\Mozilla\Mozilla Firefox\<em>[VERSION]</em>\Main\PathToExe</code>
+          <li><code>HKEY_LOCAL_MACHINE\SOFTWARE WOW6432Node\Mozilla\Mozilla Firefox\[VERSION]\Main\PathToExe</code>
           </li>
-          <li><code>HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\Mozilla Firefox\<em>[VERSION]</em>\Main\PathToExe</code></li>
+          <li><code>HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\Mozilla Firefox\[VERSION]\Main\PathToExe</code></li>
         </ol>
       </td>
     </tr>
   </tbody>
 </table>
 
-<a id="args"></a>
 <h5 id="args_array_of_strings"><code>args</code> (array of strings)</h5>
 
 <p>Command line arguments to pass to the Firefox binary. These must include the leading dash (<code>-</code>) where
@@ -84,7 +82,6 @@ tags:
   <code>["-profile", "/path/to/profile"]</code>. But if a profile has to be transferred to a target machine it is
   recommended to use the <code>profile</code> entry.</p>
 
-<a id="profile"></a>
 <h5 id="profile_string"><code>profile</code> (string)</h5>
 
 <p>Base64-encoded ZIP of a profile directory to use for the Firefox instance. This may be used to e.g. install
@@ -100,47 +97,39 @@ tags:
   <code>{"args": ["-profile", "/path/to/your/profile"]}</code>. Note that if you use a remote client targeting a server
   on a different system, the profile must already exist on the target system.</p>
 
-<a id="log"></a>
 <h5 id="log_Log_object"><code>log</code> (Log object)</h5>
 
 <p>To increase the logging verbosity of geckodriver and Firefox, you may pass a <code><a href="#log">log</a></code>
   object that may look like <code>{"log": {"level": "trace"}}</code> to include all trace-level logs and above</p>
 
-<a id="prefs"></a>
 <h5 id="prefs_Preferences_object"><code>prefs</code> (Preferences object)</h5>
 
 <p>Map of preference name to preference value, which can be a string, a boolean or an integer.</p>
 
-<a id="env"></a>
 <h5 id="env_Env_object"><code>env</code> (Env object)</h5>
 
 <p>Map of environment variable name to environment variable value, both of which must be strings.</p>
 
-<a id="android"></a>
 <h3 id="Android">Android</h3>
 
 <p>Starting with geckodriver 0.26.0 additional capabilities exist if Firefox or an application embedding <a href="https://wiki.mozilla.org/Mobile/GeckoView">GeckoView</a> has to be controlled on Android:</p>
 
-<a id="androidPackage"></a>
 <h5 id="androidPackage_string_required"><code>androidPackage</code> (string, required)</h5>
 
-<p>The package name of Firefox, e.g. <span class="message"><span class="content"><code>org.mozilla.firefox</code>,
-      <code>org.mozilla.firefox_beta,</code> or <code>org.mozilla.fennec</code></span></span> depending on the release
+<p>The package name of Firefox, e.g. <code>org.mozilla.firefox</code>,
+      <code>org.mozilla.firefox_beta,</code> or <code>org.mozilla.fennec</code> depending on the release
   channel, or the package name of the application embedding GeckoView, e.g. <code>org.mozilla.geckoview_example</code>.</p>
 
-<a id="androidActivity"></a>
 <h5 id="androidActivity_string_optional"><code>androidActivity</code> (string, optional)</h5>
 
 <p>The fully qualified class name of the activity to be launched, e.g. <code>.GeckoViewActivity</code>. If not
   specified, the package’s default activity will be used.</p>
 
-<a id="androidDeviceSerial"></a>
 <h5 id="androidDeviceSerial_string_optional"><code>androidDeviceSerial</code> (string, optional)</h5>
 
 <p>The serial number of the device on which to launch the application. If not specified and multiple devices are
   attached, an error will be returned.</p>
 
-<a id="androidIntentArguments"></a>
 <h5 id="androidIntentArguments_array_of_strings_optional"><code>androidIntentArguments</code> (array of strings, optional)</h5>
 
 <p>Arguments to launch the intent with.  Under the hood, geckodriver uses <a
@@ -167,24 +156,21 @@ tags:
 }
 </pre>
 
-<a id="Log"></a>
 <h3 id="Log_object">Log object</h3>
 
 <p>A JSON Object that may have any of these fields:</p>
 
-<a id="level"></a>
 <h5 id="level_string"><code>level</code> (string)</h5>
 
 <p>Set the level of verbosity of geckodriver and Firefox. Available levels are <code>trace</code>, <code>debug</code>,
   <code>config</code>, <code>info</code>, <code>warn</code>, <code>error</code>, and <code>fatal</code>. If left
   undefined the default is <code>info</code>. The value is treated case-insensitively.</p>
 
-<a id="Prefs"></a>
 <h3 id="Preferences_object">Preferences object</h3>
 
 <p>A JSON Object with one entry per preference to set. The preference will be written to the <a
     href="#profile">profile</a> before starting Firefox. A full list of available preferences is available from visiting
-  "<a>about:config</a>" in your Firefox browser. Some of these are documented in <a
+  "about:config" in your Firefox browser. Some of these are documented in <a
     href="https://searchfox.org/mozilla-central/source/modules/libpref/init/all.js">this source</a> file.</p>
 
 <p>An example of a preference object:</p>
@@ -195,7 +181,6 @@ tags:
 }
 </pre>
 
-<a id="Env"></a>
 <h3 id="Env_object">Env object</h3>
 
 <p>A JSON Object with one entry per environment variable to set. On Desktop, the Firefox under test will launch with
@@ -238,15 +223,15 @@ tags:
 }
 </pre>
 
-<p><span class="p">The <code><a href="#firefoxoptions">moz:firefoxOptions</a></code> must be placed—as above—inside
-    <code><a href="/en-US/docs/Web/WebDriver/Capabilities#alwaysmatch">alwaysMatch</a></code>, or in one of the
-  </span><code><a href="/en-US/docs/Web/WebDriver/Capabilities#firstmatch">firstMatch</a></code> <a
+<p>The <a href="#firefoxoptions"><code>moz:firefoxOptions</code></a> must be placed—as above—inside
+    <a href="/en-US/docs/Web/WebDriver/Capabilities#alwaysmatch"><code>alwaysMatch</code></a>, or in one of the
+  <a href="/en-US/docs/Web/WebDriver/Capabilities#firstmatch"><code>firstMatch</code></a> <a
     href="/en-US/docs/Web/WebDriver/Capabilities">capabilities objects</a> as seen here:</p>
 
 <pre class="brush: json">{
   "capabilities": {
     "firstMatch": [
-      {"<a href="#firefoxoptions">moz:firefoxOptions</a>": …}
+      {"moz:firefoxOptions": …}
     ]
   }
 }
