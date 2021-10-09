@@ -8,64 +8,61 @@ tags:
   - MathML:General Layout Schemata
 browser-compat: mathml.elements.mpadded
 ---
-<div>{{MathMLRef}}</div>
+{{MathMLRef}}
 
-<p class="summary">The MathML <code>&lt;mpadded&gt;</code> element is used to add extra padding and to set the general adjustment of position and size of enclosed contents.</p>
+The MathML `<mpadded>` element is used to add extra padding and to set the general adjustment of position and size of enclosed contents.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt id="attr-class-id-style">class, id, style</dt>
- <dd>Provided for use with <a href="/en-US/docs/Web/CSS">stylesheets</a>.</dd>
- <dt id="attr-depth">depth</dt>
- <dd>Sets or increments the depth. Possible values: Any <a href="/en-US/docs/Web/MathML/Attribute/Values#lengths">length</a> or an increment/decrement (a length prefixed with "+" or "-") .</dd>
- <dt id="attr-displaystyle"><code>displaystyle</code></dt>
- <dd>A Boolean value specifying whether more vertical space is used for displayed equations or, if set to <code>false</code>, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when <code>displaystyle</code> is set to <code>true</code>. See also <code>movablelimits</code> on {{ MathMLElement("mo") }}.</dd>
- <dt id="attr-height">height</dt>
- <dd>Sets or increments the height. Possible values: Any <a href="/en-US/docs/Web/MathML/Attribute/Values#lengths">length</a> or an increment/decrement (a length prefixed with "+" or "-") .</dd>
- <dt id="attr-href">href</dt>
- <dd>Used to set a hyperlink to a specified URI.</dd>
- <dt id="attr-lspace">lspace</dt>
- <dd>Sets or increments the horizontal position. Possible values: Any <a href="/en-US/docs/Web/MathML/Attribute/Values#lengths">length</a> or an increment/decrement (a length prefixed with "+" or "-") .</dd>
- <dt id="attr-mathbackground">mathbackground</dt>
- <dd>The background color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/Web/CSS/color_value#color_keywords">HTML color names</a>.</dd>
- <dt id="attr-mathcolor">mathcolor</dt>
- <dd>The text color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/Web/CSS/color_value#color_keywords">HTML color names</a>.</dd>
- <dt id="attr-voffset">voffset</dt>
- <dd>Sets or increments the vertical position. Possible values: Any <a href="/en-US/docs/Web/MathML/Attribute/Values#lengths">length</a> or an increment/decrement (a length prefixed with "+" or "-") .</dd>
- <dt id="attr-width">width</dt>
- <dd>Sets or increments the width. Possible values: Any <a href="/en-US/docs/Web/MathML/Attribute/Values#lengths">length</a> or an increment/decrement (a length prefixed with "+" or "-") .</dd>
-</dl>
+- class, id, style
+  - : Provided for use with [stylesheets](/en-US/docs/Web/CSS).
+- depth
+  - : Sets or increments the depth. Possible values: Any [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) or an increment/decrement (a length prefixed with "+" or "-") .
+- `displaystyle`
+  - : A Boolean value specifying whether more vertical space is used for displayed equations or, if set to `false`, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when `displaystyle` is set to `true`. See also `movablelimits` on {{ MathMLElement("mo") }}.
+- height
+  - : Sets or increments the height. Possible values: Any [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) or an increment/decrement (a length prefixed with "+" or "-") .
+- href
+  - : Used to set a hyperlink to a specified URI.
+- lspace
+  - : Sets or increments the horizontal position. Possible values: Any [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) or an increment/decrement (a length prefixed with "+" or "-") .
+- mathbackground
+  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
+- mathcolor
+  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
+- voffset
+  - : Sets or increments the vertical position. Possible values: Any [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) or an increment/decrement (a length prefixed with "+" or "-") .
+- width
+  - : Sets or increments the width. Possible values: Any [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) or an increment/decrement (a length prefixed with "+" or "-") .
 
-<h3 id="Pseudo-units">Pseudo-units</h3>
+### Pseudo-units
 
-<p>It is possible to use the keywords <code>"depth</code>",<code> "height"</code>, and <code>"width"</code> as a pseudo-unit for the attributes <code>depth</code>, <code>height</code>, <code>lspace</code>, <code>voffset</code>, and <code>width</code>. They represent each length of the same-named dimension.<br>
- Prior to Gecko 7.0 {{ geckoRelease("7.0") }} the MathML2 pseudo-unit <code>lspace</code> was allowed, which is no longer present in the MathML3 Recommendation and has been removed now.</p>
+It is possible to use the keywords `"depth`",` "height"`, and `"width"` as a pseudo-unit for the attributes `depth`, `height`, `lspace`, `voffset`, and `width`. They represent each length of the same-named dimension.
+Prior to Gecko 7.0 {{ geckoRelease("7.0") }} the MathML2 pseudo-unit `lspace` was allowed, which is no longer present in the MathML3 Recommendation and has been removed now.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: html">&lt;math&gt;
+```html
+<math>
 
-  &lt;mpadded height="+150px" width="100px" lspace="2height"&gt;
-    &lt;mi&gt; x &lt;/mi&gt;
-    &lt;mo&gt; + &lt;/mo&gt;
-    &lt;mi&gt; y &lt;/mi&gt;
-  &lt;/mpadded&gt;
+  <mpadded height="+150px" width="100px" lspace="2height">
+    <mi> x </mi>
+    <mo> + </mo>
+    <mi> y </mi>
+  </mpadded>
 
-&lt;/math&gt;
-</pre>
+</math>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{ MathMLElement("mphantom") }}</li>
- <li>{{ MathMLElement("mspace") }}</li>
-</ul>
+- {{ MathMLElement("mphantom") }}
+- {{ MathMLElement("mspace") }}

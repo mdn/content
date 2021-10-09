@@ -8,64 +8,61 @@ tags:
   - MathML:Script and Limit Schemata
 browser-compat: mathml.elements.mover
 ---
-<div>{{MathMLRef}}</div>
+{{MathMLRef}}
 
-<p class="summary">The MathML <code>&lt;mover&gt;</code> element is used to attach an accent or a limit over an expression. Use the following syntax: <code>&lt;mover&gt; <em>base overscript</em> &lt;/mover&gt;</code></p>
+The MathML `<mover>` element is used to attach an accent or a limit over an expression. Use the following syntax: `<mover> base overscript </mover>`
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt id="attr-accent">accent</dt>
- <dd>If <code>true</code> the over-script is an <em>accent</em>, which is drawn closer to the base expression.<br>
- If <code>false</code> (default value) the over-script is a <em>limit</em> over the base expression.</dd>
- <dt id="attr-align">align {{deprecated_inline}}</dt>
- <dd>The alignment of the over-script. Possible values are: <code>left</code>, <code>center</code>, and <code>right</code>.<br>
- This attribute is deprecated and will be removed in the future. Use CSS <code><a href="/en-US/docs/Web/CSS/text-align">text-align</a></code> instead.</dd>
- <dt id="attr-class-id-style">class, id, style</dt>
- <dd>Provided for use with <a href="/en-US/docs/Web/CSS">stylesheets</a>.</dd>
- <dt id="attr-displaystyle"><code>displaystyle</code></dt>
- <dd>A Boolean value specifying whether more vertical space is used for displayed equations or, if set to <code>false</code>, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when <code>displaystyle</code> is set to <code>true</code>. See also <code>movablelimits</code> on {{ MathMLElement("mo") }}.</dd>
- <dt id="attr-href">href</dt>
- <dd>Used to set a hyperlink to a specified URI.</dd>
- <dt id="attr-mathbackground">mathbackground</dt>
- <dd>The background color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/Web/CSS/color_value#color_keywords">HTML color names</a>.</dd>
- <dt id="attr-mathcolor">mathcolor</dt>
- <dd>The text color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/Web/CSS/color_value#color_keywords">HTML color names</a>.</dd>
-</dl>
+- accent
+  - : If `true` the over-script is an _accent_, which is drawn closer to the base expression.
+    If `false` (default value) the over-script is a _limit_ over the base expression.
+- align {{deprecated_inline}}
+  - : The alignment of the over-script. Possible values are: `left`, `center`, and `right`.
+    This attribute is deprecated and will be removed in the future. Use CSS [`text-align`](/en-US/docs/Web/CSS/text-align) instead.
+- class, id, style
+  - : Provided for use with [stylesheets](/en-US/docs/Web/CSS).
+- `displaystyle`
+  - : A Boolean value specifying whether more vertical space is used for displayed equations or, if set to `false`, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when `displaystyle` is set to `true`. See also `movablelimits` on {{ MathMLElement("mo") }}.
+- href
+  - : Used to set a hyperlink to a specified URI.
+- mathbackground
+  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
+- mathcolor
+  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Sample rendering: <img alt="x+y+z" src="mover.png"></p>
+Sample rendering: ![x+y+z](mover.png)
 
-<p>Rendering in your browser: <math> <mover accent="true"> <mrow> <mi> x </mi> <mo> + </mo> <mi> y </mi> <mo> + </mo> <mi> z </mi> </mrow> <mo> ⏞ </mo> </mover> </math></p>
+Rendering in your browser: <math><mover accent="true"><mrow><mi>x </mi><mo>+ </mo><mi>y </mi><mo>+ </mo><mi>z </mi></mrow><mo>⏞</mo></mover></math>
 
-<pre class="brush: html">&lt;math&gt;
+```html
+<math>
 
-&lt;mover accent="true"&gt;
-  &lt;mrow&gt;
-    &lt;mi&gt; x &lt;/mi&gt;
-    &lt;mo&gt; + &lt;/mo&gt;
-    &lt;mi&gt; y &lt;/mi&gt;
-    &lt;mo&gt; + &lt;/mo&gt;
-    &lt;mi&gt; z &lt;/mi&gt;
-  &lt;/mrow&gt;
-  &lt;mo&gt; &amp;#x23DE; &lt;!--TOP CURLY BRACKET--&gt; &lt;/mo&gt;
-&lt;/mover&gt;
+<mover accent="true">
+  <mrow>
+    <mi> x </mi>
+    <mo> + </mo>
+    <mi> y </mi>
+    <mo> + </mo>
+    <mi> z </mi>
+  </mrow>
+  <mo> &#x23DE; <!--TOP CURLY BRACKET--> </mo>
+</mover>
 
-&lt;/math&gt;
-</pre>
+</math>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{ MathMLElement("munder") }} (Underscript)</li>
- <li>{{ MathMLElement("munderover") }} (Underscript-overscript pair)</li>
-</ul>
+- {{ MathMLElement("munder") }} (Underscript)
+- {{ MathMLElement("munderover") }} (Underscript-overscript pair)

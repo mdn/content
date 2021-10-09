@@ -8,13 +8,11 @@ tags:
   - MathML
   - NeedsBeginnerUpdate
 ---
-<p>Below you'll find some examples you can look at to help you to understand how to use MathML to display increasingly complex mathematical concepts in Web content.</p>
+Below you'll find some examples you can look at to help you to understand how to use MathML to display increasingly complex mathematical concepts in Web content.
 
-<dl>
- <dt><a href="/en-US/docs/Web/MathML/Examples/MathML_Pythagorean_Theorem">Pythagorean Theorem</a></dt>
- <dd>Small example showing a proof of the Pythagorean Theorem.</dd>
- <dt><a href="/en-US/docs/Web/MathML/Examples/Deriving_the_Quadratic_Formula">Deriving the Quadratic Formula</a></dt>
- <dd>Outlines the derivation of the Quadratic Formula.</dd>
- <dt><a href="https://fred-wang.github.io/MathFonts/mozilla_mathml_test/">MathML Torture Test</a></dt>
- <dd>Large set of test markup.</dd>
-</dl>
+- [Pythagorean Theorem](/en-US/docs/Web/MathML/Examples/MathML_Pythagorean_Theorem)
+  - : Small example showing a proof of the Pythagorean Theorem.
+- [Deriving the Quadratic Formula](/en-US/docs/Web/MathML/Examples/Deriving_the_Quadratic_Formula)
+  - : Outlines the derivation of the Quadratic Formula.
+- [MathML Torture Test](https://fred-wang.github.io/MathFonts/mozilla_mathml_test/)
+  - : Large set of test markup.

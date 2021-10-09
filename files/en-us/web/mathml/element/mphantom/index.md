@@ -8,53 +8,50 @@ tags:
   - MathML:General Layout Schemata
 browser-compat: mathml.elements.mphantom
 ---
-<div>{{MathMLRef}}</div>
+{{MathMLRef}}
 
-<p class="summary">The MathML <code>&lt;mphantom&gt;</code> element is rendered invisibly, but dimensions (such as height, width, and baseline position) are still kept.</p>
+The MathML `<mphantom>` element is rendered invisibly, but dimensions (such as height, width, and baseline position) are still kept.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt id="attr-class-id-style">class, id, style</dt>
- <dd>Provided for use with <a href="/en-US/docs/Web/CSS">stylesheets</a>.</dd>
- <dt id="attr-displaystyle"><code>displaystyle</code></dt>
- <dd>A Boolean value specifying whether more vertical space is used for displayed equations or, if set to <code>false</code>, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when <code>displaystyle</code> is set to <code>true</code>. See also <code>movablelimits</code> on {{ MathMLElement("mo") }}.</dd>
- <dt id="attr-mathbackground">mathbackground</dt>
- <dd>The background color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/Web/CSS/color_value#color_keywords">HTML color names</a>.</dd>
-</dl>
+- class, id, style
+  - : Provided for use with [stylesheets](/en-US/docs/Web/CSS).
+- `displaystyle`
+  - : A Boolean value specifying whether more vertical space is used for displayed equations or, if set to `false`, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when `displaystyle` is set to `true`. See also `movablelimits` on {{ MathMLElement("mo") }}.
+- mathbackground
+  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Sample rendering: <img alt="x+  z" src="mphantom.png"></p>
+Sample rendering: ![x+  z](mphantom.png)
 
-<p>Rendering in your browser: <math> <mrow> <mi> x </mi> <mo> + </mo> <mphantom> <mi> y </mi> <mo> + </mo> </mphantom> <mi> z </mi> </mrow> </math></p>
+Rendering in your browser: <math><mrow><mi>x </mi><mo>+ </mo><mphantom><mi>y </mi><mo>+ </mo></mphantom><mi>z</mi></mrow></math>
 
-<pre class="brush: html">&lt;math&gt;
+```html
+<math>
 
-&lt;mrow&gt;
-  &lt;mi&gt; x &lt;/mi&gt;
-  &lt;mo&gt; + &lt;/mo&gt;
-  &lt;mphantom&gt;
-    &lt;mi&gt; y &lt;/mi&gt;
-    &lt;mo&gt; + &lt;/mo&gt;
-  &lt;/mphantom&gt;
-  &lt;mi&gt; z &lt;/mi&gt;
-&lt;/mrow&gt;
+<mrow>
+  <mi> x </mi>
+  <mo> + </mo>
+  <mphantom>
+    <mi> y </mi>
+    <mo> + </mo>
+  </mphantom>
+  <mi> z </mi>
+</mrow>
 
-&lt;/math&gt;
-</pre>
+</math>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{ MathMLElement("mspace") }}</li>
- <li>{{ MathMLElement("mpadded") }}</li>
-</ul>
+- {{ MathMLElement("mspace") }}
+- {{ MathMLElement("mpadded") }}

@@ -8,93 +8,90 @@ tags:
   - MathML:Enlivening Expressions
 browser-compat: mathml.elements.maction
 ---
-<div>{{MathMLRef}}</div>
+{{MathMLRef}}
 
-<div class="summary">
-<p>The MathML <strong><code>&lt;maction&gt;</code></strong> element provides a possibility to bind actions to (sub-) expressions. The action itself is specified by the <code>actiontype</code> attribute, which accepts several values. To specify which child elements are addressed by the action, you can make use of the <code>selection</code> attribute.</p>
-</div>
+The MathML **`<maction>`** element provides a possibility to bind actions to (sub-) expressions. The action itself is specified by the `actiontype` attribute, which accepts several values. To specify which child elements are addressed by the action, you can make use of the `selection` attribute.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
-	<dt id="attr-actiontype">actiontype</dt>
-	<dd>The action which specifies what happens for this element. Possible values are:
-	<ul>
-		<li><code>statusline</code>: If there is a click on the <em>expression</em> or the reader moves the pointer over it, the <em>message</em> is sent to the browser's status line. The syntax is: <code>&lt;maction actiontype="statusline"&gt; <em>expression</em> <em>message</em> &lt;/maction&gt;.</code></li>
-		<li><code>toggle</code>: When there is a click on the subexpression, the rendering alternates the display of selected subexpressions. Therefore each click increments the <code>selection</code> value.<br>
-		The syntax is: <code>&lt;maction actiontype="toggle" selection="<em>positive-integer</em>" &gt; <em>expression1</em> <em>expression2</em> <em>expressionN</em> &lt;/maction&gt;</code>.</li>
-		<li><code>tooltip</code>: When the pointer moves over the <em>expression</em>, a tooltip box with a <em>message</em> is displayed near the expression.<br>
-		The syntax is:<code> &lt;maction actiontype="tooltip"&gt; <em>expression</em> <em>message</em> &lt;/maction&gt;.</code></li>
-	</ul>
-	</dd>
-	<dt id="attr-class-id-style">class, id, style</dt>
-	<dd>Provided for use with <a href="/en-US/docs/Web/CSS">stylesheets</a>.</dd>
-	<dt id="attr-displaystyle"><code>displaystyle</code></dt>
-	<dd>A Boolean value specifying whether more vertical space is used for displayed equations or, if set to <code>false</code>, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when <code>displaystyle</code> is set to <code>true</code>. See also <code>movablelimits</code> on {{ MathMLElement("mo") }}.</dd>
-	<dt id="attr-href">href</dt>
-	<dd>Used to set a hyperlink to a specified URI.</dd>
-	<dt id="attr-mathbackground">mathbackground</dt>
-	<dd>The background color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/Web/CSS/color_value#color_keywords">HTML color names</a>.</dd>
-	<dt id="attr-mathcolor">mathcolor</dt>
-	<dd>The text color and also the fraction line color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/Web/CSS/color_value#color_keywords">HTML color names</a>.</dd>
-	<dt id="attr-selection">selection</dt>
-	<dd>The child element which is addressed by the action. The default value is <code>1</code>, which is the first child element.</dd>
-</dl>
+- actiontype
 
-<h2 id="Examples">Examples</h2>
+  - : The action which specifies what happens for this element. Possible values are:
 
-<p>The following example uses the "toggle" <code>actiontype</code>:</p>
+    - `statusline`: If there is a click on the _expression_ or the reader moves the pointer over it, the _message_ is sent to the browser's status line. The syntax is: `<maction actiontype="statusline"> expression message </maction>.`
+    - `toggle`: When there is a click on the subexpression, the rendering alternates the display of selected subexpressions. Therefore each click increments the `selection` value.
+      The syntax is: `<maction actiontype="toggle" selection="positive-integer" > expression1 expression2 expressionN </maction>`.
+    - `tooltip`: When the pointer moves over the _expression_, a tooltip box with a _message_ is displayed near the expression.
+      The syntax is:` <maction actiontype="tooltip"> expression message </maction>.`
 
-<pre class="brush: html">&lt;math&gt;
+- class, id, style
+  - : Provided for use with [stylesheets](/en-US/docs/Web/CSS).
+- `displaystyle`
+  - : A Boolean value specifying whether more vertical space is used for displayed equations or, if set to `false`, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when `displaystyle` is set to `true`. See also `movablelimits` on {{ MathMLElement("mo") }}.
+- href
+  - : Used to set a hyperlink to a specified URI.
+- mathbackground
+  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
+- mathcolor
+  - : The text color and also the fraction line color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
+- selection
+  - : The child element which is addressed by the action. The default value is `1`, which is the first child element.
 
-&lt;maction actiontype="toggle"&gt;
+## Examples
 
-  &lt;mfrac&gt;
-    &lt;mn&gt;6&lt;/mn&gt;
-    &lt;mn&gt;8&lt;/mn&gt;
-  &lt;/mfrac&gt;
+The following example uses the "toggle" `actiontype`:
 
-  &lt;mfrac&gt;
-    &lt;mrow&gt;
-      &lt;mn&gt;3&lt;/mn&gt;
-      &lt;mo&gt;&amp;sdot;&lt;/mo&gt;
-      &lt;mn&gt;2&lt;/mn&gt;
-    &lt;/mrow&gt;
-    &lt;mrow&gt;
-      &lt;mn&gt;4&lt;/mn&gt;
-      &lt;mo&gt;&amp;sdot;&lt;/mo&gt;
-      &lt;mn&gt;2&lt;/mn&gt;
-    &lt;/mrow&gt;
-  &lt;/mfrac&gt;
+```html
+<math>
 
-  &lt;mfrac&gt;
-    &lt;mn&gt;3&lt;/mn&gt;
-    &lt;mn&gt;4&lt;/mn&gt;
-  &lt;/mfrac&gt;
+<maction actiontype="toggle">
 
-&lt;/maction&gt;
+  <mfrac>
+    <mn>6</mn>
+    <mn>8</mn>
+  </mfrac>
 
-&lt;/math&gt;
-</pre>
+  <mfrac>
+    <mrow>
+      <mn>3</mn>
+      <mo>&sdot;</mo>
+      <mn>2</mn>
+    </mrow>
+    <mrow>
+      <mn>4</mn>
+      <mo>&sdot;</mo>
+      <mn>2</mn>
+    </mrow>
+  </mfrac>
 
-<h2 id="Specifications">Specifications</h2>
+  <mfrac>
+    <mn>3</mn>
+    <mn>4</mn>
+  </mfrac>
 
-<p>{{Specifications}}</p>
+</maction>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+</math>
+```
 
-<p>{{Compat}}</p>
+## Specifications
 
-<h2 id="Gecko-specific_notes">Gecko-specific notes</h2>
+{{Specifications}}
 
-<ul>
-	<li>Prior to Gecko 9.0 {{ geckoRelease("9.0") }} the non-standard <code>restyle</code> value on the <code>actiontype</code> attribute was supported. This value has been removed.</li>
-	<li>Prior to Gecko 14.0 {{ geckoRelease("14.0") }} the <code>statusline</code> action type was using a non-standard syntax (see below). This has been fixed to follow the MathML specification.
-	<pre class="brush: html">&lt;maction actiontype="statusline#(message)"&gt;
-(expression)
-&lt;/maction&gt;
-</pre>
-	</li>
-	<li>With Gecko 15.0 {{geckoRelease("15.0")}} the <code>selection</code> attribute is only taken into account with the actiontype <code>"toggle"</code>.</li>
-	<li>Starting with Gecko 16.0 {{geckoRelease("16.0")}} the <code>selection</code> attribute is also taken into account when an unknown <code>actiontype</code> is specified. If an <code>actiontype</code> is not specified (is empty) or when the <code>selection</code> attribute is invalid, the markup will throw an MathML error (invalid-markup).</li>
-</ul>
+## Browser compatibility
+
+{{Compat}}
+
+## Gecko-specific notes
+
+- Prior to Gecko 9.0 {{ geckoRelease("9.0") }} the non-standard `restyle` value on the `actiontype` attribute was supported. This value has been removed.
+- Prior to Gecko 14.0 {{ geckoRelease("14.0") }} the `statusline` action type was using a non-standard syntax (see below). This has been fixed to follow the MathML specification.
+
+  ```html
+  <maction actiontype="statusline#(message)">
+  (expression)
+  </maction>
+  ```
+
+- With Gecko 15.0 {{geckoRelease("15.0")}} the `selection` attribute is only taken into account with the actiontype `"toggle"`.
+- Starting with Gecko 16.0 {{geckoRelease("16.0")}} the `selection` attribute is also taken into account when an unknown `actiontype` is specified. If an `actiontype` is not specified (is empty) or when the `selection` attribute is invalid, the markup will throw an MathML error (invalid-markup).

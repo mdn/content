@@ -6,135 +6,131 @@ tags:
   - MathML
   - Project
 ---
-<p>Fonts with appropriate Unicode coverage and Open Font Format features are required for good math rendering.
-  This page describes how users can install and use such math fonts with Mozilla's MathML engine.
-  Note that most of these instructions may as well apply to other Web rendering engines.</p>
+Fonts with appropriate Unicode coverage and Open Font Format features are required for good math rendering.
+This page describes how users can install and use such math fonts with Mozilla's MathML engine.
+Note that most of these instructions may as well apply to other Web rendering engines.
 
-<h2 id="Installation_Instructions">Installation Instructions</h2>
+## Installation Instructions
 
-<h3 id="Windows">Windows</h3>
+### Windows
 
-<p>Install the <em>Latin Modern Math</em> and <em>STIX</em> fonts as follows:</p>
+Install the _Latin Modern Math_ and _STIX_ fonts as follows:
 
-<ol>
- <li>Download <a href="http://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip">latinmodern-math-1959.zip</a>.</li>
- <li>Open the ZIP archive, move inside the <code>latinmodern-math-1959</code> directory and then inside the <code>otf</code> directory. You will find a <code>latinmodern-math</code> font file.</li>
- <li>Open the <code>latinmodern-math</code> font file and click the <code>Install</code> button.</li>
- <li>Download <a href="https://github.com/stipub/stixfonts/raw/master/zipfiles/static_otf.zip">static_otf.zip</a>.</li>
- <li>Open the <code>static_otf.zip</code> ZIP archive, and then move inside the <code>static_otf</code> directory. Among the files there, you will find a <code>STIXTwoMath-Regular</code> file.</li>
- <li>Open the <code>STIXTwoMath-Regular</code> file and click the <code>Install</code> button. If desired, you may also do the same for the other font files.</li>
-</ol>
+1.  Download [latinmodern-math-1959.zip](http://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip).
+2.  Open the ZIP archive, move inside the `latinmodern-math-1959` directory and then inside the `otf` directory. You will find a `latinmodern-math` font file.
+3.  Open the `latinmodern-math` font file and click the `Install` button.
+4.  Download [static_otf.zip](https://github.com/stipub/stixfonts/raw/master/zipfiles/static_otf.zip).
+5.  Open the `static_otf.zip` ZIP archive, and then move inside the `static_otf` directory. Among the files there, you will find a `STIXTwoMath-Regular` file.
+6.  Open the `STIXTwoMath-Regular` file and click the `Install` button. If desired, you may also do the same for the other font files.
 
-<div class="note notecard">
-<p><strong>Note:</strong> <em>Cambria Math</em> is installed by default on Windows 7 and later versions and should ensure relatively good MathML rendering. <a href="https://windows.uservoice.com/forums/265757-windows-feature-suggestions/suggestions/9727281-add-new-math-fonts-latin-modern-math-and-stix-2">An enhancement request has been submitted to Microsoft to install Latin Modern Math and STIX by default</a>.</p>
-</div>
+> **Note:** _Cambria Math_ is installed by default on Windows 7 and later versions and should ensure relatively good MathML rendering. [An enhancement request has been submitted to Microsoft to install Latin Modern Math and STIX by default](https://windows.uservoice.com/forums/265757-windows-feature-suggestions/suggestions/9727281-add-new-math-fonts-latin-modern-math-and-stix-2).
 
-<h3 id="OS_X">OS X</h3>
+### OS X
 
-<p>Install the <em>Latin Modern Math</em> and <em>STIX</em> fonts as follows:</p>
+Install the _Latin Modern Math_ and _STIX_ fonts as follows:
 
-<ol>
- <li>Download <a href="http://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip">latinmodern-math-1959.zip</a>.</li>
- <li>Extract the ZIP archive, move inside the <code>latinmodern-math-1959</code> directory and then inside the <code>otf</code> directory. You will find a <code>latinmodern-math</code> font file.</li>
- <li>Double-click the <code>latinmodern-math</code> font file click the &quot;Install the font&quot; button from the window that opens.</li>
- <li>Download <a href="https://github.com/stipub/stixfonts/raw/master/zipfiles/static_otf.zip">static_otf.zip</a>.</li>
- <li>Open the <code>static_otf.zip</code> ZIP archive, and then move inside the <code>static_otf</code> directory. Among the files there, you will find a <code>STIXTwoMath-Regular.otf</code> file.</li>
- <li>Open the <code>STIXTwoMath-Regular.otf</code> file and click the <strong>Install Font</strong> button from the window that opens. If desired, you may also do the same for the other font files.</li>
-</ol>
+1.  Download [latinmodern-math-1959.zip](http://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip).
+2.  Extract the ZIP archive, move inside the `latinmodern-math-1959` directory and then inside the `otf` directory. You will find a `latinmodern-math` font file.
+3.  Double-click the `latinmodern-math` font file click the "Install the font" button from the window that opens.
+4.  Download [static_otf.zip](https://github.com/stipub/stixfonts/raw/master/zipfiles/static_otf.zip).
+5.  Open the `static_otf.zip` ZIP archive, and then move inside the `static_otf` directory. Among the files there, you will find a `STIXTwoMath-Regular.otf` file.
+6.  Open the `STIXTwoMath-Regular.otf` file and click the **Install Font** button from the window that opens. If desired, you may also do the same for the other font files.
 
-<div class="note notecard">
-<p><strong>Note:</strong> A deprecated version of STIX is preinstalled starting with OS X Lion and should ensure relatively good MathML rendering. Enhancement requests have been submitted to Apple to ship OpenType MATH fonts in the default installation. If you have a developer account, these are problems 16841023 and 17021145.</p>
-</div>
+> **Note:** A deprecated version of STIX is preinstalled starting with OS X Lion and should ensure relatively good MathML rendering. Enhancement requests have been submitted to Apple to ship OpenType MATH fonts in the default installation. If you have a developer account, these are problems 16841023 and 17021145.
 
-<h3 id="Linux">Linux</h3>
+### Linux
 
-<p>Install the <em>Latin Modern Math</em>, <em>STIX</em> or <em>XITS</em> fonts, which are generally available from your package manager.</p>
+Install the _Latin Modern Math_, _STIX_ or _XITS_ fonts, which are generally available from your package manager.
 
-<p>On Debian/Ubuntu/Mint and other Debian-based distributions, use the following command:</p>
+On Debian/Ubuntu/Mint and other Debian-based distributions, use the following command:
 
-<pre class="brush: bash">sudo apt-get install <code>fonts-lmodern fonts-stix</code></pre>
+```bash
+sudo apt-get install fonts-lmodern fonts-stix
+```
 
-<p>On Fedora and other Fedora-based distributions, use the following command (<code>stix-math-fonts</code> is often already installed):</p>
+On Fedora and other Fedora-based distributions, use the following command (`stix-math-fonts` is often already installed):
 
-<pre class="brush: bash">sudo dnf install <code>texlive-lm-math stix-math-fonts</code></pre>
+```bash
+sudo dnf install texlive-lm-math stix-math-fonts
+```
 
-<p>On openSUSE and other openSUSE-based distributions, use the following command:</p>
+On openSUSE and other openSUSE-based distributions, use the following command:
 
-<pre class="brush: plain">sudo zypper install texlive-lm-math stix-fonts</pre>
+```plain
+sudo zypper install texlive-lm-math stix-fonts
+```
 
-<p>On other Linux distributions, consider installing appropriate <code>texlive</code> packages, which includes <em>Latin Modern Math</em> and <em>XITS</em>:</p>
+On other Linux distributions, consider installing appropriate `texlive` packages, which includes _Latin Modern Math_ and _XITS_:
 
-<pre class="brush: bash">sudo pacman -S texlive-core texlive-fontsextra # Arch Linux
+```bash
+sudo pacman -S texlive-core texlive-fontsextra # Arch Linux
 sudo urpmi texlive-dist texlive-fontsextra # Mageia
-</pre>
+```
 
-<p>However, you might need to ensure that the fonts are known by your system. Typically,  use a fontconfig configuration <code>/etc/fonts/conf.avail/09-texlive-fonts.conf</code> that points to the <code>opentype</code> directory of TeXLive, such as:</p>
+However, you might need to ensure that the fonts are known by your system. Typically,  use a fontconfig configuration `/etc/fonts/conf.avail/09-texlive-fonts.conf` that points to the `opentype` directory of TeXLive, such as:
 
-<pre class="brush: plain">&lt;?xml version=&quot;1.0&quot;?&gt;
-&lt;!DOCTYPE fontconfig SYSTEM &quot;fonts.dtd&quot;&gt;
-&lt;fontconfig&gt;
-  &lt;dir&gt;/your/path/to/texmf-dist/fonts/opentype&lt;/dir&gt;
-&lt;/fontconfig&gt;</pre>
+```plain
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+  <dir>/your/path/to/texmf-dist/fonts/opentype</dir>
+</fontconfig>
+```
 
-<p>Finally, add this configuration file to the system font location list and regenerate the fontconfig cache:</p>
+Finally, add this configuration file to the system font location list and regenerate the fontconfig cache:
 
-<pre class="brush: plain">ln -sf /etc/fonts/conf.avail/09-texlive-fonts.conf /etc/fonts/conf.d/
+```plain
+ln -sf /etc/fonts/conf.avail/09-texlive-fonts.conf /etc/fonts/conf.d/
 fc-cache -sf
-</pre>
+```
 
-<h3 id="Android">Android</h3>
+### Android
 
-<p>You must use the <a href="https://addons.mozilla.org/firefox/addon/mathml-fonts/">MathML-fonts add-on</a>.</p>
+You must use the [MathML-fonts add-on](https://addons.mozilla.org/firefox/addon/mathml-fonts/).
 
-<div class="note notecard">
-<p><strong>Note:</strong> There is an <a href="https://github.com/googlei18n/noto-fonts/issues/330">enhancement request</a> opened on the Noto bug tracker to improve math support.</p>
-</div>
+> **Note:** There is an [enhancement request](https://github.com/googlei18n/noto-fonts/issues/330) opened on the Noto bug tracker to improve math support.
 
-<h3 id="Firefox_OS">Firefox OS</h3>
+### Firefox OS
 
-<p>You must use the <a href="https://addons.mozilla.org/firefox/addon/mathml-fonts/">MathML-fonts add-on</a>.</p>
+You must use the [MathML-fonts add-on](https://addons.mozilla.org/firefox/addon/mathml-fonts/).
 
-<div class="note notecard">
-<p><strong>Note:</strong> We <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=775060">plan to bundle</a> a <a href="#Fonts_with_a_MATH_table">MATH font</a> in the default installation.</p>
-</div>
+> **Note:** We [plan to bundle](https://bugzilla.mozilla.org/show_bug.cgi?id=775060) a [MATH font](#Fonts_with_a_MATH_table) in the default installation.
 
-<h3 id="Other_systems">Other systems</h3>
+### Other systems
 
-<p>On other systems, consider installing a <a href="#Fonts_with_a_MATH_table">MATH font</a> using your package manager. Note that these fonts are generally delivered with TeX distributions such as <a href="https://www.tug.org/texlive/">TeX Live</a>, but you might need to follow specific instructions so that your system is aware of the fonts. As a last resort, install the <a href="https://addons.mozilla.org/firefox/addon/mathml-fonts/">MathML fonts add-on</a>.</p>
+On other systems, consider installing a [MATH font](#Fonts_with_a_MATH_table) using your package manager. Note that these fonts are generally delivered with TeX distributions such as [TeX Live](https://www.tug.org/texlive/), but you might need to follow specific instructions so that your system is aware of the fonts. As a last resort, install the [MathML fonts add-on](https://addons.mozilla.org/firefox/addon/mathml-fonts/).
 
-<h2 id="Advanced_setup">Advanced setup</h2>
+## Advanced setup
 
-<h3 id="Arabic_Mathematical_Alphabetic_Symbols">Arabic Mathematical Alphabetic Symbols</h3>
+### Arabic Mathematical Alphabetic Symbols
 
-<p>Currently, very few fonts have appropriate glyphs for the Arabic Mathematical Alphabetic Symbols. If you are likely to need these characters, we recommend to install the XITS or <a href="https://www.amirifont.org/">Amiri</a> fonts.</p>
+Currently, very few fonts have appropriate glyphs for the Arabic Mathematical Alphabetic Symbols. If you are likely to need these characters, we recommend to install the XITS or [Amiri](https://www.amirifont.org/) fonts.
 
-<h3 id="Installation_without_Administrator_Privilege">Installation without Administrator Privilege</h3>
+### Installation without Administrator Privilege
 
-<p>If you need to install fonts on a system without adminstrator privilege, the easiest option is to use math font the <a href="https://addons.mozilla.org/firefox/addon/mathml-fonts/">MathML-fonts add-on</a>. Note that using the add-on is not optimal since it forces your Gecko browser to load a CSS stylesheet on each page you visit as well as Web math fonts on all pages with MathML content. A better alternative on UNIX systems is to install the OTF files for <a href="http://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip">Latin Modern Math</a> and <a href="https://github.com/stipub/stixfonts">STIX</a> into some local font folder and (if necessary) to run <code>fc-cache</code> on it. On OS X and Linux, the standard paths are <code>~/Library/Fonts/</code> and <code>~/.fonts</code>.</p>
+If you need to install fonts on a system without adminstrator privilege, the easiest option is to use math font the [MathML-fonts add-on](https://addons.mozilla.org/firefox/addon/mathml-fonts/). Note that using the add-on is not optimal since it forces your Gecko browser to load a CSS stylesheet on each page you visit as well as Web math fonts on all pages with MathML content. A better alternative on UNIX systems is to install the OTF files for [Latin Modern Math](http://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip) and [STIX](https://github.com/stipub/stixfonts) into some local font folder and (if necessary) to run `fc-cache` on it. On OS X and Linux, the standard paths are `~/Library/Fonts/` and `~/.fonts`.
 
-<h3 id="Fonts_with_a_MATH_table">Fonts with a MATH table</h3>
+### Fonts with a MATH table
 
-<p>You can actually render MathML using any font with a MATH table and related Open Font Format features. A list of such math fonts is provided below. You can use the <em>advanced font preference menu</em> to configure the default font for mathematics. Alternatively, you can try the <a href="https://addons.mozilla.org/en-US/firefox/addon/mathml-font-settings/">MathML-fontsettings add-on</a>.</p>
+You can actually render MathML using any font with a MATH table and related Open Font Format features. A list of such math fonts is provided below. You can use the _advanced font preference menu_ to configure the default font for mathematics. Alternatively, you can try the [MathML-fontsettings add-on](https://addons.mozilla.org/en-US/firefox/addon/mathml-font-settings/).
 
-<ul>
- <li><a href="https://www.ctan.org/tex-archive/fonts/Asana-Math/">Asana Math</a></li>
- <li><a href="https://www.microsoft.com/typography/fonts/family.aspx?FID=360">Cambria Math</a></li>
- <li><a href="https://sourceforge.net/projects/dejavu/files/dejavu/">DejaVu Math TeX Gyre</a></li>
- <li><a href="https://github.com/YuanshengZhao/Garamond-Math">Garamond Math</a> (under development)</li>
- <li><a href="http://www.gust.org.pl/projects/e-foundry/lm-math">Latin Modern Math</a></li>
- <li><a href="https://github.com/khaledhosny/libertinus">Libertinus Math</a></li>
- <li><a href="https://github.com/stipub/stixfonts">STIX Math</a></li>
- <li><a href="http://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Bonum_Math">TeX Gyre Bonum Math</a></li>
- <li><a href="http://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Pagella_Math">TeX Gyre Pagella Math</a></li>
- <li><a href="http://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Schola_Math">TeX Gyre Schola Math</a></li>
- <li><a href="http://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Termes_Math">TeX Gyre Termes Math</a></li>
- <li><a href="https://github.com/khaledhosny/xits-math/releases">XITS Math</a></li>
- <li><a href="https://github.com/firamath/firamath">Fira Math</a> (sans-serif typeface, under development)</li>
- <li><a href="https://greekfontsociety-gfs.gr/typefaces/Math">GFS Neohellenic Math</a> (sans-serif typeface)</li>
-</ul>
+- [Asana Math](https://www.ctan.org/tex-archive/fonts/Asana-Math/)
+- [Cambria Math](https://www.microsoft.com/typography/fonts/family.aspx?FID=360)
+- [DejaVu Math TeX Gyre](https://sourceforge.net/projects/dejavu/files/dejavu/)
+- [Garamond Math](https://github.com/YuanshengZhao/Garamond-Math) (under development)
+- [Latin Modern Math](http://www.gust.org.pl/projects/e-foundry/lm-math)
+- [Libertinus Math](https://github.com/khaledhosny/libertinus)
+- [STIX Math](https://github.com/stipub/stixfonts)
+- [TeX Gyre Bonum Math](http://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Bonum_Math)
+- [TeX Gyre Pagella Math](http://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Pagella_Math)
+- [TeX Gyre Schola Math](http://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Schola_Math)
+- [TeX Gyre Termes Math](http://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Termes_Math)
+- [XITS Math](https://github.com/khaledhosny/xits-math/releases)
+- [Fira Math](https://github.com/firamath/firamath) (sans-serif typeface, under development)
+- [GFS Neohellenic Math](https://greekfontsociety-gfs.gr/typefaces/Math) (sans-serif typeface)
 
-<h3 id="Using_mathematical_fonts_on_Web_pages">Using mathematical fonts on Web pages</h3>
+### Using mathematical fonts on Web pages
 
-<p>Starting with Gecko 31.0 (Firefox 31.0 / Thunderbird 31.0 / SeaMonkey 2.28), it is now easy to set up the CSS style (and optional WOFF fonts) to use on your Web site.
-  See the <a href="/en-US/docs/Web/MathML/Authoring#mathematical_fonts">Authoring MathML page</a> for details.
-  You can use <a href="https://github.com/behdad/fonttools">FontTools</a> to edit the MATH table and create your own mathematical fonts.</p>
+Starting with Gecko 31.0 (Firefox 31.0 / Thunderbird 31.0 / SeaMonkey 2.28), it is now easy to set up the CSS style (and optional WOFF fonts) to use on your Web site.
+See the [Authoring MathML page](/en-US/docs/Web/MathML/Authoring#mathematical_fonts) for details.
+You can use [FontTools](https://github.com/behdad/fonttools) to edit the MATH table and create your own mathematical fonts.

@@ -8,65 +8,66 @@ tags:
   - MathML:General Layout Schemata
 browser-compat: mathml.elements.mfrac
 ---
-<div>{{MathMLRef}}</div>
+{{MathMLRef}}
 
-<p class="summary">The MathML <code>&lt;mfrac&gt;</code> element is used to display fractions.</p>
+The MathML `<mfrac>` element is used to display fractions.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">&lt;mfrac&gt;<em>numerator</em> <em>denominator</em>&lt;/mfrac&gt;</pre>
+```html
+<mfrac>numerator denominator</mfrac>
+```
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt id="attr-bevelled"><code>bevelled</code> {{deprecated_inline}}</dt>
- <dd>Specifies the way the fraction is displayed. If <code>true</code>, the fraction line is bevelled, which means that numerator and denominator are displayed side by side and separated by a slash (/). Otherwise, if set to <code>false</code> (which is the default value), numerator and denominator are on top of each other.<br>
- This attribute is deprecated and will be removed in the future. Use U+2044 (fraction slash) instead.</dd>
- <dt id="attr-class-id-style"><code>class</code>, <code>id</code>, <code>style</code></dt>
- <dd>Provided for use with <a href="/en-US/docs/Web/CSS">stylesheets</a>.</dd>
- <dt id="attr-denomalign"><code>denomalign</code> {{deprecated_inline}}</dt>
- <dd>The alignment of the denominator under the fraction. Possible values are: <code>left</code>, <code>center</code> (default), and <code>right</code>.<br>
- This attribute is deprecated and will be removed in the future. Use CSS <code><a href="/en-US/docs/Web/CSS/text-align">text-align</a></code> instead.</dd>
- <dt id="attr-displaystyle"><code>displaystyle</code></dt>
- <dd>A Boolean value specifying whether more vertical space is used for displayed equations or, if set to <code>false</code>, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when <code>displaystyle</code> is set to <code>true</code>. See also <code>movablelimits</code> on {{ MathMLElement("mo") }}.</dd>
- <dt id="attr-href"><code>href</code></dt>
- <dd>Used to set a hyperlink to a specified URI.</dd>
- <dt id="attr-linethickness"><code>linethickness</code></dt>
- <dd>The thickness of the horizontal fraction line. This attributes accepts any <a href="/en-US/docs/Web/CSS/length">length values</a>.<br>
- The values <code>medium</code>, <code>thin</code>, and <code>thick</code> are deprecated and will be removed in the future.</dd>
- <dt id="attr-mathbackground"><code>mathbackground</code></dt>
- <dd>The background color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/Web/CSS/color_value#color_keywords">HTML color names</a>.</dd>
- <dt id="attr-mathcolor"><code>mathcolor</code></dt>
- <dd>The text color and also the fraction line color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/Web/CSS/color_value#color_keywords">HTML color names</a>.</dd>
- <dt id="attr-numalign"><code>numalign</code> {{deprecated_inline}}</dt>
- <dd>The alignment of the numerator over the fraction. Possible values are: <code>left</code>, <code>center</code> (default), and <code>right</code>.<br>
- This attribute is deprecated and will be removed in the future. Use CSS <code><a href="/en-US/docs/Web/CSS/text-align">text-align</a></code> instead.</dd>
-</dl>
+- `bevelled` {{deprecated_inline}}
+  - : Specifies the way the fraction is displayed. If `true`, the fraction line is bevelled, which means that numerator and denominator are displayed side by side and separated by a slash (/). Otherwise, if set to `false` (which is the default value), numerator and denominator are on top of each other.
+    This attribute is deprecated and will be removed in the future. Use U+2044 (fraction slash) instead.
+- `class`, `id`, `style`
+  - : Provided for use with [stylesheets](/en-US/docs/Web/CSS).
+- `denomalign` {{deprecated_inline}}
+  - : The alignment of the denominator under the fraction. Possible values are: `left`, `center` (default), and `right`.
+    This attribute is deprecated and will be removed in the future. Use CSS [`text-align`](/en-US/docs/Web/CSS/text-align) instead.
+- `displaystyle`
+  - : A Boolean value specifying whether more vertical space is used for displayed equations or, if set to `false`, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when `displaystyle` is set to `true`. See also `movablelimits` on {{ MathMLElement("mo") }}.
+- `href`
+  - : Used to set a hyperlink to a specified URI.
+- `linethickness`
+  - : The thickness of the horizontal fraction line. This attributes accepts any [length values](/en-US/docs/Web/CSS/length).
+    The values `medium`, `thin`, and `thick` are deprecated and will be removed in the future.
+- `mathbackground`
+  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
+- `mathcolor`
+  - : The text color and also the fraction line color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
+- `numalign` {{deprecated_inline}}
+  - : The alignment of the numerator over the fraction. Possible values are: `left`, `center` (default), and `right`.
+    This attribute is deprecated and will be removed in the future. Use CSS [`text-align`](/en-US/docs/Web/CSS/text-align) instead.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Sample rendering: <img alt="(a/b)/(c/d)" src="mfrac.png"></p>
+Sample rendering: ![(a/b)/(c/d)](mfrac.png)
 
-<p>Your browser rendering: <math> <mfrac bevelled="true"> <mfrac> <mi> a </mi> <mi> b </mi> </mfrac> <mfrac> <mi> c </mi> <mi> d </mi> </mfrac> </mfrac> </math></p>
+Your browser rendering: <math><mfrac bevelled="true"><mfrac><mi>a </mi><mi>b </mi></mfrac><mfrac><mi>c </mi><mi>d</mi></mfrac></mfrac></math>
 
-<pre class="brush: html">&lt;math&gt;
-  &lt;mfrac bevelled="true"&gt;
-     &lt;mfrac&gt;
-        &lt;mi&gt; a &lt;/mi&gt;
-        &lt;mi&gt; b &lt;/mi&gt;
-     &lt;/mfrac&gt;
-     &lt;mfrac&gt;
-        &lt;mi&gt; c &lt;/mi&gt;
-        &lt;mi&gt; d &lt;/mi&gt;
-     &lt;/mfrac&gt;
-  &lt;/mfrac&gt;
-&lt;/math&gt;
-</pre>
+```html
+<math>
+  <mfrac bevelled="true">
+     <mfrac>
+        <mi> a </mi>
+        <mi> b </mi>
+     </mfrac>
+     <mfrac>
+        <mi> c </mi>
+        <mi> d </mi>
+     </mfrac>
+  </mfrac>
+</math>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
