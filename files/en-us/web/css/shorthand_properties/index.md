@@ -204,7 +204,7 @@ Margin shorthand rules for one, two, three and four value declarations are:
 
 ## The universal shorthand property
 
-CSS provides a universal shorthand property, {{cssxref("all")}}, which applies its value to every property in the document. Its purpose is to change the properties' inheritance model to one of:
+CSS provides a universal shorthand property, {{cssxref("all")}}, which applies its value to every property in the document. Its purpose is to change the properties' inheritance model.
 
 {{page("/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance", "Controlling_inheritance")}}
 
