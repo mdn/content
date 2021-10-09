@@ -916,9 +916,7 @@
         "MediaSource",
         "SourceBuffer",
         "SourceBufferList",
-        "VideoPlaybackQuality",
-        "TrackDefault",
-        "TrackDefaultList"
+        "VideoPlaybackQuality"
       ],
       "methods": [
         "HTMLVideoElement.getVideoPlaybackQuality()",
