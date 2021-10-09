@@ -8604,8 +8604,6 @@
 /en-US/docs/Web/API/TouchEvent/TouchEvent()	/en-US/docs/Web/API/TouchEvent/TouchEvent
 /en-US/docs/Web/API/TouchList.item	/en-US/docs/Web/API/TouchList/item
 /en-US/docs/Web/API/TouchList.length	/en-US/docs/Web/API/TouchList/length
-/en-US/docs/Web/API/TrackDefaultList/TrackDefault	/en-US/docs/Web/API/TrackDefaultList
-/en-US/docs/Web/API/TrackDefaultList/TrackDefaultList.length	/en-US/docs/Web/API/TrackDefaultList/length
 /en-US/docs/Web/API/Transaction	/en-US/docs/Web/API/IDBTransaction
 /en-US/docs/Web/API/TransactionSync	/en-US/docs/Web/API/IDBTransactionSync
 /en-US/docs/Web/API/TransitionEvent.TransitionEvent	/en-US/docs/Web/API/TransitionEvent/TransitionEvent
