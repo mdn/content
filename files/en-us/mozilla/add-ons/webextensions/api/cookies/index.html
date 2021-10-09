@@ -64,33 +64,47 @@ browser-compat: webextensions.api.cookies
  </dd>
 </dl>
 
-<h2 id="First-party_isolation">First-party isolation</h2>
+<h2 id="Tracking_protection">Tracking protection</h2>
 
-<p>Third-party cookies are cookies that are set by a website other than the one you are on. For example:</p>
+<p>Trackers use third-party cookies, that is, cookies set by a website other than the one you are on, to identify the websites you visit. For example:</p>
 
 <ol>
- <li>You visit <a href="https://bbc.com">bbc.com</a>. It contains an ad from <a href="http://tracker.com">tracker.com</a> that sets a cookie associated with the "<a href="http://tracker.com">tracker.com</a>" domain.</li>
- <li>You visit <a href="https://cnn.com">cnn.com</a>. It also contains an ad from <a href="http://tracker.com">tracker.com</a> that sets a cookie associated with the "<a href="http://tracker.com">tracker.com</a>" domain.</li>
- <li>Eventually both cookies can be sent to <a href="http://tracker.com">tracker.com</a>. who can then figure out that the same user visited both sites.</li>
+ <li>You visit <code>a-shopping-site.com</code>, which uses <code>ad-tracker.com</code> to deliver its adverts on the web. <code>ad-tracker.com</code> sets a cookie associated with the <code>ad-tracker.com</code> domain. While you are on <code>a-shopping-site.com</code>, <code>ad-tracker.com</code> receives information about the products you browse.</li>
+ <li>You now visit <code>a-news-site.com</code> that uses <code>ad-tracker.com</code> to deliver adverts. <code>ad-tracker.com</code> read its cookie and use the information collected from <code>a-shopping-site.com</code> to decide which adverts to display to you.</li>
 </ol>
 
-<p>When first-party isolation is on, cookies are further qualified by the domain of the original page the user visited (essentially, the domain shown to the user in the URL bar, also known as the "first party domain"). This means it's not possible for a tracker to correlate its cookie from <a href="https://bbc.com">bbc.com</a> with its cookie from <a href="https://cnn.com">cnn.com</a>, so the tracker can't track a single user across both sites.</p>
+<p>To prevent tracking, Firefox separates cookies so trackers cannot make an association between websites visited. So, in the preceding example, <code>ad-tracker.com</code> cannot see the cookie created on <code>a-news-site.com</code> when visiting <code>a-shopping-site.com</code>. The first iteration of this protection was first-party isolation which is now being superseded by <a href="/en-US/docs/Web/Privacy/State_Partitioning#dynamic_state_partitioning">dynamic partitioning</a>.</p>
 
-<p>First-party isolation can be enabled directly by the user by adjusting the browser's configuration, and can be set by extensions using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites#properties">firstPartyIsolate</a></code> setting in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy">privacy</a></code> API. Note that first-party isolation is enabled by default in <a href="https://www.torproject.org/">Tor Browser</a>.</p>
+<div class="note notecard">
+<p><strong>Note:</strong> First-party isolation and dynamic partitioning will not be active at the same time. However, it's possible for normal browsing to use first-party isolation and private browsing to use dynamic partitioning.</p>
+</div>
 
-<p>In the <code>cookies</code> API, the first party domain is represented using the <code>firstPartyDomain</code> attribute. All cookies set while first-party isolation is on will have this attribute set to the domain of the original page. In the example above, this would be "<a href="https://bbc.com">bbc.com</a>" for one cookie and "<a href="https://cnn.com">cnn.com</a>" for the other. All cookies set by websites while first-party isolation is off will have this property set to an empty string.<br>
- <br>
- The {{WebExtAPIRef("cookies.get()")}}, {{WebExtAPIRef("cookies.getAll()")}}, {{WebExtAPIRef("cookies.set()")}} and {{WebExtAPIRef("cookies.remove()")}} APIs all accept a <code>firstPartyDomain</code> option.<br>
- When first-party isolation is on, you must provide this option or the API call will fail and return a rejected promise. For <code>get()</code>, <code>set()</code>, and <code>remove()</code> you must pass a string value. For <code>getAll()</code>, you may also pass <code>null</code> here, and this will get all cookies, whether or not they have a non-empty value for <code>firstPartyDomain</code>.<br>
+<h3 id="Dynamic_partitioning">Dynamic partitioning</h3>
+
+<p>Using dynamic partitioning, Firefox partitions storage accessible to JavaScript APIs by top-level site. However, this method can provide appropriate access to unpartitioned storage to enable common use cases, such as federated login. This feature is being progressively rounded out. See <a href="/en-US/docs/Web/Privacy/State_Partitioning#dynamic_state_partitioning">Dynamic partitioning</a>, on the State Partitioning page, for more information.</p>
+
+<p>When this feature is active, <code>partitionKey</code> returns or sets the key to the cookie's partitioned storage, for example,<code>partitionKey: {topLevelSite: "http://site"}</code>.</p>
+
+<p>By default, {{WebExtAPIRef("cookies.get()")}}, {{WebExtAPIRef("cookies.getAll()")}}, {{WebExtAPIRef("cookies.set()")}}, and {{WebExtAPIRef("cookies.remove()")}} work with unpartitioned cookies and <code>partitionKey</code> must be set to work with partitioned cookies, including for <code>getAll</code>. However, {{WebExtAPIRef("cookies.onChanged()")}} always return information on the cookie partitioning, if available, in <code>partitionKey</code>. The <code>partitionKey</code> value then must be reflected in {{WebExtAPIRef("cookies.set()")}} and {{WebExtAPIRef("cookies.remove()")}} to ensure any changes are made made to the correct cookie.</p>
+
+<p>To access the partitioned cookies in <code>getAll</code> and <code>getAll</code>, <code>partitionKey</code> must include the top site.</p>
+
+<div class="note notecard">
+<p><strong>Note:</strong> Cookies created by extension in background pages and pop-ups are, by default, unpartitioned.</p>
+</div>
+
+<h3 id="First-party_isolation">First-party isolation</h3>
+
+<p>When first-party isolation is on, cookies are qualified by the domain of the original page the user visited (essentially, the domain shown to the user in the URL bar, also known as the "first party domain").</p>
+
+<p>First-party isolation can be enabled by the user by adjusting the browser's configuration, and can be set by extensions using the { order{WebExtAPIRef("privacy.websites","firstPartyIsolate")}} setting in the {{WebExtAPIRef("privacy")}} API. Note that first-party isolation is enabled by default in <a href="https://www.torproject.org/">Tor Browser</a>.</p>
+
+<p>In the <code>cookies</code> API, the first party domain is represented using the <code>firstPartyDomain</code> attribute. All cookies set while first-party isolation is on have this attribute set to the domain of the original page. In the preceding example, this is <code>a-shopping-site.com</code> for one cookie and <code>a-news-site.com</code> for the other. When first-party isolation is off, all cookies set by websites have this property set to an empty string.</p>
+
+<p>The {{WebExtAPIRef("cookies.get()")}}, {{WebExtAPIRef("cookies.getAll()")}}, {{WebExtAPIRef("cookies.set()")}} and {{WebExtAPIRef("cookies.remove()")}} APIs all accept a <code>firstPartyDomain</code> option.</p>
+
+<p>When first-party isolation is on, you must provide this option or the API call will fail and return a rejected promise. For <code>get()</code>, <code>set()</code>, and <code>remove()</code> you must pass a string value. For <code>getAll()</code>, you may also pass <code>null</code> here, and this will get all cookies, whether or not they have a non-empty value for <code>firstPartyDomain</code>.</p>
  When first-party isolation is off, the <code>firstPartyDomain</code> parameter is optional and defaults to an empty string.  A non-empty string can be used to retrieve or modify first-party isolation cookies. Likewise, passing <code>null</code> as <code>firstPartyDomain</code> to <code>getAll()</code> will return all cookies.</p>
-
-<h2 id="Dynamic_partitioning">Dynamic partitioning</h2>
-
-<p>To further prevent cross-site, Firefox partitions storage accessible to JavaScript APIs by top-level site. See <a href="/en-US/docs/Web/Privacy/State_Partitioning#dynamic_state_partitioning">Dynamic partitioning</a>, on the State Partitioning page, for more information.</p>
-
-<p>When this feature is active <code>partitionKey</code> returns the key to this partition storage for a cookie. The {{WebExtAPIRef("cookies.get()")}}, {{WebExtAPIRef("cookies.getAll()")}}, {{WebExtAPIRef("cookies.set()")}} and {{WebExtAPIRef("cookies.remove()")}} APIs all accept a <code>partitionKey</code> option.</p>
-
-<p>However, by default {{WebExtAPIRef("cookies.getAll()")}} only returns unpartitioned cookies. This is to prevent extensions that aren't aware of partitioned cookies from inadvertently copying cookies between partition. To access the partitioned cookies in <code>getAll</code>, <code>partitionKey</code> must include the top site, for example,<code>partitionKey: {topLevelSite: "http://site"}</code>.</p>
 
 <h2 id="Types">Types</h2>
 

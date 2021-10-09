@@ -40,8 +40,8 @@ browser-compat: webextensions.api.cookies.getAll
   <dd>This property must be supplied if the browser has first-party isolation enabled. You can however pass <code>null</code> in this situation. If you do this, then cookies with any value for <code>firstPartyDomain</code>, as well as cookies which do not have <code>firstPartyDomain</code> set at all, will be included in the results. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation">First-party isolation</a>.</dd>
   <dt><code>name</code>{{optional_inline}}</dt>
   <dd>A <code>string</code> representing a name that the cookies should have.</dd>
-  <dt><code>partitionKey</code></dt>
-  <dd>An <code>object</code> representing the storage partition containing the cookies. Omit this object to obtain cookies that are not in partitioned storage. This object contains:
+  <dt><code>partitionKey</code>{{optional_inline}}</dt>
+  <dd>An <code>object</code> representing the storage partition containing the cookies. Include this object to obtain cookies in partitioned storage, otherwise only cookies from unpartitioned storage are returned. This object contains:
    <dl class="reference-values">
    <dt><code>topLevelSite</code></dt>
    <dd>A <code>string</code> representing the first-party URL of the top-level site partition containing the cookies.</dd>

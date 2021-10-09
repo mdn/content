@@ -145,15 +145,14 @@ tags:
     <li>WebRTC deviceID</li>
   </ul>
 <h3 id="dynamic_state_partitioning">Dynamic Partitioning</h3>
-  <p>To prevent cross-site tracking via JavaScript accessible storage APIs,
-  Firefox partitions them for third-parties by top-level site. As opposed to
-  Network Partitioning this boundary is dynamic and storage access to the
-  embedders context maybe be granted in certain circumstances.</p>
-  <p>Firefox implements the
-  <a href="#storage_access_api">StorageAccessAPI</a> to allow frames to request
-  access to the parent storage. Access to top-level storage may also be granted
-  automatically in specific scenarios. <a href="#partitioning_heuristics">You
-  can read more about these heuristics here.</a></p>
+  <p>To prevent JavaScript accessible storage APIs being used for cross-site tracking, Firefox partitions accessible storage by top-level site. This mechanism ieans that, generally, a third-party embedded in one top-level site cannot access data stored under another top-level site.</p>
+  <p>However, unlike Network Partitioning, this boundary is dynamic and access to a third-party's unpartitioned storage can be granted:
+  <ul>
+    <li>using the <a href="#storage_access_api">StorageAccessAPI</a>.</li>
+    <li>automatically, such as for third-parties providing federated login.</li>
+  </ul>
+  <p>Details about automatic grants are provided in the <a href="#partitioning_heuristics">Storage Access Heuristics</a> section. <p>
+  <p>At the time of writing, dynamic partitioning is enabled in Nightly and private browsing in the general release of Firefox.</p>
 
   <h4 id="dynamically_partitioned_apis">Partitioned APIs</h4>
   <ul>

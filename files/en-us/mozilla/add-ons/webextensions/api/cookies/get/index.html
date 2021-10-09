@@ -39,8 +39,8 @@ browser-compat: webextensions.api.cookies.get
   <dd>A <code>string</code> representing the first-party domain with which the cookie to retrieve is associated. This property must be supplied if the browser has first-party isolation enabled. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation">First-party isolation</a>.</dd>
   <dt><code>name</code></dt>
   <dd>A <code>string</code> representing the name of the cookie to retrieve.</dd>
-  <dt><code>partitionKey</code></dt>
-  <dd>An <code>object</code> representing the storage partition containing the cookie. Omit this object to a obtain cookie that is not in partitioned storage. This object contains:
+  <dt><code>partitionKey</code>{{optional_inline}}</dt>
+  <dd>An <code>object</code> representing the storage partition containing the cookie. Include this object to a obtain cookie from partitioned storage. This object contains:
    <dl class="reference-values">
    <dt><code>topLevelSite</code></dt>
    <dd>A <code>string</code> representing the first-party URL of the top-level site partition containing the cookie.</dd>
