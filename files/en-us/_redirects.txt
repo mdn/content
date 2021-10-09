@@ -5941,11 +5941,6 @@
 /en-US/docs/Related/IMSC/Mapping_Time_Code_to_IMSC	/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC
 /en-US/docs/Related/IMSC/Using_imscJS_as_polyfill	/en-US/docs/Related/IMSC/Using_the_imscJS_polyfill
 /en-US/docs/Resource_Timing_API	/en-US/docs/Web/API/Resource_Timing_API
-/en-US/docs/Rich-Text_Editing_in_Mozilla	/en-US/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla
-/en-US/docs/Rich-Text_Editing_in_Mozilla/Class_xbDesignMode	/en-US/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla/Class_xbDesignMode
-/en-US/docs/Rich-Text_Editing_in_Mozilla:Class_xbDesignMode	/en-US/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla/Class_xbDesignMode
-/en-US/docs/Rich-Text_Editing_in_Mozillakjbkjb	/en-US/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla
-/en-US/docs/Rich-Text_Editing_in_Mozillakjbkjb/Class_xbDesignMode	/en-US/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla/Class_xbDesignMode
 /en-US/docs/SGML	/en-US/docs/Glossary/SGML
 /en-US/docs/SMTP	/en-US/docs/Glossary/SMTP
 /en-US/docs/SVG	/en-US/docs/Web/SVG

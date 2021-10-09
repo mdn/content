@@ -48,9 +48,9 @@ tags:
 <h3 id="RTSP">RTSP</h3>
 
 <div class="note">
-<p>Real Time Streaming Protocol (RTSP) controls media sessions between endpoints and is often used together with Real-time Transport Protocol (RTP) and with Real-time Control Protocol (RTCP) for media stream delivery. Using RTP with RTCP allows for adaptive streaming. This is not yet supported natively in most browsers, but be aware that <a href="https://www.mozilla.org/en-US/firefox/os/notes/1.3/">Firefox OS 1.3 supports RTSP</a>.<br>
-<br>
-<strong>Note</strong>: some vendors implement propriety transport protocols, such as RealNetworks and their Real Data Transport (RDT).</p>
+<p><strong>Note:</strong> Real Time Streaming Protocol (RTSP) controls media sessions between endpoints and is often used together with Real-time Transport Protocol (RTP) and with Real-time Control Protocol (RTCP) for media stream delivery. Using RTP with RTCP allows for adaptive streaming. This is not yet supported natively in most browsers, but be aware that <a href="https://www.mozilla.org/en-US/firefox/os/notes/1.3/">Firefox OS 1.3 supports RTSP</a>.</p>
+
+<p>Some vendors implement propriety transport protocols, such as RealNetworks and their Real Data Transport (RDT).</p>
 </div>
 
 <h3 id="RTSP_2.0">RTSP 2.0</h3>
@@ -94,7 +94,7 @@ For example,  <a href="https://web.archive.org/web/20170504035455/https://msope
 <p>DASH stands for Dynamic Adaptive Streaming over HTTP and is a new format that has recently seen support added to Chrome, and Internet Explorer 11 running on Windows 8.1. It is supported via Media Source Extensions which are used by JavaScript libraries such as <a href="https://github.com/Dash-Industry-Forum/dash.js/">DASH.js</a>. This approach allows us to download chunks of the video stream using XHR and "append" the chunks to the stream that's played by the {{ htmlelement("video") }} element. So for example, if we detect that the network is slow, we can start requesting lower quality (smaller) chunks for the next segment. This technology also allows an advertising segment to be appended/inserted into the stream.</p>
 
 <div class="note">
-<p><strong>Note:</strong> you can also <a href="http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification">use WebM with the MPEG DASH adaptive streaming system</a>.</p>
+<p><strong>Note:</strong> You can also <a href="http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification">use WebM with the MPEG DASH adaptive streaming system</a>.</p>
 </div>
 
 <h3 id="HLS">HLS</h3>

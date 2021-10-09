@@ -12,7 +12,9 @@ tags:
 
 <p>For a basic introduction to these concepts, with examples, see the <a href="/en-US/docs/Learn/Forms/Form_validation">Form validation tutorial</a>.</p>
 
-<div class="note"><strong>Note:</strong> HTML5 Constraint validation doesn't remove the need for validation on the <em>server side</em>. Even though far fewer invalid form requests are to be expected, invalid ones can still be sent by non-compliant browsers (for instance, browsers without HTML5 and without JavaScript) or by bad people trying to trick your web application. Therefore, like with HTML4, you need to also validate input constraints on the server side, in a way that is consistent with what is done on the client side.</div>
+<div class="note">
+  <p><strong>Note:</strong> HTML5 Constraint validation doesn't remove the need for validation on the <em>server side</em>. Even though far fewer invalid form requests are to be expected, invalid ones can still be sent by non-compliant browsers (for instance, browsers without HTML5 and without JavaScript) or by bad people trying to trick your web application. Therefore, like with HTML4, you need to also validate input constraints on the server side, in a way that is consistent with what is done on the client side.</p>
+</div>
 
 <h2 id="Intrinsic_and_basic_constraints">Intrinsic and basic constraints</h2>
 
@@ -164,12 +166,13 @@ tags:
 
 <p>Calling <code>checkValidity()</code> is called <em>statically</em> validating the constraints, while calling <code>reportValidity()</code> or submitting the form is called <em>interactively</em> validating the constraints.</p>
 
-<div class="note"><strong>Note: </strong>
+<div class="note"><p><strong>Note:</strong>
 
 <ul>
  <li>If the {{ htmlattrxref("novalidate", "form") }} attribute is set on the {{ HTMLElement("form") }} element, interactive validation of the constraints doesn't happen.</li>
  <li>Calling the <code>submit()</code> method on the <code><a href="/en-US/docs/Web/API/HTMLFormElement">HTMLFormElement</a></code> interface doesn't trigger a constraint validation. In other words, this method sends the form data to the server even if doesn't satisfy the constraints. Call the <code>click()</code> method on a submit button instead.</li>
 </ul>
+</p>
 </div>
 
 <h2 id="Complex_constraints_using_the_Constraint_Validation_API">Complex constraints using the Constraint Validation API</h2>
