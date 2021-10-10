@@ -7,9 +7,6 @@ tags:
   - NPAPI
   - Plugins
 ---
-<div class="prevnext" style="text-align: right;">
-    <p><a href="/en-US/docs/Gecko_Plugin_API_Reference:Plug-in_Basics" style="float: left;">« Previous</a><a href="/en-US/docs/Gecko_Plugin_API_Reference:Initialization_and_Destruction">Next  »</a></p>
-</div>
 
 <h3 id="Writing_Plug-ins">Writing Plug-ins</h3>
 
@@ -87,17 +84,17 @@ tags:
 <p><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPP_GetValue">NPP_GetValue</a></code> is called after the plug-in is initialized to get the scripting interface while <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NP_GetValue">NP_GetValue</a></code> is called during initialization to retrieve the plug-in's name and description, which will appear in the <code><a href="/en-US/docs/Web/API/NavigatorPlugins/plugins">navigator.plugins</a></code> DOM object which is used to populate <em>about:plugins</em>.</p>
 
 <div class="warning">
-<p><strong>Caution:</strong> Gecko caches the values returned by these functions and will only call it if the plug-in's timestamp has changed. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=125469" title="[pluggerrc changes not read] Plugin caching preventing dynamic mime types through NP_GetMIMEDescritpion">bug 125469</a>.</p>
+<p><strong>Warning:</strong> Gecko caches the values returned by these functions and will only call it if the plug-in's timestamp has changed. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=125469" title="[pluggerrc changes not read] Plugin caching preventing dynamic mime types through NP_GetMIMEDescritpion">bug 125469</a>.</p>
 </div>
 
 <h4 id="Mac_OS_X">Mac OS X</h4>
 
-<p>Mac OS X plug-ins are found according to the section <a href="/en-US/Gecko_Plugin_API_Reference/Plug-in_Basics#how_gecko_finds_plug-ins" style="text-decoration: none; color: rgb(4, 137, 183) !important; cursor: default;">How Gecko Finds Plug-ins</a>. Plug-ins are identified by file type NSPL.</p>
+<p>Mac OS X plug-ins are found according to the section <a href="/en-US/Gecko_Plugin_API_Reference/Plug-in_Basics#how_gecko_finds_plug-ins">How Gecko Finds Plug-ins</a>. Plug-ins are identified by file type NSPL.</p>
 
-<p>To determine the supported MIME types, Gecko first checks for <a class="external" href="https://developer.apple.com/mac/library/documentation/InternetWeb/Conceptual/WebKit_PluginProgTopic/Concepts/AboutPlugins.html#//apple_ref/doc/uid/30001248-198944">registry information in the plugins Info.plist</a>. If nothing is found there, Gecko checks for an <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NP_GetMIMEDescription">NP_GetMIMEDescription</a></code> entry point, and will use the information returned by this function.</p>
+<p>To determine the supported MIME types, Gecko first checks for <a href="https://developer.apple.com/mac/library/documentation/InternetWeb/Conceptual/WebKit_PluginProgTopic/Concepts/AboutPlugins.html#//apple_ref/doc/uid/30001248-198944">registry information in the plugins Info.plist</a>. If nothing is found there, Gecko checks for an <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NP_GetMIMEDescription">NP_GetMIMEDescription</a></code> entry point, and will use the information returned by this function.</p>
 
 <div class="warning">
-<p><strong>Note:</strong> The resource method described below is deprecated. Plugins should use the Info.plist approach, and only use the following method as a supplement to support older browsers.</p>
+<p><strong>Warning:</strong> The resource method described below is deprecated. Plugins should use the Info.plist approach, and only use the following method as a supplement to support older browsers.</p>
 </div>
 
 <p>If neither is present, Gecko will check the plugins resources. 'STR#' 128 should contain a list of MIME types and file extensions in alternating strings. For example:</p>

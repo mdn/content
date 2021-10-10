@@ -7,9 +7,6 @@ tags:
   - NPAPI
   - Plugins
 ---
-<div class="prevnext" style="text-align: right;">
-<p><a href="/en-US/docs/Gecko_Plugin_API_Reference:Streams" style="float: left;">« Previous</a><a href="/en-US/docs/Gecko_Plugin_API_Reference:Memory">Next »</a></p>
-</div>
 
 <p>This chapter describes retrieving URLs and displaying them on specified target pages, posting data to an HTTP server, uploading files to an FTP server, and sending mail.</p>
 
@@ -18,11 +15,13 @@ tags:
 <p>The table below summarizes URLs supported by Gecko. In addition, Gecko may support URLs not listed on this table.</p>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
-   <td class="header">URL Scheme</td>
-   <td class="header">Description</td>
-  </tr>
+   <th>URL Scheme</th>
+   <th>Description</th>
+   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td><code>about</code></td>
    <td>Locates browser information or "fun" pages.</td>
@@ -34,10 +33,6 @@ tags:
   <tr>
    <td><code>ftp</code></td>
    <td>(File Transfer Protocol) Locates files and directories on Internet hosts for file download.</td>
-  </tr>
-  <tr>
-   <td><code>gopher</code></td>
-   <td>(Gopher protocol) Locates specified items on a Gopher server. <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)">Obsolete since Gecko 2.0</span></td>
   </tr>
   <tr>
    <td><code>http</code></td>
@@ -131,7 +126,9 @@ tags:
 
 <p>The instance and url parameters have the same definitions as those of <code>NPN_GetURL</code>. The notifyData parameter contains the private plug-in data passed to the corresponding call to <code>NPN_GetURLNotify</code> and <code>NPN_PostURLNotify</code>.</p>
 
-<div class="warning"><strong>Warning</strong>: In Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1), <code>NPN_GetURLNotify()</code> does not notify the plug-in if <code>notifyData</code> is <code>NULL</code>. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=638367" title="[Firefox 4] [NPAPI plugins] NPN_GetURLNotify does not call NPP_URLNotify if notifyData is null">bug 638367</a> for details.</div>
+<div class="warning">
+  <p><strong>Warning:</strong> In Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1), <code>NPN_GetURLNotify()</code> does not notify the plug-in if <code>notifyData</code> is <code>NULL</code>. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=638367" title="[Firefox 4] [NPAPI plugins] NPN_GetURLNotify does not call NPP_URLNotify if notifyData is null">bug 638367</a> for details.</p>
+</div>
 
 <h4 id="Getting_the_URL_and_Displaying_the_Page">Getting the URL and Displaying the Page</h4>
 
@@ -193,7 +190,8 @@ const char *buf, NPBool file);</pre>
 
 <p>Possible URL types include http (similar to an HTML form submission), mailto (sending mail), news (posting a news article), and ftp (uploading a file). For protocols in which the headers must be distinguished from the body, such as http, the buffer or file should contain the headers, followed by a blank line, then the body. If no custom headers are required, add a blank line ('\n') to the beginning of the file or buffer.</p>
 
-<div class="note"><strong>NOTE</strong>: You cannot use <code>NPN_PostURL</code> to specify headers (even a blank line) in a memory buffer. To do this, use <code>NPN_PostURLNotify</code> for this purpose. § The <code>NPN_PostURLNotify</code> function has all the same capabilities and works like <code>NPN_PostURL</code> in most ways except that (1) it supports specifying headers when posting a memory buffer, and (2) it calls <code>NPP_URLNotify</code> upon successful or unsuccessful completion of the request. <code>NPN_PostURLNotify</code> is typically asynchronous: it returns immediately and only later handles the request and calls <code>NPP_URLNotify</code>.</div>
+<div class="note">
+  <p><strong>Note:</strong> You cannot use <code>NPN_PostURL</code> to specify headers (even a blank line) in a memory buffer. To do this, use <code>NPN_PostURLNotify</code> for this purpose. § The <code>NPN_PostURLNotify</code> function has all the same capabilities and works like <code>NPN_PostURL</code> in most ways except that (1) it supports specifying headers when posting a memory buffer, and (2) it calls <code>NPP_URLNotify</code> upon successful or unsuccessful completion of the request. <code>NPN_PostURLNotify</code> is typically asynchronous: it returns immediately and only later handles the request and calls <code>NPP_URLNotify</code>.</p></div>
 
 <pre>NPError NPN_PostURLNotify(
 
@@ -211,11 +209,11 @@ const char *buf, NPBool file);</pre>
 
 <p>The following code posts two name-value pairs to a CGI script through HTTP. The response from the server is displayed in a new window.</p>
 
-<p class="p0" style="margin-bottom: 0pt; margin-top: 0pt;"><em>char* pPostData = "Content-Type:\tapplication/x-www-form-urlencoded\nContent-Length:\t17\n\nname=aaashun@gmail.com\n";</em></p>
+<p><em>char* pPostData = "Content-Type:\tapplication/x-www-form-urlencoded\nContent-Length:\t17\n\nname=aaashun@gmail.com\n";</em></p>
 
-<p class="p0" style="margin-bottom: 0pt; margin-top: 0pt;"><em>uint32 nPostDataLen = (uint32)strlen(pPostData);</em></p>
+<p><em>uint32 nPostDataLen = (uint32)strlen(pPostData);</em></p>
 
-<p class="p0" style="margin-bottom: 0pt; margin-top: 0pt;"><em>NPN_PostURL(npInstance, "http://www.baidu.com","_blank", nPostDataLen, pPostData, FALSE);</em></p>
+<p><em>NPN_PostURL(npInstance, "http://www.baidu.com","_blank", nPostDataLen, pPostData, FALSE);</em></p>
 
 <h4 id="Uploading_Files_to_an_FTP_Server">Uploading Files to an FTP Server</h4>
 
@@ -244,7 +242,3 @@ NULL, myLength, myData, FALSE);</pre>
 <p>The example starts by defining the mail message, <code>myData</code>, and its length, <code>myLength</code>. It sends <code>myData</code> and <code>myLength</code> to the mailto URL <code>mailto:fred@example.com</code>. The target window for displaying the message is null in the example. Normally, using a null target window causes the response to be delivered from the server to the plug-in instance in a new stream, but no response is expected for a mailto URL.</p>
 
 <p>You cannot use either of these functions to set the body or attachments of an email message.</p>
-
-<div class="prevnext" style="text-align: right;">
-<p><a href="/en-US/docs/Gecko_Plugin_API_Reference:Streams" style="float: left;">« Previous</a><a href="/en-US/docs/Gecko_Plugin_API_Reference:Memory">Next »</a></p>
-</div>
