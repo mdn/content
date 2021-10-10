@@ -66395,33 +66395,6 @@
       "pioug"
     ]
   },
-  "Web/API/PayerErrors": {
-    "modified": "2020-10-15T22:09:51.212Z",
-    "contributors": [
-      "quixx",
-      "Sheppy",
-      "akansha2608",
-      "marcoscaceres"
-    ]
-  },
-  "Web/API/PayerErrors/email": {
-    "modified": "2020-10-15T22:11:53.338Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/PayerErrors/name": {
-    "modified": "2020-10-15T22:11:53.084Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/PayerErrors/phone": {
-    "modified": "2020-10-15T22:11:53.106Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/PaymentAddress": {
     "modified": "2020-10-15T21:48:36.020Z",
     "contributors": [
