@@ -40523,98 +40523,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/EffectTiming": {
-    "modified": "2020-10-15T21:43:00.800Z",
-    "contributors": [
-      "sideshowbarker",
-      "kvoncode",
-      "fscholz",
-      "Sheppy",
-      "rachelnabors",
-      "chrisdavidmills",
-      "rolfedh"
-    ]
-  },
-  "Web/API/EffectTiming/delay": {
-    "modified": "2020-10-15T21:47:51.236Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "Sheppy",
-      "rachelnabors",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/EffectTiming/direction": {
-    "modified": "2020-10-15T21:47:51.120Z",
-    "contributors": [
-      "claviska",
-      "fscholz",
-      "Sheppy",
-      "chrisdavidmills",
-      "rachelnabors"
-    ]
-  },
-  "Web/API/EffectTiming/duration": {
-    "modified": "2020-10-15T21:47:51.235Z",
-    "contributors": [
-      "fscholz",
-      "Sheppy",
-      "rachelnabors",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/EffectTiming/easing": {
-    "modified": "2020-10-15T21:47:51.125Z",
-    "contributors": [
-      "estelle",
-      "birtles",
-      "duncancumming",
-      "fscholz",
-      "chrisdavidmills",
-      "Sheppy",
-      "rachelnabors"
-    ]
-  },
-  "Web/API/EffectTiming/endDelay": {
-    "modified": "2020-10-15T21:47:52.431Z",
-    "contributors": [
-      "fscholz",
-      "Sheppy",
-      "rachelnabors",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/EffectTiming/fill": {
-    "modified": "2020-10-15T21:47:52.151Z",
-    "contributors": [
-      "Jack.Works",
-      "alexey-yunoshev",
-      "birtles",
-      "fscholz",
-      "Sheppy",
-      "rachelnabors",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/EffectTiming/iterationStart": {
-    "modified": "2020-10-15T21:47:51.277Z",
-    "contributors": [
-      "fscholz",
-      "Sheppy",
-      "chrisdavidmills",
-      "rachelnabors"
-    ]
-  },
-  "Web/API/EffectTiming/iterations": {
-    "modified": "2020-10-15T21:47:52.045Z",
-    "contributors": [
-      "fscholz",
-      "Sheppy",
-      "rachelnabors",
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/Element": {
     "modified": "2020-10-25T20:44:13.988Z",
     "contributors": [
@@ -58114,12 +58022,6 @@
       "birtles",
       "rachelnabors",
       "chrisdavidmills"
-    ]
-  },
-  "Web/API/KeyframeEffectOptions": {
-    "modified": "2020-10-15T22:28:10.095Z",
-    "contributors": [
-      "lpd-au"
     ]
   },
   "Web/API/LargestContentfulPaint": {
