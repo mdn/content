@@ -691,13 +691,13 @@ In HTML, the characters `<`, `>`,`"`,`'` and `&` are special characters. They ar
 
 You do this with character references. These are special codes that represent characters, to be used in these exact circumstances. Each character reference starts with an ampersand (&), and ends with a semicolon (;).
 
-| Literal character | Character reference equivalent |
-| ----------------- | ------------------------------ |
-| <                 | &lt;                           |
-| >                 | &gt;                           |
-| "                 | &quot;                         |
-| '                 | &apos;                         |
-| &                 | &amp;                          |
+| Literal character |  Character reference equivalent  |
+| ----------------- | -------------------------------- |
+| <                 | `&lt;`                           |
+| >                 | `&gt;`                           |
+| "                 | `&quot;`                         |
+| '                 | `&apos;`                         |
+| &                 | `&amp;`                          |
 
 The character reference equivalent could be easily remembered because the text it uses can be seen as less than for '\&lt;' , quotation for ' \&quot; ' and similarly for others. To find more about entity reference, see [List of XML and HTML character entity references](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references) (Wikipedia).
 
