@@ -64,17 +64,21 @@ WebAssembly.instantiateStreaming(
 );
 </pre>
 
-
-<table id="Opcodes">
+<table>
+ <thead>
   <tr>
-    <th colspan="2">Opcodes</th>
+   <th>Instruction</th>
+   <th>Binary opcode</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>if</code></td>
+   <td><code>0x04</code></td>
   </tr>
   <tr>
-    <td><code>if</code></td>
-    <td><code>0x04</code></td>
+   <td><code>else</code></td>
+   <td><code>0x05</code></td>
   </tr>
-  <tr>
-    <td><code>else</code></td>
-    <td><code>0x05</code></td>
-  </tr>
+ </tbody>
 </table>
