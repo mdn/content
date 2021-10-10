@@ -58722,14 +58722,6 @@
       "estelle"
     ]
   },
-  "Web/API/MediaCapabilities/MediaCapabilitiesInfo": {
-    "modified": "2019-11-18T13:45:38.099Z",
-    "contributors": [
-      "LeonFrempong",
-      "ExE-Boss",
-      "estelle"
-    ]
-  },
   "Web/API/MediaCapabilities/decodingInfo": {
     "modified": "2020-10-15T22:07:18.295Z",
     "contributors": [
@@ -68893,56 +68885,6 @@
       "kscarfone",
       "teoli",
       "rabimba"
-    ]
-  },
-  "Web/API/PositionOptions": {
-    "modified": "2020-10-15T21:24:35.804Z",
-    "contributors": [
-      "chrisdavidmills",
-      "connorshea",
-      "forest51690",
-      "leolux",
-      "Sebastianz",
-      "fscholz",
-      "Alhadis",
-      "teoli"
-    ]
-  },
-  "Web/API/PositionOptions/enableHighAccuracy": {
-    "modified": "2020-10-15T21:24:37.564Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "chrisdavidmills",
-      "Sebastianz",
-      "fscholz",
-      "teoli",
-      "Reachmeatshivam"
-    ]
-  },
-  "Web/API/PositionOptions/maximumAge": {
-    "modified": "2020-10-15T21:24:37.766Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "chrisdavidmills",
-      "Sebastianz",
-      "fscholz",
-      "teoli",
-      "Reachmeatshivam"
-    ]
-  },
-  "Web/API/PositionOptions/timeout": {
-    "modified": "2020-10-15T21:24:42.000Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "chrisdavidmills",
-      "Sebastianz",
-      "fscholz",
-      "teoli",
-      "Brian294",
-      "Reachmeatshivam"
     ]
   },
   "Web/API/PositionSensorVRDevice": {
