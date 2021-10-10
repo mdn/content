@@ -79166,38 +79166,6 @@
       "scunliffe"
     ]
   },
-  "Web/API/StorageEstimate": {
-    "modified": "2020-10-15T21:50:38.992Z",
-    "contributors": [
-      "x1shi",
-      "chrisdavidmills",
-      "jarryd999",
-      "ddbeck",
-      "jpmedley",
-      "tomayac",
-      "Sheppy"
-    ]
-  },
-  "Web/API/StorageEstimate/quota": {
-    "modified": "2020-10-15T21:50:38.455Z",
-    "contributors": [
-      "sideshowbarker",
-      "duncancumming",
-      "connorshea",
-      "chrisdavidmills",
-      "Sheppy"
-    ]
-  },
-  "Web/API/StorageEstimate/usage": {
-    "modified": "2020-10-15T21:50:41.920Z",
-    "contributors": [
-      "sideshowbarker",
-      "duncancumming",
-      "connorshea",
-      "chrisdavidmills",
-      "Sheppy"
-    ]
-  },
   "Web/API/StorageEvent": {
     "modified": "2020-10-15T21:10:59.931Z",
     "contributors": [

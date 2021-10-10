@@ -8538,6 +8538,9 @@
 /en-US/docs/Web/API/Storage.removeItem	/en-US/docs/Web/API/Storage/removeItem
 /en-US/docs/Web/API/Storage.setItem	/en-US/docs/Web/API/Storage/setItem
 /en-US/docs/Web/API/Storage/LocalStorage	/en-US/docs/Web/API/Window/localStorage
+/en-US/docs/Web/API/StorageEstimate	/en-US/docs/Web/API/StorageManager/estimate
+/en-US/docs/Web/API/StorageEstimate/quota	/en-US/docs/Web/API/StorageManager/estimate
+/en-US/docs/Web/API/StorageEstimate/usage	/en-US/docs/Web/API/StorageManager/estimate
 /en-US/docs/Web/API/StorageQuota	/en-US/docs/Web/API/StorageManager
 /en-US/docs/Web/API/StorageQuota/queryInfo	/en-US/docs/Web/API/StorageManager
 /en-US/docs/Web/API/StorageQuota/requestPersistentQuota	/en-US/docs/Web/API/StorageManager

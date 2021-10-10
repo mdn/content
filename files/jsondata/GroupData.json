@@ -1295,7 +1295,7 @@
     },
     "Storage": {
       "overview": ["Storage API"],
-      "interfaces": ["StorageManager", "StorageEstimate"],
+      "interfaces": ["StorageManager"],
       "methods": [],
       "properties": ["Navigator.storage", "WorkerNavigator.storage"],
       "events": []
