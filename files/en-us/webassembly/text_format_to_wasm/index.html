@@ -13,10 +13,10 @@ tags:
 ---
 <p>{{WebAssemblySidebar}}</p>
 
-<p class="summary">WebAssembly has an S-expression-based textual representation, an intermediate form designed to be exposed in text editors, browser developer tools, etc. This article explains a little bit about how it works, and how to use available tools to convert text format files to the <code>.wasm</code> assembly format.</p>
+<p>WebAssembly has an S-expression-based textual representation, an intermediate form designed to be exposed in text editors, browser developer tools, etc. This article explains a little bit about how it works, and how to use available tools to convert text format files to the <code>.wasm</code> assembly format.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Text format files are usually saved with a <code>.wat</code> extension. Historically, a <code>.wast</code> extension was also used, however that's now used for the scripting language used by the WebAssembly testsuite.</p>
+<p><strong>Note:</strong> Text format files are usually saved with a <code>.wat</code> extension. Historically, a <code>.wast</code> extension was also used, however that's now used for the scripting language used by the WebAssembly testsuite.</p>
 </div>
 
 <h2 id="A_first_look_at_the_text_format">A first look at the text format</h2>
@@ -42,25 +42,25 @@ tags:
  <li>We need to assemble this textual representation into the assembly language the browser actually reads before we can use it. To do this, we can use the wabt tool, which includes compilers to convert between WebAssembly’s text representation and wasm, and vice versa, plus more besides. Go to <a href="https://github.com/webassembly/wabt">https://github.com/webassembly/wabt</a> — follow the instructions on this page to set up the tool.</li>
  <li>Once you’ve got the tool built, add the <code>/wabt/out/clang/Debug</code> directory to your system <code>PATH</code>.</li>
  <li>Next, execute the wat2wasm program, passing it the path to the input file, followed by an <code>-o</code> parameter, followed by the path to the output file:
-  <pre class="brush: bash no-line-numbers">wat2wasm simple.wat -o simple.wasm</pre>
+  <pre class="brush: bash">wat2wasm simple.wat -o simple.wasm</pre>
  </li>
 </ol>
 
 <p>This will convert the wasm into a file called <code>simple.wasm</code>, which contains the <code>.wasm</code> assembly code.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You can also convert the assembly back into the text representation using the wasm2wat tool; for example <code>wasm2wat simple.wasm -o text.wat</code>.</p>
+<p><strong>Note:</strong> You can also convert the assembly back into the text representation using the wasm2wat tool; for example <code>wasm2wat simple.wasm -o text.wat</code>.</p>
 </div>
 
 <h2 id="Viewing_the_assembly_output">Viewing the assembly output</h2>
 
 <p>Because the output file is assembly-based, it can’t be viewed in a normal text editor. However, you can view it using the wat2wasm tool’s <code>-v</code> option. Try this:</p>
 
-<pre class="brush: bash no-line-numbers">wat2wasm simple.wat -v</pre>
+<pre class="brush: bash">wat2wasm simple.wat -v</pre>
 
 <p>This will give you an output in your terminal in the following way:</p>
 
-<p><img alt="several strings of binary with textual descriptions beside them. For example: 0000008: 01 ; section code " src="assembly-output.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="several strings of binary with textual descriptions beside them. For example: 0000008: 01 ; section code " src="assembly-output.png"></p>
 
 <h2 id="See_also">See also</h2>
 

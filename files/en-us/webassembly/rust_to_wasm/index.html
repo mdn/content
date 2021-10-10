@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{WebAssemblySidebar}}</div>
 
-<p class="summary">If you have some Rust code, you can compile it into <a href="/en-US/docs/WebAssembly">WebAssembly</a> (wasm). This tutorial takes you through all you need to know to compile a Rust project to wasm and use it in an existing web app.</p>
+<p>If you have some Rust code, you can compile it into <a href="/en-US/docs/WebAssembly">WebAssembly</a> (wasm). This tutorial takes you through all you need to know to compile a Rust project to wasm and use it in an existing web app.</p>
 
 <h2 id="Rust_and_WebAssembly_use_cases">Rust and WebAssembly use cases</h2>
 
@@ -33,25 +33,25 @@ tags:
 <p>Install Rust by going to the <a href="https://www.rust-lang.org/install.html">Install Rust</a> page and following the instructions. This installs a tool called "rustup", which lets you manage multiple versions of Rust. By default, it installs the latest stable Rust release, which you can use for general Rust development. Rustup installs <code>rustc</code>, the Rust compiler, as well as <code>cargo</code>, Rust's package manager, <code>rust-std</code>, Rust's standard libraries, and some helpful docs — <code>rust-docs</code>.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Pay attention to the post-install note about needing cargo's <code>bin</code> directory in your system <code>PATH</code>. This is added automatically, but you must restart your terminal for it to take effect.</p>
+<p><strong>Note:</strong> Pay attention to the post-install note about needing cargo's <code>bin</code> directory in your system <code>PATH</code>. This is added automatically, but you must restart your terminal for it to take effect.</p>
 </div>
 
 <h3 id="wasm-pack">wasm-pack</h3>
 
 <p>To build the package, we need an additional tool, <code>wasm-pack</code>. This helps compile the code to WebAssembly, as well as produce the right packaging for use in the browser. To download and install it, enter the following command into your terminal:</p>
 
-<pre class="brush: bash no-line-numbers">$ cargo install wasm-pack</pre>
+<pre class="brush: bash">$ cargo install wasm-pack</pre>
 
 <h2 id="Building_our_WebAssembly_package">Building our WebAssembly package</h2>
 
 <p>Enough setup; let's create a new package in Rust. Navigate to wherever you keep your personal projects, and type this:</p>
 
-<pre class="brush: bash no-line-numbers">$ cargo new --lib hello-wasm
+<pre class="brush: bash">$ cargo new --lib hello-wasm
      Created library `hello-wasm` project</pre>
 
 <p>This creates a new library in a subdirectory named <code>hello-wasm</code> with everything you need to get going:</p>
 
-<pre class="brush: none no-line-numbers">+-- Cargo.toml
+<pre class="brush: plain">+-- Cargo.toml
 +-- src
     +-- lib.rs</pre>
 
@@ -170,7 +170,7 @@ wasm-bindgen = "0.2"</pre>
 
 <p>Now that we've got everything set up, let's build the package. Type this into your terminal:</p>
 
-<pre class="brush: bash no-line-numbers">$ wasm-pack build --target web</pre>
+<pre class="brush: bash">$ wasm-pack build --target web</pre>
 
 <p>This does a number of things (and they take a lot of time, especially the first time you run <code>wasm-pack</code>). To learn about them in detail, check out <a href="https://hacks.mozilla.org/2018/04/hello-wasm-pack/">this blog post on Mozilla Hacks</a>. In short, <code>wasm-pack build</code>:</p>
 
@@ -228,7 +228,7 @@ wasm-bindgen = "0.2"</pre>
 
 <p>Let’s start by recompiling out Rust with the target bundler option:</p>
 
-<pre class="brush: bash no-line-numbers">$ wasm-pack build --target bundler</pre>
+<pre class="brush: bash">$ wasm-pack build --target bundler</pre>
 
 <h3 id="Install_Node.js_and_npm">Install Node.js and npm</h3>
 
@@ -238,7 +238,7 @@ wasm-bindgen = "0.2"</pre>
 
 <p>Next, let's use `npm link` to make this package available to other JavaScript packages installed</p>
 
-<pre class="brush: bash no-line-numbers">$ cd pkg
+<pre class="brush: bash">$ cd pkg
 $ npm link</pre>
 
 <p>We now have an npm package, written in Rust, but compiled to WebAssembly. It's ready for use from JavaScript, and doesn't require the user to have Rust installed; the code included was the WebAssembly code, not the Rust source.</p>
@@ -249,7 +249,7 @@ $ npm link</pre>
 
 <p>Let's move back out of the <code>pkg</code> directory, and make a new directory, <code>site</code>, to try this out in:</p>
 
-<pre class="brush: bash no-line-numbers">$ cd ..
+<pre class="brush: bash">$ cd ..
 $ mkdir site
 $ cd site
 $ npm link hello-wasm
@@ -306,7 +306,7 @@ module.exports = {
 
 <p>We're done making files. Let's give this a shot:</p>
 
-<pre class="brush: bash no-line-numbers">$ npm install
+<pre class="brush: bash">$ npm install
 $ npm run serve</pre>
 
 <p>This starts a web server. Load <a href="http://localhost:8080">http://localhost:8080</a> and an alert box appears on the screen, with <code>Hello, WebAssembly with NPM!</code> in it. We've successfully used the Rust module with npm.</p>
