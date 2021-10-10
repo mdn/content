@@ -32,8 +32,7 @@ navigator.geolocation.watchPosition(success[, error[, options]])
   - : An optional callback function that takes a {{domxref("GeolocationPositionError")}}
     object as an input parameter.
 - `options` {{optional_inline}}
-  - : An optional {{domxref("PositionOptions")}} object that provides configuration
-    options for the location watch.
+  - : An optional object that provides configuration options for the location watch. View {{domxref("Geolocation.getCurrentPosition")}} for more details on possible options.
 
 ### Return value
 

@@ -55,9 +55,7 @@ possible:
       <td><code>3</code></td>
       <td><code>TIMEOUT</code></td>
       <td>
-        The time allowed to acquire the geolocation, defined by
-        {{domxref("PositionOptions.timeout")}} information that
-        was reached before the information was obtained.
+        The time allowed to acquire the geolocation had passed before the information was obtained.
       </td>
     </tr>
   </tbody>

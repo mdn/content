@@ -7906,6 +7906,7 @@
 /en-US/docs/Web/API/MSContentZoom	/en-US/docs/Web/API/Element/msContentZoom_event
 /en-US/docs/Web/API/MSLaunchUri	/en-US/docs/Web/API/Navigator/msLaunchUri
 /en-US/docs/Web/API/MSManipulationStateChanged	/en-US/docs/Web/API/Element/MSManipulationStateChanged_event
+/en-US/docs/Web/API/MediaCapabilities/MediaCapabilitiesInfo	/en-US/docs/Web/API/MediaCapabilities
 /en-US/docs/Web/API/MediaCapabilities_API	/en-US/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API
 /en-US/docs/Web/API/MediaDevices/mediaDevices.getUserMedia	/en-US/docs/Web/API/MediaDevices/getUserMedia
 /en-US/docs/Web/API/MediaMetadata/MediaMetadata.title	/en-US/docs/Web/API/MediaMetadata/title
@@ -8281,9 +8282,13 @@
 /en-US/docs/Web/API/PositionError.message	/en-US/docs/Web/API/GeolocationPositionError/message
 /en-US/docs/Web/API/PositionError/code	/en-US/docs/Web/API/GeolocationPositionError/code
 /en-US/docs/Web/API/PositionError/message	/en-US/docs/Web/API/GeolocationPositionError/message
-/en-US/docs/Web/API/PositionOptions.enableHighAccuracy	/en-US/docs/Web/API/PositionOptions/enableHighAccuracy
-/en-US/docs/Web/API/PositionOptions.maximumAge	/en-US/docs/Web/API/PositionOptions/maximumAge
-/en-US/docs/Web/API/PositionOptions.timeout	/en-US/docs/Web/API/PositionOptions/timeout
+/en-US/docs/Web/API/PositionOptions	/en-US/docs/Web/API/Geolocation/getCurrentPosition
+/en-US/docs/Web/API/PositionOptions.enableHighAccuracy	/en-US/docs/Web/API/Geolocation/getCurrentPosition
+/en-US/docs/Web/API/PositionOptions.maximumAge	/en-US/docs/Web/API/Geolocation/getCurrentPosition
+/en-US/docs/Web/API/PositionOptions.timeout	/en-US/docs/Web/API/Geolocation/getCurrentPosition
+/en-US/docs/Web/API/PositionOptions/enableHighAccuracy	/en-US/docs/Web/API/Geolocation/getCurrentPosition
+/en-US/docs/Web/API/PositionOptions/maximumAge	/en-US/docs/Web/API/Geolocation/getCurrentPosition
+/en-US/docs/Web/API/PositionOptions/timeout	/en-US/docs/Web/API/Geolocation/getCurrentPosition
 /en-US/docs/Web/API/PositionSensorVRDevice/getState()	/en-US/docs/Web/API/PositionSensorVRDevice/getState
 /en-US/docs/Web/API/PresentationConnectionClosedEvent	/en-US/docs/Web/API/PresentationConnectionCloseEvent
 /en-US/docs/Web/API/ProgressEvent.ProgressEvent	/en-US/docs/Web/API/ProgressEvent/ProgressEvent
