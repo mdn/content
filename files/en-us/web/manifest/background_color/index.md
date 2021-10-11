@@ -7,37 +7,37 @@ tags:
   - background_color
 browser-compat: html.manifest.background_color
 ---
-<div>{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}</div>
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>String</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>String</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The <code>background_color</code> member defines a placeholder background color for the application page to display before its stylesheet is loaded. This value is used by the user agent to draw the background color of a shortcut when the manifest is available before the stylesheet has loaded.</p>
+The `background_color` member defines a placeholder background color for the application page to display before its stylesheet is loaded. This value is used by the user agent to draw the background color of a shortcut when the manifest is available before the stylesheet has loaded.
 
-<p>Therefore <code>background_color</code> should match the {{cssxref("background-color")}} CSS property in the site’s stylesheet for a smooth transition between launching the web application and loading the site's content.</p>
+Therefore `background_color` should match the {{cssxref("background-color")}} CSS property in the site’s stylesheet for a smooth transition between launching the web application and loading the site's content.
 
-<div class="notecard note">
-<p><strong>Note:</strong> The <code>background_color</code> member is only meant to improve the user experience while the main stylesheet is loading from the network or the storage media; it is not used by the user agent as the {{cssxref("background-color")}} CSS property when the progressive web app stylesheet is available.</p>
-</div>
+> **Note:** The `background_color` member is only meant to improve the user experience while the main stylesheet is loading from the network or the storage media; it is not used by the user agent as the {{cssxref("background-color")}} CSS property when the progressive web app stylesheet is available.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: json">"background_color": "red"</pre>
+```json
+"background_color": "red"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

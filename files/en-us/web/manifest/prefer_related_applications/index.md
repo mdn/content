@@ -7,34 +7,35 @@ tags:
   - prefer_related_applications
 browser-compat: html.manifest.prefer_related_applications
 ---
-<div>{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}</div>
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>Boolean</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>Boolean</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The <dfn><code>prefer_related_applications</code></dfn> member is a boolean value that specifies that applications listed in <code><a href="/en-US/docs/Web/Manifest/related_applications">related_applications</a></code> should be preferred over the web application. If the <code>prefer_related_applications</code> member is set to <code>true</code>, the user agent might suggest installing one of the related applications instead of this web app.</p>
+The _`prefer_related_applications`_ member is a boolean value that specifies that applications listed in [`related_applications`](/en-US/docs/Web/Manifest/related_applications) should be preferred over the web application. If the `prefer_related_applications` member is set to `true`, the user agent might suggest installing one of the related applications instead of this web app.
 
-<p>If omitted, <dfn><code>prefer_related_applications</code></dfn> defaults to <code>false</code>.</p>
+If omitted, _`prefer_related_applications`_ defaults to `false`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: json">"prefer_related_applications": true
-</pre>
+```json
+"prefer_related_applications": true
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
