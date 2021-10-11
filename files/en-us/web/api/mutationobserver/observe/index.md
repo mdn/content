@@ -45,7 +45,7 @@ mutationObserver.observe(target, options)
     tree to watch for changes, or to be the root of a subtree of nodes to be watched.
 - `options`
 
-  - : A {{domxref("MutationObserverInit")}} object providing options that describe which
+  - : An object providing options that describe which
     DOM mutations should be reported to
     `mutationObserver`’s `callback`. At a
     minimum, one of `childList`, `attributes`, and/or
@@ -55,42 +55,37 @@ mutationObserver.observe(target, options)
 
     Options are as follows:
 
-    - {{domxref("MutationObserverInit.subtree", "subtree")}} {{optional_inline}}
+    - `subtree` {{optional_inline}}
       - : Set to `true` to extend monitoring to the entire subtree of nodes
-        rooted at `target`. All of the other `MutationObserverInit`
+        rooted at `target`. All of the other
         properties are then extended to all of the nodes in the subtree instead of
         applying solely to the `target` node. The default value is
         `false`.
-    - {{domxref("MutationObserverInit.childList", "childList")}} {{optional_inline}}
+    - `childList` {{optional_inline}}
       - : Set to `true` to monitor the target node (and, if
         `subtree` is `true`, its descendants) for the addition of
         new child nodes or removal of existing child nodes. The default value is
         `false`.
-    - {{domxref("MutationObserverInit.attributes", "attributes")}} {{optional_inline}}
+    - `attributes` {{optional_inline}}
       - : Set to `true` to watch for changes to the value of attributes on the
         node or nodes being monitored. The default value is `true` if either of
         `attributeFilter` or `attributeOldValue` is specified,
         otherwise the default value is `false`.
-    - {{domxref("MutationObserverInit.attributeFilter", "attributeFilter")}}
-      {{optional_inline}}
+    - `attributeFilter` {{optional_inline}}
       - : An array of specific attribute names to be monitored. If this property isn't
         included, changes to all attributes cause mutation notifications.
-    - {{domxref("MutationObserverInit.attributeOldValue", "attributeOldValue")}}
-      {{optional_inline}}
+    - `attributeOldValue` {{optional_inline}}
       - : Set to `true` to record the previous value of any attribute that
         changes when monitoring the node or nodes for attribute changes; see
-        {{SectionOnPage("/en-US/docs/Web/API/MutationObserver", "Monitoring attribute
-        values")}} for details on watching for attribute changes and value recording. The
+        {{SectionOnPage("/en-US/docs/Web/API/MutationObserver", "Monitoring attribute values")}} for details on watching for attribute changes and value recording. The
         default value is `false`.
-    - {{domxref("MutationObserverInit.characterData", "characterData")}}
-      {{optional_inline}}
+    - `characterData` {{optional_inline}}
       - : Set to `true` to monitor the specified target node (and, if
         `subtree` is `true`, its descendants) for changes to the
         character data contained within the node or nodes. The default value is
         `true` if `characterDataOldValue` is specified, otherwise
         the default value is `false`.
-    - {{domxref("MutationObserverInit.characterDataOldValue",
-        "characterDataOldValue")}} {{optional_inline}}
+    - `characterDataOldValue` {{optional_inline}}
       - : Set to `true` to record the previous value of a node's text whenever
         the text changes on nodes being monitored. The default value is `false`.
 
@@ -106,16 +101,13 @@ mutationObserver.observe(target, options)
 
     - The `options` are configured such that nothing will
       actually be monitored. 
-      (For example, if {{domxref("MutationObserverInit.childList")}},
-      {{domxref("MutationObserverInit.attributes")}}, and
-      {{domxref("MutationObserverInit.characterData")}} are all `false`.)
+      (For example, if `childList`, `attributes`, and `characterData` are all `false`.)
     - The value of `options.attributes` is `false`
       (indicating that attribute changes are not to be monitored), but
       `attributeOldValue` is `true` and/or
       `attributeFilter` is present.
-    - The {{domxref("MutationObserverInit.characterDataOldValue",
-        "characterDataOldValue")}} option is `true` but
-      {{domxref("MutationObserverInit.characterData")}} is `false`
+    - The `characterDataOldValue` option is `true` but
+      `characterData` is `false`
       (indicating that character changes are not to be monitored).
 
 ## Usage notes
@@ -155,7 +147,7 @@ rewinding the DOM back to its initial state.
 In this example, we demonstrate how to call the method
 **`observe()`** on an instance of
 {{domxref("MutationObserver")}}, once it has been set up, passing it a target element
-and a {{domxref("MutationObserverInit")}} options object.
+and an `options` object.
 
 ```js
 // identify an element to observe
