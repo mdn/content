@@ -5,33 +5,81 @@ tags:
   - Transferable
   - Workers
 ---
-**Transferable objects** are objects for which the underlying resources can be transferred from one context to another using a zero-copy (high performance) operation.
+**Transferable objects** are objects that can be _detached_ from one context and attached to another, rather than simply duplicated in both contexts.
+Following a transfer, the original object is no longer available in the original context, and any attempt to access it will throw an exception.
 
-Transfer operations detach specified resources from the original object and move them to the new context.
-Following a transfer, attempts to use transferred objects in the original context will throw an exception.
+Transferring is commonly used to share resources between threads that can only be safely exposed to a single JS thread at a time.
+It may also be used when creating deep copies of objects, where the object manages resources for which there must only be one copy.
 
-For example, {{jsxref("ArrayBuffer")}} is a _transferrable object_ that might be moved from a main app to a {{domxref("Web Workers API", "web worker script","","true")}}.
-After transfer the memory from the original `ArrayBuffer` is (quite literally) moved to another version of `ArrayBuffer` in the worker context.
-The `ArrayBuffer` in the original context is cleared/has no access to transferred memory. 
+Not all objects are transferable, and the mechanism used to transfer an object depends on the object.
+For example, when an {{jsxref("ArrayBuffer")}} is transfered between threads the memory literally moved between threads in a fast and efficient zero-copy operation.
+Other objects may be transferred by copying the object and then removing it in the new context.
+
+
+## Transferring objects between threads
+
+The code below demonstrates the first case: sending a message from a main thread to a {{domxref("Web Workers API", "web worker thread","","true")}}.
+The {{jsxref("Uint8Array")}} is copied (duplicated) in the worker while its buffer is transferred.
+After transfer an attempt to access `uInt8Array` from the worker will throw, but you can check the `byteLength` to confirm it is now zero.
 
 ```js
-// Create a 32MB "file" and fill it.
-var uInt8Array = new Uint8Array(1024 * 1024 * 32); // 32MB
+// Create an 8MB "file" and fill it.
+var uInt8Array = new Uint8Array(1024 * 1024 * 8); // 8MB
 for (var i = 0; i < uInt8Array.length; ++i) {
   uInt8Array[i] = i;
 }
+console.log(uInt8Array.byteLength);  // 8388608
 
 // Transfer the underlying buffer to a worker
-worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
+worker.postMessage(uInt8Array, [uInt8Array.buffer]);
+console.log(uInt8Array.byteLength);  // 0
 ```
 
-Similarly, the {{domxref("structuredClone()")}} method can be used to make deep copies of a transferrable object, and may additionally transfer specified resources to the cloned object.
-This is useful when you want to safely perform operations on some data and also fail attempts to access the data while performing the operation.
-In this case you clone and transfer the object and perform the operations on the copied data; attempts to access the original object will fail.
+> **Note:** [Typed arrays](en-US/docs/Web/JavaScript/Typed_arrays) like {{jsxref("Int32Array")}} and {{jsxref("Uint8Array")}}, are serializable, but not transferable.
+> However their underlying buffer is an {{jsxref("ArrayBuffer")}}, which is a transferable object.
+> We could have sent `uInt8Array.buffer` in the data parameter, but not `uInt8Array` in the transfer sequence.
 
+
+### Transferring during a cloning operation
+
+The code below shows a {{domxref("structuredClone()")}} operation where the underlying buffer is copied from the original object to the clone.
+
+```js
+const original = new Uint8Array(1024);
+const clone = structuredClone(original);
+console.log(original.byteLength);  // 1024
+
+original[0] = 1;
+console.log(clone[0]);  // 0
+
+// Transfering the Uint8Array would throw an exception:
+// const transferred = structuredClone(original, {transfer: [original]}); 
+
+// We can tranfer its buffer. Afterwards the buffer is removed
+const transferred = structuredClone(original, {transfer: [original.buffer]});
+console.log(original.byteLength);  // 0
+console.log(transferred[0]);  // 1
+```
+
+## Supported objects
+
+The items that can be _transferred_ are: 
+- {{jsxref("ArrayBuffer")}}
+- {{domxref("MessagePort")}}
+- {{domxref("ReadableStream")}}
+- {{domxref("WritableStream")}}
+- {{domxref("TransformStream")}}
+- {{domxref("AudioData")}}
+- {{domxref("ImageBitmap")}}
+- {{domxref("VideoFrame")}}
+- {{domxref("OffscreenCanvas")}}
+
+
+> **Note:** Transferrable objects are marked up in [Web IDL files](https://github.com/w3c/webref/tree/main/ed/idl) with the attribute `Transferrable`.
 
 ## See also
 
 - [Transferable Objects: Lightning Fast!](https://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast)
 - [Using Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
 - [Transferable objects in the HTML specification](https://html.spec.whatwg.org/multipage/structured-data.html#transferable-objects)
+- {{domxref("DedicatedWorkerGlobalScope.postMessage()")}}

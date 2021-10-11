@@ -14,8 +14,8 @@ browser-compat: api.structuredClone
 
 The global **`structuredClone()`** method creates a deep clone of a given value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 
-The method also allows all or part of the original object to be {{Glossary("transferable objects","transferred")}} (moved) rather than copied to the new object.
-On return, the transferred objects will no longer be accessible in the original object.
+The method also allows {{Glossary("transferable objects")}} in the original value to be _transferred_ rather than cloned to the new object.
+Transferred objects are detached from the original object and attached to the new object; they are no longer accessible in the original object.
 
 ## Syntax
 
@@ -30,11 +30,11 @@ structuredClone(value, { transfer })
   - : The object to be cloned.
     This can be any [structured-clonable type](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 - `transfer` {{optional_inline}}
-  - : A sequence of {{Glossary("transferable objects")}} in `value` that will be moved rather than copied to the returned object.
+  - : A array of {{Glossary("transferable objects")}} in `value` that will be moved rather than cloned to the returned object.
 
 ### Return value
 
-The returned value is a clone of the original `value`.
+The returned value is a deep copy of the original `value`.
 
 ### Exceptions
 
@@ -59,14 +59,16 @@ console.assert(clone.name === "MDN"); // they do have the same values
 console.assert(clone.itself === clone); // and the circular reference is preserved
 ```
 
-Values can be transferred rather than copied to the new object using the optional parameter's `transfer` value.
+### Transfering values
+
+{{Glossary("Transferable objects")}} (only) can be transferred rather than duplicated in the cloned object, using the optional parameter's `transfer` value.
 Transferring makes the specified object unavailable in the original value.
 
 > **Note:** A scenario where this might be useful is when asynchronously validating some data in a buffer before saving it.
 > To avoid the buffer being modified before the data is saved, you can clone the buffer and validate that data.
 > If you also _transfer_ the data, any attempts to modify the original buffer will fail, preventing its accidental misuse.
 
-The following code shows how to clone an array and move its underlying resources to the new object.
+The following code shows how to clone an array and transfer its underlying resources to the new object.
 On return, the original `uInt8Array.buffer` will be cleared.
 
 ```js
@@ -75,7 +77,8 @@ for (var i = 0; i < uInt8Array.length; ++i) {
   uInt8Array[i] = i;
 }
 
-const transferred = structuredClone(uInt8Array.buffer, { transfer: [uInt8Array.buffer] }).
+const transferred = structuredClone(uInt8Array, { transfer: [uInt8Array.buffer] }).
+console.log(uInt8Array.byteLength);  // 0
 ```
 
 You can clone any number of objects and transfer any subset of those objects.
@@ -86,6 +89,7 @@ const transferred = structuredClone(
    { x: { y: { z: arrayBuffer1, w: arrayBuffer2 } } },
    { transfer: [arrayBuffer1] });
 ```
+
 
 ## Specifications
 
