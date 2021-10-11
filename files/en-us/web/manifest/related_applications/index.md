@@ -7,30 +7,29 @@ tags:
   - related_applications
 browser-compat: html.manifest.related_applications
 ---
-<div>{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}</div>
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>Array</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>Array</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The <code>related_applications</code> field is an array of objects specifying native applications that are installable by, or accessible to, the underlying platform — for example, a native Android application obtainable through the Google Play Store. Such applications are intended to be alternatives to the manifest's website that provides similar/equivalent functionality — like the native app equivalent.</p>
+The `related_applications` field is an array of objects specifying native applications that are installable by, or accessible to, the underlying platform — for example, a native Android application obtainable through the Google Play Store. Such applications are intended to be alternatives to the manifest's website that provides similar/equivalent functionality — like the native app equivalent.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Developer can specify that the native applications are preferred over the web application by setting <code>prefer_related_applications</code> to <code>true</code>.</p>
-</div>
+> **Note:** Developer can specify that the native applications are preferred over the web application by setting `prefer_related_applications` to `true`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: json">"related_applications": [
+```json
+"related_applications": [
   {
     "platform": "play",
     "url": "https://play.google.com/store/apps/details?id=com.example.app1",
@@ -39,39 +38,23 @@ browser-compat: html.manifest.related_applications
     "platform": "itunes",
     "url": "https://itunes.apple.com/app/example-app1/id123456789"
   }
-]</pre>
+]
+```
 
-<h2 id="Related_application_values">Related application values</h2>
+## Related application values
 
-<p>Application objects may contain the following values:</p>
+Application objects may contain the following values:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Member</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>platform</code></td>
-   <td>The platform on which the application can be found. <a href="https://github.com/w3c/manifest/wiki/Platforms">List of available values</a></td>
-  </tr>
-  <tr>
-   <td><code>url</code></td>
-   <td>The URL at which the application can be found.</td>
-  </tr>
-  <tr>
-   <td><code>id</code></td>
-   <td>The ID used to represent the application on the specified platform.</td>
-  </tr>
- </tbody>
-</table>
+| Member     | Description                                                                                                                    |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `platform` | The platform on which the application can be found. [List of available values](https://github.com/w3c/manifest/wiki/Platforms) |
+| `url`      | The URL at which the application can be found.                                                                                 |
+| `id`       | The ID used to represent the application on the specified platform.                                                            |
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

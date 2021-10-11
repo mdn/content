@@ -7,46 +7,49 @@ tags:
   - scope
 browser-compat: html.manifest.scope
 ---
-<div>{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}</div>
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>String</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>String</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The <dfn><code>scope</code></dfn> member is a string that defines the navigation scope of this web application's application context. It restricts what web pages can be viewed while the manifest is applied. If the user navigates outside the scope, it reverts to a normal web page inside a browser tab or window.</p>
+The _`scope`_ member is a string that defines the navigation scope of this web application's application context. It restricts what web pages can be viewed while the manifest is applied. If the user navigates outside the scope, it reverts to a normal web page inside a browser tab or window.
 
-<p>If the <code>scope</code> is a relative URL, the base URL will be the URL of the manifest.</p>
+If the `scope` is a relative URL, the base URL will be the URL of the manifest.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>If the scope is relative, the manifest URL is used as a base URL:</p>
+If the scope is relative, the manifest URL is used as a base URL:
 
-<pre class="brush: json">"scope": "/app/"
-</pre>
+```json
+"scope": "/app/"
+```
 
-<p>The following scope limits navigation to the current site:</p>
+The following scope limits navigation to the current site:
 
-<pre class="brush: json">"scope": "https://example.com/"
-</pre>
+```json
+"scope": "https://example.com/"
+```
 
-<p>Finally, the following example limits navigation to a subdirectory of the current site:</p>
+Finally, the following example limits navigation to a subdirectory of the current site:
 
-<pre class="brush: json">"scope": "https://example.com/subdirectory/"
-</pre>
+```json
+"scope": "https://example.com/subdirectory/"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

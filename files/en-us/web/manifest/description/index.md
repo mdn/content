@@ -7,39 +7,43 @@ tags:
   - description
 browser-compat: html.manifest.description
 ---
-<div>{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}</div>
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>String</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>String</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The <dfn><code>description</code></dfn> member is a string in which developers can explain what the application does. <code>description</code> is directionality-capable, which means it can be displayed left to right or right to left based on the values of the <code><a href="/en-US/docs/Web/Manifest/dir">dir</a></code> and <code><a href="/en-US/docs/Web/Manifest/lang">lang</a></code> manifest members.</p>
+The _`description`_ member is a string in which developers can explain what the application does. `description` is directionality-capable, which means it can be displayed left to right or right to left based on the values of the [`dir`](/en-US/docs/Web/Manifest/dir) and [`lang`](/en-US/docs/Web/Manifest/lang) manifest members.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Simple <code>description</code> in left-to-right language:</p>
+Simple `description` in left-to-right language:
 
-<pre class="brush: json">"description": "Awesome application that will help you achieve your dreams."</pre>
+```json
+"description": "Awesome application that will help you achieve your dreams."
+```
 
-<p><code>description</code> in Arabic, which will be displayed right-to-left:</p>
+`description` in Arabic, which will be displayed right-to-left:
 
-<pre class="brush: json">"dir": "rtl",
+```json
+"dir": "rtl",
 "lang": "ar",
-"description": ".تطبيق رائع سيساعدك على تحقيق أحلامك"</pre>
+"description": ".تطبيق رائع سيساعدك على تحقيق أحلامك"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

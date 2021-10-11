@@ -10,25 +10,24 @@ tags:
   - Web
 browser-compat: html.manifest
 ---
-<div>{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}</div>
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
-<div>{{SeeCompatTable}}</div>
+**Web app manifests** are part of a collection of web technologies called [progressive web apps](/en-US/docs/Web/Progressive_web_apps) (PWAs), which are websites that can be installed to a device’s homescreen without an app store. Unlike regular web apps with simple homescreen links or bookmarks, PWAs can be downloaded in advance and can work offline, as well as use regular [Web APIs](/en-US/docs/Web/API).
 
-<p><strong>Web app manifests</strong> are part of a collection of web technologies called <a href="/en-US/docs/Web/Progressive_web_apps">progressive web apps</a> (PWAs), which are websites that can be installed to a device’s homescreen without an app store. Unlike regular web apps with simple homescreen links or bookmarks, PWAs can be downloaded in advance and can work offline, as well as use regular <a href="/en-US/docs/Web/API">Web APIs</a>.</p>
+The web app manifest provides information about a web application in a {{Glossary("JSON")}} text file, necessary for the web app to be downloaded and be presented to the user similarly to a native app (e.g., be installed on the homescreen of a device, providing users with quicker access and a richer experience). PWA manifests include its name, author, icon(s), version, description, and list of all the necessary resources (among other things).
 
-<p>The web app manifest provides information about a web application in a {{Glossary("JSON")}} text file, necessary for the web app to be downloaded and be presented to the user similarly to a native app (e.g., be installed on the homescreen of a device, providing users with quicker access and a richer experience). PWA manifests include its name, author, icon(s), version, description, and list of all the necessary resources (among other things).</p>
+A manifest is a {{Glossary("JSON")}}-formatted file, with one exception: it is allowed to contain "`//`"-style comments.
 
-<p>A manifest is a {{Glossary("JSON")}}-formatted file, with one exception: it is allowed to contain "<code>//</code>"-style comments.</p>
+## Members
 
-<h2 id="Members">Members</h2>
+Web manifests can contain the following keys. Click on each one to link through to more information about it:
 
-<p>Web manifests can contain the following keys. Click on each one to link through to more information about it:</p>
+{{ListSubpages("/en-US/docs/Web/Manifest")}}
 
-<p>{{ListSubpages("/en-US/docs/Web/Manifest")}}</p>
+## Example manifest
 
-<h2 id="Example_manifest">Example manifest</h2>
-
-<pre class="brush: json">{
+```json
+{
   "name": "HackerWeb",
   "short_name": "HackerWeb",
   "start_url": ".",
@@ -64,40 +63,41 @@ browser-compat: html.manifest
     "platform": "play",
     "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
   }]
-}</pre>
+}
+```
 
-<h2>Deploying a manifest</h2>
+## Deploying a manifest
 
-<p>Web app manifests are deployed in your HTML pages using a {{HTMLElement("link")}} element in the {{HTMLElement("head")}} of a document:</p>
+Web app manifests are deployed in your HTML pages using a {{HTMLElement("link")}} element in the {{HTMLElement("head")}} of a document:
 
-<pre class="brush: html">&lt;link rel="manifest" href="manifest.json"&gt;</pre>
+```html
+<link rel="manifest" href="manifest.json">
+```
 
-<p>The <code>.webmanifest</code> extension is specified in the <a href="https://w3c.github.io/manifest/#media-type-registration">Media type registration</a> section of the specification (the response of the manifest file should return <code>Content-Type: application/manifest+json</code>). Browsers generally support manifests with other appropriate extensions like <code>.json</code> (<code>Content-Type: application/json</code>).</p>
+The `.webmanifest` extension is specified in the [Media type registration](https://w3c.github.io/manifest/#media-type-registration) section of the specification (the response of the manifest file should return `Content-Type: application/manifest+json`). Browsers generally support manifests with other appropriate extensions like `.json` (`Content-Type: application/json`).
 
-<p>If the manifest requires credentials to fetch, the <a href="/en-US/docs/Web/HTML/Attributes/crossorigin"><code>crossorigin</code></a> attribute must be set to <code>use-credentials</code>, even if the manifest file is in the same origin as the current page.</p>
+If the manifest requires credentials to fetch, the [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute must be set to `use-credentials`, even if the manifest file is in the same origin as the current page.
 
-<pre class="brush: html">&lt;link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials"&gt;</pre>
+```html
+<link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials">
+```
 
-<h2 id="Splash_screens">Splash screens</h2>
+## Splash screens
 
-<p>In some browsers (Chrome 47 and later, for example), a splash screen is displayed for sites launched from a homescreen. This splash screen is auto-generated from properties in the web app manifest, specifically:</p>
+In some browsers (Chrome 47 and later, for example), a splash screen is displayed for sites launched from a homescreen. This splash screen is auto-generated from properties in the web app manifest, specifically:
 
-<ul>
-	<li><code><a href="/en-US/docs/Web/Manifest/name">name</a></code></li>
-	<li><code><a href="/en-US/docs/Web/Manifest/background_color">background_color</a></code></li>
-	<li>The icon in the <code><a href="/en-US/docs/Web/Manifest/icons">icons</a></code> array that is closest to 128dpi for the device.</li>
-</ul>
+- [`name`](/en-US/docs/Web/Manifest/name)
+- [`background_color`](/en-US/docs/Web/Manifest/background_color)
+- The icon in the [`icons`](/en-US/docs/Web/Manifest/icons) array that is closest to 128dpi for the device.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/Progressive_web_apps">Progressive Web Apps (PWAs)</a></li>
-</ul>
+- [Progressive Web Apps (PWAs)](/en-US/docs/Web/Progressive_web_apps)

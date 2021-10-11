@@ -7,53 +7,49 @@ tags:
   - dir
 browser-compat: html.manifest.dir
 ---
-<div>{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}</div>
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>String</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>String</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The base direction in which to display direction-capable members of the manifest. Together with the <code><a href="/en-US/docs/Web/Manifest/lang">lang</a></code> member, it helps to correctly display right-to-left languages.</p>
+The base direction in which to display direction-capable members of the manifest. Together with the [`lang`](/en-US/docs/Web/Manifest/lang) member, it helps to correctly display right-to-left languages.
 
-<p>The <code>dir</code> member can be set to one of the following values:</p>
+The `dir` member can be set to one of the following values:
 
-<ul>
- <li><code>auto</code> — text direction is determined by the user agent</li>
- <li><code>ltr</code> — left to right</li>
- <li><code>rtl</code> — right to left</li>
-</ul>
+- `auto` — text direction is determined by the user agent
+- `ltr` — left to right
+- `rtl` — right to left
 
-<p>The <dfn>directionality-capable members</dfn> are:</p>
+The _directionality-capable members_ are:
 
-<ul>
- <li><code><a href="/en-US/docs/Web/Manifest/name">name</a></code></li>
- <li><code><a href="/en-US/docs/Web/Manifest/short_name">short_name</a></code></li>
- <li><code><a href="/en-US/docs/Web/Manifest/description">description</a></code></li>
-</ul>
+- [`name`](/en-US/docs/Web/Manifest/name)
+- [`short_name`](/en-US/docs/Web/Manifest/short_name)
+- [`description`](/en-US/docs/Web/Manifest/description)
 
-<div class="notecard note">
-<p><strong>Note:</strong> If the value is omitted or set to <code>auto</code>, the browser will use the <a href="/en-US/docs/Web/Guide/Unicode_Bidrectional_Text_Algorithm">Unicode bidirectional algorithm</a> to make a best guess about the text's direction.</p>
-</div>
+> **Note:** If the value is omitted or set to `auto`, the browser will use the [Unicode bidirectional algorithm](/en-US/docs/Web/Guide/Unicode_Bidrectional_Text_Algorithm) to make a best guess about the text's direction.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: json">&quot;dir&quot;: &quot;rtl&quot;,
-&quot;lang&quot;: &quot;ar&quot;,
-&quot;short_name&quot;: &quot;!أنا من التطبيق&quot;</pre>
+```json
+"dir": "rtl",
+"lang": "ar",
+"short_name": "!أنا من التطبيق"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -7,43 +7,45 @@ tags:
   - start_url
 browser-compat: html.manifest.start_url
 ---
-<div>{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}</div>
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>String</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>String</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The <dfn><code>start_url</code></dfn> member is a string that represents the <dfn>start URL of the web application</dfn> — the preferred URL that should be loaded when the user launches the web application (e.g., when the user taps on the web application's icon from a device's application menu or homescreen).</p>
+The _`start_url`_ member is a string that represents the _start URL of the web application_ — the preferred URL that should be loaded when the user launches the web application (e.g., when the user taps on the web application's icon from a device's application menu or homescreen).
 
-<div class="notecard note">
-<p><strong>Note:</strong> The <code>start_url</code> member is purely advisory, and a user agent may ignore it or allow the user to alter it at install time or afterwards.</p>
-</div>
+> **Note:** The `start_url` member is purely advisory, and a user agent may ignore it or allow the user to alter it at install time or afterwards.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Absolute_URL">Absolute URL</h3>
+### Absolute URL
 
-<pre class="brush: json">"start_url": "https://example.com"</pre>
+```json
+"start_url": "https://example.com"
+```
 
-<h3 id="Relative_URL">Relative URL</h3>
+### Relative URL
 
-<p>If the URL is relative, the manifest URL is used as the base URL to resolve it.</p>
+If the URL is relative, the manifest URL is used as the base URL to resolve it.
 
-<pre class="brush: json">"start_url": "../startpoint.html"</pre>
+```json
+"start_url": "../startpoint.html"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

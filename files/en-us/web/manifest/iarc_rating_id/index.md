@@ -7,43 +7,40 @@ tags:
   - iarc_rating_id
 browser-compat: html.manifest.iarc_rating_id
 ---
-<div>{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}</div>
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>String</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>String</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The <dfn><code>iarc_rating_id</code></dfn> member is a string that represents the <a href="https://www.globalratings.com/">International Age Rating Coalition (IARC)</a> certification code of the web application. It is intended to be used to determine which ages the web application is appropriate for.</p>
+The _`iarc_rating_id`_ member is a string that represents the [International Age Rating Coalition (IARC)](https://www.globalratings.com/) certification code of the web application. It is intended to be used to determine which ages the web application is appropriate for.
 
-<div class="notecard note">
-<p><strong>Note:</strong> The same code can be shared across multiple participating storefronts, as long as the distributed product remains the same (i.e., doesn’t serve totally different code paths on different storefronts).</p>
-</div>
+> **Note:** The same code can be shared across multiple participating storefronts, as long as the distributed product remains the same (i.e., doesn’t serve totally different code paths on different storefronts).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: json">"iarc_rating_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7"
-</pre>
+```json
+"iarc_rating_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.globalratings.com/how-iarc-works.aspx">How IARC Works</a></li>
- <li><a href="https://www.globalratings.com/for-developers.aspx">How developers can get their games and apps rated with IARC</a></li>
-</ul>
+- [How IARC Works](https://www.globalratings.com/how-iarc-works.aspx)
+- [How developers can get their games and apps rated with IARC](https://www.globalratings.com/for-developers.aspx)
