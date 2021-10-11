@@ -92,7 +92,7 @@ tags:
   efforts as the Work Item is standardized.
 </p>
 
-<h3>Status of partitioning in Firefox</h3>
+<h3 id="status_of_partitioning_in_firefox">Status of partitioning in Firefox</h3>
 <table class="standard-table">
   <tbody>
    <tr>
@@ -107,7 +107,9 @@ tags:
       <a class="external"
         href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection">
         "Strict" privacy protections
-      </a> enabled.</td>
+      </a> enabled.<br>
+      Since Firefox 90: Enabled in private browsing.
+    </td>
    </tr>
   </tbody>
  </table>
@@ -145,14 +147,18 @@ tags:
     <li>WebRTC deviceID</li>
   </ul>
 <h3 id="dynamic_state_partitioning">Dynamic Partitioning</h3>
-  <p>To prevent JavaScript accessible storage APIs being used for cross-site tracking, Firefox partitions accessible storage by top-level site. This mechanism ieans that, generally, a third-party embedded in one top-level site cannot access data stored under another top-level site.</p>
-  <p>However, unlike Network Partitioning, this boundary is dynamic and access to a third-party's unpartitioned storage can be granted:
+  <p>To prevent JavaScript accessible storage APIs being used for cross-site 
+  tracking, Firefox partitions accessible storage by top-level site. This 
+  mechanism ieans that, generally, a third-party embedded in one top-level site
+  cannot access data stored under another top-level site.</p>
+  <p>However, unlike Network Partitioning, this boundary is dynamic and access 
+  to a third-party's unpartitioned storage can be granted:
   <ul>
-    <li>using the <a href="#storage_access_api">StorageAccessAPI</a>.</li>
+    <li>using the <a href="#storage_access_api">Storage Access API</a>.</li>
     <li>automatically, such as for third-parties providing federated login.</li>
   </ul>
-  <p>Details about automatic grants are provided in the <a href="#partitioning_heuristics">Storage Access Heuristics</a> section. <p>
-  <p>At the time of writing, dynamic partitioning is enabled in Nightly and private browsing in the general release of Firefox.</p>
+  <p>Details about automatic grants are provided in the 
+  <a href="#partitioning_heuristics">Storage Access Heuristics</a> section. <p>
 
   <h4 id="dynamically_partitioned_apis">Partitioned APIs</h4>
   <ul>
@@ -229,7 +235,7 @@ tags:
       <code>document.requestStorageAccess</code>
     </a>
     to request unpartitioned storage access through the
-    <a href="/en-US/docs/Web/API/Storage_Access_API">StorageAccessAPI</a>. Once
+    <a href="/en-US/docs/Web/API/Storage_Access_API">Storage Access API</a>. Once
     granted, the requesting third-party will gain access to its first-party
     storage bucket (i.e., the storage it would have access to if visited as a
     first-party). Any calls to <a
