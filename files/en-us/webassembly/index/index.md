@@ -5,6 +5,6 @@ tags:
   - Index
   - WebAssembly
 ---
-<div>{{WebAssemblySidebar}}</div>
+{{WebAssemblySidebar}}
 
-<p>{{Index("/en-US/docs/WebAssembly")}}</p>
+{{Index("/en-US/docs/WebAssembly")}}

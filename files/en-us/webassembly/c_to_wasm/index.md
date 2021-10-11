@@ -9,192 +9,165 @@ tags:
   - WebAssembly
   - wasm
 ---
-<p>{{WebAssemblySidebar}}</p>
+{{WebAssemblySidebar}}
 
-<p>When you’ve written a new code module in a language like C/C++, you can compile it into WebAssembly using a tool like <a href="/en-US/docs/Mozilla/Projects/Emscripten">Emscripten</a>. Let’s look at how it works.</p>
+When you’ve written a new code module in a language like C/C++, you can compile it into WebAssembly using a tool like [Emscripten](/en-US/docs/Mozilla/Projects/Emscripten). Let’s look at how it works.
 
-<h2 id="Emscripten_Environment_Setup">Emscripten Environment Setup</h2>
+## Emscripten Environment Setup
 
-<p>First, let's set up the required development environment.</p>
+First, let's set up the required development environment.
 
-<h3 id="Prerequisites">Prerequisites</h3>
+### Prerequisites
 
-<p>Get the Emscripten SDK, using these instructions: <a href="https://emscripten.org/docs/getting_started/downloads.html">https://emscripten.org/docs/getting_started/downloads.html</a></p>
+Get the Emscripten SDK, using these instructions: <https://emscripten.org/docs/getting_started/downloads.html>
 
-<h2 id="Compiling_an_example">Compiling an example</h2>
+## Compiling an example
 
-<p>With the environment set up, let's look at how to use it to compile a C example to Emscripten. There are a number of options available when compiling with Emscripten, but the main two scenarios we'll cover are:</p>
+With the environment set up, let's look at how to use it to compile a C example to Emscripten. There are a number of options available when compiling with Emscripten, but the main two scenarios we'll cover are:
 
-<ul>
-	<li>Compiling to wasm and creating HTML to run our code in, plus all the JavaScript "glue" code needed to run the wasm in the web environment.</li>
-	<li>Compiling to wasm and just creating the JavaScript.</li>
-</ul>
+- Compiling to wasm and creating HTML to run our code in, plus all the JavaScript "glue" code needed to run the wasm in the web environment.
+- Compiling to wasm and just creating the JavaScript.
 
-<p>We will look at both below.</p>
+We will look at both below.
 
-<h3 id="Creating_HTML_and_JavaScript">Creating HTML and JavaScript</h3>
+### Creating HTML and JavaScript
 
-<p>This is the simplest case we'll look at, whereby you get emscripten to generate everything you need to run your code, as WebAssembly, in the browser.</p>
+This is the simplest case we'll look at, whereby you get emscripten to generate everything you need to run your code, as WebAssembly, in the browser.
 
-<ol>
-	<li>First we need an example to compile. Take a copy of the following simple C example, and save it in a file called <code>hello.c</code> in a new directory on your local drive:
+1.  First we need an example to compile. Take a copy of the following simple C example, and save it in a file called `hello.c` in a new directory on your local drive:
 
-	<pre class="brush: cpp">#include &lt;stdio.h&gt;
+    ```cpp
+    #include <stdio.h>
 
-int main() {
-    printf("Hello World\n");
-}</pre>
-	</li>
-	<li>Now, using the terminal window you used to enter the Emscripten compiler environment, navigate to the same directory as your <code>hello.c</code> file, and run the following command:
-	<pre class="brush: bash">emcc hello.c -s WASM=1 -o hello.html</pre>
-	</li>
-</ol>
+    int main() {
+        printf("Hello World\n");
+    }
+    ```
 
-<p>The options we’ve passed in with the command are as follows:</p>
+2.  Now, using the terminal window you used to enter the Emscripten compiler environment, navigate to the same directory as your `hello.c` file, and run the following command:
 
-<ul>
-	<li><code>-s WASM=1</code> — Specifies that we want wasm output. If we don’t specify this, Emscripten will just output <a href="http://asmjs.org/">asm.js</a>, as it does by default.</li>
-	<li><code>-o hello.html</code> — Specifies that we want Emscripten to generate an HTML page to run our code in (and a filename to use), as well as the wasm module and the JavaScript "glue" code to compile and instantiate the wasm so it can be used in the web environment.</li>
-</ul>
+    ```bash
+    emcc hello.c -s WASM=1 -o hello.html
+    ```
 
-<p>At this point in your source directory you should have:</p>
+The options we’ve passed in with the command are as follows:
 
-<ul>
-	<li>The binary wasm module code (<code>hello.wasm</code>)</li>
-	<li>A JavaScript file containing glue code to translate between the native C functions, and JavaScript/wasm (<code>hello.js</code>)</li>
-	<li>An HTML file to load, compile, and instantiate your wasm code, and display its output in the browser (<code>hello.html</code>)</li>
-</ul>
+- `-s WASM=1` — Specifies that we want wasm output. If we don’t specify this, Emscripten will just output [asm.js](http://asmjs.org/), as it does by default.
+- `-o hello.html` — Specifies that we want Emscripten to generate an HTML page to run our code in (and a filename to use), as well as the wasm module and the JavaScript "glue" code to compile and instantiate the wasm so it can be used in the web environment.
 
-<h3 id="Running_your_example">Running your example</h3>
+At this point in your source directory you should have:
 
-<p>Now all that remains is for you to load the resulting <code>hello.html</code> in a browser that supports WebAssembly. It is enabled by default in Firefox 52+ and Chrome 57+/latest Opera (you can also run wasm code in Firefox 47+ by enabling the <code>javascript.options.wasm</code> flag in <em>about:config</em>, or Chrome (51+) and Opera (38+) by going to <em>chrome://flags</em> and enabling the <em>Experimental WebAssembly</em> flag.)</p>
+- The binary wasm module code (`hello.wasm`)
+- A JavaScript file containing glue code to translate between the native C functions, and JavaScript/wasm (`hello.js`)
+- An HTML file to load, compile, and instantiate your wasm code, and display its output in the browser (`hello.html`)
 
-<div class="notecard note">
-<p><strong>Note:</strong> If you try to open generated HTML file (<code>hello.html</code>) directly from your local hard drive (e.g. <code>file://your_path/hello.html</code>), you will end up with an error message along the lines of <em><code>both async and sync fetching of the wasm failed</code>.</em> You need to run your HTML file through an HTTP server (<code>http://</code>) — see <a href="/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">How do you set up a local testing server?</a> for more information.</p>
-</div>
+### Running your example
 
-<p>If everything has worked as planned, you should see "Hello world" output in the Emscripten console appearing on the web page, and your browser’s JavaScript console. Congratulations, you’ve just compiled C to WebAssembly and run it in your browser!</p>
+Now all that remains is for you to load the resulting `hello.html` in a browser that supports WebAssembly. It is enabled by default in Firefox 52+ and Chrome 57+/latest Opera (you can also run wasm code in Firefox 47+ by enabling the `javascript.options.wasm` flag in _about:config_, or Chrome (51+) and Opera (38+) by going to _chrome://flags_ and enabling the _Experimental WebAssembly_ flag.)
 
-<h3 id="Using_a_custom_HTML_template">Using a custom HTML template</h3>
+> **Note:** If you try to open generated HTML file (`hello.html`) directly from your local hard drive (e.g. `file://your_path/hello.html`), you will end up with an error message along the lines of _`both async and sync fetching of the wasm failed`._ You need to run your HTML file through an HTTP server (`http://`) — see [How do you set up a local testing server?](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server) for more information.
 
-<p>Sometimes you will want to use a custom HTML template. Let's look at how we can do this.</p>
+If everything has worked as planned, you should see "Hello world" output in the Emscripten console appearing on the web page, and your browser’s JavaScript console. Congratulations, you’ve just compiled C to WebAssembly and run it in your browser!
 
-<ol>
-	<li>
-	<p>First of all, save the following C code in a file called <code>hello2.c</code>, in a new directory:</p>
+### Using a custom HTML template
 
-	<pre class="brush: cpp">#include &lt;stdio.h&gt;
+Sometimes you will want to use a custom HTML template. Let's look at how we can do this.
 
-int main() {
-    printf("Hello World\n");
-}</pre>
-	</li>
-	<li>
-	<p>Search for the file <code>shell_minimal.html</code> in your emsdk repo. Copy it into a sub-directory called <code>html_template</code> inside your previous new directory.</p>
-	</li>
-	<li>
-	<p>Now navigate into your new directory (again, in your Emscripten compiler environment terminal window), and run the following command:</p>
+1.  First of all, save the following C code in a file called `hello2.c`, in a new directory:
 
-	<pre class="brush: bash">emcc -o hello2.html hello2.c -O3 -s WASM=1 --shell-file html_template/shell_minimal.html</pre>
+    ```cpp
+    #include <stdio.h>
 
-	<p>The options we've passed are slightly different this time:</p>
+    int main() {
+        printf("Hello World\n");
+    }
+    ```
 
-	<ul>
-		<li>We've specified <code>-o hello2.html</code>, meaning that the compiler will still output the JavaScript glue code and <code>.html</code>.</li>
-		<li>We've also specified <code>--shell-file html_template/shell_minimal.html</code> — this provides the path to the HTML template you want to use to create the HTML you will run your example through.</li>
-	</ul>
-	</li>
-	<li>
-	<p>Now let's run this example. The above command will have generated <code>hello2.html</code>, which will have much the same content as the template with some glue code added into load the generated wasm, run it, etc. Open it in your browser and you'll see much the same output as the last example.</p>
-	</li>
-</ol>
+2.  Search for the file `shell_minimal.html` in your emsdk repo. Copy it into a sub-directory called `html_template` inside your previous new directory.
+3.  Now navigate into your new directory (again, in your Emscripten compiler environment terminal window), and run the following command:
 
-<div class="notecard note">
-<p><strong>Note:</strong> You could specify outputting just the JavaScript "glue" file* rather than the full HTML by specifying a .js file instead of an HTML file in the <code>-o</code> flag, e.g. <code>emcc -o hello2.js hello2.c -O3 -s WASM=1</code>. You could then build your custom HTML completely from scratch, although this is an advanced approach; it is usually easier to use the provided HTML template.</p>
+    ```bash
+    emcc -o hello2.html hello2.c -O3 -s WASM=1 --shell-file html_template/shell_minimal.html
+    ```
 
-<ul>
-	<li>Emscripten requires a large variety of JavaScript "glue" code to handle memory allocation, memory leaks, and a host of other problems</li>
-</ul>
-</div>
+    The options we've passed are slightly different this time:
 
-<h3 id="Calling_a_custom_function_defined_in_C">Calling a custom function defined in C</h3>
+    - We've specified `-o hello2.html`, meaning that the compiler will still output the JavaScript glue code and `.html`.
+    - We've also specified `--shell-file html_template/shell_minimal.html` — this provides the path to the HTML template you want to use to create the HTML you will run your example through.
 
-<p>If you have a function defined in your C code that you want to call as needed from JavaScript, you can do this using the Emscripten <code>ccall()</code> function, and the <code>EMSCRIPTEN_KEEPALIVE</code> declaration (which adds your functions to the exported functions list (see <a href="https://emscripten.org/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process">Why do functions in my C/C++ source code vanish when I compile to JavaScript, and/or I get No functions to process?</a>)). Let's look at how this works.</p>
+4.  Now let's run this example. The above command will have generated `hello2.html`, which will have much the same content as the template with some glue code added into load the generated wasm, run it, etc. Open it in your browser and you'll see much the same output as the last example.
 
-<ol>
-	<li>
-	<p>To start with, save the following code as <code>hello3.c</code> in a new directory:</p>
+> **Note:** You could specify outputting just the JavaScript "glue" file\* rather than the full HTML by specifying a .js file instead of an HTML file in the `-o` flag, e.g. `emcc -o hello2.js hello2.c -O3 -s WASM=1`. You could then build your custom HTML completely from scratch, although this is an advanced approach; it is usually easier to use the provided HTML template.
+>
+> - Emscripten requires a large variety of JavaScript "glue" code to handle memory allocation, memory leaks, and a host of other problems
 
-	<pre class="brush: cpp">#include &lt;stdio.h&gt;
-#include &lt;emscripten/emscripten.h&gt;
+### Calling a custom function defined in C
 
-int main() {
-    printf("Hello World\n");
-}
+If you have a function defined in your C code that you want to call as needed from JavaScript, you can do this using the Emscripten `ccall()` function, and the `EMSCRIPTEN_KEEPALIVE` declaration (which adds your functions to the exported functions list (see [Why do functions in my C/C++ source code vanish when I compile to JavaScript, and/or I get No functions to process?](https://emscripten.org/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process))). Let's look at how this works.
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+1.  To start with, save the following code as `hello3.c` in a new directory:
 
-EMSCRIPTEN_KEEPALIVE void myFunction(int argc, char ** argv) {
-    printf("MyFunction Called\n");
-}
+    ```cpp
+    #include <stdio.h>
+    #include <emscripten/emscripten.h>
 
-#ifdef __cplusplus
-}
-#endif</pre>
+    int main() {
+        printf("Hello World\n");
+    }
 
-	<p>By default, Emscripten-generated code always just calls the <code>main()</code> function, and other functions are eliminated as dead code. Putting <code>EMSCRIPTEN_KEEPALIVE</code> before a function name stops this from happening. You also need to import the <code>emscripten.h</code> library to use <code>EMSCRIPTEN_KEEPALIVE</code>.</p>
+    #ifdef __cplusplus
+    extern "C" {
+    #endif
 
-	<div class="notecard note">
-	<p><strong>Note:</strong> We are including the <code>#ifdef</code> blocks so that if you are trying to include this in C++ code, the example will still work. Due to C versus C++ name mangling rules, this would otherwise break, but here we are setting it so that it treats it as an external C function if you are using C++.</p>
-	</div>
-	</li>
-	<li>
-	<p>Now add <code>html_template/shell_minimal.html</code> into this new directory too, just for convenience (you'd obviously put this in a central place in your real dev environment).</p>
-	</li>
-	<li>
-	<p>Now let's run the compilation step again. From inside your latest directory (and while inside your Emscripten compiler environment terminal window), compile your C code with the following command. (Note that we need to compile with <code>NO_EXIT_RUNTIME</code>, which is necessary as otherwise when <code>main()</code> exits the runtime would be shut down — necessary for proper C emulation, e.g., atexits are called — and it wouldn't be valid to call compiled code.)</p>
+    EMSCRIPTEN_KEEPALIVE void myFunction(int argc, char ** argv) {
+        printf("MyFunction Called\n");
+    }
 
-	<pre class="brush: bash">emcc -o hello3.html hello3.c -O3 -s WASM=1 --shell-file html_template/shell_minimal.html -s NO_EXIT_RUNTIME=1  -s "EXTRA_EXPORTED_RUNTIME_METHODS=['ccall']"</pre>
-	</li>
-	<li>
-	<p>If you load the example in your browser again, you'll see the same thing as before!</p>
-	</li>
-	<li>
-	<p>Now we need to run our new <code>myFunction()</code> function from JavaScript. First of all, open up your hello3.html file in a text editor.</p>
-	</li>
-	<li>
-	<p>Add a {{HTMLElement("button")}} element as shown below, just above the first opening <code>&lt;script type='text/javascript'&gt;</code> tag.</p>
+    #ifdef __cplusplus
+    }
+    #endif
+    ```
 
-	<pre class="brush: html">&lt;button class="mybutton"&gt;Run myFunction&lt;/button&gt;</pre>
-	</li>
-	<li>
-	<p>Now add the following code at the end of the first {{HTMLElement("script")}} element:</p>
+    By default, Emscripten-generated code always just calls the `main()` function, and other functions are eliminated as dead code. Putting `EMSCRIPTEN_KEEPALIVE` before a function name stops this from happening. You also need to import the `emscripten.h` library to use `EMSCRIPTEN_KEEPALIVE`.
 
-	<pre class="brush: js">document.querySelector('.mybutton')
-    .addEventListener('click', function() {
-        alert('check console');
-        var result = Module.ccall(
-            'myFunction',	// name of C function
-            null,	// return type
-            null,	// argument types
-            null	// arguments
-        );
-    });</pre>
-	</li>
-</ol>
+    > **Note:** We are including the `#ifdef` blocks so that if you are trying to include this in C++ code, the example will still work. Due to C versus C++ name mangling rules, this would otherwise break, but here we are setting it so that it treats it as an external C function if you are using C++.
 
-<p>This illustrates how <code>ccall()</code> is used to call the exported function.</p>
+2.  Now add `html_template/shell_minimal.html` into this new directory too, just for convenience (you'd obviously put this in a central place in your real dev environment).
+3.  Now let's run the compilation step again. From inside your latest directory (and while inside your Emscripten compiler environment terminal window), compile your C code with the following command. (Note that we need to compile with `NO_EXIT_RUNTIME`, which is necessary as otherwise when `main()` exits the runtime would be shut down — necessary for proper C emulation, e.g., atexits are called — and it wouldn't be valid to call compiled code.)
 
-<h2 id="See_also">See also</h2>
+    ```bash
+    emcc -o hello3.html hello3.c -O3 -s WASM=1 --shell-file html_template/shell_minimal.html -s NO_EXIT_RUNTIME=1  -s "EXTRA_EXPORTED_RUNTIME_METHODS=['ccall']"
+    ```
 
-<ul>
-	<li><a href="https://emscripten.org/">emscripten.org</a> — learn more about Emscripten and its large variety of options.</li>
-	<li><a href="https://emscripten.org/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html#calling-compiled-c-functions-from-javascript-using-ccall-cwrap">Calling compiled C functions from JavaScript using ccall/cwrap</a></li>
-	<li><a href="https://emscripten.org/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process">Why do functions in my C/C++ source code vanish when I compile to JavaScript, and/or I get No functions to process?</a></li>
-	<li><a href="https://research.mozilla.org/webassembly/">WebAssembly on Mozilla Research</a></li>
-	<li>
-	<p><a href="/en-US/docs/WebAssembly/existing_C_to_wasm">Compiling an Existing C Module to WebAssembly</a></p>
-	</li>
-</ul>
+4.  If you load the example in your browser again, you'll see the same thing as before!
+5.  Now we need to run our new `myFunction()` function from JavaScript. First of all, open up your hello3.html file in a text editor.
+6.  Add a {{HTMLElement("button")}} element as shown below, just above the first opening `<script type='text/javascript'>` tag.
+
+    ```html
+    <button class="mybutton">Run myFunction</button>
+    ```
+
+7.  Now add the following code at the end of the first {{HTMLElement("script")}} element:
+
+    ```js
+    document.querySelector('.mybutton')
+        .addEventListener('click', function() {
+            alert('check console');
+            var result = Module.ccall(
+                'myFunction',	// name of C function
+                null,	// return type
+                null,	// argument types
+                null	// arguments
+            );
+        });
+    ```
+
+This illustrates how `ccall()` is used to call the exported function.
+
+## See also
+
+- [emscripten.org](https://emscripten.org/) — learn more about Emscripten and its large variety of options.
+- [Calling compiled C functions from JavaScript using ccall/cwrap](https://emscripten.org/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html#calling-compiled-c-functions-from-javascript-using-ccall-cwrap)
+- [Why do functions in my C/C++ source code vanish when I compile to JavaScript, and/or I get No functions to process?](https://emscripten.org/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process)
+- [WebAssembly on Mozilla Research](https://research.mozilla.org/webassembly/)
+- [Compiling an Existing C Module to WebAssembly](/en-US/docs/WebAssembly/existing_C_to_wasm)

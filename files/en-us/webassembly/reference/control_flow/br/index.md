@@ -2,22 +2,21 @@
 title: br
 slug: WebAssembly/Reference/Control_flow/br
 tags:
-- WebAssembly
-- wasm
-- Landing page
-- Reference
-- Control flow
+  - WebAssembly
+  - wasm
+  - Landing page
+  - Reference
+  - Control flow
 ---
-<p>{{WebAssemblySidebar}}</p>
+{{WebAssemblySidebar}}
 
-<p><span class="seoSummary">The <strong><code>br</code></strong> statement branches to a loop, block, or if.</span></p>
+The **`br`** statement branches to a loop, block, or if.
 
-<p>Other variants of <code>br</code> are <code>br_if</code> for branching on condition, and <code>br_table</code> for branching to different blocks based on an argument.</p>
+Other variants of `br` are `br_if` for branching on condition, and `br_table` for branching to different blocks based on an argument.
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: wasm">
+```wasm
 ;; label the loop so that it can be branched to
 (loop $my_loop
 
@@ -27,14 +26,13 @@ tags:
   br $my_loop
 
 )
-</pre>
+```
 
+## Full working example
 
-<h2 id="Full_working_example">Full working example</h2>
+Wasm file
 
-<p>Wasm file</p>
-
-<pre class="brush: wasm">
+```wasm
   (module
     ;; import the browser console object, you'll need to pass this in from JavaScript
     (import "console" "log" (func $log (param i32)))
@@ -66,36 +64,19 @@ tags:
 
     (start 1) ;; run the first function automatically
   )
-</pre>
+```
 
-<p>JavaScript file</p>
+JavaScript file
 
-<pre class="brush: js">
+```js
   WebAssembly.instantiateStreaming(
     fetch("link to .wasm file"),
     { console }
   );
-</pre>
+```
 
-<table>
- <thead>
-  <tr>
-   <th>Instruction</th>
-   <th>Binary opcode</th>
-  </tr>
- </thead>
- <tbody>
-   <tr>
-     <td><code>br</code></td>
-     <td><code>0x0c</code></td>
-   </tr>
-   <tr>
-     <td><code>br_if</code></td>
-     <td><code>0x0d</code></td>
-   </tr>
-   <tr>
-     <td><code>br_table</code></td>
-     <td><code>0x0e</code></td>
-   </tr>
- </tbody>
-</table>
+| Instruction | Binary opcode |
+| ----------- | ------------- |
+| `br`        | `0x0c`        |
+| `br_if`     | `0x0d`        |
+| `br_table`  | `0x0e`        |

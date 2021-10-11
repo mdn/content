@@ -10,46 +10,45 @@ tags:
   - compile
   - wasm
 ---
-<div>{{WebAssemblySidebar}}</div>
+{{WebAssemblySidebar}}
 
-<div class="warning">
-<p><strong>Warning:</strong> Experimental {{jsxref("WebAssembly.Module")}} IndexedDB serialization support is being removed from browsers; see {{bug("1469395")}} and <a href="https://github.com/WebAssembly/spec/issues/821">this spec issue</a>.</p>
-</div>
+> **Warning:** Experimental {{jsxref("WebAssembly.Module")}} IndexedDB serialization support is being removed from browsers; see {{bug("1469395")}} and [this spec issue](https://github.com/WebAssembly/spec/issues/821).
 
-<p>Caching is useful for improving the performance of an app — we can store compiled WebAssembly modules on the client so they don't have to be downloaded and compiled every time. This article explains the best practices around this.</p>
+Caching is useful for improving the performance of an app — we can store compiled WebAssembly modules on the client so they don't have to be downloaded and compiled every time. This article explains the best practices around this.
 
-<h2 id="Caching_via_IndexedDB">Caching via IndexedDB</h2>
+## Caching via IndexedDB
 
-<p><a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> is a transactional database system that allows you to store and retrieve structured data on the client-side. It is ideal for persisting assets locally for the saved state of an application, including text, blobs, and any other type of cloneable object.</p>
+[IndexedDB](/en-US/docs/Web/API/IndexedDB_API) is a transactional database system that allows you to store and retrieve structured data on the client-side. It is ideal for persisting assets locally for the saved state of an application, including text, blobs, and any other type of cloneable object.
 
-<p>This includes compiled wasm modules ({{jsxref("WebAssembly.Module")}} JavaScript objects).</p>
+This includes compiled wasm modules ({{jsxref("WebAssembly.Module")}} JavaScript objects).
 
-<h2 id="Setting_up_a_caching_library">Setting up a caching library</h2>
+## Setting up a caching library
 
-<p>Because IndexedDB is a somewhat old-fashioned API, we wanted to provide a library function to speed up writing caching code, and make it work better along with today's more modern APIs.</p>
+Because IndexedDB is a somewhat old-fashioned API, we wanted to provide a library function to speed up writing caching code, and make it work better along with today's more modern APIs.
 
-<p>In our wasm-utils.js library script, you'll find <code>instantiateCachedURL()</code> — this function fetches the wasm module at <code>url</code> with a version of <code>dbVersion</code>, instantiates it with the given <code>importObject</code>, and returns a promise resolving to the finished wasm Instance. Additionally, it handles creating a database to cache the compiled wasm modules in, attempts to store new modules in the database, and retrieves previously cached modules from the database, saving you from having to download them again.</p>
+In our wasm-utils.js library script, you'll find `instantiateCachedURL()` — this function fetches the wasm module at `url` with a version of `dbVersion`, instantiates it with the given `importObject`, and returns a promise resolving to the finished wasm Instance. Additionally, it handles creating a database to cache the compiled wasm modules in, attempts to store new modules in the database, and retrieves previously cached modules from the database, saving you from having to download them again.
 
-<div class="note">
-<p><strong>Note:</strong> The entire site's wasm cache (not just the given URL) is versioned by the specified <code>dbVersion</code> passed into the function. If the wasm module code is updated, or its URL changes, you will need to update <code>dbVersion</code>. Any subsequent call to <code>instantiateCachedURL()</code> will then clear out the entire cache, allowing you to avoid using out-of-date modules.</p>
-</div>
+> **Note:** The entire site's wasm cache (not just the given URL) is versioned by the specified `dbVersion` passed into the function. If the wasm module code is updated, or its URL changes, you will need to update `dbVersion`. Any subsequent call to `instantiateCachedURL()` will then clear out the entire cache, allowing you to avoid using out-of-date modules.
 
-<p>The function starts off by defining some necessary constants:</p>
+The function starts off by defining some necessary constants:
 
-<pre class="brush: js">function instantiateCachedURL(dbVersion, url, importObject) {
+```js
+function instantiateCachedURL(dbVersion, url, importObject) {
   const dbName = 'wasm-cache';
-  const storeName = 'wasm-cache';</pre>
+  const storeName = 'wasm-cache';
+```
 
-<h3 id="Setting_up_the_database">Setting up the database</h3>
+### Setting up the database
 
-<p class="brush: js">The first helper function contained inside <code>instantiateCachedURL()</code> — <code>openDatabase()</code> — creates an object store for storing wasm modules, and also handles clearing out the database if the <code>dbVersion</code> is updated; it returns a promise resolving to the new database.</p>
+The first helper function contained inside `instantiateCachedURL()` — `openDatabase()` — creates an object store for storing wasm modules, and also handles clearing out the database if the `dbVersion` is updated; it returns a promise resolving to the new database.
 
-<pre class="brush: js">  function openDatabase() {
-    return new Promise((resolve, reject) =&gt; {
+```js
+  function openDatabase() {
+    return new Promise((resolve, reject) => {
       var request = indexedDB.open(dbName, dbVersion);
       request.onerror = reject.bind(null, 'Error opening wasm cache database');
-      request.onsuccess = () =&gt; { resolve(request.result) };
-      request.onupgradeneeded = event =&gt; {
+      request.onsuccess = () => { resolve(request.result) };
+      request.onupgradeneeded = event => {
         var db = request.result;
         if (db.objectStoreNames.contains(storeName)) {
             console.log(`Clearing out version ${event.oldVersion} wasm cache`);
@@ -59,97 +58,108 @@ tags:
         db.createObjectStore(storeName)
       };
     });
-  }</pre>
+  }
+```
 
-<h3 id="Looking_up_modules_in_the_database">Looking up modules in the database</h3>
+### Looking up modules in the database
 
-<p>Our next function — <code>lookupInDatabase()</code> — provides a simple promise-based operation for looking up the given <code>url</code> in the object store we created above. It resolves with the stored compiled module, or rejects with an error.</p>
+Our next function — `lookupInDatabase()` — provides a simple promise-based operation for looking up the given `url` in the object store we created above. It resolves with the stored compiled module, or rejects with an error.
 
-<pre class="brush: js">  function lookupInDatabase(db) {
-    return new Promise((resolve, reject) =&gt; {
+```js
+  function lookupInDatabase(db) {
+    return new Promise((resolve, reject) => {
       var store = db.transaction([storeName]).objectStore(storeName);
       var request = store.get(url);
       request.onerror = reject.bind(null, `Error getting wasm module ${url}`);
-      request.onsuccess = event =&gt; {
+      request.onsuccess = event => {
         if (request.result)
           resolve(request.result);
         else
           reject(`Module ${url} was not found in wasm cache`);
       }
     });
-  }</pre>
+  }
+```
 
-<h3 id="Storing_and_instantiating_modules">Storing and instantiating modules</h3>
+### Storing and instantiating modules
 
-<p>Next, we define a function <code>storeInDatabase()</code> that fires off an async operation to store a given wasm module in a given database.</p>
+Next, we define a function `storeInDatabase()` that fires off an async operation to store a given wasm module in a given database.
 
-<pre class="brush: js">  function storeInDatabase(db, module) {
+```js
+  function storeInDatabase(db, module) {
     var store = db.transaction([storeName], 'readwrite').objectStore(storeName);
     var request = store.put(module, url);
-    request.onerror = err =&gt; { console.log(`Failed to store in wasm cache: ${err}`) };
-    request.onsuccess = err =&gt; { console.log(`Successfully stored ${url} in wasm cache`) };
-  }</pre>
+    request.onerror = err => { console.log(`Failed to store in wasm cache: ${err}`) };
+    request.onsuccess = err => { console.log(`Successfully stored ${url} in wasm cache`) };
+  }
+```
 
-<h3 id="Using_our_helper_functions">Using our helper functions</h3>
+### Using our helper functions
 
-<p>With all the Promise-based helper functions defined, we can now express the core logic of an IndexedDB cache lookup. We start by trying to open a database, then see if we already have a compiled Module with the key <code>url</code> stored in the given <code>db</code>:</p>
+With all the Promise-based helper functions defined, we can now express the core logic of an IndexedDB cache lookup. We start by trying to open a database, then see if we already have a compiled Module with the key `url` stored in the given `db`:
 
-<pre class="brush: js">  return openDatabase().then(db =&gt; {
-    return lookupInDatabase(db).then(module =&gt; {</pre>
+```js
+  return openDatabase().then(db => {
+    return lookupInDatabase(db).then(module => {
+```
 
-<p>If we do, we instantiate it with the given import object:</p>
+If we do, we instantiate it with the given import object:
 
-<pre class="brush: js">      console.log(`Found ${url} in wasm cache`);
+```js
+      console.log(`Found ${url} in wasm cache`);
       return WebAssembly.instantiate(module, importObject);
-    },</pre>
+    },
+```
 
-<p>If not, we compile it from scratch and then store the compiled Module in the database with a key of url, for next time we want to use it:</p>
+If not, we compile it from scratch and then store the compiled Module in the database with a key of url, for next time we want to use it:
 
-<pre class="brush: js">    errMsg =&gt; {
+```js
+    errMsg => {
       console.log(errMsg);
-      return WebAssembly.instantiateStreaming(fetch(url)).then(results =&gt; {
+      return WebAssembly.instantiateStreaming(fetch(url)).then(results => {
         storeInDatabase(db, results.module);
         return results.instance;
       });
     })
-  },</pre>
+  },
+```
 
-<div class="note">
-<p><strong>Note:</strong> It is for this kind of usage that {{jsxref("WebAssembly.instantiate()")}} returns both a {{jsxref("WebAssembly.Module()", "Module")}} and an {{jsxref("WebAssembly.Instance()", "Instance")}}: the Module represents the compiled code and can be stored/retrieved in IDB or shared between Workers via <code><a href="/en-US/docs/Web/API/MessagePort/postMessage">postMessage()</a></code>; the Instance is stateful and contains the callable JavaScript functions, therefore it cannot be stored/shared.</p>
-</div>
+> **Note:** It is for this kind of usage that {{jsxref("WebAssembly.instantiate()")}} returns both a {{jsxref("WebAssembly.Module()", "Module")}} and an {{jsxref("WebAssembly.Instance()", "Instance")}}: the Module represents the compiled code and can be stored/retrieved in IDB or shared between Workers via [`postMessage()`](/en-US/docs/Web/API/MessagePort/postMessage); the Instance is stateful and contains the callable JavaScript functions, therefore it cannot be stored/shared.
 
-<p>If opening the database failed (for example due to permissions or quota), we fall back to fetching and compiling the module and don't try to store the results (since there is no database to store them into).</p>
+If opening the database failed (for example due to permissions or quota), we fall back to fetching and compiling the module and don't try to store the results (since there is no database to store them into).
 
-<pre class="brush: js">  errMsg =&gt; {
+```js
+  errMsg => {
     console.log(errMsg);
-    return WebAssembly.instantiateStreaming(fetch(url)).then(results =&gt; {
+    return WebAssembly.instantiateStreaming(fetch(url)).then(results => {
       return results.instance
     });
   });
-}</pre>
+}
+```
 
-<h2 id="Caching_a_wasm_module">Caching a wasm module</h2>
+## Caching a wasm module
 
-<p>With the above library function defined, getting a wasm module instance and using its exported features (while handling caching in the background) is as simple as calling it with the following parameters:</p>
+With the above library function defined, getting a wasm module instance and using its exported features (while handling caching in the background) is as simple as calling it with the following parameters:
 
-<ul>
- <li>A cache version, which — as we explained above — you need to update when any wasm module is updated or moved to a different URL.</li>
- <li>The URL of the wasm module you want to instantiate.</li>
- <li>An import object, if required.</li>
-</ul>
+- A cache version, which — as we explained above — you need to update when any wasm module is updated or moved to a different URL.
+- The URL of the wasm module you want to instantiate.
+- An import object, if required.
 
-<pre class="brush: js">const wasmCacheVersion = 1;
+```js
+const wasmCacheVersion = 1;
 
-instantiateCachedURL(wasmCacheVersion, 'test.wasm').then(instance =&gt;
+instantiateCachedURL(wasmCacheVersion, 'test.wasm').then(instance =>
   console.log("Instance says the answer is: " + instance.exports.answer())
-).catch(err =&gt;
+).catch(err =>
   console.error("Failure to instantiate: " + err)
-);</pre>
+);
+```
 
-<h2 id="Browser_support">Browser support</h2>
+## Browser support
 
-<p>At the moment, this technique will work in Firefox and Edge, as they both have support for structured cloning of WebAssembly modules.</p>
+At the moment, this technique will work in Firefox and Edge, as they both have support for structured cloning of WebAssembly modules.
 
-<p>Chrome has support implemented behind the <em>WebAssembly structured cloning support</em> flag, but is yet to turn it on by default because of some concerns (<a href="https://github.com/WebAssembly/design/issues/972">see this discussion</a>, for example).</p>
+Chrome has support implemented behind the _WebAssembly structured cloning support_ flag, but is yet to turn it on by default because of some concerns ([see this discussion](https://github.com/WebAssembly/design/issues/972), for example).
 
-<p>Safari is still yet to implement.</p>
+Safari is still yet to implement.
