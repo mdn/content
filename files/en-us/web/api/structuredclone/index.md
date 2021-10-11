@@ -63,7 +63,7 @@ Values can be transferred rather than copied to the new object using the optiona
 Transferring makes the specified object unavailable in the original value.
 
 > **Note:** A scenario where this might be useful is when asynchronously validating some data in a buffer before saving it.
-> To avoid the buffer being modified before the data is saved you can clone the buffer and validate that data.
+> To avoid the buffer being modified before the data is saved, you can clone the buffer and validate that data.
 > If you also _transfer_ the data, any attempts to modify the original buffer will fail, preventing its accidental misuse.
 
 The following code shows how to clone an array and move its underlying resources to the new object.
