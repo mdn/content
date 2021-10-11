@@ -7,63 +7,53 @@ tags:
   - NPAPI
   - Plugins
 ---
+This chapter describes the Plug-in API functions that allocate and free memory as needed by the plug-in.
 
-<p>This chapter describes the Plug-in API functions that allocate and free memory as needed by the plug-in.</p>
+Because plug-ins share memory space with the browser, they can take advantage of any customized memory-allocation scheme the browser has. Browser memory schemes may be more efficient than standard OS memory functions, and can give the browser flexibility in the way it manages memory. In addition, the plug-in usually has the option of using its own memory functions.
 
-<p>Because plug-ins share memory space with the browser, they can take advantage of any customized memory-allocation scheme the browser has. Browser memory schemes may be more efficient than standard OS memory functions, and can give the browser flexibility in the way it manages memory. In addition, the plug-in usually has the option of using its own memory functions.</p>
+The methods that handle memory belong to the browser group of methods.
 
-<p>The methods that handle memory belong to the browser group of methods.</p>
+- [`NPN_MemAlloc`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_MemAlloc) allocates memory from the browser's memory space. Use this function to allocate memory dynamically.
+- [`NPN_MemFree`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_MemFree) requests that the browser free a specified block of memory. Use this function to free memory allocated with `NPN_MemAlloc`.
+- [`NPN_MemFlush`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_MemFlush) requests the browser to free up a specified amount of memory if not enough is currently available for the plug-in's requirements.
 
-<ul>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_MemAlloc">NPN_MemAlloc</a></code> allocates memory from the browser's memory space. Use this function to allocate memory dynamically.</li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_MemFree">NPN_MemFree</a></code> requests that the browser free a specified block of memory. Use this function to free memory allocated with <code>NPN_MemAlloc</code>.</li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_MemFlush">NPN_MemFlush</a></code> requests the browser to free up a specified amount of memory if not enough is currently available for the plug-in's requirements.</li>
-</ul>
+### Allocating and freeing memory
 
-<h3 id="Allocating_and_freeing_memory">Allocating and freeing memory</h3>
+To allocate memory and free memory, use these paired functions:
 
-<p>To allocate memory and free memory, use these paired functions:</p>
+- `NPN_MemAlloc` allocates a specified amount of memory in the browser's memory space.
+- `NPN_MemFree` deallocates a block of memory allocated using `NPN_MemAlloc`.
 
-<ul>
- <li><code>NPN_MemAlloc</code> allocates a specified amount of memory in the browser's memory space.</li>
- <li><code>NPN_MemFree</code> deallocates a block of memory allocated using <code>NPN_MemAlloc</code>.</li>
-</ul>
+The plug-in can call the Plug-in API `NPN_MemAlloc` function instead of the standard malloc function to allocate dynamic memory. Using `NPN_MemAlloc` offers several advantages to the plug-in.
 
-<p>The plug-in can call the Plug-in API <code>NPN_MemAlloc</code> function instead of the standard malloc function to allocate dynamic memory. Using <code>NPN_MemAlloc</code> offers several advantages to the plug-in.</p>
+- A call to `NPN_MemAlloc` is more likely to succeed. The browser may be able to deallocate nonessential memory structures in response to a request.
+- `NPN_MemAlloc` uses the browser's customized memory-allocation scheme, which is typically faster and causes less fragmentation than the standard OS memory functions.
+- If the plug-in uses `NPN_MemAlloc`, the browser is able to manage memory more efficiently because it knows how much memory the plug-in is using at any given time.
 
-<ul>
- <li>A call to <code>NPN_MemAlloc</code> is more likely to succeed. The browser may be able to deallocate nonessential memory structures in response to a request.</li>
- <li><code>NPN_MemAlloc</code> uses the browser's customized memory-allocation scheme, which is typically faster and causes less fragmentation than the standard OS memory functions.</li>
- <li>If the plug-in uses <code>NPN_MemAlloc</code>, the browser is able to manage memory more efficiently because it knows how much memory the plug-in is using at any given time.</li>
-</ul>
+#### Mac OS
 
-<h4 id="Mac_OS">Mac OS</h4>
+The Mac OS browser frequently fills its memory partition with cached data that is purged only as necessary. Since `NPN_MemAlloc` automatically frees cached information if necessary to fulfill a request for memory, calls to `NPN_MemAlloc` may succeed where direct calls to `NewPtr` fail.
 
-<p>The Mac OS browser frequently fills its memory partition with cached data that is purged only as necessary. Since <code>NPN_MemAlloc</code> automatically frees cached information if necessary to fulfill a request for memory, calls to <code>NPN_MemAlloc</code> may succeed where direct calls to <code>NewPtr</code> fail.</p>
+The `NPN_MemAlloc` method has the following syntax:
 
-<p>The <code>NPN_MemAlloc</code> method has the following syntax:</p>
+    void *NPN_MemAlloc (uint32 size);
 
-<pre>void *NPN_MemAlloc (uint32 size);
-</pre>
+The `size` parameter is an unsigned long integer that represents the amount of memory, in bytes, to allocate in the browser's memory space. This function returns a pointer to the allocated memory or null if not enough memory is available.
 
-<p>The <code>size</code> parameter is an unsigned long integer that represents the amount of memory, in bytes, to allocate in the browser's memory space. This function returns a pointer to the allocated memory or null if not enough memory is available.</p>
+The `NPN_MemFree` method deallocates a block of memory that was allocated using `NPN_MemAlloc` only. `NPN_MemFree` does not free memory allocated by other means.
 
-<p>The <code>NPN_MemFree</code> method deallocates a block of memory that was allocated using <code>NPN_MemAlloc</code> only. <code>NPN_MemFree</code> does not free memory allocated by other means.</p>
+    void NPN_MemFree (void *ptr);
 
-<pre>void NPN_MemFree (void *ptr);
-</pre>
+The `ptr` parameter represents a block of memory previously allocated using `NPN_MemAlloc`.
 
-<p>The <code>ptr</code> parameter represents a block of memory previously allocated using <code>NPN_MemAlloc</code>.</p>
+### Flushing memory (Mac OS only)
 
-<h3 id="Flushing_memory_.28Mac_OS_only.29">Flushing memory (Mac OS only)</h3>
+The `NPN_MemFlush` method frees a specified amount of memory. Normally, plug-ins should use `NPN_MemAlloc`, which automatically frees nonessential memory if necessary to fulfill the request. For Communicator 4.0 and later versions, this function is not necessary for the Mac OS platform; `NPN_MemAlloc` now performs memory flushing internally. You need to use `NPN_MemFlush` only when it is not possible to call `NPN_MemAlloc`, for example, when calling system methods that allocate memory indirectly. If `NPN_MemAlloc` is called, calls to `NPN_MemFlush` have no effect.
 
-<p>The <code>NPN_MemFlush</code> method frees a specified amount of memory. Normally, plug-ins should use <code>NPN_MemAlloc</code>, which automatically frees nonessential memory if necessary to fulfill the request. For Communicator 4.0 and later versions, this function is not necessary for the Mac OS platform; <code>NPN_MemAlloc</code> now performs memory flushing internally. You need to use <code>NPN_MemFlush</code> only when it is not possible to call <code>NPN_MemAlloc</code>, for example, when calling system methods that allocate memory indirectly. If <code>NPN_MemAlloc</code> is called, calls to <code>NPN_MemFlush</code> have no effect.</p>
+For example, suppose that the plug-in calls `NewGWorld`, and that the call fails because of insufficient memory. The plug-in should try calling `NPN_MemFlush` to free enough memory. If `NPN_MemFlush` returns a value indicating that enough memory was freed, the plug-in can call `NewGWorld` again. Calling `NPN_MemFlush` is particularly important to systems with small amounts of RAM and with virtual memory turned off.
 
-<p>For example, suppose that the plug-in calls <code>NewGWorld</code>, and that the call fails because of insufficient memory. The plug-in should try calling <code>NPN_MemFlush</code> to free enough memory. If <code>NPN_MemFlush</code> returns a value indicating that enough memory was freed, the plug-in can call <code>NewGWorld</code> again. Calling <code>NPN_MemFlush</code> is particularly important to systems with small amounts of RAM and with virtual memory turned off.</p>
+To request that the browser free as much memory as possible, call `NPN_MemFlush` repeatedly until it returns 0.
 
-<p>To request that the browser free as much memory as possible, call <code>NPN_MemFlush</code> repeatedly until it returns 0.</p>
+    uint32 NPN_MemFlush (uint32 size);
 
-<pre>uint32 NPN_MemFlush (uint32 size);
-</pre>
-
-<p>The size parameter is an unsigned long integer that represents the amount of memory, in bytes, to free in the browser's memory space. This function returns the amount of freed memory, in bytes, or 0 if no memory could be freed.</p>
+The size parameter is an unsigned long integer that represents the amount of memory, in bytes, to free in the browser's memory space. This function returns the amount of freed memory, in bytes, or 0 if no memory could be freed.

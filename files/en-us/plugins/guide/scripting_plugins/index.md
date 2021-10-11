@@ -7,100 +7,91 @@ tags:
   - NPAPI
   - Plugins
 ---
+This document describes the new cross-browser NPAPI extensions, commonly called _npruntime_, that have been developed by a group of browser and plugin vendors, including the [Mozilla Foundation](https://www.mozilla.org), [Adobe](https://www.adobe.com), [Apple](https://www.apple.com), [Opera](https://www.opera.com), and [Sun Microsystems](http://www.sun.com) (see [press release](https://www.mozilla.org/press/mozilla-2004-06-30.html)). This document also explains how to make a plugin use these new extensions to be scriptable as well as how to access objects in a browser.
 
-<p>This document describes the new cross-browser NPAPI extensions, commonly called <em>npruntime</em>, that have been developed by a group of browser and plugin vendors, including the <a class="external" href="https://www.mozilla.org">Mozilla Foundation</a>, <a class="external" href="https://www.adobe.com">Adobe</a>, <a class="external" href="https://www.apple.com">Apple</a>, <a class="external" href="https://www.opera.com">Opera</a>, and <a class="external" href="http://www.sun.com">Sun Microsystems</a> (see <a class="external" href="https://www.mozilla.org/press/mozilla-2004-06-30.html">press release</a>). This document also explains how to make a plugin use these new extensions to be scriptable as well as how to access objects in a browser.</p>
+(A bit of history: [NPAPI plugins](/en-US/docs/Plugins) that used to take advantage of being scriptable via LiveConnect in 4.x Netscape browsers lost this possibility in Mozilla (due to the [JNI](https://java.sun.com/j2se/1.3/docs/guide/jni/spec/jniTOC.doc.html) making the Netscape 4.x JRI obsolete). As an answer to this large gap in the Netscape Plugin API, an extension to the API has been developed that lets plugins be scriptable again, independent of Java. This extension will also let plugins access the script objects in the browser, and is thus a much stronger and more flexible API.)
 
-<p>(A bit of history: <a href="/en-US/docs/Plugins">NPAPI plugins</a> that used to take advantage of being scriptable via LiveConnect in 4.x Netscape browsers lost this possibility in Mozilla (due to the <a class="external" href="https://java.sun.com/j2se/1.3/docs/guide/jni/spec/jniTOC.doc.html">JNI</a> making the Netscape 4.x JRI obsolete). As an answer to this large gap in the Netscape Plugin API, an extension to the API has been developed that lets plugins be scriptable again, independent of Java. This extension will also let plugins access the script objects in the browser, and is thus a much stronger and more flexible API.)</p>
+> **Note:** The information in this section applies to Firefox 1.0 and Mozilla 1.7.5 and newer versions.
 
-<div class="note">
-<p><strong>Note:</strong> The information in this section applies to Firefox 1.0 and Mozilla 1.7.5 and newer versions.</p>
-</div>
+## How the DOM handles scripting
 
-<h2 id="How_the_DOM_handles_scripting">How the DOM handles scripting</h2>
+The Mozilla DOM code now checks if a plugin supports this new scriptability API and if it exposes a scriptable object through this new mechanism. Mozilla does this by calling the old plugin API call [`NPP_GetValue`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPP_GetValue) with the new enumeration value that has been added to the [`NPPVariable`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPPVariable) enumeration.
 
-<p>The Mozilla DOM code now checks if a plugin supports this new scriptability API and if it exposes a scriptable object through this new mechanism. Mozilla does this by calling the old plugin API call <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPP_GetValue">NPP_GetValue</a></code> with the new enumeration value that has been added to the <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPPVariable">NPPVariable</a></code> enumeration.</p>
+The new `NPPVariable` enumeration is defined in `npapi.h` as:
 
-<p>The new <code>NPPVariable</code> enumeration is defined in <code>npapi.h</code> as:</p>
+    NPPVpluginScriptableNPObject = 15
 
-<pre class="eval">NPPVpluginScriptableNPObject = 15
-</pre>
+## Threading model
 
-<h2 id="Threading_model">Threading model</h2>
+This API is not designed to be thread safe. The threading model for this API is such that all calls through this API are synchronous and calls from a plugin to methods in this API must come from the thread on which the plugin was initiated, and likewise all calls to methods in this API by the browser are guaranteed to come from the same thread. Future revisions to this API might provide a mechanism for proxying calls from one thread to another to aid in using this API from other threads.
 
-<p>This API is not designed to be thread safe. The threading model for this API is such that all calls through this API are synchronous and calls from a plugin to methods in this API must come from the thread on which the plugin was initiated, and likewise all calls to methods in this API by the browser are guaranteed to come from the same thread. Future revisions to this API might provide a mechanism for proxying calls from one thread to another to aid in using this API from other threads.</p>
+## Security model
 
-<h2 id="Security_model">Security model</h2>
+The security model for making calls through this API is much like the general [same-origin](https://www.mozilla.org/projects/security/components/same-origin.html) security model enforced by the browser. That means that a script from an origin other than the origin of the page that loaded the plugin is not able to access methods and properties on the plugin. The same thing applies the other way too; the plugin can reach only JavaScript objects in the same origin as the page that loaded the plugin.
 
-<p>The security model for making calls through this API is much like the general <a class="external" href="https://www.mozilla.org/projects/security/components/same-origin.html">same-origin</a> security model enforced by the browser. That means that a script from an origin other than the origin of the page that loaded the plugin is not able to access methods and properties on the plugin. The same thing applies the other way too; the plugin can reach only JavaScript objects in the same origin as the page that loaded the plugin.</p>
+In addition to this, a further extension to this API is being discussed that would give a plugin greater flexibility by letting the plugin control the origin of the calling code, so that the plugin can specify the origin of calls that come from internally loaded code from other origins. This way such code can be executed with only the privileges of the origin of the code, and not the privileges of the plugin page's origin.
 
-<p>In addition to this, a further extension to this API is being discussed that would give a plugin greater flexibility by letting the plugin control the origin of the calling code, so that the plugin can specify the origin of calls that come from internally loaded code from other origins. This way such code can be executed with only the privileges of the origin of the code, and not the privileges of the plugin page's origin.</p>
+## What's in the plugin code?
 
-<h2 id="What.27s_in_the_plugin_code.3F">What's in the plugin code?</h2>
+A plugin that wishes to be scriptable using this new mechanism needs to return the appropriate [`NPObject`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPObject) (which is created by calling [`NPN_CreateObject`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_CreateObject)) when the browser requests it by calling:
 
-<p>A plugin that wishes to be scriptable using this new mechanism needs to return the appropriate <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPObject">NPObject</a></code> (which is created by calling <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_CreateObject">NPN_CreateObject</a></code>) when the browser requests it by calling:</p>
+    NPP_GetValue(npp, NPPVpluginScriptableNPObject, ...);
 
-<pre class="eval">NPP_GetValue(npp, NPPVpluginScriptableNPObject, ...);
-</pre>
+## Accessing browser objects from a plugin
 
-<h2 id="Accessing_browser_objects_from_a_plugin">Accessing browser objects from a plugin</h2>
+A plugin that wishes to access objects in the browser window that loaded the plugin can do this by getting the [`NPObject`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPObject) for the browser's window object, or the DOM element that loaded the plugin. This is done by using an extension to [`NPN_GetValue`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetValue). The extensions are two additions to the [`NPNVariables`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPNVariables) enumeration; the new enumerations are `NPNVWindowNPObject` and `NPNVPluginElementNPObject`. Calling `NPN_GetValue()` with either of those new enumerations will return an `NPObject` representing the browser object, and from there, the functions in this API can be used to get and set properties, and to call methods on those browser objects.
 
-<p>A plugin that wishes to access objects in the browser window that loaded the plugin can do this by getting the <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPObject">NPObject</a></code> for the browser's window object, or the DOM element that loaded the plugin. This is done by using an extension to <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetValue">NPN_GetValue</a></code>. The extensions are two additions to the <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPNVariables">NPNVariables</a></code> enumeration; the new enumerations are <code>NPNVWindowNPObject</code> and <code>NPNVPluginElementNPObject</code>. Calling <code>NPN_GetValue()</code> with either of those new enumerations will return an <code>NPObject</code> representing the browser object, and from there, the functions in this API can be used to get and set properties, and to call methods on those browser objects.</p>
+And as always when working with reference counted `NPObject`s, the caller is responsible for calling [`NPN_ReleaseObject`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_ReleaseObject) on the `NPObject` to drop the reference.
 
-<p>And as always when working with reference counted <code>NPObject</code>s, the caller is responsible for calling <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_ReleaseObject">NPN_ReleaseObject</a></code> on the <code>NPObject</code> to drop the reference.</p>
+The new `NPNVariable` enumerations are defined in [npapi.h](https://dxr.mozilla.org/mozilla-central/source/dom/plugins/base/npapi.h) as:
 
-<p>The new <code>NPNVariable</code> enumerations are defined in <a href="https://dxr.mozilla.org/mozilla-central/source/dom/plugins/base/npapi.h" rel="custom">npapi.h</a> as:</p>
+    NPNVWindowNPObject = 15,
+    NPNVPluginElementNPObject = 16
 
-<pre class="eval">NPNVWindowNPObject = 15,
-NPNVPluginElementNPObject = 16
-</pre>
+## How to call plugin native methods
 
-<h2 id="How_to_call_plugin_native_methods">How to call plugin native methods</h2>
+The following HTML code will do the job:
 
-<p>The following HTML code will do the job:</p>
-
-<pre class="brush: html">&lt;embed type="application/plugin-mimetype"&gt;
-&lt;script&gt;
+```html
+<embed type="application/plugin-mimetype">
+<script>
   var embed = document.embeds[0];
   embed.nativeMethod();
   alert(embed.nativeProperty);
   embed.nativeProperty.anotherNativeMethod();
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="The_API_extensions">The API extensions</h2>
+## The API extensions
 
-<p>The API extensions are based on four new structs:</p>
+The API extensions are based on four new structs:
 
-<ul>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPString">NPString</a></code></li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPVariant">NPVariant</a></code>
-  <ul>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_ReleaseVariantValue">NPN_ReleaseVariantValue</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetStringIdentifier">NPN_GetStringIdentifier</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetStringIdentifiers">NPN_GetStringIdentifiers</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetIntIdentifier">NPN_GetIntIdentifier</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_IdentifierIsString">NPN_IdentifierIsString</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_UTF8FromIdentifier">NPN_UTF8FromIdentifier</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_IntFromIdentifier">NPN_IntFromIdentifier</a></code></li>
-  </ul>
- </li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPObject">NPObject</a></code>
-  <ul>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Construct">NPN_Construct</a></code> (since Firefox 3.0b1)</li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_CreateObject">NPN_CreateObject</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_RetainObject">NPN_RetainObject</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_ReleaseObject">NPN_ReleaseObject</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Invoke">NPN_Invoke</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_InvokeDefault">NPN_InvokeDefault</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Enumerate">NPN_Enumerate</a></code> (since Mozilla 1.9a1)</li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Evaluate">NPN_Evaluate</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetProperty">NPN_GetProperty</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_SetProperty">NPN_SetProperty</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_RemoveProperty">NPN_RemoveProperty</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_HasProperty">NPN_HasProperty</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_HasMethod">NPN_HasMethod</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_SetException">NPN_SetException</a></code></li>
-  </ul>
- </li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPClass">NPClass</a></code></li>
-</ul>
+- [`NPString`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPString)
+- [`NPVariant`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPVariant)
+
+  - [`NPN_ReleaseVariantValue`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_ReleaseVariantValue)
+  - [`NPN_GetStringIdentifier`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetStringIdentifier)
+  - [`NPN_GetStringIdentifiers`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetStringIdentifiers)
+  - [`NPN_GetIntIdentifier`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetIntIdentifier)
+  - [`NPN_IdentifierIsString`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_IdentifierIsString)
+  - [`NPN_UTF8FromIdentifier`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_UTF8FromIdentifier)
+  - [`NPN_IntFromIdentifier`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_IntFromIdentifier)
+
+- [`NPObject`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPObject)
+
+  - [`NPN_Construct`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Construct) (since Firefox 3.0b1)
+  - [`NPN_CreateObject`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_CreateObject)
+  - [`NPN_RetainObject`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_RetainObject)
+  - [`NPN_ReleaseObject`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_ReleaseObject)
+  - [`NPN_Invoke`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Invoke)
+  - [`NPN_InvokeDefault`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_InvokeDefault)
+  - [`NPN_Enumerate`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Enumerate) (since Mozilla 1.9a1)
+  - [`NPN_Evaluate`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Evaluate)
+  - [`NPN_GetProperty`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetProperty)
+  - [`NPN_SetProperty`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_SetProperty)
+  - [`NPN_RemoveProperty`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_RemoveProperty)
+  - [`NPN_HasProperty`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_HasProperty)
+  - [`NPN_HasMethod`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_HasMethod)
+  - [`NPN_SetException`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_SetException)
+
+- [`NPClass`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPClass)

@@ -6,216 +6,55 @@ tags:
   - NPAPI
   - Plugins
 ---
+This section is a reference to the program definitions used by the Plug-in API. All program definitions are found in [npapi.h](https://dxr.mozilla.org/mozilla-central/source/modules/plugin/base/public/npapi.h).
 
-<p>This section is a reference to the program definitions used by the Plug-in API. All program definitions are found in <a href="https://dxr.mozilla.org/mozilla-central/source/modules/plugin/base/public/npapi.h" rel="custom">npapi.h</a>.</p>
+## Error Codes
 
-<h2 id="Error_Codes">Error Codes</h2>
+| Code                               | Value | Description                                        |
+| ---------------------------------- | ----- | -------------------------------------------------- |
+| `NPERR_NO_ERROR`                   | 0     | No errors occurred.                                |
+| `NPERR_GENERIC_ERROR`              | 1     | Error with no specific error code occurred.        |
+| `NPERR_INVALID_INSTANCE_ERROR`     | 2     | Invalid instance passed to the plug-in.            |
+| `NPERR_INVALID_FUNCTABLE_ERROR`    | 3     | Function table invalid.                            |
+| `NPERR_MODULE_LOAD_FAILED_ERROR`   | 4     | Loading of plug-in failed.                         |
+| `NPERR_OUT_OF_MEMORY_ERROR`        | 5     | Memory allocation failed.                          |
+| `NPERR_INVALID_PLUGIN_ERROR`       | 6     | Plug-in missing or invalid.                        |
+| `NPERR_INVALID_PLUGIN_DIR_ERROR`   | 7     | Plug-in directory missing or invalid.              |
+| `NPERR_INCOMPATIBLE_VERSION_ERROR` | 8     | Versions of plug-in and Communicator do not match. |
+| `NPERR_INVALID_PARAM`              | 9     | Parameter missing or invalid.                      |
+| `NPERR_INVALID_URL`                | 10    | URL missing or invalid.                            |
+| `NPERR_FILE_NOT_FOUND`             | 11    | File missing or invalid.                           |
+| `NPERR_NO_DATA`                    | 12    | Stream contains no data.                           |
+| `NPERR_STREAM_NOT_SEEKABLE`        | 13    | Seekable stream expected.                          |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Code</th>
-   <th>Value</th>
-   <th>Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>NPERR_NO_ERROR</code></td>
-   <td>0</td>
-   <td>No errors occurred.</td>
-  </tr>
-  <tr>
-   <td><code>NPERR_GENERIC_ERROR</code></td>
-   <td>1</td>
-   <td>Error with no specific error code occurred.</td>
-  </tr>
-  <tr>
-   <td><code>NPERR_INVALID_INSTANCE_ERROR</code></td>
-   <td>2</td>
-   <td>Invalid instance passed to the plug-in.</td>
-  </tr>
-  <tr>
-   <td><code>NPERR_INVALID_FUNCTABLE_ERROR</code></td>
-   <td>3</td>
-   <td>Function table invalid.</td>
-  </tr>
-  <tr>
-   <td><code>NPERR_MODULE_LOAD_FAILED_ERROR</code></td>
-   <td>4</td>
-   <td>Loading of plug-in failed.</td>
-  </tr>
-  <tr>
-   <td><code>NPERR_OUT_OF_MEMORY_ERROR</code></td>
-   <td>5</td>
-   <td>Memory allocation failed.</td>
-  </tr>
-  <tr>
-   <td><code>NPERR_INVALID_PLUGIN_ERROR</code></td>
-   <td>6</td>
-   <td>Plug-in missing or invalid.</td>
-  </tr>
-  <tr>
-   <td><code>NPERR_INVALID_PLUGIN_DIR_ERROR</code></td>
-   <td>7</td>
-   <td>Plug-in directory missing or invalid.</td>
-  </tr>
-  <tr>
-   <td><code>NPERR_INCOMPATIBLE_VERSION_ERROR</code></td>
-   <td>8</td>
-   <td>Versions of plug-in and Communicator do not match.</td>
-  </tr>
-  <tr>
-   <td><code>NPERR_INVALID_PARAM</code></td>
-   <td>9</td>
-   <td>Parameter missing or invalid.</td>
-  </tr>
-  <tr>
-   <td><code>NPERR_INVALID_URL</code></td>
-   <td>10</td>
-   <td>URL missing or invalid.</td>
-  </tr>
-  <tr>
-   <td><code>NPERR_FILE_NOT_FOUND</code></td>
-   <td>11</td>
-   <td>File missing or invalid.</td>
-  </tr>
-  <tr>
-   <td><code>NPERR_NO_DATA</code></td>
-   <td>12</td>
-   <td>Stream contains no data.</td>
-  </tr>
-  <tr>
-   <td><code>NPERR_STREAM_NOT_SEEKABLE</code></td>
-   <td>13</td>
-   <td>Seekable stream expected.</td>
-  </tr>
- </tbody>
-</table>
+## Result Codes
 
-<h2 id="Result_Codes">Result Codes</h2>
+| Constant            | Value | Description                                                                                                                                                            |
+| ------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `NPRES_DONE`        | 0     | (Most common): Completed normally; all data was sent to the instance.                                                                                                  |
+| `NPRES_NETWORK_ERR` | 1     | Stream failed due to problems with network, disk I/O, lack of memory, or other problems.                                                                               |
+| `NPRES_USER_BREAK`  | 2     | User canceled stream directly by clicking the Stop button or indirectly by some action such as deleting the instance or initiating higher-priority network operations. |
 
-<table class="standard-table">
- <thead>
-   <tr>
-    <th>Constant</th>
-    <th>Value</th>
-    <th>Description</th>
-   </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>NPRES_DONE</code></td>
-   <td>0</td>
-   <td>(Most common): Completed normally; all data was sent to the instance.</td>
-  </tr>
-  <tr>
-   <td><code>NPRES_NETWORK_ERR</code></td>
-   <td>1</td>
-   <td>Stream failed due to problems with network, disk I/O, lack of memory, or other problems.</td>
-  </tr>
-  <tr>
-   <td><code>NPRES_USER_BREAK</code></td>
-   <td>2</td>
-   <td>User canceled stream directly by clicking the Stop button or indirectly by some action such as deleting the instance or initiating higher-priority network operations.</td>
-  </tr>
- </tbody>
-</table>
+## Plug-in Version Constants
 
-<h2 id="Plug-in_Version_Constants">Plug-in Version Constants</h2>
+| Constant           | Value | Description                                                   |
+| ------------------ | ----- | ------------------------------------------------------------- |
+| `NP_VERSION_MAJOR` | 0     | Major version number; changes with major code release number. |
+| `NP_VERSION_MINOR` | 22    | Minor version number; changes with point release number.      |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Constant</th>
-   <th>Value</th>
-   <th>Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>NP_VERSION_MAJOR</code></td>
-   <td>0</td>
-   <td>Major version number; changes with major code release number.</td>
-  </tr>
-  <tr>
-   <td><code>NP_VERSION_MINOR</code></td>
-   <td>22</td>
-   <td>Minor version number; changes with point release number.</td>
-  </tr>
- </tbody>
-</table>
+## Version Feature Constants
 
-<h2 id="Version_Feature_Constants">Version Feature Constants</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>NPVERS Constant: Version Feature Information</th>
-   <th>Value</th>
-   <th>Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>NPVERS_HAS_STREAMOUTPUT</code></td>
-   <td>8</td>
-   <td>Streaming data.</td>
-  </tr>
-  <tr>
-   <td><code>NPVERS_HAS_NOTIFICATION</code></td>
-   <td>9</td>
-   <td>Notification of completion.</td>
-  </tr>
-  <tr>
-   <td><code>NPVERS_HAS_LIVECONNECT</code></td>
-   <td>9</td>
-   <td>LiveConnect.</td>
-  </tr>
-  <tr>
-   <td><code>NPVERS_WIN16_HAS_LIVECONNECT</code></td>
-   <td>9</td>
-   <td>LiveConnect (Win16).</td>
-  </tr>
-  <tr>
-   <td><code>NPVERS_68K_HAS_LIVECONNECT</code></td>
-   <td>11</td>
-   <td>LiveConnect (68K).</td>
-  </tr>
-  <tr>
-   <td><code>NPVERS_HAS_WINDOWLESS</code></td>
-   <td>11</td>
-   <td>Windowless plug-in.</td>
-  </tr>
-  <tr>
-   <td><code>NPVERS_HAS_XPCONNECT_SCRIPTING</code></td>
-   <td>13</td>
-   <td>Plug-in is scriptable using XPConnect.</td>
-  </tr>
-  <tr>
-   <td><code>NPVERS_HAS_NPRUNTIME_SCRIPTING</code></td>
-   <td>14</td>
-   <td>Plug-in is scriptable using NPRuntime.</td>
-  </tr>
-  <tr>
-   <td><code>NPVERS_HAS_FORM_VALUES</code></td>
-   <td>15</td>
-   <td><code>NPPVformValue</code> <code>NPPVariable</code>s are supported.</td>
-  </tr>
-  <tr>
-   <td><code>NPVERS_HAS_POPUPS_ENABLED_STATE</code></td>
-   <td>16</td>
-   <td>The <code>NPN_PushPopupsEnabledState()</code> and <code>NPN_PopPopupsEnabledState()</code> functions are supported.</td>
-  </tr>
-  <tr>
-   <td><code>NPVERS_HAS_RESPONSE_HEADERS</code></td>
-   <td>17</td>
-   <td>NPStreams have response headers for HTTP streams.</td>
-  </tr>
-  <tr>
-   <td><code>NPVERS_HAS_NPOBJECT_ENUM</code></td>
-   <td>18</td>
-   <td>The <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPClass">NPClass</a></code> in question has an <code>enumerate</code> field, which lets you enumerate the properties of an <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPObject">NPObject</a></code> of that class.</td>
-  </tr>
- </tbody>
-</table>
+| NPVERS Constant: Version Feature Information | Value | Description                                                                                                                                                                                                                                    |
+| -------------------------------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `NPVERS_HAS_STREAMOUTPUT`                    | 8     | Streaming data.                                                                                                                                                                                                                                |
+| `NPVERS_HAS_NOTIFICATION`                    | 9     | Notification of completion.                                                                                                                                                                                                                    |
+| `NPVERS_HAS_LIVECONNECT`                     | 9     | LiveConnect.                                                                                                                                                                                                                                   |
+| `NPVERS_WIN16_HAS_LIVECONNECT`               | 9     | LiveConnect (Win16).                                                                                                                                                                                                                           |
+| `NPVERS_68K_HAS_LIVECONNECT`                 | 11    | LiveConnect (68K).                                                                                                                                                                                                                             |
+| `NPVERS_HAS_WINDOWLESS`                      | 11    | Windowless plug-in.                                                                                                                                                                                                                            |
+| `NPVERS_HAS_XPCONNECT_SCRIPTING`             | 13    | Plug-in is scriptable using XPConnect.                                                                                                                                                                                                         |
+| `NPVERS_HAS_NPRUNTIME_SCRIPTING`             | 14    | Plug-in is scriptable using NPRuntime.                                                                                                                                                                                                         |
+| `NPVERS_HAS_FORM_VALUES`                     | 15    | `NPPVformValue` `NPPVariable`s are supported.                                                                                                                                                                                                  |
+| `NPVERS_HAS_POPUPS_ENABLED_STATE`            | 16    | The `NPN_PushPopupsEnabledState()` and `NPN_PopPopupsEnabledState()` functions are supported.                                                                                                                                                  |
+| `NPVERS_HAS_RESPONSE_HEADERS`                | 17    | NPStreams have response headers for HTTP streams.                                                                                                                                                                                              |
+| `NPVERS_HAS_NPOBJECT_ENUM`                   | 18    | The [`NPClass`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPClass) in question has an `enumerate` field, which lets you enumerate the properties of an [`NPObject`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPObject) of that class. |

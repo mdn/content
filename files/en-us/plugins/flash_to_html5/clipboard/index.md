@@ -10,19 +10,17 @@ tags:
   - Selection
   - execCommand
 ---
-<p>Flash's Clipboard API used to be the only available means for creating advanced clipboard functionality, but this is now available in web standards.</p>
+Flash's Clipboard API used to be the only available means for creating advanced clipboard functionality, but this is now available in web standards.
 
-<p>Operating systems all have standard clipboard (i.e. Copy/Paste/Cut) functionality built in, but what if you want to do something a bit more complex, such as having a button that triggers the copying of a certain text selection?</p>
+Operating systems all have standard clipboard (i.e. Copy/Paste/Cut) functionality built in, but what if you want to do something a bit more complex, such as having a button that triggers the copying of a certain text selection?
 
-<h2 id="The_basics">The basics</h2>
+## The basics
 
-<p>The <a href="https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/desktop/Clipboard.html">Flash Clipboard API</a> provided such functionality, but fortunately modern browsers now have functionality available to do the same things, without having the Flash Player present or having to attach a Flash movie to your page. The relevant APIs are:</p>
+The [Flash Clipboard API](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/desktop/Clipboard.html) provided such functionality, but fortunately modern browsers now have functionality available to do the same things, without having the Flash Player present or having to attach a Flash movie to your page. The relevant APIs are:
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Selection">Selection API</a>: Allows you to programmatically set and modify the text selection on the current document.</li>
- <li><a href="/en-US/docs/Web/API/Document/execCommand">execCommand API</a>: Allows you to programmatically execute clipboard-related commands such as Copy and Paste.</li>
-</ul>
+- [Selection API](/en-US/docs/Web/API/Selection): Allows you to programmatically set and modify the text selection on the current document.
+- [execCommand API](/en-US/docs/Web/API/Document/execCommand): Allows you to programmatically execute clipboard-related commands such as Copy and Paste.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p>The <a href="https://clipboardjs.com/">clipboard.js library</a>: The best solution for rapidly implementing clipboard functionality on web applications.</p>
+The [clipboard.js library](https://clipboardjs.com/): The best solution for rapidly implementing clipboard functionality on web applications.

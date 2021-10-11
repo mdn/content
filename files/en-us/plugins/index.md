@@ -5,38 +5,30 @@ tags:
   - Flash
   - Plugins
 ---
-<p>Plugins are shared libraries that users can install to display content that the browser can't display natively.</p>
+Plugins are shared libraries that users can install to display content that the browser can't display natively.
 
-<div class="warning">
-<p><strong>Warning:</strong> plugins are a legacy technology that are a security and performance problem for Firefox (and other browser) users. They may not be supported in the future. New content should not be written using Flash or any other plugin technology.</p>
-</div>
+> **Warning:** plugins are a legacy technology that are a security and performance problem for Firefox (and other browser) users. They may not be supported in the future. New content should not be written using Flash or any other plugin technology.
 
-<h2 id="Roadmap">Roadmap</h2>
+## Roadmap
 
-<dl>
- <dt><a href="/en-US/docs/Plugins/Roadmap">Plugin Roadmap</a></dt>
- <dd>Information about the roadmap for Adobe Flash and other plugin support in Firefox.</dd>
-</dl>
+- [Plugin Roadmap](/en-US/docs/Plugins/Roadmap)
+  - : Information about the roadmap for Adobe Flash and other plugin support in Firefox.
 
-<h3 id="Roadmap_highlights">Roadmap highlights</h3>
+### Roadmap highlights
 
-<ul>
- <li>Since <a href="/en-US/docs/Mozilla/Firefox/Releases/52">Firefox 52</a>, plugins other than Flash are not loaded by Firefox.</li>
- <li>Starting in <a href="/en-US/docs/Mozilla/Firefox/Releases/55">Firefox 55</a>, users will be asked to choose which sites may use Flash content. This feature will be rolled out gradually to Firefox users. </li>
- <li>Also From <a href="/en-US/docs/Mozilla/Firefox/Releases/55">Firefox 55</a> onwards, Flash and other plugins can no longer be loaded from any URL scheme except for http:// and https:// ({{bug("1335475")}}).</li>
- <li>Starting with Firefox 56 in September 2017, Firefox for Android will remove all support for plugins (<a class="external external-icon" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1381916" title="FIXED: Remove support for plugins (flash)">bug 1381916</a>).</li>
- <li>Since <a href="/en-US/docs/Mozilla/Firefox/Releases/85">Firefox 85</a>, Flash support is no longer available in Firefox.</li>
-</ul>
+- Since [Firefox 52](/en-US/docs/Mozilla/Firefox/Releases/52), plugins other than Flash are not loaded by Firefox.
+- Starting in [Firefox 55](/en-US/docs/Mozilla/Firefox/Releases/55), users will be asked to choose which sites may use Flash content. This feature will be rolled out gradually to Firefox users.
+- Also From [Firefox 55](/en-US/docs/Mozilla/Firefox/Releases/55) onwards, Flash and other plugins can no longer be loaded from any URL scheme except for http\:// and https\:// ({{bug("1335475")}}).
+- Starting with Firefox 56 in September 2017, Firefox for Android will remove all support for plugins ([bug 1381916](https://bugzilla.mozilla.org/show_bug.cgi?id=1381916 "FIXED: Remove support for plugins (flash)")).
+- Since [Firefox 85](/en-US/docs/Mozilla/Firefox/Releases/85), Flash support is no longer available in Firefox.
 
-<h2 id="Tutorials_and_references">Tutorials and references</h2>
+## Tutorials and references
 
-<p>The articles below are developer information about the  developing for click-to-play, and plugin blocking.</p>
+The articles below are developer information about the  developing for click-to-play, and plugin blocking.
 
-<dl>
- <dt><a href="/en-US/docs/Plugins/Flash_to_HTML5">Flash to HTML5 migration guide</a></dt>
- <dd>This set of articles provides you with information on how to migrate existing Flash content and functionality to HTML and JavaScript.</dd>
- <dt><a href="/en-US/docs/Plugins/Blocking_By_Domain">Plugin Blocking By Domain</a></dt>
- <dd>In order to improve security and performance for Firefox users, Firefox maintains a list of sites that are not able to use plugins.</dd>
- <dt><a href="/en-US/docs/Archive/Plugins">Archived Information</a></dt>
- <dd>Legacy documentation about developing NPAPI plugins.</dd>
-</dl>
+- [Flash to HTML5 migration guide](/en-US/docs/Plugins/Flash_to_HTML5)
+  - : This set of articles provides you with information on how to migrate existing Flash content and functionality to HTML and JavaScript.
+- [Plugin Blocking By Domain](/en-US/docs/Plugins/Blocking_By_Domain)
+  - : In order to improve security and performance for Firefox users, Firefox maintains a list of sites that are not able to use plugins.
+- [Archived Information](/en-US/docs/Archive/Plugins)
+  - : Legacy documentation about developing NPAPI plugins.
