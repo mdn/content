@@ -66534,34 +66534,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/PaymentCurrencyAmount": {
-    "modified": "2020-10-15T22:11:42.209Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/PaymentCurrencyAmount/currency": {
-    "modified": "2020-12-10T07:30:26.385Z",
-    "contributors": [
-      "bershanskiy",
-      "Sheppy"
-    ]
-  },
-  "Web/API/PaymentCurrencyAmount/currencySystem": {
-    "modified": "2020-12-10T07:32:11.153Z",
-    "contributors": [
-      "bershanskiy",
-      "Sheppy"
-    ]
-  },
-  "Web/API/PaymentCurrencyAmount/value": {
-    "modified": "2020-12-10T07:31:38.484Z",
-    "contributors": [
-      "bershanskiy",
-      "MyNameIsBond",
-      "Sheppy"
-    ]
-  },
   "Web/API/PaymentItem": {
     "modified": "2020-10-15T22:12:04.568Z",
     "contributors": [
