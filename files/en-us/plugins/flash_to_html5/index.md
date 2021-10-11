@@ -12,63 +12,57 @@ tags:
   - Video
   - conversion
 ---
-<p>This set of articles provides you with information on how to migrate existing Flash content and functionality to HTML and JavaScript.</p>
+This set of articles provides you with information on how to migrate existing Flash content and functionality to HTML and JavaScript.
 
-<h2 id="Background">Background</h2>
+## Background
 
-<p>Flash became very popular in the late 1990s to early 2000s because it provided an effective way to create rich content on the web — such as animations, games, and video players. However, it has a number of issues; the Flash Player causes security and performance problems, and leads to bloated pages. In addition, the modern web platform has feature parity with Flash, so you no longer need to rely on plugins to implement rich content.</p>
+Flash became very popular in the late 1990s to early 2000s because it provided an effective way to create rich content on the web — such as animations, games, and video players. However, it has a number of issues; the Flash Player causes security and performance problems, and leads to bloated pages. In addition, the modern web platform has feature parity with Flash, so you no longer need to rely on plugins to implement rich content.
 
-<p>Browsers are working together to move carefully towards a plugin-free web (see our <a href="/en-US/docs/Plugins/Roadmap">Plugin Roadmap</a>), so developers should start migrating their Flash-based functionality to open web technologies as soon as possible.</p>
+Browsers are working together to move carefully towards a plugin-free web (see our [Plugin Roadmap](/en-US/docs/Plugins/Roadmap)), so developers should start migrating their Flash-based functionality to open web technologies as soon as possible.
 
-<h2 id="Video">Video</h2>
+## Video
 
-<p>All you need to know to move your video requirements over from Flash to HTML5 (see the <a href="/en-US/docs/Plugins/Flash_to_HTML5/Video">Flash video to HTML5 video</a> landing page also).</p>
+All you need to know to move your video requirements over from Flash to HTML5 (see the [Flash video to HTML5 video](/en-US/docs/Plugins/Flash_to_HTML5/Video) landing page also).
 
-<h3 id="Planning">Planning</h3>
+### Planning
 
-<dl>
- <dt><a href="/en-US/docs/Plugins/Flash_to_HTML5/Video/Planning">Planning your transition from Flash video to HTML5 video</a></dt>
- <dd>Transitioning from Flash to HTML5 can take several months and may require new skills and software. This guide shows you how to plan for that transition, and contains two main parts, <a href="/en-US/docs/Plugins/Flash_to_HTML5/Video/Planning#auditing_what_you_have">Content audit</a> and <a href="/en-US/docs/Plugins/Flash_to_HTML5/Video/Planning#decision_points">Decision points</a>.</dd>
-</dl>
+- [Planning your transition from Flash video to HTML5 video](/en-US/docs/Plugins/Flash_to_HTML5/Video/Planning)
+  - : Transitioning from Flash to HTML5 can take several months and may require new skills and software. This guide shows you how to plan for that transition, and contains two main parts, [Content audit](/en-US/docs/Plugins/Flash_to_HTML5/Video/Planning#auditing_what_you_have) and [Decision points](/en-US/docs/Plugins/Flash_to_HTML5/Video/Planning#decision_points).
 
-<h3 id="Process">Process</h3>
+### Process
 
-<dl>
- <dt><a href="/en-US/docs/Plugins/Flash_to_HTML5/Video/File_format_conversion">File format conversion</a></dt>
- <dd>Once you've planned out what you want to do, the first step is to convert your video files into formats compatible with HTML embedding.</dd>
- <dt><a href="/en-US/docs/Plugins/Flash_to_HTML5/Video/DRM_and_authentication">DRM and authentication</a></dt>
- <dd>If your media requires authentication/rights to access, you'll need to work out how to hook up the necessary DRM and authentication mechanisms.</dd>
- <dt><a href="/en-US/docs/Plugins/Flash_to_HTML5/Video/Advertising">Video advertising</a></dt>
- <dd>You may also want to incorporate advertising into your video delivery system, via an ad network.</dd>
- <dt><a href="/en-US/docs/Plugins/Flash_to_HTML5/Video/Distribution">Distribution</a></dt>
- <dd>A CDN is a popular choice for effective delivery of media content.</dd>
- <dt><a href="/en-US/docs/Plugins/Flash_to_HTML5/Video/Players">Video and audio players</a></dt>
- <dd>There are a number of ways to play back web media depending on the scale of your needs and whether you need ad integration and digital rights management.</dd>
- <dt><a href="/en-US/docs/Plugins/Flash_to_HTML5/Video/Subtitles_captions">Subtitles and captions</a></dt>
- <dd>Just as audio and video may need transcoding for the web, subtitles and captions may also need to be converted and made available.</dd>
-</dl>
+- [File format conversion](/en-US/docs/Plugins/Flash_to_HTML5/Video/File_format_conversion)
+  - : Once you've planned out what you want to do, the first step is to convert your video files into formats compatible with HTML embedding.
+- [DRM and authentication](/en-US/docs/Plugins/Flash_to_HTML5/Video/DRM_and_authentication)
+  - : If your media requires authentication/rights to access, you'll need to work out how to hook up the necessary DRM and authentication mechanisms.
+- [Video advertising](/en-US/docs/Plugins/Flash_to_HTML5/Video/Advertising)
+  - : You may also want to incorporate advertising into your video delivery system, via an ad network.
+- [Distribution](/en-US/docs/Plugins/Flash_to_HTML5/Video/Distribution)
+  - : A CDN is a popular choice for effective delivery of media content.
+- [Video and audio players](/en-US/docs/Plugins/Flash_to_HTML5/Video/Players)
+  - : There are a number of ways to play back web media depending on the scale of your needs and whether you need ad integration and digital rights management.
+- [Subtitles and captions](/en-US/docs/Plugins/Flash_to_HTML5/Video/Subtitles_captions)
+  - : Just as audio and video may need transcoding for the web, subtitles and captions may also need to be converted and made available.
 
-<h2 id="Other_topics">Other topics</h2>
+## Other topics
 
-<p>Other common Flash use cases that should now be migrated to HTML5.</p>
+Other common Flash use cases that should now be migrated to HTML5.
 
-<dl>
- <dt><a href="/en-US/docs/Games">Open web games</a></dt>
- <dd>Flash games used to be very common, but the open web is now a viable platform for creating and distributing games.</dd>
- <dt><a href="/en-US/docs/Web/API/WebSockets_API">Real-time apps with WebSockets</a></dt>
- <dd>Flash TCP sockets have been commonly used to create real-time multiuser apps such as chat apps, but they can be replaced with WebSockets.</dd>
- <dt><a href="/en-US/docs/Plugins/Flash_to_HTML5/Clipboard">Clipboard access</a></dt>
- <dd>Flash's clipboard API used to be the only available means for creating advanced clipboard functionality, but this is now available in web standards.</dd>
- <dt><a href="/en-US/docs/Web/API/Intersection_Observer_API">Content and advertising visibility with Intersection Observer</a></dt>
- <dd>Flash used to be a simple but slow way to detect content and advertising visibility on the page. The web platform now has the Intersection Observer API to do this better and faster.</dd>
- <dt><a href="/en-US/docs/Learn/CSS/CSS_layout">Flexible user interfaces with CSS</a></dt>
- <dd>Adobe Flex used to provide a way to effectively create flexible user interfaces on the web, but the open web platform now boasts powerful CSS layout systems like Grid and Flexbox to close the gap.</dd>
- <dt><a href="/en-US/docs/Web/API/WebRTC_API">Camera/Microphone access with WebRTC</a></dt>
- <dd>Developers used to rely exclusively on Flash for accessing the user's camera and microphone, but this can now be achieved with WebRTC and related technologies. See also <a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a> and <a href="/en-US/docs/Web/API/MediaDevices/getUserMedia">getUserMedia</a> for useful starting points.</dd>
- <dt><a href="/en-US/docs/Web/API/File">File selection using the File API</a></dt>
- <dd>The web platform has functionality accessing files on the user's file system, e.g. for upload or display. See <a href="/en-US/docs/Web/HTML/Element/input/file">&lt;input type="file"&gt;</a> and <a href="/en-US/docs/Web/API/File/Using_files_from_web_applications">Using files from web applications</a> for useful resources.</dd>
-</dl>
+- [Open web games](/en-US/docs/Games)
+  - : Flash games used to be very common, but the open web is now a viable platform for creating and distributing games.
+- [Real-time apps with WebSockets](/en-US/docs/Web/API/WebSockets_API)
+  - : Flash TCP sockets have been commonly used to create real-time multiuser apps such as chat apps, but they can be replaced with WebSockets.
+- [Clipboard access](/en-US/docs/Plugins/Flash_to_HTML5/Clipboard)
+  - : Flash's clipboard API used to be the only available means for creating advanced clipboard functionality, but this is now available in web standards.
+- [Content and advertising visibility with Intersection Observer](/en-US/docs/Web/API/Intersection_Observer_API)
+  - : Flash used to be a simple but slow way to detect content and advertising visibility on the page. The web platform now has the Intersection Observer API to do this better and faster.
+- [Flexible user interfaces with CSS](/en-US/docs/Learn/CSS/CSS_layout)
+  - : Adobe Flex used to provide a way to effectively create flexible user interfaces on the web, but the open web platform now boasts powerful CSS layout systems like Grid and Flexbox to close the gap.
+- [Camera/Microphone access with WebRTC](/en-US/docs/Web/API/WebRTC_API)
+  - : Developers used to rely exclusively on Flash for accessing the user's camera and microphone, but this can now be achieved with WebRTC and related technologies. See also [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API) and [getUserMedia](/en-US/docs/Web/API/MediaDevices/getUserMedia) for useful starting points.
+- [File selection using the File API](/en-US/docs/Web/API/File)
+  - : The web platform has functionality accessing files on the user's file system, e.g. for upload or display. See [\<input type="file">](/en-US/docs/Web/HTML/Element/input/file) and [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications) for useful resources.
 
-<h2 id="Getting_help">Getting help</h2>
+## Getting help
 
-<p>If you find that our migration guide leaves you with any questions unanswered, please don't hesitate to visit our <a href="https://discourse.mozilla-community.org/c/mdn">MDN Discourse page</a> and ask them there.</p>
+If you find that our migration guide leaves you with any questions unanswered, please don't hesitate to visit our [MDN Discourse page](https://discourse.mozilla-community.org/c/mdn) and ask them there.

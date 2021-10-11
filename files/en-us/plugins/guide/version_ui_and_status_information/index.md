@@ -7,114 +7,108 @@ tags:
   - NPAPI
   - Plugins
 ---
+This chapter describes the functions that allow a plug-in to display a message on the status line, get agent information, and check on the current version of the Plug-in API and the browser.
 
-<p>This chapter describes the functions that allow a plug-in to display a message on the status line, get agent information, and check on the current version of the Plug-in API and the browser.</p>
+## Displaying a Status Line Message
 
-<h2 id="Displaying_a_Status_Line_Message">Displaying a Status Line Message</h2>
+Users are accustomed to checking the UI status line at the bottom of the browser window for updates on the progress of an operation or the URL of a link on the page. You can also use the status line to notify the user of plug-in-related information. The user might appreciate seeing the percentage completed of the current operation or the URL of a button or other link object when the cursor is over it, all of which the browser shows. In fact, your plug-in interface should be consistent with the rest of the browser in this way.
 
-<p>Users are accustomed to checking the UI status line at the bottom of the browser window for updates on the progress of an operation or the URL of a link on the page. You can also use the status line to notify the user of plug-in-related information. The user might appreciate seeing the percentage completed of the current operation or the URL of a button or other link object when the cursor is over it, all of which the browser shows. In fact, your plug-in interface should be consistent with the rest of the browser in this way.</p>
+To accomplish this, the plug-in calls the [`NPN_Status`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Status) method to display your message on the status line.
 
-<p>To accomplish this, the plug-in calls the <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Status">NPN_Status</a></code> method to display your message on the status line.</p>
+    void NPN_Status(NPP instance, const char *message);
 
-<pre class="eval">void NPN_Status(NPP instance, const char *message);
-</pre>
+The `instance` parameter is the current plug-in instance, that is, the one that the status message belongs to. In the `message` parameter, pass the string you want to display on the status line.
 
-<p>The <code>instance</code> parameter is the current plug-in instance, that is, the one that the status message belongs to. In the <code>message</code> parameter, pass the string you want to display on the status line.</p>
+The browser always displays the last status line message it receives, regardless of the message source. For this reason, your message is always displayed, but you have no control over how long it stays in the status line before another message replaces it. You should use a different method to display messages that the user needs to see, such as error messages.
 
-<p>The browser always displays the last status line message it receives, regardless of the message source. For this reason, your message is always displayed, but you have no control over how long it stays in the status line before another message replaces it. You should use a different method to display messages that the user needs to see, such as error messages.</p>
+## Getting Agent Information
 
-<h2 id="Getting_Agent_Information">Getting Agent Information</h2>
+A plug-in can check which browser is running on the user's current system. Browsers communicate with HTTP servers, which store agent software name, version, and operating system in a `user_agent` field. If you want to gather usage statistics or just find out the version of your plug-in's host browser, this information can help you.
 
-<p>A plug-in can check which browser is running on the user's current system. Browsers communicate with HTTP servers, which store agent software name, version, and operating system in a <code>user_agent</code> field. If you want to gather usage statistics or just find out the version of your plug-in's host browser, this information can help you.</p>
+The plug-in calls the [`NPN_UserAgent`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_UserAgent) method to retrieve the contents of the `user_agent` field.
 
-<p>The plug-in calls the <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_UserAgent">NPN_UserAgent</a></code> method to retrieve the contents of the <code>user_agent</code> field.</p>
+    const char* NPN_UserAgent(NPP instance);
 
-<pre class="eval">const char* NPN_UserAgent(NPP instance);
-</pre>
+The `instance` parameter represents the current plug-in instance. This function returns a string that contains the `user_agent` field of the browser.
 
-<p>The <code>instance</code> parameter represents the current plug-in instance. This function returns a string that contains the <code>user_agent</code> field of the browser.</p>
+## Getting the Current Version
 
-<h2 id="Getting_the_Current_Version">Getting the Current Version</h2>
+Your plug-in should make sure, possibly during initialization, that the version of the Plug-in API it is using is compatible with the version the browser is using. To do so, it must find the major and minor version numbers, which are determined when the plug-in and Navigator are compiled, and compare them. If the versions are not compatible, the plug-in can let the user know. The plug-in can also use the version number to find out whether a particular feature exists on the version of the browser that the plug-in is running in.
 
-<p>Your plug-in should make sure, possibly during initialization, that the version of the Plug-in API it is using is compatible with the version the browser is using. To do so, it must find the major and minor version numbers, which are determined when the plug-in and Navigator are compiled, and compare them. If the versions are not compatible, the plug-in can let the user know. The plug-in can also use the version number to find out whether a particular feature exists on the version of the browser that the plug-in is running in.</p>
+The browser and Plug-in API major version numbers represent code release numbers, and their minor version numbers represent point release numbers. For example, Plug-in API version 6.03 has a major version number of 6 and a point release number of 3.
 
-<p>The browser and Plug-in API major version numbers represent code release numbers, and their minor version numbers represent point release numbers. For example, Plug-in API version 6.03 has a major version number of 6 and a point release number of 3.</p>
+Differing version numbers may mean that the current Plug-in API and the browser versions are incompatible. Changes to the minor version numbers indicate a smaller difference than changes to the major version. Changes to the major version numbers probably indicate incompatibility.
 
-<p>Differing version numbers may mean that the current Plug-in API and the browser versions are incompatible. Changes to the minor version numbers indicate a smaller difference than changes to the major version. Changes to the major version numbers probably indicate incompatibility.</p>
+The plug-in calls the [`NPN_Version`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Version) method to check for changes in major and minor Plug-in API version numbers. It gets the values from the plug-in rather than from the browser.
 
-<p>The plug-in calls the <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Version">NPN_Version</a></code> method to check for changes in major and minor Plug-in API version numbers. It gets the values from the plug-in rather than from the browser.</p>
+    void NPN_Version(int *plugin_major,
+       int *plugin_minor,
+       int *netscape_major,
+       int *netscape_minor);
 
-<pre class="eval">void NPN_Version(int *plugin_major,
-   int *plugin_minor,
-   int *netscape_major,
-   int *netscape_minor);
-</pre>
+This function returns the plug-in version number in `plugin_major`, the plug-in point release number in `plugin_minor`, the browser version number in `netscape_major`, and the browser point release number in `netscape_minor`.
 
-<p>This function returns the plug-in version number in <code>plugin_major</code>, the plug-in point release number in <code>plugin_minor</code>, the browser version number in <code>netscape_major</code>, and the browser point release number in <code>netscape_minor</code>.</p>
+This code declares variables to hold the version numbers and calls [`NPN_Version`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Version) to return the major and minor version numbers for the browser and the Plug-in API.
 
-<p>This code declares variables to hold the version numbers and calls <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Version">NPN_Version</a></code> to return the major and minor version numbers for the browser and the Plug-in API.</p>
+    int plugin_major, plugin_minor, netscape_major,
+    netscape_minor; // declare variables to hold version numbers
 
-<pre class="eval">int plugin_major, plugin_minor, netscape_major,
-netscape_minor; // declare variables to hold version numbers
+    void NPN_Version(
+       &plugin_major, &plugin_minor, &netscape_major,
+       &netscape_minor
+    ); // find version numbers
 
-void NPN_Version(
-   &amp;plugin_major, &amp;plugin_minor, &amp;netscape_major,
-   &amp;netscape_minor
-); // find version numbers
-</pre>
+## Finding Out if a Feature Exists
 
-<h2 id="Finding_Out_if_a_Feature_Exists">Finding Out if a Feature Exists</h2>
+A plug-in can figure out whether it is running in a version of the browser that supports a particular feature by using version or `NPVERS` constants (see [Version Feature Constants](/en-US/docs/Gecko_Plugin_API_Reference/Constants#Version_Feature_Constants)). Each `NPVERS` constant represents a feature. The plug-in can compare the `NPVERS` constant to the version number. If the version supports the feature, the plug-in can operate according to plan. If not, the plug-in cannot use some functionality. If an essential feature is unavailable, the developer must arrange for alternative behavior, shut down the plug-in, or give the user a chance to decide what to do.
 
-<p>A plug-in can figure out whether it is running in a version of the browser that supports a particular feature by using version or <code>NPVERS</code> constants (see <a href="/en-US/docs/Gecko_Plugin_API_Reference/Constants#Version_Feature_Constants">Version Feature Constants</a>). Each <code>NPVERS</code> constant represents a feature. The plug-in can compare the <code>NPVERS</code> constant to the version number. If the version supports the feature, the plug-in can operate according to plan. If not, the plug-in cannot use some functionality. If an essential feature is unavailable, the developer must arrange for alternative behavior, shut down the plug-in, or give the user a chance to decide what to do.</p>
+### Detecting Windowless Support on MS Windows and Mac OS X
 
-<h3 id="Detecting_Windowless_Support_on_MS_Windows_and_Mac_OS_X">Detecting Windowless Support on MS Windows and Mac OS X</h3>
+In this example, the `has_windowless` method finds out whether the current version of the API supports windowless plug-ins. This method for detecting support is only useful on MS Windows and Mac OS X.
 
-<p>In this example, the <code>has_windowless</code> method finds out whether the current version of the API supports windowless plug-ins. This method for detecting support is only useful on MS Windows and Mac OS X.</p>
+It starts by using [`NPN_Version`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Version) to get the version numbers. It then uses the `netscape_minor` version number to find out if the windowless feature, represented by the `NPVERS_HAS_WINDOWLESS` constant, is supported. If the method returns true, a windowless plug-in can confidently proceed. If false is returned, windowless plug-ins will not work, and the developer must provide alternatives.
 
-<p>It starts by using <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Version">NPN_Version</a></code> to get the version numbers. It then uses the <code>netscape_minor</code> version number to find out if the windowless feature, represented by the <code>NPVERS_HAS_WINDOWLESS</code> constant, is supported. If the method returns true, a windowless plug-in can confidently proceed. If false is returned, windowless plug-ins will not work, and the developer must provide alternatives.</p>
+    Bool has_windowless()
+    {
+       int plugin_major, plugin_minor;
+       int netscape_major, netscape_minor;
 
-<pre class="eval">Bool has_windowless()
-{
-   int plugin_major, plugin_minor;
-   int netscape_major, netscape_minor;
+       /* Find the version numbers. */
+       NPN_Version(&plugin_major, &plugin_minor,
+          &netscape_major, &netscape_minor);
 
-   /* Find the version numbers. */
-   NPN_Version(&amp;plugin_major, &amp;plugin_minor,
-      &amp;netscape_major, &amp;netscape_minor);
+       /* Use the netscape_minor version number: */
+       /* Does this version support the windowless feature? */
+       if (netscape_minor < NPVERS_HAS_WINDOWLESS) {
+          /* Plug-in is running in a version of the Navigator */
+          /* that does not support windowless plug-ins. */
+          return FALSE;
+       }
+       else
+          /* Plug-in is running in a Navigator version */
+          /* that has windowless support */
+          return TRUE;
+    }
 
-   /* Use the netscape_minor version number: */
-   /* Does this version support the windowless feature? */
-   if (netscape_minor &lt; NPVERS_HAS_WINDOWLESS) {
-      /* Plug-in is running in a version of the Navigator */
-      /* that does not support windowless plug-ins. */
-      return FALSE;
-   }
-   else
-      /* Plug-in is running in a Navigator version */
-      /* that has windowless support */
-      return TRUE;
-}
-</pre>
+### Detecting Windowless Support on other platforms
 
-<h3 id="Detecting_Windowless_Support_on_other_platforms">Detecting Windowless Support on other platforms</h3>
+Browser implementations on other platforms did not have windowless plug-in support at the time it was added to MS Windows and Mac OS X, so a different method must be used to detect whether the browser provides support.
 
-<p>Browser implementations on other platforms did not have windowless plug-in support at the time it was added to MS Windows and Mac OS X, so a different method must be used to detect whether the browser provides support.</p>
+    Bool has_windowless()
+    {
+       NPBool supportsWindowless = FALSE;
 
-<pre class="eval">Bool has_windowless()
-{
-   NPBool supportsWindowless = FALSE;
+       NPError ret = NPN_GetValue(instance, NPNVSupportsWindowless, &supportsWindowless);
 
-   NPError ret = NPN_GetValue(instance, NPNVSupportsWindowless, &amp;supportsWindowless);
+       return ret == NPERR_NO_ERROR && supportsWindowless;
+    }
 
-   return ret == NPERR_NO_ERROR &amp;&amp; supportsWindowless;
-}
-</pre>
+## Reloading a Plug-in
 
-<h2 id="Reloading_a_Plug-in">Reloading a Plug-in</h2>
+When the browser starts up, it loads all the plug-ins it finds in the Plugins directory for the platform. If you call [`NPN_ReloadPlugins`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_ReloadPlugins), the browser reloads all plug-ins in the Plugins directory without restarting. This causes the browser to install a new plug-in and load it, or remove a plug-in, without having to restart. Consider using this function as part of the plug-in's SmartUpdate process.
 
-<p>When the browser starts up, it loads all the plug-ins it finds in the Plugins directory for the platform. If you call <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_ReloadPlugins">NPN_ReloadPlugins</a></code>, the browser reloads all plug-ins in the Plugins directory without restarting. This causes the browser to install a new plug-in and load it, or remove a plug-in, without having to restart. Consider using this function as part of the plug-in's SmartUpdate process.</p>
+```plain
+void NPN_ReloadPlugins(NPBool reloadPages);
+```
 
-<pre class="brush: plain">void NPN_ReloadPlugins(NPBool reloadPages);
-</pre>
-
-<p>The <code>reloadPages</code> parameter is a boolean that indicates whether to reload the page (<code>true</code>) or not (<code>false</code>).</p>
+The `reloadPages` parameter is a boolean that indicates whether to reload the page (`true`) or not (`false`).

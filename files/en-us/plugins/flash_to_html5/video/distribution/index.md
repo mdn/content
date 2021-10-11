@@ -5,12 +5,12 @@ tags:
   - cdn
   - distribution
 ---
-<p>{{PreviousMenuNext("Plugins/Flash_to_HTML5/Video/Advertising", "Plugins/Flash_to_HTML5/Video/Players", "Plugins/Flash_to_HTML5/Video")}}</p>
+{{PreviousMenuNext("Plugins/Flash_to_HTML5/Video/Advertising", "Plugins/Flash_to_HTML5/Video/Players", "Plugins/Flash_to_HTML5/Video")}}
 
-<p>A CDN is a popular choice for effective delivery of media content.</p>
+A CDN is a popular choice for effective delivery of media content.
 
-<h2 id="CDN_requirements">CDN requirements</h2>
+## CDN requirements
 
-<p>If you are working with a content delivery network (CDN) you will want to ensure that it supports HTTPS for media delivery. This is rapidly becoming a firm requirement within browsers for native media playback.</p>
+If you are working with a content delivery network (CDN) you will want to ensure that it supports HTTPS for media delivery. This is rapidly becoming a firm requirement within browsers for native media playback.
 
-<p>You'll also want to coordinate with your CDN company to ensure support for your media file format, adaptive streaming formats, digital rights management, and ad network providers.</p>
+You'll also want to coordinate with your CDN company to ensure support for your media file format, adaptive streaming formats, digital rights management, and ad network providers.

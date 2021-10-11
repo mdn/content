@@ -8,45 +8,41 @@ tags:
   - formats
   - transcoding
 ---
-<p>{{PreviousMenuNext("Plugins/Flash_to_HTML5/Video/Planning", "Plugins/Flash_to_HTML5/Video/DRM_and_authentication", "Plugins/Flash_to_HTML5/Video")}}</p>
+{{PreviousMenuNext("Plugins/Flash_to_HTML5/Video/Planning", "Plugins/Flash_to_HTML5/Video/DRM_and_authentication", "Plugins/Flash_to_HTML5/Video")}}
 
-<p>Once you've planned out what you want to do, the first step is to convert your video (or audio) files into formats compatible with HTML embedding.</p>
+Once you've planned out what you want to do, the first step is to convert your video (or audio) files into formats compatible with HTML embedding.
 
-<h2 id="What_files_have_you_got">What files have you got?</h2>
+## What files have you got?
 
-<p>How to proceed depends on what format you've got your video files in:</p>
+How to proceed depends on what format you've got your video files in:
 
-<ul>
- <li>If you've already got your files in web-compatible formats (such as MP4 and WebM), then great. You may need to do some optimization to get the file size down as low as you can without resulting in unacceptable quality, but for now you're in good shape.</li>
- <li>If not, ideally you should transcode your original high-quality versions to web formats. This isn't too much of a problem.</li>
- <li>If you only have Flash video files (FLV or F4V), then this is more problematic. See if you can find the original versions from before they were converted to FLV. Only convert from FLV as a last resort — your quality will likely suffer as a result.</li>
-</ul>
+- If you've already got your files in web-compatible formats (such as MP4 and WebM), then great. You may need to do some optimization to get the file size down as low as you can without resulting in unacceptable quality, but for now you're in good shape.
+- If not, ideally you should transcode your original high-quality versions to web formats. This isn't too much of a problem.
+- If you only have Flash video files (FLV or F4V), then this is more problematic. See if you can find the original versions from before they were converted to FLV. Only convert from FLV as a last resort — your quality will likely suffer as a result.
 
-<h2 id="Transcoding_your_video">Transcoding your video</h2>
+## Transcoding your video
 
-<p>There are many good quality, free, transcoding applications and utilities available, such as <a href="https://ffmpeg.org/">FFmpeg</a> and <a href="https://handbrake.fr/">Handbrake</a>. You probably already have your favorite; consult the documentation for your particular transcoder for transcoding options.</p>
+There are many good quality, free, transcoding applications and utilities available, such as [FFmpeg](https://ffmpeg.org/) and [Handbrake](https://handbrake.fr/). You probably already have your favorite; consult the documentation for your particular transcoder for transcoding options.
 
-<p>If you need to transcode from Flash video files, be wary — not all transcoders support this (although FFmpeg and Handbrake both do.)</p>
+If you need to transcode from Flash video files, be wary — not all transcoders support this (although FFmpeg and Handbrake both do.)
 
-<p>If your Flash video files use a web-compatible video compression format, and they have same bitrate you want for the web, you may be able to swap the container format without having to do any transcoding. This would give you the same quality, and save you some time too. Many transcoders have an option to do this, for example FFmpeg has the <code>-c copy</code> option:</p>
+If your Flash video files use a web-compatible video compression format, and they have same bitrate you want for the web, you may be able to swap the container format without having to do any transcoding. This would give you the same quality, and save you some time too. Many transcoders have an option to do this, for example FFmpeg has the `-c copy` option:
 
-<pre class="brush: bash">ffmpeg -i mymovie.flv -c copy mymovie.mp4</pre>
+```bash
+ffmpeg -i mymovie.flv -c copy mymovie.mp4
+```
 
-<h2 id="Formats_for_adaptive_streaming">Formats for adaptive streaming</h2>
+## Formats for adaptive streaming
 
-<p>If you want your video playback to be able to react to changing network conditions (e.g. start to serve a lower bitrate video if the network becomes slow), then you'll want to package your video with an adaptive bitrate.</p>
+If you want your video playback to be able to react to changing network conditions (e.g. start to serve a lower bitrate video if the network becomes slow), then you'll want to package your video with an adaptive bitrate.
 
-<ul>
- <li>To do this, first you'll have to use a transcoder like FFmpeg to create fragmented MP4s suitable for adaptive streaming. This is achieved in FFmpeg using the <code>-movflags frag_keyframe+empty_moov</code> flag.</li>
- <li>You'll need encodings in multiple resolutions, so the process will need to be repeated.</li>
- <li>The next step is to use a utility like <a href="https://github.com/axiomatic-systems/Bento4">Bento4</a>'s <code>mp4-dash.py</code> Python script to generate the corresponding MPD manifest file needed by clients to access the different resolution fragmented MP4s.</li>
-</ul>
+- To do this, first you'll have to use a transcoder like FFmpeg to create fragmented MP4s suitable for adaptive streaming. This is achieved in FFmpeg using the `-movflags frag_keyframe+empty_moov` flag.
+- You'll need encodings in multiple resolutions, so the process will need to be repeated.
+- The next step is to use a utility like [Bento4](https://github.com/axiomatic-systems/Bento4)'s `mp4-dash.py` Python script to generate the corresponding MPD manifest file needed by clients to access the different resolution fragmented MP4s.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p>For more information about transcoding:</p>
+For more information about transcoding:
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Media_Source_Extensions_API/Transcoding_assets_for_MSE">Transcoding assets for Media Source Extensions</a></li>
- <li><a href="https://developers.google.com/web/fundamentals/media/manipulating/files">From Raw Video to Web Ready</a></li>
-</ul>
+- [Transcoding assets for Media Source Extensions](/en-US/docs/Web/API/Media_Source_Extensions_API/Transcoding_assets_for_MSE)
+- [From Raw Video to Web Ready](https://developers.google.com/web/fundamentals/media/manipulating/files)

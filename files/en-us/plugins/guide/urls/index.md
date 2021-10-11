@@ -7,238 +7,179 @@ tags:
   - NPAPI
   - Plugins
 ---
+This chapter describes retrieving URLs and displaying them on specified target pages, posting data to an HTTP server, uploading files to an FTP server, and sending mail.
 
-<p>This chapter describes retrieving URLs and displaying them on specified target pages, posting data to an HTTP server, uploading files to an FTP server, and sending mail.</p>
-
-<p>Uniform resource locator (URL) protocols provide a means for locating and accessing resources that are available on the Internet and on intranets. Plug-ins can request and receive the data associated with URLs of any type that the browser can handle, including HTTP, FTP, news, mailto, and gopher.</p>
-
-<p>The table below summarizes URLs supported by Gecko. In addition, Gecko may support URLs not listed on this table.</p>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>URL Scheme</th>
-   <th>Description</th>
-   </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>about</code></td>
-   <td>Locates browser information or "fun" pages.</td>
-  </tr>
-  <tr>
-   <td><code>file</code></td>
-   <td>(Host-specific filenames) Locates files on a specific host computer rather than an Internet resource.</td>
-  </tr>
-  <tr>
-   <td><code>ftp</code></td>
-   <td>(File Transfer Protocol) Locates files and directories on Internet hosts for file download.</td>
-  </tr>
-  <tr>
-   <td><code>http</code></td>
-   <td>(Hypertext Transfer Protocol) Locates resources on the Internet.</td>
-  </tr>
-  <tr>
-   <td><code>javascript</code></td>
-   <td>Executes JavaScript code that follows the URL. Netscape-specific.</td>
-  </tr>
-  <tr>
-   <td><code>mailto</code></td>
-   <td>(Electronic mail address) Locates the Internet mailing address of an individual or service.</td>
-  </tr>
-  <tr>
-   <td><code>nethelp</code></td>
-   <td>Displays a NetHelp topic in a NetHelp window. Browser-specific.</td>
-  </tr>
-  <tr>
-   <td><code>news</code></td>
-   <td>(USENET news) Locates USENET news groups or individual USENET articles.</td>
-  </tr>
-  <tr>
-   <td><code>nntp</code></td>
-   <td>(USENET news using nntp access) Locates USENET news groups or individual USENET articles; alternate to news.</td>
-  </tr>
-  <tr>
-   <td><code>prospero</code></td>
-   <td>(Prospero Directory Service) Locates a resource on a Prospero directory server.</td>
-  </tr>
-  <tr>
-   <td><code>telnet</code></td>
-   <td>(Reference to interactive sessions) Locates an interactive service.</td>
-  </tr>
-  <tr>
-   <td><code>wais</code></td>
-   <td>(Wide Area Information Servers) Locates WAIS databases and their documents.</td>
-  </tr>
-  <tr>
-   <td><code>wysiwyg</code></td>
-   <td>Placed before another URL; displays a page that JavaScript has updated using document.write.</td>
-  </tr>
- </tbody>
-</table>
+Uniform resource locator (URL) protocols provide a means for locating and accessing resources that are available on the Internet and on intranets. Plug-ins can request and receive the data associated with URLs of any type that the browser can handle, including HTTP, FTP, news, mailto, and gopher.
 
-<p>For more information, see <a class="external" href="https://datatracker.ietf.org/doc/html/rfc3986">RFC 3986</a>, "Uniform Resource Identifier (URI): Generic Syntax", and the <a class="external" href="https://www.iana.org/assignments/uri-schemes.html">IANA URI scheme registry</a>.</p>
+The table below summarizes URLs supported by Gecko. In addition, Gecko may support URLs not listed on this table.
 
-<ul>
- <li><a href="/en-US/docs/Gecko_Plugin_API_Reference/URLs#Getting_URLs">Getting URLs</a></li>
- <li><a href="/en-US/docs/Gecko_Plugin_API_Reference/URLs#Posting_URLs">Posting URLs</a></li>
-</ul>
+| URL Scheme   | Description                                                                                                  |
+| ------------ | ------------------------------------------------------------------------------------------------------------ |
+| `about`      | Locates browser information or "fun" pages.                                                                  |
+| `file`       | (Host-specific filenames) Locates files on a specific host computer rather than an Internet resource.        |
+| `ftp`        | (File Transfer Protocol) Locates files and directories on Internet hosts for file download.                  |
+| `http`       | (Hypertext Transfer Protocol) Locates resources on the Internet.                                             |
+| `javascript` | Executes JavaScript code that follows the URL. Netscape-specific.                                            |
+| `mailto`     | (Electronic mail address) Locates the Internet mailing address of an individual or service.                  |
+| `nethelp`    | Displays a NetHelp topic in a NetHelp window. Browser-specific.                                              |
+| `news`       | (USENET news) Locates USENET news groups or individual USENET articles.                                      |
+| `nntp`       | (USENET news using nntp access) Locates USENET news groups or individual USENET articles; alternate to news. |
+| `prospero`   | (Prospero Directory Service) Locates a resource on a Prospero directory server.                              |
+| `telnet`     | (Reference to interactive sessions) Locates an interactive service.                                          |
+| `wais`       | (Wide Area Information Servers) Locates WAIS databases and their documents.                                  |
+| `wysiwyg`    | Placed before another URL; displays a page that JavaScript has updated using document.write.                 |
 
-<h3 id="Getting_URLs">Getting URLs</h3>
+For more information, see [RFC 3986](https://datatracker.ietf.org/doc/html/rfc3986), "Uniform Resource Identifier (URI): Generic Syntax", and the [IANA URI scheme registry](https://www.iana.org/assignments/uri-schemes.html).
 
-<p>To retrieve a URL and display it on a specified target page, use the <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetURL">NPN_GetURL</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetURLNotify">NPN_GetURLNotify</a></code>, and <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPP_URLNotify">NPP_URLNotify</a></code> functions. This section describes the methods and procedures used for getting the URL and displaying the page.</p>
+- [Getting URLs](/en-US/docs/Gecko_Plugin_API_Reference/URLs#Getting_URLs)
+- [Posting URLs](/en-US/docs/Gecko_Plugin_API_Reference/URLs#Posting_URLs)
 
-<p>The plug-in uses the <code>NPN_GetURL</code> function to ask the browser to display data retrieved from a URL in a specified target window or frame, or deliver it to the plug-in instance in a new stream. This is the way that plug-ins provide hyperlinks to other documents or retrieve data from the network.</p>
+### Getting URLs
 
-<p>If the browser cannot locate the URL and retrieve the data, it does not create a stream for the instance; in this case, the plug-in receives notification of the result. To request a stream and receive notification of the result in all cases, use <code>NPN_GetURLNotify</code>.</p>
+To retrieve a URL and display it on a specified target page, use the [`NPN_GetURL`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetURL), [`NPN_GetURLNotify`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetURLNotify), and [`NPP_URLNotify`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPP_URLNotify) functions. This section describes the methods and procedures used for getting the URL and displaying the page.
 
-<p>For HTTP URLs, the browser resolves <code>NPN_GetURL</code> as the HTTP server method GET, which requests URL objects.</p>
+The plug-in uses the `NPN_GetURL` function to ask the browser to display data retrieved from a URL in a specified target window or frame, or deliver it to the plug-in instance in a new stream. This is the way that plug-ins provide hyperlinks to other documents or retrieve data from the network.
 
-<p>Note that <code>NPN_GetURL</code> is typically asynchronous: it returns immediately and only later handles the request, such as displaying the URL or creating the stream for the instance and writing the data. For this reason as well, calling <code>NPN_GetURLNotify</code> may be more useful than <code>NPN_GetURL</code>; the plug-in is notified upon either successful or unsuccessful completion of the request.</p>
+If the browser cannot locate the URL and retrieve the data, it does not create a stream for the instance; in this case, the plug-in receives notification of the result. To request a stream and receive notification of the result in all cases, use `NPN_GetURLNotify`.
 
-<pre>NPError NPN_GetURL(NPP instance, const char *url, const char *target);</pre>
+For HTTP URLs, the browser resolves `NPN_GetURL` as the HTTP server method GET, which requests URL objects.
 
-<p>The instance parameter represents the current plug-in instance. The url parameter is the URL of the request, which can be of any type, including HTTP, FTP, news, or mailto.</p>
+Note that `NPN_GetURL` is typically asynchronous: it returns immediately and only later handles the request, such as displaying the URL or creating the stream for the instance and writing the data. For this reason as well, calling `NPN_GetURLNotify` may be more useful than `NPN_GetURL`; the plug-in is notified upon either successful or unsuccessful completion of the request.
 
-<p>The target parameter represents the destination where the URL will be displayed, a window or frame. If target refers to the window or frame containing the plug-in instance, it is destroyed and the plug-in may be unloaded. If the target parameter is set to null, the application creates a new stream and delivers the data to the plug-in instance, through calls to <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPP_NewStream">NPP_NewStream</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPP_WriteReady">NPP_WriteReady</a></code> and <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPP_Write">NPP_Write</a></code>, and <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPP_DestroyStream">NPP_DestroyStream</a></code>.</p>
+    NPError NPN_GetURL(NPP instance, const char *url, const char *target);
 
-<p>In general, if a URL works in the location box of the Navigator, it works as a target for <code>NPN_GetURL</code>, except for the <code>_self</code> target.</p>
+The instance parameter represents the current plug-in instance. The url parameter is the URL of the request, which can be of any type, including HTTP, FTP, news, or mailto.
 
-<p>Make sure that the target matches the URL type sent to it. For example, a null target does not make sense for some URL types (such as mailto). For some recommendations to help you with target parameter choice, see the reference entry for <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetURL">NPN_GetURL</a></code>.</p>
+The target parameter represents the destination where the URL will be displayed, a window or frame. If target refers to the window or frame containing the plug-in instance, it is destroyed and the plug-in may be unloaded. If the target parameter is set to null, the application creates a new stream and delivers the data to the plug-in instance, through calls to [`NPP_NewStream`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPP_NewStream), [`NPP_WriteReady`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPP_WriteReady) and [`NPP_Write`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPP_Write), and [`NPP_DestroyStream`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPP_DestroyStream).
 
-<p>The <code>NPN_GetURLNotify</code> method acts like <code>NPN_GetURL</code>. Both request the creation of a new stream with the contents of the specified URL, and, in addition, <code>NPN_GetURLNotify</code> notifies the plug-in of the successful or unsuccessful completion of the request. The browser notifies the plug-in by calling the plug-in's <code>NPP_URLNotify</code> function and passing it the <code>notifyData</code> value, which may be used to track multiple requests.</p>
+In general, if a URL works in the location box of the Navigator, it works as a target for `NPN_GetURL`, except for the `_self` target.
 
-<p><code>NPN_GetURLNotify</code> handles the URL request asynchronously. It returns immediately and only later handles the request and calls <code>NPP_URLNotify</code>. Without this notification, the plug-in cannot tell whether a request with a null target failed or a request with a non-null target was completed.</p>
+Make sure that the target matches the URL type sent to it. For example, a null target does not make sense for some URL types (such as mailto). For some recommendations to help you with target parameter choice, see the reference entry for [`NPN_GetURL`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetURL).
 
-<pre>NPError NPN_GetURLNotify(NPP instance, const char* url,
+The `NPN_GetURLNotify` method acts like `NPN_GetURL`. Both request the creation of a new stream with the contents of the specified URL, and, in addition, `NPN_GetURLNotify` notifies the plug-in of the successful or unsuccessful completion of the request. The browser notifies the plug-in by calling the plug-in's `NPP_URLNotify` function and passing it the `notifyData` value, which may be used to track multiple requests.
 
-                        const char* target, void* notifyData);</pre>
+`NPN_GetURLNotify` handles the URL request asynchronously. It returns immediately and only later handles the request and calls `NPP_URLNotify`. Without this notification, the plug-in cannot tell whether a request with a null target failed or a request with a non-null target was completed.
 
-<p>The instance, url, and target parameters have the same definitions as those of <code>NPN_GetURL</code>. The notifyData parameter contains private plug-in data that can be used to associate the request with the subsequent <code>NPP_URLNotify</code> call (which returns this value) and/or to pass a pointer to some request-related payload.</p>
+    NPError NPN_GetURLNotify(NPP instance, const char* url,
 
-<p>If a request is not completed successfully (for example, because the URL is invalid or an HTTP server is down), the browser should call <code>NPP_URLNotify</code> as soon as possible. If a request completes successfully, and the target is non-null, the browser calls <code>NPP_URLNotify</code> after it has finished loading the URL. If the target is null, it calls <code>NPP_URLNotify</code> after calling <code>NPP_DestroyStream</code> to close the stream.</p>
+                            const char* target, void* notifyData);
 
-<p>Both the <code>NPN_GetURLNotify</code> and <code>NPN_PostURLNotify</code> functions call <code>the NPP_URLNotify</code> method to notify the plug-in of the result of a request. Both functions pass the <code>notifyData</code> value to <code>NPP_URLNotify</code>, which tells the plug-in that the URL request was completed and the reason for completion.</p>
+The instance, url, and target parameters have the same definitions as those of `NPN_GetURL`. The notifyData parameter contains private plug-in data that can be used to associate the request with the subsequent `NPP_URLNotify` call (which returns this value) and/or to pass a pointer to some request-related payload.
 
-<pre>void NPP_URLNotify(NPP instance, const char* url,
+If a request is not completed successfully (for example, because the URL is invalid or an HTTP server is down), the browser should call `NPP_URLNotify` as soon as possible. If a request completes successfully, and the target is non-null, the browser calls `NPP_URLNotify` after it has finished loading the URL. If the target is null, it calls `NPP_URLNotify` after calling `NPP_DestroyStream` to close the stream.
 
-                   NPReason reason, void* notifyData);</pre>
+Both the `NPN_GetURLNotify` and `NPN_PostURLNotify` functions call `the NPP_URLNotify` method to notify the plug-in of the result of a request. Both functions pass the `notifyData` value to `NPP_URLNotify`, which tells the plug-in that the URL request was completed and the reason for completion.
 
-<p>The instance and url parameters have the same definitions as those of <code>NPN_GetURL</code>. The notifyData parameter contains the private plug-in data passed to the corresponding call to <code>NPN_GetURLNotify</code> and <code>NPN_PostURLNotify</code>.</p>
+    void NPP_URLNotify(NPP instance, const char* url,
 
-<div class="warning">
-  <p><strong>Warning:</strong> In Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1), <code>NPN_GetURLNotify()</code> does not notify the plug-in if <code>notifyData</code> is <code>NULL</code>. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=638367" title="[Firefox 4] [NPAPI plugins] NPN_GetURLNotify does not call NPP_URLNotify if notifyData is null">bug 638367</a> for details.</p>
-</div>
+                       NPReason reason, void* notifyData);
 
-<h4 id="Getting_the_URL_and_Displaying_the_Page">Getting the URL and Displaying the Page</h4>
+The instance and url parameters have the same definitions as those of `NPN_GetURL`. The notifyData parameter contains the private plug-in data passed to the corresponding call to `NPN_GetURLNotify` and `NPN_PostURLNotify`.
 
-<p>To retrieve a URL and display it on a specified target page, you use the <code>NPN_GetURL</code> and <code>NPN_GetURLNotify</code> functions. The URL can be displayed in the same window or frame, a new window, or a different window or frame, depending on the value of the target parameter. Specify the display target with one of these special target names:</p>
+> **Warning:** In Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1), `NPN_GetURLNotify()` does not notify the plug-in if `notifyData` is `NULL`. See [bug 638367](https://bugzilla.mozilla.org/show_bug.cgi?id=638367 "[Firefox 4] [NPAPI plugins] NPN_GetURLNotify does not call NPP_URLNotify if notifyData is null") for details.
 
-<ul>
- <li><code>_blank</code> or <code>_new</code>: Load the URL in a new blank unnamed window. Safest target, even though, when used with a mailto or news URL, this creates an extra blank browser instance.</li>
- <li><code>_self</code> or <code>_current</code>: Load the URL into the same window the plug-in instance occupies. If this target refers to the window or frame containing the instance, the instance is destroyed and the plug-in may be unloaded.</li>
- <li><code>_parent</code>: Load the URL into the immediate <code>FRAMESET</code> parent of the plug-in instance document. If the plug-in instance document has no parent, the default is <code>_self</code>.</li>
- <li><code>_top</code>: Load the URL into the plug-in instance window. The default is <code>_self</code>, if the plug-in instance document is already at the top. Use for breaking out of a deep frame nesting.</li>
-</ul>
+#### Getting the URL and Displaying the Page
 
-<p>Be careful when you assign a target. If the target refers to the window or frame containing the instance or one of its parents/ancestors, the instance is destroyed and the plug-in may be unloaded.</p>
+To retrieve a URL and display it on a specified target page, you use the `NPN_GetURL` and `NPN_GetURLNotify` functions. The URL can be displayed in the same window or frame, a new window, or a different window or frame, depending on the value of the target parameter. Specify the display target with one of these special target names:
 
-<p>Here's an example of getting a URL: A plug-in instance draws a button that acts like a link to another web page. When the user clicks the button, the plug-in calls <code>NPN_GetURL</code> to go to the page.</p>
+- `_blank` or `_new`: Load the URL in a new blank unnamed window. Safest target, even though, when used with a mailto or news URL, this creates an extra blank browser instance.
+- `_self` or `_current`: Load the URL into the same window the plug-in instance occupies. If this target refers to the window or frame containing the instance, the instance is destroyed and the plug-in may be unloaded.
+- `_parent`: Load the URL into the immediate `FRAMESET` parent of the plug-in instance document. If the plug-in instance document has no parent, the default is `_self`.
+- `_top`: Load the URL into the plug-in instance window. The default is `_self`, if the plug-in instance document is already at the top. Use for breaking out of a deep frame nesting.
 
-<pre>err = NPN_GetURL(
+Be careful when you assign a target. If the target refers to the window or frame containing the instance or one of its parents/ancestors, the instance is destroyed and the plug-in may be unloaded.
 
-  instance, "http://www.example.com/", "_blank");</pre>
+Here's an example of getting a URL: A plug-in instance draws a button that acts like a link to another web page. When the user clicks the button, the plug-in calls `NPN_GetURL` to go to the page.
 
-<h3 id="Posting_URLs">Posting URLs</h3>
+    err = NPN_GetURL(
 
-<ul>
- <li><a href="/en-US/docs/Gecko_Plugin_API_Reference/URLs#Posting_Data_to_an_HTTP_Server">Posting Data to an HTTP Server</a></li>
- <li><a href="/en-US/docs/Gecko_Plugin_API_Reference/URLs#Uploading_Files_to_an_FTP_Server">Uploading Files to an FTP Server</a></li>
- <li><a href="/en-US/docs/Gecko_Plugin_API_Reference/URLs#Sending_Mail">Sending Mail</a></li>
-</ul>
+      instance, "http://www.example.com/", "_blank");
 
-<p>The plug-in calls <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_PostURL">NPN_PostURL</a></code> to post data from a file or buffer to a URL. This function is the counterpart of <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetURL">NPN_GetURL</a></code>.</p>
+### Posting URLs
 
-<ul>
- <li><code>NPN_PostURL</code> writes data from a file or buffer to the URL and either displays the server response in the target window or delivers it to the plug-in.</li>
- <li><code>NPN_GetURL</code> reads data from the URL and either displays it in the target window or delivers it to the plug-in.</li>
-</ul>
+- [Posting Data to an HTTP Server](/en-US/docs/Gecko_Plugin_API_Reference/URLs#Posting_Data_to_an_HTTP_Server)
+- [Uploading Files to an FTP Server](/en-US/docs/Gecko_Plugin_API_Reference/URLs#Uploading_Files_to_an_FTP_Server)
+- [Sending Mail](/en-US/docs/Gecko_Plugin_API_Reference/URLs#Sending_Mail)
 
-<p>For HTTP URLs only, the browser resolves this method as the HTTP server method <code>POST</code>, which transmits data to the server.</p>
+The plug-in calls [`NPN_PostURL`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_PostURL) to post data from a file or buffer to a URL. This function is the counterpart of [`NPN_GetURL`](/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetURL).
 
-<p>You can use <code>NPN_PostURL</code> to post data to a URL from a memory buffer or file. The result from the server can also be sent to a particular browser window or frame for display, or delivered to the plug-in instance in a new stream. Plug-ins can use this capability to post form data to CGI scripts using HTTP or upload files to a remote server using FTP.</p>
+- `NPN_PostURL` writes data from a file or buffer to the URL and either displays the server response in the target window or delivers it to the plug-in.
+- `NPN_GetURL` reads data from the URL and either displays it in the target window or delivers it to the plug-in.
 
-<p>The browser resolves this method as the HTTP server method POST, which transmits data to the server. The data to post can be contained either in a local temporary file or a new memory buffer. To post a file, set the flag file to true, the buffer buf to the path name string for a file, and len to the length of the path string. The file-type URL prefix "file://" is optional.</p>
+For HTTP URLs only, the browser resolves this method as the HTTP server method `POST`, which transmits data to the server.
 
-<p><code>NPN_PostURL</code> is typically asynchronous: it returns immediately and only later handles the request and calls <code>NPP_Notify</code> (which, in turn, calls <code>NPP_URLNotify</code>).</p>
+You can use `NPN_PostURL` to post data to a URL from a memory buffer or file. The result from the server can also be sent to a particular browser window or frame for display, or delivered to the plug-in instance in a new stream. Plug-ins can use this capability to post form data to CGI scripts using HTTP or upload files to a remote server using FTP.
 
-<pre>NPError NPN_PostURL(NPP instance, const char *url,
+The browser resolves this method as the HTTP server method POST, which transmits data to the server. The data to post can be contained either in a local temporary file or a new memory buffer. To post a file, set the flag file to true, the buffer buf to the path name string for a file, and len to the length of the path string. The file-type URL prefix "file://" is optional.
 
-const char *target, uint32 len,
+`NPN_PostURL` is typically asynchronous: it returns immediately and only later handles the request and calls `NPP_Notify` (which, in turn, calls `NPP_URLNotify`).
 
-const char *buf, NPBool file);</pre>
+    NPError NPN_PostURL(NPP instance, const char *url,
 
-<p>The <code>instance</code>, <code>url</code>, and <code>target</code> parameters have the same definitions as those of <code>NPN_GetURL</code>.</p>
+    const char *target, uint32 len,
 
-<p>The <code>buf</code> parameter identifies a local temporary file or data buffer that contains the data to post.</p>
+    const char *buf, NPBool file);
 
-<p><strong>Windows and Mac</strong></p>
+The `instance`, `url`, and `target` parameters have the same definitions as those of `NPN_GetURL`.
 
-<p>If a file is posted with any protocol other than FTP, the file must be text with Unix-style line breaks ('\n' separators only).</p>
+The `buf` parameter identifies a local temporary file or data buffer that contains the data to post.
 
-<p><code>NPN_PostURL</code> works identically with buffers and files. To post data from a memory buffer, set the flag file to false, the buffer buf to the data to post, and len to the length of the buffer.</p>
+**Windows and Mac**
 
-<p>Possible URL types include http (similar to an HTML form submission), mailto (sending mail), news (posting a news article), and ftp (uploading a file). For protocols in which the headers must be distinguished from the body, such as http, the buffer or file should contain the headers, followed by a blank line, then the body. If no custom headers are required, add a blank line ('\n') to the beginning of the file or buffer.</p>
+If a file is posted with any protocol other than FTP, the file must be text with Unix-style line breaks ('\n' separators only).
 
-<div class="note">
-  <p><strong>Note:</strong> You cannot use <code>NPN_PostURL</code> to specify headers (even a blank line) in a memory buffer. To do this, use <code>NPN_PostURLNotify</code> for this purpose. § The <code>NPN_PostURLNotify</code> function has all the same capabilities and works like <code>NPN_PostURL</code> in most ways except that (1) it supports specifying headers when posting a memory buffer, and (2) it calls <code>NPP_URLNotify</code> upon successful or unsuccessful completion of the request. <code>NPN_PostURLNotify</code> is typically asynchronous: it returns immediately and only later handles the request and calls <code>NPP_URLNotify</code>.</p></div>
+`NPN_PostURL` works identically with buffers and files. To post data from a memory buffer, set the flag file to false, the buffer buf to the data to post, and len to the length of the buffer.
 
-<pre>NPError NPN_PostURLNotify(
+Possible URL types include http (similar to an HTML form submission), mailto (sending mail), news (posting a news article), and ftp (uploading a file). For protocols in which the headers must be distinguished from the body, such as http, the buffer or file should contain the headers, followed by a blank line, then the body. If no custom headers are required, add a blank line ('\n') to the beginning of the file or buffer.
 
-  NPP instance, const char *url,
+> **Note:** You cannot use `NPN_PostURL` to specify headers (even a blank line) in a memory buffer. To do this, use `NPN_PostURLNotify` for this purpose. § The `NPN_PostURLNotify` function has all the same capabilities and works like `NPN_PostURL` in most ways except that (1) it supports specifying headers when posting a memory buffer, and (2) it calls `NPP_URLNotify` upon successful or unsuccessful completion of the request. `NPN_PostURLNotify` is typically asynchronous: it returns immediately and only later handles the request and calls `NPP_URLNotify`.
 
-  const char *target, uint32 len,
+    NPError NPN_PostURLNotify(
 
-  const char *buf, NPBool file, void* notifyData
+      NPP instance, const char *url,
 
-);</pre>
+      const char *target, uint32 len,
 
-<p>The parameters of this function have the same definitions as those of <code>NPN_PostURL</code>. The <code>notifyData</code> parameter contains plug-in-private data passed by <code>NPP_URLNotify</code> and may be used for tracking multiple posts.</p>
+      const char *buf, NPBool file, void* notifyData
 
-<h4 id="Posting_Data_to_an_HTTP_Server">Posting Data to an HTTP Server</h4>
+    );
 
-<p>The following code posts two name-value pairs to a CGI script through HTTP. The response from the server is displayed in a new window.</p>
+The parameters of this function have the same definitions as those of `NPN_PostURL`. The `notifyData` parameter contains plug-in-private data passed by `NPP_URLNotify` and may be used for tracking multiple posts.
 
-<p><em>char* pPostData = "Content-Type:\tapplication/x-www-form-urlencoded\nContent-Length:\t17\n\nname=aaashun@gmail.com\n";</em></p>
+#### Posting Data to an HTTP Server
 
-<p><em>uint32 nPostDataLen = (uint32)strlen(pPostData);</em></p>
+The following code posts two name-value pairs to a CGI script through HTTP. The response from the server is displayed in a new window.
 
-<p><em>NPN_PostURL(npInstance, "http://www.baidu.com","_blank", nPostDataLen, pPostData, FALSE);</em></p>
+_char\* pPostData = "Content-Type:\tapplication/x-www-form-urlencoded\nContent-Length:\t17\n\nname=aaashun\@gmail.com\n";_
 
-<h4 id="Uploading_Files_to_an_FTP_Server">Uploading Files to an FTP Server</h4>
+_uint32 nPostDataLen = (uint32)strlen(pPostData);_
 
-<p>Plug-ins can use <code>NPN_PostURL</code> or <code>NPN_PostURLNotify</code> to upload files to a remote server using FTP. This example uploads a file from the root of the local file system to an FTP server and displays the response in a frame named response:</p>
+_NPN_PostURL(npInstance, "http\://www\.baidu.com","\_blank", nPostDataLen, pPostData, FALSE);_
 
-<pre>char* myData = "file:///c\/myDirectory/myFileName";
+#### Uploading Files to an FTP Server
 
-uint32 myLength = strlen(myData) + 1;
+Plug-ins can use `NPN_PostURL` or `NPN_PostURLNotify` to upload files to a remote server using FTP. This example uploads a file from the root of the local file system to an FTP server and displays the response in a frame named response:
 
-err = NPN_PostURL(instance, "ftp://fred@ftp.example.com/pub/",
+    char* myData = "file:///c\/myDirectory/myFileName";
 
-                  "response", myLength, myData, TRUE);</pre>
+    uint32 myLength = strlen(myData) + 1;
 
-<h4 id="Sending_Mail">Sending Mail</h4>
+    err = NPN_PostURL(instance, "ftp://fred@ftp.example.com/pub/",
 
-<p>A plug-in can send an email message using <code>NPN_PostURL</code> or <code>NPN_PostURLNotify</code>. The following code sends a mail message with the default headers from the client machine.</p>
+                      "response", myLength, myData, TRUE);
 
-<pre>char* myData = "\nHi Fred, this is a message from my plug-in!";
+#### Sending Mail
 
-uint32 myLength = strlen(myData) + 1;
+A plug-in can send an email message using `NPN_PostURL` or `NPN_PostURLNotify`. The following code sends a mail message with the default headers from the client machine.
 
-err = NPN_PostURLNotify(instance, "mailto:fred@example.com",
+    char* myData = "\nHi Fred, this is a message from my plug-in!";
 
-NULL, myLength, myData, FALSE);</pre>
+    uint32 myLength = strlen(myData) + 1;
 
-<p>The example starts by defining the mail message, <code>myData</code>, and its length, <code>myLength</code>. It sends <code>myData</code> and <code>myLength</code> to the mailto URL <code>mailto:fred@example.com</code>. The target window for displaying the message is null in the example. Normally, using a null target window causes the response to be delivered from the server to the plug-in instance in a new stream, but no response is expected for a mailto URL.</p>
+    err = NPN_PostURLNotify(instance, "mailto:fred@example.com",
 
-<p>You cannot use either of these functions to set the body or attachments of an email message.</p>
+    NULL, myLength, myData, FALSE);
+
+The example starts by defining the mail message, `myData`, and its length, `myLength`. It sends `myData` and `myLength` to the mailto URL `mailto:fred@example.com`. The target window for displaying the message is null in the example. Normally, using a null target window causes the response to be delivered from the server to the plug-in instance in a new stream, but no response is expected for a mailto URL.
+
+You cannot use either of these functions to set the body or attachments of an email message.
