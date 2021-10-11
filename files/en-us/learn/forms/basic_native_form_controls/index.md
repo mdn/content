@@ -49,7 +49,7 @@ You've already met some form elements, including {{HTMLelement('form')}}, {{HTML
 
 Text {{htmlelement("input")}} fields are the most basic form widgets. They are a very convenient way to let the user enter any kind of data, and we've already seen a few simple examples.
 
-> **Note:** HTML form text fields are simple plain text input controls. This means that you cannot use them to perform [rich editing](/en-US/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla) (bold, italic, etc.). All rich text editors you'll encounter are custom widgets created with HTML, CSS, and JavaScript.
+> **Note:** HTML form text fields are simple plain text input controls. This means that you cannot use them to perform rich text editing (bold, italic, etc.). All rich text editors you'll encounter are custom widgets created with HTML, CSS, and JavaScript.
 
 All basic text controls share some common behaviors:
 
