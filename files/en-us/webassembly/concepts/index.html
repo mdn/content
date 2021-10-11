@@ -15,7 +15,7 @@ tags:
 ---
 <div>{{WebAssemblySidebar}}</div>
 
-<p class="summary">This article explains the concepts behind how WebAssembly works including its goals, the problems it solves, and how it runs inside the web browser's rendering engine.</p>
+<p>This article explains the concepts behind how WebAssembly works including its goals, the problems it solves, and how it runs inside the web browser's rendering engine.</p>
 
 <h2 id="What_is_WebAssembly">What is WebAssembly?</h2>
 
@@ -37,7 +37,7 @@ tags:
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: WebAssembly will also have uses outside web and JavaScript environments (see <a href="https://webassembly.org/docs/non-web/">Non-web embeddings</a>).</p>
+<p><strong>Note:</strong> WebAssembly will also have uses outside web and JavaScript environments (see <a href="https://webassembly.org/docs/non-web/">Non-web embeddings</a>).</p>
 </div>
 
 <h2 id="How_does_WebAssembly_fit_into_the_web_platform">How does WebAssembly fit into the web platform?</h2>
@@ -110,7 +110,7 @@ tags:
 
 <p>The Emscripten tool is able to take just about any C/C++ source code and compile it into a .wasm module, plus the necessary JavaScript "glue" code for loading and running the module, and an HTML document to display the results of the code.</p>
 
-<p><img alt="" src="emscripten-diagram.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="emscripten-diagram.png"></p>
 
 <p>In a nutshell, the process works as follows:</p>
 
@@ -121,7 +121,7 @@ tags:
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: There are future plans to <a href="https://github.com/WebAssembly/gc/blob/master/README.md">allow WebAssembly to call Web APIs directly</a>.</p>
+<p><strong>Note:</strong> There are future plans to <a href="https://github.com/WebAssembly/gc/blob/master/README.md">allow WebAssembly to call Web APIs directly</a>.</p>
 </div>
 
 <p>The JavaScript glue code is not as simple as you might imagine. For a start, Emscripten implements popular C/C++ libraries like <a href="https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer">SDL</a>, <a href="https://en.wikipedia.org/wiki/OpenGL">OpenGL</a>, <a href="https://en.wikipedia.org/wiki/OpenAL">OpenAL</a>, and parts of <a href="https://en.wikipedia.org/wiki/POSIX">POSIX</a>. These libraries are implemented in terms of Web APIs and thus each one requires some JavaScript glue code to connect WebAssembly to the underlying Web API.</p>

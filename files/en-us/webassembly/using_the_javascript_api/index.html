@@ -13,10 +13,10 @@ tags:
 ---
 <div>{{WebAssemblySidebar}}</div>
 
-<p class="summary">If you have already <a href="/en-US/docs/WebAssembly/C_to_wasm">compiled a module from another language using tools like Emscripten</a>, or <a href="/en-US/docs/WebAssembly/Loading_and_running">loaded and run the code yourself</a>, the next step is to learn more about using the other features of the WebAssembly JavaScript API. This article teaches you what you’ll need to know.</p>
+<p>If you have already <a href="/en-US/docs/WebAssembly/C_to_wasm">compiled a module from another language using tools like Emscripten</a>, or <a href="/en-US/docs/WebAssembly/Loading_and_running">loaded and run the code yourself</a>, the next step is to learn more about using the other features of the WebAssembly JavaScript API. This article teaches you what you’ll need to know.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If you are unfamiliar with the basic concepts mentioned in this article and need more explanation, read <a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a> first, then come back.</p>
+<p><strong>Note:</strong> If you are unfamiliar with the basic concepts mentioned in this article and need more explanation, read <a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a> first, then come back.</p>
 </div>
 
 <h2 id="Some_simple_examples">Some simple examples</h2>
@@ -24,7 +24,7 @@ tags:
 <p>Let’s run through some examples that explain how to use the WebAssembly JavaScript API, and how to use it to load a wasm module in a web page.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can find the sample code in our <a href="https://github.com/mdn/webassembly-examples">webassembly-examples</a> GitHub repo.</p>
+<p><strong>Note:</strong> You can find the sample code in our <a href="https://github.com/mdn/webassembly-examples">webassembly-examples</a> GitHub repo.</p>
 </div>
 
 <h3 id="Preparing_the_example">Preparing the example</h3>
@@ -60,7 +60,7 @@ tags:
 <p>The net result of this is that we call our exported WebAssembly function <code>exported_func</code>, which in turn calls our imported JavaScript function <code>imported_func</code>, which logs the value provided inside the WebAssembly instance (42) to the console. If you save your example code now and load it a browser that supports WebAssembly, you’ll see this in action!</p>
 
 <div class="note">
-<p><strong>Note</strong>: This is a convoluted, longwinded example that achieves very little, but it does serve to illustrate what is possible — using WebAssembly code alongside JavaScript in your web applications. As we’ve said elsewhere, WebAssembly doesn’t aim to replace JavaScript; the two instead can work together, drawing on each other’s strengths.</p>
+<p><strong>Note:</strong> This is a convoluted, longwinded example that achieves very little, but it does serve to illustrate what is possible — using WebAssembly code alongside JavaScript in your web applications. As we’ve said elsewhere, WebAssembly doesn’t aim to replace JavaScript; the two instead can work together, drawing on each other’s strengths.</p>
 </div>
 
 <h3 id="Loading_our_wasm_module_without_streaming">Loading our wasm module without streaming</h3>
@@ -83,7 +83,7 @@ tags:
 
 <p>In Firefox 54+, the Developer Tool Debugger Panel has functionality to expose the text representation of any wasm code included in a web page. To view it, you can go to the Debugger Panel and click on the “wasm://” entry.</p>
 
-<p><img alt="" src="wasm-debug.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="wasm-debug.png"></p>
 
 <p>In addition to viewing WebAssembly as text, developers are able to debug (place breakpoints, inspect the callstack, single-step, etc.) WebAssembly using the text format. See <a href="https://www.youtube.com/watch?v=R1WtBkMeGds">WebAssembly debugging with Firefox DevTools</a> for a video preview.</p>
 
@@ -142,7 +142,7 @@ tags:
   <p>make a local copy of <code>memory.wasm</code> in the same directory as before.</p>
 
   <div class="note">
-  <p><strong>Note</strong>: You can see the module’s text representation at <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat">memory.wat</a>.</p>
+  <p><strong>Note:</strong> You can see the module’s text representation at <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat">memory.wat</a>.</p>
   </div>
  </li>
  <li>
@@ -177,7 +177,7 @@ console.log(sum);</pre>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: You can find our complete demo at <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html">memory.html</a> (<a href="https://mdn.github.io/webassembly-examples/js-api-examples/memory.html">see it live also</a>) .</p>
+<p><strong>Note:</strong> You can find our complete demo at <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html">memory.html</a> (<a href="https://mdn.github.io/webassembly-examples/js-api-examples/memory.html">see it live also</a>) .</p>
 </div>
 
 <h2 id="Tables">Tables</h2>
@@ -201,7 +201,7 @@ console.log(sum);</pre>
   <p>Make a local copy of <code>table.wasm</code> in a new directory.</p>
 
   <div class="note">
-  <p><strong>Note</strong>: You can see the module’s text representation at <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat">table.wat</a>.</p>
+  <p><strong>Note:</strong> You can see the module’s text representation at <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat">table.wat</a>.</p>
   </div>
  </li>
  <li>
@@ -227,7 +227,7 @@ console.log(tbl.get(1)());  // 42</pre>
 <p>This code accesses each function reference stored in the table in turn, and instantiates them to print the values they hold to the console — note how each function reference is retrieved with a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">Table.prototype.get()</a></code> call, then we add an extra set of parentheses on the end to actually invoke the function.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can find our complete demo at <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html">table.html</a> (<a href="https://mdn.github.io/webassembly-examples/js-api-examples/table.html">see it live also</a>).</p>
+<p><strong>Note:</strong> You can find our complete demo at <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html">table.html</a> (<a href="https://mdn.github.io/webassembly-examples/js-api-examples/table.html">see it live also</a>).</p>
 </div>
 
 <h2 id="Globals">Globals</h2>
@@ -278,7 +278,7 @@ WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
 });</pre>
 
 <div class="note">
-<p><strong>Note</strong>: You can see the example <a href="https://mdn.github.io/webassembly-examples/js-api-examples/global.html">running live on GitHub</a>; see also the <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html">source code</a>.</p>
+<p><strong>Note:</strong> You can see the example <a href="https://mdn.github.io/webassembly-examples/js-api-examples/global.html">running live on GitHub</a>; see also the <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html">source code</a>.</p>
 </div>
 
 <h2 id="Multiplicity">Multiplicity</h2>

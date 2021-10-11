@@ -11,7 +11,7 @@ tags:
 ---
 <p>{{WebAssemblySidebar}}</p>
 
-<p class="summary">When you’ve written a new code module in a language like C/C++, you can compile it into WebAssembly using a tool like <a href="/en-US/docs/Mozilla/Projects/Emscripten">Emscripten</a>. Let’s look at how it works.</p>
+<p>When you’ve written a new code module in a language like C/C++, you can compile it into WebAssembly using a tool like <a href="/en-US/docs/Mozilla/Projects/Emscripten">Emscripten</a>. Let’s look at how it works.</p>
 
 <h2 id="Emscripten_Environment_Setup">Emscripten Environment Setup</h2>
 
@@ -46,7 +46,7 @@ int main() {
 }</pre>
 	</li>
 	<li>Now, using the terminal window you used to enter the Emscripten compiler environment, navigate to the same directory as your <code>hello.c</code> file, and run the following command:
-	<pre class="brush: bash no-line-numbers">emcc hello.c -s WASM=1 -o hello.html</pre>
+	<pre class="brush: bash">emcc hello.c -s WASM=1 -o hello.html</pre>
 	</li>
 </ol>
 
@@ -70,7 +70,7 @@ int main() {
 <p>Now all that remains is for you to load the resulting <code>hello.html</code> in a browser that supports WebAssembly. It is enabled by default in Firefox 52+ and Chrome 57+/latest Opera (you can also run wasm code in Firefox 47+ by enabling the <code>javascript.options.wasm</code> flag in <em>about:config</em>, or Chrome (51+) and Opera (38+) by going to <em>chrome://flags</em> and enabling the <em>Experimental WebAssembly</em> flag.)</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: If you try to open generated HTML file (<code>hello.html</code>) directly from your local hard drive (e.g. <code>file://your_path/hello.html</code>), you will end up with an error message along the lines of <em><code>both async and sync fetching of the wasm failed</code>.</em> You need to run your HTML file through an HTTP server (<code>http://</code>) — see <a href="/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">How do you set up a local testing server?</a> for more information.</p>
+<p><strong>Note:</strong> If you try to open generated HTML file (<code>hello.html</code>) directly from your local hard drive (e.g. <code>file://your_path/hello.html</code>), you will end up with an error message along the lines of <em><code>both async and sync fetching of the wasm failed</code>.</em> You need to run your HTML file through an HTTP server (<code>http://</code>) — see <a href="/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">How do you set up a local testing server?</a> for more information.</p>
 </div>
 
 <p>If everything has worked as planned, you should see "Hello world" output in the Emscripten console appearing on the web page, and your browser’s JavaScript console. Congratulations, you’ve just compiled C to WebAssembly and run it in your browser!</p>
@@ -95,7 +95,7 @@ int main() {
 	<li>
 	<p>Now navigate into your new directory (again, in your Emscripten compiler environment terminal window), and run the following command:</p>
 
-	<pre class="brush: bash no-line-numbers">emcc -o hello2.html hello2.c -O3 -s WASM=1 --shell-file html_template/shell_minimal.html</pre>
+	<pre class="brush: bash">emcc -o hello2.html hello2.c -O3 -s WASM=1 --shell-file html_template/shell_minimal.html</pre>
 
 	<p>The options we've passed are slightly different this time:</p>
 
@@ -110,7 +110,7 @@ int main() {
 </ol>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You could specify outputting just the JavaScript "glue" file* rather than the full HTML by specifying a .js file instead of an HTML file in the <code>-o</code> flag, e.g. <code>emcc -o hello2.js hello2.c -O3 -s WASM=1</code>. You could then build your custom HTML completely from scratch, although this is an advanced approach; it is usually easier to use the provided HTML template.</p>
+<p><strong>Note:</strong> You could specify outputting just the JavaScript "glue" file* rather than the full HTML by specifying a .js file instead of an HTML file in the <code>-o</code> flag, e.g. <code>emcc -o hello2.js hello2.c -O3 -s WASM=1</code>. You could then build your custom HTML completely from scratch, although this is an advanced approach; it is usually easier to use the provided HTML template.</p>
 
 <ul>
 	<li>Emscripten requires a large variety of JavaScript "glue" code to handle memory allocation, memory leaks, and a host of other problems</li>
@@ -147,7 +147,7 @@ EMSCRIPTEN_KEEPALIVE void myFunction(int argc, char ** argv) {
 	<p>By default, Emscripten-generated code always just calls the <code>main()</code> function, and other functions are eliminated as dead code. Putting <code>EMSCRIPTEN_KEEPALIVE</code> before a function name stops this from happening. You also need to import the <code>emscripten.h</code> library to use <code>EMSCRIPTEN_KEEPALIVE</code>.</p>
 
 	<div class="notecard note">
-	<p><strong>Note</strong>: We are including the <code>#ifdef</code> blocks so that if you are trying to include this in C++ code, the example will still work. Due to C versus C++ name mangling rules, this would otherwise break, but here we are setting it so that it treats it as an external C function if you are using C++.</p>
+	<p><strong>Note:</strong> We are including the <code>#ifdef</code> blocks so that if you are trying to include this in C++ code, the example will still work. Due to C versus C++ name mangling rules, this would otherwise break, but here we are setting it so that it treats it as an external C function if you are using C++.</p>
 	</div>
 	</li>
 	<li>
@@ -156,7 +156,7 @@ EMSCRIPTEN_KEEPALIVE void myFunction(int argc, char ** argv) {
 	<li>
 	<p>Now let's run the compilation step again. From inside your latest directory (and while inside your Emscripten compiler environment terminal window), compile your C code with the following command. (Note that we need to compile with <code>NO_EXIT_RUNTIME</code>, which is necessary as otherwise when <code>main()</code> exits the runtime would be shut down — necessary for proper C emulation, e.g., atexits are called — and it wouldn't be valid to call compiled code.)</p>
 
-	<pre class="brush: bash no-line-numbers">emcc -o hello3.html hello3.c -O3 -s WASM=1 --shell-file html_template/shell_minimal.html -s NO_EXIT_RUNTIME=1  -s "EXTRA_EXPORTED_RUNTIME_METHODS=['ccall']"</pre>
+	<pre class="brush: bash">emcc -o hello3.html hello3.c -O3 -s WASM=1 --shell-file html_template/shell_minimal.html -s NO_EXIT_RUNTIME=1  -s "EXTRA_EXPORTED_RUNTIME_METHODS=['ccall']"</pre>
 	</li>
 	<li>
 	<p>If you load the example in your browser again, you'll see the same thing as before!</p>
@@ -167,7 +167,7 @@ EMSCRIPTEN_KEEPALIVE void myFunction(int argc, char ** argv) {
 	<li>
 	<p>Add a {{HTMLElement("button")}} element as shown below, just above the first opening <code>&lt;script type='text/javascript'&gt;</code> tag.</p>
 
-	<pre class="brush: html no-line-numbers">&lt;button class="mybutton"&gt;Run myFunction&lt;/button&gt;</pre>
+	<pre class="brush: html">&lt;button class="mybutton"&gt;Run myFunction&lt;/button&gt;</pre>
 	</li>
 	<li>
 	<p>Now add the following code at the end of the first {{HTMLElement("script")}} element:</p>

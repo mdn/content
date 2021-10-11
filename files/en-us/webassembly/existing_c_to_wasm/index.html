@@ -10,7 +10,7 @@ tags:
 ---
 <p>{{WebAssemblySidebar}}</p>
 
-<p class="summary">A core use-case for WebAssembly is to take the existing ecosystem of C libraries and allow developers to use them on the web.</p>
+<p>A core use-case for WebAssembly is to take the existing ecosystem of C libraries and allow developers to use them on the web.</p>
 
 <p>These libraries often rely on C's standard library, an operating system, a file system and other things. Emscripten provides most of these features, although there are some <a href="https://emscripten.org/docs/porting/guidelines/api_limitations.html">limitations</a>.</p>
 
@@ -55,7 +55,7 @@ int version() {
 
 <p>And you will see the correct version number in the <a href="https://googlechrome.github.io/samples/webassembly/version.html">output</a>:</p>
 
-<p><img alt="  Screenshot of the DevTools console showing the correct versionnumber." src="version.png" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="  Screenshot of the DevTools console showing the correct versionnumber." src="version.png"></p>
 
 <div class="note">
 <p><strong>Note:</strong> libwebp returns the current version a.b.c as a hexadecimal number 0xabc. For example, v0.6.1 is encoded as 0x000601 = 1537.</p>
@@ -179,4 +179,4 @@ document.body.appendChild(img)
 
 <p><a href="https://googlechrome.github.io/samples/webassembly/image.html">Demo</a> | <a href="https://developers.google.com/web/updates/2018/03/emscripting-a-c-library">Original Article</a></p>
 
-<p><img alt="DevTools network panel and the generated image." src="result.jpg" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="DevTools network panel and the generated image." src="result.jpg"></p>

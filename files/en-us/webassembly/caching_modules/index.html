@@ -13,10 +13,10 @@ tags:
 <div>{{WebAssemblySidebar}}</div>
 
 <div class="warning">
-<p><strong>Warning</strong>: Experimental {{jsxref("WebAssembly.Module")}} IndexedDB serialization support is being removed from browsers; see {{bug("1469395")}} and <a href="https://github.com/WebAssembly/spec/issues/821">this spec issue</a>.</p>
+<p><strong>Warning:</strong> Experimental {{jsxref("WebAssembly.Module")}} IndexedDB serialization support is being removed from browsers; see {{bug("1469395")}} and <a href="https://github.com/WebAssembly/spec/issues/821">this spec issue</a>.</p>
 </div>
 
-<p class="summary">Caching is useful for improving the performance of an app — we can store compiled WebAssembly modules on the client so they don't have to be downloaded and compiled every time. This article explains the best practices around this.</p>
+<p>Caching is useful for improving the performance of an app — we can store compiled WebAssembly modules on the client so they don't have to be downloaded and compiled every time. This article explains the best practices around this.</p>
 
 <h2 id="Caching_via_IndexedDB">Caching via IndexedDB</h2>
 
@@ -31,7 +31,7 @@ tags:
 <p>In our wasm-utils.js library script, you'll find <code>instantiateCachedURL()</code> — this function fetches the wasm module at <code>url</code> with a version of <code>dbVersion</code>, instantiates it with the given <code>importObject</code>, and returns a promise resolving to the finished wasm Instance. Additionally, it handles creating a database to cache the compiled wasm modules in, attempts to store new modules in the database, and retrieves previously cached modules from the database, saving you from having to download them again.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The entire site's wasm cache (not just the given URL) is versioned by the specified <code>dbVersion</code> passed into the function. If the wasm module code is updated, or its URL changes, you will need to update <code>dbVersion</code>. Any subsequent call to <code>instantiateCachedURL()</code> will then clear out the entire cache, allowing you to avoid using out-of-date modules.</p>
+<p><strong>Note:</strong> The entire site's wasm cache (not just the given URL) is versioned by the specified <code>dbVersion</code> passed into the function. If the wasm module code is updated, or its URL changes, you will need to update <code>dbVersion</code>. Any subsequent call to <code>instantiateCachedURL()</code> will then clear out the entire cache, allowing you to avoid using out-of-date modules.</p>
 </div>
 
 <p>The function starts off by defining some necessary constants:</p>
@@ -115,7 +115,7 @@ tags:
   },</pre>
 
 <div class="note">
-<p><strong>Note</strong>: It is for this kind of usage that {{jsxref("WebAssembly.instantiate()")}} returns both a {{jsxref("WebAssembly.Module()", "Module")}} and an {{jsxref("WebAssembly.Instance()", "Instance")}}: the Module represents the compiled code and can be stored/retrieved in IDB or shared between Workers via <code><a href="/en-US/docs/Web/API/MessagePort/postMessage">postMessage()</a></code>; the Instance is stateful and contains the callable JavaScript functions, therefore it cannot be stored/shared.</p>
+<p><strong>Note:</strong> It is for this kind of usage that {{jsxref("WebAssembly.instantiate()")}} returns both a {{jsxref("WebAssembly.Module()", "Module")}} and an {{jsxref("WebAssembly.Instance()", "Instance")}}: the Module represents the compiled code and can be stored/retrieved in IDB or shared between Workers via <code><a href="/en-US/docs/Web/API/MessagePort/postMessage">postMessage()</a></code>; the Instance is stateful and contains the callable JavaScript functions, therefore it cannot be stored/shared.</p>
 </div>
 
 <p>If opening the database failed (for example due to permissions or quota), we fall back to fetching and compiling the module and don't try to store the results (since there is no database to store them into).</p>
