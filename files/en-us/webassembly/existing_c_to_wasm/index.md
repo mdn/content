@@ -8,68 +8,73 @@ tags:
   - WebAssembly
   - wasm
 ---
-<p>{{WebAssemblySidebar}}</p>
+{{WebAssemblySidebar}}
 
-<p>A core use-case for WebAssembly is to take the existing ecosystem of C libraries and allow developers to use them on the web.</p>
+A core use-case for WebAssembly is to take the existing ecosystem of C libraries and allow developers to use them on the web.
 
-<p>These libraries often rely on C's standard library, an operating system, a file system and other things. Emscripten provides most of these features, although there are some <a href="https://emscripten.org/docs/porting/guidelines/api_limitations.html">limitations</a>.</p>
+These libraries often rely on C's standard library, an operating system, a file system and other things. Emscripten provides most of these features, although there are some [limitations](https://emscripten.org/docs/porting/guidelines/api_limitations.html).
 
-<p>As an example, let's compile an encoder for WebP to wasm. The source for the WebP codec is written in C and <a href="https://github.com/webmproject/libwebp">available on GitHub</a> as well as some extensive <a href="https://developers.google.com/speed/webp/docs/api">API documentation</a>. That's a pretty good starting point.</p>
+As an example, let's compile an encoder for WebP to wasm. The source for the WebP codec is written in C and [available on GitHub](https://github.com/webmproject/libwebp) as well as some extensive [API documentation](https://developers.google.com/speed/webp/docs/api). That's a pretty good starting point.
 
-<pre class="brush: bash">$ git clone https://github.com/webmproject/libwebp</pre>
+```bash
+$ git clone https://github.com/webmproject/libwebp
+```
 
-<p>To start off simple, expose <code>WebPGetEncoderVersion()</code> from <code>encode.h</code> to JavaScript by writing a C file called <code>webp.c</code>:</p>
+To start off simple, expose `WebPGetEncoderVersion()` from `encode.h` to JavaScript by writing a C file called `webp.c`:
 
-<pre class="brush: cpp">#include "emscripten.h"
+```cpp
+#include "emscripten.h"
 #include "src/webp/encode.h"
 
 EMSCRIPTEN_KEEPALIVE
 int version() {
   return WebPGetEncoderVersion();
-}</pre>
+}
+```
 
-<p>This is a good simple program to test whether you can get the source code of libwebp to compile, as it doesn't require any parameters or complex data structures to invoke this function.</p>
+This is a good simple program to test whether you can get the source code of libwebp to compile, as it doesn't require any parameters or complex data structures to invoke this function.
 
-<p>To compile this program, you need to tell the compiler where it can find libwebp's header files using the <code>-I</code> flag and also pass it all the C files of libwebp that it needs. A useful strategy is to just give it <strong>all</strong> the C files and rely on the compiler to strip out everything that is unnecessary. It seems to work brilliantly for this library:</p>
+To compile this program, you need to tell the compiler where it can find libwebp's header files using the `-I` flag and also pass it all the C files of libwebp that it needs. A useful strategy is to just give it **all** the C files and rely on the compiler to strip out everything that is unnecessary. It seems to work brilliantly for this library:
 
-<pre class="brush: bash">$ emcc -O3 -s WASM=1 -s EXTRA_EXPORTED_RUNTIME_METHODS='["cwrap"]' \
+```bash
+$ emcc -O3 -s WASM=1 -s EXTRA_EXPORTED_RUNTIME_METHODS='["cwrap"]' \
     -I libwebp \
     webp.c \
-    libwebp/src/{dec,dsp,demux,enc,mux,utils}/*.c</pre>
+    libwebp/src/{dec,dsp,demux,enc,mux,utils}/*.c
+```
 
-<div class="note">
-<p><strong>Note:</strong> This strategy will not work with every C project. Many projects rely on autoconf/automake to generate system-specific code before compilation. Emscripten provides <code>emconfigure</code> and <code>emmake</code> to wrap these commands and inject the appropriate parameters. You can find more in the <a href="https://emscripten.org/docs/compiling/Building-Projects.html">Emscripten documentation</a>.</p>
-</div>
+> **Note:** This strategy will not work with every C project. Many projects rely on autoconf/automake to generate system-specific code before compilation. Emscripten provides `emconfigure` and `emmake` to wrap these commands and inject the appropriate parameters. You can find more in the [Emscripten documentation](https://emscripten.org/docs/compiling/Building-Projects.html).
 
-<p>Now you only need some HTML and JavaScript to load your new module:</p>
+Now you only need some HTML and JavaScript to load your new module:
 
-<pre class="brush: html">&lt;script src="./a.out.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-  Module.onRuntimeInitialized = async _ =&gt; {
+```html
+<script src="./a.out.js"></script>
+<script>
+  Module.onRuntimeInitialized = async _ => {
     const api = {
       version: Module.cwrap('version', 'number', []),
     };
     console.log(api.version());
   };
-&lt;/script&gt;</pre>
+</script>
+```
 
-<p>And you will see the correct version number in the <a href="https://googlechrome.github.io/samples/webassembly/version.html">output</a>:</p>
+And you will see the correct version number in the [output](https://googlechrome.github.io/samples/webassembly/version.html):
 
-<p><img alt="  Screenshot of the DevTools console showing the correct versionnumber." src="version.png"></p>
+![  Screenshot of the DevTools console showing the correct versionnumber.](version.png)
 
-<div class="note">
-<p><strong>Note:</strong> libwebp returns the current version a.b.c as a hexadecimal number 0xabc. For example, v0.6.1 is encoded as 0x000601 = 1537.</p>
-</div>
+> **Note:** libwebp returns the current version a.b.c as a hexadecimal number 0xabc. For example, v0.6.1 is encoded as 0x000601 = 1537.
 
-<h3 id="Get_an_image_from_JavaScript_into_Wasm">Get an image from JavaScript into Wasm</h3>
+### Get an image from JavaScript into Wasm
 
-<p>Getting the encoder's version number is great, but encoding an actual image would be more impressive. How do we do that?</p>
+Getting the encoder's version number is great, but encoding an actual image would be more impressive. How do we do that?
 
-<p>The first question you need to answer is: how do I get the image into wasm? Looking at the <a href="https://developers.google.com/speed/webp/docs/api#simple_encoding_api">encoding API of libwebp</a>, you'll find that it expects an array of bytes in RGB, RGBA, BGR or BGRA. Luckily, the Canvas API has {{domxref("CanvasRenderingContext2D.getImageData")}} — that gives you an {{jsxref("Uint8ClampedArray")}} containing the image data in RGBA:</p>
+The first question you need to answer is: how do I get the image into wasm? Looking at the [encoding API of libwebp](https://developers.google.com/speed/webp/docs/api#simple_encoding_api), you'll find that it expects an array of bytes in RGB, RGBA, BGR or BGRA. Luckily, the Canvas API has {{domxref("CanvasRenderingContext2D.getImageData")}} — that gives you an {{jsxref("Uint8ClampedArray")}} containing the image data in RGBA:
 
-<pre class="brush: js"> async function loadImage(src) {
+```js
+ async function loadImage(src) {
   // Load image
-  const imgBlob = await fetch(src).then(resp =&gt; resp.blob());
+  const imgBlob = await fetch(src).then(resp => resp.blob());
   const img = await createImageBitmap(imgBlob);
   // Make canvas same size as image
   const canvas = document.createElement('canvas');
@@ -79,11 +84,13 @@ int version() {
   const ctx = canvas.getContext('2d');
   ctx.drawImage(img, 0, 0);
   return ctx.getImageData(0, 0, img.width, img.height);
-}</pre>
+}
+```
 
-<p>Now it's "only" a matter of copying the data from JavaScript into wasm. For that, you need to expose two additional functions — one that allocates memory for the image inside wasm and one that frees it up again:</p>
+Now it's "only" a matter of copying the data from JavaScript into wasm. For that, you need to expose two additional functions — one that allocates memory for the image inside wasm and one that frees it up again:
 
-<pre class="brush: cpp">#include &lt;stdlib.h&gt; // required for malloc definition
+```cpp
+#include <stdlib.h> // required for malloc definition
 
 EMSCRIPTEN_KEEPALIVE
 uint8_t* create_buffer(int width, int height) {
@@ -93,11 +100,13 @@ uint8_t* create_buffer(int width, int height) {
 EMSCRIPTEN_KEEPALIVE
 void destroy_buffer(uint8_t* p) {
   free(p);
-}</pre>
+}
+```
 
-<p>The <code>create_buffer()</code> function allocates a buffer for the RGBA image — hence 4 bytes per pixel. The pointer returned by <code>malloc()</code> is the address of the first memory cell of that buffer. When the pointer is returned to JavaScript land, it is treated as just a number. After exposing the function to JavaScript using cwrap, you can use that number to find the start of our buffer and copy the image data:</p>
+The `create_buffer()` function allocates a buffer for the RGBA image — hence 4 bytes per pixel. The pointer returned by `malloc()` is the address of the first memory cell of that buffer. When the pointer is returned to JavaScript land, it is treated as just a number. After exposing the function to JavaScript using cwrap, you can use that number to find the start of our buffer and copy the image data:
 
-<pre class="brush: js">const api = {
+```js
+const api = {
   version: Module.cwrap('version', 'number', []),
   create_buffer: Module.cwrap('create_buffer', 'number', ['number', 'number']),
   destroy_buffer: Module.cwrap('destroy_buffer', '', ['number']),
@@ -111,21 +120,23 @@ const image = await loadImage('./image.jpg');
 const p = api.create_buffer(image.width, image.height);
 Module.HEAP8.set(image.data, p);
 // ... call encoder ...
-api.destroy_buffer(p);</pre>
+api.destroy_buffer(p);
+```
 
-<h3 id="Encode_the_Image">Encode the Image</h3>
+### Encode the Image
 
-<p>The image is now available in wasm. It is time to call the WebP encoder to do its job. Looking at the <a href="https://developers.google.com/speed/webp/docs/api#simple_encoding_api">WebP documentation</a>, you'll find that <code>WebPEncodeRGBA</code> seems like a perfect fit. The function takes a pointer to the input image and its dimensions, as well as a quality option between 0 and 100. It also allocates an output buffer for us that we need to free using <code>WebPFree()</code> once we are done with the WebP image.</p>
+The image is now available in wasm. It is time to call the WebP encoder to do its job. Looking at the [WebP documentation](https://developers.google.com/speed/webp/docs/api#simple_encoding_api), you'll find that `WebPEncodeRGBA` seems like a perfect fit. The function takes a pointer to the input image and its dimensions, as well as a quality option between 0 and 100. It also allocates an output buffer for us that we need to free using `WebPFree()` once we are done with the WebP image.
 
-<p>The result of the encoding operation is an output buffer and its length. Because functions in C can't have arrays as return types (unless you allocate memory dynamically), this example resorts to a static global array. This may not be clean C. In fact, it relies on wasm pointers being 32 bits wide. But this is a fair shortcut for keeping things simple:</p>
+The result of the encoding operation is an output buffer and its length. Because functions in C can't have arrays as return types (unless you allocate memory dynamically), this example resorts to a static global array. This may not be clean C. In fact, it relies on wasm pointers being 32 bits wide. But this is a fair shortcut for keeping things simple:
 
-<pre class="brush: js">int result[2];
+```js
+int result[2];
 EMSCRIPTEN_KEEPALIVE
 void encode(uint8_t* img_in, int width, int height, float quality) {
   uint8_t* img_out;
   size_t size;
 
-  size = WebPEncodeRGBA(img_in, width, height, width * 4, quality, &amp;img_out);
+  size = WebPEncodeRGBA(img_in, width, height, width * 4, quality, &img_out);
 
   result[0] = (int)img_out;
   result[1] = size;
@@ -144,39 +155,41 @@ int get_result_pointer() {
 EMSCRIPTEN_KEEPALIVE
 int get_result_size() {
   return result[1];
-}</pre>
+}
+```
 
-<p>Now with all of that in place, you can call the encoding function, grab the pointer and image size, put it in a JavaScript buffer of your own, and release all the wasm buffers allocated in the process:</p>
+Now with all of that in place, you can call the encoding function, grab the pointer and image size, put it in a JavaScript buffer of your own, and release all the wasm buffers allocated in the process:
 
-<pre class="brush: js">api.encode(p, image.width, image.height, 100);
+```js
+api.encode(p, image.width, image.height, 100);
 const resultPointer = api.get_result_pointer();
 const resultSize = api.get_result_size();
 const resultView = new Uint8Array(Module.HEAP8.buffer, resultPointer, resultSize);
 const result = new Uint8Array(resultView);
-api.free_result(resultPointer);</pre>
+api.free_result(resultPointer);
+```
 
-<div class="note">
-<p><strong>Note:</strong> <code>new Uint8Array(someBuffer)</code> will create a new view onto the same memory chunk, while <code>new Uint8Array(someTypedArray)</code> will copy the data.</p>
-</div>
+> **Note:** `new Uint8Array(someBuffer)` will create a new view onto the same memory chunk, while `new Uint8Array(someTypedArray)` will copy the data.
 
-<p>Depending on the size of your image, you might run into an error where wasm can't grow the memory enough to accommodate both the input and the output image:</p>
+Depending on the size of your image, you might run into an error where wasm can't grow the memory enough to accommodate both the input and the output image:
 
-<p><img alt="
-  Screenshot of the DevTools console showing an error." src="error.png"></p>
+![
+  Screenshot of the DevTools console showing an error.](error.png)
 
-<p>Luckily, the solution to this problem is in the error message. You just need to add <code>-s ALLOW_MEMORY_GROWTH=1</code> to your compilation command.</p>
+Luckily, the solution to this problem is in the error message. You just need to add `-s ALLOW_MEMORY_GROWTH=1` to your compilation command.
 
-<p>And there you have it. You have compiled a WebP encoder and transcoded a JPEG image to WebP. To prove that it worked, turn your result buffer into a blob and use it on an <code>&lt;img&gt;</code> element:</p>
+And there you have it. You have compiled a WebP encoder and transcoded a JPEG image to WebP. To prove that it worked, turn your result buffer into a blob and use it on an `<img>` element:
 
-<pre class="brush: js">const blob = new Blob([result], {type: 'image/webp'});
+```js
+const blob = new Blob([result], {type: 'image/webp'});
 const blobURL = URL.createObjectURL(blob);
 const img = document.createElement('img');
 img.src = blobURL;
 document.body.appendChild(img)
-</pre>
+```
 
-<p>Behold, the glory of a new WebP image.</p>
+Behold, the glory of a new WebP image.
 
-<p><a href="https://googlechrome.github.io/samples/webassembly/image.html">Demo</a> | <a href="https://developers.google.com/web/updates/2018/03/emscripting-a-c-library">Original Article</a></p>
+[Demo](https://googlechrome.github.io/samples/webassembly/image.html) | [Original Article](https://developers.google.com/web/updates/2018/03/emscripting-a-c-library)
 
-<p><img alt="DevTools network panel and the generated image." src="result.jpg"></p>
+![DevTools network panel and the generated image.](result.jpg)

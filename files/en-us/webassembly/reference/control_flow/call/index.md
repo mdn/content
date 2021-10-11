@@ -2,28 +2,27 @@
 title: call
 slug: WebAssembly/Reference/Control_flow/call
 tags:
-- WebAssembly
-- wasm
-- Landing page
-- Reference
-- Control flow
+  - WebAssembly
+  - wasm
+  - Landing page
+  - Reference
+  - Control flow
 ---
-<p>{{WebAssemblySidebar}}</p>
+{{WebAssemblySidebar}}
 
-<p><span class="seoSummary"><strong><code>call</code></strong> calls a function. <code>call_indirect</code> calls a function in a table.</span></p>
+**`call`** calls a function. `call_indirect` calls a function in a table.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: wasm">
+```wasm
 call $greet
-</pre>
+```
 
+## Full working example
 
-<h2 id="Full_working_example">Full working example</h2>
+Wasm file
 
-<p>Wasm file</p>
-
-<pre class="brush: wasm">
+```wasm
 (module
   (import "env" "greet" (func $greet))
 
@@ -34,11 +33,11 @@ call $greet
 
   (start 1) ;; run the first function automatically
 )
-</pre>
+```
 
-<p>JavaScript file</p>
+JavaScript file
 
-<pre class="brush: js">
+```js
 WebAssembly.instantiateStreaming(
   fetch("../out/main.wasm"),
   {
@@ -49,23 +48,9 @@ WebAssembly.instantiateStreaming(
     }
   }
 );
-</pre>
+```
 
-<table>
- <thead>
-  <tr>
-   <th>Instruction</th>
-   <th>Binary opcode</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-    <td><code>call</code></td>
-    <td><code>0x10</code></td>
-  </tr>
-  <tr>
-    <td><code>call_indirect</code></td>
-    <td><code>0x11</code></td>
-  </tr>
- </tbody>
-</table>
+| Instruction     | Binary opcode |
+| --------------- | ------------- |
+| `call`          | `0x10`        |
+| `call_indirect` | `0x11`        |

@@ -2,20 +2,19 @@
 title: if...else
 slug: WebAssembly/Reference/Control_flow/if...else
 tags:
-- WebAssembly
-- wasm
-- Landing page
-- Reference
-- Control flow
+  - WebAssembly
+  - wasm
+  - Landing page
+  - Reference
+  - Control flow
 ---
-<p>{{WebAssemblySidebar}}</p>
+{{WebAssemblySidebar}}
 
-<p><span class="seoSummary">The <strong><code>if</code></strong> statement executes a statement if the last item on the stack is true (1). If the condition is false (0), another statement can be executed</span></p>
+The **`if`** statement executes a statement if the last item on the stack is true (1). If the condition is false (0), another statement can be executed
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: wasm">
+```wasm
 i32.const 0
 (if
   (then
@@ -25,14 +24,13 @@ i32.const 0
     ;; do something else
   )
 )
-</pre>
+```
 
+## Full working example
 
-<h2 id="Full_working_example">Full working example</h2>
+Wasm file
 
-<p>Wasm file</p>
-
-<pre class="brush: wasm">
+```wasm
 (module
   ;; import the browser console object, you'll need to pass this in from JavaScript
   (import "console" "log" (func $log (param i32)))
@@ -53,32 +51,18 @@ i32.const 0
 
   (start 1) ;; run the first function automatically
 )
-</pre>
+```
 
-<p>JavaScript file</p>
+JavaScript file
 
-<pre class="brush: js">
+```js
 WebAssembly.instantiateStreaming(
   fetch("link to .wasm file"),
   { console }
 );
-</pre>
+```
 
-<table>
- <thead>
-  <tr>
-   <th>Instruction</th>
-   <th>Binary opcode</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>if</code></td>
-   <td><code>0x04</code></td>
-  </tr>
-  <tr>
-   <td><code>else</code></td>
-   <td><code>0x05</code></td>
-  </tr>
- </tbody>
-</table>
+| Instruction | Binary opcode |
+| ----------- | ------------- |
+| `if`        | `0x04`        |
+| `else`      | `0x05`        |

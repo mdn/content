@@ -2,22 +2,21 @@
 title: loop
 slug: WebAssembly/Reference/Control_flow/loop
 tags:
-- WebAssembly
-- wasm
-- Landing page
-- Reference
-- Control flow
+  - WebAssembly
+  - wasm
+  - Landing page
+  - Reference
+  - Control flow
 ---
-<p>{{WebAssemblySidebar}}</p>
+{{WebAssemblySidebar}}
 
-<p><span class="seoSummary">The <strong><code>loop</code></strong> statement creates a label that can later be branched to with a <code>br</code>. The loop instruction doesn't loop by itself; you need to branch to it to actually create a loop.</span></p>
+The **`loop`** statement creates a label that can later be branched to with a `br`. The loop instruction doesn't loop by itself; you need to branch to it to actually create a loop.
 
-<p>The <strong><code>loop</code></strong> statement is the opposite of the <code>block</code> statement, in the sense that while branching to a <code>loop</code> jumps to the beginning of the loop, branching to a <code>block</code> jumps to the end of the block, that is, out of the block.</p>
+The **`loop`** statement is the opposite of the `block` statement, in the sense that while branching to a `loop` jumps to the beginning of the loop, branching to a `block` jumps to the end of the block, that is, out of the block.
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: wasm">
+```wasm
 ;; label the loop so that it can be branched to
 (loop $my_loop
 
@@ -27,16 +26,15 @@ tags:
   br $my_loop
 
 )
-</pre>
+```
 
+## Full working example
 
-<h2 id="Full_working_example">Full working example</h2>
+We'll create a simple wasm module that increments a variable `$i` 10 times and logs the value on every cycle.
 
-<p>We'll create a simple wasm module that increments a variable <code>$i</code> 10 times and logs the value on every cycle.</p>
+Wasm file
 
-<p>Wasm file</p>
-
-<pre class="brush: wasm">
+```wasm
 (module
   ;; import the browser console object, you'll need to pass this in from JavaScript
   (import "console" "log" (func $log (param i32)))
@@ -71,28 +69,17 @@ tags:
 
   (start 1) ;; run the first function automatically
 )
-</pre>
+```
 
-<p>JavaScript file</p>
+JavaScript file
 
-<pre class="brush: js">
+```js
 WebAssembly.instantiateStreaming(
   fetch("link to .wasm file"),
   { console }
 );
-</pre>
+```
 
-<table>
- <thead>
-  <tr>
-   <th>Instruction</th>
-   <th>Binary opcode</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-    <td><code>loop</code></td>
-    <td><code>0x03</code></td>
-  </tr>
- </tbody>
-</table>
+| Instruction | Binary opcode |
+| ----------- | ------------- |
+| `loop`      | `0x03`        |

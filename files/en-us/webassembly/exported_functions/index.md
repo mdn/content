@@ -10,31 +10,30 @@ tags:
   - exported wasm functions
   - wasm
 ---
-<div>{{WebAssemblySidebar}}</div>
+{{WebAssemblySidebar}}
 
-<p>Exported WebAssembly functions are how WebAssembly functions are represented in JavaScript. This article describes what they are in a little more detail.</p>
+Exported WebAssembly functions are how WebAssembly functions are represented in JavaScript. This article describes what they are in a little more detail.
 
-<h2 id="Exported..._what">Exported... what?</h2>
+## Exported... what?
 
-<p>Exported WebAssembly functions are basically just JavaScript wrappers that represent WebAssembly functions in JavaScript. When you call them, you get some activity in the background to convert the arguments into types that wasm can work with (for example converting JavaScript numbers to Int32), the arguments are passed to the function inside your wasm module, the function is invoked, and the result is converted and passed back to JavaScript.</p>
+Exported WebAssembly functions are basically just JavaScript wrappers that represent WebAssembly functions in JavaScript. When you call them, you get some activity in the background to convert the arguments into types that wasm can work with (for example converting JavaScript numbers to Int32), the arguments are passed to the function inside your wasm module, the function is invoked, and the result is converted and passed back to JavaScript.
 
-<p>You can retrieve exported WebAssembly functions in two ways:</p>
+You can retrieve exported WebAssembly functions in two ways:
 
-<ul>
- <li>By calling <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">Table.prototype.get()</a></code> on an existing table.</li>
- <li>By accessing a function exported from a wasm module instance via <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports">Instance.exports</a></code>.</li>
-</ul>
+- By calling [`Table.prototype.get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) on an existing table.
+- By accessing a function exported from a wasm module instance via [`Instance.exports`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports).
 
-<p>Either way, you get the same kind of wrapper for the underlying function.  From a JavaScript point of view, it's as if every wasm function <em>is</em> a JavaScript function too — but they are encapsulated by the exported wasm function object instance and there are only limited ways to access them.</p>
+Either way, you get the same kind of wrapper for the underlying function.  From a JavaScript point of view, it's as if every wasm function _is_ a JavaScript function too — but they are encapsulated by the exported wasm function object instance and there are only limited ways to access them.
 
-<h2 id="An_example">An example</h2>
+## An example
 
-<p>Let's look at an example to clear things up (you can find this on GitHub as <a href="https://github.com/mdn/webassembly-examples/blob/master/other-examples/table-set.html">table-set.html</a>; see it <a href="https://mdn.github.io/webassembly-examples/other-examples/table-set.html">running live also</a>, and check out the wasm <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat">text representation</a>):</p>
+Let's look at an example to clear things up (you can find this on GitHub as [table-set.html](https://github.com/mdn/webassembly-examples/blob/master/other-examples/table-set.html); see it [running live also](https://mdn.github.io/webassembly-examples/other-examples/table-set.html), and check out the wasm [text representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat)):
 
-<pre class="brush: js">var otherTable = new WebAssembly.Table({ element: "anyfunc", initial: 2 });
+```js
+var otherTable = new WebAssembly.Table({ element: "anyfunc", initial: 2 });
 
 WebAssembly.instantiateStreaming(fetch('table.wasm'))
-.then(obj =&gt; {
+.then(obj => {
   var tbl = obj.instance.exports.tbl;
   console.log(tbl.get(0)());  // 13
   console.log(tbl.get(1)());  // 42
@@ -42,35 +41,38 @@ WebAssembly.instantiateStreaming(fetch('table.wasm'))
   otherTable.set(1,tbl.get(1));
   console.log(otherTable.get(0)());
   console.log(otherTable.get(1)());
-});</pre>
+});
+```
 
-<p>Here we create a table (<code>otherTable</code>) from JavaScript using the {{jsxref("WebAssembly.Table")}} constructor, then we load table.wasm into our page using the {{jsxref("WebAssembly.instantiateStreaming()")}} method.</p>
+Here we create a table (`otherTable`) from JavaScript using the {{jsxref("WebAssembly.Table")}} constructor, then we load table.wasm into our page using the {{jsxref("WebAssembly.instantiateStreaming()")}} method.
 
-<p>We then get the function exported from the module, retrieve the functions it references via <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">tbl.get()</a></code> and log the result of invoking each one to the console. Next, we use <code>set()</code> to make the <code>otherTable</code> table contain references to the same functions as the <code>tbl</code> table.</p>
+We then get the function exported from the module, retrieve the functions it references via [`tbl.get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) and log the result of invoking each one to the console. Next, we use `set()` to make the `otherTable` table contain references to the same functions as the `tbl` table.
 
-<p>To prove this, we then retrieve these references back from <code>otherTable</code> and print their results to console too, which gives the same results.</p>
+To prove this, we then retrieve these references back from `otherTable` and print their results to console too, which gives the same results.
 
-<h2 id="They_are_real_functions">They are real functions</h2>
+## They are real functions
 
-<p>In the previous example, the return value of each <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">Table.prototype.get()</a></code> call is an exported WebAssembly function — exactly what we have been talking about.</p>
+In the previous example, the return value of each [`Table.prototype.get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) call is an exported WebAssembly function — exactly what we have been talking about.
 
-<p>It is worth noting that these are real JavaScript functions, in addition to being wrappers for WebAssembly functions. If you load the above example in a <a href="/en-US/docs/WebAssembly#browser_compatibility">WebAssembly-supporting browser</a>, and run the following lines in your console:</p>
+It is worth noting that these are real JavaScript functions, in addition to being wrappers for WebAssembly functions. If you load the above example in a [WebAssembly-supporting browser](/en-US/docs/WebAssembly#browser_compatibility), and run the following lines in your console:
 
-<pre class="brush: js">var testFunc = otherTable.get(0);
-typeof testFunc;</pre>
+```js
+var testFunc = otherTable.get(0);
+typeof testFunc;
+```
 
-<p>you'll get the result <code>function</code> returned. You can then go on to do pretty much anything to this function that you can do to other <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">functions</a> in JavaScript — <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">bind()</a></code>, etc. <code>testFunc.toString()</code> returns an interesting result:</p>
+you'll get the result `function` returned. You can then go on to do pretty much anything to this function that you can do to other [functions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) in JavaScript — [`call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call), [`bind()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind), etc. `testFunc.toString()` returns an interesting result:
 
-<pre class="brush: js">function 0() {
+```js
+function 0() {
     [native code]
-}</pre>
+}
+```
 
-<p>This gives you more of an idea of its wrapper-type nature.</p>
+This gives you more of an idea of its wrapper-type nature.
 
-<p>Some other particulars to be aware of with exported WebAssembly functions:</p>
+Some other particulars to be aware of with exported WebAssembly functions:
 
-<ul>
- <li>Their <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length">length</a> property is the number of declared arguments in the wasm function signature.</li>
- <li>Their <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name">name</a> property is the <code>toString()</code> result of the function's index in the wasm module.</li>
- <li>If you try to call a exported wasm function that takes or returns an i64 type value, it currently throws an error because JavaScript currently has no precise way to represent an i64. This may well change in the future though — a new int64 type is being considered for future standards, which could then be used by wasm.</li>
-</ul>
+- Their [length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length) property is the number of declared arguments in the wasm function signature.
+- Their [name](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name) property is the `toString()` result of the function's index in the wasm module.
+- If you try to call a exported wasm function that takes or returns an i64 type value, it currently throws an error because JavaScript currently has no precise way to represent an i64. This may well change in the future though — a new int64 type is being considered for future standards, which could then be used by wasm.

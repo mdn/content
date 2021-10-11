@@ -2,56 +2,44 @@
 title: unreachable
 slug: WebAssembly/Reference/Control_flow/unreachable
 tags:
-- WebAssembly
-- wasm
-- Landing page
-- Reference
-- Control flow
+  - WebAssembly
+  - wasm
+  - Landing page
+  - Reference
+  - Control flow
 ---
-<p>{{WebAssemblySidebar}}</p>
+{{WebAssemblySidebar}}
 
-<p><span class="seoSummary"><strong><code>unreachable</code></strong> is used to denote a point in code that should not be reachable. In the case where an <code>unreachable</code> is reached it throws an unrecoverable error.</span></p>
+**`unreachable`** is used to denote a point in code that should not be reachable. In the case where an `unreachable` is reached it throws an unrecoverable error.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: wasm">
+```wasm
 unreachable
-</pre>
+```
 
+## Full working example
 
-<h2 id="Full_working_example">Full working example</h2>
+Wasm file
 
-<p>Wasm file</p>
-
-<pre class="brush: wasm">
+```wasm
 (module
   (func (export "throw")
     unreachable
   )
 )
-</pre>
+```
 
-<p>JavaScript file</p>
+JavaScript file
 
-<pre class="brush: js">
+```js
 WebAssembly.instantiateStreaming(
   fetch("../out/main.wasm")
 ).then(result => {
   result.instance.exports.throw();
 });
-</pre>
+```
 
-<table>
- <thead>
-  <tr>
-   <th>Instruction</th>
-   <th>Binary opcode</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-    <td><code>unreachable</code></td>
-    <td><code>0x00</code></td>
-  </tr>
- </tbody>
-</table>
+| Instruction   | Binary opcode |
+| ------------- | ------------- |
+| `unreachable` | `0x00`        |

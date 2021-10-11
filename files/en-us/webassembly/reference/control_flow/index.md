@@ -2,57 +2,55 @@
 title: WebAssembly control flow
 slug: WebAssembly/Reference/Control_flow
 tags:
-- WebAssembly
-- wasm
-- Landing page
-- Reference
-- Control flow
+  - WebAssembly
+  - wasm
+  - Landing page
+  - Reference
+  - Control flow
 ---
-<p>{{WebAssemblySidebar}}</p>
+{{WebAssemblySidebar}}
 
-<p>WebAssembly control flow operators.</p>
+WebAssembly control flow operators.
 
-<dl>
-  <dt><code><a href="/en-US/docs/WebAssembly/Reference/Control_flow/block">block</a></code></dt>
-  <dd>Creates a label that can later be branched out of with a <code><a href="/en-US/docs/WebAssembly/Reference/Control_flow/br">br</a></code>.</dd>
-</dl>
+- [`block`](/en-US/docs/WebAssembly/Reference/Control_flow/block)
+  - : Creates a label that can later be branched out of with a [`br`](/en-US/docs/WebAssembly/Reference/Control_flow/br).
 
-<dl>
-  <dt><code><a href="/en-US/docs/WebAssembly/Reference/Control_flow/br">br</a></code></dt>
-  <dd>Branches to a loop or block.</dd>
-</dl>
+<!---->
 
-<dl>
-  <dt><code><a href="/en-US/docs/WebAssembly/Reference/Control_flow/call">call</a></code></dt>
-  <dd>Calls a function.</dd>
-</dl>
+- [`br`](/en-US/docs/WebAssembly/Reference/Control_flow/br)
+  - : Branches to a loop or block.
 
-<dl>
-  <dt><code><a href="/en-US/docs/WebAssembly/Reference/Control_flow/end">end</a></code></dt>
-  <dd>Can be used to end a <code>block</code>, <code>loop</code>, <code>if</code>, or <code>else</code>.</dd>
-</dl>
+<!---->
 
-<dl>
-  <dt><code><a href="/en-US/docs/WebAssembly/Reference/Control_flow/if...else">if...else</a></code></dt>
-  <dd>Executes a statement if the last item on the stack is true (<code>1</code>).</dd>
-</dl>
+- [`call`](/en-US/docs/WebAssembly/Reference/Control_flow/call)
+  - : Calls a function.
 
-<dl>
-  <dt><code><a href="/en-US/docs/WebAssembly/Reference/Control_flow/loop">loop</a></code></dt>
-  <dd>Creates a label that can later be branched to with a <code><a href="/en-US/docs/WebAssembly/Reference/Control_flow/br">br</a></code>.</dd>
-</dl>
+<!---->
 
-<dl>
-  <dt><code><a href="/en-US/docs/WebAssembly/Reference/Control_flow/nop">nop</a></code></dt>
-  <dd>Does nothing.</dd>
-</dl>
+- [`end`](/en-US/docs/WebAssembly/Reference/Control_flow/end)
+  - : Can be used to end a `block`, `loop`, `if`, or `else`.
 
-<dl>
-  <dt><code><a href="/en-US/docs/WebAssembly/Reference/Control_flow/return">return</a></code></dt>
-  <dd>Returns from a function.</dd>
-</dl>
+<!---->
 
-<dl>
-  <dt><code><a href="/en-US/docs/WebAssembly/Reference/Control_flow/unreachable">unreachable</a></code></dt>
-  <dd>Denotes a point in code that should not be reachable.</dd>
-</dl>
+- [`if...else`](/en-US/docs/WebAssembly/Reference/Control_flow/if...else)
+  - : Executes a statement if the last item on the stack is true (`1`).
+
+<!---->
+
+- [`loop`](/en-US/docs/WebAssembly/Reference/Control_flow/loop)
+  - : Creates a label that can later be branched to with a [`br`](/en-US/docs/WebAssembly/Reference/Control_flow/br).
+
+<!---->
+
+- [`nop`](/en-US/docs/WebAssembly/Reference/Control_flow/nop)
+  - : Does nothing.
+
+<!---->
+
+- [`return`](/en-US/docs/WebAssembly/Reference/Control_flow/return)
+  - : Returns from a function.
+
+<!---->
+
+- [`unreachable`](/en-US/docs/WebAssembly/Reference/Control_flow/unreachable)
+  - : Denotes a point in code that should not be reachable.

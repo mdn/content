@@ -2,21 +2,21 @@
 title: block
 slug: WebAssembly/Reference/Control_flow/block
 tags:
-- WebAssembly
-- wasm
-- Landing page
-- Reference
-- Control flow
+  - WebAssembly
+  - wasm
+  - Landing page
+  - Reference
+  - Control flow
 ---
-<p>{{WebAssemblySidebar}}</p>
+{{WebAssemblySidebar}}
 
-<p><span class="seoSummary">The <strong><code>block</code></strong> statement creates a label that can later be branched out of with a <code>br</code>.</span></p>
+The **`block`** statement creates a label that can later be branched out of with a `br`.
 
-<p>The <strong><code>loop</code></strong> statement is the opposite of the <code>block</code> statement, in the sense that while branching to a <code>loop</code> jumps to the beginning of the loop, branching to a <code>block</code> jumps to the end of the block; that is, out of the block.</p>
+The **`loop`** statement is the opposite of the `block` statement, in the sense that while branching to a `loop` jumps to the beginning of the loop, branching to a `block` jumps to the end of the block; that is, out of the block.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: wasm">
+```wasm
 ;; label the block so that it can be branched to.
 (block $my_block
 
@@ -29,14 +29,13 @@ tags:
   unreachable
 
 )
-</pre>
+```
 
+## Full working example
 
-<h2 id="Full_working_example">Full working example</h2>
+Wasm file
 
-<p>Wasm file</p>
-
-<pre class="brush: wasm">
+```wasm
 (module
   ;; import the browser console object, you'll need to pass this in from JavaScript
   (import "console" "log" (func $log (param i32)))
@@ -65,11 +64,11 @@ tags:
     )
   )
 )
-</pre>
+```
 
-<p>JavaScript file</p>
+JavaScript file
 
-<pre class="brush: js">
+```js
 WebAssembly.instantiateStreaming(
   fetch("../out/main.wasm"),
   { console }
@@ -81,19 +80,8 @@ WebAssembly.instantiateStreaming(
   log_if_not_100(101); // should log 101
 
 });
-</pre>
+```
 
-<table>
- <thead>
-  <tr>
-   <th>Instruction</th>
-   <th>Binary opcode</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>block</code></td>
-   <td><code>0x02</code></td>
-  </tr>
- </tbody>
-</table>
+| Instruction | Binary opcode |
+| ----------- | ------------- |
+| `block`     | `0x02`        |

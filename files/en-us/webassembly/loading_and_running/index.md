@@ -8,64 +8,67 @@ tags:
   - XMLHttpRequest
   - bytecode
 ---
-<div>{{WebAssemblySidebar}}</div>
+{{WebAssemblySidebar}}
 
-<p>To use WebAssembly in JavaScript, you first need to pull your module into memory before compilation/instantiation. This article provides a reference for the different mechanisms that can be used to fetch WebAssembly bytecode, as well as how to compile/instantiate then run it.</p>
+To use WebAssembly in JavaScript, you first need to pull your module into memory before compilation/instantiation. This article provides a reference for the different mechanisms that can be used to fetch WebAssembly bytecode, as well as how to compile/instantiate then run it.
 
-<h2 id="What_are_the_options">What are the options?</h2>
+## What are the options?
 
-<p>WebAssembly is not yet integrated with <code>&lt;script type='module'&gt;</code> or ES2015 <code>import</code> statements, thus there is not a path to have the browser fetch modules for you using imports.</p>
+WebAssembly is not yet integrated with `<script type='module'>` or ES2015 `import` statements, thus there is not a path to have the browser fetch modules for you using imports.
 
-<p>The older {{jsxref("WebAssembly.compile")}}/{{jsxref("WebAssembly.instantiate")}} methods require you to create an {{jsxref("ArrayBuffer")}} containing your WebAssembly module binary after fetching the raw bytes, and then compile/instantiate it. This is analogous to <code>new Function(string)</code>, except that we are substituting a string of characters (JavaScript source code) with an array buffer of bytes (WebAssembly source code).</p>
+The older {{jsxref("WebAssembly.compile")}}/{{jsxref("WebAssembly.instantiate")}} methods require you to create an {{jsxref("ArrayBuffer")}} containing your WebAssembly module binary after fetching the raw bytes, and then compile/instantiate it. This is analogous to `new Function(string)`, except that we are substituting a string of characters (JavaScript source code) with an array buffer of bytes (WebAssembly source code).
 
-<p>The newer {{jsxref("WebAssembly.compileStreaming")}}/{{jsxref("WebAssembly.instantiateStreaming")}} methods are a lot more efficient — they perform their actions directly on the raw stream of bytes coming from the network, cutting out the need for the {{jsxref("ArrayBuffer")}} step.</p>
+The newer {{jsxref("WebAssembly.compileStreaming")}}/{{jsxref("WebAssembly.instantiateStreaming")}} methods are a lot more efficient — they perform their actions directly on the raw stream of bytes coming from the network, cutting out the need for the {{jsxref("ArrayBuffer")}} step.
 
-<p>So how do we get those bytes into an array buffer and compiled? The following sections explain.</p>
+So how do we get those bytes into an array buffer and compiled? The following sections explain.
 
-<h2 id="Using_Fetch">Using Fetch</h2>
+## Using Fetch
 
-<p><a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> is a convenient, modern API for fetching network resources.</p>
+[Fetch](/en-US/docs/Web/API/Fetch_API) is a convenient, modern API for fetching network resources.
 
-<p>The quickest, most efficient way to fetch a wasm module is using the newer {{jsxref("WebAssembly.instantiateStreaming()")}} method, which can take a <code>fetch()</code> call as its first argument, and will handle fetching, compiling, and instantiating the module in one step, accessing the raw byte code as it streams from the server:</p>
+The quickest, most efficient way to fetch a wasm module is using the newer {{jsxref("WebAssembly.instantiateStreaming()")}} method, which can take a `fetch()` call as its first argument, and will handle fetching, compiling, and instantiating the module in one step, accessing the raw byte code as it streams from the server:
 
-<pre class="brush: js">WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(results =&gt; {
+```js
+WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
+.then(results => {
   // Do something with the results!
-});</pre>
+});
+```
 
-<p>If we used the older {{jsxref("WebAssembly.instantiate()")}} method, which doesn't work on the direct stream, we'd need an extra step of converting the fetched byte code to an {{jsxref("ArrayBuffer")}}, like so:</p>
+If we used the older {{jsxref("WebAssembly.instantiate()")}} method, which doesn't work on the direct stream, we'd need an extra step of converting the fetched byte code to an {{jsxref("ArrayBuffer")}}, like so:
 
-<pre class="brush: js">fetch('module.wasm').then(response =&gt;
+```js
+fetch('module.wasm').then(response =>
   response.arrayBuffer()
-).then(bytes =&gt;
+).then(bytes =>
   WebAssembly.instantiate(bytes, importObject)
-).then(results =&gt; {
+).then(results => {
   // Do something with the results!
-});</pre>
+});
+```
 
-<h3 id="Aside_on_instantiate_overloads">Aside on instantiate() overloads</h3>
+### Aside on instantiate() overloads
 
-<p>The {{jsxref("WebAssembly.instantiate()")}} function has two overload forms — the one shown above takes the byte code to compile as an argument and returns a Promise that resolves to an object containing both the compiled module object and an instantiated instance of it. The object looks like this:</p>
+The {{jsxref("WebAssembly.instantiate()")}} function has two overload forms — the one shown above takes the byte code to compile as an argument and returns a Promise that resolves to an object containing both the compiled module object and an instantiated instance of it. The object looks like this:
 
-<pre class="brush: js">{
+```js
+{
   module : Module // The newly compiled WebAssembly.Module object,
   instance : Instance // A new WebAssembly.Instance of the module object
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note:</strong> Usually we only care about the instance, but it’s useful to have the module in case we want to cache it, share it with another worker or window via <code><a href="/en-US/docs/Web/API/MessagePort/postMessage">postMessage()</a></code>, or create more instances.</p>
-</div>
+> **Note:** Usually we only care about the instance, but it’s useful to have the module in case we want to cache it, share it with another worker or window via [`postMessage()`](/en-US/docs/Web/API/MessagePort/postMessage), or create more instances.
 
-<div class="note">
-<p><strong>Note:</strong> The second overload form takes a {{jsxref("WebAssembly.Module")}} object as an argument, and returns a promise directly containing the instance object as the result. See the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#second_overload_example">Second overload example</a>.</p>
-</div>
+> **Note:** The second overload form takes a {{jsxref("WebAssembly.Module")}} object as an argument, and returns a promise directly containing the instance object as the result. See the [Second overload example](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#second_overload_example).
 
-<h3 id="Running_your_WebAssembly_code">Running your WebAssembly code</h3>
+### Running your WebAssembly code
 
-<p>Once you've got your WebAssembly instance available in your JavaScript, you can then start using features of it that have been exported via the {{jsxref("WebAssembly.Instance/exports", "WebAssembly.Instance.exports")}} property. Your code might look something like this:</p>
+Once you've got your WebAssembly instance available in your JavaScript, you can then start using features of it that have been exported via the {{jsxref("WebAssembly.Instance/exports", "WebAssembly.Instance.exports")}} property. Your code might look something like this:
 
-<pre class="brush: js">WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
-.then(obj =&gt; {
+```js
+WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
+.then(obj => {
   // Call an exported function:
   obj.instance.exports.exported_func();
 
@@ -75,37 +78,34 @@ tags:
   // or access the elements of an exported table:
   var table = obj.instance.exports.table;
   console.log(table.get(0)());
-})</pre>
+})
+```
 
-<div class="note">
-<p><strong>Note:</strong> For more information on how exporting from a WebAssembly module works, have a read of <a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a>, and <a href="/en-US/docs/WebAssembly/Understanding_the_text_format">Understanding WebAssembly text format</a>.</p>
-</div>
+> **Note:** For more information on how exporting from a WebAssembly module works, have a read of [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API), and [Understanding WebAssembly text format](/en-US/docs/WebAssembly/Understanding_the_text_format).
 
-<h2 id="Using_XMLHttpRequest">Using XMLHttpRequest</h2>
+## Using XMLHttpRequest
 
-<p><code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> is somewhat older than Fetch, but can still be happily used to get a typed array. Again, assuming our module is called <code>simple.wasm</code>:</p>
+[`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) is somewhat older than Fetch, but can still be happily used to get a typed array. Again, assuming our module is called `simple.wasm`:
 
-<ol>
-	<li>Create a new {{domxref("XMLHttpRequest()")}} instance, and use its {{domxref("XMLHttpRequest.open","open()")}} method to open a request, setting the request method to <code>GET</code>, and declaring the path to the file we want to fetch.</li>
-	<li>The key part of this is to set the response type to <code>'arraybuffer'</code> using the {{domxref("XMLHttpRequest.responseType","responseType")}} property.</li>
-	<li>Next, send the request using {{domxref("XMLHttpRequest.send()")}}.</li>
-	<li>We then use the {{domxref("XMLHttpRequest.onload", "onload")}} event handler to invoke a function when the response has finished downloading — in this function we get the array buffer from the {{domxref("XMLHttpRequest.response", "response")}} property, and then feed that into our {{jsxref("WebAssembly.instantiate()")}} method as we did with Fetch.</li>
-</ol>
+1.  Create a new {{domxref("XMLHttpRequest()")}} instance, and use its {{domxref("XMLHttpRequest.open","open()")}} method to open a request, setting the request method to `GET`, and declaring the path to the file we want to fetch.
+2.  The key part of this is to set the response type to `'arraybuffer'` using the {{domxref("XMLHttpRequest.responseType","responseType")}} property.
+3.  Next, send the request using {{domxref("XMLHttpRequest.send()")}}.
+4.  We then use the {{domxref("XMLHttpRequest.onload", "onload")}} event handler to invoke a function when the response has finished downloading — in this function we get the array buffer from the {{domxref("XMLHttpRequest.response", "response")}} property, and then feed that into our {{jsxref("WebAssembly.instantiate()")}} method as we did with Fetch.
 
-<p>The final code looks like this:</p>
+The final code looks like this:
 
-<pre class="brush: js">request = new XMLHttpRequest();
+```js
+request = new XMLHttpRequest();
 request.open('GET', 'simple.wasm');
 request.responseType = 'arraybuffer';
 request.send();
 
 request.onload = function() {
   var bytes = request.response;
-  WebAssembly.instantiate(bytes, importObject).then(results =&gt; {
+  WebAssembly.instantiate(bytes, importObject).then(results => {
     results.instance.exports.exported_func();
   });
-};</pre>
+};
+```
 
-<div class="note">
-<p><strong>Note:</strong> You can see an example of this in action in <a href="https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html">xhr-wasm.html</a>.</p>
-</div>
+> **Note:** You can see an example of this in action in [xhr-wasm.html](https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html).
