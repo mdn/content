@@ -13,9 +13,7 @@ tags:
   - WebGL
   - developer recommendation
 ---
-<div class="summary">
 <p>The beauty of the web is that you can combine technologies to create new forms. Having native audio and video in the browser means we can use these data streams with technologies such as {{htmlelement("canvas")}}, <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> or <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> to modify audio and video directly, for example adding reverb/compression effects to audio, or grayscale/sepia filters to video. This article provides a reference to explain what you need to do.</p>
-</div>
 
 <h2 id="Video_manipulation">Video manipulation</h2>
 
@@ -107,7 +105,7 @@ tags:
 <p>You can achieve the same result by applying the {{cssxref("filter-function/grayscale()", "grayscale()")}} CSS function to the source <code>&lt;video&gt;</code> element.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Due to potential security issues if your video is on a different domain than your code, you'll need to enable <a href="/en-US/docs/Web/HTTP/CORS">CORS (Cross Origin Resource Sharing)</a> on your video server.</p>
+<p><strong>Note:</strong> Due to potential security issues if your video is on a different domain than your code, you'll need to enable <a href="/en-US/docs/Web/HTTP/CORS">CORS (Cross Origin Resource Sharing)</a> on your video server.</p>
 </div>
 
 <h3 id="Video_and_WebGL">Video and WebGL</h3>
@@ -117,7 +115,7 @@ tags:
 <p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can find the <a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8">source code of this demo on GitHub</a> (<a href="https://mdn.github.io/webgl-examples/tutorial/sample8/">see it live</a> also).</p>
+<p><strong>Note:</strong> You can find the <a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8">source code of this demo on GitHub</a> (<a href="https://mdn.github.io/webgl-examples/tutorial/sample8/">see it live</a> also).</p>
 </div>
 
 <h3 id="Playback_rate">Playback rate</h3>
@@ -137,10 +135,9 @@ tags:
 <pre class="brush: js">var myVideo = document.getElementById('my-video');
 myVideo.playbackRate = 2;</pre>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
+<h4>Editable example</h4>
 
-<pre class="brush: html">&lt;video id="my-video" controls="true" width="480" height="270"&gt;
+<pre class="brush: html hidden">&lt;video id="my-video" controls="true" width="480" height="270"&gt;
   &lt;source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm"&gt;
   &lt;source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4"&gt;
 &lt;/video&gt;
@@ -153,7 +150,7 @@ var myVideo = document.getElementById('my-video');
 myVideo.playbackRate = 2;&lt;/textarea&gt;
 </pre>
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var edit = document.getElementById('edit');
 var code = textarea.value;
@@ -174,12 +171,11 @@ edit.addEventListener('click', function() {
 textarea.addEventListener('input', setPlaybackRate);
 window.addEventListener('load', setPlaybackRate);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 425) }}</p>
+<p>{{ EmbedLiveSample('Editable_example', 700, 450) }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: Try the <a href="https://jsbin.com/qomuvefu/2/edit">playbackRate example</a> live.</p>
+<p><strong>Note:</strong> Try the <a href="https://jsbin.com/qomuvefu/2/edit">playbackRate example</a> live.</p>
 </div>
 
 <h2 id="Audio_manipulation">Audio manipulation</h2>
@@ -240,10 +236,9 @@ filter.type = "lowshelf";
 filter.frequency.value = 1000;
 filter.gain.value = 25;</pre>
 
-<div class="hidden">
-<h6 id="Playable_code_2">Playable code</h6>
+<h4>Editable example</h4>
 
-<pre class="brush: html">&lt;video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous"&gt;
+<pre class="brush: html hidden">&lt;video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous"&gt;
   &lt;source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm"&gt;
   &lt;source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4"&gt;
 &lt;/video&gt;
@@ -256,7 +251,7 @@ filter.type = "lowshelf";
 filter.frequency.value = 1000;
 filter.gain.value = 25;&lt;/textarea&gt;</pre>
 
-<pre class="brush: js">var context     = new AudioContext(),
+<pre class="brush: js hidden">var context     = new AudioContext(),
     audioSource = context.createMediaElementSource(document.getElementById("my-video")),
     filter      = context.createBiquadFilter();
 audioSource.connect(filter);
@@ -283,12 +278,11 @@ edit.addEventListener('click', function() {
 textarea.addEventListener('input', setFilter);
 window.addEventListener('load', setFilter);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_2', 700, 425) }}</p>
+<p>{{ EmbedLiveSample('Editable_example_2', 700, 450) }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: unless you have <a href="/en-US/docs/Web/HTTP/CORS">CORS</a> enabled, to avoid security issues your video should be on the same domain as your code.</p>
+<p><strong>Note:</strong> unless you have <a href="/en-US/docs/Web/HTTP/CORS">CORS</a> enabled, to avoid security issues your video should be on the same domain as your code.</p>
 </div>
 
 <h4 id="Common_audio_filters">Common audio filters</h4>
@@ -307,7 +301,7 @@ window.addEventListener('load', setFilter);
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: See {{domxref("BiquadFilterNode")}} for more information.</p>
+<p><strong>Note:</strong> See {{domxref("BiquadFilterNode")}} for more information.</p>
 </div>
 
 <h3 id="Convolutions_and_impulses">Convolutions and impulses</h3>
@@ -344,7 +338,7 @@ source.start(0);
 context.listener.setPosition(0, 0, 0);</pre>
 
 <div class="note">
-<p><strong>Note</strong>: You can find an <a href="https://github.com/mdn/webaudio-examples/tree/master/panner-node">example on our GitHub repository</a> (<a href="https://mdn.github.io/webaudio-examples/panner-node/">see it live</a> also).</p>
+<p><strong>Note:</strong> You can find an <a href="https://github.com/mdn/webaudio-examples/tree/master/panner-node">example on our GitHub repository</a> (<a href="https://mdn.github.io/webaudio-examples/panner-node/">see it live</a> also).</p>
 </div>
 
 <h3 id="JavaScript_codecs">JavaScript codecs</h3>
@@ -363,7 +357,7 @@ context.listener.setPosition(0, 0, 0);</pre>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: At Audiocogs, you can <a href="http://audiocogs.org/codecs/">Try out a few demos</a>; Audiocogs also provides a framework, <a href="http://audiocogs.org/codecs/">Aurora.js</a>, which is intended to help you author your own codecs in JavaScript.</p>
+<p><strong>Note:</strong> At Audiocogs, you can <a href="http://audiocogs.org/codecs/">Try out a few demos</a>; Audiocogs also provides a framework, <a href="http://audiocogs.org/codecs/">Aurora.js</a>, which is intended to help you author your own codecs in JavaScript.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>
