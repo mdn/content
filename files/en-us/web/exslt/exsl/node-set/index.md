@@ -6,28 +6,25 @@ tags:
   - NeedsSpecTable
   - Reference
 ---
-<div>{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}</div>
+{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
-<p><code>exsl:node-set()</code> returns a node-set from a result tree fragment, which is what you get when you look at the <code>xsl:variable</code> instead of its select attribute to fetch a variable's value. This lets you process the XML created within a variable to process it in multiple steps.</p>
+`exsl:node-set()` returns a node-set from a result tree fragment, which is what you get when you look at the `xsl:variable` instead of its select attribute to fetch a variable's value. This lets you process the XML created within a variable to process it in multiple steps.
 
-<p>You can also use <code>exsl:node-set()</code> to turn strings into text nodes.</p>
+You can also use `exsl:node-set()` to turn strings into text nodes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval">exsl:node-set(<em>object</em>)
-</pre>
+    exsl:node-set(object)
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code><em>object</em></code></dt>
- <dd>The object for which to return the corresponding node-set.</dd>
-</dl>
+- `object`
+  - : The object for which to return the corresponding node-set.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>The node-set corresponding to the specified <code><em>object</em></code>.</p>
+The node-set corresponding to the specified `object`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><a href="http://www.exslt.org/exsl/functions/node-set/index.html">EXSLT - EXSL:NODE-SET</a></p>
+[EXSLT - EXSL:NODE-SET](http://www.exslt.org/exsl/functions/node-set/index.html)

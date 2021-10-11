@@ -1,32 +1,32 @@
 ---
-title: 'set:intersection()'
+title: set:intersection()
 slug: Web/EXSLT/set/intersection
 tags:
   - EXSLT
   - NeedsSpecTable
   - Reference
 ---
-<p>{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}</p>
+{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
-<p><code>set:intersection()</code> returns the intersection of two node-sets. In other words, it returns a node-set containing all the nodes that exits in both <code>nodeSet1</code> and <code>nodeSet2</code>.</p>
+`set:intersection()` returns the intersection of two node-sets. In other words, it returns a node-set containing all the nodes that exits in both `nodeSet1` and `nodeSet2`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">set:intersection(<var>nodeSet1</var>, <var>nodeSet2</var>)</pre>
+```js
+set:intersection(nodeSet1, nodeSet2)
+```
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><code>nodeSet1</code></dt>
- <dd>The first node-set.</dd>
- <dt><code>nodeSet2</code></dt>
- <dd>The second node-set.</dd>
-</dl>
+- `nodeSet1`
+  - : The first node-set.
+- `nodeSet2`
+  - : The second node-set.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A node-set containing the nodes that existed in both <code>nodeSet1</code> and in <code>nodeSet2</code>.</p>
+A node-set containing the nodes that existed in both `nodeSet1` and in `nodeSet2`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><a href="http://www.exslt.org/set/functions/intersection/index.html">EXSLT - SET:INTERSECTION</a></p>
+[EXSLT - SET:INTERSECTION](http://www.exslt.org/set/functions/intersection/index.html)

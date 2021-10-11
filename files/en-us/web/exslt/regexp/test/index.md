@@ -1,43 +1,41 @@
 ---
-title: 'regexp:test()'
+title: regexp:test()
 slug: Web/EXSLT/regexp/test
 tags:
   - EXSLT
   - NeedsSpecTable
   - Reference
 ---
-<div>{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}</div>
+{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
-<p><code>regexp:test()</code> tests to see whether a string matches a specified regular expression.</p>
+`regexp:test()` tests to see whether a string matches a specified regular expression.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">regexp:test(<var>testString<var>, <var>regExpString</var>[, <var>flagsString</var>])</var></var></pre>
+```js
+regexp:test(testString, regExpString[, flagsString])
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>testString</code></dt>
- <dd>The string to test..</dd>
- <dt><code>regExpString</code></dt>
- <dd>The JavaScript style regular expression to evaluate.</dd>
- <dt><code>flagsString</code>{{Optional_Inline}}</dt>
- <dd>An optional string containing character flags.</dd>
-</dl>
+- `testString`
+  - : The string to test..
+- `regExpString`
+  - : The JavaScript style regular expression to evaluate.
+- `flagsString`{{Optional_Inline}}
+  - : An optional string containing character flags.
 
-<p>The character flags are:</p>
+The character flags are:
 
-<dl>
- <dt><code>g</code></dt>
- <dd>Global match. Has no effect for this function; it's allowed for consistency with other regexp functions.</dd>
- <dt><code>i</code></dt>
- <dd>Case insensitive match<. If this flag is specified, the match is performed in a case insensitive fashion.</dd>
-</dl>
+- `g`
+  - : Global match. Has no effect for this function; it's allowed for consistency with other regexp functions.
+- `i`
+  - : Case insensitive match<. If this flag is specified, the match is performed in a case insensitive fashion.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p><code>true</code> if the specified regexp matches the test string.</p>
+`true` if the specified regexp matches the test string.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><a href="http://www.exslt.org/regexp/functions/test/index.html">EXSLT - REGEXP:TEST</a></p>
+[EXSLT - REGEXP:TEST](http://www.exslt.org/regexp/functions/test/index.html)

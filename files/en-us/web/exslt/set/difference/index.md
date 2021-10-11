@@ -1,34 +1,34 @@
 ---
-title: 'set:difference()'
+title: set:difference()
 slug: Web/EXSLT/set/difference
 tags:
   - EXSLT
   - NeedsSpecTable
   - Reference
 ---
-<p>{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}</p>
+{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
-<p><code>set:difference()</code> returns the difference between two node-sets. In other words, it returns a node-set whose nodes are in one node-set but not in the other.</p>
+`set:difference()` returns the difference between two node-sets. In other words, it returns a node-set whose nodes are in one node-set but not in the other.
 
-<p>The template version of <code>set:difference</code> applies templates to these nodes in <code>set:difference</code> mode, copying the nodes so that a result tree fragment consisting of the nodes is returned.</p>
+The template version of `set:difference` applies templates to these nodes in `set:difference` mode, copying the nodes so that a result tree fragment consisting of the nodes is returned.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">set:difference(<var>nodeSet1</var>, <var>nodeSet2</var>)</pre>
+```js
+set:difference(nodeSet1, nodeSet2)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>nodeSet1</code></dt>
- <dd>The node-set from which to subtract nodes.</dd>
- <dt><code>nodeSet2</code></dt>
- <dd>The set of nodes to subtract from <code>nodeSet1</code>.</dd>
-</dl>
+- `nodeSet1`
+  - : The node-set from which to subtract nodes.
+- `nodeSet2`
+  - : The set of nodes to subtract from `nodeSet1`.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A node-set containing the nodes that are in <code>nodeSet1</code> but not in <code>nodeSet2</code>.</p>
+A node-set containing the nodes that are in `nodeSet1` but not in `nodeSet2`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><a href="http://www.exslt.org/set/functions/difference/index.html">EXSLT - SET:DIFFERENCE</a></p>
+[EXSLT - SET:DIFFERENCE](http://www.exslt.org/set/functions/difference/index.html)

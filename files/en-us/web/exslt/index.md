@@ -5,118 +5,84 @@ tags:
   - EXSLT
   - Landing
 ---
+EXSLT is a set of extensions to [XSLT](/en-US/docs/Web/XSLT). There are a number of modules; those that are supported by Firefox are listed below:
 
-<p>EXSLT is a set of extensions to <a href="/en-US/docs/Web/XSLT">XSLT</a>. There are a number of modules; those that are supported by Firefox are listed below:</p>
+{{SubpagesWithSummaries}}
 
-<p>{{SubpagesWithSummaries}}</p>
+## EXSLT modules
 
-<h2 id="EXSLT_modules">EXSLT modules</h2>
+To use an EXSLT function, you need to declare the namespace the function is in, and then use the appropriate prefix when calling the function. For example, to use the regular expressions package:
 
-<p>To use an EXSLT function, you need to declare the namespace the function is in, and then use the appropriate prefix when calling the function. For example, to use the regular expressions package:</p>
-
-<pre class="brush: xml;">&lt;xsl:stylesheet version="1.0"
+```xml
+<xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:regexp="http://exslt.org/regular-expressions"&gt;
-  &lt;xsl:template match="/"&gt;
+                xmlns:regexp="http://exslt.org/regular-expressions">
+  <xsl:template match="/">
     ...
-    &lt;xsl:value-of select="regexp:replace(/root/@value, 'before', 'gi', 'AFTER')"/&gt;
+    <xsl:value-of select="regexp:replace(/root/@value, 'before', 'gi', 'AFTER')"/>
     ...
-  &lt;/xsl:template&gt;
+  </xsl:template>
 
-&lt;/xsl:stylesheet&gt;
-</pre>
+</xsl:stylesheet>
+```
 
-<h3 id="Common">Common</h3>
+### Common
 
-<p>The EXSLT Common package provides basic functions that expand upon the capabilities of XSLT. The namespace for the Common package is <code>http://exslt.org/common</code>.</p>
+The EXSLT Common package provides basic functions that expand upon the capabilities of XSLT. The namespace for the Common package is `http://exslt.org/common`.
 
-<h4 id="Functions">Functions</h4>
+#### Functions
 
-<ul>
- <li><code><a href="/en-US/docs/Web/EXSLT/exsl/node-set">exsl:node-set()</a></code></li>
- <li><code><a href="/en-US/docs/Web/EXSLT/exsl/object-type">exsl:object-type()</a></code></li>
-</ul>
+- [`exsl:node-set()`](/en-US/docs/Web/EXSLT/exsl/node-set)
+- [`exsl:object-type()`](/en-US/docs/Web/EXSLT/exsl/object-type)
 
-<h3 id="Math">Math</h3>
+### Math
 
-<p>The EXSLT Math package provides functions for working with numeric values and comparing nodes. The namespace for the Math package is <code>http://exslt.org/math</code>.</p>
+The EXSLT Math package provides functions for working with numeric values and comparing nodes. The namespace for the Math package is `http://exslt.org/math`.
 
-<h4 id="Functions_2">Functions</h4>
+#### Functions
 
-<ul>
- <li><code><a href="/en-US/docs/Web/EXSLT/math/highest">math:highest()</a></code></li>
- <li><code><a href="/en-US/docs/Web/EXSLT/math/lowest">math:lowest()</a></code></li>
- <li><code><a href="/en-US/docs/Web/EXSLT/math/max">math:max()</a></code></li>
- <li><code><a href="/en-US/docs/Web/EXSLT/math/min">math:min()</a></code></li>
-</ul>
+- [`math:highest()`](/en-US/docs/Web/EXSLT/math/highest)
+- [`math:lowest()`](/en-US/docs/Web/EXSLT/math/lowest)
+- [`math:max()`](/en-US/docs/Web/EXSLT/math/max)
+- [`math:min()`](/en-US/docs/Web/EXSLT/math/min)
 
-<h3 id="Regular_expressions">Regular expressions</h3>
+### Regular expressions
 
-<p>The EXSLT Regular Expressions package provides functions that allow testing, matching, and replacing text using JavaScript style regular expressions.</p>
+The EXSLT Regular Expressions package provides functions that allow testing, matching, and replacing text using JavaScript style regular expressions.
 
-<p>The EXSLT Regular Expressions namespace is <code>http://exslt.org/regular-expressions</code>.</p>
+The EXSLT Regular Expressions namespace is `http://exslt.org/regular-expressions`.
 
-<h4 id="Functions_3">Functions</h4>
+#### Functions
 
-<ul>
- <li><code><a href="/en-US/docs/Web/EXSLT/regexp/match">regexp:match()</a></code></li>
- <li><code><a href="/en-US/docs/Web/EXSLT/regexp/replace">regexp:replace()</a></code></li>
- <li><code><a href="/en-US/docs/Web/EXSLT/regexp/test">regexp:test()</a></code></li>
-</ul>
+- [`regexp:match()`](/en-US/docs/Web/EXSLT/regexp/match)
+- [`regexp:replace()`](/en-US/docs/Web/EXSLT/regexp/replace)
+- [`regexp:test()`](/en-US/docs/Web/EXSLT/regexp/test)
 
-<h3 id="Sets">Sets</h3>
+### Sets
 
-<p>The EXSLT Sets package offers functions that let you perform set manipulation. The namespace for these functions is <code>http://exslt.org/sets</code>.</p>
+The EXSLT Sets package offers functions that let you perform set manipulation. The namespace for these functions is `http://exslt.org/sets`.
 
-<h4 id="Functions_4">Functions</h4>
+#### Functions
 
-<ul>
- <li><code><a href="/en-US/docs/Web/EXSLT/set/difference">set:difference()</a></code></li>
- <li><code><a href="/en-US/docs/Web/EXSLT/set/distinct">set:distinct()</a></code></li>
- <li><code><a href="/en-US/docs/Web/EXSLT/set/intersection">set:intersection()</a></code></li>
- <li><code><a href="/en-US/docs/Web/EXSLT/set/has-same-node">set:has-same-node()</a></code></li>
- <li><code><a href="/en-US/docs/Web/EXSLT/set/leading">set:leading()</a></code></li>
- <li><code><a href="/en-US/docs/Web/EXSLT/set/trailing">set:trailing()</a></code></li>
-</ul>
+- [`set:difference()`](/en-US/docs/Web/EXSLT/set/difference)
+- [`set:distinct()`](/en-US/docs/Web/EXSLT/set/distinct)
+- [`set:intersection()`](/en-US/docs/Web/EXSLT/set/intersection)
+- [`set:has-same-node()`](/en-US/docs/Web/EXSLT/set/has-same-node)
+- [`set:leading()`](/en-US/docs/Web/EXSLT/set/leading)
+- [`set:trailing()`](/en-US/docs/Web/EXSLT/set/trailing)
 
-<h3 id="Strings">Strings</h3>
+### Strings
 
-<p>The EXSLT Strings package provides functions that allow the manipulation of strings. The namespace for the Strings package is <code>http://exslt.org/strings</code>.</p>
+The EXSLT Strings package provides functions that allow the manipulation of strings. The namespace for the Strings package is `http://exslt.org/strings`.
 
-<h4 id="Functions_5">Functions</h4>
+#### Functions
 
-<ul>
- <li><code><a href="/en-US/docs/Web/EXSLT/str/concat">str:concat()</a></code></li>
- <li><code><a href="/en-US/docs/Web/EXSLT/str/split">str:split()</a></code></li>
- <li><code><a href="/en-US/docs/Web/EXSLT/str/tokenize">str:tokenize()</a></code></li>
-</ul>
+- [`str:concat()`](/en-US/docs/Web/EXSLT/str/concat)
+- [`str:split()`](/en-US/docs/Web/EXSLT/str/split)
+- [`str:tokenize()`](/en-US/docs/Web/EXSLT/str/tokenize)
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="http://www.exslt.org/">EXSLT web site</a></li>
-</ul>
+- [EXSLT web site](http://www.exslt.org/)
 
-
-<section id="Quick_links">
-<ol>
- <li><strong><a href="/en-US/docs/Web/XSLT">XSLT</a></strong></li>
- <li><strong><a href="/en-US/docs/Web/XPath">XPath</a></strong></li>
- <li><strong><a href="/en-US/docs/Web/EXSLT">EXSLT</a></strong></li>
- <li class="toggle">
-  <details open><summary><a href="/en-US/docs/Web/EXSLT/exsl">Common (exsl)</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/exsl", "", "", "exsl:", ")")}}</details>
- </li>
- <li class="toggle">
-  <details open><summary><a href="/en-US/docs/Web/EXSLT/math">Math (math)</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/math", "", "", "math:", ")")}}</details>
- </li>
- <li class="toggle">
-  <details open><summary><a href="/en-US/docs/Web/EXSLT/regexp">Regular expressions (regexp)</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/regexp", "", "", "regexp:", ")")}}</details>
- </li>
- <li class="toggle">
-  <details open><summary><a href="/en-US/docs/Web/EXSLT/set">Sets (set)</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/set", "", "", "set:", ")")}}</details>
- </li>
- <li class="toggle">
-  <details open><summary><a href="/en-US/docs/Web/EXSLT/str">Strings (str)</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/str", "", "", "str:", ")")}}</details>
- </li>
-</ol>
-</section>
+<section id="Quick_links"><ol><li><strong><a href="/en-US/docs/Web/XSLT">XSLT</a></strong></li><li><strong><a href="/en-US/docs/Web/XPath">XPath</a></strong></li><li><strong><a href="/en-US/docs/Web/EXSLT">EXSLT</a></strong></li><li class="toggle"><details open><summary><a href="/en-US/docs/Web/EXSLT/exsl">Common (exsl)</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/exsl", "", "", "exsl:", ")")}}</details></li><li class="toggle"><details open><summary><a href="/en-US/docs/Web/EXSLT/math">Math (math)</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/math", "", "", "math:", ")")}}</details></li><li class="toggle"><details open><summary><a href="/en-US/docs/Web/EXSLT/regexp">Regular expressions (regexp)</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/regexp", "", "", "regexp:", ")")}}</details></li><li class="toggle"><details open><summary><a href="/en-US/docs/Web/EXSLT/set">Sets (set)</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/set", "", "", "set:", ")")}}</details></li><li class="toggle"><details open><summary><a href="/en-US/docs/Web/EXSLT/str">Strings (str)</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/str", "", "", "str:", ")")}}</details></li></ol></section>

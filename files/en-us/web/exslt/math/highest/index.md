@@ -6,28 +6,27 @@ tags:
   - NeedsSpecTable
   - Reference
 ---
-<div>{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}</div>
+{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
-<p><code>math:highest()</code> returns the node in the specified node-set with the highest value (where the highest value calculated using <a href="/en-US/docs/Web/EXSLT/math/max"><code>math:max()</code></a>).</p>
+`math:highest()` returns the node in the specified node-set with the highest value (where the highest value calculated using [`math:max()`](/en-US/docs/Web/EXSLT/math/max)).
 
-<p>A node has this maximum value if converting its string value to a number equals the maximum value.</p>
+A node has this maximum value if converting its string value to a number equals the maximum value.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">math:highest(<em>nodeSet</em>)
-</pre>
+```js
+math:highest(nodeSet)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code><em>nodeSet</em></code></dt>
- <dd>The node-set whose highest value is to be returned.</dd>
-</dl>
+- `nodeSet`
+  - : The node-set whose highest value is to be returned.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A result tree fragment consisting of copies of the nodes returned by <code><a href="/en-US/docs/Web/EXSLT/math/max">math:max()</a></code>.</p>
+A result tree fragment consisting of copies of the nodes returned by [`math:max()`](/en-US/docs/Web/EXSLT/math/max).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><a href="http://www.exslt.org/math/functions/highest/index.html">EXSLT - MATH:HIGHEST</a></p>
+[EXSLT - MATH:HIGHEST](http://www.exslt.org/math/functions/highest/index.html)

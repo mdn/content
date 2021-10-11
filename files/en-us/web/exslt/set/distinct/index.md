@@ -1,30 +1,30 @@
 ---
-title: 'set:distinct()'
+title: set:distinct()
 slug: Web/EXSLT/set/distinct
 tags:
   - EXSLT
   - NeedsSpecTable
   - Reference
 ---
-<p>{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}</p>
+{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
-<p><code>set:distinct()</code> returns a subset of the nodes in the specified node-set, returning only nodes with unique string values.</p>
+`set:distinct()` returns a subset of the nodes in the specified node-set, returning only nodes with unique string values.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">set:distinct(<var>nodeSet</var>)</pre>
+```js
+set:distinct(nodeSet)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>nodeSet</code></dt>
- <dd>The node-set in which to find unique nodes.</dd>
-</dl>
+- `nodeSet`
+  - : The node-set in which to find unique nodes.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A node-set containing the nodes that have unique string values.</p>
+A node-set containing the nodes that have unique string values.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><a href="http://www.exslt.org/set/functions/distinct/index.html">EXSLT - SET:DISTINCT</a></p>
+[EXSLT - SET:DISTINCT](http://www.exslt.org/set/functions/distinct/index.html)

@@ -1,32 +1,32 @@
 ---
-title: 'set:has-same-node()'
+title: set:has-same-node()
 slug: Web/EXSLT/set/has-same-node
 tags:
   - EXSLT
   - NeedsSpecTable
   - Reference
 ---
-<p>{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}</p>
+{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
-<p><code>set:has-same-node()</code> determines whether two node-sets have any nodes in common.</p>
+`set:has-same-node()` determines whether two node-sets have any nodes in common.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">set:has-same-node(<var>nodeSet1</var>, <var>nodeSet2</var>)</pre>
+```js
+set:has-same-node(nodeSet1, nodeSet2)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>nodeSet1</code></dt>
- <dd>The first node set to check.</dd>
- <dt><code>nodeSet2</code></dt>
- <dd>The second node set to check.</dd>
-</dl>
+- `nodeSet1`
+  - : The first node set to check.
+- `nodeSet2`
+  - : The second node set to check.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p><code>true</code> if the two node-sets have any nodes in common; otherwise <code>false</code>.</p>
+`true` if the two node-sets have any nodes in common; otherwise `false`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><a href="http://www.exslt.org/set/functions/has-same-node/index.html">EXSLT - SET:HAS-SAME-NODE</a></p>
+[EXSLT - SET:HAS-SAME-NODE](http://www.exslt.org/set/functions/has-same-node/index.html)

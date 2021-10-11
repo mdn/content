@@ -7,28 +7,25 @@ tags:
   - NeedsSpecTable
   - Reference
 ---
-<div>{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}</div>
+{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
-<p><code>math:min()</code> returns the minimum value of a node-set.</p>
+`math:min()` returns the minimum value of a node-set.
 
-<p>To compute the minimum value of the node-set, the node set is sorted into ascending order as it would be using <code><a href="/en-US/XSLT/sort">xsl:sort()</a></code> with a data type of <code>number</code>. The minimum value is then the first node in the sorted list, converted into a number.</p>
+To compute the minimum value of the node-set, the node set is sorted into ascending order as it would be using [`xsl:sort()`](/en-US/XSLT/sort) with a data type of `number`. The minimum value is then the first node in the sorted list, converted into a number.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval">math:min(<em>nodeSet</em>)
-</pre>
+    math:min(nodeSet)
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code><em>nodeSet</em></code></dt>
- <dd>The node-set whose lowest value is to be returned.</dd>
-</dl>
+- `nodeSet`
+  - : The node-set whose lowest value is to be returned.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A result tree fragment representing the lowest valued node's numeric value as a string.</p>
+A result tree fragment representing the lowest valued node's numeric value as a string.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><a href="http://www.exslt.org/regexp/functions/min/index.html">EXSLT - MATH:MIN</a></p>
+[EXSLT - MATH:MIN](http://www.exslt.org/regexp/functions/min/index.html)

@@ -6,12 +6,12 @@ tags:
   - Overview
   - Reference
 ---
-<p>{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}</p>
+{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
-<p>The EXSLT Sets package offers functions that let you perform set manipulation. The namespace for these functions is <code>http://exslt.org/sets</code>.</p>
+The EXSLT Sets package offers functions that let you perform set manipulation. The namespace for these functions is `http://exslt.org/sets`.
 
-<p>{{SubpagesWithSummaries}}</p>
+{{SubpagesWithSummaries}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("xslt.exslt.set")}}</p>
+{{Compat("xslt.exslt.set")}}

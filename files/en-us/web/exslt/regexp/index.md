@@ -6,12 +6,12 @@ tags:
   - Overview
   - Reference
 ---
-<div>{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}</div>
+{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
-<p>The EXSLT Regular Expressions package provides functions that allow testing, matching, and replacing text using JavaScript style regular expressions. The namespace for the Regular Expressions package is <code>http://exslt.org/regular-expressions</code>.</p>
+The EXSLT Regular Expressions package provides functions that allow testing, matching, and replacing text using JavaScript style regular expressions. The namespace for the Regular Expressions package is `http://exslt.org/regular-expressions`.
 
-<p>{{SubpagesWithSummaries}}</p>
+{{SubpagesWithSummaries}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("xslt.exslt.regexp")}}</p>
+{{Compat("xslt.exslt.regexp")}}

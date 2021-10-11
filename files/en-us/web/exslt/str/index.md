@@ -6,12 +6,12 @@ tags:
   - Overview
   - Reference
 ---
-<p>{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}</p>
+{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
-<p>The EXSLT Strings package provides functions that allow the manipulation of strings. The namespace for the Strings package is <code>http://exslt.org/strings</code>.</p>
+The EXSLT Strings package provides functions that allow the manipulation of strings. The namespace for the Strings package is `http://exslt.org/strings`.
 
-<p>{{SubpagesWithSummaries}}</p>
+{{SubpagesWithSummaries}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("xslt.exslt.str")}}</p>
+{{Compat("xslt.exslt.str")}}

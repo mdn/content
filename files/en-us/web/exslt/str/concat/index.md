@@ -1,30 +1,30 @@
 ---
-title: 'str:concat()'
+title: str:concat()
 slug: Web/EXSLT/str/concat
 tags:
   - EXSLT
   - NeedsSpecTable
   - Reference
 ---
-<p>{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}</p>
+{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
-<p><code>str:concat()</code> returns a string containing all the string values in a node-set concatenated together.</p>
+`str:concat()` returns a string containing all the string values in a node-set concatenated together.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">str:concat(<var>nodeSet</var>)</pre>
+```js
+str:concat(nodeSet)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>nodeSet</code></dt>
- <dd>The node-set whose nodes' string values should be concatenated into one string.</dd>
-</dl>
+- `nodeSet`
+  - : The node-set whose nodes' string values should be concatenated into one string.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A string whose value is all the string values of the nodes in <code>nodeSet</code> concatenated together. If <code>nodeSet</code> is empty, an empty string is returned.</p>
+A string whose value is all the string values of the nodes in `nodeSet` concatenated together. If `nodeSet` is empty, an empty string is returned.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><a href="http://www.exslt.org/str/functions/concat/index.html">EXSLT - STR:CONCAT</a></p>
+[EXSLT - STR:CONCAT](http://www.exslt.org/str/functions/concat/index.html)
