@@ -20,7 +20,7 @@ Other objects may be transferred by copying the object and then removing it in t
 
 The code below demonstrates the first case: sending a message from a main thread to a {{domxref("Web Workers API", "web worker thread","","true")}}.
 The {{jsxref("Uint8Array")}} is copied (duplicated) in the worker while its buffer is transferred.
-After transfer an attempt to access `uInt8Array` from the worker will throw, but you can check the `byteLength` to confirm it is now zero.
+After transfer any attempt to read or write `uInt8Array` from the main thread will throw, but you can still check the `byteLength` to confirm it is now zero.
 
 ```js
 // Create an 8MB "file" and fill it.

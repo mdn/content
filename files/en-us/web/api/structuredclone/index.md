@@ -62,7 +62,7 @@ console.assert(clone.itself === clone); // and the circular reference is preserv
 ### Transfering values
 
 {{Glossary("Transferable objects")}} (only) can be transferred rather than duplicated in the cloned object, using the optional parameter's `transfer` value.
-Transferring makes the specified object unavailable in the original value.
+Transferring makes the original object unusable.
 
 > **Note:** A scenario where this might be useful is when asynchronously validating some data in a buffer before saving it.
 > To avoid the buffer being modified before the data is saved, you can clone the buffer and validate that data.
