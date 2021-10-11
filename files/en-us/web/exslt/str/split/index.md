@@ -1,49 +1,51 @@
 ---
-title: 'str:split()'
+title: str:split()
 slug: Web/EXSLT/str/split
 tags:
   - EXSLT
   - NeedsSpecTable
   - Reference
 ---
-<p>{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}</p>
+{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
-<p><code>str:split()</code> splits a string using a pattern string to determine where the splits should occur, returning a node-set containing the resulting strings.</p>
+`str:split()` splits a string using a pattern string to determine where the splits should occur, returning a node-set containing the resulting strings.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">str:split(<var>string</var>, <var>pattern</var>)</pre>
+```js
+str:split(string, pattern)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code>string</code></dt>
-	<dd>The string to split.</dd>
-	<dt><code>pattern</code></dt>
-	<dd>The pattern indicating where to split the string.</dd>
-</dl>
+- `string`
+  - : The string to split.
+- `pattern`
+  - : The pattern indicating where to split the string.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A node-set of <code>token</code> elements, each containing one token from the <code>string</code>.</p>
+A node-set of `token` elements, each containing one token from the `string`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js; no-line-numbers">str:split('book, phone, computer, chair', ', ')</pre>
+```js
+str:split('book, phone, computer, chair', ', ')
+```
 
-<p>Returns a node set like:</p>
+Returns a node set like:
 
-<pre class="brush: xml; no-line-numbers">&lt;token&gt;book&lt;/token&gt;
-&lt;token&gt;phone&lt;/token&gt;
-&lt;token&gt;computer&lt;/token&gt;
-&lt;token&gt;chair&lt;/token&gt;</pre>
+```xml
+<token>book</token>
+<token>phone</token>
+<token>computer</token>
+<token>chair</token>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><a href="http://www.exslt.org/str/functions/split/index.html">EXSLT - STR:SPLIT</a></p>
+[EXSLT - STR:SPLIT](http://www.exslt.org/str/functions/split/index.html)
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><code><a href="/en-US/docs/Web/EXSLT/str/tokenize">str:tokenize()</a></code></li>
-</ul>
+- [`str:tokenize()`](/en-US/docs/Web/EXSLT/str/tokenize)

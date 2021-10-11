@@ -1,33 +1,32 @@
 ---
-title: 'math:max()'
+title: math:max()
 slug: Web/EXSLT/math/max
 tags:
   - EXSLT
   - NeedsSpecTable
   - Reference
 ---
-<div>{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}</div>
+{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
-<p><code>math:max()</code> returns the maximum value of a node-set.</p>
+`math:max()` returns the maximum value of a node-set.
 
-<p>To compute the maximum value of the node-set, the node set is sorted into descending order as it would be using <code><a href="/en-US/XSLT/sort">xsl:sort()</a></code> with a data type of <code>number</code>. The maximum value is then the first node in the sorted list, converted into a number.</p>
+To compute the maximum value of the node-set, the node set is sorted into descending order as it would be using [`xsl:sort()`](/en-US/XSLT/sort) with a data type of `number`. The maximum value is then the first node in the sorted list, converted into a number.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">math:max(<var>nodeSet</var>)
-</pre>
+```js
+math:max(nodeSet)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code><em>nodeSet</em></code></dt>
- <dd>The node-set whose highest value is to be returned.</dd>
-</dl>
+- `nodeSet`
+  - : The node-set whose highest value is to be returned.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A result tree fragment representing the highest valued node's numeric value as a string.</p>
+A result tree fragment representing the highest valued node's numeric value as a string.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><a href="http://www.exslt.org/math/functions/max/index.html">EXSLT - MATH:MAX</a></p>
+[EXSLT - MATH:MAX](http://www.exslt.org/math/functions/max/index.html)

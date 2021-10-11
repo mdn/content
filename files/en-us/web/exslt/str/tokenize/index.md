@@ -1,51 +1,53 @@
 ---
-title: 'str:tokenize()'
+title: str:tokenize()
 slug: Web/EXSLT/str/tokenize
 tags:
   - EXSLT
   - NeedsSpecTable
   - Reference
 ---
-<p>{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}</p>
+{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
-<p><code>str:tokenize()</code> splits a string using a set of characters as delimiters that determine where the splits should occur, returning a node-set containing the resulting strings.</p>
+`str:tokenize()` splits a string using a set of characters as delimiters that determine where the splits should occur, returning a node-set containing the resulting strings.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">str:tokenize(<var>string</var>, <var>delimiters</var>)</pre>
+```js
+str:tokenize(string, delimiters)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code>string</code></dt>
-	<dd>The string to tokenize.</dd>
-	<dt><code>delimiters</code></dt>
-	<dd>Each character in this string is used as a word separator while tokenizing.</dd>
-</dl>
+- `string`
+  - : The string to tokenize.
+- `delimiters`
+  - : Each character in this string is used as a word separator while tokenizing.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A node-set of <code>token</code> elements, each containing one token from the <code>string</code>.</p>
+A node-set of `token` elements, each containing one token from the `string`.
 
-<h2 id="Example">Example:</h2>
+## Example:
 
-<pre class="brush: js; no-line-numbers">str:tokenize('2007-09-14-03T11:40:23', '-T:')</pre>
+```js
+str:tokenize('2007-09-14-03T11:40:23', '-T:')
+```
 
-<p>Returns a node set like this:</p>
+Returns a node set like this:
 
-<pre class="brush: xml; no-line-numbers">&lt;token&gt;2007&lt;/token&gt;
-&lt;token&gt;09&lt;/token&gt;
-&lt;token&gt;14&lt;/token&gt;
-&lt;token&gt;11&lt;/token&gt;
-&lt;token&gt;40&lt;/token&gt;
-&lt;token&gt;23&lt;/token&gt;</pre>
+```xml
+<token>2007</token>
+<token>09</token>
+<token>14</token>
+<token>11</token>
+<token>40</token>
+<token>23</token>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><a href="http://www.exslt.org/str/functions/tokenize/index.html">EXSLT - STR:TOKENIZE</a></p>
+[EXSLT - STR:TOKENIZE](http://www.exslt.org/str/functions/tokenize/index.html)
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><code><a href="/en-US/docs/Web/EXSLT/str/split">str:split()</a></code></li>
-</ul>
+- [`str:split()`](/en-US/docs/Web/EXSLT/str/split)

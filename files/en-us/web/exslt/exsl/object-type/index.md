@@ -1,44 +1,39 @@
 ---
-title: 'exsl:object-type()'
+title: exsl:object-type()
 slug: Web/EXSLT/exsl/object-type
 tags:
   - EXSLT
   - NeedsSpecTable
   - Reference
 ---
-<div>{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}</div>
+{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
-<p><code>exsl:object-type()</code> returns a string that indicates the type of the specified object.</p>
+`exsl:object-type()` returns a string that indicates the type of the specified object.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Most <a href="/en-US/docs/Web/XSLTT">XSLT</a> object types can be coerced into each other safely; however, certain coercions to raise error conditions. In particular, treating something that\'s not a node-set as a node-set will do so. This function lets authors of named templates and extension functions easily provide flexibility in parameter values.</p>
-</div>
+> **Note:** Most [XSLT](/en-US/docs/Web/XSLTT) object types can be coerced into each other safely; however, certain coercions to raise error conditions. In particular, treating something that\\'s not a node-set as a node-set will do so. This function lets authors of named templates and extension functions easily provide flexibility in parameter values.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">exsl:object-type(<var>object</var>)
-</pre>
+```js
+exsl:object-type(object)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code><em>object</em></code></dt>
- <dd>The object whose type is to be returned.</dd>
-</dl>
+- `object`
+  - : The object whose type is to be returned.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>The object's type, which will be one of the following:</p>
+The object's type, which will be one of the following:
 
-<ul>
- <li><code>string</code></li>
- <li><code>number</code></li>
- <li><code>boolean</code></li>
- <li><code>node-set</code></li>
- <li><code>RTF</code></li>
- <li><code>external</code></li>
-</ul>
+- `string`
+- `number`
+- `boolean`
+- `node-set`
+- `RTF`
+- `external`
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><a href="http://www.exslt.org/exsl/functions/object-type/index.html">EXSLT - EXSL:OBJECT-TYPE</a></p>
+[EXSLT - EXSL:OBJECT-TYPE](http://www.exslt.org/exsl/functions/object-type/index.html)

@@ -6,28 +6,27 @@ tags:
   - NeedsSpecTable
   - Reference
 ---
-<div>{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}</div>
+{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
-<p><code>math:lowest()</code> returns the node in the specified node-set with the lowest value (where the lowest value calculated using <a href="/en-US/docs/Web/EXSLT/math/min"><code>math:min()</code></a>).</p>
+`math:lowest()` returns the node in the specified node-set with the lowest value (where the lowest value calculated using [`math:min()`](/en-US/docs/Web/EXSLT/math/min)).
 
-<p>A node has this minimum value if converting its string value to a number equals the minimum value.</p>
+A node has this minimum value if converting its string value to a number equals the minimum value.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">math:lowest(<var>nodeSet</var>)
-</pre>
+```js
+math:lowest(nodeSet)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code><em>nodeSet</em></code></dt>
- <dd>The node-set whose lowest value is to be returned.</dd>
-</dl>
+- `nodeSet`
+  - : The node-set whose lowest value is to be returned.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A result tree fragment consisting of copies of the nodes returned by <code><a href="/en-US/docs/Web/EXSLT/math/min">math:min()</a></code>.</p>
+A result tree fragment consisting of copies of the nodes returned by [`math:min()`](/en-US/docs/Web/EXSLT/math/min).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><a href="http://www.exslt.org/math/functions/lowest/index.html">EXSLT - MATH:LOWEST</a></p>
+[EXSLT - MATH:LOWEST](http://www.exslt.org/math/functions/lowest/index.html)

@@ -6,12 +6,12 @@ tags:
   - Overview
   - Reference
 ---
-<div>{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}</div>
+{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
-<p>The EXSLT Common package provides basic functions that expand upon the capabilities of XSLT. The namespace for the Common package is <code>http://exslt.org/common</code>.</p>
+The EXSLT Common package provides basic functions that expand upon the capabilities of XSLT. The namespace for the Common package is `http://exslt.org/common`.
 
-<p>{{SubpagesWithSummaries}}</p>
+{{SubpagesWithSummaries}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("xslt.exslt.exsl")}}</p>
+{{Compat("xslt.exslt.exsl")}}

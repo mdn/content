@@ -1,60 +1,58 @@
 ---
-title: 'regexp:match()'
+title: regexp:match()
 slug: Web/EXSLT/regexp/match
 tags:
   - EXSLT
   - NeedsSpecTable
   - Reference
 ---
-<div>{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}</div>
+{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
-<p><code>regexp:match()</code> performs regular expression matching on a string, returning the submatches found as a result.</p>
+`regexp:match()` performs regular expression matching on a string, returning the submatches found as a result.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">regexp:match(<var>targetString</var>, <var>regExpString</var>[, <var>flagsString</var>])</pre>
+```js
+regexp:match(targetString, regExpString[, flagsString])
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>targetString</code></dt>
- <dd>The string to perform regular expression matching upon.</dd>
- <dt><code>regExpString</code></dt>
- <dd>The JavaScript style regular expression to evaluate.</dd>
- <dt><code>flagsString{{Optional_Inline}}</code></dt>
- <dd>An optional string containing character flags.</dd>
-</dl>
+- `targetString`
+  - : The string to perform regular expression matching upon.
+- `regExpString`
+  - : The JavaScript style regular expression to evaluate.
+- `flagsString{{Optional_Inline}}`
+  - : An optional string containing character flags.
 
-<p>The character flags are:</p>
+The character flags are:
 
-<dl>
- <dt><code>g</code></dt>
- <dd>Global match. The submatches from every match in the string are returned. If this flag isn't specified, only the submatches from the first match are returned.</dd>
- <dt><code>i</code></dt>
- <dd>Case insensitive match. If this flag is specified, the match is performed in a case insensitive fashion.</dd>
-</dl>
+- `g`
+  - : Global match. The submatches from every match in the string are returned. If this flag isn't specified, only the submatches from the first match are returned.
+- `i`
+  - : Case insensitive match. If this flag is specified, the match is performed in a case insensitive fashion.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A node set of <code>match</code> elements, each of which has the string value equal to a portion of the first parameter string as captured by the regular expression. If the match isn't a global one, the first match element has the value of the portion of the string matched by the entire regular expression.</p>
+A node set of `match` elements, each of which has the string value equal to a portion of the first parameter string as captured by the regular expression. If the match isn't a global one, the first match element has the value of the portion of the string matched by the entire regular expression.
 
-<p>For example:</p>
+For example:
 
-<pre class="xml">&lt;xsl:for-each select="regExp:match('https://developer.mozilla.org/en/docs/Firefox_3_for_developers',
-                                   '(\w+):\/\/([^/:]+)(:\d*)?([^# ]*)')"&gt;
-   Part &lt;xsl:value-of select="position()" /&gt; = &lt;xsl:value-of select="." /&gt;
-&lt;/xsl:for-each&gt;
-</pre>
+```xml
+<xsl:for-each select="regExp:match('https://developer.mozilla.org/en/docs/Firefox_3_for_developers',
+                                   '(\w+):\/\/([^/:]+)(:\d*)?([^# ]*)')">
+   Part <xsl:value-of select="position()" /> = <xsl:value-of select="." />
+</xsl:for-each>
+```
 
-<p>This code generates the following output:</p>
+This code generates the following output:
 
-<pre class="eval">Part 1 = https://developer.mozilla.org/en/docs/Firefox_3_for_developers
-Part 2 = https
-Part 3 = developer.mozilla.org
-Part 4 =
-Part 5 = /en/docs/Firefox_3_for_developers
-</pre>
+    Part 1 = https://developer.mozilla.org/en/docs/Firefox_3_for_developers
+    Part 2 = https
+    Part 3 = developer.mozilla.org
+    Part 4 =
+    Part 5 = /en/docs/Firefox_3_for_developers
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><a href="http://www.exslt.org/regexp/functions/match/index.html">EXSLT - REGEXP:MATCH</a></p>
+[EXSLT - REGEXP:MATCH](http://www.exslt.org/regexp/functions/match/index.html)

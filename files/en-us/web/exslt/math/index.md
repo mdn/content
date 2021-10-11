@@ -6,12 +6,12 @@ tags:
   - Overview
   - Reference
 ---
-<div>{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}</div>
+{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
-<p>The EXSLT Math package provides functions for working with numeric values and comparing nodes. The namespace for the Math package is <code>http://exslt.org/math</code>.</p>
+The EXSLT Math package provides functions for working with numeric values and comparing nodes. The namespace for the Math package is `http://exslt.org/math`.
 
-<p>{{SubpagesWithSummaries}}</p>
+{{SubpagesWithSummaries}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("xslt.exslt.math")}}</p>
+{{Compat("xslt.exslt.math")}}

@@ -1,37 +1,34 @@
 ---
-title: 'set:leading()'
+title: set:leading()
 slug: Web/EXSLT/set/leading
 tags:
   - EXSLT
   - NeedsSpecTable
   - Reference
 ---
-<p>{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}</p>
+{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
-<p><code>set:leading()</code> returns the nodes in one node-set that come before the first node in the other node-set.</p>
+`set:leading()` returns the nodes in one node-set that come before the first node in the other node-set.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">set:leading(<var>nodeSet1</var>, <var>nodeSet2</var>)
-</pre>
+```js
+set:leading(nodeSet1, nodeSet2)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>nodeSet1</code></dt>
- <dd>The node set to find nodes in that precede the first node in the second node set.</dd>
- <dt><code>nodeSet2</code></dt>
- <dd>The node set to compare against.</dd>
-</dl>
+- `nodeSet1`
+  - : The node set to find nodes in that precede the first node in the second node set.
+- `nodeSet2`
+  - : The node set to compare against.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A node-set containing the nodes from <code>nodeSet1</code> whose values precede the first node in <code>nodeSet2</code>.</p>
+A node-set containing the nodes from `nodeSet1` whose values precede the first node in `nodeSet2`.
 
-<div class="note">
-<p><strong>Note:</strong> If the first node in <code>nodeSet2</code> isn't contained in <code>nodeSet1</code>, an empty set is returned. If <code>nodeSet2</code> is empty, then the result is <code>nodeSet1</code>.</p>
-</div>
+> **Note:** If the first node in `nodeSet2` isn't contained in `nodeSet1`, an empty set is returned. If `nodeSet2` is empty, then the result is `nodeSet1`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><a href="http://www.exslt.org/set/functions/leading/index.html">EXSLT - SET:LEADING</a></p>
+[EXSLT - SET:LEADING](http://www.exslt.org/set/functions/leading/index.html)
