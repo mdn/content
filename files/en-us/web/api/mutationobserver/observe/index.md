@@ -111,7 +111,9 @@ and before you have a chance to specifically begin monitoring the moved node or 
 Theoretically, this means that if you keep track of the {{domxref("MutationRecord")}} objects describing the changes that occur, you should be able to "undo" the changes,
 rewinding the DOM back to its initial state.
 
-## Example
+## Examples
+
+### Basic usage
 
 In this example, we demonstrate how to call the method **`observe()`** on an instance of {{domxref("MutationObserver")}}, once it has been set up, passing it a target element
 and an `options` object.
@@ -129,6 +131,42 @@ const observer = new MutationObserver(function() {
 // call `observe()` on that MutationObserver instance,
 // passing it the element to observe, and the options object
 observer.observe(elementToObserve, {subtree: true, childList: true});
+```
+
+### Using `attributeFilter`
+
+In this example, a Mutation Observer is set up to watch for changes to the
+`status` and `username` attributes in any elements contained
+within a subtree that displays the names of users in a chat room. This lets the code,
+for example, reflect changes to users' nicknames, or to mark them as away from keyboard
+(AFK) or offline.
+
+```js
+function callback(mutationList) {
+  mutationList.forEach(function(mutation) {
+    switch(mutation.type) {
+      case "attributes":
+        switch(mutation.attributeName) {
+          case "status":
+            userStatusChanged(mutation.target.username, mutation.target.status);
+            break;
+          case "username":
+            usernameChanged(mutation.oldValue, mutation.target.username);
+            break;
+        }
+        break;
+    }
+  });
+}
+
+var userListElement = document.querySelector("#userlist");
+
+var observer = new MutationObserver(callback);
+observer.observe(userListElement, {
+  attributeFilter: [ "status", "username" ],
+  attributeOldValue: true,
+  subtree: true
+});
 ```
 
 ## Specifications
