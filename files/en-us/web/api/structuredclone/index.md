@@ -44,7 +44,7 @@ The returned value is a clone of the original `value`.
 ## Description
 
 This function can be used to deep copy JavaScript values.
-It also supports circular references as shown below:
+It also supports circular references, as shown below:
 
 ```js
 // Create an object with a value and a circular reference to itself.
