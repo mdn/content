@@ -27,7 +27,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 
 Similarly, the {{domxref("structuredClone()")}} method can be used to make deep copies of a transferrable object, and may additionally transfer specified resources to the cloned object.
 This is useful when you want to safely perform operations on some data and also fail attempts to access the data while performing the operation.
-In this case you clone and transfer the object and peform the operations on the copied data: attempts to access the original object will fail.
+In this case you clone and transfer the object and perform the operations on the copied data; attempts to access the original object will fail.
 
 
 ## See also
