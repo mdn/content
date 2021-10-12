@@ -107,71 +107,46 @@ Here is a screenshot of VoiceOver on Mac announcing the update (via subtitles) t
 
 Elements with the following [`role="..."`](/en-US/Docs/Web/Accessibility/ARIA/Roles) values act as live regions by default:
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Role</th>
-      <th scope="col">Description</th>
-      <th scope="col">Compatibility Notes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>[`log`](/en-us/docs/web/accessibility/aria/roles/log_role)</td>
-      <td>Chat, error, game or other type of log</td>
-      <td>
-        To maximize compatibility, add a redundant
-        `aria-live="polite"` when using this role.
-      </td>
-    </tr>
-    <tr>
-      <td>[`status`](/en-us/docs/web/accessibility/aria/roles/status_role)</td>
-      <td>
-        A status bar or area of the screen that provides an updated status of
-        some kind. Screen reader users have a special command to read the
-        current status.
-      </td>
-      <td>
-        To maximize compatibility, add a redundant
-        `aria-live="polite"` when using this role.
-      </td>
-    </tr>
-    <tr>
-      <td>[`alert`](/en-us/docs/web/accessibility/aria/roles/alert_role)</td>
-      <td>
-        Error or warning message that flashes on the screen. Alerts are
-        particularly important for client side validation notices to users.
-      </td>
-      <td>
-        To maximize compatibility, some people recommend adding a redundant
-        `aria-live="assertive"` when using this role. However, adding
-        both `aria-live` and `role="alert"` causes double
-        speaking issues in VoiceOver on iOS.
-      </td>
-    </tr>
-    <tr>
-      <td>[`progressbar`](/en-us/docs/web/accessibility/aria/roles/progressbar_role)</td>
-      <td>
-        A hybrid between a widget and a live region. Use this with
-        `aria-valuemin`, `aria-valuenow` and
-        `aria-valuemax`. (TBD: add more info here).
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>[`marquee`](/en-us/docs/web/accessibility/aria/roles/marquee_role)</td>
-      <td>for text which scrolls, such as a stock ticker.</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>[`timer`](/en-us/docs/web/accessibility/aria/roles/timer_role)</td>
-      <td>
-        or any kind of timer or clock, such as a countdown timer or stopwatch
-        readout.
-      </td>
-      <td></td>
-    </tr>
-  </tbody>
+<table style="width: 100%;">
+ <thead>
+  <tr>
+   <th scope="col">Role</th>
+   <th scope="col">Description</th>
+   <th scope="col">Compatibility Notes</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>log</td>
+   <td>Chat, error, game or other type of log</td>
+   <td>To maximize compatibility, add a redundant <code>aria-live="polite"</code> when using this role.</td>
+  </tr>
+  <tr>
+   <td>status</td>
+   <td>A status bar or area of the screen that provides an updated status of some kind. Screen reader users have a special command to read the current status.</td>
+   <td>To maximize compatibility, add a redundant <code>aria-live="polite"</code> when using this role.</td>
+  </tr>
+  <tr>
+   <td>alert</td>
+   <td>Error or warning message that flashes on the screen. Alerts are particularly important for client side validation notices to users. <a href="https://www.w3.org/TR/wai-aria-practices/examples/alert/alert.html" class="external" rel=" noopener">Alert Example.</a></td>
+   <td>To maximize compatibility, some people recommend adding a redundant <code>aria-live="assertive"</code> when using this role. However, adding both <code>aria-live</code> and <code>role="alert"</code> causes double speaking issues in VoiceOver on iOS.</td>
+  </tr>
+  <tr>
+   <td>progressbar</td>
+   <td>A hybrid between a widget and a live region. Use this with <code>aria-valuemin</code>, <code>aria-valuenow</code> and <code>aria-valuemax</code>. (TBD: add more info here).</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>marquee</td>
+   <td>for text which scrolls, such as a stock ticker.</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>timer</td>
+   <td>or any kind of timer or clock, such as a countdown timer or stopwatch readout.</td>
+   <td></td>
+  </tr>
+ </tbody>
 </table>
 
 ## Additional live region attributes
