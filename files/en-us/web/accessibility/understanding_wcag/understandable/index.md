@@ -20,7 +20,7 @@ tags:
 ---
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Understandable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Understandable states that information and the operation of user interface must be understandable.
 
-> **Note:** To read the W3C definitions for Understandable and its guidelines and success criteria, see <a href="https://www.w3.org/TR/WCAG21/#understandable">Principle 3: Understandable — Information and the operation of user interface must be understandable</a>.
+> **Note:** To read the W3C definitions for Understandable and its guidelines and success criteria, see [Principle 3: Understandable — Information and the operation of user interface must be understandable](https://www.w3.org/TR/WCAG21/#understandable).
 
 ## Guideline 3.1 — Readable: Make text content readable and understandable
 
@@ -168,7 +168,7 @@ This guideline focuses on making text content as understandable as possible.
   </tbody>
 </table>
 
-> **Note:** Also see the WCAG description for <a href="https://www.w3.org/TR/WCAG21/#readable">Guideline 3.1 Readable: Make text content readable and understandable</a>.
+> **Note:** Also see the WCAG description for [Guideline 3.1 Readable: Make text content readable and understandable](https://www.w3.org/TR/WCAG21/#readable).
 
 ## Guideline 3.2 — Predictable: Make Web pages appear and operate in predictable ways
 
@@ -301,7 +301,7 @@ This guideline focuses on making user interfaces intuitive and understandable.
   </tbody>
 </table>
 
-> **Note:** Also see the WCAG description for <a href="https://www.w3.org/TR/WCAG21/#predictable">Guideline 3.2 Predictable: Make Web pages appear and operate in predictable ways</a>.
+> **Note:** Also see the WCAG description for [Guideline 3.2 Predictable: Make Web pages appear and operate in predictable ways](https://www.w3.org/TR/WCAG21/#predictable).
 
 ## Guideline 3.3 — Input Assistance: Help users avoid and correct mistakes
 
@@ -482,7 +482,7 @@ This guideline centers around helping users enter correct information when requi
   </tbody>
 </table>
 
-> **Note:** Also see the WCAG description for <a href="https://www.w3.org/TR/WCAG21/#input-assistance">Guideline 3.3 Input Assistance: Help users avoid and correct mistakes</a>.
+> **Note:** Also see the WCAG description for [Guideline 3.3 Input Assistance: Help users avoid and correct mistakes](https://www.w3.org/TR/WCAG21/#input-assistance).
 
 ## See also
 

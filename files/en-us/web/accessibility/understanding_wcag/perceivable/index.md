@@ -13,7 +13,7 @@ tags:
 ---
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Perceivable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Perceivable states that users must be able to perceive it in some way, using one or more of their senses.
 
-> **Note:** To read the W3C definitions for Perceivable and its guidelines and success criteria, see <a href="https://www.w3.org/TR/WCAG21/#perceivable">Principle 1: Perceivable - Information and user interface components must be presentable to users in ways they can perceive.</a>
+> **Note:** To read the W3C definitions for Perceivable and its guidelines and success criteria, see [Principle 1: Perceivable - Information and user interface components must be presentable to users in ways they can perceive.](https://www.w3.org/TR/WCAG21/#perceivable)
 
 ## Guideline 1.1 — Providing text alternatives for non-text content
 
@@ -127,7 +127,7 @@ The key here is that text can be converted to other forms that people with disab
   </tbody>
 </table>
 
-> **Note:** Also see the <a href="https://www.w3.org/TR/WCAG21/#text-alternatives">WCAG description for Guideline 1.1: Text alternatives</a>.
+> **Note:** Also see the [WCAG description for Guideline 1.1: Text alternatives](https://www.w3.org/TR/WCAG21/#text-alternatives).
 
 ## Guideline 1.2 — Providing text alternatives for time-based media
 
@@ -254,7 +254,7 @@ This guideline refers to the ability of content to be consumed by users in multi
         </ul>
         <div class="note">
           <p>
-            <strong>Note</strong>: Conveying instructions solely by color is
+            <strong>Note:</strong> Conveying instructions solely by color is
             related, but covered in a different guideline — 1.4.1.
           </p>
         </div>
@@ -612,7 +612,7 @@ This guideline relates to making sure core content is easy to discern from backg
   </thead>
 </table>
 
-> **Note:** Also see the WCAG description for <a href="https://www.w3.org/TR/WCAG21/#distinguishable">Guideline 1.4: Distinguishable: Make it easier for users to see and hear content including separating foreground from background.</a><a href="https://www.w3.org/TR/WCAG21/#distinguishable">.</a>
+> **Note:** Also see the WCAG description for [Guideline 1.4: Distinguishable: Make it easier for users to see and hear content including separating foreground from background](https://www.w3.org/TR/WCAG21/#distinguishable).
 
 ## See also
 

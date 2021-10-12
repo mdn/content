@@ -103,4 +103,9 @@ Following talks are a great way to understand ARIA:
 
 [Accessibility](/en-US/docs/Web/Accessibility), [AJAX](/en-US/docs/Web/Guide/AJAX), [JavaScript](/en-US/docs/Web/JavaScript)
 
-<section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Guide">Web Development</a></li><li><a href="/en-US/docs/Mozilla/Accessibility">Accessibility and Mozilla</a></li></ol></section>
+<section id="Quick_links">
+  <ol>
+    <li><a href="/en-US/docs/Web/Guide">Web Development</a></li>
+    <li><a href="/en-US/docs/Mozilla/Accessibility">Accessibility and Mozilla</a></li>
+  </ol>
+</section>
