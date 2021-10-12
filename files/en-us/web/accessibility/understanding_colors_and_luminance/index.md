@@ -165,7 +165,7 @@ Some other display colorspaces use different primary colors. For the new [ultraH
 
 While some standards in development such as **[CSS Color Module Level 4](https://drafts.csswg.org/css-color-4/)** are adding additional colorspaces, sRGB will remain the default colorspace, and the preferred colorspace for accessibility for the foreseeable future.
 
-<hr>
+------------
 
 ## Light and Luminance
 
@@ -337,7 +337,7 @@ The Epilepsy Foundation of America researched photic-related seizures thoroughly
 
 The consensus recommendations are in this brief paper, [Photic- and Pattern-induced Seizures: Expert Consensus of the Epilepsy Foundation of America](https://www.epilepsy.com/sites/core/files/atoms/files/Epilepsia%20vol%2046%20issue%209%20Photosensitivity.pdf). Some additional insights are available in this UK paper covering [guidelines for preventing seizures.](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.9473&rep=rep1&type=pdf).
 
-<hr>
+----------
 
 ## Modeling Light Color and Vision
 
