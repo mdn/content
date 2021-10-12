@@ -1,105 +1,91 @@
 ---
-title: Accessibility and Spacial Patterns
+title: Accessibility and Spacial Patterns 
 slug: Web/Accessibility/Accessibility_and_Spacial_Patterns
 tags:
   - Accessibility
   - Braille
   - patterns
-  - photosensitive seizures
+  - photosensitive seizure
 ---
-<p>{{draft}}</p>
+{{draft}}
 
-<h3 id="Spatial_Localization">Spatial Localization</h3>
+### Spatial Localization
 
-<p>NASA conducted research on the perception of color, and found that luminance contrast mattered greatly as to how they were perceived.   The two images below are from NASA research, specifically, from the article, "<a href="https://colorusage.arc.nasa.gov/blue_2.php">Designing With Blue</a>"</p>
+NASA conducted research on the perception of color, and found that luminance contrast mattered greatly as to how colors are perceived.   The two images below are from NASA research, specifically, from the article, "[Designing With Blue](https://colorusage.arc.nasa.gov/blue_2.php)"
 
-<p><img alt="Comparison of the stability of the spatial localization of yellow vs. red. Both are roughly isoluminant with their backgrounds. The misalignment and gap between the chromatic bars and black bars is physically the same for the yellow and red but much less visually obvious for the yellow." src="yellow_edge_3.gif">   <img alt="Comparison of the stability of the spatial localization of yellow vs. red. Both are roughly isoluminant with their backgrounds. The misalignment and gap between the chromatic bars and black bars is physically the same for the yellow and red but much less visually obvious for the yellow." src="yellow_edge_4.gif"></p>
+![Comparison of the stability of the spatial localization of yellow vs. red. Both are roughly isoluminant with their backgrounds. The misalignment and gap between the chromatic bars and black bars is physically the same for the yellow and red but much less visually obvious for the yellow.](yellow_edge_3.gif)   ![Comparison of the stability of the spatial localization of yellow vs. red. Both are roughly isoluminant with their backgrounds. The misalignment and gap between the chromatic bars and black bars is physically the same for the yellow and red but much less visually obvious for the yellow.](yellow_edge_4.gif)
 
-<p><em><strong>"Spatial Localization.</strong> Symbols which have the same luminance as their background are perceptually less securely located in space and time than are symbols with higher luminance contrast. They tend to "float" visually or be "captured" by adjacent symbols with high luminance-contrast. The phenomenon seems to be especially problematic for symbol/background combinations that differ only in the blue channel."</em></p>
+**\*"Spatial Localization.** Symbols which have the same luminance as their background are perceptually less securely located in space and time than are symbols with higher luminance contrast. They tend to "float" visually or be "captured" by adjacent symbols with high luminance-contrast. The phenomenon seems to be especially problematic for symbol/background combinations that differ only in the blue channel."\*
 
-<h3 id="Distance_between_stripes">Distance between stripes</h3>
+### Distance between stripes
 
-<p>Photosensitive seizures may be caused by static images as well as animation. The mechanism for this is poorly understood, but is believed to be linked to "gamma oscillations" set up in the brain.   These oscillations in the brain are a different kind of response than other kinds of neurological responses believed to cause photosensitive seizures.</p>
+Photosensitive seizures may be caused by static images as well as animation. The mechanism for this is poorly understood, but is believed to be linked to "gamma oscillations" set up in the brain.   These oscillations in the brain are a different kind of response than other kinds of neurological responses believed to cause photosensitive seizures.
 
-<p>Stripes and patterns are typical of the kinds of images that create problems, and stripes have been studied most closely.  There's the potential for causing harm if there are more than five light-dark pairs of stripes in any orientation.   They can be parallel, radial, curved or straight, and may be formed by rows of repeating elements.  </p>
+Stripes and patterns are typical of the kinds of images that create problems, and stripes have been studied most closely.  There's the potential for causing harm if there are more than five light-dark pairs of stripes in any orientation.   They can be parallel, radial, curved or straight, and may be formed by rows of repeating elements.
 
-<p>In 2005, Arnold Wilkins, John Emmett, and Graham Harding evaluated the guidelines for characterizing patterned images that could precipitate seizures.  They revised the guidelines to their fundamental core, and came up with a surprisingly simple, but powerful <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1528-1167.2005.01405.x">test</a>. which they published in the paper, <strong><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1528-1167.2005.01405.x">Characterizing the Patterned Images That Precipitate Seizures and Optimizing Guidelines To Prevent Them</a></strong></p>
+In 2005, Arnold Wilkins, John Emmett, and Graham Harding evaluated the guidelines for characterizing patterned images that could precipitate seizures.  They revised the guidelines to their fundamental core, and came up with a surprisingly simple, but powerful [test](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1528-1167.2005.01405.x). which they published in the paper, **[Characterizing the Patterned Images That Precipitate Seizures and Optimizing Guidelines To Prevent Them](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1528-1167.2005.01405.x)**
 
-<div class="note">
-  <p><strong>Note:</strong> The steps necessary to evaluate material reduce to the following:</p>
+> **Note:** The steps necessary to evaluate material reduce to the following:
+>
+> Look at the screen
+>
+> Are there more than five stripes?
+>
+> If so, do they last longer than 0.5 s?
+>
+> If so, does the brightness exceed the stated limit?
+>
+> If so, categorize the motion of the pattern
+>
+> Are the guidelines contravened?
+>
+> If so, reduce brightness.
 
-  <p>Look at the screen</p>
+### Text and padding
 
-  <p>Are there more than five stripes?</p>
+WCAG standards for contrast perception do not take into account the effect of padding.  For example, blue text on a gray background is easier to perceive if it is surrounded "locally" by black than by white.  There is such a thing as "local" adaptation to colors.   The bottom line: padding matters.
 
-  <p>If so, do they last longer than 0.5 s?</p>
+### Math
 
-  <p>If so, does the brightness exceed the stated limit?</p>
+Spatial reasoning affects Math learning; consequently, spatial relationships in how math is presented affects cognition.  The web developer can do something about this in the manner in which they display math.  Animation figures strongly in this arena.   For example, "how" an object looks when it is rotated, from different angles, how they look sliced, and how they relate to each other in space all make a difference in an ability to understand Math in spatial terms.
 
-  <p>If so, categorize the motion of the pattern</p>
+### Braille
 
-  <p>Are the guidelines contravened?</p>
+Modern technology enables non-experts to print Braille.  Adobe Illustrator, for example, allows one to Typeset ADA Braille for printing out.
 
-  <p>If so, reduce brightness.</p>
-</div>
+The ability to represent spatial patterns accurate to those who are blind is critical for accessibility.   For example, knowing Braille is not enough.  The Braille dots have to be spatially apart from one another so as to be readable in a "human" way.   The human touch does distinguish with ease braille dots that are too close or too far apart from one another.
 
-<h3 id="Text_and_padding">Text and padding</h3>
+Space has to surround the braille character. A user of braille does not lay a finger on "top" of a braille character, the user has to move her finger over the character, in the way that a sighted person must move her eyes across text written on a page.
 
-<p>WCAG standards for contrast perception do not take into account the effect of padding.  For example, blue text on a gray background is easier to perceive if it is surrounded "locally" by black than by white.  There is such a thing as "local" adaptation to colors.   The bottom line: padding matters.</p>
+The nature of space can change depending upon what MIME type is being used, and its version.   For example, borders on SVG can extend both inward and outward from its dimensions, or for newer versions of SVG, entirely outward from it, thus reducing the space around the SVG to enable perception.
 
-<h3 id="Math">Math</h3>
+## See Also
 
-<p>Spatial reasoning affects Math learning; consequently, spatial relationships in how math is presented affects cognition.  The web developer can do something about this in the manner in which they display math.  Animation figures strongly in this arena.   For example, "how" an object looks when it is rotated, from different angles, how they look sliced, and how they relate to each other in space all make a difference in an ability to understand Math in spatial terms.</p>
+### **MDN**
 
-<h3 id="Braille">Braille</h3>
+- [Accessibility: What users can do to browse more safely](/en-US/docs/Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely)
+- [Web accessibility for seizures and physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders)
+- [Web Accessibility: Understanding Colors and Luminance](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
 
-<p>Modern technology enables non-experts to print Braille.  Adobe Illustrator, for example, allows one to Typeset ADA Braille for printing out.</p>
+### Braille
 
-<p>The ability to represent spatial patterns accurate to those who are blind is critical for accessibility.   For example, knowing Braille is not enough.  The Braille dots have to be spatially apart from one another so as to be readable in a "human" way.   The human touch does distinguish with ease braille dots that are too close or too far apart from one another.  </p>
+- [Part 3: A Step-by-Step Guide to Typesetting ADA Braille Correctly in Adobe Illustrator](https://www.tinkeringmonkey.com/guides/ada-signage/a-step-by-step-guide-to-typesetting-ada-braille-correctly-in-adobe-illustrator/)
+- [Spatial Math in BrailleBlaster (4 of 5)](https://www.youtube.com/watch?v=yz9vefDsj1g)
 
-<p>Space has to surround the braille character. A user of braille does not lay a finger on "top" of a braille character, the user has to move her finger over the character, in the way that a sighted person must move her eyes across text written on a page.</p>
+### Government Literature
 
-<p>The nature of space can change depending upon what MIME type is being used, and its version.   For example, borders on SVG can extend both inward and outward from its dimensions, or for newer versions of SVG, entirely outward from it, thus reducing the space around the SVG to enable perception.</p>
+- [NASA: Designing With Blue](https://colorusage.arc.nasa.gov/blue_2.php)
 
-<p><strong>See Also</strong></p>
+### Math
 
-<h4 id="MDN"><strong>MDN</strong></h4>
+- [Spatial Reasoning: Why Math Talk is About More Than Numbers](https://dreme.stanford.edu/news/spatial-reasoning-why-math-talk-about-more-numbers)
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely">Accessibility: What users can do to browse more safely</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Seizure_disorders">Web accessibility for seizures and physical reactions</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance">Web Accessibility: Understanding Colors and Luminance</a></li>
-</ul>
+### Scientific Literature
 
-<h4 id="Braille_2">Braille</h4>
+- [Color constancy in context: Roles for local adaptation and levels of reference](https://jov.arvojournals.org/article.aspx?articleid=2192799)
+- [Gamma oscillations and photosensitive epilepsy](https://www.sciencedirect.com/science/article/pii/S0960982217304062?via%3Dihub)
+- [Characterizing the Patterned Images That Precipitate Seizures and Optimizing Guidelines To Prevent Them](https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1528-1167.2005.01405.x)  Arnold Wilkins, John Emmett, and Graham Harding
 
-<ul>
- <li><a href="https://www.tinkeringmonkey.com/guides/ada-signage/a-step-by-step-guide-to-typesetting-ada-braille-correctly-in-adobe-illustrator/">Part 3: A Step-by-Step Guide to Typesetting ADA Braille Correctly in Adobe Illustrator</a></li>
- <li>
-  <p><a href="https://www.youtube.com/watch?v=yz9vefDsj1g">Spatial Math in BrailleBlaster (4 of 5)</a></p>
- </li>
-</ul>
+#### Contributors:
 
-<h4 id="Government_Literature">Government Literature</h4>
-
-<ul>
- <li><a href="https://colorusage.arc.nasa.gov/blue_2.php">NASA: Designing With Blue</a></li>
-</ul>
-
-<h4 id="Math_2">Math</h4>
-
-<ul>
- <li id="page-title"><a href="https://dreme.stanford.edu/news/spatial-reasoning-why-math-talk-about-more-numbers">Spatial Reasoning: Why Math Talk is About More Than Numbers</a></li>
-</ul>
-
-<h4 id="Scientific_Literature"><strong>Scientific Literature</strong></h4>
-
-<ul>
- <li><a href="https://jov.arvojournals.org/article.aspx?articleid=2192799">Color constancy in context: Roles for local adaptation and levels of reference</a></li>
- <li><a href="https://www.sciencedirect.com/science/article/pii/S0960982217304062?via%3Dihub">Gamma oscillations and photosensitive epilepsy</a></li>
- <li><a href="https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1528-1167.2005.01405.x">Characterizing the Patterned Images That Precipitate Seizures and Optimizing Guidelines To Prevent Them</a>  Arnold Wilkins, John Emmett, and Graham Harding</li>
-</ul>
-
-<h4>Contributors:</h4>
-
-<p>Heartfelt thanks to Jim Allan of the <a href="http://diagramcenter.org/" rel="noopener">Diagram Center</a> for his discussions on the topic of alternative means of education.</p>
+Heartfelt thanks to Jim Allan of the [Diagram Center](http://diagramcenter.org/) for his discussions on the topic of alternative means of education.
