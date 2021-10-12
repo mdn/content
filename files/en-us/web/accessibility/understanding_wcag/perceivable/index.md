@@ -330,7 +330,7 @@ This guideline refers to the ability of content to be consumed by users in multi
   </tbody>
 </table>
 
-> **Note:** Also see the WCAG description for <a href="https://www.w3.org/TR/WCAG21/#adaptable">Guideline 1.3: Adaptable: Create content that can be presented in different ways without losing information or structure.</a>
+> **Note:** Also see the WCAG description for [Guideline 1.3: Adaptable: Create content that can be presented in different ways without losing information or structure.](https://www.w3.org/TR/WCAG21/#adaptable)
 
 ## Guideline 1.4: Make it easier for users to see and hear content including separating foreground from background
 
