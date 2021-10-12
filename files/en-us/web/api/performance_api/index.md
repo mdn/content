@@ -38,8 +38,6 @@ The `{{domxref("Performance.navigation","navigation")}}` property returns a {{do
   - : Provides methods and properties containing timing-related performance information for the given page.
 - {{domxref('PerformanceEntry')}}
   - : Provides methods and properties the encapsulate a single performance metric that is part of the performance timeline.
-- {{domxref('PerformanceFrameTiming')}}
-  - : Provides methods and properties containing frame timing data about the browser's event loop.
 - {{domxref('PerformanceMark')}}
   - : An abstract interface for [`performance entries`](/en-US/docs/Web/API/PerformanceEntry) with an [`entry type`](/en-US/docs/Web/API/PerformanceEntry/entryType) of "`mark`". Entries of this type are created by calling [`performance.mark()`](/en-US/docs/Web/API/Performance/mark) to add a named [`DOMHighResTimeStamp`](/en-US/docs/Web/API/DOMHighResTimeStamp) (the mark) to the browser's performance timeline.
 - {{domxref('PerformanceMeasure')}}
@@ -56,7 +54,6 @@ The `{{domxref("Performance.navigation","navigation")}}` property returns a {{do
 | Specification                                                     |
 | ----------------------------------------------------------------- |
 | [High Resolution Time](https://w3c.github.io/hr-time/)            |
-| [Frame Timing](https://wicg.github.io/frame-timing/)              |
 | [Navigation Timing](https://w3c.github.io/navigation-timing/)     |
 | [Performance Timing](https://w3c.github.io/performance-timeline/) |
 | [Resource Timing](https://w3c.github.io/resource-timing/)         |

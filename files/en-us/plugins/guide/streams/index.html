@@ -7,9 +7,6 @@ tags:
   - NPAPI
   - Plugins
 ---
-<div class="prevnext" style="text-align: right;">
-    <p><a href="/en-US/docs/Gecko_Plugin_API_Reference:Drawing_and_Event_Handling" style="float: left;">« Previous</a><a href="/en-US/docs/Gecko_Plugin_API_Reference:URLs">Next  »</a></p>
-</div>
 
 <p>This chapter describes using plug-in API functions to receive and send streams.</p>
 
@@ -80,7 +77,7 @@ NPStream *stream, NPBool seekable, uint16* stype);
 <p>Once all data in the stream has been written to the plug-in, the stream is destroyed. To do this, either the browser can call <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPP_DestroyStream">NPP_DestroyStream</a></code> or the plug-in can call <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_DestroyStream">NPN_DestroyStream</a></code>. This applies to all plug-in modes except <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NP_SEEK">NP_SEEK</a></code>.</p>
 
 <div class="note">
-<p>NOTE: A plug-in can also use the <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetURL">NPN_GetURL</a></code> method to request a stream for an arbitrary URL.</p>
+<p><strong>Note:</strong> A plug-in can also use the <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetURL">NPN_GetURL</a></code> method to request a stream for an arbitrary URL.</p>
 </div>
 
 <h3 id="Telling_the_Plug-in_When_a_Stream_Is_Deleted">Telling the Plug-in When a Stream Is Deleted</h3>
@@ -171,7 +168,7 @@ int32 offset, int32 len, void *buf);
 <p>File mode is determined in <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPP_NewStream">NPP_NewStream</a></code> by setting the mode NP_ASFILEONLY. This mode gives the plug-in full random access to the data with platform-specific file operations. The browser saves stream data to a local file, and, when the stream is complete, delivers the path of the file through a call to <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPP_StreamAsFile">NPP_StreamAsFile</a></code>.</p>
 
 <div class="note">
-<p>NOTE: Most plug-ins that need the stream saved to a file should use NP_ASFILEONLY mode rather than the older NP_ASFILE; this mode is less efficient because it uses successive calls to <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPP_Write">NPP_Write</a></code>. <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPP_StreamAsFile">NPP_StreamAsFile</a></code> provides the plug-in with a full path to a local file for the stream. It is a good idea to check that the file exists in the directory at the start of this method. If an error occurs during data retrieval or writing to the file, the browser passes null for the filename. If the file is created from a stream from the network, the file is locked in the browser disk cache until the stream or its instance is destroyed.</p>
+<p><strong>Note:</strong> Most plug-ins that need the stream saved to a file should use NP_ASFILEONLY mode rather than the older NP_ASFILE; this mode is less efficient because it uses successive calls to <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPP_Write">NPP_Write</a></code>. <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPP_StreamAsFile">NPP_StreamAsFile</a></code> provides the plug-in with a full path to a local file for the stream. It is a good idea to check that the file exists in the directory at the start of this method. If an error occurs during data retrieval or writing to the file, the browser passes null for the filename. If the file is created from a stream from the network, the file is locked in the browser disk cache until the stream or its instance is destroyed.</p>
 </div>
 
 <pre>void NPP_StreamAsFile(NPP instance, NPStream *stream,
@@ -269,7 +266,3 @@ err = NPN_DestroyStream(instance, stream, NPRES_DONE);
 </pre>
 
 <p>Your plug-in can create another instance of itself by specifying its own MIME type and a new target name in a call to <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_NewStream">NPN_NewStream</a></code>.</p>
-
-<div class="prevnext" style="text-align: right;">
-    <p><a href="/en-US/docs/Gecko_Plugin_API_Reference:Drawing_and_Event_Handling" style="float: left;">« Previous</a><a href="/en-US/docs/Gecko_Plugin_API_Reference:URLs">Next  »</a></p>
-</div>

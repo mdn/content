@@ -384,7 +384,7 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
   /**
    * Listen for messages from the background script.
    * Call "insertBeast()" or "removeExistingBeasts()".
-  */
+   */
   browser.runtime.onMessage.addListener((message) =&gt; {
     if (message.command === "beastify") {
       insertBeast(message.beastURL);

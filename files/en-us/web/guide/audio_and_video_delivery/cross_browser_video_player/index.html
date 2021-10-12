@@ -7,18 +7,16 @@ tags:
   - Video
   - full screen
 ---
-<div class="summary">
-<p><span class="seoSummary">This article describes a simple HTML5 video player that uses the Media and Fullscreen APIs and works across most major desktop and mobile browsers. As well as working fullscreen, the player features custom controls rather than just using the browser defaults. The player controls themselves won't be styled beyond the basics required to get them working; full styling of the player will be taken care of in a future article.</span></p>
-</div>
+<p>This article describes a simple HTML5 video player that uses the Media and Fullscreen APIs and works across most major desktop and mobile browsers. As well as working fullscreen, the player features custom controls rather than just using the browser defaults. The player controls themselves won't be styled beyond the basics required to get them working; full styling of the player will be taken care of in a future article.</p>
 
 <h2 id="Working_example">Working example</h2>
 
 <p>Our example video player displays a clip from an open source movie called <a href="https://mango.blender.org/about/">Tears of Steel</a>, and includes typical video controls.</p>
 
-<p><img alt="a shot of a video player, with several control buttons such as play, pause and stop. The video is showing a group of men fighting a group of robots." src="video-player-example.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="a shot of a video player, with several control buttons such as play, pause and stop. The video is showing a group of men fighting a group of robots." src="video-player-example.png"></p>
 
 <div class="note">
-<p><strong>Note</strong>: You can see the <a href="https://iandevlin.github.io/mdn/video-player/">example running live</a>, or check out the <a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player">source code on Github</a>.</p>
+<p><strong>Note:</strong> You can see the <a href="https://iandevlin.github.io/mdn/video-player/">example running live</a>, or check out the <a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player">source code on Github</a>.</p>
 </div>
 
 <h2 id="HTML_Markup">HTML Markup</h2>
@@ -53,7 +51,7 @@ tags:
 <p>A poster image is defined for the video, and the <code>preload</code> attribute is set to <code>metadata</code>, which informs the browser that it should initially only attempt to load the metadata from the video file rather than the entire video file. This provides the player with data such as video duration and format.</p>
 
 <div class="note">
-<p><strong>Note</strong>: IE9 behaves differently than most other browsers when a <code>poster</code> attribute is set. Most browsers interpret the presence of a <code>poster</code> attribute to mean that the specified image is to be displayed until the user chooses to play the video. IE9 will only use the specified poster image in this way if <code>preload="none"</code> is set; otherwise, it will take the first still of the video and display that instead.</p>
+<p><strong>Note:</strong> IE9 behaves differently than most other browsers when a <code>poster</code> attribute is set. Most browsers interpret the presence of a <code>poster</code> attribute to mean that the specified image is to be displayed until the user chooses to play the video. IE9 will only use the specified poster image in this way if <code>preload="none"</code> is set; otherwise, it will take the first still of the video and display that instead.</p>
 </div>
 
 <p>Three different video sources are provided for the player: MP4, WebM, and Ogg. Using these different source formats gives the best chance of being supported across all browsers that support HTML5 video. For further information on video formats and browser compatibility, see <a href="/en-US/docs/Web/Media/Formats#browser_compatibility">supported media formats</a>.</p>
@@ -235,7 +233,7 @@ voldec.addEventListener('click', function(e) {
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: for more information and ideas on progress bars and buffering feedback, read <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges">Media buffering, seeking, and time ranges</a>.</p>
+<p><strong>Note:</strong> for more information and ideas on progress bars and buffering feedback, read <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges">Media buffering, seeking, and time ranges</a>.</p>
 </div>
 
 <h3 id="Skip_Ahead">Skip Ahead</h3>

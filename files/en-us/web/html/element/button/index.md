@@ -157,7 +157,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - {{htmlattrdef("formtarget")}}
 
-  - : If the button is a submit button, this attribute is a author-defined name or standardized, underscore-prefixed keyword indicating where to display the response from submitting the form. This is the `name` of, or keyword for, a _browsing context_ (a tab, window, or {{HTMLElement("iframe")}}). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the button's form owner. The following keywords have special meanings:
+  - : If the button is a submit button, this attribute is an author-defined name or standardized, underscore-prefixed keyword indicating where to display the response from submitting the form. This is the `name` of, or keyword for, a _browsing context_ (a tab, window, or {{HTMLElement("iframe")}}). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the button's form owner. The following keywords have special meanings:
 
     - `_self`: Load the response into the same browsing context as the current one. This is the default if the attribute is not specified.
     - `_blank`: Load the response into a new unnamed browsing context — usually a new tab or window, depending on the user’s browser settings.
