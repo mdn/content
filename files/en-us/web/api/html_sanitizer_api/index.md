@@ -28,21 +28,26 @@ The other applies a string using a Sanitzer directly to an existing element node
 ## Interfaces
 
 - {{domxref('Sanitizer')}}
-  - : The **`Sanitizer`** interface provides the functionality to take untrusted strings of HTML, and sanitize them for safe insertion into a document’s DOM.
+  - : Provides the functionality to define a sanitizer configuration, and to sanitize untrusted strings of HTML, {{domxref('Document')}} and {{domxref('DocumentFragment')}} objects.
 - {{domxref('Element/setHTML','Element.setHTML()')}}
-  - : The `setHTML` method of the {{domxref('Element')}} interface applies a string using a `Sanitizer` directly to an existing element node.
+  - : Sanitizes a string of HTML using a `Sanitizer` and sets it onto an existing element node.
+
 
 ## Examples
 
-This example shows the use of the {{domxref('Sanitizer.sanitize()')}} method.
-This returns a {{domxref('DocumentFragment')}} with disallowed `script` and `blink` elements removed.
+The example below shows a sanitization operation using the {{domxref("Sanitizer.sanitizeFor()")}} method.
+This method takes as inputs a string of HTML to sanitize and the context (tag) in which it is sanitized, and returns a sanitized node object for the specified tag.
+To simplify the presentation the result that is shown is actually the _innerHTML_ of the returned object.
+
+> **Note:** The API _only_ sanitizes HTML in strings in the context of a particular element/tag.
+> For more information see {{domxref('HTML Sanitizer API')}} (and {{domxref("Sanitizer.sanitizeFor()")}}).
+
+This example shows the result of sanitizing a string with disallowed `script` element using the default sanitizer (in a `div` context). 
 
 ```js
-// our input string to clean
-const stringToClean = 'Some text <b><i>with</i></b> <blink>tags</blink>, including a rogue script <script>alert(1)</script> def.';
-
-const result = new Sanitizer().sanitize(stringToClean);
-// Result: A DocumentFragment containing text nodes and a <b> element, with a <i> child element
+let unsanitized = "abc <script>alert(1)</script> def"
+const sanitized =  new Sanitizer().sanitizeFor("div", unsanitized);
+// Result (innerHTML of 'sanitized'): script will be removed: "abc alert(1) def"
 ```
 
 ## Specifications
