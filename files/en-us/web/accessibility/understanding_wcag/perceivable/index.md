@@ -133,19 +133,62 @@ The key here is that text can be converted to other forms that people with disab
 
 Time-based media refers to multimedia with a duration, such as audio and video. Note that if the audio/video serves as an alternative to existing text content, you don't need to provide another text alternative.
 
-| Success criteria                                                                  | How to conform to the criteria                                                                                                                                                                                                                                                                   | Practical resource                                                                                                                                                                                                                                                                                                                                                  |
-| --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1.2.1 Provide alternatives for pre-recorded audio-only and video-only content (A) | A transcript should be provided for prerecorded audio-only media, and a transcript or audio description should be provided for prerecorded video-only media (i.e., silent video).                                                                                                                | See [Audio transcripts](/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts) for transcript information. No audio description tutorial is available yet.                                                                                                                                                                                                   |
-| 1.2.2 Provide captions for web-based video (A)                                    | You should provide captions for video presented on the web (e.g., HTML5 video). This is for the benefit of people who can't hear the audio part of the video.                                                                                                                                    | See [Video text tracks](/en-US/docs/Learn/Accessibility/Multimedia#video_text_tracks) for HTML5 video captions, and [Other multimedia content](/en-US/docs/Learn/Accessibility/Multimedia#other_multimedia_content) for other technologies. See also [Add your own subtitles & closed captions](https://support.google.com/youtube/answer/2734796?hl=en) (YouTube). |
-| 1.2.3 Provide text transcript or audio description for web-based video (A)        | You should provide text transcripts or audio descriptions for video presented on the web (e.g., HTML5 video. This is for the benefit of people who can't see the visual part of the video, and don't get the full content from the audio alone.                                                  | See [Audio transcripts](/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts) for transcript information. No audio description tutorial is available yet.                                                                                                                                                                                                   |
-| 1.2.4 Provide captions for live audio (AA)                                        | You should provide synchronized captions for all live multimedia that contains audio (e.g., video conferences, live audio broadcasts).                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                     |
-| 1.2.5 Provide audio descriptions for prerecorded video (AA)                       | Audio descriptions should be provided for prerecorded video, but only where the existing audio does not convey the full meaning expressed by the video.                                                                                                                                          |                                                                                                                                                                                                                                                                                                                                                                     |
-| 1.2.6 Provide sign language equivalent to prerecorded audio (AAA)                 | An equivalent sign language video should be provided for any prerecorded content containing audio.                                                                                                                                                                                               |                                                                                                                                                                                                                                                                                                                                                                     |
-| 1.2.7 Provide extended video with audio descriptions (AAA)                        | Where audio descriptions cannot be provided (see 1.2.5) due to video timing issues (e.g., there are no suitable pauses in the content in which to insert the audio descriptions), an alternative version of the video should be provided that includes inserted pauses (and audio descriptions). |                                                                                                                                                                                                                                                                                                                                                                     |
-| 1.2.8 Provide an alternative for prerecorded media (AAA)                          | For all content that features video, a descriptive text transcript should be provided, for example a script of the movie you are watching. This is for the benefit of hearing-impaired viewers who cannot hear the content.                                                                      | See [Audio transcripts](/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts) for transcript information.                                                                                                                                                                                                                                                   |
-| 1.2.9 Provide a transcript for live audio (AAA)                                   | For any live audio content being broadcast, a descriptive text should be provided, for example a script of the play or musical you are listening to. This is for the benefit of hearing-impaired viewers who cannot hear the content.                                                            | See [Audio transcripts](/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts) for transcript information.                                                                                                                                                                                                                                                   |
+<table>
+ <thead>
+  <tr>
+   <th scope="col">Success criteria</th>
+   <th scope="col">How to conform to the criteria</th>
+   <th scope="col">Practical resource</th>
+  </tr>
+  <tr>
+   <td>1.2.1 Provide alternatives for pre-recorded audio-only and video-only content (A)</td>
+   <td>A transcript should be provided for prerecorded audio-only media, and a transcript or audio description should be provided for prerecorded video-only media (i.e., silent video).</td>
+   <td>See&nbsp;<a href="/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a> for transcript information. No audio description tutorial is available yet.</td>
+  </tr>
+  <tr>
+   <td>1.2.2 Provide captions for web-based video (A)</td>
+   <td>You should provide captions for video presented on the web (e.g., HTML5 video). This is for the benefit of people who can't hear the audio part of the video.</td>
+   <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#video_text_tracks">Video text tracks</a> for HTML5 video captions, and <a href="/en-US/docs/Learn/Accessibility/Multimedia#other_multimedia_content">Other multimedia content</a> for other technologies. See also <a href="https://support.google.com/youtube/answer/2734796?hl=en">Add your own subtitles &amp; closed captions</a> (YouTube).</td>
+  </tr>
+  <tr>
+   <td>1.2.3 Provide text transcript or audio description for web-based video (A)</td>
+   <td>You should provide text transcripts or audio descriptions for video presented on the web (e.g., HTML5 video. This is for the benefit of people who can't see the visual part of the video, and don't get the full content from the audio alone.</td>
+   <td>See&nbsp;<a href="/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a> for transcript information. No audio description tutorial is available yet.</td>
+  </tr>
+  <tr>
+   <td>1.2.4 Provide captions for live audio (AA)</td>
+   <td>You should provide synchronized captions for all live multimedia that contains audio (e.g., video conferences, live audio broadcasts).</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>1.2.5 Provide audio descriptions for prerecorded video (AA)</td>
+   <td>Audio descriptions should be provided for prerecorded video, but only where the existing audio does not convey the full meaning expressed by the video.</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>1.2.6 Provide sign language equivalent to prerecorded audio (AAA)</td>
+   <td>An equivalent sign language video should be provided for any prerecorded content containing audio.</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>1.2.7 Provide extended video with audio descriptions (AAA)</td>
+   <td>Where audio descriptions cannot be provided (see 1.2.5) due to video timing issues (e.g., there are no suitable pauses in the content in which to insert the audio descriptions), an alternative version of the video should be provided that includes inserted pauses (and audio descriptions).</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>1.2.8 Provide an alternative for prerecorded media (AAA)</td>
+   <td>For all content that features video, a descriptive text transcript should be provided, for example a script of the movie you are watching. This is for the benefit of hearing-impaired viewers who cannot hear the content.</td>
+   <td>See&nbsp;<a href="/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a> for transcript information.</td>
+  </tr>
+  <tr>
+   <td>1.2.9 Provide a transcript for live audio (AAA)</td>
+   <td>For any live audio content being broadcast, a descriptive text should be provided, for example a script of the play or musical you are listening to. This is for the benefit of hearing-impaired viewers who cannot hear the content.</td>
+   <td>See&nbsp;<a href="/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a> for transcript information.</td>
+  </tr>
+ </thead>
+</table>
 
-> **Note:** Also see the <a href="https://www.w3.org/TR/WCAG21/#time-based-media">WCAG description for Guideline 1.2: Time-based Media: Provide alternatives for time-based media</a>.
+> **Note:** Also see the [WCAG description for Guideline 1.2: Time-based Media: Provide alternatives for time-based media](https://www.w3.org/TR/WCAG21/#time-based-media).
 
 ## Guideline 1.3 — Create content that can be presented in different ways
 
