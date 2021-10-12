@@ -612,7 +612,7 @@ This guideline relates to making sure core content is easy to discern from backg
   </thead>
 </table>
 
-> **Note:** Also see the WCAG description for [Guideline 1.4: Distinguishable: Make it easier for users to see and hear content including separating foreground from background](https://www.w3.org/TR/WCAG21/#distinguishable).
+> **Note:** Also see the WCAG description for [Guideline 1.4: Distinguishable: Make it easier for users to see and hear content including separating foreground from background.](https://www.w3.org/TR/WCAG21/#distinguishable)
 
 ## See also
 
