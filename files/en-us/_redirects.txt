@@ -8317,6 +8317,7 @@
 /en-US/docs/Web/API/PushManager.registrations	/en-US/docs/Web/API/PushManager/registrations
 /en-US/docs/Web/API/PushManager.unregister	/en-US/docs/Web/API/PushManager/unregister
 /en-US/docs/Web/API/Push_API/Using_the_Push_API	/en-US/docs/Web/API/Push_API
+/en-US/docs/Web/API/RTCAnswerOptions	/en-US/docs/Web/API/RTCPeerConnection/createAnswer
 /en-US/docs/Web/API/RTCDTMFSender/tonechange	/en-US/docs/Web/API/RTCDTMFSender/tonechange_event
 /en-US/docs/Web/API/RTCDataChannel.binaryType	/en-US/docs/Web/API/RTCDataChannel/binaryType
 /en-US/docs/Web/API/RTCDataChannel.bufferedAmount	/en-US/docs/Web/API/RTCDataChannel/bufferedAmount
@@ -8351,6 +8352,10 @@
 /en-US/docs/Web/API/RTCIceProtocol	/en-US/docs/Web/API/RTCIceCandidate/protocol
 /en-US/docs/Web/API/RTCIceTcpCandidateType	/en-US/docs/Web/API/RTCIceCandidate/tcpType
 /en-US/docs/Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimesta	/en-US/docs/Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimestamp
+/en-US/docs/Web/API/RTCOfferAnswerOptions	/en-US/docs/Web/API/RTCPeerConnection/createAnswer
+/en-US/docs/Web/API/RTCOfferAnswerOptions/voiceActivityDetection	/en-US/docs/Web/API/RTCPeerConnection/createAnswer
+/en-US/docs/Web/API/RTCOfferOptions	/en-US/docs/Web/API/RTCPeerConnection/createOffer
+/en-US/docs/Web/API/RTCOfferOptions/iceRestart	/en-US/docs/Web/API/RTCPeerConnection/createOffer
 /en-US/docs/Web/API/RTCOutboundRtpStreamStats/perDscpPacketsReceived	/en-US/docs/Web/API/RTCOutboundRtpStreamStats/perDscpPacketsSent
 /en-US/docs/Web/API/RTCPeerConnection.addStream	/en-US/docs/Web/API/RTCPeerConnection/addStream
 /en-US/docs/Web/API/RTCPeerConnection.close	/en-US/docs/Web/API/RTCPeerConnection/close

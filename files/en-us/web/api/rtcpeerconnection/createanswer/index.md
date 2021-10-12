@@ -35,8 +35,9 @@ RTCPeerConnection.createAnswer(successCallback, failureCallback[, options]); {{d
 ### Parameters
 
 - `options` {{optional_inline}}
-  - : An object which contains options which customize the answer; this is based on the
-    {{domxref("RTCAnswerOptions")}} dictionary.
+  - : An object which contains the following properties:
+    - `voiceActivityDetection` {{optional_inline}}
+      - : For configurations of systems and codecs that are able to detect when the user is speaking and toggle muting on and off automatically, this option enables and disables that behavior. The default value is `true`, enabling this functionality
 
 ### Deprecated parameters
 
@@ -54,8 +55,7 @@ should update any existing code to use the {{jsxref("Promise")}}-based version o
     {{domxref("DOMException")}} object explaining why the request to create an answer
     failed.
 - `options` {{optional_inline}}
-  - : An optional {{domxref("RTCOfferOptions")}} object providing options requested for
-    the answer.
+  - : An optional object providing options requested for the answer.
 
 ### Exceptions
 

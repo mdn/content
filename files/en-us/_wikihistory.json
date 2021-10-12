@@ -69723,13 +69723,6 @@
       "dvincent"
     ]
   },
-  "Web/API/RTCAnswerOptions": {
-    "modified": "2020-10-15T22:08:24.120Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy"
-    ]
-  },
   "Web/API/RTCCertificate": {
     "modified": "2020-10-15T21:42:29.375Z",
     "contributors": [
@@ -70924,36 +70917,6 @@
     "modified": "2020-10-15T22:15:52.187Z",
     "contributors": [
       "Sheppy"
-    ]
-  },
-  "Web/API/RTCOfferAnswerOptions": {
-    "modified": "2020-10-15T22:08:23.550Z",
-    "contributors": [
-      "sideshowbarker",
-      "chrisdavidmills",
-      "Sheppy"
-    ]
-  },
-  "Web/API/RTCOfferAnswerOptions/voiceActivityDetection": {
-    "modified": "2020-10-15T22:08:25.025Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy"
-    ]
-  },
-  "Web/API/RTCOfferOptions": {
-    "modified": "2020-10-15T22:08:26.218Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy"
-    ]
-  },
-  "Web/API/RTCOfferOptions/iceRestart": {
-    "modified": "2020-11-04T00:00:29.134Z",
-    "contributors": [
-      "realityforge",
-      "Sheppy",
-      "larspa"
     ]
   },
   "Web/API/RTCOutboundRtpStreamStats": {

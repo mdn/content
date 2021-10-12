@@ -21,8 +21,7 @@ or not the most recent RTP packet on the source includes voice activity.
 
 This
 is only present if the stream is using the voice activity detection feature; see the
-`RTCOfferOptions` flag
-[`voiceActivityDetection`](/en-US/docs/Web/API/RTCPeerConnection/createOffer#RTCOfferOptions_dictionary).
+[`voiceActivityDetection` option](/en-US/docs/Web/API/RTCPeerConnection/createOffer).
 
 ## Syntax
 
