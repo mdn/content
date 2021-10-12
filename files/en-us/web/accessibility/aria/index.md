@@ -10,7 +10,7 @@ Accessible Rich Internet Applications **(ARIA)** is a set of attributes that def
 
 It supplements HTML so that interactions and widgets commonly used in applications can be passed to assistive technologies when there is not otherwise a mechanism. For example, ARIA enables accessible navigation landmarks in HTML4, JavaScript widgets, form hints and error messages, live content updates, and more.
 
-> **Warning:** Many of these widgets were later incorporated into HTML5, and <strong>developers should prefer using the correct semantic HTML element over using ARIA</strong>, if such an element exists. For instance, native elements have built-in <a href="/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets">keyboard accessibility</a>, roles and states. However, if you choose to use ARIA, you are responsible for mimicking (the equivalent) browser behavior in script.
+> **Warning:** Many of these widgets were later incorporated into HTML5, and **developers should prefer using the correct semantic HTML element over using ARIA**, if such an element exists. For instance, native elements have built-in [keyboard accessibility](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets), roles and states. However, if you choose to use ARIA, you are responsible for mimicking (the equivalent) browser behavior in script.
 
 Here's the markup for a progress bar widget:
 
