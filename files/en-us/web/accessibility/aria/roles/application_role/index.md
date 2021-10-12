@@ -9,7 +9,7 @@ tags:
   - Role application
   - document structure role
 ---
-The `application` role indicates to assistive technologies that an element _and all of its children_ should be treated similar to a desktop application, and no traditional HTML interpretation techniques should be used. This role should only be used to define very dynamic and desktop-like web applications.
+The `application` role indicates to assistive technologies that an element _and all of its children_ should be treated similar to a desktop application, and no traditional HTML interpretation techniques should be used. This role should only be used to define very dynamic and desktop-like web applications. Most mobile and desktop web apps _are not_ considered applications for this purpose.
 
 ```html
 <div role="application">...</div>
@@ -33,7 +33,7 @@ In addition, a set of so-called _quick navigation keys_ has been established ove
 
 For all of this to work, ATs intercept almost all keyboard input and consume it themselves, letting nothing through to the browser or other user agent. To be able to interact with a web page, a standard set of widgets is recognized that, when pressing a certain key (usually the <kbd>Enter</kbd> key) this mode is switched off. The screen reader mode, often called _forms mode_ or _focus mode_, lets all keyboard input go through to the browser again. <kbd>Escape</kbd> is the most common way of switching back to _browse_ mode.
 
-The `application` role is designed to provide a means for widgets that are not part of the standard set to be accessible for direct interaction in ATs that use both _browse_ and _focus_ modes for interacting with web content.
+The `application` role is designed to provide a means for widgets that are not part of the standard set to be accessible for direct interaction in ATs that use both _browse_ and _focus_ modes for interacting with web content. Most common widgets have expected keyboard interaction behaviors. Because of this, a custom keyboard experience created by a web author would create a confusing experience.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -56,7 +56,6 @@ The `application` role is designed to provide a means for widgets that are not p
 - `aria-haspopup`
   - : Indicates there is a popup, such as menu or dialog, that can be triggered by the element.
 
-
 ### Keyboard interactions
 
 Keyboard interaction is completely under the web author's control and can be anything associated with the particular widget being implemented. In a slides application, for example, a widget could be created that uses the arrow keys to position elements on the slide, and uses audio feedback via an ARIA live region to communicate the position and overlap status with other objects. Focus is being managed via _aria-activedescendant_.
@@ -72,7 +71,7 @@ The <kbd>tab</kbd> , <kbd>Space</kbd> and <kbd>Enter</kbd> keys, as well as <kbd
 - Changing attribute values
   - : `aria-activedescendant` is used to manage the focus inside the application container. Set in response to keyboard or other application events that change focus or point of interaction.
 
->**Note** The `application` role does not have a related HTML widget and thus is completely free form. The author of the application must take full responsibility for not letting users get stuck in a focus limbo or trap focus inside something the user cannot exit from. All aspects of interaction, including returning to the regular web content on other parts of the page, must be handled. Use wisely, and cautiously!
+>**Note** The `application` role does not have a related HTML widget and thus is completely free form. The author of the application must take full responsibility for not letting users get stuck in a focus trap inside something the user cannot exit from. All aspects of interaction, including returning to the regular web content on other parts of the page, must be handled. Use wisely, and cautiously, and remember to test!
 ## Examples
 
 Some prominent web applications that use the application role properly are:
@@ -83,7 +82,9 @@ Some prominent web applications that use the application role properly are:
 
 ## Accessibility concerns
 
-Improperly using the `application` role can unintentionally take away access from information on a web page, so be very mindful of using it. Think hard on if you actually need it and cannot just use a set of other, known, widgets to accomplish the same task. If used, the application role should be added to the lowest common container possible, not on the `<body>` element, for example.
+Improperly using the `application` role can unintentionally take away access from information on a web page, so be very mindful of using it. Think hard on if you actually need it and cannot just use a set of other, known, widgets to accomplish the same task. 
+
+If used, the application role should be added to the lowest common container possible, not on the `<body>` element, for example. Also be sure to test what you have written with assistive technology, to verify it works as intended.
 
 ## Specifications
 
