@@ -728,7 +728,7 @@ If you get stuck, you can always press the _Show solution_ button, or check out 
 
 ### Nesting lists
 
-It is perfectly ok to nest one list inside another one. You might want to have some sub-bullets sitting below a top-level bullet. Let's take the second list from our recipe example:
+It is perfectly OK to nest one list inside another one. You might want to have some sub-bullets sitting below a top-level bullet. Let's take the second list from our recipe example:
 
 ```html
 <ol>

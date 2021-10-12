@@ -263,7 +263,7 @@ You'll need to make local copies of the following four pages, all in the same di
 
 You should:
 
-1.  Add an unordered list in the indicated place on one page that includes the names of the pages to link to. A navigation menu is usually just a list of links, so this is semantically ok.
+1.  Add an unordered list in the indicated place on one page that includes the names of the pages to link to. A navigation menu is usually just a list of links, so this is semantically OK.
 2.  Change each page name into a link to that page.
 3.  Copy the navigation menu across to each page.
 4.  On each page, remove just the link to that same page — it's confusing and unnecessary for a page to include a link to itself. And, the lack of a link acts a good visual reminder of which page you are currently on.

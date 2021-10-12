@@ -67,7 +67,7 @@ Note that a {{jsxref("URIError")}} will be thrown if one attempts to encode a su
 which is not part of a high-low pair, e.g.,
 
 ```js
-// high-low pair ok
+// high-low pair OK
 console.log(encodeURIComponent('\uD800\uDFFF'));
 
 // lone high surrogate throws "URIError: malformed URI sequence"
