@@ -10,20 +10,76 @@ The state of ARIA technology has always depended on the community. If you notice
 > **Note:** When finding a bug, please also update the relevant compatibility tables in the [examples page](/en-US/docs/Web/Accessibility/ARIA/ARIA_Test_Cases).
 
 ### Screen Readers 
-| Software | Where to file | Notes  |
-| ------ | ------ | ------ | 
-| [Freedom Scientific JAWS](https://www.freedomscientific.com/products/fs/jaws-product-page.asp) |  [JAWS technical support form](https://www.freedomscientific.com/Forms/TechSupport) | |
-|  [GW Micro Window Eyes](/en-US/docs/Mozilla/Developer_guide/Inner_and_outer_windows) | <a href="mailto:support@gwmicro.com">Window-Eyes comments, questions, and feedback</a> (email) |
-| [Non Visual Desktop Access (NVDA)](http://www.nvda-project.org/) | [File NVDA bugs](http://www.nvda-project.org/wiki/ReportingIssues) | Discuss NVDA issues |
+
+<table style="width: 100%;">
+ <thead>
+  <tr>
+   <th>Software</th>
+   <th>Where to file</th>
+   <th>Notes</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a href="https://www.freedomscientific.com/products/fs/jaws-product-page.asp">Freedom Scientific JAWS</a></td>
+   <td><a href="https://www.freedomscientific.com/Forms/TechSupport">JAWS technical support form</a></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Developer_guide/Inner_and_outer_windows">GW Micro Window Eyes</a></td>
+   <td><a href="mailto:support@gwmicro.com">Window-Eyes comments, questions, and feedback</a></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><a href="http://www.nvda-project.org/">Non Visual Desktop Access (NVDA)</a></td>
+   <td><a href="http://www.nvda-project.org/wiki/ReportingIssues">File NVDA bugs</a></td>
+   <td>Discuss NVDA issues</td>
+  </tr>
+  </tbody>
+  </table>
 
 
 ### Browsers 
 
-| Software | Where to file | Notes |
-| ------ | ------ | ------ | 
- | Apple Safari | [File WebKit.org bugs](https://www.webkit.org/quality/reporting.html) | |
-| Google Chrome |  [File Chromium bugs](https://code.google.com/p/chromium/issues/list) | |
-| Microsoft Internet Explorer | [File IE bugs](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/) | |
-| Microsoft Edge |   [File MS Edge Bugs](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/) | [View existing MS Edge ARIA bugs](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&#x26;q=ARIA) |
-| Mozilla Firefox | [File Firefox bugs](https://bugzilla.mozilla.org/)> | Use Component: Disability Access APIs |
-| Opera |  [File Opera bugs](https://bugs.opera.com/wizard/)| Use [ARIA] in the summary field |
+
+<table style="width: 100%;">
+ <thead>
+  <tr>
+   <th>Software</th>
+   <th>Where to file</th>
+   <th>Notes</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Apple Safari</td>
+   <td><a href="https://www.webkit.org/quality/reporting.html">File WebKit.org bugs</a></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>Google Chrome</td>
+   <td><a href="https://code.google.com/p/chromium/issues/list">File Chromium bugs</a></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>Microsoft Internet Explorer</td>
+   <td><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/">File IE bugs</a></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>Microsoft Edge</td>
+   <td><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/">File MS Edge Bugs</a></td>
+   <td><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&amp;q=ARIA">View existing MS Edge ARIA bugs</a></td>
+  </tr>
+  <tr>
+   <td>Mozilla Firefox</td>
+   <td><a href="https://bugzilla.mozilla.org/">File Firefox bugs </a></td>
+   <td>Use Component: Disability Access APIs</td>
+  </tr>
+  <tr>
+   <td>Opera</td>
+   <td><a href="https://bugs.opera.com/wizard/">File Opera bugs</a></td>
+   <td><span>Use [ARIA] in the summary field</span></td>
+  </tr>
+ </tbody>
+</table>
