@@ -54,7 +54,8 @@ We normally associate L, M, or S cone sensitivity with the sensation of red, gre
 
 RGB is called an additive color model because it functions by adding light of different wavelengths in different proportions to stimulate the L, M, S cones in the eye to create a particular color sensation. For instance when you see the color yellow on your monitor, the monitor is still only emitting red and green light. The separate red and green stimulate the L and M cones similarly to how a "yellow" wavelength of light might, as yellow is "in between" red and green. The red and green light do not "mix" in the air as if paint, they remain separate. The "mixing" happens in our vision system's neurological processing.
 
-<figure><img alt="An image of a block of red and of green, with a plus, over a bar of yellow with an equals sign." src="greenandredareyellow.svg"><figcaption>The monitor is only emitting the red and green light shown on top to create the yellow bar underneath.</figcaption></figure>
+![An image of a block of red and of green, with a plus, over a bar of yellow with an equals sign](greenandredareyellow.svg)
+The monitor is only emitting the red and green light shown on top to create the yellow bar underneath.
 
 #### CMYK subtractive model
 
@@ -77,7 +78,8 @@ Like color, contrast is not "real," it is a perception. It takes the first 20 ye
 
 In the following image both of the yellow dots, and the grey of the square they are on, are identical in terms of the sRGB color value that is being displayed on your monitor. It is your context-sensitive perception of these colors that makes them appear so different, as your brain's image processing adjusts the perception based on what it thinks is in shadow or not.
 
-<figure><img alt="An image of a checkerboard, where identical colors look different if they are in shadow." src="yellowdotcheckershadow_dlyon.png"><figcaption>The yellow dots in this image are identical colors coming from your monitor, but they appear different due to context. Image D.Lyon</figcaption></figure>
+![An image of a checkerboard, where identical colors look different if they are in shadow](yellowdotcheckershadow_dlyon.png)
+The yellow dots in this image are identical colors coming from your monitor, but they appear different due to context. Image D.Lyon
 
 Our contrast, lightness, and color perception is affected by the context of the nearby colors, and other features of a design or image. This makes predicting contrast challenging. It is clearly not as simple as the distance or ratio between two colors.
 
@@ -87,7 +89,7 @@ For web content, readability is one very important goal. Readability is not the 
 
 For normal vision, the contrast sensitivity (CS) JND legibility level is about 1%, while someone with a mild impairment might have a CS of 3%. 10% would be represent profound impairment in the area of low vision. These levels are for large, bold fonts on a special chart used for testing contrast sensitivity.
 
-But the threshold of 1% to 3% is wholly insufficient for fluent, easy reading. The minimum critical contrast level is ten times the CS JND, and 20 times the JND is considered the better target to allow for "contrast reserve." [<cite>(Visual requirements for reading, S G Whittaker, J Lovie-Kitchin)</cite>](https://pubmed.ncbi.nlm.nih.gov/8430009/).
+But the threshold of 1% to 3% is wholly insufficient for fluent, easy reading. The minimum critical contrast level is ten times the CS JND, and 20 times the JND is considered the better target to allow for "contrast reserve." <cite>[(Visual requirements for reading, S G Whittaker, J Lovie-Kitchin)](https://pubmed.ncbi.nlm.nih.gov/8430009/)</cite>.
 
 ### Spatial Frequency
 
@@ -113,7 +115,7 @@ Today, the proliferation of easily available web fonts of all sizes and weights 
 
 ## CSS and the sRGB Colorspace
 
-The W3.org defines the sRGB colorspace as the [default for web content](https://www.w3.org/TR/css-color-3/#SRGB). The MDN page on **[\<color>](/en-US/docs/Web/CSS/color_value)** says "_The **[CSS](/en-US/docs/Web/CSS)** **[color data type](/en-US/docs/Web/CSS/CSS_Types)** represents a color in the_ **_[sRGB colorspace](https://en.wikipedia.org/wiki/SRGB)._"**
+The W3.org defines the sRGB colorspace as the [default for web content](https://www.w3.org/TR/css-color-3/#SRGB). The MDN page on [\<color>](/en-US/docs/Web/CSS/color_value) says "_The [CSS](/en-US/docs/Web/CSS) [color data type](/en-US/docs/Web/CSS/CSS_Types) represents a color in the [sRGB colorspace](https://en.wikipedia.org/wiki/SRGB)._"
 
 ### CSS Color Level 3 notations:
 
@@ -239,7 +241,7 @@ A complete color theory and color design guide is beyond the scope of this docum
 
 The world standard in terms of colorimetry (measuring color) is the **CIE**, and their [interactive glossary](http://eilv.cie.co.at) is filled with color information.
 
-<p class="note notecard">TIP: when searching the CIE glossary use the UK spelling of "colour."</p>
+> **Note:** Tip: when searching the CIE glossary use the UK spelling of "colour."
 
 #### Colorfulness
 
@@ -361,7 +363,8 @@ Linearize the data to remove the encoded transfer curve.
 
 Using the function shown below:
 
-<pre class="brush: javascript">function sRGBtoLin(colorChannel) {
+```javascript
+function sRGBtoLin(colorChannel) {
   // Send this function a decimal sRGB gamma encoded color channel
   // between 0.0 and 1.0, and it returns a linearized value.
   if ( colorChannel &#x3C;= 0.04045 ) {
@@ -369,9 +372,10 @@ Using the function shown below:
   } else {
       return Math.pow((( colorChannel + 0.055)/1.055),2.4);
   }
-}</pre>
+}
+```
 
-<div class="note notecard"><h4>Important Note</h4><p>Those familiar with the WCAG 2.x contrast math may notice that the above code uses the threshold value of 0.04045. This is the official IEC standard. The WCAG 2.x guidelines were drafted citing an obsolete value. While the WCAG 2.x version is technically incorrect, with 8-bit color there is no functional difference for the purpose of WCAG 2.x contrast. For the record, the WCAG 2.x value is 0.03928.
+> **Note:** Those familiar with the WCAG 2.x contrast math may notice that the above code uses the threshold value of 0.04045. This is the official IEC standard. The WCAG 2.x guidelines were drafted citing an obsolete value. While the WCAG 2.x version is technically incorrect, with 8-bit color there is no functional difference for the purpose of WCAG 2.x contrast. For the record, the WCAG 2.x value is 0.03928.
 
 #### Step three: Spectrally Weighted Luminance
 
@@ -393,15 +397,15 @@ Raise each color channel to the power of 2.2, the same as an sRGB display. This 
 
 Within the W3 AGWG there is active discussion and investigation regarding the WCAG 2.x contrast method, math, and future proposals. The main discussion thread is on GitHub as [W3C/WCAG issue #695](https://github.com/w3c/wcag/issues/695).
 
-- <cite><a href="https://webaim.org/resources/contrastchecker/">WCAG 2.x Contrast Checker</a></cite>
+- <cite>[WCAG 2.x Contrast Checker](https://webaim.org/resources/contrastchecker/)</cite>
 
   at WebAim.org. This popular and easy to use contrast check is for the WCAG 2.x guidelines 1.4.3 and 1.4.6
 
-- <cite><a href="https://www.myndex.com/APCA/">APCA Contrast Calculator</a></cite>
+- <cite>[APCA Contrast Calculator](https://www.myndex.com/APCA/)</cite>
 
   The proposed method for assessing contrast and more.
 
-- <cite><a href="http://brucelindbloom.com">brucelindbloom.com</a></cite>
+- <cite>[brucelindbloom.com](http://brucelindbloom.com)</cite>
 
   Bruce Lindbloom's site on colorspaces and the related math and transformations. It includes a very helpful calculator that converters between many color models, including the key CIE models.
 
@@ -412,7 +416,7 @@ Within the W3 AGWG there is active discussion and investigation regarding the WC
 - [Accessibility](/en-US/docs/Web/Accessibility)
 - [Accessibility learning path](/en-US/docs/Learn/Accessibility)
 - [color](/en-US/docs/Web/CSS/color)
-- [\<color>](/en-US/docs/Web/CSS/color_value)
+- [`<color>`](/en-US/docs/Web/CSS/color_value)
 - [Web accessibility for seizures and physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders)
 
 #### W3C Issues and Discussions
