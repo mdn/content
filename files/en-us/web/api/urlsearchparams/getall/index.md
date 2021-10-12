@@ -34,11 +34,8 @@ An array of {{domxref("USVString")}}s.
 ## Examples
 
 ```js
-let url = new URL('https://example.com?foo=1&bar=2');
-let params = new URLSearchParams(url.search.slice(1));
-
-//Add a second foo parameter.
-params.append('foo', 4);
+let url = new URL('https://example.com?foo=1&bar=2&foo=4');
+let params = new URLSearchParams(url.search);
 
 console.log(params.getAll('foo')) //Prints ["1","4"].
 ```
