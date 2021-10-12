@@ -7994,6 +7994,14 @@
 /en-US/docs/Web/API/MsStereo3DRenderMode	/en-US/docs/Web/API/HTMLVideoElement/msStereo3DRenderMode
 /en-US/docs/Web/API/MsZoom	/en-US/docs/Web/API/HTMLVideoElement/msZoom
 /en-US/docs/Web/API/MsZoomTo	/en-US/docs/Web/API/Element/msZoomTo
+/en-US/docs/Web/API/MutationObserverInit	/en-US/docs/Web/API/MutationObserver/observe
+/en-US/docs/Web/API/MutationObserverInit/attributeFilter	/en-US/docs/Web/API/MutationObserver/observe
+/en-US/docs/Web/API/MutationObserverInit/attributeOldValue	/en-US/docs/Web/API/MutationObserver/observe
+/en-US/docs/Web/API/MutationObserverInit/attributes	/en-US/docs/Web/API/MutationObserver/observe
+/en-US/docs/Web/API/MutationObserverInit/characterData	/en-US/docs/Web/API/MutationObserver/observe
+/en-US/docs/Web/API/MutationObserverInit/characterDataOldValue	/en-US/docs/Web/API/MutationObserver/observe
+/en-US/docs/Web/API/MutationObserverInit/childList	/en-US/docs/Web/API/MutationObserver/observe
+/en-US/docs/Web/API/MutationObserverInit/subtree	/en-US/docs/Web/API/MutationObserver/observe
 /en-US/docs/Web/API/NDEFReader/onerror	/en-US/docs/Web/API/NDEFReader/onreadingerror
 /en-US/docs/Web/API/NDEFWriter	/en-US/docs/Web/API/NDEFReader
 /en-US/docs/Web/API/NDEFWriter/NDEFWriter	/en-US/docs/Web/API/NDEFReader/NDEFReader
@@ -8209,6 +8217,10 @@
 /en-US/docs/Web/API/Path2D.addPath	/en-US/docs/Web/API/Path2D/addPath
 /en-US/docs/Web/API/PaymentAddress/PaymentAddress.country	/en-US/docs/Web/API/PaymentAddress/country
 /en-US/docs/Web/API/PaymentAddress/regionCode	/en-US/docs/Web/API/PaymentAddress
+/en-US/docs/Web/API/PaymentCurrencyAmount	/en-US/docs/Web/API/PaymentItem
+/en-US/docs/Web/API/PaymentCurrencyAmount/currency	/en-US/docs/Web/API/PaymentItem
+/en-US/docs/Web/API/PaymentCurrencyAmount/currencySystem	/en-US/docs/Web/API/PaymentItem
+/en-US/docs/Web/API/PaymentCurrencyAmount/value	/en-US/docs/Web/API/PaymentItem
 /en-US/docs/Web/API/PaymentDetailsUpdate	/en-US/docs/Web/API/PaymentRequestUpdateEvent/updateWith
 /en-US/docs/Web/API/PaymentDetailsUpdate/error	/en-US/docs/Web/API/PaymentRequestUpdateEvent/updateWith
 /en-US/docs/Web/API/PaymentDetailsUpdate/shippingAddressErrors	/en-US/docs/Web/API/PaymentRequestUpdateEvent/updateWith

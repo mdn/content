@@ -62300,61 +62300,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/MutationObserverInit": {
-    "modified": "2020-10-15T22:05:50.952Z",
-    "contributors": [
-      "mathijshenquet",
-      "andrey-semin",
-      "ExE-Boss",
-      "Sheppy"
-    ]
-  },
-  "Web/API/MutationObserverInit/attributeFilter": {
-    "modified": "2020-10-15T22:05:49.609Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy"
-    ]
-  },
-  "Web/API/MutationObserverInit/attributeOldValue": {
-    "modified": "2020-10-15T22:05:55.939Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/MutationObserverInit/attributes": {
-    "modified": "2020-10-15T22:05:46.364Z",
-    "contributors": [
-      "waffledonkey",
-      "Sheppy"
-    ]
-  },
-  "Web/API/MutationObserverInit/characterData": {
-    "modified": "2020-10-15T22:05:55.954Z",
-    "contributors": [
-      "d4rkne55",
-      "Sheppy"
-    ]
-  },
-  "Web/API/MutationObserverInit/characterDataOldValue": {
-    "modified": "2020-10-15T22:05:55.919Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/MutationObserverInit/childList": {
-    "modified": "2020-10-15T22:05:55.963Z",
-    "contributors": [
-      "anonyco",
-      "Sheppy"
-    ]
-  },
-  "Web/API/MutationObserverInit/subtree": {
-    "modified": "2020-10-15T22:05:56.995Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/MutationRecord": {
     "modified": "2020-10-15T21:43:45.183Z",
     "contributors": [
@@ -66532,34 +66477,6 @@
       "sideshowbarker",
       "fscholz",
       "jpmedley"
-    ]
-  },
-  "Web/API/PaymentCurrencyAmount": {
-    "modified": "2020-10-15T22:11:42.209Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/PaymentCurrencyAmount/currency": {
-    "modified": "2020-12-10T07:30:26.385Z",
-    "contributors": [
-      "bershanskiy",
-      "Sheppy"
-    ]
-  },
-  "Web/API/PaymentCurrencyAmount/currencySystem": {
-    "modified": "2020-12-10T07:32:11.153Z",
-    "contributors": [
-      "bershanskiy",
-      "Sheppy"
-    ]
-  },
-  "Web/API/PaymentCurrencyAmount/value": {
-    "modified": "2020-12-10T07:31:38.484Z",
-    "contributors": [
-      "bershanskiy",
-      "MyNameIsBond",
-      "Sheppy"
     ]
   },
   "Web/API/PaymentItem": {
