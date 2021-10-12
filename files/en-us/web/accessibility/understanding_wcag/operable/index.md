@@ -224,11 +224,32 @@ This guideline covers situations in which functionality may have a time limit. F
 
 This refers to content that, if not changed, could cause seizures in users with conditions such as epilepsy OR could cause physical reactions (like dizziness) for users with conditions such as vestibular disorders.
 
-| Success criteria | How to conform to the  criteria | Practical resource |
-| --------------- | -------------------- | ----------- |
-| 2.3.1 Three flashes, or below threshold (A) | Content doesn't contain any aspect that Flashes more than three times per second, or flashing content is below acceptable [flash and red flash thresholds](https://www.w3.org/TR/WCAG20/#general-thresholddef) ||    |
-| 2.3.2 Three flashes(AAA) | Content doesn't contain any aspect that Flashes more than three times per second |             |
-| 2.3.3 Animations from Interactions (AAA) *[added in 2.1](https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1)* | Allow users to disable animations from interactions (unless the animation is essential).                            | [Understanding Animations from Interactions](https://www.w3.org/TR/WCAG21/#animation-from-interactions) |
+<table>
+ <thead>
+  <tr>
+   <th scope="col">Success criteria</th>
+   <th scope="col">How to conform to the criteria</th>
+   <th scope="col">Practical resource</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>2.3.1 Three flashes, or below threshold (A)</td>
+   <td>Content doesn't contain any aspect that Flashes more than three times per second, or flashing content is below acceptable <a href="https://www.w3.org/TR/WCAG20/#general-thresholddef">flash and red flash thresholds</a>.</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>2.3.2 Three flashes (AAA)</td>
+   <td>Content doesn't contain any aspect that Flashes more than three times per second.</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>2.3.3 Animations from Interactions (AAA) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
+   <td>Allow users to disable animations from interactions (unless the animation is essential).&nbsp;</td>
+   <td><a href="https://www.w3.org/TR/WCAG21/#animation-from-interactions">Understanding Animations from Interactions</a></td>
+  </tr>
+ </tbody>
+</table>
 
 > **Note:** Also see the WCAG description for [Guideline 2.3 Seizures and Physical Reactions: Do not design content in a way that is known to cause seizures or physical reactions.](https://www.w3.org/TR/WCAG21/#seizures-and-physical-reactions)
 
