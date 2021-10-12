@@ -40,9 +40,9 @@ browser-compat: webextensions.api.cookies.get
   <dt><code>name</code></dt>
   <dd>A <code>string</code> representing the name of the cookie to retrieve.</dd>
   <dt><code>partitionKey</code>{{optional_inline}}</dt>
-  <dd>An <code>object</code> representing the storage partition containing the cookie. Include this object to a obtain cookie from partitioned storage. This object contains:
+  <dd>An <code>object</code> representing the storage partition containing the cookie. Include this object with <code>topLevelSite</code> to obtain a cookie from partitioned storage, otherwise returns the cookie from unpartition storage. This object contains:
    <dl class="reference-values">
-   <dt><code>topLevelSite</code></dt>
+   <dt><code>topLevelSite</code>{{optional_inline}}</dt>
    <dd>A <code>string</code> representing the first-party URL of the top-level site partition containing the cookie.</dd>
    </dl>
   </dd>

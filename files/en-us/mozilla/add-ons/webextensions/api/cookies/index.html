@@ -76,7 +76,7 @@ browser-compat: webextensions.api.cookies
 <p>To prevent tracking, Firefox separates cookies so trackers cannot make an association between websites visited. So, in the preceding example, <code>ad-tracker.com</code> cannot see the cookie created on <code>a-news-site.com</code> when visiting <code>a-shopping-site.com</code>. The first iteration of this protection was first-party isolation which is now being superseded by <a href="/en-US/docs/Web/Privacy/State_Partitioning#dynamic_state_partitioning">dynamic partitioning</a>.</p>
 
 <div class="note notecard">
-<p><strong>Note:</strong> First-party isolation and dynamic partitioning will not be active at the same time. However, it's possible for normal browsing to use first-party isolation and private browsing to use dynamic partitioning.</p>
+<p><strong>Note:</strong> First-party isolation and dynamic partitioning will not be active at the same time. If the user or an extension turns on first-party isolation, it takes precedence over dynamic partitioning. However, when private browsing uses dynamic partitioning, normal browsing may not be partitioning cookies. See <a href="/en-US/docs/Web/Privacy/State_Partitioning#status_of_partitioning_in_firefox">Status of partitioning in Firefox</a>, for details.</p>
 </div>
 
 <h3 id="Dynamic_partitioning">Dynamic partitioning</h3>
@@ -85,9 +85,7 @@ browser-compat: webextensions.api.cookies
 
 <p>When this feature is active, <code>partitionKey</code> returns or sets the key to the cookie's partitioned storage, for example,<code>partitionKey: {topLevelSite: "http://site"}</code>.</p>
 
-<p>By default, {{WebExtAPIRef("cookies.get()")}}, {{WebExtAPIRef("cookies.getAll()")}}, {{WebExtAPIRef("cookies.set()")}}, and {{WebExtAPIRef("cookies.remove()")}} work with unpartitioned cookies and <code>partitionKey</code> must be set to work with partitioned cookies, including for <code>getAll</code>. However, {{WebExtAPIRef("cookies.onChanged()")}} always return information on the cookie partitioning, if available, in <code>partitionKey</code>. The <code>partitionKey</code> value then must be reflected in {{WebExtAPIRef("cookies.set()")}} and {{WebExtAPIRef("cookies.remove()")}} to ensure any changes are made made to the correct cookie.</p>
-
-<p>To access the partitioned cookies in <code>getAll</code> and <code>getAll</code>, <code>partitionKey</code> must include the top site.</p>
+<p>By default, {{WebExtAPIRef("cookies.get()")}}, {{WebExtAPIRef("cookies.getAll()")}}, {{WebExtAPIRef("cookies.set()")}}, and {{WebExtAPIRef("cookies.remove()")}} work with unpartitioned cookies and <code>topLevelSite</code> in <code>partitionKey</code> must be set to work with partitioned cookies. The exception is <code>getAll</code> where setting <code>partitionKey</code> without <code>topLevelSite</code> returned partitioned and unpartitioned cookies. {{WebExtAPIRef("cookies.onChanged")}} fires for any cookie that the extension can access, including partitioned cookies. To ensure that the correct cookie is modified, extensions should read the <code>cookie.partitionKey</code> property from the event and pass its value to  {{WebExtAPIRef("cookies.set()")}} and {{WebExtAPIRef("cookies.remove()")}}.</p> 
 
 <div class="note notecard">
 <p><strong>Note:</strong> Cookies created by extension in background pages and pop-ups are, by default, unpartitioned.</p>
@@ -104,7 +102,8 @@ browser-compat: webextensions.api.cookies
 <p>The {{WebExtAPIRef("cookies.get()")}}, {{WebExtAPIRef("cookies.getAll()")}}, {{WebExtAPIRef("cookies.set()")}} and {{WebExtAPIRef("cookies.remove()")}} APIs all accept a <code>firstPartyDomain</code> option.</p>
 
 <p>When first-party isolation is on, you must provide this option or the API call will fail and return a rejected promise. For <code>get()</code>, <code>set()</code>, and <code>remove()</code> you must pass a string value. For <code>getAll()</code>, you may also pass <code>null</code> here, and this will get all cookies, whether or not they have a non-empty value for <code>firstPartyDomain</code>.</p>
- When first-party isolation is off, the <code>firstPartyDomain</code> parameter is optional and defaults to an empty string.  A non-empty string can be used to retrieve or modify first-party isolation cookies. Likewise, passing <code>null</code> as <code>firstPartyDomain</code> to <code>getAll()</code> will return all cookies.</p>
+
+ <p>When first-party isolation is off, the <code>firstPartyDomain</code> parameter is optional and defaults to an empty string. A non-empty string can be used to retrieve or modify first-party isolation cookies. Likewise, passing <code>null</code> as <code>firstPartyDomain</code> to <code>getAll()</code> will return all cookies.</p>
 
 <h2 id="Types">Types</h2>
 

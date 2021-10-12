@@ -41,9 +41,15 @@ browser-compat: webextensions.api.cookies.getAll
   <dt><code>name</code>{{optional_inline}}</dt>
   <dd>A <code>string</code> representing a name that the cookies should have.</dd>
   <dt><code>partitionKey</code>{{optional_inline}}</dt>
-  <dd>An <code>object</code> representing the storage partition containing the cookies. Include this object to obtain cookies in partitioned storage, otherwise only cookies from unpartitioned storage are returned. This object contains:
+  <dd>An <code>object</code> representing which cookies managed under dynamic partitioning to return:
+    <ul>
+      <li>if omitted, returns only cookies from unpartitioned storage.</li>
+      <li>if included without <code>topLevelSite</code>, returns all cookies from partitioned and unpartitioned storage.</li>
+      <li>if included with <code>topLevelSite</code> specified, returns cookies from the specified partition storage.</li>
+    </ul>
+   This object contains:
    <dl class="reference-values">
-   <dt><code>topLevelSite</code></dt>
+   <dt><code>topLevelSite</code>{{optional_inline}}</dt>
    <dd>A <code>string</code> representing the first-party URL of the top-level site partition containing the cookies.</dd>
    </dl>
   </dd>
