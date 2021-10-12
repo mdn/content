@@ -245,7 +245,7 @@ This refers to content that, if not changed, could cause seizures in users with
   </tr>
   <tr>
    <td>2.3.3 Animations from Interactions (AAA) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
-   <td>Allow users to disable animations from interactions (unless the animation is essential).&nbsp;</td>
+   <td>Allow users to disable animations from interactions (unless the animation is essential).</td>
    <td><a href="https://www.w3.org/TR/WCAG21/#animation-from-interactions">Understanding Animations from Interactions</a></td>
   </tr>
  </tbody>
