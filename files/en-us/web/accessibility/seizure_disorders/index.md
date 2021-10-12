@@ -137,7 +137,7 @@ The "cd/m2" refers to candela per square meter. So for the web developer, how do
 
 The candela is a SI unit (International System of units) of luminous intensity. It's a photometric term, and photometry deals with the measurement of visible light as perceived by human eyes. Wikipedia's article on "**[Candela per square metre](https://en.wikipedia.org/wiki/Candela_per_square_metre)**" puts it in terms of what we are familiar with as developers: on a display device, and in the RGB space. This is helpful, because there's a specific standard assumed to be used on monitors, printers, and the Internet, and it is the **sRGB** (standard Red Green Blue).
 
-"_As a measure of light emitted per unit area, this unit is frequently used to specify the brightness of a display device. The **[sRGB](https://en.wikipedia.org/wiki/SRGB)** spec for monitors targets 80 cd/m<sup>2</sup>.<sup><a href="https://en.wikipedia.org/wiki/Candela_per_square_metre#cite_note-3">[3]</a></sup> Typically, calibrated monitors should have a brightness of 120 cd/m<sup>2</sup>. Most consumer desktop **[liquid crystal displays](https://en.wikipedia.org/wiki/Liquid_crystal_display)** have luminances of 200 to 300 cd/m<sup>2</sup>.<sup><a href="https://en.wikipedia.org/wiki/Candela_per_square_metre#cite_note-4">[4]</a></sup> **[High-definition televisions](https://en.wikipedia.org/wiki/High-definition_television)** range from 450 to about 1500 cd/m<sup>2</sup>_."
+"_As a measure of light emitted per unit area, this unit is frequently used to specify the brightness of a display device. The **[sRGB](https://en.wikipedia.org/wiki/SRGB)** spec for monitors targets 80 cd/m<sup>2</sup>.<sup>[\[3\]](https://en.wikipedia.org/wiki/Candela_per_square_metre#cite_note-3)</sup> Typically, calibrated monitors should have a brightness of 120 cd/m<sup>2</sup>. Most consumer desktop **[liquid crystal displays](https://en.wikipedia.org/wiki/Liquid_crystal_display)** have luminances of 200 to 300 cd/m<sup>2</sup>.<sup>[\[4\]](https://en.wikipedia.org/wiki/Candela_per_square_metre#cite_note-4)</sup> **[High-definition televisions](https://en.wikipedia.org/wiki/High-definition_television)** range from 450 to about 1500 cd/m<sup>2</sup>_."
 
 The takeaway is that the **sRGB** color space is a common touch point between research, assessment tools, and developers, since it is easily converted from the commonly used Hex code.
 
@@ -221,7 +221,7 @@ With animated GIFs, ensure animation is inactive until the user chooses to activ
 
 ### Videos
 
-As in the case of animated GIFs, the user must push a button or check a box in order to start the animation. There are many ways to do this, such as NOT adding the [`autoplay`](/en-US/docs/Web/API/HTMLMediaElement/autoplay) attribute to **`<video controls>`**, or setting {{CSSxRef('animation-play-state')}} to `paused` as an initial state. To see a powerful example of how this can actually work see the article by **[Kirupa, Toggling Animations On and Off.](https://www.kirupa.com/html5/toggling_animations_on_off.htm)**[ ](https://www.kirupa.com/html5/toggling_animations_on_off.htm)Kirupa uses the **`animation-play-state`** in concert with {{CSSxRef('transition')}}, {{CSSxRef('transform')}}, and {{CSSxRef('prefers-reduced-motion')}} to create a very accessible experience under the user's control.
+As in the case of animated GIFs, the user must push a button or check a box in order to start the animation. There are many ways to do this, such as NOT adding the [`autoplay`](/en-US/docs/Web/API/HTMLMediaElement/autoplay) attribute to **`<video controls>`**, or setting {{CSSxRef('animation-play-state')}} to `paused` as an initial state. To see a powerful example of how this can actually work see the article by **[Kirupa, Toggling Animations On and Off](https://www.kirupa.com/html5/toggling_animations_on_off.htm)**.  Kirupa uses the **`animation-play-state`** in concert with {{CSSxRef('transition')}}, {{CSSxRef('transform')}}, and [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) to create a very accessible experience under the user's control.
 
 **[animation-play-state](https://www.w3.org/TR/css-animations-1/#animation-play-state)** This is a css property that sets whether an animation is running or paused.
 
@@ -312,7 +312,7 @@ The methods for sniffing them out is not a casual exercise. You may be intereste
 
 #### Text can also be animated
 
-Translations and transformations can animate text in a div, and do harm. Although it is experimental technology, `<strong><a href="/en-US/docs/Web/API/CSSKeyframe/keyText" rel="nofollow">CSSKeyframe.keyText</a></strong>` is being developed. Moving text can induce seizures for the same reasons that moving images do, so avoid animating your text. It's a good idea to avoid using moving text anyhow, as many screenreaders cannot read moving text and it's bad user experience even for those with no vision or vestibular issues.
+Translations and transformations can animate text in a div, and do harm. Although it is experimental technology, [`**CSSKeyframe.keyText**`](/en-US/docs/Web/API/CSSKeyframe/keyText) is being developed. Moving text can induce seizures for the same reasons that moving images do, so avoid animating your text. It's a good idea to avoid using moving text anyhow, as many screenreaders cannot read moving text and it's bad user experience even for those with no vision or vestibular issues.
 
 ### CSS for animation
 
@@ -542,7 +542,7 @@ EnvironmentMQ (Planned in Media Queries Level 5)
 **[User Preference Media Features](https://drafts.csswg.org/mediaqueries-5/#mf-user-preferences)** in **[W3C Editor's Draft Media Queries Level 5](https://drafts.csswg.org/mediaqueries-5/)** are especially promising in providing user control over media. Here are some highlights:
 
 - inverted-colors
-  - : According to the section, **[User Preference Media Features](https://drafts.csswg.org/mediaqueries-5/#mf-user-preferences)** , "The **<a href="https://drafts.csswg.org/mediaqueries-5/#descdef-media-inverted-colors" id="ref-for-descdef-media-inverted-colors①">inverted-colors</a>** media feature indicates whether the content is displayed normally, or whether colors have been inverted."
+  - : According to the section, **[User Preference Media Features](https://drafts.csswg.org/mediaqueries-5/#mf-user-preferences)** , "The [**inverted-colors**](https://drafts.csswg.org/mediaqueries-5/#descdef-media-inverted-colors) media feature indicates whether the content is displayed normally, or whether colors have been inverted."
 - forced-colors
 
   - : [forced-colors](https://drafts4.csswg.org/mediaqueries-5/#forced-colors)
@@ -550,13 +550,13 @@ EnvironmentMQ (Planned in Media Queries Level 5)
     In **[forced-colors-mode](https://drafts.csswg.org/css-color-adjust-1/#forced-colors-mode),** the user agent enforces the user's preferred color palette on the page, overriding the author's chosen colors. From W3C's Draft document, Media Queries Level 5 section on forced-colors: "_The forced-colors media feature is used to detect if the user agent has enabled a**[ forced colors mode](https://drafts.csswg.org/css-color-adjust-1/#forced-colors-mode)** where it enforces a user-chosen limited color palette on the page_". The user will need to be made aware of this ability, and it will need to play nice with the appropriate value for the prefers-color-scheme media query.
 
 - light-level
-  - : From W3C's Draft document, Media Queries Level 5 section on light-level: "_The `<strong><a href="https://drafts.csswg.org/mediaqueries-5/#descdef-media-light-level" id="ref-for-descdef-media-light-level①">light-level</a></strong>` media feature is used to query about the ambient light-level in which the device is used, to allow the author to adjust style of the document in response_." This will be a godsend to those who have motor-skills problems, or for some with cognitive difficulties, who cannot find the right "button" to change their screen settings.
+  - : From W3C's Draft document, Media Queries Level 5 section on light-level: "_The [`**light-level**`](https://drafts.csswg.org/mediaqueries-5/#descdef-media-light-level) media feature is used to query about the ambient light-level in which the device is used, to allow the author to adjust style of the document in response_." This will be a godsend to those who have motor-skills problems, or for some with cognitive difficulties, who cannot find the right "button" to change their screen settings.
 - prefers-contrast
   - : From W3C's Draft document, Media Queries Level 5 section on [**`prefers-contrast`**](https://drafts4.csswg.org/mediaqueries-5/#prefers-contrast): "_The **`prefers-contrast`** media feature is used to detect if the user has requested the system increase or decrease the amount of contrast between adjacent colors. For example, many users have difficulty reading text that has a small difference in contrast to the text background and would prefer a larger contrast._" Sometimes there can be such a thing as too much contrast; a halo effect around text can occur in such situations and actually reduce legibility. Putting the amount of contrast in the user's control is a definite gift for accessibility.
 
 #### `MediaQueryList` Interface
 
-Section 4.2 from the CSSWG.org drafts integrates with the **<a href="https://html.spec.whatwg.org/multipage/webappapis.html#event-loop" id="ref-for-event-loop">event loop</a>** defined in HTML. **[\[HTML\]](https://drafts.csswg.org/cssom-view/#biblio-html)** for the **[`MediaQueryList`](https://drafts.csswg.org/cssom-view/#mediaquerylist)** object. See the MDN document, **[MediaQueryList](/en-US/docs/Web/API/MediaQueryList)** for more information.
+Section 4.2 from the CSSWG.org drafts integrates with the [**event loop**](https://html.spec.whatwg.org/multipage/webappapis.html#event-loop) defined in HTML. **[HTML](https://drafts.csswg.org/cssom-view/#biblio-html)** for the **[`MediaQueryList`](https://drafts.csswg.org/cssom-view/#mediaquerylist)** object. See the MDN document, **[MediaQueryList](/en-US/docs/Web/API/MediaQueryList)** for more information.
 
 #### Personalization Help and Support
 
