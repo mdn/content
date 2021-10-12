@@ -54,7 +54,7 @@ If we wanted the text to stand by itself, we could specify that it is a paragrap
 <p>My cat is very grumpy</p>
 ```
 
-> **Note:** Tags in HTML are case-insensitive. This means they can be written in uppercase or lowercase. For example, a {{htmlelement("title")}} tag could be written as `<title>`, `<TITLE>`, `<Title>`, `<TiTlE>`, etc., and it will work. However, it is best practice to write all tags in lowercase for consistency and readability.
+> **Note:** Tags in HTML are not case-sensitive. This means they can be written in uppercase or lowercase. For example, a {{htmlelement("title")}} tag could be written as `<title>`, `<TITLE>`, `<Title>`, `<TiTlE>`, etc., and it will work. However, it is best practice to write all tags in lowercase for consistency and readability.
 
 ## Anatomy of an HTML element
 
