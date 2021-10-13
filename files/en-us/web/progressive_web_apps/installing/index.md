@@ -19,78 +19,76 @@ tags:
   - Uninstalling
   - Web
 ---
-<p>{{draft}}</p>
+{{draft}}
 
-<p>Web application installation is a feature available in modern browsers that allows users to choose to easily and conveniently “install” a web application on their device so they can access it in the same way they would any other installed app. Depending on the device and features of the operating system and browser, this can result in what is essentially a fully featured application (for example, using <a href="https://developers.google.com/web/fundamentals/integration/webapks">WebAPK</a> on Android) or as a shortcut added to their device’s screen. This guide explains how installation is performed, what it means, and what you need to do as a developer to let your users take advantage of it.</p>
+Web application installation is a feature available in modern browsers that allows users to choose to easily and conveniently “install” a web application on their device so they can access it in the same way they would any other installed app. Depending on the device and features of the operating system and browser, this can result in what is essentially a fully featured application (for example, using [WebAPK](https://developers.google.com/web/fundamentals/integration/webapks) on Android) or as a shortcut added to their device’s screen. This guide explains how installation is performed, what it means, and what you need to do as a developer to let your users take advantage of it.
 
-<h2 id="Why_installation">Why installation?</h2>
+## Why installation?
 
-<p>The option to install a web application is part of the<a href="/en-US/docs/Web/Progressive_web_apps"> Progressive Web App</a> philosophy—giving web apps the same user experience advantages as native apps so they can be competitive. Installed applications are more conveniently invoked as they have a presence in a device’s home screen or app list or bar. This makes it simple for a user to use a gesture to access an app by tapping or clicking its icon. The application itself may then manifest as in a chromeless view (without the full browser chrome) but it nevertheless is executing effectively as a tab within the browser.</p>
+The option to install a web application is part of the[ Progressive Web App](/en-US/docs/Web/Progressive_web_apps) philosophy—giving web apps the same user experience advantages as native apps so they can be competitive. Installed applications are more conveniently invoked as they have a presence in a device’s home screen or app list or bar. This makes it simple for a user to use a gesture to access an app by tapping or clicking its icon. The application itself may then manifest as in a chromeless view (without the full browser chrome) but it nevertheless is executing effectively as a tab within the browser.
 
-<p>For users, the experience of a seemingly-native PWA is more comfortable and convenient than a typical web site. By reducing the user experience differential between the web app and native apps on the user's device, you reduce both the loss of any muscle memory they have revolving around the native interface of the device and the sensation of "something isn't quite right" that users can experience when switching between native and web-based apps.</p>
+For users, the experience of a seemingly-native PWA is more comfortable and convenient than a typical web site. By reducing the user experience differential between the web app and native apps on the user's device, you reduce both the loss of any muscle memory they have revolving around the native interface of the device and the sensation of "something isn't quite right" that users can experience when switching between native and web-based apps.
 
-<h2 id="What_browsers_support_installation">What browsers support installation?</h2>
+## What browsers support installation?
 
-<p>Installation is supported by Chrome for Android and Android WebView version 31 and later, Opera for Android 32 onward, Samsung Internet from version 4 onward, and Firefox for Android<a href="/en-US/docs/Mozilla/Firefox/Releases/58"> version 58</a> and later.</p>
+Installation is supported by Chrome for Android and Android WebView version 31 and later, Opera for Android 32 onward, Samsung Internet from version 4 onward, and Firefox for Android[ version 58](/en-US/docs/Mozilla/Firefox/Releases/58) and later.
 
-<p>Safari on iOS is a little different. Some parts of the PWA ecosystem are supported, while others are not. iOS 13 introduced a much more comparable install experience, which is also described here.</p>
+Safari on iOS is a little different. Some parts of the PWA ecosystem are supported, while others are not. iOS 13 introduced a much more comparable install experience, which is also described here.
 
-<h2 id="The_install_user_experience">The install user experience</h2>
+## The install user experience
 
-<p>We've written a very simple example web site (<a href="https://mdn.github.io/pwa-examples/a2hs/">see our demo live</a>, and also<a href="https://github.com/mdn/pwa-examples/tree/master/a2hs"> see the source code</a>) that doesn't do much, but was developed with the necessary code to allow it to be installed, as well as a service worker to enable it to be used offline. The example displays a series of fox pictures.If you have a web application compatible device available, use it to navigate to our demo at <code>https://mdn.github.io/pwa-examples/a2hs/</code>. You'll see fox pictures, but more importantly, some form of user interface will be available to let you install the site as a web app.</p>
+We've written a very simple example web site ([see our demo live](https://mdn.github.io/pwa-examples/a2hs/), and also[ see the source code](https://github.com/mdn/pwa-examples/tree/master/a2hs)) that doesn't do much, but was developed with the necessary code to allow it to be installed, as well as a service worker to enable it to be used offline. The example displays a series of fox pictures.If you have a web application compatible device available, use it to navigate to our demo at `https://mdn.github.io/pwa-examples/a2hs/`. You'll see fox pictures, but more importantly, some form of user interface will be available to let you install the site as a web app.
 
-<p>The UI for this varies from browser to browser, but the general idea is the same.  Unfortunately, there isn't a standard for icons and symbols used for operations such as this.</p>
+The UI for this varies from browser to browser, but the general idea is the same.  Unfortunately, there isn't a standard for icons and symbols used for operations such as this.
 
-<h3 id="Firefox_for_Android">Firefox for Android</h3>
+### Firefox for Android
 
-<p>On an Android device using Firefox,  you'll see a "home" icon with a plus (+) icon inside it—this is the "Add to Home screen" icon displayed for any site that has the necessary features in place.</p>
+On an Android device using Firefox,  you'll see a "home" icon with a plus (+) icon inside it—this is the "Add to Home screen" icon displayed for any site that has the necessary features in place.
 
-<p><img alt="A screenshot of a web browser displaying the Add to Home Screen icon at the top" src="android-a2hs-icon.png"></p>
+![A screenshot of a web browser displaying the Add to Home Screen icon at the top](android-a2hs-icon.png)
 
-<p>Tapping this will show a confirmation banner—pressing the banner's big "+ ADD TO HOME SCREEN" button completes the action, adding the app to the Home screen. Note that in Android 8 and higher, a system-level "Add to Home screen" permission dialog will be shown first.</p>
+Tapping this will show a confirmation banner—pressing the banner's big "+ ADD TO HOME SCREEN" button completes the action, adding the app to the Home screen. Note that in Android 8 and higher, a system-level "Add to Home screen" permission dialog will be shown first.
 
-<p><img alt="A screenshot of Firefox for Android requesting confirmation before installing a web app" src="fx-a2hs-banner.png"></p>
+![A screenshot of Firefox for Android requesting confirmation before installing a web app](fx-a2hs-banner.png)
 
-<h3 id="Samsung_Internet_Browser">Samsung Internet Browser</h3>
+### Samsung Internet Browser
 
-<p>If you have Samsung Internet in your mobile device you will see a different icon.</p>
+If you have Samsung Internet in your mobile device you will see a different icon.
 
-<p><img alt="A screenshot of Samsung Internet Browser showing its Add to Home Screen icon" src="samsung-internet-add-app.png"></p>
+![A screenshot of Samsung Internet Browser showing its Add to Home Screen icon](samsung-internet-add-app.png)
 
-<p>Tapping that icon should then take you to the same confirmation banner shown in Firefox above.</p>
+Tapping that icon should then take you to the same confirmation banner shown in Firefox above.
 
-<h3 id="Google_Chrome_for_Android">Google Chrome for Android</h3>
+### Google Chrome for Android
 
-<p>If you have Google Chrome for Android available, the experience is slightly different; upon loading our site, you'll see an install banner pop up asking whether you want to add this app to your Home screen.</p>
+If you have Google Chrome for Android available, the experience is slightly different; upon loading our site, you'll see an install banner pop up asking whether you want to add this app to your Home screen.
 
-<p><img alt="Screenshot of a Chrome banner requesting permission to install the Foxes sample app" src="chrome-a2hs-banner.png"></p>
+![Screenshot of a Chrome banner requesting permission to install the Foxes sample app](chrome-a2hs-banner.png)
 
-<div class="notecard note">
-<p><strong>Note:</strong> You can find out a lot more about Chrome install banners from the article<a href="https://developers.google.com/web/fundamentals/app-install-banners/"> Web App Install Banners</a>.</p>
-</div>
+> **Note:** You can find out a lot more about Chrome install banners from the article[ Web App Install Banners](https://developers.google.com/web/fundamentals/app-install-banners/).
 
-<p>If you choose not to add it to your Home screen at this point, you can do so later using the "Add to Home Screen" icon in the main Chrome menu.</p>
+If you choose not to add it to your Home screen at this point, you can do so later using the "Add to Home Screen" icon in the main Chrome menu.
 
-<h3 id="Safari_for_iOS_iPhoneOS_iPadOS">Safari for iOS / iPhoneOS / iPadOS</h3>
+### Safari for iOS / iPhoneOS / iPadOS
 
-<p>On Apple's iOS (including iPhoneOS and iPadOS), the Safari browser built into the device has some support for web applications, including support for the add to home screen feature. To add a web app to the home screen (also known as the launcher or springboard), tap the sharing button at the bottom of the screen:</p>
+On Apple's iOS (including iPhoneOS and iPadOS), the Safari browser built into the device has some support for web applications, including support for the add to home screen feature. To add a web app to the home screen (also known as the launcher or springboard), tap the sharing button at the bottom of the screen:
 
-<p><img alt="Screenshot showing the location of the Share button in Safari on iOS 13" src="safari-ios-a2hs-icon.png"></p>
+![Screenshot showing the location of the Share button in Safari on iOS 13](safari-ios-a2hs-icon.png)
 
-<p>This calls up the sharing panel. Among the options should be the "Add to Home Screen" option, unless it's been specifically removed from the list by the user editing the optons displayed:</p>
+This calls up the sharing panel. Among the options should be the "Add to Home Screen" option, unless it's been specifically removed from the list by the user editing the optons displayed:
 
-<p><img alt="Screenshot of Safari iOS's sharing panel, showing the &quot;Add to Home Screen&quot; option" src="safari-ios-share-menu.png"></p>
+![Screenshot of Safari iOS's sharing panel, showing the "Add to Home Screen" option](safari-ios-share-menu.png)
 
-<p>Choosing "Add to Home Screen" here presents the confirmation dialog box, which not only confirms that the user wants to add the app to the home screen, but also lets the user customize its name.</p>
+Choosing "Add to Home Screen" here presents the confirmation dialog box, which not only confirms that the user wants to add the app to the home screen, but also lets the user customize its name.
 
-<p><img alt='A screenshot of iOS Safari showing its "Add to Home Screen" setup and confirmation panel' src="safari-ios-a2hs-banner.png"></p>
+![A screenshot of iOS Safari showing its "Add to Home Screen" setup and confirmation panel](safari-ios-a2hs-banner.png)
 
-<p>Upon clicking "Add," the app is included on the home screen.</p>
+Upon clicking "Add," the app is included on the home screen.
 
-<h3 id="The_installed_web_application">The installed web application</h3>
+### The installed web application
 
-<p>Regardless of which browser and device you're using, when you choose to add the app to your home screen or app launcher, it'll show up there looking just like any application. Typically this means you'll see the app's icon along with a short title.</p>
+Regardless of which browser and device you're using, when you choose to add the app to your home screen or app launcher, it'll show up there looking just like any application. Typically this means you'll see the app's icon along with a short title.
 
-<p><img alt='Screenshot of an Android home screen with the "Foxes" app displayed' src="a2hs-on-home-screen.png"></p>
+![Screenshot of an Android home screen with the "Foxes" app displayed](a2hs-on-home-screen.png)
 
-<p>When you tap the web app's icon on the home screen, it opens up in a full screen web environment, without the browser's UI around it.</p>
+When you tap the web app's icon on the home screen, it opens up in a full screen web environment, without the browser's UI around it.
