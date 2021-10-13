@@ -922,6 +922,8 @@ The keywords in the following list are defined by the CSS Color Module Level 4 s
   - : Background color of controls
 - ButtonText
   - : Foreground color of controls
+- ButtonBorder
+  - : Base border color of controls
 - Canvas
   - : Background of application content or documents
 - CanvasText
