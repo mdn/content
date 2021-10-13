@@ -5,76 +5,57 @@ tags:
   - Secure contexts
   - Security
 ---
-<p><span class="seoSummary">A <strong>secure context</strong> is a <code>Window</code> or <code>Worker</code> for which certain minimum standards of authentication and confidentiality are met.</span> Many Web APIs and features are accessible only in a secure context. The primary goal of secure contexts is to prevent {{interwiki("wikipedia", "man-in-the-middle attack", "MITM attackers")}} from accessing powerful APIs that could further compromise the victim of an attack.</p>
+A **secure context** is a `Window` or `Worker` for which certain minimum standards of authentication and confidentiality are met. Many Web APIs and features are accessible only in a secure context. The primary goal of secure contexts is to prevent {{interwiki("wikipedia", "man-in-the-middle attack", "MITM attackers")}} from accessing powerful APIs that could further compromise the victim of an attack.
 
-<h2 id="Why_should_some_features_be_restricted">Why should some features be restricted?</h2>
+## Why should some features be restricted?
 
-<p>Some APIs on the web are very powerful, giving an attacker the ability to do the following and more:</p>
+Some APIs on the web are very powerful, giving an attacker the ability to do the following and more:
 
-<ul>
- <li>Invade a user's privacy.</li>
- <li>Get low-level access to a user's computer.</li>
- <li>Get access to data such as user credentials.</li>
-</ul>
+- Invade a user's privacy.
+- Get low-level access to a user's computer.
+- Get access to data such as user credentials.
 
-<h2 id="When_is_a_context_considered_secure">When is a context considered secure?</h2>
+## When is a context considered secure?
 
-<p>A context is considered secure when it meets certain minimum standards of authentication and confidentiality defined in the <a href="https://w3c.github.io/webappsec-secure-contexts/">Secure Contexts</a> specification. A particular document is considered to be in a secure context when it is the <a href="https://html.spec.whatwg.org/multipage/browsers.html#active-document">active document</a> of a <a href="https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context">top-level browsing context</a> (basically, a containing window or tab) that is a secure context.</p>
+A context is considered secure when it meets certain minimum standards of authentication and confidentiality defined in the [Secure Contexts](https://w3c.github.io/webappsec-secure-contexts/) specification. A particular document is considered to be in a secure context when it is the [active document](https://html.spec.whatwg.org/multipage/browsers.html#active-document) of a [top-level browsing context](https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context) (basically, a containing window or tab) that is a secure context.
 
-<p>For example, even for a document delivered over TLS within an {{HTMLElement("iframe")}}, its context is <strong>not</strong> considered secure if it has an ancestor that was not also delivered over TLS.</p>
+For example, even for a document delivered over TLS within an {{HTMLElement("iframe")}}, its context is **not** considered secure if it has an ancestor that was not also delivered over TLS.
 
-<p>However, it’s important to note that if a non-secure context causes a new window to be created (with or without specifying <a href="/en-US/docs/Web/API/Window/open">noopener</a>), then the fact that the opener was insecure has no effect on whether the new window is considered secure. That’s because the determination of whether or not a particular document is in a secure context is based only on considering it within the top-level browsing context with which it is associated — and not whether a non-secure context happened to be used to create it.</p>
+However, it’s important to note that if a non-secure context causes a new window to be created (with or without specifying [noopener](/en-US/docs/Web/API/Window/open)), then the fact that the opener was insecure has no effect on whether the new window is considered secure. That’s because the determination of whether or not a particular document is in a secure context is based only on considering it within the top-level browsing context with which it is associated — and not whether a non-secure context happened to be used to create it.
 
-<p>Locally-delivered resources such as those with <em>http://127.0.0.1</em> URLs, <em>http://localhost</em> and  <em>http://*.localhost</em> URLs (e.g. <em>http://dev.whatever.localhost/</em>), and <em>file://</em> URLs are also considered to have been delivered securely.</p>
+Locally-delivered resources such as those with _http\://127.0.0.1_ URLs, *http\://localhost* and  *http\://\*.localhost* URLs (e.g. _http\://dev.whatever.localhost/_), and _file://_ URLs are also considered to have been delivered securely.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Firefox 84 and later support <em>http://localhost</em> and <em>http://*.localhost</em> URLs as trustworthy origins (earlier versions did not, because <code>localhost</code> was not guaranteed to map to a local/loopback address).</p>
-</div>
+> **Note:** Firefox 84 and later support *http\://localhost* and *http\://\*.localhost* URLs as trustworthy origins (earlier versions did not, because `localhost` was not guaranteed to map to a local/loopback address).
 
-<p>Resources that are not local, to be considered secure, must meet the following criteria:</p>
+Resources that are not local, to be considered secure, must meet the following criteria:
 
-<ul>
- <li>must be served over <em>https://</em> or <em>wss://</em> URLs</li>
- <li>the security properties of the network channel used to deliver the resource must not be considered deprecated</li>
-</ul>
+- must be served over _https\://_ or _wss\://_ URLs
+- the security properties of the network channel used to deliver the resource must not be considered deprecated
 
-<h2 id="Feature_detection">Feature detection</h2>
+## Feature detection
 
-<p>Pages can use feature detection to check whether they are in a secure context or not by using the {{domxref("isSecureContext")}} boolean, which is exposed on the global scope.</p>
+Pages can use feature detection to check whether they are in a secure context or not by using the {{domxref("isSecureContext")}} boolean, which is exposed on the global scope.
 
-<pre class="brush: js">if (window.isSecureContext) {
+```js
+if (window.isSecureContext) {
   // Page is a secure context so service workers are now available
   navigator.serviceWorker.register("/offline-worker.js").then(function () {
     ...
   });
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-   <tr>
-    <th>Specification</th>
-    <th>Status</th>
-    <th>Comment</th>
-   </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Secure Contexts')}}</td>
-   <td>{{Spec2('Secure Contexts')}}</td>
-   <td>Editor’s Draft</td>
-  </tr>
- </tbody>
-</table>
+| Specification                            | Status                               | Comment        |
+| ---------------------------------------- | ------------------------------------ | -------------- |
+| {{SpecName('Secure Contexts')}} | {{Spec2('Secure Contexts')}} | Editor’s Draft |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts">Platform features restricted to secure contexts</a> — a list of the features available only in secure contexts</li>
- <li>{{domxref("isSecureContext")}}</li>
- <li><a href="https://permission.site">https://permission.site</a> — A site that allows you to check what API permission checks your browser employs, over HTTP and HTTPS</li>
- <li><a href="/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">Strict-Transport-Security</a> HTTP header</li>
-</ul>
+- [Platform features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts) — a list of the features available only in secure contexts
+- {{domxref("isSecureContext")}}
+- <https://permission.site> — A site that allows you to check what API permission checks your browser employs, over HTTP and HTTPS
+- [Strict-Transport-Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) HTTP header
 
-<div>{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}</div>
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

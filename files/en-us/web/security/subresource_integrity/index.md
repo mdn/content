@@ -8,153 +8,121 @@ tags:
   - Networking
   - Security
 ---
-<p><strong>Subresource Integrity</strong> (SRI) is a security feature that enables browsers to verify that resources they fetch (for example, from a <a href="/en-US/docs/Glossary/CDN">CDN</a>) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match.</p>
+**Subresource Integrity** (SRI) is a security feature that enables browsers to verify that resources they fetch (for example, from a [CDN](/en-US/docs/Glossary/CDN)) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match.
 
-<div class="note">
-<p><strong>Note:</strong> For subresource-integrity verification of a resource served from an origin other than the document in which it’s embedded, browsers additionally check the resource using <a href="/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing (CORS)</a>, to ensure the origin serving the resource allows it to be shared with the requesting origin.</p>
-</div>
+> **Note:** For subresource-integrity verification of a resource served from an origin other than the document in which it’s embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin.
 
-<h2 id="How_Subresource_Integrity_helps">How Subresource Integrity helps</h2>
+## How Subresource Integrity helps
 
-<p>Using {{Glossary("CDN", "Content Delivery Networks (CDNs)")}} to host files such as scripts and stylesheets that are shared among multiple sites can improve site performance and conserve bandwidth. However, using CDNs also comes with a risk, in that if an attacker gains control of a CDN, the attacker can inject arbitrary malicious content into files on the CDN (or replace the files completely) and thus can also potentially attack all sites that fetch files from that CDN.</p>
+Using {{Glossary("CDN", "Content Delivery Networks (CDNs)")}} to host files such as scripts and stylesheets that are shared among multiple sites can improve site performance and conserve bandwidth. However, using CDNs also comes with a risk, in that if an attacker gains control of a CDN, the attacker can inject arbitrary malicious content into files on the CDN (or replace the files completely) and thus can also potentially attack all sites that fetch files from that CDN.
 
-<p>Subresource Integrity enables you to mitigate some risks of attacks such as this, by ensuring that the files your web application or web document fetches (from a CDN or anywhere) have been delivered without a third-party having injected any additional content into those files — and without any other changes of any kind at all having been made to those files.</p>
+Subresource Integrity enables you to mitigate some risks of attacks such as this, by ensuring that the files your web application or web document fetches (from a CDN or anywhere) have been delivered without a third-party having injected any additional content into those files — and without any other changes of any kind at all having been made to those files.
 
-<h2 id="Using_Subresource_Integrity">Using Subresource Integrity</h2>
+## Using Subresource Integrity
 
-<p>You use the Subresource Integrity feature by specifying a base64-encoded cryptographic hash of a resource (file) you’re telling the browser to fetch, in the value of the <code>integrity</code> attribute of any {{HTMLElement("script")}} or {{HTMLElement("link")}} element.</p>
+You use the Subresource Integrity feature by specifying a base64-encoded cryptographic hash of a resource (file) you’re telling the browser to fetch, in the value of the `integrity` attribute of any {{HTMLElement("script")}} or {{HTMLElement("link")}} element.
 
-<p>An <code>integrity</code> value begins with at least one string, with each string including a prefix indicating a particular hash algorithm (currently the allowed prefixes are <code>sha256</code>, <code>sha384</code>, and <code>sha512</code>), followed by a dash, and ending with the actual base64-encoded hash.</p>
+An `integrity` value begins with at least one string, with each string including a prefix indicating a particular hash algorithm (currently the allowed prefixes are `sha256`, `sha384`, and `sha512`), followed by a dash, and ending with the actual base64-encoded hash.
 
-<div class="note">
-<p><strong>Note:</strong> An <strong>integrity</strong> value may contain multiple hashes separated by whitespace. A resource will be loaded if it matches one of those hashes.</p>
-</div>
+> **Note:** An **integrity** value may contain multiple hashes separated by whitespace. A resource will be loaded if it matches one of those hashes.
 
-<p>Example <code>integrity</code> string with base64-encoded sha384 hash:</p>
+Example `integrity` string with base64-encoded sha384 hash:
 
-<pre>sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC
-</pre>
+    sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC
 
-<p>So <code>oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC</code> is the "hash" part, and the prefix <code>sha384</code> indicates that it's a sha384 hash.</p>
+So `oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC` is the "hash" part, and the prefix `sha384` indicates that it's a sha384 hash.
 
-<div class="note">
-<p><strong>Note:</strong> An <code>integrity</code> value's "hash" part is, strictly speaking, a <strong><em>cryptographic</em> <em>digest</em></strong> formed by applying a particular hash function to some input (for example, a script or stylesheet file). But it’s common to use the shorthand "hash" to mean <em>cryptographic</em> <em>digest</em>, so that's what's used in this article.</p>
-</div>
+> **Note:** An `integrity` value's "hash" part is, strictly speaking, a **_cryptographic_ _digest_** formed by applying a particular hash function to some input (for example, a script or stylesheet file). But it’s common to use the shorthand "hash" to mean _cryptographic_ _digest_, so that's what's used in this article.
 
-<h3 id="Tools_for_generating_SRI_hashes">Tools for generating SRI hashes</h3>
+### Tools for generating SRI hashes
 
-<p>The <a href="https://www.srihash.org/">SRI Hash Generator</a> is an online tool you can use to generate SRI hashes.</p>
+The [SRI Hash Generator](https://www.srihash.org/) is an online tool you can use to generate SRI hashes.
 
-<p>You can generate SRI hashes from the command-line with <strong>openssl</strong> using a command invocation such as:</p>
+You can generate SRI hashes from the command-line with **openssl** using a command invocation such as:
 
-<pre class="brush: bash">cat <strong>FILENAME.js</strong> | openssl dgst -sha384 -binary | openssl base64 -A</pre>
+```bash
+cat FILENAME.js | openssl dgst -sha384 -binary | openssl base64 -A
+```
 
-<p>…or with <strong>shasum</strong> using a command invocation such as:</p>
+…or with **shasum** using a command invocation such as:
 
-<pre class="brush: bash">shasum -b -a 384 <strong>FILENAME.js</strong> | awk '{ print $1 }' | xxd -r -p | base64
-</pre>
+```bash
+shasum -b -a 384 FILENAME.js | awk '{ print $1 }' | xxd -r -p | base64
+```
 
-<div class="note">
-<p><strong>Note:</strong></p>
+> **Note:**
+>
+> - The pipe-through-`xxd` step takes the hexadecimal output from `shasum` and converts it to binary.
+> - The pipe-through-`awk` step is necessary because `shasum` will pass the hashed filename in its output to `xxd`. That can have disastrous consequences if the filename happens to have valid hex characters in it — because `xxd` will also decode that and pass it to `base64`.
 
-<ul>
-	<li>The pipe-through-<code>xxd</code> step takes the hexadecimal output from <code>shasum</code> and converts it to binary.</li>
-	<li>The pipe-through-<code>awk</code> step is necessary because <code>shasum</code> will pass the hashed filename in its output to <code>xxd</code>. That can have disastrous consequences if the filename happens to have valid hex characters in it — because <code>xxd</code> will also decode that and pass it to <code>base64</code>.</li>
-</ul>
-</div>
+In a Windows environment, you can create a tool for generating SRI hashes with the following code:
 
-<p>In a Windows environment, you can create a tool for generating SRI hashes with the following code:</p>
+    @echo off
+    set bits=384
+    openssl dgst -sha%bits% -binary %1% | openssl base64 -A > tmp
+    set /p a= < tmp
+    del tmp
+    echo sha%bits%-%a%
+    pause
 
-<pre>@echo off
-set bits=384
-openssl dgst -sha%bits% -binary %1% | openssl base64 -A &gt; tmp
-set /p a= &lt; tmp
-del tmp
-echo sha%bits%-%a%
-pause
-</pre>
+To use that code:
 
-<p>To use that code:</p>
-  <ol>
-    <li>Save that code in a file named <code>sri-hash.bat</code> in the Windows SendTo folder in your environment (for example, <code>C:\Users\USER\AppData\Roaming\Microsoft\Windows\SendTo</code>).
-    <li>Right-click a file in the File Explorer, select <strong>Send to...</strong>, and then select <code>sri-hash</code>. You will see the integrity value in a command box.</li>
-    <li>Select the integrity value and right-click to copy it to the Clipboard.</li>
-    <li>Press any key to dismiss the command box.</li>
-  </ol>
+1.  Save that code in a file named `sri-hash.bat` in the Windows SendTo folder in your environment (for example, `C:\Users\USER\AppData\Roaming\Microsoft\Windows\SendTo`).
+2.  Right-click a file in the File Explorer, select **Send to...**, and then select `sri-hash`. You will see the integrity value in a command box.
+3.  Select the integrity value and right-click to copy it to the Clipboard.
+4.  Press any key to dismiss the command box.
 
-<h3 id="Cross-Origin_Resource_Sharing_and_Subresource_Integrity">Cross-Origin Resource Sharing and Subresource Integrity</h3>
+### Cross-Origin Resource Sharing and Subresource Integrity
 
-<p>For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using <a href="/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing (CORS)</a>, to ensure the origin serving the resource allows it to be shared with the requesting origin. Therefore, the resource must be served with an <code><a href="/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin">Access-Control-Allow-Origin</a></code> header that allows the resource to be shared with the requesting origin; for example:</p>
+For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin. Therefore, the resource must be served with an [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) header that allows the resource to be shared with the requesting origin; for example:
 
-<pre>Access-Control-Allow-Origin: *</pre>
+    Access-Control-Allow-Origin: *
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following examples, assume that <code>oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC</code> is already known to be the expected SHA-384 hash (digest) of a particular script <code>example-framework.js</code>, and there’s a copy of the script hosted at <code>https://example.com/example-framework.js</code>.</p>
+In the following examples, assume that `oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC` is already known to be the expected SHA-384 hash (digest) of a particular script `example-framework.js`, and there’s a copy of the script hosted at `https://example.com/example-framework.js`.
 
-<h3 id="Subresource_Integrity_with_the_&lt;script&gt;_element">Subresource Integrity with the &lt;script&gt; element</h3>
+### Subresource Integrity with the \<script> element
 
-<p>You can use the following {{HTMLElement("script")}} element to tell a browser that before executing the <code>https://example.com/example-framework.js</code> script, the browser must first compare the script to the expected hash, and verify that there's a match.</p>
+You can use the following {{HTMLElement("script")}} element to tell a browser that before executing the `https://example.com/example-framework.js` script, the browser must first compare the script to the expected hash, and verify that there's a match.
 
-<pre class="brush: html">&lt;script src="https://example.com/example-framework.js"
+```html
+<script src="https://example.com/example-framework.js"
         integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
-        crossorigin="anonymous"&gt;&lt;/script&gt;</pre>
+        crossorigin="anonymous"></script>
+```
 
-<div class="note">
-<p><strong>Note:</strong> For more details on the purpose of the <code>crossorigin</code> attribute, see <a href="/en-US/docs/Web/HTML/Attributes/crossorigin">CORS settings attributes</a>.</p>
-</div>
+> **Note:** For more details on the purpose of the `crossorigin` attribute, see [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin).
 
-<h2 id="How_browsers_handle_Subresource_Integrity">How browsers handle Subresource Integrity</h2>
+## How browsers handle Subresource Integrity
 
-<p>Browsers handle SRI by doing the following:</p>
+Browsers handle SRI by doing the following:
 
-<ol>
-	<li>
-	<p>When a browser encounters a {{HTMLElement("script")}} or {{HTMLElement("link")}} element with an <code>integrity</code> attribute, before executing the script or before applying any stylesheet specified by the {{HTMLElement("link")}} element, the browser must first compare the script or stylesheet to the expected hash given in the <code>integrity</code> value.</p>
+1.  When a browser encounters a {{HTMLElement("script")}} or {{HTMLElement("link")}} element with an `integrity` attribute, before executing the script or before applying any stylesheet specified by the {{HTMLElement("link")}} element, the browser must first compare the script or stylesheet to the expected hash given in the `integrity` value.
 
-	<p> For subresource-integrity verification of a resource served from an origin other than the document in which it’s embedded, browsers additionally check the resource using <a href="/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing (CORS)</a>, to ensure the origin serving the resource allows it to be shared with the requesting origin.</p>
-	</li>
-	<li>If the script or stylesheet doesn’t match its associated <code>integrity</code> value, the browser must refuse to execute the script or apply the stylesheet, and must instead return a network error indicating that fetching of that script or stylesheet failed.</li>
-</ol>
+    For subresource-integrity verification of a resource served from an origin other than the document in which it’s embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin.
 
-<h2 id="Specifications">Specifications</h2>
+2.  If the script or stylesheet doesn’t match its associated `integrity` value, the browser must refuse to execute the script or apply the stylesheet, and must instead return a network error indicating that fetching of that script or stylesheet failed.
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('Subresource Integrity')}}</td>
-			<td>{{Spec2('Subresource Integrity')}}</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>{{SpecName('Fetch')}}</td>
-			<td>{{Spec2('Fetch')}}</td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
+## Specifications
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+| Specification                                    | Status                                       | Comment |
+| ------------------------------------------------ | -------------------------------------------- | ------- |
+| {{SpecName('Subresource Integrity')}} | {{Spec2('Subresource Integrity')}} |         |
+| {{SpecName('Fetch')}}                     | {{Spec2('Fetch')}}                     |         |
 
-<h3 id="&lt;script_integrity&gt;">&lt;script integrity&gt;</h3>
+## Browser compatibility
 
-<p>{{Compat("html.elements.script.integrity")}}</p>
+### \<script integrity>
 
-<h2 id="See_also">See also</h2>
+{{Compat("html.elements.script.integrity")}}
 
-<ul>
-	<li>Content Security Policy</li>
-	<li>{{httpheader("Content-Security-Policy")}}</li>
-	<li><a href="https://frederik-braun.com/using-subresource-integrity.html">A CDN that can not XSS you: Using Subresource Integrity</a></li>
-	<li><a href="https://w3c-test.org/subresource-integrity/subresource-integrity.html">Subresource Integrity test from W3C</a></li>
-	<li><a href="https://www.srihash.org/">SRI Hash Generator</a></li>
-</ul>
+## See also
 
-<p>{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}</p>
+- Content Security Policy
+- {{httpheader("Content-Security-Policy")}}
+- [A CDN that can not XSS you: Using Subresource Integrity](https://frederik-braun.com/using-subresource-integrity.html)
+- [Subresource Integrity test from W3C](https://w3c-test.org/subresource-integrity/subresource-integrity.html)
+- [SRI Hash Generator](https://www.srihash.org/)
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

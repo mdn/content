@@ -4,267 +4,156 @@ slug: Web/Security/Firefox_Security_Guidelines
 tags:
   - Security
 ---
-<h2 id="Purpose">Purpose</h2>
+## Purpose
 
-<p>This document outlines a set of security guidelines that will generally apply to all client applications, such as Firefox and Thunderbird.</p>
+This document outlines a set of security guidelines that will generally apply to all client applications, such as Firefox and Thunderbird.
 
-<h2 id="Secure_Coding_Principles">Secure Coding Principles</h2>
+## Secure Coding Principles
 
-<p>Ensure that the application follows the <a href="https://www.owasp.org/index.php/Secure_Coding_Principles">OWASP Secure Coding Principles</a>:</p>
+Ensure that the application follows the [OWASP Secure Coding Principles](https://www.owasp.org/index.php/Secure_Coding_Principles):
 
-<ol>
- <li>Minimize attack surface area</li>
- <li>Establish secure defaults</li>
- <li>Principle of Least privilege</li>
- <li>Principle of Defense in depth</li>
- <li>Fail securely</li>
- <li>Don’t trust services</li>
- <li>Keep security simple</li>
- <li>Fix security issues correctly</li>
-</ol>
+1.  Minimize attack surface area
+2.  Establish secure defaults
+3.  Principle of Least privilege
+4.  Principle of Defense in depth
+5.  Fail securely
+6.  Don’t trust services
+7.  Keep security simple
+8.  Fix security issues correctly
 
-<h2 id="Input_Validation">Input Validation</h2>
+## Input Validation
 
-<ol>
- <li>Does the application accept user input?
-  <ol>
-   <li>Verify a sampling of input locations to ensure that reasonable maximums are in place when accepting user data</li>
-   <li>Verify a sampling of input locations to ensure that the application allows only a defined set of acceptable characters</li>
-   <li>Ensure that allowlisting is used instead of denylisting</li>
-  </ol>
- </li>
- <li>Does the application accept user input that is displayed in any way?
-  <ol>
-   <li>Verify a sampling of input and output locations to ensure user supplied content is properly encoded in the response</li>
-  </ol>
- </li>
-</ol>
+1.  Does the application accept user input?
 
-<h2 id="Chrome_JS_-_Dangerous_Functions">Chrome JS - Dangerous Functions</h2>
+    1.  Verify a sampling of input locations to ensure that reasonable maximums are in place when accepting user data
+    2.  Verify a sampling of input locations to ensure that the application allows only a defined set of acceptable characters
+    3.  Ensure that allowlisting is used instead of denylisting
 
-<p>Are any of the following functions used?</p>
+2.  Does the application accept user input that is displayed in any way?
 
-<p>If so ensure they are safe and that no better alternatives are available.</p>
+    1.  Verify a sampling of input and output locations to ensure user supplied content is properly encoded in the response
 
-<table>
- <thead>
-  <tr>
-   <th>Name</th>
-   <th>Risk Level</th>
-   <th>Problem</th>
-   <th>Solution</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>eval</td>
-   <td>Very High</td>
-   <td>Invokes JavaScript parser - dangerous if used with untrusted input</td>
-   <td>Avoid eval if at all possible.</td>
-  </tr>
-  <tr>
-   <td>setTimeout(string, time)</td>
-   <td>Very High</td>
-   <td>Acts like eval</td>
-   <td>Use setTimeout(function, time, param1, param2, ...)</td>
-  </tr>
- </tbody>
-</table>
+## Chrome JS - Dangerous Functions
 
-<h2 id="C_-_Dangerous_Functions">C++ - Dangerous Functions</h2>
+Are any of the following functions used?
 
-<p>Are any of the following functions used?</p>
+If so ensure they are safe and that no better alternatives are available.
 
-<p>If so ensure they are safe and that no better alternatives are available.</p>
+| Name                     | Risk Level | Problem                                                            | Solution                                            |
+| ------------------------ | ---------- | ------------------------------------------------------------------ | --------------------------------------------------- |
+| eval                     | Very High  | Invokes JavaScript parser - dangerous if used with untrusted input | Avoid eval if at all possible.                      |
+| setTimeout(string, time) | Very High  | Acts like eval                                                     | Use setTimeout(function, time, param1, param2, ...) |
 
-<table>
- <thead>
-  <tr>
-   <th>Name</th>
-   <th>Risk Level</th>
-   <th>Problem</th>
-   <th>Solution</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>gets</td>
-   <td>Very High</td>
-   <td>No bounds checking</td>
-   <td>Do not use gets. Use fgets instead.</td>
-  </tr>
-  <tr>
-   <td>strcpy</td>
-   <td>Very High</td>
-   <td>No bounds checking</td>
-   <td>strcpy is safe only if the source string is a constant and the destination is large enough to hold it. Otherwise, use strncpy.</td>
-  </tr>
-  <tr>
-   <td>sprintf</td>
-   <td>Very High</td>
-   <td>No bounds checking, format string attacks</td>
-   <td>sprintf is very hard to use safely. Use snprintf instead.</td>
-  </tr>
-  <tr>
-   <td>scanf, sscanf</td>
-   <td>High</td>
-   <td>Possibly no bounds checking, format string attacks</td>
-   <td>Make sure all %-directives match the corresponding argument types. Do not use '%s' directives with no bounds checking. Use '%xs' where x is the buffer size of the corresponding argument. Do not use untrusted, un-validated data in the format string.</td>
-  </tr>
-  <tr>
-   <td>strcat</td>
-   <td>High</td>
-   <td>No bounds checking</td>
-   <td>If input sizes are not well-known and fixed, use strncat instead.</td>
-  </tr>
-  <tr>
-   <td>printf, fprintf, snprintf, vfprintf, vsprintf, syslog</td>
-   <td>High</td>
-   <td>format string attacks</td>
-   <td>Do not use untrusted, un-validated data in the format string. If the format string can be influenced by Web content or user input, validate it for the proper number and type of %-directives before calling these functions. Make sure destination size arguments are correct.</td>
-  </tr>
-  <tr>
-   <td>strncpy, fgets, strncat</td>
-   <td>Low</td>
-   <td>May not null-terminate</td>
-   <td>Always explicitly null-terminate the destination buffer. Make sure the size argument is correct. Be sure to leave room in the destination buffer to add the null character!</td>
-  </tr>
- </tbody>
-</table>
+## C++ - Dangerous Functions
 
-<h2 id="URLs">URLs</h2>
+Are any of the following functions used?
 
-<ol>
- <li>Does the application make use of untrusted data to construct URLs?
-  <ul>
-   <li>Ensure any such data is adequately sanitized and encoded prior to use.</li>
-   <li>Ensure any data obtained from these URLs is checked before use or storage.</li>
-  </ul>
- </li>
- <li>Does the application follow redirects?
-  <ul>
-   <li>Ensure security checks are performed on redirects as well as the original request URI.</li>
-  </ul>
- </li>
-</ol>
+If so ensure they are safe and that no better alternatives are available.
 
-<h2 id="Security_Controls">Security Controls</h2>
+| Name                                                  | Risk Level | Problem                                            | Solution                                                                                                                                                                                                                                                                        |
+| ----------------------------------------------------- | ---------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| gets                                                  | Very High  | No bounds checking                                 | Do not use gets. Use fgets instead.                                                                                                                                                                                                                                             |
+| strcpy                                                | Very High  | No bounds checking                                 | strcpy is safe only if the source string is a constant and the destination is large enough to hold it. Otherwise, use strncpy.                                                                                                                                                  |
+| sprintf                                               | Very High  | No bounds checking, format string attacks          | sprintf is very hard to use safely. Use snprintf instead.                                                                                                                                                                                                                       |
+| scanf, sscanf                                         | High       | Possibly no bounds checking, format string attacks | Make sure all %-directives match the corresponding argument types. Do not use '%s' directives with no bounds checking. Use '%xs' where x is the buffer size of the corresponding argument. Do not use untrusted, un-validated data in the format string.                        |
+| strcat                                                | High       | No bounds checking                                 | If input sizes are not well-known and fixed, use strncat instead.                                                                                                                                                                                                               |
+| printf, fprintf, snprintf, vfprintf, vsprintf, syslog | High       | format string attacks                              | Do not use untrusted, un-validated data in the format string. If the format string can be influenced by Web content or user input, validate it for the proper number and type of %-directives before calling these functions. Make sure destination size arguments are correct. |
+| strncpy, fgets, strncat                               | Low        | May not null-terminate                             | Always explicitly null-terminate the destination buffer. Make sure the size argument is correct. Be sure to leave room in the destination buffer to add the null character!                                                                                                     |
 
-<ol>
- <li>Does the application implement suitable permission checks?
-  <ul>
-   <li>Ensure the correct APIs are used where available (e.g. shouldLoad, etc.)</li>
-   <li>Ensure the application fails securely.</li>
-  </ul>
- </li>
-</ol>
+## URLs
 
-<h2 id="Remote_System_Access">Remote System Access</h2>
+1.  Does the application make use of untrusted data to construct URLs?
 
-<ol>
- <li>Does the application access any remote systems?</li>
-</ol>
+    - Ensure any such data is adequately sanitized and encoded prior to use.
+    - Ensure any data obtained from these URLs is checked before use or storage.
 
-<ul>
- <li>Ensure that TLS is used unless there’s a <em>very</em> good reason not to.</li>
- <li>Ensure that no user information is transmitted without the user’s consent.</li>
-</ul>
+2.  Does the application follow redirects?
 
-<h2 id="Information_Storage">Information Storage</h2>
+    - Ensure security checks are performed on redirects as well as the original request URI.
 
-<ol>
- <li>File storage
-  <ol>
-   <li>Ensure the application checks that any files created are under allowed paths</li>
-   <li>Are filenames generated from untrusted data?
-    <ul>
-     <li>Ensure the data is suitably encoded</li>
-    </ul>
-   </li>
-   <li>Check files are of an acceptable type</li>
-   <li>Check files cannot exceed reasonable size limits</li>
-  </ol>
- </li>
- <li>Database storage
-  <ol>
-   <li>Ensure any untrusted information sent to the database is adequately sanitized</li>
-   <li>Where possible, make use of type safe parameterization to prevent injection attacks</li>
-  </ol>
- </li>
- <li>Sensitive information
-  <ol>
-   <li>Ensure any security sensitive or personal information is adequately protected (see Encryption section)</li>
-   <li>Particular care must be taken around credentials (passwords, etc) - If you're working with information of this type and you're unsure of what to do, it's always worth asking</li>
-  </ol>
- </li>
- <li>Logging
-  <ol>
-   <li>Don't forget the above rules apply to logs as well as your usual application data</li>
-  </ol>
- </li>
-</ol>
+## Security Controls
 
-<h2 id="Encryption">Encryption</h2>
+1.  Does the application implement suitable permission checks?
 
-<ol>
- <li>Does the application use any form of encryption?</li>
- <li>Are the algorithms used recognized standards?</li>
-</ol>
+    - Ensure the correct APIs are used where available (e.g. shouldLoad, etc.)
+    - Ensure the application fails securely.
 
-<h2 id="Denial_of_Service">Denial of Service</h2>
+## Remote System Access
 
-<ol>
- <li>Ensure the application protects against exhaustion of:
-  <ol>
-   <li>System memory</li>
-   <li>Storage</li>
-  </ol>
- </li>
-</ol>
+1.  Does the application access any remote systems?
 
-<h2 id="Security_Warnings">Security Warnings</h2>
+- Ensure that TLS is used unless there’s a *very* good reason not to.
+- Ensure that no user information is transmitted without the user’s consent.
 
-<ol>
- <li>Does the application present the user with any security warnings?</li>
- <li>Are they clearly understandable and appropriate?</li>
- <li>Can untrusted data change the meaning of messages to the user?
-  <ul>
-   <li>Can user input change the meaning of messages?</li>
-   <li>Can user input force system messages off the visible screen?</li>
-   <li>Can user input include special characters that can change the meaning of messages (eg Unicode right-to-left override U+202E)</li>
-  </ul>
- </li>
- <li>Can an attacker use the timing of dialogs to fool the user into clicking on something they didnt intend to?</li>
-</ol>
+## Information Storage
 
-<h2 id="Information_Disclosure">Information Disclosure</h2>
+1.  File storage
 
-<ol>
- <li>Does the application disclose information that could compromise the user?</li>
- <li>Does the application disclose any information that it does not need to?</li>
- <li>Does the application disclose anything that may surprise or upset the user?</li>
-</ol>
+    1.  Ensure the application checks that any files created are under allowed paths
+    2.  Are filenames generated from untrusted data?
 
-<h2 id="Front_End">Front End</h2>
+        - Ensure the data is suitably encoded
 
-<ol>
- <li>Are safe mechanisms used to create XUL and HTML UI elements?
-  <ul>
-   <li>e.g. use createTextNode instead of innerHTML or similar</li>
-  </ul>
- </li>
- <li>Does the application create its own docshells (tabs, iframes)?
-  <ul>
-   <li>Ensure you are explicit about the type of these, e.g. iframe.setAttribute("type", "content")</li>
-  </ul>
- </li>
-</ol>
+    3.  Check files are of an acceptable type
+    4.  Check files cannot exceed reasonable size limits
 
-<h2 id="References">References</h2>
+2.  Database storage
 
-<ul>
- <li><a href="https://wiki.mozilla.org/WebAppSec/Web_Security_Verification" >Web Security Verification</a></li>
- <li><a href="https://www.mozilla.org/projects/security/components/reviewguide.html" >Mozilla Security Review and Best Practices</a></li>
- <li><a href="https://www.squarefree.com/securitytips/mozilla-developers.html" >Security tips for Mozilla and extension developers</a></li>
- <li><a href="https://owasp.org/www-pdf-archive/OWASP_SCP_Quick_Reference_Guide_v2.pdf" >OWASP Secure Coding Practices - Quick Reference Guide</a></li>
-</ul>
+    1.  Ensure any untrusted information sent to the database is adequately sanitized
+    2.  Where possible, make use of type safe parameterization to prevent injection attacks
+
+3.  Sensitive information
+
+    1.  Ensure any security sensitive or personal information is adequately protected (see Encryption section)
+    2.  Particular care must be taken around credentials (passwords, etc) - If you're working with information of this type and you're unsure of what to do, it's always worth asking
+
+4.  Logging
+
+    1.  Don't forget the above rules apply to logs as well as your usual application data
+
+## Encryption
+
+1.  Does the application use any form of encryption?
+2.  Are the algorithms used recognized standards?
+
+## Denial of Service
+
+1.  Ensure the application protects against exhaustion of:
+
+    1.  System memory
+    2.  Storage
+
+## Security Warnings
+
+1.  Does the application present the user with any security warnings?
+2.  Are they clearly understandable and appropriate?
+3.  Can untrusted data change the meaning of messages to the user?
+
+    - Can user input change the meaning of messages?
+    - Can user input force system messages off the visible screen?
+    - Can user input include special characters that can change the meaning of messages (eg Unicode right-to-left override U+202E)
+
+4.  Can an attacker use the timing of dialogs to fool the user into clicking on something they didnt intend to?
+
+## Information Disclosure
+
+1.  Does the application disclose information that could compromise the user?
+2.  Does the application disclose any information that it does not need to?
+3.  Does the application disclose anything that may surprise or upset the user?
+
+## Front End
+
+1.  Are safe mechanisms used to create XUL and HTML UI elements?
+
+    - e.g. use createTextNode instead of innerHTML or similar
+
+2.  Does the application create its own docshells (tabs, iframes)?
+
+    - Ensure you are explicit about the type of these, e.g. iframe.setAttribute("type", "content")
+
+## References
+
+- [Web Security Verification](https://wiki.mozilla.org/WebAppSec/Web_Security_Verification)
+- [Mozilla Security Review and Best Practices](https://www.mozilla.org/projects/security/components/reviewguide.html)
+- [Security tips for Mozilla and extension developers](https://www.squarefree.com/securitytips/mozilla-developers.html)
+- [OWASP Secure Coding Practices - Quick Reference Guide](https://owasp.org/www-pdf-archive/OWASP_SCP_Quick_Reference_Guide_v2.pdf)
