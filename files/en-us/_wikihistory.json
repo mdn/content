@@ -151392,30 +151392,6 @@
       "mingxinhe"
     ]
   },
-  "Web/Performance/Fundamentals/Power": {
-    "modified": "2019-03-18T20:51:55.876Z",
-    "contributors": [
-      "chrisdavidmills",
-      "MNizam0802",
-      "mfluehr",
-      "dkocho4",
-      "mflanagan",
-      "rikkie",
-      "jhylands",
-      "Hub",
-      "huseby"
-    ]
-  },
-  "Web/Performance/Fundamentals/Power/Nexus_4_Harness": {
-    "modified": "2019-03-18T20:51:55.534Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfluehr",
-      "dkocho4",
-      "rikkie",
-      "jhylands"
-    ]
-  },
   "Web/Performance/How_browsers_work": {
     "modified": "2020-09-26T16:40:32.931Z",
     "contributors": [
