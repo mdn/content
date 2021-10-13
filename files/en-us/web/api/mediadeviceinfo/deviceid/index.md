@@ -24,7 +24,7 @@ a different identifier is used that is not persisted across sessions.
 ## Syntax
 
 ```js
-var deviceID = MediaDeviceInfo.deviceId
+var deviceID = new MediaDeviceInfo().deviceId
 ```
 
 ### Value
