@@ -8,197 +8,183 @@ tags:
   - Guide
   - Performance
 ---
-<p>Performance means efficiency. In the context of Open Web Apps, this document explains in general what performance is, how the browser platform helps improve it, and what tools and processes you can use to test and improve it.</p>
+Performance means efficiency. In the context of Open Web Apps, this document explains in general what performance is, how the browser platform helps improve it, and what tools and processes you can use to test and improve it.
 
-<h2 id="What_is_performance">What is performance?</h2>
+## What is performance?
 
-<p>Ultimately, user-perceived performance is the only performance that matters. Users provide inputs to the system through touch, movement, and speech. In return, they perceive outputs through sight, touch, and hearing. Performance is the quality of system outputs in response to user inputs.</p>
+Ultimately, user-perceived performance is the only performance that matters. Users provide inputs to the system through touch, movement, and speech. In return, they perceive outputs through sight, touch, and hearing. Performance is the quality of system outputs in response to user inputs.
 
-<p>All other things being equal, code optimized for some target besides user-perceived performance (hereafter UPP) loses when competing against code optimized for UPP. Users prefer, say, a responsive, smooth app that only processes 1,000 database transactions per second, over a choppy, unresponsive app that processes 100,000,000 per second. Of course, it's by no means pointless to optimize other metrics, but real UPP targets come first.</p>
+All other things being equal, code optimized for some target besides user-perceived performance (hereafter UPP) loses when competing against code optimized for UPP. Users prefer, say, a responsive, smooth app that only processes 1,000 database transactions per second, over a choppy, unresponsive app that processes 100,000,000 per second. Of course, it's by no means pointless to optimize other metrics, but real UPP targets come first.
 
-<p>The next few subsections point out and discuss essential performance metrics.</p>
+The next few subsections point out and discuss essential performance metrics.
 
-<h3 id="Responsiveness">Responsiveness</h3>
+### Responsiveness
 
-<p>Responsiveness means how fast the system provides outputs (possibly multiple ones) in response to user inputs. For example, when a user taps the screen, they expect the pixels to change in a certain way. For this interaction, the responsiveness metric is the time elapsed between the tap and the pixel change.</p>
+Responsiveness means how fast the system provides outputs (possibly multiple ones) in response to user inputs. For example, when a user taps the screen, they expect the pixels to change in a certain way. For this interaction, the responsiveness metric is the time elapsed between the tap and the pixel change.
 
-<p>Responsiveness sometimes involves multiple stages of feedback. Application launch is one particularly important case discussed in more detail below.</p>
+Responsiveness sometimes involves multiple stages of feedback. Application launch is one particularly important case discussed in more detail below.
 
-<p>Responsiveness is important because people get frustrated and angry when they're ignored. Your app is ignoring the user every second that it fails to respond to the user's input.</p>
+Responsiveness is important because people get frustrated and angry when they're ignored. Your app is ignoring the user every second that it fails to respond to the user's input.
 
-<h3 id="Framerate">Framerate</h3>
+### Framerate
 
-<p>Framerate is the rate at which the system changes pixels displayed to the user. This is a familiar concept: everyone prefers, say, games that display 60 frames per second over ones that display 10 frames per second, even if they can't explain why.</p>
+Framerate is the rate at which the system changes pixels displayed to the user. This is a familiar concept: everyone prefers, say, games that display 60 frames per second over ones that display 10 frames per second, even if they can't explain why.
 
-<p>Framerate is important as a "quality of service" metric. Computer displays are designed to "fool" user's eyes, by delivering photons to them that mimic reality. For example, paper covered with printed text reflects photons to the user's eyes in some pattern. By manipulating pixels, a reader app emits photons in a similar pattern to "fool" the user's eyes.</p>
+Framerate is important as a "quality of service" metric. Computer displays are designed to "fool" user's eyes, by delivering photons to them that mimic reality. For example, paper covered with printed text reflects photons to the user's eyes in some pattern. By manipulating pixels, a reader app emits photons in a similar pattern to "fool" the user's eyes.
 
-<p>As your brain infers, motion is not jerky and discrete, but rather "updates" smoothly and continuously. (Strobe lights are fun because they turn that upside down, starving your brain of inputs to create the illusion of discrete reality). On a computer display, a higher framerate makes for a more faithful imitation of reality.</p>
+As your brain infers, motion is not jerky and discrete, but rather "updates" smoothly and continuously. (Strobe lights are fun because they turn that upside down, starving your brain of inputs to create the illusion of discrete reality). On a computer display, a higher framerate makes for a more faithful imitation of reality.
 
-<div class="note">
-<p><strong>Note:</strong> Humans usually cannot perceive differences in framerate above 60Hz. That's why most modern electronic displays are designed to refresh at that rate. A television probably looks choppy and unrealistic to a hummingbird, for example.</p>
-</div>
+> **Note:** Humans usually cannot perceive differences in framerate above 60Hz. That's why most modern electronic displays are designed to refresh at that rate. A television probably looks choppy and unrealistic to a hummingbird, for example.
 
-<h3 id="Memory_usage">Memory usage</h3>
+### Memory usage
 
-<p><strong>Memory usage</strong> is another key metric. Unlike responsiveness and framerate, users don't directly perceive memory usage, but memory usage closely approximates "user state". An ideal system would maintain 100% of user state at all times: all applications in the system would run simultaneously, and all applications would retain the state created by the user the last time the user interacted with the application (application state is stored in computer memory, which is why the approximation is close).</p>
+**Memory usage** is another key metric. Unlike responsiveness and framerate, users don't directly perceive memory usage, but memory usage closely approximates "user state". An ideal system would maintain 100% of user state at all times: all applications in the system would run simultaneously, and all applications would retain the state created by the user the last time the user interacted with the application (application state is stored in computer memory, which is why the approximation is close).
 
-<p>From this comes an important but counter-intuitive corollary: a well-designed system does not maximize the amount of <strong>free</strong> memory. Memory is a resource, and free memory is an unused resource. Rather, a well-designed system has been optimized to <strong>use</strong> as much memory as possible to maintain user state, while meeting other UPP goals.</p>
+From this comes an important but counter-intuitive corollary: a well-designed system does not maximize the amount of **free** memory. Memory is a resource, and free memory is an unused resource. Rather, a well-designed system has been optimized to **use** as much memory as possible to maintain user state, while meeting other UPP goals.
 
-<p>That doesn't mean the system should <strong>waste</strong> memory. When a system uses more memory than necessary to maintain some particular user state, the system is wasting a resource it could use to retain some other user state. In practice, no system can maintain all user states. Intelligently allocating memory to user state is an important concern that we go over in more detail below.</p>
+That doesn't mean the system should **waste** memory. When a system uses more memory than necessary to maintain some particular user state, the system is wasting a resource it could use to retain some other user state. In practice, no system can maintain all user states. Intelligently allocating memory to user state is an important concern that we go over in more detail below.
 
-<h3 id="Power_usage">Power usage</h3>
+### Power usage
 
-<p>The final metric discussed here is <strong>power usage</strong>. Like memory usage, users perceive power usage only indirectly, by how long their devices can maintain all other UPP goals. In service of meeting UPP goals, the system must use only the minimum power required.</p>
+The final metric discussed here is **power usage**. Like memory usage, users perceive power usage only indirectly, by how long their devices can maintain all other UPP goals. In service of meeting UPP goals, the system must use only the minimum power required.
 
-<p>The remainder of this document will discuss performance in terms of these metrics.</p>
+The remainder of this document will discuss performance in terms of these metrics.
 
-<h2 id="Platform_performance_optimizations">Platform performance optimizations</h2>
+## Platform performance optimizations
 
-<p>This section provides a brief overview of how Firefox/Gecko contributes to performance generally, below the level of all applications. From a developer's or user's perspective, this answers the question, "What does the platform do for you?"</p>
+This section provides a brief overview of how Firefox/Gecko contributes to performance generally, below the level of all applications. From a developer's or user's perspective, this answers the question, "What does the platform do for you?"
 
-<h3 id="Web_technologies">Web technologies</h3>
+### Web technologies
 
-<p>The Web platform provides many tools, some better suited for particular jobs than others. All application logic is written in JavaScript. To display graphics, developers can use HTML or CSS (i.e. high-level declarative languages), or use low-level imperative interfaces offered by the {{ htmlelement("canvas") }} element (which includes <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a>). Somewhere "in between" HTML/CSS and Canvas is <a href="/en-US/docs/Web/SVG">SVG</a>, which offers some benefits of both.</p>
+The Web platform provides many tools, some better suited for particular jobs than others. All application logic is written in JavaScript. To display graphics, developers can use HTML or CSS (i.e. high-level declarative languages), or use low-level imperative interfaces offered by the {{ htmlelement("canvas") }} element (which includes [WebGL](/en-US/docs/Web/API/WebGL_API)). Somewhere "in between" HTML/CSS and Canvas is [SVG](/en-US/docs/Web/SVG), which offers some benefits of both.
 
-<p>HTML and CSS greatly increase productivity, sometimes at the expense of framerate or pixel-level control over rendering. Text and images reflow automatically, UI elements automatically receive the system theme, and the system provides "built-in" support for some use cases developers may not think of initially, like different-resolution displays or right-to-left languages.</p>
+HTML and CSS greatly increase productivity, sometimes at the expense of framerate or pixel-level control over rendering. Text and images reflow automatically, UI elements automatically receive the system theme, and the system provides "built-in" support for some use cases developers may not think of initially, like different-resolution displays or right-to-left languages.
 
-<p>The <code>canvas</code> element offers a pixel buffer directly for developers to draw on. This gives developers pixel-level control over rendering and precise control of framerate, but now the developers need to deal with multiple resolutions and orientations, right-to-left languages, and so forth. Developers draw to canvases using either a familiar 2D drawing API, or WebGL, a "close to the metal" binding that mostly follows OpenGL ES 2.0.</p>
+The `canvas` element offers a pixel buffer directly for developers to draw on. This gives developers pixel-level control over rendering and precise control of framerate, but now the developers need to deal with multiple resolutions and orientations, right-to-left languages, and so forth. Developers draw to canvases using either a familiar 2D drawing API, or WebGL, a "close to the metal" binding that mostly follows OpenGL ES 2.0.
 
-<h3 id="Gecko_rendering">Gecko rendering</h3>
+### Gecko rendering
 
-<p>The Gecko JavaScript engine supports just-in-time (JIT) compilation. This enables application logic to perform comparably to other virtual machines — such as Java virtual machines — and in some cases even close to "native code".</p>
+The Gecko JavaScript engine supports just-in-time (JIT) compilation. This enables application logic to perform comparably to other virtual machines — such as Java virtual machines — and in some cases even close to "native code".
 
-<p>The graphics pipeline in Gecko that underpins HTML, CSS, and Canvas is optimized in several ways. The HTML/CSS layout and graphics code in Gecko reduces invalidation and repainting for common cases like scrolling; developers get this support "for free". Pixel buffers painted by both Gecko "automatically" and applications to <code>canvas</code> "manually" minimize copies when being drawn to the display framebuffer. This is done by avoiding intermediate surfaces where they would create overhead (such as per-application "back buffers" in many other operating systems), and by using special memory for graphics buffers that can be directly accessed by the compositor hardware. Complex scenes are rendered using the device's GPU for maximum performance. To improve power usage, simple scenes are rendered using special dedicated composition hardware, while the GPU idles or turns off.</p>
+The graphics pipeline in Gecko that underpins HTML, CSS, and Canvas is optimized in several ways. The HTML/CSS layout and graphics code in Gecko reduces invalidation and repainting for common cases like scrolling; developers get this support "for free". Pixel buffers painted by both Gecko "automatically" and applications to `canvas` "manually" minimize copies when being drawn to the display framebuffer. This is done by avoiding intermediate surfaces where they would create overhead (such as per-application "back buffers" in many other operating systems), and by using special memory for graphics buffers that can be directly accessed by the compositor hardware. Complex scenes are rendered using the device's GPU for maximum performance. To improve power usage, simple scenes are rendered using special dedicated composition hardware, while the GPU idles or turns off.
 
-<p>Fully static content is the exception rather than the rule for rich applications. Rich applications use dynamic content with {{ cssxref("animation") }} and {{ cssxref ("transition") }} effects. Transitions and animations are particularly important to applications: developers can use CSS to declare complicated behavior with a simple, high-level syntax. In turn, Gecko's graphics pipeline is highly optimized to render common animations efficiently. Common-case animations are "offloaded" to the system compositor, which can render them in a performant, power-efficient fashion.</p>
+Fully static content is the exception rather than the rule for rich applications. Rich applications use dynamic content with {{ cssxref("animation") }} and {{ cssxref ("transition") }} effects. Transitions and animations are particularly important to applications: developers can use CSS to declare complicated behavior with a simple, high-level syntax. In turn, Gecko's graphics pipeline is highly optimized to render common animations efficiently. Common-case animations are "offloaded" to the system compositor, which can render them in a performant, power-efficient fashion.
 
-<p>An app's startup performance matters just as much as its runtime performance. Gecko is optimized to load a wide variety of content efficiently: the entire Web! Many years of improvements targeting this content, like parallel HTML parsing, intelligent scheduling of reflows and image decoding, clever layout algorithms, etc., translate just as well to improving Web applications on Firefox.</p>
+An app's startup performance matters just as much as its runtime performance. Gecko is optimized to load a wide variety of content efficiently: the entire Web! Many years of improvements targeting this content, like parallel HTML parsing, intelligent scheduling of reflows and image decoding, clever layout algorithms, etc., translate just as well to improving Web applications on Firefox.
 
-<h2 id="Application_performance">Application performance</h2>
+## Application performance
 
-<p>This section is intended for developers asking the question: "How can I make my app fast"?</p>
+This section is intended for developers asking the question: "How can I make my app fast"?
 
-<h3 id="Startup_performance">Startup performance</h3>
+### Startup performance
 
-<p>Application startup is punctuated by three user-perceived events, generally speaking:</p>
+Application startup is punctuated by three user-perceived events, generally speaking:
 
-<ul>
- <li>The first is the application <strong>first paint</strong> — the point at which sufficient application resources have been loaded to paint an initial frame</li>
- <li>The second is when the application becomes <strong>interactive</strong> — for example, users are able to tap a button and the application responds</li>
- <li>The final event is <strong>full load</strong> — for example when all the user's albums have been listed in a music player</li>
-</ul>
+- The first is the application **first paint** — the point at which sufficient application resources have been loaded to paint an initial frame
+- The second is when the application becomes **interactive** — for example, users are able to tap a button and the application responds
+- The final event is **full load** — for example when all the user's albums have been listed in a music player
 
-<p>The key to fast startup is to keep two things in mind: UPP is all that matters, and there's a "critical path" to each user-perceived event above. The critical path is exactly and only the code that must run to produce the event.</p>
+The key to fast startup is to keep two things in mind: UPP is all that matters, and there's a "critical path" to each user-perceived event above. The critical path is exactly and only the code that must run to produce the event.
 
-<p>For example, to paint an application's first frame that comprises visually some HTML and CSS to style that HTML:</p>
+For example, to paint an application's first frame that comprises visually some HTML and CSS to style that HTML:
 
-<ol>
- <li>The HTML must be parsed</li>
- <li>The DOM for that HTML must be constructed</li>
- <li>Resources like images in that part of the DOM have to be loaded and decoded</li>
- <li>The CSS styles must be applied to that DOM</li>
- <li>The styled document has to be reflowed</li>
-</ol>
+1.  The HTML must be parsed
+2.  The DOM for that HTML must be constructed
+3.  Resources like images in that part of the DOM have to be loaded and decoded
+4.  The CSS styles must be applied to that DOM
+5.  The styled document has to be reflowed
 
-<p>Nowhere in that list is "load the JS file needed for an uncommon menu"; "fetch and decode the image for the High Scores list", etc. Those work items are not on the critical path to painting the first frame.</p>
+Nowhere in that list is "load the JS file needed for an uncommon menu"; "fetch and decode the image for the High Scores list", etc. Those work items are not on the critical path to painting the first frame.
 
-<p>It seems obvious, but to reach a user-perceived startup event more quickly, the main "trick" is run <em>only the code on the critical path.</em> Shorten the critical path by simplifying the scene.</p>
+It seems obvious, but to reach a user-perceived startup event more quickly, the main "trick" is run _only the code on the critical path._ Shorten the critical path by simplifying the scene.
 
-<p>The Web platform is highly dynamic. JavaScript is a dynamically-typed language, and the Web platform allows loading code, HTML, CSS, images, and other resources dynamically. These features can be used to defer work that's off the critical path by loading unnecessary content "lazily" some time after startup.</p>
+The Web platform is highly dynamic. JavaScript is a dynamically-typed language, and the Web platform allows loading code, HTML, CSS, images, and other resources dynamically. These features can be used to defer work that's off the critical path by loading unnecessary content "lazily" some time after startup.
 
-<p>Another problem that can delay startup is idle time, caused by waiting for responses to requests (like database loads). To avoid this problem, applications should issue requests as early as possible in startup (this is called "front-loading"). Then when the data is needed later, hopefully it's already available and the application doesn't have to wait.</p>
+Another problem that can delay startup is idle time, caused by waiting for responses to requests (like database loads). To avoid this problem, applications should issue requests as early as possible in startup (this is called "front-loading"). Then when the data is needed later, hopefully it's already available and the application doesn't have to wait.
 
-<div class="note">
-<p><strong>Note:</strong> For much more information on improving startup performance, read <a href="/en-US/docs/Web/Performance/Optimizing_startup_performance">Optimizing startup performance</a>.</p>
-</div>
+> **Note:** For much more information on improving startup performance, read [Optimizing startup performance](/en-US/docs/Web/Performance/Optimizing_startup_performance).
 
-<p>On the same note, notice that locally-cached, static resources can be loaded much faster than dynamic data fetched over high-latency, low-bandwidth mobile networks. Network requests should never be on the critical path to early application startup. Local caching/offline apps can be achieved via <a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a>. See <a href="/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers">Making PWAs work offline with Service workers</a> for a guide as to how.</p>
+On the same note, notice that locally-cached, static resources can be loaded much faster than dynamic data fetched over high-latency, low-bandwidth mobile networks. Network requests should never be on the critical path to early application startup. Local caching/offline apps can be achieved via [Service Workers](/en-US/docs/Web/API/Service_Worker_API). See [Making PWAs work offline with Service workers](/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers) for a guide as to how.
 
-<h3 id="Framerate_2">Framerate</h3>
+### Framerate
 
-<p>The first important thing for high framerate is to choose the right tool. Use HTML and CSS to implement content that's mostly static, scrolled, and infrequently animated. Use Canvas to implement highly dynamic content, like games that need tight control over rendering and don't need theming.</p>
+The first important thing for high framerate is to choose the right tool. Use HTML and CSS to implement content that's mostly static, scrolled, and infrequently animated. Use Canvas to implement highly dynamic content, like games that need tight control over rendering and don't need theming.
 
-<p>For content drawn using Canvas, it's up to the developer to hit framerate targets: they have direct control over what's drawn.</p>
+For content drawn using Canvas, it's up to the developer to hit framerate targets: they have direct control over what's drawn.
 
-<p>For HTML and CSS content, the path to high framerate is to use the right primitives. Firefox is highly optimized to scroll arbitrary content; this is usually not a concern. But often trading some generality and quality for speed, such as using a static rendering instead of a CSS radial gradient, can push scrolling framerate over a target. CSS <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media queries</a> allow these compromises to be restricted only to devices that need them.</p>
+For HTML and CSS content, the path to high framerate is to use the right primitives. Firefox is highly optimized to scroll arbitrary content; this is usually not a concern. But often trading some generality and quality for speed, such as using a static rendering instead of a CSS radial gradient, can push scrolling framerate over a target. CSS [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) allow these compromises to be restricted only to devices that need them.
 
-<p>Many applications use transitions or animations through "pages", or "panels". For example, the user taps a "Settings" button to transition into an application configuration screen, or a settings menu "pops up". Firefox is highly optimized to transition and animate scenes that:</p>
+Many applications use transitions or animations through "pages", or "panels". For example, the user taps a "Settings" button to transition into an application configuration screen, or a settings menu "pops up". Firefox is highly optimized to transition and animate scenes that:
 
-<ul>
- <li>use pages/panels approximately the size of the device screen or smaller</li>
- <li>transition/animate the CSS <code>transform</code> and <code>opacity</code> properties</li>
-</ul>
+- use pages/panels approximately the size of the device screen or smaller
+- transition/animate the CSS `transform` and `opacity` properties
 
-<p>Transitions and animations that adhere to these guidelines can be offloaded to the system compositor and run maximally efficiently.</p>
+Transitions and animations that adhere to these guidelines can be offloaded to the system compositor and run maximally efficiently.
 
-<h3 id="Memory_and_power_usage">Memory and power usage</h3>
+### Memory and power usage
 
-<p>Improving memory and power usage is a similar problem to speeding up startup: don't do unneeded work or lazily load uncommonly-used UI resources. Do use efficient data structures and ensure resources like images are optimized well.</p>
+Improving memory and power usage is a similar problem to speeding up startup: don't do unneeded work or lazily load uncommonly-used UI resources. Do use efficient data structures and ensure resources like images are optimized well.
 
-<p>Modern CPUs can enter a lower-power mode when mostly idle. Applications that constantly fire timers or keep unnecessary animations running prevent CPUs from entering low-power mode. Power-efficient applications shouldn't do that.</p>
+Modern CPUs can enter a lower-power mode when mostly idle. Applications that constantly fire timers or keep unnecessary animations running prevent CPUs from entering low-power mode. Power-efficient applications shouldn't do that.
 
-<p>When applications are sent to the background, a {{event("visibilitychange")}} event is fired on their documents. This event is a developer's friend; applications should listen for it.</p>
+When applications are sent to the background, a {{event("visibilitychange")}} event is fired on their documents. This event is a developer's friend; applications should listen for it.
 
-<h3 id="Specific_coding_tips_for_application_performance">Specific coding tips for application performance</h3>
+### Specific coding tips for application performance
 
-<p>The following practical tips will help improve one or more of the Application performance factors discussed above.</p>
+The following practical tips will help improve one or more of the Application performance factors discussed above.
 
-<h4 id="Use_CSS_animations_and_transitions">Use CSS animations and transitions</h4>
+#### Use CSS animations and transitions
 
-<p>Instead of using some library’s <code>animate()</code> function, which probably currently uses many badly performing technologies ({{domxref("setTimeout()")}} or <code>top</code>/<code>left</code> positioning, for example) use <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">CSS animations</a>. In many cases, you can actually use <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS Transitions</a> to get the job done. This works well because the browser is designed to optimize these effects and use the GPU to handle them smoothly with minimal impact on processor performance. Another benefit is that you can define these effects in CSS along with the rest of your app's look-and-feel, using a standardized syntax.</p>
+Instead of using some library’s `animate()` function, which probably currently uses many badly performing technologies ({{domxref("setTimeout()")}} or `top`/`left` positioning, for example) use [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations). In many cases, you can actually use [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) to get the job done. This works well because the browser is designed to optimize these effects and use the GPU to handle them smoothly with minimal impact on processor performance. Another benefit is that you can define these effects in CSS along with the rest of your app's look-and-feel, using a standardized syntax.
 
-<p>CSS animations give you very granular control over your effects using <a href="/en-US/docs/Web/CSS/@keyframes">keyframes</a>, and you can even watch events fired during the animation process in order to handle other tasks that need to be performed at set points in the animation process. You can easily trigger these animations with the {{cssxref(":hover")}}, {{cssxref(":focus")}}, or {{cssxref(":target")}}, or by dynamically adding and removing classes on parent elements.</p>
+CSS animations give you very granular control over your effects using [keyframes](/en-US/docs/Web/CSS/@keyframes), and you can even watch events fired during the animation process in order to handle other tasks that need to be performed at set points in the animation process. You can easily trigger these animations with the {{cssxref(":hover")}}, {{cssxref(":focus")}}, or {{cssxref(":target")}}, or by dynamically adding and removing classes on parent elements.
 
-<p>If you want to create animations on the fly or modify them in <a href="/en-US/docs/Web/JavaScript">JavaScript</a>, James Long has written a simple library for that called <a href="https://github.com/jlongster/css-animations.js/">CSS-animations.js</a>.</p>
+If you want to create animations on the fly or modify them in [JavaScript](/en-US/docs/Web/JavaScript), James Long has written a simple library for that called [CSS-animations.js](https://github.com/jlongster/css-animations.js/).
 
-<h4 id="Use_CSS_transforms">Use CSS transforms</h4>
+#### Use CSS transforms
 
-<p>Instead of tweaking absolute positioning and fiddling with all that math yourself, use the {{cssxref("transform")}} CSS property to adjust the position, scale, and so forth of your content. The reason is, once again, hardware acceleration. The browser can do these tasks on your GPU, letting the CPU handle other things.</p>
+Instead of tweaking absolute positioning and fiddling with all that math yourself, use the {{cssxref("transform")}} CSS property to adjust the position, scale, and so forth of your content. The reason is, once again, hardware acceleration. The browser can do these tasks on your GPU, letting the CPU handle other things.
 
-<p>In addition, transforms give you capabilities you might not otherwise have. Not only can you translate elements in 2D space, but you can transform in three dimensions, skew and rotate, and so forth. Paul Irish has an <a href="https://paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/">in-depth analysis of the benefits of <code>translate()</code></a> from a performance point of view. In general, however, you have the same benefits you get from using CSS animations: you use the right tool for the job and leave the optimization to the browser. You also use an easily extensible way of positioning elements — something that needs a lot of extra code if you simulate translation with <code>top</code> and <code>left</code> positioning. Another bonus is that this is just like working in a <code>canvas</code> element.</p>
+In addition, transforms give you capabilities you might not otherwise have. Not only can you translate elements in 2D space, but you can transform in three dimensions, skew and rotate, and so forth. Paul Irish has an [in-depth analysis of the benefits of `translate()`](https://paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/) from a performance point of view. In general, however, you have the same benefits you get from using CSS animations: you use the right tool for the job and leave the optimization to the browser. You also use an easily extensible way of positioning elements — something that needs a lot of extra code if you simulate translation with `top` and `left` positioning. Another bonus is that this is just like working in a `canvas` element.
 
-<div class="note">
-<p><strong>Note:</strong> You may need to attach a <code>translateZ(0.1)</code> transform if you wish to get hardware acceleration on your CSS animations, depending on platform. As noted above, this can improve performance, but can also have memory consumption issues. What you do in this regard is up to you — do some testing and find out what's best for your particular app.</p>
-</div>
+> **Note:** You may need to attach a `translateZ(0.1)` transform if you wish to get hardware acceleration on your CSS animations, depending on platform. As noted above, this can improve performance, but can also have memory consumption issues. What you do in this regard is up to you — do some testing and find out what's best for your particular app.
 
-<h4 id="Use_requestAnimationFrame_instead_of_setInterval">Use <code>requestAnimationFrame()</code> instead of <code>setInterval()</code></h4>
+#### Use `requestAnimationFrame()` instead of `setInterval()`
 
-<p>Calls to {{domxref("setInterval()")}} run code at a presumed frame rate that may or may not be possible under current circumstances. It tells the browser to render results even while the browser isn't actually drawing; that is, while the video hardware hasn't reached the next display cycle. This wastes processor time and can even lead to reduced battery life on the user's device.</p>
+Calls to {{domxref("setInterval()")}} run code at a presumed frame rate that may or may not be possible under current circumstances. It tells the browser to render results even while the browser isn't actually drawing; that is, while the video hardware hasn't reached the next display cycle. This wastes processor time and can even lead to reduced battery life on the user's device.
 
-<p>Instead, you should try to use {{domxref("window.requestAnimationFrame()")}}. This waits until the browser is actually ready to start building the next frame of your animation, and won't bother if the hardware isn't going to actually draw anything. Another benefit to this API is that animations won't run while your app isn't visible on the screen (such as if it's in the background and some other task is operating). This will save battery life and prevent users from cursing your name into the night sky.</p>
+Instead, you should try to use {{domxref("window.requestAnimationFrame()")}}. This waits until the browser is actually ready to start building the next frame of your animation, and won't bother if the hardware isn't going to actually draw anything. Another benefit to this API is that animations won't run while your app isn't visible on the screen (such as if it's in the background and some other task is operating). This will save battery life and prevent users from cursing your name into the night sky.
 
-<h4 id="Make_events_immediate">Make events immediate</h4>
+#### Make events immediate
 
-<p>As old-school, accessibility-aware Web developers we love click events since they also support keyboard input. On mobile devices, these are too slow. You should use {{event("touchstart")}} and {{event("touchend")}} instead. The reason is that these don’t have a delay that makes the interaction with the app appear sluggish. If you test for touch support first, you don’t sacrifice accessibility, either. For example, the Financial Times uses a library called <a href="https://github.com/ftlabs/fastclick">fastclick</a> for that purpose, which is available for you to use.</p>
+As old-school, accessibility-aware Web developers we love click events since they also support keyboard input. On mobile devices, these are too slow. You should use {{event("touchstart")}} and {{event("touchend")}} instead. The reason is that these don’t have a delay that makes the interaction with the app appear sluggish. If you test for touch support first, you don’t sacrifice accessibility, either. For example, the Financial Times uses a library called [fastclick](https://github.com/ftlabs/fastclick) for that purpose, which is available for you to use.
 
-<h4 id="Keep_your_interface_simple">Keep your interface simple</h4>
+#### Keep your interface simple
 
-<p>One big performance issue we found in HTML5 apps was that moving lots of <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a> elements around makes everything sluggish — especially when they feature lots of gradients and drop shadows. It helps a lot to simplify your look-and-feel and move a proxy element around when you drag and drop.</p>
+One big performance issue we found in HTML5 apps was that moving lots of [DOM](/en-US/docs/Web/API/Document_Object_Model) elements around makes everything sluggish — especially when they feature lots of gradients and drop shadows. It helps a lot to simplify your look-and-feel and move a proxy element around when you drag and drop.
 
-<p>When, for example, you have a long list of elements (let’s say tweets), don’t move them all. Instead, keep in your DOM tree only the ones that are visible and a few on either side of the currently visible set of tweets. Hide or remove the rest. Keeping the data in a JavaScript object instead of accessing the DOM can vastly improve your app's performance. Think of the display as a presentation of your data rather than the data itself. That doesn’t mean you can't use straight HTML as the source; just read it once and then scroll 10 elements, changing the content of the first and last accordingly to your position in the results list, instead of moving 100 elements that aren’t visible. The same trick applies in games to sprites: if they aren’t currently on the screen, there is no need to poll them. Instead re-use elements that scroll off screen as new ones coming in.</p>
+When, for example, you have a long list of elements (let’s say tweets), don’t move them all. Instead, keep in your DOM tree only the ones that are visible and a few on either side of the currently visible set of tweets. Hide or remove the rest. Keeping the data in a JavaScript object instead of accessing the DOM can vastly improve your app's performance. Think of the display as a presentation of your data rather than the data itself. That doesn’t mean you can't use straight HTML as the source; just read it once and then scroll 10 elements, changing the content of the first and last accordingly to your position in the results list, instead of moving 100 elements that aren’t visible. The same trick applies in games to sprites: if they aren’t currently on the screen, there is no need to poll them. Instead re-use elements that scroll off screen as new ones coming in.
 
-<h2 id="General_application_performance_analysis">General application performance analysis</h2>
+## General application performance analysis
 
-<p>Firefox, Chrome, and other browsers include built-in tools that can help you diagnose slow page rendering. In particular, <a href="/en-US/docs/Tools/Network_Monitor">Firefox's Network Monitor</a> will display a precise timeline of when each network request on your page happens, how large it is, and how long it takes.</p>
+Firefox, Chrome, and other browsers include built-in tools that can help you diagnose slow page rendering. In particular, [Firefox's Network Monitor](/en-US/docs/Tools/Network_Monitor) will display a precise timeline of when each network request on your page happens, how large it is, and how long it takes.
 
-<p><img alt="The Firefox network monitor showing get requests, multiple files, and different times taken to load each resource on a graph." src="network-monitor.jpg"></p>
+![The Firefox network monitor showing get requests, multiple files, and different times taken to load each resource on a graph.](network-monitor.jpg)
 
-<p>If your page contains JavaScript code that is taking a long time to run, the <a href="/en-US/docs/Tools/Performance">JavaScript profiler</a> will pinpoint the slowest lines of code:</p>
+If your page contains JavaScript code that is taking a long time to run, the [JavaScript profiler](/en-US/docs/Tools/Performance) will pinpoint the slowest lines of code:
 
-<p><img alt="The Firefox JavaScript profiler showing a completed profile 1." src="javascript-profiler.png"></p>
+![The Firefox JavaScript profiler showing a completed profile 1.](javascript-profiler.png)
 
-<p>The <a href="/en-US/docs/Performance/Profiling_with_the_Built-in_Profiler">Built-in Gecko Profiler</a> is a very useful tool that provides even more detailed information about which parts of the browser code are running slowly while the profiler runs. This is a bit more complex to use, but provides a lot of useful details.</p>
+The [Built-in Gecko Profiler](/en-US/docs/Performance/Profiling_with_the_Built-in_Profiler) is a very useful tool that provides even more detailed information about which parts of the browser code are running slowly while the profiler runs. This is a bit more complex to use, but provides a lot of useful details.
 
-<p><img alt="A built-in Gecko profiler windows showing a lot of network information." src="gecko-profiler.png"></p>
+![A built-in Gecko profiler windows showing a lot of network information.](gecko-profiler.png)
 
-<div class="note">
-<p><strong>Note:</strong> You can use these tools with the Android browser by running Firefox and enabling <a href="/en-US/docs/Tools/Remote_Debugging">remote debugging</a>.</p>
-</div>
+> **Note:** You can use these tools with the Android browser by running Firefox and enabling [remote debugging](/en-US/docs/Tools/Remote_Debugging).
 
-<p>In particular, making dozens or hundreds of network requests takes longer in mobile browsers. Rendering large images and CSS gradients can also take longer. Downloading large files can take longer, even over a fast network, because mobile hardware is sometimes too slow to take advantage of all the available bandwidth. For useful general tips on mobile Web performance, have a look at Maximiliano Firtman's <a href="http://www.slideshare.net/firt/mobile-web-high-performance">Mobile Web High Performance</a> talk.</p>
+In particular, making dozens or hundreds of network requests takes longer in mobile browsers. Rendering large images and CSS gradients can also take longer. Downloading large files can take longer, even over a fast network, because mobile hardware is sometimes too slow to take advantage of all the available bandwidth. For useful general tips on mobile Web performance, have a look at Maximiliano Firtman's [Mobile Web High Performance](http://www.slideshare.net/firt/mobile-web-high-performance) talk.
 
-<h3 id="Test_cases_and_submitting_bugs">Test cases and submitting bugs</h3>
+### Test cases and submitting bugs
 
-<p>If the Firefox and Chrome developer tools don't help you find a problem, or if they seem to indicate that the Web browser has caused the problem, try to provide a reduced test case that maximally isolates the problem. That often helps in diagnosing problems.</p>
+If the Firefox and Chrome developer tools don't help you find a problem, or if they seem to indicate that the Web browser has caused the problem, try to provide a reduced test case that maximally isolates the problem. That often helps in diagnosing problems.
 
-<p>See if you can reproduce the problem by saving and loading a static copy of an HTML page (including any images/stylesheets/scripts it embeds). If so, edit the static files to remove any private information, then send them to others for help (submit a <a href="https://bugzilla.mozilla.org/">Bugzilla</a> report, for example, or host it on a server and share the URL). You should also share any profiling information you've collected using the tools listed above.</p>
+See if you can reproduce the problem by saving and loading a static copy of an HTML page (including any images/stylesheets/scripts it embeds). If so, edit the static files to remove any private information, then send them to others for help (submit a [Bugzilla](https://bugzilla.mozilla.org/) report, for example, or host it on a server and share the URL). You should also share any profiling information you've collected using the tools listed above.

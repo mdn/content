@@ -12,108 +12,92 @@ tags:
   - Web Performance
   - rendering
 ---
-<p><strong>Lazy loading</strong> is a strategy to identify resources as non-blocking (non-critical) and load these only when needed. It's a way to shorten the length of the <a href="/en-US/docs/Web/Performance/Critical_rendering_path">critical rendering path</a>, which translates into reduced page load times.</p>
+**Lazy loading** is a strategy to identify resources as non-blocking (non-critical) and load these only when needed. It's a way to shorten the length of the [critical rendering path](/en-US/docs/Web/Performance/Critical_rendering_path), which translates into reduced page load times.
 
-<p>Lazy loading can occur on different moments in the application, but it typically happens on some user interactions such as scrolling and navigation. </p>
+Lazy loading can occur on different moments in the application, but it typically happens on some user interactions such as scrolling and navigation.
 
-<h2 id="Overview">Overview</h2>
+## Overview
 
-<p>As the web has evolved, we have come to see huge increases in the number and size of assets sent to users.<br>
- Between 2011 and 2019, the median resource weight increased from <strong>~100KB</strong> to <strong>~400KB</strong> for desktop and <strong>~50KB</strong> to <strong>~350KB</strong> for mobile. While Image size has increased from <strong>~250KB</strong> to <strong>~900KB</strong> on desktop and <strong>~100KB</strong> to <strong>~850KB</strong> on mobile.</p>
+As the web has evolved, we have come to see huge increases in the number and size of assets sent to users.
+Between 2011 and 2019, the median resource weight increased from **\~100KB** to **\~400KB** for desktop and **\~50KB** to **\~350KB** for mobile. While Image size has increased from **\~250KB** to **\~900KB** on desktop and **\~100KB** to **\~850KB** on mobile.
 
-<p>One of the methods we can use to tackle this problem is to shorten the <a href="/en-US/docs/Web/Performance/Critical_rendering_path">Critical Rendering Path</a> length by lazy loading resources that are not critical for the first render to happen.<br>
- A practical example would be when, you land on the home page of an e-commerce site which has a link to a cart page/section and all its resources (JS, CSS, images...) are downloaded <strong>only</strong> when the user navigates to that cart page.</p>
+One of the methods we can use to tackle this problem is to shorten the [Critical Rendering Path](/en-US/docs/Web/Performance/Critical_rendering_path) length by lazy loading resources that are not critical for the first render to happen.
+A practical example would be when, you land on the home page of an e-commerce site which has a link to a cart page/section and all its resources (JS, CSS, images...) are downloaded **only** when the user navigates to that cart page.
 
-<h2 id="Strategies">Strategies</h2>
+## Strategies
 
-<p>Lazy loading can be applied to multiple resources and through multiple strategies.   </p>
+Lazy loading can be applied to multiple resources and through multiple strategies.
 
-<h3 id="General">General</h3>
+### General
 
-<p><strong>Code splitting</strong><br>
- JavaScript, CSS and HTML can be split into smaller chunks. This enables sending the minimal code required to provide value upfront, improving page-load times. The rest can be loaded on demand.</p>
+**Code splitting**
+JavaScript, CSS and HTML can be split into smaller chunks. This enables sending the minimal code required to provide value upfront, improving page-load times. The rest can be loaded on demand.
 
-<ul>
- <li>    Entry point splitting: separates code by entry point(s) in the app</li>
- <li>    Dynamic splitting: separates code where <a href="/en-US/docs/Web/JavaScript/Reference/Statements/import">dynamic import()</a> statements are used</li>
-</ul>
+- Entry point splitting: separates code by entry point(s) in the app
+- Dynamic splitting: separates code where [dynamic import()](/en-US/docs/Web/JavaScript/Reference/Statements/import) statements are used
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<p><strong>Script type module</strong><br>
- Any script tag with <code>type="module"</code> is treated as a <a href="/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript module</a> and is deferred by default.</p>
+**Script type module**
+Any script tag with `type="module"` is treated as a [JavaScript module](/en-US/docs/Web/JavaScript/Guide/Modules) and is deferred by default.
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<p>By default, CSS is treated as a <a href="/en-US/docs/Web/Performance/Critical_rendering_path">render blocking</a> resource, so the browser won't render any processed content until the <a href="/en-US/docs/Web/API/CSS_Object_Model">CSSOM</a> is constructed. CSS must be thin, delivered as quickly as possible, and the usage media types and queries are advised to unblock rendering.</p>
+By default, CSS is treated as a [render blocking](/en-US/docs/Web/Performance/Critical_rendering_path) resource, so the browser won't render any processed content until the [CSSOM](/en-US/docs/Web/API/CSS_Object_Model) is constructed. CSS must be thin, delivered as quickly as possible, and the usage media types and queries are advised to unblock rendering.
 
-<pre class="brush: html">&lt;link href="style.css"    rel="stylesheet" media="all"&gt;
-&lt;link href="portrait.css" rel="stylesheet" media="orientation:portrait"&gt;
-&lt;link href="print.css"    rel="stylesheet" media="print"&gt;
-</pre>
+```html
+<link href="style.css"    rel="stylesheet" media="all">
+<link href="portrait.css" rel="stylesheet" media="orientation:portrait">
+<link href="print.css"    rel="stylesheet" media="print">
+```
 
-<p>It is possible to perform some <a href="/en-US/docs/Learn/Performance/CSS">CSS optimizations</a>  to achieve that.</p>
+It is possible to perform some [CSS optimizations](/en-US/docs/Learn/Performance/CSS)  to achieve that.
 
-<h3 id="Fonts">Fonts</h3>
+### Fonts
 
-<p>By default, font requests are delayed until the render tree is constructed, which can result in delayed text rendering.</p>
+By default, font requests are delayed until the render tree is constructed, which can result in delayed text rendering.
 
-<p>It is possible to override the default behavior and preload web font resources using <code>&lt;link rel="preload"&gt;</code>, the <a href="/en-US/docs/Web/CSS/@font-face/font-display">CSS font-display property</a>, and the <a href="/en-US/docs/Web/API/CSS_Font_Loading_API">Font Loading API</a>.<br>
- <br>
- See also: <a href="/en-US/docs/Web/HTML/Element/link">Element Link</a></p>
+It is possible to override the default behavior and preload web font resources using `<link rel="preload">`, the [CSS font-display property](/en-US/docs/Web/CSS/@font-face/font-display), and the [Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API).
 
-<h3 id="Images_and_iframes">Images and iframes</h3>
+See also: [Element Link](/en-US/docs/Web/HTML/Element/link)
 
-<p>Very often, webpages contain many images that contribute to data-usage and how fast a page can load. Most of those images are off-screen (<a href="/en-US/docs/Web/Performance/Critical_rendering_path">non-critical</a>), requiring user interaction (an example being scroll) in order to view them.</p>
+### Images and iframes
 
-<p><strong>Loading attribute</strong><br>
- The {{htmlattrxref("loading", "img")}} attribute on an {{HTMLElement("img")}} element (or the {{htmlattrxref("loading", "iframe")}} attribute on an {{HTMLElement("iframe")}}) can be used to instruct the browser to defer loading of images/iframes that are off-screen until the user scrolls near them.</p>
+Very often, webpages contain many images that contribute to data-usage and how fast a page can load. Most of those images are off-screen ([non-critical](/en-US/docs/Web/Performance/Critical_rendering_path)), requiring user interaction (an example being scroll) in order to view them.
 
-<pre class="brush: html">&lt;img src="image.jpg" alt="..." loading="lazy"&gt;
-&lt;iframe src="video-player.html" title="..." loading="lazy"&gt;&lt;/iframe&gt;</pre>
+**Loading attribute**
+The {{htmlattrxref("loading", "img")}} attribute on an {{HTMLElement("img")}} element (or the {{htmlattrxref("loading", "iframe")}} attribute on an {{HTMLElement("iframe")}}) can be used to instruct the browser to defer loading of images/iframes that are off-screen until the user scrolls near them.
 
-<p>The <code>load</code> event fires when the eagerly-loaded content has all been loaded; at that time, it's entirely possible (or even likely) that there may be lazily-loaded images that are within the {{Glossary("visual viewport")}} that haven't yet loaded.</p>
+```html
+<img src="image.jpg" alt="..." loading="lazy">
+<iframe src="video-player.html" title="..." loading="lazy"></iframe>
+```
 
-<p>You can determine if a given image has finished loading by examining the value of its Boolean {{domxref("HTMLImageElement.complete", "complete")}} property.</p>
+The `load` event fires when the eagerly-loaded content has all been loaded; at that time, it's entirely possible (or even likely) that there may be lazily-loaded images that are within the {{Glossary("visual viewport")}} that haven't yet loaded.
 
-<p><strong>Polyfill</strong><br>
- Include this polyfill to provide support for older and currently incompatible browsers:<br>
- <a href="https://github.com/mfranzke/loading-attribute-polyfill" rel="noopener">loading-attribute-polyfill</a></p>
+You can determine if a given image has finished loading by examining the value of its Boolean {{domxref("HTMLImageElement.complete", "complete")}} property.
 
-<p><strong>Intersection Observer API</strong><br>
- <a href="/en-US/docs/Web/API/IntersectionObserver">Intersection Observers</a> allow the user to know when an observed element enters or exits the browser’s viewport.</p>
+**Polyfill**
+Include this polyfill to provide support for older and currently incompatible browsers:
+[loading-attribute-polyfill](https://github.com/mfranzke/loading-attribute-polyfill)
 
-<p><strong>Event handlers</strong><br>
- When browser compatibility is crucial, there are a few options:</p>
+**Intersection Observer API**
+[Intersection Observers](/en-US/docs/Web/API/IntersectionObserver) allow the user to know when an observed element enters or exits the browser’s viewport.
 
-<ul>
- <li><a href="https://github.com/w3c/IntersectionObserver">polyfill intersection observer</a></li>
- <li>fallback to scroll, resize or orientation change event handlers to determine if a specific element is in viewport</li>
-</ul>
+**Event handlers**
+When browser compatibility is crucial, there are a few options:
 
-<h2 id="Specifications">Specifications</h2>
+- [polyfill intersection observer](https://github.com/w3c/IntersectionObserver)
+- fallback to scroll, resize or orientation change event handlers to determine if a specific element is in viewport
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th><strong>Specification</strong></th>
-   <th><strong>Status</strong></th>
-   <th><strong>Comment</strong></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#lazy-loading-attributes")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+## Specifications
 
-<h2 id="See_also">See also</h2>
+| **Specification**                                                        | **Status**                       | **Comment** |
+| ------------------------------------------------------------------------ | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "#lazy-loading-attributes")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<ul>
- <li><a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css">Render blocking CSS</a></li>
- <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization#optimizing_loading_and_rendering">Optimizing loading and rendering</a></li>
- <li><a href="https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video">Lazy loading images and video</a></li>
-</ul>
+## See also
+
+- [Render blocking CSS](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css)
+- [Optimizing loading and rendering](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization#optimizing_loading_and_rendering)
+- [Lazy loading images and video](https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video)

@@ -5,66 +5,68 @@ tags:
   - Web Performance
   - dns-prefetch
 ---
-<p><code><strong>DNS-prefetch</strong></code> is an attempt to resolve domain names before resources get requested. This could be a file loaded later or link target a user tries to follow.</p>
+**`DNS-prefetch`** is an attempt to resolve domain names before resources get requested. This could be a file loaded later or link target a user tries to follow.
 
-<h2 id="Why_use_dns-prefetch">Why use dns-prefetch?</h2>
+## Why use dns-prefetch?
 
-<p>When a browser requests a resource from a (third party) server, that <a href="/en-US/docs/Web/HTTP/CORS">cross-origin</a>’s domain name must be resolved to an IP address before the browser can issue the request. This process is known as DNS resolution. While DNS caching can help to reduce this latency, DNS resolution can add significant latency to requests. For websites that open connections to many third parties, this latency can significantly reduce loading performance.</p>
+When a browser requests a resource from a (third party) server, that [cross-origin](/en-US/docs/Web/HTTP/CORS)’s domain name must be resolved to an IP address before the browser can issue the request. This process is known as DNS resolution. While DNS caching can help to reduce this latency, DNS resolution can add significant latency to requests. For websites that open connections to many third parties, this latency can significantly reduce loading performance.
 
-<p><code>dns-prefetch</code> helps developers mask DNS resolution latency. The <a href="/en-US/docs/Web/HTML/Element/link">HTML <code>&lt;link&gt;</code> element</a> offers this functionality by way of a <a href="/en-US/docs/Web/HTML/Attributes/rel"><code>rel</code> attribute</a> value of <code>dns-prefetch</code>. The <a href="/en-US/docs/Web/HTTP/CORS">cross-origin</a> domain is then specified in the <a href="/en-US/docs/Web/HTML/Attributes">href attribute</a>:</p>
+`dns-prefetch` helps developers mask DNS resolution latency. The [HTML `<link>` element](/en-US/docs/Web/HTML/Element/link) offers this functionality by way of a [`rel` attribute](/en-US/docs/Web/HTML/Attributes/rel) value of `dns-prefetch`. The [cross-origin](/en-US/docs/Web/HTTP/CORS) domain is then specified in the [href attribute](/en-US/docs/Web/HTML/Attributes):
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">&lt;link rel="dns-prefetch" href="https://fonts.googleapis.com/" &gt;
-</pre>
+```html
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/" >
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: html">&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;
-    &lt;link rel="dns-prefetch" href="https://fonts.googleapis.com/"&gt;
-    &lt;!-- and all other head elements --&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;!-- your page content --&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+```html
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+    <!-- and all other head elements -->
+  </head>
+  <body>
+    <!-- your page content -->
+  </body>
+</html>
+```
 
-<p>You should place <code>dns-prefetch</code> hints in the <a href="/en-US/docs/Web/HTML/Element/head"><code>&lt;head&gt;</code> element</a> any time your site references resources on cross-origin domains, but there are some things to keep in mind.</p>
+You should place `dns-prefetch` hints in the [`<head>` element](/en-US/docs/Web/HTML/Element/head) any time your site references resources on cross-origin domains, but there are some things to keep in mind.
 
-<h2 id="Best_practices">Best practices</h2>
+## Best practices
 
-<p>There are 3 main things to keep in mind:</p>
+There are 3 main things to keep in mind:
 
-<p><strong>For one</strong>, <code>dns-prefetch</code> is only effective for DNS lookups on <a href="/en-US/docs/Web/HTTP/CORS">cross-origin</a> domains, so avoid using it to point to your site or domain. This is because the IP behind your site’s domain will have already been resolved by the time the browser sees the hint.</p>
+**For one**, `dns-prefetch` is only effective for DNS lookups on [cross-origin](/en-US/docs/Web/HTTP/CORS) domains, so avoid using it to point to your site or domain. This is because the IP behind your site’s domain will have already been resolved by the time the browser sees the hint.
 
-<p><strong>Second</strong>, it’s also possible to specify <code>dns-prefetch</code> (and other resources hints) as an <a href="/en-US/docs/Web/HTTP/Headers">HTTP header</a> by using the <a href="/en-US/docs/Web/HTTP/Headers/Link">HTTP Link field</a>:</p>
+**Second**, it’s also possible to specify `dns-prefetch` (and other resources hints) as an [HTTP header](/en-US/docs/Web/HTTP/Headers) by using the [HTTP Link field](/en-US/docs/Web/HTTP/Headers/Link):
 
-<pre class="brush: plain">Link: &lt;https://fonts.googleapis.com/&gt;; rel=dns-prefetch</pre>
+```plain
+Link: <https://fonts.googleapis.com/>; rel=dns-prefetch
+```
 
-<p><strong>Third</strong>, consider pairing <code>dns-prefetch</code> with the <code>preconnect</code> hint. While <code>dns-prefetch</code> only performs a DNS lookup, <code>preconnect</code> establishes a connection to a server. This process includes DNS resolution, as well as establishing the TCP connection, and performing the <a href="/en-US/docs/Glossary/TLS">TLS</a> handshake—if a site is served over HTTPS. Combining the two provides an opportunity to further reduce the perceived latency of <a href="/en-US/docs/Web/HTTP/CORS">cross-origin requests</a>. You can safely use them together like so:</p>
+**Third**, consider pairing `dns-prefetch` with the `preconnect` hint. While `dns-prefetch` only performs a DNS lookup, `preconnect` establishes a connection to a server. This process includes DNS resolution, as well as establishing the TCP connection, and performing the [TLS](/en-US/docs/Glossary/TLS) handshake—if a site is served over HTTPS. Combining the two provides an opportunity to further reduce the perceived latency of [cross-origin requests](/en-US/docs/Web/HTTP/CORS). You can safely use them together like so:
 
-<pre class="brush: html">&lt;link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin&gt;
-&lt;link rel="dns-prefetch" href="https://fonts.googleapis.com/"&gt;
-</pre>
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> If a page needs to make connections to many third-party domains, preconnecting them all is counterproductive. The <code>preconnect</code> hint is best used for only the most critical connections. For the others, just use <code>&lt;link rel="dns-prefetch"&gt;</code> to save time on the first step — the DNS lookup.</p>
-</div>
+> **Note:** If a page needs to make connections to many third-party domains, preconnecting them all is counterproductive. The `preconnect` hint is best used for only the most critical connections. For the others, just use `<link rel="dns-prefetch">` to save time on the first step — the DNS lookup.
 
-<p>The logic behind pairing these hints is because support for dns-prefetch is better than support for preconnect. Browsers that don’t support preconnect will still get some added benefit by falling back to dns-prefetch. Because this is an HTML feature, it is very fault-tolerant. If a non-supporting browser encounters a dns-prefetch hint—or any other resource hint—your site won’t break. You just won’t receive the benefits it provides.</p>
+The logic behind pairing these hints is because support for dns-prefetch is better than support for preconnect. Browsers that don’t support preconnect will still get some added benefit by falling back to dns-prefetch. Because this is an HTML feature, it is very fault-tolerant. If a non-supporting browser encounters a dns-prefetch hint—or any other resource hint—your site won’t break. You just won’t receive the benefits it provides.
 
-<p>Some resources such as fonts are loaded in anonymous mode. In such cases you should set the <a href="/en-US/docs/Web/HTML/Attributes/crossorigin">crossorigin</a> attribute with the preconnect hint. If you omit it, the browser will only perform the DNS lookup.</p>
+Some resources such as fonts are loaded in anonymous mode. In such cases you should set the [crossorigin](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute with the preconnect hint. If you omit it, the browser will only perform the DNS lookup.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></li>
- <li><a href="/en-US/docs/Web/HTML/Attributes/rel">HTML attribute: rel</a></li>
- <li><a href="/en-US/docs/Web/HTML/Attributes/crossorigin">crossorigin</a></li>
- <li><a href="/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Headers/Link">HTTP header </a><a href="/en-US/docs/Web/HTTP/Headers/Link" title="The HTTP Link entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML &lt;link&gt; element.">Link</a></li>
-</ul>
+- [\<link>](/en-US/docs/Web/HTML/Element/link)
+- [HTML attribute: rel](/en-US/docs/Web/HTML/Attributes/rel)
+- [crossorigin](/en-US/docs/Web/HTML/Attributes/crossorigin)
+- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP headers](/en-US/docs/Web/HTTP/Headers)
+- [HTTP header ](/en-US/docs/Web/HTTP/Headers/Link)[Link](/en-US/docs/Web/HTTP/Headers/Link "The HTTP Link entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML <link> element.")
