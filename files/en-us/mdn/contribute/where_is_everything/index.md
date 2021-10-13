@@ -9,26 +9,22 @@ tags:
   - Beginners
   - Repos
 ---
-<p>{{MDNSidebar}}</p>
+{{MDNSidebar}}
 
-<p>MDN is a complex project with lots of moving parts. Contributing to the site is easy to begin with, if you have a bit of GitHub knowledge and are starting out on some simple typo fixes or code snippet improvements. However, when you start making more significant contributions such as adding entire new pages, you'll notice that there are quite a few bits of the content that aren't stored in the page sources and instead come from somewhere else.</p>
+MDN is a complex project with lots of moving parts. Contributing to the site is easy to begin with, if you have a bit of GitHub knowledge and are starting out on some simple typo fixes or code snippet improvements. However, when you start making more significant contributions such as adding entire new pages, you'll notice that there are quite a few bits of the content that aren't stored in the page sources and instead come from somewhere else.
 
-<p>This article acts as a quick guide to finding the different repos you need to edit to update the different parts of MDN content.</p>
+This article acts as a quick guide to finding the different repos you need to edit to update the different parts of MDN content.
 
-<h2 id="core_repos">Core repos</h2>
+## Core repos
 
-<ul>
-  <li><strong>Core content</strong>: <a href="https://github.com/mdn/content">https://github.com/mdn/content</a>. The most important repo for MDN content — this is where all the core English content of the site is stored, and where you'll make all standard changes to page content.</li>
-  <li><strong>MDN Platform</strong>: <a href="https://github.com/mdn/yari">https://github.com/mdn/yari</a>. This is where the MDN platform is stored, and where you'll go if you want to make changes to MDN's high level page structure or rendering machinery.</li>
-  <li><strong>Browser compat data</strong>: <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>. This is where the data used to generate the browser compatibility tables found on our reference pages is stored (example). Go here to make compat data changes!</li>
-  <li><strong>Interactive examples</strong>: <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>. This repo stores the rendering code and example code blocks that together produce the nice editable, copyable examples found at the top of many of our reference pages (example). Edit those examples here.</li>
-  <li><strong>Translated content</strong>: <a href="https://github.com/mdn/translated-content">https://github.com/mdn/translated-content</a>. This is where localized content lives. Go here if you want to help to maintain the tier 1 locales that we currently have unfrozen (currently <code>fr</code>, <code>ja</code>, <code>ko</code>, and <code>zh-CN</code>/<code>zh-TW</code>). We are not currently allowing edits to other locales.</li>
-  <li><strong>CSS data</strong>: <a href="https://github.com/mdn/data">https://github.com/mdn/data</a>. Originally envisaged as a hold-all repo for general purpose MDN data, the data repo now serves the purpose of holding data about CSS features such as formal syntax, inheritance, computed value, animation type, etc. This is used to generate sections on CSS reference pages such as formal definition (example) and formal syntax (example).</li>
-</ul>
+- **Core content**: <https://github.com/mdn/content>. The most important repo for MDN content — this is where all the core English content of the site is stored, and where you'll make all standard changes to page content.
+- **MDN Platform**: <https://github.com/mdn/yari>. This is where the MDN platform is stored, and where you'll go if you want to make changes to MDN's high level page structure or rendering machinery.
+- **Browser compat data**: <https://github.com/mdn/browser-compat-data>. This is where the data used to generate the browser compatibility tables found on our reference pages is stored (example). Go here to make compat data changes!
+- **Interactive examples**: <https://github.com/mdn/interactive-examples>. This repo stores the rendering code and example code blocks that together produce the nice editable, copyable examples found at the top of many of our reference pages (example). Edit those examples here.
+- **Translated content**: <https://github.com/mdn/translated-content>. This is where localized content lives. Go here if you want to help to maintain the tier 1 locales that we currently have unfrozen (currently `fr`, `ja`, `ko`, and `zh-CN`/`zh-TW`). We are not currently allowing edits to other locales.
+- **CSS data**: <https://github.com/mdn/data>. Originally envisaged as a hold-all repo for general purpose MDN data, the data repo now serves the purpose of holding data about CSS features such as formal syntax, inheritance, computed value, animation type, etc. This is used to generate sections on CSS reference pages such as formal definition (example) and formal syntax (example).
 
-<h2 id="other_repos">Other repos</h2>
+## Other repos
 
-<ul>
-  <li><strong>Demo repos</strong>. The MDN GitHub org contains a huge number of demo repos, for example <a href="https://github.com/mdn/css-examples">css-examples</a>, <a href="https://github.com/mdn/dom-examples">dom-examples</a>, <a href="https://github.com/mdn/webaudio-examples">webaudio-examples</a>. These generally contain free-standing examples that are often linked to from MDN pages, but occasionally you'll find one of these examples embedded into a page using a macro call like this — \{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid1.html", '100%', 700)}}. If you want to edit a standalone live example, it will always be found in one of these example repos.</li>
-  <li><strong>MDN-minimalist</strong>: <a href="https://github.com/mdn/mdn-minimalist">https://github.com/mdn/mdn-minimalist</a>. The base styling information for MDN. If you want to help improve MDN's CSS styling, this is the place to visit.</li>
-</ul>
+- **Demo repos**. The MDN GitHub org contains a huge number of demo repos, for example [css-examples](https://github.com/mdn/css-examples), [dom-examples](https://github.com/mdn/dom-examples), [webaudio-examples](https://github.com/mdn/webaudio-examples). These generally contain free-standing examples that are often linked to from MDN pages, but occasionally you'll find one of these examples embedded into a page using a macro call like this — \\{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid1.html", '100%', 700)}}. If you want to edit a standalone live example, it will always be found in one of these example repos.
+- **MDN-minimalist**: <https://github.com/mdn/mdn-minimalist>. The base styling information for MDN. If you want to help improve MDN's CSS styling, this is the place to visit.

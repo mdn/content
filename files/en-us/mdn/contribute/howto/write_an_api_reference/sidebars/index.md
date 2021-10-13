@@ -13,40 +13,37 @@ tags:
   - onboarding
   - sidebars
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>You are able to include a custom sidebar on API reference pages it so that it displays links to related Interfaces, tutorials, and other resources relevant just to that API. This article explains how.</p>
+You are able to include a custom sidebar on API reference pages it so that it displays links to related Interfaces, tutorials, and other resources relevant just to that API. This article explains how.
 
-<h2 id="Creating_a_sidebar">Creating a sidebar</h2>
+## Creating a sidebar
 
-<p>You need to take the following three steps to create your API sidebar:</p>
+You need to take the following three steps to create your API sidebar:
 
-<ol>
-	<li>Create your API reference pages.</li>
-	<li>Add an entry for your particular API into the Yari repo's <a href="https://github.com/mdn/yari/blob/master/kumascript/macros/GroupData.json"><code>GroupData.json</code></a> file.</li>
-	<li>Use the <a href="https://github.com/mdn/yari/blob/master/kumascript/macros/APIRef.ejs"><code>APIRef</code></a> macro to insert the sidebar into each page you want to display it on.</li>
-</ol>
+1.  Create your API reference pages.
+2.  Add an entry for your particular API into the Yari repo's [`GroupData.json`](https://github.com/mdn/yari/blob/master/kumascript/macros/GroupData.json) file.
+3.  Use the [`APIRef`](https://github.com/mdn/yari/blob/master/kumascript/macros/APIRef.ejs) macro to insert the sidebar into each page you want to display it on.
 
-<p>Let's run through each of these steps in turn. The example we'll refer to in this article is the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>.</p>
+Let's run through each of these steps in turn. The example we'll refer to in this article is the [Fetch API](/en-US/docs/Web/API/Fetch_API).
 
-<h3 id="Adding_an_entry_to_GroupData.json">Adding an entry to GroupData.json</h3>
+### Adding an entry to GroupData.json
 
-<p>The <code>GroupData.json</code> file holds all the data relating to what links should appear in API reference sidebars. When invoked, the <code>APIRef</code> macro takes an API name given to it as a parameter, looks up that name in <code>GroupData.json</code>, builds an appropriate sidebar, and inserts it into the page.</p>
+The `GroupData.json` file holds all the data relating to what links should appear in API reference sidebars. When invoked, the `APIRef` macro takes an API name given to it as a parameter, looks up that name in `GroupData.json`, builds an appropriate sidebar, and inserts it into the page.
 
-<p>To add an entry to <code>GroupData.json</code>, you need to:</p>
+To add an entry to `GroupData.json`, you need to:
 
-<ol>
-	<li>Make sure you have a <a href="https://github.com/">GitHub</a> account.</li>
-	<li>Fork the Yari repo, create a new branch to contain your changes, and clone the repo locally.</li>
-	<li>Checkout your new branch before starting work, and make sure you push changes to it after finishing.</li>
-	<li>Create a pull request so that the MDN team can review your work, and ask for changes if necessary.</li>
-</ol>
+1.  Make sure you have a [GitHub](https://github.com/) account.
+2.  Fork the Yari repo, create a new branch to contain your changes, and clone the repo locally.
+3.  Checkout your new branch before starting work, and make sure you push changes to it after finishing.
+4.  Create a pull request so that the MDN team can review your work, and ask for changes if necessary.
 
-<p>The <code>GroupData.json</code> file can be found inside the kumascript/macros directory of the Yari repo. Looking at it, you'll see a giant JSON structure, with each API having its own member. The name is the API name, and the value is an object containing several sub-members defining the sidebar links to be created.</p>
+The `GroupData.json` file can be found inside the kumascript/macros directory of the Yari repo. Looking at it, you'll see a giant JSON structure, with each API having its own member. The name is the API name, and the value is an object containing several sub-members defining the sidebar links to be created.
 
-<p>For example, look at the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> page on MDN. The corresponding entry in <code>GroupData.json</code> looks like this:</p>
+For example, look at the [Fetch API](/en-US/docs/Web/API/Fetch_API) page on MDN. The corresponding entry in `GroupData.json` looks like this:
 
-<pre class="brush: json">"Fetch API": {
+```json
+"Fetch API": {
     "overview":   [ "Fetch API"],
     "interfaces": [ "Headers",
                     "Request",
@@ -58,67 +55,55 @@ tags:
     "methods":    [ "fetch()" ],
     "properties": [],
     "events":     []
-},</pre>
+},
+```
 
-<p>As you can see, we've used "Fetch API" for the name, and inside the object value we include a number of sub-members.</p>
+As you can see, we've used "Fetch API" for the name, and inside the object value we include a number of sub-members.
 
-<h4 id="Sub-members_to_include_inside_a_GroupData_entry">Sub-members to include inside a GroupData entry</h4>
+#### Sub-members to include inside a GroupData entry
 
-<p>This section lists all the sub-members you could include in a <code>GroupData</code> entry.</p>
+This section lists all the sub-members you could include in a `GroupData` entry.
 
-<p>Note that most of the values included inside the listed sub-members equate to both the link text, and slugs appended to the end of the main API index page —  <code>https://developer.mozilla.org/<em>&lt;language-code&gt;</em>/docs/Web/API</code> — to create the final URL for the displayed link. So for example, "Response" will result in a link being created like so:</p>
+Note that most of the values included inside the listed sub-members equate to both the link text, and slugs appended to the end of the main API index page —  `https://developer.mozilla.org/<language-code>/docs/Web/API` — to create the final URL for the displayed link. So for example, "Response" will result in a link being created like so:
 
-<pre class="brush: html">&lt;li&gt;&lt;a href="/en-US/docs/Web/API"&gt;Response&lt;/a&gt;&lt;/li&gt;</pre>
+```html
+<li><a href="/en-US/docs/Web/API">Response</a></li>
+```
 
-<p>There are a few exceptions. For example the "guides" sub-member contains one or more sets of link information (title and slug) that defines links to associated guides/tutorials. In this case the slugs are appended to the end of the MDN docs root — https://developer.mozilla.org/<em>&lt;language-code&gt;</em>/docs — allowing an article anywhere on MDN to be included.</p>
+There are a few exceptions. For example the "guides" sub-member contains one or more sets of link information (title and slug) that defines links to associated guides/tutorials. In this case the slugs are appended to the end of the MDN docs root — https\://developer.mozilla.org/_\<language-code>_/docs — allowing an article anywhere on MDN to be included.
 
-<p>Here are the available members. These are all technically optional, but it is strongly encouraged that instead of omitting them, you include empty arrays.</p>
+Here are the available members. These are all technically optional, but it is strongly encouraged that instead of omitting them, you include empty arrays.
 
-<ol>
-	<li>
-	<p><code>"overview"</code> — the value is an array, inside of which you include the slug of the API overview page, if there is one. "Fetch API" results in a link being made to <a href="/en-US/docs/Web/API/Fetch_API">https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API</a>.</p>
-	</li>
-	<li>
-	<p><code>"interfaces"</code> — the value is an array in which you should list all of the interfaces that form part of that API. "Response" results in a link being made to <a href="/en-US/docs/Web/API/Response">https://developer.mozilla.org/en-US/docs/Web/API/Response</a>.</p>
-	</li>
-	<li>
-	<p><code>"methods"</code> — the value is an array that should contain any methods the spec adds to interfaces associated with other APIs, such as instantiation methods created on {{domxref("Navigator")}} or {{domxref("Window")}}. If there are a huge number of methods, you might want to consider only listing the most popular ones, or putting them first in the list. "fetch()" results in a link being made to <a href="/en-US/docs/Web/API/fetch">https://developer.mozilla.org/en-US/docs/Web/API/fetch</a>. Do <em>not</em> list methods that are members of interfaces that are members of interfaces that are owned by the same API.</p>
-	</li>
-	<li>
-	<p><code>"properties"</code> — the value is an array that should contain all of the properties associated with the API. This can include properties that are members of interfaces defined in the API spec, and properties the API defines on other interfaces. If there are a huge number of properties, you might want to consider only listing the most popular ones, or putting them first in the list. "Headers.append" results in a link being made to <a href="/en-US/docs/Web/API/Headers/append">https://developer.mozilla.org/en-US/docs/Web/API/Headers/append</a>.</p>
-	</li>
-	<li>
-	<p><code>"events"</code> — the value is an array that should contain all of the events associated with the API, defined in the API spec, or elsewhere. If there are a huge number of events, you might want to consider only listing the most popular ones, or putting them first in the list. "animationstart" results in a link being made to <a href="/en-US/docs/Web/API/HTMLElement/animationstart_event">https://developer.mozilla.org/en-US/docs/Web/Events/animationstart</a>.</p>
-	</li>
-	<li>
-	<p><code>"guides"</code> — the value is an array containing one or more objects that define links to guides explain how to use the API. Each object contains two sub-members — "url", which contains the partial URL pointing to the guide article, and "title", which defines the link test for the link. As an example, the following object:</p>
+1.  `"overview"` — the value is an array, inside of which you include the slug of the API overview page, if there is one. "Fetch API" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API](/en-US/docs/Web/API/Fetch_API).
+2.  `"interfaces"` — the value is an array in which you should list all of the interfaces that form part of that API. "Response" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/Response](/en-US/docs/Web/API/Response).
+3.  `"methods"` — the value is an array that should contain any methods the spec adds to interfaces associated with other APIs, such as instantiation methods created on {{domxref("Navigator")}} or {{domxref("Window")}}. If there are a huge number of methods, you might want to consider only listing the most popular ones, or putting them first in the list. "fetch()" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/fetch](/en-US/docs/Web/API/fetch). Do _not_ list methods that are members of interfaces that are members of interfaces that are owned by the same API.
+4.  `"properties"` — the value is an array that should contain all of the properties associated with the API. This can include properties that are members of interfaces defined in the API spec, and properties the API defines on other interfaces. If there are a huge number of properties, you might want to consider only listing the most popular ones, or putting them first in the list. "Headers.append" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/Headers/append](/en-US/docs/Web/API/Headers/append).
+5.  `"events"` — the value is an array that should contain all of the events associated with the API, defined in the API spec, or elsewhere. If there are a huge number of events, you might want to consider only listing the most popular ones, or putting them first in the list. "animationstart" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/Events/animationstart](/en-US/docs/Web/API/HTMLElement/animationstart_event).
+6.  `"guides"` — the value is an array containing one or more objects that define links to guides explain how to use the API. Each object contains two sub-members — "url", which contains the partial URL pointing to the guide article, and "title", which defines the link test for the link. As an example, the following object:
 
-	<pre class="brush: json">{ "url":   "/docs/Web/API/Detecting_device_orientation",
-"title": "Detecting device orientation" }</pre>
+    ```json
+    { "url":   "/docs/Web/API/Detecting_device_orientation",
+    "title": "Detecting device orientation" }
+    ```
 
-	<p>Creates a link with the title "Detecting device orientation", which points to <a href="/en-US/docs/Web/API/Detecting_device_orientation">https://developer.mozilla.org/en-US/docs/Web/API/Detecting_device_orientation</a>.</p>
-	</li>
-	<li>
-	<p><code>"dictionaries"</code> — an array of strings listing all of the dictionaries which are part of the API. Generally, only dictionaries used by more than one property or method should be listed here, unless they are of special significance or are likely to require being referenced from multiple pages. "RTCConfiguration" results in a link to <a href="/en-US/docs/Web/API/RTCConfiguration">https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration</a>.</p>
-	</li>
-	<li>
-	<p><code>"types"</code> — an array of typedefs and enumerated types defined by the API. You may choose to only list those that are of special importance or are referenced from multiple pages, in order to keep the list short. "RTCSctpTransportState" creates a link to <a href="/en-US/docs/Web/API/RTCSctpTransport/state">https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransportState</a>.</p>
-	</li>
-	<li>
-	<p><code>"callbacks"</code> — the value is an array containing a list of all the defined callback types for the API. You may find it unnecessary to use this group at all, even on APIs that include callback types, as often they are not useful to document separately. An entry in this array containing the string "RTCSessionDescriptionCallback" results in a link being created to <a href="/en-US/docs/Web/API/RTCSessionDescriptionCallback">https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescriptionCallback</a>.</p>
-	</li>
-</ol>
+    Creates a link with the title "Detecting device orientation", which points to [https://developer.mozilla.org/en-US/docs/Web/API/Detecting_device_orientation](/en-US/docs/Web/API/Detecting_device_orientation).
 
-<h2 id="Tags_used_by_sidebars">Tags used by sidebars</h2>
+7.  `"dictionaries"` — an array of strings listing all of the dictionaries which are part of the API. Generally, only dictionaries used by more than one property or method should be listed here, unless they are of special significance or are likely to require being referenced from multiple pages. "RTCConfiguration" results in a link to [https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration](/en-US/docs/Web/API/RTCConfiguration).
+8.  `"types"` — an array of typedefs and enumerated types defined by the API. You may choose to only list those that are of special importance or are referenced from multiple pages, in order to keep the list short. "RTCSctpTransportState" creates a link to [https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransportState](/en-US/docs/Web/API/RTCSctpTransport/state).
+9.  `"callbacks"` — the value is an array containing a list of all the defined callback types for the API. You may find it unnecessary to use this group at all, even on APIs that include callback types, as often they are not useful to document separately. An entry in this array containing the string "RTCSessionDescriptionCallback" results in a link being created to [https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescriptionCallback](/en-US/docs/Web/API/RTCSessionDescriptionCallback).
 
-<p>Some sub-members are automatically discovered from child pages, based on page tags.  Pages under the top-level API are crawled each time the sidebar is rendered, and entries are automatically created for methods ("Method" tag), properties ("Property" tag), and constructors ("Constructor" tag).</p>
+## Tags used by sidebars
 
-<p>Sub-members are automatically decorated with warning icons based on tags as well.  Decorations are added for experimental ("Experimental" tag), non-standard ("Non Standard" or "Non-standard" tag), deprecated ("Deprecated" tag), or obsolete ("Obsolete" tag) sub-members.</p>
+Some sub-members are automatically discovered from child pages, based on page tags.  Pages under the top-level API are crawled each time the sidebar is rendered, and entries are automatically created for methods ("Method" tag), properties ("Property" tag), and constructors ("Constructor" tag).
 
-<p>Further information about tag-based processing is available <a href="https://github.com/mdn/yari/blob/master/kumascript/macros/APIRef.ejs">in the APIRef source</a>.</p>
+Sub-members are automatically decorated with warning icons based on tags as well.  Decorations are added for experimental ("Experimental" tag), non-standard ("Non Standard" or "Non-standard" tag), deprecated ("Deprecated" tag), or obsolete ("Obsolete" tag) sub-members.
 
-<h2 id="Inserting_the_sidebar">Inserting the sidebar</h2>
+Further information about tag-based processing is available [in the APIRef source](https://github.com/mdn/yari/blob/master/kumascript/macros/APIRef.ejs).
 
-<p>Once you've added an entry for your API into <code>GroupData.json</code>, submitted it as a pull request and had the change accepted into the main repo, you can include it in your API reference pages using the {{TemplateLink("APIRef")}} macro, which takes the name you used for your API in GroupData as a parameter. As an example, the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a>'s sidebar is included in its pages with the following:</p>
+## Inserting the sidebar
 
-<pre class="brush: js">\{{APIRef("WebVR API")}}</pre>
+Once you've added an entry for your API into `GroupData.json`, submitted it as a pull request and had the change accepted into the main repo, you can include it in your API reference pages using the {{TemplateLink("APIRef")}} macro, which takes the name you used for your API in GroupData as a parameter. As an example, the [WebVR API](/en-US/docs/Web/API/WebVR_API)'s sidebar is included in its pages with the following:
+
+```js
+\{{APIRef("WebVR API")}}
+```

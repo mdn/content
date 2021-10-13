@@ -8,155 +8,183 @@ tags:
   - HTML
   - MDN Meta
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>The following guidelines cover how to write HTML for MDN code examples.</p>
+The following guidelines cover how to write HTML for MDN code examples.
 
-<h2 id="In_this_article">In this article</h2>
+## In this article
 
-<ul>
-	<li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#doctype_and_metadata">Doctype and metadata</a>
+- [Doctype and metadata](/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#doctype_and_metadata)
 
-	<ul>
-		<li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#doctype">Doctype</a></li>
-		<li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#document_language">Document language</a></li>
-		<li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#document_characterset">Document characterset</a></li>
-		<li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#viewport_meta_tag">Viewport meta tag</a></li>
-	</ul>
-	</li>
-	<li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#general_markup_coding_style">General markup coding style</a>
-	<ul>
-		<li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#use_lowercase">Use lower case</a></li>
-		<li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#trailing_slashes">Trailing slashes</a></li>
-		<li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#quoting_attributes">Quoting attributes</a></li>
-		<li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#use_double_quotes">Use double quotes</a></li>
-		<li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#boolean_attributes">Boolean attributes</a></li>
-		<li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#class_and_id_names">Class and ID names</a></li>
-		<li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#entity_references">Entity references</a></li>
-	</ul>
-	</li>
-</ul>
+  - [Doctype](/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#doctype)
+  - [Document language](/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#document_language)
+  - [Document characterset](/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#document_characterset)
+  - [Viewport meta tag](/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#viewport_meta_tag)
 
-<h2 id="Doctype_and_metadata">Doctype and metadata</h2>
+- [General markup coding style](/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#general_markup_coding_style)
 
-<div class="note">
-<p><strong>Note:</strong> The guidelines in this section apply only when you need to show a complete HTML document. Most of the time you won't need to do this; a snippet is usually enough to demonstrate a feature. When using the <a href="/en-US/docs/MDN/Structures/Code_examples#traditional_live_samples">EmbedLiveSample macro</a>, just include the HTML snippet; it will automatically be inserted it into a full HTML document when displayed.</p>
-</div>
+  - [Use lower case](/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#use_lowercase)
+  - [Trailing slashes](/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#trailing_slashes)
+  - [Quoting attributes](/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#quoting_attributes)
+  - [Use double quotes](/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#use_double_quotes)
+  - [Boolean attributes](/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#boolean_attributes)
+  - [Class and ID names](/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#class_and_id_names)
+  - [Entity references](/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#entity_references)
 
-<h3 id="Doctype">Doctype</h3>
+## Doctype and metadata
 
-<p>You should use the HTML5 doctype. It is short, easy to remember, and backwards compatible:</p>
+> **Note:** The guidelines in this section apply only when you need to show a complete HTML document. Most of the time you won't need to do this; a snippet is usually enough to demonstrate a feature. When using the [EmbedLiveSample macro](/en-US/docs/MDN/Structures/Code_examples#traditional_live_samples), just include the HTML snippet; it will automatically be inserted it into a full HTML document when displayed.
 
-<pre class="brush: html example-good">&lt;!DOCTYPE html&gt;</pre>
+### Doctype
 
-<h3 id="Document_language">Document language</h3>
+You should use the HTML5 doctype. It is short, easy to remember, and backwards compatible:
 
-<p>Set the document language using the {{htmlattrxref('lang')}} attribute on your {{htmlelement("html")}} element:</p>
+```html example-good
+<!DOCTYPE html>
+```
 
-<pre class="brush: html example-good">&lt;html lang="en-US"&gt;</pre>
+### Document language
 
-<p>This is good for accessibility and search engines, helps with localizing content, and reminds people to use best practices.</p>
+Set the document language using the {{htmlattrxref('lang')}} attribute on your {{htmlelement("html")}} element:
 
-<h3 id="Document_characterset">Document characterset</h3>
+```html example-good
+<html lang="en-US">
+```
 
-<p>You should also define your document's characterset like so:</p>
+This is good for accessibility and search engines, helps with localizing content, and reminds people to use best practices.
 
-<pre class="brush: html example-good">&lt;meta charset="utf-8"&gt;</pre>
+### Document characterset
 
-<p>Use UTF-8 unless you have a very good reason not to; it will cover your character needs pretty much regardless of what language you are using in your document. In addition, you should always specify the characterset as early as possible within your HTML's {{HTMLElement("head")}} block (within the first kilobyte), as it protects against a rather <a href="https://support.microsoft.com/kb/928847">nasty Internet Explorer security vulnerability</a>.</p>
+You should also define your document's characterset like so:
 
-<h3 id="Viewport_meta_tag">Viewport meta tag</h3>
+```html example-good
+<meta charset="utf-8">
+```
 
-<p>Finally, you should always add the viewport meta tag into your HTML {{HTMLElement("head")}}, to give the example a better chance of working on mobile devices. You should include at least the following in your document, which can be modified later on as the need arises:</p>
+Use UTF-8 unless you have a very good reason not to; it will cover your character needs pretty much regardless of what language you are using in your document. In addition, you should always specify the characterset as early as possible within your HTML's {{HTMLElement("head")}} block (within the first kilobyte), as it protects against a rather [nasty Internet Explorer security vulnerability](https://support.microsoft.com/kb/928847).
 
-<pre class="brush: html example-good">&lt;meta name="viewport" content="width=device-width"&gt;</pre>
+### Viewport meta tag
 
-<p>See <a href="/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">Using the viewport meta tag to control layout on mobile browsers</a> for further details.</p>
+Finally, you should always add the viewport meta tag into your HTML {{HTMLElement("head")}}, to give the example a better chance of working on mobile devices. You should include at least the following in your document, which can be modified later on as the need arises:
 
-<h2 id="General_markup_coding_style">General markup coding style</h2>
+```html example-good
+<meta name="viewport" content="width=device-width">
+```
 
-<h3 id="Use_lowercase">Use lowercase</h3>
+See [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) for further details.
 
-<p>Use lowercase for all element names and attribute names/values, as it looks neater and means you can write markup faster:</p>
+## General markup coding style
 
-<p>This is good:</p>
+### Use lowercase
 
-<pre class="brush: html example-good">&lt;p class="nice"&gt;This looks nice and neat&lt;/p&gt;</pre>
+Use lowercase for all element names and attribute names/values, as it looks neater and means you can write markup faster:
 
-<p>This is not so good:</p>
+This is good:
 
-<pre class="brush: html example-bad">&lt;P CLASS="WHOA-THERE"&gt;Why is my markup shouting?&lt;/P&gt;</pre>
+```html example-good
+<p class="nice">This looks nice and neat</p>
+```
 
-<h3 id="Trailing_slashes">Trailing slashes</h3>
+This is not so good:
 
-<p>Don't include XHTML-style trailing slashes for empty elements, as they are unnecessary and slow things down. They can also break old browsers if you are not careful (although from what we can recall, this hasn't been a problem since Netscape 4).</p>
+```html example-bad
+<P CLASS="WHOA-THERE">Why is my markup shouting?</P>
+```
 
-<p>This is fine:</p>
+### Trailing slashes
 
-<pre class="brush: html example-good">&lt;input type="text"&gt;
-&lt;hr&gt;</pre>
+Don't include XHTML-style trailing slashes for empty elements, as they are unnecessary and slow things down. They can also break old browsers if you are not careful (although from what we can recall, this hasn't been a problem since Netscape 4).
 
-<p>The slashes are not needed:</p>
+This is fine:
 
-<pre class="brush: html example-bad">&lt;input type="text" /&gt;
-&lt;hr /&gt;</pre>
+```html example-good
+<input type="text">
+<hr>
+```
 
-<h3 id="Quoting_attributes">Quoting attributes</h3>
+The slashes are not needed:
 
-<p>You should put all attribute values in double quotes. It is tempting to omit quotes since HTML5 allows this, but markup is neater and easier to read if you do include them. For example, this is better:</p>
+```html example-bad
+<input type="text" />
+<hr />
+```
 
-<pre class="brush: html example-good">&lt;img src="images/logo.jpg" alt="A circular globe icon" class="no-border"&gt;</pre>
+### Quoting attributes
 
-<p>than this:</p>
+You should put all attribute values in double quotes. It is tempting to omit quotes since HTML5 allows this, but markup is neater and easier to read if you do include them. For example, this is better:
 
-<pre class="brush: html example-bad">&lt;img src=images/logo.jpg alt=A circular globe icon class=no-border&gt;</pre>
+```html example-good
+<img src="images/logo.jpg" alt="A circular globe icon" class="no-border">
+```
 
-<p>It can also cause problems — in the above example the <code>alt</code> attribute will be interpreted as multiple attributes, because there are no quotes to specify that "A circular globe icon" is a single attribute value.</p>
+than this:
 
-<h3 id="Use_double_quotes">Use double quotes</h3>
+```html example-bad
+<img src=images/logo.jpg alt=A circular globe icon class=no-border>
+```
 
-<p>Use double quotes for HTML, not single quotes:</p>
+It can also cause problems — in the above example the `alt` attribute will be interpreted as multiple attributes, because there are no quotes to specify that "A circular globe icon" is a single attribute value.
 
-<pre class="brush: html example-good">&lt;p class="important"&gt;Yes&lt;/p&gt;</pre>
+### Use double quotes
 
-<pre class="brush: html example-bad">&lt;p class='important'&gt;Nope&lt;/p&gt;</pre>
+Use double quotes for HTML, not single quotes:
 
-<h3 id="Boolean_attributes">Boolean attributes</h3>
+```html example-good
+<p class="important">Yes</p>
+```
 
-<p>Don't write out boolean attributes in full; you can just write the attribute name to set it. For example, you can write:</p>
+```html example-bad
+<p class='important'>Nope</p>
+```
 
-<pre class="brush: html example-good">required</pre>
+### Boolean attributes
 
-<p>This is perfectly understandable and works fine; the longer version with the value is supported but not necessary:</p>
+Don't write out boolean attributes in full; you can just write the attribute name to set it. For example, you can write:
 
-<pre class="brush: html example-bad">required="required"</pre>
+```html example-good
+required
+```
 
-<h3 id="Class_and_ID_names">Class and ID names</h3>
+This is perfectly understandable and works fine; the longer version with the value is supported but not necessary:
 
-<p>Use semantic class/ID names, and separate multiple words with hyphens. Don't use camelCase.</p>
+```html example-bad
+required="required"
+```
 
-<p>Good:</p>
+### Class and ID names
 
-<pre class="brush: html example-good">&lt;p class="editorial-summary"&gt;Blah blah blah&lt;/p&gt;</pre>
+Use semantic class/ID names, and separate multiple words with hyphens. Don't use camelCase.
 
-<p>Bad:</p>
+Good:
 
-<pre class="brush: html example-bad">&lt;p class="bigRedBox"&gt;Blah blah blah&lt;/p&gt;</pre>
+```html example-good
+<p class="editorial-summary">Blah blah blah</p>
+```
 
-<h3 id="Entity_references">Entity references</h3>
+Bad:
 
-<p>Don’t use entity references unnecessarily — use the literal character wherever possible (you'll still need to escape characters like angle brackets and quote marks).</p>
+```html example-bad
+<p class="bigRedBox">Blah blah blah</p>
+```
 
-<p>As an example you could just write</p>
+### Entity references
 
-<pre class="brush: html example-good">&lt;p&gt;© 2018 Me&lt;/p&gt;</pre>
+Don’t use entity references unnecessarily — use the literal character wherever possible (you'll still need to escape characters like angle brackets and quote marks).
 
-<p>Instead of</p>
+As an example you could just write
 
-<pre class="brush: html example-bad">&lt;p&gt;&amp;copy; 2018 Me&lt;/p&gt;</pre>
+```html example-good
+<p>© 2018 Me</p>
+```
 
-<p>This is fine as long as you declare a UTF-8 character set.</p>
+Instead of
 
-<h2 id="Good_HTML_examples_on_MDN">Good HTML examples on MDN</h2>
+```html example-bad
+<p>&copy; 2018 Me</p>
+```
 
-<p>You can find good, concise, meaningful HTML snippets at the top of the <a href="/en-US/docs/Web/HTML/Reference">HTML reference pages</a> — our interactive examples are generally written to follow these guidelines, although be aware that they may differ in some places as they were mostly written before the guidelines were newly written.</p>
+This is fine as long as you declare a UTF-8 character set.
+
+## Good HTML examples on MDN
+
+You can find good, concise, meaningful HTML snippets at the top of the [HTML reference pages](/en-US/docs/Web/HTML/Reference) — our interactive examples are generally written to follow these guidelines, although be aware that they may differ in some places as they were mostly written before the guidelines were newly written.

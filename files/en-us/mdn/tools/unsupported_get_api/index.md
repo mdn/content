@@ -12,19 +12,20 @@ tags:
   - Page-level
   - Tools
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>MDN's platform, <a href="https://github.com/mdn/yari">Yari</a>, doesn't provide a supported GET API. However, Yari does currently provide an unsupported mechanism that exposes JSON resources which you can retrieve with HTTP <code>GET</code> requests and then consume programmatically.</p>
+MDN's platform, [Yari](https://github.com/mdn/yari), doesn't provide a supported GET API. However, Yari does currently provide an unsupported mechanism that exposes JSON resources which you can retrieve with HTTP `GET` requests and then consume programmatically.
 
-<h2>index.json resources</h2>
+## index.json resources
 
-<p>Given the URL for a particular MDN article, by making an HTTP GET request to the corresponding URL with <code>/index.json</code> appended, you can retrieve associated JSON data.</p>
+Given the URL for a particular MDN article, by making an HTTP GET request to the corresponding URL with `/index.json` appended, you can retrieve associated JSON data.
 
-<p>For example, for the MDN article at:</p>
-<p><a href="/en-US/docs/Web/API/Fetch_API/Using_Fetch">https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch</a></p>
-<p>...you can retrieve its associated JSON data at:</p>
-<p><a href="/en-US/docs/Web/API/Fetch_API/Using_Fetch/index.json">https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch/index.json</a></p>
+For example, for the MDN article at:
 
-<div class="warning">
-<p><strong>Warning:</strong> The format used for the JSON data in the MDN <code>index.json</code> resources is unversioned and intentionally undocumented. Any part of the format is subject to possible change, including the structure and the key names. It's even possible that Yari may change in such a way that the <code>index.json</code> resources are no longer provided at all.</p>
-</div>
+[https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+
+...you can retrieve its associated JSON data at:
+
+[https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch/index.json](/en-US/docs/Web/API/Fetch_API/Using_Fetch/index.json)
+
+> **Warning:** The format used for the JSON data in the MDN `index.json` resources is unversioned and intentionally undocumented. Any part of the format is subject to possible change, including the structure and the key names. It's even possible that Yari may change in such a way that the `index.json` resources are no longer provided at all.

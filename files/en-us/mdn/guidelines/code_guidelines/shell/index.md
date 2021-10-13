@@ -8,27 +8,28 @@ tags:
   - MDN Meta
   - Shell
 ---
-<div>{{MDNSidebar}}</div>
-<p>The following guidelines cover how to write Shell prompts on MDN pages.</p>
+{{MDNSidebar}}
 
-<h2 id="Shell_prompts_in_brief">Shell prompts in brief</h2>
+The following guidelines cover how to write Shell prompts on MDN pages.
 
-<p>A shell is a program that waits for you to type in a command and then press the return key. To indicate which commands you should type, MDN documentation lists them in a code block, similar to code examples. Such a block looks like this:</p>
+## Shell prompts in brief
 
-<pre class="brush: bash example-good"># This may take a while...
+A shell is a program that waits for you to type in a command and then press the return key. To indicate which commands you should type, MDN documentation lists them in a code block, similar to code examples. Such a block looks like this:
+
+```bash example-good
+# This may take a while...
 hg clone https://hg.mozilla.org/mozilla-central/ firefox
-cd firefox</pre>
+cd firefox
+```
 
-<h2 id="Guidelines">Guidelines</h2>
+## Guidelines
 
-<p>There are a some guidelines to follow when writing a shell code block:</p>
+There are a some guidelines to follow when writing a shell code block:
 
-<ul>
- <li>Do not include a "$" or "&gt;" at the beginning of a shell instruction. It confuses more than it helps and it is not useful when copying the instructions.</li>
- <li>Comments start with "#".</li>
- <li>Choose the "Bash" syntax highlighter.</li>
-</ul>
+- Do not include a "$" or ">" at the beginning of a shell instruction. It confuses more than it helps and it is not useful when copying the instructions.
+- Comments start with "#".
+- Choose the "Bash" syntax highlighter.
 
-<h2 id="Good_shell_prompt_examples_on_MDN">Good shell prompt examples on MDN</h2>
+## Good shell prompt examples on MDN
 
-<p>Our <a href="/en-US/docs/Learn/Server-side/Django">Django server-side development docs</a> show good practice presentation of shell prompt commands, etc. on MDN. See <a href="/en-US/docs/Learn/Server-side/Django/development_environment">Setting up a Django development environment</a> for example.</p>
+Our [Django server-side development docs](/en-US/docs/Learn/Server-side/Django) show good practice presentation of shell prompt commands, etc. on MDN. See [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment) for example.

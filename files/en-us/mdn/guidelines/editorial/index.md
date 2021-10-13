@@ -7,34 +7,34 @@ tags:
   - MDN Meta
   - Writing
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>This article describes the policies set by the Mozilla MDN staff to govern the content on MDN web docs. All contributors to MDN web docs are expected to abide by these policies.</p>
+This article describes the policies set by the Mozilla MDN staff to govern the content on MDN web docs. All contributors to MDN web docs are expected to abide by these policies.
 
-<h2 id="Relevance">Relevance</h2>
+## Relevance
 
-<p>All content on MDN must be relevant to the technology section in which it appears. Spam (commercial advertisement) and other irrelevant content will never be accepted onto the site. Contributors who keep trying to submit spam may be banned from MDN at the discretion of Mozilla staff.</p>
+All content on MDN must be relevant to the technology section in which it appears. Spam (commercial advertisement) and other irrelevant content will never be accepted onto the site. Contributors who keep trying to submit spam may be banned from MDN at the discretion of Mozilla staff.
 
-<p>Outbound links to commercial sites that are relevant to the topic from which they are linked will be judged on a case-by-case basis. Their value in aiding web developers must outweigh the commercial benefit to the linked site.</p>
+Outbound links to commercial sites that are relevant to the topic from which they are linked will be judged on a case-by-case basis. Their value in aiding web developers must outweigh the commercial benefit to the linked site.
 
-<h2 id="Neutrality">Neutrality</h2>
+## Neutrality
 
-<p>Article content on MDN must maintain a <a href="https://en.wikipedia.org/wiki/Wikipedia:Neutral_point_of_view">neutral point-of-view</a>, reporting on browser variations without editorial bias. Derogatory comments about any browser or user agent is not acceptable.</p>
+Article content on MDN must maintain a [neutral point-of-view](https://en.wikipedia.org/wiki/Wikipedia:Neutral_point_of_view), reporting on browser variations without editorial bias. Derogatory comments about any browser or user agent is not acceptable.
 
-<h3 id="Open_web_topics">Open web topics</h3>
+### Open web topics
 
-<p>MDN web docs contains <em>browser-neutral</em> documentation that enables web developers to write <em>browser-agnostic</em> code.</p>
+MDN web docs contains _browser-neutral_ documentation that enables web developers to write _browser-agnostic_ code.
 
-<p>Web technologies to be documented on MDN should be on a standards track, and be implemented by at least one rendering engine. Variations in browser support are documented in the <a href="/en-US/docs/MDN/Structures/Compatibility_tables">browser compatibility</a> section of an article.</p>
+Web technologies to be documented on MDN should be on a standards track, and be implemented by at least one rendering engine. Variations in browser support are documented in the [browser compatibility](/en-US/docs/MDN/Structures/Compatibility_tables) section of an article.
 
-<h3 id="Mozilla-specific_sections">Mozilla-specific sections</h3>
+### Mozilla-specific sections
 
-<p>Note that Mozilla-specific sections of MDN need not be browser-neutral, as they are concerned with Mozilla-specific content; however, they must still maintain a neutral point-of-view and avoid derogatory remarks about other products.</p>
+Note that Mozilla-specific sections of MDN need not be browser-neutral, as they are concerned with Mozilla-specific content; however, they must still maintain a neutral point-of-view and avoid derogatory remarks about other products.
 
-<h2 id="Structure">Structure</h2>
+## Structure
 
-<p>Reference pages should follow the same structure as other pages of the same type. See <a href="/en-US/docs/MDN/Structures/Page_types">Page Types</a> for a list and examples of common page structures.</p>
+Reference pages should follow the same structure as other pages of the same type. See [Page Types](/en-US/docs/MDN/Structures/Page_types) for a list and examples of common page structures.
 
-<h2 id="Other_guidelines">Guidelines</h2>
+## Guidelines
 
-<p>Contributors are expected to follow the <a href="/en-US/docs/MDN/Guidelines">MDN guidelines</a> for writing style, code samples, and other topics.</p>
+Contributors are expected to follow the [MDN guidelines](/en-US/docs/MDN/Guidelines) for writing style, code samples, and other topics.

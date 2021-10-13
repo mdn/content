@@ -8,8 +8,8 @@ tags:
   - Landing
   - MDN Meta
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>These articles provide step-by-step guides to accomplishing specific goals when contributing to MDN.</p>
+These articles provide step-by-step guides to accomplishing specific goals when contributing to MDN.
 
-<p>{{LandingPageListSubpages}}</p>
+{{LandingPageListSubpages}}

@@ -7,55 +7,51 @@ tags:
   - MDN
   - MDN Meta
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>Welcome to MDN Web Docs! If you have suggestions for, or are having problems using the MDN Web Docs, this is the right place to be. The very fact that you're interested in offering feedback makes you even more a part of the Mozilla community, and we thank you in advance for your interest.</p>
+Welcome to MDN Web Docs! If you have suggestions for, or are having problems using the MDN Web Docs, this is the right place to be. The very fact that you're interested in offering feedback makes you even more a part of the Mozilla community, and we thank you in advance for your interest.
 
-<p>You have several options for offering your insight; this article will help you do so.</p>
+You have several options for offering your insight; this article will help you do so.
 
-<h2 id="Update_the_documentation">Update the documentation</h2>
+## Update the documentation
 
-<p>First of all, if you've seen a problem with the documentation, you should always feel free to correct it yourself. Start by reading about the <a href="https://github.com/mdn/content/#making-contributions">specific steps for getting set up to make contributions</a>.</p>
+First of all, if you've seen a problem with the documentation, you should always feel free to correct it yourself. Start by reading about the [specific steps for getting set up to make contributions](https://github.com/mdn/content/#making-contributions).
 
-<p>The sources for the documentation here are <a href="https://github.com/mdn/content/">stored in GitHub</a>, and curated by a team of volunteers and paid staff, so don't be shy — your grammar doesn't have to be perfect. We'll review your changes and help you fix any mistakes; no harm done!</p>
+The sources for the documentation here are [stored in GitHub](https://github.com/mdn/content/), and curated by a team of volunteers and paid staff, so don't be shy — your grammar doesn't have to be perfect. We'll review your changes and help you fix any mistakes; no harm done!
 
-<p>For more information about contributing to MDN documentation, see:</p>
+For more information about contributing to MDN documentation, see:
 
-<ul>
- <li><a href="/en-US/docs/MDN/Contribute/Getting_started">Getting started</a>, for more details on how to begin.</li>
- <li><a href="/en-US/docs/MDN/Contribute">Contributing to MDN</a>, for ideas of specific tasks you can do to help.</li>
-</ul>
+- [Getting started](/en-US/docs/MDN/Contribute/Getting_started), for more details on how to begin.
+- [Contributing to MDN](/en-US/docs/MDN/Contribute), for ideas of specific tasks you can do to help.
 
-<h2 id="Join_the_conversation">Join the conversation</h2>
+## Join the conversation
 
-<p>Talk to us! There are a few ways to get in touch with other people who work on MDN content.</p>
+Talk to us! There are a few ways to get in touch with other people who work on MDN content.
 
-<h3 id="Synchronous_Chat">(Synchronous) Chat</h3>
+### (Synchronous) Chat
 
-<p>We use <a href="https://wiki.mozilla.org/Matrix">Matrix</a> to converse about MDN and its content. You can join in the conversation!</p>
+We use [Matrix](https://wiki.mozilla.org/Matrix) to converse about MDN and its content. You can join in the conversation!
 
-<p><a href="https://chat.mozilla.org/#/room/#mdn:mozilla.org">MDN Web Docs </a></p>
+[MDN Web Docs](https://chat.mozilla.org/#/room/#mdn:mozilla.org)
 
-<p>This room is for general discussion of MDN: using the site, reading content on the site, and contributing to the site's content. If you have questions or comments about article content, new articles you'd like to see or create, or just want to talk with the writing team, this is the place to be.</p>
+This room is for general discussion of MDN: using the site, reading content on the site, and contributing to the site's content. If you have questions or comments about article content, new articles you'd like to see or create, or just want to talk with the writing team, this is the place to be.
 
-<h3 id="Asynchronous_Discussions">(Asynchronous) Discussions</h3>
+### (Asynchronous) Discussions
 
-<p>Longer-term discussions happen on our <a href="https://discourse.mozilla-community.org/c/mdn">MDN discussion forum</a>. You can post to the forum via email to <a href="mailto://mdn@mozilla-community.org">mdn@mozilla-community.org</a>. If you join the forum, you can choose to have notifications about discussions sent to you via email as well.</p>
+Longer-term discussions happen on our [MDN discussion forum](https://discourse.mozilla-community.org/c/mdn). You can post to the forum via email to [mdn@mozilla-community.org](mailto://mdn@mozilla-community.org). If you join the forum, you can choose to have notifications about discussions sent to you via email as well.
 
-<h2 id="Report_an_issue">Report an issue</h2>
+## Report an issue
 
-<h3 id="Documentation_issues">Documentation issues</h3>
+### Documentation issues
 
-<p>If you see a problem in the documentation and can't fix it yourself for any reason, you can <a href="https://github.com/mdn/content/issues/new/choose" title="Report a documentation content problem.">report the issue</a>! For some problems of translation, you can <a href="https://github.com/mdn/translated-content/issues/new/choose" title="Report a translation problem.">report to translated content</a>. You can use this form for any documentation issue at all, for example:</p>
+If you see a problem in the documentation and can't fix it yourself for any reason, you can [report the issue](https://github.com/mdn/content/issues/new/choose "Report a documentation content problem.")! For some problems of translation, you can [report to translated content](https://github.com/mdn/translated-content/issues/new/choose "Report a translation problem."). You can use this form for any documentation issue at all, for example:
 
-<ul>
- <li>a simple correction</li>
- <li>a request for an entirely new piece of content</li>
- <li>reporting inappropriate content (including spam and misplaced translations)</li>
-</ul>
+- a simple correction
+- a request for an entirely new piece of content
+- reporting inappropriate content (including spam and misplaced translations)
 
-<p>As mentioned before, we invite you to contribute the changes yourself, but this option is available for you as well.</p>
+As mentioned before, we invite you to contribute the changes yourself, but this option is available for you as well.
 
-<h3 id="Site_issues">Site issues</h3>
+### Site issues
 
-<p>If you encounter problems with the MDN web site, or have ideas for new features for the site,  you can <a href="https://github.com/mdn/yari/issues">submit a ticket to the MDN development team</a>.</p>
+If you encounter problems with the MDN web site, or have ideas for new features for the site,  you can [submit a ticket to the MDN development team](https://github.com/mdn/yari/issues).

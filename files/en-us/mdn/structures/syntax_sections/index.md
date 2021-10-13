@@ -10,73 +10,82 @@ tags:
   - Syntax
   - onboarding
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>The syntax section of an MDN reference page contains a syntax box defining the exact syntax that a feature has (e.g. what parameters can it accept, which ones are optional?) This article explains how to write syntax boxes for reference articles.</p>
+The syntax section of an MDN reference page contains a syntax box defining the exact syntax that a feature has (e.g. what parameters can it accept, which ones are optional?) This article explains how to write syntax boxes for reference articles.
 
-<h2 id="API_reference_syntax">API reference syntax</h2>
+## API reference syntax
 
-<p>Syntax sections for API reference pages are written manually, and may differ slightly based on the feature being documented.
-  The section starts with a heading (typically {{HTMLElement("H2")}}) named "Syntax", and must be included at the top of the reference page (just below the introductory material).
-  Below the heading is a code block showing the feature's exact syntax, styled using the <code>brush: [markup-language]</code> class.</p>
+Syntax sections for API reference pages are written manually, and may differ slightly based on the feature being documented.
+The section starts with a heading (typically {{HTMLElement("H2")}}) named "Syntax", and must be included at the top of the reference page (just below the introductory material).
+Below the heading is a code block showing the feature's exact syntax, styled using the `brush: [markup-language]` class.
 
-<p>The example below shows the source code for a typical Syntax section (for a JavaScript function):</p>
+The example below shows the source code for a typical Syntax section (for a JavaScript function):
 
-<pre class="brush: html">
-  &lt;h2 id="Syntax"&gt;Syntax&lt;/h2&gt;
+```html
+  <h2 id="Syntax">Syntax</h2>
 
-  &lt;pre class="brush: js"&gt;slice();
+  <pre class="brush: js">slice();
   slice(start);
   slice(start, end);
-  &lt;/pre&gt;
-</pre>
+  </pre>
+```
 
-<h3 id="General_style_rules">General style rules</h3>
+### General style rules
 
-<p>A few rules to follow in terms of markup within the syntax block:</p>
+A few rules to follow in terms of markup within the syntax block:
 
-<ul>
- <li>Do <strong>not</strong> use &lt;code&gt; within the syntax block (or within any code sample block on MDN, either). Not only is it generally useless, but our markup does not want it, and will not render the way you want it to look if you include it.</li>
- <li>Only specify the function and arguments. Example showing "corrected" examples below
-  <pre class="brush: js">querySelector(selector);
-//responseStr = element.querySelector(selector);
+- Do **not** use \<code> within the syntax block (or within any code sample block on MDN, either). Not only is it generally useless, but our markup does not want it, and will not render the way you want it to look if you include it.
+- Only specify the function and arguments. Example showing "corrected" examples below
 
+  ```js
+  querySelector(selector);
+  //responseStr = element.querySelector(selector);
+
+  new IntersectionObserver(callback, options);
+  // var observer = new IntersectionObserver(callback, options);
+  ```
+
+### Constructors and methods
+
+#### Syntax block
+
+Start with a syntax block, like this (from the {{DOMxRef("IntersectionObserver.IntersectionObserver", "IntersectionObserver constructor")}} page):
+
+```js
 new IntersectionObserver(callback, options);
-// var observer = new IntersectionObserver(callback, options);
-</pre>
- </li>
-</ul>
+```
 
-<h3 id="Constructors_and_methods">Constructors and methods</h3>
+or this (from {{DOMxRef("Document.hasStorageAccess")}}):
 
-<h4 id="Syntax_block">Syntax block</h4>
+```js
+hasStorageAccess();
+```
 
-<p>Start with a syntax block, like this (from the {{DOMxRef("IntersectionObserver.IntersectionObserver", "IntersectionObserver constructor")}} page):</p>
+##### Multiple lines/Optional parameters
 
-<pre class="brush: js">new IntersectionObserver(callback, options);</pre>
+Methods that can be used in many different different ways should be expanded out into multiple lines, showing all possible variations.
 
-<p>or this (from {{DOMxRef("Document.hasStorageAccess")}}):</p>
+Each option should be on its own line, omitting both per-option comments and assignment. For example, {{jsxref("Array.prototype.slice()")}} has two optional parameters, and would be documented as shown below:
 
-<pre class="brush: js">hasStorageAccess();</pre>
-
-<h5 id="Multiple_lines">Multiple lines/Optional parameters</h5>
-
-<p>Methods that can be used in many different different ways should be expanded out into multiple lines, showing all possible variations.</p>
-
-<p>Each option should be on its own line, omitting both per-option comments and assignment. For example, {{jsxref("Array.prototype.slice()")}} has two optional parameters, and would be documented as shown below:</p>
-<pre class="brush: js">slice();
+```js
+slice();
 slice(begin);
-slice(begin, end);</pre>
+slice(begin, end);
+```
 
-<p>Similarly, for {{DOMxRef("CanvasRenderingContext2D.drawImage")}}:</p>
+Similarly, for {{DOMxRef("CanvasRenderingContext2D.drawImage")}}:
 
-<pre class="brush: js">drawImage(image, dx, dy);
+```js
+drawImage(image, dx, dy);
 drawImage(image, dx, dy, dWidth, dHeight);
-drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);</pre>
+drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
+```
 
-<p>Similarly for the {{jsxref("Date")}} constructor:</p>
+Similarly for the {{jsxref("Date")}} constructor:
 
-<pre class="brush: js">new Date();
+```js
+new Date();
 new Date(value);
 new Date(dateString);
 new Date(year, monthIndex);
@@ -84,36 +93,41 @@ new Date(year, monthIndex, day);
 new Date(year, monthIndex, day, hours);
 new Date(year, monthIndex, day, hours, minutes);
 new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds);
-</pre>
+```
 
-<h5 id="Formal_syntax">Formal syntax</h5>
+##### Formal syntax
 
-<p>Formal syntax notation (using <a href="https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form">BNF</a>) should not be used in the Syntax section — instead use the expanded multiple-line format <a href="#multiple_lines">described above</a>.</p>
+Formal syntax notation (using [BNF](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form)) should not be used in the Syntax section — instead use the expanded multiple-line format [described above](#multiple_lines).
 
-<p>While the formal notation provides a concise mechanism for describing complex syntax, it is not familiar to many developers, and can <em>conflict</em> with valid syntax for particular programming languages. For example, "<code>[&nbsp;]</code>" indicates both an "optional parameter" and a JavaScript {{jsxref("Array")}}. You can see this in the formal syntax for {{jsxref("Array.prototype.slice()")}} below:</p>
+While the formal notation provides a concise mechanism for describing complex syntax, it is not familiar to many developers, and can _conflict_ with valid syntax for particular programming languages. For example, "`[ ]`" indicates both an "optional parameter" and a JavaScript {{jsxref("Array")}}. You can see this in the formal syntax for {{jsxref("Array.prototype.slice()")}} below:
 
-<pre class="brush: js">arr.slice([begin[, end]])</pre>
+```js
+arr.slice([begin[, end]])
+```
 
-<p>For specific cases where it is seen as beneficial, a separate <strong>Formal syntax</strong> section may be declared using the formal notification.</p>
+For specific cases where it is seen as beneficial, a separate **Formal syntax** section may be declared using the formal notification.
 
+##### Concise syntax blocks
 
-<h5 id="Concise_syntax_blocks">Concise syntax blocks</h5>
+The aim is to make the syntax block as pure and unambiguous a definition of the feature's syntax as possible — don't include any irrelevant syntax. For example, you may see this syntax form used to describe promises in many places on the site:
 
-<p>The aim is to make the syntax block as pure and unambiguous a definition of the feature's syntax as possible — don't include any irrelevant syntax. For example, you may see this syntax form used to describe promises in many places on the site:</p>
-
-<pre class="brush: js">caches.match(request, options).then(function(response) {
+```js
+caches.match(request, options).then(function(response) {
   // Do something with the response
-});</pre>
+});
+```
 
-<p>But this version is much more concise, and doesn't include the superfluous {{JSxRef("Promise.prototype.then()")}} method call:</p>
+But this version is much more concise, and doesn't include the superfluous {{JSxRef("Promise.prototype.then()")}} method call:
 
-<pre class="brush: js">match(request, options);</pre>
+```js
+match(request, options);
+```
 
-<h5 id="Callback_syntax_blocks">Callback syntax blocks</h5>
+##### Callback syntax blocks
 
-<p>For methods with a callback function, the syntax for arrow functions, functions, and inline functions is shown:</p>
+For methods with a callback function, the syntax for arrow functions, functions, and inline functions is shown:
 
-<pre class="brush: js">
+```js
 // Arrow function
 filter((currentValue) => { ... } )
 filter((currentValue, index) => { ... } )
@@ -128,157 +142,157 @@ filter(function callbackFn(currentValue) { ... })
 filter(function callbackFn(currentValue, index) { ... })
 filter(function callbackFn(currentValue, index, array){ ... })
 filter(function callbackFn(currentValue, index, array) { ... }, thisArg)
-</pre>
+```
 
-<h5 id="Syntax_for_arbitrary_number_of_parameters">Syntax for arbitrary number of parameters</h5>
+##### Syntax for arbitrary number of parameters
 
-<p>For methods that accept an arbitrary number of parameters, the syntax block is written like this:</p>
+For methods that accept an arbitrary number of parameters, the syntax block is written like this:
 
-<pre class="brush: js">
+```js
 unshift(element0)
 unshift(element0, element1)
 unshift(element0, element1, ... , elementN)
-</pre>
+```
 
-<h4 id="Parameters_section">Parameters section</h4>
+#### Parameters section
 
-<p>Next, include a "Parameters" subsection, which explains what each parameter should be, in a description list. Parameters that are objects containing multiple members can include a nested description list, which itself includes an explanation of what each member should be. Optional parameters should be marked with an \{{optional_inline}} macro call next to their name in the description term.</p>
+Next, include a "Parameters" subsection, which explains what each parameter should be, in a description list. Parameters that are objects containing multiple members can include a nested description list, which itself includes an explanation of what each member should be. Optional parameters should be marked with an \\{{optional_inline}} macro call next to their name in the description term.
 
-<p>The name of each parameter in the list should be contained in a {{HTMLElement("code")}} block.</p>
+The name of each parameter in the list should be contained in a {{HTMLElement("code")}} block.
 
-<div class="note">
-  <p><strong>Note:</strong> If the feature does not take any parameters, you don't need to include a "Parameters" section, but you can if you wish include it with content of "None".</p>
-</div>
+> **Note:** If the feature does not take any parameters, you don't need to include a "Parameters" section, but you can if you wish include it with content of "None".
 
-<h4 id="Return_value_section">Return value section</h4>
+#### Return value section
 
-<p>Next, include a "Return value" subsection, which explains what the return value of the constructor or method is, even if it is <code>undefined</code>. See the above links for examples.</p>
+Next, include a "Return value" subsection, which explains what the return value of the constructor or method is, even if it is `undefined`. See the above links for examples.
 
-<h4 id="Exceptions_section">Exceptions section</h4>
+#### Exceptions section
 
-<p>Finally, include an "Exceptions" subsection, which explains what exceptions can be thrown if a problem is encountered when invoking the constructor/method. This could be because a parameter name has been misspelled or it has been given a value of the wrong datatype, because there is a problem with the environment it is being invoked in (e.g. trying to run a secure context-only feature in a non-secure context), or some other reason.</p>
+Finally, include an "Exceptions" subsection, which explains what exceptions can be thrown if a problem is encountered when invoking the constructor/method. This could be because a parameter name has been misspelled or it has been given a value of the wrong datatype, because there is a problem with the environment it is being invoked in (e.g. trying to run a secure context-only feature in a non-secure context), or some other reason.
 
-<p>Determining what exceptions are thrown by a method can require a good perusal of the specification. Looking through the spec's step-by-step explanation of how a feature operates will generally provide a solid list of the exceptions and the situations that cause them to be thrown.</p>
+Determining what exceptions are thrown by a method can require a good perusal of the specification. Looking through the spec's step-by-step explanation of how a feature operates will generally provide a solid list of the exceptions and the situations that cause them to be thrown.
 
-<p>The exception names and explanations should be included in a description list.</p>
+The exception names and explanations should be included in a description list.
 
-<div class="note">
-  <p><strong>Note:</strong> If no exceptions can be raised on the feature, you don't need to include an "Exceptions" section, but you can if you wish include it with content of "None".</p>
-</div>
+> **Note:** If no exceptions can be raised on the feature, you don't need to include an "Exceptions" section, but you can if you wish include it with content of "None".
 
-<h3 id="Properties">Properties</h3>
+### Properties
 
-<h4 id="Value_section">Value section</h4>
+#### Value section
 
-<p>Properties contain no syntax section. Instead, add a "Value" section containing an explanation of the property's value. Describe its data type and what its purpose is.</p>
+Properties contain no syntax section. Instead, add a "Value" section containing an explanation of the property's value. Describe its data type and what its purpose is.
 
-<h4 id="Exceptions_section_2">Exceptions section</h4>
+#### Exceptions section
 
-<p>If accessing the property can throw an exception, include an "Exceptions" subsection explaining each exception; this should be set up just like the one described for methods and constructors above.</p>
+If accessing the property can throw an exception, include an "Exceptions" subsection explaining each exception; this should be set up just like the one described for methods and constructors above.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<p>Event handler properties are still properties, but they have some differences in their syntax sections.</p>
+Event handler properties are still properties, but they have some differences in their syntax sections.
 
-<h4 id="Syntax_block_3">Syntax block</h4>
+#### Syntax block
 
-<p>Start with a syntax block, like this (see {{DOMxRef("Window.onvrdisplaypresentchange")}}):</p>
+Start with a syntax block, like this (see {{DOMxRef("Window.onvrdisplaypresentchange")}}):
 
-<pre class="brush: js">window.onvrdisplaypresentchange = functionRef;</pre>
+```js
+window.onvrdisplaypresentchange = functionRef;
+```
 
-<p>And that's it — event handler properties are always settable, and always contain a function; therefore no more information is needed.</p>
+And that's it — event handler properties are always settable, and always contain a function; therefore no more information is needed.
 
-<h2 id="JavaScript_reference_syntax">JavaScript reference syntax</h2>
+## JavaScript reference syntax
 
-<p>JavaScript built-in object reference pages follow the same basic rules as API reference pages; e.g. for methods and properties. There are a few differences that you might observe:</p>
+JavaScript built-in object reference pages follow the same basic rules as API reference pages; e.g. for methods and properties. There are a few differences that you might observe:
 
-<ul>
- <li>For built-in objects with a single constructor, the constructor syntax is often included on the object landing page. See {{JSxRef("Date")}} for example. You'll notice that static methods (those that exist on the <code>Date</code> object itself) are listed under "Methods", whereas instance methods are listed under "Date.prototype methods".</li>
- <li>You'll also notice that methods that have no parameters/exceptions are more likely to have those subsections not included at all on JavaScript reference pages. See {{JSxRef("Date.getDate()")}} and {{JSxRef("Date.now()")}} for examples.</li>
-</ul>
+- For built-in objects with a single constructor, the constructor syntax is often included on the object landing page. See {{JSxRef("Date")}} for example. You'll notice that static methods (those that exist on the `Date` object itself) are listed under "Methods", whereas instance methods are listed under "Date.prototype methods".
+- You'll also notice that methods that have no parameters/exceptions are more likely to have those subsections not included at all on JavaScript reference pages. See {{JSxRef("Date.getDate()")}} and {{JSxRef("Date.now()")}} for examples.
 
-<h2 id="CSS_reference_syntax">CSS reference syntax</h2>
+## CSS reference syntax
 
-<h3 id="Properties_2">Properties</h3>
+### Properties
 
-<p>CSS property reference pages include a "Syntax" section, which used to be found at the top of the page but is increasingly commonly found below a section containing a block of code showing typical usage of the feature, plus a live example to illustrate what the feature does (see {{CSSxRef("animation")}} for example).</p>
+CSS property reference pages include a "Syntax" section, which used to be found at the top of the page but is increasingly commonly found below a section containing a block of code showing typical usage of the feature, plus a live example to illustrate what the feature does (see {{CSSxRef("animation")}} for example).
 
-<div class="note">
-  <p><strong>Note:</strong> We do this because CSS formal syntax is complex, not used by many of the MDN readership, and offputting for beginners. Real syntax and examples are more useful to the majority of people.</p>
-</div>
+> **Note:** We do this because CSS formal syntax is complex, not used by many of the MDN readership, and offputting for beginners. Real syntax and examples are more useful to the majority of people.
 
-<p>Inside the syntax section you'll find the following contents.</p>
+Inside the syntax section you'll find the following contents.
 
-<h4 id="Optional_explanation_text">Optional explanation text</h4>
+#### Optional explanation text
 
-<p>Some CSS properties are self-explanatory and don't really need extra explanation (for example {{CSSxRef("color")}}). Some on the other hand are more complex and need explanation on syntax order, including multiple values, etc. (see {{CSSxRef("animation")}}). In such cases you can include extra explanation before any of the subsections.</p>
+Some CSS properties are self-explanatory and don't really need extra explanation (for example {{CSSxRef("color")}}). Some on the other hand are more complex and need explanation on syntax order, including multiple values, etc. (see {{CSSxRef("animation")}}). In such cases you can include extra explanation before any of the subsections.
 
-<h4 id="Values_section">Values section</h4>
+#### Values section
 
-<p>Next, you should include a "Values" section — this contains a description list explaining the CSS value types that make up the value of the property. Each value type should be wrapped in angle brackets and linked to the MDN reference page covering that value type if a page exists for it. For example, see the {{CSSxRef("border")}} property reference — this reference three value types, only one of which is linked ({{CSSxRef("&lt;color&gt;")}}).</p>
+Next, you should include a "Values" section — this contains a description list explaining the CSS value types that make up the value of the property. Each value type should be wrapped in angle brackets and linked to the MDN reference page covering that value type if a page exists for it. For example, see the {{CSSxRef("border")}} property reference — this reference three value types, only one of which is linked ({{CSSxRef("&lt;color&gt;")}}).
 
-<h4 id="Formal_syntax2">Formal syntax</h4>
+#### Formal syntax
 
-<p>The last section, "Formal syntax", is automatically generated from the data included in the <a href="https://github.com/mdn/data">MDN data repo</a>'s CSS directory. You just need to include a <code>CSSSyntax</code> macro call below the title, and it will take care of the rest.</p>
+The last section, "Formal syntax", is automatically generated from the data included in the [MDN data repo](https://github.com/mdn/data)'s CSS directory. You just need to include a `CSSSyntax` macro call below the title, and it will take care of the rest.
 
-<p>The only complication arises from making sure the data you need is present. The <a href="https://github.com/mdn/data/blob/master/css/properties.json">properties.json</a> file needs to contain an entry for the property you are documenting, and the <a href="https://github.com/mdn/data/blob/master/css/types.json">types.json</a> file needs to contain an entry for all of the value types used in the property's value.</p>
+The only complication arises from making sure the data you need is present. The [properties.json](https://github.com/mdn/data/blob/master/css/properties.json) file needs to contain an entry for the property you are documenting, and the [types.json](https://github.com/mdn/data/blob/master/css/types.json) file needs to contain an entry for all of the value types used in the property's value.
 
-<p>You need to do this by forking the <a href="https://github.com/mdn/data">MDN data repo</a>, cloning your fork locally, making the changes in a new branch, then submitting a pull request against the upstream repo. You can <a href="/en-US/docs/MDN/Structures/Compatibility_tables#preparing_to_add_the_data">find more details about using Git here</a>.</p>
+You need to do this by forking the [MDN data repo](https://github.com/mdn/data), cloning your fork locally, making the changes in a new branch, then submitting a pull request against the upstream repo. You can [find more details about using Git here](/en-US/docs/MDN/Structures/Compatibility_tables#preparing_to_add_the_data).
 
-<h3 id="Selectors">Selectors</h3>
+### Selectors
 
-<p>The "Syntax" section of selector reference pages is much simpler than that of property pages. It contains one block styled using the "Syntax Box" style, which shows the basic syntax of the selector, whether it is just a simple keyword (e.g. {{CSSxRef(":hover")}}), or a more complex function value that takes a parameter (e.g. {{CSSxRef(":not", ":not()")}}). Sometimes the parameter is explained in a further entry inside the syntax block (see {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}} for an example).</p>
+The "Syntax" section of selector reference pages is much simpler than that of property pages. It contains one block styled using the "Syntax Box" style, which shows the basic syntax of the selector, whether it is just a simple keyword (e.g. {{CSSxRef(":hover")}}), or a more complex function value that takes a parameter (e.g. {{CSSxRef(":not", ":not()")}}). Sometimes the parameter is explained in a further entry inside the syntax block (see {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}} for an example).
 
-<p>This block is automatically generated from the data included in the <a href="https://github.com/mdn/data">MDN data repo</a>'s CSS directory. You just need to include a <code>CSSSyntax</code> macro call below the title, and it will take care of the rest.</p>
+This block is automatically generated from the data included in the [MDN data repo](https://github.com/mdn/data)'s CSS directory. You just need to include a `CSSSyntax` macro call below the title, and it will take care of the rest.
 
-<p>The only complication arises from making sure the data you need is present. The <a href="https://github.com/mdn/data/blob/master/css/selectors.json">selectors.json</a> file needs to contain an entry for the selector you are documenting.</p>
+The only complication arises from making sure the data you need is present. The [selectors.json](https://github.com/mdn/data/blob/master/css/selectors.json) file needs to contain an entry for the selector you are documenting.
 
-<p>You need to do this by forking the <a href="https://github.com/mdn/data">MDN data repo</a>, cloning your fork locally, making the changes in a new branch, then submitting a pull request against the upstream repo. You can <a href="/en-US/docs/MDN/Structures/Compatibility_tables#preparing_to_add_the_data">find more details about using Git here</a>.</p>
+You need to do this by forking the [MDN data repo](https://github.com/mdn/data), cloning your fork locally, making the changes in a new branch, then submitting a pull request against the upstream repo. You can [find more details about using Git here](/en-US/docs/MDN/Structures/Compatibility_tables#preparing_to_add_the_data).
 
-<h2 id="HTML_reference_syntax">HTML reference syntax</h2>
+## HTML reference syntax
 
-<p>HTML reference pages don't have "Syntax" sections — the syntax is always just the element name surrounded by angle brackets, so it isn't needed. The main thing you need to know about HTML elements is what attributes they take and what their values can be, and this is covered in a separate "Attributes" section. See {{htmlelement("ol")}} and {{htmlelement("video")}} for examples.</p>
+HTML reference pages don't have "Syntax" sections — the syntax is always just the element name surrounded by angle brackets, so it isn't needed. The main thing you need to know about HTML elements is what attributes they take and what their values can be, and this is covered in a separate "Attributes" section. See {{htmlelement("ol")}} and {{htmlelement("video")}} for examples.
 
-<h2 id="HTTP_reference_syntax">HTTP reference syntax</h2>
+## HTTP reference syntax
 
-<p>HTTP reference syntax is all manually created, and differs depending on what type of HTTP feature you are documenting.</p>
+HTTP reference syntax is all manually created, and differs depending on what type of HTTP feature you are documenting.
 
-<h3 id="HTTP_headersContent-Security-Policy">HTTP headers/Content-Security-Policy</h3>
+### HTTP headers/Content-Security-Policy
 
-<p>HTTP header syntax (and Content-Security-Policy) is documented in two separate sections on the page — "Syntax" and "Directives".</p>
+HTTP header syntax (and Content-Security-Policy) is documented in two separate sections on the page — "Syntax" and "Directives".
 
-<h4 id="Syntax_section">Syntax section</h4>
+#### Syntax section
 
-<p>The "Syntax" section shows what a header's syntax will look like, using a syntax block styled using the "Syntax Box" style, including formal syntax to show exactly what directives can be included in the value, in what order, etc. For example, the {{HTTPHeader("If-None-Match")}} header's syntax block looks like this:</p>
+The "Syntax" section shows what a header's syntax will look like, using a syntax block styled using the "Syntax Box" style, including formal syntax to show exactly what directives can be included in the value, in what order, etc. For example, the {{HTTPHeader("If-None-Match")}} header's syntax block looks like this:
 
-<pre class="brush: plain">If-None-Match: &lt;etag_value&gt;
-If-None-Match: &lt;etag_value&gt;, &lt;etag_value&gt;, …
-If-None-Match: *</pre>
+```plain
+If-None-Match: <etag_value>
+If-None-Match: <etag_value>, <etag_value>, …
+If-None-Match: *
+```
 
-<p>Some headers will have separate request directive, response directive, and extension syntax. If available, these must be included in separate syntax blocks, each under its own subsection. See {{HTTPHeader("Cache-Control")}} for an example.</p>
+Some headers will have separate request directive, response directive, and extension syntax. If available, these must be included in separate syntax blocks, each under its own subsection. See {{HTTPHeader("Cache-Control")}} for an example.
 
-<h4 id="Directive_section">Directive section</h4>
+#### Directive section
 
-<p>The "Directive" section contains a description list containing the names and descriptions of all the directives that can appear inside the syntax.</p>
+The "Directive" section contains a description list containing the names and descriptions of all the directives that can appear inside the syntax.
 
-<h3 id="HTTP_request_methods">HTTP request methods</h3>
+### HTTP request methods
 
-<p>Request method syntax is really simple, just containing a syntax block styled using the "Syntax Box" style that shows how the method syntax is structured. The syntax for the <a href="/en-US/docs/Web/HTTP/Methods/GET">GET method</a> looks like this:</p>
+Request method syntax is really simple, just containing a syntax block styled using the "Syntax Box" style that shows how the method syntax is structured. The syntax for the [GET method](/en-US/docs/Web/HTTP/Methods/GET) looks like this:
 
-<pre class="brush: plain">GET /index.html</pre>
+```plain
+GET /index.html
+```
 
-<h3 id="HTTP_response_status_codes">HTTP response status codes</h3>
+### HTTP response status codes
 
-<p>Again, the syntax for HTTP response status codes is really simple — a syntax block including the code and name. For example:</p>
+Again, the syntax for HTTP response status codes is really simple — a syntax block including the code and name. For example:
 
-<pre class="brush: plain">404 Not Found</pre>
+```plain
+404 Not Found
+```
 
-<h2 id="SVG_reference_syntax">SVG reference syntax</h2>
+## SVG reference syntax
 
-<h3 id="SVG_elements">SVG elements</h3>
+### SVG elements
 
-<p>SVG element syntax sections are non-existent — just like HTML element syntax sections. Each SVG element reference page just includes a list of the attributes that can apply to that element. See {{SVGElement("feTile")}} for example.</p>
+SVG element syntax sections are non-existent — just like HTML element syntax sections. Each SVG element reference page just includes a list of the attributes that can apply to that element. See {{SVGElement("feTile")}} for example.
 
-<h3 id="SVG_attributes">SVG attributes</h3>
+### SVG attributes
 
-<p>SVG attribute reference pages also do not include syntax sections.</p>
+SVG attribute reference pages also do not include syntax sections.

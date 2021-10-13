@@ -8,34 +8,32 @@ tags:
   - Intro
   - MDN Meta
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>This article introduces new contributors to the process of editing existing pages and creating new ones.</p>
+This article introduces new contributors to the process of editing existing pages and creating new ones.
 
-<h2 id="Editing_an_existing_page">Editing an existing page</h2>
+## Editing an existing page
 
-<p>To edit a page, you need to find the page source in our <a href="https://github.com/mdn/content">content</a> repo. The easiest way to find it is to navigate to the page you want to edit, go to the bottom of the page, and click on the "Source on GitHub" link.</p>
+To edit a page, you need to find the page source in our [content](https://github.com/mdn/content) repo. The easiest way to find it is to navigate to the page you want to edit, go to the bottom of the page, and click on the "Source on GitHub" link.
 
-<p>Once you've found the source to edit, go to our README and work through our <a href="https://github.com/mdn/content#making-contributions">Making contributions</a> guide.</p>
+Once you've found the source to edit, go to our README and work through our [Making contributions](https://github.com/mdn/content#making-contributions) guide.
 
-<h3 id="Preview_changes">Preview changes</h3>
+### Preview changes
 
-<p>If you are editing the page locally, to see what your changes look like you can go to the content repo folder, execute the CLI command <code>yarn start</code>, go to <code>localhost:5000</code> in your browser, and navigate to page and view it. Enter the title in the search box to find it easily. The previewed page will update in the browser live as you edit the source.</p>
+If you are editing the page locally, to see what your changes look like you can go to the content repo folder, execute the CLI command `yarn start`, go to `localhost:5000` in your browser, and navigate to page and view it. Enter the title in the search box to find it easily. The previewed page will update in the browser live as you edit the source.
 
-<h3 id="Tags">Tags</h3>
+### Tags
 
-<p>You can add or remove tags, which describe the page's content and purpose, in the "tags" list at the top of the page source. See <a href="/en-US/docs/MDN/Contribute/Howto/Tag">How to properly tag pages</a>, for information on which tags to apply.</p>
+You can add or remove tags, which describe the page's content and purpose, in the "tags" list at the top of the page source. See [How to properly tag pages](/en-US/docs/MDN/Contribute/Howto/Tag), for information on which tags to apply.
 
-<h3 id="Attach_files">Attach files</h3>
+### Attach files
 
-<p>To attach a file to your article, you just need to include it in the same directory as the article's <code>index.html</code> file, and include it in your page, typically via an <code>&lt;a&gt;</code> element.</p>
+To attach a file to your article, you just need to include it in the same directory as the article's `index.html` file, and include it in your page, typically via an `<a>` element.
 
-<h2 id="Creating_a_new_page">Creating a new page</h2>
+## Creating a new page
 
-<p>To create a new page, see our <a href="https://github.com/mdn/content#adding-a-new-document">Adding a new document</a> instructions.</p>
+To create a new page, see our [Adding a new document](https://github.com/mdn/content#adding-a-new-document) instructions.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/MDN/Guidelines/Writing_style_guide">MDN style guide</a></li>
-</ul>
+- [MDN style guide](/en-US/docs/MDN/Guidelines/Writing_style_guide)
