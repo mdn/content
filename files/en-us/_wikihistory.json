@@ -69258,75 +69258,6 @@
       "SphinxKnight"
     ]
   },
-  "Web/API/PublicKeyCredentialCreationOptions": {
-    "modified": "2020-10-15T22:01:50.179Z",
-    "contributors": [
-      "mfuji09",
-      "SphinxKnight",
-      "jpmedley",
-      "fscholz",
-      "chrisdavidmills",
-      "apowers313"
-    ]
-  },
-  "Web/API/PublicKeyCredentialCreationOptions/attestation": {
-    "modified": "2020-10-15T22:15:59.320Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/API/PublicKeyCredentialCreationOptions/authenticatorSelection": {
-    "modified": "2020-10-15T22:15:56.785Z",
-    "contributors": [
-      "mfuji09",
-      "SphinxKnight"
-    ]
-  },
-  "Web/API/PublicKeyCredentialCreationOptions/challenge": {
-    "modified": "2020-10-15T22:15:55.906Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/API/PublicKeyCredentialCreationOptions/excludeCredentials": {
-    "modified": "2020-10-15T22:15:57.778Z",
-    "contributors": [
-      "mfuji09",
-      "SphinxKnight"
-    ]
-  },
-  "Web/API/PublicKeyCredentialCreationOptions/extensions": {
-    "modified": "2020-10-15T22:15:57.798Z",
-    "contributors": [
-      "letrthang",
-      "SphinxKnight"
-    ]
-  },
-  "Web/API/PublicKeyCredentialCreationOptions/pubKeyCredParams": {
-    "modified": "2020-10-15T22:15:56.162Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/API/PublicKeyCredentialCreationOptions/rp": {
-    "modified": "2020-10-15T22:15:54.811Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/API/PublicKeyCredentialCreationOptions/timeout": {
-    "modified": "2020-10-26T12:19:46.113Z",
-    "contributors": [
-      "maxwellium",
-      "SphinxKnight"
-    ]
-  },
-  "Web/API/PublicKeyCredentialCreationOptions/user": {
-    "modified": "2020-10-15T22:15:57.445Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "Web/API/PublicKeyCredentialRequestOptions": {
     "modified": "2020-10-15T22:01:33.607Z",
     "contributors": [
@@ -69338,45 +69269,6 @@
       "fscholz",
       "chrisdavidmills",
       "apowers313"
-    ]
-  },
-  "Web/API/PublicKeyCredentialRequestOptions/allowCredentials": {
-    "modified": "2020-10-15T22:15:59.201Z",
-    "contributors": [
-      "mahnunchik",
-      "SphinxKnight"
-    ]
-  },
-  "Web/API/PublicKeyCredentialRequestOptions/challenge": {
-    "modified": "2020-10-15T22:15:58.077Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/API/PublicKeyCredentialRequestOptions/extensions": {
-    "modified": "2020-10-15T22:15:58.109Z",
-    "contributors": [
-      "letrthang",
-      "billinghamj",
-      "SphinxKnight"
-    ]
-  },
-  "Web/API/PublicKeyCredentialRequestOptions/rpId": {
-    "modified": "2020-10-15T22:15:58.869Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/API/PublicKeyCredentialRequestOptions/timeout": {
-    "modified": "2020-10-15T22:15:58.051Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/API/PublicKeyCredentialRequestOptions/userVerification": {
-    "modified": "2020-10-15T22:15:59.160Z",
-    "contributors": [
-      "SphinxKnight"
     ]
   },
   "Web/API/PushEvent": {
