@@ -849,8 +849,7 @@
       "interfaces": [
         "MediaCapabilities",
         "ScreenLuminance",
-        "Screen",
-        "MediaCapabilitiesInfo"
+        "Screen"
       ],
       "methods": [
         "mediaCapabilities.decodingInfo()",
