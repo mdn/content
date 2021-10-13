@@ -41,6 +41,7 @@ Used in **ALL** [roles](/en-US/docs/Web/Accessibility/ARIA/Roles).
 
 ## See Also
 
+- [Event.ariaAtomic](/en-US/docs/Web/API/Element/ariaAtomic)
 
 <section id="Quick_links">
 

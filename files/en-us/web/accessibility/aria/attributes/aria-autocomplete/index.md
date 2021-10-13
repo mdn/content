@@ -72,7 +72,7 @@ Used in roles:
 - [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) attribute 
 -  [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute
 -  [Editable Combobox With Both List and Inline Autocomplete Example](https://www.w3.org/TR/wai-aria-practices-1.2/examples/combobox/combobox-autocomplete-both.html)
-
+- [Event.ariaAutoComplete](/en-US/docs/Web/API/Element/ariaAutoComplete)
 
 <section id="Quick_links">
 
