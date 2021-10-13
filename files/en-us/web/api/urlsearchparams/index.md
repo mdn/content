@@ -121,7 +121,7 @@ const searchParams3 = new URLSearchParams(url.search);
 searchParams3.has('query') // true
 ```
 
-It interprets `+` in the value as a space
+It interprets `+` as a space
 
 ```js
 const base64 = btoa(String.fromCharCode(19, 224, 23, 64, 31, 128)); // base64 is "E+AXQB+A"
