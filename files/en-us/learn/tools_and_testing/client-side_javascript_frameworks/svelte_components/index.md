@@ -193,7 +193,7 @@ When any filter button is clicked, we just update the filter variable with the n
 
 In the previous example we realized that our `FilterButton` component wasn't working because our application state was flowing down from parent to child through the `filter` prop — but it wasn't going back up. So we added an `onclick` prop to let the child component communicate the new `filter` value to its parent.
 
-It works ok, but Svelte provides us an easier and more straightforward way to achieve two-way data binding. Data ordinarily flows down from parent to child using props. If we want it to also flow the other way — from child to parent — we can use [the `bind:` directive](https://svelte.dev/docs#bind_element_property).
+It works OK, but Svelte provides us an easier and more straightforward way to achieve two-way data binding. Data ordinarily flows down from parent to child using props. If we want it to also flow the other way — from child to parent — we can use [the `bind:` directive](https://svelte.dev/docs#bind_element_property).
 
 Using `bind`, we will tell Svelte that any changes made to the `filter` prop in the `FilterButton` component should propagate back up to the parent component, `Todos`. That is, we will bind the `filter` variable's value in the parent to its value in the child.
 

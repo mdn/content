@@ -19,7 +19,7 @@ When you've spent your time building a game, [distributing](/en-US/docs/Games/Pu
 
 The first, most obvious choice that may come to your mind might be selling the games the way it is done for huge AAA titles — with a fixed, up front price. Even though the digital market is key and you don't need to print covers and put your game in a physical store in boxes, to earn decent money on selling your games for a fixed price you have to invest your time and money in marketing. Only the best games will break even or earn more than they cost to make, and you still need a lot of luck for that.
 
-How much you charge for your game depends on the market, quality of your game and a lot of other small factors. An arcade iOS title can be sold for 0.99 USD, but a longer RPG-style desktop game on Steam can cost 20 USD; both prices are ok. You have to follow the market and do your own research — learning from your mistakes quickly is important.
+How much you charge for your game depends on the market, quality of your game and a lot of other small factors. An arcade iOS title can be sold for 0.99 USD, but a longer RPG-style desktop game on Steam can cost 20 USD; both prices are OK. You have to follow the market and do your own research — learning from your mistakes quickly is important.
 
 ## In-app purchases
 
@@ -83,7 +83,7 @@ If you're a graphic designer, you can sell the assets from the games you've crea
 
 ### Writing articles and tutorials
 
-It is possible to write articles about your games and even get paid for them. Game [promotion](/en-US/docs/Games/Publishing_games/Game_promotion) and monetization at the same time is a win-win, and if you don't abuse it with too much advertising the readers will enjoy reading them and as well as learning a thing or two. If you focus on sharing the knowledge first and use your games just as the examples it should be ok. Check out [Tuts+ Game Development](https://gamedevelopment.tutsplus.com/) or similar websites for writing opportunities.
+It is possible to write articles about your games and even get paid for them. Game [promotion](/en-US/docs/Games/Publishing_games/Game_promotion) and monetization at the same time is a win-win, and if you don't abuse it with too much advertising the readers will enjoy reading them and as well as learning a thing or two. If you focus on sharing the knowledge first and use your games just as the examples it should be OK. Check out [Tuts+ Game Development](https://gamedevelopment.tutsplus.com/) or similar websites for writing opportunities.
 
 ### Merchandise
 

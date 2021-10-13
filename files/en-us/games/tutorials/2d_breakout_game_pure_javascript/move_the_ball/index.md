@@ -88,7 +88,7 @@ function draw() {
 }
 ```
 
-Save your code again and try it in your browser. This works ok, although it appears that the ball is leaving a trail behind it:
+Save your code again and try it in your browser. This works OK, although it appears that the ball is leaving a trail behind it:
 
 ![](ball-trail.png)
 
