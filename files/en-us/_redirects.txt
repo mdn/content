@@ -8414,6 +8414,7 @@
 /en-US/docs/Web/API/RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent	/en-US/docs/Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent
 /en-US/docs/Web/API/RTCPeerConnectionIceEvent.candidate	/en-US/docs/Web/API/RTCPeerConnectionIceEvent/candidate
 /en-US/docs/Web/API/RTCRtpSender/getCapabilities()	/en-US/docs/Web/API/RTCRtpSender/getCapabilities
+/en-US/docs/Web/API/RTCRtpTransceiverInit	/en-US/docs/Web/API/RTCPeerConnection/addTransceiver
 /en-US/docs/Web/API/RTCSctpTransportState	/en-US/docs/Web/API/RTCSctpTransport/state
 /en-US/docs/Web/API/RTCSdpType	/en-US/docs/Web/API/RTCSessionDescription/type
 /en-US/docs/Web/API/RTCSessionDescription.RTCSessionDescription	/en-US/docs/Web/API/RTCSessionDescription/RTCSessionDescription
