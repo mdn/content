@@ -12,7 +12,7 @@ tags:
 ---
 <p>{{AddonSidebar}}</p>
 
-<p><span class="seoSummary">The <strong><a href="https://github.com/dewitt/opensearch" rel="external">OpenSearch description format</a></strong> lets a website describe a search engine for itself, so that a browser or other client application can use that search engine.</span> OpenSearch is supported by (at least) Firefox, Edge, Internet Explorer, Safari, and Chrome. (See <a href="#reference_material">Reference Material</a> for links to other browsers' documentation.)</p>
+<p>The <strong><a href="https://github.com/dewitt/opensearch" rel="external">OpenSearch description format</a></strong> lets a website describe a search engine for itself, so that a browser or other client application can use that search engine. OpenSearch is supported by (at least) Firefox, Edge, Internet Explorer, Safari, and Chrome. (See <a href="#reference_material">Reference Material</a> for links to other browsers' documentation.)</p>
 
 <p>Firefox also supports additional features not in the OpenSearch standard, such as search suggestions and the <code>&lt;SearchForm&gt;</code> element. This article focuses on creating OpenSearch-compatible search plugins that support these additional Firefox features.</p>
 
@@ -57,13 +57,13 @@ tags:
 
  <p>Firefox caches the icon as a <a href="https://en.wikipedia.org/wiki/Base64">base64</a> <code>data:</code> URI (search plug-ins are stored in the <a href="/en-US/docs/Mozilla/Profile_Manager">profile</a>'s <code>searchplugins/</code> folder). <code>http:</code> and <code>https:</code> URLs are converted to <code>data:</code> URIs when this is done.</p>
 
- <div class="note"><strong>Note:</strong> For icons loaded remotely (that is, from <code>https://</code> URIs as opposed to <code>data:</code> URIs), Firefox will reject icons larger than <strong>10 kilobytes</strong>.</div>
+ <div class="note"><p><strong>Note:</strong> For icons loaded remotely (that is, from <code>https://</code> URIs as opposed to <code>data:</code> URIs), Firefox will reject icons larger than <strong>10 kilobytes</strong>.</p></div>
 
  <p><img alt="Search suggestions from Google displayed in Firefox's search box" class="internal" src="searchsuggestionsample.png"></p>
  </dd>
  <dt>Url</dt>
- <dd>Describes the URL or URLs to use for the search. The <code>template</code> attribute indicates the base URL for the search query.</dd>
- <dd>Firefox supports three URL types:
+ <dd><p>Describes the URL or URLs to use for the search. The <code>template</code> attribute indicates the base URL for the search query.</p>
+ <p>Firefox supports three URL types:</p>
  <ul>
   <li><code>type="text/html"</code> specifies the URL for the actual search query.</li>
   <li><code>type="application/x-suggestions+json"</code> specifies the URL for fetching search suggestions. In Firefox 63 onwards, <code>type="application/json"</code> is accepted as an alias of this.</li>
@@ -77,9 +77,8 @@ tags:
  <dt>Param</dt>
  <dd>The parameters that must be passed in along with the search query as key/value pairs. When specifying values, you can use <code>{searchTerms}</code> to insert the search terms entered by the user in the search bar.</dd>
  <dt>moz:SearchForm</dt>
- <dd>The URL for the site's search page for which the plugin. This lets Firefox users visit the web site directly.</dd>
- <dd>
- <div class="note"><strong>Note:</strong> Since this element is Firefox-specific, and not part of the OpenSearch specification, we use the <code>moz:</code> XML namespace prefix in the example above to ensure that other user agents that don't support this element can safely ignore it.</div>
+ <dd><p>The URL for the site's search page for which the plugin. This lets Firefox users visit the web site directly.</p>
+ <div class="note"><p><strong>Note:</strong> Since this element is Firefox-specific, and not part of the OpenSearch specification, we use the <code>moz:</code> XML namespace prefix in the example above to ensure that other user agents that don't support this element can safely ignore it.</p></div>
  </dd>
 </dl>
 
@@ -116,8 +115,8 @@ tags:
 <p>This way, your site can offer plugins to search by author, or by title.</p>
 
 <div class="note">
-<p>In Firefox, an icon change in the search box indicates there's a provided search plugin. (See image, the green plus sign.) Thus if a search box is not shown in the user's UI, they will receive <em>no</em> indication. <em>In general, behavior varies among browsers</em>.</p>
-<img alt="How search plugin availability is shown in Firefox" src="new.png"></div>
+  <p><strong>Note:</strong> In Firefox, an icon change in the search box indicates there's a provided search plugin. (See image, the green plus sign.) Thus if a search box is not shown in the user's UI, they will receive <em>no</em> indication. <em>In general, behavior varies among browsers</em>.</p>
+</div>
 
 <h2 id="Supporting_automatic_updates_for_OpenSearch_plugins">Supporting automatic updates for OpenSearch plugins</h2>
 
@@ -130,7 +129,7 @@ tags:
      template="https://example.com/mysearchdescription.xml" /&gt;
 </pre>
 
-<div class="note"><strong>Note:</strong> At this time, <a class="external" href="https://addons.mozilla.org">addons.mozilla.org</a> (AMO) doesn't support automatic updating of OpenSearch plugins. If you want to put your search plugin on AMO, remove the auto-updating feature before submitting it.</div>
+<div class="note"><p><strong>Note:</strong> At this time, <a class="external" href="https://addons.mozilla.org">addons.mozilla.org</a> (AMO) doesn't support automatic updating of OpenSearch plugins. If you want to put your search plugin on AMO, remove the auto-updating feature before submitting it.</p></div>
 
 <h2 id="Troubleshooting_Tips">Troubleshooting Tips</h2>
 
