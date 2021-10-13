@@ -19,6 +19,7 @@ Glossary terms can be selected from the sidebar (or listed below on mobile devic
 {{LearnBox({"title":"Learn a new word ..."})}}
 
 <section id="Quick_links">
-  1. [MDN Web Docs Glossary](/en-US/docs/Glossary)
-  2. {{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}
+ <ol>
+  <li><strong><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a></strong>{{ListSubpagesForSidebar("/en-us/docs/Glossary", 1)}}</li>
+ </ol>
 </section>
