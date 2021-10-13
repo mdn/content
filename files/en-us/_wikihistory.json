@@ -69534,45 +69534,6 @@
       "rolfedh"
     ]
   },
-  "Web/API/RTCConfiguration": {
-    "modified": "2020-10-15T21:25:50.332Z",
-    "contributors": [
-      "Sheppy",
-      "Jib",
-      "fscholz",
-      "teoli",
-      "jpmedley",
-      "williamboman",
-      "eharris",
-      "zmi",
-      "wesj"
-    ]
-  },
-  "Web/API/RTCConfiguration/bundlePolicy": {
-    "modified": "2020-10-15T22:33:16.667Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/RTCConfiguration/certificates": {
-    "modified": "2020-10-15T22:33:26.024Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/RTCConfiguration/iceServers": {
-    "modified": "2020-10-15T22:33:11.106Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/RTCConfiguration/iceTransportPolicy": {
-    "modified": "2020-12-10T11:04:03.568Z",
-    "contributors": [
-      "bershanskiy",
-      "Sheppy"
-    ]
-  },
   "Web/API/RTCDTMFSender": {
     "modified": "2020-10-15T21:51:49.716Z",
     "contributors": [

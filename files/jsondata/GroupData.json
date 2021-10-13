@@ -1895,7 +1895,6 @@
         "RTCErrorEvent"
       ],
       "dictionaries": [
-        "RTCConfiguration",
         "RTCOAuthCredential",
         "RTCIceServer",
         "RTCOfferAnswerOptions",
