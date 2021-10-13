@@ -1,5 +1,5 @@
 ---
-title: <s>
+title: '<s>: The Strikethrough element'
 slug: Web/HTML/Element/s
 tags:
   - Element
