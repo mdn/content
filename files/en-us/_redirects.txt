@@ -8317,6 +8317,11 @@
 /en-US/docs/Web/API/PushManager.registrations	/en-US/docs/Web/API/PushManager/registrations
 /en-US/docs/Web/API/PushManager.unregister	/en-US/docs/Web/API/PushManager/unregister
 /en-US/docs/Web/API/Push_API/Using_the_Push_API	/en-US/docs/Web/API/Push_API
+/en-US/docs/Web/API/RTCConfiguration	/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection
+/en-US/docs/Web/API/RTCConfiguration/bundlePolicy	/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection
+/en-US/docs/Web/API/RTCConfiguration/certificates	/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection
+/en-US/docs/Web/API/RTCConfiguration/iceServers	/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection
+/en-US/docs/Web/API/RTCConfiguration/iceTransportPolicy	/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection
 /en-US/docs/Web/API/RTCDTMFSender/tonechange	/en-US/docs/Web/API/RTCDTMFSender/tonechange_event
 /en-US/docs/Web/API/RTCDataChannel.binaryType	/en-US/docs/Web/API/RTCDataChannel/binaryType
 /en-US/docs/Web/API/RTCDataChannel.bufferedAmount	/en-US/docs/Web/API/RTCDataChannel/bufferedAmount
