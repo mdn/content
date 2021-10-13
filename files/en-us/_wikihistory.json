@@ -116026,18 +116026,6 @@
       "Bzbarsky"
     ]
   },
-  "Web/Events/Mouse_gesture_events": {
-    "modified": "2019-03-24T00:16:25.836Z",
-    "contributors": [
-      "Jeremie",
-      "Sheppy",
-      "ethertank",
-      "Nickolay",
-      "dflanagan",
-      "Midnightaz",
-      "hamishwillee"
-    ]
-  },
   "Web/Events/Orientation_and_motion_data_explained": {
     "modified": "2020-01-18T20:53:28.435Z",
     "contributors": [

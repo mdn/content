@@ -29,8 +29,7 @@ elem.dispatchEvent(event);</pre>
 
 <h3 id="Adding_custom_data_–_CustomEvent">Adding custom data – CustomEvent()</h3>
 
-<p>To add more data to the event object, the <a href="/en-US/docs/Web/API/CustomEvent">CustomEvent</a> interface exists and the <u><strong>detail</strong></u> property can be used to pass custom data.<br>
- <span style="line-height: 1.5;">For example, the event could be created as follows:</span></p>
+<p>To add more data to the event object, the <a href="/en-US/docs/Web/API/CustomEvent">CustomEvent</a> interface exists and the <strong>detail</strong> property can be used to pass custom data.<br>For example, the event could be created as follows:</p>
 
 <pre class="brush: js">const event = new CustomEvent('build', { detail: elem.dataset.time });</pre>
 
