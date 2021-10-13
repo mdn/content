@@ -7907,6 +7907,7 @@
 /en-US/docs/Web/API/MSLaunchUri	/en-US/docs/Web/API/Navigator/msLaunchUri
 /en-US/docs/Web/API/MSManipulationStateChanged	/en-US/docs/Web/API/Element/MSManipulationStateChanged_event
 /en-US/docs/Web/API/MediaCapabilities/MediaCapabilitiesInfo	/en-US/docs/Web/API/MediaCapabilities
+/en-US/docs/Web/API/MediaCapabilitiesInfo	/en-US/docs/Web/API/MediaCapabilities/encodingInfo
 /en-US/docs/Web/API/MediaCapabilities_API	/en-US/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API
 /en-US/docs/Web/API/MediaDevices/mediaDevices.getUserMedia	/en-US/docs/Web/API/MediaDevices/getUserMedia
 /en-US/docs/Web/API/MediaMetadata/MediaMetadata.title	/en-US/docs/Web/API/MediaMetadata/title
@@ -7950,7 +7951,7 @@
 /en-US/docs/Web/API/MediaStreamTrack.stop	/en-US/docs/Web/API/MediaStreamTrack/stop
 /en-US/docs/Web/API/MediaStream_API	/en-US/docs/Web/API/Media_Streams_API
 /en-US/docs/Web/API/Media_Capabilities_API/MediaCapabilities	/en-US/docs/Web/API/MediaCapabilities
-/en-US/docs/Web/API/Media_Capabilities_API/MediaCapabilitiesInfo	/en-US/docs/Web/API/MediaCapabilitiesInfo
+/en-US/docs/Web/API/Media_Capabilities_API/MediaCapabilitiesInfo	/en-US/docs/Web/API/MediaCapabilities/encodingInfo
 /en-US/docs/Web/API/Media_Capabilities_API/MediaConfiguration	/en-US/docs/Web/API/MediaConfiguration
 /en-US/docs/Web/API/Media_Capabilities_API_	/en-US/docs/Web/API/MediaCapabilities
 /en-US/docs/Web/API/Media_Streams_API/ended_event	/en-US/docs/Web/API/MediaStreamTrack/ended_event

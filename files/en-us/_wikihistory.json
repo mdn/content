@@ -58641,14 +58641,6 @@
       "estelle"
     ]
   },
-  "Web/API/MediaCapabilitiesInfo": {
-    "modified": "2020-10-15T22:07:32.490Z",
-    "contributors": [
-      "Wind1808",
-      "chrisdavidmills",
-      "estelle"
-    ]
-  },
   "Web/API/MediaConfiguration": {
     "modified": "2020-10-15T22:07:10.854Z",
     "contributors": [
