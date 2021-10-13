@@ -75,7 +75,7 @@ Along with `mdn.svg`, these images will be your icons to link to further resourc
 
 Next, create a 1200px wide landscape version of `red-panda.jpg`, and a 600px wide portrait version that shows the panda in more of a close up shot. Again, call them something sensible so you can easily identify them. Save a copy of both of these inside the same directory as `index.html`.
 
-> **Note:** You should optimize your JPG and PNG images to make them as small as possible, while still looking ok. [tinypng.com](https://tinypng.com/) is a great service for doing this easily.
+> **Note:** You should optimize your JPG and PNG images to make them as small as possible, while still looking OK. [tinypng.com](https://tinypng.com/) is a great service for doing this easily.
 
 ### Adding a logo to the header
 

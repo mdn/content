@@ -10,7 +10,7 @@ tags:
   - add to home screen
   - icon
 ---
-<p class="summary">Add to Home screen (or A2HS for short) is a feature available in modern browsers that allows a user to "install" a web app, ie. add a shortcut to their Home screen representing their favorite web app (or site) so they can subsequently access it with a single tap. This guide explains how A2HS is used, and what you need to do as a developer to allow your users to take advantage of it.</p>
+<p>Add to Home screen (or A2HS for short) is a feature available in modern browsers that allows a user to "install" a web app, ie. add a shortcut to their Home screen representing their favorite web app (or site) so they can subsequently access it with a single tap. This guide explains how A2HS is used, and what you need to do as a developer to allow your users to take advantage of it.</p>
 
 <h2 id="Why_A2HS">Why A2HS?</h2>
 
@@ -30,25 +30,25 @@ tags:
 
 <p>If you have Firefox for Android available, use it to navigate to our demo at <code>https://mdn.github.io/pwa-examples/a2hs/</code>. You'll see fox pictures, but more important, you'll see a "home" icon with a plus (+) icon inside it — this is the "Add to Home screen" icon displayed for any site that has the necessary features in place.</p>
 
-<p><img alt="" src="add-to-home-screen-icon.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="add-to-home-screen-icon.png"></p>
 
 <p>Tapping this will show a confirmation banner — pressing the big + <em>ADD TO HOME SCREEN</em> button completes the action, adding the app to the Home screen. (Note: In Android 8 and higher, a system-level "Add to Home screen" permission dialog will be shown first.)</p>
 
-<p><img alt="" src="fx-a2hs-banner.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="fx-a2hs-banner.png"></p>
 
 <p>If you have Mobile Chrome available, the experience is slightly different; upon loading our site, you'll see an install banner pop up asking whether you want to add this app to your Home screen.</p>
 
-<p><img alt="" src="chrome-a2hs-banner.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="chrome-a2hs-banner.png"></p>
 
 <div class="note">
-<p><strong>Note</strong>: You can find out a lot more about Chrome install banners from the article <a href="https://developers.google.com/web/fundamentals/app-install-banners/">Web App Install Banners</a>.</p>
+<p><strong>Note:</strong> You can find out a lot more about Chrome install banners from the article <a href="https://developers.google.com/web/fundamentals/app-install-banners/">Web App Install Banners</a>.</p>
 </div>
 
 <p>If you choose not to add it to your Home screen at this point, you can do so later using the <em>Add to Home screen</em> icon in the main Chrome menu.</p>
 
 <p>Regardless of which browser you are using, when you choose to add the app to your Home screen, you'll see it appear along with a short title, in the same way that native apps do.</p>
 
-<p><img alt="" src="a2hs-on-home-screen.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="a2hs-on-home-screen.png"></p>
 
 <p>Tapping this icon opens it up, but as a fullscreen app, you'll no longer see the browser UI around it.</p>
 
@@ -68,7 +68,7 @@ tags:
 <p>The web manifest is written in standard JSON format and should be placed somewhere inside your app directory (in the root is probably best) with the name <code><em>somefilename</em>.webmanifest</code> (we've chosen <code>manifest.webmanifest</code>). It contains multiple fields that define certain information about the web app and how it should behave.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The <code>.webmanifest</code> extension is specified in the <a href="https://w3c.github.io/manifest/#media-type-registration">Media type registration</a> section of the specification, but generally browsers will support manifests with other appropriate extensions, e.g. <code>.json</code>.</p>
+<p><strong>Note:</strong> The <code>.webmanifest</code> extension is specified in the <a href="https://w3c.github.io/manifest/#media-type-registration">Media type registration</a> section of the specification, but generally browsers will support manifests with other appropriate extensions, e.g. <code>.json</code>.</p>
 </div>
 
 <p>The fields needed for A2HS are as follows:</p>
@@ -126,7 +126,7 @@ tags:
 <p>While originally intended to improve user experience on mobile OSes, there is movement to make PWAs installable on desktop platforms too.</p>
 
 <div class="note">
-<p><strong>Note</strong>: At the time of writing, the functionality described below was only supported in newer versions of Chrome — by default on Windows, and behind the <code>#enable-desktop-pwas</code> flag on macOS.</p>
+<p><strong>Note:</strong> At the time of writing, the functionality described below was only supported in newer versions of Chrome — by default on Windows, and behind the <code>#enable-desktop-pwas</code> flag on macOS.</p>
 </div>
 
 <h3 id="Adding_an_install_button">Adding an install button</h3>
@@ -198,16 +198,16 @@ addBtn.style.display = 'none';</pre>
 
 <p>So when the button is clicked, the install prompt appears.</p>
 
-<p><img alt="" src="chrome-desktop-a2hs-banner.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="chrome-desktop-a2hs-banner.png"></p>
 
 <p>If the user selects <em>Install</em>, the app is installed (available as standalone desktop app), and the Install button no longer shows (the <code>onbeforeinstallprompt</code> event no longer fires if the app is already installed). When you open the app, it will appear in its own window:</p>
 
-<p><img alt="" src="a2hs-installed-desktop.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="a2hs-installed-desktop.png"></p>
 
 <p>If the user selects <em>Cancel</em>, the state of the app goes back to how it was before the button was clicked.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The code for this section was mostly taken from <a href="https://developers.google.com/web/fundamentals/app-install-banners/">App install banners/Add to Home Screen</a> by Pete LePage.</p>
+<p><strong>Note:</strong> The code for this section was mostly taken from <a href="https://developers.google.com/web/fundamentals/app-install-banners/">App install banners/Add to Home Screen</a> by Pete LePage.</p>
 </div>
 
 <h2 id="See_also">See also</h2>

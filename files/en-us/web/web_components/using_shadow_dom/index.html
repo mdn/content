@@ -10,10 +10,10 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Web Components")}}</div>
 
-<p class="summary">An important aspect of web components is encapsulation — being able to keep the markup structure, style, and behavior hidden and separate from other code on the page so that different parts do not clash, and the code can be kept nice and clean. The Shadow DOM API is a key part of this, providing a way to attach a hidden separated DOM to an element. This article covers the basics of using the Shadow DOM.</p>
+<p>An important aspect of web components is encapsulation — being able to keep the markup structure, style, and behavior hidden and separate from other code on the page so that different parts do not clash, and the code can be kept nice and clean. The Shadow DOM API is a key part of this, providing a way to attach a hidden separated DOM to an element. This article covers the basics of using the Shadow DOM.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Shadow DOM is supported by default in Firefox (63 and onwards), Chrome, Opera, and Safari. The new Chromium-based Edge (79 and onwards) supports it too; the old Edge didn't.</p>
+<p><strong>Note:</strong> Shadow DOM is supported by default in Firefox (63 and onwards), Chrome, Opera, and Safari. The new Chromium-based Edge (79 and onwards) supports it too; the old Edge didn't.</p>
 </div>
 
 <h2 id="High-level_view">High-level view</h2>
@@ -36,7 +36,7 @@ tags:
 
 <p>This fragment produces the following DOM structure:</p>
 
-<p><img alt="" src="dom-screenshot.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="dom-screenshot.png"></p>
 
 <p><em>Shadow</em> DOM allows hidden DOM trees to be attached to elements in the regular DOM tree — this shadow DOM tree starts with a shadow root, underneath which can be attached to any elements you want, in the same way as the normal DOM.</p>
 
@@ -69,7 +69,7 @@ let shadow = elementRef.attachShadow({mode: 'closed'});</pre>
 <p>If you attach a shadow root to a custom element with <code>mode: closed</code> set, you won't be able to access the shadow DOM from the outside — <code>myCustomElem.shadowRoot</code> returns <code>null</code>. This is the case with built in elements that contain shadow DOMs, such as <code>&lt;video&gt;</code>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: As <a href="https://blog.revillweb.com/open-vs-closed-shadow-dom-9f3d7427d1af">this blog post shows</a>, it is actually fairly easy to work around closed shadow DOMs, and the hassle to completely hide them is often more than it's worth.</p>
+<p><strong>Note:</strong> As <a href="https://blog.revillweb.com/open-vs-closed-shadow-dom-9f3d7427d1af">this blog post shows</a>, it is actually fairly easy to work around closed shadow DOMs, and the hassle to completely hide them is often more than it's worth.</p>
 </div>
 
 <p>If you are attaching a shadow DOM to a custom element as part of its constructor (by far the most useful application of the shadow DOM), you would use something like this:</p>
@@ -106,9 +106,9 @@ shadow.appendChild(para);
 <pre class="brush: js">// Create a shadow root
 let shadow = this.attachShadow({mode: 'open'});</pre>
 
-<h3 class="brush: js" id="Creating_the_shadow_DOM_structure">Creating the shadow DOM structure</h3>
+<h3 id="Creating_the_shadow_DOM_structure">Creating the shadow DOM structure</h3>
 
-<p class="brush: js">Next, we use some DOM manipulation to create the element's internal shadow DOM structure:</p>
+<p>Next, we use some DOM manipulation to create the element's internal shadow DOM structure:</p>
 
 <pre class="brush: js">// Create spans
 let wrapper = document.createElement('span');
@@ -135,9 +135,9 @@ img.src = imgUrl;
 icon.appendChild(img);
 </pre>
 
-<h3 class="brush: js" id="Styling_the_shadow_DOM">Styling the shadow DOM</h3>
+<h3 id="Styling_the_shadow_DOM">Styling the shadow DOM</h3>
 
-<p class="brush: js">After that we create a {{htmlelement("style")}} element and populate it with some CSS to style it:</p>
+<p>After that we create a {{htmlelement("style")}} element and populate it with some CSS to style it:</p>
 
 <pre class="brush: js">// Create some CSS to apply to the shadow dom
 let style = document.createElement('style');

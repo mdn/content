@@ -8,7 +8,7 @@ tags:
   - Web
   - console
 ---
-<p>When a user visits a page served over {{Glossary("HTTPS")}}, their connection with the web server is encrypted with {{Glossary("TLS")}} and is therefore safeguarded from most sniffers and man-in-the-middle attacks. <span class="seoSummary">An HTTPS page that includes content fetched using cleartext HTTP is called a <strong>mixed content</strong> page. Pages like this are only partially encrypted, leaving the unencrypted content accessible to sniffers and man-in-the-middle attackers.</span> That leaves the pages unsafe.</p>
+<p>When a user visits a page served over {{Glossary("HTTPS")}}, their connection with the web server is encrypted with {{Glossary("TLS")}} and is therefore safeguarded from most sniffers and man-in-the-middle attacks. An HTTPS page that includes content fetched using cleartext HTTP is called a <strong>mixed content</strong> page. Pages like this are only partially encrypted, leaving the unencrypted content accessible to sniffers and man-in-the-middle attackers. That leaves the pages unsafe.</p>
 
 <h2 id="Types_of_mixed_content">Types of mixed content</h2>
 
@@ -73,32 +73,30 @@ tags:
 
 <p>Browsers may support automatic upgrade of requests for display/media content from HTTP to HTTPS on secure pages (this prevents mixed-content conditions in which some content is loaded securely while other content is insecure).</p>
 
-<div class="notecard note">
-<p>Firefox 60 and later support this functionality as an experimental feature. It can be enabled using the preference <code>security.mixed_content.upgrade_display_content</code>).</p>
+<p>Firefox supports this functionality as an experimental feature. It can be enabled using the preference <code>security.mixed_content.upgrade_display_content</code>).</p>
 
 <ul>
  <li>If the upgrade fails (because the media's host doesn't support HTTPS), the media is not loaded.</li>
  <li>Console warnings indicate when content has been successfully upgraded.</li>
  <li>For more information see <a href="/en-US/docs/Mozilla/Firefox/Experimental_features#upgrading_mixed_display_content">Experimental features in Firefox &gt; Upgrading mixed display content</a>.</li>
 </ul>
-</div>
 
 <h2 id="Warnings_in_Firefox_Web_Console">Warnings in Firefox Web Console</h2>
 
 <p>The Firefox Web Console displays a mixed content warning message in the Net pane when a page on your website has this issue. The mixed content resource that was loaded via HTTP will show up in red, along with the text "mixed content", which links to this page.</p>
 
-<p><a class="internal" href="/files/12545/Mixed_content_-_Net_pane.png"><img alt="Screen shot of the web console displaying a mixed content warning." src="mixed_content_-_net_pane.png" style="border-style: solid; border-width: 1px;"></a></p>
+<p><img alt="Screen shot of the web console displaying a mixed content warning." src="mixed_content_-_net_pane.png"></p>
 
-<p>As well as finding these warnings in the Web Console, you could use <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a> to report issues. You could also use an online crawler like <a href="http://www.jitbit.com/sslcheck/" rel="noopener">SSL-check</a> or <a href="https://www.missingpadlock.com/" rel="noopener">Missing Padlock</a> that will check your website recursively and find links to insecure content.</p>
+<p>As well as finding these warnings in the Web Console, you could use <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a> to report issues. You could also use an online crawler like <a href="http://www.jitbit.com/sslcheck/">SSL-check</a> or <a href="https://www.missingpadlock.com/">Missing Padlock</a> that will check your website recursively and find links to insecure content.</p>
 
 <p>Starting in Firefox 23, mixed active content is blocked by default (and mixed display content can be blocked by setting a preference). To make it easier for web developers to find mixed content errors, all blocked mixed content requests are logged to the Security pane of the Web Console, as seen below:</p>
 
-<p><a href="/files/5261/blocked-mixed-content-errors.png"><img alt="A screenshot of blocked mixed content errors in the Security Pane of the Web Console" src="mixed_content_webconsole.png" style="border-style: solid; border-width: 1px;"></a></p>
+<p><img alt="A screenshot of blocked mixed content errors in the Security Pane of the Web Console" src="mixed_content_webconsole.png"></p>
 
 <p>To fix this type of error, all requests to HTTP content should be removed and replaced with content served over HTTPS. Some common examples of mixed content include JavaScript files, stylesheets, images, videos, and other media.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The console will display a message indicating if mixed-display content is being successfully <a href="#upgrading_mixed-display_resources">upgraded from HTTP to HTTPS</a>  (instead of a warning about "Loading mixed (insecure) display content").</p>
+<p><strong>Note:</strong> The console will display a message indicating if mixed-display content is being successfully <a href="#upgrading_mixed-display_resources">upgraded from HTTP to HTTPS</a>  (instead of a warning about "Loading mixed (insecure) display content").</p>
 </div>
 
 <h2 id="See_also">See also</h2>

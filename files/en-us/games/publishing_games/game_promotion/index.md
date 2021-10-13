@@ -32,7 +32,7 @@ While you can create your website from scratch, there are also tools that can he
 
 Your social media presence is very important — follow the right [hashtags](https://twitter.com/hashtag/gamedev), make friends, engage in conversations, help other devs in need. Honesty is key and you should be authentic, because nobody likes boring press releases or pushy advertisements. When the time comes your community will help you spread the word about your shiny little game.
 
-You should use at least Twitter and Facebook and be active on appropriate forums — the most popular one is [HTML5GameDevs.com](https://www.html5gamedevs.com/). Share your gamedev news and answer questions, so people will value what you're doing and will know that you're ok. Remember to not be too pushy on telling everyone about your games — you're not a walking advertisement.
+You should use at least Twitter and Facebook and be active on appropriate forums — the most popular one is [HTML5GameDevs.com](https://www.html5gamedevs.com/). Share your gamedev news and answer questions, so people will value what you're doing and will know that you're OK. Remember to not be too pushy on telling everyone about your games — you're not a walking advertisement.
 
 Grow your fanbase by talking to them, sharing tips, offering discounts, giving away prizes in competitions, or just complaining at the weather or buggy browser you have to deal with. Act cool, be generous, be yourself and be there for others, and you'll get treated with respect.
 

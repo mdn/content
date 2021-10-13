@@ -1562,7 +1562,6 @@
         "AnimationTimeline",
         "AnimationPlaybackEvent",
         "DocumentTimeline",
-        "EffectTiming",
         "KeyframeEffect"
       ],
       "methods": ["Document.getAnimations()", "Element.animate()"],
@@ -1896,7 +1895,6 @@
         "RTCErrorEvent"
       ],
       "dictionaries": [
-        "RTCConfiguration",
         "RTCOAuthCredential",
         "RTCIceServer",
         "RTCOfferAnswerOptions",

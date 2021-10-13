@@ -33,11 +33,9 @@ fileSystemFlags.create = booleanValue
 
 ## Specifications
 
-{{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
+| Specification                        | Status                           | Comment         |
+| ------------------------------------ | -------------------------------- | --------------- |
+| {{SpecName('File System API', '#dom-filesystemflags-create')}} | {{Spec2('File System API')}} | |
 
 ## See also
 

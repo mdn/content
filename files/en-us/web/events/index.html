@@ -13,13 +13,12 @@ tags:
 <p><span class="seoSummary">This topic provides an index to the main <em>sorts</em> of events you might be interested in (animation, clipboard, workers etc.) along with the main classes that implement those sorts of events. At the end is a flat list of all documented events.</span></p>
 
 <div class="notecard note">
-	<h4>Note</h4>
-	<p>This page lists many of the most common events you'll come across on the web. If you are searching for an event that isn't listed here, try searching for its name, topic area, or associated specification on the rest of MDN.</p>
+	<p><strong>Note:</strong> This page lists many of the most common events you'll come across on the web. If you are searching for an event that isn't listed here, try searching for its name, topic area, or associated specification on the rest of MDN.</p>
 </div>
 
 <h2 id="Event_index">Event index</h2>
 
-<table class="standard-table" style="vertical-align: top">
+<table class="standard-table">
 	<tr>
 		<th>Event type</th>
 		<th style="width: 50%">Description</th>
@@ -87,9 +86,8 @@ tags:
 			<p>Events related to modifications to the Document Object Model (DOM) hierarchy and nodes.</p>
 		</td>
 		<td>
-      <div class="notecard note">
-        <h4>Note</h4>
-        <p><strong><a href="/en-US/docs/Web/API/MutationEvent">Mutation Events</a> are deprecated</strong>. <a href="/en-US/docs/Web/API/MutationObserver">Mutation Observers</a> should be used instead.</p>
+      <div class="notecard warning">
+        <p><strong>Warning:</strong> <a href="/en-US/docs/Web/API/MutationEvent">Mutation Events</a> are deprecated. <a href="/en-US/docs/Web/API/MutationObserver">Mutation Observers</a> should be used instead.</p>
       </div>
     </td>
 	</tr>
@@ -342,8 +340,8 @@ tags:
 		<td>Virtual reality</td>
 		<td>
 			<p>Events related to the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a>.</p>
-			<div class="notecard note">
-				<p>The <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> (and associated <a href="/en-US/docs/Web/API/Window#webvr_events"><code>Window</code> events</a>) are deprecated.</p>
+			<div class="notecard warning">
+				<p><strong>Warning:</strong> The <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> (and associated <a href="/en-US/docs/Web/API/Window#webvr_events"><code>Window</code> events</a>) are deprecated.</p>
 			</div>
 		</td>
 		<td>Events fired on <a href="/en-US/docs/Web/API/XRSystem#events"><code>XRSystem</code></a>, <a href="/en-US/docs/Web/API/XRSession#events"><code>XRSession</code></a>, <a href="/en-US/docs/Web/API/XRReferenceSpace#events"><code>XRReferenceSpace</code></a>.</td>
@@ -391,43 +389,37 @@ tags:
 
 <p>This section lists events that have <em>their own</em> reference pages on MDN. If you are interested in an event that isn't listed here, try searching for its name, topic area, or associated specification on the rest of MDN.</p>
 
-<dl>
-  <dt>{{DOMxRef("AbortSignal")}}</dt>
-  <dd>
+<ul>
+  <li>{{DOMxRef("AbortSignal")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/AbortSignal/abort_event">abort event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("AudioScheduledSourceNode")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("AudioScheduledSourceNode")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/AudioScheduledSourceNode/ended_event">ended event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("AudioTrackList")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("AudioTrackList")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/AudioTrackList/addtrack_event">addtrack event</a></li>
       <li><a href="/en-US/docs/Web/API/AudioTrackList/change_event">change event</a></li>
       <li><a href="/en-US/docs/Web/API/AudioTrackList/removetrack_event">removetrack event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("BroadcastChannel")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("BroadcastChannel")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/BroadcastChannel/messageerror_event">messageerror event</a></li>
       <li><a href="/en-US/docs/Web/API/BroadcastChannel/message_event">message event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("DedicatedWorkerGlobalScope")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("DedicatedWorkerGlobalScope")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event">messageerror event</a></li>
       <li><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/message_event">message event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("Document")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("Document")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/Document/animationcancel_event">animationcancel event</a></li>
       <li><a href="/en-US/docs/Web/API/Document/animationend_event">animationend event</a></li>
@@ -476,9 +468,8 @@ tags:
       <li><a href="/en-US/docs/Web/API/Document/visibilitychange_event">visibilitychange event</a></li>
       <li><a href="/en-US/docs/Web/API/Document/wheel_event">wheel event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("Element")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("Element")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/Element/afterscriptexecute_event">afterscriptexecute event</a></li>
       <li><a href="/en-US/docs/Web/API/Element/auxclick_event">auxclick event</a></li>
@@ -538,17 +529,15 @@ tags:
       <li><a href="/en-US/docs/Web/API/Element/webkitmouseforcewillbegin_event">webkitmouseforcewillbegin event</a></li>
       <li><a href="/en-US/docs/Web/API/Element/wheel_event">wheel event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("EventSource")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("EventSource")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/EventSource/error_event">error event</a></li>
       <li><a href="/en-US/docs/Web/API/EventSource/message_event">message event</a></li>
       <li><a href="/en-US/docs/Web/API/EventSource/open_event">open event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("FileReader")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("FileReader")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/FileReader/abort_event">abort event</a></li>
       <li><a href="/en-US/docs/Web/API/FileReader/error_event">error event</a></li>
@@ -557,30 +546,26 @@ tags:
       <li><a href="/en-US/docs/Web/API/FileReader/load_event">load event</a></li>
       <li><a href="/en-US/docs/Web/API/FileReader/progress_event">progress event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("HTMLCanvasElement")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("HTMLCanvasElement")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event">webglcontextcreationerror event</a></li>
       <li><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event">webglcontextlost event</a></li>
       <li><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event">webglcontextrestored event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("HTMLDetailsElement")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("HTMLDetailsElement")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/HTMLDetailsElement/toggle_event">toggle event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("HTMLDialogElement")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("HTMLDialogElement")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/HTMLDialogElement/cancel_event">cancel event</a></li>
       <li><a href="/en-US/docs/Web/API/HTMLDialogElement/close_event">close event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("HTMLElement")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("HTMLElement")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/HTMLElement/animationcancel_event">animationcancel event</a></li>
       <li><a href="/en-US/docs/Web/API/HTMLElement/animationend_event">animationend event</a></li>
@@ -604,24 +589,21 @@ tags:
       <li><a href="/en-US/docs/Web/API/HTMLElement/transitionrun_event">transitionrun event</a></li>
       <li><a href="/en-US/docs/Web/API/HTMLElement/transitionstart_event">transitionstart event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("HTMLFormElement")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("HTMLFormElement")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/HTMLFormElement/formdata_event">formdata event</a></li>
       <li><a href="/en-US/docs/Web/API/HTMLFormElement/reset_event">reset event</a></li>
       <li><a href="/en-US/docs/Web/API/HTMLFormElement/submit_event">submit event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("HTMLInputElement")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("HTMLInputElement")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/HTMLInputElement/invalid_event">invalid event</a></li>
       <li><a href="/en-US/docs/Web/API/HTMLInputElement/search_event">search event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("HTMLMediaElement")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("HTMLMediaElement")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/HTMLMediaElement/abort_event">abort event</a></li>
       <li><a href="/en-US/docs/Web/API/HTMLMediaElement/canplaythrough_event">canplaythrough event</a></li>
@@ -646,126 +628,108 @@ tags:
       <li><a href="/en-US/docs/Web/API/HTMLMediaElement/volumechange_event">volumechange event</a></li>
       <li><a href="/en-US/docs/Web/API/HTMLMediaElement/waiting_event">waiting event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("HTMLSlotElement")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("HTMLSlotElement")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/HTMLSlotElement/slotchange_event">slotchange event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("HTMLTrackElement")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("HTMLTrackElement")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/HTMLTrackElement/cuechange_event">cuechange event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("HTMLVideoElement")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("HTMLVideoElement")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/HTMLVideoElement/enterpictureinpicture_event">enterpictureinpicture event</a></li>
       <li><a href="/en-US/docs/Web/API/HTMLVideoElement/leavepictureinpicture_event">leavepictureinpicture event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("IDBDatabase")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("IDBDatabase")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/IDBDatabase/abort_event">abort event</a></li>
       <li><a href="/en-US/docs/Web/API/IDBDatabase/close_event">close event</a></li>
       <li><a href="/en-US/docs/Web/API/IDBDatabase/error_event">error event</a></li>
       <li><a href="/en-US/docs/Web/API/IDBDatabase/versionchange_event">versionchange event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("IDBOpenDBRequest")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("IDBOpenDBRequest")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event">blocked event</a></li>
       <li><a href="/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event">upgradeneeded event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("IDBRequest")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("IDBRequest")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/IDBRequest/error_event">error event</a></li>
       <li><a href="/en-US/docs/Web/API/IDBRequest/success_event">success event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("IDBTransaction")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("IDBTransaction")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/IDBTransaction/abort_event">abort event</a></li>
       <li><a href="/en-US/docs/Web/API/IDBTransaction/complete_event">complete event</a></li>
       <li><a href="/en-US/docs/Web/API/IDBTransaction/error_event">error event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("MediaDevices")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("MediaDevices")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/MediaDevices/devicechange_event">devicechange event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("MediaRecorder")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("MediaRecorder")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/MediaRecorder/error_event">error event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("MediaStream")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("MediaStream")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/MediaStream/addtrack_event">addtrack event</a></li>
       <li><a href="/en-US/docs/Web/API/MediaStream/removetrack_event">removetrack event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("MediaStreamTrack")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("MediaStreamTrack")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/MediaStreamTrack/ended_event">ended event</a></li>
       <li><a href="/en-US/docs/Web/API/MediaStreamTrack/mute_event">mute event</a></li>
       <li><a href="/en-US/docs/Web/API/MediaStreamTrack/unmute_event">unmute event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("MessagePort")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("MessagePort")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/MessagePort/messageerror_event">messageerror event</a></li>
       <li><a href="/en-US/docs/Web/API/MessagePort/message_event">message event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("OfflineAudioContext")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("OfflineAudioContext")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/OfflineAudioContext/complete_event">complete event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("PaymentRequest")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("PaymentRequest")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/PaymentRequest/merchantvalidation_event">merchantvalidation event</a></li>
       <li><a href="/en-US/docs/Web/API/PaymentRequest/paymentmethodchange_event">paymentmethodchange event</a></li>
       <li><a href="/en-US/docs/Web/API/PaymentRequest/shippingaddresschange_event">shippingaddresschange event</a></li>
       <li><a href="/en-US/docs/Web/API/PaymentRequest/shippingoptionchange_event">shippingoptionchange event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("PaymentResponse")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("PaymentResponse")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/PaymentResponse/payerdetailchange_event">payerdetailchange event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("Performance")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("Performance")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event">resourcetimingbufferfull event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("PictureInPictureWindow")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("PictureInPictureWindow")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/PictureInPictureWindow/resize_event">resize event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("RTCDataChannel")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("RTCDataChannel")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/RTCDataChannel/bufferedamountlow_event">bufferedamountlow event</a></li>
       <li><a href="/en-US/docs/Web/API/RTCDataChannel/close_event">close event</a></li>
@@ -774,29 +738,25 @@ tags:
       <li><a href="/en-US/docs/Web/API/RTCDataChannel/message_event">message event</a></li>
       <li><a href="/en-US/docs/Web/API/RTCDataChannel/open_event">open event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("RTCDtlsTransport")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("RTCDtlsTransport")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/RTCDtlsTransport/error_event">error event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("RTCDTMFSender")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("RTCDTMFSender")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/RTCDTMFSender/tonechange_event">tonechange event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("RTCIceTransport")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("RTCIceTransport")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/RTCIceTransport/gatheringstatechange_event">gatheringstatechange event</a></li>
       <li><a href="/en-US/docs/Web/API/RTCIceTransport/selectedcandidatepairchange_event">selectedcandidatepairchange event</a></li>
       <li><a href="/en-US/docs/Web/API/RTCIceTransport/statechange_event">statechange event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("RTCPeerConnection")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("RTCPeerConnection")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/RTCPeerConnection/addstream_event">addstream event</a></li>
       <li><a href="/en-US/docs/Web/API/RTCPeerConnection/connectionstatechange_event">connectionstatechange event</a></li>
@@ -810,21 +770,18 @@ tags:
       <li><a href="/en-US/docs/Web/API/RTCPeerConnection/signalingstatechange_event">signalingstatechange event</a></li>
       <li><a href="/en-US/docs/Web/API/RTCPeerConnection/track_event">track event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("ScriptProcessorNode")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("ScriptProcessorNode")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/ScriptProcessorNode/audioprocess_event">audioprocess event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("ServiceWorkerContainer")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("ServiceWorkerContainer")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/ServiceWorkerContainer/message_event">message event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("ServiceWorkerGlobalScope")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("ServiceWorkerGlobalScope")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event">activate event</a></li>
       <li><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/contentdelete_event">contentdelete event</a></li>
@@ -834,15 +791,13 @@ tags:
       <li><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event">pushsubscriptionchange event</a></li>
       <li><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/push_event">push event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("SharedWorkerGlobalScope")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("SharedWorkerGlobalScope")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/SharedWorkerGlobalScope/connect_event">connect event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("SpeechRecognition")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("SpeechRecognition")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/SpeechRecognition/audioend_event">audioend event</a></li>
       <li><a href="/en-US/docs/Web/API/SpeechRecognition/audiostart_event">audiostart event</a></li>
@@ -856,15 +811,13 @@ tags:
       <li><a href="/en-US/docs/Web/API/SpeechRecognition/speechstart_event">speechstart event</a></li>
       <li><a href="/en-US/docs/Web/API/SpeechRecognition/start_event">start event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("SpeechSynthesis")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("SpeechSynthesis")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/SpeechSynthesis/voiceschanged_event">voiceschanged event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("SpeechSynthesisUtterance")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("SpeechSynthesisUtterance")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/boundary_event">boundary event</a></li>
       <li><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/end_event">end event</a></li>
@@ -874,17 +827,15 @@ tags:
       <li><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/resume_event">resume event</a></li>
       <li><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/start_event">start event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("SVGAnimationElement")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("SVGAnimationElement")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/SVGAnimationElement/beginEvent_event">beginEvent event</a></li>
       <li><a href="/en-US/docs/Web/API/SVGAnimationElement/endEvent_event">endEvent event</a></li>
       <li><a href="/en-US/docs/Web/API/SVGAnimationElement/repeatEvent_event">repeatEvent event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("SVGElement")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("SVGElement")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/SVGElement/abort_event">abort event</a></li>
       <li><a href="/en-US/docs/Web/API/SVGElement/error_event">error event</a></li>
@@ -893,55 +844,48 @@ tags:
       <li><a href="/en-US/docs/Web/API/SVGElement/scroll_event">scroll event</a></li>
       <li><a href="/en-US/docs/Web/API/SVGElement/unload_event">unload event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("SVGGraphicsElement")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("SVGGraphicsElement")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/SVGGraphicsElement/copy_event">copy event</a></li>
       <li><a href="/en-US/docs/Web/API/SVGGraphicsElement/cut_event">cut event</a></li>
       <li><a href="/en-US/docs/Web/API/SVGGraphicsElement/paste_event">paste event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("TextTrack")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("TextTrack")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/TextTrack/cuechange_event">cuechange event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("TextTrackList")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("TextTrackList")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/TextTrackList/addtrack_event">addtrack event</a></li>
       <li><a href="/en-US/docs/Web/API/TextTrackList/change_event">change event</a></li>
       <li><a href="/en-US/docs/Web/API/TextTrackList/removeTrack_event">removeTrack event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("VideoTrackList")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("VideoTrackList")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/VideoTrackList/addtrack_event">addtrack event</a></li>
       <li><a href="/en-US/docs/Web/API/VideoTrackList/change_event">change event</a></li>
       <li><a href="/en-US/docs/Web/API/VideoTrackList/removetrack_event">removetrack event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("VisualViewport")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("VisualViewport")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/VisualViewport/resize_event">resize event</a></li>
       <li><a href="/en-US/docs/Web/API/VisualViewport/scroll_event">scroll event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("WebSocket")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("WebSocket")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/WebSocket/close_event">close event</a></li>
       <li><a href="/en-US/docs/Web/API/WebSocket/error_event">error event</a></li>
       <li><a href="/en-US/docs/Web/API/WebSocket/message_event">message event</a></li>
       <li><a href="/en-US/docs/Web/API/WebSocket/open_event">open event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("Window")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("Window")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/Window/afterprint_event">afterprint event</a></li>
       <li><a href="/en-US/docs/Web/API/Window/animationcancel_event">animationcancel event</a></li>
@@ -992,22 +936,19 @@ tags:
       <li><a href="/en-US/docs/Web/API/Window/vrdisplaypointerunrestricted_event">vrdisplaypointerunrestricted event</a></li>
       <li><a href="/en-US/docs/Web/API/Window/vrdisplaypresentchange_event">vrdisplaypresentchange event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("Worker")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("Worker")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/Worker/messageerror_event">messageerror event</a></li>
       <li><a href="/en-US/docs/Web/API/Worker/message_event">message event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("WorkerGlobalScope")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("WorkerGlobalScope")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/WorkerGlobalScope/languagechange_event">languagechange event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("XMLHttpRequest")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("XMLHttpRequest")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/XMLHttpRequest/abort_event">abort event</a></li>
       <li><a href="/en-US/docs/Web/API/XMLHttpRequest/error_event">error event</a></li>
@@ -1017,15 +958,13 @@ tags:
       <li><a href="/en-US/docs/Web/API/XMLHttpRequest/progress_event">progress event</a></li>
       <li><a href="/en-US/docs/Web/API/XMLHttpRequest/timeout_event">timeout event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("XRReferenceSpace")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("XRReferenceSpace")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/XRReferenceSpace/reset_event">reset event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("XRSession")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("XRSession")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/XRSession/end_event">end event</a></li>
       <li><a href="/en-US/docs/Web/API/XRSession/inputsourceschange_event">inputsourceschange event</a></li>
@@ -1037,14 +976,13 @@ tags:
       <li><a href="/en-US/docs/Web/API/XRSession/squeeze_event">squeeze event</a></li>
       <li><a href="/en-US/docs/Web/API/XRSession/visibilitychange_event">visibilitychange event</a></li>
     </ul>
-  </dd>
-  <dt>{{DOMxRef("XRSystem")}}</dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("XRSystem")}}
     <ul>
       <li><a href="/en-US/docs/Web/API/XRSystem/devicechange_event">devicechange event</a></li>
     </ul>
-  </dd>
-</dl>
+  </li>
+</ul>
 
 
 <h2 id="Specifications">Specifications</h2>
