@@ -9,63 +9,68 @@ tags:
   - js13kGames
   - progressive
 ---
-<div>{{PreviousMenuNext("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps")}}</div>
+{{PreviousMenuNext("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps")}}
 
-<p>Now that we’ve seen what the structure of js13kPWA looks like and have seen the basic shell up and running, let's look at how the offline capabilities using Service Worker are implemented. In this article, we look at how it is used in our <a href="https://mdn.github.io/pwa-examples/js13kpwa/">js13kPWA example</a> (<a href="https://github.com/mdn/pwa-examples/tree/master/js13kpwa">see the source code also</a>). We examine how to add offline functionality.</p>
+Now that we’ve seen what the structure of js13kPWA looks like and have seen the basic shell up and running, let's look at how the offline capabilities using Service Worker are implemented. In this article, we look at how it is used in our [js13kPWA example](https://mdn.github.io/pwa-examples/js13kpwa/) ([see the source code also](https://github.com/mdn/pwa-examples/tree/master/js13kpwa)). We examine how to add offline functionality.
 
-<h2 id="Service_workers_explained">Service workers explained</h2>
+## Service workers explained
 
-<p>Service Workers are a virtual proxy between the browser and the network. They finally fix issues that front-end developers have struggled with for years — most notably how to properly cache the assets of a website and make them available when the user’s device is offline.</p>
+Service Workers are a virtual proxy between the browser and the network. They finally fix issues that front-end developers have struggled with for years — most notably how to properly cache the assets of a website and make them available when the user’s device is offline.
 
-<p>They run on a separate thread from the main JavaScript code of our page, and don't have any access to the DOM structure. This introduces a different approach from traditional web programming — the API is non-blocking, and can send and receive communication between different contexts. You are able to give a Service Worker something to work on, and receive the result whenever it is ready using a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>-based approach.</p>
+They run on a separate thread from the main JavaScript code of our page, and don't have any access to the DOM structure. This introduces a different approach from traditional web programming — the API is non-blocking, and can send and receive communication between different contexts. You are able to give a Service Worker something to work on, and receive the result whenever it is ready using a [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)-based approach.
 
-<p>They can do a lot more than "just" offering offline capabilities, including handling notifications, performing heavy calculations on a separate thread, etc. Service workers are quite powerful as they can take control over network requests, modify them, serve custom responses retrieved from the cache, or synthesize responses completely.</p>
+They can do a lot more than "just" offering offline capabilities, including handling notifications, performing heavy calculations on a separate thread, etc. Service workers are quite powerful as they can take control over network requests, modify them, serve custom responses retrieved from the cache, or synthesize responses completely.
 
-<h3 id="Security">Security</h3>
+### Security
 
-<p>Because they are so powerful, Service Workers can only be executed in secure contexts (meaning HTTPS). If you want to experiment first before pushing your code to production, you can always test on a localhost or setup GitHub Pages — both support HTTPS.</p>
+Because they are so powerful, Service Workers can only be executed in secure contexts (meaning HTTPS). If you want to experiment first before pushing your code to production, you can always test on a localhost or setup GitHub Pages — both support HTTPS.
 
-<h2 id="Offline_First">Offline First</h2>
+## Offline First
 
-<p>The "offline first" — or "cache first" — pattern is the most popular strategy for serving content to the user. If a resource is cached and available offline, return it first before trying to download it from the server. If it isn’t in the cache already, download it and cache it for future usage.</p>
+The "offline first" — or "cache first" — pattern is the most popular strategy for serving content to the user. If a resource is cached and available offline, return it first before trying to download it from the server. If it isn’t in the cache already, download it and cache it for future usage.
 
-<h2 id="Progressive_in_PWA">"Progressive" in PWA</h2>
+## "Progressive" in PWA
 
-<p>When implemented properly as a progressive enhancement, service workers can benefit users who have modern browsers that support the API by providing offline support, but won't break anything for those using legacy browsers.</p>
+When implemented properly as a progressive enhancement, service workers can benefit users who have modern browsers that support the API by providing offline support, but won't break anything for those using legacy browsers.
 
-<h2 id="Service_workers_in_the_js13kPWA_app">Service workers in the js13kPWA app</h2>
+## Service workers in the js13kPWA app
 
-<p>Enough theory — let's see some source code!</p>
+Enough theory — let's see some source code!
 
-<h3 id="Registering_the_Service_Worker">Registering the Service Worker</h3>
+### Registering the Service Worker
 
-<p>We'll start by looking at the code that registers a new Service Worker, in the app.js file:</p>
+We'll start by looking at the code that registers a new Service Worker, in the app.js file:
 
-<p><strong>NOTE</strong> : We're using the <a href="http://es6-features.org/">es6</a> <strong>arrow functions</strong> syntax in the Service Worker Implementation</p>
+**NOTE** : We're using the [es6](http://es6-features.org/) **arrow functions** syntax in the Service Worker Implementation
 
-<pre class="brush: js">if('serviceWorker' in navigator) {
+```js
+if('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./pwa-examples/js13kpwa/sw.js');
-};</pre>
+};
+```
 
-<p>If the service worker API is supported in the browser, it is registered against the site using the {{domxref("ServiceWorkerContainer.register()")}} method. Its contents reside in the sw.js file, and can be executed after the registration is successful. It's the only piece of Service Worker code that sits inside the app.js file; everything else that is Service Worker-specific is written in the sw.js file itself.</p>
+If the service worker API is supported in the browser, it is registered against the site using the {{domxref("ServiceWorkerContainer.register()")}} method. Its contents reside in the sw\.js file, and can be executed after the registration is successful. It's the only piece of Service Worker code that sits inside the app.js file; everything else that is Service Worker-specific is written in the sw\.js file itself.
 
-<h3 id="Lifecycle_of_a_Service_Worker">Lifecycle of a Service Worker</h3>
+### Lifecycle of a Service Worker
 
-<p>When registration is complete, the sw.js file is automatically downloaded, then installed, and finally activated.</p>
+When registration is complete, the sw\.js file is automatically downloaded, then installed, and finally activated.
 
-<h4 id="Installation">Installation</h4>
+#### Installation
 
-<p>The API allows us to add event listeners for key events we are interested in — the first one is the <code>install</code> event:</p>
+The API allows us to add event listeners for key events we are interested in — the first one is the `install` event:
 
-<pre class="brush: js">self.addEventListener('install', (e) =&gt; {
+```js
+self.addEventListener('install', (e) => {
   console.log('[Service Worker] Install');
-});</pre>
+});
+```
 
-<p>In the <code>install</code> listener, we can initialize the cache and add files to it for offline use. Our js13kPWA app does exactly that.</p>
+In the `install` listener, we can initialize the cache and add files to it for offline use. Our js13kPWA app does exactly that.
 
-<p>First, a variable for storing the cache name is created, and the app shell files are listed in one array.</p>
+First, a variable for storing the cache name is created, and the app shell files are listed in one array.
 
-<pre class="brush: js">const cacheName = 'js13kPWA-v1';
+```js
+const cacheName = 'js13kPWA-v1';
 const appShellFiles = [
   '/pwa-examples/js13kpwa/',
   '/pwa-examples/js13kpwa/index.html',
@@ -85,55 +90,63 @@ const appShellFiles = [
   '/pwa-examples/js13kpwa/icons/icon-192.png',
   '/pwa-examples/js13kpwa/icons/icon-256.png',
   '/pwa-examples/js13kpwa/icons/icon-512.png'
-];</pre>
+];
+```
 
-<p>Next, the links to images to be loaded along with the content from the data/games.js file are generated in the second array. After that, both arrays are merged using the {{jsxref("Array.prototype.concat()")}} function.</p>
+Next, the links to images to be loaded along with the content from the data/games.js file are generated in the second array. After that, both arrays are merged using the {{jsxref("Array.prototype.concat()")}} function.
 
-<pre class="brush: js">const gamesImages = [];
-for (let i = 0; i &lt; games.length; i++) {
+```js
+const gamesImages = [];
+for (let i = 0; i < games.length; i++) {
   gamesImages.push(`data/img/${games[i].slug}.jpg`);
 }
-const contentToCache = appShellFiles.concat(gamesImages);</pre>
+const contentToCache = appShellFiles.concat(gamesImages);
+```
 
-<p>Then we can manage the <code>install</code> event itself:</p>
+Then we can manage the `install` event itself:
 
-<pre class="brush: js">self.addEventListener('install', (e) =&gt; {
+```js
+self.addEventListener('install', (e) => {
   console.log('[Service Worker] Install');
-  e.waitUntil((async () =&gt; {
+  e.waitUntil((async () => {
     const cache = await caches.open(cacheName);
     console.log('[Service Worker] Caching all: app shell and content');
     await cache.addAll(contentToCache);
   })());
-});</pre>
+});
+```
 
-<p>There are two things that need an explanation here: what {{domxref("ExtendableEvent.waitUntil")}} does, and what the {{domxref("Cache","caches")}} object is.</p>
+There are two things that need an explanation here: what {{domxref("ExtendableEvent.waitUntil")}} does, and what the {{domxref("Cache","caches")}} object is.
 
-<p>The service worker does not install until the code inside <code>waitUntil</code> is executed. It returns a promise — this approach is needed because installing may take some time, so we have to wait for it to finish.</p>
+The service worker does not install until the code inside `waitUntil` is executed. It returns a promise — this approach is needed because installing may take some time, so we have to wait for it to finish.
 
-<p><code>caches</code> is a special {{domxref("CacheStorage")}} object available in the scope of the given Service Worker to enable saving data — saving to <a href="/en-US/docs/Web/API/Web_Storage_API">web storage</a> won't work, because web storage is synchronous. With Service Workers, we use the Cache API instead.</p>
+`caches` is a special {{domxref("CacheStorage")}} object available in the scope of the given Service Worker to enable saving data — saving to [web storage](/en-US/docs/Web/API/Web_Storage_API) won't work, because web storage is synchronous. With Service Workers, we use the Cache API instead.
 
-<p>Here, we open a cache with a given name, then add all the files our app uses to the cache, so they are available next time it loads (identified by request URL).</p>
+Here, we open a cache with a given name, then add all the files our app uses to the cache, so they are available next time it loads (identified by request URL).
 
-<p>You may notice we haven't cached <code>game.js</code>. This is the file that contains the data we use when displaying our games. In reality this data would most likely come from an API endpoint or database and caching the data would mean updating it periodically when there was network connectivity. We won't go into that here, but the {{domxref('Web Periodic Background Synchronization API','Periodic Background Sync API')}} is good further reading on this topic.</p>
+You may notice we haven't cached `game.js`. This is the file that contains the data we use when displaying our games. In reality this data would most likely come from an API endpoint or database and caching the data would mean updating it periodically when there was network connectivity. We won't go into that here, but the {{domxref('Web Periodic Background Synchronization API','Periodic Background Sync API')}} is good further reading on this topic.
 
-<h4 id="Activation">Activation</h4>
+#### Activation
 
-<p>There is also an <code>activate</code> event, which is used in the same way as <code>install</code>. This event is usually used to delete any files that are no longer necessary and clean up after the app in general. We don't need to do that in our app, so we'll skip it.</p>
+There is also an `activate` event, which is used in the same way as `install`. This event is usually used to delete any files that are no longer necessary and clean up after the app in general. We don't need to do that in our app, so we'll skip it.
 
-<h3 id="Responding_to_fetches">Responding to fetches</h3>
+### Responding to fetches
 
-<p>We also have a <code>fetch</code> event at our disposal, which fires every time an HTTP request is fired off from our app. This is very useful, as it allows us to intercept requests and respond to them with custom responses. Here is a simple usage example:</p>
+We also have a `fetch` event at our disposal, which fires every time an HTTP request is fired off from our app. This is very useful, as it allows us to intercept requests and respond to them with custom responses. Here is a simple usage example:
 
-<pre class="brush: js">self.addEventListener('fetch', (e) =&gt; {
+```js
+self.addEventListener('fetch', (e) => {
   console.log(`[Service Worker] Fetched resource ${e.request.url}`);
-});</pre>
+});
+```
 
-<p>The response can be anything we want: the requested file, its cached copy, or a piece of JavaScript code that will do something specific — the possibilities are endless.</p>
+The response can be anything we want: the requested file, its cached copy, or a piece of JavaScript code that will do something specific — the possibilities are endless.
 
-<p>In our example app, we serve content from the cache instead of the network as long as the resource is actually in the cache. We do this whether the app is online or offline. If the file is not in the cache, the app adds it there first before then serving it:</p>
+In our example app, we serve content from the cache instead of the network as long as the resource is actually in the cache. We do this whether the app is online or offline. If the file is not in the cache, the app adds it there first before then serving it:
 
-<pre class="brush: js">self.addEventListener('fetch', (e) =&gt; {
-  e.respondWith((async () =&gt; {
+```js
+self.addEventListener('fetch', (e) => {
+  e.respondWith((async () => {
     const r = await caches.match(e.request);
     console.log(`[Service Worker] Fetching resource: ${e.request.url}`);
     if (r) { return r; }
@@ -143,60 +156,67 @@ const contentToCache = appShellFiles.concat(gamesImages);</pre>
     cache.put(e.request, response.clone());
     return response;
   })());
-});</pre>
+});
+```
 
-<p>Here, we respond to the fetch event with a function that tries to find the resource in the cache and return the response if it's there. If not, we use another fetch request to fetch it from the network, then store the response in the cache so it will be available there next time it is requested.</p>
+Here, we respond to the fetch event with a function that tries to find the resource in the cache and return the response if it's there. If not, we use another fetch request to fetch it from the network, then store the response in the cache so it will be available there next time it is requested.
 
-<p>The {{domxref("FetchEvent.respondWith")}} method takes over control — this is the part that functions as a proxy server between the app and the network. This allows us to respond to every single request with any response we want: prepared by the Service Worker, taken from cache, modified if needed.</p>
+The {{domxref("FetchEvent.respondWith")}} method takes over control — this is the part that functions as a proxy server between the app and the network. This allows us to respond to every single request with any response we want: prepared by the Service Worker, taken from cache, modified if needed.
 
-<p>That's it! Our app is caching its resources on install and serving them with fetch from the cache, so it works even if the user is offline. It also caches new content whenever it is added.</p>
+That's it! Our app is caching its resources on install and serving them with fetch from the cache, so it works even if the user is offline. It also caches new content whenever it is added.
 
-<h2 id="Updates">Updates</h2>
+## Updates
 
-<p>There is still one point to cover: how do you upgrade a Service Worker when a new version of the app containing new assets is available? The version number in the cache name is key to this:</p>
+There is still one point to cover: how do you upgrade a Service Worker when a new version of the app containing new assets is available? The version number in the cache name is key to this:
 
-<pre class="brush: js">var cacheName = 'js13kPWA-v1';</pre>
+```js
+var cacheName = 'js13kPWA-v1';
+```
 
-<p>When this updates to v2, we can then add all of our files (including our new files) to a new cache:</p>
+When this updates to v2, we can then add all of our files (including our new files) to a new cache:
 
-<pre class="brush: js">contentToCache.push('/pwa-examples/js13kpwa/icons/icon-32.png');
+```js
+contentToCache.push('/pwa-examples/js13kpwa/icons/icon-32.png');
 
 // ...
 
-self.addEventListener('install', (e) =&gt; {
-  e.waitUntil((async () =&gt; {
+self.addEventListener('install', (e) => {
+  e.waitUntil((async () => {
     const cache = await caches.open(cacheName);
     await cache.addAll(contentToCache);
   })());
-});</pre>
+});
+```
 
-<p>A new service worker is installed in the background, and the previous one (v1) works correctly up until there are no pages using it — the new Service Worker is then activated and takes over management of the page from the old one.</p>
+A new service worker is installed in the background, and the previous one (v1) works correctly up until there are no pages using it — the new Service Worker is then activated and takes over management of the page from the old one.
 
-<h2 id="Clearing_the_cache">Clearing the cache</h2>
+## Clearing the cache
 
-<p>Remember the <code>activate</code> event we skipped? It can be used to clear out the old cache we don't need anymore:</p>
+Remember the `activate` event we skipped? It can be used to clear out the old cache we don't need anymore:
 
-<pre class="brush: js">self.addEventListener('activate', (e) =&gt; {
-  e.waitUntil(caches.keys().then((keyList) =&gt; {
-    return Promise.all(keyList.map((key) =&gt; {
+```js
+self.addEventListener('activate', (e) => {
+  e.waitUntil(caches.keys().then((keyList) => {
+    return Promise.all(keyList.map((key) => {
       if (key === cacheName) { return; }
       return caches.delete(key);
     }))
   }));
-});</pre>
+});
+```
 
-<p>This ensures we have only the files we need in the cache, so we don't leave any garbage behind; the <a href="/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria">available cache space in the browser is limited</a>, so it is a good idea to clean up after ourselves.</p>
+This ensures we have only the files we need in the cache, so we don't leave any garbage behind; the [available cache space in the browser is limited](/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria), so it is a good idea to clean up after ourselves.
 
-<h2 id="Other_use_cases">Other use cases</h2>
+## Other use cases
 
-<p>Serving files from cache is not the only feature Service Worker offers. If you have heavy calculations to do, you can offload them from the main thread and do them in the worker, and receive results as soon as they are available. Performance-wise, you can prefetch resources that are not needed right now, but might be in the near future, so the app will be faster when you actually need those resources.</p>
+Serving files from cache is not the only feature Service Worker offers. If you have heavy calculations to do, you can offload them from the main thread and do them in the worker, and receive results as soon as they are available. Performance-wise, you can prefetch resources that are not needed right now, but might be in the near future, so the app will be faster when you actually need those resources.
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>In this article we took a simple look at how you can make your PWA work offline with service workers. Be sure to check out our further documentation if you want to learn more about the concepts behind the <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a> and how to use it in more detail.</p>
+In this article we took a simple look at how you can make your PWA work offline with service workers. Be sure to check out our further documentation if you want to learn more about the concepts behind the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) and how to use it in more detail.
 
-<p>Service Workers are also used when dealing with <a href="/en-US/docs/Web/API/Push_API">push notifications</a> — this will be explained in a subsequent article.</p>
+Service Workers are also used when dealing with [push notifications](/en-US/docs/Web/API/Push_API) — this will be explained in a subsequent article.
 
-<p>{{PreviousMenuNext("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps")}}</p>
+{{PreviousMenuNext("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps")}}
 
-<div>{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}</div>
+{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
