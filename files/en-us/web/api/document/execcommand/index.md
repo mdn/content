@@ -235,7 +235,6 @@ This feature is not part of any current specification. It is no longer on track 
 
 - {{domxref("HTMLElement.contentEditable")}}
 - {{domxref("document.designMode")}}
-- [Rich-Text Editing in Mozilla](/en-US/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla)
 - [Scribe's
   "Browser Inconsistencies" documentation](https://github.com/guardian/scribe/blob/master/BROWSERINCONSISTENCIES.md) with bugs related to
   `document.execCommand`.

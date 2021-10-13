@@ -30,7 +30,7 @@ A number representing the current time in milliseconds, or `null` to deactivate 
 
 ## Examples
 
-In the [Drink Me/Eat Me game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010), Alice's height is animated so it can go from small to large or large to small. At the start of the game, her height is set between the two extremes by setting her animation's `currentTime` to half her [`KeyframeEffect`'s duration](/en-US/docs/Web/API/EffectTiming):
+In the [Drink Me/Eat Me game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010), Alice's height is animated so it can go from small to large or large to small. At the start of the game, her height is set between the two extremes by setting her animation's `currentTime` to half her `KeyframeEffect`'s duration:
 
 ```js
 aliceChange.currentTime = aliceChange.effect.timing.duration / 2;

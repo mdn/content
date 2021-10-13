@@ -20,8 +20,7 @@ a page and a pop-up that it spawned, or between a page and an iframe embedded wi
 Normally, scripts on different pages are allowed to access each other if and only if
 the pages they originate from share the same protocol, port number, and host (also known
 as the "[same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)").
-`window.postMessage()` provides a controlled mechanism to securely circumvent
-this restriction (if used properly).
+`window.postMessage()` provides a controlled mechanism to securely circumvent this restriction (if used properly).
 
 Broadly, one window may obtain a reference to another (_e.g.,_ via
 `targetWindow = window.opener`), and then dispatch a
@@ -32,7 +31,8 @@ receiving window is then free to [handle this event](/en-US/docs/Web/Events/Even
 ## Syntax
 
 ```js
-targetWindow.postMessage(message, targetOrigin, [transfer]);
+postMessage(message, targetOrigin)
+postMessage(message, targetOrigin, [transfer])
 ```
 
 - `targetWindow`
@@ -42,10 +42,8 @@ targetWindow.postMessage(message, targetOrigin, [transfer]);
 
     - {{domxref("window.open")}} (to spawn a new window and then reference it),
     - {{domxref("window.opener")}} (to reference the window that spawned this one),
-    - {{domxref("HTMLIFrameElement.contentWindow")}} (to reference an embedded
-      {{HTMLElement("iframe")}} from its parent window),
-    - {{domxref("window.parent")}} (to reference the parent window from within an
-      embedded {{HTMLElement("iframe")}}), or
+    - {{domxref("HTMLIFrameElement.contentWindow")}} (to reference an embedded {{HTMLElement("iframe")}} from its parent window),
+    - {{domxref("window.parent")}} (to reference the parent window from within an embedded {{HTMLElement("iframe")}}), or
     - {{domxref("window.frames")}} + an index value (named or numeric).
 
 - `message`
@@ -68,9 +66,8 @@ targetWindow.postMessage(message, targetOrigin, [transfer]);
     window's document should be located. Failing to provide a specific target discloses
     the data you send to any interested malicious site.**
 - `transfer` {{optional_Inline}}
-  - : Is a sequence of {{domxref("Transferable")}} objects that are transferred with the
-    message. The ownership of these objects is given to the destination side and they are
-    no longer usable on the sending side.
+  - : Is a sequence of {{Glossary("transferable objects")}} that are transferred with the message.
+    The ownership of these objects is given to the destination side and they are no longer usable on the sending side.
 
 ## The dispatched event
 

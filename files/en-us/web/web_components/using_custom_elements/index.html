@@ -15,7 +15,7 @@ tags:
 <p class="summary">One of the key features of the Web Components standard is the ability to create custom elements that encapsulate your functionality on an HTML page, rather than having to make do with a long, nested batch of elements that together provide a custom page feature. This article introduces the use of the Custom Elements API.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Custom elements are supported by default in Firefox, Chrome, and Edge (76). Opera and Safari so far support only autonomous custom elements.</p>
+<p><strong>Note:</strong> Custom elements are supported by default in Firefox, Chrome, and Edge (76). Opera and Safari so far support only autonomous custom elements.</p>
 </div>
 
 <h2 id="High-level_view">High-level view</h2>
@@ -124,7 +124,7 @@ this.shadowRoot.append(style,wrapper);
   back of your card."&gt;&lt;/popup-info&gt;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: You can see the <a href="https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js">full JavaScript source</a> code here.</p>
+<p><strong>Note:</strong> You can see the <a href="https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js">full JavaScript source</a> code here.</p>
 </div>
 
 <h3 id="Internal_vs._external_styles">Internal vs. external styles</h3>
@@ -179,7 +179,7 @@ shadow.appendChild(linkElem);</pre>
 <p>You use a <code>&lt;ul&gt;</code> element as normal, but specify the name of the custom element inside the <code>is</code> attribute.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Again, you can see the full <a href="https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js">JavaScript source code</a> here.</p>
+<p><strong>Note:</strong> Again, you can see the full <a href="https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js">JavaScript source code</a> here.</p>
 </div>
 
 <h2 id="Using_the_lifecycle_callbacks">Using the lifecycle callbacks</h2>
@@ -190,7 +190,7 @@ shadow.appendChild(linkElem);</pre>
  <li><code>connectedCallback</code>: Invoked each time the custom element is appended into a document-connected element. This will happen each time the node is moved, and may happen before the element's contents have been fully parsed.
 
   <div class="note">
-  <p><strong>Note</strong>: <code>connectedCallback</code> may be called once your element is no longer connected, use {{domxref("Node.isConnected")}} to make sure.</p>
+  <p><strong>Note:</strong> <code>connectedCallback</code> may be called once your element is no longer connected, use {{domxref("Node.isConnected")}} to make sure.</p>
   </div>
  </li>
  <li><code>disconnectedCallback</code>: Invoked each time the custom element is disconnected from the document's DOM.</li>
@@ -255,7 +255,7 @@ adoptedCallback() {
 <p>This is placed right at the top of the constructor, in our example.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Find the <a href="https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js">full JavaScript source</a> here.</p>
+<p><strong>Note:</strong> Find the <a href="https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js">full JavaScript source</a> here.</p>
 </div>
 
 <h2 id="Transpilers_vs._classes">Transpilers vs. classes</h2>

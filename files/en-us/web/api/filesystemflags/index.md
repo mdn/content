@@ -125,11 +125,9 @@ Note that, when `create` is `false`, the value of `exclusive` is irrelevant and 
 
 ## Specifications
 
-{{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
+| Specification                        | Status                           | Comment         |
+| ------------------------------------ | -------------------------------- | --------------- |
+| {{SpecName('File System API', '#dictdef-filesystemflags')}} | {{Spec2('File System API')}} | |
 
 ## See also
 

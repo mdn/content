@@ -1,5 +1,5 @@
 ---
-title: <ruby>
+title: '<ruby>: The Ruby Annotation element'
 slug: Web/HTML/Element/ruby
 tags:
   - Element

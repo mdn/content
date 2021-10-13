@@ -12,19 +12,9 @@ browser-compat: api.GeolocationPositionError.code
 ---
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-The **`GeolocationPositionError.code`** read-only property is
-an `unsigned short` representing the error code.
+The **`GeolocationPositionError.code`** read-only property is an `unsigned short` representing the error code.
 
-## Syntax
-
-```js
-let typeErr = geolocationPositionErrorInstance.code
-```
-
-### Value
-
-An `unsigned short` representing the error code. The following values are
-possible:
+The following values are possible:
 
 <table class="no-markdown">
   <thead>
@@ -47,18 +37,13 @@ possible:
       <td><code>2</code></td>
       <td><code>POSITION_UNAVAILABLE</code></td>
       <td>
-        The acquisition of the geolocation failed because one or several
-        internal sources of position returned an internal error.
+        The acquisition of the geolocation failed because one or several internal sources of position returned an internal error.
       </td>
     </tr>
     <tr>
       <td><code>3</code></td>
       <td><code>TIMEOUT</code></td>
-      <td>
-        The time allowed to acquire the geolocation, defined by
-        {{domxref("PositionOptions.timeout")}} information that
-        was reached before the information was obtained.
-      </td>
+      <td>Geolocation information was not obtained in the allowed time.</td>
     </tr>
   </tbody>
 </table>

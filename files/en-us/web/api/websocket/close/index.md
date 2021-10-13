@@ -38,7 +38,7 @@ WebSocket.close(code, reason);
 - `code` {{optional_inline}}
   - : A numeric value indicating the status code explaining why the connection is being
     closed. If this parameter is not specified, a default value of 1005 is assumed. See
-    the [list of status codes](/en-US/docs/Web/API/CloseEvent#status_codes) of
+    the [list of status codes](/en-US/docs/Web/API/CloseEvent/code) of
     {{domxref("CloseEvent")}} for permitted values.
 - `reason` {{optional_inline}}
   - : A human-readable string explaining why the connection is closing. This string must

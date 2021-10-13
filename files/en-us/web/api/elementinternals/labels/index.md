@@ -28,8 +28,10 @@ A {{domxref("NodeList")}} containing all of the label elements associated with t
 The following example shows a custom checkbox component with a {{HTMLElement("label")}} element linked to it. Printing the value of `labels` to the console returns a {{domxref("NodeList")}} with one entry, representing this label.
 
 ```html
-<form id="myForm"><custom-checkbox id="join-checkbox"></custom-checkbox>
-  <label for="custom-checkbox">Join newsletter</label></form>
+<form id="myForm">
+  <custom-checkbox id="custom-checkbox"></custom-checkbox>
+  <label for="custom-checkbox">Join newsletter</label>
+</form>
 ```
 
 ```js
