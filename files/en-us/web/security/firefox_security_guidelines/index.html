@@ -10,7 +10,7 @@ tags:
 
 <h2 id="Secure_Coding_Principles">Secure Coding Principles</h2>
 
-<p>Ensure that the application follows the <a class="external-link" href="https://www.owasp.org/index.php/Secure_Coding_Principles" rel="nofollow">OWASP Secure Coding Principles</a>:</p>
+<p>Ensure that the application follows the <a href="https://www.owasp.org/index.php/Secure_Coding_Principles">OWASP Secure Coding Principles</a>:</p>
 
 <ol>
  <li>Minimize attack surface area</li>
@@ -46,40 +46,30 @@ tags:
 
 <p>If so ensure they are safe and that no better alternatives are available.</p>
 
-<div class="table-wrap">
-<table class="confluenceTable tablesorter">
+<table>
  <thead>
-  <tr class="sortableHeader">
-   <th class="confluenceTh sortableHeader">
-    <div class="tablesorter-header-inner">Name</div>
-   </th>
-   <th class="confluenceTh sortableHeader">
-    <div class="tablesorter-header-inner">Risk Level</div>
-   </th>
-   <th class="confluenceTh sortableHeader">
-    <div class="tablesorter-header-inner">Problem</div>
-   </th>
-   <th class="confluenceTh sortableHeader">
-    <div class="tablesorter-header-inner">Solution</div>
-   </th>
+  <tr>
+   <th>Name</th>
+   <th>Risk Level</th>
+   <th>Problem</th>
+   <th>Solution</th>
   </tr>
  </thead>
  <tbody>
   <tr>
-   <td class="confluenceTd">eval</td>
-   <td class="confluenceTd">Very High</td>
-   <td class="confluenceTd">Invokes JavaScript parser - dangerous if used with untrusted input</td>
-   <td class="confluenceTd">Avoid eval if at all possible.</td>
+   <td>eval</td>
+   <td>Very High</td>
+   <td>Invokes JavaScript parser - dangerous if used with untrusted input</td>
+   <td>Avoid eval if at all possible.</td>
   </tr>
   <tr>
-   <td class="confluenceTd">setTimeout(string, time)</td>
-   <td class="confluenceTd">Very High</td>
-   <td class="confluenceTd">Acts like eval</td>
-   <td class="confluenceTd">Use setTimeout(function, time, param1, param2, ...)</td>
+   <td>setTimeout(string, time)</td>
+   <td>Very High</td>
+   <td>Acts like eval</td>
+   <td>Use setTimeout(function, time, param1, param2, ...)</td>
   </tr>
  </tbody>
 </table>
-</div>
 
 <h2 id="C_-_Dangerous_Functions">C++ - Dangerous Functions</h2>
 
@@ -87,66 +77,57 @@ tags:
 
 <p>If so ensure they are safe and that no better alternatives are available.</p>
 
-<div class="table-wrap">
-<table class="confluenceTable tablesorter">
+<table>
  <thead>
-  <tr class="sortableHeader">
-   <th class="confluenceTh sortableHeader">
-    <div class="tablesorter-header-inner">Name</div>
-   </th>
-   <th class="confluenceTh sortableHeader">
-    <div class="tablesorter-header-inner">Risk Level</div>
-   </th>
-   <th class="confluenceTh sortableHeader">
-    <div class="tablesorter-header-inner">Problem</div>
-   </th>
-   <th class="confluenceTh sortableHeader">
-    <div class="tablesorter-header-inner">Solution</div>
-   </th>
+  <tr>
+   <th>Name</th>
+   <th>Risk Level</th>
+   <th>Problem</th>
+   <th>Solution</th>
   </tr>
  </thead>
  <tbody>
   <tr>
-   <td class="confluenceTd">gets</td>
-   <td class="confluenceTd">Very High</td>
-   <td class="confluenceTd">No bounds checking</td>
-   <td class="confluenceTd">Do not use gets. Use fgets instead.</td>
+   <td>gets</td>
+   <td>Very High</td>
+   <td>No bounds checking</td>
+   <td>Do not use gets. Use fgets instead.</td>
   </tr>
   <tr>
-   <td class="confluenceTd">strcpy</td>
-   <td class="confluenceTd">Very High</td>
-   <td class="confluenceTd">No bounds checking</td>
-   <td class="confluenceTd">strcpy is safe only if the source string is a constant and the destination is large enough to hold it. Otherwise, use strncpy.</td>
+   <td>strcpy</td>
+   <td>Very High</td>
+   <td>No bounds checking</td>
+   <td>strcpy is safe only if the source string is a constant and the destination is large enough to hold it. Otherwise, use strncpy.</td>
   </tr>
   <tr>
-   <td class="confluenceTd">sprintf</td>
-   <td class="confluenceTd">Very High</td>
-   <td class="confluenceTd">No bounds checking, format string attacks</td>
-   <td class="confluenceTd">sprintf is very hard to use safely. Use snprintf instead.</td>
+   <td>sprintf</td>
+   <td>Very High</td>
+   <td>No bounds checking, format string attacks</td>
+   <td>sprintf is very hard to use safely. Use snprintf instead.</td>
   </tr>
   <tr>
-   <td class="confluenceTd">scanf, sscanf</td>
-   <td class="confluenceTd">High</td>
-   <td class="confluenceTd">Possibly no bounds checking, format string attacks</td>
-   <td class="confluenceTd">Make sure all %-directives match the corresponding argument types. Do not use '%s' directives with no bounds checking. Use '%xs' where x is the buffer size of the corresponding argument. Do not use untrusted, un-validated data in the format string.</td>
+   <td>scanf, sscanf</td>
+   <td>High</td>
+   <td>Possibly no bounds checking, format string attacks</td>
+   <td>Make sure all %-directives match the corresponding argument types. Do not use '%s' directives with no bounds checking. Use '%xs' where x is the buffer size of the corresponding argument. Do not use untrusted, un-validated data in the format string.</td>
   </tr>
   <tr>
-   <td class="confluenceTd">strcat</td>
-   <td class="confluenceTd">High</td>
-   <td class="confluenceTd">No bounds checking</td>
-   <td class="confluenceTd">If input sizes are not well-known and fixed, use strncat instead.</td>
+   <td>strcat</td>
+   <td>High</td>
+   <td>No bounds checking</td>
+   <td>If input sizes are not well-known and fixed, use strncat instead.</td>
   </tr>
   <tr>
-   <td class="confluenceTd">printf, fprintf, snprintf, vfprintf, vsprintf, syslog</td>
-   <td class="confluenceTd">High</td>
-   <td class="confluenceTd">format string attacks</td>
-   <td class="confluenceTd">Do not use untrusted, un-validated data in the format string. If the format string can be influenced by Web content or user input, validate it for the proper number and type of %-directives before calling these functions. Make sure destination size arguments are correct.</td>
+   <td>printf, fprintf, snprintf, vfprintf, vsprintf, syslog</td>
+   <td>High</td>
+   <td>format string attacks</td>
+   <td>Do not use untrusted, un-validated data in the format string. If the format string can be influenced by Web content or user input, validate it for the proper number and type of %-directives before calling these functions. Make sure destination size arguments are correct.</td>
   </tr>
   <tr>
-   <td class="confluenceTd">strncpy, fgets, strncat</td>
-   <td class="confluenceTd">Low</td>
-   <td class="confluenceTd">May not null-terminate</td>
-   <td class="confluenceTd">Always explicitly null-terminate the destination buffer. Make sure the size argument is correct. Be sure to leave room in the destination buffer to add the null character!</td>
+   <td>strncpy, fgets, strncat</td>
+   <td>Low</td>
+   <td>May not null-terminate</td>
+   <td>Always explicitly null-terminate the destination buffer. Make sure the size argument is correct. Be sure to leave room in the destination buffer to add the null character!</td>
   </tr>
  </tbody>
 </table>
@@ -283,8 +264,8 @@ tags:
 <h2 id="References">References</h2>
 
 <ul>
- <li><a class="external-link" href="https://wiki.mozilla.org/WebAppSec/Web_Security_Verification" rel="nofollow">Web Security Verification</a></li>
- <li><a class="external-link" href="https://www.mozilla.org/projects/security/components/reviewguide.html" rel="nofollow">Mozilla Security Review and Best Practices</a></li>
- <li><a class="external-link" href="https://www.squarefree.com/securitytips/mozilla-developers.html" rel="nofollow">Security tips for Mozilla and extension developers</a></li>
- <li><a class="external-link" href="https://owasp.org/www-pdf-archive/OWASP_SCP_Quick_Reference_Guide_v2.pdf" rel="nofollow">OWASP Secure Coding Practices - Quick Reference Guide</a></li>
+ <li><a href="https://wiki.mozilla.org/WebAppSec/Web_Security_Verification" >Web Security Verification</a></li>
+ <li><a href="https://www.mozilla.org/projects/security/components/reviewguide.html" >Mozilla Security Review and Best Practices</a></li>
+ <li><a href="https://www.squarefree.com/securitytips/mozilla-developers.html" >Security tips for Mozilla and extension developers</a></li>
+ <li><a href="https://owasp.org/www-pdf-archive/OWASP_SCP_Quick_Reference_Guide_v2.pdf" >OWASP Secure Coding Practices - Quick Reference Guide</a></li>
 </ul>
