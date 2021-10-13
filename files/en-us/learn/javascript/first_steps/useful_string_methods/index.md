@@ -150,7 +150,7 @@ radData.toUpperCase();
 
 ### Updating parts of a string
 
-You can replace one substring inside a string with another substring using the {{jsxref("String.prototype.replace()", "replace()")}} method. This works very at a basic level, although there are some advanced things you can do with it that we won't go into yet.
+You can replace one substring inside a string with another substring using the {{jsxref("String.prototype.replace()", "replace()")}} method. This works at a very basic level, although there are some advanced things you can do with it that we won't go into yet.
 
 It takes two parameters — the string you want to replace, and the string you want to replace it with. Try this example:
 
