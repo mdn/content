@@ -52,7 +52,6 @@ Used in **ALL** roles.
 | Specification         | Status            |
 | ---------------- | ---------------- |
 | {{SpecName("ARIA","#aria-braillelabel","ARIA: aria-braillelabel Attribute")}}              | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria-braillelabel","using aria-braillelabel")}} | {{Spec2('ARIA Authoring Practices')}} |
 
 ## See Also
 
