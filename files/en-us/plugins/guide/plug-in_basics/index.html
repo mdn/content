@@ -7,10 +7,6 @@ tags:
   - NPAPI
   - Plugins
 ---
-<div class="prevnext" style="text-align: right;">
-<p><a href="/en-US/docs/Gecko_Plugin_API_Reference:Plug-in_Development_Overview">Next »</a></p>
-</div>
-
 
 <h3 id="How_Plug-ins_Are_Used">How Plug-ins are used</h3>
 
@@ -37,7 +33,7 @@ tags:
  <li>communicate with <a href="/en-US/docs/Web/JavaScript">JavaScript</a>/<a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a> from native code</li>
 </ul>
 
-<p>You can see which plug-ins are installed on your system and have been properly associated with the browser by consulting the Installed Plug-ins page. <span class="comment">Go to the Help menu, and click Help and then About Plug-ins.</span> Type "about:plugins" in the Location bar. The Installed Plug-ins page lists each installed plug-in along with its MIME type or types, description, file extensions, and the current state (enabled or disabled) of the plug-in for each MIME type assigned to it. Notice in view-source that this information is gathered from the JavaScript.</p>
+<p>You can see which plug-ins are installed on your system and have been properly associated with the browser by consulting the Installed Plug-ins page. Go to the Help menu, and click Help and then About Plug-ins. Type "about:plugins" in the Location bar. The Installed Plug-ins page lists each installed plug-in along with its MIME type or types, description, file extensions, and the current state (enabled or disabled) of the plug-in for each MIME type assigned to it. Notice in view-source that this information is gathered from the JavaScript.</p>
 
 <p>Because plug-ins are platform-specific, you must port them to every operating system and processor platform upon which you want to deploy your plug-in.</p>
 
@@ -47,7 +43,7 @@ tags:
 
 <p>When the browser encounters a MIME type, it always searches for a registered plug-in first. If there are no matches for the MIME type, it looks for a helper application.</p>
 
-<p>Plug-ins and helper applications fill different application needs. <span class="comment">For more information about helper applications, refer to the Netscape online help.</span></p>
+<p>Plug-ins and helper applications fill different application needs. For more information about helper applications, refer to the Netscape online help.</p>
 
 <h3 id="How_Plug-ins_Work">How plug-ins work</h3>
 
@@ -79,7 +75,7 @@ tags:
 <p>Gecko calls the plug-in API function <a href="/en-US/NP_Initialize">NP_Initialize</a> when the plug-in code is first loaded. By convention, all of the plug-in specific functions have the prefix "NPP", and all of the browser-specific functions have the prefix "NPN".</p>
 
 <div class="note">
-<p><strong>Note</strong>: <code>NP_Initialize</code> and <code>NP_Shutdown</code> are not technically a part of the function table that the plug-in hands to the browser. The browser calls them when the plug-in software is loaded and unloaded. These functions are exported from the plug-in DLL and accessed with a system table lookup, which means that they are not related to any particular plug-in instance. Again, see <a href="/en-US/docs/Gecko_Plugin_API_Reference/Initialization_and_Destruction">Initialization and Destruction</a> for more information about initializing and destructing.</p>
+<p><strong>Note:</strong> <code>NP_Initialize</code> and <code>NP_Shutdown</code> are not technically a part of the function table that the plug-in hands to the browser. The browser calls them when the plug-in software is loaded and unloaded. These functions are exported from the plug-in DLL and accessed with a system table lookup, which means that they are not related to any particular plug-in instance. Again, see <a href="/en-US/docs/Gecko_Plugin_API_Reference/Initialization_and_Destruction">Initialization and Destruction</a> for more information about initializing and destructing.</p>
 </div>
 
 <ul>
@@ -89,7 +85,7 @@ tags:
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: Plug-in API calls and callbacks use the main Navigator thread. In general, if you want a plug-in to generate additional threads to handle processing at any stage in its lifespan, you should be careful to isolate these from Plug-in API calls.</p>
+<p><strong>Note:</strong> Plug-in API calls and callbacks use the main Navigator thread. In general, if you want a plug-in to generate additional threads to handle processing at any stage in its lifespan, you should be careful to isolate these from Plug-in API calls.</p>
 </div>
 
 <p>See <a href="/en-US/docs/Gecko_Plugin_API_Reference/Initialization_and_Destruction">Initialization and Destruction</a> for more information about using these methods.</p>
@@ -129,7 +125,7 @@ tags:
  <li>Directory pointed to by <code>MOZ_PLUGIN_PATH</code> environment variable. For example:</li>
 </ul>
 
-<pre class="brush: bash" dir="ltr">#!/bin/bash
+<pre class="brush: bash">#!/bin/bash
 
 export MOZ_PLUGIN_PATH=/usr/lib64/mozilla/plugins
 exec /usr/lib64/firefox/firefox</pre>
@@ -141,7 +137,7 @@ exec /usr/lib64/firefox/firefox</pre>
  <li><code>/usr/lib64/firefox/plugins</code> (for 64-bit Firefox)</li>
 </ul>
 
-<p><em>Note:</em> Firefox Nightly checks a subset of these locations. Also some Linux distributions provide a system browser configured differently.<span class="short_text" id="result_box" lang="en"><span class="alt-edited hps"> </span></span></p>
+<p><strong>Note:</strong> Firefox Nightly checks a subset of these locations. Also some Linux distributions provide a system browser configured differently.</p>
 
 <blockquote>
 <p><em>Advanced:</em> You can determine which directories a Gecko program checks with the Linux <code>strace</code> command, for example:</p>
@@ -304,7 +300,7 @@ if (mimetype) {
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: Whether a plug-in is windowed or windowless is not meaningful if the plug-in is invoked with the <code>hidden</code> attribute.</p>
+<p><strong>Note:</strong> Whether a plug-in is windowed or windowless is not meaningful if the plug-in is invoked with the <code>hidden</code> attribute.</p>
 </div>
 
 <p>You can also create hidden plug-ins using the <code>object</code> element. Though the <code>object</code> element has no <code>hidden</code> attribute, you can create <a href="/en-US/docs/Web/CSS">CSS</a> rules to override the sizing attributes of the <code>object</code> element</p>
@@ -334,7 +330,7 @@ object.hiddenObject {
 <p>A <strong>full-page plug-in</strong> is a visible plug-in that is not part of an HTML page. The server looks for the media (MIME) type registered by a plug-in, based on the file extension, and starts sending the file to the browser. Gecko looks up the MIME type and loads the appropriate plug-in if it finds a plug-in registered to that type. This type of plug-in completely fills the web page. Full-page plug-ins are commonly used for document viewers, such as Adobe Acrobat.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The browser does not display scroll bars automatically for a full-page plug-in. The plug-in must draw its own scroll bars if it requires them.</p>
+<p><strong>Note:</strong> The browser does not display scroll bars automatically for a full-page plug-in. The plug-in must draw its own scroll bars if it requires them.</p>
 </div>
 
 <p>The browser user interface remains relatively constant regardless of which type of plug-in is displayed. The part of the application window that does not display plug-in data does not change. The basic operations of the browser, such as navigation, history, and opening files, apply to all pages, regardless of the plug-ins in use.</p>
@@ -574,8 +570,3 @@ argv = {"movie.avi", "100", "125", "true", "true"}
 <ul>
  <li><a class="external" href="https://www.mozilla.org/projects/plugins/">The Mozilla Plug-ins project page</a></li>
 </ul>
-
-
-<div class="prevnext" style="text-align: right;">
-<p><a href="/en-US/docs/Gecko_Plugin_API_Reference:Preface" style="float: left;">« Previous</a><a href="/en-US/docs/Gecko_Plugin_API_Reference:Plug-in_Development_Overview">Next »</a></p>
-</div>

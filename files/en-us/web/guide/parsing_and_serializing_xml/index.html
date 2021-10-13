@@ -19,7 +19,7 @@ tags:
   - XMLDocument
   - XMLHttpRequest
 ---
-<p>At times, you may need to parse {{Glossary("XML")}} content and convert it into a {{Glossary("DOM")}} tree, or, conversely, serialize an existing DOM tree into XML. <span class="seoSummary">In this article, we'll look at the objects provided by the web platform to make the common tasks of serializing and parsing XML easy.</span></p>
+<p>At times, you may need to parse {{Glossary("XML")}} content and convert it into a {{Glossary("DOM")}} tree, or, conversely, serialize an existing DOM tree into XML. In this article, we'll look at the objects provided by the web platform to make the common tasks of serializing and parsing XML easy.</p>
 
 <dl>
 	<dt>{{domxref("XMLSerializer")}}</dt>
@@ -40,7 +40,6 @@ tags:
 
 <p>This example converts an XML fragment in a string into a DOM tree using a {{domxref("DOMParser")}}:</p>
 
-<div style="overflow: hidden;">
 <pre class="brush: js">const xmlStr = '&lt;a id="a"&gt;&lt;b id="b"&gt;hey!&lt;/b&gt;&lt;/a&gt;';
 const parser = new DOMParser();
 const doc = parser.parseFromString(xmlStr, "application/xml");
@@ -52,7 +51,6 @@ if (errorNode) {
   console.log(dom.documentElement.nodeName);
 }
 </pre>
-</div>
 
 <h3 id="Parsing_URL-addressable_resources_into_DOM_trees">Parsing URL-addressable resources into DOM trees</h3>
 
@@ -114,7 +112,7 @@ const xmlStr = serializer.serializeToString(doc);</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a class="internal" href="/en-US/docs/Web/XPath">XPath</a></li>
+	<li><a href="/en-US/docs/Web/XPath">XPath</a></li>
 	<li>{{domxref("XMLHttpRequest")}}</li>
 	<li>{{domxref("Document")}}, {{domxref("XMLDocument")}}, and {{domxref("HTMLDocument")}}</li>
 </ul>

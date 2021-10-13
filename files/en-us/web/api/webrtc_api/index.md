@@ -76,8 +76,6 @@ These interfaces, dictionaries, and types are used to set up, open, and manage W
 
 #### Dictionaries
 
-- {{DOMxRef("RTCConfiguration")}}
-  - : Used to provide configuration options for an [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection "The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed.").
 - {{DOMxRef("RTCIceServer")}}
   - : Defines how to connect to a single {{Glossary("ICE")}} server (such as a {{Glossary("STUN")}} or {{Glossary("TURN")}} server).
 - {{DOMxRef("RTCRtpContributingSource")}}

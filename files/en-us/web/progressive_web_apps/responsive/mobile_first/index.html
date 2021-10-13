@@ -12,9 +12,7 @@ tags:
   - Mobile Development
   - Mobile first
 ---
-<div class="summary">
-  <p><span class="seoSummary">This article provides a guide to implementing a website layout that follows the principle of <strong>mobile first</strong>. This means creating a layout where the default configuration is for narrow screen/mobile devices, and layout features for wider viewports are then layered on top of that default.</span></p>
-</div>
+<p>This article provides a guide to implementing a website layout that follows the principle of <strong>mobile first</strong>. This means creating a layout where the default configuration is for narrow screen/mobile devices, and layout features for wider viewports are then layered on top of that default.</p>
 
 <h2 id="First_things_first_—_mobile_as_a_default">First things first — mobile as a default</h2>
 
@@ -28,7 +26,7 @@ tags:
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: Starting with very little and working up as the need arises usually makes more sense than starting with everything and then covering up things if they aren't needed!</p>
+<p><strong>Note:</strong> Starting with very little and working up as the need arises usually makes more sense than starting with everything and then covering up things if they aren't needed!</p>
 </div>
 
 <h2 id="Mobile_constraints">Mobile constraints</h2>
@@ -163,7 +161,7 @@ nav {
 
 <h3 id="Adding_a_mobile_first_layout">Adding a mobile first layout</h3>
 
-<p class="brush: css">The above layout is fine for narrower layouts, but it doesn't work very well when you get wider than about 480px. To create something more suitable for desktop, I put in the following media queries:</p>
+<p>The above layout is fine for narrower layouts, but it doesn't work very well when you get wider than about 480px. To create something more suitable for desktop, I put in the following media queries:</p>
 
 <pre class="brush: css">@media (min-width: 480px) {
   #bottom, #top {
@@ -225,7 +223,7 @@ nav {
 <p>The second one sets the width of the content at 600px and centers it in the space available, then adds in a gradient and a nice background image for the wider layout. This is a key point - the background image is 126KB, and not ideal for narrow layouts. Having it included in the "600 pixels or wider" media query means that narrow screen devices won't read that media query, so they will not waste their time and bandwidth downloading that image.</p>
 
 <div class="note">
-<p>Note: Firefox's Responsive Design View is a great way to get a quick idea of how your media queries are behaving themselves. Try it out with Tools &gt; Web Developer &gt; Responsive Design View.</p>
+<p><strong>Note:</strong> Firefox's Responsive Design View is a great way to get a quick idea of how your media queries are behaving themselves. Try it out with Tools &gt; Web Developer &gt; Responsive Design View.</p>
 </div>
 
 <h3 id="Feature_detection">Feature detection</h3>
@@ -243,10 +241,6 @@ nav {
 <pre class="brush: java">if(!Modernizr.mq('only all')) {
   require('respond');
 }</pre>
-
-<div class="note">
-<p>EDITORIAL NOTE: This currently doesn't work, and I'm not sure why. Ongoing work required.</p>
-</div>
 
 <p><code>matchMedia</code> is also very useful in many other ways. Imagine you wanted to include some kind of WebGL chart in the desktop version of the site requiring a WebGL library like Three but didn't want it included in the mobile version? You could create a block to only load the library in the case of narrow screen devices:</p>
 
