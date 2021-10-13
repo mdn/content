@@ -9619,8 +9619,6 @@
 /en-US/docs/Web/Apps/Build/Performance/CSS_JavaScript_animation_performance	/en-US/docs/Web/Performance/CSS_JavaScript_animation_performance
 /en-US/docs/Web/Apps/Build/Performance/Optimizing_startup_performance	/en-US/docs/Web/Performance/Optimizing_startup_performance
 /en-US/docs/Web/Apps/Build/Performance/Performance_fundamentals	/en-US/docs/Web/Performance/Fundamentals
-/en-US/docs/Web/Apps/Build/Performance/Performance_fundamentals/Power	/en-US/docs/Web/Performance/Fundamentals/Power
-/en-US/docs/Web/Apps/Build/Performance/Performance_fundamentals/Power/Nexus_4_Harness	/en-US/docs/Web/Performance/Fundamentals/Power/Nexus_4_Harness
 /en-US/docs/Web/Apps/Build/Performance/The_performance_of_CSS_and_JavaScript_animations	/en-US/docs/Web/Performance/CSS_JavaScript_animation_performance
 /en-US/docs/Web/Apps/Build/User_input_methods	/en-US/docs/Web/Guide/User_input_methods
 /en-US/docs/Web/Apps/Build/User_notifications/Checking_when_a_deadline_is_due	/en-US/docs/Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
@@ -9641,7 +9639,6 @@
 /en-US/docs/Web/Apps/Developing/Optimizing_startup_performance	/en-US/docs/Web/Performance/Optimizing_startup_performance
 /en-US/docs/Web/Apps/Developing/Performance/Optimizing_startup_performance	/en-US/docs/Web/Performance/Optimizing_startup_performance
 /en-US/docs/Web/Apps/Developing/Performance/Performance_fundamentals	/en-US/docs/Web/Performance/Fundamentals
-/en-US/docs/Web/Apps/Developing/Performance/Performance_fundamentals/Power	/en-US/docs/Web/Performance/Fundamentals/Power
 /en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery	/en-US/docs/Web/Guide/Audio_and_video_delivery
 /en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 /en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Cross-browser_audio_basics	/en-US/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics
@@ -9657,8 +9654,6 @@
 /en-US/docs/Web/Apps/Fundamentals/Performance/CSS_JavaScript_animation_performance	/en-US/docs/Web/Performance/CSS_JavaScript_animation_performance
 /en-US/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance	/en-US/docs/Web/Performance/Optimizing_startup_performance
 /en-US/docs/Web/Apps/Fundamentals/Performance/Performance_fundamentals	/en-US/docs/Web/Performance/Fundamentals
-/en-US/docs/Web/Apps/Fundamentals/Performance/Performance_fundamentals/Power	/en-US/docs/Web/Performance/Fundamentals/Power
-/en-US/docs/Web/Apps/Fundamentals/Performance/Performance_fundamentals/Power/Nexus_4_Harness	/en-US/docs/Web/Performance/Fundamentals/Power/Nexus_4_Harness
 /en-US/docs/Web/Apps/Fundamentals/User_input_methods	/en-US/docs/Web/Guide/User_input_methods
 /en-US/docs/Web/Apps/Fundamentals/User_notifications/Checking_when_a_deadline_is_due	/en-US/docs/Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
 /en-US/docs/Web/Apps/Graphics_and_UX/graphic_design_for_responsive_sites	/en-US/docs/Web/Progressive_web_apps/Responsive/Graphics_for_responsive_sites

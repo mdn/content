@@ -28,7 +28,7 @@ tags:
 
 <p>The process a browser uses to paint changes to a page when an element is animating CSS properties can be described as a waterfall consisting of the following steps:</p>
 
-<p><img alt="" src="css-rendering-waterfall.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="css-rendering-waterfall.png"></p>
 
 <ol>
  <li><strong>Recalculate Style</strong>: when a property for an element changes, the browser must recalculate computed styles.</li>
@@ -44,7 +44,7 @@ tags:
 
 <p>In the context of the rendering waterfall, some properties are more expensive than others:</p>
 
-<table class="fullwidth-table standard-table">
+<table class="standard-table">
  <thead>
   <tr>
    <th scope="col">Property type</th>
@@ -83,7 +83,7 @@ tags:
 </table>
 
 <div class="note">
-<p>The <a href="http://csstriggers.com/">CSS Triggers</a> website shows how much of the waterfall is triggered for each CSS property, with information for most CSS properties by browser engine.</p>
+<p><strong>Note:</strong> The <a href="http://csstriggers.com/">CSS Triggers</a> website shows how much of the waterfall is triggered for each CSS property, with information for most CSS properties by browser engine.</p>
 </div>
 
 <h2 id="An_example_margin_versus_transform">An example: margin versus transform</h2>
@@ -94,7 +94,7 @@ tags:
 
 <p>If you want to play along, the demo website is <a href="https://mdn.github.io/performance-scenarios/animation-transform-margin/index.html">here</a>. It looks like this:</p>
 
-<p><img alt="" src="css-animations-demo.png" style="display: block; margin-left: auto; margin-right: auto;">It has two controls: a button to start/stop the animation, and a radio group to choose to animate using <code>margin</code>, or to animate using <code>transform</code>.</p>
+<p><img alt="" src="css-animations-demo.png">It has two controls: a button to start/stop the animation, and a radio group to choose to animate using <code>margin</code>, or to animate using <code>transform</code>.</p>
 
 <p>There are a number of elements, and we've added a <code><a href="/en-US/docs/Web/CSS/linear-gradient()">linear-gradient</a></code> background and a <code><a href="/en-US/docs/Web/CSS/box-shadow">box-shadow</a></code> to each element, because they are both relatively expensive effects to paint.</p>
 
@@ -108,19 +108,19 @@ tags:
 
 <p>Open up the first recording. Exactly what you'll see depends a lot on your machine and system load, but it will be something like this:</p>
 
-<p><img alt="" src="margin-recording.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="margin-recording.png"></p>
 
 <p>This is showing three distinct views: (a) an overview of the Waterfall, (b) the frame rate, and (c) the timeline details.</p>
 
 <h4 id="Waterfall_overview">Waterfall overview</h4>
 
-<p><img alt="" src="margin-timeline-overview.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="margin-timeline-overview.png"></p>
 
 <p>This is showing a compressed view of the <a href="/en-US/docs/Tools/Performance/Waterfall">Waterfall</a>. The predominance of green is telling us that <a href="/en-US/docs/Tools/Performance/Waterfall#timeline-color-coding">we're spending a lot of time painting</a>.</p>
 
 <h4 id="Frame_rate">Frame rate</h4>
 
-<p><img alt="" src="margin-frame-rate.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="margin-frame-rate.png"></p>
 
 <p>This is showing <a href="/en-US/docs/Tools/Performance/Frame_rate">frame rate</a>. Average frame rate here is 46.67fps, well below the target of 60fps. Worse, though, is that the frame rate is very jagged, with lots of dips into the twenties and teens. It's unlikely you'll see a smooth animation here, especially when you add in user interaction.</p>
 
@@ -128,7 +128,7 @@ tags:
 
 <p>The rest of the recording shows the Waterfall view. If you scroll through this, you'll see a pattern like this:</p>
 
-<p><img alt="" src="margin-timeline.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="margin-timeline.png"></p>
 
 <p>This is showing us the <a href="/en-US/docs/Tools/Performance/Scenarios/Animating_CSS_properties#the_css_rendering_waterfall">rendering waterfall</a>. In each animation frame, we recalculate styles for every element, then perform a single layout, then a repaint.</p>
 
@@ -140,17 +140,17 @@ tags:
 
 <p>Now switch the radio button in the web page to "Use transform", and make a new recording. It will look something like this:</p>
 
-<p><img alt="" src="transform-recording.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="transform-recording.png"></p>
 
 <h4 id="Waterfall_overview_2">Waterfall overview</h4>
 
-<p><img alt="" src="transform-timeline-overview.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="transform-timeline-overview.png"></p>
 
 <p>Compared with <a href="/en-US/docs/Tools/Performance/Scenarios/Animating_CSS_properties#waterfall_overview">the version that uses margin</a>, we're seeing a lot less green and a lot more pink, which<a href="/en-US/docs/Tools/Performance/Waterfall#timeline-color-coding"> could be either layout or style recalculation</a>.</p>
 
 <h4 id="Frame_rate_2">Frame rate</h4>
 
-<p><img alt="" src="transform-frame-rate.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="transform-frame-rate.png"></p>
 
 <p>Compared with <a href="/en-US/docs/Tools/Performance/Scenarios/Animating_CSS_properties#frame_rate">the version that uses margin</a>, this is looking pretty good. We're averaging nearly 60fps, and apart from one dip near the start, we're getting a consistently high frame rate.</p>
 
@@ -158,6 +158,6 @@ tags:
 
 <p>The timeline view shows the reason for the improved frame rate. Compared with <a href="/en-US/docs/Tools/Performance/Scenarios/Animating_CSS_properties#waterfall">the version that uses margin</a>, we're not spending any time in layout or (more importantly in this case) in paint:</p>
 
-<p><img alt="" src="transform-timeline.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="transform-timeline.png"></p>
 
 <p>In this case, using <code>transform</code> significantly improved the site's performance, and the performance tools were able to show how and why it did.</p>
