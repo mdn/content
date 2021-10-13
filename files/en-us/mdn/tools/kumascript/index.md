@@ -83,7 +83,9 @@ Note that this parameter style is very picky — it must adhere to [JSON syntax]
 
 <h4 id="How_to_write_in_text">How to write "\{{" in text</h4>
 
-<p>Since the character sequence "<code>\{{</code>" is used to indicate the start of a macro, this can be troublesome if you actually just want to use "<code>\{{</code>" and "<code>}}" in a page. It will probably produce <code>DocumentParsingError</code> messages.<p></p><p>In this case, you can escape the first brace with a backslash, like so: <code>\\{{</code></p></h4>
+<p>Since the character sequence "<code>\{{</code>" is used to indicate the start of a macro, this can be troublesome if you actually just want to use "<code>\{{</code>" and "<code>\}\}</code>" in a page. It will probably produce <code>DocumentParsingError</code> messages.</p>
+
+<p>In this case, you can escape the first brace with a backslash, like so: <code>\\{{</code>.</p>
 
 ### Template syntax
 
