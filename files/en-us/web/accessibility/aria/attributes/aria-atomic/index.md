@@ -23,9 +23,9 @@ If none of the ancestors have explicitly set `aria-atomic`, or an ancestor in th
 
 ## Values
 
-- False (default)
+- `false` (default)
   - : present only the changed node or nodes.
-- True
+- `true`
   - : present the entire changed region as a whole, including the author-defined label if one exists.
   
 ## Associated roles
