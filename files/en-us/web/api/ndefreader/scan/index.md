@@ -38,13 +38,13 @@ This method doesn't throw exceptions; instead, it rejects the returned promise,
 passing a {{domxref("DOMException")}} whose `name` is one of the
 following:
 
-- `"AbortError"`
+- `AbortError`
   - : The scan operation was aborted with the {{DOMxRef("AbortSignal")}} passed in the `options` argument.
-- `"InvalidStateError"`
+- `InvalidStateError`
   - : There's already an ongoing scan.
-- `"NotAllowedError"`
+- `NotAllowedError`
   - : The permission for this operation was rejected.
-- `"NotSupportedError"`
+- `NotSupportedError`
   - : There is no NFC adapter compatible with Web NFC, or a connection can not be
     established.
 
