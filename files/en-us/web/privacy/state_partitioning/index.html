@@ -93,24 +93,15 @@ tags:
 </p>
 
 <h3>Status of partitioning in Firefox</h3>
-<table class="standard-table">
-  <tbody>
-   <tr>
-    <th scope="row"><a href="#network_partitioning">Network Partitioning</a></th>
-    <td>Enabled by default for all users since Firefox 85.</td>
-   </tr>
-   <tr>
-    <th scope="row"><a href="#dynamic_state_partitioning">Dynamic State Partitioning</a></th>
-    <td>Enabled by default in <a
-    href="/en-US/docs/Mozilla/Firefox#firefox_nightly">Firefox Nightly</a>. <br>
-      Since Firefox 86: Enabled for users that have
-      <a class="external"
-        href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection">
-        "Strict" privacy protections
-      </a> enabled.</td>
-   </tr>
-  </tbody>
- </table>
+
+<ul>
+  <li>
+    <p><a href="#network_partitioning"><strong>Network Partitioning</strong></a>: Enabled by default for all users since Firefox 85.</p>
+  </li>
+  <li><p><a href="#dynamic_state_partitioning"><strong>Dynamic State Partitioning</strong></a>: Since Firefox 86: Enabled for users that have
+  <a href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection"> "Strict" privacy protections </a> enabled.</p>
+  </li>
+</ul>
 
 <h3 id="network_partitioning">Network Partitioning</h3>
   <p>Networking-related APIs are not intended to be used for websites to store
@@ -119,7 +110,7 @@ tags:
   for cross-site tracking. As such, the following network APIs and caches are
   <strong>permanently</strong> partitioned by the top-level site.</p>
   <div class="note">
-    <p><strong>Note</strong>: Network Partitioning is permanent. Websites can't
+    <p><strong>Note:</strong> Network Partitioning is permanent. Websites can't
     control or relax these restrictions.</p>
   </div>
   <h4>Partitioned APIs</h4>
@@ -180,7 +171,7 @@ tags:
     third-party integrations that are common on the web to continue to function.
   </p>
   <div class="warning">
-    <p><strong>Warning</strong>: Storage access heuristics are a transitional
+    <p><strong>Warning:</strong> Storage access heuristics are a transitional
     feature meant to prevent website breakage. They should not be relied upon
     for current and future web development.</p>
   </div>
@@ -200,7 +191,7 @@ tags:
     </li>
   </ul>
   <div class="note">
-    <p><strong>Note</strong>: For third-parties which abuse these heuristic for
+    <p><strong>Note:</strong> For third-parties which abuse these heuristic for
     tracking purposes, we may require user interaction with the popup before
     storage access is granted.</p>
   </div>
@@ -240,7 +231,7 @@ tags:
     made in context of the first-party bucket.
   </p>
   <div class="warning">
-    <p><strong>Warning</strong>: When storage access is granted there may still
+    <p><strong>Warning:</strong> When storage access is granted there may still
     be references to the partitioned storage. However, sites shouldn't rely on
     being able to use partitioned and unpartitioned storage at the same
     time.</p>
@@ -271,20 +262,20 @@ tags:
    </thead>
   <tbody>
    <tr>
-    <th scope="row">Storage of a third-party frame is partitioned</th>
+    <td>Storage of a third-party frame is partitioned</td>
     <td>Partitioned cookie or storage access was provided to “b.example” because
     it is loaded in the third-party context and storage partitioning is
     enabled.</td>
    </tr>
    <tr>
-    <th scope="row">Storage access is granted through a <b>heuristic</b></th>
+    <td>Storage access is granted through a <b>heuristic</b></td>
     <td>Storage access automatically granted for First-Party isolation
     “b.example” on “a.example”.</td>
    </tr>
    <tr>
-    <th scope="row">Storage access is granted via the
+    <td>Storage access is granted via the
       <a href="/en-US/docs/Web/API/Document/requestStorageAccess">StorageAccessAPI</a>
-    </th>
+    </td>
     <td>Storage access granted for origin “b.example” on “a.example”.</td>
    </tr>
   </tbody>
@@ -301,7 +292,7 @@ tags:
 
 <h4>Test Preferences</h4>
 <div class="warning">
-  <p><strong>Warning</strong>: Make sure to set these prefs in a separate
+  <p><strong>Warning:</strong> Make sure to set these prefs in a separate
   Firefox profile or reset them after testing.</p>
 </div>
 
@@ -316,14 +307,14 @@ tags:
   <li>
     Enable / disable the <a href="#storage_access_redirect_heuristics">redirect
     heuristics</a>:
-    <code>privacy.restrict3rdpartystorage.heuristic.recently_visited,
-    privacy.restrict3rdpartystorage.heuristic.redirect</code>
+    <code>privacy.restrict3rdpartystorage.heuristic.recently_visited</code>,
+    <code>privacy.restrict3rdpartystorage.heuristic.redirect</code>
   </li>
   <li>
     Enable / disable the <a href="#storage_access_window_open_heuristics">window
     open heuristics</a>:
-    <code>privacy.restrict3rdpartystorage.heuristic.window_open,
-    privacy.restrict3rdpartystorage.heuristic.opened_window_after_interaction</code>
+    <code>privacy.restrict3rdpartystorage.heuristic.window_open</code>,
+    <code>privacy.restrict3rdpartystorage.heuristic.opened_window_after_interaction</code>
   </li>
 </ul>
 
@@ -343,15 +334,15 @@ tags:
    </thead>
   <tbody>
    <tr>
-    <th scope="row">5</th>
+    <td>5</td>
     <td>Reject (known) trackers and partition third-party storage.</td>
    </tr>
    <tr>
-    <th scope="row">4</th>
+    <td>4</td>
     <td>Only reject trackers (Storage partitioning disabled).</td>
    </tr>
    <tr>
-    <th scope="row">0</th>
+    <td>0</td>
     <td>Allow all</td>
    </tr>
   </tbody>
