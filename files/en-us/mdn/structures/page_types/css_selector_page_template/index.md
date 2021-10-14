@@ -1,6 +1,6 @@
 ---
 title: CSS selector page template
-slug: MDN/Structures/Page_types/CSS_selector_page_template
+slug: mdn/structures/page_types/css_selector_page_template
 tags:
   - CSS
   - Reference
