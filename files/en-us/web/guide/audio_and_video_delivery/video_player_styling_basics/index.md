@@ -8,61 +8,62 @@ tags:
   - Styling
   - Video
 ---
-<p>In the previous <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player">Cross browser video player article</a> we described how to build a cross-browser HTML5 video player using the Media and Fullscreen APIs. This follow-up article looks at how to style this custom player, including making it responsive.</p>
+In the previous [Cross browser video player article](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player) we described how to build a cross-browser HTML5 video player using the Media and Fullscreen APIs. This follow-up article looks at how to style this custom player, including making it responsive.
 
-<h2 id="The_example_in_action">The example in action</h2>
+## The example in action
 
-<p><img alt="A video player with play, stop, volume and fullscreen controls, showing an image of a soldier." src="video-player-styled.png"></p>
+![A video player with play, stop, volume and fullscreen controls, showing an image of a soldier.](video-player-styled.png)
 
-<p>You can find the code for the <a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-styled">updated, styled example</a> on Github, and <a href="https://iandevlin.github.io/mdn/video-player-styled/">view it live</a>.</p>
+You can find the code for the [updated, styled example](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-styled) on Github, and [view it live](https://iandevlin.github.io/mdn/video-player-styled/).
 
-<h2 id="Preliminary_modifications_from_the_original_example">Preliminary modifications from the original example</h2>
+## Preliminary modifications from the original example
 
-<p>This section summarizes the modifications that were made to the <a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player">original video player example</a> to make the styling task easier, before the bulk of the work was started.</p>
+This section summarizes the modifications that were made to the [original video player example](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player) to make the styling task easier, before the bulk of the work was started.
 
-<h3 id="HTML_Markup">HTML Markup</h3>
+### HTML Markup
 
-<p>There are a few changes that were made to the HTML markup shown in the previous article. The custom video controls and {{htmlelement("progress")}} element are now contained within {{htmlelement("div") }} elements, rather than residing inside unordered list items.</p>
+There are a few changes that were made to the HTML markup shown in the previous article. The custom video controls and {{htmlelement("progress")}} element are now contained within {{htmlelement("div") }} elements, rather than residing inside unordered list items.
 
-<p>The markup for the custom controls now looks as follows:</p>
+The markup for the custom controls now looks as follows:
 
-<pre class="brush: html">&lt;div id="video-controls" class="controls" data-state="hidden"&gt;
-   &lt;button id="playpause" type="button" data-state="play"&gt;Play/Pause&lt;/button&gt;
-   &lt;button id="stop" type="button" data-state="stop"&gt;Stop&lt;/button&gt;
-   &lt;div class="progress"&gt;
-      &lt;progress id="progress" value="0" min="0"&gt;
-         &lt;span id="progress-bar"&gt;&lt;/span&gt;
-      &lt;/progress&gt;
-   &lt;/div&gt;
-   &lt;button id="mute" type="button" data-state="mute"&gt;Mute/Unmute&lt;/button&gt;
-   &lt;button id="volinc" type="button" data-state="volup"&gt;Vol+&lt;/button&gt;
-   &lt;button id="voldec" type="button" data-state="voldown"&gt;Vol-&lt;/button&gt;
-   &lt;button id="fs" type="button" data-state="go-fullscreen"&gt;Fullscreen&lt;/button&gt;
-&lt;/div&gt;</pre>
-
-<h3 id="Related_CSS_alteration">Related CSS alteration</h3>
-
-<p>The previous article set the <code>display</code> property of the video controls to <code>block</code> in order to display them. This has now been changed to use a <a href="http://toddmotto.com/stop-toggling-classes-with-js-use-behavior-driven-dom-manipulation-with-data-states/"><code>data-state</code> attribute</a>, which this code already uses to handle its <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player#fullscreen">fullscreen implementation</a>.</p>
-
-<p>This "data-state" idea is also used for setting the current state of buttons within the video control set, which allows specific state styling.</p>
-
-<h3 id="JavaScript">JavaScript</h3>
-
-<p>As mentioned above, a <code>data-state</code> attribute is used in various places for styling purposes and these are set using JavaScript. Specific implementations will be mentioned at appropriate places below.</p>
-
-<h2 id="Styling">Styling</h2>
-
-<p>The resultant video player style used here is rather basic — this is intentional, as the purpose is to show how such a video player could be styled and be made responsive.</p>
-
-<div class="note">
-<p><strong>Note:</strong> in some cases some basic CSS is omitted from the code examples here as its use is either obvious or not specifically relevant to styling the video player.</p>
+```html
+<div id="video-controls" class="controls" data-state="hidden">
+   <button id="playpause" type="button" data-state="play">Play/Pause</button>
+   <button id="stop" type="button" data-state="stop">Stop</button>
+   <div class="progress">
+      <progress id="progress" value="0" min="0">
+         <span id="progress-bar"></span>
+      </progress>
+   </div>
+   <button id="mute" type="button" data-state="mute">Mute/Unmute</button>
+   <button id="volinc" type="button" data-state="volup">Vol+</button>
+   <button id="voldec" type="button" data-state="voldown">Vol-</button>
+   <button id="fs" type="button" data-state="go-fullscreen">Fullscreen</button>
 </div>
+```
 
-<h3 id="Basic_styling">Basic styling</h3>
+### Related CSS alteration
 
-<p>The HTML video and its controls are all contained within a {{htmlelement("figure") }} element, which is given a maximum width and height (based on the dimensions of the video used) and centered within the page:</p>
+The previous article set the `display` property of the video controls to `block` in order to display them. This has now been changed to use a [`data-state` attribute](http://toddmotto.com/stop-toggling-classes-with-js-use-behavior-driven-dom-manipulation-with-data-states/), which this code already uses to handle its [fullscreen implementation](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player#fullscreen).
 
-<pre class="brush: css">figure {
+This "data-state" idea is also used for setting the current state of buttons within the video control set, which allows specific state styling.
+
+### JavaScript
+
+As mentioned above, a `data-state` attribute is used in various places for styling purposes and these are set using JavaScript. Specific implementations will be mentioned at appropriate places below.
+
+## Styling
+
+The resultant video player style used here is rather basic — this is intentional, as the purpose is to show how such a video player could be styled and be made responsive.
+
+> **Note:** in some cases some basic CSS is omitted from the code examples here as its use is either obvious or not specifically relevant to styling the video player.
+
+### Basic styling
+
+The HTML video and its controls are all contained within a {{htmlelement("figure") }} element, which is given a maximum width and height (based on the dimensions of the video used) and centered within the page:
+
+```css
+figure {
    max-width:64rem;
    width:100%;
    max-height:30.875rem;
@@ -70,31 +71,37 @@ tags:
    margin:1.25rem auto;
    padding:1.051%;
    background-color:#666;
-}</pre>
+}
+```
 
-<p>The video controls container itself also needs some styling so that it is set up the correct way:</p>
+The video controls container itself also needs some styling so that it is set up the correct way:
 
-<pre class="brush: css">.controls {
+```css
+.controls {
    width:100%;
    height:8.0971659919028340080971659919028%; /* of figure's height */
    position:relative;
-}</pre>
+}
+```
 
-<p>The height of the <code>.controls</code> class is set to be (a very precise!) percentage of the enclosing {{htmlelement("figure") }} element (this was worked out with experimentation based on the required button height). Its position is also specifically set to <code>relative</code>, which is required for its responsiveness (more on that later).</p>
+The height of the `.controls` class is set to be (a very precise!) percentage of the enclosing {{htmlelement("figure") }} element (this was worked out with experimentation based on the required button height). Its position is also specifically set to `relative`, which is required for its responsiveness (more on that later).
 
-<p>As mentioned earlier, a <code>data-state</code> attribute is now used to indicate whether the video controls are visible or not and these also need to be styled:</p>
+As mentioned earlier, a `data-state` attribute is now used to indicate whether the video controls are visible or not and these also need to be styled:
 
-<pre class="brush: css">.controls[data-state=hidden] {
+```css
+.controls[data-state=hidden] {
    display:none;
 }
 
 .controls[data-state=visible] {
    display:block;
-}</pre>
+}
+```
 
-<p>There are a number of properties that also need to be set for all elements within the video controls:</p>
+There are a number of properties that also need to be set for all elements within the video controls:
 
-<pre class="brush: css">.controls &gt; * {
+```css
+.controls > * {
    float:left;
    width:3.90625%;
    height:100%;
@@ -102,78 +109,88 @@ tags:
    display:block;
 }
 
-.controls &gt; *:first-child {
+.controls > *:first-child {
    margin-left:0;
-}</pre>
+}
+```
 
-<p>All elements are floated left, as they are to be aligned next to one another, and each element is set to have a <code>width</code> of nearly 4% (again the actual value was calculated based on the required dimensions of the buttons), and a <code>height</code> of 100%. A value for <code>margin-left</code> is also set, but the first element (in this case the play/pause button) has this property overridden by the value 0.<br>
- <br>
- The {{htmlelement("div") }} container for the {{htmlelement("progress") }} element also requires some specific settings; it is set to be much wider than the other child elements and its cursor value is set to be pointer:</p>
+All elements are floated left, as they are to be aligned next to one another, and each element is set to have a `width` of nearly 4% (again the actual value was calculated based on the required dimensions of the buttons), and a `height` of 100%. A value for `margin-left` is also set, but the first element (in this case the play/pause button) has this property overridden by the value 0.
 
-<pre class="brush: css">.controls .progress {
+The {{htmlelement("div") }} container for the {{htmlelement("progress") }} element also requires some specific settings; it is set to be much wider than the other child elements and its cursor value is set to be pointer:
+
+```css
+.controls .progress {
    cursor:pointer;
    width:75.390625%;
-}</pre>
+}
+```
 
-<h3 id="Buttons">Buttons</h3>
+### Buttons
 
-<p>The first major styling task to tackle is to make the video control's buttons actually look like and act like real buttons.</p>
+The first major styling task to tackle is to make the video control's buttons actually look like and act like real buttons.
 
-<p>Each button has some basic styling:</p>
+Each button has some basic styling:
 
-<pre class="brush: css">.controls button {
+```css
+.controls button {
    border:none;
    cursor:pointer;
    background:transparent;
    background-size:contain;
    background-repeat:no-repeat;
-}</pre>
+}
+```
 
-<p>By default, all {{htmlelement("button") }} elements have a border, so this is removed. Since background images will be used to display appropriate icons, the background color of the button is set to be transparent, non-repeated, and the element should fully contain the image.</p>
+By default, all {{htmlelement("button") }} elements have a border, so this is removed. Since background images will be used to display appropriate icons, the background color of the button is set to be transparent, non-repeated, and the element should fully contain the image.
 
-<p>Simple <code>:hover</code> and <code>:focus</code> states are then set for each button that alters the opacity of the button:</p>
+Simple `:hover` and `:focus` states are then set for each button that alters the opacity of the button:
 
-<pre class="brush: css">.controls button:hover, .controls button:focus {
+```css
+.controls button:hover, .controls button:focus {
    opacity:0.5;
-}</pre>
+}
+```
 
-<p>To obtain appropriate button images, a set of free common control set icons was downloaded from the web. Each image was then converted to a base64 encoded string (using an online <a href="https://www.base64-image.de/">base64 image encoder</a>), since the images are quite small, the resultant encoded strings are quite short.</p>
+To obtain appropriate button images, a set of free common control set icons was downloaded from the web. Each image was then converted to a base64 encoded string (using an online [base64 image encoder](https://www.base64-image.de/)), since the images are quite small, the resultant encoded strings are quite short.
 
-<p>Since some buttons have dual functionality, e.g. play/pause, and mute/unmute, these buttons have different states that need to be styled. As mentioned earlier, a `data-state` variable is used to indicate which state such buttons are currently in.</p>
+Since some buttons have dual functionality, e.g. play/pause, and mute/unmute, these buttons have different states that need to be styled. As mentioned earlier, a \`data-state\` variable is used to indicate which state such buttons are currently in.
 
-<p>For example, the play/pause button has the following background image definitions (the full base64 strings have been omitted for brevity):</p>
+For example, the play/pause button has the following background image definitions (the full base64 strings have been omitted for brevity):
 
-<pre class="brush: css">.controls button[data-state="play"] {
+```css
+.controls button[data-state="play"] {
    background-image: url('data:image/png;base64,iVBORw0KGgoAAA ... ');
 }
 
 .controls button[data-state="pause"] {
    background-image: url('data:image/png;base64,iVBORw0KGgoAAA ... ');
-}</pre>
+}
+```
 
-<p>When the <code>data-state</code> of the button is changed, the appropriate image will also be changed. All the other buttons are treated in a similar way.</p>
+When the `data-state` of the button is changed, the appropriate image will also be changed. All the other buttons are treated in a similar way.
 
-<h3 id="Progress_bar">Progress bar</h3>
+### Progress bar
 
-<p>The {{htmlelement("progress") }} element has the following basic style set up:</p>
+The {{htmlelement("progress") }} element has the following basic style set up:
 
-<pre>.controls progress {
-   display:block;
-   width:100%;
-   height:81%;
-   margin-top:0.125rem;
-   border:none;
-   color:#0095dd;
-   -moz-border-radius:2px;
-   -webkit-border-radius:2px;
-   border-radius:2px;
-}</pre>
+    .controls progress {
+       display:block;
+       width:100%;
+       height:81%;
+       margin-top:0.125rem;
+       border:none;
+       color:#0095dd;
+       -moz-border-radius:2px;
+       -webkit-border-radius:2px;
+       border-radius:2px;
+    }
 
-<p>Like the {{htmlelement("button") }} elements, {{htmlelement("progress") }} also has a default border, which is removed here. It is also given a slight rounded corner for aesthetic reasons. The <code>color</code> property is also defined here as Internet Explorer uses this defined color for styling the progress bar's background color as it increases.<br>
- <br>
- As mentioned in the <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player">previous article</a>, there is a fallback provided for browsers that do not support the {{htmlelement("progress") }} element; this also needs to be styled appropriately:</p>
+Like the {{htmlelement("button") }} elements, {{htmlelement("progress") }} also has a default border, which is removed here. It is also given a slight rounded corner for aesthetic reasons. The `color` property is also defined here as Internet Explorer uses this defined color for styling the progress bar's background color as it increases.
 
-<pre class="brush: css">.controls progress[data-state="fake"] {
+As mentioned in the [previous article](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player), there is a fallback provided for browsers that do not support the {{htmlelement("progress") }} element; this also needs to be styled appropriately:
+
+```css
+.controls progress[data-state="fake"] {
    background:#e6e6e6;
    height:65%;
 }
@@ -182,49 +199,57 @@ tags:
    height:100%;
    display:inline-block;
    background-color:#2a84cd;
-}</pre>
+}
+```
 
-<p>A <code>.data-state</code> class is also used here when a {{ htmlelement("progress") }} element is being "faked";  when it's in this state the background color needs to be set. The internal {{htmlelement("span") }} element used as the actual progressing part of the faked progress bar has its width initially set to 0% (it is updated via JavaScript) and it also has its background color set.</p>
+A `.data-state` class is also used here when a {{ htmlelement("progress") }} element is being "faked";  when it's in this state the background color needs to be set. The internal {{htmlelement("span") }} element used as the actual progressing part of the faked progress bar has its width initially set to 0% (it is updated via JavaScript) and it also has its background color set.
 
-<p>There are some browser-specific properties that need to be set to ensure that Firefox and Chrome use the required color for the progress bar:</p>
+There are some browser-specific properties that need to be set to ensure that Firefox and Chrome use the required color for the progress bar:
 
-<pre class="brush: css">.controls progress::-moz-progress-bar {
+```css
+.controls progress::-moz-progress-bar {
    background-color:#0095dd;
 }
 
 .controls progress::-webkit-progress-value {
    background-color:#0095dd;
-}</pre>
+}
+```
 
-<p>Although the same properties are set to the same value, these rules need to be defined separately, otherwise Chrome ignores it.</p>
+Although the same properties are set to the same value, these rules need to be defined separately, otherwise Chrome ignores it.
 
-<h2 id="JavaScript_2">JavaScript</h2>
+## JavaScript
 
-<p>That's really it for the immediate styling; the next task is making a number of JavaScript changes to ensure that everything works as expected.</p>
+That's really it for the immediate styling; the next task is making a number of JavaScript changes to ensure that everything works as expected.
 
-<h3 id="Control_visibility">Control visibility</h3>
+### Control visibility
 
-<p>The first change is simple: the <code>data-state</code> for showing the video controls when JavaScript is available to the browser now needs to be set:</p>
+The first change is simple: the `data-state` for showing the video controls when JavaScript is available to the browser now needs to be set:
 
-<pre class="brush: js">// Display the user defined video controls
-videoControls.setAttribute('data-state', 'visible');</pre>
+```js
+// Display the user defined video controls
+videoControls.setAttribute('data-state', 'visible');
+```
 
-<h3 id="Progress_bar_support">Progress bar support</h3>
+### Progress bar support
 
-<p>A check also needs to be made to set up the "fake" progress bar if the browser doesn't support the {{htmlelement("progress") }} element:</p>
+A check also needs to be made to set up the "fake" progress bar if the browser doesn't support the {{htmlelement("progress") }} element:
 
-<pre class="brush: js">var supportsProgress = (document.createElement('progress').max !== undefined);
-if (!supportsProgress) progress.setAttribute('data-state', 'fake');</pre>
+```js
+var supportsProgress = (document.createElement('progress').max !== undefined);
+if (!supportsProgress) progress.setAttribute('data-state', 'fake');
+```
 
-<h3 id="Button_functionality">Button functionality</h3>
+### Button functionality
 
-<p>This section looks at the JavaScript required for implementing the button functionality.</p>
+This section looks at the JavaScript required for implementing the button functionality.
 
-<h4 id="PlayPause_and_Mute">Play/Pause and Mute</h4>
+#### Play/Pause and Mute
 
-<p>Now that the buttons actually look like buttons and have images that indicate what they do, some changes need to be made so that the "dual functionality" buttons (such as the play/pause button) are in the correct "state" and display the correct image. In order to facilitate this, a new function is defined called <code>changeButtonState()</code>, which accepts a type variable indicating the button's functionality:</p>
+Now that the buttons actually look like buttons and have images that indicate what they do, some changes need to be made so that the "dual functionality" buttons (such as the play/pause button) are in the correct "state" and display the correct image. In order to facilitate this, a new function is defined called `changeButtonState()`, which accepts a type variable indicating the button's functionality:
 
-<pre class="brush: js">var changeButtonState = function(type) {
+```js
+var changeButtonState = function(type) {
    // Play/Pause button
    if (type == 'playpause') {
       if (video.paused || video.ended) {
@@ -238,11 +263,13 @@ if (!supportsProgress) progress.setAttribute('data-state', 'fake');</pre>
    else if (type == 'mute') {
       mute.setAttribute('data-state', video.muted ? 'unmute' : 'mute');
    }
-}</pre>
+}
+```
 
-<p>This function is then called by the relevant event handlers:</p>
+This function is then called by the relevant event handlers:
 
-<pre class="brush: js">video.addEventListener('play', function() {
+```js
+video.addEventListener('play', function() {
    changeButtonState('playpause');
 }, false);
 video.addEventListener('pause', function() {
@@ -258,65 +285,75 @@ stop.addEventListener('click', function(e) {
 mute.addEventListener('click', function(e) {
    video.muted = !video.muted;
    changeButtonState('mute');
-});</pre>
+});
+```
 
-<p>You might have noticed that there are new handlers where the <code>play</code> and <code>pause</code> events are reacted to on the video. There is a reason for this! Even though the browser's default video control set has been turned off, many browsers make them accessible by right clicking on the HTML5 video. This means that a user could play/pause the video from these controls, which would then leave the custom control set's buttons out of sync. If a user uses the default controls, the defined Media API events — such as <code>play</code> and <code>pause</code> — are raised so this can be taken advantage of to ensure that the custom control buttons are kept in sync. To ensure this, a new click handler needs to be defined for the play/pause button so that it too raises the <code>play</code> and <code>pause</code> events:</p>
+You might have noticed that there are new handlers where the `play` and `pause` events are reacted to on the video. There is a reason for this! Even though the browser's default video control set has been turned off, many browsers make them accessible by right clicking on the HTML5 video. This means that a user could play/pause the video from these controls, which would then leave the custom control set's buttons out of sync. If a user uses the default controls, the defined Media API events — such as `play` and `pause` — are raised so this can be taken advantage of to ensure that the custom control buttons are kept in sync. To ensure this, a new click handler needs to be defined for the play/pause button so that it too raises the `play` and `pause` events:
 
-<pre class="brush: js">playpause.addEventListener('click', function(e) {
+```js
+playpause.addEventListener('click', function(e) {
    if (video.paused || video.ended) video.play();
    else video.pause();
-});</pre>
+});
+```
 
-<h4 id="Volume">Volume</h4>
+#### Volume
 
-<p>The <code>alterVolume()</code> function, called when the player's volume buttons are clicked, also changes — it now calls a new function called <code>checkVolume()</code>:</p>
+The `alterVolume()` function, called when the player's volume buttons are clicked, also changes — it now calls a new function called `checkVolume()`:
 
-<pre class="brush: js">var checkVolume = function(dir) {
+```js
+var checkVolume = function(dir) {
    if (dir) {
       var currentVolume = Math.floor(video.volume * 10) / 10;
       if (dir === '+') {
-         if (currentVolume &lt; 1) video.volume += 0.1;
+         if (currentVolume < 1) video.volume += 0.1;
       }
       else if (dir === '-') {
-         if (currentVolume &gt; 0) video.volume -= 0.1;
+         if (currentVolume > 0) video.volume -= 0.1;
       }
       // If the volume has been turned off, also set it as muted
       // Note: can only do this with the custom control set as when the 'volumechange' event is raised, there is no way to know if it was via a volume or a mute change
-      if (currentVolume &lt;= 0) video.muted = true;
+      if (currentVolume <= 0) video.muted = true;
       else video.muted = false;
    }
    changeButtonState('mute');
 }
 var alterVolume = function(dir) {
    checkVolume(dir);
-}</pre>
+}
+```
 
-<p>This new <code>checkVolume()</code> function does the same thing as the <code>alterVolume()</code> but it also sets the state of the mute button depending on the video's current volume setting. <code>checkVolume()</code> is also called when the <code>volumechange</code> event is raised:</p>
+This new `checkVolume()` function does the same thing as the `alterVolume()` but it also sets the state of the mute button depending on the video's current volume setting. `checkVolume()` is also called when the `volumechange` event is raised:
 
-<pre class="brush: js">video.addEventListener('volumechange', function() {
+```js
+video.addEventListener('volumechange', function() {
    checkVolume();
-}, false);</pre>
+}, false);
+```
 
-<h4 id="Progress_bar_2">Progress bar</h4>
+#### Progress bar
 
-<p>A small change also needs to be made to the click handler for the {{ htmlelement("progress") }} element. Since the enclosing {{htmlelement("figure") }} element now has <code>position:relative</code> set on it, the calculations made by this click handler are incorrect. It now also needs to take into account the offset position of the parent element:</p>
+A small change also needs to be made to the click handler for the {{ htmlelement("progress") }} element. Since the enclosing {{htmlelement("figure") }} element now has `position:relative` set on it, the calculations made by this click handler are incorrect. It now also needs to take into account the offset position of the parent element:
 
-<pre class="brush: js">progress.addEventListener('click', function(e) {
+```js
+progress.addEventListener('click', function(e) {
    var pos = (e.pageX  - (this.offsetLeft + this.offsetParent.offsetLeft)) / this.offsetWidth;
    video.currentTime = pos * video.duration;
-});</pre>
+});
+```
 
-<h4 id="Fullscreen">Fullscreen</h4>
+#### Fullscreen
 
-<p>The <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player#fullscreen">FullScreen implementation</a> hasn't changed.</p>
+The [FullScreen implementation](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player#fullscreen) hasn't changed.
 
-<h2 id="Responsive_styling">Responsive styling</h2>
+## Responsive styling
 
-<p>Now that the player has its basic look and feel taken care of, some other styling changes — involving media queries — need to be made in order to make it responsive.</p>
+Now that the player has its basic look and feel taken care of, some other styling changes — involving media queries — need to be made in order to make it responsive.
 
-<p>The player currently works fairly well until displayed on a "medium" screen (e.g. 1024px/64em) or smaller. In this case, the margins and padding on the {{ htmlelement("figure") }} element need to be removed so that all the available space is taken advantage of, and the buttons are a bit too small so this needs to be altered by setting a new height on the element that has the <code>.controls</code> class set on it:</p>
+The player currently works fairly well until displayed on a "medium" screen (e.g. 1024px/64em) or smaller. In this case, the margins and padding on the {{ htmlelement("figure") }} element need to be removed so that all the available space is taken advantage of, and the buttons are a bit too small so this needs to be altered by setting a new height on the element that has the `.controls` class set on it:
 
-<pre class="brush: css">@media screen and (max-width:64em) {
+```css
+@media screen and (max-width:64em) {
    figure {
       padding-left:0;
       padding-right:0;
@@ -326,16 +363,18 @@ var alterVolume = function(dir) {
    .controls {
       height:1.876rem;
    }
-}</pre>
+}
+```
 
-<p>This works well enough until it is viewed on a smaller screen (680px/42.5em), so another breakpoint is made here. Since the height of the <code>.controls</code> class element will now vary, a fixed height is no longer required — it is therefore set to <code>auto</code>. The definitions for the elements within the .controls element now also need to changed:</p>
+This works well enough until it is viewed on a smaller screen (680px/42.5em), so another breakpoint is made here. Since the height of the `.controls` class element will now vary, a fixed height is no longer required — it is therefore set to `auto`. The definitions for the elements within the .controls element now also need to changed:
 
-<pre class="brush: css">@media screen and (max-width:42.5em) {
+```css
+@media screen and (max-width:42.5em) {
    .controls {
       height:auto;
    }
 
-   .controls &gt; * {
+   .controls > * {
       display:block;
       width:16.6667%;
       margin-left:0;
@@ -359,6 +398,7 @@ var alterVolume = function(dir) {
    .controls button {
       background-position:center center;
    }
-}</pre>
+}
+```
 
-<p>The <code>.progress</code> container is now moved to the top of the control set via <code>position:absolute</code>, so it and all the buttons need to be wider. In addition, the buttons need to be pushed below the progress container so that they are visible.</p>
+The `.progress` container is now moved to the top of the control set via `position:absolute`, so it and all the buttons need to be wider. In addition, the buttons need to be pushed below the progress container so that they are visible.

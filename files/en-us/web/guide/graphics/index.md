@@ -12,29 +12,23 @@ tags:
   - WebGL
   - WebRTC
 ---
-<p>Websites and applications often need to present graphics, such as images. Static images can easily be displayed using the {{HTMLElement("img")}} element, or by setting the background of HTML elements using the {{cssxref("background-image")}} property. You can also construct graphics on-the-fly, or manipulate images after the fact. These articles provide insight into how you can accomplish this.</p>
+Websites and applications often need to present graphics, such as images. Static images can easily be displayed using the {{HTMLElement("img")}} element, or by setting the background of HTML elements using the {{cssxref("background-image")}} property. You can also construct graphics on-the-fly, or manipulate images after the fact. These articles provide insight into how you can accomplish this.
 
-<h2 id="2D_Graphics">2D Graphics</h2>
+## 2D Graphics
 
-<dl>
- <dt><a href="/en-US/docs/Web/API/Canvas_API">Canvas</a></dt>
- <dd>The {{HTMLElement("canvas")}} element provides APIs to draw 2D graphics using JavaScript.</dd>
- <dt><a href="/en-US/docs/Web/SVG">SVG</a></dt>
- <dd>Scalable Vector Graphics (SVG) lets you use lines, curves, and other geometric shapes to render graphics. With vectors, you can create images that scale cleanly to any size.</dd>
-</dl>
+- [Canvas](/en-US/docs/Web/API/Canvas_API)
+  - : The {{HTMLElement("canvas")}} element provides APIs to draw 2D graphics using JavaScript.
+- [SVG](/en-US/docs/Web/SVG)
+  - : Scalable Vector Graphics (SVG) lets you use lines, curves, and other geometric shapes to render graphics. With vectors, you can create images that scale cleanly to any size.
 
-<h2 id="3D_Graphics">3D Graphics</h2>
+## 3D Graphics
 
-<dl>
- <dt><a href="/en-US/docs/Web/API/WebGL_API">WebGL</a></dt>
- <dd>A guide to getting started with WebGL, the 3D graphics API for the Web. This technology lets you use standard OpenGL ES in web content.</dd>
-</dl>
+- [WebGL](/en-US/docs/Web/API/WebGL_API)
+  - : A guide to getting started with WebGL, the 3D graphics API for the Web. This technology lets you use standard OpenGL ES in web content.
 
-<h2 id="Video">Video</h2>
+## Video
 
-<dl>
- <dt><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Using HTML5 audio and video</a></dt>
- <dd>Embedding video and/or audio in a web page and controlling its playback.</dd>
- <dt><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></dt>
- <dd>The RTC in WebRTC stands for Real-Time Communications, a technology that enables audio/video streaming and data sharing between browser clients (peers).</dd>
-</dl>
+- [Using HTML5 audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+  - : Embedding video and/or audio in a web page and controlling its playback.
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+  - : The RTC in WebRTC stands for Real-Time Communications, a technology that enables audio/video streaming and data sharing between browser clients (peers).

@@ -4,17 +4,15 @@ slug: Web/Guide/AJAX/Community
 tags:
   - AJAX
 ---
-<p>If you know of useful mailing lists, newsgroups, forums, or other communities related to AJAX, please link to them here.</p>
+If you know of useful mailing lists, newsgroups, forums, or other communities related to AJAX, please link to them here.
 
-<h2 id="Ajax_Resources">Ajax Resources</h2>
+## Ajax Resources
 
-<h2 id="Ajax_Workshops_&amp;_Courses">Ajax Workshops and Courses</h2>
+## Ajax Workshops and Courses
 
-<ul>
- <li><a href="http://skillsmatter.com/go/ajax-ria">skillsmatter.com</a>: Courses and events on JavaScript, Ajax, and Reverse Ajax technologies</li>
- <li><a href="https://www.telerik.com/forums/aspnet-ajax">telerik.com</a>: An active community forum for Ajax</li>
- <li><a href="https://community.tableau.com/search.jspa?q=ajax">community.tableau.com</a>: Community support forum and courses available for Ajax</li>
- <li><a href="https://www.codementor.io/community/search?q=ajax">codementor.io</a>: Social platform with Ajax forums and tutorials</li>
- <li><a href="https://www.lynda.com/search?q=ajax">lynda.com</a>: Tutorials available for learning the fundamentals of Ajax</li>
- <li><a href="https://www.onlineinterviewquestions.com/ajax-interview-questions/" rel="bookmark">Ajax Interview Questions and answer</a><a href="https://www.onlineinterviewquestions.com/ajax-interview-questions/"> and answer</a>Interwiki links</li>
-</ul>
+- [skillsmatter.com](http://skillsmatter.com/go/ajax-ria): Courses and events on JavaScript, Ajax, and Reverse Ajax technologies
+- [telerik.com](https://www.telerik.com/forums/aspnet-ajax): An active community forum for Ajax
+- [community.tableau.com](https://community.tableau.com/search.jspa?q=ajax): Community support forum and courses available for Ajax
+- [codementor.io](https://www.codementor.io/community/search?q=ajax): Social platform with Ajax forums and tutorials
+- [lynda.com](https://www.lynda.com/search?q=ajax): Tutorials available for learning the fundamentals of Ajax
+- [Ajax Interview Questions and answer](https://www.onlineinterviewquestions.com/ajax-interview-questions/)[ and answer](https://www.onlineinterviewquestions.com/ajax-interview-questions/)Interwiki links

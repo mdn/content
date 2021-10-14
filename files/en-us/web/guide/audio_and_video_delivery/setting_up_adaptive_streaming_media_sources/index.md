@@ -10,288 +10,270 @@ tags:
   - Video
   - adaptive streaming
 ---
-<p>Let's say you want to set up an adaptive streaming media source on a server, to be consumed inside an HTML media element. How would you do that? This article explains how, looking at two of the most common formats: MPEG-DASH and HLS (HTTP Live Streaming.)</p>
+Let's say you want to set up an adaptive streaming media source on a server, to be consumed inside an HTML media element. How would you do that? This article explains how, looking at two of the most common formats: MPEG-DASH and HLS (HTTP Live Streaming.)
 
-<h2 id="Choosing_formats">Choosing formats</h2>
+## Choosing formats
 
-<p>In terms of adaptive streaming formats, there are many to choose from; we decided to choose the following two as between them we can support most modern browsers.</p>
+In terms of adaptive streaming formats, there are many to choose from; we decided to choose the following two as between them we can support most modern browsers.
 
-<ul>
- <li>MPEG-DASH</li>
- <li>HLS (HTTP Live Streaming)</li>
-</ul>
+- MPEG-DASH
+- HLS (HTTP Live Streaming)
 
-<p>In order to adaptively stream media we need to split the media up into chunks. We are required to provide several different quality files split up over several time points. The more qualities and time points there are, the more 'adaptive' your stream will be, but we will usually want to find a pragmatic balance between size, time to encode and adaptiveness.</p>
+In order to adaptively stream media we need to split the media up into chunks. We are required to provide several different quality files split up over several time points. The more qualities and time points there are, the more 'adaptive' your stream will be, but we will usually want to find a pragmatic balance between size, time to encode and adaptiveness.
 
-<p>The good news is that once we have encoded our media in the appropriate format we are pretty good to go. For adaptive streaming over HTTP, no special server-side components are required.</p>
+The good news is that once we have encoded our media in the appropriate format we are pretty good to go. For adaptive streaming over HTTP, no special server-side components are required.
 
-<p>Both MPEG-DASH and HLS use a playlist format to structure the component piece of media that make the possible streams. Various bitrate streams are broken into segments and placed in appropriate server folders — we have to provide our media players with a link to lookup files or playlists specifying the name and location of these stream folders.</p>
+Both MPEG-DASH and HLS use a playlist format to structure the component piece of media that make the possible streams. Various bitrate streams are broken into segments and placed in appropriate server folders — we have to provide our media players with a link to lookup files or playlists specifying the name and location of these stream folders.
 
-<h2 id="MPEG-DASH_Encoding">MPEG-DASH Encoding</h2>
+## MPEG-DASH Encoding
 
-<p>MPEG-DASH is an adaptive bitrate streaming technique that enables streaming of media content over the Internet delivered from conventional HTTP web servers.</p>
+MPEG-DASH is an adaptive bitrate streaming technique that enables streaming of media content over the Internet delivered from conventional HTTP web servers.
 
-<p>A media presentation description (MPD) file is used to hold the information on the various streams and the bandwidths they are associated with. In your video source (src) attribute you point to the MPD instead of to the media file as you would with non-adaptive media.</p>
+A media presentation description (MPD) file is used to hold the information on the various streams and the bandwidths they are associated with. In your video source (src) attribute you point to the MPD instead of to the media file as you would with non-adaptive media.
 
-<p>The MPD file tells the browser where the various pieces of media are located, it also includes meta data such as mimeType and codecs and there are other details such as byte-ranges in there too - it is an XML document and in many cases will be generated for you.</p>
+The MPD file tells the browser where the various pieces of media are located, it also includes meta data such as mimeType and codecs and there are other details such as byte-ranges in there too - it is an XML document and in many cases will be generated for you.
 
-<p>There are a few profiles we can use. We're going to take a look at Ondemand profile for Video On Demand (VOD) and the LIVE profile.</p>
+There are a few profiles we can use. We're going to take a look at Ondemand profile for Video On Demand (VOD) and the LIVE profile.
 
-<p>For live services streaming, the LIVE profile is a requirement. The stream switching capabilities are identical between the profiles.</p>
+For live services streaming, the LIVE profile is a requirement. The stream switching capabilities are identical between the profiles.
 
-<p>Other reasons to use LIVE profile over Ondemand for VOD content may be:</p>
+Other reasons to use LIVE profile over Ondemand for VOD content may be:
 
-<ol>
- <li>Your client or server does not support range requests</li>
- <li>Your server cannot cache range requests efficiently</li>
- <li>Your server cannot prefetch range requests efficiently</li>
- <li>The SIDX* is large and having to load it first slows down startup a little</li>
- <li>You want to use the original files for both DASH and other forms of delivery (such as Microsoft Smooth Streaming) as a transition strategy</li>
- <li>You can use the same media files for both live transmission and VOD at a later stage</li>
-</ol>
+1.  Your client or server does not support range requests
+2.  Your server cannot cache range requests efficiently
+3.  Your server cannot prefetch range requests efficiently
+4.  The SIDX\* is large and having to load it first slows down startup a little
+5.  You want to use the original files for both DASH and other forms of delivery (such as Microsoft Smooth Streaming) as a transition strategy
+6.  You can use the same media files for both live transmission and VOD at a later stage
 
-<p>*SIDX or SegmentIndexBox is a structure describing a segment by giving its earliest presentation time and other meta-data and can often make up a large portion of the MPD file.</p>
+\*SIDX or SegmentIndexBox is a structure describing a segment by giving its earliest presentation time and other meta-data and can often make up a large portion of the MPD file.
 
-<h3 id="Ondemand_Profile">Ondemand Profile</h3>
+### Ondemand Profile
 
-<p>This profile will allow switching between streams 'on demand' - that is to say that you only need provide a set of contiguous files and specify the bandwidth for each one and the appropriate file will be chosen automatically.</p>
+This profile will allow switching between streams 'on demand' - that is to say that you only need provide a set of contiguous files and specify the bandwidth for each one and the appropriate file will be chosen automatically.
 
-<p>Here's a simple example that provides an audio track representation and four separate video representations.</p>
+Here's a simple example that provides an audio track representation and four separate video representations.
 
-<pre class="brush: xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns="urn:mpeg:dash:schema:mpd:2011"
   xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 DASH-MPD.xsd"
   type="static"
   mediaPresentationDuration="PT654S"
   minBufferTime="PT2S"
-  profiles="urn:mpeg:dash:profile:isoff-on-demand:2011"&gt;
+  profiles="urn:mpeg:dash:profile:isoff-on-demand:2011">
 
-  &lt;BaseURL&gt;http://example.com/ondemand/&lt;/BaseURL&gt;
-  &lt;Period&gt;
-    &lt;!-- English Audio --&gt;
-    &lt;AdaptationSet mimeType="audio/mp4" codecs="mp4a.40.5" lang="en" subsegmentAlignment="true" subsegmentStartsWithSAP="1"&gt;
-      &lt;Representation id="1" bandwidth="64000"&gt;
-        &lt;BaseURL&gt;ElephantsDream_AAC48K_064.mp4.dash&lt;/BaseURL&gt;
-      &lt;/Representation&gt;
-    &lt;/AdaptationSet&gt;
-    &lt;!-- Video --&gt;
-    &lt;AdaptationSet mimeType="video/mp4" codecs="avc1.42401E" subsegmentAlignment="true" subsegmentStartsWithSAP="1"&gt;
-      &lt;Representation id="2" bandwidth="100000" width="480" height="360"&gt;
-        &lt;BaseURL&gt;ElephantsDream_H264BPL30_0100.264.dash&lt;/BaseURL&gt;
-      &lt;/Representation&gt;
-      &lt;Representation id="3" bandwidth="175000" width="480" height="360"&gt;
-        &lt;BaseURL&gt;ElephantsDream_H264BPL30_0175.264.dash&lt;/BaseURL&gt;
-      &lt;/Representation&gt;
-      &lt;Representation id="4" bandwidth="250000" width="480" height="360"&gt;
-        &lt;BaseURL&gt;ElephantsDream_H264BPL30_0250.264.dash&lt;/BaseURL&gt;
-      &lt;/Representation&gt;
-      &lt;Representation id="5" bandwidth="500000" width="480" height="360"&gt;
-        &lt;BaseURL&gt;ElephantsDream_H264BPL30_0500.264.dash&lt;/BaseURL&gt;
-      &lt;/Representation&gt;
-    &lt;/AdaptationSet&gt;
-  &lt;/Period&gt;
-&lt;/MPD&gt;</pre>
+  <BaseURL>http://example.com/ondemand/</BaseURL>
+  <Period>
+    <!-- English Audio -->
+    <AdaptationSet mimeType="audio/mp4" codecs="mp4a.40.5" lang="en" subsegmentAlignment="true" subsegmentStartsWithSAP="1">
+      <Representation id="1" bandwidth="64000">
+        <BaseURL>ElephantsDream_AAC48K_064.mp4.dash</BaseURL>
+      </Representation>
+    </AdaptationSet>
+    <!-- Video -->
+    <AdaptationSet mimeType="video/mp4" codecs="avc1.42401E" subsegmentAlignment="true" subsegmentStartsWithSAP="1">
+      <Representation id="2" bandwidth="100000" width="480" height="360">
+        <BaseURL>ElephantsDream_H264BPL30_0100.264.dash</BaseURL>
+      </Representation>
+      <Representation id="3" bandwidth="175000" width="480" height="360">
+        <BaseURL>ElephantsDream_H264BPL30_0175.264.dash</BaseURL>
+      </Representation>
+      <Representation id="4" bandwidth="250000" width="480" height="360">
+        <BaseURL>ElephantsDream_H264BPL30_0250.264.dash</BaseURL>
+      </Representation>
+      <Representation id="5" bandwidth="500000" width="480" height="360">
+        <BaseURL>ElephantsDream_H264BPL30_0500.264.dash</BaseURL>
+      </Representation>
+    </AdaptationSet>
+  </Period>
+</MPD>
+```
 
-<p>Once you have generated your MPD file you can reference it from within the video tag.</p>
+Once you have generated your MPD file you can reference it from within the video tag.
 
-<pre class="brush: html">&lt;video src="my.mpd" type="application/dash+xml"&gt;&lt;/video&gt;</pre>
+```html
+<video src="my.mpd" type="application/dash+xml"></video>
+```
 
-<p>it might be wise to provide a fallback for browsers that don't yet support MPEG-DASH:</p>
+it might be wise to provide a fallback for browsers that don't yet support MPEG-DASH:
 
-<pre class="brush: html">&lt;video&gt;
-  &lt;source src="my.mpd" type="application/dash+xml"&gt;
-  &lt;!-- fallback --&gt;
-  &lt;source src="my.mp4" type="video/mp4"&gt;
-  &lt;source src="my.webm" type="video/webm"&gt;
-&lt;/video&gt;</pre>
+```html
+<video>
+  <source src="my.mpd" type="application/dash+xml">
+  <!-- fallback -->
+  <source src="my.mp4" type="video/mp4">
+  <source src="my.webm" type="video/webm">
+</video>
+```
 
-<h3 id="LIVE_Profile">LIVE Profile</h3>
+### LIVE Profile
 
-<p>A useful piece of software when dealing with MPEG-DASH is <a href="https://github.com/slederer/DASHEncoder">Dash Encoder</a>. This uses <a href="https://gpac.wp.mines-telecom.fr/mp4box/dash/">MP4Box</a> to encode media into MPEG-DASH format.</p>
+A useful piece of software when dealing with MPEG-DASH is [Dash Encoder](https://github.com/slederer/DASHEncoder). This uses [MP4Box](https://gpac.wp.mines-telecom.fr/mp4box/dash/) to encode media into MPEG-DASH format.
 
-<div class="note">
-<p><strong>Note:</strong> You will need to be comfortable with make files and installing dependencies to get this software up and running.</p>
-</div>
+> **Note:** You will need to be comfortable with make files and installing dependencies to get this software up and running.
 
-<div class="note">
-<p><strong>Note:</strong> Since MPEG-DASH decoding is done partially using JavaScript and MSE files are often grabbed using XHR, keep same origin rules in mind.</p>
-</div>
+> **Note:** Since MPEG-DASH decoding is done partially using JavaScript and MSE files are often grabbed using XHR, keep same origin rules in mind.
 
-<div class="note">
-<p><strong>Note:</strong> If you use WebM you can use the methods shown in this tutorial <a href="/en-US/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video">DASH Adaptive Streaming for HTML 5 Video</a>.</p>
-</div>
+> **Note:** If you use WebM you can use the methods shown in this tutorial [DASH Adaptive Streaming for HTML 5 Video](/en-US/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video).
 
-<p>Once encoded your file structure may look something like this:</p>
+Once encoded your file structure may look something like this:
 
-<pre>play list -&gt;                /segments/news.mp4.mpd
+    play list ->                /segments/news.mp4.mpd
 
-main segment folder -&gt;      /segments/main/
+    main segment folder ->      /segments/main/
 
-100 Kbps segment folder -&gt;  /segments/main/news100 contains (1.m4s, 2.m4s, 3.m4s ... )
+    100 Kbps segment folder ->  /segments/main/news100 contains (1.m4s, 2.m4s, 3.m4s ... )
 
-200 Kbps segment folder -&gt;  /segments/main/news200 contains (1.m4s, 2.m4s, 3.m4s ... )
+    200 Kbps segment folder ->  /segments/main/news200 contains (1.m4s, 2.m4s, 3.m4s ... )
 
-300 Kbps segment folder -&gt;  /segments/main/news300 contains (1.m4s, 2.m4s, 3.m4s ... )
+    300 Kbps segment folder ->  /segments/main/news300 contains (1.m4s, 2.m4s, 3.m4s ... )
 
-400 Kbps segment folder -&gt;  /segments/main/news400 contains (1.m4s, 2.m4s, 3.m4s ... )</pre>
+    400 Kbps segment folder ->  /segments/main/news400 contains (1.m4s, 2.m4s, 3.m4s ... )
 
-<p>The playlist or <code>.mpd</code> file contains XML that explicitly lists where all the various bitrate files reside.</p>
+The playlist or `.mpd` file contains XML that explicitly lists where all the various bitrate files reside.
 
-<pre class="brush: xml">&lt;?xml version="1.0"?&gt;
-  &lt;MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:DASH:schema:MPD:2011"  xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011" profiles="urn:mpeg:dash:profile:isoff-main:2011" type="static" mediaPresentationDuration="PT0H9M56.46S"&gt;
-    &lt;BaseURL&gt;
+```xml
+<?xml version="1.0"?>
+  <MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:DASH:schema:MPD:2011"  xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011" profiles="urn:mpeg:dash:profile:isoff-main:2011" type="static" mediaPresentationDuration="PT0H9M56.46S">
+    <BaseURL>
       http://example.com/segments
-    &lt;/BaseURL&gt;
-    &lt;Period start="PT0S"&gt;
-      &lt;AdaptationSet bitstreamSwitching="true"&gt;
+    </BaseURL>
+    <Period start="PT0S">
+      <AdaptationSet bitstreamSwitching="true">
 
-        &lt;Representation id="0" codecs="avc1" mimeType="video/mp4" width="320" height="240" startWithSAP="1" bandwidth="46986"&gt;
-          &lt;SegmentBase&gt;
-            &lt;Initialization sourceURL="main/news100/1.m4s" range="0-862"/&gt;
-          &lt;/SegmentBase&gt;
-          &lt;SegmentList duration="1"&gt;
-            &lt;SegmentURL media="main/news100/2.m4s" mediaRange="863-7113"/&gt;
-            &lt;SegmentURL media="main/news100/3.m4s" mediaRange="7114-14104"/&gt;
-            &lt;SegmentURL media="main/news100/4.m4s" mediaRange="14105-17990"/&gt;
-          &lt;/SegmentList&gt;
-        &lt;/Representation&gt;
+        <Representation id="0" codecs="avc1" mimeType="video/mp4" width="320" height="240" startWithSAP="1" bandwidth="46986">
+          <SegmentBase>
+            <Initialization sourceURL="main/news100/1.m4s" range="0-862"/>
+          </SegmentBase>
+          <SegmentList duration="1">
+            <SegmentURL media="main/news100/2.m4s" mediaRange="863-7113"/>
+            <SegmentURL media="main/news100/3.m4s" mediaRange="7114-14104"/>
+            <SegmentURL media="main/news100/4.m4s" mediaRange="14105-17990"/>
+          </SegmentList>
+        </Representation>
 
-        &lt;Representation id="1" codecs="avc1" mimeType="video/mp4" width="320" height="240" startWithSAP="1" bandwidth="91932"&gt;
-          &lt;SegmentBase&gt;
-            &lt;Initialization sourceURL="main/news200/1.m4s" range="0-864"/&gt;
-          &lt;/SegmentBase&gt;
-          &lt;SegmentList duration="1"&gt;
-            &lt;SegmentURL media="main/news200/2.m4s" mediaRange="865-11523"/&gt;
-            &lt;SegmentURL media="main/news200/3.m4s" mediaRange="11524-25621"/&gt;
-            &lt;SegmentURL media="main/news200/4.m4s" mediaRange="25622-33693"/&gt;
-          &lt;/SegmentList&gt;
-        &lt;/Representation&gt;
+        <Representation id="1" codecs="avc1" mimeType="video/mp4" width="320" height="240" startWithSAP="1" bandwidth="91932">
+          <SegmentBase>
+            <Initialization sourceURL="main/news200/1.m4s" range="0-864"/>
+          </SegmentBase>
+          <SegmentList duration="1">
+            <SegmentURL media="main/news200/2.m4s" mediaRange="865-11523"/>
+            <SegmentURL media="main/news200/3.m4s" mediaRange="11524-25621"/>
+            <SegmentURL media="main/news200/4.m4s" mediaRange="25622-33693"/>
+          </SegmentList>
+        </Representation>
 
-        &lt;Representation id="1" codecs="avc1" mimeType="video/mp4" width="320" height="240" startWithSAP="1" bandwidth="270370"&gt;
-          &lt;SegmentBase&gt;
-            &lt;Initialization sourceURL="main/news300/1.m4s" range="0-865"/&gt;
-          &lt;/SegmentBase&gt;
-          &lt;SegmentList duration="1"&gt;
-            &lt;SegmentURL media="main/news300/2.m4s" mediaRange="866-26970"/&gt;
-            &lt;SegmentURL media="main/news300/3.m4s" mediaRange="26971-72543"/&gt;
-            &lt;SegmentURL media="main/news300/4.m4s" mediaRange="72544-95972"/&gt;
-          &lt;/SegmentList&gt;
-        &lt;/Representation&gt;
+        <Representation id="1" codecs="avc1" mimeType="video/mp4" width="320" height="240" startWithSAP="1" bandwidth="270370">
+          <SegmentBase>
+            <Initialization sourceURL="main/news300/1.m4s" range="0-865"/>
+          </SegmentBase>
+          <SegmentList duration="1">
+            <SegmentURL media="main/news300/2.m4s" mediaRange="866-26970"/>
+            <SegmentURL media="main/news300/3.m4s" mediaRange="26971-72543"/>
+            <SegmentURL media="main/news300/4.m4s" mediaRange="72544-95972"/>
+          </SegmentList>
+        </Representation>
 
         ...
 
-      &lt;/AdaptationSet&gt;
-    &lt;/Period&gt;
-  &lt;/MPD&gt;</pre>
+      </AdaptationSet>
+    </Period>
+  </MPD>
+```
 
-<p>The MPD file tells the browser where the various pieces of media are located, it also includes meta data such as mimeType and codecs and there are other details such as byte-ranges in there too. Generally these files will be generated for you.</p>
+The MPD file tells the browser where the various pieces of media are located, it also includes meta data such as mimeType and codecs and there are other details such as byte-ranges in there too. Generally these files will be generated for you.
 
-<div class="note">
-<p><strong>Note:</strong> You can also split out your audio and video streams into separate files, which can then be prioritized and served separately depending on bandwidth.</p>
-</div>
+> **Note:** You can also split out your audio and video streams into separate files, which can then be prioritized and served separately depending on bandwidth.
 
-<p>Once you have generated your MPD file you can reference as expected it from within the {{ htmlelement("video") }} element:</p>
+Once you have generated your MPD file you can reference as expected it from within the {{ htmlelement("video") }} element:
 
-<pre class="brush: html">&lt;video src="my.mpd" type="application/dash+xml"&gt;&lt;/video&gt;</pre>
+```html
+<video src="my.mpd" type="application/dash+xml"></video>
+```
 
-<p>it might be wise to provide a fallback:</p>
+it might be wise to provide a fallback:
 
-<pre class="brush: html">&lt;video&gt;
-  &lt;source src="my.mpd" type="application/dash+xml"&gt;
-  &lt;!-- fallback --&gt;
-  &lt;source src="my.mp4" type="video/mp4"&gt;
-  &lt;source src="my.webm" type="video/webm"&gt;
-&lt;/video&gt;</pre>
+```html
+<video>
+  <source src="my.mpd" type="application/dash+xml">
+  <!-- fallback -->
+  <source src="my.mp4" type="video/mp4">
+  <source src="my.webm" type="video/webm">
+</video>
+```
 
-<div class="note">
-<p><strong>Note:</strong> MPEG-DASH playback relies on <a href="https://github.com/Dash-Industry-Forum/dash.js/">dash.js</a> and browser support for <a href="https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html">Media Source Extensions</a>, see the latest <a href="https://dashif.org/reference/players/javascript/index.html">dash.js reference player</a>.</p>
-</div>
+> **Note:** MPEG-DASH playback relies on [dash.js](https://github.com/Dash-Industry-Forum/dash.js/) and browser support for [Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html), see the latest [dash.js reference player](https://dashif.org/reference/players/javascript/index.html).
 
-<h2 id="HLS_Encoding">HLS Encoding</h2>
+## HLS Encoding
 
-<p>HTTP Live Streaming (HLS) is an HTTP-based media streaming protocol implemented by Apple. It's incorporated into iOS and OSX platforms and works well on <a href="https://www.jwplayer.com/html5/hls/">mobile and desktop Safari and most Android devices with some caveats</a>.</p>
+HTTP Live Streaming (HLS) is an HTTP-based media streaming protocol implemented by Apple. It's incorporated into iOS and OSX platforms and works well on [mobile and desktop Safari and most Android devices with some caveats](https://www.jwplayer.com/html5/hls/).
 
-<p>Media is usually encoded as MPEG-4 (H.264 video and AAC audio) and packaged into an MPEG-2 Transport Stream, which is then broken into segments and saved as one or more <code>.ts</code> media files. Apple provides tools to convert media files to the appropriate format.</p>
+Media is usually encoded as MPEG-4 (H.264 video and AAC audio) and packaged into an MPEG-2 Transport Stream, which is then broken into segments and saved as one or more `.ts` media files. Apple provides tools to convert media files to the appropriate format.
 
-<h3 id="HLS_encoding_tools">HLS encoding tools</h3>
+### HLS encoding tools
 
-<p>There are a number of useful tools available for HLS encoding</p>
+There are a number of useful tools available for HLS encoding
 
-<ul>
- <li>For HLS live stream encoding <a href="http://www.adobe.com/support/downloads/product.jsp?product=160&amp;platform=Macintosh">Adobe provide a Media Encoder for Mac</a>.</li>
- <li>The Stream Segmenter — provided by Apple for Mac platforms — takes a media stream from a local network and splits media into equally sized media files together with an index file.</li>
- <li>Apple also provides a File Segmenter for Mac — which takes a suitably encoded file, splits it up and produces a index file, in a similar fashion to the Stream Segmenter.</li>
-</ul>
+- For HLS live stream encoding [Adobe provide a Media Encoder for Mac](http://www.adobe.com/support/downloads/product.jsp?product=160&platform=Macintosh).
+- The Stream Segmenter — provided by Apple for Mac platforms — takes a media stream from a local network and splits media into equally sized media files together with an index file.
+- Apple also provides a File Segmenter for Mac — which takes a suitably encoded file, splits it up and produces a index file, in a similar fashion to the Stream Segmenter.
 
-<div class="note">
-<p><strong>Note:</strong> You can find more details about these tools at <a href="https://developer.apple.com/library/mac/documentation/networkinginternet/conceptual/streamingmediaguide/UsingHTTPLiveStreaming/UsingHTTPLiveStreaming.html">Using HTTP Live Streaming</a>.</p>
-</div>
+> **Note:** You can find more details about these tools at [Using HTTP Live Streaming](https://developer.apple.com/library/mac/documentation/networkinginternet/conceptual/streamingmediaguide/UsingHTTPLiveStreaming/UsingHTTPLiveStreaming.html).
 
-<h3 id="Index_Files_(Playlists)">Index Files (Playlists)</h3>
+### Index Files (Playlists)
 
-<p>The HLS Index File (much like MPEG-DASH's <code>.mpd</code> file) contains the information on where all the media segments reside, as well as other meta data such as bandwidth application. Apple uses the <code>.m3u8</code> format (an extension of its <code>.m3u</code> playlist format) for index files — see below for an example:</p>
+The HLS Index File (much like MPEG-DASH's `.mpd` file) contains the information on where all the media segments reside, as well as other meta data such as bandwidth application. Apple uses the `.m3u8` format (an extension of its `.m3u` playlist format) for index files — see below for an example:
 
-<pre>#EXT-X-VERSION:3
-#EXTM3U
-#EXT-X-TARGETDURATION:10
-#EXT-X-MEDIA-SEQUENCE:1
+    #EXT-X-VERSION:3
+    #EXTM3U
+    #EXT-X-TARGETDURATION:10
+    #EXT-X-MEDIA-SEQUENCE:1
 
-# Old-style integer duration; avoid for newer clients.
-#EXTINF:10,
-http://media.example.com/segment0.ts
+    # Old-style integer duration; avoid for newer clients.
+    #EXTINF:10,
+    http://media.example.com/segment0.ts
 
-# New-style floating-point duration; use for modern clients.
-#EXTINF:10.0,
-http://media.example.com/segment1.ts
-#EXTINF:9.5,
-http://media.example.com/segment2.ts
-#EXT-X-ENDLIST</pre>
+    # New-style floating-point duration; use for modern clients.
+    #EXTINF:10.0,
+    http://media.example.com/segment1.ts
+    #EXTINF:9.5,
+    http://media.example.com/segment2.ts
+    #EXT-X-ENDLIST
 
-<div class="note">
-<p><strong>Note:</strong> Comprehensive information on how to encode media for Apple's HLS format can be found on <a href="https://developer.apple.com/streaming/">Apple's Developer Pages</a>.</p>
-</div>
+> **Note:** Comprehensive information on how to encode media for Apple's HLS format can be found on [Apple's Developer Pages](https://developer.apple.com/streaming/).
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p>Further resources on adaptive streaming.</p>
+Further resources on adaptive streaming.
 
-<h3 id="General_information">General information</h3>
+### General information
 
-<ul>
- <li><a href="https://www.streamingmedia.com/Articles/Editorial/Featured-Articles/Adaptive-Streaming-in-the-Field-73017.aspx">Adaptive Streaming in the Field</a></li>
-</ul>
+- [Adaptive Streaming in the Field](https://www.streamingmedia.com/Articles/Editorial/Featured-Articles/Adaptive-Streaming-in-the-Field-73017.aspx)
 
-<h3 id="HLS_overview_and_references">HLS overview and references</h3>
+### HLS overview and references
 
-<ul>
- <li><a href="https://developer.apple.com/streaming/">HTTP Live Streaming</a></li>
- <li><a href="https://www.streamingmedia.com/Articles/Editorial/What-Is-.../What-is-HLS-(HTTP-Live-Streaming)-78221.aspx">What is HLS (HTTP-Live-Streaming)?</a></li>
- <li><a href="https://developer.apple.com/library/ios/documentation/networkinginternet/conceptual/streamingmediaguide/Introduction/Introduction.html">HTTP Live Streaming Overview</a></li>
-</ul>
+- [HTTP Live Streaming](https://developer.apple.com/streaming/)
+- [What is HLS (HTTP-Live-Streaming)?](<https://www.streamingmedia.com/Articles/Editorial/What-Is-.../What-is-HLS-(HTTP-Live-Streaming)-78221.aspx>)
+- [HTTP Live Streaming Overview](https://developer.apple.com/library/ios/documentation/networkinginternet/conceptual/streamingmediaguide/Introduction/Introduction.html)
 
-<h3 id="MPEG-DASH_overview_and_references">MPEG-DASH overview and references</h3>
+### MPEG-DASH overview and references
 
-<ul>
- <li><a href="https://www-itec.uni-klu.ac.at/bib/files/p89-lederer.pdf">Dynamic Adaptive Streaming over HTTP Dataset</a></li>
- <li><a href="https://msdn.microsoft.com/en-us/library/dn551370(v=vs.85).aspx">MPEG-DASH and streaming reference and resources (MSDN)</a></li>
- <li><a href="/en-US/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video">DASH Adaptive Streaming for HTML 5 Video</a></li>
- <li><a href="https://www.slideshare.net/christian.timmerer/dynamic-adaptive-streaming-over-http-from-content-creation-to-consumption">Dynamic Adaptive Streaming over HTTP: From Content Creation to Consumption</a></li>
-</ul>
+- [Dynamic Adaptive Streaming over HTTP Dataset](https://www-itec.uni-klu.ac.at/bib/files/p89-lederer.pdf)
+- [MPEG-DASH and streaming reference and resources (MSDN)](<https://msdn.microsoft.com/en-us/library/dn551370(v=vs.85).aspx>)
+- [DASH Adaptive Streaming for HTML 5 Video](/en-US/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video)
+- [Dynamic Adaptive Streaming over HTTP: From Content Creation to Consumption](https://www.slideshare.net/christian.timmerer/dynamic-adaptive-streaming-over-http-from-content-creation-to-consumption)
 
-<h3 id="MPEG-DASH_tools">MPEG-DASH tools</h3>
+### MPEG-DASH tools
 
-<ul>
- <li><a href="https://github.com/slederer/DASHEncoder">DASHEncoder</a></li>
- <li><a href="https://gpac.wp.mines-telecom.fr/mp4box">MP4Box</a></li>
- <li><a href="https://github.com/Dash-Industry-Forum/dash.js/wiki">DASH.js Wiki</a></li>
- <li><a href="https://groups.google.com/forum/#!forum/dashjs">DASH.js Google Group</a></li>
- <li><a href="http://mediapm.edgesuite.net/dash/public/support-player/current/index.html">Akamai Dash Diagnostic Player</a></li>
-</ul>
+- [DASHEncoder](https://github.com/slederer/DASHEncoder)
+- [MP4Box](https://gpac.wp.mines-telecom.fr/mp4box)
+- [DASH.js Wiki](https://github.com/Dash-Industry-Forum/dash.js/wiki)
+- [DASH.js Google Group](https://groups.google.com/forum/#!forum/dashjs)
+- [Akamai Dash Diagnostic Player](http://mediapm.edgesuite.net/dash/public/support-player/current/index.html)
 
-<p>Adaptive streaming examples</p>
+Adaptive streaming examples
 
-<ul>
- <li><a href="https://www-itec.uni-klu.ac.at/dash/?page_id=207">ITEC – Dynamic Adaptive Streaming over HTTP</a></li>
- <li><a href="https://dash-mse-test.appspot.com/media.html">MPEG DASH Media Source Demo</a></li>
-</ul>
+- [ITEC – Dynamic Adaptive Streaming over HTTP](https://www-itec.uni-klu.ac.at/dash/?page_id=207)
+- [MPEG DASH Media Source Demo](https://dash-mse-test.appspot.com/media.html)

@@ -9,113 +9,103 @@ tags:
   - Web
   - Web Development
 ---
-<p>There are a number of methods that you can use to lay out your web pages and applications. MDN contains a number of in-depth guides to the different methods, and this page provides an overview of them all.</p>
+There are a number of methods that you can use to lay out your web pages and applications. MDN contains a number of in-depth guides to the different methods, and this page provides an overview of them all.
 
-<h2>Normal flow, block, and inline layout</h2>
+## Normal flow, block, and inline layout
 
-<p>If you are not using a flex or grid layout, then your content is laid out using normal flow, or block and inline layout. These guides will help you to understand the way this layout method works.</p>
+If you are not using a flex or grid layout, then your content is laid out using normal flow, or block and inline layout. These guides will help you to understand the way this layout method works.
 
-<dl>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow">Block and Inline layout in normal flow</a></dt>
-  <dd>An introduction to normal flow.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow">In flow and Out of flow</a></dt>
-  <dd>How to take an item out of flow, and what that does to the layout of your document.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts">Formatting contexts explained</a></dt>
-  <dd>An introduction to creating a new formatting context.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes">Flow layout and writing modes</a></dt>
-  <dd>How flow layout works if you use a different writing mode, such as vertical text.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow">Flow layout and overflow</a></dt>
-  <dd>Understanding and managing overflow.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">Introduction to the CSS basic box model</a></dt>
-  <dd>Understanding the box model is a CSS fundamental; this guide explains how it works.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">Mastering margin collapsing</a></dt>
-  <dd>Find out why you sometimes end up with less margin than you expect, due to margin collapsing in normal flow.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index">Understanding CSS z-index</a></dt>
-  <dd>Absolute positioning, flexbox, and grid all result in the stack (elements' relative position on the z-axis) to be manipulable via the <code>z-index</code> property. This article explains how to manage it.</dd>
-</dl>
+- [Block and Inline layout in normal flow](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
+  - : An introduction to normal flow.
+- [In flow and Out of flow](/en-US/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow)
+  - : How to take an item out of flow, and what that does to the layout of your document.
+- [Formatting contexts explained](/en-US/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts)
+  - : An introduction to creating a new formatting context.
+- [Flow layout and writing modes](/en-US/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes)
+  - : How flow layout works if you use a different writing mode, such as vertical text.
+- [Flow layout and overflow](/en-US/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow)
+  - : Understanding and managing overflow.
+- [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - : Understanding the box model is a CSS fundamental; this guide explains how it works.
+- [Mastering margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - : Find out why you sometimes end up with less margin than you expect, due to margin collapsing in normal flow.
+- [Understanding CSS z-index](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index)
+  - : Absolute positioning, flexbox, and grid all result in the stack (elements' relative position on the z-axis) to be manipulable via the `z-index` property. This article explains how to manage it.
 
-<h2>Multi-column layout</h2>
+## Multi-column layout
 
-<p>Multi-column layout, often referred to as multicol, takes content in normal flow, and breaks it into columns. Find out how to use this layout method in the following guides.</p>
+Multi-column layout, often referred to as multicol, takes content in normal flow, and breaks it into columns. Find out how to use this layout method in the following guides.
 
-<dl>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol">Basic concepts of Multicol</a></dt>
-  <dd>An overview of the basic functionality of multicol.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Columns/Styling_Columns">Styling columns</a></dt>
-  <dd>There is a limited amount of styling opportunities for columns; this guide explains what you can do.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Columns/Spanning_Columns">Spanning and balancing</a></dt>
-  <dd>Spanning elements across columns, and balancing the content of columns.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol">Handling overflow in Multicol</a></dt>
-  <dd>What happens when there is more content than available column space?</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Columns/Handling_content_breaks_in_multicol">Content breaks in Multicol</a></dt>
-  <dd>Dealing with content breaks as the content is split into columns.</dd>
-</dl>
+- [Basic concepts of Multicol](/en-US/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol)
+  - : An overview of the basic functionality of multicol.
+- [Styling columns](/en-US/docs/Web/CSS/CSS_Columns/Styling_Columns)
+  - : There is a limited amount of styling opportunities for columns; this guide explains what you can do.
+- [Spanning and balancing](/en-US/docs/Web/CSS/CSS_Columns/Spanning_Columns)
+  - : Spanning elements across columns, and balancing the content of columns.
+- [Handling overflow in Multicol](/en-US/docs/Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol)
+  - : What happens when there is more content than available column space?
+- [Content breaks in Multicol](/en-US/docs/Web/CSS/CSS_Columns/Handling_content_breaks_in_multicol)
+  - : Dealing with content breaks as the content is split into columns.
 
-<h2>Flexbox</h2>
+## Flexbox
 
-<p>CSS Flexible Box Layout, commonly known as flexbox, is a layout model optimized for user interface design, and the layout of items in one dimension. In the flex layout model, the children of a flex container can be laid out in any direction, and can “flex” their sizes, either growing to fill unused space or shrinking to avoid overflowing the parent.</p>
+CSS Flexible Box Layout, commonly known as flexbox, is a layout model optimized for user interface design, and the layout of items in one dimension. In the flex layout model, the children of a flex container can be laid out in any direction, and can “flex” their sizes, either growing to fill unused space or shrinking to avoid overflowing the parent.
 
-<dl>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic Concepts of Flexbox</a></dt>
-  <dd>An overview of the features of Flexbox.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods">Relationship of Flexbox to other layout methods</a></dt>
-  <dd>How Flexbox relates to other layout methods, and other CSS specifications.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning items in a flex container</a></dt>
-  <dd>How the Box Alignment properties work with Flexbox.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items">Ordering flex items</a></dt>
-  <dd>Explaining the different ways to change the order and direction of items, and covering the potential issues in doing so.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Controlling Ratios of flex items along the main axis</a></dt>
-  <dd>Explaining the <code>flex-grow</code>, <code>flex-shrink</code>, and <code>flex-basis</code> properties.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items">Mastering wrapping of flex items</a></dt>
-  <dd>How to create flex containers with multiple lines and control the display of the items along those lines.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox">Typical use cases of Flexbox</a></dt>
-  <dd>Common design patterns that are typical Flexbox use cases.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox">Backwards compatibility of Flexbox</a></dt>
-  <dd>Browser status of Flexbox, interoperability issues, and supporting older browsers and versions of the spec.</dd>
- </dl>
+- [Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+  - : An overview of the features of Flexbox.
+- [Relationship of Flexbox to other layout methods](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)
+  - : How Flexbox relates to other layout methods, and other CSS specifications.
+- [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
+  - : How the Box Alignment properties work with Flexbox.
+- [Ordering flex items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)
+  - : Explaining the different ways to change the order and direction of items, and covering the potential issues in doing so.
+- [Controlling Ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)
+  - : Explaining the `flex-grow`, `flex-shrink`, and `flex-basis` properties.
+- [Mastering wrapping of flex items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)
+  - : How to create flex containers with multiple lines and control the display of the items along those lines.
+- [Typical use cases of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)
+  - : Common design patterns that are typical Flexbox use cases.
+- [Backwards compatibility of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
+  - : Browser status of Flexbox, interoperability issues, and supporting older browsers and versions of the spec.
 
-<h2>Grid layout</h2>
+## Grid layout
 
-<p>CSS Grid Layout introduces a two-dimensional grid system to CSS. Grids can be used to lay out major page areas or small user interface elements.</p>
+CSS Grid Layout introduces a two-dimensional grid system to CSS. Grids can be used to lay out major page areas or small user interface elements.
 
-<dl>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basic concepts of Grid Layout</a></dt>
-  <dd>An overview of the features of grid layout.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship of Grid Layout to other layout methods</a></dt>
-  <dd>How grid relates to other methods such as alignment, sizing, and flexbox.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Layout using line-based placement</a></dt>
-  <dd>How to place items by numbered lines.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></dt>
-  <dd>How to place items using the grid-template syntax.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></dt>
-  <dd>How to name lines, and place items by line name rather than number.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in CSS Grid Layout</a></dt>
-  <dd>How to manage the auto-placement algorithm, and understand how the browser places items.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in CSS Grid Layout</a></dt>
-  <dd>How to align items, and distribute space on both axes in grid.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes">CSS Grid, Logical Values and Writing Modes</a></dt>
-  <dd>How to use flow relative, rather than physical, properties and values with grid.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and accessibility</a></dt>
-  <dd>Some acessibility considerations when working with grid layout.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid and progressive enhancement</a></dt>
-  <dd>How to ensure your site still works well in browsers that don't support grid.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realising common layouts using CSS Grid</a></dt>
-  <dd>Using grid to build some common layouts.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid">Subgrid</a></dt>
-  <dd>An explanation of the subgrid value, part of Grid Level 2.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout">Masonry Layout</a>{{experimental_inline}}</dt>
- <dd>An explanation of the masonry layout feature in Grid Level 3.</dd>
-</dl>
+- [Basic concepts of Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+  - : An overview of the features of grid layout.
+- [Relationship of Grid Layout to other layout methods](/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
+  - : How grid relates to other methods such as alignment, sizing, and flexbox.
+- [Layout using line-based placement](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+  - : How to place items by numbered lines.
+- [Grid template areas](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+  - : How to place items using the grid-template syntax.
+- [Layout using named grid lines](/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
+  - : How to name lines, and place items by line name rather than number.
+- [Auto-placement in CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
+  - : How to manage the auto-placement algorithm, and understand how the browser places items.
+- [Box alignment in CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
+  - : How to align items, and distribute space on both axes in grid.
+- [CSS Grid, Logical Values and Writing Modes](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes)
+  - : How to use flow relative, rather than physical, properties and values with grid.
+- [CSS Grid Layout and accessibility](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
+  - : Some acessibility considerations when working with grid layout.
+- [CSS Grid and progressive enhancement](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+  - : How to ensure your site still works well in browsers that don't support grid.
+- [Realising common layouts using CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
+  - : Using grid to build some common layouts.
+- [Subgrid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
+  - : An explanation of the subgrid value, part of Grid Level 2.
+- [Masonry Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout){{experimental_inline}}
+  - : An explanation of the masonry layout feature in Grid Level 3.
 
-<h2>Alignment</h2>
+## Alignment
 
-<dl>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables">Box alignment in block layout</a></dt>
-  <dd>The alignment properties are specified for block and inline layout, though there is no browser support as yet.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox">Box alignment in flexbox</a></dt>
-  <dd>The alignment properties first appeared with flexbox; this guide explains how they work.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout">Box alignment in grid layout</a></dt>
-  <dd>How to align items in grid layout.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout">Box alignment in multi-column layout</a></dt>
-  <dd>How alignment will work in multicol.</dd>
-</dl>
+- [Box alignment in block layout](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables)
+  - : The alignment properties are specified for block and inline layout, though there is no browser support as yet.
+- [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
+  - : The alignment properties first appeared with flexbox; this guide explains how they work.
+- [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout)
+  - : How to align items in grid layout.
+- [Box alignment in multi-column layout](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout)
+  - : How alignment will work in multicol.
