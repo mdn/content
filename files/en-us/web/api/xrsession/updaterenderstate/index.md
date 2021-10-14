@@ -54,7 +54,7 @@ None.
     - The `baseLayer` and `layers` option are both specified.
 
 - `TypeError` {{domref("DOMException")}}
-  - Thrown if the `layers` option contains duplicate instances.
+  - : Thrown if the `layers` option contains duplicate instances.
 
 ## Examples
 
