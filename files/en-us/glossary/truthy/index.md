@@ -31,5 +31,5 @@ if (-Infinity)
 ## See also
 
 - {{Glossary("Falsy")}}
-- {{Glossary("Type_Conversion", "Coercion")}}
+- {{Glossary("Type_coercion", "Coercion")}}
 - {{Glossary("Boolean")}}
