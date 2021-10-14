@@ -9,122 +9,124 @@ tags:
   - WebMechanics
   - XMLHttpRequest
 ---
-<div>{{DefaultAPISidebar("XMLHttpRequest")}}</div>
+{{DefaultAPISidebar("XMLHttpRequest")}}
 
-<p>This article guides you through the AJAX basics and gives you some simple hands-on examples to get you started.</p>
+This article guides you through the AJAX basics and gives you some simple hands-on examples to get you started.
 
-<h2 id="Whats_AJAX">What's AJAX?</h2>
+## What's AJAX?
 
-<p>AJAX stands for <strong>A</strong>synchronous <strong>J</strong>avaScript <strong>A</strong>nd <strong>X</strong>ML. In a nutshell, it is the use of the <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> object to communicate with servers. It can send and receive information in various formats, including JSON, XML, HTML, and text files. AJAX’s most appealing characteristic is its "asynchronous" nature, which means it can communicate with the server, exchange data, and update the page without having to refresh the page.</p>
+AJAX stands for **A**synchronous **J**avaScript **A**nd **X**ML. In a nutshell, it is the use of the [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) object to communicate with servers. It can send and receive information in various formats, including JSON, XML, HTML, and text files. AJAX’s most appealing characteristic is its "asynchronous" nature, which means it can communicate with the server, exchange data, and update the page without having to refresh the page.
 
-<p>The two major features of AJAX allow you to do the following:</p>
+The two major features of AJAX allow you to do the following:
 
-<ul>
- <li>Make requests to the server without reloading the page</li>
- <li>Receive and work with data from the server</li>
-</ul>
+- Make requests to the server without reloading the page
+- Receive and work with data from the server
 
-<h2 id="Step_1_–_How_to_make_an_HTTP_request">Step 1 – How to make an HTTP request</h2>
+## Step 1 – How to make an HTTP request
 
-<p>In order to make an <a href="/en-US/docs/Web/HTTP">HTTP</a> request to the server with JavaScript, you need an instance of an object with the necessary functionality. This is where <code>XMLHttpRequest</code> comes in. Its predecessor originated in Internet Explorer as an ActiveX object called <code>XMLHTTP</code>. Then, Mozilla, Safari, and other browsers followed, implementing an <code>XMLHttpRequest</code> object that supported the methods and properties of Microsoft's original ActiveX object. Meanwhile, Microsoft implemented XMLHttpRequest as well.</p>
+In order to make an [HTTP](/en-US/docs/Web/HTTP) request to the server with JavaScript, you need an instance of an object with the necessary functionality. This is where `XMLHttpRequest` comes in. Its predecessor originated in Internet Explorer as an ActiveX object called `XMLHTTP`. Then, Mozilla, Safari, and other browsers followed, implementing an `XMLHttpRequest` object that supported the methods and properties of Microsoft's original ActiveX object. Meanwhile, Microsoft implemented XMLHttpRequest as well.
 
-<pre class="brush: js">// Old compatibility code, no longer needed.
+```js
+// Old compatibility code, no longer needed.
 if (window.XMLHttpRequest) { // Mozilla, Safari, IE7+ ...
     httpRequest = new XMLHttpRequest();
 } else if (window.ActiveXObject) { // IE 6 and older
     httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
 }
-</pre>
+```
 
-<div class="note"><p><strong>Note:</strong> For illustration purposes, the above is a somewhat simplified version of the code to be used for creating an XMLHttp instance. For a more realistic example, see step 3 of this article.</p></div>
+> **Note:** For illustration purposes, the above is a somewhat simplified version of the code to be used for creating an XMLHttp instance. For a more realistic example, see step 3 of this article.
 
-<p>After making a request, you will receive a response back. At this stage, you need to tell the XMLHttp request object which JavaScript function will handle the response, by setting the <code>onreadystatechange</code> property of the object and naming it after the function to call when the request changes state, like this:</p>
+After making a request, you will receive a response back. At this stage, you need to tell the XMLHttp request object which JavaScript function will handle the response, by setting the `onreadystatechange` property of the object and naming it after the function to call when the request changes state, like this:
 
-<pre class="brush: js">httpRequest.onreadystatechange = nameOfTheFunction;</pre>
+```js
+httpRequest.onreadystatechange = nameOfTheFunction;
+```
 
-<p>Note that there are no parentheses or parameters after the function name, because you're assigning a reference to the function, rather than actually calling it. Alternatively, instead of giving a function name, you can use the JavaScript technique of defining functions on the fly (called "anonymous functions") to define the actions that will process the response, like this:</p>
+Note that there are no parentheses or parameters after the function name, because you're assigning a reference to the function, rather than actually calling it. Alternatively, instead of giving a function name, you can use the JavaScript technique of defining functions on the fly (called "anonymous functions") to define the actions that will process the response, like this:
 
-<pre class="brush: js">httpRequest.onreadystatechange = function(){
+```js
+httpRequest.onreadystatechange = function(){
     // Process the server response here.
 };
-</pre>
+```
 
-<p>Next, after declaring what happens when you receive the response, you need to actually make the request, by calling the <code>open()</code> and <code>send()</code> methods of the HTTP request object, like this:</p>
+Next, after declaring what happens when you receive the response, you need to actually make the request, by calling the `open()` and `send()` methods of the HTTP request object, like this:
 
-<pre class="brush: js">httpRequest.open('GET', 'http://www.example.org/some.file', true);
+```js
+httpRequest.open('GET', 'http://www.example.org/some.file', true);
 httpRequest.send();
-</pre>
+```
 
-<ul>
- <li>The first parameter of the call to <code>open()</code> is the HTTP request method – GET, POST, HEAD, or another method supported by your server. Keep the method all-capitals as per the HTTP standard, otherwise some browsers (like Firefox) might not process the request. For more information on the possible HTTP request methods, check the <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html">W3C specs</a>.</li>
- <li>The second parameter is the URL you're sending the request to. As a security feature, you cannot call URLs on 3rd-party domains by default. Be sure to use the exact domain name on all of your pages or you will get a "permission denied" error when you call <code>open()</code>. A common pitfall is accessing your site by <code>domain.tld</code>, but attempting to call pages with <code>www.domain.tld</code>. If you really need to send a request to another domain, see <a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>.</li>
- <li>The optional third parameter sets whether the request is asynchronous. If <code>true</code> (the default), JavaScript execution will continue and the user can interact with the page while the server response has yet to arrive. This is the first A in AJAX.</li>
-</ul>
+- The first parameter of the call to `open()` is the HTTP request method – GET, POST, HEAD, or another method supported by your server. Keep the method all-capitals as per the HTTP standard, otherwise some browsers (like Firefox) might not process the request. For more information on the possible HTTP request methods, check the [W3C specs](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html).
+- The second parameter is the URL you're sending the request to. As a security feature, you cannot call URLs on 3rd-party domains by default. Be sure to use the exact domain name on all of your pages or you will get a "permission denied" error when you call `open()`. A common pitfall is accessing your site by `domain.tld`, but attempting to call pages with `www.domain.tld`. If you really need to send a request to another domain, see [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS).
+- The optional third parameter sets whether the request is asynchronous. If `true` (the default), JavaScript execution will continue and the user can interact with the page while the server response has yet to arrive. This is the first A in AJAX.
 
-<p>The parameter to the <code>send()</code> method can be any data you want to send to the server if <code>POST</code>-ing the request. Form data should be sent in a format that the server can parse, like a query string:</p>
+The parameter to the `send()` method can be any data you want to send to the server if `POST`-ing the request. Form data should be sent in a format that the server can parse, like a query string:
 
-<pre><code>"name=value&amp;anothername="+encodeURIComponent(myVar)+"&amp;so=on"</code></pre>
+    "name=value&anothername="+encodeURIComponent(myVar)+"&so=on"
 
-<p>or other formats, like <code>multipart/form-data</code>, JSON, XML, and so on.</p>
+or other formats, like `multipart/form-data`, JSON, XML, and so on.
 
-<p>Note that if you want to <code>POST</code> data, you may have to set the MIME type of the request. For example, use the following before calling <code>send()</code> for form data sent as a query string:</p>
+Note that if you want to `POST` data, you may have to set the MIME type of the request. For example, use the following before calling `send()` for form data sent as a query string:
 
-<pre class="brush: js">httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-</pre>
+```js
+httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+```
 
-<h2 id="Step_2_–_Handling_the_server_response">Step 2 – Handling the server response</h2>
+## Step 2 – Handling the server response
 
-<p>When you sent the request, you provided the name of a JavaScript function to handle the response:</p>
+When you sent the request, you provided the name of a JavaScript function to handle the response:
 
-<pre class="brush: js">httpRequest.onreadystatechange = nameOfTheFunction;
-</pre>
+```js
+httpRequest.onreadystatechange = nameOfTheFunction;
+```
 
-<p>What should this function do? First, the function needs to check the request's state. If the state has the value of <code>XMLHttpRequest.DONE</code> (corresponding to 4), that means that the full server response was received and it's OK for you to continue processing it.</p>
+What should this function do? First, the function needs to check the request's state. If the state has the value of `XMLHttpRequest.DONE` (corresponding to 4), that means that the full server response was received and it's OK for you to continue processing it.
 
-<pre class="brush: js">if (httpRequest.readyState === XMLHttpRequest.DONE) {
+```js
+if (httpRequest.readyState === XMLHttpRequest.DONE) {
     // Everything is good, the response was received.
 } else {
     // Not ready yet.
 }
-</pre>
+```
 
-<p>The full list of the <code>readyState</code> values is documented at <a href="/en-US/docs/Web/API/XMLHttpRequest/readyState">XMLHTTPRequest.readyState</a> and is as follows:</p>
+The full list of the `readyState` values is documented at [XMLHTTPRequest.readyState](/en-US/docs/Web/API/XMLHttpRequest/readyState) and is as follows:
 
-<ul>
- <li>0 (uninitialized) or (<strong>request not initialized</strong>)</li>
- <li>1 (loading) or (<strong>server connection established</strong>)</li>
- <li>2 (loaded) or (<strong>request received</strong>)</li>
- <li>3 (interactive) or (<strong>processing request</strong>)</li>
- <li>4 (complete) or (<strong>request finished and response is ready</strong>)</li>
-</ul>
+- 0 (uninitialized) or (**request not initialized**)
+- 1 (loading) or (**server connection established**)
+- 2 (loaded) or (**request received**)
+- 3 (interactive) or (**processing request**)
+- 4 (complete) or (**request finished and response is ready**)
 
-<p>Next, check the <a href="/en-US/docs/Web/HTTP/Status">HTTP response status codes</a> of the HTTP response. The possible codes are listed at the <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">W3C</a>. In the following example, we differentiate between a successful and unsuccessful AJAX call by checking for a <a href="/en-US/docs/Web/HTTP/Status#successful_responses"><code>200 OK</code></a> response code.</p>
+Next, check the [HTTP response status codes](/en-US/docs/Web/HTTP/Status) of the HTTP response. The possible codes are listed at the [W3C](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html). In the following example, we differentiate between a successful and unsuccessful AJAX call by checking for a [`200 OK`](/en-US/docs/Web/HTTP/Status#successful_responses) response code.
 
-<pre class="brush: js">if (httpRequest.status === 200) {
+```js
+if (httpRequest.status === 200) {
     // Perfect!
 } else {
     // There was a problem with the request.
     // For example, the response may have a 404 (Not Found)
     // or 500 (Internal Server Error) response code.
 }
-</pre>
+```
 
-<p>After checking the state of the request and the HTTP status code of the response, you can do whatever you want with the data the server sent. You have two options to access that data:</p>
+After checking the state of the request and the HTTP status code of the response, you can do whatever you want with the data the server sent. You have two options to access that data:
 
-<ul>
- <li><code>httpRequest.responseText</code> – returns the server response as a string of text</li>
- <li><code>httpRequest.responseXML</code> – returns the response as an <code>XMLDocument</code> object you can traverse with JavaScript DOM functions</li>
-</ul>
+- `httpRequest.responseText` – returns the server response as a string of text
+- `httpRequest.responseXML` – returns the response as an `XMLDocument` object you can traverse with JavaScript DOM functions
 
-<p>Note that the steps above are valid only if you used an asynchronous request (the third parameter of <code>open()</code> was unspecified or set to <code>true</code>). If you used a <strong>synchronous</strong> request you don't need to specify a function, but this is highly discouraged as it makes for an awful user experience.</p>
+Note that the steps above are valid only if you used an asynchronous request (the third parameter of `open()` was unspecified or set to `true`). If you used a **synchronous** request you don't need to specify a function, but this is highly discouraged as it makes for an awful user experience.
 
-<h2 id="Step_3_–_A_Simple_Example">Step 3 – A Simple Example</h2>
+## Step 3 – A Simple Example
 
-<p>Let's put it all together with a simple HTTP request. Our JavaScript will request an HTML document, <code>test.html</code>, which contains the text "I'm a test." Then we'll <code>alert()</code> the contents of the response. Note that this example uses vanilla JavaScript — no jQuery is involved. Also, the HTML, XML and PHP files should be placed in the same directory.</p>
+Let's put it all together with a simple HTTP request. Our JavaScript will request an HTML document, `test.html`, which contains the text "I'm a test." Then we'll `alert()` the contents of the response. Note that this example uses vanilla JavaScript — no jQuery is involved. Also, the HTML, XML and PHP files should be placed in the same directory.
 
-<pre class="brush: html">&lt;button id="ajaxButton" type="button"&gt;Make a request&lt;/button&gt;
+```html
+<button id="ajaxButton" type="button">Make a request</button>
 
-&lt;script&gt;
+<script>
 (function() {
   var httpRequest;
   document.getElementById("ajaxButton").addEventListener('click', makeRequest);
@@ -151,27 +153,26 @@ httpRequest.send();
     }
   }
 })();
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<p>In this example:</p>
+In this example:
 
-<ul>
- <li>The user clicks the "Make a request" button;</li>
- <li>The event handler calls the <code>makeRequest()</code> function;</li>
- <li>The request is made and then (<code>onreadystatechange</code>) the execution is passed to <code>alertContents()</code>;</li>
- <li><code>alertContents()</code> checks if the response was received and OK, then <code>alert()</code>s the contents of the <code>test.html</code> file.</li>
-</ul>
+- The user clicks the "Make a request" button;
+- The event handler calls the `makeRequest()` function;
+- The request is made and then (`onreadystatechange`) the execution is passed to `alertContents()`;
+- `alertContents()` checks if the response was received and OK, then `alert()`s the contents of the `test.html` file.
 
-<div class="note"><p><strong>Note:</strong> If you're sending a request to a piece of code that will return XML, rather than a static HTML file, you must set response headers to work in Internet Explorer. If you do not set header <code>Content-Type: application/xml</code>, IE will throw a JavaScript "Object Expected" error after the line where you tried to access an XML element.</p></div>
+> **Note:** If you're sending a request to a piece of code that will return XML, rather than a static HTML file, you must set response headers to work in Internet Explorer. If you do not set header `Content-Type: application/xml`, IE will throw a JavaScript "Object Expected" error after the line where you tried to access an XML element.
 
-<div class="note"><p><strong>Note:</strong> If you do not set header <code>Cache-Control: no-cache</code> the browser will cache the response and never re-submit the request, making debugging challenging. You can also add an always-different GET parameter, like a timestamp or random number (see <a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#bypassing_the_cache">bypassing the cache</a>)</p></div>
+> **Note:** If you do not set header `Cache-Control: no-cache` the browser will cache the response and never re-submit the request, making debugging challenging. You can also add an always-different GET parameter, like a timestamp or random number (see [bypassing the cache](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#bypassing_the_cache))
 
-<div class="note"><p><strong>Note:</strong> If the <code>httpRequest</code> variable is used globally, competing functions calling <code>makeRequest()</code> can overwrite each other, causing a race condition. Declaring the <code>httpRequest </code>variable local to a <a href="/en-US/docs/Web/JavaScript/Closures">closure</a> containing the AJAX functions avoids this.</p></div>
+> **Note:** If the `httpRequest` variable is used globally, competing functions calling `makeRequest()` can overwrite each other, causing a race condition. Declaring the `httpRequest `variable local to a [closure](/en-US/docs/Web/JavaScript/Closures) containing the AJAX functions avoids this.
 
-<p>In the event of a communication error (such as the server going down), an exception will be thrown in the <code>onreadystatechange</code> method when accessing the response status. To mitigate this problem, you could wrap your <code>if...then</code> statement in a <code>try...catch</code>:</p>
+In the event of a communication error (such as the server going down), an exception will be thrown in the `onreadystatechange` method when accessing the response status. To mitigate this problem, you could wrap your `if...then` statement in a `try...catch`:
 
-<pre class="brush: js">function alertContents() {
+```js
+function alertContents() {
   try {
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
       if (httpRequest.status === 200) {
@@ -185,60 +186,67 @@ httpRequest.send();
     alert('Caught Exception: ' + e.description);
   }
 }
-</pre>
+```
 
-<h2 id="Step_4_–_Working_with_the_XML_response">Step 4 – Working with the XML response</h2>
+## Step 4 – Working with the XML response
 
-<p>In the previous example, after receiving the response to the HTTP request we used the request object's <code>responseText</code> property , which contained the contents of the <code>test.html</code> file. Now let's try the <code>responseXML</code> property.</p>
+In the previous example, after receiving the response to the HTTP request we used the request object's `responseText` property , which contained the contents of the `test.html` file. Now let's try the `responseXML` property.
 
-<p>First off, let's create a valid XML document that we'll request later on. The document (<code>test.xml</code>) contains the following:</p>
+First off, let's create a valid XML document that we'll request later on. The document (`test.xml`) contains the following:
 
-<pre class="brush: html">&lt;?xml version="1.0" ?&gt;
-&lt;root&gt;
+```html
+<?xml version="1.0" ?>
+<root>
     I'm a test.
-&lt;/root&gt;
-</pre>
+</root>
+```
 
-<p>In the script we only need to change the request line to:</p>
+In the script we only need to change the request line to:
 
-<pre class="brush: html">...
-onclick="makeRequest('test.xml')"&gt;
+```html
 ...
-</pre>
+onclick="makeRequest('test.xml')">
+...
+```
 
-<p>Then in <code>alertContents()</code>, we need to replace the line <code>alert(httpRequest.responseText);</code> with:</p>
+Then in `alertContents()`, we need to replace the line `alert(httpRequest.responseText);` with:
 
-<pre class="brush: js">var xmldoc = httpRequest.responseXML;
+```js
+var xmldoc = httpRequest.responseXML;
 var root_node = xmldoc.getElementsByTagName('root').item(0);
 alert(root_node.firstChild.data);
-</pre>
+```
 
-<p>This code takes the <code>XMLDocument</code> object given by <code>responseXML</code> and uses DOM methods to access some of the data contained in the XML document.</p>
+This code takes the `XMLDocument` object given by `responseXML` and uses DOM methods to access some of the data contained in the XML document.
 
-<h2 id="Step_5_–_Working_with_data">Step 5 – Working with data</h2>
+## Step 5 – Working with data
 
-<p>Finally, let's send some data to the server and receive a response. Our JavaScript will request a dynamic page this time, <code>test.php</code>, which will take the data we send and return a "computed" string - "Hello, [user data]!" - which we'll <code>alert().</code></p>
+Finally, let's send some data to the server and receive a response. Our JavaScript will request a dynamic page this time, `test.php`, which will take the data we send and return a "computed" string - "Hello, \[user data]!" - which we'll `alert().`
 
-<p>First we'll add a text box to our HTML so the user can enter their name:</p>
+First we'll add a text box to our HTML so the user can enter their name:
 
-<pre class="brush: html">&lt;label&gt;Your name:
-  &lt;input type="text" id="ajaxTextbox" /&gt;
-&lt;/label&gt;
-&lt;span id="ajaxButton" style="cursor: pointer; text-decoration: underline"&gt;
+```html
+<label>Your name:
+  <input type="text" id="ajaxTextbox" />
+</label>
+<span id="ajaxButton" style="cursor: pointer; text-decoration: underline">
   Make a request
-&lt;/span&gt;</pre>
+</span>
+```
 
-<p>We'll also add a line to our event handler to get the user's data from the text box and send it to the <code>makeRequest()</code> function along with the URL of our server-side script:</p>
+We'll also add a line to our event handler to get the user's data from the text box and send it to the `makeRequest()` function along with the URL of our server-side script:
 
-<pre class="brush: js">  document.getElementById("ajaxButton").onclick = function() {
+```js
+  document.getElementById("ajaxButton").onclick = function() {
       var userName = document.getElementById("ajaxTextbox").value;
       makeRequest('test.php',userName);
   };
-</pre>
+```
 
-<p>We need to modify <code>makeRequest()</code> to accept the user data and pass it along to the server. We'll change the request method from <code>GET</code> to <code>POST</code>, and include our data as a parameter in the call to <code>httpRequest.send()</code>:</p>
+We need to modify `makeRequest()` to accept the user data and pass it along to the server. We'll change the request method from `GET` to `POST`, and include our data as a parameter in the call to `httpRequest.send()`:
 
-<pre class="brush: js">  function makeRequest(url, userName) {
+```js
+  function makeRequest(url, userName) {
 
     ...
 
@@ -247,15 +255,16 @@ alert(root_node.firstChild.data);
     httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     httpRequest.send('userName=' + encodeURIComponent(userName));
   }
-</pre>
+```
 
-<p>The function <code>alertContents()</code> can be written the same way it was in Step 3 to alert our computed string, if that's all the server returns. However, let's say the server is going to return both the computed string and the original user data. So if our user typed "Jane" in the text box, the server's response would look like this:</p>
+The function `alertContents()` can be written the same way it was in Step 3 to alert our computed string, if that's all the server returns. However, let's say the server is going to return both the computed string and the original user data. So if our user typed "Jane" in the text box, the server's response would look like this:
 
-<p><code>{"userData":"Jane","computedString":"Hi, Jane!"}</code></p>
+`{"userData":"Jane","computedString":"Hi, Jane!"}`
 
-<p>To use this data within <code>alertContents()</code>, we can't just alert the <code>responseText</code>, we have to parse it and alert <code>computedString</code>, the property we want:</p>
+To use this data within `alertContents()`, we can't just alert the `responseText`, we have to parse it and alert `computedString`, the property we want:
 
-<pre class="brush: js">function alertContents() {
+```js
+function alertContents() {
   if (httpRequest.readyState === XMLHttpRequest.DONE) {
     if (httpRequest.status === 200) {
       var response = JSON.parse(httpRequest.responseText);
@@ -264,46 +273,50 @@ alert(root_node.firstChild.data);
       alert('There was a problem with the request.');
     }
   }
-}</pre>
+}
+```
 
-<p>The <code>test.php</code> file should contain the following:</p>
+The `test.php` file should contain the following:
 
-<pre class="brush: php">$name = (isset($_POST['userName'])) ? $_POST['userName'] : 'no name';
-$computedString = &quot;Hi, &quot; . $name . &quot;!&quot;;
-$array = ['userName' =&gt; $name, 'computedString' =&gt; $computedString];
-echo json_encode($array);</pre>
+```php
+$name = (isset($_POST['userName'])) ? $_POST['userName'] : 'no name';
+$computedString = "Hi, " . $name . "!";
+$array = ['userName' => $name, 'computedString' => $computedString];
+echo json_encode($array);
+```
 
-<p>For more on DOM methods, be sure to check out <a href="/en-US/docs/Web/API/Document_Object_Model">Document Object Model (DOM)</a>.</p>
+For more on DOM methods, be sure to check out [Document Object Model (DOM)](/en-US/docs/Web/API/Document_Object_Model).
 
-<h2 id="Simple_timed_XHR_example">Simple timed XHR example</h2>
+## Simple timed XHR example
 
-<p>Another simple example follows — here we are loading a text file via XHR, the structure of which is assumed to be like this:</p>
+Another simple example follows — here we are loading a text file via XHR, the structure of which is assumed to be like this:
 
-<pre>TIME: 312.05
-TIME: 312.07
-TIME: 312.10
-TIME: 312.12
-TIME: 312.14
-TIME: 312.15</pre>
+    TIME: 312.05
+    TIME: 312.07
+    TIME: 312.10
+    TIME: 312.12
+    TIME: 312.14
+    TIME: 312.15
 
-<p>Once the text file is loaded, we <code>split()</code> the items into an array at each newline character (<code>\n</code> — basically where each line break is in the text file), and then print the complete list of timestamps, and the last timestamp, onto the page.</p>
+Once the text file is loaded, we `split()` the items into an array at each newline character (`\n` — basically where each line break is in the text file), and then print the complete list of timestamps, and the last timestamp, onto the page.
 
-<p>This is repeated every 5 seconds, using a <code>setInterval()</code> call. The idea would be that a server-side script of some kind would continually update the text file with new timestamps, and our XHR code would be used to report the latest timestamp on the client-side.</p>
+This is repeated every 5 seconds, using a `setInterval()` call. The idea would be that a server-side script of some kind would continually update the text file with new timestamps, and our XHR code would be used to report the latest timestamp on the client-side.
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;XHR log time&lt;/title&gt;
-    &lt;style&gt;
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>XHR log time</title>
+    <style>
 
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p id="writeData" class="data"&gt;Off-Line&lt;/p&gt;
-    &lt;p id="lastStamp"&gt;No Data yet&lt;/p&gt;
+    </style>
+  </head>
+  <body>
+    <p id="writeData" class="data">Off-Line</p>
+    <p id="lastStamp">No Data yet</p>
 
-    &lt;script&gt;
+    <script>
 
     const fullData = document.getElementById('writeData');
     const lastData = document.getElementById('lastStamp');
@@ -332,6 +345,7 @@ TIME: 312.15</pre>
     }
 
     setInterval(fetchData, 5000);
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+    </script>
+  </body>
+</html>
+```

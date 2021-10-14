@@ -9,47 +9,47 @@ tags:
   - Web Standards
   - XML
 ---
-<p><strong>XHTML</strong> is a term that was historically used to describe <a href="/en-US/docs/Web/HTML">HTML</a> documents written to conform with {{Glossary("XML")}} syntax rules.</p>
+**XHTML** is a term that was historically used to describe [HTML](/en-US/docs/Web/HTML) documents written to conform with {{Glossary("XML")}} syntax rules.
 
-<p>The following example shows an HTML document and corresponding "XHTML" document, and the accompanying {{Glossary("HTTP")}} {{HTTPHeader("Content-Type")}} headers they should be served with.</p>
+The following example shows an HTML document and corresponding "XHTML" document, and the accompanying {{Glossary("HTTP")}} {{HTTPHeader("Content-Type")}} headers they should be served with.
 
-<h3 id="HTML_document">HTML document</h3>
+### HTML document
 
-<pre class="brush: html">Content-Type: text/html
+```html
+Content-Type: text/html
 
-&lt;!DOCTYPE html&gt;
-&lt;html lang=en&gt;
-  &lt;head&gt;
-    &lt;meta charset=utf-8&gt;
-    &lt;title&gt;HTML&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;I am a HTML document&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+    <meta charset=utf-8>
+    <title>HTML</title>
+  </head>
+  <body>
+    <p>I am a HTML document</p>
+  </body>
+</html>
+```
 
-<h3 id="XHTML_document">XHTML document</h3>
+### XHTML document
 
-<pre class="brush: xml">Content-Type: application/xhtml+xml
+```xml
+Content-Type: application/xhtml+xml
 
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"&gt;
-  &lt;head&gt;
-    &lt;title&gt;XHTML&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;I am a XHTML document&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>XHTML</title>
+  </head>
+  <body>
+    <p>I am a XHTML document</p>
+  </body>
+</html>
+```
 
-<p>In practice, very few "XHTML" documents are served over the web with a <code>Content-Type: application/xhtml+xml</code> header. Instead, even though the documents are written to conform to XML syntax rules, they are served with a <code>Content-Type: text/html</code> header — so browsers parse those documents using HTML parsers rather than XML parsers, which can cause a variety of sometimes-very-surprising problems. The problems are described in more details in the following articles:</p>
+In practice, very few "XHTML" documents are served over the web with a `Content-Type: application/xhtml+xml` header. Instead, even though the documents are written to conform to XML syntax rules, they are served with a `Content-Type: text/html` header — so browsers parse those documents using HTML parsers rather than XML parsers, which can cause a variety of sometimes-very-surprising problems. The problems are described in more details in the following articles:
 
-<ul>
- <li><a href="http://www.webdevout.net/articles/beware-of-xhtml">Beware of XHTML</a> by David Hammond</li>
- <li><a href="http://www.hixie.ch/advocacy/xhtml">Sending XHTML as text/html Considered Harmful</a> by Ian Hickson</li>
- <li><a href="http://www.xml.com/pub/a/2003/03/19/dive-into-xml.html">XHTML's Dirty Little Secret</a> by Mark Pilgrim</li>
- <li><a href="http://hsivonen.iki.fi/xhtml-the-point/">XHTML - What's the Point?</a> by Henri Sivonen</li>
- <li><a href="http://lachy.id.au/log/2005/12/xhtml-beginners">XHTML is not for Beginners</a> by Lachlan Hunt</li>
-</ul>
+- [Beware of XHTML](http://www.webdevout.net/articles/beware-of-xhtml) by David Hammond
+- [Sending XHTML as text/html Considered Harmful](http://www.hixie.ch/advocacy/xhtml) by Ian Hickson
+- [XHTML's Dirty Little Secret](http://www.xml.com/pub/a/2003/03/19/dive-into-xml.html) by Mark Pilgrim
+- [XHTML - What's the Point?](http://hsivonen.iki.fi/xhtml-the-point/) by Henri Sivonen
+- [XHTML is not for Beginners](http://lachy.id.au/log/2005/12/xhtml-beginners) by Lachlan Hunt

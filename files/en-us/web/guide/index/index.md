@@ -5,6 +5,6 @@ tags:
   - Guide
   - Index
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>{{Index("/en-US/docs/Web/Guide")}}</p>
+{{Index("/en-US/docs/Web/Guide")}}

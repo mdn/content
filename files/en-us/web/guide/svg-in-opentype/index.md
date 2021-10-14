@@ -7,8 +7,8 @@ tags:
   - Guide
   - NeedsContent
 ---
-<div>{{QuickLinksWithSubpages("/en-US/docs/Web/Guide")}}</div>
+{{QuickLinksWithSubpages("/en-US/docs/Web/Guide")}}
 
-<p>{{Draft}}</p>
+{{Draft}}
 
-<p>The <strong>SVG-in-OpenType</strong> work is currently in the hands of the <a href="https://mpeg.chiariglione.org/">MPEG group</a>. Once we're ready for wider adoption the information from <a href="https://wiki.mozilla.org/SVGOpenTypeFonts">wiki.mozilla.org</a> will be moved here, updated and expanded.</p>
+The **SVG-in-OpenType** work is currently in the hands of the [MPEG group](https://mpeg.chiariglione.org/). Once we're ready for wider adoption the information from [wiki.mozilla.org](https://wiki.mozilla.org/SVGOpenTypeFonts) will be moved here, updated and expanded.

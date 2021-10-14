@@ -7,58 +7,35 @@ tags:
   - WOFF
   - WOFF2
 ---
-<p><strong>WOFF</strong> (the <strong>Web Open Font Format</strong>) is a web font format developed by Mozilla in concert with Type Supply, LettError, and other organizations. It uses a compressed version of the same table-based <code>sfnt</code> structure used by TrueType, OpenType, and Open Font Format, but adds metadata and private-use data structures, including predefined fields allowing foundries and vendors to provide license information if desired.</p>
+**WOFF** (the **Web Open Font Format**) is a web font format developed by Mozilla in concert with Type Supply, LettError, and other organizations. It uses a compressed version of the same table-based `sfnt` structure used by TrueType, OpenType, and Open Font Format, but adds metadata and private-use data structures, including predefined fields allowing foundries and vendors to provide license information if desired.
 
-<p>There are three main benefits to using WOFF:</p>
+There are three main benefits to using WOFF:
 
-<ol>
- <li>The font data is compressed, so sites using WOFF will use less bandwidth and will load faster than if they used equivalent uncompressed TrueType or OpenType files.</li>
- <li>Many font vendors that are unwilling to license their TrueType or OpenType format fonts for use on the web will license WOFF format fonts. This improves availability of fonts to site designers.</li>
- <li>Both proprietary and free software browser vendors like the WOFF format, so it has the potential of becoming a truly universal, interoperable font format for the web, unlike other current font formats.</li>
-</ol>
+1.  The font data is compressed, so sites using WOFF will use less bandwidth and will load faster than if they used equivalent uncompressed TrueType or OpenType files.
+2.  Many font vendors that are unwilling to license their TrueType or OpenType format fonts for use on the web will license WOFF format fonts. This improves availability of fonts to site designers.
+3.  Both proprietary and free software browser vendors like the WOFF format, so it has the potential of becoming a truly universal, interoperable font format for the web, unlike other current font formats.
 
-<p>There are two versions of WOFF; WOFF and WOFF2, they mostly differ in regard to the compression algorithm used. In {{cssxref("@font-face")}} they are identified by the <code>'woff'</code> and <code>'woff2'</code> format descriptor respectively.</p>
+There are two versions of WOFF; WOFF and WOFF2, they mostly differ in regard to the compression algorithm used. In {{cssxref("@font-face")}} they are identified by the `'woff'` and `'woff2'` format descriptor respectively.
 
-<h2 id="Using_WOFF">Using WOFF</h2>
+## Using WOFF
 
-<p>You can use the {{cssxref("@font-face")}} CSS property to use WOFF fonts for text in web content. It works exactly like OpenType and TrueType format fonts do, except it will likely let your content download more efficiently due to the addition of compression.</p>
+You can use the {{cssxref("@font-face")}} CSS property to use WOFF fonts for text in web content. It works exactly like OpenType and TrueType format fonts do, except it will likely let your content download more efficiently due to the addition of compression.
 
-<h2 id="Tools_for_working_with_WOFF_fonts">Tools for working with WOFF fonts</h2>
+## Tools for working with WOFF fonts
 
-<ul>
- <li><a href="https://github.com/odemiral/woff2sfnt-sfnt2woff">Tools for working with WOFF</a> fonts are available. <code>sfnt2woff</code> and <code>woff2sfnt</code> convert between WOFF and OpenType.</li>
-</ul>
+- [Tools for working with WOFF](https://github.com/odemiral/woff2sfnt-sfnt2woff) fonts are available. `sfnt2woff` and `woff2sfnt` convert between WOFF and OpenType.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WOFF2.0', '', '')}}</td>
-   <td>{{Spec2('WOFF2.0')}}</td>
-   <td>New compression algorithm</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('WOFF1.0', '', '')}}</td>
-   <td>{{Spec2('WOFF1.0')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                            | Status                       | Comment                   |
+| ---------------------------------------- | ---------------------------- | ------------------------- |
+| {{SpecName('WOFF2.0', '', '')}} | {{Spec2('WOFF2.0')}} | New compression algorithm |
+| {{SpecName('WOFF1.0', '', '')}} | {{Spec2('WOFF1.0')}} | Initial specification.    |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("css.at-rules.font-face")}}</p>
+{{Compat("css.at-rules.font-face")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("@font-face")}}</li>
-</ul>
+- {{cssxref("@font-face")}}

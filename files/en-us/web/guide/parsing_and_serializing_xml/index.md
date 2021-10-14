@@ -19,28 +19,27 @@ tags:
   - XMLDocument
   - XMLHttpRequest
 ---
-<p>At times, you may need to parse {{Glossary("XML")}} content and convert it into a {{Glossary("DOM")}} tree, or, conversely, serialize an existing DOM tree into XML. In this article, we'll look at the objects provided by the web platform to make the common tasks of serializing and parsing XML easy.</p>
+At times, you may need to parse {{Glossary("XML")}} content and convert it into a {{Glossary("DOM")}} tree, or, conversely, serialize an existing DOM tree into XML. In this article, we'll look at the objects provided by the web platform to make the common tasks of serializing and parsing XML easy.
 
-<dl>
-	<dt>{{domxref("XMLSerializer")}}</dt>
-	<dd>Serializes DOM trees, converting them into strings containing XML.</dd>
-	<dt>{{domxref("DOMParser")}}</dt>
-	<dd>Constructs a DOM tree by parsing a string containing XML, returning a {{domxref("XMLDocument")}} or {{domxref("Document")}} as appropriate based on the input data.</dd>
-	<dt>{{domxref("XMLHttpRequest")}}</dt>
-	<dd>Loads content from a URL; XML content is returned as an XML {{domxref("Document")}} object with a DOM tree built from the XML itself.</dd>
-	<dt><a href="/en-US/docs/Web/XPath">XPath</a></dt>
-	<dd>A technology for creating strings that contain addresses for specific portions of an XML document, and locating XML nodes based on those addresses.</dd>
-</dl>
+- {{domxref("XMLSerializer")}}
+  - : Serializes DOM trees, converting them into strings containing XML.
+- {{domxref("DOMParser")}}
+  - : Constructs a DOM tree by parsing a string containing XML, returning a {{domxref("XMLDocument")}} or {{domxref("Document")}} as appropriate based on the input data.
+- {{domxref("XMLHttpRequest")}}
+  - : Loads content from a URL; XML content is returned as an XML {{domxref("Document")}} object with a DOM tree built from the XML itself.
+- [XPath](/en-US/docs/Web/XPath)
+  - : A technology for creating strings that contain addresses for specific portions of an XML document, and locating XML nodes based on those addresses.
 
-<h2 id="Creating_an_XML_document">Creating an XML document</h2>
+## Creating an XML document
 
-<p>Using one of the following approaches to create an XML document (which is an instance of {{domxref("Document")}}.</p>
+Using one of the following approaches to create an XML document (which is an instance of {{domxref("Document")}}.
 
-<h3 id="Parsing_strings_into_DOM_trees">Parsing strings into DOM trees</h3>
+### Parsing strings into DOM trees
 
-<p>This example converts an XML fragment in a string into a DOM tree using a {{domxref("DOMParser")}}:</p>
+This example converts an XML fragment in a string into a DOM tree using a {{domxref("DOMParser")}}:
 
-<pre class="brush: js">const xmlStr = '&lt;a id="a"&gt;&lt;b id="b"&gt;hey!&lt;/b&gt;&lt;/a&gt;';
+```js
+const xmlStr = '<a id="a"><b id="b">hey!</b></a>';
 const parser = new DOMParser();
 const doc = parser.parseFromString(xmlStr, "application/xml");
 // print the name of the root element or error message
@@ -50,15 +49,16 @@ if (errorNode) {
 } else {
   console.log(dom.documentElement.nodeName);
 }
-</pre>
+```
 
-<h3 id="Parsing_URL-addressable_resources_into_DOM_trees">Parsing URL-addressable resources into DOM trees</h3>
+### Parsing URL-addressable resources into DOM trees
 
-<h4 id="Using_XMLHttpRequest">Using XMLHttpRequest</h4>
+#### Using XMLHttpRequest
 
-<p>Here is sample code that reads and parses a URL-addressable XML file into a DOM tree:</p>
+Here is sample code that reads and parses a URL-addressable XML file into a DOM tree:
 
-<pre class="brush: js">const xhr = new XMLHttpRequest();
+```js
+const xhr = new XMLHttpRequest();
 
 xhr.onload = function() {
   dump(xhr.responseXML.documentElement.nodeName);
@@ -71,48 +71,49 @@ xhr.onerror = function() {
 xhr.open("GET", "example.xml");
 xhr.responseType = "document";
 xhr.send();
-</pre>
+```
 
-<p>The value returned in the <code>xhr</code> object's {{domxref("XMLHttpRequest.responseXML", "responseXML")}} field is a {{domxref("Document")}} constructed by parsing the XML.</p>
+The value returned in the `xhr` object's {{domxref("XMLHttpRequest.responseXML", "responseXML")}} field is a {{domxref("Document")}} constructed by parsing the XML.
 
-<p>If the document is {{Glossary("HTML")}}, the code shown above will return a {{domxref("Document")}}. If the document is XML, the resulting object is actually a {{domxref("XMLDocument")}}. The two types are essentially the same; the difference is largely historical, although differentiating has some practical benefits as well.</p>
+If the document is {{Glossary("HTML")}}, the code shown above will return a {{domxref("Document")}}. If the document is XML, the resulting object is actually a {{domxref("XMLDocument")}}. The two types are essentially the same; the difference is largely historical, although differentiating has some practical benefits as well.
 
-<div class="note">
-<p><strong>Note:</strong> There is in fact an {{domxref("HTMLDocument")}} interface as well, but it is not necessarily an independent type. In some browsers it is, while in others it is an alias for the <code>Document</code> interface.</p>
-</div>
+> **Note:** There is in fact an {{domxref("HTMLDocument")}} interface as well, but it is not necessarily an independent type. In some browsers it is, while in others it is an alias for the `Document` interface.
 
-<h2 id="Serializing_an_XML_document">Serializing an XML document</h2>
+## Serializing an XML document
 
-<p>Given a {{domxref("Document")}}, you can serialize the document's DOM tree back into XML using the {{domxref("XMLSerializer.serializeToString()")}} method.</p>
+Given a {{domxref("Document")}}, you can serialize the document's DOM tree back into XML using the {{domxref("XMLSerializer.serializeToString()")}} method.
 
-<p>Use the following approaches to serialize the contents of the XML document you created in the previous section.</p>
+Use the following approaches to serialize the contents of the XML document you created in the previous section.
 
-<h3 id="Serializing_DOM_trees_to_strings">Serializing DOM trees to strings</h3>
+### Serializing DOM trees to strings
 
-<p>First, create a DOM tree as described in <a href="/en-US/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree">How to Create a DOM tree</a>. Alternatively, use a DOM tree obtained from {{ domxref("XMLHttpRequest") }}.</p>
+First, create a DOM tree as described in [How to Create a DOM tree](/en-US/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree). Alternatively, use a DOM tree obtained from {{ domxref("XMLHttpRequest") }}.
 
-<p>To serialize the DOM tree <code>doc</code> into XML text, call {{domxref("XMLSerializer.serializeToString()")}}:</p>
+To serialize the DOM tree `doc` into XML text, call {{domxref("XMLSerializer.serializeToString()")}}:
 
-<pre class="brush: js">const serializer = new XMLSerializer();
-const xmlStr = serializer.serializeToString(doc);</pre>
+```js
+const serializer = new XMLSerializer();
+const xmlStr = serializer.serializeToString(doc);
+```
 
-<h3 id="Serializing_HTML_documents">Serializing HTML documents</h3>
+### Serializing HTML documents
 
-<p>If the DOM you have is an HTML document, you can serialize using <code>serializeToString()</code>, but there is a simpler option: just use the {{domxref("Element.innerHTML")}} property (if you want just the descendants of the specified node) or the {{domxref("Element.outerHTML")}} property if you want the node and all its descendants.</p>
+If the DOM you have is an HTML document, you can serialize using `serializeToString()`, but there is a simpler option: just use the {{domxref("Element.innerHTML")}} property (if you want just the descendants of the specified node) or the {{domxref("Element.outerHTML")}} property if you want the node and all its descendants.
 
-<pre class="brush: js">const docInnerHtml = document.documentElement.innerHTML;
-</pre>
+```js
+const docInnerHtml = document.documentElement.innerHTML;
+```
 
-<p>As a result, <code>docHTML</code> is a {{domxref("DOMString")}} containing the HTML of the contents of the document; that is, the {{HTMLElement("body")}} element's contents.</p>
+As a result, `docHTML` is a {{domxref("DOMString")}} containing the HTML of the contents of the document; that is, the {{HTMLElement("body")}} element's contents.
 
-<p>You can get HTML corresponding to the <code>&lt;body&gt;</code> <em>and</em> its descendants with this code:</p>
+You can get HTML corresponding to the `<body>` _and_ its descendants with this code:
 
-<pre class="brush: js">const docOuterHtml = document.documentElement.outerHTML;</pre>
+```js
+const docOuterHtml = document.documentElement.outerHTML;
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/XPath">XPath</a></li>
-	<li>{{domxref("XMLHttpRequest")}}</li>
-	<li>{{domxref("Document")}}, {{domxref("XMLDocument")}}, and {{domxref("HTMLDocument")}}</li>
-</ul>
+- [XPath](/en-US/docs/Web/XPath)
+- {{domxref("XMLHttpRequest")}}
+- {{domxref("Document")}}, {{domxref("XMLDocument")}}, and {{domxref("HTMLDocument")}}
