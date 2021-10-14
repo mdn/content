@@ -46,10 +46,10 @@ tags:
   aspect-ratio: attr(width) / attr(height);
 }</pre>
 
-<p>This actually affects any element that acts as a container for complex or mixed visual media — {{htmlelement("embed")}}, {{htmlelement("iframe")}}, {{htmlelement("marquee")}}, {{htmlelement("object")}}, {{htmlelement("table")}}, and {{htmlelement("video")}}, in addition to actual images ({{htmlelement("img")}} and <strong id="docs-internal-guid-1a994dc9-7fff-a700-71f0-25b6cfe48215"> </strong><code>&lt;input type="image"&gt;</code>). When such an element has <code>width</code> and <code>height</code> attributes set on it, its aspect ratio will be calculated before load time, and be available to the browser.</p>
+<p>This actually affects any element that acts as a container for complex or mixed visual media — {{htmlelement("embed")}}, {{htmlelement("iframe")}}, {{htmlelement("marquee")}}, {{htmlelement("object")}}, {{htmlelement("table")}}, and {{htmlelement("video")}}, in addition to actual images ({{htmlelement("img")}} and <code>&lt;input type="image"&gt;</code>). When such an element has <code>width</code> and <code>height</code> attributes set on it, its aspect ratio will be calculated before load time, and be available to the browser.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Currently on Firefox this effect is being limited to actual <code>&lt;img&gt;</code> elements, as applying to other such elements may have undesirable results. See ({{bug(1583980)}}).</p>
+<p><strong>Note:</strong> Currently on Firefox this effect is being limited to actual <code>&lt;img&gt;</code> elements, as applying to other such elements may have undesirable results. See ({{bug(1583980)}}).</p>
 </div>
 
 <p>When the <code>width</code>/<code>height</code> of an <code>&lt;img&gt;</code> element — as set using HTML attributes — is overridden using CSS using something like this:</p>

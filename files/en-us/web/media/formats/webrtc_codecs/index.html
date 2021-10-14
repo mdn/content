@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Containerless_media">Containerless media</h2>
 
-<p>WebRTC uses bare {{domxref("MediaStreamTrack")}} objects for each track being shared from one peer to another, without a container or even a {{domxref("MediaStream")}} associated with the tracks. Which codecs can be within those tracks is not mandated by the WebRTC specification. However, {{RFC(7742)}} specifies that all WebRTC-compatible browsers must support <a href="/en-US/docs/Web/Media/Formats/Video_codecs#vp8">VP8</a> and <a href="/en-US/docs/Web/Media/Formats/Video_codecs#avc_(h.264)">H.264</a>'s Constrained Baseline profile for video, and {{RFC(7874)}} specifies that browsers must support at least the <a href="/en-US/docs/Web/Media/Formats/Audio_codecs#opus">Opus</a> codec as well as <a href="/en-US/docs/Web/Media/Formats/Audio_codecs#g.711">G.711</a>'s PCMA and PCMU formats.</p>
+<p>WebRTC uses bare {{domxref("MediaStreamTrack")}} objects for each track being shared from one peer to another, without a container or even a {{domxref("MediaStream")}} associated with the tracks. Which codecs can be within those tracks is not mandated by the WebRTC specification. However, {{RFC(7742)}} specifies that all WebRTC-compatible browsers must support <a href="/en-US/docs/Web/Media/Formats/Video_codecs#vp8">VP8</a> and <a href="/en-US/docs/Web/Media/Formats/Video_codecs#avc_(h.264)">H.264</a>'s Constrained Baseline profile for video, and {{RFC(7874)}} specifies that browsers must support at least the <a href="/en-US/docs/Web/Media/Formats/Audio_codecs#opus">Opus</a> codec as well as <a href="/en-US/docs/Web/Media/Formats/Audio_codecs#g.711_pulse_code_modulation_of_voice_frequencies">G.711</a>'s PCMA and PCMU formats.</p>
 
 <p>These two RFCs also lay out options that must be supported for each codec, as well as specific user comfort features such as echo cancelation. This guide reviews the codecs that browsers are required to implement as well as other codecs that some or all browsers support for WebRTC.</p>
 
@@ -55,12 +55,13 @@ tags:
   <tr>
    <th scope="row">{{anch("AVC", "AVC / H.264")}}</th>
    <td>Constrained Baseline (CB)</td>
-   <td>Chrome (52+), Edge, Firefox<sup><a href="#supported-foot-1">[1]</a></sup>, Safari</td>
+   <td>
+     <p>Chrome (52+), Edge, Firefox, Safari</p>
+     <p>Firefox for Android 68 and later do not support AVC (H.264) anymore. This is due to a change in Google Play store requirements that prevent Firefox from downloading and installing the OpenH264 codec needed to handle H.264 in WebRTC connections. See <a href="https://support.mozilla.org/en-US/kb/firefox-android-openh264">this article on SUMO</a> for details.</p>
+   </td>
   </tr>
  </tbody>
 </table>
-
-<p><a name="supported-foot-1">[1]</a> Firefox for Android 68 and later do not support AVC (H.264) anymore. This is due to a change in Google Play store requirements that prevent Firefox from downloading and installing the OpenH264 codec needed to handle H.264 in WebRTC connections. See <a href="https://support.mozilla.org/en-US/kb/firefox-android-openh264">this article on SUMO</a> for details.</p>
 
 <p>For details on WebRTC-related considerations for each codec, see the sub-sections below by following the links on each codec's name.</p>
 
@@ -177,11 +178,11 @@ tags:
    <td>Chrome, Edge, Firefox, Safari</td>
   </tr>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_codecs#g.711">G.711 PCM (A-law)</a></th>
+   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_codecs#g.711_pulse_code_modulation_of_voice_frequencies">G.711 PCM (A-law)</a></th>
    <td>Chrome, Firefox, Safari</td>
   </tr>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_codecs#g.711">G.711 PCM (µ-law)</a></th>
+   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_codecs#g.711_pulse_code_modulation_of_voice_frequencies">G.711 PCM (µ-law)</a></th>
    <td>Chrome, Firefox, Safari</td>
   </tr>
  </tbody>
@@ -211,19 +212,19 @@ tags:
    <td>Chrome, Firefox, Safari</td>
   </tr>
   <tr>
-   <th scope="row">iLBC<sup><a href="#other-audio-foot-1">[1]</a></sup></th>
+   <th scope="row">iLBC</th>
    <td>Chrome, Safari</td>
   </tr>
   <tr>
-   <th scope="row">iSAC<sup><a href="#other-audio-foot-2">[2]</a></sup></th>
+   <th scope="row">iSAC</th>
    <td>Chrome, Safari</td>
   </tr>
  </tbody>
 </table>
 
-<p><a id="other-audio-foot-1">[1]</a> <strong>{{interwiki("wikipedia", "Internet Low Bitrate Codec")}}</strong> (<strong>iLBC</strong>) is an open-source narrow-band codec developed by Global IP Solutions and now Google, designed specifically for streaming voice audio. Google and some other browser developers have adopted it for WebRTC, but it is not available in all browsers and is not one of the mandatory codecs.</p>
+<p><strong>{{interwiki("wikipedia", "Internet Low Bitrate Codec")}}</strong> (<strong>iLBC</strong>) is an open-source narrow-band codec developed by Global IP Solutions and now Google, designed specifically for streaming voice audio. Google and some other browser developers have adopted it for WebRTC.</p>
 
-<p><a id="other-audio-foot-2">[2]</a> The <strong>{{interwiki("wikipedia", "Internet Speech Audio Codec")}}</strong> (<strong>iSAC</strong>) is another codec developed by Global IP Solutions and now owned by Google, which has open-sourced it. It's used by Google Talk, QQ, and other instant messaging clients and is specifically designed for voice transmissions which are encapsulated within an RTP stream. While it's not a mandatory codec, Safari and Chrome support it. Firefox and Edge do not.</p>
+<p>The <strong>{{interwiki("wikipedia", "Internet Speech Audio Codec")}}</strong> (<strong>iSAC</strong>) is another codec developed by Global IP Solutions and now owned by Google, which has open-sourced it. It's used by Google Talk, QQ, and other instant messaging clients and is specifically designed for voice transmissions which are encapsulated within an RTP stream.</p>
 
 <p><strong>{{interwiki("wikipedia", "Comfort noise")}}</strong> (<strong>CN</strong>) is a form of artificial background noise which is used to fill gaps in a transmission instead of using pure silence. This helps to avoid a jarring effect that can occur when voice activation and similar features cause a stream to stop sending data temporarily—a capability known as Discontinuous Transmission (DTX). In {{RFC(3389)}}, a method for providing an appropriate filler to use during silences.</p>
 
