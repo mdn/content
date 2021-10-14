@@ -519,7 +519,6 @@
 /en-US/docs/CSS/Getting_Started/JavaScript	/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 /en-US/docs/CSS/Getting_Started/Layout	/en-US/docs/Learn/CSS/CSS_layout
 /en-US/docs/CSS/Getting_Started/Lists	/en-US/docs/Learn/CSS/Styling_text/Styling_lists
-/en-US/docs/CSS/Getting_Started/Media	/en-US/docs/Web/Progressive_web_apps/Responsive/Media_types
 /en-US/docs/CSS/Getting_Started/SVG_and_CSS	/en-US/docs/Web/SVG/Tutorial/SVG_and_CSS
 /en-US/docs/CSS/Getting_Started/SVG_graphics	/en-US/docs/Web/SVG/Tutorial/SVG_and_CSS
 /en-US/docs/CSS/Getting_Started/Selectors	/en-US/docs/Learn/CSS/Building_blocks/Selectors
@@ -984,7 +983,6 @@
 /en-US/docs/CSS:Getting_Started:JavaScript	/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 /en-US/docs/CSS:Getting_Started:Layout	/en-US/docs/Learn/CSS/CSS_layout
 /en-US/docs/CSS:Getting_Started:Lists	/en-US/docs/Learn/CSS/Styling_text/Styling_lists
-/en-US/docs/CSS:Getting_Started:Media	/en-US/docs/Web/Progressive_web_apps/Responsive/Media_types
 /en-US/docs/CSS:Getting_Started:SVG_graphics	/en-US/docs/Web/SVG/Tutorial/SVG_and_CSS
 /en-US/docs/CSS:Getting_Started:Selectors	/en-US/docs/Learn/CSS/Building_blocks/Selectors
 /en-US/docs/CSS:Getting_Started:Tables	/en-US/docs/Learn/CSS/Building_blocks/Styling_tables
@@ -8340,6 +8338,11 @@
 /en-US/docs/Web/API/PushManager.registrations	/en-US/docs/Web/API/PushManager/registrations
 /en-US/docs/Web/API/PushManager.unregister	/en-US/docs/Web/API/PushManager/unregister
 /en-US/docs/Web/API/Push_API/Using_the_Push_API	/en-US/docs/Web/API/Push_API
+/en-US/docs/Web/API/RTCConfiguration	/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection
+/en-US/docs/Web/API/RTCConfiguration/bundlePolicy	/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection
+/en-US/docs/Web/API/RTCConfiguration/certificates	/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection
+/en-US/docs/Web/API/RTCConfiguration/iceServers	/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection
+/en-US/docs/Web/API/RTCConfiguration/iceTransportPolicy	/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection
 /en-US/docs/Web/API/RTCDTMFSender/tonechange	/en-US/docs/Web/API/RTCDTMFSender/tonechange_event
 /en-US/docs/Web/API/RTCDataChannel.binaryType	/en-US/docs/Web/API/RTCDataChannel/binaryType
 /en-US/docs/Web/API/RTCDataChannel.bufferedAmount	/en-US/docs/Web/API/RTCDataChannel/bufferedAmount
@@ -8409,6 +8412,7 @@
 /en-US/docs/Web/API/RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent	/en-US/docs/Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent
 /en-US/docs/Web/API/RTCPeerConnectionIceEvent.candidate	/en-US/docs/Web/API/RTCPeerConnectionIceEvent/candidate
 /en-US/docs/Web/API/RTCRtpSender/getCapabilities()	/en-US/docs/Web/API/RTCRtpSender/getCapabilities
+/en-US/docs/Web/API/RTCRtpTransceiverInit	/en-US/docs/Web/API/RTCPeerConnection/addTransceiver
 /en-US/docs/Web/API/RTCSctpTransportState	/en-US/docs/Web/API/RTCSctpTransport/state
 /en-US/docs/Web/API/RTCSdpType	/en-US/docs/Web/API/RTCSessionDescription/type
 /en-US/docs/Web/API/RTCSessionDescription.RTCSessionDescription	/en-US/docs/Web/API/RTCSessionDescription/RTCSessionDescription
@@ -9712,7 +9716,6 @@
 /en-US/docs/Web/Apps/Progressive/Re-engageable_Notifications_Push	/en-US/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push
 /en-US/docs/Web/Apps/Progressive/Responsive	/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks
 /en-US/docs/Web/Apps/Progressive/Responsive/Graphics_for_responsive_sites	/en-US/docs/Web/Progressive_web_apps/Responsive/Graphics_for_responsive_sites
-/en-US/docs/Web/Apps/Progressive/Responsive/Media_types	/en-US/docs/Web/Progressive_web_apps/Responsive/Media_types
 /en-US/docs/Web/Apps/Progressive/Responsive/Mobile_first	/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first
 /en-US/docs/Web/Apps/Progressive/Responsive/Responsive_navigation_patterns	/en-US/docs/Web/Progressive_web_apps/Responsive/Responsive_navigation_patterns
 /en-US/docs/Web/Apps/Progressive/Responsive/responsive_design_building_blocks	/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks
@@ -10516,7 +10519,6 @@
 /en-US/docs/Web/Guide/CSS/Getting_started/JavaScript	/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 /en-US/docs/Web/Guide/CSS/Getting_started/Layout	/en-US/docs/Learn/CSS/CSS_layout
 /en-US/docs/Web/Guide/CSS/Getting_started/Lists	/en-US/docs/Learn/CSS/Styling_text/Styling_lists
-/en-US/docs/Web/Guide/CSS/Getting_started/Media	/en-US/docs/Web/Progressive_web_apps/Responsive/Media_types
 /en-US/docs/Web/Guide/CSS/Getting_started/SVG_and_CSS	/en-US/docs/Web/SVG/Tutorial/SVG_and_CSS
 /en-US/docs/Web/Guide/CSS/Getting_started/SVG_graphics	/en-US/docs/Web/SVG/Tutorial/SVG_and_CSS
 /en-US/docs/Web/Guide/CSS/Getting_started/Selectors	/en-US/docs/Learn/CSS/Building_blocks/Selectors
@@ -11062,6 +11064,7 @@
 /en-US/docs/Web/Progressive_web_apps/Progressive	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Progressive_web_apps/Re-engageable	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Progressive_web_apps/Responsive	/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks
+/en-US/docs/Web/Progressive_web_apps/Responsive/Media_types	/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
 /en-US/docs/Web/Progressive_web_apps/Safe	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Reference	/en-US/docs/Web
 /en-US/docs/Web/Reference/API	/en-US/docs/Web/API
