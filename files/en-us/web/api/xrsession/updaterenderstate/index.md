@@ -53,14 +53,14 @@ None.
     - The `layers` option is used in a session that has been created without the `layers` feature.
     - The `baseLayer` and `layers` option are both specified.
 
-- `TypeError` {{domref("DOMException)}}hrown if:
+- `TypeError` {{domref("DOMException")}}
   - Thrown if the `layers` option contains duplicate instances.
 
 ## Examples
 
 ### Adding a `baseLayer`
 
-This example creates a WebGL context that is compatible with an immersive XR device and then uses it to create an {{DOMxRef("XRWebGLLayer")}}.  `updateRenderState()`  is then called to associate the new  `XRWebGLLayer`.
+This example creates a WebGL context that is compatible with an immersive XR device and then uses it to create an {{DOMxRef("XRWebGLLayer")}}. The method `updateRenderState()` is then called to associate the new `XRWebGLLayer`.
 
 ```js
 function onXRSessionStarted(xrSession) {
