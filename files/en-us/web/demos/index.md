@@ -13,110 +13,86 @@ tags:
   - VR
   - Video
 ---
-<p class="summary">Mozilla supports a wide variety of exciting open web technologies, and we encourage their use. This page offers links to interesting demonstrations of these technologies.</p>
+Mozilla supports a wide variety of exciting open web technologies, and we encourage their use. This page offers links to interesting demonstrations of these technologies.
 
-<p>If you know of a good demonstration or application of open web technology, please add a link to the appropriate section here.</p>
+If you know of a good demonstration or application of open web technology, please add a link to the appropriate section here.
 
-<h2 id="2D_Graphics">2D Graphics</h2>
+## 2D Graphics
 
-<h3 id="Canvas">Canvas</h3>
+### Canvas
 
-<ul>
- <li><a href="https://www.blobsallad.se/">Blob Sallad: an interactive blob using JavaScript and canvas</a> (<a href="http://blobsallad.se/article/">code demos)</a></li>
- <li><a href="https://mdn.github.io/canvas-raycaster/index.html">3D RayCaster</a></li>
- <li><a href="https://viliusle.github.io/miniPaint/">miniPaint: Image editor</a> (<a href="https://github.com/viliusle/miniPaint">source code</a>)</li>
- <li><a href="https://zenphoton.com">Zen Photon Garden </a>(<a href="https://github.com/scanlime/zenphoton">source code</a>)</li>
- <li><a href="https://maximumroulette.com/">Multi touch in canvas demo</a> (<a href="https://github.com/zlatnaspirala/multi-touch-canvas-handler">source code</a>)</li>
-</ul>
+- [Blob Sallad: an interactive blob using JavaScript and canvas](https://www.blobsallad.se/) ([code demos)](http://blobsallad.se/article/)
+- [3D RayCaster](https://mdn.github.io/canvas-raycaster/index.html)
+- [miniPaint: Image editor](https://viliusle.github.io/miniPaint/) ([source code](https://github.com/viliusle/miniPaint))
+- [Zen Photon Garden ](https://zenphoton.com)([source code](https://github.com/scanlime/zenphoton))
+- [Multi touch in canvas demo](https://maximumroulette.com/) ([source code](https://github.com/zlatnaspirala/multi-touch-canvas-handler))
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<ul>
- <li><a href="https://starkravingfinkle.org/projects/demo/svg-bubblemenu-in-html.xml">Bubblemenu</a> (visual effects and interaction)</li>
- <li><a href="https://www.themaninblue.com/experiment/Blobular/">Blobular</a> (interactive)</li>
- <li><a href="https://summerstyle.github.io/summer/">Summer HTML image map creator</a> (<a href="https://github.com/summerstyle/summer">source code</a>)</li>
-</ul>
+- [Bubblemenu](https://starkravingfinkle.org/projects/demo/svg-bubblemenu-in-html.xml) (visual effects and interaction)
+- [Blobular](https://www.themaninblue.com/experiment/Blobular/) (interactive)
+- [Summer HTML image map creator](https://summerstyle.github.io/summer/) ([source code](https://github.com/summerstyle/summer))
 
-<h3 id="Video">Video</h3>
+### Video
 
-<ul>
- <li><a href="https://vimeo.com/172328210">Video 3D Animation "mozilla constantly evolving"</a></li>
- <li><a href="https://vimeo.com/173851395">Video 3D Animation "Floating Dance"</a></li>
- <li><a href="https://vimeo.com/560300715">Video 3D Animation "The Gravel Institute: Monopoly</a></li>
-</ul>
+- [Video 3D Animation "mozilla constantly evolving"](https://vimeo.com/172328210)
+- [Video 3D Animation "Floating Dance"](https://vimeo.com/173851395)
+- [Video 3D Animation "The Gravel Institute: Monopoly](https://vimeo.com/560300715)
 
-<h2 id="3D_Graphics">3D Graphics</h2>
+## 3D Graphics
 
-<h3 id="WebGL">WebGL</h3>
+### WebGL
 
-<ul>
- <li><a href="https://ondras.github.io/fireworks-webgl/">Web Audio Fireworks</a></li>
- <li><a href="https://webglsamples.org/aquarium/aquarium.html">Aquarium</a></li>
- <li><a href="https://webglsamples.org/dynamic-cubemap/dynamic-cubemap.html">Dynamic cubemap</a></li>
- <li><a href="https://collinhover.github.io/kaiopua/">Kai 'Opua</a> (<a href="https://github.com/collinhover/kaiopua">source code</a>)</li>
-</ul>
+- [Web Audio Fireworks](https://ondras.github.io/fireworks-webgl/)
+- [Aquarium](https://webglsamples.org/aquarium/aquarium.html)
+- [Dynamic cubemap](https://webglsamples.org/dynamic-cubemap/dynamic-cubemap.html)
+- [Kai 'Opua](https://collinhover.github.io/kaiopua/) ([source code](https://github.com/collinhover/kaiopua))
 
-<h3 id="Virtual_Reality">Virtual Reality</h3>
+### Virtual Reality
 
-<ul>
- <li>The Polar Sea (<a href="https://github.com/MozVR/polarsea">source code</a>)</li>
- <li><a href="https://mixedreality.mozilla.org/sechelt/">Sechelt fly-through</a> (<a href="https://github.com/mozvr/sechelt">source code</a>)</li>
-</ul>
+- The Polar Sea ([source code](https://github.com/MozVR/polarsea))
+- [Sechelt fly-through](https://mixedreality.mozilla.org/sechelt/) ([source code](https://github.com/mozvr/sechelt))
 
-<h2 id="CSS">CSS</h2>
+## CSS
 
-<ul>
- <li><a href="https://codepen.io/SoftwareRVG/pen/OXkOWj/">CSS floating logo "mozilla"</a></li>
- <li><a href="https://ondras.github.io/blockout/">CSS Blockout</a></li>
- <li><a href="https://ondras.zarovi.cz/demos/rubik/">Rubik's cube</a></li>
- <li><a href="https://codepen.io/equinusocio/full/qjyXPP/">Loader with blend modes</a></li>
- <li><a href="https://dmytsv.github.io/sass-spa/index.html#home">CSS-based single page application</a> (<a href="https://github.com/dmytsv/sass-spa">source code</a>)</li>
-</ul>
+- [CSS floating logo "mozilla"](https://codepen.io/SoftwareRVG/pen/OXkOWj/)
+- [CSS Blockout](https://ondras.github.io/blockout/)
+- [Rubik's cube](https://ondras.zarovi.cz/demos/rubik/)
+- [Loader with blend modes](https://codepen.io/equinusocio/full/qjyXPP/)
+- [CSS-based single page application](https://dmytsv.github.io/sass-spa/index.html#home) ([source code](https://github.com/dmytsv/sass-spa))
 
-<h3 id="Transformations">Transformations</h3>
+### Transformations
 
-<ul>
- <li><a href="https://impress.github.io/impress.js">Impress.js</a> (<a href="https://github.com/impress/impress.js">source code</a>)</li>
- <li><a href="https://ohiodave.com/tests/css2d/flickr.html">Flickr Polaroid Stack</a></li>
-</ul>
+- [Impress.js](https://impress.github.io/impress.js) ([source code](https://github.com/impress/impress.js))
+- [Flickr Polaroid Stack](https://ohiodave.com/tests/css2d/flickr.html)
 
-<h2 id="Games">Games</h2>
+## Games
 
-<ul>
- <li>IoQuake3 (<a href="https://github.com/klaussilveira/ioquake3.js">source code</a>)</li>
- <li><a href="https://collinhover.github.io/kaiopua/">Kai 'Opua</a> (<a href="https://github.com/collinhover/kaiopua">source code</a>)</li>
-</ul>
+- IoQuake3 ([source code](https://github.com/klaussilveira/ioquake3.js))
+- [Kai 'Opua](https://collinhover.github.io/kaiopua/) ([source code](https://github.com/collinhover/kaiopua))
 
-<h2 id="Web_APIs">Web APIs</h2>
+## Web APIs
 
-<h3 id="Notifications_API">Notifications API</h3>
+### Notifications API
 
-<ul>
- <li><a href="https://elfoxero.github.io/html5notifications/">HTML5 Notifications</a> (<a href="https://github.com/elfoxero/html5notifications">source code</a>)</li>
-</ul>
+- [HTML5 Notifications](https://elfoxero.github.io/html5notifications/) ([source code](https://github.com/elfoxero/html5notifications))
 
-<h3 id="Web_Audio_API">Web Audio API</h3>
+### Web Audio API
 
-<ul>
- <li><a href="https://mdn.github.io/webaudio-examples/audiocontext-states/">Audio Context states demo</a></li>
- <li><a href="https://mdn.github.io/webaudio-examples/audio-analyser/">Audio analyser - graphical visualization of an audio signal</a></li>
- <li><a href="https://mdn.github.io/webaudio-examples/iirfilter-node/">IIR filter node</a></li>
- <li><a href="https://mdn.github.io/webaudio-examples/multi-track/">Multi track</a></li>
- <li><a href="https://mdn.github.io/webaudio-examples/stereo-panner-node/">Stereo-panner-node</a></li>
-</ul>
+- [Audio Context states demo](https://mdn.github.io/webaudio-examples/audiocontext-states/)
+- [Audio analyser - graphical visualization of an audio signal](https://mdn.github.io/webaudio-examples/audio-analyser/)
+- [IIR filter node](https://mdn.github.io/webaudio-examples/iirfilter-node/)
+- [Multi track](https://mdn.github.io/webaudio-examples/multi-track/)
+- [Stereo-panner-node](https://mdn.github.io/webaudio-examples/stereo-panner-node/)
 
-<h3 id="File_API">File API</h3>
+### File API
 
-<ul>
- <li><a href="https://palerdot.github.io/slide-my-text/">Slide My Text - presentation from plain text files</a></li>
-</ul>
+- [Slide My Text - presentation from plain text files](https://palerdot.github.io/slide-my-text/)
 
-<h3 id="Unclassified">Web Workers</h3>
+### Web Workers
 
-<ul>
- <li><a href="https://ondras.github.io/fractal/">Web Worker Fractals</a></li>
- <li><a href="https://ondras.github.io/photo/">Photo editor</a></li>
- <li><a href="https://ondras.github.io/coral/">Coral generator</a></li>
- <li><a href="https://nerget.com/rayjs-mt/rayjs.html">Raytracer</a></li>
- <li><a href="https://mdn.github.io/fibonacci-worker/">Fibonacci</a></li>
-</ul>
+- [Web Worker Fractals](https://ondras.github.io/fractal/)
+- [Photo editor](https://ondras.github.io/photo/)
+- [Coral generator](https://ondras.github.io/coral/)
+- [Raytracer](https://nerget.com/rayjs-mt/rayjs.html)
+- [Fibonacci](https://mdn.github.io/fibonacci-worker/)
