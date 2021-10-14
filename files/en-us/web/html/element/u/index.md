@@ -15,6 +15,7 @@ tags:
   - Web
 browser-compat: html.elements.u
 ---
+
 {{HTMLRef}}
 
 The **`<u>`** [HTML](/en-US/docs/Web/HTML) element represents a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation. This is rendered by default as a simple solid underline, but may be altered using CSS.
@@ -96,18 +97,18 @@ Along with other pure styling elements, the original HTML Underline (`<u>`) elem
 
 Valid use cases for the `<u>` element include annotating spelling errors, applying a {{interwiki("wikipedia", "proper name mark")}} to denote proper names in Chinese text, and other forms of annotation.
 
-You should *not* use `<u>` to underline text for presentation purposes, or to denote titles of books.
+You should _not_ use `<u>` to underline text for presentation purposes, or to denote titles of books.
 
 ### Other elements to consider using
 
 In most cases, you should use an element other than `<u>`, such as:
 
-*   {{HTMLElement("em")}} to denote stress emphasis
-*   {{HTMLElement("b")}} to draw attention to text
-*   {{HTMLElement("mark")}} to mark key words or phrases
-*   {{HTMLElement("strong")}} to indicate that text has strong importance
-*   {{HTMLElement("cite")}} to mark the titles of books or other publications
-*   {{HTMLElement("i")}} to denote technical terms, transliterations, thoughts, or names of vessels in Western texts
+- {{HTMLElement("em")}} to denote stress emphasis
+- {{HTMLElement("b")}} to draw attention to text
+- {{HTMLElement("mark")}} to mark key words or phrases
+- {{HTMLElement("strong")}} to indicate that text has strong importance
+- {{HTMLElement("cite")}} to mark the titles of books or other publications
+- {{HTMLElement("i")}} to denote technical terms, transliterations, thoughts, or names of vessels in Western texts
 
 To provide textual annotations (as opposed to the non-textual annotations created with `<u>`), use the {{HTMLElement("ruby")}} element.
 
@@ -211,5 +212,5 @@ cite {
 
 ## See also
 
-*   The {{HTMLElement("span")}}, {{HTMLElement("i")}}, {{HTMLElement("em")}}, {{HTMLElement("b")}}, and {{HTMLElement("cite")}} elements should usually be used instead.
-*   The CSS {{cssxref("text-decoration")}} property should be used for non-semantic underlining.
+- The {{HTMLElement("span")}}, {{HTMLElement("i")}}, {{HTMLElement("em")}}, {{HTMLElement("b")}}, and {{HTMLElement("cite")}} elements should usually be used instead.
+- The CSS {{cssxref("text-decoration")}} property should be used for non-semantic underlining.

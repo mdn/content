@@ -17,7 +17,7 @@ This feature is primarily intended for custom event-dispatching or callback-mani
 Libraries can use this feature to catch errors in callback code and re-throw them to the top level handler.
 This ensures that an exception in one callback will not prevent others from being handled, while at the same time ensuring that stack trace information is still readily available for debugging at the top level.
 
-{{EmbedInteractiveExample("pages/js/self-reporterror.html")}}
+<!-- {{EmbedInteractiveExample("pages/js/self-reporterror.html")}} -->
 
 ## Syntax
 

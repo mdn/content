@@ -14,6 +14,7 @@ tags:
   - mark
 browser-compat: html.elements.mark
 ---
+
 {{HTMLRef}}
 
 The **`<mark>`** [HTML](/en-US/docs/Web/HTML) element represents text which is **marked** or **highlighted** for reference or notation purposes, due to the marked passage's relevance or importance in the enclosing context.
@@ -85,11 +86,11 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 Typical use cases for `<mark>` include:
 
-*   When used in a quotation ({{HTMLElement("q")}}) or block quote ({{HTMLElement("blockquote")}}), it generally indicates text which is of special interest but is not marked in the original source material, or material which needs special scrutiny even though the original author didn't think it was of particular importance. Think of this like using a highlighter pen in a book to mark passages that you find of interest.
-*   Otherwise, `<mark>` indicates a portion of the document's content which is likely to be relevant to the user's current activity. This might be used, for example, to indicate the words that matched a search operation.
-*   Don't use `<mark>` for syntax highlighting purposes; instead, use the {{HTMLElement("span")}} element with appropriate CSS applied to it.
+- When used in a quotation ({{HTMLElement("q")}}) or block quote ({{HTMLElement("blockquote")}}), it generally indicates text which is of special interest but is not marked in the original source material, or material which needs special scrutiny even though the original author didn't think it was of particular importance. Think of this like using a highlighter pen in a book to mark passages that you find of interest.
+- Otherwise, `<mark>` indicates a portion of the document's content which is likely to be relevant to the user's current activity. This might be used, for example, to indicate the words that matched a search operation.
+- Don't use `<mark>` for syntax highlighting purposes; instead, use the {{HTMLElement("span")}} element with appropriate CSS applied to it.
 
-> **Note:** Don't confuse `<mark>` with the {{HTMLElement("strong")}} element; `<mark>` is used to denote content which has a degree of *relevance*, while `<strong>` indicates spans of text of *importance*.
+> **Note:** Don't confuse `<mark>` with the {{HTMLElement("strong")}} element; `<mark>` is used to denote content which has a degree of _relevance_, while `<strong>` indicates spans of text of _importance_.
 
 ## Examples
 
@@ -161,8 +162,8 @@ mark::after {
 
 Some people who use screen readers deliberately disable announcing content that creates extra verbosity. Because of this, it is important to not abuse this technique and only apply it in situations where not knowing content has been highlighted would adversely affect understanding.
 
-*   [Short note on making your mark (more accessible) | The Paciello Group](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
-*   [Tweaking Text Level Styles | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+- [Short note on making your mark (more accessible) | The Paciello Group](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
+- [Tweaking Text Level Styles | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
 ## Specifications
 

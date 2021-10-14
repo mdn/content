@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: html.elements.hr
 ---
+
 {{HTMLRef}}
 
 The **`<hr>`** [HTML](/en-US/docs/Web/HTML) element represents a thematic break between paragraph-level elements: for example, a change of scene in a story, or a shift of topic within a section.
@@ -68,16 +69,16 @@ Historically, this has been presented as a horizontal rule or line. While it may
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-*   {{htmlattrdef("align")}} {{deprecated_inline}}
-    *   : Sets the alignment of the rule on the page. If no value is specified, the default value is `left`.
-*   {{htmlattrdef("color")}} {{Non-standard_inline}}
-    *   : Sets the color of the rule through color name or hexadecimal value.
-*   {{htmlattrdef("noshade")}} {{deprecated_inline}}
-    *   : Sets the rule to have no shading.
-*   {{htmlattrdef("size")}} {{deprecated_inline}}
-    *   : Sets the height, in pixels, of the rule.
-*   {{htmlattrdef("width")}} {{deprecated_inline}}
-    *   : Sets the length of the rule on the page through a pixel or percentage value.
+- {{htmlattrdef("align")}} {{deprecated_inline}}
+  - : Sets the alignment of the rule on the page. If no value is specified, the default value is `left`.
+- {{htmlattrdef("color")}} {{Non-standard_inline}}
+  - : Sets the color of the rule through color name or hexadecimal value.
+- {{htmlattrdef("noshade")}} {{deprecated_inline}}
+  - : Sets the rule to have no shading.
+- {{htmlattrdef("size")}} {{deprecated_inline}}
+  - : Sets the height, in pixels, of the rule.
+- {{htmlattrdef("width")}} {{deprecated_inline}}
+  - : Sets the length of the rule on the page through a pixel or percentage value.
 
 ## Example
 
@@ -115,4 +116,4 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 ## See also
 
-*   {{HTMLElement('p')}}
+- {{HTMLElement('p')}}

@@ -6,4 +6,5 @@ tags:
   - Index
   - MDN Meta
 ---
+
 {{Index("/en-US/docs/Web/HTML")}}

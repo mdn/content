@@ -14,6 +14,7 @@ tags:
   - Type
 browser-compat: html.elements.input.input-file
 ---
+
 {{HTMLRef("Input_types")}}
 
 {{HTMLElement("input")}} elements with **`type="file"`** let the user choose one or more files from their device storage. Once chosen, the files can be uploaded to a server using[ form submission](/en-US/docs/Learn/Forms), or manipulated using JavaScript code and [the File API](/en-US/docs/Web/API/File/Using_files_from_web_applications).
@@ -129,11 +130,11 @@ Though originally implemented only for WebKit-based browsers, `webkitdirectory` 
 
 A **unique file type specifier** is a string that describes a type of file that may be selected by the user in an {{HTMLElement("input")}} element of type `file`. Each unique file type specifier may take one of the following forms:
 
-*   A valid case-insensitive filename extension, starting with a period (".") character. For example: `.jpg`, `.pdf`, or `.doc`.
-*   A valid MIME type string, with no extensions.
-*   The string `audio/*` meaning "any audio file".
-*   The string `video/*` meaning "any video file".
-*   The string `image/*` meaning "any image file".
+- A valid case-insensitive filename extension, starting with a period (".") character. For example: `.jpg`, `.pdf`, or `.doc`.
+- A valid MIME type string, with no extensions.
+- The string `audio/*` meaning "any audio file".
+- The string `video/*` meaning "any video file".
+- The string `image/*` meaning "any image file".
 
 The `accept` attribute takes as its value a string containing one or more of these unique file type specifiers, separated by commas. For example, a file picker that needs content that can be presented as an image, including both standard image formats and PDF files, might look like this:
 
@@ -179,18 +180,18 @@ The selected files' are returned by the element's `HTMLInputElement.files` prope
 
 Each `File` object contains the following information:
 
-*   `name`
-    *   : The file's name.
-*   `lastModified`
-    *   : A number specifying the date and time at which the file was last modified, in milliseconds since the UNIX epoch (January 1, 1970 at midnight).
-*   `lastModifiedDate` {{deprecated_inline}}
-    *   : A {{jsxref("Date")}} object representing the date and time at which the file was last modified. *This is deprecated and should not be used. Use `lastModified` instead.*
-*   `size`
-    *   : The size of the file in bytes.
-*   `type`
-    *   : The file's [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
-*   `webkitRelativePath` {{non-standard_inline}}
-    *   : A string specifying the file's path relative to the base directory selected in a directory picker (that is, a `file` picker in which the {{htmlattrxref("webkitdirectory", "input/file")}} attribute is set). *This is non-standard and should be used with caution.*
+- `name`
+  - : The file's name.
+- `lastModified`
+  - : A number specifying the date and time at which the file was last modified, in milliseconds since the UNIX epoch (January 1, 1970 at midnight).
+- `lastModifiedDate` {{deprecated_inline}}
+  - : A {{jsxref("Date")}} object representing the date and time at which the file was last modified. _This is deprecated and should not be used. Use `lastModified` instead._
+- `size`
+  - : The size of the file in bytes.
+- `type`
+  - : The file's [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
+- `webkitRelativePath` {{non-standard_inline}}
+  - : A string specifying the file's path relative to the base directory selected in a directory picker (that is, a `file` picker in which the {{htmlattrxref("webkitdirectory", "input/file")}} attribute is set). _This is non-standard and should be used with caution._
 
 > **Note:** You can set as well as get the value of `HTMLInputElement.files` in all modern browsers; this was most recently added to Firefox, in version 57 (see {{bug(1384030)}}).
 
@@ -200,10 +201,10 @@ Often you won't want the user to be able to pick any arbitrary type of file; ins
 
 Acceptable file types can be specified with the {{htmlattrxref("accept","input/file")}} attribute, which takes a comma-separated list of allowed file extensions or MIME types. Some examples:
 
-*   `accept="image/png"` or `accept=".png"` — Accepts PNG files.
-*   `accept="image/png, image/jpeg"` or `accept=".png, .jpg, .jpeg"` — Accept PNG or JPEG files.
-*   `accept="image/*"` — Accept any file with an `image/*` MIME type. (Many mobile devices also let the user take a picture with the camera when this is used.)
-*   `accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"` — accept anything that smells like an MS Word document.
+- `accept="image/png"` or `accept=".png"` — Accepts PNG files.
+- `accept="image/png, image/jpeg"` or `accept=".png, .jpg, .jpeg"` — Accept PNG or JPEG files.
+- `accept="image/*"` — Accept any file with an `image/*` MIME type. (Many mobile devices also let the user take a picture with the camera when this is used.)
+- `accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"` — accept anything that smells like an MS Word document.
 
 Let's look at a more complete example:
 
@@ -246,6 +247,7 @@ Because of this, you should make sure that the `accept` attribute is backed up b
     const input = document.querySelector("input[type=file]");
     input.value = "foo";
     ```
+
 2.  When a file is chosen using an `<input type="file">`, the real path to the source file is not shown in the input's `value` attribute for obvious security reasons. Instead, the filename is shown, with `C:\fakepath\` appended to the beginning of it. There are some historical reasons for this quirk, but it is supported across all modern browsers, and in fact is [defined in the spec](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly).
 
 ## Examples
@@ -350,16 +352,17 @@ input.addEventListener('change', updateImageDisplay);
 
 Whenever the `updateImageDisplay()` function is invoked, we:
 
-*   Use a {{jsxref("Statements/while", "while")}} loop to empty the previous contents of the preview `<div>`.
-*   Grab the {{domxref("FileList")}} object that contains the information on all the selected files, and store it in a variable called `curFiles`.
-*   Check to see if no files were selected, by checking if `curFiles.length` is equal to 0. If so, print a message into the preview `<div>` stating that no files have been selected.
-*   If files *have* been selected, we loop through each one, printing information about it into the preview `<div>`. Things to note here:
-*   We use the custom `validFileType()` function to check whether the file is of the correct type (e.g. the image types specified in the `accept` attribute).
-*   If it is, we:
+- Use a {{jsxref("Statements/while", "while")}} loop to empty the previous contents of the preview `<div>`.
+- Grab the {{domxref("FileList")}} object that contains the information on all the selected files, and store it in a variable called `curFiles`.
+- Check to see if no files were selected, by checking if `curFiles.length` is equal to 0. If so, print a message into the preview `<div>` stating that no files have been selected.
+- If files _have_ been selected, we loop through each one, printing information about it into the preview `<div>`. Things to note here:
+- We use the custom `validFileType()` function to check whether the file is of the correct type (e.g. the image types specified in the `accept` attribute).
+- If it is, we:
 
-    *   Print out its name and file size into a list item inside the previous `<div>` (obtained from `file.name` and `file.size`). The custom `returnFileSize()` function returns a nicely-formatted version of the size in bytes/KB/MB (by default the browser reports the size in absolute bytes).
-    *   Generate a thumbnail preview of the image by calling {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}}. Then, insert the image into the list item too by creating a new {{htmlelement("img")}} and setting its {{htmlattrxref("src", "img")}} to the thumbnail.
-*   If the file type is invalid, we display a message inside a list item telling the user that they need to select a different file type.
+  - Print out its name and file size into a list item inside the previous `<div>` (obtained from `file.name` and `file.size`). The custom `returnFileSize()` function returns a nicely-formatted version of the size in bytes/KB/MB (by default the browser reports the size in absolute bytes).
+  - Generate a thumbnail preview of the image by calling {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}}. Then, insert the image into the list item too by creating a new {{htmlelement("img")}} and setting its {{htmlattrxref("src", "img")}} to the thumbnail.
+
+- If the file type is invalid, we display a message inside a list item telling the user that they need to select a different file type.
 
 ```js
 function updateImageDisplay() {
@@ -447,5 +450,5 @@ The example looks like this; have a play:
 
 ## See also
 
-*   [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications) — contains a number of other useful examples related to `<input type="file">` and the [File API](/en-US/docs/Web/API/File).
-*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications) — contains a number of other useful examples related to `<input type="file">` and the [File API](/en-US/docs/Web/API/File).
+- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

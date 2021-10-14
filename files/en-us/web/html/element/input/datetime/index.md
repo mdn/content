@@ -12,6 +12,7 @@ tags:
   - Reference
   - datetime
 ---
+
 {{HTMLRef}}{{deprecated_header}}
 
 The HTML `<input type="datetime">` was a control for entering a date and time (hour, minute, second, and fraction of a second) as well as a timezone. **This feature has been [removed from WHATWG HTML](https://github.com/whatwg/html/issues/336)**, and is no longer supported in browsers.
@@ -26,5 +27,5 @@ The format of the date and time value used by this input type is described in {{
 
 ## See also
 
-*   {{HTMLElement("input")}} element
-*   [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
+- {{HTMLElement("input")}} element
+- [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)

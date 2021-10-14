@@ -18,6 +18,7 @@ tags:
   - menus
 browser-compat: html.elements.menu
 ---
+
 {{HTMLRef}}{{SeeCompatTable}}
 
 The **`<menu>`** [HTML](/en-US/docs/Web/HTML) element is a semantic alternative to {{HTMLElement("ul")}}. It represents an unordered list of items (represented by {{HTMLElement("li")}} elements), each of these represent a link or other command that the user can activate.
@@ -139,5 +140,5 @@ In this example, a `<menu>` is used to create a toolbar in an editing applicatio
 
 ## See also
 
-*   Other list-related HTML Elements: {{HTMLElement("ol")}}, {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("hr")}}, and the obsolete {{HTMLElement("dir")}}.
-*   The [`contextmenu`](/en-US/docs/Web/HTML/Global_attributes#attr-contextmenu) [global attribute](/en-US/docs/Web/HTML/Global_attributes) can be used on an element to refer to the `id` of a `menu` with {{HTMLAttrxRef("type", "menu", 'type="context"')}}.
+- Other list-related HTML Elements: {{HTMLElement("ol")}}, {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("hr")}}, and the obsolete {{HTMLElement("dir")}}.
+- The [`contextmenu`](/en-US/docs/Web/HTML/Global_attributes#attr-contextmenu) [global attribute](/en-US/docs/Web/HTML/Global_attributes) can be used on an element to refer to the `id` of a `menu` with {{HTMLAttrxRef("type", "menu", 'type="context"')}}.

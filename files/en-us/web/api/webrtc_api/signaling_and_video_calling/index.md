@@ -340,7 +340,7 @@ function createPeerConnection() {
 }
 ```
 
-When using the {{domxref("RTCPeerConnection.RTCPeerConnection", "RTCPeerConnection()")}} constructor, we will specify an {{domxref("RTCConfiguration")}}-compliant object providing configuration parameters for the connection. We use only one of these in this example: `iceServers`. This is an array of objects describing STUN and/or TURN servers for the {{Glossary("ICE")}} layer to use when attempting to establish a route between the caller and the callee. These servers are used to determine the best route and protocols to use when communicating between the peers, even if they're behind a firewall or using {{Glossary("NAT")}}.
+When using the {{domxref("RTCPeerConnection.RTCPeerConnection", "RTCPeerConnection()")}} constructor, we will specify an object providing configuration parameters for the connection. We use only one of these in this example: `iceServers`. This is an array of objects describing STUN and/or TURN servers for the {{Glossary("ICE")}} layer to use when attempting to establish a route between the caller and the callee. These servers are used to determine the best route and protocols to use when communicating between the peers, even if they're behind a firewall or using {{Glossary("NAT")}}.
 
 > **Note:** You should always use STUN/TURN servers which you own, or which you have specific authorization to use. This example is using a known public STUN server but abusing these is bad form.
 

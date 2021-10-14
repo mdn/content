@@ -16,6 +16,7 @@ tags:
   - tt
 browser-compat: html.elements.tt
 ---
+
 {{HTMLRef}}{{deprecated_header}}
 
 The **`<tt>`** [HTML](/en-US/docs/Web/HTML) element creates inline text which is presented using the {{Glossary("user agent", "user agent's")}} default monospace font face. This element was created for the purpose of rendering text as it would be displayed on a fixed-width display such as a teletype, text-only screen, or line printer.
@@ -138,5 +139,5 @@ Although this element wasn't officially deprecated in HTML 4.01, its use was dis
 
 ## See also
 
-*   The semantic {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("kbd")}}, and {{HTMLElement("samp")}} elements
-*   The {{HTMLElement("pre")}} element for displaying preformatted text blocks
+- The semantic {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("kbd")}}, and {{HTMLElement("samp")}} elements
+- The {{HTMLElement("pre")}} element for displaying preformatted text blocks

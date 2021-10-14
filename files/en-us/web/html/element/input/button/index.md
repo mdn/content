@@ -13,6 +13,7 @@ tags:
   - button
 browser-compat: html.elements.input.input-button
 ---
+
 {{HTMLRef("Input_types")}}
 
 {{HTMLElement("input")}} elements of type **`button`** are rendered as simple push buttons, which can be programmed to control custom functionality anywhere on a webpage as required when assigned an event handler function (typically for the {{event("click")}} event).
@@ -73,7 +74,7 @@ If you don't specify a `value`, you get an empty button:
 
 ## Using buttons
 
-`<input type="button">` elements have no default behavior (their cousins,`  <input type="submit"> ` and [`<input type="reset">`](/en-US/docs/Web/HTML/Element/input/reset) are used to submit and reset forms, respectively). To make buttons do anything, you have to write JavaScript code to do the work.
+`<input type="button">` elements have no default behavior (their cousins,` <input type="submit">` and [`<input type="reset">`](/en-US/docs/Web/HTML/Element/input/reset) are used to submit and reset forms, respectively). To make buttons do anything, you have to write JavaScript code to do the work.
 
 ### A simple button
 
@@ -332,6 +333,6 @@ draw();
 
 ## See also
 
-*   {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
-*   The more modern {{HTMLElement("button")}} element.
-*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
+- The more modern {{HTMLElement("button")}} element.
+- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

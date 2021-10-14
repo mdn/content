@@ -9,11 +9,12 @@ tags:
   - Web
 browser-compat: html.elements.strike
 ---
+
 {{HTMLRef}}{{deprecated_header}}
 
 The **`<strike>`** [HTML](/en-US/docs/Web/HTML) element places a strikethrough (horizontal line) over text.
 
-> **Warning:** This element is deprecated in HTML 4 and XHTML 1, and obsoleted in HTML5. If semantically appropriate, i.e., if it represents *deleted* content, use {{HTMLElement("del")}} instead. In all other cases use {{HTMLElement("s")}}.
+> **Warning:** This element is deprecated in HTML 4 and XHTML 1, and obsoleted in HTML5. If semantically appropriate, i.e., if it represents _deleted_ content, use {{HTMLElement("del")}} instead. In all other cases use {{HTMLElement("s")}}.
 
 <table class="properties">
   <tbody>
@@ -49,6 +50,6 @@ The result of this code is:
 
 ## See also
 
-*   The {{HTMLElement("s")}} element.
-*   The {{HTMLElement("del")}} element should be used if the data has been *deleted*.
-*   The CSS {{CSSxRef("text-decoration")}} property can be used to style text with a strikethrough.
+- The {{HTMLElement("s")}} element.
+- The {{HTMLElement("del")}} element should be used if the data has been _deleted_.
+- The CSS {{CSSxRef("text-decoration")}} property can be used to style text with a strikethrough.

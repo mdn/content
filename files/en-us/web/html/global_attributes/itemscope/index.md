@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: html.global_attributes.itemscope
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`itemscope`** is a boolean [global attribute](/en-US/docs/Web/HTML/Global_attributes) that defines the scope of associated metadata. Specifying the **`itemscope`** attribute for an element creates a new item, which results in a number of name-value pairs that are associated with the element.
@@ -261,10 +262,10 @@ The following is an example rendering of the preceding code example.
 
 ## See also
 
-*   [Other different global attributes](/en-US/docs/Web/HTML/Global_attributes)
-*   Other, microdata related, global attributes:
+- [Other different global attributes](/en-US/docs/Web/HTML/Global_attributes)
+- Other, microdata related, global attributes:
 
-    *   {{htmlattrxref("itemid")}}
-    *   {{htmlattrxref("itemprop")}}
-    *   {{htmlattrxref("itemref")}}
-    *   {{htmlattrxref("itemtype")}}
+  - {{htmlattrxref("itemid")}}
+  - {{htmlattrxref("itemprop")}}
+  - {{htmlattrxref("itemref")}}
+  - {{htmlattrxref("itemtype")}}

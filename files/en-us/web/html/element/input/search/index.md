@@ -11,6 +11,7 @@ tags:
   - Search
 browser-compat: html.elements.input.input-search
 ---
+
 {{HTMLRef("Input_types")}}
 
 {{HTMLElement("input")}} elements of type **`search`** are text fields designed for the user to enter search queries into. These are functionally identical to [`text`](/en-US/docs/Web/HTML/Element/input/text) inputs, but may be styled differently by the {{Glossary("user agent")}}.
@@ -103,7 +104,7 @@ See the section {{anch("Specifying a pattern")}} for details and an example.
 
 ### placeholder
 
-The `placeholder` attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text *must not* include carriage returns or line feeds.
+The `placeholder` attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text _must not_ include carriage returns or line feeds.
 
 If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossary("RTL")}}) but needs to present the placeholder in the opposite directionality, you can use Unicode bidirectional algorithm formatting characters to override directionality within the placeholder; see {{SectionOnPage("/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Overriding BiDi using Unicode control characters")}} for those characters.
 
@@ -119,18 +120,18 @@ A Boolean attribute which, if present, means this field cannot be edited by the 
 
 The `size` attribute is a numeric value indicating how many characters wide the input field should be. The value must be a number greater than zero, and the default value is 20. Since character widths vary, this may or may not be exact and should not be relied upon to be so; the resulting input may be narrower or wider than the specified number of characters, depending on the characters and the font ({{cssxref("font")}} settings in use).
 
-This does *not* set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the `{{anch("maxlength")}}` attribute.
+This does _not_ set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the `{{anch("maxlength")}}` attribute.
 
 ### spellcheck
 
 `spellcheck` is a global attribute which is used to indicate whether or not to enable spell checking for an element. It can be used on any editable content, but here we consider specifics related to the use of `spellcheck` on {{HTMLElement("input")}} elements. The permitted values for `spellcheck` are:
 
-*   `false`
-    *   : Disable spell checking for this element.
-*   `true`
-    *   : Enable spell checking for this element.
-*   "" (empty string) or no value
-    *   : Follow the element's default behavior for spell checking. This may be based upon a parent's `spellcheck` setting or other factors.
+- `false`
+  - : Disable spell checking for this element.
+- `true`
+  - : Enable spell checking for this element.
+- "" (empty string) or no value
+  - : Follow the element's default behavior for spell checking. This may be based upon a parent's `spellcheck` setting or other factors.
 
 An input field can have spell checking enabled if it doesn't have the {{anch("readonly")}} attribute set and is not disabled.
 
@@ -144,10 +145,10 @@ The following non-standard attributes are available to search input fields. As a
 
 A Safari extension, the `autocorrect` attribute is a string which indicates whether or not to activate automatic correction while the user is editing this field. Permitted values are:
 
-*   `on`
-    *   : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
-*   `off`
-    *   : Disable automatic correction and text substitutions.
+- `on`
+  - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
+- `off`
+  - : Disable automatic correction and text substitutions.
 
 ### incremental
 
@@ -196,7 +197,7 @@ This renders like so:
 
 ### Differences between search and text types
 
-The main basic differences come in the way browsers handle them. The first thing to note is that some browsers show a cross icon that can be clicked on to remove the search term instantly if desired. The following screenshot comes from Chrome:
+The main basic differences come in the way browsers handle them. The first thing to note is that some browsers show a cross icon that can be clicked on to remove the search term instantly if desired, in Chrome this action is also triggered when pressing escape. The following screenshot comes from Chrome:
 
 ![](chrome-cross-icon.png)
 
@@ -228,8 +229,8 @@ One problem with search forms is their accessibility; a common design practice i
 
 This could, however, cause confusion for screenreader users, since they will not have any verbal indication of what the search input is. One way around this that won't impact on your visual design is to use [WAI-ARIA](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) features:
 
-*   A `role` attribute of value `search` on the `<form>` element will cause screenreaders to announce that the form is a search form.
-*   If that isn't enough, you can use an `aria-label` attribute on the {{HTMLElement("input")}} itself. This should be a descriptive text label that will be read out by the screenreader; it's used as a non-visual equivalent to `<label>`.
+- A `role` attribute of value `search` on the `<form>` element will cause screenreaders to announce that the form is a search form.
+- If that isn't enough, you can use an `aria-label` attribute on the {{HTMLElement("input")}} itself. This should be a descriptive text label that will be read out by the screenreader; it's used as a non-visual equivalent to `<label>`.
 
 Let's have a look at an example:
 
@@ -274,7 +275,7 @@ The result is this wider input box:
 
 `<input>` elements of type `search` have the same validation features available to them as regular `text` inputs. It is less likely that you'd want to use validation features in general for search boxes. In many cases, users should just be allowed to search for anything, but there are a few cases to consider, such as searches against data of a known format.
 
-> **Note:** HTML form validation is *not* a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.
+> **Note:** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.
 
 ### A note on styling
 
@@ -437,7 +438,7 @@ You can see a good example of a search form used in context at our [website-aria
 
 ## See also
 
-*   [HTML Forms](/en-US/docs/Learn/Forms)
-*   {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon
-*   [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text)
-*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [HTML Forms](/en-US/docs/Learn/Forms)
+- {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon
+- [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text)
+- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

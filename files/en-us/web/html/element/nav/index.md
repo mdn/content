@@ -13,6 +13,7 @@ tags:
   - nav
 browser-compat: html.elements.nav
 ---
+
 {{HTMLRef}}
 
 The **`<nav>`** [HTML](/en-US/docs/Web/HTML) element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. Common examples of navigation sections are menus, tables of contents, and indexes.
@@ -85,9 +86,9 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## Usage notes
 
-*   It's not necessary for all links to be contained in a `<nav>` element. `<nav>` is intended only for major block of navigation links; typically the {{HTMLElement("footer")}} element often has a list of links that don't need to be in a {{HTMLElement("nav")}} element.
-*   A document may have several {{HTMLElement("nav")}} elements, for example, one for site navigation and one for intra-page navigation. [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) can be used in such case to promote accessibility, see [example](/en-US/docs/Web/HTML/Element/Heading_Elements#labeling_section_content).
-*   User agents, such as screen readers targeting disabled users, can use this element to determine whether to omit the initial rendering of navigation-only content.
+- It's not necessary for all links to be contained in a `<nav>` element. `<nav>` is intended only for major block of navigation links; typically the {{HTMLElement("footer")}} element often has a list of links that don't need to be in a {{HTMLElement("nav")}} element.
+- A document may have several {{HTMLElement("nav")}} elements, for example, one for site navigation and one for intra-page navigation. [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) can be used in such case to promote accessibility, see [example](/en-US/docs/Web/HTML/Element/Heading_Elements#labeling_section_content).
+- User agents, such as screen readers targeting disabled users, can use this element to determine whether to omit the initial rendering of navigation-only content.
 
 ## Examples
 
@@ -134,6 +135,6 @@ The semantics of the `nav` element is that of providing links. However a `nav` e
 
 ## See also
 
-*   Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
-*   [Sections and outlines of an HTML5 document](/en-US/docs/Web/HTML/Element/Heading_Elements).
-*   [ARIA: Navigation role](/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role)
+- Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
+- [Sections and outlines of an HTML5 document](/en-US/docs/Web/HTML/Element/Heading_Elements).
+- [ARIA: Navigation role](/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role)

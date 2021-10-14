@@ -11,12 +11,13 @@ tags:
   - SEO
   - Search
 ---
-[*Microformats*](https://microformats.org/) (sometimes abbreviated **μF**) are standards used to embed semantics & structured data in HTML, and provide an API to be used by search engines, aggregators, and other tools. These minimal patterns of HTML are used for marking up entities that range from fundamental to domain-specific information, such as people, organizations, events, and locations. Microformats use supporting vocabularies to describe objects and name-value pairs to assign values to their properties. The properties are carried in class attributes that can be added to any HTML element, while the data values re-use HTML element content and semantic attributes. Microformats2 is an update to microformats that provides a simpler way of annotating HTML structured syntax & vocabularies than previous approaches of using RDFa and microdata which require learning new attributes.
+
+[_Microformats_](https://microformats.org/) (sometimes abbreviated **μF**) are standards used to embed semantics & structured data in HTML, and provide an API to be used by search engines, aggregators, and other tools. These minimal patterns of HTML are used for marking up entities that range from fundamental to domain-specific information, such as people, organizations, events, and locations. Microformats use supporting vocabularies to describe objects and name-value pairs to assign values to their properties. The properties are carried in class attributes that can be added to any HTML element, while the data values re-use HTML element content and semantic attributes. Microformats2 is an update to microformats that provides a simpler way of annotating HTML structured syntax & vocabularies than previous approaches of using RDFa and microdata which require learning new attributes.
 
 Microformats are supported by all major search engines. Search engines benefit greatly from direct access to this structured data because it allows them to understand the information on web pages and provide more relevant results to users. In addition to being machine-readable, their format is designed to be easily read by humans.
 
-*   To create a microformats object, h-\* class names are used in the class attribute.
-*   To add a property to an object, the p-\*, u-\*, dt-\*, e-\* class names are used on one of the object's descendants.
+- To create a microformats object, h-\* class names are used in the class attribute.
+- To add a property to an object, the p-\*, u-\*, dt-\*, e-\* class names are used on one of the object's descendants.
 
 There are [open source parsing libraries for most languages](https://microformats.org/wiki/microformats2#Parsers) for microformats2.
 
@@ -40,22 +41,26 @@ All microformats consist of a root, and a collection of properties. Properties a
 
 All microformats class names use prefixes. Prefixes are **syntax independent from vocabularies**, which are developed separately.
 
-*   **"h-\*" for root class names**, e.g. "h-card", "h-entry", "h-feed", and many more. These top-level root classes usually indicate a type and corresponding expected vocabulary of properties. For example:
+- **"h-\*" for root class names**, e.g. "h-card", "h-entry", "h-feed", and many more. These top-level root classes usually indicate a type and corresponding expected vocabulary of properties. For example:
 
-    *   [h-card](https://microformats.org/wiki/h-card) describes a person or organization
-    *   [h-entry](https://microformats.org/wiki/h-entry) describes episodic or date stamped online content like a blog post
-    *   [h-feed](https://microformats.org/wiki/h-feed) describes a stream or feed of posts
-    *   You can find many more [vocabularies on the microformats2 wiki.](https://microformats.org/wiki/microformats2#v2\_vocabularies)
-*   **"p-\*" for plain (text) properties**, e.g. "p-name", "p-summary"
+  - [h-card](https://microformats.org/wiki/h-card) describes a person or organization
+  - [h-entry](https://microformats.org/wiki/h-entry) describes episodic or date stamped online content like a blog post
+  - [h-feed](https://microformats.org/wiki/h-feed) describes a stream or feed of posts
+  - You can find many more [vocabularies on the microformats2 wiki.](https://microformats.org/wiki/microformats2#v2_vocabularies)
 
-    *   Generic plain text parsing, element text in general. On certain HTML elements, use special attributes first, e.g. img/alt, abbr/title.
-*   **"u-\*" for URL properties**, e.g. "u-url", "u-photo", "u-logo"
+- **"p-\*" for plain (text) properties**, e.g. "p-name", "p-summary"
 
-    *   Special parsing: element attributes a/href, img/src, object/data etc. attributes over element contents.
-*   **"dt-\*" for datetime properties**, e.g. "dt-start", "dt-end", "dt-bday"
+  - Generic plain text parsing, element text in general. On certain HTML elements, use special attributes first, e.g. img/alt, abbr/title.
 
-    *   Special parsing: time element datetime attribute, [value-class-pattern](https://microformats.org/wiki/value-class-pattern "value-class-pattern") and separate date time value parsing for readability.
-*   **"e-\*" for element tree properties** where the entire contained element hierarchy is the value, e.g. "e-content". The "e-" prefix can also be mnemonically remembered as "element tree", "embedded markup", or "encapsulated markup".
+- **"u-\*" for URL properties**, e.g. "u-url", "u-photo", "u-logo"
+
+  - Special parsing: element attributes a/href, img/src, object/data etc. attributes over element contents.
+
+- **"dt-\*" for datetime properties**, e.g. "dt-start", "dt-end", "dt-bday"
+
+  - Special parsing: time element datetime attribute, [value-class-pattern](https://microformats.org/wiki/value-class-pattern "value-class-pattern") and separate date time value parsing for readability.
+
+- **"e-\*" for element tree properties** where the entire contained element hierarchy is the value, e.g. "e-content". The "e-" prefix can also be mnemonically remembered as "element tree", "embedded markup", or "encapsulated markup".
 
 ## Some microformats examples
 
@@ -358,8 +363,8 @@ Supported in all browsers’s support for the class attribute and its DOM API.
 
 ## See also
 
-*   [class attribute](/en-US/docs/Web/HTML/Global_attributes/class)
-*   {{Interwiki("wikipedia", "Microformat")}} on Wikipedia
-*   [Microformats official website](https://microformats.org/)
-*   [Search engines support](https://microformats.org/wiki/search_engines) on Microformats official website
-*   [Microformats on IndieWebCamp](https://indiewebcamp.com/microformats)
+- [class attribute](/en-US/docs/Web/HTML/Global_attributes/class)
+- {{Interwiki("wikipedia", "Microformat")}} on Wikipedia
+- [Microformats official website](https://microformats.org/)
+- [Search engines support](https://microformats.org/wiki/search_engines) on Microformats official website
+- [Microformats on IndieWebCamp](https://indiewebcamp.com/microformats)

@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: html.elements.body
 ---
+
 {{HTMLRef}}
 
 The **`<body>`** [HTML](/en-US/docs/Web/HTML) element represents the content of an HTML document. There can be only one `<body>` element in a document.
@@ -88,62 +89,62 @@ The **`<body>`** [HTML](/en-US/docs/Web/HTML) element represents the content of 
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-*   {{htmlattrdef("alink")}} {{deprecated_inline}}
-    *   : Color of text for hyperlinks when selected. *This method is non-conforming, use CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":active")}} pseudo-class instead.*
-*   {{htmlattrdef("background")}} {{deprecated_inline}}
-    *   : URI of a image to use as a background. *This method is non-conforming, use CSS {{cssxref("background")}} property on the element instead.*
-*   {{htmlattrdef("bgcolor")}} {{deprecated_inline}}
-    *   : Background color for the document. *This method is non-conforming, use CSS {{cssxref("background-color")}} property on the element instead.*
-*   {{htmlattrdef("bottommargin")}} {{deprecated_inline}}
-    *   : The margin of the bottom of the body. *This method is non-conforming, use CSS {{cssxref("margin-bottom")}} property on the element instead.*
-*   {{htmlattrdef("leftmargin")}} {{deprecated_inline}}
-    *   : The margin of the left of the body. *This method is non-conforming, use CSS {{cssxref("margin-left")}} property on the element instead.*
-*   {{htmlattrdef("link")}} {{deprecated_inline}}
-    *   : Color of text for unvisited hypertext links. *This method is non-conforming, use CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":link")}} pseudo-class instead.*
-*   {{htmlattrdef("onafterprint")}}
-    *   : Function to call after the user has printed the document.
-*   {{htmlattrdef("onbeforeprint")}}
-    *   : Function to call when the user requests printing of the document.
-*   {{htmlattrdef("onbeforeunload")}}
-    *   : Function to call when the document is about to be unloaded.
-*   {{htmlattrdef("onblur")}}
-    *   : Function to call when the document loses focus.
-*   {{htmlattrdef("onerror")}}
-    *   : Function to call when the document fails to load properly.
-*   {{htmlattrdef("onfocus")}}
-    *   : Function to call when the document receives focus.
-*   {{htmlattrdef("onhashchange")}}
-    *   : Function to call when the fragment identifier part (starting with the hash (`'#'`) character) of the document's current address has changed.
-*   {{htmlattrdef("onlanguagechange")}} {{experimental_inline}}
-    *   : Function to call when the preferred languages changed.
-*   {{htmlattrdef("onload")}}
-    *   : Function to call when the document has finished loading.
-*   {{htmlattrdef("onmessage")}}
-    *   : Function to call when the document has received a message.
-*   {{htmlattrdef("onoffline")}}
-    *   : Function to call when network communication has failed.
-*   {{htmlattrdef("ononline")}}
-    *   : Function to call when network communication has been restored.
-*   {{htmlattrdef("onpopstate")}}
-    *   : Function to call when the user has navigated session history.
-*   {{htmlattrdef("onredo")}}
-    *   : Function to call when the user has moved forward in undo transaction history.
-*   {{htmlattrdef("onresize")}}
-    *   : Function to call when the document has been resized.
-*   {{htmlattrdef("onstorage")}}
-    *   : Function to call when the storage area has changed.
-*   {{htmlattrdef("onundo")}}
-    *   : Function to call when the user has moved backward in undo transaction history.
-*   {{htmlattrdef("onunload")}}
-    *   : Function to call when the document is going away.
-*   {{htmlattrdef("rightmargin")}} {{deprecated_inline}}
-    *   : The margin of the right of the body. *This method is non-conforming, use CSS {{cssxref("margin-right")}} property on the element instead.*
-*   {{htmlattrdef("text")}} {{deprecated_inline}}
-    *   : Foreground color of text. *This method is non-conforming, use CSS {{cssxref("color")}} property on the element instead.*
-*   {{htmlattrdef("topmargin")}} {{deprecated_inline}}
-    *   : The margin of the top of the body. *This method is non-conforming, use CSS {{cssxref("margin-top")}} property on the element instead.*
-*   {{htmlattrdef("vlink")}} {{deprecated_inline}}
-    *   : Color of text for visited hypertext links. *This method is non-conforming, use CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":visited")}} pseudo-class instead.*
+- {{htmlattrdef("alink")}} {{deprecated_inline}}
+  - : Color of text for hyperlinks when selected. _This method is non-conforming, use CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":active")}} pseudo-class instead._
+- {{htmlattrdef("background")}} {{deprecated_inline}}
+  - : URI of a image to use as a background. _This method is non-conforming, use CSS {{cssxref("background")}} property on the element instead._
+- {{htmlattrdef("bgcolor")}} {{deprecated_inline}}
+  - : Background color for the document. _This method is non-conforming, use CSS {{cssxref("background-color")}} property on the element instead._
+- {{htmlattrdef("bottommargin")}} {{deprecated_inline}}
+  - : The margin of the bottom of the body. _This method is non-conforming, use CSS {{cssxref("margin-bottom")}} property on the element instead._
+- {{htmlattrdef("leftmargin")}} {{deprecated_inline}}
+  - : The margin of the left of the body. _This method is non-conforming, use CSS {{cssxref("margin-left")}} property on the element instead._
+- {{htmlattrdef("link")}} {{deprecated_inline}}
+  - : Color of text for unvisited hypertext links. _This method is non-conforming, use CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":link")}} pseudo-class instead._
+- {{htmlattrdef("onafterprint")}}
+  - : Function to call after the user has printed the document.
+- {{htmlattrdef("onbeforeprint")}}
+  - : Function to call when the user requests printing of the document.
+- {{htmlattrdef("onbeforeunload")}}
+  - : Function to call when the document is about to be unloaded.
+- {{htmlattrdef("onblur")}}
+  - : Function to call when the document loses focus.
+- {{htmlattrdef("onerror")}}
+  - : Function to call when the document fails to load properly.
+- {{htmlattrdef("onfocus")}}
+  - : Function to call when the document receives focus.
+- {{htmlattrdef("onhashchange")}}
+  - : Function to call when the fragment identifier part (starting with the hash (`'#'`) character) of the document's current address has changed.
+- {{htmlattrdef("onlanguagechange")}} {{experimental_inline}}
+  - : Function to call when the preferred languages changed.
+- {{htmlattrdef("onload")}}
+  - : Function to call when the document has finished loading.
+- {{htmlattrdef("onmessage")}}
+  - : Function to call when the document has received a message.
+- {{htmlattrdef("onoffline")}}
+  - : Function to call when network communication has failed.
+- {{htmlattrdef("ononline")}}
+  - : Function to call when network communication has been restored.
+- {{htmlattrdef("onpopstate")}}
+  - : Function to call when the user has navigated session history.
+- {{htmlattrdef("onredo")}}
+  - : Function to call when the user has moved forward in undo transaction history.
+- {{htmlattrdef("onresize")}}
+  - : Function to call when the document has been resized.
+- {{htmlattrdef("onstorage")}}
+  - : Function to call when the storage area has changed.
+- {{htmlattrdef("onundo")}}
+  - : Function to call when the user has moved backward in undo transaction history.
+- {{htmlattrdef("onunload")}}
+  - : Function to call when the document is going away.
+- {{htmlattrdef("rightmargin")}} {{deprecated_inline}}
+  - : The margin of the right of the body. _This method is non-conforming, use CSS {{cssxref("margin-right")}} property on the element instead._
+- {{htmlattrdef("text")}} {{deprecated_inline}}
+  - : Foreground color of text. _This method is non-conforming, use CSS {{cssxref("color")}} property on the element instead._
+- {{htmlattrdef("topmargin")}} {{deprecated_inline}}
+  - : The margin of the top of the body. _This method is non-conforming, use CSS {{cssxref("margin-top")}} property on the element instead._
+- {{htmlattrdef("vlink")}} {{deprecated_inline}}
+  - : Color of text for visited hypertext links. _This method is non-conforming, use CSS {{cssxref("color")}} property in conjunction with the {{cssxref(":visited")}} pseudo-class instead._
 
 ## Example
 
@@ -168,5 +169,5 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## See also
 
-*   {{HTMLElement("html")}}
-*   {{HTMLElement("head")}}
+- {{HTMLElement("html")}}
+- {{HTMLElement("head")}}

@@ -9,14 +9,12 @@ tags:
   - Media
   - events
 ---
-<div class="seoSummary">
 <p>This article provides:</p>
 
 <ul>
  <li>a basic guide to creating a cross-browser HTML5 audio player with all the associated attributes, properties, and events explained</li>
  <li>a guide to custom controls created using the Media API</li>
 </ul>
-</div>
 
 <h2 id="Basic_Audio_example">Basic Audio example</h2>
 
@@ -31,8 +29,7 @@ tags:
 &lt;/audio&gt;</pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>You can also use an MP4 file instead of MP3. MP4 files typically contain <a href="https://en.wikipedia.org/wiki/Advanced_Audio_Coding">AAC</a> encoded audio. You can use <code>type="audio/mp4"</code>. (Currently, browsers that support mp3 also support mp4 audio).</p>
+  <p><strong>Note:</strong> You can also use an MP4 file instead of MP3. MP4 files typically contain <a href="https://en.wikipedia.org/wiki/Advanced_Audio_Coding">AAC</a> encoded audio. You can use <code>type="audio/mp4"</code>. (Currently, browsers that support mp3 also support mp4 audio).</p>
 </div>
 
 <ul>
@@ -64,8 +61,7 @@ tags:
 &lt;/audio&gt;</pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>This value is often ignored on mobile platforms, and its use is not recommended unless really necessary. Auto-playing audio (and video) is usually really annoying. Plus browsers have policies that will block autoplay entirely in many situations. See the <a href="/en-US/docs/Web/Media/Autoplay_guide">Autoplay guide for media and Web Audio APIs</a> for details.</p>
+  <p><strong>Note:</strong> This value is often ignored on mobile platforms, and its use is not recommended unless really necessary. Auto-playing audio (and video) is usually really annoying. Plus browsers have policies that will block autoplay entirely in many situations. See the <a href="/en-US/docs/Web/Media/Autoplay_guide">Autoplay guide for media and Web Audio APIs</a> for details.</p>
 </div>
 
 <h4 id="loop">loop</h4>
@@ -85,8 +81,7 @@ tags:
 &lt;/audio&gt;</pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>This value is often ignored on mobile platforms.</p>
+  <p><strong>Note:</strong> This value is often ignored on mobile platforms.</p>
 </div>
 
 <h4 id="preload">preload</h4>
@@ -102,8 +97,7 @@ tags:
 </ol>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>This value is often ignored on mobile platforms.</p>
+  <p><strong>Note:</strong> This value is often ignored on mobile platforms.</p>
 </div>
 
 <pre class="brush: html">&lt;audio preload="auto"&gt;
@@ -188,8 +182,7 @@ myAudio.play();</pre>
 <pre class="brush: js">myAudio.pause();</pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>There is no stop method — to implement a stop function, you'd have to pause the media then set the <code>{{ anch("currentTime") }}</code> property value to 0.</p>
+  <p><strong>Note:</strong> There is no stop method — to implement a stop function, you'd have to pause the media then set the <code>{{ anch("currentTime") }}</code> property value to 0.</p>
 </div>
 
 <h4 id="canPlayType">canPlayType</h4>
@@ -212,8 +205,7 @@ myAudio.play();</pre>
 <p>In practice, we usually check if the result is true or false. Non-empty strings are true.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>A very early spec specified that the browser should return <code>no</code> instead of an empty string, but thankfully the number of people using older browsers that implement this version of the spec are few and far between.</p>
+  <p><strong>Note:</strong> A very early spec specified that the browser should return <code>no</code> instead of an empty string, but thankfully the number of people using older browsers that implement this version of the spec are few and far between.</p>
 </div>
 
 <h4 id="currentTime">currentTime</h4>
@@ -481,7 +473,7 @@ myAudio.volume = 0.5;</pre>
 
 <p>You should end up with something like this:</p>
 
-<p><img alt="A basic audio player with play/pause button and seek bar" src="simpleplayer.png" style="float: left;"></p>
+<p><img alt="A basic audio player with play/pause button and seek bar" src="simpleplayer.png"></p>
 
 <h3 id="Seeking_using_the_seek_bar">Seeking using the seek bar</h3>
 
@@ -539,8 +531,7 @@ progress.addEventListener('click', function(e) {
 </dl>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>You can read more on <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges">Buffering, Seeking and Time Ranges</a> elsewhere.</p>
+  <p><strong>Note:</strong> You can read more on <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges">Buffering, Seeking and Time Ranges</a> elsewhere.</p>
 </div>
 
 <h2 id="Browser_support">Browser support</h2>
@@ -727,8 +718,7 @@ progress.addEventListener('click', function(e) {
 </table>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Nearly all browsers support MP3 — for more details see this page on <a href="/en-US/docs/Web/Media/Formats#browser_compatibility">media format browser compatibility</a>.</p>
+  <p><strong>Note:</strong> Nearly all browsers support MP3 — for more details see this page on <a href="/en-US/docs/Web/Media/Formats#browser_compatibility">media format browser compatibility</a>.</p>
 </div>
 
 <h2 id="See_also">See also</h2>

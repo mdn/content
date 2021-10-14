@@ -13,6 +13,7 @@ tags:
   - Portal
 browser-compat: html.elements.portal
 ---
+
 {{HTMLRef}}
 
 The **`<portal>`** [HTML](/en-US/docs/Web/HTML) element enables the embedding of another HTML page into the current one for the purposes of allowing smoother navigation into new pages.
@@ -40,10 +41,10 @@ A `<portal>` is similar to an `<iframe>`. An `<iframe>` allows a separate {{Glos
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-*   {{htmlattrdef("referrerpolicy")}}
-    *   : Sets the [referrer policy](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) to use when requesting the page at the URL given as the value of the `src` attribute.
-*   {{htmlattrdef("src")}}
-    *   : The URL of the page to embed.
+- {{htmlattrdef("referrerpolicy")}}
+  - : Sets the [referrer policy](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) to use when requesting the page at the URL given as the value of the `src` attribute.
+- {{htmlattrdef("src")}}
+  - : The URL of the page to embed.
 
 ## Examples
 

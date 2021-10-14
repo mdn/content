@@ -12,6 +12,7 @@ tags:
   - noframes
 browser-compat: html.elements.noframes
 ---
+
 {{deprecated_header}}
 
 The **`<noframes>`** [HTML](/en-US/docs/Web/HTML) element provides content to be presented in browsers that don't support (or have disabled support for) the {{HTMLElement("frame")}} element. Although most commonly-used browsers support frames, there are exceptions, including certain special-use browsers including some mobile browsers, as well as text-mode browsers.
@@ -49,7 +50,7 @@ In this example, we see a frameset with two frames. In addition, `<noframes>` is
 
 ## See also
 
-*   {{HTMLElement("frameset")}}
-*   {{HTMLElement("frame")}}
+- {{HTMLElement("frameset")}}
+- {{HTMLElement("frame")}}
 
 {{HTMLRef}}

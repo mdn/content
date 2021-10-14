@@ -12,9 +12,8 @@ browser-compat: http.headers.X-Content-Type-Options
 
 The **`X-Content-Type-Options`** response HTTP header is a
 marker used by the server to indicate that the [MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) advertised in the
-{{HTTPHeader("Content-Type")}} headers should not be changed and be followed. This is a
-way to opt out of [MIME type
-sniffing](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_sniffing), or, in other words, to say that the MIME types are deliberately
+{{HTTPHeader("Content-Type")}} headers should be followed and not be changed. The header allows you to avoid [MIME type
+sniffing](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_sniffing) by saying that the MIME types are deliberately
 configured.
 
 This header was introduced by Microsoft in IE 8 as a way for webmasters to block
@@ -22,8 +21,8 @@ content sniffing that was happening and could transform non-executable MIME type
 executable MIME types. Since then, other browsers have introduced it, even if their MIME
 sniffing algorithms were less aggressive.
 
-Starting with Firefox 72, the opting out of MIME sniffing is also applied to top-level
-documents if a {{HTTPHeader("Content-type")}} is provided. This can cause HTML web pages
+Starting with Firefox 72, top-level
+documents also avoid MIME sniffing (if {{HTTPHeader("Content-type")}} is provided). This can cause HTML web pages
 to be downloaded instead of being rendered when they are served with a MIME type other
 than `text/html`. Make sure to set both headers correctly.
 

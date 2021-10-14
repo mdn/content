@@ -7,6 +7,7 @@ tags:
   - Mobile
   - viewport
 ---
+
 This article describes how to use the "viewport" `<meta>` tag to control the viewport's size and shape.
 
 ## Background
@@ -47,13 +48,13 @@ On high dpi screens, pages with `initial-scale=1` will effectively be zoomed by 
 
 For web developers, this means that the size of a page is much smaller than the actual pixel count and browsers may size their layouts and images accordingly. But remember that not all mobile devices are the same width; you should make sure that your pages work well in a large variation of screen sizes and orientations.
 
-The default pixel ratio depends on the display density. On a display with density less than 200dpi, the ratio is 1.0. On displays with density between 200 and 300dpi, the ratio is 1.5. For displays with density over 300dpi, the ratio is the integer floor(*density*/150dpi). Note that the default ratio is true only when the viewport scale equals 1. Otherwise, the relationship between CSS pixels and device pixels depends on the current zoom level.
+The default pixel ratio depends on the display density. On a display with density less than 200dpi, the ratio is 1.0. On displays with density between 200 and 300dpi, the ratio is 1.5. For displays with density over 300dpi, the ratio is the integer floor(_density_/150dpi). Note that the default ratio is true only when the viewport scale equals 1. Otherwise, the relationship between CSS pixels and device pixels depends on the current zoom level.
 
 ## Viewport width and screen width
 
 Sites can set their viewport to a specific size. For example, the definition `"width=320, initial-scale=1"` can be used to fit precisely onto a small phone display in portrait mode. This can cause [problems](http://starkravingfinkle.org/blog/2010/01/perils-of-the-viewport-meta-tag/) when the browser doesn't render a page at a larger size. To fix this, browsers will expand the viewport width if necessary to fill the screen at the requested scale. This is especially useful on large-screen devices like the iPad. (Allen Pike's [Choosing a viewport for iPad sites](http://www.antipode.ca/2010/choosing-a-viewport-for-ipad-sites/) has a good explanation for web developers.)
 
-For pages that set an initial or maximum scale, this means the `width` property actually translates into a *minimum* viewport width. For example, if your layout needs at least 500 pixels of width then you can use the following markup. When the screen is more than 500 pixels wide, the browser will expand the viewport (rather than zoom in) to fit the screen:
+For pages that set an initial or maximum scale, this means the `width` property actually translates into a _minimum_ viewport width. For example, if your layout needs at least 500 pixels of width then you can use the following markup. When the screen is more than 500 pixels wide, the browser will expand the viewport (rather than zoom in) to fit the screen:
 
     <meta name="viewport" content="width=500, initial-scale=1">
 

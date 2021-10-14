@@ -15,6 +15,7 @@ tags:
   - Web Components
 browser-compat: html.elements.template
 ---
+
 {{HTMLRef}}
 
 The **`<template>`** [HTML](/en-US/docs/Web/HTML) element is a mechanism for holding {{Glossary("HTML")}} that is not to be rendered immediately when a page is loaded but may be instantiated subsequently during runtime using JavaScript.
@@ -221,5 +222,5 @@ container.appendChild(secondClone);
 
 ## See also
 
-*   Web components: {{HTMLElement("slot")}} (and historical: {{HTMLElement("shadow")}})
-*   [Using templates and slots](/en-US/docs/Web/Web_Components/Using_templates_and_slots)
+- Web components: {{HTMLElement("slot")}} (and historical: {{HTMLElement("shadow")}})
+- [Using templates and slots](/en-US/docs/Web/Web_Components/Using_templates_and_slots)

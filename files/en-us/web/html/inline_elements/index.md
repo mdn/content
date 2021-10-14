@@ -10,6 +10,7 @@ tags:
   - Layout
   - Reference
 ---
+
 In this article, we'll examine HTML inline-level elements and how they differ from [block-level elements](/en-US/docs/Web/HTML/Block-level_elements).
 
 HTML (**Hypertext Markup Language**) elements historically were categorized as either "block-level" elements or "inline-level" elements. Since this is a presentational characteristic it is nowadays specified by CSS in the [Flow Layout](/en-US/docs/Web/CSS/CSS_Flow_Layout).
@@ -84,83 +85,83 @@ See the difference? The `<p>` element totally changes the layout of the text, sp
 
 ### Changing element levels
 
-You can change the *visual presentation* of an element using the CSS {{cssxref("display")}} property. For example, by changing the value of `display` from `"inline"` to `"block"`, you can tell the browser to render the inline element in a block box rather than an inline box, and vice versa. However, doing this will not change the *category* and the *content model* of the element. For example, even if the `display` of the `span` element is changed to `"block"`, it still would not allow to nest a `div` element inside it.
+You can change the *visual presentation* of an element using the CSS {{cssxref("display")}} property. For example, by changing the value of `display` from `"inline"` to `"block"`, you can tell the browser to render the inline element in a block box rather than an inline box, and vice versa. However, doing this will not change the *category* and the _content model_ of the element. For example, even if the `display` of the `span` element is changed to `"block"`, it still would not allow to nest a `div` element inside it.
 
 ## Conceptual differences
 
 In brief, here are the basic conceptual differences between inline and block-level elements:
 
-*   Content model
-    *   : Generally, inline elements may contain only data and other inline elements. You can't put block elements inside inline elements.
-*   Formatting
-    *   : By default, inline elements do not force a new line to begin in the document flow. Block elements, on the other hand, typically cause a line break to occur (although, as usual, this can be changed using CSS).
+- Content model
+  - : Generally, inline elements may contain only data and other inline elements. You can't put block elements inside inline elements.
+- Formatting
+  - : By default, inline elements do not force a new line to begin in the document flow. Block elements, on the other hand, typically cause a line break to occur (although, as usual, this can be changed using CSS).
 
 ## List of "inline" elements
 
 The following elements are inline by default (although block and inline elements are no longer defined in HTML 5, use [content categories](/en-US/docs/Web/Guide/HTML/Content_categories) instead):
 
-*   {{ HTMLElement("a") }}
-*   {{ HTMLElement("abbr") }}
-*   {{ HTMLElement("acronym") }}
-*   {{ HTMLElement("audio") }} (if it has visible controls)
-*   {{ HTMLElement("b") }}
-*   {{ HTMLElement("bdi") }}
-*   {{ HTMLElement("bdo") }}
-*   {{ HTMLElement("big") }}
-*   {{ HTMLElement("br") }}
-*   {{ HTMLElement("button") }}
-*   {{ HTMLElement("canvas") }}
-*   {{ HTMLElement("cite") }}
-*   {{ HTMLElement("code") }}
-*   {{ HTMLElement("data") }}
-*   {{ HTMLElement("datalist") }}
-*   {{ HTMLElement("del") }}
-*   {{ HTMLElement("dfn") }}
-*   {{ HTMLElement("em") }}
-*   {{ HTMLElement("embed") }}
-*   {{ HTMLElement("i") }}
-*   {{ HTMLElement("iframe") }}
-*   {{ HTMLElement("img") }}
-*   {{ HTMLElement("input") }}
-*   {{ HTMLElement("ins") }}
-*   {{ HTMLElement("kbd") }}
-*   {{ HTMLElement("label") }}
-*   {{ HTMLElement("map") }}
-*   {{ HTMLElement("mark") }}
-*   {{ HTMLElement("meter") }}
-*   {{ HTMLElement("noscript") }}
-*   {{ HTMLElement("object") }}
-*   {{ HTMLElement("output") }}
-*   {{ HTMLElement("picture") }}
-*   {{ HTMLElement("progress") }}
-*   {{ HTMLElement("q") }}
-*   {{ HTMLElement("ruby") }}
-*   {{ HTMLElement("s") }}
-*   {{ HTMLElement("samp") }}
-*   {{ HTMLElement("script") }}
-*   {{ HTMLElement("select") }}
-*   {{ HTMLElement("slot") }}
-*   {{ HTMLElement("small") }}
-*   {{ HTMLElement("span") }}
-*   {{ HTMLElement("strong") }}
-*   {{ HTMLElement("sub") }}
-*   {{ HTMLElement("sup") }}
-*   {{ HTMLElement("svg") }}
-*   {{ HTMLElement("template") }}
-*   {{ HTMLElement("textarea") }}
-*   {{ HTMLElement("time") }}
-*   {{ HTMLElement("u") }}
-*   {{ HTMLElement("tt") }}
-*   {{ HTMLElement("var") }}
-*   {{ HTMLElement("video") }}
-*   {{ HTMLElement("wbr") }}
+- {{ HTMLElement("a") }}
+- {{ HTMLElement("abbr") }}
+- {{ HTMLElement("acronym") }}
+- {{ HTMLElement("audio") }} (if it has visible controls)
+- {{ HTMLElement("b") }}
+- {{ HTMLElement("bdi") }}
+- {{ HTMLElement("bdo") }}
+- {{ HTMLElement("big") }}
+- {{ HTMLElement("br") }}
+- {{ HTMLElement("button") }}
+- {{ HTMLElement("canvas") }}
+- {{ HTMLElement("cite") }}
+- {{ HTMLElement("code") }}
+- {{ HTMLElement("data") }}
+- {{ HTMLElement("datalist") }}
+- {{ HTMLElement("del") }}
+- {{ HTMLElement("dfn") }}
+- {{ HTMLElement("em") }}
+- {{ HTMLElement("embed") }}
+- {{ HTMLElement("i") }}
+- {{ HTMLElement("iframe") }}
+- {{ HTMLElement("img") }}
+- {{ HTMLElement("input") }}
+- {{ HTMLElement("ins") }}
+- {{ HTMLElement("kbd") }}
+- {{ HTMLElement("label") }}
+- {{ HTMLElement("map") }}
+- {{ HTMLElement("mark") }}
+- {{ HTMLElement("meter") }}
+- {{ HTMLElement("noscript") }}
+- {{ HTMLElement("object") }}
+- {{ HTMLElement("output") }}
+- {{ HTMLElement("picture") }}
+- {{ HTMLElement("progress") }}
+- {{ HTMLElement("q") }}
+- {{ HTMLElement("ruby") }}
+- {{ HTMLElement("s") }}
+- {{ HTMLElement("samp") }}
+- {{ HTMLElement("script") }}
+- {{ HTMLElement("select") }}
+- {{ HTMLElement("slot") }}
+- {{ HTMLElement("small") }}
+- {{ HTMLElement("span") }}
+- {{ HTMLElement("strong") }}
+- {{ HTMLElement("sub") }}
+- {{ HTMLElement("sup") }}
+- {{ HTMLElement("svg") }}
+- {{ HTMLElement("template") }}
+- {{ HTMLElement("textarea") }}
+- {{ HTMLElement("time") }}
+- {{ HTMLElement("u") }}
+- {{ HTMLElement("tt") }}
+- {{ HTMLElement("var") }}
+- {{ HTMLElement("video") }}
+- {{ HTMLElement("wbr") }}
 
 ## See also
 
-*   [Block-level elements](/en-US/docs/Web/HTML/Block-level_elements)
-*   [HTML element reference](/en-US/docs/Web/HTML/Element)
-*   {{cssxref("display")}}
-*   [Content categories](/en-US/docs/Web/Guide/HTML/Content_categories)
-*   [Block and Inline Layout in Normal Flow](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
+- [Block-level elements](/en-US/docs/Web/HTML/Block-level_elements)
+- [HTML element reference](/en-US/docs/Web/HTML/Element)
+- {{cssxref("display")}}
+- [Content categories](/en-US/docs/Web/Guide/HTML/Content_categories)
+- [Block and Inline Layout in Normal Flow](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/HTML/")}}

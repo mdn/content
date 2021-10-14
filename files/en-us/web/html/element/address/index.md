@@ -17,6 +17,7 @@ tags:
   - Web
 browser-compat: html.elements.address
 ---
+
 {{HTMLRef}}
 
 The **`<address>`** [HTML](/en-US/docs/Web/HTML) element indicates that the enclosed HTML provides contact information for a person or people, or for an organization.
@@ -104,9 +105,9 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## Usage notes
 
-*   The `<address>` element can only be used to represent the contact information for its nearest {{HTMLElement("article")}} or {{HTMLElement("body")}} element ancestor.
-*   This element should not contain more information than the contact information, like a publication date (which belongs in a {{HTMLElement("time")}} element).
-*   Typically an `<address>` element can be placed inside the {{HTMLElement("footer")}} element of the current section, if any.
+- The `<address>` element can only be used to represent the contact information for its nearest {{HTMLElement("article")}} or {{HTMLElement("body")}} element ancestor.
+- This element should not contain more information than the contact information, like a publication date (which belongs in a {{HTMLElement("time")}} element).
+- Typically an `<address>` element can be placed inside the {{HTMLElement("footer")}} element of the current section, if any.
 
 ## Examples
 
@@ -142,5 +143,5 @@ Although it renders text with the same default styling as the {{HTMLElement("i")
 
 ## See also
 
-*   Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("header")}};
-*   [Sections and outlines of an HTML5 document](/en-US/docs/Web/HTML/Element/Heading_Elements).
+- Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("header")}};
+- [Sections and outlines of an HTML5 document](/en-US/docs/Web/HTML/Element/Heading_Elements).

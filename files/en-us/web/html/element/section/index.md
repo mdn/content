@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: html.elements.section
 ---
+
 {{HTMLRef}}
 
 The **`<section>`** [HTML](/en-US/docs/Web/HTML) element represents a generic standalone section of a document, which doesn't have a more specific semantic element to represent it. Sections should always have a heading, with very few exceptions.
@@ -106,10 +107,10 @@ As mentioned above, `<section>` is a generic sectioning element, and should only
 
 Also consider these cases:
 
-*   If the contents of the element represent a standalone, atomic unit of content that makes sense syndicated as a standalone piece (e.g. a blog post or blog comment, or a newspaper article), the {{HTMLElement("article")}} element would be a better choice.
-*   If the contents represent useful tangential information that works alongside the main content, but is not directly part of it (like related links, or an author bio), use an {{HTMLElement("aside")}}.
-*   If the contents represent the main content area of a document, use {{HTMLElement("main")}}.
-*   If you are only using the element as a styling wrapper, use a {{HTMLElement("div")}}. A rule of thumb is that a `<section>` should logically appear in the outline of a document.
+- If the contents of the element represent a standalone, atomic unit of content that makes sense syndicated as a standalone piece (e.g. a blog post or blog comment, or a newspaper article), the {{HTMLElement("article")}} element would be a better choice.
+- If the contents represent useful tangential information that works alongside the main content, but is not directly part of it (like related links, or an author bio), use an {{HTMLElement("aside")}}.
+- If the contents represent the main content area of a document, use {{HTMLElement("main")}}.
+- If you are only using the element as a styling wrapper, use a {{HTMLElement("div")}}. A rule of thumb is that a `<section>` should logically appear in the outline of a document.
 
 To reiterate, each `<section>` should be identified, typically by including a heading ({{HTMLElement('h1')}}-{{HTMLElement('h6')}} element) as a child of the `<section>` element, wherever possible. See below for examples of where you might see a `<section>` without a heading.
 
@@ -193,7 +194,7 @@ Depending on the content, including a heading could also be good for SEO, so it 
 
 ## See also
 
-*   Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
-*   [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
-*   [ARIA: Region role](/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role)
-*   [Why You Should Choose HTML5 article Over section](https://www.smashingmagazine.com/2020/01/html5-article-section/), by Bruce Lawson
+- Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
+- [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
+- [ARIA: Region role](/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role)
+- [Why You Should Choose HTML5 article Over section](https://www.smashingmagazine.com/2020/01/html5-article-section/), by Bruce Lawson

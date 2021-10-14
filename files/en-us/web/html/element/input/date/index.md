@@ -14,11 +14,12 @@ tags:
   - Reference
 browser-compat: html.elements.input.input-date
 ---
+
 {{HTMLRef}}
 
 {{HTMLElement("input")}} elements of **`type="date"`** create input fields that let the user enter a date, either with a textbox that validates the input or a special date picker interface.
 
-The resulting value includes the year, month, and day, but *not* the time. The {{HTMLElement("input/time", "time")}} and {{HTMLElement("input/datetime-local", "datetime-local")}} input types support time and date+time input.
+The resulting value includes the year, month, and day, but _not_ the time. The {{HTMLElement("input/time", "time")}} and {{HTMLElement("input/datetime-local", "datetime-local")}} input types support time and date+time input.
 
 {{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-shorter")}}
 
@@ -79,7 +80,7 @@ You can set a default value for the input with a date inside the {{htmlattrxref(
 
 {{EmbedLiveSample('Value', 600, 40)}}
 
-> **Note:** The displayed date format will differ from the actual `value` — the displayed date is formatted *based on the locale of the user's browser*, but the parsed `value` is always formatted `yyyy-mm-dd`.
+> **Note:** The displayed date format will differ from the actual `value` — the displayed date is formatted _based on the locale of the user's browser_, but the parsed `value` is always formatted `yyyy-mm-dd`.
 
 You can get and set the date value in JavaScript with the {{domxref("HTMLInputElement")}} `value` and `valueAsNumber` properties. For example:
 
@@ -163,7 +164,7 @@ You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "inpu
 
 The result is that only days in April 2017 can be selected — the month and year parts of the textbox will be uneditable, and dates outside April 2017 can't be selected in the picker widget.
 
-> **Note:** You *should* be able to use the {{htmlattrxref("step", "input")}} attribute to vary the number of days jumped each time the date is incremented (e.g. to only make Saturdays selectable). However, this does not seem to be in any implementation at the time of writing.
+> **Note:** You _should_ be able to use the {{htmlattrxref("step", "input")}} attribute to vary the number of days jumped each time the date is incremented (e.g. to only make Saturdays selectable). However, this does not seem to be in any implementation at the time of writing.
 
 ### Controlling input size
 
@@ -218,7 +219,7 @@ input:valid+span::after {
 }
 ```
 
-> **Warning:** Client-side form validation *is no substitute* for validating on the server. It's easy for someone to modify the HTML, or bypass your HTML entirely and submit the data directly to your server. If your server fails to validate the received data, disaster could strike with data that is badly-formatted, too large, of the wrong type, etc.
+> **Warning:** Client-side form validation _is no substitute_ for validating on the server. It's easy for someone to modify the HTML, or bypass your HTML entirely and submit the data directly to your server. If your server fails to validate the received data, disaster could strike with data that is badly-formatted, too large, of the wrong type, etc.
 
 ## Handling browser support
 
@@ -228,12 +229,12 @@ Unsupporting browsers gracefully degrade to a text input, but this creates probl
 
 The second problem is the more serious one; with date input supported, the value is normalized to the format `yyyy-mm-dd`. But with a text input, the browser has no recognition of what format the date should be in, and there are many different formats in which people write dates. For example:
 
-*   `ddmmyyyy`
-*   `dd/mm/yyyy`
-*   `mm/dd/yyyy`
-*   `dd-mm-yyyy`
-*   `mm-dd-yyyy`
-*   `Month dd, yyyy`
+- `ddmmyyyy`
+- `dd/mm/yyyy`
+- `mm/dd/yyyy`
+- `dd-mm-yyyy`
+- `mm-dd-yyyy`
+- `Month dd, yyyy`
 
 One way around this is the {{htmlattrxref("pattern", "input")}} attribute on your date input. Even though the date picker doesn't use it, the text input fallback will. For example, try viewing the following in a unsupporting browser:
 
@@ -480,7 +481,7 @@ daySelect.onchange = function() {
 
 ## See also
 
-*   The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
-*   [Date and Time picker tutorial](/en-US/docs/Learn/Forms/HTML5\_input_types#date_and_time_pickers)
-*   [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
-*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
+- [Date and Time picker tutorial](/en-US/docs/Learn/Forms/HTML5_input_types#date_and_time_pickers)
+- [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
+- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

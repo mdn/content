@@ -51,5 +51,4 @@ iframeNode.contentDocument.designMode = "on";
 
 ## See also
 
-- [Rich-Text Editing in Mozilla](/en-US/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla)
 - {{domxref("HTMLElement.contentEditable")}}

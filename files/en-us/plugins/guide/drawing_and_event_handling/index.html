@@ -7,9 +7,6 @@ tags:
   - NPAPI
   - Plugins
 ---
-<div class="prevnext" style="text-align: right;">
-<p><a href="/en-US/docs/Gecko_Plugin_API_Reference:Initialization_and_Destruction" style="float: left;">« Previous</a><a href="/en-US/docs/Gecko_Plugin_API_Reference:Streams">Next »</a></p>
-</div>
 
 <p>This chapter tells how to determine whether a plug-in instance is windowed or windowless, how to draw and redraw plug-ins, and how to handle plug-in events.</p>
 
@@ -23,7 +20,7 @@ tags:
 <p>For information about the way HTML determines plug-in display mode, see <a href="/en-US/docs/Gecko_Plugin_API_Reference/Plug-in_Basics#Using_HTML_to_Display_Plug-ins">Using HTML to Display Plug-ins</a>.</p>
 
 <div class="note">
-<p><strong>NOTE:</strong> Windowless plug-ins were not supported on the X Window System platform prior to Gecko 1.9 Alpha 7 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=137189" title="FIXED: Windowless plug-in support for X (WMODE)">bug 137189</a>).</p>
+<p><strong>Note:</strong> Windowless plug-ins were not supported on the X Window System platform prior to Gecko 1.9 Alpha 7 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=137189" title="FIXED: Windowless plug-in support for X (WMODE)">bug 137189</a>).</p>
 </div>
 
 <h3 id="The_NPWindow_Structure">The NPWindow Structure</h3>
@@ -31,7 +28,7 @@ tags:
 <p>When a plug-in is loaded, it is drawn into a target area. This target is either the windowed plug-in's native window, or the drawable of a windowless plug-in. The <a href="/en-US/NPWindow">NPWindow</a> structure represents either the native window or a drawable. This structure contains information about coordinate position, size, the state of the plug-in (windowed or windowless), and some platform-specific information.</p>
 
 <div class="note">
-<p><strong>NOTE:</strong> When a plug-in is drawn to a window, the plug-in is responsible for preserving state information and ensuring that the original state is restored.</p>
+<p><strong>Note:</strong> When a plug-in is drawn to a window, the plug-in is responsible for preserving state information and ensuring that the original state is restored.</p>
 </div>
 
 <p>For windowless plug-ins, the browser calls the <a href="/en-US/NPP_SetWindow">NPP_SetWindow</a> method with an <a href="/en-US/NPWindow">NPWindow</a> structure that represents a drawable. For windowed plug-ins, the browser calls the <code>NPP_SetWindow</code> method with an <code>NPWindow</code> structure that represents a window.</p>
@@ -317,7 +314,9 @@ void NPN_InvalidateRegion(NPP instance, NPRegion invalidRegion);
 
 <p>This method results in a synchronous update event or paint message for the plug-in.</p>
 
-<div class="note"><strong>Note:</strong> Some browsers, including Firefox 4, may ignore calls to <code>NPN_ForceRedraw()</code>.</div>
+<div class="note">
+  <p><strong>Note:</strong> Some browsers, including Firefox 4, may ignore calls to <code>NPN_ForceRedraw()</code>.</p>
+</div>
 
 <h4 id="Receiving_a_Paint_Message">Receiving a Paint Message</h4>
 
@@ -416,7 +415,3 @@ int16 NPP_HandleEvent(NPP instance, NPEvent* event);
 
 <p><br>
  On Mac OS, when <code>NPP_HandleEvent</code> is called, the current port is set up correctly so that its origin matches the upper-left corner of the plug-in. A plug-in does not need to set up the current port for mouse coordinate translation.</p>
-
-<div class="prevnext" style="text-align: right;">
-<p><a href="/en-US/docs/Gecko_Plugin_API_Reference:Initialization_and_Destruction" style="float: left;">« Previous</a><a href="/en-US/docs/Gecko_Plugin_API_Reference:Streams">Next »</a></p>
-</div>

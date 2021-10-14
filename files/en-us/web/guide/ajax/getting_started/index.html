@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("XMLHttpRequest")}}</div>
 
-<p class="summary">This article guides you through the AJAX basics and gives you some simple hands-on examples to get you started.</p>
+<p>This article guides you through the AJAX basics and gives you some simple hands-on examples to get you started.</p>
 
 <h2 id="Whats_AJAX">What's AJAX?</h2>
 
@@ -36,7 +36,7 @@ if (window.XMLHttpRequest) { // Mozilla, Safari, IE7+ ...
 }
 </pre>
 
-<div class="note"><strong>Note:</strong> For illustration purposes, the above is a somewhat simplified version of the code to be used for creating an XMLHttp instance. For a more realistic example, see step 3 of this article.</div>
+<div class="note"><p><strong>Note:</strong> For illustration purposes, the above is a somewhat simplified version of the code to be used for creating an XMLHttp instance. For a more realistic example, see step 3 of this article.</p></div>
 
 <p>After making a request, you will receive a response back. At this stage, you need to tell the XMLHttp request object which JavaScript function will handle the response, by setting the <code>onreadystatechange</code> property of the object and naming it after the function to call when the request changes state, like this:</p>
 
@@ -163,11 +163,11 @@ httpRequest.send();
  <li><code>alertContents()</code> checks if the response was received and OK, then <code>alert()</code>s the contents of the <code>test.html</code> file.</li>
 </ul>
 
-<div class="note"><strong>Note</strong>: If you're sending a request to a piece of code that will return XML, rather than a static HTML file, you must set response headers to work in Internet Explorer. If you do not set header <code>Content-Type: application/xml</code>, IE will throw a JavaScript "Object Expected" error after the line where you tried to access an XML element.</div>
+<div class="note"><p><strong>Note:</strong> If you're sending a request to a piece of code that will return XML, rather than a static HTML file, you must set response headers to work in Internet Explorer. If you do not set header <code>Content-Type: application/xml</code>, IE will throw a JavaScript "Object Expected" error after the line where you tried to access an XML element.</p></div>
 
-<div class="note"><strong>Note 2</strong>: If you do not set header <code>Cache-Control: no-cache</code> the browser will cache the response and never re-submit the request, making debugging challenging. You can also add an always-different GET parameter, like a timestamp or random number (see <a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#bypassing_the_cache">bypassing the cache</a>)</div>
+<div class="note"><p><strong>Note:</strong> If you do not set header <code>Cache-Control: no-cache</code> the browser will cache the response and never re-submit the request, making debugging challenging. You can also add an always-different GET parameter, like a timestamp or random number (see <a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#bypassing_the_cache">bypassing the cache</a>)</p></div>
 
-<div class="note"><strong>Note 3</strong>: If the <code>httpRequest</code> variable is used globally, competing functions calling <code>makeRequest()</code> can overwrite each other, causing a race condition. Declaring the <code>httpRequest </code>variable local to a <a href="/en-US/docs/Web/JavaScript/Closures">closure</a> containing the AJAX functions avoids this.</div>
+<div class="note"><p><strong>Note:</strong> If the <code>httpRequest</code> variable is used globally, competing functions calling <code>makeRequest()</code> can overwrite each other, causing a race condition. Declaring the <code>httpRequest </code>variable local to a <a href="/en-US/docs/Web/JavaScript/Closures">closure</a> containing the AJAX functions avoids this.</p></div>
 
 <p>In the event of a communication error (such as the server going down), an exception will be thrown in the <code>onreadystatechange</code> method when accessing the response status. To mitigate this problem, you could wrap your <code>if...then</code> statement in a <code>try...catch</code>:</p>
 

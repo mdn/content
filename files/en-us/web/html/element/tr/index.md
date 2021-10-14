@@ -13,6 +13,7 @@ tags:
   - tr tag
 browser-compat: html.elements.tr
 ---
+
 {{HTMLRef}}
 
 The **`<tr>`** [HTML](/en-US/docs/Web/HTML) element defines a row of cells in a table. The row's cells can then be established using a mix of {{HTMLElement("td")}} (data cell) and {{HTMLElement("th")}} (header cell) elements.
@@ -31,48 +32,57 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 The following attributes may still be implemented in browsers but are no longer part of the HTML specification and may be missing or may not work as expected. They should be avoided.
 
-*   {{HTMLAttrDef("align")}}{{deprecated_inline}}
-    *   : A {{DOMxRef("DOMString")}} which specifies how the cell's context should be aligned horizontally within the cells in the row; this is shorthand for using `align` on every cell in the row individually. Possible values are:
+- {{HTMLAttrDef("align")}}{{deprecated_inline}}
 
-        *   `left`
-            *   : Align the content of each cell at its left edge.
-        *   `center`
-            *   : Center the contents of each cell between their left and right edges.
-        *   `right`
-            *   : Align the content of each cell at its right edge.
-        *   `justify`
-            *   : Widen whitespaces within the text of each cell so that the text fills the full width of each cell (full justification).
-        *   `char`
-            *   : Align each cell in the row on a specific character (such that each row in the column that is configured this way will horizontally align its cells on that character). This uses the {{htmlattrxref("char", "tr")}} and {{htmlattrxref("charoff", "tr")}} to establish the alignment character (typically "." or "," when aligning numerical data) and the number of characters that should follow the alignment character. This alignment type was never widely supported.
+  - : A {{DOMxRef("DOMString")}} which specifies how the cell's context should be aligned horizontally within the cells in the row; this is shorthand for using `align` on every cell in the row individually. Possible values are:
 
-        If no value is expressly set for `align`, the parent node's value is inherited.
+    - `left`
+      - : Align the content of each cell at its left edge.
+    - `center`
+      - : Center the contents of each cell between their left and right edges.
+    - `right`
+      - : Align the content of each cell at its right edge.
+    - `justify`
+      - : Widen whitespaces within the text of each cell so that the text fills the full width of each cell (full justification).
+    - `char`
+      - : Align each cell in the row on a specific character (such that each row in the column that is configured this way will horizontally align its cells on that character). This uses the {{htmlattrxref("char", "tr")}} and {{htmlattrxref("charoff", "tr")}} to establish the alignment character (typically "." or "," when aligning numerical data) and the number of characters that should follow the alignment character. This alignment type was never widely supported.
 
-        > **Note:** Instead of using the obsolete `align` attribute, you should instead use the CSS {{CSSxRef("text-align")}} property to establish `left`, `center`, `right`, or `justify` alignment for the row's cells. To apply character-based alignment, set the CSS {{CSSxRef("text-align")}} property to the alignment character (such as `"."` or `","`).
-*   {{HTMLAttrDef("bgcolor")}}{{deprecated_inline}}
-    *   : A {{DOMxRef("DOMString")}} specifying a color to apply to the backgrounds of each of the row's cells. This can be either an [hexadecimal `#RRGGBB` or `#RGB` value](/en-US/docs/Web/CSS/color_value#rgb\(\)) or a [color keyword](/en-US/docs/Web/CSS/color_value#color_keywords). Omitting the attribute or setting it to `null` in JavaScript causes the row's cells to inherit the row's parent element's background color.
+    If no value is expressly set for `align`, the parent node's value is inherited.
 
-        > **Note:** The {{HTMLElement("tr")}} element should be styled using [CSS](/en-US/docs/Web/CSS). To give a similar effect as the `bgcolor` attribute, use the [CSS](/en-US/docs/Web/CSS) property {{CSSxRef("background-color")}}.
-*   {{HTMLAttrDef("char")}}{{deprecated_inline}}
-    *   : A {{DOMxRef("DOMString")}} which sets the character to align the cells in each of the row's columns on (each row's centering that uses the same character gets aligned with others using the same character . Typical values for this include a period (`"."`) or comma (`","`) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tr")}} is not set to `char`, this attribute is ignored.
+    > **Note:** Instead of using the obsolete `align` attribute, you should instead use the CSS {{CSSxRef("text-align")}} property to establish `left`, `center`, `right`, or `justify` alignment for the row's cells. To apply character-based alignment, set the CSS {{CSSxRef("text-align")}} property to the alignment character (such as `"."` or `","`).
 
-        > **Note:** This attribute is not only obsolete, but was rarely implemented anyway. To achieve the same effect as the {{htmlattrxref("char", "tr")}} attribute, set the CSS {{CSSxRef("text-align")}} property to the same string you would specify for the `char` property, such as `text-align: "."`.
-*   {{HTMLAttrDef("charoff")}}{{deprecated_inline}}
-    *   : A {{DOMxRef("DOMString")}} indicating the number of characters on the tail end of the column's data should be displayed after the alignment character specified by the `char` attribute. For example, when displaying money values for currencies that use hundredths of a unit (such as the dollar, which is divided into 100 cents), you would typically specify a value of 2, so that in tandem with `char` being set to `"."`, the values in a column would be cleanly aligned on the decimal points, with the number of cents properly displayed to the right of the decimal point.
+- {{HTMLAttrDef("bgcolor")}}{{deprecated_inline}}
 
-        > **Note:** This attribute is obsolete, and was never widely supported anyway.
-*   {{HTMLAttrDef("valign")}}{{deprecated_inline}}
-    *   : A {{DOMxRef("DOMString")}} specifying the vertical alignment of the text within each cell in the row. Possible values for this attribute are:
+  - : A {{DOMxRef("DOMString")}} specifying a color to apply to the backgrounds of each of the row's cells. This can be either an [hexadecimal `#RRGGBB` or `#RGB` value](</en-US/docs/Web/CSS/color_value#rgb()>) or a [color keyword](/en-US/docs/Web/CSS/color_value#color_keywords). Omitting the attribute or setting it to `null` in JavaScript causes the row's cells to inherit the row's parent element's background color.
 
-        *   `baseline`
-            *   : Aligns each cell's content text as closely as possible to the bottom of the cell, handling alignment of different fonts and font sizes by aligning the characters along the {{interwiki("wikipedia", "baseline")}} of the font(s) used in the row. If all of the characters in the row are the same size, the effect is the same as `bottom`.
-        *   `bottom`,
-            *   : Draws the text in each of the row's cells as closely as possible to the bottom edge of those cells.
-        *   `middle`
-            *   : Each cell's text is vertically centered.
-        *   `top`
-            *   : Each cell's text is drawn as closely as possible to the top edge of the containing cell.
+    > **Note:** The {{HTMLElement("tr")}} element should be styled using [CSS](/en-US/docs/Web/CSS). To give a similar effect as the `bgcolor` attribute, use the [CSS](/en-US/docs/Web/CSS) property {{CSSxRef("background-color")}}.
 
-        > **Note:** Don't use the obsolete `valign` attribute. Instead, add the CSS {{CSSxRef("vertical-align")}} property to the row.
+- {{HTMLAttrDef("char")}}{{deprecated_inline}}
+
+  - : A {{DOMxRef("DOMString")}} which sets the character to align the cells in each of the row's columns on (each row's centering that uses the same character gets aligned with others using the same character . Typical values for this include a period (`"."`) or comma (`","`) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tr")}} is not set to `char`, this attribute is ignored.
+
+    > **Note:** This attribute is not only obsolete, but was rarely implemented anyway. To achieve the same effect as the {{htmlattrxref("char", "tr")}} attribute, set the CSS {{CSSxRef("text-align")}} property to the same string you would specify for the `char` property, such as `text-align: "."`.
+
+- {{HTMLAttrDef("charoff")}}{{deprecated_inline}}
+
+  - : A {{DOMxRef("DOMString")}} indicating the number of characters on the tail end of the column's data should be displayed after the alignment character specified by the `char` attribute. For example, when displaying money values for currencies that use hundredths of a unit (such as the dollar, which is divided into 100 cents), you would typically specify a value of 2, so that in tandem with `char` being set to `"."`, the values in a column would be cleanly aligned on the decimal points, with the number of cents properly displayed to the right of the decimal point.
+
+    > **Note:** This attribute is obsolete, and was never widely supported anyway.
+
+- {{HTMLAttrDef("valign")}}{{deprecated_inline}}
+
+  - : A {{DOMxRef("DOMString")}} specifying the vertical alignment of the text within each cell in the row. Possible values for this attribute are:
+
+    - `baseline`
+      - : Aligns each cell's content text as closely as possible to the bottom of the cell, handling alignment of different fonts and font sizes by aligning the characters along the {{interwiki("wikipedia", "baseline")}} of the font(s) used in the row. If all of the characters in the row are the same size, the effect is the same as `bottom`.
+    - `bottom`,
+      - : Draws the text in each of the row's cells as closely as possible to the bottom edge of those cells.
+    - `middle`
+      - : Each cell's text is vertically centered.
+    - `top`
+      - : Each cell's text is drawn as closely as possible to the top edge of the containing cell.
+
+    > **Note:** Don't use the obsolete `valign` attribute. Instead, add the CSS {{CSSxRef("vertical-align")}} property to the row.
 
 ## Examples
 
@@ -147,9 +157,9 @@ Let's actually look at the output first this time:
 
 Notice how the heading area here is actually two rows, one with "Name", "ID", "Membership Dates", and "Balance" headings, and the other with "Joined" and "Canceled", which are sub-headings below "Membership Dates". This is accomplished by:
 
-*   Having the first row's "Name", "ID", and "Balance" heading cells span two rows using the {{htmlattrxref("rowspan")}} attribute, making them each be two rows tall.
-*   Having the first row's "Membership Dates" heading cell span two columns using the {{htmlattrxref("colspan")}} attribute, which causes this heading to actually be two columns wide.
-*   Having a second row of {{HTMLElement("th")}} elements that contains only the "Joined" and "Canceled" headings. Because the other columns are already occupied by first-row cells that span into the second row, these wind up correctly positioned under the "Membership Dates" heading.
+- Having the first row's "Name", "ID", and "Balance" heading cells span two rows using the {{htmlattrxref("rowspan")}} attribute, making them each be two rows tall.
+- Having the first row's "Membership Dates" heading cell span two columns using the {{htmlattrxref("colspan")}} attribute, which causes this heading to actually be two columns wide.
+- Having a second row of {{HTMLElement("th")}} elements that contains only the "Joined" and "Canceled" headings. Because the other columns are already occupied by first-row cells that span into the second row, these wind up correctly positioned under the "Membership Dates" heading.
 
 #### HTML
 
@@ -347,7 +357,7 @@ th, td {
 
 While we add a {{CSSxRef("font")}} property to the {{HTMLElement("table")}} element here to set a more visually-appealing typeface (or an abominable sans-serif typeface, depending on your personal opinion), the interesting part is the second style here, where we style `<tr>` elements located within the {{HTMLElement("thead")}} so they have a light blue background color. This is a way to quickly apply a background color to all of the cells in the heading area at once.
 
-This does *not* affect the style of the {{HTMLElement("th")}} elements in the first column, though, where we treat the member names as a row heading.
+This does _not_ affect the style of the {{HTMLElement("th")}} elements in the first column, though, where we treat the member names as a row heading.
 
 ### Advanced styling
 
@@ -445,7 +455,7 @@ thead > tr:nth-of-type(2) {
 }
 ```
 
-This sets the background color of all `<tr>` elements in the table's heading (as specified using {{HTMLElement("thead")}}). Then we set the bottom border of the top header to be a two-pixel wide line. Notice, however, that we're using the {{CSSxRef(":nth-of-type")}} selector to apply {{CSSxRef("border-bottom")}} to the *second* row in the heading. Why? Because the heading is made of two rows that are spanned by some of the cells. That means there are actually two rows there; applying the style to the first row would not give us the expected result.
+This sets the background color of all `<tr>` elements in the table's heading (as specified using {{HTMLElement("thead")}}). Then we set the bottom border of the top header to be a two-pixel wide line. Notice, however, that we're using the {{CSSxRef(":nth-of-type")}} selector to apply {{CSSxRef("border-bottom")}} to the _second_ row in the heading. Why? Because the heading is made of two rows that are spanned by some of the cells. That means there are actually two rows there; applying the style to the first row would not give us the expected result.
 
 ##### The "Joined" and "Canceled" headers
 
@@ -574,8 +584,8 @@ This just sets the CSS {{CSSxRef("text-align")}} property for the last {{HTMLEle
 
 ## See also
 
-*   [Learning area: HTML tables](/en-US/docs/Learn/HTML/Tables): An introduction to using tables, including `<tr>`.
-*   {{DOMxRef("HTMLTableRowElement")}}: the interface on which `<tr>` is based.
-*   Other table-related elements:
+- [Learning area: HTML tables](/en-US/docs/Learn/HTML/Tables): An introduction to using tables, including `<tr>`.
+- {{DOMxRef("HTMLTableRowElement")}}: the interface on which `<tr>` is based.
+- Other table-related elements:
 
-    *   {{HTMLElement("table")}}, {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("td")}}, {{HTMLElement("th")}},{{HTMLElement("caption")}}, {{HTMLElement("col")}}, and {{HTMLElement("colgroup")}}
+  - {{HTMLElement("table")}}, {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("td")}}, {{HTMLElement("th")}},{{HTMLElement("caption")}}, {{HTMLElement("col")}}, and {{HTMLElement("colgroup")}}

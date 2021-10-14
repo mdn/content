@@ -14,6 +14,7 @@ tags:
   - variable
 browser-compat: html.elements.var
 ---
+
 {{HTMLRef}}
 
 The **`<var>`** [HTML](/en-US/docs/Web/HTML) element represents the name of a variable in a mathematical expression or a programming context. It's typically presented using an italicized version of the current typeface, although that behavior is browser-dependent.
@@ -87,15 +88,15 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 Other elements that are used in contexts in which `<var>` is commonly used include:
 
-*   {{HTMLElement("code")}}: The HTML Code element
-*   {{HTMLElement("kbd")}}: The HTML Keyboard input element
-*   {{HTMLElement("samp")}}: The HTML Sample Output element
+- {{HTMLElement("code")}}: The HTML Code element
+- {{HTMLElement("kbd")}}: The HTML Keyboard input element
+- {{HTMLElement("samp")}}: The HTML Sample Output element
 
 If you encounter code that is mistakenly using `<var>` for style purposes rather than semantic purposes, you should either use a {{HTMLElement("span")}} with appropriate CSS or, an appropriate semantic element among the following:
 
-*   {{HTMLElement("em")}}
-*   {{HTMLElement("i")}}
-*   {{HTMLElement("q")}}
+- {{HTMLElement("em")}}
+- {{HTMLElement("i")}}
+- {{HTMLElement("q")}}
 
 ### Default style
 

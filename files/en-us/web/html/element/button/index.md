@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: html.elements.button
 ---
+
 {{HTMLRef}}
 
 The **`<button>`** [HTML](/en-US/docs/Web/HTML) element represents a clickable button, used to submit [forms](/en-US/docs/Learn/Forms) or anywhere in a document for accessible, standard button functionality.
@@ -111,56 +112,70 @@ By default, HTML buttons are presented in a style resembling the platform the {{
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-*   {{htmlattrdef("autofocus")}}
-    *   : This Boolean attribute specifies that the button should have input [focus](/en-US/docs/Web/API/HTMLElement/focus) when the page loads. **Only one element in a document can have this attribute.**
-*   {{htmlattrdef("autocomplete")}} {{non-standard_inline}}
-    *   : This attribute on a {{HTMLElement("button")}} is nonstandard and Firefox-specific. Unlike other browsers, [Firefox persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Setting `autocomplete="off"` on the button disables this feature; see {{bug(654072)}}.
-*   {{htmlattrdef("disabled")}}
-    *   : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.
+- {{htmlattrdef("autofocus")}}
+  - : This Boolean attribute specifies that the button should have input [focus](/en-US/docs/Web/API/HTMLElement/focus) when the page loads. **Only one element in a document can have this attribute.**
+- {{htmlattrdef("autocomplete")}} {{non-standard_inline}}
+  - : This attribute on a {{HTMLElement("button")}} is nonstandard and Firefox-specific. Unlike other browsers, [Firefox persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Setting `autocomplete="off"` on the button disables this feature; see {{bug(654072)}}.
+- {{htmlattrdef("disabled")}}
 
-        Firefox, unlike other browsers, [persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the {{htmlattrxref("autocomplete","button")}} attribute to control this feature.
-*   {{htmlattrdef("form")}}
-    *   : The {{HTMLElement("form")}} element to associate the button with (its *form owner*). The value of this attribute must be the `id` of a `<form>` in the same document. (If this attribute is not set, the `<button>` is associated with its ancestor `<form>` element, if any.)
+  - : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.
 
-        This attribute lets you associate `<button>` elements to `<form>`s anywhere in the document, not just inside a `<form>`. It can also override an ancestor `<form>` element.
-*   {{htmlattrdef("formaction")}}
-    *   : The URL that processes the information submitted by the button. Overrides the {{htmlattrxref("action","form")}} attribute of the button's form owner. Does nothing if there is no form owner.
-*   {{htmlattrdef("formenctype")}}
-    *   : If the button is a submit button (it's inside/associated with a `<form>` and doesn't have `type="button"`), specifies how to encode the form data that is submitted. Possible values:
+    Firefox, unlike other browsers, [persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the {{htmlattrxref("autocomplete","button")}} attribute to control this feature.
 
-        *   `application/x-www-form-urlencoded`: The default if the attribute is not used.
-        *   `multipart/form-data`: Use to submit {{HTMLElement("input")}} elements with their {{htmlattrxref("type","input")}} attributes set to `file`.
-        *   `text/plain`: Specified as a debugging aid; shouldn’t be used for real form submission.
+- {{htmlattrdef("form")}}
 
-        If this attribute is specified, it overrides the {{htmlattrxref("enctype","form")}} attribute of the button's form owner.
-*   {{htmlattrdef("formmethod")}}
-    *   : If the button is a submit button (it's inside/associated with a `<form>` and doesn't have `type="button"`), this attribute specifies the [HTTP method](/en-US/docs/Web/HTTP/Methods) used to submit the form. Possible values:
+  - : The {{HTMLElement("form")}} element to associate the button with (its _form owner_). The value of this attribute must be the `id` of a `<form>` in the same document. (If this attribute is not set, the `<button>` is associated with its ancestor `<form>` element, if any.)
 
-        *   `post`: The data from the form are included in the body of the HTTP request when sent to the server. Use when the form contains information that shouldn’t be public, like login credentials.
-        *   `get`: The form data are appended to the form's `action` URL, with a `?` as a separator, and the resulting URL is sent to the server. Use this method when the form [has no side effects](/en-US/docs/Glossary/Idempotent), like search forms.
+    This attribute lets you associate `<button>` elements to `<form>`s anywhere in the document, not just inside a `<form>`. It can also override an ancestor `<form>` element.
 
-        If specified, this attribute overrides the {{htmlattrxref("method","form")}} attribute of the button's form owner.
-*   {{htmlattrdef("formnovalidate")}}
-    *   : If the button is a submit button, this Boolean attribute specifies that the form is not to be [validated](/en-US/docs/Learn/Forms/Form_validation) when it is submitted. If this attribute is specified, it overrides the {{htmlattrxref("novalidate","form")}} attribute of the button's form owner.
+- {{htmlattrdef("formaction")}}
+  - : The URL that processes the information submitted by the button. Overrides the {{htmlattrxref("action","form")}} attribute of the button's form owner. Does nothing if there is no form owner.
+- {{htmlattrdef("formenctype")}}
 
-        This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) and [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit) elements.
-*   {{htmlattrdef("formtarget")}}
-    *   : If the button is a submit button, this attribute is a author-defined name or standardized, underscore-prefixed keyword indicating where to display the response from submitting the form. This is the `name` of, or keyword for, a *browsing context* (a tab, window, or {{HTMLElement("iframe")}}). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the button's form owner. The following keywords have special meanings:
+  - : If the button is a submit button (it's inside/associated with a `<form>` and doesn't have `type="button"`), specifies how to encode the form data that is submitted. Possible values:
 
-        *   `_self`: Load the response into the same browsing context as the current one. This is the default if the attribute is not specified.
-        *   `_blank`: Load the response into a new unnamed browsing context — usually a new tab or window, depending on the user’s browser settings.
-        *   `_parent`: Load the response into the parent browsing context of the current one. If there is no parent, this option behaves the same way as `_self`.
-        *   `_top`: Load the response into the top-level browsing context (that is, the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as `_self`.
-*   {{htmlattrdef("name")}}
-    *   : The name of the button, submitted as a pair with the button’s `value` as part of the form data, when that button is used to submit the form.
-*   {{htmlattrdef("type")}}
-    *   : The default behavior of the button. Possible values are:
+    - `application/x-www-form-urlencoded`: The default if the attribute is not used.
+    - `multipart/form-data`: Use to submit {{HTMLElement("input")}} elements with their {{htmlattrxref("type","input")}} attributes set to `file`.
+    - `text/plain`: Specified as a debugging aid; shouldn’t be used for real form submission.
 
-        *   `submit`: The button submits the form data to the server. This is the default if the attribute is not specified for buttons associated with a `<form>`, or if the attribute is an empty or invalid value.
-        *   `reset`: The button resets all the controls to their initial values, like [\<input type="reset">](/en-US/docs/Web/HTML/Element/input/reset). (This behavior tends to annoy users.)
-        *   `button`: The button has no default behavior, and does nothing when pressed by default. It can have client-side scripts listen to the element's events, which are triggered when the events occur.
-*   {{htmlattrdef("value")}}
-    *   : Defines the value associated with the button’s `name` when it’s submitted with the form data. This value is passed to the server in params when the form is submitted using this button.
+    If this attribute is specified, it overrides the {{htmlattrxref("enctype","form")}} attribute of the button's form owner.
+
+- {{htmlattrdef("formmethod")}}
+
+  - : If the button is a submit button (it's inside/associated with a `<form>` and doesn't have `type="button"`), this attribute specifies the [HTTP method](/en-US/docs/Web/HTTP/Methods) used to submit the form. Possible values:
+
+    - `post`: The data from the form are included in the body of the HTTP request when sent to the server. Use when the form contains information that shouldn’t be public, like login credentials.
+    - `get`: The form data are appended to the form's `action` URL, with a `?` as a separator, and the resulting URL is sent to the server. Use this method when the form [has no side effects](/en-US/docs/Glossary/Idempotent), like search forms.
+
+    If specified, this attribute overrides the {{htmlattrxref("method","form")}} attribute of the button's form owner.
+
+- {{htmlattrdef("formnovalidate")}}
+
+  - : If the button is a submit button, this Boolean attribute specifies that the form is not to be [validated](/en-US/docs/Learn/Forms/Form_validation) when it is submitted. If this attribute is specified, it overrides the {{htmlattrxref("novalidate","form")}} attribute of the button's form owner.
+
+    This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) and [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit) elements.
+
+- {{htmlattrdef("formtarget")}}
+
+  - : If the button is a submit button, this attribute is an author-defined name or standardized, underscore-prefixed keyword indicating where to display the response from submitting the form. This is the `name` of, or keyword for, a _browsing context_ (a tab, window, or {{HTMLElement("iframe")}}). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the button's form owner. The following keywords have special meanings:
+
+    - `_self`: Load the response into the same browsing context as the current one. This is the default if the attribute is not specified.
+    - `_blank`: Load the response into a new unnamed browsing context — usually a new tab or window, depending on the user’s browser settings.
+    - `_parent`: Load the response into the parent browsing context of the current one. If there is no parent, this option behaves the same way as `_self`.
+    - `_top`: Load the response into the top-level browsing context (that is, the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as `_self`.
+
+- {{htmlattrdef("name")}}
+  - : The name of the button, submitted as a pair with the button’s `value` as part of the form data, when that button is used to submit the form.
+- {{htmlattrdef("type")}}
+
+  - : The default behavior of the button. Possible values are:
+
+    - `submit`: The button submits the form data to the server. This is the default if the attribute is not specified for buttons associated with a `<form>`, or if the attribute is an empty or invalid value.
+    - `reset`: The button resets all the controls to their initial values, like [\<input type="reset">](/en-US/docs/Web/HTML/Element/input/reset). (This behavior tends to annoy users.)
+    - `button`: The button has no default behavior, and does nothing when pressed by default. It can have client-side scripts listen to the element's events, which are triggered when the events occur.
+
+- {{htmlattrdef("value")}}
+  - : Defines the value associated with the button’s `name` when it’s submitted with the form data. This value is passed to the server in params when the form is submitted using this button.
 
 ## Notes
 
@@ -182,7 +197,7 @@ If your buttons are not for submitting form data to a server, be sure to set the
 
 ### Icon buttons
 
-Buttons that only show an icon to represent do not have an *accessible name*. Accessible names provide information for assistive technology, such as screen readers, to access when they parse the document and generate [an accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis). Assistive technology then uses the accessibility tree to navigate and manipulate page content.
+Buttons that only show an icon to represent do not have an _accessible name_. Accessible names provide information for assistive technology, such as screen readers, to access when they parse the document and generate [an accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis). Assistive technology then uses the accessibility tree to navigate and manipulate page content.
 
 To give an icon button an accessible name, put text in the `<button>` element that concisely describes the button's functionality.
 
@@ -199,9 +214,9 @@ If you want to visually hide the button's text, an accessible way to do so is to
 
 However, it is worth noting that leaving the button text visually apparent can aid people who may not be familiar with the icon's meaning or understand the button's purpose. This is especially relevant for people who are not technologically sophisticated, or who may have different cultural interpretations for the icon the button uses.
 
-*   [What is an accessible name? | The Paciello Group](https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/)
-*   [MDN Understanding WCAG, Guideline 4.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust#guideline\_4.1\_—\_compatible_maximize_compatibility_with_current_and_future_user_agents_including_assistive_technologies)
-*   [Understanding Success Criterion 4.1.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)
+- [What is an accessible name? | The Paciello Group](https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/)
+- [MDN Understanding WCAG, Guideline 4.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust#guideline_4.1_—_compatible_maximize_compatibility_with_current_and_future_user_agents_including_assistive_technologies)
+- [Understanding Success Criterion 4.1.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)
 
 ### Size and Proximity
 
@@ -209,9 +224,9 @@ However, it is worth noting that leaving the button text visually apparent can a
 
 Interactive elements such as buttons should provide an area large enough that it is easy to activate them. This helps a variety of people, including people with motor control issues and people using non-precise forms of input such as a stylus or fingers. A minimum interactive size of 44×44 [CSS pixels](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) is recommended.
 
-*   [Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
-*   [Target Size and 2.5.5 | Adrian Roselli](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
-*   [Quick test: Large touch targets - The A11Y Project](https://a11yproject.com/posts/2018-11-21-large-touch-targets/)
+- [Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
+- [Target Size and 2.5.5 | Adrian Roselli](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
+- [Quick test: Large touch targets - The A11Y Project](https://a11yproject.com/posts/2018-11-21-large-touch-targets/)
 
 #### Proximity
 
@@ -219,7 +234,7 @@ Large amounts of interactive content — including buttons — placed in close v
 
 Spacing may be created using CSS properties such as {{cssxref("margin")}}.
 
-*   [Hand tremors and the giant-button-problem - Axess Lab](https://axesslab.com/hand-tremors/)
+- [Hand tremors and the giant-button-problem - Axess Lab](https://axesslab.com/hand-tremors/)
 
 ### ARIA state information
 
@@ -233,9 +248,9 @@ If overridden, it is important to **ensure that the state change when focus is m
 
 Color contrast ratio is determined by comparing the luminosity of the button text and background color values compared to the background the button is placed on. In order to meet current [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/intro/wcag), a ratio of 4.5:1 is required for text content and 3:1 for large text. (Large text is defined as 18.66px and {{cssxref("font-weight", "bold")}} or larger, or 24px or larger.)
 
-*   [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
-*   [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline\_1.4\_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-*   [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+- [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ### Clicking and focus
 

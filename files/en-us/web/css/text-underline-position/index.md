@@ -11,7 +11,7 @@ browser-compat: css.properties.text-underline-position
 ---
 {{CSSRef}}
 
-The **`text-underline-position`** [CSS ](/en-US/docs/CSS)property specifies the position of the underline which is set using the {{cssxref("text-decoration")}} property's `underline` value.
+The **`text-underline-position`** [CSS](/en-US/docs/Web/CSS) property specifies the position of the underline which is set using the {{cssxref("text-decoration")}} property's `underline` value.
 
 {{EmbedInteractiveExample("pages/css/text-underline-position.html")}}
 
@@ -34,8 +34,6 @@ text-underline-position: initial;
 text-underline-position: revert;
 text-underline-position: unset;
 ```
-
-## Syntax
 
 ### Values
 
