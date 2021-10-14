@@ -35,15 +35,15 @@ AudioDecoder.configure(config)
 
 ### Return Value
 
-{{jsxref("Undefined")}}.
+None.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `TypeError`
+- `TypeError` {{domxref("DOMException")}}
   - : Thrown if the provided `config` is invalid.
-- {{domxref("DOMException")}} `InvalidStateError`
+- `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("AudioEncoder.state","state")}} is `"closed"`.
-- {{domxref("DOMException")}} `NotSupportedError`
+- `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the provided `config` is valid but the user agent cannot provide a codec that can decode this profile.
 
 ## Examples

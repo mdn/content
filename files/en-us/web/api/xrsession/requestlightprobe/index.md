@@ -40,7 +40,7 @@ A {{jsxref("Promise")}} that resolves with an {{domxref("XRLightProbe")}} object
 
 ### Exceptions
 
-Rather than throwing true exceptions, `requestLightProbe()` rejects the
+Rather than throwing true exceptions, `requestLightProbe()` rejects the
 returned promise with a {{domxref("DOMException")}}, specifically, one of the following:
 
 - `NotSupportedError`
