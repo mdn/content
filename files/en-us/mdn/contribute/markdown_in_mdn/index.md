@@ -4,255 +4,241 @@ slug: MDN/Contribute/Markdown_in_MDN
 tags:
   - MDN
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<div class="warning">
+> **Warning:** We're currently in the process of converting all MDN content from HTML into Markdown. Currently you can write pages in HTML or in Markdown, but we don't want to mix formats within a section.
+>
+> At the moment the JavaScript, CSS, and Web API documentation are in Markdown, so this page applies to those parts of the site. For other parts of the site, write documentation in HTML.
 
-  <p><strong>Warning:</strong> We're currently in the process of converting all MDN content from HTML into Markdown. Currently you can write pages in HTML or in Markdown, but we don't want to mix formats within a section.</p>
+This page describes how we use Markdown to write documentation on MDN. We have chosen GitHub-Flavored Markdown (GFM) as a baseline, and added some extensions to support some of the things we need to do on MDN that aren't readily supported in GFM.
 
-  <p>At the moment the JavaScript, CSS, and Web API documentation are in Markdown, so this page applies to those parts of the site. For other parts of the site, write documentation in HTML.</p>
+## Baseline: GitHub-Flavored Markdown
 
-</div>
+The baseline for MDN Markdown is GitHub-Flavored Markdown (GFM): <https://github.github.com/gfm/>. This means that for anything not otherwise specified in this page, you can refer to the GFM specification. GFM in turn is a superset of CommonMark ([http://spec.commonmark.org/](https://spec.commonmark.org/)).
 
-<p>This page describes how we use Markdown to write documentation on MDN. We have chosen GitHub-Flavored Markdown (GFM) as a baseline, and added some extensions to support some of the things we need to do on MDN that aren't readily supported in GFM.</p>
+## Example code blocks
 
-<h2>Baseline: GitHub-Flavored Markdown</h2>
+In GFM and CommonMark, authors can use "code fences" to demarcate `<pre>` blocks. The opening code fence may be followed by some text that is called the "info string". From the spec:
 
-<p>The baseline for MDN Markdown is GitHub-Flavored Markdown (GFM): <a href="https://github.github.com/gfm/">https://github.github.com/gfm/</a>. This means that for anything not otherwise specified in this page, you can refer to the GFM specification. GFM in turn is a superset of CommonMark (<a href="https://spec.commonmark.org/">http://spec.commonmark.org/</a>).</p>
+> The first word of the info string is typically used to specify the language of the code sample, and rendered in the class attribute of the code tag.
 
-<h2>Example code blocks</h2>
+It's permissible for the info string to contain multiple words, like:
 
-<p>In GFM and CommonMark, authors can use "code fences" to demarcate <code>&lt;pre&gt;</code> blocks. The opening code fence may be followed by some text that is called the "info string". From the spec:</p>
-
-<blockquote>
-  <p> The first word of the info string is typically used to specify the language of the code sample, and rendered in the class attribute of the code tag.</p>
-</blockquote>
-
-<p>It's permissible for the info string to contain multiple words, like:</p>
-
-<pre class="brush: plain">
+````plain
 ```fee fi fo fum
 // some example code
 ```
-</pre>
+````
 
 In MDN, writers will use code fences for example code blocks. They must specify the language of the code sample using the first word of the info string, and this will be used to provide syntax highlighting for the block. The following words will be supported:
 
-<ul>
-  <li><code>bash</code></li>
-  <li><code>cpp</code> (for C/C++)</li>
-  <li><code>css</code></li>
-  <li><code>html</code></li>
-  <li><code>java</code></li>
-  <li><code>js</code> (for JavaScript)</li>
-  <li><code>json</code></li>
-  <li><code>php</code></li>
-  <li><code>python</code></li>
-  <li><code>sql</code></li>
-  <li><code>svg</code></li>
-  <li><code>xml</code></li>
-  <li><code>wasm</code> (for WebAssembly text format)</li>
-</ul>
+- `bash`
+- `cpp` (for C/C++)
+- `css`
+- `html`
+- `java`
+- `js` (for JavaScript)
+- `json`
+- `php`
+- `python`
+- `sql`
+- `svg`
+- `xml`
+- `wasm` (for WebAssembly text format)
 
 For example:
 
-<pre class="brush: plain">
+````plain
 ```js
 const greeting = "I will get syntax highlighting";
 ```
-</pre>
+````
 
-<p>Writers will be able to supply any one of the following additional words, which must come after the language word:</p>
+Writers will be able to supply any one of the following additional words, which must come after the language word:
 
-<ul>
-  <li><code>example-good</code>: style this example as a good example (one to follow)</li>
-  <li><code>example-bad</code>: style this example as a bad example (one to avoid)</li>
-  <li><code>hidden</code>: don't render this code block in the page. This is for use in live samples.</li>
-</ul>
+- `example-good`: style this example as a good example (one to follow)
+- `example-bad`: style this example as a bad example (one to avoid)
+- `hidden`: don't render this code block in the page. This is for use in live samples.
 
 For example:
 
-<pre class="brush: plain">
+````plain
 ```js example-good
 const greeting = "I'm a good example";
 ```
-</pre>
+````
 
-<h3>Discussion reference</h3>
+### Discussion reference
 
-<p>This issue was resolved in <a href="https://github.com/mdn/content/issues/3512">https://github.com/mdn/content/issues/3512</a>.</p>
+This issue was resolved in <https://github.com/mdn/content/issues/3512>.
 
-<h2>Notes, warnings, and callouts</h2>
+## Notes, warnings, and callouts
 
-<p>Sometimes writers want to call special attention to some piece of content. To do this, they will use a GFM blockquote with a special first paragraph. There are three types of these: notes, warnings, and callouts.</p>
+Sometimes writers want to call special attention to some piece of content. To do this, they will use a GFM blockquote with a special first paragraph. There are three types of these: notes, warnings, and callouts.
 
-<ul>
-  <li>To add a note, create a GFM blockquote whose first paragraph starts with <code>**Note:**</code>.</li>
-  <li>To add a warning, create a GFM blockquote whose first paragraph starts with <code>**Warning:**</code>.</li>
-  <li>To add a callout, create a GFM blockquote whose first paragraph starts with <code>**Callout:**</code>.</li>
-</ul>
+- To add a note, create a GFM blockquote whose first paragraph starts with `**Note:**`.
+- To add a warning, create a GFM blockquote whose first paragraph starts with `**Warning:**`.
+- To add a callout, create a GFM blockquote whose first paragraph starts with `**Callout:**`.
 
-<p>Notes and warnings will render the <strong>Note:</strong> or <strong>Warning:</strong> text in the output, while callouts will not. This makes callouts a good choice when an author wants to provide a custom title.</p>
+Notes and warnings will render the **Note:** or **Warning:** text in the output, while callouts will not. This makes callouts a good choice when an author wants to provide a custom title.
 
-<p>Processing of the markup works on the AST it produces, not on the exact characters provided. This means that providing <code>&lt;strong&gt;Note:&lt;/strong&gt;</code> will also generate a note. However, the Markdown syntax is required as a matter of style.</p>
+Processing of the markup works on the AST it produces, not on the exact characters provided. This means that providing `<strong>Note:</strong>` will also generate a note. However, the Markdown syntax is required as a matter of style.
 
-<p>Multiple lines are produced by an empty block quote line in the same way as normal paragraphs. Further, multiple lines without a space are also treated like normal markdown lines, and concatenated.</p>
+Multiple lines are produced by an empty block quote line in the same way as normal paragraphs. Further, multiple lines without a space are also treated like normal markdown lines, and concatenated.
 
-<p>The blockquote can contain code blocks or other block elements.</p>
+The blockquote can contain code blocks or other block elements.
 
-<p>Because the text "Note:" or "Warning:" also appears in the rendered output, it has to be sensitive to translations. In practice this means that every locale supported by MDN must supply its own translation of these strings, and the platform must recognize them as indicating that the construct needs special treatment.</p>
+Because the text "Note:" or "Warning:" also appears in the rendered output, it has to be sensitive to translations. In practice this means that every locale supported by MDN must supply its own translation of these strings, and the platform must recognize them as indicating that the construct needs special treatment.
 
-<h4>Examples</h4>
+#### Examples
 
-<h5>Note</h5>
+##### Note
 
-<pre class="brush: plain">
-&gt; **Note:** This is how you write a note.
-&gt;
-&gt; It can have multiple lines.
-</pre>
+```plain
+> **Note:** This is how you write a note.
+>
+> It can have multiple lines.
+```
 
-<p>This will produce the following HTML:</p>
+This will produce the following HTML:
 
-<pre class="brush: html">
-&lt;div class="notecard note"&gt;
-  &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This is how you write a note.&lt;/p&gt;
-  &lt;p&gt;It can have multiple lines.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
-
-<p>This HTML will be rendered as a highlighted box, like:</p>
-
-<div class="note">
+```html
+<div class="notecard note">
   <p><strong>Note:</strong> This is how you write a note.</p>
   <p>It can have multiple lines.</p>
 </div>
+```
 
-<h5>Warnings</h5>
+This HTML will be rendered as a highlighted box, like:
 
-<pre class="brush: plain">
-&gt; **Warning:** This is how you write a warning.
-&gt;
-&gt; It can have multiple paragraphs.
-</pre>
+> **Note:** This is how you write a note.
+>
+> It can have multiple lines.
 
-<p>This will produce the following HTML:</p>
+##### Warnings
 
-<pre class="brush: html">
-&lt;div class="notecard warning"&gt;
-  &lt;p&gt;&lt;strong&gt;Warning:&lt;/strong&gt; This is how you write a warning.&lt;/p&gt;
-  &lt;p&gt;It can have multiple paragraphs.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```plain
+> **Warning:** This is how you write a warning.
+>
+> It can have multiple paragraphs.
+```
 
-<p>This HTML will be rendered as a highlighted box, like:</p>
+This will produce the following HTML:
 
-<div class="warning">
+```html
+<div class="notecard warning">
   <p><strong>Warning:</strong> This is how you write a warning.</p>
   <p>It can have multiple paragraphs.</p>
 </div>
+```
 
-<h5>Callouts</h5>
+This HTML will be rendered as a highlighted box, like:
 
-<pre class="brush: plain">
-&gt; **Callout:** **This is how you write a callout**.
-&gt;
-&gt; It can have multiple paragaphs.
-</pre>
+> **Warning:** This is how you write a warning.
+>
+> It can have multiple paragraphs.
 
-<p>This will produce the following HTML:</p>
+##### Callouts
 
-<pre class="brush: html">
-&lt;div class="callout"&gt;
-  &lt;p&gt;&lt;strong&gt;This is how you write a callout.&lt;/strong&gt;&lt;/p&gt;
-  &lt;p&gt;It can have multiple paragraphs.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```plain
+> **Callout:** **This is how you write a callout**.
+>
+> It can have multiple paragaphs.
+```
 
-<p>This HTML will be rendered as a highlighted box, like:</p>
+This will produce the following HTML:
 
+```html
 <div class="callout">
   <p><strong>This is how you write a callout.</strong></p>
   <p>It can have multiple paragraphs.</p>
 </div>
+```
 
-<h5>Translated warning</h5>
+This HTML will be rendered as a highlighted box, like:
 
-<p>For example, if we want to use "Warnung" for "Warning" in German, then in German pages we would write:</p>
+> **Callout:**
+>
+> **This is how you write a callout.**
+>
+> It can have multiple paragraphs.
 
-<pre class="brush: plain">
-&gt; Warnung: So schreibt man eine Warnung.
-</pre>
+##### Translated warning
 
-<p>...and this will produce:</p>
+For example, if we want to use "Warnung" for "Warning" in German, then in German pages we would write:
 
-<pre class="brush: html">
-&lt;div class="notecard warning"&gt;
-  &lt;p&gt;&lt;strong&gt;Warnung:&lt;/strong&gt; So schreibt man eine Warnung.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```plain
+> Warnung: So schreibt man eine Warnung.
+```
 
-<h5>Note containing a code block</h5>
+...and this will produce:
 
-<p>This example contains a code block.</p>
+```html
+<div class="notecard warning">
+  <p><strong>Warnung:</strong> So schreibt man eine Warnung.</p>
+</div>
+```
 
-<pre class="brush: plain">
-&gt; **Note:** This is how you write a note.
-&gt;
-&gt; It can contain code blocks.
-&gt;
-&gt; ```js
-&gt; const s = "I'm in a code block";
-&gt; ```
-&gt; Like that.
-</pre>
+##### Note containing a code block
 
-<p>This will produce the following HTML:</p>
+This example contains a code block.
 
-<pre class="brush: html">
-&lt;div class="notecard note"&gt;
-  &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This is how you write a note.&lt;/p&gt;
-  &lt;p&gt;It can contain code blocks.&lt;/p&gt;
-  &lt;pre class="brush: js"&gt;const s = "I'm in a code block";&lt;/pre&gt;
-  &lt;p&gt;Like that.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+````plain
+> **Note:** This is how you write a note.
+>
+> It can contain code blocks.
+>
+> ```js
+> const s = "I'm in a code block";
+> ```
+> Like that.
+````
 
-<p>This HTML will be rendered as with a code block, like:</p>
+This will produce the following HTML:
 
-<div class="note">
+```html
+<div class="notecard note">
   <p><strong>Note:</strong> This is how you write a note.</p>
   <p>It can contain code blocks.</p>
   <pre class="brush: js">const s = "I'm in a code block";</pre>
   <p>Like that.</p>
 </div>
+```
 
-<h3>Discussion reference</h3>
+This HTML will be rendered as with a code block, like:
 
-<p>This issue was resolved in <a href="https://github.com/mdn/content/issues/3483">https://github.com/mdn/content/issues/3483</a>.</p>
+> **Note:** This is how you write a note.
+>
+> It can contain code blocks.
+>
+> ```js
+> const s = "I'm in a code block";
+> ```
+>
+> Like that.
 
-<h2>Definition lists</h2>
+### Discussion reference
 
-<p>To create definition lists in MDN authors write a modified form of a GFM unordered list ({{HTMLElement("ul")}}). In this form:</p>
+This issue was resolved in <https://github.com/mdn/content/issues/3483>.
 
-<ul>
-  <li>The GFM <code>&lt;ul&gt;</code> contains any number of top-level GFM <code>&lt;li&gt;</code> elements.</li>
-  <li>Each of these top-level GFM <code>&lt;li&gt;</code> elements must contain, as its final element, one GFM <code>&lt;ul&gt;</code> element.</li>
-  <li>This final nested <code>&lt;ul&gt;</code> must contain a single GFM <code>&lt;li&gt;</code> element, whose text content must start with <code>:&nbsp;</code> (a colon followed by a space). This element may contain block elements, including paragraphs, code blocks, embedded lists, and notes.</li>
-</ul>
+## Definition lists
 
-<p>Each of these top-level GFM <code>&lt;li&gt;</code> elements will be transformed into a
-  <code>&lt;dt&gt;</code>/<code>&lt;dd&gt;</code> pair, as follows:</p>
+To create definition lists in MDN authors write a modified form of a GFM unordered list ({{HTMLElement("ul")}}). In this form:
 
-<ul>
-  <li>The top-level GFM <code>&lt;li&gt;</code> element will be parsed as a GFM <code>&lt;li&gt;</code> element
-    and its internal contents will comprise the contents of the <code>&lt;dt&gt;</code>, except for the final nested <code>&lt;ul&gt;</code>, which will not be included in the <code>&lt;dt&gt;</code>.
-  <li>The <code>&lt;li&gt;</code> element in the final nested <code>&lt;ul&gt;</code> will be parsed as a GFM <code>&lt;li&gt;</code> element and its internal contents will comprise the contents of the <code>&lt;dd&gt;</code>, except for the leading <code>:&nbsp;</code>, which will be discarded.</li>
-</ul>
+- The GFM `<ul>` contains any number of top-level GFM `<li>` elements.
+- Each of these top-level GFM `<li>` elements must contain, as its final element, one GFM `<ul>` element.
+- This final nested `<ul>` must contain a single GFM `<li>` element, whose text content must start with `: ` (a colon followed by a space). This element may contain block elements, including paragraphs, code blocks, embedded lists, and notes.
 
-For example, this is a <code>&lt;dl&gt;</code>:
+Each of these top-level GFM `<li>` elements will be transformed into a
+`<dt>`/`<dd>` pair, as follows:
 
-<pre class="brush: plain">
+- The top-level GFM `<li>` element will be parsed as a GFM `<li>` element
+  and its internal contents will comprise the contents of the `<dt>`, except for the final nested `<ul>`, which will not be included in the `<dt>`.
+- The `<li>` element in the final nested `<ul>` will be parsed as a GFM `<li>` element and its internal contents will comprise the contents of the `<dd>`, except for the leading `: `, which will be discarded.
+
+For example, this is a `<dl>`:
+
+````plain
 * term1
     * : My description of term1
 
@@ -264,226 +250,228 @@ For example, this is a <code>&lt;dl&gt;</code>:
       ```js
       const thing = 1;
       ```
-</pre>
+````
 
 In GFM/CommonMark, this would produce the following HTML:
 
-<pre class="brush: html">
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;term1&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;: My description of term1&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code&gt;term2&lt;/code&gt;&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;: My description of term2&lt;/p&gt;
-        &lt;p&gt;It can have multiple paragraphs, and code blocks too:&lt;/p&gt;
-        &lt;pre&gt;
-          &lt;code class="brush: js"&gt;const thing = 1;&lt;/code&gt;
-        &lt;/pre&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+```html
+<ul>
+  <li>
+    <p>term1</p>
+    <ul>
+      <li>: My description of term1</li>
+    </ul>
+  </li>
+  <li>
+    <p><code>term2</code></p>
+    <ul>
+      <li>
+        <p>: My description of term2</p>
+        <p>It can have multiple paragraphs, and code blocks too:</p>
+        <pre>
+          <code class="brush: js">const thing = 1;</code>
+        </pre>
+      </li>
+    </ul>
+  </li>
+</ul>
+```
 
 On MDN, this would produce the following HTML:
 
-<pre class="brush: html">
-&lt;dl&gt;
-  &lt;dt&gt;
-    &lt;p&gt;term1&lt;/p&gt;
-  &lt;/dt&gt;
-  &lt;dd&gt;My description of term1&lt;/dd&gt;
-  &lt;dt&gt;
-    &lt;p&gt;&lt;code&gt;term2&lt;/code&gt;&lt;/p&gt;
-  &lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;p&gt;My description of term2&lt;/p&gt;
-    &lt;p&gt;It can have multiple paragraphs, and code blocks too:&lt;/p&gt;
-    &lt;pre&gt;
-       &lt;code class="brush: js"&gt;const thing = 1;&lt;/code&gt;
-    &lt;/pre&gt;
-  &lt;/dd&gt;
-&lt;/dl&gt;
-</pre>
+```html
+<dl>
+  <dt>
+    <p>term1</p>
+  </dt>
+  <dd>My description of term1</dd>
+  <dt>
+    <p><code>term2</code></p>
+  </dt>
+  <dd>
+    <p>My description of term2</p>
+    <p>It can have multiple paragraphs, and code blocks too:</p>
+    <pre>
+       <code class="brush: js">const thing = 1;</code>
+    </pre>
+  </dd>
+</dl>
+```
 
-<p>Definition lists written using this syntax must consist of pairs of <code>&lt;dt&gt;</code>/<code>&lt;dd&gt;</code> elements. Using this syntax, it's not possible to write a list with more than one consecutive <code>&lt;dt&gt;</code> element or more than one consecutive <code>&lt;dd&gt;</code> element: the parser will treat this as an error. We expect almost all definition lists on MDN will work with this limitation, and for those that do not, authors can fall back to raw HTML.</p>
+Definition lists written using this syntax must consist of pairs of `<dt>`/`<dd>` elements. Using this syntax, it's not possible to write a list with more than one consecutive `<dt>` element or more than one consecutive `<dd>` element: the parser will treat this as an error. We expect almost all definition lists on MDN will work with this limitation, and for those that do not, authors can fall back to raw HTML.
 
-<p>As a workaround for cases where an author needs to associate multiple <code>&lt;dt&gt;</code> items with a single <code>&lt;dd&gt;</code>, consider providing them as a single <code>&lt;dt&gt;</code> that holds multiple terms, separated by commas, like this:<p>
+As a workaround for cases where an author needs to associate multiple `<dt>` items with a single `<dd>`, consider providing them as a single `<dt>` that holds multiple terms, separated by commas, like this:
 
-<pre class="brush: plain">
+```plain
 * `param1`, `param2`, `param3`
     * : My description of params 1, 2, and 3
-</pre>
+```
 
-<p>The rationale for the syntax described here is that it works well enough with tools that expect CommonMark (for example, Prettier or GitHub previews) while being reasonably easy to write and to parse.</p>
+The rationale for the syntax described here is that it works well enough with tools that expect CommonMark (for example, Prettier or GitHub previews) while being reasonably easy to write and to parse.
 
-<h3>Discussion reference</h3>
+### Discussion reference
 
-<p>This issue was resolved in <a href="https://github.com/mdn/content/issues/4367">https://github.com/mdn/content/issues/4367</a>.</p>
+This issue was resolved in <https://github.com/mdn/content/issues/4367>.
 
-<h2>Tables</h2>
+## Tables
 
-<p>In GFM (but not CommonMark) there is a syntax for tables: <a href="https://github.github.com/gfm/#tables-extension-">https://github.github.com/gfm/#tables-extension-</a>. We will make use of this but:</p>
+In GFM (but not CommonMark) there is a syntax for tables: <https://github.github.com/gfm/#tables-extension->. We will make use of this but:
 
-<ul>
-  <li>The GFM syntax only supports a subset of the features available in HTML. If you need to use table features that are not supported in GFM, use HTML for the table.</li>
-  <li>If the GFM representation of the table would be more than 150 characters wide, use HTML for the table.</li>
-  <li>We support a special kind of table called a "properties table", which has its own CSS class and is therefore always HTML.</li>
-</ul>
+- The GFM syntax only supports a subset of the features available in HTML. If you need to use table features that are not supported in GFM, use HTML for the table.
+- If the GFM representation of the table would be more than 150 characters wide, use HTML for the table.
+- We support a special kind of table called a "properties table", which has its own CSS class and is therefore always HTML.
 
-<p>So the general principle here is: authors should use the GFM Markdown syntax when they can, and fall back to raw HTML when they have to or when HTML is more readable. See "When to use HTML tables" below.</p>
+So the general principle here is: authors should use the GFM Markdown syntax when they can, and fall back to raw HTML when they have to or when HTML is more readable. See "When to use HTML tables" below.
 
-<h3>GFM table syntax style</h3>
+### GFM table syntax style
 
-<p>In GFM table syntax, authors can omit leading and trailing pipes for rows. MDN authors must include these pipes, for the sake of readability.</p>
+In GFM table syntax, authors can omit leading and trailing pipes for rows. MDN authors must include these pipes, for the sake of readability.
 
-<p>That is, MDN authors must use this style:</p>
+That is, MDN authors must use this style:
 
-<pre class="brush: plain">
+```plain
 | Heading 1 | Heading 2 | Heading 3 |
 |-----------|-----------|-----------|
 | cell 1    | cell 2    | cell 3    |
 | cell 4    | cell 5    | cell 6    |
-</pre>
+```
 
-<p>and not this style:</p>
+and not this style:
 
-<pre class="brush: plain">
+```plain
 Heading 1 | Heading 2 | Heading 3
  --- | --- | ---
 cell 1    | cell 2    | cell 3
 cell 4    | cell 5    | cell 6
-</pre>
+```
 
-<h3>When to use HTML tables</h3>
+### When to use HTML tables
 
-<p>There are three main circumstances in which authors should use HTML tables rather than GFM syntax: when the table uses features that are not supported in GFM, when the GFM table would be too wide to be readable, and when the writer wants a special type of table called a "properties table".</p>
+There are three main circumstances in which authors should use HTML tables rather than GFM syntax: when the table uses features that are not supported in GFM, when the GFM table would be too wide to be readable, and when the writer wants a special type of table called a "properties table".
 
-<h4>Table features that are not supported in GFM</h4>
+#### Table features that are not supported in GFM
 
-<p>The main limitations of GFM table syntax are:</p>
+The main limitations of GFM table syntax are:
 
-<ul>
-  <li>GFM tables must have a header row.</li>
-  <li>GFM tables may not have a header column.</li>
-  <li>GFM won't parse GFM block elements in table cells. For example, you can't have a list in a table cell.</li>
-  <li>GFM doesn't support any table elements beyond <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, and <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code>.</li>
-  <li>GFM doesn't support any table element attributes like <code>colspan</code>, <code>rowspan</code>, or <code>scope</code>.</li>
-</ul>
+- GFM tables must have a header row.
+- GFM tables may not have a header column.
+- GFM won't parse GFM block elements in table cells. For example, you can't have a list in a table cell.
+- GFM doesn't support any table elements beyond `<table>`, `<tr>`, and `<th>`, and `<td>`.
+- GFM doesn't support any table element attributes like `colspan`, `rowspan`, or `scope`.
 
-<p>If an author needs to use any of the unsupported features, they should write the table in HTML.</p>
+If an author needs to use any of the unsupported features, they should write the table in HTML.
 
-<p>Note that we don't recommend the general use of <code>&lt;caption&gt;</code> elements on tables, since that would also rule out the GFM syntax.</p>
+Note that we don't recommend the general use of `<caption>` elements on tables, since that would also rule out the GFM syntax.
 
-<h4>GFM table maximum width</h4>
+#### GFM table maximum width
 
-<p>Even when a table could be written in GFM it is sometimes better to use HTML, because GFM uses an "ASCII art" approach to tables that is not readable when table rows get long. For example, consider this table:</p>
+Even when a table could be written in GFM it is sometimes better to use HTML, because GFM uses an "ASCII art" approach to tables that is not readable when table rows get long. For example, consider this table:
 
-<pre class="brush: html">
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;th&gt;A heading 1&lt;/th&gt;
-      &lt;th&gt;A heading 2&lt;/th&gt;
-      &lt;th&gt;A heading 3&lt;/th&gt;
-      &lt;th&gt;A heading 4&lt;/th&gt;
-      &lt;th&gt;A heading 5&lt;/th&gt;
-      &lt;th&gt;A heading 6&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Something shortish&lt;/td&gt;
-      &lt;td&gt;Something much longer that really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format.&lt;/td&gt;
-      &lt;td&gt;Something shortish&lt;/td&gt;
-      &lt;td&gt;Another cell  with lots of text in it, that also really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format.&lt;/td&gt;
-      &lt;td&gt;Something shortish&lt;/td&gt;
-      &lt;td&gt;Something shortish&lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/table&gt;
-</pre>
+```html
+  <table>
+    <tr>
+      <th>A heading 1</th>
+      <th>A heading 2</th>
+      <th>A heading 3</th>
+      <th>A heading 4</th>
+      <th>A heading 5</th>
+      <th>A heading 6</th>
+    </tr>
+    <tr>
+      <td>Something shortish</td>
+      <td>Something much longer that really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format.</td>
+      <td>Something shortish</td>
+      <td>Another cell  with lots of text in it, that also really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format.</td>
+      <td>Something shortish</td>
+      <td>Something shortish</td>
+    </tr>
+</table>
+```
 
-<p>In GFM this will look like:</p>
+In GFM this will look like:
 
-<pre class="brush: plain">
+```plain
   | A heading 1        | A heading 2                                                                                                                                         | A heading 3        | A heading 4                                                                                                                                                              | A heading 5        | A heading 6        |
   | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------ | ------------------ |
   | Something shortish | Something much longer that really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format. | Something shortish | Another cell with lots of text in it, that also really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format. | Something shortish | Something shortish |
-</pre>
+```
 
-<p>In a case like this it would be better to use HTML.</p>
+In a case like this it would be better to use HTML.
 
-<p>This leads us to the following guideline: <em>if the Markdown representation of the table would be more than 150 characters wide, use HTML for the table</em>.</p>
+This leads us to the following guideline: _if the Markdown representation of the table would be more than 150 characters wide, use HTML for the table_.
 
-<h4>Properties tables</h4>
+#### Properties tables
 
-<p>Properties tables are a specific type of table used for displaying structured property-value content across a set of pages of a particular type. For example, all event pages have a properties table listing common information about the event: whether it bubbles, whether it is cancellable, and so on.</p>
+Properties tables are a specific type of table used for displaying structured property-value content across a set of pages of a particular type. For example, all event pages have a properties table listing common information about the event: whether it bubbles, whether it is cancellable, and so on.
 
-<p>These tables have two columns: the first column is the header column and lists the properties, and the second column lists their values for this particular item. For example, here's the properties table for the {{domxref("XMLHttpRequest/progress_event", "progress")}} event of the {{domxref("XMLHttpRequest")}} interface:</p>
+These tables have two columns: the first column is the header column and lists the properties, and the second column lists their values for this particular item. For example, here's the properties table for the {{domxref("XMLHttpRequest/progress_event", "progress")}} event of the {{domxref("XMLHttpRequest")}} interface:
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("ProgressEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("XMLHttpRequestEventTarget/onprogress", "onprogress")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("ProgressEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("XMLHttpRequestEventTarget/onprogress", "onprogress")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>These pages can't be represented in GFM anyway, because they have a header column. Writers should therefore use HTML. To get the special styling, writers should apply the <code>"properties"</code> class to the table:</p>
+These pages can't be represented in GFM anyway, because they have a header column. Writers should therefore use HTML. To get the special styling, writers should apply the `"properties"` class to the table:
 
-<pre class="brush: html">&lt;table class="properties"&gt;
-</pre>
+```html
+<table class="properties">
+```
 
-<h3>Discussion reference</h3>
+### Discussion reference
 
-<p>This issue was resolved in <a href="https://github.com/mdn/content/issues/4325">https://github.com/mdn/content/issues/4325</a>, <a href="https://github.com/mdn/content/issues/7342">https://github.com/mdn/content/issues/7342</a>, and <a href="https://github.com/mdn/content/issues/7898#issuecomment-913265900">https://github.com/mdn/content/issues/7898#issuecomment-913265900</a>.</p>
+This issue was resolved in <https://github.com/mdn/content/issues/4325>, <https://github.com/mdn/content/issues/7342>, and <https://github.com/mdn/content/issues/7898#issuecomment-913265900>.
 
-<h2>Superscript and subscript</h2>
+## Superscript and subscript
 
-<p>Writers will be able to use the HTML {{HTMLElement("sup")}}> and {{HTMLElement("sub")}} elements if necessary, but should use alternatives if possible. In particular:</p>
+Writers will be able to use the HTML {{HTMLElement("sup")}}> and {{HTMLElement("sub")}} elements if necessary, but should use alternatives if possible. In particular:
 
-<ul>
-  <li>For exponentiation, use the caret: <code>2^53</code>.</li>
-  <li>For ordinal expressions like 1<sup>st</sup>, prefer words like "first".</li>
-  <li>For footnotes, don’t mark up the footnote references with, e.g., <code>&lt;sup&gt;[1]&lt;/sup&gt;</code>; it’s unnecessary.</li>
-</ul>
+- For exponentiation, use the caret: `2^53`.
+- For ordinal expressions like 1
 
-<h3>Discussion reference</h3>
+  <sup>st</sup>
 
-<p>This issue was resolved in <a href="https://github.com/mdn/content/issues/4578">https://github.com/mdn/content/issues/4578</a>.</p>
+  , prefer words like "first".
 
-<h2>Page summary</h2>
+- For footnotes, don’t mark up the footnote references with, e.g., `<sup>[1]</sup>`; it’s unnecessary.
 
-<p>The <em>page summary</em> is the first "content" paragraph in a page—the first text that appears after the page front matter and any <a href="#kumascript">sidebar or page banner macros</a>.</p>
+### Discussion reference
 
-<p>This summary is used for search engine optimisation (SEO) and also automatically included alongside page listings by some macros.
-  The first paragraph should therefore be both succinct and informative.</p>
+This issue was resolved in <https://github.com/mdn/content/issues/4578>.
 
-<h3>Discussion reference</h3>
+## Page summary
 
-<p>This issue was resolved in <a href="https://github.com/mdn/content/issues/3923">https://github.com/mdn/content/issues/3923</a>.</p>
+The _page summary_ is the first "content" paragraph in a page—the first text that appears after the page front matter and any [sidebar or page banner macros](#kumascript).
 
-<h2>KumaScript</h2>
+This summary is used for search engine optimisation (SEO) and also automatically included alongside page listings by some macros.
+The first paragraph should therefore be both succinct and informative.
 
-<p>Writers will be able to include KumaScript macro calls in prose content:</p>
+### Discussion reference
 
-<pre class="brush: plain">
+This issue was resolved in <https://github.com/mdn/content/issues/3923>.
+
+## KumaScript
+
+Writers will be able to include KumaScript macro calls in prose content:
+
+```plain
 
 The **`margin`** [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) property
 sets the margin area on all four sides of an element. It is a shorthand for
@@ -494,5 +482,4 @@ and \{{cssxref("margin-left")}}.
 
 The top and bottom margins have no effect on replaced inline elements, such as
 \{{HTMLElement("span")}} or \{{HTMLElement("code")}}.
-
-</pre>
+```

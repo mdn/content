@@ -8,42 +8,38 @@ tags:
   - MDN Meta
   - Tools
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>This article details the four types of KumaScript error, and some steps you can take to fix them.</p>
+This article details the four types of KumaScript error, and some steps you can take to fix them.
 
-<h2 id="DocumentParsingError">DocumentParsingError</h2>
+## DocumentParsingError
 
-<p><code>DocumentParsingError</code> errors appear when KumaScript has trouble understanding something in the document itself. The most common cause is a syntax error in a <a href="/en-US/docs/MDN/Structures/Macros">macro</a>.</p>
+`DocumentParsingError` errors appear when KumaScript has trouble understanding something in the document itself. The most common cause is a syntax error in a [macro](/en-US/docs/MDN/Structures/Macros).
 
-<p>Check for:</p>
+Check for:
 
-<dl>
- <dt>Use of curly braces without intending to call a macro.</dt>
- <dd>If you need to write  \{ in a document without calling a macro you can escape it with a \ like this: <code>\\{</code></dd>
- <dt>Use of a special character in a macro parameter.</dt>
- <dd>If you need to use a " or a \  inside of a macro parameter they can be escaped with a \ like this: <code>\\</code> or <code>\"</code></dd>
- <dt>Missing commas between macro parameters.</dt>
- <dd>Macro parameters need to be delimited by a comma (,) but not at the end of the list of parameters; for example <code>\{\{anch("top", "Back to top")}}</code>.</dd>
- <dt>HTML tags appearing inside a macro call</dt>
- <dd>If you apply styling to a macro, it will often break because, for example, a <code>&lt;/code&gt;</code> tag may have appeared inside the macro code in the source code. Check the source view to see what's there, and remove any unnecessary styling.</dd>
-</dl>
+- Use of curly braces without intending to call a macro.
+  - : If you need to write  \\{ in a document without calling a macro you can escape it with a \ like this: `\\{`
+- Use of a special character in a macro parameter.
+  - : If you need to use a " or a \  inside of a macro parameter they can be escaped with a \ like this: `\\` or `\"`
+- Missing commas between macro parameters.
+  - : Macro parameters need to be delimited by a comma (,) but not at the end of the list of parameters; for example `\{\{anch("top", "Back to top")}}`.
+- HTML tags appearing inside a macro call
+  - : If you apply styling to a macro, it will often break because, for example, a `</code>` tag may have appeared inside the macro code in the source code. Check the source view to see what's there, and remove any unnecessary styling.
 
-<h2 id="TemplateLoadingError">TemplateLoadingError</h2>
+## TemplateLoadingError
 
-<p><code>TemplateLoadingError</code> errors appear when KumaScript has trouble finding which <a href="/en-US/docs/MDN/Structures/Macros">macro</a> to include on a page.</p>
+`TemplateLoadingError` errors appear when KumaScript has trouble finding which [macro](/en-US/docs/MDN/Structures/Macros) to include on a page.
 
-<p>Check for:</p>
+Check for:
 
-<dl>
- <dt>Misspelling of macro names or renamed macros.</dt>
- <dd>You can look at the list of active macros in the <a href="https://github.com/mdn/yari/tree/master/kumascript/macros">Yari repo</a>.</dd>
-</dl>
+- Misspelling of macro names or renamed macros.
+  - : You can look at the list of active macros in the [Yari repo](https://github.com/mdn/yari/tree/master/kumascript/macros).
 
-<h2 id="TemplateExecutionError">TemplateExecutionError</h2>
+## TemplateExecutionError
 
-<p><code>TemplateExecutionError</code> errors appear when KumaScript encounters an error in the macro. If the error persists, <a href="https://github.com/mdn/yari/issues">report an issue</a>, including the URL of the page and the text of the error.</p>
+`TemplateExecutionError` errors appear when KumaScript encounters an error in the macro. If the error persists, [report an issue](https://github.com/mdn/yari/issues), including the URL of the page and the text of the error.
 
-<h2 id="Error_Unknown">Error &amp; Unknown</h2>
+## Error & Unknown
 
-<p>This is the category errors end up in if they are not one of the other kinds of error.</p>
+This is the category errors end up in if they are not one of the other kinds of error.

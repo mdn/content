@@ -9,86 +9,81 @@ tags:
   - MDN Meta
   - Tutorial
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>When learning the web, it's important to rely on active learning content. Such content is made to help with learning something pro-actively. It can be exercises, live hackable examples, tasks to perform, assessments, etc. In short, anything that can help someone to actively understand something.</p>
+When learning the web, it's important to rely on active learning content. Such content is made to help with learning something pro-actively. It can be exercises, live hackable examples, tasks to perform, assessments, etc. In short, anything that can help someone to actively understand something.
 
-<p>There is no straightforward way to create such content. For example many third party tools exist that can help you create live hackable examples (see: <a href="https://jsfiddle.net/" rel="external">JSFiddle</a>, <a href="https://codepen.io/">CodePen</a>, <a href="https://dabblet.com/">Dabblet</a>, etc.) that you can link from MDN articles. If you want to create more advanced comprehensible exercises, you can easily use <a href="https://thimble.mozilla.org" rel="external">Thimble</a> from the WebMaker project.</p>
+There is no straightforward way to create such content. For example many third party tools exist that can help you create live hackable examples (see: [JSFiddle](https://jsfiddle.net/), [CodePen](https://codepen.io/), [Dabblet](https://dabblet.com/), etc.) that you can link from MDN articles. If you want to create more advanced comprehensible exercises, you can easily use [Thimble](https://thimble.mozilla.org) from the WebMaker project.
 
-<p>Currently, MDN does not have an easy tool to author such active content. However, if you are a coder you can use the current MDN features to create custom active learning content.</p>
+Currently, MDN does not have an easy tool to author such active content. However, if you are a coder you can use the current MDN features to create custom active learning content.
 
-<h2 id="MDN_live_samples">MDN live samples</h2>
+## MDN live samples
 
-<p>MDN has a very cool feature called <strong>live samples</strong>. It's a mechanism that turns any HTML, CSS, and JavaScript code inside an MDN page into its executed equivalent. Before using it, you should read over <a href="/en-US/docs/MDN/Structures/Live_samples">Using the live sample system</a>, which is our complete documentation for building them. While they're easy to create, there are quirks and tricks you'll learn along the way.</p>
+MDN has a very cool feature called **live samples**. It's a mechanism that turns any HTML, CSS, and JavaScript code inside an MDN page into its executed equivalent. Before using it, you should read over [Using the live sample system](/en-US/docs/MDN/Structures/Live_samples), which is our complete documentation for building them. While they're easy to create, there are quirks and tricks you'll learn along the way.
 
-<p>What is interesting is that it's really easy to tweak that feature to use it in order to embed any kind of tool or utility you want into an MDN page.</p>
+What is interesting is that it's really easy to tweak that feature to use it in order to embed any kind of tool or utility you want into an MDN page.
 
-<h3 id="Hidden_code">Hidden code</h3>
+### Hidden code
 
-<p>The first way to use a code sample to create active learning content is to edit the page where you want to add your content. Use the Live Sample feature to create your content as you wish. Don't bother with the code complexity you could write; just create what you need. Once your code example is ready, surround it with a simple {{HTMLElement('div')}} element with an appropriate <code>id</code> attribute. Add the class <code>hidden</code> to any {{HTMLElement('pre')}} elements that surround this code. By doing so, your code won't be displayed but your live sample remains accessible and displayable.</p>
+The first way to use a code sample to create active learning content is to edit the page where you want to add your content. Use the Live Sample feature to create your content as you wish. Don't bother with the code complexity you could write; just create what you need. Once your code example is ready, surround it with a simple {{HTMLElement('div')}} element with an appropriate `id` attribute. Add the class `hidden` to any {{HTMLElement('pre')}} elements that surround this code. By doing so, your code won't be displayed but your live sample remains accessible and displayable.
 
-<p>Let's see a simple example:</p>
+Let's see a simple example:
 
-<div>
-<p>Click on the following square to randomly change its color:</p>
+Click on the following square to randomly change its color:
 
-<div id="hidden_code_example">
-
-<pre class="brush: html hidden">&lt;div class="square"&gt;
-  &lt;p class="color"&gt;#000000&lt;/p&gt;
-&lt;/div&gt;</pre>
-
-<pre class="brush: css hidden">body {
+<div id="hidden_code_example"><pre class="brush: html hidden">&#x3C;div class="square">
+  &#x3C;p class="color">#000000&#x3C;/p>
+&#x3C;/div></pre><pre class="brush: css hidden">body {
   padding: 10px;
   margin : 0;
 }
 
 .square {
-  width  : 80px;
-  height : 80px;
-  padding: 10px;
-  background-color: black;
-  color: white;
-  text-align: center;
+width : 80px;
+height : 80px;
+padding: 10px;
+background-color: black;
+color: white;
+text-align: center;
 }
 
 .color {
-  width: 60px;
-  text-shadow: 1px 1px 1px black;
+width: 60px;
+text-shadow: 1px 1px 1px black;
 }
-</pre>
 
-<pre class="brush: js hidden">function setColor(color) {
+</pre><pre class="brush: js hidden">function setColor(color) {
   document.querySelector('.square').style.backgroundColor = '#' + color;
   document.querySelector('.color').textContent = '#' + color;
 }
 
 function getRandomColor() {
-  var color = Math.floor(Math.random() * 16777215);
-  return color.toString(16);
+var color = Math.floor(Math.random() \* 16777215);
+return color.toString(16);
 }
 
 document.addEventListener('click', function (e) {
-  setColor(getRandomColor());
+setColor(getRandomColor());
 });
+
+</pre></div>
+
+{{EmbedLiveSample('hidden_code_example', 120, 125)}}
+
+If you take a look at the source code of this page, you'll see the following HTML code:
+
+```html
+<p>Click on the following square to randomly change its color or just type an hexadecimal code color</p>
+
+<div id="hidden_code_example">
+
+<pre class="brush: html hidden">
+  <div class="square">
+    <p class="color">#000000</p>
+  </div>
 </pre>
-</div>
 
-{{EmbedLiveSample('hidden_code_example', 120, 125)}}</div>
-
-<p>If you take a look at the source code of this page, you'll see the following HTML code:</p>
-
-<pre class="brush: html">&lt;p&gt;Click on the following square to randomly change its color or just type an hexadecimal code color&lt;/p&gt;
-
-&lt;div id="hidden_code_example"&gt;
-
-&lt;pre class="brush: html hidden"&gt;
-  &lt;div class="square"&gt;
-    &lt;p class="color"&gt;#000000&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/pre&gt;
-
-&lt;pre class="brush: css hidden"&gt;
+<pre class="brush: css hidden">
 body {
   padding: 10px;
   margin : 0;
@@ -107,9 +102,9 @@ body {
   width: 60px;
   text-transform: uppercase;
 }
-&lt;/pre&gt;
+</pre>
 
-&lt;pre class="brush: js hidden"&gt;
+<pre class="brush: js hidden">
 function setColor(color) {
   document.querySelector('.square').style.backgroundColor = '#' + color;
   document.querySelector('.color').textContent = '#' + color;
@@ -123,23 +118,24 @@ function getRandomColor() {
 document.addEventListener('click', function (e) {
   setColor(getRandomColor());
 });
-&lt;/pre&gt;
-&lt;/div&gt;
+</pre>
+</div>
 
-\{{EmbedLiveSample('hidden_code_example', 120, 125)}}</pre>
+\{{EmbedLiveSample('hidden_code_example', 120, 125)}}
+```
 
-<p>You can see a more advanced example of such a tweak on <a href="/en-US/docs/Web/API/Canvas_API#javascript">the Canvas API page</a>.</p>
+You can see a more advanced example of such a tweak on [the Canvas API page](/en-US/docs/Web/API/Canvas_API#javascript).
 
-<h3 id="Code_from_outside_the_page">Code from outside the page</h3>
+### Code from outside the page
 
-<p>The previous example is okay if you want to embed basic active learning content. However, if you want to deal with complex code, it can become a bit awkward to deal with that <code>hidden</code> class wrapper.</p>
+The previous example is okay if you want to embed basic active learning content. However, if you want to deal with complex code, it can become a bit awkward to deal with that `hidden` class wrapper.
 
-<p>So another option is to write the code of your learning content on an MDN page and then embed it into another page. To do this we can still use the {{TemplateLink("EmbedLiveSample")}} macro, but we'll also have to pass it the page from where to extract your code.</p>
+So another option is to write the code of your learning content on an MDN page and then embed it into another page. To do this we can still use the {{TemplateLink("EmbedLiveSample")}} macro, but we'll also have to pass it the page from where to extract your code.
 
-<p>Let's how that sample looks when configured as if it were being embedded from a remote origin:</p>
+Let's how that sample looks when configured as if it were being embedded from a remote origin:
 
-<div>
-<p>Click on the following square to randomly change its color or just type a hexadecimal code color</p>
-{{EmbedLiveSample('The_example', 120, 125, '', 'MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example')}}</div>
+Click on the following square to randomly change its color or just type a hexadecimal code color
 
-<p>This time, if you take a look at that page's source, you'll see no hidden code. If you want to see the code, just go to <a href="/en-US/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example">the page that hosts it</a>.</p>
+{{EmbedLiveSample('The_example', 120, 125, '', 'MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example')}}
+
+This time, if you take a look at that page's source, you'll see no hidden code. If you want to see the code, just go to [the page that hosts it](/en-US/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example).

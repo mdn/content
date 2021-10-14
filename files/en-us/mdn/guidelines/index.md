@@ -6,8 +6,8 @@ tags:
   - Landing
   - MDN Meta
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>These guides provide details on how MDN documentation should be written and formatted, as well as how our code samples and other content should be presented. By following these guides, you can ensure that the material you produce is clean and easy to use.</p>
+These guides provide details on how MDN documentation should be written and formatted, as well as how our code samples and other content should be presented. By following these guides, you can ensure that the material you produce is clean and easy to use.
 
-<p>{{LandingPageListSubpages}}</p>
+{{LandingPageListSubpages}}

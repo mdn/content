@@ -1,25 +1,21 @@
 ---
-title: "Yari: MDN's rendering platform"
+title: 'Yari: MDN''s rendering platform'
 slug: MDN/Yari
 tags:
   - Yari
   - Landing
   - MDN Meta
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>Yari is the code that renders MDN Web Docs. It takes a <a href="https://jamstack.org/">JAMStack</a> approach, which involves taking the MDN content stored as flat source files in a GitHub repo (which include front matter and macro calls), rendering them out to static HTML files, and serving those as quickly and efficiently as possible.</p>
+Yari is the code that renders MDN Web Docs. It takes a [JAMStack](https://jamstack.org/) approach, which involves taking the MDN content stored as flat source files in a GitHub repo (which include front matter and macro calls), rendering them out to static HTML files, and serving those as quickly and efficiently as possible.
 
-<p>The core MDN platform now actually consists of two GitHub repos:</p>
+The core MDN platform now actually consists of two GitHub repos:
 
-<ul>
-  <li><a href="https://github.com/mdn/content">The MDN content repo</a> — this is where the MDN content is stored, along with information such as contributor history and redirects. Visit this repo if you want to contribute to the MDN content.</li>
-  <li><a href="https://github.com/mdn/yari">The Yari project</a> — this is the platform code that renders and displays the MDN content, and deals with associated services such as user accounts. Visit this repo if you want to contribute to the MDN platform.</li>
-</ul>
+- [The MDN content repo](https://github.com/mdn/content) — this is where the MDN content is stored, along with information such as contributor history and redirects. Visit this repo if you want to contribute to the MDN content.
+- [The Yari project](https://github.com/mdn/yari) — this is the platform code that renders and displays the MDN content, and deals with associated services such as user accounts. Visit this repo if you want to contribute to the MDN platform.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://hacks.mozilla.org/2020/10/mdn-web-docs-evolves-lowdown-on-the-upcoming-new-platform/">MDN Web Docs evolves! Lowdown on the upcoming new platform</a> — explanation of the need for a platform change, and the new architecture.</li>
- <li>As needed, take a deep dive into the <a href="https://hacks.mozilla.org/2020/12/welcome-yari-mdn-web-docs-has-a-new-platform/">Welcome Yari: MDN Web Docs has a new platform</a> — formal announcement of the new platform launch.</li>
-</ul>
+- [MDN Web Docs evolves! Lowdown on the upcoming new platform](https://hacks.mozilla.org/2020/10/mdn-web-docs-evolves-lowdown-on-the-upcoming-new-platform/) — explanation of the need for a platform change, and the new architecture.
+- As needed, take a deep dive into the [Welcome Yari: MDN Web Docs has a new platform](https://hacks.mozilla.org/2020/12/welcome-yari-mdn-web-docs-has-a-new-platform/) — formal announcement of the new platform launch.

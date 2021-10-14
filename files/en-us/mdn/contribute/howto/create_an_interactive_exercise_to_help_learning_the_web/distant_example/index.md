@@ -3,20 +3,22 @@ title: distant example
 slug: >-
   MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
+## The example
 
-<h2 id="The_example">The example</h2>
+### HTML
 
-<h3 id="HTML">HTML</h3>
+```html
+<div class="square">
+  <p class="color">#000000</p>
+</div>
+```
 
-<pre class="brush: html">&lt;div class="square"&gt;
-  &lt;p class="color"&gt;#000000&lt;/p&gt;
-&lt;/div&gt;</pre>
+### CSS
 
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">body {
+```css
+body {
   padding: 10px;
   margin : 0;
 }
@@ -34,11 +36,12 @@ slug: >-
   width: 60px;
   text-transform: uppercase;
 }
-</pre>
+```
 
-<h3 id="JS">JS</h3>
+### JS
 
-<pre class="brush: js">function setColor(color) {
+```js
+function setColor(color) {
   document.querySelector('.square').style.backgroundColor = '#' + color;
   document.querySelector('.color').textContent = '#' + color;
 }
@@ -51,8 +54,8 @@ function getRandomColor() {
 document.addEventListener('click', function (e) {
   setColor(getRandomColor());
 });
-</pre>
+```
 
-<h2 id="Live_result">Live result</h2>
+## Live result
 
-<p>{{EmbedLiveSample('The_example', 120, 120)}}</p>
+{{EmbedLiveSample('The_example', 120, 120)}}

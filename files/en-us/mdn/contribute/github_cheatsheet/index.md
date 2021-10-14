@@ -10,72 +10,94 @@ tags:
   - Cheatsheet
   - Commands
 ---
-<p>{{MDNSidebar}}</p>
+{{MDNSidebar}}
 
-<p>This article provides a quick reference to the essential commands you'll need when using <a href="https://git-scm.com/">Git</a> and <a href="https://github.com/">GitHub</a> to contribute to MDN. If you are new to these tools and need a helping hand, our <a href="/en-US/docs/MDN/Contribute/GitHub_beginners">GitHub for complete beginners</a> tutorial teaches the basics.</p>
+This article provides a quick reference to the essential commands you'll need when using [Git](https://git-scm.com/) and [GitHub](https://github.com/) to contribute to MDN. If you are new to these tools and need a helping hand, our [GitHub for complete beginners](/en-US/docs/MDN/Contribute/GitHub_beginners) tutorial teaches the basics.
 
-<h2 id="Cloning">Cloning</h2>
+## Cloning
 
-<pre class="brush: bash">git clone <em>the-repo-url</em></pre>
+```bash
+git clone the-repo-url
+```
 
-<h2 id="setting_up_a_remote">Setting up a remote</h2>
+## Setting up a remote
 
-<pre class="brush: bash">git remote add <em>remote-name</em> <em>repo-you-want-to-point-to</em></pre>
+```bash
+git remote add remote-name repo-you-want-to-point-to
+```
 
-<h2 id="view_remotes_list">View remotes list</h2>
+## View remotes list
 
-<pre class="brush: bash">git remote -v</pre>
+```bash
+git remote -v
+```
 
-<h2 id="preparing_to_make_a_change_to_the_repo">Preparing to make a change to the repo</h2>
+## Preparing to make a change to the repo
 
-<h3 id="switch_to_the_main_branch">Switch to the main branch</h3>
+### Switch to the main branch
 
-<pre class="brush: bash">git switch main</pre>
+```bash
+git switch main
+```
 
-<h3 id="update_your_main_branch">Update your main branch</h3>
+### Update your main branch
 
-<pre class="brush: bash">git fetch <em>remote-name</em>
-git rebase <em>remote-name</em>/main
-git push</pre>
+```bash
+git fetch remote-name
+git rebase remote-name/main
+git push
+```
 
-<h2 id="get_your_branch_locally_and_switch_to_it">Get your branch locally and switch to it</h2>
+## Get your branch locally and switch to it
 
-<pre class="brush: bash">git pull
-git switch new-branch</pre>
+```bash
+git pull
+git switch new-branch
+```
 
-<h2 id="get_latest_status">Get latest status</h2>
+## Get latest status
 
-<pre class="brush: bash">git status</pre>
+```bash
+git status
+```
 
-<h2 id="adding_committing_and_pushing_changes">Adding, committing, and pushing changes</h2>
+## Adding, committing, and pushing changes
 
-<pre class="brush: bash">git add path-to-changed-file
+```bash
+git add path-to-changed-file
 git commit -m 'my commit message'
-git push</pre>
+git push
+```
 
-<h2 id="troubleshooting">Troubleshooting</h2>
+## Troubleshooting
 
-<h3 id="reverting_a_change_you_made_to_a_file_that_you_havent_yet_added_to_the_commit_list">Reverting a change you made to a file that you haven't yet added to the commit list</h3>
+### Reverting a change you made to a file that you haven't yet added to the commit list
 
-<pre class="brush: bash">git restore <em>file-path</em></pre>
+```bash
+git restore file-path
+```
 
-<h3 id="removing_a_file_from_the_commit_list">Removing a file from the commit list</h3>
+### Removing a file from the commit list
 
-<pre class="brush: bash">git restore --staged <em>file-path</em></pre>
+```bash
+git restore --staged file-path
+```
 
-<h3 id="reversing_a_commit">Reversing the last commit</h3>
+### Reversing the last commit
 
-<pre class="brush: bash">git reset HEAD~1</pre>
+```bash
+git reset HEAD~1
+```
 
-<h3 id="reversing_a_commit_that_has_been_pushed_to_the_remote_fork">Reversing a commit that has been pushed to the remote fork</h3>
+### Reversing a commit that has been pushed to the remote fork
 
-<pre class="brush: bash">git revert HEAD
-git push</pre>
+```bash
+git revert HEAD
+git push
+```
 
-<div class="note">
-  <p><strong>Note:</strong> Another way to handle getting rid of files that have ended up in pull requests that you don't want to be there is to use the GitHub UI. Go to your pull request's page on github.com, go to the "Files changed" tab, and find the file you want to remove from the pull request. At the top right of the file's box in the page there will be a "three dot" (<code>...</code>) menu. Press this button and choose "Delete file". In the confirmation page, enter a title for the new commit, make sure the "Commit directly..." checkbox is selected, and press the "Commit changes" button.</p>
-</div>
+> **Note:** Another way to handle getting rid of files that have ended up in pull requests that you don't want to be there is to use the GitHub UI. Go to your pull request's page on github.com, go to the "Files changed" tab, and find the file you want to remove from the pull request. At the top right of the file's box in the page there will be a "three dot" (`...`) menu. Press this button and choose "Delete file". In the confirmation page, enter a title for the new commit, make sure the "Commit directly..." checkbox is selected, and press the "Commit changes" button.
 
-<h2 id="want_to_see_more">Want to see more?</h2>
+## Want to see more?
 
-<p>If you think this cheatsheet should contain more commands, please <a href="https://github.com/mdn/content/issues/new">create an issue</a> to suggest what you think we should include.</p>
+If you think this cheatsheet should contain more commands, please [create an issue](https://github.com/mdn/content/issues/new) to suggest what you think we should include.
