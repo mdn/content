@@ -54,4 +54,5 @@ false && "dog"
 ## See also
 
 - {{Glossary("Truthy")}}
+- {{Glossary("Type_coercion", "Coercion")}}
 - {{Glossary("Boolean")}}
