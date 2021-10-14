@@ -10,35 +10,34 @@ tags:
   - custom elements
   - customized
 ---
-<div>{{DefaultAPISidebar("Web Components")}}</div>
+{{DefaultAPISidebar("Web Components")}}
 
-<p class="summary">One of the key features of the Web Components standard is the ability to create custom elements that encapsulate your functionality on an HTML page, rather than having to make do with a long, nested batch of elements that together provide a custom page feature. This article introduces the use of the Custom Elements API.</p>
+One of the key features of the Web Components standard is the ability to create custom elements that encapsulate your functionality on an HTML page, rather than having to make do with a long, nested batch of elements that together provide a custom page feature. This article introduces the use of the Custom Elements API.
 
-<div class="note">
-<p><strong>Note:</strong> Custom elements are supported by default in Firefox, Chrome, and Edge (76). Opera and Safari so far support only autonomous custom elements.</p>
-</div>
+> **Note:** Custom elements are supported by default in Firefox, Chrome, and Edge (76). Opera and Safari so far support only autonomous custom elements.
 
-<h2 id="High-level_view">High-level view</h2>
+## High-level view
 
-<p>The controller of custom elements on a web document is the {{domxref("CustomElementRegistry")}} object — this object allows you to register a custom element on the page, return information on what custom elements are registered, etc.</p>
+The controller of custom elements on a web document is the {{domxref("CustomElementRegistry")}} object — this object allows you to register a custom element on the page, return information on what custom elements are registered, etc.
 
-<p>To register a custom element on the page, you use the {{domxref("CustomElementRegistry.define()")}} method. This takes as its arguments:</p>
+To register a custom element on the page, you use the {{domxref("CustomElementRegistry.define()")}} method. This takes as its arguments:
 
-<ul>
- <li>A {{domxref("DOMString")}} representing the name you are giving to the element. Note that custom element names <a href="https://html.spec.whatwg.org/#valid-custom-element-name">require a dash to be used in them</a> (kebab-case); they can't be single words.</li>
- <li>A <a href="/en-US/docs/Web/JavaScript/Reference/Classes">class</a> object that defines the behavior of the element.</li>
- <li>{{optional_inline}} An options object containing an <code>extends</code> property, which specifies the built-in element your element inherits from, if any (only relevant to customized built-in elements; see the definition below).</li>
-</ul>
+- A {{domxref("DOMString")}} representing the name you are giving to the element. Note that custom element names [require a dash to be used in them](https://html.spec.whatwg.org/#valid-custom-element-name) (kebab-case); they can't be single words.
+- A [class](/en-US/docs/Web/JavaScript/Reference/Classes) object that defines the behavior of the element.
+- {{optional_inline}} An options object containing an `extends` property, which specifies the built-in element your element inherits from, if any (only relevant to customized built-in elements; see the definition below).
 
-<p>So for example, we can define a custom <a href="https://mdn.github.io/web-components-examples/word-count-web-component/">word-count element</a> like this:</p>
+So for example, we can define a custom [word-count element](https://mdn.github.io/web-components-examples/word-count-web-component/) like this:
 
-<pre class="brush: js">customElements.define('word-count', WordCount, { extends: 'p' });</pre>
+```js
+customElements.define('word-count', WordCount, { extends: 'p' });
+```
 
-<p>The element is called <code>word-count</code>, its class object is <code>WordCount</code>, and it extends the {{htmlelement("p")}} element.</p>
+The element is called `word-count`, its class object is `WordCount`, and it extends the {{htmlelement("p")}} element.
 
-<p>A custom element's class object is written using standard ES 2015 class syntax. For example, <code>WordCount</code> is structured like so:</p>
+A custom element's class object is written using standard ES 2015 class syntax. For example, `WordCount` is structured like so:
 
-<pre class="brush: js">class WordCount extends HTMLParagraphElement {
+```js
+class WordCount extends HTMLParagraphElement {
   constructor() {
     // Always call super first in constructor
     super();
@@ -47,30 +46,30 @@ tags:
 
     ...
   }
-}</pre>
+}
+```
 
-<p>This is just a simple example, but there is more you can do here. It is possible to define specific lifecycle callbacks inside the class, which run at specific points in the element's lifecycle. For example, <code>connectedCallback</code> is invoked each time the custom element is appended into a document-connected element, while <code>attributeChangedCallback</code> is invoked when one of the custom element's attributes is added, removed, or changed.</p>
+This is just a simple example, but there is more you can do here. It is possible to define specific lifecycle callbacks inside the class, which run at specific points in the element's lifecycle. For example, `connectedCallback` is invoked each time the custom element is appended into a document-connected element, while `attributeChangedCallback` is invoked when one of the custom element's attributes is added, removed, or changed.
 
-<p>You'll learn more about these in the {{anch("Using the lifecycle callbacks")}} section below.</p>
+You'll learn more about these in the {{anch("Using the lifecycle callbacks")}} section below.
 
-<p>There are two types of custom elements:</p>
+There are two types of custom elements:
 
-<ul>
- <li><strong>Autonomous custom elements</strong> are standalone — they don't inherit from standard HTML elements. You use these on a page by literally writing them out as an HTML element. For example <code>&lt;popup-info&gt;</code>, or <code>document.createElement("popup-info")</code>.</li>
- <li><strong>Customized built-in elements</strong> inherit from basic HTML elements. To create one of these, you have to specify which element they extend (as implied in the examples above), and they are used by writing out the basic element but specifying the name of the custom element in the {{htmlattrxref("is")}} attribute (or property). For example <code>&lt;p is="word-count"&gt;</code>, or <code>document.createElement("p", { is: "word-count" })</code>.</li>
-</ul>
+- **Autonomous custom elements** are standalone — they don't inherit from standard HTML elements. You use these on a page by literally writing them out as an HTML element. For example `<popup-info>`, or `document.createElement("popup-info")`.
+- **Customized built-in elements** inherit from basic HTML elements. To create one of these, you have to specify which element they extend (as implied in the examples above), and they are used by writing out the basic element but specifying the name of the custom element in the {{htmlattrxref("is")}} attribute (or property). For example `<p is="word-count">`, or `document.createElement("p", { is: "word-count" })`.
 
-<h2 id="Working_through_some_simple_examples">Working through some simple examples</h2>
+## Working through some simple examples
 
-<p>At this point, let's go through some more simple examples to show you how custom elements are created in more detail.</p>
+At this point, let's go through some more simple examples to show you how custom elements are created in more detail.
 
-<h3 id="Autonomous_custom_elements">Autonomous custom elements</h3>
+### Autonomous custom elements
 
-<p>Let's have a look at an example of an autonomous custom element — <code><a href="https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component">&lt;popup-info-box&gt;</a></code> (see a <a href="https://mdn.github.io/web-components-examples/popup-info-box-web-component/">live example</a>). This takes an image icon and a text string, and embeds the icon into the page. When the icon is focused, it displays the text in a pop up information box to provide further in-context information.</p>
+Let's have a look at an example of an autonomous custom element — [`<popup-info-box>`](https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component) (see a [live example](https://mdn.github.io/web-components-examples/popup-info-box-web-component/)). This takes an image icon and a text string, and embeds the icon into the page. When the icon is focused, it displays the text in a pop up information box to provide further in-context information.
 
-<p>To begin with, the JavaScript file defines a class called <code>PopUpInfo</code>, which extends the generic {{domxref("HTMLElement")}} class.</p>
+To begin with, the JavaScript file defines a class called `PopUpInfo`, which extends the generic {{domxref("HTMLElement")}} class.
 
-<pre class="brush: js">class PopUpInfo extends HTMLElement {
+```js
+class PopUpInfo extends HTMLElement {
   constructor() {
     // Always call super first in constructor
     super();
@@ -79,13 +78,15 @@ tags:
 
     ...
   }
-}</pre>
+}
+```
 
-<p>The preceding code snippet contains the <code><a href="/en-US/docs/Web/JavaScript/Reference/Classes/constructor">constructor()</a></code> definition for the class, which always starts by calling <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/super">super()</a></code> so that the correct prototype chain is established.</p>
+The preceding code snippet contains the [`constructor()`](/en-US/docs/Web/JavaScript/Reference/Classes/constructor) definition for the class, which always starts by calling [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super) so that the correct prototype chain is established.
 
-<p>Inside the constructor, we define all the functionality the element will have when an instance of it is instantiated. In this case we attach a shadow root to the custom element, use some DOM manipulation to create the element's internal shadow DOM structure — which is then attached to the shadow root — and finally attach some CSS to the shadow root to style it.</p>
+Inside the constructor, we define all the functionality the element will have when an instance of it is instantiated. In this case we attach a shadow root to the custom element, use some DOM manipulation to create the element's internal shadow DOM structure — which is then attached to the shadow root — and finally attach some CSS to the shadow root to style it.
 
-<pre class="brush: js">// Create a shadow root
+```js
+// Create a shadow root
 this.attachShadow({mode: 'open'}); // sets and returns 'this.shadowRoot'
 
 // Create (nested) span elements
@@ -110,48 +111,52 @@ style.textContent = '.wrapper {' +
 
 // attach the created elements to the shadow DOM
 this.shadowRoot.append(style,wrapper);
+```
 
-</pre>
+Finally, we register our custom element on the `CustomElementRegistry` using the `define()` method we mentioned earlier — in the parameters we specify the element name, and then the class name that defines its functionality:
 
-<p>Finally, we register our custom element on the <code>CustomElementRegistry</code> using the <code>define()</code> method we mentioned earlier — in the parameters we specify the element name, and then the class name that defines its functionality:</p>
+```js
+customElements.define('popup-info', PopUpInfo);
+```
 
-<pre class="brush: js">customElements.define('popup-info', PopUpInfo);</pre>
+It is now available to use on our page. Over in our HTML, we use it like so:
 
-<p>It is now available to use on our page. Over in our HTML, we use it like so:</p>
-
-<pre class="brush: html">&lt;popup-info img="img/alt.png" data-text="Your card validation code (CVC)
+```html
+<popup-info img="img/alt.png" data-text="Your card validation code (CVC)
   is an extra security feature — it is the last 3 or 4 numbers on the
-  back of your card."&gt;&lt;/popup-info&gt;</pre>
+  back of your card."></popup-info>
+```
 
-<div class="note">
-<p><strong>Note:</strong> You can see the <a href="https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js">full JavaScript source</a> code here.</p>
-</div>
+> **Note:** You can see the [full JavaScript source](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js) code here.
 
-<h3 id="Internal_vs._external_styles">Internal vs. external styles</h3>
+### Internal vs. external styles
 
-<p>In the above example we apply style to the Shadow DOM using a {{htmlelement("style")}} element, but it is perfectly possible to do it by referencing an external stylesheet from a {{htmlelement("link")}} element instead.</p>
+In the above example we apply style to the Shadow DOM using a {{htmlelement("style")}} element, but it is perfectly possible to do it by referencing an external stylesheet from a {{htmlelement("link")}} element instead.
 
-<p>For example, take a look at this code from our <a href="https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/">popup-info-box-external-stylesheet</a> example (see the <a href="https://github.com/mdn/web-components-examples/blob/master/popup-info-box-external-stylesheet/main.js">source code</a>):</p>
+For example, take a look at this code from our [popup-info-box-external-stylesheet](https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/) example (see the [source code](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-external-stylesheet/main.js)):
 
-<pre class="brush: js">// Apply external styles to the shadow dom
+```js
+// Apply external styles to the shadow dom
 const linkElem = document.createElement('link');
 linkElem.setAttribute('rel', 'stylesheet');
 linkElem.setAttribute('href', 'style.css');
 
 // Attach the created element to the shadow dom
-shadow.appendChild(linkElem);</pre>
+shadow.appendChild(linkElem);
+```
 
-<p>Note that {{htmlelement("link")}} elements do not block paint of the shadow root, so there may be a flash of unstyled content (FOUC) while the stylesheet loads.</p>
+Note that {{htmlelement("link")}} elements do not block paint of the shadow root, so there may be a flash of unstyled content (FOUC) while the stylesheet loads.
 
-<p>Many modern browsers implement an optimization for {{htmlelement("style")}} tags either cloned from a common node or that have identical text, to allow them to share a single backing stylesheet. With this optimization the performance of external and internal styles should be similar.</p>
+Many modern browsers implement an optimization for {{htmlelement("style")}} tags either cloned from a common node or that have identical text, to allow them to share a single backing stylesheet. With this optimization the performance of external and internal styles should be similar.
 
-<h3 id="Customized_built-in_elements">Customized built-in elements</h3>
+### Customized built-in elements
 
-<p>Now let's have a look at another customized built in element example — <a href="https://github.com/mdn/web-components-examples/tree/master/expanding-list-web-component">expanding-list</a> (<a href="https://mdn.github.io/web-components-examples/expanding-list-web-component/">see it live also</a>). This turns any unordered list into an expanding/collapsing menu.</p>
+Now let's have a look at another customized built in element example — [expanding-list](https://github.com/mdn/web-components-examples/tree/master/expanding-list-web-component) ([see it live also](https://mdn.github.io/web-components-examples/expanding-list-web-component/)). This turns any unordered list into an expanding/collapsing menu.
 
-<p>First of all, we define our element's class, in the same manner as before:</p>
+First of all, we define our element's class, in the same manner as before:
 
-<pre class="brush: js">class ExpandingList extends HTMLUListElement {
+```js
+class ExpandingList extends HTMLUListElement {
   constructor() {
     // Always call super first in constructor
     super();
@@ -160,60 +165,64 @@ shadow.appendChild(linkElem);</pre>
 
     ...
   }
-}</pre>
+}
+```
 
-<p>We will not explain the element functionality in any detail here, but you can discover how it works by checking out the source code. The only real difference here is that our element is extending the {{domxref("HTMLUListElement")}} interface, and not {{domxref("HTMLElement")}}. So it has all the characteristics of a {{htmlelement("ul")}} element with the functionality we define built on top, rather than being a standalone element. This is what makes it a customized built-in, rather than an autonomous element.</p>
+We will not explain the element functionality in any detail here, but you can discover how it works by checking out the source code. The only real difference here is that our element is extending the {{domxref("HTMLUListElement")}} interface, and not {{domxref("HTMLElement")}}. So it has all the characteristics of a {{htmlelement("ul")}} element with the functionality we define built on top, rather than being a standalone element. This is what makes it a customized built-in, rather than an autonomous element.
 
-<p>Next, we register the element using the <code>define()</code> method as before, except that this time it also includes an options object that details what element our custom element inherits from:</p>
+Next, we register the element using the `define()` method as before, except that this time it also includes an options object that details what element our custom element inherits from:
 
-<pre class="brush: js">customElements.define('expanding-list', ExpandingList, { extends: "ul" });</pre>
+```js
+customElements.define('expanding-list', ExpandingList, { extends: "ul" });
+```
 
-<p>Using the built-in element in a web document also looks somewhat different:</p>
+Using the built-in element in a web document also looks somewhat different:
 
-<pre class="brush: html">&lt;ul is="expanding-list"&gt;
+```html
+<ul is="expanding-list">
 
   ...
 
-&lt;/ul&gt;</pre>
-
-<p>You use a <code>&lt;ul&gt;</code> element as normal, but specify the name of the custom element inside the <code>is</code> attribute.</p>
-
-<div class="note">
-<p><strong>Note:</strong> Again, you can see the full <a href="https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js">JavaScript source code</a> here.</p>
-</div>
-
-<h2 id="Using_the_lifecycle_callbacks">Using the lifecycle callbacks</h2>
-
-<p>You can define several different callbacks inside a custom element's class definition, which fire at different points in the element's lifecycle:</p>
-
-<ul>
- <li><code>connectedCallback</code>: Invoked each time the custom element is appended into a document-connected element. This will happen each time the node is moved, and may happen before the element's contents have been fully parsed.
-
-  <div class="note">
-  <p><strong>Note:</strong> <code>connectedCallback</code> may be called once your element is no longer connected, use {{domxref("Node.isConnected")}} to make sure.</p>
-  </div>
- </li>
- <li><code>disconnectedCallback</code>: Invoked each time the custom element is disconnected from the document's DOM.</li>
- <li><code>adoptedCallback</code>: Invoked each time the custom element is moved to a new document.</li>
- <li><code>attributeChangedCallback</code>: Invoked each time one of the custom element's attributes is added, removed, or changed. Which attributes to notice change for is specified in a static get <code>observedAttributes</code> method</li>
 </ul>
+```
 
-<p>Let's look at an example of these in use. The code below is taken from the <a href="https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks">life-cycle-callbacks</a> example (<a href="https://mdn.github.io/web-components-examples/life-cycle-callbacks/">see it running live</a>). This is a trivial example that generates a colored square of a fixed size on the page. The custom element looks like this:</p>
+You use a `<ul>` element as normal, but specify the name of the custom element inside the `is` attribute.
 
-<pre class="brush: html">&lt;custom-square l="100" c="red"&gt;&lt;/custom-square&gt;</pre>
+> **Note:** Again, you can see the full [JavaScript source code](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js) here.
 
-<p>The class constructor is really simple — here we attach a shadow DOM to the element, then attach empty {{htmlelement("div")}} and {{htmlelement("style")}} elements to the shadow root:</p>
+## Using the lifecycle callbacks
 
-<pre class="brush: js">const shadow = this.attachShadow({mode: 'open'});
+You can define several different callbacks inside a custom element's class definition, which fire at different points in the element's lifecycle:
+
+- `connectedCallback`: Invoked each time the custom element is appended into a document-connected element. This will happen each time the node is moved, and may happen before the element's contents have been fully parsed.
+
+  > **Note:** `connectedCallback` may be called once your element is no longer connected, use {{domxref("Node.isConnected")}} to make sure.
+
+- `disconnectedCallback`: Invoked each time the custom element is disconnected from the document's DOM.
+- `adoptedCallback`: Invoked each time the custom element is moved to a new document.
+- `attributeChangedCallback`: Invoked each time one of the custom element's attributes is added, removed, or changed. Which attributes to notice change for is specified in a static get `observedAttributes` method
+
+Let's look at an example of these in use. The code below is taken from the [life-cycle-callbacks](https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks) example ([see it running live](https://mdn.github.io/web-components-examples/life-cycle-callbacks/)). This is a trivial example that generates a colored square of a fixed size on the page. The custom element looks like this:
+
+```html
+<custom-square l="100" c="red"></custom-square>
+```
+
+The class constructor is really simple — here we attach a shadow DOM to the element, then attach empty {{htmlelement("div")}} and {{htmlelement("style")}} elements to the shadow root:
+
+```js
+const shadow = this.attachShadow({mode: 'open'});
 
 const div = document.createElement('div');
 const style = document.createElement('style');
 shadow.appendChild(style);
-shadow.appendChild(div);</pre>
+shadow.appendChild(div);
+```
 
-<p>The key function in this example is <code>updateStyle()</code> — this takes an element, gets its shadow root, finds its <code>&lt;style&gt;</code> element, and adds {{cssxref("width")}}, {{cssxref("height")}}, and {{cssxref("background-color")}} to the style.</p>
+The key function in this example is `updateStyle()` — this takes an element, gets its shadow root, finds its `<style>` element, and adds {{cssxref("width")}}, {{cssxref("height")}}, and {{cssxref("background-color")}} to the style.
 
-<pre class="brush: js">function updateStyle(elem) {
+```js
+function updateStyle(elem) {
   const shadow = elem.shadowRoot;
   shadow.querySelector('style').textContent = `
     div {
@@ -222,46 +231,53 @@ shadow.appendChild(div);</pre>
       background-color: ${elem.getAttribute('c')};
     }
   `;
-}</pre>
+}
+```
 
-<p>The actual updates are all handled by the life cycle callbacks, which are placed inside the class definition as methods. The <code>connectedCallback()</code> runs each time the element is added to the DOM — here we run the <code>updateStyle()</code> function to make sure the square is styled as defined in its attributes:</p>
+The actual updates are all handled by the life cycle callbacks, which are placed inside the class definition as methods. The `connectedCallback()` runs each time the element is added to the DOM — here we run the `updateStyle()` function to make sure the square is styled as defined in its attributes:
 
-<pre class="brush: js">connectedCallback() {
+```js
+connectedCallback() {
   console.log('Custom square element added to page.');
   updateStyle(this);
-}</pre>
+}
+```
 
-<p>The <code>disconnectedCallback()</code> and <code>adoptedCallback()</code> callbacks log simple messages to the console to inform us when the element is either removed from the DOM, or moved to a different page:</p>
+The `disconnectedCallback()` and `adoptedCallback()` callbacks log simple messages to the console to inform us when the element is either removed from the DOM, or moved to a different page:
 
-<pre class="brush: js">disconnectedCallback() {
+```js
+disconnectedCallback() {
   console.log('Custom square element removed from page.');
 }
 
 adoptedCallback() {
   console.log('Custom square element moved to new page.');
-}</pre>
+}
+```
 
-<p>The <code>attributeChangedCallback()</code> callback is run whenever one of the element's attributes is changed in some way. As you can see from its properties, it is possible to act on attributes individually, looking at their name, and old and new attribute values. In this case however, we are just running the <code>updateStyle()</code> function again to make sure that the square's style is updated as per the new values:</p>
+The `attributeChangedCallback()` callback is run whenever one of the element's attributes is changed in some way. As you can see from its properties, it is possible to act on attributes individually, looking at their name, and old and new attribute values. In this case however, we are just running the `updateStyle()` function again to make sure that the square's style is updated as per the new values:
 
-<pre class="brush: js">attributeChangedCallback(name, oldValue, newValue) {
+```js
+attributeChangedCallback(name, oldValue, newValue) {
   console.log('Custom square element attributes changed.');
   updateStyle(this);
-}</pre>
+}
+```
 
-<p>Note that to get the <code>attributeChangedCallback()</code> callback to fire when an attribute changes, you have to observe the attributes. This is done by specifying a <code>static get observedAttributes()</code> method inside custom element class - this should <code>return</code>  an array containing the names of the attributes you want to observe:</p>
+Note that to get the `attributeChangedCallback()` callback to fire when an attribute changes, you have to observe the attributes. This is done by specifying a `static get observedAttributes()` method inside custom element class - this should `return`  an array containing the names of the attributes you want to observe:
 
-<pre class="brush: js">static get observedAttributes() { return ['c', 'l']; }</pre>
+```js
+static get observedAttributes() { return ['c', 'l']; }
+```
 
-<p>This is placed right at the top of the constructor, in our example.</p>
+This is placed right at the top of the constructor, in our example.
 
-<div class="note">
-<p><strong>Note:</strong> Find the <a href="https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js">full JavaScript source</a> here.</p>
-</div>
+> **Note:** Find the [full JavaScript source](https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js) here.
 
-<h2 id="Transpilers_vs._classes">Transpilers vs. classes</h2>
+## Transpilers vs. classes
 
-<p>Please note that ES2015 classes cannot reliably be transpiled in Babel 6 or TypeScript targeting legacy browsers. You can either use Babel 7 or the <a href="https://www.npmjs.com/package/babel-plugin-transform-builtin-classes">babel-plugin-transform-builtin-classes</a> for Babel 6, and target ES2015 in TypeScript instead of legacy.</p>
+Please note that ES2015 classes cannot reliably be transpiled in Babel 6 or TypeScript targeting legacy browsers. You can either use Babel 7 or the [babel-plugin-transform-builtin-classes](https://www.npmjs.com/package/babel-plugin-transform-builtin-classes) for Babel 6, and target ES2015 in TypeScript instead of legacy.
 
-<h2 id="Libraries">Libraries</h2>
+## Libraries
 
-<p>There are several libraries that are built on Web Components with the aim of increasing the level of abstraction when creating custom elements. Some of these libraries are <a href="https://www.fast.design/docs/fast-element/getting-started" rel="nofollow">FASTElement</a>, <a href="https://github.com/devpunks/snuggsi" rel="nofollow">snuggsi</a>, <a href="https://x-tag.github.io/" rel="nofollow">X-Tag</a>, <a href="https://slimjs.com/" rel="nofollow">Slim.js</a>, <a href="https://lit.dev/">Lit</a>, <a href="https://www.htmlelements.com/">Smart</a>, <a href="https://stenciljs.com">Stencil</a>, <a href="https://github.com/WebReflection/hyperHTML-Element">hyperHTML-Element</a>, <a href="https://www.dataformsjs.com/">DataFormsJS</a>, and <a href="https://tmorin.github.io/ceb/">Custom-Element-Builder</a>.</p>
+There are several libraries that are built on Web Components with the aim of increasing the level of abstraction when creating custom elements. Some of these libraries are [FASTElement](https://www.fast.design/docs/fast-element/getting-started), [snuggsi](https://github.com/devpunks/snuggsi), [X-Tag](https://x-tag.github.io/), [Slim.js](https://slimjs.com/), [Lit](https://lit.dev/), [Smart](https://www.htmlelements.com/), [Stencil](https://stenciljs.com), [hyperHTML-Element](https://github.com/WebReflection/hyperHTML-Element), [DataFormsJS](https://www.dataformsjs.com/), and [Custom-Element-Builder](https://tmorin.github.io/ceb/).

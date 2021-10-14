@@ -7,8 +7,8 @@ tags:
   - Web
   - XML
 ---
-<p>{{QuickLinksWithSubpages("/en-US/docs/Web/XML")}}{{Draft}}</p>
+{{QuickLinksWithSubpages("/en-US/docs/Web/XML")}}{{Draft}}
 
-<p class="summary">The <strong>Extensible Markup Language</strong> is a strict serialization of the <a href="/en-US/docs/Web/API/Document_Object_Model">Document Object Model</a>.</p>
+The **Extensible Markup Language** is a strict serialization of the [Document Object Model](/en-US/docs/Web/API/Document_Object_Model).
 
-<p>{{LandingPageListSubpages}}</p>
+{{LandingPageListSubpages}}

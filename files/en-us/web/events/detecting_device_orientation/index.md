@@ -10,39 +10,37 @@ tags:
   - Orientation
   - Reference
 ---
-<div>{{SeeCompatTable}}</div>
+{{SeeCompatTable}}
 
-<p>Increasingly, web-enabled devices are capable of determining their <strong>orientation</strong>; that is, they can report data indicating changes to their orientation with relation to the pull of gravity. In particular, hand-held devices such as mobile phones can use this information to automatically rotate the display to remain upright, presenting a wide-screen view of the web content when the device is rotated so that its width is greater than its height.</p>
+Increasingly, web-enabled devices are capable of determining their **orientation**; that is, they can report data indicating changes to their orientation with relation to the pull of gravity. In particular, hand-held devices such as mobile phones can use this information to automatically rotate the display to remain upright, presenting a wide-screen view of the web content when the device is rotated so that its width is greater than its height.
 
-<p>There are two JavaScript events that handle orientation information. The first one is the {{domxref("DeviceOrientationEvent")}}, which is sent when the accelerometer detects a change to the orientation of the device. By receiving and processing the data reported by these orientation events, it's possible to interactively respond to rotation and elevation changes caused by the user moving the device.</p>
+There are two JavaScript events that handle orientation information. The first one is the {{domxref("DeviceOrientationEvent")}}, which is sent when the accelerometer detects a change to the orientation of the device. By receiving and processing the data reported by these orientation events, it's possible to interactively respond to rotation and elevation changes caused by the user moving the device.
 
-<p>The second event is the {{domxref("DeviceMotionEvent")}}, which is sent when a change in acceleration was added. It is different from the {{domxref("DeviceOrientationEvent")}} because it is listening for changes in acceleration as opposed to orientation. Sensors that are commonly capable of detecting {{domxref("DeviceMotionEvent")}} include sensors in laptops to protect moving storage devices. {{domxref("DeviceOrientationEvent")}} is more commonly found in mobile devices.</p>
+The second event is the {{domxref("DeviceMotionEvent")}}, which is sent when a change in acceleration was added. It is different from the {{domxref("DeviceOrientationEvent")}} because it is listening for changes in acceleration as opposed to orientation. Sensors that are commonly capable of detecting {{domxref("DeviceMotionEvent")}} include sensors in laptops to protect moving storage devices. {{domxref("DeviceOrientationEvent")}} is more commonly found in mobile devices.
 
-<h2 id="Processing_orientation_events">Processing orientation events</h2>
+## Processing orientation events
 
-<p>All you need to do in order to begin receiving orientation change is to listen to the {{event("deviceorientation")}} event:</p>
+All you need to do in order to begin receiving orientation change is to listen to the {{event("deviceorientation")}} event:
 
-<div class="notecard note">
-  <p><strong>Note:</strong> <a href="https://github.com/wagerfield/parallax">parallax</a> is a polyfill for normalizing the accelerometer and gyroscope data on mobile devices. This is useful for overcoming some of the differences in device support for device orientation.</p>
-</div>
+> **Note:** [parallax](https://github.com/wagerfield/parallax) is a polyfill for normalizing the accelerometer and gyroscope data on mobile devices. This is useful for overcoming some of the differences in device support for device orientation.
 
-<pre class="brush: js">window.addEventListener("deviceorientation", handleOrientation, true);
-</pre>
+```js
+window.addEventListener("deviceorientation", handleOrientation, true);
+```
 
-<p>After registering your event listener (in this case, a JavaScript function called handleOrientation()), your listener function periodically gets called with updated orientation data.</p>
+After registering your event listener (in this case, a JavaScript function called handleOrientation()), your listener function periodically gets called with updated orientation data.
 
-<p>The orientation event contains four values:</p>
+The orientation event contains four values:
 
-<ul>
- <li>{{domxref("DeviceOrientationEvent.absolute")}}</li>
- <li>{{domxref("DeviceOrientationEvent.alpha")}}</li>
- <li>{{domxref("DeviceOrientationEvent.beta")}}</li>
- <li>{{domxref("DeviceOrientationEvent.gamma")}}</li>
-</ul>
+- {{domxref("DeviceOrientationEvent.absolute")}}
+- {{domxref("DeviceOrientationEvent.alpha")}}
+- {{domxref("DeviceOrientationEvent.beta")}}
+- {{domxref("DeviceOrientationEvent.gamma")}}
 
-<p>The event handler function can look something like this:</p>
+The event handler function can look something like this:
 
-<pre class="brush: js">function handleOrientation(event) {
+```js
+function handleOrientation(event) {
   var absolute = event.absolute;
   var alpha    = event.alpha;
   var beta     = event.beta;
@@ -50,34 +48,34 @@ tags:
 
   // Do stuff with the new orientation data
 }
-</pre>
+```
 
-<h3 id="Orientation_values_explained">Orientation values explained</h3>
+### Orientation values explained
 
-<p>The value reported for each axis indicates the amount of rotation around a given axis in reference to a standard coordinate frame. These are described in greater detail in the <a href="/en-US/docs/Web/Events/Orientation_and_motion_data_explained">Orientation and motion data explained</a> article which is summarized below.</p>
+The value reported for each axis indicates the amount of rotation around a given axis in reference to a standard coordinate frame. These are described in greater detail in the [Orientation and motion data explained](/en-US/docs/Web/Events/Orientation_and_motion_data_explained) article which is summarized below.
 
-<ul>
- <li>The {{domxref("DeviceOrientationEvent.alpha")}} value represents the motion of the device around the z axis, represented in degrees with values ranging from 0 (inclusive) to 360 (exclusive).</li>
- <li>The {{domxref("DeviceOrientationEvent.beta")}} value represents the motion of the device around the x axis, represented in degrees with values ranging from -180 (inclusive) to 180 (exclusive). This represents a front to back motion of the device.</li>
- <li>The {{domxref("DeviceOrientationEvent.gamma")}} value represents the motion of the device around the y axis, represented in degrees with values ranging from -90 (inclusive) to 90 (exclusive). This represents a left to right motion of the device.</li>
-</ul>
+- The {{domxref("DeviceOrientationEvent.alpha")}} value represents the motion of the device around the z axis, represented in degrees with values ranging from 0 (inclusive) to 360 (exclusive).
+- The {{domxref("DeviceOrientationEvent.beta")}} value represents the motion of the device around the x axis, represented in degrees with values ranging from -180 (inclusive) to 180 (exclusive). This represents a front to back motion of the device.
+- The {{domxref("DeviceOrientationEvent.gamma")}} value represents the motion of the device around the y axis, represented in degrees with values ranging from -90 (inclusive) to 90 (exclusive). This represents a left to right motion of the device.
 
-<h3 id="Orientation_example">Orientation example</h3>
+### Orientation example
 
-<p>This example will work on any browser supporting the {{event("deviceorientation")}} event and running on a device able to detect its orientation.</p>
+This example will work on any browser supporting the {{event("deviceorientation")}} event and running on a device able to detect its orientation.
 
-<p>So let's imagine a ball in a garden:</p>
+So let's imagine a ball in a garden:
 
-<pre class="brush: html">&lt;div class="garden"&gt;
-  &lt;div class="ball"&gt;&lt;/div&gt;
-&lt;/div&gt;
+```html
+<div class="garden">
+  <div class="ball"></div>
+</div>
 
-&lt;pre class="output"&gt;&lt;/pre&gt;
-</pre>
+<pre class="output"></pre>
+```
 
-<p>This garden is 200 pixel wide (yes, it's a tiny one), and the ball is in the center:</p>
+This garden is 200 pixel wide (yes, it's a tiny one), and the ball is in the center:
 
-<pre class="brush: css">.garden {
+```css
+.garden {
   position: relative;
   width : 200px;
   height: 200px;
@@ -94,11 +92,12 @@ tags:
   background: green;
   border-radius: 100%;
 }
-</pre>
+```
 
-<p>Now, if we move our device, the ball will move accordingly:</p>
+Now, if we move our device, the ball will move accordingly:
 
-<pre class="brush: js">var ball   = document.querySelector('.ball');
+```js
+var ball   = document.querySelector('.ball');
 var garden = document.querySelector('.garden');
 var output = document.querySelector('.output');
 
@@ -114,8 +113,8 @@ function handleOrientation(event) {
 
   // Because we don't want to have the device upside down
   // We constrain the x value to the range [-90,90]
-  if (x &gt;  90) { x =  90};
-  if (x &lt; -90) { x = -90};
+  if (x >  90) { x =  90};
+  if (x < -90) { x = -90};
 
   // To make computation easier we shift the range of
   // x and y to [0,180]
@@ -129,97 +128,70 @@ function handleOrientation(event) {
 }
 
 window.addEventListener('deviceorientation', handleOrientation);
-</pre>
+```
 
-<p>{{LiveSampleLink("Orientation_example", "Click here")}} to open this example in a new window; because {{event("deviceorientation")}} doesn't work in a cross-origin {{HTMLElement("iframe")}} in all browsers.</p>
+{{LiveSampleLink("Orientation_example", "Click here")}} to open this example in a new window; because {{event("deviceorientation")}} doesn't work in a cross-origin {{HTMLElement("iframe")}} in all browsers.
 
-<div>{{EmbedLiveSample('Orientation_example', '230', '260')}}</div>
+{{EmbedLiveSample('Orientation_example', '230', '260')}}
 
-<h2 id="Processing_motion_events">Processing motion events</h2>
+## Processing motion events
 
-<p>Motion events are handled the same way as the orientation events except that they have their own event's name: {{event("devicemotion")}}</p>
+Motion events are handled the same way as the orientation events except that they have their own event's name: {{event("devicemotion")}}
 
-<pre class="brush: js">window.addEventListener("devicemotion", <em>handleMotion</em>, true);</pre>
+```js
+window.addEventListener("devicemotion", handleMotion, true);
+```
 
-<p>What's really changed are the information provided within the {{domxref("DeviceMotionEvent")}} object passed as a parameter of the <em>HandleMotion</em> function.</p>
+What's really changed are the information provided within the {{domxref("DeviceMotionEvent")}} object passed as a parameter of the _HandleMotion_ function.
 
-<p>The motion event contains four properties:</p>
+The motion event contains four properties:
 
-<ul>
- <li>{{domxref("DeviceMotionEvent.acceleration")}}</li>
- <li>{{domxref("DeviceMotionEvent.accelerationIncludingGravity")}}</li>
- <li>{{domxref("DeviceMotionEvent.rotationRate")}}</li>
- <li>{{domxref("DeviceMotionEvent.interval")}}</li>
-</ul>
+- {{domxref("DeviceMotionEvent.acceleration")}}
+- {{domxref("DeviceMotionEvent.accelerationIncludingGravity")}}
+- {{domxref("DeviceMotionEvent.rotationRate")}}
+- {{domxref("DeviceMotionEvent.interval")}}
 
-<h3 id="Motion_values_explained">Motion values explained</h3>
+### Motion values explained
 
-<p>The {{domxref("DeviceMotionEvent")}} objects provide web developers with information about the speed of changes for the device's position and orientation. The changes are provided along three axis (see <a href="/en-US/docs/Web/Events/Orientation_and_motion_data_explained">Orientation and motion data explained</a> for details).</p>
+The {{domxref("DeviceMotionEvent")}} objects provide web developers with information about the speed of changes for the device's position and orientation. The changes are provided along three axis (see [Orientation and motion data explained](/en-US/docs/Web/Events/Orientation_and_motion_data_explained) for details).
 
-<p>For {{domxref("DeviceMotionEvent.acceleration","acceleration")}} and {{domxref("DeviceMotionEvent.accelerationIncludingGravity","accelerationIncludingGravity")}}, those axes correspond to the following:</p>
+For {{domxref("DeviceMotionEvent.acceleration","acceleration")}} and {{domxref("DeviceMotionEvent.accelerationIncludingGravity","accelerationIncludingGravity")}}, those axes correspond to the following:
 
-<ul>
- <li><code>x</code>: Represents the axis from West to East</li>
- <li><code>y</code>: Represents the axis from South to North</li>
- <li><code>z</code>: Represents the axis perpendicular to the ground</li>
-</ul>
+- `x`: Represents the axis from West to East
+- `y`: Represents the axis from South to North
+- `z`: Represents the axis perpendicular to the ground
 
-<p>For {{domxref("DeviceMotionEvent.rotationRate","rotationRate")}}, the situation is a bit different; the information corresponds to the following in each case:</p>
+For {{domxref("DeviceMotionEvent.rotationRate","rotationRate")}}, the situation is a bit different; the information corresponds to the following in each case:
 
-<ul>
- <li><code>alpha</code>: Represents a rotation rate along the axis perpendicular to the screen (or keyboard for desktop).</li>
- <li><code>beta</code>: Represents a rotation rate along the axis going from left to right of the plane of the screen (or keyboard for desktop).</li>
- <li><code>gamma</code>: Represents a rotation rate along the axis going from bottom to top of the plane of the screen (or keyboard for desktop).</li>
-</ul>
+- `alpha`: Represents a rotation rate along the axis perpendicular to the screen (or keyboard for desktop).
+- `beta`: Represents a rotation rate along the axis going from left to right of the plane of the screen (or keyboard for desktop).
+- `gamma`: Represents a rotation rate along the axis going from bottom to top of the plane of the screen (or keyboard for desktop).
 
-<p>Finally, {{domxref("DeviceMotionEvent.interval","interval")}} represents the interval of time, in milliseconds, at which data are obtained from the device.</p>
+Finally, {{domxref("DeviceMotionEvent.interval","interval")}} represents the interval of time, in milliseconds, at which data are obtained from the device.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Device Orientation')}}</td>
-   <td>{{Spec2('Device Orientation')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                | Status                                   | Comment                |
+| -------------------------------------------- | ---------------------------------------- | ---------------------- |
+| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} | Initial specification. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="DeviceMotionEvent"><code>DeviceMotionEvent</code></h3>
+### `DeviceMotionEvent`
 
-<p>{{Compat("api.DeviceMotionEvent")}}</p>
+{{Compat("api.DeviceMotionEvent")}}
 
-<h3 id="DeviceOrientationEvent"><code>DeviceOrientationEvent</code></h3>
+### `DeviceOrientationEvent`
 
-<p>{{Compat("api.DeviceOrientationEvent")}}</p>
+{{Compat("api.DeviceOrientationEvent")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("DeviceOrientationEvent")}}</li>
- <li>{{domxref("DeviceMotionEvent")}}</li>
- <li>The legacy <code><a href="/en-US/docs/Web/Events/MozOrientation">MozOrientation</a></code> event.</li>
- <li><a href="/en-US/docs/Web/Events/Orientation_and_motion_data_explained">Orientation and motion data explained</a></li>
- <li><a href="/en-US/docs/Web/Events/Using_device_orientation_with_3D_transforms">Using deviceorientation in 3D Transforms</a></li>
- <li><a href="/en-US/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation">Cyber Orb: 2D maze game with device orientation</a></li>
-</ul>
+- {{domxref("DeviceOrientationEvent")}}
+- {{domxref("DeviceMotionEvent")}}
+- The legacy [`MozOrientation`](/en-US/docs/Web/Events/MozOrientation) event.
+- [Orientation and motion data explained](/en-US/docs/Web/Events/Orientation_and_motion_data_explained)
+- [Using deviceorientation in 3D Transforms](/en-US/docs/Web/Events/Using_device_orientation_with_3D_transforms)
+- [Cyber Orb: 2D maze game with device orientation](/en-US/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation)
 
-<section id="Quick_links">
-  <ul>
-    <li><a href="/en-US/docs/Web/Events/Orientation_and_motion_data_explained">Orientation and motion data explained</a></li>
-    <li>{{domxref("DeviceOrientationEvent")}}</li>
-    <li>{{domxref("DeviceMotionEvent")}}</li>
-    <li><a href="/en-US/docs/Web/Events/Using_device_orientation_with_3D_transforms">Using deviceorientation in 3D Transforms</a></li>
-    <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
-  </ul>
-</section>
+<section id="Quick_links"><ul><li><a href="/en-US/docs/Web/Events/Orientation_and_motion_data_explained">Orientation and motion data explained</a></li><li>{{domxref("DeviceOrientationEvent")}}</li><li>{{domxref("DeviceMotionEvent")}}</li><li><a href="/en-US/docs/Web/Events/Using_device_orientation_with_3D_transforms">Using deviceorientation in 3D Transforms</a></li><li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li></ul></section>

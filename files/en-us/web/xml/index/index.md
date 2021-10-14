@@ -6,6 +6,6 @@ tags:
   - Web
   - XML
 ---
-<p>{{QuickLinksWithSubpages("/en-US/docs/Web/XML")}}</p>
+{{QuickLinksWithSubpages("/en-US/docs/Web/XML")}}
 
-<p>{{Index("/en-US/docs/Web/XML")}}</p>
+{{Index("/en-US/docs/Web/XML")}}
