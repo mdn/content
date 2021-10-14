@@ -43,7 +43,7 @@ The `aria-brailleroledescription` value will not be exposed to the braille user 
 - The element to which the attribute is applied has an explicit or implicit WAI-ARIA role where `aria-brailleroledescription` is prohibited.
 - The element to which the attribute is applied does not have a valid  `aria-roledescription`.
 
-> **Note:** Test your sites and applications with daily users of assistive technologies, including Braille readers, to ensure your content is accessible, and that Braille content makes sense.
+> **Note:** Test your sites and applications with daily users of assistive technologies, including Braille readers, to ensure your content makes sense in Braille.
 
 ## Values
 
