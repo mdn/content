@@ -34,7 +34,7 @@ tags:
   <tr>
    <th scope="row">Codec name (short)</th>
    <th scope="col">Full codec name</th>
-   <th scope="col">Browser compatibility<sup><a href="#index-foot-1">1</a></sup></th>
+   <th scope="col">Browser compatibility</th>
   </tr>
  </thead>
  <tbody>
@@ -46,7 +46,9 @@ tags:
   <tr>
    <th scope="row">{{anch("ADTS")}}</th>
    <td>Audio Data Transport Stream</td>
-   <td>Firefox<sup><a href="#index-foot-2">2</a></sup></td>
+   <td>
+     <p>Firefox</p>
+     <p>Available only if available on the underlying operating system's media framework.</p></td>
   </tr>
   <tr>
    <th scope="row">{{anch("FLAC")}}</th>
@@ -66,7 +68,10 @@ tags:
   <tr>
    <th scope="row">{{anch("Ogg")}}</th>
    <td>Ogg</td>
-   <td>Chrome 3, Firefox 3.5, Edge 17<sup><a href="#index-foot-3">3</a></sup> (desktop only), Internet Explorer 9, Opera 10.50</td>
+   <td>
+     <p>Chrome 3, Firefox 3.5, Edge 17 (desktop only), Internet Explorer 9, Opera 10.50</p>
+     <p>Edge requires <a href="https://www.microsoft.com/store/productId/9N5TDP8VCMHS">Web Media Extensions</a> to be installed.</p>
+   </td>
   </tr>
   <tr>
    <th scope="row">{{anch("QuickTime", "QuickTime (MOV)")}}</th>
@@ -76,16 +81,15 @@ tags:
   <tr>
    <th scope="row">{{anch("WebM")}}</th>
    <td>Web Media</td>
-   <td>Chrome 6, Edge 17<sup><a href="#index-foot-3">3</a></sup> (desktop only), Firefox 4, Opera 10.6, Safari (WebRTC only)</td>
+   <td>
+     <p>Chrome 6, Edge 17 (desktop only), Firefox 4, Opera 10.6, Safari (WebRTC only)</p>
+     <p>Edge requires <a href="https://www.microsoft.com/store/productId/9N5TDP8VCMHS">Web Media Extensions</a> to be installed.</p>
+   </td>
   </tr>
  </tbody>
 </table>
 
-<p><a id="index-foot-1">[1]</a> Unless otherwise specified, both mobile and desktop browser compatibility is implied if a browser is listed here. Support is also implied only for the container itself, not for any specific codecs.</p>
-
-<p><a id="index-foot-2">[2]</a> Available only if available on the underlying operating system's media framework.</p>
-
-<p><a name="index-foot-3">[3]</a> Requires <a href="https://www.microsoft.com/store/productId/9N5TDP8VCMHS">Web Media Extensions</a> to be installed.</p>
+<p>Unless otherwise specified, both mobile and desktop browser compatibility is implied if a browser is listed here. Support is also implied only for the container itself, not for any specific codecs.</p>
 
 <h3 id="3GP">3GP</h3>
 
@@ -138,36 +142,32 @@ tags:
    <th scope="row">AVC (H.264)</th>
    <td></td>
    <td></td>
-   <td>Yes<sup><a href="#3gp-vid-footnote-1">1</a>,<a href="#3gp-vid-footnote-1">2</a></sup></td>
+   <td></td>
    <td></td>
   </tr>
   <tr>
    <th scope="row">H.263</th>
    <td></td>
    <td></td>
-   <td>Yes<sup><a href="#3gp-vid-footnote-1">1</a></sup></td>
+   <td></td>
    <td></td>
   </tr>
   <tr>
    <th scope="row">MPEG-4 Part 2 (MP4v-es)</th>
    <td></td>
    <td></td>
-   <td>Yes<sup><a href="#3gp-vid-footnote-1">1</a></sup></td>
+   <td></td>
    <td></td>
   </tr>
   <tr>
    <th scope="row">VP8</th>
    <td></td>
    <td></td>
-   <td>Yes<sup><a href="#3gp-vid-footnote-1">1</a></sup></td>
+   <td></td>
    <td></td>
   </tr>
  </tbody>
 </table>
-
-<p><a id="3gp-vid-footnote-1">[1]</a> Firefox only supports 3GP on <a href="https://www.khronos.org/openmax/">OpenMAX</a>-based devices, which currently means the Boot to Gecko (B2G) platform.</p>
-
-<p><a id="3gp-vid-footnote-2">[2]</a> Firefox support for H.264 relies upon the operating system's media infrastructure, so it is available as long as the OS supports it.</p>
 
 <table class="standard-table">
  <caption>Audio codecs supported by 3GP</caption>
@@ -188,57 +188,53 @@ tags:
    <th scope="row">AMR-NB</th>
    <td></td>
    <td></td>
-   <td>Yes<sup><a href="#3gp-aud-footnote-1">1</a></sup></td>
+   <td></td>
    <td></td>
   </tr>
   <tr>
    <th scope="row">AMR-WB</th>
    <td></td>
    <td></td>
-   <td>Yes<sup><a href="#3gp-aud-footnote-1">1</a></sup></td>
+   <td></td>
    <td></td>
   </tr>
   <tr>
    <th scope="row">AMR-WB+</th>
    <td></td>
    <td></td>
-   <td>Yes<sup><a href="#3gp-aud-footnote-1">1</a></sup></td>
+   <td></td>
    <td></td>
   </tr>
   <tr>
    <th scope="row">AAC-LC</th>
    <td></td>
    <td></td>
-   <td>Yes<sup><a href="#3gp-aud-footnote-1">1</a>,<a href="#av1-vid-footnote-2">2</a></sup></td>
+   <td></td>
    <td></td>
   </tr>
   <tr>
    <th scope="row">HE-AAC v1</th>
    <td></td>
    <td></td>
-   <td>Yes<sup><a href="#3gp-aud-footnote-1">1</a>,<a href="#av1-vid-footnote-2">2</a></sup></td>
+   <td></td>
    <td></td>
   </tr>
   <tr>
    <th scope="row">HE-AAC v2</th>
    <td></td>
    <td></td>
-   <td>Yes<sup><a href="#3gp-aud-footnote-1">1</a>,<a href="#av1-vid-footnote-2">2</a></sup></td>
+   <td></td>
    <td></td>
   </tr>
   <tr>
    <th scope="row">MP3</th>
    <td></td>
    <td></td>
-   <td>Yes<sup><a href="#3gp-aud-footnote-1">1</a></sup></td>
+   <td></td>
    <td></td>
   </tr>
  </tbody>
 </table>
-
-<p><a id="3gp-aud-footnote-1">[1]</a> Firefox only supports 3GP on <a href="https://www.khronos.org/openmax/">OpenMAX</a>-based devices, which currently means the Boot to Gecko (B2G) platform.</p>
-
-<p><a id="3gp-aud-footnote-2">[2]</a> Firefox support for AAC relies upon the operating system's media infrastructure, so it is available as long as the OS supports it.</p>
 
 <h3 id="ADTS">ADTS</h3>
 
@@ -253,15 +249,15 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <td><code>audio/aac</code><sup><a href="#adts-foot-1">[1]</a></sup></td>
+   <td><code>audio/aac</code></td>
   </tr>
   <tr>
-   <td><code>audio/mpeg</code><sup><a href="#adts-foot-1">[1]</a></sup></td>
+   <td><code>audio/mpeg</code></td>
   </tr>
  </tbody>
 </table>
 
-<p><a id="adts-foot-1">[1]</a> The MIME type used for ADTS depends on what kind of audio frames are contained within. If ADTS frames are used, the <code>audio/aac</code> MIME type should be used. If the audio frames are in MPEG-1/MPEG-2 Audio Layer I, II, or III format, the MIME type should be <code>audio/mpeg</code>.</p>
+<p>The MIME type used for ADTS depends on what kind of audio frames are contained within. If ADTS frames are used, the <code>audio/aac</code> MIME type should be used. If the audio frames are in MPEG-1/MPEG-2 Audio Layer I, II, or III format, the MIME type should be <code>audio/mpeg</code>.</p>
 
 <table class="standard-table">
  <caption>Audio codecs supported by ADTS</caption>
@@ -282,7 +278,7 @@ tags:
    <th scope="row">AAC</th>
    <td></td>
    <td></td>
-   <td>Yes<sup><a href="#adts-aud-footnote-1">1</a></sup></td>
+   <td>Yes</td>
    <td></td>
   </tr>
   <tr>
@@ -295,7 +291,7 @@ tags:
  </tbody>
 </table>
 
-<p><a id="adts-aud-footnote-1">[1]</a> Firefox support for AAC relies upon the operating system's media infrastructure, so it is available as long as the OS supports it.</p>
+<p>Firefox support for AAC relies upon the operating system's media infrastructure, so it is available as long as the OS supports it.</p>
 
 <h3 id="FLAC">FLAC</h3>
 
@@ -483,14 +479,20 @@ tags:
    <th scope="row">AVC (H.264)</th>
    <td></td>
    <td></td>
-   <td>Yes<sup><a href="#mp4-vid-footnote-1">1</a></sup></td>
+   <td>
+     <p>Yes</p>
+     <p>Firefox support for H.264 relies upon the operating system's media infrastructure, so it is available as long as the OS supports it.</p>
+   </td>
    <td></td>
   </tr>
   <tr>
    <th scope="row">AV1</th>
    <td></td>
    <td></td>
-   <td>Yes<sup><a href="#mp4-vid-footnote-1">1</a></sup></td>
+   <td>
+     <p>Yes</p>
+     <p>Firefox support for AV1 is currently disabled by default; it can be enabled by setting the preference <code>media.av1.enabled</code> to <code>true</code>.</p>
+   </td>
    <td></td>
   </tr>
   <tr>
@@ -517,10 +519,6 @@ tags:
  </tbody>
 </table>
 
-<p><a id="mp4-vid-footnote-1">[1]</a> Firefox support for H.264 relies upon the operating system's media infrastructure, so it is available as long as the OS supports it.</p>
-
-<p><a id="mp4-vid-footnote-2">[2]</a> Firefox support for AV1 is currently disabled by default; it can be enabled by setting the preference <code>media.av1.enabled</code> to <code>true</code>.</p>
-
 <table class="standard-table">
  <caption>Audio codecs supported by MPEG-4</caption>
  <thead>
@@ -540,7 +538,10 @@ tags:
    <th scope="row">AAC</th>
    <td></td>
    <td></td>
-   <td>Yes<sup><a href="#mp4-aud-footnote-1">1</a></sup></td>
+   <td>
+     <p>Yes</p>
+     <p>Firefox support for H.264 relies upon the operating system's media infrastructure, so it is available as long as the OS supports it.</p>
+   </td>
    <td></td>
   </tr>
   <tr>
@@ -566,8 +567,6 @@ tags:
   </tr>
  </tbody>
 </table>
-
-<p><a id="mp4-aud-footnote-1">[1]</a> Firefox support for H.264 relies upon the operating system's media infrastructure, so it is available as long as the OS supports it.</p>
 
 <h3 id="Ogg">Ogg</h3>
 
@@ -884,7 +883,7 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <td><code>audio/wave</code><sup><a href="#wave-foot-1">1</a></sup></td>
+   <td><code>audio/wave</code></td>
   </tr>
   <tr>
    <td><code>audio/wav</code></td>
@@ -898,7 +897,7 @@ tags:
  </tbody>
 </table>
 
-<p><a id="wave-foot-1">[1]</a> The <code>audio/wave</code> MIME type is the standard type, and is preferred; however, the others have been used by various products over the years and may be used as well in some environments. </p>
+<p>The <code>audio/wave</code> MIME type is the standard type, and is preferred; however, the others have been used by various products over the years and may be used as well in some environments. </p>
 
 <table class="standard-table">
  <caption>Audio codecs supported by WAVE</caption>
@@ -994,7 +993,10 @@ tags:
    <th scope="row">AV1</th>
    <td>Yes</td>
    <td>Yes</td>
-   <td>Yes<sup><a href="#av1-vid-footnote-1">1</a></sup></td>
+   <td>
+     <p>Yes</p>
+     <p>Firefox support for AV1 was added to macOS in Firefox 66; for Windows in Firefox 67; and Firefox 68 on Linux. Firefox for Android does not yet support AV1; the implementation in Firefox is designed to use a secure process, which is not supported yet in Android.</p>
+   </td>
    <td>Yes</td>
   </tr>
   <tr>
@@ -1013,8 +1015,6 @@ tags:
   </tr>
  </tbody>
 </table>
-
-<p><a id="av1-vid-footnote-1">[1]</a> Firefox support for AV1 was added to macOS in Firefox 66; for Windows in Firefox 67; and Firefox 68 on Linux. Firefox for Android does not yet support AV1; the implementation in Firefox is designed to use a secure process, which is not supported yet in Android.</p>
 
 <table class="standard-table">
  <caption>Audio codecs supported by WebM</caption>
@@ -1135,8 +1135,6 @@ tags:
 <p>In the example shown here, a video is offered to the browser in two formats: WebM and MP4.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}</div>
-
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</p>
 
 <p>The video is offered first in WebM format (with the {{htmlattrxref("type", "video")}} attribute set to <code>video/webm</code>). If the {{Glossary("user agent")}} can't play that, it moves on to the next option, whose <code>type</code> is specified as <code>video/mp4</code>. If neither of those can be played, the text "This browser does not support the HTML5 video element." is presented.</p>
 

@@ -77,7 +77,8 @@ tags:
   <tr>
    <th scope="row"><a href="#mp3_mpeg-1_audio_layer_iii">MP3</a></th>
    <td>MPEG-1 Audio Layer III</td>
-   <td><a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#adts">ADTS</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg">MPEG</a><sup><a href="#in-brief-footnote1">1</a></sup>, <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a></td>
+   <td><a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#adts">ADTS</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg">MPEG</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>
+   <p>When MPEG-1 Audio Layer III codec data is stored in an MPEG file, and there is no video track on the file, the file is typically referred to as an MP3 file, even though it's still an MPEG format file.</p></td>
   </tr>
   <tr>
    <th scope="row"><a href="#opus">Opus</a></th>
@@ -91,8 +92,6 @@ tags:
   </tr>
  </tbody>
 </table>
-
-<p><a id="in-brief-footnote1">[1]</a> When MPEG-1 Audio Layer III codec data is stored in an MPEG file, and there is no video track on the file, the file is typically referred to as an MP3 file, even though it's still an MPEG format file.</p>
 
 <h2 id="Factors_affecting_the_encoded_audio">Factors affecting the encoded audio</h2>
 
@@ -115,7 +114,7 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_concepts#channel_count">Channel count</a></th>
+   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_concepts#Audio_data_format_and_structure">Channel count</a></th>
    <td>The number of channels affects only the perception of directionality, not the quality.</td>
    <td>Each channel may substantially increase the encoded audio size, depending on contents and encoder settings.</td>
   </tr>
@@ -125,12 +124,12 @@ tags:
    <td>Hiss, static, or background noise increases the audio complexity, which generally reduces the amount of compression which is possible.</td>
   </tr>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_concepts#sample_rate">Sample rate</a></th>
+   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_concepts#Sampling_audio">Sample rate</a></th>
    <td>The more samples available per second, the higher the resulting encoded audio fidelity is likely to be.</td>
    <td>Increasing the sample rate increases the encoded audio file's size.</td>
   </tr>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_concepts#sample_size">Sample size</a></th>
+   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_concepts#Audio_data_format_and_structure">Sample size</a></th>
    <td>The larger the samples, the more detail each sample can contain, resulting in more accurate representation of each sample.</td>
    <td>Depends on the codec; codecs typically have an internal sample format that may or may not be the same as the original sample size. But more source detail may make the encoded file larger; it will never make it smaller.</td>
   </tr>
@@ -224,7 +223,6 @@ tags:
 
 <p>Below we take a brief look at each of these codecs, looking at their basic capabilities and their primary use cases.</p>
 
-<a id="AAC"></a>
 <h3 id="aac_advanced_audio_coding">AAC (Advanced Audio Coding)</h3>
 
 <p>The <strong>Advanced Audio Coding</strong> (<strong>AAC</strong>) codec is defined as part of the MPEG-4 (H.264) standard; specifically, as part of <a href="https://www.iso.org/standard/53943.html">MPEG-4 Part 3</a> and <a href="https://www.iso.org/standard/43345.html">MPEG-2 Part 7</a>. Designed to be able to provide more compression with higher audio fidelity than MP3, AAC has become a popular choice, and is the standard format for audio in many types of media, including Blu-Ray discs and HDTV, as well as being the format used for songs purchased from online vendors including iTunes.</p>
@@ -288,15 +286,17 @@ tags:
       </tr>
       <tr>
        <th scope="row">AAC support</th>
-       <td>Yes<sup><a href="#aac-foot-2">[2]</a></sup></td>
        <td>Yes</td>
-       <td>Yes<sup><a href="#aac-foot-1">[1]</a></sup></td>
+       <td>Yes</td>
+       <td>Yes</td>
        <td>9</td>
        <td>Yes</td>
        <td>3.1</td>
       </tr>
      </tbody>
     </table>
+    <p>Due to patent issues, Firefox does not directly support AAC. Instead, Firefox relies upon a platform's native support for AAC. This capability was introduced on each platform in different Firefox releases:</p>
+    <p>Chrome supports AAC only in MP4 containers, and only supports AAC's Main Profile. In addition, AAC is not available in Chromium builds.</p>
    </td>
   </tr>
   <tr>
@@ -313,8 +313,6 @@ tags:
   </tr>
  </tbody>
 </table>
-
-<p><a name="aac-foot-1">[1]</a> Due to patent issues, Firefox does not directly support AAC. Instead, Firefox relies upon a platform's native support for AAC. This capability was introduced on each platform in different Firefox releases:</p>
 
 <table class="standard-table" style="margin-left: 4em; max-width: 30em;">
  <caption>AAC support in Firefox using external library, by platform</caption>
@@ -345,9 +343,6 @@ tags:
  </tbody>
 </table>
 
-<p><a id="aac-foot-2">[2]</a> Chrome supports AAC only in MP4 containers, and only supports AAC's Main Profile. In addition, AAC is not available in Chromium builds.</p>
-
-<a id="alac"></a>
 <h3 id="alac_apple_lossless_audio_codec">ALAC (Apple Lossless Audio Codec)</h3>
 
 <p>The <strong>Apple Lossless Audio Codec</strong> (<strong>ALAC</strong> or <strong>Apple Lossless</strong>) is a lossless codec developed by Apple. After initially being a closed format, Apple opened it up under an Apache license.</p>
@@ -436,7 +431,6 @@ tags:
  </tbody>
 </table>
 
-<a id="AMR"></a>
 <h3 id="AMR_Adaptive_Multi-Rate">AMR (Adaptive Multi-Rate)</h3>
 
 <p>The <strong><a href="http://www.voiceage.com/AMR-NB.AMR.html">Adaptive Multi-Rate audio codec</a></strong> is optimized for encoding human speech efficiently. It was standardized in 1999 as part of the 3GPP audio standard used for both {{interwiki("wikipedia", "GSM")}} and {{interwiki("wikipedia", "UMTS")}} cellular telephony, and uses a multi-rate narrowband algorithm to encode audio frequencies at a telephony-grade quality level at around 7.4 kbps. In addition to being used for real-time telephony, AMR audio may be used for voicemail and other short audio recordings.</p>
@@ -502,15 +496,16 @@ tags:
       </tr>
       <tr>
        <th scope="row">AMR support</th>
-       <td>No<sup><a href="#amr-foot-1">[1]</a></sup></td>
+       <td>No</td>
        <td>?</td>
-       <td>No<sup><a href="#amr-foot-2">[2]</a></sup></td>
+       <td>No</td>
        <td>?</td>
        <td>No</td>
        <td>?</td>
       </tr>
      </tbody>
     </table>
+    <p>While the Chrome browser does not support AMR, Chrome OS supports AMR-NB (narrowband) and AMR-WB (wideband).</p>
    </td>
   </tr>
   <tr>
@@ -528,11 +523,6 @@ tags:
  </tbody>
 </table>
 
-<p><a id="amr-foot-1">[1]</a> While the Chrome browser does not support AMR, Chrome OS supports AMR-NB (narrowband) and AMR-WB (wideband).</p>
-
-<p><a id="amr-foot-2">[2]</a> The Firefox browser doesn't support AMR; however, the Boot to Gecko platform does support both narrow and wideband AMR in 3GP containers.</p>
-
-<a id="flac"></a>
 <h3 id="flac_free_lossless_audio_codec">FLAC (Free Lossless Audio Codec)</h3>
 
 <p><strong>FLAC </strong>(<strong>Free Lossless Audio Codec</strong>) is a lossless audio codec published by the <a href="https://xiph.org/">Xiph.org Foundation</a>. It provides good compression rates with no loss of audio fidelity; that is, the decompressed audio is identical to the original. Because the compression algorithm is specifically designed for audio, it gives better results than would be achieved using a general-purpose compression algorithm.</p>
@@ -620,7 +610,6 @@ tags:
  </tbody>
 </table>
 
-<a id="g.711"></a>
 <h3 id="g.711_pulse_code_modulation_of_voice_frequencies">G.711 (Pulse Code Modulation of Voice Frequencies)</h3>
 <p>The <strong>G.711</strong> specification, published by the International Telecommunications Union (ITU), was issued in 1972 to define standard audio encoding for telephone applications. It supports voice-grade audio covering frequencies from 300 to 3400 Hz. It is used extensively for telephone traffic and voicemail, and it is the highest quality audio encoding which can be transmitted through the public telephone network.</p>
 
@@ -683,15 +672,16 @@ tags:
       </tr>
       <tr>
        <th scope="row">G.711 support</th>
-       <td>23<sup><a href="#g711-foot-1">[1]</a></sup></td>
-       <td>15<sup><a href="#g711-foot-1">[1]</a></sup></td>
-       <td>22<sup><a href="#g711-foot-1">[1]</a></sup></td>
+       <td>23</td>
+       <td>15</td>
+       <td>22</td>
        <td>No</td>
-       <td>43<sup><a href="#g711-foot-1">[1]</a></sup></td>
-       <td>11<sup><a href="#g711-foot-1">[1]</a></sup></td>
+       <td>43</td>
+       <td>11</td>
       </tr>
      </tbody>
     </table>
+    <p>G.711 is supported only for WebRTC connections.</p>
    </td>
   </tr>
   <tr>
@@ -709,9 +699,6 @@ tags:
  </tbody>
 </table>
 
-<p><a id="g711-foot-1">[1]</a> G.711 is supported only for WebRTC connections.</p>
-
-<a id="G.722"></a>
 <h3 id="g.722_64_kbps_7_khz_audio_coding">G.722 (64 kbps (7 kHz) audio coding)</h3>
 
 <p>Published by the International Telecommunications Union (ITU), the <strong>G.722</strong> codec is designed specifically for voice compression. Its audio coding bandwidth is limited to the 50 Hz to 7,000 Hz range, which covers most of the frequency range of typical human vocalization. This makes it ill-suited for handling any audio that might range outside the human speech range, such as music.</p>
@@ -777,15 +764,16 @@ tags:
       </tr>
       <tr>
        <th scope="row">G.722 support</th>
-       <td>Yes<sup><a href="#g722-foot-1">[1]</a></sup></td>
-       <td>Yes<sup><a href="#g722-foot-1">[1]</a></sup></td>
-       <td>Yes<sup><a href="#g722-foot-1">[1]</a></sup></td>
+       <td>Yes</td>
+       <td>Yes</td>
+       <td>Yes</td>
        <td>No</td>
-       <td>Yes<sup><a href="#g722-foot-1">[1]</a></sup></td>
-       <td>Yes<sup><a href="#g722-foot-1">[1]</a></sup></td>
+       <td>Yes</td>
+       <td>Yes</td>
       </tr>
      </tbody>
     </table>
+    <p>WebRTC only.</p>
    </td>
   </tr>
   <tr>
@@ -803,9 +791,6 @@ tags:
  </tbody>
 </table>
 
-<p><a id="g722-foot-1">[1]</a> WebRTC only.</p>
-
-<a id="MP3"></a>
 <h3 id="mp3_mpeg-1_audio_layer_iii">MP3 (MPEG-1 Audio Layer III)</h3>
 
 <p>Of the audio formats specified by the MPEG/MPEG-2 standards, <strong>MPEG-1 Audio Layer III</strong>—otherwise known as <strong>{{interwiki("wikipedia", "MP3")}}</strong>—is by far the most widely used and best-known. The MP3 codec is defined by <a href="https://www.iso.org/standard/22412.html">MPEG-1 Part 3</a> and <a href="https://www.iso.org/standard/26797.html">MPEG-2 Part 3</a>, and was introduced in 1991 (and finalized in 1992).</p>
@@ -881,7 +866,7 @@ tags:
        <th scope="row">MP3 support</th>
        <td>Yes</td>
        <td>Yes</td>
-       <td>Yes<sup><a href="#mp3-foot-1">[1]</a></sup></td>
+       <td>Yes</td>
        <td>9</td>
        <td>Yes</td>
        <td>3.1</td>
@@ -905,7 +890,7 @@ tags:
  </tbody>
 </table>
 
-<p><a id="mp3-foot-1">[1]</a> For patent reasons, Firefox did not directly support MP3 prior to version 71; instead, platform-native libraries were used to support MP3. This capability was introduced on each platform in different Firefox releases:</p>
+<p>For patent reasons, Firefox did not directly support MP3 prior to version 71; instead, platform-native libraries were used to support MP3. This capability was introduced on each platform in different Firefox releases:</p>
 
 <table class="standard-table" style="margin-left: 4em; max-width: 30em;">
  <caption>MP3 support with external library, by platform, in Firefox</caption>
@@ -985,10 +970,11 @@ tags:
       </tr>
       <tr>
        <th scope="row">Fullband (FB)</th>
-       <td>48 kHz<sup><a href="#opus-footnote1">[1]</a></sup></td>
+       <td>48 kHz</td>
       </tr>
      </tbody>
     </table>
+    <p>The specified sample rates are <em>effective sample rates</em>. Opus uses an algorithm based on audio bandwidths rather than sample rates. See {{RFC(6716, "", 2)}} for details. In addition, there is an <em>optional</em> part of the Opus specification (Opus Custom) that does allow for non-standard sample rates, but the use of this feature is discouraged.</p>
    </td>
   </tr>
   <tr>
@@ -1032,10 +1018,11 @@ tags:
       </tr>
       <tr>
        <th scope="row">Fullband (FB)</th>
-       <td>20 kHz<sup><a href="#opus-foot-3">[3]</a></sup></td>
+       <td>20 kHz</td>
       </tr>
      </tbody>
     </table>
+    <p>Although the {{interwiki("wikipedia", "Nyquist–Shannon sampling theorem")}} shows that audio bandwidth can be as much as one half of the sampling rate, Opus doesn't allow encoding outside a maximum 20 kHz audio frequency band, since the human ear can't percieve anything above the 20 kHz point anyway. This saves some space in the encoded audio.</p>
    </td>
   </tr>
   <tr>
@@ -1063,12 +1050,13 @@ tags:
        <td>15</td>
        <td>No</td>
        <td>20</td>
-       <td>11<sup><a href="#opus-foot-2">[2]</a></sup></td>
+       <td>11</td>
       </tr>
      </tbody>
     </table>
-
     <p>This information refers to support for Opus in HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements, and not to WebRTC.</p>
+
+    <p>Safari supports Opus in the {{HTMLElement("audio")}} element only when packaged in a CAF file, and only on macOS High Sierra (10.13) or iOS 11.</p>
    </td>
   </tr>
   <tr>
@@ -1085,12 +1073,6 @@ tags:
   </tr>
  </tbody>
 </table>
-
-<p><a id="opus-footnote1">[1]</a> The specified sample rates are <em>effective sample rates</em>. Opus uses an algorithm based on audio bandwidths rather than sample rates. See {{RFC(6716, "", 2)}} for details. In addition, there is an <em>optional</em> part of the Opus specification (Opus Custom) that does allow for non-standard sample rates, but the use of this feature is discouraged.</p>
-
-<p><a id="opus-foot-2">[2]</a> Safari supports Opus in the {{HTMLElement("audio")}} element only when packaged in a CAF file, and only on macOS High Sierra (10.13) or iOS 11.</p>
-
-<p><a id="opus-foot-3">[3]</a> Although the {{interwiki("wikipedia", "Nyquist–Shannon sampling theorem")}} shows that audio bandwidth can be as much as one half of the sampling rate, Opus doesn't allow encoding outside a maximum 20 kHz audio frequency band, since the human ear can't percieve anything above the 20 kHz point anyway. This saves some space in the encoded audio.</p>
 
 <h3 id="vorbis">Vorbis</h3>
 
@@ -1220,8 +1202,7 @@ tags:
 <p>If you need to minimize latency during music playback, you should strongly consider Opus, which has the lowest range of latencies of the general-purpose codecs (5 ms to 66.5 ms, compared to at least 100 ms for the others).</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Compatibility information described here is generally correct as of the time this article was written; however, there may be caveats and exceptions. Be sure to refer to the compatibility tables before committing to a given media format.</p>
+  <p><strong>Note:</strong> Compatibility information described here is generally correct as of the time this article was written; however, there may be caveats and exceptions. Be sure to refer to the compatibility tables before committing to a given media format.</p>
 </div>
 
 <p>Based on this, AAC is likely your best choice if you can only support one audio format. Of course, if you can provide multiple formats (for example, by using the {{HTMLElement("source")}} element within your {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements), you can avoid many or all of those exceptions.</p>

@@ -208,7 +208,7 @@ When the browser starts to load a page, it starts to download (preload) any ima
 
 ### Use modern image formats boldly
 
-New image formats like [WebP](/en-US/docs/Web/Media/Formats/Image_types#webp) and [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif) can maintain a low file size and high quality at the same time. These formats now have relatively broad browser support but little "historical depth".
+New image formats like [WebP](/en-US/docs/Web/Media/Formats/Image_types#WebP_image) and [AVIF](/en-US/docs/Web/Media/Formats/Image_types#AVIF_image) can maintain a low file size and high quality at the same time. These formats now have relatively broad browser support but little "historical depth".
 
 `<picture>` lets us continue catering to older browsers. You can supply MIME types inside `type` attributes so the browser can immediately reject unsupported file types:
 
