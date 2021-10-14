@@ -47,7 +47,7 @@ block content
   h1= title
 
   ul
-    each book in book_list
+    each book in book_list
       li
         a(href=book.url) #{book.title}
         |  (#{book.author.name})
