@@ -10,148 +10,146 @@ tags:
   - Web
   - Web Standards
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
-<p>The <strong><a href="https://github.com/dewitt/opensearch" rel="external">OpenSearch description format</a></strong> lets a website describe a search engine for itself, so that a browser or other client application can use that search engine. OpenSearch is supported by (at least) Firefox, Edge, Internet Explorer, Safari, and Chrome. (See <a href="#reference_material">Reference Material</a> for links to other browsers' documentation.)</p>
+The **[OpenSearch description format](https://github.com/dewitt/opensearch)** lets a website describe a search engine for itself, so that a browser or other client application can use that search engine. OpenSearch is supported by (at least) Firefox, Edge, Internet Explorer, Safari, and Chrome. (See [Reference Material](#reference_material) for links to other browsers' documentation.)
 
-<p>Firefox also supports additional features not in the OpenSearch standard, such as search suggestions and the <code>&lt;SearchForm&gt;</code> element. This article focuses on creating OpenSearch-compatible search plugins that support these additional Firefox features.</p>
+Firefox also supports additional features not in the OpenSearch standard, such as search suggestions and the `<SearchForm>` element. This article focuses on creating OpenSearch-compatible search plugins that support these additional Firefox features.
 
-<p>OpenSearch description files can be advertised as described in <a href="#autodiscovery_of_search_plugins">Autodiscovery of search plugins</a>, and can be installed programmatically as described in <a href="/en-US/docs/Web/OpenSearch">Adding search engines from web pages</a>.</p>
+OpenSearch description files can be advertised as described in [Autodiscovery of search plugins](#autodiscovery_of_search_plugins), and can be installed programmatically as described in [Adding search engines from web pages](/en-US/docs/Web/OpenSearch).
 
-<h2 id="OpenSearch_description_file">OpenSearch description file</h2>
+## OpenSearch description file
 
-<p>The XML file that describes a search engine follows the basic template below. Sections in <em>[square brackets]</em> should be customized for the specific plugin you're writing.</p>
+The XML file that describes a search engine follows the basic template below. Sections in _\[square brackets]_ should be customized for the specific plugin you're writing.
 
-<pre class="brush: xml">&lt;OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
-                       xmlns:moz="http://www.mozilla.org/2006/browser/search/"&gt;
-  &lt;ShortName&gt;<mark><strong>[SNK]</strong></mark>&lt;/ShortName&gt;
-  &lt;Description&gt;<mark><strong>[Search engine full name and summary]</strong></mark>&lt;/Description&gt;
-  &lt;InputEncoding&gt;<mark><strong>[UTF-8]</strong></mark>&lt;/InputEncoding&gt;
-  &lt;Image width="16" height="16" type="image/x-icon"&gt;<mark><strong>[https://example.com/favicon.ico]</strong></mark>&lt;/Image&gt;
-  &lt;Url type="text/html" template="<mark><strong>[searchURL]</strong></mark>"&gt;
-    &lt;Param name="<mark><strong>[key name]</strong></mark>" value="{searchTerms}"/&gt;
-    &lt;!-- other Params if you need them… --&gt;
-    &lt;Param name="<mark><strong>[other key name]</strong></mark>" value="<mark><strong>[parameter value]</strong></mark>"/&gt;
-  &lt;/Url&gt;
-  &lt;Url type="application/x-suggestions+json" template="<mark><strong>[suggestionURL]</strong></mark>"/&gt;
-  &lt;moz:SearchForm&gt;<mark><strong>[https://example.com/search]</strong></mark>&lt;/moz:SearchForm&gt;
-&lt;/OpenSearchDescription&gt;</pre>
+```xml
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>[SNK]</ShortName>
+  <Description>[Search engine full name and summary]</Description>
+  <InputEncoding>[UTF-8]</InputEncoding>
+  <Image width="16" height="16" type="image/x-icon">[https://example.com/favicon.ico]</Image>
+  <Url type="text/html" template="[searchURL]">
+    <Param name="[key name]" value="{searchTerms}"/>
+    <!-- other Params if you need them… -->
+    <Param name="[other key name]" value="[parameter value]"/>
+  </Url>
+  <Url type="application/x-suggestions+json" template="[suggestionURL]"/>
+  <moz:SearchForm>[https://example.com/search]</moz:SearchForm>
+</OpenSearchDescription>
+```
 
-<dl>
- <dt>ShortName</dt>
- <dd>A short name for the search engine. It must be <strong>16 or fewer character</strong>s of plain text, with no HTML or other markup.</dd>
- <dt>Description</dt>
- <dd>A brief description of the search engine. It must be <strong>1024 or fewer characters</strong> of plain text, with no HTML or other markup.</dd>
- <dt>InputEncoding</dt>
- <dd>The <a href="/en-US/docs/Glossary/character_encoding">character encoding</a> to use when submitting input to the search engine.</dd>
- <dt>Image</dt>
- <dd>
- <p>URI of an icon for the search engine. When possible, include a 16×16 image of type <code>image/x-icon</code> (such as <code>/favicon.ico</code>) and a 64×64 image of type <code>image/jpeg</code> or <code>image/png</code>.</p>
+- ShortName
+  - : A short name for the search engine. It must be **16 or fewer character**s of plain text, with no HTML or other markup.
+- Description
+  - : A brief description of the search engine. It must be **1024 or fewer characters** of plain text, with no HTML or other markup.
+- InputEncoding
+  - : The [character encoding](/en-US/docs/Glossary/character_encoding) to use when submitting input to the search engine.
+- Image
 
- <p>The URI may also use the <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data:</code> URI scheme</a>. (You can generate a <code>data:</code> URI from an icon file at <a class="external" href="https://software.hixie.ch/utilities/cgi/data/data">The <code>data:</code> URI kitchen</a>.)</p>
+  - : URI of an icon for the search engine. When possible, include a 16×16 image of type `image/x-icon` (such as `/favicon.ico`) and a 64×64 image of type `image/jpeg` or `image/png`.
 
- <pre class="brush: xml">&lt;Image height="16" width="16" type="image/x-icon"&gt;https://example.com/favicon.ico&lt;/Image&gt;
-  &lt;!-- or --&gt;
-&lt;Image height="16" width="16"&gt;data:image/x-icon;base64,AAABAAEAEBAAA … DAAA=&lt;/Image&gt;
-</pre>
+    The URI may also use the [`data:` URI scheme](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs). (You can generate a `data:` URI from an icon file at [The `data:` URI kitchen](https://software.hixie.ch/utilities/cgi/data/data).)
 
- <p>Firefox caches the icon as a <a href="https://en.wikipedia.org/wiki/Base64">base64</a> <code>data:</code> URI (search plug-ins are stored in the <a href="/en-US/docs/Mozilla/Profile_Manager">profile</a>'s <code>searchplugins/</code> folder). <code>http:</code> and <code>https:</code> URLs are converted to <code>data:</code> URIs when this is done.</p>
+    ```xml
+    <Image height="16" width="16" type="image/x-icon">https://example.com/favicon.ico</Image>
+      <!-- or -->
+    <Image height="16" width="16">data:image/x-icon;base64,AAABAAEAEBAAA … DAAA=</Image>
+    ```
 
- <div class="note"><p><strong>Note:</strong> For icons loaded remotely (that is, from <code>https://</code> URIs as opposed to <code>data:</code> URIs), Firefox will reject icons larger than <strong>10 kilobytes</strong>.</p></div>
+    Firefox caches the icon as a [base64](https://en.wikipedia.org/wiki/Base64) `data:` URI (search plug-ins are stored in the [profile](/en-US/docs/Mozilla/Profile_Manager)'s `searchplugins/` folder). `http:` and `https:` URLs are converted to `data:` URIs when this is done.
 
- <p><img alt="Search suggestions from Google displayed in Firefox's search box" class="internal" src="searchsuggestionsample.png"></p>
- </dd>
- <dt>Url</dt>
- <dd><p>Describes the URL or URLs to use for the search. The <code>template</code> attribute indicates the base URL for the search query.</p>
- <p>Firefox supports three URL types:</p>
- <ul>
-  <li><code>type="text/html"</code> specifies the URL for the actual search query.</li>
-  <li><code>type="application/x-suggestions+json"</code> specifies the URL for fetching search suggestions. In Firefox 63 onwards, <code>type="application/json"</code> is accepted as an alias of this.</li>
-  <li><code>type="application/x-moz-keywordsearch"</code> specifies the URL used when a keyword search is entered in the location bar. This is supported only in Firefox.</li>
- </ul>
+    > **Note:** For icons loaded remotely (that is, from `https://` URIs as opposed to `data:` URIs), Firefox will reject icons larger than **10 kilobytes**.
 
- <p>For these URL types, you can use <code>{searchTerms}</code> to substitute the search terms entered by the user in the search bar or location bar. Other supported dynamic search parameters are described in <a class="external" href="https://github.com/dewitt/opensearch/blob/master/opensearch-1-1-draft-6.md#opensearch-11-parameters">OpenSearch 1.1 parameters</a>.</p>
+    ![Search suggestions from Google displayed in Firefox's search box](searchsuggestionsample.png)
 
- <p>For search suggestions, the <code>application/x-suggestions+json</code> URL template is used to fetch a suggestion list in <a href="/en-US/docs/Glossary/JSON">JSON</a> format. For details on how to implement search suggestion support on a server, see <a href="/en-US/docs/Archive/Add-ons/Supporting_search_suggestions_in_search_plugins">Supporting search suggestions in search plugins</a>.</p>
- </dd>
- <dt>Param</dt>
- <dd>The parameters that must be passed in along with the search query as key/value pairs. When specifying values, you can use <code>{searchTerms}</code> to insert the search terms entered by the user in the search bar.</dd>
- <dt>moz:SearchForm</dt>
- <dd><p>The URL for the site's search page for which the plugin. This lets Firefox users visit the web site directly.</p>
- <div class="note"><p><strong>Note:</strong> Since this element is Firefox-specific, and not part of the OpenSearch specification, we use the <code>moz:</code> XML namespace prefix in the example above to ensure that other user agents that don't support this element can safely ignore it.</p></div>
- </dd>
-</dl>
+- Url
 
-<h2 id="Autodiscovery_of_search_plugins">Autodiscovery of search plugins</h2>
+  - : Describes the URL or URLs to use for the search. The `template` attribute indicates the base URL for the search query.
 
-<p>Web sites with search plugins can advertise them so Firefox users can easily install the plugins.</p>
+    Firefox supports three URL types:
 
-<p>To support autodiscovery, add a <code>&lt;link&gt;</code> element for each plugin to the <code>&lt;head&gt;</code> of your web page:</p>
+    - `type="text/html"` specifies the URL for the actual search query.
+    - `type="application/x-suggestions+json"` specifies the URL for fetching search suggestions. In Firefox 63 onwards, `type="application/json"` is accepted as an alias of this.
+    - `type="application/x-moz-keywordsearch"` specifies the URL used when a keyword search is entered in the location bar. This is supported only in Firefox.
 
-<pre class="brush: html; highlight[3-4]">&lt;link rel="search"
+    For these URL types, you can use `{searchTerms}` to substitute the search terms entered by the user in the search bar or location bar. Other supported dynamic search parameters are described in [OpenSearch 1.1 parameters](https://github.com/dewitt/opensearch/blob/master/opensearch-1-1-draft-6.md#opensearch-11-parameters).
+
+    For search suggestions, the `application/x-suggestions+json` URL template is used to fetch a suggestion list in [JSON](/en-US/docs/Glossary/JSON) format. For details on how to implement search suggestion support on a server, see [Supporting search suggestions in search plugins](/en-US/docs/Archive/Add-ons/Supporting_search_suggestions_in_search_plugins).
+
+- Param
+  - : The parameters that must be passed in along with the search query as key/value pairs. When specifying values, you can use `{searchTerms}` to insert the search terms entered by the user in the search bar.
+- moz:SearchForm
+
+  - : The URL for the site's search page for which the plugin. This lets Firefox users visit the web site directly.
+
+    > **Note:** Since this element is Firefox-specific, and not part of the OpenSearch specification, we use the `moz:` XML namespace prefix in the example above to ensure that other user agents that don't support this element can safely ignore it.
+
+## Autodiscovery of search plugins
+
+Web sites with search plugins can advertise them so Firefox users can easily install the plugins.
+
+To support autodiscovery, add a `<link>` element for each plugin to the `<head>` of your web page:
+
+```html
+<link rel="search"
       type="application/opensearchdescription+xml"
-      title="<mark><strong>searchTitle</strong></mark>"
-      href="<mark><strong>pluginURL</strong></mark>"&gt;
-</pre>
+      title="searchTitle"
+      href="pluginURL">
+```
 
-<p>Replace the bolded items as explained below:</p>
+Replace the bolded items as explained below:
 
-<dl>
- <dt>searchTitle</dt>
- <dd>The name of the search to perform, such as "Search MDC" or "Yahoo! Search". This must match your plugin file's <code>&lt;ShortName&gt;</code>.</dd>
- <dt>pluginURL</dt>
- <dd>The URL to the XML search plugin, so the browser can download it.</dd>
-</dl>
+- searchTitle
+  - : The name of the search to perform, such as "Search MDC" or "Yahoo! Search". This must match your plugin file's `<ShortName>`.
+- pluginURL
+  - : The URL to the XML search plugin, so the browser can download it.
 
-<p>If your site offers multiple search plugins, you can support autodiscovery for them all. For example:</p>
+If your site offers multiple search plugins, you can support autodiscovery for them all. For example:
 
-<pre class="brush: html">&lt;link rel="search" type="application/opensearchdescription+xml"
-      title="MySite: By Author" href="http://example.com/mysiteauthor.xml"&gt;
+```html
+<link rel="search" type="application/opensearchdescription+xml"
+      title="MySite: By Author" href="http://example.com/mysiteauthor.xml">
 
-&lt;link rel="search" type="application/opensearchdescription+xml"
-      title="MySite: By Title" href="http://example.com/mysitetitle.xml"&gt;
-</pre>
+<link rel="search" type="application/opensearchdescription+xml"
+      title="MySite: By Title" href="http://example.com/mysitetitle.xml">
+```
 
-<p>This way, your site can offer plugins to search by author, or by title.</p>
+This way, your site can offer plugins to search by author, or by title.
 
-<div class="note">
-  <p><strong>Note:</strong> In Firefox, an icon change in the search box indicates there's a provided search plugin. (See image, the green plus sign.) Thus if a search box is not shown in the user's UI, they will receive <em>no</em> indication. <em>In general, behavior varies among browsers</em>.</p>
-</div>
+> **Note:** In Firefox, an icon change in the search box indicates there's a provided search plugin. (See image, the green plus sign.) Thus if a search box is not shown in the user's UI, they will receive _no_ indication. _In general, behavior varies among browsers_.
 
-<h2 id="Supporting_automatic_updates_for_OpenSearch_plugins">Supporting automatic updates for OpenSearch plugins</h2>
+## Supporting automatic updates for OpenSearch plugins
 
-<p>OpenSearch plugins can automatically update. To support this, include an extra <code>Url</code> element with <code>type="application/opensearchdescription+xml"</code> and <code>rel="self"</code>. The <code>template</code> attribute should be the URL of the OpenSearch document to automatically update to.</p>
+OpenSearch plugins can automatically update. To support this, include an extra `Url` element with `type="application/opensearchdescription+xml"` and `rel="self"`. The `template` attribute should be the URL of the OpenSearch document to automatically update to.
 
-<p>For example:</p>
+For example:
 
-<pre class="brush: xml">&lt;Url type="application/opensearchdescription+xml"
+```xml
+<Url type="application/opensearchdescription+xml"
      rel="self"
-     template="https://example.com/mysearchdescription.xml" /&gt;
-</pre>
+     template="https://example.com/mysearchdescription.xml" />
+```
 
-<div class="note"><p><strong>Note:</strong> At this time, <a class="external" href="https://addons.mozilla.org">addons.mozilla.org</a> (AMO) doesn't support automatic updating of OpenSearch plugins. If you want to put your search plugin on AMO, remove the auto-updating feature before submitting it.</p></div>
+> **Note:** At this time, [addons.mozilla.org](https://addons.mozilla.org) (AMO) doesn't support automatic updating of OpenSearch plugins. If you want to put your search plugin on AMO, remove the auto-updating feature before submitting it.
 
-<h2 id="Troubleshooting_Tips">Troubleshooting Tips</h2>
+## Troubleshooting Tips
 
-<p>If there is a mistake in your Search Plugin XML, you could run into errors when adding a discovered plugin. If the error message isn't be helpful, the following tips could help you find the problem.</p>
+If there is a mistake in your Search Plugin XML, you could run into errors when adding a discovered plugin. If the error message isn't be helpful, the following tips could help you find the problem.
 
-<ul>
- <li>Your server should serve OpenSearch plugins using <code>Content-Type: application/opensearchdescription+xml</code>.</li>
- <li>Be sure that your Search Plugin XML is well formed. You can check by loading the file directly into Firefox. Ampersands (&amp;) in the <code>template</code> URL must be escaped as <code>&amp;amp;</code>, and tags must be closed with a trailing slash or matching end tag.</li>
- <li>The <code>xmlns</code> attribute is important — without it you could get the error message "Firefox could not download the search plugin".</li>
- <li>You <strong>must</strong> include a <code>text/html</code> URL — search plugins including only Atom or <a href="/en-US/docs/Glossary/RSS">RSS</a> URL types (which is valid, but Firefox doesn't support) will also generate the "could not download the search plugin" error.</li>
- <li>Remotely fetched favicons must not be larger than 10KB (see {{ Bug(361923) }}).</li>
-</ul>
+- Your server should serve OpenSearch plugins using `Content-Type: application/opensearchdescription+xml`.
+- Be sure that your Search Plugin XML is well formed. You can check by loading the file directly into Firefox. Ampersands (&) in the `template` URL must be escaped as `&amp;`, and tags must be closed with a trailing slash or matching end tag.
+- The `xmlns` attribute is important — without it you could get the error message "Firefox could not download the search plugin".
+- You **must** include a `text/html` URL — search plugins including only Atom or [RSS](/en-US/docs/Glossary/RSS) URL types (which is valid, but Firefox doesn't support) will also generate the "could not download the search plugin" error.
+- Remotely fetched favicons must not be larger than 10KB (see {{ Bug(361923) }}).
 
-<p>In addition, the search plugin service provides a logging mechanism that may be useful to plugin developers. Use <code>about:config</code> to set the pref '<code>browser.search.log</code>' to <code>true</code>. Then, logging information will appear in Firefox's <a href="/en-US/docs/Archive/Mozilla/Error_console">Error Console</a> (Tools ➤ Error Console) when search plugins are added.</p>
+In addition, the search plugin service provides a logging mechanism that may be useful to plugin developers. Use `about:config` to set the pref '`browser.search.log`' to `true`. Then, logging information will appear in Firefox's [Error Console](/en-US/docs/Archive/Mozilla/Error_console) (Tools ➤ Error Console) when search plugins are added.
 
-<h2 id="Reference_Material">Reference Material</h2>
+## Reference Material
 
-<ul>
- <li><a href="https://github.com/dewitt/opensearch">OpenSearch Documentation</a></li>
- <li><a href="https://developer.apple.com/library/archive/releasenotes/General/WhatsNewInSafari/Articles/Safari_8_0.html">Safari 8.0 Release Notes: Quick Website Search</a></li>
- <li><a href="https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/browser-features/search-provider-discovery">Microsoft Edge Dev Guide: Search provider discovery</a></li>
- <li><a href="https://www.chromium.org/tab-to-search">The Chromium Projects: Tab to Search</a></li>
- <li>imdb.com has a <a class="external" href="https://m.media-amazon.com/images/G/01/imdb/images/imdbsearch-3349468880._CB470047351_.xml">working <code>osd.xml</code></a></li>
- <li><a class="external" href="https://ready.to/search/en">Ready2Search</a> - create OpenSearch plugins. <a class="external" href="https://ready.to/search/make/en_make_plugin.htm">Customized Search through Ready2Search</a></li>
-</ul>
+- [OpenSearch Documentation](https://github.com/dewitt/opensearch)
+- [Safari 8.0 Release Notes: Quick Website Search](https://developer.apple.com/library/archive/releasenotes/General/WhatsNewInSafari/Articles/Safari_8_0.html)
+- [Microsoft Edge Dev Guide: Search provider discovery](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/browser-features/search-provider-discovery)
+- [The Chromium Projects: Tab to Search](https://www.chromium.org/tab-to-search)
+- imdb.com has a [working `osd.xml`](https://m.media-amazon.com/images/G/01/imdb/images/imdbsearch-3349468880._CB470047351_.xml)
+- [Ready2Search](https://ready.to/search/en) - create OpenSearch plugins. [Customized Search through Ready2Search](https://ready.to/search/make/en_make_plugin.htm)

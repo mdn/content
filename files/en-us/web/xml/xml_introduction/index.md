@@ -7,145 +7,115 @@ tags:
   - NeedsContent
   - XML
 ---
-<p>XML (Extensible Markup Language) is a markup language similar to {{Glossary("HTML")}}, but without predefined tags to use. Instead, you define your own tags designed specifically for your needs. This is a powerful way to store data in a format that can be stored, searched, and shared. Most importantly, since the fundamental format of XML is standardized, if you share or transmit XML across systems or platforms, either locally or over the internet, the recipient can still parse the data due to the standardized XML syntax.</p>
+XML (Extensible Markup Language) is a markup language similar to {{Glossary("HTML")}}, but without predefined tags to use. Instead, you define your own tags designed specifically for your needs. This is a powerful way to store data in a format that can be stored, searched, and shared. Most importantly, since the fundamental format of XML is standardized, if you share or transmit XML across systems or platforms, either locally or over the internet, the recipient can still parse the data due to the standardized XML syntax.
 
-<p>There are many languages based on XML, including <a href="/en-US/docs/Glossary/XHTML">XHTML</a>, <a href="/en-US/docs/Web/MathML">MathML</a>, <a href="/en-US/docs/Web/SVG">SVG</a>, <a href="/en-US/docs/Mozilla/Tech/XUL">XUL</a>, <a href="/en-US/docs/Mozilla/Tech/XBL">XBL</a>, <a href="/en-US/docs/Web/RSS">RSS</a>, and <a href="/en-US/docs/Web/RDF">RDF</a>. You can also define your own.</p>
+There are many languages based on XML, including [XHTML](/en-US/docs/Glossary/XHTML), [MathML](/en-US/docs/Web/MathML), [SVG](/en-US/docs/Web/SVG), [XUL](/en-US/docs/Mozilla/Tech/XUL), [XBL](/en-US/docs/Mozilla/Tech/XBL), [RSS](/en-US/docs/Web/RSS), and [RDF](/en-US/docs/Web/RDF). You can also define your own.
 
-<h2 id="Structure_of_an_XML_document">Structure of an XML document</h2>
+## Structure of an XML document
 
-<p>Whole structure XML and XML based languages built on {{Glossary("tag")}}s.</p>
+Whole structure XML and XML based languages built on {{Glossary("tag")}}s.
 
-<h3 id="XML_declaration">XML declaration</h3>
+### XML declaration
 
-<p>XML - declaration is not a tag. It is used for the transmission of the meta-data of a document.</p>
+XML - declaration is not a tag. It is used for the transmission of the meta-data of a document.
 
-<pre class="brush: html">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</pre>
+```html
+<?xml version="1.0" encoding="UTF-8"?>
+```
 
-<h4 id="Attributes">Attributes:</h4>
+#### Attributes:
 
-<dl>
-	<dt>version:</dt>
-	<dd>Used version XML in this document.</dd>
-	<dt>encoding :</dt>
-	<dd>Used encoding in this document.</dd>
-</dl>
+- version:
+  - : Used version XML in this document.
+- encoding :
+  - : Used encoding in this document.
 
-<h3 id="Comments">Comments</h3>
+### Comments
 
-<pre class="brush: html">&lt;!-- Comment --&gt;</pre>
+```html
+<!-- Comment -->
+```
 
-<h2 id="Correct_XML_valid_and_well-formed">"Correct" XML (valid and well-formed)</h2>
+## "Correct" XML (valid and well-formed)
 
-<h3 id="Correct_design_rules">Correct design rules</h3>
+### Correct design rules
 
-<p>For an XML document to be correct, the following conditions must be fulfilled:</p>
+For an XML document to be correct, the following conditions must be fulfilled:
 
-<ul>
-	<li>Document must be well-formed.</li>
-	<li>Document must conform to all XML syntax rules.</li>
-	<li>Document must conform to semantic rules, which are usually set in an XML schema or a DTD (<strong><a href="/en-US/docs/Glossary/Doctype">Document Type Definition</a>)</strong>.</li>
-</ul>
+- Document must be well-formed.
+- Document must conform to all XML syntax rules.
+- Document must conform to semantic rules, which are usually set in an XML schema or a DTD (**[Document Type Definition](/en-US/docs/Glossary/Doctype))**.
 
-<h3 id="Example">Example</h3>
+### Example
 
-<pre class="brush: xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;message&gt;
-    &lt;warning&gt;
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<message>
+    <warning>
         Hello World
-    &lt;!--missing &lt;/warning&gt; --&gt;
-&lt;/message&gt;
-</pre>
+    <!--missing </warning> -->
+</message>
+```
 
-<p>Now let's look at a corrected version of that same document:</p>
+Now let's look at a corrected version of that same document:
 
-<pre class="brush: xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;message&gt;
-    &lt;warning&gt;
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<message>
+    <warning>
          Hello World
-    &lt;/warning&gt;
-&lt;/message&gt;
-</pre>
+    </warning>
+</message>
+```
 
-<p>A document that contains an undefined tag is invalid. For example, if we never defined the <code>&lt;warning&gt;</code> tag, the document above wouldn't be valid.</p>
+A document that contains an undefined tag is invalid. For example, if we never defined the `<warning>` tag, the document above wouldn't be valid.
 
-<p>Most browsers offer a debugger that can identify poorly-formed XML documents.</p>
+Most browsers offer a debugger that can identify poorly-formed XML documents.
 
-<h2 id="Entities">Entities</h2>
+## Entities
 
-<p>Like HTML, XML offers methods (called entities) for referring to some special reserved characters (such as a greater than sign which is used for tags). There are five of these characters that you should know:</p>
+Like HTML, XML offers methods (called entities) for referring to some special reserved characters (such as a greater than sign which is used for tags). There are five of these characters that you should know:
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Entity</th>
-			<th scope="col">Character</th>
-			<th scope="col">Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>&amp;lt;</td>
-			<td>&lt;</td>
-			<td>Less than sign</td>
-		</tr>
-		<tr>
-			<td>&amp;gt;</td>
-			<td>&gt;</td>
-			<td>Greater than sign</td>
-		</tr>
-		<tr>
-			<td>&amp;amp;</td>
-			<td>&amp;</td>
-			<td>Ampersand</td>
-		</tr>
-		<tr>
-			<td>&amp;quot;</td>
-			<td>"</td>
-			<td>One double-quotation mark</td>
-		</tr>
-		<tr>
-			<td>&amp;apos;</td>
-			<td>'</td>
-			<td>One apostrophe (or single-quotation mark)</td>
-		</tr>
-	</tbody>
-</table>
+| Entity | Character | Description                               |
+| ------ | --------- | ----------------------------------------- |
+| &lt;   | <         | Less than sign                            |
+| &gt;   | >         | Greater than sign                         |
+| &amp;  | &         | Ampersand                                 |
+| &quot; | "         | One double-quotation mark                 |
+| &apos; | '         | One apostrophe (or single-quotation mark) |
 
-<p>Even though there are only 5 declared entities, more can be added using the document's <a href="/en-US/docs/Glossary/Doctype">Document Type Definition</a>. For example, to create a new <code>&amp;warning;</code> entity, you can do this:</p>
+Even though there are only 5 declared entities, more can be added using the document's [Document Type Definition](/en-US/docs/Glossary/Doctype). For example, to create a new `&warning;` entity, you can do this:
 
-<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;!DOCTYPE body [
-  &lt;!ENTITY warning "Warning: Something bad happened... please refresh and try again."&gt;
-]&gt;
-&lt;body&gt;
-  &lt;message&gt; &amp;warning; &lt;/message&gt;
-&lt;/body&gt;
-</pre>
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE body [
+      <!ENTITY warning "Warning: Something bad happened... please refresh and try again.">
+    ]>
+    <body>
+      <message> &warning; </message>
+    </body>
 
-<p>You can also use numeric character references to specify special characters; for example, &amp;#xA9; is the "©" symbol.</p>
+You can also use numeric character references to specify special characters; for example, \&#xA9; is the "©" symbol.
 
-<h2 id="Displaying_XML">Displaying XML</h2>
+## Displaying XML
 
-<p>XML is usually used for descriptive purposes, but there are ways to display XML data. If you don't define a specific way for the XML to be rendered, the raw XML is displayed in the browser.</p>
+XML is usually used for descriptive purposes, but there are ways to display XML data. If you don't define a specific way for the XML to be rendered, the raw XML is displayed in the browser.
 
-<p>One way to style XML output is to specify <a href="/en-US/docs/Web/CSS">CSS</a> to apply to the document using the <code>xml-stylesheet</code> processing instruction.</p>
+One way to style XML output is to specify [CSS](/en-US/docs/Web/CSS) to apply to the document using the `xml-stylesheet` processing instruction.
 
-<pre>&lt;?xml-stylesheet type="text/css" href="stylesheet.css"?&gt;</pre>
+    <?xml-stylesheet type="text/css" href="stylesheet.css"?>
 
-<p>There is also another more powerful way to display XML: the <strong>Extensible Stylesheet Language Transformations</strong> (<a href="/en-US/docs/Web/XSLT">XSLT</a>) which can be used to transform XML into other languages such as HTML. This makes XML incredibly versatile.</p>
+There is also another more powerful way to display XML: the **Extensible Stylesheet Language Transformations** ([XSLT](/en-US/docs/Web/XSLT)) which can be used to transform XML into other languages such as HTML. This makes XML incredibly versatile.
 
-<pre>&lt;?xml-stylesheet type="text/xsl" href="transform.xsl"?&gt;</pre>
+    <?xml-stylesheet type="text/xsl" href="transform.xsl"?>
 
-<h2 id="Recommendations">Recommendations</h2>
+## Recommendations
 
-<p>This article is obviously only a very brief introduction to what XML is, with a few small examples and references to get you started. For more details about XML, you should look around on the Web for more in-depth articles.</p>
+This article is obviously only a very brief introduction to what XML is, with a few small examples and references to get you started. For more details about XML, you should look around on the Web for more in-depth articles.
 
-<p>Learning the HyperText Markup Language (<a href="/en-US/docs/Web/HTML">HTML</a>) will help you better understand XML.</p>
+Learning the HyperText Markup Language ([HTML](/en-US/docs/Web/HTML)) will help you better understand XML.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://www.xml.com/">XML.com</a></li>
-  <li><a href="https://www.w3.org/XML/">Extensible Markup Language (XML) @ W3.org</a></li>
-  <li><a href="https://alistapart.com/article/usingxml/">Using XML: A List Apart</a></li>
-</ul>
+- [XML.com](https://www.xml.com/)
+- [Extensible Markup Language (XML) @ W3.org](https://www.w3.org/XML/)
+- [Using XML: A List Apart](https://alistapart.com/article/usingxml/)
