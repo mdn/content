@@ -63,7 +63,7 @@ Used in **ALL** roles, except those that prohibit its use.
 ## See Also
 
 - [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription).
-- [`Element.ariaRoleDescription](/en-US/docs/Web/API/Element/ariaRoleDescription)
+- [`Element.ariaRoleDescription`](/en-US/docs/Web/API/Element/ariaRoleDescription)
 
 <section id="Quick_links">
 
