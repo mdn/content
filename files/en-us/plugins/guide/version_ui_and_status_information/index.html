@@ -7,11 +7,6 @@ tags:
   - NPAPI
   - Plugins
 ---
-<div>
-<div class="prevnext" style="text-align: right;">
-<p><a href="/en-US/docs/Gecko_Plugin_API_Reference:Memory" style="float: left;">« Previous</a><a href="/en-US/docs/Gecko_Plugin_API_Reference:Plug-in_Side_Plug-in_API">Next »</a></p>
-</div>
-</div>
 
 <p>This chapter describes the functions that allow a plug-in to display a message on the status line, get agent information, and check on the current version of the Plug-in API and the browser.</p>
 
@@ -119,13 +114,7 @@ void NPN_Version(
 
 <p>When the browser starts up, it loads all the plug-ins it finds in the Plugins directory for the platform. If you call <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_ReloadPlugins">NPN_ReloadPlugins</a></code>, the browser reloads all plug-ins in the Plugins directory without restarting. This causes the browser to install a new plug-in and load it, or remove a plug-in, without having to restart. Consider using this function as part of the plug-in's SmartUpdate process.</p>
 
-<pre class="eval">void NPN_ReloadPlugins(NPBool reloadPages);
+<pre class="brush: plain">void NPN_ReloadPlugins(NPBool reloadPages);
 </pre>
 
 <p>The <code>reloadPages</code> parameter is a boolean that indicates whether to reload the page (<code>true</code>) or not (<code>false</code>).</p>
-
-<div>
-<div class="prevnext" style="text-align: right;">
-<p><a href="/en-US/docs/Gecko_Plugin_API_Reference:Memory" style="float: left;">« Previous</a><a href="/en-US/docs/Gecko_Plugin_API_Reference:Plug-in_Side_Plug-in_API">Next »</a></p>
-</div>
-</div>

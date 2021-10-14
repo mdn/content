@@ -23,8 +23,7 @@ tags:
 <p>There are two recommended approaches for registering handlers. Event handler code can be made to run when an event is triggered by assigning it to the target element's corresponding <em>onevent</em> property, or by registering the handler as a listener for the element using the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method. In either case the handler will receive an object that conforms to the <a href="/en-US/docs/Web/API/Event"><code>Event</code> interface</a> (or a <a href="/en-US/docs/Web/API/Event#introduction">derived interface</a>). The main difference is that multiple event handlers can be added (or removed) using the event listener methods.</p>
 
 <div class="notecard warning">
-  <h4>Warning</h4>
-  <p>A third approach for setting event handlers using HTML onevent attributes is not recommended! They inflate the markup and make it less readable and harder to debug. For more information see <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#inline_event_handlers_—_dont_use_these">Inline event handlers</a>.</p>
+  <p><strong>Warning:</strong> A third approach for setting event handlers using HTML onevent attributes is not recommended! They inflate the markup and make it less readable and harder to debug. For more information see <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#inline_event_handlers_—_dont_use_these">Inline event handlers</a>.</p>
 </div>
 
 <h3 id="Using_onevent_properties">Using onevent properties</h3>
@@ -52,8 +51,7 @@ btn.onclick = greet;
 <p>The most flexible way to set an event handler on an element is to use the {{domxref("EventTarget.addEventListener")}} method. This approach allows multiple listeners to be assigned to an element, and for listeners to be <em>removed</em> if needed (using {{domxref("EventTarget.removeEventListener")}}).</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>The ability to add and remove event handlers allows you to, for example, have the same button performing different actions in different circumstances. In addition, in more complex programs cleaning up old/unused event handlers can improve efficiency.</p>
+  <p><strong>Note:</strong> The ability to add and remove event handlers allows you to, for example, have the same button performing different actions in different circumstances. In addition, in more complex programs cleaning up old/unused event handlers can improve efficiency.</p>
 </div>
 
 <p>Below we show how a simple <code>greet()</code> function can be set as a listener/event handler for the <code>click</code> event (you could use a lambda function instead of a named function if desired). Note again that the event is passed as the first argument to the event handler.</p>

@@ -33,11 +33,9 @@ fileSystemFlags.exclusive = booleanValue
 
 ## Specifications
 
-{{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
+| Specification                        | Status                           | Comment         |
+| ------------------------------------ | -------------------------------- | --------------- |
+| {{SpecName('File System API', '#dom-filesystemflags-exclusive')}} | {{Spec2('File System API')}} | |
 
 ## See also
 

@@ -1,5 +1,5 @@
 ---
-title: <time>
+title: '<time>: The (Date) Time element'
 slug: Web/HTML/Element/time
 tags:
   - Element

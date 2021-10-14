@@ -16,7 +16,7 @@ tags:
   - Web
   - Web Performance
 ---
-<p><span class="seoSummary">Web performance is the objective measurements and the perceived user experience of load time and runtime. Web performance is how long a site takes to load, become interactive and responsive, and how smooth the content is during user interactions </span>- is the scrolling smooth? are buttons clickable? Are pop-ups quick to load and display, and do they animate smoothly as they do so? Web performance includes both objective measurements like time to load, frames per second, and time to become interactive, and subjective experiences of how long it felt like it took the content to load.</p>
+<p>Web performance is the objective measurements and the perceived user experience of load time and runtime. Web performance is how long a site takes to load, become interactive and responsive, and how smooth the content is during user interactions - is the scrolling smooth? are buttons clickable? Are pop-ups quick to load and display, and do they animate smoothly as they do so? Web performance includes both objective measurements like time to load, frames per second, and time to become interactive, and subjective experiences of how long it felt like it took the content to load.</p>
 
 <p>The longer it takes for a site to respond, the more users will abandon the site. It is important to minimize the loading and response times and add additional features to conceal latency by making the experience as available and interactive as possible, as soon as possible, while asynchronously loading in the longer tail parts of the experience.</p>
 
@@ -37,7 +37,7 @@ tags:
  <dd>This article starts the module off with a good look at what performance actually is — this includes the tools, metrics, APIs, networks, and groups of people we need to consider when thinking about performance, and how we can make performance part of our web development workflow.</dd>
  <dt><a href="/en-US/docs/Learn/Performance/Perceived_performance">How do users perceive performance?</a></dt>
  <dd>
- <p>More important than how fast your website is in milliseconds, is how fast your users perceive your site to be. These perceptions are impacted by actual p<span style="letter-spacing: -0.00278rem;">age load time, idling, responsiveness to user interaction, and the smoothness of scrolling and other animations. In this article, we discuss the various loading metrics, animation, and responsiveness metrics, along with best practices to improve user perception, if not the actual timings.</span></p>
+ <p>More important than how fast your website is in milliseconds, is how fast your users perceive your site to be. These perceptions are impacted by actual page load time, idling, responsiveness to user interaction, and the smoothness of scrolling and other animations. In this article, we discuss the various loading metrics, animation, and responsiveness metrics, along with best practices to improve user perception, if not the actual timings.</p>
  </dd>
  <dt><a href="/en-US/docs/Learn/Performance/Web_Performance_Basics">Web performance basics</a></dt>
  <dd>In addition to the front end components of HTML, CSS, JavaScript, and media files, there are features that can make applications slower and features that can make applications subjectively and objectively faster. There are many APIs, developer tools, best practices, and bad practices relating to web performance. Here we'll introduce many of these features ad the basic level and provide links to deeper dives to improve performance for each topic.</dd>
@@ -66,8 +66,6 @@ tags:
  <dd>The <a href="/en-US/docs/Web/API/Performance_Timeline">Performance Timeline</a> standard defines extensions to the <a href="/en-US/docs/Web/API/Performance" title="The Performance interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the Performance Timeline API, the Navigation Timing API, the User Timing API, and the Resource Timing API."><code>Performance</code></a> interface to support client-side latency measurements within applications. Together, these interfaces can be used to help identify an application's performance bottlenecks.</dd>
  <dt><a href="/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API">User Timing API</a></dt>
  <dd>Create application specific timestamps using the <a href="/en-US/docs/Web/API/User_Timing_API">user timing API</a>'s "mark" and "measure" entry types - that are part of the browser's performance timeline.</dd>
- <dt><a href="/en-US/docs/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API">Frame Timing API</a></dt>
- <dd>The <code><a href="/en-US/docs/Web/API/PerformanceFrameTiming">PerformanceFrameTiming</a></code> interface provides <em>frame</em> timing data about the browser's event loop.</dd>
  <dt><a href="/en-US/docs/Web/API/Beacon_API">Beacon API</a></dt>
  <dd>The <a href="/en-US/docs/Web/API/Beacon_API">Beacon</a> interface schedules an asynchronous and non-blocking request to a web server.</dd>
  <dt><a href="/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility">Intersection Observer API</a></dt>
@@ -85,7 +83,7 @@ tags:
 
 <h2 id="Glossary_Terms">Glossary Terms</h2>
 
-<ul class="index">
+<ul>
  <li>{{glossary('Beacon')}}</li>
  <li>{{glossary('Brotli compression')}}</li>
  <li>{{glossary('Client hints')}}</li>
@@ -146,8 +144,6 @@ tags:
  <dd>With web access on mobile devices being so popular, and all mobile platforms having fully-fledged web browsers, but possibly limited bandwidth, CPU, and battery life, it is important to consider the performance of your web content on these platforms. This article also looks at mobile-specific performance considerations.</dd>
  <dt>Web font performance</dt>
  <dd>An often overlooked aspect of performance landscape are web fonts. Web fonts are more prominent in web design than ever, yet many developers embed them from a third party service and think nothing of it. In this article, we'll covers methods for getting your font files as small as possible with efficient file formats and sub setting. From there, we'll go on to talk about how browsers text, and how you can use CSS and JavaScript features to ensure your fonts render quickly, and with minimal disruption to the user experience.</dd>
- <dt>Performance bottlenecks</dt>
- <dd></dd>
  <dt>Understanding bandwidth</dt>
  <dd>Bandwidth is the amount of data measured in Megabits(Mb) or Kilobits(Kb) that one can send per second. This article explains the role of bandwidth in media-rich internet applications, how you can measure it, and how you can optimize applications to make the best use of available bandwidth</dd>
  <dt>The role of TLS in performance</dt>

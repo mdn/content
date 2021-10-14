@@ -10,18 +10,16 @@ tags:
   - subtitles
   - track
 ---
-<div class="summary">
-<p><span class="seoSummary">In other articles we looked at how to <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player">build a cross browser video player</a> using the {{ domxref("HTMLMediaElement") }} and {{ domxref("Window.fullScreen") }} APIs, and also at how to <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics">style the player</a>. This article will take the same player and show how to add captions and subtitles to it, using {{ domxref("WebVTT_API","the WebVTT format") }} and the {{ htmlelement("track") }} element.</span></p>
-</div>
+<p>In other articles we looked at how to <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player">build a cross browser video player</a> using the {{ domxref("HTMLMediaElement") }} and {{ domxref("Window.fullScreen") }} APIs, and also at how to <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics">style the player</a>. This article will take the same player and show how to add captions and subtitles to it, using {{ domxref("WebVTT_API","the WebVTT format") }} and the {{ htmlelement("track") }} element.</p>
 
 <h2 id="Captioned_video_example">Captioned video example</h2>
 
 <p>In this article, we will refer to the Video player with captions example. This example uses an excerpt from the <a href="https://www.sintel.org/">Sintel open movie</a>, created by the <a href="https://www.blender.org/foundation/">Blender Foundation</a>.</p>
 
-<p><img alt='Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."' src="video-player-with-captions.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt='Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."' src="video-player-with-captions.png"></p>
 
 <div class="note">
-<p><strong>Note</strong>: You can find the <a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions">source on Github</a>, and also <a href="https://iandevlin.github.io/mdn/video-player-with-captions/">view the example live</a>.</p>
+<p><strong>Note:</strong> You can find the <a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions">source on Github</a>, and also <a href="https://iandevlin.github.io/mdn/video-player-with-captions/">view the example live</a>.</p>
 </div>
 
 <h2 id="HTML5_and_Video_Captions">HTML5 and Video Captions</h2>
@@ -74,7 +72,7 @@ tags:
 
 <p>In addition to adding the <code>&lt;track&gt;</code> elements, we have also added a new button to control the subtitles menu that we will build. As a consequence, the video controls now look as follows:</p>
 
-<pre class="brush: html;highlight[13]">&lt;div id="video-controls" class="controls" data-state="hidden"&gt;
+<pre class="brush: html">&lt;div id="video-controls" class="controls" data-state="hidden"&gt;
    &lt;button id="playpause" type="button" data-state="play"&gt;Play/Pause&lt;/button&gt;
    &lt;button id="stop" type="button" data-state="stop"&gt;Stop&lt;/button&gt;
    &lt;div class="progress"&gt;
@@ -269,7 +267,7 @@ var createMenuItem = function(id, lang, label) {
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Some of the styling of cues with ::cue currently works on Chrome, Opera, and Safari, but not yet on Firefox.</p>
+<p><strong>Note:</strong> Some of the styling of cues with ::cue currently works on Chrome, Opera, and Safari, but not yet on Firefox.</p>
 </div>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -281,7 +279,7 @@ var createMenuItem = function(id, lang, label) {
 <p>Internet Explorer 10+ subtitles are enabled by default, and the default controls contain a button and a menu that offers the same functionality as the menu we just built. The <code>default</code> attribute is also supported.</p>
 
 <div class="note">
-<p><strong>Note</strong>: IE will completely ignore WebVTT files unless you define the MIME type. This can easily be done by adding an <code>.htaccess</code> file to an appropriate directory that contains <code>AddType text/vtt .vtt</code>.</p>
+<p><strong>Note:</strong> IE will completely ignore WebVTT files unless you define the MIME type. This can easily be done by adding an <code>.htaccess</code> file to an appropriate directory that contains <code>AddType text/vtt .vtt</code>.</p>
 </div>
 
 <h3 id="Safari">Safari</h3>
@@ -291,10 +289,6 @@ var createMenuItem = function(id, lang, label) {
 <h3 id="Chrome_and_Opera">Chrome and Opera</h3>
 
 <p>These browsers have similar implementations again: subtitles are enabled by default and the default control set contains a 'cc' button that turns subtitles on and off. Chrome and Opera ignore the <code>default</code> attribute on the <code>&lt;track&gt;</code> element and will instead try to match the browser's language to the subtitle's language.</p>
-
-<h3 id="Firefox">Firefox</h3>
-
-<p>Firefox's implementation was completely broken due to a <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=981280">bug</a>, leading to Mozilla turning off WebVTT support by default (you can turn it on via the <code>media.webvtt.enabled</code> flag.) However, <s>this bug looks to have been fixed and WebVTT support re-enabled as of Gecko 31, so this will not be a problem for Firefox final release users for much longer (on Gecko 29 as of the time of this writing)</s> this has been fixed as of Firefox 31, and everything works as it should.</p>
 
 <h2 id="Plugins">Plugins</h2>
 
@@ -322,5 +316,5 @@ var createMenuItem = function(id, lang, label) {
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: You can find an excellent list of HTML5 Video Players and their current "state" at <a href="https://praegnanz.de/html5video/">HTML5 Video Player Comparison</a>.</p>
+<p><strong>Note:</strong> You can find an excellent list of HTML5 Video Players and their current "state" at <a href="https://praegnanz.de/html5video/">HTML5 Video Player Comparison</a>.</p>
 </div>

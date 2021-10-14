@@ -18,7 +18,7 @@ browser-compat: api.StorageManager.estimate
 
 The **`estimate()`** method of the {{domxref("StorageManager")}} interface asks the Storage Manager for how much storage the current [origin](/en-US/docs/Glossary/Same-origin_policy) takes up (`usage`), and how much space is available (`quota`).
 
-This method operates asynchronously, so it returns a {{jsxref("Promise")}} which resolves once the information is available. The promise's fulfillment handler is called with a {{domxref("StorageEstimate")}} containing the usage and quota data.
+This method operates asynchronously, so it returns a {{jsxref("Promise")}} which resolves once the information is available. The promise's fulfillment handler is called with an object containing the usage and quota data.
 
 ## Syntax
 
@@ -32,7 +32,14 @@ None.
 
 ### Return value
 
-A {{jsxref('Promise')}} that resolves to an object which conforms to the {{domxref('StorageEstimate')}} dictionary. This dictionary contains estimates of how much space is available to the origin in {{domxref("StorageEstimate.quota")}}, as well as how much is currently used in {{domxref("StorageEstimate.usage")}}.
+A {{jsxref('Promise')}} that resolves to an object with the following properties:
+
+- `quota`
+  - : A numeric value in bytes which provides a conservative approximation of the total storage the user's device or computer has available for the site origin or Web app. It's possible that there's more than this amount of space available though you can't rely on that being the case.
+- `usage`
+  - : A numeric value in bytes approximating the amount of storage space currently being used by the site or Web app, out of the available space as indicated by `quota`. Unit is byte.
+- `usageDetails`
+  - : An object containing a breakdown of `usage` by storage system. All included properties will have a `usage` greater than 0 and any storage system with 0 `usage` will be excluded from the object.
 
 > **Note:** The returned values are not exact: between compression, deduplication, and obfuscation for security reasons, they will be imprecise.
 

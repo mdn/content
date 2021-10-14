@@ -15,13 +15,12 @@ tags:
 ---
 <div>{{NextMenu("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps")}}</div>
 
-<p class="summary"><span class="seoSummary">This article provides an introduction to Progressive Web Apps (PWAs), discussing what they are and the advantages they offer over regular web apps.</span></p>
+<p>This article provides an introduction to Progressive Web Apps (PWAs), discussing what they are and the advantages they offer over regular web apps.</p>
 
 <h2 id="What_is_a_Progressive_Web_App">What is a Progressive Web App?</h2>
 
 <div class="notecard note">
-	<h3>Note</h3>
-	<p>The term "Progressive Web App" isn't a formal or official name. It's just a shorthand used initially by Google for the concept of creating a flexible, adaptable app using only web technologies.</p>
+	<p><strong>Note:</strong> The term "Progressive Web App" isn't a formal or official name. It's just a shorthand used initially by Google for the concept of creating a flexible, adaptable app using only web technologies.</p>
 </div>
 
 <p>PWAs are web apps developed using a number of specific technologies and standard patterns to allow them to take advantage of both web and native app features. For example, web apps are more discoverable than native apps; it's a lot easier and faster to visit a website than to install an application, and you can also share web apps by sending a link.</p>
@@ -74,7 +73,7 @@ tags:
 
 <h3 id="Discoverability">Discoverability</h3>
 
-<p><img alt="" src="discoverable.svg" style="float: left; margin-right: 1em;">The eventual aim is that web apps should have better representation in search engines, be easier to expose, catalog and rank, and have metadata usable by browsers to give them special capabilities.</p>
+<p>The eventual aim is that web apps should have better representation in search engines, be easier to expose, catalog and rank, and have metadata usable by browsers to give them special capabilities.</p>
 
 <p>Some of the capabilities have already been enabled on certain web-based platforms by proprietary technologies like <a href="https://ogp.me/">Open Graph</a>, which provides a format for specifying similar metadata in the {{Glossary("HTML")}} {{HTMLElement("head")}} block using {{HTMLElement("meta")}} tags.</p>
 
@@ -82,21 +81,15 @@ tags:
 
 <h3 id="Installability">Installability</h3>
 
-<p><img alt="" src="installable.svg" style="float: left; margin-right: 1em;"></p>
-
 <p>A core part of the web app experience is for users to have app icons on their home screen, and be able to tap to open apps into their own native container that feels nicely integrated with the underlying platform.</p>
 
 <p>Modern web apps can have this native app feel via properties set inside the Web app manifest, and via a feature available in modern smartphone browsers called <a href="/en-US/docs/Web/Progressive_web_apps/Installing">web app installation</a>.</p>
 
 <h3 id="Linkability">Linkability</h3>
 
-<p><img alt="" src="linkable.svg" style="float: left; margin-right: 1em;"></p>
-
 <p>One of the most powerful features of the web is the ability to link to an app at a specific URL without the need for an app store or complex installation process. This is how it has always been.</p>
 
 <h3 id="Network_independence">Network independence</h3>
-
-<p><img alt="" src="network-independent.svg" style="float: left; margin-right: 1em;"></p>
 
 <p>Modern web apps can work when the network is unreliable, or even non-existent. The basic ideas behind network independence are to be able to:</p>
 
@@ -110,27 +103,19 @@ tags:
 
 <h3 id="Progressive_enhancement_support">Progressive enhancement support</h3>
 
-<p><img alt="" src="progressive.svg" style="float: left; margin-right: 1em;"></p>
-
 <p>Modern web apps can be developed to provide an excellent experience to fully capable browsers, and an acceptable (although not quite as shiny) experience to less capable browsers. We've been doing this for years with best practices such as progressive enhancement. By using <a href="/en-US/docs/Glossary/Progressive_Enhancement">progressive enhancement</a>, PWAs are cross-browser. This means developers should take into account the differences in implementation of some PWA features and technologies between different browser implementations.</p>
 
 <h3 id="Re-engageability">Re-engageability</h3>
-
-<p><img alt="" src="re-engageable.svg" style="float: left; margin-right: 1em;"></p>
 
 <p>One major advantage of native platforms is the ease with which users can be re-engaged by updates and new content, even when they aren't looking at the app or using their devices. Modern web apps can now do this too, using new technologies such as Service Workers for controlling pages, the <a href="/en-US/docs/Web/API/Push_API">Web Push API</a> for sending updates straight from server to app via a service worker, and the <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a> for generating system notifications to help engage users when they're not actively using their web browser.</p>
 
 <h3 id="Responsiveness">Responsiveness</h3>
 
-<p><img alt="" src="responsive.svg" style="float: left; margin-right: 1em;"></p>
-
 <p>Responsive web apps use technologies like <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a> and <a href="/en-US/docs/Glossary/Viewport">viewport</a> to make sure that their UIs will fit any form factor: desktop, mobile, tablet, or whatever comes next.</p>
 
 <h3 id="secure">Secure</h3>
 
-<p><img alt="" src="safe.svg" style="float: left; margin-right: 1em;"></p>
-
-<p><img alt='Screenshot showing a huge number of results upon searching for "Messenger" when trying to find Facebook Messenger. Which is the right one?' src="instalingmessengersomanyoptionseek.jpeg" style="border-style: solid; border-width: 1px; float: right; margin-left: 1em;">The web platform provides a secure delivery mechanism that prevents snooping while simultaneously ensuring that content hasn’t been tampered with, as long as you take advantage of {{Glossary("HTTPS")}} and develop your apps with security in mind.</p>
+<p>The web platform provides a secure delivery mechanism that prevents snooping while simultaneously ensuring that content hasn’t been tampered with, as long as you take advantage of {{Glossary("HTTPS")}} and develop your apps with security in mind.</p>
 
 <p>It's also easy for users to ensure that they're installing the right app, because its URL will match your site's domain. This is very different from apps in app stores, which may have a number of similarly-named apps, some of which may even be based on your own site, which only adds to the confusion. Web apps eliminate that confusion and ensure that users get the best possible experience.</p>
 

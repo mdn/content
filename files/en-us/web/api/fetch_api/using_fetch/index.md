@@ -238,7 +238,7 @@ A {{domxref("fetch()")}} promise will reject with a {{jsxref("TypeError")}} when
 fetch('flowers.jpg')
   .then(response => {
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error('Network response was not OK');
     }
     return response.blob();
   })

@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Web Components")}}</div>
 
-<p class="summary">This article explains how you can use the {{htmlelement("template")}} and {{htmlelement("slot")}} elements to create a flexible template that can then be used to populate the shadow DOM of a web component.</p>
+<p>This article explains how you can use the {{htmlelement("template")}} and {{htmlelement("slot")}} elements to create a flexible template that can then be used to populate the shadow DOM of a web component.</p>
 
 <h2 id="The_truth_about_templates">The truth about templates</h2>
 
@@ -70,7 +70,7 @@ document.body.appendChild(templateContent);</pre>
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: Templates are well-supported in browsers; the Shadow DOM API is supported by default in Firefox (version 63 onwards), Chrome, Opera, Safari, and Edge (starting with version 79).</p>
+<p><strong>Note:</strong> Templates are well-supported in browsers; the Shadow DOM API is supported by default in Firefox (version 63 onwards), Chrome, Opera, Safari, and Edge (starting with version 79).</p>
 </div>
 
 <h2 id="Adding_flexibility_with_slots">Adding flexibility with slots</h2>
@@ -102,7 +102,7 @@ document.body.appendChild(templateContent);</pre>
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: Nodes that can be inserted into slots are known as <em>Slottable</em> nodes; when a node has been inserted in a slot, it is said to be <em>slotted</em>.</p>
+<p><strong>Note:</strong> Nodes that can be inserted into slots are known as <em>Slottable</em> nodes; when a node has been inserted in a slot, it is said to be <em>slotted</em>.</p>
 </div>
 
 <div class="notecard note">
@@ -127,7 +127,7 @@ document.body.appendChild(templateContent);</pre>
 <p>In addition, even if it is not already rendered, the purpose of the container as a template should be more semantically clear when using the {{HTMLElement("template")}}. In addition, {{HTMLElement("template")}} can have items directly added to it, like {{HTMLElement("td")}}, which would disappear when added to a {{HTMLElement("div")}}.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can find this complete example at <a href="https://github.com/mdn/web-components-examples/tree/master/element-details">element-details</a> (see it <a href="https://mdn.github.io/web-components-examples/element-details/">running live</a> also).</p>
+<p><strong>Note:</strong> You can find this complete example at <a href="https://github.com/mdn/web-components-examples/tree/master/element-details">element-details</a> (see it <a href="https://mdn.github.io/web-components-examples/element-details/">running live</a> also).</p>
 </div>
 
 <h3 id="Creating_a_template_with_some_slots">Creating a template with some slots</h3>
@@ -236,15 +236,13 @@ document.body.appendChild(templateContent);</pre>
   dd { margin-left: 16px }
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">body { margin-top: 47px }</pre>
-</div>
+<pre class="brush: css hidden">body { margin-top: 47px }</pre>
 
 <h3 id="Result">Result</h3>
 
 <p>Finally let’s put all the snippets together and see what the rendered result looks like.</p>
 
-<p>{{ EmbedLiveSample('full_example', '300','400','element-details.png','') }}</p>
+<p>{{ EmbedLiveSample('A_more_involved_example', '300','400','element-details.png','') }}</p>
 
 <p>Notice the following points about this rendered result:</p>
 
@@ -255,83 +253,3 @@ document.body.appendChild(templateContent);</pre>
 	<li>Because the first <strong><code>&lt;element-details&gt;</code></strong> has a {{HTMLElement("dl")}} element which explicitly references the <code>"attributes"</code> <a href="/en-US/docs/Web/HTML/Element/slot#named-slot">named slot</a> from its <a href="/en-US/docs/Web/API/ShadowRoot">shadow root</a>, the contents of that {{HTMLElement("dl")}} replace the <code>"attributes"</code> <a href="/en-US/docs/Web/HTML/Element/slot#named-slot">named slot</a> from the <a href="/en-US/docs/Web/API/ShadowRoot">shadow root</a>.</li>
 	<li>Because the second <strong><code>&lt;element-details&gt;</code></strong> doesn’t explicitly reference the <code>"attributes"</code> <a href="/en-US/docs/Web/HTML/Element/slot#named-slot">named slot</a> from its <a href="/en-US/docs/Web/API/ShadowRoot">shadow root</a>, its content for that <a href="/en-US/docs/Web/HTML/Element/slot#named-slot">named slot</a> gets filled with the default content for it from the <a href="/en-US/docs/Web/API/ShadowRoot">shadow root</a>.</li>
 </ul>
-
-<div class="hidden">
-<h5 id="full_example">full example</h5>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;slot example&lt;/title&gt;
-    &lt;style&gt;
-
-      dl { margin-left: 6px; }
-      dt { font-weight: bold; color: #217ac0; font-size: 110% }
-      dt { font-family: Consolas, "Liberation Mono", Courier }
-      dd { margin-left: 16px }
-
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;template id="element-details-template"&gt;
-      &lt;style&gt;
-      details {font-family: "Open Sans Light",Helvetica,Arial}
-      .name {font-weight: bold; color: #217ac0; font-size: 120%}
-      h4 { margin: 10px 0 -8px 0; }
-      h4 span { background: #217ac0; padding: 2px 6px 2px 6px }
-      h4 span { border: 1px solid #cee9f9; border-radius: 4px }
-      h4 span { color: white }
-      .attributes { margin-left: 22px; font-size: 90% }
-      .attributes p { margin-left: 16px; font-style: italic }
-      &lt;/style&gt;
-      &lt;details&gt;
-        &lt;summary&gt;
-          &lt;span&gt;
-            &lt;code class="name"&gt;&amp;lt;&lt;slot name="element-name"&gt;NEED NAME&lt;/slot&gt;&amp;gt;&lt;/code&gt;
-            &lt;i class="desc"&gt;&lt;slot name="description"&gt;NEED DESCRIPTION&lt;/slot&gt;&lt;/i&gt;
-          &lt;/span&gt;
-        &lt;/summary&gt;
-        &lt;div class="attributes"&gt;
-          &lt;h4&gt;&lt;span&gt;Attributes&lt;/span&gt;&lt;/h4&gt;
-          &lt;slot name="attributes"&gt;&lt;p&gt;None&lt;/p&gt;&lt;/slot&gt;
-        &lt;/div&gt;
-      &lt;/details&gt;
-      &lt;hr&gt;
-    &lt;/template&gt;
-
-    &lt;element-details&gt;
-      &lt;span slot="element-name"&gt;slot&lt;/span&gt;
-      &lt;span slot="description"&gt;A placeholder inside a web
-        component that users can fill with their own markup,
-        with the effect of composing different DOM trees
-        together.&lt;/span&gt;
-      &lt;dl slot="attributes"&gt;
-        &lt;dt&gt;name&lt;/dt&gt;
-        &lt;dd&gt;The name of the slot.&lt;/dd&gt;
-      &lt;/dl&gt;
-    &lt;/element-details&gt;
-
-    &lt;element-details&gt;
-      &lt;span slot="element-name"&gt;template&lt;/span&gt;
-      &lt;span slot="description"&gt;A mechanism for holding client-
-        side content that is not to be rendered when a page is
-        loaded but may subsequently be instantiated during
-        runtime using JavaScript.&lt;/span&gt;
-    &lt;/element-details&gt;
-
-    &lt;script&gt;
-    customElements.define('element-details',
-      class extends HTMLElement {
-        constructor() {
-          super();
-          const template = document
-            .getElementById('element-details-template')
-            .content;
-          const shadowRoot = this.attachShadow({mode: 'open'})
-            .appendChild(template.cloneNode(true));
-        }
-      })
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
-</div>

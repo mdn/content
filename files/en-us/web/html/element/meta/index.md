@@ -142,8 +142,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     - `refresh`This instruction specifies:
 
-      - The number of seconds until the page should be reloaded - only if the {{htmlattrxref("content", "meta")}} attribute contains a positive integer.
-      - The number of seconds until the page should redirect to another - only if the {{htmlattrxref("content", "meta")}} attribute contains a positive integer followed by the string '`;url=`', and a valid URL.
+      - The number of seconds until the page should be reloaded - only if the {{htmlattrxref("content", "meta")}} attribute contains a non-negative integer.
+      - The number of seconds until the page should redirect to another - only if the {{htmlattrxref("content", "meta")}} attribute contains a non-negative integer followed by the string '`;url=`', and a valid URL.
 
       ##### Accessibility concerns
 
