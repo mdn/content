@@ -28,6 +28,18 @@ if (Infinity)
 if (-Infinity)
 ```
 
+### The logical AND operator, &&
+
+If the first object is truthy, it returns the last one
+
+```js
+true && "dog"
+// ↪ "dog"
+
+[] && "dog"
+// ↪ "dog"
+```
+
 ## See also
 
 - {{Glossary("Falsy")}}
