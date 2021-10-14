@@ -35,7 +35,7 @@ The {{domxref("MutationObserver")}} interface provides the ability to watch for 
 
 ## Mutation Observer & customize resize event listener & demo
 
-<https://codepen.io/webgeeker/full/YjrZgg/>
+<https://codepen.io/milofultz/pen/LYjPXPw>
 
 ## Example
 
