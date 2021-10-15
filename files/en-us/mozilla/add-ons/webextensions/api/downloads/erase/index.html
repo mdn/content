@@ -22,7 +22,7 @@ browser-compat: webextensions.api.downloads.erase
 <p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If you want to remove a downloaded file from disk <em>and</em> erase it from history, you have to call {{WebExtAPIRef("downloads.removeFile()")}} before you call <code>erase()</code>. If you try it the other way around you'll get an error when calling {{WebExtAPIRef("downloads.removeFile()")}}, because it no longer exists according to the browser.</p>
+<p><strong>Note:</strong> If you want to remove a downloaded file from disk <em>and</em> erase it from history, you have to call {{WebExtAPIRef("downloads.removeFile()")}} before you call <code>erase()</code>. If you try it the other way around you'll get an error when calling {{WebExtAPIRef("downloads.removeFile()")}}, because it no longer exists according to the browser.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
