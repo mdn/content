@@ -8,6 +8,7 @@ tags:
   - Prototype
   - Reference
   - String
+  - Polyfill
 browser-compat: javascript.builtins.String.substr
 ---
 {{JSRef}}
@@ -111,5 +112,6 @@ console.log(aString.substr(20, 2));  // ''
 
 ## See also
 
+- A polyfill of `String.prototype.substr` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.slice()")}}
 - {{jsxref("String.prototype.substring()")}}
