@@ -15,7 +15,7 @@ It should be used when the data to be sanitized is already available as DOM node
 For example when sanitizing a `Document` instance in a frame.
 
 The default `Sanitizer()` configuration strips out XSS-relevant input by default, including {{HTMLElement("script")}} tags, custom elements, and comments.
-This configuration may be customized using {{domxref("Sanitizer.Sanitizer","Sanitizer()")}} constructor options.
+The sanitizer configuration may be customized using {{domxref("Sanitizer.Sanitizer","Sanitizer()")}} constructor options.
 
 > **Note:** This method is not intended for sanitizing strings.
 > If string sanitizing is needed you would use {{domxref("Element.setHTML()")}} or {{domxref("Sanitizer.sanitizeFor()")}}.
@@ -45,7 +45,7 @@ None.
 To sanitize data from an iframe with id `userFrame`:
 
 ```js
-const sanitizer = new Sanitizer( ... );  // Our Sanitizer;
+const sanitizer = new Sanitizer();  // Default Sanitizer;
 
 // Get the frame and its Document object
 const frame_element = document.getElementById("userFrame")
