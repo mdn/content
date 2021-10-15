@@ -173,7 +173,7 @@ block content
       label(for='author') Author:
       select#author.form-control(type='select', placeholder='Select author' name='author' required='true' )
         - authors.sort(function(a, b) {let textA = a.family_name.toUpperCase(); let textB = b.family_name.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
-        for author in authors
+        for author in authors
           if book
             option(value=author._id selected=(author._id.toString()===book.author._id.toString() ? 'selected' : false) ) #{author.name}
           else
