@@ -6,260 +6,174 @@ tags:
   - storage access policy
   - tracking protection
 ---
+Firefox includes a new storage access policy that blocks cookies and other site data from third-party tracking resources. This policy is designed as an alternative to the [older cookie policies](/en-US/docs/Mozilla/Cookies_Preferences), which have been available in Firefox for many years. This policy protects against cross-site tracking while minimizing the site breakage associated with traditional cookie blocking. This article explains how the policy works and how you can test it.
 
-<p class="summary">Firefox includes a new storage access policy that blocks cookies and other site data from third-party tracking resources. This policy is designed as an alternative to the <a href="/en-US/docs/Mozilla/Cookies_Preferences">older cookie policies</a>, which have been available in Firefox for many years. This policy protects against cross-site tracking while minimizing the site breakage associated with traditional cookie blocking. This article explains how the policy works and how you can test it.</p>
-
-<h2 id="Testing_in_Firefox">Testing in Firefox</h2>
+## Testing in Firefox
 
-<p>This cookie policy has been available in Firefox since version 63. This documentation describes the policy that we intend to ship to Firefox Release users, but may not match what is implemented in the current Release version of Firefox. That's because we document new aspects of the policy as soon as they land in <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly">Firefox Nightly</a>, our pre-release channel. Firefox Nightly may also contain experimental features that we don't yet plan to ship to Release users; experimental features will not be included in this documentation, but may nevertheless impact the functionality of domains classified as trackers.</p>
+This cookie policy has been available in Firefox since version 63. This documentation describes the policy that we intend to ship to Firefox Release users, but may not match what is implemented in the current Release version of Firefox. That's because we document new aspects of the policy as soon as they land in [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly), our pre-release channel. Firefox Nightly may also contain experimental features that we don't yet plan to ship to Release users; experimental features will not be included in this documentation, but may nevertheless impact the functionality of domains classified as trackers.
 
-<p>We recommend sites test with <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly">Firefox Nightly</a>, as this includes the newest version of our protections. As described above, note that Nightly may include additional protections that end up getting removed or changed before they reach our Release users. We’ll keep this page updated with the newest information as we strengthen our protections.</p>
+We recommend sites test with [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly), as this includes the newest version of our protections. As described above, note that Nightly may include additional protections that end up getting removed or changed before they reach our Release users. We’ll keep this page updated with the newest information as we strengthen our protections.
 
-<p>These protections are on by default in Nightly. The cookie policy can be enabled in other versions of Firefox through the <a href="https://support.mozilla.org/en-US/kb/content-blocking">Content Blocking settings</a> (these steps will vary by version; the linked documentation includes a dropdown to select the appropriate Firefox version).</p>
-
-<h3 id="Report_Broken_Sites">Report Broken Sites</h3>
+These protections are on by default in Nightly. The cookie policy can be enabled in other versions of Firefox through the [Content Blocking settings](https://support.mozilla.org/en-US/kb/content-blocking) (these steps will vary by version; the linked documentation includes a dropdown to select the appropriate Firefox version).
 
-<p>If you find a website broken as a result of this change, file a bug under the Tracking Protection component within the Firefox product on <a href="https://bugzilla.mozilla.org/enter_bug.cgi?assigned_to=nobody%40mozilla.org&amp;blocked=1480137&amp;bug_file_loc=http%3A%2F%2F&amp;bug_ignored=0&amp;bug_severity=normal&amp;bug_status=NEW&amp;cf_fx_iteration=---&amp;cf_fx_points=---&amp;cf_platform_rel=---&amp;cf_status_firefox62=---&amp;cf_status_firefox63=---&amp;cf_status_firefox64=---&amp;cf_status_firefox_esr60=---&amp;cf_status_geckoview62=---&amp;cf_tracking_firefox62=---&amp;cf_tracking_firefox63=---&amp;cf_tracking_firefox64=---&amp;cf_tracking_firefox_esr60=---&amp;cf_tracking_firefox_relnote=---&amp;cf_tracking_geckoview62=---&amp;component=Tracking%20Protection&amp;contenttypemethod=list&amp;contenttypeselection=text%2Fplain&amp;defined_groups=1&amp;flag_type-203=X&amp;flag_type-37=X&amp;flag_type-41=X&amp;flag_type-5=X&amp;flag_type-607=X&amp;flag_type-721=X&amp;flag_type-737=X&amp;flag_type-748=X&amp;flag_type-787=X&amp;flag_type-799=X&amp;flag_type-800=X&amp;flag_type-803=X&amp;flag_type-835=X&amp;flag_type-846=X&amp;flag_type-855=X&amp;flag_type-864=X&amp;flag_type-914=X&amp;flag_type-916=X&amp;flag_type-929=X&amp;flag_type-930=X&amp;flag_type-933=X&amp;form_name=enter_bug&amp;maketemplate=Remember%20values%20as%20bookmarkable%20template&amp;op_sys=Unspecified&amp;priority=--&amp;product=Firefox&amp;rep_platform=Unspecified&amp;target_milestone=---&amp;version=unspecified">Bugzilla</a>. Alternatively you can report broken sites directly in Firefox by clicking "Report a Problem" in the Content Blocking section of the <a href="https://support.mozilla.org/en-US/kb/control-center-site-privacy-and-security-firefox">Control Center</a> (this shortcut may not be available in all versions of Firefox).</p>
+### Report Broken Sites
 
-<h2 id="Tracking_protection_explained">Tracking protection explained</h2>
+If you find a website broken as a result of this change, file a bug under the Tracking Protection component within the Firefox product on [Bugzilla](https://bugzilla.mozilla.org/enter_bug.cgi?assigned_to=nobody%40mozilla.org&blocked=1480137&bug_file_loc=http%3A%2F%2F&bug_ignored=0&bug_severity=normal&bug_status=NEW&cf_fx_iteration=---&cf_fx_points=---&cf_platform_rel=---&cf_status_firefox62=---&cf_status_firefox63=---&cf_status_firefox64=---&cf_status_firefox_esr60=---&cf_status_geckoview62=---&cf_tracking_firefox62=---&cf_tracking_firefox63=---&cf_tracking_firefox64=---&cf_tracking_firefox_esr60=---&cf_tracking_firefox_relnote=---&cf_tracking_geckoview62=---&component=Tracking%20Protection&contenttypemethod=list&contenttypeselection=text%2Fplain&defined_groups=1&flag_type-203=X&flag_type-37=X&flag_type-41=X&flag_type-5=X&flag_type-607=X&flag_type-721=X&flag_type-737=X&flag_type-748=X&flag_type-787=X&flag_type-799=X&flag_type-800=X&flag_type-803=X&flag_type-835=X&flag_type-846=X&flag_type-855=X&flag_type-864=X&flag_type-914=X&flag_type-916=X&flag_type-929=X&flag_type-930=X&flag_type-933=X&form_name=enter_bug&maketemplate=Remember%20values%20as%20bookmarkable%20template&op_sys=Unspecified&priority=--&product=Firefox&rep_platform=Unspecified&target_milestone=---&version=unspecified). Alternatively you can report broken sites directly in Firefox by clicking "Report a Problem" in the Content Blocking section of the [Control Center](https://support.mozilla.org/en-US/kb/control-center-site-privacy-and-security-firefox) (this shortcut may not be available in all versions of Firefox).
 
-<p>How does Firefox determine which resources are tracking resources?</p>
+## Tracking protection explained
 
-<p>Firefox uses the Tracking Protection list to determine which resources are tracking resources. The Tracking Protection list is <a href="https://github.com/disconnectme/disconnect-tracking-protection/issues">maintained by Disconnect</a>. When the list is applied in Firefox, we make two important changes:</p>
+How does Firefox determine which resources are tracking resources?
 
-<ul>
- <li>First, we only use the "Basic Protection" version of the list, which <a href="https://github.com/mozilla-services/shavar-prod-lists#disconnect-blacklistjson">excludes some categories of trackers</a>. In the future, we may expand our protections to use the "Strict Protection" version of the list.</li>
- <li>Second, Firefox uses an additional "<a href="https://github.com/mozilla-services/shavar-prod-lists/blob/master/disconnect-entitylist.json">entity list</a>", which prevents <a href="https://github.com/mozilla-services/shavar-prod-lists#disconnect-entitylistjson">domains from being classified as trackers when they are loaded on a top-level site owned by the same organization</a>.</li>
-</ul>
-
-<p>Firefox uses the built-in <a href="https://support.mozilla.org/en-US/kb/tracking-protection">Tracking Protection</a> URL classifier to determine which resources match the tracking protection list. Domains are matched against the list in accordance with the <a href="https://developers.google.com/safe-browsing/v4/urls-hashing#suffixprefix-expressions">SafeBrowsing v4 specification</a>. Specifically, we check the exact hostname of the resource against the list, as well as the last four hostnames formed by starting with the last five components and successively removing the leading component. Consider the following examples:</p>
+Firefox uses the Tracking Protection list to determine which resources are tracking resources. The Tracking Protection list is [maintained by Disconnect](https://github.com/disconnectme/disconnect-tracking-protection/issues). When the list is applied in Firefox, we make two important changes:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Hostname on the list</th>
-   <th scope="col">Hostname of resource</th>
-   <th scope="col">Matched</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>example.com</code></td>
-   <td><code>example.com</code></td>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <td><code>example.com</code></td>
-   <td><code>a.b.example.com</code></td>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <td><code>blah.example.com</code></td>
-   <td><code>example.com</code></td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <td><code>a.b.example.com</code></td>
-   <td><code>c.d.example.com</code></td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <td><code>blah.example.com</code></td>
-   <td><code>foo.blah.example.com</code></td>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+- First, we only use the "Basic Protection" version of the list, which [excludes some categories of trackers](https://github.com/mozilla-services/shavar-prod-lists#disconnect-blacklistjson). In the future, we may expand our protections to use the "Strict Protection" version of the list.
+- Second, Firefox uses an additional "[entity list](https://github.com/mozilla-services/shavar-prod-lists/blob/master/disconnect-entitylist.json)", which prevents [domains from being classified as trackers when they are loaded on a top-level site owned by the same organization](https://github.com/mozilla-services/shavar-prod-lists#disconnect-entitylistjson).
 
-<h2 id="What_does_the_storage_access_policy_block">What does the storage access policy block?</h2>
+Firefox uses the built-in [Tracking Protection](https://support.mozilla.org/en-US/kb/tracking-protection) URL classifier to determine which resources match the tracking protection list. Domains are matched against the list in accordance with the [SafeBrowsing v4 specification](https://developers.google.com/safe-browsing/v4/urls-hashing#suffixprefix-expressions). Specifically, we check the exact hostname of the resource against the list, as well as the last four hostnames formed by starting with the last five components and successively removing the leading component. Consider the following examples:
 
-<p>The storage access policy blocks resources identified as trackers from accessing their cookies and other site storage when they are loaded in a third-party context. This prevents those resources from retrieving tracking identifiers stored in cookies or site storage and using them to identify users across visits to multiple first parties. Specifically, Firefox does this by imposing the following restrictions:</p>
+| Hostname on the list | Hostname of resource   | Matched |
+| -------------------- | ---------------------- | ------- |
+| `example.com`        | `example.com`          | Yes     |
+| `example.com`        | `a.b.example.com`      | Yes     |
+| `blah.example.com`   | `example.com`          | No      |
+| `a.b.example.com`    | `c.d.example.com`      | No      |
+| `blah.example.com`   | `foo.blah.example.com` | Yes     |
 
-<p>Cookies:</p>
+## What does the storage access policy block?
 
-<ul>
- <li>Block {{httpheader("Cookie")}} request headers and ignore {{httpheader("Set-Cookie")}} response headers.</li>
- <li>Return an empty string for calls to {{domxref("Document.cookie")}} and ignore requests to set cookies via <code>Document.cookie</code>.</li>
-</ul>
-
-<p>DOM Storage:</p>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Storage_API">localStorage</a>: <code><a href="/en-US/docs/Web/API/Window/localStorage">Window.localStorage</a></code>: read and write attempts throw a <code>SecurityError</code> exception.  Prior to Firefox 70: <code><a href="/en-US/docs/Web/API/Window/localStorage">Window.localStorage</a></code> is <code>null</code>. Thus, attempts to read and write using this object will throw a <code>TypeError</code> exception.</li>
- <li><a href="/en-US/docs/Web/API/Web_Storage_API">sessionStorage</a>: read and write attempts are permitted.</li>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>: attempting to access the IndexedDB factory object throws a <code>SecurityError</code> exception.</li>
-</ul>
-
-<p>Messaging and Workers:</p>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Broadcast_Channel_API">Broadcast Channel</a>: attempts to create a new {{domxref("BroadcastChannel")}} will throw a <code>SecurityError</code> exception.</li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API">Shared Worker</a>: attempts to create a new {{domxref("SharedWorker")}} will throw a <code>SecurityError</code> exception.</li>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker</a>: attempts to create a new {{domxref("ServiceWorker")}} will throw a <code>SecurityError</code> exception.</li>
-</ul>
-
-<p>DOM Cache:</p>
-
-<ul>
- <li>Calls to {{domxref("CacheStorage")}} will always reject with a <code>SecurityError</code>.</li>
-</ul>
-
-<p>Browser caches:</p>
-
-<ul>
- <li>The <a href="/en-US/docs/Web/HTTP/Caching">HTTP cache</a>, the Image cache, and the <a href="/en-US/docs/Web/HTTP/Headers/Alt-Svc">Alternative Services (Alt-Svc) cache</a> are all partitioned for tracking resources, such that each top-level origin will have a separate partition and tracking resources on different top-level origins will be cached separate from each other.</li>
-</ul>
+The storage access policy blocks resources identified as trackers from accessing their cookies and other site storage when they are loaded in a third-party context. This prevents those resources from retrieving tracking identifiers stored in cookies or site storage and using them to identify users across visits to multiple first parties. Specifically, Firefox does this by imposing the following restrictions:
 
-<p>Network connections:</p>
+Cookies:
 
-<ul>
- <li><a href="https://wiki.mozilla.org/Security/Server_Side_TLS#Session_Resumption">TLS sessions</a> will not be resumed using a session ticket when an HTTPS connection is made to an embedded third-party resource that is classified as a tracker.</li>
- <li><a href="/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x#persistent_connections">HTTP connection reuse</a> by domains classified as trackers is limited to requests that occur under the same top-level origin. For example, a request for content from tracker.example on news.example will not reuse an HTTP connection with a request for content from tracker.example on shopping.example or with requests that occur when tracker.example is visited directly (i.e., as a first party).</li>
-</ul>
+- Block {{httpheader("Cookie")}} request headers and ignore {{httpheader("Set-Cookie")}} response headers.
+- Return an empty string for calls to {{domxref("Document.cookie")}} and ignore requests to set cookies via `Document.cookie`.
 
-<p>HTTP Referrers</p>
+DOM Storage:
 
-<ul>
- <li>The default <a href="/en-US/docs/Web/HTTP/Headers/Referrer-Policy">Referrer Policy</a> for third-party resources classified as trackers is set to <code>strict-origin-when-cross-origin</code>.</li>
-</ul>
+- [localStorage](/en-US/docs/Web/API/Web_Storage_API): [`Window.localStorage`](/en-US/docs/Web/API/Window/localStorage): read and write attempts throw a `SecurityError` exception.  Prior to Firefox 70: [`Window.localStorage`](/en-US/docs/Web/API/Window/localStorage) is `null`. Thus, attempts to read and write using this object will throw a `TypeError` exception.
+- [sessionStorage](/en-US/docs/Web/API/Web_Storage_API): read and write attempts are permitted.
+- [IndexedDB](/en-US/docs/Web/API/IndexedDB_API): attempting to access the IndexedDB factory object throws a `SecurityError` exception.
 
-<h3 id="What_is_not_blocked_by_the_policy">What is not blocked by the policy?</h3>
+Messaging and Workers:
 
-<ol>
- <li>This policy does not currently restrict third-party storage access for resources that are not classified as tracking resources. We may choose to apply additional restrictions to third-party storage access in the future.</li>
- <li>The restrictions applied by the policy will not prevent third-party scripts classified as tracking resources from accessing storage in the main context of the page. These scripts can continue to use storage scoped to the top-level origin.</li>
- <li>Origins classified as trackers will have access to their own storage when they are loaded in a first-party context.</li>
- <li>Cross-origin resources loaded from the same eTLD+1 as the top-level context will still have access to their storage.</li>
- <li>Origins normally classified as trackers will <a href="https://github.com/mozilla-services/shavar-prod-lists#entity-list">not be blocked if the top-level page origin is determined to be from the same organization as them</a>.</li>
-</ol>
+- [Broadcast Channel](/en-US/docs/Web/API/Broadcast_Channel_API): attempts to create a new {{domxref("BroadcastChannel")}} will throw a `SecurityError` exception.
+- [Shared Worker](/en-US/docs/Web/API/Web_Workers_API): attempts to create a new {{domxref("SharedWorker")}} will throw a `SecurityError` exception.
+- [Service Worker](/en-US/docs/Web/API/Service_Worker_API): attempts to create a new {{domxref("ServiceWorker")}} will throw a `SecurityError` exception.
 
-<h2 id="Storage_access_grants">Storage access grants</h2>
+DOM Cache:
 
-<p>In order to improve web compatibility and permit third-party integrations that require storage access, Firefox will grant storage access scoped to the first party for a particular third-party origin as described in this section. Currently, Firefox includes some web compatibility heuristics that grant storage access to third-party resources classified as trackers when a user interacts with those third parties. We do this when we expect that not granting access would cause the web page to break. We also support an initial implementation of the <a href="/en-US/docs/Web/API/Storage_Access_API">Storage Access API</a>, through which embedded {{htmlelement("iframe")}}s can request storage access by calling {{domxref("Document.requestStorageAccess()")}}. Although both of these approaches provide the same level of storage access, we recommend third parties switch to using the Storage Access API in order to guarantee their access to storage.</p>
+- Calls to {{domxref("CacheStorage")}} will always reject with a `SecurityError`.
 
-<h3 id="Automatic_storage_access_upon_interaction">Automatic storage access upon interaction</h3>
+Browser caches:
 
-<p>In order to improve web compatibility, Firefox currently includes some heuristics to grant storage access automatically to third parties that receive user interaction. These heuristics are intended to allow some third-party integrations that are common on the web to continue to function. They are intended to be temporary and will be removed in a future version of Firefox. They should not be relied upon for current and future web development.</p>
+- The [HTTP cache](/en-US/docs/Web/HTTP/Caching), the Image cache, and the [Alternative Services (Alt-Svc) cache](/en-US/docs/Web/HTTP/Headers/Alt-Svc) are all partitioned for tracking resources, such that each top-level origin will have a separate partition and tracking resources on different top-level origins will be cached separate from each other.
 
-<p>Third-party storage access may be granted to resources that have been classified as tracking resources when a user gesture triggers a pop-up window that has <a href="/en-US/docs/Web/API/Window/opener">opener access</a> to the originating document. When that occurs, there are three possible ways a third-party origin can be granted access:</p>
+Network connections:
 
-<ul>
- <li>The origin of the resource that is initially loaded in the pop-up window is granted storage access on the opener document. If we discover that an origin is abusing this heuristic to gain tracking access, that origin will have the additional requirement that it must have received user interaction as a first party within the past 30 days.</li>
- <li>After the initial resource is loaded in the pop-up window, the window may go through a series of redirects to other hosts. If a user interacts with the pop-up window following a redirect, the origin of the content loaded in the pop-up window is given storage access on the opener document.</li>
- <li>When there is a top-level redirect from a tracking origin to a non-tracking origin, the tracking origin receives short-lived storage access on the non-tracking origin and any other non-tracking origins that appear further down the redirect chain (i.e., if the load continues to redirect). The tracking origin must have received user interaction as a first party within the past 30 days, and the storage access permission expires after 15 minutes.</li>
-</ul>
+- [TLS sessions](https://wiki.mozilla.org/Security/Server_Side_TLS#Session_Resumption) will not be resumed using a session ticket when an HTTPS connection is made to an embedded third-party resource that is classified as a tracker.
+- [HTTP connection reuse](/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x#persistent_connections) by domains classified as trackers is limited to requests that occur under the same top-level origin. For example, a request for content from tracker.example on news.example will not reuse an HTTP connection with a request for content from tracker.example on shopping.example or with requests that occur when tracker.example is visited directly (i.e., as a first party).
 
-<h3 id="Scope_of_storage_access">Scope of storage access</h3>
+HTTP Referrers
 
-<p>When storage access is granted, it is scoped to the origin of the opener document or subdomains of that origin. Access that is granted on the subdomain of an origin does not extend to the top-level origin. As an example, if a resource from <code>tracker.example</code> is granted storage access on <code>foo.example.com</code>, then <code>tracker.example</code> will be able to access its cookies on <code>bar.foo.example.com</code> but not <code>example.com</code>. Instead, if <code>tracker.example</code> were granted access on <code>example.com</code> it would be able to access its storage on <code>bar.foo.example.com</code>, <code>foo.example.com</code>, and <code>example.com</code>.</p>
+- The default [Referrer Policy](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) for third-party resources classified as trackers is set to `strict-origin-when-cross-origin`.
 
-<p>When storage access is granted to <code>tracker.example</code> on <code>example.com</code>, all resources loaded from <code>tracker.example</code> on any top-level document loaded from <code>example.com</code> are immediately given storage access. This includes all resources loaded in the main context of the page, embedded <code>&lt;iframe&gt;</code>s, and resources loaded within embedded <code>&lt;iframe&gt;</code>s. Storage access is not extended to other resources loaded on <code>example.com</code> (e.g. <code>other-tracker.example</code>), nor to other first parties on which <code>tracker.example</code> is embedded (e.g. <code>example.org</code>).</p>
+### What is not blocked by the policy?
 
-<p>Storage access grants extend into the first level of nested contexts, but no further. This means that <code>&lt;iframe&gt;</code>s embedded in the main context of the page and loaded from a domain classified as a tracker will have full access to all storage locations accessible through JavaScript. Similarly, requests for resources loaded in <code>&lt;iframe&gt;</code>s embedded in the main context of the page will have access to HTTP cookies. However, further nested contexts, including but not limited to those from the origin classified as a tracker, will not be granted storage access.</p>
+1.  This policy does not currently restrict third-party storage access for resources that are not classified as tracking resources. We may choose to apply additional restrictions to third-party storage access in the future.
+2.  The restrictions applied by the policy will not prevent third-party scripts classified as tracking resources from accessing storage in the main context of the page. These scripts can continue to use storage scoped to the top-level origin.
+3.  Origins classified as trackers will have access to their own storage when they are loaded in a first-party context.
+4.  Cross-origin resources loaded from the same eTLD+1 as the top-level context will still have access to their storage.
+5.  Origins normally classified as trackers will [not be blocked if the top-level page origin is determined to be from the same organization as them](https://github.com/mozilla-services/shavar-prod-lists#entity-list).
 
-<p>Consider the following embedding scenarios on a top-level page loaded from <code>example.com</code> on which <code>tracker.example</code> has been granted storage access.</p>
+## Storage access grants
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Embedding</th>
-   <th scope="col">tracker.example resource storage access</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>An image is loaded from <code>tracker.example</code> and embedded in the main context of <code>example.com</code>.</td>
-   <td>HTTP: Yes<br>
-    JS: N/A</td>
-  </tr>
-  <tr>
-   <td><code>example.com</code> embeds an <code>&lt;iframe&gt;</code> from <code>example.org</code>. That <code>&lt;iframe&gt;</code> goes on to load an image from <code>tracker.example</code>.</td>
-   <td>HTTP: Yes<br>
-    JS: N/A</td>
-  </tr>
-  <tr>
-   <td><code>example.com</code> embeds an <code>&lt;iframe&gt;</code> from <code>example.org</code>. That <code>&lt;iframe&gt;</code> goes on to embed an <code>&lt;iframe&gt;</code> from <code>tracker.example</code>.</td>
-   <td>HTTP: Yes<br>
-    JS: No</td>
-  </tr>
-  <tr>
-   <td><code>example.com</code> embeds an <code>&lt;iframe&gt;</code> from <code>tracker.example</code>.</td>
-   <td>HTTP: Yes<br>
-    JS: Yes</td>
-  </tr>
-  <tr>
-   <td><code>example.com</code> embeds an <code>&lt;iframe&gt;</code> from <code>example.com</code> (same origin). The nested <code>&lt;iframe&gt;</code> embeds an <code>&lt;iframe&gt;</code> from <code>tracker.example</code>.</td>
-   <td>HTTP: Yes<br>
-    JS: No</td>
-  </tr>
- </tbody>
-</table>
+In order to improve web compatibility and permit third-party integrations that require storage access, Firefox will grant storage access scoped to the first party for a particular third-party origin as described in this section. Currently, Firefox includes some web compatibility heuristics that grant storage access to third-party resources classified as trackers when a user interacts with those third parties. We do this when we expect that not granting access would cause the web page to break. We also support an initial implementation of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API), through which embedded {{htmlelement("iframe")}}s can request storage access by calling {{domxref("Document.requestStorageAccess()")}}. Although both of these approaches provide the same level of storage access, we recommend third parties switch to using the Storage Access API in order to guarantee their access to storage.
 
-<h3 id="Storage_access_expiration">Storage access expiration</h3>
+### Automatic storage access upon interaction
 
-<p>The storage access grant expires after 30 days. Domains classified as tracking resources may be granted third-party storage access on multiple first parties, and the storage permission for each party expires independently. The above heuristics will also serve to extend the lifetime of a third-party storage permission on origins that have already been granted access.  Each time the heuristic is activated, or a success call to the Storage Access API is made, the pre-existing storage access expiration will be extended by 30 days, counting from the time the previous access was granted.</p>
+In order to improve web compatibility, Firefox currently includes some heuristics to grant storage access automatically to third parties that receive user interaction. These heuristics are intended to allow some third-party integrations that are common on the web to continue to function. They are intended to be temporary and will be removed in a future version of Firefox. They should not be relied upon for current and future web development.
 
-<p>Please note that in the future we expect to make changes to how long storage access will remain valid for.  As mentioned before, the way to know that you will be able to use storage as a third-party going forward will be using the Storage Access API.</p>
+Third-party storage access may be granted to resources that have been classified as tracking resources when a user gesture triggers a pop-up window that has [opener access](/en-US/docs/Web/API/Window/opener) to the originating document. When that occurs, there are three possible ways a third-party origin can be granted access:
 
-<h2 id="Debugging">Debugging</h2>
+- The origin of the resource that is initially loaded in the pop-up window is granted storage access on the opener document. If we discover that an origin is abusing this heuristic to gain tracking access, that origin will have the additional requirement that it must have received user interaction as a first party within the past 30 days.
+- After the initial resource is loaded in the pop-up window, the window may go through a series of redirects to other hosts. If a user interacts with the pop-up window following a redirect, the origin of the content loaded in the pop-up window is given storage access on the opener document.
+- When there is a top-level redirect from a tracking origin to a non-tracking origin, the tracking origin receives short-lived storage access on the non-tracking origin and any other non-tracking origins that appear further down the redirect chain (i.e., if the load continues to redirect). The tracking origin must have received user interaction as a first party within the past 30 days, and the storage access permission expires after 15 minutes.
 
-<p>We encourage site owners to test their sites, particularly those that rely on third-party content integrations. We’ve added several new features to Firefox to make testing easier.</p>
+### Scope of storage access
 
-<h3 id="Developer_Tools_notifications">Developer Tools notifications</h3>
+When storage access is granted, it is scoped to the origin of the opener document or subdomains of that origin. Access that is granted on the subdomain of an origin does not extend to the top-level origin. As an example, if a resource from `tracker.example` is granted storage access on `foo.example.com`, then `tracker.example` will be able to access its cookies on `bar.foo.example.com` but not `example.com`. Instead, if `tracker.example` were granted access on `example.com` it would be able to access its storage on `bar.foo.example.com`, `foo.example.com`, and `example.com`.
 
-<p>The <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> in Firefox Developer Tools now includes an indicator for all resource requests that have been classified as tracking resources. This indicator is shown as a shield icon in the domain column. In the sample image below, <code>trackertest.org</code> is classified as a tracking resource, while the request to example.com is not.</p>
+When storage access is granted to `tracker.example` on `example.com`, all resources loaded from `tracker.example` on any top-level document loaded from `example.com` are immediately given storage access. This includes all resources loaded in the main context of the page, embedded `<iframe>`s, and resources loaded within embedded `<iframe>`s. Storage access is not extended to other resources loaded on `example.com` (e.g. `other-tracker.example`), nor to other first parties on which `tracker.example` is embedded (e.g. `example.org`).
 
-<p><img alt="network requests in Firefox devtools indicating which ones are tracking resources with a small shield icon" src="screen_shot_2018-09-21_at_10.34.22_am.png"></p>
+Storage access grants extend into the first level of nested contexts, but no further. This means that `<iframe>`s embedded in the main context of the page and loaded from a domain classified as a tracker will have full access to all storage locations accessible through JavaScript. Similarly, requests for resources loaded in `<iframe>`s embedded in the main context of the page will have access to HTTP cookies. However, further nested contexts, including but not limited to those from the origin classified as a tracker, will not be granted storage access.
 
-<h3 id="Adding_custom_domains_to_the_Tracking_Protection_list">Adding custom domains to the Tracking Protection list</h3>
+Consider the following embedding scenarios on a top-level page loaded from `example.com` on which `tracker.example` has been granted storage access.
 
-<p>Curious how things will work if a third-party domain on your site were classified as a tracker? We’ve added a preference that allows you to add custom domains to the Tracking Protection URL classifier. To do so:</p>
+| Embedding                                                                                                                               | tracker.example resource storage access |
+| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| An image is loaded from `tracker.example` and embedded in the main context of `example.com`.                                            | HTTP: Yes JS: N/A                       |
+| `example.com` embeds an `<iframe>` from `example.org`. That `<iframe>` goes on to load an image from `tracker.example`.                 | HTTP: Yes JS: N/A                       |
+| `example.com` embeds an `<iframe>` from `example.org`. That `<iframe>` goes on to embed an `<iframe>` from `tracker.example`.           | HTTP: Yes JS: No                        |
+| `example.com` embeds an `<iframe>` from `tracker.example`.                                                                              | HTTP: Yes JS: Yes                       |
+| `example.com` embeds an `<iframe>` from `example.com` (same origin). The nested `<iframe>` embeds an `<iframe>` from `tracker.example`. | HTTP: Yes JS: No                        |
 
-<ol>
- <li>Type <code>about:config</code> in your address bar. If you are presented with a page that warns you "This may void your warranty!", click "I accept the risk!"</li>
- <li>Search for the preference name "urlclassifier.trackingAnnotationTable.testEntries".</li>
- <li>If the preference already exists, edit the preference value.</li>
- <li>If the preference does not exist, click "String" and then "+" to create a new preference.</li>
- <li>For the preference value enter comma separated origins that you’d like to have classified as trackers. E.g. "example.net,example.org".</li>
-</ol>
+### Storage access expiration
 
-<div class="warning">
-<p><strong>Warning:</strong> Be sure to remove these entries after you have finished testing.</p>
-</div>
+The storage access grant expires after 30 days. Domains classified as tracking resources may be granted third-party storage access on multiple first parties, and the storage permission for each party expires independently. The above heuristics will also serve to extend the lifetime of a third-party storage permission on origins that have already been granted access.  Each time the heuristic is activated, or a success call to the Storage Access API is made, the pre-existing storage access expiration will be extended by 30 days, counting from the time the previous access was granted.
 
-<h2 id="FAQ">FAQ</h2>
+Please note that in the future we expect to make changes to how long storage access will remain valid for.  As mentioned before, the way to know that you will be able to use storage as a third-party going forward will be using the Storage Access API.
 
-<p>This cookie policy has the potential to lead to site breakage, but has been designed to allow common third-party integrations to continue to work while preventing cross-site tracking. In this section we describe the functionality you can expect in different integration scenarios.</p>
+## Debugging
 
-<h3 id="Will_this_storage_access_policy_block_ads_from_displaying_on_my_website">Will this storage access policy block ads from displaying on my website?</h3>
+We encourage site owners to test their sites, particularly those that rely on third-party content integrations. We’ve added several new features to Firefox to make testing easier.
 
-<p>No — this feature only restricts access to cookies and site data that can be used to track users across websites. Blocking tracking identifiers does not prevent the display of advertisements.</p>
+### Developer Tools notifications
 
-<h3 id="I_use_a_third-party_analytics_service_that_is_classified_as_a_tracker._Will_I_still_receive_analytics_data">I use a third-party analytics service that is classified as a tracker. Will I still receive analytics data?</h3>
+The [Network Monitor](/en-US/docs/Tools/Network_Monitor) in Firefox Developer Tools now includes an indicator for all resource requests that have been classified as tracking resources. This indicator is shown as a shield icon in the domain column. In the sample image below, `trackertest.org` is classified as a tracking resource, while the request to example.com is not.
 
-<p>This depends on how the third-party analytics service is implemented. Third-party analytics providers will no longer be able to user their third-party storage to collect data. This means that providers using cookies which are scoped to their third-party domain, or local storage and other site data stored under their origin, will no longer have access to those identifiers across other websites.</p>
+![network requests in Firefox devtools indicating which ones are tracking resources with a small shield icon](screen_shot_2018-09-21_at_10.34.22_am.png)
 
-<p>If these services are embedded into the main context of the page, they can continue to use first-party cookies and site storage to track users across page visits on that specific first-party domain.</p>
+### Adding custom domains to the Tracking Protection list
 
-<h3 id="I_use_third-party_services_for_social_login_like_and_share_button_integration._Will_my_users_still_be_able_to_make_use_of_these_services">I use third-party services for social login, like, and share button integration. Will my users still be able to make use of these services?</h3>
+Curious how things will work if a third-party domain on your site were classified as a tracker? We’ve added a preference that allows you to add custom domains to the Tracking Protection URL classifier. To do so:
 
-<p>This depends on how the social integration is implemented. We expect that many of the popular social integrations will continue to function as they do under Firefox’s current cookie policy with some minor differences in the user experience.</p>
+1.  Type `about:config` in your address bar. If you are presented with a page that warns you "This may void your warranty!", click "I accept the risk!"
+2.  Search for the preference name "urlclassifier.trackingAnnotationTable.testEntries".
+3.  If the preference already exists, edit the preference value.
+4.  If the preference does not exist, click "String" and then "+" to create a new preference.
+5.  For the preference value enter comma separated origins that you’d like to have classified as trackers. E.g. "example.net,example.org".
 
-<p>A social content provider that is classified as a tracker will not have access to their third-party cookies when the user first visits a new first party. Thus, the user may appear logged out to the service despite being logged in when they visit the provider’s website directly. Depending on the type of integration, the user may have to take some action to interact with the social content provider before the provider is given access to their cookies. For example:</p>
+> **Warning:** Be sure to remove these entries after you have finished testing.
 
-<ul>
- <li>For social login, the user may have to click a login button on the first party.</li>
- <li>For social like or share buttons, the user will have to first interact with the button in a logged-out state. Once they do, many social content providers will prompt them to log in.</li>
-</ul>
+## FAQ
 
-<p>After these interactions, the provider will receive third-party storage access if they prompt the user in a way that is captured by the storage access activation heuristics described above. These providers should consider switching to explicitly request storage access through the Storage Access API as soon as possible. An <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1469714">initial implementation of this API</a> is currently available in Nightly.</p>
+This cookie policy has the potential to lead to site breakage, but has been designed to allow common third-party integrations to continue to work while preventing cross-site tracking. In this section we describe the functionality you can expect in different integration scenarios.
 
-<h3 id="I_use_third-party_pixels_and_other_tools_to_measure_the_effectiveness_of_my_ad_campaigns._Will_I_still_be_able_to_measure_the_conversion_rate_of_my_ads">I use third-party pixels and other tools to measure the effectiveness of my ad campaigns. Will I still be able to measure the conversion rate of my ads?</h3>
+### Will this storage access policy block ads from displaying on my website?
 
-<p>This depends on how the third party has implemented the measurement tool, but generally ad conversion measurement will be more difficult. Consider the following examples:</p>
+No — this feature only restricts access to cookies and site data that can be used to track users across websites. Blocking tracking identifiers does not prevent the display of advertisements.
 
-<ol>
- <li>You run an ad on a social media website that is seen several times by a user, but never clicked. That user later visits your website, which includes a conversion tracking tag from the same social media website. This type of conversion is often referred to as a “view-through conversion.” Since the social media website does not have access to their third-party storage, they will not recognize the user as the same user that saw the advertisements on their website and the conversion will not be tracked. We expect that most view-through conversion tracking techniques will no longer work, including those offered by display networks.</li>
- <li>You run an ad on a display network or social media website that is clicked by a user. That user lands on your website, which includes a conversion tracking tag from the same website that displayed your ad. This type of conversion is often referred to as a “click-through conversion.” Since the social media site or display network will not have access to their third-party storage, they will not recognize the user as the same user that saw the advertisements on their website and the conversion will not be tracked. We expect that this version of click-through conversion will no longer work.</li>
- <li>You run an ad that appears on a social media website. A user clicks on your advertisement and is taken to a landing page that contains a conversion tracking tag from the third-party network. On the social media website, the network annotates the advertisement landing page URL with a query parameter that signals that the visit was the result of a click on an advertisement. On your website, the display network’s tag checks the URL query parameters and saves any ad tracking parameters to first-party storage. If a user later completes a conversion event, the network’s tag checks first-party storage to determine which click (or clicks) was responsible for the visit. We expect that click-through conversion implemented in this way will continue to work.</li>
-</ol>
+### I use a third-party analytics service that is classified as a tracker. Will I still receive analytics data?
+
+This depends on how the third-party analytics service is implemented. Third-party analytics providers will no longer be able to user their third-party storage to collect data. This means that providers using cookies which are scoped to their third-party domain, or local storage and other site data stored under their origin, will no longer have access to those identifiers across other websites.
+
+If these services are embedded into the main context of the page, they can continue to use first-party cookies and site storage to track users across page visits on that specific first-party domain.
+
+### I use third-party services for social login, like, and share button integration. Will my users still be able to make use of these services?
+
+This depends on how the social integration is implemented. We expect that many of the popular social integrations will continue to function as they do under Firefox’s current cookie policy with some minor differences in the user experience.
+
+A social content provider that is classified as a tracker will not have access to their third-party cookies when the user first visits a new first party. Thus, the user may appear logged out to the service despite being logged in when they visit the provider’s website directly. Depending on the type of integration, the user may have to take some action to interact with the social content provider before the provider is given access to their cookies. For example:
+
+- For social login, the user may have to click a login button on the first party.
+- For social like or share buttons, the user will have to first interact with the button in a logged-out state. Once they do, many social content providers will prompt them to log in.
+
+After these interactions, the provider will receive third-party storage access if they prompt the user in a way that is captured by the storage access activation heuristics described above. These providers should consider switching to explicitly request storage access through the Storage Access API as soon as possible. An [initial implementation of this API](https://bugzilla.mozilla.org/show_bug.cgi?id=1469714) is currently available in Nightly.
+
+### I use third-party pixels and other tools to measure the effectiveness of my ad campaigns. Will I still be able to measure the conversion rate of my ads?
+
+This depends on how the third party has implemented the measurement tool, but generally ad conversion measurement will be more difficult. Consider the following examples:
+
+1.  You run an ad on a social media website that is seen several times by a user, but never clicked. That user later visits your website, which includes a conversion tracking tag from the same social media website. This type of conversion is often referred to as a “view-through conversion.” Since the social media website does not have access to their third-party storage, they will not recognize the user as the same user that saw the advertisements on their website and the conversion will not be tracked. We expect that most view-through conversion tracking techniques will no longer work, including those offered by display networks.
+2.  You run an ad on a display network or social media website that is clicked by a user. That user lands on your website, which includes a conversion tracking tag from the same website that displayed your ad. This type of conversion is often referred to as a “click-through conversion.” Since the social media site or display network will not have access to their third-party storage, they will not recognize the user as the same user that saw the advertisements on their website and the conversion will not be tracked. We expect that this version of click-through conversion will no longer work.
+3.  You run an ad that appears on a social media website. A user clicks on your advertisement and is taken to a landing page that contains a conversion tracking tag from the third-party network. On the social media website, the network annotates the advertisement landing page URL with a query parameter that signals that the visit was the result of a click on an advertisement. On your website, the display network’s tag checks the URL query parameters and saves any ad tracking parameters to first-party storage. If a user later completes a conversion event, the network’s tag checks first-party storage to determine which click (or clicks) was responsible for the visit. We expect that click-through conversion implemented in this way will continue to work.

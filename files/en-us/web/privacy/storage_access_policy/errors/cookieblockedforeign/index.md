@@ -8,30 +8,25 @@ tags:
   - storage access policy
   - tracking
 ---
+## Message
 
-<h2 id="Message">Message</h2>
+Firefox:
 
-<p>Firefox:</p>
+    CookieBlockedForeign=Request to access cookies or storage on “X” was blocked because we are blocking all third-party storage access requests and content blocking is enabled.
 
-<pre class="syntaxbox">CookieBlockedForeign=Request to access cookies or storage on “X” was blocked because we are blocking all third-party storage access requests and content blocking is enabled.</pre>
+## What went wrong?
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+A request to access cookies or storage was blocked because it came from a third-party (a different origin) and content blocking is enabled.
 
-<p>A request to access cookies or storage was blocked because it came from a third-party (a different origin) and content blocking is enabled.</p>
+The permission can be changed or removed by:
 
-<p>The permission can be changed or removed by:</p>
+- Going to _Preferences > Content Blocking_ and either
+- adding an exception with the _Manage Exceptions_… button
+- choosing the _Custom_ Content Blocking and unchecking the _Cookies_ checkbox
 
-<ul>
- <li>Going to <em>Preferences &gt; Content Blocking </em>and either</li>
- <li>adding an exception with the <em>Manage Exceptions</em>… button</li>
- <li>choosing the <em>Custom</em> Content Blocking and unchecking the <em>Cookies</em> checkbox</li>
-</ul>
+If the resource that is being blocked doesn't need authentication, you can fix the warning message by adding a `crossorigin="anonymous"` attribute to the relevant element.
 
-<p>If the resource that is being blocked doesn't need authentication, you can fix the warning message by adding a <code>crossorigin="anonymous"</code> attribute to the relevant element.</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://support.mozilla.org/en-US/kb/content-blocking">Content blocking</a> on <a href="https://support.mozilla.org">support.mozilla.org</a></li>
- <li><a href="/en-US/docs/Web/HTML/Attributes/crossorigin">The <code>crossorigin</code> attribute</a></li>
-</ul>
+- [Content blocking](https://support.mozilla.org/en-US/kb/content-blocking) on [support.mozilla.org](https://support.mozilla.org)
+- [The `crossorigin` attribute](/en-US/docs/Web/HTML/Attributes/crossorigin)
