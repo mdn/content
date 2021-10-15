@@ -330,7 +330,7 @@ AV1 Image File Format (AVIF) is a powerful, open source, royalty-free file for
 > **Note:** AVIF has potential to become the "next big thing" for sharing images in web content.
 > It offers state-of-the-art features and performance, without the encumbrance of complicated licensing and patent royalties that have hampered comparable alternatives.
 
-_AV1 is a coding format that was originally designed for video transmission over the Internet. The format benefits from the signficant advances in video encoding in recent years, and may potentially benefit from the associated support for hardware rendering. However it also has disadvantages for some cases, as video and image encoding have some different requirements._
+AV1 is a coding format that was originally designed for video transmission over the Internet. The format benefits from the signficant advances in video encoding in recent years, and may potentially benefit from the associated support for hardware rendering. However it also has disadvantages for some cases, as video and image encoding have some different requirements.
 
 The format offers:
 

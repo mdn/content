@@ -1,6 +1,5 @@
 ---
-title: >-
-  Mapping the width and height attributes of media container elements to their
+title: Mapping the width and height attributes of media container elements to their
   aspect-ratio
 slug: Web/Media/images/aspect_ratio_mapping
 tags:
