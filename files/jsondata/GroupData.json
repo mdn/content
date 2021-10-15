@@ -406,8 +406,7 @@
         "MediaKeys",
         "MediaKeySession",
         "MediaKeyStatusMap",
-        "MediaKeySystemAccess",
-        "MediaKeySystemConfiguration"
+        "MediaKeySystemAccess"
       ],
       "methods": [
         "Navigator.requestMediaKeySystemAccess()",

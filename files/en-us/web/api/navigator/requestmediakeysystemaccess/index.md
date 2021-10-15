@@ -44,8 +44,7 @@ promise = navigator.requestMediaKeySystemAccess(keySystem, supportedConfiguratio
   - : A {{domxref('DOMString')}} identifying the key system. For example
     `com.example.somesystem` or `org.w3.clearkey`.
 - `supportedConfigurations`
-  - : A non-empty {{jsxref('Array')}} of {{domxref('MediaKeySystemConfiguration')}}
-    objects. The first element with a satisfiable configuration will be used.
+  - : A non-empty {{jsxref('Array')}} of objects conforming to the object returned by {{domxref("MediaKeySystemAccess.getConfiguration")}}. The first element with a satisfiable configuration will be used.
 
 ### Return value
 
