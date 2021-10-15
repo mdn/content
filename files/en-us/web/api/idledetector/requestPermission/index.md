@@ -40,6 +40,7 @@ startButton.addEventListener('click', async () => {
     console.error("Idle detection permission denied.");
     return;
   }
+})
 ```
 
 ## Specifications
