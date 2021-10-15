@@ -88,7 +88,7 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
 - {{DOMxRef("Element.openOrClosedShadowRoot")}} {{Non-standard_Inline}}{{readOnlyInline}}
   - : Returns the shadow root that is hosted by the element, regardless if its open or closed. **Available only to [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).**
 - {{DOMxRef("Element.setHTML")}}
-  - : Applies a string using a {{DOMxRef("Sanitizer")}} directly to an existing element node.
+  - : Parses and [sanitizes](/en-US/docs/Web/API/HTML_Sanitizer_API) a string of HTML and inserts into the DOM as a subtree of the element.
 - {{DOMxRef("Element.slot")}} {{Experimental_Inline}}
   - : Returns the name of the shadow DOM slot the element is inserted in.
 - {{DOMxRef("Element.tagName")}} {{readOnlyInline}}
