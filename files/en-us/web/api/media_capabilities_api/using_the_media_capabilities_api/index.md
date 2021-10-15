@@ -103,8 +103,6 @@ navigator.mediaCapabilities.decodingInfo(videoConfiguration).then(result => {
 });
 ```
 
-The response provided is defined by the  [`MediaCapabilitiesInfo`](https://w3c.github.io/media-capabilities/#media-capabilities-info) dictionary.
-
 ## Handling errors
 
 In our video decoding example, a `TypeError` would be raised if the media configuration passed to the {{domxref("MediaCapabilities.decodingInfo", "decodingInfo()")}} method was invalid. There are a few reasons why an error might occur, including:
