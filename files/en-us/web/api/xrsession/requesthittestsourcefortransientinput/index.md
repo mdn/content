@@ -44,7 +44,7 @@ A {{jsxref("Promise")}} that resolves with an {{domxref("XRTransientInputHitTest
 
 ### Exceptions
 
-Rather than throwing true exceptions, `requestHitTestSourceForTransientInput()` rejects the
+Rather than throwing true exceptions, `requestHitTestSourceForTransientInput()` rejects the
 returned promise with a {{domxref("DOMException")}}, specifically, one of the following:
 
 - `NotSupportedError`

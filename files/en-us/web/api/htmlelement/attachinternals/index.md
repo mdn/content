@@ -29,11 +29,11 @@ An {{domxref("ElementInternals")}} object.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NotSupportedError`
+- `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the element is not a custom element.
-- {{domxref("DOMException")}} `NotSupportedError`
+- `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the "internals" feature was disabled as part of the element definition.
-- {{domxref("DOMException")}} `NotSupportedError`
+- `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if this method is called twice on the same element.
 
 ## Examples

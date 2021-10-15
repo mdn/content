@@ -25,7 +25,7 @@ A {{domxref("ValidityState")}} object.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NotSupportedError`
+- `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the element does not have its `formAssociated` property set to `true`.
 
 ## Examples

@@ -41,12 +41,12 @@ requestSession(mode, options)
   - : A {{jsxref("String")}} defining the XR session mode. The supported modes are:
 
     - {{experimental_inline}} `immersive-ar`: The session's output will be given exclusive access to the immersive device,
-      but the rendered content will be blended with the real-world environment.
-      The session's {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} indicates the method
+      but the rendered content will be blended with the real-world environment.
+      The session's {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} indicates the method
       to be used to blend the content together.
     - `immersive-vr`: Indicates that the rendered session will be displayed using an immersive XR device
       in VR mode; it is not intended to be overlaid or integrated into the surrounding environment.
-      The {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} is expected to be
+      The {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} is expected to be
       `opaque` if possible, but might be `additive` if the hardware requires it.
     - `inline`: The output is presented inline within the context of an element in a standard HTML document,
       rather than occupying the full visual space. Inline sessions can be presented in either mono or stereo mode,
@@ -56,7 +56,7 @@ requestSession(mode, options)
 - `options` {{optional_inline}}
 
   - : An object to configure the {{domxref("XRSession")}}. If none are included, the device will use a default feature configuration for all options.
-    - `requiredFeatures` {{optional_inline}}: An array of values which the returned {{domxref("XRSession")}}
+    - `requiredFeatures` {{optional_inline}}: An array of values which the returned {{domxref("XRSession")}}
       _must_ support. See [Session features](#session_features) below.
     - `optionalFeatures` {{optional_inline}}: An array of values identifying features which the returned
       {{domxref("XRSession")}} may optionally support. See [Session features](#session_features) below.

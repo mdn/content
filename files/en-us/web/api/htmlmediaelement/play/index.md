@@ -47,12 +47,12 @@ The promise's **rejection handler** is called with an exception name
 passed in as its sole input parameter (as opposed to a traditional exception being
 thrown). Possible errors include:
 
-- `NotAllowedError`
-  - : The user agent (browser) or operating system doesn't allow playback of media in the
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Provided if the user agent (browser) or operating system doesn't allow playback of media in the
     current context or situation. This may happen, for example, if the browser requires
     the user to explicitly start media playback by clicking a "play" button.
-- `NotSupportedError`
-  - : The media source (which may be specified as a {{domxref("MediaStream")}},
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Provided if the media source (which may be specified as a {{domxref("MediaStream")}},
     {{domxref("MediaSource")}}, {{domxref("Blob")}}, or {{domxref("File")}}, for example)
     doesn't represent a supported media format.
 
@@ -78,8 +78,7 @@ UI based on whether the returned promise is fulfilled or rejected. See the
 > returned promise is resolved. Be sure your code doesn't expect an immediate response.
 
 For even more in-depth information about autoplay and autoplay blocking, see our
-article [Autoplay guide for media and Web
-Audio APIs](/en-US/docs/Web/Media/Autoplay_guide).
+article [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide).
 
 ## Example
 
@@ -127,8 +126,7 @@ playback on and off. It then sets up an event handler for the {{event("click")}}
 on the play toggle button and attempts to automatically begin playback by calling
 `playVideo()`.
 
-You can [try out or remix this example
-in real time on Glitch](https://media-play-promise.glitch.me/).
+You can [try out or remix this example in real time on Glitch](https://media-play-promise.glitch.me/).
 
 ## Specifications
 
@@ -141,9 +139,6 @@ in real time on Glitch](https://media-play-promise.glitch.me/).
 ## See also
 
 - [Web media technologies](/en-US/docs/Web/Media)
-- Learning: [Video
-  and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [Autoplay guide for media and Web
-  Audio APIs](/en-US/docs/Web/Media/Autoplay_guide)
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- Learning: [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
