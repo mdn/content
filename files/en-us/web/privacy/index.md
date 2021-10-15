@@ -79,9 +79,7 @@ There are several web technologies and features at play to manage privacy and se
   <tbody>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/Security/Certificate_Transparency"
-          >Certificate Transparency</a
-        >
+        <a href="/en-US/docs/Web/Security/Certificate_Transparency">Certificate Transparency</a>
       </td>
       <td>
         An open standard for monitoring and auditing certificates, creating a
@@ -118,10 +116,7 @@ There are several web technologies and features at play to manage privacy and se
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/HTTP/Public_Key_Pinning"
-          >HTTP Public Key Pinning</a
-        >
-        (HPKP)
+        <a href="/en-US/docs/Web/HTTP/Public_Key_Pinning">HTTP Public Key Pinning</a> (HPKP)
       </td>
       <td>
         HPKP is used by servers to instruct a client to associate a specific
@@ -131,10 +126,7 @@ There are several web technologies and features at play to manage privacy and se
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security"
-          >HTTP Strict Transport Security</a
-        >
-        (HSTS)
+        <a href="/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">HTTP Strict Transport Security</a> (HSTS)
       </td>
       <td>
         HSTS is used by servers to let them protect themselves from protocol
@@ -159,9 +151,7 @@ There are several web technologies and features at play to manage privacy and se
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/Security/Transport_Layer_Security"
-          >Transport Layer Security</a
-        >
+        <a href="/en-US/docs/Web/Security/Transport_Layer_Security">Transport Layer Security</a>
         (TLS); formerly known as Secure Sockets Layer (SSL)
       </td>
       <td>
