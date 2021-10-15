@@ -40,11 +40,11 @@ Before we go into any depth about the various security and privacy features avai
 
 ## Personal and private information
 
-\<what kind of information is private or personal?>
+<!--what kind of information is private or personal?-->
 
 ## Privacy risks
 
-\<what are ways personal information can be gotten by third parties?>
+<!--what are ways personal information can be gotten by third parties?-->
 
 ### Fingerprinting
 
@@ -58,7 +58,7 @@ For example, if a web site queries a user's browser for the elapsed time, a comp
 
 Web browsers are actively working on improving the privacy space through new features:
 
-{{ ListSubpages () }}
+{{ListSubpages()}}
 
 ## Privacy and security controls
 
@@ -182,7 +182,7 @@ Not all of these are generally directly used within code; notably, the [Permissi
 
 ## Bringing it all together
 
-\<using Feature Policy with permissions and so forth; how to use them together, how they interact, etc>
+<!--using Feature Policy with permissions and so forth; how to use them together, how they interact, etc-->
 
 ### Permission requests in \<iframe> elements
 
@@ -190,13 +190,13 @@ Things can get tricky when your web app uses the {{HTMLElement("iframe")}} eleme
 
 While specifications for these technologies either state or recommend tactics for handling situations like this, browsers may offer different solutions to improve security even further or to try new features, or try to reduce complexity for users, among other possible reasons.
 
-<--- allow attribute, feature policy, and permissions api stuff --->
+<!-- allow attribute, feature policy, and permissions api stuff -->
 
 A specific user experience issue that often arises is a document that's loaded with permission to access a resource and the document contains an {{HTMLElement("iframe")}} with the {{htmlattrxref("allow", "iframe")}} attribute to delegate that permission to the contents of the frame. In this case, it's possible for the user to wind up being prompted repeatedly for that same resource, first by the main page, then by the document in the frame.
 
 Browsers may choose to provide ways around this. For example, in Firefox 73, the user permission requests were revised so that when an `<iframe>` uses the `allow` keyword to delegate permission to the embedded document, the browser asks the user to grant the parent document permission to use the resource, and that permission is then shared with the embedded content that requested the resource to begin with.
 
-<-- diagram and/or code snippet to clarify things-->
+<!-- diagram and/or code snippet to clarify things-->
 
 ## See also
 
