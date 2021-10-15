@@ -73,7 +73,7 @@ myHTMLElement.ariaChecked = true;
 | Specification         | Status            |
 | ---------------- | ---------------- |
 | {{SpecName("ARIA","#aria-checked","ARIA: aria-checked Attribute")}}              | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria-checked","using aria-checked")}} | {{Spec2('ARIA Authoring Practices')}} |
+| {{SpecName("ARIA Authoring Practices 1.2","#checkbox","Checkbox role with `aria-checked`")}} | {{Spec2('ARIA Authoring Practices')}} |
 
 ## See Also
 
@@ -81,7 +81,9 @@ myHTMLElement.ariaChecked = true;
 - [`<input type="radio">`](en-US/docs/Web/HTML/Element/Input/radio)
 - [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
 - [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected).
-
+- [Two state checkbox example](https://www.w3.org/TR/wai-aria-practices-1.2/examples/checkbox/checkbox-1/checkbox-1.html) - w3.org
+- [Tri-state checkbox example](https://www.w3.org/TR/wai-aria-practices-1.2/examples/checkbox/checkbox-2/checkbox-2.html) - w3.org
+- 
 <section id="Quick_links">
 
 1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
