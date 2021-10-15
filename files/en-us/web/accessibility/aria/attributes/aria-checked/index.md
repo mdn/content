@@ -10,7 +10,7 @@ tags:
   - aria-checked
 ---
 
-The  `aria-checked` attribute indicates the current "checked" state of checkboxes, radio buttons, and other widgets. See related [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) and [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected).
+The  `aria-checked` attribute indicates the current "checked" state of checkboxes, radio buttons, and other widgets. 
 
 
 > **Note:** Where possible use an HTML {{htmlelement("input")}} element with `type="checkbox"` and `type="radio"` as these have built in semantics and do not require ARIA attributes.
@@ -79,6 +79,8 @@ myHTMLElement.ariaChecked = true;
 
 - [`<input type="checkbox`](en-US/docs/Web/HTML/Element/Input/checkbox)
 - [`<input type="radio">`](en-US/docs/Web/HTML/Element/Input/radio)
+- [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
+- [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected).
 
 <section id="Quick_links">
 
