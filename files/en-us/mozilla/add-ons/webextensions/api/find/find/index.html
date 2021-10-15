@@ -101,9 +101,9 @@ browser-compat: webextensions.api.find.find
 
   <p>For example, consider part of a web page that looks like this:</p>
 
-  <p><img alt="" src="rects-1.png" style="display: block; margin-left: auto; margin-right: auto;">If you search for "You may", the match needs to be described by two rectangles:</p>
+  <p><img alt="" src="rects-1.png">If you search for "You may", the match needs to be described by two rectangles:</p>
 
-  <p><img alt="" src="rects-2.png" style="display: block; margin-left: auto; margin-right: auto;">In this case, in the <code>RectData</code> that describes this match, <code>rectsAndTexts.rectList</code> and <code>rectsAndTexts.textList</code> will each have 2 items.</p>
+  <p><img alt="" src="rects-2.png">In this case, in the <code>RectData</code> that describes this match, <code>rectsAndTexts.rectList</code> and <code>rectsAndTexts.textList</code> will each have 2 items.</p>
 
   <ul>
    <li><code>textList[0]</code> will contain "You ", and <code>rectList[0]</code> will contain its bounding rectangle.</li>
@@ -228,7 +228,7 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) =&gt; {
 
 <p>In this example the extension uses <code>rectData</code> to "redact" the matches, by adding black DIVs over the top of their bounding rectangles:</p>
 
-<p><img alt="" src="redacted.png" style="display: block; margin-left: auto; margin-right: auto;">Note that in many ways this is a poor way to redact pages.</p>
+<p><img alt="" src="redacted.png">Note that in many ways this is a poor way to redact pages.</p>
 
 <p>The background script:</p>
 
