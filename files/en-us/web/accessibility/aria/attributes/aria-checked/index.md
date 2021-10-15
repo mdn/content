@@ -62,7 +62,7 @@ Used in roles:
 
 ## ARIAMixin API
 
-The **`ariaChecked`** property of the {{domxref("ARIAMixin")}} interface reflects the value of the `aria-checked` attribute, which indicates the current "checked" state of checkboxes, radio buttons, and other widgets that have a checked state.
+The {domxref("ariaChecked")}} property of the {{domxref("ARIAMixin")}} interface,  reflects the value of the `aria-checked` attribute, which indicates the current "checked" state of checkboxes, radio buttons, and other widgets that have a checked state.
 
 ```js
 myHTMLElement.ariaChecked = true;
