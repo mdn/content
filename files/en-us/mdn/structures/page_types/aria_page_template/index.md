@@ -7,147 +7,114 @@ tags:
   - Reference
   - Template
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<h2 id="Page_includes">Page includes</h2>
+## Page includes
 
-<h3 id="Title_and_slug">Title and slug</h3>
+### Title and slug
 
-<p>An ARIA role page should have a <em>title</em> and <em>slug</em> of <em>ARIA:Name</em>Of<em>TheRole</em>. For example, the <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">button role</a> has a <em>title</em> and <em>slug</em> of <em>ARIA/NameOfTheRole_role</em> and the <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby </a>attribute has a title of <em>ARIA-labelledby Attribute.</em></p>
+An ARIA role page should have a _title_ and _slug_ of *ARIA:Name*Of*TheRole*. For example, the [button role](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role) has a _title_ and _slug_ of _ARIA/NameOfTheRole_role_ and the [aria-labelledby ](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)attribute has a title of _ARIA-labelledby Attribute._
 
-<h3 id="Top_macros">Top macros</h3>
+### Top macros
 
-<p>A number of macro calls appear at the top of the content section. You should update or delete them according to the advice below:</p>
+A number of macro calls appear at the top of the content section. You should update or delete them according to the advice below:
 
-<ul>
- <li>\{{deprecated_header}}—generates a <strong>Deprecated</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>. If it isn't, then you can remove the macro call.</li>
- <li>\{{ariaref}}—generates a suitable ARIA sidebar, depending on what tags are included on the page.</li>
-</ul>
+- \\{{deprecated_header}}—generates a **Deprecated** banner that indicates the technology is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete). If it isn't, then you can remove the macro call.
+- \\{{ariaref}}—generates a suitable ARIA sidebar, depending on what tags are included on the page.
 
-<h3 id="Tags">Tags</h3>
+### Tags
 
-<p>In ARIA role or attribute subpages, you need to include the following tags (see the <em>Tags</em> section at the bottom of the editor UI): <strong>ARIA</strong>, <strong>Reference</strong>, <strong>ARIA Role</strong> or <strong>ARIA Attribute</strong>, <em>the name of the Role or Attribute</em> (e.g. <strong>ARIA button</strong> or <strong>aria-labelledby</strong>), <strong>ARIA widget,</strong> <strong>Experimental</strong> (if the role or attribute is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>), and <strong>Deprecated</strong> (if it is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>).</p>
+In ARIA role or attribute subpages, you need to include the following tags (see the _Tags_ section at the bottom of the editor UI): **ARIA**, **Reference**, **ARIA Role** or **ARIA Attribute**, _the name of the Role or Attribute_ (e.g. **ARIA button** or **aria-labelledby**), **ARIA widget,** **Experimental** (if the role or attribute is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)), and **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)).
 
-<h3 id="Specifications">Specifications</h3>
+### Specifications
 
-<p>Update the fragment link within the following specifications to the correct section:</p>
+Update the fragment link within the following specifications to the correct section:
 
-<ul>
- <li>ARIA: https://www.w3.org/TR/wai-aria-1.1/</li>
- <li>ARIA Authoring Practices: https://www.w3.org/TR/wai-aria-practices-1.1/</li>
-</ul>
+- ARIA: https\://www\.w3.org/TR/wai-aria-1.1/
+- ARIA Authoring Practices: https\://www\.w3.org/TR/wai-aria-practices-1.1/
 
-<p>Additional resources:</p>
+Additional resources:
 
-<ul>
- <li>Accessibility Object Model: https://wicg.github.io/aom/spec/</li>
- <li>ARIA in HTML: https://w3c.github.io/html-aria/</li>
-</ul>
-</div>
+- Accessibility Object Model: https\://wicg.github.io/aom/spec/
+- ARIA in HTML: https\://w3c.github.io/html-aria/
 
-<h2 id="Page_template">Page template</h2>
+## Page template
 
+The summary paragraph—start by naming the role or attribute and saying what it does. This should ideally be 1 or 2 short sentences. This content appears as a tool tip on links to this page, so craft it well.
 
-<p>The summary paragraph—start by naming the role or attribute and saying what it does. This should ideally be 1 or 2 short sentences. This content appears as a tool tip on links to this page, so craft it well.</p>
+```html
+<!-- Insert code block showing common use cases -->
+```
 
-<pre class="brush: html">&lt;!-- Insert code block showing common use cases --&gt;
-</pre>
+(Optional) Include a short description of the preceding example.
 
-<p>(Optional) Include a short description of the preceding example.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+Include a complete description of the attribute or role.
 
-<p>Include a complete description of the attribute or role.</p>
+### Associated ARIA roles, states, and properties
 
-<h3 id="Associated_ARIA_roles_states_and_properties">Associated ARIA roles, states, and properties</h3>
+- Name of associated roles
+  - : Explanation of requirement, link to features pages.
+- Name of associated attribute(s)
+  - : Explanation of requirement, link to attribute's pages, along with link to JS required to change the value, if appropriate.
 
-<dl>
- <dt>Name of associated roles</dt>
- <dd>Explanation of requirement, link to features pages.</dd>
- <dt>Name of associated attribute(s)</dt>
- <dd>Explanation of requirement, link to attribute's pages, along with link to JS required to change the value, if appropriate.</dd>
-</dl>
+### Keyboard interactions
 
+### Required JavaScript features
 
-<h3 id="Keyboard_interactions">Keyboard interactions</h3>
+- Required event handlers
+  - : Explanation of each
+- Changing attribute values
+  - : explanation of each
 
+> **Note:** Include a note about semantic alternatives to using this role or attribute. The first rule of ARIA use is that you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state, or property to make it accessible, then do so. Then post full details in best practices section below.
 
-<h3 id="Required_JavaScript_features">Required JavaScript features</h3>
+## Examples
 
-<dl>
- <dt>Required event handlers</dt>
- <dd>Explanation of each</dd>
- <dt>Changing attribute values</dt>
- <dd>explanation of each</dd>
-</dl>
+Fill in a simple example that shows a typical usage of the property, then perhaps some more complex examples. For more information, see our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples).
 
-<div class="note">
-  <p><strong>Note:</strong> Include a note about semantic alternatives to using this role or attribute. The first rule of ARIA use is that you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and <strong>adding</strong> an ARIA role, state, or property to make it accessible, then do so. Then post full details in best practices section below.</p>
-</div>
+```html
+my code block
+```
 
-<h2 id="Examples">Examples</h2>
+And/or include a list of links to useful code samples that live elsewhere:
 
-<p>Fill in a simple example that shows a typical usage of the property, then perhaps some more complex examples. For more information, see our guide on how to add <a href="/en-US/docs/MDN/Structures/Code_examples">code examples</a>.</p>
+- x
+- y
+- z
 
-<pre class="brush: html">my code block</pre>
+## Accessibility concerns
 
-<p>And/or include a list of links to useful code samples that live elsewhere:</p>
+Optionally, warn of any potential accessibility concerns that exist with using this property, and how to work around them. Remove this section if there are none to list.
 
-<ul>
- <li>x</li>
- <li>y</li>
- <li>z</li>
-</ul>
+## Best practices
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+Optionally, list any best practices that exist for this role. Remove the section if none exist.
 
-<p>Optionally, warn of any potential accessibility concerns that exist with using this property, and how to work around them. Remove this section if there are none to list.</p>
+### Added benefits
 
-<h2 id="Best_practices">Best practices</h2>
+- Associated role
+  - : If that role is a required parent, child or sibling, and what it does.
 
-<p>Optionally, list any best practices that exist for this role. Remove the section if none exist.</p>
+Any additional benefits this feature has for non-typical screen reader users, like Google or mobile speech recognition.
 
-<h3 id="Added_benefits">Added benefits</h3>
+## Specifications
 
-<dl>
- <dt>Associated role</dt>
- <dd>If that role is a required parent, child or sibling, and what it does.</dd>
-</dl>
+| Specification                                                                                                                    | Status                                           |
+| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| {{SpecName("ARIA","#direct-document-fragment-link","NameOfRoleOrAttribute")}}                         | {{Spec2('ARIA')}}                         |
+| {{SpecName("ARIA Authoring Practices","#direct-document-fragment-link","NameOfRoleOrAttribute")}} | {{Spec2('ARIA Authoring Practices')}} |
 
-<p>Any additional benefits this feature has for non-typical screen reader users, like Google or mobile speech recognition.</p>
+## Precedence order
 
-<h2 id="Specifications_2">Specifications</h2>
+What are the related properties, and in what order will this attribute or property be read (which property will take precedence over this one, and which property will be overwritten.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("ARIA","#direct-document-fragment-link","NameOfRoleOrAttribute")}}</td>
-   <td>{{Spec2('ARIA')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("ARIA Authoring Practices","#direct-document-fragment-link","NameOfRoleOrAttribute")}}</td>
-   <td>{{Spec2('ARIA Authoring Practices')}}</td>
-  </tr>
- </tbody>
-</table>
+## Screen reader support
 
-<h2 id="Precedence_order">Precedence order</h2>
+## See also
 
-<p>What are the related properties, and in what order will this attribute or property be read (which property will take precedence over this one, and which property will be overwritten.</p>
-
-<h2 id="Screen_reader_support">Screen reader support</h2>
-
-
-<h2 id="See_also">See also</h2>
-
-
-<ul>
- <li>Include list of</li>
- <li>other links related to</li>
- <li>this role or attribute that might</li>
- <li>be useful</li>
-</ul>
+- Include list of
+- other links related to
+- this role or attribute that might
+- be useful

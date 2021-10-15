@@ -6,19 +6,17 @@ tags:
   - Howto
   - MDN Meta
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>Now and then, you may run into problems while using MDN. Whether it's a problem with site infrastructure or an error in documentation content, you can either try to fix it yourself or report the problem. While the former is preferred, the latter is sometimes the best you can manage, and that's okay too.</p>
+Now and then, you may run into problems while using MDN. Whether it's a problem with site infrastructure or an error in documentation content, you can either try to fix it yourself or report the problem. While the former is preferred, the latter is sometimes the best you can manage, and that's okay too.
 
-<p>The best thing you can possibly do is fix problems you spot yourself — this is done by updating the site source:</p>
+The best thing you can possibly do is fix problems you spot yourself — this is done by updating the site source:
 
-<ul>
-<li>The MDN content itself is found in the <a href="https://github.com/mdn/content">content</a> repo.</li>
-<li>The MDN platform code, which renders the content as MDN, is found in the <a href="https://github.com/mdn/yari">yari</a> repo.</li>
-</ul>
+- The MDN content itself is found in the [content](https://github.com/mdn/content) repo.
+- The MDN platform code, which renders the content as MDN, is found in the [yari](https://github.com/mdn/yari) repo.
 
-<p>Both repos include useful information to guide you on how to contribute.</p>
+Both repos include useful information to guide you on how to contribute.
 
-<p>However, maybe you don't know the answer or are in the middle of a deadline on your own project, and need to jot down the problem so someone can look at it later.</p>
+However, maybe you don't know the answer or are in the middle of a deadline on your own project, and need to jot down the problem so someone can look at it later.
 
-<p>The way to report a documentation problem by filing an <a href="https://github.com/mdn/content/issues">documentation issue</a> or <a href="https://github.com/mdn/yari/issues">platform issue</a>, depending on what the problem you've discovered relates to.</p>
+The way to report a documentation problem by filing an [documentation issue](https://github.com/mdn/content/issues) or [platform issue](https://github.com/mdn/yari/issues), depending on what the problem you've discovered relates to.

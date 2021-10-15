@@ -12,595 +12,481 @@ tags:
   - Style guide
   - Writing style guide
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>To present documentation in an organized, standardized, and easy-to-read manner, the MDN Web Docs style guide describes how text should be organized, spelled, formatted, and so on. These are guidelines rather than strict rules. We are more interested in content than formatting, so don't feel obligated to learn the style guide before contributing. Do not be upset or surprised, however, if an industrious volunteer later edits your work to conform to this guide.</p>
+To present documentation in an organized, standardized, and easy-to-read manner, the MDN Web Docs style guide describes how text should be organized, spelled, formatted, and so on. These are guidelines rather than strict rules. We are more interested in content than formatting, so don't feel obligated to learn the style guide before contributing. Do not be upset or surprised, however, if an industrious volunteer later edits your work to conform to this guide.
 
-<p>The language aspects of this guide apply primarily to English-language documentation. Other languages may have (and are welcome to create) style guides. These should be published as subpages of the localization team's page.</p>
+The language aspects of this guide apply primarily to English-language documentation. Other languages may have (and are welcome to create) style guides. These should be published as subpages of the localization team's page.
 
-<h2 id="Basics">Basics</h2>
+## Basics
 
-<p>The best place to start in any extensive publishing style guide is with some very basic text standards to help keep documentation consistent. The following sections outline some of these basics to help you.</p>
+The best place to start in any extensive publishing style guide is with some very basic text standards to help keep documentation consistent. The following sections outline some of these basics to help you.
 
-<h3 id="Page_titles">Page titles</h3>
+### Page titles
 
-<p>Page titles are used in search results and are also used to structure the page hierarchy in the breadcrumb list at the top of the page. The page title (which is displayed at the top of the page and in the search results) can be different from the page "slug", which is the portion of the page's URL following "<code><var>&lt;locale&gt;</var>/docs/</code>".</p>
+Page titles are used in search results and are also used to structure the page hierarchy in the breadcrumb list at the top of the page. The page title (which is displayed at the top of the page and in the search results) can be different from the page "slug", which is the portion of the page's URL following "`<locale>/docs/`".
 
-<h4 id="Title_and_heading_capitalization">Title and heading capitalization</h4>
+#### Title and heading capitalization
 
-<p>Page titles and section headings should use sentence-style capitalization (only capitalize the first word and proper nouns) rather than headline-style capitalization:</p>
+Page titles and section headings should use sentence-style capitalization (only capitalize the first word and proper nouns) rather than headline-style capitalization:
 
-<ul>
- <li><strong>Correct</strong>: "A new method for creating JavaScript rollovers"</li>
- <li><strong>Incorrect</strong>: "A New Method for Creating JavaScript Rollovers"</li>
-</ul>
+- **Correct**: "A new method for creating JavaScript rollovers"
+- **Incorrect**: "A New Method for Creating JavaScript Rollovers"
 
-<p>We have many older pages that were written before this style rule was established. Feel free to update them as needed if you like. We're gradually getting to them.</p>
+We have many older pages that were written before this style rule was established. Feel free to update them as needed if you like. We're gradually getting to them.
 
-<h4 id="Choosing_titles_and_slugs">Choosing titles and slugs</h4>
+#### Choosing titles and slugs
 
-<p>Page slugs should be kept short. When creating a new level of hierarchy, the new level's component in the slug should just be a word or two.</p>
+Page slugs should be kept short. When creating a new level of hierarchy, the new level's component in the slug should just be a word or two.
 
-<p>Page titles, on the other hand, may be as long as you like, within reason, and they should be descriptive.</p>
+Page titles, on the other hand, may be as long as you like, within reason, and they should be descriptive.
 
-<h4 id="Creating_new_subtrees">Creating new subtrees</h4>
+#### Creating new subtrees
 
-<p>When you need to add some articles about a topic or subject area, you will typically do so by creating a landing page, then adding subpages for each of the individual articles. The landing page should open with a paragraph or two describing the topic or technology, then provide a list of the subpages with descriptions of each page. You can automate the insertion of pages into the list using some macros we've created.</p>
+When you need to add some articles about a topic or subject area, you will typically do so by creating a landing page, then adding subpages for each of the individual articles. The landing page should open with a paragraph or two describing the topic or technology, then provide a list of the subpages with descriptions of each page. You can automate the insertion of pages into the list using some macros we've created.
 
-<p>For example, consider the <a href="/en-US/docs/Web/JavaScript">JavaScript</a> guide, which is structured as follows:</p>
+For example, consider the [JavaScript](/en-US/docs/Web/JavaScript) guide, which is structured as follows:
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide">JavaScript/Guide</a> – Main table-of-contents page</li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Introduction">JavaScript/Guide/JavaScript Overview</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Functions">JavaScript/Guide/Functions</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model">JavaScript/Guide/Details of the Object Model</a></li>
-</ul>
+- [JavaScript/Guide](/en-US/docs/Web/JavaScript/Guide) – Main table-of-contents page
+- [JavaScript/Guide/JavaScript Overview](/en-US/docs/Web/JavaScript/Guide/Introduction)
+- [JavaScript/Guide/Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [JavaScript/Guide/Details of the Object Model](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
 
-<p>Try to avoid putting your article at the top of the hierarchy, which slows the site down and makes search and site navigation less effective.</p>
+Try to avoid putting your article at the top of the hierarchy, which slows the site down and makes search and site navigation less effective.
 
-<h3 id="General_article_content_guidelines">General article content guidelines</h3>
+### General article content guidelines
 
-<p>When writing any document, it's important to know how much to say. If you ramble on too long, or provide excessive detail, the article becomes tedious to read and it will rarely be used. Getting the amount of coverage right is important for several reasons. Among those reasons: ensure that the reader finds the information they truly need, and provide enough quality material for search engines to adequately analyze and rank the article.</p>
+When writing any document, it's important to know how much to say. If you ramble on too long, or provide excessive detail, the article becomes tedious to read and it will rarely be used. Getting the amount of coverage right is important for several reasons. Among those reasons: ensure that the reader finds the information they truly need, and provide enough quality material for search engines to adequately analyze and rank the article.
 
-<p>We'll discuss the former (providing the information the reader may need) here. To learn more about ensuring that pages are properly classified and ranked by search engines, see the article <a href="/en-US/docs/MDN/Contribute/Howto/Write_for_SEO">How to write for SEO on MDN</a>.</p>
+We'll discuss the former (providing the information the reader may need) here. To learn more about ensuring that pages are properly classified and ranked by search engines, see the article [How to write for SEO on MDN](/en-US/docs/MDN/Contribute/Howto/Write_for_SEO).
 
-<p>The goal is to write pages that include all the information that readers may need without going into too much detail. Following are some recommendations to achieve this.</p>
+The goal is to write pages that include all the information that readers may need without going into too much detail. Following are some recommendations to achieve this.
 
-<h4 id="Consider_your_audience">Consider your audience</h4>
+#### Consider your audience
 
-<p>Keep in mind that these are guidelines. Some of these tips may not apply in every case. Certainly keep your article's audience in mind. For example, an article on advanced network techniques likely doesn't need to go into as much detail about basic networking concepts as the typical article on networking.</p>
+Keep in mind that these are guidelines. Some of these tips may not apply in every case. Certainly keep your article's audience in mind. For example, an article on advanced network techniques likely doesn't need to go into as much detail about basic networking concepts as the typical article on networking.
 
-<h4 id="Provide_a_useful_summary">Provide a useful summary</h4>
+#### Provide a useful summary
 
-<p>Make sure the article's summary—that is, the opening paragraph or paragraphs before the first heading—provides enough information to adequately inform readers of the article's contents. This way a reader can determine quickly whether the article is relevant to their concerns.</p>
+Make sure the article's summary—that is, the opening paragraph or paragraphs before the first heading—provides enough information to adequately inform readers of the article's contents. This way a reader can determine quickly whether the article is relevant to their concerns.
 
-<p>In a guide or tutorial, the summary should inform the reader of the topics that are covered as well as of what requisite knowledge the reader is expected to have, if any. It should mention the technologies and/or APIs that are being documented or discussed, with links to related information, and it should offer hints to situations in which the article's contents might be useful.</p>
+In a guide or tutorial, the summary should inform the reader of the topics that are covered as well as of what requisite knowledge the reader is expected to have, if any. It should mention the technologies and/or APIs that are being documented or discussed, with links to related information, and it should offer hints to situations in which the article's contents might be useful.
 
-<h5 id="Example_Too_short!">Example: Too short!</h5>
+##### Example: Too short!
 
-<p>This example of a summary is far too short. It leaves out too much information, such as what it means exactly to "stroke" text, where the text is drawn, and so forth.</p>
+This example of a summary is far too short. It leaves out too much information, such as what it means exactly to "stroke" text, where the text is drawn, and so forth.
 
-<p><strong><code>CanvasRenderingContext2D.strokeText()</code></strong> draws a string.</p>
+**`CanvasRenderingContext2D.strokeText()`** draws a string.
 
-<h5 id="Example_Too_long!">Example: Too long!</h5>
+##### Example: Too long!
 
-<p>Here, we've updated the summary, but now it's far too long. Too much detail is included, and the text delves too deeply into describing other methods and properties.</p>
+Here, we've updated the summary, but now it's far too long. Too much detail is included, and the text delves too deeply into describing other methods and properties.
 
-<p>Instead, the summary should focus on the <code>strokeText()</code> method, and should refer to the appropriate guides where the other details are described.</p>
+Instead, the summary should focus on the `strokeText()` method, and should refer to the appropriate guides where the other details are described.
 
-<p>When called, the Canvas 2D API method <strong><code>CanvasRenderingContext2D.strokeText()</code></strong> strokes the characters in the specified string beginning at the coordinates specified, using the current pen color. In the terminology of computer graphics, "stroking" text means to draw the outlines of the glyphs in the string without filling in the contents of each character with color.</p>
+When called, the Canvas 2D API method **`CanvasRenderingContext2D.strokeText()`** strokes the characters in the specified string beginning at the coordinates specified, using the current pen color. In the terminology of computer graphics, "stroking" text means to draw the outlines of the glyphs in the string without filling in the contents of each character with color.
 
-<p>The text is drawn using the context's current font as specified in the context's {{domxref("CanvasRenderingContext2D.font", "font")}} property.</p>
+The text is drawn using the context's current font as specified in the context's {{domxref("CanvasRenderingContext2D.font", "font")}} property.
 
-<p>The placement of the text relative to the specified coordinates are determined by the context's <code>textAlign</code>, <code>textBaseline</code>, and <code>direction</code> properties. <code>textAlign</code> controls the placement of the string relative to the X coordinate specified; if the value is <code>"center"</code>, then the string is drawn starting at <code>x - (stringWidth / 2)</code>, placing the specified X-coordinate in the middle of the string. If the value is <code>"left"</code>, the string is drawn starting at the specified value of <code>x</code>. And if <code>textAlign</code> is <code>"right"</code>, the text is drawn such that it ends at the specified X-coordinate.</p>
+The placement of the text relative to the specified coordinates are determined by the context's `textAlign`, `textBaseline`, and `direction` properties. `textAlign` controls the placement of the string relative to the X coordinate specified; if the value is `"center"`, then the string is drawn starting at `x - (stringWidth / 2)`, placing the specified X-coordinate in the middle of the string. If the value is `"left"`, the string is drawn starting at the specified value of `x`. And if `textAlign` is `"right"`, the text is drawn such that it ends at the specified X-coordinate.
 
-<p>(etc etc etc...)</p>
+(etc etc etc...)
 
-<p>You can, optionally, provide a fourth parameter that lets you specify a maximum width for the string, in pixels. If you provide this parameter, the text is compressed horizontally or scaled (or otherwise adjusted) to fit inside a space that wide when being drawn.</p>
+You can, optionally, provide a fourth parameter that lets you specify a maximum width for the string, in pixels. If you provide this parameter, the text is compressed horizontally or scaled (or otherwise adjusted) to fit inside a space that wide when being drawn.
 
-<p>You can call the <strong><code>fillText()</code></strong> method to draw a string's characters as filled with color instead of only drawing the outlines of the characters.</p>
+You can call the **`fillText()`** method to draw a string's characters as filled with color instead of only drawing the outlines of the characters.
 
-<h5 id="Example_Much_better!">Example: Much better!</h5>
+##### Example: Much better!
 
-<p>Here we see a much better overview for the <code>strokeText()</code> method.</p>
+Here we see a much better overview for the `strokeText()` method.
 
-<p>The {{domxref("CanvasRenderingContext2D")}} method <code><strong>strokeText()</strong></code>, part of the <a href="/en-US/docs/Web/API/Canvas_API">Canvas 2D API</a>, strokes—that is, draws the outlines of—the characters of a specified string, anchored at the position indicated by the given X and Y coordinates. The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.</p>
+The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API), strokes—that is, draws the outlines of—the characters of a specified string, anchored at the position indicated by the given X and Y coordinates. The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
 
-<p>For more details and further examples, see {{SectionOnPage("/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Text")}} in the Learning Area as well as our main article on the subject, <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text">Drawing text</a>.</p>
+For more details and further examples, see {{SectionOnPage("/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Text")}} in the Learning Area as well as our main article on the subject, [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
-<h4 id="Include_all_relevant_examples">Include all relevant examples</h4>
+#### Include all relevant examples
 
-<p>It's important to ensure that you use examples to clarify what every parameter is used for, and to clarify any edge cases that may exist. You should also use examples to demonstrate solutions for common tasks, and you should use examples to demonstrate solutions to problems that may arise.</p>
+It's important to ensure that you use examples to clarify what every parameter is used for, and to clarify any edge cases that may exist. You should also use examples to demonstrate solutions for common tasks, and you should use examples to demonstrate solutions to problems that may arise.
 
-<p>In general it is expected that most of the pages will include examples, and that most of them will include more than one example.</p>
+In general it is expected that most of the pages will include examples, and that most of them will include more than one example.
 
-<p>Each example should be preceded by text explaining what the example does and anything the reader should know before beginning to read or try out the example.</p>
+Each example should be preceded by text explaining what the example does and anything the reader should know before beginning to read or try out the example.
 
-<h5 id="Code_Examples">Code Examples</h5>
+##### Code Examples
 
-<p>Each piece of code should include an explanation of how it works. Keep in mind that it may make sense to break up a large piece of code into smaller portions so they can be described individually.</p>
+Each piece of code should include an explanation of how it works. Keep in mind that it may make sense to break up a large piece of code into smaller portions so they can be described individually.
 
-<p>The text following each piece of code should explain anything relevant, using an appropriate level of detail:</p>
+The text following each piece of code should explain anything relevant, using an appropriate level of detail:
 
-<ul>
- <li>If the code is very simple and doesn't really use anything directly related to the API being documented, you need only give a quick summary of what it is and why it's there.</li>
- <li>If the code is intricate, uses the API being documented, or is technically creative, you should provide a more detailed explanation.</li>
-</ul>
+- If the code is very simple and doesn't really use anything directly related to the API being documented, you need only give a quick summary of what it is and why it's there.
+- If the code is intricate, uses the API being documented, or is technically creative, you should provide a more detailed explanation.
 
-<p>When adding <a href="/en-US/docs/MDN/Structures/Live_samples">live samples</a>, it's helpful to be aware that all of the {{HTMLElement("pre")}} blocks in the area that contains the sample are concatenated together before running the example, which lets you break any or all of the HTML, CSS, and JavaScript into multiple segments, each optionally with its own descriptions, headings, and so forth. This makes documenting code incredibly powerful and flexible.</p>
+When adding [live samples](/en-US/docs/MDN/Structures/Live_samples), it's helpful to be aware that all of the {{HTMLElement("pre")}} blocks in the area that contains the sample are concatenated together before running the example, which lets you break any or all of the HTML, CSS, and JavaScript into multiple segments, each optionally with its own descriptions, headings, and so forth. This makes documenting code incredibly powerful and flexible.
 
-<h4 id="Overly-short_articles_are_hard_to_find">Overly-short articles are hard to find</h4>
+#### Overly-short articles are hard to find
 
-<p>If an article is "thin"—that is, too short—it may not be indexed properly (or at all) by search engines. As a rule of thumb, the article's body text should be at least 250–300 words. Don't artificially inflate a page, but treat this guideline as a minimum target length when possible.</p>
+If an article is "thin"—that is, too short—it may not be indexed properly (or at all) by search engines. As a rule of thumb, the article's body text should be at least 250–300 words. Don't artificially inflate a page, but treat this guideline as a minimum target length when possible.
 
-<h3 id="Headings">Headings</h3>
+### Headings
 
-<p>When a new paragraph starts a new section, a header should be added. Use heading levels in decreasing order: {{HTMLElement("h2")}} then {{HTMLElement("h3")}} then {{HTMLElement("h4")}}, without skipping levels.</p>
+When a new paragraph starts a new section, a header should be added. Use heading levels in decreasing order: {{HTMLElement("h2")}} then {{HTMLElement("h3")}} then {{HTMLElement("h4")}}, without skipping levels.
 
-<p>H2 is the highest level allowed because H1 is reserved for the page title. If you need more than three or four levels of headers, consider breaking up the article into several smaller articles with a landing page.</p>
+H2 is the highest level allowed because H1 is reserved for the page title. If you need more than three or four levels of headers, consider breaking up the article into several smaller articles with a landing page.
 
-<h4 id="Heading_dos_and_donts">Heading dos and don'ts</h4>
+#### Heading dos and don'ts
 
-<ul>
- <li><strong>Don't create single subsections.</strong> Don't subdivide a topic into a single subtopic. It's either two subheadings or more, or none at all.</li>
- <li><strong>Don't use styles and classes within headings.</strong> This includes the {{HTMLElement("code")}} element for code terms. So don't make a heading "Using the <code>SuperAmazingThing</code> interface". It should instead just be "Using the SuperAmazingThing interface".</li>
- <li><strong>Avoid using macros within headings</strong> (except for certain macros that are specifically designed to be used in headings).</li>
- <li><strong>Don't create "bumping heads."</strong> These are headings followed immediately by a subheading, with no content text in between. This doesn't look good, and leaves readers without any explanatory text at the beginning of the outer section.</li>
-</ul>
+- **Don't create single subsections.** Don't subdivide a topic into a single subtopic. It's either two subheadings or more, or none at all.
+- **Don't use styles and classes within headings.** This includes the {{HTMLElement("code")}} element for code terms. So don't make a heading "Using the `SuperAmazingThing` interface". It should instead just be "Using the SuperAmazingThing interface".
+- **Avoid using macros within headings** (except for certain macros that are specifically designed to be used in headings).
+- **Don't create "bumping heads."** These are headings followed immediately by a subheading, with no content text in between. This doesn't look good, and leaves readers without any explanatory text at the beginning of the outer section.
 
-<h3 id="Lists">Lists</h3>
+### Lists
 
-<p>Lists should be formatted and structured uniformly across all pages. Individual list items should be written with suitable punctuation, regardless of the list format. However, depending on the type of the list you are creating, you will want to adjust your writing as described in the sections below.</p>
+Lists should be formatted and structured uniformly across all pages. Individual list items should be written with suitable punctuation, regardless of the list format. However, depending on the type of the list you are creating, you will want to adjust your writing as described in the sections below.
 
-<h4 id="Bulleted_lists">Bulleted lists</h4>
+#### Bulleted lists
 
-<p>Bulleted lists should be used to group related pieces of concise information. Each item in the list should follow a similar sentence structure. Phrases and sentences in bulleted lists should include standard punctuation. A period must appear at the end of each sentence in a bulleted list, including the item's final sentence, just as would be expected in a paragraph.</p>
+Bulleted lists should be used to group related pieces of concise information. Each item in the list should follow a similar sentence structure. Phrases and sentences in bulleted lists should include standard punctuation. A period must appear at the end of each sentence in a bulleted list, including the item's final sentence, just as would be expected in a paragraph.
 
-<p>An example of a correctly structured bulleted list:</p>
+An example of a correctly structured bulleted list:
 
-<p>In this example we should include:</p>
+In this example we should include:
 
-<ul>
- <li>A condition, with a brief explanation.</li>
- <li>A similar condition, with a brief explanation.</li>
- <li>Yet another condition, with some further explanation.</li>
-</ul>
+- A condition, with a brief explanation.
+- A similar condition, with a brief explanation.
+- Yet another condition, with some further explanation.
 
-<p>Note how the same sentence structure repeats from bullet to bullet. In this example, each bullet point states a condition followed by a comma and a brief explanation, and each item in the list ends with a period.</p>
+Note how the same sentence structure repeats from bullet to bullet. In this example, each bullet point states a condition followed by a comma and a brief explanation, and each item in the list ends with a period.
 
-<h4 id="Numbered_lists">Numbered lists</h4>
+#### Numbered lists
 
-<p>Numbered lists are used primarily to enumerate steps in a set of instructions. Because instructions can be complex, clarity is a priority, especially if the text in each list item is lengthy. As with bulleted lists, follow standard punctuation usage.</p>
+Numbered lists are used primarily to enumerate steps in a set of instructions. Because instructions can be complex, clarity is a priority, especially if the text in each list item is lengthy. As with bulleted lists, follow standard punctuation usage.
 
-<p>An example of a correctly structured numbered list:</p>
+An example of a correctly structured numbered list:
 
-<p>In order to correctly structure a numbered list, you should:</p>
+In order to correctly structure a numbered list, you should:
 
-<ol>
- <li>Open with a heading or brief paragraph to introduce the instructions. It's important to provide the user with context before beginning the instructions.</li>
- <li>Start creating your instructions, and keep each step in its own numbered item. Your instructions may be quite extensive, so it is important to write clearly and use correct punctuation.</li>
- <li>After you have finished your instructions, follow the numbered list with a brief closing summary or explanation about the expected outcome upon completion.</li>
-</ol>
+1.  Open with a heading or brief paragraph to introduce the instructions. It's important to provide the user with context before beginning the instructions.
+2.  Start creating your instructions, and keep each step in its own numbered item. Your instructions may be quite extensive, so it is important to write clearly and use correct punctuation.
+3.  After you have finished your instructions, follow the numbered list with a brief closing summary or explanation about the expected outcome upon completion.
 
-<p>This is an example of writing a closing explanation. We have created a short numbered list that provides instructive steps to produce a numbered list with the correct formatting.</p>
+This is an example of writing a closing explanation. We have created a short numbered list that provides instructive steps to produce a numbered list with the correct formatting.
 
-<p>Note how the items in numbered lists read like short paragraphs. Because numbered lists are routinely used for instructional purposes, or to walk someone through an orderly procedure, be sure to keep each item focused: one numbered item per step.</p>
+Note how the items in numbered lists read like short paragraphs. Because numbered lists are routinely used for instructional purposes, or to walk someone through an orderly procedure, be sure to keep each item focused: one numbered item per step.
 
-<h3 id="Text_formatting_and_styles">Text formatting and styles</h3>
+### Text formatting and styles
 
-<p>Use the <strong>"Formatting Styles"</strong> drop-down list to apply predefined styles to selected content.</p>
+Use the **"Formatting Styles"** drop-down list to apply predefined styles to selected content.
 
-<div class="note">
-  <p><strong>Note:</strong> The <strong>"Note Box"</strong> style is used to call out important notes, like this one.</p>
-</div>
+> **Note:** The **"Note Box"** style is used to call out important notes, like this one.
 
-<div class="warning">
-  <p><strong>Warning:</strong> Similarly, the <strong>"Warning Box"</strong> style creates warning boxes like this.</p>
-</div>
+> **Warning:** Similarly, the **"Warning Box"** style creates warning boxes like this.
 
-<p>Unless specifically instructed, <em>do not</em> use the HTML <code>style</code> attribute to manually apply a style. If you can't do it using a predefined class, ask for help in the <a href="https://discourse.mozilla.org/c/mdn">MDN discussion forum</a>.</p>
+Unless specifically instructed, _do not_ use the HTML `style` attribute to manually apply a style. If you can't do it using a predefined class, ask for help in the [MDN discussion forum](https://discourse.mozilla.org/c/mdn).
 
-<h3 id="Code_sample_style_and_formatting">Code sample style and formatting</h3>
+### Code sample style and formatting
 
-<div class="note">
-<p><strong>Note:</strong> This section deals with the styling/formatting of code as it appears on an MDN article. If you want guidelines on actually writing code examples, see our <a href="/en-US/docs/MDN/Guidelines/Code_guidelines">Code sample guidelines</a>.</p>
-</div>
+> **Note:** This section deals with the styling/formatting of code as it appears on an MDN article. If you want guidelines on actually writing code examples, see our [Code sample guidelines](/en-US/docs/MDN/Guidelines/Code_guidelines).
 
-<h4 id="Tabs_and_line_breaks">Tabs and line breaks</h4>
+#### Tabs and line breaks
 
-<p>Use two spaces per tab in all code examples. Indent the code cleanly, with open-brace ("<code>{</code>") characters on the same line as the statement that opens the block. For example:</p>
+Use two spaces per tab in all code examples. Indent the code cleanly, with open-brace ("`{`") characters on the same line as the statement that opens the block. For example:
 
-<pre class="brush: js">if (condition) {
+```js
+if (condition) {
   /* handle the condition */
 } else {
   /* handle the "else" case */
 }
-</pre>
+```
 
-<p>Long lines shouldn't be allowed to stretch off horizontally to the extent that they require horizontal scrolling to read. Instead, break long lines at natural breaking points. Some examples follow:</p>
+Long lines shouldn't be allowed to stretch off horizontally to the extent that they require horizontal scrolling to read. Instead, break long lines at natural breaking points. Some examples follow:
 
-<pre class="brush: js">if (class.CONDITION || class.OTHER_CONDITION || class.SOME_OTHER_CONDITION
+```js
+if (class.CONDITION || class.OTHER_CONDITION || class.SOME_OTHER_CONDITION
        || class.YET_ANOTHER_CONDITION ) {
   /* something */
 }
 
 var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-service;1"]
                            .createInstance(Components.interfaces.nsIToolkitProfileService);
-</pre>
-
-<h4 id="Inline_code_formatting">Inline code formatting</h4>
-
-<p>Use the {{HTMLElement("code")}} tags to mark up function names, variable names, and method names. For example: "the <code>frenchText()</code> function".</p>
-
-<p><strong>Method names should be followed by a pair of parentheses.</strong> For example, <code>doSomethingUseful()</code>. The parentheses help differentiate methods from other code terms.</p>
-
-<h4 id="Syntax_highlighting">Syntax highlighting</h4>
-
-<p>A line or multiple lines of code should be formatted using <a href="/en-US/docs/MDN/Guidelines/CSS_style_guide#code_syntax_highlighting">syntax highlighting</a> rather than the {{HTMLElement("code")}} element.</p>
-
-<h4 id="Styling_mentions_of_HTML_elements">Styling mentions of HTML elements</h4>
-
-<p>There are specific rules to follow when writing about HTML elements. These rules produce consistent descriptions of elements and their components. They also ensure correct linking to detailed documentation.</p>
-
-<dl>
- <dt>Element names</dt>
- <dd>Use the {{TemplateLink("HTMLElement")}} macro, which creates a link to the page for that element. For example, writing \{{HTMLElement("title")}} produces "{{HTMLElement("title")}}". If you don't want to create a link, <strong>enclose the name in angle brackets</strong> and use the "Inline Code" style (e.g., <code>&lt;title&gt;</code>).</dd>
- <dt>Attribute names</dt>
- <dd>Use "Inline Code" style to put attribute names in <code>code font</code>. Additionally, put them in <strong><code>bold face</code></strong> when the attribute is mentioned in association with an explanation of what it does, or the first time it is used in the article.</dd>
- <dt>Attribute definitions</dt>
- <dd>Use the {{TemplateLink("htmlattrdef")}} macro (e.g., \{{htmlattrdef("type")}}) for the definition term, so that it can be linked to from other pages easily by using the {{TemplateLink("htmlattrxref")}} macro (e.g., \{{htmlattrxref("type","element")}}) to reference attribute definitions.</dd>
- <dt>Attribute values</dt>
- <dd>Use the "Inline Code" style to apply <code>&lt;code&gt;</code> to attribute values, and don't use quotation marks around string values, unless needed by the syntax of a code sample. <strong>For example:</strong> "When the <code>type</code> attribute of an <code>&lt;input&gt;</code> element is set to <code>email</code> or <code>tel</code> ..."</dd>
-</dl>
-
-<h3 id="Latin_abbreviations">Latin abbreviations</h3>
-
-<h4 id="In_notes_and_parentheses">In notes and parentheses</h4>
-
-<ul>
- <li>Common Latin abbreviations (etc., i.e., e.g.) may be used in parenthetical expressions and notes. Use periods in these abbreviations, followed by a comma or other appropriate punctuation.
-  <ul>
-   <li><strong>Correct</strong>: Web browsers (e.g., Firefox) can be used ...</li>
-   <li><strong>Incorrect</strong>: Web browsers e.g. Firefox can be used ...</li>
-   <li><strong>Incorrect</strong>: Web browsers, e.g. Firefox, can be used ...</li>
-   <li><strong>Incorrect</strong>: Web browsers, (eg: Firefox) can be used ...</li>
-  </ul>
- </li>
-</ul>
-
-<h4 id="In_running_text">In running text</h4>
-
-<ul>
- <li>In regular text (i.e., text outside of notes or parentheses), use the English equivalent of the abbreviation.
-  <ul>
-   <li><strong>Correct</strong>: ... web browsers, and so on.</li>
-   <li><strong>Incorrect</strong>: ... web browsers, etc.</li>
-   <li><strong>Correct</strong>: Web browsers such as Firefox can be used ...</li>
-   <li><strong>Incorrect</strong>: Web browsers e.g. Firefox can be used ...</li>
-  </ul>
- </li>
-</ul>
-
-<h4 id="Meanings_and_English_equivalents_of_Latin_abbreviations">Meanings and English equivalents of Latin abbreviations</h4>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Abbrev</th>
-   <th scope="col">Latin</th>
-   <th scope="col">English</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>cf.</td>
-   <td><em>confer</em></td>
-   <td>compare</td>
-  </tr>
-  <tr>
-   <td>e.g.</td>
-   <td><em>exempli gratia</em></td>
-   <td>for example</td>
-  </tr>
-  <tr>
-   <td>et al.</td>
-   <td><em>et alii</em></td>
-   <td>and others</td>
-  </tr>
-  <tr>
-   <td>etc.</td>
-   <td><em>et cetera</em></td>
-   <td>and so forth, and so on</td>
-  </tr>
-  <tr>
-   <td>i.e.</td>
-   <td><em>id est</em></td>
-   <td>that is, in other words</td>
-  </tr>
-  <tr>
-   <td>N.B.</td>
-   <td><em>nota bene</em></td>
-   <td>note well</td>
-  </tr>
-  <tr>
-   <td>P.S.</td>
-   <td><em>post scriptum</em></td>
-   <td>postscript</td>
-  </tr>
- </tbody>
-</table>
+```
 
-<div class="note">
-<p><strong>Note:</strong> Always consider whether it's truly beneficial to use a Latin abbreviation. Some of these are used so rarely that many readers will either confuse or fail to understand their meanings.</p>
+#### Inline code formatting
 
-<p>Also, be sure that <em>you</em> use them correctly, if you choose to do so. For example, be careful not to confuse "e.g." with "i.e.", which is a common error.</p>
-</div>
+Use the {{HTMLElement("code")}} tags to mark up function names, variable names, and method names. For example: "the `frenchText()` function".
 
-<h3 id="Acronyms_and_abbreviations">Acronyms and abbreviations</h3>
+**Method names should be followed by a pair of parentheses.** For example, `doSomethingUseful()`. The parentheses help differentiate methods from other code terms.
 
-<h4 id="Capitalization_and_periods">Capitalization and periods</h4>
+#### Syntax highlighting
 
-<p>Use full capitals and delete periods in all acronyms and abbreviations, including organizations such as "US" and "UN".</p>
+A line or multiple lines of code should be formatted using [syntax highlighting](/en-US/docs/MDN/Guidelines/CSS_style_guide#code_syntax_highlighting) rather than the {{HTMLElement("code")}} element.
 
-<ul>
- <li><strong>Correct</strong>: XUL</li>
- <li><strong>Incorrect</strong>: X.U.L.; Xul</li>
-</ul>
+#### Styling mentions of HTML elements
 
-<h4 id="Expansion">Expansion</h4>
+There are specific rules to follow when writing about HTML elements. These rules produce consistent descriptions of elements and their components. They also ensure correct linking to detailed documentation.
 
-<p>On the first mention of a term on a page, expand acronyms that are likely to be unfamiliar to users. When in doubt, expand it—or better yet, link it to the article or <a href="/en-US/docs/Glossary">glossary</a> entry describing the technology.</p>
+- Element names
+  - : Use the {{TemplateLink("HTMLElement")}} macro, which creates a link to the page for that element. For example, writing \\{{HTMLElement("title")}} produces "{{HTMLElement("title")}}". If you don't want to create a link, **enclose the name in angle brackets** and use the "Inline Code" style (e.g., `<title>`).
+- Attribute names
+  - : Use "Inline Code" style to put attribute names in `code font`. Additionally, put them in **`bold face`** when the attribute is mentioned in association with an explanation of what it does, or the first time it is used in the article.
+- Attribute definitions
+  - : Use the {{TemplateLink("htmlattrdef")}} macro (e.g., \\{{htmlattrdef("type")}}) for the definition term, so that it can be linked to from other pages easily by using the {{TemplateLink("htmlattrxref")}} macro (e.g., \\{{htmlattrxref("type","element")}}) to reference attribute definitions.
+- Attribute values
+  - : Use the "Inline Code" style to apply `<code>` to attribute values, and don't use quotation marks around string values, unless needed by the syntax of a code sample. **For example:** "When the `type` attribute of an `<input>` element is set to `email` or `tel` ..."
 
-<ul>
- <li><strong>Correct</strong>: "XUL (XML User Interface Language) is Mozilla's XML-based language..."</li>
- <li><strong>Incorrect</strong>: "XUL is Mozilla's XML-based language..."</li>
-</ul>
+### Latin abbreviations
 
-<h4 id="Plurals_of_acronyms_and_abbreviations">Plurals of acronyms and abbreviations</h4>
+#### In notes and parentheses
 
-<p>For plurals of acronyms or abbreviations, add <em>s</em>.</p>
+- Common Latin abbreviations (etc., i.e., e.g.) may be used in parenthetical expressions and notes. Use periods in these abbreviations, followed by a comma or other appropriate punctuation.
 
-<p>Don't use an apostrophe. Ever. Please.</p>
+  - **Correct**: Web browsers (e.g., Firefox) can be used ...
+  - **Incorrect**: Web browsers e.g. Firefox can be used ...
+  - **Incorrect**: Web browsers, e.g. Firefox, can be used ...
+  - **Incorrect**: Web browsers, (eg: Firefox) can be used ...
 
-<ul>
- <li><strong>Correct</strong>: CD-ROMs</li>
- <li><strong>Incorrect</strong>: CD-ROM's</li>
-</ul>
+#### In running text
 
-<h4 id="Versus_vs._and_v.">"Versus", "vs.", and "v."</h4>
+- In regular text (i.e., text outside of notes or parentheses), use the English equivalent of the abbreviation.
 
-<p>The contraction "vs." is preferred.</p>
+  - **Correct**: ... web browsers, and so on.
+  - **Incorrect**: ... web browsers, etc.
+  - **Correct**: Web browsers such as Firefox can be used ...
+  - **Incorrect**: Web browsers e.g. Firefox can be used ...
 
-<ul>
- <li><strong>Correct</strong>: this vs. that</li>
- <li><strong>Incorrect</strong>: this v. that</li>
- <li><strong>Incorrect</strong>: this versus that</li>
-</ul>
+#### Meanings and English equivalents of Latin abbreviations
 
-<h3 id="Capitalization">Capitalization</h3>
+| Abbrev | Latin            | English                 |
+| ------ | ---------------- | ----------------------- |
+| cf.    | _confer_         | compare                 |
+| e.g.   | _exempli gratia_ | for example             |
+| et al. | _et alii_        | and others              |
+| etc.   | _et cetera_      | and so forth, and so on |
+| i.e.   | _id est_         | that is, in other words |
+| N.B.   | _nota bene_      | note well               |
+| P.S.   | _post scriptum_  | postscript              |
 
-<p>Use standard English capitalization rules in body text, and capitalize "World Wide Web." It is acceptable to use lower case for "web" (used alone or as a modifier) and "internet".</p>
+> **Note:** Always consider whether it's truly beneficial to use a Latin abbreviation. Some of these are used so rarely that many readers will either confuse or fail to understand their meanings.
+>
+> Also, be sure that _you_ use them correctly, if you choose to do so. For example, be careful not to confuse "e.g." with "i.e.", which is a common error.
 
-<div class="note">
-<p><strong>Note</strong>: This guideline is a change from a previous version of this guide, so you may find many instances of "Web" and "Internet" on MDN.</p>
+### Acronyms and abbreviations
 
-<p>Feel free to change these as you are making other changes, but editing an article just to change capitalization is not necessary.</p>
-</div>
+#### Capitalization and periods
 
-<p>Keyboard keys should use sentence-style capitalization, not all-caps capitalization. For example, "<kbd>Enter</kbd>" not "<kbd>ENTER</kbd>". The only exception is that you can use "<kbd>ESC</kbd>" to abbreviate the "<kbd>Escape</kbd>" key.</p>
+Use full capitals and delete periods in all acronyms and abbreviations, including organizations such as "US" and "UN".
 
-<p>Certain words should always be capitalized (such as trademarks which include capital letters), or words derived from the name of a person (unless it's being used within code, and code’s syntax requires lower-casing). Some examples:</p>
+- **Correct**: XUL
+- **Incorrect**: X.U.L.; Xul
 
-<ul>
- <li>Boolean (named for English mathematician and logician {{interwiki("wikipedia", "George Boole")}})</li>
- <li>JavaScript (a trademark of Oracle Corporation, it should always be written as trademarked)</li>
- <li>Python, TypeScript, Django, and other programming languages and framework names</li>
-</ul>
+#### Expansion
 
-<h3 id="Contractions">Contractions</h3>
+On the first mention of a term on a page, expand acronyms that are likely to be unfamiliar to users. When in doubt, expand it—or better yet, link it to the article or [glossary](/en-US/docs/Glossary) entry describing the technology.
 
-<p>Our writing style tends to be casual, so you should feel free to use contractions (e.g., "don't", "can't", "shouldn't"), if you prefer.</p>
+- **Correct**: "XUL (XML User Interface Language) is Mozilla's XML-based language..."
+- **Incorrect**: "XUL is Mozilla's XML-based language..."
 
-<h3 id="Pluralization">Pluralization</h3>
+#### Plurals of acronyms and abbreviations
 
-<p>Use English-style plurals, not the Latin- or Greek-influenced forms.</p>
+For plurals of acronyms or abbreviations, add _s_.
 
-<ul>
- <li><strong>Correct</strong>: syllabuses, octopuses</li>
- <li><strong>Incorrect</strong>: syllabi, octopi</li>
-</ul>
+Don't use an apostrophe. Ever. Please.
 
-<h3 id="Hyphenation">Hyphenation</h3>
+- **Correct**: CD-ROMs
+- **Incorrect**: CD-ROM's
 
-<p>Hyphenated compounds should be used when the last letter of the prefix is a vowel and is the same as the first letter of the root.</p>
+#### "Versus", "vs.", and "v."
 
-<ul>
- <li><strong>Correct</strong>: email, re-elect, co-op</li>
- <li><strong>Incorrect</strong>: e-mail, reelect, coop</li>
-</ul>
+The contraction "vs." is preferred.
 
+- **Correct**: this vs. that
+- **Incorrect**: this v. that
+- **Incorrect**: this versus that
 
-<h3 id="Inclusive_language">Inclusive language</h3>
+### Capitalization
 
-<p>MDN has a wide and diverse audience. We strongly encourage keeping text as inclusive as possible. Here are some alternatives to common terms used in documentation:</p>
+Use standard English capitalization rules in body text, and capitalize "World Wide Web." It is acceptable to use lower case for "web" (used alone or as a modifier) and "internet".
 
-<ul>
-  <li>Avoid using the terms <b>master</b> and <b>slave</b> and instead <b>main</b> and <b>replica</b></li>
-  <li>Replace <b>whitelist</b> and <b>blacklist</b> with <b>allowlist</b> and <b>denylist</b></li>
-  <li><b>Sanity</b> should be replaced with <b>coherence</b></li>
-  <li>Instead of <b>dummy</b> you should use <b>placeholder</b>
-  <li>You should not need to use <b>crazy</b> and <b>insane</b> in documentation, however if the case arises consider <b>fantastic</b> instead.</li>
-</ul>
+<div class="note"><p><strong>Note</strong>: This guideline is a change from a previous version of this guide, so you may find many instances of "Web" and "Internet" on MDN.</p><p>Feel free to change these as you are making other changes, but editing an article just to change capitalization is not necessary.</p></div>
 
+Keyboard keys should use sentence-style capitalization, not all-caps capitalization. For example, "<kbd>Enter</kbd>" not "<kbd>ENTER</kbd>". The only exception is that you can use "<kbd>ESC</kbd>" to abbreviate the "<kbd>Escape</kbd>" key.
 
-<h4 id="Gender-neutral_language">Gender-neutral language</h4>
+Certain words should always be capitalized (such as trademarks which include capital letters), or words derived from the name of a person (unless it's being used within code, and code’s syntax requires lower-casing). Some examples:
 
-<p>It is best to use gender-neutral language in any writing where gender is irrelevant to the subject matter. For example, if you are talking about the actions of a specific man, using "he"/"his" is fine; but if the subject is a person of either gender, "he"/"his" isn't appropriate.<br>
- <br>
- Let's take the following example:</p>
+- Boolean (named for English mathematician and logician {{interwiki("wikipedia", "George Boole")}})
+- JavaScript (a trademark of Oracle Corporation, it should always be written as trademarked)
+- Python, TypeScript, Django, and other programming languages and framework names
 
-<p><em>A confirmation dialog appears, asking the user if he allows the Web page to make use of his Web cam.</em></p>
+### Contractions
 
-<p><em>A confirmation dialog appears, asking the user if she allows the Web page to make use of her Web cam.</em></p>
+Our writing style tends to be casual, so you should feel free to use contractions (e.g., "don't", "can't", "shouldn't"), if you prefer.
 
-<p>Both versions are gender-specific. To fix this, use gender-neutral pronouns:</p>
+### Pluralization
 
-<p><em>A confirmation dialog appears, asking the user if they allow the Web page to make use of their Web cam.</em></p>
+Use English-style plurals, not the Latin- or Greek-influenced forms.
 
-<div class="note">
-<p><strong>Note:</strong> MDN allows the use of this very common syntax (which is controversial among usage authorities) to make up for the lack of a neutral gender in English.</p>
+- **Correct**: syllabuses, octopuses
+- **Incorrect**: syllabi, octopi
 
-<p>The use of the third-person plural as a gender neutral pronoun (that is, using "they," "them", "their," and "theirs") is an accepted practice, commonly known as "<a href="https://en.wikipedia.org/wiki/Singular_they">singular 'they.'</a>"</p>
-</div>
+### Hyphenation
 
-<p>Making the users plural:</p>
+Hyphenated compounds should be used when the last letter of the prefix is a vowel and is the same as the first letter of the root.
 
-<p><em>A confirmation dialog appears, asking the users if they allow the web page to make use of their web cams.</em></p>
+- **Correct**: email, re-elect, co-op
+- **Incorrect**: e-mail, reelect, coop
 
-<p>The best solution, of course, is to rewrite and eliminate the pronouns:</p>
+### Inclusive language
 
-<p><em>A confirmation dialog appears, requesting the user's permission for web cam access.</em></p>
+MDN has a wide and diverse audience. We strongly encourage keeping text as inclusive as possible. Here are some alternatives to common terms used in documentation:
 
-<p><em>A confirmation dialog box appears, which asks the user for permission to use the web cam.</em></p>
+- Avoid using the terms **master** and **slave** and instead **main** and **replica**
+- Replace **whitelist** and **blacklist** with **allowlist** and **denylist**
+- **Sanity** should be replaced with **coherence**
+- Instead of **dummy** you should use **placeholder**
+- You should not need to use **crazy** and **insane** in documentation, however if the case arises consider **fantastic** instead.
 
-<p>This last example of dealing with the problem is arguably better. Not only is it grammatically more correct, but removes some of the complexity associated with dealing with genders across different languages that may have wildly different gender rules. This solution can make translation easier for both readers and localizers.</p>
+#### Gender-neutral language
 
+It is best to use gender-neutral language in any writing where gender is irrelevant to the subject matter. For example, if you are talking about the actions of a specific man, using "he"/"his" is fine; but if the subject is a person of either gender, "he"/"his" isn't appropriate.
 
-<h3 id="Numbers_and_numerals">Numbers and numerals</h3>
+Let's take the following example:
 
-<h4 id="Dates">Dates</h4>
+_A confirmation dialog appears, asking the user if he allows the Web page to make use of his Web cam._
 
-<p>For dates (not including dates in code samples) use the format "January 1, 1990".</p>
+_A confirmation dialog appears, asking the user if she allows the Web page to make use of her Web cam._
 
-<ul>
- <li><strong>Correct</strong>: February 24, 2006</li>
- <li><strong>Incorrect</strong>: February 24th, 2006; 24 February, 2006; 24/02/2006</li>
-</ul>
+Both versions are gender-specific. To fix this, use gender-neutral pronouns:
 
-<p>Alternately, you can use the YYYY/MM/DD format.</p>
+_A confirmation dialog appears, asking the user if they allow the Web page to make use of their Web cam._
 
-<ul>
- <li><strong>Correct</strong>: 2006/02/24</li>
- <li><strong>Incorrect</strong>: 02/24/2006; 24/02/2006; 02/24/06</li>
-</ul>
+> **Note:** MDN allows the use of this very common syntax (which is controversial among usage authorities) to make up for the lack of a neutral gender in English.
+>
+> The use of the third-person plural as a gender neutral pronoun (that is, using "they," "them", "their," and "theirs") is an accepted practice, commonly known as "[singular 'they.'](https://en.wikipedia.org/wiki/Singular_they)"
 
-<h4 id="Decades">Decades</h4>
+Making the users plural:
 
-<p>For decades, use the format "1990s". Don't use an apostrophe.</p>
+_A confirmation dialog appears, asking the users if they allow the web page to make use of their web cams._
 
-<ul>
- <li><strong>Correct</strong>: 1990s</li>
- <li><strong>Incorrect</strong>: 1990's</li>
-</ul>
+The best solution, of course, is to rewrite and eliminate the pronouns:
 
-<h4 id="Plurals_of_numerals">Plurals of numerals</h4>
+_A confirmation dialog appears, requesting the user's permission for web cam access._
 
-<p>For plurals of numerals add "s". Don't use an apostrophe.</p>
+_A confirmation dialog box appears, which asks the user for permission to use the web cam._
 
-<ul>
- <li><strong>Correct</strong>: 486s</li>
- <li><strong>Incorrect</strong>: 486's</li>
-</ul>
+This last example of dealing with the problem is arguably better. Not only is it grammatically more correct, but removes some of the complexity associated with dealing with genders across different languages that may have wildly different gender rules. This solution can make translation easier for both readers and localizers.
 
-<h4 id="Commas">Commas</h4>
+### Numbers and numerals
 
-<p>In running text, use commas only in five-digit and larger numbers.</p>
+#### Dates
 
-<ul>
- <li><strong>Correct</strong>: 4000; 54,000</li>
- <li><strong>Incorrect</strong>: 4,000; 54000</li>
-</ul>
+For dates (not including dates in code samples) use the format "January 1, 1990".
 
-<h3 id="Punctuation">Punctuation</h3>
+- **Correct**: February 24, 2006
+- **Incorrect**: February 24th, 2006; 24 February, 2006; 24/02/2006
 
-<h4 id="Serial_comma">Serial comma</h4>
+Alternately, you can use the YYYY/MM/DD format.
 
-<p><strong>Use the serial comma</strong>. The serial (also known as "Oxford") comma is the comma that appears before the conjunction in a series of three or more items.</p>
+- **Correct**: 2006/02/24
+- **Incorrect**: 02/24/2006; 24/02/2006; 02/24/06
 
-<ul>
- <li><strong>Correct</strong>: I will travel on trains, planes, and automobiles.</li>
- <li><strong>Incorrect</strong>: I will travel on trains, planes and automobiles.</li>
-</ul>
+#### Decades
 
-<h4 id="Apostrophes_and_quotation_marks">Apostrophes and quotation marks</h4>
+For decades, use the format "1990s". Don't use an apostrophe.
 
-<p><strong>Do not use "curly" quotes and quotation marks.</strong> On MDN, we only use straight quotes and apostrophes.</p>
+- **Correct**: 1990s
+- **Incorrect**: 1990's
 
-<p>There are a couple of reasons for this.</p>
+#### Plurals of numerals
 
-<ol>
- <li>We need to choose one or the other for consistency.</li>
- <li>If curly quotes or apostrophes make their way into code snippets—even inline ones—readers may copy and paste them, expecting them to function (which they will not).</li>
-</ol>
+For plurals of numerals add "s". Don't use an apostrophe.
 
-<ul>
- <li><strong>Correct</strong>: Please don't use "curly quotes."</li>
- <li><strong>Incorrect</strong>: Please don’t use “curly quotes.”</li>
-</ul>
+- **Correct**: 486s
+- **Incorrect**: 486's
 
-<h3 id="Spelling">Spelling</h3>
+#### Commas
 
-<p>Use American-English spelling.</p>
+In running text, use commas only in five-digit and larger numbers.
 
-<p>In general, use the first entry at <a href="https://www.dictionary.com/">Dictionary.com</a>, unless that entry is listed as a variant spelling or as being primarily used in a non-American form of English. For example, if you <a href="https://www.dictionary.com/browse/behavior">look up "behavior"</a>, you find the phrase "Chiefly British" followed by a link to the American standard form, "<a href="https://dictionary.reference.com/browse/behavior">behavior</a>". Do not use variant spellings.</p>
+- **Correct**: 4000; 54,000
+- **Incorrect**: 4,000; 54000
 
-<ul>
- <li><strong>Correct</strong>: localize, behavior</li>
- <li><strong>Incorrect</strong>: localise, behaviour</li>
-</ul>
+### Punctuation
 
-<h3 id="Terminology">Terminology</h3>
+#### Serial comma
 
-<h4 id="HTML_elements">HTML elements</h4>
+**Use the serial comma**. The serial (also known as "Oxford") comma is the comma that appears before the conjunction in a series of three or more items.
 
-<p>Use "elements" to refer to HTML and XML elements, rather than "tags". In addition, they should almost always be wrapped in "&lt;&gt;", and should be in the {{HTMLElement("code")}} style.</p>
+- **Correct**: I will travel on trains, planes, and automobiles.
+- **Incorrect**: I will travel on trains, planes and automobiles.
 
-<p>When you reference a given element for the first time in a section, you should use the {{TemplateLink("HTMLElement")}} macro to create a link to the documentation for the element (unless you're writing within that element's reference document page).</p>
+#### Apostrophes and quotation marks
 
-<ul>
- <li><strong>Correct</strong>: the {{HTMLElement("span")}} element</li>
- <li><strong>Incorrect</strong>: the span tag</li>
-</ul>
+**Do not use "curly" quotes and quotation marks.** On MDN, we only use straight quotes and apostrophes.
 
-<h4 id="Parameters_vs._arguments">Parameters vs. arguments</h4>
+There are a couple of reasons for this.
 
-<p>The preferred term on MDN is <strong>parameters</strong>. Please avoid the term "arguments" for consistency whenever possible.</p>
+1.  We need to choose one or the other for consistency.
+2.  If curly quotes or apostrophes make their way into code snippets—even inline ones—readers may copy and paste them, expecting them to function (which they will not).
 
-<h4 id="User_interface_actions">User interface actions</h4>
+- **Correct**: Please don't use "curly quotes."
+- **Incorrect**: Please don’t use “curly quotes.”
 
-<p>In task sequences, describe user interface actions using the imperative mood. Identify the user interface element by its label and type.</p>
+### Spelling
 
-<ul>
- <li><strong>Correct</strong>: Click the Edit button.</li>
- <li><strong>Incorrect</strong>: Click Edit.</li>
-</ul>
+Use American-English spelling.
 
-<h3 id="Voice">Voice</h3>
+In general, use the first entry at [Dictionary.com](https://www.dictionary.com/), unless that entry is listed as a variant spelling or as being primarily used in a non-American form of English. For example, if you [look up "behavior"](https://www.dictionary.com/browse/behavior), you find the phrase "Chiefly British" followed by a link to the American standard form, "[behavior](https://dictionary.reference.com/browse/behavior)". Do not use variant spellings.
 
-<p>While the active voice is preferred, the passive voice is also acceptable, given the informal feel of our content. Try to be consistent, though.</p>
+- **Correct**: localize, behavior
+- **Incorrect**: localise, behaviour
 
-<h2 id="Other_references">Other references</h2>
+### Terminology
 
-<h3 id="Preferred_style_guides">Preferred style guides</h3>
+#### HTML elements
 
-<p>If you have questions about usage and style not covered here, we recommend referring to the <a href="https://docs.microsoft.com/en-us/style-guide/welcome/">Microsoft Writing Style Guide</a>—or, failing that, the <a href="https://www.amazon.com/Chicago-Manual-Style-16th/dp/0226104206">Chicago Manual of Style</a>. An <a href="https://faculty.cascadia.edu/cma/HIST148/cmscrib.pdf">unofficial crib sheet for the Chicago Manual of Style</a> is available online.</p>
+Use "elements" to refer to HTML and XML elements, rather than "tags". In addition, they should almost always be wrapped in "<>", and should be in the {{HTMLElement("code")}} style.
 
-<h3 id="Preferred_dictionary">Preferred dictionary</h3>
+When you reference a given element for the first time in a section, you should use the {{TemplateLink("HTMLElement")}} macro to create a link to the documentation for the element (unless you're writing within that element's reference document page).
 
-<p>For questions of spelling, please refer to <a href="https://www.dictionary.com/">Dictionary.com</a>. The spelling checker for this site uses American English. Please do not use variant spellings (e.g., use <em>color</em> rather than <em>colour</em>).</p>
+- **Correct**: the {{HTMLElement("span")}} element
+- **Incorrect**: the span tag
 
-<p>We will be expanding the guide over time, so if you have specific questions that aren't covered in this document, <a href="/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help">please get in touch</a>, so we know what should be added.</p>
+#### Parameters vs. arguments
 
-<h3 id="Language_grammar_spelling">Language, grammar, spelling</h3>
+The preferred term on MDN is **parameters**. Please avoid the term "arguments" for consistency whenever possible.
 
-<p>If you're interested in improving your writing and editing skills, you may find the following resources to be helpful.</p>
+#### User interface actions
 
-<ul>
- <li><a href="https://www.amazon.com/Writing-Well-30th-Anniversary-Nonfiction/dp/0060891548">On Writing Well</a>, by William Zinsser (Amazon link)</li>
- <li><a href="https://www.amazon.com/Style-Basics-Clarity-Grace-4th/dp/0205830765/">Style: The Basics of Clarity and Grace</a>, by Joseph Williams and Gregory Colomb (Amazon link)</li>
- <li><a href="https://brians.wsu.edu/common-errors-in-english-usage/">Common Errors in English</a></li>
- <li><a href="https://www-personal.umich.edu/~jlawler/aue.html">English Grammar FAQ</a> (alt.usage.english)</li>
- <li><a href="https://www.angryflower.com/bobsqu.gif">Bob's quick guide to the apostrophe, you idiots</a> (funny)</li>
- <li><a href="https://www.amazon.com/Merriam-Websters-Concise-Dictionary-English-Usage/dp/B004L2KNI2">Merriam-Webster's Concise Dictionary of English Usage</a> (Amazon link): Scholarly but user-friendly, evidence-based advice; very good for non-native speakers, especially for preposition usage.</li>
- <li><a href="https://english.stackexchange.com/">English Language and Usage StackExchange</a>: Question and answer site for English language usage.</li>
-</ul>
+In task sequences, describe user interface actions using the imperative mood. Identify the user interface element by its label and type.
+
+- **Correct**: Click the Edit button.
+- **Incorrect**: Click Edit.
+
+### Voice
+
+While the active voice is preferred, the passive voice is also acceptable, given the informal feel of our content. Try to be consistent, though.
+
+## Other references
+
+### Preferred style guides
+
+If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/)—or, failing that, the [Chicago Manual of Style](https://www.amazon.com/Chicago-Manual-Style-16th/dp/0226104206). An [unofficial crib sheet for the Chicago Manual of Style](https://faculty.cascadia.edu/cma/HIST148/cmscrib.pdf) is available online.
+
+### Preferred dictionary
+
+For questions of spelling, please refer to [Dictionary.com](https://www.dictionary.com/). The spelling checker for this site uses American English. Please do not use variant spellings (e.g., use _color_ rather than _colour_).
+
+We will be expanding the guide over time, so if you have specific questions that aren't covered in this document, [please get in touch](/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help), so we know what should be added.
+
+### Language, grammar, spelling
+
+If you're interested in improving your writing and editing skills, you may find the following resources to be helpful.
+
+- [On Writing Well](https://www.amazon.com/Writing-Well-30th-Anniversary-Nonfiction/dp/0060891548), by William Zinsser (Amazon link)
+- [Style: The Basics of Clarity and Grace](https://www.amazon.com/Style-Basics-Clarity-Grace-4th/dp/0205830765/), by Joseph Williams and Gregory Colomb (Amazon link)
+- [Common Errors in English](https://brians.wsu.edu/common-errors-in-english-usage/)
+- [English Grammar FAQ](https://www-personal.umich.edu/~jlawler/aue.html) (alt.usage.english)
+- [Bob's quick guide to the apostrophe, you idiots](https://www.angryflower.com/bobsqu.gif) (funny)
+- [Merriam-Webster's Concise Dictionary of English Usage](https://www.amazon.com/Merriam-Websters-Concise-Dictionary-English-Usage/dp/B004L2KNI2) (Amazon link): Scholarly but user-friendly, evidence-based advice; very good for non-native speakers, especially for preposition usage.
+- [English Language and Usage StackExchange](https://english.stackexchange.com/): Question and answer site for English language usage.

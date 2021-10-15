@@ -13,68 +13,58 @@ tags:
   - Word
   - define
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>This article explains how to add and link to entries in the <a href="/en-US/docs/Glossary">MDN Web Docs glossary</a>. It also provides guidelines about glossary entry layout and content. The glossary provides definitions for all the terms, jargon, abbreviations, and acronyms you'll come across when reading MDN content about the web and web development.</p>
+This article explains how to add and link to entries in the [MDN Web Docs glossary](/en-US/docs/Glossary). It also provides guidelines about glossary entry layout and content. The glossary provides definitions for all the terms, jargon, abbreviations, and acronyms you'll come across when reading MDN content about the web and web development.
 
-<p>It's possible that the glossary will never be complete because the web is always changing. By contributing new entries or fixing problems, you can help us update the glossary and fill-in gaps.</p>
+It's possible that the glossary will never be complete because the web is always changing. By contributing new entries or fixing problems, you can help us update the glossary and fill-in gaps.
 
-<p>Contributing to the glossary is an easy way to help make the web more understandable for everyone. You don't need high level technical skills. Glossary entries are intended to be straightforward and brief.</p>
+Contributing to the glossary is an easy way to help make the web more understandable for everyone. You don't need high level technical skills. Glossary entries are intended to be straightforward and brief.
 
-<h2 id="How_to_write_an_entry">How to write an entry</h2>
+## How to write an entry
 
-<p>First, choose what topic you'd like to write a glossary entry for. If you're looking for topics that need a glossary entry, check the <a href="/en-US/docs/Glossary#contribute_to_the_glossary">list of undocumented terms</a> at the end of the <a href="/en-US/docs/Glossary">Glossary landing page</a>.</p>
+First, choose what topic you'd like to write a glossary entry for. If you're looking for topics that need a glossary entry, check the [list of undocumented terms](/en-US/docs/Glossary#contribute_to_the_glossary) at the end of the [Glossary landing page](/en-US/docs/Glossary).
 
-<p>If you have an idea for a new glossary entry, <a href="https://github.com/mdn/content#adding-a-new-document">create a new page</a> for it underneath the <a href="https://github.com/mdn/content/tree/main/files/en-us/glossary">glossary landing page</a>.</p>
+If you have an idea for a new glossary entry, [create a new page](https://github.com/mdn/content#adding-a-new-document) for it underneath the [glossary landing page](https://github.com/mdn/content/tree/main/files/en-us/glossary).
 
-<h3 id="Write_a_summary">Write a summary</h3>
+### Write a summary
 
-<p>The first paragraph of any glossary page is a simple and short description of the term. Preferably, this should be no more than two sentences. Make sure anyone reading the description can immediately understand the defined term.</p>
+The first paragraph of any glossary page is a simple and short description of the term. Preferably, this should be no more than two sentences. Make sure anyone reading the description can immediately understand the defined term.
 
-<div class="note">
-<p><strong>Note:</strong> Please don't copy-and-paste from other definitions or content on the Internet. (And especially not Wikipedia, since its range of license versions is smaller and incompatible with MDN.) Your glossary entry should be original content.</p>
-</div>
+> **Note:** Please don't copy-and-paste from other definitions or content on the Internet. (And especially not Wikipedia, since its range of license versions is smaller and incompatible with MDN.) Your glossary entry should be original content.
 
-<h4 id="Writing_a_good_glossary_entry">Writing a good glossary entry</h4>
+#### Writing a good glossary entry
 
-<p>Add a few extra paragraphs if you must, but it's easy to find yourself writing an entire article. Writing an article is fine, but please don't create it in/for the glossary. If you aren't sure where to put your article, feel free to <a href="/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help">reach out to discuss it</a>.</p>
+Add a few extra paragraphs if you must, but it's easy to find yourself writing an entire article. Writing an article is fine, but please don't create it in/for the glossary. If you aren't sure where to put your article, feel free to [reach out to discuss it](/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help).
 
-<p>There are a few simple guidelines to consider for writing a better glossary entry:</p>
+There are a few simple guidelines to consider for writing a better glossary entry:
 
-<ul>
- <li>When you use terms in the glossary's description of the term or when you use abbreviation, you should create appropriate links. Often, this just involves creating links to other pages in the glossary.</li>
- <li>Use appropriate related terms (with links) in the glossary entry, if it can be done without making the article difficult to follow. Having a good network of related and useful links makes a page—or set of pages—much easier to use.</li>
- <li>Think about the search terms you would choose if you wanted to find this page. Try to use all the words you would use to search for the term, but without making the glossary entry nonsensical, long, or difficult to read.</li>
-</ul>
+- When you use terms in the glossary's description of the term or when you use abbreviation, you should create appropriate links. Often, this just involves creating links to other pages in the glossary.
+- Use appropriate related terms (with links) in the glossary entry, if it can be done without making the article difficult to follow. Having a good network of related and useful links makes a page—or set of pages—much easier to use.
+- Think about the search terms you would choose if you wanted to find this page. Try to use all the words you would use to search for the term, but without making the glossary entry nonsensical, long, or difficult to read.
 
-<h3 id="Expand_with_links">Expand with links</h3>
+### Expand with links
 
-<p>A glossary entry should always end with a <em>Learn more</em> section. This section should contain links to help the reader move forward: discovering more details; learning to use the relevant technology.</p>
+A glossary entry should always end with a _Learn more_ section. This section should contain links to help the reader move forward: discovering more details; learning to use the relevant technology.
 
-<p>It is good practice to organize the links into three groups:</p>
+It is good practice to organize the links into three groups:
 
-<dl>
- <dt>General knowledge</dt>
- <dd>These links provide higher-level information about the term or topic. For example: a link to a relevant <a href="https://wikipedia.org/">Wikipedia</a> page.</dd>
- <dt>Technical reference</dt>
- <dd>These links offer in-depth technical information, on MDN Web Docs or other sites.</dd>
- <dt>Learn about it</dt>
- <dd>These are links to tutorials, exercises, examples, or any other instructional content that helps the reader learn.</dd>
-</dl>
+- General knowledge
+  - : These links provide higher-level information about the term or topic. For example: a link to a relevant [Wikipedia](https://wikipedia.org/) page.
+- Technical reference
+  - : These links offer in-depth technical information, on MDN Web Docs or other sites.
+- Learn about it
+  - : These are links to tutorials, exercises, examples, or any other instructional content that helps the reader learn.
 
-<h2 id="Dealing_with_disambiguation">Dealing with disambiguation</h2>
+## Dealing with disambiguation
 
-<p>Some terms can have multiple meanings depending upon context. To resolve ambiguity, follow these guidelines:</p>
+Some terms can have multiple meanings depending upon context. To resolve ambiguity, follow these guidelines:
 
-<ul>
- <li>The term's main page must be a disambiguation page containing the {{TemplateLink("GlossaryDisambiguation")}} macro.</li>
- <li>The term has subpages that define the term for different contexts.</li>
-</ul>
+- The term's main page must be a disambiguation page containing the {{TemplateLink("GlossaryDisambiguation")}} macro.
+- The term has subpages that define the term for different contexts.
 
-<p>Let's illustrate this with an example. The term <em>signature</em> can have different meanings in at least two different contexts: security and function.</p>
+Let's illustrate this with an example. The term _signature_ can have different meanings in at least two different contexts: security and function.
 
-<ol>
- <li>The page <a href="/en-US/docs/Glossary/Signature">Glossary/Signature</a> is the disambiguation page with the {{TemplateLink("GlossaryDisambiguation")}} macro.</li>
- <li>The page <a href="/en-US/docs/Glossary/Signature/Security">Glossary/Signature/Security</a> is the page defining a signature in a security context.</li>
- <li>The page <a href="/en-US/docs/Glossary/Signature/Function">Glossary/Signature/Function</a> is the page defining a function signature.</li>
-</ol>
+1.  The page [Glossary/Signature](/en-US/docs/Glossary/Signature) is the disambiguation page with the {{TemplateLink("GlossaryDisambiguation")}} macro.
+2.  The page [Glossary/Signature/Security](/en-US/docs/Glossary/Signature/Security) is the page defining a signature in a security context.
+3.  The page [Glossary/Signature/Function](/en-US/docs/Glossary/Signature/Function) is the page defining a function signature.

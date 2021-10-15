@@ -8,147 +8,161 @@ tags:
   - Guidelines
   - MDN Meta
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>The following code example guidelines apply to all code, whether we are talking about HTML, CSS, JavaScript, or something else.</p>
+The following code example guidelines apply to all code, whether we are talking about HTML, CSS, JavaScript, or something else.
 
-<h2 id="In_this_article">In this article</h2>
+## In this article
 
-<ul>
- <li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/General#indentation_spacing_size">Indentation, spacing, size</a>
+- [Indentation, spacing, size](/en-US/docs/MDN/Guidelines/Code_guidelines/General#indentation_spacing_size)
 
-  <ul>
-   <li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/General#indentation">Indentation</a></li>
-   <li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/General#code_line_length">Code line length</a></li>
-   <li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/General#code_block_height">Code block height</a></li>
-  </ul>
- </li>
- <li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/General#guidelines_for_displaying_examples">Guidelines for displaying examples</a>
-  <ul>
-   <li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/General#size_of_rendered_example">Size of rendered example</a></li>
-   <li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/General#use_of_images_and_other_media">Use of images and other media</a></li>
-   <li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/General#use_of_color">Use of color</a></li>
-   <li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/General#highlight_good_and_bad_practice_examples">Highlight good and bad practice examples</a></li>
-  </ul>
- </li>
- <li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/General#writing_syntax_sections_on_reference_pages">Writing syntax sections on reference pages</a></li>
-</ul>
+  - [Indentation](/en-US/docs/MDN/Guidelines/Code_guidelines/General#indentation)
+  - [Code line length](/en-US/docs/MDN/Guidelines/Code_guidelines/General#code_line_length)
+  - [Code block height](/en-US/docs/MDN/Guidelines/Code_guidelines/General#code_block_height)
 
-<h2 id="Indentation_spacing_size">Indentation, spacing, size</h2>
+- [Guidelines for displaying examples](/en-US/docs/MDN/Guidelines/Code_guidelines/General#guidelines_for_displaying_examples)
 
-<h3 id="Indentation">Indentation</h3>
+  - [Size of rendered example](/en-US/docs/MDN/Guidelines/Code_guidelines/General#size_of_rendered_example)
+  - [Use of images and other media](/en-US/docs/MDN/Guidelines/Code_guidelines/General#use_of_images_and_other_media)
+  - [Use of color](/en-US/docs/MDN/Guidelines/Code_guidelines/General#use_of_color)
+  - [Highlight good and bad practice examples](/en-US/docs/MDN/Guidelines/Code_guidelines/General#highlight_good_and_bad_practice_examples)
 
-<p>All code should use 2 spaces for indentation, for example:</p>
+- [Writing syntax sections on reference pages](/en-US/docs/MDN/Guidelines/Code_guidelines/General#writing_syntax_sections_on_reference_pages)
 
-<pre class="brush: html example-good">&lt;div&gt;
-  &lt;p&gt;This is my paragraph.&lt;/p&gt;
-&lt;/div&gt;</pre>
+## Indentation, spacing, size
 
-<pre class="brush: js example-good">function myFunc() {
+### Indentation
+
+All code should use 2 spaces for indentation, for example:
+
+```html example-good
+<div>
+  <p>This is my paragraph.</p>
+</div>
+```
+
+```js example-good
+function myFunc() {
   if(thingy) {
     console.log('Yup, that worked.');
   }
-}</pre>
+}
+```
 
-<h3 id="Code_line_length">Code line length</h3>
+### Code line length
 
-<p>Lines of code should be a maximum of 80 characters long (64 for <a href="https://github.com/mdn/interactive-examples">interactive examples</a>). You should break lines sensibly for the sake of readability, but not at the expense of best practices.</p>
+Lines of code should be a maximum of 80 characters long (64 for [interactive examples](https://github.com/mdn/interactive-examples)). You should break lines sensibly for the sake of readability, but not at the expense of best practices.
 
-<p>For example, this is not great:</p>
+For example, this is not great:
 
-<pre class="brush: js example-bad">let tommyCat = 'Said Tommy the Cat as he reeled back to clear whatever foreign matter may have nestled its way into his mighty throat. Many a fat alley rat had met its demise while staring point blank down the cavernous barrel of this awesome prowling machine.';</pre>
+```js example-bad
+let tommyCat = 'Said Tommy the Cat as he reeled back to clear whatever foreign matter may have nestled its way into his mighty throat. Many a fat alley rat had met its demise while staring point blank down the cavernous barrel of this awesome prowling machine.';
+```
 
-<p>This is better, but somewhat awkward:</p>
+This is better, but somewhat awkward:
 
-<pre class="brush: js">let tommyCat = 'Said Tommy the Cat as he reeled back to clear whatever foreign '
+```js
+let tommyCat = 'Said Tommy the Cat as he reeled back to clear whatever foreign '
 + 'matter may have nestled its way into his mighty throat. Many a fat alley rat '
 + 'had met its demise while staring point blank down the cavernous barrel of '
-+ 'this awesome prowling machine.';</pre>
++ 'this awesome prowling machine.';
+```
 
-<p>Even better is to use a template literal:</p>
+Even better is to use a template literal:
 
-<pre class="brush: js example-good">let tommyCat = `Said Tommy the Cat as he reeled back to clear whatever foreign
+```js example-good
+let tommyCat = `Said Tommy the Cat as he reeled back to clear whatever foreign
   matter may have nestled its way into his mighty throat. Many a fat alley rat
   had met its demise while staring point blank down the cavernous barrel of
-  this awesome prowling machine.`;</pre>
+  this awesome prowling machine.`;
+```
 
-<h3 id="Code_block_height">Code block height</h3>
+### Code block height
 
-<p>Code blocks should be as long as they need to be, but no longer. Ideally, aim for something short like 15-25 lines. If a code block is going to be a lot longer, consider just showing the most useful snippet, and link to the full example on a GitHub repo or codepen, say.</p>
+Code blocks should be as long as they need to be, but no longer. Ideally, aim for something short like 15-25 lines. If a code block is going to be a lot longer, consider just showing the most useful snippet, and link to the full example on a GitHub repo or codepen, say.
 
-<h2 id="Guidelines_for_displaying_examples">Guidelines for displaying examples</h2>
+## Guidelines for displaying examples
 
-<h3 id="Size_of_rendered_example">Size of rendered example</h3>
+### Size of rendered example
 
-<p>The MDN main content pane is about 700px wide on desktop, so embedded MDN examples must look OK at that width (set the width of embedded examples at 100%).</p>
+The MDN main content pane is about 700px wide on desktop, so embedded MDN examples must look OK at that width (set the width of embedded examples at 100%).
 
-<p>For height, we'd recommend keeping the rendered example at below 700px in height if at all possible, for maximum onscreen legibility.</p>
+For height, we'd recommend keeping the rendered example at below 700px in height if at all possible, for maximum onscreen legibility.
 
-<p>You should also think about making your examples responsive to  some degree, so they are also useful on mobile devices.</p>
+You should also think about making your examples responsive to  some degree, so they are also useful on mobile devices.
 
-<h3 id="Use_of_images_and_other_media">Use of images and other media</h3>
+### Use of images and other media
 
-<p>Sometimes you'll want to include images or other media in an example. If you do:</p>
+Sometimes you'll want to include images or other media in an example. If you do:
 
-<ul>
- <li>Make sure their license allows you to use them. Try to use media that has a very permissive license such as <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">CC0</a>, or at least one that is compatible with our general content license —  <a href="https://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</li>
- <li>For images, run them through <a href="https://tinypng.com">https://tinypng.com</a> or <a href="https://imageoptim.com">https://imageoptim.com</a>, to reduce the page weight of the examples.</li>
- <li>For <code>SVG</code>, run the code through <a href="https://jakearchibald.github.io/svgomg/">SVGOMG</a>, and ensure that the <code>SVG</code> file has an empty line at the end of the file.</li>
- <li>
-  <p>When displaying icons on a page (e.g. via {{cssxref("background-image")}}), use icons from the <a href="https://github.com/mdn/mdn-dinocons">mdn-dinocons</a> repository, where appropriate, and try to match their style in other cases.</p>
- </li>
-</ul>
+- Make sure their license allows you to use them. Try to use media that has a very permissive license such as [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/), or at least one that is compatible with our general content license —  [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA).
+- For images, run them through <https://tinypng.com> or <https://imageoptim.com>, to reduce the page weight of the examples.
+- For `SVG`, run the code through [SVGOMG](https://jakearchibald.github.io/svgomg/), and ensure that the `SVG` file has an empty line at the end of the file.
+- When displaying icons on a page (e.g. via {{cssxref("background-image")}}), use icons from the [mdn-dinocons](https://github.com/mdn/mdn-dinocons) repository, where appropriate, and try to match their style in other cases.
 
-<h3 id="Use_of_color">Use of color</h3>
+### Use of color
 
-<p>Lower case for hex, can use keywords for shades and primary colors (e.g. black, white, red), use more complex schemes only when needed (e.g. to include transparency)</p>
+Lower case for hex, can use keywords for shades and primary colors (e.g. black, white, red), use more complex schemes only when needed (e.g. to include transparency)
 
-<p>Prefer to use keywords for primary and other "basic" colors, for example:</p>
+Prefer to use keywords for primary and other "basic" colors, for example:
 
-<pre class="brush: css example-good">color: black;
+```css example-good
+color: black;
 color: white;
-color: red;</pre>
+color: red;
+```
 
-<p>Use rgb() for more complex colors (including semi-transparent ones):</p>
+Use rgb() for more complex colors (including semi-transparent ones):
 
-<pre class="brush: css example-good">color: rgb(0, 0, 0, 0.5);
-color: rgb(248, 242, 230);</pre>
+```css example-good
+color: rgb(0, 0, 0, 0.5);
+color: rgb(248, 242, 230);
+```
 
-<p>If you have to use hex colors, then use lower-case:</p>
+If you have to use hex colors, then use lower-case:
 
-<pre class="brush: css example-good">color: #058ed9;
-color: #a39a92;</pre>
+```css example-good
+color: #058ed9;
+color: #a39a92;
+```
 
-<p>and use the short form where relevant:</p>
+and use the short form where relevant:
 
-<pre class="brush: css example-good">color: #ff0;
-color: #fff;</pre>
+```css example-good
+color: #ff0;
+color: #fff;
+```
 
-<p>The <a href="https://github.com/mdn/mdn-minimalist/blob/main/sass/vars/_color-palette.scss">sass/vars/_color-palette.scss</a> file in the <a href="https://github.com/mdn/mdn-minimalist">mdn-minimalist</a> repository has a set of useful colors that complement the overall MDN design.</p>
+The [sass/vars/\_color-palette.scss](https://github.com/mdn/mdn-minimalist/blob/main/sass/vars/_color-palette.scss) file in the [mdn-minimalist](https://github.com/mdn/mdn-minimalist) repository has a set of useful colors that complement the overall MDN design.
 
-<h3 id="Highlight_good_and_bad_practice_examples">Highlight good and bad practice examples</h3>
+### Highlight good and bad practice examples
 
-<p>As you will notice from looking around these guidelines, the code blocks that are supposed to be good practice examples are highlighted with a smiley face in green, and the code blocks that are supposed to be bad practice examples are highlighted with a sad face in red.</p>
+As you will notice from looking around these guidelines, the code blocks that are supposed to be good practice examples are highlighted with a smiley face in green, and the code blocks that are supposed to be bad practice examples are highlighted with a sad face in red.
 
-<p>To do this, you first use the MDN editor controls to put your code block in a <code>&lt;pre&gt;</code> block and give it appropriate syntax highlighting. The source of the code will look something like this:</p>
+To do this, you first use the MDN editor controls to put your code block in a `<pre>` block and give it appropriate syntax highlighting. The source of the code will look something like this:
 
-<pre class="brush: js">
+```js
 function myFunc() {
   console.log('Hello!');
-};&lt;/pre&gt;</pre>
+};</pre>
+```
 
-<p>To make it into a good example, you insert <code>example-good</code> just before the closing quote of the <code>class</code> attribute:</p>
+To make it into a good example, you insert `example-good` just before the closing quote of the `class` attribute:
 
-<pre class="brush: html">&lt;pre class="brush: js example-good"&gt;
-  ...</pre>
+```html
+<pre class="brush: js example-good">
+  ...
+```
 
-<p>To make it into a bad example, you insert <code>example-bad</code> just before the closing quote of the <code>class</code> attribute:</p>
+To make it into a bad example, you insert `example-bad` just before the closing quote of the `class` attribute:
 
-<pre class="brush: html">&lt;pre class="brush: js example-bad"&gt;
-  ...</pre>
+```html
+<pre class="brush: js example-bad">
+  ...
+```
 
-<p>We would like to encourage you to use these. You don't need to use these everywhere — only when you are specifically calling out good and bad practices in your code.</p>
+We would like to encourage you to use these. You don't need to use these everywhere — only when you are specifically calling out good and bad practices in your code.
 
-<h2 id="Writing_syntax_sections_on_reference_pages">Writing syntax sections on reference pages</h2>
+## Writing syntax sections on reference pages
 
-<p>MDN reference pages include Syntax sections that show unambiguously what the syntax of a feature can/should be, for example a JavaScript method, CSS property, HTML element, etc. Guidelines for writing these are given on the <a href="/en-US/docs/MDN/Structures/Syntax_sections">Syntax sections</a> document.</p>
+MDN reference pages include Syntax sections that show unambiguously what the syntax of a feature can/should be, for example a JavaScript method, CSS property, HTML element, etc. Guidelines for writing these are given on the [Syntax sections](/en-US/docs/MDN/Structures/Syntax_sections) document.
