@@ -114,11 +114,11 @@ setCookie.then(logCookie, logError);</pre>
 <dl>
   <dt>Notifications API</dt>
   <dd>
-    <p id="notifications_incompatibilities">These incompatibilities are present in {{WebExtAPIRef("notifications")}}:</p>
+    <p>These incompatibilities are present in {{WebExtAPIRef("notifications")}}:</p>
     <ul>
      <li>
       <p>For <code>notifications.create()</code>, with <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/TemplateType">type</a> "basic"</code>:</p>
-    
+
       <dl>
        <dt>In Firefox</dt>
        <dd><code>iconUrl</code> is optional.</dd>
@@ -128,7 +128,7 @@ setCookie.then(logCookie, logError);</pre>
      </li>
      <li>
       <p>When the user clicks on a notification:</p>
-    
+
       <dl>
        <dt>In Firefox</dt>
        <dd>The notification is cleared immediately.</dd>
@@ -138,7 +138,7 @@ setCookie.then(logCookie, logError);</pre>
      </li>
      <li>
       <p>If you call <code>notifications.create()</code> more than once in rapid succession:</p>
-    
+
       <ul>
        <li>In Firefox, the notifications may not display at all. Waiting to make subsequent calls until within the <code>chrome.notifications.create()</code> callback function is not a sufficient delay to prevent this.</li>
       </ul>
@@ -148,8 +148,8 @@ setCookie.then(logCookie, logError);</pre>
 
   <dt>Proxy API</dt>
   <dd>
-    <p id="proxy_incompatibilities">Firefox's {{WebExtAPIRef("proxy")}} API followed a completely different design from Chrome's Proxy API.</p>
-    
+    <p>Firefox's {{WebExtAPIRef("proxy")}} API followed a completely different design from Chrome's Proxy API.</p>
+
     <dl>
      <dt>In Chrome</dt>
      <dd>An extension can register a PAC file, but can also define explicit proxying rules.</dd>
@@ -163,27 +163,27 @@ setCookie.then(logCookie, logError);</pre>
   <dt>Tabs API</dt>
   <dd>
 
-    <p id="tabs_incompatibilities">These incompatibilities are present in {{WebExtAPIRef("tabs")}}:</p>
-    
+    <p>These incompatibilities are present in {{WebExtAPIRef("tabs")}}:</p>
+
     <ul>
      <li>
       <p>When using <code>tabs.executeScript()</code> or <code>tabs.insertCSS()</code>:</p>
-    
+
       <dl>
        <dt>In Firefox</dt>
        <dd>Relative URLs passed are resolved relative to the current page URL.</dd>
        <dt>In Chrome</dt>
        <dd>These URLs are resolved relative to the extension's base URL.</dd>
       </dl>
-    
+
       <p>To work cross-browser, you can specify the path as an absolute URL, starting at the extension's root, like this:</p>
-    
+
       <pre class="brush: none;">/path/to/script.js
     </pre>
      </li>
      <li>
       <p>When :</p>
-    
+
       <dl>
        <dt>In Firefox</dt>
        <dd>Querying tabs by URL with <code>tabs.query()</code> requires the <code>"tabs"</code> permission.</dd>
@@ -193,7 +193,7 @@ setCookie.then(logCookie, logError);</pre>
      </li>
      <li>
       <p>When calling <code>tabs.remove()</code>:</p>
-    
+
       <dl>
        <dt>In Firefox</dt>
        <dd>The <code>tabs.remove()</code> promise is fulfilled after the <code>beforeunload</code> event.</dd>
@@ -206,8 +206,8 @@ setCookie.then(logCookie, logError);</pre>
 
   <dt>WebRequest API</dt>
   <dd>
-    <p id="web_request_incompatibilities">These incompatibilities are present in {{WebExtAPIRef("webRequest")}}:</p>
-    
+    <p>These incompatibilities are present in {{WebExtAPIRef("webRequest")}}:</p>
+
     <dl>
       <dt>In Firefox</dt>
       <dd>
@@ -235,7 +235,7 @@ setCookie.then(logCookie, logError);</pre>
     <ul>
      <li>
       <p>When using <code>browser.webRequest.*</code>:</p>
-    
+
       <dl>
        <dt>In Firefox (starting from Firefox 52)</dt>
        <dd>Some of the <code>browser.webRequest.*</code> APIs allow returning Promises that resolves <code>webRequest.BlockingResponse</code> asynchronously.</dd>
@@ -248,7 +248,7 @@ setCookie.then(logCookie, logError);</pre>
 
 
   <dt>Windows API</dt>
-  <dd> 
+  <dd>
     <dl>
      <dt>In Firefox</dt>
      <dd><code>onFocusChanged</code> of the {{WebExtAPIRef("windows")}} API, will trigger multiple times for a given focus change.</dd>
@@ -261,7 +261,7 @@ setCookie.then(logCookie, logError);</pre>
   <dl>
     <dt>DeclarativeContent API</dt>
     <dd>
-      <p id="declarative_content_incompatibilities">Chrome's <a href="https://developer.chrome.com/extensions/declarativeContent" name="dec">declarativeContent</a> API <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1435864">has not yet been implemented</a> in Firefox:</p>     
+      <p>Chrome's <a href="https://developer.chrome.com/extensions/declarativeContent" name="dec">declarativeContent</a> API <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1435864">has not yet been implemented</a> in Firefox:</p>
       <dl>
        <dt>In Firefox</dt>
        <dd>In addition, Firefox <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1323433#c16">will not be supporting</a> the <code>declarativeContent.RequestContentScript</code> API (which is rarely used, and is unavailable in stable releases of Chrome).</dd>
@@ -279,15 +279,15 @@ setCookie.then(logCookie, logError);</pre>
      <dd>URLs in injected CSS files are resolved relative to <em>the page they are injected into</em>.</dd>
     </dl>
   </dd>
-    
+
   <dt>Additional incompatibilities</dt>
-  <dd>  
+  <dd>
     <dl>
      <dt>In Firefox</dt>
      <dd>Background pages do not support using <a href="/en-US/docs/Web/API/Window/alert"><code>alert()</code></a>, <a href="/en-US/docs/Web/API/Window/confirm"><code>confirm()</code></a>, or <a href="/en-US/docs/Web/API/Window/prompt"><code>prompt()</code></a>.</dd>
     </dl>
-  </dd> 
-  
+  </dd>
+
   <dt>web_accessible_resources</dt>
   <dd>
     <dl>
@@ -297,7 +297,7 @@ setCookie.then(logCookie, logError);</pre>
      <dd>Resources are assigned a random UUID that changes for every instance of Firefox: <code>moz-extension://«<var>random-UUID</var>»/«<var>path/to/resource</var>»</code>. This randomness can prevent you from doing a few things, such as add your specific extension's URL to another domain's CSP policy.</dd>
     </dl>
   </dd>
-    
+
   <dt>Manifest "key" property</dt>
   <dd>
     <dl>
@@ -307,38 +307,38 @@ setCookie.then(logCookie, logError);</pre>
      <dd>Since Firefox uses random UUIDs for <code>web_accessible_resources</code>, this property is unsupported.</dd>
     </dl>
   </dd>
-    
+
   <dt>Content script requests happen in the context of extension, not content page</dt>
-  <dd>  
+  <dd>
     <dl>
      <dt>In Chrome</dt>
      <dd>When a content script makes a request (for example, using <a href="/en-US/docs/Web/API/Fetch_API/Using_Fetch"><code>fetch()</code></a>) to a relative URL (like <code>/api</code>), it will be sent to <code>https://example.com/api</code>.</dd>
      <dt>In Firefox</dt>
      <dd>When a content script makes a request, you <em>must</em> provide absolute URLs.</dd>
     </dl>
-  </dd>  
+  </dd>
 
   <dt>Sharing variables between content scripts</dt>
-  <dd>      
+  <dd>
     <dl>
      <dt>In Firefox</dt>
      <dd>You cannot share variables between content scripts by assigning them to <code>this.{variableName}</code> in one script and then attempting to access them using <code>window.{variableName}</code> in another. This is a limitation created by the sandbox environment in Firefox. This limitation may be removed, see {{bug(1208775)}}.</dd>
     </dl>
-  </dd>   
+  </dd>
 
   <dt>Content script lifecycle during navigation</dt>
-  <dd>      
+  <dd>
     <dl>
      <dt>In Chrome</dt>
      <dd>Content scripts are destroyed when the user navigates away from a web page. If the user then returns to the page through history, by clicking the back button, the content script is injected into the web page again.</dd>
      <dt>In Firefox</dt>
      <dd>
      <p>Content scripts remain injected in a web page after the user has navigated away, however, window object properties are destroyed. For example, if a content script sets <code>window.prop1 = "prop"</code>  and the user then navigates away and returns to the page <code>window.prop1</code> is undefined. This issue is tracked in {{bug(1525400)}} .</p>
-    
+
      <p>To mimic the behavior of Chrome, listen for the <a href="/en-US/docs/Web/API/Window/pageshow_event">pageshow</a> and <a href="/en-US/docs/Web/API/Window/pagehide_event">pagehide</a> events. Then simulate the injection or destruction of the content script.</p>
      </dd>
     </dl>
-  </dd>  
+  </dd>
 
   <dt>"per-tab" zoom behavior</dt>
   <dd>

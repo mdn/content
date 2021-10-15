@@ -52,7 +52,7 @@ let creating = browser.windows.create(createData);</pre>
 
 <p>By default, pages you open in this way will be stored in the user's history, just like normal web pages. If you don't want to have this behavior, use {{WebExtAPIRef("history.deleteUrl()")}} to remove the browser's record:</p>
 
-<pre class="brush: js" id="ct-4">function onVisited(historyItem) {
+<pre class="brush: js">function onVisited(historyItem) {
   if (historyItem.url == browser.extension.getURL(myPage)) {
     browser.history.deleteUrl({url: historyItem.url});
   }
