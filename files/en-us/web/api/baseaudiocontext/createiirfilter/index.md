@@ -53,7 +53,7 @@ feedforward coefficient arrays.
   - : Thrown if all of the `feedforward` coefficients are 0, or if the first
     `feedback` coefficient is 0.
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown if one, or both, of the input arrays exceeds 20 members.
+  - : Thrown if one or both of the input arrays exceeds 20 members.
 
 ## Specifications
 
