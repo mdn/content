@@ -48,7 +48,7 @@ compare = range.compareBoundaryPoints(how, sourceRange);
 ### Exceptions
 
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown if the value of the `how` parameter is invalid
+  - : Thrown if the value of the `how` parameter is invalid.
 
 ## Example
 
