@@ -8,9 +8,7 @@ tags:
   - ARIA attribute
   - ARIA property
   - aria-checked
-  - NeedsContent
 ---
-{{draft}}
 
 The  `aria-checked` attribute indicates the current "checked" state of checkboxes, radio buttons, and other widgets. See related [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) and [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected).
 
@@ -44,7 +42,7 @@ By using the {{htmlelement("input")}} element with `type="checkbox"` instead of 
 
 - false
   - : The element supports being checked but is not currently checked. 
--true	
+- true	
   - : The element is checked.
 - mixed	
   - : for [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role) and  [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role) only, equivalent to `indeterminate`, indicating a mixed mode value of neither checked nor unchecked.
