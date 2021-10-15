@@ -32,7 +32,7 @@ browser-compat: webextensions.api.windows.getAll
  <dt><code>getInfo</code>{{optional_inline}}</dt>
  <dd><code>object</code>. This controls what {{WebExtAPIRef('windows.Window')}} objects are retrieved.</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>populate</code>{{optional_inline}}</dt>
   <dd><code>boolean</code>. Defaults to <code>false</code>. If set to <code>true</code>, each {{WebExtAPIRef('windows.Window')}} object will have a <code>tabs</code> property that contains a list of {{WebExtAPIRef('tabs.Tab')}} objects representing the tabs in that window. The <code>Tab</code> objects will contain the <code>url</code>, <code>title</code> and <code>favIconUrl</code> properties only if the extension's manifest file includes the <code>"tabs"</code> permission or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> that match the tab's URL.</dd>
   <dt><code>windowTypes</code>{{optional_inline}}</dt>

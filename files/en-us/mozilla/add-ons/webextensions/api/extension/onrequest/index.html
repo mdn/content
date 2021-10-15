@@ -52,17 +52,17 @@ chrome.extension.onRequest.hasListener(listener)
  <dd>
  <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>request</code></dt>
   <dd><code>any</code>. The request sent by the calling script.</dd>
  </dl>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>sender</code></dt>
   <dd>{{WebExtAPIRef('runtime.MessageSender')}}.</dd>
  </dl>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>sendResponse</code></dt>
   <dd><code>function</code>. Function to call (at most once) when you have a response. The argument should be any JSON-ifiable object, or undefined if there is no response. If you have more than one <code>onRequest</code> listener in the same document, then only one may send a response.</dd>
  </dl>

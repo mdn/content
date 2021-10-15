@@ -32,7 +32,7 @@ browser-compat: webextensions.api.webNavigation.getFrame
  <dt><code>details</code></dt>
  <dd><code>object</code>. Information about the frame to retrieve information about.</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>tabId</code></dt>
   <dd><code>integer</code>. The ID of the tab in which the frame is.</dd>
   <dt><code>processId</code> {{optional_inline}}</dt>
@@ -47,7 +47,7 @@ browser-compat: webextensions.api.webNavigation.getFrame
 
 <p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an object containing the following properties:</p>
 
-<dl class="reference-values">
+<dl>
  <dt><code>errorOccurred</code></dt>
  <dd><code>boolean</code>. True if the last navigation in this frame was interrupted by an error, i.e. the {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} event fired.</dd>
  <dt><code>url</code></dt>
