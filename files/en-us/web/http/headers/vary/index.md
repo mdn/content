@@ -40,7 +40,7 @@ Vary: <header-name>, <header-name>, ...
 ## Directives
 
 - \*
-  - : Each request for a URL is treated as a unique and uncacheable
+  - : Each request for a URL is supposed to be treated as a unique and uncacheable
     request. A better way to indicate this is to use {{HTTPHeader("Cache-Control")}}:
     `no-store`, which is clearer to read and also signals that the object should never be stored.
 - \<header-name>
