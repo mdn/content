@@ -8,34 +8,34 @@ tags:
   - MDN Meta
   - Structures
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>The <a href="/en-US/docs/MDN/Yari">Yari</a> platform on which MDN runs provides a macro system, <a href="/en-US/docs/MDN/Tools/KumaScript">KumaScript</a>, which makes it possible to automate certain tasks. This article provides information on how to invoke MDN's macros within articles.</p>
+The [Yari](/en-US/docs/MDN/Yari) platform on which MDN runs provides a macro system, [KumaScript](/en-US/docs/MDN/Tools/KumaScript), which makes it possible to automate certain tasks. This article provides information on how to invoke MDN's macros within articles.
 
-<p>The <a href="/en-US/docs/MDN/Tools/KumaScript">KumaScript guide</a> provides an in-depth look at how to use macros on MDN, so this section is more of a brief overview.</p>
+The [KumaScript guide](/en-US/docs/MDN/Tools/KumaScript) provides an in-depth look at how to use macros on MDN, so this section is more of a brief overview.
 
-<h2 id="How_macros_are_implemented">How macros are implemented</h2>
+## How macros are implemented
 
-<p>Macros on MDN are implemented using server-executed <a href="/en-US/docs/Web/JavaScript">JavaScript</a> code, interpreted using <a href="https://nodejs.org/en/">Node.js</a>. On top of that we have a number of libraries we've implemented that provide services and features to let macros interact with the platform and its contents.</p>
+Macros on MDN are implemented using server-executed [JavaScript](/en-US/docs/Web/JavaScript) code, interpreted using [Node.js](https://nodejs.org/en/). On top of that we have a number of libraries we've implemented that provide services and features to let macros interact with the platform and its contents.
 
-<h2 id="Using_a_macro_in_content">Using a macro in content</h2>
+## Using a macro in content
 
-<p>To use a macro, you enclose the call to the macro in a pair of double-braces along with its parameters, if any:</p>
+To use a macro, you enclose the call to the macro in a pair of double-braces along with its parameters, if any:
 
-<pre class="brush: js">\{{macroname(parameter-list)}}</pre>
+```js
+\{{macroname(parameter-list)}}
+```
 
-<p>A few notes about macro calls:</p>
+A few notes about macro calls:
 
-<ul>
- <li>Macro names are case-sensitive, but some attempt is made to correct for common capitalization errors; you may use all lowercase even if the macro name uses caps within it, and you may capitalize a macro whose name normally starts with a lower-case letter.</li>
- <li>Parameters are separated by commas.</li>
- <li>If there are no parameters, you may leave out the parentheses entirely; <code>\{{macroname()}}</code> and <code>\{{macroname}}</code> are identical.</li>
- <li>Numeric parameters can be in quotes, or not. It's up to you (however, if you have a version number with multiple decimals in it, it needs to be in quotes).</li>
- <li>If you get errors, review your code carefully. If you still can't figure out what's going on, see <a href="/en-US/docs/MDN/Tools/KumaScript/Troubleshooting">Troubleshooting KumaScript errors</a> for help.</li>
-</ul>
+- Macro names are case-sensitive, but some attempt is made to correct for common capitalization errors; you may use all lowercase even if the macro name uses caps within it, and you may capitalize a macro whose name normally starts with a lower-case letter.
+- Parameters are separated by commas.
+- If there are no parameters, you may leave out the parentheses entirely; `\{{macroname()}}` and `\{{macroname}}` are identical.
+- Numeric parameters can be in quotes, or not. It's up to you (however, if you have a version number with multiple decimals in it, it needs to be in quotes).
+- If you get errors, review your code carefully. If you still can't figure out what's going on, see [Troubleshooting KumaScript errors](/en-US/docs/MDN/Tools/KumaScript/Troubleshooting) for help.
 
-<p>Macros are heavily cached; for any set of input values (both parameters and environmental values such as the URL for which the macro was run), the results are stored and reused. This means that the macro is only actually run when the inputs change.</p>
+Macros are heavily cached; for any set of input values (both parameters and environmental values such as the URL for which the macro was run), the results are stored and reused. This means that the macro is only actually run when the inputs change.
 
-<p>Macros can be as simple as just inserting a larger block of text or swapping in contents from another part of MDN, or as complex as building an entire index of content by searching through parts of the site, styling the output, and adding links.</p>
+Macros can be as simple as just inserting a larger block of text or swapping in contents from another part of MDN, or as complex as building an entire index of content by searching through parts of the site, styling the output, and adding links.
 
-<p>You can read up on our most commonly-used macros on the <a href="/en-US/docs/MDN/Structures/Macros/Commonly-used_macros">Commonly-used macros</a> page; also, you can browse through the <a href="https://github.com/mdn/yari/tree/master/kumascript/macros">complete sources for all macros</a>. Most of the macro sources have documentation built into them, as comments at the top.</p>
+You can read up on our most commonly-used macros on the [Commonly-used macros](/en-US/docs/MDN/Structures/Macros/Commonly-used_macros) page; also, you can browse through the [complete sources for all macros](https://github.com/mdn/yari/tree/master/kumascript/macros). Most of the macro sources have documentation built into them, as comments at the top.

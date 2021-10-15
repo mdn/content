@@ -6,8 +6,8 @@ tags:
   - MDN Meta
   - Tools
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>MDN offers a number of features that make it easier to track progress, manage content, and keep up with the latest changes to the site.</p>
+MDN offers a number of features that make it easier to track progress, manage content, and keep up with the latest changes to the site.
 
-<p>{{LandingPageListSubpages}}</p>
+{{LandingPageListSubpages}}

@@ -6,35 +6,30 @@ tags:
   - Template
   - reference page
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<h3 id="Title_and_slug">Title and slug</h3>
+### Title and slug
 
-<p>A glossary page should have a <em>title</em> and <em>slug</em> of <em>TermBeingDefined</em>. Simple</p>
+A glossary page should have a _title_ and _slug_ of _TermBeingDefined_. Simple
 
-<h3 id="Tags">Tags</h3>
+### Tags
 
-<p>In a glossary page, you need to include the following tags (see the <em>Tags</em> section at the bottom of the editor UI): <strong>Glossary</strong>, and <strong>TermBeingDefined</strong>. You can also include further descriptive tags as appropriate. </p>
+In a glossary page, you need to include the following tags (see the _Tags_ section at the bottom of the editor UI): **Glossary**, and **TermBeingDefined**. You can also include further descriptive tags as appropriate.
 
+The TermBeingDefined is ... (include concise definition of the term being defined).
 
-<p>The TermBeingDefined is ... (include concise definition of the term being defined).</p>
+Include further supporting information as required, but not much — no more than 2 more small paragraphs. Any further detailed information, code examples, tutorials, etc. should go in separate articles.
 
-<p>Include further supporting information as required, but not much — no more than 2 more small paragraphs. Any further detailed information, code examples, tutorials, etc. should go in separate articles.</p>
+## Learn more
 
-<h2 id="Learn_more">Learn more</h2>
+### General knowledge
 
-<h3 id="General_Knowledge">General knowledge</h3>
+- Include list of links pointing to
+- more detailed general information.
+- For example Wikipedia articles, other encyclopedia entries.
 
-<ul>
- <li>Include list of links pointing to</li>
- <li>more detailed general information.</li>
- <li>For example Wikipedia articles, other encyclopedia entries.</li>
-</ul>
+### Technical information
 
-<h3 id="Technical_information">Technical information</h3>
-
-<ul>
- <li>Include list of links pointing to</li>
- <li>more detailed technical information.</li>
- <li>For example technical tutorials, specifications.</li>
-</ul>
+- Include list of links pointing to
+- more detailed technical information.
+- For example technical tutorials, specifications.

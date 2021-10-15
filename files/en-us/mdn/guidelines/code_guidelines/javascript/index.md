@@ -8,313 +8,337 @@ tags:
   - JavaScript
   - MDN Meta
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>The following guidelines cover how to write JavaScript for MDN code examples.</p>
+The following guidelines cover how to write JavaScript for MDN code examples.
 
-<p>The following is a fairly simple set of JavaScript guidelines. We could go a lot deeper on this, but essentially we want to provide simple guidelines for writing concise examples that will be understandable by as many people as possible, rather than detailed guidelines for writing complex web apps. If you want something that goes into more detail, we'd recommend the <a href="https://github.com/airbnb/javascript">AirBnB JavaScript Style Guide</a>, which is generally compatible with our guidelines.</p>
+The following is a fairly simple set of JavaScript guidelines. We could go a lot deeper on this, but essentially we want to provide simple guidelines for writing concise examples that will be understandable by as many people as possible, rather than detailed guidelines for writing complex web apps. If you want something that goes into more detail, we'd recommend the [AirBnB JavaScript Style Guide](https://github.com/airbnb/javascript), which is generally compatible with our guidelines.
 
-<h2 id="In_this_article">In this article</h2>
+## In this article
 
-<ul>
- <li><a href="#general_javascript_guidelines">General JavaScript guidelines</a>
+- [General JavaScript guidelines](#general_javascript_guidelines)
 
-  <ul>
-   <li><a href="#use_expanded_syntax">Use expanded syntax</a></li>
-   <li><a href="#javascript_comments">JavaScript comments</a></li>
-   <li><a href="#use_modern_js_features">Use modern JS features</a></li>
-  </ul>
- </li>
- <li><a href="#variables">Variables</a>
-  <ul>
-   <li><a href="#variable_naming">Variable naming</a></li>
-   <li><a href="#declaring_variables">Declaring variables</a></li>
-  </ul>
- </li>
- <li><a href="#operators_and_comparison">Operators and comparison</a>
-  <ul>
-   <li><a href="#ternary_operators">Ternary operators</a></li>
-   <li><a href="#use_strict_equality">Use strict equality</a></li>
-   <li><a href="#use_shortcuts_for_boolean_tests">Use shortcuts for boolean tests</a></li>
-  </ul>
- </li>
- <li><a href="#control_statements">Control statements</a></li>
- <li><a href="#strings">Strings</a>
-  <ul>
-   <li><a href="#use_template_literals">Use template literals</a></li>
-   <li><a href="#use_textcontent_not_innerhtml">Use textContent, not innerHTML</a></li>
-  </ul>
- </li>
- <li><a href="#conditionals">Conditionals</a>
-  <ul>
-   <li><a href="#general_purpose_looping">General purpose looping</a></li>
-   <li><a href="#switch_statements">Switch statements</a></li>
-  </ul>
- </li>
- <li><a href="#functions_and_objects">Functions and objects</a>
-  <ul>
-   <li><a href="#function_naming">Function naming</a></li>
-   <li><a href="#defining_functions">Defining functions</a></li>
-   <li><a href="#creating_objects">Creating objects</a></li>
-   <li><a href="#object_classes">Object classes</a></li>
-   <li><a href="#object_naming">Object naming</a></li>
-  </ul>
- </li>
- <li><a href="#arrays">Arrays</a>
-  <ul>
-   <li><a href="#creating_arrays">Creating arrays</a></li>
-   <li><a href="#adding_to_an_array">Adding to an array</a></li>
-  </ul>
- </li>
- <li><a href="#error_handling">Error handling</a></li>
-</ul>
+  - [Use expanded syntax](#use_expanded_syntax)
+  - [JavaScript comments](#javascript_comments)
+  - [Use modern JS features](#use_modern_js_features)
 
-<h2 id="General_JavaScript_guidelines">General JavaScript guidelines</h2>
+- [Variables](#variables)
 
-<h3 id="Use_expanded_syntax">Use expanded syntax</h3>
+  - [Variable naming](#variable_naming)
+  - [Declaring variables](#declaring_variables)
 
-<p>For JavaScript we use expanded syntax, with each line of JS on a new line, the opening brace of a block on the same line as its associated statement, and the closing brace on a new line. This maximizes readability, and again, promotes consistency on MDN.</p>
+- [Operators and comparison](#operators_and_comparison)
 
-<p>Do this</p>
+  - [Ternary operators](#ternary_operators)
+  - [Use strict equality](#use_strict_equality)
+  - [Use shortcuts for boolean tests](#use_shortcuts_for_boolean_tests)
 
-<pre class="brush: js example-good">function myFunc() {
+- [Control statements](#control_statements)
+- [Strings](#strings)
+
+  - [Use template literals](#use_template_literals)
+  - [Use textContent, not innerHTML](#use_textcontent_not_innerhtml)
+
+- [Conditionals](#conditionals)
+
+  - [General purpose looping](#general_purpose_looping)
+  - [Switch statements](#switch_statements)
+
+- [Functions and objects](#functions_and_objects)
+
+  - [Function naming](#function_naming)
+  - [Defining functions](#defining_functions)
+  - [Creating objects](#creating_objects)
+  - [Object classes](#object_classes)
+  - [Object naming](#object_naming)
+
+- [Arrays](#arrays)
+
+  - [Creating arrays](#creating_arrays)
+  - [Adding to an array](#adding_to_an_array)
+
+- [Error handling](#error_handling)
+
+## General JavaScript guidelines
+
+### Use expanded syntax
+
+For JavaScript we use expanded syntax, with each line of JS on a new line, the opening brace of a block on the same line as its associated statement, and the closing brace on a new line. This maximizes readability, and again, promotes consistency on MDN.
+
+Do this
+
+```js example-good
+function myFunc() {
   console.log('Hello!');
-};</pre>
+};
+```
 
-<p>Not this</p>
+Not this
 
-<pre class="brush: js example-bad">function myFunc() { console.log('Hello!'); };</pre>
+```js example-bad
+function myFunc() { console.log('Hello!'); };
+```
 
-<p>We also have a few specific rules around spacing inside language features. You should include spaces between operators and operands, parameters, etc.</p>
+We also have a few specific rules around spacing inside language features. You should include spaces between operators and operands, parameters, etc.
 
-<p>This is more readable</p>
+This is more readable
 
-<pre class="brush: js example-good">if(dayOfWeek === 7 &amp;&amp; weather === 'sunny') {
+```js example-good
+if(dayOfWeek === 7 && weather === 'sunny') {
   goOnTrip('beach', 'car', ['ice cream', 'bucket and spade', 'beach towel']);
-}</pre>
+}
+```
 
-<p>than this</p>
+than this
 
-<pre class="brush: js example-bad">if(dayOfWeek===7&amp;&amp;weather==='sunny'){
+```js example-bad
+if(dayOfWeek===7&&weather==='sunny'){
   goOnTrip('beach','car',['ice cream','bucket and spade','beach towel']);
-}</pre>
+}
+```
 
-<p>In addition, keep these specifics in mind:</p>
+In addition, keep these specifics in mind:
 
-<ul>
- <li>Don't include padding spaces after opening brackets or before closing brackets — <code>(myVar)</code>, not <code>( myVar )</code>.</li>
- <li>All statements must end with semicolons (";"). We require them in all of our code samples even though they're technically optional in JavaScript because we feel that it leads to code that is clearer and more precise about where each statement ends.</li>
- <li>Use single quotes in JavaScript, wherever single quotes are needed in syntax.</li>
- <li>There should be no space between a control statement keyword, function, or loop keyword and its opening parenthesis (e.g. <code>if() { ... }</code>, <code>function myFunc() { ... }, for(...) { ... }</code>).</li>
- <li>There should be a space between the parentheses and the opening curly brace in such cases as described in the previous bullet.</li>
-</ul>
+- Don't include padding spaces after opening brackets or before closing brackets — `(myVar)`, not `( myVar )`.
+- All statements must end with semicolons (";"). We require them in all of our code samples even though they're technically optional in JavaScript because we feel that it leads to code that is clearer and more precise about where each statement ends.
+- Use single quotes in JavaScript, wherever single quotes are needed in syntax.
+- There should be no space between a control statement keyword, function, or loop keyword and its opening parenthesis (e.g. `if() { ... }`, `function myFunc() { ... }, for(...) { ... }`).
+- There should be a space between the parentheses and the opening curly brace in such cases as described in the previous bullet.
 
-<h3 id="JavaScript_comments">JavaScript comments</h3>
+### JavaScript comments
 
-<p>Use JS-style comments to comment code that isn't self-documenting:</p>
+Use JS-style comments to comment code that isn't self-documenting:
 
-<pre class="brush: js example-good">// This is a JavaScript-style comment</pre>
+```js example-good
+// This is a JavaScript-style comment
+```
 
-<p>Put your comments on separate lines preceding the code they are referring to:</p>
+Put your comments on separate lines preceding the code they are referring to:
 
-<pre class="brush: js example-good">function myFunc() {
+```js example-good
+function myFunc() {
   // Output the string 'Hello' to the browser's JS console
   console.log('Hello');
-  // Create a new paragraph, fill it with content, and append it to the &lt;body&gt;
+  // Create a new paragraph, fill it with content, and append it to the <body>
   let para = document.createElement('p');
   para.textContent = 'My new paragraph';
   document.body.appendChild(para);
-}</pre>
+}
+```
 
-<p>Also note that you should leave a space between the slashes and the comment, in each case.</p>
+Also note that you should leave a space between the slashes and the comment, in each case.
 
-<h3 id="Use_modern_JS_features">Use modern JS features</h3>
+### Use modern JS features
 
-<p>For general usage, you can use modern well-supported JS features (such as <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async</a></code>/<code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code>/<code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code>, <a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">template literals</a>, and <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread syntax</a>) in MDN examples. We include them in many places in these guidelines, as we believe the web industry has generally gotten to the point where such features are familiar enough to be understandable. And for those that don't use them yet, we'd like to play our part in helping people to evolve their skills.</p>
+For general usage, you can use modern well-supported JS features (such as [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)/[`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals), and [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)) in MDN examples. We include them in many places in these guidelines, as we believe the web industry has generally gotten to the point where such features are familiar enough to be understandable. And for those that don't use them yet, we'd like to play our part in helping people to evolve their skills.
 
-<div class="note">
-  <p><strong>Note:</strong> By "general usage", we mean general example writing. Reference pages covering specific JS features obviously need to use the features they are documenting!</p>
-</div>
+> **Note:** By "general usage", we mean general example writing. Reference pages covering specific JS features obviously need to use the features they are documenting!
 
-<h2 id="Variables">Variables</h2>
+## Variables
 
-<h3 id="Variable_naming">Variable naming</h3>
+### Variable naming
 
-<p>For variable names use lowerCamelCasing, and use concise, human-readable, semantic names where appropriate.</p>
+For variable names use lowerCamelCasing, and use concise, human-readable, semantic names where appropriate.
 
-<p>Do this:</p>
+Do this:
 
-<pre class="brush: js example-good">let playerScore = 0;
+```js example-good
+let playerScore = 0;
 
-let speed = distance / time;</pre>
+let speed = distance / time;
+```
 
-<p>Not this:</p>
+Not this:
 
-<pre class="brush: js example-bad">let thisIsaveryLONGVariableThatRecordsPlayerscore345654 = 0;
+```js example-bad
+let thisIsaveryLONGVariableThatRecordsPlayerscore345654 = 0;
 
 let s = d/t;
-</pre>
+```
 
-<div class="note">
-  <p><strong>Note:</strong> The only place where it is OK to not use human-readable semantic names is where a very common recognized convention exists, such as using <code>i</code>, <code>j</code>, etc. for loop iterators.</p>
-</div>
+> **Note:** The only place where it is OK to not use human-readable semantic names is where a very common recognized convention exists, such as using `i`, `j`, etc. for loop iterators.
 
-<h3 id="Declaring_variables">Declaring variables</h3>
+### Declaring variables
 
-<p>When declaring variables and constants, use the <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code> keywords, not <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a></code>.</p>
+When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) keywords, not [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var).
 
-<p>If a variable will not be reassigned, prefer <code>const</code>:</p>
+If a variable will not be reassigned, prefer `const`:
 
-<pre class="brush: js example-good">const myName = 'Chris';
+```js example-good
+const myName = 'Chris';
 console.log(myName);
-</pre>
+```
 
-<p>Otherwise, use <code>let</code>:</p>
+Otherwise, use `let`:
 
-<pre class="brush: js example-good">let myAge = '40';
+```js example-good
+let myAge = '40';
 myAge++;
 console.log('Happy birthday!');
-</pre>
+```
 
-<p>This example uses <code>let</code> where it should prefer <code>const</code>. It will work but should be avoided in MDN code examples:</p>
+This example uses `let` where it should prefer `const`. It will work but should be avoided in MDN code examples:
 
-<pre class="brush: js example-bad">let myName = 'Chris';
+```js example-bad
+let myName = 'Chris';
 console.log(myName);
-</pre>
+```
 
-<p>This example uses const for a variable that gets reassigned. The reassignment will throw an error:</p>
+This example uses const for a variable that gets reassigned. The reassignment will throw an error:
 
-<pre class="brush: js example-bad">const myAge = '40';
+```js example-bad
+const myAge = '40';
 myAge++;
 console.log('Happy birthday!');
-</pre>
+```
 
-<p>This example uses <code>var</code>, which should be avoided in MDN code examples unless it is really needed:</p>
+This example uses `var`, which should be avoided in MDN code examples unless it is really needed:
 
-<pre class="brush: js example-bad">var myAge = '40';
-var myName = 'Chris';</pre>
+```js example-bad
+var myAge = '40';
+var myName = 'Chris';
+```
 
-<h2 id="Operators_and_comparison">Operators and comparison</h2>
+## Operators and comparison
 
-<h3 id="Ternary_operators">Ternary operators</h3>
+### Ternary operators
 
-<p>Ternary operators should be put on a single line:</p>
+Ternary operators should be put on a single line:
 
-<pre class="brush: js example-good">let status = (age &gt;= 18) ? 'adult' : 'minor';</pre>
+```js example-good
+let status = (age >= 18) ? 'adult' : 'minor';
+```
 
-<p>Not nested:</p>
+Not nested:
 
-<pre class="brush: js example-bad">let status = (age &gt;= 18)
+```js example-bad
+let status = (age >= 18)
   ? 'adult'
-  : 'minor';</pre>
+  : 'minor';
+```
 
-<p>This is much harder to read.</p>
+This is much harder to read.
 
-<h3 id="Use_strict_equality">Use strict equality</h3>
+### Use strict equality
 
-<p>Always use strict equality and inequality.</p>
+Always use strict equality and inequality.
 
-<p>Do this:</p>
+Do this:
 
-<pre class="brush: js example-good">name === 'Chris';
-age !== 25;</pre>
+```js example-good
+name === 'Chris';
+age !== 25;
+```
 
-<p>Not this:</p>
+Not this:
 
-<pre class="brush: js example-bad">name == 'Chris';
-age != 25;</pre>
+```js example-bad
+name == 'Chris';
+age != 25;
+```
 
-<h3 id="Use_shortcuts_for_boolean_tests">Use shortcuts for boolean tests</h3>
+### Use shortcuts for boolean tests
 
-<p>Use shortcuts for boolean tests — use <code>x</code> and <code>!x</code>, not <code>x === true</code> and <code>x === false</code>.</p>
+Use shortcuts for boolean tests — use `x` and `!x`, not `x === true` and `x === false`.
 
-<h2 id="Control_statements">Control statements</h2>
+## Control statements
 
-<p>Write control statements like this:</p>
+Write control statements like this:
 
-<pre class="brush: js example-good">if(iceCream) {
+```js example-good
+if(iceCream) {
   alert('Woo hoo!');
-}</pre>
+}
+```
 
-<p>Not this:</p>
+Not this:
 
-<pre class="brush: js example-bad">if (iceCream){
+```js example-bad
+if (iceCream){
   alert('Woo hoo!');
-}</pre>
+}
+```
 
-<p>Also bear in mind:</p>
+Also bear in mind:
 
-<ul>
- <li>There should be <em>no space</em> between a control statement keyword and its opening parenthesis.</li>
- <li>There should be <em>a space</em> between the parentheses and the opening curly brace.</li>
-</ul>
+- There should be _no space_ between a control statement keyword and its opening parenthesis.
+- There should be _a space_ between the parentheses and the opening curly brace.
 
-<h2 id="Strings">Strings</h2>
+## Strings
 
-<h3 id="Use_template_literals">Use template literals</h3>
+### Use template literals
 
-<p>For inserting values into strings, use string literals.</p>
+For inserting values into strings, use string literals.
 
-<p>Do this:</p>
+Do this:
 
-<pre class="brush: js example-good">let myName = 'Chris';
-console.log(`Hi! I'm ${myName}!`);</pre>
+```js example-good
+let myName = 'Chris';
+console.log(`Hi! I'm ${myName}!`);
+```
 
-<p>Not this:</p>
+Not this:
 
-<pre class="brush: js example-bad">let myName = 'Chris';
-console.log('Hi! I\'m' + myName + '!');</pre>
+```js example-bad
+let myName = 'Chris';
+console.log('Hi! I\'m' + myName + '!');
+```
 
-<h3 id="Use_textContent_not_innerHTML">Use textContent, not innerHTML</h3>
+### Use textContent, not innerHTML
 
-<p>When inserting strings into DOM nodes, use {{DOMxRef("Node.textContent")}}:</p>
+When inserting strings into DOM nodes, use {{DOMxRef("Node.textContent")}}:
 
-<pre class="brush: js example-good">let text = 'Hello to all you good people';
+```js example-good
+let text = 'Hello to all you good people';
 const para = document.createElement('p');
-para.textContent = text;</pre>
+para.textContent = text;
+```
 
-<p>Not {{DOMxRef("Element.innerHTML")}}:</p>
+Not {{DOMxRef("Element.innerHTML")}}:
 
-<pre class="brush: js example-bad">let text = 'Hello to all you good people';
+```js example-bad
+let text = 'Hello to all you good people';
 const para = document.createElement('p');
-para.innerHTML = text;</pre>
+para.innerHTML = text;
+```
 
-<p><code>textContent</code> is a lot more efficient, and less error-prone than <code>innerHTML</code>.</p>
+`textContent` is a lot more efficient, and less error-prone than `innerHTML`.
 
-<h2 id="Conditionals">Conditionals</h2>
+## Conditionals
 
-<h3 id="General_purpose_looping">General purpose looping</h3>
+### General purpose looping
 
-<p>When <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">loops</a> are required, feel free to choose an appropriate loop out of the available ones (<code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/while">while</a></code>, etc.) Just make sure to keep the code as understandable as possible.</p>
+When [loops](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code) are required, feel free to choose an appropriate loop out of the available ones ([`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for), [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of), [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while), etc.) Just make sure to keep the code as understandable as possible.
 
-<p>When using <code>for</code>/<code>for...of</code> loops, make sure to define the initializer properly, with a <code>let</code> keyword:</p>
+When using `for`/`for...of` loops, make sure to define the initializer properly, with a `let` keyword:
 
-<pre class="brush: js example-good">let cats = ['Athena', 'Luna'];
+```js example-good
+let cats = ['Athena', 'Luna'];
 for(let i of cats) {
   console.log(i);
 }
-</pre>
+```
 
-<p>Not</p>
+Not
 
-<pre class="brush: js example-bad">let cats = ['Athena', 'Luna'];
+```js example-bad
+let cats = ['Athena', 'Luna'];
 for(i of cats) {
   console.log(i);
 }
-</pre>
+```
 
-<p>Also bear in mind:</p>
+Also bear in mind:
 
-<ul>
- <li>There should be <em>no space</em> between a loop keyword and its opening parenthesis.</li>
- <li>There should be <em>a space</em> between the parentheses and the opening curly brace.</li>
-</ul>
+- There should be _no space_ between a loop keyword and its opening parenthesis.
+- There should be _a space_ between the parentheses and the opening curly brace.
 
-<h3 id="Switch_statements">Switch statements</h3>
+### Switch statements
 
-<p>Format switch statements like this:</p>
+Format switch statements like this:
 
-<pre class="brush: js example-good">let expr = 'Papayas';
+```js example-good
+let expr = 'Papayas';
 switch(expr) {
   case 'Oranges':
     console.log('Oranges are $0.59 a pound.');
@@ -325,91 +349,104 @@ switch(expr) {
     break;
   default:
     console.log(`Sorry, we are out of ${expr}`);
-}</pre>
+}
+```
 
-<h2 id="Functions_and_objects">Functions and objects</h2>
+## Functions and objects
 
-<h3 id="Function_naming">Function naming</h3>
+### Function naming
 
-<p>For function names use lowerCamelCasing, and use concise, human-readable, semantic names where appropriate.</p>
+For function names use lowerCamelCasing, and use concise, human-readable, semantic names where appropriate.
 
-<p>Do this:</p>
+Do this:
 
-<pre class="brush: js example-good">function sayHello() {
+```js example-good
+function sayHello() {
   alert('Hello!');
-};</pre>
+};
+```
 
-<p>Not these:</p>
+Not these:
 
-<pre class="brush: js example-bad">function SayHello() {
+```js example-bad
+function SayHello() {
   alert('Hello!');
 };
 
 function notVeryObviousName() {
   alert('Hello!');
 };
-</pre>
+```
 
-<h3 id="Defining_functions">Defining functions</h3>
+### Defining functions
 
-<p>Where possible, use the <code>function</code> declaration to define functions over function expressions:</p>
+Where possible, use the `function` declaration to define functions over function expressions:
 
-<p>Do this:</p>
+Do this:
 
-<pre class="brush: js example-good">function sum(a, b) {
+```js example-good
+function sum(a, b) {
   return a + b;
-}</pre>
+}
+```
 
-<p>Not this:</p>
+Not this:
 
-<pre class="brush: js example-bad">let sum = function(a, b) {
+```js example-bad
+let sum = function(a, b) {
   return a + b;
-}</pre>
+}
+```
 
-<p>When using anonymous functions inside a method that requires a function as a parameter, it is acceptable (although not required) to use an arrow function to make the code shorter and cleaner.</p>
+When using anonymous functions inside a method that requires a function as a parameter, it is acceptable (although not required) to use an arrow function to make the code shorter and cleaner.
 
-<p>So instead of this:</p>
+So instead of this:
 
-<pre class="brush: js example-good">const array1 = [1, 2, 3, 4];
+```js example-good
+const array1 = [1, 2, 3, 4];
 let sum = array1.reduce(function(a, b) {
   return a + b;
-});</pre>
+});
+```
 
-<p>you could write this:</p>
+you could write this:
 
-<pre class="brush: js example-good">const array1 = [1, 2, 3, 4];
-let sum = array1.reduce((a, b) =&gt;
+```js example-good
+const array1 = [1, 2, 3, 4];
+let sum = array1.reduce((a, b) =>
   a + b
-);</pre>
+);
+```
 
-<p>Also bear in mind:</p>
+Also bear in mind:
 
-<ul>
- <li>There should be <em>no space</em> between a function name and its opening parenthesis.</li>
- <li>There should be <em>a space</em> between the parentheses and the opening curly brace.</li>
-</ul>
+- There should be _no space_ between a function name and its opening parenthesis.
+- There should be _a space_ between the parentheses and the opening curly brace.
 
-<h3 id="Creating_objects">Creating objects</h3>
+### Creating objects
 
-<p>Use literals — not constructors — for creating general objects (i.e., when classes are not involved):</p>
+Use literals — not constructors — for creating general objects (i.e., when classes are not involved):
 
-<p>Do this:</p>
+Do this:
 
-<pre class="brush: js example-good">let myObject = { };
-</pre>
+```js example-good
+let myObject = { };
+```
 
-<p>Not this:</p>
+Not this:
 
-<pre class="brush: js example-bad">let myObject = new Object();
-</pre>
+```js example-bad
+let myObject = new Object();
+```
 
-<h3 id="Object_classes">Object classes</h3>
+### Object classes
 
-<p>Use ES class syntax for objects, not old-style constructors.</p>
+Use ES class syntax for objects, not old-style constructors.
 
-<p>For example:</p>
+For example:
 
-<pre class="brush: js example-good">class Person {
+```js example-good
+class Person {
   constructor(name, age, gender) {
     this.name = name;
     this.age = age;
@@ -419,79 +456,94 @@ let sum = array1.reduce((a, b) =&gt;
   greeting() {
     console.log(`Hi! I'm ${this.name}`);
   };
-}</pre>
+}
+```
 
-<p>Use <code>extends</code> for inheritance:</p>
+Use `extends` for inheritance:
 
-<pre class="brush: js example-good">class Teacher extends Person {
+```js example-good
+class Teacher extends Person {
   ...
-}</pre>
+}
+```
 
-<h3 id="Object_naming">Object naming</h3>
+### Object naming
 
-<p>When defining an object class (as seen above), use UpperCamelCasing (also known as PascalCasing) for the class name, and lowerCamelCasing for the object property and method names.</p>
+When defining an object class (as seen above), use UpperCamelCasing (also known as PascalCasing) for the class name, and lowerCamelCasing for the object property and method names.
 
-<p>When defining an object instance, either a literal or via a constructor, use lowerCamelCase for the instance name:</p>
+When defining an object instance, either a literal or via a constructor, use lowerCamelCase for the instance name:
 
-<pre class="brush: js example-good">let hanSolo = new Person('Han Solo', 25, 'male');
+```js example-good
+let hanSolo = new Person('Han Solo', 25, 'male');
 
 let hanSolo = {
   name: 'Han Solo',
   age: 25,
   gender: 'male'
-}</pre>
+}
+```
 
-<h2 id="Arrays">Arrays</h2>
+## Arrays
 
-<h3 id="Creating_arrays">Creating arrays</h3>
+### Creating arrays
 
-<p>Use literals — not constructors — for creating arrays:</p>
+Use literals — not constructors — for creating arrays:
 
-<p>Do this:</p>
+Do this:
 
-<pre class="brush: js example-good">let myArray = [ ];</pre>
+```js example-good
+let myArray = [ ];
+```
 
-<p>Not this:</p>
+Not this:
 
-<pre class="brush: js example-bad">let myArray = new Array(length);</pre>
+```js example-bad
+let myArray = new Array(length);
+```
 
-<h3 id="Adding_to_an_array">Adding to an array</h3>
+### Adding to an array
 
-<p>When adding items to an array, use <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push">push()</a></code>, not direct assignment. Given the following array:</p>
+When adding items to an array, use [`push()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push), not direct assignment. Given the following array:
 
-<pre class="brush: js">const pets = [];</pre>
+```js
+const pets = [];
+```
 
-<p>do this:</p>
+do this:
 
-<pre class="brush: js example-good">pets.push('cat');</pre>
+```js example-good
+pets.push('cat');
+```
 
-<p>not this:</p>
+not this:
 
-<pre class="brush: js example-bad">pets[pets.length] = 'cat';</pre>
+```js example-bad
+pets[pets.length] = 'cat';
+```
 
-<h2 id="Error_handling">Error handling</h2>
+## Error handling
 
-<p>If certain states of your program throw uncaught errors, they will halt execution and potentially reduce the usefulness of the example. You should therefore catch errors using a <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> block:</p>
+If certain states of your program throw uncaught errors, they will halt execution and potentially reduce the usefulness of the example. You should therefore catch errors using a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block:
 
-<pre class="brush: js example-good">try {
+```js example-good
+try {
   console.log(results);
 }
 catch(e) {
   console.error(e);
-}</pre>
+}
+```
 
-<h2 id="Good_JavaScript_examples_on_MDN">Good JavaScript examples on MDN</h2>
+## Good JavaScript examples on MDN
 
-<p>You can find good, concise, meaningful JavaScript snippets at the top of our <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript language reference</a> pages — browse through it to find some.</p>
+You can find good, concise, meaningful JavaScript snippets at the top of our [JavaScript language reference](/en-US/docs/Web/JavaScript/Reference) pages — browse through it to find some.
 
-<p>Our interactive (and other) examples are generally written to follow the above guidelines, although be aware that they may differ in some places as they were mostly written before the guidelines were newly written.</p>
+Our interactive (and other) examples are generally written to follow the above guidelines, although be aware that they may differ in some places as they were mostly written before the guidelines were newly written.
 
-<p>For API examples, we'd like to highlight a few examples we think are good:</p>
+For API examples, we'd like to highlight a few examples we think are good:
 
-<ul>
- <li><a href="/en-US/docs/Web/API/fetch#examples"><code>fetch()</code> examples</a></li>
- <li><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect#examples"><code>fillRect()</code> examples</a> (the Canvas 2D examples are generally good, although they still use old-style <code>var</code>).</li>
- <li><a href="/en-US/docs/Web/API/PaymentRequest/show">Payment Request API <code>show()</code></a> (The {{DOMxRef("PaymentRequest")}} examples are generally quite good).</li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a> (general good practices for HTML, CSS, and JavaScript, and a good demonstration of how to use snippets and link to full examples elsewhere).</li>
- <li><a href="/en-US/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API">Using the Media Capabilities API</a> (more general good practices for using code snippets in a guide).</li>
-</ul>
+- [`fetch()` examples](/en-US/docs/Web/API/fetch#examples)
+- [`fillRect()` examples](/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect#examples) (the Canvas 2D examples are generally good, although they still use old-style `var`).
+- [Payment Request API `show()`](/en-US/docs/Web/API/PaymentRequest/show) (The {{DOMxRef("PaymentRequest")}} examples are generally quite good).
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API) (general good practices for HTML, CSS, and JavaScript, and a good demonstration of how to use snippets and link to full examples elsewhere).
+- [Using the Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API) (more general good practices for using code snippets in a guide).
