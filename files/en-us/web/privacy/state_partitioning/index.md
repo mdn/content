@@ -8,359 +8,276 @@ tags:
   - Storage
   - tracking
 ---
+State Partitioning is a broad effort to rework how Firefox manages client-side
+state (i.e., data stored in the browser) to mitigate the ability of websites
+to abuse state for cross-site tracking. This effort aims to
+achieve that by providing what is effectively a "different", isolated storage
+location to every website a user visits. This article gives an overview of
+the mechanism, lists the affected APIs and explains how to debug affected
+sites.
 
-<p class="summary">
-  State Partitioning is a broad effort to rework how Firefox manages client-side
-  state (i.e., data stored in the browser) to mitigate the ability of websites
-  to abuse state for cross-site tracking. This effort aims to
-  achieve that by providing what is effectively a "different", isolated storage
-  location to every website a user visits. This article gives an overview of
-  the mechanism, lists the affected APIs and explains how to debug affected
-  sites.
-  <br>
-  <br>
-  State Partitioning is currently turned on by default in the Firefox Nightly
-  channel. A subset of the state partitioning efforts (namely <a href="#network_partitioning">
-  network partitioning</a>) has been enabled by default in the release channel
-  of Firefox since version 85.
-</p>
+State Partitioning is currently turned on by default in the Firefox Nightly
+channel. A subset of the state partitioning efforts (namely [network partitioning](#network_partitioning)) has been enabled by default in the release channel
+of Firefox since version 85.
 
-<h2>Motivation</h2>
-<h3>Cross-site tracking using shared state</h3>
-<p>
-  Browsers traditionally key client-side state by the origin (or sometimes
-  registrable domain) of the location a resource was loaded from. For example,
-  the cookies, localStorage objects, and caches available to an iframe loaded
-  from <code>https://example.com/hello.html</code> will be keyed by
-  <code>example.com</code>. This is true regardless of whether the browser
-  is currently loading resources from that domain as a <i>first-party</i>
-  resources or as an embedded <i>third party</i> resources. Trackers have taken
-  advantage of this cross-site state to store user identifiers and access them
-  across websites. The example below shows how <code>example.com</code> can use
-  its cross-site state (in this instance, cookies) to track a user across its
-  own site as well as <code>A.example</code> and <code>B.example</code>.
-</p>
-<img src="example-cross-site-state.png" alt="An example of cross-site state">
+## Motivation
 
-<h3>Past approaches to blocking cross-site tracking</h3>
-<p>
-  Firefox's past cookie policies attempt to mitigate tracking by blocking
-  access to some storage APIs (e.g., cookies and localStorage) for certain
-  domains under certain conditions. For example, our "block all third-party
-  cookies" policy will prevent all domains from accessing certain storage APIs
-  when loaded in a third-party context. Our current
-  <a href="en-US/docs/Mozilla/Firefox/Privacy/Storage_access_policy">
-    default cookie policy
-  </a> blocks access in a third-party context only for domains classified as
-  trackers.
-</p>
+### Cross-site tracking using shared state
 
-<h2 id="state_partitioning">State Partitioning</h2>
-<p>
-  State Partitioning is a different approach to preventing cross-site tracking.
-  Rather than block access to certain stateful APIs in a third-party context,
-  Firefox provides embedded resources with a separate storage
-  bucket for every top-level website. More specifically, Firefox double-keys
-  all client-side state by the
-  <i><a class="external"
-  href="https://html.spec.whatwg.org/#origin">origin</a></i>
-  of the resource being loaded and by the <i>top-level
-  <a class="external"
-  href="https://html.spec.whatwg.org/multipage/origin.html#site">site</a></i>.
-  In most instances, the top-level site is the scheme and eTLD+1 of the top-level
-  page being visited by the user.
-</p>
-<p>
-  In the example below <code>example.com</code> is embedded in
-  <code>A.example</code> and <code>B.example</code>. However, since storage is
-  partitioned, there are three distinct storage buckets (instead of one). The
-  tracker can still access storage, but since every storage bucket is
-  additionally keyed under the top-level site, the data it has access to on A
-  will be different than the data on B. This will prevent a tracker from storing
-  an identifier in their cookies when visited directly and then retrieving that
-  identifier when embedded in other websites.
-</p>
-<img src="example-state-partitioning.png" alt="An example of state partitioning">
-<h3>Standardization</h3>
-<p>
-  The <a class="external" href="https://privacycg.github.io/">Privacy Community
-  Group</a> has a Work Item for
-  <a class="external" href="https://privacycg.github.io/storage-partitioning/">
-  Client-Side Storage Partitioning</a>. This serves as an overview of the
-  standardization efforts for storage partitioning in the individual standards
-  affected. We intend to align our state partitioning implementation with these
-  efforts as the Work Item is standardized.
-</p>
+Browsers traditionally key client-side state by the origin (or sometimes
+registrable domain) of the location a resource was loaded from. For example,
+the cookies, localStorage objects, and caches available to an iframe loaded
+from `https://example.com/hello.html` will be keyed by
+`example.com`. This is true regardless of whether the browser
+is currently loading resources from that domain as a _first-party_
+resources or as an embedded _third party_ resources. Trackers have taken
+advantage of this cross-site state to store user identifiers and access them
+across websites. The example below shows how `example.com` can use
+its cross-site state (in this instance, cookies) to track a user across its
+own site as well as `A.example` and `B.example`.
 
-<h3>Status of partitioning in Firefox</h3>
+![An example of cross-site state](example-cross-site-state.png)
 
-<ul>
-  <li>
-    <p><a href="#network_partitioning"><strong>Network Partitioning</strong></a>: Enabled by default for all users since Firefox 85.</p>
-  </li>
-  <li><p><a href="#dynamic_state_partitioning"><strong>Dynamic State Partitioning</strong></a>: Since Firefox 86: Enabled for users that have
-  <a href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection"> "Strict" privacy protections </a> enabled.</p>
-  </li>
-</ul>
+### Past approaches to blocking cross-site tracking
 
-<h3 id="network_partitioning">Network Partitioning</h3>
-  <p>Networking-related APIs are not intended to be used for websites to store
-  data, but they can be
-  <a class="external" href="https://blog.mozilla.org/security/2021/01/26/supercookie-protections/">abused</a>
-  for cross-site tracking. As such, the following network APIs and caches are
-  <strong>permanently</strong> partitioned by the top-level site.</p>
-  <div class="note">
-    <p><strong>Note:</strong> Network Partitioning is permanent. Websites can't
-    control or relax these restrictions.</p>
-  </div>
-  <h4>Partitioned APIs</h4>
-  <ul>
-    <li><a href="/en-US/docs/Web/HTTP/Caching">HTTP Cache</a></li>
-    <li>Image Cache</li>
-    <li>Favicon Cache</li>
-    <li>Connection Pooling</li>
-    <li>Stylesheet Cache</li>
-    <li><a href="/en-US/docs/Glossary/DNS">DNS</a></li>
-    <li>HTTP Authentication</li>
-    <li><a href="/en-US/docs/Web/HTTP/Headers/Alt-Svc">Alt-Svc</a></li>
-    <li>Speculative Connections</li>
-    <li>Fonts &amp; Font Cache</li>
-    <li><a href="/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">HSTS</a></li>
-    <li>OCSP</li>
-    <li>Intermediate CA Cache</li>
-    <li>TLS Client Certificates</li>
-    <li>TLS Session Identifiers</li>
-    <li>Prefetch</li>
-    <li>Preconnect</li>
-    <li><a href="/en-US/docs/Glossary/Preflight_request">CORS-preflight</a> Cache</li>
-    <li>WebRTC deviceID</li>
-  </ul>
-<h3 id="dynamic_state_partitioning">Dynamic Partitioning</h3>
-  <p>To prevent cross-site tracking via JavaScript accessible storage APIs,
-  Firefox partitions them for third-parties by top-level site. As opposed to
-  Network Partitioning this boundary is dynamic and storage access to the
-  embedders context maybe be granted in certain circumstances.</p>
-  <p>Firefox implements the
-  <a href="#storage_access_api">StorageAccessAPI</a> to allow frames to request
-  access to the parent storage. Access to top-level storage may also be granted
-  automatically in specific scenarios. <a href="#partitioning_heuristics">You
-  can read more about these heuristics here.</a></p>
+Firefox's past cookie policies attempt to mitigate tracking by blocking
+access to some storage APIs (e.g., cookies and localStorage) for certain
+domains under certain conditions. For example, our "block all third-party
+cookies" policy will prevent all domains from accessing certain storage APIs
+when loaded in a third-party context. Our current
+[default cookie policy
+](en-US/docs/Mozilla/Firefox/Privacy/Storage_access_policy)blocks access in a third-party context only for domains classified as
+trackers.
 
-  <h4 id="dynamically_partitioned_apis">Partitioned APIs</h4>
-  <ul>
-    <li><a href="/en-US/docs/Web/API/Document/cookie">Cookies</a></li>
-    <li><a href="/en-US/docs/Web/API/Window/localStorage">localStorage</a></li>
-    <li><a href="/en-US/docs/Web/API/Window/sessionStorage">sessionStorage</a></li>
-    <li><a href="/en-US/docs/Web/API/Cache">DOM Cache</a></li>
-    <li><a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a></li>
-    <li><a href="/en-US/docs/Web/API/BroadcastChannel">Broadcast Channel</a></li>
-    <li><a href="/en-US/docs/Web/API/SharedWorker">Shared Workers</a></li>
-  </ul>
-  <p>
-	<a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a>
-	are currently disabled in partitioned contexts when dynamic partitioning is
-  enabled. In	<a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1495241">Bug 1495241</a>
-	we are exploring options to enable Service Workers in partitioned contexts.
-  </p>
+## State Partitioning
 
-  <h4 id="partitioning_heuristics">Storage Access Heuristics</h4>
-  <p>
-    To improve web compatibility, Firefox currently includes some heuristics to
-    grant unpartitioned storage access automatically to third parties that
-    receive user interaction. These heuristics are intended to allow some
-    third-party integrations that are common on the web to continue to function.
-  </p>
-  <div class="warning">
-    <p><strong>Warning:</strong> Storage access heuristics are a transitional
-    feature meant to prevent website breakage. They should not be relied upon
-    for current and future web development.</p>
-  </div>
+State Partitioning is a different approach to preventing cross-site tracking.
+Rather than block access to certain stateful APIs in a third-party context,
+Firefox provides embedded resources with a separate storage
+bucket for every top-level website. More specifically, Firefox double-keys
+all client-side state by the
+_[origin](https://html.spec.whatwg.org/#origin)_
+of the resource being loaded and by the _top-level
+[site](https://html.spec.whatwg.org/multipage/origin.html#site)_.
+In most instances, the top-level site is the scheme and eTLD+1 of the top-level
+page being visited by the user.
 
-  <h5 id="storage_access_window_open_heuristics">Opener Heuristics</h5>
-  <ul>
-    <li>
-      When a partitioned third-party opens a pop-up window that has
-      <a href="/en-US/docs/Web/API/Window/opener">opener access</a> to the
-      originating document, the third-party is granted storage access to its
-      embedder for 30 days.
-    </li>
-    <li>
-      When a first-party <code>a.example</code> opens a third-party pop-up
-      <code>b.example</code>, <code>b.example</code> is granted
-      third-party storage access to <code>a.example</code> for 30 days.
-    </li>
-  </ul>
-  <div class="note">
-    <p><strong>Note:</strong> For third-parties which abuse these heuristic for
-    tracking purposes, we may require user interaction with the popup before
-    storage access is granted.</p>
-  </div>
+In the example below `example.com` is embedded in
+`A.example` and `B.example`. However, since storage is
+partitioned, there are three distinct storage buckets (instead of one). The
+tracker can still access storage, but since every storage bucket is
+additionally keyed under the top-level site, the data it has access to on A
+will be different than the data on B. This will prevent a tracker from storing
+an identifier in their cookies when visited directly and then retrieving that
+identifier when embedded in other websites.
 
-  <h5 id="storage_access_redirect_heuristics">Redirect Heuristics</h5>
-  <ul>
-    <li>
-      If a site <code>b.example</code> redirects to <code>a.example</code>, then
-      <code>b.example</code> receives storage access to its embedder
-      <code>a.example</code> if both <code>a.example</code> and
-      <code>b.example</code> have been visited and interacted with within the
-      last 10 minutes. This storage access will be granted for 15 minutes.
-    </li>
-    <li>
-      If a tracker <code>tracker.example</code> (as classified by the Enhanced
-      Tracking Protection) redirects to a non-tracker
-      <code>a.example</code> and <code>tracker.example</code> received user
-      interaction as a first-party within the last 45 days,
-      <code>tracker.example</code> is granted storage access to
-      <code>a.example</code> for 15 minutes.
-    </li>
-  </ul>
-  <h4 id="storage_access_api">Storage Access API</h4>
-  <p>
-    Third-party frames may use
-    <a href="/en-US/docs/Web/API/Document/requestStorageAccess">
-      <code>document.requestStorageAccess</code>
-    </a>
-    to request unpartitioned storage access through the
-    <a href="/en-US/docs/Web/API/Storage_Access_API">StorageAccessAPI</a>. Once
-    granted, the requesting third-party will gain access to its first-party
-    storage bucket (i.e., the storage it would have access to if visited as a
-    first-party). Any calls to <a
-    href="#dynamically_partitioned_apis">dynamically partitioned APIs</a>, for
-    example
-    <a href="/en-US/docs/Web/API/Window/localStorage">localStorage</a>, will be
-    made in context of the first-party bucket.
-  </p>
-  <div class="warning">
-    <p><strong>Warning:</strong> When storage access is granted there may still
-    be references to the partitioned storage. However, sites shouldn't rely on
-    being able to use partitioned and unpartitioned storage at the same
-    time.</p>
-  </div>
+![An example of state partitioning](example-state-partitioning.png)
 
-<h3 id="debugging">Debugging</h3>
-<p>
-  We encourage site owners to test their sites, particularly those that rely on
-  third-party content integrations. There are several features in Firefox to
-  make testing easier.
-</p>
+### Standardization
 
+The [Privacy Community
+Group](https://privacycg.github.io/) has a Work Item for
+[Client-Side Storage Partitioning](https://privacycg.github.io/storage-partitioning/). This serves as an overview of the
+standardization efforts for storage partitioning in the individual standards
+affected. We intend to align our state partitioning implementation with these
+efforts as the Work Item is standardized.
 
-<h4>Logging</h4>
-<p>
-  Here is an overview of the messages logged to the web console when interacting
-  with storage in a third-party context. In the following examples,
-<code>a.example</code> is the top-level site which embeds the third-party frame
-<code>b.example</code>.
-</p>
+### Status of partitioning in Firefox
 
-<table class="standard-table">
-  <thead>
-    <tr>
-     <th scope="col">Reason</th>
-     <th scope="col">Console Message</th>
-    </tr>
-   </thead>
-  <tbody>
-   <tr>
-    <td>Storage of a third-party frame is partitioned</td>
-    <td>Partitioned cookie or storage access was provided to “b.example” because
-    it is loaded in the third-party context and storage partitioning is
-    enabled.</td>
-   </tr>
-   <tr>
-    <td>Storage access is granted through a <b>heuristic</b></td>
-    <td>Storage access automatically granted for First-Party isolation
-    “b.example” on “a.example”.</td>
-   </tr>
-   <tr>
-    <td>Storage access is granted via the
-      <a href="/en-US/docs/Web/API/Document/requestStorageAccess">StorageAccessAPI</a>
-    </td>
-    <td>Storage access granted for origin “b.example” on “a.example”.</td>
-   </tr>
-  </tbody>
- </table>
+- [**Network Partitioning**](#network_partitioning): Enabled by default for all users since Firefox 85.
+- [**Dynamic State Partitioning**](#dynamic_state_partitioning): Since Firefox 86: Enabled for users that have
+  ["Strict" privacy protections ](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection)enabled.
 
-<h4>Clear Third-Party Storage-Access</h4>
-<p>
-  If a third-party iframe is granted storage access to the parent context,
-  Firefox sets a permission. To revoke access you can clear the permission via
-  the <a class="external"
-  href="https://support.mozilla.org/en-US/kb/site-information-panel">Site
-  Information Panel</a> in the permissions section under "Cross-site Cookies".
-</p>
+### Network Partitioning
 
-<h4>Test Preferences</h4>
-<div class="warning">
-  <p><strong>Warning:</strong> Make sure to set these prefs in a separate
-  Firefox profile or reset them after testing.</p>
-</div>
+Networking-related APIs are not intended to be used for websites to store
+data, but they can be
+[abused](https://blog.mozilla.org/security/2021/01/26/supercookie-protections/)
+for cross-site tracking. As such, the following network APIs and caches are
+**permanently** partitioned by the top-level site.
 
-<h5>Disable Heuristics</h5>
-<p>
-  The following prefs can be used to disable individual storage access
-  heuristics via the
-  <a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">
-    config editor</a>:
-</p>
-<ul>
-  <li>
-    Enable / disable the <a href="#storage_access_redirect_heuristics">redirect
-    heuristics</a>:
-    <code>privacy.restrict3rdpartystorage.heuristic.recently_visited</code>,
-    <code>privacy.restrict3rdpartystorage.heuristic.redirect</code>
-  </li>
-  <li>
-    Enable / disable the <a href="#storage_access_window_open_heuristics">window
-    open heuristics</a>:
-    <code>privacy.restrict3rdpartystorage.heuristic.window_open</code>,
-    <code>privacy.restrict3rdpartystorage.heuristic.opened_window_after_interaction</code>
-  </li>
-</ul>
+> **Note:** Network Partitioning is permanent. Websites can't
+> control or relax these restrictions.
 
-<h5>Disable Network Partitioning</h5>
-<p>Network partitioning can be disabled with the
-<code>privacy.partition.network_state</code> pref.</p>
+#### Partitioned APIs
 
-<h5 id="disable_dynamic_state_partitioning">Disable Dynamic State Partitioning</h5>
-<p>To disable dynamic storage partitioning for all sites you can use the
-<code>network.cookie.cookieBehavior</code> pref:</p>
-<table class="standard-table">
-  <thead>
-    <tr>
-     <th scope="col">Value</th>
-     <th scope="col">Description</th>
-    </tr>
-   </thead>
-  <tbody>
-   <tr>
-    <td>5</td>
-    <td>Reject (known) trackers and partition third-party storage.</td>
-   </tr>
-   <tr>
-    <td>4</td>
-    <td>Only reject trackers (Storage partitioning disabled).</td>
-   </tr>
-   <tr>
-    <td>0</td>
-    <td>Allow all</td>
-   </tr>
-  </tbody>
- </table>
+- [HTTP Cache](/en-US/docs/Web/HTTP/Caching)
+- Image Cache
+- Favicon Cache
+- Connection Pooling
+- Stylesheet Cache
+- [DNS](/en-US/docs/Glossary/DNS)
+- HTTP Authentication
+- [Alt-Svc](/en-US/docs/Web/HTTP/Headers/Alt-Svc)
+- Speculative Connections
+- Fonts & Font Cache
+- [HSTS](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)
+- OCSP
+- Intermediate CA Cache
+- TLS Client Certificates
+- TLS Session Identifiers
+- Prefetch
+- Preconnect
+- [CORS-preflight](/en-US/docs/Glossary/Preflight_request) Cache
+- WebRTC deviceID
 
-<h5>Exempt specific origins from partitioning</h5>
+### Dynamic Partitioning
 
- <p>Dynamic State Partitioning can also be disabled for specific
- origins with the <code>privacy.restrict3rdpartystorage.skip_list</code>
- preference. This pref holds a comma separated list of origins to exempt.
- The pref value should follow the following format
- <code>first-party_origin_1,third-party_origin_1;first-party_origin_2,third-party_origin_2;...</code>.
- </p>
- <p>
-  For example, to disable partitioning for <code>tracker.example</code>
-  on <code>example.com</code> and for <code>social.example</code> on
-  <code>news.example</code>, you would set the pref to the following:
-</p>
-<pre>
- <code>https://tracker.example,http://example.com;https://social.example,https://news.example</code>
-</pre>
+To prevent cross-site tracking via JavaScript accessible storage APIs,
+Firefox partitions them for third-parties by top-level site. As opposed to
+Network Partitioning this boundary is dynamic and storage access to the
+embedders context maybe be granted in certain circumstances.
+
+Firefox implements the
+[StorageAccessAPI](#storage_access_api) to allow frames to request
+access to the parent storage. Access to top-level storage may also be granted
+automatically in specific scenarios. [You
+can read more about these heuristics here.](#partitioning_heuristics)
+
+#### Partitioned APIs
+
+- [Cookies](/en-US/docs/Web/API/Document/cookie)
+- [localStorage](/en-US/docs/Web/API/Window/localStorage)
+- [sessionStorage](/en-US/docs/Web/API/Window/sessionStorage)
+- [DOM Cache](/en-US/docs/Web/API/Cache)
+- [IndexedDB](/en-US/docs/Web/API/IndexedDB_API)
+- [Broadcast Channel](/en-US/docs/Web/API/BroadcastChannel)
+- [Shared Workers](/en-US/docs/Web/API/SharedWorker)
+
+[Service Workers](/en-US/docs/Web/API/Service_Worker_API)
+are currently disabled in partitioned contexts when dynamic partitioning is
+enabled. In [Bug 1495241](https://bugzilla.mozilla.org/show_bug.cgi?id=1495241)
+we are exploring options to enable Service Workers in partitioned contexts.
+
+#### Storage Access Heuristics
+
+To improve web compatibility, Firefox currently includes some heuristics to
+grant unpartitioned storage access automatically to third parties that
+receive user interaction. These heuristics are intended to allow some
+third-party integrations that are common on the web to continue to function.
+
+> **Warning:** Storage access heuristics are a transitional
+> feature meant to prevent website breakage. They should not be relied upon
+> for current and future web development.
+
+##### Opener Heuristics
+
+- When a partitioned third-party opens a pop-up window that has
+  [opener access](/en-US/docs/Web/API/Window/opener) to the
+  originating document, the third-party is granted storage access to its
+  embedder for 30 days.
+- When a first-party `a.example` opens a third-party pop-up
+  `b.example`, `b.example` is granted
+  third-party storage access to `a.example` for 30 days.
+
+> **Note:** For third-parties which abuse these heuristic for
+> tracking purposes, we may require user interaction with the popup before
+> storage access is granted.
+
+##### Redirect Heuristics
+
+- If a site `b.example` redirects to `a.example`, then
+  `b.example` receives storage access to its embedder
+  `a.example` if both `a.example` and
+  `b.example` have been visited and interacted with within the
+  last 10 minutes. This storage access will be granted for 15 minutes.
+- If a tracker `tracker.example` (as classified by the Enhanced
+  Tracking Protection) redirects to a non-tracker
+  `a.example` and `tracker.example` received user
+  interaction as a first-party within the last 45 days,
+  `tracker.example` is granted storage access to
+  `a.example` for 15 minutes.
+
+#### Storage Access API
+
+Third-party frames may use
+[`document.requestStorageAccess`
+](/en-US/docs/Web/API/Document/requestStorageAccess)to request unpartitioned storage access through the
+[StorageAccessAPI](/en-US/docs/Web/API/Storage_Access_API). Once
+granted, the requesting third-party will gain access to its first-party
+storage bucket (i.e., the storage it would have access to if visited as a
+first-party). Any calls to [dynamically partitioned APIs](#dynamically_partitioned_apis), for
+example
+[localStorage](/en-US/docs/Web/API/Window/localStorage), will be
+made in context of the first-party bucket.
+
+> **Warning:** When storage access is granted there may still
+> be references to the partitioned storage. However, sites shouldn't rely on
+> being able to use partitioned and unpartitioned storage at the same
+> time.
+
+### Debugging
+
+We encourage site owners to test their sites, particularly those that rely on
+third-party content integrations. There are several features in Firefox to
+make testing easier.
+
+#### Logging
+
+Here is an overview of the messages logged to the web console when interacting
+with storage in a third-party context. In the following examples,
+`a.example` is the top-level site which embeds the third-party frame
+`b.example`.
+
+| Reason                                                                                                  | Console Message                                                                                                                                       |
+| ------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Storage of a third-party frame is partitioned                                                           | Partitioned cookie or storage access was provided to “b.example” because it is loaded in the third-party context and storage partitioning is enabled. |
+| Storage access is granted through a **heuristic**                                                       | Storage access automatically granted for First-Party isolation “b.example” on “a.example”.                                                            |
+| Storage access is granted via the [StorageAccessAPI](/en-US/docs/Web/API/Document/requestStorageAccess) | Storage access granted for origin “b.example” on “a.example”.                                                                                         |
+
+#### Clear Third-Party Storage-Access
+
+If a third-party iframe is granted storage access to the parent context,
+Firefox sets a permission. To revoke access you can clear the permission via
+the [Site
+Information Panel](https://support.mozilla.org/en-US/kb/site-information-panel) in the permissions section under "Cross-site Cookies".
+
+#### Test Preferences
+
+> **Warning:** Make sure to set these prefs in a separate
+> Firefox profile or reset them after testing.
+
+##### Disable Heuristics
+
+The following prefs can be used to disable individual storage access
+heuristics via the
+[config editor](https://support.mozilla.org/en-US/kb/about-config-editor-firefox):
+
+- Enable / disable the [redirect
+  heuristics](#storage_access_redirect_heuristics):
+  `privacy.restrict3rdpartystorage.heuristic.recently_visited`,
+  `privacy.restrict3rdpartystorage.heuristic.redirect`
+- Enable / disable the [window
+  open heuristics](#storage_access_window_open_heuristics):
+  `privacy.restrict3rdpartystorage.heuristic.window_open`,
+  `privacy.restrict3rdpartystorage.heuristic.opened_window_after_interaction`
+
+##### Disable Network Partitioning
+
+Network partitioning can be disabled with the
+`privacy.partition.network_state` pref.
+
+##### Disable Dynamic State Partitioning
+
+To disable dynamic storage partitioning for all sites you can use the
+`network.cookie.cookieBehavior` pref:
+
+| Value | Description                                                |
+| ----- | ---------------------------------------------------------- |
+| 5     | Reject (known) trackers and partition third-party storage. |
+| 4     | Only reject trackers (Storage partitioning disabled).      |
+| 0     | Allow all                                                  |
+
+##### Exempt specific origins from partitioning
+
+Dynamic State Partitioning can also be disabled for specific
+origins with the `privacy.restrict3rdpartystorage.skip_list`
+preference. This pref holds a comma separated list of origins to exempt.
+The pref value should follow the following format
+`first-party_origin_1,third-party_origin_1;first-party_origin_2,third-party_origin_2;...`.
+
+For example, to disable partitioning for `tracker.example`
+on `example.com` and for `social.example` on
+`news.example`, you would set the pref to the following:
+
+     https://tracker.example,http://example.com;https://social.example,https://news.example

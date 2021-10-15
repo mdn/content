@@ -8,32 +8,28 @@ tags:
   - storage access policy
   - tracking
 ---
+## Message
 
-<h2 id="Message">Message</h2>
+Firefox:
 
-<p>Firefox:</p>
+    CookiePartitionedForeign=Partitioned cookie
+    or storage access was provided to “<URL>” because it is loaded in the
+    third-party context and storage partitioning is enabled.
 
-<pre class="syntaxbox">CookiePartitionedForeign=Partitioned cookie
-or storage access was provided to “&lt;URL&gt;” because it is loaded in the
-third-party context and storage partitioning is enabled.</pre>
+## What went wrong?
 
-<h2 id="What_went_wrong">What went wrong?</h2>
-
-<p>A request to access cookies or storage was <em>partitioned</em> because it
+A request to access cookies or storage was _partitioned_ because it
 came from a third-party (a different origin) and
-<a href="/en-US/docs/Web/Privacy/State_Partitioning#dynamic_state_partitioning">
-  dynamic state partitioning
-</a> is enabled.</p>
-<p>With Dynamic State Partitioning enabled, Firefox provides embedded resources with a
-separate storage bucket for every top-level website. Embedded third-parties may
-request access to the top-level storage bucket via the <a
-href="/en-US/docs/Web/Privacy/State_Partitioning#storage_access_api">Storage Access API</a>.
-You can also <a
-href="/en-US/docs/Web/Privacy/State_Partitioning#disable_dynamic_state_partitioning">disable
-Dynamic State Partitioning</a> with the
-<code>network.cookie.cookieBehavior</code> pref.</p>
+[dynamic state partitioning
+](/en-US/docs/Web/Privacy/State_Partitioning#dynamic_state_partitioning)is enabled.
 
-<h2 id="See_also">See also</h2>
-<ul>
- <li><a href="/en-US/docs/Web/Privacy/State_Partitioning">State Partitioning</a></li>
-</ul>
+With Dynamic State Partitioning enabled, Firefox provides embedded resources with a
+separate storage bucket for every top-level website. Embedded third-parties may
+request access to the top-level storage bucket via the [Storage Access API](/en-US/docs/Web/Privacy/State_Partitioning#storage_access_api).
+You can also [disable
+Dynamic State Partitioning](/en-US/docs/Web/Privacy/State_Partitioning#disable_dynamic_state_partitioning) with the
+`network.cookie.cookieBehavior` pref.
+
+## See also
+
+- [State Partitioning](/en-US/docs/Web/Privacy/State_Partitioning)
