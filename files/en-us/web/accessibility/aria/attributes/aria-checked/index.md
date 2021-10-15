@@ -83,7 +83,7 @@ myHTMLElement.ariaChecked = true;
 - [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected).
 - [Two state checkbox example](https://www.w3.org/TR/wai-aria-practices-1.2/examples/checkbox/checkbox-1/checkbox-1.html) - w3.org
 - [Tri-state checkbox example](https://www.w3.org/TR/wai-aria-practices-1.2/examples/checkbox/checkbox-2/checkbox-2.html) - w3.org
-- 
+  
 <section id="Quick_links">
 
 1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
