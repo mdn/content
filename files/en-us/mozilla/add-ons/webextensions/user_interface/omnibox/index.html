@@ -17,11 +17,11 @@ tags:
 
 <p>You tell your extension that it is going to customize the address bar suggestions by including the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox">omnibox</a> key and definition of the trigger keyword in its <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> file:</p>
 
-<pre class="brush: json line-numbers  language-json">  "omnibox": { "keyword" : "cs" }</pre>
+<pre class="brush: json">  "omnibox": { "keyword" : "cs" }</pre>
 
 <p>In the extension's background JavaScript file, using {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, you can optionally define the first suggestion to be displayed in the address bar drop-down. Use this to provide a hint on how to use the feature:</p>
 
-<pre class="brush: js line-numbers  language-js">browser.omnibox.setDefaultSuggestion({
+<pre class="brush: js">browser.omnibox.setDefaultSuggestion({
   description: `Search the firefox codebase
     (e.g. "hello world" | "path:omnibox.js onInputChanged")`
 });</pre>

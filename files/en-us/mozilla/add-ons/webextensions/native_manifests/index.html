@@ -149,7 +149,7 @@ tags:
 
 <p>For example:</p>
 
-<pre class="brush: json line-numbers  language-json">{
+<pre class="brush: json">{
   &quot;name&quot;: &quot;favourite-color-examples@mozilla.org&quot;,
   &quot;description&quot;: &quot;ignored&quot;,
   &quot;type&quot;: &quot;storage&quot;,
@@ -161,7 +161,7 @@ tags:
 
 <p>Given this JSON manifest, the <code>favourite-color-examples@mozilla.org</code> extension could access the data using code like this:</p>
 
-<pre class="brush: js line-numbers language-js">let storageItem = browser.storage.managed.get('color');
+<pre class="brush: js">let storageItem = browser.storage.managed.get('color');
 storageItem.then((res) =&gt; {
   console.log(`Managed color is: ${res.color}`);
 });</pre>
@@ -233,7 +233,7 @@ storageItem.then((res) =&gt; {
 
 <p>For example:</p>
 
-<pre class="brush: json line-numbers  language-json">{
+<pre class="brush: json">{
   "name": "my_module",
   "description": "My test module",
   "type": "pkcs11",
@@ -243,7 +243,7 @@ storageItem.then((res) =&gt; {
 
 <p>Given this JSON manifest, saved as <code>my_module.json</code>, the <code>my-extension@mozilla.org</code> extension could install the security module at <code>/path/to/libpkcs11testmodule.dylib</code> using code like this:</p>
 
-<pre class="brush: js line-numbers language-js">browser.pkcs11.installModule("my_module");</pre>
+<pre class="brush: js">browser.pkcs11.installModule("my_module");</pre>
 
 <h2 id="Manifest_location">Manifest location</h2>
 
