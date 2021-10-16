@@ -35,14 +35,14 @@ browser-compat: webextensions.api.find.find
 
 <h3 id="Parameters">Parameters</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>queryphrase</code></dt>
  <dd><code>string</code>. The text to search for.</dd>
  <dt><code>options</code>{{optional_inline}}</dt>
  <dd>
  <p><code>object</code>. An object specifying additional options. It may take any of the following properties, all optional:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>tabId</code></dt>
   <dd><code>integer</code>. ID of the tab to search. Defaults to the active tab.</dd>
   <dt><code>caseSensitive</code></dt>
@@ -61,7 +61,7 @@ browser-compat: webextensions.api.find.find
 
 <p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an object containing up to three properties:</p>
 
-<dl class="reference-values">
+<dl>
  <dt><code>count</code></dt>
  <dd><code>integer</code>. The number of results found.</dd>
  <dt><code>rangeData</code>{{optional_inline}}</dt>
@@ -72,7 +72,7 @@ browser-compat: webextensions.api.find.find
 
  <p>Each <code>RangeData</code> contains the following properties:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>framePos</code></dt>
   <dd>The index of the frame containing the match. 0 corresponds to the parent window. Note that the order of objects in the <code>rangeData</code> array will sequentially line up with the order of frame indexes: for example, <code>framePos</code> for the first sequence of <code>rangeData</code> objects will be 0, <code>framePos</code> for the next sequence will be 1, and so on.</dd>
   <dt><code>startTextNodePos</code></dt>
@@ -91,7 +91,7 @@ browser-compat: webextensions.api.find.find
 
  <p>Each <code>RectData</code> object contains rectangle data for a single match. It has two properties:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>rectsAndTexts</code></dt>
   <dd>An object containing two properties, both arrays:
   <ul>

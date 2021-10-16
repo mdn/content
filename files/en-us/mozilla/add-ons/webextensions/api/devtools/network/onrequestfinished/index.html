@@ -47,7 +47,7 @@ browser.devtools.network.onRequestFinished.hasListener(listener)
  <dd>
  <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>request</code></dt>
   <dd><code>object</code>. An object representing the request. This object is a single <a href="http://www.softwareishard.com/blog/har-12-spec/#entries">HAR entry</a> object. It also defines an asynchronous <code>getContent()</code> method, which returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that resolves with an array of two elements. The first element is the HTTP response body as a string, while the second element is the <a href="/en-US/docs/Glossary/MIME_type">MIME type</a> of the HTTP response also as a string.</dd>
  </dl>

@@ -50,7 +50,7 @@ browser.webRequest.onCompleted.hasListener(listener)
  <dd>
  <p>A function that will be called when this event occurs. The function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>details</code></dt>
   <dd><a href="#details"><code>object</code></a>. Details about the request. See <code><a href="#details">details</a></code> below.</dd>
  </dl>
@@ -70,7 +70,7 @@ browser.webRequest.onCompleted.hasListener(listener)
 
 <h3 id="details">details</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>cookieStoreId</code></dt>
  <dd><code>string</code>. If the request is from a tab open in a contextual identity, the cookie store ID of the contextual identity.</dd>
  <dt><code>documentUrl</code></dt>
@@ -144,7 +144,7 @@ browser.webRequest.onCompleted.hasListener(listener)
  <dt><code>urlClassification</code></dt>
  <dd><code>object</code>. The type of tracking associated with the request, if with the request has been classified by <a class="external external-icon" href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop" rel="noopener">Firefox Tracking Protection</a>. This is an object with the following properties:</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>firstParty</code></dt>
   <dd><code>array</code> of <code>strings</code>. Classification flags for the request's first party.</dd>
   <dt><code>thirdParty</code></dt>

@@ -32,7 +32,7 @@ browser-compat: webextensions.api.windows.getLastFocused
  <dt><code>getInfo</code>{{optional_inline}}</dt>
  <dd><code>object</code>.</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>populate</code>{{optional_inline}}</dt>
   <dd><code>boolean</code>. If <code>true</code>, the {{WebExtAPIRef('windows.Window')}} object will have a <code>tabs</code> property that contains a list of {{WebExtAPIRef('tabs.Tab')}} objects representing the tabs in the window. The <code>Tab</code> objects only contain the <code>url</code>, <code>title</code> and <code>favIconUrl</code> properties if the extension's manifest file includes the <code>"tabs"</code> permission or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> matching the tab's URL.</dd>
   <dt><code>windowTypes</code>{{optional_inline}}</dt>

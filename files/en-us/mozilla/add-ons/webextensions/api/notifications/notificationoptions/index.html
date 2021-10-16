@@ -28,7 +28,7 @@ browser-compat: webextensions.api.notifications.NotificationOptions
 
 <p>The first three properties - <code>type</code>, <code>title</code>, <code>message</code> - are mandatory in {{WebExtAPIRef("notifications.create()")}}, but optional in {{WebExtAPIRef("notifications.update()")}}. Firefox currently: only supports the <code>type</code>, <code>title</code>, <code>message</code>, and <code>iconUrl</code> properties; and the only supported value for <code>type</code> is <code>'basic'</code>.</p>
 
-<dl class="reference-values">
+<dl>
  <dt><code>type</code></dt>
  <dd>{{WebExtAPIRef("notifications.TemplateType")}}. The type of notification you want. Depending on your choice here, certain other properties are either mandatory or are not permitted.</dd>
  <dt><a id="message"><code>message</code></a></dt>
@@ -46,7 +46,7 @@ browser-compat: webextensions.api.notifications.NotificationOptions
  <dt><a id="buttons"><code>buttons</code></a>{{optional_inline}}</dt>
  <dd><code>array</code> of <code>button</code>. An array of up to 2 buttons to include in the notification. You can listen for button clicks using {{WebExtAPIRef("notifications.onButtonClicked")}}. Each button is specified as an object with the following properties:</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>title</code></dt>
   <dd><code>string</code>. Title for the button.</dd>
   <dt><code>iconUrl</code>{{optional_inline}}</dt>
@@ -62,7 +62,7 @@ browser-compat: webextensions.api.notifications.NotificationOptions
  <dt><a id="items"><code>items</code></a></dt>
  <dd><code>array</code> of <code>item</code>. An array of items to include in the notification. Depending on the settings for the operating system's notification mechanism, some of the items you provide might not be displayed. Each item is specified as an object with the following properties:</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>title</code></dt>
   <dd><code>string</code>. Title to display in the item.</dd>
   <dt><code>message</code></dt>

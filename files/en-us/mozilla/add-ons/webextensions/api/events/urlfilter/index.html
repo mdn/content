@@ -25,7 +25,7 @@ browser-compat: webextensions.api.events.UrlFilter
 
 <p>However, note that these last two patterns will not match the last component of the hostname, because no implicit dot is added at the end of the hostname. So for example, <code>"org."</code> will match "https://borg.com" but not "https://example.org". To match these patterns, use <code>hostSuffix</code>.</p>
 
-<dl class="reference-values">
+<dl>
 	<dt><code>hostContains</code>{{optional_inline}}</dt>
 	<dd><code>string</code>. Matches if the <a href="/en-US/docs/Web/API/HTMLAnchorElement/hostname">hostname</a> of the URL (without protocol or port – see <code>schemes</code> and <code>ports</code>) contains the given string.
 	<ul>
