@@ -14,7 +14,7 @@ tags:
 
 <p>If you don't specify a popup, then when the user clicks the button an event is dispatched to the extension, which you can listen for using <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked" title="Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."><code>browserAction.onClicked</code></a>:</p>
 
-<pre class="brush: js line-numbers  language-js">browser.browserAction.onClicked.addListener(handleClick);</pre>
+<pre class="brush: js">browser.browserAction.onClicked.addListener(handleClick);</pre>
 
 <p>If you do specify a popup, the click event is not dispatched: instead, the popup will be shown when the user clicks the button. The user will be able to interact with the popup and it will close automatically when the user clicks outside it.</p>
 
@@ -24,7 +24,7 @@ tags:
 
 <p>You define the browser action's properties - icon, title, popup - using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> key in manifest.json:</p>
 
-<pre class="brush: json line-numbers  language-json">&quot;browser_action&quot;: {
+<pre class="brush: json">&quot;browser_action&quot;: {
   &quot;default_icon&quot;: {
     &quot;19&quot;: &quot;button/geo-19.png&quot;,
     &quot;38&quot;: &quot;button/geo-38.png&quot;

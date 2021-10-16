@@ -62,7 +62,7 @@ browser.commands.onCommand.hasListener(listener)
 <div>Given a manifest.json entry like this:</div>
 
 
-<pre class="brush: json line-numbers language-json">&quot;commands&quot;: {
+<pre class="brush: json">&quot;commands&quot;: {
   &quot;toggle-feature&quot;: {
     &quot;suggested_key&quot;: {
       &quot;default&quot;: &quot;Ctrl+Shift+Y&quot;
@@ -75,7 +75,7 @@ browser.commands.onCommand.hasListener(listener)
 
 
 <div>
-<pre class="brush: js line-numbers language-js">browser.commands.onCommand.addListener(function(command) {
+<pre class="brush: js">browser.commands.onCommand.addListener(function(command) {
   if (command == &quot;toggle-feature&quot;) {
     console.log(&quot;toggling the feature!&quot;);
   }
