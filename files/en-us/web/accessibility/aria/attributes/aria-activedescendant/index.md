@@ -16,7 +16,7 @@ The `aria-activedescendant` attribute identifies the currently active element wh
 
 ## Description
 
-The `aria-activedescendant` property provides a method of managing focus for assistive technologies on interactive elements when they contain multiple focusable descendants, such as menus, grids, and toolbars. Instead of the screen reader moving focus between owned elements, `aria-activedescendant` can be used on container elements to refer to the currently active element, informing assistive technology users of the currently active element when focus. 
+The `aria-activedescendant` property provides a method of managing focus for assistive technologies on interactive elements when they contain multiple focusable descendants, such as menus, grids, and toolbars. Instead of the screen reader moving focus between owned elements, `aria-activedescendant` can be used on container elements to refer to the currently active element, informing assistive technology users of the currently active element when focused. 
 
 With aria-activedescendant, the browser keeps the DOM focus on the container element or on an input element that controls the container element. However, the user agent communicates desktop focus events and states to the assistive technology as if the element referenced by `aria-activedescendant` has focus.
 
@@ -37,7 +37,7 @@ e value of `aria-activedescendant` refers to an owned element of the controlled 
 ## Values
 
 - ID reference
-  - : takes as it's value the `id` of the currently focused element.
+  - : takes as its value the `id` of the currently focused element.
 
 ## Associated roles
 
