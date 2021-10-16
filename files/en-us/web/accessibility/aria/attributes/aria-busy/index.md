@@ -17,7 +17,7 @@ When multiple parts of a live region need to be loaded before changes are announ
 
 ## Description
 
-There is a section of content that updates. The updates are important and you want to let the user know when it has been modified, so you have converted it into an [ARIA live region](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) with the [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live) attribute. You may want to update several components of that section at the same time, but you can't be sure that everything will update simultaneously. Even if it is a very important live region with `aria-live="assertive"`, you don't want to interupt the user multiple times as different parts of the content load. This is where `aria-busy` can help. 
+There is a section of content that updates. The updates are important and you want to let the user know when it has been modified, so you have converted it into an [ARIA live region](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) with the [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live) attribute. You may want to update several components of that section at the same time, but you can't be sure that everything will update simultaneously. Even if it is a very important live region with `aria-live="assertive"`, you don't want to interrupt the user multiple times as different parts of the content load. This is where `aria-busy` can help. 
 
 The `aria-busy` property is an optional property of live regions that can have the value `true` or `false`. The `aria-busy` attribute with a value of `true` can be added to an element currently being updated or modified, to inform the assistive technology that it should wait until the modifications or changes are complete before exposing the content to the user. Use the [`ariaBusy`](/en-US/docs/Web/API/Element/ariaBusy) property of the {{domxref("ARIAMixin")}} interface to change the value to `false` when downloading is complete.
 
@@ -25,7 +25,7 @@ The `aria-busy` property is an optional property of live regions that can have t
 ariaLiveElement.ariaBusy = "false";
 ```
 
-Whether the changes are announced immediately upon changing the value to `false` or the assistive technology waits until the current task is complete before interupting the user, depends on the [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live) value.
+Whether the changes are announced immediately upon changing the value to `false` or the assistive technology waits until the current task is complete before interrupting the user, depends on the [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live) value.
 
 ### Within a `feed`
 
