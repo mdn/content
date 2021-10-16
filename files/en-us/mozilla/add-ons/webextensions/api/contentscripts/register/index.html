@@ -94,7 +94,7 @@ var registered = register(defaultHosts, defaultCode);</pre>
 
 <p>This code registers the JS file at content_scripts/example.js:</p>
 
-<pre class="brush: js" id="ct-3">const scriptObj = await browser.contentScripts.register({
+<pre class="brush: js">const scriptObj = await browser.contentScripts.register({
   "js": [{file: "/content_scripts/example.js"}],
   "matches": ["&lt;all_urls&gt;"],
   "allFrames": true,
