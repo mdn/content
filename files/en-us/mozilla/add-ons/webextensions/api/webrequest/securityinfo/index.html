@@ -21,7 +21,7 @@ browser-compat: webextensions.api.webRequest.SecurityInfo
 
 <p>Values of this type are objects. They contain the following properties:</p>
 
-<dl class="reference-values">
+<dl>
  <dt><code>certificates</code></dt>
  <dd><code>Array</code> of {{WebExtAPIRef("webRequest.CertificateInfo", "CertificateInfo")}}. If {{WebExtAPIRef("webRequest.getSecurityInfo()")}} was called with the <code>certificateChain</code> option present and set to <code>true</code>, this will contain a <code>CertificateInfo</code> object for every certificate in the chain, from the server certificate up to and including the trust root.</dd>
  <dd>Otherwise it will contain a single <code>CertificateInfo</code> object, for the server certificate.</dd>

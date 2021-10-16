@@ -43,7 +43,7 @@ browser-compat: webextensions.api.runtime.connect
  <dt><code>connectInfo</code>{{optional_inline}}</dt>
  <dd><code>object</code>. Details of the connection:</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>name</code>{{optional_inline}}</dt>
   <dd><code>string</code>. Will be passed into {{WebExtAPIRef("runtime.onConnect")}} for processes that are listening for the connection event.</dd>
   <dt><code>includeTlsChannelId</code>{{optional_inline}}</dt>
@@ -70,7 +70,7 @@ browser-compat: webextensions.api.runtime.connect
  <li>sends messages to the background script, using <code>myPort</code>, when the user clicks the document.</li>
 </ul>
 
-<pre class="brush: js line-numbers language-js">// content-script.js
+<pre class="brush: js">// content-script.js
 
 var myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
@@ -98,7 +98,7 @@ document.body.addEventListener("click", function() {
  <li>sends messages to the content script, using <code>portFromCS</code>, when the user clicks the extension's browser action.</li>
 </ul>
 
-<pre class="brush: js line-numbers language-js">// background-script.js
+<pre class="brush: js">// background-script.js
 
 var portFromCS;
 
@@ -119,7 +119,7 @@ browser.browserAction.onClicked.addListener(function() {
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
+<div class="note"><p><strong>Note:</strong></p>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#method-connect"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
 

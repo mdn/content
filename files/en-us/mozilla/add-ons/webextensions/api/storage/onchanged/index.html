@@ -44,7 +44,7 @@ browser.storage.onChanged.hasListener(<var>listener</var>)
  <dd>
  <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code><var>changes</var></code></dt>
   <dd><code>object</code>. Object describing the change. This contains one property for each key that changed. The name of the property is the name of the key that changed, and its value is a {{WebExtAPIRef('storage.StorageChange')}} object describing the change to that item.</dd>
   <dt><code><var>areaName</var></code></dt>
@@ -83,7 +83,7 @@ browser.storage.onChanged.addListener(logStorageChange);
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
+<div class="note"><p><strong>Note:</strong></p>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/storage#event-onChanged"><code>chrome.storage</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json"><code>storage.json</code></a> in the Chromium code.</p>
 

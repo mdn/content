@@ -7,7 +7,7 @@ tags:
 <div>{{AddonSidebar}}</div>
 
 <p>Commonly referred to as a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browser action</a>, this user interface option is a button added to the browser toolbar. Users click the button to interact with your extension.<br>
- <img alt="" src="browser-action.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+ <img alt="" src="browser-action.png"></p>
 
 <p>The toolbar button (browser action) is very like the address bar button (page action). For the differences, and guidance on when to use what, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions#page_actions_and_browser_actions">Page actions and browser actions</a>.</p>
 
@@ -27,7 +27,7 @@ tags:
 
 <p>There are two ways to specify a browser action: with or without a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">popup</a>. If you don't specify a popup, when the user clicks the button an event is dispatched to the extension, which the extension listens for using <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked" title="Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."><code>browserAction.onClicked</code></a>:</p>
 
-<pre class="brush: js line-numbers language-js">browser.browserAction.onClicked.addListener(handleClick);</pre>
+<pre class="brush: js">browser.browserAction.onClicked.addListener(handleClick);</pre>
 
 <p>If you specify a popup, the click event is not dispatched: instead, the popup is shown when the user clicks the button. The user is able to interact with the popup and it closes automatically when the user clicks outside it. See the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">Popup</a> article for more details on creating and managing popups.</p>
 

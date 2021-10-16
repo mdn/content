@@ -23,7 +23,7 @@ browser-compat: webextensions.api.cookies.CookieStore
 
 <p>Values of this type are objects, which can contain the following properties:</p>
 
-<dl class="reference-values">
+<dl>
  <dt><code>id</code></dt>
  <dd>A <code>string</code> representing the unique identifier for the cookie store.</dd>
  <dt><code>incognito</code></dt>
@@ -40,7 +40,7 @@ browser-compat: webextensions.api.cookies.CookieStore
 
 <p>In the following snippet, the {{WebExtAPIRef("cookies.getAllCookieStores()")}} method is used to retrieve all the cookie stores currently available in the browser, and print out each cookie store ID, and the tabs that currently share each cookie store.</p>
 
-<pre class="brush: js line-numbers  language-js">function logStores(cookieStores) {
+<pre class="brush: js">function logStores(cookieStores) {
   for(store of cookieStores) {
     console.log(`Cookie store: ${store.id}\n Tab IDs: ${store.tabIds}`);
   }
@@ -58,7 +58,7 @@ getting.then(logStores);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
+<div class="note"><p><strong>Note:</strong></p>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/cookies#type-CookieStore"><code>chrome.cookies</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a> in the Chromium code.</p>
 

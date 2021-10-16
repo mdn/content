@@ -44,12 +44,12 @@ browser.bookmarks.onRemoved.hasListener(listener)
  <dd>
  <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>id</code></dt>
   <dd><code>string</code>. ID of the item that was removed.</dd>
  </dl>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>removeInfo</code></dt>
   <dd><a href="#removeinfo"><code>object</code></a>. More details about the removed item.</dd>
  </dl>
@@ -60,7 +60,7 @@ browser.bookmarks.onRemoved.hasListener(listener)
 
 <h3 id="removeInfo">removeInfo</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>parentId</code></dt>
  <dd><code>string</code>. ID of the item's parent in the tree.</dd>
  <dt><code>index</code></dt>
@@ -89,7 +89,7 @@ browser.browserAction.onClicked.addListener(handleClick);</pre>
 
 <p>{{Compat}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
+<div class="note"><p><strong>Note:</strong></p>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/bookmarks#event-onRemoved"><code>chrome.bookmarks</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
 

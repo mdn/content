@@ -23,7 +23,7 @@ tags:
 <p>When considering using <code>browser_style: true</code>, you need to test your extension with various themes (built-in or from AMO) to make sure that the extension UI behaves the way you expect it to.</p>
 
 <div class="notecard warning">
-<p>When <code>browser_style: true</code> is included in your web extension's manifest, text selection in your extension's UI is disabled except in input controls. If this will cause a problem, include browser_style:false instead.</p>
+<p><strong>Warning:</strong> When <code>browser_style: true</code> is included in your web extension's manifest, text selection in your extension's UI is disabled except in input controls. If this will cause a problem, include browser_style:false instead.</p>
 </div>
 
 <div class="notecard note">
@@ -32,7 +32,7 @@ tags:
 
 <p>In Firefox, the stylesheet can be seen at <code>chrome://browser/content/extension.css</code>. The extra stylesheet at <code>chrome://browser/content/extension-mac.css</code> is also included on OS X.</p>
 
-<p>Most styles are automatically applied, but some elements require you to add the <span style="white-space: nowrap;">non-standard</span> <code style="white-space: nowrap;">browser-style</code> class to get their styling, as detailed in the table below:</p>
+<p>Most styles are automatically applied, but some elements require you to add the non-standard <code>browser-style</code> class to get their styling, as detailed in the table below:</p>
 
 <table class="fullwidth-table standard-table">
  <thead>
@@ -266,10 +266,7 @@ tags:
   &lt;button class="panel-section-footer-button default"&gt;Confirm&lt;/button&gt;
 &lt;/footer&gt;</pre>
 
-<div class="hidden">
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">/* Global */
+<pre class="brush: css hidden">/* Global */
 html,
 body {
   background: white;
@@ -437,8 +434,7 @@ button.panel-section-tabs-button {
   z-index: 99;
 }</pre>
 
-<hr>
-<pre class="brush: css">/* Example specific – not part of chrome://browser/content/extension.css */
+<pre class="brush: css hidden">/* Example specific – not part of chrome://browser/content/extension.css */
 body {
   background: #fcfcfc;
   background-clip: padding-box;
@@ -460,7 +456,6 @@ html &gt; body {
 .icon-section-header {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48Y2lyY2xlIGZpbGw9IiMzNjM5NTkiIGN4PSIxNSIgY3k9IjE1IiByPSIxNSIvPjwvc3ZnPg==");
 }</pre>
-</div>
 
 <h4 id="Result">Result</h4>
 

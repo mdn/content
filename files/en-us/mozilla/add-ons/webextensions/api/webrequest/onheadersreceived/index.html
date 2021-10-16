@@ -58,7 +58,7 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
  <dd>
  <p>The function called when this event occurs. The function is passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>details</code></dt>
   <dd><a href="#details"><code>object</code></a>. Details of the request. This will include response headers if you have included <code>"responseHeaders"</code> in <code>extraInfoSpec</code>.</dd>
  </dl>
@@ -81,7 +81,7 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
 
 <h3 id="details">details</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>cookieStoreId</code></dt>
  <dd><code>string</code>. If the request is from a tab open in a contextual identity, the cookie store ID of the contextual identity.</dd>
  <dt><code>documentUrl</code></dt>
@@ -89,7 +89,7 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
  <dt><code>frameAncestors</code></dt>
  <dd><code>array</code>. Information for each document in the frame hierarchy up to the top-level document. The first element in the array contains information about the immediate parent of the document being requested, and the last element contains information about the top-level document. If the load is for the top-level document, then this array is empty.</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>url</code></dt>
   <dd><code>string</code>. The URL that the document was loaded from.</dd>
   <dt><code>frameId</code></dt>
@@ -165,7 +165,7 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
  <dt><code>urlClassification</code></dt>
  <dd><code>object</code>. The type of tracking associated with the request, if with the request has been classified by <a class="external external-icon" href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop" rel="noopener">Firefox Tracking Protection</a>. This is an object with the following properties:</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>firstParty</code></dt>
   <dd><code>array</code> of <code>strings</code>. Classification flags for the request's first party.</dd>
   <dt><code>thirdParty</code></dt>

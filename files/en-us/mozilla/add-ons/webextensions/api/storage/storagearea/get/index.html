@@ -47,7 +47,7 @@ browser-compat: webextensions.api.storage.StorageArea.get
 <p>If managed storage is not set, <code>undefined</code> will be returned.</p>
 
 <div class="warning">
-<p><strong>Caution:</strong> When used within a content script in Firefox versions prior to 52, the Promise returned by <code>browser.storage.local.get()</code> is fulfilled with an Array containing one Object. The Object in the Array contains the <code>keys</code> found in the storage area, as described above.</p>
+<p><strong>Warning:</strong> When used within a content script in Firefox versions prior to 52, the Promise returned by <code>browser.storage.local.get()</code> is fulfilled with an Array containing one Object. The Object in the Array contains the <code>keys</code> found in the storage area, as described above.</p>
 
 <p>The Promise is correctly fulfilled with an Object when used in the background context (background scripts, popups, options pages, etc.).</p>
 
@@ -141,7 +141,7 @@ gettingItem.then(onGot, onError);
 <pre class="brush: js">let gettingItem = new Promise(resolve =&gt; chrome.storage.local.get("kitten", resolve));
 gettingItem.then(onGot); // -&gt; Object { kitten: Object }</pre>
 
-<div class="note"><strong>Acknowledgements</strong>
+<div class="note"><p><strong>Note:</strong></p>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/storage"><code>chrome.storage</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json"><code>storage.json</code></a> in the Chromium code.</p>
 

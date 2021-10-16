@@ -16,7 +16,9 @@ The **`setAppBadge()`** method of the {{domxref("Navigator")}} interface a badge
 
 ## Syntax
 
-    let promise = Navigator.setAppBadge(contents);
+```js
+let promise = Navigator.setAppBadge(contents);
+````
 
 ### Parameters
 
@@ -29,7 +31,7 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 
 ### Exceptions
 
-- `NotSupportedError`
+- `NotSupportedError` {{domxref("DOMException")}}
   - : The {{domxref("Navigator")}} does not have a document that this action can be acted on.
 
 ## Examples

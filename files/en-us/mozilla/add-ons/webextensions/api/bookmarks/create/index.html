@@ -18,7 +18,7 @@ browser-compat: webextensions.api.bookmarks.create
 <p>Creates a bookmark or folder as a child of the {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} with the specified <code>parentId</code>. To create a folder, omit or leave empty the {{WebExtAPIRef("bookmarks.CreateDetails", "CreateDetails", "url")}} parameter.</p>
 
 <div class="notecard warning">
-<p>If your extension tries to create a new bookmark in the bookmark tree's root node, it raises an error: "<em>The bookmark root cannot be modified</em>" and the bookmark won't be created.</p>
+<p><strong>Warning:</strong> If your extension tries to create a new bookmark in the bookmark tree's root node, it raises an error: "<em>The bookmark root cannot be modified</em>" and the bookmark won't be created.</p>
 </div>
 
 <p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
@@ -62,7 +62,7 @@ createBookmark.then(onCreated);</pre>
 
 <p>{{Compat}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
+<div class="note"><p><strong>Note:</strong></p>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/bookmarks#method-create"><code>chrome.bookmarks</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
 

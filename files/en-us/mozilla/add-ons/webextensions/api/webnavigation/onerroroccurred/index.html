@@ -50,12 +50,12 @@ browser.webNavigation.onErrorOccurred.hasListener(<var>listener</var>)
 
 	<p>The <code><var>listener</var></code> function will be called with the following arguments:</p>
 
-	<dl class="reference-values">
+	<dl>
 		<dt><code>details</code></dt>
 		<dd>
 		<p><a href="#details"><code>object</code></a>. Details about the navigation event. <strong><code>details</code></strong> has the following properties:</p>
 
-		<dl class="reference-values">
+		<dl>
 			<dt><code>tabId</code></dt>
 			<dd><code>integer</code>. The ID of the tab in which the navigation was happening.</dd>
 			<dt><code>url</code></dt>
@@ -114,7 +114,7 @@ browser.webNavigation.onErrorOccurred.addListener(logOnErrorOccurred, filter);
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
+<div class="note"><p><strong>Note:</strong></p>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webNavigation#event-onBeforeNavigate"><code>chrome.webNavigation</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json"><code>web_navigation.json</code></a> in the Chromium code.</p>
 

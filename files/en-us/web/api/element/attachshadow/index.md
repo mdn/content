@@ -17,7 +17,7 @@ tree to the specified element and returns a reference to its {{domxref("ShadowRo
 
 ## Elements you can attach a shadow to
 
-Note that you can't attach a shadow root to every type of element. There are some that
+Note that you can't attach a shadow root to every type of element. There are some that
 can't have a shadow DOM for security reasons (for example {{htmlelement("a")}}), and
 more besides. The following is a list of elements you **can** attach a
 shadow root to:
@@ -53,23 +53,27 @@ var shadowroot = element.attachShadow(init);
 
 - `init`
 
-  - : A `ShadowRootInit` dictionary, which can contain the following fields:
+  - : A `ShadowRootInit` dictionary, which can contain the following fields:
 
     - `mode`
 
-      - : A string specifying the _encapsulation mode_ for the shadow DOM tree.
+      - : A string specifying the _encapsulation mode_ for the shadow DOM tree.
         This can be one of:
 
         - `open`: Elements of the shadow root are accessible from
           JavaScript outside the root, for example using
           {{domxref("Element.shadowRoot")}}:
 
-              element.shadowRoot; // Returns a ShadowRoot obj
+          ```js
+          element.shadowRoot; // Returns a ShadowRoot obj
+          ```
 
-        - `closed`: Denies access to the node(s) of a closed shadow root
+        - `closed`: Denies access to the node(s) of a closed shadow root
           from JavaScript outside it:
 
-              element.shadowRoot; // Returns null
+          ```js
+          element.shadowRoot; // Returns null
+          ```
 
     - `delegatesFocus`
       - : A boolean that, when set to `true`, specifies behavior that mitigates
@@ -83,29 +87,13 @@ Returns a {{domxref("ShadowRoot")}} object.
 
 ### Exceptions
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Explanation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>The element you are trying to attach to is already a shadow host.</td>
-    </tr>
-    <tr>
-      <td><code>NotSupportedError</code></td>
-      <td>
-        You are trying to attach a shadow root to an element outside the HTML
-        namespace, the element cannot have a shadow attached to it, or the
-        static property <code>disabledFeatures</code> has been given a value of
-        <code>"shadow"</code> in the element definition.
-      </td>
-    </tr>
-  </tbody>
-</table>
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the element you are trying to attach to is already a shadow host.
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if the shadow root would be attached to an element outside the HTML
+    namespace, if the element cannot have a shadow attached to it, or if the
+    static property `disabledFeatures` has been given a value of
+    `"shadow"` in the element definition.
 
 ## Examples
 

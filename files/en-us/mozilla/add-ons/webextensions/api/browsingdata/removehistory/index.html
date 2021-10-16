@@ -51,7 +51,7 @@ browser-compat: webextensions.api.browsingData.removeHistory
 
 <p>Remove records of pages visited in the last week:</p>
 
-<pre class="brush: js line-numbers  language-js">function onRemoved() {
+<pre class="brush: js">function onRemoved() {
   console.log(&quot;removed&quot;);
 }
 
@@ -71,7 +71,7 @@ then(onRemoved, onError);</pre>
 
 <p>Remove all records of visited pages:</p>
 
-<pre class="brush: js line-numbers  language-js">function onRemoved() {
+<pre class="brush: js">function onRemoved() {
   console.log(&quot;removed&quot;);
 }
 
@@ -84,7 +84,7 @@ then(onRemoved, onError);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
+<div class="note"><p><strong>Note:</strong></p>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/browsingData"><code>chrome.browsingData</code></a> API.</p>
 

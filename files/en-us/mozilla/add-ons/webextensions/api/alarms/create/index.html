@@ -41,7 +41,7 @@ browser-compat: webextensions.api.alarms.create
  <p>The <code>alarmInfo</code> object may contain the following properties:</p>
  </dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>when</code>{{optional_inline}}</dt>
   <dd><code>double</code>. The time the alarm will fire first, given as <a href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>. To get the number of milliseconds between the epoch and the current time, use <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now">Date.now()</a></code>. If you specify <code>when</code>, don't specify <code>delayInMinutes</code>.</dd>
   <dt><code>delayInMinutes</code>{{optional_inline}}</dt>
@@ -86,7 +86,7 @@ browser.alarms.create("my-periodic-alarm", {
 
 <p>{{Compat}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
+<div class="note"><p><strong>Note:</strong></p>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/alarms"><code>chrome.alarms</code></a> API.</p>
 

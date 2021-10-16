@@ -35,7 +35,7 @@ browser-compat: webextensions.api.menus.create
  <dt><code>createProperties</code></dt>
  <dd><code>object</code>. Properties for the new menu item.</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>checked</code> {{optional_inline}}</dt>
   <dd><code>boolean</code>. The initial state of a checkbox or radio item: <code>true</code> for selected and <code>false</code> for unselected. Only one radio item can be selected at a time in a given group of radio items.</dd>
   <dt><code>command</code> {{optional_inline}}</dt>
@@ -79,7 +79,7 @@ browser-compat: webextensions.api.menus.create
     }</pre>
 
   <div class="notecard note">
-  <p><strong>Note</strong>: The top-level menu item uses the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a> specified in the manifest rather than what is specified with this key.</p>
+  <p><strong>Note:</strong> The top-level menu item uses the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a> specified in the manifest rather than what is specified with this key.</p>
   </div>
   </dd>
   <dt><code>id</code> {{optional_inline}}</dt>
@@ -187,7 +187,7 @@ browser.menus.onClicked.addListener(function(info, tab) {
 
 <p>{{Compat}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
+<div class="note"><p><strong>Note:</strong></p>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/contextMenus#method-create"><code>chrome.contextMenus</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json"><code>context_menus.json</code></a> in the Chromium code.</p>
 </div>

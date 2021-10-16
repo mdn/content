@@ -44,7 +44,7 @@ browser-compat: webextensions.api.tabs.sendMessage
  <dt><code><var>options</var></code> {{optional_inline}}</dt>
  <dd><code>object</code>.</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code><var>frameId</var></code> {{optional_inline}}</dt>
   <dd><code>integer</code>. Sends the message to a specific frame identified by <code><var>frameId</var></code> instead of all frames in the tab. Whether the content script is executed in all frames depends on the <code>all_frames</code> setting in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts"><code>content_scripts</code></a> section of <code>manifest.json</code>.</dd>
  </dl>
@@ -106,7 +106,7 @@ browser.runtime.onMessage.addListener(request =&gt; {
 
 <p>{{Compat}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
+<div class="note"><p><strong>Note:</strong></p>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-sendMessage"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
 

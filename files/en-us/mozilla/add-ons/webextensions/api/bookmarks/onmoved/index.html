@@ -44,12 +44,12 @@ browser.bookmarks.onMoved.hasListener(listener)
  <dd>
  <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>id</code></dt>
   <dd><code>string</code>. ID of the item that was moved.</dd>
  </dl>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>moveInfo</code></dt>
   <dd><a href="#moveinfo"><code>object</code></a>. Object containing more details about the move.</dd>
  </dl>
@@ -60,7 +60,7 @@ browser.bookmarks.onMoved.hasListener(listener)
 
 <h3 id="moveInfo">moveInfo</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>parentId</code></dt>
  <dd><code>string</code>. The new parent folder.</dd>
  <dt><code>index</code></dt>
@@ -94,7 +94,7 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
+<div class="note"><p><strong>Note:</strong></p>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/bookmarks#event-onMoved"><code>chrome.bookmarks</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
 

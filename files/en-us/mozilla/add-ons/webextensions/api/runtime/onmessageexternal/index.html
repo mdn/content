@@ -55,17 +55,17 @@ browser.runtime.onMessageExternal.hasListener(listener)
  <dd>
  <p>A callback function that will be called when this event occurs. The function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>message</code></dt>
   <dd><code>object</code>. The message itself. This is a JSON-ifiable object.</dd>
  </dl>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>sender</code></dt>
   <dd>A {{WebExtAPIRef('runtime.MessageSender')}} object representing the sender of the message.</dd>
  </dl>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>sendResponse</code></dt>
   <dd>
   <p>A function to call, at most once, to send a response to the message. The function takes a single argument, which may be any JSON-ifiable object. This argument is passed back to the message sender.</p>
@@ -112,7 +112,7 @@ browser.runtime.onMessageExternal.addListener(handleMessage);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
+<div class="note"><p><strong>Note:</strong></p>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#event-onMessageExternal"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
 

@@ -32,7 +32,7 @@ tags:
 <h3 id="CSS">CSS</h3>
 
 <ul>
- <li>The {{cssxref("align-content")}}, {{cssxref("align-items")}}, {{cssxref("align-self")}}, {{cssxref("justify-content")}}, and {{cssxref("place-content")}} property values have been updated as per the latest <a href="https://drafts.csswg.org/css-align-3/">CSS Box Alignment Module Level 3</a> spec ({{bug(1430817)}}).</li>
+ <li>The {{cssxref("align-content")}}, {{cssxref("align-items")}}, {{cssxref("align-self")}}, {{cssxref("justify-content")}}, and {{cssxref("place-content")}} property values have been updated as per the latest <a href="https://drafts.csswg.org/css-align-3/">CSS Box Alignment Module Level 3</a> spec ({{bug(1430817)}}).</li>
  <li>The {{cssxref("paint-order")}} property has been implemented ({{bug(1426146)}}).</li>
 </ul>
 
@@ -90,7 +90,7 @@ tags:
  <li>When recording or sharing media obtained using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}, muting the camera by setting the corresponding track's {{domxref("MediaStreamTrack.enabled")}} property to <code>false</code> now turns off the camera's "in use" indicator light, to help the user more easily see that the camera is not in use ({{bug(1299515)}}). See {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/getUserMedia", "User privacy")}} for more details. See also <a href="https://blog.mozilla.org/webrtc/better-privacy-on-camera-mute-in-firefox-60/">this blog post</a>.</li>
  <li>Removing a track from an {{domxref("RTCPeerConnection")}} using {{domxref("RTCPeerConnection.removeTrack", "removeTrack()")}} no longer removes the track's {{domxref("RTCRtpSender")}} from the peer connection's list of senders as reported by {{domxref("RTCPeerConnection.getSenders", "getSenders()")}} ({{bug(1290949)}}).</li>
  <li>The {{domxref("RTCRtpContributingSource")}} and {{domxref("RTCRtpSynchronizationSource")}} objects' timestamps were previously being reported based on values returned by {{jsxref("Date.getTime()")}}. In Firefox 60, these have been fixed to correctly use the <a href="/en-US/docs/Web/API/Performance_API">Performance Timing API</a> instead ({{bug(1433576)}}).</li>
- <li>As per spec, the {{domxref("ConvolverNode.ConvolverNode","ConvolverNode()")}} constructor now throws a <code>NotSupportedError</code> if the referenced {{domxref("AudioBuffer")}} does not have 1, 2, or 4 channels ({{bug(1443228)}}).</li>
+ <li>As per spec, the {{domxref("ConvolverNode.ConvolverNode","ConvolverNode()")}} constructor now throws a <code>NotSupportedError</code> {{domxref("DOMException")}} if the referenced {{domxref("AudioBuffer")}} does not have 1, 2, or 4 channels ({{bug(1443228)}}).</li>
  <li>The obsolete {{domxref("RTCPeerConnection")}} event handler {{domxref("RTCPeerConnection.onremovestream")}} has been removed; by now you should be using {{event("removetrack")}} events instead ({{bug(1442385)}}).</li>
  <li>The primary name for {{domxref("RTCDataChannel")}} is now in fact <code>RTCDataChannel</code>, instead of being an alias for <code>DataChannel</code>. The name <code>DataChannel</code> is no longer supported ({{bug(1173851)}}).</li>
 </ul>

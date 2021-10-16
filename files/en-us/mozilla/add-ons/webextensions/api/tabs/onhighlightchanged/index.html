@@ -16,7 +16,9 @@ browser-compat: webextensions.api.tabs.onHighlightChanged
 ---
 <div>{{AddonSidebar()}}</div>
 
-<div class="warning">This event is deprecated. Use {{WebExtAPIRef("tabs.onHighlighted")}} instead.</div>
+<div class="warning">
+  <p><strong>Warning:</strong> This event is deprecated. Use {{WebExtAPIRef("tabs.onHighlighted")}} instead.</p>
+</div>
 
 <p>Fired when the highlighted or selected tabs in a window changes.</p>
 
@@ -47,7 +49,7 @@ browser.tabs.onHighlightChanged.hasListener(listener)
  <dd>
  <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>selectInfo</code></dt>
   <dd><a href="#selectinfo"><code>object</code></a>.</dd>
  </dl>
@@ -58,7 +60,7 @@ browser.tabs.onHighlightChanged.hasListener(listener)
 
 <h3 id="selectInfo">selectInfo</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>windowId</code></dt>
  <dd><code>integer</code>. The window whose tabs changed.</dd>
  <dt><code>tabIds</code></dt>
@@ -69,7 +71,7 @@ browser.tabs.onHighlightChanged.hasListener(listener)
 
 <p>{{Compat}}</p>
 
-<p><strong>Acknowledgements</strong></p>
+<p><strong>Note:</strong></p>
 
 <div class="note">
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#event-onHighlightChanged"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>

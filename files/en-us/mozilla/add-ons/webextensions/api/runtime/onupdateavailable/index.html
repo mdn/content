@@ -52,7 +52,7 @@ browser.runtime.onUpdateAvailable.hasListener(listener)
  <dd>
  <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>details</code></dt>
   <dd><code>object</code>. Contains a single property, a string named <code>version</code>, which represents the version number of the update.</dd>
  </dl>
@@ -77,7 +77,7 @@ browser.runtime.onUpdateAvailable.addListener(handleUpdateAvailable);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
+<div class="note"><p><strong>Note:</strong></p>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#event-onUpdateAvailable"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
 

@@ -58641,14 +58641,6 @@
       "estelle"
     ]
   },
-  "Web/API/MediaCapabilitiesInfo": {
-    "modified": "2020-10-15T22:07:32.490Z",
-    "contributors": [
-      "Wind1808",
-      "chrisdavidmills",
-      "estelle"
-    ]
-  },
   "Web/API/MediaConfiguration": {
     "modified": "2020-10-15T22:07:10.854Z",
     "contributors": [
@@ -59197,67 +59189,6 @@
       "sideshowbarker",
       "fscholz",
       "libbymc",
-      "rolfedh",
-      "Sebastianz",
-      "jpmedley"
-    ]
-  },
-  "Web/API/MediaKeySystemConfiguration": {
-    "modified": "2020-10-15T21:33:47.354Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "Sheppy",
-      "Sebastianz",
-      "jpmedley",
-      "kscarfone"
-    ]
-  },
-  "Web/API/MediaKeySystemConfiguration/audioCapabilities": {
-    "modified": "2020-10-15T21:37:20.135Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "rolfedh",
-      "Sebastianz",
-      "jpmedley"
-    ]
-  },
-  "Web/API/MediaKeySystemConfiguration/distinctiveIdentifier": {
-    "modified": "2020-10-15T21:37:20.112Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "rolfedh",
-      "Sebastianz",
-      "jpmedley"
-    ]
-  },
-  "Web/API/MediaKeySystemConfiguration/initDataTypes": {
-    "modified": "2020-10-15T21:37:20.109Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "rolfedh",
-      "Sebastianz",
-      "jpmedley"
-    ]
-  },
-  "Web/API/MediaKeySystemConfiguration/persistentState": {
-    "modified": "2020-10-15T21:37:20.133Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "rolfedh",
-      "Sebastianz",
-      "jpmedley"
-    ]
-  },
-  "Web/API/MediaKeySystemConfiguration/videoCapabilities": {
-    "modified": "2020-10-15T21:37:20.137Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
       "rolfedh",
       "Sebastianz",
       "jpmedley"

@@ -49,12 +49,12 @@ browser.bookmarks.onChanged.hasListener(listener)
 	<dd>
 	<p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
 
-	<dl class="reference-values">
+	<dl>
 		<dt><code>id</code></dt>
 		<dd><code>string</code>. ID of the item that changed.</dd>
 	</dl>
 
-	<dl class="reference-values">
+	<dl>
 		<dt><code>changeInfo</code></dt>
 		<dd><a href="#changeinfo"><code>object</code></a>. Object containing two properties: <code>title</code>, a string containing the item's title, and <code>url</code>, a string containing the item's URL. If the item is a folder, <code>url</code> is omitted.</dd>
 	</dl>
@@ -86,7 +86,7 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 <p>{{Compat}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
+<div class="note"><p><strong>Note:</strong></p>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/bookmarks#event-onChanged"><code>chrome.bookmarks</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
 

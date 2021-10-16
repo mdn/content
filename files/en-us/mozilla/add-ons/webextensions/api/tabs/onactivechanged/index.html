@@ -17,7 +17,7 @@ browser-compat: webextensions.api.tabs.onActiveChanged
 <div>{{AddonSidebar()}}</div>
 
 <div class="warning">
-<p>This event is deprecated. Use {{WebExtAPIRef("tabs.onActivated")}} instead.</p>
+<p><strong>Warning:</strong> This event is deprecated. Use {{WebExtAPIRef("tabs.onActivated")}} instead.</p>
 </div>
 
 <p>Fires when the selected tab in a window changes. Note that the tab's URL may not be set at the time this event fired, but you can listen to {{WebExtAPIRef('tabs.onUpdated')}} events to be notified when a URL is set.</p>
@@ -49,12 +49,12 @@ browser.tabs.onActiveChanged.hasListener(listener)
  <dd>
  <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>tabId</code></dt>
   <dd><code>integer</code>. The ID of the tab that has become active.</dd>
  </dl>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>selectInfo</code></dt>
   <dd><a href="#selectinfo"><code>object</code></a>.</dd>
  </dl>
@@ -65,7 +65,7 @@ browser.tabs.onActiveChanged.hasListener(listener)
 
 <h3 id="selectInfo">selectInfo</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>windowId</code></dt>
  <dd><code>integer</code>. The ID of the window containing the selected tab.</dd>
 </dl>
@@ -74,7 +74,7 @@ browser.tabs.onActiveChanged.hasListener(listener)
 
 <p>{{Compat}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
+<div class="note"><p><strong>Note:</strong></p>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#event-onActiveChanged"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
 

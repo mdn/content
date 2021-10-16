@@ -96,7 +96,7 @@ browser.webRequest.onAuthRequired.hasListener(<var>listener</var>)
  <dd>
  <p>A function that will be called when this event occurs. The function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code><var>details</var></code></dt>
   <dd><a href="#details"><code>object</code></a>. Details about the request. See <code><a href="#details">details</a></code> below.</dd>
  </dl>
@@ -124,12 +124,12 @@ browser.webRequest.onAuthRequired.hasListener(<var>listener</var>)
 
 <h3 id="details">details</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>challenger</code></dt>
  <dd>
  <p><code>object</code>. The server requesting authentication. This is an object with the following properties:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>host</code></dt>
   <dd><code>string</code>. The server's <a href="https://en.wikipedia.org/wiki/Hostname#Internet_hostnames">hostname</a>.<br>
   <strong>Warning</strong>: Unlike Chrome, Firefox will return the requested host instead of the proxy requesting the authentication, even if <code>isProxy</code> is <code>true</code>.</dd>
@@ -184,7 +184,7 @@ browser.webRequest.onAuthRequired.hasListener(<var>listener</var>)
  <dt><code>requestId</code></dt>
  <dd><code>string</code>. The ID of the request. Request IDs are unique within a browser session, so you can use them to relate different events associated with the same request.</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
  </dl>
  </dd>
  <dt><code>responseHeaders</code>{{optional_inline}}</dt>
@@ -208,7 +208,7 @@ browser.webRequest.onAuthRequired.hasListener(<var>listener</var>)
  <dt><code>urlClassification</code></dt>
  <dd><code>object</code>. The type of tracking associated with the request, if with the request has been classified by <a class="external external-icon" href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop" rel="noopener">Firefox Tracking Protection</a>. This is an object with the following properties:</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>firstParty</code></dt>
   <dd><code>array</code> of <code>strings</code>. Classification flags for the request's first party.</dd>
   <dt><code>thirdParty</code></dt>

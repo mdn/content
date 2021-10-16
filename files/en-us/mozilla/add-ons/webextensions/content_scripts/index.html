@@ -17,7 +17,7 @@ tags:
 <div class="note">
 <p>Note that content scripts are blocked on the following domains:</p>
 
-<ul style="display: grid;">
+<ul>
  <li>accounts-static.cdn.mozilla.net</li>
  <li>accounts.firefox.com</li>
  <li>addons.cdn.mozilla.net</li>
@@ -225,7 +225,7 @@ window.confirm("Are you sure?"); // calls the original window.confirm()</pre>
 </div>
 
 <div class="notecard note">
-<p>In Chrome, starting with version 73, content scripts are subject to the same CORS policy as the page they are running within. Only backend scripts have elevated cross-domain privileges. See "<span id="sites-page-title" style="outline: none;"><a href="https://www.chromium.org/Home/chromium-security/extension-content-script-fetches">Changes to Cross-Origin Requests in Chrome Extension Content Scripts</a></span>".</p>
+<p>In Chrome, starting with version 73, content scripts are subject to the same CORS policy as the page they are running within. Only backend scripts have elevated cross-domain privileges. See <a href="https://www.chromium.org/Home/chromium-security/extension-content-script-fetches">Changes to Cross-Origin Requests in Chrome Extension Content Scripts</a>.</p>
 </div>
 
 <h2 id="Communicating_with_background_scripts">Communicating with background scripts</h2>
@@ -463,7 +463,7 @@ window.addEventListener("message", function(event) {
 <p>For a complete working example of this, <a href="https://mdn.github.io/webextensions-examples/content-script-page-script-messaging.html">visit the demo page on GitHub</a> and follow the instructions.</p>
 
 <div class="warning">
-<p><strong>Be very careful when interacting with untrusted web content in this manner!</strong> Extensions are privileged code which can have powerful capabilities and hostile web pages can easily trick them into accessing those capabilities.</p>
+<p><strong>Warning:</strong> Be very careful when interacting with untrusted web content in this manner! Extensions are privileged code which can have powerful capabilities and hostile web pages can easily trick them into accessing those capabilities.</p>
 
 <p>To give a trivial example, suppose the content script code that receives the message does something like this:</p>
 
@@ -538,7 +538,7 @@ In page script, window.y: undefined</pre>
 <p>The same applies to <code><a href="/en-US/docs/Web/API/setTimeout">setTimeout()</a></code>, <code><a href="/en-US/docs/Web/API/setInterval">setInterval()</a></code>, and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function()</a></code>.</p>
 
 <div class="notecard warning">
-<p><strong>Be very careful when running code in the context of the page!</strong> </p>
+<p><strong>Warning:</strong> Be very careful when running code in the context of the page!</p>
 
 <p>The page's environment is controlled by potentially malicious web pages, which can redefine objects you interact with to behave in unexpected ways:</p>
 

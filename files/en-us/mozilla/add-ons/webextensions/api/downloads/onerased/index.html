@@ -46,7 +46,7 @@ browser.downloads.onErased.hasListener(listener)
  <dd>
  <p>A callback function that will be called when this event occurs. This function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>downloadId</code></dt>
   <dd>An <code>integer</code> representing the <code>id</code> of the {{WebExtAPIRef('downloads.DownloadItem')}} that was erased.</dd>
  </dl>
@@ -74,7 +74,7 @@ var erasing = browser.downloads.erase({
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
+<div class="note"><p><strong>Note:</strong></p>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/downloads#event-onErased"><code>chrome.downloads</code></a> API.</p>
 

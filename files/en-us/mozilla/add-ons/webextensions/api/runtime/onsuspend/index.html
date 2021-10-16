@@ -18,7 +18,7 @@ browser-compat: webextensions.api.runtime.onSuspend
 <p>Sent to the event page just before it is unloaded. This gives the extension an opportunity to do some cleanup. Note that since the page is unloading, any asynchronous operations started while handling this event are not guaranteed to complete.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If something prevents the event page from being unloaded, the {{WebExtAPIRef("runtime.onSuspendCanceled")}} event will be sent and the page won't be unloaded.</p>
+<p><strong>Note:</strong> If something prevents the event page from being unloaded, the {{WebExtAPIRef("runtime.onSuspendCanceled")}} event will be sent and the page won't be unloaded.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -67,7 +67,7 @@ browser.runtime.onSuspend.addListener(handleSuspend);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
+<div class="note"><p><strong>Note:</strong></p>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#event-onSuspend"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
 

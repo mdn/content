@@ -39,7 +39,7 @@ browser-compat: webextensions.api.extension.getViews
  <dt><code>fetchProperties</code>{{optional_inline}}</dt>
  <dd><code>object</code>.</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>type</code>{{optional_inline}}</dt>
   <dd><code>string</code>. An {{WebExtAPIRef('extension.ViewType')}} indicating the type of view to get. If omitted, this function returns all views.</dd>
   <dt><code>windowId</code>{{optional_inline}}</dt>
@@ -76,7 +76,7 @@ for (var extensionWindow of windows) {
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
+<div class="note"><p><strong>Note:</strong></p>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/extension#method-getViews"><code>chrome.extension</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json"><code>extension.json</code></a> in the Chromium code.</p>
 

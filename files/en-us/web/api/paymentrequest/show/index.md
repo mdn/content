@@ -17,12 +17,12 @@ browser-compat: api.PaymentRequest.show
 ---
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
-The **{{domxref('PaymentRequest')}}** interface's
-**`show()`** method instructs the user agent to begin the
+The **{{domxref('PaymentRequest')}}** interface's
+**`show()`** method instructs the user agent to begin the
 process of showing and handling the user interface for the payment request to the
 user.
 
-For security reasons, the `PaymentRequest.show()` method can't just be
+For security reasons, the `PaymentRequest.show()` method can't just be
 initiated at any time. It may only be called while handling events that represent user
 interactions, such as {{event("click")}}, {{event("keyup")}}, or the like.
 
@@ -81,32 +81,32 @@ paymentPromise = paymentRequest.show(detailsPromise);
 
 ### Return value
 
-A {{jsxref("Promise")}} that eventually resolves with a {{domxref("PaymentResponse")}}.
+A {{jsxref("Promise")}} that eventually resolves with a {{domxref("PaymentResponse")}}.
 The promise is resolved when the user accepts the payment request (such as by clicking a
 "Pay" button in the browser's payment sheet).
 
 ### Exceptions
 
-- `AbortError`
+Exceptions are not thrown but returned when the {{jsxref("Promise")}} rejects.
 
-  - : The returned promise rejects with an `AbortError` if the
+- `AbortError` {{domxref("DOMException")}}
+  - : Returned if the
     {{Glossary("user agent")}} is already showing a payment panel. Only one payment
     panel may be visible at a time _across all documents loaded by the user
     agent_.
 
     The promise is also rejected with `AbortError` if the user cancels the
     payment request.
-
-- `InvalidStateError`
-  - : The promise rejects with an `InvalidStateError` if the same payment has
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Returned if the same payment has
     already been shown for this request (its state is `interactive` because it
     is being shown already).
-- `NotSupportedError`
-  - : The promise rejects with a `NotSupportedError` if the user agent does not
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Returned if the user agent does not
     support the payment methods specified when the
     {{domxref("PaymentRequest.PaymentRequest","PaymentRequest")}} constructor was called.
-- `SecurityError`
-  - : The promise rejects with a `SecurityError` if the call to
+- `SecurityError` {{domxref("DOMException")}}
+  - : Returned if the call to
     `show()` was not in response to a user action, such as a {{event("click")}}
     or {{event("keyup")}} event. Other reasons a `SecurityError` may be thrown
     are at the discretion of the user agent, and may include situations such as too many
@@ -227,18 +227,17 @@ function validateResponse(response) {
 }
 ```
 
-See the article [Using
-promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) for more information if you need more information about working with
+See the article [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) for more information if you need more information about working with
 promises.
 
 ## Examples
 
-In the following example, a `PaymentRequest` object is instantiated before
-the `show()` method is called. This method triggers the user agent's built-in
-process for retrieving payment information from the user. The `show()` method
+In the following example, a `PaymentRequest` object is instantiated before
+the `show()` method is called. This method triggers the user agent's built-in
+process for retrieving payment information from the user. The `show()` method
 returns a {{jsxref('Promise')}} that resolves to a {{domxref("PaymentResponse")}} object
 when the user interaction is complete. The developer then uses the information in
-the `PaymentResponse` object to format and send payment data to the server.
+the `PaymentResponse` object to format and send payment data to the server.
 You should send the payment information to the server asynchronously so that the final
 call to {{domxref("paymentResponse.complete()")}} can indicate the success or failure of
 the payment.
@@ -303,8 +302,7 @@ document.getElementById("buyButton").onclick = requestPayment;
 ## See also
 
 - [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
-- [Using
-  the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
+- [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - {{domxref('PaymentRequest.abort()')}}
 - {{domxref("PaymentRequest.retry()")}}
 - {{domxref("PaymentRequest.complete()")}}

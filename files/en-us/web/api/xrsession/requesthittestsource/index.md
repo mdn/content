@@ -44,7 +44,7 @@ A {{jsxref("Promise")}} that resolves with an {{domxref("XRHitTestSource")}} obj
 
 ### Exceptions
 
-Rather than throwing true exceptions, `requestHitTestSource()` rejects the
+Rather than throwing true exceptions, `requestHitTestSource()` rejects the
 returned promise with a {{domxref("DOMException")}}, specifically, one of the following:
 
 - `NotSupportedError`

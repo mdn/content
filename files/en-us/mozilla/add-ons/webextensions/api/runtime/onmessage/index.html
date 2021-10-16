@@ -51,7 +51,7 @@ browser-compat: webextensions.api.runtime.onMessage
 </ul>
 
 <div class="warning">
-<p>Returning a <code>Promise</code> is now preferred, as <code>sendResponse()</code> <a href="https://github.com/mozilla/webextension-polyfill/issues/16#issuecomment-296693219">will be removed from the W3C spec</a>.</p>
+<p><strong>Warning:</strong> Returning a <code>Promise</code> is now preferred, as <code>sendResponse()</code> <a href="https://github.com/mozilla/webextension-polyfill/issues/16#issuecomment-296693219">will be removed from the W3C spec</a>.</p>
 
 <p>The popular <a href="https://github.com/mozilla/webextension-polyfill">webextension-polyfill</a> library has already removed the <code>sendResponse()</code> function from its implementation.</p>
 </div>
@@ -87,7 +87,7 @@ browser.runtime.onMessage.hasListener(<var>listener</var>)
  <dd>
  <p>A callback function that will be called when this event occurs. The function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code><var>message</var></code></dt>
   <dd><code>object</code>. The message itself. This is a serializable object (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm">Data cloning algorithm</a>).</dd>
   <dt><code><var>sender</var></code></dt>
@@ -283,7 +283,7 @@ browser.runtime.onMessage.addListener(handleMessage);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
+<div class="note"><p><strong>Note:</strong></p>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#event-onMessage"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
 

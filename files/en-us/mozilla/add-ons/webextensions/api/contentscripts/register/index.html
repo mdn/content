@@ -39,7 +39,7 @@ browser-compat: webextensions.api.contentScripts.register
 
  <p>The <code>RegisteredContentScriptOptions</code> object has the following properties:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>allFrames</code>{{optional_inline}}</dt>
   <dd>Same as <code>all_frames</code> in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key.</dd>
   <dt><code>css</code>{{optional_inline}}</dt>
@@ -94,7 +94,7 @@ var registered = register(defaultHosts, defaultCode);</pre>
 
 <p>This code registers the JS file at content_scripts/example.js:</p>
 
-<pre class="brush: js" id="ct-3">const scriptObj = await browser.contentScripts.register({
+<pre class="brush: js">const scriptObj = await browser.contentScripts.register({
   "js": [{file: "/content_scripts/example.js"}],
   "matches": ["&lt;all_urls&gt;"],
   "allFrames": true,

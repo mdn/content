@@ -44,12 +44,12 @@ browser.bookmarks.onChildrenReordered.hasListener(listener)
  <dd>
  <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>id</code></dt>
   <dd><code>string</code>. ID of the folder whose children were reordered.</dd>
  </dl>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>reorderInfo</code></dt>
   <dd><a href="#reorderinfo"><code>object</code></a>. Object containing Additional objects.</dd>
  </dl>
@@ -60,7 +60,7 @@ browser.bookmarks.onChildrenReordered.hasListener(listener)
 
 <h3 id="reorderInfo">reorderInfo</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>childIds</code></dt>
  <dd><code>array</code> of <code>string</code>. Array containing the IDs of all the bookmark items in this folder, in the order they now appear in the UI.</dd>
 </dl>
@@ -85,7 +85,7 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
+<div class="note"><p><strong>Note:</strong></p>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/bookmarks#event-onChildrenReordered"><code>chrome.bookmarks</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
 

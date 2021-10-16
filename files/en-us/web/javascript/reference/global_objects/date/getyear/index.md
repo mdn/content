@@ -8,6 +8,7 @@ tags:
   - Method
   - Prototype
   - Reference
+  - Polyfill
 browser-compat: javascript.builtins.Date.getYear
 ---
 {{JSRef}} {{deprecated_header}}
@@ -105,6 +106,7 @@ var year = Xmas.getYear(); // returns 95
 
 ## See also
 
+- A polyfill of `Date.prototype.getYear` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-date)
 - {{jsxref("Date.prototype.getFullYear()")}}
 - {{jsxref("Date.prototype.getUTCFullYear()")}}
 - {{jsxref("Date.prototype.setYear()")}}

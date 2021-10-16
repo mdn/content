@@ -44,7 +44,7 @@ browser.runtime.onConnect.hasListener(listener)
  <dd>
  <p>A callback function that will be called when this event occurs. The function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>port</code></dt>
   <dd>A {{WebExtAPIRef('runtime.Port')}} object connecting the current script to the other context it is connecting to.</dd>
  </dl>
@@ -65,7 +65,7 @@ browser.runtime.onConnect.hasListener(listener)
  <li>sends messages to the background script, using <code>myPort</code>, when the user clicks the document</li>
 </ul>
 
-<pre class="brush: js line-numbers language-js">// content-script.js
+<pre class="brush: js">// content-script.js
 
 var myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
@@ -93,7 +93,7 @@ document.body.addEventListener("click", function() {
  <li>sends messages to the content script, using <code>portFromCS</code>, when the user clicks the extension's browser action</li>
 </ul>
 
-<pre class="brush: js line-numbers language-js">// background-script.js
+<pre class="brush: js">// background-script.js
 
 var portFromCS;
 
@@ -114,7 +114,7 @@ browser.browserAction.onClicked.addListener(function() {
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
+<div class="note"><p><strong>Note:</strong></p>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
 

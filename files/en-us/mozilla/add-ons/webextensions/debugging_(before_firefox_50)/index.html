@@ -121,7 +121,7 @@ chrome.runtime.onMessage.addListener(notify);
 
 <p>In Firefox, a "Toolbox" is the name for a separate window containing a set of tools in a tabbed interface, like this:</p>
 
-<p><img alt="" src="browser-toolbox.png" style="display: block; margin-left: auto; margin-right: auto;">The above toolbox contains five tools, which you can switch between using the tabs at the top of the window: "Inspector", "Console", "Debugger", "Style Editor", and "Scratchpad". We'll be using only two of these tools: "Console" and "Debugger".</p>
+<p><img alt="" src="browser-toolbox.png">The above toolbox contains five tools, which you can switch between using the tabs at the top of the window: "Inspector", "Console", "Debugger", "Style Editor", and "Scratchpad". We'll be using only two of these tools: "Console" and "Debugger".</p>
 
 <h3 id="Viewing_log_output">Viewing log output</h3>
 
@@ -178,7 +178,7 @@ chrome.runtime.onMessage.addListener(notify);
 </div>
 
 <div class="notecard warning">
-<p>Enabling worker debugging in Toolbox Options will disable Browser Content Toolbox debugging, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1236892">Bug 1236892</a> should address this.</p>
+<p><strong>Warning:</strong> Enabling worker debugging in Toolbox Options will disable Browser Content Toolbox debugging, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1236892">Bug 1236892</a> should address this.</p>
 </div>
 
 <p>{{EmbedYouTube("xAt3Q0PgJP4")}}</p>
@@ -201,10 +201,10 @@ chrome.runtime.onMessage.addListener(notify);
 
 <p>The problem with debugging panels in general is that they are hidden when you click outside them. So the first step is to disable this behavior. In the Browser Toolbox, click the icon that looks like four little squares:</p>
 
-<p><img alt="" src="disable-autohide.png" style="display: block; margin-left: auto; margin-right: auto;">Now, when you open a panel in Firefox, it will stay open until you press Escape.</p>
+<p><img alt="" src="disable-autohide.png">Now, when you open a panel in Firefox, it will stay open until you press Escape.</p>
 
 <div class="notecard note">
-<p>Note that this change applies to <a href="/en-US/docs/Tools/Browser_Toolbox#debugging_popups">built-in browser popups</a>, like the Hamburger menu (<img alt="" src="hamburger.png" style="display: inline-block; vertical-align: middle;">), as well as extension popups.</p>
+<p>Note that this change applies to <a href="/en-US/docs/Tools/Browser_Toolbox#debugging_popups">built-in browser popups</a>, like the Hamburger menu, as well as extension popups.</p>
 
 <p>Also note that the change is persistent, even across browser restarts. We're working on addressing this in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1251658">bug 1251658</a>, but until then you may prefer to re-enable autohide by clicking the button again before you close the Browser Toolbox.</p>
 
@@ -217,7 +217,7 @@ chrome.runtime.onMessage.addListener(notify);
 
 <h4 id="Select_the_popup's_frame">Select the popup's frame</h4>
 
-<p>The popup is loaded into its own frame. So next, select your popup's document with the Browser Toolbox's <a href="/en-US/docs/Tools/Browser_Toolbox#targeting_a_document">frame selection button</a>:<img alt="" src="frame-selection.png" style="display: block; margin-left: auto; margin-right: auto;">The document will be called something like</p>
+<p>The popup is loaded into its own frame. So next, select your popup's document with the Browser Toolbox's <a href="/en-US/docs/Tools/Browser_Toolbox#targeting_a_document">frame selection button</a>:<img alt="" src="frame-selection.png">The document will be called something like</p>
 
 <pre>moz-extension://&lt;some-uuid&gt;/path/to/your-popup.html</pre>
 
