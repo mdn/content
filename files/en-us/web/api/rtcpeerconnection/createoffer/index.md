@@ -50,14 +50,6 @@ myPeerConnection.createOffer(successCallback, failureCallback, [options]) {{depr
         you then apply the returned offer, ICE will restart. Specify `false` to
         keep the same credentials and therefore not restart ICE. **The default is
         `false`**.
-    - `voiceActivityDetection` {{optional_inline}}
-      - : Some codecs and hardware are able to detect when audio begins and ends by watching
-        for "silence" (or relatively low sound levels) to occur. This reduces network
-        bandwidth used for audio by only sending audio data when there's actually something to
-        broadcast. However, in some cases, this is unwanted. For example, in the case of music
-        or other non-voice transmission, this can cause loss of important low-volume sounds.
-        Also, emergency calls should never cut audio when quiet. **This option defaults
-        to `true`** (voice activity detection _enabled_).
 
 ### Deprecated parameters
 

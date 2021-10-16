@@ -35,9 +35,7 @@ RTCPeerConnection.createAnswer(successCallback, failureCallback[, options]); {{d
 ### Parameters
 
 - `options` {{optional_inline}}
-  - : An object which contains the following properties:
-    - `voiceActivityDetection` {{optional_inline}}
-      - : For configurations of systems and codecs that are able to detect when the user is speaking and toggle muting on and off automatically, this option enables and disables that behavior. The default value is `true`, enabling this functionality
+  - : An ooptional object providing options requested for the answer. Currently, there are no available options.
 
 ### Deprecated parameters
 
