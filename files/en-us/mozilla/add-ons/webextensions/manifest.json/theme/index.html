@@ -140,7 +140,7 @@ browser-compat: webextensions.manifest.theme
    <td><code>String</code></td>
    <td>
     <div class="notecard warning">
-    <p><code>headerURL</code> has been removed in Firefox 70. You will begin to get warnings in Firefox 65 and later if you load a theme that uses this property. Use <code>theme_frame</code> instead.</p>
+    <p><strong>Warning:</strong> <code>headerURL</code> has been removed in Firefox 70. You will begin to get warnings in Firefox 65 and later if you load a theme that uses this property. Use <code>theme_frame</code> instead.</p>
     </div>
 
     <p>The URL of a foreground image to be added to the header area and anchored to the upper right corner of the header area.</p>
@@ -170,7 +170,7 @@ browser-compat: webextensions.manifest.theme
    <td><code>Array </code>of <code>String</code></td>
    <td>
     <div class="warning">
-    <p>The <code>additional_backgrounds</code> property is experimental. It is currently accepted in release versions of Firefox, but its behavior is subject to change. It is not supported in Firefox for Android.</p>
+    <p><strong>Warning:</strong> The <code>additional_backgrounds</code> property is experimental. It is currently accepted in release versions of Firefox, but its behavior is subject to change. It is not supported in Firefox for Android.</p>
     </div>
 
     <p>An array of URLs for additional background images to be added to the header area and displayed behind the <code>"theme_frame":</code> image. These images layer the first image in the array on top, the last image in the array at the bottom.</p>
@@ -230,7 +230,7 @@ browser-compat: webextensions.manifest.theme
    </td>
    <td>
     <div class="notecard warning">
-    <p><code>accentcolor</code> has been removed in Firefox 70. You will begin to get warnings in Firefox 65 and later if you load a theme that uses this property. Use the <code>frame</code> property instead.</p>
+    <p><strong>Warning:</strong> <code>accentcolor</code> has been removed in Firefox 70. You will begin to get warnings in Firefox 65 and later if you load a theme that uses this property. Use the <code>frame</code> property instead.</p>
     </div>
 
     <p>The color of the header area background, displayed in the part of the header not covered or visible through the images specified in <code>"headerURL"</code> and <code>"additional_backgrounds"</code>.</p>
@@ -673,7 +673,7 @@ browser-compat: webextensions.manifest.theme
    <td><code>tab_background_separator</code> {{Deprecated_Inline}}</td>
    <td>
     <div class="notecard warning">
-    <p><code>tab_background_separator</code> is not supported starting with Firefox 89.
+    <p><strong>Warning:</strong> <code>tab_background_separator</code> is not supported starting with Firefox 89.
     </div>
     <p>The color of the vertical separator of the background tabs.</p>
 
@@ -813,7 +813,7 @@ browser-compat: webextensions.manifest.theme
    <td><code>textcolor</code> {{Deprecated_Inline}}</td>
    <td>
     <div class="notecard warning">
-    <p><code>textcolor</code> has been removed in Firefox 70. You will begin to get warnings in Firefox 65 and later if you load a theme that uses this property. Use <code>tab_background_text</code> instead.</p>
+    <p><strong>Warning:</strong> <code>textcolor</code> has been removed in Firefox 70. You will begin to get warnings in Firefox 65 and later if you load a theme that uses this property. Use <code>tab_background_text</code> instead.</p>
     </div>
 
     <p>The color of the text displayed in the header area.</p>
@@ -1019,7 +1019,7 @@ browser-compat: webextensions.manifest.theme
    <td><code>toolbar_field_separator</code> {{Deprecated_Inline}}</td>
    <td>
     <div class="notecard warning">
-    <p><code>toolbar_field_separator</code> is not supported starting with Firefox 89.
+    <p><strong>Warning:</strong> <code>toolbar_field_separator</code> is not supported starting with Firefox 89.
     </div>
     <p>The color of separators inside the URL bar. In Firefox 58 this was implemented as <code>toolbar_vertical_separator</code>.</p>
 
@@ -1169,7 +1169,7 @@ browser-compat: webextensions.manifest.theme
 <p>Additionally, this key accepts various properties that are aliases for one of the properties above. These are provided for compatibility with Chrome. If an alias is given, and the non-alias version is also given, then the value will be taken from the non-alias version.</p>
 
 <div class="notecard warning">
-<p>Beginning Firefox 70, the following properties are removed: <code>accentcolor</code> and <code>textcolor</code>. Use <code>frame</code> and <code>tab_background_text</code> instead. Using these values in themes loaded into Firefox 65 or later will raise warnings.</p>
+<p><strong>Warning:</strong> Beginning Firefox 70, the following properties are removed: <code>accentcolor</code> and <code>textcolor</code>. Use <code>frame</code> and <code>tab_background_text</code> instead. Using these values in themes loaded into Firefox 65 or later will raise warnings.</p>
 </div>
 
 <table class="fullwidth-table standard-table">

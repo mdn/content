@@ -18,7 +18,7 @@ browser-compat: webextensions.api.bookmarks.update
 <p><strong><code>bookmarks.update()</code></strong> updates the title and/or URL of a bookmark, or the name of a bookmark folder.</p>
 
 <div class="notecard warning">
-<p>If your extension attempts to update a bookmark in the bookmarks tree root node, the call will raise an error with the message: "The bookmark root cannot be modified" and the bookmark won't be updated.</p>
+<p><strong>Warning:</strong> If your extension attempts to update a bookmark in the bookmarks tree root node, the call will raise an error with the message: "The bookmark root cannot be modified" and the bookmark won't be updated.</p>
 </div>
 
 <p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
