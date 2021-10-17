@@ -225,7 +225,7 @@ Now let's make this fun. We are now going to start adding balls to the canvas, a
     }
     ```
 
-    The `while` loop creates a new instance of our `Ball()` using random values generated with our `random()` function, then `push()`es it onto the end of our balls array, but only while the number of balls in the array is less than 25. So when we have 25 balls on screen, no more balls appear. You can try varying the number in `balls.length < 25` to get more or fewer balls on screen. Depending on how much processing power your computer/browser has, specifying several thousand balls might slow down the animation rather a lot!
+    The `while` loop creates a new instance of our `Ball()` using random values generated with our `random()` function, then `push()`es it onto the end of our balls array, but only while the number of balls in the array is less than 25. So when we have 25 balls in the array, no more balls will be pushed. You can try varying the number in `balls.length < 25` to get more or fewer balls in the array. Depending on how much processing power your computer/browser has, specifying several thousand balls might slow down the animation rather a lot!
 
 2.  Add the following to the bottom of your code now:
 
