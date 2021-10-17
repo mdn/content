@@ -35,9 +35,7 @@ Undefined.
 ### Exceptions
 
 - {{domxref("DOMException")}} `NotAllowedError`
-  - : Thrown if the stylesheet was not created using the {{domxref("CSSStyleSheet.CSSStyleSheet()","CSSStyleSheet()")}} constructor.
-- {{domxref("DOMException")}} `NotAllowedError`
-  - : If the stylesheet is flagged as unmodifiable.
+  - : Thrown if the stylesheet was not created using the {{domxref("CSSStyleSheet.CSSStyleSheet()","CSSStyleSheet()")}} constructor or if the stylesheet is flagged as unmodifiable.
 
 ## Examples
 
