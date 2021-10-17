@@ -42,12 +42,12 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 
 There are five basic forms for the `Date()` constructor:
 
-1.  #### No parameters
+1. No parameters
 
     When no parameters are provided, the newly-created `Date` object
     represents the current date and time as of the time of instantiation.
 
-2.  #### Time value or timestamp number
+2. Time value or timestamp number
 
     - `value`
       - : An integer value representing the number of milliseconds since January 1, 1970,
@@ -55,7 +55,7 @@ There are five basic forms for the `Date()` constructor:
         seconds ignored. Keep in mind that most [UNIX
         Timestamp](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16) functions are only accurate to the nearest second.
 
-3.  #### Timestamp string
+3. Timestamp string
 
     - `dateString`
 
@@ -73,7 +73,7 @@ There are five basic forms for the `Date()` constructor:
         > - Support for ISO 8601 formats differs in that date-only strings (e.g.
         >   `"1970-01-01"`) are treated as UTC, not local.
 
-4.  ####  Date object
+4. Date object
 
   - `dateObject`
 
@@ -81,7 +81,7 @@ There are five basic forms for the `Date()` constructor:
         This is equivalent to using the `new Date(value)` constuctor, where `value` is the can be obtained using the `valueOf()` method.
 
 
-5.  #### Individual date and time component values
+5. Individual date and time component values
 
     Given at least a year and month, this form of `Date()` returns a
     `Date` object whose component values (year, month, day, hour, minute,
