@@ -822,6 +822,6 @@ div {
 - Gradient functions: {{cssxref("gradient/linear-gradient()", "linear-gradient()")}}, {{cssxref("gradient/radial-gradient()", "radial-gradient()")}}, {{cssxref("gradient/conic-gradient()", "conic-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient()", "repeating-conic-gradient()")}}
 - Gradient-related CSS data types: {{cssxref("&lt;gradient&gt;")}}, {{cssxref("&lt;image&gt;")}}
 - Gradient-related CSS properties: {{cssxref("background")}}, {{cssxref("background-image")}}
-- [CSS Gradients Patterns Gallery, by Lea Verou](https://lea.verou.me/css3patterns/)
+- [CSS Gradients Patterns Gallery, by Lea Verou](https://projects.verou.me/css3patterns/)
 - [CSS3 Gradients Library, by Estelle Weyl](http://standardista.com/cssgradients)
 - [Gradient CSS Generator](https://cssgenerator.org/gradient-css-generator.html)
