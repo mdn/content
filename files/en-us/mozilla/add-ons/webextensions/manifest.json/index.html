@@ -25,9 +25,9 @@ browser-compat: webextensions.manifest
 
 <p><code>manifest.json</code> keys are listed below:</p>
 
-<div class="index">{{ListSubpages("/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json")}}</div>
+{{ListSubpages("/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json")}}
 
-<h3 class="index" id="Notes_about_manifest.json_keys">Notes about manifest.json keys</h3>
+<h3 id="Notes_about_manifest.json_keys">Notes about manifest.json keys</h3>
 
 <ul>
  <li><code>"manifest_version"</code>, <code>"version"</code>, and <code>"name"</code> are the only mandatory keys.</li>
@@ -39,7 +39,7 @@ browser-compat: webextensions.manifest
 
 <p>You can access your extension's manifest from the extension's JavaScript using the {{WebExtAPIRef("runtime.getManifest()")}} function:</p>
 
-<pre class="brush: js no-line-numbers">browser.runtime.getManifest().version;</pre>
+<pre class="brush: js">browser.runtime.getManifest().version;</pre>
 
 <h2 id="Example">Example</h2>
 

@@ -22,7 +22,7 @@ browser-compat: webextensions.manifest.content_scripts
   <tr>
    <th scope="row">Example</th>
    <td>
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
 "content_scripts": [
   {
     "matches": ["*://*.mozilla.org/*"],
@@ -110,7 +110,7 @@ browser-compat: webextensions.manifest.content_scripts
 
     <p>Files are injected in the order given. This means that, for example, if you include jQuery here followed by another content script, like this...</p>
 
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
 &quot;js&quot;: [&quot;jquery.js&quot;, &quot;my-content-script.js&quot;]</pre>
 
     <p>...then <code>"my-content-script.js"</code> can use jQuery.</p>
@@ -128,7 +128,7 @@ browser-compat: webextensions.manifest.content_scripts
 
     <p>For example, suppose you have a <code>content_scripts</code> key like this:</p>
 
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
   "content_scripts": [
     {
       "js": ["my-script.js"],
@@ -196,7 +196,7 @@ browser-compat: webextensions.manifest.content_scripts
 
 <p>To match one of these properties, a URL must match at least one of the items in its array. For example, given a property like:</p>
 
-<pre class="brush: json  no-line-numbers">"matches": ["*://*.example.org/*", "*://*.example.com/*"]</pre>
+<pre class="brush: json ">"matches": ["*://*.example.org/*", "*://*.example.com/*"]</pre>
 
 <p>Both <code>http://example.org/</code> and <code>http://example.com/</code> will match.</p>
 
@@ -224,7 +224,7 @@ browser-compat: webextensions.manifest.content_scripts
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: json  no-line-numbers">"content_scripts": [
+<pre class="brush: json ">"content_scripts": [
   {
     "matches": ["*://*.mozilla.org/*"],
     "js": ["borderify.js"]
@@ -233,7 +233,7 @@ browser-compat: webextensions.manifest.content_scripts
 
 <p>This injects a single content script <code>borderify.js</code> into all pages under <code>mozilla.org</code> or any of its subdomains, whether served over HTTP or HTTPS.</p>
 
-<pre class="brush: json  no-line-numbers">  "content_scripts": [
+<pre class="brush: json ">  "content_scripts": [
     {
       "exclude_matches": ["*://developer.mozilla.org/*"],
       "matches": ["*://*.mozilla.org/*"],

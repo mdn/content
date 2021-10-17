@@ -62,7 +62,7 @@ browser-compat: webextensions.api.search.search
 
 <p>Search using the default search engine. The results will be shown in a new tab:</p>
 
-<pre class="brush: js no-line-numbers">function search() {
+<pre class="brush: js">function search() {
   browser.search.search({
     query: "styracosaurus"
   });
@@ -73,7 +73,7 @@ browser.browserAction.onClicked.addListener(search);
 
 <p>Search using Wikipedia. The results will be shown in a new tab:</p>
 
-<pre class="brush: js no-line-numbers">function search() {
+<pre class="brush: js">function search() {
   browser.search.search({
     query: "styracosaurus",
     engine: "Wikipedia (en)"
@@ -85,7 +85,7 @@ browser.browserAction.onClicked.addListener(search);
 
 <p>Search using Wikipedia. The results will be shown in the active tab:</p>
 
-<pre class="brush: js no-line-numbers">function search(tab) {
+<pre class="brush: js">function search(tab) {
   browser.search.search({
     query: "styracosaurus",
     engine: "Wikipedia (en)",
