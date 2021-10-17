@@ -18,8 +18,8 @@ It can be used for many simple image manipulations, such as tinting an image wit
 
 ## Syntax
 
-**Important**: The specification and current implementations have different syntaxes.
-The specification syntax is explained first.
+> **Warning**: The specification and current implementations have different syntaxes.
+> The specification syntax is explained first.
 
 ### Specification syntax
 
