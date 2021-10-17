@@ -63,16 +63,16 @@ browser-compat: webextensions.manifest.browser_specific_settings
 
 <ul>
 	<li><a href="https://en.wikipedia.org/wiki/Universally_unique_identifier" title="Generating_GUIDs">GUID</a></li>
-	<li>A string formatted like an email address: <code class="plain">extensionname@example.org</code></li>
+	<li>A string formatted like an email address: <code>extensionname@example.org</code></li>
 </ul>
 
 <p>The latter format is easier to generate and manipulate. Be aware that using a real email address here may attract spam.</p>
 
 <p>For example:</p>
 
-<pre class="brush: json; auto-links: false;">"id": "extensionname@example.org"</pre>
+<pre class="brush: json">"id": "extensionname@example.org"</pre>
 
-<pre class="brush: json; auto-links: false;">"id": "{daf44bf7-a45e-4450-979c-91cf07434c3d}"</pre>
+<pre class="brush: json">"id": "{daf44bf7-a45e-4450-979c-91cf07434c3d}"</pre>
 
 <h3 id="Microsoft_Edge_properties">Microsoft Edge properties</h3>
 
@@ -113,7 +113,7 @@ browser-compat: webextensions.manifest.browser_specific_settings
 
 <p>Example with all possible keys. Note that most extensions will omit <code>strict_max_version</code> and <code>update_url</code>.</p>
 
-<pre class="brush: json; auto-links: false;">"browser_specific_settings": {
+<pre class="brush: json">"browser_specific_settings": {
   "gecko": {
     "id": "addon@example.com",
     "strict_min_version": "42.0",
