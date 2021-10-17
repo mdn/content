@@ -73,7 +73,7 @@ browser-compat: webextensions.api.cookies
  <li>You now visit <code>a-news-site.com</code> that uses <code>ad-tracker.com</code> to deliver adverts. <code>ad-tracker.com</code> read its cookie and use the information collected from <code>a-shopping-site.com</code> to decide which adverts to display to you.</li>
 </ol>
 
-<p>To prevent tracking, Firefox separates cookies so trackers cannot make an association between websites visited. So, in the preceding example, <code>ad-tracker.com</code> cannot see the cookie created on <code>a-news-site.com</code> when visiting <code>a-shopping-site.com</code>. The first iteration of this protection was first-party isolation which is now being superseded by <a href="/en-US/docs/Web/Privacy/State_Partitioning#dynamic_state_partitioning">dynamic partitioning</a>.</p>
+<p>Firefox includes features to prevent tracking. These features separate cookies so that trackers cannot make an association between websites visited. So, in the preceding example, <code>ad-tracker.com</code> cannot see the cookie created on <code>a-news-site.com</code> when visiting <code>a-shopping-site.com</code>. The first iteration of this protection was first-party isolation which is now being superseded by <a href="/en-US/docs/Web/Privacy/State_Partitioning#dynamic_state_partitioning">dynamic partitioning</a>.</p>
 
 <div class="note notecard">
 <p><strong>Note:</strong> First-party isolation and dynamic partitioning will not be active at the same time. If the user or an extension turns on first-party isolation, it takes precedence over dynamic partitioning. However, when private browsing uses dynamic partitioning, normal browsing may not be partitioning cookies. See <a href="/en-US/docs/Web/Privacy/State_Partitioning#status_of_partitioning_in_firefox">Status of partitioning in Firefox</a>, for details.</p>
@@ -83,19 +83,17 @@ browser-compat: webextensions.api.cookies
 
 <p>Using dynamic partitioning, Firefox partitions storage accessible to JavaScript APIs by top-level site. However, this method can provide appropriate access to unpartitioned storage to enable common use cases, such as federated login. See <a href="/en-US/docs/Web/Privacy/State_Partitioning#dynamic_state_partitioning">Dynamic partitioning</a>, on the State Partitioning page, for more information. This feature is being progressively rolled out. See <a href="/en-US/docs/Web/Privacy/State_Partitioning#status_of_partitioning_in_firefox">Status of partitioning in Firefox</a>, for implementation details.</p>
 
-<p>When this feature is active, <code>partitionKey</code> returns or sets the key to the cookie's partitioned storage, for example,<code>partitionKey: {topLevelSite: "http://site"}</code>.</p>
+<p>The partition is keyed by the schemeful URL of the top-level {{glossary("Site","website")}} and, when this feature is active, the key value is available through the <code>partitionKey.topLevelSite</code> property in the cookies API, for example, <code>partitionKey: {topLevelSite: "http://site"}</code>.</p>
+
+<p>Generally, top-level documents are in unpartitioned storage, while third-party iframes are in partitioned storage. If a partition key cannot be determined, the default (unpartitioned storage) is used. For example, while all HTTP(S) sites can be used as a partition key, <code>moz-extension:-</code> URLs cannot. Therefore, iframes in Firefox's extension documents do not use partitioned storage.</p>
 
 <p>By default, {{WebExtAPIRef("cookies.get()")}}, {{WebExtAPIRef("cookies.getAll()")}}, {{WebExtAPIRef("cookies.set()")}}, and {{WebExtAPIRef("cookies.remove()")}} work with unpartitioned cookies and <code>topLevelSite</code> in <code>partitionKey</code> must be set to work with partitioned cookies. The exception is <code>getAll</code> where setting <code>partitionKey</code> without <code>topLevelSite</code> returned partitioned and unpartitioned cookies. {{WebExtAPIRef("cookies.onChanged")}} fires for any cookie that the extension can access, including partitioned cookies. To ensure that the correct cookie is modified, extensions should read the <code>cookie.partitionKey</code> property from the event and pass its value to  {{WebExtAPIRef("cookies.set()")}} and {{WebExtAPIRef("cookies.remove()")}}.</p> 
-
-<div class="note notecard">
-<p><strong>Note:</strong> Cookies created by extension in background pages and pop-ups are, by default, unpartitioned.</p>
-</div>
 
 <h3 id="First-party_isolation">First-party isolation</h3>
 
 <p>When first-party isolation is on, cookies are qualified by the domain of the original page the user visited (essentially, the domain shown to the user in the URL bar, also known as the "first party domain").</p>
 
-<p>First-party isolation can be enabled by the user by adjusting the browser's configuration, and can be set by extensions using the { order{WebExtAPIRef("privacy.websites","firstPartyIsolate")}} setting in the {{WebExtAPIRef("privacy")}} API. Note that first-party isolation is enabled by default in <a href="https://www.torproject.org/">Tor Browser</a>.</p>
+<p>First-party isolation can be enabled by the user by adjusting the browser's configuration and set by extensions using the {{WebExtAPIRef("privacy.websites","firstPartyIsolate")}} setting in the {{WebExtAPIRef("privacy")}} API. Note that first-party isolation is enabled by default in <a href="https://www.torproject.org/">Tor Browser</a>.</p>
 
 <p>In the <code>cookies</code> API, the first party domain is represented using the <code>firstPartyDomain</code> attribute. All cookies set while first-party isolation is on have this attribute set to the domain of the original page. In the preceding example, this is <code>a-shopping-site.com</code> for one cookie and <code>a-news-site.com</code> for the other. When first-party isolation is off, all cookies set by websites have this property set to an empty string.</p>
 
