@@ -75,10 +75,10 @@ There are five basic forms for the `Date()` constructor:
 
 4. Date object
 
-  - `dateObject`
+    - `dateObject`
 
-    - : An existing `Date` object. This effectively makes a copy of the existing `Date` object with the same date and time.
-        This is equivalent to using the `new Date(value)` constuctor, where `value` is the can be obtained using the `valueOf()` method.
+      - : An existing `Date` object. This effectively makes a copy of the existing `Date` object with the same date and time.
+          This is equivalent to using the `new Date(value)` constuctor, where `value` is the can be obtained using the `valueOf()` method.
 
 
 5. Individual date and time component values
