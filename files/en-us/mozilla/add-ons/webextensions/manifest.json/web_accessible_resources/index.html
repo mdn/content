@@ -47,7 +47,7 @@ browser-compat: webextensions.manifest.web_accessible_resources
 
 <p>For example, suppose your extension includes an image file at images/my-image.png, like this:</p>
 
-<pre class="no-line-numbers">my-extension-files/
+<pre class="brush: plain">my-extension-files/
     manifest.json
     my-background-script.js
     images/
@@ -59,7 +59,7 @@ browser-compat: webextensions.manifest.web_accessible_resources
 
 <p>The file is then available using a URL like:</p>
 
-<pre class="no-line-numbers">moz-extension://&lt;extension-UUID&gt;/images/my-image.png"</pre>
+<pre class="brush: plain">moz-extension://&lt;extension-UUID&gt;/images/my-image.png"</pre>
 
 <p><code>&lt;extension-UUID&gt;</code> is <strong>not</strong> your extension's ID. This ID is randomly generated for every browser instance. This prevents websites from fingerprinting a browser by examining the extensions it has installed.</p>
 
