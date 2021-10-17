@@ -46,14 +46,14 @@ browser-compat: webextensions.api.menus.createProperties
  <dd>
  <p><code>object</code>. One or more custom icons to display next to the item. Custom icons can only be set for items appearing in submenus. This property is an object with one property for each supplied icon: the property's name should include the icon's size in pixels, and path is relative to the icon from the extension's root directory. The browser tries to choose a 16x16 pixel icon for a normal display or a 32x32 pixel icon for a high-density display. To avoid any scaling, you can specify icons like this:</p>
 
- <pre class="brush: json no-line-numbers  language-json">&quot;icons&quot;: {
+ <pre class="brush: json">&quot;icons&quot;: {
       &quot;16&quot;: &quot;path/to/geo-16.png&quot;,
       &quot;32&quot;: &quot;path/to/geo-32.png&quot;
     }</pre>
 
  <p>Alternatively, you can specify a single SVG icon, and it will be scaled appropriately:</p>
 
- <pre class="brush: json no-line-numbers  language-json">&quot;icons&quot;: {
+ <pre class="brush: json">&quot;icons&quot;: {
       &quot;16&quot;: &quot;path/to/geo.svg&quot;
     }</pre>
 

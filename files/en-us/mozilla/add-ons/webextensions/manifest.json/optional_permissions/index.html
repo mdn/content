@@ -23,7 +23,7 @@ browser-compat: webextensions.manifest.optional_permissions
   <tr>
    <th scope="row">Example</th>
    <td>
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
 "optional_permissions": [
   "*://developer.mozilla.org/*",
   "webRequest"
@@ -89,15 +89,15 @@ browser-compat: webextensions.manifest.optional_permissions
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: json no-line-numbers"> "optional_permissions": ["*://developer.mozilla.org/*"]</pre>
+<pre class="brush: json"> "optional_permissions": ["*://developer.mozilla.org/*"]</pre>
 
 <p>Enable the extension to ask for privileged access to pages under developer.mozilla.org.</p>
 
-<pre class="brush: json no-line-numbers">  "optional_permissions": ["tabs"]</pre>
+<pre class="brush: json">  "optional_permissions": ["tabs"]</pre>
 
 <p>Enable the extension to ask for access to the privileged pieces of the <code>tabs</code> API.</p>
 
-<pre class="brush: json no-line-numbers">  "optional_permissions": ["*://developer.mozilla.org/*", "tabs"]</pre>
+<pre class="brush: json">  "optional_permissions": ["*://developer.mozilla.org/*", "tabs"]</pre>
 
 <p>Enable the extension to ask for both of the above permissions.</p>
 

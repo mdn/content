@@ -22,7 +22,7 @@ browser-compat: webextensions.manifest.web_accessible_resources
   <tr>
    <th scope="row">Example</th>
    <td>
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
 "web_accessible_resources": [
   "images/my-image.png"
 ]</pre>
@@ -55,7 +55,7 @@ browser-compat: webextensions.manifest.web_accessible_resources
 
 <p>To enable a web page to use an <code><a href="/en-US/docs/Web/HTML/Element/img">&lt;img&gt;</a></code> element whose <code>src</code> attribute points to this image, you would specify <code>web_accessible_resources</code> like this:</p>
 
-<pre class="brush: json no-line-numbers">"web_accessible_resources": ["images/my-image.png"]</pre>
+<pre class="brush: json">"web_accessible_resources": ["images/my-image.png"]</pre>
 
 <p>The file is then available using a URL like:</p>
 
@@ -69,7 +69,7 @@ browser-compat: webextensions.manifest.web_accessible_resources
 
 <p>The recommended approach to obtaining the URL of the resource is to use <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL">runtime.getURL</a></code> passing the path relative to manifest.json, for example:</p>
 
-<pre class="brush: js no-line-numbers">browser.runtime.getURL("images/my-image.png");
+<pre class="brush: js">browser.runtime.getURL("images/my-image.png");
 // something like:
 // moz-extension://944cfddf-7a95-3c47-bd9a-663b3ce8d699/images/my-image.png</pre>
 
@@ -79,7 +79,7 @@ browser-compat: webextensions.manifest.web_accessible_resources
 
 <p><code>web_accessible_resources</code> entries can contain wildcards. For example, the following entry would also work to include the resource at "images/my-image.png":</p>
 
-<pre class="brush: json no-line-numbers">  "web_accessible_resources": ["images/*.png"]</pre>
+<pre class="brush: json">  "web_accessible_resources": ["images/*.png"]</pre>
 
 <h3 id="Security">Security</h3>
 
@@ -89,7 +89,7 @@ browser-compat: webextensions.manifest.web_accessible_resources
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: json no-line-numbers">"web_accessible_resources": ["images/my-image.png"]</pre>
+<pre class="brush: json">"web_accessible_resources": ["images/my-image.png"]</pre>
 
 <p>Make the file at "images/my-image.png" web accessible.</p>
 

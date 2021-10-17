@@ -22,7 +22,7 @@ browser-compat: webextensions.manifest.content_security_policy
   <tr>
    <th scope="row">Example</th>
    <td>
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
 "content_security_policy": "default-src 'self'"</pre>
    </td>
   </tr>
@@ -63,54 +63,54 @@ browser-compat: webextensions.manifest.content_security_policy
 
 <p>Allow remote scripts from "https://example.com":</p>
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' https://example.com; object-src 'self'"</pre>
+<pre class="brush: json">"content_security_policy": "script-src 'self' https://example.com; object-src 'self'"</pre>
 
 <p>Allow remote scripts from any subdomain of "jquery.com":</p>
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' https://*.jquery.com; object-src 'self'"</pre>
+<pre class="brush: json">"content_security_policy": "script-src 'self' https://*.jquery.com; object-src 'self'"</pre>
 
 <p>Allow <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#eval%28%29_and_friends"><code>eval()</code> and friends</a>:</p>
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';"</pre>
+<pre class="brush: json">"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';"</pre>
 
 <p>Allow the inline script: <code>"&lt;script&gt;alert('Hello, world.');&lt;/script&gt;"</code>:</p>
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' 'sha256-qznLcsROx4GACP2dm0UCKCzCG+HiZ1guq6ZZDob/Tng='; object-src 'self'"</pre>
+<pre class="brush: json">"content_security_policy": "script-src 'self' 'sha256-qznLcsROx4GACP2dm0UCKCzCG+HiZ1guq6ZZDob/Tng='; object-src 'self'"</pre>
 
 <p>Keep the rest of the policy, but also require that images should be packaged with the extension:</p>
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'"</pre>
+<pre class="brush: json">"content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'"</pre>
 
 <p>Require that all types of content should be packaged with the extension:</p>
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "default-src 'self'"
+<pre class="brush: json">"content_security_policy": "default-src 'self'"
 </pre>
 
 <h3 id="Invalid_examples">Invalid examples</h3>
 
 <p>Policy that omits the <code>"object-src"</code> directive:</p>
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' https://*.jquery.com;"</pre>
+<pre class="brush: json">"content_security_policy": "script-src 'self' https://*.jquery.com;"</pre>
 
 <p>Policy that omits the <code>"self"</code> keyword in the <code>"script-src"</code> directive:</p>
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src https://*.jquery.com; object-src 'self'"</pre>
+<pre class="brush: json">"content_security_policy": "script-src https://*.jquery.com; object-src 'self'"</pre>
 
 <p>Scheme for a remote source is not <code>https</code>:</p>
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' http://code.jquery.com; object-src 'self'"</pre>
+<pre class="brush: json">"content_security_policy": "script-src 'self' http://code.jquery.com; object-src 'self'"</pre>
 
 <p>Wildcard is used with a generic domain:</p>
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' https://*.blogspot.com; object-src 'self'"</pre>
+<pre class="brush: json">"content_security_policy": "script-src 'self' https://*.blogspot.com; object-src 'self'"</pre>
 
 <p>Source specifies a scheme but no host:</p>
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' https:; object-src 'self'"</pre>
+<pre class="brush: json">"content_security_policy": "script-src 'self' https:; object-src 'self'"</pre>
 
 <p>Directive includes the unsupported keyword <code>'unsafe-inline'</code>:</p>
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' 'unsafe-inline'; object-src 'self'"</pre>
+<pre class="brush: json">"content_security_policy": "script-src 'self' 'unsafe-inline'; object-src 'self'"</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

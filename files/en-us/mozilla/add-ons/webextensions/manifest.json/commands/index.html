@@ -23,7 +23,7 @@ browser-compat: webextensions.manifest.commands
   <tr>
    <th scope="row">Example</th>
    <td>
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
 "commands": {
   "toggle-feature": {
     "suggested_key": {
@@ -69,7 +69,7 @@ browser-compat: webextensions.manifest.commands
 
 <p>For example:</p>
 
-<pre class="brush: json no-line-numbers">"commands": {
+<pre class="brush: json">"commands": {
   "toggle-feature": {
     "suggested_key": {
       "default": "Alt+Shift+U",
@@ -93,7 +93,7 @@ browser-compat: webextensions.manifest.commands
 
 <p>You could then listen for the <code>"toggle-feature"</code> command with code like this:</p>
 
-<pre class="brush: js no-line-numbers">browser.commands.onCommand.addListener(function (command) {
+<pre class="brush: js">browser.commands.onCommand.addListener(function (command) {
   if (command === "toggle-feature") {
     console.log("Toggling the feature!");
   }
@@ -111,7 +111,7 @@ browser-compat: webextensions.manifest.commands
 
 <p>For example, this JSON defines a key combination that clicks the extension's browser action:</p>
 
-<pre class="brush: js no-line-numbers">"commands": {
+<pre class="brush: js">"commands": {
   "_execute_browser_action": {
     "suggested_key": {
       "default": "Ctrl+Shift+Y"
@@ -167,7 +167,7 @@ browser-compat: webextensions.manifest.commands
 
 <p>Define a single keyboard shortcut, using only the default key combination:</p>
 
-<pre class="brush: json no-line-numbers">"commands": {
+<pre class="brush: json">"commands": {
   "toggle-feature": {
     "suggested_key": {
       "default": "Ctrl+Shift+Y"
@@ -178,7 +178,7 @@ browser-compat: webextensions.manifest.commands
 
 <p>Define two keyboard shortcuts, one with a platform-specific key combination:</p>
 
-<pre class="brush: json no-line-numbers">"commands": {
+<pre class="brush: json">"commands": {
   "toggle-feature": {
     "suggested_key": {
       "default": "Alt+Shift+U",

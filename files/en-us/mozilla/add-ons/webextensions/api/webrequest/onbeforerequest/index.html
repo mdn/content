@@ -73,11 +73,11 @@ browser.webRequest.onBeforeRequest.hasListener(listener)
  <dt><code>filter</code></dt>
  <dd>{{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that will be sent to this listener.</dd>
  <dt><code>extraInfoSpec</code>{{optional_inline}}</dt>
- <dd><code>array</code> of <code>string</code>. <span class="im">Extra options for the event. You can pass any of the following values:</span></dd>
+ <dd><code>array</code> of <code>string</code>. Extra options for the event. You can pass any of the following values:</dd>
  <dd>
  <ul>
   <li><code>"blocking"</code>: make the request synchronous, so you can cancel or redirect the request</li>
-  <li><span class="im"><code>"requestBody"</code>: include <code>requestBody</code> in the <code>details</code> object passed to the listener</span></li>
+  <li><code>"requestBody"</code>: include <code>requestBody</code> in the <code>details</code> object passed to the listener</li>
  </ul>
  </dd>
 </dl>
