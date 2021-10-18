@@ -99,7 +99,7 @@ body {
 
 {{EmbedLiveSample("Example")}}
 
-> **Note:** If you have to display reserved characters such as `<`, `>`, `&`, `"` within the `<pre>` tag, the characters must be escaped using their respective [HTML entity](https://developer.mozilla.org/en-US/docs/Glossary/Entity).
+> **Note:** If you have to display reserved characters such as `<`, `>`, `&`, `"` within the `<pre>` tag, the characters must be escaped using their respective [HTML entity](/en-US/docs/Glossary/Entity).
 
 ## Accessibility concerns
 
@@ -142,5 +142,5 @@ A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}}
 ## See also
 
 - CSS: {{Cssxref('white-space')}}, {{Cssxref('word-break')}}
-- [HTML Entity](https://developer.mozilla.org/en-US/docs/Glossary/Entity)
+- [HTML Entity](/en-US/docs/Glossary/Entity)
 - Related element: {{HTMLElement("code")}}
