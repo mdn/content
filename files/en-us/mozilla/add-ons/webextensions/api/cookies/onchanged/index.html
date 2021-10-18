@@ -15,7 +15,9 @@ browser-compat: webextensions.api.cookies.onChanged
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p>The <code>onChanged</code> event of the {{WebExtAPIRef("cookies")}} API is fired when a cookie is set or removed.</p>
+<p>The <code>onChanged</code> event of the {{WebExtAPIRef("cookies")}} API fires when a cookie that the extension can access is set or removed.</p>
+
+<div class="note"><p><strong>Note:</strong> When <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#dynamic_partitioning">dynamic partitioning</a> is active, <code>cookies.Cookie.partitionKey.topLevelSiteChanged</code> contains the URL of the top-level site when the cookie is partitioned. It's important to pass this value in {{WebExtAPIRef("cookies.set()")}} and {{WebExtAPIRef("cookies.remove()")}} to ensure the extension works with the correct cookie.</div>
 
 <p>Note that updating a cookie's properties is implemented as a two step process:</p>
 
