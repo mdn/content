@@ -298,7 +298,7 @@ Usage: `\{{Optional_Inline}}` or `\{{ReadOnlyInline}}`. Example:
 
 #### Non-standard
 
-{{TemplateLink("non-standard_inline")}} inserts an in-line mark indicating the API has not been standardized and is not on a standards track.
+[`non-standard_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Inline.ejs) inserts an in-line mark indicating the API has not been standardized and is not on a standards track.
 
 ##### Syntax
 
@@ -324,7 +324,7 @@ Usage: `\{{Optional_Inline}}` or `\{{ReadOnlyInline}}`. Example:
 
 #### Deprecated
 
-[`deprecated_inline`](https://github.com/mdn/yari/tree/master/kumascript/macros/deprecated_inline.ejs) inserts an in-line deprecated mark ({{Deprecated_Inline}}) to discourage the use of an API that is officially deprecated (or has been removed).
+[`deprecated_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Inline.ejs) inserts an in-line deprecated mark ({{Deprecated_Inline}}) to discourage the use of an API that is officially deprecated (or has been removed).
 
 ##### Syntax
 
@@ -338,10 +338,10 @@ Usage: `\{{Optional_Inline}}` or `\{{ReadOnlyInline}}`. Example:
 
 These templates have the same semantics as their inline counterparts described above. The templates should be placed directly underneath the main page title (or breadcrumb navigation if available) in the reference page. They can also be used to mark up a section on a page.
 
-- {{TemplateLink("non-standard_header")}}: `\{{Non-standard_Header}}` {{Non-standard_Header}}
+- [`non-standard_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Header.ejs): `\{{Non-standard_Header}}` {{Non-standard_Header}}
 - [`SeeCompatTable`](https://github.com/mdn/yari/tree/master/kumascript/macros/SeeCompatTable.ejs) should be used on pages that document [experimental features](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental). Example: `\{{SeeCompatTable}}` {{SeeCompatTable}}
-- [`deprecated_header`](https://github.com/mdn/yari/tree/master/kumascript/macros/deprecated_header.ejs): `\{{Deprecated_Header}}` {{Deprecated_Header}}
-- [`secureContext_header`](https://github.com/mdn/yari/tree/master/kumascript/macros/secureContext_header.ejs). Should be used on main pages like interface pages, API overview pages, and API entry points (e.g. `navigator.xyz`) but usually not on sub-pages like method and property pages. Example: `\{{SecureContext_Header}}` {{SecureContext_Header}}
+- [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs): `\{{Deprecated_Header}}` {{Deprecated_Header}}
+- [`secureContext_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/secureContext_header.ejs). Should be used on main pages like interface pages, API overview pages, and API entry points (e.g. `navigator.xyz`) but usually not on sub-pages like method and property pages. Example: `\{{SecureContext_Header}}` {{SecureContext_Header}}
 
 ### Indicating that a feature is available in web workers
 
