@@ -34,7 +34,7 @@ See the {{anch("Obtaining a StyleSheet")}} section for the various ways a `CSSSt
 
 ## Constructor
 
-- {{domxref("CSSStyleSheet.CSSStyleSheet()")}}
+- {{domxref("CSSStyleSheet.CSSStyleSheet()", "CSSStyleSheet()")}}
   - : Creates a new `CSSStyleSheet` object.
 
 ## Properties
