@@ -11,17 +11,18 @@ browser-compat: api.Sanitizer.sanitizeFor
 
 The **`sanitizeFor()`** method of the {{domxref("Sanitizer")}} interface is used to parse and sanitize a string of HTML for insertion into the DOM at some later point.
 
-The method takes as a parameter the tag name of the type of HTML element into which the input string is to be parsed, and returns an HTML object of that type containing the sanitized subtree as its child.
-The returned object **must** be inserted into an object of the same type.
+The method takes the tag name of the eventual destination HTML element as a parameter.
+This is needed because the result of parsing an HTML string depends on where it is used.
+For example, {{HTMLElement("td")}} elements are valid nodes when inserted into a {{HTMLElement("table")}} but will be skipped/ignored when parsed into a {{HTMLElement("div")}}.
 
-This context is required because the parsing of an HTML string into a subtree depends on the context into which it is inserted.
-For example, {{HTMLElement("td")}} is a valid node for insertion into a {{HTMLElement("table")}}, but would be stripped if inserted into a {{HTMLElement("div")}}.
-If the caller extracts the sanitized tree, for example by using `innerHTML` to get the subtree as a string, it is their responsibility to ensure the correct context is used when it is inserted.
+The method returns an HTML element object of the same as the eventual destination element, containing the sanitized subtree as its child.
+The subtree **must** be inserted into an element of the same type.
+If the caller extracts the sanitized subtree from the object, for example by using `innerHTML`, it is their responsibility to ensure the correct context is used when it is inserted in the DOM.
 
 The default `Sanitizer()` configuration strips out XSS-relevant input by default, including {{HTMLElement("script")}} tags, custom elements, and comments.
 The sanitizer configuration may be customized using {{domxref("Sanitizer.Sanitizer","Sanitizer()")}} constructor options.
 
-> **Note:** Use {{domxref("Element.setHTML()")}} instead of this method if the target element is available for immediate update, or {{domxref("Sanitizer.sanitize()")}} to sanitize a {{domxref("DocumentFragment")}}.
+> **Note:** Use {{domxref("Element.setHTML()")}} instead of this method if the target element is available for immediate update.
 
 ## Syntax
 
@@ -58,9 +59,9 @@ const sanitizer = new Sanitizer();  // Default sanitizer;
 // Sanitize the string
 let sanitizedDiv = sanitizer.sanitizeFor("div", unsanitized_string);
 
-//We can verify the returned element type and view sanitized HTML in string form:
-console.log(typeof sanitizedDiv);
-// HTMLDivElement
+//We can verify the returned element type, and view sanitized HTML in string form:
+console.log( (sanitizedDiv instanceof HTMLDivElement) );
+// true
 console.log(sanitizedDiv.innerHTML)
 // "abc  def"
 
@@ -82,3 +83,4 @@ document.querySelector("div#target").replaceChildren(sanitizedDiv.children);
 ## See also
 
 - {{domxref("Element.setHTML()")}}
+- {{domxref('HTML Sanitizer API')}}
