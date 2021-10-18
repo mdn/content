@@ -99,6 +99,8 @@ body {
 
 {{EmbedLiveSample("Example")}}
 
+> **Note:** If you have to display reserved characters such as `<`, `>`, `&`, `"` within the `<pre>` tag, the characters must be escaped using their respective [HTML entity](https://developer.mozilla.org/en-US/docs/Glossary/Entity).
+
 ## Accessibility concerns
 
 It is important to provide an alternate description for any images or diagrams created using preformatted text. The alternate description should clearly and concisely describe the image or diagram's content.
@@ -108,22 +110,23 @@ People experiencing low vision conditions and browsing with the aid of assistive
 A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}} elements, supplemented by a combination of an {{htmlattrxref("id")}} and the [ARIA](/en-US/docs/Web/Accessibility/ARIA) `role` and `aria-labelledby` attributes allow the preformatted text to be announced as an image, with the `figcaption` serving as the image's alternate description.
 
 ### Example
-
-    <figure role="img" aria-labelledby="cow-caption">
-      <pre>
+```html
+<figure role="img" aria-labelledby="cow-caption">
+  <pre>
       ___________________________
-    < I'm an expert in my field. >
+  &lt; I'm an expert in my field. &gt;
       ---------------------------
-             \   ^__^
-              \  (oo)\_______
-                 (__)\       )\/\
-                     ||----w |
-                     ||     ||
-      </pre>
-      <figcaption id="cow-caption">
-        A cow saying, "I'm an expert in my field." The cow is illustrated using preformatted text characters.
-      </figcaption>
-    </figure>
+          \   ^__^
+           \  (oo)\_______
+              (__)\       )\/\
+                  ||----w |
+                  ||     ||
+  </pre>
+  <figcaption id="cow-caption">
+    A cow saying, "I'm an expert in my field." The cow is illustrated using preformatted text characters.
+  </figcaption>
+</figure>
+```
 
 - [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [H86: Providing text alternatives for ASCII art, emoticons, and leetspeak | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H86.html)
@@ -139,4 +142,5 @@ A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}}
 ## See also
 
 - CSS: {{Cssxref('white-space')}}, {{Cssxref('word-break')}}
+- [HTML Entity](https://developer.mozilla.org/en-US/docs/Glossary/Entity)
 - Related element: {{HTMLElement("code")}}
