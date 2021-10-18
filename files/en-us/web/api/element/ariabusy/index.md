@@ -25,9 +25,9 @@ The **`ariaBusy`** property of the {{domxref("Element")}} interface reflects the
 A {{domxref("DOMString")}} with one of the following values:
 
 - `"true"`
-  - : There are no expected updates for the element.
-- `"false"`
   - : The element is being updated.
+- `"false"`
+  - : There are no expected updates for the element.
 
 ## Examples
 
