@@ -9,27 +9,26 @@ tags:
   - Button Role
   - Reference
 ---
+
 The `button` role is for clickable elements that trigger a response when activated by the user. Adding `role="button"` tells the screen reader the element is a button, but provides no button functionality. Use {{HTMLElement("button")}} or {{HTMLElement("input")}} with `type="button"` instead. 
 
 ## Description
 
-The button role identifies an element as a button to screen readers. A button is a widget used to perform actions such as submitting a form, opening a dialog, cancelling an action, or performing a command such as inserting a new record or displaying information. Adding `role="button"` tells the screen reader the element is a button, but provides no button functionality. Use {{HTMLElement("button")}} or {{HTMLElement("input")}} with `type="button"` instead. This role can be used in combination with the `aria-pressed` attribute to create toggle buttons.
+The button role identifies an element as a button to assistive technology such as screen readers. A button is a widget used to perform actions such as submitting a form, opening a dialog, cancelling an action, or performing a command such as inserting a new record or displaying information. Adding `role="button"` tells assistive technology that the element is a button, but provides no button functionality. Use {{HTMLElement("button")}} or {{HTMLElement("input")}} with `type="button"` instead. This role can be used in combination with the `aria-pressed` attribute to create toggle buttons.
 
 ```html
 <div id="saveChanges" tabindex="0" role="button" aria-pressed="false">Save</div>
 ```
 
-The above example creates a focusable button, requiring JavaScript and CSS to include button appearance and functionality; features provided by default when using the {{HTMLElement("button")}} and {{HTMLElement("input")}} with `type="button"` elements:
+The above example creates a focusable button, but requires JavaScript and CSS to include button appearance and functionality. These are features provided by default when using the {{HTMLElement("button")}} and {{HTMLElement("input")}} with `type="button"` elements:
 
 ```html
-<button id="saveChanges">Save</button>
+<button type="button" id="saveChanges">Save</button>
 ```
 
-> **Note:** If using role="button" instead of the semantic `<button>` or `<input type="button">` elements, you will need to make the element focusable and have to define event handlers for {{event("click")}} and {{event("keydown")}} events, including the <kbd>Enter</kbd> and <kbd>Space</kbd> keys, in order to process the user's input. See [the official WAI-ARIA example code](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html).
+> **Note:** If using `role="button"` instead of the semantic `<button>` or `<input type="button">` elements, you will need to make the element focusable and have to define event handlers for {{event("click")}} and {{event("keydown")}} events. This includes handling the <kbd>Enter</kbd> and <kbd>Space</kbd> keypresses in order to process all forms of user input. See [the official WAI-ARIA example code](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html).
 
-In addition to the ordinary button widget, role="button" should be included when creating a toggle button or menu button using a non button element. A toggle button is a two-state button that can be either off (not pressed) or on (pressed). The `aria-pressed` attribute values of `true` or `false` identify a button as a toggle button. A menu button is a button that controls a menu and has an `aria-haspopup` property attribute set to either `menu` or `true`.
-
-A common convention to inform users a button will launch a dialog is to append "…" (ellipsis) to the button's label, e.g., "Save as…".
+In addition to the ordinary button widget, `role="button"` should be included when creating a toggle button or menu button using a non-button element. A toggle button is a two-state button that can be either off (not pressed) or on (pressed). The `aria-pressed` attribute values of `true` or `false` identify a button as a toggle button. A menu button is a button that controls a menu and has an `aria-haspopup` property attribute set to either `menu` or `true`.
 
 ### Associated ARIA roles, states, and properties
 
@@ -223,7 +222,7 @@ function toggleButton(element) {
 
 Buttons are interactive controls and thus focusable. If the `button` role is added to an element that is not focusable by itself (such as `<span>`, `<div>` or `<p>`) then, the `tabindex` attribute has to be used to make the button focusable.
 
-> **Warning:** Be careful when marking up links with the button role. Buttons are expected to be triggered using the <kbd>Space</kbd> or <kbd>Enter</kbd> key, while links are expected to be triggered using the <kbd>Enter</kbd> key. In other words, when links are used to behave like buttons, adding `role="button" `alone is not sufficient. It will also be necessary to add a key event handler that listens for the <kbd>Space</kbd> key in order to be consistent with native buttons.
+> **Warning:** Be careful when marking up links with the button role. Buttons are expected to be triggered using the <kbd>Space</kbd> or <kbd>Enter</kbd> key, while links are expected to be triggered using the <kbd>Enter</kbd> key. In other words, when links are used to behave like buttons, adding `role="button"` alone is not sufficient. It will also be necessary to add a key event handler that listens for the <kbd>Space</kbd> key in order to be consistent with native buttons.
 
 When the `button` role is used, screen readers announce the element as a button, generally saying "click" followed by the button's accessible name. The accessible name is either the content of the element or the value of an `aria-label` or element referenced by an  `aria-labelledby` attribute, or description, if included.
 

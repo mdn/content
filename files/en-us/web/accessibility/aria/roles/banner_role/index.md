@@ -59,7 +59,6 @@ We could also have written the above with the HTML `header` element:
 
 ```html
 <header>
-  <a href="#nav" id="skipToMenu" class="skiptocontent">Skip To Keyboard Navigation</a>
   <img src="images/w3c.png" alt="W3C Logo">
   <h1>ARIA Landmarks</h1>
   <p>Identifying page subsections for easy navigation</p>
