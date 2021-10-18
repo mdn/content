@@ -2,7 +2,6 @@
 title: 'ARIA: aria-busy attribute'
 slug: Web/Accessibility/ARIA/Attributes/aria-busy
 tags: 
-
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -25,7 +24,7 @@ The `aria-busy` property is an optional property of live regions that can have t
 ariaLiveElement.ariaBusy = "false";
 ```
 
-Whether the changes are announced immediately upon changing the value to `false` or the assistive technology waits until the current task is complete before interrupting the user, depends on the [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live) value.
+[`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live)'s value dictates whether the changes are announced immediately upon changing the value to `false`, or the assistive technology waits until the current task is complete before interrupting the user.
 
 ### Within a `feed`
 
