@@ -88,7 +88,11 @@ browser.webRequest.onBeforeRequest.addListener(
 
 }</pre>
 
-<p>The only change here is to add the <code>"webRequestBlocking"</code> <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a></code>. We need to ask for this extra permission whenever we are actively modifying a request.</p>
+<p>The changes here are to:</p>
+<ul> 
+  <li>add the <code>"webRequestBlocking"</code> <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a></code>. This extra permission is needed whenever an extension wants to modify a request.</li>
+  <li>replace the <code>&lt;all_urls&gt;</code> permission with individual <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a>, as this is good practice to minimize the number of requested permissions.</li>
+</ul>
 
 <p>Next, replace "background.js" with this:</p>
 
