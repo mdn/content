@@ -49,7 +49,7 @@ var ContactInfo = ContactsManager.select(properties, options);
 Returns a {{jsxref('Promise')}} that resolves with an array of objects containing contact information. Each object represents a single contact may contain the following properties:
 
 - `address`
-  - : An {{jsxref("Array")}} of {{domxref("ContactAddress)}} objects, each containing specifics of a unique physical address.
+  - : An {{jsxref("Array")}} of {{domxref("ContactAddress")}} objects, each containing specifics of a unique physical address.
 - `email`
   - : An array of strings containing email addresses.
 - `icon`
