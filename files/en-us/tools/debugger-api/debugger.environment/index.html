@@ -12,7 +12,7 @@ slug: Tools/Debugger-API/Debugger.Environment
 
 <p>(If more than one <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance is debugging the same code, each <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> gets a separate <code>Debugger.Environment</code> instance for a given environment. This allows the code using each <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance to place whatever properties it likes on its own <a href="Debugger.Object"><code>Debugger.Object</code></a> instances, without worrying about interfering with other debuggers.)</p>
 
-<p>If a <code>Debugger.Environment</code> instance’s referent is not a debuggee environment, then attempting to access its properties (other than <code>inspectable</code>) or call any its methods throws an instance of <code>Error</code>.</p>
+<p>If a <code>Debugger.Environment</code> instance’s referent is not a debuggee environment, then attempting to access its properties (other than <code>inspectable</code>) or call any of its methods throws an instance of <code>Error</code>.</p>
 
 <p><code>Debugger.Environment</code> instances protect their referents from the garbage collector; as long as the <code>Debugger.Environment</code> instance is live, the referent remains live. Garbage collection has no visible effect on <code>Debugger.Environment</code> instances.</p>
 
