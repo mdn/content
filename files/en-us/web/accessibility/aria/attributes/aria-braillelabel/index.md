@@ -2,13 +2,11 @@
 title: 'ARIA: aria-braillelabel attribute'
 slug: web/Accessibility/ARIA/Attributes/aria-braillelabel
 tags: 
-
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-braillelabel
-  
 ---
 
 The global `aria-braillelabel` property defines a string value that labels the current element, which is intended to be converted into Braille. 

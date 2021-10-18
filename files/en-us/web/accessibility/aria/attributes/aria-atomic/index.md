@@ -2,7 +2,6 @@
 title: 'ARIA: aria-atomic attribute'
 slug: web/Accessibility/ARIA/Attributes/aria-atomic
 tags: 
-
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -37,7 +36,6 @@ Used in **ALL** [roles](/en-US/docs/Web/Accessibility/ARIA/Roles).
 | Specification         | Status            |
 | ---------------- | ---------------- |
 | {{SpecName("ARIA","#aria-atomic","ARIA: aria-atomic Attribute")}}              | {{Spec2('ARIA')}}                         |
-
 
 ## See Also
 

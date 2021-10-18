@@ -2,7 +2,6 @@
 title: 'ARIA: aria-autocomplete attribute'
 slug: web/Accessibility/ARIA/Attributes/aria-autocomplete
 tags: 
-
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -18,13 +17,13 @@ The  `aria-autocomplete` attribute indicates whether inputting text could trigge
 
 ## Description
 
-Autocompletion is user interface feature wherein inline suggestions are made as a user types in an input.  Suggested text for completing the value of the field dynamically appears in the field after the input cursor, and the suggested value is becomes the value if the user performs an action, such as tabbing, that causes focus to leave the field.
+Autocompletion is user interface feature wherein inline suggestions are made as a user types in an input. Suggested text for completing the value of the field dynamically appears in the field after the input cursor, and the suggested value becomes the value if the user performs an action, such as tabbing, that causes focus to leave the field.
 
 The `aria-autocomplete` property describes the type of autocompletion interaction model a textbox, searchbox, or combobox will use when dynamically helping users complete text input. It distinguishes between two models: the **inline** model (`aria-autocomplete="inline"`), which presents a single predicted value and the **list** model (`aria-autocomplete="list"`), which presents a collection of possible values in a separate element that pops up next to or below the text input, similar to a {{HTMLElement('datalist')}}. A third value, `aria-autocomplete="both"` is for when the interface will present a list while also including a predicted value. The default is `none`, meaning the textbox, searchbox, or combobox will not provide an auto complete value. 
 
 The `aria-autocomplete` property only describes the type of predictive behavior for an input element for assistive technologies; it doesn't provide the functionality. The actual autocompletion should be provided using HTML attributes or JavaScript. 
 
-Do not specify a value for `aria-autocomplete`, or, if you do, set the value to the `none` default, if the suggested autocomplete value provides suggested values  that aren't dependent on the input provided by the user. For example, a searchbox input displaying unfiltered recent search terms may be helpful to a marketing team on an eCommerce site, but likely isn't helpful for the screen reader user. 
+Do not specify a value for `aria-autocomplete`, or, if you do, set the value to the `none` default, if the suggested autocomplete value provides suggested values that aren't dependent on the input provided by the user. For example, a searchbox input displaying unfiltered recent search terms may be helpful to a marketing team on an eCommerce site, but likely isn't helpful for the screen reader user. 
 
 When implementing autocomplete functionality, ensure the suggested portion of the value is presented as selected text to enable distinguishing between a user's input and the suggestion. Make sure that when the suggested value is not the desired value, users can easily delete the suggestion or replace it by continuing to type.
 
