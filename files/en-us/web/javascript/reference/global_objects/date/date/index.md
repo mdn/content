@@ -23,6 +23,7 @@ milliseconds since 1 January 1970 UTC.
 new Date()
 new Date(value)
 new Date(dateString)
+new Date(dateObject)
 
 new Date(year, monthIndex)
 new Date(year, monthIndex, day)
@@ -39,7 +40,7 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 
 ### Parameters
 
-There are four basic forms for the `Date()` constructor:
+There are five basic forms for the `Date()` constructor:
 
 1.  #### No parameters
 
@@ -72,7 +73,15 @@ There are four basic forms for the `Date()` constructor:
         > - Support for ISO 8601 formats differs in that date-only strings (e.g.
         >   `"1970-01-01"`) are treated as UTC, not local.
 
-4.  #### Individual date and time component values
+4.  ####  Date object
+
+  - `dateObject`
+
+    - : An existing `Date` object. This effectively makes a copy of the existing `Date` object with the same date and time.
+        This is equivalent to using the `new Date(value)` constuctor, where `value` is the can be obtained using the `valueOf()` method.
+
+
+5.  #### Individual date and time component values
 
     Given at least a year and month, this form of `Date()` returns a
     `Date` object whose component values (year, month, day, hour, minute,
@@ -125,6 +134,7 @@ The following examples show several ways to create JavaScript dates:
 
 ```js
 let today = new Date()
+let sameDay = new Date(today)
 let birthday = new Date('December 17, 1995 13:24:00')
 let birthday = new Date('1995-12-17T13:24:00')
 let birthday = new Date(1995, 11, 17)            // the month is 0-indexed

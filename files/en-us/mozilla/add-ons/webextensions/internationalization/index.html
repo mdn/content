@@ -24,7 +24,7 @@ tags:
 
 <p>An internationalized extension can contain the same features as any other extension — <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts">background scripts</a>, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a>, etc. — but it also has some extra parts to allow it to switch between different locales. These are summarized in the following directory tree:</p>
 
-<ul class="directory-tree">
+<ul>
  <li>extension-root-directory/
   <ul>
    <li>_locales
@@ -73,8 +73,8 @@ tags:
 
 <h2 id="Providing_localized_strings_in__locales">Providing localized strings in _locales</h2>
 
-<div class="pull-aside">
-<div class="moreinfo">You can look up language subtags using the <em>Find</em> tool on the <a href="https://r12a.github.io/app-subtags/">Language subtag lookup page</a>. Note that you need to search for the English name of the language.</div>
+<div class="note">
+  <p><strong>Note:</strong> You can look up language subtags using the <em>Find</em> tool on the <a href="https://r12a.github.io/app-subtags/">Language subtag lookup page</a>. Note that you need to search for the English name of the language.</p>
 </div>
 
 <p>Every i18n system requires the provision of strings translated into all the different locales you want to support. In extensions, these are contained within a directory called <code>_locales</code>, placed inside the extension root. Each individual locale has its strings (referred to as messages) contained within a file called <code>messages.json</code>, which is placed inside a subdirectory of <code>_locales</code>, named using the language subtag for that locale's language.</p>
@@ -245,7 +245,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
 
 <p>Take the following example:</p>
 
-<ul class="directory-tree">
+<ul>
  <li>extension-root-directory/
   <ul>
    <li>_locales

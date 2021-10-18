@@ -22,7 +22,7 @@ tags:
 
 <p>Any set of content that should be consumed as a single image (which could include images, video, audio, code snippets, emojis, or other content) can be identified using <code>role="img"</code>.</p>
 
-<p>You shouldn't count on the alt text of individual elements images for conveying context to assistive technologies; most screenreaders will consider the element with <code>role="img"</code> set on it to be to be like a black box, and not access the individual elements inside it.  Therefore, provide a comprehensive overall descriptive alt text for image, either in the surrounding text, or by using an <code>aria-label</code> attribute, with optional alt attributes for search engines or sighted users to be written to the page should an image fail:</p>
+<p>You shouldn't count on the alt text of individual elements images for conveying context to assistive technologies; most screenreaders will consider the element with <code>role="img"</code> set on it to be like a black box, and not access the individual elements inside it.  Therefore, provide a comprehensive overall descriptive alt text for image, either in the surrounding text, or by using an <code>aria-label</code> attribute, with optional alt attributes for search engines or sighted users to be written to the page should an image fail:</p>
 
 <pre class="brush: html">&lt;div role="img" aria-label="Description of the overall image"&gt;
   &lt;img src="graphic1.png" alt=""&gt;

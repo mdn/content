@@ -55,17 +55,17 @@ browser-compat: webextensions.api.clipboard.setImageData
 
 <p>Copy a remote image:</p>
 
-<pre class="brush: js"><span class="quote">// requires:
+<pre class="brush: js">// requires:
 // * the host permission for "<a href="https://cdn.mdn.mozilla.net/" rel="nofollow">https://cdn.mdn.mozilla.net/</a>*"
 // * the API permission "clipboardWrite"
 
 fetch('<a href="https://cdn.mdn.mozilla.net/static/img/favicon144.png" rel="nofollow">https://cdn.mdn.mozilla.net/static/img/favicon144.png</a>')
 .then(response =&gt; response.arrayBuffer())
-.then(buffer =&gt; browser.clipboard.setImageData(buffer, 'png'));</span></pre>
+.then(buffer =&gt; browser.clipboard.setImageData(buffer, 'png'));</pre>
 
-<p><span class="quote">Copy an image that was bundled with the extension:</span></p>
+<p>Copy an image that was bundled with the extension:</p>
 
-<pre class="brush: js">// requires <span class="quote">the API permission </span>"clipboardWrite"
+<pre class="brush: js">// requires the API permission "clipboardWrite"
 
 fetch(browser.runtime.getURL('image.png'))
 .then(response =&gt; response.arrayBuffer())
