@@ -85,6 +85,26 @@ Cache-Control: stale-while-revalidate=<seconds>
 Cache-Control: stale-if-error=<seconds>
 ```
 
+## Vocabulary 
+
+When talking about Caching, there is sometimes confusion because the word *Cache* is both a noun and a verb (e.g. "Caching cache in the cache).
+Therefore, several terms are used in the specification to clarify the explanation.
+
+- `Cache Storage`
+  - : The storage who stores request/response in it for reusing in following request. It's in Browser, Proxy, CDN, Loadbalancer etc.
+- `Store response`
+  - : Storing response in Cache Storage when it's cachable. But it's not always reused as-is. (Usually "Cache" means it)
+- `Reuse response`
+  - : Reusing cached response for following request.
+- `Revalidate response`
+  - : Ask origin server whether stored response is still fresh or not. Usually it's done through a conditional request.
+- `Fresh response`
+  - : Indicates that the response is fresh. It usually means its response can be reusable for following request, but it's depends on request directives.
+- `Stale response`
+  - : Indeicates that the response is stale. It usually means its response can't be reusable as-is. Cache Storage doesn't required to remove stale response immediately because revalidation could make stale to fresh again.
+- `Age`
+  - : The time since response has generated. It is a criterion for whether a response is fresh or stale.
+
 ## Directives
 
 ### Cacheability
