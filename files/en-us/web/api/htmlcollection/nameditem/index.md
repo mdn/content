@@ -28,7 +28,7 @@ const item = collection.namedItem(key);
 
 ### Return value
 
-- `item` is the first {{domxref("Element")}} in the {{domxref("HTMLCollection"}} matching the _key_, or {{jsxref("null")}}, if there are none.
+- `item` is the first {{domxref("Element")}} in the {{domxref("HTMLCollection")}} matching the _key_, or {{jsxref("null")}}, if there are none.
 
 ## Example
 
