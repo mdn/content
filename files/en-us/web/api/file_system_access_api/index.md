@@ -12,7 +12,7 @@ tags:
   - Overview
   - working with files
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The File System Access API allows read, write and file management capabilities.
 
