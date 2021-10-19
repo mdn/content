@@ -2,9 +2,6 @@
 title: Event.type
 slug: Web/API/Event/type
 tags:
-  - API
-  - DOM
-  - Event
   - Property
   - Read-only
   - Reference
@@ -20,13 +17,7 @@ constructed and is the name commonly used to refer to the specific event, such a
 For a list of available event types, see the [event
 reference](/en-US/docs/Web/Events).
 
-## Syntax
-
-```js
-let eventType = event.type;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} containing the type of {{domxref("Event")}}.
 
@@ -40,7 +31,7 @@ button.
 ```html
 <p>Press any key or click the mouse to get the event type.</p>
 <p id="log"></p>
-```
+``
 
 ### JavaScript
 
