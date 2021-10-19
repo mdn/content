@@ -14,8 +14,7 @@ interface returns a string containing the event's type. It is set when the event
 constructed and is the name commonly used to refer to the specific event, such as
 `click`, `load`, or `error`.
 
-For a list of available event types, see the [event
-reference](/en-US/docs/Web/Events).
+For a list of available event types, see the [event reference](/en-US/docs/Web/Events).
 
 ## Value
 
@@ -31,7 +30,7 @@ button.
 ```html
 <p>Press any key or click the mouse to get the event type.</p>
 <p id="log"></p>
-``
+```
 
 ### JavaScript
 
