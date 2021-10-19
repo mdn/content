@@ -102,7 +102,7 @@ Many of the above attributes are global, meaning they can be included on any ele
 - [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) 	 	 	
 - [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) 	
 
-By "specifically disallowed", all the above attributes are global except for `aria-label` and `aria-labelledby` which are not allowed on a [`presentation` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Presentation_role) element or an element with it's synonym [`none` role](/en-US/docs/Web/Accessibility/ARIA/Roles/None_role).    
+By "specifically disallowed", all the above attributes are global except for `aria-label` and `aria-labelledby` properties which are not allowed on elements with role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/Presentation_role) nor it's synonym [`none`](/en-US/docs/Web/Accessibility/ARIA/Roles/None_role) role.    
 
 ## States and proerties defined on MDN
 
