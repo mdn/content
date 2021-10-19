@@ -27,29 +27,29 @@ browser-compat: webextensions.api.browserAction.setTitle
 
 <dl>
  <dt><code>details</code></dt>
- <dd><code>object</code>. The new title and optionally the ID of the tab or window to target.
+ <dd><p><code>object</code>. The new title and optionally the ID of the tab or window to target.</p>
  <dl>
   <dt><code>title</code></dt>
   <dd>
-  <p><code>string</code> or <code>null</code>. The string the browser action should display when moused over.</p>
+   <p><code>string</code> or <code>null</code>. The string the browser action should display when moused over.</p>
 
-  <p>If <code>title</code> is an empty string, the used title will be the extension name, but {{WebExtAPIRef("browserAction.getTitle")}} will still provide the empty string.</p>
+   <p>If <code>title</code> is an empty string, the used title will be the extension name, but {{WebExtAPIRef("browserAction.getTitle")}} will still provide the empty string.</p>
 
-  <p>If <code>title</code> is <code>null</code>:</p>
+   <p>If <code>title</code> is <code>null</code>:</p>
 
-  <ul>
-   <li>If <code>tabId</code> is specified, and the tab has a tab-specific title set, then the tab will inherit the title from the window to which it belongs.</li>
-   <li>if <code>windowId</code> is specified, and the window has a window-specific title set, then the window will inherit the global title.</li>
-   <li>Otherwise, the global title will be reset to the manifest title.</li>
-  </ul>
+   <ul>
+    <li>If <code>tabId</code> is specified, and the tab has a tab-specific title set, then the tab will inherit the title from the window to which it belongs.</li>
+    <li>if <code>windowId</code> is specified, and the window has a window-specific title set, then the window will inherit the global title.</li>
+    <li>Otherwise, the global title will be reset to the manifest title.</li>
+   </ul>
   </dd>
   <dt><code>tabId</code>{{Optional_Inline}}</dt>
   <dd>
-  <p><code>integer</code>. Sets the title only for the given tab.</p>
+   <p><code>integer</code>. Sets the title only for the given tab.</p>
   </dd>
   <dt><code>windowId</code>{{Optional_Inline}}</dt>
   <dd>
-  <p><code>integer</code>. Sets the title for the given window.</p>
+   <p><code>integer</code>. Sets the title for the given window.</p>
   </dd>
  </dl>
  </dd>

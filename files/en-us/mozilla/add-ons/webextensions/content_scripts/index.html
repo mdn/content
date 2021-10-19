@@ -166,43 +166,39 @@ window.confirm("Are you sure?"); // calls the original window.confirm()</pre>
 
 <p>In addition to the standard DOM APIs, content scripts can use the following WebExtension APIs:</p>
 
-<dl>
- <dt>From <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension">extension</a></code>:</dt>
- <dd>
- <ul>
+<p><strong>From <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension">extension</a></code>:</strong></p>
+<ul>
   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/getURL">getURL()</a></code></li>
   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/inIncognitoContext">inIncognitoContext</a></code></li>
- </ul>
- </dd>
- <dt>From <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime">runtime</a></code>:</dt>
- <dd>
- <ul>
+</ul>
+
+<p><strong>From <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime">runtime</a></code>:</strong></p>
+<ul>
   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect">connect()</a></code></li>
   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getManifest">getManifest()</a></code></li>
   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL">getURL()</a></code></li>
   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect">onConnect</a></code></li>
   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">onMessage</a></code></li>
   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage">sendMessage()</a></code></li>
- </ul>
- </dd>
- <dt>From <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n">i18n</a></code>:</dt>
- <dd>
- <ul>
+</ul>
+
+<p><strong>From <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n">i18n</a></code>:</strong></p>
+<ul>
   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getMessage">getMessage()</a></code></li>
   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getAcceptLanguages">getAcceptLanguages()</a></code></li>
   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getUILanguage">getUILanguage()</a></code></li>
   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/detectLanguage">detectLanguage()</a></code></li>
  </ul>
- </dd>
- <dt>From <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus">menus</a></code>:</dt>
- <dd>
- <ul>
+
+<p><strong>From <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus">menus</a></code>:</strong></p>
+<ul>
   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement">getTargetElement</a></code></li>
- </ul>
- </dd>
- <dt>Everything from:</dt>
- <dd><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a></code></dd>
-</dl>
+</ul>
+
+<p><strong>Everything from:</strong></p>
+<ul>
+  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a></code></li>
+</ul>
 
 <h3 id="XHR_and_Fetch">XHR and Fetch</h3>
 
@@ -413,22 +409,17 @@ browser.browserAction.onClicked.addListener(function() {
 
 <p>The recommended best practices are:</p>
 
-<dl>
- <dt>Use one-off messages when…</dt>
- <dd>
- <ul>
-  <li>Only one response is expected to a message.</li>
-  <li>A small number of scripts listen to receive messages ({{WebExtAPIRef("runtime.onMessage")}} calls).</li>
- </ul>
- </dd>
- <dt>Use connection-based messaging when…</dt>
- <dd>
- <ul>
-  <li>Scripts engage in sessions where multiple messages are exchanged.</li>
-  <li>The extension needs to know about task progress or if a task is interrupted, or wants to interrupt a task initiated using messaging.</li>
- </ul>
- </dd>
-</dl>
+<p><strong>Use one-off messages when…</strong></p>
+<ul>
+<li>Only one response is expected to a message.</li>
+<li>A small number of scripts listen to receive messages ({{WebExtAPIRef("runtime.onMessage")}} calls).</li>
+</ul>
+
+<p><strong>Use connection-based messaging when…</strong></p>
+<ul>
+<li>Scripts engage in sessions where multiple messages are exchanged.</li>
+<li>The extension needs to know about task progress or if a task is interrupted, or wants to interrupt a task initiated using messaging.</li>
+</ul>
 
 <h2 id="Communicating_with_the_web_page">Communicating with the web page</h2>
 
@@ -518,22 +509,19 @@ window.postMessage({
   }
 });</pre>
 
-<dl>
- <dt>In Chrome, this produces output like this:</dt>
- <dd>
- <pre>In content script, window.x: 1
+<p>In Chrome, this produces output like this:</p>
+
+<pre>In content script, window.x: 1
 In content script, window.y: 2
 In page script, window.x: undefined
 In page script, window.y: undefined</pre>
- </dd>
- <dt>In Firefox, this produces output like this:</dt>
- <dd>
- <pre>In content script, window.x: undefined
+
+<p>In Firefox, this produces output like this:</p>
+
+<pre>In content script, window.x: undefined
 In content script, window.y: 2
 In page script, window.x: 1
 In page script, window.y: undefined</pre>
- </dd>
-</dl>
 
 <p>The same applies to <code><a href="/en-US/docs/Web/API/setTimeout">setTimeout()</a></code>, <code><a href="/en-US/docs/Web/API/setInterval">setInterval()</a></code>, and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function()</a></code>.</p>
 

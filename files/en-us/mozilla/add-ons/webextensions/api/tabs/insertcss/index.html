@@ -52,7 +52,7 @@ browser-compat: webextensions.api.tabs.insertCSS
     <dt><code>code</code>{{optional_inline}}</dt>
     <dd><code>string</code>. Code to inject, as a text string.</dd>
     <dt><code>cssOrigin</code>{{optional_inline}}</dt>
-    <dd><code>string</code>. This can take one of two values: "user", to add the CSS as a user stylesheet or "author" to add it as an author stylesheet. If this option is omitted, the CSS is added as an author stylesheet.
+    <dd><p><code>string</code>. This can take one of two values: "user", to add the CSS as a user stylesheet or "author" to add it as an author stylesheet. If this option is omitted, the CSS is added as an author stylesheet.</p>
     <ul>
      <li>"user" enables you to prevent websites from overriding the CSS you insert: see <a href="/en-US/docs/Web/CSS/Cascade#cascading_order">Cascading order</a>.</li>
      <li>"author" stylesheets behave as if they appear after all author rules specified by the web page. This behavior includes any author stylesheets added dynamically by the page’s scripts, even if that addition happens after the <code>insertCSS</code> call completes.</li>

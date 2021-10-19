@@ -33,7 +33,7 @@ browser-compat: webextensions.api.management.uninstall
  <dt><code>id</code></dt>
  <dd><code>string</code>. ID of the add-on to uninstall.</dd>
  <dt><code>options{{optional_inline}}</code></dt>
- <dd><code>object</code>. Object which may contain a single property, <code>showConfirmDialog</code>. If <code>showConfirmDialog</code> is <code>true</code>, the browser will show a dialog asking the user to confirm that the add-on should be uninstalled.
+ <dd><p><code>object</code>. Object which may contain a single property, <code>showConfirmDialog</code>. If <code>showConfirmDialog</code> is <code>true</code>, the browser will show a dialog asking the user to confirm that the add-on should be uninstalled.</p>
  <ul>
   <li>If <code>id</code> is the calling add-on's ID, <code>showConfirmDialog</code> defaults to <code>false</code>.</li>
   <li>If <code>id</code> is a the ID of a different add-on, this option is ignored and the confirmation dialog is always shown.</li>

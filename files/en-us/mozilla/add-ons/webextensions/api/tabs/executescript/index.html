@@ -61,29 +61,30 @@ browser-compat: webextensions.api.tabs.executeScript
 	<p>It contains the following properties:</p>
 	<dl>
 		<dt><code><var>allFrames</var></code> {{optional_inline}}</dt>
-		<dd><code>boolean</code>. If <code>true</code>, the code will be injected into all frames of the current page.
-		<p>If <code>true</code> and <code><var>frameId</var></code> is set, then it will raise an error. (<code><var>frameId</var></code> and <code><var>allFrames</var></code> are mutually exclusive.)</p>
+		<dd>
+      <p><code>boolean</code>. If <code>true</code>, the code will be injected into all frames of the current page.</p>
+		  <p>If <code>true</code> and <code><var>frameId</var></code> is set, then it will raise an error. (<code><var>frameId</var></code> and <code><var>allFrames</var></code> are mutually exclusive.)</p>
 
-		<p>If it is <code>false</code>, code is only injected into the top frame.</p>
+		  <p>If it is <code>false</code>, code is only injected into the top frame.</p>
 
-		<p>Defaults to <code>false</code>.</p>
+		  <p>Defaults to <code>false</code>.</p>
 		</dd>
 		<dt><code><var>code</var></code> {{optional_inline}}</dt>
 		<dd>
-		<p><code>string</code>. Code to inject, as a text string.</p>
+		  <p><code>string</code>. Code to inject, as a text string.</p>
 
-		<div class="notecard warning">
-		<p><strong>Warning:</strong> Don’t use this property to interpolate untrusted data into JavaScript, as this could lead to a security issue.</p>
-		</div>
+		  <div class="notecard warning">
+		    <p><strong>Warning:</strong> Don’t use this property to interpolate untrusted data into JavaScript, as this could lead to a security issue.</p>
+		  </div>
 		</dd>
 		<dt><code><var>file</var></code> {{optional_inline}}</dt>
 		<dd>
-		<p><code>string</code>. Path to a file containing the code to inject.</p>
+		  <p><code>string</code>. Path to a file containing the code to inject.</p>
 
-		<ul>
-			<li>In Firefox, relative URLs not starting at the extension root are resolved relative to the current page URL.</li>
-			<li>In Chrome, these URLs are resolved relative to the extension's base URL.</li>
-		</ul>
+  		<ul>
+  			<li>In Firefox, relative URLs not starting at the extension root are resolved relative to the current page URL.</li>
+  			<li>In Chrome, these URLs are resolved relative to the extension's base URL.</li>
+  		</ul>
 
 		<p>To work cross-browser, you can specify the path as a relative URL, starting at the extension's root, like this: <code>"/path/to/script.js"</code>.</p>
 		</dd>
