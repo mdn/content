@@ -55,7 +55,7 @@ Used in **ALL** roles.
 
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
 - [`aria-brailleroledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription)
-- 
+
 <section id="Quick_links">
 
 1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
