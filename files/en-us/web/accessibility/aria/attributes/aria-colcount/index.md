@@ -10,7 +10,7 @@ tags:
   - aria-colcount
 ---
 
-The `aria-colcount` attribute defines the total number of columns in a [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role).
+The `aria-colcount` attribute defines the total number of columns in a [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_role), or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_role) when not all columns are present in the [DOM](/en-US/docs/Glossary/DOM).
 
 ## Description
 
@@ -20,7 +20,7 @@ If all columns in a table are present in the DOM, the `aria-colcount` attribute 
 
 When using `aria-colcount` when you have a known number of columns, make sure to also use [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) to label each column, or, if the columns are contiguous (sequential with no breaks), label each row.
 
-The following example shows a grid with 6 columns, of which columns 1, 2, 5, and 6 are displayed to the user. The total number of columns that make up the table is set as `aria-colcount="6"` on the table itself. As the columns aren't contiguous, every [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) - in this case [`columnheader`s](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) and [`gridcell`s](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role) - have the `aria-colindex` attribute set.
+The following example shows a grid with 6 columns, of which columns 1, 2, 5, and 6 are displayed to the user. The total number of columns that make up the table is set as `aria-colcount="6"` on the table itself. As the columns aren't contiguous, every [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_role) - in this case [`columnheader`s](/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_role) and [`gridcell`s](/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_role) - have the `aria-colindex` attribute set.
 
 ```html
 <div role="grid" aria-colcount="6">
@@ -40,7 +40,7 @@ The following example shows a grid with 6 columns, of which columns 1, 2, 5, and
       <div role="gridcell" aria-colindex="6">14127</div>
     </div>
   </div>
-  ...
+  …
 </div>
 ```
 
@@ -68,6 +68,8 @@ The first rule of ARIA use is if you can use a native feature with the semantics
 </table>
 ```
 
+
+
 ## Values
 
 - `<interger>`
@@ -81,15 +83,14 @@ Used in roles:
 
 Inherits into roles:
 
-- [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role)
-- [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
+- [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_role)
+- [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_role)
 
 ## Specifications
 
 | Specification | Status | 
 | ------------- | ------  |
 | {{SpecName("ARIA","#aria-colcount","ARIA: aria-colcount Attribute")}}  | {{Spec2('ARIA')}} |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria-colcount","using aria-colcount")}} | {{Spec2('ARIA Authoring Practices')}} |
 
 
 ## See Also
