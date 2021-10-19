@@ -37,14 +37,14 @@ browser-compat: webextensions.api.bookmarks.move
  <dt><code>id</code></dt>
  <dd>A {{jsxref("string")}} containing the ID of the bookmark or folder to move.</dd>
  <dt><code>destination</code></dt>
- <dd>An {{jsxref("object")}} which specifies the destination for the bookmark. This object must contain one or both of the following fields:</dd>
  <dd>
- <dl>
-  <dt><code>parentId</code> {{optional_inline}}</dt>
-  <dd>A {{jsxref("string")}} which specifies the ID of the destination folder. If this value is left out, the bookmark is moved to a new location within its current folder.</dd>
-  <dt><code>index</code> {{optional_inline}}</dt>
-  <dd>A 0-based index specifying the position within the folder to which to move the bookmark. A value of 0 moves the bookmark to the top of the folder. If this value is omitted, the bookmark is placed at the end of the new parent folder.</dd>
- </dl>
+   <p>An {{jsxref("object")}} which specifies the destination for the bookmark. This object must contain one or both of the following fields:</p>
+   <dl>
+    <dt><code>parentId</code> {{optional_inline}}</dt>
+    <dd>A {{jsxref("string")}} which specifies the ID of the destination folder. If this value is left out, the bookmark is moved to a new location within its current folder.</dd>
+    <dt><code>index</code> {{optional_inline}}</dt>
+    <dd>A 0-based index specifying the position within the folder to which to move the bookmark. A value of 0 moves the bookmark to the top of the folder. If this value is omitted, the bookmark is placed at the end of the new parent folder.</dd>
+   </dl>
  </dd>
 </dl>
 

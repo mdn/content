@@ -32,18 +32,18 @@ browser-compat: webextensions.api.cookies.get
 
 <dl>
  <dt><code>details</code></dt>
- <dd>An <code>object</code> containing details that can be used to match a cookie to be retrieved. It can include the following properties:</dd>
  <dd>
- <dl>
-  <dt><code>firstPartyDomain</code>{{optional_inline}}</dt>
-  <dd>A <code>string</code> representing the first-party domain with which the cookie to retrieve is associated. This property must be supplied if the browser has first-party isolation enabled. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation">First-party isolation</a>.</dd>
-  <dt><code>name</code></dt>
-  <dd>A <code>string</code> representing the name of the cookie to retrieve.</dd>
-  <dt><code>storeId</code>{{optional_inline}}</dt>
-  <dd>A <code>string</code> representing the ID of the {{WebExtAPIRef("cookies.CookieStore", "cookie store")}} in which to look for the cookie (as returned by {{WebExtAPIRef("cookies.getAllCookieStores()")}}). By default, the current execution context's cookie store will be used.</dd>
-  <dt><code>url</code></dt>
-  <dd>A <code>string</code> representing the URL with which the cookie to retrieve is associated. This argument may be a full URL, in which case any data following the URL path (e.g. the query string) is ignored. If <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">host permissions</a> for this URL are not specified in the extension's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest file</a>, the API call will fail.</dd>
- </dl>
+   <p>An <code>object</code> containing details that can be used to match a cookie to be retrieved. It can include the following properties:</p>
+   <dl>
+    <dt><code>firstPartyDomain</code>{{optional_inline}}</dt>
+    <dd>A <code>string</code> representing the first-party domain with which the cookie to retrieve is associated. This property must be supplied if the browser has first-party isolation enabled. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation">First-party isolation</a>.</dd>
+    <dt><code>name</code></dt>
+    <dd>A <code>string</code> representing the name of the cookie to retrieve.</dd>
+    <dt><code>storeId</code>{{optional_inline}}</dt>
+    <dd>A <code>string</code> representing the ID of the {{WebExtAPIRef("cookies.CookieStore", "cookie store")}} in which to look for the cookie (as returned by {{WebExtAPIRef("cookies.getAllCookieStores()")}}). By default, the current execution context's cookie store will be used.</dd>
+    <dt><code>url</code></dt>
+    <dd>A <code>string</code> representing the URL with which the cookie to retrieve is associated. This argument may be a full URL, in which case any data following the URL path (e.g. the query string) is ignored. If <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">host permissions</a> for this URL are not specified in the extension's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest file</a>, the API call will fail.</dd>
+   </dl>
  </dd>
 </dl>
 

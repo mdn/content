@@ -36,7 +36,7 @@ browser-compat: webextensions.api.notifications.NotificationOptions
  <dt><code>title</code></dt>
  <dd><code>string</code>. The notification's title.</dd>
  <dt><code>iconUrl</code>{{optional_inline}}</dt>
- <dd><code>string</code>. A URL pointing to an icon to display in the notification. The URL can be: a data URL, a blob URL, a http or https URL, or the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#relative_urls">relative URL of a file within the extension.</dd>
+ <dd><code>string</code>. A URL pointing to an icon to display in the notification. The URL can be: a data URL, a blob URL, a http or https URL, or the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#relative_urls">relative URL of a file within the extension.</a></dd>
  <dt><code>contextMessage</code>{{optional_inline}}</dt>
  <dd><code>string</code>. Supplementary content to display.</dd>
  <dt><code>priority</code>{{optional_inline}}</dt>
@@ -44,8 +44,8 @@ browser-compat: webextensions.api.notifications.NotificationOptions
  <dt><code>eventTime</code>{{optional_inline}}</dt>
  <dd><code>number</code>. A timestamp for the notification in <a href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>.</dd>
  <dt><code>buttons</code>{{optional_inline}}</dt>
- <dd><code>array</code> of <code>button</code>. An array of up to 2 buttons to include in the notification. You can listen for button clicks using {{WebExtAPIRef("notifications.onButtonClicked")}}. Each button is specified as an object with the following properties:</dd>
  <dd>
+   <p><code>array</code> of <code>button</code>. An array of up to 2 buttons to include in the notification. You can listen for button clicks using {{WebExtAPIRef("notifications.onButtonClicked")}}. Each button is specified as an object with the following properties:</p>
  <dl>
   <dt><code>title</code></dt>
   <dd><code>string</code>. Title for the button.</dd>
@@ -60,18 +60,20 @@ browser-compat: webextensions.api.notifications.NotificationOptions
  <p><em>This property is only permitted if <code>type</code> is <code>"image"</code>. In this case, it is mandatory if the <code>NotificationOptions</code> is used in {{WebExtAPIRef("notifications.create()")}}, and optional if it is used in {{WebExtAPIRef("notifications.update()")}}.</em></p>
  </dd>
  <dt><code>items</code></dt>
- <dd><code>array</code> of <code>item</code>. An array of items to include in the notification. Depending on the settings for the operating system's notification mechanism, some of the items you provide might not be displayed. Each item is specified as an object with the following properties:</dd>
- <dd>
- <dl>
-  <dt><code>title</code></dt>
-  <dd><code>string</code>. Title to display in the item.</dd>
-  <dt><code>message</code></dt>
-  <dd><code>string</code>. Message to display in the item.</dd>
- </dl>
- <em>This property is only permitted if <code>type</code> is <code>"list"</code>. In this case, it is mandatory if the <code>NotificationOptions</code> is used in {{WebExtAPIRef("notifications.create()")}}, and optional if it is used in {{WebExtAPIRef("notifications.update()")}}.</em></dd>
+ <dd><p><code>array</code> of <code>item</code>. An array of items to include in the notification. Depending on the settings for the operating system's notification mechanism, some of the items you provide might not be displayed. Each item is specified as an object with the following properties:</p>
+   <dl>
+    <dt><code>title</code></dt>
+    <dd><code>string</code>. Title to display in the item.</dd>
+    <dt><code>message</code></dt>
+    <dd><code>string</code>. Message to display in the item.</dd>
+   </dl>
+   <em>This property is only permitted if <code>type</code> is <code>"list"</code>. In this case, it is mandatory if the <code>NotificationOptions</code> is used in {{WebExtAPIRef("notifications.create()")}}, and optional if it is used in {{WebExtAPIRef("notifications.update()")}}.</em>
+ </dd>
  <dt><code>progress</code></dt>
- <dd><code>integer</code>. An integer between 0 and 100, used to represent the current progress in a progress indicator.</dd>
- <dd><em>This property is only permitted if <code>type</code> is <code>"progress"</code>. In this case, it is mandatory if the <code>NotificationOptions</code> is used in {{WebExtAPIRef("notifications.create()")}}, and optional if it is used in {{WebExtAPIRef("notifications.update()")}}.</em></dd>
+ <dd>
+   <p><code>integer</code>. An integer between 0 and 100, used to represent the current progress in a progress indicator.</p>
+   <p><em>This property is only permitted if <code>type</code> is <code>"progress"</code>. In this case, it is mandatory if the <code>NotificationOptions</code> is used in {{WebExtAPIRef("notifications.create()")}}, and optional if it is used in {{WebExtAPIRef("notifications.update()")}}.</em></p>
+ </dd>
 </dl>
 
 <p>Note that <code>appIconMaskUrl</code> and <code>isClickable</code> are not supported.</p>

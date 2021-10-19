@@ -35,13 +35,13 @@ browser-compat: webextensions.api.browserAction.setBadgeBackgroundColor
  <dd><code>object</code>.
  <dl>
   <dt><code>color</code></dt>
-  <dd>The color, specified as one of:</dd>
   <dd>
-  <ul>
-   <li>a string: any CSS <a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a> value, for example <code>"red"</code>, <code>"#FF0000"</code>, or <code>"rgb(255,0,0)"</code>. If the string is not a valid color, the returned promise will be rejected and the background color won't be altered.</li>
-   <li>a <code>{{WebExtAPIRef('browserAction.ColorArray')}}</code> object.</li>
-   <li><code>null</code>. If a <code>tabId</code> is specified, it removes the tab-specific badge background color so that the tab inherits the global badge background color. Otherwise it reverts the global badge background color to the default value.</li>
-  </ul>
+    <p>The color, specified as one of:</p>
+    <ul>
+     <li>a string: any CSS <a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a> value, for example <code>"red"</code>, <code>"#FF0000"</code>, or <code>"rgb(255,0,0)"</code>. If the string is not a valid color, the returned promise will be rejected and the background color won't be altered.</li>
+     <li>a <code>{{WebExtAPIRef('browserAction.ColorArray')}}</code> object.</li>
+     <li><code>null</code>. If a <code>tabId</code> is specified, it removes the tab-specific badge background color so that the tab inherits the global badge background color. Otherwise it reverts the global badge background color to the default value.</li>
+    </ul>
   </dd>
   <dt><code>tabId</code>{{optional_inline}}</dt>
   <dd><code>integer</code>. Sets the badge background color only for the given tab. The color is reset when the user navigates this tab to a new page.</dd>

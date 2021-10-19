@@ -44,29 +44,29 @@ browser-compat: webextensions.api.tabs.insertCSS
  <dt><code>tabId</code> {{optional_inline}}</dt>
  <dd><code>integer</code>. The ID of the tab in which to insert the CSS. Defaults to the active tab of the current window.</dd>
  <dt><code>details</code></dt>
- <dd>An object describing the CSS to insert. It contains the following properties:</dd>
  <dd>
- <dl>
-  <dt><code>allFrames</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. If <code>true</code>, the CSS will be injected into all frames of the current page. If it is <code>false</code>, CSS is only injected into the top frame. Defaults to <code>false</code>.</dd>
-  <dt><code>code</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. Code to inject, as a text string.</dd>
-  <dt><code>cssOrigin</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. This can take one of two values: "user", to add the CSS as a user stylesheet or "author" to add it as an author stylesheet. If this option is omitted, the CSS is added as an author stylesheet.
-  <ul>
-   <li>"user" enables you to prevent websites from overriding the CSS you insert: see <a href="/en-US/docs/Web/CSS/Cascade#cascading_order">Cascading order</a>.</li>
-   <li>"author" stylesheets behave as if they appear after all author rules specified by the web page. This behavior includes any author stylesheets added dynamically by the page’s scripts, even if that addition happens after the <code>insertCSS</code> call completes.</li>
-  </ul>
-  </dd>
-  <dt><code>file</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. Path to a file containing the code to inject. In Firefox, relative URLs are resolved relative to the current page URL. In Chrome, these URLs are resolved relative to the extension's base URL. To work cross-browser, you can specify the path as an absolute URL, starting at the extension's root, like this: <code>"/path/to/stylesheet.css"</code>.</dd>
-  <dt><code>frameId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. The frame where the CSS should be injected. Defaults to <code>0</code> (the top-level frame).</dd>
-  <dt><code>matchAboutBlank</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. If <code>true</code>, the code will be injected into embedded "about:blank" and "about:srcdoc" frames if your extension has access to their parent document. The code cannot be inserted in top-level about: frames. Defaults to <code>false</code>.</dd>
-  <dt><code>runAt</code>{{optional_inline}}</dt>
-  <dd>{{WebExtAPIRef('extensionTypes.RunAt')}}. The soonest that the code will be injected into the tab. Defaults to "document_idle".</dd>
- </dl>
+   <p>An object describing the CSS to insert. It contains the following properties:</p>
+   <dl>
+    <dt><code>allFrames</code>{{optional_inline}}</dt>
+    <dd><code>boolean</code>. If <code>true</code>, the CSS will be injected into all frames of the current page. If it is <code>false</code>, CSS is only injected into the top frame. Defaults to <code>false</code>.</dd>
+    <dt><code>code</code>{{optional_inline}}</dt>
+    <dd><code>string</code>. Code to inject, as a text string.</dd>
+    <dt><code>cssOrigin</code>{{optional_inline}}</dt>
+    <dd><code>string</code>. This can take one of two values: "user", to add the CSS as a user stylesheet or "author" to add it as an author stylesheet. If this option is omitted, the CSS is added as an author stylesheet.
+    <ul>
+     <li>"user" enables you to prevent websites from overriding the CSS you insert: see <a href="/en-US/docs/Web/CSS/Cascade#cascading_order">Cascading order</a>.</li>
+     <li>"author" stylesheets behave as if they appear after all author rules specified by the web page. This behavior includes any author stylesheets added dynamically by the page’s scripts, even if that addition happens after the <code>insertCSS</code> call completes.</li>
+    </ul>
+    </dd>
+    <dt><code>file</code>{{optional_inline}}</dt>
+    <dd><code>string</code>. Path to a file containing the code to inject. In Firefox, relative URLs are resolved relative to the current page URL. In Chrome, these URLs are resolved relative to the extension's base URL. To work cross-browser, you can specify the path as an absolute URL, starting at the extension's root, like this: <code>"/path/to/stylesheet.css"</code>.</dd>
+    <dt><code>frameId</code>{{optional_inline}}</dt>
+    <dd><code>integer</code>. The frame where the CSS should be injected. Defaults to <code>0</code> (the top-level frame).</dd>
+    <dt><code>matchAboutBlank</code>{{optional_inline}}</dt>
+    <dd><code>boolean</code>. If <code>true</code>, the code will be injected into embedded "about:blank" and "about:srcdoc" frames if your extension has access to their parent document. The code cannot be inserted in top-level about: frames. Defaults to <code>false</code>.</dd>
+    <dt><code>runAt</code>{{optional_inline}}</dt>
+    <dd>{{WebExtAPIRef('extensionTypes.RunAt')}}. The soonest that the code will be injected into the tab. Defaults to "document_idle".</dd>
+   </dl>
  </dd>
 </dl>
 
@@ -111,12 +111,12 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 <div class="notecard note">
   <h4>Acknowledgements</h4>
   <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-insertCSS"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-  
+
   <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>
 
 <div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved. 
+<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are

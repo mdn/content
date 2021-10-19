@@ -30,29 +30,29 @@ browser-compat: webextensions.api.history.search
 
 <dl>
  <dt><code>query</code></dt>
- <dd>An object which indicates what to look for in the browser's history. This object has the following fields:</dd>
  <dd>
- <dl>
-  <dt><code>text</code></dt>
-  <dd><code>string</code>. Search history items by URL and title. The string is split up into separate search terms at space boundaries. Each search term is matched case-insensitively against the history item's URL and title. The history item will be returned if all search terms match.</dd>
-  <dd>For example, consider this item:</dd>
-  <dd>URL: <code>"http://example.org"</code><br>
-  Title: <code>"Example Domain"</code></dd>
-  <dd>
-  <pre>"http"              -&gt; matches
-"domain"            -&gt; matches
-"MAIN ample"        -&gt; matches
-"main tt"           -&gt; matches
-"main https"        -&gt; does not match</pre>
-  </dd>
-  <dd>Specify an empty string (<code>""</code>) to retrieve all {{WebExtAPIRef("history.HistoryItem")}} objects that meet all the other criteria.</dd>
-  <dt><code>startTime</code> {{optional_inline}}</dt>
-  <dd><code>number</code> or <code>string</code> or <code>object</code>. A value indicating a date and time. This can be represented as: a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code> object, an <a href="https://www.iso.org/iso/home/standards/iso8601.htm">ISO 8601 date string</a>, or the number of milliseconds since the epoch. If it is supplied, this option excludes results whose <code>lastVisitTime</code> is earlier than this time. If it is omitted, the search is limited to the last 24 hours.</dd>
-  <dt><code>endTime</code> {{optional_inline}}</dt>
-  <dd><code>number</code> or <code>string</code> or <code>object</code>. A value indicating a date and time.  This can be represented as: a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code> object, an <a href="https://www.iso.org/iso/home/standards/iso8601.htm">ISO 8601 date string</a>, or the number of milliseconds since the epoch. If it is supplied, this option limits results to those visited before this date. If it is omitted, then all entries are considered from the start time onwards.</dd>
-  <dt><code>maxResults</code> {{optional_inline}}</dt>
-  <dd><code>number</code>. The maximum number of results to retrieve. Defaults to 100, with a minimum value of 1. The function will throw an error if you pass it a <code>maxResults</code> value less than 1.</dd>
- </dl>
+   <p>An object which indicates what to look for in the browser's history. This object has the following fields:</p>
+   <dl>
+    <dt><code>text</code></dt>
+    <dd>
+      <p><code>string</code>. Search history items by URL and title. The string is split up into separate search terms at space boundaries. Each search term is matched case-insensitively against the history item's URL and title. The history item will be returned if all search terms match.</p>
+      <p>For example, consider this item:</p>
+      <p>URL: <code>"http://example.org"</code><p>
+      <p>Title: <code>"Example Domain"</code></p>
+      <pre>"http"              -&gt; matches
+  "domain"            -&gt; matches
+  "MAIN ample"        -&gt; matches
+  "main tt"           -&gt; matches
+  "main https"        -&gt; does not match</pre>
+      <p>Specify an empty string (<code>""</code>) to retrieve all {{WebExtAPIRef("history.HistoryItem")}} objects that meet all the other criteria.</p>
+    </dd>
+    <dt><code>startTime</code> {{optional_inline}}</dt>
+    <dd><code>number</code> or <code>string</code> or <code>object</code>. A value indicating a date and time. This can be represented as: a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code> object, an <a href="https://www.iso.org/iso/home/standards/iso8601.htm">ISO 8601 date string</a>, or the number of milliseconds since the epoch. If it is supplied, this option excludes results whose <code>lastVisitTime</code> is earlier than this time. If it is omitted, the search is limited to the last 24 hours.</dd>
+    <dt><code>endTime</code> {{optional_inline}}</dt>
+    <dd><code>number</code> or <code>string</code> or <code>object</code>. A value indicating a date and time.  This can be represented as: a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code> object, an <a href="https://www.iso.org/iso/home/standards/iso8601.htm">ISO 8601 date string</a>, or the number of milliseconds since the epoch. If it is supplied, this option limits results to those visited before this date. If it is omitted, then all entries are considered from the start time onwards.</dd>
+    <dt><code>maxResults</code> {{optional_inline}}</dt>
+    <dd><code>number</code>. The maximum number of results to retrieve. Defaults to 100, with a minimum value of 1. The function will throw an error if you pass it a <code>maxResults</code> value less than 1.</dd>
+   </dl>
  </dd>
 </dl>
 

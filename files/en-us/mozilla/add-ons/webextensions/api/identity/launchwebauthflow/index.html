@@ -51,26 +51,26 @@ browser-compat: webextensions.api.identity.launchWebAuthFlow
 
 <dl>
  <dt><code>details</code></dt>
- <dd><code>object</code>. Options for the flow, containing the following properties:</dd>
  <dd>
- <dl>
-  <dt><code>url</code></dt>
-  <dd>
-  <p><code>string</code>. The URL offered by the OAuth2 service provider to get an access token. The details of this URL should be given in the documentation for the service provider in question, but the URL parameters should always include:</p>
-  </dd>
-  <dt><code>redirect_uri</code> {{optional_inline}}</dt>
-  <dd><code>string</code>. This represents the URI your extension is redirected to when the flow has finished. Not required for the flow to work on the browser side if it matches the generated redirect URL. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/identity#getting_the_redirect_url">Getting the redirect URL</a>.</dd>
-  <dt><code>interactive</code> {{optional_inline}}</dt>
-  <dd>
-  <p><code>boolean</code>. If omitted or <code>false</code>, forces the flow to complete silently, without any user interaction.</p>
+   <p><code>object</code>. Options for the flow, containing the following properties:</p>
+   <dl>
+    <dt><code>url</code></dt>
+    <dd>
+    <p><code>string</code>. The URL offered by the OAuth2 service provider to get an access token. The details of this URL should be given in the documentation for the service provider in question, but the URL parameters should always include:</p>
+    </dd>
+    <dt><code>redirect_uri</code> {{optional_inline}}</dt>
+    <dd><code>string</code>. This represents the URI your extension is redirected to when the flow has finished. Not required for the flow to work on the browser side if it matches the generated redirect URL. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/identity#getting_the_redirect_url">Getting the redirect URL</a>.</dd>
+    <dt><code>interactive</code> {{optional_inline}}</dt>
+    <dd>
+    <p><code>boolean</code>. If omitted or <code>false</code>, forces the flow to complete silently, without any user interaction.</p>
 
-  <p>If the user is already signed in and has already granted access for the extension, then <code>launchWebAuthFlow()</code> can complete silently, without any user interaction. Otherwise (if the service provider needs the user to sign in, or to authorize the extension), then <code>launchWebAuthFlow()</code> will prompt the user: that is, the flow will be interactive.</p>
+    <p>If the user is already signed in and has already granted access for the extension, then <code>launchWebAuthFlow()</code> can complete silently, without any user interaction. Otherwise (if the service provider needs the user to sign in, or to authorize the extension), then <code>launchWebAuthFlow()</code> will prompt the user: that is, the flow will be interactive.</p>
 
-  <p>Extensions should not launch interactive flows except in response to a user action. However, sometimes extensions still want to access the user's data without a direct user action (for example, imagine an extension that wants to access data when the browser launches).</p>
+    <p>Extensions should not launch interactive flows except in response to a user action. However, sometimes extensions still want to access the user's data without a direct user action (for example, imagine an extension that wants to access data when the browser launches).</p>
 
-  <p>This is the purpose of <code>interactive</code>: if you omit <code>interactive</code> or set it to <code>false</code>, then the flow is forced to conclude silently: if the service provider needs to interact with the user, the flow will just fail. So as a general rule: set <code>interactive</code> to <code>true</code> if you're launching the flow in response to a user action, and omit it otherwise.</p>
-  </dd>
- </dl>
+    <p>This is the purpose of <code>interactive</code>: if you omit <code>interactive</code> or set it to <code>false</code>, then the flow is forced to conclude silently: if the service provider needs to interact with the user, the flow will just fail. So as a general rule: set <code>interactive</code> to <code>true</code> if you're launching the flow in response to a user action, and omit it otherwise.</p>
+    </dd>
+   </dl>
  </dd>
 </dl>
 
