@@ -3,22 +3,18 @@ title: HTMLCollection.namedItem()
 slug: Web/API/HTMLCollection/namedItem
 tags:
   - API
-  - HTML DOM
   - Element Lists
   - HTMLCollection
   - Interface
   - Reference
 browser-compat: api.HTMLCollection.namedItem
 ---
-{{APIRef("HTML DOM")}}
+{{APIRef("DOM")}}
 
-The **`HTMLCollection.namedItem()`** method returns
-the first {{domxref("Element")}} in the collection whose
-`id` or `name` attribute match the specified name, or `null` if
-no node matches.
+The **`namedItem()`** method of the {{domxref("HTMLCollection")}} interface returns
+the first {{domxref("Element")}} in the collection whose `id` or `name` attribute match the specified name, or `null` if no element matches.
 
-In JavaScript, using the array bracket syntax with a {{jsxref("String")}}, like `collection["value"]` is
-equivalent to `collection.namedItem("value")`.
+In JavaScript, using the array bracket syntax with a {{jsxref("String")}}, like `collection["value"]` is equivalent to `collection.namedItem("value")`.
 
 ## Syntax
 
@@ -28,12 +24,11 @@ const item = collection.namedItem(key);
 
 ### Parameters
 
-- `key` is a {{domxref("DOMString")}}
+- `key` is a {{jsxref("String")}} representing the value of the `id` or `name` attribute of the element we are looking for.
 
 ### Return value
 
-- `item` is an {{domxref("Element")}}, or
-  {{jsxref("null")}}.
+- `item` is the first {{domxref("Element")}} in the {{domxref("HTMLCollection"}} matching the _key_, or {{jsxref("null")}}, if there are none.
 
 ## Example
 
@@ -57,6 +52,10 @@ const titleSpan = container.children.namedItem('title');
 const firstnameSpan = container.children['firstname'];
 const lastnameSpan = container.children.firstname;
 ```
+
+## Specification
+
+{{Specification}}
 
 ## Browser compatibility
 
