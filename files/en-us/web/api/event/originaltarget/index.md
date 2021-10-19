@@ -6,6 +6,7 @@ tags:
   - Property
   - Reference
   - Read-only
+browser-compat: api.Event.originalTarget
 ---
 {{ ApiRef("DOM") }} {{Non-standard_header}}
 
