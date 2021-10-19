@@ -63,14 +63,15 @@ Cache-Control: only-if-cached
 Standard `Cache-Control` directives that the server can use in an HTTP response:
 
 ```
+Cache-Control: max-age=<seconds>
 Cache-Control: must-revalidate
+Cache-Control: must-understand
 Cache-Control: no-cache
 Cache-Control: no-store
 Cache-Control: no-transform
-Cache-Control: public
 Cache-Control: private
 Cache-Control: proxy-revalidate
-Cache-Control: max-age=<seconds>
+Cache-Control: public
 Cache-Control: s-maxage=<seconds>
 ```
 
