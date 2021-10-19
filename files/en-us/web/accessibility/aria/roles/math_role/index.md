@@ -11,7 +11,7 @@ tags:
   - document structure role
 ---
 
-The `math` role indicates that the content that represents a mathematical expression.
+The `math` role indicates that the content represents a mathematical expression.
 
 
 ## Description
