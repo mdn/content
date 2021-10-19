@@ -14,15 +14,9 @@ The read-only **`target`** property of the
 dispatched. It is different from {{domxref("Event.currentTarget")}} when the event
 handler is called during the bubbling or capturing phase of the event.
 
-## Syntax
+## Value
 
-```js
-const theTarget = someEvent.target;
-```
-
-### Value
-
-{{domxref("EventTarget")}}
+The associated {{domxref("EventTarget")}}.
 
 ## Example
 
