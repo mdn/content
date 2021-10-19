@@ -112,13 +112,41 @@ window.addEventListener("click", notifyBackgroundPage);</pre>
 
 <pre class="brush: js">// background-script.js
 
-function handleMessage(request, sender, sendResponse) {
+async function handleMessage(request, sender) {
   console.log("Message from the content script: " +
     request.greeting);
-  sendResponse({response: "Response from background script"});
+  return {response: "Response from background script"};
 }
 
 browser.runtime.onMessage.addListener(handleMessage);</pre>
+
+If you pass an <code>async</code> function to <code>addListener()</code> as shown in the example above, the listener will return a Promise for every message it receives,
+preventing other listeners from responding. If you want to declare multiple {{WebExtAPIRef('runtime.onMessage')}} listeners and have each respond to messages of a certain type,
+you must define the listener as a non-<code>async</code> function, and return a Promise only for the messages the listener is meant to respond to — and otherwise return false or
+undefined:
+
+<pre class="brush: js">// background-script.js
+
+function handleGreeting(request, sender) {
+  if (request.greeting) {
+    console.log("Greeting from the content script: " +
+      request.greeting);
+    return Promise.resolve({response: "Greeting from background script"});
+  }
+  return false;
+}
+
+function handleFarewell(request, sender) {
+  if (request.farewell) {
+    console.log("Farewell from the content script: " +
+      request.farewell);
+    return Promise.resolve({response: "Farewell from background script"});
+  }
+  return false;
+}
+
+browser.runtime.onMessage.addListener(handleGreeting);</pre>
+browser.runtime.onMessage.addListener(handleFarewell);</pre>
 
 <p>{{WebExtExamples}}</p>
 
