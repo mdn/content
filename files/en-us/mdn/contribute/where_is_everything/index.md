@@ -21,7 +21,7 @@ This article acts as a quick guide to finding the different repos you need to ed
 - **MDN Platform**: <https://github.com/mdn/yari>. This is where the MDN platform is stored, and where you'll go if you want to make changes to MDN's high level page structure or rendering machinery.
 - **Browser compat data**: <https://github.com/mdn/browser-compat-data>. This is where the data used to generate the browser compatibility tables found on our reference pages is stored (example). Go here to make compat data changes!
 - **Interactive examples**: <https://github.com/mdn/interactive-examples>. This repo stores the rendering code and example code blocks that together produce the nice editable, copyable examples found at the top of many of our reference pages (example). Edit those examples here.
-- **Translated content**: <https://github.com/mdn/translated-content>. This is where localized content lives. Go here if you want to help to maintain the tier 1 locales that we currently have unfrozen (currently `de`, `es`, `fr`, `ja`, `ko`, `pl`, `pt-BR`, `ru`, and `zh-CN`/`zh-TW`). We are not currently allowing edits to other locales.
+- **Translated content**: <https://github.com/mdn/translated-content>. This is where localized content lives. Go here if you want to help translate pages into any of our actively maintained locales.
 - **CSS data**: <https://github.com/mdn/data>. Originally envisaged as a hold-all repo for general purpose MDN data, the data repo now serves the purpose of holding data about CSS features such as formal syntax, inheritance, computed value, animation type, etc. This is used to generate sections on CSS reference pages such as formal definition (example) and formal syntax (example).
 
 ## Other repos
