@@ -24,7 +24,7 @@ const item = collection.namedItem(key);
 
 ### Parameters
 
-- `key` is a {{jsxref("String")}} representing the value of the `id` or `name` attribute of the element we are looking for.
+- `key` is a string representing the value of the `id` or `name` attribute of the element we are looking for.
 
 ### Return value
 
