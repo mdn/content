@@ -1,5 +1,5 @@
 ---
-title:
+title: Idle Detection API
 slug: Web/API/Idle_Detection_API
 tags:
   - API
