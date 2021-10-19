@@ -42,7 +42,7 @@ browser-compat: webextensions.api.identity
 <p>However, loopback addresses are an accepted alternative that do not require domain validation (based on <a href="https://datatracker.ietf.org/doc/html/rfc8252#section-7.3">RFC 8252, section 7.3</a>). Starting from Firefox 86, a loopback address with the format <code>http://127.0.0.1/mozoauth2/[subdomain of URL returned by identity.getRedirectURL()]</code> is permitted as a value for the redirect URL.</p>
 
 <div class="notecard note">
-<p>Starting with Firefox 75, you must use the redirect URL returned by {{WebExtAPIRef("identity.getRedirectURL()")}}.  Earlier versions allowed you to supply any redirect url.</p>
+<p><strong>Note:</strong> Starting with Firefox 75, you must use the redirect URL returned by {{WebExtAPIRef("identity.getRedirectURL()")}}.  Earlier versions allowed you to supply any redirect url.</p>
 <p>Starting with Firefox 86, the special loopback address described above can be used too.</p>
 </div>
 

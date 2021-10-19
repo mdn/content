@@ -31,7 +31,7 @@ browser-compat: webextensions.api.userScripts
 <p>To use the API, call <code>{{WebExtAPIRef("userScripts.register","register()")}}</code> passing in an object defining the scripts to register. The method returns a Promise that is resolved with a <code>{{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}}</code> object.</p>
 
 <div class="notecard note">
-<p>User scripts are unregistered when the related extension page (from which the user scripts were registered) is unloaded, so you should register a user script from an extension page that persists at least as long as you want the user scripts to stay registered.</p>
+<p><strong>Note:</strong> User scripts are unregistered when the related extension page (from which the user scripts were registered) is unloaded, so you should register a user script from an extension page that persists at least as long as you want the user scripts to stay registered.</p>
 </div>
 
 <h2 id="Types">Types</h2>
