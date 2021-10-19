@@ -58,22 +58,22 @@ There are 4 categories of ARIA states and properties:
    
 4. ### Relationship Attributes
      - [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) 	 	 	
-  - [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) 	 		
-  - [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) 	 		
-  - [`aria-colspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colspan) 	 		
-  - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls) 	 	 	
-  - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) 	 	 	
-  - [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details) 	 		
-  - [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage) 	 	 	
-  - [`aria-flowto`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-flowto) 	 	 	
-  - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 	 	 	
-  - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) 	 	 	
-  - [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) 	 	 	
-  - [`aria-rowcount`](/en-US/docs/Web/  [Accessibility/ARIA/Attributes/aria-rowcount) 	 		
-  - [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) 	 		
-  - [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) 	 		
-  - [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
-  
+     - [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) 	 		
+    - [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) 	 		
+    - [`aria-colspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colspan) 	 		
+    - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls) 	 	 	
+    - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) 	 	 	
+    - [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details) 	 		
+    - [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage) 	 	 	
+    - [`aria-flowto`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-flowto) 	 	 	
+    - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 	 	 	
+    - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) 	 	 	
+    - [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) 	 	 	
+    - [`aria-rowcount`](/en-US/docs/Web/  [Accessibility/ARIA/Attributes/aria-rowcount) 	 		
+    - [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) 	 		
+    - [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) 	 		
+    - [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
+    
 ## Global ARIA attributes
 
 Some states and properties are applicable to all host language elements regardless of whether a role is applied. These are defined as "Global" attributes. Global states and properties are supported by all roles and by all base markup elements.
