@@ -71,7 +71,7 @@ This role does not support any specific keyboard interaction.
 - Changing attribute values
   - : When constructing a feed, set the `aria-posinset` and `aria-setsize` attributes on each article role to the appropriate values, bearing in mind that `aria-posinset` is 1-based.
 
-> **note:** **Always use native element if available.** Instead of a `<div>` with the `article` role, the `<article>` element should be used.
+> **Note:** **Always use native element if available.** Instead of a `<div>` with the `article` role, the `<article>` element should be used.
 
 ## Examples
 
