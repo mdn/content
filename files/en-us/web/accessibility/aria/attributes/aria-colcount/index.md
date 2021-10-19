@@ -40,7 +40,7 @@ The following example shows a grid with 6 columns, of which columns 1, 2, 5, and
       <div role="gridcell" aria-colindex="6">14127</div>
     </div>
   </div>
-  …
+  ...
 </div>
 ```
 
@@ -63,7 +63,7 @@ The first rule of ARIA use is if you can use a native feature with the semantics
       <td>New York</td>
       <td>14127</td>
     </tr>
-  
+    ...
   </tbody>
 </table>
 ```
