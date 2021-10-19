@@ -40,7 +40,7 @@ browser-compat: webextensions.api.cookies.remove
   <dt><code>name</code></dt>
   <dd>A <code>string</code> representing the name of the cookie to remove.</dd>
   <dt><code>partitionKey</code>{{optional_inline}}</dt>
-  <dd>An <code>object</code> representing the storage partition containing the cookie. Include this object to a remove a cookie from partitioned storage. This object contains:
+  <dd>An <code>object</code> representing the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#dynamic_partitioning">dynamic partition</a> storage containing the cookie. Include this object to a remove a cookie from partitioned storage. This object contains:
    <dl class="reference-values">
    <dt><code>topLevelSite</code>{{optional_inline}}</dt>
    <dd>A <code>string</code> representing the first-party URL of the top-level site partition containing the cookie.</dd>
