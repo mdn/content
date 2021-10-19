@@ -2,29 +2,17 @@
 title: CustomEvent.detail
 slug: Web/API/CustomEvent/detail
 tags:
-  - API
-  - CustomEvent
-  - DOM
   - Property
   - Reference
-  - detail
+  - Read-only
 browser-compat: api.CustomEvent.detail
 ---
 {{APIRef("DOM")}}
 
-The **`detail`** readonly property of the
-{{domxref("CustomEvent")}} interface returns any data passed when initializing the
-event.
+The  read-only **`detail`** property of the {{domxref("CustomEvent")}} interface
+returns any data passed when initializing the event.
 
-{{AvailableInWorkers}}
-
-## Syntax
-
-```js
- let myDetail = customEventInstance.detail;
-```
-
-### Return value
+### Value
 
 Whatever data the event was initialized with.
 
