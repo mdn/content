@@ -123,7 +123,8 @@ By default, you should see the reporting tab, like so:
 
 ![](analytics-reporting.png)
 
-There is a huge amount of data you could look at using Google Analytics — customized reports in different categories, etc. — and we haven't got time to discuss it all. [Getting started with Analytics](https://support.google.com/analytics/answer/1008015) provides some useful guidance on reporting (and more) for beginners.
+There is a huge amount of data you could look at using Google Analytics — customized reports in different categories, etc. — and we haven't got time to discuss it all.
+[Getting started with Analytics](https://support.google.com/analytics/answer/1008015) provides some useful guidance on reporting (and more) for beginners.
 
 You should also be encouraged to look at the different options on the left hand side, and see what kinds of data you can find out. For example, you can find out what browsers and operating systems your users are using by selecting _Audience > Technology > Browser & OS_ from the left hand menu.
 
@@ -207,7 +208,7 @@ We will cover each of the other options below.
 
 Emulators are basically programs that run inside your computer and emulate a device or particular device conditions of some kind, allowing you to do some of your testing more conveniently than having to find a particular combination of hardware/software to test.
 
-An emulator might be as simple as testing a device condition. For example, if you want to do some quick and dirty testing of your width/height media queries for responsive design, you could use Firefox's [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode). Safari has a similar mode too, which can be enabled by going to _Safari > Preferences_, and checking _Show Develop menu_, then choosing _Develop > Enter Responsive Design Mode_. Chrome also has something similar: Device mode (see [Simulate Mobile Devices with Device Mode](https://developers.google.com/web/tools/chrome-devtools/device-mode/)).
+An emulator might be as simple as testing a device condition. For example, if you want to do some quick and dirty testing of your width/height media queries for responsive design, you could use Firefox's [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode). Safari has a similar mode too, which can be enabled by going to _Safari > Preferences_, and checking _Show Develop menu_, then choosing _Develop > Enter Responsive Design Mode_. Chrome also has something similar: Device mode (see [Simulate Mobile Devices with Device Mode](https://developer.chrome.com/docs/devtools/device-mode/)).
 
 More often than not though, you'll have to install some kind of emulator. The most common devices/browsers you'll want to test are as follows:
 
