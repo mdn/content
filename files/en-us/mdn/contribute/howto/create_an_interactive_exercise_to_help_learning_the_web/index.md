@@ -130,7 +130,7 @@ You can see a more advanced example of such a tweak on [the Canvas API page](/en
 
 The previous example is okay if you want to embed basic active learning content. However, if you want to deal with complex code, it can become a bit awkward to deal with that `hidden` class wrapper.
 
-So another option is to write the code of your learning content on an MDN page and then embed it into another page. To do this we can still use the {{TemplateLink("EmbedLiveSample")}} macro, but we'll also have to pass it the page from where to extract your code.
+So another option is to write the code of your learning content on an MDN page and then embed it into another page. To do this we can still use the [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) macro, but we'll also have to pass it the page from where to extract your code.
 
 Let's how that sample looks when configured as if it were being embedded from a remote origin:
 
