@@ -32,7 +32,7 @@ A media query computes to true when the media type (if specified) matches the de
 
 ### Media types
 
-_Media types_ describe the general category of a device. Except when using the `not` or `only` logical operators, the media type is optional and the `all` type will be implied.
+_Media types_ describe the general category of a device. Except when using the `not` or `only` logical operators, the media type is optional and the `all` type is implied.
 
 - `all`
   - : Suitable for all devices.
@@ -47,7 +47,8 @@ _Media types_ describe the general category of a device. Except when using the `
 
 ### Media features
 
-_Media features_ describe specific characteristics of the {{glossary("user agent")}}, output device, or environment. Media feature expressions test for their presence or value, and are entirely optional. Each media feature expression must be surrounded by parentheses.
+_Media features_ describe specific characteristics of the {{glossary("user agent")}}, output device, or environment.
+Media feature expressions test for their presence or value, and are entirely optional. Each media feature expression must be surrounded by parentheses.
 
 | Name                                                                                                              | Summary                                                                                                                          | Notes                                                                                                   |
 | ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
