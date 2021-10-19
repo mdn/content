@@ -18,7 +18,7 @@ tags:
  <li>Added privileged-code-only getters for <code>Node.nodePrincipal</code>, <code>Node.baseURIObject</code>, and <code>document.documentURIObject</code>. Chrome code must not touch (get or set) these properties on an unwrapped content object (e.g. on a <code>wrappedJSObject</code> of an <code><a href="/en-US/XPCNativeWrapper">XPCNativeWrapper</a></code>), see {{ Bug(324464) }} for details.</li>
  <li>The Web Applications 1.0 (HTML5) <code><a href="/en-US/docs/Web/API/Document/getElementsByClassName">getElementsByClassName()</a></code> DOM method is now supported.</li>
  <li>The Web Applications 1.0 (HTML5) <code><a href="/en-US/docs/Web/API/Window/postMessage">window.postMessage</a></code> DOM method is now supported. This method allows a limited, opt-in form of client-side communication between windows not necessarily on the same domain.</li>
- <li>The <code>charCode</code> value of the <code>keypress</code> event is changed to an ASCII character if the accelerator key is pressed. Otherwise the <code>charCode</code> is the unmodified character (excepting <kbd>Shift</kbd> state). See <a href="/en-US/Gecko_Keypress_Event">Gecko Keypress Event</a>.</li>
+ <li>The <code>charCode</code> value of the <code>keypress</code> event is changed to an ASCII character if the accelerator key is pressed. Otherwise the <code>charCode</code> is the unmodified character (excepting <code>Shift</code> state). See <a href="/en-US/Gecko_Keypress_Event">Gecko Keypress Event</a>.</li>
 </ul>
 
 <h3 id="See_also">See also</h3>

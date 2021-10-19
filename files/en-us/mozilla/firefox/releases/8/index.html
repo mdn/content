@@ -108,7 +108,9 @@ tags:
 
 <p>See <a href="/en-US/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_8">Updating add-ons for Firefox 8</a> for a guide to changes you're likely to have to make to make your add-ons compatible with Firefox 8.</p>
 
-<div class="note"><strong>Note:</strong> Firefox 8 requires that binary components be recompiled, as do all major releases of Firefox. See <a href="/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces">Binary Interfaces</a> for details.</div>
+<div class="note">
+  <p><strong>Note:</strong> Firefox 8 requires that binary components be recompiled, as do all major releases of Firefox. See <a href="/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces">Binary Interfaces</a> for details.</p>
+</div>
 
 <h3 id="XPCOM">XPCOM</h3>
 
@@ -121,7 +123,7 @@ tags:
 
 <ul>
  <li>You can now instantiate DOM {{ domxref("File") }} objects from component code by doing new File, instead of having to instantiate an {{ interface("nsIDOMFile") }} directly.</li>
- <li>The <code>nsTPtrArray</code> array type has been removed. Its functionality is now all available on <code>nsTArray</code>, which now offers the <code>SafeElementAt()</code> method when instantiated using a pointer type. See the section on <a href="/en-US/docs/XPCOM_array_guide#Bounds-safe_access_to_elements"><code>SafeElementAt()</code></a> in the <a href="/en-US/docs/XPCOM_array_guide" title="XPCOM array guide">XPCOM array guide</a> for more information.</li>
+ <li>The <code>nsTPtrArray</code> array type has been removed. Its functionality is now all available on <code>nsTArray</code>, which now offers the <code>SafeElementAt()</code> method when instantiated using a pointer type. See the section on <a href="/en-US/docs/XPCOM_array_guide#Bounds-safe_access_to_elements"><code>SafeElementAt()</code></a> in the <a href="/en-US/docs/XPCOM_array_guide">XPCOM array guide</a> for more information.</li>
 </ul>
 
 <h3 id="Workers">Workers</h3>
@@ -132,7 +134,7 @@ tags:
 
 <ul>
  <li>A bug in {{ domxref("document.execCommand()") }} that occurred when calling it on the value of <code><a href="/en-US/docs/XUL/Property/contentDocument">contentDocument</a></code> has been fixed. Since Firefox 3, this resulted in errors instead of working correctly.</li>
- <li><a href="/en-US/docs/Extensions/Bootstrapped_extensions" title="Bootstrapped extensions">Bootstrapped add-ons</a> can now load chrome using a <a href="/en-US/docs/Chrome_Registration"><code>chrome.manifest</code></a> file. See the section <a href="/en-US/docs/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest">Adding user interface with a chrome.manifest</a> for details.</li>
+ <li><a href="/en-US/docs/Extensions/Bootstrapped_extensions">Bootstrapped add-ons</a> can now load chrome using a <a href="/en-US/docs/Chrome_Registration"><code>chrome.manifest</code></a> file. See the section <a href="/en-US/docs/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest">Adding user interface with a chrome.manifest</a> for details.</li>
  <li><a href="/en-US/docs/XUL/image">XUL images</a> now shrink down with the same ratio in both directions when specifying maximum sizes.</li>
 </ul>
 

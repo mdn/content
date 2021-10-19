@@ -9,7 +9,7 @@ tags:
 ---
 <p>{{FirefoxSidebar}}</p>
 
-<p class="summary">This article provides information about the changes in Firefox 71 that will affect developers. Firefox 71 was released on December 3, 2019.</p>
+<p >This article provides information about the changes in Firefox 71 that will affect developers. Firefox 71 was released on December 3, 2019.</p>
 
 <h2 id="Changes_for_web_developers">Changes for web developers</h2>
 
@@ -28,7 +28,7 @@ tags:
  <li><a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint#inline_variable_preview">Inline variable preview</a> has been enabled ({{bug(1576679)}}).</li>
  <li><a href="/en-US/docs/Tools/Debugger/Set_event_listener_breakpoints#logging_on_events">Logging on events</a> is now available ({{bug(1110276)}}), as is the ability to <a href="/en-US/docs/Tools/Debugger/Set_event_listener_breakpoints#filter_by_event_type">filter by event type</a>.</li>
  <li>The new debugger <a href="/en-US/docs/Tools/Debugger/How_to/Step_through_code#pause_on_breakpoints_overlay">paused overlay</a> can now be disabled using the <code>devtools.debugger.features.overlay</code> pref ({{bug(1579768)}}).</li>
- <li>We've got new <a href="/en-US/docs/Tools/Keyboard_shortcuts">keyboard shortcuts</a> for opening the debugger: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Z</kbd> on Linux/Windows and <kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>Z</kbd> on macOS ({{bug(1583042)}}).</li>
+ <li>We've got new <a href="/en-US/docs/Tools/Keyboard_shortcuts">keyboard shortcuts</a> for opening the debugger: <code>Ctrl</code> + <code>Shift</code> + <code>Z</code> on Linux/Windows and <code>Cmd</code> + <code>Opt</code> + <code>Z</code> on macOS ({{bug(1583042)}}).</li>
  <li>Pausing on a <a href="/en-US/docs/Tools/Debugger/Break_on_DOM_mutation">DOM Mutation Breakpoints</a> now mentions the DOM node that has the breakpoint and, if available, the child node that was added/removed ({{bug(1576145)}}).</li>
  <li>Locations in <a href="/en-US/docs/Tools/Debugger/How_to/Pretty-print_a_minified_file">pretty printed sources</a> are now correct after pretty-printing and when jumping to the source from the Inspector's <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_event_listeners">events listener tooltip</a> ({{bug(1500222)}}).</li>
 </ul>
@@ -121,7 +121,7 @@ tags:
  <li>{{domxref("DataTransfer.mozTypesAt()")}}</li>
 </ul>
 
-<h3 class="highlight-spanned" id="WebDriver_conformance_Marionette"><span class="highlight-span">WebDriver conformance (Marionette)</span></h3>
+<h3 id="WebDriver_conformance_Marionette">WebDriver conformance (Marionette)</h3>
 
 <ul>
  <li>Both the <code>WebDriver:TakeScreenshot</code> and <code>WebDriver:TakeElementScreenshot</code> commands have been updated to respect the unhandled prompt behavior setting ({{bug(1584927)}}).</li>
@@ -148,7 +148,7 @@ tags:
 <h4 id="Removals_4">Removals</h4>
 
 <ul>
- <li>The <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register" title="This method has been deprecated in Firefox 68 and will be removed from Firefox 71. In Firefox 68 or later, calling this method logs an error message to the console:"><code>proxy.register()</code></a> and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/unregister" title="This method has been deprecated in Firefox 68 and will be removed from Firefox 71. In Firefox 68 or later, calling this method logs an error message to the console:"><code>proxy.unregister()</code></a> functions have been removed ({{bug(1443259)}}). {{WebExtAPIRef("proxy.onRequest")}} should now be used to handle the proxying of requests.</li>
+ <li>The <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register"><code>proxy.register()</code></a> and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/unregister"><code>proxy.unregister()</code></a> functions have been removed ({{bug(1443259)}}). {{WebExtAPIRef("proxy.onRequest")}} should now be used to handle the proxying of requests.</li>
 </ul>
 
 <h2 id="See_also">See also</h2>

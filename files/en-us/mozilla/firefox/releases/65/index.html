@@ -22,7 +22,7 @@ tags:
  <li>The <a href="/en-US/docs/Tools/Accessibility_inspector#color_contrast">color contrast</a> display of the Accessibility Picker has been updated so that if a text's background is complex (e.g. a gradient or complex image), it shows a range of color contrast values.</li>
  <li>The Headers tab of the <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> now displays the Referrer Policy for the selected request ({{bug(1496742)}}).</li>
  <li>When displaying stack traces (e.g. in console logs or the JavaScript debugger), calls to framework methods are identified and collapsed by default, making it easier to home in on your code.</li>
- <li>In the same fashion as native terminals, you can now use reverse search to find entries in your JavaScript console history (<kbd>F9</kbd> on Windows/Linux or <kbd>Ctrl</kbd> + <kbd>R</kbd> on macOS, then type a search term, followed by <kbd>Ctrl</kbd> + <kbd>R</kbd>/<kbd>Ctrl</kbd> + <kbd>S</kbd> to toggle through results).</li>
+ <li>In the same fashion as native terminals, you can now use reverse search to find entries in your JavaScript console history (<code>F9</code> on Windows/Linux or <code>Ctrl</code> + <code>R</code> on macOS, then type a search term, followed by <code>Ctrl</code> + <code>R</code>/<code>Ctrl</code> + <code>S</code> to toggle through results).</li>
  <li>The JavaScript console's <code>$0</code> shortcut (references the currently inspected element on the page) now has autocomplete available, so for example you could type <code>$0.te</code> to get autocomplete suggestions for properties like <code>$0.textContent</code>.</li>
  <li>The edits you make in the Rules view of the Inspector are now listed in the Changes panel ({{bug(1503920)}}).</li>
 </ul>
@@ -153,7 +153,7 @@ tags:
  <li>The non-standard {{domxref("MediaStream")}} property <code>currentTime</code> has been removed ({{bug(1502927)}}).</li>
  <li>The <code>dom.webcomponents.shadowdom.enabled</code> and <code>dom.webcomponents.customelements.enabled</code> prefs have been removed — Shadow DOM and Custom Elements can no longer be disabled in <code>about:config</code> ({{bug(1503019)}}).</li>
  <li>The non-standard DOM <code>text</code> event — fired to notify the browser editor UI of IME composition string data and selection range — has been removed ({{bug(1288640)}}).</li>
- <li>The {{event("keypress")}} event is no longer fired for <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)">non-printable keys</a> ({{bug(968056)}}), except for the <kbd>Enter</kbd> key, and the <kbd>Shift</kbd> + <kbd>Enter</kbd> and <kbd>Ctrl</kbd> + <kbd>Enter</kbd> key combinations (these were kept for cross-browser compatibility purposes).</li>
+ <li>The {{event("keypress")}} event is no longer fired for <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)">non-printable keys</a> ({{bug(968056)}}), except for the <code>Enter</code> key, and the <code>Shift</code> + <code>Enter</code> and <code>Ctrl</code> + <code>Enter</code> key combinations (these were kept for cross-browser compatibility purposes).</li>
 </ul>
 
 <h3 id="Security">Security</h3>

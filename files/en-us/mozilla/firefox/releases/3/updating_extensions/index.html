@@ -8,7 +8,7 @@ tags:
 
 <p>This article provides information that will be useful to developers that wish to update their extensions to work properly under Firefox 3.</p>
 
-<p>Before going further, there's one helpful hint we can offer: if the only change your extension requires is a bump to the <code>maxVersion</code> field in its install manifest, and you host your extension at <a class="link-https" href="https://addons.mozilla.org">addons.mozilla.org</a>, you don't actually need to upload a new version of your extension! Use the Developer Control Panel at AMO to adjust the <code>maxVersion</code>. You can avoid having to have your extension re-reviewed this way.</p>
+<p>Before going further, there's one helpful hint we can offer: if the only change your extension requires is a bump to the <code>maxVersion</code> field in its install manifest, and you host your extension at <a href="https://addons.mozilla.org">addons.mozilla.org</a>, you don't actually need to upload a new version of your extension! Use the Developer Control Panel at AMO to adjust the <code>maxVersion</code>. You can avoid having to have your extension re-reviewed this way.</p>
 
 <h2 id="Step_1_Update_the_install_manifest">Step 1: Update the install manifest</h2>
 
@@ -16,17 +16,13 @@ tags:
 
 <p>Find the line indicating the maximum compatible version of Firefox (which, for Firefox 2, might look like this):</p>
 
-<div style="overflow: hidden;">
-<pre class="brush:xml">&lt;em:maxVersion&gt;2.0.*&lt;/em:maxVersion&gt;
+<pre class="brush: xml">&lt;em:maxVersion&gt;2.0.*&lt;/em:maxVersion&gt;
 </pre>
-</div>
 
 <p>Change it to indicate compatibility with Firefox 3:</p>
 
-<div style="overflow: hidden;">
-<pre class="brush:xml">&lt;em:maxVersion&gt;3.0.*&lt;/em:maxVersion&gt;
+<pre class="brush: xml">&lt;em:maxVersion&gt;3.0.*&lt;/em:maxVersion&gt;
 </pre>
-</div>
 
 <p>Then reinstall your extension.</p>
 
@@ -34,7 +30,7 @@ tags:
 
 <p>There have been (and will continue to be) a number of API changes that will likely break some extensions. We're still working on compiling a complete list of these changes.</p>
 
-<div class="note"><span class="lang lang-en"><strong>Note:</strong> If your extension still uses an <code><a href="/en-US/docs/Install.js" rel="internal">Install.js</a></code> script instead of an <a href="/en-US/docs/Install_Manifests" rel="internal">install manifest</a>, you need to make the transition to an install manifest now. Firefox 3 no longer supports <code>install.js</code> scripts in XPI files.</span></div>
+<div class="note"><strong>Note:</strong> If your extension still uses an <code><a href="/en-US/docs/Install.js" >Install.js</a></code> script instead of an <a href="/en-US/docs/Install_Manifests" >install manifest</a>, you need to make the transition to an install manifest now. Firefox 3 no longer supports <code>install.js</code> scripts in XPI files.</div>
 
 <h3 id="Add_localizations_to_the_install_manifest">Add localizations to the install manifest</h3>
 
@@ -42,7 +38,7 @@ tags:
 
 <h2 id="Step_2_Ensure_you_are_providing_secure_updates">Step 2: Ensure you are providing secure updates</h2>
 
-<p>If you are hosting addons yourself and not on a secure add-on hosting provider like <a class="link-https" href="https://addons.mozilla.org">addons.mozilla.org</a> then you must provide a secure method of updating your add-on. This will either involve hosting your updates on an SSL website, or using cryptographic keys to sign the update information. Read <a href="/en-US/docs/Extension_Versioning,_Update_and_Compatibility#Securing_Updates" title="Extension_Versioning,_Update_and_Compatibility#Securing_Updates">Securing Updates</a> for more information.</p>
+<p>If you are hosting addons yourself and not on a secure add-on hosting provider like <a   href="https://addons.mozilla.org">addons.mozilla.org</a> then you must provide a secure method of updating your add-on. This will either involve hosting your updates on an SSL website, or using cryptographic keys to sign the update information. Read <a href="/en-US/docs/Extension_Versioning,_Update_and_Compatibility#Securing_Updates">Securing Updates</a> for more information.</p>
 
 <h2 id="Step_3_Deal_with_changed_APIs">Step 3: Deal with changed APIs</h2>
 
@@ -50,13 +46,13 @@ tags:
 
 <h3 id="DOM">DOM</h3>
 
-<p>Nodes from external documents should be cloned using <a href="/en-US/docs/Web/API/Document/importNode" title="The Document object's importNode() method creates a copy of a Node or DocumentFragment from another document, to be inserted into the current document later."><code>document.importNode()</code></a> (or adopted using <a href="/en-US/docs/Web/API/Document/adoptNode" title="Document.adoptNode() transfers a node from another document into the method's document. The adopted node and its subtree is removed from its original document (if any), and its ownerDocument is changed to the current document. The node can then be inserted into the current document."><code>document.adoptNode()</code></a>) before they can be inserted into the current document. For more on the <a href="/en-US/docs/Web/API/Node/ownerDocument" title="The Node.ownerDocument read-only property returns the top-level document object for this node."><code>Node.ownerDocument</code></a> issues, see the <a class="external" href="https://www.w3.org/DOM/faq.html#ownerdoc" rel="noopener">W3C DOM FAQ</a>.</p>
+<p>Nodes from external documents should be cloned using <a href="/en-US/docs/Web/API/Document/importNode"><code>document.importNode()</code></a> (or adopted using <a href="/en-US/docs/Web/API/Document/adoptNode"><code>document.adoptNode()</code></a>) before they can be inserted into the current document. For more on the <a href="/en-US/docs/Web/API/Node/ownerDocument"><code>Node.ownerDocument</code></a> issues, see the <a href="https://www.w3.org/DOM/faq.html#ownerdoc" rel="noopener">W3C DOM FAQ</a>.</p>
 
 <p>Firefox doesn't currently enforce this rule (it did for a while during the development of Firefox 3, but too many sites break when this rule is enforced). We encourage Web developers to fix their code to follow this rule for improved future compatibility.</p>
 
 <h3 id="Bookmarks__History">Bookmarks &amp; History</h3>
 
-<p>If your extension accesses bookmark or history data in any way, it will need substantial work to be compatible with Firefox 3. The old APIs for accessing this information have been replaced by the new <a href="/en-US/docs/Places">Places</a> architecture. See the <a href="/en-US/docs/Places_Developer_Guide" title="Places_migration_guide">Places migration guide</a> for details on updating your existing extension to use the Places API.</p>
+<p>If your extension accesses bookmark or history data in any way, it will need substantial work to be compatible with Firefox 3. The old APIs for accessing this information have been replaced by the new <a href="/en-US/docs/Places">Places</a> architecture. See the <a href="/en-US/docs/Places_Developer_Guide">Places migration guide</a> for details on updating your existing extension to use the Places API.</p>
 
 <h3 id="Download_Manager">Download Manager</h3>
 
@@ -80,7 +76,7 @@ tags:
 
 <h3 id="Autocomplete">Autocomplete</h3>
 
-<p>The {{ Interface("nsIAutoCompleteController") }} interface's <code><a href="/en-US/docs/XPCOM_Interface_Reference/nsIAutoCompleteController#handleEnter.28.29" title="nsIAutoCompleteController#handleEnter.28.29">handleEnter()</a></code> method has been changed to accept an argument that indicates whether the text was selected from the autocomplete popup or by the user pressing enter after typing text.</p>
+<p>The {{ Interface("nsIAutoCompleteController") }} interface's <code><a href="/en-US/docs/XPCOM_Interface_Reference/nsIAutoCompleteController#handleEnter.28.29">handleEnter()</a></code> method has been changed to accept an argument that indicates whether the text was selected from the autocomplete popup or by the user pressing enter after typing text.</p>
 
 <h3 id="DOMParser">DOMParser</h3>
 
@@ -101,9 +97,9 @@ tags:
 <p>The internal string API is no longer exported; you must migrate to the external string API. See these articles for helpful information:</p>
 
 <ul>
- <li><a href="/en-US/docs/Mozilla_external_string_guide" title="Mozilla external string guide">Mozilla external string guide</a></li>
- <li><a href="/en-US/docs/XPCOM_Glue" title="XPCOM Glue">XPCOM Glue</a></li>
- <li><a href="/en-US/docs/Migrating_from_Internal_Linkage_to_Frozen_Linkage" title="Migrating from Internal Linkage to Frozen Linkage">Migrating from Internal Linkage to Frozen Linkage</a></li>
+ <li><a href="/en-US/docs/Mozilla_external_string_guide">Mozilla external string guide</a></li>
+ <li><a href="/en-US/docs/XPCOM_Glue">XPCOM Glue</a></li>
+ <li><a href="/en-US/docs/Migrating_from_Internal_Linkage_to_Frozen_Linkage">Migrating from Internal Linkage to Frozen Linkage</a></li>
 </ul>
 
 <h3 id="Removed_interfaces">Removed interfaces</h3>
@@ -172,5 +168,5 @@ tags:
  <li><code>content.window.getSelection()</code> gives an object (which can be converted to a string by <code>toString()</code>), unlike the now deprecated <code>content.document.getSelection()</code> which returns a string</li>
  <li><code>event.preventBubble()</code> was deprecated in Firefox 2 and has been removed in Firefox 3. Use <a href="/en-US/docs/Web/API/Event/stopPropagation"><code>event.stopPropagation()</code></a>, which works in Firefox 2 as well.</li>
  <li>Timers that are initiated using <code>setTimeout()</code> are now blocked by modal windows due to the fix made for {{ Bug(52209) }}. You may use {{ Interface("nsITimer") }} instead.</li>
- <li>If your extension needs to allow an untrusted source (e.g., a web site) to access the extension's chrome, then you must use the new <a href="/en-US/docs/Chrome_Registration#contentaccessible" title="Chrome_Registration#contentaccessible"><code>contentaccessible</code> flag</a>.</li>
+ <li>If your extension needs to allow an untrusted source (e.g., a web site) to access the extension's chrome, then you must use the new <a href="/en-US/docs/Chrome_Registration#contentaccessible"><code>contentaccessible</code> flag</a>.</li>
 </ul>
