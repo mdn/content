@@ -42,7 +42,7 @@ Caching directives follow the validation rules below:
 
 - Case-insensitive, but lowercase is recommended.
 - Multiple directives are comma-separated.
-- Some directives have an optional argument, which can be either a _token_ or a _quoted-string_. (See spec for definitions)
+- Some directives have an optional argument.
 
 ### Cache request directives
 
