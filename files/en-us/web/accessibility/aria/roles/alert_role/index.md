@@ -46,6 +46,7 @@ function triggerAlert() {
   var alertEl = document.querySelector('.alert');
   alertEl.setAttribute("role", "alert");
 }
+```
 
 The `alert` role should read out content that has changed, or bring the user's attention to it immediately, so it should not be used for static content or used regularly. Alerts, by definition, are disruptive. Several alerts at once and unnecessary alerts create bad user experiences.
 
