@@ -18,15 +18,15 @@ The `aria-activedescendant` property provides a method of managing focus for ass
 
 With aria-activedescendant, the browser keeps the DOM focus on the container element or on an input element that controls the container element. However, the user agent communicates desktop focus events and states to the assistive technology as if the element referenced by `aria-activedescendant` has focus.
 
-This attribute is only relevant on elements with role of composite widget, combobox, textbox, group, or application whose `id` is referenced as the attribute value. 
+This attribute is only relevant on elements with role of [`composite`](/en-US/docs/Web/Accessibility/ARIA/Roles/composite_role) widget, [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role), [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role), [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role), or [`application`](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role) whose `id` is referenced as the attribute value. 
 
 The attribute manages providing assistive technologies with information as to which element has focus, but doesn't actually create focus. Changing focus and managing the attributes value is done with JavaScript. In addition to managing that attribute value, make sure the currently active descendant is visible and in view (or scrolls into view) when focused.
 
 In setting the value of `aria-activedescendant` on an element with DOM focus, ensure the value refers to an owned element—either a descendant of the element with DOM focus OR a logical descendant as indicated by the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) attribute.
 
 When the element with DOM focus is a combobox, textbox, or searchbox, include [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls) to refer to the element that supports `aria-activedescendant`. 
-h
-e value of `aria-activedescendant` refers to an owned element of the controlled element. For example, in a combobox, focus may remain on the combobox while the value of `aria-activedescendant` on the combobox element refers to a descendant of a popup listbox that is controlled by the combobox.
+
+The value of `aria-activedescendant` refers to an owned element of the controlled element. For example, in a combobox, focus may remain on the combobox while the value of `aria-activedescendant` on the combobox element refers to a descendant of a popup listbox that is controlled by the combobox.
 
 > **Note:** The attribute is supported only on a few roles. For example, `dialog`s do not support `aria-activedescendant`. When a combobox opens a dialog, DOM focus moves into the dialog from the combobox as it is not referenceable with this attribute.
 
