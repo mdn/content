@@ -13,7 +13,7 @@ The **`CustomEvent()`** constructor creates a new {{domxref("CustomEvent")}}.
 ## Syntax
 
 ```js
-event = new CustomEvent(typeArg, customEventInit);
+CustomEvent(typeArg, options);
 ```
 
 ### Parameters
