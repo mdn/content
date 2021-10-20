@@ -28,6 +28,8 @@ In the following HTML snippet, our table has 8 columns, but we are only displayi
       <th aria-colindex="7" scope="col">Zip</th>
     </tr>
   </thead>
+  ...
+</table>
 ```
 
 This table is not very complex. Had this been a 100+ column spreadsheet or a grid without column headers, such as a chess board, the provided or calculated value of `aria-colindex` might not be meaningful or may not reflect the displayed index. When this is the case, `aria-colindextext` can be included. The value is a string that is a human readable text alternative to the numeric `aria-colindex`. 
@@ -42,6 +44,8 @@ This table is not very complex. Had this been a 100+ column spreadsheet or a gri
       <th aria-colindex="124" scope="col">Recommendation</th>
     </tr>
   </thead>
+  ...
+</table>
 ```
 In the above example, the table has 128 columns of which only 4 columns are shown. The `aria-colindextext` is used in three columns to provide human readable text alternatives. By including `aria-colindextext="Value at start of 2021"`, assistive technologies can announce "Value at start of 2021" instead of "Column 110".
 
