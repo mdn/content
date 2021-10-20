@@ -13,7 +13,7 @@ The **`CustomEvent.initCustomEvent()`** method initializes a {{domxref("CustomEv
 If the event has already been dispatched, this method does nothing.
 
 Events initialized in this way must have been created with the {{domxref("Document.createEvent()")}} method.
-This method must be called to set the event before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}.
+This method must be called to set the event before it is dispatched using {{ domxref("EventTarget.dispatchEvent()") }}.
 Once dispatched, it doesn't do anything anymore.
 
 > **Note:** **Do not use this method anymore, as it is deprecated.**
