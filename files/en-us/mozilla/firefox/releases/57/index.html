@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{FirefoxSidebar}}</div>
 
-<p >This article provides information about the changes in Firefox 57 (a.k.a. Firefox Quantum) that will affect developers. Firefox 57 was released on November 14, 2017.</p>
+<p>This article provides information about the changes in Firefox 57 (a.k.a. Firefox Quantum) that will affect developers. Firefox 57 was released on November 14, 2017.</p>
 
 <h2 id="Firefox_57_Firefox_Quantum">Firefox 57 === Firefox Quantum</h2>
 
@@ -107,7 +107,9 @@ tags:
 
 <ul>
  <li>Support for messages of arbitrary size (up to 1GiB, although 256kiB is more interoperable) is now supported on {{DOMxRef("RTCDataChannel")}} through use of the end-of-record (EOR) flag on SCTP messages. See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels", "Understanding message size limits")}} for more information ({{bug(979417)}}).
-  <div class="note">Because Firefox doesn't yet support the SCTP ndata protocol that provides the ability to interleave SCTP messages from multiple sources, sending large data objects can cause significant delays on all other SCTP traffic. See {{bug(1381145)}} to track progress on implementing and deploying ndata support in Firefox..</div>
+  <div class="note">
+    <p><strong>Note:</strong> Because Firefox doesn't yet support the SCTP ndata protocol that provides the ability to interleave SCTP messages from multiple sources, sending large data objects can cause significant delays on all other SCTP traffic. See {{bug(1381145)}} to track progress on implementing and deploying ndata support in Firefox.</p>
+  </div>
  </li>
  <li>The {{DOMxRef("RTCDataChannel.send()")}} method can now throw a <code>TypeError</code> exception if the size of the message you're trying to send is not compatible with the receiving {{Glossary("user agent")}} (this is implemented as part of {{bug(979417)}}).</li>
  <li>The <a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</a> has been updated so that {{event("error")}} events sent to report problems that occur while recording are now of type {{DOMxRef("MediaRecorderErrorEvent")}} rather than being generic events.</li>
@@ -153,7 +155,7 @@ tags:
 <h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
 
 <div class="note">
-<p>Starting in Firefox 57, all support for XPCOM-based add-ons has been removed. All extensions must be converted into the new <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">browser extensions</a> (also known as WebExtensions) or they will not work.</p>
+  <p><strong>Note:</strong> Starting in Firefox 57, all support for XPCOM-based add-ons has been removed. All extensions must be converted into the new <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">browser extensions</a> (also known as WebExtensions) or they will not work.</p>
 </div>
 
 <h3 id="WebExtensions">WebExtensions</h3>

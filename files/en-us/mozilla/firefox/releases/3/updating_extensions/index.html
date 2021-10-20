@@ -30,7 +30,9 @@ tags:
 
 <p>There have been (and will continue to be) a number of API changes that will likely break some extensions. We're still working on compiling a complete list of these changes.</p>
 
-<div class="note"><strong>Note:</strong> If your extension still uses an <code><a href="/en-US/docs/Install.js" >Install.js</a></code> script instead of an <a href="/en-US/docs/Install_Manifests" >install manifest</a>, you need to make the transition to an install manifest now. Firefox 3 no longer supports <code>install.js</code> scripts in XPI files.</div>
+<div class="note">
+  <p><strong>Note:</strong> If your extension still uses an <code><a href="/en-US/docs/Install.js" >Install.js</a></code> script instead of an <a href="/en-US/docs/Install_Manifests" >install manifest</a>, you need to make the transition to an install manifest now. Firefox 3 no longer supports <code>install.js</code> scripts in XPI files.</p>
+</div>
 
 <h3 id="Add_localizations_to_the_install_manifest">Add localizations to the install manifest</h3>
 
@@ -38,7 +40,7 @@ tags:
 
 <h2 id="Step_2_Ensure_you_are_providing_secure_updates">Step 2: Ensure you are providing secure updates</h2>
 
-<p>If you are hosting addons yourself and not on a secure add-on hosting provider like <a   href="https://addons.mozilla.org">addons.mozilla.org</a> then you must provide a secure method of updating your add-on. This will either involve hosting your updates on an SSL website, or using cryptographic keys to sign the update information. Read <a href="/en-US/docs/Extension_Versioning,_Update_and_Compatibility#Securing_Updates">Securing Updates</a> for more information.</p>
+<p>If you are hosting addons yourself and not on a secure add-on hosting provider like <a href="https://addons.mozilla.org">addons.mozilla.org</a> then you must provide a secure method of updating your add-on. This will either involve hosting your updates on an SSL website, or using cryptographic keys to sign the update information. Read <a href="/en-US/docs/Extension_Versioning,_Update_and_Compatibility#Securing_Updates">Securing Updates</a> for more information.</p>
 
 <h2 id="Step_3_Deal_with_changed_APIs">Step 3: Deal with changed APIs</h2>
 

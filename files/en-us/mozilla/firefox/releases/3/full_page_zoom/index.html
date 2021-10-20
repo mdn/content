@@ -14,7 +14,7 @@ tags:
 
 <p>The following example demonstrates the use for the current focused browser window. This is the typical usage for a Firefox extension.</p>
 
-<pre>var zoom = ZoomManager.getZoomForBrowser(gBrowser.selectedBrowser);
+<pre class="brush: none">var zoom = ZoomManager.getZoomForBrowser(gBrowser.selectedBrowser);
 ZoomManager.enlarge();
 ZoomManager.setZoomForBrowser(gBrowser.selectedBrowser, ZoomManager.MIN);
 </pre>
@@ -25,7 +25,7 @@ ZoomManager.setZoomForBrowser(gBrowser.selectedBrowser, ZoomManager.MIN);
 
 <p>You may use the fullZoom feature for a <a href="/en-US/docs/XUL/iframe">XUL:iframe</a> as well. However, because an iframe doesn't have a markupDocumentViewer property, we need to get that first:</p>
 
-<pre>var zoom = 1.5;
+<pre class="brush: none">var zoom = 1.5;
 var iframe = document.getElementById("authorFrame");
 var contViewer = iframe.docShell.contentViewer;
 var docViewer = contViewer.QueryInterface(Components.interfaces.nsIMarkupDocumentViewer);
@@ -36,7 +36,7 @@ docViewer.fullZoom = zoom;
 
 <ul>
  <li>Page zoom extension by Ted Mielczarek <a href="https://ted.mielczarek.org/code/mozilla/fullpagezoom.xpi">fullpagezoom.xpi</a> for latest Firefox 3.0 nightlies</li>
- <li><a   href="https://addons.mozilla.org/en-US/firefox/addon/6489">Glazoom extension</a> by Daniel Glazman for Firefox 3.0</li>
- <li>The <a   href="https://bugzilla.mozilla.org/show_bug.cgi?id=4821">bugzilla bug</a> about fullZoom.</li>
+ <li><a href="https://addons.mozilla.org/en-US/firefox/addon/6489">Glazoom extension</a> by Daniel Glazman for Firefox 3.0</li>
+ <li>The <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=4821">bugzilla bug</a> about fullZoom.</li>
  <li>{{ Interface("nsIMarkupDocumentViewer") }} Interface documentation.</li>
 </ul>

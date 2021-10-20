@@ -25,12 +25,12 @@ tags:
 
 <p>The <code>&lt;script&gt;</code> element in <code>text/html</code> documents now requires a closing <code>&lt;/script&gt;</code> in HTML 4 documents, even if you're not including any content in between. While in previous versions of Firefox, you could do:</p>
 
-<pre>&lt;script ... /&gt;
+<pre class="brush: none">&lt;script ... /&gt;
 </pre>
 
 <p>Now the markup must comply with the HTML specifications (if it's actually HTML), and hence you must actually close it, like this:</p>
 
-<pre>&lt;script ...&gt;&lt;/script&gt;
+<pre class="brush: none">&lt;script ...&gt;&lt;/script&gt;
 </pre>
 
 <p>This improves both compatibility and security.</p>
@@ -55,16 +55,17 @@ tags:
 
 <p>There is, however, a way for extensions to make their content web-accessible. They can specify a special flag in their <code>chrome.manifest</code> file, like this:</p>
 
-<pre>content mypackage location/ contentaccessible=yes
+<pre class="brush: none">content mypackage location/ contentaccessible=yes
 </pre>
 
 <p>This shouldn't be something you need to do very often, but it's available for those rare cases in which it's needed. Note that it's possible that Firefox may alert the user that your extension uses the <code>contentaccessible</code> flag in this way, as it does constitute a potential security risk.</p>
 
-<div class="note"><strong>Note:</strong> Because Firefox 2 doesn't understand the <code>contentaccessible</code> flag (it will ignore the entire line containing the flag), if you want your add-on to be compatible with both Firefox 2 and Firefox 3, you should do something like this:
+<div class="note">
+  <p><strong>Note:</strong> Because Firefox 2 doesn't understand the <code>contentaccessible</code> flag (it will ignore the entire line containing the flag), if you want your add-on to be compatible with both Firefox 2 and Firefox 3, you should do something like this:</p>
 
-<pre>content mypackage location/
+  <pre class="brush: bash">content mypackage location/
 content mypackage location/ contentaccessible=yes
-</pre>
+  </pre>
 </div>
 
 <h3 id="File_upload_fields">File upload fields</h3>

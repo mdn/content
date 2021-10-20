@@ -8,7 +8,7 @@ tags:
 ---
 <div>{{FirefoxSidebar}}</div>
 
-<p >This article provides information about the changes in Firefox 62 that will affect developers. Firefox 62 was released on September 5, 2018.</p>
+<p>This article provides information about the changes in Firefox 62 that will affect developers. Firefox 62 was released on September 5, 2018.</p>
 
 <h2 id="Changes_for_web_developers">Changes for web developers</h2>
 
@@ -24,10 +24,8 @@ tags:
  <li>The <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a>'s <a href="/en-US/docs/Tools/Network_Monitor#cookies">Cookies tab</a> now shows the cookie <code>samesite</code> attribute ({{bug(1452715)}}).</li>
  <li><a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive design mode</a> now works inside container tabs ({{bug(1306975)}}).</li>
  <li>When {{Glossary("CORS")}} errors occur and are reported on the console, Firefox now provides a link to the corresponding page in our <a href="/en-US/docs/Web/HTTP/CORS/Errors">CORS error documentation</a> ({{bug(1475391)}}).</li>
- <li>Create a screenshot of the current page (with an optional filename) from the Console tab ({{bug(1464461)}}) using the following command:<br>
-  <br>
-  <code>:screenshot &lt;filename.png&gt; --fullpage</code><br>
-  <br>
+ <li>Create a screenshot of the current page (with an optional filename) from the Console tab ({{bug(1464461)}}) using the following command:
+  <pre class="brush: bash">:screenshot &lt;filename.png&gt; --fullpage</pre>
   where <code>&lt;filename.png&gt;</code> is the desired filename. The file will be saved to your downloads folder. The <code>--fullpage</code> parameter is optional, but if included, it will save the full web page. This option also adds <code>-fullpage</code> to the name of the file. For a list of all options available for this command, enter: <code>:screenshot --help</code></li>
 </ul>
 

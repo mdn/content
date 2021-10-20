@@ -85,11 +85,10 @@ tags:
 
 <h4 id="New_CSS_properties">New CSS properties</h4>
 
-<table class="standard-table">
- <tbody>
+<table>
   <tr>
-   <td >Property</td>
-   <td >Description</td>
+   <td>Property</td>
+   <td>Description</td>
   </tr>
   <tr>
    <td><code>-moz-font-feature-settings</code></td>
@@ -103,13 +102,11 @@ tags:
    <td>{{cssxref("resize")}}</td>
    <td>Lets you control the dimensions in which an element may be resized.</td>
   </tr>
- </tbody>
 </table>
 
 <h4 id="New_CSS_pseudo-classes">New CSS pseudo-classes</h4>
 
-<table class="standard-table">
- <tbody>
+<table>
   <tr>
    <td >Pseudo-class</td>
    <td >Description</td>
@@ -146,13 +143,11 @@ tags:
    <td>{{cssxref(":valid")}}</td>
    <td>Automatically applied to {{HTMLElement("input")}} fields when their contents validate successfully.</td>
   </tr>
- </tbody>
 </table>
 
 <h4 id="New_CSS_pseudo-selectors">New CSS pseudo-selectors</h4>
 
-<table class="standard-table">
- <tbody>
+<table>
   <tr>
    <td >Pseudo-selector</td>
    <td >Description</td>
@@ -161,13 +156,11 @@ tags:
    <td>{{cssxref(":-moz-focusring")}}</td>
    <td>Lets you specify the appearance of an element when Gecko believes it should have a focus indication rendered.</td>
   </tr>
- </tbody>
 </table>
 
 <h4 id="New_CSS_functions">New CSS functions</h4>
 
-<table class="standard-table">
- <tbody>
+<table>
   <tr>
    <td >Function</td>
    <td >Description</td>
@@ -188,20 +181,16 @@ tags:
    <td><code>-moz-image-rect</code></td>
    <td>Lets you use a subrectangle of an image as a {{cssxref("background-image")}} or {{cssxref("background")}}.</td>
   </tr>
- </tbody>
 </table>
 
 <h4 id="Renamed_CSS_properties">Renamed CSS properties</h4>
 
-<table class="standard-table">
- <thead>
+<table>
   <tr>
-   <td >Old Name</td>
-   <td >New Name</td>
-   <td >Notes</td>
+   <th>Old Name</th>
+   <th>New Name</th>
+   <th>Notes</th>
   </tr>
- </thead>
- <tbody>
   <tr>
    <td><code>-moz-background-size</code></td>
    <td>{{cssxref("background-size")}}</td>
@@ -217,7 +206,6 @@ tags:
    <td>{{cssxref("box-shadow")}}</td>
    <td></td>
   </tr>
- </tbody>
 </table>
 
 <h4 id="Miscellaneous_CSS_changes">Miscellaneous CSS changes</h4>
@@ -272,15 +260,12 @@ tags:
 
 <p>Several HTML elements have had their DOM interfaces changed to the ones required by the HTML5 specification, as shown below.</p>
 
-<table class="standard-table">
- <thead>
+<table>
   <tr>
-   <td >Interface in Firefox 3.6</td>
-   <td >Interface in Firefox 4</td>
-   <td >HTML Element</td>
+   <th>Interface in Firefox 3.6</th>
+   <th>Interface in Firefox 4</th>
+   <th>HTML Element</th>
   </tr>
- </thead>
- <tbody>
   <tr>
    <td><code><a href="/en-US/docs/Web/API/HTMLSpanElement">HTMLSpanElement</a></code></td>
    <td><code><a href="/en-US/docs/Web/API/HTMLElement">HTMLElement</a></code></td>
@@ -296,7 +281,6 @@ tags:
    <td><code><a href="/en-US/docs/Web/API/HTMLElement">HTMLElement</a></code></td>
    <td>{{HTMLElement("wbr")}}</td>
   </tr>
- </tbody>
 </table>
 
 <h4 id="Miscellaneous_DOM_changes">Miscellaneous DOM changes</h4>
@@ -355,7 +339,7 @@ tags:
 </dl>
 
 <div class="note">
-<p><strong>Note:</strong>The Error Console is disabled by default starting in {{Gecko("2.0")}}. You can re-enable it by changing the <code>devtools.errorconsole.enabled</code> preference to <code>true</code> and restarting the browser.</p>
+  <p><strong>Note:</strong>The Error Console is disabled by default starting in {{Gecko("2.0")}}. You can re-enable it by changing the <code>devtools.errorconsole.enabled</code> preference to <code>true</code> and restarting the browser.</p>
 </div>
 
 <h2 id="Changes_for_Mozilla_and_add-on_developers">Changes for Mozilla and add-on developers</h2>
@@ -433,7 +417,7 @@ tags:
 
 <h4 id="Remote_XUL_support_removed">Remote XUL support removed</h4>
 
-<p>Remote XUL is no longer supported; this affects XUL documents being served through HTTP; also, you can no longer load XUL documents using <code>file://</code> URLs unless you create the preference <code>dom.allow_XUL_XBL_for_file</code> and set it to <code>true</code>. There is, however, a whitelist feature that can be used to allow specific domains to load remote XUL. The <a   href="https://addons.mozilla.org/en-US/firefox/addon/235281/">Remote XUL Manager extension</a> lets you manage this whitelist.</p>
+<p>Remote XUL is no longer supported; this affects XUL documents being served through HTTP; also, you can no longer load XUL documents using <code>file://</code> URLs unless you create the preference <code>dom.allow_XUL_XBL_for_file</code> and set it to <code>true</code>. There is, however, a whitelist feature that can be used to allow specific domains to load remote XUL. The <a href="https://addons.mozilla.org/en-US/firefox/addon/235281/">Remote XUL Manager extension</a> lets you manage this whitelist.</p>
 
 <h4 id="Miscellaneous_XUL_changes">Miscellaneous XUL changes</h4>
 
@@ -548,7 +532,7 @@ tags:
  <dt>Only the root chrome.manifest file is loaded</dt>
  <dd>Only the root <code>chrome.manifest</code> file is loaded now; if you need secondary manifest files to be loaded, you can use the <a href="/en-US/docs/Chrome_Registration#manifest"><code>manifest</code></a> command in your root <code>chrome.manifest</code> to load them.</dd>
  <dt>Gopher support removed</dt>
- <dd>The Gopher protocol is no longer supported natively. Continued support is available via the <a   href="https://addons.mozilla.org/addon/7685/">OverbiteFF</a> extension.</dd>
+ <dd>The Gopher protocol is no longer supported natively. Continued support is available via the <a href="https://addons.mozilla.org/addon/7685/">OverbiteFF</a> extension.</dd>
  <dt><a href="/en-US/docs/The_message_manager">Content process event handling</a></dt>
  <dd>In order to support out-of-process plugins and other multiple-process features, a new API has been introduced to support sending messages across processes.</dd>
  <dt><a href="/en-US/docs/Extensions/Bootstrapped_extensions">Bootstrapped extensions</a></dt>

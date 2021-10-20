@@ -23,7 +23,7 @@ tags:
 <h4 id="Canvas">Canvas</h4>
 
 <ul>
- <li>As part of the <a href="https://blog.mozilla.com/joe/2011/04/26/introducing-the-azure-project/">Azure project</a> the Direct2D Azure Backend <a   href="https://bugzilla.mozilla.org/show_bug.cgi?id=651858">has been implemented</a> and will significantly improve the performance of the 2D canvas.</li>
+ <li>As part of the <a href="https://blog.mozilla.com/joe/2011/04/26/introducing-the-azure-project/">Azure project</a> the Direct2D Azure Backend <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=651858">has been implemented</a> and will significantly improve the performance of the 2D canvas.</li>
  <li>Specifying invalid values when calling <code>setTransform()</code>, <code>bezierCurveTo()</code>, or <code>arcTo()</code> no longer throws an exception; these calls are now correctly silently ignored.</li>
  <li>The <a href="/en-US/docs/Web/API/CanvasRenderingContext2D#ispointinpath()"><code>isPointInPath()</code></a> method now correctly considers the transformation matrix when comparing the specified point to the current path.</li>
  <li>Calling <code>strokeRect()</code> with a zero width and height now correctly does nothing.</li>
@@ -108,7 +108,9 @@ tags:
 
 <p>These changes affect add-on developers as well as developers working on or with Mozilla code itself. Add-on developers should see <a href="/en-US/docs/Mozilla/Firefox/Updating_extensions_for_Firefox_7">Updating extensions for Firefox 7</a> for additional information.</p>
 
-<div class="note"><strong>Note:</strong> Firefox 7 requires that binary components be recompiled, as do all major releases of Firefox. See <a href="/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces">Binary Interfaces</a> for details.</div>
+<div class="note">
+  <p><strong>Note:</strong> Firefox 7 requires that binary components be recompiled, as do all major releases of Firefox. See <a href="/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces">Binary Interfaces</a> for details.</p>
+</div>
 
 <h3 id="JavaScript_code_modules">JavaScript code modules</h3>
 
@@ -166,8 +168,7 @@ tags:
  <li>The <code>nsIDOMWindow_2_0_BRANCH</code> interface has been merged into the {{ interface("nsIDOMWindowInternal") }} interface.</li>
  <li>{{ interface("nsINavHistoryObserver") }} methods with URI parameters now require a GUID as well.</li>
  <li>The <code>nsISHistory_2_0_BRANCH</code> interface has been merged into the {{ interface("nsISHistory") }} interface.</li>
- <li>{{ interface("nsITelemetry") }} has a new method, {{ ifmethod("nsITelemetry","getHistogramById") }} which returns a histogram by its ID, and a new attribute, <code>canRecord</code> which when set to <code>false</code> disables recording of telemetry statistics. Telemetry statistics are no longer recorded when in Private Browsing Mode. (see {{ bug("661574") }} and {{ bug("661573") }})<br>
-  Telemetry histograms defined with {{ ifmethod("nsITelemetry","newHistogram") }} will not be reported in the telemetry ping.</li>
+ <li>{{ interface("nsITelemetry") }} has a new method, {{ ifmethod("nsITelemetry","getHistogramById") }} which returns a histogram by its ID, and a new attribute, <code>canRecord</code> which when set to <code>false</code> disables recording of telemetry statistics. Telemetry statistics are no longer recorded when in Private Browsing Mode. (see {{ bug("661574") }} and {{ bug("661573") }}) Telemetry histograms defined with {{ ifmethod("nsITelemetry","newHistogram") }} will not be reported in the telemetry ping.</li>
  <li>The {{ interface("nsIMemoryReporter") }} interface has been substantially changed; if you use it, you will need to make some adjustments to your code.</li>
  <li>{{ interface("nsIXMLHttpRequest") }}, headers set by {{ ifmethod("nsIXMLHttpRequest","setRequestHeader") }} are sent with the request when following a redirect. Previously these headers would not be sent.</li>
  <li>{{ interface("nsIDocShell") }} has a new <code>allowWindowControl</code> attribute. If <code>true</code>, the docshell's content is allowed to control the window (that is, to move or resize the window).</li>
@@ -228,7 +229,7 @@ tags:
 
 <ul>
  <li>The structure of the library window (<code>places.xul</code>) <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=588027">has been cleaned up</a>. This <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=677417">may break extensions</a> and themes.</li>
- <li>The look of the print preview window <a   href="https://bugzilla.mozilla.org/show_bug.cgi?id=663028">has been modernized</a> and theme authors are encouraged to style it using the CSS pseudo-elements {{ cssxref("::-moz-page") }}, {{ cssxref("::-moz-page-sequence") }} and {{ cssxref("::-moz-scrolled-page-sequence") }}.</li>
+ <li>The look of the print preview window <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=663028">has been modernized</a> and theme authors are encouraged to style it using the CSS pseudo-elements {{ cssxref("::-moz-page") }}, {{ cssxref("::-moz-page-sequence") }} and {{ cssxref("::-moz-scrolled-page-sequence") }}.</li>
 </ul>
 
 <h2 id="See_also">See also</h2>

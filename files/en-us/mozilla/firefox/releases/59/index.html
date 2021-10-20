@@ -8,7 +8,7 @@ tags:
 ---
 <div>{{FirefoxSidebar}}</div>
 
-<p >This article provides information about the changes in Firefox 59 that will affect developers. Firefox 59 was released on March 13, 2018.</p>
+<p>This article provides information about the changes in Firefox 59 that will affect developers. Firefox 59 was released on March 13, 2018.</p>
 
 <h2 id="Changes_for_web_developers">Changes for web developers</h2>
 
@@ -83,7 +83,9 @@ tags:
 <ul>
  <li>The {{domxref("MediaStreamTrack")}} property {{domxref("MediaStreamTrack.muted")}}, along with the events {{event("mute")}} and {{event("unmute")}} and the corresponding event handlers, {{domxref("MediaStreamTrack.onmute", "onmute")}} and {{domxref("MediaStreamTrack.onmute", "onunmute")}}, have been implemented. A track's <code>muted</code> state indicates that the track is not currently able to provide media data.
 
-  <div class="note"><strong>Note:</strong> The <code>muted</code> state of a track isn't useful for what's typically thought of as muting and unmuting a track. Instead, use the {{domxref("MediaStreamTrack.enabled", "enabled")}} property; setting <code>enabled</code> to <code>false</code> causes the track to output only empty frames.</div>
+  <div class="note">
+    <p><strong>Note:</strong> The <code>muted</code> state of a track isn't useful for what's typically thought of as muting and unmuting a track. Instead, use the {{domxref("MediaStreamTrack.enabled", "enabled")}} property; setting <code>enabled</code> to <code>false</code> causes the track to output only empty frames.</p>
+  </div>
  </li>
  <li>Firefox 59 on Android now supports Apple's HTTPS Live Streaming (HLS) protocol for both audio and video. This non-standard protocol is being supported on mobile to improve compatibility with sites that require it for mobile streaming. There is not currently any plan to implement it on Firefox Desktop.</li>
  <li>The {{domxref("RTCRtpReceiver")}} methods {{domxref("RTCRtpReceiver.getContributingSources", "getContributingSources()")}} and {{domxref("RTCRtpReceiver.getSynchronizationSources", "getSynchronizationSources()")}} have been implemented to provide information about the sources of each RTP stream. However, a specification change occurred before release and we have disabled these by default behind the preference <code>media.peerconnection.rtpsourcesapi.enable</code> ({{bug(1363667)}}, {{bug(1430213)}}, and {{bug(1433236)}}.</li>

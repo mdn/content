@@ -7,12 +7,16 @@ tags:
   - Firefox 8
   - Guide
 ---
-<div>{{FirefoxSidebar}}</div><p>This article provides information on steps you need to take in order to update your existing add-on for compatibility with Firefox 8. See <a href="/en-US/docs/Mozilla/Firefox/Releases/8">Firefox 8 for developers</a> for a complete list of everything that changed in Firefox 8.</p>
+<div>{{FirefoxSidebar}}</div>
+
+<p>This article provides information on steps you need to take in order to update your existing add-on for compatibility with Firefox 8. See <a href="/en-US/docs/Mozilla/Firefox/Releases/8">Firefox 8 for developers</a> for a complete list of everything that changed in Firefox 8.</p>
+
 <h2 id="Do_you_need_to_do_anything_at_all">Do you need to do anything at all?</h2>
 <p>If your add-on is distributed on <a href="http://addons.mozilla.org">addons.mozilla.org</a> (AMO), it's been checked by an automated compatibility verification tool. Add-ons that don't use APIs that changed in Firefox 8, and have no binary components (which <a href="/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces">need to be recompiled for every major Firefox release</a>), have automatically been updated on AMO to indicate that they work in Firefox 8.</p>
 <p>So you should start by visiting AMO and looking to see if your add-on needs any work done at all.</p>
 <div class="note">
- <strong>Note:</strong> You should still test your add-on on Firefox 8, even if it's been automatically upgraded. There are edge cases that may not be automatically detected.</div>
+ <p><strong>Note:</strong> You should still test your add-on on Firefox 8, even if it's been automatically upgraded. There are edge cases that may not be automatically detected.</p>
+</div>
 <p>Once you've confirmed that you need to make changes, come on back to this page and read on.</p>
 <h2 id="Development_process_note">Development process note</h2>
 <p>It's worth noting that during startup, Firefox 8 now checks for third-party add-ons on its first startup, and presents a user interface letting users decide whether or not to enable them. If you drop your add-on into the profile directory in order to test it, Firefox won't enable it automatically on the first startup, but will show this interface instead.</p>

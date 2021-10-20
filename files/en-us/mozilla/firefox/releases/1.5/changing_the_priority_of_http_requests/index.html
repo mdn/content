@@ -23,14 +23,14 @@ tags:
 
 <p>To change the priority of an HTTP request, you need access to the <a href="/en-US/docs/XPCOM_Interface_Reference/nsIChannel">nsIChannel</a> that the request is being made on. If you do not have an existing channel, then you can create one as follows:</p>
 
-<pre>var ios = Components.classes["@<a href="https://mozilla.org/network/io-service;1">mozilla.org/network/io-service;1</a>"]
+<pre class="brush: none">var ios = Components.classes["@<a href="https://mozilla.org/network/io-service;1">mozilla.org/network/io-service;1</a>"]
                     .getService(Components.interfaces.nsIIOService);
 var ch = ios.newChannel("<a href="https://www.example.com/">https://www.example.com/</a>", null, null);
 </pre>
 
 <p>Once you have an <a href="/en-US/docs/XPCOM_Interface_Reference/nsIChannel">nsIChannel</a>, you can access the priority as follows:</p>
 
-<pre>if (ch instanceof Components.interfaces.nsISupportsPriority) {
+<pre class="brush: none">if (ch instanceof Components.interfaces.nsISupportsPriority) {
   ch.priority = Components.interfaces.nsISupportsPriority.PRIORITY_LOWEST;
 }
 </pre>
@@ -41,7 +41,7 @@ var ch = ios.newChannel("<a href="https://www.example.com/">https://www.example.
 
 <p>If you are programming in <a href="/en-US/docs/Web/JavaScript">JavaScript</a>, you will probably want to use <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>, a much higher level abstraction of an HTTP request. You can access the <code>channel</code> member of an <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> once you have called the <code>open</code> method on it, as follows:</p>
 
-<pre>var req = new XMLHttpRequest();
+<pre class="brush: none">var req = new XMLHttpRequest();
 req.open("GET", "<a href="https://www.example.com">https://www.example.com</a>", false);
 if (req.channel instanceof Components.interfaces.nsISupportsPriority) {
   req.channel.priority = Components.interfaces.nsISupportsPriority.PRIORITY_LOWEST;
@@ -49,14 +49,15 @@ if (req.channel instanceof Components.interfaces.nsISupportsPriority) {
 req.send(null);
 </pre>
 
-<p><br>
- Note that this example uses a synchronous <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>, which you should not use in practice.</p>
+<div class="note">
+  <p><strong>Note:</strong> This example uses a synchronous <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>, which you should not use in practice.</p>
+</div>
 
 <h4 id="Adjusting_priority">Adjusting priority</h4>
 
 <p><a href="/en-US/docs/nsISupportsPriority#adjustPriority">nsISupportsPriority</a> includes a convenience method named <code>adjustPriority</code>. You should use this if you want to alter the priority of a request by a certain amount. For example, if you would like to make a request have slightly higher priority than it currently has, you could do the following:</p>
 
-<pre>// assuming we already have a nsIChannel from above
+<pre class="brush: none">// assuming we already have a nsIChannel from above
 if (ch instanceof Components.interfaces.nsISupportsPriority) {
   ch.adjustPriority(-1);
 }
