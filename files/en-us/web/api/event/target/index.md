@@ -54,5 +54,4 @@ ul.addEventListener('click', hide, false);
 
 ## See also
 
-- [Comparison of Event
-  Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets)
+- [Comparison of Event Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets)
