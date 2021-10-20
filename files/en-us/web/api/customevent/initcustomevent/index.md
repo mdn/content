@@ -9,7 +9,7 @@ browser-compat: api.CustomEvent.initCustomEvent
 ---
 {{APIRef("DOM")}}{{Deprecated_header}}
 
-The **`CustomEvent.initCustomEvent()`** method initializes a `CustomEvent` object.
+The **`CustomEvent.initCustomEvent()`** method initializes a {{domxref("CustomEvent")}} object.
 If the event has already been dispatched, this method does nothing.
 
 Events initialized in this way must have been created with the {{domxref("Document.createEvent()")}} method.
