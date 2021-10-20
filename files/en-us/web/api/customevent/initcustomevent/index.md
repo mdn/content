@@ -30,7 +30,7 @@ event.initCustomEvent(type, canBubble, cancelable, detail);
 ### Parameters
 
 - `type`
-  - : Is a string containing the name of the event.
+  - : A string containing the name of the event.
 - `canBubble`
   - : Is a boolean value indicating whether the event bubbles up through the DOM
     or not.
