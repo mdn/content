@@ -22,7 +22,7 @@ tags:
 <h2 id="Bootstrapped_add-ons_can_remove_delayed-load_scripts">Bootstrapped add-ons can remove delayed-load scripts</h2>
 <p>If your add-on uses {{ ifmethod("nsIChromeFrameMessageManager", "loadFrameScript") }} with the delayed-load flag set, the script gets loaded into every frame created from that point on. This is great, except that until Firefox 9, there was no way to stop loading the script, so it would keep happening even after your add-on was shut down.</p>
 <p>Starting in Firefox 9, you should call the new {{ ifmethod("nsIChromeFrameMessageManager", "removeDelayedFrameScript") }} method to stop loading your script in newly-created frames. You do this like this, for example:</p>
-<pre class="brush: none">browser.messageManager.removeDelayedFrameScript("chrome://myextension/content/somescript.js");
+<pre>browser.messageManager.removeDelayedFrameScript("chrome://myextension/content/somescript.js");
 </pre>
 <h2 id="Interface_changes">Interface changes</h2>
 <ul>

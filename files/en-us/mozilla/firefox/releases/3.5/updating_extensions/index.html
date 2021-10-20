@@ -11,14 +11,14 @@ tags:
 <h3 id="Test_your_extension">Test your extension</h3>
 <p>Start by editing your extension's <code>install.rdf</code> file, updating <code>maxVersion</code> to 3.5b4 (if you're testing on Firefox 3.5 beta 4), and increase your extension's <code>version</code>.</p>
 <p>Then create a new Firefox profile so that your testing doesn't risk your usual profile.  Navigate to the directory containing Firefox, then issue the command:</p>
-<pre class="brush: none">firefox -createProfile testBeta4
+<pre>firefox -createProfile testBeta4
 </pre>
 <p>On the Mac, you need to navigate all the way into the Firefox application bundle:</p>
-<pre class="brush: none">cd /Applications/Firefox.app/Contents/MacOS/
+<pre>cd /Applications/Firefox.app/Contents/MacOS/
 firefox -createProfile testBeta4
 </pre>
 <p>Launch Firefox using the new profile by issuing this command on the command line:</p>
-<pre class="brush: none">firefox -P testBeta4
+<pre>firefox -P testBeta4
 </pre>
 <p>Test your extension thoroughly.  We suggest you set the following preferences to <code>true</code> in order to be alerted to any JavaScript warnings or exceptions:</p>
 <ul>
