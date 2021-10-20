@@ -33,7 +33,7 @@ event.initEvent(type, bubbles, cancelable);
 - _`type`_
   - : A string defining the type of event.
 - _`bubbles`_
-  - : Is a boolean value deciding whether the event should bubble up through the
+  - : A boolean value deciding whether the event should bubble up through the
     event chain or not. Once set, the read-only property {{ domxref("Event.bubbles") }}
     will give its value.
 - _`cancelable`_
