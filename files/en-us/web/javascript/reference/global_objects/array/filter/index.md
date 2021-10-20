@@ -49,7 +49,7 @@ filter(function callbackFn(element, index, array) { ... }, thisArg)
     - `index`{{optional_inline}}
       - : The index of the current element being processed in the array.
     - `array`{{optional_inline}}
-      - : The array `filter()` was called upon.
+      - : The array on which `filter()` was called.
 
 - `thisArg`{{optional_inline}}
   - : Value to use as `this` when executing `callbackFn`.
