@@ -22,7 +22,7 @@ The **`for await...of` statement** creates a loop iterating over async iterable 
 ## Syntax
 
 ```js
-for await (variable of iterable) {
+for await (const variable of iterable) {
   statement
 }
 ```
