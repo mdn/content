@@ -28,16 +28,16 @@ Once dispatched, it doesn't do anything anymore.
 event.initEvent(type, bubbles, cancelable);
 ```
 
-## Parameters
+### Parameters
 
 - _`type`_
-  - : Is a {{domxref("DOMString")}} defining the type of event.
+  - : A string defining the type of event.
 - _`bubbles`_
   - : Is a boolean value deciding whether the event should bubble up through the
     event chain or not. Once set, the read-only property {{ domxref("Event.bubbles") }}
     will give its value.
 - _`cancelable`_
-  - : Is a boolean value defining whether the event can be canceled. Once set, the
+  - : A boolean value defining whether the event can be canceled. Once set, the
     read-only property {{ domxref("Event.cancelable") }} will give its value.
 
 ## Return value
@@ -48,7 +48,7 @@ None.
 
 ```js
 // Create the event.
-var event = document.createEvent('Event');
+const event = document.createEvent('Event');
 
 // Create a click event that bubbles up and
 // cannot be canceled
@@ -73,4 +73,4 @@ elem.dispatchEvent(event);
 ## See also
 
 - The constructor to use instead of this deprecated method:
-  {{domxref("Event.Event", "Event()")}}. More specific constructors should be used for more specific event interfaces, inherited from this one.
+  {{domxref("Event.Event", "Event()")}}. To create more specific event interfaces than `Event`, use the constructor defined for the desired event interface.

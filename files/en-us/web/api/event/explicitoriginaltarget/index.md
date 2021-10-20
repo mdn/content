@@ -16,11 +16,11 @@ If the event was retargeted for some reason other than an anonymous boundary cro
 
 For example, mouse events are retargeted to their parent node when they happen over text nodes (see {{Bug(185889)}}), and in that case [`currentTarget`](/en-US/docs/Web/API/Event/currentTarget) will show the parent while this property will show the text node.
 
-This property also differs from [`originalTarget`](/en-US/docs/Web/API/Event/originalTarget) in that it will never contain anonymous content^.
+This property also differs from [`originalTarget`](/en-US/docs/Web/API/Event/originalTarget) in that it will never contain anonymous content.
 
 ## Value
 
-Returns the {{domxref("EventTarget")}} object, or null if there aren't one.
+Returns the {{domxref("EventTarget")}} object, or null if there isn't one.
 
 ## Example
 

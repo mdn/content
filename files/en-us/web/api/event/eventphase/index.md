@@ -38,7 +38,7 @@ flow. Possible values are:
 - `Event.BUBBLING_PHASE (3)`
   - : The event is propagating back up through the target's ancestors in reverse order,
     starting with the parent, and eventually reaching the containing {{domxref("Window")}}.
-    This is known as _bubbling_</em>_, and occurs only if {{domxref("Event.bubbles")}} is
+    This is known as _bubbling_, and occurs only if {{domxref("Event.bubbles")}} is
     `true`. {{domxref("EventListener", "Event listeners", "", 1)}} registered for this phase are triggered during this process.
 
 ## Example

@@ -30,7 +30,8 @@ A boolean value which is `true` if the event has not been
 canceled; otherwise, if the event has been canceled or the default has been prevented,
 the value is `false`.
 
-The value contained in `returnValue` is the opposite of the value returned by
+The value of `returnValue` is the opposite of the value returned by
+
 {{domxref("Event.defaultPrevented", "defaultPrevented")}}.
 
 ## Specifications

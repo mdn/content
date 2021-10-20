@@ -55,7 +55,7 @@ To offer protection against timing attacks and fingerprinting, the precision of
 `Event.timeStamp` might get rounded depending on browser settings.
 
 In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by
-default and defaults to 20µs in Firefox 59; and 2ms from Firefox 60.
+default and defaults to 2ms.
 
 ```js
 // reduced time precision (2ms) in Firefox 60

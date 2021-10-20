@@ -17,7 +17,7 @@ which the event occurred and which may be its descendant.
 
 ## Value
 
-An {{domxref("EventTarget")}} representing the object that the current event handler is attached.
+An {{domxref("EventTarget")}} representing the object to which the current event handler is attached.
 
 ## Examples
 
