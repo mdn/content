@@ -28,6 +28,7 @@ Do not specify a value for `aria-autocomplete`, or, if you do, set the value to 
 When implementing autocomplete functionality, ensure the suggested portion of the value is presented as selected text to enable distinguishing between a user's input and the suggestion. Make sure that when the suggested value is not the desired value, users can easily delete the suggestion or replace it by continuing to type.
 
 When implementing a list of values, DOM focus should remain on the text input while the suggestion list is displayed.
+
  - include [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls) with the value of the id of the suggested list of values. 
  - include [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) matching the role of the element that contains the collection of suggested values.
  - manage focus, if required, including using [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) if the collection container supports. 
