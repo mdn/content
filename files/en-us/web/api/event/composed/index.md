@@ -13,12 +13,6 @@ The read-only **`composed`** property of the
 {{domxref("Event")}} interface returns a boolean value which indicates whether
 or not the event will propagate across the shadow DOM boundary into the standard DOM.
 
-## Value
-
-A boolean value which is `true` if the event will cross from the
-shadow DOM into the standard DOM after reaching the shadow root. (That is, the first
-node in the shadow DOM in which the event began to propagate.)
-
 All UA-dispatched UI events are composed (click/touch/mouseover/copy/paste, etc.). Most
 other types of events are not composed, and so will return `false`. For
 example, this includes synthetic events that are created without their
@@ -29,6 +23,12 @@ Propagation only occurs if the {{domxref("Event.bubbles", "bubbles")}} property 
 if they were in `AT_TARGET` phase. You can determine the path the event will
 follow through the shadow root to the DOM root by calling
 {{domxref("Event.composedPath", "composedPath()")}}.
+
+## Value
+
+A boolean value which is `true` if the event will cross from the
+shadow DOM into the standard DOM after reaching the shadow root. (That is, the first
+node in the shadow DOM in which the event began to propagate.)
 
 If this value is `false`, the shadow root will be the last node to be
 offered the event.
