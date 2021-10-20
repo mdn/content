@@ -13,9 +13,9 @@ tags:
   - XPCOM
   - page scripts
 ---
-<div>{{AddonSidebar}}
+<div>{{AddonSidebar}}</div>
 <div class="notecard note">
-<p>The techniques described in this section are only available in Firefox, and only from Firefox 49 onwards.</p>
+<p><strong>Note:</strong> The techniques described in this section are only available in Firefox, and only from Firefox 49 onwards.</p>
 </div>
 
 <div class="notecard warning">
@@ -24,7 +24,6 @@ tags:
 <p>The isolation between content scripts and scripts loaded by web pages is intended to make it more difficult for hostile web pages to do this.</p>
 
 <p>Since the techniques described in this section break down that isolation, they are inherently dangerous and should be used with great care.</p>
-</div>
 </div>
 
 <p>As the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#dom_access">content scripts guide notes</a>, content scripts don't see changes made to the DOM by scripts loaded by web pages. This means that, for example, if a web page loads a library like jQuery, content scripts won't be able to use it, and have to load their own copy. Conversely, scripts loaded by web pages can't see changes made by content scripts.</p>

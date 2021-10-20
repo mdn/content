@@ -45,4 +45,4 @@ If you want your video playback to be able to react to changing network conditio
 For more information about transcoding:
 
 - [Transcoding assets for Media Source Extensions](/en-US/docs/Web/API/Media_Source_Extensions_API/Transcoding_assets_for_MSE)
-- [From Raw Video to Web Ready](https://developers.google.com/web/fundamentals/media/manipulating/files)
+- [From Raw Video to Web Ready](https://web.dev/media/#prepare-media-files-for-the-web)
