@@ -112,41 +112,17 @@ window.addEventListener("click", notifyBackgroundPage);</pre>
 
 <pre class="brush: js">// background-script.js
 
-async function handleMessage(request, sender) {
+function handleMessage(request, sender, sendResponse) {
   console.log("Message from the content script: " +
     request.greeting);
-  return {response: "Response from background script"};
+  sendResponse({response: "Response from background script"});
 }
 
 browser.runtime.onMessage.addListener(handleMessage);</pre>
 
-If you pass an <code>async</code> function to <code>addListener()</code> as shown in the example above, the listener will return a Promise for every message it receives,
-preventing other listeners from responding. If you want to declare multiple {{WebExtAPIRef('runtime.onMessage')}} listeners and have each respond to messages of a certain type,
-you must define the listener as a non-<code>async</code> function, and return a Promise only for the messages the listener is meant to respond to — and otherwise return false or
-undefined:
-
-<pre class="brush: js">// background-script.js
-
-function handleGreeting(request, sender) {
-  if (request.greeting) {
-    console.log("Greeting from the content script: " +
-      request.greeting);
-    return Promise.resolve({response: "Greeting from background script"});
-  }
-  return false;
-}
-
-function handleFarewell(request, sender) {
-  if (request.farewell) {
-    console.log("Farewell from the content script: " +
-      request.farewell);
-    return Promise.resolve({response: "Farewell from background script"});
-  }
-  return false;
-}
-
-browser.runtime.onMessage.addListener(handleGreeting);
-browser.runtime.onMessage.addListener(handleFarewell);</pre>
+<p><strong>Note:</strong>
+Examples showing an alternative implementation, not using the <code>sendResponse()</code> function but instead returning a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> (which is the preferred way for Firefox Add-ons), can be found in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#examples">examples section</a> of the {{WebExtAPIRef('runtime.onMessage')}} listener.  
+</p> 
 
 <p>{{WebExtExamples}}</p>
 
