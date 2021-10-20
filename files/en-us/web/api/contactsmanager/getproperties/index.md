@@ -31,7 +31,7 @@ This method receives no parameters.
 
 Returns a {{jsxref('Promise')}} that resolves with an {{jsxref('Array')}} of {{jsxref('String','strings')}} naming the contact properties that can be returned by the current system.
 
-Properties can include of the following:
+Properties can include the following:
 
 - `'name'`: The contact's name.
 - `'tel'`: The telephone number(s) of the contact.
