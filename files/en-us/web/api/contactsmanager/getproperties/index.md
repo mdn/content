@@ -10,7 +10,7 @@ tags:
   - contact picker
 browser-compat: api.ContactsManager.getProperties
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}
+{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}
 
 The **`getProperties()`** method of the
 {{domxref("ContactsManager")}} interface returns a {{jsxref('Promise')}} which resolves
@@ -29,10 +29,9 @@ This method receives no parameters.
 
 ### Return value
 
-Returns a {{jsxref('Promise')}} which when resolved returns an {{jsxref('Array')}} of
-available contact properties as {{jsxref('String','strings')}}.
+Returns a {{jsxref('Promise')}} that resolves with an {{jsxref('Array')}} of {{jsxref('String','strings')}} naming the contact properties that can be returned by the current system.
 
-Properties can be any of the following:
+Properties can include the following:
 
 - `'name'`: The contact's name.
 - `'tel'`: The telephone number(s) of the contact.
@@ -46,26 +45,33 @@ No exceptions are thrown.
 
 ## Examples
 
-The following asynchronous function uses the `getProperties` method to check
-for supported properties.
+### Verify Property Support
+
+The following asynchronous function uses the `getProperties()` method to check
+whether the current system supports the `icon` property.
 
 ```js
 async function checkProperties() {
   const supportedProperties = await navigator.contacts.getProperties();
-  if (supportedProperties.includes('name')) {
-    // run code for name support
+  if (!supportedProperties.includes('icon')) {
+    console.log("Your system does not support getting icons.");
   }
-  if (supportedProperties.includes('email')) {
-    // run code for email support
-  }
-  if (supportedProperties.includes('tel')) {
-    // run code for telephone number support
-  }
-  if (supportedProperties.includes('address')) {
-    // run code for address support
-  }
-  if (supportedProperties.includes('icon')) {
-    // run code for avatar support
+}
+```
+
+### Select Using Only Supported Properties
+
+The following example is similar to one for the {{domxref("ContactsManager.select", "select()")}} method. Instead of hard-coding the properties passed to `select()`, it uses `getProperties()` to ensure that only supported properties are passed. Otherwise, `select()` might throw a {{jsxref("TypeError")}}. `handleResults()` is a developer defined function.
+
+```js
+const supportedProperties = await navigator.contacts.getProperties();
+
+async function getContacts() {
+  try {
+      const contacts = await navigator.contacts.select(supportedProperties);
+      handleResults(contacts);
+  } catch (ex) {
+      // Handle any errors here.
   }
 }
 ```
