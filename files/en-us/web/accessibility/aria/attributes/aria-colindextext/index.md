@@ -2,7 +2,6 @@
 title: 'ARIA: aria-colindextext attribute'
 slug: Web/Accessibility/ARIA/Attributes/aria-colindextext
 tags: 
-
   - Accessibility
   - ARIA
   - ARIA attribute
