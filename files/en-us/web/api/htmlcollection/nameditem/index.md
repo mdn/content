@@ -50,7 +50,7 @@ const container = document.getElementById('personal');
 const titleSpan = container.children.namedItem('title');
 // The following variants return undefined instead of null if there's no element with a matching name or id
 const firstnameSpan = container.children['firstname'];
-const lastnameSpan = container.children.firstname;
+const lastnameSpan = container.children.lastname;
 ```
 
 ## Specification
