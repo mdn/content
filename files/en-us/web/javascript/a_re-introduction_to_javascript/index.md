@@ -625,7 +625,7 @@ That may seem a little silly, but functions have access to an additional variabl
 ```js
 function add() {
   var sum = 0;
-  for (var i = 0 ;i <arguments.length; i++) {
+  for (var i = 0; i < arguments.length; i++) {
     sum += arguments[i];
   }
   return sum;
