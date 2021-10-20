@@ -10,7 +10,7 @@ tags:
   - aria-colindextext
 ---
 
-The  `aria-colindextext`  attribute  "Defines a human readable text alternative of the numeric [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex). See related [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext)."
+The  `aria-colindextext`  attribute  "Defines a human readable text alternative of the numeric [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex).
 
 ## Description
 
@@ -45,7 +45,9 @@ In the above example, the table has 128 columns, of which only 4 columns are sho
 
 Only use `aria-colindextext` when the provided or calculated value of `aria-colindex` is not meaningful or does not reflect the displayed index. Whenever you include `aria-colindextext` you should also keep the `aria-colindex` because some assistive technologies rely upon the numeric column index for the purpose of keeping track of the user's position or providing alternative table navigation.
 
-> **Note:** While `aria-colindex` can be added to a row when all the columns present are contiguous, as sequential values can be deduced, `aria-colindextext` is NOT a supported property of row.
+> **Note:** While `aria-colindex` can be added to a row when all the columns present are contiguous, as sequential values can be deduced, `aria-colindextext` is NOT a supported property of row. 
+
+See related [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext)."
 
 ## Values
 
