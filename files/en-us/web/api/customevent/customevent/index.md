@@ -25,8 +25,8 @@ CustomEvent(typeArg, options);
   - : A dictionary, having the following fields:
 
     - `"detail"`, optional and defaulting to `null`, of any type,
-      containing an event-dependent value associated with the event,
-      available to the handler using the {{domxref("CustomEvent.detail")}} property.
+      containing an event-dependent value associated with the event.
+      This is available to the handler using the {{domxref("CustomEvent.detail")}} property.
 
     - Any field that can be used in the init object of the {{domxref("Event.Event", "Event()")}} constructor._
 
