@@ -12,7 +12,7 @@ browser-compat: api.CustomEvent.detail
 The  read-only **`detail`** property of the {{domxref("CustomEvent")}} interface
 returns any data passed when initializing the event.
 
-### Value
+## Value
 
 Whatever data the event was initialized with.
 
