@@ -46,6 +46,7 @@ This table is not very complex. Had this been a 100+ column spreadsheet or a gri
   ...
 </table>
 ```
+
 In the above example, the table has 128 columns of which only 4 columns are shown. The `aria-colindextext` is used in three columns to provide human readable text alternatives. By including `aria-colindextext="Value at start of 2021"`, assistive technologies can announce "Value at start of 2021" instead of "Column 110".
 
 Only use `aria-colindextext` when the provided or calculated value of `aria-colindex` is not meaningful or does not reflect the displayed index. Whenever you include `aria-colindextext`, also keep the `aria-colindex` as some assistive technologies rely on the numeric column index for the purpose of keeping track of the user's position and in providing alternative table navigation.
