@@ -18,7 +18,7 @@ For a list of available event types, see the [event reference](/en-US/docs/Web/E
 
 ## Value
 
-A {{domxref("DOMString")}} containing the type of {{domxref("Event")}}.
+A {{jsxref("String")}} containing the type of {{domxref("Event")}}.
 
 ## Example
 
