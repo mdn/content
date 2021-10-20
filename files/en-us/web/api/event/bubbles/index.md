@@ -32,8 +32,6 @@ function handleInput(e) {
 }
 ```
 
-> **Note:** Only certain events can bubble. Events that do bubble have this property set to `true`. You can use this property to check if an event is allowed to bubble or not.
-
 ## Specifications
 
 {{Specifications}}
