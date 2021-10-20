@@ -20,7 +20,7 @@ CustomEvent(typeArg, options);
 
 - `typeArg`
   - : A string representing the name of the event.
-- `customEventInit` {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : A dictionary, having the following fields:
 
