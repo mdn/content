@@ -23,7 +23,6 @@ default, allowing the default action to occur. Setting this property to
 > {{domxref("Event.defaultPrevented", "defaultPrevented")}} instead of this historical
 > property.
 
-
 ## Value
 
 A boolean value which is `true` if the event has not been
