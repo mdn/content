@@ -12,7 +12,7 @@ tags:
 <div>{{AddonSidebar}}</div>
 
 <div class="notecard note">
-<p>This article explains how you can debug extensions using WebExtension APIs on versions of Firefox earlier than version 50.</p>
+<p><strong>Note:</strong> This article explains how you can debug extensions using WebExtension APIs on versions of Firefox earlier than version 50.</p>
 
 <p>If you're using Firefox 50 or later, see the <a href="https://extensionworkshop.com/documentation/develop/debugging/">main article on debugging extensions</a>.</p>
 </div>
@@ -174,7 +174,7 @@ chrome.runtime.onMessage.addListener(notify);
 <p>Note that content scripts won't appear in the source listing until they are loaded. If you need to access them as soon as they load, try adding a <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/debugger">debugger;</a></code> statement at the start of your script.</p>
 
 <div class="notecard note">
-<p>Note: you only need, and can only access, the Browser Content Toolbox if you are developing against multiprocess Firefox.</p>
+<p><strong>Note:</strong> You only need, and can only access, the Browser Content Toolbox if you are developing against multiprocess Firefox.</p>
 </div>
 
 <div class="notecard warning">
@@ -202,7 +202,7 @@ chrome.runtime.onMessage.addListener(notify);
 <p><img alt="" src="disable-autohide.png">Now, when you open a panel in Firefox, it will stay open until you press Escape.</p>
 
 <div class="notecard note">
-<p>Note that this change applies to <a href="/en-US/docs/Tools/Browser_Toolbox#debugging_popups">built-in browser popups</a>, like the Hamburger menu, as well as extension popups.</p>
+<p><strong>Note:</strong> This change applies to <a href="/en-US/docs/Tools/Browser_Toolbox#debugging_popups">built-in browser popups</a>, like the Hamburger menu, as well as extension popups.</p>
 
 <p>Also note that the change is persistent, even across browser restarts. We're working on addressing this in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1251658">bug 1251658</a>, but until then you may prefer to re-enable autohide by clicking the button again before you close the Browser Toolbox.</p>
 

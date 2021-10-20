@@ -64,7 +64,7 @@ browser-compat: webextensions.manifest.web_accessible_resources
 <p><code>&lt;extension-UUID&gt;</code> is <strong>not</strong> your extension's ID. This ID is randomly generated for every browser instance. This prevents websites from fingerprinting a browser by examining the extensions it has installed.</p>
 
 <div class="notecard note">
-<p>In Chrome, an extension's ID is fixed. When a resource is listed in <code>web_accessible_resources</code>, it is accessible as <code>chrome-extension://&lt;your-extension-id&gt;/&lt;path/to/resource&gt;</code>.  </p>
+<p><strong>Note:</strong> In Chrome, an extension's ID is fixed. When a resource is listed in <code>web_accessible_resources</code>, it is accessible as <code>chrome-extension://&lt;your-extension-id&gt;/&lt;path/to/resource&gt;</code>.  </p>
 </div>
 
 <p>The recommended approach to obtaining the URL of the resource is to use <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL">runtime.getURL</a></code> passing the path relative to manifest.json, for example:</p>

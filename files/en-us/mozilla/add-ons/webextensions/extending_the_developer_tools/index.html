@@ -12,7 +12,7 @@ tags:
 <div>{{AddonSidebar}}</div>
 
 <div class="note">
-<p>This page describes devtools APIs as they exist in Firefox 55. Although the APIs are based on the <a href="https://developer.chrome.com/extensions/devtools">Chrome devtools APIs</a>, there are still many features that are not yet implemented in Firefox, and therefore are not documented here. To see which features are currently missing please see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#limitations_of_the_devtools_apis">Limitations of the devtools APIs</a>.</p>
+<p><strong>Note:</strong> This page describes devtools APIs as they exist in Firefox 55. Although the APIs are based on the <a href="https://developer.chrome.com/extensions/devtools">Chrome devtools APIs</a>, there are still many features that are not yet implemented in Firefox, and therefore are not documented here. To see which features are currently missing please see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#limitations_of_the_devtools_apis">Limitations of the devtools APIs</a>.</p>
 </div>
 
 <p><span class="seoSummary">You can use WebExtensions APIs to extend the browser's built-in developer tools.</span> To create a devtools extension, include the "<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page">devtools_page</a>" key in <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a>:</p>
@@ -87,7 +87,7 @@ tags:
 </ul>
 
 <div class="note">
-<p>Note that a clean view of the DOM is a security feature, intended to help prevent hostile pages from tricking extensions by redefining the behavior of native DOM functions. This means you need to be very careful using eval(), and should use a normal content script if you can.</p>
+<p><strong>Note:</strong> A clean view of the DOM is a security feature, intended to help prevent hostile pages from tricking extensions by redefining the behavior of native DOM functions. This means you need to be very careful using eval(), and should use a normal content script if you can.</p>
 </div>
 
 <p>Scripts loaded using <code>devtools.inspectedWindow.eval()</code> also don't see any JavaScript variables defined by content scripts.</p>
