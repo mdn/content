@@ -28,7 +28,7 @@ tags:
  <li>The {{cssxref("font-feature-settings")}} property has been updated to the latest syntax: <code>font-feature-settings: "lnum" 1;</code></li>
  <li>The CSS {{cssxref("text-transform")}} property has been extended to correctly handle Unicode ligature characters (like <code>ﬁ</code>).</li>
  <li>The CSS {{cssxref("word-break")}} property has been implemented.</li>
- <li>The {{cssxref("border-image")}} property has been updated to match the latest Specification and properties have been unprefixed. (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=713643">bug 713643</a>)</li>
+ <li>The {{cssxref("border-image")}} property has been updated to match the latest Specification and properties have been unprefixed. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=713643">bug 713643</a>)</li>
  <li>The <code>skew()</code> {{cssxref("transform")}} function dropped in Firefox 14 has been restored due to existing site compatibility. Authors are however, advised to use <code>skewX()</code> and <code>skewY(</code>) functions instead.</li>
  <li>The value <code>plaintext</code> of CSS {{cssxref("unicode-bidi")}} property now applies to inline elements too. ({{bug("746987")}}).</li>
 </ul>
@@ -36,16 +36,16 @@ tags:
 <h3 id="DOM">DOM</h3>
 
 <ul>
- <li>The DOM Events Level 3 methods <a href="/en-US/docs/Web/API/KeyboardEvent#getmodifierstate%28%29"><code>KeyboardEvent.getModifierState()</code></a> and <a href="/en-US/docs/Web/API/MouseEvent#getmodifierstate%28%29"><code>MouseEvent.getModifierState()</code></a>, which let you query the state of modifier keys, like <code>Ctrl</code> or <code>Shift</code>, have been implemented (bugs <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=630811">630811</a> and <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=731878">731878</a>). But the behavior conforms to the latest D3E draft. So, some modifier key names are different from IE ({{bug("769190")}}).</li>
+ <li>The DOM Events Level 3 methods <a href="/en-US/docs/Web/API/KeyboardEvent#getmodifierstate%28%29"><code>KeyboardEvent.getModifierState()</code></a> and <a href="/en-US/docs/Web/API/MouseEvent#getmodifierstate%28%29"><code>MouseEvent.getModifierState()</code></a>, which let you query the state of modifier keys, like <code>Ctrl</code> or <code>Shift</code>, have been implemented (bugs <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=630811">630811</a> and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=731878">731878</a>). But the behavior conforms to the latest D3E draft. So, some modifier key names are different from IE ({{bug("769190")}}).</li>
  <li>On mouse events, support for querying the state of the mouse buttons using the <a href="/en-US/docs/Web/API/MouseEvent"><code>MouseEvent.buttons</code></a> attribute, has been implemented.</li>
  <li>On keyboard events, support for querying the key location (standard, left or right of modifier key, in the Numpad) using the <a href="/en-US/docs/Web/API/KeyboardEvent#attributes_location">KeyboardEvent.location</a> attribute, has been implemented ({{bug("166240")}}).</li>
  <li>KeyboardEvent.keycode result has been computed from better rules which were almost same on Windows/Linux/Mac. And now they are available on some keyboard layouts which are not ASCII capable layouts on Linux and Mac, such as Arabic, Cyrillic, Thai and so on. See <a href="/en-US/docs/Web/API/KeyboardEvent#virtual_key_codes">the document for virtual key codes</a>.</li>
  <li>The <a href="/en-US/docs/Web/API/Range/detach"><code>range.detach()</code></a> method has been transformed in a no-op and will probably be removed in the future.</li>
- <li>The method <code>HTMLVideoElement.mozHasAudio()</code> has been implemented. It indicates if there is an audio track associated to a given video element. (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=480376">bug </a><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=480376">480376</a>)</li>
- <li>The <code>Performance</code> API has a new method, <a href="/en-US/docs/Web/API/Performance/now"><code>now()</code></a>, supporting high resolution timers of type<code> DOMHighResTimeStamp</code>. (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=539095">bug 539095</a>).</li>
+ <li>The method <code>HTMLVideoElement.mozHasAudio()</code> has been implemented. It indicates if there is an audio track associated to a given video element. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=480376">bug </a><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=480376">480376</a>)</li>
+ <li>The <code>Performance</code> API has a new method, <a href="/en-US/docs/Web/API/Performance/now"><code>now()</code></a>, supporting high resolution timers of type<code> DOMHighResTimeStamp</code>. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=539095">bug 539095</a>).</li>
  <li>The <a href="/en-US/docs/API/WebSMS">WebSMS API</a> has been updated and now supports a <code>read</code> attribute indicating whether an SMS text message is read or unread.</li>
- <li>The <a class="link-https" href="https://wiki.mozilla.org/WebAPI/FileHandleAPI">FileHandle API</a> has been implemented.</li>
- <li>The <a href="/en-US/docs/Web/API/Blob"><code>Blob</code></a> constructor now takes <code>ArrayBufferView</code> as a member of <code><var>blobParts</var></code> parameter in addition to <code>ArrayBuffer</code>. (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=752402">bug 752402</a>)</li>
+ <li>The <a href="https://wiki.mozilla.org/WebAPI/FileHandleAPI">FileHandle API</a> has been implemented.</li>
+ <li>The <a href="/en-US/docs/Web/API/Blob"><code>Blob</code></a> constructor now takes <code>ArrayBufferView</code> as a member of <code><var>blobParts</var></code> parameter in addition to <code>ArrayBuffer</code>. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=752402">bug 752402</a>)</li>
  <li>The <code>DeviceLightEvent</code> specified in the <a href="https://www.w3.org/TR/ambient-light/">Ambient Light Events Working Draft</a> has been implemented.</li>
  <li>The {{domxref("DeviceProximityEvent")}} and {{domxref("UserProximityEvent")}} <a href="https://www.w3.org/TR/proximity/">Proximity Events</a> have been implemented.</li>
  <li>The {{domxref("File")}} <code>lastModifiedDate</code> property has been implemented. ({{bug("673586")}})</li>
@@ -55,9 +55,9 @@ tags:
 
 <ul>
  <li>Support for the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView"><code>DataView</code></a> interface from the Typed Arrays specification has been added. This provides low-level access to the data contained in an <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a>.</li>
- <li>Support for new ECMAScript 2015 built-ins:  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN"><code>Number.isNaN()</code></a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toInteger"><code>Number.toInteger()</code></a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger"><code>Number.isInteger()</code></a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isFinite"><code>Number.isFinite()</code></a> has been added. (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=749818">bug 749818</a>, <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=749818">bug 761495</a>, <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=749818">bug 761480</a>).</li>
- <li>Support for ECMAScript 2015 <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">default parameters</a> has been added. (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=757676">bug 757676</a>).</li>
- <li>Support for ECMAScript 2015 <a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest parameters</a> has been added. (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=574132">bug 574132</a>).</li>
+ <li>Support for new ECMAScript 2015 built-ins:  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN"><code>Number.isNaN()</code></a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toInteger"><code>Number.toInteger()</code></a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger"><code>Number.isInteger()</code></a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isFinite"><code>Number.isFinite()</code></a> has been added. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=749818">bug 749818</a>, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=749818">bug 761495</a>, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=749818">bug 761480</a>).</li>
+ <li>Support for ECMAScript 2015 <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">default parameters</a> has been added. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=757676">bug 757676</a>).</li>
+ <li>Support for ECMAScript 2015 <a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest parameters</a> has been added. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=574132">bug 574132</a>).</li>
 </ul>
 
 <h3 id="WebGL">WebGL</h3>
@@ -69,7 +69,7 @@ tags:
 <h3 id="MathML">MathML</h3>
 
 <ul>
- <li>Mathematical operators can now use downloadable fonts specified with {{cssxref("@font-face")}}. This makes the <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/mathml-fonts/">MathML-fonts add-on</a> work with stretchy operators too.</li>
+ <li>Mathematical operators can now use downloadable fonts specified with {{cssxref("@font-face")}}. This makes the <a href="https://addons.mozilla.org/en-US/firefox/addon/mathml-fonts/">MathML-fonts add-on</a> work with stretchy operators too.</li>
  <li>The <code>selection</code> attribute of the {{MathMLElement("maction")}} is now only taken into account with the <code>toggle</code> actiontype.</li>
  <li><a href="https://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1">Deprecated namedspace binding</a> has been removed ({{bug('673759')}}).</li>
  <li>Supported syntax for <a href="/en-US/docs/Web/MathML/Attribute/Values">Length</a> and {{MathMLElement("mpadded")}} values have been made closer to the one specified in MathML3 spec.</li>
@@ -85,7 +85,7 @@ tags:
 <h3 id="Network">Network</h3>
 
 <ul>
- <li>Support for the SPDY v3 protocol has landed. It is disabled by default and can be enabled by setting the preference <code>network.http.spdy.enabled.v3</code> to true. (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=737470">bug 737470</a>)</li>
+ <li>Support for the SPDY v3 protocol has landed. It is disabled by default and can be enabled by setting the preference <code>network.http.spdy.enabled.v3</code> to true. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=737470">bug 737470</a>)</li>
 </ul>
 
 <h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
