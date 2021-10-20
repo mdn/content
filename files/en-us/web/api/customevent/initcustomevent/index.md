@@ -37,7 +37,7 @@ event.initCustomEvent(type, canBubble, cancelable, detail);
 - `cancelable`
   - : Is a boolean value indicating whether the event is cancelable.
 - `detail`
-  - : Any data, that will be available to the handler through the {{domxref("CustomEvent.detail")}} property.
+  - : Any data that will be available to the handler through the {{domxref("CustomEvent.detail")}} property.
 
 ## Specifications
 
