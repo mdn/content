@@ -41,7 +41,7 @@ browser-compat: webextensions.api.cookies.getAll
   <dt><code>name</code>{{optional_inline}}</dt>
   <dd>A <code>string</code> representing a name that the cookies should have.</dd>
   <dt><code>partitionKey</code>{{optional_inline}}</dt>
-  <dd>An <code>object</code> representing which cookies managed under <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#dynamic_partitioning">dynamic partitioning</a> to return:
+  <dd>An <code>object</code> defining which <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#Storage_partitioning">storage partitions</a> to return cookies from:
     <ul>
       <li>if omitted, returns only cookies from unpartitioned storage.</li>
       <li>if included without <code>topLevelSite</code>, returns all cookies from partitioned and unpartitioned storage.</li>
@@ -50,7 +50,7 @@ browser-compat: webextensions.api.cookies.getAll
    This object contains:
    <dl class="reference-values">
    <dt><code>topLevelSite</code>{{optional_inline}}</dt>
-   <dd>A <code>string</code> representing the first-party URL of the top-level site partition containing the cookies.</dd>
+   <dd>A <code>string</code> representing the first-party URL of the top-level site storage partition containing the cookies.</dd>
    </dl>
   </dd>
   <dt><code>path</code>{{optional_inline}}</dt>
