@@ -80,7 +80,7 @@ When you click on the `<open-shadow>` element and then the
 
 1. The `composed` property returns `true` because the
     `click` event is always able to propagate across shadow boundaries.
-2. You'll notice a difference in the value of `composedPath` for the two
+2. A difference in the value of `composedPath` for the two
     elements.
 
 The `<open-shadow>` element's composed path is this:
