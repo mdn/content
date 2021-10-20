@@ -639,7 +639,7 @@ That's really not any more useful than writing `2 + 3 + 4 + 5` though. Let's cre
 ```js
 function avg() {
   var sum = 0;
-  for (var i = 0;i <arguments.length; i++) {
+  for (var i = 0; i < arguments.length; i++) {
     sum += arguments[i];
   }
   return sum / arguments.length;
