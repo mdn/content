@@ -22,15 +22,15 @@ tags:
  <li>
   <p>Javascript APIs:</p>
   <ul>
-   <li><strong>In Chrome:</strong> JavaScript APIs are accessed under the <code>chrome</code> namespace. (cf. <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=798169">Chrome bug 798169</a>)</li>
    <li><strong>In Firefox and Edge:</strong> JavaScript APIs are accessed under the <code>browser</code> namespace.</li>
+   <li><strong>In Chrome:</strong> JavaScript APIs are accessed under the <code>chrome</code> namespace. (cf. <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=798169">Chrome bug 798169</a>)</li>
   </ul>
  </li>
  <li>
   <p>Asynchronous APIs:</p>
   <ul>
+    <li><strong>In Firefox:</strong> Asynchronous APIs are implemented using promises.</li>
     <li><strong>In Chrome and Edge:</strong> Asynchronous APIs are implemented using callbacks. (cf. <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=328932">Chrome bug 328932</a>)</li>
-      <li><strong>In Firefox:</strong> Asynchronous APIs are implemented using promises.</li>
   </ul>
  </li>
 </ul>
@@ -41,29 +41,19 @@ tags:
 
 <h3><em>chrome.*</em> and <em>browser.*</em> namespace</h3>
 
-<p><strong>In Chrome:</strong> Extensions access privileged JavaScript APIs using the <code>chrome</code> namespace.</p>
-<pre class="brush: js">chrome.browserAction.setIcon({path: "path/to/icon.png"});</pre>
-
-<p><strong>In Firefox:</strong> The equivalent APIs are accessed using the <code>browser</code> namespace.
-<pre class="brush: js">browser.browserAction.setIcon({path: "path/to/icon.png"});</pre>
+<ul>
+  <li><strong>In Firefox:</strong> The equivalent APIs are accessed using the <code>browser</code> namespace.
+  <pre class="brush: js">browser.browserAction.setIcon({path: "path/to/icon.png"});</pre>
+  </li>
+  <li><strong>In Chrome:</strong> Extensions access privileged JavaScript APIs using the <code>chrome</code> namespace.
+    <pre class="brush: js">chrome.browserAction.setIcon({path: "path/to/icon.png"});</pre>
+  </li>
+</ul>
 
 <h3>Callbacks and promises</h3>
 
-<p><strong>In Chrome:</strong> Asynchronous APIs use callbacks to return values, and {{WebExtAPIRef("runtime.lastError")}} to communicate errors.</p>
-<pre class="brush: js">function logCookie(c) {
-  if (chrome.runtime.lastError) {
-    console.error(chrome.runtime.lastError);
-  } else {
-    console.log(c);
-  }
-}
-
-chrome.cookies.set(
-  {url: "https://developer.mozilla.org/"},
-  logCookie
-);</pre>
-
-<p><strong>In Firefox:</strong> Asynchronous APIs use <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a> to return values instead.</p>
+<ul>
+  <li><strong>In Firefox:</strong> Asynchronous APIs use <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a> to return values instead.
 <pre class="brush: js">function logCookie(c) {
   console.log(c);
 }
@@ -76,6 +66,22 @@ let setCookie = browser.cookies.set(
   {url: "https://developer.mozilla.org/"}
 );
 setCookie.then(logCookie, logError);</pre>
+  </li>
+  <li><strong>In Chrome:</strong> Asynchronous APIs use callbacks to return values, and {{WebExtAPIRef("runtime.lastError")}} to communicate errors.
+<pre class="brush: js">function logCookie(c) {
+  if (chrome.runtime.lastError) {
+    console.error(chrome.runtime.lastError);
+  } else {
+    console.log(c);
+  }
+}
+
+chrome.cookies.set(
+  {url: "https://developer.mozilla.org/"},
+  logCookie
+);</pre>
+  </li>
+</ul>
 
 <h3 id="Firefox_supports_both_the_chrome_and_browser_namespaces">Firefox supports both the <em>chrome</em> and <em>browser</em> namespaces</h3>
 
@@ -151,33 +157,35 @@ setCookie.then(logCookie, logError);</pre>
 
 <h4>WebRequest API</h4>
 
-<p><strong>In Firefox:</strong></p>
 <ul>
- <li>Requests can be redirected only if their original URL uses the <code>http:</code> or <code>https:</code> scheme.</li>
- <li>The <code>activeTab</code> permission does not allow intercepting network requests in the current tab. (See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1617479">bug 1617479</a>)</li>
- <li>Events are not fired for system requests (for example, extension upgrades or searchbar suggestions).
-  <ul>
-   <li><strong>From Firefox 57 onwards:</strong> Firefox makes an exception for extensions that need to intercept {{WebExtAPIRef("webRequest.onAuthRequired")}} for proxy authorization. See the documentation for {{WebExtAPIRef("webRequest.onAuthRequired")}}.</li>
-  </ul>
- </li>
- <li>If an extension wants to redirect a public (e.g., HTTPS) URL to an <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">extension page</a>, the extension's <code>manifest.json</code> file must contain a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources"><code>web_accessible_resources</code></a> key with the URL of the extension page.
-  <ul>
-   <li>
-    <div class="notecard note">
-    <p><strong>Note:</strong> <em>Any</em> website may then link or redirect to that URL, and extensions should treat any input (POST data, for example) as if it came from an untrusted source, just as a normal web page should.</p>
-    </div>
-   </li>
-  </ul>
- </li>
+  <li><strong>In Firefox:</strong>
+    <ul>
+     <li>Requests can be redirected only if their original URL uses the <code>http:</code> or <code>https:</code> scheme.</li>
+     <li>The <code>activeTab</code> permission does not allow intercepting network requests in the current tab. (See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1617479">bug 1617479</a>)</li>
+     <li>Events are not fired for system requests (for example, extension upgrades or searchbar suggestions).
+      <ul>
+       <li><strong>From Firefox 57 onwards:</strong> Firefox makes an exception for extensions that need to intercept {{WebExtAPIRef("webRequest.onAuthRequired")}} for proxy authorization. See the documentation for {{WebExtAPIRef("webRequest.onAuthRequired")}}.</li>
+      </ul>
+     </li>
+     <li>If an extension wants to redirect a public (e.g., HTTPS) URL to an <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">extension page</a>, the extension's <code>manifest.json</code> file must contain a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources"><code>web_accessible_resources</code></a> key with the URL of the extension page.
+      <ul>
+       <li>
+        <div class="notecard note">
+        <p><strong>Note:</strong> <em>Any</em> website may then link or redirect to that URL, and extensions should treat any input (POST data, for example) as if it came from an untrusted source, just as a normal web page should.</p>
+        </div>
+       </li>
+      </ul>
+     </li>
+     <li>Some of the <code>browser.webRequest.*</code> APIs allow returning Promises that resolves <code>webRequest.BlockingResponse</code> asynchronously.</li>
+    </ul>
+  <li><strong>In Chrome:</strong> Only <code>webRequest.onAuthRequired</code> supports asynchronous <code>webRequest.BlockingResponse</code> via supplying <code>'asyncBlocking'</code>.</li>
 </ul>
-
-<p><strong>In Firefox (starting from Firefox 52):</strong> Some of the <code>browser.webRequest.*</code> APIs allow returning Promises that resolves <code>webRequest.BlockingResponse</code> asynchronously.</p>
-
-<p><strong>In Chrome:</strong> Only <code>webRequest.onAuthRequired</code> supports asynchronous <code>webRequest.BlockingResponse</code> via supplying <code>'asyncBlocking'</code>.</p>
 
 <h4>Windows API</h4>
 
-<p><strong>In Firefox:</strong> <code>onFocusChanged</code> of the {{WebExtAPIRef("windows")}} API, will trigger multiple times for a given focus change.</p>
+<ul>
+  <li><strong>In Firefox:</strong> <code>onFocusChanged</code> of the {{WebExtAPIRef("windows")}} API, will trigger multiple times for a given focus change.</li>
+</ul>
 
 <h3 id="Unsupported_APIs">Unsupported APIs</h3>
 
@@ -189,53 +197,65 @@ setCookie.then(logCookie, logError);</pre>
 
 <h3 id="Miscellaneous_incompatibilities">Miscellaneous incompatibilities</h3>
 
-<h4>URLs in CSS:</h4>
+<h4>URLs in CSS</h4>
 
-<p><strong>In Firefox</strong>: URLs in injected CSS files are resolved relative to <em>the CSS file itself</em>.</p>
-
-<p><strong>In Chrome</strong>: URLs in injected CSS files are resolved relative to <em>the page they are injected into</em>.</p>
+<ul>
+  <li><strong>In Firefox:</strong> URLs in injected CSS files are resolved relative to <em>the CSS file itself</em>.</li>
+  <li><strong>In Chrome:</strong> URLs in injected CSS files are resolved relative to <em>the page they are injected into</em>.</li>
+</ul>
 
 <h4>Support for dialogs in background pages</h4>
 
-<p><strong>In Firefox:</strong> <a href="/en-US/docs/Web/API/Window/alert"><code>alert()</code></a>, <a href="/en-US/docs/Web/API/Window/confirm"><code>confirm()</code></a>, and <a href="/en-US/docs/Web/API/Window/prompt"><code>prompt()</code></a> are not supported in background pages:</p>
+<ul>
+  <li><strong>In Firefox:</strong> <a href="/en-US/docs/Web/API/Window/alert"><code>alert()</code></a>, <a href="/en-US/docs/Web/API/Window/confirm"><code>confirm()</code></a>, and <a href="/en-US/docs/Web/API/Window/prompt"><code>prompt()</code></a> are not supported in background pages:</li>
+</ul>
 
-<h4>web_accessible_resources:</h4>
+<h4>web_accessible_resources</h4>
 
-<p><strong>In Firefox:</strong> Resources are assigned a random UUID that changes for every instance of Firefox: <code>moz-extension://«<var>random-UUID</var>»/«path»</code>. This randomness can prevent you from doing a few things, such as add your specific extension's URL to another domain's CSP policy.</p>
+<ul>
+  <li><strong>In Firefox:</strong> Resources are assigned a random UUID that changes for every instance of Firefox: <code>moz-extension://«<var>random-UUID</var>»/«path»</code>. This randomness can prevent you from doing a few things, such as add your specific extension's URL to another domain's CSP policy.</li>
+  <li><strong>In Chrome:</strong> When a resource is listed in <code>web_accessible_resources</code>, it is accessible as <code>chrome-extension://«your-extension-id»/«path»</code>. The extension ID is fixed for a given extension.</li>
+</ul>
 
-<p><strong>In Chrome</strong>: When a resource is listed in <code>web_accessible_resources</code>, it is accessible as <code>chrome-extension://«your-extension-id»/«path»</code>. The extension ID is fixed for a given extension.</p>
+<h4>Manifest "key" property</h4>
 
-<h4>Manifest "key" property:</h4>
+<ul>
+  <li><strong>In Firefox:</strong> Since Firefox uses random UUIDs for <code>web_accessible_resources</code>, this property is unsupported.</li>
+  <li><strong>In Chrome:</strong> When working with an unpacked extension, the manifest may include a <a href="https://developer.chrome.com/extensions/manifest/key"><code>"key"</code> property</a> to pin the extension ID across different machines. This is mainly useful when working with <code>web_accessible_resources</code>.</li>
+</ul>
 
-<p><strong>In Firefox</strong>: Since Firefox uses random UUIDs for <code>web_accessible_resources</code>, this property is unsupported.</p>
+<h4>Content script HTTP(S) requests</h4>
 
-<p><strong>In Chrome</strong>: When working with an unpacked extension, the manifest may include a <a href="https://developer.chrome.com/extensions/manifest/key"><code>"key"</code> property</a> to pin the extension ID across different machines. This is mainly useful when working with <code>web_accessible_resources</code>.</p>
+<ul>
+  <li><strong>In Firefox:</strong> When a content script makes an HTTP(S) request, you <em>must</em> provide absolute URLs.</li>
+  <li><strong>In Chrome:</strong> When a content script makes a request (for example, using <a href="/en-US/docs/Web/API/Fetch_API/Using_Fetch"><code>fetch()</code></a>) to a relative URL (like <code>/api</code>), it will be sent to <code>https://example.com/api</code>.</li>
+</ul>
 
-<h4>Content script HTTP(S) requests:</h4>
+<h4>Sharing variables between content scripts</h4>
 
-<p><strong>In Firefox</strong>: When a content script makes an HTTP(S) request, you <em>must</em> provide absolute URLs.</p>
+<ul>
+  <li><strong>In Firefox:</strong> You cannot share variables between content scripts by assigning them to <code>this.{variableName}</code> in one script and then attempting to access them using <code>window.{variableName}</code> in another. This is a limitation created by the sandbox environment in Firefox. This limitation may be removed, see {{bug(1208775)}}.</li>
+</ul>
 
-<p><strong>In Chrome</strong>: When a content script makes a request (for example, using <a href="/en-US/docs/Web/API/Fetch_API/Using_Fetch"><code>fetch()</code></a>) to a relative URL (like <code>/api</code>), it will be sent to <code>https://example.com/api</code>.</p>
+<h4>Content script lifecycle during navigation</h4>
 
-<h4>Sharing variables between content scripts:</h4>
+<ul>
+  <li>
+    <p><strong>In Firefox:</strong> Content scripts remain injected in a web page after the user has navigated away, however, window object properties are destroyed. For example, if a content script sets <code>window.prop1 = "prop"</code>  and the user then navigates away and returns to the page <code>window.prop1</code> is undefined. This issue is tracked in {{bug(1525400)}}.</p>
 
-<p><strong>In Firefox</strong>: You cannot share variables between content scripts by assigning them to <code>this.{variableName}</code> in one script and then attempting to access them using <code>window.{variableName}</code> in another. This is a limitation created by the sandbox environment in Firefox. This limitation may be removed, see {{bug(1208775)}}.</p>
-
-<h4>Content script lifecycle during navigation:</h4>
-
-<p><strong>In Firefox</strong>: Content scripts remain injected in a web page after the user has navigated away, however, window object properties are destroyed. For example, if a content script sets <code>window.prop1 = "prop"</code>  and the user then navigates away and returns to the page <code>window.prop1</code> is undefined. This issue is tracked in {{bug(1525400)}}.</p>
-
-<p>To mimic the behavior of Chrome, listen for the <a href="/en-US/docs/Web/API/Window/pageshow_event">pageshow</a> and <a href="/en-US/docs/Web/API/Window/pagehide_event">pagehide</a> events. Then simulate the injection or destruction of the content script.</p></li>
-
-<p><strong>In Chrome</strong>: Content scripts are destroyed when the user navigates away from a web page. If the user then returns to the page through history, by clicking the back button, the content script is injected into the web page again.</p>
+    <p>To mimic the behavior of Chrome, listen for the <a href="/en-US/docs/Web/API/Window/pageshow_event">pageshow</a> and <a href="/en-US/docs/Web/API/Window/pagehide_event">pagehide</a> events. Then simulate the injection or destruction of the content script.</p>
+  </li>
+  <li><strong>In Chrome:</strong> Content scripts are destroyed when the user navigates away from a web page. If the user then returns to the page through history, by clicking the back button, the content script is injected into the web page again.</li>
+</ul>
 
 <h4>"per-tab" zoom behavior</h4>
 
+<ul>
+  <li><strong>In Firefox:</strong> The zoom level persists across page loads and navigation within the tab.</li>
+  <li><strong>In Chrome:</strong> Zoom changes are reset on navigation; navigating a tab will always load pages with their per-origin zoom factors.</li>
+</ul>
+
 <p>See {{WebExtAPIRef("tabs.ZoomSettingsScope")}}.</p>
-
-<p><strong>In Firefox</strong>: The zoom level persists across page loads and navigation within the tab.</p>
-
-<p><strong>In Chrome</strong>: Zoom changes are reset on navigation; navigating a tab will always load pages with their per-origin zoom factors.</p>
 
 <h2 id="manifest.json_keys">manifest.json keys</h2>
 
@@ -257,21 +277,25 @@ setCookie.then(logCookie, logError);</pre>
 
 <h3 id="allowed_extensions">allowed_extensions</h3>
 
-<p><strong>In Firefox:</strong> The manifest key is called <code>allowed_extensions</code>.</p>
-
-<p><strong>In Chrome:</strong> The manifest key is called <code>allowed_origins</code> instead.</p>
+<ul>
+  <li><strong>In Firefox:</strong> The manifest key is called <code>allowed_extensions</code>.</li>
+  <li><strong>In Chrome:</strong> The manifest key is called <code>allowed_origins</code> instead.</li>
+</ul>
 
 <h3 id="App_manifest_location">App manifest location</h3>
 
-<p><strong>In Chrome:</strong> The app manifest is expected in a different place. See <a href="https://developer.chrome.com/extensions/nativeMessaging#native-messaging-host-location">Native messaging host location</a> in the Chrome docs.</p>
+<ul>
+  <li><strong>In Chrome:</strong> The app manifest is expected in a different place. See <a href="https://developer.chrome.com/extensions/nativeMessaging#native-messaging-host-location">Native messaging host location</a> in the Chrome docs.</li>
+</ul>
 
 <h2 id="Data_cloning_algorithm">Data cloning algorithm</h2>
 
 <p>Some extension APIs allow an extension to send data from one part of the extension to another, such as {{WebExtAPIRef("runtime.sendMessage()")}}, {{WebExtAPIRef("tabs.sendMessage()")}}, {{WebExtAPIRef("runtime.onMessage")}}, the <code>postMessage()</code> method of {{WebExtAPIRef("runtime.port")}}, and {{WebExtAPIRef("tabs.executeScript()")}}.</p>
 
-<p><strong>In Firefox:</strong> The <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">Structured clone algorithm</a> is used.</p>
-
-<p><strong>In Chrome:</strong> The <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#description">JSON serialization algorithm</a> is used. It may switch to structured cloning in the future (<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=248548">issue 248548</a>).</p>
+<ul>
+  <li><strong>In Firefox:</strong> The <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">Structured clone algorithm</a> is used.</li>
+  <li><strong>In Chrome:</strong> The <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#description">JSON serialization algorithm</a> is used. It may switch to structured cloning in the future (<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=248548">issue 248548</a>).</li>
+</ul>
 
 <p>The Structured clone algorithm supports more types than the JSON serialization algorithm. A notable exception are (DOM) objects with a <code>toJSON</code> method. DOM objects are not cloneable nor JSON-serializable by default, but with a <code>toJSON()</code> method, these can be JSON-serialized (but still not cloned with the structured cloning algorithm). Examples of JSON-serializable objects that are not structured cloneable include instances of {{domxref("URL")}} and {{domxref("PerformanceEntry")}}.</p>
 
