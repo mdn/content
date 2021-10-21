@@ -169,7 +169,10 @@ writableStream.write({ type: "truncate", size: size })
 
 ## Specifications
 
-{{Specifications}}
+| Specification                                        | Status                                           | Comment             |
+| ---------------------------------------------------- | ------------------------------------------------ | ------------------- |
+| {{SpecName('File System Access API')}} | {{Spec2('File System Access API')}} | Initial definition. |
+
 
 ## See also
 
