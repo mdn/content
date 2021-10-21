@@ -190,6 +190,6 @@ When a URL is used as a path for a filter, the URL must be one of the following:
 
 - {{cssxref("&lt;gradient&gt;")}}
 - {{cssxref("element()")}}
-- {{cssxref("image()")}}
-- {{cssxref("image-set()")}}
+- {{cssxref("image/image()")}}
+- {{cssxref("image/image-set()")}}
 - {{cssxref("cross-fade()")}}
