@@ -100,6 +100,7 @@ Usable in all roles; except in for elements with the role of [`gridcell`](/en-US
 ## See Also
 
 - [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
+- {{cssxref(':local-link')}}
 
 <section id="Quick_links">
 
