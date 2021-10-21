@@ -63,13 +63,13 @@ When the promise is fulfilled, the fulfillment handler receives a value of
 If the returned promise is rejected, one of the following exceptions is provided to the
 rejection handler:
 
-- `InvalidModificationError`
-  - : Replacing the `RTCRtpSender`'s current track with the new one
+- `InvalidModificationError` {{domxref("DOMException")}}
+  - : Thrown if replacing the `RTCRtpSender`'s current track with the new one
     would require negotiation.
-- `InvalidStateError`
-  - : The track on which this method was called is stopped rather than running.
-- `TypeError`
-  - : The new track's `kind` doesn't match the original track.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the track on which this method was called is stopped rather than running.
+- `TypeError` {{domxref("DOMException")}}
+  - : Thrown if the new track's `kind` doesn't match the original track.
 
 ## Usage notes
 

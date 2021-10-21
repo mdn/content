@@ -53,12 +53,14 @@ operation are fired.
 
 This method may raise a {{domxref("DOMException")}} of one of the following types:
 
-| Exception                  | Description                                                       |
-| -------------------------- | ----------------------------------------------------------------- |
-| `TransactionInactiveError` | This {{domxref("IDBIndex")}}'s transaction is inactive.  |
-| `TypeError`                | The value for the direction parameter is invalid.                 |
-| `DataError`                | The key or key range provided contains an invalid key.            |
-| `InvalidStateError`        | The {{domxref("IDBIndex")}} has been deleted or removed. |
+- `TransactionInactiveError` {{domxref("DOMException")}}
+  - : Thrown if this {{domxref("IDBIndex")}}'s transaction is inactive.
+- `TypeError` {{domxref("DOMException")}}
+  - : Thrown if the value for the direction parameter is invalid.
+- `DataError` {{domxref("DOMException")}}
+  - : Thrown if the key or key range provided contains an invalid key.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the {{domxref("IDBIndex")}} has been deleted or removed.
 
 ## Example
 
