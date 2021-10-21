@@ -13,15 +13,10 @@ browser-compat: api.NavigatorUAData.platform
 
 The **`platform`** read-only property of the {{domxref("NavigatorUAData")}} interface returns the platform brand information.
 
-## Syntax
+## Value
 
-```js
-let platform = NavigatorUAData.platform;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}} containing the platform brand. For example, `"Windows"`.
+A {{domxref("DOMString","string")}} containing the platform brand.
+For example, `"Windows"`.
 
 ## Examples
 
