@@ -23,7 +23,7 @@ Examples include:
 
 The `aria-current` attribute accepts a limited list of [values](#Values) including `page`, `step`, `location`, `date`, `time`, `true`, and `false` being enumerated. Any non-null string value not included in the list of allowed values is treated as if `aria-current="true"` were set, rather than the default of `false`. If the attribute is not present, is an empty string, is present with no value, or is set to `aria-current="false"` it is not exposed to the user.
 
-When something is selected rather than current, such as a [`tab`](/en-US/docs/Web/Accessibility/Roles/Tab_role) in a [`tablist`](/en-US/docs/Web/Accessibility/Roles/Tablist_role), use [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) to indicate the currently-displayed tabpanel.
+When something is selected rather than current, such as a [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_role) in a [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tablist_role), use [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) to indicate the currently-displayed tabpanel.
 
 > **Note:** Don't use `aria-current` as a substitute for [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) in widgets when both would have similar meanings. 
 
@@ -88,7 +88,7 @@ If the element representing the current page in the breadcrumb was not a link, t
 
 ## Associated roles
 
-Usable in all roles; except in for elements with the role of [`gridcell`](/en-US/docs/Web/Accessibility/Roles/Gridcell_role), [`option`](/en-US/docs/Web/Accessibility/Roles/Option_role), [`row`](/en-US/docs/Web/Accessibility/Roles/Row_role) and [`tab`](/en-US/docs/Web/Accessibility/Roles/Tab_role) where [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) should be used
+Usable in all roles; except in for elements with the role of [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_role), [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/Option_role), [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_role) and [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_role) where [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) should be used
 
 ## Specifications
 
