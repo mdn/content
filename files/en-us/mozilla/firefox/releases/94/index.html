@@ -59,6 +59,11 @@ tags:
 
 <h3 id="webdriver_conformance_marionette">WebDriver conformance (Marionette)</h3>
 
+<ul>
+  <li>WebDriver:GetWindowHandle and WebDriver:GetWindowHandles now returns content or chrome window handles based on the selected scope ({{bug(1729291)}})</li>
+  <li>The succesive dialog limit is disabled if alerts are fired to quickly ({{bug(1731795)}}) </li>
+</ul>
+
 <h4 id="removals_webdriver">Removals</h4>
 
 <h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
