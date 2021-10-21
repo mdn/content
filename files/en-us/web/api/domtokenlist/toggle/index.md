@@ -40,6 +40,8 @@ list after the call.
 
 ## Examples
 
+### Toggling a class on click
+
 In the following example we retrieve the list of classes set on a
 {{htmlelement("span")}} element as a `DOMTokenList` using
 {{domxref("Element.classList")}}. We then replace a token in the list, and write the
@@ -70,9 +72,11 @@ span.addEventListener('click', function() {
 
 The output looks like this:
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{ EmbedLiveSample('Toggling_a_class_on_click', '100%', 60) }}
 
-The second parameter can be used to determine whether the class is included or not. This next example would include the 'c' class only if the browser window is over 1000 pixels wide:
+### Setting the force parameter
+
+The second parameter can be used to determine whether the class is included or not. This example would include the 'c' class only if the browser window is over 1000 pixels wide:
 
 ```js
 span.classList.toggle("c", window.innerWidth > 1000);
