@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: aria-controls attribute'
+title: 'aria-controls'
 slug: Web/Accessibility/ARIA/Attributes/aria-controls
 tags: 
 
