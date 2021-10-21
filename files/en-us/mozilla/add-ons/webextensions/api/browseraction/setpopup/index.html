@@ -45,11 +45,11 @@ browser-compat: webextensions.api.browserAction.setPopup
 
     <p>If <code>popup</code> is <code>null</code>:</p>
 
-    <p>If <code>tabId</code> is specified, removes the tab-specific popup so that the tab inherits the global popup.</p>
-
-    <p>If <code>windowId</code> is specified, removes the window-specific popup so that the window inherits the global popup.</p>
-
-    <p>Otherwise it reverts the global popup to the default value.</p>
+    <ul>
+      <li>If <code>tabId</code> is specified, removes the tab-specific popup so that the tab inherits the global popup.</li>
+      <li>If <code>windowId</code> is specified, removes the window-specific popup so that the window inherits the global popup.</li>
+      <li>If <code>tabId</code> and <code>windowId</code> are both omitted, reverts the global popup to the default value.</li>
+    </ul>
     </dd>
    </dl>
  </dd>
