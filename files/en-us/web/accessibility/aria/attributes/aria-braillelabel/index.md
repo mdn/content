@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: aria-braillelabel attribute'
+title: 'aria-braillelabel'
 slug: web/Accessibility/ARIA/Attributes/aria-braillelabel
 tags: 
   - Accessibility

@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: aria-colindextext attribute'
+title: 'aria-colindextext'
 slug: Web/Accessibility/ARIA/Attributes/aria-colindextext
 tags: 
   - Accessibility

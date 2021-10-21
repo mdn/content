@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: aria-checked attribute'
+title: 'aria-checked'
 slug: web/Accessibility/ARIA/Attributes/aria-checked
 tags: 
 
