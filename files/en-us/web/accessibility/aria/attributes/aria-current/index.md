@@ -10,22 +10,21 @@ tags:
   - aria-current
 ---
 
-An element with `aria-current` state indicates that this element represents the current item within a container or set of related elements.
+A non-null `aria-current` state on an element indicates that this element represents the current item within a container or set of related elements.
 
 ## Description
 
-When you have related elements with one styled differently from the others to indicate to the sighted user that this is the current element within its group, the `aria-current` should be used to infom the assistive technology user what has been indicated via styling. The `aria-current` attribute indicates the element on which it is set, to a value other than `false`, represents the current item within a container or set of related elements. Only mark one element in a set of elements as current with `aria-current`.
+When you have a group of related elements, such as several links in a breadcrump or steps in a multi-step flow, with one element in the group styled differently from the others to indicate to the sighted user that this is the current element within its group, the `aria-current` should be used to infom the assistive technology user what has been indicated via styling. 
 
-Examples include:
+In a breadcrumb list, when a link within a set of pagination links is styled to indicate the user is currently on that page, `aria-current="page"` should be set on that link. In a multi step based process with a step indicator such as a multi-page survey or a multi step checkout or registration process, when the current step icon is visually different to represent that it is the current step, that icon's container should have `aria-current="step"` for assistive technology users who may not be able to "see" the visual difference.
 
-- In a breadcrumb list, when a link within a set of pagination links is styled to indicate the user is currently on that page, `aria-current="page"` should be set.
-- In a multi step based process with a step indicator such as a multi-page survey or a multi step checkout or registration process, when the current step icon is visually different to represent the current step, that icon's container should have `aria-current="step"` for assistive technology users who may not be able to "see" the visual different.
+The `aria-current` attribute indicates the element on which it is set, to a value other than `false`, represents the current item within a container or set of related elements. Only mark one element in a set of elements as current with `aria-current`.
 
-The `aria-current` attribute accepts a limited list of [values](#Values) including `page`, `step`, `location`, `date`, `time`, `true`, and `false` being enumerated. Any non-null string value not included in the list of allowed values is treated as if `aria-current="true"` were set, rather than the default of `false`. If the attribute is not present, is an empty string, is present with no value, or is set to `aria-current="false"` it is not exposed to the user.
+The `aria-current` attribute accepts a limited list of [values](#Values) including `page`, `step`, `location`, `date`, `time`, `true`, and `false`. Any non-null string value not included in this list of enumerated values is treated as if `aria-current="true"` were set, not the default `false` value. If the attribute is not present, is an empty string, is present with no value, or is set to `aria-current="false"` it is not exposed to the user.
 
 When something is selected rather than current, such as a [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_role) in a [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tablist_role), use [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) to indicate the currently-displayed tabpanel.
 
-> **Note:** Don't use `aria-current` as a substitute for [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) in widgets when both would have similar meanings. 
+> **Note:** Don't use `aria-current` as a substitute for [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) in [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_role), [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/Option_role), [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_role) or [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_role). 
 
 ## Example
 
