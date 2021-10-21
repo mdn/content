@@ -46,11 +46,11 @@ browser.runtime.onInstalled.hasListener(listener)
  <dd>
  <p>The callback function called when this event occurs. The function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>details</code></dt>
   <dd>An object with the following properties:</dd>
   <dd>
-  <dl class="reference-values">
+  <dl>
    <dt><code>id</code>{{optional_inline}}</dt>
    <dd><code>string</code>. The ID of the imported shared module extension that updated. This is present only if the <code>reason</code> value is <code>shared_module_update</code>.</dd>
    <dt><code>previousVersion</code>{{optional_inline}}</dt>
@@ -84,9 +84,8 @@ browser.runtime.onInstalled.addListener(handleInstalled);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#event-onInstalled"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#event-onInstalled"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

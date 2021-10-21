@@ -38,17 +38,17 @@ IIRFilterNode.getFrequencyResponse(frequencyArray, magResponseOutput, phaseRespo
   - : A {{jsxref("Float32Array")}} to receive the computed magnitudes of the frequency
     response for each frequency value in the `frequencyArray`.
 - `phaseResponseOutput`
-  - : A {{jsxref("Float32Array")}} to receive the computed phase response values in
+  - : A {{jsxref("Float32Array")}} to receive the computed phase response values in
     radians for each frequency value in the input `frequencyArray`.
 
 ### Return value
 
-{{jsxref("undefined")}}
+None.
 
 ### Exceptions
 
-- `NotSupportedError`
-  - : The three arrays provided are not all of the same length.
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if the three arrays provided are not all of the same length.
 
 ## Examples
 

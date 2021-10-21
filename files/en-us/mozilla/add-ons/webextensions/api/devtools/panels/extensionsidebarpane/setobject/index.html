@@ -50,7 +50,7 @@ browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.setObject
 
 <p>Create a new pane, and populate it with a JSON object. You could run this code in a script loaded by your extension's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page">devtools page</a>.</p>
 
-<pre class="brush: js line-numbers  language-js">function onCreated(sidebarPane) {
+<pre class="brush: js">function onCreated(sidebarPane) {
   sidebarPane.setObject({
     someBool: true,
     someString: &quot;hello there&quot;,
@@ -65,9 +65,8 @@ browser.devtools.panels.elements.createSidebarPane(&quot;My pane&quot;).then(onC
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/devtools_panels"><code>chrome.devtools.panels</code></a> API.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/devtools_panels"><code>chrome.devtools.panels</code></a> API.</p>
 </div>
 
 <div class="hidden">

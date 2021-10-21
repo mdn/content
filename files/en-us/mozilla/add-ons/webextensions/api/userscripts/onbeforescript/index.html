@@ -46,11 +46,11 @@ browser.userScripts.onBeforeScript.hasListener(listener)
  <dd>
  <p>A function that is called when this event occurs. The function is passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>script</code></dt>
   <dd>An <code>object</code> that represents the user script that matched a web page. Its properties and methods are as follows:</dd>
   <dd>
-  <dl class="reference-values">
+  <dl>
    <dt><code>defineGlobals</code></dt>
    <dd>A method that exports an object containing properties and methods available globally to the user script sandbox. This method must be called synchronously to guarantee that the user script has not executed.</dd>
    <dt><code>export</code></dt>

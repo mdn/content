@@ -17,13 +17,13 @@ tags:
 
 <ul>
  <li>The {{HTMLElement("progress")}} element is no longer incorrectly classified as a form element, and therefore no longer has a <code>form</code> attribute.</li>
- <li>The default modifier keys for the <code><a href="/en-US/docs/Web/HTML/Global_attributes" title="Global attributes">accesskey</a></code> of HTML contents on Mac are changed to Control+Option. This is the same as WebKit-based browsers on Mac.</li>
+ <li>The default modifier keys for the <code><a href="/en-US/docs/Web/HTML/Global_attributes">accesskey</a></code> of HTML contents on Mac are changed to Control+Option. This is the same as WebKit-based browsers on Mac.</li>
 </ul>
 
 <h3 id="DOM">DOM</h3>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/HTMLElement/input_event">input</a> events are fired also on editing host element of <a href="/en-US/docs/Web/API/HTMLElement/contentEditable" title="Element.contentEditable">contenteditable</a> editor and root element of <a href="/en-US/docs/Web/API/Document/designMode" title="document.designMode">designMode</a> editor.</li>
+ <li><a href="/en-US/docs/Web/API/HTMLElement/input_event">input</a> events are fired also on editing host element of <a href="/en-US/docs/Web/API/HTMLElement/contentEditable">contenteditable</a> editor and root element of <a href="/en-US/docs/Web/API/Document/designMode">designMode</a> editor.</li>
  <li>{{domxref("DOMException", "DOMException.code")}} is now deprecated per latest DOM Level 4 specification.</li>
  <li>The {{domxref("Range.insertNode()")}} method now works correctly when used on collapsed ranges.</li>
  <li>The {{domxref("BlobBuilder", "MozBlobBuilder")}} interface has been deprecated in favor of the constructor on {{domxref("Blob")}}. If you use <code>MozBlobBuilder</code> you'll see a warning message in the Web Console.</li>
@@ -83,7 +83,7 @@ tags:
 <h3 id="Interfaces">Interfaces</h3>
 
 <ul>
- <li>The {{interface("nsILocalFile")}} interface has been merged into {{interface("nsIFile")}} (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=682360">bug 682360</a>).</li>
+ <li>The {{interface("nsILocalFile")}} interface has been merged into {{interface("nsIFile")}} (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=682360">bug 682360</a>).</li>
  <li>The methods in {{interface("nsIPlacesImportExportService")}} for importing bookmarks have all been removed in favor of the <code><a href="/en-US/docs/JavaScript_code_modules/BookmarkHTMLUtils.jsm">BookmarkHTMLUtils.jsm</a></code> JavaScript code module.</li>
  <li>The {{interface("nsIDOMGeoPositionAddress")}} interface has been removed.</li>
  <li>The <code>getItemGUID</code>, <code>setItemGUID</code> and <code>getItemIdForGUID</code> methods have been removed from {{interface("nsINavBookmarksService")}} ({{bug("715355")}}).</li>
@@ -92,7 +92,7 @@ tags:
 <h3 id="Spellchecking">Spellchecking</h3>
 
 <ul>
- <li>Dictionary names are now parsed as full <a href="https://datatracker.ietf.org/doc/html/bcp47">BCP 47</a> language tags (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=730209">bug 730209</a>, <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=741842">bug 741842</a>). Developers are encouraged to not hard-code the name of their language in their dictionary names.</li>
+ <li>Dictionary names are now parsed as full <a href="https://datatracker.ietf.org/doc/html/bcp47">BCP 47</a> language tags (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=730209">bug 730209</a>, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=741842">bug 741842</a>). Developers are encouraged to not hard-code the name of their language in their dictionary names.</li>
 </ul>
 
 <h2 id="See_also">See also</h2>

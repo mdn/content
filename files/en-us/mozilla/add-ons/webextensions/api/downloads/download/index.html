@@ -40,7 +40,7 @@ browser-compat: webextensions.api.downloads.download
  <dt><code>options</code></dt>
  <dd>An <code>object</code> specifying what file you wish to download, and any other preferences you wish to set concerning the download. It can contain the following properties:</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>allowHttpErrors</code>{{optional_inline}}</dt>
   <dd>A <code>boolean</code> flag that enables downloads to continue even if they encounter HTTP errors. Using this flag, for example, enables the download of server error pages. Default value <code>false</code>. When set to:
   <ul>
@@ -70,7 +70,7 @@ browser-compat: webextensions.api.downloads.download
   <p>If this option is omitted, the browser will show the file chooser or not based on the general user preference for this behavior (in Firefox this preference is labeled "Always ask you where to save files" in about:preferences, or <code>browser.download.useDownloadDir</code> in about:config).</p>
 
   <div class="note">
-  <p><strong>Note</strong>: Firefox for Android raises an error if <code>saveAs</code> is set to <code>true</code>. The parameter is ignored when <code>saveAs</code> is <code>false</code> or not included.</p>
+  <p><strong>Note:</strong> Firefox for Android raises an error if <code>saveAs</code> is set to <code>true</code>. The parameter is ignored when <code>saveAs</code> is <code>false</code> or not included.</p>
   </div>
   </dd>
   <dt><code>url</code></dt>
@@ -113,9 +113,8 @@ downloading.then(onStartedDownload, onFailed);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/downloads#method-download"><code>chrome.downloads</code></a> API.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/downloads#method-download"><code>chrome.downloads</code></a> API.</p>
 </div>
 
 <div class="hidden">

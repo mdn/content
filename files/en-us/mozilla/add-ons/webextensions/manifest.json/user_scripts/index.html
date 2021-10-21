@@ -14,7 +14,7 @@ browser-compat: webextensions.manifest.user_scripts
 <table class="fullwidth-table standard-table">
  <tbody>
   <tr>
-   <th scope="row" style="width: 30%;">Type</th>
+   <th scope="row">Type</th>
    <td><code>Object</code></td>
   </tr>
   <tr>
@@ -24,7 +24,7 @@ browser-compat: webextensions.manifest.user_scripts
   <tr>
    <th scope="row">Example</th>
    <td>
-    <pre class="brush: json; line-numbers language-json">
+    <pre class="brush: json">
   "user_scripts": {
     "api_script": "apiscript.js",
   }
@@ -37,7 +37,7 @@ browser-compat: webextensions.manifest.user_scripts
 <p>Instructs the browser to load a script packaged in the extension, known as the API script, this script is used to export a set of custom API methods for use in user scripts. The API script path, relative to the manifest.json file, is defined as a <code>string</code> in <code>"api_script"</code>.</p>
 
 <div class="notecard note">
-<p>The <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">user_script</a></code> key  is required for the {{WebExtAPIRef("userScripts")}} API to function, even if no API script is specified. For example. <code>user_scripts: {}</code>.</p>
+<p><strong>Note:</strong> The <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">user_script</a></code> key  is required for the {{WebExtAPIRef("userScripts")}} API to function, even if no API script is specified. For example. <code>user_scripts: {}</code>.</p>
 </div>
 
 <p>The API script:</p>

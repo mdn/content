@@ -50,7 +50,7 @@ browser.webRequest.onSendHeaders.hasListener(listener)
  <dd>
  <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>details</code></dt>
   <dd><a href="#details"><code>object</code></a>. Details about the request. See <code><a href="#details">details</a></code> below.</dd>
  </dl>
@@ -58,10 +58,10 @@ browser.webRequest.onSendHeaders.hasListener(listener)
  <dt><code>filter</code></dt>
  <dd>{{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that will be sent to this listener.</dd>
  <dt><code>extraInfoSpec</code>{{optional_inline}}</dt>
- <dd><code>array</code> of <code>string</code>. <span class="im">Extra options for the event. You can only pass one value here:</span></dd>
+ <dd><code>array</code> of <code>string</code>. Extra options for the event. You can only pass one value here:</dd>
  <dd>
  <ul>
-  <li><span class="im"><code>"requestHeaders"</code>: include the request headers in the <code>details</code> object passed to the listener</span></li>
+  <li><code>"requestHeaders"</code>: include the request headers in the <code>details</code> object passed to the listener</li>
  </ul>
  </dd>
 </dl>
@@ -70,7 +70,7 @@ browser.webRequest.onSendHeaders.hasListener(listener)
 
 <h3 id="details">details</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>cookieStoreId</code></dt>
  <dd><code>string</code>. If the request is from a tab open in a contextual identity, the cookie store ID of the contextual identity.</dd>
  <dt><code>documentUrl</code></dt>
@@ -136,7 +136,7 @@ browser.webRequest.onSendHeaders.hasListener(listener)
  <dt><code>urlClassification</code></dt>
  <dd><code>object</code>. The type of tracking associated with the request, if with the request has been classified by <a class="external external-icon" href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop" rel="noopener">Firefox Tracking Protection</a>. This is an object with the following properties:</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>firstParty</code></dt>
   <dd><code>array</code> of <code>strings</code>. Classification flags for the request's first party.</dd>
   <dt><code>thirdParty</code></dt>
@@ -185,9 +185,8 @@ browser.webRequest.onSendHeaders.addListener(
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webRequest#event-onSendHeaders"><code>chrome.webRequest</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webRequest#event-onSendHeaders"><code>chrome.webRequest</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

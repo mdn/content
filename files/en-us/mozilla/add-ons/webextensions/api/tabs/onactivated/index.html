@@ -44,7 +44,7 @@ browser.tabs.onActivated.hasListener(listener)
  <dd>
  <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>activeInfo</code></dt>
   <dd><a href="#activeinfo"><code>object</code></a>. ID of the tab that was made active, and ID of its window.</dd>
  </dl>
@@ -55,7 +55,7 @@ browser.tabs.onActivated.hasListener(listener)
 
 <h3 id="activeInfo">activeInfo</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>previousTabId</code></dt>
  <dd><code>integer</code>. The ID of the previous activated tab, if that tab is still open.</dd>
  <dt><code>tabId</code></dt>
@@ -81,9 +81,8 @@ browser.tabs.onActivated.addListener(handleActivated);</pre>
 
 <p>{{Compat}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#event-onActivated"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#event-onActivated"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
 </div>
 
 <div class="hidden">

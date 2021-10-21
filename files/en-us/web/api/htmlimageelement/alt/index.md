@@ -180,8 +180,8 @@ instead of the icon when the icons cannot be or are intentionally not used.
 
 When an image contains information presented as a diagram, chart, graph, or map,
 the `alt` text should provide the same information, at least in summary form.
-This is true whether the /me image is in a bitmapped format such as [PNG](/en-US/docs/Web/Media/Formats/Image_types#png) or [JPEG](/en-US/docs/Web/Media/Formats/Image_types#jpeg) or in a vector format
-like [SVG](/en-US/docs/Web/Media/Formats/Image_types#svg).
+This is true whether the /me image is in a bitmapped format such as [PNG](/en-US/docs/Web/Media/Formats/Image_types#PNG_Portable_Network_Graphics) or [JPEG](/en-US/docs/Web/Media/Formats/Image_types#JPEG_Joint_Photographic_Experts_Group_image) or in a vector format
+like [SVG](/en-US/docs/Web/Media/Formats/Image_types#SVG_Scalable_Vector_Graphics).
 
 - For a map, the `alt` text could be directions to the place indicated by
   the map, similarly to how you would explain it verbally.

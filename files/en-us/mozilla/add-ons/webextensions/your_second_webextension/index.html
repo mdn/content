@@ -28,7 +28,7 @@ tags:
 
 <p>You could visualise the overall structure of the extension like this:</p>
 
-<p><img alt="" src="untitled-1.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="untitled-1.png"></p>
 
 <p>It's a simple extension, but shows many of the basic concepts of the WebExtensions API:</p>
 
@@ -111,7 +111,7 @@ cd beastify</pre>
 
 <p>If you choose to supply your own icon, It should be 48x48 pixels. You could also supply a 96x96 pixel icon, for high-resolution displays, and if you do this it will be specified as the <code>96</code> property of the <code>icons</code> object in manifest.json:</p>
 
-<pre class="brush: json line-numbers  language-json">&quot;icons&quot;: {
+<pre class="brush: json">&quot;icons&quot;: {
   &quot;48&quot;: &quot;icons/beasts-48.png&quot;,
   &quot;96&quot;: &quot;icons/beasts-96.png&quot;
 }</pre>
@@ -384,7 +384,7 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
   /**
    * Listen for messages from the background script.
    * Call "insertBeast()" or "removeExistingBeasts()".
-  */
+   */
   browser.runtime.onMessage.addListener((message) =&gt; {
     if (message.command === "beastify") {
       insertBeast(message.beastURL);
@@ -411,7 +411,9 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
 
 <p>Create a new directory called "beasts", and add the three images in that directory, with the appropriate names. You can get the images from <a href="https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts">the GitHub repository</a>, or from here:</p>
 
-<p><img alt="" src="frog.jpg" style="display: inline-block; margin: 20px;"><img alt="" src="snake.jpg" style="display: inline-block; margin: 20px;"><img alt="" src="turtle.jpg" style="display: inline-block; margin: 20px;"></p>
+<p><img alt="" src="frog.jpg"></p>
+<p><img alt="" src="snake.jpg"></p>
+<p><img alt="" src="turtle.jpg"></p>
 
 <h2 id="Testing_it_out">Testing it out</h2>
 

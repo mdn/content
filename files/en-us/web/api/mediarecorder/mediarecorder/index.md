@@ -21,8 +21,7 @@ creates a new {{domxref("MediaRecorder")}} object that will record a specified
 
 The object can optionally be configured to record
 using a specific media container (file type), and, further, can specify the exact codec
-and codec configuration(s) to use by specifying [the `codecs`
-parameter](/en-US/docs/Web/Media/Formats/codecs_parameter).
+and codec configuration(s) to use by specifying [the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter).
 
 ## Syntax
 
@@ -32,19 +31,18 @@ var mediaRecorder = new MediaRecorder(stream[, options]);
 
 ### Parameters
 
-- **`stream`**
+- `stream`
   - : The {{domxref("MediaStream")}} that will be recorded. This source media can come
     from a stream created using {{domxref("MediaDevices.getUserMedia",
     "navigator.mediaDevices.getUserMedia()")}} or from an {{HTMLElement("audio")}},
-    {{HTMLElement("video")}} or {{HTMLElement("canvas")}} element.
-- **`options`** {{optional_inline}}
+    {{HTMLElement("video")}} or {{HTMLElement("canvas")}} element.
+- `options` {{optional_inline}}
 
   - : A dictionary object that can contain the following properties:
 
     - `mimeType`: A MIME type specifying the format for the resulting
       media; you may specify the container format (the browser will select its preferred
-      codecs for audio and/or video), or you may [use the
-      `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter) and/or the `profiles` parameter to
+      codecs for audio and/or video), or you may [use the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter) and/or the `profiles` parameter to
       provide detailed information about which codecs to use and how to configure them.
       Applications can check in advance if a `mimeType` is supported by the
       {{Glossary("user agent")}} by calling
@@ -68,8 +66,8 @@ var mediaRecorder = new MediaRecorder(stream[, options]);
 
 ### Exceptions
 
-- `NotSupportedError`
-  - : The specified MIME type is not supported by the user agent.
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if the specified MIME type is not supported by the user agent.
 
 ## Example
 
@@ -85,13 +83,13 @@ if (navigator.mediaDevices.getUserMedia) {
   var chunks = [];
 
   var onSuccess = function(stream) {
-    var options = {
-      audioBitsPerSecond : 128000,
-      videoBitsPerSecond : 2500000,
-      mimeType : 'video/mp4'
-    }
-    var mediaRecorder = new MediaRecorder(stream,options);
-    m = mediaRecorder;
+    var options = {
+      audioBitsPerSecond : 128000,
+      videoBitsPerSecond : 2500000,
+      mimeType : 'video/mp4'
+    }
+    var mediaRecorder = new MediaRecorder(stream,options);
+    m = mediaRecorder;
 
 ...
   }
@@ -108,10 +106,8 @@ if (navigator.mediaDevices.getUserMedia) {
 
 ## See also
 
-- [Using
-  the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder +
   getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
-- [simpl.info MediaStream Recording
-  demo](http://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+- [simpl.info MediaStream Recording demo](http://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("MediaDevices.getUserMedia")}}

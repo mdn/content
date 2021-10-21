@@ -8,6 +8,7 @@ tags:
   - Method
   - Prototype
   - Sorting
+  - Polyfill
 browser-compat: javascript.builtins.Array.sort
 ---
 {{JSRef}}
@@ -71,20 +72,16 @@ Unicode order. All `undefined` elements are sorted to the end of the array.
 If `compareFunction` is supplied, all non-`undefined` array
 elements are sorted according to the return value of the compare function (all
 `undefined` elements are sorted to the end of the array, with no call to
-`compareFunction`). If `a` and `b` are two elements
-being compared, then:
+`compareFunction`).
 
-- If `compareFunction(a, b)` returns a value > than 0, sort `b` before `a`.
-- If `compareFunction(a, b)` returns a value < than 0, sort `a` before `b`.
-- If `compareFunction(a, b)` returns 0, `a` and `b` are considered equal.
+| `compareFunction(a, b)` return value | sort order                         |
+|--------------------------------------|------------------------------------|
+| > 0                                  | sort `b` before `a`                |
+| < 0                                  | sort `a` before `b`                |
+| === 0                                | keep original order of `a` and `b` |
 
-  > **Note:** The [ECMAScript Standard, 10th edition](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-intro) (2019)
-  > algorithm mandates stable sorting, which means elements that compare equal must remain in their original order with respect to each other.
-  > This behaviour may not be respected by older browsers.
-
-- `compareFunction(a, b)` must always return the same value when given a
-  specific pair of elements `a` and `b` as its two arguments. If
-  inconsistent results are returned, then the sort order is undefined.
+> **Note:** `compareFunction(a, b)` must always return the same value when given a specific pair of
+> elements `a` and `b` as its two arguments.
 
 So, the compare function has the following form:
 
@@ -308,6 +305,7 @@ Before version 10 (or EcmaScript 2019), sort stability was not guaranteed, meani
 
 ## See also
 
+- A polyfill of `Array.prototype.sort` with modern behavior like stable sort is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.reverse()")}}
 - {{jsxref("String.prototype.localeCompare()")}}
 - [About the stability of the algorithm used

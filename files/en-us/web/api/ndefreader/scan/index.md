@@ -8,7 +8,7 @@ tags:
   - Method
 browser-compat: api.NDEFReader.scan
 ---
-{{Draft}}{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
 The `scan()` method of the {{DOMxRef("NDEFReader")}} interface activates a reading device and returns a {{jsxref("Promise")}} that either resolves when an NFC tag is read or rejects if a hardware or permission error is encountered. This method triggers a permission prompt if the "nfc" permission has not been previously granted.
 
@@ -38,13 +38,13 @@ This method doesn't throw exceptions; instead, it rejects the returned promise,
 passing a {{domxref("DOMException")}} whose `name` is one of the
 following:
 
-- `"AbortError"`
+- `AbortError`
   - : The scan operation was aborted with the {{DOMxRef("AbortSignal")}} passed in the `options` argument.
-- `"InvalidStateError"`
+- `InvalidStateError`
   - : There's already an ongoing scan.
-- `"NotAllowedError"`
+- `NotAllowedError`
   - : The permission for this operation was rejected.
-- `"NotSupportedError"`
+- `NotSupportedError`
   - : There is no NFC adapter compatible with Web NFC, or a connection can not be
     established.
 

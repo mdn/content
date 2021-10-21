@@ -73,6 +73,6 @@ However, this is not the case for negative numbers. For example,
 ## See also
 
 - [Bitwise
-  operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise)
+  operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)
 - [Unsigned
   right shift assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment)

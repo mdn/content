@@ -16,7 +16,7 @@ browser-compat: webextensions.api.identity.launchWebAuthFlow
 
 <p>Performs the first part of an <a href="https://oauth.net/2/">OAuth2</a> flow, including user authentication and client authorization.</p>
 
-<p>This function's only mandatory parameter is the service provider's authorization URL, which must contain <span class="im">a number of URL parameters including the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/identity#getting_the_redirect_url">redirect URL</a> and the extension's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/identity#registering_your_add-on">client ID</a>. The service provider then:</span></p>
+<p>This function's only mandatory parameter is the service provider's authorization URL, which must contain a number of URL parameters including the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/identity#getting_the_redirect_url">redirect URL</a> and the extension's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/identity#registering_your_add-on">client ID</a>. The service provider then:</p>
 
 <ul>
  <li>authenticates the user with the service provider, if necessary (that is: if they are not already signed in)</li>
@@ -53,7 +53,7 @@ browser-compat: webextensions.api.identity.launchWebAuthFlow
  <dt><code>details</code></dt>
  <dd><code>object</code>. Options for the flow, containing the following properties:</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>url</code></dt>
   <dd>
   <p><code>string</code>. The URL offered by the OAuth2 service provider to get an access token. The details of this URL should be given in the documentation for the service provider in question, but the URL parameters should always include:</p>
@@ -112,9 +112,8 @@ function getAccessToken() {
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/identity"><code>identity</code></a> API.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/identity"><code>identity</code></a> API.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

@@ -34,21 +34,21 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@4.0.5":
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.0.5.tgz#21905dcc1520f095631a0d72a9f15605039ac7ff"
-  integrity sha512-KPSNaHUl5aikqsQU7LpBntFzaPbhm5OJxD88Wv00OKDc4wudyid2wDFqLeb7VcYT9x5bND8PPFloWdK5DY0pHA==
+"@mdn/browser-compat-data@4.0.7":
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.0.7.tgz#d49658ed8662908a742dac7b0082cbe5c4e13487"
+  integrity sha512-rWwBWRpA34dKdF3qNKancAZ9ZpPx3Dk/bByKONQm+vK92JVGeydHt0lTHNpAkDfB+eqbU8Dz0FXTO5dLw7zIbg==
 
-"@mdn/yari@0.4.784":
-  version "0.4.784"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.784.tgz#2c418dba4574866eb0094883ba133a4aa62c7ff1"
-  integrity sha512-SSuBA5MKUm8DCwEz8hHJIXPMPd8hcsA/csB98WnIu3G0Uuy3y/H0A0dVo7TyZAACOyjgmGtlpQvzKKuZ4F60aQ==
+"@mdn/yari@0.4.804":
+  version "0.4.804"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.804.tgz#ff09344cefc48b2124331353440f21e25b6b91a6"
+  integrity sha512-sEQhR71h/FMJZl67j+cgnrU6FlratGSGnkLAvQki2+iByqmQ7zBzPAmIQffg8ntV1mw2lU0GZXn/jS+2y5J0Og==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
-    "@mdn/browser-compat-data" "4.0.5"
+    "@mdn/browser-compat-data" "4.0.7"
     accept-language-parser "1.5.0"
-    browser-specs "^2.14.0"
+    browser-specs "^2.15.1"
     chalk "4.1.2"
     cheerio "1.0.0-rc.10"
     cli-progress "^3.9.1"
@@ -78,7 +78,7 @@
     imagemin-mozjpeg "9.0.0"
     imagemin-pngquant "9.0.2"
     imagemin-svgo "9.0.0"
-    inquirer "^8.1.5"
+    inquirer "^8.2.0"
     is-svg "4.2.2"
     js-yaml "4.1.0"
     loglevel "^1.7.1"
@@ -88,7 +88,7 @@
     mdast-util-phrasing "^2.0.0"
     mdn-data "2.0.22"
     node-gettext "^3.0.0"
-    open "^8.2.1"
+    open "^8.3.0"
     open-editor "3.0.0"
     prismjs "1.25.0"
     react-modal "^3.14.3"
@@ -548,10 +548,10 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^2.14.0:
-  version "2.14.1"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-2.14.1.tgz#19617db971f4fb13a41847dc0b12908821bdae72"
-  integrity sha512-DKzCDdLvXgnHqX3cjI0GBpenerDYYkkllSDpanqFdE4Rd/yaWwPbqMoiWQgjc2ieeN6LvsyQgpsGFSNDwajFyA==
+browser-specs@^2.15.1:
+  version "2.15.1"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-2.15.1.tgz#ec00b60519abf1e116c6fadd2acb3bb28a32a7f1"
+  integrity sha512-z6OwXRUCYpjm4BKQjzvIm+WFrouWkvIKWYx4YJx/MCRKpacW19Mp0q6GVCGKdDNYInjq5gSspeTb9aNHGghnSA==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
@@ -2420,10 +2420,10 @@ inquirer@^6.0.0:
     strip-ansi "^5.1.0"
     through "^2.3.6"
 
-inquirer@^8.1.5:
-  version "8.1.5"
-  resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-8.1.5.tgz#2dc5159203c826d654915b5fe6990fd17f54a150"
-  integrity sha512-G6/9xUqmt/r+UvufSyrPpt84NYwhKZ9jLsgMbQzlx804XErNupor8WQdBnBRrXmBfTPpuwf1sV+ss2ovjgdXIg==
+inquirer@^8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-8.2.0.tgz#f44f008dd344bbfc4b30031f45d984e034a3ac3a"
+  integrity sha512-0crLweprevJ02tTuA6ThpoAERAGyVILC4sS74uib58Xf/zSr1/ZWtmm7D5CI+bSQEaA04f0K7idaHpQbSWgiVQ==
   dependencies:
     ansi-escapes "^4.2.1"
     chalk "^4.1.1"
@@ -3373,10 +3373,10 @@ open@^7.3.0:
     is-docker "^2.0.0"
     is-wsl "^2.1.1"
 
-open@^8.2.1:
-  version "8.2.1"
-  resolved "https://registry.yarnpkg.com/open/-/open-8.2.1.tgz#82de42da0ccbf429bc12d099dad2e0975e14e8af"
-  integrity sha512-rXILpcQlkF/QuFez2BJDf3GsqpjGKbkUUToAIGo9A0Q6ZkoSGogZJulrUdwRkrAsoQvoZsrjCYt8+zblOk7JQQ==
+open@^8.3.0:
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/open/-/open-8.3.0.tgz#fdef1cdfe405e60dec8ebd18889e7e812f39c59f"
+  integrity sha512-7INcPWb1UcOwSQxAXTnBJ+FxVV4MPs/X++FWWBtgY69/J5lc+tCteMt/oFK1MnkyHC4VILLa9ntmwKTwDR4Q9w==
   dependencies:
     define-lazy-prop "^2.0.0"
     is-docker "^2.1.1"

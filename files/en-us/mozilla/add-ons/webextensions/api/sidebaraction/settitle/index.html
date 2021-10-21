@@ -39,7 +39,7 @@ browser-compat: webextensions.api.sidebarAction.setTitle
  <dt><code>details</code></dt>
  <dd><code>object</code>. An object with the following properties:</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>title</code></dt>
   <dd><code>string</code> or <code>null</code>. The sidebar's new title.</dd>
   <dd>If <code>title</code> is an empty string, the used title will be the extension name, but {{WebExtAPIRef("sidebarAction.getTitle")}} will still provide the empty string.</dd>
@@ -82,9 +82,8 @@ browser.browserAction.onClicked.addListener(setTitleForTab);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Opera's <a class="external external-icon" href="https://dev.opera.com/extensions/sidebar-action-api/"><code>chrome.sidebarAction</code></a> API.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Opera's <a class="external external-icon" href="https://dev.opera.com/extensions/sidebar-action-api/"><code>chrome.sidebarAction</code></a> API.</p>
 </div>
 
 <div class="hidden">

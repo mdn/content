@@ -161,7 +161,7 @@ This will make our audio graph look like this:
 
 ![an audio graph with an audio element source, connected to a gain node that modifies the audio source, and then going to the default destination](graph2.jpg)
 
-The default value for gain is 1; this keeps the current volume the same. Gain can be set to a minimum of about -3.4 and a max of about 3.4. Here we'll allow the boombox to move the gain up to 2 (double the original volume) and down to 0 (this will effectively mute our sound).
+The default value for gain is 1; this keeps the current volume the same. Gain can be set to a minimum of about -3.4028235E38 and a max of about 3.4028235E38 (float number range in Javascript). Here we'll allow the boombox to move the gain up to 2 (double the original volume) and down to 0 (this will effectively mute our sound).
 
 Let's give the user control to do this — we'll use a [range input](/en-US/docs/Web/HTML/Element/input/range):
 

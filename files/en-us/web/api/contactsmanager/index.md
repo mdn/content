@@ -9,7 +9,7 @@ tags:
   - contact picker
 browser-compat: api.ContactsManager
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}
+{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}
 
 The **`ContactsManager`** interface of the {{domxref('Contact Picker API')}} allows users to select entries from their contact list and share limited details of the selected entries with a website or application.
 

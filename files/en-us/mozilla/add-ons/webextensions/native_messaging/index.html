@@ -18,7 +18,7 @@ tags:
 
 <p>After installing, the extension can exchange JSON messages with the native application. Use a set of functions in the {{WebExtAPIRef("runtime")}} API. On the native app side, messages are received using standard input (<code>stdin</code>) and sent using standard output (<code>stdout</code>).</p>
 
-<p><img alt="" src="native-messaging.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="native-messaging.png"></p>
 
 <p>Support for native messaging in extensions is mostly compatible with Chrome, with two main differences:</p>
 
@@ -77,7 +77,7 @@ tags:
 
 <div class="notecard note">
 <p><strong>Note:</strong> When using optional permission, check that permission has been granted and, where necessary, request permission from the user with the {{WebExtAPIRef("permissions")}} API before communicating with the native application.</p>
-</div> 
+</div>
 
 <h3 id="App_manifest">App manifest</h3>
 
@@ -173,7 +173,7 @@ python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"</pre>
 </ul>
 
 <div class="note">
-<p>Chrome  handles the passed arguments differently:</p>
+<p><strong>Note:</strong> Chrome  handles the passed arguments differently:</p>
 
 <ul>
  <li>On Linux and Mac, Chrome passes <em>one</em> argument: the origin of the extension that started it (in the form <code>chrome-extension://[extensionID]</code>). This enables the app to identify the extension.</li>
