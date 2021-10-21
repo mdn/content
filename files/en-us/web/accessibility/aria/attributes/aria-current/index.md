@@ -66,9 +66,9 @@ If the element representing the current page in the breadcrumb was not a link, t
 ## Values
 
 - `page`	
-  - : Represents the current page within a set of pages.
+  - : Represents the current page within a set of pages such as the link to the current document in a breadcrumb.
 - `step`	
-  - : Represents the current step within a process.
+  - : Represents the current step within a process such as the current step in an enumerated multi step checkout flow .
 - `location`	
   - : Represents the current location within an environment or context such as the image that is visually highlighted as the current component of a flow chart.
 - `date`	
@@ -83,7 +83,9 @@ If the element representing the current page in the breadcrumb was not a link, t
 ## ARIAMixin API 
 
 - {{domxref("Element.ariaCurrent")}}
-  - : The  [`ariaCurrent`](/en-US/docs/Web/API/Element/ariaBusy) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-current` attribute, which indicates whether an element is being modified.
+  - : The [`ariaCurrent`](/en-US/docs/Web/API/Element/ariaCurrent) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-current` attribute.
+- {{domxref("ElementInternals.ariaCurrent")}}
+  - : The [`ariaCurrent`](https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaCurrent) property of the {{domxref("ElementInternals")}} interface reflects the value of the `aria-current` attribute.
 
 ## Associated roles
 
