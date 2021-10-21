@@ -89,7 +89,7 @@ handler to respond to these errors.
   - : Thrown if the {{domxref("MediaStream")}} is configured to disallow recording. This may be the
     case, for example, with sources obtained using {{domxref("MediaDevices.getUserMedia",
     "getUserMedia()")}} when the user denies permission to use an input device. This
-    exception may also be thrown as an {{event("error")}} event if
+    exception may also be delivered as an {{event("error")}} event if
     the security options for the source media change after recording begins.
 - `UnknownError` {{domxref("DOMException")}}
   - : Thrown if something else went wrong during the recording process.

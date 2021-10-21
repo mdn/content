@@ -102,9 +102,7 @@ one of the following types:
 - `ConstraintError` {{domxref("DOMException")}}
   - : Thrown if an object store with the given name (based on a case-sensitive comparison)
         already exists in the connected database.
-- <a href="/en-US/docs/Web/API/IDBDatabaseException#non_transient_err"
-            >`InvalidAccessError`</a
-          >
+- `InvalidAccessError` {{domxref("DOMException")}}
   - : Thrown if `autoIncrement` is set to true and `keyPath` is
         either an empty string or an array containing an empty string.
 
