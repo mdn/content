@@ -122,7 +122,7 @@ should update any existing code to use the {{jsxref("Promise")}}-based version o
 
 ### Return value
 
-A {{jsxref("Promise")}} which is fulfilled when the candidate has been successfully
+A {{jsxref("Promise")}} that is fulfilled when the candidate has been successfully
 added to the remote peer's description by the ICE agent. The promise does not receive any input parameters.
 
 ### Exceptions
@@ -132,16 +132,14 @@ When an error occurs while attempting to add the ICE candidate, the
 below as the {{domxref("DOMException.name", "name")}} attribute in the specified
 {{domxref("DOMException")}} object passed to the rejection handler.
 
-- `TypeError`
-  - : The specified candidate's {{domxref("RTCIceCandidate.sdpMid", "sdpMid")}} and
+- `TypeError` {{domxref("DOMException")}}
+  - : Thrown if the specified candidate's {{domxref("RTCIceCandidate.sdpMid", "sdpMid")}} and
     {{domxref("RTCIceCandidate.sdpMLineIndex", "sdpMLineIndex")}} are both `null`.
-- `InvalidStateError`
-  - : The `RTCPeerConnection` currently has no remote peer established
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the `RTCPeerConnection` currently has no remote peer established
     ({{domxref("RTCPeerConnection.remoteDescription", "remoteDescription")}} is `null`).
-- `OperationError`
-
-  - : This can happen for a number of reasons:
-
+- `OperationError` {{domxref("DOMException")}}
+  - : Thrown in one of the following situations:
     - The value specified for {{domxref("RTCIceCandidate.sdpMid", "sdpMid")}} is
       non-`null` and doesn't match the media description ID of any
       media description included within the
