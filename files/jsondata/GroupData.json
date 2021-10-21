@@ -418,6 +418,16 @@
       ],
       "events": []
     },
+    "EyeDropper API": {
+      "overview": ["EyeDropper API"],
+      "interfaces": [
+        "EyeDropper",
+        "ColorSelectionResult"
+      ],
+      "methods": ["EyeDropper.open()"],
+      "properties": [],
+      "events": []
+    },
     "Fetch API": {
       "overview": ["Fetch API"],
       "guides": [
