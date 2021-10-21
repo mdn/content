@@ -7,57 +7,56 @@ tags:
   - Mozilla
   - Release
 ---
-<p>{{FirefoxSidebar}}{{draft}}</p>
+{{FirefoxSidebar}}{{draft}}
 
-<p>This article provides information about the changes in Firefox 95 that will affect developers. Firefox 95 is the current <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly">Nightly version of Firefox</a>, and will ship on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">December 7, 2021</a>.</p>
+This article provides information about the changes in Firefox 95 that will affect developers. Firefox 95 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly), and will ship on [December 7, 2021](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
 
-<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+## Changes for web developers
 
-<h3 id="Developer_Tools">Developer Tools</h3>
+### Developer Tools
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<h4 id="removals_html">Removals</h4>
+#### Removals
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<h4 id="removals_css">Removals</h4>
+#### Removals
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<h4 id="removals_js">Removals</h4>
+#### Removals
 
-<h3 id="HTTP">HTTP</h3>
+### HTTP
 
-<h4 id="removals_http">Removals</h4>
+#### Removals
 
-<h3 id="Security">Security</h3>
+### Security
 
-<h4 id="removals_sec">Removals</h4>
+#### Removals
 
-<h3 id="APIs">APIs</h3>
+### APIs
 
-<h4 id="DOM">DOM</h4>
+#### DOM
 
-<h4 id="Media_WebRTC_and_Web_Audio">Media, WebRTC, and Web Audio</h4>
+#### Media, WebRTC, and Web Audio
 
-<h4 id="removals_media">Removals</h4>
+#### Removals
 
-<h3 id="WebAssembly">WebAssembly</h3>
+### WebAssembly
 
-<h4 id="removals_wasm">Removals</h4>
+#### Removals
 
-<h3 id="webdriver_conformance_marionette">WebDriver conformance (Marionette)</h3>
+### WebDriver conformance (Marionette)
 
-<h4 id="removals_webdriver">Removals</h4>
+#### Removals
 
-<h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
+## Changes for add-on developers
 
-<h4 id="removals_webext">Removals</h4>
+#### Removals
 
-<h3 id="Other">Other</h3>
+### Other
 
+## Older versions
 
-<h2 id="Older_versions">Older versions</h2>
-
-<p>{{Firefox_for_developers(94)}}</p>
+{{Firefox_for_developers(94)}}

@@ -7,80 +7,60 @@ tags:
   - Mozilla
   - Release
 ---
-<p>{{FirefoxSidebar}}</p>
+{{FirefoxSidebar}}
 
-<p>This article provides information about the changes in Firefox 82 that will affect developers. Firefox 82 was released on October 20, 2020.</p>
+This article provides information about the changes in Firefox 82 that will affect developers. Firefox 82 was released on October 20, 2020.
 
-<div class="note">
-  <p><strong>Note:</strong> See also <a href="https://hacks.mozilla.org/2020/10/coming-through-with-firefox-82/">Coming through with Firefox 82</a> on Mozilla Hacks.</p>
-</div>
+> **Note:** See also [Coming through with Firefox 82](https://hacks.mozilla.org/2020/10/coming-through-with-firefox-82/) on Mozilla Hacks.
 
-<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+## Changes for web developers
 
-<h3 id="Developer_tools">Developer tools</h3>
+### Developer tools
 
-<ul>
- <li>You can now <a href="/en-US/docs/Tools/Network_Monitor/Inspecting_server-sent_events">inspect server-sent events</a> using the <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> ({{bug(1640857)}}).</li>
- <li>The Network Monitor's <em>Message</em> panel has now been merged with the <em>Response</em> panel — messages (e.g. from WebSockets or server-sent events) can now be viewed right below the responses list ({{bug(1636421)}}).</li>
-</ul>
+- You can now [inspect server-sent events](/en-US/docs/Tools/Network_Monitor/Inspecting_server-sent_events) using the [Network Monitor](/en-US/docs/Tools/Network_Monitor) ({{bug(1640857)}}).
+- The Network Monitor's _Message_ panel has now been merged with the _Response_ panel — messages (e.g. from WebSockets or server-sent events) can now be viewed right below the responses list ({{bug(1636421)}}).
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<ul>
- <li>The color picker used for <code><a href="/en-US/docs/Web/HTML/Element/input/color">&lt;input type="color"&gt;</a></code> is now keyboard-accessible on Windows ({{bug(1526820)}}).</li>
- <li>The <code>allow-downloads</code> flag for the <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe sandbox&gt;</a></code> attribute is now supported  ({{bug(1656212)}}).</li>
-</ul>
+- The color picker used for [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color) is now keyboard-accessible on Windows ({{bug(1526820)}}).
+- The `allow-downloads` flag for the [`<iframe sandbox>`](/en-US/docs/Web/HTML/Element/iframe) attribute is now supported  ({{bug(1656212)}}).
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>Support for the new {{CSSxRef("::file-selector-button", "::file-selector-button")}} pseudo-element has been added. This pseudo-element represents the file selection button inside an <a href="/en-US/docs/Web/HTML/Element/input/file"><code>&lt;input type="file"&gt;</code></a> element ({{bug(1635675)}}, {{bug(1662478)}}).</li>
- <li>We have improved error recovery for the {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":where", ":where()")}} pseudo-classes. These pseudo-classes now accept a forgiving selector list, where an invalid selector in the list will not render the entire list invalid ({{bug(1664718)}}).</li>
- <li><code>appearance: button</code> now applies only to buttons; the <code>button</code> value of  {{CSSxRef("appearance")}} will otherwise behave as <code>auto</code> ({{bug(1662703)}}).</li>
-</ul>
+- Support for the new {{CSSxRef("::file-selector-button", "::file-selector-button")}} pseudo-element has been added. This pseudo-element represents the file selection button inside an [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file) element ({{bug(1635675)}}, {{bug(1662478)}}).
+- We have improved error recovery for the {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":where", ":where()")}} pseudo-classes. These pseudo-classes now accept a forgiving selector list, where an invalid selector in the list will not render the entire list invalid ({{bug(1664718)}}).
+- `appearance: button` now applies only to buttons; the `button` value of  {{CSSxRef("appearance")}} will otherwise behave as `auto` ({{bug(1662703)}}).
 
-<h4 id="Removals">Removals</h4>
+#### Removals
 
-<ul>
- <li>We have removed the proprietary <code><a href="/en-US/docs/Web/CSS/:-moz-user-disabled">:-moz-user-disabled</a></code> pseudo-class ({{bug(1664432)}}).</li>
-</ul>
+- We have removed the proprietary [`:-moz-user-disabled`](/en-US/docs/Web/CSS/:-moz-user-disabled) pseudo-class ({{bug(1664432)}}).
 
-<h3 id="HTTP">HTTP</h3>
+### HTTP
 
-<ul>
- <li>The <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Disposition">Content-Disposition</a></code> header's <code>inline</code> directive will now be ignored if the HTML <a href="/en-US/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a> element's <code>download</code> attribute is specified (for <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin URLs</a>). Note that if specified the <code>Content-Disposition</code> header <code>filename</code> will be used in preference to a filename specified in the <code>download</code> attribute ({{bug(1658877)}}).</li>
-</ul>
+- The [`Content-Disposition`](/en-US/docs/Web/HTTP/Headers/Content-Disposition) header's `inline` directive will now be ignored if the HTML [`<a>`](/en-US/docs/Web/HTML/Element/a) element's `download` attribute is specified (for [same-origin URLs](/en-US/docs/Web/Security/Same-origin_policy)). Note that if specified the `Content-Disposition` header `filename` will be used in preference to a filename specified in the `download` attribute ({{bug(1658877)}}).
 
-<h3 id="APIs">APIs</h3>
+### APIs
 
-<h4 id="New_APIs">New APIs</h4>
+#### New APIs
 
-<ul>
- <li>The <a href="/en-US/docs/Web/API/Media_Session_API">Media Session API</a> is now enabled by default ({{bug(1665496)}}).</li>
-</ul>
+- The [Media Session API](/en-US/docs/Web/API/Media_Session_API) is now enabled by default ({{bug(1665496)}}).
 
-<h4 id="DOM">DOM</h4>
+#### DOM
 
-<ul>
- <li><code><a href="/en-US/docs/Web/API/Document/execCommand">Document.execCommand()</a></code> is no longer supported for nested/recursive calls, which will now return <code>false</code> ({{bug(1634262)}}).</li>
- <li><code><a href="/en-US/docs/Web/API/Element/setPointerCapture">Element.setPointerCapture()</a></code> throws the <code>NotFoundError</code> exception if the pointer <code>id</code> is invalid, as per the <a href="https://w3c.github.io/pointerevents/#setting-pointer-capture">specification</a> ({{bug(1662124)}}). Previously it wrongly threw an <code>InvalidPointerId</code> exception.</li>
- <li>The <code><a href="/en-US/docs/Web/API/Window/name">window.name</a></code> property is reset to an empty string if a tab loads a page from a different domain, and restored if the original page is reloaded (e.g. via the "back" button). This prevents an untrusted page from accessing any information that the previous page might have stored in the variable. This change may impact frameworks that use <code>window.name</code> for cross-domain messaging ({{bug(444222)}}).</li>
-</ul>
+- [`Document.execCommand()`](/en-US/docs/Web/API/Document/execCommand) is no longer supported for nested/recursive calls, which will now return `false` ({{bug(1634262)}}).
+- [`Element.setPointerCapture()`](/en-US/docs/Web/API/Element/setPointerCapture) throws the `NotFoundError` exception if the pointer `id` is invalid, as per the [specification](https://w3c.github.io/pointerevents/#setting-pointer-capture) ({{bug(1662124)}}). Previously it wrongly threw an `InvalidPointerId` exception.
+- The [`window.name`](/en-US/docs/Web/API/Window/name) property is reset to an empty string if a tab loads a page from a different domain, and restored if the original page is reloaded (e.g. via the "back" button). This prevents an untrusted page from accessing any information that the previous page might have stored in the variable. This change may impact frameworks that use `window.name` for cross-domain messaging ({{bug(444222)}}).
 
-<h3 id="WebDriver_conformance_Marionette">WebDriver conformance (Marionette)</h3>
+### WebDriver conformance (Marionette)
 
-<ul>
- <li>To simulate a more realistic user navigation, all supported navigation commands have been moved to the parent process ({{bug(1612831)}}).</li>
- <li>We updated the checks for the current or top-level browsing context for all the commands to improve conformance with the WebDriver specification ({{bug(1493108)}}).</li>
- <li>Fixed a bug in <code>WebDriver:ElementClick</code> that sometimes caused the command to return before the click event was actually synthesized ({{bug(1394354)}}).</li>
-</ul>
+- To simulate a more realistic user navigation, all supported navigation commands have been moved to the parent process ({{bug(1612831)}}).
+- We updated the checks for the current or top-level browsing context for all the commands to improve conformance with the WebDriver specification ({{bug(1493108)}}).
+- Fixed a bug in `WebDriver:ElementClick` that sometimes caused the command to return before the click event was actually synthesized ({{bug(1394354)}}).
 
-<h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
+## Changes for add-on developers
 
-<ul>
- <li>The <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/captureTab">tabs.captureTab()</a></code> and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab">tabs.captureVisibleTab()</a></code> methods now capture an area of the relevant tab's content specified by the <code>rect</code> property of the provided <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails">options</a></code> object, or the visible area of the tab if this property is not provided ({{bug(1636508)}}). Previously the <code>rect</code> property was not available, and these methods always captured the visible area of the relevant tab</li>
-</ul>
+- The [`tabs.captureTab()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/captureTab) and [`tabs.captureVisibleTab()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab) methods now capture an area of the relevant tab's content specified by the `rect` property of the provided [`options`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails) object, or the visible area of the tab if this property is not provided ({{bug(1636508)}}). Previously the `rect` property was not available, and these methods always captured the visible area of the relevant tab
 
-<h2 id="Older_versions">Older versions</h2>
+## Older versions
 
-<p>{{Firefox_for_developers(81)}}</p>
+{{Firefox_for_developers(81)}}

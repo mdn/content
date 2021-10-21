@@ -5,119 +5,101 @@ tags:
   - Firefox
   - Release Notes
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>Firefox 37 was released on March 31st, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.</p>
+Firefox 37 was released on March 31st, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-<h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
+## Changes for Web developers
 
-<h3 id="Developer_Tools">Developer Tools</h3>
+### Developer Tools
 
-<p>Highlights:</p>
+Highlights:
 
-<ul>
- <li><a href="/en-US/docs/Tools/Network_Monitor#security">Security panel in the Network Monitor</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#firefox_37">Animations panel in the Page Inspector</a></li>
- <li><a href="/en-US/docs/Tools/WebIDE/Running_and_debugging_apps#Running_a_custom_build_step">Support for running a custom build step in WebIDE</a></li>
-</ul>
+- [Security panel in the Network Monitor](/en-US/docs/Tools/Network_Monitor#security)
+- [Animations panel in the Page Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#firefox_37)
+- [Support for running a custom build step in WebIDE](/en-US/docs/Tools/WebIDE/Running_and_debugging_apps#Running_a_custom_build_step)
 
-<p><a class="external-icon external" href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Client%20Software&amp;chfieldto=2015-01-12&amp;chfield=resolution&amp;query_format=advanced&amp;chfieldfrom=2014-11-28&amp;chfieldvalue=FIXED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;component=Developer%20Tools&amp;component=Developer%20Tools%3A%203D%20View&amp;component=Developer%20Tools%3A%20Canvas%20Debugger&amp;component=Developer%20Tools%3A%20Console&amp;component=Developer%20Tools%3A%20Debugger&amp;component=Developer%20Tools%3A%20Framework&amp;component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&amp;component=Developer%20Tools%3A%20Inspector&amp;component=Developer%20Tools%3A%20Memory&amp;component=Developer%20Tools%3A%20Netmonitor&amp;component=Developer%20Tools%3A%20Object%20Inspector&amp;component=Developer%20Tools%3A%20Profiler&amp;component=Developer%20Tools%3A%20Responsive%20Mode&amp;component=Developer%20Tools%3A%20Scratchpad&amp;component=Developer%20Tools%3A%20Source%20Editor&amp;component=Developer%20Tools%3A%20Storage%20Inspector&amp;component=Developer%20Tools%3A%20Style%20Editor&amp;component=Developer%20Tools%3A%20Timeline&amp;component=Developer%20Tools%3A%20User%20Stories&amp;component=Developer%20Tools%3A%20Web%20Audio%20Editor&amp;component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&amp;component=Developer%20Tools%3A%20WebIDE&amp;product=Firefox&amp;list_id=11892733">All devtools bugs fixed between Firefox 36 and Firefox 37</a>.</p>
+[All devtools bugs fixed between Firefox 36 and Firefox 37](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2015-01-12&chfield=resolution&query_format=advanced&chfieldfrom=2014-11-28&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20Timeline&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=11892733).
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>{{cssxref("display")}}<code>:</code> <code>contents</code> is now activated by default ({{bug(1102374)}} and {{bug(1105369)}}).</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts">CSS multi-column layout</a> is now working on element with {{cssxref("display")}}<code>:</code> <code>table-caption</code> ({{bug(1109571)}}).</li>
- <li>Relative positioning ({{cssxref("position")}}<code>:</code> <code>relative</code>) of table cells has been implemented ({{bug(35168)}}).</li>
- <li>The quirks mode behavior of {{cssxref("empty-cells")}} has been removed: it now defaults to <code>show</code> like in standard mode ({{bug(1020400)}}).</li>
-</ul>
+- {{cssxref("display")}}`:` `contents` is now activated by default ({{bug(1102374)}} and {{bug(1105369)}}).
+- [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts) is now working on element with {{cssxref("display")}}`:` `table-caption` ({{bug(1109571)}}).
+- Relative positioning ({{cssxref("position")}}`:` `relative`) of table cells has been implemented ({{bug(35168)}}).
+- The quirks mode behavior of {{cssxref("empty-cells")}} has been removed: it now defaults to `show` like in standard mode ({{bug(1020400)}}).
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<ul>
- <li>The value <code>&lt;a rel="noreferrer"&gt;</code> now also works when the link is opened in new tab ({{bug(1031264)}}).</li>
- <li>The <code>'.'</code> followed by the extension is now allowed in <code>&lt;input accept&gt;</code>: when used, a file selector filters with this given extension to be proposed to the user ({{bug(826176)}}).</li>
-</ul>
+- The value `<a rel="noreferrer">` now also works when the link is opened in new tab ({{bug(1031264)}}).
+- The `'.'` followed by the extension is now allowed in `<input accept>`: when used, a file selector filters with this given extension to be proposed to the user ({{bug(826176)}}).
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<ul>
- <li>The {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}} and {{jsxref("WeakSet")}} constructors now ignore null iterable ({{bug(1092538)}}).</li>
- <li>The {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}} and {{jsxref("WeakSet")}} constructors now supports monkey-patched <code>prototype.set</code> or <code>prototype.add</code> ({{bug(804279)}}).</li>
- <li>The Non-standard {{jsxref("String.quote","String.prototype.quote()")}} method has been removed ({{bug(1103181)}}).</li>
- <li>The {{jsxref("RegExp.prototype.flags")}} property has been implemented ({{bug(1108467)}}).</li>
- <li>Several {{jsxref("Array")}} methods have been implemented for <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed arrays</a> as well:
-  <ul>
-   <li>The {{jsxref("TypedArray.every", "every()")}} and {{jsxref("TypedArray.some", "some()")}} methods ({{bug(1116390)}}).</li>
-   <li>The {{jsxref("TypedArray.find", "find()")}} and {{jsxref("TypedArray.findIndex", "findIndex()")}} methods ({{bug(1078975)}}).</li>
-   <li>The {{jsxref("TypedArray.fill", "fill()")}} method ({{bug(1113722)}}).</li>
-   <li>The {{jsxref("TypedArray.indexOf", "indexOf()")}} and {{jsxref("TypedArray.lastIndexOf", "lastIndexOf()")}} methods ({{bug(1107601)}}).</li>
-   <li>The {{jsxref("TypedArray.join", "join()")}} method ({{bug(1115817)}}).</li>
-   <li>The {{jsxref("TypedArray.reduce", "reduce()")}} and {{jsxref("TypedArray.reduceRight", "reduceRight()")}} methods ({{bug(1117350)}}).</li>
-   <li>The {{jsxref("TypedArray.reverse", "reverse()")}} method ({{bug(1111516)}}).</li>
-   <li>The {{jsxref("TypedArray.keys", "keys()")}}, {{jsxref("TypedArray.values", "values()")}}, and {{jsxref("TypedArray.entries", "entries()")}} methods ({{bug(1119217)}}).</li>
-  </ul>
- </li>
- <li>ES2015 Proxy {{jsxref("Global_Objects/Proxy/handler/enumerate", "enumerate")}} trap is implemented ({{bug(783829)}}).</li>
- <li>The <code>configurable</code> attribute of the {{jsxref("Function.length")}} property is now <code>true</code> per the ES2015 specification ({{bug(911142)}}).</li>
- <li>The development of <a href="http://wiki.ecmascript.org/doku.php?id=strawman:data_parallelism">ParallelJS (PJS)</a> has been discontinued due to the limited future prospects, little attention and code complexity. The experimental implementation that had been enabled only on the Nightly channel, including the <code>Array.prototype.mapPar</code>, <code>filterPar</code> and <code>reducePar</code> methods, has been completely removed.</li>
-</ul>
+- The {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}} and {{jsxref("WeakSet")}} constructors now ignore null iterable ({{bug(1092538)}}).
+- The {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}} and {{jsxref("WeakSet")}} constructors now supports monkey-patched `prototype.set` or `prototype.add` ({{bug(804279)}}).
+- The Non-standard {{jsxref("String.quote","String.prototype.quote()")}} method has been removed ({{bug(1103181)}}).
+- The {{jsxref("RegExp.prototype.flags")}} property has been implemented ({{bug(1108467)}}).
+- Several {{jsxref("Array")}} methods have been implemented for [typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) as well:
 
-<h3 id="InterfacesAPIsDOM">Interfaces/APIs/DOM</h3>
+  - The {{jsxref("TypedArray.every", "every()")}} and {{jsxref("TypedArray.some", "some()")}} methods ({{bug(1116390)}}).
+  - The {{jsxref("TypedArray.find", "find()")}} and {{jsxref("TypedArray.findIndex", "findIndex()")}} methods ({{bug(1078975)}}).
+  - The {{jsxref("TypedArray.fill", "fill()")}} method ({{bug(1113722)}}).
+  - The {{jsxref("TypedArray.indexOf", "indexOf()")}} and {{jsxref("TypedArray.lastIndexOf", "lastIndexOf()")}} methods ({{bug(1107601)}}).
+  - The {{jsxref("TypedArray.join", "join()")}} method ({{bug(1115817)}}).
+  - The {{jsxref("TypedArray.reduce", "reduce()")}} and {{jsxref("TypedArray.reduceRight", "reduceRight()")}} methods ({{bug(1117350)}}).
+  - The {{jsxref("TypedArray.reverse", "reverse()")}} method ({{bug(1111516)}}).
+  - The {{jsxref("TypedArray.keys", "keys()")}}, {{jsxref("TypedArray.values", "values()")}}, and {{jsxref("TypedArray.entries", "entries()")}} methods ({{bug(1119217)}}).
 
-<ul>
- <li>The {{domxref("StereoPannerNode")}} <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio</a> node has been implemented ({{bug(1100349)}}).</li>
- <li>The {{jsxref("Promise")}}-based version of {{domxref("OfflineAudioContext")}} is now available ({{bug(1087944)}}).</li>
- <li>The experimental, not activated by default, implementation of <a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a> progresses: {{domxref("ServiceWorkerRegistration/update", "ServiceWorkerGlobalScope.update()")}} has been implemented {{bug(1065366)}}.</li>
- <li>The <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> can now be used in <a href="/en-US/docs/Web/API/Web_Workers_API">Web workers</a> ({{bug(701634)}}).</li>
- <li>Our experimental implementation of WebGL 2.0 is going forward!
-  <ul>
-   <li>The {{domxref("WebGL2RenderingContext.getBufferSubData()")}} method has been implemented to provide access to Buffer Objects ({{bug(1048731)}}).</li>
-  </ul>
- </li>
- <li>In keeping with the evolving WebRTC specification, we have deprecated {{domxref("RTCIceServer.url")}} in favor of {{domxref("RTCIceServer.urls")}}, which lets you specify more than one URL for a given ICE server.</li>
- <li>Some key names of <code>KeyboardEvent.key</code> are changed for conforming <a href="https://dvcs.w3.org/hg/dom3events/raw-file/tip/html/DOM3Events-key.html">the latest DOM Level 3 Events spec</a>. See <a href="/en-US/docs/Web/API/KeyboardEvent/key#key_values">the tables of <code>KeyboardEvent.key</code> values in MDN</a>. The green cells are new values. And purple values are still unstable. Be careful if you use them (meta bug for these changes is {{bug(900372)}}).</li>
- <li>The {{domxref("console")}} interface is now working on {{domxref("ServiceWorker")}} and {{domxref("SharedWorker")}}. It was previously available but not working ({{bug(1058644)}}).</li>
- <li>The value of {{domxref("KeyboardEvent.key")}} was incorrectly being reported as <code>"RomanCharacters"</code> when the <code>英数</code> (<code>Eisu</code>) key was pressed. Now it correctly returns <code>"Eisu"</code>.</li>
-</ul>
+- ES2015 Proxy {{jsxref("Global_Objects/Proxy/handler/enumerate", "enumerate")}} trap is implemented ({{bug(783829)}}).
+- The `configurable` attribute of the {{jsxref("Function.length")}} property is now `true` per the ES2015 specification ({{bug(911142)}}).
+- The development of [ParallelJS (PJS)](http://wiki.ecmascript.org/doku.php?id=strawman:data_parallelism) has been discontinued due to the limited future prospects, little attention and code complexity. The experimental implementation that had been enabled only on the Nightly channel, including the `Array.prototype.mapPar`, `filterPar` and `reducePar` methods, has been completely removed.
 
-<h3 id="MathML">MathML</h3>
+### Interfaces/APIs/DOM
 
-<p><em>No change.</em></p>
+- The {{domxref("StereoPannerNode")}} [Web Audio](/en-US/docs/Web/API/Web_Audio_API) node has been implemented ({{bug(1100349)}}).
+- The {{jsxref("Promise")}}-based version of {{domxref("OfflineAudioContext")}} is now available ({{bug(1087944)}}).
+- The experimental, not activated by default, implementation of [Service Workers](/en-US/docs/Web/API/Service_Worker_API) progresses: {{domxref("ServiceWorkerRegistration/update", "ServiceWorkerGlobalScope.update()")}} has been implemented {{bug(1065366)}}.
+- The [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) can now be used in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ({{bug(701634)}}).
+- Our experimental implementation of WebGL 2.0 is going forward!
 
-<h3 id="SVG">SVG</h3>
+  - The {{domxref("WebGL2RenderingContext.getBufferSubData()")}} method has been implemented to provide access to Buffer Objects ({{bug(1048731)}}).
 
-<ul>
- <li>SVG2's <code>&lt;marker orient="auto-start-reverse"&gt;</code> has been implemented ({{bug(1107584)}}).</li>
-</ul>
+- In keeping with the evolving WebRTC specification, we have deprecated {{domxref("RTCIceServer.url")}} in favor of {{domxref("RTCIceServer.urls")}}, which lets you specify more than one URL for a given ICE server.
+- Some key names of `KeyboardEvent.key` are changed for conforming [the latest DOM Level 3 Events spec](https://dvcs.w3.org/hg/dom3events/raw-file/tip/html/DOM3Events-key.html). See [the tables of `KeyboardEvent.key` values in MDN](/en-US/docs/Web/API/KeyboardEvent/key#key_values). The green cells are new values. And purple values are still unstable. Be careful if you use them (meta bug for these changes is {{bug(900372)}}).
+- The {{domxref("console")}} interface is now working on {{domxref("ServiceWorker")}} and {{domxref("SharedWorker")}}. It was previously available but not working ({{bug(1058644)}}).
+- The value of {{domxref("KeyboardEvent.key")}} was incorrectly being reported as `"RomanCharacters"` when the `英数` (`Eisu`) key was pressed. Now it correctly returns `"Eisu"`.
 
-<h3 id="AudioVideo">Audio/Video</h3>
+### MathML
 
-<p><em>No change.</em></p>
+_No change._
 
-<h2 id="Networking">Networking</h2>
+### SVG
 
-<ul>
- <li>WebSockets now supports the <code>permessage</code> compression method, if the server does support it ({{bug(792831)}}).</li>
-</ul>
+- SVG2's `<marker orient="auto-start-reverse">` has been implemented ({{bug(1107584)}}).
 
-<h2 id="Security">Security</h2>
+### Audio/Video
 
-<ul>
- <li>The usage of weak protocols or ciphers, like SSL 3.0 and RC4, are now logged in the console, to warn sites that are using it ({{bug(1092835)}}).</li>
- <li>The <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> 1.1 <code>referrer</code> <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">directive</a> is now supported ({{bug(965727)}}).</li>
-</ul>
+_No change._
 
-<h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
+## Networking
 
-<h3 id="Add-on_SDK">Add-on SDK</h3>
+- WebSockets now supports the `permessage` compression method, if the server does support it ({{bug(792831)}}).
 
-<p><em>No change.</em></p>
+## Security
 
-<h3 id="XUL">XUL</h3>
+- The usage of weak protocols or ciphers, like SSL 3.0 and RC4, are now logged in the console, to warn sites that are using it ({{bug(1092835)}}).
+- The [CSP](/en-US/docs/Web/HTTP/CSP) 1.1 `referrer` [directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) is now supported ({{bug(965727)}}).
 
-<p><em>No change.</em></p>
+## Changes for add-on and Mozilla developers
 
-<h2 id="Older_versions">Older versions</h2>
+### Add-on SDK
 
-<p>{{Firefox_for_developers('36')}}</p>
+_No change._
+
+### XUL
+
+_No change._
+
+## Older versions
+
+{{Firefox_for_developers('36')}}

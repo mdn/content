@@ -7,83 +7,65 @@ tags:
   - Mozilla
   - Release
 ---
-<p>{{FirefoxSidebar}}</p>
+{{FirefoxSidebar}}
 
-<p>This article provides information about the changes in Firefox 88 that will affect developers. Firefox 88 was released on April 19, 2021.</p>
+This article provides information about the changes in Firefox 88 that will affect developers. Firefox 88 was released on April 19, 2021.
 
-<div class="note">
-  <p><strong>Note:</strong> See also <a href="https://hacks.mozilla.org/2021/04/never-too-late-for-firefox-88/">Never too late for Firefox 88</a> on Mozilla Hacks.</p>
-</div>
+> **Note:** See also [Never too late for Firefox 88](https://hacks.mozilla.org/2021/04/never-too-late-for-firefox-88/) on Mozilla Hacks.
 
-<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+## Changes for web developers
 
-<h3 id="Developer_Tools">Developer Tools</h3>
+### Developer Tools
 
-<ul>
-  <li>The toggle button for switching between raw and formatted response views has been implemented ({{bug(1693147)}}). For examples, see <a href="/en-US/docs/Tools/Network_Monitor/request_details#response_tab">Network request details > Response tab</a>.</li>
-</ul>
+- The toggle button for switching between raw and formatted response views has been implemented ({{bug(1693147)}}). For examples, see [Network request details > Response tab](/en-US/docs/Tools/Network_Monitor/request_details#response_tab).
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
-  <li>The {{cssxref(":user-valid")}} and {{cssxref(":user-invalid")}} pseudo-classes have been implemented ({{bug(1694141)}}).</li>
-  <li>The {{cssxref("image-set()")}} functional notation is now enabled ({{bug(1698133)}}), and was made available for {{cssxref("content")}} and {{cssxref("cursor")}} in {{bug(1695402)}} and {{bug(1695403)}}.</li>
-  <li>The default <code>monospace</code> font for MacOS has been changed to Menlo ({{bug(1342741)}}).</li>
-  <li>The <code>collapse</code> value of {{cssxref("visibility")}} is now implemented for ruby annotations ({{bug(1697529)}}).</li>
-  <li>The <code>alternate</code> value for {{cssxref("ruby-position")}} has been implemented, and is the new initial value for the property ({{bug(1694748)}}).</li>
-  <li>The {{cssxref("outline")}} CSS property has been updated to follow the outline created by {{cssxref("border-radius")}}. As part of this work the non-standard {{cssxref("-moz-outline-radius")}} property has been removed. ({{bug(315209)}} and {{bug(1694146)}}.)</li>
-</ul>
+- The {{cssxref(":user-valid")}} and {{cssxref(":user-invalid")}} pseudo-classes have been implemented ({{bug(1694141)}}).
+- The {{cssxref("image-set()")}} functional notation is now enabled ({{bug(1698133)}}), and was made available for {{cssxref("content")}} and {{cssxref("cursor")}} in {{bug(1695402)}} and {{bug(1695403)}}.
+- The default `monospace` font for MacOS has been changed to Menlo ({{bug(1342741)}}).
+- The `collapse` value of {{cssxref("visibility")}} is now implemented for ruby annotations ({{bug(1697529)}}).
+- The `alternate` value for {{cssxref("ruby-position")}} has been implemented, and is the new initial value for the property ({{bug(1694748)}}).
+- The {{cssxref("outline")}} CSS property has been updated to follow the outline created by {{cssxref("border-radius")}}. As part of this work the non-standard {{cssxref("-moz-outline-radius")}} property has been removed. ({{bug(315209)}} and {{bug(1694146)}}.)
 
-<h4 id="removals_css">Removals</h4>
+#### Removals
 
-<ul>
-  <li>The {{cssxref(":-moz-submit-invalid")}} pseudo-class has been hidden behind a preference, thereby removing it from web content ({{bug(1694129)}}).</li>
-  <li>Default styling for the non-standard {{cssxref(":-moz-ui-invalid")}} and {{cssxref(":-moz-ui-valid")}} has been removed ({{bug(1693969)}}).</li>
-</ul>
+- The {{cssxref(":-moz-submit-invalid")}} pseudo-class has been hidden behind a preference, thereby removing it from web content ({{bug(1694129)}}).
+- Default styling for the non-standard {{cssxref(":-moz-ui-invalid")}} and {{cssxref(":-moz-ui-valid")}} has been removed ({{bug(1693969)}}).
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<ul>
-  <li>Added support for <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec">RegExp match indices</a> ({{bug(1519483)}}).</li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames"><code>Intl.DisplayNames()</code></a> and <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat"><code>Intl.ListFormat()</code></a> now have stricter checking that <code>options</code> passed to the constructor are <a href="/en-US/docs/Learn/JavaScript/Objects">objects</a>, and will throw an exception if a string or other primitive is used instead ({{bug(1696881)}}).</li>
-</ul>
+- Added support for [RegExp match indices](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) ({{bug(1519483)}}).
+- [`Intl.DisplayNames()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames) and [`Intl.ListFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat) now have stricter checking that `options` passed to the constructor are [objects](/en-US/docs/Learn/JavaScript/Objects), and will throw an exception if a string or other primitive is used instead ({{bug(1696881)}}).
 
-<h3 id="HTTP">HTTP</h3>
+### HTTP
 
-<ul>
-  <li>FTP has been disabled on all releases (preference <code>network.ftp.enabled</code> now defaults to <code>false</code>), with the intent of removing it altogether in Firefox 90 ({{bug(1691890)}}). Complementing this change, the extension setting <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/ftpProtocolEnabled">browserSettings.ftpProtocolEnabled</a></code> has been made read-only, and web extensions can now register themselves as <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers">protocol handlers</a> for FTP ({{bug(1626365)}}).</li>
-</ul>
+- FTP has been disabled on all releases (preference `network.ftp.enabled` now defaults to `false`), with the intent of removing it altogether in Firefox 90 ({{bug(1691890)}}). Complementing this change, the extension setting [`browserSettings.ftpProtocolEnabled`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/ftpProtocolEnabled) has been made read-only, and web extensions can now register themselves as [protocol handlers](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers) for FTP ({{bug(1626365)}}).
 
-<h3 id="Security">Security</h3>
+### Security
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h3 id="APIs">APIs</h3>
+### APIs
 
-<h4 id="DOM">DOM</h4>
+#### DOM
 
-<ul>
-  <li>Code can now use the new static method <a href="/en-US/docs/Web/API/AbortSignal/abort"><code>AbortSignal.abort()</code></a> to return an {{domxref("AbortSignal")}} that is already set as <a href="/en-US/docs/Web/API/AbortSignal/aborted"><code>aborted</code></a> ({{bug(1698468)}}).</li>
-</ul>
+- Code can now use the new static method [`AbortSignal.abort()`](/en-US/docs/Web/API/AbortSignal/abort) to return an {{domxref("AbortSignal")}} that is already set as [`aborted`](/en-US/docs/Web/API/AbortSignal/aborted) ({{bug(1698468)}}).
 
-<h3 id="webdriver_conformance_marionette">WebDriver conformance (Marionette)</h3>
+### WebDriver conformance (Marionette)
 
-<ul>
-  <li>Marionette will no longer be enabled unless the <code>--marionette</code> command line argument or the <code>MOZ_MARIONETTE</code> environment variable is specified. As such the <code>marionette.enabled</code> preference is no longer used. With this change the state of <code>navigator.webdriver</code> now correctly reflects the enabled state of Marionette ({{bug(1593343)}}).</li>
-  <li>Fixed a bug where pointer actions other than <code>down</code> and <code>up</code> inappropriately led to buttons being pressed ({{bug(1686361)}}).</li>
-  <li>Fixed a race condition in <code>WebDriver:GetCurrentURL</code> that could have led the command to return the URL of the previously opened page, or even a hang in Marionette ({{bug(1664881)}}).</li>
-</ul>
+- Marionette will no longer be enabled unless the `--marionette` command line argument or the `MOZ_MARIONETTE` environment variable is specified. As such the `marionette.enabled` preference is no longer used. With this change the state of `navigator.webdriver` now correctly reflects the enabled state of Marionette ({{bug(1593343)}}).
+- Fixed a bug where pointer actions other than `down` and `up` inappropriately led to buttons being pressed ({{bug(1686361)}}).
+- Fixed a race condition in `WebDriver:GetCurrentURL` that could have led the command to return the URL of the previously opened page, or even a hang in Marionette ({{bug(1664881)}}).
 
-<h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
+## Changes for add-on developers
 
-<ul>
-  <li><code>url</code> can now be used to limit the properties for which the {{WebExtAPIRef("tabs.onUpdated")}} event is triggered ({{bug(1680279)}}).</li>
-</ul>
+- `url` can now be used to limit the properties for which the {{WebExtAPIRef("tabs.onUpdated")}} event is triggered ({{bug(1680279)}}).
 
-<h2 id="Older_versions">Older versions</h2>
+## Older versions
 
-<p>{{Firefox_for_developers(87)}}</p>
+{{Firefox_for_developers(87)}}

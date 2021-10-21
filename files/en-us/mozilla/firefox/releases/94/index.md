@@ -7,66 +7,60 @@ tags:
   - Mozilla
   - Release
 ---
-<p>{{FirefoxSidebar}}{{draft}}</p>
+{{FirefoxSidebar}}{{draft}}
 
+This article provides information about the changes in Firefox 94 that will affect developers. Firefox 94 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta), and will ship on [November 1, 2021](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
 
-<p>This article provides information about the changes in Firefox 94 that will affect developers. Firefox 94 is the current <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#beta">Beta version of Firefox</a>, and will ship on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">November 1, 2021</a>.</p>
+## Changes for web developers
 
-<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+### Developer Tools
 
-<h3 id="Developer_Tools">Developer Tools</h3>
+### HTML
 
-<h3 id="HTML">HTML</h3>
+#### Removals
 
-<h4 id="removals_html">Removals</h4>
+### CSS
 
-<h3 id="CSS">CSS</h3>
+#### Removals
 
-<h4 id="removals_css">Removals</h4>
+### JavaScript
 
-<h3 id="JavaScript">JavaScript</h3>
+#### Removals
 
-<h4 id="removals_js">Removals</h4>
+### HTTP
 
-<h3 id="HTTP">HTTP</h3>
+#### Removals
 
-<h4 id="removals_http">Removals</h4>
+### Security
 
-<h3 id="Security">Security</h3>
+#### Removals
 
-<h4 id="removals_sec">Removals</h4>
+### APIs
 
-<h3 id="APIs">APIs</h3>
+- The {{domxref("structuredClone()")}} global function is now supported for copying complex JavaScript objects ({{bug(1722576)}}).
 
-<ul>
-  <li>The {{domxref("structuredClone()")}} global function is now supported for copying complex JavaScript objects ({{bug(1722576)}}).</li>
-</ul>
+#### DOM
 
-<h4 id="DOM">DOM</h4>
+- The {{domxref("HTMLScriptElement.supports()")}} static method is now supported. This provides a simple and unified method for feature checking whether a browser supports particular types of scripts, such as JavaScript modules or classic scripts ({{bug(1729239)}}).
 
-<ul>
-  <li>The {{domxref("HTMLScriptElement.supports()")}} static method is now supported. This provides a simple and unified method for feature checking whether a browser supports particular types of scripts, such as JavaScript modules or classic scripts ({{bug(1729239)}}).</li>
-</ul>
+#### Media, WebRTC, and Web Audio
 
-<h4 id="Media_WebRTC_and_Web_Audio">Media, WebRTC, and Web Audio</h4>
+#### Removals
 
-<h4 id="removals_media">Removals</h4>
+### WebAssembly
 
-<h3 id="WebAssembly">WebAssembly</h3>
+#### Removals
 
-<h4 id="removals_wasm">Removals</h4>
+### WebDriver conformance (Marionette)
 
-<h3 id="webdriver_conformance_marionette">WebDriver conformance (Marionette)</h3>
+#### Removals
 
-<h4 id="removals_webdriver">Removals</h4>
+## Changes for add-on developers
 
-<h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
+#### Removals
 
-<h4 id="removals_webext">Removals</h4>
+### Other
 
-<h3 id="Other">Other</h3>
+## Older versions
 
-
-<h2 id="Older_versions">Older versions</h2>
-
-<p>{{Firefox_for_developers(93)}}</p>
+{{Firefox_for_developers(93)}}

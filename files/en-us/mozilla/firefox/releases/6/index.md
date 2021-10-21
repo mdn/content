@@ -6,234 +6,194 @@ tags:
   - Firefox 6
   - Gecko 6.0
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article provides links to information about the changes that affect developers in this release.</p>
+Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article provides links to information about the changes that affect developers in this release.
 
-<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+## Changes for web developers
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<ul>
- <li>The HTML5 {{ HTMLElement("progress") }} element, which lets you create a progress bar, is now supported.</li>
- <li>The parsing of the HTML5 {{ HTMLElement("track") }} element, which specifies text tracks for media elements, is now supported. This element should appear in the DOM now, though its behavior is still not implemented.</li>
- <li>The {{ HTMLElement("iframe") }} element is now clipped correctly by its container when the container's corners have been rounded using the {{ cssxref("border-radius") }} property.</li>
- <li>{{ HTMLElement("form") }} elements' text {{ HTMLElement("input") }} fields no longer support the XUL <code><a href="/en-US/docs/XUL/Property/maxwidth">maxwidth</a></code> property; this was never intentional, and is in violation of the HTML specification. You should instead use the {{ HTMLAttrXref("size", "input") }} attribute to set the maximum width of input fields.</li>
- <li>The {{ HTMLElement("canvas") }} {{ domxref("CanvasRenderingContext2d") }} properties <code>fillStyle</code> and <code>strokeStyle</code> used to ignore garbage included after a valid color definition; now this is correctly treated as an error. For example, "red blue" as a color used to be treated as "red", when it should have been ignored.</li>
- <li>The width and height of {{ HTMLElement("canvas") }} elements can now properly be set to 0px; previously, these were getting arbitrarily set to 300px when you tried to do that.</li>
- <li>Support for the HTML <a href="/en-US/docs/Web/HTML/Global_attributes#attr-data-*">custom data attributes</a> (data-*) has been added. The DOM {{ domxref("element.dataset") }} property allows to access them.</li>
- <li>When a {{ HTMLElement("textarea") }} element receives focus, the text insertion point is now placed, by default, at the beginning of the text rather than at the end. This makes Firefox's behavior consistent with other browsers.</li>
-</ul>
+- The HTML5 {{ HTMLElement("progress") }} element, which lets you create a progress bar, is now supported.
+- The parsing of the HTML5 {{ HTMLElement("track") }} element, which specifies text tracks for media elements, is now supported. This element should appear in the DOM now, though its behavior is still not implemented.
+- The {{ HTMLElement("iframe") }} element is now clipped correctly by its container when the container's corners have been rounded using the {{ cssxref("border-radius") }} property.
+- {{ HTMLElement("form") }} elements' text {{ HTMLElement("input") }} fields no longer support the XUL [`maxwidth`](/en-US/docs/XUL/Property/maxwidth) property; this was never intentional, and is in violation of the HTML specification. You should instead use the {{ HTMLAttrXref("size", "input") }} attribute to set the maximum width of input fields.
+- The {{ HTMLElement("canvas") }} {{ domxref("CanvasRenderingContext2d") }} properties `fillStyle` and `strokeStyle` used to ignore garbage included after a valid color definition; now this is correctly treated as an error. For example, "red blue" as a color used to be treated as "red", when it should have been ignored.
+- The width and height of {{ HTMLElement("canvas") }} elements can now properly be set to 0px; previously, these were getting arbitrarily set to 300px when you tried to do that.
+- Support for the HTML [custom data attributes](/en-US/docs/Web/HTML/Global_attributes#attr-data-*) (data-\*) has been added. The DOM {{ domxref("element.dataset") }} property allows to access them.
+- When a {{ HTMLElement("textarea") }} element receives focus, the text insertion point is now placed, by default, at the beginning of the text rather than at the end. This makes Firefox's behavior consistent with other browsers.
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<dl>
- <dt>{{ cssxref("text-decoration-color", "-moz-text-decoration-color") }}</dt>
- <dd>This new property lets you set the color used by text decorations, such as underlines, overlines, and strikethroughs.</dd>
- <dt>{{ cssxref("text-decoration-line", "-moz-text-decoration-line") }}</dt>
- <dd>This new property lets you set the kind of text decorations added to an element.</dd>
- <dt>{{ cssxref("text-decoration-style", "-moz-text-decoration-style") }}</dt>
- <dd>This new property lets you set the style of text decorations, such as underlines, overlines, and strikethroughs. Styles include single-strokes, double strokes, wavy lines, dotted lines, and so forth.</dd>
- <dt>{{ cssxref("hyphens", "-moz-hyphens") }}</dt>
- <dd>This new property lets you control how hyphenation of words during line wrapping is handled.</dd>
- <dt>{{ cssxref("-moz-orient", "-moz-orient") }}</dt>
- <dd>A new (currently Mozilla-specific) property which lets you control the vertical or horizontal orientation of certain elements (particularly {{ HTMLElement("progress") }}).</dd>
- <dt>{{ cssxref("::-moz-progress-bar") }}</dt>
- <dd>A Mozilla-specific pseudo-element that lets you style the area of an {{ HTMLElement("progress") }} element representing the completed portion of a task.</dd>
-</dl>
+- {{ cssxref("text-decoration-color", "-moz-text-decoration-color") }}
+  - : This new property lets you set the color used by text decorations, such as underlines, overlines, and strikethroughs.
+- {{ cssxref("text-decoration-line", "-moz-text-decoration-line") }}
+  - : This new property lets you set the kind of text decorations added to an element.
+- {{ cssxref("text-decoration-style", "-moz-text-decoration-style") }}
+  - : This new property lets you set the style of text decorations, such as underlines, overlines, and strikethroughs. Styles include single-strokes, double strokes, wavy lines, dotted lines, and so forth.
+- {{ cssxref("hyphens", "-moz-hyphens") }}
+  - : This new property lets you control how hyphenation of words during line wrapping is handled.
+- {{ cssxref("-moz-orient", "-moz-orient") }}
+  - : A new (currently Mozilla-specific) property which lets you control the vertical or horizontal orientation of certain elements (particularly {{ HTMLElement("progress") }}).
+- {{ cssxref("::-moz-progress-bar") }}
+  - : A Mozilla-specific pseudo-element that lets you style the area of an {{ HTMLElement("progress") }} element representing the completed portion of a task.
 
-<h4 id="Other_changes">Other changes</h4>
+#### Other changes
 
-<ul>
- <li>The <code>@-moz-document</code> property has a new <code>regexp()</code> function, which lets you match the document's URL to a <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expression</a>.</li>
- <li>The {{ cssxref("azimuth") }} CSS property is no longer supported, as we have removed what little code we had for the <code>aural</code> media group. It was never significantly implemented, so it made more sense to remove the crufty implementation for the time being rather than try to patch it up.</li>
- <li>In the past, the {{ cssxref(":hover") }} pseudoclass was not applied to class selectors when in quirks mode; for example, <code>.someclass:hover</code> did not work. This quirk has been removed.</li>
- <li>The {{ cssxref(":indeterminate") }} pseudo-class can be applied to {{ HTMLElement("progress") }} elements. This is non-standard, but we hope it will be adopted by other browsers, because it will be useful.</li>
- <li>The <code>-moz-win-exclude-glass</code> value has been added to the <code>-moz-appearance</code> CSS property in order to exclude opaque regions in Aero Glass glaze effects on Windows systems.</li>
- <li>
-  <p>{{ Bug(658949) }} changed how the hash (#) symbol is treated in data URIs which may break CSS stylesheets which contain such a symbol if it is not escaped.</p>
- </li>
-</ul>
+- The `@-moz-document` property has a new `regexp()` function, which lets you match the document's URL to a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
+- The {{ cssxref("azimuth") }} CSS property is no longer supported, as we have removed what little code we had for the `aural` media group. It was never significantly implemented, so it made more sense to remove the crufty implementation for the time being rather than try to patch it up.
+- In the past, the {{ cssxref(":hover") }} pseudoclass was not applied to class selectors when in quirks mode; for example, `.someclass:hover` did not work. This quirk has been removed.
+- The {{ cssxref(":indeterminate") }} pseudo-class can be applied to {{ HTMLElement("progress") }} elements. This is non-standard, but we hope it will be adopted by other browsers, because it will be useful.
+- The `-moz-win-exclude-glass` value has been added to the `-moz-appearance` CSS property in order to exclude opaque regions in Aero Glass glaze effects on Windows systems.
+- {{ Bug(658949) }} changed how the hash (#) symbol is treated in data URIs which may break CSS stylesheets which contain such a symbol if it is not escaped.
 
-<h3 id="DOM">DOM</h3>
+### DOM
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">Using media queries from code</a></dt>
- <dd>You can now test the result of a media query string programmatically using the {{ domxref("window.matchMedia()") }} method and the {{ domxref("MediaQueryList") }} interface.</dd>
- <dt><a href="/en-US/docs/Web/API/Touch_events">Touch events</a></dt>
- <dd>Firefox 6 adds support for W3C standard touch events; these make it easy to interpret one or more touches at a time on touch-sensitive surfaces such as touch screens and trackpads.</dd>
- <dt><a href="/en-US/docs/Web/API/Server-sent_events">Server-sent events</a></dt>
- <dd>Server-sent events make it possible for a web application to ask a server to send events just like any locally-created DOM event.</dd>
-</dl>
+- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+  - : You can now test the result of a media query string programmatically using the {{ domxref("window.matchMedia()") }} method and the {{ domxref("MediaQueryList") }} interface.
+- [Touch events](/en-US/docs/Web/API/Touch_events)
+  - : Firefox 6 adds support for W3C standard touch events; these make it easy to interpret one or more touches at a time on touch-sensitive surfaces such as touch screens and trackpads.
+- [Server-sent events](/en-US/docs/Web/API/Server-sent_events)
+  - : Server-sent events make it possible for a web application to ask a server to send events just like any locally-created DOM event.
 
-<ul>
- <li><code>navigator.securityPolicy</code>, which has returned an empty string for a long time, has been removed outright.</li>
- <li>{{ domxref("BlobBuilder") }} is now implemented, although for now it's prefixed (so you need to use <code>MozBlobBuilder</code>).</li>
- <li>The {{ domxref("document.height") }} and {{ domxref("document.width") }} have been removed. {{ Bug(585877) }}</li>
- <li>The {{ domxref("DocumentType") }} object's <code>entities</code> and <code>notations</code> properties, which were never implemented and always returned <code>null</code>, have been removed, since they've been removed from the specification anyway.</li>
- <li>The <code>DOMConfiguration</code> interface and the <code>document.domConfig</code> property that used it have both been removed; they were never supported and have since been removed from the DOM specification.</li>
- <li>The <code>hashchange</code> event now correctly includes <a href="/en-US/docs/Web/API/WindowEventHandlers/onhashchange#the_hashchange_event">the <code>newURL</code> and <code>oldURL</code> fields</a>.</li>
- <li>The {{ domxref("FileReader") }} interface's <code>abort()</code> method now throws an exception when used if no file read is in progress.</li>
- <li>The {{ domxref("window.postMessage()") }} method now uses <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">the structured clone algorithm</a> to let you pass JavaScript objects instead of just strings from one window to another.</li>
- <li>The {{ domxref("window.history") }} API now uses <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">the structured clone algorithm</a> to serialize the objects you pass to the <code>pushState()</code> and <code>replaceState()</code> methods; this lets you use more complex objects (including those that contain cyclic graphs of references).</li>
- <li>You can now <a href="/en-US/docs/Web/Guide/Printing#detecting_print_requests">detect when printing has been initiated and has completed</a> by listening for the new <code>beforeprint</code> and <code>afterprint</code> events.</li>
- <li>The <code>document.strictErrorChecking</code> property has been removed, since it was never implemented and was removed from the DOM specification.</li>
- <li>The standard {{ domxref("event.defaultPrevented") }} property is now supported; you should use this instead of the non-standard <code>getPreventDefault()</code> method to detect whether or not {{ domxref("event.preventDefault()") }} was called on the event.</li>
- <li>The {{ domxref("window.top") }} property is now properly read only.</li>
- <li>DOM views, which we never documented, have been removed. This was a bit of implementation detail that was unnecessarily complicating things, so we got rid of it. If you notice this change, you're probably doing something wrong.</li>
- <li>The <code>EventTarget</code> function <a href="/en-US/docs/XPCOM_Interface_Reference/nsIDOMEventTarget"><code>addEventListener()</code></a>'s <code>useCapture</code> parameter is now optional, as it is in WebKit (and as per the latest version of the specification).</li>
- <li>The <code>mozResponseArrayBuffer</code> property of the <a href="/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> object has been replaced with the <code>responseType</code> and <code>response</code> properties.</li>
- <li>The {{ domxref("element.dataset") }} property has been added to the <a href="/en-US/docs/Web/API/HTMLElement"><code>HTMLElement</code></a> interface allowing access to the <a href="/en-US/docs/Web/HTML/Global_attributes#attr-data-*"><code>data-*</code> global attributes</a> of an element.</li>
- <li>The {{ domxref("CustomEvent") }} interface has been implemented. (see {{ bug("427537") }})</li>
- <li>For security reasons, <code>data:</code> and <code>javascript:</code> URIs no longer inherit the security context of the current page when the user enters them in the location bar; instead, a new, empty, security context is created. This means that script loaded by entering <code>javascript:</code> URIs in the location bar no longer has access to DOM methods and the like, for example. These URIs continue to work as before when used by script, however.</li>
-</ul>
+<!---->
 
-<h3 id="JavaScript">JavaScript</h3>
+- `navigator.securityPolicy`, which has returned an empty string for a long time, has been removed outright.
+- {{ domxref("BlobBuilder") }} is now implemented, although for now it's prefixed (so you need to use `MozBlobBuilder`).
+- The {{ domxref("document.height") }} and {{ domxref("document.width") }} have been removed. {{ Bug(585877) }}
+- The {{ domxref("DocumentType") }} object's `entities` and `notations` properties, which were never implemented and always returned `null`, have been removed, since they've been removed from the specification anyway.
+- The `DOMConfiguration` interface and the `document.domConfig` property that used it have both been removed; they were never supported and have since been removed from the DOM specification.
+- The `hashchange` event now correctly includes [the `newURL` and `oldURL` fields](/en-US/docs/Web/API/WindowEventHandlers/onhashchange#the_hashchange_event).
+- The {{ domxref("FileReader") }} interface's `abort()` method now throws an exception when used if no file read is in progress.
+- The {{ domxref("window.postMessage()") }} method now uses [the structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) to let you pass JavaScript objects instead of just strings from one window to another.
+- The {{ domxref("window.history") }} API now uses [the structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) to serialize the objects you pass to the `pushState()` and `replaceState()` methods; this lets you use more complex objects (including those that contain cyclic graphs of references).
+- You can now [detect when printing has been initiated and has completed](/en-US/docs/Web/Guide/Printing#detecting_print_requests) by listening for the new `beforeprint` and `afterprint` events.
+- The `document.strictErrorChecking` property has been removed, since it was never implemented and was removed from the DOM specification.
+- The standard {{ domxref("event.defaultPrevented") }} property is now supported; you should use this instead of the non-standard `getPreventDefault()` method to detect whether or not {{ domxref("event.preventDefault()") }} was called on the event.
+- The {{ domxref("window.top") }} property is now properly read only.
+- DOM views, which we never documented, have been removed. This was a bit of implementation detail that was unnecessarily complicating things, so we got rid of it. If you notice this change, you're probably doing something wrong.
+- The `EventTarget` function [`addEventListener()`](/en-US/docs/XPCOM_Interface_Reference/nsIDOMEventTarget)'s `useCapture` parameter is now optional, as it is in WebKit (and as per the latest version of the specification).
+- The `mozResponseArrayBuffer` property of the [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) object has been replaced with the `responseType` and `response` properties.
+- The {{ domxref("element.dataset") }} property has been added to the [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) interface allowing access to the [`data-*` global attributes](/en-US/docs/Web/HTML/Global_attributes#attr-data-*) of an element.
+- The {{ domxref("CustomEvent") }} interface has been implemented. (see {{ bug("427537") }})
+- For security reasons, `data:` and `javascript:` URIs no longer inherit the security context of the current page when the user enters them in the location bar; instead, a new, empty, security context is created. This means that script loaded by entering `javascript:` URIs in the location bar no longer has access to DOM methods and the like, for example. These URIs continue to work as before when used by script, however.
 
-<ul>
- <li>In the past, it was possible to use the <code>new</code> operator on several built-in functions (eval, parseInt, Date.parse...) that should not have allowed it, according to the specification. This behavior is no longer supported. Using the <code>new</code> operator in this way was never officially supported and was not widely done, so it's unlikely that this change affects you.</li>
- <li>ECMAScript 2015 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap">WeakMaps</a> have been added as a prototype implementation.</li>
-</ul>
+### JavaScript
 
-<h3 id="SVG">SVG</h3>
+- In the past, it was possible to use the `new` operator on several built-in functions (eval, parseInt, Date.parse...) that should not have allowed it, according to the specification. This behavior is no longer supported. Using the `new` operator in this way was never officially supported and was not widely done, so it's unlikely that this change affects you.
+- ECMAScript 2015 [WeakMaps](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) have been added as a prototype implementation.
 
-<ul>
- <li>The {{ SVGAttr("pathLength") }} attribute is now supported.</li>
- <li>SVG patterns, gradients, and filters now work correctly when loaded from <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data:</code> URLs</a>.</li>
-</ul>
+### SVG
 
-<h3 id="MathML">MathML</h3>
+- The {{ SVGAttr("pathLength") }} attribute is now supported.
+- SVG patterns, gradients, and filters now work correctly when loaded from [`data:` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
 
-<ul>
- <li>The implementation of {{ MathMLElement("mstyle") }} has been corrected.</li>
-</ul>
+### MathML
 
-<h3 id="Accessibility_(ARIA)">Accessibility (ARIA)</h3>
+- The implementation of {{ MathMLElement("mstyle") }} has been corrected.
 
-<ul>
- <li>A state change event is now correctly sent when the value of <code>aria-busy</code> changes.</li>
- <li>An attribute change event is now correctly sent when <code>aria-sort</code> occurs.</li>
-</ul>
+### Accessibility (ARIA)
 
-<h3 id="Networking">Networking</h3>
+- A state change event is now correctly sent when the value of `aria-busy` changes.
+- An attribute change event is now correctly sent when `aria-sort` occurs.
 
-<dl>
- <dt><a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a></dt>
- <dd>WebSockets was updated to protocol version 07 for Firefox 6. In addition, the global <code>WebSocket</code> object has been renamed to <code>MozWebSocket</code> to prevent it from incorrectly being used to detect the availability of unprefixed WebSockets.</dd>
-</dl>
+### Networking
 
-<ul>
- <li>Parsing of the <code>Content-Disposition</code> header has been fixed to properly interpret backslash-escaped ASCII characters as just that character itself. Previously it was incorrectly replacing that character with an underscore ("_").</li>
- <li>The value of the path field on <code>Set-Cookie</code> headers is now interpreted correctly when quotes are used; previously, they were being treated as part of the path string instead of as delimiters. <strong>This change may affect compatibility with some web sites</strong>, so authors should check their code.</li>
- <li>The <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.42"><code>Upgrade</code></a> request header is now supported; you can request an upgrade of an HTTP channel to another protocol by calling {{ ifmethod("nsIHttpChannelInternal","HTTPUpgrade") }}.</li>
-</ul>
+- [WebSockets](/en-US/docs/Web/API/WebSockets_API)
+  - : WebSockets was updated to protocol version 07 for Firefox 6. In addition, the global `WebSocket` object has been renamed to `MozWebSocket` to prevent it from incorrectly being used to detect the availability of unprefixed WebSockets.
 
-<h3 id="Other_changes_2">Other changes</h3>
+<!---->
 
-<ul>
- <li>Support for microsummaries has been removed; these were never widely used, were not very discoverable, and continuing to support them was making improvements to the Places (bookmark and history) architecture difficult.</li>
- <li>WebGL now supports the <a href="http://www.khronos.org/registry/gles/extensions/OES/OES_texture_float.txt"><code>OES_texture_float</code></a> extension.</li>
- <li>The new <a href="/en-US/docs/Tools/Scratchpad">Scratchpad</a> tool provides a handy place to experiment with JavaScript code.</li>
- <li>The <code>console.trace()</code> method has been added to the <a href="/en-US/docs/Web/API/Console_API">Console API </a>(see {{ bug('585956') }}).</li>
-</ul>
+- Parsing of the `Content-Disposition` header has been fixed to properly interpret backslash-escaped ASCII characters as just that character itself. Previously it was incorrectly replacing that character with an underscore ("\_").
+- The value of the path field on `Set-Cookie` headers is now interpreted correctly when quotes are used; previously, they were being treated as part of the path string instead of as delimiters. **This change may affect compatibility with some web sites**, so authors should check their code.
+- The [`Upgrade`](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.42) request header is now supported; you can request an upgrade of an HTTP channel to another protocol by calling {{ ifmethod("nsIHttpChannelInternal","HTTPUpgrade") }}.
 
-<h2 id="Changes_for_Mozilla_and_add-on_developers">Changes for Mozilla and add-on developers</h2>
+### Other changes
 
-<p>For an overview of the changes you may need to make in order to make your add-on compatible with Firefox 6, see <a href="/en-US/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_6">Updating add-ons for Firefox 6</a>.</p>
+- Support for microsummaries has been removed; these were never widely used, were not very discoverable, and continuing to support them was making improvements to the Places (bookmark and history) architecture difficult.
+- WebGL now supports the [`OES_texture_float`](http://www.khronos.org/registry/gles/extensions/OES/OES_texture_float.txt) extension.
+- The new [Scratchpad](/en-US/docs/Tools/Scratchpad) tool provides a handy place to experiment with JavaScript code.
+- The `console.trace()` method has been added to the [Console API ](/en-US/docs/Web/API/Console_API)(see {{ bug('585956') }}).
 
-<div class="note">
-  <p><strong>Note:</strong> Firefox 6 requires that binary components be recompiled, as do all major releases of Firefox. See <a href="/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces">Binary Interfaces</a> for details.</p>
-</div>
+## Changes for Mozilla and add-on developers
 
-<h3 id="JavaScript_code_modules">JavaScript code modules</h3>
+For an overview of the changes you may need to make in order to make your add-on compatible with Firefox 6, see [Updating add-ons for Firefox 6](/en-US/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_6).
 
-<h4 id="FileUtils.jsm">FileUtils.jsm</h4>
+> **Note:** Firefox 6 requires that binary components be recompiled, as do all major releases of Firefox. See [Binary Interfaces](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces) for details.
 
-<ul>
- <li>The <code>openSafeFileOutputStream()</code> method now opens files with the <code>DEFER_OPEN</code> <a href="/en-US/docs/XPCOM_Interface_Reference/nsIFileOutputStream#Behavior_flag_constants">behavior flag</a> instead of attempting to open them immediately.</li>
-</ul>
+### JavaScript code modules
 
-<h4 id="XPCOMUtils.jsm">XPCOMUtils.jsm</h4>
+#### FileUtils.jsm
 
-<ul>
- <li>The new <a href="/en-US/docs/JavaScript_code_modules/XPCOMUtils.jsm#importRelative()"><code>importRelative()</code></a> method lets you load one JavaScript code module from a path relative to the path of another JavaScript code module. This makes it easier to build modules that depend on each other.</li>
-</ul>
+- The `openSafeFileOutputStream()` method now opens files with the `DEFER_OPEN` [behavior flag](/en-US/docs/XPCOM_Interface_Reference/nsIFileOutputStream#Behavior_flag_constants) instead of attempting to open them immediately.
 
-<h3 id="XPCOM">XPCOM</h3>
+#### XPCOMUtils.jsm
 
-<ul>
- <li><a href="/en-US/docs/XPCOM_array_guide#nsCOMArray.3cT.3e"><code>nsCOMArray&lt;T&gt;</code></a> now has a <a href="/en-US/docs/XPCOM_array_guide#Deleting_objects"><code>RemoveObjectsAt()</code></a> method for removing multiple objects at once from the array.</li>
-</ul>
+- The new [`importRelative()`](</en-US/docs/JavaScript_code_modules/XPCOMUtils.jsm#importRelative()>) method lets you load one JavaScript code module from a path relative to the path of another JavaScript code module. This makes it easier to build modules that depend on each other.
 
-<h3 id="Using_the_DOM_from_chrome">Using the DOM from chrome</h3>
+### XPCOM
 
-<dl>
- <dt><a href="/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code">Using the DOM File API in chrome code</a></dt>
- <dd>Although you've always been able to use the DOM File API from chrome code, the {{ domxref("File") }} constructor now supports specifying a local pathname string when used from chrome. In addition, you can also specify the file to access using the DOM File API using an {{ interface("nsIFile") }} object.</dd>
-</dl>
+- [`nsCOMArray<T>`](/en-US/docs/XPCOM_array_guide#nsCOMArray.3cT.3e) now has a [`RemoveObjectsAt()`](/en-US/docs/XPCOM_array_guide#Deleting_objects) method for removing multiple objects at once from the array.
 
-<h3 id="Interface_changes">Interface changes</h3>
+### Using the DOM from chrome
 
-<ul>
- <li>{{ interface("nsINavHistoryQueryOptions") }} now supports sorting in frequency order using the new <code>SORT_BY_FREQUENCY_ASCENDING</code> and <code>SORT_BY_FREQUENCY_DESCENDING</code> constants.</li>
- <li>{{ interface("nsIFilePicker") }} has a new {{ ifattribute("nsIFilePicker", "addToRecentDocs") }} attribute, which lets you indicate that the selected file should be added to the user's "recent documents" list if there is one. This attribute has no effect when in private browsing mode.</li>
- <li>{{ interface("nsINavBookmarkObserver") }} methods with item ID parameters now require a GUID as well.</li>
- <li>{{ ifmethod("nsIPrefBranch", "clearUserPref") }} no longer throws an exception if the specified preference doesn't exist or has no user-set value. Instead, it does nothing.</li>
- <li>The {{ interface("nsIMemoryReporter") }} interface now provides support for indicating the kind of memory being described (mapped, heap, or other).</li>
- <li>The {{ interface("nsISHEntry") }} <code>stateData</code> attribute now returns a {{ interface("nsIStructuredCloneContainer") }}.</li>
- <li>{{ interface("nsIURI") }} has a new {{ ifattribute("nsIURI", "ref") }} attribute, which returns the reference portion (the part after the "#") of the URI. It also has new methods {{ ifmethod("nsIURI", "cloneIgnoringRef") }} which clones the {{ interface("nsIURI") }} without the ref member and {{ ifmethod("nsIURI", "equalsExceptRef") }} which compares to another {{ interface("nsIURI") }} ignoring the ref member.</li>
-</ul>
+- [Using the DOM File API in chrome code](/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code)
+  - : Although you've always been able to use the DOM File API from chrome code, the {{ domxref("File") }} constructor now supports specifying a local pathname string when used from chrome. In addition, you can also specify the file to access using the DOM File API using an {{ interface("nsIFile") }} object.
 
-<h4 id="New_interfaces">New interfaces</h4>
+### Interface changes
 
-<dl>
- <dt>{{ interface("mozIAsyncFavicons") }}</dt>
- <dd>A new service that lets you access the favicon service asynchronously.</dd>
- <dt>{{ interface("nsIEventSource") }}</dt>
- <dd><em>Details forthcoming.</em></dd>
- <dt>{{ interface("nsIGSettingsCollection") }}</dt>
- <dd><em>Details forthcoming.</em></dd>
- <dt>{{ interface("nsIGSettingsService") }}</dt>
- <dd><em>Details forthcoming.</em></dd>
- <dt>{{ interface("nsIHttpUpgradeListener") }}</dt>
- <dd>The callback interface for handling HTTP upgrade requests via the {{ ifmethod("nsIHttpChannelInternal", "HTTPUpgrade") }} method.</dd>
- <dt>{{ interface("nsIStructuredCloneContainer") }}</dt>
- <dd>A container for objects that have been serialized using the <a href="/en-US/docs/HTML/Structured_clones">structured clone algorithm</a>.</dd>
- <dt>{{ interface("nsITelemetry") }}</dt>
- <dd>Implements telemetry support to allow recording of telemetry data to be used to present histograms for performance tracking purposes. See {{ bug("649502") }} and {{ bug("585196") }}.</dd>
- <dt>{{ interface("nsITimedChannel") }}</dt>
- <dd>See {{ bug("576006") }}.</dd>
- <dt>{{ interface("nsIWebSocketListener") }}</dt>
- <dd>See {{ bug("640003") }}.</dd>
- <dt>{{ interface("nsIWebSocketProtocol") }}</dt>
- <dd>See {{ bug("640003") }}.</dd>
-</dl>
+- {{ interface("nsINavHistoryQueryOptions") }} now supports sorting in frequency order using the new `SORT_BY_FREQUENCY_ASCENDING` and `SORT_BY_FREQUENCY_DESCENDING` constants.
+- {{ interface("nsIFilePicker") }} has a new {{ ifattribute("nsIFilePicker", "addToRecentDocs") }} attribute, which lets you indicate that the selected file should be added to the user's "recent documents" list if there is one. This attribute has no effect when in private browsing mode.
+- {{ interface("nsINavBookmarkObserver") }} methods with item ID parameters now require a GUID as well.
+- {{ ifmethod("nsIPrefBranch", "clearUserPref") }} no longer throws an exception if the specified preference doesn't exist or has no user-set value. Instead, it does nothing.
+- The {{ interface("nsIMemoryReporter") }} interface now provides support for indicating the kind of memory being described (mapped, heap, or other).
+- The {{ interface("nsISHEntry") }} `stateData` attribute now returns a {{ interface("nsIStructuredCloneContainer") }}.
+- {{ interface("nsIURI") }} has a new {{ ifattribute("nsIURI", "ref") }} attribute, which returns the reference portion (the part after the "#") of the URI. It also has new methods {{ ifmethod("nsIURI", "cloneIgnoringRef") }} which clones the {{ interface("nsIURI") }} without the ref member and {{ ifmethod("nsIURI", "equalsExceptRef") }} which compares to another {{ interface("nsIURI") }} ignoring the ref member.
 
-<h4 id="Removed_interfaces">Removed interfaces</h4>
+#### New interfaces
 
-<p>The following interfaces were implementation details that are no longer needed:</p>
+- {{ interface("mozIAsyncFavicons") }}
+  - : A new service that lets you access the favicon service asynchronously.
+- {{ interface("nsIEventSource") }}
+  - : _Details forthcoming._
+- {{ interface("nsIGSettingsCollection") }}
+  - : _Details forthcoming._
+- {{ interface("nsIGSettingsService") }}
+  - : _Details forthcoming._
+- {{ interface("nsIHttpUpgradeListener") }}
+  - : The callback interface for handling HTTP upgrade requests via the {{ ifmethod("nsIHttpChannelInternal", "HTTPUpgrade") }} method.
+- {{ interface("nsIStructuredCloneContainer") }}
+  - : A container for objects that have been serialized using the [structured clone algorithm](/en-US/docs/HTML/Structured_clones).
+- {{ interface("nsITelemetry") }}
+  - : Implements telemetry support to allow recording of telemetry data to be used to present histograms for performance tracking purposes. See {{ bug("649502") }} and {{ bug("585196") }}.
+- {{ interface("nsITimedChannel") }}
+  - : See {{ bug("576006") }}.
+- {{ interface("nsIWebSocketListener") }}
+  - : See {{ bug("640003") }}.
+- {{ interface("nsIWebSocketProtocol") }}
+  - : See {{ bug("640003") }}.
 
-<ul>
- <li><code>nsIDOMDocumentEvent</code> (see {{ bug("655517") }})</li>
- <li><code>nsIDOMDocumentTraversal</code> (see {{ bug("655514") }})</li>
- <li><code>nsIDOMDocumentRange</code> (see {{ bug("655513") }})</li>
- <li><code>IWeaveCrypto</code> (see {{ bug("651596") }})</li>
- <li><code>nsIDOM3DocumentEvent</code> (see {{ bug("481863") }})</li>
- <li><code>nsIDOMAbstractView</code></li>
- <li><code>nsILiveTitleNotificationSubject</code></li>
- <li><code>nsIPlugin</code> (see {{ bug("637253") }})</li>
- <li><code>nsIPluginInstance</code> (see {{ bug("637253") }})</li>
- <li><code>nsIHTMLEditRules</code> (see {{ bug(633750) }})</li>
- <li>{{ interface("nsIXSLTProcessorObsolete") }} (see {{ bug("649534") }})</li>
-</ul>
+#### Removed interfaces
 
-<h3 id="Other_changes_3">Other changes</h3>
+The following interfaces were implementation details that are no longer needed:
 
-<dl>
- <dt><a href="/en-US/docs/Mozilla/Preferences/Using_preferences_from_application_code">Using preferences from application code</a></dt>
- <dd>A new static API is available for easily accessing preferences; this is only available to application code and can't be used by add-ons.</dd>
-</dl>
+- `nsIDOMDocumentEvent` (see {{ bug("655517") }})
+- `nsIDOMDocumentTraversal` (see {{ bug("655514") }})
+- `nsIDOMDocumentRange` (see {{ bug("655513") }})
+- `IWeaveCrypto` (see {{ bug("651596") }})
+- `nsIDOM3DocumentEvent` (see {{ bug("481863") }})
+- `nsIDOMAbstractView`
+- `nsILiveTitleNotificationSubject`
+- `nsIPlugin` (see {{ bug("637253") }})
+- `nsIPluginInstance` (see {{ bug("637253") }})
+- `nsIHTMLEditRules` (see {{ bug(633750) }})
+- {{ interface("nsIXSLTProcessorObsolete") }} (see {{ bug("649534") }})
 
-<h2 id="See_also">See also</h2>
+### Other changes
 
-<div>{{Firefox_for_developers('5')}}</div>
+- [Using preferences from application code](/en-US/docs/Mozilla/Preferences/Using_preferences_from_application_code)
+  - : A new static API is available for easily accessing preferences; this is only available to application code and can't be used by add-ons.
+
+## See also
+
+{{Firefox_for_developers('5')}}

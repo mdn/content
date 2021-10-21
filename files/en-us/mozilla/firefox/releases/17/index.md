@@ -5,126 +5,104 @@ tags:
   - '17'
   - Firefox
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>Firefox 17 shipped on November 20, 2012. This article lists key changes that are useful for not only web developers, but also Firefox and Gecko developers as well as add-on developers.</p>
+Firefox 17 shipped on November 20, 2012. This article lists key changes that are useful for not only web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-<h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
+## Changes for Web developers
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<ul>
- <li>Support for the {{htmlattrxref("sandbox", "iframe")}} attribute on the {{HTMLElement("iframe")}} element has been added. ({{bug("341604")}})</li>
-</ul>
+- Support for the {{htmlattrxref("sandbox", "iframe")}} attribute on the {{HTMLElement("iframe")}} element has been added. ({{bug("341604")}})
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>Support for {{cssxref("@supports")}} at-rule defined in <a href="https://dev.w3.org/csswg/css3-conditional/">CSS3 Conditional Rules specification</a> has been landed. It is disabled by default. Developers can try it by setting <code>layout.css.supports-rule.enabled</code> to true (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=649740">bug 649740</a>).</li>
- <li>Support for the CSS Selectors Level 4 pseudo-class {{cssxref(":dir", ":dir()")}} allowing selection of elements based on their directionality has landed. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=562169">bug 562169</a>)</li>
- <li>Support for the newly specified <code>isolate-override</code> value of the CSS {{cssxref("unicode-bidi")}} value has landed ({{bug("774335")}})</li>
- <li>Our prefixed implementation of {{cssxref("box-sizing")}} now takes into account {{cssxref("min-height")}} and {{cssxref("max-height")}}. One step closer to its unprefixing ({{bug("308801")}})</li>
-</ul>
+- Support for {{cssxref("@supports")}} at-rule defined in [CSS3 Conditional Rules specification](https://dev.w3.org/csswg/css3-conditional/) has been landed. It is disabled by default. Developers can try it by setting `layout.css.supports-rule.enabled` to true ([bug 649740](https://bugzilla.mozilla.org/show_bug.cgi?id=649740)).
+- Support for the CSS Selectors Level 4 pseudo-class {{cssxref(":dir", ":dir()")}} allowing selection of elements based on their directionality has landed. ([bug 562169](https://bugzilla.mozilla.org/show_bug.cgi?id=562169))
+- Support for the newly specified `isolate-override` value of the CSS {{cssxref("unicode-bidi")}} value has landed ({{bug("774335")}})
+- Our prefixed implementation of {{cssxref("box-sizing")}} now takes into account {{cssxref("min-height")}} and {{cssxref("max-height")}}. One step closer to its unprefixing ({{bug("308801")}})
 
-<h3 id="DOMAPIs">DOM/APIs</h3>
+### DOM/APIs
 
-<ul>
- <li>Support for {{domxref("CSSSupportsRule")}} interface defined in <a href="https://dev.w3.org/csswg/css3-conditional/">CSS3 Conditional Rules specification</a> has been landed ({{bug("649740")}})</li>
- <li>Support for {{domxref("WheelEvent")}} object and <code>wheel</code> event have been landed ({{bug("719320")}}).</li>
- <li>Support DOM Meta key on Linux again ({{bug("751749")}}).</li>
- <li>On {{domxref("HTMLMediaElement")}}, a new method, <code>mozGetMetadata</code>, that returns a javascript object whose properties represent metadata from the playing media resource as {key: value} pairs ({{bug("763010")}}).</li>
- <li>Support for {{domxref("Range.intersectsNode")}} has been added again; it has been removed in Gecko 1.9 ({{bug("579638")}}.</li>
- <li>{{domxref("Range.compareBoundaryPoints()")}} now throws a {{domxref("DOMException")}} with the <code>NOT_SUPPORTED_ERR</code> value when the comparison method is invalid ({{bug("714279")}}) .</li>
- <li>{{domxref("Event.initEvent()")}} has been adapted to the spec: it doesn't throw anymore if called after the dispatch of the event, it is only a no-op ({{bug(768310)}}).</li>
- <li>The non-standard {{domxref("XMLHttpRequest", "XMLHttpRequest.onuploadrequest")}} property has been removed ({{bug(761278)}}).</li>
- <li>The method {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} now separates them with a CRLF (instead of a LF), as requested by the spec ({{bug(730925)}}).</li>
-</ul>
+- Support for {{domxref("CSSSupportsRule")}} interface defined in [CSS3 Conditional Rules specification](https://dev.w3.org/csswg/css3-conditional/) has been landed ({{bug("649740")}})
+- Support for {{domxref("WheelEvent")}} object and `wheel` event have been landed ({{bug("719320")}}).
+- Support DOM Meta key on Linux again ({{bug("751749")}}).
+- On {{domxref("HTMLMediaElement")}}, a new method, `mozGetMetadata`, that returns a javascript object whose properties represent metadata from the playing media resource as {key: value} pairs ({{bug("763010")}}).
+- Support for {{domxref("Range.intersectsNode")}} has been added again; it has been removed in Gecko 1.9 ({{bug("579638")}}.
+- {{domxref("Range.compareBoundaryPoints()")}} now throws a {{domxref("DOMException")}} with the `NOT_SUPPORTED_ERR` value when the comparison method is invalid ({{bug("714279")}}) .
+- {{domxref("Event.initEvent()")}} has been adapted to the spec: it doesn't throw anymore if called after the dispatch of the event, it is only a no-op ({{bug(768310)}}).
+- The non-standard {{domxref("XMLHttpRequest", "XMLHttpRequest.onuploadrequest")}} property has been removed ({{bug(761278)}}).
+- The method {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} now separates them with a CRLF (instead of a LF), as requested by the spec ({{bug(730925)}}).
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a> object now offers Harmony <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith"><code>startsWith</code></a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith"><code>endsWith</code></a>, and <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes"><code>contains</code></a> methods ({{bug("772733")}}).</li>
- <li>The String methods <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/link">link</a> and <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/anchor">anchor</a> now escape the <code>'<strong>"</strong>'</code> (quotation mark) ({{bug("352437")}}).</li>
- <li>Experimental support for strawman <a href="/en-US/docs/JavaScript/Reference/Global_Objects/ParallelArray"><code>ParallelArray</code></a> object has been implemented ({{bug("778559")}}).</li>
- <li>Support to iterate <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">Map</a></code>/<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set">Set</a></code> ({{bug("725909")}}).</li>
- <li>Disabled <a href="/en-US/docs/E4X">E4X</a> for web content by default ({{bug("778851")}}).</li>
- <li><code>__exposedProps__</code> must now be set for Chrome JavaScript objects exposed to content. Attempts to access Chrome objects from content without <code>__exposedProps__</code> set will fail silently ({{bug("553102")}}).</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of"><code>for..of</code></a> loops now work in terms of <code>.iterator()</code> and <code>.next()</code> ({{bug(725907)}}).</li>
-</ul>
+- [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) object now offers Harmony [`startsWith`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith), [`endsWith`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith), and [`contains`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) methods ({{bug("772733")}}).
+- The String methods [link](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/link) and [anchor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/anchor) now escape the `'"'` (quotation mark) ({{bug("352437")}}).
+- Experimental support for strawman [`ParallelArray`](/en-US/docs/JavaScript/Reference/Global_Objects/ParallelArray) object has been implemented ({{bug("778559")}}).
+- Support to iterate [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)/[`Set`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) ({{bug("725909")}}).
+- Disabled [E4X](/en-US/docs/E4X) for web content by default ({{bug("778851")}}).
+- `__exposedProps__` must now be set for Chrome JavaScript objects exposed to content. Attempts to access Chrome objects from content without `__exposedProps__` set will fail silently ({{bug("553102")}}).
+- [`for..of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops now work in terms of `.iterator()` and `.next()` ({{bug(725907)}}).
 
-<h3 id="WebGL">WebGL</h3>
+### WebGL
 
-<ul>
- <li>The {{domxref("EXT_texture_filter_anisotropic")}} WebGL extension has been unprefixed. Using <code>"MOZ_EXT_texture_filter_anisotropic"</code> will present a warning from now on. The prefixed name is going to be removed in a future release ({{bug(776001)}}).</li>
-</ul>
+- The {{domxref("EXT_texture_filter_anisotropic")}} WebGL extension has been unprefixed. Using `"MOZ_EXT_texture_filter_anisotropic"` will present a warning from now on. The prefixed name is going to be removed in a future release ({{bug(776001)}}).
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<p><em>No change.</em></p>
+_No change._
 
-<h3 id="MathML">MathML</h3>
+### MathML
 
-<ul>
- <li>The parsing of the <code>align</code> attribute on {{MathMLElement("mtable")}} elements has been updated to treat optional spaces more correctly.</li>
-</ul>
+- The parsing of the `align` attribute on {{MathMLElement("mtable")}} elements has been updated to treat optional spaces more correctly.
 
-<h3 id="XUL">XUL</h3>
+### XUL
 
-<ul>
- <li>XUL <a href="/en-US/docs/XUL/key">key</a> element supports "os" modifier which is Win key (Super or Hyper key) ({{bug("778732")}}).</li>
-</ul>
+- XUL [key](/en-US/docs/XUL/key) element supports "os" modifier which is Win key (Super or Hyper key) ({{bug("778732")}}).
 
-<h3 id="Network">Network</h3>
+### Network
 
-<ul>
- <li>Removed the non-standard feature <code>XMLHttpRequest.onuploadprogress</code> which was deprecated in Firefox 14.</li>
-</ul>
+- Removed the non-standard feature `XMLHttpRequest.onuploadprogress` which was deprecated in Firefox 14.
 
-<p><em>No change.</em></p>
+_No change._
 
-<h3 id="Developer_tools">Developer tools</h3>
+### Developer tools
 
-<ul>
- <li>Change JSTerm's $ helper function from getElementById to querySelector() ({{bug("751749")}}).</li>
-</ul>
+- Change JSTerm's $ helper function from getElementById to querySelector() ({{bug("751749")}}).
 
-<h3 id="User_Agent">User Agent</h3>
+### User Agent
 
-<p>The Gecko part of the user agent string changed. The build date (which hadn't been updated since 2010) was removed, and the Gecko version number was put in its place instead. So <code>Gecko/20100101</code> -&gt; <code>Gecko/17.0</code>. This may affect you if you are doing user agent sniffing.</p>
+The Gecko part of the user agent string changed. The build date (which hadn't been updated since 2010) was removed, and the Gecko version number was put in its place instead. So `Gecko/20100101` -> `Gecko/17.0`. This may affect you if you are doing user agent sniffing.
 
-<h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
+## Changes for add-on and Mozilla developers
 
-<h3 id="Interface_changes">Interface changes</h3>
+### Interface changes
 
-<dl>
- <dt>{{interface("nsIInputStream")}}</dt>
- <dd>The <code>available()</code> method returns 64-bit length instead of 32-bit ({{bug("215450")}}).</dd>
- <dt>{{interface("nsIDOMWindowUtils")}}</dt>
- <dd>The <code>sendMouseScrollEvent()</code> method has been replaced with <code>sendWheelEvent()</code> ({{bug("719320")}}).</dd>
- <dt>{{interface("nsIFilePicker")}}</dt>
- <dd>The <code>open()</code> method, to open the file dialog asynchronously, has been added and the <code>show()</code> method has been deprecated ({{bug("731307")}}).</dd>
- <dt>{{interface("nsIScriptSecurityManager")}}</dt>
- <dd>The <code>checkLoadURIStr()</code> and <code>checkLoadURI()</code> methods have been removed ({{bug("327244")}}).</dd>
- <dt>{{interface("nsIRefreshURI")}}</dt>
- <dd>The <code>setupRefreshURIFromHeader()</code> method has a added <code>principal</code> parameter ({{bug("327244")}}).</dd>
-</dl>
+- {{interface("nsIInputStream")}}
+  - : The `available()` method returns 64-bit length instead of 32-bit ({{bug("215450")}}).
+- {{interface("nsIDOMWindowUtils")}}
+  - : The `sendMouseScrollEvent()` method has been replaced with `sendWheelEvent()` ({{bug("719320")}}).
+- {{interface("nsIFilePicker")}}
+  - : The `open()` method, to open the file dialog asynchronously, has been added and the `show()` method has been deprecated ({{bug("731307")}}).
+- {{interface("nsIScriptSecurityManager")}}
+  - : The `checkLoadURIStr()` and `checkLoadURI()` methods have been removed ({{bug("327244")}}).
+- {{interface("nsIRefreshURI")}}
+  - : The `setupRefreshURIFromHeader()` method has a added `principal` parameter ({{bug("327244")}}).
 
-<h4 id="New_interfaces">New interfaces</h4>
+#### New interfaces
 
-<p><em>None.</em></p>
+_None._
 
-<h4 id="Removed_interfaces">Removed interfaces</h4>
+#### Removed interfaces
 
-<p><em>None removed.</em></p>
+_None removed._
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.mozilla.org/en-US/firefox/17.0/releasenotes/">Firefox 17 Release Notes</a></li>
- <li><a href="https://hacks.mozilla.org/2012/08/aurora-17-is-out/">Aurora 17 is out, bringing better security and support for new standards</a> (Mozilla Hacks)</li>
- <li><a href="https://blog.mozilla.org/addons/2012/11/08/compatibility-for-firefox-17/">Add-on Compatibility for Firefox 17</a> (Add-ons Blog)</li>
-</ul>
+- [Firefox 17 Release Notes](https://www.mozilla.org/en-US/firefox/17.0/releasenotes/)
+- [Aurora 17 is out, bringing better security and support for new standards](https://hacks.mozilla.org/2012/08/aurora-17-is-out/) (Mozilla Hacks)
+- [Add-on Compatibility for Firefox 17](https://blog.mozilla.org/addons/2012/11/08/compatibility-for-firefox-17/) (Add-ons Blog)
 
-<h3 id="Older_versions">Older versions</h3>
+### Older versions
 
-<div>{{Firefox_for_developers('16')}}</div>
+{{Firefox_for_developers('16')}}

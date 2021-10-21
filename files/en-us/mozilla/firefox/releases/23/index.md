@@ -5,86 +5,70 @@ tags:
   - Firefox
   - Firefox 23
 ---
-<div>{{FirefoxSidebar}}</div><h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
+{{FirefoxSidebar}}
 
-<h3 id="Security">Security</h3>
+## Changes for Web developers
 
-<ul>
- <li>Mixed content blocking. Firefox will no longer load non-secure (http) resources on secure (https) pages ({{bug(834836)}}).</li>
- <li>The standard syntax of <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> 1.0 policies are now implemented and enforced by default.</li>
-</ul>
+### Security
 
-<h3 id="Developer_Tools">Developer Tools</h3>
+- Mixed content blocking. Firefox will no longer load non-secure (http) resources on secure (https) pages ({{bug(834836)}}).
+- The standard syntax of [CSP](/en-US/docs/Web/HTTP/CSP) 1.0 policies are now implemented and enforced by default.
 
-<ul>
- <li>A Network Panel has been added to the developer tools. This is more detailed view than the "Net" view option in the Web Console.</li>
- <li>Web Console has been renamed "Console", and includes the option to filter security errors/warnings.</li>
- <li>The new Toolbox Options lets you disable features, change light/dark theme, or enable Chrome/Remote debugging.</li>
-</ul>
+### Developer Tools
 
-<h3 id="HTML">HTML</h3>
+- A Network Panel has been added to the developer tools. This is more detailed view than the "Net" view option in the Web Console.
+- Web Console has been renamed "Console", and includes the option to filter security errors/warnings.
+- The new Toolbox Options lets you disable features, change light/dark theme, or enable Chrome/Remote debugging.
 
-<ul>
- <li>The {{HTMLElement("blink")}} element support is now completely dropped. The <code>&lt;blink&gt;</code> tag now implements the {{domxref("HTMLUnknownElement")}} interface ({{bug(857820)}}).</li>
- <li>The <code>range</code> type of the {{HTMLElement("input")}} element (<code><a href="/en-US/docs/Web/HTML/Element/input/range">&lt;input type="range"&gt;</a></code>) has been switched on by default ({{bug(841950)}}).</li>
-</ul>
+### HTML
 
-<h3 id="JavaScript">JavaScript</h3>
+- The {{HTMLElement("blink")}} element support is now completely dropped. The `<blink>` tag now implements the {{domxref("HTMLUnknownElement")}} interface ({{bug(857820)}}).
+- The `range` type of the {{HTMLElement("input")}} element ([`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)) has been switched on by default ({{bug(841950)}}).
 
-<ul>
- <li>The <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty"><code>Object.defineProperty</code></a> method can now be used to redefine the <code>length</code> property of an <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a> object.</li>
- <li>The option to disable JavaScript, including the options to allow moving windows/replace context menu, have been removed. You may still disable JavaScript by double clicking the "javascript.enabled" option in about:config.</li>
-</ul>
+### JavaScript
 
-<h3 id="DOM">DOM</h3>
+- The [`Object.defineProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) method can now be used to redefine the `length` property of an [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) object.
+- The option to disable JavaScript, including the options to allow moving windows/replace context menu, have been removed. You may still disable JavaScript by double clicking the "javascript.enabled" option in about:config.
 
-<ul>
- <li>D3E <a href="/en-US/docs/Web/API/KeyboardEvent#key_names_and_char_values"><code>KeyboardEvent.key</code></a> is now supported, but only for non-printable keys ({{bug(842927)}}).</li>
- <li>The <code>title</code> attribute of {{domxref("DOMImplementation.createHTMLDocument")}} is now optional as per updated DOM specification.</li>
- <li>The ability to add a sidebar panel (<code>window.sidebar.addPanel</code>) has been dropped ({{bug(691647)}}).</li>
- <li>The unprefixed {{domxref("Window.requestAnimationFrame")}} and {{domxref("Window.cancelAnimationFrame")}} methods has been added ({{bug(704063)}}). The unprefixed {{domxref("Window.requestAnimationFrame")}} receives a {{domxref("DOMHighResTimeStamp")}} as argument; the prefixed version did, and still is, received a {{domxref("DOMTimeStamp")}}({{bug(753453)}}).</li>
- <li>The text argument for {{domxref("window.alert")}} and {{domxref("window.confirm")}} is now optional ({{bug(861605)}}).</li>
- <li>The {{domxref("HTMLMediaElement.initialTime")}} property, removed from the spec, is no more supported ({{bug(742537)}}).</li>
- <li>The {{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}} constructor has been added ({{bug(848293)}}).</li>
- <li>The {{domxref("AnimationEvent.pseudoElement")}} property has been implemented ({{bug(848293)}}).</li>
- <li>The {{domxref("TransitionEvent.TransitionEvent", "TransitionEvent()")}} constructor has been added ({{bug(848291)}}).</li>
- <li>The {{domxref("TransitionEvent.pseudoElement")}} property has been implemented ({{bug(848291)}}).</li>
- <li>The non-standard {{domxref("TransitionEvent.initTransitionEvent()")}} and <code>AnimationEvent.initAnimationEvent()</code> have been removed ({{bug(868751)}}).</li>
-</ul>
+### DOM
 
-<h3 id="WebRTC">WebRTC</h3>
+- D3E [`KeyboardEvent.key`](/en-US/docs/Web/API/KeyboardEvent#key_names_and_char_values) is now supported, but only for non-printable keys ({{bug(842927)}}).
+- The `title` attribute of {{domxref("DOMImplementation.createHTMLDocument")}} is now optional as per updated DOM specification.
+- The ability to add a sidebar panel (`window.sidebar.addPanel`) has been dropped ({{bug(691647)}}).
+- The unprefixed {{domxref("Window.requestAnimationFrame")}} and {{domxref("Window.cancelAnimationFrame")}} methods has been added ({{bug(704063)}}). The unprefixed {{domxref("Window.requestAnimationFrame")}} receives a {{domxref("DOMHighResTimeStamp")}} as argument; the prefixed version did, and still is, received a {{domxref("DOMTimeStamp")}}({{bug(753453)}}).
+- The text argument for {{domxref("window.alert")}} and {{domxref("window.confirm")}} is now optional ({{bug(861605)}}).
+- The {{domxref("HTMLMediaElement.initialTime")}} property, removed from the spec, is no more supported ({{bug(742537)}}).
+- The {{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}} constructor has been added ({{bug(848293)}}).
+- The {{domxref("AnimationEvent.pseudoElement")}} property has been implemented ({{bug(848293)}}).
+- The {{domxref("TransitionEvent.TransitionEvent", "TransitionEvent()")}} constructor has been added ({{bug(848291)}}).
+- The {{domxref("TransitionEvent.pseudoElement")}} property has been implemented ({{bug(848291)}}).
+- The non-standard {{domxref("TransitionEvent.initTransitionEvent()")}} and `AnimationEvent.initAnimationEvent()` have been removed ({{bug(868751)}}).
 
-<ul>
- <li>Instead of including usernames in the {{domxref("RTCIceServer.url")}} property (such as stun:username@stunserver.example.com), you now need to use the new {{domxref("RTCIceServer.username")}} property.</li>
-</ul>
+### WebRTC
 
-<h3 id="CSS">CSS</h3>
+- Instead of including usernames in the {{domxref("RTCIceServer.url")}} property (such as stun:username\@stunserver.example.com), you now need to use the new {{domxref("RTCIceServer.username")}} property.
 
-<ul>
- <li>The blink effect for <code><a href="/en-US/docs/Web/CSS/text-decoration">text-decoration</a>: blink;</code> has no more effect, but is still a valid value ({{bug(857820)}}).</li>
- <li>In-flow {{cssxref("::after")}} and {{cssxref("::before")}} pseudo-elements are now flex items ({{bug(867454)}}).</li>
- <li>The way to compute <a href="/en-US/docs/Web/CSS/length#viewport-percentage_lengths">viewport units</a> has been changed. In conjunction with <code>overflow:auto</code>, space taken by eventual scrollbars is not substracted from the viewport, whereas in the case of <code>overflow:scroll</code>, it is. ({{bug(811403)}})</li>
-</ul>
+### CSS
 
-<h3 id="MathML">MathML</h3>
+- The blink effect for `text-decoration: blink;` has no more effect, but is still a valid value ({{bug(857820)}}).
+- In-flow {{cssxref("::after")}} and {{cssxref("::before")}} pseudo-elements are now flex items ({{bug(867454)}}).
+- The way to compute [viewport units](/en-US/docs/Web/CSS/length#viewport-percentage_lengths) has been changed. In conjunction with `overflow:auto`, space taken by eventual scrollbars is not substracted from the viewport, whereas in the case of `overflow:scroll`, it is. ({{bug(811403)}})
 
-<ul>
- <li>Negative widths for the {{MathMLElement("mspace")}} element has been implemented ({{bug(717546)}}).</li>
- <li>The {{MathMLElement("semantics")}} element now determines the visible child as described in the MathML3 specification.</li>
-</ul>
+### MathML
 
-<h2 id="Changes_for_addon_and_Mozilla_developers">Changes for addon and Mozilla developers</h2>
+- Negative widths for the {{MathMLElement("mspace")}} element has been implemented ({{bug(717546)}}).
+- The {{MathMLElement("semantics")}} element now determines the visible child as described in the MathML3 specification.
 
-<h3 id="Firefox_developer_tools">Firefox developer tools</h3>
+## Changes for addon and Mozilla developers
 
-<p>Addons that overlay chrome://browser/content/debugger.xul must now overlay chrome://browser/content/devtools/debugger.xul. You may add references to both these files in chrome.manifest for compatibility.</p>
+### Firefox developer tools
 
-<h2 id="See_also">See also</h2>
+Addons that overlay chrome://browser/content/debugger.xul must now overlay chrome://browser/content/devtools/debugger.xul. You may add references to both these files in chrome.manifest for compatibility.
 
-<ul>
- <li><a href="https://www.mozilla.org/en-US/firefox/23.0a2/auroranotes/">Firefox 23 Aurora Notes</a></li>
-</ul>
+## See also
 
-<h3 id="Older_versions">Older versions</h3>
+- [Firefox 23 Aurora Notes](https://www.mozilla.org/en-US/firefox/23.0a2/auroranotes/)
 
-<p>{{Firefox_for_developers('22')}}</p>
+### Older versions
+
+{{Firefox_for_developers('22')}}

@@ -5,83 +5,71 @@ tags:
   - Firefox
   - Firefox for Developers
 ---
-<div>{{FirefoxSidebar}}</div><h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
+{{FirefoxSidebar}}
 
-<h3 id="Developer_Tools">Developer Tools</h3>
+## Changes for Web developers
 
-<ul>
- <li>A Box Model Highlighter has been implemented ({{bug(663778)}}).</li>
- <li>Anywhere a DOM node appears in the console output, it is highlighted when you hover over that console output ({{bug(757866)}}). Similarly all JS functions and objects are highlighted in the console output ({{bug(584733)}}). More information about the console improvement can be found in this <a href="https://www.robodesign.ro/mihai/blog/web-console-improvements-episode-30">blog post</a>.</li>
- <li>Support for {{domxref("console.count()")}} has been added ({{bug(922208)}}).</li>
-</ul>
+### Developer Tools
 
-<h3 id="CSS">CSS</h3>
+- A Box Model Highlighter has been implemented ({{bug(663778)}}).
+- Anywhere a DOM node appears in the console output, it is highlighted when you hover over that console output ({{bug(757866)}}). Similarly all JS functions and objects are highlighted in the console output ({{bug(584733)}}). More information about the console improvement can be found in this [blog post](https://www.robodesign.ro/mihai/blog/web-console-improvements-episode-30).
+- Support for {{domxref("console.count()")}} has been added ({{bug(922208)}}).
 
-<ul>
- <li>The property {{cssxref("background-blend-mode")}} has been enabled by default ({{bug(970600)}}).</li>
- <li>The non-standard {{cssxref("overflow-clip-box")}} property has been implemented for use in UA stylesheets only ({{bug(966992)}}).</li>
- <li>The {{cssxref("line-height")}} property now affects single-line text inputs (<code>&lt;input type=text|password|email|search|tel|url|unknown&gt;</code> types) although it cannot shrink them below a line height of <code>1.0</code> ({{bug(349259)}}).</li>
- <li>The {{cssxref("line-height")}} property now also affects <code>type=button</code>, with no restrictions ({{bug(697451)}}).</li>
- <li>Change to keyframes' name does not affect current elements ({{bug(978648)}}).</li>
- <li>positioned internal table elements not abs pos containing block(relative position for table rows) ({{bug(63895)}}).</li>
-</ul>
+### CSS
 
-<h3 id="HTML">HTML</h3>
+- The property {{cssxref("background-blend-mode")}} has been enabled by default ({{bug(970600)}}).
+- The non-standard {{cssxref("overflow-clip-box")}} property has been implemented for use in UA stylesheets only ({{bug(966992)}}).
+- The {{cssxref("line-height")}} property now affects single-line text inputs (`<input type=text|password|email|search|tel|url|unknown>` types) although it cannot shrink them below a line height of `1.0` ({{bug(349259)}}).
+- The {{cssxref("line-height")}} property now also affects `type=button`, with no restrictions ({{bug(697451)}}).
+- Change to keyframes' name does not affect current elements ({{bug(978648)}}).
+- positioned internal table elements not abs pos containing block(relative position for table rows) ({{bug(63895)}}).
 
-<p><em>No change.</em></p>
+### HTML
 
-<h3 id="JavaScript">JavaScript</h3>
+_No change._
 
-<ul>
- <li>New ES2015-compatible <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Array_comprehensions">array comprehensions</a> <code>[for (item of iterable) item]</code> and <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions">generator comprehensions</a> <code>(for (item of iterable) item)</code> have been implemented ({{bug(979865)}}).</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#property_access">Typed arrays</a> are now extensible and support new named properties ({{bug(695438)}}).</li>
- <li>The {{jsxref("Error.prototype.stack")}} property now contains column numbers ({{bug(762556)}}) and has been improved <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack#stack_of_eval'ed_code">when using <code>Function()</code> and <code>eval()</code> calls</a>. This can help you to better debug minified or generated JavaScript code.</li>
- <li>The <code>Promise.cast()</code> method has been renamed to {{jsxref("Promise.resolve()")}} ({{bug(966348)}}).</li>
-</ul>
+### JavaScript
 
-<h3 id="InterfacesAPIsDOM">Interfaces/APIs/DOM</h3>
+- New ES2015-compatible [array comprehensions](/en-US/docs/Web/JavaScript/Reference/Operators/Array_comprehensions) `[for (item of iterable) item]` and [generator comprehensions](/en-US/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions) `(for (item of iterable) item)` have been implemented ({{bug(979865)}}).
+- [Typed arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#property_access) are now extensible and support new named properties ({{bug(695438)}}).
+- The {{jsxref("Error.prototype.stack")}} property now contains column numbers ({{bug(762556)}}) and has been improved [when using `Function()` and `eval()` calls](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack#stack_of_eval'ed_code). This can help you to better debug minified or generated JavaScript code.
+- The `Promise.cast()` method has been renamed to {{jsxref("Promise.resolve()")}} ({{bug(966348)}}).
 
-<ul>
- <li>{{domxref("Navigator.sendBeacon")}} has been implemented, easing telemetry collection ({{bug(936340)}}).</li>
- <li>Added a <code>relList</code> property returning a {{domxref("DOMTokenList")}} to {{domxref("HTMLLinkElement")}}, {{domxref("HTMLAreaElement")}} and {{domxref("HTMLAnchorElement")}} ({{bug(968637)}}).</li>
- <li>As per the latest specification, the first argument of {{domxref("OscillatorNode.start")}} and {{domxref("OscillatorNode.stop")}} is now optional and defaults to <code>0</code> ({{bug(982541)}}).</li>
- <li>The method {{domxref("Navigator.requestWakeLock()")}} and the non-standard {{domxref("MozWakeLock")}} are no longer available from the Web on Desktop ({{bug(963366)}}).</li>
- <li>The <code>DOM_VK_ENTER</code> constant has been removed from {{domxref("KeyboardEvent")}} ({{bug(969247)}}).</li>
- <li>Web components' {{domxref("Document.register")}} has been adapted to follow the behavior described in the latest version of the specification ({{bug(856140)}}).</li>
- <li>The non-standard, and deprecated since Firefox 15, {{domxref("Blob.mozSlice")}} is no longer supported ({{bug(961804)}}).</li>
- <li>The non-standard {{domxref("ArchiveReader")}} and {{domxref("ArchiveRequest")}} are no longer exposed to the Web ({{bug(968883)}}).</li>
- <li><a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/">WebIDL constructors</a> cannot be called as functions anymore. They need to be preceded by the keyword <code>new</code>. ({{bug(916644)}})</li>
- <li>Added support for a new value (<code>alpha</code>) for the second, optional, parameter of the {{domxref("HTMLCanvasElement.getContext()")}} method allowing to define if alpha blending must be stored or not for this context. When not, the per-pixel alpha value in this store is always <code>1.0</code>. This allows the back-end to implement a fast-track. ({{bug(982480)}})</li>
- <li>{{domxref("GlobalWorkerScope.console")}} now returns for the regular {{domxref("console")}}; <code>WorkerConsole</code> has been removed ({{bug(965860)}}).</li>
- <li>The {{domxref("WebGL_debug_shaders")}} WebGL extension has been implemented ({{bug(968374)}}).</li>
-</ul>
+### Interfaces/APIs/DOM
 
-<h3 id="MathML">MathML</h3>
+- {{domxref("Navigator.sendBeacon")}} has been implemented, easing telemetry collection ({{bug(936340)}}).
+- Added a `relList` property returning a {{domxref("DOMTokenList")}} to {{domxref("HTMLLinkElement")}}, {{domxref("HTMLAreaElement")}} and {{domxref("HTMLAnchorElement")}} ({{bug(968637)}}).
+- As per the latest specification, the first argument of {{domxref("OscillatorNode.start")}} and {{domxref("OscillatorNode.stop")}} is now optional and defaults to `0` ({{bug(982541)}}).
+- The method {{domxref("Navigator.requestWakeLock()")}} and the non-standard {{domxref("MozWakeLock")}} are no longer available from the Web on Desktop ({{bug(963366)}}).
+- The `DOM_VK_ENTER` constant has been removed from {{domxref("KeyboardEvent")}} ({{bug(969247)}}).
+- Web components' {{domxref("Document.register")}} has been adapted to follow the behavior described in the latest version of the specification ({{bug(856140)}}).
+- The non-standard, and deprecated since Firefox 15, {{domxref("Blob.mozSlice")}} is no longer supported ({{bug(961804)}}).
+- The non-standard {{domxref("ArchiveReader")}} and {{domxref("ArchiveRequest")}} are no longer exposed to the Web ({{bug(968883)}}).
+- [WebIDL constructors](https://dxr.mozilla.org/mozilla-central/source/dom/webidl/) cannot be called as functions anymore. They need to be preceded by the keyword `new`. ({{bug(916644)}})
+- Added support for a new value (`alpha`) for the second, optional, parameter of the {{domxref("HTMLCanvasElement.getContext()")}} method allowing to define if alpha blending must be stored or not for this context. When not, the per-pixel alpha value in this store is always `1.0`. This allows the back-end to implement a fast-track. ({{bug(982480)}})
+- {{domxref("GlobalWorkerScope.console")}} now returns for the regular {{domxref("console")}}; `WorkerConsole` has been removed ({{bug(965860)}}).
+- The {{domxref("WebGL_debug_shaders")}} WebGL extension has been implemented ({{bug(968374)}}).
 
-<p><em>No change.</em></p>
+### MathML
 
-<h3 id="SVG">SVG</h3>
+_No change._
 
-<ul>
- <li>{{SVGElement("feDropShadow")}}, and its interface {{domxref("SVGFEDropShadowElement")}}, from the Filter Effects Module are now supported ({{bug(964200)}}).</li>
-</ul>
+### SVG
 
-<h3 id="AudioVideo">Audio/Video</h3>
+- {{SVGElement("feDropShadow")}}, and its interface {{domxref("SVGFEDropShadowElement")}}, from the Filter Effects Module are now supported ({{bug(964200)}}).
 
-<ul>
- <li>On Linux, Gstreamer 1.0 is now supported (instead of 0.10) ({{bug(806917)}}).</li>
-</ul>
+### Audio/Video
 
-<h2 id="Security">Security</h2>
+- On Linux, Gstreamer 1.0 is now supported (instead of 0.10) ({{bug(806917)}}).
 
-<p><em>No change.</em></p>
+## Security
 
-<h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
+_No change._
 
-<ul>
- <li>The interface <code>nsIDOMWindowUtils</code> now supports the Boolean attribute <code>audioMuted</code> and <code>audioVolume</code>, a float in the range <code>[0.0</code> ,  <code>1.0]</code>, allowing to control the sound produced by a window (that is any tab or iframe). There is no UI for this, but is available to add-ons. ({{bug(923247)}})</li>
-</ul>
+## Changes for add-on and Mozilla developers
 
-<h3 id="Older_versions">Older versions</h3>
+- The interface `nsIDOMWindowUtils` now supports the Boolean attribute `audioMuted` and `audioVolume`, a float in the range `[0.0` ,  `1.0]`, allowing to control the sound produced by a window (that is any tab or iframe). There is no UI for this, but is available to add-ons. ({{bug(923247)}})
 
-<p>{{Firefox_for_developers('29')}}</p>
+### Older versions
+
+{{Firefox_for_developers('29')}}

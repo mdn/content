@@ -7,73 +7,56 @@ tags:
   - Mozilla
   - Release
 ---
-<p>{{FirefoxSidebar}}</p>
+{{FirefoxSidebar}}
 
-<p>This article provides information about the changes in Firefox 91 that will affect developers. Firefox 91 was released on August 10, 2021</a>.</p>
+This article provides information about the changes in Firefox 91 that will affect developers. Firefox 91 was released on August 10, 2021.
 
-<div class="note">
-  <p><strong>Note:</strong> See also <a href="https://hacks.mozilla.org/2021/08/hopping-on-firefox-91/">Hopping on Firefox 91</a> on Mozilla Hacks.</p>
-</div>
+> **Note:** See also [Hopping on Firefox 91](https://hacks.mozilla.org/2021/08/hopping-on-firefox-91/) on Mozilla Hacks.
 
-<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+## Changes for web developers
 
+### HTML
 
-<h3 id="HTML">HTML</h3>
+No changes
 
-<p>No changes</p>
+### CSS
 
-<h3 id="CSS">CSS</h3>
+- A fix to how the {{cssxref("@counter-style/pad")}} descriptor handles the negative sign ({{bug(1714445)}}).
+- The `-moz-tab-size` property has been unprefixed to the standard {{cssxref("tab-size")}}, and the prefixed version maintained as an alias ({{bug(737785)}}).
 
-<ul>
-  <li>A fix to how the {{cssxref("@counter-style/pad")}} descriptor handles the negative sign ({{bug(1714445)}}).</li>
-  <li>The <code>-moz-tab-size</code> property has been unprefixed to the standard {{cssxref("tab-size")}}, and the prefixed version maintained as an alias ({{bug(737785)}}).</li>
-</ul>
+#### Removals
 
-<h4 id="removals_css">Removals</h4>
+- The non-standard {{cssxref("-moz-outline-radius")}} property has been removed ({{bug(1715984)}}). The property has not been usable by web developers since Firefox 88, this completes the removal.
 
-<ul>
-  <li>The non-standard {{cssxref("-moz-outline-radius")}} property has been removed ({{bug(1715984)}}). The property has not been usable by web developers since Firefox 88, this completes the removal.</li>
-</ul>
+### JavaScript
 
-<h3 id="JavaScript">JavaScript</h3>
+- {{jsxref("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}} and {{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}} are now supported in release builds. The `formatRange()` method returns a localized and formatted string for the range between two {{jsxref("Date")}} objects (e.g. "1/05/21 – 1/10/21"). The `formatRangeToParts()` method returns an array containing the locale-specific _parts_ of a formatted date range ({{bug(1653024)}}).
+- The {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat() constructor")}} allows four new `timeZoneName` options for formatting how the timezone is displayed. These include the localized GMT formats `shortOffset` and `longOffset`, and the generic non-location formats `shortGeneric` and `longGeneric` ({{bug(1653024)}}).
+- The {{jsxref("Global_Objects/Error/Error", "Error() constructor")}} can now take the error `cause` as value in the `option` parameter.
+  This allows code to catch errors and throw new/modifed versions that retain the original error and stack trace ({{bug(1679653)}}).
 
-<ul>
-  <li>{{jsxref("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}} and {{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}} are now supported in release builds. The <code>formatRange()</code> method returns a localized and formatted string for the range between two {{jsxref("Date")}} objects (e.g. "1/05/21 – 1/10/21"). The <code>formatRangeToParts()</code> method returns an array containing the locale-specific <em>parts</em> of a formatted date range ({{bug(1653024)}}).</li>
-  <li>The {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat() constructor")}} allows four new <code>timeZoneName</code> options for formatting how the timezone is displayed. These include the localized GMT formats <code>shortOffset</code> and <code>longOffset</code>, and the generic non-location formats <code>shortGeneric</code> and <code>longGeneric</code> ({{bug(1653024)}}).</li>
-  <li>The {{jsxref("Global_Objects/Error/Error", "Error() constructor")}} can now take the error <code>cause</code> as value in the <code>option</code> parameter.
-    This allows code to catch errors and throw new/modifed versions that retain the original error and stack trace ({{bug(1679653)}}).</li>
- </ul>
+### HTTP
 
+- The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) now requires a [secure context](/en-US/docs/Web/Security/Secure_Contexts) ({{bug(1704005)}}).
 
-<h3 id="HTTP">HTTP</h3>
+### APIs
 
-<ul>
-  <li>The <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> now requires a <a href="/en-US/docs/Web/Security/Secure_Contexts">secure context</a> ({{bug(1704005)}}).</li>
-</ul>
+#### DOM
 
-<h3 id="APIs">APIs</h3>
+- The [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API) is now enabled by default on Firefox desktop releases (it has been enabled on Firefox for Android since version 68).
+  The API provides access to information describing the position of the {{Glossary("visual viewport")}} relative to the document, as well as to the window's content area.
+  It also provides events that allow changes to the viewport to be monitored. ({{bug(1551302)}}).
+- The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) is now protected by {{httpheader('Feature-Policy/gamepad','Feature-Policy: gamepad')}}.
+  If disallowed by the [feature policy](/en-US/docs/Web/HTTP/Feature_Policy), calls to {{domxref('Navigator.getGamepads()')}} will throw a `SecurityError` {{domxref('DOMException')}},
+  and the {{event("gamepadconnected")}} and {{event("gamepaddisconnected")}} events will not fire.
+  The default `allowlist` is `*`; this default will be updated to `self` in a future release, in order to match the specification. ({{bug(1704005)}}).
+- `Window.clientInformation` has been added as an alias for {{domxref("Window.navigator")}}, in order to match recent specification updates and improve compatibility with other major browsers ({{bug(1717072)}}).
 
-<h4 id="DOM">DOM</h4>
+### WebDriver conformance (Marionette)
 
-<ul>
-  <li>The <a href="/en-US/docs/Web/API/Visual_Viewport_API">Visual Viewport API</a> is now enabled by default on Firefox desktop releases (it has been enabled on Firefox for Android since version 68).
-    The API provides access to information describing the position of the {{Glossary("visual viewport")}} relative to the document, as well as to the window's content area.
-    It also provides events that allow changes to the viewport to be monitored. ({{bug(1551302)}}).</li>
-  <li>The <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> is now protected by {{httpheader('Feature-Policy/gamepad','Feature-Policy: gamepad')}}.
-    If disallowed by the <a href="/en-US/docs/Web/HTTP/Feature_Policy">feature policy</a>, calls to {{domxref('Navigator.getGamepads()')}} will throw a <code>SecurityError</code> {{domxref('DOMException')}},
-    and the {{event("gamepadconnected")}} and {{event("gamepaddisconnected")}} events will not fire.
-    The default <code>allowlist</code> is <code>*</code>; this default will be updated to <code>self</code> in a future release, in order to match the specification. ({{bug(1704005)}}).</li>
-  <li><code>Window.clientInformation</code> has been added as an alias for {{domxref("Window.navigator")}}, in order to match recent specification updates and improve compatibility with other major browsers ({{bug(1717072)}}).</li>
-  
-</ul>
+- Fixed a bug, which caused the commands `WebDriver:AcceptAlert` and `WebDriver:DismissAlert` to hang for user prompts as opened in a popup window ({{bug(1721982)}}).
+- Fixed an inappropriate handling of the `webSocketUrl` capability, which would return `true` if `webSocketUrl` was not supported ({{bug(1713775)}}).
 
+## Older versions
 
-<h3 id="webdriver_conformance_marionette">WebDriver conformance (Marionette)</h3>
-<ul>
-  <li>Fixed a bug, which caused the commands <code>WebDriver:AcceptAlert</code> and <code>WebDriver:DismissAlert</code> to hang for user prompts as opened in a popup window ({{bug(1721982)}}).</li>
-  <li>Fixed an inappropriate handling of the <code>webSocketUrl</code> capability, which would return <code>true</code> if <code>webSocketUrl</code> was not supported ({{bug(1713775)}}).</li>
-</ul>
-
-<h2 id="Older_versions">Older versions</h2>
-
-<p>{{Firefox_for_developers(90)}}</p>
+{{Firefox_for_developers(90)}}

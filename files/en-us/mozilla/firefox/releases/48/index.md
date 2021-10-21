@@ -7,161 +7,133 @@ tags:
   - Mozilla
   - Release
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p><a href="https://www.mozilla.org/firefox/developer/">To test the latest developer features of Firefox, install Firefox Developer Edition</a> Firefox 48 was released on August 2, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.</p>
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 48 was released on August 2, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-<h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
+## Changes for Web developers
 
-<h3 id="Developer_Tools">Developer Tools</h3>
+### Developer Tools
 
-<ul>
-	<li>The position of elements can now be changed within the content ({{bug(1139187)}}).</li>
-	<li>Implemented {{domxref("console.clear()")}} to clear the console output ({{bug(659625)}}).</li>
-	<li>Added <a href="/en-US/docs/Tools/Web_Console/Console_messages#viewing_network_request_details">HTTP log inspection to the Web Console</a> ({{bug(1211525)}}).</li>
-	<li>Added a <a href="/en-US/docs/Tools/Tools_Toolbox#choose_devtools_theme">Firebug theme</a> ({{bug(1244054)}}).</li>
-	<li>Added the <a href="/en-US/docs/Tools/DOM_Property_Viewer">DOM Inspector</a> ({{bug(1201475)}}).</li>
-	<li><a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#fonts_view">Font inspector</a> has been enabled by default again ({{bug(1280121)}}).</li>
-	<li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#edit_rules">Improved suggestions</a> for CSS properties ({{bug(1168246)}}).</li>
-	<li>Cookies, localstorage and sessionstorage entries are editable via double-click ({{bug(1231154)}}, {{bug(1231179)}}, {{bug(1231155)}}).</li>
-</ul>
+- The position of elements can now be changed within the content ({{bug(1139187)}}).
+- Implemented {{domxref("console.clear()")}} to clear the console output ({{bug(659625)}}).
+- Added [HTTP log inspection to the Web Console](/en-US/docs/Tools/Web_Console/Console_messages#viewing_network_request_details) ({{bug(1211525)}}).
+- Added a [Firebug theme](/en-US/docs/Tools/Tools_Toolbox#choose_devtools_theme) ({{bug(1244054)}}).
+- Added the [DOM Inspector](/en-US/docs/Tools/DOM_Property_Viewer) ({{bug(1201475)}}).
+- [Font inspector](/en-US/docs/Tools/Page_Inspector/UI_Tour#fonts_view) has been enabled by default again ({{bug(1280121)}}).
+- [Improved suggestions](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#edit_rules) for CSS properties ({{bug(1168246)}}).
+- Cookies, localstorage and sessionstorage entries are editable via double-click ({{bug(1231154)}}, {{bug(1231179)}}, {{bug(1231155)}}).
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<ul>
-	<li>The {{HTMLElement("details")}} and {{HTMLElement("summary")}} elements have been activated by default on Nightly and Aurora (DevTools), but not on Beta or Release:
-	<ul>
-		<li>The default style for these elements has been adapted to match the spec ({{bug(1258657)}}).</li>
-		<li>The {{event("toggle")}} event is now sent to the {{HTMLElement("details")}} element when this one is opened or closed ({{bug(1225412)}}).</li>
-	</ul>
-	</li>
-	<li>The {{htmlattrxref("meta", "referrer")}} attributes now also supports the <code>no-referrer-when-downgrade</code> and <code>origin-when-cross-origin</code> values ({{bug(1178337)}}).</li>
-</ul>
+- The {{HTMLElement("details")}} and {{HTMLElement("summary")}} elements have been activated by default on Nightly and Aurora (DevTools), but not on Beta or Release:
 
-<h3 id="CSS">CSS</h3>
+  - The default style for these elements has been adapted to match the spec ({{bug(1258657)}}).
+  - The {{event("toggle")}} event is now sent to the {{HTMLElement("details")}} element when this one is opened or closed ({{bug(1225412)}}).
 
-<ul>
-	<li>The {{cssxref("calc()")}} has been improved to be closer to the specification:
-	<ul>
-		<li>{{cssxref("calc()")}} is now supported on the {{cssxref("line-height")}} property ({{bug(594933)}}).</li>
-		<li>Added support for nested CSS {{cssxref("calc()")}} ({{bug(968761)}}).</li>
-	</ul>
-	</li>
-	<li>Our experimental implementation of CSS grids has been updated:
-	<ul>
-		<li>Fragmentation for grid layout has been implemented ({{bug(1144096)}}).</li>
-		<li>[css-grid] Percentage tracks are now treated as <code>auto</code> if grid container size is indefinite ({{bug(1264607)}}).</li>
-		<li>{{HTMLElement("fieldset")}} now supports grid and flex layouts ({{bug(1230207)}}).</li>
-	</ul>
-	</li>
-	<li>The <code>luminance</code> value for {{cssxref("mask-mode")}} has been added; the <code>auto</code> value has been renamed to <code>match-source</code>, to match the spec ({{bug(1228354)}}).</li>
-	<li>Interpolation of {{cssxref("clip-path")}} basic shapes in CSS animations and transitions is now supported ({{bug(1110460)}}).</li>
-	<li>Support for horizontal-in-vertical (<em>tate-chu-yoko</em>) text has been added via the <code>all</code> value of the {{cssxref("text-combine-upright")}} property ({{bug(1097499)}}).</li>
-	<li>Support for the experimental {{cssxref("color-adjust")}} property has been added, allowing pages to specify that background colors and images should be printed ({{bug(1209273)}}).</li>
-	<li>The {{cssxref("::first-letter")}} pseudo-element now also matches punctuation characters of type Pd that precede or immediately follow the actual first letter; this is a new requirement of CSS Pseudo-element module level 4 ({{bug(1260366)}}).</li>
-	<li>Several <code>-webkit</code> prefixed properties and values have been added for web compatibility, behind the preference <code>layout.css.prefixes.webkit</code>, defaulting to <code>false</code>:
-	<ul>
-		<li>{{cssxref("-webkit-text-fill-color")}} ({{bug(1247777)}}).</li>
-		<li>{{cssxref("-webkit-text-stroke")}}, {{cssxref("-webkit-text-stroke-color")}}, {{cssxref("-webkit-text-stroke-width")}} ({{bug(1248708)}}).</li>
-		<li> <code>-webkit-background-clip</code>  (as background-clip) text value ({{bug(759568)}}).</li>
-		<li><code>-webkit-box-direction</code>, <code>-webkit-box-orient</code> ({{bug(1262049)}}.</li>
-		<li>The value <code>-webkit-inline-box</code> is now an alias of <code>inline-flex</code> on the {{cssxref("display")}} property. ({{bug(1257661)}}).</li>
-		<li><code>-webkit-flex-direction</code>, <code>-webkit-flex-wrap</code>, <code>-webkit-flex-flow</code>, <code>-webkit-order</code>, <code>-webkit-flex</code>, <code>-webkit-flex-grow</code>, <code>-webkit-flex-shrink</code>, <code>-webkit-flex-basis</code>, <code>-webkit-justify-content</code>, <code>-webkit-align-items</code>, <code>-webkit-align-self</code> and <code>-webkit-align-content</code> were added as aliases for the unprefixed properties and the values <code>-webkit-flex</code> and <code>-webkit-inline-flex</code> for the {{cssxref("display")}} property as aliases for the unprefixed values ({{bug(1274096)}}).</li>
-		<li>Added <code>-webkit-box-flex</code>, <code>-webkit-box-ordinal-group</code>, <code>-webkit-box-align</code> and <code>-webkit-box-pack</code> properties and <code>-webkit-box</code> value to {{cssxref("display")}} as aliases for modern <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox">CSS Flexbox</a> ({{bug(1208635)}}).</li>
-	</ul>
-	</li>
-	<li>The <code>text</code> value of {{cssxref("background-clip")}} is now available in all type of Firefox (and not only non-release builds) ({{bug(1263516)}}).</li>
-	<li>The <code>absolute</code> value of {{cssxref("position")}} properties on the top layer element ({{bug(1236828)}}).</li>
-	<li>Added an internal-only syntax for {{domxref("@supports")}} to detect pref ({{bug(1259889)}}).</li>
-</ul>
+- The {{htmlattrxref("meta", "referrer")}} attributes now also supports the `no-referrer-when-downgrade` and `origin-when-cross-origin` values ({{bug(1178337)}}).
 
-<h3 id="JavaScript">JavaScript</h3>
+### CSS
 
-<h4 id="New_APIs">New APIs</h4>
+- The {{cssxref("calc()")}} has been improved to be closer to the specification:
 
-<ul>
-	<li>The {{jsxref("String.prototype.padStart()")}} and {{jsxref("String.prototype.padEnd()")}} methods have been implemented ({{bug(1260509)}}).</li>
-	<li>The ES2015 {{jsxref("Symbol.unscopables")}} and {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} properties have been implemented ({{bug(1054759)}} and {{bug(1258163)}}).</li>
-	<li>The ES2015 {{jsxref("Symbol.isConcatSpreadable")}} symbol has been implemented ({{bug(1041586)}}).</li>
-	<li>The ES2015 {{jsxref("Array.@@species", "Array[@@species]")}} getter has been implemented ({{bug(1165052)}}).</li>
-	<li>The ES2015 {{jsxref("ArrayBuffer.@@species", "ArrayBuffer[@@species]")}} getter and {{jsxref("TypedArray.@@species", "%TypedArray%[@@species]")}} getter have been implemented ({{bug(1165053)}}).</li>
-	<li>The {{jsxref("Intl.getCanonicalLocales()")}} method of the ECMAScript Internationalization API draft has been implemented ({{bug(1263040)}}).</li>
-</ul>
+  - {{cssxref("calc()")}} is now supported on the {{cssxref("line-height")}} property ({{bug(594933)}}).
+  - Added support for nested CSS {{cssxref("calc()")}} ({{bug(968761)}}).
 
-<h4 id="Deprecations_and_removals">Deprecations and removals</h4>
+- Our experimental implementation of CSS grids has been updated:
 
-<ul>
-	<li>The deprecated <a href="/en-US/docs/Archive/Web/Old_Proxy_API">old Proxy API</a> (<code>Proxy.create</code> and <code>Proxy.createFunction()</code>) has been removed. Use the standard {{jsxref("Proxy")}} object instead ({{bug(892903)}}).</li>
-	<li>The <code>String.prototype.contains()</code> method has been removed (it was deprecated since version 40). Use the {{jsxref("String.prototype.includes()")}} method instead ({{bug(1103588)}}).</li>
-	<li>The non-standard <code>RegExp.multiline</code> property (not {{jsxref("RegExp.prototype.multiline")}}) has been removed. Use the standard <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags">m flag</a> instead ({{bug(1219757)}}).</li>
-	<li>The {{jsxref("Object.__defineGetter__", "__defineGetter__")}} and {{jsxref("Object.__defineSetter__", "__defineSetter__")}} methods can no longer be called at the global scope without any object. ({{bug(1253016)}}).</li>
-</ul>
+  - Fragmentation for grid layout has been implemented ({{bug(1144096)}}).
+  - \[css-grid] Percentage tracks are now treated as `auto` if grid container size is indefinite ({{bug(1264607)}}).
+  - {{HTMLElement("fieldset")}} now supports grid and flex layouts ({{bug(1230207)}}).
 
-<h3 id="InterfacesAPIsDOM">Interfaces/APIs/DOM</h3>
+- The `luminance` value for {{cssxref("mask-mode")}} has been added; the `auto` value has been renamed to `match-source`, to match the spec ({{bug(1228354)}}).
+- Interpolation of {{cssxref("clip-path")}} basic shapes in CSS animations and transitions is now supported ({{bug(1110460)}}).
+- Support for horizontal-in-vertical (_tate-chu-yoko_) text has been added via the `all` value of the {{cssxref("text-combine-upright")}} property ({{bug(1097499)}}).
+- Support for the experimental {{cssxref("color-adjust")}} property has been added, allowing pages to specify that background colors and images should be printed ({{bug(1209273)}}).
+- The {{cssxref("::first-letter")}} pseudo-element now also matches punctuation characters of type Pd that precede or immediately follow the actual first letter; this is a new requirement of CSS Pseudo-element module level 4 ({{bug(1260366)}}).
+- Several `-webkit` prefixed properties and values have been added for web compatibility, behind the preference `layout.css.prefixes.webkit`, defaulting to `false`:
 
-<h4 id="DOM_HTML_DOM">DOM &amp; HTML DOM</h4>
+  - {{cssxref("-webkit-text-fill-color")}} ({{bug(1247777)}}).
+  - {{cssxref("-webkit-text-stroke")}}, {{cssxref("-webkit-text-stroke-color")}}, {{cssxref("-webkit-text-stroke-width")}} ({{bug(1248708)}}).
+  - `-webkit-background-clip`  (as background-clip) text value ({{bug(759568)}}).
+  - `-webkit-box-direction`, `-webkit-box-orient` ({{bug(1262049)}}.
+  - The value `-webkit-inline-box` is now an alias of `inline-flex` on the {{cssxref("display")}} property. ({{bug(1257661)}}).
+  - `-webkit-flex-direction`, `-webkit-flex-wrap`, `-webkit-flex-flow`, `-webkit-order`, `-webkit-flex`, `-webkit-flex-grow`, `-webkit-flex-shrink`, `-webkit-flex-basis`, `-webkit-justify-content`, `-webkit-align-items`, `-webkit-align-self` and `-webkit-align-content` were added as aliases for the unprefixed properties and the values `-webkit-flex` and `-webkit-inline-flex` for the {{cssxref("display")}} property as aliases for the unprefixed values ({{bug(1274096)}}).
+  - Added `-webkit-box-flex`, `-webkit-box-ordinal-group`, `-webkit-box-align` and `-webkit-box-pack` properties and `-webkit-box` value to {{cssxref("display")}} as aliases for modern [CSS Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox) ({{bug(1208635)}}).
 
-<ul>
-	<li>Dropped the "Moz" prefix from the {{domxref("CSSKeyframeRule")}} and {{domxref("CSSKeyframesRule")}} interfaces ({{bug(1256178)}}).</li>
-	<li>The {{domxref("NavigatorConcurrentHardware")}} {{Glossary("mixin")}} has been implemented, which adds the {{domxref("NavigatorConcurrentHardware.hardwareConcurrency", "window.navigator.hardwareConcurrency")}} property to the {{domxref("Navigator")}} interface. This lets Web sites and apps get at least an approximation of how many processing cores are available to run {{domxref("Worker")}}s in ({{bug(1008453)}}).</li>
-	<li>The {{domxref("Node.isSameNode()")}} method, which was removed in Firefox 10, has returned after being added back into the specification after a lengthy absence ({{bug(1256299)}}).</li>
-	<li>Firefox now returns proper exceptions instead of numbers when things go wrong during a call to {{domxref("Navigator.registerProtocolHandler()")}}.</li>
-	<li>{{domxref("Element.animate()")}} is now activated by default ({{bug(1245000)}}).</li>
-	<li>The two methods {{domxref("Element.insertAdjacentText()")}} and {{domxref("Element.insertAdjacentElement()")}} have been implemented ({{bug(811259)}}).</li>
-	<li>{{domxref("Document.scrollingElement")}} got enabled by default ({{bug(1265032)}}).</li>
-	<li><code>Node.localName</code>, <code>Node.namespaceURI</code> and <code>Node.prefix</code> were moved to the {{domxref("Element")}} and {{domxref("Attr")}} APIs ({{bug(1055776)}}).</li>
-	<li>Per the latest specification, the values of {{domxref("KeyboardEvent.code")}} returned for the following keys have been changed see ({{bug(1264150)}}):
-	<ul>
-		<li><code>"OSLeft"</code> and <code>"OSRight"</code> are now <code>"MetaLeft"</code> and <code>"MetaRight"</code>.</li>
-		<li><code>"VolumeDown"</code>, <code>"VolumeUp"</code>, and <code>"VolumeMute"</code> are now <code>"AudioVolumeDown"</code>, <code>"AudioVolumeUp"</code>, and <code>"AudioVolumeMute"</code>.</li>
-		<li><code>"IntlHash"</code> has been removed.</li>
-		<li>All keys whose <code>code</code> values were reported as "" in earlier versions of Firefox are now reported as "Unidentified".</li>
-	</ul>
-	</li>
-</ul>
+- The `text` value of {{cssxref("background-clip")}} is now available in all type of Firefox (and not only non-release builds) ({{bug(1263516)}}).
+- The `absolute` value of {{cssxref("position")}} properties on the top layer element ({{bug(1236828)}}).
+- Added an internal-only syntax for {{domxref("@supports")}} to detect pref ({{bug(1259889)}}).
 
-<h4 id="Canvas_2D">Canvas 2D</h4>
+### JavaScript
 
-<ul>
-	<li>The {{domxref("CanvasRenderingContext2D.ellipse()")}} method has been implemented ({{bug(910138)}}).</li>
-</ul>
+#### New APIs
 
-<h4 id="WebRTC">WebRTC</h4>
+- The {{jsxref("String.prototype.padStart()")}} and {{jsxref("String.prototype.padEnd()")}} methods have been implemented ({{bug(1260509)}}).
+- The ES2015 {{jsxref("Symbol.unscopables")}} and {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} properties have been implemented ({{bug(1054759)}} and {{bug(1258163)}}).
+- The ES2015 {{jsxref("Symbol.isConcatSpreadable")}} symbol has been implemented ({{bug(1041586)}}).
+- The ES2015 {{jsxref("Array.@@species", "Array[@@species]")}} getter has been implemented ({{bug(1165052)}}).
+- The ES2015 {{jsxref("ArrayBuffer.@@species", "ArrayBuffer[@@species]")}} getter and {{jsxref("TypedArray.@@species", "%TypedArray%[@@species]")}} getter have been implemented ({{bug(1165053)}}).
+- The {{jsxref("Intl.getCanonicalLocales()")}} method of the ECMAScript Internationalization API draft has been implemented ({{bug(1263040)}}).
 
-<ul>
-	<li>The two methods {{domxref("MediaStream.clone()")}} and {{domxref("MediaStreamTrack.clone()")}} have been implemented ({{bug(1208371)}}).</li>
-	<li>The <code>iceRestart</code> entry is now supported in the {{domxref("RTCOfferOptions")}} dictionary, allowing {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} to be used to request ICE restarts ({{bug(906986)}}).</li>
-	<li>The {{domxref("RTCPeerConnection.createOffer()")}} method now prefers the VP9 video codec by default; previously VP8 was preferred ({{bug(1242324)}}.</li>
-	<li>WebM/VP8 video that includes video resolution changes that has been recorded using {{domxref("MediaRecorder")}} can now be played back successfully.</li>
-</ul>
+#### Deprecations and removals
 
-<h4 id="Others">Others</h4>
+- The deprecated [old Proxy API](/en-US/docs/Archive/Web/Old_Proxy_API) (`Proxy.create` and `Proxy.createFunction()`) has been removed. Use the standard {{jsxref("Proxy")}} object instead ({{bug(892903)}}).
+- The `String.prototype.contains()` method has been removed (it was deprecated since version 40). Use the {{jsxref("String.prototype.includes()")}} method instead ({{bug(1103588)}}).
+- The non-standard `RegExp.multiline` property (not {{jsxref("RegExp.prototype.multiline")}}) has been removed. Use the standard [m flag](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) instead ({{bug(1219757)}}).
+- The {{jsxref("Object.__defineGetter__", "__defineGetter__")}} and {{jsxref("Object.__defineSetter__", "__defineSetter__")}} methods can no longer be called at the global scope without any object. ({{bug(1253016)}}).
 
-<ul>
-	<li>The <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</a> is now available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web workers</a> ({{bug(842818)}}).</li>
-	<li>The {{domxref("CustomEvent")}} interface is now available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> ({{bug(1003432)}}).</li>
-	<li>The <code>DOMApplicationsManager.getNotInstalled()</code> method has been removed ({{bug("1255036")}}).</li>
-	<li>Several Firefox OS APIs that were erroneously exposed to the Web have now been hidden as they should have been — {{domxref("mozContact")}}, {{domxref("MozContactChangeEvent")}}, {{domxref("navigator.mozContacts")}}, {{domxref("MozPowerManager")}}, {{domxref("MozSettingsEvent")}} (see {{bug("1043562")}}, {{bug("1256414")}}, and {{bug("1256046")}}).</li>
-	<li>Support for UTF-16 has been removed from {{domxref("TextEncoder")}} ({{bug(1257877)}}).</li>
-	<li>{{domxref("RTCStatsReport")}} is now a true <code>maplike</code> interface: in addition to {{domxref("RTCStatsReport.forEach()", "forEach()")}}, {{domxref("RTCStatsReport.get()", "get()")}}, and {{domxref("RTCStatsReport.has()", "has()")}}, the methods {{domxref("RTCStatsReport.entries", "entries()")}}, {{domxref("RTCStatsReport.values", "values()")}}, {{domxref("RTCStatsReport.keys()", "keys()")}}, as well as the {{domxref("RTCStatsReport.size", "size")}} getter have been implemented ({{bug(906986)}}).</li>
-	<li>The {{domxref("Request.cache")}} property has been added allowing to control the cache behavior ({{bug(1120715)}}).</li>
-	<li>Handling of dead keys on Mac OS X has been changed to work the same as other platforms; they no longer fire a {{event("keypress")}} event when no text is generated when the focused element isn't editable (when the focused element is editable, dead key causes composition events instead of keyboard events on Mac OS X). Also, like on other platforms, the value of {{domxref("KeyboardEvent.key")}} is now <code>"Dead"</code> for dead keypresses which don't generate text in other situations.</li>
-</ul>
+### Interfaces/APIs/DOM
 
-<h2 id="HTTP">HTTP</h2>
+#### DOM & HTML DOM
 
-<ul>
-	<li>Support for the {{HTTPHeader("Upgrade-Insecure-Requests")}} header has been added ({{bug(1243586)}}).</li>
-	<li>The {{CSP("block-all-mixed-content")}} CSP directive has been implemented ({{bug(1122236)}})</li>
-</ul>
+- Dropped the "Moz" prefix from the {{domxref("CSSKeyframeRule")}} and {{domxref("CSSKeyframesRule")}} interfaces ({{bug(1256178)}}).
+- The {{domxref("NavigatorConcurrentHardware")}} {{Glossary("mixin")}} has been implemented, which adds the {{domxref("NavigatorConcurrentHardware.hardwareConcurrency", "window.navigator.hardwareConcurrency")}} property to the {{domxref("Navigator")}} interface. This lets Web sites and apps get at least an approximation of how many processing cores are available to run {{domxref("Worker")}}s in ({{bug(1008453)}}).
+- The {{domxref("Node.isSameNode()")}} method, which was removed in Firefox 10, has returned after being added back into the specification after a lengthy absence ({{bug(1256299)}}).
+- Firefox now returns proper exceptions instead of numbers when things go wrong during a call to {{domxref("Navigator.registerProtocolHandler()")}}.
+- {{domxref("Element.animate()")}} is now activated by default ({{bug(1245000)}}).
+- The two methods {{domxref("Element.insertAdjacentText()")}} and {{domxref("Element.insertAdjacentElement()")}} have been implemented ({{bug(811259)}}).
+- {{domxref("Document.scrollingElement")}} got enabled by default ({{bug(1265032)}}).
+- `Node.localName`, `Node.namespaceURI` and `Node.prefix` were moved to the {{domxref("Element")}} and {{domxref("Attr")}} APIs ({{bug(1055776)}}).
+- Per the latest specification, the values of {{domxref("KeyboardEvent.code")}} returned for the following keys have been changed see ({{bug(1264150)}}):
 
-<h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
+  - `"OSLeft"` and `"OSRight"` are now `"MetaLeft"` and `"MetaRight"`.
+  - `"VolumeDown"`, `"VolumeUp"`, and `"VolumeMute"` are now `"AudioVolumeDown"`, `"AudioVolumeUp"`, and `"AudioVolumeMute"`.
+  - `"IntlHash"` has been removed.
+  - All keys whose `code` values were reported as "" in earlier versions of Firefox are now reported as "Unidentified".
 
-<ul>
-	<li>The <a href="/en-US/docs/Mozilla/Projects/Social_API/Service_worker_API_reference">Social Worker API</a> has been removed.</li>
-	<li>Added the <code><a href="/en-US/docs/Mozilla/Gecko/Chrome/CSS/-moz-bool-pref">-moz-bool-pref()</a></code> <a href="/en-US/docs/Web/CSS">CSS</a> {{CSSxRef("@supports")}} function to allow hiding portions of chrome stylesheets behind boolean preferences. ({{bug(1259889)}})</li>
-</ul>
+#### Canvas 2D
 
-<h2 id="Older_versions">Older versions</h2>
+- The {{domxref("CanvasRenderingContext2D.ellipse()")}} method has been implemented ({{bug(910138)}}).
 
-<p>{{Firefox_for_developers(47)}}</p>
+#### WebRTC
+
+- The two methods {{domxref("MediaStream.clone()")}} and {{domxref("MediaStreamTrack.clone()")}} have been implemented ({{bug(1208371)}}).
+- The `iceRestart` entry is now supported in the {{domxref("RTCOfferOptions")}} dictionary, allowing {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} to be used to request ICE restarts ({{bug(906986)}}).
+- The {{domxref("RTCPeerConnection.createOffer()")}} method now prefers the VP9 video codec by default; previously VP8 was preferred ({{bug(1242324)}}.
+- WebM/VP8 video that includes video resolution changes that has been recorded using {{domxref("MediaRecorder")}} can now be played back successfully.
+
+#### Others
+
+- The [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) is now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ({{bug(842818)}}).
+- The {{domxref("CustomEvent")}} interface is now available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) ({{bug(1003432)}}).
+- The `DOMApplicationsManager.getNotInstalled()` method has been removed ({{bug("1255036")}}).
+- Several Firefox OS APIs that were erroneously exposed to the Web have now been hidden as they should have been — {{domxref("mozContact")}}, {{domxref("MozContactChangeEvent")}}, {{domxref("navigator.mozContacts")}}, {{domxref("MozPowerManager")}}, {{domxref("MozSettingsEvent")}} (see {{bug("1043562")}}, {{bug("1256414")}}, and {{bug("1256046")}}).
+- Support for UTF-16 has been removed from {{domxref("TextEncoder")}} ({{bug(1257877)}}).
+- {{domxref("RTCStatsReport")}} is now a true `maplike` interface: in addition to {{domxref("RTCStatsReport.forEach()", "forEach()")}}, {{domxref("RTCStatsReport.get()", "get()")}}, and {{domxref("RTCStatsReport.has()", "has()")}}, the methods {{domxref("RTCStatsReport.entries", "entries()")}}, {{domxref("RTCStatsReport.values", "values()")}}, {{domxref("RTCStatsReport.keys()", "keys()")}}, as well as the {{domxref("RTCStatsReport.size", "size")}} getter have been implemented ({{bug(906986)}}).
+- The {{domxref("Request.cache")}} property has been added allowing to control the cache behavior ({{bug(1120715)}}).
+- Handling of dead keys on Mac OS X has been changed to work the same as other platforms; they no longer fire a {{event("keypress")}} event when no text is generated when the focused element isn't editable (when the focused element is editable, dead key causes composition events instead of keyboard events on Mac OS X). Also, like on other platforms, the value of {{domxref("KeyboardEvent.key")}} is now `"Dead"` for dead keypresses which don't generate text in other situations.
+
+## HTTP
+
+- Support for the {{HTTPHeader("Upgrade-Insecure-Requests")}} header has been added ({{bug(1243586)}}).
+- The {{CSP("block-all-mixed-content")}} CSP directive has been implemented ({{bug(1122236)}})
+
+## Changes for add-on and Mozilla developers
+
+- The [Social Worker API](/en-US/docs/Mozilla/Projects/Social_API/Service_worker_API_reference) has been removed.
+- Added the [`-moz-bool-pref()`](/en-US/docs/Mozilla/Gecko/Chrome/CSS/-moz-bool-pref) [CSS](/en-US/docs/Web/CSS) {{CSSxRef("@supports")}} function to allow hiding portions of chrome stylesheets behind boolean preferences. ({{bug(1259889)}})
+
+## Older versions
+
+{{Firefox_for_developers(47)}}

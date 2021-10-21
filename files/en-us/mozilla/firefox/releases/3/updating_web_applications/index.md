@@ -4,90 +4,85 @@ slug: Mozilla/Firefox/Releases/3/Updating_web_applications
 tags:
   - Firefox 3
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>There are a number of changes in the upcoming Firefox 3 that may affect your web site or web application, as well as new features you may wish to take advantage of. This article will serve as a starting point as you work on updating your content to take the fullest possible advantage of Firefox 3.</p>
+There are a number of changes in the upcoming Firefox 3 that may affect your web site or web application, as well as new features you may wish to take advantage of. This article will serve as a starting point as you work on updating your content to take the fullest possible advantage of Firefox 3.
 
-<h2 id="DOM_changes">DOM changes</h2>
+## DOM changes
 
-<p>Nodes from external documents should be cloned using <a href="/en-US/docs/Web/API/Document/importNode"><code>document.importNode()</code></a> (or adopted using <a href="/en-US/docs/Web/API/Document/adoptNode"><code>document.adoptNode()</code></a>) before they can be inserted into the current document. For more on the <a href="/en-US/docs/Web/API/Node/ownerDocument"><code>Node.ownerDocument</code></a> issues, see the
-<a href="https://www.w3.org/DOM/faq.html#ownerdoc" rel="noopener">W3C DOM FAQ</a>.</p>
+Nodes from external documents should be cloned using [`document.importNode()`](/en-US/docs/Web/API/Document/importNode) (or adopted using [`document.adoptNode()`](/en-US/docs/Web/API/Document/adoptNode)) before they can be inserted into the current document. For more on the [`Node.ownerDocument`](/en-US/docs/Web/API/Node/ownerDocument) issues, see the
+[W3C DOM FAQ](https://www.w3.org/DOM/faq.html#ownerdoc).
 
-<p>Firefox doesn't currently enforce this rule (it did for a while during the development of Firefox 3, but too many sites break when this rule is enforced). We encourage Web developers to fix their code to follow this rule for improved future compatibility.</p>
+Firefox doesn't currently enforce this rule (it did for a while during the development of Firefox 3, but too many sites break when this rule is enforced). We encourage Web developers to fix their code to follow this rule for improved future compatibility.
 
-<h2 id="HTML_changes">HTML changes</h2>
+## HTML changes
 
-<h3 id="Changes_to_character_set_inheritance">Changes to character set inheritance</h3>
+### Changes to character set inheritance
 
-<p>Firefox 3 closes a security bug in frames and iframes that allowed them to inherit the parent's character set. This could cause problems in certain cases. Now, frames are only allowed to inherit the parent's character set if both frame and parent were loaded from the same server. If you have pages that assume that frames loaded from other servers will inherit the same character set, you should update the frames' HTML to indicate their character set specifically.</p>
+Firefox 3 closes a security bug in frames and iframes that allowed them to inherit the parent's character set. This could cause problems in certain cases. Now, frames are only allowed to inherit the parent's character set if both frame and parent were loaded from the same server. If you have pages that assume that frames loaded from other servers will inherit the same character set, you should update the frames' HTML to indicate their character set specifically.
 
-<h3 id="Change_to_the_SCRIPT_element">Change to the SCRIPT element</h3>
+### Change to the SCRIPT element
 
-<p>The <code>&lt;script&gt;</code> element in <code>text/html</code> documents now requires a closing <code>&lt;/script&gt;</code> in HTML 4 documents, even if you're not including any content in between. While in previous versions of Firefox, you could do:</p>
+The `<script>` element in `text/html` documents now requires a closing `</script>` in HTML 4 documents, even if you're not including any content in between. While in previous versions of Firefox, you could do:
 
-<pre>&lt;script ... /&gt;
-</pre>
+    <script ... />
 
-<p>Now the markup must comply with the HTML specifications (if it's actually HTML), and hence you must actually close it, like this:</p>
+Now the markup must comply with the HTML specifications (if it's actually HTML), and hence you must actually close it, like this:
 
-<pre>&lt;script ...&gt;&lt;/script&gt;
-</pre>
+    <script ...></script>
 
-<p>This improves both compatibility and security.</p>
+This improves both compatibility and security.
 
-<h2 id="CSS_changes">CSS changes</h2>
+## CSS changes
 
-<h3 id="Change_to_font-size_based_on_em_ex_units">Change to font-size based on em, ex units</h3>
+### Change to font-size based on em, ex units
 
-<p>font-size values in em and ex units used to be affected by the user's minimum font size setting: if a font was displayed larger due to the minimum font size, the em and ex units for font-size settings based on this one would be enlarged accordingly. This was inconsistent with the way percentage-based font sizes behaved.</p>
+font-size values in em and ex units used to be affected by the user's minimum font size setting: if a font was displayed larger due to the minimum font size, the em and ex units for font-size settings based on this one would be enlarged accordingly. This was inconsistent with the way percentage-based font sizes behaved.
 
-<p>font-size values in em and ex units are now based on an "intended font size" that is not affected by the user's minimum font size. In other words, font sizes are always calculated according to the designer's intention and are adjusted for minimum font size afterwards.</p>
+font-size values in em and ex units are now based on an "intended font size" that is not affected by the user's minimum font size. In other words, font sizes are always calculated according to the designer's intention and are adjusted for minimum font size afterwards.
 
-<p>See {{Bug(434718)}}, especially its NOT A CASE FOR THE BUG TEMPLATE - The following link points to a Bugzilla attachment, not a Bugzilla bug; if you use the attachment number as a bug number, it becomes nonsense <a href="https://bugzilla.mozilla.org/attachment.cgi?id=322943">attachment 322943</a> NOT A CASE FOR THE BUG TEMPLATE for a demonstration (must be watched with a minimum font size &gt;= 6 to see the difference: the two box cascades behave differently in Firefox 2, because the em-based font-size "bounces" off the minimum font size).</p>
+See {{Bug(434718)}}, especially its NOT A CASE FOR THE BUG TEMPLATE - The following link points to a Bugzilla attachment, not a Bugzilla bug; if you use the attachment number as a bug number, it becomes nonsense [attachment 322943](https://bugzilla.mozilla.org/attachment.cgi?id=322943) NOT A CASE FOR THE BUG TEMPLATE for a demonstration (must be watched with a minimum font size >= 6 to see the difference: the two box cascades behave differently in Firefox 2, because the em-based font-size "bounces" off the minimum font size).
 
-<h2 id="Security_changes">Security changes</h2>
+## Security changes
 
-<h3 id="Chrome_access">Chrome access</h3>
+### Chrome access
 
-<p>In prior versions of Firefox, any web page could load scripts or images from chrome using the <code>chrome://</code> protocol. Among other things, this made it possible for sites to detect the presence of add-ons -- which could be used to breach a user's security by bypassing add-ons that add security features to the browser.</p>
+In prior versions of Firefox, any web page could load scripts or images from chrome using the `chrome://` protocol. Among other things, this made it possible for sites to detect the presence of add-ons -- which could be used to breach a user's security by bypassing add-ons that add security features to the browser.
 
-<p>Firefox 3 only allows web content to access items in the <code>chrome://browser/</code> and <code>chrome://toolkit/</code> spaces. These files are intended to be accessible by web content. All other chrome content is now blocked from access by the web.</p>
+Firefox 3 only allows web content to access items in the `chrome://browser/` and `chrome://toolkit/` spaces. These files are intended to be accessible by web content. All other chrome content is now blocked from access by the web.
 
-<p>There is, however, a way for extensions to make their content web-accessible. They can specify a special flag in their <code>chrome.manifest</code> file, like this:</p>
+There is, however, a way for extensions to make their content web-accessible. They can specify a special flag in their `chrome.manifest` file, like this:
 
-<pre>content mypackage location/ contentaccessible=yes
-</pre>
+    content mypackage location/ contentaccessible=yes
 
-<p>This shouldn't be something you need to do very often, but it's available for those rare cases in which it's needed. Note that it's possible that Firefox may alert the user that your extension uses the <code>contentaccessible</code> flag in this way, as it does constitute a potential security risk.</p>
+This shouldn't be something you need to do very often, but it's available for those rare cases in which it's needed. Note that it's possible that Firefox may alert the user that your extension uses the `contentaccessible` flag in this way, as it does constitute a potential security risk.
 
-<div class="note">
-  <p><strong>Note:</strong> Because Firefox 2 doesn't understand the <code>contentaccessible</code> flag (it will ignore the entire line containing the flag), if you want your add-on to be compatible with both Firefox 2 and Firefox 3, you should do something like this:</p>
+> **Note:** Because Firefox 2 doesn't understand the `contentaccessible` flag (it will ignore the entire line containing the flag), if you want your add-on to be compatible with both Firefox 2 and Firefox 3, you should do something like this:
+>
+> ```bash
+> content mypackage location/
+> content mypackage location/ contentaccessible=yes
+>
+> ```
 
-  <pre class="brush: bash">content mypackage location/
-content mypackage location/ contentaccessible=yes
-  </pre>
-</div>
+### File upload fields
 
-<h3 id="File_upload_fields">File upload fields</h3>
+In prior versions of Firefox, there were cases in which when the user submitted a file for uploading, the entire path of the file was available to the web application. This privacy concern has been resolved in Firefox 3; now only the filename itself is available to the web application.
 
-<p>In prior versions of Firefox, there were cases in which when the user submitted a file for uploading, the entire path of the file was available to the web application. This privacy concern has been resolved in Firefox 3; now only the filename itself is available to the web application.</p>
+### Using remote JARs in frames
 
-<h3 id="Using_remote_JARs_in_frames">Using remote JARs in frames</h3>
+Using code in JAR files loaded from other domains is no longer allowed in frames; this mitigates a [potential attack vector](https://www.mozilla.org/security/announce/2008/mfsa2008-23.html).
 
-<p>Using code in JAR files loaded from other domains is no longer allowed in frames; this mitigates a <a href="https://www.mozilla.org/security/announce/2008/mfsa2008-23.html">potential attack vector</a>.</p>
+### Changes to same-origin policy for file: URIs
 
-<h3 id="Changes_to_same-origin_policy_for_file_URIs">Changes to same-origin policy for file: URIs</h3>
+The same-origin policy for file: URIs has changed in Firefox 3. This may affect your content; please see [Same-origin policy for file: URIs](/en-US/docs/Same-origin_policy_for_file:_URIs) for details.
 
-<p>The same-origin policy for file: URIs has changed in Firefox 3. This may affect your content; please see <a href="/en-US/docs/Same-origin_policy_for_file:_URIs">Same-origin policy for file: URIs</a> for details.</p>
+## JavaScript changes
 
-<h2 id="JavaScript_changes">JavaScript changes</h2>
+Firefox 3 supports [JavaScript 1.8](/en-US/docs/New_in_JavaScript_1.8). One important change that may require updates to your web site or application is that the obsolete and non-standard `Script` object is no longer supported. This is not the `<script>` tag, but a JavaScript object that was never standardized. It is unlikely this is something you ever used anyway, so you're probably fine.
 
-<p>Firefox 3 supports <a href="/en-US/docs/New_in_JavaScript_1.8">JavaScript 1.8</a>. One important change that may require updates to your web site or application is that the obsolete and non-standard <code>Script</code> object is no longer supported. This is not the <code>&lt;script&gt;</code> tag, but a JavaScript object that was never standardized. It is unlikely this is something you ever used anyway, so you're probably fine.</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Mozilla/Firefox/Releases/3">Firefox 3 for developers</a></li>
- <li><a href="/en-US/docs/New_in_JavaScript_1.8">New in JavaScript 1.8</a></li>
- <li><a href="/en-US/docs/Mozilla/Firefox/Releases/3/Updating_extensions">Updating extensions for Firefox 3</a></li>
-</ul>
+- [Firefox 3 for developers](/en-US/docs/Mozilla/Firefox/Releases/3)
+- [New in JavaScript 1.8](/en-US/docs/New_in_JavaScript_1.8)
+- [Updating extensions for Firefox 3](/en-US/docs/Mozilla/Firefox/Releases/3/Updating_extensions)

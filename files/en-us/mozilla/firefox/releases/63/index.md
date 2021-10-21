@@ -7,264 +7,214 @@ tags:
   - Mozilla
   - Release
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>This article provides information about the changes in Firefox 63 that will affect developers. Firefox 63 was released on October 23, 2018.</p>
+This article provides information about the changes in Firefox 63 that will affect developers. Firefox 63 was released on October 23, 2018.
 
-<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+## Changes for web developers
 
-<h3 id="Developer_tools">Developer tools</h3>
+### Developer tools
 
-<ul>
- <li>The Fonts tab in the <a href="/en-US/docs/Tools/Page_Inspector">Page Inspector</a> now includes an editor that makes it easy to view and edit the settings of the fonts on your page. See <a href="/en-US/docs/Tools/Page_Inspector/How_to/Edit_fonts">Edit fonts</a> for details.</li>
- <li>The <a href="/en-US/docs/Tools/Accessibility_inspector">Accessibility inspector</a> is now enabled by default ({{bug(1482454)}}).</li>
- <li>When you hover over an object in the <a href="/en-US/docs/Tools/Accessibility_inspector">Accessibility Inspector</a>, <a href="/en-US/docs/Tools/Accessibility_inspector#highlighting_of_ui_items">the item is highlighted</a> and its role and name will be shown in an information bar on the page ({{bug(1473030)}}).</li>
- <li>The command line in the <a href="/en-US/docs/Tools/Web_Console">Web Console</a> is now shown immediately following the console output ({{bug(1136299)}}).</li>
- <li>A new icon has been added to the content in the <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> to indicate when a URL belongs to a known tracker — see {{SectionOnPage("/en-US/docs/Tools/Network_Monitor/request_list", "Security icons")}} ({{bug(1333994)}}).</li>
- <li>The default value of <code>devtools.aboutdebugging.showSystemAddons</code> is now <code>false</code>, meaning that system add-ons will not be listed on the <code>about:debugging</code> page. You can change the settings by navigating to <code>about:config</code> ({{bug(1425347)}}).</li>
- <li>The <a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive Design Mode</a> toolbar was simplified, and we added the option to left-align the viewport.</li>
- <li>The Page Inspector includes a <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#custom_element_definition">link to the class definition</a> for a custom element. ({{bug(1443923)}}).</li>
-</ul>
+- The Fonts tab in the [Page Inspector](/en-US/docs/Tools/Page_Inspector) now includes an editor that makes it easy to view and edit the settings of the fonts on your page. See [Edit fonts](/en-US/docs/Tools/Page_Inspector/How_to/Edit_fonts) for details.
+- The [Accessibility inspector](/en-US/docs/Tools/Accessibility_inspector) is now enabled by default ({{bug(1482454)}}).
+- When you hover over an object in the [Accessibility Inspector](/en-US/docs/Tools/Accessibility_inspector), [the item is highlighted](/en-US/docs/Tools/Accessibility_inspector#highlighting_of_ui_items) and its role and name will be shown in an information bar on the page ({{bug(1473030)}}).
+- The command line in the [Web Console](/en-US/docs/Tools/Web_Console) is now shown immediately following the console output ({{bug(1136299)}}).
+- A new icon has been added to the content in the [Network Monitor](/en-US/docs/Tools/Network_Monitor) to indicate when a URL belongs to a known tracker — see {{SectionOnPage("/en-US/docs/Tools/Network_Monitor/request_list", "Security icons")}} ({{bug(1333994)}}).
+- The default value of `devtools.aboutdebugging.showSystemAddons` is now `false`, meaning that system add-ons will not be listed on the `about:debugging` page. You can change the settings by navigating to `about:config` ({{bug(1425347)}}).
+- The [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode) toolbar was simplified, and we added the option to left-align the viewport.
+- The Page Inspector includes a [link to the class definition](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#custom_element_definition) for a custom element. ({{bug(1443923)}}).
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<ul>
- <li>Support for the {{HTMLElement("img")}} element's <code>decoding</code> attribute has been added ({{bug(1416328)}}); see also {{DOMxRef("HTMLImageElement.decoding")}}.</li>
-</ul>
+- Support for the {{HTMLElement("img")}} element's `decoding` attribute has been added ({{bug(1416328)}}); see also {{DOMxRef("HTMLImageElement.decoding")}}.
 
-<h4 id="Removals">Removals</h4>
+#### Removals
 
-<ul>
- <li>Support for the <code>sidebar</code> link type (<code>rel="sidebar"</code>) has been removed. If an anchor tag includes this attribute, it will be ignored ({{bug(1452645)}}).</li>
-</ul>
+- Support for the `sidebar` link type (`rel="sidebar"`) has been removed. If an anchor tag includes this attribute, it will be ignored ({{bug(1452645)}}).
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>Support for the {{CSSxRef(":defined")}} pseudo-class has been added ({{bug(1331334)}}).</li>
- <li>Support for {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}} and {{CSSxRef("gap")}} have been added in <a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox#the_gap_properties">Flexbox layout</a> ({{bug(1398483)}}).</li>
- <li>Re-enabled support for <a href="/en-US/docs/Web/CSS/@media/-webkit-device-pixel-ratio">webkit-prefixed pixel-density @media queries</a> ({{bug(1444139)}}).</li>
- <li>Support added for the <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">CSS Flexible Box Layout</a> (Flexbox) properties {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}}, and {{CSSxRef("align-items")}} as well as the {{CSSxRef("justify-content")}} property ({{bug(1472843)}}).</li>
- <li>Implemented the <code>path()</code> function for {{CSSxRef("offset-path")}} ({{bug(1429298)}}).</li>
- <li>Implemented <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax_improvements_in_level_4">syntax improvements from the Media Queries Level 4 specification</a> ({{bug(1472843)}}).</li>
- <li>Renamed <code>offset-*</code> properties to {{CSSxRef("inset-block-start")}}, {{CSSxRef("inset-block-end")}}, {{CSSxRef("inset-inline-start")}}, and {{CSSxRef("inset-inline-end")}} ({{bug(1464782)}}).</li>
- <li>Added support for the <a href="/en-US/docs/Web/CSS/@media/prefers-reduced-motion">prefers-reduced-motion</a> media feature ({{bug(1365045)}}, {{bug(1475462)}}).</li>
- <li>Added flow relative values (<code>block</code>, <code>inline</code>) for the {{CSSxRef("resize")}} property ({{bug(1464786)}}).</li>
- <li>Implemented flexbox layout for <code>safe</code> &amp; <code>unsafe</code> values in {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}}, and {{CSSxRef("justify-content")}} ({{bug(1297774)}}).</li>
- <li>The <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties">logical properties</a> (where appropriate) are now animatable ({{bug(1309752)}}).</li>
-</ul>
+- Support for the {{CSSxRef(":defined")}} pseudo-class has been added ({{bug(1331334)}}).
+- Support for {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}} and {{CSSxRef("gap")}} have been added in [Flexbox layout](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox#the_gap_properties) ({{bug(1398483)}}).
+- Re-enabled support for [webkit-prefixed pixel-density @media queries](/en-US/docs/Web/CSS/@media/-webkit-device-pixel-ratio) ({{bug(1444139)}}).
+- Support added for the [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) (Flexbox) properties {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}}, and {{CSSxRef("align-items")}} as well as the {{CSSxRef("justify-content")}} property ({{bug(1472843)}}).
+- Implemented the `path()` function for {{CSSxRef("offset-path")}} ({{bug(1429298)}}).
+- Implemented [syntax improvements from the Media Queries Level 4 specification](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax_improvements_in_level_4) ({{bug(1472843)}}).
+- Renamed `offset-*` properties to {{CSSxRef("inset-block-start")}}, {{CSSxRef("inset-block-end")}}, {{CSSxRef("inset-inline-start")}}, and {{CSSxRef("inset-inline-end")}} ({{bug(1464782)}}).
+- Added support for the [prefers-reduced-motion](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media feature ({{bug(1365045)}}, {{bug(1475462)}}).
+- Added flow relative values (`block`, `inline`) for the {{CSSxRef("resize")}} property ({{bug(1464786)}}).
+- Implemented flexbox layout for `safe` & `unsafe` values in {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}}, and {{CSSxRef("justify-content")}} ({{bug(1297774)}}).
+- The [logical properties](/en-US/docs/Web/CSS/CSS_Logical_Properties) (where appropriate) are now animatable ({{bug(1309752)}}).
 
-<h4 id="Removals_2">Removals</h4>
+#### Removals
 
-<ul>
- <li>Removed <code>offset-block-start</code>, <code>offset-block-end</code>, <code>offset-inline-start</code>, and <code>offset-inline-end</code>; these have been renamed to <code>inset-*</code>, as described above ({{bug(1464782)}}).</li>
-</ul>
+- Removed `offset-block-start`, `offset-block-end`, `offset-inline-start`, and `offset-inline-end`; these have been renamed to `inset-*`, as described above ({{bug(1464782)}}).
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<ul>
- <li>The {{JSxRef("Symbol.prototype.description")}} property has been implemented ({{bug(1472170)}}).</li>
- <li>The {{JSxRef("Object.fromEntries()")}} method has been added ({{bug(1469019)}}).</li>
- <li>When you try to access a property of an undefined object, the error message is now much improved. Considering the case where <code>x</code> is undefined and you try to access <code>x.y</code>, instead of <code>TypeError: x is undefined</code> the console now returns the more descriptive <code><a href="/en-US/docs/Web/JavaScript/Reference/Errors/Cant_access_property">x is undefined; can't access its "y" property</a></code> ({{bug(1259822)}}).</li>
-</ul>
+- The {{JSxRef("Symbol.prototype.description")}} property has been implemented ({{bug(1472170)}}).
+- The {{JSxRef("Object.fromEntries()")}} method has been added ({{bug(1469019)}}).
+- When you try to access a property of an undefined object, the error message is now much improved. Considering the case where `x` is undefined and you try to access `x.y`, instead of `TypeError: x is undefined` the console now returns the more descriptive [`x is undefined; can't access its "y" property`](/en-US/docs/Web/JavaScript/Reference/Errors/Cant_access_property) ({{bug(1259822)}}).
 
-<h4 id="Removals_3">Removals</h4>
+#### Removals
 
-<ul>
- <li>Experimental WebAssembly Module IndexedDB serialization support has been removed ({{bug(1469395)}}).</li>
-</ul>
+- Experimental WebAssembly Module IndexedDB serialization support has been removed ({{bug(1469395)}}).
 
-<h3 id="APIs">APIs</h3>
+### APIs
 
-<h4 id="New_APIs">New APIs</h4>
+#### New APIs
 
-<ul>
- <li>The Shadow DOM ({{bug(1471947)}}) and Custom Elements ({{bug(1471948)}}) APIs have been enabled by default; See <a href="/en-US/docs/Web/Web_Components">Web components</a> for more details.</li>
- <li>The {{domxref("Media_Capabilities_API", "Media Capabilities API", "", "1")}} has been implemented ({{bug(1409664)}}).</li>
- <li>The {{domxref("Clipboard", "Async Clipboard API", "", "1")}} has been implemented and enabled by default for all channels ({{bug(1461465)}}). As is the case with Chrome, Firefox currently implements only the {{domxref("Clipboard.writeText", "writeText()")}} and {{domxref("Clipboard.readText", "readText()")}} methods; however, unlike Chrome, <code>readText()</code> is only available in <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">browser extensions</a>.</li>
- <li>The {{DOMxRef("SecurityPolicyViolationEvent")}} interface is now supported. It allows sending events when the {{HTTPHeader("Content-Security-Policy")}} is violated ({{bug(1472661)}}).</li>
-</ul>
+- The Shadow DOM ({{bug(1471947)}}) and Custom Elements ({{bug(1471948)}}) APIs have been enabled by default; See [Web components](/en-US/docs/Web/Web_Components) for more details.
+- The {{domxref("Media_Capabilities_API", "Media Capabilities API", "", "1")}} has been implemented ({{bug(1409664)}}).
+- The {{domxref("Clipboard", "Async Clipboard API", "", "1")}} has been implemented and enabled by default for all channels ({{bug(1461465)}}). As is the case with Chrome, Firefox currently implements only the {{domxref("Clipboard.writeText", "writeText()")}} and {{domxref("Clipboard.readText", "readText()")}} methods; however, unlike Chrome, `readText()` is only available in [browser extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).
+- The {{DOMxRef("SecurityPolicyViolationEvent")}} interface is now supported. It allows sending events when the {{HTTPHeader("Content-Security-Policy")}} is violated ({{bug(1472661)}}).
 
-<h4 id="DOM">DOM</h4>
+#### DOM
 
-<ul>
- <li>The following portions of the {{domxref("Web_Animations_API", "Web Animations API", "", "1")}} have been enabled by default (see {{bug(1476158)}}):
-  <ul>
-   <li>The {{DOMxRef("Animation")}} properties {{DOMxRef("Animation.ready", "ready")}} and {{DOMxRef("Animation.finished", "finished")}}, specifying the <code>Animation</code> object's <code>ready</code> and <code>finished</code> {{JSxRef("Promise")}}s.</li>
-   <li>The {{DOMxRef("Animation")}} object's {{DOMxRef("Animation.effect", "effect")}} property.</li>
-   <li>The interfaces {{DOMxRef("KeyframeEffect")}} and {{DOMxRef("AnimationEffect")}}.</li>
-  </ul>
- </li>
- <li>The {{DOMxRef("Element.toggleAttribute()")}} method has been implemented ({{bug(1469592)}}).</li>
- <li>The historical, previously non-standard, {{DOMxRef("Event.returnValue")}} property is now supported for compatibility purposes ({{bug(1452569)}}).</li>
- <li>We implemented the {{DOMxRef("Window.event")}} property to improve web compatibility, now that it's become standard ({{bug(218415)}}). However, due to some web compat issues (e.g. {{bug(1479964)}}), this was quickly disabled in non-Nightly channels, hidden behind the <code>dom.window.event.enabled</code> pref ({{bug(1493869)}}).</li>
- <li>To bring Firefox into alignment with Edge and Chrome, the {{DOMxRef("Navigator/platform", "navigator.platform")}} property now returns <code>"Win32"</code> even when running on 64-bit Windows ({{bug(1472618)}}).</li>
- <li>Prior to Firefox 63, links that open new windows that had <code>rel="noopener"</code>, as well as calls to {{DOMxRef("Window.open()")}} with the <code><a href="/en-US/docs/Web/API/Window/open">noopener</a></code> window feature enabled would default to having all window features disabled so that you had to explicitly re-enable any standard features you wanted. Now, these windows have the same set of features enabled like any other window, and you need to explicitly turn off any you don't want ({{bug(1419960)}}).</li>
-</ul>
+- The following portions of the {{domxref("Web_Animations_API", "Web Animations API", "", "1")}} have been enabled by default (see {{bug(1476158)}}):
 
-<h4 id="DOM_events">DOM events</h4>
+  - The {{DOMxRef("Animation")}} properties {{DOMxRef("Animation.ready", "ready")}} and {{DOMxRef("Animation.finished", "finished")}}, specifying the `Animation` object's `ready` and `finished` {{JSxRef("Promise")}}s.
+  - The {{DOMxRef("Animation")}} object's {{DOMxRef("Animation.effect", "effect")}} property.
+  - The interfaces {{DOMxRef("KeyframeEffect")}} and {{DOMxRef("AnimationEffect")}}.
 
-<ul>
- <li>Handling of the <code>Alt</code> key <em>on the right side</em> of the keyboard has been improved on Windows. If the user's current keyboard layout maps the <code>Alt</code> key to the <code>AltGr</code> modifier key, the value of {{DOMxRef("KeyboardEvent.key")}} is now reported as <code>"AltGraph"</code>. This behavior matches the behavior recently introduced in Chrome ({{bug(900750)}}).</li>
-</ul>
+- The {{DOMxRef("Element.toggleAttribute()")}} method has been implemented ({{bug(1469592)}}).
+- The historical, previously non-standard, {{DOMxRef("Event.returnValue")}} property is now supported for compatibility purposes ({{bug(1452569)}}).
+- We implemented the {{DOMxRef("Window.event")}} property to improve web compatibility, now that it's become standard ({{bug(218415)}}). However, due to some web compat issues (e.g. {{bug(1479964)}}), this was quickly disabled in non-Nightly channels, hidden behind the `dom.window.event.enabled` pref ({{bug(1493869)}}).
+- To bring Firefox into alignment with Edge and Chrome, the {{DOMxRef("Navigator/platform", "navigator.platform")}} property now returns `"Win32"` even when running on 64-bit Windows ({{bug(1472618)}}).
+- Prior to Firefox 63, links that open new windows that had `rel="noopener"`, as well as calls to {{DOMxRef("Window.open()")}} with the [`noopener`](/en-US/docs/Web/API/Window/open) window feature enabled would default to having all window features disabled so that you had to explicitly re-enable any standard features you wanted. Now, these windows have the same set of features enabled like any other window, and you need to explicitly turn off any you don't want ({{bug(1419960)}}).
 
-<h4 id="Media_Web_Audio_and_WebRTC">Media, Web Audio, and WebRTC</h4>
+#### DOM events
 
-<ul>
- <li>Microphone access now works simultaneously in multiple tabs, even within the same content process ({{bug(1404977)}}).</li>
- <li>{{DOMxRef("RTCDataChannel")}} has been updated to support the sctp-sdp-21 data format for the data, in addition to the older sctp-sdp-05 format previously supported.</li>
- <li>The {{DOMxRef("ConstantSourceNode")}} node type for Web Audio API now has a default channel count of 2 rather than 1, in order to match the specification ({{bug(1413283)}}).</li>
- <li>The {{domxref("Web_Audio_API", "Web Audio API", "", "1")}} interface {{DOMxRef("AudioScheduledSourceNode")}} (and by extension, all the other node types based on it) now throw the correct exception when a negative value is specified for the node start time. That error is <code>RangeError</code> ({{bug(1413284)}}).</li>
- <li>The minimum and maximum permitted values for an {{DOMxRef("AudioParam")}} object's {{DOMxRef("AudioParam.value", "value")}} have been changed to the minimum negative single-precision floating-point value (-340,282,346,638,528,859,811,704,183,484,516,925,440) and the maximum positive single-precision floating-point value (+340,282,346,638,528,859,811,704,183,484,516,925,440) respectively ({{bug(1476695)}}).</li>
- <li>The {{DOMxRef("SourceBuffer.changeType")}} method, which allows you to change codecs during an active stream, has been enabled by default. This is part of the {{domxref("Media_Source_Extensions_API", "Media Source Extensions API", "", "1")}} ({{bug(1481166)}}).</li>
- <li>The {{DOMxRef("AudioParam.setValueCurveAtTime()")}} method has been updated to correctly accept an array of floating-point values to indicate the parameter's values to change to over time. Previously, it required a {{jsxref("Float32Array")}} ({{bug(1421091)}}).</li>
- <li>{{DOMxRef("AudioParam.setValueCurveAtTime()")}} has also been updated to correctly return a proper <code>TypeError</code> when a non-finite value is found in the <code>values</code> array ({{bug(1472095)}}).</li>
- <li>In addition, <code>setValueCurveAtTime()</code> has been updated to ensure that, when the parameter finishes following the specified value curve after the duration elapses, the value of the parameter is set to the last value in the list of values to curve through ({{bug(1308436)}}).</li>
- <li>The <code>RTCRTPStreamStats</code> dictionary has been renamed to {{DOMxRef("RTCRtpStreamStats")}} for consistency with other WebRTC dictionaries and the specification ({{bug(1480498)}}).</li>
- <li>Support for the <code>RTCRtpStreamStats</code> dictionary's {{DOMxRef("RTCRtpStreamStats.kind", "kind")}} property has been added ({{bug(1481851)}}).</li>
- <li>The <code>RTCRtpStreamStats</code> dictionary's <code>isRemote</code> property is deprecated and will be removed in Firefox 65. A warning is now output to console when this property is accessed. See <a href="https://blog.mozilla.org/webrtc/getstats-isremote-65/">this blog post on the Advancing WebRTC blog</a> for details ({{bug(1393306)}}).</li>
-</ul>
+- Handling of the `Alt` key _on the right side_ of the keyboard has been improved on Windows. If the user's current keyboard layout maps the `Alt` key to the `AltGr` modifier key, the value of {{DOMxRef("KeyboardEvent.key")}} is now reported as `"AltGraph"`. This behavior matches the behavior recently introduced in Chrome ({{bug(900750)}}).
 
-<h4 id="Canvas_and_WebGL">Canvas and WebGL</h4>
+#### Media, Web Audio, and WebRTC
 
-<ul>
- <li>A new <code>powerPreference</code> context attribute has been added to {{DOMxRef("HTMLCanvasElement.getContext()")}}. On macOS this allows WebGL non-performance-critical applications and applets to request the low-power GPU instead of the high-power GPU in multi-GPU systems ({{bug(1349799)}}).</li>
-</ul>
+- Microphone access now works simultaneously in multiple tabs, even within the same content process ({{bug(1404977)}}).
+- {{DOMxRef("RTCDataChannel")}} has been updated to support the sctp-sdp-21 data format for the data, in addition to the older sctp-sdp-05 format previously supported.
+- The {{DOMxRef("ConstantSourceNode")}} node type for Web Audio API now has a default channel count of 2 rather than 1, in order to match the specification ({{bug(1413283)}}).
+- The {{domxref("Web_Audio_API", "Web Audio API", "", "1")}} interface {{DOMxRef("AudioScheduledSourceNode")}} (and by extension, all the other node types based on it) now throw the correct exception when a negative value is specified for the node start time. That error is `RangeError` ({{bug(1413284)}}).
+- The minimum and maximum permitted values for an {{DOMxRef("AudioParam")}} object's {{DOMxRef("AudioParam.value", "value")}} have been changed to the minimum negative single-precision floating-point value (-340,282,346,638,528,859,811,704,183,484,516,925,440) and the maximum positive single-precision floating-point value (+340,282,346,638,528,859,811,704,183,484,516,925,440) respectively ({{bug(1476695)}}).
+- The {{DOMxRef("SourceBuffer.changeType")}} method, which allows you to change codecs during an active stream, has been enabled by default. This is part of the {{domxref("Media_Source_Extensions_API", "Media Source Extensions API", "", "1")}} ({{bug(1481166)}}).
+- The {{DOMxRef("AudioParam.setValueCurveAtTime()")}} method has been updated to correctly accept an array of floating-point values to indicate the parameter's values to change to over time. Previously, it required a {{jsxref("Float32Array")}} ({{bug(1421091)}}).
+- {{DOMxRef("AudioParam.setValueCurveAtTime()")}} has also been updated to correctly return a proper `TypeError` when a non-finite value is found in the `values` array ({{bug(1472095)}}).
+- In addition, `setValueCurveAtTime()` has been updated to ensure that, when the parameter finishes following the specified value curve after the duration elapses, the value of the parameter is set to the last value in the list of values to curve through ({{bug(1308436)}}).
+- The `RTCRTPStreamStats` dictionary has been renamed to {{DOMxRef("RTCRtpStreamStats")}} for consistency with other WebRTC dictionaries and the specification ({{bug(1480498)}}).
+- Support for the `RTCRtpStreamStats` dictionary's {{DOMxRef("RTCRtpStreamStats.kind", "kind")}} property has been added ({{bug(1481851)}}).
+- The `RTCRtpStreamStats` dictionary's `isRemote` property is deprecated and will be removed in Firefox 65. A warning is now output to console when this property is accessed. See [this blog post on the Advancing WebRTC blog](https://blog.mozilla.org/webrtc/getstats-isremote-65/) for details ({{bug(1393306)}}).
 
-<h4 id="Removals_4">Removals</h4>
+#### Canvas and WebGL
 
-<ul>
- <li>The obsolete and non-standard Firefox-only methods {{DOMxRef("Window.back()")}} and {{DOMxRef("Window.forward()")}} have been removed. Please use the {{DOMxRef("History.back", "window.history.back()")}} and {{DOMxRef("History.forward", "window.history.forward()")}} methods instead ({{bug(1479486)}}).</li>
- <li>The {{DOMxRef("URL.createObjectURL", "createObjectURL()")}} and {{DOMxRef("URL.revokeObjectURL", "revokeObjectURL()")}} methods are no longer available on {{DOMxRef("ServiceWorker")}} instances due to the potential they introduced for memory leaks to occur ({{bug(1264182)}}).</li>
- <li>Since it was deprecated in the specification anyway, the limited support for Doppler effects on {{DOMxRef("PannerNode")}} has been removed from the Web Audio API. The {{DOMxRef("AudioListener")}} properties {{DOMxRef("AudioListener.dopplerFactor", "dopplerFactor")}} and {{DOMxRef("AudioListener.speedOfSound", "speedOfSound")}} have been removed, along with the <code>PannerNode</code> method {{DOMxRef("PannerNode.setVelocity", "setVelocity()")}} ({{bug(1148354)}}).</li>
-</ul>
+- A new `powerPreference` context attribute has been added to {{DOMxRef("HTMLCanvasElement.getContext()")}}. On macOS this allows WebGL non-performance-critical applications and applets to request the low-power GPU instead of the high-power GPU in multi-GPU systems ({{bug(1349799)}}).
 
-<h3 id="CSSOM">CSSOM</h3>
+#### Removals
 
-<p><em>No changes.</em></p>
+- The obsolete and non-standard Firefox-only methods {{DOMxRef("Window.back()")}} and {{DOMxRef("Window.forward()")}} have been removed. Please use the {{DOMxRef("History.back", "window.history.back()")}} and {{DOMxRef("History.forward", "window.history.forward()")}} methods instead ({{bug(1479486)}}).
+- The {{DOMxRef("URL.createObjectURL", "createObjectURL()")}} and {{DOMxRef("URL.revokeObjectURL", "revokeObjectURL()")}} methods are no longer available on {{DOMxRef("ServiceWorker")}} instances due to the potential they introduced for memory leaks to occur ({{bug(1264182)}}).
+- Since it was deprecated in the specification anyway, the limited support for Doppler effects on {{DOMxRef("PannerNode")}} has been removed from the Web Audio API. The {{DOMxRef("AudioListener")}} properties {{DOMxRef("AudioListener.dopplerFactor", "dopplerFactor")}} and {{DOMxRef("AudioListener.speedOfSound", "speedOfSound")}} have been removed, along with the `PannerNode` method {{DOMxRef("PannerNode.setVelocity", "setVelocity()")}} ({{bug(1148354)}}).
 
-<h3 id="HTTP">HTTP</h3>
+### CSSOM
 
-<ul>
- <li>The {{HTTPHeader("Clear-Site-Data")}} header is implemented and no longer behind a preference ({{bug(1470111)}}).</li>
-</ul>
+_No changes._
 
-<h3 id="Security">Security</h3>
+### HTTP
 
-<ul>
- <li>Site favicons are now subject to <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a> if one is configured for the site ({{bug(1297156)}}).</li>
- <li>CSP <code>script-src</code> directive's <code>'report-sample'</code> expression now recognized when generating violation reports. This directive indicates that a short sample of where the violation occurred should be included in the report. Previously, Firefox always included this sample ({{bug(1473218)}}).</li>
- <li>Firefox now uses NSS 3.39 ({{bug(1470914)}}).</li>
-</ul>
+- The {{HTTPHeader("Clear-Site-Data")}} header is implemented and no longer behind a preference ({{bug(1470111)}}).
 
-<h3 id="Plugins">Plugins</h3>
+### Security
 
-<p><em>No changes.</em></p>
+- Site favicons are now subject to [Content Security Policy](/en-US/docs/Web/HTTP/CSP) if one is configured for the site ({{bug(1297156)}}).
+- CSP `script-src` directive's `'report-sample'` expression now recognized when generating violation reports. This directive indicates that a short sample of where the violation occurred should be included in the report. Previously, Firefox always included this sample ({{bug(1473218)}}).
+- Firefox now uses NSS 3.39 ({{bug(1470914)}}).
 
-<h3 id="WebDriver_conformance_Marionette">WebDriver conformance (Marionette)</h3>
+### Plugins
 
-<h4 id="New_features">New features</h4>
+_No changes._
 
-<ul>
- <li>Marionette now returns a <code>setWindowRect</code> <a href="/en-US/docs/Web/WebDriver/Capabilities">capability</a> in the <code>WebDriver:NewSession</code> response that is true if the browser window can be repositioned and resized, which e.g. is the case for Firefox but not any mobile applications ({{bug(1470659)}}).</li>
- <li>Added support for the <code>unhandledPromptBehavior</code> capability, which allows to define a specific <a href="https://w3c.github.io/webdriver/#dfn-user-prompt-handler">prompt behavior</a> of the WebDriver specification ({{bug(1264259)}}).</li>
- <li>Handling of user prompts has been added to the <code>WebDriver:ExecuteScript</code> and <code>WebDriver:ExecuteAsyncScript</code> commands ({{bug(1439995)}}).</li>
-</ul>
+### WebDriver conformance (Marionette)
 
-<h4 id="API_changes">API changes</h4>
+#### New features
 
-<ul>
- <li>Deprecated command end-points without the <code>WebDriver:</code> prefix have been removed ({{bug(1451725)}}).</li>
- <li>The <code>WebDriver:NewSession</code> command returns recommended strings (<code>linux</code>, <code>mac</code>, <code>windows</code>) for <code>platformName</code> as defined in the WebDriver specification ({{bug(1470646)}}).</li>
-</ul>
+- Marionette now returns a `setWindowRect` [capability](/en-US/docs/Web/WebDriver/Capabilities) in the `WebDriver:NewSession` response that is true if the browser window can be repositioned and resized, which e.g. is the case for Firefox but not any mobile applications ({{bug(1470659)}}).
+- Added support for the `unhandledPromptBehavior` capability, which allows to define a specific [prompt behavior](https://w3c.github.io/webdriver/#dfn-user-prompt-handler) of the WebDriver specification ({{bug(1264259)}}).
+- Handling of user prompts has been added to the `WebDriver:ExecuteScript` and `WebDriver:ExecuteAsyncScript` commands ({{bug(1439995)}}).
 
-<h4 id="Bug_fixes">Bug fixes</h4>
+#### API changes
 
-<ul>
- <li>Focus related events were missing on element interaction when Firefox was not running as the top-most application ({{bug(1398111)}}).</li>
- <li>Performing a <code>pointerDown</code> and <code>pointerUp</code> action in a subsequent action sequence could trigger a double click because <code>WebDriver:ReleaseActions</code> didn't reset the double click tracker ({{bug(1422583)}}).</li>
- <li>Executing <code>pause</code> actions repeatedly could cause an infinite hang ({{bug(1447449)}}).</li>
- <li>Fixed a bug where returning an element collection from <code>WebDriver:ExecuteScript</code> and <code>WebDriver:ExecuteAsyncScript</code> would cause a cyclic reference error ({{bug(1447977)}}).</li>
- <li>To prevent a race condition both the <code>WebDriver:AcceptAlert</code> and <code>WebDriver:DismissAlert</code> commands now wait until the user prompt has been closed ({{bug(1479368)}}).</li>
- <li>Log entries as emitted by the frame script were no longer limited by <code>MarionettePrefs.logLevel</code> but logged everything ({{bug(1482829)}}).</li>
- <li><code>WebDriver:TakeScreenshot</code> raised an error when taking a screenshot of a window larger than 32767 pixels in width or height ({{bug(1485730)}}).</li>
- <li><code>WebDriver:SendAlertText</code> didn't replace default user prompt value if text to send is an empty string ({{bug(1486485)}}).</li>
-</ul>
+- Deprecated command end-points without the `WebDriver:` prefix have been removed ({{bug(1451725)}}).
+- The `WebDriver:NewSession` command returns recommended strings (`linux`, `mac`, `windows`) for `platformName` as defined in the WebDriver specification ({{bug(1470646)}}).
 
-<h3 id="Other">Other</h3>
+#### Bug fixes
 
-<ul>
- <li>Corrected the behavior of {{DOMxRef("PerformanceObserver.observe()")}} to do nothing if no valid entry types are found in the specified array of entry types to observe, or if the array is empty or missing. Previously, Firefox was incorrectly throwing a <code>TypeError</code> ({{bug(1403027)}}).</li>
- <li>In <a href="/en-US/docs/Web/OpenSearch">OpenSearch</a>, Firefox now accepts <code>application/json</code> as a search URL type, as an alias of <code>application/x-suggestions+json</code> ({{bug(1425827)}}).</li>
-</ul>
+- Focus related events were missing on element interaction when Firefox was not running as the top-most application ({{bug(1398111)}}).
+- Performing a `pointerDown` and `pointerUp` action in a subsequent action sequence could trigger a double click because `WebDriver:ReleaseActions` didn't reset the double click tracker ({{bug(1422583)}}).
+- Executing `pause` actions repeatedly could cause an infinite hang ({{bug(1447449)}}).
+- Fixed a bug where returning an element collection from `WebDriver:ExecuteScript` and `WebDriver:ExecuteAsyncScript` would cause a cyclic reference error ({{bug(1447977)}}).
+- To prevent a race condition both the `WebDriver:AcceptAlert` and `WebDriver:DismissAlert` commands now wait until the user prompt has been closed ({{bug(1479368)}}).
+- Log entries as emitted by the frame script were no longer limited by `MarionettePrefs.logLevel` but logged everything ({{bug(1482829)}}).
+- `WebDriver:TakeScreenshot` raised an error when taking a screenshot of a window larger than 32767 pixels in width or height ({{bug(1485730)}}).
+- `WebDriver:SendAlertText` didn't replace default user prompt value if text to send is an empty string ({{bug(1486485)}}).
 
-<h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
+### Other
 
-<h3 id="API_changes_2">API changes</h3>
+- Corrected the behavior of {{DOMxRef("PerformanceObserver.observe()")}} to do nothing if no valid entry types are found in the specified array of entry types to observe, or if the array is empty or missing. Previously, Firefox was incorrectly throwing a `TypeError` ({{bug(1403027)}}).
+- In [OpenSearch](/en-US/docs/Web/OpenSearch), Firefox now accepts `application/json` as a search URL type, as an alias of `application/x-suggestions+json` ({{bug(1425827)}}).
 
-<h4 id="Theming">Theming</h4>
+## Changes for add-on developers
 
-<ul>
- <li>The default text color for {{WebExtAPIRef("browserAction")}} badges is now automatically set to black or white, to maximise contrast with the background ({{bug(1474110)}}).</li>
- <li>The <code>accentcolor</code> and <code>textcolor</code> properties of the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme">theme</a></code> manifest key are now optional ({{bug(1413144)}}).</li>
- <li>{{WebExtAPIRef("browserAction.getBadgeTextColor()")}} and {{WebExtAPIRef("browserAction.setBadgeTextColor()")}} enable you to get and set the text color of browser action badges ({{bug(1424620)}}).</li>
- <li>The theme <code>colors</code> key in <code>manifest.json</code> now supports the <code>ntp_text</code> property to set the text color in a new tab, and the <code>ntp_background</code> property to set the color of a new tab ({{bug(1347204)}}).</li>
- <li>Themes can now define the colors for sidebars, such as the bookmarks sidebar ({{bug(1418602)}}). The relevant properties include:
-  <ul>
-   <li><code>sidebar</code>: The background color for sidebars.</li>
-   <li><code>sidebar_text</code>: The text color for sidebars.</li>
-   <li><code>sidebar_highlight</code>: The background color of a selected item in a sidebar.</li>
-   <li><code>sidebar_highlight_text</code>: The text color of a selected item in a sidebar.</li>
-  </ul>
- </li>
- <li>The method {{WebExtAPIRef("management.install()")}} allows web extensions to install and enable signed browser themes ({{bug(1369209)}}).</li>
- <li>The manifest key <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme_experiment">theme_experiment</a> was introduced ({{bug(1472740)}}). This key enables the definition of experimental <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme">theme</a></code> key properties for the Firefox interface.</li>
-</ul>
+### API changes
 
-<h4 id="Search">Search</h4>
+#### Theming
 
-<ul>
- <li>The new {{WebExtAPIRef("search")}} AP<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/search">I</a> enables you to retrieve the list of installed search engines and perform searches with them ({{bug(1352598)}}).</li>
- <li>{{WebExtAPIRef("topSites.get()")}} now takes an <code>options</code> parameter enabling you to set various options for the list of sites returned ({{bug(1445836)}}).</li>
-</ul>
+- The default text color for {{WebExtAPIRef("browserAction")}} badges is now automatically set to black or white, to maximise contrast with the background ({{bug(1474110)}}).
+- The `accentcolor` and `textcolor` properties of the [`theme`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) manifest key are now optional ({{bug(1413144)}}).
+- {{WebExtAPIRef("browserAction.getBadgeTextColor()")}} and {{WebExtAPIRef("browserAction.setBadgeTextColor()")}} enable you to get and set the text color of browser action badges ({{bug(1424620)}}).
+- The theme `colors` key in `manifest.json` now supports the `ntp_text` property to set the text color in a new tab, and the `ntp_background` property to set the color of a new tab ({{bug(1347204)}}).
+- Themes can now define the colors for sidebars, such as the bookmarks sidebar ({{bug(1418602)}}). The relevant properties include:
 
-<h4 id="Tabs">Tabs</h4>
+  - `sidebar`: The background color for sidebars.
+  - `sidebar_text`: The text color for sidebars.
+  - `sidebar_highlight`: The background color of a selected item in a sidebar.
+  - `sidebar_highlight_text`: The text color of a selected item in a sidebar.
 
-<ul>
- <li>{{WebExtAPIRef("tabs.onHighlighted")}} now supports multi-select ({{bug(1474440)}}).</li>
- <li>{{WebExtAPIRef("tabs.highlight")}} now includes an optional field in the <code>highlightInfo</code> object — <code>populate</code> — which defaults to <code>true</code>. Setting it to <code>false</code> prevents the returned <code>windows.Window</code> object from being populated with a list of tabs, to improve performance ({{bug(1489814)}}).</li>
- <li>{{WebExtAPIRef("tabs.update")}} now supports changing the selection status of a tab by including <code>highlighted: true</code> in the <code>updateProperties</code> parameter ({{bug(1479129)}}).</li>
- <li>{{WebExtAPIRef("tabs.update")}} now supports changing the selection status of a tab without changing the focused tab ({{bug(1486050)}}) by including both <code>highlighted: true</code> and <code>active: false</code> in the <code>updateProperties</code> parameter.</li>
- <li>{{WebExtAPIRef("tabs.query")}} now returns an array of {{WebExtAPIRef("tabs.Tab")}} objects if multiple tabs are selected ({{bug(1465170)}}).</li>
- <li>The {{WebExtAPIRef("tabs.Tab")}} property now properly reflects which tabs in a browser window are selected (highlighted) and {{WebExtAPIRef("tabs.highlight")}} supports changing the highlighted status of multiple tabs ({{bug(1464862)}}).</li>
- <li>The <code>isarticle</code> property in the <code>extraParameters</code> object passed into {{WebExtAPIRef("tabs.onUpdated")}} has been renamed to <code>isArticle</code>. The old name is retained but deprecated. This change was uplifted to Firefox 62 ({{bug(1461695)}}).</li>
- <li>The {{WebExtAPIRef('tabs.onUpdated')}} event can be used to track when a tab is drawing the user's attention with <code>attention</code> property of the <code>changeInfo</code> object ({{bug(1396684)}}).</li>
-</ul>
+- The method {{WebExtAPIRef("management.install()")}} allows web extensions to install and enable signed browser themes ({{bug(1369209)}}).
+- The manifest key [theme_experiment](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme_experiment) was introduced ({{bug(1472740)}}). This key enables the definition of experimental [`theme`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) key properties for the Firefox interface.
 
-<h4 id="Menus">Menus</h4>
+#### Search
 
-<ul>
- <li>Added {{WebExtApiRef("menus.getTargetElement()")}} to the {{WebExtApiRef("menus")}} API. The method returns the element referenced by the <code>targetElementId</code> parameter that identifies the clicked element. If the <code>targetElementId</code> is no longer valid, the method returns null ({{bug(1325814)}}).</li>
- <li>{{WebExtAPIRef("menus.create()")}} now enables you to create invisible menu items, and {{WebExtAPIRef("menus.update()")}} enables you to toggle menu item visibility ({{bug(1482529)}}).</li>
- <li>Items created using the {{WebExtAPIRef("menus")}} API now support access keys ({{bug(1320462)}}).</li>
- <li>The <code>targetUrlPatterns</code> parameter of {{WebExtApiRef("menus.create()")}} and {{WebExtApiRef("menus.update()")}} now supports any URL scheme, even those that are usually not allowed in a match pattern ({{bug(1280370)}}).</li>
- <li>When a tab context menu item is clicked, the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission">"activeTab" permission</a> is now granted for that tab, even if that's not the currently active tab ({{bug(1446956)}}).</li>
-</ul>
+- The new {{WebExtAPIRef("search")}} AP[I](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/search) enables you to retrieve the list of installed search engines and perform searches with them ({{bug(1352598)}}).
+- {{WebExtAPIRef("topSites.get()")}} now takes an `options` parameter enabling you to set various options for the list of sites returned ({{bug(1445836)}}).
 
-<h4 id="Other_2">Other</h4>
+#### Tabs
 
-<ul>
- <li>{{WebExtAPIRef("commands.onCommand")}} is now treated as <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions">user input</a> ({{bug(1408129)}}).</li>
- <li>The {{WebExtAPIRef("webRequest")}} API now enables you to filter for speculative connections ({{bug(1479565)}}).</li>
- <li>{{WebExtAPIRef("webRequest.SecurityInfo")}} adds two new properties, <code>keaGroupName</code>, and <code>signatureSchemeName</code>. This change was uplifted to Firefox 62 ({{bug(1471959)}}).</li>
- <li>{{WebExtAPIRef("cookies.Cookie")}} now includes a property indicating the SameSite state of the cookie. The {{WebExtAPIRef("cookies.SameSiteStatus")}} enumeration defines SameSite state values ({{bug(1351663)}}).</li>
- <li>Match patterns for URLs now explicitly match the "data" URL scheme ({{bug(1280370)}}).</li>
-</ul>
+- {{WebExtAPIRef("tabs.onHighlighted")}} now supports multi-select ({{bug(1474440)}}).
+- {{WebExtAPIRef("tabs.highlight")}} now includes an optional field in the `highlightInfo` object — `populate` — which defaults to `true`. Setting it to `false` prevents the returned `windows.Window` object from being populated with a list of tabs, to improve performance ({{bug(1489814)}}).
+- {{WebExtAPIRef("tabs.update")}} now supports changing the selection status of a tab by including `highlighted: true` in the `updateProperties` parameter ({{bug(1479129)}}).
+- {{WebExtAPIRef("tabs.update")}} now supports changing the selection status of a tab without changing the focused tab ({{bug(1486050)}}) by including both `highlighted: true` and `active: false` in the `updateProperties` parameter.
+- {{WebExtAPIRef("tabs.query")}} now returns an array of {{WebExtAPIRef("tabs.Tab")}} objects if multiple tabs are selected ({{bug(1465170)}}).
+- The {{WebExtAPIRef("tabs.Tab")}} property now properly reflects which tabs in a browser window are selected (highlighted) and {{WebExtAPIRef("tabs.highlight")}} supports changing the highlighted status of multiple tabs ({{bug(1464862)}}).
+- The `isarticle` property in the `extraParameters` object passed into {{WebExtAPIRef("tabs.onUpdated")}} has been renamed to `isArticle`. The old name is retained but deprecated. This change was uplifted to Firefox 62 ({{bug(1461695)}}).
+- The {{WebExtAPIRef('tabs.onUpdated')}} event can be used to track when a tab is drawing the user's attention with `attention` property of the `changeInfo` object ({{bug(1396684)}}).
 
-<h2 id="Older_versions">Older versions</h2>
+#### Menus
 
-<p>{{Firefox_for_developers(62)}}</p>
+- Added {{WebExtApiRef("menus.getTargetElement()")}} to the {{WebExtApiRef("menus")}} API. The method returns the element referenced by the `targetElementId` parameter that identifies the clicked element. If the `targetElementId` is no longer valid, the method returns null ({{bug(1325814)}}).
+- {{WebExtAPIRef("menus.create()")}} now enables you to create invisible menu items, and {{WebExtAPIRef("menus.update()")}} enables you to toggle menu item visibility ({{bug(1482529)}}).
+- Items created using the {{WebExtAPIRef("menus")}} API now support access keys ({{bug(1320462)}}).
+- The `targetUrlPatterns` parameter of {{WebExtApiRef("menus.create()")}} and {{WebExtApiRef("menus.update()")}} now supports any URL scheme, even those that are usually not allowed in a match pattern ({{bug(1280370)}}).
+- When a tab context menu item is clicked, the ["activeTab" permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) is now granted for that tab, even if that's not the currently active tab ({{bug(1446956)}}).
+
+#### Other
+
+- {{WebExtAPIRef("commands.onCommand")}} is now treated as [user input](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions) ({{bug(1408129)}}).
+- The {{WebExtAPIRef("webRequest")}} API now enables you to filter for speculative connections ({{bug(1479565)}}).
+- {{WebExtAPIRef("webRequest.SecurityInfo")}} adds two new properties, `keaGroupName`, and `signatureSchemeName`. This change was uplifted to Firefox 62 ({{bug(1471959)}}).
+- {{WebExtAPIRef("cookies.Cookie")}} now includes a property indicating the SameSite state of the cookie. The {{WebExtAPIRef("cookies.SameSiteStatus")}} enumeration defines SameSite state values ({{bug(1351663)}}).
+- Match patterns for URLs now explicitly match the "data" URL scheme ({{bug(1280370)}}).
+
+## Older versions
+
+{{Firefox_for_developers(62)}}

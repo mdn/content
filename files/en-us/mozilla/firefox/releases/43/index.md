@@ -4,162 +4,140 @@ slug: Mozilla/Firefox/Releases/43
 tags:
   - Firefox
 ---
-<div>{{FirefoxSidebar}}</div><p><a href="https://www.mozilla.org/firefox/developer/">To test the latest developer features of Firefox, install Firefox Developer Edition</a> Firefox 43 was released on December 15, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.</p>
+{{FirefoxSidebar}}
 
-<h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 43 was released on December 15, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-<h3 id="Developer_Tools">Developer Tools</h3>
+## Changes for Web developers
 
-<p>Highlights:</p>
+### Developer Tools
 
-<ul>
- <li><a href="/en-US/docs/Tools/Web_Console/Console_messages#server">Server logging in the Web Console</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#overridden_declarations">Quickly find the rule that overrode a CSS declaration</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#element_popup_menu">"Use in Console" context menu item in Inspector</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#strict_search">"Strict" option for filtering in the Rules view</a></li>
- <li><a href="/en-US/docs/Tools/Web_Console/Console_messages#network">Network entries in the Console now link to the Network Monitor</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#setting_hover_active_focus">Markup view shows indicators for pseudo-classes locked for elements</a></li>
- <li>New sidebar UI for WebIDE</li>
-</ul>
+Highlights:
 
-<p><a class="external external-icon" href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Client%20Software&amp;chfieldto=2015-09-19&amp;query_format=advanced&amp;chfield=resolution&amp;chfieldfrom=2015-08-10&amp;chfieldvalue=FIXED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;component=Developer%20Tools&amp;component=Developer%20Tools%3A%203D%20View&amp;component=Developer%20Tools%3A%20Canvas%20Debugger&amp;component=Developer%20Tools%3A%20Console&amp;component=Developer%20Tools%3A%20Debugger&amp;component=Developer%20Tools%3A%20Framework&amp;component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&amp;component=Developer%20Tools%3A%20Inspector&amp;component=Developer%20Tools%3A%20Memory&amp;component=Developer%20Tools%3A%20Netmonitor&amp;component=Developer%20Tools%3A%20Object%20Inspector&amp;component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&amp;component=Developer%20Tools%3A%20Responsive%20Mode&amp;component=Developer%20Tools%3A%20Scratchpad&amp;component=Developer%20Tools%3A%20Source%20Editor&amp;component=Developer%20Tools%3A%20Storage%20Inspector&amp;component=Developer%20Tools%3A%20Style%20Editor&amp;component=Developer%20Tools%3A%20User%20Stories&amp;component=Developer%20Tools%3A%20Web%20Audio%20Editor&amp;component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&amp;component=Developer%20Tools%3A%20WebIDE&amp;product=Firefox&amp;list_id=12582678">All devtools bugs fixed between Firefox 42 and Firefox 43</a>.</p>
+- [Server logging in the Web Console](/en-US/docs/Tools/Web_Console/Console_messages#server)
+- [Quickly find the rule that overrode a CSS declaration](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#overridden_declarations)
+- ["Use in Console" context menu item in Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#element_popup_menu)
+- ["Strict" option for filtering in the Rules view](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#strict_search)
+- [Network entries in the Console now link to the Network Monitor](/en-US/docs/Tools/Web_Console/Console_messages#network)
+- [Markup view shows indicators for pseudo-classes locked for elements](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#setting_hover_active_focus)
+- New sidebar UI for WebIDE
 
-<h3 id="CSS">CSS</h3>
+[All devtools bugs fixed between Firefox 42 and Firefox 43](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2015-09-19&query_format=advanced&chfield=resolution&chfieldfrom=2015-08-10&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=12582678).
 
-<ul>
- <li>Support for the standard, unprefixed version of {{Cssxref("hyphens")}} has been landed ({{bug(953408)}}).</li>
- <li>The shorthand property {{cssxref("font")}} has been updated to accept {{cssxref("font-stretch")}} values ({{bug(1057680)}}).</li>
- <li>To match a latest evolution of the specification, the {{cssxref(":fullscreen")}} pseudo-class now selects the whole stack of elements in full screen, and not only the top-level one ({{bug(1199522)}}).</li>
- <li>The deprecated SVG values for the {{cssxref("writing-mode")}}, <code>lr</code>, <code>lr-tb</code>, <code>rl</code>, <code>tb</code>, and <code>tb-rl</code>, have been added in CSS as aliases to standard properties ({{bug(1205787)}}).</li>
-</ul>
+### CSS
 
-<h3 id="HTML">HTML</h3>
+- Support for the standard, unprefixed version of {{Cssxref("hyphens")}} has been landed ({{bug(953408)}}).
+- The shorthand property {{cssxref("font")}} has been updated to accept {{cssxref("font-stretch")}} values ({{bug(1057680)}}).
+- To match a latest evolution of the specification, the {{cssxref(":fullscreen")}} pseudo-class now selects the whole stack of elements in full screen, and not only the top-level one ({{bug(1199522)}}).
+- The deprecated SVG values for the {{cssxref("writing-mode")}}, `lr`, `lr-tb`, `rl`, `tb`, and `tb-rl`, have been added in CSS as aliases to standard properties ({{bug(1205787)}}).
 
-<ul>
- <li>For {{htmlelement("img")}} with ICO image containing multiple frames, the intrinsic dimension of the image is set to the one of the largest frame, and no more of the smallest frame {{bug(1201796)}}.</li>
- <li>The value of the document's viewport (defined with <code>&lt;<a href="/en-US/docs/Web/HTML/Element/meta">meta</a> name="viewport&gt;</code>)can now dynamically be changed via JavaScript ({{bug(976616)}}).</li>
-</ul>
+### HTML
 
-<h3 id="JavaScript">JavaScript</h3>
+- For {{htmlelement("img")}} with ICO image containing multiple frames, the intrinsic dimension of the image is set to the one of the largest frame, and no more of the smallest frame {{bug(1201796)}}.
+- The value of the document's viewport (defined with `<meta name="viewport>`)can now dynamically be changed via JavaScript ({{bug(976616)}}).
 
-<h4 id="New_APIs">New APIs</h4>
+### JavaScript
 
-<ul>
- <li>The new ES2016 methods {{jsxref("Array.prototype.includes()")}} and {{jsxref("TypedArray.prototype.includes()")}} are now enabled by default ({{bug(1070767)}}).</li>
-</ul>
+#### New APIs
 
-<h4 id="Changes_regarding_the_arguments_object">Changes regarding the <code>arguments</code> object</h4>
+- The new ES2016 methods {{jsxref("Array.prototype.includes()")}} and {{jsxref("TypedArray.prototype.includes()")}} are now enabled by default ({{bug(1070767)}}).
 
-<ul>
- <li>To match the ES2015 specification, <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a> no longer have their own <code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a></code> object. The <code>arguments</code> object is now lexically bound (inherited from the outer function). In most cases, <a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest parameters</a> are a good alternative <code>(...args) =&gt; args[i]</code>, see {{bug(889158)}}.</li>
- <li>The <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a> object is now allowed in conjunction with <a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest parameters</a> ({{bug(1133298)}}).</li>
- <li>From now on, a mapped <code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a></code> object in non-strict functions is only provided if the function does <strong>not</strong> contain any <a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest parameters</a>, any <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">default parameters</a> or any <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructured parameters</a> ({{bug(1175394)}}).</li>
-</ul>
+#### Changes regarding the `arguments` object
 
-<h4 id="Other_changes">Other changes</h4>
+- To match the ES2015 specification, [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) no longer have their own [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object. The `arguments` object is now lexically bound (inherited from the outer function). In most cases, [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) are a good alternative `(...args) => args[i]`, see {{bug(889158)}}.
+- The [arguments](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object is now allowed in conjunction with [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) ({{bug(1133298)}}).
+- From now on, a mapped [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object in non-strict functions is only provided if the function does **not** contain any [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), any [default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) or any [destructured parameters](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) ({{bug(1175394)}}).
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/function*">Generators</a> and <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">generator methods</a> are no longer constructable as per ES2016 ({{bug(1191486)}}).</li>
-</ul>
+#### Other changes
 
-<h3 id="InterfacesAPIsDOM">Interfaces/APIs/DOM</h3>
+- [Generators](/en-US/docs/Web/JavaScript/Reference/Statements/function*) and [generator methods](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) are no longer constructable as per ES2016 ({{bug(1191486)}}).
 
-<h4 id="DOM_HTML_DOM">DOM &amp; HTML DOM</h4>
+### Interfaces/APIs/DOM
 
-<p><em>No change.</em></p>
+#### DOM & HTML DOM
 
-<h4 id="IndexedDB">IndexedDB</h4>
+_No change._
 
-<ul>
- <li>A new feature called <a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting">locale-aware sorting</a> has been added allowing for the creation of indexes with a locale specified, which can then be used to sort data according to the rules of that locale ({{bug(871846)}}). This is a non-standard Firefox-specific feature.</li>
-</ul>
+#### IndexedDB
 
-<h4 id="Service_Workers">Service Workers</h4>
+- A new feature called [locale-aware sorting](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting) has been added allowing for the creation of indexes with a locale specified, which can then be used to sort data according to the rules of that locale ({{bug(871846)}}). This is a non-standard Firefox-specific feature.
 
-<ul>
- <li>As per the specification, if {{domxref("ExtendableEvent.waitUntil()")}} is called outside of the {{domxref("ExtendableEvent")}} handler, Firefox will now throw an <code>InvalidStateError</code>; in addition, multiple calls to {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} will now stack up, and the resulting promises will be added to the list of <a href="https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#dfn-extend-lifetime-promises">extend lifetime promises</a> ({{bug(1180274)}}).</li>
- <li>{{domxref("PushMessageData")}} methods have been implemented ({{bug(1149195)}}).</li>
-</ul>
+#### Service Workers
 
-<h4 id="WebRTC">WebRTC</h4>
+- As per the specification, if {{domxref("ExtendableEvent.waitUntil()")}} is called outside of the {{domxref("ExtendableEvent")}} handler, Firefox will now throw an `InvalidStateError`; in addition, multiple calls to {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} will now stack up, and the resulting promises will be added to the list of [extend lifetime promises](https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#dfn-extend-lifetime-promises) ({{bug(1180274)}}).
+- {{domxref("PushMessageData")}} methods have been implemented ({{bug(1149195)}}).
 
-<ul>
- <li>The {{domxref("HTMLCanvasElement.captureStream()")}} method has been activated by default ({{bug(1177276)}}).</li>
- <li>The non-standard constraint style option list for {{domxref("RTCOfferOptions")}} has been deprecated and will be removed entirely in Firefox 44.</li>
-</ul>
+#### WebRTC
 
-<h4 id="Miscellaneous">Miscellaneous</h4>
+- The {{domxref("HTMLCanvasElement.captureStream()")}} method has been activated by default ({{bug(1177276)}}).
+- The non-standard constraint style option list for {{domxref("RTCOfferOptions")}} has been deprecated and will be removed entirely in Firefox 44.
 
-<ul>
- <li>The <a href="/en-US/docs/Web/API/Battery_Status_API">Battery Status API</a> now uses the new promise syntax for {{domxref("Navigator.getBattery()")}}, as specified in the recent evolution of the specification ({{bug(1050749)}}).</li>
- <li>The <code>User-Agent</code> header is no longer in the list of {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} so it can now be set in a <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> {{domxref("Headers")}} object, via XHR {{domxref("XMLHttpRequest.setRequestHeader()")}},… ({{bug(1188932)}}).</li>
- <li>The {{domxref("MediaRecorder.MediaRecorder()")}} constructor can now accept an options dictionary as a parameter, which allows you to set custom bitrates for the audio/video to be recorded ({{bug("1161276")}}).</li>
- <li>The {{domxref("PerformanceObserver")}} interface, belonging to the <a href="/en-US/docs/Web/API/Performance_Timeline_API">Performance Timeline API</a> has been implemented ({{bug(1165796)}}).</li>
- <li>The Frame Timing API has been added: the {{domxref("PerformanceRenderTiming")}} and {{domxref("PerformanceCompositeTiming")}} interfaces are now available ({{bug(1191178)}}).</li>
- <li>The modern <a href="/en-US/docs/Web/API/Screen_Orientation_API">Screen Orientation API</a> has been implemented: unprefixed {{domxref("Screen.orientation")}} and the {{domxref("ScreenOrientation")}} interface are now available ({{bug("1131470")}}). The non-standard {{domxref("Screen.mozOrientation")}}, {{domxref("Screen.onmozorientationchange")}}, {{domxref("Screen.mozLockOrientation()")}}, and {{domxref("Screen.mozUnlockOrientation()")}} will be removed in the future.</li>
- <li>Under Linux, like under Windows, {{domxref("Event.timeStamp")}} now returns a {{domxref("DOMHighResTimeStamp")}} ({{bug(1026803)}}).</li>
- <li>Experimental support for {{domxref("Selection")}} events {{event("selectionchange")}} and {{event("selectstart")}}, as well as the {{domxref("GlobalEventHandlers/onselectionchange", "Document.onselectionchange")}} and {{domxref("GlobalEventHandlers.onselectstart")}} event handlers property has been added ({{bug(571294)}}). The <code>selectionchange</code> event is fired on the {{domxref("Document")}} if the associated <code>Selection</code> object is concerned, or on the specific {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} ({{bug(1196479)}}). This feature is controlled by the <code>dom.select_events.enabled</code> preference, that defaults to <code>false</code>, except on Nightly.</li>
- <li>Support for {{domxref("MouseEvent.offsetX")}} and {{domxref("MouseEvent.offsetY")}} have been activated on Firefox for Android and Firefox OS ({{bug(1204841)}}).</li>
- <li>The {{domxref("HTMLCanvasElement.mozFetchAsStream()")}} method has been removed ({{bug(1206030)}}).</li>
- <li>The constructor {{domxref("Request.Request", "Request()")}} as well as {{domxref("fetch()")}} will now raise a {{exception("TypeError")}} exception when used with a URL containing a username and password ({{bug(1195820)}}).</li>
-</ul>
+#### Miscellaneous
 
-<h3 id="MathML">MathML</h3>
+- The [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) now uses the new promise syntax for {{domxref("Navigator.getBattery()")}}, as specified in the recent evolution of the specification ({{bug(1050749)}}).
+- The `User-Agent` header is no longer in the list of {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} so it can now be set in a [Fetch](/en-US/docs/Web/API/Fetch_API) {{domxref("Headers")}} object, via XHR {{domxref("XMLHttpRequest.setRequestHeader()")}},… ({{bug(1188932)}}).
+- The {{domxref("MediaRecorder.MediaRecorder()")}} constructor can now accept an options dictionary as a parameter, which allows you to set custom bitrates for the audio/video to be recorded ({{bug("1161276")}}).
+- The {{domxref("PerformanceObserver")}} interface, belonging to the [Performance Timeline API](/en-US/docs/Web/API/Performance_Timeline_API) has been implemented ({{bug(1165796)}}).
+- The Frame Timing API has been added: the {{domxref("PerformanceRenderTiming")}} and {{domxref("PerformanceCompositeTiming")}} interfaces are now available ({{bug(1191178)}}).
+- The modern [Screen Orientation API](/en-US/docs/Web/API/Screen_Orientation_API) has been implemented: unprefixed {{domxref("Screen.orientation")}} and the {{domxref("ScreenOrientation")}} interface are now available ({{bug("1131470")}}). The non-standard {{domxref("Screen.mozOrientation")}}, {{domxref("Screen.onmozorientationchange")}}, {{domxref("Screen.mozLockOrientation()")}}, and {{domxref("Screen.mozUnlockOrientation()")}} will be removed in the future.
+- Under Linux, like under Windows, {{domxref("Event.timeStamp")}} now returns a {{domxref("DOMHighResTimeStamp")}} ({{bug(1026803)}}).
+- Experimental support for {{domxref("Selection")}} events {{event("selectionchange")}} and {{event("selectstart")}}, as well as the {{domxref("GlobalEventHandlers/onselectionchange", "Document.onselectionchange")}} and {{domxref("GlobalEventHandlers.onselectstart")}} event handlers property has been added ({{bug(571294)}}). The `selectionchange` event is fired on the {{domxref("Document")}} if the associated `Selection` object is concerned, or on the specific {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} ({{bug(1196479)}}). This feature is controlled by the `dom.select_events.enabled` preference, that defaults to `false`, except on Nightly.
+- Support for {{domxref("MouseEvent.offsetX")}} and {{domxref("MouseEvent.offsetY")}} have been activated on Firefox for Android and Firefox OS ({{bug(1204841)}}).
+- The {{domxref("HTMLCanvasElement.mozFetchAsStream()")}} method has been removed ({{bug(1206030)}}).
+- The constructor {{domxref("Request.Request", "Request()")}} as well as {{domxref("fetch()")}} will now raise a {{exception("TypeError")}} exception when used with a URL containing a username and password ({{bug(1195820)}}).
 
-<p><em>No change.</em></p>
+### MathML
 
-<h3 id="SVG">SVG</h3>
+_No change._
 
-<p><em>No change.</em></p>
+### SVG
 
-<h3 id="AudioVideo">Audio/Video</h3>
+_No change._
 
-<p><em>No change.</em></p>
+### Audio/Video
 
-<h2 id="HTTP">HTTP</h2>
+_No change._
 
-<p><em>No change.</em></p>
+## HTTP
 
-<h2 id="Networking">Networking</h2>
+_No change._
 
-<p><em>No change.</em></p>
+## Networking
 
-<h2 id="Security">Security</h2>
+_No change._
 
-<ul>
- <li>Access to Web Storage (i.e. <code>localStorage</code> and <code>sessionStorage</code>) from third-party IFrames is now denied if the user has <a href="https://support.mozilla.org/en-US/kb/disable-third-party-cookies">disabled third-party cookies</a> ({{bug("536509")}}).</li>
- <li>This whitelist has even been removed in Nightly and Aurora/Dev Edition of the browser ({{bug(1201023)}}). It is currently scheduled that this removal will also happen for Beta and Release versions for the next version (Firefox 44).</li>
- <li>Subresource integrity has been implemented for {{htmlelement("script")}} and {{htmlelement("link")}} that links to stylesheets ({{bug("992096")}}).</li>
-</ul>
+## Security
 
-<h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
+- Access to Web Storage (i.e. `localStorage` and `sessionStorage`) from third-party IFrames is now denied if the user has [disabled third-party cookies](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) ({{bug("536509")}}).
+- This whitelist has even been removed in Nightly and Aurora/Dev Edition of the browser ({{bug(1201023)}}). It is currently scheduled that this removal will also happen for Beta and Release versions for the next version (Firefox 44).
+- Subresource integrity has been implemented for {{htmlelement("script")}} and {{htmlelement("link")}} that links to stylesheets ({{bug("992096")}}).
 
-<h3 id="Interfaces">Interfaces</h3>
+## Changes for add-on and Mozilla developers
 
-<p><em>No change</em></p>
+### Interfaces
 
-<h3 id="XUL">XUL</h3>
+_No change_
 
-<p><em>No change.</em></p>
+### XUL
 
-<h3 id="JavaScript_code_modules">JavaScript code modules</h3>
+_No change._
 
-<p><em>No change.</em></p>
+### JavaScript code modules
 
-<h3 id="XPCOM">XPCOM</h3>
+_No change._
 
-<p><em>No change.</em></p>
+### XPCOM
 
-<h3 id="Plugins">Plugins</h3>
+_No change._
 
-<ul>
- <li>In preparation for future releases to switch over to multi-process content, <a href="/en-US/docs/Plugins">NPAPI</a> plugins can no longer be run in the same process as the page content. The preferences starting with <code>dom.ipc.plugins</code> are no longer used.</li>
-</ul>
+### Plugins
 
-<h3 id="Other">Other</h3>
+- In preparation for future releases to switch over to multi-process content, [NPAPI](/en-US/docs/Plugins) plugins can no longer be run in the same process as the page content. The preferences starting with `dom.ipc.plugins` are no longer used.
 
-<p><em>No change.</em></p>
+### Other
 
-<h2 id="Older_versions">Older versions</h2>
+_No change._
 
-<p>{{Firefox_for_developers('42')}}</p>
+## Older versions
+
+{{Firefox_for_developers('42')}}

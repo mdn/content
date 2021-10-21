@@ -6,53 +6,55 @@ tags:
   - Extensions
   - Firefox 5
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>This article provides an overview of the changes you may need to make to your add-ons in order for them to work properly in Firefox 5. You can find a complete list of developer-related changes in Firefox 5 in <a href="/en-US/docs/Mozilla/Firefox/Releases/5">Firefox 5 for developers</a>.</p>
+This article provides an overview of the changes you may need to make to your add-ons in order for them to work properly in Firefox 5. You can find a complete list of developer-related changes in Firefox 5 in [Firefox 5 for developers](/en-US/docs/Mozilla/Firefox/Releases/5).
 
-<h2 id="Do_you_need_to_do_anything_at_all">Do you need to do anything at all?</h2>
+## Do you need to do anything at all?
 
-<p>If your add-on is distributed on <a class=" external" href="http://addons.mozilla.org">addons.mozilla.org</a> (AMO), it's been checked by an automated compatibility verification tool. Add-ons that don't use APIs that changed in Firefox 5, and have no binary components (which <a href="/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces">need to be recompiled for every major Firefox release</a>), have automatically been updated on AMO to indicate that they work in Firefox 5.</p>
-<p>So you should start by visiting AMO and looking to see if your add-on needs any work done at all.</p>
+If your add-on is distributed on [addons.mozilla.org](http://addons.mozilla.org) (AMO), it's been checked by an automated compatibility verification tool. Add-ons that don't use APIs that changed in Firefox 5, and have no binary components (which [need to be recompiled for every major Firefox release](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces)), have automatically been updated on AMO to indicate that they work in Firefox 5.
 
-<div class="note">
-  <p><strong>Note:</strong> You should still test your add-on on Firefox 5, even if it's been automatically upgraded. There are edge cases that may not be automatically detected.</p>
-</div>
+So you should start by visiting AMO and looking to see if your add-on needs any work done at all.
 
-<p>Once you've confirmed that you need to make changes, come on back to this page and read on.</p>
+> **Note:** You should still test your add-on on Firefox 5, even if it's been automatically upgraded. There are edge cases that may not be automatically detected.
 
-<h2 id="User_interface_related_changes">User interface related changes</h2>
-<p>Due to the short development cycle (even for our rapid release cycle; Firefox 5 was on an extra-short schedule for timing reasons), there are very few UI related changes in Firefox 5.</p>
+Once you've confirmed that you need to make changes, come on back to this page and read on.
 
-<h3 id="Determining_the_UI_language">Determining the UI language</h3>
-<p>In the past, the {{ domxref("window.navigator.language") }} DOM property reflected the language of Firefox's user interface. This is no longer the case; instead, it reflects the value of the <code>Accept-Language</code> header for the current document. If you need to detect the UI language, you should instead look at the value of the <code>general.useragent.locale</code> preference.</p>
+## User interface related changes
 
-<h2 id="DOM_changes">DOM changes</h2>
+Due to the short development cycle (even for our rapid release cycle; Firefox 5 was on an extra-short schedule for timing reasons), there are very few UI related changes in Firefox 5.
 
-<p>The behaviors of {{ domxref("setTimeout()") }} and {{ domxref("setInterval()") }} have changed; the minimum allowed time has changed, and <a href="/en-US/docs/Web/API/setTimeout#minimum_delay_and_timeout_nesting">varies depending on the situation</a>. In addition, timeouts and intervals are clamped to one per second in inactive tabs (that is, tabs the user isn't currently looking at).</p>
+### Determining the UI language
 
-<h2 id="JavaScript_changes">JavaScript changes</h2>
-<p>The following keywords are now reserved in JavaScript, even when you're not in <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>:</p>
+In the past, the {{ domxref("window.navigator.language") }} DOM property reflected the language of Firefox's user interface. This is no longer the case; instead, it reflects the value of the `Accept-Language` header for the current document. If you need to detect the UI language, you should instead look at the value of the `general.useragent.locale` preference.
 
-<ul>
-  <li><code>class</code></li>
-  <li><code>enum</code></li>
-  <li><code>export</code></li>
-  <li><code>extends</code></li>
-  <li><code>import</code></li>
-  <li><code>super</code></li>
-</ul>
+## DOM changes
 
-<p>Don't use those keywords anywhere in your code, even as object property names.</p>
+The behaviors of {{ domxref("setTimeout()") }} and {{ domxref("setInterval()") }} have changed; the minimum allowed time has changed, and [varies depending on the situation](/en-US/docs/Web/API/setTimeout#minimum_delay_and_timeout_nesting). In addition, timeouts and intervals are clamped to one per second in inactive tabs (that is, tabs the user isn't currently looking at).
 
-<div class="note">
-  <p><strong>Note:</strong> This is one of those things that AMO's automatically upgrade tool may not always catch, so check your code for these if your add-on was automatically upgraded but is still not working properly.</p>
-</div>
+## JavaScript changes
 
-<h2 id="Interface_changes">Interface changes</h2>
-<p>Instantiating certain services, including the {{ interface("nsICertOverrideService") }}, at startup can make Firefox unusable ({{ bug(650858) }}. This happens only if you try to instantiate a service before the <code>load</code> event is fired.</p>
-<p>To fix this, move your instantiation of these services into your <code>load</code> event handler:</p>
-<pre class="brush: js">var MyObject = {
+The following keywords are now reserved in JavaScript, even when you're not in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode):
+
+- `class`
+- `enum`
+- `export`
+- `extends`
+- `import`
+- `super`
+
+Don't use those keywords anywhere in your code, even as object property names.
+
+> **Note:** This is one of those things that AMO's automatically upgrade tool may not always catch, so check your code for these if your add-on was automatically upgraded but is still not working properly.
+
+## Interface changes
+
+Instantiating certain services, including the {{ interface("nsICertOverrideService") }}, at startup can make Firefox unusable ({{ bug(650858) }}. This happens only if you try to instantiate a service before the `load` event is fired.
+
+To fix this, move your instantiation of these services into your `load` event handler:
+
+```js
+var MyObject = {
   comp : null,
   init: function() {
     this.comp = Components.classes[...].getService(...);
@@ -60,8 +62,10 @@ tags:
   ...
 }
 window.addEventListener("load", function() { MyObject.init(); }, false);
-</pre>
-<p>An even better solution, of course, is to follow <a href="/en-US/docs/Extensions/Performance_best_practices_in_extensions">performance best practices</a> and to not instantiate services until you need to use them.</p>
-<h2 id="See_also">See also</h2>
-<ul> <li><a href="/en-US/docs/Mozilla/Firefox/Releases/5">Firefox 5 for developers</a></li>
-</ul>
+```
+
+An even better solution, of course, is to follow [performance best practices](/en-US/docs/Extensions/Performance_best_practices_in_extensions) and to not instantiate services until you need to use them.
+
+## See also
+
+- [Firefox 5 for developers](/en-US/docs/Mozilla/Firefox/Releases/5)

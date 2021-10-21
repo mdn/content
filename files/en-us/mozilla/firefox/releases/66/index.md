@@ -7,178 +7,144 @@ tags:
   - Mozilla
   - Release
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>This article provides information about the changes in Firefox 66 that will affect developers. Firefox 66 was released on March 19, 2019.</p>
+This article provides information about the changes in Firefox 66 that will affect developers. Firefox 66 was released on March 19, 2019.
 
-<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+## Changes for web developers
 
-<h3 id="Developer_tools">Developer tools</h3>
+### Developer tools
 
-<ul>
- <li>JavaScript getters can now be executed from the auto-completion popup in the <a href="/en-US/docs/Tools/Web_Console">Web Console</a> ({{bug(1499289)}}).</li>
- <li>The Window methods {{domxref("Window.alert()", "alert()")}}, {{domxref("Window.prompt()","prompt()")}}, and {{domxref("Window.confirm()","confirm()")}} now work again in <a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive Design Mode</a>, after a period of being broken ({{bug(1273997)}}).</li>
- <li>You can copy the output of the console to the clipboard by right-clicking and selecting "<strong>Export visible messages to clipboard</strong>" from the context menu.</li>
-</ul>
+- JavaScript getters can now be executed from the auto-completion popup in the [Web Console](/en-US/docs/Tools/Web_Console) ({{bug(1499289)}}).
+- The Window methods {{domxref("Window.alert()", "alert()")}}, {{domxref("Window.prompt()","prompt()")}}, and {{domxref("Window.confirm()","confirm()")}} now work again in [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode), after a period of being broken ({{bug(1273997)}}).
+- You can copy the output of the console to the clipboard by right-clicking and selecting "**Export visible messages to clipboard**" from the context menu.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<ul>
- <li>UTF-8-encoded HTML (and plain text) files loaded from <code>file:</code> URLs are now supported without <code>&lt;meta charset="utf-8"&gt;</code> or the UTF-8 BOM, making it easier to work on such files locally before uploading them to a server. You still need to make sure that the server sends <code>charset=utf-8</code> in the <code>Content-Type</code> HTTP header for such files, otherwise the detection mechanism used for local files would break incremental loading in the network case ({{bug(1071816)}}).</li>
-</ul>
+- UTF-8-encoded HTML (and plain text) files loaded from `file:` URLs are now supported without `<meta charset="utf-8">` or the UTF-8 BOM, making it easier to work on such files locally before uploading them to a server. You still need to make sure that the server sends `charset=utf-8` in the `Content-Type` HTTP header for such files, otherwise the detection mechanism used for local files would break incremental loading in the network case ({{bug(1071816)}}).
 
-<h4 id="Removals">Removals</h4>
+#### Removals
 
-<ul>
- <li>The <code>x-moz-errormessage</code> attribute has been removed from the {{HTMLElement("input")}} element ({{bug(1513890)}}). You should use  {{domxref("Constraint_validation", "Constraint validation features", "", "1")}} to implement custom validation messages instead.</li>
-</ul>
+- The `x-moz-errormessage` attribute has been removed from the {{HTMLElement("input")}} element ({{bug(1513890)}}). You should use  {{domxref("Constraint_validation", "Constraint validation features", "", "1")}} to implement custom validation messages instead.
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li><a href="https://drafts.csswg.org/css-scroll-anchoring/">Scroll anchoring</a> has been implemented in Firefox Desktop (but not mobile yet), which includes the {{cssxref("overflow-anchor")}} property ({{bug(1305957)}}).</li>
- <li>We've implemented the case-sensitive <a href="/en-US/docs/Web/CSS/Attribute_selectors">attribute selector</a> modifier, <code>s</code> ({{Bug(1512386)}}).</li>
- <li>Several <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties">logical property</a> shorthands have landed, along with the flow-relative border radius properties:
-  <ul>
-   <li>{{cssxref("padding-block")}} and {{cssxref("padding-inline")}} ({{bug(1519847)}}).</li>
-   <li>{{cssxref("margin-block")}} and {{cssxref("margin-inline")}} ({{bug(1519944)}}).</li>
-   <li>{{cssxref("inset")}}, {{cssxref("inset-block")}}, and {{cssxref("inset-inline")}} ({{bug(1520229)}}).</li>
-   <li>{{cssxref("border-block-color")}}, {{cssxref("border-block-style")}}, {{cssxref("border-block-width")}}, {{cssxref("border-inline-color")}}, {{cssxref("border-inline-style")}}, and {{cssxref("border-inline-width")}} ({{bug(1520236)}}).</li>
-   <li>{{cssxref("border-block")}} and {{cssxref("border-inline")}} ({{bug(1520396)}}).</li>
-   <li>{{cssxref("border-start-start-radius")}}, {{cssxref("border-start-end-radius")}}, {{cssxref("border-end-start-radius")}}, and {{cssxref("border-end-end-radius")}} ({{bug(1520684)}}).</li>
-  </ul>
- </li>
- <li>We implemented the {{cssxref("@media/overflow-inline", "overflow-inline")}} and {{cssxref("@media/overflow-block", "overflow-block")}} media queries ({{Bug(1422235)}}).</li>
- <li>{{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} are now animatable, as per the rules set out in their specs ({{bug(1348519)}}).</li>
- <li>We now support {{cssxref("calc()")}} with percentages for table cells and column widths ({{bug(957915)}}).</li>
- <li>The <code>min-content</code> and <code>max-content</code> keywords are now available unprefixed ({{bug(1322780)}}). These can be set on:
-  <ul>
-   <li>{{cssxref("width")}}</li>
-   <li>{{cssxref("height")}}</li>
-   <li>{{cssxref("flex-basis")}}</li>
-   <li>{{cssxref("min-width")}}</li>
-   <li>{{cssxref("max-width")}}</li>
-   <li>{{cssxref("min-height")}}</li>
-   <li>{{cssxref("max-height")}}</li>
-   <li>{{cssxref("min-block-size")}}</li>
-   <li>{{cssxref("min-inline-size")}}</li>
-   <li>{{cssxref("max-block-size")}}</li>
-   <li>{{cssxref("max-inline-size")}}</li>
-   <li>{{cssxref("block-size")}}</li>
-   <li>{{cssxref("inline-size")}}</li>
-  </ul>
- </li>
-</ul>
+- [Scroll anchoring](https://drafts.csswg.org/css-scroll-anchoring/) has been implemented in Firefox Desktop (but not mobile yet), which includes the {{cssxref("overflow-anchor")}} property ({{bug(1305957)}}).
+- We've implemented the case-sensitive [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) modifier, `s` ({{Bug(1512386)}}).
+- Several [logical property](/en-US/docs/Web/CSS/CSS_Logical_Properties) shorthands have landed, along with the flow-relative border radius properties:
 
-<h3 id="SVG">SVG</h3>
+  - {{cssxref("padding-block")}} and {{cssxref("padding-inline")}} ({{bug(1519847)}}).
+  - {{cssxref("margin-block")}} and {{cssxref("margin-inline")}} ({{bug(1519944)}}).
+  - {{cssxref("inset")}}, {{cssxref("inset-block")}}, and {{cssxref("inset-inline")}} ({{bug(1520229)}}).
+  - {{cssxref("border-block-color")}}, {{cssxref("border-block-style")}}, {{cssxref("border-block-width")}}, {{cssxref("border-inline-color")}}, {{cssxref("border-inline-style")}}, and {{cssxref("border-inline-width")}} ({{bug(1520236)}}).
+  - {{cssxref("border-block")}} and {{cssxref("border-inline")}} ({{bug(1520396)}}).
+  - {{cssxref("border-start-start-radius")}}, {{cssxref("border-start-end-radius")}}, {{cssxref("border-end-start-radius")}}, and {{cssxref("border-end-end-radius")}} ({{bug(1520684)}}).
 
-<p><em>No additions.</em></p>
+- We implemented the {{cssxref("@media/overflow-inline", "overflow-inline")}} and {{cssxref("@media/overflow-block", "overflow-block")}} media queries ({{Bug(1422235)}}).
+- {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} are now animatable, as per the rules set out in their specs ({{bug(1348519)}}).
+- We now support {{cssxref("calc()")}} with percentages for table cells and column widths ({{bug(957915)}}).
+- The `min-content` and `max-content` keywords are now available unprefixed ({{bug(1322780)}}). These can be set on:
 
-<h4 id="Removals_2">Removals</h4>
+  - {{cssxref("width")}}
+  - {{cssxref("height")}}
+  - {{cssxref("flex-basis")}}
+  - {{cssxref("min-width")}}
+  - {{cssxref("max-width")}}
+  - {{cssxref("min-height")}}
+  - {{cssxref("max-height")}}
+  - {{cssxref("min-block-size")}}
+  - {{cssxref("min-inline-size")}}
+  - {{cssxref("max-block-size")}}
+  - {{cssxref("max-inline-size")}}
+  - {{cssxref("block-size")}}
+  - {{cssxref("inline-size")}}
 
-<ul>
- <li>We removed support for the <code><a href="/en-US/docs/Web/XML/xml:base">xml:base</a></code> attribute ({{Bug(903372)}}).</li>
-</ul>
+### SVG
 
-<h3 id="JavaScript">JavaScript</h3>
+_No additions._
 
-<p>No changes.</p>
+#### Removals
 
-<h3 id="APIs">APIs</h3>
+- We removed support for the [`xml:base`](/en-US/docs/Web/XML/xml:base) attribute ({{Bug(903372)}}).
 
-<h4 id="New_APIschanges">New APIs/changes</h4>
+### JavaScript
 
-<ul>
- <li>Autoplaying audio will be blocked by default soon after 66 becomes the release version of Firefox ({{bug(1487844)}}, see {{bug(1535667)}} for rollout details). The feature will be rolled out gradually to users until everyone has it.</li>
-</ul>
+No changes.
 
-<h4 id="DOM">DOM</h4>
+### APIs
 
-<ul>
- <li>The {{domxref("HTMLSlotElement.assignedElements()")}} method has been implemented ({{bug(1425685)}}).</li>
- <li>The {{domxref("TextEncoder.encodeInto()")}} method has been implemented ({{bug(1514664)}}).</li>
-</ul>
+#### New APIs/changes
 
-<h4 id="DOM_events">DOM events</h4>
+- Autoplaying audio will be blocked by default soon after 66 becomes the release version of Firefox ({{bug(1487844)}}, see {{bug(1535667)}} for rollout details). The feature will be rolled out gradually to users until everyone has it.
 
-<ul>
- <li>The {{domxref("InputEvent.inputType")}} property has been implemented ({{bug(1447239)}}).</li>
- <li>The {{domxref("Window.event")}} and {{domxref("Event.returnValue")}} properties — originally proprietary IE features, then also supported across other browsers for compatibility purposes — have been re-introduced in Firefox 66, after first being added in versions 63 and 64 respectively but then removed again due to compatibility issues. </li>
- <li>From 66 onwards, when the {{domxref("KeyboardEvent.keyCode")}} property of the {{event("keypress")}} event object is 0, the value will be the same as {{domxref("KeyboardEvent.charCode")}}. Conversely, when <code>charCode</code> is 0, it will be the same as <code>keyCode</code>. This mirroring behavior matches other browsers and is expected to solve most associated compatibility issues, however user agent sniffing might cause further issues in some JavaScript libraries. Note that in spec terms, we've switched from the <em>split model</em> to the <em>conflated model</em> (see <a href="https://w3c.github.io/uievents/#determine-keypress-keyCode">How to determine keyCode for keypress events</a> in the UI Event spec).</li>
-</ul>
+#### DOM
 
-<h4 id="Media_Web_Audio_and_WebRTC">Media, Web Audio, and WebRTC</h4>
+- The {{domxref("HTMLSlotElement.assignedElements()")}} method has been implemented ({{bug(1425685)}}).
+- The {{domxref("TextEncoder.encodeInto()")}} method has been implemented ({{bug(1514664)}}).
 
-<ul>
- <li>The new <a href="/en-US/docs/Web/Media/Formats/Video_codecs#av1">AV1 video codec</a> is now enabled by default on both macOS and Windows (for Intel processors). Linux support will come in Firefox 67 ({{bug(1521181)}}, {{bug(1452146)}}, and {{bug(1534814)}}).</li>
- <li>The {{domxref("MediaDevices")}} method {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}, available as <code>navigator.mediaDevices.getDisplayMedia()</code>, has been added and synchronized with the specification. This method lets you capture a screen or part of a screen as a {{domxref("MediaStream")}} for manipulation or sharing ({{bug(1321221)}}).</li>
- <li>As a step toward eventually deprecating the Firefox-specific {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}-based method for capturing screen and window contents, the non-standard <code>mediaSource</code> constraint now treats the values <code>screen</code> and <code>window</code> identically. Both now present a list of both screens and windows for the user to choose from ({{bug(1474376)}}).</li>
- <li>{{domxref("RTCRtpStreamStats.qpSum", "qpSum")}} has been added to local outbound {{domxref("RTCRTPStreamStats")}} objects. This measures the total of the Quantization Parameter values for every frame sent or received on the video track. The higher this number, the more compressed the stream probably is ({{bug(1347070)}}).</li>
- <li>In a step along the road toward implementing support for Feature Policy in a future Firefox update, {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} can no longer be used in situations in which there is no proper origin for the content, such as when called from a sandboxed {{HTMLElement("iframe")}} or from a <code>data</code> URL entered into the address bar by the user. For more specifics and details, see {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/getUserMedia", "Security")}} ({{bug(1371741)}}).</li>
-</ul>
+#### DOM events
 
-<h4 id="Removals_3">Removals</h4>
+- The {{domxref("InputEvent.inputType")}} property has been implemented ({{bug(1447239)}}).
+- The {{domxref("Window.event")}} and {{domxref("Event.returnValue")}} properties — originally proprietary IE features, then also supported across other browsers for compatibility purposes — have been re-introduced in Firefox 66, after first being added in versions 63 and 64 respectively but then removed again due to compatibility issues.
+- From 66 onwards, when the {{domxref("KeyboardEvent.keyCode")}} property of the {{event("keypress")}} event object is 0, the value will be the same as {{domxref("KeyboardEvent.charCode")}}. Conversely, when `charCode` is 0, it will be the same as `keyCode`. This mirroring behavior matches other browsers and is expected to solve most associated compatibility issues, however user agent sniffing might cause further issues in some JavaScript libraries. Note that in spec terms, we've switched from the _split model_ to the _conflated model_ (see [How to determine keyCode for keypress events](https://w3c.github.io/uievents/#determine-keypress-keyCode) in the UI Event spec).
 
-<ul>
- <li>The legacy WebRTC {{domxref("PeerConnection.getStats()")}} method has been removed, along with associated types ({{bug(1328194)}}).</li>
-</ul>
+#### Media, Web Audio, and WebRTC
 
-<h3 id="Networking">Networking</h3>
+- The new [AV1 video codec](/en-US/docs/Web/Media/Formats/Video_codecs#av1) is now enabled by default on both macOS and Windows (for Intel processors). Linux support will come in Firefox 67 ({{bug(1521181)}}, {{bug(1452146)}}, and {{bug(1534814)}}).
+- The {{domxref("MediaDevices")}} method {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}, available as `navigator.mediaDevices.getDisplayMedia()`, has been added and synchronized with the specification. This method lets you capture a screen or part of a screen as a {{domxref("MediaStream")}} for manipulation or sharing ({{bug(1321221)}}).
+- As a step toward eventually deprecating the Firefox-specific {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}-based method for capturing screen and window contents, the non-standard `mediaSource` constraint now treats the values `screen` and `window` identically. Both now present a list of both screens and windows for the user to choose from ({{bug(1474376)}}).
+- {{domxref("RTCRtpStreamStats.qpSum", "qpSum")}} has been added to local outbound {{domxref("RTCRTPStreamStats")}} objects. This measures the total of the Quantization Parameter values for every frame sent or received on the video track. The higher this number, the more compressed the stream probably is ({{bug(1347070)}}).
+- In a step along the road toward implementing support for Feature Policy in a future Firefox update, {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} can no longer be used in situations in which there is no proper origin for the content, such as when called from a sandboxed {{HTMLElement("iframe")}} or from a `data` URL entered into the address bar by the user. For more specifics and details, see {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/getUserMedia", "Security")}} ({{bug(1371741)}}).
 
-<ul>
- <li>The default value of the {{httpheader("Accept")}} header has been changed to <code>*/*</code> ({{bug(1417463)}}).</li>
-</ul>
+#### Removals
 
-<h3 id="Security">Security</h3>
+- The legacy WebRTC {{domxref("PeerConnection.getStats()")}} method has been removed, along with associated types ({{bug(1328194)}}).
 
-<p><em>No changes.</em></p>
+### Networking
 
-<h3 id="Plugins">Plugins</h3>
+- The default value of the {{httpheader("Accept")}} header has been changed to `*/*` ({{bug(1417463)}}).
 
-<p><em>No changes.</em></p>
+### Security
 
-<h3 id="WebDriver_conformance_Marionette">WebDriver conformance (Marionette)</h3>
+_No changes._
 
-<h4 id="API_changes">API changes</h4>
+### Plugins
 
-<ul>
- <li><code>WebDriver:NewWindow</code> has been added to support opening of a new browsing context, which can be one of either window or tab ({{bug(1504756)}}).</li>
- <li><code>WebDriver:SwitchToFrame</code> now raises a <code>no such element</code> error if the specified element isn't part of the current browsing context ({{bug(1517196)}}).</li>
- <li><code>WebDriver:ExecuteScript</code> and <code>WebDriver:ExecuteAsyncScript</code> no longer support the non-spec compliant <code>scriptTimeout</code> parameter. Instead, use <code>WebDriver:SetTimeout</code> or the <code>timeouts</code> capability to define this value ({{bug(1510929)}}).
-  <ul>
-   <li>In addition, indefinite script timeouts are now supported ({{bug(1128997)}}).</li>
-  </ul>
- </li>
- <li><code>WebDriver:SetWindowRect</code> no longer returns the window state in its response ({{bug(1517587)}}).</li>
-</ul>
+_No changes._
 
-<h4 id="Bug_fixes">Bug fixes</h4>
+### WebDriver conformance (Marionette)
 
-<ul>
- <li><code>WebDriver:TakeScreenshot</code> now uses the {{domxref("Element.clientWidth")}} and {{domxref("Element.clientHeight")}} properties of the {{domxref("Document.documentElement")}} instead of the viewport dimensions ({{bug(1385706)}}).</li>
- <li>Various fixes have been applied to make window manipulation commands more reliable across platforms ({{bug(1522408)}}, {{bug(1478358)}}, {{bug(1489955)}}).</li>
-</ul>
+#### API changes
 
-<h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
+- `WebDriver:NewWindow` has been added to support opening of a new browsing context, which can be one of either window or tab ({{bug(1504756)}}).
+- `WebDriver:SwitchToFrame` now raises a `no such element` error if the specified element isn't part of the current browsing context ({{bug(1517196)}}).
+- `WebDriver:ExecuteScript` and `WebDriver:ExecuteAsyncScript` no longer support the non-spec compliant `scriptTimeout` parameter. Instead, use `WebDriver:SetTimeout` or the `timeouts` capability to define this value ({{bug(1510929)}}).
 
-<h3 id="API_changes_2">API changes</h3>
+  - In addition, indefinite script timeouts are now supported ({{bug(1128997)}}).
 
-<h4 id="Menus">Menus</h4>
+- `WebDriver:SetWindowRect` no longer returns the window state in its response ({{bug(1517587)}}).
 
-<ul>
- <li>Extension menu items of the "bookmark" {{WebExtAPIRef("menus.ContextType", "type")}} will also appear in the Bookmarks sidebar (<code>Ctrl</code> + <code>B</code>) and Library window (<code>Ctrl</code> + <code>Shift</code> + <code>B</code>) ({{bug(1419195)}}).</li>
-</ul>
+#### Bug fixes
 
-<h3 id="Manifest_changes">Manifest changes</h3>
+- `WebDriver:TakeScreenshot` now uses the {{domxref("Element.clientWidth")}} and {{domxref("Element.clientHeight")}} properties of the {{domxref("Document.documentElement")}} instead of the viewport dimensions ({{bug(1385706)}}).
+- Various fixes have been applied to make window manipulation commands more reliable across platforms ({{bug(1522408)}}, {{bug(1478358)}}, {{bug(1489955)}}).
 
-<p><em>No changes.</em></p>
+## Changes for add-on developers
 
-<h2 id="See_also">See also</h2>
+### API changes
 
-<ul>
- <li>Hacks release post: <a href="https://hacks.mozilla.org/2019/03/firefox-66-the-sound-of-silence/">Firefox 66: The Sound of Silence</a></li>
-</ul>
+#### Menus
 
-<h2 id="Older_versions">Older versions</h2>
+- Extension menu items of the "bookmark" {{WebExtAPIRef("menus.ContextType", "type")}} will also appear in the Bookmarks sidebar (`Ctrl` + `B`) and Library window (`Ctrl` + `Shift` + `B`) ({{bug(1419195)}}).
 
-<p>{{Firefox_for_developers(65)}}</p>
+### Manifest changes
+
+_No changes._
+
+## See also
+
+- Hacks release post: [Firefox 66: The Sound of Silence](https://hacks.mozilla.org/2019/03/firefox-66-the-sound-of-silence/)
+
+## Older versions
+
+{{Firefox_for_developers(65)}}

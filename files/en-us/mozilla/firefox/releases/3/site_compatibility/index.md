@@ -6,62 +6,64 @@ tags:
   - Gecko
   - Web Development
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>This page tries to give an overview of the changes between <a href="/en-US/Gecko">Gecko</a> 1.8 and Gecko 1.9, that could possibly affect websites in their behavior or rendering.</p>
+This page tries to give an overview of the changes between [Gecko](/en-US/Gecko) 1.8 and Gecko 1.9, that could possibly affect websites in their behavior or rendering.
 
-<p>See also <a href="/en-US/Firefox_3_for_developers">Firefox 3 for developers</a>.</p>
+See also [Firefox 3 for developers](/en-US/Firefox_3_for_developers).
 
-<h2 id="Events">Events</h2>
+## Events
 
-<h3 id="Capturing_load_event_listeners">Capturing load event listeners</h3>
+### Capturing load event listeners
 
-<p>In Gecko 1.8, it was not possible to set capturing load event listeners on images. In Gecko 1.9, this has been fixed by {{ Bug(234455) }}. But this can cause problems on websites that incorrectly have their event listeners set to capture the load event. See the discussion in {{ Bug(335251) }}. To fix this problem, the problematic page in question should not set a capturing load event listener.</p>
+In Gecko 1.8, it was not possible to set capturing load event listeners on images. In Gecko 1.9, this has been fixed by {{ Bug(234455) }}. But this can cause problems on websites that incorrectly have their event listeners set to capture the load event. See the discussion in {{ Bug(335251) }}. To fix this problem, the problematic page in question should not set a capturing load event listener.
 
-<p>For example, this:</p>
+For example, this:
 
-<pre class="brush: bash">window.addEventListener('load', yourFunction, true);
-</pre>
+```bash
+window.addEventListener('load', yourFunction, true);
+```
 
-<p>should be changed into this:</p>
+should be changed into this:
 
-<pre class="brush: bash">window.addEventListener('load', yourFunction, false);
-</pre>
+```bash
+window.addEventListener('load', yourFunction, false);
+```
 
-<p>For an explanation of how event capture works, see <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture">DOM Level 2 Event capture</a></p>
+For an explanation of how event capture works, see [DOM Level 2 Event capture](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture)
 
-<h3 id="preventBubble_has_been_removed"><code>preventBubble</code> has been removed</h3>
+### `preventBubble` has been removed
 
-<p>In Gecko 1.8, the <code>preventBubble</code> method existed on events to prevent events from bubbling upwards. In Gecko 1.9 this method has been removed. Instead, you should use the standard <a href="/en-US/docs/Web/API/Event/stopPropagation">stopPropagation()</a>, which also works fine in Gecko 1.8. The patch in {{ Bug(330494) }} made this happen. See also {{ Bug(105280) }}.</p>
+In Gecko 1.8, the `preventBubble` method existed on events to prevent events from bubbling upwards. In Gecko 1.9 this method has been removed. Instead, you should use the standard [stopPropagation()](/en-US/docs/Web/API/Event/stopPropagation), which also works fine in Gecko 1.8. The patch in {{ Bug(330494) }} made this happen. See also {{ Bug(105280) }}.
 
-<h3 id="A_few_other_old_event_APIs_are_no_longer_supported">A few other old event APIs are no longer supported</h3>
+### A few other old event APIs are no longer supported
 
-<p><a href="/en-US/docs/Web/API/Window/captureEvents"><code>window.captureEvents</code></a>, <a href="/en-US/docs/Web/API/Window/releaseEvents"><code>window.releaseEvents</code></a> and <a href="/en-US/docs/Web/API/Window/routeEvent"><code>window.routeEvent</code></a> are now considered deprecated since Gecko 1.9.</p>
+[`window.captureEvents`](/en-US/docs/Web/API/Window/captureEvents), [`window.releaseEvents`](/en-US/docs/Web/API/Window/releaseEvents) and [`window.routeEvent`](/en-US/docs/Web/API/Window/routeEvent) are now considered deprecated since Gecko 1.9.
 
-<h2 id="DOM">DOM</h2>
+## DOM
 
-<h3 id="WRONG_DOCUMENT_ERR"><code>WRONG_DOCUMENT_ERR</code></h3>
+### `WRONG_DOCUMENT_ERR`
 
-<p>Nodes from external documents should be cloned using <a href="/en-US/docs/Web/API/Document/importNode"><code>document.importNode()</code></a> (or adopted using <a href="/en-US/docs/Web/API/Document/adoptNode"><code>document.adoptNode()</code></a>) before they can be inserted into the current document. For more on the <a href="/en-US/docs/Web/API/Node/ownerDocument"><code>Node.ownerDocument</code></a> issues, see the <a href="https://www.w3.org/DOM/faq.html#ownerdoc" rel="noopener">W3C DOM FAQ</a>.</p>
+Nodes from external documents should be cloned using [`document.importNode()`](/en-US/docs/Web/API/Document/importNode) (or adopted using [`document.adoptNode()`](/en-US/docs/Web/API/Document/adoptNode)) before they can be inserted into the current document. For more on the [`Node.ownerDocument`](/en-US/docs/Web/API/Node/ownerDocument) issues, see the [W3C DOM FAQ](https://www.w3.org/DOM/faq.html#ownerdoc).
 
-<p>Firefox doesn't currently enforce this rule (it did for a while during the development of Firefox 3, but too many sites break when this rule is enforced). We encourage Web developers to fix their code to follow this rule for improved future compatibility.</p>
+Firefox doesn't currently enforce this rule (it did for a while during the development of Firefox 3, but too many sites break when this rule is enforced). We encourage Web developers to fix their code to follow this rule for improved future compatibility.
 
-<h2 id="Ranges">Ranges</h2>
+## Ranges
 
-<h3 id="intersectsNode_has_been_removed"><code>intersectsNode</code> has been removed</h3>
+### `intersectsNode` has been removed
 
-<p>In Gecko 1.8 the function <code>intersectsNode</code> code be used to test if a node intersected a range. However the return values from this function were confusing and rarely useful and has therefore been removed in Gecko 1.9. Instead use the more precise and standard function <a href="/en-US/docs/Web/API/Range/compareBoundaryPoints">compareBoundaryPoints</a>. The patch in {{ Bug(358073) }} removed this function.</p>
+In Gecko 1.8 the function `intersectsNode` code be used to test if a node intersected a range. However the return values from this function were confusing and rarely useful and has therefore been removed in Gecko 1.9. Instead use the more precise and standard function [compareBoundaryPoints](/en-US/docs/Web/API/Range/compareBoundaryPoints). The patch in {{ Bug(358073) }} removed this function.
 
-<p>See the documentation for <a href="/en-US/docs/Web/API/Range/intersectsNode">intersectsNode</a> for how to use <code>compareBoundaryPoints</code> instead.</p>
+See the documentation for [intersectsNode](/en-US/docs/Web/API/Range/intersectsNode) for how to use `compareBoundaryPoints` instead.
 
-<h3 id="compareNode_has_been_removed"><code>compareNode</code> has been removed</h3>
+### `compareNode` has been removed
 
-<p>In Gecko 1.8 the function <code>compareNode</code> code be used to test how a node intersected a range. However the return values from this function were confusing and rarely useful and has therefore been removed in Gecko 1.9. Instead use the more precise and standard function <a href="/en-US/docs/Web/API/Range/compareBoundaryPoints">compareBoundaryPoints</a>. The patch in {{ Bug(358073) }} removed this function.</p>
+In Gecko 1.8 the function `compareNode` code be used to test how a node intersected a range. However the return values from this function were confusing and rarely useful and has therefore been removed in Gecko 1.9. Instead use the more precise and standard function [compareBoundaryPoints](/en-US/docs/Web/API/Range/compareBoundaryPoints). The patch in {{ Bug(358073) }} removed this function.
 
-<p>See the documentation for <a href="/en-US/docs/Web/API/Range/compareNode">compareNode</a> for how to use <code>compareBoundaryPoints</code> instead.</p>
+See the documentation for [compareNode](/en-US/docs/Web/API/Range/compareNode) for how to use `compareBoundaryPoints` instead.
 
-<h2 id="HTML">HTML</h2>
+## HTML
 
-<h3 id="Many_bugs_in_the_.3Cobject.3E_have_been_fixed">Many bugs in the <code>&lt;object&gt;</code> have been fixed</h3>
+### Many bugs in the `<object>` have been fixed
 
-<p><code>object</code> and <code>embed</code> elements no longer need a <code>type</code> attribute to render. Changing the <code>src</code> attribute (of <code>&lt;embed&gt;</code>) or the <code>data</code> attribute (of <code>&lt;object&gt;</code>) via JavaScript now works correctly. The Content-Type header sent by the server (if any) now takes precedence over the <code>type</code> attribute of an <code>&lt;object&gt;</code> element as per the HTML specification (this is not the case for <code>embed</code>).</p>
+`object` and `embed` elements no longer need a `type` attribute to render. Changing the `src` attribute (of `<embed>`) or the `data` attribute (of `<object>`) via JavaScript now works correctly. The Content-Type header sent by the server (if any) now takes precedence over the `type` attribute of an `<object>` element as per the HTML specification (this is not the case for `embed`).

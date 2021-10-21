@@ -7,105 +7,81 @@ tags:
   - Mozilla
   - Release
 ---
-<p>{{FirefoxSidebar}}</p>
+{{FirefoxSidebar}}
 
-<p>This article provides information about the changes in Firefox 73 that will affect developers. Firefox 73 was released on February 11, 2020.</p>
+This article provides information about the changes in Firefox 73 that will affect developers. Firefox 73 was released on February 11, 2020.
 
-<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+## Changes for web developers
 
-<h3 id="Developer_tools">Developer tools</h3>
+### Developer tools
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/CORS/Errors">CORS errors</a> now appear as errors in the console (and no longer as warnings) giving them the appropriate visibility ({{bug(1602093)}}).</li>
- <li>Text and regular expression searches in the web console <a href="/en-US/docs/Tools/Web_Console/Console_messages#filtering_and_searching">can now be negated by prefixing them with '-'</a> ({{bug(1291192)}}).</li>
-</ul>
+- [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors) now appear as errors in the console (and no longer as warnings) giving them the appropriate visibility ({{bug(1602093)}}).
+- Text and regular expression searches in the web console [can now be negated by prefixing them with '-'](/en-US/docs/Tools/Web_Console/Console_messages#filtering_and_searching) ({{bug(1291192)}}).
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>We've implemented {{cssxref("overscroll-behavior-block")}} and {{cssxref("overscroll-behavior-inline")}}, the logical mappings for {{cssxref("overscroll-behavior-x")}} and {{cssxref("overscroll-behavior-y")}} ({{bug(833953)}}).</li>
-</ul>
+- We've implemented {{cssxref("overscroll-behavior-block")}} and {{cssxref("overscroll-behavior-inline")}}, the logical mappings for {{cssxref("overscroll-behavior-x")}} and {{cssxref("overscroll-behavior-y")}} ({{bug(833953)}}).
 
-<h4 id="Removals">Removals</h4>
+#### Removals
 
-<ul>
- <li>The proprietary <code><a href="/en-US/docs/Web/CSS/@media/-moz-touch-enabled">-moz-touch-enabled</a></code> media query has been removed ({{bug(1486964)}}). You should use <code><a href="/en-US/docs/Web/CSS/@media/pointer">pointer: coarse</a></code> instead.</li>
-</ul>
+- The proprietary [`-moz-touch-enabled`](/en-US/docs/Web/CSS/@media/-moz-touch-enabled) media query has been removed ({{bug(1486964)}}). You should use [`pointer: coarse`](/en-US/docs/Web/CSS/@media/pointer) instead.
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<ul>
- <li>The {{SVGAttr("letter-spacing")}} and {{SVGAttr("word-spacing")}} properties now work in SVG ({{bug(371787)}}). </li>
-</ul>
+- The {{SVGAttr("letter-spacing")}} and {{SVGAttr("word-spacing")}} properties now work in SVG ({{bug(371787)}}).
 
-<h3 id="MathML">MathML</h3>
+### MathML
 
-<h4 id="Removals_2">Removals</h4>
+#### Removals
 
-<ul>
- <li>The deprecated {{MathMLElement("mfenced")}} element has been removed ({{bug(1603773)}}). Use the {{MathMLElement("mrow")}} and {{MathMLElement("mo")}} elements instead.</li>
-</ul>
+- The deprecated {{MathMLElement("mfenced")}} element has been removed ({{bug(1603773)}}). Use the {{MathMLElement("mrow")}} and {{MathMLElement("mo")}} elements instead.
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<ul>
- <li>The <code>yearName</code> and <code>relatedYear</code> fields have been made available in the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts">DateTimeFormat.prototype.formatToParts()</a></code> method, enabling useful formatting options for CJK calendars ({{bug(1591664)}}).</li>
-</ul>
+- The `yearName` and `relatedYear` fields have been made available in the [`DateTimeFormat.prototype.formatToParts()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts) method, enabling useful formatting options for CJK calendars ({{bug(1591664)}}).
 
-<h3 id="APIs">APIs</h3>
+### APIs
 
-<h4 id="DOM">DOM</h4>
+#### DOM
 
-<ul>
- <li>The {{domxref("Window.innerWidth", "innerWidth")}} and {{domxref("Window.innerHeight", "innerHeight")}} properties on {{domxref("Window")}} objects have been updated to return the width and height of the layout viewport in all situations, rather than sometimes being based on the visual viewport. In particular, previously when using <a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive Design Mode</a>, these returned the visual viewport dimensions, causing the behavior to vary from what was expected ({{bug(1514429)}}).</li>
-</ul>
+- The {{domxref("Window.innerWidth", "innerWidth")}} and {{domxref("Window.innerHeight", "innerHeight")}} properties on {{domxref("Window")}} objects have been updated to return the width and height of the layout viewport in all situations, rather than sometimes being based on the visual viewport. In particular, previously when using [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode), these returned the visual viewport dimensions, causing the behavior to vary from what was expected ({{bug(1514429)}}).
 
-<h4 id="WebVR">WebVR</h4>
+#### WebVR
 
-<ul>
- <li>The deprecated <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a>—which has been supplanted by <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR</a>, which supports both <a href="https://en.wikipedia.org/wiki/Augmented_reality">augmented</a> and <a href="https://en.wikipedia.org/wiki/Virtual_reality">virtual reality</a> applications—now <a href="/en-US/docs/Web/API/WebVR_API#api_availability">requires a secure context</a> using the {{Glossary("HTTPS")}} protocol to operate. This is due to the availability of sensitive input sources that may include private information ({{bug(1381645)}}).</li>
-</ul>
+- The deprecated [WebVR API](/en-US/docs/Web/API/WebVR_API)—which has been supplanted by [WebXR](/en-US/docs/Web/API/WebXR_Device_API), which supports both [augmented](https://en.wikipedia.org/wiki/Augmented_reality) and [virtual reality](https://en.wikipedia.org/wiki/Virtual_reality) applications—now [requires a secure context](/en-US/docs/Web/API/WebVR_API#api_availability) using the {{Glossary("HTTPS")}} protocol to operate. This is due to the availability of sensitive input sources that may include private information ({{bug(1381645)}}).
 
-<h4 id="Removals_3">Removals</h4>
+#### Removals
 
-<ul>
- <li>Support for the {{domxref("VideoPlaybackQuality")}} property {{domxref("VideoPlaybackQuality.corruptedVideoFrames", "corruptedVideoFrames")}}, which has been deprecated in the specification, has been removed from Firefox ({{bug(1602163)}}).</li>
-</ul>
+- Support for the {{domxref("VideoPlaybackQuality")}} property {{domxref("VideoPlaybackQuality.corruptedVideoFrames", "corruptedVideoFrames")}}, which has been deprecated in the specification, has been removed from Firefox ({{bug(1602163)}}).
 
-<h3 id="Security">Security</h3>
+### Security
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h3 id="WebDriver_conformance_Marionette">WebDriver conformance (Marionette)</h3>
+### WebDriver conformance (Marionette)
 
-<ul>
- <li>Added <code>WebDriver:Print</code> to print the current page as a PDF document ({{bug(1604506)}}).</li>
- <li><code>Webdriver:TakeScreenshot</code> now always captures the top-level browsing context and not the currently-selected browsing context, if no element to capture has been specified ({{bug(1398087)}}, {{bug(1606794)}}).</li>
- <li>Using <code>Webdriver:TakeScreenshot</code>'s <code>full</code> argument causes the complete page to be captured ({{bug(1571424)}}).</li>
-</ul>
+- Added `WebDriver:Print` to print the current page as a PDF document ({{bug(1604506)}}).
+- `Webdriver:TakeScreenshot` now always captures the top-level browsing context and not the currently-selected browsing context, if no element to capture has been specified ({{bug(1398087)}}, {{bug(1606794)}}).
+- Using `Webdriver:TakeScreenshot`'s `full` argument causes the complete page to be captured ({{bug(1571424)}}).
 
-<h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
+## Changes for add-on developers
 
-<h3 id="API_changes">API changes</h3>
+### API changes
 
-<ul>
- <li>The {{WebExtAPIRef("sidebarAction.toggle()")}} function has been implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1453355">bug 1453355</a>).</li>
-</ul>
+- The {{WebExtAPIRef("sidebarAction.toggle()")}} function has been implemented ([bug 1453355](https://bugzilla.mozilla.org/show_bug.cgi?id=1453355)).
 
-<h3 id="Manifest_changes">Manifest changes</h3>
+### Manifest changes
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Hacks blog post: <a href="https://hacks.mozilla.org/2020/02/firefox-73-is-upon-us/">Firefox 73 is upon us</a></li>
-</ul>
+- Hacks blog post: [Firefox 73 is upon us](https://hacks.mozilla.org/2020/02/firefox-73-is-upon-us/)
 
-<h2 id="Older_versions">Older versions</h2>
+## Older versions
 
-<p>{{Firefox_for_developers(72)}}</p>
+{{Firefox_for_developers(72)}}

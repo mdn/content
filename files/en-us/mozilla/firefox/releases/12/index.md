@@ -7,158 +7,122 @@ tags:
   - Gecko 12
   - Web Development
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>Firefox 12 was shipped on April 24, 2012. This page summarizes the changes in Firefox 12 that affect developers. This article provides information about the new features and key bugs fixed in this release, as well as links to more detailed documentation for both web developers and add-on developers.</p>
+Firefox 12 was shipped on April 24, 2012. This page summarizes the changes in Firefox 12 that affect developers. This article provides information about the new features and key bugs fixed in this release, as well as links to more detailed documentation for both web developers and add-on developers.
 
-<h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
+## Changes for Web developers
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<ul>
- <li>The <code>title</code> attribute now supports newline characters to allow multi-line tooltips.</li>
- <li>If JavaScript is disabled, the {{HTMLElement("canvas")}} element was being rendered instead of showing the fallback content as per the <a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html">specification</a>. Now the fallback content is rendered instead.</li>
- <li>The <code>crossorigin</code> attribute is now supported on {{HTMLElement("video")}}.</li>
-</ul>
+- The `title` attribute now supports newline characters to allow multi-line tooltips.
+- If JavaScript is disabled, the {{HTMLElement("canvas")}} element was being rendered instead of showing the fallback content as per the [specification](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html). Now the fallback content is rendered instead.
+- The `crossorigin` attribute is now supported on {{HTMLElement("video")}}.
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>Support for the {{cssxref("text-align-last")}} property has been added (prefixed).</li>
-</ul>
+- Support for the {{cssxref("text-align-last")}} property has been added (prefixed).
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<ul>
- <li>Support for <a href="/en-US/docs/JavaScript/Sharp_variables_in_JavaScript">sharp variables</a> (a Netscape non-standard extension) has been dropped.</li>
- <li>{{jsxref("ArrayBuffer.prototype.slice()")}} has been implemented.</li>
-</ul>
+- Support for [sharp variables](/en-US/docs/JavaScript/Sharp_variables_in_JavaScript) (a Netscape non-standard extension) has been dropped.
+- {{jsxref("ArrayBuffer.prototype.slice()")}} has been implemented.
 
-<h3 id="DOM">DOM</h3>
+### DOM
 
-<ul>
- <li>{{domxref("DOMParser")}} now supports parsing of HTML document fragments.</li>
- <li>{{domxref("XMLHttpRequest")}} now supports timeouts using the <code>timeout</code> property and "timeout" event, as well as the <code>ontimeout</code> event handler on the {{domxref("XMLHttpRequestEventTarget")}} interface.</li>
- <li>{{domxref("XMLHttpRequest")}} can now load from <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data:</code> URIs</a>.</li>
- <li>When downloading large amounts of data, {{domxref("XMLHttpRequest")}} progress event handlers are now called periodically with the <code>responseType</code> set to "moz-blob" and the response being a {{domxref("Blob")}} containing all of the data received so far. This lets progress handlers begin processing data without having to wait for it all to arrive.</li>
- <li>Gecko now supports <a href="/en-US/docs/Web/API/Touch_events">multi-touch</a> (instead of just single touches at a time) on Android.</li>
- <li>While editing text using an IME, the <code>input</code> event is now sent whenever the contents of the element being edited have been changed; this happens after the <code>compositionupdate</code> event has been sent to indicate that the IME's text has been changed. You can use the <code>input</code> event handler, therefore, to monitor changes to the actual content of the element.</li>
- <li>{{domxref("DOMError")}} as defined in the DOM 4 specification has been implemented.</li>
- <li>The {{domxref("Document.createNodeIterator()")}} method has been updated to match the DOM4 specification. This makes the <code>whatToShow</code> and <code>filter</code> parameters optional and removes the non-standard fourth parameter, <code>entityReferenceExpansion</code>.</li>
- <li>The {{domxref("Blob")}} interface's <code>slice()</code> method was affected by a bug that prevented it from properly accepting <code>start</code> and <code>end</code> values outside the range of a signed 64-bit integer; this has been fixed.</li>
- <li>The {{domxref("element.getBoundingClientRect()")}} method now considers effect of <a href="/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">CSS transforms</a> when computing the element's bounding rectangle.</li>
- <li>The <code>crossOrigin</code> property is now supported by {{domxref("HTMLMediaElement")}}.</li>
-</ul>
+- {{domxref("DOMParser")}} now supports parsing of HTML document fragments.
+- {{domxref("XMLHttpRequest")}} now supports timeouts using the `timeout` property and "timeout" event, as well as the `ontimeout` event handler on the {{domxref("XMLHttpRequestEventTarget")}} interface.
+- {{domxref("XMLHttpRequest")}} can now load from [`data:` URIs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
+- When downloading large amounts of data, {{domxref("XMLHttpRequest")}} progress event handlers are now called periodically with the `responseType` set to "moz-blob" and the response being a {{domxref("Blob")}} containing all of the data received so far. This lets progress handlers begin processing data without having to wait for it all to arrive.
+- Gecko now supports [multi-touch](/en-US/docs/Web/API/Touch_events) (instead of just single touches at a time) on Android.
+- While editing text using an IME, the `input` event is now sent whenever the contents of the element being edited have been changed; this happens after the `compositionupdate` event has been sent to indicate that the IME's text has been changed. You can use the `input` event handler, therefore, to monitor changes to the actual content of the element.
+- {{domxref("DOMError")}} as defined in the DOM 4 specification has been implemented.
+- The {{domxref("Document.createNodeIterator()")}} method has been updated to match the DOM4 specification. This makes the `whatToShow` and `filter` parameters optional and removes the non-standard fourth parameter, `entityReferenceExpansion`.
+- The {{domxref("Blob")}} interface's `slice()` method was affected by a bug that prevented it from properly accepting `start` and `end` values outside the range of a signed 64-bit integer; this has been fixed.
+- The {{domxref("element.getBoundingClientRect()")}} method now considers effect of [CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms) when computing the element's bounding rectangle.
+- The `crossOrigin` property is now supported by {{domxref("HTMLMediaElement")}}.
 
-<h4 id="New_WebAPIs">New WebAPIs</h4>
+#### New WebAPIs
 
-<ul>
- <li>Network Information API: Experimental support for {{domxref("window.navigator.connection")}} has been added (prefixed).</li>
- <li>WebTelephony API: {{domxref("window.navigator.mozTelephony")}} has been implemented and provides support for dialing, answering, and managing phone calls on a device.</li>
- <li>WebSMS API: {{domxref("window.navigator.mozSms")}} is now available for mobile devices to send SMS text messages.</li>
- <li>Screen brightness API: {{domxref("window.screen.mozEnabled")}} and {{domxref("window.screen.mozBrightness")}} have been added to control the device's screen.</li>
-</ul>
+- Network Information API: Experimental support for {{domxref("window.navigator.connection")}} has been added (prefixed).
+- WebTelephony API: {{domxref("window.navigator.mozTelephony")}} has been implemented and provides support for dialing, answering, and managing phone calls on a device.
+- WebSMS API: {{domxref("window.navigator.mozSms")}} is now available for mobile devices to send SMS text messages.
+- Screen brightness API: {{domxref("window.screen.mozEnabled")}} and {{domxref("window.screen.mozBrightness")}} have been added to control the device's screen.
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<ul>
- <li>Firefox now implements the <code>SVGTests</code> DOM API, see {{bug("607854")}}</li>
- <li>The {{domxref("SVGStringList")}} DOM interface support the non-standard <code>length</code> property see {{bug("711958")}}</li>
-</ul>
+- Firefox now implements the `SVGTests` DOM API, see {{bug("607854")}}
+- The {{domxref("SVGStringList")}} DOM interface support the non-standard `length` property see {{bug("711958")}}
 
-<h3 id="MathML">MathML</h3>
+### MathML
 
-<ul>
- <li>To control the directionality of MathML formulas, the <code>dir</code> attribute is now supported on the {{MathMLElement("math")}}, {{MathMLElement("mrow")}}, and {{MathMLElement("mstyle")}} elements as well as on <a href="/en-US/docs/Web/MathML/Element#token_elements">MathML Token Elements</a>. This is particularly important for some <a href="https://www.w3.org/TR/arabic-math/">Arabic mathematical notations</a>.</li>
- <li>The alignment attribute <code>align</code> defined in MathML3 has been implemented for {{MathMLElement("munder")}}, {{MathMLElement("mover")}}, and {{MathMLElement("munderover")}}.</li>
-</ul>
+- To control the directionality of MathML formulas, the `dir` attribute is now supported on the {{MathMLElement("math")}}, {{MathMLElement("mrow")}}, and {{MathMLElement("mstyle")}} elements as well as on [MathML Token Elements](/en-US/docs/Web/MathML/Element#token_elements). This is particularly important for some [Arabic mathematical notations](https://www.w3.org/TR/arabic-math/).
+- The alignment attribute `align` defined in MathML3 has been implemented for {{MathMLElement("munder")}}, {{MathMLElement("mover")}}, and {{MathMLElement("munderover")}}.
 
-<h3 id="Networking">Networking</h3>
+### Networking
 
-<ul>
- <li>Previously, Gecko reported the close code <code>CLOSE_NORMAL</code> when a WebSocket channel was closed due to an unexpected error, or if it was closed due to an error condition that the specification doesn't cover. Now <code>CLOSE_GOING_AWAY</code> is reported instead.</li>
-</ul>
+- Previously, Gecko reported the close code `CLOSE_NORMAL` when a WebSocket channel was closed due to an unexpected error, or if it was closed due to an error condition that the specification doesn't cover. Now `CLOSE_GOING_AWAY` is reported instead.
 
-<h3 id="Developer_tools">Developer tools</h3>
+### Developer tools
 
-<ul>
- <li>The <a href="/en-US/docs/Tools/Web_Console">Web Console</a> now caches error messages and log entries added using {{domxref("console.log()")}} if the console isn't currently open, and displays them when the console is opened.</li>
- <li>You can now reset the zoom level, panning, and rotation in the <a href="/en-US/docs/Tools/3D_View">3D view</a> by pressing the "r" key.</li>
- <li>You can now hide nodes in the <a href="/en-US/docs/Tools/3D_View">3D view</a> by pressing the "x" key after selecting them.</li>
- <li>The <a href="/en-US/docs/Tools/Keyboard_shortcuts#source_editor">source editor</a> has a several new editing features and keyboard shortcuts; see <a href="/en-US/docs/Tools/Keyboard_shortcuts#source_editor">Using the Source Editor</a> for details</li>
-</ul>
+- The [Web Console](/en-US/docs/Tools/Web_Console) now caches error messages and log entries added using {{domxref("console.log()")}} if the console isn't currently open, and displays them when the console is opened.
+- You can now reset the zoom level, panning, and rotation in the [3D view](/en-US/docs/Tools/3D_View) by pressing the "r" key.
+- You can now hide nodes in the [3D view](/en-US/docs/Tools/3D_View) by pressing the "x" key after selecting them.
+- The [source editor](/en-US/docs/Tools/Keyboard_shortcuts#source_editor) has a several new editing features and keyboard shortcuts; see [Using the Source Editor](/en-US/docs/Tools/Keyboard_shortcuts#source_editor) for details
 
-<p>Mozilla has been working on integrating its own Web developer tools that complement the popular <a href="https://getfirebug.com/">Firebug</a> add-on. You can get more information about these tools as well as see a list of resources external to Firefox that will help you with your Web development. The entire list is located at <a href="/en-US/docs/Tools">Web developer tools</a>.</p>
+Mozilla has been working on integrating its own Web developer tools that complement the popular [Firebug](https://getfirebug.com/) add-on. You can get more information about these tools as well as see a list of resources external to Firefox that will help you with your Web development. The entire list is located at [Web developer tools](/en-US/docs/Tools).
 
-<h3 id="Miscellaneous_changes">Miscellaneous changes</h3>
+### Miscellaneous changes
 
-<ul>
- <li>The GEOSTD8 character set, which was never fully supported, is no longer supported at all.</li>
-</ul>
+- The GEOSTD8 character set, which was never fully supported, is no longer supported at all.
 
-<h2 id="Changes_for_Mozilla_and_add-on_developers">Changes for Mozilla and add-on developers</h2>
+## Changes for Mozilla and add-on developers
 
-<h3 id="JavaScript_code_modules">JavaScript code modules</h3>
+### JavaScript code modules
 
-<h4 id="source-editor.jsm">source-editor.jsm</h4>
+#### source-editor.jsm
 
-<ul>
- <li>The <a href="/en-US/docs/JavaScript_code_modules/source-editor.jsm#resetUndo%28%29"><code>resetUndo()</code></a> method was added; this lets you clear the undo stack.</li>
- <li>The source editor now offers methods for providing search capability: <a href="/en-US/docs/JavaScript_code_modules/source-editor.jsm#find()"><code>find()</code></a>, <a href="/en-US/docs/JavaScript_code_modules/source-editor.jsm#findNext()"><code>findNext()</code></a>, and <a href="/en-US/docs/JavaScript_code_modules/source-editor.jsm#findPrevious()"><code>findPrevious()</code></a>.</li>
-</ul>
+- The [`resetUndo()`](/en-US/docs/JavaScript_code_modules/source-editor.jsm#resetUndo%28%29) method was added; this lets you clear the undo stack.
+- The source editor now offers methods for providing search capability: [`find()`](</en-US/docs/JavaScript_code_modules/source-editor.jsm#find()>), [`findNext()`](</en-US/docs/JavaScript_code_modules/source-editor.jsm#findNext()>), and [`findPrevious()`](</en-US/docs/JavaScript_code_modules/source-editor.jsm#findPrevious()>).
 
-<h3 id="XUL">XUL</h3>
+### XUL
 
-<ul>
- <li>The definition of the values for the {{XULAttr("chromemargin")}} attribute has changed slightly, to make it easier to make cross-platform XUL code look good on platforms with different default window border widths.</li>
-</ul>
+- The definition of the values for the {{XULAttr("chromemargin")}} attribute has changed slightly, to make it easier to make cross-platform XUL code look good on platforms with different default window border widths.
 
-<h3 id="XPCOM">XPCOM</h3>
+### XPCOM
 
-<ul>
- <li><a href="/en-US/docs/nsISupports_proxies"><code>nsISupports</code> proxies</a> are no longer supported. You should be using runnables instead; see <a href="/en-US/docs/XPCOM/Making_cross-thread_calls_using_runnables">Making cross-thread calls using runnables</a>.</li>
- <li>Firefox 11 changed the behavior of <a href="/en-US/docs/Components.utils.getWeakReference"><code>Components.utils.getWeakReference()</code></a> to throw an exception when the object reference is null; the previous behavior of silently failing has been restored.</li>
-</ul>
+- [`nsISupports` proxies](/en-US/docs/nsISupports_proxies) are no longer supported. You should be using runnables instead; see [Making cross-thread calls using runnables](/en-US/docs/XPCOM/Making_cross-thread_calls_using_runnables).
+- Firefox 11 changed the behavior of [`Components.utils.getWeakReference()`](/en-US/docs/Components.utils.getWeakReference) to throw an exception when the object reference is null; the previous behavior of silently failing has been restored.
 
-<h3 id="XPConnect">XPConnect</h3>
+### XPConnect
 
-<ul>
- <li>The <a href="/en-US/docs/PRUint64"><code>PRUint64</code></a> data type was incorrectly essentially identical to <a href="/en-US/docs/PRInt64"><code>PRint64</code></a> when used with XPConnect. This has been fixed.</li>
-</ul>
+- The [`PRUint64`](/en-US/docs/PRUint64) data type was incorrectly essentially identical to [`PRint64`](/en-US/docs/PRInt64) when used with XPConnect. This has been fixed.
 
-<h3 id="Interface_changes">Interface changes</h3>
+### Interface changes
 
-<ul>
- <li>The <code>nsIScreen_MOZILLA_2_0_BRANCH</code> interface has been merged into {{interface("nsIScreen")}}. The APIs defined in that interface (for controlling minimum screen brightness) had not previously been documented, but now they are.</li>
- <li>The {{interface("nsIScriptError2")}} interface has been merged into {{interface("nsIScriptError")}}.</li>
- <li>{{ifmethod("nsIDownloadManager", "addDownload")}} is now handled asynchronously rather than synchronously.</li>
- <li>The {{ifmethod("imgIContainerObserver", "frameChanged")}} method now receives as its first parameter an {{interface("imgIRequest")}} object identifying the corresponding request.</li>
- <li>The {{ifmethod("nsIDOMWindowUtils", "sendTouchEvent")}} method has been added to allow synthesizing touch events.</li>
- <li>You can now scroll the specified content to the vertical center of the view by specifying <code>SCROLL_CENTER_VERTICALLY</code> as the scroll constant when calling {{ifmethod("nsISelectionController", "scrollSelectionIntoView")}}.</li>
- <li>The new {{ifattribute("nsIMemoryMultiReporter", "explicitNonHeap")}} attribute has been added; this is a more efficient way to obtain the sum of all of the multi-reporter's measurements that have a path that starts with "explicit" <strong>and</strong> are of the kind <code>KIND_NONHEAP</code>.</li>
- <li>The {{ifattribute("nsIDOMWindowUtils", "paintingSuppressed")}} attribute has been added; this boolean value indicates whether or not painting is currently suppressed on the window. This is used on mobile to prevent bouncy rendering that occurs when attempts to draw the page begin before enough content is available to do so smoothly.</li>
- <li>The <code>nsIDocCharset</code> and <code>nsIDocumentCharsetInfo</code> interfaces have been merged into {{interface("nsIDocShell")}}. As part of this work, the old <code>forcedDetector</code> attribute has been removed; it never did anything.</li>
-</ul>
+- The `nsIScreen_MOZILLA_2_0_BRANCH` interface has been merged into {{interface("nsIScreen")}}. The APIs defined in that interface (for controlling minimum screen brightness) had not previously been documented, but now they are.
+- The {{interface("nsIScriptError2")}} interface has been merged into {{interface("nsIScriptError")}}.
+- {{ifmethod("nsIDownloadManager", "addDownload")}} is now handled asynchronously rather than synchronously.
+- The {{ifmethod("imgIContainerObserver", "frameChanged")}} method now receives as its first parameter an {{interface("imgIRequest")}} object identifying the corresponding request.
+- The {{ifmethod("nsIDOMWindowUtils", "sendTouchEvent")}} method has been added to allow synthesizing touch events.
+- You can now scroll the specified content to the vertical center of the view by specifying `SCROLL_CENTER_VERTICALLY` as the scroll constant when calling {{ifmethod("nsISelectionController", "scrollSelectionIntoView")}}.
+- The new {{ifattribute("nsIMemoryMultiReporter", "explicitNonHeap")}} attribute has been added; this is a more efficient way to obtain the sum of all of the multi-reporter's measurements that have a path that starts with "explicit" **and** are of the kind `KIND_NONHEAP`.
+- The {{ifattribute("nsIDOMWindowUtils", "paintingSuppressed")}} attribute has been added; this boolean value indicates whether or not painting is currently suppressed on the window. This is used on mobile to prevent bouncy rendering that occurs when attempts to draw the page begin before enough content is available to do so smoothly.
+- The `nsIDocCharset` and `nsIDocumentCharsetInfo` interfaces have been merged into {{interface("nsIDocShell")}}. As part of this work, the old `forcedDetector` attribute has been removed; it never did anything.
 
-<h3 id="SpiderMonkey">SpiderMonkey</h3>
+### SpiderMonkey
 
-<ul>
- <li><code>JSThread</code> has been eliminated.</li>
- <li><code>JSThreadData</code> has been merged into <code>JSRuntime</code>.</li>
-</ul>
+- `JSThread` has been eliminated.
+- `JSThreadData` has been merged into `JSRuntime`.
 
-<h3 id="Building">Building</h3>
+### Building
 
-<ul>
- <li>When building on Windows, you must have the Windows 7 SDK installed.</li>
-</ul>
+- When building on Windows, you must have the Windows 7 SDK installed.
 
-<h3 id="Other_changes">Other changes</h3>
+### Other changes
 
-<ul>
- <li>The editor component (known as <a href="/en-US/docs/Midas">Midas</a>) now <a href="/en-US/docs/Using_the_Editor_from_XUL#Editor_event_handling">only accepts events</a> from privileged code.</li>
-</ul>
+- The editor component (known as [Midas](/en-US/docs/Midas)) now [only accepts events](/en-US/docs/Using_the_Editor_from_XUL#Editor_event_handling) from privileged code.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<div>{{Firefox_for_developers('11')}}</div>
+{{Firefox_for_developers('11')}}

@@ -5,145 +5,124 @@ tags:
   - Firefox
   - Releases
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>Firefox 34 was released on December 1st, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.</p>
+Firefox 34 was released on December 1st, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-<h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
+## Changes for Web developers
 
-<h3 id="Developer_Tools">Developer Tools</h3>
+### Developer Tools
 
-<p>Highlights:</p>
+Highlights:
 
-<ul>
- <li><a href="/en-US/docs/Tools/Storage_Inspector">Storage Inspector: a new tool enabling you to view data stored by web pages</a></li>
- <li><a href="/en-US/docs/Tools/Performance">Performance tool: revamped Profiler UI and frame rate timeline</a></li>
- <li><a href="/en-US/docs/Tools/Working_with_iframes">Frame switching: point the developer tools at a specific iframe in the page</a></li>
- <li><a href="/en-US/docs/Web/API/console/table">console.table support</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector#examining_event_listeners">jQuery events are visible in the Page Inspector</a></li>
-</ul>
+- [Storage Inspector: a new tool enabling you to view data stored by web pages](/en-US/docs/Tools/Storage_Inspector)
+- [Performance tool: revamped Profiler UI and frame rate timeline](/en-US/docs/Tools/Performance)
+- [Frame switching: point the developer tools at a specific iframe in the page](/en-US/docs/Tools/Working_with_iframes)
+- [console.table support](/en-US/docs/Web/API/console/table)
+- [jQuery events are visible in the Page Inspector](/en-US/docs/Tools/Page_Inspector#examining_event_listeners)
 
-<p><a class="external-icon external" href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;chfieldto=2014-09-02&amp;chfield=resolution&amp;query_format=advanced&amp;chfieldfrom=2014-07-21&amp;chfieldvalue=FIXED&amp;component=Developer%20Tools&amp;component=Developer%20Tools%3A%203D%20View&amp;component=Developer%20Tools%3A%20Canvas%20Debugger&amp;component=Developer%20Tools%3A%20Console&amp;component=Developer%20Tools%3A%20Debugger&amp;component=Developer%20Tools%3A%20Framework&amp;component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&amp;component=Developer%20Tools%3A%20Inspector&amp;component=Developer%20Tools%3A%20Memory&amp;component=Developer%20Tools%3A%20Netmonitor&amp;component=Developer%20Tools%3A%20Object%20Inspector&amp;component=Developer%20Tools%3A%20Profiler&amp;component=Developer%20Tools%3A%20Responsive%20Mode&amp;component=Developer%20Tools%3A%20Scratchpad&amp;component=Developer%20Tools%3A%20Source%20Editor&amp;component=Developer%20Tools%3A%20Storage%20Inspector&amp;component=Developer%20Tools%3A%20Style%20Editor&amp;component=Developer%20Tools%3A%20Timeline&amp;component=Developer%20Tools%3A%20User%20Stories&amp;component=Developer%20Tools%3A%20Web%20Audio%20Editor&amp;component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&amp;component=Developer%20Tools%3A%20WebIDE&amp;component=Simulator&amp;product=Firefox&amp;product=Firefox%20OS&amp;list_id=11184176">All devtools bugs fixed between Firefox 33 and Firefox 34</a>.</p>
+[All devtools bugs fixed between Firefox 33 and Firefox 34](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-09-02&chfield=resolution&query_format=advanced&chfieldfrom=2014-07-21&chfieldvalue=FIXED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20Timeline&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&component=Simulator&product=Firefox&product=Firefox%20OS&list_id=11184176).
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>Our experimental implementation of CSS Fonts Level 3 progresses. Newly implemented features are:
-  <ul>
-   <li>the fallback algorithm of {{cssxref("font-variant-position")}}, creating synthetic alternates for missing glyphs, based on the subscript and superscript metrics supplied by the font ({{bug(1024804)}}).</li>
-   <li>The <code>layout.css.font-features.enabled</code> preference has been removed, meaning the following properties have been activated by default:
-    <ul>
-     <li>The CSS Font Level 3 version of {{cssxref("font-variant")}} which is now a shorthand property.</li>
-     <li>The longhand properties {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-ligatures")}}, and {{cssxref("font-variant-alternates")}}.</li>
-     <li>The properties {{cssxref("font-kerning")}} and {{cssxref("font-synthesis")}}</li>
-     <li>The properties {{cssxref("font-feature-settings")}} and {{cssxref("font-language-override")}} are unprefixed. The prefixed version are still available for some time to ease transition.</li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li>The value <code>auto</code> has been added to {{cssxref("min-width")}} and {{cssxref("min-height")}} with a different behavior than the last time ({{bug(984711)}} and {{bug(1015474)}}).</li>
- <li>An experimental implementation, disabled by default, of the filter functional values of the {{cssxref("filter")}} property have been implemented. It is controlled by the <code>layout.css.filters.enabled</code> pref ({{bug(948265)}}).</li>
- <li>Fixed starting of CSS transitions that start together with changes to {{cssxref("display")}}, {{cssxref("position")}}, {{cssxref("overflow")}}, and similar properties ({{bug(625289)}})</li>
-</ul>
+- Our experimental implementation of CSS Fonts Level 3 progresses. Newly implemented features are:
 
-<h3 id="HTML">HTML</h3>
+  - the fallback algorithm of {{cssxref("font-variant-position")}}, creating synthetic alternates for missing glyphs, based on the subscript and superscript metrics supplied by the font ({{bug(1024804)}}).
+  - The `layout.css.font-features.enabled` preference has been removed, meaning the following properties have been activated by default:
 
-<p><em>No change.</em></p>
+    - The CSS Font Level 3 version of {{cssxref("font-variant")}} which is now a shorthand property.
+    - The longhand properties {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-ligatures")}}, and {{cssxref("font-variant-alternates")}}.
+    - The properties {{cssxref("font-kerning")}} and {{cssxref("font-synthesis")}}
+    - The properties {{cssxref("font-feature-settings")}} and {{cssxref("font-language-override")}} are unprefixed. The prefixed version are still available for some time to ease transition.
 
-<h3 id="JavaScript">JavaScript</h3>
+- The value `auto` has been added to {{cssxref("min-width")}} and {{cssxref("min-height")}} with a different behavior than the last time ({{bug(984711)}} and {{bug(1015474)}}).
+- An experimental implementation, disabled by default, of the filter functional values of the {{cssxref("filter")}} property have been implemented. It is controlled by the `layout.css.filters.enabled` pref ({{bug(948265)}}).
+- Fixed starting of CSS transitions that start together with changes to {{cssxref("display")}}, {{cssxref("position")}}, {{cssxref("overflow")}}, and similar properties ({{bug(625289)}})
 
-<ul>
- <li>The ES2015 syntax for <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names">computed property names on object literals</a> has been implemented ({{bug(924688)}}).
+### HTML
 
-  <ul>
-   <li>This includes <a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">getter</a> and <a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a> method names as well ({{bug(1048384)}}) and can also be used with <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#computed_object_property_names_and_destructuring">destructuring</a>.</li>
-  </ul>
- </li>
- <li>The ES2015<a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions"> shorthand syntax for defining methods</a> on objects has been implemented ({{bug(924672)}}).</li>
- <li>The ES2015 <code>Object</code> method {{jsxref("Object.assign", "Object.assign()")}} has been implemented ({{bug(937855)}}).</li>
- <li>ES2015 <a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">template strings</a> and the {{jsxref("String.raw()")}} method are now supported ({{bug(1038259)}}, {{bug(1039774)}}).</li>
- <li>A new ES2015 object {{jsxref("WeakSet")}} has been added ({{bug(792439)}}).</li>
- <li>ES2015 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbols</a> (only available in the Nightly channel) have been updated to conform with recent specification changes ({{bug(1042602)}}):
-  <ul>
-   <li>When trying to convert a symbol to a number, a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError"><code>TypeError</code></a> will be thrown now.</li>
-   <li>When using loose equality, <code>Object(sym) == sym</code> returns <code>true</code> now.</li>
-  </ul>
- </li>
- <li>The experimental {{jsxref("TypedArray.prototype.move()")}} method (only available in former Nightly and Aurora channels) has been replaced with the now implemented standard ES2015 {{jsxref("TypedArray.prototype.copyWithin()")}} method ({{bug(1021379)}}).</li>
- <li>In <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>, setting a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#duplicate_property_names">duplicate property name in object literals</a> will no longer throw a <code>SyntaxError</code> as per ES2015 specification ({{bug(1041128)}}).</li>
- <li>In regular expressions (including <code>String.replace</code>), the matched text for a capturing group is now <code>undefined</code> instead of the empty string when that capturing group didn't get consulted because quantifiers prevented its exercise (see {{bug(369778)}} and <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#gecko_specific_notes">this example code</a>). Note that due to web compatibility, RegExp.$N will still return an empty string ({{bug(1053944)}}).</li>
- <li>The ES2015 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread operator</a> is now supported in <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructuring</a> ({{bug(933276)}}).</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring</a> now uses iterator protocol instead of array-like protocol ({{bug(933276)}}).</li>
- <li>{{jsxref("Proxy.revocable()")}} has been implemented ({{bug(978279)}}).</li>
-</ul>
+_No change._
 
-<h3 id="InterfacesAPIsDOM">Interfaces/APIs/DOM</h3>
+### JavaScript
 
-<ul>
- <li>The {{domxref("Element.matches()")}} method has been added; it does what the non-standard <code>mozMatchesSelector()</code> was doing ({{bug(886308)}}).</li>
- <li>The {{domxref("Performance.now()")}} method is now available to Web workers ({{bug(908390)}}).</li>
- <li>The non-standard interface <code>MozNamedAttrMap</code> has been renamed to the standard {{domxref("NamedNodeMap")}} and {{domxref("Element.attributes")}} has been adapted to use it ({{bug(1055467)}}).</li>
- <li>The {{domxref("Path2D.addPath()")}} method has been added ({{bug(985801)}}).</li>
- <li>The non-standard <a href="/en-US/docs/Web/API/Device_Storage_API">Device Storage API</a> is now also enabled for privileged apps installed on Android ({{bug(886627)}}).</li>
- <li>Web Crypto API has been enabled by default ({{bug(1074001)}}).</li>
- <li>The {{domxref("MediaStreamTrack.stop()")}} method has been added ({{bug(1057955)}}).</li>
- <li>Our experimental implementation of EME continues. The {{domxref("MediaKeySession.getUsableKeyIds()")}} method has been added ({{bug(1057171)}}).</li>
- <li>Regarding <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>:
-  <ul>
-   <li>an experiment implementation of {{domxref("RTPSender")}} and {{domxref("RTPReceiver")}} working with {{domxref("RTCPeerConnection")}} has landed ({{bug(1032835)}}).</li>
-   <li>application window sharing has been added to {{domxref("Navigation.getUserMedia()")}} ({{bug(1036653)}}) and {{domxref("MediaTrackConstraintSet")}} now supports <code>browserWindow</code> and <code>scrollWithPage</code> allowing to chose the tab of a window that has to be shared without showing the tab chooser dialog ({{bug(1041700)}}).</li>
-   <li><code>"browser"</code> is now an accepted value of MediaSourceEnum, used to define constraints ({{bug(1041493)}}).</li>
-  </ul>
- </li>
- <li>For Web Components, event retargeting is now implemented ({{bug(887541)}}).</li>
- <li>The {{domxref("Headers")}} interface has been implemented ({{bug(1029620)}}). It is controlled by the <code>dom.fetch.enabled</code> preference which is set to <code>false</code> by default.</li>
- <li>Regarding our experimental implementation of Web Animations, the {{domxref("AnimationEffect")}} interface has been added, with the single {{domxref("AnimationEffect.name")}} property ({{bug(1045993)}}). Web Animations is not activated by default and is controlled by the <code>dom.animations-api.core.enabled</code> preference.</li>
- <li>CSSOM View smooth scrolling methods have been added: {{domxref("Window.scroll()")}}, {{domxref("Window.scrollTo()")}}, and {{domxref("Window.scrollBy()")}} ({{bug(1022818)}}).</li>
- <li>The non-standard <code>MozSmsSegmentInfo</code> is no more visible on the global object {{bug(916607)}}.</li>
-</ul>
+- The ES2015 syntax for [computed property names on object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names) has been implemented ({{bug(924688)}}).
 
-<h3 id="MathML">MathML</h3>
+  - This includes [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) method names as well ({{bug(1048384)}}) and can also be used with [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#computed_object_property_names_and_destructuring).
 
-<p><em>No change.</em></p>
+- The ES2015[ shorthand syntax for defining methods](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) on objects has been implemented ({{bug(924672)}}).
+- The ES2015 `Object` method {{jsxref("Object.assign", "Object.assign()")}} has been implemented ({{bug(937855)}}).
+- ES2015 [template strings](/en-US/docs/Web/JavaScript/Reference/Template_literals) and the {{jsxref("String.raw()")}} method are now supported ({{bug(1038259)}}, {{bug(1039774)}}).
+- A new ES2015 object {{jsxref("WeakSet")}} has been added ({{bug(792439)}}).
+- ES2015 [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) (only available in the Nightly channel) have been updated to conform with recent specification changes ({{bug(1042602)}}):
 
-<h3 id="SVG">SVG</h3>
+  - When trying to convert a symbol to a number, a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) will be thrown now.
+  - When using loose equality, `Object(sym) == sym` returns `true` now.
 
-<p><em>No change.</em></p>
+- The experimental {{jsxref("TypedArray.prototype.move()")}} method (only available in former Nightly and Aurora channels) has been replaced with the now implemented standard ES2015 {{jsxref("TypedArray.prototype.copyWithin()")}} method ({{bug(1021379)}}).
+- In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), setting a [duplicate property name in object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#duplicate_property_names) will no longer throw a `SyntaxError` as per ES2015 specification ({{bug(1041128)}}).
+- In regular expressions (including `String.replace`), the matched text for a capturing group is now `undefined` instead of the empty string when that capturing group didn't get consulted because quantifiers prevented its exercise (see {{bug(369778)}} and [this example code](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#gecko_specific_notes)). Note that due to web compatibility, RegExp.$N will still return an empty string ({{bug(1053944)}}).
+- The ES2015 [spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) is now supported in [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) ({{bug(933276)}}).
+- [Destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) now uses iterator protocol instead of array-like protocol ({{bug(933276)}}).
+- {{jsxref("Proxy.revocable()")}} has been implemented ({{bug(978279)}}).
 
-<h3 id="AudioVideo">Audio/Video</h3>
+### Interfaces/APIs/DOM
 
-<p><em>No change.</em></p>
+- The {{domxref("Element.matches()")}} method has been added; it does what the non-standard `mozMatchesSelector()` was doing ({{bug(886308)}}).
+- The {{domxref("Performance.now()")}} method is now available to Web workers ({{bug(908390)}}).
+- The non-standard interface `MozNamedAttrMap` has been renamed to the standard {{domxref("NamedNodeMap")}} and {{domxref("Element.attributes")}} has been adapted to use it ({{bug(1055467)}}).
+- The {{domxref("Path2D.addPath()")}} method has been added ({{bug(985801)}}).
+- The non-standard [Device Storage API](/en-US/docs/Web/API/Device_Storage_API) is now also enabled for privileged apps installed on Android ({{bug(886627)}}).
+- Web Crypto API has been enabled by default ({{bug(1074001)}}).
+- The {{domxref("MediaStreamTrack.stop()")}} method has been added ({{bug(1057955)}}).
+- Our experimental implementation of EME continues. The {{domxref("MediaKeySession.getUsableKeyIds()")}} method has been added ({{bug(1057171)}}).
+- Regarding [WebRTC](/en-US/docs/Web/API/WebRTC_API):
 
-<h2 id="Security_and_Networking">Security and Networking</h2>
+  - an experiment implementation of {{domxref("RTPSender")}} and {{domxref("RTPReceiver")}} working with {{domxref("RTCPeerConnection")}} has landed ({{bug(1032835)}}).
+  - application window sharing has been added to {{domxref("Navigation.getUserMedia()")}} ({{bug(1036653)}}) and {{domxref("MediaTrackConstraintSet")}} now supports `browserWindow` and `scrollWithPage` allowing to chose the tab of a window that has to be shared without showing the tab chooser dialog ({{bug(1041700)}}).
+  - `"browser"` is now an accepted value of MediaSourceEnum, used to define constraints ({{bug(1041493)}}).
 
-<ul>
- <li>SSLv3 is now disabled by default ({{bug(1030963)}}).</li>
- <li>A warning is sent to the console when a Web site use the CSS <code>reflected-xss</code> directive ({{bug(1045902)}}).</li>
-</ul>
+- For Web Components, event retargeting is now implemented ({{bug(887541)}}).
+- The {{domxref("Headers")}} interface has been implemented ({{bug(1029620)}}). It is controlled by the `dom.fetch.enabled` preference which is set to `false` by default.
+- Regarding our experimental implementation of Web Animations, the {{domxref("AnimationEffect")}} interface has been added, with the single {{domxref("AnimationEffect.name")}} property ({{bug(1045993)}}). Web Animations is not activated by default and is controlled by the `dom.animations-api.core.enabled` preference.
+- CSSOM View smooth scrolling methods have been added: {{domxref("Window.scroll()")}}, {{domxref("Window.scrollTo()")}}, and {{domxref("Window.scrollBy()")}} ({{bug(1022818)}}).
+- The non-standard `MozSmsSegmentInfo` is no more visible on the global object {{bug(916607)}}.
 
-<h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
+### MathML
 
-<ul>
- <li>localstore.rdf has been removed ({{bug(559505)}}).</li>
-</ul>
+_No change._
 
-<h3 id="Add-on_SDK">Add-on SDK</h3>
+### SVG
 
-<h4 id="Highlights">Highlights</h4>
+_No change._
 
-<ul>
- <li>New API: <a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/dev_panel">dev/panel</a> enables you to extend the Firefox Developer Tools.</li>
- <li><a href="/en-US/docs/Mozilla/Add-ons/SDK/Tools/jpm">jpm</a> beta released.</li>
- <li><code>"./my-file"</code> introduced everywhere as an alias for <code>require("sdk/self").data.url("my-file")</code></li>
- <li>Added the ability to <a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/tabs#attaching_stylesheets">attach stylesheets to individual tabs</a>.</li>
-</ul>
+### Audio/Video
 
-<h4 id="Details">Details</h4>
+_No change._
 
-<p><a class="external external-icon" href="https://github.com/mozilla/addon-sdk/compare/firefox33...firefox34">GitHub commits made between Firefox 33 and Firefox 34</a>. This will not include any uplifts made after this release entered Aurora.</p>
+## Security and Networking
 
-<p><a class="external external-icon" href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;chfieldto=2014-09-02&amp;chfield=resolution&amp;query_format=advanced&amp;chfieldfrom=2014-07-21&amp;chfieldvalue=FIXED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;product=Add-on%20SDK&amp;list_id=11562840">Bugs fixed between Firefox 33 and Firefox 34</a>. This will not include any uplifts made after this release entered Aurora.</p>
+- SSLv3 is now disabled by default ({{bug(1030963)}}).
+- A warning is sent to the console when a Web site use the CSS `reflected-xss` directive ({{bug(1045902)}}).
 
-<h2 id="Older_versions">Older versions</h2>
+## Changes for add-on and Mozilla developers
 
-<p>{{Firefox_for_developers('33')}}</p>
+- localstore.rdf has been removed ({{bug(559505)}}).
+
+### Add-on SDK
+
+#### Highlights
+
+- New API: [dev/panel](/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/dev_panel) enables you to extend the Firefox Developer Tools.
+- [jpm](/en-US/docs/Mozilla/Add-ons/SDK/Tools/jpm) beta released.
+- `"./my-file"` introduced everywhere as an alias for `require("sdk/self").data.url("my-file")`
+- Added the ability to [attach stylesheets to individual tabs](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/tabs#attaching_stylesheets).
+
+#### Details
+
+[GitHub commits made between Firefox 33 and Firefox 34](https://github.com/mozilla/addon-sdk/compare/firefox33...firefox34). This will not include any uplifts made after this release entered Aurora.
+
+[Bugs fixed between Firefox 33 and Firefox 34](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-09-02&chfield=resolution&query_format=advanced&chfieldfrom=2014-07-21&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&product=Add-on%20SDK&list_id=11562840). This will not include any uplifts made after this release entered Aurora.
+
+## Older versions
+
+{{Firefox_for_developers('33')}}
