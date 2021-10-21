@@ -2,7 +2,6 @@
 title: 'ARIA: aria-colspan attribute'
 slug: Web/Accessibility/ARIA/Attributes/aria-colspan
 tags: 
-
   - Accessibility
   - ARIA
   - ARIA attribute
