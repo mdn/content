@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: aria-colcount attribute'
+title: 'aria-colcount'
 slug: Web/Accessibility/ARIA/Attributes/aria-colcount
 tags: 
 
