@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: `aria-current` attribute'
+title: 'ARIA: <code>aria-current</code> attribute'
 slug: Web/Accessibility/ARIA/Attributes/aria-current
 tags: 
 
