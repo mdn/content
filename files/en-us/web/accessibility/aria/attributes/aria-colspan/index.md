@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: aria-colspan attribute'
+title: 'aria-colspan'
 slug: Web/Accessibility/ARIA/Attributes/aria-colspan
 tags: 
   - Accessibility
