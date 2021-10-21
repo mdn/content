@@ -51,10 +51,9 @@ tags:
  <li>Added the experimental support for {{htmlelement("picture")}} element ({{bug(870022)}}), behind the <code>dom.image.picture.enabled</code> preference (off by default).</li>
  <li>The {{HTMLElement("label")}}, especially without a {{htmlattrxref("for", "label")}} attribute, doesn't apply anymore to a <code>&lt;input type=hidden&gt;</code> field ({{bug(597650)}}). The previous behavior wasn't spec compliant.</li>
  <li>The link annotation <code>noreferrer</code> has been implemented on {{HTMLElement("a")}} elements. <code>&lt;a rel="noreferrer"&gt;</code> will not include the URL of the referrer in the HTTP request sent to fetch it ({{bug(530396)}}). Note that this work only for in-page links, not for linked clicked via the UI, like via contextual menus.</li>
- <li>On Android, support for two new values for the {{htmlattrxref("name", "meta")}} attribute of {{HTMLElement("meta")}} has been added: <code>msapplication-TileImage</code> and <code>msapplication-TileColor</code> ({{bug(1014712)}}).<br>
-  Example:<br>
-  <code>&lt;meta name="msapplication-TileImage" content="images/benthepcguy-144.png"/&gt;<br>
-  &lt;meta name="msapplication-TileColor" content="#d83434"/&gt;</code></li>
+ <li>On Android, support for two new values for the {{htmlattrxref("name", "meta")}} attribute of {{HTMLElement("meta")}} has been added: <code>msapplication-TileImage</code> and <code>msapplication-TileColor</code> ({{bug(1014712)}}). Example:
+  <pre class="brush: html">&lt;meta name="msapplication-TileImage" content="images/benthepcguy-144.png"/&gt;
+  &lt;meta name="msapplication-TileColor" content="#d83434"/&gt;</pre></li>
 </ul>
 
 <h3 id="JavaScript">JavaScript</h3>

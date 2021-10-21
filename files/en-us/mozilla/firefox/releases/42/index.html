@@ -10,8 +10,7 @@ tags:
 ---
 <div>{{FirefoxSidebar}}</div>
 
-<div class="column-container zone-callout"><a href="https://www.mozilla.org/firefox/developer/" style="float: right; margin-bottom: 20px; padding: 10px; text-align: center; border-radius: 4px; display: inline-block; background-color: #81BC2E; white-space: nowrap; color: white; text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25); box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2), 0px -1px 0px 0px rgba(0, 0, 0, 0.3) inset;">To test the latest developer features of Firefox,<br>
-install Firefox Developer Edition</a> Firefox 42 was released on November 3, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.</div>
+<p><a href="https://www.mozilla.org/firefox/developer/">To test the latest developer features of Firefox, install Firefox Developer Edition</a> Firefox 42 was released on November 3, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.</p>
 
 <h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
 
@@ -74,7 +73,7 @@ install Firefox Developer Edition</a> Firefox 42 was released on November 3, 201
 
 <ul>
  <li><code>Request.context</code> has been removed ({{bug(1188062)}}).</li>
- <li>The <a href="/en-US/docs/Web/API/Push_API">Push API</a> has been activated by default on Firefox for Desktop ({{bug(1153499)}}), but only on the Nightly/Dev Edition/Beta channels. It is being deactivated by default in the Release channel until consumer UX and debugging features have been properly implemented ({{bug(1207875)}}.) You can still activate it by enabling the <code>dom.push.enabled</code> pref in <a>about:config</a>.</li>
+ <li>The <a href="/en-US/docs/Web/API/Push_API">Push API</a> has been activated by default on Firefox for Desktop ({{bug(1153499)}}), but only on the Nightly/Dev Edition/Beta channels. It is being deactivated by default in the Release channel until consumer UX and debugging features have been properly implemented ({{bug(1207875)}}.) You can still activate it by enabling the <code>dom.push.enabled</code> pref in <code>about:config</code>.</li>
  <li>The {{domxref("PushManager.hasPermission()")}} method has been deprecated in the spec, and replaced with the {{domxref("PushManager.permissionState()")}} method. Firefox has updated its implementation to reflect this ({{bug("1183853")}}.)</li>
  <li>Service-worker-related additions to the <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a> have been implemented ({{bug(1114554)}}), but are disabled in this release.</li>
 </ul>
@@ -168,8 +167,8 @@ install Firefox Developer Edition</a> Firefox 42 was released on November 3, 201
 <h4 id="nsIContentPolicy">nsIContentPolicy</h4>
 
 <ul>
- <li>The <code><strong>TYPE_EMBED</strong></code> constant has been added to <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentPolicy">nsIContentPolicy</a></code> to allow Gecko internals and add-on code to better differentiate different types of requests. Previously, <code><strong>TYPE_OBJECT</strong></code> was used for these cases ({{bug(1148030)}}).</li>
- <li>Similarly, the <strong><code>TYPE_SUBDOCUMENT</code></strong> constants has been split into <code><strong>TYPE_FRAME</strong></code> and <strong><code>TYPE_IFRAME</code></strong> ({{bug(1148044)}}).</li>
+ <li>The <code>TYPE_EMBED</code> constant has been added to <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentPolicy">nsIContentPolicy</a></code> to allow Gecko internals and add-on code to better differentiate different types of requests. Previously, <code>TYPE_OBJECT</code> was used for these cases ({{bug(1148030)}}).</li>
+ <li>Similarly, the <code>TYPE_SUBDOCUMENT</code> constants has been split into <code>TYPE_FRAME</code> and <code>TYPE_IFRAME</code> ({{bug(1148044)}}).</li>
 </ul>
 
 <h3 id="XUL">XUL</h3>

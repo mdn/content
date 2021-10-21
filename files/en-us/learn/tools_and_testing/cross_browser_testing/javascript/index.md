@@ -16,7 +16,8 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-Now we'll look at common cross-browser JavaScript problems and how to fix them. This includes information on using browser dev tools to track down and fix problems, using Polyfills and libraries to work around problems, getting modern JavaScript features working in older browsers, and more.
+Now we'll look at common cross-browser JavaScript problems and how to fix them.
+This includes information on using browser dev tools to track down and fix problems, using Polyfills and libraries to work around problems, getting modern JavaScript features working in older browsers, and more.
 
 <table>
   <tbody>
@@ -54,7 +55,7 @@ Things have improved significantly since then; modern browsers do a good job of 
 These days, most cross-browser JavaScript problems are seen:
 
 - When poor-quality browser-sniffing code, feature-detection code, and vendor prefix usage block browsers from running code they could otherwise use just fine.
-- When developers make use of new/nascent JavaScript features (for example [ECMAScript 6](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla) / [ECMAScript Next](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_Next_support_in_Mozilla) features, modern Web APIs...) in their code, and find that such features don't work in older browsers.
+- When developers make use of new/nascent JavaScript features, modern Web APIs, etc.) in their code, and find that such features don't work in older browsers.
 
 We'll explore all these problems and more below.
 
@@ -182,7 +183,7 @@ To summarize, anytime something is not working and a value does not appear to be
 
 Unfortunately, we still have the same error — the problem has not gone away. Let's investigate this now, using a more sophisticated feature of browser developer tools: the [JavaScript debugger](/en-US/docs/Tools/Debugger) as it is called in Firefox.
 
-> **Note:** Similar tools are available in other browsers; the [Sources tab](https://developers.google.com/web/tools/chrome-devtools/#sources) in Chrome, Debugger in Safari (see [Safari Web Development Tools](https://developer.apple.com/safari/tools/)), etc.
+> **Note:** Similar tools are available in other browsers; the [Sources tab](https://developer.chrome.com/docs/devtools/#sources) in Chrome, Debugger in Safari (see [Safari Web Development Tools](https://developer.apple.com/safari/tools/)), etc.
 
 In Firefox, the Debugger tab looks as follows:
 
@@ -237,14 +238,21 @@ In this section, we'll look at some of the more common cross-browser JavaScript 
 
 In the [previous article](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#older_browsers_not_supporting_modern_features) we described some of the ways in which HTML and CSS errors and unrecognized features can be handled due to the nature of the languages. JavaScript is not as permissive as HTML and CSS however — if the JavaScript engine encounters mistakes or unrecognized syntax, more often than not it will throw errors.
 
-There are a number of modern JavaScript language features defined in recent versions of the specs ([ECMAScript 6](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla) / [ECMAScript Next](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_Next_support_in_Mozilla)) that won't work in older browsers. Some of these are syntactic sugar (basically an easier, nicer way of writing what you can already do using existing features), and some offer interesting new possibilities.
+There are a number of modern JavaScript language features defined in recent versions of the specs that won't work in older browsers.
+Some of these are syntactic sugar (basically an easier, nicer way of writing what you can already do using existing features), and some offer interesting new possibilities.
 
 For example:
 
-- [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) are a great new feature for performing asynchronous operations and making sure those operations are complete before code that relies on their results is used for something else. As an example, the [Fetch API](/en-US/docs/Web/API/fetch) (a modern equivalent to [XMLHTTPRequest](/en-US/docs/Web/API/XMLHttpRequest)) uses promises to fetch resources across the network and make sure that the response has been returned before they are used (for example, displaying an image inside an {{htmlelement("img")}} element). They are not supported in IE at all but are supported across all modern browsers.
-- Arrow functions provide a shorter, more convenient syntax for writing [anonymous functions](/en-US/docs/Learn/JavaScript/Building_blocks/Functions#anonymous_functions), which also has other advantages (see [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)). For a quick example, see [arrow-function.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html) (see the [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/arrow-function.html) also). Arrow functions are supported across all modern browsers, except for IE and Safari.
-- Declaring [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) at the top of your JavaScript code causes it to be parsed with a stricter set of rules, meaning that more warnings and errors will be thrown, and some things will be disallowed that would otherwise be acceptable. It is arguably a good idea to use strict mode, as it makes for better, more efficient code, however it has limited/patchy support across browsers (see [Strict mode in browsers](/en-US/docs/Web/JavaScript/Reference/Strict_mode#strict_mode_in_browsers)).
-- [Typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) allow JavaScript code to access and manipulate raw binary data, which is necessary as browser APIs for example start to manipulate streams of raw video and audio data. These are available in IE10 and above, and all modern browsers.
+- [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) are a great new feature for performing asynchronous operations and making sure those operations are complete before code that relies on their results is used for something else.
+  As an example, the [Fetch API](/en-US/docs/Web/API/fetch) (a modern equivalent to [XMLHTTPRequest](/en-US/docs/Web/API/XMLHttpRequest)) uses promises to fetch resources across the network and make sure that the response has been returned before they are used (for example, displaying an image inside an {{htmlelement("img")}} element).
+  They are not supported in IE at all but are supported across all modern browsers.
+- Arrow functions provide a shorter, more convenient syntax for writing [anonymous functions](/en-US/docs/Learn/JavaScript/Building_blocks/Functions#anonymous_functions), which also has other advantages (see [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)).
+  For a quick example, see [arrow-function.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html) (see the [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/arrow-function.html) also).
+  Arrow functions are supported across all modern browsers, except for IE and Safari.
+- Declaring [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) at the top of your JavaScript code causes it to be parsed with a stricter set of rules, meaning that more warnings and errors will be thrown, and some things will be disallowed that would otherwise be acceptable.
+  It is arguably a good idea to use strict mode, as it makes for better, more efficient code, however it has limited/patchy support across browsers (see [Strict mode in browsers](/en-US/docs/Web/JavaScript/Reference/Strict_mode#strict_mode_in_browsers)).
+- [Typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) allow JavaScript code to access and manipulate raw binary data, which is necessary as browser APIs for example start to manipulate streams of raw video and audio data.
+  These are available in IE10 and above, and all modern browsers.
 
 There are also many new APIs appearing in recent browsers, which don't work in older browsers, for example:
 
