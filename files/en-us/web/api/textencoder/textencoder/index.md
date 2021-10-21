@@ -17,7 +17,7 @@ The **`TextEncoder()`** constructor returns a newly created
 ## Syntax
 
 ```js
-var encoder = new TextEncoder();
+new TextEncoder();
 ```
 
 ### Parameters
