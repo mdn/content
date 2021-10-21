@@ -53,7 +53,7 @@ RTCDataChannel.send(data);
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown when the data channel has not finished establishing its own connection (that is, its
-    {{domxref("RTCDataChannel.readyState", "readyState")}} is `"connecting")`. The data channel
+    {{domxref("RTCDataChannel.readyState", "readyState")}} is `connecting`). The data channel
     must establish its own connection because it uses a transport channel separate from that of the media content. This error occurs without sending or buffering the `data`.
 - `NetworkError` {{domxref("DOMException")}}
   - : Thrown when the specified `data` would need to be buffered, and there isn't room for
